@@ -223,3 +223,60 @@ through the firstsession without revaluation.** No known exactnextdate proved.
 House management and prior exact order IDs remain in dated entries below.
 Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
 execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.
+
+
+## 2026-10-17T22:51:15+00:00 — Worlds entry review complete; no sports order
+
+The primary read both independent advisories, the corrected2026event objects,
+the original600-denominator formula and the current patch/roster follow-up.
+The ordinary15pp calculation is positive at30c, but it does not resolve the
+score-to-match mapping. A separate primary specification audit gives LCK75–80%
+when its region receives a100-point common rating offset; the original broad
+25–80% range already allowed that failure. No observed calibration establishes
+that the current regional zero or2026formula transfers accurately. The field's
+small MonteCarlo error does not answer this question. Original46%YES/54%NO is
+retained as a low-confidence exploratory forecast, not a funded recommendation.
+
+**Decline the current30cNO proposal.** No sports order, canonicalprior,
+reservation, newfeed/keyword/timer or daemon action. DEC-0208 records a
+skip, not a purchase. The new aggregator-feed audit also shows no existing
+specificcoverage and falsepositiveitems; this is an operational gap to resolve
+if a future thesis survives, not the reason to pretend the model was calibrated.
+Reopen after current-strength mapping validation, an independently supported
+roster/patch forecast, or substantiallybetterprice with a newly justified
+pessimistic net-return comparison. The exact two research cases remain valued;
+neither is a small-model exclusion or a claim that esports have no opportunity.
+
+Source/model files: `worlds_roster_patch_followup.json`,
+`worlds_monitoring_sources.json`, tracked `models/worlds_mapping_adverse_audit.json`,
+and `advisories/worlds_{skeptic,champion}.md`. Existing5pendingbids were separately
+reverified22:47:42UTC/block95714608, allzero-filled/both-outcome balances0;
+fullpending12.90/free12.096890pUSD, exactidentities unchanged, venueFI02unblocked.
+No financialstate mutation arose from this review; only the decision log appended.
+
+
+## 2026-10-17T23:39:25.528330+00:00 — current Idaho poll source and shared Senate forecast revision
+
+Primary visually read the recovered PeakInsights memo:Sep28–30,n500LVlive,
+R49/Achilles24/Fleming3/Loesby2/None6/DK15 (rounds99). The source is no longer
+merely a CTMattribution. Risch-campaign commissioning is attributed by theOct2
+post, not printed in the memo. OriginalATRthree-wayI45.5/R39.4/L4.5/U10.6
+remains distinctRVmixed-mode counterevidence. Neither questionnaire is known;
+no biography effect or clean trend is claimed. Official finalballot remains a
+specific pending entry check; FECindependent identity is not state certification.
+
+A separate primary revision gives25%ATR/75%Peak regimes, selected before1870
+prices. NamedAchilles20%,1–80%range;15ppreserve is a policy stress, not a full
+source-regime floor (Peakonly1.65%). See models/senate_idaho_revision_2337_method.md,
+its inputs/runner/results and both new advisory files. Originalv1 unchanged.
+**Current rounded chamber values D56/R43/Other1, DD51/RR15** supersede earlier
+D57/R42/Other1/DD52 for current research; HouseD80unchanged. Cases52/73/1810/1822
+keep immutable originalobservations. Same datedquotes still fail15/15/15/10pp
+stress, no newmoneypriors/order. Extra caucus/no-pledge branches prevent treating
+RNOasDYES or fourmajpartyjointclaims as exhaustive guaranteedarb.
+
+157valued/1blocked/327excluded/2515pending. Case132 also complete: official
+noresult yields50/50CASHpayout, not50%India sportingwin; bothasksnegativeafter
+fees andbothbooksstale918s. No sportsorder. Case1870 is a makerresearchcandidate
+YES<=3.2cfor<=10shares, risk<=.32, pending actualballot/currentallgate and
+source-risk decision. No order/reservation/prior/keyword change.

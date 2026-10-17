@@ -7,7 +7,7 @@ another. Check the live index before doing work; a fact packet is not completion
 
 | Pending cases | Local factual packet | What still needs primary work |
 |---|---|---|
-| 10,52,73; compounds12,26,80,169,185 | `data/deep_review_20261017/us_chambers_sources.json` | Full Senate state/seat and cross-chamber model; generic ballot is not control probability. D needs net4 for51 under current RepublicanVP tie rule. Do not multiply dependent national-error legs. |
+| Completed10,52,73,1810,1822; pending compounds12,26,80,169,185 | `data/deep_review_20261017/us_chambers_sources.json` | Full Senate state/seat and cross-chamber model; generic ballot is not control probability. Corrected:33regular13D/20R +OH/FLspecials =35total13D/22R; donotaddOHagain. Dneedsnet4for51undertheordinary100seatRepublicanVPtiecase. Do not multiply dependent national-error legs. |
 | Completed30,58,86,114,140,142,170,198,219,233; revised2 | `data/deep_review_20261017/spotify_annual_sources.json`, `spotify_early_history_addendum.json`, `spotify_release_chronology_sources.json` | Ten children and dated MNI37% revision are complete. Read shared Spotify joint method/audit: January1 week straddles2025, absent rows are unknown, catalog dates can postdate original charts, and alternate recording totals cannot be assumed additive. No official2026 cutoff or aggregate ranking recovered; no order. |
 | Completed222,812,1262,1672,1983 | `data/deep_review_20261017/issuer_events_followup_sources.json`, `earnings_metric_history_sources.json` | All five ISRG procedure-growth brackets are complete. Da Vinci differs from Ion/combined; Oct20call20:30Z before22Z metadata. Whole-percent reported precision changes boundary mass. Conference addendum is in CURRENT_REVISIONS; no ISRG order. |
 | 56,63,77,98,147,203,210,224 | `data/deep_review_20261017/google_time_sources.json`, `google_2026_catalysts_sources.json` | Full rules and official methodology/catalysts retrieved. Google ranks growth, not total searches.2025cutoff is not confirmed2026policy; public normalized-series probes failed. TIME is editorial; its public poll does not select the winner. Primary must retain these gaps. |
@@ -149,3 +149,59 @@ include IPO158NO5@.62 in addition to four House bids. This supersedes older
 four/two-order snapshots, not their dated observations.22:00held-thesis review
 completed once; next existing scheduled check02:00. No newtimer. Staticquote
 archives and writer guards remain; safe Gitrepack completed22:29, disk329MiB.
+
+
+## October17 Senate source correction and active52
+
+Read `senate_specials_independent_correction.json` before older chamber packets.
+OfficialClassII has33regularseats (13D/20R), not35regular. OHplusFLspecials make
+35total (13D/22R); olderpackets double-addedOHandomittedFL. BaselineD47includes
+2sittingindependentcaucusers. NEOsborn'sSept24reportedcaucuseverybodystatement
+doesnotnameD; protempfallbackremainsseparatefromautomaticDseatassignment.
+CTMcurrentDcontrol56%versus52.6%withoutNEusesunverifiedcaucusconventions.
+Active52primaryforecastpending;7originalpollstatepacketsandnew4statefollow-up
+areinputs, notsmall-modelverdicts. Case10saved80%HouseDwithexplicitunfitted
+overlay/source82%anchor; noorder. CTMcasepagescontainmethod/provenance/display
+inconsistencies (RCVandnationalblend), so do nottreatthemasindependentlyaudited
+runtimeorcollapsepublicationclaimsintoreplicatedcalibration.
+
+Worlds150entryreviewnowcomplete: current30cproposaldeclinedbyprimary, noorder/
+prior/reservation/feedchange. Adverse100pointregionalbiasaudit reaches75–80%
+LCKtitlemasswithinexistingrange; mappingunverified. Existing5bidsreverified
+22:47:42/block95714608allzero-filled/pending12.90/free12.096890.
+
+
+### Active52 — primary Senate source-coverage correction23:04UTC
+
+Read models/senate_primary_working_notes.md and draft model/inputs/results. Initial11-statepollcoverage is incomplete: newly located currentKansas closepoll source leads and FloridaNixonmatchup require originalcapture; SC alsofollow-up. Agents collecting allremaining21states sourceindex. Do not publish initial51.55%D draft as final; no quotation/financialdecision yet. All35seats count correctly, but currentpollcoverage and nominees are decision-relevant. Each finalcase stillsaved individually before next.
+
+
+## October17 23:34UTC — final Senate model and continuation
+
+157valued/1blocked/327excluded/2515pending. Cases10/52/73/1810/1822 are complete;
+older active52 labels are historical. All35 contests reviewed; D57/R42/Other1,
+DD52/RR15 primary judgments with wide ranges. No new order from these cases.
+Read models/senate_primary_method.md and the linked input/results/advisories.
+Pending1870 Achilles ID uses the shared source conflict but needs independent
+full-literal race valuation; source follow-up is in progress, no forecast yet.
+Ready compound packets: hormuz_compound_deadline_followup.json,
+oil_cll_compound_followup.json, oil_dated_proxy_followup.json, and
+compound_literal_sources.json. Target CLLZ6 Nov2 close is not a current Cushing
+spot quote or an untimestamped catalog number.12/26 different deadlines remain.
+
+Current quote batch1801–1920:97 exact Gamma matches,23 gaps;1810/1822/1870
+fully bound. Original book receipt23:18:56 is preserved despite metadata repair.
+No omitted row is a rejection or zero price. Historical diagnostic compression
+is recorded in ARCHIVED_HISTORICAL_DIAGNOSTICS.json;12 quote archives remain
+indexed separately by ARCHIVED_CAPTURES.json. Preserve original hashes.
+
+
+### October17 23:40UTC — current source revision and two new cases
+
+157valued/1blocked/327excluded/2515pending. Cricket132 expectedcash50ceach
+afterofficialnoresult, not50%gamewin; no entry. Achilles1870namedwin20% is
+complete with1–80%range/15ppreserve and prioritytiny makerwatch<=3.2c, pending
+certifiedballot/currentgates. No order yet. Read senate_idaho_revision_2337_method
+for recoveredoriginalPeakmemo and currentD56/R43/Other1, DD51/RR15. Oldcases
+stayimmutable; no canonicalmoneypriorchanged. Case1870 is no longer pending
+valuation, only concreteentryfollowup. Source/fact assistants own no forecasts.

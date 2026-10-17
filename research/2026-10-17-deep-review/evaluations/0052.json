@@ -1,0 +1,180 @@
+{
+  "review_index": 52,
+  "condition_id": "0x86bfb53af7250a40928975c551d12c185b762fa4ce0b40c6a64a50c946d72587",
+  "criteria_sha256": "f93497d0ec93a4017b065ca0c92522fc135cb34d3507d681650a573a0809fa52",
+  "status": "valued",
+  "literal_analysis": "Fullrulesread: majority/VP/ProTemp, 33regular+2specials, electionparty/fixednonballot attribution, qualifyingrunoffs andOct31cutoff, independentformalintentJan4 deadline; otherorganization means RNO differsfrom DYES.",
+  "evidence": [
+    {
+      "url": "https://www.senate.gov/senators/Class_II.htm",
+      "finding": "33regularClassII; 13D20R; OH+FLspecials correction and fixed34D31R in linkedsourcepacket",
+      "observed_utc": "2026-10-17T23:22:42.816170+00:00"
+    },
+    {
+      "url": "https://www.fec.gov/resources/cms-content/documents/2024presgeresults.xlsx",
+      "finding": "Official allstatepresidentialbaseline rawhash/state sums independentlyverified; nationalDmargin−1.471909pp; discrepancywithClerkpreserved",
+      "observed_utc": "2026-10-17T23:22:42.816170+00:00"
+    },
+    {
+      "url": "https://emersoncollegepolling.com/kansas-2026/",
+      "finding": "OriginalcurrentKansasHamilton/Marshallclosepoll included, nohistorical-leanexclusion",
+      "observed_utc": "2026-10-17T23:22:42.816170+00:00"
+    },
+    {
+      "url": "https://www.documentcloud.org/documents/28817212-sd-sen-gov-concord-public-opinion-partners-oct-2026/",
+      "finding": "Primaryvisuallyreadpublicimage; Bengs43/Rounds42, correctedreversal; officialI/withdrawnDandownnocaucusstatementtracked",
+      "observed_utc": "2026-10-17T23:22:42.816170+00:00"
+    },
+    {
+      "url": "https://www.callthemap.com/methodology",
+      "finding": "Publishedforecastercomparisononly; method/displayandNMpollbindingproblemsretained; notinputp or auditedruntime",
+      "observed_utc": "2026-10-17T23:22:42.816170+00:00"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.42,
+    "low": 0.15,
+    "high": 0.75,
+    "method": "Primary35-state correlated margin/candidate/independent-organization sensitivity; not calibrated",
+    "reasoning": "Originalpolls and structuralpriors modeled together; no venueodds input; rawR42.02/D56.85/other1.13 rounded42/57/1; stackedscenarios andsourcegaps justify broad range and15ppentryreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 81.0,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.42,
+        "best_bid": 0.36,
+        "best_ask": 0.37,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.223,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.37,
+            "fee_usd": 0.09324
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.7932400000000004,
+        "fee_usd": 0.09324,
+        "break_even_probability_before_carry": 0.37932400000000005,
+        "break_even_probability_with_idealized_carry": 0.3818658883546763,
+        "central_expected_profit_usd": 0.4067599999999998,
+        "default_10pp_stressed_profit_usd": -0.5932400000000011,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.31999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.50784
+      },
+      "No": {
+        "probability": 0.5800000000000001,
+        "best_bid": 0.63,
+        "best_ask": 0.64,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.223,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.64,
+            "fee_usd": 0.09216
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.49216,
+        "fee_usd": 0.09216,
+        "break_even_probability_before_carry": 0.649216,
+        "break_even_probability_with_idealized_carry": 0.6535664618481021,
+        "central_expected_profit_usd": -0.6921599999999994,
+        "default_10pp_stressed_profit_usd": -1.6921599999999994,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4800000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.20676
+      }
+    }
+  },
+  "verdict": "Noentry: capturedYEScentralEVpositivebut10pp/15ppstressnegative; NOcentralnegative. MakerwatchYES<=.25 orNO<=.41 x10subjectfreshvalidation; noorder/prior/reservation.",
+  "reopen_condition": "Freshsourcechange or makerquote below netthreshold with currentliteralidentity/fees/depth/source, portfolio and monitoring revalidated.",
+  "current_description_sha256": "d60f66146b9379066f4fecd624eae6f5c200f703d75aa1e99398461ce3ababc9",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "51939490109676186832507970701169130490548061087912630009168726706475001411420",
+    "108587038225191871355030577171066853142535232042155117887981453750193713427381"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0074",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0074.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0074.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.15,
+    "primary_model": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+    "source_packets": [
+      "senate_current_state_sources.json",
+      "senate_four_state_followup.json",
+      "election_2024_baseline_facts.json",
+      "election_2024_baseline_addendum.json",
+      "senate_specials_independent_correction.json",
+      "senate_secondary_battlegrounds_ks.json",
+      "senate_secondary_battlegrounds_fl_sc.json",
+      "senate_sc_la_mechanics_followup.json",
+      "senate_remaining_state_directory_full.json",
+      "senate_remaining_original_poll_verification.json",
+      "senate_la_ar_original_followup.json",
+      "senate_montana_field_followup.json",
+      "senate_independent_id_sd_ms_followup.json",
+      "independent_field_correction_addendum.json"
+    ],
+    "model_hashes": {
+      "models/senate_primary_inputs.json": "1664fd6fc20a57be385167e96f37091ce658fc9ff2f914c0b20329696702c04c",
+      "models/senate_primary_model.py": "b58eef24693b417c0de04fdb6b4fb0a19233762e1e4983e95c24f0b2335f5175"
+    },
+    "selected_15pp_stress_usd": {
+      "Yes": -1.0932400000000002,
+      "No": -2.1921599999999994
+    },
+    "hypothetical_maker_limits": {
+      "Yes": 0.25,
+      "No": 0.41
+    },
+    "no_new_execution_authority": true
+  },
+  "evaluated_utc": "2026-10-17T23:22:43.166354+00:00",
+  "question": "Will the Republican Party control the Senate after the 2026 Midterm elections?",
+  "market_id": "562794",
+  "valuation_author": "primary_operator",
+  "original_index": 52,
+  "report_sha256": "71b9dd6a58499e29f28225ab7d3fc1e17aea6614c9f045aaff2e4e1a669d6d4d"
+}

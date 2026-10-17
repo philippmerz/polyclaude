@@ -1,0 +1,11 @@
+{
+  "source_majority_anchor": 0.82,
+  "source_date": "2026-10-17",
+  "alternative_whole_model_failure_weight": 0.1,
+  "alternative_D_control_probability": 0.6,
+  "residual_D_Speaker_fallback_absolute_probability": 0.002,
+  "p_D_control": 0.8,
+  "calibrated_overlay": false,
+  "entry_haircut": 0.12,
+  "note": "Primary subjective model pooling, not another independent poll or a replication of provider simulations.12ppreserve preservesordinary10ppbelowthe82%sourceanchor."
+}

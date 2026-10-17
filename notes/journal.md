@@ -30527,3 +30527,91 @@ manifest and reader/writer guards. Newresearch stops below180MiB; warning512.
 Ledger audit476/476 hash/identity/index checks passed before the two Worlds
 records, and a final focused-commit audit follows. No financial state change
 since the separately recorded22:15:59 fifthIPO pendingbid.
+
+
+## 2026-10-17T22:51:15+00:00 — Worlds entry review complete; no sports order
+
+The primary read both independent advisories, the corrected2026event objects,
+the original600-denominator formula and the current patch/roster follow-up.
+The ordinary15pp calculation is positive at30c, but it does not resolve the
+score-to-match mapping. A separate primary specification audit gives LCK75–80%
+when its region receives a100-point common rating offset; the original broad
+25–80% range already allowed that failure. No observed calibration establishes
+that the current regional zero or2026formula transfers accurately. The field's
+small MonteCarlo error does not answer this question. Original46%YES/54%NO is
+retained as a low-confidence exploratory forecast, not a funded recommendation.
+
+**Decline the current30cNO proposal.** No sports order, canonicalprior,
+reservation, newfeed/keyword/timer or daemon action. DEC-0208 records a
+skip, not a purchase. The new aggregator-feed audit also shows no existing
+specificcoverage and falsepositiveitems; this is an operational gap to resolve
+if a future thesis survives, not the reason to pretend the model was calibrated.
+Reopen after current-strength mapping validation, an independently supported
+roster/patch forecast, or substantiallybetterprice with a newly justified
+pessimistic net-return comparison. The exact two research cases remain valued;
+neither is a small-model exclusion or a claim that esports have no opportunity.
+
+Source/model files: `worlds_roster_patch_followup.json`,
+`worlds_monitoring_sources.json`, tracked `models/worlds_mapping_adverse_audit.json`,
+and `advisories/worlds_{skeptic,champion}.md`. Existing5pendingbids were separately
+reverified22:47:42UTC/block95714608, allzero-filled/both-outcome balances0;
+fullpending12.90/free12.096890pUSD, exactidentities unchanged, venueFI02unblocked.
+No financialstate mutation arose from this review; only the decision log appended.
+
+
+### 2026-10-17T22:58:04.671713+00:00 — Deep review House comparison
+
+Primary retained four resting House bids after CTM/source comparison; no new
+canonical probability, order or size. Current Tulchin already considered; MT/NY
+external chances close to primary; CA chooser-only normalization not a new poll.
+Provider method/display conflict is unresolved, not proof of bad runtime.
+See research/2026-10-17-deep-review/candidate_followup.md dated entry and raw
+receipts. Latest separate account proof22:47:42UTC remains all5zero-filled.
+
+
+## 2026-10-17T23:33:24.686569+00:00 — Senate full-field model and five separate chamber valuations
+
+155 valuations,1 blocked and327 factual exclusions are now saved;2,517 remain
+pending. Each case was written/indexed before the next. New since150 are
+House10, R Senate52, DD73, D Senate1810 and RR1822. The primary corrected
+initial11-state coverage by reviewing all35 contests, adding close Kansas and
+current Florida evidence, preserving original-source/certification gaps and
+correcting the initially reversed South Dakota Concord reading. The primary
+visually verified Bengs43/Rounds42. New Mexico governor polls were not rebound
+to Senate.33regular plusOH/FLspecials, fixed34D/31R, count100seats in each draw.
+
+Final primary Senate D57/R42/Other1, jointDD52/RR15 are uncalibrated judgments,
+with explicit shared national errors, actual independent fields, future caucus
+and firstProTemp branches. Ordinary50/50 uses RepublicanVP.24x60000 sensitivity
+draws quantify assumptions, not calibrated accuracy. Standalone/DD15pp reserves
+and rarerRR10ppcase reserve reject captured entries even where centralEVpositive.
+No new order, reservation or canonical forecast. The confusing old input-note
+50%D ProTemp text is identified as stale; final code/parameters use45D/45R/10Other.
+Both independent advisories read. ID standalone1870 gets further original-source
+follow-up before valuation; no small-model probability or exclusion substituted.
+
+Read-only ledger audit482/482 passed before1822 added record483: frozen identity,
+criteria/report/ledger hashes, CSV/checkpoint and append-only decision prefix.
+DEC0208 is only a skip, not a position. All5existing bids were separately
+zero-filled at22:47:42, pending12.90/free12.096890. Latest full safety22:00,
+next existing02:00. Historical public diagnostic lossless compression reclaimed
+78,992,436bytes; exactraw/gziphashes in ARCHIVED_HISTORICAL_DIAGNOSTICS. No
+active-log/dependency/financial evidence deletion. Disk~302MiB,180MiBresearchfloor.
+
+
+## 2026-10-17T23:39:25.528330+00:00 — cricket payout valuation and Idaho source revision;157 saved
+
+Saved132 before1870. OfficialBCCI/ICC exactOct17 fifthT20Inoresult supports
+50/50CASHpayout, not50%chanceIndiawin. Bothasksloseafter5%curvefees, both
+918sbooksstale; noentry. Fullrulesstillopen, so valuedratherthanassumedclosed.
+
+Primaryvisuallyread newPeakmemo (R49/I24/Fleming3/L2/None6/DK15,n500LV),
+changingIDregimeweightsfrom50/50to25/75ATR/Peakbeforequotes. OriginalRVATR
+contradictionretained; no questionwording/biography/trendclaim.1870pYES20%,
+1–80range,15ppreserve;Peakonly1.65%.Bothadvisoriesread. CurrentSenD56/R43/Other1,
+DD51/RR15researchrevisions linked; no oldrecordoverwrite ornewcompletedcounts.
+Case1870capturedYES4.5cpositivecentral/stress15tiny,butmaker-only/noorder.
+Tiny<=3.2c/10sharewatchrisk<=.32 needsactualcertifiedballot/currentgates and
+explicit adversewealth/monitoring review. FECIidentitynotstatecertification.
+Officialballot boundedfollowupunderway; no canonicalprior/reservation/feedchange.
+157valued/1blocked/327excluded/2515pending. Ledgerupdatesbothcompletedcases.

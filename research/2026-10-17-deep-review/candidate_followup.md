@@ -197,3 +197,89 @@ through the firstsession without revaluation.** No known exactnextdate proved.
 House management and prior exact order IDs remain in dated entries below.
 Proof: `data/deep_review_20261017/all_pilots_verified_2216.json`;
 execution log: `logs/deep_review_20261017/ipo_entry_execute_2215.log`.
+
+
+## 2026-10-17T22:51:15+00:00 — Worlds entry review complete; no sports order
+
+The primary read both independent advisories, the corrected2026event objects,
+the original600-denominator formula and the current patch/roster follow-up.
+The ordinary15pp calculation is positive at30c, but it does not resolve the
+score-to-match mapping. A separate primary specification audit gives LCK75–80%
+when its region receives a100-point common rating offset; the original broad
+25–80% range already allowed that failure. No observed calibration establishes
+that the current regional zero or2026formula transfers accurately. The field's
+small MonteCarlo error does not answer this question. Original46%YES/54%NO is
+retained as a low-confidence exploratory forecast, not a funded recommendation.
+
+**Decline the current30cNO proposal.** No sports order, canonicalprior,
+reservation, newfeed/keyword/timer or daemon action. DEC-0208 records a
+skip, not a purchase. The new aggregator-feed audit also shows no existing
+specificcoverage and falsepositiveitems; this is an operational gap to resolve
+if a future thesis survives, not the reason to pretend the model was calibrated.
+Reopen after current-strength mapping validation, an independently supported
+roster/patch forecast, or substantiallybetterprice with a newly justified
+pessimistic net-return comparison. The exact two research cases remain valued;
+neither is a small-model exclusion or a claim that esports have no opportunity.
+
+Source/model files: `worlds_roster_patch_followup.json`,
+`worlds_monitoring_sources.json`, tracked `models/worlds_mapping_adverse_audit.json`,
+and `advisories/worlds_{skeptic,champion}.md`. Existing5pendingbids were separately
+reverified22:47:42UTC/block95714608, allzero-filled/both-outcome balances0;
+fullpending12.90/free12.096890pUSD, exactidentities unchanged, venueFI02unblocked.
+No financialstate mutation arose from this review; only the decision log appended.
+
+
+## 2026-10-17T22:58:04.671713+00:00 — Primary comparison of resting House bids
+
+Read all four captured CTM district pages, their admitted poll summaries, the
+methodology, and the offline display-label addendum. Retain the existing four
+bids at their current limits; no new order or size change. Current account proof
+is the separate22:47:42UTC observation, not a new fill check in this comparison.
+
+- ME02: CTM history Dwin55.3%, lower than our61%; even55% minus ordinary10pp
+  at38c leaves70c gross on10shares before roughly3c conservative carry+5c
+  operation allowance. Current Tulchin D+4 is already in our original-source
+  information set. No proved nominee/rule/field change. RCV prose conflicts
+  within the provider; do not treat its output as a fresh literal-rule audit.
+- MT01: CTM Dwin44.5%, near our47%. At45% minus10pp and33c,10shares leave20c
+  before carry+operations. Same dated source pollster-name aliases do not create
+  new independent polls. Retain33c; do not chase with the comparison output.
+- NY01: CTM Dwin32.9%, near our31%; no new2026admittedpoll, old2025PPP is not
+  current evidence. Retain12c.
+- CA06: CTM NO2% differs from primary15%, but the panel admits no nominee-matched
+  poll average and does not invalidate the original Bullfinch raw36.7/36.5 with
+ 26.7undecided. Its50.1/49.9 chooser-only normalization is that same close poll,
+  not a new Pan landslide. Candidate/caucus uncertainty remains explicitly
+  modeled in the primary case. No newly established fact breaks that15% thesis.
+  Retain3c; do not add, chase or call the NO bid a measured House-wave hedge.
+
+CTM's exact win probabilities appear separately in forecast history. Some
+matching numbers are also labeled first-choice Forecast share in the card;
+we do not infer probability or arithmetic error from the bare numbers alone.
+The district explanatory panel uses special/approval channels excluded by the
+method document. Public HTML cannot establish which reflects executed code.
+This is model provenance uncertainty, not proof the published result is wrong.
+No canonical probability changed. Review earlier on material original evidence;
+cancel first on a changed or uncertain load-bearing thesis.
+
+Evidence: data/deep_review_20261017/house_resting_ctm_comparison_sources.json,
+house_ctm_display_addendum.json; raw compressed receipts and hashes in each.
+
+
+## 2026-10-17T23:39:25.528330+00:00 — pending157th valuation: Idaho named candidate1870
+
+157valuations saved; Achilles1870pYES20/NO80,1–80%range. Primary read new
+Peakmemo andbothadvisories before action.15ppreserve gives5%policy-stressvalue
+butPeakonly1.65%; not a guaranteed floor or D-control hedge. At captured4.5c
+ask10YEScost.46719, centralEV1.53281/stress15EV.03281, before operationalcost;
+maker-only doctrine stillapplies. Candidate<=3.2cfor<=10shares (.32cashrisk):
+central+1.68/policystress+.18/Peakonly−.15467, beforecosts. OppositeNOask96.8c
+fails centrally. ExactliteralAP/Fox/NBCcallselseofficialcertification; current
+FECIndependent identity verified but certifiedstateballot notyet. Existing
+publiccandidateportalonlyshell; bounded officialballot followupunderway.
+
+No entry/prior/reservation/feedchange. Need currentbook/fee/UMA/fullaccount
+checks and source/monitoring/factor decision afterballot status. Existing5bids
+remain last verified22:47:42zero-filled; no new fill/profit claim. All prospective
+IDrisk joinsUSpolitics alongside4Housebids; nocaucusintent notmeasuredhedge.
+CurrentSenateD56/R43/Other1 andDD51/RR15 are linkedresearchrevisions only.

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T22:35:31.563066+00:00
+Updated: 2026-10-17T23:38:46.302796+00:00
 
-**150 valuations saved; first milestone100:** 150 valued; 1 blocked after in-depth review. 327 factual exclusions separately; 2522 pending.
+**157 valuations saved; first milestone100:** 157 valued; 1 blocked after in-depth review. 327 factual exclusions separately; 2515 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -21,6 +21,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |7|[Will Microsoft be the largest company in the world by market cap on October 31, 2026?](evaluations/0007.md)|valued|YES central tail value; NO has no offer; no supported entry|
 |8|[Bitcoin Up or Down on October 17?](evaluations/0008.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |9|[Will "Doing Life" be the #2 US Netflix movie this week?](evaluations/0009.md)|valued|Maker planning candidate: YES20c/10shares subject to fresh full gates; no order yet|
+|10|[Will the Democratic Party control the House after the 2026 Midterm elections?](evaluations/0010.md)|valued|Bothsidesvalued; YESnegativecentral, NO10c losesafterdefaultreserve/fees. <=7cpassiveNO20sharesresearchwatchunder12ppreserve, noorder.|
 |11|[Will the Fed increase interest rates by 25 bps after the October 2026 meeting?](evaluations/0011.md)|valued|No entry: YES has positive central EV but fails ordinary10pp stress; NO negative central EV.|
 |13|[Will Liverpool FC win on 2026-10-17?](evaluations/0013.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |14|[Will Anthropic have the best AI model at the end of December 2026?](evaluations/0014.md)|valued|NO central and default10pp edge; frontier-release uncertainty/December doctrine require follow-up, no order|
@@ -60,6 +61,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |49|[Will Apple be the third-largest company in the world by market cap on October 31?](evaluations/0049.md)|valued|YES central rank-change lead; event-tail calibration needed, no entry|
 |50|[Will Bitcoin reach $100,000 by December 31, 2026?](evaluations/0050.md)|valued|YES positive central forecast, fails10ppstress/carry; no entry|
 |51|[Will "Doing Life" be the #2 global Netflix movie this week?](evaluations/0051.md)|valued|Priority maker-NO planning lead at.021/50shares; fresh gates required, no order|
+|52|[Will the Republican Party control the Senate after the 2026 Midterm elections?](evaluations/0052.md)|valued|Noentry: capturedYEScentralEVpositivebut10pp/15ppstressnegative; NOcentralnegative. MakerwatchYES<=.25 orNO<=.41 x10subjectfreshvalidation; noorder/prior/reservation.|
 |53|[Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?](evaluations/0053.md)|valued|YES positive central tail arithmetic; unsupported floor and minimum size, no entry|
 |54|[Will Gen.G win Worlds 2026?](evaluations/0054.md)|valued|Bothsidesvalued; YESnegativecentral, NO70c failscase-specific15ppreserveafterfees/carry; <=69cpassiveNOresearchwatch, noorder.|
 |55|[US x Iran ceasefire continues through October 31?](evaluations/0055.md)|valued|Creation-window ambiguity and operational history assessed; neither side clears ordinary uncertainty reserve|
@@ -76,6 +78,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |70|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0070.md)|valued|NO central/default-stress lead; metric/release and December uncertainty follow-up, no order|
 |71|[Will the price of Bitcoin be above $80,000 on October 18?](evaluations/0071.md)|valued|NO positive central value afterweekend correction, tail uncertainty preventsentry|
 |72|[Will "Transformers One" be the top US Netflix movie this week?](evaluations/0072.md)|valued|Both asks negative central EV; no entry|
+|73|[2026 Balance of Power: D Senate, D House](evaluations/0073.md)|valued|Noentry: YEScentralnegative; NOcentralpositivebut10pp/15ppstressnegativeafterfee. MakerwatchYES<=.35/NO<=.31 x10onlyafterfreshgates.|
 |74|[Will the Democratic Party win the FL-03 House seat?](evaluations/0074.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |75|[Will Falcons Win the Thunderpick World Championship 2026?](evaluations/0075.md)|excluded_factual|Factualexclusion, separatefromsubstantivevaluations: Knowneliminatedteam; exactcurrentGammaYES/NOmid.0005/.9995 andproposedstatus; freshYESask.001 butnoYESbids, noNOasks. Noheldshares/orders. This is obviouseliminated-candidate irrelevance with noeligiblecurrentwinning-entry route, not an uncertainfutureevent screen.|
 |76|[Will SV 07 Elversberg win on 2026-10-17?](evaluations/0076.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -119,6 +122,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |127|[Bitcoin Up or Down - October 17, 11AM ET](evaluations/0127.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |128|[Will "The Widower: 'Til Death Do Us Part" be the top US Netflix movie this week?](evaluations/0128.md)|valued|Both offered sides negative central EV; no entry|
 |129|[Iran leadership change by October 31?](evaluations/0129.md)|valued|Personal de-facto leadership tail valued, with latent/current-state uncertainty explicit|
+|132|[West Indies Tour of India T20s: India vs West Indies](evaluations/0132.md)|valued|No entry: both captured asks lose after5%curve fees at50/50payout, and both booksstale918s. Researchwatcheach<=.39for<=10shares with freshallgatechecks.|
 |134|[Will the price of Ethereum be above $2,500 on October 17?](evaluations/0134.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |135|[Will "Ice Age" be the #2 global Netflix movie this week?](evaluations/0135.md)|valued|YES ask negative central EV, NO offer unavailable; no entry|
 |139|[Dota 2: LEGION vs Team Lynx - Game 1 Winner](evaluations/0139.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -357,11 +361,14 @@ Each report below is written before moving to the next evaluation. Related contr
 |1796|[Will Luton Town FC win on 2026-10-17?](evaluations/1796.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1800|[Will AC Carpi win on 2026-10-17?](evaluations/1800.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1806|[Will Elon Musk post 90-114 tweets from October 15 to October 17, 2026?](evaluations/1806.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1810|[Will the Democratic Party control the Senate after the 2026 Midterm elections?](evaluations/1810.md)|valued|No entry: both sides fail selected15pp stress; NO central value positive but ordinary10pp also negative after fee. Maker watches YES<=.40/NO<=.26 x10 only after fresh gates.|
 |1820|[Will Huddersfield Town AFC win on 2026-10-17?](evaluations/1820.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1822|[2026 Balance of Power: R Senate, R House](evaluations/1822.md)|valued|No entry at captured quotes; YES central positive but10pp stressed negative. Researchmaker watch YES<=.03 or NO<=.73 for<=10shares.|
 |1828|[Will Sivasspor vs. Sariyer SK end in a draw?](evaluations/1828.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1845|[Will the lowest temperature in Guangzhou be 29°C or higher on October 17?](evaluations/1845.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1848|[Will Reading FC win on 2026-10-17?](evaluations/1848.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1856|[Will Jahn Regensburg win on 2026-10-17?](evaluations/1856.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1870|[Will Todd Achilles win the Idaho Senate race in 2026?](evaluations/1870.md)|valued|Priority maker research YES<=.032 for<=10shares (.32risk), pending officialballot/currentgates/source-risk decision. No taker:15ppaskEVonly.03281; adversePeakloses. NO capturedask negative.|
 |1888|[Will Aberdeen FC win on 2026-10-17?](evaluations/1888.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1892|[RC Strasbourg Alsace leading at halftime?](evaluations/1892.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1897|[Will the price of XRP be between $1.30 and $1.40 on October 17?](evaluations/1897.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

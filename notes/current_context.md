@@ -18,7 +18,7 @@ Read [checkpoint](deep_review_checkpoint.json), [protocol](../research/2026-10-1
 [corrections](../research/2026-10-17-deep-review/CURRENT_REVISIONS.md),
 [candidate follow-up](../research/2026-10-17-deep-review/candidate_followup.md) and
 [SOURCE_QUEUE](../research/2026-10-17-deep-review/SOURCE_QUEUE.md).
-At22:37UTC:150valued/1blocked/327factual exclusions/2522pending; none active.
+At23:33UTC:157valued/1blocked/327factual exclusions/2515pending; no active case.
 First100notifiedchat/TG1163. Continue finitequeue unless operatorsteers; no new
 timer/durablegoal/idlecontinuation. Primary reads fullrules/owns probabilities
 and action; cheap agents collect facts/advisory challenge. Oldscreensnonbinding.
@@ -72,9 +72,10 @@ Actual2026tournament115660540725177488/currentKC–MVKfinalOct18 18:00UTC.
 **Earlierstandings113475452383887518is2025**, not future2026Swiss results;
 readplayin_correction_addendum. OriginalGPR2024formula600denominator visually
 verified; game-versus-series/current2026mappingunproved, no calibratedtitlemodel.
-A tiny LCK_NO5@.30=1.50 proposal is under independent champion/skeptic review
-in trackedadvisories/worlds_*.md. No sportsorder/prior/reservation. Primary must
-read reviews, resolve crux, decide and fresh-check allgates/coverage if entry.
+The primaryreadbothadvisories and DECLINED current30cLCKNOproposal: unvalidated
+regionalmapping; +100scorebiasaudit gives75–80%LCKwithinexistingbroad range.
+DEC0208skip/no sportsorder/prior/reservation/feedchange. Reopenwithvalidated
+mapping/independentrosterpatchforecast or materiallybetterprice/currentfacts.
 GEN_NOshares samefactor, noindependence.
 
 Spotifytenchildrencomplete, MNI2current37% explicitrevision. Jan1weeklylabel
@@ -91,7 +92,10 @@ complete/noorders. Apple9named/25unknown notfullalbum; MinervaZenUANfertilizer
 notdiesel; PHEICnotautomaticpandemic. CS2 41/75factualexcluded, notvaluations.
 Ready facts for Senate/chambers, Google/TIME, Mojtaba64 and Ballon66/82,
 cricket132 in SOURCE_QUEUE; primary mustread literal/currentstatus before each.
-Originalindexnextpending10; sharedsourcegroupingallowed, no discardedcases.
+Original index next pending12; shared-source grouping allowed, no discarded cases.
+Senate source review covers all35 contests; current D56/R43/Other1 and jointDD51/RR15. See datedIdaho revision.
+Cases10/52/73/1810/1822 saved individually; no new order. See final Senate method.
+Pending1870 source follow-up checks original conflicting ID polls/official ballot.
 
 ## Capacity and persistence
 
@@ -102,6 +106,39 @@ observationsnotexecutioncertificates. Gzipreclaimed12,827,256bytes. Gitrepack
 completed22:29 rc0, ~140MiBfreed/329MiBavailable, refs/files/historypreserved;
 no GC/prune or dependency/evidence deletion. SudoAPTclean denied beforeaction.
 180MiBnewresearchstop/128MiBcritical/512MiBwarning. Smallcompressedcapturesonly.
-Ledgeraudit476/476 passedbefore2newWorldscases. Lastpushedmain9a7e891at134;
-16newvaluations+2exclusions+revisions/archives/22:00docs+IPOprior/DEC207 await
-focusedcommit. Preserve unrelatedruntimechanges; activeadvisories mayarrive.
+Ledgeraudit476/476 passedbefore2newWorldscases. Lastpushedmain53aa082at150;
+newHouse10case/overlay, latestadvisorycorrections/Worldsskip/Senatecorrectiondocs
+awaitnextfocusedcommit. Existing5bidsrechecked22:47:42block95714608allzero-filled.
+ActiveSenate52:33regular13D20R+OH/FLspecials35total13D22R; olderpacketswrong.
+CTMHouse82/SenD56/joint54 are publishedclaims, notruntimeaudit; NEcredit and
+casepagevsdocumentedmethodinconsistencies needretaineduncertainty. Preserve unrelatedruntimechanges; activeadvisories mayarrive.
+
+
+## October17 23:34UTC persistence correction
+
+The final Senate method and working-note banner supersede the active52/draft
+labels above.35 contests were source-reviewed; all state winners/caucus/no-pledge
+organization branches count. Raw ProTemp fallback45D/45R/10Other; ordinary50/50
+uses RepublicanVP. Model input note50%D is stale prose, not a different code run.
+Standalone/DD reserves15pp; case1822 RR10pp is justified before its quote and
+remains no-entry. ID and other source gaps remain, not no-opportunity claims.
+
+Ledger audit482 records passed23:31; the later1822 record makes483. Frozen IDs,
+criteria/report/ledger hashes, CSV and checkpoint all checked. DEC0208 only
+appends skip to the exact207-record prior decision prefix. A94,109,207-byte old
+public diagnostic was losslessly gzip archived, reclaiming78,992,436bytes; see
+ARCHIVED_HISTORICAL_DIAGNOSTICS.json. Do not recreate originals or touch active
+operator log. Latest disk~302MiB;180MiB research floor. New quote batch1801–1920
+has97 exact Gamma matches/23 gaps; selected1810/1822/1870 validated. Original
+23:18:56 book receipts stay dated; metadata repair did not refresh prices.
+
+
+### October17 23:40UTC — current source revision and two new cases
+
+157valued/1blocked/327excluded/2515pending. Cricket132 expectedcash50ceach
+afterofficialnoresult, not50%gamewin; no entry. Achilles1870namedwin20% is
+complete with1–80%range/15ppreserve and prioritytiny makerwatch<=3.2c, pending
+certifiedballot/currentgates. No order yet. Read senate_idaho_revision_2337_method
+for recoveredoriginalPeakmemo and currentD56/R43/Other1, DD51/RR15. Oldcases
+stayimmutable; no canonicalmoneypriorchanged. Case1870 is no longer pending
+valuation, only concreteentryfollowup. Source/fact assistants own no forecasts.

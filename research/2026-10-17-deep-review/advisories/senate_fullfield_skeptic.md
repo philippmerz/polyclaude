@@ -1,0 +1,25 @@
+# Full-field Senate model skeptic audit — 2026-10-17
+
+I reviewed the updated 35-seat inputs, simulation code, and 60,000-draw scenario results. I found no arithmetic or party-allocation coding error in the seat totals or headline control logic. The main vulnerabilities are uncalibrated assumptions that drive the result, especially common polling error, independent organization, and poll-source regime weights.
+
+## Checks that passed
+
+- The inputs contain 33 regular seats (13 D-held, 20 R-held) plus the Ohio and Florida specials (both R-held), totaling 35 contests. Fixed nonballot seats are 34 D-aligned and 31 R, so each simulated result accounts for all 100 seats. Assertions check the seat identities and `D + R + unassigned == 100` on every draw.
+- Winners of the ID and SD independent contests are allocated through explicit D/R/neither branches; Montana’s Libertarian winner is kept unaligned, separate from the independent; Nebraska’s Osborn win has its own caucus branches. No automatic D credit is assigned to these candidates.
+- The VP tie rule is implemented consistently with the model’s current-Republican-VP assumption: D needs 51; R has effective control with 50 if D has not reached 51. Cases with neither party at 50 are exposed through a separate Pro Tem fallback rather than silently forcing a D/R majority.
+- House marginal is held at 80% using the normal conditional construction. Senate–House dependence shares the same national shock. The six joint cells sum to one, including an explicit “other Senate organization” branch. No venue prices or R-NO/D-YES identity assumption enter this model.
+- Poll inputs with assumed rather than publisher-reported precision are labeled. The code doubles candidate-share MOE when forming a D–R margin error, which is conservative under equal candidate-share variances; source-specific extra error and age inflation add uncertainty rather than treating missing methodology as precision.
+
+## Decision-sensitive assumptions, not code bugs
+
+- Central D Senate control is 56.85%, R 42.02%, and other 1.13%; D Senate + D House is 52.27%. These are model outputs, not sourced frequencies. Across named cases, D-control ranges from 46.13% under a −3pp polling-bias scenario to 66.99% at zero mean poll bias; the generic D6 case is 50.54%. This sensitivity is wider than Monte Carlo error (about 0.2pp near 50%).
+- The 3pp national error, 1pp regional component, 7pp structural prior, 0.8 transfer from 2024 presidential margin, −1.5pp poll-bias mean, source floor, and candidate adjustments are assumptions, not fitted or backtested coefficients. Region factors correlate several seats, but there is no demonstrated calibration that the model captures correlated turnout, candidate-quality, or pollster errors in this cycle.
+- ID’s two incompatible sources are sampled as a 50/50 validity regime, not pooled: older direct ATR (positive Achilles) versus a later CTM-attributed Peak result (negative Achilles) whose original report remains inaccessible. SD uses an 85/15 split favoring the now-verified Concord primary result; both regime shares are chosen assumptions. They can move Senate control, so I would show wider regime-weight sensitivities before relying on a precise central p.
+- The independent caucus probabilities are future-behavior judgments. ID’s campaign-hosted interview title says Achilles would not caucus with either party; Bengs says the same directly. MT has no current pledge. The model’s small future-reversal probabilities are not measured. Its Pro Tem fallback is also fixed at 45% D / 45% R / 10% other whenever neither party reaches the modeled control threshold, irrespective of the exact independent-seat count or votes on organization. That is transparent but material: forcing ambiguous outcomes to R gives D control 51.63%; forcing them to D gives 63.04%; the central branch is 56.85%.
+- Montana’s four-candidate winner model starts from one incomplete local poll and adds hard-coded R-relative utility offsets plus a 10% strategic-consolidation regime. The 10% is not estimated. The model’s central R win is 94.2%, I 5.7%, D 0.1%; this should be read as an assumption-sensitive scenario, not an empirically calibrated four-way forecast.
+- Zero observed wins in 60,000 simulations are not true zero probabilities; report them as draw counts or with Monte Carlo intervals. This mostly affects safe-seat detail, but prevents false precision in the seat-output table.
+
+I found no single clear code defect that invalidates the 35-seat totals or joint-probability arithmetic. The central result is particularly sensitive to poll-bias and organizational assumptions; a single point estimate should not be treated as independent confirmation of a trade price.
+
+
+Primary clarification: ordinary50D/50R is resolved forR by the RepublicanVP. The first-ProTemp branch instead applies where D<51 and R<50, including D50/R49/I1, D49/R49/I2 and similar partitions. Any advisory shorthand suggesting an ordinary50–50 usesProTemp is incorrect; the inspected code uses the proper branch.

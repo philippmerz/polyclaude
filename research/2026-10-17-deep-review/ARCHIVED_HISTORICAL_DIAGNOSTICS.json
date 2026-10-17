@@ -1,0 +1,23 @@
+{
+  "schema": "historical_public_diagnostic_archive.v1",
+  "archived_utc": "2026-10-17T23:09:21.391520+00:00",
+  "purpose": "Preserve evidence while recovering disk space for the finite primary review",
+  "hash_algorithm": "SHA-256 exact raw and gzipbytes",
+  "entries": [
+    {
+      "original_path": "data/scanner_review_20261012/low_activity_diagnostic.json",
+      "archive_path": "data/scanner_review_20261012/low_activity_diagnostic.json.gz",
+      "original_bytes": 94109207,
+      "archive_bytes": 15116771,
+      "original_sha256": "c7d23fff4444f6fdf270dcd7533b8e380a3d580695e177ae22f844a50e905a73",
+      "archive_sha256": "ab78a154396c7c6e3dbe346a091fa4454ced23672c8f76c791f0109210ff3fbb",
+      "roundtrip_verified": true,
+      "record_count": 30745,
+      "source_type": "Historical public-market diagnostic cache, dated2026-10-12; original criteria/quotes/model diagnostic fields preserved exactly",
+      "original_tracked": false,
+      "operating_dependency_search": "No named path reference in current scripts/tests/README/active protocol/context; not a live financial record or running log",
+      "restore_command": "gzip -dk data/scanner_review_20261012/low_activity_diagnostic.json.gz",
+      "legacy_references": "Historical paths may require lossless decompression. Do not rerun old writers for restoration."
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+{
+  "review_index": 132,
+  "condition_id": "0x03e0fbae113cacf26fe321f8c2afcabc9e546f712934a98693145033eff0e5ed",
+  "criteria_sha256": "b26a76f5e1aded56d8c3f638f6135fda25bf454db61b3610d359b3c0dac17da4",
+  "status": "valued",
+  "literal_analysis": "Full exact fixture rules read; final official no-result meets50/50payout branch rather than postponement. p_yes compatibility field represents expected cash payout, not India win probability.",
+  "evidence": [
+    {
+      "url": "https://www.bcci.tv/matches/b567f7d4-7455-48b3-8ec2-f76ce4788e70/More",
+      "observed_utc": "2026-10-17T22:31:30Z",
+      "finding": "ExactOct17Bengaluru fifthT20I at13:30UTC, noresult."
+    },
+    {
+      "url": "https://www.icc-cricket.com/news/india-west-indies-share-t20i-series-honours",
+      "observed_utc": "2026-10-17T22:31:30Z",
+      "finding": "Finalfifthmatchcalledoffafter46balls; series2–2, governing-body corroboration."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5533029",
+      "observed_utc": "2026-10-17T22:39:34.293928+00:00",
+      "finding": "Exactidentity/tokens/rules unchanged, stillopen/accepting; fee5%. Bothquoteages918.46s fail180sguard."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.5,
+    "low": 0.475,
+    "high": 0.525,
+    "method": "Primary exactrule/officialresult cash-payout model;50/50settlement is third state, not Bernoulli game prediction.",
+    "reasoning": "Completed official noresult satisfies literal abandoned/completedwithoutwinner branch.>=95%weightonsplit;5%unmeasuredoperational/correctionbranch equally allocated yields centralcash.50each.",
+    "calibration": "Observed result with explicit uncalibrated5% operational/rule-error allowance; numericp field is expectedpayout/share.",
+    "quantity_type": "expected_cash_payout_per_gross_share",
+    "p_observed_no_result_branch": 0.95
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/cricket_hko_current_verification.json",
+    "quote_observed_utc": "2026-10-17T22:39:34.519792+00:00",
+    "fee_source": "Exact current Gamma at22:39:34UTC,5% rate/exponent1/takerOnly; separate signing-time compact fee descriptor still required.",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 7,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "India": {
+        "probability": 0.5,
+        "best_bid": 0.5,
+        "best_ask": 0.51,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 918.46,
+        "received_utc": "2026-10-17T22:39:34.519792+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.51,
+            "fee_usd": 0.12495
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.22495,
+        "fee_usd": 0.12495,
+        "break_even_probability_before_carry": 0.5224949999999999,
+        "break_even_probability_with_idealized_carry": 0.5227966585013323,
+        "central_expected_profit_usd": -0.22494999999999976,
+        "default_10pp_stressed_profit_usd": -1.2249499999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.875
+      },
+      "West Indies": {
+        "probability": 0.5,
+        "best_bid": 0.49,
+        "best_ask": 0.5,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 918.46,
+        "received_utc": "2026-10-17T22:39:34.519792+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.5,
+            "fee_usd": 0.125
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.125,
+        "fee_usd": 0.125,
+        "break_even_probability_before_carry": 0.5125,
+        "break_even_probability_with_idealized_carry": 0.5127958879643495,
+        "central_expected_profit_usd": -0.125,
+        "default_10pp_stressed_profit_usd": -1.125,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.77505
+      }
+    }
+  },
+  "verdict": "No entry: both captured asks lose after5%curve fees at50/50payout, and both booksstale918s. Researchwatcheach<=.39for<=10shares with freshallgatechecks.",
+  "reopen_condition": "Original official correction/reschedule or changed venueproposal/criteria, or lower verifiedfresh fee-netprice with exactsplit interpretation.",
+  "current_description_sha256": "6fbf2147c2b8943dcd5b951c84ed2895b637718b00864e850787d283db864ba8",
+  "current_identity_valid": true,
+  "current_token_ids": "[\"92328956763842737634120959614749633129456204079980224817111840613178730273051\", \"82020438735541615024124411203101384219718730830103030350055391781030302725082\"]",
+  "source_receipt_references": {
+    "gamma": {
+      "name": "gamma_132",
+      "method": "GET",
+      "url": "https://gamma-api.polymarket.com/markets/5533029",
+      "requested_at_utc": "2026-10-17T22:39:34.179855+00:00",
+      "received_at_utc": "2026-10-17T22:39:34.293928+00:00",
+      "request_body_bytes": 0,
+      "request_body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "http_status": 200,
+      "content_type": "application/json",
+      "response_body_bytes": 4442,
+      "response_sha256": "636dde1db0da505f1171adda75122662413d93fbaf0b9fdb871a3aca995657c6",
+      "gzip_bytes": 2065,
+      "receipt_path": "logs/deep_review_20261017/cricket_hko_current_verification/gamma_132.body.gz",
+      "truncated": false,
+      "final_url": "https://gamma-api.polymarket.com/markets/5533029",
+      "etag": null
+    },
+    "books": {
+      "method": "POST",
+      "url": "https://clob.polymarket.com/books",
+      "requested_at_utc": "2026-10-17T22:39:34.413433+00:00",
+      "received_at_utc": "2026-10-17T22:39:34.519792+00:00",
+      "http_status": 200,
+      "request_body_bytes": 373,
+      "request_body_sha256": "dad4c21627d31bf990c7759d982fdf3362e6f1feffe87485afced7622232c013",
+      "response_sha256": "72ac5819979fd096ea52eeae1904cc275eba5fee24c2fcd3ea0c98a16695ab84",
+      "receipt_path": "logs/deep_review_20261017/cricket_hko_current_verification/clob_books_both_cases.body.gz"
+    },
+    "official_source_packet": "data/deep_review_20261017/ballon_cricket_sources.json"
+  },
+  "portfolio_action": "none; dated payout research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "split_payout_not_50percent_sporting_win_probability": true,
+    "source_packets": [
+      "data/deep_review_20261017/ballon_cricket_sources.json",
+      "data/deep_review_20261017/cricket_hko_current_verification.json"
+    ],
+    "quotes_failed_freshness": true
+  },
+  "evaluated_utc": "2026-10-17T23:34:58.958056+00:00",
+  "question": "West Indies Tour of India T20s: India vs West Indies",
+  "market_id": "5533029",
+  "valuation_author": "primary_operator",
+  "original_index": 132,
+  "report_sha256": "33a4810cbc42be401bc23abcad3b57cc33987b29d9354ff9e44efc296972e66c"
+}

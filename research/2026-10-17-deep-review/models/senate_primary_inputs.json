@@ -1,0 +1,743 @@
+{
+  "authored_by": "primary",
+  "status": "Primary sourcecoveragecomplete for35-state directory; original/certification gaps retained. Research model, pending final primary publication; no venuepriceinput.",
+  "source_packets": [
+    "senate_current_state_sources.json",
+    "senate_four_state_followup.json",
+    "election_2024_baseline_facts.json",
+    "election_2024_baseline_addendum.json",
+    "senate_specials_independent_correction.json",
+    "senate_secondary_battlegrounds_ks.json",
+    "senate_secondary_battlegrounds_fl_sc.json",
+    "senate_sc_la_mechanics_followup.json",
+    "senate_remaining_state_directory_full.json",
+    "senate_remaining_original_poll_verification.json",
+    "senate_la_ar_original_followup.json",
+    "senate_montana_field_followup.json",
+    "senate_independent_id_sd_ms_followup.json",
+    "independent_field_correction_addendum.json"
+  ],
+  "national_pres2024_d_minus_r_allvote_pp": -1.471909,
+  "fixed_nonballot": {
+    "D_aligned": 34,
+    "R": 31
+  },
+  "assumption_notes": [
+    "Generic D8 is primary judgment from Fox certain-vote D6 and YouGov loose/strict D8/D11, not a fitted aggregate.",
+    "0.8 national swing transfer, candidate shifts, 7pp priorSD, 3pp national+1pp region+2pp future residual, 1pp shared pollbiasSD and1.5pp source floor are judgment, not learned coefficients.",
+    "OH/NE/AK personal context uses same-source Clerk margin differences; AK first-choice candidate support is NOT certified final-round RCV margin. Retain75% as explicit assumption.",
+    "ME Collins -10pp judgmental crossover, not verified2020result; NC+3/TX+3/IA+1/NH-3/MI-2/MN-2/GA+1 subjective candidate adjustments.",
+    "Current official nominee/ballot list not independently obtained for every unpolled safe seat; priors allow failures; competitive field source gaps retained.",
+    "NE models independent Osborn beating R, then FUTURE D35/R10/neither55 caucus choice; NO current D pledge claimed. D50/R49/I1 no pledge uses ProTem50%D branch.",
+    "Ordinary50/50 R via VP; extraOctober31specials or nonballot affiliation changes beforeElection are unmodeled small risks covered by judgment range.",
+    "Independent ID/SD have separately declared alternative poll-regime models, not a Democratic presidential prior. Current no-caucus intent is respected, but small future-reversal probability is a judgment; coalition organization can still selectProTem without caucus.",
+    "MT explicitly hasR/I/D/L winner possibilities. 10% strategicconsolidation branch not fitted; caucus not inferred from endorsements.",
+    "ID ATR vslatestunverifiedPeak are conflicting instruments/data-validity regimes with equal scenario weight, not an inversevariance precise pooled mean.",
+    "No fabricated report precision: newpolls with missing subgroupMOE mark the numerical precision as assumed, not publisherfact.",
+    "Current directory review covers all35contests; unverified secondarypolls have cappedweight and source-extra uncertainty. No currentmatchedpoll found in directory for6states is boundedsourcecoverage, not universalabsence.",
+    "FirstProTem can be neithermajorparty: central conditional branch45D/45R/10Other, scenario extremes exposed. Consequently standalone RNO is not identical to standalone DYES; fourmajorpartyjointclaims are not exhaustive guaranteedarbitrage."
+  ],
+  "seats": [
+    {
+      "seat": "NJ",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 5.909531,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "DE",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 14.701742,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "IL",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Midwest",
+      "pres2024_d_minus_r_allvote_pp": 10.895619,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 13.0,
+          "share_moe_pp": 5.0,
+          "age_days": 16,
+          "source": "PPP/CNW Sep30–Oct1 original media sponsor, MOEnotreported here: sensitivity assumption",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ]
+    },
+    {
+      "seat": "CO",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "West",
+      "pres2024_d_minus_r_allvote_pp": 10.984842,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "NM",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "West",
+      "pres2024_d_minus_r_allvote_pp": 6.000739,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [],
+      "source_binding_correction": "All3CTMlinks verified as Haaland/Hull GOVERNOR polls, not Lujan/Marker Senate: no rebind, wide structural prior retained."
+    },
+    {
+      "seat": "MA",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 25.195701,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 26.0,
+          "share_moe_pp": 4.5,
+          "age_days": 25,
+          "source": "MassINC/Beacon Sep14–22 original partner release; MOE4.5assumption",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ]
+    },
+    {
+      "seat": "OR",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "West",
+      "pres2024_d_minus_r_allvote_pp": 14.307017,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "GA",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -2.192003,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 8.0,
+          "share_moe_pp": 2.9,
+          "age_days": 8,
+          "source": "Trafalgar Oct7–9 original report, mode incomplete",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "MI",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Midwest",
+      "pres2024_d_minus_r_allvote_pp": -1.414201,
+      "candidate_adjustment_pp": -2.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 1.0,
+          "share_moe_pp": 2.5,
+          "age_days": 13,
+          "source": "YouGov Sep22–Oct4 original allocated-respondent PDF",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "RI",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 13.781054,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 33.69,
+          "share_moe_pp": 5.0,
+          "age_days": 6,
+          "source": "Emerson/WPRI directory original403; precision explicitly assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ],
+      "maximum_poll_weight": 0.35
+    },
+    {
+      "seat": "NH",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 2.77963,
+      "candidate_adjustment_pp": -3.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 8.0,
+          "share_moe_pp": 3.9,
+          "age_days": 12,
+          "source": "YouGov Sep28–Oct5 original allocated-respondent PDF",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "MN",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "Midwest",
+      "pres2024_d_minus_r_allvote_pp": 4.23941,
+      "candidate_adjustment_pp": -2.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 3.0,
+          "share_moe_pp": 4.2,
+          "age_days": 5,
+          "source": "KSTP/SurveyUSA Oct8–12 original+3; MOE/sample secondary only",
+          "source_extra_sd_pp": 3.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ],
+      "maximum_poll_weight": 0.6
+    },
+    {
+      "seat": "VA",
+      "kind": "regular",
+      "defending_party": "D",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": 5.766476,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 17.5,
+          "share_moe_pp": 3.7,
+          "age_days": 123,
+          "source": "TPSI June12–16 original hypothetical Warner/Mizusawa; nominee not verified",
+          "source_extra_sd_pp": 4.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "publisher reported MOE/credibility interval, not all probability samples"
+        }
+      ],
+      "maximum_poll_weight": 0.3
+    },
+    {
+      "seat": "OK",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -34.262754,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -24.0,
+          "share_moe_pp": 5.0,
+          "age_days": 72,
+          "source": "ColeHargrave Aug3–6 directory; finalnominee/regular-speciallabel unresolved; precision explicitly assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ],
+      "maximum_poll_weight": 0.35
+    },
+    {
+      "seat": "WV",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -41.863957,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "LA",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -22.005008,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -4.0,
+          "share_moe_pp": 5.0,
+          "age_days": 28,
+          "source": "Hart Sep17–19 campaign-sourced secondary/CTM, NOT original instrument; precision assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": -1.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        },
+        {
+          "margin_pp": -4.0,
+          "share_moe_pp": 5.5,
+          "age_days": 87,
+          "source": "PPP Jul21–22 campaign-sourced Bayou secondary RV; precision assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": -1.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ],
+      "maximum_poll_weight": 0.5
+    },
+    {
+      "seat": "ME",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Northeast",
+      "pres2024_d_minus_r_allvote_pp": 6.937303,
+      "candidate_adjustment_pp": -10.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 2.8,
+          "share_moe_pp": 3.8,
+          "age_days": 18,
+          "source": "MPA Sep25–29 original sponsor release; direct403/browser original",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": -1.0
+        }
+      ]
+    },
+    {
+      "seat": "TX",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -13.683305,
+      "candidate_adjustment_pp": 3.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 2.0,
+          "share_moe_pp": 4.9,
+          "age_days": 6,
+          "source": "Marist Oct8–11 original",
+          "source_extra_sd_pp": 2.0,
+          "sponsor_adjustment_pp": 0.0
+        },
+        {
+          "margin_pp": 3.0,
+          "share_moe_pp": 3.34,
+          "age_days": 12,
+          "source": "UT/TPP Sep25–Oct5 original",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "AR",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -30.636962,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -9.0,
+          "share_moe_pp": 5.0,
+          "age_days": 4,
+          "source": "TBP/Hendrix Oct8–13 original full3way; Cotton50/Shoffner41/WadlinL4.5",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "publisher reported MOE/credibility interval, not all probability samples"
+        }
+      ]
+    },
+    {
+      "seat": "MT",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Plains",
+      "pres2024_d_minus_r_allvote_pp": -19.929518,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [],
+      "field_model": "montana_multicandidate",
+      "independent_caucus": {
+        "D": 0.1,
+        "R": 0.05,
+        "neither": 0.85,
+        "basis": "Official4filed+1writein; no current formalBodnarpledge; oldaidesneither onlypreview. Futurechoicejudgment."
+      },
+      "consolidation_regime": 0.1,
+      "candidate_field_note": "OfficialfiledAlmeR/BodnarI/BankheadD/AustinL+Woodmanwritein; primary media poll R45.1/I26.1/D18.9 incomplete remainder, latestPeak44/29/12/3 secondary only. LatentR-relative margin model and10% strategicconsolidation regime are judgmental."
+    },
+    {
+      "seat": "IA",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Midwest",
+      "pres2024_d_minus_r_allvote_pp": -13.209511,
+      "candidate_adjustment_pp": 1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 3.0,
+          "share_moe_pp": 6.6,
+          "age_days": 6,
+          "source": "Marist Oct8–11 original",
+          "source_extra_sd_pp": 2.0,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "SC",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -17.867739,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -4.0,
+          "share_moe_pp": 3.0,
+          "age_days": 9,
+          "source": "Rasmussen/Pulse Oct5–8 original; Graham49/Andrews45",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "publisher reported MOE/credibility interval, not all probability samples"
+        },
+        {
+          "margin_pp": -1.0,
+          "share_moe_pp": 2.83,
+          "age_days": 18,
+          "source": "InsiderAdvantage Sep28–29 original, minorcandidates5%",
+          "source_extra_sd_pp": 3.5,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "publisher reported MOE/credibility interval, not all probability samples"
+        }
+      ]
+    },
+    {
+      "seat": "TN",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -29.719884,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -25.0,
+          "share_moe_pp": 3.5,
+          "age_days": 52,
+          "source": "Targoz/Beacon Aug15–26 original; 1200RVmethod/607LVdirectory, precision assumed for subgroup",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ]
+    },
+    {
+      "seat": "MS",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -22.888776,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -6.7,
+          "share_moe_pp": 3.0,
+          "age_days": 63,
+          "source": "DfP Aug5–15 sponsor original3way; not postbiography two-way",
+          "source_extra_sd_pp": 4.0,
+          "sponsor_adjustment_pp": -1.0,
+          "precision_source": "publisher reported MOE/credibility interval, not all probability samples"
+        }
+      ],
+      "candidate_field_note": "PinkinsI8% in original full3way; no verified finalballot/Octtwo-way instrument. Minor Iwin not modeled separately; original7.9 is not a D caucus pledge. Wedgewood Octtwo-way not substituted for fullballot."
+    },
+    {
+      "seat": "WY",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Plains",
+      "pres2024_d_minus_r_allvote_pp": -45.756148,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": []
+    },
+    {
+      "seat": "KS",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Plains",
+      "pres2024_d_minus_r_allvote_pp": -16.115581,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 0.9,
+          "share_moe_pp": 2.9,
+          "age_days": 16,
+          "source": "Trafalgar Sep29–Oct1 original KS PDF",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0
+        },
+        {
+          "margin_pp": 2.0,
+          "share_moe_pp": 3.6,
+          "age_days": 31,
+          "source": "Emerson/Nexstar Sep15–16 original; nonprob credibility interval",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ],
+      "candidate_field_note": "HamiltonD / MarshallR / GrahamL; neither poll is officialballotcertification, Graham2/4% not modeled as principalwinner; residual covered in range."
+    },
+    {
+      "seat": "KY",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -30.534675,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -9.0,
+          "share_moe_pp": 5.0,
+          "age_days": 51,
+          "source": "GSG/Fox56 Aug24–27 directory original403; precision explicitly assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ],
+      "maximum_poll_weight": 0.35
+    },
+    {
+      "seat": "NE",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Plains",
+      "pres2024_d_minus_r_allvote_pp": -20.460479,
+      "candidate_adjustment_pp": 0.0,
+      "observed_2024_personal_overperformance_pp": 13.785791,
+      "polls": [
+        {
+          "margin_pp": -3.0,
+          "share_moe_pp": 4.0,
+          "age_days": 12,
+          "source": "NPA Oct2–5 original five-candidate memo",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ],
+      "challenger_party": "I",
+      "candidate_field_note": "OsbornI vsRickettsR, not a D nominee."
+    },
+    {
+      "seat": "ID",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "West",
+      "pres2024_d_minus_r_allvote_pp": -36.492066,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [],
+      "challenger_party": "I",
+      "independent_caucus": {
+        "D": 0.05,
+        "R": 0.05,
+        "neither": 0.9,
+        "basis": "Campaign-hosted CBS title says no party caucus; no transcript/current officialballot retrieved. 10%future reversal is judgment, not measured."
+      },
+      "direct_poll_regimes": [
+        {
+          "weight": 0.5,
+          "margin_pp": 6.1,
+          "residual_sd_pp": 8.0,
+          "source": "Original ATR Sep13–16 n700RV THREEWAY Achilles45.5/Risch39.4/Loesby4.5; broad turnout/mode/undecided uncertainty"
+        },
+        {
+          "weight": 0.5,
+          "margin_pp": -25.0,
+          "residual_sd_pp": 12.0,
+          "source": "Latest Peak Sep28–30 CTMattribution only, I24/R49, original inaccessible; fullquestion/remaining27% unverified. This is alternative data-validity regime, not a second confirmed measurement."
+        }
+      ],
+      "poll_bias_scale": 0.5,
+      "national_loading": 0.5
+    },
+    {
+      "seat": "SD",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "Plains",
+      "pres2024_d_minus_r_allvote_pp": -29.194585,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [],
+      "challenger_party": "I",
+      "independent_caucus": {
+        "D": 0.025,
+        "R": 0.025,
+        "neither": 0.95,
+        "basis": "Bengs Aug9 own statement no partycaucus; 5%future reversal purely judgment. OfficialDnominee withdrawnAug4."
+      },
+      "direct_poll_regimes": [
+        {
+          "weight": 0.85,
+          "margin_pp": 1.0,
+          "residual_sd_pp": 7.0,
+          "source": "Primary visually verified Concord Oct6–8 n400LV, +/-4.9shareMOE: Bengs43/Rounds42, other5/DK10. Earliertranscriptionreversed is superseded."
+        },
+        {
+          "weight": 0.15,
+          "margin_pp": -4.5,
+          "residual_sd_pp": 10.0,
+          "source": "Older secondary Zenith/PPP counterreadings only, not new confirmed originaldata; robustness/sourceuncertainty branch"
+        }
+      ],
+      "poll_bias_scale": 0.5,
+      "national_loading": 0.5
+    },
+    {
+      "seat": "AK",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "West",
+      "pres2024_d_minus_r_allvote_pp": -13.138682,
+      "candidate_adjustment_pp": 0.0,
+      "observed_2024_personal_overperformance_pp": 11.098962,
+      "polls": [
+        {
+          "margin_pp": 2.0,
+          "share_moe_pp": 3.0,
+          "age_days": 14,
+          "source": "ASR Oct1–3 finalRCV thirdparty transcript only, original403",
+          "source_extra_sd_pp": 4.0,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ],
+      "maximum_poll_weight": 0.45
+    },
+    {
+      "seat": "NC",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -3.211852,
+      "candidate_adjustment_pp": 3.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": 8.0,
+          "share_moe_pp": 3.9,
+          "age_days": 31,
+          "source": "HPU SRC127 Sep6–16 nonprobability credibility interval",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "AL",
+      "kind": "regular",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -30.471372,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -21.0,
+          "share_moe_pp": 5.0,
+          "age_days": 22,
+          "source": "RMG/Al.com Sep21–25 directory original403; precision explicitly assumed",
+          "source_extra_sd_pp": 5.0,
+          "sponsor_adjustment_pp": 0.0,
+          "precision_source": "sensitivity assumption, NOT reported MOE"
+        }
+      ],
+      "maximum_poll_weight": 0.35
+    },
+    {
+      "seat": "OH",
+      "kind": "special",
+      "defending_party": "R",
+      "region": "Midwest",
+      "pres2024_d_minus_r_allvote_pp": -11.207364,
+      "candidate_adjustment_pp": 0.0,
+      "observed_2024_personal_overperformance_pp": 7.588648,
+      "polls": [
+        {
+          "margin_pp": 6.0,
+          "share_moe_pp": 3.95,
+          "age_days": 8,
+          "source": "BGSU/YouGov Sep29–Oct9 original release",
+          "source_extra_sd_pp": 2.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ]
+    },
+    {
+      "seat": "FL",
+      "kind": "special",
+      "defending_party": "R",
+      "region": "South",
+      "pres2024_d_minus_r_allvote_pp": -13.10005,
+      "candidate_adjustment_pp": -1.0,
+      "observed_2024_personal_overperformance_pp": 0.0,
+      "polls": [
+        {
+          "margin_pp": -5.2,
+          "share_moe_pp": 2.8,
+          "age_days": 7,
+          "source": "MDW/EDGE Oct4–10 original sponsor release, weighted online",
+          "source_extra_sd_pp": 3.0,
+          "sponsor_adjustment_pp": -1.0
+        },
+        {
+          "margin_pp": -11.0,
+          "share_moe_pp": 4.2,
+          "age_days": 8,
+          "source": "Stetson Oct1–9 original nonprob modeledLV release; leaners included",
+          "source_extra_sd_pp": 3.5,
+          "sponsor_adjustment_pp": 0.0
+        }
+      ],
+      "candidate_field_note": "NixonD vs MoodyR; olderVindmanmatchup excluded by identity, no forecastinginterpretation."
+    }
+  ],
+  "updated_utc": "2026-10-17T23:18:00.312635+00:00",
+  "primary_review_status": "Final primary research model v1; explicit judgment, not fitted/backtested/calibrated or execution authority",
+  "primary_finalized_utc": "2026-10-17T23:22:42.816170+00:00"
+}

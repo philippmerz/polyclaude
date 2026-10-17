@@ -1,5 +1,5 @@
 {
-  "next_id": 208,
+  "next_id": 209,
   "decisions": [
     {
       "id": 1,
@@ -4398,6 +4398,26 @@
         "pending-zero-fill"
       ],
       "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 208,
+      "timestamp": "2026-10-17T22:51:15Z",
+      "type": "skip",
+      "thesis": "Decline current tiny LCK_NO30c proposal after independent champion/skeptic and primary adverse audit. Current publicGPR mapping is unvalidated: adding100scorepoints to allLCK shifts modeledtitlemass from46% to75\u201380%, inside alreadyadmitted broad range. No evidence calibrates the regional score zero or current2026formula. Primary54%NO remains dated exploratory judgment, not funded. File models/worlds_mapping_adverse_audit.json; no sportsorder/prior/reservation or monitoringconfigmutation.",
+      "confidence": "low",
+      "prediction": "PrimaryresearchP(LCKNO)=.54, wideYES25\u201380%specificationrange, unchanged. Hypothetical5NO@.30 has~.39default-stressed net surplus under15ppreserve but~-.56atNO20%. Reopenwithvalidatedcurrentstrengthmapping/independentroster-patchmodel or materiallycheaperpriceafterfreshfacts; this skip is not an investmentoutcome.",
+      "size_usd": 0,
+      "resolution_at": "2027-01-08",
+      "tags": [
+        "deep-review",
+        "new-strategy",
+        "sports-model",
+        "no-order"
+      ],
+      "slug": "will-a-team-from-lck-south-korea-win-lol-worlds-2026-115",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

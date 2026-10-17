@@ -1,0 +1,178 @@
+{
+  "review_index": 1870,
+  "condition_id": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+  "criteria_sha256": "03d6fc81c34d9e4cba1a253c012997e68126c4deb51ef1f9fc0b8128755a1889",
+  "status": "valued",
+  "literal_analysis": "All exactrulesread; namedIndependentAchilleswin, runoffs included; unanimousAP/Fox/NBCcalls elseofficialcertification; notDwin/caucusclaim.",
+  "evidence": [
+    {
+      "url": "https://pbs.twimg.com/media/HTqAoMGXUAAUkh_?format=webp&name=large",
+      "observed_utc": "2026-10-17T23:32:08.018524+00:00",
+      "finding": "Primary visually read pollster memo: Sep28–30n500LVlive,R49/I24/Fleming3/Loesby2,None6/DK15; fullinstrumentnotavailable."
+    },
+    {
+      "url": "https://www.advancedtargetingresearch.com/_files/ugd/03a624_0fca9a6dd7f846f7bc96f97429561064.pdf",
+      "observed_utc": "2026-10-17T23:33:30+00:00",
+      "finding": "OriginalSep17releasehashverified locally, RV700threewayI45.5/R39.4/L4.5, distincttwo-waytest; no exactquestionnaire, notsamequestiontrend."
+    },
+    {
+      "url": "https://www.fec.gov/data/candidate/S6ID00146/?cycle=2026&election_full=true",
+      "observed_utc": "2026-10-17T23:33:19.172883+00:00",
+      "finding": "ToddBakerAchilles independentSenateIDidentity; notstateballotcertification."
+    },
+    {
+      "url": "https://run.voteidaho.gov/search",
+      "observed_utc": "2026-10-17T23:32:22.717085+00:00",
+      "finding": "Officialportal shell only; finalcertifiedballot notverified inthispass."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_idaho_revision_2337_method.md",
+      "observed_utc": "2026-10-17T23:38:45.943900+00:00",
+      "finding": "Primary25/75regimechangebeforequote,20%rounded,1–80range, explicit15ppstress andadversePeakregime."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2,
+    "low": 0.01,
+    "high": 0.8,
+    "method": "Primary explicit two-poll data-regime mixture25%ATR/75%Peak; source/turnout uncertainty uncalibrated",
+    "reasoning": "New originalPeakmemo justifies heavierlatestLVweight; earlierATRpreserved. Raw.19912 rounded.20;1–80range. Namedcandidatewin distinct fromfuturecaucus/Senatecontrol.15ppreserve notfullregimefloor.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1801_1920.json",
+    "quote_observed_utc": "2026-10-17T23:18:56.576+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.2,
+        "best_bid": 0.032,
+        "best_ask": 0.045,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.489,
+        "received_utc": "2026-10-17T23:18:56.576+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.045,
+            "fee_usd": 0.01719
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.46718999999999994,
+        "fee_usd": 0.01719,
+        "break_even_probability_before_carry": 0.046719,
+        "break_even_probability_with_idealized_carry": 0.04683470765540931,
+        "central_expected_profit_usd": 1.53281,
+        "default_10pp_stressed_profit_usd": 0.53281,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.1,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.3076
+      },
+      "No": {
+        "probability": 0.8,
+        "best_bid": 0.955,
+        "best_ask": 0.968,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.489,
+        "received_utc": "2026-10-17T23:18:56.576+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.968,
+            "fee_usd": 0.012390400000000011
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.6924,
+        "fee_usd": 0.0124,
+        "break_even_probability_before_carry": 0.9692399999999999,
+        "break_even_probability_with_idealized_carry": 0.971640489906225,
+        "central_expected_profit_usd": -1.6923999999999992,
+        "default_10pp_stressed_profit_usd": -2.6923999999999984,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.7000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.53281
+      }
+    }
+  },
+  "verdict": "Priority maker research YES<=.032 for<=10shares (.32risk), pending officialballot/currentgates/source-risk decision. No taker:15ppaskEVonly.03281; adversePeakloses. NO capturedask negative.",
+  "reopen_condition": "Certifiedballot/currentcandidate/sourceverification plusnewtransparentpoll/questionnaire; or materiallychangedfreshfee-netprice, thenindependentprimarysize/risk/monitoring/currentallgate review.",
+  "current_description_sha256": "555fa2d3e564887bae977251e7561e3adc185578280884313fa9e83f26361dfe",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+    "57925461341104910435866398583612621937921844618146243318901522652628878376322"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "status": "exact_market_condition_and_binary_token_identity_validated",
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/gamma_chunks/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1801_1920/gamma_chunks/req_0001.body.json.gz",
+      "received_utc": "2026-10-17T23:27:26.281+00:00",
+      "description_sha256_current": "555fa2d3e564887bae977251e7561e3adc185578280884313fa9e83f26361dfe",
+      "criteria_sha256_current": "03d6fc81c34d9e4cba1a253c012997e68126c4deb51ef1f9fc0b8128755a1889",
+      "criteria_sha256_frozen": "03d6fc81c34d9e4cba1a253c012997e68126c4deb51ef1f9fc0b8128755a1889",
+      "criteria_sha256_matches_frozen": true,
+      "previous_supplement_history": "logs/deep_review_20261017/quotes_1801_1920/gamma_supplements/supplement_history.json"
+    },
+    "books": {
+      "request_id": "req_0004",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/req_0004.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1801_1920/req_0004.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/req_0001.receipt.json",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_match_count": 0,
+      "status": "no_exact_match_in_bulk_gamma_response",
+      "error": null
+    },
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.15,
+    "raw_model_probability": 0.19911666666666666,
+    "priority_followup": true,
+    "full_regime_stress_peak_only_p": 0.016533333333333334,
+    "tracked_method": "research/2026-10-17-deep-review/models/senate_idaho_revision_2337_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/idaho_literal_source_followup.json"
+    ],
+    "advisories": [
+      "research/2026-10-17-deep-review/advisories/idaho_followup_skeptic.md",
+      "research/2026-10-17-deep-review/advisories/idaho_followup_champion.md"
+    ],
+    "entry_still_needs_official_ballot": true
+  },
+  "evaluated_utc": "2026-10-17T23:38:46.167887+00:00",
+  "question": "Will Todd Achilles win the Idaho Senate race in 2026?",
+  "market_id": "630707",
+  "valuation_author": "primary_operator",
+  "original_index": 1870,
+  "report_sha256": "12789f05d657e774ce6aef9bd3ba464788d0f0b0b0d33a909a79e3c01251d837"
+}

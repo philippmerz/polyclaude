@@ -1,0 +1,4878 @@
+{
+  "model_status": "Primary judgment sensitivity; not fitted/backtested or calibrated",
+  "source": "/home/polyclaude/polyclaude/research/2026-10-17-deep-review/models/senate_primary_inputs.json",
+  "scenarios": {
+    "central": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5154666666666666,
+      "R_senate_control": 0.4845333333333333,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.015333333333333332,
+      "D_aligned_seats_mean": 50.365833333333335,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.47927028371087527,
+        "D_senate_R_house": 0.03619638295579142,
+        "R_senate_D_house": 0.32135561552124153,
+        "R_senate_R_house": 0.1631777178120918
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.24701666666666666
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.61785
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.74475
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "no_mean_poll_bias": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": 0.0,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.60505,
+      "R_senate_control": 0.39495,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.015983333333333332,
+      "D_aligned_seats_mean": 50.89471666666667,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.5527084412839628,
+        "D_senate_R_house": 0.0523415587160373,
+        "R_senate_D_house": 0.2479174579481541,
+        "R_senate_R_house": 0.1470325420518459
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 7.525159079554793,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.91845
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 1.7819367611757653,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.6353333333333333
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 7.781340164249904,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.91885
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 5.744759624278613,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.83845
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 2.795228388892446,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6858833333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 1.3610725451331653,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.6070833333333333
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -0.9233346483936355,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.43856666666666666
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -2.84146132518591,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.30683333333333335
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 2.4196866850000007,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.65995
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 7.743628029958674,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.9079333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 4.664009890368308,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.7986
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "adverse_mean_poll_bias": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -3.0,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.4272666666666667,
+      "R_senate_control": 0.5727333333333333,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.0133,
+      "D_aligned_seats_mean": 49.8004,
+      "D_aligned_seats_10_50_90": [
+        46.0,
+        50.0,
+        53.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.40334654262935243,
+        "D_senate_R_house": 0.023920124037314236,
+        "R_senate_D_house": 0.3972793566027644,
+        "R_senate_R_house": 0.17545397673056898
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 5.407502909877689,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.8437666666666667
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": -0.4764987793867934,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.46225
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 5.801775498129803,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8521333333333333
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 3.95267435654809,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7513833333333333
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 0.8949970472333393,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.5629666666666666
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": -0.983927103228565,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.42611666666666664
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -2.3811400822598725,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.34955
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -4.799338330896097,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.1956
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.0696866850000009,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.5740666666666666
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 5.956123442598978,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8471833333333333
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 2.681687220913641,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.68455
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "generic_D6": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 6.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.43633333333333335,
+      "R_senate_control": 0.5636666666666666,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.015766666666666665,
+      "D_aligned_seats_mean": 49.804833333333335,
+      "D_aligned_seats_10_50_90": [
+        46.0,
+        50.0,
+        53.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.41116063382938917,
+        "D_senate_R_house": 0.025172699503944105,
+        "R_senate_D_house": 0.3894652654027275,
+        "R_senate_R_house": 0.1742014012639391
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 12.887058200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 12.887058200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9484833333333333
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 21.6792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 21.6792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9968666666666667
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 17.8731462,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 17.8731462,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9879
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 17.9623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 17.9623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.98835
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 12.9782662,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 12.9782662,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9497666666666666
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 32.1732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 32.1732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99995
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 21.2845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 21.2845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9961166666666667
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 4.785524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 5.99574761854403,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.8679166666666667
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 2.5633262000000006,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.25721794586118385,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5192166666666667
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 20.758581200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 20.758581200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99535
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 5.757157200000002,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.247325653120574,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8697666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 8.2169372,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.20449579986963,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7646333333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 12.744003200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 12.744003200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.94575
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -29.2852268,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.2852268,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00015
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -36.8864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -36.8864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -17.0274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -17.0274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.01585
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 2.914830200000001,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.2585694336144166,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.5873166666666667
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -4.7057778,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": -0.16076079992144354,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.4907166666666667
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -25.6594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -25.6594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0006
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -14.9519908,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -14.9519908,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.029533333333333335
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -6.231983799999998,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -2.4747411339314276,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.34376666666666666
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -12.8902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -12.8902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.05198333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -24.7423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.7423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0009166666666666666
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -17.9112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -17.9112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.012233333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -40.7786208,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -40.7786208,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -11.138053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.138053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07996666666666667
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -25.5571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -25.5571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0005833333333333334
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -4.14360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -4.376198758328904,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.21663333333333334
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -31.5145388,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -31.5145388,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -24.2170578,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.2170578,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0011
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 1.1630667000000017,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 0.8646866850000009,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.56015
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 5.7656752000000004,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.203211516203997,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8563333333333333
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -25.493844799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -25.493844799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0005333333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 0.461649200000001,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.130087312683464,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.7133166666666667
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -8.122522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -8.122522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.15475
+        }
+      ]
+    },
+    "generic_D10": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 10.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5969166666666667,
+      "R_senate_control": 0.40308333333333335,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.0144,
+      "D_aligned_seats_mean": 50.938316666666665,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.5465409405049875,
+        "D_senate_R_house": 0.05037572616167907,
+        "R_senate_D_house": 0.2540849587271292,
+        "R_senate_R_house": 0.14899837460620413
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 16.0870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 16.0870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9792166666666666
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 24.8792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 24.8792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99925
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 21.0731462,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 21.0731462,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9963
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 21.1623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 21.1623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9962
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 16.1782662,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 16.1782662,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9792
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 35.3732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 35.3732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 24.484544200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 24.484544200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9989333333333333
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 7.9855242,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.936914370888452,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.9016666666666666
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 5.7633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 1.0482200359277878,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5812833333333334
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 23.958581199999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.958581199999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9986666666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 8.957157200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 7.335790009259133,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.90705
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 11.4169372,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 5.492938180957072,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.82655
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 15.944003200000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 15.944003200000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9778
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -26.0852268,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -26.0852268,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00055
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -33.6864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -33.6864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -13.8274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.8274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.040766666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 6.1148302,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 2.4316560025113687,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6643333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -1.5057778000000006,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.5379062418260441,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.54485
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -22.4594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.4594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0020666666666666667
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -11.751990800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.751990800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.06921666666666666
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -3.031983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -0.8297335967220804,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.44455
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -9.6902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.6902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11195
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -21.5423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -21.5423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0035166666666666666
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -14.7112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -14.7112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.03186666666666667
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -37.5786208,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -37.5786208,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -7.938053799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -7.938053799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.15795
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -22.3571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.3571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002416666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -0.9436085500000004,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.2646008977531027,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.2793333333333333
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -28.3145388,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -28.3145388,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00016666666666666666
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -21.0170578,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -21.0170578,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0048
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 4.363066700000001,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 2.624686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.6721166666666667
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 8.9656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 7.496539956353654,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.90075
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -22.2938448,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.2938448,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 3.6616492000000003,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 4.215609798598486,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.77555
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -4.922522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -4.922522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.26948333333333335
+        }
+      ]
+    },
+    "stronger_structural_prior": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 5.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5171333333333333,
+      "R_senate_control": 0.48286666666666667,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.01535,
+      "D_aligned_seats_mean": 50.36533333333333,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        53.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.48184934605405616,
+        "D_senate_R_house": 0.03528398727927717,
+        "R_senate_D_house": 0.3187765531780606,
+        "R_senate_R_house": 0.16409011348860603
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9903833333333333
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9998666666666667
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9992833333333333
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.99915
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9901166666666666
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 1.0
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9998666666666667
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.550462335355913,
+          "center_pp": 6.448538816209737,
+          "idiosyncratic_sd_pp": 3.903644658021805,
+          "non_republican_win_probability": 0.8986833333333333
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.6084308295125669,
+          "center_pp": 1.3260147718463138,
+          "idiosyncratic_sd_pp": 3.7133851486461555,
+          "non_republican_win_probability": 0.6065333333333334
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9998333333333334
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.4974258096262416,
+          "center_pp": 6.930785085813037,
+          "idiosyncratic_sd_pp": 4.069933016567221,
+          "non_republican_win_probability": 0.91035
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.4308313462336548,
+          "center_pp": 6.233739949583237,
+          "idiosyncratic_sd_pp": 4.2695686367780326,
+          "non_republican_win_probability": 0.8789333333333333
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.9894166666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.006333333333333333
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.4685245057510206,
+          "center_pp": 2.540078963720525,
+          "idiosyncratic_sd_pp": 4.157750275837221,
+          "non_republican_win_probability": 0.6836666666666666
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.6462189787852238,
+          "center_pp": -0.3822739851090553,
+          "idiosyncratic_sd_pp": 3.5839259939861208,
+          "non_republican_win_probability": 0.47163333333333335
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.015233333333333333
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.32536619277947515,
+          "center_pp": -2.6368435768085807,
+          "idiosyncratic_sd_pp": 4.567914751887684,
+          "non_republican_win_probability": 0.31453333333333333
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.03526666666666667
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.004583333333333333
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.0634
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 8.333333333333333e-05
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.4894156512961337,
+          "center_pp": -3.5010971456919378,
+          "idiosyncratic_sd_pp": 4.0944607358719,
+          "non_republican_win_probability": 0.24915
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.00016666666666666666
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.172503782362284,
+          "non_republican_win_probability": 0.6306666666666667
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.4292762915068837,
+          "center_pp": 6.99406136049452,
+          "idiosyncratic_sd_pp": 4.274118939890174,
+          "non_republican_win_probability": 0.9051333333333333
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 5e-05
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.49845046635017326,
+          "center_pp": 3.277046293385318,
+          "idiosyncratic_sd_pp": 4.066784767017511,
+          "non_republican_win_probability": 0.73625
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 5.385164807134504,
+          "non_republican_win_probability": 0.1496
+        }
+      ]
+    },
+    "weaker_structural_prior": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 10.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5236666666666666,
+      "R_senate_control": 0.47633333333333333,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.014383333333333333,
+      "D_aligned_seats_mean": 50.46046666666667,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.4843834885653109,
+        "D_senate_R_house": 0.03928317810135575,
+        "R_senate_D_house": 0.31624241066680586,
+        "R_senate_R_house": 0.16009092266652744
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9131
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9850333333333333
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.96485
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9665666666666667
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9148166666666666
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9993
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9849666666666667
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.8304518866482663,
+          "center_pp": 6.480590844085569,
+          "idiosyncratic_sd_pp": 4.577642552141153,
+          "non_republican_win_probability": 0.8756
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.8614057935325133,
+          "center_pp": 0.14630999418803997,
+          "idiosyncratic_sd_pp": 4.226040776749399,
+          "non_republican_win_probability": 0.50995
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9810166666666666
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7983474132733824,
+          "center_pp": 6.672847966611345,
+          "idiosyncratic_sd_pp": 4.9158171927627405,
+          "non_republican_win_probability": 0.8719666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.6,
+          "center_pp": 4.82677488,
+          "idiosyncratic_sd_pp": 5.647109428544765,
+          "non_republican_win_probability": 0.77085
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.9096
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.00545
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.0005833333333333334
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.07426666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.7790649545993197,
+          "center_pp": 1.2312037015931585,
+          "idiosyncratic_sd_pp": 5.108180159319757,
+          "non_republican_win_probability": 0.5806333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.8796113228332423,
+          "center_pp": 0.6013630794909617,
+          "idiosyncratic_sd_pp": 4.004855517578102,
+          "non_republican_win_probability": 0.5479833333333334
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.012083333333333333
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.10586666666666666
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.6586031614942099,
+          "center_pp": -0.5934398830887204,
+          "idiosyncratic_sd_pp": 6.175733466607753,
+          "non_republican_win_probability": 0.4626166666666667
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.14585
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.0162
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.0636
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.18551666666666666
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.01225
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.7931388721458738,
+          "center_pp": -4.09529865812883,
+          "idiosyncratic_sd_pp": 4.968512129945204,
+          "non_republican_win_probability": 0.24423333333333333
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.0025666666666666667
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.017966666666666666
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 6.332241926350223,
+          "non_republican_win_probability": 0.5986666666666667
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7505391618887165,
+          "center_pp": 6.715952060924153,
+          "idiosyncratic_sd_pp": 5.380156485747265,
+          "non_republican_win_probability": 0.8586666666666667
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.013133333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.7990064510190164,
+          "center_pp": 4.0099072190473795,
+          "idiosyncratic_sd_pp": 4.909109379317022,
+          "non_republican_win_probability": 0.75225
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 10.198039027185569,
+          "non_republican_win_probability": 0.2724666666666667
+        }
+      ]
+    },
+    "wider_common_error": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 5.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5101666666666667,
+      "R_senate_control": 0.48983333333333334,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.010416666666666666,
+      "D_aligned_seats_mean": 50.174216666666666,
+      "D_aligned_seats_10_50_90": [
+        45.0,
+        51.0,
+        55.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.48234115649002385,
+        "D_senate_R_house": 0.027825510176642813,
+        "R_senate_D_house": 0.31828474274209295,
+        "R_senate_R_house": 0.1715485905912404
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9488833333333333
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9953166666666666
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9859166666666667
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9867666666666667
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9507166666666667
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9949166666666667
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.8333666666666667
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5382
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9941
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8387833333333333
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.75415
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9473833333333334
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0009833333333333332
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0405
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6050166666666666
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.51455
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002916666666666667
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.06683333333333333
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.40896666666666665
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.10266666666666667
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0053
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.03375
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.14253333333333335
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0036166666666666665
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.28995
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0004166666666666667
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.006383333333333334
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.5968833333333333
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8330833333333333
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.003416666666666667
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.7040666666666666
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.23268333333333333
+        }
+      ]
+    },
+    "NE_no_D_credit": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.0,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.51015,
+      "R_senate_control": 0.48985,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.024616666666666665,
+      "D_aligned_seats_mean": 50.28081666666667,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        50.0,
+        53.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.47453449252003466,
+        "D_senate_R_house": 0.03561550747996533,
+        "R_senate_D_house": 0.32609140671208214,
+        "R_senate_R_house": 0.16375859328791792
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.24701666666666666
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.61785
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.74475
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "NE_all_D_credit": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 1.0,
+        "NE_caucus_R": 0.0,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.5255833333333333,
+      "R_senate_control": 0.47441666666666665,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.0,
+      "D_aligned_seats_mean": 50.527833333333334,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.48815375201366173,
+        "D_senate_R_house": 0.03742958131967158,
+        "R_senate_D_house": 0.312472147218455,
+        "R_senate_R_house": 0.16194451944821164
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.24701666666666666
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.61785
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.74475
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "house_lower_correlation": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.35
+      },
+      "D_senate_control": 0.5154666666666666,
+      "R_senate_control": 0.4845333333333333,
+      "D_house_marginal": 0.8002207976017788,
+      "no_pledge_control_fallback_mass": 0.015333333333333332,
+      "D_aligned_seats_mean": 50.365833333333335,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.44528110424116835,
+        "D_senate_R_house": 0.07018556242549831,
+        "R_senate_D_house": 0.3549396933606105,
+        "R_senate_R_house": 0.12959363997272288
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.24701666666666666
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.61785
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.74475
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "house_higher_correlation": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.75,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.85
+      },
+      "D_senate_control": 0.5154666666666666,
+      "R_senate_control": 0.4845333333333333,
+      "D_house_marginal": 0.8009625989647092,
+      "no_pledge_control_fallback_mass": 0.015333333333333332,
+      "D_aligned_seats_mean": 50.365833333333335,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.49406951169444224,
+        "D_senate_R_house": 0.021397154972224438,
+        "R_senate_D_house": 0.30689308727026704,
+        "R_senate_R_house": 0.1776402460630663
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -2.54360855,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -3.820399828041003,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.24701666666666666
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 2.7630667000000013,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 1.744686685000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.61785
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 2.0616492000000006,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 3.6728485556409747,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.74475
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "no_personal_retention": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 0.0,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.43255,
+      "R_senate_control": 0.56745,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.005666666666666667,
+      "D_aligned_seats_mean": 49.89215,
+      "D_aligned_seats_10_50_90": [
+        46.0,
+        50.0,
+        53.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.40738676174960614,
+        "D_senate_R_house": 0.0251632382503939,
+        "R_senate_D_house": 0.39323913748251066,
+        "R_senate_R_house": 0.17421086251748932
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": -12.882951799999999,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -7.412022276934394,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.09245
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": -5.561154799999999,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": -2.8336351399999997,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.31795
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": -3.6298367999999996,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 1.7421497958689303,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.62395
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    },
+    "full_personal_retention": {
+      "draws": 60000,
+      "seed": 17102259,
+      "assumptions": {
+        "generic_d_margin_pp": 8.0,
+        "national_sd_pp": 3.0,
+        "poll_bias_mean_pp": -1.5,
+        "structural_prior_sd_pp": 7.0,
+        "personal_retention": 1.0,
+        "NE_caucus_D": 0.35,
+        "NE_caucus_R": 0.1,
+        "no_pledge_protem_D": 0.5,
+        "house_loading": 0.7
+      },
+      "D_senate_control": 0.54335,
+      "R_senate_control": 0.45665,
+      "D_house_marginal": 0.8006258992321168,
+      "no_pledge_control_fallback_mass": 0.020083333333333335,
+      "D_aligned_seats_mean": 50.52023333333333,
+      "D_aligned_seats_10_50_90": [
+        47.0,
+        51.0,
+        54.0
+      ],
+      "joint": {
+        "D_senate_D_house": 0.5027742072997985,
+        "D_senate_R_house": 0.0405757927002016,
+        "R_senate_D_house": 0.29785169193231836,
+        "R_senate_R_house": 0.1587983080676816
+      },
+      "seat_outputs": [
+        {
+          "seat": "NJ",
+          "prior_center_pp": 14.4870582,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.4870582,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.96665
+        },
+        {
+          "seat": "DE",
+          "prior_center_pp": 23.2792692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 23.2792692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9983
+        },
+        {
+          "seat": "IL",
+          "prior_center_pp": 19.473146200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.473146200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.99305
+        },
+        {
+          "seat": "CO",
+          "prior_center_pp": 19.5623692,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 19.5623692,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9931833333333333
+        },
+        {
+          "seat": "NM",
+          "prior_center_pp": 14.578266200000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.578266200000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9675333333333334
+        },
+        {
+          "seat": "MA",
+          "prior_center_pp": 33.7732282,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 33.7732282,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9999666666666667
+        },
+        {
+          "seat": "OR",
+          "prior_center_pp": 22.8845442,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.8845442,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9977833333333334
+        },
+        {
+          "seat": "GA",
+          "prior_center_pp": 6.385524200000001,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.7058853898923683,
+          "center_pp": 6.466330994716241,
+          "idiosyncratic_sd_pp": 4.290875889055049,
+          "non_republican_win_probability": 0.88505
+        },
+        {
+          "seat": "MI",
+          "prior_center_pp": 4.1633262,
+          "poll_center_before_cycle_bias_pp": 1.0,
+          "poll_weight": 0.7528118468541862,
+          "center_pp": 0.6527189908944859,
+          "idiosyncratic_sd_pp": 4.014002927769844,
+          "non_republican_win_probability": 0.5496
+        },
+        {
+          "seat": "RI",
+          "prior_center_pp": 22.3585812,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 22.3585812,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9975166666666667
+        },
+        {
+          "seat": "NH",
+          "prior_center_pp": 7.3571572,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.6598548887067002,
+          "center_pp": 6.791557831189853,
+          "idiosyncratic_sd_pp": 4.546109375429906,
+          "non_republican_win_probability": 0.8896666666666667
+        },
+        {
+          "seat": "MN",
+          "prior_center_pp": 9.816937200000002,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.5973617559101744,
+          "center_pp": 4.848716990413352,
+          "idiosyncratic_sd_pp": 4.871270261482262,
+          "non_republican_win_probability": 0.7968833333333334
+        },
+        {
+          "seat": "VA",
+          "prior_center_pp": 14.3440032,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": 14.3440032,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.9643666666666667
+        },
+        {
+          "seat": "OK",
+          "prior_center_pp": -27.685226800000002,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -27.685226800000002,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0003
+        },
+        {
+          "seat": "WV",
+          "prior_center_pp": -35.2864298,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -35.2864298,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 1.6666666666666667e-05
+        },
+        {
+          "seat": "LA",
+          "prior_center_pp": -15.4274808,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -15.4274808,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.025866666666666666
+        },
+        {
+          "seat": "ME",
+          "prior_center_pp": 4.5148302000000005,
+          "poll_center_before_cycle_bias_pp": 1.7999999999999998,
+          "poll_weight": 0.6334104472197023,
+          "center_pp": 1.8451127180628928,
+          "idiosyncratic_sd_pp": 4.686457946705016,
+          "non_republican_win_probability": 0.6263333333333333
+        },
+        {
+          "seat": "TX",
+          "prior_center_pp": -3.1057778000000003,
+          "poll_center_before_cycle_bias_pp": 2.608743754304464,
+          "poll_weight": 0.7816665494539101,
+          "center_pp": 0.18857272095230027,
+          "idiosyncratic_sd_pp": 3.833841295197077,
+          "non_republican_win_probability": 0.518
+        },
+        {
+          "seat": "AR",
+          "prior_center_pp": -24.0594348,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -24.0594348,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0010166666666666666
+        },
+        {
+          "seat": "MT",
+          "prior_center_pp": -13.351990800000001,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -13.351990800000001,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.04635
+        },
+        {
+          "seat": "IA",
+          "prior_center_pp": -4.631983799999999,
+          "poll_center_before_cycle_bias_pp": 3.0,
+          "poll_weight": 0.485935144622079,
+          "center_pp": -1.6522373653267541,
+          "idiosyncratic_sd_pp": 5.402700983167413,
+          "non_republican_win_probability": 0.39293333333333336
+        },
+        {
+          "seat": "SC",
+          "prior_center_pp": -11.2902118,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -11.2902118,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.07803333333333333
+        },
+        {
+          "seat": "TN",
+          "prior_center_pp": -23.1423568,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.1423568,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.00185
+        },
+        {
+          "seat": "MS",
+          "prior_center_pp": -16.3112488,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -16.3112488,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.020183333333333334
+        },
+        {
+          "seat": "WY",
+          "prior_center_pp": -39.178620800000004,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -39.178620800000004,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0
+        },
+        {
+          "seat": "KS",
+          "prior_center_pp": -9.538053799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -9.538053799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.11428333333333333
+        },
+        {
+          "seat": "KY",
+          "prior_center_pp": -23.9571478,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.9571478,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012166666666666667
+        },
+        {
+          "seat": "NE",
+          "prior_center_pp": 0.9028392000000007,
+          "poll_center_before_cycle_bias_pp": -3.0,
+          "poll_weight": 0.6526256685700621,
+          "center_pp": -2.6231923450765393,
+          "idiosyncratic_sd_pp": 4.584903732911625,
+          "non_republican_win_probability": 0.32038333333333335
+        },
+        {
+          "seat": "ID",
+          "prior_center_pp": -29.914538800000003,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -29.914538800000003,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 6.666666666666667e-05
+        },
+        {
+          "seat": "SD",
+          "prior_center_pp": -22.617057799999998,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -22.617057799999998,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.002533333333333333
+        },
+        {
+          "seat": "AK",
+          "prior_center_pp": 5.537807200000001,
+          "poll_center_before_cycle_bias_pp": 2.0,
+          "poll_weight": 0.45,
+          "center_pp": 3.270793960000001,
+          "idiosyncratic_sd_pp": 4.966869015167158,
+          "non_republican_win_probability": 0.7099833333333333
+        },
+        {
+          "seat": "NC",
+          "prior_center_pp": 7.3656752,
+          "poll_center_before_cycle_bias_pp": 8.0,
+          "poll_weight": 0.595834862453232,
+          "center_pp": 6.849875736278825,
+          "idiosyncratic_sd_pp": 4.878943711480143,
+          "non_republican_win_probability": 0.8806333333333334
+        },
+        {
+          "seat": "AL",
+          "prior_center_pp": -23.893844799999997,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -23.893844799999997,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.0012833333333333334
+        },
+        {
+          "seat": "OH",
+          "prior_center_pp": 3.9588112000000004,
+          "poll_center_before_cycle_bias_pp": 6.0,
+          "poll_weight": 0.6607742231515558,
+          "center_pp": 4.3164148088983225,
+          "idiosyncratic_sd_pp": 4.5411521737961795,
+          "non_republican_win_probability": 0.78065
+        },
+        {
+          "seat": "FL",
+          "prior_center_pp": -6.522522799999999,
+          "poll_center_before_cycle_bias_pp": null,
+          "poll_weight": 0.0,
+          "center_pp": -6.522522799999999,
+          "idiosyncratic_sd_pp": 7.280109889280518,
+          "non_republican_win_probability": 0.20776666666666666
+        }
+      ]
+    }
+  }
+}

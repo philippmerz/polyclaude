@@ -1,0 +1,157 @@
+{
+  "review_index": 1810,
+  "condition_id": "0x307a1ed89d60b61002dd5bbf00e1408c5ed2ab3fcdb056191ca7ef9bc34d38f3",
+  "criteria_sha256": "550ae830db4dcef0f5d7834b0c59860c5b993905c77bafce323936f8b3b0d548",
+  "status": "valued",
+  "literal_analysis": "Full individual rules read; current description byte hash equals frozen description; majority/VP/ProTemp, election affiliation/vacancy/runoff/Oct31 and Jan4 independent-intent clauses all applied.",
+  "evidence": [
+    {
+      "url": "https://www.senate.gov/senators/Class_II.htm",
+      "finding": "33regular contests; OH/FLspecial and fixed34D31R counts, source details in primary method",
+      "observed_utc": "2026-10-17T23:28:09.708146+00:00"
+    },
+    {
+      "url": "https://www.documentcloud.org/documents/28817212-sd-sen-gov-concord-public-opinion-partners-oct-2026/",
+      "finding": "Visually verified Bengs43/Rounds42; no automatic D caucus credit. Full current-source list and original polling in method/inputs.",
+      "observed_utc": "2026-10-17T23:28:09.708202+00:00"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.57,
+    "low": 0.25,
+    "high": 0.85,
+    "method": "Exact Democratic-control projection of the primary correlated35-seat model",
+    "reasoning": "Raw D56.845% rounded57%; broad source/model/independent-organization uncertainty, 15pp entry reserve. Other control gives NO, so this is not a simple complement of Republican control.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1801_1920.json",
+    "quote_observed_utc": "2026-10-17T23:18:56.378+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 81.0,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.57,
+        "best_bid": 0.64,
+        "best_ask": 0.65,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.936,
+        "received_utc": "2026-10-17T23:18:56.378+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.65,
+            "fee_usd": 0.09099999999999998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.591,
+        "fee_usd": 0.091,
+        "break_even_probability_before_carry": 0.6591,
+        "break_even_probability_with_idealized_carry": 0.6635166955282743,
+        "central_expected_profit_usd": -0.8910000000000009,
+        "default_10pp_stressed_profit_usd": -1.891000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.47,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.307840000000001
+      },
+      "No": {
+        "probability": 0.43000000000000005,
+        "best_bid": 0.35,
+        "best_ask": 0.36,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.936,
+        "received_utc": "2026-10-17T23:18:56.378+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.36,
+            "fee_usd": 0.09216
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.6921599999999994,
+        "fee_usd": 0.09216,
+        "break_even_probability_before_carry": 0.36921599999999993,
+        "break_even_probability_with_idealized_carry": 0.3716901536279279,
+        "central_expected_profit_usd": 0.6078400000000013,
+        "default_10pp_stressed_profit_usd": -0.39215999999999873,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.33000000000000007,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.409
+      }
+    }
+  },
+  "verdict": "No entry: both sides fail selected15pp stress; NO central value positive but ordinary10pp also negative after fee. Maker watches YES<=.40/NO<=.26 x10 only after fresh gates.",
+  "reopen_condition": "Material original evidence or a fresh maker price below net threshold with current identity, account, portfolio and monitoring revalidated.",
+  "current_description_sha256": "d60f66146b9379066f4fecd624eae6f5c200f703d75aa1e99398461ce3ababc9",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "113287701564209339913693347405685749986285999146352375265161592243948562084773",
+    "107118433685650702332040991454078902188473746599223732907923581436160160612542"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "status": "exact_market_condition_and_binary_token_identity_validated",
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/gamma_chunks/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1801_1920/gamma_chunks/req_0001.body.json.gz",
+      "received_utc": "2026-10-17T23:27:26.281+00:00",
+      "description_sha256_current": "d60f66146b9379066f4fecd624eae6f5c200f703d75aa1e99398461ce3ababc9",
+      "criteria_sha256_current": "550ae830db4dcef0f5d7834b0c59860c5b993905c77bafce323936f8b3b0d548",
+      "criteria_sha256_frozen": "550ae830db4dcef0f5d7834b0c59860c5b993905c77bafce323936f8b3b0d548",
+      "criteria_sha256_matches_frozen": true,
+      "previous_supplement_history": "logs/deep_review_20261017/quotes_1801_1920/gamma_supplements/supplement_history.json"
+    },
+    "books": {
+      "request_id": "req_0002",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/req_0002.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1801_1920/req_0002.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_1801_1920/req_0001.receipt.json",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_match_count": 0,
+      "status": "no_exact_match_in_bulk_gamma_response",
+      "error": null
+    },
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.15,
+    "shared_model": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+    "description_bytes_unchanged": true,
+    "selected_15pp_stress_usd": {
+      "Yes": -2.391000000000001,
+      "No": -0.8921599999999992
+    }
+  },
+  "evaluated_utc": "2026-10-17T23:28:09.928034+00:00",
+  "question": "Will the Democratic Party control the Senate after the 2026 Midterm elections?",
+  "market_id": "562793",
+  "valuation_author": "primary_operator",
+  "original_index": 1810,
+  "report_sha256": "49ab24bd4ae6bd1d5b624614e6a6d3ad1e5f046796f2531647d30d65b35251c2"
+}

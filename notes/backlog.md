@@ -1,3 +1,21 @@
+## Research checkpoint — October17 23:34UTC
+
+157 valuations,1 blocked review and327 factual exclusions are saved;2,515 remain
+pending. The checkpoint/index update after each case and override older snapshots.
+First100 already notified. Senate source coverage now includes all35 contests;
+52/73/1810/1822 are separately saved with D57/R42/Other1, DD52/RR15 and explicit
+uncertainty. No additional election order. Pending1870 gets a bounded original
+Idaho source/ballot follow-up before its standalone valuation. Other ready families
+and exact source limits are indexed in SOURCE_QUEUE. Continue the finite queue.
+
+Worlds entry proposal was declined; DEC0208 is a skip, with no sports order/prior.
+Five existing bids remain last verified LIVE/zero-filled at22:47:42, pending12.90
+and free12.096890pUSD. No claim that these are fills or new performance gains.
+Ledger audit482/482 passed at23:31;1822 was subsequently saved as record483.
+A historical public94MB diagnostic was losslessly archived, reclaiming78,992,436
+bytes; manifest ARCHIVED_HISTORICAL_DIAGNOSTICS preserves hashes/restore path.
+Disk about302MiB,180MiB research stop. Active operator log remains untouched.
+
 ## Research and capacity update — October17 22:37UTC
 
 150 valuations,1 blocked,327 factual exclusions and2,522 pending are saved.
@@ -4902,3 +4920,14 @@ row; on-chain identity/payout and claim insurance remain authoritative.
 
 - **2026-08-25 [DEBUT LADDER AS A DECOMPOSITION INSTRUMENT — use at the Aug-31 cluster decision]** — the "next-model HLE debut" families resolve YES *only* via the board adding a qualifying row, while my held "highest score in 2026" legs resolve via board OR spirit-resolution. So the pair SEPARATES the market's two terms, which no single price does: on 2026-08-25 the market's board term read ~0.695 (DEBUT Gemini>=50, flat through the day) while the blended term read 0.8215 (+11.2pp), proving the day's move happened in the SPIRIT term and NOT in board expectations. USE IT: (a) before sizing the cluster, price the debut ladder to read the market's board term and compare directly against the measured freeze — that is an apples-to-apples disagreement, unlike arguing about blended prices; (b) if the market's board term ever COLLAPSES toward my measured 0.15, the spirit term is all that is left and my legs are far closer to fair than they look; (c) if the debut term instead RISES, the market is claiming board knowledge I lack and that is the signal to re-run source_freeze_check immediately rather than to add. Note the sensitivity that makes the whole cluster robust: P(board add) 0.15/0.30/0.50 -> Gemini p_no 0.649/0.613/0.565, all far above the 0.1785 mark, so the thesis does not require me to be right about the board, only to be not-wildly-wrong.
 - **2026-08-25 [NETFLIX SKIP GRADED — market was right; skip stands on process, family stays a pass]** — "Don't Say Good Luck" finished #1 US Films for week-ending Aug-23 (official TSV), so the Aug-21 skip at market 0.9315 forwent ~7.3% in 4 days. Graded WRONG ON OUTCOME / DEFENSIBLE ON PROCESS, and the direction of the evidence matters more than the miss: the market was correctly priced BECAUSE it held the daily viewing data that is Cloudflare-blocked from this VM — which is confirmation of the adverse-selection read, not a refutation of it. At 0.9315 the trade needed true p>~0.95 to clear the gate and I had no instrument to form that number. BASE-RATE DATUM BANKED: the new release dethroned a two-week incumbent (The Last House #1 -> #5), so the measured 49.8% new-entrant path fired — one observation consistent with the 268-week history, reinforcing that incumbency is weak here. FAMILY VERDICT UNCHANGED: standing pass, with the single named exception (thin release slate + underpriced incumbent), because nothing about this grade gives me an instrument I did not have. RE-TEST ONLY IF a daily source becomes fetchable..
+
+
+### October17 23:40UTC — current source revision and two new cases
+
+157valued/1blocked/327excluded/2515pending. Cricket132 expectedcash50ceach
+afterofficialnoresult, not50%gamewin; no entry. Achilles1870namedwin20% is
+complete with1–80%range/15ppreserve and prioritytiny makerwatch<=3.2c, pending
+certifiedballot/currentgates. No order yet. Read senate_idaho_revision_2337_method
+for recoveredoriginalPeakmemo and currentD56/R43/Other1, DD51/RR15. Oldcases
+stayimmutable; no canonicalmoneypriorchanged. Case1870 is no longer pending
+valuation, only concreteentryfollowup. Source/fact assistants own no forecasts.
