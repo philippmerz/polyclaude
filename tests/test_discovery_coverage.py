@@ -35,6 +35,32 @@ def shortlist(rows, **kwargs):
     )
 
 
+@pytest.mark.parametrize("question,description,expected", [
+    ("Will Iran sign an agreement?", "This resolves according to whether an agreement is signed.", "geopolitics"),
+    ("Will gold reach $1,900?", "The primary resolution source is the closing price.", "other"),
+    ("Will aliens be confirmed?", "A federal agency must confirm it; the primary resolution source is official reporting.", "other"),
+    ("Will Tesla release the Roadster?", "The primary resolution source is the company announcement.", "tech"),
+    ("Will hardware shipments rise?", "Exact company metric.", "other"),
+    ("Will the target federal funds rate reach 4.5%?", "Official decision.", "macro"),
+    ("Will ETH reach $2,000?", "Exact closing price.", "crypto"),
+    ("Will Bitcoin reach $100,000?", "Exact closing price.", "crypto"),
+    ("StandX FDV above $1B one day after launch?", "Exact valuation.", "crypto"),
+    ("Will the Fed cut interest rates?", "Official decision.", "macro"),
+    ("Will the Republican primary have a runoff?", "Official results.", "geopolitics"),
+    ("Next White House Press Secretary announced this month?", "Official announcement.", "geopolitics"),
+    ("Will GPT-6 be released?", "Official release.", "tech"),
+    ("Will the film score 76 on the Tomatometer?", "All Critics score.", "entertainment"),
+    ("Will the Netflix show rank first?", "Official weekly ranking.", "entertainment"),
+    ("Will it happen?", "The Ethereum closing price determines the result.", "crypto"),
+])
+def test_categories_use_topic_words_and_ignore_resolution_boilerplate(question, description, expected):
+    assert scanner.category_of(market("category", question=question, description=description)) == expected
+
+
+def test_sports_metadata_keeps_its_route_when_title_is_ambiguous():
+    assert scanner.category_of(market("sport", question="Will it happen?", sportsMarketType="moneyline")) == "sports"
+
+
 def test_hurdle_filter_precedes_top_and_does_not_lose_a_lower_volume_survivor():
     counts = {}
     result = shortlist([

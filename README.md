@@ -140,6 +140,20 @@ Discovery snapshots can be organized with `scripts/market_context_batches.py`.
 Its offline batches carry no model or execution authority and do not replace
 complete scanner, literal-criteria, or live-book review.
 
+On Oct 17, a finite diagnostic completed **3,000 primary-model first-pass
+screens**, including 73 full literal-rule or PDF reviews and 17 family
+investigations at varying depth. Most markets remain unpriced; this is not
+3,000 fully underwritten rejections. The pass found and fixed a category-routing
+bug: substring ETH matched “whether”, ordinary dollar thresholds matched crypto,
+and “primary source” boilerplate matched politics. Forty-seven focused checks
+passed. The frozen sample changed 971 labels; that is not a gold-set accuracy or
+ROI result. Routine discovery had selected 2,691 conditions but documented only
+four full literal reviews. Selection totals do not measure substantive coverage.
+No new entry was justified by the detailed checks; no order was placed. See the
+[individual ledger](research/2026-10-17-primary-market-review.csv),
+[audit and case findings](research/2026-10-17-primary-market-review.json), and
+[frozen public rules](research/2026-10-17-primary-market-review-rules.jsonl.gz).
+
 The [Oct 12 opportunity-method review](research/2026-10-12-opportunity-method-review.md)
 fixed discovery filter ordering, exposed incomplete coverage, removed the failed
 favorite-population forecasts and diversified bounded basket quoting. The

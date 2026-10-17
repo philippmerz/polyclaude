@@ -12,6 +12,7 @@ import hashlib
 import json
 import math
 import os
+import re
 from pathlib import Path
 from typing import Any
 
@@ -490,29 +491,29 @@ def days_to_resolution(m: dict[str, Any], now: dt.datetime) -> float | None:
         return None
 
 
+_CATEGORY_PATTERNS = tuple((category, re.compile(pattern, re.IGNORECASE)) for category, pattern in (
+    ("sports", r"\b(?:vs|premier league|serie a|nba|nfl|nhl|mlb|uefa|fifa)\b"),
+    ("crypto", r"\b(?:bitcoin|ethereum|btc|eth|solana|memecoin|crypto|fdv|fully diluted valuation)\b"),
+    ("macro", r"\b(?:fed|federal funds|interest rates?|cpi|inflation|recession|gdp|unemployment|fomc|rate cuts?|treasury)\b"),
+    ("geopolitics", r"\b(?:elections?|primary election|(?:republican|democratic|gop|presidential) primary|president|senator|senate|congress|house seat|governor|cabinet|prime minister|white house|uk|germany|france|russia|putin|ukraine|israel|gaza|iran|nato|china|taiwan|war|ceasefire|treaty|sanctions?|tariffs?)\b"),
+    ("tech", r"\b(?:openai|anthropic|google|chatgpt|ai|agi|model release|stargate|tesla|nvidia|apple|microsoft|tiktok|openrouter)\b|\bgpt-"),
+    ("entertainment", r"\b(?:movie|box office|oscar|billboard|song|spotify|album|rotten tomatoes|tomatometer|netflix)\b"),
+))
+
+
 def category_of(m: dict[str, Any]) -> str:
-    """Heuristic category from question/event/tag fields."""
-    q = (m.get("question") or "").lower()
-    desc = (m.get("description") or "").lower()
-    text = q + " " + desc
-    if m.get("sportsMarketType") or any(
-        k in text for k in [" vs. ", " vs ", "premier league", "serie a", "nba", "nfl", "nhl", "mlb", "uefa", "fifa"]
-    ):
+    """Attention heuristic: classify the question before consulting its rules.
+
+    Token boundaries keep ETH out of "whether", Fed out of "federal agency",
+    and war out of "hardware". Dollar amounts and generic "primary source"
+    boilerplate are not topic evidence. Categories never establish a thesis.
+    """
+    if m.get("sportsMarketType"):
         return "sports"
-    if any(k in text for k in ["bitcoin", "ethereum", "btc", "eth", "solana", "$1", "memecoin", "crypto"]):
-        return "crypto"
-    if any(k in text for k in ["fed", "interest rate", "cpi", "inflation", "recession", "gdp", "unemployment", "fomc", "rate cut", "treasury"]):
-        return "macro"
-    if any(k in text for k in [
-        "election", "primary", "president", "senator", "congress", "house seat",
-        "uk", "germany", "france", "russia", "putin", "ukraine", "israel", "gaza", "iran", "nato", "china",
-        "taiwan", "war", "ceasefire", "treaty", "sanction", "tariff",
-    ]):
-        return "geopolitics"
-    if any(k in text for k in ["openai", "anthropic", "google", "chatgpt", "gpt-", "ai ", "agi", "model release", "stargate", "tesla", "nvidia", "apple", "microsoft", "tiktok"]):
-        return "tech"
-    if any(k in text for k in ["movie", "box office", "oscar", "billboard", "song", "spotify", "album"]):
-        return "entertainment"
+    for text in (m.get("question") or "", m.get("description") or ""):
+        for category, pattern in _CATEGORY_PATTERNS:
+            if pattern.search(text):
+                return category
     return "other"
 
 

@@ -1,20 +1,43 @@
 ---
-reviewed_at: "2026-10-17T14:27:12Z"
+reviewed_at: "2026-10-17T17:22:55Z"
 valid_until: "2026-10-17T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 967db0dac906947f883ec0d6e146bb36b0196738606e868eb11e996c723160f3
+  README.md: 9408c596256d26069bf13b9a5b95476ed7c885c0f12993fade0c6cd6373ddf51
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 4e6c2bebe2886c741153c3ebccb6c0f689822a77b6582c6a9747b7cecc1f44f0
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: bbbe32c89f7ffae47d0d5420efdf3989d12018f9cc387ee1319de89214a6b31e
+  notes/backlog.md: f940722385cfd3698d34e11c44ec58b3420321d0f9c2349cfcbdd50cad548420
 ---
 
-# Current context — Oct 17 14:00 full check and verified trim
+# Current context — Oct 17 primary diagnostic and verified 14:00 trim
 
-Current post-trade bankroll window: 2026-10-17T14:17:33.394116–14:17:49.150538 UTC.
+The finite primary-market diagnostic is complete: 3,000 first-pass screens,
+73 full literal/PDF reviews and 17 family investigations covering 42 rows at
+unequal depth. Of 255 source flags, 38 have family follow-up and 217 do not.
+Most rows remain unpriced; this is not 3,000 complete underwrites or proof that
+opportunities are absent. All broad screening was by the primary model in this
+chat. Two required new-strategy reviewers were used only for the lake follow-up.
+
+Category routing is fixed: question-first token boundaries remove ETH/whether,
+generic dollar and primary-source boilerplate matches. All 47 focused checks
+passed. The original frozen sample changes 971 labels, without a gold-set accuracy
+or ROI claim. Routine selection had greatly exceeded documented full-review depth;
+the diagnostic does not isolate cheaper-model ability. No new entry, order,
+transfer, prior or financial-record change. Lake uncertainty failed underwriting;
+the Hormuz conditional floor does not establish a gated executable entry.
+
+See the [ledger](../research/2026-10-17-primary-market-review.csv),
+[audit and case findings](../research/2026-10-17-primary-market-review.json), and
+[frozen rules](../research/2026-10-17-primary-market-review-rules.jsonl.gz).
+Closing status at 17:15 had no watch hits or UMA alerts; a 17:17 configured fetch
+found all 65 full HLE objects equal to 14:00. Public last-80 tails had no post-14:00
+rows. Disk was 367.49 MiB at 17:21, below warning and above critical; capacity is
+unresolved. Existing cadence handles the next 18:00 light check; no new loop.
+
+Latest whole-account snapshot remains dated 14:17. Bankroll window: 2026-10-17T14:17:33.394116–14:17:49.150538 UTC.
 Total $196.27; gas $5.86; trading midpoint/depth $190.41/$188.15; PM midpoint/depth
 $30.75/$28.49; open cost $29.86; residual $19.52; approximate whole-account depth
 $194.01. These are rounded sequential marks; VM/API excluded, not synchronized NAV.
@@ -52,5 +75,5 @@ Health at 14:02 showed heartbeat 1,447s/3,600s, news age 105s, disk 484.07 MiB
 below 512 MiB warning and above 128 MiB critical. The latest bounded cleanup census
 was 10:00 and found no safe candidate. Post-trade audit CLEAN after size-snapshot
 refresh; 77 decisions pending, none overdue. Weekly Oct 23/monthly Nov 12; next
-light 18:00. Manual issuer-account credential rotation remains blocked. Root sent
-Telegram update 1155; no repeat was sent.
+light 18:00. Manual issuer-account credential rotation remains blocked. The 14:00
+full check sent Telegram update 1155.
