@@ -1,0 +1,140 @@
+{
+  "review_index": 57,
+  "condition_id": "0x0fcfcfc35d71424c0693c717d2e3bc9b8992910835d124d80cd2f01498f1d3dc",
+  "criteria_sha256": "77f3051840693842df86dc9a9d37aa5ac7982ba12dd2b1e23fd2fe22441db8bf",
+  "status": "valued",
+  "literal_analysis": "Completeindividualregime/officeannouncement/incapacity/landcontrolcriteriaread; dates/baselinesandnonqualifyingnewsdistinguished.",
+  "evidence": [
+    {
+      "url": "https://www.war.gov/About/Secretary-of-war/",
+      "observed_utc": "2026-10-17T19:43:05.377126+00:00",
+      "finding": "Currentofficialroleandhistoricaldepartmentrename;freshrootweb403preservedasgap,notabsence."
+    },
+    {
+      "url": "https://www.war.gov/serve-from-netstorage/News/News-Stories/Article/Article/4513916/us-prepared-for-anything-hegseth-tells-troops-at-guantanamo-bay/index.html",
+      "observed_utc": "2026-10-17T19:43:05.377159+00:00",
+      "finding": "June10officialcontingency-readinessremarksnotremoval/invasionproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15,
+    "low": 0.04,
+    "high": 0.4,
+    "method": "Primary criterion-bound currentstatus/competingregime scenario valuation",
+    "reasoning": "See primarysharedmethod for explicit branch probabilities, datedsourcegaps and75dayhorizon; no calibratedeventfrequencyclaim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.15,
+        "best_bid": 0.24,
+        "best_ask": 0.25,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.515,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.25,
+            "fee_usd": 0.075
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.575,
+        "fee_usd": 0.075,
+        "break_even_probability_before_carry": 0.2575,
+        "break_even_probability_with_idealized_carry": 0.25909732057231993,
+        "central_expected_profit_usd": -1.0750000000000002,
+        "default_10pp_stressed_profit_usd": -2.075,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.3270399999999998
+      },
+      "No": {
+        "probability": 0.85,
+        "best_bid": 0.75,
+        "best_ask": 0.76,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.515,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.76,
+            "fee_usd": 0.07296
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.67296,
+        "fee_usd": 0.07296,
+        "break_even_probability_before_carry": 0.767296,
+        "break_even_probability_with_idealized_carry": 0.7720556803334321,
+        "central_expected_profit_usd": 0.8270400000000002,
+        "default_10pp_stressed_profit_usd": -0.17295999999999978,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.75,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.425
+      }
+    }
+  },
+  "verdict": "NO central advantage fails10ppstress/carry; no entry",
+  "reopen_condition": "Verifiedliteralqualifyingevent/announcement, changedmilitaryintent/officecontrol/sourceconsensus;freshbooks/fullgatesbeforeanyentry.",
+  "current_description_sha256": "188cd4e8bd2961885265e410fdefd1fdd3579cf738cf936a2da272e9db7b93b6",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "21275820052009278915970165572803516066396758597545413537036789986793691057073",
+    "39839649379979262874224474703228993451530996696316314037781119946088999891171"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0079",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0079.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0079.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/office_security_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json",
+      "data/deep_review_20261017/geopolitics_extension_sources.json"
+    ],
+    "tracked_method": "models/office_security_method.md"
+  },
+  "evaluated_utc": "2026-10-17T19:43:05.671111+00:00",
+  "question": "Pete Hegseth out as Secretary of Defense by December 31?",
+  "market_id": "1811265",
+  "valuation_author": "primary_operator",
+  "original_index": 57,
+  "report_sha256": "7e2fb276bb7939a1150290e63a20311e98ee114967ee1d72a7d35873112c6e3e"
+}

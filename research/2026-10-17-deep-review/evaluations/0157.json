@@ -1,0 +1,140 @@
+{
+  "review_index": 157,
+  "condition_id": "0x119b6b3b744ac3239c7a71100165d254234eaecea401abde5a3d303bef21d19e",
+  "criteria_sha256": "3e08a8ba2b5a93af7e2008a6c8d5a98a8338a966134546bd94e1c244beb52424",
+  "status": "valued",
+  "literal_analysis": "Complete exact individual party-nominee/replacement/independent and three-source/certification criteria read; California named-Hilton/Other fallback handled separately.",
+  "evidence": [
+    {
+      "url": "https://www.voterguide.sos.ca.gov/candidates/governor-candidate-statements.htm",
+      "observed_utc": "2026-10-17T20:04:07.434641+00:00",
+      "finding": "Official current governor candidate guide binds Becerra Democratic and Hilton Republican."
+    },
+    {
+      "url": "https://escholarship.org/uc/item/2dh2g5z0",
+      "observed_utc": "2026-10-17T20:04:07.434664+00:00",
+      "finding": "IGS primary tabulation in source packet;58/33/U9 and4512 weightedLV. Root web repeat met bot verification; field/mode metadata partly secondary, retained as a gap."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.01,
+    "low": 0.001,
+    "high": 0.08,
+    "method": "Primary vote-margin model with explicit common poll error and unmodeled-event branch",
+    "reasoning": "Full state_election_model.py/method gives priors, source populations/dates, share-to-margin MoE conversion, branch weights and sensitivity; not calibrated or price-derived.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.01,
+        "best_bid": 0.039,
+        "best_ask": 0.041,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.264,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.041,
+            "fee_usd": 0.0157276
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.42573000000000005,
+        "fee_usd": 0.01573,
+        "break_even_probability_before_carry": 0.04257300000000001,
+        "break_even_probability_with_idealized_carry": 0.042766504968651906,
+        "central_expected_profit_usd": -0.3257300000000001,
+        "default_10pp_stressed_profit_usd": -0.42573000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.375
+      },
+      "No": {
+        "probability": 0.99,
+        "best_bid": 0.959,
+        "best_ask": 0.961,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.264,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.961,
+            "fee_usd": 0.014991600000000013
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.625,
+        "fee_usd": 0.015,
+        "break_even_probability_before_carry": 0.9625,
+        "break_even_probability_with_idealized_carry": 0.9668748040384154,
+        "central_expected_profit_usd": 0.27500000000000036,
+        "default_10pp_stressed_profit_usd": -0.7249999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.89,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.57427
+      }
+    }
+  },
+  "verdict": "Both sides valued; no entry after fees, default uncertainty reserve and carry",
+  "reopen_condition": "New current named-matchup poll, official nominee/roster change, material early-vote/campaign development or qualifying call/certification; fresh both-sided book and full execution gates.",
+  "current_description_sha256": "2ef4f973747ebae47896b5fb059b907027efd1e541560dfcd4ad338416844a7a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "82742036522262670996662794097029680950132682539859985097974842241612036171395",
+    "63644763464034691367428527733393916036342796100129702980469514153898496549749"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0063",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/election_extension_sources.json",
+      "data/deep_review_20261017/election_extension_sources_corrected.json",
+      "data/deep_review_20261017/macro_election_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/state_election_method.md",
+    "priority_followup": false,
+    "source_url_correction_preserved": true
+  },
+  "evaluated_utc": "2026-10-17T20:04:07.715989+00:00",
+  "question": "Will Steve Hilton win the California Governor Election in 2026?",
+  "market_id": "628940",
+  "valuation_author": "primary_operator",
+  "original_index": 157,
+  "report_sha256": "addaaa9e4bf253a9630e573aca7bd64fb0e4b82077690b2a1edc319745209c02"
+}

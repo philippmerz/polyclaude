@@ -1,0 +1,219 @@
+{
+  "calibration": "None; primary parameter and error-regime sensitivity, not a measured posterior.",
+  "common_poll_error": "Do not divide common error by sqrt(number of polls); conservative maximum share MoE used.",
+  "cases": {
+    "59": {
+      "inputs": {
+        "name": "Texas Senate",
+        "yes_party": "R",
+        "prior": -4,
+        "prior_sd": 10,
+        "poll": 3.25,
+        "share_moe": 4.9,
+        "common_sd": 4,
+        "age_sd": 2.5,
+        "poll_bias": 0,
+        "surprise": 0.05,
+        "p_yes": 0.44,
+        "low": 0.12,
+        "high": 0.75
+      },
+      "effective_poll_margin_sd_pp": 6.873863542433761,
+      "combined_mean_D_margin_pp": 0.9235993208828519,
+      "combined_sd_pp": 5.664652260218808,
+      "unrounded_p_yes": 0.4384790245350866,
+      "primary_p_yes": 0.44,
+      "scenario_range": [
+        0.12,
+        0.75
+      ],
+      "grid_min": 0.20775576889491965,
+      "grid_max": 0.6986808427580998
+    },
+    "115": {
+      "inputs": {
+        "name": "Michigan Senate",
+        "yes_party": "R",
+        "prior": 4,
+        "prior_sd": 8,
+        "poll": 2.2,
+        "share_moe": 3.8,
+        "common_sd": 4,
+        "age_sd": 3,
+        "poll_bias": 0,
+        "surprise": 0.05,
+        "p_yes": 0.29,
+        "low": 0.08,
+        "high": 0.65
+      },
+      "effective_poll_margin_sd_pp": 6.327353468541835,
+      "combined_mean_D_margin_pp": 2.8926846258241956,
+      "combined_sd_pp": 4.962739837627135,
+      "unrounded_p_yes": 0.2909875081544725,
+      "primary_p_yes": 0.29,
+      "scenario_range": [
+        0.08,
+        0.65
+      ],
+      "grid_min": 0.10331188562957172,
+      "grid_max": 0.5838671462766185
+    },
+    "157": {
+      "inputs": {
+        "name": "California governor, named Hilton",
+        "yes_party": "R",
+        "prior": 20,
+        "prior_sd": 10,
+        "poll": 25,
+        "share_moe": 2,
+        "common_sd": 4,
+        "age_sd": 3,
+        "poll_bias": 0,
+        "surprise": 0.02,
+        "p_yes": 0.01,
+        "low": 0.001,
+        "high": 0.08
+      },
+      "effective_poll_margin_sd_pp": 5.400456580571118,
+      "combined_mean_D_margin_pp": 23.871019750100768,
+      "combined_sd_pp": 4.751800184980917,
+      "unrounded_p_yes": 0.010000248521512045,
+      "primary_p_yes": 0.01,
+      "scenario_range": [
+        0.001,
+        0.08
+      ],
+      "grid_min": 0.01000000219597763,
+      "grid_max": 0.010036962246390724
+    },
+    "164": {
+      "inputs": {
+        "name": "Arizona governor",
+        "yes_party": "D",
+        "prior": 4,
+        "prior_sd": 8,
+        "poll": 6,
+        "share_moe": 3.2,
+        "common_sd": 4,
+        "age_sd": 3,
+        "poll_bias": -1,
+        "surprise": 0.05,
+        "p_yes": 0.82,
+        "low": 0.45,
+        "high": 0.98
+      },
+      "effective_poll_margin_sd_pp": 5.971785668734503,
+      "combined_mean_D_margin_pp": 4.642169092603504,
+      "combined_sd_pp": 4.785517534538528,
+      "unrounded_p_yes": 0.8172886563658069,
+      "primary_p_yes": 0.82,
+      "scenario_range": [
+        0.45,
+        0.98
+      ],
+      "grid_min": 0.5471627711554928,
+      "grid_max": 0.9413064146351401
+    },
+    "213": {
+      "inputs": {
+        "name": "Maine Senate",
+        "yes_party": "R",
+        "prior": 0,
+        "prior_sd": 8,
+        "poll": 2,
+        "share_moe": 4.4,
+        "common_sd": 4,
+        "age_sd": 1.5,
+        "poll_bias": 0,
+        "surprise": 0.05,
+        "p_yes": 0.4,
+        "low": 0.12,
+        "high": 0.8
+      },
+      "effective_poll_margin_sd_pp": 6.197440390079447,
+      "combined_mean_D_margin_pp": 1.2498990878764125,
+      "combined_sd_pp": 4.899309052096511,
+      "unrounded_p_yes": 0.4043503945545477,
+      "primary_p_yes": 0.4,
+      "scenario_range": [
+        0.12,
+        0.8
+      ],
+      "grid_min": 0.15986110809001075,
+      "grid_max": 0.7020761518802792
+    },
+    "220": {
+      "inputs": {
+        "name": "New Hampshire Senate",
+        "yes_party": "D",
+        "prior": 6,
+        "prior_sd": 8,
+        "poll": 8,
+        "share_moe": 3.9,
+        "common_sd": 4,
+        "age_sd": 2,
+        "poll_bias": 0,
+        "surprise": 0.05,
+        "p_yes": 0.91,
+        "low": 0.5,
+        "high": 0.99
+      },
+      "effective_poll_margin_sd_pp": 5.986413883704118,
+      "combined_mean_D_margin_pp": 7.282087864869488,
+      "combined_sd_pp": 4.793035397759587,
+      "unrounded_p_yes": 0.9138744028121502,
+      "primary_p_yes": 0.91,
+      "scenario_range": [
+        0.5,
+        0.99
+      ],
+      "grid_min": 0.7307790684800632,
+      "grid_max": 0.9661744565589729
+    },
+    "234": {
+      "inputs": {
+        "name": "Michigan governor",
+        "yes_party": "D",
+        "prior": 4,
+        "prior_sd": 8,
+        "poll": 17,
+        "share_moe": 4.4,
+        "common_sd": 4,
+        "age_sd": 3,
+        "poll_bias": 0,
+        "surprise": 0.05,
+        "p_yes": 0.96,
+        "low": 0.65,
+        "high": 0.995
+      },
+      "effective_poll_margin_sd_pp": 6.719990133072227,
+      "combined_mean_D_margin_pp": 11.621960479073904,
+      "combined_sd_pp": 5.1455322617652435,
+      "unrounded_p_yes": 0.9636450698314165,
+      "primary_p_yes": 0.96,
+      "scenario_range": [
+        0.65,
+        0.995
+      ],
+      "grid_min": 0.8974835853741407,
+      "grid_max": 0.9738613294220364
+    },
+    "178": {
+      "name": "Idaho Senate",
+      "pvi_R_share_pp": 18,
+      "pvi_margin_transfer": 0.8,
+      "national_D_margin_pp": 8,
+      "R_incumbency_margin_pp": 2,
+      "margin_sd_pp": 9,
+      "main_D_margin": -22.8,
+      "unmodeled_symmetric_branch": 0.02,
+      "primary_p_yes": 0.985,
+      "scenario_range": [
+        0.9,
+        0.9995
+      ],
+      "unrounded_p_yes": 0.9844638106995506,
+      "limitation": "No individual current district poll or complete final ballot captured; this is not an empirical tail estimate."
+    }
+  }
+}

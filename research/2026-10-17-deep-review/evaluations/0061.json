@@ -1,0 +1,151 @@
+{
+  "review_index": 61,
+  "condition_id": "0x5c79dfde05559b79a9cb9f7c4187e4d49632dd042572ae676952f812732591cc",
+  "criteria_sha256": "dd976c3cdbdd2e1bbdeaa68c9cdd0cc8477669b2e64a3a95fa867305e3f6093b",
+  "status": "valued",
+  "literal_analysis": "Exact May6–December31 eligible window; >=60 trailing IMF mean and full historical publication/revision/fallback language read.",
+  "evidence": [
+    {
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0",
+      "observed_utc": "2026-10-17T19:07:42.944+00:00",
+      "finding": "Official IMF-owned layer, 165 complete daily rows per chokepoint through October11; full source-window and five-class arithmetic in packet. Publication-state archive not reconstructed."
+    },
+    {
+      "url": "https://en.irna.ir/news/86186085/Islamabad-Memorandum-of-Understanding-between-Iran-and-US",
+      "observed_utc": "2026-10-17T19:56:11.084251+00:00",
+      "finding": "Captured June MOU describes gradual best-efforts navigation; June measured seven-day peak31.857 does not reach60."
+    },
+    {
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4542098/us-forces-to-resume-naval-blockade-against-iran/",
+      "observed_utc": "2026-10-17T19:56:11.084274+00:00",
+      "finding": "Official July13 notice resumed Iranian-port blockade July14; does not establish a current qualifying traffic normalization."
+    },
+    {
+      "url": "https://www.presstv.co.uk/Detail/2026/10/17/778543/Iran-Abbas-Araghci-Tehran-conveyed-seven-day-plan-reopen-Strait-of-Hormuz-choice-rests-with-US",
+      "observed_utc": "2026-10-17T19:56:11.084277+00:00",
+      "finding": "October17 state-broadcaster attribution of conditional seven-day offer; US mutual acceptance and actual implementation remain separate unverified events."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.26,
+    "low": 0.08,
+    "high": 0.65,
+    "method": "Primary source-bound current-traffic and implemented-versus-nominal-regime scenario model",
+    "reasoning": "Explicit branch arithmetic in models/shipping_scenarios.py and shipping_method.md; observed weeks inform magnitude, not calibrated forward probabilities.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 89.4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.26,
+        "best_bid": 0.11,
+        "best_ask": 0.12,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.479,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.12,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.2,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.12,
+        "break_even_probability_with_idealized_carry": 0.12088783133828669,
+        "central_expected_profit_usd": 1.4000000000000001,
+        "default_10pp_stressed_profit_usd": 0.40000000000000013,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.16,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.1
+      },
+      "No": {
+        "probability": 0.74,
+        "best_bid": 0.88,
+        "best_ask": 0.89,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.479,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.89,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.9,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.89,
+        "break_even_probability_with_idealized_carry": 0.8965847490922931,
+        "central_expected_profit_usd": -1.5,
+        "default_10pp_stressed_profit_usd": -2.5,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.64,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.8
+      }
+    }
+  },
+  "verdict": "YES price/model difference clears default reserve, but uncertainty and December hold-only prevent entry",
+  "reopen_condition": "Changed official daily series, concrete sustained navigation restrictions/implementation or qualifying earlier publication; then fresh both-sided depth/fees and full execution checks.",
+  "current_description_sha256": "cb371ec8e828421f47cbb688988125d12401981984ee047e317fc25d02bc0b07",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "83783489454659420807679723574840032660002326710045123865554753994450797728825",
+    "48727431314333088243693016929623363710488980152833544156961659445129455301311"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0084",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0084.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0084.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/portwatch_fullwindow_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/shipping_method.md",
+    "priority_followup": false,
+    "entry_policy_change": false
+  },
+  "evaluated_utc": "2026-10-17T19:56:11.376397+00:00",
+  "question": "Strait of Hormuz traffic returns to normal by December 31?",
+  "market_id": "2176270",
+  "valuation_author": "primary_operator",
+  "original_index": 61,
+  "report_sha256": "9f468839bba8c568a14c61a32c14d69abc4c8916a4512ef2eb6992ba0237ebf8"
+}

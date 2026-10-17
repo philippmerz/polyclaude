@@ -1,0 +1,151 @@
+{
+  "review_index": 5,
+  "condition_id": "0xd8659b58a90d0d69fb1170f25b2b896871a1328115fd11c6f4cfe2b01a2a8ba0",
+  "criteria_sha256": "ceb8afe371543e0d07e20ed62bdb6e0ff875b0e26a1113c6b5ebcbed381cea0b",
+  "status": "valued",
+  "literal_analysis": "Seven-day mean <=10 in July9–December31 window; prior-publication and revision preservation, fourteen-day fallback read in full.",
+  "evidence": [
+    {
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0",
+      "observed_utc": "2026-10-17T19:07:42.944+00:00",
+      "finding": "Official IMF-owned layer, 165 complete daily rows per chokepoint through October11; full source-window and five-class arithmetic in packet. Publication-state archive not reconstructed."
+    },
+    {
+      "url": "https://en.irna.ir/news/86186085/Islamabad-Memorandum-of-Understanding-between-Iran-and-US",
+      "observed_utc": "2026-10-17T19:56:08.678332+00:00",
+      "finding": "Captured June MOU describes gradual best-efforts navigation; June measured seven-day peak31.857 does not reach60."
+    },
+    {
+      "url": "https://www.centcom.mil/MEDIA/PUBLIC-RELEASES/Article/4542098/us-forces-to-resume-naval-blockade-against-iran/",
+      "observed_utc": "2026-10-17T19:56:08.678356+00:00",
+      "finding": "Official July13 notice resumed Iranian-port blockade July14; does not establish a current qualifying traffic normalization."
+    },
+    {
+      "url": "https://www.presstv.co.uk/Detail/2026/10/17/778543/Iran-Abbas-Araghci-Tehran-conveyed-seven-day-plan-reopen-Strait-of-Hormuz-choice-rests-with-US",
+      "observed_utc": "2026-10-17T19:56:08.678360+00:00",
+      "finding": "October17 state-broadcaster attribution of conditional seven-day offer; US mutual acceptance and actual implementation remain separate unverified events."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Primary source-bound current-traffic and implemented-versus-nominal-regime scenario model",
+    "reasoning": "Explicit branch arithmetic in models/shipping_scenarios.py and shipping_method.md; observed weeks inform magnitude, not calibrated forward probabilities.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 89.4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "best_bid": 0.17,
+        "best_ask": 0.18,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.579,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.18,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.7999999999999998,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.18,
+        "break_even_probability_with_idealized_carry": 0.18133174700743002,
+        "central_expected_profit_usd": -0.9999999999999998,
+        "default_10pp_stressed_profit_usd": -1.7999999999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.7000000000000002
+      },
+      "No": {
+        "probability": 0.92,
+        "best_bid": 0.82,
+        "best_ask": 0.83,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.579,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.83,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.299999999999999,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.8299999999999998,
+        "break_even_probability_with_idealized_carry": 0.8361408334231495,
+        "central_expected_profit_usd": 0.9000000000000021,
+        "default_10pp_stressed_profit_usd": -0.09999999999999787,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.2
+      }
+    }
+  },
+  "verdict": "NO central edge fails default reserve and carry; December hold-only remains",
+  "reopen_condition": "Changed official daily series, concrete sustained navigation restrictions/implementation or qualifying earlier publication; then fresh both-sided depth/fees and full execution checks.",
+  "current_description_sha256": "7098aa56dc92e4e0226101f80fa5fc2cdb4de8414633af30fafe1ac504a179af",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "43976511902268111041633866799555037330317427315454056847054364885183934986197",
+    "33460385394344753109351907923235209397225125746318923726067817676780036931403"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0025",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0025.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0025.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/portwatch_fullwindow_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/shipping_method.md",
+    "priority_followup": false,
+    "entry_policy_change": false
+  },
+  "evaluated_utc": "2026-10-17T19:56:09.101472+00:00",
+  "question": "Bab el-Mandeb Strait effectively closed by December 31?",
+  "market_id": "2853074",
+  "valuation_author": "primary_operator",
+  "original_index": 5,
+  "report_sha256": "949c3bb736440ccfb376d0320ad39111b344e5530a963af5d47b4806a494346b"
+}

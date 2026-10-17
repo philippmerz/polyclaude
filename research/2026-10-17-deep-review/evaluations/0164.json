@@ -1,0 +1,140 @@
+{
+  "review_index": 164,
+  "condition_id": "0xaf874c80349379303164629c3962b1456f667ca1d44edf95e0474dd13483a4b3",
+  "criteria_sha256": "0c93bc2fc2ddd44c85349a1ac4bf8c6bc785689ecdd5bd4d58277b5c0744aabc",
+  "status": "valued",
+  "literal_analysis": "Complete exact individual party-nominee/replacement/independent and three-source/certification criteria read; California named-Hilton/Other fallback handled separately.",
+  "evidence": [
+    {
+      "url": "https://www.weareequis.us/research/memo-arizona-voter-research---sept-2026",
+      "observed_utc": "2026-10-17T20:04:07.955098+00:00",
+      "finding": "Original memo read by root: fieldSep1–9, political sponsor,49/43LV, full/subgroup MoE distinct; displayed margin is6 despite rounded+7 narrative."
+    },
+    {
+      "url": "https://www.azsos.gov/elections/election-information/2026-election-info",
+      "observed_utc": "2026-10-17T20:04:07.955120+00:00",
+      "finding": "Official general calendar and primary canvass; final general listing403 is an explicit source gap."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.82,
+    "low": 0.45,
+    "high": 0.98,
+    "method": "Primary vote-margin model with explicit common poll error and unmodeled-event branch",
+    "reasoning": "Full state_election_model.py/method gives priors, source populations/dates, share-to-margin MoE conversion, branch weights and sensitivity; not calibrated or price-derived.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.82,
+        "best_bid": 0.92,
+        "best_ask": 0.93,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.112,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.93,
+            "fee_usd": 0.026039999999999987
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.32604,
+        "fee_usd": 0.02604,
+        "break_even_probability_before_carry": 0.9326040000000001,
+        "break_even_probability_with_idealized_carry": 0.9368429192160439,
+        "central_expected_profit_usd": -1.1260400000000015,
+        "default_10pp_stressed_profit_usd": -2.1260400000000015,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.72,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.170560000000002
+      },
+      "No": {
+        "probability": 0.18000000000000005,
+        "best_bid": 0.07,
+        "best_ask": 0.08,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.112,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.08,
+            "fee_usd": 0.02944
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.8294400000000001,
+        "fee_usd": 0.02944,
+        "break_even_probability_before_carry": 0.082944,
+        "break_even_probability_with_idealized_carry": 0.0833210012947141,
+        "central_expected_profit_usd": 0.9705600000000004,
+        "default_10pp_stressed_profit_usd": -0.029439999999999578,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.08000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.6739600000000001
+      }
+    }
+  },
+  "verdict": "NO maker near .07 is a thin contrarian watch; current source, notional and risk checks required",
+  "reopen_condition": "New current named-matchup poll, official nominee/roster change, material early-vote/campaign development or qualifying call/certification; fresh both-sided book and full execution gates.",
+  "current_description_sha256": "e6b6c3d98fef208e9a76eb76f6159667d78f6387ea19ddc7ec88becca12c94db",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "48368039124533504674394545622809320495392482760644292167644042386014017726777",
+    "2523036761393218729489135332182856159698268685360641264822465280431935747282"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0092",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/election_extension_sources.json",
+      "data/deep_review_20261017/election_extension_sources_corrected.json",
+      "data/deep_review_20261017/macro_election_sources.json"
+    ],
+    "tracked_method": "research/2026-10-17-deep-review/models/state_election_method.md",
+    "priority_followup": true,
+    "source_url_correction_preserved": true
+  },
+  "evaluated_utc": "2026-10-17T20:04:08.237475+00:00",
+  "question": "Will the Democrats win the Arizona governor race in 2026?",
+  "market_id": "629183",
+  "valuation_author": "primary_operator",
+  "original_index": 164,
+  "report_sha256": "ee19be06c94fd28a8c9009f08890ddb0e602457d4f8b7e73e15e00828c6c4fda"
+}

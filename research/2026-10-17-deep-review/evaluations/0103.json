@@ -1,0 +1,140 @@
+{
+  "review_index": 103,
+  "condition_id": "0x80ebf0a88a44bf737d4047b3accd7108285c69b84257e5c684bdc4c715c81139",
+  "criteria_sha256": "3fedb5573cfdfb88b4389fa6bf0eb3dbadc774be59de55b123733342ced60c73",
+  "status": "valued",
+  "literal_analysis": "Completeindividualregime/officeannouncement/incapacity/landcontrolcriteriaread; dates/baselinesandnonqualifyingnewsdistinguished.",
+  "evidence": [
+    {
+      "url": "https://www.war.gov/serve-from-netstorage/News/News-Stories/Article/Article/4513916/us-prepared-for-anything-hegseth-tells-troops-at-guantanamo-bay/index.html",
+      "observed_utc": "2026-10-17T19:43:07.053594+00:00",
+      "finding": "OfficialcontingencyreadinessatGuantanamo,notanoffensiveorder."
+    },
+    {
+      "url": "https://www.southcom.mil/MEDIA/NEWS-ARTICLES/Article/4589266/officials-provide-progress-update-on-major-operation-1-year-after-its-launch/",
+      "observed_utc": "2026-10-17T19:43:07.053626+00:00",
+      "finding": "Sep2regionalmaritimeoperationdescription,notCubanlandcontrol."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Primary criterion-bound currentstatus/competingregime scenario valuation",
+    "reasoning": "See primarysharedmethod for explicit branch probabilities, datedsourcegaps and75dayhorizon; no calibratedeventfrequencyclaim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "best_bid": 0.06,
+        "best_ask": 0.07,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.211,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.07,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.7000000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.07,
+        "break_even_probability_with_idealized_carry": 0.07043422306820347,
+        "central_expected_profit_usd": 0.09999999999999998,
+        "default_10pp_stressed_profit_usd": -0.7000000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.6
+      },
+      "No": {
+        "probability": 0.92,
+        "best_bid": 0.93,
+        "best_ask": 0.94,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.211,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.94,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.399999999999999,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.9399999999999998,
+        "break_even_probability_with_idealized_carry": 0.9458309954873035,
+        "central_expected_profit_usd": -0.1999999999999975,
+        "default_10pp_stressed_profit_usd": -1.1999999999999975,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.3
+      }
+    }
+  },
+  "verdict": "YES small central tail value, no robustfloor; no entry",
+  "reopen_condition": "Verifiedliteralqualifyingevent/announcement, changedmilitaryintent/officecontrol/sourceconsensus;freshbooks/fullgatesbeforeanyentry.",
+  "current_description_sha256": "65ffd83ee00a4bcbc021491d29260a4d6a99d2e4573c807773d1d871e735335b",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "1291454874125024564913411658636854434792972068510027777552181749936579562639",
+    "46036307473347147486878725188057240439237346445231099615680388314304154599904"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0128",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0128.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0128.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/office_security_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json",
+      "data/deep_review_20261017/geopolitics_extension_sources.json"
+    ],
+    "tracked_method": "models/office_security_method.md"
+  },
+  "evaluated_utc": "2026-10-17T19:43:07.380759+00:00",
+  "question": "Will the U.S. invade Cuba in 2026?",
+  "market_id": "1107878",
+  "valuation_author": "primary_operator",
+  "original_index": 103,
+  "report_sha256": "9975416271fabe0cc3c65ca3ae07edc0d300225314007fcb04e9494626a59b12"
+}

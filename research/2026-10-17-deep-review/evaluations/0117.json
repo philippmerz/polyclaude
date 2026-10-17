@@ -1,0 +1,145 @@
+{
+  "review_index": 117,
+  "condition_id": "0xec10a736a52480e4cc689cfcdf2a5a5f2bacb86aa84c1dd1163b3809010eb297",
+  "criteria_sha256": "efbedd7ec5dde4f7b921e60e5f065fd90571238392a5b0929d0576c9c0aac39c",
+  "status": "valued",
+  "literal_analysis": "Completeindividualregime/officeannouncement/incapacity/landcontrolcriteriaread; dates/baselinesandnonqualifyingnewsdistinguished.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/10/what-they-are-saying-president-trump-delivers-immediate-diesel-relief-saving-americans-up-to-100-per-fill/",
+      "observed_utc": "2026-10-17T19:43:07.643648+00:00",
+      "finding": "Oct6officialtitleconfirmscurrentWilesrole."
+    },
+    {
+      "url": "https://www.whitehouse.gov/videos/president-trump-gaggles-with-press-upon-departure-from-the-white-house-oct-16-2026/",
+      "observed_utc": "2026-10-17T19:43:07.643671+00:00",
+      "finding": "OfficialOct16gaggleposted;pagehasnotranscript."
+    },
+    {
+      "url": "https://keyt.com/politics/cnn-us-politics/2026/10/16/trump-says-zero-chance-hes-replacing-chief-of-staff-susie-wiles/",
+      "observed_utc": "2026-10-17T19:43:07.643674+00:00",
+      "finding": "AttributedCNNtranscriptofdenial;notindependentverificationoffuturetenure."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.19,
+    "low": 0.05,
+    "high": 0.45,
+    "method": "Primary criterion-bound currentstatus/competingregime scenario valuation",
+    "reasoning": "See primarysharedmethod for explicit branch probabilities, datedsourcegaps and75dayhorizon; no calibratedeventfrequencyclaim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.19,
+        "best_bid": 0.3,
+        "best_ask": 0.31,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 35.628,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.31,
+            "fee_usd": 0.08556
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.18556,
+        "fee_usd": 0.08556,
+        "break_even_probability_before_carry": 0.318556,
+        "break_even_probability_with_idealized_carry": 0.32053206233878034,
+        "central_expected_profit_usd": -1.2855600000000003,
+        "default_10pp_stressed_profit_usd": -2.2855600000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.09,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.916
+      },
+      "No": {
+        "probability": 0.81,
+        "best_bid": 0.69,
+        "best_ask": 0.7,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 35.628,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.7,
+            "fee_usd": 0.08400000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.08401,
+        "fee_usd": 0.08401,
+        "break_even_probability_before_carry": 0.7084010000000001,
+        "break_even_probability_with_idealized_carry": 0.7127953436534058,
+        "central_expected_profit_usd": 1.0159900000000013,
+        "default_10pp_stressed_profit_usd": 0.015990000000000393,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.7100000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.814439999999999
+      }
+    }
+  },
+  "verdict": "NO central edge, stressed margin too thin after costs/source uncertainty; no entry",
+  "reopen_condition": "Verifiedliteralqualifyingevent/announcement, changedmilitaryintent/officecontrol/sourceconsensus;freshbooks/fullgatesbeforeanyentry.",
+  "current_description_sha256": "29a4f6a0247993ca3b16356535d0411d34be0a036fc980689d45c9e935d84f3d",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "66644629028327937907428619061383718824519631245959168127779085524141442398219",
+    "100947827765345569241081285525009742123553528235404464449099801853748787339273"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0142",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0142.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0142.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/office_security_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json",
+      "data/deep_review_20261017/geopolitics_extension_sources.json"
+    ],
+    "tracked_method": "models/office_security_method.md"
+  },
+  "evaluated_utc": "2026-10-17T19:43:07.944481+00:00",
+  "question": "Susie Wiles out as White House Chief of Staff by December 31?",
+  "market_id": "1796504",
+  "valuation_author": "primary_operator",
+  "original_index": 117,
+  "report_sha256": "f9e82b4685c89c752acaa802a1a473545f521e5092ad7b28ab1cd5d666e93b73"
+}

@@ -1,0 +1,68 @@
+{
+  "author": "Primary judgment; not an empirical posterior or minimum tail estimate",
+  "observed_data_latest": "2026-10-11",
+  "weekly_normal_sensitivity": {
+    "weeks": [
+      206,
+      184,
+      178,
+      191,
+      173,
+      190,
+      207,
+      198
+    ],
+    "mean": 190.875,
+    "sample_sd": 12.38013962533772,
+    "continuity_corrected_under170": 0.04212374850633216,
+    "eight_day_shock_hazard_from_15pct_over75days": 0.01718595976107351,
+    "3pct_adverse_source_or_regime_branch_is_judgment_not_observed_frequency": true
+  },
+  "cases": {
+    "5": {
+      "unrounded": 0.07925,
+      "p_yes": 0.08,
+      "range": [
+        0.01,
+        0.3
+      ]
+    },
+    "19": {
+      "unrounded": 0.039,
+      "p_yes": 0.04,
+      "range": [
+        0.005,
+        0.2
+      ]
+    },
+    "40": {
+      "unrounded": 0.145,
+      "p_yes": 0.15,
+      "range": [
+        0.03,
+        0.45
+      ]
+    },
+    "61": {
+      "unrounded": 0.26375000000000004,
+      "p_yes": 0.26,
+      "range": [
+        0.08,
+        0.65
+      ]
+    },
+    "215": {
+      "unrounded": 0.08349412189032429,
+      "p_yes": 0.08,
+      "range": [
+        0.01,
+        0.3
+      ]
+    }
+  },
+  "limitations": [
+    "Branch weights and event rates are not fitted or calibrated.",
+    "Current daily data do not reconstruct every historically published chart or revision.",
+    "The broad ranges are scenario ranges, not confidence intervals or entry guarantees."
+  ]
+}

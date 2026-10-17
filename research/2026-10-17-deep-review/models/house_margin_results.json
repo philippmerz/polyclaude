@@ -1,0 +1,489 @@
+{
+  "model": "Physical election-margin sensitivity, uncalibrated, primary coefficients. CookPVI is share relative to national baseline, so multiply by2 before comparing two-party margins.",
+  "assumptions": {
+    "generic_D_margin_pp": 8,
+    "national_error_sd_pp": 3,
+    "local_error_sd_pp": 6,
+    "pvi_margin_transfer_coefficient": 0.8,
+    "fundraising_adjustment": "Subjective context at most1.5pp, not fitted causal effect; outside spending/loans not zero.",
+    "poll_covariance": "One named poll percase used; other same-period partisan polls not independent trials."
+  },
+  "cases": {
+    "81": {
+      "inputs": {
+        "district": "NC11",
+        "pvi_D_share_pp": -5,
+        "incumbency_D_margin_pp": 0,
+        "cash_context_D_adjustment_pp": 1.5,
+        "poll_D_margin_pp": 3,
+        "poll_margin_sampling_sd_pp": 4.387755102040816,
+        "poll_non_sampling_sd_pp": 3,
+        "age_turnout_sd_pp": 2.5
+      },
+      "prior_mean_D_margin_pp": 1.5,
+      "prior_sd_margin_pp": 6.708203932499369,
+      "effective_poll_sd_pp": 5.873873920632381,
+      "central": {
+        "mean_D_margin_pp": 2.3490310278033535,
+        "sd_margin_pp": 4.4191706423150725,
+        "p_D_win": 0.7024827847605712
+      },
+      "sensitivity_grid": [
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -0.21698965739888232,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.48041904621094494
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 1.481072398207824,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6312429524550307
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 3.1791344538145307,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7640515733261573
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -1.0849482869944116,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.4030309843377906
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 0.6131137686122948,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.5551720200302299
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 2.311175824219001,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6995089033616958
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -1.9529069165899406,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.3292746109700254
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": -0.2548448609832343,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.47700653020971995
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 1.4432171946234722,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6280075942968703
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 1.5189276017921762,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6344690355520413
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 3.2169896573988828,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7666816699833536
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 4.915051713005589,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.8669763538996962
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 0.6509689721966468,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.5585546284892663
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 2.3490310278033535,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7024827847605712
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 4.04709308341006,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.820115084060916
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -0.21698965739888232,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.48041904621094494
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 1.481072398207824,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6312429524550307
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 3.1791344538145307,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7640515733261573
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 3.2548448609832343,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7692954169558701
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 4.95290691658994,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.8688087028926605
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 6.6509689721966465,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.9338413694730077
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 2.3868862313877055,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7054431558463258
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 4.084948286994412,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.8223531174377793
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 5.783010342601118,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.9046682667478503
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 1.5189276017921762,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.6344690355520413
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 3.2169896573988828,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.7666816699833536
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 4.915051713005589,
+          "sd_margin_pp": 4.4191706423150725,
+          "p_D_win": 0.8669763538996962
+        }
+      ]
+    },
+    "116": {
+      "inputs": {
+        "district": "OH07",
+        "pvi_D_share_pp": -5,
+        "incumbency_D_margin_pp": -2,
+        "cash_context_D_adjustment_pp": 1,
+        "poll_D_margin_pp": 8,
+        "poll_margin_sampling_sd_pp": 4.8979591836734695,
+        "poll_non_sampling_sd_pp": 3,
+        "age_turnout_sd_pp": 5
+      },
+      "prior_mean_D_margin_pp": -1.0,
+      "prior_sd_margin_pp": 6.708203932499369,
+      "effective_poll_sd_pp": 7.615116818863075,
+      "central": {
+        "mean_D_margin_pp": 2.9324204643338097,
+        "sd_margin_pp": 5.03367635812345,
+        "p_D_win": 0.7199053617467515
+      },
+      "sensitivity_grid": [
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 0.4954848571856089,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.5392061578965741
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 1.8062916786302123,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.6401431455220453
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 3.1170985000748157,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7321237957849169
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -0.630643928517989,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.4501489802687618
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 0.6801628929266142,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.5537424863521299
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 1.990969714371218,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.653774085359383
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": -1.756772714221587,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.36354318830765425
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": -0.44596589277698373,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.46470131181994695
+        },
+        {
+          "national_D_margin": 4,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 0.86484092866762,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.568206938181091
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 2.7477424285928045,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7074229989994886
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 4.058549250037408,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7899590997743486
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 5.369356071482012,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.8569433526504496
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 1.621613642889207,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.6263315834251912
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 2.9324204643338097,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7199053617467515
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 4.2432272857784135,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.8003767847954092
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 0.4954848571856089,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.5392061578965741
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 1.8062916786302123,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.6401431455220453
+        },
+        {
+          "national_D_margin": 8,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 3.1170985000748157,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7321237957849169
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 5.000000000000001,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.8397204956744024
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 6.310806821444603,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.895027599976326
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.6,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 7.621613642889207,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.9350028908446424
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 3.8738712142964027,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7792286796883683
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 5.184678035741006,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.848494595592463
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 0.8,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 6.495484857185609,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.9015450895958228
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": -3,
+          "mean_D_margin_pp": 2.7477424285928045,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7074229989994886
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 0,
+          "mean_D_margin_pp": 4.058549250037408,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.7899590997743486
+        },
+        {
+          "national_D_margin": 12,
+          "pvi_beta": 1.0,
+          "poll_bias_D_margin": 3,
+          "mean_D_margin_pp": 5.369356071482012,
+          "sd_margin_pp": 5.03367635812345,
+          "p_D_win": 0.8569433526504496
+        }
+      ]
+    }
+  }
+}

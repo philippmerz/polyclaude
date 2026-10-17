@@ -1,10 +1,12 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T19:34:52.374351+00:00
+Updated: 2026-10-17T20:04:10.799321+00:00
 
-**53/100 first-milestone valuations saved:** 53 valued; 0 blocked after in-depth review. 15 factual exclusions separately; 2932 pending.
+**75/100 first-milestone valuations saved:** 75 valued; 0 blocked after in-depth review. 15 factual exclusions separately; 2910 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
+
+Read [dated corrections](CURRENT_REVISIONS.md) and [candidate follow-up](candidate_followup.md) with the original observations. A [spacing-normalized reader snapshot](reader/INDEX.md) is available for older reports; the complete canonical queue is below.
 
 Each report below is written before moving to the next evaluation. Related contracts may share evidence, but each probability, literal binding and economic evaluation is explicit. Observations are dated; orders need fresh execution checks.
 
@@ -14,6 +16,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |2|[Will Man I Need – Olivia Dean be the #2 song in the US for 2026?](evaluations/0002.md)|valued|YES positive central model; historical/cutoff input gaps prevent near-market entry|
 |3|[Will the Tesla Roadster's 0-60 time be less than 1 second?](evaluations/0003.md)|valued|Apparent cheap NO under primary interpretation; current UMA dispute blocks entry|
 |4|[Will the US confirm that aliens exist before 2027?](evaluations/0004.md)|valued|NO small central edge, insufficient tail margin; no entry|
+|5|[Bab el-Mandeb Strait effectively closed by December 31?](evaluations/0005.md)|valued|NO central edge fails default reserve and carry; December hold-only remains|
 |6|[Will Manchester City FC win on 2026-10-17?](evaluations/0006.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |7|[Will Microsoft be the largest company in the world by market cap on October 31, 2026?](evaluations/0007.md)|valued|YES central tail value; NO has no offer; no supported entry|
 |8|[Bitcoin Up or Down on October 17?](evaluations/0008.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -23,6 +26,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |14|[Will Anthropic have the best AI model at the end of December 2026?](evaluations/0014.md)|valued|NO central and default10pp edge; frontier-release uncertainty/December doctrine require follow-up, no order|
 |16|[Will "Animals" be the top US Netflix movie this week?](evaluations/0016.md)|valued|NO positive central tail arithmetic, unsupported floor; YES negative EV, no entry|
 |18|[Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?](evaluations/0018.md)|valued|YES central tail value; no supported probability floor at offered cost|
+|19|[Strait of Hormuz traffic returns to normal by October 31?](evaluations/0019.md)|valued|Cheap YES has central value but no supported reserve floor; no entry|
 |20|[Manchester City FC vs. Ipswich Town FC: O/U 3.5](evaluations/0020.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |21|[Will Microsoft be the largest company in the world by market cap on December 31?](evaluations/0021.md)|valued|Priority YES lead: central model~4% versus0.5c ask; tail underwriting incomplete, no order|
 |22|[Will the price of Bitcoin be above $78,000 on October 17?](evaluations/0022.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -36,29 +40,42 @@ Each report below is written before moving to the next evaluation. Related contr
 |37|[Will "Sacrifice" be the #2 US Netflix movie this week?](evaluations/0037.md)|valued|YES small central upside, uncertainty/minimum-size failure; no entry|
 |38|[Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?](evaluations/0038.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |39|[Will the Democratic Party win the CA-04 House seat?](evaluations/0039.md)|valued|Priority makerYES candidate~.930/10shares with documented5ppcase reserve; no order|
+|40|[Strait of Hormuz traffic returns to normal by November 30?](evaluations/0040.md)|valued|YES central edge is consumed by 10pp reserve before carry; watch cheaper maker|
 |42|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0042.md)|valued|YES positive central EV but fails10ppstress; no entry|
 |43|[Will Bitcoin dip to $78,000 October 12-18?](evaluations/0043.md)|valued|YES central value, uncertainty floor fails; no entry|
 |44|[Will "Sacrifice" be the top US Netflix movie this week?](evaluations/0044.md)|valued|Both asks negative central EV; no supported tail bid|
+|45|[Will the Iranian regime fall before 2027?](evaluations/0045.md)|valued|YES tiny central tail edge, unsupported uncertainty floor; no entry|
+|47|[Modi out by December 31, 2026?](evaluations/0047.md)|valued|YES nominal point edge is below operating cost; neither robust side enters|
 |49|[Will Apple be the third-largest company in the world by market cap on October 31?](evaluations/0049.md)|valued|YES central rank-change lead; event-tail calibration needed, no entry|
 |50|[Will Bitcoin reach $100,000 by December 31, 2026?](evaluations/0050.md)|valued|YES positive central forecast, fails10ppstress/carry; no entry|
 |51|[Will "Doing Life" be the #2 global Netflix movie this week?](evaluations/0051.md)|valued|Priority maker-NO planning lead at.021/50shares; fresh gates required, no order|
 |53|[Bank of Japan increases interest rates by 50+ bps after the October 2026 meeting?](evaluations/0053.md)|valued|YES positive central tail arithmetic; unsupported floor and minimum size, no entry|
+|57|[Pete Hegseth out as Secretary of Defense by December 31?](evaluations/0057.md)|valued|NO central advantage fails10ppstress/carry; no entry|
+|59|[Will the Republicans win the Texas Senate race in 2026?](evaluations/0059.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|61|[Strait of Hormuz traffic returns to normal by December 31?](evaluations/0061.md)|valued|YES price/model difference clears default reserve, but uncertainty and December hold-only prevent entry|
 |65|[Will "Animals" be the #2 US Netflix movie this week?](evaluations/0065.md)|valued|Both asks negative central EV; no entry|
 |70|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0070.md)|valued|NO central/default-stress lead; metric/release and December uncertainty follow-up, no order|
 |71|[Will the price of Bitcoin be above $80,000 on October 18?](evaluations/0071.md)|valued|NO positive central value afterweekend correction, tail uncertainty preventsentry|
 |72|[Will "Transformers One" be the top US Netflix movie this week?](evaluations/0072.md)|valued|Both asks negative central EV; no entry|
 |76|[Will SV 07 Elversberg win on 2026-10-17?](evaluations/0076.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |79|[Will "Ice Age: Collision Course" be the #2 global Netflix movie this week?](evaluations/0079.md)|valued|YES central value, proxy/model error consumes robust edge; no entry|
+|81|[Will the Democratic Party win the NC-11 House seat?](evaluations/0081.md)|valued|SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding|
 |85|[Will the highest temperature in Beijing be 15°C on October 17?](evaluations/0085.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|87|[Will the U.S. invade Iran before 2027?](evaluations/0087.md)|valued|Neither offered side has positive central net economics; no entry|
 |88|[Another Fed rate hike in 2026?](evaluations/0088.md)|valued|YES small central edge consumed by uncertainty/carry; no entry|
 |93|[Will "Norm: The Tale of Norm Macdonald" be the #2 US Netflix movie this week?](evaluations/0093.md)|valued|Both asks negative central EV; no supported maker entry|
+|94|[Putin out as President of Russia by December 31, 2026?](evaluations/0094.md)|valued|Tiny YES central tail value lacks robustfloor; no entry|
 |99|[Will Bitcoin reach $95,000 in October?](evaluations/0099.md)|valued|YES central model value, no supported robustfloor; no entry|
 |100|[Will "Doing Life" be the top US Netflix movie this week?](evaluations/0100.md)|valued|Both asks negative central EV; no entry|
+|103|[Will the U.S. invade Cuba in 2026?](evaluations/0103.md)|valued|YES small central tail value, no robustfloor; no entry|
 |104|[Fulham FC vs. Hull City AFC: O/U 2.5](evaluations/0104.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |105|[Will "Instadocs: AI Gone Wild" be the #2 US Netflix show this week?](evaluations/0105.md)|valued|YES central model lead; unresolved category/rank mapping and error floor, no entry|
 |107|[Will "Animals" be the #2 global Netflix movie this week?](evaluations/0107.md)|valued|YES ask negative central EV, NO has no offer; no entry|
 |110|[Will XRP reach $2.60 by December 31, 2026?](evaluations/0110.md)|valued|Both asks negative central EV; no supported maker tailentry|
 |111|[Will Villarreal CF win on 2026-10-17?](evaluations/0111.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|115|[Will the Republicans win the Michigan Senate race in 2026?](evaluations/0115.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|116|[Will the Democratic Party win the OH-07 House seat?](evaluations/0116.md)|valued|SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding|
+|117|[Susie Wiles out as White House Chief of Staff by December 31?](evaluations/0117.md)|valued|NO central edge, stressed margin too thin after costs/source uncertainty; no entry|
 |118|[Will Paris Saint-Germain FC win on 2026-10-17?](evaluations/0118.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |120|[Will the price of Bitcoin be between $78,000 and $80,000 on October 17?](evaluations/0120.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |121|[Will "The Widower: 'Til Death Do Us Part" be the #2 US Netflix movie this week?](evaluations/0121.md)|valued|YES central lead, uncertainty/minimum-size failure individually; possible joint-union research|
@@ -68,13 +85,20 @@ Each report below is written before moving to the next evaluation. Related contr
 |148|[Will Anthropic have the best AI model at the end of October 2026?](evaluations/0148.md)|valued|NO central edge fails stressed all-in route; no entry|
 |149|[Will "Ice Age" be the #2 US Netflix movie this week?](evaluations/0149.md)|valued|YES central value, no supported individual robust floor; no entry|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
+|157|[Will Steve Hilton win the California Governor Election in 2026?](evaluations/0157.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |161|[Will Google have the best AI model at the end of December 2026?](evaluations/0161.md)|valued|YES central/default-stress lead; correlated AI/December uncertainty review needed, no order|
 |163|[Will "Transformers One" be the #2 global Netflix movie this week?](evaluations/0163.md)|valued|Both asks negative central EV; availability/model uncertainty remains, no entry|
+|164|[Will the Democrats win the Arizona governor race in 2026?](evaluations/0164.md)|valued|NO maker near .07 is a thin contrarian watch; current source, notional and risk checks required|
 |177|[Will "Ice Age: Collision Course" be the #2 US Netflix movie this week?](evaluations/0177.md)|valued|YES central lead, failsindividualstress; possible joint-unionresearch|
+|178|[Will the Republicans win the Idaho Senate race in 2026?](evaluations/0178.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |184|[Will "Norm: The Tale of Norm Macdonald" be the top US Netflix movie this week?](evaluations/0184.md)|valued|Both asks nonpositive central EV; no entry|
 |189|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0189.md)|valued|NO small central edge consumed by uncertainty; no entry|
 |191|[Will "Norm: The Tale of Norm Macdonald" be the #2 global Netflix movie this week?](evaluations/0191.md)|valued|YES negative central EV; NO nominal edge vanishes tocost/uncertainty; no entry|
 |205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
 |212|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 global Netflix movie this week?](evaluations/0212.md)|valued|YES negative central EV, NO offereddepth absent; no entry|
+|213|[Will the Republicans win the Maine Senate race in 2026?](evaluations/0213.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|215|[Will fewer than 170 ships transit the Bab el-Mandeb Strait between October 19-October 25?](evaluations/0215.md)|valued|NO maker around .78 is a concrete short-window watch; refresh data and test adverse regime before entry|
 |217|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0217.md)|valued|Priority makerNO research lead; release/protocol uncertainty and current gates outstanding|
+|220|[Will the Democrats win the New Hampshire Senate race in 2026?](evaluations/0220.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |226|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 US Netflix movie this week?](evaluations/0226.md)|valued|Tiny YES central edge, unsupported floor/minimum-size exposure; no entry|
+|234|[Will the Democrats win the Michigan governor race in 2026?](evaluations/0234.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|

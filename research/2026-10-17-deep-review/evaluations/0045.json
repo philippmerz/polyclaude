@@ -1,0 +1,140 @@
+{
+  "review_index": 45,
+  "condition_id": "0xbb4d51e6364066d92eb6f9b8413dd7193de70966736044463b205834805a1f3b",
+  "criteria_sha256": "4cf7788264f8e3d9c52b119e27250f7c5541115112346bc85e202ffe57cba551",
+  "status": "valued",
+  "literal_analysis": "Completeindividualregime/officeannouncement/incapacity/landcontrolcriteriaread; dates/baselinesandnonqualifyingnewsdistinguished.",
+  "evidence": [
+    {
+      "url": "https://nournews.ir/en/news/352985/education-is-everyones-right-all-must-have-equal-learning-opportunities",
+      "observed_utc": "2026-10-17T19:43:04.215072+00:00",
+      "finding": "Oct17 reported Iranian president public activity; state-linked reporting, not a population-control audit."
+    },
+    {
+      "url": "https://tasnimnews.ir/en/news/2026/10/17/3725165/iran-offers-7-day-plan-to-reopen-hormuz",
+      "observed_utc": "2026-10-17T19:43:04.215094+00:00",
+      "finding": "Currentconditionalshippingoffer demonstrates negotiating apparatus, not a completed peace deal or regime continuity guarantee."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Primary criterion-bound currentstatus/competingregime scenario valuation",
+    "reasoning": "See primarysharedmethod for explicit branch probabilities, datedsourcegaps and75dayhorizon; no calibratedeventfrequencyclaim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "best_bid": 0.05,
+        "best_ask": 0.06,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.254,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.06,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.6,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.06,
+        "break_even_probability_with_idealized_carry": 0.06037219120131726,
+        "central_expected_profit_usd": 0.10000000000000009,
+        "default_10pp_stressed_profit_usd": -0.6,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.5
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "best_bid": 0.94,
+        "best_ask": 0.95,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.254,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.95,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.5,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.95,
+        "break_even_probability_with_idealized_carry": 0.9558930273541899,
+        "central_expected_profit_usd": -0.20000000000000107,
+        "default_10pp_stressed_profit_usd": -1.200000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.83,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.399999999999999
+      }
+    }
+  },
+  "verdict": "YES tiny central tail edge, unsupported uncertainty floor; no entry",
+  "reopen_condition": "Verifiedliteralqualifyingevent/announcement, changedmilitaryintent/officecontrol/sourceconsensus;freshbooks/fullgatesbeforeanyentry.",
+  "current_description_sha256": "84f0230f6e82f86b947a2e269ef40d5e9a12b2f37c993df232cd6e9cd85c9fe2",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "10991849228756847439673778874175365458450913336396982752046655649803657501964",
+    "106181075047366745139197108801635573283215248045056329679360376976893016488727"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0067",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0067.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0067.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/office_security_sources.json",
+      "data/deep_review_20261017/hormuz_sources.json",
+      "data/deep_review_20261017/geopolitics_extension_sources.json"
+    ],
+    "tracked_method": "models/office_security_method.md"
+  },
+  "evaluated_utc": "2026-10-17T19:43:04.533692+00:00",
+  "question": "Will the Iranian regime fall before 2027?",
+  "market_id": "663583",
+  "valuation_author": "primary_operator",
+  "original_index": 45,
+  "report_sha256": "775ed6d61073b7c15b1a91c652a380f45be36a2b2e533598a1d78400c293eda2"
+}

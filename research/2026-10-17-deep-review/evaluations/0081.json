@@ -1,0 +1,150 @@
+{
+  "review_index": 81,
+  "condition_id": "0x7fd71c48a98bb515664cadb1f62cf1f27b770fe9cc1216571e183b982a48e42a",
+  "criteria_sha256": "cd1d92cac8f1683154580d93d7a65010db13ebcc6210be4ad7a7f8d745b6373b",
+  "status": "valued",
+  "literal_analysis": "ExactHousewinnerpartyrule: ballotaffiliationatall-House-calltrigger/caucusfallback,credibleconsensus/FEC; current2026candidate/mapidentitychecked.",
+  "evidence": [
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi",
+      "observed_utc": "2026-10-17T19:38:13.454149+00:00",
+      "finding": "PrimaryPVImethodsharevsmargin, currentracepagesdatedinpacket; notindependentlyrecomputedcurrentprecincts."
+    },
+    {
+      "url": "https://www.publicpolicypolling.com/polls/democrats-running-close-in-red-territory/",
+      "observed_utc": "2026-10-17T19:38:13.454170+00:00",
+      "finding": "Sep16primaryNC11Ager47–44; fullmethodmissing."
+    },
+    {
+      "url": "https://242750075.fs1.hubspotusercontent-na2.net/hubfs/242750075/Toplines%20-%20OH-07%20General%2008_03%20Cint.pdf",
+      "observed_utc": "2026-10-17T19:38:13.454173+00:00",
+      "finding": "PrimaryOH07Aug4–5original6pages:635LV,54/46named,50/50generic,question-orderandfollow-upbasesread."
+    },
+    {
+      "url": "https://www.fec.gov/data/",
+      "observed_utc": "2026-10-17T19:38:13.454176+00:00",
+      "finding": "DatedQ3candidatecommitteecontext; NCrawcapturesverified,OHrawarchivalgapdisclosed."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.7,
+    "low": 0.4,
+    "high": 0.9,
+    "method": "Primary national/PVI/candidate margin model with agedpoll likelihood",
+    "reasoning": "PrimaryGaussian sensitivity with explicit margin/share conversion, candidatecontext and one agedpoll only; no calibration claim.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.7,
+        "best_bid": 0.84,
+        "best_ask": 0.86,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.364,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.86,
+            "fee_usd": 0.04816
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.648159999999999,
+        "fee_usd": 0.04816,
+        "break_even_probability_before_carry": 0.8648159999999999,
+        "break_even_probability_with_idealized_carry": 0.8687468057447129,
+        "central_expected_profit_usd": -1.648159999999999,
+        "default_10pp_stressed_profit_usd": -2.648159999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.6,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.34624
+      },
+      "No": {
+        "probability": 0.30000000000000004,
+        "best_bid": 0.14,
+        "best_ask": 0.16,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.364,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.16,
+            "fee_usd": 0.053759999999999995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.6537600000000001,
+        "fee_usd": 0.05376,
+        "break_even_probability_before_carry": 0.16537600000000002,
+        "break_even_probability_with_idealized_carry": 0.1661276754209423,
+        "central_expected_profit_usd": 1.3462400000000003,
+        "default_10pp_stressed_profit_usd": 0.3462400000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.20000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.3518400000000002
+      }
+    }
+  },
+  "verdict": "SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding",
+  "reopen_condition": "Newpoll/nominee/affiliation/map/candidatecashoroutside-spending/news; comparefreshmakeredgeaftercorrelationandallcosts.",
+  "current_description_sha256": "b711182f35dca2178d3a625a7bc464b2fa424c2123d1781c40d1b9a930e9ff62",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "26725090567941494839753555432942030379400825958244897490974743127556962267884",
+    "92454050168323304543164027657212968476059707826906259679044731747027315653424"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0105",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0105.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0105.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/nc11_oh07_followup_sources.json"
+    ],
+    "tracked_method": "models/house_primary_method.md",
+    "model": "models/house_margin_sensitivity.py",
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-17T19:38:13.764265+00:00",
+  "question": "Will the Democratic Party win the NC-11 House seat?",
+  "market_id": "943542",
+  "valuation_author": "primary_operator",
+  "original_index": 81,
+  "report_sha256": "b2b7e0d7e1ea337ade92a707064a6d538db05664734bb138b500cf6d6a5fc853"
+}
