@@ -1,0 +1,160 @@
+{
+  "review_index": 18,
+  "condition_id": "0xf17ad24eb4ad57926495b114149c765b9b95bc286eadc91cbbfa901ceb10d0b8",
+  "criteria_sha256": "e267facb40e6aeb28c6cb173ee54bdddb40484e8c5969ef603c928eb4fe923bf",
+  "status": "valued",
+  "literal_analysis": "Exact December meeting25bp-equivalent upper-bound cut vs premeeting level; larger/emergency-premeeting cuts differ; rounding/fallback read.",
+  "evidence": [
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-17T18:57:50.056026+00:00",
+      "finding": "Sep16 unanimous25bp hike, target3.75–4.00."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "observed_utc": "2026-10-17T18:57:50.056068+00:00",
+      "finding": "16/18yearend appropriate-policy dots above current midpoint; not outcome probabilities."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "observed_utc": "2026-10-17T18:57:50.056072+00:00",
+      "finding": "Sep headline3.7y/y,core2.6,monthly .6/.3,energy contribution."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "observed_utc": "2026-10-17T18:57:50.056074+00:00",
+      "finding": "Sep payroll+29k/unemployment4.2 weak-labor counterweight."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/openmarket.htm",
+      "observed_utc": "2026-10-17T18:57:50.056150+00:00",
+      "finding": "Only2026 target change is Sep16announced/Sep17effective increase; no cut."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-17T18:57:50.056153+00:00",
+      "finding": "Oct27–28 and Dec8–9 scheduled; missing statement fallback separately in frozen rule."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.028,
+    "low": 0.005,
+    "high": 0.12,
+    "method": "Primary conditional October/December policy-path model",
+    "reasoning": "Sum .20*.03+.005*.05+.79*.025+.005*.40=.028; subjective small-reversal/crisis weights with0.005–0.12 sensitivity, no market-implied prior.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 53.2,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.028,
+        "best_bid": 0.006,
+        "best_ask": 0.007,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 11.318,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.007,
+            "fee_usd": 0.0034755000000000003
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.07348,
+        "fee_usd": 0.00348,
+        "break_even_probability_before_carry": 0.007348,
+        "break_even_probability_with_idealized_carry": 0.007380303062997971,
+        "central_expected_profit_usd": 0.20652000000000004,
+        "default_10pp_stressed_profit_usd": -0.07348,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.05701
+      },
+      "No": {
+        "probability": 0.972,
+        "best_bid": 0.993,
+        "best_ask": 0.994,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 11.318,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.994,
+            "fee_usd": 0.0029820000000000024
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.94299,
+        "fee_usd": 0.00299,
+        "break_even_probability_before_carry": 0.994299,
+        "break_even_probability_with_idealized_carry": 0.9986701082247984,
+        "central_expected_profit_usd": -0.22299000000000113,
+        "default_10pp_stressed_profit_usd": -1.2229899999999994,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.872,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.92652
+      }
+    }
+  },
+  "verdict": "YES central tail value; no supported probability floor at offered cost",
+  "reopen_condition": "Primary policy/labor/inflation evidence identifying December small-cut probability floor or cheaper supported maker offer; recheck larger minimum-size economics.",
+  "current_description_sha256": "fdb210318474078daa855d747ed941b2113f64d186318fe4a0e4776c7737e4e6",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "77367448845023382525249480243608609306658725883285195065573683809293972009019",
+    "23677896678650147625251750117853328843601853501710889530409633595389256242910"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0038",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0038.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0038.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/macro_election_sources.json",
+      "data/deep_review_20261017/macro_followup_sources.json"
+    ],
+    "primary_model": "data/deep_review_20261017/fed_primary_scenario.json",
+    "order_min_notional_warning": "10share diagnostic below1pUSD route; no scaled executable claim"
+  },
+  "evaluated_utc": "2026-10-17T18:57:50.424048+00:00",
+  "question": "Will the Fed decrease interest rates by 25 bps after the December 2026 meeting?",
+  "market_id": "3215006",
+  "valuation_author": "primary_operator",
+  "original_index": 18,
+  "report_sha256": "620aed8ac2a1760e6d6e9d6a09da76e6a9f1b0e0c026c3cdd0f524f0e5aea947"
+}

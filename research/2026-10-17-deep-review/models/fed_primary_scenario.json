@@ -1,0 +1,41 @@
+{
+  "author": "primary_operator",
+  "as_of": "2026-10-17",
+  "model_type": "subjective conditional scenario tree, NOT calibrated posterior or dot-vote frequencies",
+  "october_weights": {
+    "+25": 0.2,
+    "+50": 0.005,
+    "hold": 0.79,
+    "-25": 0.005
+  },
+  "december_given_october": {
+    "+25": {
+      "hold": 0.7,
+      "+25": 0.25,
+      "-25": 0.03,
+      "-50": 0.02
+    },
+    "+50": {
+      "hold": 0.65,
+      "+25": 0.25,
+      "-25": 0.05,
+      "-50": 0.05
+    },
+    "hold": {
+      "+25": 0.75,
+      "+50": 0.02,
+      "hold": 0.2,
+      "-25": 0.025,
+      "-50": 0.005
+    },
+    "-25": {
+      "hold": 0.3,
+      "+25": 0.1,
+      "-25": 0.4,
+      "-50": 0.2
+    }
+  },
+  "interpretation": "Changes are December relative to immediately before December, not net-year rate. Emergency sequences unmodeled residual covered by range. Sep16 excluded from another-hike contract despite Sep17 effective date.",
+  "P_December_minus25": 0.028000000000000004,
+  "P_another_hike": 0.8138000000000001
+}

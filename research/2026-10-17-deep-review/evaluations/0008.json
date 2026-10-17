@@ -1,0 +1,90 @@
+{
+  "review_index": 8,
+  "condition_id": "0x30b8d2cce78436aa3668afb4fe04932e84c18269c3826e8eb80796846185e85d",
+  "criteria_sha256": "255df2e165d87035a087d00b665a437f10c94309c41577e39a20b5e88ad10d6a",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5742115",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 8,
+    "frozen_market_id": "5742115",
+    "frozen_condition_id": "0x30b8d2cce78436aa3668afb4fe04932e84c18269c3826e8eb80796846185e85d",
+    "request_id": "req_0163",
+    "receipt_path": "req_0163.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0163.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5742115",
+      "conditionId": "0x30b8d2cce78436aa3668afb4fe04932e84c18269c3826e8eb80796846185e85d",
+      "question": "Bitcoin Up or Down on October 17?",
+      "slug": "bitcoin-up-or-down-on-october-17-2026",
+      "description": "This market will resolve to \"Up\" if the \"Close\" price for the Binance 1 minute candle for BTC/USDT Oct 16 '26 12:00 in the ET timezone (noon) is lower than the final \"Close\" price for the Oct 17 '26 12:00 ET candle.\n\nThis market will resolve to \"Down\" if the \"Close\" price for the Binance 1 minute candle for BTC/USDT Oct 16 '26 12:00 in the ET timezone (noon) is higher than the final \"Close\" price for the Oct 17 '26 12:00 ET candle.\n\nIf the final \"Close\" price for both of these candles is exactly equal on Binance, this market will resolve 50-50.\n\nThe resolution source for this market is Binance, specifically the BTC/USDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nPlease note that this market is about the price according to Binance BTC/USDT, not according to other exchanges or trading pairs.",
+      "description_sha256": "844029a9529fb9f7f7378953853482580754a44279559352521dfabc97047a19",
+      "resolutionSource": "https://www.binance.com/en/trade/BTC_USDT",
+      "endDate": "2026-10-17T16:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Up",
+        "Down"
+      ],
+      "clobTokenIds": [
+        "98652812430155750534167657602179289251276353090018313077049608369758328613265",
+        "103654683378443963986501799859092519625754190033541230825140244663145255331122"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.07,
+        "takerOnly": true,
+        "rebateRate": 0.2
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": false,
+      "negRiskMarketID": null,
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-15T16:07:00.836188Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:00.705998+00:00",
+  "question": "Bitcoin Up or Down on October 17?",
+  "market_id": "5742115",
+  "valuation_author": "primary_operator",
+  "original_index": 8,
+  "report_sha256": "793e067e201e0812a7f1b55d2c1cc2c3668a175d5d516b0dc45dc875b73289e2"
+}

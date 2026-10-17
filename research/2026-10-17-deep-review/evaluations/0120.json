@@ -1,0 +1,90 @@
+{
+  "review_index": 120,
+  "condition_id": "0xe45f5f0b06cbce3c0d6ae9376fda856d16e709082d13e9d3007bb3d71c66d5eb",
+  "criteria_sha256": "f13ae405c3a04ce5779fcb2de08c423aa128f77270fccc56137fdffde39fcfb8",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5506665",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 120,
+    "frozen_market_id": "5506665",
+    "frozen_condition_id": "0xe45f5f0b06cbce3c0d6ae9376fda856d16e709082d13e9d3007bb3d71c66d5eb",
+    "request_id": "req_0176",
+    "receipt_path": "req_0176.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0176.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5506665",
+      "conditionId": "0xe45f5f0b06cbce3c0d6ae9376fda856d16e709082d13e9d3007bb3d71c66d5eb",
+      "question": "Will the price of Bitcoin be between $78,000 and $80,000 on October 17?",
+      "slug": "will-the-price-of-bitcoin-be-between-78000-80000-on-october-17-2026",
+      "description": "This market will resolve according to the final \"Close\" price of the Binance 1 minute candle for BTC/USDT closing at 12:00 in the ET timezone (noon) on the date specified in the title. Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTC/USDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note that this market is about the price according to Binance BTC/USDT, not according to other exchanges or trading pairs.",
+      "description_sha256": "32122e270f1741fafae995053b22eeb35c7af5dcc9e64f9ddbfd9265ae33f3e1",
+      "resolutionSource": "https://www.binance.com/en/trade/BTC_USDT",
+      "endDate": "2026-10-17T16:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "62398061828951085127986765657710351355931415927242438358609149871668438634443",
+        "46717038649661601671266364542643757613905917294539649034806754486656136858226"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.07,
+        "takerOnly": true,
+        "rebateRate": 0.2
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0xa865fc613bc86f09eb60a73edacb1fd9b69bc1759659e5105e293ebf2dafef00",
+      "updatedAt": "2026-10-17T18:07:28.790814Z",
+      "createdAt": "2026-10-10T16:00:01.462469Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:04.288739+00:00",
+  "question": "Will the price of Bitcoin be between $78,000 and $80,000 on October 17?",
+  "market_id": "5506665",
+  "valuation_author": "primary_operator",
+  "original_index": 120,
+  "report_sha256": "6abf8b470e1094c3036ed68c7c03ec9c95643a9d178b13416862e1b5312e0978"
+}

@@ -1,0 +1,90 @@
+{
+  "review_index": 104,
+  "condition_id": "0x3bdf3b062ca85aba21224a30490fff459ba9ab341876d23e87f304d20861aff2",
+  "criteria_sha256": "47b297a3daf1e4e24da22d7f5042dc5d179f0775d9680987941d84cf09719fd0",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5267496",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 104,
+    "frozen_market_id": "5267496",
+    "frozen_condition_id": "0x3bdf3b062ca85aba21224a30490fff459ba9ab341876d23e87f304d20861aff2",
+    "request_id": "req_0173",
+    "receipt_path": "req_0173.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0173.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5267496",
+      "conditionId": "0x3bdf3b062ca85aba21224a30490fff459ba9ab341876d23e87f304d20861aff2",
+      "question": "Fulham FC vs. Hull City AFC: O/U 2.5",
+      "slug": "epl-ful-hul-2026-10-17-total-2pt5",
+      "description": "In the upcoming Premier League game between Fulham FC and Hull City AFC, scheduled for October 17 at 10:00 AM ET:\n\nThis market will resolve to \"Over\" if Fulham FC and Hull City AFC combine to score 3 or more goals in this game.\n\nIf the combined total is less than 3, this market will resolve to \"Under\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\n\nIf the game is started but not completed, this market will resolve according to the official final score published on premierleague.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "143dd35e6128fb1a25a3720837ceb8e1fbf548b1904e250a765c0cf70634ba55",
+      "resolutionSource": "https://www.premierleague.com/",
+      "endDate": "2026-10-17T14:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Over",
+        "Under"
+      ],
+      "clobTokenIds": [
+        "42479253021647633489438460966665298335437257710162360109761798909556254535063",
+        "65788228329151999240001573421153264631952784063848110511509987226494443538719"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": false,
+      "negRiskMarketID": null,
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-04T05:00:38.143664Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:03.492322+00:00",
+  "question": "Fulham FC vs. Hull City AFC: O/U 2.5",
+  "market_id": "5267496",
+  "valuation_author": "primary_operator",
+  "original_index": 104,
+  "report_sha256": "b01a23856af71907f5a5ed8cc835d180a5d1df0e9f9b68ff1ad6eb4eedc6bf91"
+}

@@ -1,0 +1,90 @@
+{
+  "review_index": 111,
+  "condition_id": "0x5dbdb72c8e7e0aa126dc91c92005b68a767eac410534888cdc8b4f4f9a18274b",
+  "criteria_sha256": "816dc70eb40c6c8497ba33c761f6e3d30cadad5df537fdbf33bbfac652d77687",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5268755",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 111,
+    "frozen_market_id": "5268755",
+    "frozen_condition_id": "0x5dbdb72c8e7e0aa126dc91c92005b68a767eac410534888cdc8b4f4f9a18274b",
+    "request_id": "req_0174",
+    "receipt_path": "req_0174.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0174.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5268755",
+      "conditionId": "0x5dbdb72c8e7e0aa126dc91c92005b68a767eac410534888cdc8b4f4f9a18274b",
+      "question": "Will Villarreal CF win on 2026-10-17?",
+      "slug": "lal-vil-elc-2026-10-17-vil",
+      "description": "In the upcoming game, scheduled for October 17, 2026\nIf Villarreal CF wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "1ef1d921dda20deb5665f2cac2de1ad0e7da438d5d5faeff35373f2bca373607",
+      "resolutionSource": "https://www.laliga.com/",
+      "endDate": "2026-10-17T14:15:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "77142974921445060187923083472960401419578516103994321906075934067134420415647",
+        "71868861798236901151252924309102976845638046945688499615723926241842857472215"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0x0f87930144604f0f9a02c54df201a1eaeb0b044835ceb5ce08b3b3a46c7bba00",
+      "updatedAt": "2026-10-17T18:21:30.513789Z",
+      "createdAt": "2026-10-04T06:00:05.28158Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:03.748540+00:00",
+  "question": "Will Villarreal CF win on 2026-10-17?",
+  "market_id": "5268755",
+  "valuation_author": "primary_operator",
+  "original_index": 111,
+  "report_sha256": "5466609214afe2080f7797164489c82b95618e7e73c5ff552f313bf074bb784b"
+}

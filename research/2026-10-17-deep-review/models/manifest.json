@@ -1,0 +1,16 @@
+{
+  "author": "primary_operator",
+  "scope": "Dated subjective model assumptions; source access gaps and non-calibration explicit. No execution certificate.",
+  "copies": [
+    {
+      "local_source": "data/deep_review_20261017/fed_primary_scenario.json",
+      "tracked_copy": "research/2026-10-17-deep-review/models/fed_primary_scenario.json",
+      "sha256": "3fb805178f7150bfa162ecd09b73885fde1991a33f27bd0fdec21c317a76daee"
+    },
+    {
+      "local_source": "data/deep_review_20261017/spotify_primary_sensitivity.json",
+      "tracked_copy": "research/2026-10-17-deep-review/models/spotify_primary_sensitivity.json",
+      "sha256": "185b57eb573239526f0be1698a9ab4328a1c280c0aef1def5771b11866865e39"
+    }
+  ]
+}

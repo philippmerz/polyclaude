@@ -1,0 +1,90 @@
+{
+  "review_index": 29,
+  "condition_id": "0xb29d72e1d712d22e9726ced5a239e0f5994c6b19678d12e4bb769aea81d467b6",
+  "criteria_sha256": "5ed8ce4c59f5993a4b6adfe9030deace9ee1751418fa04ab8382f8255d4e0a72",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5742123",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 29,
+    "frozen_market_id": "5742123",
+    "frozen_condition_id": "0xb29d72e1d712d22e9726ced5a239e0f5994c6b19678d12e4bb769aea81d467b6",
+    "request_id": "req_0168",
+    "receipt_path": "req_0168.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0168.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5742123",
+      "conditionId": "0xb29d72e1d712d22e9726ced5a239e0f5994c6b19678d12e4bb769aea81d467b6",
+      "question": "Ethereum Up or Down on October 17?",
+      "slug": "ethereum-up-or-down-on-october-17-2026",
+      "description": "This market will resolve to \"Up\" if the \"Close\" price for the Binance 1 minute candle for ETH/USDT Oct 16 '26 12:00 in the ET timezone (noon) is lower than the final \"Close\" price for the Oct 17 '26 12:00 ET candle.\n\nThis market will resolve to \"Down\" if the \"Close\" price for the Binance 1 minute candle for ETH/USDT Oct 16 '26 12:00 in the ET timezone (noon) is higher than the final \"Close\" price for the Oct 17 '26 12:00 ET candle.\n\nIf the final \"Close\" price for both of these candles is exactly equal on Binance, this market will resolve 50-50.\n\nThe resolution source for this market is Binance, specifically the ETH/USDT \"Close\" prices currently available at https://www.binance.com/en/trade/ETH_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nPlease note that this market is about the price according to Binance ETH/USDT, not according to other exchanges or trading pairs.",
+      "description_sha256": "9e7cc692f8fa4b8b9d8d1654e9c6b4898a4d54b1337d2a9e6e83ee754a8a64e6",
+      "resolutionSource": "https://www.binance.com/en/trade/ETH_USDT",
+      "endDate": "2026-10-17T16:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Up",
+        "Down"
+      ],
+      "clobTokenIds": [
+        "14818429486944262834213488194796030086227524495324327441812660557569983315377",
+        "1860647959517929613202460249006088512395006185288503380094517836498941641268"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.07,
+        "takerOnly": true,
+        "rebateRate": 0.2
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": false,
+      "negRiskMarketID": null,
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-15T16:07:02.850847Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:02.135179+00:00",
+  "question": "Ethereum Up or Down on October 17?",
+  "market_id": "5742123",
+  "valuation_author": "primary_operator",
+  "original_index": 29,
+  "report_sha256": "1bf60f0bd2e77afc856b2a74f94b451fab0247de31545263759f4bbcc5cd6791"
+}

@@ -1,0 +1,90 @@
+{
+  "review_index": 38,
+  "condition_id": "0x7ba90c028db923d6e10b8ed56c5c1ae2078defb23750ecb945f4a9dc0fea7ad1",
+  "criteria_sha256": "16c53155d9538029f715c9e12020170535650399bfa138c37b87d8db07adf6f6",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5611007",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 38,
+    "frozen_market_id": "5611007",
+    "frozen_condition_id": "0x7ba90c028db923d6e10b8ed56c5c1ae2078defb23750ecb945f4a9dc0fea7ad1",
+    "request_id": "req_0170",
+    "receipt_path": "req_0170.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0170.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5611007",
+      "conditionId": "0x7ba90c028db923d6e10b8ed56c5c1ae2078defb23750ecb945f4a9dc0fea7ad1",
+      "question": "Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?",
+      "slug": "elon-musk-of-tweets-october-15-october-17-2026-140-164",
+      "description": "This market will resolve according to the number of times Elon Musk (@elonmusk), posts on X from October 15 12:00 PM ET to October 17, 2026 12:00 PM ET.\n\nFor the purposes of this market, only main feed posts, quote posts and reposts will count.\n\nReplies will NOT count towards the total - however, replies on the main feed such as https://x.com/elonmusk/status/1786073478711353576 will be counted by the tracker.\n\nDeleted posts will count as long as they remain available long enough to be captured by the tracker (~5 minutes).\n\nCommunity reposts which are not counted by the tracker not count toward the total.\n\nThe resolution source for this market is the 'Post Counter' figure for posts found at https://xtracker.polymarket.com. Individual posts can be viewed by clicking \"Export Data\". If the tracker does not update correctly in accordance with the rules, X itself may be used as a secondary resolution source.",
+      "description_sha256": "a2fb873f10c33db59de4ee5b48e0be629592c7f88386ae7c87c92ec5d2969c55",
+      "resolutionSource": "https://x.com/elonmusk",
+      "endDate": "2026-10-17T16:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "39800768508893129397089876079851444459715993040349019291016362415224082151504",
+        "56828932642180571045558320912660407793115786566932046264455908400282892958312"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.25
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0xaee4b23a1676c3f6d60ad329604f6b5cf501be755748f73237f79ba79382e600",
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-12T16:07:02.063152Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:02.659685+00:00",
+  "question": "Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?",
+  "market_id": "5611007",
+  "valuation_author": "primary_operator",
+  "original_index": 38,
+  "report_sha256": "ba2f293f9579e104bd7836e02b6f64b56fe9aeca838979df4d8d574a91768b2c"
+}

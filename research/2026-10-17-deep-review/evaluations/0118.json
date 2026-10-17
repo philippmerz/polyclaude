@@ -1,0 +1,90 @@
+{
+  "review_index": 118,
+  "condition_id": "0x8deaf6e32806ca3f3ea4f00985db42c0a7240ee152bbfb9f4e671218d28fa85c",
+  "criteria_sha256": "155fdd575c2d63ec16adf677dbd3302da6be26c595c77035d9e14f24ec1b7974",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263849",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 118,
+    "frozen_market_id": "5263849",
+    "frozen_condition_id": "0x8deaf6e32806ca3f3ea4f00985db42c0a7240ee152bbfb9f4e671218d28fa85c",
+    "request_id": "req_0175",
+    "receipt_path": "req_0175.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0175.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5263849",
+      "conditionId": "0x8deaf6e32806ca3f3ea4f00985db42c0a7240ee152bbfb9f4e671218d28fa85c",
+      "question": "Will Paris Saint-Germain FC win on 2026-10-17?",
+      "slug": "fl1-str-psg-2026-10-17-psg",
+      "description": "In the upcoming game, scheduled for October 17, 2026\nIf Paris Saint-Germain FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "b82c30030012e6634dd084d6f2893fde795952d598dfdbafb792be79e5798ce7",
+      "resolutionSource": "https://www.ligue1.com/",
+      "endDate": "2026-10-17T15:15:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "20266172229235870459516021880820450319310601372885027941736329579427041298588",
+        "106621898261842945808023228777382153330691240538830393783463641665469101628542"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0x67f736f07a0d5c6c2f076a04e736a5f07fe1f5fb2340fbba454e146497f7bf00",
+      "updatedAt": "2026-10-17T18:21:30.513789Z",
+      "createdAt": "2026-10-04T04:00:02.168974Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:04.017627+00:00",
+  "question": "Will Paris Saint-Germain FC win on 2026-10-17?",
+  "market_id": "5263849",
+  "valuation_author": "primary_operator",
+  "original_index": 118,
+  "report_sha256": "b1aaa917f7d599565e30923c769c7a98545cf72966b2a14344c4fc89a5b60ad4"
+}

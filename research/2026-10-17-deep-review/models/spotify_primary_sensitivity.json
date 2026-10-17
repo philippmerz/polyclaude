@@ -1,0 +1,68 @@
+{
+  "created": "2026-10-17",
+  "author": "primary_operator",
+  "not_calibrated": true,
+  "method": "Transparent scenario sensitivity, not recovered annual ranking or empirical posterior",
+  "seed": 20261017,
+  "units": "million US streams",
+  "MNI_missing_week_average_triangle": [
+    5.5,
+    7.5,
+    10.0
+  ],
+  "missing_weeks": 7,
+  "future_weekly_mean_bases": {
+    "MNI": 5.000426,
+    "Earrings": 6.497057,
+    "Babydoll": 3.927145,
+    "MrBrightside": 5.159373
+  },
+  "future_average_multiplier_lognormal_median_logsigma": {
+    "MNI": [
+      1.02,
+      0.2
+    ],
+    "Earrings": [
+      0.98,
+      0.15
+    ],
+    "Babydoll": [
+      1,
+      0.25
+    ],
+    "MrBrightside": [
+      1,
+      0.15
+    ]
+  },
+  "hypothetical_cutoff_days_weights": {
+    "30": 0.7,
+    "44": 0.2,
+    "77": 0.1
+  },
+  "future_streaming_source_methodology_noise_sd_million": 3,
+  "results": {
+    "30": {
+      "p_mni_second_conditional_known_cohort": 0.5056166666666667,
+      "samples": 60000
+    },
+    "44": {
+      "p_mni_second_conditional_known_cohort": 0.41938333333333333,
+      "samples": 60000
+    },
+    "77": {
+      "p_mni_second_conditional_known_cohort": 0.31655,
+      "samples": 60000
+    }
+  },
+  "mixture_conditional_known_cohort": 0.46946333333333334,
+  "residual_other_competitor_or_aggregation_discount": 0.1,
+  "p_after_residual_discount": 0.42251700000000003,
+  "limitations": [
+    "No official 2026 US aggregate cutoff confirmed; weights primary judgment",
+    "Missing historical weeks imputed, not observed; shared average draw prevents artificial independent-week confidence",
+    "Known competitor coverage incomplete; 10% residual allocation is subjective",
+    "No proven map from thirdparty weekly chart cells to official Wrapped aggregate",
+    "No current-order authorization"
+  ]
+}

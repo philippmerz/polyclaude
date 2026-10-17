@@ -1,0 +1,90 @@
+{
+  "review_index": 20,
+  "condition_id": "0x5f07b0192cbbf902fed719090a72f0b19927a409d266e5329818b9588ae35b89",
+  "criteria_sha256": "f6debeecee191dbd9383fafaae2d58dce88665ffccf2a9d08f592f492f06d4a5",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5267258",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 20,
+    "frozen_market_id": "5267258",
+    "frozen_condition_id": "0x5f07b0192cbbf902fed719090a72f0b19927a409d266e5329818b9588ae35b89",
+    "request_id": "req_0165",
+    "receipt_path": "req_0165.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0165.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5267258",
+      "conditionId": "0x5f07b0192cbbf902fed719090a72f0b19927a409d266e5329818b9588ae35b89",
+      "question": "Manchester City FC vs. Ipswich Town FC: O/U 3.5",
+      "slug": "epl-mac-ips-2026-10-17-total-3pt5",
+      "description": "In the upcoming Premier League game between Manchester City FC and Ipswich Town FC, scheduled for October 17 at 10:00 AM ET:\n\nThis market will resolve to \"Over\" if Manchester City FC and Ipswich Town FC combine to score 4 or more goals in this game.\n\nIf the combined total is less than 4, this market will resolve to \"Under\".\n\nIf the game is postponed, this market will remain open until the game has been completed. If the game is canceled entirely, with no make-up game, this market will resolve 50–50.\n\nIf the game is started but not completed, this market will resolve according to the official final score published on premierleague.com. This market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "2e9a73b8e20f75b6aded5c83a032b1f20fb963214535dffa9a859efcef5aa6b2",
+      "resolutionSource": "https://www.premierleague.com/",
+      "endDate": "2026-10-17T14:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Over",
+        "Under"
+      ],
+      "clobTokenIds": [
+        "34545287078080494140208570435509390468354490046339510890873070239638382239024",
+        "17706316607991919383679084589334655865383853357196978296605248127641129966045"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": false,
+      "negRiskMarketID": null,
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-04T05:00:27.677875Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:01.272573+00:00",
+  "question": "Manchester City FC vs. Ipswich Town FC: O/U 3.5",
+  "market_id": "5267258",
+  "valuation_author": "primary_operator",
+  "original_index": 20,
+  "report_sha256": "78ba005811f6dd6887f4a20f7c6f63d8482ef06426cb189f76cdc8b3abd03fcd"
+}

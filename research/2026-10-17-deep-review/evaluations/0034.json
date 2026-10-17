@@ -1,0 +1,90 @@
+{
+  "review_index": 34,
+  "condition_id": "0x375444d179598cfa1c61c608717651dcb81a11d146d1e346c4fa4ff7fa27b827",
+  "criteria_sha256": "0f509ba0dde022c989e7537ceca93361b4a1adaa5432b592668bf2d24b9340ea",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263885",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 34,
+    "frozen_market_id": "5263885",
+    "frozen_condition_id": "0x375444d179598cfa1c61c608717651dcb81a11d146d1e346c4fa4ff7fa27b827",
+    "request_id": "req_0169",
+    "receipt_path": "req_0169.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0169.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5263885",
+      "conditionId": "0x375444d179598cfa1c61c608717651dcb81a11d146d1e346c4fa4ff7fa27b827",
+      "question": "Will Fulham FC win on 2026-10-17?",
+      "slug": "epl-ful-hul-2026-10-17-ful",
+      "description": "In the upcoming game, scheduled for October 17, 2026\nIf Fulham FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "05fa1d2e48e0c3f724fbedcda5a64cf4f211663b6e8bbbcdd2c8d696aba41451",
+      "resolutionSource": "https://www.premierleague.com/",
+      "endDate": "2026-10-17T14:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "57236179669267383495197298693784788242704919103915559321491240097555026391081",
+        "9582227456665932446562468362880782228960426171731173363906127551512959674910"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0x16fc1e85b0ee9441bcc1b355ab22fdafd8e5505f8d57eeb177f42bfb5f33ee00",
+      "updatedAt": "2026-10-17T18:21:30.513789Z",
+      "createdAt": "2026-10-04T04:00:05.604121Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:02.400929+00:00",
+  "question": "Will Fulham FC win on 2026-10-17?",
+  "market_id": "5263885",
+  "valuation_author": "primary_operator",
+  "original_index": 34,
+  "report_sha256": "5c7a9c6325c54592d47ba07585679a11cf0cc35c1662bbcbec2d64c616a50c12"
+}

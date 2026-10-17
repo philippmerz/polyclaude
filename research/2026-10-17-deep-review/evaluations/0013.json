@@ -1,0 +1,90 @@
+{
+  "review_index": 13,
+  "condition_id": "0xbfdaa64d81c94034b1c43cc52c360e959e3b097ee2c77cae004fd725686e8941",
+  "criteria_sha256": "ee66385d90a906a94cd8727096e058716101e05495d823f68463e733be472f1c",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5263876",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 13,
+    "frozen_market_id": "5263876",
+    "frozen_condition_id": "0xbfdaa64d81c94034b1c43cc52c360e959e3b097ee2c77cae004fd725686e8941",
+    "request_id": "req_0164",
+    "receipt_path": "req_0164.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0164.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5263876",
+      "conditionId": "0xbfdaa64d81c94034b1c43cc52c360e959e3b097ee2c77cae004fd725686e8941",
+      "question": "Will Liverpool FC win on 2026-10-17?",
+      "slug": "epl-bre-liv-2026-10-17-liv",
+      "description": "In the upcoming game, scheduled for October 17, 2026\nIf Liverpool FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+      "description_sha256": "6298ae2b30956c12c8446d77a11595d4b65c6b4d65a5f1479413b9246d73d829",
+      "resolutionSource": "https://www.premierleague.com/",
+      "endDate": "2026-10-17T14:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "clobTokenIds": [
+        "30011374050084153758081872511383555856953546591648089095853930999708438962002",
+        "22845512027909583787024722197710565559158890247051029400468684991538066227990"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": true,
+      "negRiskMarketID": "0x2767d54b8236e842137d55268f1d7b2499f13104190ac81832fa105be8634800",
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-04T04:00:04.377107Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:00.987425+00:00",
+  "question": "Will Liverpool FC win on 2026-10-17?",
+  "market_id": "5263876",
+  "valuation_author": "primary_operator",
+  "original_index": 13,
+  "report_sha256": "26c8585d25274896ddf0c7df29652bd8ca07c491739d1fc3b48442696bbcdb48"
+}

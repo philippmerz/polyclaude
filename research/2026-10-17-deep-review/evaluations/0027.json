@@ -1,0 +1,90 @@
+{
+  "review_index": 27,
+  "condition_id": "0x78717bc333cc779da078456f5e36c54b99111a924d758d2242adeb10937a2e39",
+  "criteria_sha256": "9422b2742a3169bc8e238353ad2331df83fa70e0d2ba8c917c7369f6e924ef71",
+  "status": "excluded_factual",
+  "literal_analysis": "Exact fullrule version retained; direct official venue closure/orderacceptance state makes newentryunavailable independently of forecasting interpretation. No underlyingresult inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5778024",
+      "observed_utc": "2026-10-17T18:37:29Z",
+      "finding": "Exact market/CID/tokens and full frozen-rule version match. Venue currently explicitly closed=true, acceptingOrders=false; previous listendpoint defaultfilter omitted it. This is a current entry-availability exclusion, not a forecast or economic rejection."
+    }
+  ],
+  "forecast": {
+    "not_applicable": "Closed to neworders; doesnotcounttowardvaluationmilestone."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_available": false,
+    "reason": "Exactclosed=true andacceptingOrders=false",
+    "new_entry_probability_not_estimated": true
+  },
+  "verdict": "Factual exclusion: exact venue market closed to new orders; not an investment rejection.",
+  "reopen_condition": "Exactmarketreopensorderacceptance ormatchingheldpositionrequiresmanagement.",
+  "source_receipts": {
+    "original_index": 27,
+    "frozen_market_id": "5778024",
+    "frozen_condition_id": "0x78717bc333cc779da078456f5e36c54b99111a924d758d2242adeb10937a2e39",
+    "request_id": "req_0167",
+    "receipt_path": "req_0167.receipt.json",
+    "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0167.body.json.gz",
+    "http_status": 200,
+    "parse_status": "ok",
+    "exact_identity_match_count": 1,
+    "status": "exact_identity_match",
+    "metadata_projection": {
+      "id": "5778024",
+      "conditionId": "0x78717bc333cc779da078456f5e36c54b99111a924d758d2242adeb10937a2e39",
+      "question": "Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs",
+      "slug": "cs2-furia-aur1-2026-10-17",
+      "description": "This market refers to the Counter-Strike Semifinal 1 match between FURIA and Aurora Gaming in the Thunderpick World Championship Playoffs, initially scheduled for October 17, 2026 at 10:00 AM ET.\n\nThis market will resolve to \"FURIA\" if FURIA win the match against Aurora Gaming.\n\nThis market will resolve to \"Aurora Gaming\" if Aurora Gaming win the match against FURIA.\n\nIf the match is canceled (not played at all) or ends in a tie, this market will resolve to 50-50.\n\nIf the match is postponed, it must be rescheduled to a start time on or before October 31, 2026 at 11:59 PM ET (14 calendar days after the originally scheduled start of October 17, 2026 at 10:00 AM ET). If, by that deadline, the most recently announced rescheduled start time is on or before the deadline, this market resolves based on the result of the match as played. Otherwise, this market resolves 50-50, regardless of whether the match is subsequently played.\n\nIf the match begins but is not completed, and one team wins due to the opponent's forfeiture, disqualification, or walkover, this market will resolve to the team who wins. \n\nIf the match ends in a forfeit, disqualification, or walkover (team withdraws before the start and the other wins automatically), this market will resolve to 50-50. \n\nThe resolution source for this market will be official information from https://hltv.org. However, if https://hltv.org has not published final results within 2 hours after the event’s conclusion, a consensus of credible reporting may be used instead including video evidence.\n\nIn cases where a team’s listed name includes minor discrepancies from the resolution source, this market will resolve based on the underlying real-world match rather than exact name matching. Recognizable abbreviations, alternate or erroneous spellings, sponsor tags, affiliate or academy designations, regional identifiers, and minor formatting differences will be treated as referring to the same team, provided the intended team can be clearly and uniquely identified within the relevant competition. If a listed team name has no reasonable connection to any participating team, or if it matches or could reasonably refer to another team in the same competition such that the intended team cannot be unambiguously determined, this market will resolve 50-50.",
+      "description_sha256": "981d6d937e6deb3d01221281bfb2d5a9aa4e7535ce25622527d1e8259465f404",
+      "resolutionSource": "https://hltv.org",
+      "endDate": "2026-10-17T20:00:00Z",
+      "active": true,
+      "closed": true,
+      "enableOrderBook": true,
+      "acceptingOrders": false,
+      "outcomes": [
+        "FURIA",
+        "Aurora Gaming"
+      ],
+      "clobTokenIds": [
+        "63023602674955856573289020133927363067610772118484087348457096650810218334865",
+        "16095432482862916819785432598863637949937692164180581166076490121814179242231"
+      ],
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.15
+      },
+      "takerBaseFee": 1000,
+      "minimum_tick_size": null,
+      "minimum_order_size": null,
+      "orderPriceMinTickSize": 0.001,
+      "orderMinSize": 5,
+      "negRisk": false,
+      "negRiskMarketID": null,
+      "updatedAt": "2026-10-17T18:37:29.215589Z",
+      "createdAt": "2026-10-16T16:35:10.429465Z",
+      "baseline_deltas": {
+        "market_id_changed": false,
+        "condition_id_changed": false,
+        "question_changed": false,
+        "criteria_description_changed": false,
+        "end_date_changed": false,
+        "outcomes_changed": false,
+        "token_ids_changed": false
+      }
+    }
+  },
+  "evaluated_utc": "2026-10-17T18:44:01.850195+00:00",
+  "question": "Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs",
+  "market_id": "5778024",
+  "valuation_author": "primary_operator",
+  "original_index": 27,
+  "report_sha256": "51468f76819dc84b314708da188524ffec4540092400cec5fec746050eb5d52e"
+}

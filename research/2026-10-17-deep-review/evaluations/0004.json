@@ -1,0 +1,151 @@
+{
+  "review_index": 4,
+  "condition_id": "0x747dc809fb79e1b05be09c42d6179459a58de2ef3e40f02484a4e1260f741f75",
+  "criteria_sha256": "58099a8355a138f2d74f73feb60cd2eec76c0fba5b0427b0f3c09dc7cb0058aa",
+  "status": "valued",
+  "literal_analysis": "Definitive eligible US official/agency statement of extraterrestrial life OR technology by Dec31 23:59ET; evidence standard and assertion standard differ; both analyzed.",
+  "evidence": [
+    {
+      "url": "https://science.nasa.gov/uap/faqs/",
+      "observed_utc": "2026-10-17T18:53:41.562596+00:00",
+      "finding": "Current FAQ updated Oct8: NASA no credible extraterrestrial evidence; bounded agency statement, not universal absence proof."
+    },
+    {
+      "url": "https://www.war.gov/UFO/release/05/?agency=Office+of+the+Director+of+National+Intelligence",
+      "observed_utc": "2026-10-17T18:53:41.562648+00:00",
+      "finding": "Official indexed source: unresolved archive and rolling releases; direct403 gap. Not definitive life/technology assertion."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202600370/html/DCPD-202600370.htm",
+      "observed_utc": "2026-10-17T18:53:41.562652+00:00",
+      "finding": "Primary May27 transcript describes release of information; read context does not establish definitive extraterrestrial life/technology identification."
+    },
+    {
+      "url": "https://www.whitehouse.gov/aliens/",
+      "observed_utc": "2026-10-17T18:53:41.562655+00:00",
+      "finding": "Explicit immigration subject, not extraterrestrial confirmation."
+    },
+    {
+      "url": "https://www.nasa.gov/news-release/nasa-says-mars-rover-discovered-potential-biosignature-last-year/",
+      "observed_utc": "2026-10-17T18:53:41.562658+00:00",
+      "finding": "Sep10,2025 potential biosignature with abiotic explanations still not ruled out; not definitive life confirmation."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.005,
+    "high": 0.12,
+    "method": "Explicit scientific/political/assertion scenario allocation, with broad uncalibrated tail range",
+    "reasoning": "Scientific .008 + political .020 + residual wording/adjudication .002, rounded total .03; broad .005–.12 sensitivity, no borrowed market probability.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:16.096+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75.4,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "best_bid": 0.051,
+        "best_ask": 0.052,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 25.254,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.052,
+            "fee_usd": 0.019718399999999997
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.53972,
+        "fee_usd": 0.01972,
+        "break_even_probability_before_carry": 0.053972,
+        "break_even_probability_with_idealized_carry": 0.054308589539681616,
+        "central_expected_profit_usd": -0.23972,
+        "default_10pp_stressed_profit_usd": -0.53972,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.49064
+      },
+      "No": {
+        "probability": 0.97,
+        "best_bid": 0.948,
+        "best_ask": 0.949,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 25.254,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.949,
+            "fee_usd": 0.019359600000000015
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.509360000000001,
+        "fee_usd": 0.01936,
+        "break_even_probability_before_carry": 0.9509360000000001,
+        "break_even_probability_with_idealized_carry": 0.9568663918792465,
+        "central_expected_profit_usd": 0.19063999999999837,
+        "default_10pp_stressed_profit_usd": -0.8093600000000016,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.87,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.460280000000001
+      }
+    }
+  },
+  "verdict": "NO small central edge, insufficient tail margin; no entry",
+  "reopen_condition": "Exact eligible government wording, new NASA confirmation, or NO price below uncertainty/carry-adjusted entry ceiling.",
+  "current_description_sha256": "2f32c2340627e201bc1730d0b26897002c92168c17e8591c5bc383e2134f2021",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "107505882767731489358349912513945399560393482969656700824895970500493757150417",
+    "7305630249804085635496399869905769372294302716159034447326228509068694952392"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0041",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0041.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/tesla_alien_cap_sources.json",
+    "followup_sources_read_by_primary": true
+  },
+  "evaluated_utc": "2026-10-17T18:53:41.821136+00:00",
+  "question": "Will the US confirm that aliens exist before 2027?",
+  "market_id": "703257",
+  "valuation_author": "primary_operator",
+  "original_index": 4,
+  "report_sha256": "c4c6847cf80d1d411584dd470cf3e7b137271c63fdb37d81f0d65cc8ebb8997a"
+}
