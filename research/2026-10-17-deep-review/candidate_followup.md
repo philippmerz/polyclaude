@@ -55,3 +55,86 @@ October17~19:50UTC. The independentNetflixcoverageauditfound no existing watcher
 October 17 19:40–19:41 UTC — the Netflix runner-up union was independently revalidated in `data/deep_review_20261017/netflix_union_revalidation.json`. Exact event 1191155/common NegRisk identity and all four current rank/week rules matched. Guarded equal-share preflight failed: available shares at rounded limits were 16, 5, 381.74 and 6.29 across cases37/121/149/177, insufficient for either ten or one hundred equal units. Worst signed-limit cost was .06295 per unit, above the primary union .06 default-stressed payout before costs. Unrestricted one-hundred-share walking would cost11.384538, and the .001 exit bids lacked full rollback depth on two legs. No bundle command, order or reservation was submitted. This supersedes the earlier .04966 dated planning-cost hypothesis.
 
 October 17 source checks — NC-11's existing broad RSS feeds lack candidate/district keywords; PPP's authentic feed contains only a2016 test post. `nc11_coverage_audit.json` records this operational gap and current early-voting dates. No entry or coverage configuration has yet been changed. Case215 short-week Bab NO near a genuinely available .78 maker and case164 Arizona governor NO near .07 are additional primary research watches. Their wide scenario ranges and stale source windows mean neither is a validated lower-bound arbitrage. Current gates, news/publication coverage, size minima and net dollar return must be assessed before a funded proposal.
+
+
+## October 17, 21:34 UTC — primary MT-01 / NY-01 entry decision
+
+Primary retains 47% MT-01 Democratic YES and 31% NY-01 Democratic YES after
+reading both independent advisory reviews and the current candidate, FEC and
+news packets. These are uncalibrated, broad-range forecasts. The newer
+American Pulse/PPP poll leads in the October 1 MTFP report are consistent with
+a close MT race, but their original instruments remain unverified and are
+not added as independent likelihoods. Today's ratings report is an analyst
+classification change, not a fresh poll. No material candidate withdrawal,
+ballot change or caucus change was substantiated in the reviewed feed window.
+
+Approve at most ten genuinely passive shares each: MT-01 at 33c ($3.30) and
+NY-01 at 12c ($1.20). Ordinary ten-point reserve leaves four and nine points
+respectively before carry/operations; neither is a proven floor. The shared
+Democratic-wave factor includes ME-02, and CA-06 NO is not a calibrated hedge.
+The combined $4.50 addition is deliberately far below advisory Kelly amounts.
+
+Read-only preflight 21:31:28–33 UTC: all four exact frozen/current conditions,
+full rules, end times and outcome tokens match; open, accepting, no proposed
+or disputed scalar UMA status. Complete authenticated inventory contains the
+two earlier zero-matched bids only. Polygon block 95711562 shows zero balances
+on both outcomes of all four candidates, pUSD24.996890, existing pending5.30,
+uncommitted19.696890, sufficient allowance and CTF approval. Venue geoblock
+returns HTTP200/blocked=false/FI02. This account check does not refresh the
+18:00 held-thesis review.
+
+Five validated feeds were added to the existing daemon. Its normal pass
+ingested the eligible baseline (8/30/30/28/12 entries, GUID or exact normalized
+title) before candidate names were promoted to tier1. No direct watcher-state
+mutation or new timer/daemon. The next normal state write at21:33:34 follows
+the21:30:43 configuration change and preceding21:28:20 cycle. New candidate
+news will bypass the small-model tier2 relevance filter. Normal source gaps,
+feed limits and unobserved private information remain.
+
+Orders must still pass final vetted helper caps and post-only guards. After
+each submission, independently reconcile complete inventory, reservations,
+CTF balances and cash. Do not replay ambiguous submissions. Initial review
+remains the existing22:00 UTC check; cancel first on changed/uncertain facts
+and pull before known catalyst windows. This paragraph records intent only;
+the actual result follows separately.
+
+
+## October 17, 21:35 UTC — verified MT/NY commitments
+
+Complete authenticated pagination and reservations agree. Polygon95711709 shows
+zero balances on both outcomes of all four candidates, pUSD24.996890, pending
+9.80 and uncommitted15.196890. Allowance and CTF approval are sufficient; current
+venue response is blocked=false/FI02. This is a cash commitment, not filled
+positions or realized profit. New decisions DEC-0205/0206. Primary MT/NY points
+47%/31% remain broad, uncalibrated and exposed to the same national wave as ME.
+CA NO is not a measured hedge. All current criteria and token identities match.
+
+Existing daemon ingested eligible baseline entries before seven MT/NY names
+were promoted to tier1; future matching news bypasses the small-model filter.
+Original reports and independent criticism remain in candidate_followup.
+**Review at existing22:00 UTC check and every tick/earlier relevant news. Cancel
+first if facts change or become uncertain, and pull before known catalysts.**
+Do not replay execution commands. The18:00 held-thesis check remains dated.
+Evidence: `data/deep_review_20261017/house_next_verified_2135.json`.
+
+
+
+## October 17, 21:23–35 UTC — ISRG conference follow-up and advisory correction
+
+The September9 official event/player shell was located; no issuer transcript,
+captions or audio was independently reviewed. The publicly captured secondary
+StockAnalysis/Quartr transcript attributes a reaffirmed13.5–15.5% annual global
+range, nearer midpoint, to CFO Jamie Samath. He declined regional guidance and
+said harder H2 comparisons and ACA effects were already in that range. This
+does not supply a numeric Q3 da Vinci-only forecast; Ion-inclusive commentary
+is not the settlement metric. The primary retains the35% point for case1262
+and the original broad3–80% scenario range. Reaffirmation supports the existing
+guide anchor and is not an independent second likelihood. The archived report's
+unreviewed-conference statement is superseded only to this limited extent.
+
+Root caught an independent advisory note's incorrect Q3'25 growth16% claim;
+actual official Q3'25 was19%, and16% belonged to Q1'26. The note preserves the
+error and appends an explicit correction. The primary model had already used
+the correct797k/19% history; it is unchanged. No ISRG order, prior or reservation
+has been created. Source packets `isrg_conference_followup.json` and official
+historical figures in `earnings_metric_history_sources.json` retain access gaps.

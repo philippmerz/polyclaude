@@ -1,5 +1,5 @@
 {
-  "next_id": 205,
+  "next_id": 207,
   "decisions": [
     {
       "id": 1,
@@ -4338,6 +4338,46 @@
         "pending-zero-fill"
       ],
       "slug": "will-the-democratic-party-win-the-ca-06-house-seat",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 205,
+      "timestamp": "2026-10-17T21:35:13Z",
+      "type": "open_position",
+      "thesis": "Posted and independently verified exact case271 post-only BUY YES, ten shares. Order 0xfbd59e65b20dbb8249709e167935f2830591275f8d7b3d0ef95326297a66b292. Primary P(YES)=0.47; ordinary 10pp reserve and shared us-politics factor. Independent champion/skeptic read; original poll/ballot/FEC and newer news caveats retained. LIVE, zero matched and zero both-outcome CTF balances at Polygon95711709. This is an unfilled commitment, not a purchased position or realized profit. See house_next_verified_2135.json and candidate_followup.",
+      "confidence": "medium",
+      "prediction": "Conditional on a genuine fill, primary P(YES)=0.47. Cancel first on changed/uncertain candidate, ballot, poll or caucus facts; review at existing22UTC check and pull before known catalysts. Do not score an unfilled bid as an investment.",
+      "size_usd": 3.3,
+      "resolution_at": "2026-12-01",
+      "tags": [
+        "deep-review",
+        "maker",
+        "us-politics",
+        "pending-zero-fill"
+      ],
+      "slug": "will-the-democratic-party-win-the-mt-01-house-seat",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 206,
+      "timestamp": "2026-10-17T21:35:13Z",
+      "type": "open_position",
+      "thesis": "Posted and independently verified exact case409 post-only BUY YES, ten shares. Order 0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585. Primary P(YES)=0.31; ordinary 10pp reserve and shared us-politics factor. Independent champion/skeptic read; original poll/ballot/FEC and newer news caveats retained. LIVE, zero matched and zero both-outcome CTF balances at Polygon95711709. This is an unfilled commitment, not a purchased position or realized profit. See house_next_verified_2135.json and candidate_followup.",
+      "confidence": "medium",
+      "prediction": "Conditional on a genuine fill, primary P(YES)=0.31. Cancel first on changed/uncertain candidate, ballot, poll or caucus facts; review at existing22UTC check and pull before known catalysts. Do not score an unfilled bid as an investment.",
+      "size_usd": 1.2,
+      "resolution_at": "2026-12-01",
+      "tags": [
+        "deep-review",
+        "maker",
+        "us-politics",
+        "pending-zero-fill"
+      ],
+      "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

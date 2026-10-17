@@ -1,45 +1,66 @@
 ---
-reviewed_at: "2026-10-17T21:16:53Z"
+reviewed_at: "2026-10-17T21:39:37Z"
 valid_until: "2026-10-17T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 5fd6909ed1f4fd2df5d88f1bfe1fa5e38bb369b4bd18d3256300f311313c7b59
+  README.md: de8ea5d0f341619a97d987a901d5e6e05bff900a16587327fbe5a7735dda0b51
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 8a5b43f42faa5cace24ddf53b2e0553c835294b4c1775fc851e9cc6c175583cc
-  notes/backlog.md: 9583677993224f28ab998ba07828408a06a6aff3793774f63c181c581281bd16
+  notes/backlog.md: 9e8dac666f33e941ad980e0a27eafc03c976e87e7f2f1d40c471b42527297b2c
 ---
 
-**ACTIVE OPERATOR TASK:** Primary in-depth review of all 3,000 frozen conditions beyond clearly factual exclusions. Earlier screen labels are nonbinding. Save every completed case before starting another. Read [deep review checkpoint](deep_review_checkpoint.json), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md), and [live index](../research/2026-10-17-deep-review/INDEX.md); those files carry current counts/active cases and override the old diagnostic completion status. First100 were notified in chat and Telegram1163; currently125 valued,1blocked,325factualexclusions,2549pending. Continue unless steered; distinguish counts. Facts may be delegated; valuations belong to primary. The portfolio snapshot below remains dated18:04.
+**ACTIVE OPERATOR TASK:** Continue the finite in-depth primary review of all3,000
+frozen conditions beyond factual exclusions. Save/index each completed case
+before starting the next. Read [checkpoint](deep_review_checkpoint.json),
+[protocol](../research/2026-10-17-deep-review/PROTOCOL.md), [live index](../research/2026-10-17-deep-review/INDEX.md),
+[current corrections](../research/2026-10-17-deep-review/CURRENT_REVISIONS.md),
+and [candidate follow-up](../research/2026-10-17-deep-review/candidate_followup.md).
+At21:40UTC:134valued,1blocked,325factual exclusions,2540pending. First100
+already notified in chat/Telegram1163. Original screen labels are nonbinding.
+Cheap agents collect facts/advisory challenges; primary owns forecasts/actions.
+No indefinite goal or idle timer. Last full held-thesis check remains18:00;
+next existing light check22:00UTC. Account research checks do not replace it.
 
+## Active money — verified21:35:13UTC
 
-# Current context — Oct 17 deep review and20:52 pending entries
+Four LIVE post-only BUYs, all zero matched and zero both-outcome balances:
+ME-02YES10@.38, CA-06NO50@.03, MT-01YES10@.33, NY-01YES10@.12.
+Polygon95711709: pUSD24.996890, full pending9.80, uncommitted15.196890;
+allowance/operator approval sufficient. DEC-0203–0206 are commitments, not
+positions or profit. Read [resting orders](resting_orders.md). Exact ME-02
+historical slug containsME-01; current rules,parent726881,CID/tokens matchME-02.
+Do not normalize it or replay execution commands. Recheck everytick/22:00 and
+on relevant news; cancel first if changed/uncertain and pull before known
+catalysts. MT/NY are tiny correlated-wave pilots; CA NO is not a measured hedge.
+The existing news daemon ingested baseline feeds before seven MT/NY names were
+promoted to tier1; a subsequent normal cycle followed the config change.
 
-**New live commitments,20:52:56UTC:** ME-02YES10@.38 andCA-06NO50@.03 are
-LIVE post-only bids, both zero matched. Block95710019 confirms zero candidate
-CTF balances, pUSD24.996890 and19.696890 uncommitted after full5.30reservation.
-DEC-0203/0204. These are not filled positions or realized gains. Read
-[resting orders](resting_orders.md) and [current source/entry corrections](../research/2026-10-17-deep-review/candidate_followup.md).
-Initial review22:00UTC; cancel first on changed/uncertain candidate/poll/ballot/
-caucus facts and pull before known catalyst windows. Watcher processed all3new
-feeds; candidate terms are tier1 to bypass small-model relevance rejection.
-No new timer/daemon. Exact ME-02 historical slug containsME-01; full current
-rules,parent726881,CID/tokens all bindME-02. Do not normalize the slug.
+## Current research follow-up
 
-First100 report: [MILESTONE_100](../research/2026-10-17-deep-review/MILESTONE_100.md).
-New completed groups include twelve additional House and all five NVDAmargin brackets. Cases55/167 retain different start/deadline rules. MT/NY/AZ entry checks are separate; originalNY01Siena lead was NY21. Ready factual source packets for the remaining queue are in
-[SOURCE_QUEUE](../research/2026-10-17-deep-review/SOURCE_QUEUE.md). Save each
-valuation immediately. The old diagnostic below remains a historical screen,
-not the status of this active in-depth assignment. The18:00 held-thesis check
-is still dated;20:52 account verification does not replace it.
+Five ISRG growth brackets are complete; the annual/H1 bridge and reported
+whole-percent boundary matter. Case1262 YES35% remains a tiny passive candidate,
+not an order/prior. September9 secondary CFO transcript reaffirms the existing
+annual guide; no numeric Q3 update or official audio verification. Root caught
+and documented an advisory's erroneous Q3'25 16%: actual19%, already correct
+in the primary model. Four AI IPO cases are valued; case158 NO is provisional
+for entry because Nasdaq's narrative near160.95/2.1T does not by itself prove
+an exact historical official close. Ops is checking that gap. No IPO/ISRG money.
 
-The finite primary-market diagnostic screened 3,000 distinct conditions. It
-included 73 full literal/shared-rule/PDF reviews and 17 family investigations
-at unequal depth. Of 255 source flags, only 38 had family follow-up; 217 remain
-without it, and 2,716 rows remain unpriced. This is not 3,000 fully underwritten
-rejections or evidence that opportunities are absent. See the [ledger](../research/2026-10-17-primary-market-review.csv), [audit](../research/2026-10-17-primary-market-review.json), and [checkpoint](market_review_checkpoint.json). Resume from the tracked checkpoint; append each completed batch/case before starting the next and refresh its hashes. The routing fix passed 47 focused checks; 971 frozen labels changed, not a gold-set accuracy or ROI result. No new opportunity research ran in the light check.
+All seven missing early MNI US weekly cells are now recovered; update case2
+through a dated linked revision, not by erasing its42% earlier model. New
+Spotify, Google historical/catalyst/normalized-series and Senate source packets
+are indexed in SOURCE_QUEUE. Global normalized Trends requests429 are unknown,
+not zero. Ready quote batches span1–1080,1201–1320,1561–1680,1921–2040; exact
+120-row binding fails closed outside captured ranges. Missing/stale books stay
+explicit. Primary quotes must be refreshed for any entry.
+
+Disk last about227MiB: keep .venv/node_modules/source evidence, bounded gzip
+captures and180MiB new-research stop. No big temporary installs. The latest
+pushed commit7bd06bd covers125valuations; new nine reports and four-order
+management follow-up await focused commit. Preserve unrelated runtime dirt.
 
 ## Portfolio at 18:04 UTC
 

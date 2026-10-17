@@ -1,5 +1,31 @@
 # Standing resting orders (GTC post-only makers)
 
+
+**October 17, 21:35:13 UTC — four verified LIVE BUY bids, all zero filled.**
+
+| Contract | Order ID | Shares | Price | Pending cash |
+|---|---|---:|---:|---:|
+| ME-02 Democratic YES | `0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37` | 10 | .38 | $3.80 |
+| CA-06 Democratic NO | `0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd` | 50 | .03 | $1.50 |
+| MT-01 Democratic YES | `0xfbd59e65b20dbb8249709e167935f2830591275f8d7b3d0ef95326297a66b292` | 10 | .33 | $3.30 |
+| NY-01 Democratic YES | `0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585` | 10 | .12 | $1.20 |
+
+Complete authenticated pagination and reservations agree. Polygon95711709 shows
+zero balances on both outcomes of all four candidates, pUSD24.996890, pending
+9.80 and uncommitted15.196890. Allowance and CTF approval are sufficient; current
+venue response is blocked=false/FI02. This is a cash commitment, not filled
+positions or realized profit. New decisions DEC-0205/0206. Primary MT/NY points
+47%/31% remain broad, uncalibrated and exposed to the same national wave as ME.
+CA NO is not a measured hedge. All current criteria and token identities match.
+
+Existing daemon ingested eligible baseline entries before seven MT/NY names
+were promoted to tier1; future matching news bypasses the small-model filter.
+Original reports and independent criticism remain in candidate_followup.
+**Review at existing22:00 UTC check and every tick/earlier relevant news. Cancel
+first if facts change or become uncertain, and pull before known catalysts.**
+Do not replay execution commands. The18:00 held-thesis check remains dated.
+Evidence: `data/deep_review_20261017/house_next_verified_2135.json`.
+
 **October17 20:52:56UTC — two new small BUY commitments, zero filled.**
 Authenticated complete inventory contains exactly:
 

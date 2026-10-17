@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T21:15:23.637506+00:00
+Updated: 2026-10-17T21:37:53.117792+00:00
 
-**125 valuations saved; first milestone100:** 125 valued; 1 blocked after in-depth review. 325 factual exclusions separately; 2549 pending.
+**134 valuations saved; first milestone100:** 134 valued; 1 blocked after in-depth review. 325 factual exclusions separately; 2540 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -36,6 +36,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |24|[Will Benjamin Netanyahu be the next Prime Minister of Israel?](evaluations/0024.md)|valued|Next sworn PM valued separately from seat winner; neither side clears default reserve at captured asks|
 |25|[Will 12 or more Fed rate cuts happen in 2026?](evaluations/0025.md)|valued|Tiny YES central tail value; unsupported floor/minimum-size route, no NO offer|
 |27|[Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs](evaluations/0027.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
+|28|[Anthropic IPO before 2027?](evaluations/0028.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |29|[Ethereum Up or Down on October 17?](evaluations/0029.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |31|[Next White House Press Secretary announced by October 31, 2026?](evaluations/0031.md)|valued|YES has a small-maker price/model difference; new permanent appointment and monitoring checks required|
 |32|[Will the Democratic Party win the CA-06 House seat?](evaluations/0032.md)|valued|NO is a concrete small-maker research lead; poll provenance and future caucus binding need balanced review|
@@ -120,6 +121,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |153|[Will Venezia FC win on 2026-10-17?](evaluations/0153.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
 |157|[Will Steve Hilton win the California Governor Election in 2026?](evaluations/0157.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|158|[Will Anthropic have the highest IPO Market Cap 2026?](evaluations/0158.md)|valued|Potential small passive NO follow-up; requires complete current entry review|
 |160|[Brentford FC vs. Liverpool FC: O/U 3.5](evaluations/0160.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |161|[Will Google have the best AI model at the end of December 2026?](evaluations/0161.md)|valued|YES central/default-stress lead; correlated AI/December uncertainty review needed, no order|
 |163|[Will "Transformers One" be the #2 global Netflix movie this week?](evaluations/0163.md)|valued|Both asks negative central EV; availability/model uncertainty remains, no entry|
@@ -128,6 +130,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |166|[Romanian PM Bolojan out by October 31?](evaluations/0166.md)|valued|Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain|
 |167|[Israel x Iran ceasefire continues through October 18?](evaluations/0167.md)|valued|Short-window survival valued; NO central difference fails ordinary uncertainty reserve|
 |171|[Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?](evaluations/0171.md)|valued|Exact ballot-list contest deeply valued with poll disagreement retained; no ordinary-reserved entry|
+|175|[OpenAI IPO before 2027?](evaluations/0175.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |176|[Will Together win the most seats in the 2026 Israeli legislative election?](evaluations/0176.md)|valued|Rare named-list event fully valued, including late-merger fork; point edge lacks a calibrated tail reserve|
 |177|[Will "Ice Age: Collision Course" be the #2 US Netflix movie this week?](evaluations/0177.md)|valued|YES central lead, failsindividualstress; possible joint-unionresearch|
 |178|[Will the Republicans win the Idaho Senate race in 2026?](evaluations/0178.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
@@ -139,6 +142,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |192|[Will Aleksandar Vučić be the next Prime Minister of Serbia?](evaluations/0192.md)|valued|Formal next-PM event valued separately from largest-list result; long fallback and normal reserve defeat captured asks|
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |195|[Spread: Galatasaray SK (-1.5)](evaluations/0195.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|199|[Will Anthropic IPO by December 31, 2026?](evaluations/0199.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |202|[Villarreal CF vs. Elche CF: O/U 0.5](evaluations/0202.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
 |207|[Will the Democratic Party win the NH-01 House seat?](evaluations/0207.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
@@ -150,6 +154,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |217|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0217.md)|valued|Priority makerNO research lead; release/protocol uncertainty and current gates outstanding|
 |220|[Will the Democrats win the New Hampshire Senate race in 2026?](evaluations/0220.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |221|[Will the Republican Party win the NY-22 House seat?](evaluations/0221.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
+|222|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 12.5% to 15%?](evaluations/0222.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
 |223|[Will Galatasaray SK win on 2026-10-17?](evaluations/0223.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |226|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 US Netflix movie this week?](evaluations/0226.md)|valued|Tiny YES central edge, unsupported floor/minimum-size exposure; no entry|
 |230|[Bologna FC 1909 vs. FC Internazionale Milano: O/U 2.5](evaluations/0230.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -233,6 +238,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |795|[Bristol City FC vs. Sheffield United FC: O/U 2.5](evaluations/0795.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |801|[Dota 2: Stray Team vs Stariy bog Team - Game 1 Winner](evaluations/0801.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |807|[Counter-Strike: EAC Extra vs RoundsGG (BO3) - European Pro League Regular Playoffs](evaluations/0807.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|812|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 10% to 12.5%?](evaluations/0812.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
 |833|[Ethereum Up or Down - October 17, 11AM ET](evaluations/0833.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |861|[Exact Score: Manchester City FC 3 - 2 Ipswich Town FC?](evaluations/0861.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |863|[Bitcoin Up or Down - October 17, 12:00PM-4:00PM ET](evaluations/0863.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -274,6 +280,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |1248|[Counter-Strike: Lilmix vs MORROW (BO3) - CCT Europe Closed Qualifier: Series #12 Group C](evaluations/1248.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1253|[Manchester City FC leading at halftime?](evaluations/1253.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1258|[Newcastle United FC vs. Aston Villa FC: O/U 3.5](evaluations/1258.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1262|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 15% to 17.5%?](evaluations/1262.md)|valued|Potential tiny passive YES follow-up; ask fails five-cent operation allowance at stressedp|
 |1263|[Southampton FC vs. Bolton Wanderers FC: O/U 0.5](evaluations/1263.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1265|[Will the Hanshin Tigers win the 2026 Japan Series?](evaluations/1265.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1268|[FC Schalke 04 vs. 1. FSV Mainz 05: O/U 4.5](evaluations/1268.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -313,6 +320,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |1638|[W15 Maceio: Ana Sofia Sanchez vs Luna Maria Cinalli](evaluations/1638.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1653|[Hamburger SV vs. VfB Stuttgart: Draw at halftime?](evaluations/1653.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1664|[Will the price of XRP be above $1.30 on October 17?](evaluations/1664.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1672|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth <10%?](evaluations/1672.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
 |1673|[Al-Nasr Dubai CSC vs. Hatta SC: O/U 1.5](evaluations/1673.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1678|[Will Hibernian FC win on 2026-10-17?](evaluations/1678.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1688|[Wycombe Wanderers FC vs. Notts County FC: Both Teams to Score](evaluations/1688.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -346,6 +354,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |1956|[Bursaspor vs. Bahcesehir Koleji](evaluations/1956.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1960|[Exact Score: Millwall FC 0 - 2 Lincoln City FC?](evaluations/1960.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1964|[Spread: Reading FC (-1.5)](evaluations/1964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1983|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 17.5%+?](evaluations/1983.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
 |1985|[Will the lowest temperature in Tokyo be 18°C on October 17?](evaluations/1985.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1988|[NEOM SC vs. Al Ettifaq Saudi Club: O/U 1.5](evaluations/1988.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1996|[Spread: Guangxi Hengchen FC (-2.5)](evaluations/1996.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

@@ -1,0 +1,78 @@
+{
+  "author": "primary",
+  "calibrated": false,
+  "inputs_asof": "2026-10-17",
+  "central": {
+    "anthropic_ipo": 0.71,
+    "anthropic_listed_and_tradable": 0.7129,
+    "anthropic_highest_ipo_cap": 0.18364516515870974,
+    "spacex_base_first_day_cap_trillion": 2.10456049991625,
+    "rival_survival": 0.94,
+    "regimes": [
+      {
+        "name": "Orderly offering with some valuation concession",
+        "weight": 0.45,
+        "completion": 0.95,
+        "offer_cap": 1.75,
+        "first_day_multiple": 1.12,
+        "log_sd": 0.23,
+        "close_cap_median": 1.9600000000000002,
+        "conditional_exceeds_spacex": 0.37850833186001465,
+        "ipo_mass": 0.4275,
+        "exceeds_spacex_mass": 0.16181231187015627
+      },
+      {
+        "name": "Weak demand, substantial price concession or delay",
+        "weight": 0.4,
+        "completion": 0.65,
+        "offer_cap": 1.5,
+        "first_day_multiple": 1.05,
+        "log_sd": 0.25,
+        "close_cap_median": 1.5750000000000002,
+        "conditional_exceeds_spacex": 0.1231454602991009,
+        "ipo_mass": 0.26,
+        "exceeds_spacex_mass": 0.032017819677766235
+      },
+      {
+        "name": "Market, safety or governance interruption",
+        "weight": 0.15,
+        "completion": 0.15,
+        "offer_cap": 1.25,
+        "first_day_multiple": 1.0,
+        "log_sd": 0.35,
+        "close_cap_median": 1.25,
+        "conditional_exceeds_spacex": 0.06831401908570223,
+        "ipo_mass": 0.0225,
+        "exceeds_spacex_mass": 0.0015370654294283
+      }
+    ]
+  },
+  "primary_rounded_p_yes": {
+    "28": 0.71,
+    "199": 0.71,
+    "175": 0.05,
+    "158": 0.18
+  },
+  "openai_components": {
+    "executive_timing_reversal": 0.06,
+    "timely_completion_given_reversal": 0.75,
+    "other_eligibility_or_missed_event_mass": 0.005,
+    "p_yes": 0.049999999999999996
+  },
+  "sensitivity_cases": 81,
+  "sensitivity_ranges": {
+    "anthropic_ipo": [
+      0.5175000000000001,
+      0.7875
+    ],
+    "anthropic_listed_and_tradable": [
+      0.522325,
+      0.789625
+    ],
+    "anthropic_highest_ipo_cap": [
+      0.012069637287071378,
+      0.5641329845745198
+    ]
+  },
+  "caveat": "Subjective regimes and price distributions. No measured tail, sample calibration, or universal current-listing absence proof."
+}

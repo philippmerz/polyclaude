@@ -1,0 +1,165 @@
+{
+  "review_index": 175,
+  "condition_id": "0x7844ad013088564a11d5d4d3b1766c57ad936a55247f0ae1efe28180d7285af3",
+  "criteria_sha256": "a86a1485868f23843f788ddd7674f6b512c1d16938efb88971573dcd645f5602",
+  "status": "valued",
+  "literal_analysis": "Full exact frozen rule read: issuer-sale vs listed/open-for-trading, Dec31ET, merger/acquisition paths; case158 official first-close outstanding-share, tie/FX/interrupted-session clauses.",
+  "evidence": [
+    {
+      "url": "https://www.anthropic.com/news/confidential-draft-s1-sec",
+      "observed_utc": "2026-10-17T21:29:00Z",
+      "finding": "Official dated June1 confidential submission, not a completed offering."
+    },
+    {
+      "url": "https://openai.com/index/openai-submits-confidential-s-1/",
+      "observed_utc": "2026-10-17T21:30:00Z",
+      "finding": "Official dated June8 option notice, not completed IPO."
+    },
+    {
+      "url": "https://www.sec.gov/about/divisions-offices/division-corporation-finance/voluntary-submission-draft-registration-statements-faqs",
+      "observed_utc": "2026-10-17T21:29:00Z",
+      "finding": "Current staff FAQ public draft/registration interval; process constraint, not intention or universal route ban."
+    },
+    {
+      "url": "https://fortune.com/2026/09/12/sam-altman-interview-ai-doomsday-safety-models-control-ipo-2027/",
+      "observed_utc": "2026-10-17T21:30:00Z",
+      "finding": "Original interviewer account and linked video of CEO timing intention; not binding filing."
+    },
+    {
+      "url": "https://www.marketscreener.com/news/investors-temper-anthropic-ipo-valuation-expectations-over-revenue-growth-slowdown-sources-say-ce785dd3d18ef225",
+      "observed_utc": "2026-10-17T21:32:00Z",
+      "finding": "Root rendered current Reuters report of preparation/repricing; anonymous sources; direct capture403 retained as gap."
+    },
+    {
+      "url": "https://www.nasdaq.com/newsroom/spacex-makes-history-raising-85-billion-through-nasdaq-listing",
+      "observed_utc": "2026-10-17T21:31:00Z",
+      "finding": "Primary exchange first-session price/capitalization; not opening value or proceeds."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1181412/000162828026040874/spacexukfwp.htm",
+      "observed_utc": "2026-10-17T21:28:04Z",
+      "finding": "Issuer-filed base outstanding ClassA/B shares, separate full option timing."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.001,
+    "high": 0.35,
+    "method": "Primary joint timing, offering-value and first-close scenario model; separate CEO-timing-reversal tree forOpenAI",
+    "reasoning": "Regime weights, completion rates, capitalization distributions, rival survival and technical branches are explicit assumptions in tracked model; not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 76,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "best_bid": 0.026,
+        "best_ask": 0.03,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.923,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.03,
+            "fee_usd": 0.01164
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.31164,
+        "fee_usd": 0.01164,
+        "break_even_probability_before_carry": 0.031163999999999997,
+        "break_even_probability_with_idealized_carry": 0.031359901742719784,
+        "central_expected_profit_usd": 0.18836000000000003,
+        "default_10pp_stressed_profit_usd": -0.31164,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.24987
+      },
+      "No": {
+        "probability": 0.95,
+        "best_bid": 0.97,
+        "best_ask": 0.974,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.923,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.974,
+            "fee_usd": 0.01012960000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.75013,
+        "fee_usd": 0.01013,
+        "break_even_probability_before_carry": 0.975013,
+        "break_even_probability_with_idealized_carry": 0.9811420831046865,
+        "central_expected_profit_usd": -0.2501300000000004,
+        "default_10pp_stressed_profit_usd": -1.2501300000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.85,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.68836
+      }
+    }
+  },
+  "verdict": "Both sides valued; captured routes fail ordinary reserve or scale/fee economics",
+  "reopen_condition": "Public registration, issuer/exchange pricing/timetable, altered company intent or safety/governance/market conditions, a new rival IPO, or corrected first-day shares require primary revaluation.",
+  "current_description_sha256": "421153c0756436b90f40d44334b33bbf3bfca082c8daca6e92615a141501c972",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "110919823681366572848644726084407500574182275918205089812967934254809885857695",
+    "44069265739522064332214860829659371087110860870698295438128050660626185746105"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0103",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/ai_ipo_current_timing_sources.json",
+      "data/deep_review_20261017/ai_ipo_primary_addendum.json",
+      "data/deep_review_20261017/ipo_status_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/ai_ipo_model.py",
+    "model_calibrated": false,
+    "candidate_followup_required_before_money": false
+  },
+  "evaluated_utc": "2026-10-17T21:37:52.480242+00:00",
+  "question": "OpenAI IPO before 2027?",
+  "market_id": "676785",
+  "valuation_author": "primary_operator",
+  "original_index": 175,
+  "report_sha256": "08ba5b12f4ecdabbd95d1d9cf85512cd67f55787d19b143431d2924ae54f82e1"
+}

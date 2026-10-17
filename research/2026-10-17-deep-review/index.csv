@@ -26,7 +26,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 25,0xffa0accb74987c0dc33a70eb3780c1da160206bcfb3ef5d16c1667bc5c459c78,616914,Will 12 or more Fed rate cuts happen in 2026?,valued,2026-10-17T19:00:01.753681+00:00,0.003,"Tiny YES central tail value; unsupported floor/minimum-size route, no NO offer",evaluations/0025.md
 26,0x4447dc6ab61c50f386cbc6541e39672f520d6496dce2ce3df4df5aa8da6bba57,5612095,"Will there be no Hormuz agreement or oil at least $80, and the Democrats win the Senate?",pending,,,,
 27,0x78717bc333cc779da078456f5e36c54b99111a924d758d2242adeb10937a2e39,5778024,Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs,excluded_factual,2026-10-17T18:44:01.850195+00:00,,Factual exclusion: exact venue market closed to new orders; not an investment rejection.,evaluations/0027.md
-28,0x6522024c060166830e53a48b0db1cab9296601a8539ab005124db5e4bf50a303,676792,Anthropic IPO before 2027?,pending,,,,
+28,0x6522024c060166830e53a48b0db1cab9296601a8539ab005124db5e4bf50a303,676792,Anthropic IPO before 2027?,valued,2026-10-17T21:37:51.375096+00:00,0.71,Both sides valued; captured routes fail ordinary reserve or scale/fee economics,evaluations/0028.md
 29,0xb29d72e1d712d22e9726ced5a239e0f5994c6b19678d12e4bb769aea81d467b6,5742123,Ethereum Up or Down on October 17?,excluded_factual,2026-10-17T18:44:02.135179+00:00,,Factual exclusion: exact venue market closed to new orders; not an investment rejection.,evaluations/0029.md
 30,0x8456187f44f11c6a97b36ed30f61d86d654eda52bea45e39d0f6d98bb00facb7,3211307,Will Die With A Smile – Lady Gaga & Bruno Mars be the #2 song in the US for 2026?,pending,,,,
 31,0x6bfa7b0ba9259c7555ac948eb80015271b9720d961f4e3bf05027946c25a0e92,5784290,"Next White House Press Secretary announced by October 31, 2026?",valued,2026-10-17T20:26:43.880392+00:00,0.33,YES has a small-maker price/model difference; new permanent appointment and monitoring checks required,evaluations/0031.md
@@ -156,7 +156,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 155,0x88aeab3adb4e316a51430a38d2f8deff32a139bf36fc1df30cf38dbd49bcab79,5610602,"Will the price of Bitcoin be above $84,000 on October 19?",pending,,,,
 156,0x464a847f0e60f7b97d9bbd4a25a69504d2930a1e6809fffdb4ba002428c4c799,5713606,"Will ""Ice Age"" be the top US Netflix movie this week?",valued,2026-10-17T19:33:48.455100+00:00,0.003,Both asks negative central EV; no entry,evaluations/0156.md
 157,0x119b6b3b744ac3239c7a71100165d254234eaecea401abde5a3d303bef21d19e,628940,Will Steve Hilton win the California Governor Election in 2026?,valued,2026-10-17T20:04:07.715989+00:00,0.01,"Both sides valued; no entry after fees, default uncertainty reserve and carry",evaluations/0157.md
-158,0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09,1321564,Will Anthropic have the highest IPO Market Cap 2026?,pending,,,,
+158,0xe96dbaceb816e80063bec945a76ac915cba4341bdf1ef704f722bfc9054aad09,1321564,Will Anthropic have the highest IPO Market Cap 2026?,valued,2026-10-17T21:37:53.006242+00:00,0.18,Potential small passive NO follow-up; requires complete current entry review,evaluations/0158.md
 159,0xd126be462373d003c41de347ae8dbd5237b887dacbbc551921789c3ca8b0d39e,5364732,Will the Central Bank of Chile make no change to the monetary policy rate at the October meeting?,pending,,,,
 160,0x4d72a30066ea5650e3f16d25ae1dbeecb4e8b18647d84919e53ab222b15c92d6,5267711,Brentford FC vs. Liverpool FC: O/U 3.5,excluded_factual,2026-10-17T20:37:11.784821+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0160.md
 161,0x94f240d042917cabd55f0bcbcac7d4d2accd4436773bf91596f76572cac643cb,2431412,Will Google have the best AI model at the end of December 2026?,valued,2026-10-17T19:27:55.256534+00:00,0.548,"YES central/default-stress lead; correlated AI/December uncertainty review needed, no order",evaluations/0161.md
@@ -173,7 +173,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 172,0x1fe6d77fdefb404ad02e08544db5e8d270fe91443d6daf068e08b53661c56715,4797667,Will the 10-year Treasury yield dip below 4.6% before 2027?,pending,,,,
 173,0x6e7aee94adfd2751604c4f92bfa7d169b08aec825539dc51034de674def849eb,5692101,Will Hyperliquid dip to $60 in October?,pending,,,,
 174,0x4051174e9ccefce81be2b567c53a242be317cbb396ce23a46916a6727ce8453a,5349499,Ohio State vs. Indiana,pending,,,,
-175,0x7844ad013088564a11d5d4d3b1766c57ad936a55247f0ae1efe28180d7285af3,676785,OpenAI IPO before 2027?,pending,,,,
+175,0x7844ad013088564a11d5d4d3b1766c57ad936a55247f0ae1efe28180d7285af3,676785,OpenAI IPO before 2027?,valued,2026-10-17T21:37:52.480242+00:00,0.05,Both sides valued; captured routes fail ordinary reserve or scale/fee economics,evaluations/0175.md
 176,0x4e9cff8a3aeac036225fedcc98af9b0d55284b3f430b599e7f61b059c1e177af,2100982,Will Together win the most seats in the 2026 Israeli legislative election?,valued,2026-10-17T20:31:03.083994+00:00,0.03,"Rare named-list event fully valued, including late-merger fork; point edge lacks a calibrated tail reserve",evaluations/0176.md
 177,0x43d5e6dd7f48c4cd152982c89cb889221fad069e13becfb5b5d7f8d37a81a9d6,5713622,"Will ""Ice Age: Collision Course"" be the #2 US Netflix movie this week?",valued,2026-10-17T19:33:49.568880+00:00,0.05,"YES central lead, failsindividualstress; possible joint-unionresearch",evaluations/0177.md
 178,0x22e986868fae24a9e7b6fff86e063cc90843c85c4a9dd65b2628bbf5663997c7,630706,Will the Republicans win the Idaho Senate race in 2026?,valued,2026-10-17T20:04:08.900412+00:00,0.985,"Both sides valued; no entry after fees, default uncertainty reserve and carry",evaluations/0178.md
@@ -197,7 +197,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 196,0x27802b8b0d6d500d6ccaf122c1efbc542b8473c765782bfe6d9b5cb425f76232,5166967,Will Microsoft be the third-largest company in the world by market cap on October 31?,pending,,,,
 197,0xb7310b6af5b81cdf29a836f1cf86bdb35ea629acb7abb711280ccc3707e7bbb1,5610574,"Will the price of Ethereum be above $2,400 on October 19?",pending,,,,
 198,0x40a8b496dfd17f0a1c80e6a818d621b793847a398dab8ddc4f0598126446a0d7,3211316,Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?,pending,,,,
-199,0xb40b0cd531184a1e436d23ca898e1590418187b116f387158753d1adb9853e47,2413330,"Will Anthropic IPO by December 31, 2026?",pending,,,,
+199,0xb40b0cd531184a1e436d23ca898e1590418187b116f387158753d1adb9853e47,2413330,"Will Anthropic IPO by December 31, 2026?",valued,2026-10-17T21:37:51.940460+00:00,0.71,Both sides valued; captured routes fail ordinary reserve or scale/fee economics,evaluations/0199.md
 200,0x83b1600a655c72c6dd1d6a6e4fa12dd14688f1cc22dcb876b2072c4f5f6d6ba5,3241900,Will Pep Guardiola be the next head coach of the England national team?,pending,,,,
 201,0x899f8c70dae5b6d09a19ebe324e248ce8bf48002f06216fa7d937b935f4c1734,676744,Will Saudi Aramco be the largest company in the world by market cap on December 31?,pending,,,,
 202,0x7f0cd327f07e2a54fd0abdc79dcbae22df42924cb57f8685cb9911719cdfac5c,5270032,Villarreal CF vs. Elche CF: O/U 0.5,excluded_factual,2026-10-17T20:37:12.745326+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0202.md
@@ -220,7 +220,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 219,0x8ba9325719d9cae13226f277c6239ee852c40005efc9dbfcadb898ed06d546b9,3211317,Will Beauty And A Beat – Justin Bieber & Nicki Minaj be the #2 song in the US for 2026?,pending,,,,
 220,0xfc5c740e4617eb9908ceada7c91bfbe1cd41f172d703ef811d544e60a7a70bb5,630844,Will the Democrats win the New Hampshire Senate race in 2026?,valued,2026-10-17T20:04:10.021495+00:00,0.91,"Both sides valued; no entry after fees, default uncertainty reserve and carry",evaluations/0220.md
 221,0xf0f97c951d0d46413884ffa8ba3b97affc5d388e6be3f3fbf007a9bac2060757,943468,Will the Republican Party win the NY-22 House seat?,valued,2026-10-17T20:15:01.839871+00:00,0.02,Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs,evaluations/0221.md
-222,0x662ed1d4d0d917b08bb132fe792cf20a4f6c094a6eea7cac9f07c368b6146e0a,5457282,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 12.5% to 15%?,pending,,,,
+222,0x662ed1d4d0d917b08bb132fe792cf20a4f6c094a6eea7cac9f07c368b6146e0a,5457282,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 12.5% to 15%?,valued,2026-10-17T21:21:57.777578+00:00,0.47,Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable,evaluations/0222.md
 223,0xdaa229a6f4d44a36a5b6933be19af8ede9af34c82a38a3286784db0ee34147b1,5239731,Will Galatasaray SK win on 2026-10-17?,excluded_factual,2026-10-17T20:37:13.345112+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0223.md
 224,0x2579c53c318675bde886ceb1ad73605d293c27b6eb3b7d878481299d73af1765,3251368,Will Lindsay Clancy be the #1 searched person on Google in the US this year?,pending,,,,
 225,0x7424fc90b4f00144146bd99bbb6a82d3b020c8c0bfe1da2b8073e4b089877ef2,5564831,"Will the price of Bitcoin be between $78,000 and $80,000 on October 18?",pending,,,,
@@ -810,7 +810,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 809,0xc5b68de0e0b56bb7c3914c5b1a516b47951659de747133d6eeb69b89a944a7ff,5774594,Will the highest temperature in Toronto be 17°C on October 18?,pending,,,,
 810,0xfd16632c6efddf65806863f741d069669b57917f977b6997c8b9b3bc2840aad1,3851376,Will Nelly Dever win the 2026 Kamloops mayoral election?,pending,,,,
 811,0xdab5bbe10e1ed098b8e92aae92195d5c1c94152ab34c76c6d8b3a0a6af2aed81,2883732,"Will the U.S. lift CAATSA sanctions on Turkey by October 31, 2026?",pending,,,,
-812,0xd5a085fc03e83e7d4a83d6027b93615f9dd01d815b829a7c4c30304175383f35,5457281,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 10% to 12.5%?,pending,,,,
+812,0xd5a085fc03e83e7d4a83d6027b93615f9dd01d815b829a7c4c30304175383f35,5457281,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 10% to 12.5%?,valued,2026-10-17T21:21:57.233450+00:00,0.15,Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable,evaluations/0812.md
 813,0xcb37300ae3f8d1ae110cf28d585de64323d4d814aa17cc4aecec60d74d58ea63,5798268,Exact Score: Any Other Score?,pending,,,,
 814,0xecd576b10f0541bb41740116ccde1146c2d4e52092c238fe471dd2e76e52e0fc,3251344,Will Timothée Chalamet be the #1 searched person on Google in the US this year?,pending,,,,
 815,0x09e78be2239754fed2f719d0c3ef0a79e7879e1a835aac472e1d890c22a38c5b,5720917,Will the highest temperature in Istanbul be 13°C on October 17?,pending,,,,
@@ -1260,7 +1260,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1259,0xd9a9a78baeeda8e32538e0391a579f79f8d4b763537bc3c071ad39912f56c565,692261,Will Pete Buttigieg announce a Presidential run before 2027?,pending,,,,
 1260,0x523959b6256674318eb34755789fffd8c62cd652e5fa11ffd332402361d058e9,1807912,"Will any country leave NATO by December 31, 2026?",pending,,,,
 1261,0x51397c0612e3ccc1d9dfaf24ec9669deeb767f0c3bd2b42c591997fd13e5dd57,2937548,Will Markwayne Mullin leave the Trump administration before 2027?,pending,,,,
-1262,0x137dae1b687b067134e318b81978cbae949d5d6ee8e23208510d97165310b6a1,5457283,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 15% to 17.5%?,pending,,,,
+1262,0x137dae1b687b067134e318b81978cbae949d5d6ee8e23208510d97165310b6a1,5457283,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 15% to 17.5%?,valued,2026-10-17T21:21:58.306799+00:00,0.35,Potential tiny passive YES follow-up; ask fails five-cent operation allowance at stressedp,evaluations/1262.md
 1263,0x912648b288a72a8ce65612f9a9738da81c60dd736846898166f7bcc50b4a59df,5276282,Southampton FC vs. Bolton Wanderers FC: O/U 0.5,excluded_factual,2026-10-17T20:37:50.821250+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1263.md
 1264,0xfa0d351a574ae9217b1c54b9b25c2fa8a108b68cc6d82d0d406effe4798e14fc,5739551,"Will the price of Ethereum be above $2,100 on October 22?",pending,,,,
 1265,0xde6ec0c85a6930eb981c86fd324f98fa1379d64adc26195f5eba8e8935ac1775,3959593,Will the Hanshin Tigers win the 2026 Japan Series?,excluded_factual,2026-10-17T20:37:51.166688+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1265.md
@@ -1670,7 +1670,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1669,0x3d335af920870f5081ee82365a4282ed3851baab1f448c1a0b5e10f90a223ca2,3767070,Republicans favored to win the Senate on Nate Silver's Bulletin by October 31?,pending,,,,
 1670,0x82fd75bbcc747de1fc5524ea6c2edc0d7e853ee1a3cd8356a78526dd15b86e15,3408667,Will the Democratic Party candidate win the 2026 HI-01 House election by 45%-50%?,pending,,,,
 1671,0x2db6568b722fe6946b6a8471196334e473cfaba5743d620b8b3d7c8a93f6ec15,4797672,Will the 10-year Treasury yield dip below 4.5% before 2027?,pending,,,,
-1672,0xac38888bfa6f3a27444b6514c72b1721d3a451d35c7d2cd9db2c80088e32ed41,5457280,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth <10%?,pending,,,,
+1672,0xac38888bfa6f3a27444b6514c72b1721d3a451d35c7d2cd9db2c80088e32ed41,5457280,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth <10%?,valued,2026-10-17T21:21:56.666203+00:00,0.02,Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable,evaluations/1672.md
 1673,0x950f3c490d29cc0580812e2bb1410fdcc44487bdf1d6cb49215356efab08cde6,5610063,Al-Nasr Dubai CSC vs. Hatta SC: O/U 1.5,excluded_factual,2026-10-17T20:38:04.430773+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1673.md
 1674,0xecb6a2e9c4086796a50baea31560ce0072baa2897215f6911af356fc069a7bea,5723799,Will the lowest temperature in Chicago be between 40-41°F on October 17?,pending,,,,
 1675,0x002341871854e39158ec683fd0583a3000210a5f31ce5cc4a4b3cc7aec1ed900,5332466,Will Yashar win the second-most seats in the 2026 Israeli legislative election?,pending,,,,
@@ -1981,7 +1981,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1980,0x28d5f08b49c0adff9dcd671214ab8b7cbd96947e337e5b067efc4aec7d55ee11,5255288,"UFC Fight Night: Chad Anheliger vs. Steven Koslow (Bantamweight, Prelims)",pending,,,,
 1981,0x49fd0143620c62f2f60f3f1e322a99a01efcdea8c0dd5284e155801b1727cd95,5766469,Will the lowest temperature in Tokyo be 15°C on October 18?,pending,,,,
 1982,0x646198f18035295a3b1ebd48dbc2232a0eaa9d427ca3c1a623a221cbd9835a41,5786295,Will commitments to the 1W public sale exceed $30M?,pending,,,,
-1983,0x3f3ec60ee1896d372c0e0b0510c6698c971a79d3a0580281720cab73a500095d,5457284,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 17.5%+?,pending,,,,
+1983,0x3f3ec60ee1896d372c0e0b0510c6698c971a79d3a0580281720cab73a500095d,5457284,Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 17.5%+?,valued,2026-10-17T21:21:58.828376+00:00,0.01,Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable,evaluations/1983.md
 1984,0x7141329fc1b9fdd01b6dd4b9dfa31fd72bd56e14729e661c3785ee76d80ce05c,5506818,Will Ironi Tiberias win on 2026-10-17?,pending,,,,
 1985,0x0a6b9bfb3611f5c107cdbd7ff67fd81498d539bc26c7173493f6959dd8ae2eaa,5720267,Will the lowest temperature in Tokyo be 18°C on October 17?,excluded_factual,2026-10-17T20:38:17.018613+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1985.md
 1986,0x4cd035dcfb450c9a6bc9aa13f3aa94fabc01e47499d05d28ef653ef42939c364,629544,Will the Democrats win the New York governor race in 2026?,pending,,,,

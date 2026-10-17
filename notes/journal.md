@@ -30388,3 +30388,29 @@ Evidence: `data/checkin_20261016T0200_root_judgment.json`,
 -MT01/NY01 and thinnerAZ02 remain possible small-maker follow-ups, with independent advisory notes read. No new entry was posted. A fresh complete authenticated order read confirms only the existing ME02/CA06 bids LIVE/zero matched; receipt house_pilot_orders_2115.json carries its actual observation time. Last on-chain balance proof stays20:52:56/block95710019; this order-only read is not a new full bankroll/thesis check. No newer public alert appeared in bounded tails.
 -NVDAofficial original guidance/actual residuals include its real H20charge. Later SBCrestatements and extra H20-excluding variants do not replace the specified first report. All five bracket probabilities form one common partition and both sides were fee/depth valued. No captured ask cleared the ordinary reserve.
 -Source/index queue and primary handoff updated; no timer, daemon or indefinite goal created. Existing22:00lightcheck/order review remains due. Telegram1165 previously reported the two pending bids; neither is booked as a purchased position/profit.
+
+
+## 2026-10-17T21:39:37Z —134 valuations; four verified zero-filled House pilots
+
+Nine new valuations (five ISRG growth brackets, four exact AI IPO cases) are
+persisted independently, one before the next:134valued,1blocked,325factual
+exclusions,2540pending. ISRG whole-percent publication and annual/H1 bridge are
+explicit; secondarySeptember conference reaffirms annual guidance, not Q3.
+Root caught and corrected an advisory's Q3'25 16% claim (actual19%). IPO timing
+uses current preparation/CEO intentions and exact sale-versus-trading clauses.
+IPO-cap158's18% is provisional for entry while exact SpaceX first close is
+verified: narrative near160.95 is not an explicit historical closing table.
+No IPO/ISRG prior, order or reservation. Original reports remain dated.
+
+MT01YES10@.33 andNY01YES10@.12 were posted through the vetted maker helper
+after full current identity/account/legal/cap checks and both primary-read
+advisories. Independently verified21:35:13/block95711709: four LIVE BUYs
+including ME02YES10@.38 andCA06NO50@.03, all zero matched and zero both-outcome
+CTF balances, pUSD24.996890, pending9.80, free15.196890. DEC0205/0206 record
+commitments, not fills/P&L. Candidate baseline feeds were ingested before tier1
+promotion; no new timer/daemon or direct watcher-state edits. Review all four
+at existing22:00UTC and earlier relevant news; cancel first on changed/uncertain
+facts. Source gaps/broad probabilities/common-wave risk remain. Last full
+held-thesis check is still18:00. First100 notification already delivered;
+continue the finite remaining queue and per-case persistence. Direct quota
+probe21:34:3%used/97%headroom.

@@ -64,15 +64,18 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was sent in chat and Telegram. At21:16UTC,125 valuations,1 blocked review and325
-closed-market exclusions are saved;2,549 remain pending. At20:52:56UTC, two new
-post-only bids are verified LIVE with zero fills: ME-02YES10@38c andCA-06NO50@3c,
-total pending commitment **$5.30**. Polygon95710019 confirms zero new shares;
-pUSD24.996890 and uncommitted19.696890. Read
-[current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md)
-and [resting-order management](notes/resting_orders.md). These commitments are
-separate from the older bankroll/held-thesis snapshot below; review at22:00UTC
-or earlier on relevant news.
+was sent in chat and Telegram. At21:40UTC,134 valuations,1 blocked review and325
+closed-market exclusions are saved;2,540 remain pending. At21:35:13UTC, four
+post-only bids are verified LIVE with zero fills: ME-02YES10@38c, CA-06NO50@3c,
+MT-01YES10@33c andNY-01YES10@12c, total pending commitment **$9.80**.
+Polygon95711709 confirms zero candidate shares; pUSD24.996890 and
+uncommitted15.196890. Read
+[current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
+[current source corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
+and [resting-order management](notes/resting_orders.md). The IPO-capitalization
+candidate remains blocked for entry pending an exact historical-close check;
+no IPO/ISRG order exists. These commitments are separate from the older
+bankroll/held-thesis snapshot below; review at22:00UTC or earlier on news.
 
 ## Mandate and constraints
 

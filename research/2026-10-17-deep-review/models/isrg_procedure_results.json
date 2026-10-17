@@ -1,0 +1,92 @@
+{
+  "authority": "Primary uncalibrated scenario model; no market prices enter.",
+  "metric": "Q3 2026 worldwide da Vinci procedure growth YoY as first officially reported, not Ion or combined.",
+  "rounded_approximate_counts_thousands": {
+    "H1_2025": 1507,
+    "FY_2025": 3153,
+    "H1_2026": 1737,
+    "Q3_2025": 797,
+    "Q4_2025": 849
+  },
+  "source_precision": "Counts approximate and independently rounded. Q1+Q2_2026 displayed1736 differs H1displayed1737; company growth uses unrounded estimates. Derived ratios are forecast inputs only.",
+  "annual_guidance_pp": [
+    13.5,
+    15.5
+  ],
+  "midpoint_bridge_pp": 13.802247873633045,
+  "central_inputs": {
+    "annual_center": 14.5,
+    "bridge_H2_growth_pp": 13.802247873633045,
+    "bridge_sd_pp": 1.3990481355066104,
+    "components": [
+      [
+        0.75,
+        13.802247873633045,
+        1.3990481355066104
+      ],
+      [
+        0.2,
+        15.2,
+        1.2
+      ],
+      [
+        0.05,
+        11.5,
+        3.0
+      ]
+    ],
+    "reported_integer_probability": 0.85,
+    "fallback_to_lowest": 0.003
+  },
+  "probabilities": [
+    0.017043525224675046,
+    0.15141340074822943,
+    0.46654910568924346,
+    0.35527655034185507,
+    0.009717417995996982
+  ],
+  "rounded_probabilities": [
+    0.02,
+    0.15,
+    0.47,
+    0.35,
+    0.01
+  ],
+  "labels": [
+    "<10",
+    "10<=x<12.5",
+    "12.5<=x<15",
+    "15<=x<17.5",
+    "17.5<=x"
+  ],
+  "grid_size": 2187,
+  "grid_ranges": [
+    [
+      0.005049957518750892,
+      0.09356735726579717
+    ],
+    [
+      0.014327754175737237,
+      0.3577831262472845
+    ],
+    [
+      0.2829517701577985,
+      0.7082521908256958
+    ],
+    [
+      0.08325935776415617,
+      0.6291491934645772
+    ],
+    [
+      0.0031870184109109414,
+      0.08644270184005654
+    ]
+  ],
+  "limitations": [
+    "Annual guidance does not give Q3/H2 guidance or confidence coverage",
+    "Quarter allocation, guidance uncertainty, persistence/disruption weights and presentation mix are primary assumptions",
+    "September9 conference remarks were not reviewed; no claim all oral guidance is checked",
+    "Historical rounded growth series is too short/nonstationary for tail calibration"
+  ],
+  "execution": "No order, canonical prior or reservation authority."
+}

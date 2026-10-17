@@ -1,0 +1,158 @@
+{
+  "review_index": 1262,
+  "condition_id": "0x137dae1b687b067134e318b81978cbae949d5d6ee8e23208510d97165310b6a1",
+  "criteria_sha256": "1a583c53e80a87f7f56e0f67eb0adf602c7b8f0c77fb753f57766870166b76e9",
+  "status": "valued",
+  "literal_analysis": "Full exact specifiedQ3daVinci-only metric, firstreport/mostprecise version, higher-boundary/range-midpoint/lowest-fallback/webcast rules read. MetadataendDate not literal Nov30fallback.",
+  "evidence": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1035267/000103526726000058/isrg-20260630.htm",
+      "observed_utc": "2026-10-17T21:21:58.106540+00:00",
+      "finding": "Official Q2/H1 procedure table and approximate-count/unrounded-growth footnote; whole-percent da Vinci growth distinct from Ion/combined."
+    },
+    {
+      "url": "https://investor.intuitivesurgical.com/news-releases/news-release-details/intuitive-announces-second-quarter-earnings-6",
+      "observed_utc": "2026-10-17T21:21:58.106560+00:00",
+      "finding": "July16 annual da Vinci guide13.5–15.5, closer to midpoint; not Q3 guidance."
+    },
+    {
+      "url": "https://investor.intuitivesurgical.com/events/event-details/q3-2026-intuitive-earnings-conference-call",
+      "observed_utc": "2026-10-17T21:21:58.106563+00:00",
+      "finding": "Oct20call20:30UTC; separate publication time unverified; current repeatedGET403, earlier actual200 and rendered source retained."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.35,
+    "low": 0.03,
+    "high": 0.8,
+    "method": "Primary normalized annual/H1 bridge, Q3 allocation, persistence/disruption and reported-precision scenario mixture",
+    "reasoning": "Approximate-count H2bridge13.802%; 75%guide-anchor,20%persistence,5%disruption;85%integer publication;0.3%lowest fallback. Explicit primary assumptions, not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1201_1320.json",
+    "quote_observed_utc": "2026-10-17T21:13:51.039+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 6,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.35,
+        "best_bid": 0.23,
+        "best_ask": 0.24,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.705,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.24,
+            "fee_usd": 0.07296
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.47296,
+        "fee_usd": 0.07296,
+        "break_even_probability_before_carry": 0.24729600000000002,
+        "break_even_probability_with_idealized_carry": 0.2474183730617608,
+        "central_expected_profit_usd": 1.02704,
+        "default_10pp_stressed_profit_usd": 0.02703999999999951,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.24999999999999997,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.2291600000000003
+      },
+      "No": {
+        "probability": 0.65,
+        "best_bid": 0.76,
+        "best_ask": 0.77,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.705,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.77,
+            "fee_usd": 0.07083999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.77084,
+        "fee_usd": 0.07084,
+        "break_even_probability_before_carry": 0.777084,
+        "break_even_probability_with_idealized_carry": 0.7774685357317761,
+        "central_expected_profit_usd": -1.2708399999999997,
+        "default_10pp_stressed_profit_usd": -2.2708399999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.55,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.5270399999999995
+      }
+    }
+  },
+  "verdict": "Potential tiny passive YES follow-up; ask fails five-cent operation allowance at stressedp",
+  "reopen_condition": "New official quarter/annual guidance, conference evidence, precise metric/publication scope or a materially different supported book needs fresh primary review.",
+  "current_description_sha256": "91326203586b0a1fdc47b3dfcd05ab68d6800bdeb444f24080bafa68c6967197",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "22247303375792060226801569156261463177318624692760923632462394314950726761334",
+    "94391120815191467754310269361299109487032113304619069591443805677925947807818"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0132",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0155",
+      "receipt_path": "logs/deep_review_20261017/quotes_1201_1320/req_0155.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1201_1320/req_0155.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/isrg_procedure_guidance_detail.json",
+      "data/deep_review_20261017/earnings_metric_history_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/isrg_procedure_model.py",
+    "model_calibrated": false,
+    "shared_metric_partition": [
+      "<10",
+      "10<=x<12.5",
+      "12.5<=x<15",
+      "15<=x<17.5",
+      "17.5<=x"
+    ],
+    "partition_probabilities": [
+      0.017043525224675046,
+      0.15141340074822943,
+      0.46654910568924346,
+      0.35527655034185507,
+      0.009717417995996982
+    ],
+    "candidate_followup_required_before_money": true
+  },
+  "evaluated_utc": "2026-10-17T21:21:58.306799+00:00",
+  "question": "Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 15% to 17.5%?",
+  "market_id": "5457283",
+  "valuation_author": "primary_operator",
+  "original_index": 1262,
+  "report_sha256": "091cc4b3c62f53ac7caa6f44e3f4074f7a3c5093208b1d79f07648704b85a508"
+}

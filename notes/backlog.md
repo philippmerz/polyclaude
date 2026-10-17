@@ -1,19 +1,26 @@
-## Active — primary in-depth review authorized October 17
+## Active — primary in-depth review authorized October17
 
-First100 completed valuations reached20:31UTC and were notified in chat/Telegram1163.
-Current106 valued,1 blocked,325 factual closed-market exclusions;2,568 pending. Read the
-[first100 inspection report](../research/2026-10-17-deep-review/MILESTONE_100.md).
-ME-02YES10@.38 andCA-06NO50@.03 are now LIVE post-only orders, **zero matched**
-at20:52:56/block95710019;5.30 full pending commitment, pUSD24.996890/free19.696890.
-Both balanced critics and fresh source/account/venue checks completed. Recheck
-at existing22:00UTC or earlier on candidate/poll/caucus news; cancel first if
-changed/uncertain. Exact IDs in notes/resting_orders and candidate_followup.
-Three new feeds were observed in the current daemon; candidate names are tier1
-so the small-model relevance filter cannot discard their future items. No new
-timer/daemon. The separate metadata refresh's325 closed/resolved/no-new-order
-rows are all now indexed as factual exclusions; it did not reject the2,675 open markets. Tesla case3 is
-currently disputed and cannot be a new-entry candidate. Continue the finite
-queue and per-case persistence; don't mistake this milestone for task completion.
+First100 were reached20:31UTC and notified in chat/Telegram1163. At21:40UTC,
+134 valued,1 blocked,325 factual closed-market exclusions;2,540 pending.
+The checkpoint/ledger are authoritative after each case. Four verified LIVE
+post-only bids at21:35:13/block95711709 are ME-02YES10@.38, CA-06NO50@.03,
+MT-01YES10@.33 andNY-01YES10@.12. All zero matched and zero CTF balances;
+pending9.80, pUSD24.996890, uncommitted15.196890. DEC-0203–0206 are commitments,
+not fills or P&L. Review22:00UTC and earlier on relevant news; cancel first on
+changed/uncertain facts. All candidate names are tier1 in the existing daemon.
+No new timer or daemon. Exact identities, sources and management are in
+notes/resting_orders and research/2026-10-17-deep-review/candidate_followup.
+
+Five ISRG brackets and four AI IPO cases are newly valued. ISRG35%15–17.5 is
+only a candidate; the September conference reaffirmed the existing annual guide
+in a secondary transcript, not a Q3 guide. IPO-largest18% is provisional for
+entry while the exact SpaceX first close is checked: Nasdaq narrative says
+near160.95/first-session2.1T, not an explicit closing-price table. No IPO/ISRG
+order or prior. Read CURRENT_REVISIONS; preserve original dated reports.
+Spotify's seven missing MNI weeks were recovered, ready for a linked revision.
+Tesla case3 is disputed, blocking new entry. The325 exclusions are exact closed/
+resolved/no-new-order conditions, not cheap-model rejections of open markets.
+Continue the finite queue and per-case persistence; first100 is not completion.
 
 Review all 3,000 frozen conditions beyond clearly factual exclusions. Start with
 the original index order; common-source grouping is allowed, with each distinct

@@ -60,3 +60,58 @@ or profit until a fill. New CNN October16 direct interview confirms Kiley's
 neither-caucus intent; primary retains the conservative15%NO point with its
 existing uncertainty, not a guaranteed literal outcome. Exact current records
 and management are in candidate_followup and notes/resting_orders.
+
+
+## October 17, 21:35 UTC — verified MT/NY commitments
+
+Complete authenticated pagination and reservations agree. Polygon95711709 shows
+zero balances on both outcomes of all four candidates, pUSD24.996890, pending
+9.80 and uncommitted15.196890. Allowance and CTF approval are sufficient; current
+venue response is blocked=false/FI02. This is a cash commitment, not filled
+positions or realized profit. New decisions DEC-0205/0206. Primary MT/NY points
+47%/31% remain broad, uncalibrated and exposed to the same national wave as ME.
+CA NO is not a measured hedge. All current criteria and token identities match.
+
+Existing daemon ingested eligible baseline entries before seven MT/NY names
+were promoted to tier1; future matching news bypasses the small-model filter.
+Original reports and independent criticism remain in candidate_followup.
+**Review at existing22:00 UTC check and every tick/earlier relevant news. Cancel
+first if facts change or become uncertain, and pull before known catalysts.**
+Do not replay execution commands. The18:00 held-thesis check remains dated.
+Evidence: `data/deep_review_20261017/house_next_verified_2135.json`.
+
+
+
+## October 17, 21:23–35 UTC — ISRG conference follow-up and advisory correction
+
+The September9 official event/player shell was located; no issuer transcript,
+captions or audio was independently reviewed. The publicly captured secondary
+StockAnalysis/Quartr transcript attributes a reaffirmed13.5–15.5% annual global
+range, nearer midpoint, to CFO Jamie Samath. He declined regional guidance and
+said harder H2 comparisons and ACA effects were already in that range. This
+does not supply a numeric Q3 da Vinci-only forecast; Ion-inclusive commentary
+is not the settlement metric. The primary retains the35% point for case1262
+and the original broad3–80% scenario range. Reaffirmation supports the existing
+guide anchor and is not an independent second likelihood. The archived report's
+unreviewed-conference statement is superseded only to this limited extent.
+
+Root caught an independent advisory note's incorrect Q3'25 growth16% claim;
+actual official Q3'25 was19%, and16% belonged to Q1'26. The note preserves the
+error and appends an explicit correction. The primary model had already used
+the correct797k/19% history; it is unchanged. No ISRG order, prior or reservation
+has been created. Source packets `isrg_conference_followup.json` and official
+historical figures in `earnings_metric_history_sources.json` retain access gaps.
+
+
+## October17, 21:39 UTC — case158 exact-close source qualification
+
+Primary reread the Nasdaq narrative: it describes first-session capitalization
+about$2.1T and trading anchored *near*$160.95. It does not itself display an
+explicit official historical closing-price table. The primary model and source
+packet overstate the precision when calling$160.95 the proven exact official
+close. The$2.10456T product is therefore a proxy calculation pending a direct
+historical-close check, not yet an exact settlement observation. Ops is checking
+that bounded factual gap. No IPO order, prior or reservation exists. Retain the
+dated research model as provisional; **do not execute case158 until this gap
+and current route/source checks are resolved**. Any new verified value must
+recompute the joint model and appear here; do not erase the original evidence.
