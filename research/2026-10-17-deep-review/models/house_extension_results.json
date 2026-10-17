@@ -1,0 +1,517 @@
+{
+  "authority": "Primary judgment; not calibrated, not fitted, not a price-based screen.",
+  "shared": {
+    "national_D_margin": 8,
+    "pvi_beta": 0.8,
+    "national_sd": 3,
+    "default_local_sd": 6,
+    "history_reference_D_margin": -2.5,
+    "history_reference_note": "Rounded modeling reference, not a separately recounted official national popular-vote total; varied in sensitivity.",
+    "history_swing_coefficient": 0.8,
+    "history_sd": 8,
+    "unmodeled_symmetric_branch": 0.02
+  },
+  "cases": {
+    "32": {
+      "inputs": {
+        "district": "CA06",
+        "yes": "D",
+        "pvi": 5,
+        "inc": -2,
+        "adj": -4,
+        "local_sd": 7,
+        "poll": 0.2,
+        "moe": 3.2,
+        "poll_bias": 1.5,
+        "age": 4,
+        "common": 4,
+        "other": 0,
+        "low": 0.35,
+        "high": 0.99
+      },
+      "prior_D_mean": 10.0,
+      "updated_D_mean": 5.217669742231784,
+      "updated_sd": 4.957953875588505,
+      "effective_poll_sd": 6.53163257335429,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.8466144588103325,
+      "unrounded_p_yes": 0.8454490973400741,
+      "primary_p_yes": 0.85,
+      "scenario_range": [
+        0.35,
+        0.99
+      ],
+      "grid_min": 0.5798105521263567,
+      "grid_max": 0.9586724580625746
+    },
+    "46": {
+      "inputs": {
+        "district": "TN04",
+        "yes": "R",
+        "pvi": -11,
+        "inc": -2,
+        "adj": 0,
+        "other": 0.005,
+        "low": 0.45,
+        "high": 0.9995
+      },
+      "prior_D_mean": -11.600000000000001,
+      "updated_D_mean": -11.600000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.051046649361176505,
+      "unrounded_p_yes": 0.9442085838856293,
+      "primary_p_yes": 0.94,
+      "scenario_range": [
+        0.45,
+        0.9995
+      ],
+      "grid_min": 0.6762639612941702,
+      "grid_max": 0.9836511640582231
+    },
+    "60": {
+      "inputs": {
+        "district": "WA05",
+        "yes": "D",
+        "pvi": -5,
+        "inc": -2,
+        "adj": 0,
+        "history": -21.2806,
+        "history_weight": 0.65,
+        "poll": -6,
+        "moe": 5.6,
+        "poll_bias": 0,
+        "age": 6,
+        "common": 4,
+        "other": 0.003,
+        "low": 0.01,
+        "high": 0.65
+      },
+      "prior_D_mean": -2.0,
+      "updated_D_mean": -3.3883204785140877,
+      "updated_sd": 5.420460738416662,
+      "effective_poll_sd": 9.200709821774067,
+      "historical_component": {
+        "D_margin_mean": -9.918276880834705,
+        "sd": 6.037044710890917,
+        "p_D": 0.05020153615293017,
+        "weight": 0.65
+      },
+      "p_D_before_other_affiliation": 0.13320035728842175,
+      "unrounded_p_yes": 0.1328007562165565,
+      "primary_p_yes": 0.13,
+      "scenario_range": [
+        0.01,
+        0.65
+      ],
+      "grid_min": 0.03773981947713709,
+      "grid_max": 0.3244000092263796
+    },
+    "74": {
+      "inputs": {
+        "district": "FL03",
+        "yes": "D",
+        "pvi": -10,
+        "inc": -2,
+        "adj": 0,
+        "other": 0.01,
+        "low": 0.001,
+        "high": 0.65
+      },
+      "prior_D_mean": -10.0,
+      "updated_D_mean": -10.0,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.07665819277593039,
+      "unrounded_p_yes": 0.07589161084817109,
+      "primary_p_yes": 0.08,
+      "scenario_range": [
+        0.001,
+        0.65
+      ],
+      "grid_min": 0.01343655271020394,
+      "grid_max": 0.38128988418634513
+    },
+    "95": {
+      "inputs": {
+        "district": "GA10",
+        "yes": "R",
+        "pvi": -11,
+        "inc": 0,
+        "adj": 0,
+        "other": 0.005,
+        "low": 0.35,
+        "high": 0.9995
+      },
+      "prior_D_mean": -9.600000000000001,
+      "updated_D_mean": -9.600000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.08467907913880715,
+      "unrounded_p_yes": 0.9107443162568869,
+      "primary_p_yes": 0.91,
+      "scenario_range": [
+        0.35,
+        0.9995
+      ],
+      "grid_min": 0.566718615835734,
+      "grid_max": 0.9814955859124718
+    },
+    "102": {
+      "inputs": {
+        "district": "AL02",
+        "yes": "R",
+        "pvi": -7,
+        "inc": 2,
+        "adj": 0,
+        "poll": 0,
+        "moe": 4.8,
+        "poll_bias": -2,
+        "age": 5,
+        "common": 4,
+        "other": 0.003,
+        "low": 0.15,
+        "high": 0.97
+      },
+      "prior_D_mean": -1.200000000000001,
+      "updated_D_mean": -1.527302469650039,
+      "updated_sd": 5.156475160629144,
+      "effective_poll_sd": 8.061637809088875,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.3858712007137522,
+      "unrounded_p_yes": 0.6122864128883891,
+      "primary_p_yes": 0.61,
+      "scenario_range": [
+        0.15,
+        0.97
+      ],
+      "grid_min": 0.24001222148266194,
+      "grid_max": 0.8946775150869174
+    },
+    "109": {
+      "inputs": {
+        "district": "NH02",
+        "yes": "D",
+        "pvi": 2,
+        "inc": 2,
+        "adj": 0,
+        "history": 5.9605,
+        "history_weight": 0.5,
+        "history_adjustment": 1,
+        "other": 0.01,
+        "low": 0.65,
+        "high": 0.999
+      },
+      "prior_D_mean": 13.2,
+      "updated_D_mean": 13.2,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 15.3605,
+        "sd": 8,
+        "p_D": 0.9725749973444227,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.964532743204497,
+      "unrounded_p_yes": 0.9548874157724521,
+      "primary_p_yes": 0.95,
+      "scenario_range": [
+        0.65,
+        0.999
+      ],
+      "grid_min": 0.883732010352502,
+      "grid_max": 0.9754857875156101
+    },
+    "123": {
+      "inputs": {
+        "district": "ME02",
+        "yes": "D",
+        "pvi": -4,
+        "inc": 0,
+        "adj": -2,
+        "local_sd": 7,
+        "poll": 4,
+        "moe": 4.38,
+        "poll_bias": -1.5,
+        "age": 1,
+        "common": 4,
+        "other": 0.002,
+        "low": 0.15,
+        "high": 0.95
+      },
+      "prior_D_mean": -0.40000000000000036,
+      "updated_D_mean": 1.370984405970987,
+      "updated_sd": 4.751874564903861,
+      "effective_poll_sd": 6.0807422988855615,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.6112530386068358,
+      "unrounded_p_yes": 0.6100305325296221,
+      "primary_p_yes": 0.61,
+      "scenario_range": [
+        0.15,
+        0.95
+      ],
+      "grid_min": 0.2927933632148737,
+      "grid_max": 0.8622081888744256
+    },
+    "144": {
+      "inputs": {
+        "district": "FL07",
+        "yes": "D",
+        "pvi": -5,
+        "inc": 0,
+        "adj": 0,
+        "local_R_regime_weight": 0.3,
+        "local_R_regime_D_margin": -5,
+        "other": 0.005,
+        "low": 0.08,
+        "high": 0.92
+      },
+      "prior_D_mean": 0.0,
+      "updated_D_mean": 0.0,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.4200403114167876,
+      "unrounded_p_yes": 0.41794010985970365,
+      "primary_p_yes": 0.42,
+      "scenario_range": [
+        0.08,
+        0.92
+      ],
+      "grid_min": 0.20330371047725757,
+      "grid_max": 0.6325765092421498
+    },
+    "151": {
+      "inputs": {
+        "district": "NV04",
+        "yes": "D",
+        "pvi": 2,
+        "inc": 2,
+        "adj": 0,
+        "history": 8.0868,
+        "history_weight": 0.45,
+        "other": 0.005,
+        "low": 0.65,
+        "high": 0.999
+      },
+      "prior_D_mean": 13.2,
+      "updated_D_mean": 13.2,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 16.486800000000002,
+        "sd": 8,
+        "p_D": 0.9803413236738908,
+        "weight": 0.45
+      },
+      "p_D_before_other_affiliation": 0.9680986176964888,
+      "unrounded_p_yes": 0.9632581246080063,
+      "primary_p_yes": 0.96,
+      "scenario_range": [
+        0.65,
+        0.999
+      ],
+      "grid_min": 0.8969988552317393,
+      "grid_max": 0.981385007574249
+    },
+    "165": {
+      "inputs": {
+        "district": "NE02",
+        "yes": "R",
+        "pvi": 3,
+        "inc": 0,
+        "adj": 0,
+        "history": -1.853,
+        "history_weight": 0.35,
+        "history_adjustment": 2,
+        "other": 0.005,
+        "low": 0.001,
+        "high": 0.65
+      },
+      "prior_D_mean": 12.8,
+      "updated_D_mean": 12.8,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 8.547,
+        "sd": 8,
+        "p_D": 0.8573243052761226,
+        "weight": 0.35
+      },
+      "p_D_before_other_affiliation": 0.9231062172319443,
+      "unrounded_p_yes": 0.07650931385421542,
+      "primary_p_yes": 0.08,
+      "scenario_range": [
+        0.001,
+        0.65
+      ],
+      "grid_min": 0.02851258403761857,
+      "grid_max": 0.20059964829082638
+    },
+    "186": {
+      "inputs": {
+        "district": "VA01",
+        "yes": "R",
+        "pvi": -3,
+        "inc": -2,
+        "adj": 0,
+        "history": -12.7816,
+        "history_weight": 0.6,
+        "other": 0.002,
+        "low": 0.1,
+        "high": 0.95
+      },
+      "prior_D_mean": 1.1999999999999993,
+      "updated_D_mean": 1.1999999999999993,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -4.381599999999999,
+        "sd": 8,
+        "p_D": 0.2919489560668066,
+        "weight": 0.6
+      },
+      "p_D_before_other_affiliation": 0.4054925653977281,
+      "unrounded_p_yes": 0.5933184197330673,
+      "primary_p_yes": 0.59,
+      "scenario_range": [
+        0.1,
+        0.95
+      ],
+      "grid_min": 0.35767125286438817,
+      "grid_max": 0.8065693961275096
+    },
+    "193": {
+      "inputs": {
+        "district": "NC01",
+        "yes": "D",
+        "pvi": -5,
+        "inc": 2,
+        "adj": 0,
+        "other": 0.003,
+        "low": 0.1,
+        "high": 0.98
+      },
+      "prior_D_mean": 2.0,
+      "updated_D_mean": 2.0,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.6148587028420757,
+      "unrounded_p_yes": 0.6130141267335495,
+      "primary_p_yes": 0.61,
+      "scenario_range": [
+        0.1,
+        0.98
+      ],
+      "grid_min": 0.2791426959849458,
+      "grid_max": 0.8731839545197291
+    },
+    "207": {
+      "inputs": {
+        "district": "NH01",
+        "yes": "D",
+        "pvi": 2,
+        "inc": 0,
+        "adj": 0,
+        "history": 8.0633,
+        "history_weight": 0.3,
+        "history_adjustment": -2,
+        "other": 0.003,
+        "low": 0.6,
+        "high": 0.999
+      },
+      "prior_D_mean": 11.2,
+      "updated_D_mean": 11.2,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 14.4633,
+        "sd": 8,
+        "p_D": 0.9646899400142845,
+        "weight": 0.3
+      },
+      "p_D_before_other_affiliation": 0.9470341714441574,
+      "unrounded_p_yes": 0.9441930689298249,
+      "primary_p_yes": 0.94,
+      "scenario_range": [
+        0.6,
+        0.999
+      ],
+      "grid_min": 0.8374601403989086,
+      "grid_max": 0.9788402486330646
+    },
+    "214": {
+      "inputs": {
+        "district": "VA02",
+        "yes": "R",
+        "pvi": 0,
+        "inc": -2,
+        "adj": 0,
+        "history": -3.8419,
+        "history_weight": 0.5,
+        "history_adjustment": 1,
+        "other": 0.01,
+        "low": 0.01,
+        "high": 0.7
+      },
+      "prior_D_mean": 6.0,
+      "updated_D_mean": 6.0,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 5.5581000000000005,
+        "sd": 8,
+        "p_D": 0.7563979236838243,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.7797171070720129,
+      "unrounded_p_yes": 0.21808006399870722,
+      "primary_p_yes": 0.22,
+      "scenario_range": [
+        0.01,
+        0.7
+      ],
+      "grid_min": 0.09029060223377897,
+      "grid_max": 0.4198332595784311
+    },
+    "221": {
+      "inputs": {
+        "district": "NY22",
+        "yes": "R",
+        "pvi": 4,
+        "inc": 2,
+        "adj": 0,
+        "history": 9.112,
+        "history_weight": 0.5,
+        "history_adjustment": 1,
+        "other": 0.003,
+        "low": 0.001,
+        "high": 0.4
+      },
+      "prior_D_mean": 16.4,
+      "updated_D_mean": 16.4,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 18.512,
+        "sd": 8,
+        "p_D": 0.9896661389300083,
+        "weight": 0.5
+      },
+      "p_D_before_other_affiliation": 0.9813852436806917,
+      "unrounded_p_yes": 0.018558912050350387,
+      "primary_p_yes": 0.02,
+      "scenario_range": [
+        0.001,
+        0.4
+      ],
+      "grid_min": 0.011095564961391732,
+      "grid_max": 0.05734113271719055
+    }
+  }
+}

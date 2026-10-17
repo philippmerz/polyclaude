@@ -1,0 +1,175 @@
+{
+  "review_index": 102,
+  "condition_id": "0x789e15c2a1581b37deaabb5fa555d0d8dbfba11b46424c65cd42e73cfe722eaa",
+  "criteria_sha256": "753f57c0122848990737097a15aaff04cd60d080442b6a493cf6a387271ea77f",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://dccc.org/%F0%9F%9A%A8-new-dccc-poll-shows-toss-up-race-in-al-02-as-momentum-builds-behind-shomari-figures/",
+      "observed_utc": "2026-10-17T20:14:56.266669+00:00",
+      "finding": "Original named46/46 partisan release read by primary, not an independent probability; current restored legislative map separately verified."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:14:56.266687+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.61,
+    "low": 0.15,
+    "high": 0.97,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.61,
+        "best_bid": 0.7,
+        "best_ask": 0.71,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.072,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.71,
+            "fee_usd": 0.08236000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.18237,
+        "fee_usd": 0.08237,
+        "break_even_probability_before_carry": 0.718237,
+        "break_even_probability_with_idealized_carry": 0.7215015674058589,
+        "central_expected_profit_usd": -1.08237,
+        "default_10pp_stressed_profit_usd": -2.08237,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.51,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.916
+      },
+      "No": {
+        "probability": 0.39,
+        "best_bid": 0.29,
+        "best_ask": 0.3,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.072,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.3,
+            "fee_usd": 0.08399999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.084,
+        "fee_usd": 0.084,
+        "break_even_probability_before_carry": 0.3084,
+        "break_even_probability_with_idealized_carry": 0.3098017553926725,
+        "central_expected_profit_usd": 0.8160000000000003,
+        "default_10pp_stressed_profit_usd": -0.18399999999999972,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.29000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.81764
+      }
+    }
+  },
+  "verdict": "Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "3c4ef9b0f8c351ab0325600ce576d3770dab747abb17b2f43edbcb0080721920",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "110498646838643141699770234895735915394620065036723874056548571888067488950164",
+    "105896210412150332172576802914745590235885229895617849790568484198648827088432"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0127",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0127.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0127.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": false,
+    "model": {
+      "inputs": {
+        "district": "AL02",
+        "yes": "R",
+        "pvi": -7,
+        "inc": 2,
+        "adj": 0,
+        "poll": 0,
+        "moe": 4.8,
+        "poll_bias": -2,
+        "age": 5,
+        "common": 4,
+        "other": 0.003,
+        "low": 0.15,
+        "high": 0.97
+      },
+      "prior_D_mean": -1.200000000000001,
+      "updated_D_mean": -1.527302469650039,
+      "updated_sd": 5.156475160629144,
+      "effective_poll_sd": 8.061637809088875,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.3858712007137522,
+      "unrounded_p_yes": 0.6122864128883891,
+      "primary_p_yes": 0.61,
+      "scenario_range": [
+        0.15,
+        0.97
+      ],
+      "grid_min": 0.24001222148266194,
+      "grid_max": 0.8946775150869174
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:14:56.555693+00:00",
+  "question": "Will the Republican Party win the AL-02 House seat?",
+  "market_id": "1280800",
+  "valuation_author": "primary_operator",
+  "original_index": 102,
+  "report_sha256": "92a2f761e713597bf0d674b1c7e89e76a53385e7794b8bc7dc1ab18fb1fc8277"
+}

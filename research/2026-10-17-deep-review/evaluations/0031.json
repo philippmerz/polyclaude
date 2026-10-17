@@ -1,0 +1,149 @@
+{
+  "review_index": 31,
+  "condition_id": "0x6bfa7b0ba9259c7555ac948eb80015271b9720d961f4e3bf05027946c25a0e92",
+  "criteria_sha256": "42a1ef78a568a3f016c57c41ac9c193cc23960854145fad3581314f5da128419",
+  "status": "valued",
+  "literal_analysis": "Full announcement/eligibility/cutoff/exclusion clauses read. Press interim/acting names excluded; Millennium Navier–Stokes excluded, full lab-own-work declaration without Clay confirmation required.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/10/katie-zacharia-delivers-powerful-inaugural-briefing-as-37th-white-house-press-secretary/",
+      "observed_utc": "2026-10-17T20:26:43.565750+00:00",
+      "finding": "Official October13 role and inaugural briefing; not a new post-creation successor."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/08/never-surrender-karoline-leavitts-historic-tenure-as-white-house-press-secretary/",
+      "observed_utc": "2026-10-17T20:26:43.565771+00:00",
+      "finding": "Official August27 final Leavitt day read by root; interval to next inaugural is contextual, not an empirical vacancy hazard."
+    },
+    {
+      "url": "https://apnews.com/article/trump-katie-zacharia-press-secretary-c40a8c276f5e2a9d71685a5daba94731",
+      "observed_utc": "2026-10-17T20:26:43.565774+00:00",
+      "finding": "Departure reporting precedes market creation; no successor in captured article. Repeat direct access failure retained."
+    },
+    {
+      "url": "https://www.axios.com/2026/10/16/trump-katie-zacharia-press-secretary",
+      "observed_utc": "2026-10-17T20:26:43.565776+00:00",
+      "finding": "Trump reportedly was not rushing to name a replacement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.33,
+    "low": 0.08,
+    "high": 0.8,
+    "method": "Primary literal-event competing-regime tree",
+    "reasoning": "Explicit weighted branches in individual report; dated primary statements distinguish existing facts from future announcements, with uncaptured historical source risk and wide uncalibrated ranges.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 15,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.33,
+        "best_bid": 0.18,
+        "best_ask": 0.19,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.449,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.19,
+            "fee_usd": 0.06156000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.9615699999999998,
+        "fee_usd": 0.06157,
+        "break_even_probability_before_carry": 0.19615699999999997,
+        "break_even_probability_with_idealized_carry": 0.19639975809373425,
+        "central_expected_profit_usd": 1.3384300000000005,
+        "default_10pp_stressed_profit_usd": 0.33843000000000045,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.23,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.7409599999999998
+      },
+      "No": {
+        "probability": 0.6699999999999999,
+        "best_bid": 0.81,
+        "best_ask": 0.82,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.449,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.82,
+            "fee_usd": 0.05904000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.259049999999998,
+        "fee_usd": 0.05905,
+        "break_even_probability_before_carry": 0.8259049999999999,
+        "break_even_probability_with_idealized_carry": 0.8269271155676604,
+        "central_expected_profit_usd": -1.5590499999999992,
+        "default_10pp_stressed_profit_usd": -2.559049999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.57,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.038440000000001
+      }
+    }
+  },
+  "verdict": "YES has a small-maker price/model difference; new permanent appointment and monitoring checks required",
+  "reopen_condition": "Actual named qualifying official announcement, clear source correction or a new load-bearing regime fact, followed by fresh both-sided prices/costs and complete account/venue checks.",
+  "current_description_sha256": "2733b86887565aa01122869fe803729f45f77a6a048da15ec0eaed378aed6d9f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "76247087846652401266749567718491044127867019848374971199677382769316504861710",
+    "61921192180241789430065065086477379034688355646496182389780166177277821431791"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0052",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0052.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0052.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0062",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0062.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/serbia_press_sources.json"
+    ],
+    "priority_followup": true,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:26:43.880392+00:00",
+  "question": "Next White House Press Secretary announced by October 31, 2026?",
+  "market_id": "5784290",
+  "valuation_author": "primary_operator",
+  "original_index": 31,
+  "report_sha256": "41c67e3b7f504b408ec7463c1735d92eef4bd0263c327dec3d5a086487ea1f00"
+}

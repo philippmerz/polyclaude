@@ -1,0 +1,157 @@
+{
+  "review_index": 108,
+  "condition_id": "0x9b8a472f0f5f8a3b2c11b345d969ed90203c800b8c60ef4e4b7f5ad38df5338f",
+  "criteria_sha256": "50a61fdd61327f738e60434f6f104e81ee7f3e44cbabb1110173d36b5d6569ff",
+  "status": "valued",
+  "literal_analysis": "Full individual frozen rules read, including identity, valid-vote/seat ranking, merger clauses, creation boundaries, formal oath/confidence and fallback dates as applicable.",
+  "evidence": [
+    {
+      "url": "https://agerpres.ro/viata-parlamentara/2026/10/05/x--1600230",
+      "observed_utc": "2026-10-17T20:31:01.003104+00:00",
+      "finding": "Presidential press release: formal designation decree signedOctober6, not a confidence vote."
+    },
+    {
+      "url": "https://www.senat.ro/StiriSenatDetaliu.aspx?ID=C98462ED-2688-4A0D-9318-2A6D2768DAD4",
+      "observed_utc": "2026-10-17T20:31:01.003129+00:00",
+      "finding": "OfficialOctober15 cabinet/program/hearing filings."
+    },
+    {
+      "url": "https://agerpres.ro/news-alert/2026/10/15/parlament-plenul-reunit-pentru-investirea-guvernului-niculescu---marti-la-ora-14-00-audieri---luni-s--1603527",
+      "observed_utc": "2026-10-17T20:31:01.003132+00:00",
+      "finding": "Investiture sitting scheduledOctober20 at14:00; no result yet."
+    },
+    {
+      "url": "https://agerpres.ro/politic/2026/10/17/pnl-sustine-investirea-guvernului-niculescu-bolojan-am-decis-sa-acordam-un-vot-de-responsabilitate--1604085",
+      "observed_utc": "2026-10-17T20:31:01.003135+00:00",
+      "finding": "Original RomanianOctober17 conditional PNL pledge; not individual vote proof."
+    },
+    {
+      "url": "https://www.cdep.ro/ords/pls/dic/site.page?id=256&idl=2&par1=3",
+      "observed_utc": "2026-10-17T20:31:01.003137+00:00",
+      "finding": "Official constitutional confidence, appointment and oath framework."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.84,
+    "low": 0.35,
+    "high": 0.99,
+    "method": "Primary literal-event mixture and explicit polling/formation sensitivity",
+    "reasoning": "Primary model inputs, uncertainty branches and arithmetic are preserved in individual report and political_transition_model.py; not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 45,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.84,
+        "best_bid": 0.938,
+        "best_ask": 0.947,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.132,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.947,
+            "fee_usd": 0.020076400000000015
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.490079999999999,
+        "fee_usd": 0.02008,
+        "break_even_probability_before_carry": 0.9490079999999999,
+        "break_even_probability_with_idealized_carry": 0.9525357548288733,
+        "central_expected_profit_usd": -1.0900799999999986,
+        "default_10pp_stressed_profit_usd": -2.0900799999999986,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.74,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.356729999999999
+      },
+      "No": {
+        "probability": 0.16000000000000003,
+        "best_bid": 0.053,
+        "best_ask": 0.062,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.132,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.062,
+            "fee_usd": 0.0232624
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.64327,
+        "fee_usd": 0.02327,
+        "break_even_probability_before_carry": 0.064327,
+        "break_even_probability_with_idealized_carry": 0.06456612325805151,
+        "central_expected_profit_usd": 0.9567300000000003,
+        "default_10pp_stressed_profit_usd": -0.0432699999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.060000000000000026,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.50992
+      }
+    }
+  },
+  "verdict": "Nominee deeply valued; NO has central difference but current net ask misses ordinary reserve",
+  "reopen_condition": "New primary polling, exact official lists or formal government/exit statements change the specified event; recheck both-side costs and full account/venue constraints before any action.",
+  "current_description_sha256": "b5e031cd02f873a7a4441bc93017cd3d28dee4f880967da404d90bcece9207cf",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "65057750565250219127941515517695620491075931791765593327307829586347576070328",
+    "30044547678829499378008432891171459016862015636167720981500963462030356345070"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0133",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0133.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0133.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/political_transition_sources.json",
+      "data/deep_review_20261017/politique_followup_sources.json",
+      "data/deep_review_20261017/formation_literal_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/political_transition_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:31:01.353043+00:00",
+  "question": "Will Luca Niculescu be the next Prime Minister of Romania?",
+  "market_id": "2166702",
+  "valuation_author": "primary_operator",
+  "original_index": 108,
+  "report_sha256": "9b18b571334231eb3dcfd7464b4aee5b2dd63550f36ca2d9b5aff5b0627c36a3"
+}

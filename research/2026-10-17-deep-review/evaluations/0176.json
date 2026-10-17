@@ -1,0 +1,164 @@
+{
+  "review_index": 176,
+  "condition_id": "0x4e9cff8a3aeac036225fedcc98af9b0d55284b3f430b599e7f61b059c1e177af",
+  "criteria_sha256": "23de8eee0e2cb36e87eb97517845aee49eb528102c9ea03c7ae87dd2c97dc11e",
+  "status": "valued",
+  "literal_analysis": "Full individual frozen rules read, including identity, valid-vote/seat ranking, merger clauses, creation boundaries, formal oath/confidence and fallback dates as applicable.",
+  "evidence": [
+    {
+      "url": "https://elections.knesset.tv/",
+      "observed_utc": "2026-10-17T20:31:02.803900+00:00",
+      "finding": "Official parliamentary-channel portal currently lists Together,Yashar,Likud separately and filing dates."
+    },
+    {
+      "url": "https://www.gov.il/en/pages/time--table-26",
+      "observed_utc": "2026-10-17T20:31:02.803924+00:00",
+      "finding": "CEC timetable: September filing/approval, October18 final publication; direct403 and late-change legal gap preserved."
+    },
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/israeli-parties-submit-candidate-lists-as-eisenkot-rules-out-merger-with-bennett-s-alliance/4050181",
+      "observed_utc": "2026-10-17T20:31:02.803927+00:00",
+      "finding": "DatedSeptember8 statement of separate lists and rejected merger, not a current legal certification."
+    },
+    {
+      "url": "https://www.mako.co.il/news-israel-elections/2026/Article-cc91389788031a1026.htm",
+      "observed_utc": "2026-10-17T20:31:02.803929+00:00",
+      "finding": "OriginalN12 main seat projection and method."
+    },
+    {
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905396904/?pid=106628",
+      "observed_utc": "2026-10-17T20:31:02.803932+00:00",
+      "finding": "OriginalChannel13 projection; includes all reported parties."
+    },
+    {
+      "url": "https://www.jpost.com/israel-election-2026/article-911902",
+      "observed_utc": "2026-10-17T20:31:02.803934+00:00",
+      "finding": "AttributedMaariv/Lazar projection."
+    },
+    {
+      "url": "https://ch10.co.il/en/news/1107207/",
+      "observed_utc": "2026-10-17T20:31:02.803936+00:00",
+      "finding": "Counter-poll Together7/Likud29; primary methodology not recovered."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.002,
+    "high": 0.25,
+    "method": "Primary literal-event mixture and explicit polling/formation sensitivity",
+    "reasoning": "Primary model inputs, uncertainty branches and arithmetic are preserved in individual report and political_transition_model.py; not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "best_bid": 0.004,
+        "best_ask": 0.006,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.798,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.006,
+            "fee_usd": 0.0023856
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.06239,
+        "fee_usd": 0.00239,
+        "break_even_probability_before_carry": 0.006239,
+        "break_even_probability_with_idealized_carry": 0.006254451958776916,
+        "central_expected_profit_usd": 0.23761,
+        "default_10pp_stressed_profit_usd": -0.06239,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.038400000000000004
+      },
+      "No": {
+        "probability": 0.97,
+        "best_bid": 0.994,
+        "best_ask": 0.996,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.798,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.996,
+            "fee_usd": 0.0015936000000000012
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.9616,
+        "fee_usd": 0.0016,
+        "break_even_probability_before_carry": 0.99616,
+        "break_even_probability_with_idealized_carry": 0.9986271619258235,
+        "central_expected_profit_usd": -0.2616000000000014,
+        "default_10pp_stressed_profit_usd": -1.2616000000000014,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.87,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.93761
+      }
+    }
+  },
+  "verdict": "Rare named-list event fully valued, including late-merger fork; point edge lacks a calibrated tail reserve",
+  "reopen_condition": "New primary polling, exact official lists or formal government/exit statements change the specified event; recheck both-side costs and full account/venue constraints before any action.",
+  "current_description_sha256": "2b040ed0d7501d68f16a67d11856d852e7355acaba8d43ec0399bd99bcb931b6",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "4486291330995931849416559581383425061287287542982906092720569789339786774392",
+    "17536997240040421052821175590718482940149024324949123126034467190302150640963"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0104",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/politique_followup_sources.json",
+      "data/deep_review_20261017/formation_literal_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/political_transition_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:31:03.083994+00:00",
+  "question": "Will Together win the most seats in the 2026 Israeli legislative election?",
+  "market_id": "2100982",
+  "valuation_author": "primary_operator",
+  "original_index": 176,
+  "report_sha256": "321c3936719e9292316c6e72708a2dddc920d50279a350609411f0957eba80dd"
+}

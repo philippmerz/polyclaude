@@ -1,0 +1,154 @@
+{
+  "review_index": 192,
+  "condition_id": "0x9639a6a92c4b2a434ee674c104c7f4660340663b91e418e2be1ee4377971aa32",
+  "criteria_sha256": "b36757c5431f75c25dc6386d6abae070ab8ccc2fce9cda0c510cdf7726817425",
+  "status": "valued",
+  "literal_analysis": "Full individual frozen rules read, including identity, valid-vote/seat ranking, merger clauses, creation boundaries, formal oath/confidence and fallback dates as applicable.",
+  "evidence": [
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/288482/president-of-republic-of-serbia-aleksandar-vucic-resigns.php",
+      "observed_utc": "2026-10-17T20:31:03.341732+00:00",
+      "finding": "OfficialSeptember27 presidential resignation and acting-president transition; not PM appointment."
+    },
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/290192/serbia-to-continue-supporting-its-people-serbian-orthodox-church-in-croatia.php",
+      "observed_utc": "2026-10-17T20:31:03.341756+00:00",
+      "finding": "OfficialOctober17 still identifies Macut as caretaker PM."
+    },
+    {
+      "url": "https://apnews.com/article/12260c5e6971650269cec1a4b4420eb3",
+      "observed_utc": "2026-10-17T20:31:03.341759+00:00",
+      "finding": "October3 attributed campaign launch and intent, not an Assembly vote."
+    },
+    {
+      "url": "https://www.srbija.gov.rs/vest/en/247381/new-serbian-government-voted-in.php",
+      "observed_utc": "2026-10-17T20:31:03.341761+00:00",
+      "finding": "OfficialApril16,2025 Macut government election and oath, before creation."
+    },
+    {
+      "url": "https://www.rik.parlament.gov.rs/vest/en/4086/50th-session-of-the-republic-electoral-commission-.php",
+      "observed_utc": "2026-10-17T20:31:03.341763+00:00",
+      "finding": "ExactOctober2026 ballot lists for separate largest-list model."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.6,
+    "low": 0.15,
+    "high": 0.95,
+    "method": "Primary literal-event mixture and explicit polling/formation sensitivity",
+    "reasoning": "Primary model inputs, uncertainty branches and arithmetic are preserved in individual report and political_transition_model.py; not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 120,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.6,
+        "best_bid": 0.68,
+        "best_ask": 0.682,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.565,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.682,
+            "fee_usd": 0.0867504
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.90676,
+        "fee_usd": 0.08676,
+        "break_even_probability_before_carry": 0.6906760000000001,
+        "break_even_probability_with_idealized_carry": 0.6975437738472191,
+        "central_expected_profit_usd": -0.9067600000000002,
+        "default_10pp_stressed_profit_usd": -1.9067600000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.5,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.712960000000001
+      },
+      "No": {
+        "probability": 0.4,
+        "best_bid": 0.318,
+        "best_ask": 0.32,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.565,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.32,
+            "fee_usd": 0.08704
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.28704,
+        "fee_usd": 0.08704,
+        "break_even_probability_before_carry": 0.328704,
+        "break_even_probability_with_idealized_carry": 0.33197248585252176,
+        "central_expected_profit_usd": 0.7129599999999998,
+        "default_10pp_stressed_profit_usd": -0.28703999999999974,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.30000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.09324
+      }
+    }
+  },
+  "verdict": "Formal next-PM event valued separately from largest-list result; long fallback and normal reserve defeat captured asks",
+  "reopen_condition": "New primary polling, exact official lists or formal government/exit statements change the specified event; recheck both-side costs and full account/venue constraints before any action.",
+  "current_description_sha256": "1f0ec6de7b3591563ecc808031d74ff0b25f9c198be54887ee79e5e9a9a4d42c",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "113036572395843970447593101017818963449633996776632310882541416364942207828991",
+    "27894134110525110222541912377402886885798991982728797154430620359278422156247"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0142",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/serbia_press_sources.json",
+      "data/deep_review_20261017/serbia_poll_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/political_transition_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:31:03.617330+00:00",
+  "question": "Will Aleksandar Vučić be the next Prime Minister of Serbia?",
+  "market_id": "2757891",
+  "valuation_author": "primary_operator",
+  "original_index": 192,
+  "report_sha256": "653b525a7513f2f880459f936b8bb896c11302ac2491730fc0049352cb1608fe"
+}

@@ -1,0 +1,97 @@
+{
+  "calibrated": false,
+  "brazil": {
+    "mu_margin_pp": 3.08,
+    "sd_margin_pp": 4.938069185450916,
+    "p_named_band": 0.12416486127564098,
+    "p_reverse_band": 0.014136199446953773,
+    "p_yes": 0.12368469215375998,
+    "sensitivity_min": 0.025705393940145947,
+    "sensitivity_max": 0.2252082888433038
+  },
+  "together": {
+    "party_error_sd_seats": 3.5,
+    "n_per_poll": 40000,
+    "conditional_by_poll": [
+      0.00835,
+      0.02035,
+      0.026725
+    ],
+    "main_poll_mixture": 0.018475000000000002,
+    "p_yes": 0.025502500000000004
+  },
+  "together_sensitivities": [
+    {
+      "party_error_sd_seats": 2,
+      "n_per_poll": 40000,
+      "conditional_by_poll": [
+        7.5e-05,
+        0.00065,
+        0.000725
+      ],
+      "main_poll_mixture": 0.0004833333333333333,
+      "p_yes": 0.009309999999999999
+    },
+    {
+      "party_error_sd_seats": 5,
+      "n_per_poll": 40000,
+      "conditional_by_poll": [
+        0.03415,
+        0.051925,
+        0.0629
+      ],
+      "main_poll_mixture": 0.04965833333333333,
+      "p_yes": 0.0535675
+    },
+    {
+      "party_error_sd_seats": 7,
+      "n_per_poll": 40000,
+      "conditional_by_poll": [
+        0.063425,
+        0.078475,
+        0.089075
+      ],
+      "main_poll_mixture": 0.07699166666666667,
+      "p_yes": 0.07816750000000001
+    }
+  ],
+  "netanyahu_next": 0.34750000000000003,
+  "niculescu_next": 0.8400000000000001,
+  "bolojan_out_oct31": 0.92,
+  "serbia_largest": {
+    "components_margin_sd_weight": [
+      [
+        11.5,
+        7,
+        0.5
+      ],
+      [
+        -2.7,
+        7,
+        0.35
+      ],
+      [
+        -9.2,
+        10,
+        0.15
+      ]
+    ],
+    "p_yes": 0.6204388692410606
+  },
+  "vucic_next": 0.59529,
+  "probabilities_recorded_rounded": {
+    "17": 0.12,
+    "24": 0.35,
+    "108": 0.84,
+    "166": 0.92,
+    "171": 0.62,
+    "176": 0.03,
+    "192": 0.6
+  },
+  "limits": [
+    "Subjective mixture weights, not fitted frequencies.",
+    "Together simulation is continuous seat-rank sensitivity, not a legal allocation model.",
+    "Serbia dominant-pair margin is a proxy for list seat rank, not a full seat model.",
+    "Neither incumbent role nor a nomination is a sworn-in successor."
+  ]
+}

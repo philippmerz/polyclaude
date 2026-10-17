@@ -1,0 +1,102 @@
+{
+  "review_index": 35,
+  "condition_id": "0x09a19e04282d5baf1b2e9d842c487950dcd53ad02cbfa5412da8940ae7a73f0b",
+  "criteria_sha256": "e3ed2f11fb25a3726eee9d66cd6f1ff84848888fb0167dcaeccfc24d755d9209",
+  "status": "blocked_after_review",
+  "literal_analysis": "Full fixed Monday–Sunday four-week sum, displayed rounding, higher boundary bracket and first-next-week/fallback snapshot read; rolling selector is not silently substituted.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings",
+      "observed_utc": "2026-10-17T20:20:50.341335+00:00",
+      "finding": "Official methodology/current display is rolling; exact two historical completed calendar-week totals and final revision mapping not recovered."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/models?period=week",
+      "observed_utc": "2026-10-17T20:20:50.341338+00:00",
+      "finding": "646row current token sum174.020765561738T; tested historical/date/period parameters ignored with identical payloads, not fixed-week evidence."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Unpriced after source-definition and historical-data investigation",
+    "reasoning": "Missing exact historical fixed-week displayed totals and an unresolved rolling-versus-calendar binding prevent a defensible narrow-bracket forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:18.217+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 13,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "best_bid": 0.43,
+        "best_ask": 0.44,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.076,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.44,
+            "fee_usd": 0.09856000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 4.49857,
+        "fee_usd": 0.09857,
+        "break_even_probability_before_carry": 0.449857,
+        "break_even_probability_with_idealized_carry": 0.4503394592835397,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.20196
+      },
+      "No": {
+        "best_bid": 0.56,
+        "best_ask": 0.57,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.076,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.57,
+            "fee_usd": 0.09804
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.798039999999999,
+        "fee_usd": 0.09804,
+        "break_even_probability_before_carry": 0.579804,
+        "break_even_probability_with_idealized_carry": 0.5804258238738831,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 5.5014400000000006
+      }
+    },
+    "probability_is_unpriced": true
+  },
+  "verdict": "Blocked after deep review: historical calendar-week totals and display binding unresolved; retained for follow-up",
+  "reopen_condition": "Recover exact fixed-week source display/archive and revisions or authoritative source/venue clarification, then complete independent forecast and fresh cost checks.",
+  "current_identity_valid": true,
+  "source_packets": [
+    "data/deep_review_20261017/openrouter_sources.json"
+  ],
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-17T20:20:50.401644+00:00",
+  "question": "Will OpenRouter process between 675T and 725T tokens from Sep 28 to Oct 25?",
+  "market_id": "5326402",
+  "valuation_author": "primary_operator",
+  "original_index": 35,
+  "report_sha256": "5f012c08b765dfed4a797faa85aa0765c38c6bd51fc4a87312a0b49d63a491ec"
+}

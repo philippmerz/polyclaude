@@ -1,0 +1,181 @@
+{
+  "review_index": 207,
+  "condition_id": "0x4460b4d5604834b9579c7b001b19a3faa8441acb6b94b0c35067cf1aaa22d682",
+  "criteria_sha256": "827be07dc0afe93ade0f311a4d6062b71b3571401b4c426d2b0eec1fc69ba0fb",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://newhampshirebulletin.com/voter-guides/contests/2026-general-u-s-house-district-1/",
+      "observed_utc": "2026-10-17T20:15:00.497040+00:00",
+      "finding": "Secondary current Shaheen/DiLorenzo roster; official final-list403 preserved."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:15:00.497062+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T20:15:00.497066+00:00",
+      "finding": "Official-count compilation with immediate-results caveat; candidate-consolidated valid-vote margins and current-map binding in historical source packets."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.94,
+    "low": 0.6,
+    "high": 0.999,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:53.680+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.94,
+        "best_bid": 0.96,
+        "best_ask": 0.961,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 21.677,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.961,
+            "fee_usd": 0.014991600000000013
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.625,
+        "fee_usd": 0.015,
+        "break_even_probability_before_carry": 0.9625,
+        "break_even_probability_with_idealized_carry": 0.9668748040384154,
+        "central_expected_profit_usd": -0.22500000000000142,
+        "default_10pp_stressed_profit_usd": -1.2249999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.84,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.58464
+      },
+      "No": {
+        "probability": 0.06000000000000005,
+        "best_bid": 0.039,
+        "best_ask": 0.04,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 21.677,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.04,
+            "fee_usd": 0.015359999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.41536,
+        "fee_usd": 0.01536,
+        "break_even_probability_before_carry": 0.041536000000000003,
+        "break_even_probability_with_idealized_carry": 0.04172479154341779,
+        "central_expected_profit_usd": 0.18464000000000053,
+        "default_10pp_stressed_profit_usd": -0.41536,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.375
+      }
+    }
+  },
+  "verdict": "Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "df983e818a15949ed6fd6f509ae3f47bdf7fc96d543e831396571fe5176010c3",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "15841973896294397863780283211777886833063131427675236235397936182214462263761",
+    "57553502995830775992126087002622990615625670975273656077143914574086079721073"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0180",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0195",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": false,
+    "model": {
+      "inputs": {
+        "district": "NH01",
+        "yes": "D",
+        "pvi": 2,
+        "inc": 0,
+        "adj": 0,
+        "history": 8.0633,
+        "history_weight": 0.3,
+        "history_adjustment": -2,
+        "other": 0.003,
+        "low": 0.6,
+        "high": 0.999
+      },
+      "prior_D_mean": 11.2,
+      "updated_D_mean": 11.2,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": 14.4633,
+        "sd": 8,
+        "p_D": 0.9646899400142845,
+        "weight": 0.3
+      },
+      "p_D_before_other_affiliation": 0.9470341714441574,
+      "unrounded_p_yes": 0.9441930689298249,
+      "primary_p_yes": 0.94,
+      "scenario_range": [
+        0.6,
+        0.999
+      ],
+      "grid_min": 0.8374601403989086,
+      "grid_max": 0.9788402486330646
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:15:00.772572+00:00",
+  "question": "Will the Democratic Party win the NH-01 House seat?",
+  "market_id": "942910",
+  "valuation_author": "primary_operator",
+  "original_index": 207,
+  "report_sha256": "3c15e663a89d403a724c472b5e4aeafeba09253bf011fc1e054c15492fb7a77e"
+}

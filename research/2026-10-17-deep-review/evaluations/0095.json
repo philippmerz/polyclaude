@@ -1,0 +1,170 @@
+{
+  "review_index": 95,
+  "condition_id": "0x712da1b055e10bf6885872fbb6d0ec5baa5f5da8da58ece8bec7462945aab4d4",
+  "criteria_sha256": "4f4f3c8e85334ecb867348ae078143317a1e884ee33703a48da4074d3d83e43d",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://pickensgaelections.com/2026-general-election",
+      "observed_utc": "2026-10-17T20:14:55.717880+00:00",
+      "finding": "Official District10 write-in certification, separate from printed ballot and primary nominations."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:14:55.717902+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.91,
+    "low": 0.35,
+    "high": 0.9995,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.91,
+        "best_bid": 0.964,
+        "best_ask": 0.965,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.426,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.965,
+            "fee_usd": 0.013510000000000012
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.66352,
+        "fee_usd": 0.01352,
+        "break_even_probability_before_carry": 0.966352,
+        "break_even_probability_with_idealized_carry": 0.9707443123450709,
+        "central_expected_profit_usd": -0.5635200000000005,
+        "default_10pp_stressed_profit_usd": -1.5635199999999987,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.81,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.62611
+      },
+      "No": {
+        "probability": 0.08999999999999997,
+        "best_bid": 0.035,
+        "best_ask": 0.036,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 9.426,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.036,
+            "fee_usd": 0.013881600000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.37389,
+        "fee_usd": 0.01389,
+        "break_even_probability_before_carry": 0.037389,
+        "break_even_probability_with_idealized_carry": 0.03755894238773227,
+        "central_expected_profit_usd": 0.5261099999999996,
+        "default_10pp_stressed_profit_usd": -0.37389,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.33649
+      }
+    }
+  },
+  "verdict": "Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "2b68f43112bc96ae3939abcfb94ed1868238338c8180f053a02c5a72dc3bab5a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "5429413500272026808093645002354335486349411711859896403742794626113959422496",
+    "73047185301194533204086296334577747298911054308650446145838236337690993250177"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0119",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0119.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0119.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": false,
+    "model": {
+      "inputs": {
+        "district": "GA10",
+        "yes": "R",
+        "pvi": -11,
+        "inc": 0,
+        "adj": 0,
+        "other": 0.005,
+        "low": 0.35,
+        "high": 0.9995
+      },
+      "prior_D_mean": -9.600000000000001,
+      "updated_D_mean": -9.600000000000001,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.08467907913880715,
+      "unrounded_p_yes": 0.9107443162568869,
+      "primary_p_yes": 0.91,
+      "scenario_range": [
+        0.35,
+        0.9995
+      ],
+      "grid_min": 0.566718615835734,
+      "grid_max": 0.9814955859124718
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:14:56.008720+00:00",
+  "question": "Will the Republican Party win the GA-10 House seat?",
+  "market_id": "1283232",
+  "valuation_author": "primary_operator",
+  "original_index": 95,
+  "report_sha256": "cd6f0e2c062b473d924e5f4c956bcb91fb6db0057ac9009cd80420bbf94788c0"
+}

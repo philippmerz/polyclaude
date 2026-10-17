@@ -1,0 +1,149 @@
+{
+  "review_index": 166,
+  "condition_id": "0x0e659adc20ce404c3cf897d7707186c62d1aa2a816dca6c2a7c9b6529a37ea9d",
+  "criteria_sha256": "3fb30bc4704af6ff411fb10a4c24a57c854956497c68fa7ae87320e544caad41",
+  "status": "valued",
+  "literal_analysis": "Full individual frozen rules read, including identity, valid-vote/seat ranking, merger clauses, creation boundaries, formal oath/confidence and fallback dates as applicable.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5177618",
+      "observed_utc": "2026-10-17T20:31:01.649658+00:00",
+      "finding": "Exact current creation timestamp October1 14:39:48.769159UTC; question/rules match frozen."
+    },
+    {
+      "url": "https://agerpres.ro/politic/2026/10/17/pnl-sustine-investirea-guvernului-niculescu-bolojan-am-decis-sa-acordam-un-vot-de-responsabilitate--1604085",
+      "observed_utc": "2026-10-17T20:31:01.649684+00:00",
+      "finding": "PNL conditional pledge and unnamed official resignations; no personal Bolojan exit announcement."
+    },
+    {
+      "url": "https://www.senat.ro/StiriSenatDetaliu.aspx?ID=C98462ED-2688-4A0D-9318-2A6D2768DAD4",
+      "observed_utc": "2026-10-17T20:31:01.649687+00:00",
+      "finding": "October15 program/cabinet filings, not a new government."
+    },
+    {
+      "url": "https://agerpres.ro/news-alert/2026/10/15/parlament-plenul-reunit-pentru-investirea-guvernului-niculescu---marti-la-ora-14-00-audieri---luni-s--1603527",
+      "observed_utc": "2026-10-17T20:31:01.649690+00:00",
+      "finding": "ScheduledOctober20 confidence sitting, not an already-passed vote."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.92,
+    "low": 0.55,
+    "high": 0.999,
+    "method": "Primary literal-event mixture and explicit polling/formation sensitivity",
+    "reasoning": "Primary model inputs, uncertainty branches and arithmetic are preserved in individual report and political_transition_model.py; not calibrated.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 15,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.92,
+        "best_bid": 0.95,
+        "best_ask": 0.962,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.412,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.962,
+            "fee_usd": 0.014622400000000015
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.63463,
+        "fee_usd": 0.01463,
+        "break_even_probability_before_carry": 0.963463,
+        "break_even_probability_with_idealized_carry": 0.9646553532744868,
+        "central_expected_profit_usd": -0.4346299999999985,
+        "default_10pp_stressed_profit_usd": -1.4346299999999985,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.481
+      },
+      "No": {
+        "probability": 0.07999999999999996,
+        "best_bid": 0.038,
+        "best_ask": 0.05,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.412,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.05,
+            "fee_usd": 0.019
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.519,
+        "fee_usd": 0.019,
+        "break_even_probability_before_carry": 0.0519,
+        "break_even_probability_with_idealized_carry": 0.05196422990290843,
+        "central_expected_profit_usd": 0.2809999999999996,
+        "default_10pp_stressed_profit_usd": -0.519,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.36537000000000003
+      }
+    }
+  },
+  "verdict": "Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain",
+  "reopen_condition": "New primary polling, exact official lists or formal government/exit statements change the specified event; recheck both-side costs and full account/venue constraints before any action.",
+  "current_description_sha256": "b0a169d9632d8dfd894ba57b5ce8d9ac40cad688b62296d06377b8f74a52f58a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "91786803224143729884991442035329738968378753854451950550649645230220539704767",
+    "113460393037440761855038729968536020550246593386545530201248650508034490457693"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0094",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/politique_followup_sources.json",
+      "data/deep_review_20261017/formation_literal_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/political_transition_model.py",
+    "model_calibrated": false,
+    "case_specific_policy_exception": false
+  },
+  "evaluated_utc": "2026-10-17T20:31:01.944403+00:00",
+  "question": "Romanian PM Bolojan out by October 31?",
+  "market_id": "5177618",
+  "valuation_author": "primary_operator",
+  "original_index": 166,
+  "report_sha256": "4105c72e564f40b2bea0a09995b043b093d32f05e18095f41880b8099f9f4f04"
+}

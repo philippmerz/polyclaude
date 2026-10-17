@@ -1,0 +1,189 @@
+{
+  "review_index": 123,
+  "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+  "criteria_sha256": "be6894cd24dea1d67a28832e4a2d2c2b47cde13076fc75f47f98898c3d80127b",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://static01.nyt.com/newsgraphics/documenttools/0cdb44a57dfd2687/fddf7303-full.pdf",
+      "observed_utc": "2026-10-17T20:14:57.355917+00:00",
+      "finding": "Recovered Tulchin October16 original,500LV fieldOct12–14,50/46/U4,4.38MoE; client/mode/question/weighting not disclosed."
+    },
+    {
+      "url": "https://scholars.unh.edu/survey_center_polls/1007/",
+      "observed_utc": "2026-10-17T20:14:57.355938+00:00",
+      "finding": "Primary abstract statistical tie only; secondary numeric details not promoted because PDF inaccessible."
+    },
+    {
+      "url": "https://www.maine.gov/sos/",
+      "observed_utc": "2026-10-17T20:14:57.355941+00:00",
+      "finding": "Official2026 ranked-choice District2 ballot and prior election workbooks in candidate-history source packet."
+    },
+    {
+      "url": "https://www.fec.gov/data/",
+      "observed_utc": "2026-10-17T20:14:57.355943+00:00",
+      "finding": "Actual October15 Q3 principal-committee filings, period totals not cumulative candidate totals, preserved with filing IDs in source packet."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:14:57.355946+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.61,
+    "low": 0.15,
+    "high": 0.95,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.61,
+        "best_bid": 0.38,
+        "best_ask": 0.39,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.249,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.39,
+            "fee_usd": 0.09516
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.9951600000000003,
+        "fee_usd": 0.09516,
+        "break_even_probability_before_carry": 0.39951600000000004,
+        "break_even_probability_with_idealized_carry": 0.4013319004781419,
+        "central_expected_profit_usd": 2.1048399999999994,
+        "default_10pp_stressed_profit_usd": 1.1048399999999994,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.51,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.7057599999999997
+      },
+      "No": {
+        "probability": 0.39,
+        "best_bid": 0.61,
+        "best_ask": 0.62,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.249,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.62,
+            "fee_usd": 0.09424
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.29424,
+        "fee_usd": 0.09424,
+        "break_even_probability_before_carry": 0.629424,
+        "break_even_probability_with_idealized_carry": 0.6322848900333253,
+        "central_expected_profit_usd": -2.39424,
+        "default_10pp_stressed_profit_usd": -3.39424,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.29000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.00484
+      }
+    }
+  },
+  "verdict": "YES around .39 maker is a concrete pilot candidate; fresh sources, balanced review and full gates required",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "cd42b1d1892a0328c024da31b1e7001f9832848a8eeb8eedceb466b9a3636a88",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+    "115344862533823877787593931582052527994258645729917868626175818881592688447868"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0003",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": true,
+    "model": {
+      "inputs": {
+        "district": "ME02",
+        "yes": "D",
+        "pvi": -4,
+        "inc": 0,
+        "adj": -2,
+        "local_sd": 7,
+        "poll": 4,
+        "moe": 4.38,
+        "poll_bias": -1.5,
+        "age": 1,
+        "common": 4,
+        "other": 0.002,
+        "low": 0.15,
+        "high": 0.95
+      },
+      "prior_D_mean": -0.40000000000000036,
+      "updated_D_mean": 1.370984405970987,
+      "updated_sd": 4.751874564903861,
+      "effective_poll_sd": 6.0807422988855615,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.6112530386068358,
+      "unrounded_p_yes": 0.6100305325296221,
+      "primary_p_yes": 0.61,
+      "scenario_range": [
+        0.15,
+        0.95
+      ],
+      "grid_min": 0.2927933632148737,
+      "grid_max": 0.8622081888744256
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:14:57.629830+00:00",
+  "question": "Will the Democratic Party win the ME-02 House seat?",
+  "market_id": "3006483",
+  "valuation_author": "primary_operator",
+  "original_index": 123,
+  "report_sha256": "82392513c3239b6025f8510c04d9d3a10154fa6edd34a2683358c06383fed173"
+}

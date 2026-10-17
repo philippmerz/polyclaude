@@ -1,0 +1,170 @@
+{
+  "review_index": 144,
+  "condition_id": "0xc55de48b150591d3047f4f097ee8c3196d8f5c5099559d8c34d35dc36694bbb9",
+  "criteria_sha256": "208e881d42b1e1bc2dd3d517bcd76af3c0bd9c2c24a7f581be95020e6b1faa7e",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://dos.elections.myflorida.com/candidates/CanList.asp?CountyCode=ALL&OfficeGroup=ALL&Party=ALL&StatusCode=QUA&cantype=FED&elecID=20261103-GEN&sortby=OFF",
+      "observed_utc": "2026-10-17T20:14:57.886799+00:00",
+      "finding": "Official final District7 DaltonDEM/ElijahREP/DennisonLPF; old Mills primary is not general polling."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:14:57.886822+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.42,
+    "low": 0.08,
+    "high": 0.92,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.42,
+        "best_bid": 0.31,
+        "best_ask": 0.32,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.851,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.32,
+            "fee_usd": 0.08704
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.28704,
+        "fee_usd": 0.08704,
+        "break_even_probability_before_carry": 0.328704,
+        "break_even_probability_with_idealized_carry": 0.3301980421679411,
+        "central_expected_profit_usd": 0.91296,
+        "default_10pp_stressed_profit_usd": -0.0870400000000009,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.31999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.01444
+      },
+      "No": {
+        "probability": 0.5800000000000001,
+        "best_bid": 0.68,
+        "best_ask": 0.69,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.851,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.69,
+            "fee_usd": 0.08556000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.985569999999999,
+        "fee_usd": 0.08557,
+        "break_even_probability_before_carry": 0.6985569999999999,
+        "break_even_probability_with_idealized_carry": 0.7017321168671826,
+        "central_expected_profit_usd": -1.1855699999999985,
+        "default_10pp_stressed_profit_usd": -2.1855699999999985,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4800000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.712960000000001
+      }
+    }
+  },
+  "verdict": "Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "e650a824fa9b4af807614d18e6334af7c455e60dd8ec24abe06f4db864673c75",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "48595994389294380413605252588038399089739882614541392889205137632817333951567",
+    "16661917299889844562247566603559122251937209362630950418259738730496536105112"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0048",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": false,
+    "model": {
+      "inputs": {
+        "district": "FL07",
+        "yes": "D",
+        "pvi": -5,
+        "inc": 0,
+        "adj": 0,
+        "local_R_regime_weight": 0.3,
+        "local_R_regime_D_margin": -5,
+        "other": 0.005,
+        "low": 0.08,
+        "high": 0.92
+      },
+      "prior_D_mean": 0.0,
+      "updated_D_mean": 0.0,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": null,
+      "p_D_before_other_affiliation": 0.4200403114167876,
+      "unrounded_p_yes": 0.41794010985970365,
+      "primary_p_yes": 0.42,
+      "scenario_range": [
+        0.08,
+        0.92
+      ],
+      "grid_min": 0.20330371047725757,
+      "grid_max": 0.6325765092421498
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:14:58.157050+00:00",
+  "question": "Will the Democratic Party win the FL-07 House seat?",
+  "market_id": "1283001",
+  "valuation_author": "primary_operator",
+  "original_index": 144,
+  "report_sha256": "1a0647998cd2d3c64ca314f439d22c83e05b463319e54e154432a5cbf67d6f11"
+}

@@ -1,5 +1,15 @@
 ## Active — primary in-depth review authorized October 17
 
+First100 completed valuations reached20:31UTC. One blocked review and15 factual
+exclusions are separate;2,884 remain pending. Read the
+[first100 inspection report](../research/2026-10-17-deep-review/MILESTONE_100.md).
+ME-02 YES and CA-06 NO merit current small-maker entry review; both balanced
+critics are complete, but no order has yet been placed. The separate metadata
+refresh found325 closed/resolved/no-new-order rows to document as factual
+exclusions; it did not value or reject the2,675 open markets. Tesla case3 is
+currently disputed and cannot be a new-entry candidate. Continue the finite
+queue and per-case persistence; don't mistake this milestone for task completion.
+
 Review all 3,000 frozen conditions beyond clearly factual exclusions. Start with
 the original index order; common-source grouping is allowed, with each distinct
 contract valued explicitly. All old screen labels are nonbinding. Notify the

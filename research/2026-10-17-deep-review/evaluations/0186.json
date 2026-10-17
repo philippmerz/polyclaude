@@ -1,0 +1,180 @@
+{
+  "review_index": 186,
+  "condition_id": "0xb47f229515c8720ca5ab0bb536f6e6b3fc2041e587179551358503741a1820db",
+  "criteria_sha256": "fcebfa3b4b587e91b80fcc64ea40717d4e197bb706a9c3d67c5463229a3eea9d",
+  "status": "valued",
+  "literal_analysis": "Complete exact House rule: winner party/most-recent independent caucus intent when all2026House elections called, credible consensus/FEC fallback; exact district/candidate/current-map binding checked separately.",
+  "evidence": [
+    {
+      "url": "https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/",
+      "observed_utc": "2026-10-17T20:14:59.463747+00:00",
+      "finding": "Official exactDistrict1 TaylorD/WittmanR current general nominees."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "observed_utc": "2026-10-17T20:14:59.463774+00:00",
+      "finding": "Current attributed professional ratings and current-map PVI in source packets; no category-to-probability conversion or screen rejection."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T20:14:59.463779+00:00",
+      "finding": "Official-count compilation with immediate-results caveat; candidate-consolidated valid-vote margins and current-map binding in historical source packets."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.59,
+    "low": 0.1,
+    "high": 0.95,
+    "method": "Primary current-map candidate, local-poll and discounted historical-margin sensitivity",
+    "reasoning": "All explicit primary coefficients, mixture/history discounts, poll provenance/error, other-affiliation risks and broad scenarios are in house_extension_model.py/results and house_extension_method.md; no price inputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 55,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.59,
+        "best_bid": 0.46,
+        "best_ask": 0.47,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.046,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.47,
+            "fee_usd": 0.09963999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 4.799639999999999,
+        "fee_usd": 0.09964,
+        "break_even_probability_before_carry": 0.47996399999999995,
+        "break_even_probability_with_idealized_carry": 0.4821455568264872,
+        "central_expected_profit_usd": 1.1003600000000002,
+        "default_10pp_stressed_profit_usd": 0.10036000000000111,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.49,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.500640000000001
+      },
+      "No": {
+        "probability": 0.41000000000000003,
+        "best_bid": 0.53,
+        "best_ask": 0.54,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.046,
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.54,
+            "fee_usd": 0.09936
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.49936,
+        "fee_usd": 0.09936,
+        "break_even_probability_before_carry": 0.549936,
+        "break_even_probability_with_idealized_carry": 0.5524355971258909,
+        "central_expected_profit_usd": -1.3993599999999997,
+        "default_10pp_stressed_profit_usd": -2.3993599999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.31000000000000005,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 5.200360000000001
+      }
+    }
+  },
+  "verdict": "YES has a thin maker price/model difference; local candidate uncertainty and carry can erase it",
+  "reopen_condition": "New named current-map survey, official ballot/caucus change or concrete local campaign event; then fresh exact-token books/fees, current account/funding, exposure and monitoring checks.",
+  "current_description_sha256": "4ce7dcee596c7d975bc25bab5714a2b7d6a2f40637ada38b109df6014ae09d4a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "19527325130044660074684336011478717458899906478875219180396447156299505391740",
+    "109221185828609696152295126285793980024516683390733668492309397849318398468765"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0135",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    }
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/house_extension_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/house_ballot_final_followup.json",
+      "data/deep_review_20261017/house_2024_context_followup.json",
+      "data/deep_review_20261017/map_pvi_binding_followup.json",
+      "data/deep_review_20261017/district_depth_followup_sources.json",
+      "data/deep_review_20261017/me02_poll_primary_followup.json",
+      "data/deep_review_20261017/me02_candidate_history_followup.json"
+    ],
+    "priority_followup": true,
+    "model": {
+      "inputs": {
+        "district": "VA01",
+        "yes": "R",
+        "pvi": -3,
+        "inc": -2,
+        "adj": 0,
+        "history": -12.7816,
+        "history_weight": 0.6,
+        "other": 0.002,
+        "low": 0.1,
+        "high": 0.95
+      },
+      "prior_D_mean": 1.1999999999999993,
+      "updated_D_mean": 1.1999999999999993,
+      "updated_sd": 6.708203932499369,
+      "effective_poll_sd": null,
+      "historical_component": {
+        "D_margin_mean": -4.381599999999999,
+        "sd": 8,
+        "p_D": 0.2919489560668066,
+        "weight": 0.6
+      },
+      "p_D_before_other_affiliation": 0.4054925653977281,
+      "unrounded_p_yes": 0.5933184197330673,
+      "primary_p_yes": 0.59,
+      "scenario_range": [
+        0.1,
+        0.95
+      ],
+      "grid_min": 0.35767125286438817,
+      "grid_max": 0.8065693961275096
+    }
+  },
+  "evaluated_utc": "2026-10-17T20:14:59.728966+00:00",
+  "question": "Will the Republican Party win the VA-01 House seat?",
+  "market_id": "944281",
+  "valuation_author": "primary_operator",
+  "original_index": 186,
+  "report_sha256": "db552b4ac260cf2e3c0e2ded2a5391d50c1bc8a92c522c6374811b06ae60c141"
+}
