@@ -1,41 +1,55 @@
-## Current — October 18, 02:05 UTC
+## Current — October 18, 02:34 UTC
 
-The finite primary review has **189 valued, 2 blocked, 327 factual exclusions and
-2,482 pending** across 518 canonical records. Mamdani case98 is saved; case12
-(Hormuz/oil/Democratic Senate combination) is active, with its full four-page
-PDF read. Primary source/model work precedes own prices. The checkpoint and index remain authoritative;
-save each finished valuation before starting another.
+The finite primary review has **200 valued, 2 blocked, 327 factual exclusions and
+2,471 pending** across 529 canonical records. The active case is 1602, a Hormuz/oil/
+Democratic Senate combination. Its individual full rule and source binding are
+read; probability and quote work remain incomplete. The checkpoint and live index
+authoritatively track progress. Save each completed case before starting another.
+
+Eleven cases were added after the prior 189-valuation checkpoint: 12, 26, 64, 80,
+169, 270, 546, 722, 728, 1192 and 1197. The shared [Hormuz/oil/Senate method](../research/2026-10-17-deep-review/models/hormuz_oil_senate_method_0206.md)
+and [24-scenario joint table](../research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json)
+show the common inputs and case-specific rules. Case 169’s literal cutoff is
+October 23; neighboring titles or variants do not alter it. The 722 YES / 728 NO
+floor pair had dated cost $9.98776 against a $10 payout floor, only $0.01224 before
+carry and operational costs; the reverse pair is not an arbitrage. Case 270’s
+whole-market fallback is 50–50 and nontrade; case 546 uses a prior-close fallback.
+Case 64 is valued at 30% YES with a 5–80% range and 20-point reserve. Root reviewed
+four recent channel images/poster without establishing authenticated fresh capture
+time; the full video was not reviewed. All quotes in these reports are dated, not
+current execution checks. See the [case index](../research/2026-10-17-deep-review/INDEX.md),
+[case 64 source packet](../data/deep_review_20261017/mojtaba_appearance_primary_followup_0212.json)
+and [image receipt manifest](../logs/deep_review_20261017/mojtaba_appearance_primary_followup_0213/manifest.json).
 
 Eight post-only bids were independently verified LIVE and zero-filled at
 02:01:40 UTC. Pending cash is $14.72 and arithmetic uncommitted pUSD is $10.276890;
-the separate01:58:50–01:59:01/block95722257 proof showed all11 reviewed
-candidates have zero balances in both outcomes. The new order is
-Messi Global Athletes TOP 5 YES 5 at 27¢ ($1.35, DEC-0213); the other seven are the
-four House bids, Idaho, Michigan Senate and Sedgwick County. See
-[resting orders](resting_orders.md) for exact IDs, proofs and pull plans. The
-canceled Anthropic IPO prior remains review-required; the state audit's nine
-orphan flags are eight live-order priors plus that canceled IPO prior. Do not
-remove them as cleanup.
+the separate 01:58:50–01:59:01 / block 95722257 proof showed all 11 reviewed
+candidates had zero balances in both outcomes. The newest order is Messi Global
+Athletes TOP 5 YES, 5 shares at 27¢ ($1.35, DEC-0213); the other seven are the four
+House bids, Idaho, Michigan Senate and Sedgwick County. See [resting orders](resting_orders.md)
+for exact IDs, proofs and pull plans. The canceled Anthropic IPO prior remains
+review-required; the state audit's nine orphan flags are eight live-order priors
+plus that canceled IPO prior. Preserve them.
 
 The 02:00 full held review is complete. Retain OpenAI HLE NO 9 and the complete
-Clarity 29/29 group, with no add; Gemini50 is finalYES, losingNO4.034750 at zero with no action, and
-Hormuz dust remains because gas exceeds payout. No asset action occurred during
-the review. The bounded source pass found the 65 HLE objects, five held criteria,
-256 Senate rows, compared articles and AA HLE pair unchanged from 22:00. Three
-OpenAI direct pages returned 403; these are coverage gaps. The sampled public
-alert tail contained no material or critical held match, not a global no-news
-finding. The next existing light check is06:00UTC; weekly October 23 and monthly
-November 12 checks are not due.
+Clarity 29/29 group, with no add; Gemini remains final NO dust, and Hormuz dust
+remains because gas exceeds payout. No asset action occurred during the review.
+The bounded source pass found 65 HLE objects, five held criteria, 256 Senate rows,
+compared articles and the AA HLE pair unchanged from 22:00. Three OpenAI direct
+pages returned 403; these are coverage gaps. The sampled public alert tail had no
+material or critical held match, not a global no-news finding. The next existing
+light check is 06:00 UTC; weekly October 23 and monthly November 12 checks are not
+due.
 
 The full bankroll record is $196.48 total, $5.83 separately funded gas, $190.65
 trading midpoint / $188.42 indicative depth, $30.98 Polymarket midpoint / $28.75
 fee-net depth, $194.25 approximate whole-account depth, $29.86 open-position cost
 and $19.53 settled residual. These sequential marks are not synchronized NAV or
-cash profit; VM/API costs are excluded. Disk is about 224 MiB, with a 180 MiB
+cash profit; VM/API costs are excluded. Disk was about 224 MiB, with a 180 MiB
 research floor and 128 MiB critical threshold. The direct quota check succeeded:
 20 of 100 used, resetting October 24 at 20:41 UTC. The last pushed commit is
-`63181ff` (178 valuations); the focused commit remains pending. See the
-[02:00 risk record](../data/checkin_20261018T0200_risk.json),
+`4257f65` through 189 valuations and DEC-0213; the focused 200-valuation commit is
+pending. See the [02:00 risk record](../data/checkin_20261018T0200_risk.json),
 [source capture](../data/checkin_20261018T0200_sources.json), and
 [checkpoint](deep_review_checkpoint.json).
 

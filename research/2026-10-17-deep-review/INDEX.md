@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T02:11:28.619043+00:00
+Updated: 2026-10-18T02:34:17.391536+00:00
 
-**189 valuations saved; first milestone100:** 189 valued; 2 blocked after in-depth review. 327 factual exclusions separately; 2482 pending.
+**200 valuations saved; first milestone100:** 200 valued; 2 blocked after in-depth review. 327 factual exclusions separately; 2471 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -23,6 +23,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |9|[Will "Doing Life" be the #2 US Netflix movie this week?](evaluations/0009.md)|valued|Maker planning candidate: YES20c/10shares subject to fresh full gates; no order yet|
 |10|[Will the Democratic Party control the House after the 2026 Midterm elections?](evaluations/0010.md)|valued|Bothsidesvalued; YESnegativecentral, NO10c losesafterdefaultreserve/fees. <=7cpassiveNO20sharesresearchwatchunder12ppreserve, noorder.|
 |11|[Will the Fed increase interest rates by 25 bps after the October 2026 meeting?](evaluations/0011.md)|valued|No entry: YES has positive central EV but fails ordinary10pp stress; NO negative central EV.|
+|12|[Will there be no Hormuz agreement by October 23 or oil at least $80, and the Democrats win the Senate?](evaluations/0012.md)|valued|Noentry: YESnegativecentral, NOpositivecentralbutfails15ppselectedreserve atasks/ordinarymaker. FutureNO30c/YES34ctriggersonly.|
 |13|[Will Liverpool FC win on 2026-10-17?](evaluations/0013.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |14|[Will Anthropic have the best AI model at the end of December 2026?](evaluations/0014.md)|valued|NO central and default10pp edge; frontier-release uncertainty/December doctrine require follow-up, no order|
 |15|[US announces end of Iranian blockade by October 31, 2026?](evaluations/0015.md)|valued|Official general-lift announcement valued separately from shipping/deal; neither ask clears normal reserve|
@@ -36,6 +37,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |23|[Will "Sacrifice" be the #2 global Netflix movie this week?](evaluations/0023.md)|valued|Both offered sides negative central EV; no supported maker entry|
 |24|[Will Benjamin Netanyahu be the next Prime Minister of Israel?](evaluations/0024.md)|valued|Next sworn PM valued separately from seat winner; neither side clears default reserve at captured asks|
 |25|[Will 12 or more Fed rate cuts happen in 2026?](evaluations/0025.md)|valued|Tiny YES central tail value; unsupported floor/minimum-size route, no NO offer|
+|26|[Will there be no Hormuz agreement or oil at least $80, and the Democrats win the Senate?](evaluations/0026.md)|valued|Noentry: NOpositivecentralbutfails15ppselectedreserve/currentordinarymaker; YESnegativecentral. Correctfloorpaircostexceedsfloor; reversepairnotarb.|
 |27|[Counter-Strike: FURIA vs Aurora Gaming (BO3) - Thunderpick World Championship Playoffs](evaluations/0027.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
 |28|[Anthropic IPO before 2027?](evaluations/0028.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |29|[Ethereum Up or Down on October 17?](evaluations/0029.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -73,6 +75,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |61|[Strait of Hormuz traffic returns to normal by December 31?](evaluations/0061.md)|valued|YES price/model difference clears default reserve, but uncertainty and December hold-only prevent entry|
 |62|[Real Betis Balompié vs. FC Barcelona: O/U 3.5](evaluations/0062.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |63|[Will Conor McGregor rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0063.md)|valued|Noentry. Takerselectedstressdoesnotcoveropcost; tiny<=18c/1.08makerresearchpriorityneedsbalanced/currentgates.|
+|64|[Mojtaba Khamenei seen in public by December 31?](evaluations/0064.md)|valued|Noentry: YESpositivecentralbutfails20ppselectedreserve atasks/ordinarymaker, NOnegativecentral. RetainYES7c/15shareexplicit$1.05illustration only.|
 |65|[Will "Animals" be the #2 US Netflix movie this week?](evaluations/0065.md)|valued|Both asks negative central EV; no entry|
 |66|[Will Lamine Yamal win the 2026 Ballon d'Or?](evaluations/0066.md)|valued|No entry: YES negativecentral; NOcentral+.08032/10shares fails20ppreserve. MakerresearchonlyYES<=.04 orNO<=.52, with renewedindependentforecast/currentallgates.|
 |67|[US imports Russian diesel by October 31?](evaluations/0067.md)|valued|YES centralvaluepositive but failsordinary10ppreserve; NOcentralnegative. Future<=3cmaker/evidencewatchonly, noentry.|
@@ -88,6 +91,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |77|[Will Sean 'Diddy' Combs be the #1 searched person on Google in the US this year?](evaluations/0077.md)|valued|Bothdatedasks andordinaryNOmaker failselected20ppreserve. Noentry; illustrativefutureNO70cneedsfreshrevaluation/gates, not executabletoday.|
 |78|[US-Iran Hormuz Agreement by October 31?](evaluations/0078.md)|valued|Mutual acceptance event valued; YES central difference fails normal uncertainty reserve|
 |79|[Will "Ice Age: Collision Course" be the #2 global Netflix movie this week?](evaluations/0079.md)|valued|YES central value, proxy/model error consumes robust edge; no entry|
+|80|[Will oil be at least $85 on November 2 and the Democrats win the Senate?](evaluations/0080.md)|valued|Noentry: NOpositivecentralbutfails20ppselectedreserve/ordinarymaker; YESnegativecentral. RetainNO34c/datafollowup, YES20ctriggeronly.|
 |81|[Will the Democratic Party win the NC-11 House seat?](evaluations/0081.md)|valued|SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding|
 |82|[Will Vinícius Júnior attend the 2026 Ballon d'Or ceremony?](evaluations/0082.md)|blocked_after_review|Blockedafterreview, notvalued/excluded. NoRSVP/delegation/availabilitybase; bothsidespricedconditionally, combinedaskslose; illustrativeYESedgeisnotfunded.|
 |83|[Florida Atlantic vs. Army](evaluations/0083.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -154,6 +158,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |165|[Will the Republican Party win the NE-02 House seat?](evaluations/0165.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |166|[Romanian PM Bolojan out by October 31?](evaluations/0166.md)|valued|Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain|
 |167|[Israel x Iran ceasefire continues through October 18?](evaluations/0167.md)|valued|Short-window survival valued; NO central difference fails ordinary uncertainty reserve|
+|169|[Will there be a Hormuz agreement and the Democrats win the Senate?](evaluations/0169.md)|valued|Noentry: cheapYESpositivecentralbutfails15ppreserveandten-share$1cashminimum; NOnegativecentral. FutureNO79ctriggeronly.|
 |170|[Will Swim – BTS be the #2 song in the US for 2026?](evaluations/0170.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |171|[Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?](evaluations/0171.md)|valued|Exact ballot-list contest deeply valued with poll disagreement retained; no ordinary-reserved entry|
 |175|[OpenAI IPO before 2027?](evaluations/0175.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
@@ -199,6 +204,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |267|[Charleston Southern vs. Clemson](evaluations/0267.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |269|[Will the highest temperature in Shanghai be 28°C on October 17?](evaluations/0269.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|270|[Will oil be below $80 on November 2 and the Republicans win the Senate?](evaluations/0270.md)|valued|Noentry: YESmodestpositiveexpectedpayoutbut20ppreservefails/ten-sharecashfloor; NOnegativecentral. Wholemarket50–50fallbackdistinctfrom546.|
 |271|[Will the Democratic Party win the MT-01 House seat?](evaluations/0271.md)|valued|Potential small passive YES source revalidation|
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -248,6 +254,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |540|[Will the Republicans win Sedgwick County in the Kansas Senate race in 2026?](evaluations/0540.md)|valued|NOprioritymakerfollowup only; captured40ctakerfails15ppstress, noorder.|
 |545|[Will the highest temperature in Kuala Lumpur be 32°C on October 17?](evaluations/0545.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|546|[Will oil be below $80 on November 2 and the Republicans win the Senate?](evaluations/0546.md)|valued|Noentry: YESmodestpositivecentralbut20ppreserve/cashfloorfail, NOnegativecentral. Distinctfallbackfromsame-title270, no automaticpair.|
 |549|[Brentford FC vs. Liverpool FC: O/U 10.5 Total Corners](evaluations/0549.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |563|[Will the highest temperature in Chengdu be 26°C on October 17?](evaluations/0563.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |567|[Yunnan Yukun FC vs. Chongqing Tonglianglong FC: O/U 1.5](evaluations/0567.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -270,6 +277,8 @@ Each report below is written before moving to the next evaluation. Related contr
 |705|[Will Sheffield Wednesday FC win on 2026-10-17?](evaluations/0705.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |710|[Will the price of XRP be above $0.90 on October 17?](evaluations/0710.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |711|[Elche CF leading at halftime?](evaluations/0711.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|722|[Will there be no Hormuz agreement by October 23 or oil at least $80, and the Republicans win the Senate?](evaluations/0722.md)|valued|Noentry: YESpositivecentralbutfails15ppselectedreserveatasks/ordinarymaker; NOnegativecentral. FutureYES27c/NO37c only.|
+|728|[Will there be no Hormuz agreement or oil at least $80, and the Republicans win the Senate?](evaluations/0728.md)|valued|Noentry: YESpositivecentralfails15ppselectedreserve/ordinarymaker; NOnegativecentral. Datedcorrectfloorpairmarginbelowcarry/operations, reverseisnotarb.|
 |729|[Dota 2: by Owl Team vs Nix Team - Game 2 Winner](evaluations/0729.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |731|[Will the highest temperature in Lucknow be 30°C on October 17?](evaluations/0731.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |735|[Roanne: Nicolai Budkov Kjaer vs Matteo Martineau](evaluations/0735.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -315,7 +324,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |1162|[Will MrBeast say "Contestant" during his next video?](evaluations/1162.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1173|[Counter-Strike: VP.Future vs QUAZAR (BO3) - GLuck Yungstar Series #3 Playoffs](evaluations/1173.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1184|[Ethereum Up or Down - October 17, 12:00PM-12:15PM ET](evaluations/1184.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1192|[Will there be a Hormuz agreement by October 23, oil below $80, and the Republicans win the Senate?](evaluations/1192.md)|valued|Noentry: YESnegativecentral/cashfloor; NOrawcentralmarginbelowoperationsandfails20ppreserve. FutureNO76c only.|
 |1193|[Liverpool FC leading at halftime?](evaluations/1193.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1197|[Will there be a Hormuz agreement, oil below $80, and the Republicans win the Senate?](evaluations/1197.md)|valued|Noentry: YESnegativecentral/cashminimum; NOrawmarginbelowoperations/carryand20ppreservefails. FutureNO75c only.|
 |1213|[SHL: Luleå vs. HV71](evaluations/1213.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1233|[Will Salford City FC win on 2026-10-17?](evaluations/1233.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1238|[SD Eibar vs. RCD Mallorca: O/U 1.5](evaluations/1238.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -531,4 +542,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 12
+Active indices: 1602

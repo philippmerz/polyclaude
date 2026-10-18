@@ -1,0 +1,168 @@
+{
+  "review_index": 546,
+  "condition_id": "0x0964ce19c0cc782aa1c020de42186977c1620143185f8108fcdb612511eed506",
+  "criteria_sha256": "73af7601d53af12681f5c5585d1a95c80655737e382adbf64e44b054c7944b8e",
+  "status": "valued",
+  "literal_analysis": "Fullinlineoil<80 AND Rcontrol; no-session/nontradingusespriorclose, not270whole50/50. AllCLLroll/candle/outage/structuralandSenatecaucusJan4clausesread.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "PrimaryreadretainedoriginalUSMOU/reopeningassertion; Iranian signatures/paragraph5remainattributedIRNAextract/currentopensfailed; Juneinterpretationexplicit."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3701662",
+      "observed_utc": "2026-10-17T18:39:13Z",
+      "finding": "PostJune-createdSeptemberdeadlinevenuecontractresolvedNO; materiallymatchingclausesprecedent, notonchainfinality/currentadjudicationguarantee."
+    },
+    {
+      "url": "https://mofa.gov.qa/en/qatar/latest-articles/latest-news/details/2026/10/16/qatar-urges-diplomacy-and-respect-for-international-law-to-secure-lasting-mideast-peace",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "RootreadoriginalOct16body: continuedmediation/unconditionalreopeningrequest, noacceptanceornexttalkdate; boundedsource notprivateprogressabsence."
+    },
+    {
+      "url": "https://app.pyth.com/explore?search=CLL",
+      "observed_utc": "2026-10-17T22:57:40.910391Z",
+      "finding": "CLLZ6catalog99.0475untimestamped/repeatedsparkline, notverifiedlatestclose/volatility; ICEexpirydefinesDec26mapping."
+    },
+    {
+      "url": "https://insideradvantage.com/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "CurrentprimarySenateIArevision0059usesoriginalpollreleases/all35contests andsharednationalerror; D53/R46/Other1uncalibrated, notquotederived."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.04,
+    "low": 0.005,
+    "high": 0.45,
+    "method": "Primaryfullindividualcase546 withpriortradingdayfallback; effectiveCLLclose<80ANDRcontrolprojectedfromjoint0206, no50/50mixing.",
+    "reasoning": "Entireinlineallfourbucket/oil/Senateclausesread. Same-title270haswholebinary50/50ifnotrade; thisspecificparentusespreviousvalidtradingclose, sothatwholemarketpartialpayoffbranchisnotimported. Pricebinsrepresentthiseffectivecloseunderordinarycalendarandfallback; R46currentjointmargin, unknownCLLterminalvol/source remains.20ppreserveprequote.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0481_0600.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:25.790+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.04,
+        "best_bid": 0.032,
+        "best_ask": 0.033,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 13.948,
+        "received_utc": "2026-10-17T21:00:25.790+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.033,
+            "fee_usd": 0.0127644
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.34277,
+        "fee_usd": 0.01277,
+        "break_even_probability_before_carry": 0.034277,
+        "break_even_probability_with_idealized_carry": 0.034361892898060006,
+        "central_expected_profit_usd": 0.05723,
+        "default_10pp_stressed_profit_usd": -0.34277,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.3076
+      },
+      "No": {
+        "probability": 0.96,
+        "best_bid": 0.967,
+        "best_ask": 0.968,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 13.948,
+        "received_utc": "2026-10-17T21:00:25.790+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.968,
+            "fee_usd": 0.012390400000000011
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.6924,
+        "fee_usd": 0.0124,
+        "break_even_probability_before_carry": 0.9692399999999999,
+        "break_even_probability_with_idealized_carry": 0.971640489906225,
+        "central_expected_profit_usd": -0.0923999999999996,
+        "default_10pp_stressed_profit_usd": -1.0923999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.86,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.65723
+      }
+    }
+  },
+  "verdict": "Noentry: YESmodestpositivecentralbut20ppreserve/cashfloorfail, NOnegativecentral. Distinctfallbackfromsame-title270, no automaticpair.",
+  "reopen_condition": "DatedtargetCLL/calendar/structure/Senatesourcechange/currentNO<=73c withallcurrentgates.",
+  "current_description_sha256": "03625d46a42b16adadcabe011ebe0f23daa6a9dc77d16160853d42fd52017076",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "8139556833907835847675694800037805702388459775432218665308197936639756441899",
+    "73250829062913413193539470557911236329033207421279595386921063308884659129464"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0136",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0481_0600/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0481_0600/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0546_primary_before_quote.json",
+    "raw_model_p_yes": 0.043033470180000005,
+    "scenarios": {
+      "central": 0.043033470180000005,
+      "peace_repricing_R_favorable": 0.250278175,
+      "no_deal_D_wave": 0.008326276700000003,
+      "June_counted_and_cheap_oil": 0.2844,
+      "price_gapped_lower_without_new_deal": 0.20558857899375
+    },
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.76,
+    "selected_stressed_yes_taker_profit_usd": -0.34277,
+    "selected_stressed_no_taker_profit_usd": -2.0924,
+    "ten_YES_shares_below_route_USD1_minimum": true,
+    "nontrading_priorclose_not270halfhalf": true,
+    "illustrative_NO_maker_trigger": 0.73
+  },
+  "evaluated_utc": "2026-10-18T02:32:20.077457+00:00",
+  "question": "Will oil be below $80 on November 2 and the Republicans win the Senate?",
+  "market_id": "5611042",
+  "valuation_author": "primary_operator",
+  "original_index": 546,
+  "report_sha256": "9cfcd04f0a54d8fb0c50c4a0a8ab4e3cbdbe8d819cdcb0d76995a4abaf97598a"
+}

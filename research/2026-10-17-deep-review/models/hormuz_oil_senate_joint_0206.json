@@ -1,0 +1,739 @@
+{
+  "written_utc": "2026-10-18T02:16:30.125389+00:00",
+  "primary_author": true,
+  "calibration": false,
+  "own_prices_read": false,
+  "purpose": "Explicit joint regime sensitivities; onlycase12 full literal read at creation. Related-condition formulas are tentative until their own fullrules read, not completed valuations.",
+  "scenarios": {
+    "central": {
+      "regime_weights": {
+        "prior_interpretation": 0.01,
+        "new_by_Oct23": 0.0495,
+        "new_Oct24_Nov2": 0.0693,
+        "no_qualifying_by_Nov2": 0.8712
+      },
+      "oil_bin_probabilities_conditional_on_regime": {
+        "prior_interpretation": [
+          0.15,
+          0.1,
+          0.75
+        ],
+        "new_by_Oct23": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "new_Oct24_Nov2": [
+          0.25,
+          0.15,
+          0.6
+        ],
+        "no_qualifying_by_Nov2": [
+          0.05,
+          0.1,
+          0.85
+        ]
+      },
+      "D_target": 0.53,
+      "global_D_intercept_shift": -0.00557300000000005,
+      "cells": [
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "below80",
+          "mass": 0.0015,
+          "p_D_conditional": 0.48442699999999994,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.505573
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "80_to_below85",
+          "mass": 0.001,
+          "p_D_conditional": 0.514427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.475573
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "85_or_more",
+          "mass": 0.0075,
+          "p_D_conditional": 0.524427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.465573
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "below80",
+          "mass": 0.022275000000000003,
+          "p_D_conditional": 0.4544269999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.5355730000000001
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "80_to_below85",
+          "mass": 0.007425,
+          "p_D_conditional": 0.48442699999999994,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.505573
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "85_or_more",
+          "mass": 0.0198,
+          "p_D_conditional": 0.49442699999999995,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.49557300000000004
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "below80",
+          "mass": 0.017325,
+          "p_D_conditional": 0.47442699999999993,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.5155730000000001
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.010395,
+          "p_D_conditional": 0.504427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.48557300000000003
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.04158,
+          "p_D_conditional": 0.514427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.475573
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "below80",
+          "mass": 0.04356,
+          "p_D_conditional": 0.49842699999999995,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.49157300000000004
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.08712,
+          "p_D_conditional": 0.528427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.461573
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.74052,
+          "p_D_conditional": 0.538427,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.451573
+        }
+      ],
+      "results": {
+        "D_control": 0.53,
+        "case12_D_and_not_A23_or_O80": 0.519150998075,
+        "case26_D_and_not_A2_or_O80": 0.5109315503,
+        "D_and_O85": 0.4338286938,
+        "D_and_A2": 0.0635359976,
+        "A23": 0.059500000000000004,
+        "A2": 0.1288,
+        "O80": 0.9153399999999999,
+        "O85": 0.8093999999999999
+      }
+    },
+    "peace_repricing_R_favorable": {
+      "regime_weights": {
+        "prior_interpretation": 0.05,
+        "new_by_Oct23": 0.18,
+        "new_Oct24_Nov2": 0.12,
+        "no_qualifying_by_Nov2": 0.65
+      },
+      "oil_bin_probabilities_conditional_on_regime": {
+        "prior_interpretation": [
+          0.5,
+          0.15,
+          0.35
+        ],
+        "new_by_Oct23": [
+          0.8,
+          0.1,
+          0.1
+        ],
+        "new_Oct24_Nov2": [
+          0.6,
+          0.15,
+          0.25
+        ],
+        "no_qualifying_by_Nov2": [
+          0.2,
+          0.2,
+          0.6
+        ]
+      },
+      "D_target": 0.35,
+      "global_D_intercept_shift": -0.165925,
+      "cells": [
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "below80",
+          "mass": 0.025,
+          "p_D_conditional": 0.324075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.665925
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "80_to_below85",
+          "mass": 0.0075,
+          "p_D_conditional": 0.35407500000000003,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.635925
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "85_or_more",
+          "mass": 0.017499999999999998,
+          "p_D_conditional": 0.36407500000000004,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.625925
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "below80",
+          "mass": 0.144,
+          "p_D_conditional": 0.294075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.695925
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "80_to_below85",
+          "mass": 0.018,
+          "p_D_conditional": 0.324075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.665925
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "85_or_more",
+          "mass": 0.018,
+          "p_D_conditional": 0.334075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.655925
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "below80",
+          "mass": 0.072,
+          "p_D_conditional": 0.314075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.675925
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.018,
+          "p_D_conditional": 0.344075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.645925
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.03,
+          "p_D_conditional": 0.35407500000000003,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.635925
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "below80",
+          "mass": 0.13,
+          "p_D_conditional": 0.338075,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.651925
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.13,
+          "p_D_conditional": 0.36807500000000004,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.621925
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.39,
+          "p_D_conditional": 0.37807500000000005,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.6119249999999999
+        }
+      ],
+      "results": {
+        "D_control": 0.35000000000000003,
+        "case12_D_and_not_A23_or_O80": 0.29955132500000003,
+        "case26_D_and_not_A2_or_O80": 0.27693792500000003,
+        "D_and_O85": 0.17045616250000004,
+        "D_and_A2": 0.11075124999999998,
+        "A23": 0.22999999999999998,
+        "A2": 0.35,
+        "O80": 0.629,
+        "O85": 0.4555
+      }
+    },
+    "no_deal_D_wave": {
+      "regime_weights": {
+        "prior_interpretation": 0,
+        "new_by_Oct23": 0.01,
+        "new_Oct24_Nov2": 0.02,
+        "no_qualifying_by_Nov2": 0.97
+      },
+      "oil_bin_probabilities_conditional_on_regime": {
+        "prior_interpretation": [
+          0.15,
+          0.1,
+          0.75
+        ],
+        "new_by_Oct23": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "new_Oct24_Nov2": [
+          0.25,
+          0.15,
+          0.6
+        ],
+        "no_qualifying_by_Nov2": [
+          0.02,
+          0.08,
+          0.9
+        ]
+      },
+      "D_target": 0.75,
+      "global_D_intercept_shift": 0.2088969999999999,
+      "cells": [
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "below80",
+          "mass": 0.0,
+          "p_D_conditional": 0.6988969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2911030000000001
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "80_to_below85",
+          "mass": 0.0,
+          "p_D_conditional": 0.7288969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2611030000000001
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "85_or_more",
+          "mass": 0.0,
+          "p_D_conditional": 0.7388969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2511030000000001
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "below80",
+          "mass": 0.0045000000000000005,
+          "p_D_conditional": 0.6688969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.32110300000000014
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "80_to_below85",
+          "mass": 0.0015,
+          "p_D_conditional": 0.6988969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2911030000000001
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "85_or_more",
+          "mass": 0.004,
+          "p_D_conditional": 0.7088969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2811030000000001
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "below80",
+          "mass": 0.005,
+          "p_D_conditional": 0.6888969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.3011030000000001
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.003,
+          "p_D_conditional": 0.7188969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2711030000000001
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.012,
+          "p_D_conditional": 0.7288969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2611030000000001
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "below80",
+          "mass": 0.0194,
+          "p_D_conditional": 0.7128969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.2771030000000001
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.0776,
+          "p_D_conditional": 0.7428969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.24710300000000007
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.873,
+          "p_D_conditional": 0.7528969999999999,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.23710300000000006
+        }
+      ],
+      "results": {
+        "D_control": 0.75,
+        "case12_D_and_not_A23_or_O80": 0.7469899634999999,
+        "case26_D_and_not_A2_or_O80": 0.7435454785,
+        "D_and_O85": 0.668861433,
+        "D_and_A2": 0.021241909999999996,
+        "A23": 0.01,
+        "A2": 0.03,
+        "O80": 0.9711,
+        "O85": 0.889
+      }
+    },
+    "June_counted_and_cheap_oil": {
+      "regime_weights": {
+        "prior_interpretation": 1,
+        "new_by_Oct23": 0,
+        "new_Oct24_Nov2": 0,
+        "no_qualifying_by_Nov2": 0
+      },
+      "oil_bin_probabilities_conditional_on_regime": {
+        "prior_interpretation": [
+          0.6,
+          0.2,
+          0.2
+        ],
+        "new_by_Oct23": [
+          0.45,
+          0.15,
+          0.4
+        ],
+        "new_Oct24_Nov2": [
+          0.25,
+          0.15,
+          0.6
+        ],
+        "no_qualifying_by_Nov2": [
+          0.05,
+          0.1,
+          0.85
+        ]
+      },
+      "D_target": 0.53,
+      "global_D_intercept_shift": 0.026000000000000023,
+      "cells": [
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "below80",
+          "mass": 0.6,
+          "p_D_conditional": 0.516,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.474
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "80_to_below85",
+          "mass": 0.2,
+          "p_D_conditional": 0.546,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.44399999999999995
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "85_or_more",
+          "mass": 0.2,
+          "p_D_conditional": 0.556,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.43399999999999994
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "below80",
+          "mass": 0.0,
+          "p_D_conditional": 0.486,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.504
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "80_to_below85",
+          "mass": 0.0,
+          "p_D_conditional": 0.516,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.474
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "85_or_more",
+          "mass": 0.0,
+          "p_D_conditional": 0.526,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.46399999999999997
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "below80",
+          "mass": 0.0,
+          "p_D_conditional": 0.506,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.484
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.0,
+          "p_D_conditional": 0.536,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.45399999999999996
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.0,
+          "p_D_conditional": 0.546,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.44399999999999995
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "below80",
+          "mass": 0.0,
+          "p_D_conditional": 0.53,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.45999999999999996
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.0,
+          "p_D_conditional": 0.56,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.42999999999999994
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.0,
+          "p_D_conditional": 0.5700000000000001,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.41999999999999993
+        }
+      ],
+      "results": {
+        "D_control": 0.53,
+        "case12_D_and_not_A23_or_O80": 0.22040000000000004,
+        "case26_D_and_not_A2_or_O80": 0.22040000000000004,
+        "D_and_O85": 0.11120000000000002,
+        "D_and_A2": 0.53,
+        "A23": 1,
+        "A2": 1,
+        "O80": 0.4,
+        "O85": 0.2
+      }
+    },
+    "price_gapped_lower_without_new_deal": {
+      "regime_weights": {
+        "prior_interpretation": 0.01,
+        "new_by_Oct23": 0.0495,
+        "new_Oct24_Nov2": 0.0693,
+        "no_qualifying_by_Nov2": 0.8712
+      },
+      "oil_bin_probabilities_conditional_on_regime": {
+        "prior_interpretation": [
+          0.45,
+          0.2,
+          0.35
+        ],
+        "new_by_Oct23": [
+          0.7,
+          0.15,
+          0.15
+        ],
+        "new_Oct24_Nov2": [
+          0.55,
+          0.2,
+          0.25
+        ],
+        "no_qualifying_by_Nov2": [
+          0.4,
+          0.2,
+          0.4
+        ]
+      },
+      "D_target": 0.53,
+      "global_D_intercept_shift": 0.008986249999999973,
+      "cells": [
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "below80",
+          "mass": 0.0045000000000000005,
+          "p_D_conditional": 0.49898624999999996,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.49101375
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "80_to_below85",
+          "mass": 0.002,
+          "p_D_conditional": 0.52898625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.46101375
+        },
+        {
+          "agreement_regime": "prior_interpretation",
+          "price_bin": "85_or_more",
+          "mass": 0.0034999999999999996,
+          "p_D_conditional": 0.53898625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.45101375
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "below80",
+          "mass": 0.03465,
+          "p_D_conditional": 0.46898624999999994,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.52101375
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "80_to_below85",
+          "mass": 0.007425,
+          "p_D_conditional": 0.49898624999999996,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.49101375
+        },
+        {
+          "agreement_regime": "new_by_Oct23",
+          "price_bin": "85_or_more",
+          "mass": 0.007425,
+          "p_D_conditional": 0.50898625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.48101375
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "below80",
+          "mass": 0.038115,
+          "p_D_conditional": 0.48898624999999996,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.50101375
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.01386,
+          "p_D_conditional": 0.51898625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.47101375
+        },
+        {
+          "agreement_regime": "new_Oct24_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.017325,
+          "p_D_conditional": 0.52898625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.46101375
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "below80",
+          "mass": 0.34848,
+          "p_D_conditional": 0.51298625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.47701375
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "80_to_below85",
+          "mass": 0.17424,
+          "p_D_conditional": 0.54298625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.44701375
+        },
+        {
+          "agreement_regime": "no_qualifying_by_Nov2",
+          "price_bin": "85_or_more",
+          "mass": 0.34848,
+          "p_D_conditional": 0.55298625,
+          "p_Other_conditional": 0.01,
+          "p_R_conditional": 0.43701375
+        }
+      ],
+      "results": {
+        "D_control": 0.53,
+        "case12_D_and_not_A23_or_O80": 0.5115041883125,
+        "case26_D_and_not_A2_or_O80": 0.49286647739375,
+        "D_and_O85": 0.20753500996250002,
+        "D_and_A2": 0.063919979,
+        "A23": 0.059500000000000004,
+        "A2": 0.1288,
+        "O80": 0.574255,
+        "O85": 0.37673
+      }
+    }
+  },
+  "case12_adopted": {
+    "p_yes": 0.52,
+    "range": [
+      0.2,
+      0.8
+    ],
+    "entry_reserve": 0.15
+  },
+  "sources": [
+    "data/deep_review_20261017/hormuz_oil_primary_followup_0204.json",
+    "data/deep_review_20261017/hormuz_compound_deadline_followup.json",
+    "data/deep_review_20261017/oil_cll_compound_followup.json",
+    "data/deep_review_20261017/oil_dated_proxy_followup.json",
+    "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md"
+  ],
+  "caveats": [
+    "CLL99.0475 is untimestamped page snapshot, not latestclose; no options/volatility observations. EIA98.73Oct9 is differentinstrument/lagged.",
+    "Iran acceptance details are attributed IRNA browser extracts; primary currentopens inaccessible, no full Iran govt-hosted original recovered.",
+    "June agreement already described in USrelease/IRNA but no lower time bound inPDF; prior postJuneAug/SepresolvedNO contracts weaken backwardinterpretation, do not guaranteeexactcurrentadjudication.",
+    "NewUS/Iranacceptance not verified inboundedsource set, not no-privateprogressproof.",
+    "Regimeweights/conditionaloil andSenatecorrelation shifts are subjective notestimatedcausal effects. Dmarginal53 currentstandalonemodel; Other1 ismodelresidual notverifiedforecast.",
+    "15ppselectedreserve followsdominantcurrentSenatesourceuncertainty; scenario/rangeendpoints can be worse, fullcashloss remainspossible.",
+    "January4 caucus/runoffs/14dayambiguity/UMA can delaysettlement; no automaticprotectedpayoutfromapairwithoutcurrentexactrulesandmatchingmanagement."
+  ],
+  "case12_PDF_and_fulltext_hashes_verified": true
+}

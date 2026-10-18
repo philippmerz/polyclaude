@@ -542,3 +542,37 @@ Current official2026 route404/methodology2025-only revalidated01:54:53–54 (dat
 Monitoring: current broadRSS30 plus existing GoogleBlog20 all normally seen before three keyword promotions01:54:05; postpromotion normal save01:55:22, sameconfig/alivedaemon/>309seconds sinceprior. OriginalYahooNYCFC item shifted out of first30, not manually marked seen; an old-news alert can still recur. No manual poll/state edit/restart/newdaemon/timer. Norris bid deferred for stale books/no financialprior; McGregor current18c bid declined/no order.
 
 Private0600 proof: `data/deep_review_20261017/all_pilots_messi_postentry_0197.json` and `messi_exact_order_0197.json` (owner fields omitted). Execution log`logs/deep_review_20261017/messi_entry_execute_0196.log`. Never replay execution or this writer. This is entry verification, not the due02:00 full held-thesis check.
+
+
+## October18 — compound model0206 and source-link correction
+
+Cases12/26/80/169 are individually valued and indexed:52/51/43/3%YES, broad ranges and selected15/15/20/15pp entry reserves. No order/prior/reservation/feed. Primary read both complete four-page PDFs and full inline80/169 descriptions. **169agreement deadline isOctober23**, not tentativejointmodel's separately labeledA2formula; actualA23ANDDprojection2.8683%rounds3%. Models/hormuz_oil_senate_method_0206.md and joint_0206.json retain all scenario cells, June-MOU/venue-precedent interpretation risks, currentSenate53/46/1, missingdatedCLLprice and dependence. Do not overwrite standalonecase1's dated source assumptions from secondary summaries.
+
+PDF12/26fulltexts match afteronlyOctober23->November2/whitespace; YES26=>YES12. Correct conditionalfloorpairYES12+NO26 costs10.53717per10pairedshares in datedcaptures, above10floor. Reversepair9.85719canpayzeroandisnotanarbitrage. BothcapturedPDFraw/fulltextSHAverified; descriptionfingerprintscoverURLonly, currentlinkedbytesnotrevalidated. Allfirst120caseslackindependentcompactdescriptor; case169hasexactcompact4%/exponent1parity.
+
+**Case80 source-link correction:** the first evidence item's generic PolymarketparentURL was unverified orientation and is not used as evidence of any parent identity. Exactsource is the retained Gamma request `https://gamma-api.polymarket.com/markets?id=5611882`, requestreq_0103 inquotes_0001_0120, with fullfrozenrules/CID0x5f5e121333f1a684aeeee44941b753473795e334342eecaff975879ea58e5ec9. Primary read the entire individual rule; no parent inference entered the valuation. Preserve immutablecase80 and read this dated provenance correction alongside it.
+
+Fifteen further pending compounds are mapped without rejection/forecast in data/deep_review_20261017/remaining_compounds_manifest_0210.json (SHA54266adf8c2602df428088c189b19fed967bad6a27498d1c43f314f7aa7cf433). Primary must read everyindividual fullrule and persist separately. Similar-title270/546 and1910/2058 can differ in nontrading-dayfallback; do not normalize or share payout protection withoutproof.
+
+Focusedcommit4257f65 (through189valuations/DEC213/full02check) pushed.169money-math regression checks passed subsequently; no pricingcode changed. Newcase records are now193valued; active64. Canonicalcheckpoint/index override datednarrative counts. No newmoney since verifiedMessi and nofullcheckrerun; next06UTC.
+
+## October 18 02:42 UTC — milestone 200 audit
+
+The checkpoint contains 529 records: 200 valued, 2 blocked, 327 factual exclusions
+and 2,471 pending. The eleven new valuations are cases 12, 26, 64, 80, 169, 270,
+546, 722, 728, 1192 and 1197; none added an order or financial prior. Case 1602
+has a saved primary pre-quote forecast; its own quote analysis is underway, so valuation
+is incomplete.
+
+The joint model uses five specifications by twelve joint cells.
+For case 270, raw expected payout is 0.0453183028291 per YES share, including the
+50–50 no-session fallback. Ten-share EV is +$0.058553 from raw payout versus
++$0.10537 using rounded displayed p=0.05; the immutable report records both.
+Audit 0221 passed ledger, CSV, checkpoint, case-binding and protected financial
+record checks. Saved forecast/reserve values match the final records, but the old
+quote capture predates those files. The root reports saving forecasts before
+reading its own prices; timestamps alone do not attest to that sequence. Five
+pre-quote files omit an explicit `own_prices_not_read` field.
+
+The eight LIVE zero-filled bids and $14.72 pending were verified at 02:01:40 UTC.
+That is a dated order-state snapshot, not proof of current status.

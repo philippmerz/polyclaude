@@ -64,16 +64,44 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was delivered in chat and Telegram. The checkpoint now records **189 valued,
-2 blocked and 327 factual exclusions**; 2,482 remain pending, with case 12
-(Hormuz/oil/Democratic Senate combination) active. Mamdani case98 is saved
-with its explicit group-cover model. The 518 canonical records are indexed
-for continuation. All 3,000 conditions
-have archived public quote captures; missing, stale or omitted books remain
-explicit gaps, never zero prices.
+was delivered in chat and Telegram. The [200-valuation report](research/2026-10-17-deep-review/MILESTONE_200.md) is also saved. The 02:34 UTC checkpoint recorded **200 valuations,
+2 blocked cases and 327 factual exclusions**; 2,471 conditions remain pending
+across 529 canonical records. The active case is 1602, a Hormuz/oil/Democratic
+Senate combination. Its full individual rule and source binding have been read,
+and its primary pre-quote forecast is saved; its own quote analysis is underway and
+the valuation is incomplete. All 3,000 conditions
+have archived, dated public quote captures; missing, stale or omitted books remain
+explicit gaps, and none of those captures is a current execution certificate.
 
-**Eight post-only BUY bids are LIVE and zero-filled**, independently verified
-at 02:01:40 UTC. Pending cash is $14.72; arithmetic uncommitted pUSD is
+Eleven valuations were added since the prior 189-case checkpoint: 12, 26, 64, 80,
+169, 270, 546, 722, 728, 1192 and 1197. The linked
+[Hormuz/oil/Senate method](research/2026-10-17-deep-review/models/hormuz_oil_senate_method_0206.md)
+and [five-specification, twelve-cell joint table](research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json)
+record the shared assumptions. Case 169 has an exact October 23 deadline in its
+literal rule; adjacent titles or variants do not change that cutoff. The 722 YES /
+728 NO floor pair costs $9.98776 for a $10 payout floor, leaving $0.01224 before
+carry and operational costs; the reverse pair is not an arbitrage. Case 270 uses a
+50–50 whole-market fallback and is nontrade; case 546 uses a prior-close fallback.
+For case 270, the 50–50 branch is included in raw expected payout: $0.0453183028291
+per YES share implies +$0.058553 on ten shares, versus +$0.10537 using the rounded
+displayed 5% value. The immutable report preserves both calculations; the difference
+is about $0.046817, not a missing fallback branch. The offline milestone audit found
+that pre-quote forecasts/reserves match their final saved values, while saved quote
+captures predate those files. The reported tool sequence saved forecasts before own
+price reads, but timestamps do not independently attest to price blindness; five
+pre-quote files omit an explicit `own_prices_not_read` field. No entry from these
+eleven valuations was added.
+
+Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
+review of four recent channel images/poster did not establish an authenticated,
+newly captured appearance; the full video was not reviewed. See the individual
+[case reports](research/2026-10-17-deep-review/INDEX.md), dated
+[source follow-up](data/deep_review_20261017/mojtaba_appearance_primary_followup_0212.json)
+and [image receipts](logs/deep_review_20261017/mojtaba_appearance_primary_followup_0213/manifest.json).
+
+**Eight post-only BUY bids were LIVE and zero-filled in the 02:01:40 UTC check.**
+This is a dated order-state snapshot, not proof of current status. Pending cash was
+$14.72; arithmetic uncommitted pUSD was
 $10.276890. The separate fixed-block proof at01:58:50–01:59:01/block95722257
 confirmed all11 reviewed candidates have zero balances in both outcomes. The newest bid is Lionel Messi Global Athletes
 TOP 5 YES, 5 shares at 27¢ ($1.35; DEC-0213). The other seven bids are the four
@@ -163,8 +191,7 @@ marked review-required. Preserve them; do not delete or close them as if they
 were positions. Four canonical current daemons passed the health probe. Disk
 headroom was about 224 MiB, above the 180 MiB research floor and 128 MiB critical
 threshold. The direct quota check succeeded with 20 of 100 used and reset at
-October 24, 20:41 UTC. The last pushed commit is `63181ff` (178 valuations); the focused commit
-is pending. No financial record or unrelated runtime state was changed.
+October 24, 20:41 UTC. The last pushed commit is `4257f65` (through 189 valuations and DEC-0213); the focused 200-valuation commit is pending. No financial record or unrelated runtime state was changed.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

@@ -559,3 +559,24 @@ Current official2026 route404/methodology2025-only revalidated01:54:53–54 (dat
 Monitoring: current broadRSS30 plus existing GoogleBlog20 all normally seen before three keyword promotions01:54:05; postpromotion normal save01:55:22, sameconfig/alivedaemon/>309seconds sinceprior. OriginalYahooNYCFC item shifted out of first30, not manually marked seen; an old-news alert can still recur. No manual poll/state edit/restart/newdaemon/timer. Norris bid deferred for stale books/no financialprior; McGregor current18c bid declined/no order.
 
 Private0600 proof: `data/deep_review_20261017/all_pilots_messi_postentry_0197.json` and `messi_exact_order_0197.json` (owner fields omitted). Execution log`logs/deep_review_20261017/messi_entry_execute_0196.log`. Never replay execution or this writer. This is entry verification, not the due02:00 full held-thesis check.
+
+## October 18, 02:42 UTC — milestone 200 audit
+
+The ledger has 529 records: 200 valued, 2 blocked, 327 factual exclusions and
+2,471 pending. Cases 12, 26, 64, 80, 169, 270, 546, 722, 728, 1192 and 1197
+were valued with no resulting order or financial prior. Active case 1602 has a
+saved primary pre-quote forecast, but its own quote analysis is underway and valuation is
+incomplete.
+
+The joint model is five specifications by twelve joint cells. Case 270's raw
+expected payout is 0.0453183028291 per YES share including its 50–50 no-session
+fallback. Ten-share EV is +$0.058553 from raw payout and +$0.10537 using rounded
+displayed p=0.05; both are preserved in the report. Offline audit 0221 passed
+ledger, CSV, checkpoint, case-binding and protected-record integrity. Forecast
+and reserve snapshots match final values, while the older quote batch predates
+those files. Root reports saving forecasts before reading own prices, but the
+timestamps do not independently prove that sequence; five pre-quote files lack
+an explicit `own_prices_not_read` field.
+
+Eight LIVE zero-filled bids and $14.72 pending were verified at 02:01:40 UTC.
+This is a dated snapshot, not a claim about current order status.

@@ -1,39 +1,49 @@
-## Current pointer — October 18, 02:05 UTC
+## Current pointer — October 18, 02:42 UTC
 
-The canonical review contains **189 valued, 2 blocked, 327 factual exclusions and
-2,482 pending**; 518 records are saved. Case98 TIME/Mamdani is complete at12%
-with its [qualification-route model](models/time_mamdani_method_0203.md).
-Active case12 is the October23Hormuz/oil/Democratic Senate combination; the
-complete four-page attached PDF has been read. Full literal rules and sources,
-not titles or old screens, govern. See [checkpoint](../../notes/deep_review_checkpoint.json).
+The canonical review contains **200 valued, 2 blocked, 327 factual exclusions and
+2,471 pending** across 529 records. The live [index](INDEX.md) and
+[checkpoint](../../notes/deep_review_checkpoint.json) are authoritative. Case
+1602 is active: its full individual rule and source binding have been read, and
+its primary pre-quote forecast is saved. The quote has since been read; analysis
+is underway and no valuation is saved yet. This is a finite review of the frozen
+universe; old screens are not rejection authority. See the
+[milestone-200 audit](MILESTONE_200.md) for checkpoint and provenance details.
 
-Case 147, Sydney Sweeney / Global Actors #1, is
-complete at 15% with a 2–60% range and a 20-point entry reserve; its record is
-[evaluation 0147](evaluations/0147.md). It has no order, prior or reservation.
+Eleven valuations were saved after the previous 189-case checkpoint: 12, 26, 64,
+80, 169, 270, 546, 722, 728, 1192 and 1197. Read the shared
+[Hormuz/oil/Senate method](models/hormuz_oil_senate_method_0206.md) and
+[five-specification, twelve-cell joint table](models/hormuz_oil_senate_joint_0206.json) alongside their
+individual reports. Case 169’s exact literal cutoff is October 23. Cases 270 and
+546 share a title but use different sources for their fallback: case 270’s
+whole-market fallback is 50–50 and nontrade, while case 546 uses a prior close.
+The dated 722 YES / 728 NO floor pair cost $9.98776 for $10 payout, leaving
+$0.01224 before carry and operations; the reverse is not an arbitrage. Case 64 is
+30% YES (5–80% range, 20-point reserve). Root reviewed four recent channel
+images/poster but did not establish authenticated fresh capture time; the full
+video was not reviewed. Its bounded source packet is
+[here](../../data/deep_review_20261017/mojtaba_appearance_primary_followup_0212.json),
+with [image request receipts](../../logs/deep_review_20261017/mojtaba_appearance_primary_followup_0213/manifest.json).
+All archived quote observations are dated and must be refreshed before execution.
 
-For case 147, consult [Google’s 2026 catalyst sources](../../data/deep_review_20261017/google_2026_catalysts_sources.json),
-[competitor coverage](../../data/deep_review_20261017/google_2026_competitor_sources.json),
-[historical category results](../../data/deep_review_20261017/google_historical_category_sources.json),
-[the actor follow-up](../../data/deep_review_20261017/google_actors_primary_followup_0187.json),
-and the shared [Athletes method](models/google_athletes_method_0158.md) and
-[scenarios](models/google_athletes_scenarios_0158.json). These concern a different
-Google category and are not a TIME forecast. For case 98’s editorial and
-historical context, use the [TIME source index](../../data/deep_review_20261017/google_time_primary_fact_index.json),
-[official historical facts](../../data/deep_review_20261017/google_time_historical_facts_0018.json),
-and [primary source index](../../data/deep_review_20261017/google_time_primary_read_index_0130.json).
-Google Year in Search rankings, public polls and TIME’s editorial selection are
-different measures; do not treat one as another’s probability.
+The offline milestone-200 audit passed the 529-record ledger prefix, all 3,000
+CSV identities, checkpoint counts, and the 11 new case JSON/Markdown hashes and
+frozen-rule bindings. The 02:00 protected decisions and priors are unchanged.
+Case 270's raw expected YES payout is 0.0453183028291 per share after its 50–50
+whole-market no-session branch; the ten-share report uses rounded `p_yes=0.05`,
+so its +$0.10537 EV is about $0.046817 above the raw-payout +$0.058553 calculation.
+The report retains both. Forecast/reserve files match their final cases, but their
+timestamps follow the older quote-batch capture times, so the artifacts alone do
+not prove the “own prices unread” ordering; five files lack that explicit field.
+No entry or prior was created from the eleven valuations. The 02:01:40 eight-bid,
+$14.72 pending-cash inventory is a dated snapshot only.
 
-The 02:00 held-source pass is complete. Its 30 public requests found unchanged
-65-object HLE, five held Gamma criteria and 256 Senate rows against the 22:00
-baseline; three direct OpenAI pages returned 403. Read
-[the source record](../../data/checkin_20261018T0200_sources.json) and
-[the root risk review](../../data/checkin_20261018T0200_risk.json) for live portfolio
-and source facts. These periodic sources do not replace current case-specific
-quote gates. The source table and dated entries below reflect earlier queue
-snapshots; their pending labels are superseded by the current checkpoint and
-index. They are historical evidence, not a shortlist or a basis for rejecting
-pending markets.
+Case 147, Sydney Sweeney / Global Actors #1, remains complete at 15% with a
+2–60% range and 20-point entry reserve; see [evaluation 0147](evaluations/0147.md).
+The 02:00 held-source review is complete. Its 30 public requests found unchanged
+65-object HLE, five held Gamma criteria and 256 Senate rows versus 22:00; three
+direct OpenAI pages returned 403. Read the [source record](../../data/checkin_20261018T0200_sources.json)
+and [root risk review](../../data/checkin_20261018T0200_risk.json). Those periodic
+sources do not replace case-specific quote gates or establish global absence.
 
 # Retrieved evidence for unfinished valuations
 
@@ -44,12 +54,12 @@ another. Check the live index before doing work; a fact packet is not completion
 
 | Pending cases | Local factual packet | What still needs primary work |
 |---|---|---|
-| Completed10,52,73,1810,1822; pending compounds12,26,80,169,185 | `data/deep_review_20261017/us_chambers_sources.json` | Full Senate state/seat and cross-chamber model; generic ballot is not control probability. Corrected:33regular13D/20R +OH/FLspecials =35total13D/22R; donotaddOHagain. Dneedsnet4for51undertheordinary100seatRepublicanVPtiecase. Do not multiply dependent national-error legs. |
+| Completed10,12,26,52,73,80,169,722,728,1192,1197,1810,1822; pending compounds185 and1602 | `data/deep_review_20261017/us_chambers_sources.json`; [shared method](models/hormuz_oil_senate_method_0206.md), [joint table](models/hormuz_oil_senate_joint_0206.json) | Full Senate state/seat and cross-chamber model; generic ballot is not control probability. Corrected:33regular13D/20R +OH/FLspecials =35total13D/22R; donotaddOHagain. Dneedsnet4for51undertheordinary100seatRepublicanVPtiecase. Do not multiply dependent national-error legs. |
 | Completed30,58,86,114,140,142,170,198,219,233; revised2 | `data/deep_review_20261017/spotify_annual_sources.json`, `spotify_early_history_addendum.json`, `spotify_release_chronology_sources.json` | Ten children and dated MNI37% revision are complete. Read shared Spotify joint method/audit: January1 week straddles2025, absent rows are unknown, catalog dates can postdate original charts, and alternate recording totals cannot be assumed additive. No official2026 cutoff or aggregate ranking recovered; no order. |
 | Completed222,812,1262,1672,1983 | `data/deep_review_20261017/issuer_events_followup_sources.json`, `earnings_metric_history_sources.json` | All five ISRG procedure-growth brackets are complete. Da Vinci differs from Ion/combined; Oct20call20:30Z before22Z metadata. Whole-percent reported precision changes boundary mass. Conference addendum is in CURRENT_REVISIONS; no ISRG order. |
 | 56,63,77,98,147,203,210,224 | `data/deep_review_20261017/google_time_sources.json`, `google_2026_catalysts_sources.json` | Full rules and official methodology/catalysts retrieved. Google ranks growth, not total searches.2025cutoff is not confirmed2026policy; public normalized-series probes failed. TIME is editorial; its public poll does not select the winner. Primary must retain these gaps. |
 | Completed28,199,175,158 | same issuer packet plus `ai_ipo_extension_sources.json` | ConfidentialS1 is not completedIPO. Current issuer/SEC/Nasdaq checks do not prove listing absence; OpenAIdirect403. HighestIPOmarketcap needs all eligible issuers and metric, not last private mark. |
-| 64 | `data/deep_review_20261017/mojtaba_visual_followup_sources.json` | New post-creation capture ANDrelease required; undatedAugustfootage not proven new, ABCpromiseoffuturefootage not independentreleasedproof. |
+| Completed64 | `data/deep_review_20261017/mojtaba_visual_followup_sources.json`, `data/deep_review_20261017/mojtaba_appearance_primary_followup_0212.json`; image receipts in `logs/deep_review_20261017/mojtaba_appearance_primary_followup_0213/manifest.json` | 30% YES, 5–80% range, 20-point reserve. Current images/poster did not establish authenticated fresh capture; full video was not reviewed. |
 | 154,168,196,201 | existing `marketcap_sources.json`, original four completed market-cap reports/model | Extend only after exact current metric/company universe/share counts, calendar/end-time and specialhorizons read. Do not price Tesla/Aramco from title alone. |
 
 Additional pending conditions remain in the full CSV; this table is not a

@@ -1,0 +1,176 @@
+{
+  "review_index": 728,
+  "condition_id": "0xb2afaf375208490fbfbb21aa5f1a9fcd35838b2ff747fde0ffc26099f644b6f3",
+  "criteria_sha256": "d448b9c13f7db50b5b12251780bec66f6b9e79fb3d6df0bb78e2adf8930100bb",
+  "status": "valued",
+  "literal_analysis": "IndividualRbucket/full4pageURG hashbound; RAND(notA2ORO80Nov2), allacceptance/CLLroll-candle-fallback/SenateJan4rulesread; YES728impliesYES722, notconverse.",
+  "evidence": [
+    {
+      "url": "https://polymarket-upload.s3.us-east-2.amazonaws.com/urg.pdf",
+      "observed_utc": "2026-10-17T20:27:00Z",
+      "finding": "Primaryfull4pageindividualread; exactPDF/fulltexthashesverified; PDF12/26identicalafterdate/whitespacenormalization. Currentattachedbytesnotrevalidated."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "PrimaryreadretainedoriginalUSMOU/reopeningassertion; Iranian signatures/paragraph5remainattributedIRNAextract/currentopensfailed; Juneinterpretationexplicit."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/3701662",
+      "observed_utc": "2026-10-17T18:39:13Z",
+      "finding": "PostJune-createdSeptemberdeadlinevenuecontractresolvedNO; materiallymatchingclausesprecedent, notonchainfinality/currentadjudicationguarantee."
+    },
+    {
+      "url": "https://mofa.gov.qa/en/qatar/latest-articles/latest-news/details/2026/10/16/qatar-urges-diplomacy-and-respect-for-international-law-to-secure-lasting-mideast-peace",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "RootreadoriginalOct16body: continuedmediation/unconditionalreopeningrequest, noacceptanceornexttalkdate; boundedsource notprivateprogressabsence."
+    },
+    {
+      "url": "https://app.pyth.com/explore?search=CLL",
+      "observed_utc": "2026-10-17T22:57:40.910391Z",
+      "finding": "CLLZ6catalog99.0475untimestamped/repeatedsparkline, notverifiedlatestclose/volatility; ICEexpirydefinesDec26mapping."
+    },
+    {
+      "url": "https://insideradvantage.com/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "CurrentprimarySenateIArevision0059usesoriginalpollreleases/all35contests andsharednationalerror; D53/R46/Other1uncalibrated, notquotederived."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.44,
+    "low": 0.14,
+    "high": 0.75,
+    "method": "PrimaryfullURG-Rbucket plus joint0206 projection RAND(notA2ORO80), not independentSenate/commoditymarginals.",
+    "reasoning": "Rcontrol46minusallagreementbyNov2/lowoil/Rstates; A2supersetA23soYES728impliesYES722, fullPDFdate-onlyparityverified. CurrentrareOther1andallsourceuncertaintyretained. Selected15ppbeforeownprice.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0721_0840.json.gz",
+    "quote_observed_utc": "2026-10-17T21:11:42.557+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.44,
+        "best_bid": 0.343,
+        "best_ask": 0.344,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 6.241,
+        "received_utc": "2026-10-17T21:11:42.557+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.344,
+            "fee_usd": 0.09026560000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.5302699999999994,
+        "fee_usd": 0.09027,
+        "break_even_probability_before_carry": 0.3530269999999999,
+        "break_even_probability_with_idealized_carry": 0.35390133220886966,
+        "central_expected_profit_usd": 0.869730000000001,
+        "default_10pp_stressed_profit_usd": -0.13026999999999989,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.33999999999999997,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.33985
+      },
+      "No": {
+        "probability": 0.56,
+        "best_bid": 0.656,
+        "best_ask": 0.657,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 6.241,
+        "received_utc": "2026-10-17T21:11:42.557+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.657,
+            "fee_usd": 0.0901404
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.660150000000001,
+        "fee_usd": 0.09015,
+        "break_even_probability_before_carry": 0.666015,
+        "break_even_probability_with_idealized_carry": 0.6676645009336124,
+        "central_expected_profit_usd": -1.0601500000000001,
+        "default_10pp_stressed_profit_usd": -2.06015,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4600000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.46973
+      }
+    }
+  },
+  "verdict": "Noentry: YESpositivecentralfails15ppselectedreserve/ordinarymaker; NOnegativecentral. Datedcorrectfloorpairmarginbelowcarry/operations, reverseisnotarb.",
+  "reopen_condition": "Originaldiplomatic/CLL/Senatesourcedelta,currentYES<=26c/NO<=38c ormateriallybetterprotectedpair afterallcurrentgates.",
+  "current_description_sha256": "521e73c84b4a95116ae76bd7945a46bb163d862e2c4aada858b64fd8864fecc7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "75496880713570558226487851363025041503257426636783085116492267360525381703782",
+    "31823905471325950504452083889528200960173890796050580293408587201411767920980"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0008",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0721_0840/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0721_0840/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0728_primary_before_quote.json",
+    "raw_model_p_yes": 0.4383794497,
+    "scenarios": {
+      "central": 0.4383794497,
+      "peace_repricing_R_favorable": 0.474472075,
+      "no_deal_D_wave": 0.23704952150000005,
+      "June_counted_and_cheap_oil": 0.17559999999999998,
+      "price_gapped_lower_without_new_deal": 0.42064117260625
+    },
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_stress_yes": 0.29,
+    "selected_stress_no": 0.41,
+    "selected_stressed_yes_taker_profit_usd": -0.63027,
+    "selected_stressed_no_taker_profit_usd": -2.56015,
+    "illustrative_YES_maker_trigger": 0.26,
+    "illustrative_NO_maker_trigger": 0.38,
+    "dated_correct_floor_pair_cost10": 9.98776,
+    "dated_correct_floor_pair_margin10": 0.01224,
+    "linkedPDF_current_bytes_not_revalidated": true,
+    "reverse_pair_is_not_floor_protected": true
+  },
+  "evaluated_utc": "2026-10-18T02:30:15.141759+00:00",
+  "question": "Will there be no Hormuz agreement or oil at least $80, and the Republicans win the Senate?",
+  "market_id": "5612094",
+  "valuation_author": "primary_operator",
+  "original_index": 728,
+  "report_sha256": "33f0b276c0b0252f665df72f2074b36fd5a873ba746d61f005fff13e1acb374e"
+}

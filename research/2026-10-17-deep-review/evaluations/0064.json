@@ -1,0 +1,230 @@
+{
+  "review_index": 64,
+  "condition_id": "0xfed2dd1e83691ca08b8bc08d2bed09cb19003730f2be47da6a467ee37df96fbb",
+  "criteria_sha256": "b6f13d6943cd3c78755f89de09844aae4087772e60b5b89417ca8427a83b9fc3",
+  "status": "valued",
+  "literal_analysis": "Fullauthenticphoto/video BOTHtakenandreleased betweencreationandDec31ET; digitallivecounts; archive/reused/alteredAI/staged/posthumousexclusionsread. Creation17:55notoldstart17:57; credibleconsensusauthenticity.",
+  "evidence": [
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iran-releases-rare-video-of-mojtaba-khamenei-after-reports-of-deteriorating-health/4022467",
+      "observed_utc": "2026-10-18T02:26:42.896665+00:00",
+      "finding": "RootreadactualAug9article: releasedMehrclipundatedrecording/location, notauthenticatedpostcreationcapture."
+    },
+    {
+      "url": "https://www.abc.net.au/news/2026-08-30/absent-iran-supreme-leader-mojtaba-khamenei-dead-or-alive/107023950",
+      "observed_utc": "2026-10-18T02:26:42.896665+00:00",
+      "finding": "Rootreadfullbody: FarsAug24archivalandMehrundateddistinct; attributedrole/healthclaimsnotactualvisualconfirmation."
+    },
+    {
+      "url": "https://www.internazionale.it/ultime-notizie-reuters/2026/08/28/iran-s-disfigured-supreme-leader-remains-invisible-six-months-into-an-existential-war",
+      "observed_utc": "2026-10-18T02:26:42.896665+00:00",
+      "finding": "RootreadEnglishReuterswire: officials/insiderclaimsaboutrole/health/meetingsdatedAug28, notcurrentindependenthealthproof; picturecaptionarchive."
+    },
+    {
+      "url": "https://t.me/s/MKhamenei_en",
+      "observed_utc": "2026-10-18T02:23:12.470636Z",
+      "finding": "Boundedcurrentpublicchanneltextposts/selfattribution; rootviewedthreeOct17wrestlingmessagecardsandOct16poster pluspriorbluegraphic. Fullvideo/currentavatarcapturedatenotverified; noabsencecertificate."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets?id=2771185",
+      "observed_utc": "2026-10-17T20:11:27.430Z",
+      "finding": "ExactdatedsnapshotcreatedAtJuly2 17:55:14.262872; oldstartDate17:57:25.422diffpreserved. Fullcriteria/status/tokenidentityunchanged."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.3,
+    "low": 0.05,
+    "high": 0.8,
+    "method": "Primaryhypotheticalhidden-state/firstqualifyingvisualrelease model, pastclipauthentication and75dayfuturehorizon. Notmedical/officialintelligence estimate orcalibratedsurvival model.",
+    "reasoning": "Digitalappearancecounts, soauthenticnewvideo/photo canbe releasedwithoutphysicalpublicrally. Monthswithoutverifiedvisualandundated/archiveAIclips oppose certainty; alive/meeting/recoveryclaims areattributedandstale, notproof. Institutionallegitimacy/reassuranceandpotentialsecurityeasingallowpositivefutureprobability. Existingpastqualifiernotestablished butlaterauthenticationrisk retained. NewOct17assetsarewrestlingmessagecards, Oct16postervisiblewomen—notwholevideoinspection. NoauthenticatedpostJuly2Mojtabavisualestablished inboundedset; notnoneverywhere.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.3,
+        "best_bid": 0.17,
+        "best_ask": 0.18,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.147,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.18,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.7999999999999998,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.18,
+        "break_even_probability_with_idealized_carry": 0.18111657360395175,
+        "central_expected_profit_usd": 1.2000000000000002,
+        "default_10pp_stressed_profit_usd": 0.19999999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.19999999999999998,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.7000000000000002
+      },
+      "No": {
+        "probability": 0.7,
+        "best_bid": 0.82,
+        "best_ask": 0.83,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.147,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.83,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.299999999999999,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.8299999999999998,
+        "break_even_probability_with_idealized_carry": 0.8351486449515553,
+        "central_expected_profit_usd": -1.299999999999999,
+        "default_10pp_stressed_profit_usd": -2.299999999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.6,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.2
+      }
+    }
+  },
+  "verdict": "Noentry: YESpositivecentralbutfails20ppselectedreserve atasks/ordinarymaker, NOnegativecentral. RetainYES7c/15shareexplicit$1.05illustration only.",
+  "reopen_condition": "Authenticatedfreshlivingin-windowvisual/captured-dateclarification/originalcurrentrolehealthfactsormaterialcurrentpricechange withfreshallgates.",
+  "current_description_sha256": "944a8f58aa3115af4518c4bd134faf89781dfa0b864830062fa5e7fb62565a0b",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "106352973084247809978722887479381361784509565887960822996102387300658431649079",
+    "78735213477140259179719985437634225008013438052010449207550476177307188383355"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0087",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0087.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0087.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0064_primary_before_quote.json",
+    "scenarios": {
+      "central": {
+        "prior_existing_clip_later_authenticates": 0.02,
+        "living_capable_weight_if_not_prior": 0.65,
+        "future_qualifying_release_given_capable": 0.4,
+        "limited_weight_if_not_prior": 0.25,
+        "future_qualifying_release_given_limited": 0.1,
+        "no_qualifiable_living_capture_weight": 0.1,
+        "future_release_in_last_regime": 0,
+        "p_qualifying_YES": 0.29930000000000007
+      },
+      "strong_authentication_release": {
+        "prior_existing_clip_later_authenticates": 0.02,
+        "living_capable_weight_if_not_prior": 0.8,
+        "future_qualifying_release_given_capable": 0.65,
+        "limited_weight_if_not_prior": 0.15,
+        "future_qualifying_release_given_limited": 0.2,
+        "no_qualifiable_living_capture_weight": 0.05,
+        "future_release_in_last_regime": 0,
+        "p_qualifying_YES": 0.559
+      },
+      "persistent_secrecy": {
+        "prior_existing_clip_later_authenticates": 0.02,
+        "living_capable_weight_if_not_prior": 0.65,
+        "future_qualifying_release_given_capable": 0.15,
+        "limited_weight_if_not_prior": 0.25,
+        "future_qualifying_release_given_limited": 0.02,
+        "no_qualifiable_living_capture_weight": 0.1,
+        "future_release_in_last_regime": 0,
+        "p_qualifying_YES": 0.12045000000000002
+      },
+      "severe_constraints": {
+        "prior_existing_clip_later_authenticates": 0.02,
+        "living_capable_weight_if_not_prior": 0.35,
+        "future_qualifying_release_given_capable": 0.2,
+        "limited_weight_if_not_prior": 0.35,
+        "future_qualifying_release_given_limited": 0.05,
+        "no_qualifiable_living_capture_weight": 0.3,
+        "future_release_in_last_regime": 0,
+        "p_qualifying_YES": 0.10575
+      }
+    },
+    "primary_visual_assets": {
+      "post778.jpg": {
+        "bytes": 101526,
+        "sha256": "797d9b5053681d98f09292200864a71178e06451a67b5a5677b7b4d1a401f86a",
+        "root_viewed": true
+      },
+      "post779.jpg": {
+        "bytes": 69520,
+        "sha256": "83a860b38808b843df5b2a504f964c78da82956fe09ff957d039f256657672a5",
+        "root_viewed": true
+      },
+      "post780.jpg": {
+        "bytes": 82037,
+        "sha256": "c2f1f0a28cf39c870889621a5a44754fbe096d39f9890d72a08a33363c0c1590",
+        "root_viewed": true
+      },
+      "post773_video_poster.jpg": {
+        "bytes": 11138,
+        "sha256": "879faad7fb2de47e2d71aea9f72cc4cc96920d5393debfa3ae385a13d5510c51",
+        "root_viewed": true
+      }
+    },
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0.1,
+    "selected_stress_no": 0.5,
+    "selected_stressed_yes_taker_profit_usd": -0.8,
+    "selected_stressed_no_taker_profit_usd": -3.3,
+    "actual_creation_not_earlier_startDate_used": true,
+    "full35s_video_not_viewed": true,
+    "independent_compact_descriptor_gap": true,
+    "illustrative_YES_maker_trigger": 0.07,
+    "illustrative_YES_quantity": 15,
+    "illustrative_NO_maker_trigger": 0.47,
+    "hidden_state_weights_not_medical_facts": true
+  },
+  "evaluated_utc": "2026-10-18T02:27:43.621738+00:00",
+  "question": "Mojtaba Khamenei seen in public by December 31?",
+  "market_id": "2771185",
+  "valuation_author": "primary_operator",
+  "original_index": 64,
+  "report_sha256": "9bb8b5debcb4086c9864db2c0f0727842b68aa791c1a1d5e1df6700ff8479549"
+}
