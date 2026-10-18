@@ -1,0 +1,177 @@
+{
+  "review_index": 137,
+  "condition_id": "0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b",
+  "criteria_sha256": "1cff9cdfb89b719e76174822a50b1920c895e0337ce083d383ea4203b3bd5aa0",
+  "status": "valued",
+  "literal_analysis": "Full October21 decision-change rule read for this exact named outcome; no decision by end next scheduled meeting→No change; publication/effective dates differ.",
+  "evidence": [
+    {
+      "url": "https://www.boi.org.il/en/economic-roles/monetary-policy/interest-rate-announcement-dates-2026/",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "BOI listed Oct 21, 2026 as the interest-rate publication date; its table lists effective date Oct 25, liquidity-period start Oct 22, and Research Department forecast and press briefing on Oct 21.; BOI says notices are published at 16:00 on the listed dates and says dates can change with announcement.; Following listed decision is Nov 23, 2026.; BOI publication schedule separately lists Oct 20 expected-inflation update and September activity index; Oct 21 macroeconomic forecast, Governor remarks, and interest-rate publication."
+    },
+    {
+      "url": "https://www.boi.org.il/en/communication-and-publications/press-releases/01-9-26-en",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "Committee lowered the policy rate by 0.25 percentage point to 3.25%.; At that decision, July CPI had risen 0.3% m/m and 12-month CPI was 1.5%.; The Committee described geopolitical uncertainty as high; over its review period the risk premium was around pre-2023-10-07 levels and the exchange rate was virtually unchanged.; Since the prior decision, shekel appreciated 0.6% vs USD, depreciated 1.0% vs EUR, and nominal effective exchange rate depreciated 0.1%.; Q2 GDP grew 15.4% annualized vs Q1 and was 6.2% above Q4 2025; excluding Israeli firms’ foreign production, Q2 was 3.8% above Q4 2025 on an annualized basis.; The BOI said policy path would depend on inflation, activity, geopolitical uncertainty, and fiscal developments."
+    },
+    {
+      "url": "https://www.cbs.gov.il/he/mediarelease/Madad/DocLib/2026/326/10_26_326b.pdf",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "September CPI decreased 0.5% m/m; 12-month inflation was +1.6% (Sep 2026 vs Sep 2025).; CPI level was 105.3, base average 2024=100.; June–September trend annual inflation was 1.4%."
+    },
+    {
+      "url": "https://www.boi.org.il/en/communication-and-publications/press-releases/the-monthly-index-of-economic-activity-increased-by-04-percent-in-augus/",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "August monthly activity index +0.4%, representing average monthly estimated GDP-growth over June–August; BOI stated long-run trend about 0.3%.; BOI page says July estimate revised slightly down and June slightly up.; September index is scheduled for 2026-10-20."
+    },
+    {
+      "url": "https://www.boi.org.il/en/communication-and-publications/press-releases/22-9-26-en/",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "BOI current-data row: 1.3% first-year market breakeven, 2.0% average 12-month forecasts from commercial banks/consultancies, 1.8% internal-bank expectations, and 1.8% inflation-contract expectations.; BOI cautions market-derived expectations include inflation-risk premium and tax/liquidity/depth biases.; Next expected-inflation update listed for 2026-10-20."
+    },
+    {
+      "url": "https://boi.org.il/en/communication-and-publications/press-releases/07-10b/",
+      "observed_utc": "2026-10-18T12:02–12:06UTC; exact receipts in source packet",
+      "finding": "End-September reserves $236,998 million, down $4,643 million from August, 34.2% of GDP; BOI attributed about $4,411 million to revaluation and $272 million to government FX activity.; BOI homepage search result displayed representative USD/ILS 3.0890 current as of 2026-10-16."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.41,
+    "low": 0.15,
+    "high": 0.75,
+    "method": "Primary dependent scenario forecast: cut56/hold41/hike3; before own prices;15pp entry reserve",
+    "reasoning": "September headline CPI -0.5%m/m and +1.6%y/y, trend+1.4; seasonally adjusted CPI unchanged, rent+0.4%m/m: headline drop is not accelerating underlying deflation. September1 BOI cut to3.25 with July1.5% inflation, tight labor/wages5.4 and recovering activity, still-high geopolitical/fiscal uncertainty. August activity+0.4 versus longtrend0.3. September22 forward-inflation readings near target, not meeting odds. October20 activity/expectations release still ahead. Fresh October energy/FX/risk-premium histories absent; September risk observations are not current proof. Subjective70/25/5 response branches plus1% fallback; details in tracked shared model.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 37,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.41,
+        "best_bid": 0.91,
+        "best_ask": 0.927,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.678,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.927,
+            "fee_usd": 0.033835499999999984
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.30384,
+        "fee_usd": 0.03384,
+        "break_even_probability_before_carry": 0.9303839999999999,
+        "break_even_probability_with_idealized_carry": 0.9332851908393387,
+        "central_expected_profit_usd": -5.20384,
+        "default_10pp_stressed_profit_usd": -6.20384,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.30999999999999994,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.05905
+      },
+      "No": {
+        "probability": 0.5900000000000001,
+        "best_bid": 0.073,
+        "best_ask": 0.09,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.678,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.09,
+            "fee_usd": 0.04095000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.9409599999999999,
+        "fee_usd": 0.04096,
+        "break_even_probability_before_carry": 0.09409599999999999,
+        "break_even_probability_with_idealized_carry": 0.09438941696892725,
+        "central_expected_profit_usd": 4.959040000000001,
+        "default_10pp_stressed_profit_usd": 3.9590400000000012,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4900000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.69616
+      }
+    }
+  },
+  "verdict": "priority follow-up; dated central and15pp-selected edge on137NO/607YES needs independent factual and current execution review",
+  "reopen_condition": "Fresh BOI guidance/October20 data, material FX/energy/geopolitical change, source/date mismatch, or current prices and all gates supporting an entry.",
+  "current_description_sha256": "37021797ec659dbf5c20fe8bae23424f0e27473a09981e6eedb8eff1f1f5ec9e",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "37138446756021377464512602416366707399216545340491188303671550631209194752283",
+    "114660857161931670198834046480178945397435960531104080936469579382607930952728"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0019",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "shared_primary_model": "research/2026-10-17-deep-review/models/boi_oct21_primary_1240.json",
+    "source_packets": [
+      "data/deep_review_20261017/boi_oct21_decision_sources_1210.json",
+      "data/deep_review_20261017/boi_cbs_pdf_read_1235.json"
+    ],
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_entry_probabilities": {
+      "Yes": 0.26,
+      "No": 0.44000000000000006
+    },
+    "research_trigger_prices": {
+      "Yes": 0.24,
+      "No": 0.42
+    },
+    "priority_followup": true,
+    "own_probability_model_preceded_family_quotes": true,
+    "dependent_family_indices": [
+      137,
+      607,
+      931
+    ]
+  },
+  "evaluated_utc": "2026-10-18T12:40:10.300493+00:00",
+  "question": "Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the October decision?",
+  "market_id": "4082027",
+  "valuation_author": "primary_operator",
+  "original_index": 137,
+  "report_sha256": "90833b3263de2a3ee3a7489d40ef506e8b85afa0ab29f32e1a8598b9c009a88e"
+}

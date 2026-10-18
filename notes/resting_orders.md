@@ -1,5 +1,33 @@
 # Standing resting orders (GTC post-only makers)
 
+## October 18 13:03 UTC — Bank of Israel bid verified; nine BUYs remain
+
+**New LIVE BUY: 15 NO at 7¢, 1.05 pUSD full-fill risk**, DEC-0215. NO means a
+cut or hike at the October21 Bank of Israel decision. Exact order:
+`0x7d652a83630f8497951d6ec19e96e6c84d845b704e9b17cba0286c33ffc15bbd`.
+Market4082027/CID`0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b`;
+NOasset`114660857161931670198834046480178945397435960531104080936469579382607930952728`.
+Primary NO32%; actual 20pp reserve selects 12%, not a probability floor. The
+adverse 6% change scenario reverses the trade; all $1.05 can be lost. No add,
+automatic repricing, repost or hedge credit. [Entry and source record](../research/2026-10-17-deep-review/boi_entry_1255.md).
+
+**Pull October19 22:00 UTC**, before unknown-time October20 activity/expectations
+releases, or earlier on load-bearing source, policy, FX, energy, CPI or forecast
+uncertainty. Review each existing tick; cancel first. Official decision October21
+13:00 UTC; missing announcement through the following November23 meeting's end
+defaults to no change. The existing watcher has the new bounded RSS feed and Tier1
+terms; normal post-promotion saves at12:56:11 and13:01:21 are verified. Indexing,
+caching, caps, cooldowns and unannounced/private information remain gaps.
+
+Independent13:03:57 authenticated full inventory and separate exact order agree:
+LIVE15original/0matched/15remaining. **Nine BUYs, zero SELLs, all LIVE, total17.47**;
+nine linked reservations, no reconciliation block. Polygon95748861 timestamp
+13:03:59: both137CTFbalances0, pUSD23.446890, allowance/approval sufficient,
+cash after all bids5.976890. [Verification](../data/deep_review_20261017/boi137_postsubmit_1305.json).
+This is an unfilled commitment, not a holding or profit. Other bid instructions
+remain: **OpenRouter112 pull TODAY22:00 UTC**; Sedgwick Oct19 10:00 UTC; Idaho
+Oct19 22:00 UTC; Messi Nov1 22:00 UTC. Earlier financial snapshots below are dated.
+
 ## October 18 11:50 UTC — OpenRouter bid verified; eight BUYs remain
 
 **New LIVE BUY:5NO at65c,3.25pUSD full-fill risk**, order

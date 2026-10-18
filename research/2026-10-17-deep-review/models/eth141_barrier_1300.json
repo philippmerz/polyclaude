@@ -1,0 +1,80 @@
+{
+  "created_utc": "2026-10-18T12:49:05.983206+00:00",
+  "before_own_case_quotes": true,
+  "review_index": 141,
+  "source_packet": "data/deep_review_20261017/crypto141_155_162_sources_1230.json",
+  "source_sha256": "a4547edd01f3ac07ca19a046bee6c4bd393bd41d6c3711ffbb910b505ea80485",
+  "source_current_partial_candle_close_used_as_last_trade_not_final_daily_close": 2417.15,
+  "underlying_observed_utc": "2026-10-18T12:20:27.309981+00:00",
+  "days_until_last_qualifying_minute": 74.69411678262732,
+  "historical_coverage": "SHAverified327contiguouscompleteUTCdailybarsNov25\u2013Oct17 plus300contiguousexactfirstpartial1mNov24 19\u201324UTC; currentOct18partialdailyseparate. No full-minute archive claim for all327days.",
+  "historical_min_daily_low": 1505.68,
+  "historical_firstpartial_minute_low": 2947.77,
+  "daily_low_minute_low_assumption": "Same source/aggregation: dailyLow bounds all included minuteLows. Present source vintage can be corrected; not every historical1m downloaded.",
+  "realized_volatility_diagnostics": [
+    {
+      "daily_returns": 20,
+      "daily_log_mean": -0.005619808066138761,
+      "daily_log_sd": 0.018956689568156573,
+      "annualized_sd": 0.36216704567776664,
+      "lowest_daily_log_return": -0.04680621325780432
+    },
+    {
+      "daily_returns": 60,
+      "daily_log_mean": 0.003757304677396248,
+      "daily_log_sd": 0.03167727098423756,
+      "annualized_sd": 0.6051934123965815,
+      "lowest_daily_log_return": -0.047827495417000716
+    },
+    {
+      "daily_returns": 120,
+      "daily_log_mean": 0.0028287834388746086,
+      "daily_log_sd": 0.026559302387083983,
+      "annualized_sd": 0.50741475963981,
+      "lowest_daily_log_return": -0.047827495417000716
+    },
+    {
+      "daily_returns": 326,
+      "daily_log_mean": -0.000639049021963155,
+      "daily_log_sd": 0.03162415265553736,
+      "annualized_sd": 0.6041785881516878,
+      "lowest_daily_log_return": -0.16207598779923496
+    }
+  ],
+  "primary_selected_branches": [
+    {
+      "name": "ordinary diffusion",
+      "weight": 0.7,
+      "annual_log_drift": -0.1,
+      "annual_sigma": 0.65,
+      "hit_probability": 0.00021986920483067643
+    },
+    {
+      "name": "liquidation/extended weak regime diffusion",
+      "weight": 0.25,
+      "annual_log_drift": -0.8,
+      "annual_sigma": 1.25,
+      "hit_probability": 0.08629360960753726
+    },
+    {
+      "name": "systemic/venue flash-tail",
+      "weight": 0.05,
+      "conditional_qualifying_minute_low_probability": 0.6,
+      "hit_probability": 0.6
+    }
+  ],
+  "raw_yes_probability": 0.051727310845265786,
+  "adopted_yes_probability": 0.052,
+  "primary_marginal_sensitivity_range": [
+    0.005,
+    0.25
+  ],
+  "selected_entry_probabilities": {
+    "Yes": 0,
+    "No": 0.75
+  },
+  "formula": "a=ln(S/800), Tyears; P(minX<=0)=Phi((-a-mu*T)/(sigma*sqrt(T)))+exp(-2*mu*a/sigma^2)*Phi((-a+mu*T)/(sigma*sqrt(T))). Continuous Brownian passage approximates any-trade-minuteLow; jumps are separate subjective branch.",
+  "uncalibrated_parameters": "Regime weights/drifts/vol inflation and5%*60%flash/systemic tail are primary assumptions, not estimated by sample. No implied vol/options/skew or venue insurance guarantee.",
+  "catalyst": "Official EF blogOct16: Hoodi testnetOct26 17:42:48UTC; mainnetdateTBD. Do not infer testnet=mainnetorpricecollapse. FedOct27\u201328/Dec8\u20139, USdata/elections, leverage liquidation, venue/wick/sourcecorrection can alter path.",
+  "scope": "Resolution source Binance spot ETHUSDT; no CEX trade proposed, no ETH token investment recommendation; PM conditioned payoff only."
+}

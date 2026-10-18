@@ -1479,5 +1479,23 @@
   "management": "Any bid: reverify every existing tick and earlier relevant news; cancel FIRST on uncertain source/rule/measurement/method/pricing/routing/release/forecast facts. Pull by2026-10-18 22:00UTC existing tick, beforeOct19 weekly display; earlier publication or known catalyst. No automatic add/repost. New weekly Totals require revaluation; forecast Weekly Pace is not a realized total or data cutoff. Worst case full3.25cashloss on the actual five-share65c commitment; no independence/hedge credit.",
   "monitoring": "ExistingPID449/currentcode,35feeds. Googlefeed11:26:09/officialRSS11:28:47 warmedagainstcapturedfirst30IDs/titles; Tier1OpenRouter promoted11:38:13, postpromotionstate11:43:34(>300s) consistentwithnormalreload. Fullsource/data/book rechecks remainmanualexistingticks. 30/feedcap,sourcecaching/cooldowns/unannouncedrouting/privatechanges remain gaps; noperfeedHTTPsuccess telemetry. No newdaemon/timer/manualpoll/stateedit.",
   "latest_catalyst": "PullOct18 22UTCbeforeOct19firstweeklydisplay; ElevenLabsdiscountendsOct19 15UTC; firsttargetweekOct26. FinalNov23display/Nov27ETfallback. Currentfuturelaunchdatesnotestablishedbyboundedofficialnews; unannouncedchanges remain."
-}
+},
+ "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
+  "p_yes": 0.68,
+  "p_no": 0.32,
+  "cluster": "israel-monetary-oct21",
+  "rho_within": 0.75,
+  "cluster_frac": 0.1,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "4082027",
+  "condition_id": "0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b",
+  "criteria_sha256": "1cff9cdfb89b719e76174822a50b1920c895e0337ce083d383ea4203b3bd5aa0",
+  "rationale": "Primary dependentcut29/hold68/hike3 source-evidencerevision; one policyforecast. NOchange includescutorhike. NewCiti attributedreport supports cautious/neutral-regimethesis; not officialguidanceorindependentsurvey. Actualentryreserve20pp\u2192NO12%, not ledger15ppcomparison. RangeYEShold35\u201397%,allpremiumcanlose. rho.75/10%floor sizingassumptions, nohedgecredit.",
+  "current_assessment": "LIVE unfilled post-only BUY15NO@7c/1.05pUSD, order0x7d652a83630f8497951d6ec19e96e6c84d845b704e9b17cba0286c33ffc15bbd, DEC0215. Independent13:03:57UTC full inventory/direct detail agree15original/0matched/15remaining. Polygon95748861 at13:03:59 both137CTF0; pUSD23.446890, nine BUY commitments17.47, cash after all bids5.976890; nine reservations/no reconciliation block. Commitment not holding/profit. Actual risk1.05, noadd/repost; never replay writer.",
+  "research_report": "research/2026-10-17-deep-review/models/boi_oct21_adversarial_revision_1245.md",
+  "latest_source_packet": "data/deep_review_20261017/boi137_entry_preparation_1255.json",
+  "management": "CancelFIRSTonuncertainloadbearingsource/decision/FX/energy/CPI/forecast/role/policyfacts. Pull anyacceptedbidat existingOct19 22UTCcheck beforeunknownOct20activity/expectationsrelease; earliermaterialnews. Noadd/repost.",
+  "monitoring": "Existing PID449/code, 36 feeds. Corrected Google14day feed nine IDs/titles normally seen12:50:59 after config12:47:46. Tier1 promoted12:53:40; ordinary post-promotion saves12:56:11 and13:01:21, all9 stillseen, no manualpoll/stateedit/restart/newtimer. No per-feed HTTP-success telemetry; 30/feed cap, caching/cooldowns, unannounced/private changes and nonexhaustive coverage remain."
+ }
 }

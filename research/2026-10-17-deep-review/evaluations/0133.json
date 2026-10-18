@@ -1,0 +1,172 @@
+{
+  "review_index": 133,
+  "condition_id": "0xe9d59a33a4d94c334684fb785cacf7c200e760f2003ef76289bfb244387a5940",
+  "criteria_sha256": "3c58a8e8f8781c83f39f82b5fd43b1cdf9e0ef50df90ab6a25d6b95e794a17f4",
+  "status": "valued",
+  "literal_analysis": "Any encounter with both Trump and Lai physically present and interacting, Jan1–Dec31ET; consensus credible reporting. No requirement for formal summit, recognition or public advanceannouncement. A remote call does not qualify.",
+  "evidence": [
+    {
+      "url": "https://english.president.gov.tw/News/7222",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "No qualifying Trump–Lai in-person interaction was found in the bounded source pass. Taiwan’s official Presidential Office releases inspected list Lai meeting a US Senate delegation led by Michael Bennet on Oct. 8 and a Canadian parliamentary delegation on Oct. 14; neither includes Trump. The releases demonstrate Lai’s reported public engagements on those dates, not a complete itinerary. Source date/window: 2026-10-18. primary official pages; Oct14 full body captured in receipt; Oct8 read via official-site search result/open"
+    },
+    {
+      "url": "https://apnews.com/article/14dc4cfc46d51b98dbe3cbca51ebb5d1",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "AP reported Trump said “I’ll always talk to him” when asked about a possible call with Lai, and described a phone call as still in play. The article reports no scheduled call and concerns remote dialogue, which does not satisfy the frozen in-person requirement. Direct GET returned 403; web-rendered article read. Source date/window: 2026-06-05. credible secondary reporting, browser-rendered; direct GET 403; source is historical and no later call confirmation found in bounded search"
+    },
+    {
+      "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "White House fact sheet about Trump’s September state visit by Xi says the United States and China set up a Super Intelligence dialogue and that its next exchange will occur by November 2026. This refers to US–China engagement; it does not announce a Lai meeting. The visit itself is concluded. Source date/window: 2026-09-21 / 2026-09-23 to 2026-09-25. primary White House page; captured body receipt"
+    },
+    {
+      "url": "https://www.apec.org/",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "APEC’s official events page lists the APEC Economic Leaders’ Meeting in Shenzhen on Nov. 18–19, 2026. The page does not establish that Lai will attend in person; attendance, representation, and any Trump–Lai contact remain unverified. Source date/window: 2026-11-18 to 2026-11-19. primary APEC events page; captured body receipt"
+    },
+    {
+      "url": "https://english.president.gov.tw/Page/35?DeteailNo=53",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "Bounded searches of official Taiwan presidential releases, White House material, and credible reporting surfaced no announced upcoming in-person Trump–Lai meeting or Lai trip/transit tied to Trump. This is a search result limitation, not proof of absence. Source date/window: 2026-10-18 search cutoff. bounded search only; no complete presidential travel calendar located"
+    },
+    {
+      "url": "https://www.president.gov.tw/News/39517",
+      "observed_utc": "2026-10-18T12:12:32.010188+00:00",
+      "finding": "Official Lin Hsin-i appointment is October8,2025, not2026. Current2026representative search unresolved; do not infer Laiattendance/absence."
+    },
+    {
+      "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "Primary read complete capturedbody: actual publicationSep25display/Sep26UTC; misleading sep21filename corrected in additivepacket. Both leaders attending eachothers APEC/G20 means Trump/Xi, notLai."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.2,
+    "method": "Primary subjective two-regime diplomatic encounter model; not fitted hazard/frequency.",
+    "reasoning": "Complete literal and official/wire packets read; no qualifying2026 interaction found in bounded check. Current official Lai engagements involve legislators, not Trump. APJune5 phone-call discussion is remote, historical and not a scheduled encounter. Root-read September25 WhiteHousefact sheet describes Trump/Xi attending eachothers APEC/G20 summits; it does not promise Laiattendance. November18–19 APECcalendar is a possible diplomatic catalyst but no2026Taiwanrepresentative or Laiitinerary was located. Official2025LinHsin-i representation is historical practice, not proof of2026absence. OrdinaryUS-Chinaengagement/representation continuation favors no inperson encounter; broad short-encounter literal and possiblepolicy/crisis shift retain a tail.90%ordinary×1% plus10%disruption×40%=4.9%,rounded5%; 0.5–20 range acknowledges opaque/surprise encounters and coverage gaps.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "best_bid": 0.035,
+        "best_ask": 0.036,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.089,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.036,
+            "fee_usd": 0.013881600000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.37389,
+        "fee_usd": 0.01389,
+        "break_even_probability_before_carry": 0.037389,
+        "break_even_probability_with_idealized_carry": 0.037625707676055706,
+        "central_expected_profit_usd": 0.12611,
+        "default_10pp_stressed_profit_usd": -0.37389,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.33649
+      },
+      "No": {
+        "probability": 0.95,
+        "best_bid": 0.964,
+        "best_ask": 0.965,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.089,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.965,
+            "fee_usd": 0.013510000000000012
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.66352,
+        "fee_usd": 0.01352,
+        "break_even_probability_before_carry": 0.966352,
+        "break_even_probability_with_idealized_carry": 0.97246992067645,
+        "central_expected_profit_usd": -0.1635200000000001,
+        "default_10pp_stressed_profit_usd": -1.16352,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.85,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.62611
+      }
+    }
+  },
+  "verdict": "No entry. DatedYES+$0.12611/10 depends on unmeasured encounter tail and loses at lower scenario; NO96.5c negative centrally and selected75%stress. Call/APECcalendar not confirmed inpersonLai meeting.",
+  "reopen_condition": "Re-review verified Lai/Trump itinerary, actual inperson encounter, UStransit or materialUS–China policychange; illustrativeNO<=72c/5shares only after honestfresh tail assessment/allgates. APECTrumpXi attendance is notLaiattendance.",
+  "current_description_sha256": "dacf1476ba6c264ce0b51878e37a38758730949891113d421df36244d23eb54c",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "99792667542810032198348275219799506523385265075068332530798893037929015413037",
+    "76639653998592529397905185768040254391057709439275979928923831350943911200927"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0014",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0133_primary_before_quote_1225.json",
+    "source_packets": [
+      "data/deep_review_20261017/taiwan133_current_facts_1205.json",
+      "data/deep_review_20261017/taiwan133_apec_control_1220.json"
+    ],
+    "raw_p_yes": 0.049,
+    "selected_stress_no": 0.75,
+    "tail_failure_multiplier": 5,
+    "selected_stress_is_not_calibrated_bound": true,
+    "priority_followup": false,
+    "entry_approved": false
+  },
+  "evaluated_utc": "2026-10-18T12:27:41.102314+00:00",
+  "question": "Will Trump meet with Lai Ching-te in 2026?",
+  "market_id": "666599",
+  "valuation_author": "primary_operator",
+  "original_index": 133,
+  "report_sha256": "29fbb6fbc850b36049fc300567549a35e46d00b66d539fc8055cac38d06423ac"
+}

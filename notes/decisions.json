@@ -1,5 +1,5 @@
 {
-  "next_id": 215,
+  "next_id": 216,
   "decisions": [
     {
       "id": 1,
@@ -4545,6 +4545,28 @@
         "ai-ships-fast-short"
       ],
       "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 215,
+      "timestamp": "2026-10-18T13:08:16Z",
+      "type": "open_position",
+      "thesis": "Posted 15 NO at 7c, 1.05 pUSD full-fill risk, on exact case137/market4082027/CID0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b. NO covers a cut or hike on October21. Primary cut29/hold68/hike3; actual 20pp entry reserve gives NO12%, not a probability floor. Initial forecast drift, cautious primary analyst and Citi-attributed hold evidence remain material. Opposing 6% change scenario reverses entry; full premium can be lost. Manual pilot overrides larger advisory Kelly. Exact rule/fee/book/account/cap/venue checks passed; existing watcher baseline and normal post-promotion cycle verified. No hedge credit, no add/repost.",
+      "confidence": "low",
+      "prediction": "At13:03:57UTC, independent full authenticated inventory and exact detail agree: order0x7d652a83630f8497951d6ec19e96e6c84d845b704e9b17cba0286c33ffc15bbd LIVE15/0matched. Fixed Polygon95748861 timestamp13:03:59 both case137 CTF balances0; pUSD23.446890, nine LIVE BUY commitments17.47, cash after all bids5.976890, nine linked reservations/no reconciliation block. Unfilled commitment, not holding/profit. Review each existing tick/earlier news, cancel FIRST on load-bearing uncertainty; pull Oct19 22UTC before Oct20 activity/expectations data. Decision Oct21 13UTC; missing announcement through following Nov23 meeting end defaults no-change. Proof data/deep_review_20261017/boi137_postsubmit_1305.json; entry/risk research/2026-10-17-deep-review/boi_entry_1255.md. Never replay writer.",
+      "size_usd": 1.05,
+      "resolution_at": "2026-10-21T13:00:00Z",
+      "tags": [
+        "polymarket",
+        "deep-review",
+        "maker",
+        "bank-of-israel",
+        "pending-zero-fill",
+        "uncalibrated-policy-model"
+      ],
+      "slug": "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

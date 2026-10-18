@@ -1,0 +1,157 @@
+{
+  "review_index": 152,
+  "condition_id": "0xb2ff6ed93d21a87d1532da4cb09f1399ec80cc6f5796f4d7601beb7067c07d4b",
+  "criteria_sha256": "e73956b4553b5be3e18d84f6457291133d4b844ae7808fc81fba17d996ab48a6",
+  "status": "valued",
+  "literal_analysis": "Fiveoceansandsubdivisionsqualify;seas/gulfs/bays/straits/channels/lakesexcluded.Noexplicitcreationlowerbound;metadatacannotinventit. EO/signedbill/otherofficialaction/BGNcanqualifywithoutforeignacceptance. Mereproposalversusoperativeverbaldecreeisadjudicationrisk.",
+  "evidence": [
+    {
+      "url": "https://www.presidency.ucsb.edu/documents/pool-reports-october-10-2026",
+      "observed_utc": "2026-10-18T12:56:38.945173+00:00",
+      "finding": "SHAverifiedfirsthandpoolnote #5,17:04CDT;prospectiveoceanrenamewish,checkagainsttranscript,notcompletedaction."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/08/honoring-the-american-history-of-the-great-lakes-and-renaming-lake-ontario-as-lake-america-3a36/",
+      "observed_utc": "2026-10-18T12:56:38.945190+00:00",
+      "finding": "OfficialEO14422August27:lakechange/agencyprocess precedent,explicitlyexcludedgeographyhere."
+    },
+    {
+      "url": "https://www.usgs.gov/us-board-on-geographic-names/dnc-review-lists",
+      "observed_utc": "2026-10-18T12:34:25.346693+00:00",
+      "finding": "LatestlinkedDNCSeptember22listnotcurrentpostrallyorallBGN;zeroexactsearchedoceannamesnotuniversalnoactproof."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/",
+      "observed_utc": "2026-10-18T12:52:35.894797+00:00",
+      "finding": "Currentboundedfirst-pageactionlistingnoqualifyingoceanrenamefound;notfullarchiveaudit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.245,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Primary strict/loose0.70*20%+0.30*35%; beforeownquotes",
+    "reasoning": "ActualrallyrhetoricandEOprecedentmatter;priorofficial-onlynegativebounded. Strict19.925→20%,loose35%;beforeleaving2029notDec31deadline;unverifiedvideo/historygaps.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 76,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.245,
+        "best_bid": 0.055,
+        "best_ask": 0.067,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.39,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.067,
+            "fee_usd": 0.025004400000000003
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.69501,
+        "fee_usd": 0.02501,
+        "break_even_probability_before_carry": 0.06950100000000001,
+        "break_even_probability_with_idealized_carry": 0.06994689249816485,
+        "central_expected_profit_usd": 1.7549900000000003,
+        "default_10pp_stressed_profit_usd": 0.7549899999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.145,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.5292100000000001
+      },
+      "No": {
+        "probability": 0.755,
+        "best_bid": 0.933,
+        "best_ask": 0.945,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.39,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.945,
+            "fee_usd": 0.020790000000000017
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.470799999999999,
+        "fee_usd": 0.0208,
+        "break_even_probability_before_carry": 0.9470799999999999,
+        "break_even_probability_with_idealized_carry": 0.9531561121014368,
+        "central_expected_profit_usd": -1.920799999999999,
+        "default_10pp_stressed_profit_usd": -2.920799999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.655,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.30499
+      }
+    }
+  },
+  "verdict": "Evaluate exactdatedtwo-sided economics atselectedYES9.5/NO60.5; anyedge is a follow-up case, not a trade approval.",
+  "reopen_condition": "NewoperativeEO/directive/BGNrecordorqualifyingcredibleconsensus; source/windowcorrection; freshYES<=7c/NO<=58c withallcurrentgates.",
+  "current_description_sha256": "d66dc3596957899345d7f9a77fa831c29eb82dbd98fe00b4d29831e71f4e69c6",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "11547317176614389877783525863964319471312402197984074917339318338971050356720",
+    "108164668501341325236348639476726101507452425433976441426414875261872614237013"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0057",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/ocean152_primary_1300.json",
+    "source_packets": [
+      "data/deep_review_20261017/ocean152_current_facts_1240.json",
+      "data/deep_review_20261017/ocean152_rally_followup_1255.json"
+    ],
+    "own_model_preceded_case_quotes": true,
+    "selected_entry_probabilities": {
+      "Yes": 0.095,
+      "No": 0.605
+    },
+    "firsthand_transcript_limit": "poolreportonly,explicitcheckagainsttranscript;noverifiedvideo"
+  },
+  "evaluated_utc": "2026-10-18T12:56:39.240876+00:00",
+  "question": "Will Trump rename an ocean by December 31, 2026?",
+  "market_id": "3939749",
+  "valuation_author": "primary_operator",
+  "original_index": 152,
+  "report_sha256": "86a0a244c6233173639257c343aabcbc52dc959494009d4f8d2709b414024f93"
+}

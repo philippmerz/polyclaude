@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T12:11:19.361686+00:00
+Updated: 2026-10-18T13:00:59.401296+00:00
 
-**230 valuations saved; first milestone100:** 230 valued; 2 blocked after in-depth review. 328 factual exclusions separately; 2440 pending.
+**238 valuations saved; first milestone100:** 238 valued; 2 blocked after in-depth review. 328 factual exclusions separately; 2432 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -144,10 +144,15 @@ Each report below is written before moving to the next evaluation. Related contr
 |130|[Will the 5-year Treasury yield hit 5.10% before 2027?](evaluations/0130.md)|valued|No entry: datedYESnegative centrally; NO+$0.49589/10 centrally becomes-$1.00411 at selected26% stress. Wide model/horizon risk prevents order.|
 |131|[Edi Rama out as Albania PM in 2026?](evaluations/0131.md)|valued|No entry: YES28c negative centrally; NO10-share cost7.37640 yields+$0.52360 central but-$0.97640 at selected64% stress. Historical83 seats not treated as current unchanged support.|
 |132|[West Indies Tour of India T20s: India vs West Indies](evaluations/0132.md)|valued|No entry: both captured asks lose after5%curve fees at50/50payout, and both booksstale918s. Researchwatcheach<=.39for<=10shares with freshallgatechecks.|
+|133|[Will Trump meet with Lai Ching-te in 2026?](evaluations/0133.md)|valued|No entry. DatedYES+$0.12611/10 depends on unmeasured encounter tail and loses at lower scenario; NO96.5c negative centrally and selected75%stress. Call/APECcalendar not confirmed inpersonLai meeting.|
 |134|[Will the price of Ethereum be above $2,500 on October 17?](evaluations/0134.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |135|[Will "Ice Age" be the #2 global Netflix movie this week?](evaluations/0135.md)|valued|YES ask negative central EV, NO offer unavailable; no entry|
+|136|[Will China invade Taiwan by end of 2026?](evaluations/0136.md)|valued|No entry approved. YES2.1c has+$0.59/10 central and+$0.09 strict-branch EV but loses at1%lower; conservative draftstress stays0. NO98c negative centrally/selected60%stress. TinyYES remains a source/stress investigation, not current approval.|
+|137|[Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the October decision?](revisions/0137_20261018T124428441777Z.md)|valued|priority current entry follow-up; not yet approved|
+|138|[Will Katie Zacharia give another press briefing as Press Secretary?](evaluations/0138.md)|valued|no entry; dated two-sided taker costs exceed central fair; selectedNO80 below95c bid|
 |139|[Dota 2: LEGION vs Team Lynx - Game 1 Winner](evaluations/0139.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |140|[Will Dai Dai – Shakira & Burna Boy be the #2 song in the US for 2026?](evaluations/0140.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
+|141|[Will Ethereum dip to $800 by December 31, 2026?](evaluations/0141.md)|valued|no entry at dated book; see exact two-sided economics and selectedYES0/NO75|
 |142|[Will Stateside – PinkPantheress & Zara Larsson be the #2 song in the US for 2026?](evaluations/0142.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |143|[Israeli airspace closed by October 31, 2026?](evaluations/0143.md)|valued|Whole-FIR effective-closure event valued; source-history limits retained, neither side clears reserve|
 |144|[Will the Democratic Party win the FL-07 House seat?](evaluations/0144.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
@@ -158,6 +163,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |149|[Will "Ice Age" be the #2 US Netflix movie this week?](evaluations/0149.md)|valued|YES central value, no supported individual robust floor; no entry|
 |150|[Will a team from LCK (South Korea) win LoL Worlds 2026?](evaluations/0150.md)|valued|Bothsidesvalued; YESnegative, NO31c survives15ppreserve beforefreshentrychecks. Prioritytiny30cpost-onlyNOcandidate pendingindependentnew-classreview, noorder.|
 |151|[Will the Democratic Party win the NV-04 House seat?](evaluations/0151.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
+|152|[Will Trump rename an ocean by December 31, 2026?](evaluations/0152.md)|valued|Evaluate exactdatedtwo-sided economics atselectedYES9.5/NO60.5; anyedge is a follow-up case, not a trade approval.|
 |153|[Will Venezia FC win on 2026-10-17?](evaluations/0153.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
 |157|[Will Steve Hilton win the California Governor Election in 2026?](evaluations/0157.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
@@ -280,6 +286,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |591|[Will Shandong Taishan FC win on 2026-10-17?](evaluations/0591.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |603|[Will Norwich City FC win on 2026-10-17?](evaluations/0603.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |604|[Will Qwen have the second highest OpenRouter market share the week of October 12?](revisions/0604_20261018T120934503946Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
+|607|[Will the Bank of Israel decrease the Bank of Israel Interest Rate after the October decision?](revisions/0607_20261018T124428963856Z.md)|valued|priority current entry follow-up; not yet approved|
 |609|[LKP Motor Lublin vs. WKS Slask Wroclaw: O/U 2.5](evaluations/0609.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |629|[Will the price of Solana be above $105 on October 17?](evaluations/0629.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |642|[Will the Republicans win the Florida Senate race in 2026?](evaluations/0642.md)|valued|RepublicanYES positivecentral but fails10ppreserve; NOnegativecentral. FuturemakerYES<=.84x10onlyafterfreshallgates.|
@@ -320,6 +327,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |891|[Newcastle United FC vs. Aston Villa FC: O/U 10.5 Total Corners](evaluations/0891.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |909|[Wuhan Tennis Open (Doubles): Hunter/Siniakova vs Errani/Paolini](evaluations/0909.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |921|[Will West Bromwich Albion FC win on 2026-10-17?](evaluations/0921.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|931|[Will the Bank of Israel increase the Bank of Israel Interest Rate after the October decision?](revisions/0931_20261018T124429462437Z.md)|valued|no entry; selectedYES0/NO82 fail relevant current prices|
 |933|[Will Millwall FC vs. Lincoln City FC end in a draw?](evaluations/0933.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |963|[Will KR Reykjavik win on 2026-10-17?](evaluations/0963.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |993|[Will Birmingham City FC win on 2026-10-17?](evaluations/0993.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -573,4 +581,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 133
+Active indices: 154

@@ -1,0 +1,181 @@
+{
+  "review_index": 136,
+  "condition_id": "0xd9fb1184af0064e5e34b129f5b79afa5a17b7e32f2953ab05efed82315fee6d4",
+  "criteria_sha256": "dd8c3c92440c7e8d12acd7869fdffb6e8a1b28bf198e9da86876158fe9a1e624",
+  "status": "valued",
+  "literal_analysis": "Commencement byDec31ET of a Chinese military offensive intended to establish control over ANY ROC-administered inhabited territory. Success, conquest of mainTaiwan or occupation bydeadline is not required. Uninhabited islands excluded; routine exercises/ADIZincursions and militaryoffensivewithcontrolintent differ.",
+  "evidence": [
+    {
+      "url": "https://www.mnd.gov.tw/En/News/PLAAct/88008",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "Taiwan’s Ministry of National Defense reported 2 PLA aircraft sorties, 5 PLAN ships, and 9 official vessels operating around Taiwan. Both aircraft crossed the median line and entered the northern and central ADIZ. Taiwan said its armed forces monitored and responded using CAP aircraft, naval ships, and coastal missile systems. This report documents detected activity; it does not say a military offensive to establish control was underway. Source date/window: 2026-10-18; observation window Oct. 17 06:00–Oct. 18 06:00 UTC+8. primary Taiwan MND page; full body captured and hash/timing recorded"
+    },
+    {
+      "url": "https://www.mnd.gov.tw/EN/News/PLAAct/88006",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "Previously archived Taiwan MND report recorded 9 PLA aircraft sorties, 6 PLAN ships, 8 official vessels, and 5 sorties crossing the median line/entering northern, central, or southwestern ADIZ. Source and receipt are in the earlier geopolitics packet. This remains a report of detected activity rather than a report of an offensive to control territory. Source date/window: 2026-10-17; observation window Oct. 16 06:00–Oct. 17 06:00 UTC+8. previous primary capture: data/deep_review_20261017/geopolitics_extension_sources.json; logs/deep_review_20261017/geopolitics_extension_sources/taiwan_mnd_oct17.body.gz"
+    },
+    {
+      "url": "https://eng.mod.gov.cn/2025xb/P/16490695.html",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "At a regular press conference during Xi Jinping’s US state visit, China’s Ministry of National Defense described Taiwan as the most important issue in China–US relations and urged the US to handle it prudently. This is official political framing; the captured statement is not an announcement of an operation or a dated plan to seize territory. Source date/window: 2026-09-24. official PRC MOD page surfaced and rendered by web search; local direct HTTPS fetch failed certificate hostname verification; no retry"
+    },
+    {
+      "url": "https://eng.mod.gov.cn/2025xb/P/16483651.html",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "China’s Ministry of National Defense spokesperson, responding to a question about Taiwan activity, said the PLA had not conducted large military exercises around Taiwan during the referenced period while Chinese government vessels increased operations around Taiwan. The statement is historical and bounded to the question’s period; it is not a current Oct. 18 activity report. Source date/window: 2026-08-27. official PRC MOD page rendered by web search; no local raw capture"
+    },
+    {
+      "url": "https://eng.mod.gov.cn/2025xb/P/16477751.html",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "China’s Ministry of National Defense rejected the Taiwan Strait median line as a concept and described PLA activity in relevant airspace/waters as legitimate. It also discussed Taiwan’s planned Han Kuang exercises. This shows official PRC framing, not confirmation of an offensive to establish control. Source date/window: 2026-07-30. official PRC MOD page rendered by web search; dated source, not current observation"
+    },
+    {
+      "url": "https://www.mnd.gov.tw/En/News/PLAAct/88008",
+      "observed_utc": "2026-10-18T12:03:40.120365+00:00",
+      "finding": "The bounded source pass found no official or credible report of China commencing an offensive to establish control over ROC-administered territory during 2026. The current Taiwan MND reports describe aircraft/ship activity and ADIZ crossings, not a landing, seizure, or control transfer. This does not establish universal absence beyond the sources and date ranges checked. Source date/window: 2026-10-18 search cutoff. bounded factual search; source coverage is incomplete"
+    },
+    {
+      "url": "https://www.scmp.com/news/china/military/article/3340297/pla-sends-drone-airspace-near-taiwan-held-pratas-island-south-china-sea",
+      "observed_utc": "2026-10-18T12:30:26.408972+00:00",
+      "finding": "Root bounded search indexed January18 article on January17 Pratas drone incursion lasting four minutes; indexed excerpt, not full rawarticle. Does not establish a military offensive intended to control inhabited territory. Broader Kinmen/Matsu/Pratas search found no clear qualifying2026offensive; searchabsence bounded."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Primary equal-weight narrow and broad territorial-control interpretations with explicit offshore/intent risk; subjective probabilities.",
+    "reasoning": "Primary read fullfrozenliteral and latestTaiwanMNDfullcapture: twoaircraft,fivePLAN,nineofficialvessels forOct17 06–Oct18 06UTC+8, monitoring/response not announcedterritorial-control offensive. This snapshot endsOct17 22UTC, not currentwallclock; no completeyearincidentlog. Extra rooted searches addressedKinmen/Matsu/Pratas and surfacedJan17Pratasdroneintrusion, not a statedseizureoffensive; old2024CoastGuardcircling and2025tabletop are historical/hypothetical, not2026hits. September25rootreadWHstatevisit favorscurrentUS–Chinadiplomaticengagement, nota guarantee. Primary gives3% to a narrowly evidenced military offensive and13% to broaderoffshore/quarantine-control-intent/adjudication path, equalweights→8%. The broadbranch doesnot automatically count everyblockade,drone orcoastguardboarding. Mere continuationofgrayzoneactivity doesnot qualify. Unexpectedcrisis/shortoffshoreoperation canbeginwithin75days withoutmainlandinvasionmassmobilization.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "best_bid": 0.02,
+        "best_ask": 0.021,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.717,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.021,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.21000000000000002,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.021,
+        "break_even_probability_with_idealized_carry": 0.02113294983008826,
+        "central_expected_profit_usd": 0.5900000000000001,
+        "default_10pp_stressed_profit_usd": -0.21000000000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.2
+      },
+      "No": {
+        "probability": 0.92,
+        "best_bid": 0.979,
+        "best_ask": 0.98,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.717,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.98,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.8,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.9800000000000001,
+        "break_even_probability_with_idealized_carry": 0.9862043254041188,
+        "central_expected_profit_usd": -0.5999999999999996,
+        "default_10pp_stressed_profit_usd": -1.5999999999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8200000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.79
+      }
+    }
+  },
+  "verdict": "No entry approved. YES2.1c has+$0.59/10 central and+$0.09 strict-branch EV but loses at1%lower; conservative draftstress stays0. NO98c negative centrally/selected60%stress. TinyYES remains a source/stress investigation, not current approval.",
+  "reopen_condition": "Re-review verified offensive/controlintent/inhabited-island status or materialUSChina/mobilization news. TinyYESnear2c/max$1 needs independentconservativeprobability/currentgates; illustrativeNO<=58c/5shares needs newunderwriting. No automated war bet.",
+  "current_description_sha256": "9cf8ac84d180752f805299a19be0aebf34ccaea15b864516c6388f89e1ea8090",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "94559586571241563470235664821564670251180951772614764383113614156422396181162",
+    "90772332434487149264114862115632028379978765245278600275169585501290867536237"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0018",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0136_primary_before_quote_1235.json",
+    "source_packets": [
+      "data/deep_review_20261017/taiwan136_current_facts_1205.json",
+      "data/deep_review_20261017/taiwan133_apec_control_1220.json"
+    ],
+    "branch_weights": {
+      "narrow": 0.5,
+      "broad": 0.5
+    },
+    "branch_p_yes": {
+      "narrow": 0.03,
+      "broad": 0.13
+    },
+    "selected_stress_no": 0.6,
+    "selected_stress_yes": 0,
+    "tail_failure_multiplier": 5,
+    "selected_stress_is_not_calibrated_bound": true,
+    "tiny_yes_is_research_lead_only": true,
+    "priority_followup": false,
+    "entry_approved": false
+  },
+  "evaluated_utc": "2026-10-18T12:30:26.629658+00:00",
+  "question": "Will China invade Taiwan by end of 2026?",
+  "market_id": "567621",
+  "valuation_author": "primary_operator",
+  "original_index": 136,
+  "report_sha256": "e2baf96499e797b66bdb7c22a800ffe4d74a85b047a4a46f954d3d322ab36538"
+}

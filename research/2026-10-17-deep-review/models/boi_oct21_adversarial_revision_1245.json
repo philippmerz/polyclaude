@@ -1,0 +1,87 @@
+{
+  "created_utc": "2026-10-18T12:44:28.159360+00:00",
+  "primary_authored": true,
+  "price_aware_revision": true,
+  "supersedes_model": "models/boi_oct21_primary_1240.json",
+  "source_packet": "data/deep_review_20261017/boi_adversarial_facts_1255.json",
+  "source_sha256": "14557b6d7323bd76369627bd6d17699d2cd8dd3ee44075adf06abe5614475cf4",
+  "current_public_quote_packet": "data/deep_review_20261017/boi_current_public_1245.json",
+  "quote_sha256": "cb09f0e5fdc6efcc6182228bdb8e2515f75445b46191d283d0ef78c6f0394e73",
+  "new_evidence": "October13 primary GlobalSource public analyst teaser expects hold3.25 and cites renewed shekel weakness/oil pressure, with stronger activity/fiscal observations; it predates actualSeptember CPI. Primary read teaser. A single attributed view is not a survey or policy guidance, and it gives no quantifiedFX/oil move. No current official committee guidance was found in bounded check; Oct18 governor return notice adds no rate signal.",
+  "reason_for_change": "Initial70% ordinary-easing regime overweights low inflation and lacks current shock context. New primary economist account gives a concrete opposing macro/policy mechanism; reweight cautious regime upward. The dated/current PM disagreement triggered this investigation but is not itself a probability model. No probability was raised to clear an entry gate.",
+  "normal_decision_branches": [
+    {
+      "weight": 0.3,
+      "cut": 0.75,
+      "hold": 0.24,
+      "hike": 0.01,
+      "name": "ordinary disinflation"
+    },
+    {
+      "weight": 0.65,
+      "cut": 0.1,
+      "hold": 0.89,
+      "hike": 0.01,
+      "name": "cautious committee amid activity/FX/oil and election uncertainty"
+    },
+    {
+      "weight": 0.05,
+      "cut": 0.05,
+      "hold": 0.45,
+      "hike": 0.5,
+      "name": "new inflation shock"
+    }
+  ],
+  "no_announcement_fallback_assumption": 0.01,
+  "adopted_joint_probabilities": {
+    "cut": 0.29,
+    "hold": 0.68,
+    "hike": 0.03
+  },
+  "marginal_sensitivity_ranges": {
+    "cut": [
+      0.02,
+      0.6
+    ],
+    "hold": [
+      0.35,
+      0.97
+    ],
+    "hike": [
+      0.001,
+      0.15
+    ]
+  },
+  "entry_reserve_absolute_pp": 15,
+  "case_yes": {
+    "137": 0.68,
+    "607": 0.29,
+    "931": 0.03
+  },
+  "selected_entry_probabilities": {
+    "137": {
+      "Yes": 0.53,
+      "No": 0.17
+    },
+    "607": {
+      "Yes": 0.14,
+      "No": 0.56
+    },
+    "931": {
+      "Yes": 0,
+      "No": 0.82
+    }
+  },
+  "adversarial_countermodel": "Market-consistent hold~92% (including state known by informed economists) could make NO-change or cut bid near7c after costs unattractive. Primary still assigns29/68/3, but 15pp reserve is not the full2\u201360%/35\u201397% sensitivity bound. All premium can be lost. First pilot at most~$1.20, no add; no statistical calibration or information advantage proven.",
+  "candidate_plan": "Prefer137NO over607YES only at equal all-in price because any hike also pays137NO; do not hold both as independent. Current observed passive price7c is provisional. Planning15NO at <=8c, <=1.20 risk, no add, subject to catalyst check, monitoring warmup, all account/source/execution gates. Pull at existingOct19 22UTC before unknown-timeOct20 data; earlier uncertainty cancel-first. Not an order or approval.",
+  "normal_mixture": {
+    "cut": 0.2925,
+    "hold": 0.6729999999999999,
+    "hike": 0.0345
+  },
+  "fallback_adjusted_unrounded": {
+    "cut": 0.28957499999999997,
+    "hold": 0.6762699999999999,
+    "hike": 0.034155000000000005
+  }
+}

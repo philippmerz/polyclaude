@@ -1,0 +1,129 @@
+{
+  "created_utc": "2026-10-18T12:38:15.697231+00:00",
+  "primary_authored": true,
+  "own_case_quotes_seen_before_this_model": false,
+  "case_indices": [
+    137,
+    607,
+    931
+  ],
+  "full_description_sha256": "37021797ec659dbf5c20fe8bae23424f0e27473a09981e6eedb8eff1f1f5ec9e",
+  "identities": [
+    {
+      "review_index": 137,
+      "id": "4082027",
+      "conditionId": "0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b",
+      "criteria_sha256": "1cff9cdfb89b719e76174822a50b1920c895e0337ce083d383ea4203b3bd5aa0",
+      "question": "Will the Bank of Israel make no change to the Bank of Israel Interest Rate after the October decision?",
+      "clobTokenIds": "[\"37138446756021377464512602416366707399216545340491188303671550631209194752283\", \"114660857161931670198834046480178945397435960531104080936469579382607930952728\"]"
+    },
+    {
+      "review_index": 607,
+      "id": "4082026",
+      "conditionId": "0xc971c34b8982e35c2d02e6a88569be95860da98bf7e4067bb36d39f24682d1b1",
+      "criteria_sha256": "b74d397bb0ec9b79b9a678ddbe5c00fe0b61d844ef9f7cbe71726d6734682258",
+      "question": "Will the Bank of Israel decrease the Bank of Israel Interest Rate after the October decision?",
+      "clobTokenIds": "[\"70974541306360618752718269914222219042190628463826507102569242466799494097142\", \"90681349910511477294302608175996112638754972247219668801443152915727187998696\"]"
+    },
+    {
+      "review_index": 931,
+      "id": "4082028",
+      "conditionId": "0xd08f9d7feb144cebbd0a1ce5064bf1c0fa6fe8801ddb31faa38420eabcf3e925",
+      "criteria_sha256": "83a7e81f55848f82473ce55e7f2d113861ac86f1b5ccc4d1724771ca7f8762db",
+      "question": "Will the Bank of Israel increase the Bank of Israel Interest Rate after the October decision?",
+      "clobTokenIds": "[\"62770326544259823814283575892198893795539905093057212988031214866505607951898\", \"30803642884401159474416860472243611073811600039566898176097009880368868327444\"]"
+    }
+  ],
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/boi_oct21_decision_sources_1210.json",
+      "sha256": "f2ff6652e3ac40d6e80632ec9940eaf484894c45f42a239cfa7ea6b2913536a7"
+    },
+    {
+      "path": "data/deep_review_20261017/boi_cbs_pdf_read_1235.json",
+      "sha256": "1945c4b5cf00decebc9907ed09132e3142fc678b948ebaf493f093f1e5a897d7"
+    }
+  ],
+  "exact_claim": "October21 BOI decision relative to immediately prior level; any-size decrease or increase; missing decision by end next scheduled meeting resolves no change. Three exhaustive mutually exclusive outcomes under this reading, one dependent forecast.",
+  "official_decision_time_utc": "2026-10-21T13:00:00+00:00",
+  "official_following_meeting": "2026-11-23; exact frozen fallback is end date of next meeting, not its start",
+  "latest_policy_level_percent": 3.25,
+  "primary_evidence_interpretation": "September headline CPI -0.5%m/m and +1.6%y/y, trend+1.4; seasonally adjusted CPI unchanged, rent+0.4%m/m: headline drop is not accelerating underlying deflation. September1 BOI cut to3.25 with July1.5% inflation, tight labor/wages5.4 and recovering activity, still-high geopolitical/fiscal uncertainty. August activity+0.4 versus longtrend0.3. September22 forward-inflation readings near target, not meeting odds. October20 activity/expectations release still ahead. Fresh October energy/FX/risk-premium histories absent; September risk observations are not current proof.",
+  "branches_conditional_on_decision": [
+    {
+      "weight": 0.7,
+      "name": "ordinary disinflation and continuation of September easing",
+      "cut": 0.75,
+      "hold": 0.24,
+      "hike": 0.01
+    },
+    {
+      "weight": 0.25,
+      "name": "cautious committee on activity, wages, fiscal risk and seasonality",
+      "cut": 0.15,
+      "hold": 0.84,
+      "hike": 0.01
+    },
+    {
+      "weight": 0.05,
+      "name": "new FX, energy or geopolitical inflation shock before decision",
+      "cut": 0.1,
+      "hold": 0.5,
+      "hike": 0.4
+    }
+  ],
+  "normal_decision_mixture": {
+    "cut": 0.5674999999999999,
+    "hold": 0.403,
+    "hike": 0.029500000000000005
+  },
+  "no_announcement_fallback_probability_assumption": 0.01,
+  "unrounded_joint_probabilities": {
+    "cut": 0.5618249999999999,
+    "hold": 0.40897000000000006,
+    "hike": 0.029205000000000005
+  },
+  "adopted_joint_probabilities": {
+    "cut": 0.56,
+    "hold": 0.41,
+    "hike": 0.03
+  },
+  "primary_marginal_sensitivity_ranges": {
+    "cut": [
+      0.2,
+      0.85
+    ],
+    "hold": [
+      0.15,
+      0.75
+    ],
+    "hike": [
+      0.001,
+      0.2
+    ]
+  },
+  "case_probability_yes": {
+    "137": 0.41,
+    "607": 0.56,
+    "931": 0.03
+  },
+  "entry_uncertainty_reserve_absolute_pp": 15,
+  "case_selected_entry_probabilities": {
+    "137": {
+      "Yes": 0.26,
+      "No": 0.44000000000000006
+    },
+    "607": {
+      "Yes": 0.41000000000000003,
+      "No": 0.2899999999999999
+    },
+    "931": {
+      "Yes": 0,
+      "No": 0.82
+    }
+  },
+  "method_limit": "Subjective scenario weights/conditional outcomes and1% fallback; not fitted or statistically calibrated. Rounded coherent adoption sums1. Ranges are marginal sensitivities, not simultaneous probabilities. Reserve reflects incomplete current shock data and weak conditional calibration, not a measured confidence level.",
+  "horizon": "Normal announcement3days;37day carry sensitivity covers next scheduled meeting, with possible further dispute/delay. All fit January under ordinary rules.",
+  "resting_review_deadline": "No resting bid into October20 data without new model. Existing Oct19 22UTC check is earlier than unknown Oct20 release times. No new timer; price trigger is research-only.",
+  "entry_conditions": "Re-review at least2pp below selected probability, minimum5shares/at most$3.25 first-pass risk subject to current joint portfolio stress, liquidity, costs, identity, fresh quotes, source/news/catalyst gates. No execution authority from this record."
+}

@@ -1,0 +1,160 @@
+{
+  "review_index": 138,
+  "condition_id": "0x49501ff0c2d65172a90e7225f57eb33044b33ed180877dbdf35e7a8b6daf0cc1",
+  "criteria_sha256": "8241275b05fcd9732278d9d3e7b0fac4b47afd36bb2e067d0925e07112c0cef6",
+  "status": "valued",
+  "literal_analysis": "All full rules read: actual/joint lead scheduledWHpressbriefing while actualPressSecretary, createdOct14 afterOct13 inaugural; guests/gaggles fail; Dec31ET.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/10/katie-zacharia-delivers-powerful-inaugural-briefing-as-37th-white-house-press-secretary/",
+      "observed_utc": "2026-10-18T12:45:53.167739+00:00",
+      "finding": "Official October13 inaugural event precedes exactOctober14 creation."
+    },
+    {
+      "url": "https://www.whitehouse.gov/videos/press-secretary-katie-zacharia-briefs-members-of-the-media-oct-13-2026/",
+      "observed_utc": "2026-10-18T12:45:53.167783+00:00",
+      "finding": "Official dated video, not evidence of a second post-creation event."
+    },
+    {
+      "url": "https://www.thejakartapost.com/world/2026/10/17/trumps-new-press-secretary-out-after-less-than-week",
+      "observed_utc": "2026-10-18T12:45:53.167786+00:00",
+      "finding": "AFP October17 reports October16 departure; attributed official confirmation, not a personnel termination document."
+    },
+    {
+      "url": "https://www.thenationalnews.com/news/us/2026/10/16/katie-zacharia-fired-white-house/",
+      "observed_utc": "2026-10-18T12:45:53.167789+00:00",
+      "finding": "Later update reports her past-tense farewell, direct X source not retrieved."
+    },
+    {
+      "url": "https://www.forth.news/whpool/Cg51WPeCAyEGHZF4jWzRV",
+      "observed_utc": "2026-10-18T12:45:53.167792+00:00",
+      "finding": "Pool schedule excerpt throughOctober18 has no second listed Katie briefing; direct403, bounded coverage."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.035,
+    "low": 0.003,
+    "high": 0.2,
+    "method": "Primary explicit departure/transition/historical-gap paths; before own quotes",
+    "reasoning": "95%*1% +4%*50% +1%*50%=3.45%, rounded3.5%; subjective, no measured base rate. Actual secretary role, public schedule and podium leadership all necessary.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.035,
+        "best_bid": 0.008,
+        "best_ask": 0.05,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.857,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.05,
+            "fee_usd": 0.019
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.519,
+        "fee_usd": 0.019,
+        "break_even_probability_before_carry": 0.0519,
+        "break_even_probability_with_idealized_carry": 0.0522285760086467,
+        "central_expected_profit_usd": -0.16899999999999998,
+        "default_10pp_stressed_profit_usd": -0.519,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.07682
+      },
+      "No": {
+        "probability": 0.965,
+        "best_bid": 0.95,
+        "best_ask": 0.992,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.857,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.992,
+            "fee_usd": 0.0031744000000000034
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.92318,
+        "fee_usd": 0.00318,
+        "break_even_probability_before_carry": 0.992318,
+        "break_even_probability_with_idealized_carry": 0.998600309975882,
+        "central_expected_profit_usd": -0.27318,
+        "default_10pp_stressed_profit_usd": -1.27318,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.865,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.481
+      }
+    }
+  },
+  "verdict": "no entry; dated two-sided taker costs exceed central fair; selectedNO80 below95c bid",
+  "reopen_condition": "New qualifying postcreation footage/public-schedule entry, formal personnel status/reappointment, corrected creation/window, or NO<=77c with current all gates.",
+  "current_description_sha256": "9d1c07c6f596a38ededdd47bcb2f603c3331a61ec7cc356aba95e60acb4cc336",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "114003691361022229099180640527638818703170627863488770847913955836805770406964",
+    "64035159942470841742099294995977918476039132695577981138969243009214808366670"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0020",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/press_secretary138_current_facts_1215.json"
+    ],
+    "prequote_probability_file": "data/deep_review_20261017/work/0138_primary_before_quote_1250.json",
+    "selected_entry_probabilities": {
+      "Yes": 0,
+      "No": 0.8
+    },
+    "tail_mult_licence": false
+  },
+  "evaluated_utc": "2026-10-18T12:45:53.450787+00:00",
+  "question": "Will Katie Zacharia give another press briefing as Press Secretary?",
+  "market_id": "5685265",
+  "valuation_author": "primary_operator",
+  "original_index": 138,
+  "report_sha256": "d7cf6223ae0a76b57828e982f94e5773a125d3c0b78f5a9c93bc5a7244223b15"
+}

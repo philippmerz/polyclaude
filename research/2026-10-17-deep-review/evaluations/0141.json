@@ -1,0 +1,148 @@
+{
+  "review_index": 141,
+  "condition_id": "0x717672a48c5f2938631f6e467b9a48aedb03fa380c0198704ef5acfc91721612",
+  "criteria_sha256": "fc898e0541462bddfe5f1fe502e5c234da1ac62c43c7ae0e1b94296a02b546f9",
+  "status": "valued",
+  "literal_analysis": "FullspotETHUSDT1mfinalLow<=800,Nov24 2025 14ET–Dec31 2026 23:59ET; anyhit,notterminal/otherpair/futures.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-18T12:20:27.309981+00:00",
+      "finding": "Exact ETHUSDT interval-specific raw source, SHAverifiedcoverage/currentpartial; no full327-dayminute download."
+    },
+    {
+      "url": "https://github.com/binance/binance-spot-api-docs/blob/master/web-socket-streams.md",
+      "observed_utc": "2026-10-18T12:49:06.005737+00:00",
+      "finding": "Official interval/UTC/open-close/Low field semantics; only same-source aggregate consistency used."
+    },
+    {
+      "url": "https://blog.ethereum.org/",
+      "observed_utc": "2026-10-18T12:49:06.005745+00:00",
+      "finding": "October16 protocol announcement schedulesHoodi testnetOct26 17:42:48UTC, mainnetdateundecided; not a mainnetactivation claim."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.052,
+    "low": 0.005,
+    "high": 0.25,
+    "method": "Primary source-bound diffusion + explicit systemic/venue-tail mixture, before own prices",
+    "reasoning": "No historicalhit under auditedsame-sourceaggregation;70/25/5 regimes, separate5%*60%tailcontribution; uncalibrated, range0.5–25%.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 76,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.052,
+        "best_bid": 0.017,
+        "best_ask": 0.021,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 77.482,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.021,
+            "fee_usd": 0.014391300000000003
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.22440000000000002,
+        "fee_usd": 0.0144,
+        "break_even_probability_before_carry": 0.02244,
+        "break_even_probability_with_idealized_carry": 0.02258396667182946,
+        "central_expected_profit_usd": 0.2956,
+        "default_10pp_stressed_profit_usd": -0.22440000000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.15830000000000002
+      },
+      "No": {
+        "probability": 0.948,
+        "best_bid": 0.979,
+        "best_ask": 0.983,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 77.482,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.983,
+            "fee_usd": 0.011697700000000012
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.8417,
+        "fee_usd": 0.0117,
+        "break_even_probability_before_carry": 0.98417,
+        "break_even_probability_with_idealized_carry": 0.9904840677100889,
+        "central_expected_profit_usd": -0.361699999999999,
+        "default_10pp_stressed_profit_usd": -1.361699999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.848,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.775599999999999
+      }
+    }
+  },
+  "verdict": "no entry at dated book; see exact two-sided economics and selectedYES0/NO75",
+  "reopen_condition": "Any exact qualifyingminute, sourcecorrection/chart discrepancy, material protocol/venue/leverage news, or freshNO<=72c with all gates.",
+  "current_description_sha256": "f2d9855fbb68c1618bd6234e4bf7ffbce429d1f5bd6c15f89a187e1f9d2a8844",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "67402961747318482851880003250046703889973259367600991960666041701083209459254",
+    "103174144827908901710509553630727677341797001295655245023709154639394277936836"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0045",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "shared_source_packet": "data/deep_review_20261017/crypto141_155_162_sources_1230.json",
+    "primary_model": "research/2026-10-17-deep-review/models/eth141_barrier_1300.json",
+    "selected_entry_probabilities": {
+      "Yes": 0,
+      "No": 0.75
+    },
+    "own_model_preceded_case_quote": true
+  },
+  "evaluated_utc": "2026-10-18T12:49:06.302558+00:00",
+  "question": "Will Ethereum dip to $800 by December 31, 2026?",
+  "market_id": "701554",
+  "valuation_author": "primary_operator",
+  "original_index": 141,
+  "report_sha256": "0e16ff25950d12a9862f6eb3779aee088442e6e8c3284a1ca20562c2e0746807"
+}

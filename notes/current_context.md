@@ -1,9 +1,9 @@
 ---
-reviewed_at: "2026-10-18T12:25:43+00:00"
+reviewed_at: "2026-10-18T13:11:25.601281+00:00"
 valid_until: "2026-10-18T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 5ca2b077c6b6dcef1f30aeb052220c840d4a3c758fb31f17a9def49aac4dd594
+  README.md: f0ab8c98517929bae4b7c6b7631edaf2e27feda438f15d459060b3bf9d753b87
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
@@ -11,29 +11,27 @@ source_hashes:
   scripts/README.md: 4e19116bf182083c548261b4b8f47168a16c9c3b817ecb326847bdf349663685
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
   notes/backlog.md: 361bd445dabb93433f08134895a1a9d77217a72fd51d1250cf15e7e822e51076
-  notes/resting_orders.md: 5d7373ba981ce6c86955fd9fdb4e5cc571f93d63507622d3efa497017c1407cf
-  notes/journal.md: 94e8b1b3f9ff8e7222c3a32ac24e06f931bb3caa6d122ff7790e7ac4275bb41f
+  notes/resting_orders.md: d2faf756f9f56e61b4bfaec2b399fb9e7f837b2d47a882b8f329aa8cd38d99d1
+  notes/journal.md: ea434a2d9c0a3dfd17207f4f797ebcd0be22d3a1d3924937421963f7efd3ff0d
 ---
 
+## Current research — October18, 13:10 UTC
 
-## Current research — October 18, 12:24 UTC
+The frozen3,000-condition review has **238 valued, 2 blocked, 328 factual exclusions, 2,432 pending**; case154 NVIDIA is active. There are568 immutable base records plus18 append-only revisions. [Audit1315](../data/deep_review_20261017/ledger_audit_1315.json) checks identities, report/revision hashes, JSONL equality and the3,000-row effective index. [Live index](../research/2026-10-17-deep-review/INDEX.md) and [checkpoint](deep_review_checkpoint.json) govern after every evaluation. Milestones100/200 already notified; continue useful authorized research without a new goal/timer. Case154 full rules and sources read; no forecast or own PM quote yet. Facts for155/159/162/172/173/174/181 are prepared but not valued. Existing agents collect facts for168/179/180/181 and the14UTC portfolio source review; primary owns valuations.
 
-The frozen review has 230 valued, 2 blocked, 328 factual exclusions and 2,440 pending; case 133 is active. It has 560 immutable base records plus 15 revisions. [Audit 1215](../data/deep_review_20261017/ledger_audit_1215.json), the [index](../research/2026-10-17-deep-review/INDEX.md) and [checkpoint](deep_review_checkpoint.json) govern. Case 133’s 5% YES pre-quote draft is [here](../data/deep_review_20261017/work/0133_primary_before_quote_1225.json); it is not a saved valuation. Cases 124/130/131 are 7%/59%/21% YES. Case 35 is 60% YES from the 53-point Top Models token chart including Others; this differs from the R2 52-week request-share chart through partial Oct. 12.
+**BOI137: DEC-0215**, LIVE unfilled15NO@7¢/$1.05 at13:03:57UTC. Independent full authenticated pagination/direct detail agree; fixed Polygon95748861 timestamp13:03:59 both137CTF0, pUSD23.446890, nine BUY commitments17.47, cash after all bids5.976890, nine linked reservations/no block. This is commitment, not holding/profit. [Entry/identity/proof](../research/2026-10-17-deep-review/boi_entry_1255.md). Primary cut29/hold68/hike3; actual20pp entry reserve selects NO12%, not the revisions'15pp comparison. Adverse6%change scenario reverses7¢ entry. No add/repost. Pull **Oct19 22UTC**, before unknown-timeOct20 activity/expectations data; earlier uncertainty cancel first. DecisionOct21 13UTC; followingNov23 fallback can delay. New bounded RSS feed/terms added to existing watcher; normal post-promotion saves12:56:11/13:01:21, nine baseline entries; per-feed HTTP success/exhaustiveness unproven. Telegram1230 sent once. Never replay writer.
 
-**OpenRouter 112:** retain 11% YES / 89% NO and a 15-point reserve. The 12:14 alert was an Oct. 10 FourWeekMBA article repeating an Oct. 8 claim and an Aug. 7 chart, with no new measurement, pricing or routing fact. Retain the current entry plan; it does not change the prior, price or order. DEC-0214 was last verified at 11:50 UTC as LIVE, unfilled NO 5 at 65¢ ($3.25); that snapshot showed eight bids/$16.42, pUSD $23.446890, $7.026890 free after bids, and zero candidate balances. No later account check is claimed. Pull at 22:00 UTC or earlier on uncertainty; cancel first. See [entry/pull plan](../research/2026-10-17-deep-review/openrouter_entry_1131.md), [alert assessment](../data/deep_review_20261017/openrouter_agent_tokens_alert_1220.json) and [dated verification](../data/deep_review_20261017/openrouter112_postsubmit_1152.json).
+Cases133/136/137/607/931/138/141/152 saved since230 checkpoint. BOI forecast revised after primary analyst/Citi-attributed cautious evidence, not treated as independent votes. Katie1383.5%YES, ETH1415.2%, ocean15224.5%; wide ranges. Ocean152 rhetorical naming prospect was independently found before forecast/read in pool report, no executive action; research lead only, no entry approval or prior.
 
-All 12 R2 cases use the [daily-text revision](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md): Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, across dependent branches. The 406-row endpoint is not proven exhaustive/cutoff-complete; the revision followed 11:45 quotes. Case 119’s request-share book is stale (~65 minutes at capture), its selected NO is 0% after reserve, and no fresh maker quote is underwritten. Case 358’s 1¢ ask has no positive cent-grid passive price. No additional R2 order is approved. Case 92 remains blocked on post-creation CME active-month High history; the Pyth regular-session sample had 16,080 minutes without gaps/extras after roll-boundary exclusion, but global/special-notice coverage is qualified. Next research boundary is 14:00 UTC.
+**OpenRouter112: DEC-0214**, no add/repost, pull **TODAY22UTC** or earlier uncertainty. Latest exact direct order12:43LIVE5NO65¢/$3.25, zero matched; both112CTF0 at13:01; aggregate nine-bid proof above is newer. CentralNO89%,15pp reserve74%; concentrated750T countermodel reverses. [Entry plan](../research/2026-10-17-deep-review/openrouter_entry_1131.md). R2 cases share [current model](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md): Google90/OpenAI7.67/DeepSeek1.03/ZAI.4/residual.9. Endpoint not proven exhaustive; revision followed prices; no R2 order. 53-point token chart including Others differs from52-week R2 request chart; partial pace/cache time is not settlement cutoff.
 
-## Holdings and dated account context
+## Holdings and dated limits
 
-Retain OpenAI HLE NO 9, no add; priors .25/.15/.38 (central/stress/upper). Retain Michigan NO 5, no add; .44/.34 with .20–.70 range. Retain Clarity 29/29, no add or legwise sale; conditional floor $29. The 09:36 fallback’s Clarity joint stresses (minimum $187.13; $173.96 if that snapshot’s $13.17 bids lost) are historical seven-bid scenarios, not an eight-bid joint minimum or forecast. [Fallback report](../research/2026-10-18-fallback-checkin.md) has the complete 09:36 financial and source record; it is not a current account check. The latest dated 112 proof is 11:50 UTC above.
+Retain HLE OpenAI NO9/no add: central.25/stress.15/upper.38. Latest65objects unchanged/maxOpenAI53.6; Diamond59.9 is different;403 source gaps. Retain Michigan NO5/no add, central.44/stress.34/range.20–.70; original1.55 fill verified on chain. Retain Clarity29/29/no add or legwise sale, conditional floor29. [09:36 fallback](../research/2026-10-18-fallback-checkin.md) joint stresses are historical seven-bid scenarios, not current nine-bid guarantees. Latest authoritative bankroll196.22 at12:43; sequential mark, not liquidation value or profit. Other sleeve/source/daemon facts remain dated to fallback, not refreshed by the BOI entry.
 
-## Deadlines and controls
+## Next existing boundaries
 
-- Sedgwick: pull Oct. 19 10:00 UTC before voting 13:00 and rally 23:00; Kansas debate Oct. 22 00:00 UTC.
-- Idaho: pull Oct. 19 22:00 UTC before Oct. 20 forum; event time/location details remain uncertain.
-- Michigan: Oct. 20 candidate program 15:00–18:00 UTC, main event 16:00; pull any future resting order beforehand.
-- Messi: pull Nov. 1 22:00 UTC or earlier on method, list, athlete or catalyst change.
-- Review House bids each existing tick and on material news; cancel first under load-bearing uncertainty. Next scheduled check 14:00 UTC.
-
-Quota was 25% used at 09:36; the later direct check reported 33% used/67% headroom, resetting Oct. 24 20:41 UTC. No newer account/cash check is claimed. Four canonical daemons were exact-one/current at the fallback check; no restart or code edit. See the [fallback record](../research/2026-10-18-fallback-checkin.md) for full receipt detail.
+- **14UTC full11-step check** if active work reaches it; inspect current source bodies and account state, including newer Michigan headlines. Do not wait idly for it.
+- Sedgwick pullOct19 10UTC before voting13/rally23; Kansas debateOct22 00UTC. Idaho pullOct19 22UTC beforeOct20 forum, timezone uncertain.
+- Michigan candidate programOct20 15–18UTC, main16; any future bid must precede it. Messi pullNov1 22UTC, earlier method/list/athlete/catalyst uncertainty.
+- Review House/other bids every existing tick and earlier material news; cancel first under load-bearing uncertainty. No new daemon/timer. Direct quota last34%used/66%headroom, resetsOct24 20:41UTC.

@@ -22,6 +22,13 @@ repository's vetted execution paths.
 **Last maintained:** 2026-10-18. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
+**13:03 UTC order update:** [DEC-0215](research/2026-10-17-deep-review/boi_entry_1255.md)
+posted 15 Bank of Israel no-change **NO** shares at 7¢ ($1.05 if filled). Independent
+verification found it LIVE with zero matched shares, both token balances zero,
+and nine BUY commitments totaling $17.47; pUSD23.446890 leaves $5.976890 after
+all bids. This is an unfilled bid, not a holding or profit. Pull by Oct19 22:00 UTC,
+earlier on uncertainty. OpenRouter112's existing pull remains **today22:00 UTC**.
+
 ## Start here
 
 1. Read [`MANDATE.md`](MANDATE.md).

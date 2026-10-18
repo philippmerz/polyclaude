@@ -1,0 +1,41 @@
+{
+  "created_utc": "2026-10-18T12:56:38.921756+00:00",
+  "primary_model_before_own_quotes": true,
+  "review_index": 152,
+  "market_id": "3939749",
+  "condition_id": "0xb2ff6ed93d21a87d1532da4cb09f1399ec80cc6f5796f4d7601beb7067c07d4b",
+  "criteria_sha256": "e73956b4553b5be3e18d84f6457291133d4b844ae7808fc81fba17d996ab48a6",
+  "p_yes": 0.245,
+  "sensitivity_range": [
+    0.05,
+    0.65
+  ],
+  "strict_loose_mixture": {
+    "strict_weight": 0.7,
+    "strict_probability": 0.2,
+    "loose_weight": 0.3,
+    "loose_probability": 0.35,
+    "raw_yes": 0.245
+  },
+  "strict_construction": "30%that oceanrename is an actionable initiative *65%executionbyDec31 *95%correctocean/subdivision+70%notcurrentinitiative *2%spontaneousqualifyingact=.19925 rounded.20. Allsubjective,notcalibrated.",
+  "loose_construction": "Broader official-action interpretation includes directives/official renaming language without completedmaps/internationaladoption. Illustrative7%current-rally/source-gapcounts +93%*30%futurebroadqualifyingact=.349 rounded.35; notclaimrallyalreadyYES.",
+  "primary_evidence": "RootreadcompletefrozenruleandSHAverifiedactualOct10firsthandprintpoolpassage; authorlabelscheckagainsttranscript andquipped,prospectivebeforeleavingoffice2029notDec312026. OfficialAug27LakeAmericaEOshowsrealrenamingwillingness/one-executive-actpath,butlakeandgulfexplicitlyexcluded. Sep22DNCactionlistpredatesrallyanddoesnotboundOct10+;currentofficialWHsurfacesboundednoqualifyingactfound.",
+  "literal_forks": "Fiveoceansandsubdivisionsqualify;seas/gulfs/bays/straits/channels/lakesexcluded.Noexplicitcreationlowerbound;metadatacannotinventit. EO/signedbill/otherofficialaction/BGNcanqualifywithoutforeignacceptance. Mereproposalversusoperativeverbaldecreeisadjudicationrisk.",
+  "selected_entry_probabilities": {
+    "Yes": 0.095,
+    "No": 0.605
+  },
+  "reserve": 0.15,
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/ocean152_current_facts_1240.json",
+      "sha256": "c77554015b0e70f2db8150ba8fd4100dbb2f9610d8bf84e104544cd4fb929582"
+    },
+    {
+      "path": "data/deep_review_20261017/ocean152_rally_followup_1255.json",
+      "sha256": "966d8005ab94e2d1ef112496a195b85720ac11f09c5890b3f4217c2ce182206d"
+    }
+  ],
+  "calendar_limit": "About75daystoremaining2026versusbeforeleavingoffice2029;notprobabilityever.Spokenintentneednotbepriority;midterms/lame-duck/laterEOscansaffecttiming. NoannouncedDec31actiondatefound.",
+  "no_action": "Primaryvaluationonly; noprovedsourceedge/orders/financialprior."
+}
