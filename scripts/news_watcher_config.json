@@ -1,5 +1,5 @@
 {
-  "_comment": "Feeds + keyword tiers for the polyclaude news watcher. Keywords are matched case-insensitively against feed entry titles + summaries. Tiers: 1=urgent (auto-fires cron tick + Telegram pings); 2=notable (Telegram only). Edit freely; daemon re-reads on every poll.",
+  "_comment": "Feeds + internal review tiers for the polyclaude news watcher. Keywords match case-insensitively against feed titles + summaries. Tier 1 persists an alert and can trigger a review tick; Tier 2 uses the scoped relevance filter. No raw RSS Telegram pings; reviewed material findings/actions are reported by the agent. Daemon re-reads config every poll.",
   "poll_interval_seconds": 300,
   "alert_cooldown_seconds": 1800,
   "max_entries_per_feed": 30,

@@ -197,6 +197,10 @@ and “Process & operator covenant.” Canonical records remain in notes/;
   ALREADY_CLAIMED means no action or duplicate reply. EXPIRED means only a
   generic request for a fresh resend. Outbound agent text uses the documented
   msg --stdin path with a single-quoted heredoc delimiter.
+- Keep Telegram summaries material-only. Raw RSS keyword matches stay in the
+  internal review queue, including Tier 1; research candidates and unfilled
+  bids do not justify standalone headline pings. Preserve review wakeups and
+  report material findings, actions, decisions and operational incidents.
 - Reconcile triggered alerts with actual current holdings and orders; stale
   keywords or a dropped position must not perpetuate fictional exposure.
   Emergency exploit/depeg/chain-halt action follows the exact corroboration,

@@ -4,7 +4,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 
-- `news_watcher.py` — polls 11 RSS feeds, fires Tier-1 alerts (auto-spawns a `daily_checkin.sh` cron tick) and Tier-2 alerts (scoped fast-agent filter, then Telegram policy). Config: `news_watcher_config.json`.
+- `news_watcher.py` — polls configured RSS feeds. Tier 1 persists internal alerts and can trigger a review; Tier 2 uses the scoped relevance filter. No raw RSS Telegram messages; the reviewing agent reports material findings/actions. Config: `news_watcher_config.json`.
 - `telegram_listener.py` — long-polls Telegram, durably spools authorized messages, and submits them to the live operator's ordered conversation queue.
 - `heartbeat_watch.py` — hourly probe; alerts if any daemon stalls > 30 min or any headless model worker runs > 60 min.
 

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 203 recorded observations from Apr-25
+The local performance CSV now has 204 recorded observations from Apr-25
 through Oct-18. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -121,42 +121,44 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last account snapshot — October 18, 14:45 UTC
+## Last account snapshot — October 18, 16:38 UTC
 
-Authoritative `bankroll.py` completed **14:45:12 UTC**, after the Messi fill.
-These are rounded sequential marks and indicative depth, neither synchronized
-NAV nor certified proceeds. VM/API costs remain excluded.
+Authoritative `bankroll.py` window **16:37:51–16:38:06 UTC**. Rounded sequential
+marks and indicative depth; neither synchronized NAV nor certified proceeds.
+VM/API costs remain excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | **$195.90** (−$0.25 from13:56) |
-| Separately funded gas | $5.69 |
-| Trading midpoint / indicative depth | $190.21 / **$188.19** |
-| Polymarket midpoint / fee-net indicative depth | $33.43 / $31.41 |
-| Whole-account approximate depth | $193.88 |
-| Open-position cost / accounting residual | $32.76 / $19.53 |
+| Total marked bankroll | **$195.94** (+$0.04 from14:45) |
+| Separately funded gas | $5.68 |
+| Trading midpoint / indicative depth | $190.26 / **$188.24** |
+| Polymarket midpoint / fee-net indicative depth | $33.48 / $31.46 |
+| Whole-account approximate depth | $193.92 |
+| Open-position cost / accounting residual | $32.76 / $19.54 |
 
 Retain Michigan NO5, OpenAI HLE NO9, Clarity29/29, Messi YES5 and Trump NO0.33;
-noadd. HLE's15% stress, Michigan's20% low range and Messi's20% low range favor
+no add. HLE's15% stress, Michigan's20% low range and Messi's20% low range favor
 exit; central comparisons favor holding. Clarity's floor is conditional on
-common interpretation, collateral and settlement. Gemini4.03475 losing CTF
-tokens have verified zero redemption value; nothing was burned or regraded.
+common interpretation, collateral and settlement. Its16:44 paired exit is
+indicative because one book was stale. Gemini4.03475 losing CTFs retain zero
+redemption value; no burn, regrade, sale, transfer or redemption transaction.
 
-Independent **14:44:36** proof after the fill found eight remaining BUYs
-committing **$16.12**, pUSD22.096890/free5.976890; only the Messi reservation
-was retired9→8. The later film pilot temporarily reserved another$1.04; its
-[terminal outcome](research/2026-10-17-deep-review/film2161_entry_1450.md) is
-separate from this account mark. No sale, transfer or winning redemption.
+The16:35 authenticated inventory confirms **eight LIVE, zero-matched BUYs /
+$16.12 pending**; pUSD22.096890/free5.976890, eight reservations unchanged.
+[Exact bids and pulls](notes/resting_orders.md): OpenRouter **today22UTC**;
+Sedgwick **Oct19 10UTC**, BOI/Idaho **Oct19 22UTC**, earlier uncertainty cancels first.
 
-The [14UTC check](research/2026-10-18-1400-checkin.md) preserves source gaps,
-32 later [Messi joint states](research/2026-10-18-messi-fill.md) and capped
-scanner coverage. Claim insurance covers six indexed holdings plus one
-deindexed claim. Four daemons run once with current code; Ostium has zero
-trades, limits and allowance. HLE's cached65-row body matches the morning
-baseline, while the uncached request returned403; no current-absence guarantee.
-All87 scanner context batches were reviewed factually; capped zeros do not
-establish an exchange-wide absence of opportunity.
+The [16:34 full check](research/2026-10-18-1634-checkin.md) records 64 conditional
+wealth cells, held-source gaps and all77 scanner-context batches; capped scans
+do not establish exchange-wide absence. Claim insurance is CLEAN6indexed plus
+one deindexed claim. Ostium has zero trades, limits and allowance.
+
+**Alert repair:** raw RSS headlines now stay internal, including Tier1; review
+wakeups remain active. The news watcher was restarted once/current-code at16:54.
+Material findings/actions/decisions are reported after review. The separate
+Messi YES hurdle-coverage bug is fixed;107 advisory and27 notification/doctrine
+tests pass. No forecast or holding changed.
 
 [Performance chart](https://philippmerz.github.io/polyclaude/) and
 [recorded CSV methodology](docs/README.md).

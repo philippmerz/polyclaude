@@ -1,4 +1,12 @@
-## Current — October 18, 15:27 UTC
+## Current — October 18, 16:59 UTC
+
+- **16:34 full check complete:** no asset action; eight LIVE/zero-matched BUYs/$16.12, pUSD22.096890/free5.976890, eight reservations unchanged. Authoritative16:37:51–16:38:06 mark195.94/gas5.68/trading190.26mid/188.24indicative depth;64 conditional wealth cells, not guaranteed wealth. [Full check and gaps](../research/2026-10-18-1634-checkin.md).
+- **Telegram flood fixed:**63 Tier1 public detections over about18h bypassed relevance review. Raw RSS sends removed; internal logs/critical records/review wakeups retained. News watcher restarted16:54, exactly one/currentcode;27 notification/doctrine tests pass. DEC0217 records this change. No new feed/timer or private state reset.
+- **Messi hurdle coverage fixed:** consistent binary priors now project to the held side;107 regressions pass and one live rerun covers Messi60%. No forecast/financial prior edit. HLE15% stress and MI/Messi20% endpoints still favor exit; central cases retain holdings/noadd. Clarity YES book was stale at16:44, so pair exit is indicative.
+- **Research unchanged:**254valued/2blocked/331excluded/2,413pending,587base+24revisions,next196. All77 emitted scanner batches factually audited; selected-but-unemitted34primary/1,331thin remain unreviewed. Save/index each completed evaluation before the next. [Checkpoint](deep_review_checkpoint.json).
+- **Existing boundaries:**18UTC check; OpenRouter112 pull **today22UTC**; Sedgwick **Oct19 10UTC**, BOI137/Idaho **Oct19 22UTC**. Earlier load-bearing uncertainty cancels first; no automatic add/repost. WeeklyOct23/monthlyNov12 not due. [Exact management](resting_orders.md).
+
+## Historical checkpoint — October 18, 15:27 UTC
 
 - **Latest account check15:21:12:** eight LIVE/zero-matched BUYs, **$16.12 pending**, seven indexed rows/eight reservations, unchanged from15:06. No trade or new bankroll mark. Last fixed-chain proof14:58 remains pUSD22.096890/free5.976890; last authoritative account mark14:45 remains195.90. [Account receipt](../data/periodic_20261018T1518_account.json).
 - **CA06 fundraising follow-up complete:** the new headline concerns the October15 Q3 filing. Official September30 cash is Kiley519,859/Pan612,834.97, not current balances or new polling. Retain NO50@3c/$1.50,15%central/5%selected stress, noadd. Finance-to-vote effect is uncalibrated; an assumed extra2pp Pan structural-margin shift would reverse the reserved edge. Existing cancel-first policy applies. [Root source/judgment](../data/periodic_20261018T1518_kiley_judgment.json), [candidate follow-up](../research/2026-10-17-deep-review/candidate_followup.md).

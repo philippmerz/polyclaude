@@ -4,10 +4,12 @@ Long-running daemon: polls a configurable list of RSS feeds every N seconds,
 matches entry titles + summaries against tiered keyword lists, and:
 
 - Tier 1 (book-resolving events: Trump dies, regime falls, aliens confirmed,
-  peace deal signed, etc.) → Telegram alert with [URGENT] prefix AND auto-fires
-  a cron-style check-in so a fresh max-effort session reacts ASAP.
-- Tier 2 (notable but not resolution-shifting) → Telegram alert with [NEWS]
-  prefix only; the next scheduled cron tick will pick it up.
+  peace deal signed, etc.) → persist a structured alert and may wake the
+  scheduled check-in immediately, subject to existing cooldowns.
+- Tier 2 (notable but not resolution-shifting) → filter and persist qualifying
+  alerts for the next scheduled check-in to review.
+
+The watcher is detection-only: RSS matches never send Telegram messages.
 
 Config: `news_watcher_config.json` colocated with this script (in repo, editable).
 State (seen entry ids, last alerts): file pointed to by POLYCLAUDE_NEWS_STATE.
@@ -47,8 +49,6 @@ STATE_PATH = _secrets.path("POLYCLAUDE_NEWS_STATE")
 PID_PATH = _secrets.path("POLYCLAUDE_NEWS_PID")
 LOG_PATH = _REPO_ROOT / "logs" / "news_watcher.log"
 ALERTS_LOG_PATH = _REPO_ROOT / "notes" / "news_alerts.jsonl"
-TELEGRAM_TOKEN_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_TOKEN")
-TELEGRAM_STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 CRON_SCRIPT = _SCRIPT_DIR / "daily_checkin.sh"
 TITLE_DEDUP_SECONDS = 72 * 60 * 60
 
@@ -113,29 +113,6 @@ def _normalize_title(title: str) -> str:
     if not title:
         return ""
     return " ".join(title.lower().split()).strip()
-
-
-def telegram_send(text: str) -> bool:
-    """Best-effort Telegram message; return True only on API confirmation."""
-    try:
-        token = TELEGRAM_TOKEN_PATH.read_text().strip()
-        chat_id = json.loads(TELEGRAM_STATE_PATH.read_text())["chat_id"]
-        # Cap length to Telegram's 4096; trim with ellipsis
-        if len(text) > 4000:
-            text = text[:3997] + "..."
-        r = httpx.post(
-            f"https://api.telegram.org/bot{token}/sendMessage",
-            json={"chat_id": chat_id, "text": text, "disable_web_page_preview": False},
-            timeout=10,
-        )
-        r.raise_for_status()
-        if not r.json().get("ok"):
-            print(f"[watcher] telegram error: {_secrets.scrub(r.text[:200])}", flush=True)
-            return False
-        return True
-    except Exception as e:
-        print(f"[watcher] telegram exception: {_secrets.scrub(str(e))}", flush=True)
-        return False
 
 
 def fire_cron_tick() -> None:
@@ -325,12 +302,13 @@ def _fetch_article_body(url: str, max_chars: int = 4000) -> str | None:
 
 
 def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: str = "") -> tuple[bool, str, list[dict]]:
-    """Ask a fast scoped worker to filter Tier-2 news and score impact.
+    """Ask a fast scoped worker whether to retain Tier-2 news and score impact.
 
-    Returns (should_send, one_line_reason, per_position_impacts).
+    Returns (should_retain_internally, one_line_reason, per_position_impacts).
     Each impact is {"position": str, "level": NONE|MINOR|MATERIAL|CRITICAL, "reason": str}.
     On agent error/timeout/unparseable output, returns (True, "agent unavailable: ...", [])
-    — fail-OPEN so the operator sees raw alerts rather than silent drops.
+    — fail-open so the next check-in can review the raw alert rather than silently
+    dropping it. The worker's literal SEND verdict means retain for internal review.
     """
     pos = _positions_summary_blocking()
     if not _POSITIONS_CACHE.get("polymarket_available", False):
@@ -345,7 +323,7 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
         f"Title: {title}\n"
         f"Summary: {body}\n\n"
         "FIRST LINE: SEND or SUPPRESS verdict.\n"
-        "  - SEND = the article moves a probability the operator cares about (state change, named officials taking action, hard numbers, named-entity events).\n"
+        "  - SEND = retain this article for internal check-in review because it may matter to a decision (state change, named officials taking action, hard numbers, named-entity events).\n"
         "  - SUPPRESS = recycled noise (rephrasing of existing facts, opinion pieces, generic topic mentions).\n\n"
         "FOLLOWING LINES (only if SEND, only for IMPACTED positions): one line per "
         "materially-affected position, in this exact format:\n"
@@ -397,19 +375,19 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
             continue
 
     upper = first_line.upper()
-    send_decision = None
+    retain_decision = None
     send_reason = ""
     if upper.startswith("SEND"):
-        send_decision = True
+        retain_decision = True
         send_reason = first_line[4:].lstrip(": ").strip() or "(no reason)"
     elif upper.startswith("SUPPRESS"):
-        send_decision = False
+        retain_decision = False
         send_reason = first_line[8:].lstrip(": ").strip() or "(no reason)"
     else:
-        send_decision = True
+        retain_decision = True
         send_reason = f"agent unparseable: {first_line[:120]}"
 
-    if send_decision and url and any(i["level"] == "CRITICAL" for i in impacts):
+    if retain_decision and url and any(i["level"] == "CRITICAL" for i in impacts):
         body = _fetch_article_body(url)
         body_len = len(body) if body else 0
         if body and body_len > 200:
@@ -423,7 +401,7 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
             print(f"[watcher] tier2-CRITICAL re-val SKIPPED body_len={body_len} (kept CRITICAL) url={url[:80]}",
                   flush=True)
 
-    return (send_decision, send_reason, impacts)
+    return (retain_decision, send_reason, impacts)
 
 
 def _revalidate_critical_impacts(impacts: list[dict], title: str,
@@ -550,7 +528,7 @@ def match_keywords(text: str, keywords: list[str]) -> str | None:
 
 
 def poll_once(config: dict, state: dict) -> int:
-    """Run one polling cycle. Returns number of new alerts emitted."""
+    """Run one detection cycle. Return the number of internally retained alerts."""
     seen = set(state.get("seen_ids", []))
     seen_titles: dict[str, float] = state.get("seen_titles", {})  # title-hash → first-seen-ts
     last_alerts = state.get("last_alerts", {})
@@ -597,48 +575,28 @@ def poll_once(config: dict, state: dict) -> int:
             tier = 1 if kw1 else 2
             kw = kw1 or kw2
 
-            # Per-keyword cooldown to avoid spamming on a hot story
+            # Per-keyword detection cooldown to avoid repeating a hot story.
             cooldown_key = f"t{tier}:{kw}"
             last = last_alerts.get(cooldown_key, 0)
             if now - last < cooldown:
                 continue
-            # Tier-2 goes through agent-filter (broad keyword recall + agent
-            # precision). Tier-1 always sends — those are auto-cron-firing,
-            # we never want to suppress a regime-changing event.
+            # Cooldown records detection, independent of any outbound channel.
+            last_alerts[cooldown_key] = now
+            # Tier-2 goes through the scoped filter; Tier-1 detections are kept
+            # and can wake the scheduled check-in subject to existing gates.
             agent_reason = None
             impacts: list[dict] = []
             if tier == 2:
-                send, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary, link)
-                if not send:
-                    last_alerts[cooldown_key] = now
+                retain, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary, link)
+                if not retain:
                     print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
                           f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
                     continue
 
-            # Telegram pings are ACTION-ONLY (operator is autonomous, raw news
-            # adds noise without value). Only Tier-1 catastrophic events ping
-            # immediately — those auto-fire a cron tick that does the work.
-            # Tier-2 (incl. MATERIAL/CRITICAL impacts) silently persists to
-            # news_alerts.jsonl; the next scheduled cron tick reads, decides,
-            # and includes the digest in its tick-summary Telegram.
-            if tier == 1:
-                why_line = f"\nwhy: {agent_reason}\n" if agent_reason else "\n"
-                msg = (
-                    f"[URGENT] {feed['name']}\n"
-                    f"matched: {kw}"
-                    f"{why_line}"
-                    f"\n{title}\n"
-                    f"\n{link}\n"
-                    f"\nauto-spawning cron tick for sanity-check + decision."
-                )
-                if telegram_send(msg):
-                    last_alerts[cooldown_key] = now
-            else:
-                last_alerts[cooldown_key] = now
-            # Persist to structured alerts log for next cron tick to consume.
-            # UNCONDITIONAL for any send (2026-06-11: 30h of Iran-war alerts were
-            # logged but dropped here because impacts parsed empty — a send-worthy
-            # alert with unknown impacts is still an alert; the cron tick decides).
+            # Persist retained detections for the next check-in to review. A
+            # Tier-2 SEND verdict means internal retention, not a message.
+            # Unknown impacts stay attached as empty rather than dropping the
+            # alert; the check-in decides what matters.
             _append_news_alert({
                 "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
                 "tier": tier,
@@ -667,8 +625,8 @@ def poll_once(config: dict, state: dict) -> int:
         # SCHEDULED cron tick or an actively-working session. Journal mtime is
         # the shared "a tick just produced output" signal — if any tick ran in
         # the last 35 min, this auto-fire is redundant churn (the 02:00 cron
-        # tick → 02:23 duplicate-fire case). Alert detection/logging/telegram
-        # above are untouched; only the redundant full-tick SPAWN is skipped,
+        # tick → 02:23 duplicate-fire case). Alert detection and logging above
+        # are untouched; only the redundant full-tick SPAWN is skipped,
         # so Tier-1 sensitivity is fully preserved during active conflict.
         tick_recent = False
         try:

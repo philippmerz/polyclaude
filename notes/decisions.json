@@ -1,5 +1,5 @@
 {
-  "next_id": 217,
+  "next_id": 218,
   "decisions": [
     {
       "id": 1,
@@ -4621,6 +4621,26 @@
         "proof": "data/deep_review_20261017/film2161_cancel_reconcile_1500.json",
         "no_repost": true
       }
+    },
+    {
+      "id": 217,
+      "timestamp": "2026-10-18T16:55:20Z",
+      "type": "scaffolding",
+      "thesis": "Raw Tier-1 RSS keywords bypassed relevance review and flooded Telegram, including research and canceled-order topics. Keep detections, critical records and review wakeups internal; send reviewed material findings/actions. Correct the separate binary-prior projection that left held Messi YES uncovered in the marginal-hurdle advisory.",
+      "confidence": "high",
+      "prediction": "Offline counterexamples retain Tier-1 and critical Tier-2 alerts and review wakeups without any direct RSS Telegram send. The restarted daemon uses current code exactly once. Consistent YES/NO priors price the actual held side; inconsistent pairs and unknown outcomes remain guarded. No ROI improvement or trade outcome is claimed.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-18",
+      "tags": [
+        "operations",
+        "notifications",
+        "advisory_coverage"
+      ],
+      "slug": null,
+      "outcome": "Implemented and verified in this run: 107 hurdle/group/price/source regressions passed; old code reproduced three failing side-projection counterexamples. Notification and doctrine suites passed 27 tests. Removed raw-RSS sender; internal retention, dedup and wakeup tests passed. News watcher restarted at 16:54 UTC; all four canonical daemons exactly one and current code. No asset action or probability change.",
+      "calibration_delta": null,
+      "lesson": "A recall keyword is an internal research trigger, not evidence of portfolio relevance or materiality. Separate detection from operator notification; validate actual held-side probability coverage.",
+      "resolved_at": "2026-10-18T16:55:20Z"
     }
   ]
 }

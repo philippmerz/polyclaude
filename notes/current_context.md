@@ -1,38 +1,44 @@
 ---
-reviewed_at: "2026-10-18T15:32:01.440902+00:00"
+reviewed_at: "2026-10-18T16:59:28.506511+00:00"
 valid_until: "2026-10-18T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 1fffa34226148d2d0313e7486af3543c0f62827e070b7be1bfab46df491fe702
+  README.md: 99eaba807166337207c27326f294be970c355afd5b3b5bffd343c46fdf01fa5b
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
-  strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
-  strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
+  strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
+  strategy/02_operations.md: e85f93a752ad761090b42f0474c46d838e1843e78b0bfc94587b94473f8d6c8f
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
-  scripts/README.md: 4e19116bf182083c548261b4b8f47168a16c9c3b817ecb326847bdf349663685
+  scripts/README.md: b9124afebd5272a0db13c3b47a7e48174b8b22f926a5cde1c3343a0ec81fa804
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: fdf764ecc3699fadeec30359b1bc46bcd093d6f2d7cb2aeb42ddeadce9d1e65d
+  notes/backlog.md: bd105d8923b2b780f833c529086618e7ff62765e30bf618f860ed82fe52bd380
   notes/resting_orders.md: d0d67efa92e9c648966a69cd240033a459ce515673ae089d543e91d546ab11c6
-  notes/journal.md: 598920dec63841705aea549f898f77d2f1139436e58348c3e9fdc8cf431bf74f
+  notes/journal.md: c6dc3b05598859c1e2979c3a80752d74eec1bb782b1859774c869cc9cf96c046
 ---
 
-## Research checkpoint — October 18
+## Current bounded check — October 18
 
-**254 valued, 2 blocked, 331 factual exclusions, 2,413 pending** in the frozen3,000-condition review;587 immutable base records+24 append-only revisions, no active case, next196. [Checkpoint](deep_review_checkpoint.json), [index](../research/2026-10-17-deep-review/INDEX.md), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md). [14:52:56 offline audit](../data/deep_review_20261017/ledger_audit_1455.json) verifies all identities, base JSON/MD/JSONL, revision hashes/predecessors, index and counts. Save/index each completed evaluation before the next. First100/200 notified; continue the finite authorized queue when active. No new durable goal, timer or idle continuation.
+**16:34 full check completed once; no asset action/new fill.** [Full record](../research/2026-10-18-1634-checkin.md). Do not replay scanners or entry/cancel writers while resuming. Next existing review18UTC; OpenRouter pull22UTC. No new durable goal, timer or idle continuation.
 
-Recent187/194/197 forecasts36/91/43%YES concern a named future hourly odds rank, All Critics score with view gaps, and exact terminal Binance spot candle conditional on14:15 ETH2387.63. Dated quotes are not live alpha. Film183/2161 now40/58%YES under the [shared competition model](../research/2026-10-17-deep-review/models/film183_2161_competition_1440.json), not independent forecasts. [Current revisions](../research/2026-10-17-deep-review/CURRENT_REVISIONS.md) and [follow-up](../research/2026-10-17-deep-review/candidate_followup.md).
+**Alert flood repaired:**63 public Tier1 detections in about18h bypassed relevance review; delivery count unknown. Raw RSS Telegram sender removed. Internal alerts/critical records/review wakeups remain; agent sends reviewed material findings/actions/decisions. News restarted16:54:30 PID37974; all4daemons exactlyone/currentcode.27notification/doctrine tests pass. Material summaryTG1252 delivered once; latest inbound62572751 EXPIRED/resend1244 already handled. Never reread or duplicate replies. [Policy](../strategy/02_operations.md).
 
-## Actual money — final dated proof
+## Account and risk — dated observations
 
-**Messi DEC-0213 filled:**5 Global Athletes TOP5 YES at27¢/$1.35, Polygon95752007 at14:22:38; authenticated maker match, receipt +5CTF/−1.35pUSD/no project gas, indexed cumulative buys5 agree. Root14:44 exact reconciliation retired only its reservation9→8. Retain5/noadd, central60/stress40/range20–90%; dated fee-net exit1.20312 vs hold3/2/low1, log-growth break-even24.38–24.67%. Low range favors exit. Google2026 endpoints404/2025-only growth methodology do not establish current absence/cutoff/rank; Aug31 retirement/Oct6 farewell already modeled; today's alert repeats it. Nov1 pull obsolete. [Full source/hold/joint risk](../research/2026-10-18-messi-fill.md).
+Authoritative bankroll16:37:51–16:38:06: **195.94total/gas5.68/trading190.26mid/188.24indicative depth**, whole193.92, PM33.48/31.46,cost32.76,residual19.54. Sequential rounded estimates, not NAV/certified proceeds/audited profit; VM/API excluded. CSV204observations/chart10tests pass. [Snapshot](../research/2026-10-18-1634-checkin.md:3).
 
-**Film DEC-0216 CANCELED UNFILLED.** One13NO8¢/$1.04 bid accepted once, canceled14:52:45. Root14:58:02 after315s grace proved terminal canceled/trades0/both cases183+2161CTFs0/cash unchanged; only film reservation9→8 retired. No film holding, cash spend, PnL, add/repost/secondleg. FinalPolygon95753423: **8LIVE zero-matched BUYs/$16.12**, pUSD22.096890/**free5.976890**,8reservations/no entry block. [Exact final proof](../data/deep_review_20261017/film2161_cancel_reconcile_1500.json), [entry/outcome](../research/2026-10-17-deep-review/film2161_entry_1450.md). Compound modelNO7.28% reverses8¢ despite central42/selected17; estimatedFriday/weekend gaps remain. Temporary film feed/Tier1 term removed after zero-exposure proof; other watcher config preserved, normal reload asynchronous. No forced poll/state edit/restart.
+16:35 exhaustive authenticated book: **8LIVE zero-matched BUYs/$16.12**,7indexedrows/8reservations unchanged; prune=False merge passes. pUSD22.096890/free5.976890. Stateaudit --fix CLEAN6open+1deindexed, no holds dropped. Redeem-all0winning/losingGemini4.03475 skipped, no TX/burn. Hormuzmicroclaim insured; gas exceeds dated payout. [Routine](../data/checkin_20261018T1634_routine.json).
 
-**Remaining bid pulls:** OpenRouter1125NO65¢/$3.25 **TODAY22UTC**; BOI13715NO7¢/$1.05 **Oct19 22UTC** before unknown-timeOct20 releases; Idaho34YES3¢ **Oct19 22UTC**; Sedgwick5YES20¢ **Oct19 10UTC** before voting13/rally23. Four House bids unchanged, preserve literal historicalME-01slug mapping toME-02. Review each existing tick/earlier material news; cancel first on load-bearing uncertainty, no automatic add/repost. [Exact identities/policies](resting_orders.md). Never replay an entry writer.
+Retain/noadd: **HLE NO9 p25/stress15/upper38; MI NO5 p44/stress34/range20–70; Messi YES5 p60/stress40/range20–90; Clarity29/29; TrumpNO.33 belowmin5**.16:44 fee-net exits1.91822/1.458/1.20312; HLE15 and MI/Messi20 favor exit, central cases retain. Clarity indicative27.17935 has staleYESbook1,089.573s; no fresh paired-exit claim or legwise sale.64conditional wealth cells/160break-even cells independently checked;169.66 minimum with all8bid losses conditions onClarityfloor29, not guaranteed wealth/calibrated joint probability/hedge credit. DatedOct17 Aave3.0544% is carry sensitivity. [Risk](../data/checkin_20261018T1634_risk.json).
 
-Retain HLE OpenAI NO9/noadd central25/stress15/upper38; cached65rows/max53.6 unchanged, uncached403, Diamond separate, current unknown beyond cache. Michigan NO5/noadd44/stress34/range20–70; official Oct20 program15–18UTC/main16. Clarity29/29/noadd/nolegwise sale, conditional29floor; TrumpNO.33 below minimum. Gemini4.03475 losing CTFs have zero redemption value; no burn. Central holds/HLE15 and MI20 stresses favor different actions. No calibrated joint probabilities or hedge credit.
+**Messi DEC0213 original fill** YES5@27c/$1.35 at14:22:38/Polygon95752007; successful receipt+indexed buys+CTFs agree. Original reservation retired9→8; Nov1BUYpull obsolete. [Fill/Google-method gaps](../research/2026-10-18-messi-fill.md). **FilmDEC0216 canceled unfilled:**13NO8c/$1.04 accepted then canceled14:52:45;14:58 terminal/trades0/bothfilmCTFs0/cashunchanged after315s grace; only its reservation retired. No film holding/spend/PnL/add/repost. [Outcome](../research/2026-10-17-deep-review/film2161_entry_1450.md).
 
-## Completed check and next existing boundary
+**Remaining pulls:** OpenRouter1125NO65c/$3.25 **TODAY22UTC**; Sedgwick5YES20c/$1 **Oct19 10UTC**; BOI13715NO7c/$1.05 andIdaho34YES3c/$1.02 **Oct19 22UTC**, before unknown-timeOct20 releases/forum. FourHouse bidsME02/CA06/MT01/NY01 unchanged; preserve historicalME-01slug mapping. Everyexistingtick/earliernews review; cancel first onload-bearing uncertainty, no automaticadd/repost. [Exact IDs/policies](resting_orders.md).
 
-[14UTC eleven-step check](../research/2026-10-18-1400-checkin.md) completed once; do not rerun scanners merely to resume research. Separate authoritative bankroll completed14:45:12: **195.90 total/gas5.69/trading mid190.21/depth188.19**, whole approximate depth193.88, PM33.43/31.41,cost32.76,residual19.53. Rounded sequential marks, not synchronized NAV/certified proceeds or audited cash profit; VM/API excluded. CSV203observations; chart10/10. Eight-bid+held conditional bookkeeping minimum169.66 is not guaranteed wealth. Claim insurance6indexed+1deindexed; final read-only audit CLEAN. 15:21 account unchanged; Kiley Q3cash520K/Pan613K: retainCA06NO3c/noadd. LaLota filing reviewed. Pages203rows live15:05. 15:26 athlete alerts datedAug31/Sep28; no change.
+## Sources and checks
 
-Seven capped scanner outputs and all87context batches audited factually, no exchange-wide absence claim. UMA41tracked=39uniqueIDs; Four daemons exactlyone/currentcode at14UTC; Ostium0trades/limits/allowance. Next already-scheduled check**18UTC**, OpenRouterpull22UTC; weeklyOct23/monthlyNov12. Latest inbound62572751 EXPIRED; resendTG1244 already sent, do not reread/reply. Material updateTG1239 sent. Use Git log for record backups.
+SixfullGamma criteria/identities unchanged. HLE65cached/maxOpenAI53.6 unchanged; uncached16:44returned403, Diamond separate, currentinventory unknown beyondcache. Senate234Sep15 procedural49–50, notfinalpassage; directXML/HTMLgap. MIofficialOct20program15–18UTC/main16. KCURinquiry requestpublishedOct15/about2020conduct; noofficialfinding/newpoll. Harris/KileyarticleOct8. Local3/MotherJones/Bloomberg/Rischopinion bodies unverified. OpenRouterOct12partial157.072746975956T/53points notfinaltargetweeksorR2rank; BOIdirectschedulechallenge/priorOct20unknownreleasetimes. Forecasts unchanged. [Sources](../data/checkin_20261018T1634_sources.json).
+
+MessiYES falsely UNCOVERED due binary-anchor mismatch fixed;107regressions pass (oldcode3counterexamplefailures), one livehurdle covers3holdings/no flags; financial priors unchanged. Kellyusesdated195.90cache/advisory/noadd. UMA42tracked/40distinct refreshed/0alerts; no watchlisthit, cruxgap, overduedecision or Ostiumchange. Ostium0trades/limits/allowance. DEC0217 records verified fixes; prior216records preserved. WeeklyOct23/monthlyNov12, completed20/20experiment no rerun.
+
+## Finite research checkpoint
+
+**254valued/2blocked/331factualexclusions/2,413pending** fromfrozen3000;587immutablebase+24append-only revisions, noactivecase,next196. [Checkpoint](deep_review_checkpoint.json), [index](../research/2026-10-17-deep-review/INDEX.md), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md). Save/index each completed evaluation before next. First100/200 notified. Sevenrequiredscans/all77batches audited factually; selected-but-unemitted34primary/1,331thin remainunreviewed. Caps/mappingerrors/189unquoted consistencygroups prevent exchange-widezero claims. [Batch audit](../data/checkin_20261018T1634_batches_audit.json).

@@ -20,10 +20,11 @@ portfolio P&L and passive index comparisons remain part of account evaluation.
 ## News watcher — 24/7 reactive layer
 
 - **Daemon:** `scripts/news_watcher.py` (subcommands `start | status | stop | once`). Restarts on reboot via `@reboot` crontab.
-- **Feeds:** 11 RSS sources (BBC World/Politics/ME, Al Jazeera, NPR World/Politics, Guardian World/US, France24, CBS, Fox World). Polled every 300s.
+- **Feeds:** configured public RSS sources, polled every 300s; the current list is in the config.
 - **Config:** `scripts/news_watcher_config.json` — feeds + tiered keyword lists, editable; daemon re-reads each poll.
-- **Tier 1** (book-resolving): Trump dies / 25A-removed, Iranian regime falls / Khamenei dies, US-Iran permanent peace deal, Pahlavi takes power, aliens confirmed, Jesus returns, Iran missile-strikes a European city. → `[URGENT]` Telegram **and** auto-spawns `daily_checkin.sh` for max-effort response. 30-min rate limit between auto-fires.
-- **Tier 2** (notable): Trump health/security, Hormuz blockade ops, US-Iran talks state, Khamenei health, UAP/AARO reports, Eurovision rehearsals, Ohio primary, La Liga title race. → scoped agent filter, then structured persistence for the next material tick summary. Per-keyword 30-min cooldown.
+- **Tier 1:** broad recall keywords persist an internal alert and may spawn `daily_checkin.sh` for review. A match does not establish a held position, fresh event or material impact. Existing 90-minute and recent-journal checks limit redundant review spawns.
+- **Tier 2:** a scoped agent filters relevance before structured persistence for the next review. Unknown inventory/filter failures remain visible internally. Per-keyword detection cooldown is 30 minutes.
+- **Outbound policy (October 18):** the news watcher sends no raw headlines to Telegram, including Tier 1. The reviewing agent sends material findings, verified actions or decisions through the documented sender; routine mentions, research candidates and unfilled bids do not justify standalone headline pings. Internal detection, critical-impact records, review triggers and operational incident warnings remain active.
 
 ## Telegram bridge
 

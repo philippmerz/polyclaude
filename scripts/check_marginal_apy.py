@@ -512,8 +512,14 @@ def main() -> int:
         gross_carry_apy = (1.0 - mark) / mark * 365 / days if mark >= 0.5 else None
 
         matched = _match_prior(slug, priors)
-        prior_p = matched[1] if matched and matched[0] == outcome else None
-        prior_stale = _stale_suffix(matched[2]) if matched and matched[0] == outcome else ""
+        prior_p = None
+        if matched and outcome in ("Yes", "No") and matched[0] in ("Yes", "No"):
+            # _load_priors preserves its existing side-anchored tuple API.
+            # Project that binary anchor onto the side actually held; a Yes
+            # prior also prices its complementary No, and vice versa. Never
+            # infer binary semantics for an unknown named outcome.
+            prior_p = matched[1] if matched[0] == outcome else 1.0 - matched[1]
+        prior_stale = _stale_suffix(matched[2]) if prior_p is not None else ""
         expected_edge_apy = None
         if prior_p is not None:
             expected_edge_apy = (prior_p / mark - 1.0) * 365 / days
