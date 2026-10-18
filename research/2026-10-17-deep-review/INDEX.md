@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T22:26:45.197745+00:00
+Updated: 2026-10-18T23:49:54.031284+00:00
 
-**292 valuations saved; first milestone100:** 292 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2361 pending.
+**300 valuations saved; first milestone100:** 300 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2353 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -299,7 +299,15 @@ Each report below is written before moving to the next evaluation. Related contr
 |285|[Senators vs. Flyers](evaluations/0285.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |286|[Mistral AI IPO before 2027?](evaluations/0286.md)|valued|NO ENTRY: YEScentralpositive butselected0fails2.49%fee-inclusivecost;NOcentralnegative at98.56%cost. Fullreview/valued, notfactualexclusion.|
 |287|[Will Missouri enact a data center moratorium by December 31, 2026?](evaluations/0287.md)|valued|NO ENTRY: YEScentralpositivebutselected0fails2.18%fee-inclusivecost;NOcentralnegative at98.0785%cost. Fullreview/valued; notlawabsenceproof orfactualexclusion.|
+|288|[Will Elon Musk post 200-219 tweets from October 16 to October 23, 2026?](evaluations/0288.md)|valued|NO ENTRY: YES central profit only0.00303 per10 shares and selected0 fails; NO central negative. Dated planning, not execution authorization.|
+|289|[Alexandre de Moraes out as Brazil Supreme Court Justice?](evaluations/0289.md)|valued|NO central positive13.17pp per fee-inclusive cost but selected76.86% fails78.69% cost/79.18% carry. NO ENTRY; preserve candidate evidence for revalidation, not a factual exclusion.|
+|290|[StandX FDV above $50M one day after launch?](evaluations/0290.md)|valued|NO ENTRY: YES small uncalibrated tail central surplus fails actual reserve; NO central negative and carry hurdle exceeds100%. Valued future event, not factual exclusion.|
 |291|[Florida vs. Texas](evaluations/0291.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|292|[Will OpenRouter process at least 725T tokens from Sep 28 to Oct 25?](evaluations/0292.md)|valued|NO ENTRY: YES centralpositive12.85pp but selected0 at15pp source/model allowance fails2.08% fee cost; NO centralnegative. Source lag remains dominant; no current execution authorization.|
+|293|[Will Yisrael Beiteinu win less than 5% of the vote in the 2026 Knesset elections?](revisions/0293_20261018T232904495856Z.md)|valued|DEC0220 LIVE UNFILLED: ONEpost-onlyBUY11YES@10c/1.10cash accepted+independentlyverified; noholding/spend/PnL. Fullriskreserved, pullALLunfilledOct19 02UTC/earlierunassessedmaterialnews CANCELFIRST; noadd/replay/repost.|
+|294|[Will Likud win fewer than 20 seats in the 2026 Israeli legislative election?](revisions/0294_20261018T231457428786Z.md)|valued|NO ENTRY / FOLLOW-UP CLOSED UNPLACED: revised34.154%YES/selected19.154% fails current26c ordinary maker price; central improvement is insufficient after uncertainty. Zero execute calls/orders/spend; remove only294prior, retain293/sharedmonitorprep.|
+|295|[Will the 10-year Treasury yield hit 5.4% before 2027?](evaluations/0295.md)|valued|NO ENTRY: both dated fee-adjusted taker costs exceed central values; ordinary maker41c+ and56c+ also fail selected27.99/42.01%. 75daycarry and operation costs worsen economics. No new holding/order/prep.|
+|296|[Will gas be below $3.75/gallon in any state on October 31?](revisions/0296_20261018T234953742462Z.md)|valued|DEC0221: ONE vetted post-only BUY5YES54c /2.70 full-fill risk accepted and independently verified LIVE/unfilled. Commitment only, no holding/spend/PnL. Pull all unfilled Oct19 02UTC, earlier unassessed material AAA/tax/supply news CANCEL FIRST. No add/replay/repost.|
 |303|[FC Bayern München vs. RB Leipzig: O/U 4.5](evaluations/0303.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

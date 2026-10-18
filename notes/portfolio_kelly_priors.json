@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-10-18T19:48:41.672143+00:00",
+ "_updated": "2026-10-18T23:49:48.774747+00:00",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1541,5 +1541,43 @@
   "monitoring": "Temporary one-feed/Tier1 film monitoring was warmed and verified before the finite pilot, then removed after terminal zero fill/exposure proof14:58. Existing watcher config returned to its prior baseline; ordinary reload is asynchronous. A new deliberate entry needs its own current source/event coverage, not stale monitoring claims. No new daemon, timer, forced poll or state edit.",
   "settlement": "Sep18\u2013Oct31dailyNumbersfinaldata; ifambiguousNumbers+Mojo; alternatecrediblefallbackafterNov30 23:59ET, potentialdelaybeyond44daycarry. OrdinarysettlementfitsJanuary, notguaranteed.",
   "entry_report": "research/2026-10-17-deep-review/film2161_entry_1450.md"
+ },
+ "will-yisrael-beiteinu-win-less-than-5-percent-of-the-vote-in-the-2026-knesset-elections": {
+  "p_yes": 0.3190975935085508,
+  "p_no": 0.6809024064914492,
+  "cluster": "israel-knesset-2026",
+  "rho_within": 0.7,
+  "cluster_frac": 0.01,
+  "verified": true,
+  "criteria_read": true,
+  "market_id": "4375452",
+  "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
+  "criteria_sha256": "a876c98c625c5fc221a207260be3db03eb3e3a4142b9f289efaafecf32fd74c9",
+  "rationale": "Primary293 five-house mixture updated beforewriter; valid-vote share not seat event.15pp allowance. Nominal1.08USDmaker/rawcap10c/signedcashcap1.12; no taker/chase or assumed hedge.",
+  "research_report": "research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md",
+  "latest_source_packet": "data/deep_review_20261017/work/0293_0294_primary_addendum_2320.json",
+  "management": "DEC0220 LIVEunfilled11YES10c/1.10fullrisk; exactorder0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d. PullALLunfilledOct19 02UTC/earlierunassessedmaterialpoll/list/turnoutCANCELFIRST. Noautoadd/repost;onfillfreshsource/holdreview. LongOct31 2027fallbackrisk retained.",
+  "monitoring": "Two dedicated Hebrew/English GoogleRSS discovery feeds; latest-dated selection before30cap; rawTelegramoff. React to new polls/list/turnout, cancel before unassessed material information.",
+  "asset": "89643140239342548048448701869105827389195064616743381771593601098573294698149"
+ },
+ "will-gas-be-below-3pt75gallon-in-any-state-on-october-31": {
+  "p_yes": 0.779177375,
+  "p_no": 0.22082262500000005,
+  "cluster": "us-retail-gas-2026",
+  "rho_within": 0.7,
+  "cluster_frac": 0.02,
+  "verified": true,
+  "criteria_read": true,
+  "market_id": "4641857",
+  "condition_id": "0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a",
+  "criteria_sha256": "2b6fce11a9d6c97da1aae003fe4b7032b192b0a6098936b32a780ecfd95b97eb",
+  "asset": "89657564314254312016109285821372616495366637583869934291275521891966562780185",
+  "rationale": "Primary296 correlated50statefuel model77.9177%/15ppreserve\u219262.9177%; no independent50coinflips. NC/GAcurrentunderandtaxsuspensionscovertarget; currentpricesnotsettlement. Smallmakeronlycandidate nominal2.65/rawcap54c/signedcashcap2.75, no taker/chase.",
+  "research_report": "research/2026-10-17-deep-review/gas296_entry_outcome_2355.md",
+  "latest_source_packet": "data/deep_review_20261017/work/0296_primary_source_checks_2335.json",
+  "management": "DEC0221: LIVE_UNFILLED BUY5YES54c /2.70 full-fill risk; one vetted call, independently verified23:45:36. Pull ALL unfilled Oct19 02UTC or earlier unassessed material AAA/tax/supply news CANCEL FIRST. No add/replay/repost; on fill fresh source/holding/fee-net exit review. Whole cash loss possible.",
+  "monitoring": "AAA official RSS + Google fuel/state-policy feeds both passed normal post-config watcher cycle23:38\u201323:40. Existing watcher only; newest-before30 cap, raw Telegram off. Source delay/caps/unknown news remain.",
+  "order_id": "0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94",
+  "financial_status": "LIVE_UNFILLED_NOT_HELD"
  }
 }

@@ -1,0 +1,86 @@
+{
+  "review_index": 294,
+  "market_id": "2110576",
+  "condition_id": "0xb3c97c349eca27060cbbfa2bc1beec1df512fc90a859f08439318785c461dc86",
+  "criteria_sha256": "1fdb18addef67c25bfbe23d86976b7802f710db3390cb8036fadd8b48b682141",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T23:03:20.210987+00:00",
+  "literal_analysis": "Likud integer Knesset seats fewer than20, i.e.0..19; 20No. Count entire joint/merged list if applicable. Solely seats, not popular vote/PM/coalition. ScheduledOct27 2026. No definitive result byOct31 2027 23:59ET defaults lowestbracket, henceYes. Credible reporting consensus, ambiguity officialCEC.",
+  "evidence": [
+    {
+      "url": "https://www.i24news.tv/en/news/israeli-elections/artc-i24news-poll-likud-slips-to-25-seats-as-ben-gvirs-party-reaches-double-digits",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "i24NEWS / Direct Polls; paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://www.jpost.com/israel-election-2026/article-911902",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Maariv / Lazar Research with Panel4All (JPost report); paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905396904/",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Channel 13 / The Index, Stat-Net, Project HaMidgam, Askria; paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://www.ynetnews.com/article/no1cetlga",
+      "observed_utc": "2026-10-18T22:45:58.205660+00:00",
+      "finding": "Sep27secondary CEC-letter report listsLikudMem-Chet-Lamed separately; not directcurrentCEClist proof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.46048643133705724,
+    "low": 0.1,
+    "high": 0.85,
+    "method": "Primary equal polling-house mixture, future integer-seat normal approximation with19.5 continuity correction, residual joint/list and longfallback branches.",
+    "reasoning": "House choice dominates; sourcepolls are noisy correlated estimates, not3 independentvotes or actual election results. SD/weights/list/fallback rates are primary judgement. No government/PM threshold conversion. Extra5pp reserve reflects7-seat house gap and uncalibrated late shift.379day fallback can lock funds longer than normal result timing. No independent hedge with293/otherIsraelassets. Central46.0486%; selected31.0486%; source-house sensitivity4.94–66.60%.",
+    "model_path": "models/likud294_primary_2303.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 20.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0294_economics_2303.json",
+    "detail_sha256": "5b9c16c7c12220b441ceb178dc014078a6f26145afd591e01281e92ad170be1a",
+    "sides": {
+      "Yes": {
+        "probability": 0.46048643133705724,
+        "selected_stress_probability": 0.3104864313370572,
+        "best_bid": 0.247,
+        "best_ask": 0.275,
+        "book_age_seconds_at_receipt": 6.01800012588501,
+        "taker_cost_usd": 2.82975,
+        "central_expected_profit_usd": 1.775114313370572,
+        "selected_stress_profit_usd": 0.275114313370572,
+        "break_even_constant_carry": 0.2834566730458412
+      },
+      "No": {
+        "probability": 0.5395135686629428,
+        "selected_stress_probability": 0.38951356866294273,
+        "best_bid": 0.725,
+        "best_ask": 0.753,
+        "book_age_seconds_at_receipt": 6.01800012588501,
+        "taker_cost_usd": 7.6044,
+        "central_expected_profit_usd": -2.2092643133705723,
+        "selected_stress_profit_usd": -3.7092643133705727,
+        "break_even_constant_carry": 0.7617344021591288
+      }
+    }
+  },
+  "verdict": "YES maker candidate only: datedtakerpositive butnonurgentmaker-or-skip. ProposednominalUSD1.25/rawcap26c/signedrisk<=1.35, subjecttofresh source/account/book/fee/correlation and independentafterproof. No writer fromresearch.",
+  "reopen_condition": "Finish bounded current entry review with one vetted attempt or closednoorder; noautomaticretry; freshpoll/list/campaign facts require primaryreforecast.",
+  "question": "Will Likud win fewer than 20 seats in the 2026 Israeli legislative election?",
+  "valuation_author": "primary_operator",
+  "original_index": 294,
+  "report_sha256": "134b64654f765268ec675607f453bab0fce0f73782c10c5d23cf2012050db0f6"
+}

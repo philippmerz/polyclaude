@@ -1,0 +1,96 @@
+{
+  "review_index": 293,
+  "market_id": "4375452",
+  "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
+  "criteria_sha256": "a876c98c625c5fc221a207260be3db03eb3e3a4142b9f289efaafecf32fd74c9",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:53:32.051538+00:00",
+  "literal_analysis": "YisraelBeiteinu all-valid-national-vote share strictly<5%; exact5%No/higher bracket; below-seat-threshold votes count. Joint/merged list ALL votes count. ExpectedOct27 2026 election, not guaranteed date; no definitive results byOct31 2027 23:59ET defaults LOWEST bracket, henceYes. Credible consensus, ambiguity officialCEC alone.",
+  "evidence": [
+    {
+      "url": "https://www.i24news.tv/en/news/israeli-elections/artc-i24news-poll-likud-slips-to-25-seats-as-ben-gvirs-party-reaches-double-digits",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "i24NEWS / Direct Polls; published2026-10-18; Yisrael Beiteinu 6 seats; no vote-share estimate; sample525. Seat count, not vote share."
+    },
+    {
+      "url": "https://www.jpost.com/israel-election-2026/article-911902",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Maariv / Lazar Research with Panel4All (JPost report); published2026-10-16; Yisrael Beiteinu 8 seats; no vote-share estimate; sample700. Seat count, not vote share."
+    },
+    {
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905396904/",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Channel 13 / The Index, Stat-Net, Project HaMidgam, Askria; published2026-10-14; Yisrael Beiteinu 9 seats; no vote-share estimate; sample1018. Seat count, not vote share."
+    },
+    {
+      "url": "https://votes24.bechirot.gov.il/nationalresults",
+      "observed_utc": "2026-10-18T22:53:32.051491+00:00",
+      "finding": "Official2021 final: YB248370/4410052 valid5.63%,7seats; religiousZionism6seats5.12%,JointList6seats4.82%. Root web-rendered body; ordinary raw captured in metric bridge."
+    },
+    {
+      "url": "https://votes25.bechirot.gov.il/nationalresults",
+      "observed_utc": "2026-10-18T22:53:32.051532+00:00",
+      "finding": "Root official2022 web-rendered final: YB213687/4764742 valid4.48%,6seats. Historical scope, not2026forecast."
+    },
+    {
+      "url": "https://www.ynetnews.com/article/no1cetlga",
+      "observed_utc": "2026-10-18T22:45:58.205660+00:00",
+      "finding": "Sep27 secondaryreport ofCEC-approved ballotletters listsLamed/YB underLiberman separately; directcurrentCEClist403 leaves residualidentitygap."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.27067832521344537,
+    "low": 0.05,
+    "high": 0.7,
+    "method": "Primary equal polling-house mixture, explicit seat-to-valid-vote projection/uncertainty and joint-list/long-delay branches; no vote share claimed as observed.",
+    "reasoning": "Vote-share bridge, weights, wasted-vote and late-error distributions are primary judgement, not measured support percentages or calibrated posterior. N/moe refer polls, not event probability. Correlated house/campaign/turnout uncertainty is not diversified by counting3 polls. Same house branches pair Likud25/18/18 for294; no independent portfolio hedge claim. Ordinary15pp reserve includes extra5pp for unobserved vote-share conversion and shared polling error. Typical count publication timing differs from379day worst fallback lock; delay risk retained. Central27.0678%; selected12.0678%. Historical2021/2022examples disprove unique seat mapping.",
+    "model_path": "models/yisrael293_primary_2256.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 20.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0293_economics_2256.json",
+    "detail_sha256": "8424ad1d49b6876cca60920f4796b190ed7094675f12561a9d19fd886c5d510d",
+    "sides": {
+      "Yes": {
+        "probability": 0.27067832521344537,
+        "selected_stress_probability": 0.12067832521344538,
+        "best_bid": 0.082,
+        "best_ask": 0.127,
+        "book_age_seconds_at_receipt": 0.19700002670288086,
+        "taker_cost_usd": 1.3143500000000001,
+        "central_expected_profit_usd": 1.3924332521344533,
+        "selected_stress_profit_usd": -0.10756674786554643,
+        "break_even_constant_carry": 0.1316587254060611
+      },
+      "No": {
+        "probability": 0.7293216747865546,
+        "selected_stress_probability": 0.5793216747865546,
+        "best_bid": 0.873,
+        "best_ask": 0.918,
+        "book_age_seconds_at_receipt": 0.19700002670288086,
+        "taker_cost_usd": 9.21012,
+        "central_expected_profit_usd": -1.9169032521344533,
+        "selected_stress_profit_usd": -3.4169032521344533,
+        "break_even_constant_carry": 0.9225797238459096
+      }
+    }
+  },
+  "verdict": "YES MAKER CANDIDATE ONLY: datedtakerfailsselectedbound; potentialUSD1 post-only hardcap10c merits current account/book/source/conditionalfill execution review. No writer/order authorized by this research record.",
+  "reopen_condition": "Complete bounded current entry review; if no eligible margin closeattempt/noautomaticretry. Newpoll/list/turnout facts require primaryreforecast and all current gates.",
+  "question": "Will Yisrael Beiteinu win less than 5% of the vote in the 2026 Knesset elections?",
+  "valuation_author": "primary_operator",
+  "original_index": 293,
+  "report_sha256": "20693a238f6ee73f202edf48f4137dfdcf44c4c8ed098a8242ad80dddb4c5fae"
+}

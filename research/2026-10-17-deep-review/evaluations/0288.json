@@ -1,0 +1,111 @@
+{
+  "review_index": 288,
+  "market_id": "5640323",
+  "condition_id": "0x3cbef8c9ed1398acdd619a3b96396bb49305e5ccd8869350af825b6fa7e2302e",
+  "criteria_sha256": "517dc4efd833c65e6a96563d70e176e8e61a0f8f6155a4730731ec8d83b4ff79",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:36:28.420948+00:00",
+  "literal_analysis": "Inclusive 200..219 main-feed posts, quotes and reposts; special main-feed replies count, other replies/community reposts excluded; captured deletions count. Oct16 noon ET to Oct23 noon ET. Tracker primary, X fallback only if incorrect. API end one second before literal end; boundary/reclassification risk retained.",
+  "evidence": [
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/de0597e7-d48b-46f6-a3b1-6c3f7a81c38f?includeStats=true",
+      "observed_utc": "2026-10-18T22:24:13.625986+00:00",
+      "finding": "Current counter95;55 hourly bins sum95. API percent43/pace222 use rounded days and conflict with actual54.52h/168=32.45%; discarded as forecast. Old sync fields conflict with newer bins."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/users/elonmusk/posts?platform=X&startDate=2026-10-16T16%3A00%3A00Z&endDate=2026-10-23T15%3A59%3A59Z&timezone=EST",
+      "observed_utc": "2026-10-18T22:31:16.046060+00:00",
+      "finding": "Retained HTTP200 export116rows; root raw hash/UTC filtering verifies95unique inside,21outside,0unparsed/duplicates. Latest22:02:23Z. No post-type/pagination-total fields; match not independent capture/classification proof."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/cfff4aad-56c6-4841-bc2f-d51e910bec08?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-10-09T16:00:00.000Z..2026-10-16T15:59:59.000Z: total347, first54/55=78/78; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/a0c5d2b5-2528-41d8-b310-f2ce5aa44d70?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-10-02T16:00:00.000Z..2026-10-09T15:59:59.000Z: total326, first54/55=76/76; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/7fa5f317-bee6-4dff-b81d-e4507730d655?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-09-25T16:00:00.000Z..2026-10-02T15:59:59.000Z: total222, first54/55=64/64; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/ef499b94-6e20-4c98-bd79-57c12cb62460?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-09-18T16:00:00.000Z..2026-09-25T15:59:59.000Z: total200, first54/55=57/60; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/4229a579-4819-40d2-8dae-88aa7ad6839b?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-09-11T16:00:00.000Z..2026-09-18T15:59:59.000Z: total204, first54/55=44/46; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/70a9eaeb-aff5-4303-ab37-df643e1f69e9?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-09-04T16:00:00.000Z..2026-09-11T15:59:59.000Z: total176, first54/55=58/59; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/c0182dec-9b08-439b-b2c5-30bbf84be9ba?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:03Z/19:59:20Z",
+      "finding": "Completed 2026-08-28T16:00:00.000Z..2026-09-04T15:59:59.000Z: total226, first54/55=71/71; raw SHA verified,168 contiguous hourly bins. Nonoverlapping, not behaviourally independent."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.04117738744294136,
+    "low": 0.001,
+    "high": 0.35,
+    "method": "Primary mixture of seven aligned historical prefix/suffix conditional NB templates, calendar-neutral wide NB and source-repair regime. No own price read before model adoption.",
+    "reasoning": "Seven dependent behavioural weeks, not calibrated independent trials. Current prefix95 exceeds historical prefix max78; extrapolation may fail. Bin55 partly observed and historical within-hour arrivals nonuniform. API collection cutoff/qualifying post types not independently proved; old lastSync conflicts with newer records. Rounded API percent43/pace222 rejected: 54.52/168=32.45%. Range is subjective and wider than model sensitivities; no probability mass borrowed from case258 quiet total90 or case101 near-terminal tail. Dated valuation, not execution authorization. Explicit profile, calendar and repair branches yield4.1177%; future-intensity halving14.02%.",
+    "model_path": "models/musk288_primary_2236.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 4.728286503935185,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0288_economics_2237.json",
+    "detail_sha256": "ef5d161ed8568863840d7f932df4ccecfce7560ea450cd286ca301980907464b",
+    "sides": {
+      "Yes": {
+        "probability": 0.04117738744294136,
+        "selected_stress_probability": 0,
+        "best_bid": 0.032,
+        "best_ask": 0.039,
+        "book_age_seconds_at_receipt": 11.671000003814697,
+        "taker_cost_usd": 0.40874,
+        "central_expected_profit_usd": 0.0030338744294136077,
+        "selected_stress_profit_usd": -0.40874,
+        "break_even_constant_carry": 0.040890437779731524
+      },
+      "No": {
+        "probability": 0.9588226125570587,
+        "selected_stress_probability": 0.8088226125570587,
+        "best_bid": 0.961,
+        "best_ask": 0.968,
+        "book_age_seconds_at_receipt": 11.671000003814697,
+        "taker_cost_usd": 9.69549,
+        "central_expected_profit_usd": -0.1072638744294121,
+        "selected_stress_profit_usd": -1.607263874429412,
+        "break_even_constant_carry": 0.96993891126146
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES central profit only0.00303 per10 shares and selected0 fails; NO central negative. Dated planning, not execution authorization.",
+  "reopen_condition": "Current count/profile or actual source correction materially changes independently updated probability, or eligible price clears uncertainty/carry/cost; fresh execution gates required.",
+  "question": "Will Elon Musk post 200-219 tweets from October 16 to October 23, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 288,
+  "report_sha256": "acc10991948cb07ad78e055e6508605e3e45be008f525c6e3357486cc6396d99"
+}

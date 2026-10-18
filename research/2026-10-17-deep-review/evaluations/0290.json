@@ -1,0 +1,81 @@
+{
+  "review_index": 290,
+  "market_id": "2831225",
+  "condition_id": "0x65e4f39d20808d2f146177dcea037c9a01198ef2680793221fd18a0118542f48",
+  "criteria_sha256": "d2cadf8b704d0155d2e3fd18fe4d2636ce24c1da4286863824164486f0dae38a",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:43:28.993617+00:00",
+  "literal_analysis": "Strict FDV >USD50M (equality No) for StandX platform token at16:00 ET on calendar day after launch, not24h. Launch requires active public transferability AND trading. Most-liquid price source; no qualifying launch byDec31 23:59ET meansNo. LateDec31 launch can requireJan1 16ET valuation despite API endJan1 05Z. DUSD stablecoin/reward allocation/pre-market derivative not automatically the platform token.",
+  "evidence": [
+    {
+      "url": "https://x.com/StandX_Official/status/2110613379270185114",
+      "observed_utc": "2026-10-18T22:37:31.838031+00:00",
+      "finding": "Pinned post says StandX will not proceed with a token launch and will instead airdrop DUSD with no lockup. It states claim window Nov1–Dec31, perps reduce-only Oct20, positions close Jan15, withdrawals/redemptions close Jan31; it says a full announcement article is in the next tweet. This dated post does not itself specify an alternate token, price source, or FDV method."
+    },
+    {
+      "url": "https://docs.standx.com/docs/standx-perps-solutions/community-maker-yield",
+      "observed_utc": "2026-10-18T22:37:31.340687+00:00",
+      "finding": "Body SHA equals Oct18 21:35 capture. Page still distinguishes DUSD from platform-token allocation and says platform token not yet live; cache says must-revalidate, but unchanged body means the language has no explicit publication date."
+    },
+    {
+      "url": "https://x.com/i/article/2110604141693124608",
+      "observed_utc": "2026-10-18T22:41:27.692187+00:00",
+      "finding": "OrdinaryGET404; only official timeline article title/preview available. No inference about Oct15 reward cessation."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.011,
+    "low": 0.0001,
+    "high": 0.15,
+    "method": "Primary launch/reversal/asset-adjudication tree conditioned on direct official cancellation, distinct DUSD and future platform token.",
+    "reasoning": "Cancellation statement is measured first-hand, but74day reversal/adjudication tail is not empirically bounded; use ordinary10pp instance reserve, not short-horizon K5 bond licence. Scenario rates/weights are primary judgement; no FDV inferred from TVL, users, token allocations, or DUSD marketcap. No unlaunched-address gap treated as proof of impossibility or mechanical exclusion. Central.98*0+.01*.60+.01*.50=.011; long-window tail prevents short-horizon bond-fade exception.",
+    "model_path": "models/standx290_primary_2245.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 75.0,
+    "actual_entry_reserve_pp": 10.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0290_economics_2245.json",
+    "detail_sha256": "9b096606631e5bbf182ba14b8f1513f2b0eb2134149761478087ce898fa922ce",
+    "sides": {
+      "Yes": {
+        "probability": 0.011,
+        "selected_stress_probability": 0,
+        "best_bid": 0.006,
+        "best_ask": 0.007,
+        "book_age_seconds_at_receipt": 3.98799991607666,
+        "taker_cost_usd": 0.07487,
+        "central_expected_profit_usd": 0.03512999999999998,
+        "selected_stress_profit_usd": -0.07487,
+        "break_even_constant_carry": 0.007534902663104333
+      },
+      "No": {
+        "probability": 0.989,
+        "selected_stress_probability": 0.889,
+        "best_bid": 0.993,
+        "best_ask": 0.994,
+        "book_age_seconds_at_receipt": 3.98799991607666,
+        "taker_cost_usd": 9.94418,
+        "central_expected_profit_usd": -0.054179999999998785,
+        "selected_stress_profit_usd": -1.0541799999999988,
+        "break_even_constant_carry": 1.0007803975476004
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES small uncalibrated tail central surplus fails actual reserve; NO central negative and carry hurdle exceeds100%. Valued future event, not factual exclusion.",
+  "reopen_condition": "Genuine official reversal/qualifying launch and exact token/supply/liquid venue, source/adjudication clarification or price materially changes independently updated economics with fresh gates.",
+  "question": "StandX FDV above $50M one day after launch?",
+  "valuation_author": "primary_operator",
+  "original_index": 290,
+  "report_sha256": "97699cf3da59f8864d15867c7c75b9172ca50308bf3fe9d6d35e19a814e3f1a4"
+}

@@ -1,0 +1,84 @@
+{
+  "review_index": 296,
+  "market_id": "4641857",
+  "condition_id": "0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a",
+  "criteria_sha256": "2b6fce11a9d6c97da1aae003fe4b7032b192b0a6098936b32a780ecfd95b97eb",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T23:27:52.905127+00:00",
+  "literal_analysis": "ANYof50USstates AAAunroundedregularaverage<3.75 onOct31 at23:59ET. DCexcluded. SourceforOct31whenupdated, notcurrentdate; unavailable+2fullcalendardays→No.4decimalpublishedprecisionvsunroundedlatent unresolvednearboundary.",
+  "evidence": [
+    {
+      "url": "https://gasprices.aaa.com/state-gas-price-averages/",
+      "observed_utc": "2026-10-18T22:50:27.742816+00:00",
+      "finding": "Oct18datedtable50states/DCexcluded: NC3.6243/GA3.7393onlybelow3.75, TX3.7868next. AAAstatecomparisonsNCweek3.9784/GA3.8135 are retrospective/sourcecutoffunspecified, not futureOct31."
+    },
+    {
+      "url": "https://www.ncdor.gov/taxes-forms/motor-fuels-tax/important-notices-and-frequently-asked-questions-about-motor-fuels-tax/important-notice-temporary-suspension-motor-fuel-excise-tax-and-dyed-diesel-enforcement",
+      "observed_utc": "2026-10-18T23:06:46.823406+00:00",
+      "finding": "OfficialNCfuel-excisesuspensionOct10–Nov30 coversOct31; otherremainingtaxesdo notallvanish. OfficialGeorgiaexcisesuspensionthroughNov5alsoincludesOct31. Alreadyinforce, nopromisedadditionalpass-through."
+    },
+    {
+      "url": "https://newsroom.aaa.com/2026/10/gas-prices-not-budging-much-as-crude-oil-remains-high/",
+      "observed_utc": "2026-10-18T23:22:00Z",
+      "finding": "Oct15AAA national4.33/downcouplecentsweek, crude~100/highautumnpricevolatility. Historicaldescriptivenotforecast."
+    },
+    {
+      "url": "https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=EMM_EPMR_PTE_NUS_DPG&f=W",
+      "observed_utc": "2026-10-18T23:23:28.989540+00:00",
+      "finding": "WeeklyUSregularEIAthroughOct12=4.331; last52/104points two-observationchangesSD.20599/.15052, max+.705. Rootverified104rowsagainsthashedHTML; overlapping/nationalprovider≠AAAstatewindow."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.779177375,
+    "low": 0.35,
+    "high": 0.97,
+    "method": "All50Oct18AAAstatebaselines+ONEcommonglobal13dayretailpricechange. Empirical2observationweeklyEIAUSregularchanges:50%last52/25%last104/25%last52centered to-3c (seasonal/flatcurrentregime); shrinkduration13/14approximately. StateforecastlocalSD4c; NC+GAshareSEfactor3c plusindependent2.5c. This is high positive crossstatecorrelation, not50independentbinarydraws.98%ordinaryunion+1%exceptionalpolicy/supplybranch with5%conditionalYes+1%sourcefallbackNo.",
+    "reasoning": "Empiricalchangesoverlap/serialdepend/nonstationary andnationalEIA≠AAAstate. Mixtureweights/localSD/sourcepolicybranchesunfitted; shortcurrentstatehistorytaxconfounded. 4decimalpricesnotproofgenuinelyunrounded. Modelrange35–97%/15ppreservecoversneithereveryjointstressnorallfuturepolicy/war/refineryshock. RechecktargetdatedAAAtable/sourceoutages; no calibratedposterior/guaranteedfloor/entryauthorization.",
+    "model_path": "models/gas296_primary_2335.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 15.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0296_economics_2335.json",
+    "detail_sha256": "4468d3471fabbb56538f0dbf91b05808fd689efe1cd78ce9ec7536e96f1985ed",
+    "sides": {
+      "Yes": {
+        "probability": 0.779177375,
+        "selected_stress_probability": 0.6291773749999999,
+        "best_bid": 0.52,
+        "best_ask": 0.78,
+        "taker_cost_usd": 7.868640000000001,
+        "central_expected_profit_usd": -0.07686625000000191,
+        "selected_stress_profit_usd": -1.576866250000002,
+        "break_even_constant_carry": 0.7878683217433113
+      },
+      "No": {
+        "probability": 0.22082262500000005,
+        "selected_stress_probability": 0.07082262500000006,
+        "best_bid": 0.22,
+        "best_ask": 0.48,
+        "taker_cost_usd": 5.109649999999999,
+        "central_expected_profit_usd": -2.901423749999999,
+        "selected_stress_profit_usd": -4.401423749999999,
+        "break_even_constant_carry": 0.511617175292771
+      }
+    }
+  },
+  "verdict": "YES MAKER CANDIDATE ONLY: central77.9177%/selected62.9177%. Datedtaker78.6864%failscentral; hypotheticalordinary53c/5shares/2.65cash selectedsurplus.49589 beforecarry/.05op. Primaryboundedreview maxraw54c/signedcash2.75; currentallgatesrequired; no order/prep yet. NOnegativebothcentralandselected.",
+  "reopen_condition": "CompleteONEboundedfreshsource/account/identity/fee/book/monitoring/conditionalfillreview, elseclosedunplaced. Makerrawcap54c/signedcash<=2.75, no taker/chase/autoadd; futurepublicationnotcurrentOct18table.",
+  "question": "Will gas be below $3.75/gallon in any state on October 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 296,
+  "report_sha256": "3238ed488fb84f94e8f5da5442e68ceeae74096d8c1d9213c6631261e922f94b"
+}

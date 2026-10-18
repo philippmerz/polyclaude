@@ -1,0 +1,93 @@
+{
+  "review_index": 294,
+  "market_id": "2110576",
+  "condition_id": "0xb3c97c349eca27060cbbfa2bc1beec1df512fc90a859f08439318785c461dc86",
+  "criteria_sha256": "1fdb18addef67c25bfbe23d86976b7802f710db3390cb8036fadd8b48b682141",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T23:14:57.429082+00:00",
+  "literal_analysis": "Likud integer Knesset seats fewer than20, i.e.0..19; 20No. Count entire joint/merged list if applicable. Solely seats, not popular vote/PM/coalition. ScheduledOct27 2026. No definitive result byOct31 2027 23:59ET defaults lowestbracket, henceYes. Credible reporting consensus, ambiguity officialCEC.",
+  "evidence": [
+    {
+      "url": "https://www.i24news.tv/en/news/israeli-elections/artc-i24news-poll-likud-slips-to-25-seats-as-ben-gvirs-party-reaches-double-digits",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "i24NEWS / Direct Polls; paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://www.jpost.com/israel-election-2026/article-911902",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Maariv / Lazar Research with Panel4All (JPost report); paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905396904/",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Channel 13 / The Index, Stat-Net, Project HaMidgam, Askria; paired Likud seat observations25/18/18 percase294facts; not actual seats."
+    },
+    {
+      "url": "https://www.ynetnews.com/article/no1cetlga",
+      "observed_utc": "2026-10-18T22:45:58.205660+00:00",
+      "finding": "Sep27secondary CEC-letter report listsLikudMem-Chet-Lamed separately; not directcurrentCEClist proof."
+    },
+    {
+      "url": "https://www.c14.co.il/article/1743088",
+      "observed_utc": "2026-10-18T23:14:56.307750+00:00",
+      "finding": "New same-day NEXTDATA/Filber YB6/Likud29 n559; secondaryKan YB8/Likud21. See compact source addendum; no sample invented as fact."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34153998745300973,
+    "low": 0.03,
+    "high": 0.85,
+    "method": "Equal mixture of5 source-house hypotheses; not pooled iid respondents. Same literal/within-house/identity/fallback model as predecessor. Add Oct18C14 YB6/Likud29 and secondaryKan YB8/Likud21; Kan n500 illustrative only, not reported.",
+    "reasoning": "Weights are primary judgement, not calibrated posterior. Grouping political/method families changes answer materially. Newsource samplegap, seat/vote bridge and late turnout/campaign uncertainty retained; no guaranteed hedge between293/294. 15pp entry allowance does not cover every joint extreme. Verysmall manual position only; entirecashcanbelost, long2027fallback possible.",
+    "model_path": "models/poll294_update_2320.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 12.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0294_economics_2320.json",
+    "detail_sha256": "10301bfbe7e315f81294bfc3dc3e3c21ee8864ee0237fe71beb9b25af8be6573",
+    "sides": {
+      "Yes": {
+        "probability": 0.34153998745300973,
+        "selected_stress_probability": 0.19153998745300974,
+        "best_bid": 0.247,
+        "best_ask": 0.275,
+        "taker_cost_usd": 2.82975,
+        "central_expected_profit_usd": 0.5856498745300969,
+        "selected_stress_profit_usd": -0.9143501254699029,
+        "break_even_constant_carry": 0.2832639055185452
+      },
+      "No": {
+        "probability": 0.6584600125469903,
+        "selected_stress_probability": 0.5084600125469902,
+        "best_bid": 0.725,
+        "best_ask": 0.753,
+        "taker_cost_usd": 7.6044,
+        "central_expected_profit_usd": -1.0197998745300971,
+        "selected_stress_profit_usd": -2.519799874530097,
+        "break_even_constant_carry": 0.7612163771093647
+      }
+    }
+  },
+  "verdict": "NO ENTRY / FOLLOW-UP CLOSED UNPLACED: revised34.154%YES/selected19.154% fails current26c ordinary maker price; central improvement is insufficient after uncertainty. Zero execute calls/orders/spend; remove only294prior, retain293/sharedmonitorprep.",
+  "reopen_condition": "Finish bounded current entry review with one vetted attempt or closednoorder; noautomaticretry; freshpoll/list/campaign facts require primaryreforecast.",
+  "question": "Will Likud win fewer than 20 seats in the 2026 Israeli legislative election?",
+  "valuation_author": "primary_operator",
+  "original_index": 294,
+  "report_sha256": "d4fa3390cec45b2649645d180173c10233a247c2a5067d4d9435342bcfd91015",
+  "report_path": "revisions/0294_20261018T231457428786Z.md",
+  "revision_reason": "Current same-day C14 and secondaryKan polls surfaced by verified repaired RSS before any entry; update house mixture and close294candidate.",
+  "prior_report_sha256": "134b64654f765268ec675607f453bab0fce0f73782c10c5d23cf2012050db0f6",
+  "revision_path": "revisions/0294_20261018T231457428786Z.json"
+}

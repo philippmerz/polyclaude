@@ -1,0 +1,81 @@
+{
+  "review_index": 292,
+  "market_id": "5326403",
+  "condition_id": "0xf7fda917b786a95ed7eb07d485e514e4ecbdaed628928d4b5af6f001223583a5",
+  "criteria_sha256": "d3d2c0b77ae42ac57a34eaec0491554551be243a2da0bac6fef4f48b425bb0e2",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:48:39.501530+00:00",
+  "literal_analysis": "Sum displayed weekly Top Models Totals forSep28,Oct5,Oct12,Oct19; UTC Monday-Sunday; >=725T inclusive. Freeze at firstOct26 week display, fallbackOct30 23:59ET. Use separately rounded Total, not sum rounded model labels or hatched WeeklyPace. API end date not authoritative display/fallback time.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T22:39:14.805289+00:00",
+      "finding": "HTTP200 Age166/cache HIT; identical held22 raw hash,53weekly points/52complete. Sep28 165.856T/Oct5 171.843T complete; Oct12 162.335T partial andOct19 absent. cachedAt21:44 is not data-through cutoff."
+    },
+    {
+      "url": "https://openrouter.ai/rankings?view=week",
+      "observed_utc": "2026-10-18T11:07:19.493Z",
+      "finding": "Earlier live DOM/code verifies tooltipTotal separately formatted from full raw sum, WeeklyPace separate hatched projection. Final4KB source unit supersedes15KB provisional-plus-addendum note."
+    },
+    {
+      "url": "https://openrouter.ai/_next/static/immutable/chunks/3xobqxtdcoyru.js",
+      "observed_utc": "2026-10-18T11:07:19.493Z",
+      "finding": "Same-vintage chart code matches observed wholeT totals for150T-range values; hourly weekday weighting for WeeklyPace ignoresminutes and does not establish backend cutoff."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14925,
+    "low": 0.005,
+    "high": 0.85,
+    "method": "Primary target-specific current-week completion scenarios plus one-week mixed loggrowth and source/display revisions; seeded60000 path numerical calculation.",
+    "reasoning": "Primary scenario weights, future drift and revision law are judgement, not calibrated posterior. Data-through cutoff/first-display revisions remain unknown. RoundedTotal mapping verified by separate code/liveDOM source; formatting proxy not proof for every future magnitude. Current points are not final settlement. Source/future traffic dependence with held112 exists; different four-week target/range, no hedge or independence claim. Price-blind central14.925%; all-near-current2.65/all-lag40.32%.15pp entry reserve accounts unverified cutoff and judgemental regime/revision weights; current total notfinal.",
+    "model_path": "models/openrouter292_primary_2250.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 13.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0292_economics_2252.json",
+    "detail_sha256": "443a5ea83708c0c4f8da6ac629273c3d3d16f30a1025f44f3265b1b8ad246c2b",
+    "sides": {
+      "Yes": {
+        "probability": 0.14925,
+        "selected_stress_probability": 0,
+        "best_bid": 0.002,
+        "best_ask": 0.02,
+        "book_age_seconds_at_receipt": 50.651000022888184,
+        "taker_cost_usd": 0.20784000000000002,
+        "central_expected_profit_usd": 1.28466,
+        "selected_stress_profit_usd": -0.20784000000000002,
+        "break_even_constant_carry": 0.020806988862235982
+      },
+      "No": {
+        "probability": 0.85075,
+        "selected_stress_probability": 0.70075,
+        "best_bid": 0.98,
+        "best_ask": 0.998,
+        "book_age_seconds_at_receipt": 50.651000022888184,
+        "taker_cost_usd": 9.9808,
+        "central_expected_profit_usd": -1.4733,
+        "selected_stress_profit_usd": -2.9733,
+        "break_even_constant_carry": 0.999183960913226
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES centralpositive12.85pp but selected0 at15pp source/model allowance fails2.08% fee cost; NO centralnegative. Source lag remains dominant; no current execution authorization.",
+  "reopen_condition": "New weekly publication or actual cutoff/source evidence alters independently updated forecast; positive eligible maker economics after costs/conditional fills, portfolio and all fresh gates.",
+  "question": "Will OpenRouter process at least 725T tokens from Sep 28 to Oct 25?",
+  "valuation_author": "primary_operator",
+  "original_index": 292,
+  "report_sha256": "a3065650f3148c4a6e79ba2d4eaf705cd56443f06a9fa1be8536df632fec9595"
+}

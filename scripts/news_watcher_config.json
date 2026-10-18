@@ -147,6 +147,22 @@
     {
       "name": "Bank of Israel, Yaron, FX and energy headlines",
       "url": "https://news.google.com/rss/search?q=%28%22Bank%20of%20Israel%22%20OR%20%22Amir%20Yaron%22%20OR%20%D7%91%D7%A0%D7%A7%20%D7%99%D7%A9%D7%A8%D7%90%D7%9C%20OR%20%22%D7%90%D7%9E%D7%99%D7%A8%20%D7%99%D7%A8%D7%95%D7%9F%22%20OR%20shekel%20OR%20%22Israeli%20currency%22%20OR%20%22Israel%20FX%22%20OR%20%22Israel%20energy%22%20OR%20%22Israel%20oil%22%29%20when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "Israel Knesset Hebrew polls, party lists and elections",
+      "url": "https://news.google.com/rss/search?q=%28%22%D7%99%D7%A9%D7%A8%D7%90%D7%9C%20%D7%91%D7%99%D7%AA%D7%A0%D7%95%22%20OR%20%22%D7%90%D7%91%D7%99%D7%92%D7%93%D7%95%D7%A8%20%D7%9C%D7%99%D7%91%D7%A8%D7%9E%D7%9F%22%20OR%20%22%D7%94%D7%9C%D7%99%D7%9B%D7%95%D7%93%22%20OR%20%22%D7%A0%D7%AA%D7%A0%D7%99%D7%94%D7%95%22%29%20%28%D7%A1%D7%A7%D7%A8%20OR%20%D7%91%D7%97%D7%99%D7%A8%D7%95%D7%AA%20OR%20%D7%A8%D7%A9%D7%99%D7%9E%D7%94%20OR%20%D7%90%D7%99%D7%97%D7%95%D7%93%29%20when%3A7d&hl=he&gl=IL&ceid=IL%3Ahe"
+    },
+    {
+      "name": "Israel Knesset English polls, party lists and elections",
+      "url": "https://news.google.com/rss/search?q=%28%22Yisrael%20Beiteinu%22%20OR%20%22Yisrael%20Beytenu%22%20OR%20%22Avigdor%20Lieberman%22%20OR%20Likud%20OR%20Netanyahu%29%20%28poll%20OR%20election%20OR%20%22party%20list%22%20OR%20merger%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "AAA official fuel-price news",
+      "url": "https://newsroom.aaa.com/feed/"
+    },
+    {
+      "name": "US state gasoline prices and fuel-tax policy",
+      "url": "https://news.google.com/rss/search?q=%28%22North%20Carolina%22%20OR%20Georgia%20OR%20%22United%20States%22%29%20%28%22gas%20prices%22%20OR%20gasoline%20OR%20%22motor%20fuel%22%20OR%20%22fuel%20tax%22%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen"
     }
   ],
   "tier1_keywords": [
@@ -330,7 +346,17 @@
     "Israel inflation",
     "Israeli inflation",
     "Israel interest rate",
-    "Israeli interest rate"
+    "Israeli interest rate",
+    "Yisrael Beiteinu",
+    "ישראל ביתנו",
+    "אביגדור ליברמן",
+    "Likud",
+    "הליכוד",
+    "AAA gas",
+    "gasoline",
+    "motor fuel",
+    "fuel tax",
+    "gas prices"
   ],
   "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux — the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Sep-23 added exact GPT-6 Sol/Luna names after OpenAI's 'Introducing' title evaded the generic release verbs. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
   "tier2_keywords": [

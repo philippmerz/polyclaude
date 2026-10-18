@@ -1,5 +1,5 @@
 {
-  "next_id": 220,
+  "next_id": 222,
   "decisions": [
     {
       "id": 1,
@@ -4685,6 +4685,72 @@
       "lesson": "Comparecurrentobservationswithforecastbaseline/fielding/units/horizon beforeaddingregimepenalties. Pointforecastsandconditionalmacroopinionsarenotindependentoutcomelikelihoods.",
       "resolved_at": "2026-10-18T21:21:26.679256+00:00",
       "research_report": "research/2026-10-18-boi-cancel.md"
+    },
+    {
+      "id": 220,
+      "timestamp": "2026-10-18T23:22:57Z",
+      "type": "open_position",
+      "thesis": "Primary293 updatedfive-house model31.9098%YES/15ppreserve\u219216.9098%; YBstrictly<5% ofallvalidnationalvotes, notseats. ONEvettedpost-onlyBUY11YES10c signs1.10cash; verifiedLIVE/zerofill, NOTaholding/profit. Wholecashlosspossible, weights/seatbridgeuncalibrated; nohedgecredit.",
+      "confidence": "medium",
+      "prediction": "YB<5% paysYES; exact5NO/jointlistallvotes/Oct31 2027fallbackYES. PairednewC14+secondaryKanassessed beforewriter; source-familycollapse gives25.09%central. PullALLunfilledat existingOct19 02UTC or earlierunassessedmaterialpoll/list/turnoutnews cancelFIRST; noautoadd/repost. Independently23:20:35 7BUY12.92/pUSD18.846890/free5.926890/bothcandidateCTFs0 andnofulltradehits. Report research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md.",
+      "size_usd": 1.1,
+      "resolution_at": "2026-10-31",
+      "tags": [
+        "polymarket",
+        "deep-review",
+        "maker",
+        "pending-fill",
+        "israel-knesset-2026"
+      ],
+      "slug": "will-yisrael-beiteinu-win-less-than-5-percent-of-the-vote-in-the-2026-knesset-elections",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "order_id": "0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d",
+      "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
+      "market_id": "4375452",
+      "side": "YES",
+      "shares": 11,
+      "limit_price": 0.1,
+      "filled_shares": 0,
+      "committed_cash_usd": 1.1,
+      "financial_status": "LIVE_UNFILLED_NOT_HELD",
+      "pull_at": "2026-10-19T02:00:00Z",
+      "research_report": "research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md",
+      "verification": "data/deep_review_20261017/work/0293_postproof_2330.json"
+    },
+    {
+      "id": 221,
+      "timestamp": "2026-10-18T23:49:48.774747+00:00",
+      "type": "open_position",
+      "thesis": "AAA ANY-state Oct31 regular gas strictly below3.75: primary YES77.9177375%, actual15pp reserve selects62.9177375%. ONE vetted maker BUY5YES54c /2.70USD independently LIVE/unfilled; entire cash can be lost. Correlated fuel model and subjective policy/source branches; not50 independent chances.",
+      "confidence": "medium",
+      "prediction": "NC3.6243/GA3.7393 already below threshold; tax suspensions cover Oct31 but current prices are not settlement. Strict unrounded threshold; DC excluded; unavailable after2 full calendar days defaults NO. Pull all unfilled Oct19 02UTC, earlier unassessed material AAA/tax/supply news CANCEL FIRST; no automatic add/repost.",
+      "size_usd": 2.7,
+      "resolution_at": "2026-10-31",
+      "tags": [
+        "polymarket",
+        "deep-review",
+        "maker",
+        "pending-fill",
+        "us-retail-gas-2026"
+      ],
+      "slug": "will-gas-be-below-3pt75gallon-in-any-state-on-october-31",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "order_id": "0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94",
+      "condition_id": "0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a",
+      "market_id": "4641857",
+      "side": "YES",
+      "shares": 5,
+      "limit_price": 0.54,
+      "filled_shares": 0,
+      "committed_cash_usd": 2.7,
+      "financial_status": "LIVE_UNFILLED_NOT_HELD",
+      "pull_at": "2026-10-19T02:00:00Z",
+      "research_report": "research/2026-10-17-deep-review/gas296_entry_outcome_2355.md",
+      "verification": "data/deep_review_20261017/work/0296_postproof_2355.json"
     }
   ]
 }

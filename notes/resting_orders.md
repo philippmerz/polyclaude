@@ -1,6 +1,21 @@
 # Standing resting orders (GTC post-only makers)
 
-## Current — October18 21:21UTC
+## Current — October18 23:45 UTC
+
+**Eight LIVE BUYs, $15.62 reserved, pUSD18.846890/free3.226890**, fixed Polygon95774526. All seven prior order/reservation IDs preserved; each order matches its reservation. Independent proof: exhausted orders/trades, exact order lookup and fixed-block target balances. New bids are commitments, not holdings or PnL.
+
+- **DEC0221 gas296:**5YES54c/$2.70, zero matched, both CTFs zero. Order `0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94`. [Exact identity/model/proof](../research/2026-10-17-deep-review/gas296_entry_outcome_2355.md).
+- **DEC0220 YB293:**11YES10c/$1.10, also LIVE/zero matched/both CTFs zero. [Exact identity/model/proof](../research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md).
+- **Pull ALL unfilled293/296 Oct19 02UTC**, earlier on unassessed material poll/list/turnout or AAA/tax/supply news: CANCEL FIRST. No add, replay or repost. On fill, fresh source/holding/fee-net exit review; partial lots may be below five-share exit minimum.
+- Other existing pulls: Sedgwick Oct19 **10UTC**, Idaho **22UTC**; four House bids unchanged. Next held review02UTC. BOI/film canceled; OpenRouter/Messi old BUY pulls complete. Earlier snapshots below are history.
+
+## Previous verification — October18 23:20UTC
+
+**DEC0220 LIVEunfilled:293YB BUY11YES@10c/1.10cashreserved.** Order`0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d`; [exactidentity/model/proof](../research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md). ONEvettedcall; neverreplay. Independentauthfullinventory+directorder/fulltrades:0matched/0targettrades; exactfullriskreservation; sixpriororders/reservationspreserved. Polygon95773525/23:20:35:pUSD18.846890/targetCTFs0. **SevenLIVEBUY12.92/free5.926890**. Commitment, notholding/spend/PnL.
+
+PullALL293unfilledshares existingOct19 **02UTC**, earlierunassessedmaterialpoll/list/turnoutnews CANCELFIRST; noautoadd/repost. Onfillfreshsource/holding/fee-netexitreview. Remainingpulls: SedgwickOct19 **10UTC**, Idaho**22UTC**; fourHousebidsunchanged. Heldriskslastreviewed22UTC; next02. 294CLOSEDUNPLACED/noexecutecalls/priorremoved. BOIcanceled; OpenRouter/MessioldBUYpullscomplete. Earlierfinancialsnapshotsbelowarehistory.
+
+## Historical — October18 21:21UTC
 
 **BOI137 DEC0215 canceledunfilled; DEC0219.** Original15NO@7c/$1.05 canceled21:15:22.705517; after364s terminal/trades/index/bothCTFs prove0filled. Onlymatchingreservationretired7→6; other6rows unchanged. **Six LIVEBUYs/$11.82pending**, pUSD18.846890/free7.026890 at fixed95768759/21:21:26UTC. Noholding/spend/PnL orrepost. [Final proof/primary](../research/2026-10-18-boi-cancel.md). OldOct19 22UTCBOIBUYpullcompleteearly.
 

@@ -1,0 +1,61 @@
+{
+  "schema": "polyclaude.primary_vote_share_bridge.v1",
+  "review_index": 293,
+  "adopted_utc": "2026-10-18T22:52:17.466539+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.27067832521344537,
+  "low": 0.05,
+  "high": 0.7,
+  "entry_reserve_pp": 15,
+  "selected_yes": 0.12067832521344538,
+  "selected_no": 0.5793216747865546,
+  "literal": "YisraelBeiteinu all-valid-national-vote share strictly<5%; exact5%No/higher bracket; below-seat-threshold votes count. Joint/merged list ALL votes count. ExpectedOct27 2026 election, not guaranteed date; no definitive results byOct31 2027 23:59ET defaults LOWEST bracket, henceYes. Credible consensus, ambiguity officialCEC alone.",
+  "poll_model": "Equal mixture of three polling-house hypotheses, NOT iid pooled samples. Within each, approximate all-valid share mean=(reported seats/120)*(1-W), W~Uniform1..12% nonrepresented valid votes; party sampling variance mu*(1-mu)/n plus .8pp future-turnout/campaign SD and .35pp allocation/seat-to-share projection SD. Normal likelihood is illustrative; panel design/bias not a calibrated binomial guarantee. Integrate401 W midpoints; add2% joint/list interpretation branch with2% conditionalYes and .5% unresolved-beyond2027 fallbackYes.",
+  "house_branches": [
+    {
+      "house": "i24_DirectPolls",
+      "reported_seats": 6,
+      "n": 525,
+      "paired_Likud_seats": 25,
+      "implied_share_center_pct": 4.675,
+      "conditional_p_below5": 0.6006580186702845
+    },
+    {
+      "house": "Maariv_Lazar_secondary",
+      "reported_seats": 8,
+      "n": 700,
+      "paired_Likud_seats": 18,
+      "implied_share_center_pct": 6.233333333333337,
+      "conditional_p_below5": 0.1679440813269553
+    },
+    {
+      "house": "Channel13",
+      "reported_seats": 9,
+      "n": 1018,
+      "paired_Likud_seats": 18,
+      "implied_share_center_pct": 7.012500000000002,
+      "conditional_p_below5": 0.0476389006595153
+    }
+  ],
+  "history": "Primary2021CEC: YB248370/4410052=5.6319%,7seats; religiousZionism6seats5.12% vsJointList6seats4.82%. Primary2022CEC: YB213687/4764742=4.48475%,6seats. Thus6seats cannot be mechanically classified. Historical small-party exclusion totals roughly1.5%/8.8% motivate broad W, not a fitted2026 distribution.",
+  "list_binding": "Sep27 Ynet report ofCEC ballotletters separately namesLamed/YB underLiberman, not direct-current official list proof. DirectCEC list403; latest polls nameYB separately.2% identity/jointbranch retained, not assumed merge or impossibility.",
+  "source_units": [
+    "data/deep_review_20261017/work/0293_facts_2248.json",
+    "data/deep_review_20261017/work/0293_secondary_list_crosscheck_2252.json",
+    "data/deep_review_20261017/work/0293_poll_metric_bridge_2255.json"
+  ],
+  "sensitivity_p_yes": {
+    "i24_DirectPolls": 0.5910415682035273,
+    "Maariv_Lazar_secondary": 0.16914547929378143,
+    "Channel13": 0.05184792814302741,
+    "election_shift_pp_-1.0": 0.4861578064981899,
+    "election_shift_pp_1.0": 0.11777258180520134,
+    "late_sd_pp_0.5": 0.2574812174300691,
+    "late_sd_pp_1.2": 0.29399895790753255,
+    "wasted_votes0": 0.2056213018040668,
+    "wasted_votes15pct": 0.3759959225382437,
+    "joint_list10pct": 0.2505118985292652,
+    "fallback3pct": 0.2888763168746391
+  },
+  "limits": "Vote-share bridge, weights, wasted-vote and late-error distributions are primary judgement, not measured support percentages or calibrated posterior. N/moe refer polls, not event probability. Correlated house/campaign/turnout uncertainty is not diversified by counting3 polls. Same house branches pair Likud25/18/18 for294; no independent portfolio hedge claim. Ordinary15pp reserve includes extra5pp for unobserved vote-share conversion and shared polling error. Typical count publication timing differs from379day worst fallback lock; delay risk retained."
+}

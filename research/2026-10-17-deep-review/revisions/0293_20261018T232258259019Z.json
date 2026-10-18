@@ -1,0 +1,117 @@
+{
+  "review_index": 293,
+  "market_id": "4375452",
+  "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
+  "criteria_sha256": "a876c98c625c5fc221a207260be3db03eb3e3a4142b9f289efaafecf32fd74c9",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T23:22:58.259329+00:00",
+  "literal_analysis": "YisraelBeiteinu all-valid-national-vote share strictly<5%; exact5%No/higher bracket; below-seat-threshold votes count. Joint/merged list ALL votes count. ExpectedOct27 2026 election, not guaranteed date; no definitive results byOct31 2027 23:59ET defaults LOWEST bracket, henceYes. Credible consensus, ambiguity officialCEC alone.",
+  "evidence": [
+    {
+      "url": "https://www.i24news.tv/en/news/israeli-elections/artc-i24news-poll-likud-slips-to-25-seats-as-ben-gvirs-party-reaches-double-digits",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "i24NEWS / Direct Polls; published2026-10-18; Yisrael Beiteinu 6 seats; no vote-share estimate; sample525. Seat count, not vote share."
+    },
+    {
+      "url": "https://www.jpost.com/israel-election-2026/article-911902",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Maariv / Lazar Research with Panel4All (JPost report); published2026-10-16; Yisrael Beiteinu 8 seats; no vote-share estimate; sample700. Seat count, not vote share."
+    },
+    {
+      "url": "https://13tv.co.il/item/news/politics/politics/survey-905396904/",
+      "observed_utc": "2026-10-18T22:42:19.264443Z",
+      "finding": "Channel 13 / The Index, Stat-Net, Project HaMidgam, Askria; published2026-10-14; Yisrael Beiteinu 9 seats; no vote-share estimate; sample1018. Seat count, not vote share."
+    },
+    {
+      "url": "https://votes24.bechirot.gov.il/nationalresults",
+      "observed_utc": "2026-10-18T22:53:32.051491+00:00",
+      "finding": "Official2021 final: YB248370/4410052 valid5.63%,7seats; religiousZionism6seats5.12%,JointList6seats4.82%. Root web-rendered body; ordinary raw captured in metric bridge."
+    },
+    {
+      "url": "https://votes25.bechirot.gov.il/nationalresults",
+      "observed_utc": "2026-10-18T22:53:32.051532+00:00",
+      "finding": "Root official2022 web-rendered final: YB213687/4764742 valid4.48%,6seats. Historical scope, not2026forecast."
+    },
+    {
+      "url": "https://www.ynetnews.com/article/no1cetlga",
+      "observed_utc": "2026-10-18T22:45:58.205660+00:00",
+      "finding": "Sep27 secondaryreport ofCEC-approved ballotletters listsLamed/YB underLiberman separately; directcurrentCEClist403 leaves residualidentitygap."
+    },
+    {
+      "url": "https://www.c14.co.il/article/1743088",
+      "observed_utc": "2026-10-18T23:14:56.307750+00:00",
+      "finding": "New same-day NEXTDATA/Filber YB6/Likud29 n559; secondaryKan YB8/Likud21. See compact source addendum; no sample invented as fact."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.3190975935085508,
+    "low": 0.05,
+    "high": 0.7,
+    "method": "Equal mixture of5 source-house hypotheses; not pooled iid respondents. Same literal/within-house/identity/fallback model as predecessor. Add Oct18C14 YB6/Likud29 and secondaryKan YB8/Likud21; Kan n500 illustrative only, not reported.",
+    "reasoning": "Weights are primary judgement, not calibrated posterior. Grouping political/method families changes answer materially. Newsource samplegap, seat/vote bridge and late turnout/campaign uncertainty retained; no guaranteed hedge between293/294. 15pp entry allowance does not cover every joint extreme. Verysmall manual position only; entirecashcanbelost, long2027fallback possible.",
+    "model_path": "models/poll293_update_2320.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 12.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0293_economics_2320.json",
+    "detail_sha256": "939094dea7c4508f43761a94bcca998d8aebb44c80b5fde1a34bd36eb053e3da",
+    "sides": {
+      "Yes": {
+        "probability": 0.3190975935085508,
+        "selected_stress_probability": 0.16909759350855083,
+        "best_bid": 0.082,
+        "best_ask": 0.127,
+        "taker_cost_usd": 1.3143500000000001,
+        "central_expected_profit_usd": 1.8766259350855083,
+        "selected_stress_profit_usd": 0.3766259350855081,
+        "break_even_constant_carry": 0.13156918958151775
+      },
+      "No": {
+        "probability": 0.6809024064914492,
+        "selected_stress_probability": 0.5309024064914492,
+        "best_bid": 0.873,
+        "best_ask": 0.918,
+        "taker_cost_usd": 9.21012,
+        "central_expected_profit_usd": -2.4010959350855083,
+        "selected_stress_profit_usd": -3.9010959350855083,
+        "break_even_constant_carry": 0.9219523143367658
+      }
+    }
+  },
+  "verdict": "DEC0220 LIVE UNFILLED: ONEpost-onlyBUY11YES@10c/1.10cash accepted+independentlyverified; noholding/spend/PnL. Fullriskreserved, pullALLunfilledOct19 02UTC/earlierunassessedmaterialnews CANCELFIRST; noadd/replay/repost.",
+  "reopen_condition": "Complete bounded current entry review; if no eligible margin closeattempt/noautomaticretry. Newpoll/list/turnout facts require primaryreforecast and all current gates.",
+  "question": "Will Yisrael Beiteinu win less than 5% of the vote in the 2026 Knesset elections?",
+  "valuation_author": "primary_operator",
+  "original_index": 293,
+  "report_sha256": "0f1b1e8b16e7eac4401ca39c9ddd2be41a2136d11d85ac600e0df708e8efbcaf",
+  "report_path": "revisions/0293_20261018T232258259019Z.md",
+  "revision_reason": "ONEvetted293makerbid accepted and independentlyprovedLIVEunfilled; preserve exactrisk/pull/no-replay state.",
+  "prior_report_sha256": "689d9661650ebfab57d86a27f2c685403f018abceb0466de46f48ffac4c82b55",
+  "revision_path": "revisions/0293_20261018T232258259019Z.json",
+  "financial_action": {
+    "decision_id": 220,
+    "order_id": "0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d",
+    "status": "LIVE_UNFILLED",
+    "shares": 11,
+    "price": 0.1,
+    "committed_cash_usd": 1.1,
+    "matched_at_verification": 0,
+    "verified_utc": "2026-10-18T23:20:35.934749+00:00",
+    "proof_path": "data/deep_review_20261017/work/0293_postproof_2330.json",
+    "proof_sha256": "443f97e4650a6b4dc0c60a253d960e906fae2c65dfcdbd96e0f94665f732c589",
+    "pull_at": "2026-10-19T02:00:00Z",
+    "no_replay": true
+  }
+}

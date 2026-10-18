@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October18
 
-**292valued /4blocked /343factual exclusions /2,361pending**;639immutablebase+38append-only revisions;next288. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200notified; next300. Save/index EACH completion. [Small resume interface](research/2026-10-17-deep-review/RESUME.md) loads one full rule/latest report and named source/model units;8KB hard cap avoids whole-history ingestion.
+**300 valued /4 blocked /343 factual exclusions /2,353 pending**;647 immutable base cases +44 append-only revisions. Next297. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200 notified;300 update pending publication. Save/index EACH completion; [resume interface](research/2026-10-17-deep-review/RESUME.md) loads one full rule/latest report and named source/model units, with an8KB hard cap.
 
-Netflix278 **closedunplaced**: singleUSD1NOmaker attempt SKIP2c>1chardcap; auth/reservations/chainprove noorder/holding/spend. No retry; [smalloutcome](research/2026-10-17-deep-review/netflix278_entry_outcome_2215.md). Apple280Dec31model40.009%YES/noentry, distinctOct31horizon. Gamma+bookreceiptbindingrepaircomplete/42referencesverified/7tests; only275agegatecrossed/forecastnoentryunchanged; [38-record audit](research/2026-10-17-deep-review/quote_clock_audit_2145.md).
+**Two new LIVE, unfilled bids:** [DEC0220 Yisrael Beiteinu](research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md),11YES10c/$1.10; [DEC0221 state gas prices](research/2026-10-17-deep-review/gas296_entry_outcome_2355.md),5YES54c/$2.70. Both independently zero-matched/zero CTF balances23:45:36. Eight BUYs reserve$15.62; pUSD18.846890/free3.226890. Pull both new bids Oct19 **02UTC**, earlier on unassessed material news CANCEL FIRST; no add/replay/repost. A newer-polls feed fix changed forecasts before execution; Likud294 closed unplaced. Treasury295:42.986%YES/no entry. Research probabilities are judgments, not execution instructions.
 
-BOI137bid canceledunfilled/onlyreservation7→6retired; [DEC0219proof](research/2026-10-18-boi-cancel.md), no replay. Original OpenRouter1125NO65c filled17:37:42; latest88%NO/selected73%, retain5/noadd. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Research models are judgments, not execution instructions.
+BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 
 ## Mandate and constraints
 
@@ -99,6 +99,8 @@ Full-account valuation **21:54:32–48UTC**; rounded sequential marks/indicative
 Retain/noadd HLE9NO, Michigan5NO, Messi5YES, OpenRouter5NO, completeClarity29/29, TrumpNO.33dust. Fresh22:04:54 fixedchain/account: **6LIVE zero-matchedBUYs/$11.82**, sixmatchingreservations; pUSD18.846890/free7.026890. No newfill/financialwriter. [Review/evidence/limits](research/2026-10-18-2200-checkin.md).
 
 HLE cached ordinaryAccuracy53.6<55; originfreshnessunknown. Diamond59.9 is a differentmetric in the same row. OpenRouterpartialcurrentweek is not futuretargetsettlement. Senate proceduralcloture is not finalClaritypassage. Adverse scenarios still favor exit; retainedforecasts are not guaranteed floors.
+
+Currentcommitments independently23:20:35: **7LIVEBUY12.92**,7linkedreservations,pUSD18.846890/free5.926890;293bothCTFs0. This updates commitments only; displayedfull-account marks remain the dated22review, no newperformanceCSVrowforanunfilledbid.
 
 RawRSS Telegramoff; actualexposure IDs constrain materialreview, pending≠reviewed. [Routingproof](research/2026-10-18-news-review-routing.md). SedgwickBUYpullOct19 10UTC;Idaho22UTC; earlieruncertainty cancelsFIRST. Nextheldreview02UTC. [Chart/CSVmethodology](docs/README.md).
 

@@ -1,0 +1,11 @@
+# 296 · DEC0221 · LIVE, unfilled
+
+- ONE vetted post-only call accepted BUY **5 YES at $0.54 / $2.70 full-fill risk**, 2026-10-18 23:44:22 UTC. Independent23:45:36 proof: LIVE, zero matched, no target trades, both outcome balances zero. **No replay, add or repost.**
+- Order `0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94`; market4641857; CID `0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a`; YES `89657564314254312016109285821372616495366637583869934291275521891966562780185`.
+- Exact payoff: ANY of50 states' AAA unrounded regular average strictly below $3.75 on Oct31,23:59 ET; DC excluded. No qualifying source after two full calendar days defaults NO. Display rounding remains a boundary risk.
+- Primary YES77.9177375%; actual15pp reserve selects62.9177375%. Signed selected surplus $0.445886875 before carry/~$0.05 operations; entire $2.70 can be lost. Fuel paths are correlated; mixture weights/local shocks are judgment, not fitted probabilities. [Model](models/gas296_primary_2335.json).
+- Strict public snapshot: exact Gamma identity/rules, HTTP200, compact4% taker-only fee parity, geoblock false. Precall book53/78c, age104.207s; raw54c/signed$2.75 caps met. Standard exchange allowance/approval verified23:38. Both added feeds passed a normal watcher cycle; no new timer or forced poll.
+- At Polygon95774526 /23:45:36: pUSD18.846890; **eight BUYs reserve15.62, free3.226890**. All seven prior orders/reservations preserved; 293 also LIVE/unfilled with both balances zero. Reservations are commitments, not holdings or PnL.
+- **Pull every unfilled share Oct19 02:00 UTC**, earlier on unassessed material AAA/tax/supply news: CANCEL FIRST. On fill, fresh source/holding/fee-net exit review; partial fills may fall below five-share exit minimum.
+
+[Independent proof](../../data/deep_review_20261017/work/0296_postproof_2355.json), SHA256 `62490b1073eaf54f618b9256c4c316a3f1a109ba7072ee892364bad5dcaa10fe`; root separately verified seven private receipt hashes, exact identities and preserved inventory. [Root check](../../data/deep_review_20261017/work/0296_root_postproof_2355.json). Marker `work/0296_submission_2355.json` preserves the single call and stdout hash.

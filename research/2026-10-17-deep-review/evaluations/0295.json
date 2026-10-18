@@ -1,0 +1,79 @@
+{
+  "review_index": 295,
+  "market_id": "4890803",
+  "condition_id": "0x29781209ace34a88b6ba6feb75389d5cbdd6c75cd96d20f47edb6bcc7b366323",
+  "criteria_sha256": "e78805fdd352862193dd364688ad86a4ffefe423c5a461357c0c3f2955685ce7",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T23:17:10.274431+00:00",
+  "literal_analysis": "Treasury10Yr DailyPar CMT>=5.4 on ANYdate Sep23creation–Dec31 2026. Daily published value, not intraday; openerinclusive versus later higher-than wording retained. SourceURL2025query selected2026required. Dataunavailable14calendardaysafterend→availabledata. No qualifying2026rowthroughOct16.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-18T22:50:07.222917+00:00",
+      "finding": "199official2026dailyobservations throughOct16: latest5.09/max5.31Oct5/zero>=5.4. CreationSep23 verifiedhashedGamma; whole2026superset containswindow. TreasuryparCMTindicativeNYFedbidquotesnear15:30, notactualtrade/intradayhigh."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/cpi.htm",
+      "observed_utc": "2026-10-18T23:11:37.099646+00:00",
+      "finding": "SepCPI+0.6%m/mSA/+3.7%y/y, gasoline+9.1%/core+0.3%m/m. OfficialupcomingCPI Nov10/Dec10/jobsNov6/Dec4 are catalysts, not dailyCMT settlement or forwardyields."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-18T23:11:38Z",
+      "finding": "Sep16Fedraisedfunds25bp to3.75–4%; Oct27–28/Dec8–9 meetings. SEPmedianfunds4.1/PCE3.7year2026 are participantappropriatepolicy projections, not10Yr targets/committeecommitment."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.42985961375000004,
+    "low": 0.12,
+    "high": 0.8,
+    "method": "5-observation circular block bootstrap of centered latest120 published changes; rescale to5.5bp80%/8bp20% daily SD; futuredrift0bp60%/+0.6bp25%/-0.6bp15%.51futureobservations;8e4commonseedpaths. EventANYdailypoint max, not terminalyield or intradaybridge.1%measurement/rule/revisionbranch with50%conditionalYes.",
+    "reasoning": "Scenario weights/drifts/volscale uncalibrated judgement. Macro surprises, fiscal/term premium/oil and jointnews can change distribution. 1%sourcebranch and15pp reserve do not cover every extreme. Recent120sameyear not independent regime history; bootstrap only5-stepdependence. No externalmarket odds used. Expectedend~75days, administrativefallback+14days. Not entryauthorization.",
+    "model_path": "models/treasury295_primary_2325.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 75.0,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0295_economics_2325.json",
+    "detail_sha256": "e5a95a3317364aa7dda59dde7a90b73cee5c37429e17a3f9c430a8623b55b962",
+    "sides": {
+      "Yes": {
+        "probability": 0.42985961375000004,
+        "selected_stress_probability": 0.27985961375,
+        "best_bid": 0.41,
+        "best_ask": 0.44,
+        "taker_cost_usd": 4.523210000000001,
+        "central_expected_profit_usd": -0.22461386250000004,
+        "selected_stress_profit_usd": -1.7246138625000005,
+        "break_even_constant_carry": 0.4552150003309757
+      },
+      "No": {
+        "probability": 0.57014038625,
+        "selected_stress_probability": 0.42014038624999994,
+        "best_bid": 0.56,
+        "best_ask": 0.59,
+        "taker_cost_usd": 6.02096,
+        "central_expected_profit_usd": -0.3195561375000002,
+        "selected_stress_profit_usd": -1.8195561375000002,
+        "break_even_constant_carry": 0.6059482775269756
+      }
+    }
+  },
+  "verdict": "NO ENTRY: both dated fee-adjusted taker costs exceed central values; ordinary maker41c+ and56c+ also fail selected27.99/42.01%. 75daycarry and operation costs worsen economics. No new holding/order/prep.",
+  "reopen_condition": "A new officialdailyyield or materialrate/inflation/fiscal surprise supports independentupdatedfirstpassage forecast; positive eligiblemaker economics after uncertainty/carry and all currentgates.",
+  "question": "Will the 10-year Treasury yield hit 5.4% before 2027?",
+  "valuation_author": "primary_operator",
+  "original_index": 295,
+  "report_sha256": "193599537a1da1a2697c63ace15e2393de6585867b4c7b69a3287165012a651e"
+}

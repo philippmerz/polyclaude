@@ -1,0 +1,31 @@
+{
+  "schema": "polyclaude.primary_correlated_state_fuel.v1",
+  "review_index": 296,
+  "adopted_utc": "2026-10-18T23:26:29.251279+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.779177375,
+  "low": 0.35,
+  "high": 0.97,
+  "entry_reserve_pp": 15,
+  "literal": "ANYof50USstates AAAunroundedregularaverage<3.75 onOct31 at23:59ET. DCexcluded. SourceforOct31whenupdated, notcurrentdate; unavailable+2fullcalendardays\u2192No.4decimalpublishedprecisionvsunroundedlatent unresolvednearboundary.",
+  "source_checks": "data/deep_review_20261017/work/0296_primary_source_checks_2335.json",
+  "method": "All50Oct18AAAstatebaselines+ONEcommonglobal13dayretailpricechange. Empirical2observationweeklyEIAUSregularchanges:50%last52/25%last104/25%last52centered to-3c (seasonal/flatcurrentregime); shrinkduration13/14approximately. StateforecastlocalSD4c; NC+GAshareSEfactor3c plusindependent2.5c. This is high positive crossstatecorrelation, not50independentbinarydraws.98%ordinaryunion+1%exceptionalpolicy/supplybranch with5%conditionalYes+1%sourcefallbackNo.",
+  "horizon_days": 13,
+  "paths": 160000,
+  "seed": 29620261018,
+  "ordinary_union_probability": 0.79456875,
+  "sensitivity": {
+    "all50_base_before2pct_source_adverse_branch": 0.79456875,
+    "NC_GA_TX_only_same_paths": 0.79455625,
+    "NC_only_same_paths": 0.79444375,
+    "global_mean_plus10c": 0.5902,
+    "global_mean_minus10c": 0.86650625,
+    "future_local_sd0": 0.78879375,
+    "sourcebranch_0": 0.7512941029015479,
+    "sourcebranch_1": 0.8630404323458767,
+    "sourcebranch_2": 0.8123586851193878
+  },
+  "policy": "NCexcisetaxsuspendedOct10\u2013Nov30/GAthroughNov5, bothincludeOct31. Currentpricesalreadyreflectunknownpass-through; assumeNOadditionalautomatictaxsaving and do notextrapolateNC-35.41c/week. Otherstatetaxes/localbasiscoveredonlybyforecasterror/tailbranches.",
+  "macro": "AAAOct15national4.33/downcouplecents, crude~100/seasonalrecordrisk. EIAOct12US4.331/LowerAtlantic3.929/Gulf3.851 aredifferentprovider/datedobservations. History52two-weekSD20.6c/10415.05c includespositive+70.5ctail; currentflatseasonalregimeweight25%isjudgement.",
+  "limits": "Empiricalchangesoverlap/serialdepend/nonstationary andnationalEIA\u2260AAAstate. Mixtureweights/localSD/sourcepolicybranchesunfitted; shortcurrentstatehistorytaxconfounded. 4decimalpricesnotproofgenuinelyunrounded. Modelrange35\u201397%/15ppreservecoversneithereveryjointstressnorallfuturepolicy/war/refineryshock. RechecktargetdatedAAAtable/sourceoutages; no calibratedposterior/guaranteedfloor/entryauthorization."
+}

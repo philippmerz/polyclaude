@@ -1,0 +1,96 @@
+{
+  "schema": "polyclaude.primary_political_regimes.v1",
+  "review_index": 289,
+  "adopted_utc": "2026-10-18T22:39:10.540768+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.0814,
+  "low": 0.01,
+  "high": 0.35,
+  "entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.7686,
+  "creation_utc": "2026-03-09T21:30:41.313729Z",
+  "literal": "Ceases as STF Justice for any period after creation through Dec31 23:59 ET. Actual resignation/removal announcement before deadline immediately qualifies even if effective later. Inquiry assignment removal, TSE term end, recusal or routine leave do not by themselves establish loss of Justice tenure. Temporary suspension ambiguity retained, not assumed equivalent. Official Moraes/government primary; credible-report consensus fallback.",
+  "regimes": [
+    {
+      "name": "Institutional continuity before new Senate",
+      "weight": 0.82,
+      "conditional_yes": 0.02,
+      "basis": "Tenured justice active in Oct14 official ruling; pending PET56 only throughOct2; no automatic age retirement, no new Senate votes beforeFeb2027. Includes small personal/health/unexpected announcement risk."
+    },
+    {
+      "name": "Scandal escalation or outgoing-coalition break",
+      "weight": 0.12,
+      "conditional_yes": 0.25,
+      "basis": "Official Sep2 resignation demand and Sep30 PET56 show pressure; a vote threshold and short timetable do not make abrupt departure impossible."
+    },
+    {
+      "name": "Negotiated voluntary departure announcement",
+      "weight": 0.05,
+      "conditional_yes": 0.6,
+      "basis": "Announcement clause can qualify a future effective exit before new Senate convenes. Scenario possibility, no actual negotiation established."
+    },
+    {
+      "name": "Earlier trigger or tenure/adjudication correction",
+      "weight": 0.01,
+      "conditional_yes": 0.5,
+      "basis": "Creation-to-now any-period wording; current active profile cannot independently exclude every past announcement or suspension interpretation."
+    }
+  ],
+  "arithmetic": ".82*.02 + .12*.25 + .05*.60 + .01*.50 = .0814",
+  "primary_evidence": [
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/correcao-monetaria-de-depositos-judiciais-deve-seguir-indices-previstos-na-legislacao-da-epoca-decide-stf/",
+      "date": "2026-10-14",
+      "fact": "Official court ruling lists Moraes joining majority; correct current activity source, replacing unrelated case URL."
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/materias/2026/10/04/conheca-os-54-senadores-eleitos-neste-domingo",
+      "date": "2026-10-04",
+      "fact": "54 newly elected senators beginFeb1 2027, after exact deadline."
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "fact": "Art52II/par sole: Senate trial and2/3 conviction; Art95 tenure protection. No premise that petition filing already removes Justice.",
+      "observed_date": "2026-10-18; root web-rendered body; exact transport time unavailable"
+    }
+  ],
+  "source_units": [
+    "data/deep_review_20261017/work/0289_facts_2235.json",
+    "data/deep_review_20261017/work/0289_primary_bridge_2240.json"
+  ],
+  "sensitivity": {
+    "ordinary_conditional_0_to_5pct": [
+      0.065,
+      0.106
+    ],
+    "scandal_weight_6_to_24pct_reallocated_from_continuity": [
+      0.0676,
+      0.109
+    ],
+    "negotiated_weight_0_to_15pct_reallocated_from_continuity": [
+      0.0524,
+      0.1394
+    ],
+    "joint_bearish_for_tenure": {
+      "continuity_weight_and_rate": [
+        0.6,
+        0.05
+      ],
+      "scandal": [
+        0.25,
+        0.6
+      ],
+      "negotiated": [
+        0.14,
+        0.8
+      ],
+      "correction": [
+        0.01,
+        0.8
+      ],
+      "p_yes": 0.3
+    }
+  },
+  "limits": "Regime weights and conditional rates are judgemental, not an empirical calibrated removal model. Gabrilli claim that impeachment can take>200days is not a statutory minimum. Davi Sep2 remark is not a promise to block. PET56 data endOct2; no exhaustive later docket/announcement absence established. New2027 Senate and generic scandal headlines not treated as immediate votes or loss of office. Range wider than single-factor sensitivity; no proven portfolio hedge."
+}

@@ -1,0 +1,45 @@
+{
+  "schema": "polyclaude.primary_seat_mixture.v1",
+  "review_index": 294,
+  "adopted_utc": "2026-10-18T23:01:40.725865+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.46048643133705724,
+  "low": 0.1,
+  "high": 0.85,
+  "entry_reserve_pp": 15,
+  "selected_yes": 0.3104864313370572,
+  "selected_no": 0.38951356866294273,
+  "literal": "Likud integer Knesset seats fewer than20, i.e.0..19; 20No. Count entire joint/merged list if applicable. Solely seats, not popular vote/PM/coalition. ScheduledOct27 2026. No definitive result byOct31 2027 23:59ET defaults lowestbracket, henceYes. Credible reporting consensus, ambiguity officialCEC.",
+  "model": "Equal mixture of polling-house hypotheses: i24/DirectPolls25, Maariv/Lazar18, Channel1318. Round latent normal seat count to nearest integer, so<20 corresponds latent<19.5 (continuity correction). Per-house future SD3.25seats allows sampling/design/campaign/threshold allocation error; judgement, not fitted.97.5% standalone +2%joint/list error with1%conditional<20 +.5%longfallbackYes.",
+  "source_binding": "Same paired house branches as293 YB6/8/9, not independent. Channel13 and i24 originators; Maariv viaJPostsecondary, fieldOct14\u201315/n700. Latesti24Oct18/n525. Sep27Ynet separately listsLikudMem-Chet-Lamed; directcurrentCEClist403 remains residual gap.",
+  "scenario_detail": {
+    "reported_seat_centers": [
+      25,
+      18,
+      18
+    ],
+    "per_house_sigma": 3.25,
+    "house_probabilities": [
+      0.045293660960756876,
+      0.6777938331150942,
+      0.6777938331150942
+    ],
+    "regular_probability": 0.4669604423969818,
+    "joint_weight": 0.02,
+    "joint_conditional_yes": 0.01,
+    "fallback_weight": 0.005
+  },
+  "sensitivity": {
+    "SD2": 0.5088606440064283,
+    "SD5": 0.4509338942303935,
+    "i24_house_only": 0.04936131943673795,
+    "18seat_houses_only": 0.6660489872872168,
+    "common_plus3seats": 0.21608232270258748,
+    "common_minus3seats": 0.6729801191846146
+  },
+  "evidence_units": [
+    "data/deep_review_20261017/work/0294_facts_2250.json",
+    "data/deep_review_20261017/work/0293_poll_metric_bridge_2255.json"
+  ],
+  "limits": "House choice dominates; sourcepolls are noisy correlated estimates, not3 independentvotes or actual election results. SD/weights/list/fallback rates are primary judgement. No government/PM threshold conversion. Extra5pp reserve reflects7-seat house gap and uncalibrated late shift.379day fallback can lock funds longer than normal result timing. No independent hedge with293/otherIsraelassets."
+}

@@ -1,0 +1,101 @@
+{
+  "review_index": 289,
+  "market_id": "1544795",
+  "condition_id": "0xae515ea2b1b95486007cff8aa4afbd5f677e2760dd8752c1068d9cc55afb6d58",
+  "criteria_sha256": "1696414fe2afdebf3c5ef1cab13cb9e783b5b55b5f31bb12e0ac2b7ea24efd7a",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:40:41.506457+00:00",
+  "literal_analysis": "Ceases as STF Justice for any period after creation through Dec31 23:59 ET. Actual resignation/removal announcement before deadline immediately qualifies even if effective later. Inquiry assignment removal, TSE term end, recusal or routine leave do not by themselves establish loss of Justice tenure. Temporary suspension ambiguity retained, not assumed equivalent. Official Moraes/government primary; credible-report consensus fallback. Creation 2026-03-09T21:30:41.313729Z",
+  "evidence": [
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/correcao-monetaria-de-depositos-judiciais-deve-seguir-indices-previstos-na-legislacao-da-epoca-decide-stf/",
+      "observed_utc": "2026-10-18T22:37:59.163200+00:00",
+      "finding": "STF Oct14 majority: judicial-deposit correction follows period-specific law; not tenure event. court ruling; not resignation/removal"
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/materias/2026/10/04/conheca-os-54-senadores-eleitos-neste-domingo",
+      "observed_utc": "2026-10-18T22:38:01.184947+00:00",
+      "finding": "54 elected senators receive eight-year mandates Feb1 2027–Jan31 2035; no current justice-status event. future term dates; not Moraes departure"
+    },
+    {
+      "url": "https://www12.senado.leg.br/tv/programas/noticias-1/2026/09/davi-alcolumbre-comenta-caso-do-banco-master",
+      "observed_utc": "2026-10-18T22:38:02.878394+00:00",
+      "finding": "Alcolumbre said he would speak later amid impeachment-request discussion; not a departure announcement or judgment. senator statement; not resignation/removal"
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/materias/2026/09/02/mara-gabrilli-pede-renuncia-de-ministro-do-stf-para-evitar-crise-institucional",
+      "observed_utc": "2026-10-18T22:38:04.530389+00:00",
+      "finding": "Gabrilli requested a minister’s resignation; this is a third-party demand, not actual resignation/removal. third-party demand; not departure event"
+    },
+    {
+      "url": "https://portal.stf.jus.br/ostf/ministros/verMinistro.asp?id=50&periodo=STF",
+      "observed_utc": "2026-10-18T22:34:42.578981Z",
+      "finding": "Current page identifies Alexandre de Moraes as an STF Minister and records assumption of office on 2017-03-22. Page itself has no fresh as-of stamp; previous capture noted linked profile last updated Aug20."
+    },
+    {
+      "url": "https://www25.senado.leg.br/web/atividade/materias/-/materia/175894",
+      "observed_utc": "2026-10-18T22:34:42.578981Z",
+      "finding": "Docket still displays “Em tramitação”; last location and state both dated 2026-09-30 (Plenary; awaiting dispatch). Page says underlying legislative data last updated 2026-10-02 08:21. Thus capture on Oct18 does not establish docket movement after Oct2."
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/constituicaocompilado.htm",
+      "observed_utc": "2026-10-18T22:40:41.506415+00:00",
+      "finding": "Root web-rendered current Constitution Art52II/sole paragraph Senate trial,2/3 conviction/loss office; Art95 tenure protection. Exact network time unavailable; observation time recorded here."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0814,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Primary mutually exclusive institutional/scandal/negotiated-departure/source-correction regimes; explicit judgemental weights/rates, not calibrated from prices.",
+    "reasoning": "Regime weights and conditional rates are judgemental, not an empirical calibrated removal model. Gabrilli claim that impeachment can take>200days is not a statutory minimum. Davi Sep2 remark is not a promise to block. PET56 data endOct2; no exhaustive later docket/announcement absence established. New2027 Senate and generic scandal headlines not treated as immediate votes or loss of office. Range wider than single-factor sensitivity; no proven portfolio hedge. Central8.14%; single-factor5.24–13.94%, jointadverse30%. Actual15pp reserve includes5pp extra for stale docket and latent voluntary announcement risk.",
+    "model_path": "models/moraes289_primary_2241.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "horizon_days": 74.26356907864583,
+    "actual_entry_reserve_pp": 15.0,
+    "hypothetical_gross_shares": 10.0,
+    "detail_path": "data/deep_review_20261017/work/0289_economics_2242.json",
+    "detail_sha256": "0a01ddf373e216a0bc05a33afde32857e7a742dc7ab8249557c6accd0e881be8",
+    "sides": {
+      "Yes": {
+        "probability": 0.0814,
+        "selected_stress_probability": 0,
+        "best_bid": 0.22,
+        "best_ask": 0.23,
+        "book_age_seconds_at_receipt": 0.9639999866485596,
+        "taker_cost_usd": 2.3708400000000003,
+        "central_expected_profit_usd": -1.5568400000000002,
+        "selected_stress_profit_usd": -2.3708400000000003,
+        "break_even_constant_carry": 0.2385859483986688
+      },
+      "No": {
+        "probability": 0.9186,
+        "selected_stress_probability": 0.7686,
+        "best_bid": 0.77,
+        "best_ask": 0.78,
+        "book_age_seconds_at_receipt": 0.9639999866485596,
+        "taker_cost_usd": 7.868640000000001,
+        "central_expected_profit_usd": 1.317359999999999,
+        "selected_stress_profit_usd": -0.18264000000000102,
+        "break_even_constant_carry": 0.7918488539959261
+      }
+    }
+  },
+  "verdict": "NO central positive13.17pp per fee-inclusive cost but selected76.86% fails78.69% cost/79.18% carry. NO ENTRY; preserve candidate evidence for revalidation, not a factual exclusion.",
+  "reopen_condition": "Fresh Senate status or actual Moraes statement/announcement materially changes independent forecast or cheaper eligible NO clears costs/carry/uncertainty with current gates.",
+  "question": "Alexandre de Moraes out as Brazil Supreme Court Justice?",
+  "valuation_author": "primary_operator",
+  "original_index": 289,
+  "report_sha256": "20030341a529b8a16b3c6a4c6eb62f6f97e73eb4561bc00acc5780645c3f54e3"
+}

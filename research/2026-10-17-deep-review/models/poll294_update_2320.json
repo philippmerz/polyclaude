@@ -1,0 +1,57 @@
+{
+  "schema": "polyclaude.primary_poll_update.v1",
+  "review_index": 294,
+  "adopted_utc": "2026-10-18T23:14:56.307750+00:00",
+  "own_outcome_prices_read_before_adoption": true,
+  "previous_model": "models/likud294_primary_2303.json",
+  "source_addendum": "data/deep_review_20261017/work/0293_0294_primary_addendum_2320.json",
+  "p_yes": 0.34153998745300973,
+  "low": 0.03,
+  "high": 0.85,
+  "entry_reserve_pp": 15,
+  "method": "Equal mixture of5 source-house hypotheses; not pooled iid respondents. Same literal/within-house/identity/fallback model as predecessor. Add Oct18C14 YB6/Likud29 and secondaryKan YB8/Likud21; Kan n500 illustrative only, not reported.",
+  "paired_rows": [
+    {
+      "house": "i24_DirectPolls",
+      "YBseats": 6,
+      "n": 525,
+      "Likudseats": 25,
+      "conditional_p_yes": 0.045293660960756876
+    },
+    {
+      "house": "Maariv_Lazar_secondary",
+      "YBseats": 8,
+      "n": 700,
+      "Likudseats": 18,
+      "conditional_p_yes": 0.6777938331150942
+    },
+    {
+      "house": "Channel13",
+      "YBseats": 9,
+      "n": 1018,
+      "Likudseats": 18,
+      "conditional_p_yes": 0.6777938331150942
+    },
+    {
+      "house": "C14_NEXTDATA",
+      "YBseats": 6,
+      "n": 559,
+      "Likudseats": 29,
+      "conditional_p_yes": 0.0017329544011220333
+    },
+    {
+      "house": "Kan_secondary",
+      "YBseats": 8,
+      "n": 500,
+      "Likudseats": 21,
+      "conditional_p_yes": 0.3222061668849058
+    }
+  ],
+  "selected_yes": 0.19153998745300974,
+  "selected_no": 0.5084600125469902,
+  "sensitivity": {
+    "group_i24_C14_into_one_quarter_weight": 0.4198936155690332,
+    "Kan_n_500_700_1000_YB_p_conditional": null
+  },
+  "limits": "Weights are primary judgement, not calibrated posterior. Grouping political/method families changes answer materially. Newsource samplegap, seat/vote bridge and late turnout/campaign uncertainty retained; no guaranteed hedge between293/294. 15pp entry allowance does not cover every joint extreme. Verysmall manual position only; entirecashcanbelost, long2027fallback possible."
+}

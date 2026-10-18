@@ -1,0 +1,130 @@
+{
+  "schema": "polyclaude.primary_openrouter_threshold.v1",
+  "review_index": 292,
+  "adopted_utc": "2026-10-18T22:47:15.817054+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.14925,
+  "low": 0.005,
+  "high": 0.85,
+  "entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.70075,
+  "literal": "Sum displayed weekly Top Models Totals forSep28,Oct5,Oct12,Oct19; UTC Monday-Sunday; >=725T inclusive. Freeze at firstOct26 week display, fallbackOct30 23:59ET. Use separately rounded Total, not sum rounded model labels or hatched WeeklyPace. API end date not authoritative display/fallback time.",
+  "source": {
+    "receipt": "logs/deep_review_20261017/openrouter292_2242/receipt.json",
+    "raw_sha256": "b12bdcc68f03371b45db2eeab0ab4c87306576e4fee7ebb9544f0d27c549c935",
+    "received_utc": "2026-10-18T22:39:14.805289+00:00",
+    "cachedAt": "2026-10-18T21:44:44.918000+00:00",
+    "known_completed_raw_T": 337.698551582277,
+    "known_displayed_total_proxy_T": 338,
+    "current_Oct12_raw_T": 162.334601117638,
+    "Oct19_absent_not_zero": true,
+    "UI_elapsed_weight": 0.9836875,
+    "UI_additional_pace_T": 2.6919963715422295,
+    "backend_observation_cutoff": "unknown; cachedAt is projection anchor, not a certified cutoff"
+  },
+  "current_week_completion_scenarios": [
+    {
+      "weight": 0.65,
+      "label": "Near-current capture",
+      "remaining_T": "max(0,UIadditional+Normal(0,3T))"
+    },
+    {
+      "weight": 0.25,
+      "label": "Up to a day of unresolved lag",
+      "remaining_T": "Lognormal(log(22.425446475075177),.3); Sunday13.05% * latest complete171.8425T"
+    },
+    {
+      "weight": 0.1,
+      "label": "Broad lag/batch",
+      "remaining_T": "Uniform(0,36T)"
+    }
+  ],
+  "completion_bridge": "Current raw162.335 exceeds10:34raw152.318 by10.016T. This supports intraday change but does not identify cutoff; reduce old45% full-day-lag weight to25%, retaining uncertainty. No fixed daily leaderboard cutoff imported.",
+  "growth_regimes": [
+    [
+      "moderation",
+      0.45,
+      0.035,
+      0.065
+    ],
+    [
+      "historical_growth",
+      0.35,
+      0.08,
+      0.095
+    ],
+    [
+      "release_boom",
+      0.1,
+      0.2,
+      0.1
+    ],
+    [
+      "disruption",
+      0.1,
+      -0.15,
+      0.15
+    ]
+  ],
+  "growth_definition": "Next weekly total = completedOct12 * exp(Normal(mu,sigma)); same empirical scale/context as earlier family model, target-specific horizon. No new launch catalyst asserted.",
+  "historical_context": "Last12 completed weekly logreturns mean.08392/sd.09188; last4mean.07606/sd.05827; latest complete growth3.6%. Earlier51returns sd.31 includes structural outlier; not a stable iid calibration sample.",
+  "display_and_revision": "Three-significant-digit positive round-to-nearest proxy, then sum; observed150T-range tooltip Total wholeT. Apply95%Normal(0,2T)/5%Normal(0,10T) total revision sensitivity, equally allocated to4 raw weeks BEFORE formatting/summing, preserving inclusive725 boundary. Allocation/noise are subjective, not a proven revision law.",
+  "MC": {
+    "draws": 60000,
+    "seed": 29220261018,
+    "estimated_sampling_se": 0.0014547304303547102
+  },
+  "base": {
+    "p_yes": 0.14925,
+    "mean_total_T": 691.5003533333334,
+    "median_T": 687,
+    "p05_T": 648,
+    "p95_T": 748,
+    "by_growth": {
+      "moderation": [
+        26977,
+        2715
+      ],
+      "historical_growth": [
+        21016,
+        3638
+      ],
+      "release_boom": [
+        6052,
+        2434
+      ],
+      "disruption": [
+        5955,
+        168
+      ]
+    },
+    "by_cutoff": {
+      "near_current": [
+        39052,
+        1024
+      ],
+      "one_day_lag": [
+        14945,
+        6099
+      ],
+      "broad_unknown": [
+        6003,
+        1832
+      ]
+    }
+  },
+  "sensitivity_p_yes": {
+    "near_current": 0.026533333333333332,
+    "one_day_lag": 0.40321666666666667,
+    "broad_unknown": 0.30766666666666664,
+    "moderation": 0.1011,
+    "historical_growth": 0.17066666666666666,
+    "release_boom": 0.3967333333333333,
+    "disruption": 0.029416666666666667,
+    "unrounded_raw_sum": 0.14595,
+    "no_revision_noise": 0.15073333333333333,
+    "double_revision_noise": 0.15188333333333334
+  },
+  "limits": "Primary scenario weights, future drift and revision law are judgement, not calibrated posterior. Data-through cutoff/first-display revisions remain unknown. RoundedTotal mapping verified by separate code/liveDOM source; formatting proxy not proof for every future magnitude. Current points are not final settlement. Source/future traffic dependence with held112 exists; different four-week target/range, no hedge or independence claim."
+}

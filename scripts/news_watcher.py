@@ -21,6 +21,7 @@ useful for testing).
 from __future__ import annotations
 
 import argparse
+import calendar
 import datetime as dt
 import hashlib
 import json
@@ -682,6 +683,50 @@ def match_keywords(text: str, keywords: list[str]) -> str | None:
     return None
 
 
+def _entry_published_timestamp(entry) -> float | None:
+    """Return an RSS entry's publication/update time, or None if unavailable.
+
+    Feedparser's parsed time fields are UTC tuples. A malformed publication
+    date falls through to a valid update date rather than hiding the entry.
+    """
+    for field in ("published_parsed", "updated_parsed"):
+        value = entry.get(field)
+        if value is None:
+            continue
+        try:
+            if isinstance(value, dt.datetime):
+                parsed = value if value.tzinfo else value.replace(tzinfo=dt.timezone.utc)
+                return parsed.timestamp()
+            parts = tuple(value)
+            if len(parts) < 6:
+                continue
+            return float(calendar.timegm(parts))
+        except (TypeError, ValueError, OverflowError, OSError):
+            continue
+    return None
+
+
+def _newest_entries_first(entries: list, limit: int | None = None) -> list:
+    """Order dated RSS entries newest-first before applying the feed cap.
+
+    Equal timestamps retain source order. Entries without a usable published
+    or updated date follow all dated entries and retain their source order.
+    This lets relevance-ordered feeds expose recent tail items to the cap.
+    """
+    dated: list[tuple[float, int, object]] = []
+    undated: list[tuple[int, object]] = []
+    for index, entry in enumerate(entries):
+        timestamp = _entry_published_timestamp(entry)
+        if timestamp is None:
+            undated.append((index, entry))
+        else:
+            dated.append((timestamp, index, entry))
+    dated.sort(key=lambda item: (-item[0], item[1]))
+    ordered = [entry for _, _, entry in dated]
+    ordered.extend(entry for _, entry in undated)
+    return ordered if limit is None else ordered[:limit]
+
+
 def poll_once(config: dict, state: dict) -> int:
     """Run one detection cycle. Return the number of internally retained alerts."""
     seen = set(state.get("seen_ids", []))
@@ -702,7 +747,7 @@ def poll_once(config: dict, state: dict) -> int:
         except Exception as e:
             print(f"[watcher] feed error {feed['name']}: {e}", flush=True)
             continue
-        for entry in (d.entries or [])[:max_entries]:
+        for entry in _newest_entries_first(d.entries or [])[:max_entries]:
             eid = entry_id(entry)
             if eid in seen:
                 continue

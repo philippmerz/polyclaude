@@ -1,0 +1,69 @@
+{
+  "schema": "polyclaude.primary_launch_tree.v1",
+  "review_index": 290,
+  "adopted_utc": "2026-10-18T22:42:58.066304+00:00",
+  "own_outcome_prices_read_before_adoption": false,
+  "p_yes": 0.011,
+  "low": 0.0001,
+  "high": 0.15,
+  "entry_reserve_pp": 10,
+  "selected_yes": 0,
+  "selected_no": 0.889,
+  "literal": "Strict FDV >USD50M (equality No) for StandX platform token at16:00 ET on calendar day after launch, not24h. Launch requires active public transferability AND trading. Most-liquid price source; no qualifying launch byDec31 23:59ET meansNo. LateDec31 launch can requireJan1 16ET valuation despite API endJan1 05Z. DUSD stablecoin/reward allocation/pre-market derivative not automatically the platform token.",
+  "regimes": [
+    {
+      "weight": 0.98,
+      "conditional_yes": 0,
+      "label": "Oct15 cancellation persists; no qualifying launch",
+      "basis": "Named official account says it will not proceed with token launch; DUSD airdrop instead; reduce-onlyOct20 and later exit deadlines. Current docs platform token not live."
+    },
+    {
+      "weight": 0.01,
+      "conditional_yes": 0.6,
+      "label": "Reversal or lawful successor launches bydeadline, then FDV test",
+      "basis": "No irreversible prohibition: team/acquirer can reverse plan. 60% conditional FDV>50M is broad judgement without supply/venue/valuation data, not TVL-to-FDV conversion."
+    },
+    {
+      "weight": 0.01,
+      "conditional_yes": 0.5,
+      "label": "Unknown prior launch or disputed asset/source interpretation",
+      "basis": "DUSD versus platform-token identity, missing tokenomics/most-liquid venue, unavailable full article; adjudication/identity uncertainty not zero."
+    }
+  ],
+  "arithmetic": ".98*0 + .01*.60 + .01*.50 = .011",
+  "evidence_units": [
+    "data/deep_review_20261017/work/0290_facts_2240.json",
+    "data/deep_review_20261017/work/0290_announcement_detail_2245.json"
+  ],
+  "sources": [
+    {
+      "url": "https://x.com/StandX_Official/status/2110613379270185114",
+      "event_utc": "2026-10-15T06:06:57Z",
+      "finding": "Direct official post: token launch canceled, DUSD airdrop instead, operational dates. Raw hash root verified; core account identity and full note text inspected."
+    },
+    {
+      "url": "https://docs.standx.com/docs/standx-perps-solutions/community-maker-yield",
+      "finding": "Undated page still distinguishes DUSD distributions and separate platform-token allocation, not yet live; unchanged latest body may lag Oct15 announcement."
+    },
+    {
+      "url": "https://x.com/i/article/2110604141693124608",
+      "finding": "Official timeline article preview; directGET404. Full article unavailable, no inference about Oct15 reward cessation or precise wind-down provisions."
+    }
+  ],
+  "sensitivity": {
+    "revival_weight_0_to_10pct_reallocated_from_cancel": [
+      0.005,
+      0.065
+    ],
+    "conditional_fdv_rate_10_to_90pct": [
+      0.006,
+      0.014
+    ],
+    "interpretation_weight_0_to_5pct_reallocated_from_cancel": [
+      0.006,
+      0.031
+    ],
+    "joint_adverse_no": ".10*.90+.05*1=.14; remainder no-launch"
+  },
+  "limits": "Cancellation statement is measured first-hand, but74day reversal/adjudication tail is not empirically bounded; use ordinary10pp instance reserve, not short-horizon K5 bond licence. Scenario rates/weights are primary judgement; no FDV inferred from TVL, users, token allocations, or DUSD marketcap. No unlaunched-address gap treated as proof of impossibility or mechanical exclusion."
+}

@@ -1,0 +1,78 @@
+{
+  "schema": "polyclaude.primary_count_model.v1",
+  "review_index": 288,
+  "adopted_utc": "2026-10-18T22:35:50.907573+00:00",
+  "own_quotes_read_before_adoption": false,
+  "p_yes": 0.04117738744294136,
+  "low": 0.001,
+  "high": 0.35,
+  "entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.8088226125570587,
+  "current": {
+    "count": 95,
+    "as_of": "2026-10-18T22:31:16.046060+00:00",
+    "elapsed_hours": 54.521123905555555,
+    "actual_percent": 32.45304994378307,
+    "latest_exported_post_utc": "2026-10-18T22:02:23.000Z",
+    "export_inside_unique": 95,
+    "export_rows_outside": 21,
+    "export_rows_unparsed": 0
+  },
+  "literal": "Inclusive 200..219 main-feed posts, quotes and reposts; special main-feed replies count, other replies/community reposts excluded; captured deletions count. Oct16 noon ET to Oct23 noon ET. Tracker primary, X fallback only if incorrect. API end one second before literal end; boundary/reclassification risk retained.",
+  "branches": [
+    {
+      "weight": 0.8,
+      "label": "Friday profile persists, with future intensity uncertainty",
+      "p": 0.03533402773011533,
+      "future_means": [
+        329.3525641025641,
+        314.14473684210526,
+        235.765625,
+        230.64242384142466,
+        337.02725933438296,
+        191.7125290540494,
+        208.48591549295776
+      ],
+      "NB_shape": 8,
+      "construction": "Equal seven nonoverlapping completed Friday templates. Expected future=(current+.5)*historic_suffix/historic_prefix, linearly interpolated bins54..55 at current elapsed. Jeffreys .5 count correction; NB shape8 allows ~35% latent-intensity CV in addition to profile variation. Shape is judgement, not fitted."
+    },
+    {
+      "weight": 0.15,
+      "label": "Calendar profile breaks",
+      "p": 0.07276104849878108,
+      "future_mean": 198.77126314916558,
+      "NB_shape": 2,
+      "construction": "Constant hourly current rate; much wider future intensity CV~71%. Includes slowdown/acceleration risk, not an extrapolation of rounded tracker pace."
+    },
+    {
+      "weight": 0.05,
+      "label": "Counter or resolution-source repair",
+      "p": 0.03992015968063872,
+      "construction": "Uniform terminal integer0..500, judgemental broad repair tail. Not a capture validation or empirical outage rate."
+    }
+  ],
+  "sensitivity": {
+    "profile_shape_2": 0.05836451355122102,
+    "profile_shape_4": 0.05479947595386952,
+    "profile_shape_8": 0.04117738744294137,
+    "profile_shape_16": 0.025641981759649244,
+    "profile_shape_95.5": 0.013034114161443136,
+    "future_intensity_0.5": 0.1401794026360194,
+    "future_intensity_0.75": 0.08339659987377929,
+    "future_intensity_1.25": 0.022261193560497522,
+    "future_intensity_1.5": 0.013993518099755,
+    "elapsed_hours_54": 0.03988715737678154,
+    "elapsed_hours_55": 0.04243706525416828,
+    "corrected_count_80": 0.07503622291486806,
+    "corrected_count_110": 0.02146215154736562,
+    "recent_two_templates_only": 0.020557150679499803
+  },
+  "evidence": {
+    "history_path": "data/deep_review_20261017/work/0288_aligned_history_2232.json",
+    "history_sha256": "925ffe71e898a493f43bb3d6b1449293b7fcbddd6353ca9e7f5cb2cb7ebf7acd",
+    "export_path": "data/deep_review_20261017/work/0288_post_records_2231.json",
+    "export_body_sha256": "9fea7154ea113d9ed5e2ca4aee9ea4322bcea7cc4c276cc34df70e17c8e24969"
+  },
+  "limits": "Seven dependent behavioural weeks, not calibrated independent trials. Current prefix95 exceeds historical prefix max78; extrapolation may fail. Bin55 partly observed and historical within-hour arrivals nonuniform. API collection cutoff/qualifying post types not independently proved; old lastSync conflicts with newer records. Rounded API percent43/pace222 rejected: 54.52/168=32.45%. Range is subjective and wider than model sensitivities; no probability mass borrowed from case258 quiet total90 or case101 near-terminal tail. Dated valuation, not execution authorization."
+}
