@@ -1,0 +1,150 @@
+{
+  "review_index": 182,
+  "condition_id": "0xfaf8b14e01186f4383655da85fe831a01e209920e4fcd6b1248392f58dc1eb52",
+  "criteria_sha256": "8fd3f02a0e09cd16aa091065e00d434c697c299d88d7c0811a14aab71990c50d",
+  "status": "valued",
+  "literal_analysis": "FullfourdisplayedweeklyTotalsSep28/Oct5/Oct12/Oct19,UTCweeks,firstOct26displayfreeze/Oct30ETfallback;625inclusive675exclusive;actualrounding/sourcequeriesnotrolling-week/R2APIs.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T13:16:29.106432+00:00",
+      "finding": "RootSHAverified53point actualTopModelsseries inclOthers;52completedparsedpoints unchanged, partialOct12 now153.997T, Oct19absent. CachedAtnotdatacutoff."
+    },
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-18T13:16:30Z",
+      "finding": "Priorcapturedactualcaller andUIrounding/pacebinding reused, not retestedbycurrentUIread. Weeklypaceoverlaydistinctfromactualtotals."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.36,
+    "low": 0.05,
+    "high": 0.8,
+    "method": "Same fivefutureweeklypaths/sharedregime and25%innovationcorrelation asprevious primary112/35model, freshpartial/projection inputs and revisedcutoffweights. Case182 is disjointneighbor of35, not independent bet. Aggregate95%N(0,2T)/5%N(0,10T) correction approximates rounding/revisions rather than proving theirdistribution.",
+    "reasoning": "ExactfourweekSep28-Oct25sum; jointcurrentcutoff/growth/sourcecorrectionmodel gives36.285%band, rounded36, adjacent35disjoint57%,112still11. Wide5–80range/15ppreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 13,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.36,
+        "best_bid": 0.5,
+        "best_ask": 0.57,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 23.165,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.57,
+            "fee_usd": 0.09804
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.798039999999999,
+        "fee_usd": 0.09804,
+        "break_even_probability_before_carry": 0.579804,
+        "break_even_probability_with_idealized_carry": 0.5804385972907293,
+        "central_expected_profit_usd": -2.1980399999999998,
+        "default_10pp_stressed_profit_usd": -3.1980399999999993,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.26,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.60036
+      },
+      "No": {
+        "probability": 0.64,
+        "best_bid": 0.43,
+        "best_ask": 0.5,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 23.165,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 5.0,
+            "price": 0.5,
+            "fee_usd": 0.05
+          },
+          {
+            "shares": 5.0,
+            "price": 0.56,
+            "fee_usd": 0.049280000000000004
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 5.399290000000001,
+        "fee_usd": 0.09929,
+        "break_even_probability_before_carry": 0.5399290000000001,
+        "break_even_probability_with_idealized_carry": 0.5405199539785621,
+        "central_expected_profit_usd": 1.0007099999999998,
+        "default_10pp_stressed_profit_usd": 0.0007099999999997664,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.54,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.20196
+      }
+    }
+  },
+  "verdict": "Noentryapproved; conditionalmakerYES18c/NO46c requiresfreshjointportfolio/source/executiongates.",
+  "reopen_condition": "Changedchart/cutoff/method ormatched-timeYES<=18c/NO<=46c with fullgates; no hedgecredit against112/35.",
+  "current_description_sha256": "c371a3c5f189af4e6c6ed6f209aa83f34addebaca3ceef939a67c822190185e3",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "31218424379162301574551771094806187067954267486099629030562285233553356475945",
+    "23441210077112539187350463057155818495355674397088947366224650047845526583711"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0131",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0.21,
+    "selected_no": 0.49,
+    "source_packet": "data/deep_review_20261017/openrouter182_current_facts_1350.json",
+    "dependent_cases": [
+      35,
+      112
+    ]
+  },
+  "evaluated_utc": "2026-10-18T13:38:06.901510+00:00",
+  "question": "Will OpenRouter process between 625T and 675T tokens from Sep 28 to Oct 25?",
+  "market_id": "5326401",
+  "valuation_author": "primary_operator",
+  "original_index": 182,
+  "report_sha256": "b6bbfa82907d0ad1c97ea58a05ce0d8dd8356e4ee6d6080ef0f33e1600e77243"
+}

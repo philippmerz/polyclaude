@@ -1,0 +1,150 @@
+{
+  "review_index": 181,
+  "condition_id": "0xe5699e9eeb4d985d52ced2156482d1f49c3c27806e68e8011f4a4d217799e84c",
+  "criteria_sha256": "63de5870371f42bc3bc675831fb0672bbb08a028bf5f0b31fbfc66c4eb7e41cc",
+  "status": "valued",
+  "literal_analysis": "FullSaintsfirst/Giantssecond winnerclaim, Oct18 17UTC, overtimeincluded;tie/cancelwithoutmakeup50-50,postponementwait; forecastnumber isexpectednormalized payout, not literal fullwinprobability.",
+  "evidence": [
+    {
+      "url": "https://www.nfl.com/teams/new-orleans-saints/",
+      "observed_utc": "2026-10-18T12:46:53.317423Z",
+      "finding": "OfficialNFL SaintsawayGiants Oct18 13EDT=17UTC schedule."
+    },
+    {
+      "url": "https://oddsreference.com/games/nfl/new-orleans-saints-vs-new-york-giants-2026-10-18",
+      "observed_utc": "2026-10-18T13:11:26.858877Z",
+      "finding": "OddsReferencecrossbookbestmoneylines one-dayfreshnesslabel; spreadpointsnotexposed, notcurrentcoherenthandicapconsensus."
+    },
+    {
+      "url": "https://dknetwork.draftkings.com/moneyline-total-spread/",
+      "observed_utc": "2026-10-18T13:13:02.786984Z",
+      "finding": "DKNetworktwo-sidedGiants-112/Saints-108 with no odds timestamp; endpoint403/lineupgap."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.5,
+    "low": 0.35,
+    "high": 0.65,
+    "method": "Two-sided provider-network moneyline de-vig, crosscheck with separatelydatedcross-booklisting; explicittiehalf-payout. No independent team-selection alpha or fittedsportsforecast.",
+    "reasoning": "Provider-network -112Giants/-108Saints devig49.5665%Saints no-tie;0.5%assumedtie gives49.5686%normalizedpayout rounded50. Datedcrossbook50.7%crosscheck, no independentteamalpha; lineupandtimestampgaps/15ppreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.03,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 0.3,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Saints": {
+        "probability": 0.5,
+        "best_bid": 0.5,
+        "best_ask": 0.51,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 50.35,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.51,
+            "fee_usd": 0.07497000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.17498,
+        "fee_usd": 0.07498,
+        "break_even_probability_before_carry": 0.517498,
+        "break_even_probability_with_idealized_carry": 0.5175110638596577,
+        "central_expected_profit_usd": -0.1749799999999997,
+        "default_10pp_stressed_profit_usd": -1.1749799999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.925
+      },
+      "Giants": {
+        "probability": 0.5,
+        "best_bid": 0.49,
+        "best_ask": 0.5,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 50.35,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.5,
+            "fee_usd": 0.075
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.075,
+        "fee_usd": 0.075,
+        "break_even_probability_before_carry": 0.5075000000000001,
+        "break_even_probability_with_idealized_carry": 0.5075128114674382,
+        "central_expected_profit_usd": -0.07500000000000018,
+        "default_10pp_stressed_profit_usd": -1.0750000000000002,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.82503
+      }
+    }
+  },
+  "verdict": "Noentryapproved; mismatched-time odds and missing officialfinalinactives, conditional32cmakerceilingeitheroutcome.",
+  "reopen_condition": "Currentdatedbookmakerlines/officialinactives, exactPMmaker<=32c/allgates andfeasiblebeforekickoffmanagement.",
+  "current_description_sha256": "f8b6c46f45ef517a199643f51ef1041b07d3b22ba895d3a971c2a2c3382edf55",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "41224807342843075213821042951230830255325059346724049826875437901622575662337",
+    "94794955396448990002673742127564617284890092791353282029141410285087754183313"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0130",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/saints181_primary_1355.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_first": 0.35,
+    "selected_second": 0.35,
+    "first_expected_normalized_payout_raw": 0.495691894700381,
+    "physical_first_win": 0.493191894700381,
+    "physical_second_win": 0.501808105299619,
+    "tie_probability_assumed": 0.005,
+    "source_packet": "data/deep_review_20261017/tesla168_saints181_facts_1340.json"
+  },
+  "evaluated_utc": "2026-10-18T13:32:35.630821+00:00",
+  "question": "Saints vs. Giants",
+  "market_id": "4329887",
+  "valuation_author": "primary_operator",
+  "original_index": 181,
+  "report_sha256": "e12465a4075606124da7b01f334f708bfd494fbc2c6925ab1bb750b08236a7ce"
+}

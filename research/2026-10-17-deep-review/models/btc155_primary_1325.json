@@ -1,0 +1,46 @@
+{
+  "created_utc": "2026-10-18T13:14:58.499343+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 155,
+    "market_id": "5610602",
+    "condition_id": "0x88aeab3adb4e316a51430a38d2f8deff32a139bf36fc1df30cf38dbd49bcab79",
+    "criteria_sha256": "756b1141aba50cb767fbc6568ced432a53d4f0aebbbb85c921fa6efe2b1166cc"
+  },
+  "full_rule": "This market will resolve to \"Yes\" if the Binance 1 minute candle for BTC/USDT closing at 12:00 in the ET timezone (noon) on the date specified in the title has a final \"Close\" price higher than the price specified in the title. Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market is Binance, specifically the BTC/USDT \"Close\" prices currently available at https://www.binance.com/en/trade/BTC_USDT with \"1m\" and \"Candles\" selected on the top bar.\n\nPlease note that this market is about the price according to Binance BTC/USDT, not according to other exchanges or trading pairs.\n\nPrice precision is determined by the number of decimal places in the source.",
+  "source_packet": "data/deep_review_20261017/btc155_fresh_1325.json",
+  "horizon_years_from_last_closed_source_candle": 0.0030555555872653476,
+  "method": "Physical short-horizon zero-log-drift Gaussian volatility mixture; no expected directional return inferred from past returns. Spot-final1mClose threshold, not a barrier probability.",
+  "branches": [
+    {
+      "weight": 0.8,
+      "annual_sigma": 0.35,
+      "p_above": 0.09881738452022898
+    },
+    {
+      "weight": 0.15,
+      "annual_sigma": 0.7,
+      "p_above": 0.2597359246878488
+    },
+    {
+      "weight": 0.05,
+      "annual_sigma": 1.2,
+      "p_above": 0.3535477183268778
+    }
+  ],
+  "p_yes_raw": 0.13569168223570438,
+  "p_yes": 0.14,
+  "sensitivity_range": [
+    0.02,
+    0.4
+  ],
+  "actual_entry_reserve_pp": 15,
+  "gaps": [
+    "volatility mixture weights and zero log drift are subjective, not options implied/calibrated",
+    "macro, liquidation, weekend and exchange source gap risks",
+    "short horizon no directional informational edge; no generic realized-volatility arbitrage",
+    "endminute source labeling ambiguity; equality84000 paysNO",
+    "quoted historical PMbook may not share underlying asof; no immediate trading inference"
+  ],
+  "action": "forecast only; no order/financial prior"
+}

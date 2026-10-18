@@ -1,0 +1,54 @@
+{
+  "created_utc": "2026-10-18T13:30:31.675494+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 173,
+    "market_id": "5692101",
+    "condition_id": "0x6e7aee94adfd2751604c4f92bfa7d169b08aec825539dc51034de674def849eb",
+    "criteria_sha256": "4d123fec464747886e51dd89f8a330b0c5650e4ac0de8a993cb6cd9bff32468c"
+  },
+  "full_rule": "This market will resolve to \"Yes\" if any Binance 1 minute candle for HYPEUSDT from the creation of this market through 11:59 PM ET on the last day of the month specified in the title has a final Low price equal to or lower than the price specified in the title. Otherwise, this market will resolve to \"No\". Price action before this market's creation will not be considered.\n\nThe resolution source for this market is Binance, specifically the HYPEUSDT Low prices available at https://www.binance.com/en/futures/HYPEUSDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance HYPEUSDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+  "source_packet": "data/deep_review_20261017/hype173_tail_1350.json",
+  "catalyst_packet": "data/deep_review_20261017/hype173_catalyst_facts_1345.json",
+  "current_source_close": 78.261,
+  "horizon_years": 0.03727168952942669,
+  "branches": [
+    {
+      "name": "ordinary",
+      "weight": 0.7,
+      "log_drift_annual": 0,
+      "sigma_annual": 0.8,
+      "p_hit": 0.08536659871944263
+    },
+    {
+      "name": "liquidation_or_weakness",
+      "weight": 0.25,
+      "log_drift_annual": -1,
+      "sigma_annual": 1.5,
+      "p_hit": 0.40219041920772514
+    },
+    {
+      "name": "systemic_or_futures_flash",
+      "weight": 0.05,
+      "p_hit": 0.6
+    }
+  ],
+  "p_yes_raw": 0.1903042239055411,
+  "p_yes": 0.19,
+  "sensitivity_range": [
+    0.01,
+    0.7
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0,
+  "selected_no": 0.6100000000000001,
+  "method": "Log-price lower-barrier first-passage proxy with explicit ordinary/highvolatility-liquidation and futures/systemicflash regimes. Final named1mLow governs, not a spot or terminal price.",
+  "uncertainties": [
+    "Primary regimeweights/drift/vol/flashhazard uncalibrated; shortsamplevol not future",
+    "Futures mark/index/otherexchange prices not named tradedcandleLow",
+    "Contributor vesting ongoing but exactOct29date/amount not primaryverified; conflictingsecondary calendars",
+    "Token-treasurySECfiling not Foundationstatement; Aug23supply/fee/burnnumbers not currentchain data",
+    "No measured hedge from underlyingcrypto/treasury/exchange collateral"
+  ],
+  "action": "research only; no token position or PMentry/financialprior"
+}

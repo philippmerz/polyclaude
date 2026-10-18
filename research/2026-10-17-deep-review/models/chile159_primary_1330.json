@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-18T13:16:54.418603+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 159,
+    "market_id": "5364732",
+    "condition_id": "0xd126be462373d003c41de347ae8dbd5237b887dacbbc551921789c3ca8b0d39e",
+    "criteria_sha256": "cf4cf9f15bc19c367df315e3238463caea1d0c96a6ac1ffd1e8bc6ee23499e8a"
+  },
+  "full_rule": "This market will resolve according to the change in basis points in the monetary policy rate resulting from the October 2026 meeting of the Central Bank of Chile (Banco Central de Chile), relative to the level it was prior to this meeting.\n\nThe resolution source will be official information from the Central Bank of Chile, including the statement or release from its October 2026 meeting, scheduled for October 27, 2026, as listed on the official Central Bank of Chile calendar (https://www.bcentral.cl/es/web/banco-central/noticias-y-publicaciones/prensa/calendario-de-politica-monetaria-y-financiera). This market may resolve as soon as the statement or release of the Central Bank of Chile resulting from its October 2026 meeting with relevant data is issued.\n\nIf the specified rate is defined by an upper and lower bound, the relevant change will be the change to the upper bound.\n\nIf the specified rate is changed to a level not expressed in the displayed options, the change will be rounded according to the following guidelines. Increases or decreases of less than 25 bps will be rounded to 25 bps (e.g. an increase or decrease of 10 bps would be considered to be an increase or decrease of 25 bps). Increases or decreases of greater than 25 bps will be rounded to the nearest 25 bps and will be rounded away from 0 in cases of equidistance (e.g., an increase or decrease of 37.5 bps would be considered to be an increase or decrease of 50 bps). Displayed options of \u201cIncrease\u201d or \u201cDecrease\u201d will include policy rate increases or decreases of any size.\n\nIf the specified meeting is postponed to a date and time before the start of the next scheduled meeting, this market will resolve based on the outcome of that postponed meeting. If the specified meeting is cancelled, or postponed such that no decision is announced by the start of the next scheduled meeting, this market will resolve to the \u201cNo Change\u201d bracket. Emergency changes to the specified rate not resulting from the specified meeting will not be considered.",
+  "source_packet": "data/deep_review_20261017/chile159_current_facts_1250.json",
+  "primary_method": "Survey-anchored policy scenario mixture, explicitly subjective regime weights; response deciles are forecasts, not independent binary votes or calibrated outcome probabilities.",
+  "branches": [
+    {
+      "weight": 0.85,
+      "hold": 0.95,
+      "cut": 0.04,
+      "hike": 0.01
+    },
+    {
+      "weight": 0.1,
+      "hold": 0.65,
+      "cut": 0.34,
+      "hike": 0.01
+    },
+    {
+      "weight": 0.05,
+      "hold": 0.5,
+      "cut": 0.1,
+      "hike": 0.4
+    }
+  ],
+  "no_announcement_fallback_hold_probability": 0.01,
+  "raw": {
+    "hold": 0.8985250000000001,
+    "cut": 0.07227000000000001,
+    "hike": 0.029205000000000005
+  },
+  "rounded": {
+    "hold": 0.9,
+    "cut": 0.07,
+    "hike": 0.03
+  },
+  "p_yes": 0.9,
+  "sensitivity_range": [
+    0.65,
+    0.98
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.75,
+  "selected_no": 0,
+  "official_release_local": "2026-10-27T18:00:00-03:00",
+  "official_release_utc": "2026-10-27T21:00:00+00:00",
+  "following_meeting_start_fallback": "Dec15start; do not replace with end-of-meeting",
+  "action": "research model only; no order or financial prior"
+}

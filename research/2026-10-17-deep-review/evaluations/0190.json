@@ -1,0 +1,56 @@
+{
+  "review_index": 190,
+  "condition_id": "0x10940164052d79f5b0266b78370441f47cdd358963053059b9ac527335d6158a",
+  "criteria_sha256": "815af9b4d9fa82c5fe929aeaf450cce537128257c5b84b89bd2b027abbf5298b",
+  "status": "excluded_factual",
+  "literal_analysis": "Full NOAAKLGAHourlyData TempwholeF maximumOct17/followingdatapoint freeze/revisionwindow/fallback/technicalcorrectionrule read; currentclosed/noheldroute, not an assumed66Foutcome.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5724254",
+      "observed_utc": "2026-10-18T13:44:54.434475+00:00",
+      "finding": "Fresh exactidentity/rules/tokensmatch, closed/nonaccepting; fixedblockbothCTFs0. Scalarresolved/arrayproposed notwinningpayoutproof."
+    },
+    {
+      "url": "https://api.weather.gov/stations/KLGA/observations?start=2026-10-17T04:00:00Z&end=2026-10-18T04:00:00Z&limit=500",
+      "observed_utc": "2026-10-18T13:17:41.800978+00:00",
+      "finding": "RootSHAchecked298targetdateobservations;46hourlyfilteredmax17.2C, vsallrow19C. Targetwindowquery cannot establishnextdayfreezepointabsence."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=klga",
+      "observed_utc": "2026-10-18T13:19:57.863356+00:00",
+      "finding": "Namedviewer dynamic/preliminary; actualwholeFTempcell/finality notverified. ExactHourlyDatafilter retained."
+    }
+  ],
+  "forecast": {
+    "method": "No forecast substituted for closed/no-balance state",
+    "reasoning": "Completed targetday, exactmarketnonacceptingandzeroCTFbalances sufficeforfactualexclusion; underlyingfinalpayout notassumed."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "closed": true,
+    "acceptingOrders": false,
+    "both_CTF_balances": {
+      "Yes": 0.0,
+      "No": 0.0
+    },
+    "fixed_polygon": {
+      "block": 95750499,
+      "block_utc": "2026-10-18T13:44:56+00:00"
+    },
+    "no_live_route": "Noentryorheldclaim; oldquotesnotexecutionevidence."
+  },
+  "verdict": "Factual exclusion: exact market closed/nonaccepting, both wallet balances zero; no payout inferred.",
+  "reopen_condition": "Changedexactvenue/heldstate withactuallawfulroute; revalidatenamedhourlywholeF/freeze/correctionsource.",
+  "portfolio_action": "none",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/film183_weather190_facts_1350.json",
+    "closure_receipt": "data/deep_review_20261017/weather190_closure_1420.json",
+    "target_window_end_not_global_latest": true
+  },
+  "evaluated_utc": "2026-10-18T13:46:20.489701+00:00",
+  "question": "Will the highest temperature in New York City be between 62-63°F on October 17?",
+  "market_id": "5724254",
+  "valuation_author": "primary_operator",
+  "original_index": 190,
+  "report_sha256": "1c0ac3accb19e886a4369cf1206525700265062fb4b7f5b2f4d212d8feedc1fa"
+}

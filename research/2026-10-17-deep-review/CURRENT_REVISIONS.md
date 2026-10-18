@@ -3,6 +3,29 @@
 Canonical evaluation files remain immutable observations. Read this file with the index and candidate follow-up before interpreting current probabilities or acting.
 
 
+## Current review pointer — October 18, 13:46 UTC
+
+The effective checkpoint records **250 valued, 2 blocked, 331 factual exclusions
+and 2,417 pending** across the 3,000 frozen conditions; no cases are active.
+There are 583 immutable base records and 22 append-only revisions, with each
+condition counted once. The [checkpoint](../../notes/deep_review_checkpoint.json)
+and live [index](INDEX.md) govern.
+
+Case 154’s latest revision is **63% YES, 30–85% range, 20-point reserve**; entry
+is deferred. Case 182 is **36% YES**. Case 35 is revised to **57% YES**, and case
+112 remains **11% YES** after a source-only refresh. See the [154 revision](revisions/0154_20261018T132229289334Z.md),
+[182 evaluation](evaluations/0182.md), and [35](revisions/0035_20261018T133807876978Z.md)
+and [112](revisions/0112_20261018T133808603216Z.md) revisions. None of these
+research updates authorizes an order.
+
+**Case 137 BOI DEC-0215:** the dated post-submit proof records BUY 15 NO at 7¢,
+LIVE with zero matched at 13:03:57 UTC ($1.05 remaining risk). No add or repost.
+The actual reserve is 20 points, selecting NO 12%. Pull by October 19 22:00 UTC,
+or cancel sooner if material evidence becomes uncertain. Case 112’s existing
+October 18 22:00 UTC review/pull remains unchanged. The proof is [here](../../data/deep_review_20261017/boi137_postsubmit_1305.json).
+
+## Prior pointer — October 18, 12:15 UTC (superseded)
+
 ## Current review pointer — October 18, 12:15 UTC
 
 The effective review has **230 valued, 2 blocked, 328 factual exclusions and

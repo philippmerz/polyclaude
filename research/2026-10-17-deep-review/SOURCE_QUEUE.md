@@ -1,4 +1,22 @@
-## Current pointer — October 18, 12:15 UTC
+## Current pointer — October 18, 13:46 UTC
+
+The effective checkpoint records **250 valued, 2 blocked, 331 factual exclusions
+and 2,417 pending**, with no active case. It contains 583 base records and 22
+append-only revisions; the [checkpoint](../../notes/deep_review_checkpoint.json)
+and [index](INDEX.md) govern. Case 154 is revised to 63% YES with a 20-point
+reserve and entry deferred. Case 182 is 36% YES; case 35 is revised to 57% YES;
+case 112 remains 11% YES after source-only review. See [154](revisions/0154_20261018T132229289334Z.md),
+[182](evaluations/0182.md), [35](revisions/0035_20261018T133807876978Z.md), and
+[112](revisions/0112_20261018T133808603216Z.md). These updates do not create
+execution authority.
+
+Case 137 BOI DEC-0215: the dated 13:03:57 UTC proof shows BUY 15 NO at 7¢,
+LIVE and 0 matched ($1.05 remaining risk). No add or repost. The current 20-point
+reserve selects NO 12%; pull by October 19 22:00 UTC, or cancel sooner if evidence
+becomes uncertain. Case 112’s existing 22:00 UTC review/pull is unchanged. See
+[BOI order proof](../../data/deep_review_20261017/boi137_postsubmit_1305.json).
+
+## Prior pointer — October 18, 12:15 UTC (superseded)
 
 The effective review has **230 valued, 2 blocked, 328 factual exclusions and
 2,440 pending**; case 133 is active and included in pending. There are 560 immutable

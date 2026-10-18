@@ -1,0 +1,180 @@
+{
+  "review_index": 112,
+  "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+  "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+  "status": "valued",
+  "literal_analysis": "Full725included775excluded fixedOct26/Nov2/9/16UTCweeks,firstNov23display/Nov27ETfallback,weeklydisplayedTotalrounding/higherboundary read. SeparateWeeklyPaceandrollingmodelslistnotsettlement.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T10:47:52.436299+00:00",
+      "finding": "ActualTopModelsnoargroute53Mondaypoints includingOthers; primaryhash/sumchecked. Fixedhistoricalgrowthcontext nowavailable, futuretargetweeksabsent."
+    },
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-18T11:06:24.407Z",
+      "finding": "Primaryviewedlivebrowserscreenshots: separatelyroundedweeklyTotal172/152 versusmodel-linesums; currentWeeklyPace165isforecast, notactual. Datacutoffunknown; cachedAt isforecastreferenceonly."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5763815",
+      "observed_utc": "2026-10-18T11:01:35.882511+00:00",
+      "finding": "Fullcurrentcriteria/CID/bothtokens exactlymatchfrozen; open/accepting/UMAempty metadataonly, notnewbook/descriptor/executioncertificate."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T13:16:29.106432+00:00",
+      "finding": "RootSHAverified53point actualTopModelsseries inclOthers;52completedparsedpoints unchanged, partialOct12 now153.997T, Oct19absent. CachedAtnotdatacutoff."
+    },
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-18T13:16:30Z",
+      "finding": "Priorcapturedactualcaller andUIrounding/pacebinding reused, not retestedbycurrentUIread. Weeklypaceoverlaydistinctfromactualtotals."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11,
+    "low": 0.005,
+    "high": 0.8,
+    "method": "Same fivefutureweeklypaths/sharedregime and25%innovationcorrelation asprevious primary112/35model, freshpartial/projection inputs and revisedcutoffweights. Case182 is disjointneighbor of35, not independent bet. Aggregate95%N(0,2T)/5%N(0,10T) correction approximates rounding/revisions rather than proving theirdistribution.",
+    "reasoning": "Fresh153.997Tpartial and25/65/10cutoffweights; exactjointmodelraw0.10867, rounded0.11. Sourceweightsremainjudgmental, not datacutoffproof.",
+    "calibration": "Not a calibrated or holdout-tested posterior."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 37,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.11,
+        "best_bid": 0.33,
+        "best_ask": 0.36,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 21.6,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.36,
+            "fee_usd": 0.09216
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.6921599999999994,
+        "fee_usd": 0.09216,
+        "break_even_probability_before_carry": 0.36921599999999993,
+        "break_even_probability_with_idealized_carry": 0.3703673160984467,
+        "central_expected_profit_usd": -2.5921599999999994,
+        "default_10pp_stressed_profit_usd": -3.5921599999999994,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.009999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.2115600000000004
+      },
+      "No": {
+        "probability": 0.89,
+        "best_bid": 0.64,
+        "best_ask": 0.67,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 21.6,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.67,
+            "fee_usd": 0.08843999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.7884400000000005,
+        "fee_usd": 0.08844,
+        "break_even_probability_before_carry": 0.678844,
+        "break_even_probability_with_idealized_carry": 0.6809608205753109,
+        "central_expected_profit_usd": 2.11156,
+        "default_10pp_stressed_profit_usd": 1.1115599999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.79,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.307840000000001
+      }
+    }
+  },
+  "verdict": "Retain11%YES/89%NO; existingDEC0214 unfilledbid lastdatedaccountproofonly, pulltoday22UTC/earlieruncertainty; noadd/repost.",
+  "reopen_condition": "CurrenttinyNOmakerproposalonlyifsource/catalysts/rules/UMA/fees/books/account/correlation/minimagatespass. ReassessnewweeklyTotal/model/methodchanges; pullbeforeknownupdateoronuncertainty.",
+  "current_description_sha256": "7d0d0688c6b99b7a321f4ba4d1524f8b25f454794c06ee0696bde1021898b9e5",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "3373711736427178463491593951208511465551017208346787894062959834640943616606",
+    "69361310336830576230613545878669264146295166638950702624315653157292183550426"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0137",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0137.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0137.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "adopted_joint_model": "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.json",
+    "primary_revision_assumptions": "data/deep_review_20261017/work/0112_chart_revision_assumptions_1115.json",
+    "source_live_display": "data/deep_review_20261017/openrouter_chart_live_display_1113.json",
+    "raw_p_yes": 0.107795,
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.74,
+    "selected_stressed_no_taker_profit_usd": 0.61156,
+    "concentrated_counter_p_yes": 0.7335745882248493,
+    "countermodel_equivalent_weight_for_15pp_reserve": 0.24054860931233585,
+    "candidate_NO_shares": 5,
+    "future_NO_maker_ceiling": 0.68,
+    "preferred_dated_reference_price": 0.64,
+    "priority_followup": true,
+    "entry_approved": false,
+    "old_own_quotes_known": true,
+    "fresh_current_own_books_read_before_model": false,
+    "original_report_kept": true,
+    "current_primary_model": "research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json",
+    "source_refresh_packet": "data/deep_review_20261017/openrouter182_current_facts_1350.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0,
+    "selected_no": 0.74
+  },
+  "question": "Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?",
+  "market_id": "5763815",
+  "valuation_author": "primary_operator",
+  "original_index": 112,
+  "evaluated_utc": "2026-10-18T13:38:08.603507+00:00",
+  "revision_reason": "FreshactualTopModelschart partial and primarycutoffweightrevision; jointlyrevalueadjacent/futurebands, notanaccountororderaction.",
+  "prior_report_sha256": "42430a9efe4b66c8a74810c991ff4d69acfabe0a68eb43ec8eef8b2e769d108e",
+  "report_sha256": "3581340114f23a4cfb310e3d00b5f28a2bb39749a02f661ae36e8895b677987c",
+  "report_path": "revisions/0112_20261018T133808603216Z.md",
+  "revision_path": "revisions/0112_20261018T133808603216Z.json"
+}

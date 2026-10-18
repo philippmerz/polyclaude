@@ -1,0 +1,159 @@
+{
+  "review_index": 180,
+  "condition_id": "0xb75da764f8b8363d534eba91c4fb19ceb666272f6fb1aa4ef66bdf7ae3e34b30",
+  "criteria_sha256": "f147c94e0e2044d57c0fd98e4fbee5a47bcf41fd2014c56bb10a62c404906e7a",
+  "status": "valued",
+  "literal_analysis": "Fullanyperiodleadershipcessation/advanceannouncement/removal/detention/permanent-duty rule read throughDec31ET; temporarywordingfork andpastwindowgaps retained. SuccessiontoKing/bunkerprecautions notautomaticYES.",
+  "evidence": [
+    {
+      "url": "https://spa.gov.sa/en/N2693450",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "OfficialSPA Oct5 activity and titles, not whole-window proof."
+    },
+    {
+      "url": "https://www.spa.gov.sa/en/N2489955",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "Jan16 reassuringKingSalman medicaltests, notcurrentMBShealth."
+    },
+    {
+      "url": "https://www.aol.com/articles/analysis-houthis-helping-iran-turn-132351000.html",
+      "observed_utc": "2026-10-18T13:29:03.940247+00:00",
+      "finding": "ReutersOct15 originalreporting oninfrastructurepressure/wider-warrisk; laterbody includesHouthidenial, notleaderremoval."
+    },
+    {
+      "url": "https://www.timesofisrael.com/saudi-arabia-said-low-on-interceptors-to-thwart-mounting-houthi-missile-attacks/",
+      "observed_utc": "2026-10-18T13:29:04.027549+00:00",
+      "finding": "ToI/AFP relaysWSJguardedmovement/interceptors; direct403/browserbodyread, notpoliticaldetention."
+    },
+    {
+      "url": "https://www.thenationalnews.com/news/gulf/2026/10/14/saudi-crown-prince-meets-iraqs-prime-minister-in-riyadh/",
+      "observed_utc": "2026-10-18T13:29:04.489103+00:00",
+      "finding": "Oct14MBS/IraqiPMmeeting withSPApictures reported byTheNational; datedactivity only."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.06,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Security/continuity scenario mixture informed by current official activity and original current war reporting; explicit residual for historical-window and any-period/permanent-wording gaps. Uncalibrated scenario weights, not actuarial or coup-frequency posterior.",
+    "reasoning": "Currentofficialactivity pluswartimepressure,80/15/5continuity/escalation/crisis with2/12/40conditionalcessation and1%historical/sourcefork; raw5.846%rounded6, wide1–30range/15ppreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.06,
+        "best_bid": 0.063,
+        "best_ask": 0.067,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 81.574,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.067,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.67,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.067,
+        "break_even_probability_with_idealized_carry": 0.06742417326742445,
+        "central_expected_profit_usd": -0.07000000000000006,
+        "default_10pp_stressed_profit_usd": -0.67,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.63
+      },
+      "No": {
+        "probability": 0.94,
+        "best_bid": 0.933,
+        "best_ask": 0.937,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 81.574,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.937,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.370000000000001,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.937,
+        "break_even_probability_with_idealized_carry": 0.9429320947996525,
+        "central_expected_profit_usd": 0.029999999999997584,
+        "default_10pp_stressed_profit_usd": -0.9700000000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.84,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.33
+      }
+    }
+  },
+  "verdict": "Noentryapproved; conditionalNOmaker<=76c aftercurrentsecurity/literal/executiongates.",
+  "reopen_condition": "Verified leadership/health/security/source change orNOmaker<=76c; allcurrentgates, no regionalhedge credit.",
+  "current_description_sha256": "69def00204a58b065a576042a20a9c420c2f81c8b4fd2aa35d39a820502a720a",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "80258213610981277759457115663042357606732262500052589985882716452182550393639",
+    "105736598014314299439325107084611306656525427340760111687102255264313166419221"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0108",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/saudi180_primary_1355.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0,
+    "selected_no": 0.79,
+    "source_packets": [
+      "data/deep_review_20261017/macro179_saudi180_facts_1340.json",
+      "data/deep_review_20261017/saudi180_followup_1350.json"
+    ]
+  },
+  "evaluated_utc": "2026-10-18T13:31:20.597179+00:00",
+  "question": "Will Mohammed bin Salman cease to be the de facto leader of Saudi Arabia by December 31, 2026?",
+  "market_id": "1709755",
+  "valuation_author": "primary_operator",
+  "original_index": 180,
+  "report_sha256": "6444674df039ac01f75a62b6ef7ddcc3a58be3e1f101c87ad1729539dd6d3ffb"
+}

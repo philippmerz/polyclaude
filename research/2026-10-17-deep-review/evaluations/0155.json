@@ -1,0 +1,146 @@
+{
+  "review_index": 155,
+  "condition_id": "0x88aeab3adb4e316a51430a38d2f8deff32a139bf36fc1df30cf38dbd49bcab79",
+  "criteria_sha256": "756b1141aba50cb767fbc6568ced432a53d4f0aebbbb85c921fa6efe2b1166cc",
+  "status": "valued",
+  "literal_analysis": "Full literal rule read: BinanceBTCUSDT final1mClose>84000 strictly atOct19noonET16UTC; equalityNO, terminal not barrier. Adjacent minute source labeling gap retained.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/time",
+      "observed_utc": "2026-10-18T13:14:57.776353+00:00",
+      "finding": "Official Binance server time used to exclude open source candles."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1m&limit=3",
+      "observed_utc": "2026-10-18T13:14:58.097035+00:00",
+      "finding": "BTCUSDT closed13:14UTC candle81,932.17; exact spot source, not a cross-venue ticker."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1h&limit=720",
+      "observed_utc": "2026-10-18T13:14:58.467301+00:00",
+      "finding": "719 closed contiguous hourly bars/718logreturns; descriptive volatility, not option-implied forecast."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.02,
+    "high": 0.4,
+    "method": "Physical short-horizon zero-log-drift Gaussian volatility mixture; no expected directional return inferred from past returns. Spot-final1mClose threshold, not a barrier probability.",
+    "reasoning": "Zero-log-drift physical Gaussian mixture weights80/15/5 and annualsigma35/70/120%, datedsource81,932.17; raw13.57%,rounded14. Broad2–40%range; no directional information edge.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 1.12,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "best_bid": 0.05,
+        "best_ask": 0.07,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.739,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.07,
+            "fee_usd": 0.04557000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.74558,
+        "fee_usd": 0.04558,
+        "break_even_probability_before_carry": 0.074558,
+        "break_even_probability_with_idealized_carry": 0.07456502698184483,
+        "central_expected_profit_usd": 0.6544200000000001,
+        "default_10pp_stressed_profit_usd": -0.34557999999999994,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.46675
+      },
+      "No": {
+        "probability": 0.86,
+        "best_bid": 0.93,
+        "best_ask": 0.95,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.739,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.95,
+            "fee_usd": 0.03325000000000003
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.53326,
+        "fee_usd": 0.03326,
+        "break_even_probability_before_carry": 0.953326,
+        "break_even_probability_with_idealized_carry": 0.9534158495734086,
+        "central_expected_profit_usd": -0.9332600000000006,
+        "default_10pp_stressed_profit_usd": -1.9332600000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.76,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.254430000000001
+      }
+    }
+  },
+  "verdict": "No entry approved; temporal quote mismatch and no directional edge.",
+  "reopen_condition": "Matched-time fresh source/book and independent event thesis; selected NOmaker<=68c, all execution gates.",
+  "current_description_sha256": "1c27bfa87e1c4896178339e781cc68a24f145471680748e7228d8eb84b533e39",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "95214012069254653011555660464431767766449026442141178814643064553256459416003",
+    "36159000640445702717771714730038269456398499661961834305305165076729904068944"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0061",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/btc155_primary_1325.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0,
+    "selected_no": 0.71,
+    "source_packet": "data/deep_review_20261017/btc155_fresh_1325.json"
+  },
+  "evaluated_utc": "2026-10-18T13:15:41.291870+00:00",
+  "question": "Will the price of Bitcoin be above $84,000 on October 19?",
+  "market_id": "5610602",
+  "valuation_author": "primary_operator",
+  "original_index": 155,
+  "report_sha256": "4d4d805297d574f8adf7ad1a3c96ead806093f91e2b0980293c80893a630bd94"
+}

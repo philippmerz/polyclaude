@@ -1,0 +1,97 @@
+{
+  "written_utc": "2026-10-18T13:44:01.680159+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 185,
+    "market_id": "5336146",
+    "condition_id": "0x8a48f51af37371585fcfcc7c1fbee17f46124ab60ddca0b3d4863a82f7350cff",
+    "criteria_sha256": "4bf57599b32d2e92f2291e6035197bf0b0baffe750b2c937ca6b45cb6073b6c8"
+  },
+  "full_rule": "The runoff round of the Brazilian presidential election is scheduled to take place on October 25, 2026. Legislative elections in Israel are scheduled to be held on October 27, 2026. The United States midterm elections are scheduled to be held on November 3, 2026.\n\nThis market will resolve to the single listed outcome that matches all three of the following: the winner of the Brazilian presidential election, the first Prime Minister of Israel to be sworn in as a result of the election, and the party that wins control of the United States Senate in the midterm elections. \n\nFor full rules for the Brazilian presidential election, click here: https://polymarket.com/event/brazil-presidential-election\n\nFor full rules for the Israeli Prime Minister, click here: https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election\n\nFor full rules for the United States Senate control, click here: https://polymarket.com/event/which-party-will-win-the-senate-in-2026\n\nAdditional options may be added to this market between market creation and resolution. \n\nIn the event that any constituent market resolves to \"Other,\" this market will resolve to \"Other.\"\n\nThis market will resolve according to the sources named in the three markets linked above.",
+  "source_packet": "data/deep_review_20261017/compound185_literal_facts_1410.json",
+  "Brazil_Flavio_winner_raw": 0.7243244014436867,
+  "Brazil_basis": "Same primary margin model ascase17:mu3.08pp/sigma4.9381,95%ordinary/5%broad10pp,0.5%Other; outrightwinnernot8-12%marginband.",
+  "Israel_shared_coalition_regimes": [
+    {
+      "name": "ordinary_weak_incumbent_bloc",
+      "weight": 0.45,
+      "Netanyahu": 0.2,
+      "Eizenkot": 0.55,
+      "Bennett": 0.2,
+      "Other": 0.05
+    },
+    {
+      "name": "right_majority_or_switchers",
+      "weight": 0.25,
+      "Netanyahu": 0.85,
+      "Eizenkot": 0.05,
+      "Bennett": 0.05,
+      "Other": 0.05
+    },
+    {
+      "name": "stalemate_repeat_election",
+      "weight": 0.2,
+      "Netanyahu": 0.2,
+      "Eizenkot": 0.3,
+      "Bennett": 0.2,
+      "Other": 0.3
+    },
+    {
+      "name": "leader_change_other",
+      "weight": 0.1,
+      "Netanyahu": 0.05,
+      "Eizenkot": 0.3,
+      "Bennett": 0.35,
+      "Other": 0.3
+    }
+  ],
+  "Israel_next_PM_marginals": {
+    "Netanyahu": 0.34750000000000003,
+    "Eizenkot": 0.35,
+    "Bennett": 0.17750000000000002,
+    "Other": 0.125
+  },
+  "Senate_D_control_raw": 0.5287166666666666,
+  "Senate_basis": "LatestIA0059central raw52.8717%, not superseded55.9867Michigan-onlymodel; formalcontrol/caucus/ProTemassumptions retained.",
+  "crosscountry_latent_correlation_assumed": [
+    [
+      1.0,
+      -0.1,
+      -0.2
+    ],
+    [
+      -0.1,
+      1.0,
+      0.15
+    ],
+    [
+      -0.2,
+      0.15,
+      1.0
+    ]
+  ],
+  "dependence_rationale": "Illustrativeglobalrightwardfactor favorsFlavio and hurtsUSDemocrats/Israeliopposition; Israel-USoppositionpositiveassociation. Not estimated correlation or predictive causal law.",
+  "seed": 20261018185,
+  "draws": 500000,
+  "raw_joint_p_yes": 0.13401,
+  "p_yes": 0.13,
+  "sensitivity_dependence_only": {
+    "independent": 0.13466,
+    "positive_common": 0.198964,
+    "stronger_opposing": 0.12682
+  },
+  "frechet_bounds_for_fixed_marginals": [
+    0,
+    0.35
+  ],
+  "sensitivity_range": [
+    0.02,
+    0.4
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0,
+  "selected_no": 0.6699999999999999,
+  "method": "Shared source-based constituent models with a primary coalition disaggregation preserving Netanyahu marginal; explicitGaussianlatentdependence on threebinaryevents. No mechanical independence product as adoptedforecast.",
+  "liquidity_horizon": "ParentNov5endDate doesnotoverride linkedBrazilJune30,2027Other/IsraeliPMDec31,2027Other/SenateJan4,2027caucus orrunoff tails. NO not assumed redeemable when firstlegfails.",
+  "action": "research only; no prior, newposition or entryapproval"
+}

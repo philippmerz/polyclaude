@@ -1470,7 +1470,7 @@
   "rationale": "Primary PYES11%/NO89%, rawYES10.7795%; broad YES0.5-80% sensitivity. All four future calendar-week displayed Totals; 53-point actual chart/history independently bound. Subjective joint growth/regime model, not calibrated floor. Actual entry reserve15pp gives NO74%. Low-variance total centered750T can give73.36%YES and reverse the trade. Read both independent chart advisories; no hedge credit with HLE/other AI risks. rho.75 and10% declared cluster floor are conservative sizing assumptions, not measured exposure/correlation.",
   "current_assessment": "LIVE unfilledpost-onlyBUY5NO@65c/3.25pUSD, order0x65cc9610fa83badf53ece3522f378d3c8175fe508a91c17903e91b4417332d6c, DEC0214. Independent11:50:21-22UTC completeinventory8BUY/0SELL allLIVE,total16.42; exactauthdetail200matchesCID/NOasset/5original/0matched/5remaining. FixedPolygon95745917 timestamp11:50:23bothCTF0,pUSD23.446890,availableafterallbids7.026890;8matchingreservations,noblocks/orphans. Commitmentnotposition/profit. Retaincentral11/89,15ppreserveNO74; noadd/maxcash3.25. PullOct18 22UTC/earlieruncertainty. DoNOTreplayexecutionwriter.",
   "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T111722752018Z.md",
-  "current_revision": "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md",
+  "current_revision": "research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json",
   "balanced_reviews": [
     "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
     "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"

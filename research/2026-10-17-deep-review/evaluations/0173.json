@@ -1,0 +1,140 @@
+{
+  "review_index": 173,
+  "condition_id": "0x6e7aee94adfd2751604c4f92bfa7d169b08aec825539dc51034de674def849eb",
+  "criteria_sha256": "4d123fec464747886e51dd89f8a330b0c5650e4ac0de8a993cb6cd9bff32468c",
+  "status": "valued",
+  "literal_analysis": "Full exactBinancefuturesHYPEUSDT final1mLow<=60, postcreationOct14toOct31ET; boundaryminute separatelychecked andabove60; no spot/mark/index substitution.",
+  "evidence": [
+    {
+      "url": "https://fapi.binance.com/fapi/v1/klines",
+      "observed_utc": "2026-10-18T13:30:31.673734+00:00",
+      "finding": "Root verified original5517minute rows plus bounded fresh tail; 5560contiguous closed rows, noLow<=60, latest78.261. Exactfuturesnotspot."
+    },
+    {
+      "url": "https://hyperliquid.gitbook.io/hyperliquid-docs/about-hyperliquid/core-contributors",
+      "observed_utc": "2026-10-18T13:27:09Z",
+      "finding": "Officialcontributordocs no exactOctoberrelease calendar in boundedpass; browserobservationtime not per-requestreceipt."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/2078856/000119312526412579/d168610dars.pdf",
+      "observed_utc": "2026-10-18T13:27:09Z",
+      "finding": "SEC HYPEtreasurycompany disclosure of ongoing vesting; unknownexactmonthlyamount/date, notFoundation release or currentchain supply."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.19,
+    "low": 0.01,
+    "high": 0.7,
+    "method": "Log-price lower-barrier first-passage proxy with explicit ordinary/highvolatility-liquidation and futures/systemicflash regimes. Final named1mLow governs, not a spot or terminal price.",
+    "reasoning": "No observedhistoricalhit; physicalfutureslowerbarrier mixture with70/25/5ordinary/liquidation/flashbranches. Primary parameters/futureunlockcalendar uncertain;20ppreserve and1–70%range.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 13.6,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.19,
+        "best_bid": null,
+        "best_ask": 0.45,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 58.231,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.45,
+            "fee_usd": 0.17325000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 4.67326,
+        "fee_usd": 0.17326,
+        "break_even_probability_before_carry": 0.467326,
+        "break_even_probability_with_idealized_carry": 0.4678611104987901,
+        "central_expected_profit_usd": -2.77326,
+        "default_10pp_stressed_profit_usd": -3.77326,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.09,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.81,
+        "best_bid": 0.55,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 58.231,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.7100000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 5.32675
+      }
+    }
+  },
+  "verdict": "Noentryapproved; unresolved primary unlock calendar and uncalibrated future barrier risk.",
+  "reopen_condition": "Primarytokenrelease/exchange news or newsource threshold hit; current bothsides belowselectedprobability−3pp/allgates.",
+  "current_description_sha256": "2557e76c915860fe28a475c59fdb1101053c0de768f297db5d41f08267fc9555",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "94145691281137725469054164068537383920470685323660650932009862700692795045396",
+    "104180327130796775266929750350375378143656648434780899845644804359761425659632"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0101",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/hype173_primary_1350.json",
+    "actual_entry_reserve_pp": 20,
+    "selected_yes": 0,
+    "selected_no": 0.6100000000000001,
+    "source_packet": "data/deep_review_20261017/hype173_tail_1350.json",
+    "catalyst_packet": "data/deep_review_20261017/hype173_catalyst_facts_1345.json"
+  },
+  "evaluated_utc": "2026-10-18T13:30:32.017318+00:00",
+  "question": "Will Hyperliquid dip to $60 in October?",
+  "market_id": "5692101",
+  "valuation_author": "primary_operator",
+  "original_index": 173,
+  "report_sha256": "9702b4fcc4413b66d34dfc5190612dfcdce4dbba9a8f46b7acd0ceea72ddd343"
+}

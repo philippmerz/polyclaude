@@ -1,0 +1,50 @@
+{
+  "review_index": 162,
+  "condition_id": "0x01df96c4f4d8af93e41d87039ef328d4edd3986076f345eb31ece0de30299e35",
+  "criteria_sha256": "2411cb335d4f89588c2e731ee1ff43360666f1bfe05e525b5b85753aa16191a7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full literal rule read: any finalized BinanceBTCUSDT1mLow<=80,000 within Oct17ET midnight–23:59, i.e.Oct17 04UTC–Oct18 03:59:59.999UTC, resolvesYES; otherwiseNO. Correctly bound two captures cover all1,440 minute opens, closed/no gaps/duplicates; minimum80,819.66 at21:39UTC andzero threshold hits. Initial misbound captures were explicitly excluded and preserved. Namedexchange/pair/candleLow, not another exchange, perpetual or a contemporaneouslasttrade. The template finalsentence spot-market wording is retained; sourceURL/chartbinding is not silently replaced.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-18T12:22:18.132680+00:00",
+      "finding": "Two correctly bound exact-window sourcecaptures give1440 closed minutes,min80819.66,0lows<=80000; initialmisboundrequestsnotused."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5794264",
+      "observed_utc": "2026-10-18T13:17:22.654196+00:00",
+      "finding": "Exactidentity/description/outcomes/tokensmatch; closed/nonaccepting/resolved. Fixed-block bothCTFs0 separately checked."
+    }
+  ],
+  "forecast": {
+    "method": "No forecast substituted for completed-event status",
+    "reasoning": "Documented completed/closed exact condition and zero wallet balances, not a model rejection."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "closed": true,
+    "acceptingOrders": false,
+    "both_CTF_balances": {
+      "Yes": 0.0,
+      "No": 0.0
+    },
+    "fixed_polygon": {
+      "block": 95749397,
+      "block_utc": "2026-10-18T13:17:23+00:00"
+    },
+    "no_live_route": "No current-entry or held-balance action; old books not execution evidence."
+  },
+  "verdict": "Factual exclusion: completed and closed, no held outcome balance/live entry route.",
+  "reopen_condition": "Independently changed exact venue/claimstate and actual live route or held position.",
+  "portfolio_action": "none",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/crypto141_155_162_sources_1230.json",
+    "current_receipt": "data/deep_review_20261017/closed162_174_current_1335.json"
+  },
+  "evaluated_utc": "2026-10-18T13:18:56.652650+00:00",
+  "question": "Will Bitcoin dip to $80,000 on October 17?",
+  "market_id": "5794264",
+  "valuation_author": "primary_operator",
+  "original_index": 162,
+  "report_sha256": "3764220d566dd5a8be82ce238c5e7d4239b1de0384801870efea03c969d07d0d"
+}

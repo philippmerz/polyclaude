@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-18T13:45:36.412885+00:00",
+  "case": 181,
+  "prior_model": "research/2026-10-17-deep-review/models/saints181_primary_1355.json",
+  "conditional_no_tie_Saints": 0.4956702459300312,
+  "physical_Saints_win": 0.493191894700381,
+  "tie": 0.005,
+  "expected_normalized_payout_raw": 0.495691894700381,
+  "adopted_rounded_payout": 0.5,
+  "correction": "Static prior model/forecast prose49.5665/49.5686percent had small transcription errors. Computed fields and reportdynamicnumbers are correct; exactraw49.5691894700381percent, rounded50percent unchanged. No source, price, probability, reserve or financial action changed."
+}

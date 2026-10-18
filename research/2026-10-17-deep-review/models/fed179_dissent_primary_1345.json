@@ -1,0 +1,42 @@
+{
+  "created_utc": "2026-10-18T13:27:15.755945+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 179,
+    "market_id": "4386085",
+    "condition_id": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+    "criteria_sha256": "5f16cffb70dff4f6519e41c2b79ddcf1a07eea6542ea991640db45895f4ee47d"
+  },
+  "full_rule": "The October Federal Open Market Committee (FOMC) meeting is scheduled for October 27 to 28, 2026. The policy decision will be announced at 2:00 PM Eastern Time on October 28, followed by the Fed Chair\u2019s press conference at around 2:30 PM ET.\n\nThis market will resolve according to the number of dissenting votes recorded at the October Federal Open Market Committee monetary policy meeting, specifically those dissenting on the Fed Funds Rate decision.\n\nThe resolution source for this market is the FOMC\u2019s statement after its meeting scheduled for October 27 to 28, 2026, according to the official calendar: https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm.\n\nThis market may resolve as soon as the FOMC\u2019s statement for their October meeting with relevant data is issued; however, a consensus of credible reporting will also be used.",
+  "shared_rate_model": "research/2026-10-17-deep-review/models/fed_primary_scenario.json",
+  "shared_rate_model_asof": "2026-10-17",
+  "October_rate_weights": {
+    "+25": 0.2,
+    "+50": 0.005,
+    "hold": 0.79,
+    "-25": 0.005
+  },
+  "conditional_no_dissent": {
+    "hold": 0.75,
+    "+25": 0.8,
+    "+50": 0.35,
+    "-25": 0.2
+  },
+  "meeting_source_interpretation_branch": {
+    "weight": 0.02,
+    "p_no_dissent": 0.5
+  },
+  "p_yes_raw": 0.7501450000000001,
+  "p_yes": 0.75,
+  "sensitivity_range": [
+    0.35,
+    0.95
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.6,
+  "selected_no": 0.1,
+  "method": "Shared primary October rate branches with subjective conditional probabilities of unanimous recorded rate vote; common committee decision, not product of twelve independent votes.",
+  "source_packet": "data/deep_review_20261017/macro179_saudi180_facts_1340.json",
+  "key_uncertainty": "September unanimous hike supports consensus process but is one observation; Waller flexibility is not a vote commitment. Conditional vote probabilities and source fork are uncalibrated.",
+  "action": "research only; no order, financial prior or change to shared rate forecast"
+}

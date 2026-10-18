@@ -1,0 +1,151 @@
+{
+  "review_index": 179,
+  "condition_id": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+  "criteria_sha256": "5f16cffb70dff4f6519e41c2b79ddcf1a07eea6542ea991640db45895f4ee47d",
+  "status": "valued",
+  "literal_analysis": "Full October27–28 statement rule read: dissent specifically onFedFundsRate decision, no one meanszero recorded rate dissents; separateimplementationvotes/comments not automaticallycount;14ET18UTC actualdecision; unspecifiedcancellation/sourcegap.",
+  "evidence": [
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "Official roster updatedOct7 lists12voters andfivealternates; current eligibility is not an independent vote forecast."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "Official Septemberminutes record unanimous25bphike to3.75–4.00%, all12for/noagainst; prior meeting only."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "Oct8 Waller favors futurehikes conditionally, allows nonconsecutive meetings, personal view not Octoberdissent commitment."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-18T13:13:22.009886+00:00",
+      "finding": "Oct27–28scheduled meeting, exactstatement source, decisionOct28at18UTC fromfullrule."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.75,
+    "low": 0.35,
+    "high": 0.95,
+    "method": "Shared primary October rate branches with subjective conditional probabilities of unanimous recorded rate vote; common committee decision, not product of twelve independent votes.",
+    "reasoning": "SharedOctober hold79/hike25=20/hike50=.5/cut25=.5; conditionalunanimity75/80/35/20 plus2%sourcefork yields75.0145%, rounded75. Prior unanimousvote is evidence, not calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 12,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.75,
+        "best_bid": 0.33,
+        "best_ask": 0.38,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.999,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.38,
+            "fee_usd": 0.1178
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.9177999999999997,
+        "fee_usd": 0.1178,
+        "break_even_probability_before_carry": 0.39177999999999996,
+        "break_even_probability_with_idealized_carry": 0.3921758028223697,
+        "central_expected_profit_usd": 3.5822000000000003,
+        "default_10pp_stressed_profit_usd": 2.5822000000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.65,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.1894500000000003
+      },
+      "No": {
+        "probability": 0.25,
+        "best_bid": 0.62,
+        "best_ask": 0.67,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.999,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.67,
+            "fee_usd": 0.11055000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.810560000000001,
+        "fee_usd": 0.11056,
+        "break_even_probability_before_carry": 0.6810560000000001,
+        "break_even_probability_with_idealized_carry": 0.6817440491270402,
+        "central_expected_profit_usd": -4.310560000000001,
+        "default_10pp_stressed_profit_usd": -5.310560000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.15,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.0822
+      }
+    }
+  },
+  "verdict": "Noentryapproved; researchYESmaker<=57c orNO<=7c after15ppreserve/currentgates.",
+  "reopen_condition": "New statement/roster or material economic/vote-preference evidence; researchceilings57cYES/7cNO; pullbeforeknownrelease/Oct27 22UTC iflaterapproved.",
+  "current_description_sha256": "61b7e70be647e50d4a985d176a45c88bc5fb213a2eaa9525fbd4dba8d7a9ebdb",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+    "34497256917770705703163231626137142468419399243319640674428740458111029682083"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0107",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/fed179_dissent_primary_1345.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0.6,
+    "selected_no": 0.1,
+    "source_packet": "data/deep_review_20261017/macro179_saudi180_facts_1340.json"
+  },
+  "evaluated_utc": "2026-10-18T13:27:15.993262+00:00",
+  "question": "Will no one dissent the October Fed decision?",
+  "market_id": "4386085",
+  "valuation_author": "primary_operator",
+  "original_index": 179,
+  "report_sha256": "aa5387d054679769327efd68faf4a95702b4638691acf4c9a012e9086d7555ac"
+}

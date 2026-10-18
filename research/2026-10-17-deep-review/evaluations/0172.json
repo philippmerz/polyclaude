@@ -1,0 +1,146 @@
+{
+  "review_index": 172,
+  "condition_id": "0x1fe6d77fdefb404ad02e08544db5e8d270fe91443d6daf068e08b53661c56715",
+  "criteria_sha256": "a11d1e12fdc5691303231b93b7680d4a1462f9eb27d237f77e8585c62507cd0e",
+  "status": "valued",
+  "literal_analysis": "Full DailyTreasury10Yrstrict<4.60 postcreationSep21–Dec31; exactequalNO,14dayavailabledatafallback; frozen2025queryforkretained againstcurrent2026table. Not5Yr/intradayseries.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-18T11:44:48+00:00",
+      "finding": "RootSHAchecked/reparsed199rows exact10Yr23column; latest5.09,19postcreationdatesmin4.96,no<4.60; source-vintagegap."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2025",
+      "observed_utc": "2026-10-18T12:38:35.418790+00:00",
+      "finding": "FrozenreferenceURLyear2025 differsfromoperative2026window/currentcapture; explicitfork,notprior-yearhit."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4797667",
+      "observed_utc": "Sun, 18 Oct 2026 12:37:41 GMT",
+      "finding": "ExactmarketcreatedSep21 16:11:57UTC; startDate12secondslater notsubstituted."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.24,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Three macro regime iidGaussian daily-publication paths using common130regimeweights/drifts but exact10yrstartingvalue/column and downbarrier; explicitsource-queryfork. Not continuous intradayBrownian or calibrated physical posterior.",
+    "reasoning": "Exact10yr5.09startingrate/49bpdownbarrier;51discretepublication observations across45/35/20plateau/inflation/easing regimes plus5%source-queryfork. No historicalpostcreationhit, wide5–65range/15ppreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:45.720+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 89,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.24,
+        "best_bid": 0.26,
+        "best_ask": 0.3,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.631,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.3,
+            "fee_usd": 0.10500000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.10501,
+        "fee_usd": 0.10501,
+        "break_even_probability_before_carry": 0.310501,
+        "break_even_probability_with_idealized_carry": 0.3128350832557623,
+        "central_expected_profit_usd": -0.7050100000000001,
+        "default_10pp_stressed_profit_usd": -1.7050100000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.13999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.5038
+      },
+      "No": {
+        "probability": 0.76,
+        "best_bid": 0.7,
+        "best_ask": 0.74,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.631,
+        "received_utc": "2026-10-17T19:02:45.720+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.74,
+            "fee_usd": 0.09620000000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.4962100000000005,
+        "fee_usd": 0.09621,
+        "break_even_probability_before_carry": 0.7496210000000001,
+        "break_even_probability_with_idealized_carry": 0.7552560151022631,
+        "central_expected_profit_usd": 0.10378999999999916,
+        "default_10pp_stressed_profit_usd": -0.89621,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.66,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.895
+      }
+    }
+  },
+  "verdict": "Noentryapproved; datedtwo-sidedvaluation,15ppreserve andsource/query/eventreviewrequired.",
+  "reopen_condition": "Newexactpublisheddata/macroregime/source-queryinterpretation; maker<=selectedside−3pp/allgates.",
+  "current_description_sha256": "b9482a919cb7aa459dc8a868b6a50d63145c38af6f45b03bd28cb8fef57b7401",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "14458236935441980416702298545156691943978416610154669252189355802825560494869",
+    "24871663740560433840410255972100459824381319182013369095539285958563070727444"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0100",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/treasury172_daily_barrier_1340.json",
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0.09,
+    "selected_no": 0.61,
+    "source_packet": "data/deep_review_20261017/treasury172_current_facts_1250.json"
+  },
+  "evaluated_utc": "2026-10-18T13:25:35.387363+00:00",
+  "question": "Will the 10-year Treasury yield dip below 4.6% before 2027?",
+  "market_id": "4797667",
+  "valuation_author": "primary_operator",
+  "original_index": 172,
+  "report_sha256": "1d76deac4ed2c8e6471161c452f256c4427534a323826258775e7946b847bbbb"
+}

@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-18T13:31:20.367728+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 180,
+    "market_id": "1709755",
+    "condition_id": "0xb75da764f8b8363d534eba91c4fb19ceb666272f6fb1aa4ef66bdf7ae3e34b30",
+    "criteria_sha256": "f147c94e0e2044d57c0fd98e4fbee5a47bcf41fd2014c56bb10a62c404906e7a"
+  },
+  "createdAt": null,
+  "full_rule": "This market will resolve to \u201cYes\u201d if Crown Prince of Saudi Arabia Mohammed bin Salman ceases to be leader of Saudi Arabia for any period of time between market creation and the specified date (ET). Otherwise, this market will resolve to \u201cNo\u201d.\n\nAn announcement of Mohammed bin Salman's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nIf the specified individual is detained, effectively removed from the specified position, or otherwise permanently prevented from fulfilling the duties of the specified position within this market\u2019s timeframe, it will qualify for a \u201cYes\u201d resolution.\n\nThe resolution source for this market will be official information from Mohammed bin Salman and the government of Saudi Arabia; however, a consensus of credible reporting may also be used.",
+  "source_packets": [
+    "data/deep_review_20261017/macro179_saudi180_facts_1340.json",
+    "data/deep_review_20261017/saudi180_followup_1350.json"
+  ],
+  "branches": [
+    {
+      "name": "contained_external_pressure",
+      "weight": 0.8,
+      "p_ceases": 0.02
+    },
+    {
+      "name": "wider_war_or_elite_stress",
+      "weight": 0.15,
+      "p_ceases": 0.12
+    },
+    {
+      "name": "severe_security_or_internal_crisis",
+      "weight": 0.05,
+      "p_ceases": 0.4
+    }
+  ],
+  "past_window_or_temporary_interpretation_gap": {
+    "weight": 0.01,
+    "p_yes": 0.5
+  },
+  "p_yes_raw": 0.058460000000000005,
+  "p_yes": 0.06,
+  "sensitivity_range": [
+    0.01,
+    0.3
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.79,
+  "method": "Security/continuity scenario mixture informed by current official activity and original current war reporting; explicit residual for historical-window and any-period/permanent-wording gaps. Uncalibrated scenario weights, not actuarial or coup-frequency posterior.",
+  "limits": [
+    "Bunker precautions are not detention or loss of de facto power",
+    "Becomingking can preserveleadership; fatherKinghealth notMBShealth",
+    "OfficialactivityOct5 and secondarySPA-photoOct14 notcontinuouswindowproof",
+    "Reuters sources attribute warpressure, not MBSremoval evidence",
+    "ToI/AFP relayedWSJsecurityclaims; direct403, browserbodyread, WSJnotretrieved",
+    "No specific scheduledremoval or verifiedcurrentMBSillness found in boundedsearch; no universalabsenceclaim"
+  ],
+  "action": "research only; no position, order, reservation or financialprior"
+}

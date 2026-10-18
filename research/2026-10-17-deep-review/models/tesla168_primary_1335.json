@@ -1,0 +1,36 @@
+{
+  "created_utc": "2026-10-18T13:24:13.570913+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 168,
+    "market_id": "676743",
+    "condition_id": "0x1f403ffb53e114cbc81c5f07a0f3971886c67b67af7c260f0117d3f63ba54af4",
+    "criteria_sha256": "8a7eb3208a5a13120be0db1cdb037d193af7871a9ac0e04b03dd7cc78e9432a3"
+  },
+  "full_rule": "This market will resolve to the largest company in the world by market cap on December 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+  "primary_source_packet": "data/deep_review_20261017/tesla168_saints181_facts_1340.json",
+  "Tesla_cap_primaryshares_times_vendorclose_T": 1.4009834515996802,
+  "shares_asof": "2026-07-16 SEC3949547394; not a fresh Octoutstanding count",
+  "price_asof": "Oct16close354.72secondaryYahoo",
+  "current_leader_cap_T_dated_CMC": 5.17,
+  "required_relative_cap_multiple": 3.690264859372005,
+  "sample_TSLA_59_logreturn_annual_sd": 0.38607834716939615,
+  "normal_regime_weight": 0.88,
+  "normal_relative_annual_sigma_assumed": 0.9,
+  "normal_zero_logdrift_pair_overtake_upper_proxy": 0.0006518340009101742,
+  "transformational_or_relative_peer_crash_regime_weight": 0.1,
+  "conditional_largest_probability_in_transformational_regime": 0.2,
+  "reorganization_scope_sharecount_tail_weight": 0.02,
+  "conditional_yes_in_tail": 0.25,
+  "p_yes_raw": 0.02557361392080096,
+  "p_yes": 0.03,
+  "sensitivity_range": [
+    0.001,
+    0.2
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0,
+  "selected_no": 0.77,
+  "method": "Large relative-cap hurdle with deliberately high90%annualrelativeGaussian dispersion plus explicit subjective transformation and scope/reorganization tails; baseline pair exceedance is only a necessary-condition upper proxy, not full-world rank or calibrated forecast.",
+  "action": "research only, no equity holding/trade/order/financialprior"
+}

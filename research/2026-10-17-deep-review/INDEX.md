@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T13:00:59.401296+00:00
+Updated: 2026-10-18T13:46:20.691217+00:00
 
-**238 valuations saved; first milestone100:** 238 valued; 2 blocked after in-depth review. 328 factual exclusions separately; 2432 pending.
+**250 valuations saved; first milestone100:** 250 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2417 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -46,7 +46,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |32|[Will the Democratic Party win the CA-06 House seat?](evaluations/0032.md)|valued|NO is a concrete small-maker research lead; poll provenance and future caucus binding need balanced review|
 |33|[Will Alphabet be the largest company in the world by market cap on October 31, 2026?](evaluations/0033.md)|valued|YES central earnings-tail lead; lower-bound/model support incomplete, no entry|
 |34|[Will Fulham FC win on 2026-10-17?](evaluations/0034.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
-|35|[Will OpenRouter process between 675T and 725T tokens from Sep 28 to Oct 25?](revisions/0035_20261018T111634872634Z.md)|valued|Reopened as valued60%YES afteractualchart recovery. Noentry: datedoffer selectededge is rounding-sized andfailscarry; raw59.54%selectedEVnegative. FutureYES<=39c/NO<=20c onlyaftercurrentgates.|
+|35|[Will OpenRouter process between 675T and 725T tokens from Sep 28 to Oct 25?](revisions/0035_20261018T133807876978Z.md)|valued|Source/model revision: YES57/NO43; no entry approved. ResearchmakerYES39c/NO25c afterallgates.|
 |36|[Will Ethereum reach $2,600 October 12-18?](evaluations/0036.md)|valued|YES small central value, unsupported tail after uncertainty/minimum size; no entry|
 |37|[Will "Sacrifice" be the #2 US Netflix movie this week?](evaluations/0037.md)|valued|YES small central upside, uncertainty/minimum-size failure; no entry|
 |38|[Will Elon Musk post 140-164 tweets from October 15 to October 17, 2026?](evaluations/0038.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -123,7 +123,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |109|[Will the Democratic Party win the NH-02 House seat?](evaluations/0109.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |110|[Will XRP reach $2.60 by December 31, 2026?](evaluations/0110.md)|valued|Both asks negative central EV; no supported maker tailentry|
 |111|[Will Villarreal CF win on 2026-10-17?](evaluations/0111.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
-|112|[Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?](revisions/0112_20261018T111722752018Z.md)|valued|Revised11%YES/89%NO fromactualchartjointmodel. FiveNOmaker<=68c isprioritycurrentinvestigation; noentryapproval withoutfreshgates,sourcecoverageandportfoliojudgment.|
+|112|[Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?](revisions/0112_20261018T133808603216Z.md)|valued|Retain11%YES/89%NO; existingDEC0214 unfilledbid lastdatedaccountproofonly, pulltoday22UTC/earlieruncertainty; noadd/repost.|
 |113|[Will WTI Crude Oil (WTI) hit (HIGH) $105 in October?](revisions/0113_20261018T105834003724Z.md)|valued|No entry: datedYEScentral edge0.40016 per10 becomes-1.09984 at15ppselectedreserve; NOcentralnegative. Recoveredcompletehistorysupports53%touchforecast, notcurrentexecution.|
 |114|[Will Drop Dead – Olivia Rodrigo be the #2 song in the US for 2026?](evaluations/0114.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |115|[Will the Republicans win the Michigan Senate race in 2026?](evaluations/0115.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
@@ -165,27 +165,42 @@ Each report below is written before moving to the next evaluation. Related contr
 |151|[Will the Democratic Party win the NV-04 House seat?](evaluations/0151.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |152|[Will Trump rename an ocean by December 31, 2026?](evaluations/0152.md)|valued|Evaluate exactdatedtwo-sided economics atselectedYES9.5/NO60.5; anyedge is a follow-up case, not a trade approval.|
 |153|[Will Venezia FC win on 2026-10-17?](evaluations/0153.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|154|[Will NVIDIA be the largest company in the world by market cap on October 31, 2026?](revisions/0154_20261018T132229289334Z.md)|valued|Entry deferred after recent-volatility/adversarial revision; no order. ResearchNOmaker<=14c only after all gates.|
+|155|[Will the price of Bitcoin be above $84,000 on October 19?](evaluations/0155.md)|valued|No entry approved; temporal quote mismatch and no directional edge.|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
 |157|[Will Steve Hilton win the California Governor Election in 2026?](evaluations/0157.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |158|[Will Anthropic have the highest IPO Market Cap 2026?](evaluations/0158.md)|valued|Potential small passive NO follow-up; requires complete current entry review|
+|159|[Will the Central Bank of Chile make no change to the monetary policy rate at the October meeting?](evaluations/0159.md)|valued|No entry approved; conditional YESmaker72c ceiling after current EOF/source/catalyst/all financial gates.|
 |160|[Brentford FC vs. Liverpool FC: O/U 3.5](evaluations/0160.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |161|[Will Google have the best AI model at the end of December 2026?](evaluations/0161.md)|valued|YES central/default-stress lead; correlated AI/December uncertainty review needed, no order|
+|162|[Will Bitcoin dip to $80,000 on October 17?](evaluations/0162.md)|excluded_factual|Factual exclusion: completed and closed, no held outcome balance/live entry route.|
 |163|[Will "Transformers One" be the #2 global Netflix movie this week?](evaluations/0163.md)|valued|Both asks negative central EV; availability/model uncertainty remains, no entry|
 |164|[Will the Democrats win the Arizona governor race in 2026?](evaluations/0164.md)|valued|NO maker near .07 is a thin contrarian watch; current source, notional and risk checks required|
 |165|[Will the Republican Party win the NE-02 House seat?](evaluations/0165.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |166|[Romanian PM Bolojan out by October 31?](evaluations/0166.md)|valued|Timed personal-exit event valued; older dismissal and party pledge do not make YES already certain|
 |167|[Israel x Iran ceasefire continues through October 18?](evaluations/0167.md)|valued|Short-window survival valued; NO central difference fails ordinary uncertainty reserve|
+|168|[Will Tesla be the largest company in the world by market cap on December 31?](evaluations/0168.md)|valued|Noentryapproved; conditionalresearchNOmaker<=75c, fulltailrisk/sourcegates.|
 |169|[Will there be a Hormuz agreement and the Democrats win the Senate?](evaluations/0169.md)|valued|Noentry: cheapYESpositivecentralbutfails15ppreserveandten-share$1cashminimum; NOnegativecentral. FutureNO79ctriggeronly.|
 |170|[Will Swim – BTS be the #2 song in the US for 2026?](evaluations/0170.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |171|[Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?](evaluations/0171.md)|valued|Exact ballot-list contest deeply valued with poll disagreement retained; no ordinary-reserved entry|
+|172|[Will the 10-year Treasury yield dip below 4.6% before 2027?](evaluations/0172.md)|valued|Noentryapproved; datedtwo-sidedvaluation,15ppreserve andsource/query/eventreviewrequired.|
+|173|[Will Hyperliquid dip to $60 in October?](evaluations/0173.md)|valued|Noentryapproved; unresolved primary unlock calendar and uncalibrated future barrier risk.|
+|174|[Ohio State vs. Indiana](evaluations/0174.md)|excluded_factual|Factual exclusion: completed and closed, no held outcome balance/live entry route.|
 |175|[OpenAI IPO before 2027?](evaluations/0175.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |176|[Will Together win the most seats in the 2026 Israeli legislative election?](evaluations/0176.md)|valued|Rare named-list event fully valued, including late-merger fork; point edge lacks a calibrated tail reserve|
 |177|[Will "Ice Age: Collision Course" be the #2 US Netflix movie this week?](evaluations/0177.md)|valued|YES central lead, failsindividualstress; possible joint-unionresearch|
 |178|[Will the Republicans win the Idaho Senate race in 2026?](evaluations/0178.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|179|[Will no one dissent the October Fed decision?](evaluations/0179.md)|valued|Noentryapproved; researchYESmaker<=57c orNO<=7c after15ppreserve/currentgates.|
+|180|[Will Mohammed bin Salman cease to be the de facto leader of Saudi Arabia by December 31, 2026?](evaluations/0180.md)|valued|Noentryapproved; conditionalNOmaker<=76c aftercurrentsecurity/literal/executiongates.|
+|181|[Saints vs. Giants](revisions/0181_20261018T134536609416Z.md)|valued|Noentryapproved; mismatched-time odds and missing officialfinalinactives, conditional32cmakerceilingeitheroutcome.|
+|182|[Will OpenRouter process between 625T and 675T tokens from Sep 28 to Oct 25?](evaluations/0182.md)|valued|Noentryapproved; conditionalmakerYES18c/NO46c requiresfreshjointportfolio/source/executiongates.|
+|183|[Will the total domestic gross for Resident Evil be between 160m and 170m by October 31?](evaluations/0183.md)|valued|Noentryapproved; selectedside−3pp researchceiling pendingweekendactuals/finalityandallgates.|
 |184|[Will "Norm: The Tale of Norm Macdonald" be the top US Netflix movie this week?](evaluations/0184.md)|valued|Both asks nonpositive central EV; no entry|
+|185|[Will Flávio Bolsonaro win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?](evaluations/0185.md)|valued|Noentryapproved; finalIsraelCECfile andlongsettlement/payout/sourcegaps; selectedNO−3ppresearchceiling/allgates.|
 |186|[Will the Republican Party win the VA-01 House seat?](evaluations/0186.md)|valued|YES has a thin maker price/model difference; local candidate uncertainty and carry can erase it|
 |188|[Olbia: Jacob Fearnley vs Luca Nardi](evaluations/0188.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |189|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0189.md)|valued|NO small central edge consumed by uncertainty; no entry|
+|190|[Will the highest temperature in New York City be between 62-63°F on October 17?](evaluations/0190.md)|excluded_factual|Factual exclusion: exact market closed/nonaccepting, both wallet balances zero; no payout inferred.|
 |191|[Will "Norm: The Tale of Norm Macdonald" be the #2 global Netflix movie this week?](evaluations/0191.md)|valued|YES negative central EV; NO nominal edge vanishes tocost/uncertainty; no entry|
 |192|[Will Aleksandar Vučić be the next Prime Minister of Serbia?](evaluations/0192.md)|valued|Formal next-PM event valued separately from largest-list result; long fallback and normal reserve defeat captured asks|
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
@@ -580,5 +595,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 154

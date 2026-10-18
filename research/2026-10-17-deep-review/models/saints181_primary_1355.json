@@ -1,0 +1,45 @@
+{
+  "created_utc": "2026-10-18T13:32:35.402515+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 181,
+    "market_id": "4329887",
+    "condition_id": "0xe5699e9eeb4d985d52ced2156482d1f49c3c27806e68e8011f4a4d217799e84c",
+    "criteria_sha256": "63de5870371f42bc3bc675831fb0672bbb08a028bf5f0b31fbfc66c4eb7e41cc"
+  },
+  "full_rule": "In the upcoming NFL football game between Saints and Giants, scheduled for October 18 at 1:00PM ET:\nThis market will resolve to \"Saints\" if Saints win the game.\nThis market will resolve to \"Giants\" if Giants win the game.\nOvertime is included if played.\nIf the game ends in a tie, this market will resolve 50-50.\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve 50-50.",
+  "outcomes": [
+    "Saints",
+    "Giants"
+  ],
+  "official_kickoff_utc": "2026-10-18T17:00:00Z",
+  "DKNetwork_moneyline": {
+    "Saints": -108,
+    "Giants": -112,
+    "two_sided_raw_implied_sum": 1.047532656023222,
+    "Saints_conditional_no_tie_devig": 0.4956702459300312,
+    "underlying_quote_timestamp": "notprovided; pagecaptured13:13UTC"
+  },
+  "OddsReference_cross_book_best_synthetic": {
+    "Saints_BetRivers": -110,
+    "Giants_FanDuel": -104,
+    "Saints_normalized": 0.5067750677506776,
+    "limit": "differentbooks and1dayold, not samebookmargin/currentconsensus"
+  },
+  "tie_probability_assumed": 0.005,
+  "physical_Saints_win": 0.493191894700381,
+  "physical_Giants_win": 0.501808105299619,
+  "expected_normalized_first_payout_raw": 0.495691894700381,
+  "p_yes": 0.5,
+  "p_yes_semantics": "Expected normalized $1 payout for first outcomeSaints, includes0.5tie; rounded from49.5686%, not literal full-winprobability.",
+  "sensitivity_range": [
+    0.35,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_first": 0.35,
+  "selected_second": 0.35,
+  "method": "Two-sided provider-network moneyline de-vig, crosscheck with separatelydatedcross-booklisting; explicittiehalf-payout. No independent team-selection alpha or fittedsportsforecast.",
+  "source_packet": "data/deep_review_20261017/tesla168_saints181_facts_1340.json",
+  "action": "research only; no sportsbook or PMorder/prior"
+}

@@ -1,0 +1,152 @@
+{
+  "review_index": 185,
+  "condition_id": "0x8a48f51af37371585fcfcc7c1fbee17f46124ab60ddca0b3d4863a82f7350cff",
+  "criteria_sha256": "4bf57599b32d2e92f2291e6035197bf0b0baffe750b2c937ca6b45cb6073b6c8",
+  "status": "valued",
+  "literal_analysis": "Fullparentandallthreechildrulesread:Brazilrunoff/June2027Other,Israelnextformaloath(notcaretaker)/Dec2027Other,Senatecontrol/VP/ProTem/caucus/Jan4/runoff;anychildOther=>parentOther; Nov5metadata notdeadline.",
+  "evidence": [
+    {
+      "url": "https://polymarket.com/event/brazil-presidential-election",
+      "observed_utc": "2026-10-18T13:38:35.970203+00:00",
+      "finding": "Exactlinkedconstituent fullrules/IDs/window/fallbackread; datedGammaOct17capture, no currentprice or certifiedoutcomeforecast."
+    },
+    {
+      "url": "https://polymarket.com/event/who-will-be-the-next-prime-minister-of-israel-after-the-next-election",
+      "observed_utc": "2026-10-18T13:38:35.970203+00:00",
+      "finding": "Exactlinkedconstituent fullrules/IDs/window/fallbackread; datedGammaOct17capture, no currentprice or certifiedoutcomeforecast."
+    },
+    {
+      "url": "https://polymarket.com/event/which-party-will-win-the-senate-in-2026",
+      "observed_utc": "2026-10-18T13:38:35.970203+00:00",
+      "finding": "FulllinkedSenatecontrol/caucus/ProTem/runoffrule anddatedsourcebinding; noNov5resolutionpromise."
+    },
+    {
+      "url": "https://media.folha.uol.com.br/datafolha/2026/10/16/2sq1uhzy7x0w7caugz-gotqrxffgtdsqnx7qkfqfhs0.pdf",
+      "observed_utc": "2026-10-18T13:38:35.970203+00:00",
+      "finding": "DatedoriginalDatafolhaOctober16report surveyedOct13–14, valid51Flavio49Lula, n2520; not outcomeprobability."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.13,
+    "low": 0.02,
+    "high": 0.4,
+    "method": "Shared source-based constituent models with a primary coalition disaggregation preserving Netanyahu marginal; explicitGaussianlatentdependence on threebinaryevents. No mechanical independence product as adoptedforecast.",
+    "reasoning": "Fullconjunctionwiththreeexplicitlinkedrules; Fwinner~72%,Eizenkot35%,Dcontrol52.8717%, primarylatentnegative/positivecrosscountrydependence, broad2–40range/20ppreserve. Longchildfallbacksretained.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:49.567+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 440,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.13,
+        "best_bid": 0.36,
+        "best_ask": 0.37,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.302,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.37,
+            "fee_usd": 0.09324
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.7932400000000004,
+        "fee_usd": 0.09324,
+        "break_even_probability_before_carry": 0.37932400000000005,
+        "break_even_probability_with_idealized_carry": 0.39363149680532644,
+        "central_expected_profit_usd": -2.49324,
+        "default_10pp_stressed_profit_usd": -3.4932400000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.03,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.50784
+      },
+      "No": {
+        "probability": 0.87,
+        "best_bid": 0.63,
+        "best_ask": 0.64,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.302,
+        "received_utc": "2026-10-17T19:02:49.567+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.64,
+            "fee_usd": 0.09216
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.49216,
+        "fee_usd": 0.09216,
+        "break_even_probability_before_carry": 0.649216,
+        "break_even_probability_with_idealized_carry": 0.6737033929568569,
+        "central_expected_profit_usd": 2.207839999999999,
+        "default_10pp_stressed_profit_usd": 1.20784,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.77,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.20676
+      }
+    }
+  },
+  "verdict": "Noentryapproved; finalIsraelCECfile andlongsettlement/payout/sourcegaps; selectedNO−3ppresearchceiling/allgates.",
+  "reopen_condition": "VerifiedfinalCECballot/coalition/caucus/newpolls or materiallycheaperexactclaim; fullOther/NegRisk/longhorizon/correlation/financialgates.",
+  "current_description_sha256": "2c004092d5b6894b7366447b3028db60b3ff6b4cd3667d0abd91a928d875fe62",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "1977571050225395832315877036253590853961903374112082573819559700003898558562",
+    "64863562624246340071852246634262017764725813109842577871413689313073713162068"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0134",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/compound185_primary_1415.json",
+    "actual_entry_reserve_pp": 20,
+    "selected_yes": 0,
+    "selected_no": 0.6699999999999999,
+    "source_packet": "data/deep_review_20261017/compound185_literal_facts_1410.json",
+    "no_early_NO_redemption_assumed": true
+  },
+  "evaluated_utc": "2026-10-18T13:44:01.954411+00:00",
+  "question": "Will Flávio Bolsonaro win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?",
+  "market_id": "5336146",
+  "valuation_author": "primary_operator",
+  "original_index": 185,
+  "report_sha256": "1663a3fcc5d2918fc70ccd08f27edac183f77ebab13011dfb1b0812f411ba811"
+}

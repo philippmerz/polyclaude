@@ -1,0 +1,50 @@
+{
+  "review_index": 174,
+  "condition_id": "0x4051174e9ccefce81be2b567c53a242be317cbb396ce23a46916a6727ce8453a",
+  "criteria_sha256": "b26aa3567c7c2391263ee49d3cc4ab2809eccb9bff426aed8be17f2e79cff3bf",
+  "status": "excluded_factual",
+  "literal_analysis": "Full literal rule read: October17 OhioState/Indiana collegefootball, OhioStatefirstoutcome/Indianasecond; overtimeincluded, tie50-50, postponedwaitforcompletion, canceledwithoutmakeup50-50. Both universities officialboxscores bind date/opponents and markOhioState19–Indiana15Final; fourquarterslisted. This independently establishes the event result; noexactonchainpayoutnumerator or winning UMAoutcome is inferred from a bare resolved status.",
+  "evidence": [
+    {
+      "url": "https://ohiostatebuckeyes.com/sports/football/stats/2026/indiana/boxscore/22220",
+      "observed_utc": "2026-10-18T12:47:30.043154+00:00",
+      "finding": "Official final university boxscoreOSU19–Indiana15, exactOct17event; independentIndiana gamecenter agrees."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349499",
+      "observed_utc": "2026-10-18T13:17:23.198687+00:00",
+      "finding": "Exactidentity/description/outcomes/tokensmatch; closed/nonaccepting/resolved. Fixed-block bothCTFs0 separately checked."
+    }
+  ],
+  "forecast": {
+    "method": "No forecast substituted for completed-event status",
+    "reasoning": "Documented completed/closed exact condition and zero wallet balances, not a model rejection."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "closed": true,
+    "acceptingOrders": false,
+    "both_CTF_balances": {
+      "Ohio State": 0.0,
+      "Indiana": 0.0
+    },
+    "fixed_polygon": {
+      "block": 95749397,
+      "block_utc": "2026-10-18T13:17:23+00:00"
+    },
+    "no_live_route": "No current-entry or held-balance action; old books not execution evidence."
+  },
+  "verdict": "Factual exclusion: completed and closed, no held outcome balance/live entry route.",
+  "reopen_condition": "Independently changed exact venue/claimstate and actual live route or held position.",
+  "portfolio_action": "none",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/sports174_181_current_facts_1300.json",
+    "current_receipt": "data/deep_review_20261017/closed162_174_current_1335.json"
+  },
+  "evaluated_utc": "2026-10-18T13:18:57.268686+00:00",
+  "question": "Ohio State vs. Indiana",
+  "market_id": "5349499",
+  "valuation_author": "primary_operator",
+  "original_index": 174,
+  "report_sha256": "e977808d38443c6010d739831b692503ce75230457a41ffe749b8aac3349a609"
+}

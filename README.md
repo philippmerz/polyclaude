@@ -22,12 +22,6 @@ repository's vetted execution paths.
 **Last maintained:** 2026-10-18. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
-**13:03 UTC order update:** [DEC-0215](research/2026-10-17-deep-review/boi_entry_1255.md)
-posted 15 Bank of Israel no-change **NO** shares at 7¢ ($1.05 if filled). Independent
-verification found it LIVE with zero matched shares, both token balances zero,
-and nine BUY commitments totaling $17.47; pUSD23.446890 leaves $5.976890 after
-all bids. This is an unfilled bid, not a holding or profit. Pull by Oct19 22:00 UTC,
-earlier on uncertainty. OpenRouter112's existing pull remains **today22:00 UTC**.
 
 ## Start here
 
@@ -60,97 +54,44 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — October 18
+## Active in-depth review — October18
 
-The operator authorized primary in-depth valuations across the frozen 3,000-market
-universe, retaining candidates beyond documented factual exclusions. The
-[live index](research/2026-10-17-deep-review/INDEX.md) and
-[resume checkpoint](notes/deep_review_checkpoint.json) update after each completed
-evaluation. The first 100 substantive reviews are an inspection milestone; valued,
-blocked and factual exclusions are reported separately. Earlier screens do not
-reject markets or count as completed valuations.
+The operator authorized primary valuations across the frozen3,000-condition
+universe; surface screens carry no rejection authority. At the13:46UTC checkpoint:
+**250 valued, 2 blocked, 331 factual exclusions and2,417 pending**, with583
+immutable base records and22 append-only revisions. No case is active; next is187.
+The [live index](research/2026-10-17-deep-review/INDEX.md) and
+[resume checkpoint](notes/deep_review_checkpoint.json) update after every evaluation.
+The [first100](research/2026-10-17-deep-review/MILESTONE_100.md) and
+[milestone200](research/2026-10-17-deep-review/MILESTONE_200.md) reports remain dated
+inspection records; the operator has been notified. Continue the authorized queue.
 
-The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-and [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
-remain dated inspection records. At the 12:15 UTC checkpoint, the frozen review has
-**230 valued, 2 blocked, 328 factual exclusions and 2,440 pending**; case 133 is
-active and included in pending. It contains 560 immutable base records and 15
-append-only revisions, each condition counted once. [Audit 1215](data/deep_review_20261017/ledger_audit_1215.json)
-checks record/revision identities and hashes, the checkpoint and all 3,000 index
-rows (2,439 pending plus active 133). Cases 124, 130 and 131 were valued at 7%,
-59% and 21% YES; none added an order. Case 35 is now valued at 60% YES
-([revision](research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md));
-case 113 keeps its timestamp-only correction.
-The [effective index](research/2026-10-17-deep-review/INDEX.md) and
-[checkpoint](notes/deep_review_checkpoint.json) govern resumption.
+**Latest new bid:** [Bank of Israel case137, DEC-0215](research/2026-10-17-deep-review/boi_entry_1255.md),
+15 no-change NO at7¢/$1.05. Independent13:03:57UTC proof found it LIVE and unfilled;
+this is commitment, not holding or profit. Primary change32%, actual20-point
+reserve selects12%; full premium can be lost. Pull **Oct19 22UTC**, earlier on
+uncertainty, no add/repost. At that dated check nine BUY bids committed$17.47,
+pUSD23.446890 left$5.976890 after all bids. Full identities and controls are in
+[resting orders](notes/resting_orders.md); a later fill is not ruled out.
 
-Nine valuations were added after milestone 200: 1602, 1607, 1826, 1910, 2058,
-2077, 2153, 2822 and 2962. All 15 exact conditions in the compound source
-manifest are now valued; shared oil, diplomacy and Senate inputs do not make
-those cases independent. Case 2153's agreement cutoff is October 23, while
-2077's is November 2. Cases 1910 and 2058 have different no-session branches:
-1910 pays 50–50 on the whole binary, while 2058 uses the prior trading-day close.
-Their reports preserve raw normalized-payout expected values 0.4173816971709 and
-0.41696652982 and explicit raw EVs. The bounded EIA/CME observations are proxies;
-preliminary CME CL is not the specified ICE Europe WTI/Pyth CLL fixing. See the
-[compound source manifest](data/deep_review_20261017/remaining_compounds_manifest_0210.json),
-[oil follow-ups](data/deep_review_20261017/oil_barrier_primary_facts_0230.json),
-[terminal data](data/deep_review_20261017/oil_terminal_data_followup_0238.json),
-[Senate follow-up](data/deep_review_20261017/senate_current_state_sources.json),
-and [audit 0244](data/deep_review_20261017/ledger_audit_0244.json). No order or
-financial prior was added from these nine valuations. Case 92 was separately
-blocked after review because the April 30–October active-month CME High history
-could not establish whether $147.27 had already been exceeded; its current price
-and headline search do not prove no prior breach. The 03:00 CME browser timestamp
-is approximate page-read time, not a timed HTTP capture; packet 0238 retains its
-separate timed receipt. See [case 92](research/2026-10-17-deep-review/evaluations/0092.md)
-and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json). Case 96 was completed at 0.5% YES, with no entry; its full rule, forecast, source analysis and dated quote economics are in [case 0096](research/2026-10-17-deep-review/evaluations/0096.md). The newer [oil option proxy crosscheck](research/2026-10-17-deep-review/models/oil_option_proxy_crosscheck_0325.md) adds preliminary CME CL DEC26 American-option sensitivities. They challenge the low-oil mass but do not estimate physical ICE Europe WTI/Pyth CLL probabilities or replace the dated joint cases.
+**OpenRouter:** [joint source refresh](research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json)
+values adjacent September–October bands35/182 at57%/36%YES, and later November
+band112 at unchanged11%YES. The53-week token chart includesOthers; current
+partial153.997T and UI164.747Tpace are different quantities. Neither cache time
+nor pace proves cutoff. DEC-0214's5NO65¢/$3.25 bid retains its **today22UTC pull**,
+earlier uncertainty cancel first; source refresh is not account verification.
+R2's52-week request-share chart is separate; [current dependent model](research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md)
+retains Google90% with endpoint completeness/cutoff gaps. No R2 order approved.
 
-The separate [Oct. 18 fallback](research/2026-10-18-fallback-checkin.md) completed at 10:00 UTC. Its 09:36 bankroll and order figures are dated, not a live account check.
-
-OpenRouter’s official Top Models chart supplies 53 consecutive weekly points (Oct. 13, 2025–Oct. 12, 2026), including Others. Case 35 is valued at 60% YES ([revision](research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md)); this token chart is distinct from the R2 request-share chart’s 52-week series through partial Oct. 12. UI inspection confirmed the displayed total is rounded independently from the series lines; “Weekly Pace” is a separate projection, and `cachedAt` is a forecast reference, not a proven observation cutoff.
-
-**Case 112:** 11% YES/89% NO with a 15-point reserve. DEC-0214 was last verified at 11:50 UTC as a LIVE, unfilled five-share NO bid at 65¢ ($3.25 risk). The same dated inventory showed eight bids totaling $16.42; block 95,745,917 showed $23.446890 pUSD, zero case balances and $7.026890 after bids. This is not a newer account check. Pull at the existing 22:00 UTC check or earlier on uncertainty; cancel first.
-
-**OpenRouter R2:** The 12 exact cases now share the [daily-text revision model](research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md): Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, in subjective dependent branches. The Oct. 17 endpoint returned 406 model-variant rows totaling 204,399,302 Google and 154,821,839 OpenAI requests; it is not guaranteed exhaustive or cutoff-complete. This revision followed the 11:45 quotes, not price-blind.
-
-Case 119’s request-share chart differs from the default token-share API. Its 11:45 book was already about 65 minutes old; the helper computes a passive 1¢ price on that stale capture, not a fresh underwritten quote. Case 119’s selected NO is 0% after reserve. Case 358’s 1¢ ask has no positive cent-grid passive maker price. No new order was approved. See the [chart audit](data/deep_review_20261017/openrouter_chart_display_semantics_1100.json), [case 119 revision](research/2026-10-17-deep-review/revisions/0119_20261018T120931166457Z.md), [case 112 revision](research/2026-10-17-deep-review/revisions/0112_20261018T111722752018Z.md) and [catalyst check](data/deep_review_20261017/openrouter112_catalyst_1120.json); catalyst claims remain advisory.
-
-Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
-review of four recent channel images/poster did not establish an authenticated,
-newly captured appearance; the full video was not reviewed. See the individual
-[case reports](research/2026-10-17-deep-review/INDEX.md), dated
-[source follow-up](data/deep_review_20261017/mojtaba_appearance_primary_followup_0212.json)
-and [image receipts](logs/deep_review_20261017/mojtaba_appearance_primary_followup_0213/manifest.json).
-
-**Eight post-only BUY bids were LIVE and zero-filled in the 02:01:40 UTC check.**
-This is a dated order-state snapshot, not proof of current status. Pending cash was
-$14.72; arithmetic uncommitted pUSD was
-$10.276890. The separate fixed-block proof at01:58:50–01:59:01/block95722257
-confirmed all11 reviewed candidates have zero balances in both outcomes. The newest bid is Lionel Messi Global Athletes
-TOP 5 YES, 5 shares at 27¢ ($1.35; DEC-0213). The other seven bids are the four
-House bids, Idaho YES 34 at 3¢, Michigan Senate NO 5 at 31¢ and Sedgwick County
-YES 5 at 20¢. These are commitments, not purchases or profit; full identities,
-proofs and pull plans are in [resting orders](notes/resting_orders.md).
-
-The [02:00 full held-source check](data/checkin_20261018T0200_sources.json)
-found no change in 65 raw HLE model objects, the five held Gamma criteria, 256
-Senate rows, or the compared Google article cores and AA HLE pair. The mounted
-leaderboard still lists Gemini Argon at 55.6 and OpenAI Astra at 53.6; Diamond
-is a separate metric. Gamma outcome-price snapshots moved from 75.5% to 77.5%
-for OpenAI HLE 55%, from 5.5% to 5.0% for Clarity over 50, and from 8.0% to 7.5%
-for Clarity over 58; these are API snapshots, not executable quotes. Gemini's
-market remains resolved and closed. Three direct OpenAI pages returned HTTP 403
-and remain coverage gaps. The bounded public alert review found no material or
-critical held match; this does not establish global absence of news. No source
-discovery was added.
-
-Continue saving and indexing each primary valuation before beginning the next.
-The last full held-source check completed
-at 02:00 UTC; the next existing check is 06:00 UTC. Weekly and monthly reviews
-are not due until October 23 and November 12. Entry verification does not replace
-a scheduled full review. See [current revisions](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
-and [root risk](data/checkin_20261018T0200_risk.json) for current judgments.
+NVIDIA154's [recent-volatility revision](research/2026-10-17-deep-review/models/nvidia154_recentvol_revision_1325.json)
+is63%YES; entry deferred after20-point reserve and source/calendar review.
+Ocean152 and other dated research leads need fresh entry gates. Closed cases162,
+174 and190 were excluded only after exact identity/nonaccepting/zero-balance
+checks;190's hourly source and final payout were not inferred from all-row
+weather data. [Current corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
+and [candidate follow-up](research/2026-10-17-deep-review/candidate_followup.md)
+index the reports. Next existing full operational check14UTC; entry/source checks
+do not replace it. Weekly/monthly reviews are dueOct23/Nov12.
 
 ## Mandate and constraints
 

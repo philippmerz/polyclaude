@@ -1,0 +1,83 @@
+{
+  "created_utc": "2026-10-18T13:12:39.101839+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 154,
+    "market_id": "5180413",
+    "condition_id": "0xe09c250c2d5ba126bb97b417c55185419600555e9679c9b78cc1a9a4b6e8d151",
+    "criteria_sha256": "360c1026311ad1e628d03dbaecd02dce28fc0a1c23bcd8e193fc209870471898"
+  },
+  "full_rule": "This market will resolve to the largest company in the world by market cap on October 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.",
+  "metric": "company market capitalization, not share price, float value or enterprise value",
+  "cap_USD_trillions": {
+    "NVDA": 5.17,
+    "AAPL": 5.012,
+    "Alphabet": 4.12,
+    "Microsoft": 3.928
+  },
+  "cap_asof_limit": "CMC capture12:38UTC has no explicit snapshot time; NVDA214.13 matches Oct16 vendorclose. NVDA subpage Nasdaq5.160T differs by10B; shares/FX timings not harmonized.",
+  "log_cap_lead": 0.031037651486515952,
+  "future_US_sessions": 10,
+  "target_calendar": "Oct31Saturday; assumed ordinary precedingOct30regularclose, literal no explicit fallback",
+  "sample": {
+    "closed_bars": 60,
+    "dates": [
+      "2026-07-24",
+      "2026-10-16"
+    ],
+    "paired_log_returns": 59,
+    "nvda_logret_sd": 0.023317263813625304,
+    "aapl_logret_sd": 0.015771839119692297,
+    "correlation": -0.2239929437464314,
+    "relative_logret_sd": 0.03093857234673897,
+    "empirical_relative_mean_removed": 6.823662952053317e-05,
+    "source": "data/deep_review_20261017/nvidia154_relative_history_1305.json",
+    "raw_body_hashes_verified": true
+  },
+  "method": "100000 seeded iid ten-session centered empirical paired-relative-return bootstraps; removes historical trend. Symmetric discrete +/-10%log-relative event overlays. This is an assumed predictive model, not option-implied or calibrated posterior.",
+  "seed": 15420261018,
+  "branches": [
+    {
+      "weight": 0.8,
+      "relative_event_log_shift": 0,
+      "p_NVDA_above_AAPL": 0.61836
+    },
+    {
+      "weight": 0.1,
+      "relative_event_log_shift": 0.1,
+      "p_NVDA_above_AAPL": 0.91565
+    },
+    {
+      "weight": 0.1,
+      "relative_event_log_shift": -0.1,
+      "p_NVDA_above_AAPL": 0.23286
+    }
+  ],
+  "p_pair": 0.609539,
+  "conditional_other_company_overtake_assumption": 0.02,
+  "scope_Saturday_sharecount_source_fork_weight": 0.05,
+  "fork_pYES": 0.5,
+  "p_yes_raw": 0.592480809,
+  "p_yes": 0.59,
+  "sensitivity_range": [
+    0.3,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.43999999999999995,
+  "selected_no": 0.26,
+  "events": [
+    "NVIDIA official Aug26 transcript page15: GTCBerlin keynoteOct21; Q3callNov17 afterwindow.",
+    "Apple officialIR search-index: Nov2call afterwindow; dynamicbody omitted/direct403.",
+    "Fed Oct27-28 and peer releases can move relative prices; no assumed Oct29Applecall."
+  ],
+  "gaps": [
+    "iid, centered-return stationarity/event overlay and residual competitor weights subjective",
+    "GTCnew guidance/exportcontrols/chips customer risk can dominate pricehistory",
+    "October sharecounts, shareclasses, FX-time and public/private company universe unresolved",
+    "Double-encoded vendor events parameter; dividends present, split absence not inferred",
+    "Saturday-market-close convention not explicit; no 23/5 launch beforewindow",
+    "No directional equity research thesis or measured hedge against existing AI positions"
+  ],
+  "action": "research forecast only; no financial prior/order/entry approval"
+}

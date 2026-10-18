@@ -17,48 +17,37 @@ Operator authorized a continuous, finite in-depth review of all but clearly irre
     was 09:36 UTC and remains a dated observation, not live state. This research audit
     made no account call or financial action.
 
-    Current checkpoint at 12:15 UTC: 230 valued, 2 blocked, 328 factual exclusions
-    and 2,440 pending; case 133 is active and included in pending. There are 560
-    immutable base records and 15 revisions. [Audit 1215](../../data/deep_review_20261017/ledger_audit_1215.json),
-    [checkpoint](../../notes/deep_review_checkpoint.json), and [index](INDEX.md)
-    govern; the index has 2,439 pending rows plus one active row. Cases 124, 130
-    and 131 are valued at 7%, 59% and 21% YES; no orders were added. Case 35 is valued at 60% YES ([revision](revisions/0035_20261018T111634872634Z.md)); its 53-point Top Models token chart includes Others, distinct from the R2 request-share chart’s 52-week series through partial Oct. 12. Case 92 remains
-    blocked on incomplete post-creation CME active-month High history.
+    Current checkpoint as of 2026-10-18 13:46 UTC: 250 valued, 2 blocked, 331
+    factual exclusions and 2,417 pending, with no active case; 583 base records
+    and 22 revisions. The [checkpoint](../../notes/deep_review_checkpoint.json)
+    and [index](INDEX.md) govern. Case 154 is revised to 63% YES with a 20-point
+    reserve; entry is deferred. Case 182 is 36% YES; case 35 is revised to 57% YES;
+    case 112 remains 11% YES after a source-only refresh. See [case 154 revision](revisions/0154_20261018T132229289334Z.md),
+    [case 182](evaluations/0182.md), and the [case 35](revisions/0035_20261018T133807876978Z.md)
+    and [case 112](revisions/0112_20261018T133808603216Z.md) revisions.
 
-    All 12 exact OpenRouter R2 cases share the [daily-text revision model](models/openrouter_lab_rank2_daily_revision_1215.md):
-    Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, in dependent
-    subjective branches. The 406-row Oct. 17 endpoint has no exhaustion/cutoff
-    guarantee. Revision followed the 11:45 quotes, not price-blind; Case 112 DEC-0214 is LIVE
-    and unfilled NO 5 at 65¢ ($3.25), last verified in the 11:50 snapshot; eight
-    bids then totaled $16.42. Review/pull at the existing 22:00 UTC check or earlier
-    on uncertainty; cancel first. That account proof is dated, not a live check.
-
-    Case 119’s request-share chart differs from the default token-share API. Its
-    11:45 book was already ~65 minutes old; the helper computes a passive 1¢ price
-    on that stale capture, not a fresh underwritten quote; selected NO is 0% after
-    reserve. Case 358’s 1¢ ask has no positive cent-grid passive maker price. No
-    R2 order was added.
+    Case 137 BOI DEC-0215 is a dated 13:03:57 UTC proof of LIVE, unfilled BUY 15
+    NO at 7¢ ($1.05); do not add or repost. The actual 20-point reserve selects
+    NO 12%. Pull by the existing October 19 22:00 UTC deadline, or cancel sooner
+    if load-bearing evidence becomes uncertain. Case 112 retains its earlier October 18 22:00 UTC review/pull; its source refresh did not change the 11% YES
+    valuation. See [BOI order proof](../../data/deep_review_20261017/boi137_postsubmit_1305.json).
 
 Current corrections: read [CURRENT_REVISIONS.md](CURRENT_REVISIONS.md) and [candidate_followup.md](candidate_followup.md) alongside canonical reports. Older immutable scenario ranges/quotes do not overwrite these dated corrections.
 
 
-## Current review resume — October 18, 12:15 UTC
+## Current review resume — October 18, 13:46 UTC
 
-The effective checkpoint has 230 valued, 2 blocked, 328 factual exclusions and
-2,440 pending; case 133 is active and included in pending. It contains 560 immutable
-base evaluations plus 15 revisions, counted once. [Audit 1215](../../data/deep_review_20261017/ledger_audit_1215.json)
-validates identities, report/revision hashes, effective index and checkpoint.
-Resume case 133 from the checkpoint; case 92 remains blocked on incomplete
-post-creation CME active-month High history. Cases 124/130/131 are valued at
-7%/59%/21% YES with no new orders.
+The effective checkpoint records 250 valued, 2 blocked, 331 factual exclusions
+and 2,417 pending; there are no active cases. It contains 583 immutable base
+records plus 22 revisions, with each condition counted once. The
+[checkpoint](../../notes/deep_review_checkpoint.json) and [index](INDEX.md)
+are authoritative. Resume at the next pending case in the checkpoint.
 
-All 12 exact R2 lab cases use [the daily-text primary revision](models/openrouter_lab_rank2_daily_revision_1215.md),
-made after the 11:45 quotes were seen. Google 90%, OpenAI 7.67%, DeepSeek 1.03%,
-ZAI 0.4%, residual 0.9%; the 406-row daily endpoint is not proven exhaustive or
-cutoff-complete. Case 112 DEC-0214 is LIVE/unfilled NO 5 at 65¢ ($3.25), last verified in
-the 11:50 snapshot with eight bids/$16.42; that proof is dated. Pull at the existing
-22:00 UTC check or earlier on uncertainty; cancel first. Case 119’s 11:45 book was
-already ~65 minutes old; helper computes passive 1¢ on that stale capture, not a
-fresh underwritten quote; selected NO is 0% after reserve. Case 358’s 1¢ ask has no
-positive cent-grid maker price. No R2 order was added. Next research boundary is
-14:00 UTC.
+Recent primary records: case 154 is 63% YES (30–85% range), with a 20-point
+reserve and entry deferred; case 182 is 36% YES; case 35 is revised to 57% YES;
+case 112 remains 11% YES after source-only review. No order follows from those
+research records. Case 137’s DEC-0215 BUY 15 NO at 7¢ ($1.05) was independently
+observed LIVE and unfilled at 13:03:57 UTC; no add/repost. Its actual reserve is
+20 points (NO 12%). Pull by October 19 22:00 UTC, earlier if evidence becomes
+uncertain. Case 112’s existing October 18 22:00 UTC review/pull is unchanged. The exact,
+dated order proof is [here](../../data/deep_review_20261017/boi137_postsubmit_1305.json).

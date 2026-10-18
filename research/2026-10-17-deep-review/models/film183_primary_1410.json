@@ -1,0 +1,357 @@
+{
+  "created_utc": "2026-10-18T13:40:54.652800+00:00",
+  "before_own_PM_quotes": true,
+  "identity": {
+    "index": 183,
+    "market_id": "4893304",
+    "condition_id": "0xeba28014e3f9603cfb4cb056692c5a8644c619bf31345c404a6bea774b6ad701",
+    "criteria_sha256": "3a33ae2c726ffe755806370f6e742357fd114e22fa003e88b2efc6367104f26c"
+  },
+  "full_rule": "This market will resolve according to how much \"Resident Evil\" box office will gross domestically by October 31, 2026. The \"Daily Box Office Performance\" figures found on the \"Box Office\" tab on this movie's The Numbers (https://www.the-numbers.com/) page will be used to resolve this market once the values for all dates between opening (September 18, 2026) and October 31, 2026 are final (i.e., not studio estimates).\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nPlease note, this market will resolve according to the The Numbers figures provided under Box Office Performance until and including October 31, 2026, regardless of whether domestic refers to only the USA, or to USA and Canada, etc.\n\nIf there is ambiguity as to whether the resolution source's figures are final, this market will remain open until both https://www.boxofficemojo.com/ and https://www.the-numbers.com/ have confirmed their finalized figures.\n\nIf there is no final data available by November 30, 2026, 11:59 PM ET, another credible resolution source will be chosen.",
+  "source_packet": "data/deep_review_20261017/film183_weather190_facts_1350.json",
+  "source_raw_hash_verified": true,
+  "root_reparsed_daily_rows": 29,
+  "identical_raw_table_row_copies": 58,
+  "daily_rows": [
+    {
+      "date": "2026-09-18",
+      "gross": 26227502,
+      "cumulative": 26227502,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-19",
+      "gross": 20015762,
+      "cumulative": 46243264,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-20",
+      "gross": 13909614,
+      "cumulative": 60152878,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-21",
+      "gross": 5305537,
+      "cumulative": 65458415,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-22",
+      "gross": 6902495,
+      "cumulative": 72360910,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-23",
+      "gross": 4506916,
+      "cumulative": 76867826,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-24",
+      "gross": 3308421,
+      "cumulative": 80176247,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-25",
+      "gross": 7038093,
+      "cumulative": 87214340,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-26",
+      "gross": 9801221,
+      "cumulative": 97015561,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-27",
+      "gross": 6173534,
+      "cumulative": 103189095,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-28",
+      "gross": 2096778,
+      "cumulative": 105285873,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-29",
+      "gross": 3026409,
+      "cumulative": 108312282,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-09-30",
+      "gross": 2301587,
+      "cumulative": 110613869,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-10-01",
+      "gross": 1781026,
+      "cumulative": 112394895,
+      "theaters": 3684
+    },
+    {
+      "date": "2026-10-02",
+      "gross": 3645027,
+      "cumulative": 116039922,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-03",
+      "gross": 5458249,
+      "cumulative": 121498171,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-04",
+      "gross": 3515563,
+      "cumulative": 125013734,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-05",
+      "gross": 1223785,
+      "cumulative": 126237519,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-06",
+      "gross": 1644250,
+      "cumulative": 127881769,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-07",
+      "gross": 1253483,
+      "cumulative": 129135252,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-08",
+      "gross": 1040156,
+      "cumulative": 130175408,
+      "theaters": 3259
+    },
+    {
+      "date": "2026-10-09",
+      "gross": 2350633,
+      "cumulative": 132526041,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-10",
+      "gross": 3518804,
+      "cumulative": 136044845,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-11",
+      "gross": 2693721,
+      "cumulative": 138738566,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-12",
+      "gross": 1358172,
+      "cumulative": 140096738,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-13",
+      "gross": 1193478,
+      "cumulative": 141290216,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-14",
+      "gross": 901950,
+      "cumulative": 142192166,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-15",
+      "gross": 765789,
+      "cumulative": 142957955,
+      "theaters": 3085
+    },
+    {
+      "date": "2026-10-16",
+      "gross": 1600000,
+      "cumulative": 144557955,
+      "theaters": 2705
+    }
+  ],
+  "preview_row_note": "SeparateSep17previewnotaddedagain/subtractedfromofficialFridaycumulative; openingSep18throughOct31sourcefigurescontrol.",
+  "recent_matched_weekday_ratios_exMonday": [
+    0.6446763421749356,
+    0.7662274861807341,
+    0.7258494754447317,
+    0.7195550318592274,
+    0.7362251431516041,
+    0.6806677180146794
+  ],
+  "geometric_retention_center": 0.7110922959769665,
+  "regimes": {
+    "ordinary": {
+      "weight": 0.7,
+      "retention_median": 0.7110922959769665,
+      "log_sd": 0.12
+    },
+    "weaker": {
+      "weight": 0.2,
+      "retention_median": 0.55,
+      "log_sd": 0.12
+    },
+    "stronger": {
+      "weight": 0.1,
+      "retention_median": 0.85,
+      "log_sd": 0.15
+    }
+  },
+  "daily_noise_log_sigma": 0.15,
+  "future_Monday_multiplier": 0.85,
+  "HalloweenOct30_31_multiplier_scenarios": {
+    "1": 0.7,
+    "1.4": 0.25,
+    "2": 0.05
+  },
+  "source_revision_noise": {
+    "95pct_normal_sigma_USD": 300000,
+    "5pct_normal_sigma_USD": 2000000
+  },
+  "unreported_day_projections": [
+    {
+      "unreported_date": "2026-10-17",
+      "anchor_date": "2026-10-10",
+      "anchor_daily_gross": 3518804,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 2456130.769780317
+    },
+    {
+      "unreported_date": "2026-10-18",
+      "anchor_date": "2026-10-11",
+      "anchor_daily_gross": 2693721,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 1878915.0848618038
+    },
+    {
+      "unreported_date": "2026-10-19",
+      "anchor_date": "2026-10-12",
+      "anchor_daily_gross": 1358172,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 805560.3284810691
+    },
+    {
+      "unreported_date": "2026-10-20",
+      "anchor_date": "2026-10-13",
+      "anchor_daily_gross": 1193478,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 832483.1436566241
+    },
+    {
+      "unreported_date": "2026-10-21",
+      "anchor_date": "2026-10-14",
+      "anchor_daily_gross": 901950,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 629489.3806893477
+    },
+    {
+      "unreported_date": "2026-10-22",
+      "anchor_date": "2026-10-15",
+      "anchor_daily_gross": 765789,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 534333.2157596846
+    },
+    {
+      "unreported_date": "2026-10-23",
+      "anchor_date": "2026-10-16",
+      "anchor_daily_gross": 1600000,
+      "weeks_ahead_of_anchor": 1,
+      "mean_projected_gross": 1116420.789142365
+    },
+    {
+      "unreported_date": "2026-10-24",
+      "anchor_date": "2026-10-10",
+      "anchor_daily_gross": 3518804,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 1764278.299892171
+    },
+    {
+      "unreported_date": "2026-10-25",
+      "anchor_date": "2026-10-11",
+      "anchor_daily_gross": 2693721,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 1350942.344502693
+    },
+    {
+      "unreported_date": "2026-10-26",
+      "anchor_date": "2026-10-12",
+      "anchor_daily_gross": 1358172,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 578708.7038152994
+    },
+    {
+      "unreported_date": "2026-10-27",
+      "anchor_date": "2026-10-13",
+      "anchor_daily_gross": 1193478,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 598517.4045019085
+    },
+    {
+      "unreported_date": "2026-10-28",
+      "anchor_date": "2026-10-14",
+      "anchor_daily_gross": 901950,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 451988.29907045653
+    },
+    {
+      "unreported_date": "2026-10-29",
+      "anchor_date": "2026-10-15",
+      "anchor_daily_gross": 765789,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 383790.6530430012
+    },
+    {
+      "unreported_date": "2026-10-30",
+      "anchor_date": "2026-10-16",
+      "anchor_daily_gross": 1600000,
+      "weeks_ahead_of_anchor": 2,
+      "mean_projected_gross": 923967.4538370977
+    },
+    {
+      "unreported_date": "2026-10-31",
+      "anchor_date": "2026-10-10",
+      "anchor_daily_gross": 3518804,
+      "weeks_ahead_of_anchor": 3,
+      "mean_projected_gross": 1503367.0223022406
+    }
+  ],
+  "paths": 200000,
+  "seed": 20261018183,
+  "statistics": {
+    "below160": 0.508715,
+    "160inclusive170exclusive": 0.46001,
+    "atleast170": 0.031275,
+    "mean_m": 160.36766505429298,
+    "median_m": 159.9173690104299,
+    "p05_m": 154.01350027474334,
+    "p95_m": 168.29429918888457
+  },
+  "p_yes": 0.46,
+  "sensitivity_range": [
+    0.08,
+    0.75
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.31000000000000005,
+  "selected_no": 0.39,
+  "method": "Weekday-matched recursive box-office decay with shared uncertain retention, per-day noise, explicit Halloween/source-finality scenarios. Weights/uplifts/Mondaynormalization uncalibrated; pastunreportedOct17 remains modeled, not observed.",
+  "action": "research only; no entry or financialprior"
+}
