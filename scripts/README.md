@@ -36,6 +36,14 @@ positions; they do not create a recurring stock or brokerage workflow.
 
 - `context_packet.py` — offline, bounded orientation from allowlisted Git-tracked public docs. `--scope portfolio|research|engineering|operations`, optional `--query "heading words"`, `--format json|markdown`, default `--max-bytes 12000`. Uses notes/current_context.md review/expiry and source hashes; no live state, private history, model call or execution approval. Queries only current strategies and the lesson archive; current matches come first and archive excerpts carry historical labels, line bounds and hashes. No title match is explicit; optional sections are omitted whole on overflow, while an oversized essential packet fails. Required primary reads remain mandatory. Refresh the handoff through the existing record workflow, not by regenerating the packet.
 
+- `public_source_archive.py` — reversible archive for explicitly allowlisted,
+  receipt-linked public HTML in completed Oct 1–16 runs. `verify`, `restore` and
+  `roundtrip` check manifest, raw/gzip hashes, source receipt and file metadata;
+  this is not a general log cleaner.
+- `public_source_archive_extra.py` — isolated `prior36` and `more-html` profiles.
+  Choose `--profile prior36` or `--profile more-html` for verification/restoration;
+  each profile has its own immutable manifest and rejects out-of-scope paths. Together with the base manifest, the verified set covers 307 receipt-linked
+  public HTML bodies; this is scoped evidence archiving, not general cleanup.
 - `wallet_status.py` — Polymarket-sleeve MATIC + USDC balance on Polygon.
 - `exit_analysis.py` — held-position/group sale planning. Taker candidates meet the same book’s live `min_order_size`, including the minimum crossing inside a bid level; missing/invalid minimum leaves the book unpriced. Quotes still need all current execution gates before an order.
 - `positions.py` — Polymarket open positions with mark-to-market P&L.

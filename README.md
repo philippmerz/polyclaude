@@ -64,33 +64,30 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was delivered in chat and Telegram. The [200-valuation report](research/2026-10-17-deep-review/MILESTONE_200.md) is also saved. The 02:34 UTC checkpoint recorded **200 valuations,
-2 blocked cases and 327 factual exclusions**; 2,471 conditions remain pending
-across 529 canonical records. The active case is 1602, a Hormuz/oil/Democratic
-Senate combination. Its full individual rule and source binding have been read,
-and its primary pre-quote forecast is saved; its own quote analysis is underway and
-the valuation is incomplete. All 3,000 conditions
-have archived, dated public quote captures; missing, stale or omitted books remain
-explicit gaps, and none of those captures is a current execution certificate.
+was delivered in chat and Telegram. The [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
+remains the dated inspection record for that checkpoint. At the 03:04 UTC checkpoint, the frozen 3,000-market review had **209 valued, 3 blocked, 327 factual exclusions and 2,461 pending** across 539 canonical records. Case 92 is blocked, not valued: its complete post-creation CME active-month daily-high history is unresolved, so no probability was saved. Case 96 is now active. The live [index](research/2026-10-17-deep-review/INDEX.md) and [checkpoint](notes/deep_review_checkpoint.json) govern current status.
 
-Eleven valuations were added since the prior 189-case checkpoint: 12, 26, 64, 80,
-169, 270, 546, 722, 728, 1192 and 1197. The linked
-[Hormuz/oil/Senate method](research/2026-10-17-deep-review/models/hormuz_oil_senate_method_0206.md)
-and [five-specification, twelve-cell joint table](research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json)
-record the shared assumptions. Case 169 has an exact October 23 deadline in its
-literal rule; adjacent titles or variants do not change that cutoff. The 722 YES /
-728 NO floor pair costs $9.98776 for a $10 payout floor, leaving $0.01224 before
-carry and operational costs; the reverse pair is not an arbitrage. Case 270 uses a
-50–50 whole-market fallback and is nontrade; case 546 uses a prior-close fallback.
-For case 270, the 50–50 branch is included in raw expected payout: $0.0453183028291
-per YES share implies +$0.058553 on ten shares, versus +$0.10537 using the rounded
-displayed 5% value. The immutable report preserves both calculations; the difference
-is about $0.046817, not a missing fallback branch. The offline milestone audit found
-that pre-quote forecasts/reserves match their final saved values, while saved quote
-captures predate those files. The reported tool sequence saved forecasts before own
-price reads, but timestamps do not independently attest to price blindness; five
-pre-quote files omit an explicit `own_prices_not_read` field. No entry from these
-eleven valuations was added.
+Nine valuations were added after milestone 200: 1602, 1607, 1826, 1910, 2058,
+2077, 2153, 2822 and 2962. All 15 exact conditions in the compound source
+manifest are now valued; shared oil, diplomacy and Senate inputs do not make
+those cases independent. Case 2153's agreement cutoff is October 23, while
+2077's is November 2. Cases 1910 and 2058 have different no-session branches:
+1910 pays 50–50 on the whole binary, while 2058 uses the prior trading-day close.
+Their reports preserve raw normalized-payout expected values 0.4173816971709 and
+0.41696652982 and explicit raw EVs. The bounded EIA/CME observations are proxies;
+preliminary CME CL is not the specified ICE Europe WTI/Pyth CLL fixing. See the
+[compound source manifest](data/deep_review_20261017/remaining_compounds_manifest_0210.json),
+[oil follow-ups](data/deep_review_20261017/oil_barrier_primary_facts_0230.json),
+[terminal data](data/deep_review_20261017/oil_terminal_data_followup_0238.json),
+[Senate follow-up](data/deep_review_20261017/senate_current_state_sources.json),
+and [audit 0244](data/deep_review_20261017/ledger_audit_0244.json). No order or
+financial prior was added from these nine valuations. Case 92 was separately
+blocked after review because the April 30–October active-month CME High history
+could not establish whether $147.27 had already been exceeded; its current price
+and headline search do not prove no prior breach. The 03:00 CME browser timestamp
+is approximate page-read time, not a timed HTTP capture; packet 0238 retains its
+separate timed receipt. See [case 92](research/2026-10-17-deep-review/evaluations/0092.md)
+and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json).
 
 Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
 review of four recent channel images/poster did not establish an authenticated,

@@ -1,4 +1,18 @@
-## Current pointer — October 18, 02:42 UTC
+## Current pointer — October 18, 03:04 UTC
+
+The canonical review has **209 valued, 3 blocked, 327 factual exclusions and 2,461 pending** across 539 records; case 96 is active. Case 92 is blocked, not rejected: the full rule requires CME active-month daily High strictly above $147.27 after April 30 creation, and the complete correctly rolled May–October series is not established. No probability was saved. The 03:00 UTC CME Daily Bulletin `observed_utc` is an approximate browser read time, not a timed HTTP receipt; the separate timed packet 0238 is preserved. Current [index](INDEX.md), [checkpoint](../../notes/deep_review_checkpoint.json), and [audit 0305](../../data/deep_review_20261017/ledger_audit_0305.json) govern status.
+
+Nine valuations were appended after milestone 200: 1602, 1607, 1826, 1910, 2058,
+2077, 2153, 2822 and 2962. All 15 conditions in the original compound manifest
+are now completed; their common Senate/oil/agreement drivers remain dependent.
+Case 2153's agreement cutoff is October 23, whereas case 2077 has November 2.
+Case 1910 uses a whole-market 50–50 non-session branch; case 2058 uses the prior
+trading-day close. Both reports retain raw expected payouts and raw EVs. CME CL is
+a dated proxy, not ICE Europe WTI/Pyth CLL. See [audit 0244](../../data/deep_review_20261017/ledger_audit_0244.json),
+[oil source packet 0230](../../data/deep_review_20261017/oil_barrier_primary_facts_0230.json),
+and [terminal-data packet 0238](../../data/deep_review_20261017/oil_terminal_data_followup_0238.json).
+
+## Historical milestone-200 pointer — October 18, 02:42 UTC
 
 The canonical review contains **200 valued, 2 blocked, 327 factual exclusions and
 2,471 pending** across 529 records. The live [index](INDEX.md) and

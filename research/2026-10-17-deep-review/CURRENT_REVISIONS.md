@@ -561,8 +561,9 @@ Focusedcommit4257f65 (through189valuations/DEC213/full02check) pushed.169money-m
 The checkpoint contains 529 records: 200 valued, 2 blocked, 327 factual exclusions
 and 2,471 pending. The eleven new valuations are cases 12, 26, 64, 80, 169, 270,
 546, 722, 728, 1192 and 1197; none added an order or financial prior. Case 1602
-has a saved primary pre-quote forecast; its own quote analysis is underway, so valuation
-is incomplete.
+has a saved primary pre-quote forecast. Its quote has since been read; analysis
+is underway and no valuation is saved yet. See [MILESTONE_200.md](MILESTONE_200.md)
+for audit details.
 
 The joint model uses five specifications by twelve joint cells.
 For case 270, raw expected payout is 0.0453183028291 per YES share, including the
@@ -576,3 +577,35 @@ pre-quote files omit an explicit `own_prices_not_read` field.
 
 The eight LIVE zero-filled bids and $14.72 pending were verified at 02:01:40 UTC.
 That is a dated order-state snapshot, not proof of current status.
+
+
+## October 18 02:58 UTC — milestone 209 audit
+
+The checkpoint has 538 records: 209 valued, 2 blocked, 327 factual exclusions and
+2,462 pending. Nine cases were appended after milestone 200: 1602, 1607, 1826,
+1910, 2058, 2077, 2153, 2822 and 2962. No order or financial prior was added.
+Case 92 is active; its full rule is read, but its own quotes remain unread and no
+primary probability is saved. Audit 0244 passed the exact append after HEAD
+82d0f29, the nine frozen identity/report-hash checks, all 3,000 unique CSV rows,
+checkpoint counts and all eight protected financial files against the 02:00 baseline.
+
+All 15 entries in the compound manifest are now complete, but share dependent oil,
+agreement and Senate drivers. Case 2153 has an October 23 agreement cutoff; 2077
+has November 2. Cases 1910 and 2058 differ in the no-session rule: whole-market
+50–50 versus prior trading-day close. The reports preserve raw expected payouts
+0.4173816971709 and 0.41696652982 and their raw EVs. Oil source packets 0230/0238
+include dated CME CL observations only as proxies; they do not supply the target
+ICE/Pyth CLL fixing. See [audit 0244](../../data/deep_review_20261017/ledger_audit_0244.json).
+
+Historical-public-source archive receipts 0226 and 0236 add 36 and 81 receipt-linked
+HTML bodies to the original 190. The verified profiles cover 307 bodies in total;
+all archived bytes remain recoverable through their manifests/readers. Disk was
+192.13 MiB free at audit time, above the 180 MiB research floor and below the
+512 MiB warning threshold.
+
+
+## October 18 03:04 UTC — case 92 blocked on historical CME coverage
+
+The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
+
+The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](evaluations/0092.md), [source packet 0238](../../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.

@@ -5027,3 +5027,18 @@ verification still precedes submission. Current review count160valued,2blocked,
 
 Receipt: data/deep_review_20261017/all_pilots_ipo_cancel_verify_0000.json
 (private0600). New source investigation: ipo_revenue_alert_followup_2359.json.
+
+
+## October 18, 02:58 UTC — milestone 209, no new money
+
+- The frozen 3,000-market review now has 209 valued, 2 blocked, 327 factual exclusions and 2,462 pending across 538 records. Nine valuations were appended after the 200-case milestone: 1602, 1607, 1826, 1910, 2058, 2077, 2153, 2822 and 2962. No order or financial prior was added.
+- All 15 conditions in the compound source manifest are now valued, but shared Senate/oil/agreement inputs remain correlated. Case 2153's agreement deadline is October 23; case 2077's is November 2. Cases 1910/2058 retain distinct non-session fallbacks (whole-market 50–50 versus prior trading-day close). Their raw expected payouts and EVs are preserved. CME CL is a preliminary proxy, not ICE/Pyth CLL.
+- Audit 0244 passed the exact nine-row append after `82d0f29`, case JSON/Markdown hashes and frozen identities, 3,000 unique CSV rows, checkpoint/progress counts and all eight protected financial hashes against the 02:00 baseline. Active case 92 has a full rule read; own quotes and primary probability remain unfinished.
+- Receipt-linked historical public HTML archives now cover 307 bodies: original190 plus36 and81 additional. Profile verification/roundtrip receipts are saved; no financial, active operator or dependency files were changed. Disk was192.13 MiB free, above the180 MiB research floor and below the512 MiB warning threshold. See `data/deep_review_20261017/ledger_audit_0244.json`, archive completion receipts0226/0236 and verification0013.
+
+
+## October 18 03:04 UTC — case 92 blocked on historical CME coverage
+
+The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
+
+The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.

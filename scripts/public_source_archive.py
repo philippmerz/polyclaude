@@ -23,6 +23,10 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 MANIFEST = ROOT / "research/2026-10-17-deep-review/ARCHIVED_PUBLIC_SOURCE_BODIES.json"
+DEFAULT_SCOPE_DESCRIPTION = "Only four named public HTML source-body families in completed Oct 1–16 checkin/periodic runs; all captures retained individually."
+DEFAULT_READER_HELPER = "scripts/public_source_archive.py"
+SCOPE_DESCRIPTION = DEFAULT_SCOPE_DESCRIPTION
+READER_HELPER = DEFAULT_READER_HELPER
 ALLOWED_BODIES = {
     "aa_argon_comparison.body": "aa_argon_comparison",
     "google_september_recap.body": "google_september_recap",
@@ -217,7 +221,9 @@ def collect_plan() -> tuple[list[dict[str, Any]], list[tuple[Path, bytes, dict[s
             "archive_sha256": sha256(compressed),
             "original_mode_octal": oct(before["mode"]),
             "original_mtime_ns": before["mtime_ns"],
-            "capture_run": path.parent.parent.name,
+            # Use the run directory component so nested source folders retain the
+            # same receipt identity as flat logs/<run>/sources/<body> captures.
+            "capture_run": Path(rel(path)).parts[1],
             "capture_key": family,
             **{k: v for k, v in linkage.items() if k != "metadata_signature"},
         }
@@ -445,9 +451,9 @@ def archive_all() -> dict[str, Any]:
         manifest = {
             "schema": SCHEMA,
             "created_utc": now,
-            "scope": "Only four named public HTML source-body families in completed Oct 1–16 checkin/periodic runs; all captures retained individually.",
+            "scope": SCOPE_DESCRIPTION,
             "compression": {"format": "gzip", "level": 6, "mtime": 0, "method": "gzip.compress"},
-            "path_resolution": "Original path maps to adjacent .gz. scripts/public_source_archive.py verifies bytes and source receipt links; restore refuses a differing existing file.",
+            "path_resolution": f"Original path maps to adjacent .gz. {READER_HELPER} verifies bytes and source receipt links; restore refuses a differing existing file.",
             "hash_algorithm": "SHA-256 over exact source bytes and exact gzip bytes",
             "entry_count": len(entries),
             "skipped_count": len(skipped),

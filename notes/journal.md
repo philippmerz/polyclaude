@@ -30884,7 +30884,8 @@ Private0600 proof: `data/deep_review_20261017/all_pilots_messi_postentry_0197.js
 The 529-record checkpoint contains 200 valued, 2 blocked, 327 factual exclusions
 and 2,471 pending. Cases 12, 26, 64, 80, 169, 270, 546, 722, 728, 1192 and 1197
 were added without an order or financial prior. Case 1602 has a saved primary
-pre-quote forecast; its own quote analysis is underway, so valuation is incomplete.
+pre-quote forecast. Its quote has since been read; analysis is underway and no
+valuation is saved yet. See the deep-review [milestone-200 audit](../research/2026-10-17-deep-review/MILESTONE_200.md).
 
 The joint table has five specifications by twelve joint cells. Case 270 includes
 its 50–50 no-session fallback in raw expected payout: 0.0453183028291 per YES
@@ -30898,3 +30899,34 @@ an explicit `own_prices_not_read` field.
 
 Eight LIVE zero-filled bids and $14.72 pending were verified at 02:01:40 UTC.
 This is a dated order-state snapshot, not proof of current status.
+
+
+## October 18, 02:58 UTC — milestone 209 audit; no new money
+
+The canonical queue has 538 records: 209 valued, 2 blocked, 327 factual exclusions
+and 2,462 pending. Nine valuations were appended after the 200-case milestone:
+1602, 1607, 1826, 1910, 2058, 2077, 2153, 2822 and 2962. No order or financial
+prior was added. Active case 92 has its full rule read; its own quote and primary
+probability remain outstanding.
+
+Audit 0244 passed the exact appended ledger prefix at HEAD `82d0f29`, all nine
+case identity/criteria/report hashes, the 3,000-row unique CSV, checkpoint counts
+and all eight protected financial files against the 02:00 baseline. All 15 items
+in the compound manifest are complete, but their common Senate/oil/agreement
+inputs are dependent. Case 2153's agreement deadline is October 23, not 2077's
+November 2. Case 1910 has a whole-market 50–50 non-session fallback; 2058 uses
+the prior trading-day close. Their reports retain raw expected payouts and raw EVs.
+CME CL observations are proxies, not the ICE Europe WTI/Pyth CLL target; see
+source packets 0230/0238 and [audit 0244](../data/deep_review_20261017/ledger_audit_0244.json).
+
+Receipt-linked public HTML archives now cover 307 distinct bodies (190+36+81).
+Verified readers and restore tests are recorded in the archive receipts. Disk had
+192.13 MiB free, above the 180 MiB research floor and below the 512 MiB warning.
+The 02:00 order/account and held-risk figures in the context remain dated snapshots.
+
+
+## October 18 03:04 UTC — case 92 blocked on historical CME coverage
+
+The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
+
+The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.

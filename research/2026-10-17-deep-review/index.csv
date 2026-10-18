@@ -90,11 +90,11 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 89,0x652293940a98a7ec9b1d2b23fb9e8399728d1a461dce61523fa2fcce8d844e21,668591,GTA 6 launch postponed again?,valued,2026-10-17T22:02:37.896534+00:00,0.07,YES positive at central estimate but fails ordinary uncertainty reserve; NO negative at captured cost; no entry.,evaluations/0089.md
 90,0x537bd7793380051eab764d2b689ebe46ee7a62f335d5c48e07cced1778212664,5263923,Will Newcastle United FC win on 2026-10-17?,excluded_factual,2026-10-17T20:37:09.412119+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0090.md
 91,0x4bb452108ef121f520eb536b0c55f71ed55916e2e6807e20ebadd1b4330662c5,4662690,Will The Weeknd be featured on GTA VI: The Album?,valued,2026-10-17T22:08:41.511519+00:00,0.22,"NO centrally positive, but opaque-selection15ppreserve rejects capturedroute. Consider<=60csmallpassivewatch after bettercredits/currentgates; noentry.",evaluations/0091.md
-92,0x8a5c0b5fc339f2dbaf584def66bcf8bff94d91f0250562e452782fed3d18f821,2126461,Will Crude Oil reach a new all-time high by December 31?,pending,,,,
+92,0x8a5c0b5fc339f2dbaf584def66bcf8bff94d91f0250562e452782fed3d18f821,2126461,Will Crude Oil reach a new all-time high by December 31?,blocked_after_review,2026-10-18T03:04:11.484254+00:00,,Blocked after substantive review on precise historicalbarrier/rollcoverage. No forecast or investmentrejection; not counted towardvaluations.,evaluations/0092.md
 93,0x5b80c919fda2e75b0de00a4b685f689fa99c8753b2026bd362bb2ec687a6ae46,5713625,"Will ""Norm: The Tale of Norm Macdonald"" be the #2 US Netflix movie this week?",valued,2026-10-17T19:21:41.558934+00:00,0.01,Both asks negative central EV; no supported maker entry,evaluations/0093.md
 94,0x6bd56627aa21311850825edb27e53434a0e17a4f782be0086bc07f71eee00d0d,560317,"Putin out as President of Russia by December 31, 2026?",valued,2026-10-17T19:43:06.788987+00:00,0.04,Tiny YES central tail value lacks robustfloor; no entry,evaluations/0094.md
 95,0x712da1b055e10bf6885872fbb6d0ec5baa5f5da8da58ece8bec7462945aab4d4,1283232,Will the Republican Party win the GA-10 House seat?,valued,2026-10-17T20:14:56.008720+00:00,0.91,Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs,evaluations/0095.md
-96,0x0b4cc3b739e1dfe5d73274740e7308b6fb389c5af040c3a174923d928d134bee,703258,Will Jesus Christ return before 2027?,pending,,,,
+96,0x0b4cc3b739e1dfe5d73274740e7308b6fb389c5af040c3a174923d928d134bee,703258,Will Jesus Christ return before 2027?,in_progress,,,,
 97,0x26b5ef627ebddd730da4491dfac7f4ac22e4b4a73c4ac0fa8ea211d9da6af3a4,5557832,Tampa Bay Rays vs. Cleveland Guardians,pending,,,,
 98,0x9c08dd09883c33419b3dc35ee73720c0f69c33246c1c8370f9572279707a40d5,2363844,Will Zohran Mamdani be TIME Person of the Year 2026?,valued,2026-10-18T02:11:14.713251+00:00,0.12,"Noentry: YESnegativecentral, NOpositivecentralbutfails20ppselectedreserve atasks/ordinarymaker. FutureNO64ctriggeronly.",evaluations/0098.md
 99,0x3d78687856148bc4410fcf2d511c6a8e797a32cd123d5130550937776c1bc580,5170732,"Will Bitcoin reach $95,000 in October?",valued,2026-10-17T19:30:00.458086+00:00,0.095,"YES central model value, no supported robustfloor; no entry",evaluations/0099.md
@@ -1600,12 +1600,12 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1599,0xb818eb1084fdbc85161dda72c93e1e2da6eb3cc675aa815becb69f45f30683c9,2757806,Iran charges Hormuz fees by October 31?,pending,,,,
 1600,0x618539bb86224e173204f4aa7706abaf3e13b2425dedd9f1e5176871714059a5,3518974,Will the Republican Party candidate win the 2026 NE-03 House election by 50%-55%?,pending,,,,
 1601,0x226776d4bd3c0442adcfbb81083c0357581935fa61161192695e4256d4658f58,3241909,Will Wayne Rooney be the next head coach of the England national team?,pending,,,,
-1602,0x46a5ba0ba77dd6444d4b83990cec0e2ab2aef2c344de342c88f9d87ff82f297a,5628380,"Will there be a Hormuz agreement by October 23, oil below $80, and the Democrats win the Senate?",in_progress,,,,
+1602,0x46a5ba0ba77dd6444d4b83990cec0e2ab2aef2c344de342c88f9d87ff82f297a,5628380,"Will there be a Hormuz agreement by October 23, oil below $80, and the Democrats win the Senate?",valued,2026-10-18T02:45:10.446857+00:00,0.01,No entry: YES negative central EV and cash minimum; NO fails selected 20-point reserve despite small central margin. Hypothetical future NO76c only.,evaluations/1602.md
 1603,0x369e3e545dfcf09e845f23d1eb5992ace6ba7aa6aa9c9774d74f95033f510862,5269128,Exact Score: Real Betis Balompié 0 - 0 FC Barcelona?,excluded_factual,2026-10-17T20:38:01.939964+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1603.md
 1604,0x608e674e013151dea724a8bdc12a2ef3cb905a3d17538f164c006522b76bf873,4592250,Will the 2026 F1 Abu Dhabi Grand Prix take place?,pending,,,,
 1605,0x9aa20b4b387d7038f271464dda0d3137ad72aba90827ad3ce58d18c46587aa4e,3729340,Will Republicans win the Georgia Governor election and Democrats win the Georgia Senate election?,pending,,,,
 1606,0xcefba5a5ca20b0fee51103c05388828b138cc2199a36fe5a7702049dbc9e5222,1168133,Will the upper bound of the target federal funds rate be 2.25% at the end of 2026?,pending,,,,
-1607,0x45948551bc1850546ac61dd34699956b81244d5f733d9ad5d75f43442a58214e,5612093,"Will there be a Hormuz agreement, oil below $80, and the Democrats win the Senate?",pending,,,,
+1607,0x45948551bc1850546ac61dd34699956b81244d5f733d9ad5d75f43442a58214e,5612093,"Will there be a Hormuz agreement, oil below $80, and the Democrats win the Senate?",valued,2026-10-18T02:47:05.433697+00:00,0.02,No entry: YES central negative and cash-minimum failure; NO raw margin below operations+carry and selected reserve fails. Future NO75c illustrative only.,evaluations/1607.md
 1608,0x2d73a0344248e109740e2a9e0e3f39ba8392149f4d31d24a3148bcdcdfd09337,5286762,Spread: Aalesunds FK (-2.5),excluded_factual,2026-10-17T20:38:02.290442+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1608.md
 1609,0x31aadde7e08499bf6a41c713d0c649d836dbc70337bb52fdc6ff80e4be8b1a52,2126073,Trump goes to space in 2026?,pending,,,,
 1610,0x5566abcbf820d8a989db0e215c87853aba3a1effd657c7f6e318e075a45fb8f2,5329677,Will Lula win the most votes in the second round of the Brazil presidential election from Pará?,pending,,,,
@@ -1824,7 +1824,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1823,0x9a35432371da1720b0c02e61699218ee14d594c45b8450a20b38f696e0314af8,5730919,Will AutoZone Q1 domestic same store sales growth be between 1.5% and 2.5%?,pending,,,,
 1824,0x4a8c7d4e3df853ba2122a747613cb09603080afd1a7b7bc375ce9d4214609f40,5289996,Los Angeles Galaxy vs. San Diego FC: O/U 3.5,pending,,,,
 1825,0x554615a7db6be2479c292658594aed0649f2204d0ac65ca3ff71d857b64e4581,5723792,Will the lowest temperature in Miami be between 86-87°F on October 17?,pending,,,,
-1826,0xce825ce82163ced995908127e4d3d6d1c557169ed3776d04ac14b78e43711661,5611880,Will oil be below $85 on November 2 and the Democrats win the Senate?,pending,,,,
+1826,0xce825ce82163ced995908127e4d3d6d1c557169ed3776d04ac14b78e43711661,5611880,Will oil be below $85 on November 2 and the Democrats win the Senate?,valued,2026-10-18T02:48:22.324624+00:00,0.1,YES central discount merits exact-oil-data follow-up; current20-point reserve/cashminimum fail. NO centralnegative. No entry; futureNO67c illustrative only.,evaluations/1826.md
 1827,0xb49545e04ee8130e2ba7d52326330329d6411e53757c1e102746e2917b504aeb,5731324,Democratic Senate odds <58% on October 23?,pending,,,,
 1828,0xc498cb1cc88a6b21f8cbecc71994f466e1860c55e8ffbd1bf87aab7fc4f64eac,5652851,Will Sivasspor vs. Sariyer SK end in a draw?,excluded_factual,2026-10-17T20:38:11.146516+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1828.md
 1829,0x7fe61ddb6d9a1d309d82753eeef429d57b90bfb2be34ee96efe8b88eaad22043,5726373,Will the lowest temperature in Los Angeles be 82°F or higher on October 17?,pending,,,,
@@ -1908,7 +1908,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1907,0x4e3739e45ae43ca4419daca38a6964fd7acc46518380460b5a6a5b4074b4966a,2468323,"Will Hyperliquid dip to $50 by December 31, 2026?",pending,,,,
 1908,0x47719cd1942638532f0fd155fde9dc83aaa304a6ee1b67429d9718d479f98321,5535207,Exact Score: Any Other Score?,pending,,,,
 1909,0xd1d9c72da4ed36e09eb9019a0554451cb3a9e5681fc5d00ec94205f1d97a8ce5,716827,Extended FDV above $1B one day after launch?,pending,,,,
-1910,0x49f659544c7e9fa556a25fa5d7a1100662f03b70487db4c09d33fa556ee357b8,5567025,Will oil be at least $80 on November 2 and the Republicans win the Senate?,pending,,,,
+1910,0x49f659544c7e9fa556a25fa5d7a1100662f03b70487db4c09d33fa556ee357b8,5567025,Will oil be at least $80 on November 2 and the Republicans win the Senate?,valued,2026-10-18T02:49:37.255463+00:00,0.42,YES raw central discount retained for factual data follow-up;20-point selected reserve fails. NO centralnegative. No entry; futureYES19c/sixshares orNO35c/five illustrative only.,evaluations/1910.md
 1911,0xc4705cfbb2ff109ea11055bc02caf0bb7f8c0ed93d444032d05e6afb90ea2e88,5730124,Will Booking (BKNG) Q3 gross bookings be above $55B?,pending,,,,
 1912,0x4635ff4d17ce51433f1d00095a66c2cc6996dfed46f10b3e6fbaacf1c7feb924,5691377,Will SV Waldhof Mannheim 07 win on 2026-10-17?,pending,,,,
 1913,0x84fdbd1bb95c529f8eaf01d68ffc29b2a1d9bd8465a0722a73f75efc6c091d23,5171301,Will Hyperliquid reach $108 in October?,pending,,,,
@@ -2056,7 +2056,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2055,0x479585f7feee703a717b5c0fad059999fbf4e87d10f920a281565881058b3aa6,2870615,"Will the Ornn B200 Index be less than $3.00 on December 31, 2026?",pending,,,,
 2056,0xb348b22ca7eb2f4576c9bfc9a81318d05c3db0266d02c242a23a170b6ad7cdfb,5273601,Will Barnet FC win on 2026-10-17?,excluded_factual,2026-10-17T20:38:25.743305+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2056.md
 2057,0x2dc5b4353fe863db7a4151dbb81cb040d2c86f55558633fcd200c6d3c7518e41,2846149,"Will Russia capture Oleksiievo-Druzhkivka by December 31, 2026?",pending,,,,
-2058,0x202a0394d51dbb745e777fa9aaff17e8345d5ce322b960f66b3d5507cd7665f3,5611044,Will oil be at least $80 on November 2 and the Republicans win the Senate?,pending,,,,
+2058,0x202a0394d51dbb745e777fa9aaff17e8345d5ce322b960f66b3d5507cd7665f3,5611044,Will oil be at least $80 on November 2 and the Republicans win the Senate?,valued,2026-10-18T02:51:10.635100+00:00,0.42,YES central data follow-up but selected20-point reserve fails; NO centralnegative. No entry; hypotheticalYES19c/six orNO35c/five only.,evaluations/2058.md
 2059,0xc7304a92ad0a20f39ef0cc1093b5975cea99f7a9b444a7608cd7bc09361b801c,5765621,Will PPI YoY be 6.4% in October?,pending,,,,
 2060,0x01f457d6649ac9611a21601f142922c4f21220e0626a3bb39ddd210ad24f0122,5296091,Will CA Paranaense win on 2026-10-17?,pending,,,,
 2061,0x1178bf565b7496cd991fdf45d0946f68ff2720592117650cf8c78dbfcd311d08,2332985,Will Pete Hegseth be the next to leave the Trump Cabinet before 2027?,pending,,,,
@@ -2075,7 +2075,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2074,0x7846774d5a3d0e7ea41c74a0f84f8e50e657e1ffa20a8fdc0f36a5898eff6a90,4597026,"Friedrich Merz out as Chancellor of Germany before October 31, 2026?",pending,,,,
 2075,0x616708422105bafa83600440128e6878790e866efa5a0e565dd2596aff818c33,5154840,Will there be under 20 tornadoes in the US in October 2026?,pending,,,,
 2076,0xa13f498bb5eda4b269cb3fd6d29781a363ff36f26dcd309566179a04d1123cf9,5267011,Lille OSC vs. Stade Brestois 29: O/U 5.5,pending,,,,
-2077,0x8d3404f5f59e31aee635fe97cbce42754aa7efef8023228e1df00339de8213ed,5572737,Will there be a Hormuz agreement and the Republicans win the Senate?,pending,,,,
+2077,0x8d3404f5f59e31aee635fe97cbce42754aa7efef8023228e1df00339de8213ed,5572737,Will there be a Hormuz agreement and the Republicans win the Senate?,valued,2026-10-18T02:52:06.672624+00:00,0.06,YES central counter-thesis retained but20-point uncertainty/cashminimum fail; NO centralnegative. Noentry; hypotheticalfutureNO71c only.,evaluations/2077.md
 2078,0x36823d42f5982c4a397cdc0720744d72275f91d1f8f09071eace03de6fc44265,4743423,Will Saudi airspace be closed by December 31?,pending,,,,
 2079,0x78abfa1ac0e386cbd82b3011e1f590933f668cacaca5f8289cd569b27fed3d0e,1830433,Will Molde win Norway Eliteserien?,pending,,,,
 2080,0x00f80d81372bc13eb7da71b22fbd6363d5c9ea019806dbc0120a5c5aabe5bc7e,5296199,Will FBC Melgar win on 2026-10-17?,pending,,,,
@@ -2151,7 +2151,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2150,0xfc83afa5f96b34031a08ccdfb93455f7352b346441672795a49ef4821fefcf4c,5330020,Will Lula win the most votes in the second round of the Brazil presidential election from abroad?,pending,,,,
 2151,0x996190dd9a779ad5c694b5ab973cd8396e527276269b8d7b17f31c7c81333f53,5636483,Will MrBeast's next video get between 70 and 80 million views on week 1?,pending,,,,
 2152,0xa176e8103edd323f67b25b21a04ef5405cd7509a7b501b3b1e603e82b44e2e6f,5270696,Will Calcio Padova vs. Virtus Entella end in a draw?,excluded_factual,2026-10-17T20:38:46.968848+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2152.md
-2153,0x4ba8ec5d2c8cc2377cbf28c96546b648752db8871b6325fc7a6822eac7ad306e,5568259,Will there be no Hormuz agreement?,pending,,,,
+2153,0x4ba8ec5d2c8cc2377cbf28c96546b648752db8871b6325fc7a6822eac7ad306e,5568259,Will there be no Hormuz agreement?,valued,2026-10-18T02:53:41.894653+00:00,0.94,YES centralnegative; NO small central counter-thesis but20-point reserve/cashminimum fail. Noentry; futureYES71c illustrative only.,evaluations/2153.md
 2154,0x2bba8c8b83b46f38bb4f78c00b90bb50dbc6017822484d8994c07d9acb7e86df,5673682,Will Trudy peak at Category 3?,pending,,,,
 2155,0x94a308c805ec2731f87f56345c55b3264ae0a00c6fad520e967ccbe6c11a410c,2167511,Will Frontier Airlines announce bankruptcy by December 31?,pending,,,,
 2156,0xe55971a8696feed8714682d1cde5a308be5c89635330699bc54f1a2354ee81df,5364571,Tottenham Hotspur FC vs. Coventry City FC: O/U 4.5,pending,,,,
@@ -2820,7 +2820,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2819,0x6d219a234a3d124e9cd159fcecff03c860066a3e366d143489842847da1a28f6,4397579,Will CTBC Flying Oyster Make the Worlds 2026 Grand Final?,pending,,,,
 2820,0xdca1b40cfb32e5d75bb97afe59c4cef4b1f6a2a11cab3b8e7f6faaf5aaaf700a,5389403,Chorley FC vs. Worcester City FC: Both Teams to Score,excluded_factual,2026-10-17T20:41:05.237905+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2820.md
 2821,0xac4bb0d66a3f5c99b18d1680ab161cdd0e5a38104f8aa330acfd25219d047ecc,5610599,"Will the price of Ethereum be between $2,400 and $2,500 on October 19?",pending,,,,
-2822,0xef0933538fa1bbb54b5f81a833178e125bb4289fc3905fe565cf90ada59c0521,5611879,Will oil be below $85 on November 2 and the Republicans win the Senate?,pending,,,,
+2822,0xef0933538fa1bbb54b5f81a833178e125bb4289fc3905fe565cf90ada59c0521,5611879,Will oil be below $85 on November 2 and the Republicans win the Senate?,valued,2026-10-18T02:55:01.489963+00:00,0.09,"YES large primary central discount merits exact underlying data follow-up; current20-point reserve/cashminimum fail. NOcentralnegative; noentry, futureNO68c illustrative.",evaluations/2822.md
 2823,0x8f3d3d55b93ccd4dcccd6d96474c94c022787b89d35f494e24ff154122981934,676788,Anysphere (Cursor) IPO before 2027?,pending,,,,
 2824,0x1ea83f42a7717fe6cbd585a832e9e49f35ceac65effc6a942296bd2ae598a819,5658836,Bodrum FK vs. Bandirmaspor: Both Teams to Score,pending,,,,
 2825,0x0078d4162ef6aa7afe41df7cd973d031d34113029c8adea2321d7da0b7801bcb,2116885,Will Lee Jun-seok be arrested before 2027?,pending,,,,
@@ -2960,7 +2960,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2959,0xb5b45b3339b7e1638f2dad684180b3536c69dd5094196bc0ee394d2c425c4a3d,701605,"Will XRP dip to $0.60 by December 31, 2026?",pending,,,,
 2960,0xcd8618c6c9eea8ca82e75bc4bec8cc22f27823d05630ecb24786219c0bf3fa5a,5272751,Spread: Leyton Orient FC (-2.5),excluded_factual,2026-10-17T20:41:24.720107+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2960.md
 2961,0x19f0088484dfb7f9fe78ba07bbfede73d6487bef68bb0c56096ac96c0f932d25,5653832,Will the price of Solana be less than $60 on October 20?,pending,,,,
-2962,0xcdc12c481d3e1f59a60b7b5d6ea3cdee73fb041b476a2c9f6fb1c01f070a2748,5611043,Will oil be below $80 on November 2 and the Democrats win the Senate?,pending,,,,
+2962,0xcdc12c481d3e1f59a60b7b5d6ea3cdee73fb041b476a2c9f6fb1c01f070a2748,5611043,Will oil be below $80 on November 2 and the Democrats win the Senate?,valued,2026-10-18T02:56:46.549511+00:00,0.04,YES tiny raw central margin below operations and cashminimum/selectedreserve fail; NOcentralnegative. Noentry; futureNO73c illustrative. SeparateRthresholdpair observation needs freshroute revalidation.,evaluations/2962.md
 2963,0x0b297cbddac854e2e48cb8e64e0642d889bda8b1e2b988e1d441a896c3196ad1,5659997,Will Bardiya Daneshvar finish in the Top 8 of Titled Tuesday on October 20?,pending,,,,
 2964,0x8fa8bb8477dbe67f34f0257113777f1533cb36c9185e7b018fc65c28b2980e2d,5271507,Doncaster Rovers FC leading at halftime?,excluded_factual,2026-10-17T20:41:26.019348+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2964.md
 2965,0xa7cc7b29f10015a7588caee373b04498f4061630e62e2d0718bb4ebfd5dba5fc,5795745,Will the highest temperature in Milan be 20°C on October 19?,pending,,,,

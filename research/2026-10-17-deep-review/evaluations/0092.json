@@ -1,0 +1,145 @@
+{
+  "review_index": 92,
+  "condition_id": "0x8a5c0b5fc339f2dbaf584def66bcf8bff94d91f0250562e452782fed3d18f821",
+  "criteria_sha256": "1a6f8dcfd21d7d9eab45af228ebb650957edb88376ecf4f5310a87b1f4070f3e",
+  "status": "blocked_after_review",
+  "literal_analysis": "Entire CMECLdailyHigh>147.27afterApril30creation throughDec31; nearestmonth/two-business-day-beforeexpiry roll, earlyqualifyingpublication/finalizeddata/14dayfallback read. Historicalbreachsincecreationnotestablished; ICECLL/Brent/spot/terminaloptionsnotsubstituted.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets?id=2126461",
+      "observed_utc": "2026-10-17T18:35:25.007+00:00",
+      "finding": "Exact current captured market/CID/criteria/token match; creationApril30, active/open doesnotestablishpastthresholdhistory."
+    },
+    {
+      "url": "https://www.cmegroup.com/market-data/daily-bulletin.html",
+      "observed_utc": "2026-10-18T03:00:00Z",
+      "finding": "Primarybrowserreadindex: preliminary/finalpublicationdistinct, officialSection61and63links, historicalDataMinelandingsurfaceexposesnorowsinthisread; noretrievalabsenceclaim."
+    },
+    {
+      "url": "https://www.cmegroup.com/daily_bulletin/current/Section61_Energy_Futures_Products.pdf",
+      "observed_utc": "2026-10-18T02:48:54.884568+00:00",
+      "finding": "RetainedfactualagentcaptureOctober16PRELIMINARYNOV26/DEC26rows, notfullroll-correctpostcreationseries."
+    },
+    {
+      "url": "https://www.cmegroup.com/newsletters/infocus/2026/09/crude-oil-leads-markets-higher.html",
+      "observed_utc": "2026-10-18T03:04:11.426034+00:00",
+      "finding": "PrimaryoriginalwebreadingSeptember105+rallyandMarchnearrecordreference; notofficialcompletepostApril30Highseries or qualifyingcrossingproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Unpriced after full contract, official historical-access and exact-data investigation",
+    "reasoning": "Cannot establish whether the barrier already crossed after creation; current dated contract rows do not certify the missing May–October active-month daily-high history. A future-only probability would silently misstate the full claim."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 78,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "best_bid": 0.12,
+        "best_ask": 0.13,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.71,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.13,
+            "fee_usd": 0.04524
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.34524,
+        "fee_usd": 0.04524,
+        "break_even_probability_before_carry": 0.134524,
+        "break_even_probability_with_idealized_carry": 0.13539196404199355,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.15776
+      },
+      "No": {
+        "best_bid": 0.87,
+        "best_ask": 0.88,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.71,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.88,
+            "fee_usd": 0.04224
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.84224,
+        "fee_usd": 0.04224,
+        "break_even_probability_before_carry": 0.884224,
+        "break_even_probability_with_idealized_carry": 0.8899291131178654,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.65476
+      }
+    },
+    "probability_is_unpriced": true
+  },
+  "verdict": "Blocked after substantive review on precise historicalbarrier/rollcoverage. No forecast or investmentrejection; not counted towardvaluations.",
+  "reopen_condition": "VerifiedqualifyingCMEpostcreationdayorcompleteofficialCLactive-monthdailyHigh/expiryseries, thenindependentfuturebarrierforecast/freshcostsandallgates.",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "89220876555191016916241799318314090743516702009053928118059298766028257434413",
+    "5513378025159191337704316460710043026668901636204511402381351948151562535480"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0116",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0116.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0116.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "source_packets": [
+    "data/deep_review_20261017/oil_barrier_primary_facts_0230.json",
+    "data/deep_review_20261017/oil_terminal_data_followup_0238.json"
+  ],
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0092_primary_before_quote.json",
+    "prior_screen_tag_ignored": true,
+    "independent_compact_fee_descriptor_missing": true,
+    "primary_web_search_capture": "logs/deep_review_20261017/oil92_primary_web_search_0242.txt.gz"
+  },
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-18T03:04:11.484254+00:00",
+  "question": "Will Crude Oil reach a new all-time high by December 31?",
+  "market_id": "2126461",
+  "valuation_author": "primary_operator",
+  "original_index": 92,
+  "report_sha256": "40ebc6920a880ed7fbbc1eaff0b3810a1a6a1f6696d917b935c067a3cd06fd9a"
+}

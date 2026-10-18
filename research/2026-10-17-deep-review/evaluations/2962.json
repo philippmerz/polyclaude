@@ -1,0 +1,186 @@
+{
+  "review_index": 2962,
+  "condition_id": "0xcdc12c481d3e1f59a60b7b5d6ea3cdee73fb041b476a2c9f6fb1c01f070a2748",
+  "criteria_sha256": "c53a3e1e0853e81763cf899276792191c91bbf652e1523d2fe28f2c1ed0173fb",
+  "status": "valued",
+  "literal_analysis": "Full inline D AND Nov2CLLstrictbelow80, noagreementrequirement; finalminute/lastvalid/ICEoutage/roll/priorclose/structural and all Senate/caucus rules read, no50/50.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets?id=5611043",
+      "observed_utc": "2026-10-18T00:20:35.595+00:00",
+      "finding": "Full exact2962 inline D/oilstrictbelow80 child and prior-close fallback read; frozen identity/criteria/tokens matched."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "PrimaryreadretainedoriginalUSMOU/reopeningassertion; Iranian signatures/paragraph5remainattributedIRNAextract/currentopensfailed; Juneinterpretationexplicit."
+    },
+    {
+      "url": "https://mofa.gov.qa/en/qatar/latest-articles/latest-news/details/2026/10/16/qatar-urges-diplomacy-and-respect-for-international-law-to-secure-lasting-mideast-peace",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "RootreadoriginalOct16body: continuedmediation/unconditionalreopeningrequest, noacceptanceornexttalkdate; boundedsource notprivateprogressabsence."
+    },
+    {
+      "url": "https://app.pyth.com/explore?search=CLL",
+      "observed_utc": "2026-10-17T22:57:40.910391Z",
+      "finding": "CLLZ6catalog99.0475untimestamped/repeatedsparkline, notverifiedlatestclose/volatility; ICEexpirydefinesDec26mapping."
+    },
+    {
+      "url": "https://insideradvantage.com/",
+      "observed_utc": "2026-10-18T02:16:30.125389+00:00",
+      "finding": "CurrentprimarySenateIArevision0059usesoriginalpollreleases/all35contests andsharednationalerror; D53/R46/Other1uncalibrated, notquotederived."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.04,
+    "low": 0.001,
+    "high": 0.55,
+    "method": "Primary exact prior-close DSenate AND Nov2 CLLstrictbelow80, acrossall diplomacyregimes, projected from joint0206.",
+    "reasoning": "Normal full-payout D/low80 raw4.077992982%, includingagreement and noagreement states; noagreementprerequisite. Totaloilbelow80mass8.466% comprisesD4.077993+R4.303347+Other0.08466. Equality80fails, exactfinalregularminuteCLL/Pyth/ICEoutage/roll/priorclose/structuralrulesread, no50/50 fallback. MissingcurrentdatedCLL/options andcommon Senateerrors: broad0.1–55range/20pp reservebeforeownprices, noindependenthedge.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_2881_3000.json.gz",
+    "quote_observed_utc": "2026-10-18T00:20:35.595+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.04,
+        "best_bid": 0.033,
+        "best_ask": 0.037,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.398,
+        "received_utc": "2026-10-18T00:20:35.595+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.037,
+            "fee_usd": 0.014252399999999998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.38426,
+        "fee_usd": 0.01426,
+        "break_even_probability_before_carry": 0.038426,
+        "break_even_probability_with_idealized_carry": 0.03852116861163035,
+        "central_expected_profit_usd": 0.015740000000000032,
+        "default_10pp_stressed_profit_usd": -0.38426,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.31723
+      },
+      "No": {
+        "probability": 0.96,
+        "best_bid": 0.963,
+        "best_ask": 0.967,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.398,
+        "received_utc": "2026-10-18T00:20:35.595+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.967,
+            "fee_usd": 0.012764400000000013
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.68277,
+        "fee_usd": 0.01277,
+        "break_even_probability_before_carry": 0.9682769999999999,
+        "break_even_probability_with_idealized_carry": 0.9706751048707541,
+        "central_expected_profit_usd": -0.08277000000000001,
+        "default_10pp_stressed_profit_usd": -1.08277,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.86,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.615739999999999
+      }
+    }
+  },
+  "verdict": "YES tiny raw central margin below operations and cashminimum/selectedreserve fail; NOcentralnegative. Noentry; futureNO73c illustrative. SeparateRthresholdpair observation needs freshroute revalidation.",
+  "reopen_condition": "Exact CLL/calendar/volatility/political facts or freshNO<=73c; independentcurrentrevalidationofRthresholdpair ifeconomic, all execution gates before money.",
+  "current_description_sha256": "03625d46a42b16adadcabe011ebe0f23daa6a9dc77d16160853d42fd52017076",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "90207932212971727288948281092035357064991079133921696922895217716158963344206",
+    "11303013663135682242824257004903361575939390232869444145164804604865587789327"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_2881_3000/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2881_3000/req_0001.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_identity_match_count": 1,
+      "status": "exact_market_and_condition_identity_validated",
+      "received_utc": "2026-10-18T00:20:35.191+00:00",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0005",
+      "receipt_path": "logs/deep_review_20261017/quotes_2881_3000/req_0005.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2881_3000/req_0005.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "requests": [
+        {
+          "request_id": "req_0005",
+          "receipt_path": "logs/deep_review_20261017/quotes_2881_3000/req_0005.receipt.json",
+          "body_path": "logs/deep_review_20261017/quotes_2881_3000/req_0005.body.json.gz",
+          "http_status": 200,
+          "parse_status": "ok",
+          "received_utc": "2026-10-18T00:20:35.595+00:00",
+          "error": null
+        }
+      ]
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/2962_primary_before_quote.json",
+    "raw_model_p_yes": 0.04077992982,
+    "scenarios": {
+      "central": 0.04077992982,
+      "peace_repricing_R_favorable": 0.11701182499999999,
+      "no_deal_D_wave": 0.020284723299999998,
+      "June_counted_and_cheap_oil": 0.3096,
+      "price_gapped_lower_without_new_deal": 0.21589897100625
+    },
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.76,
+    "selected_stressed_yes_taker_profit_usd": -0.38426,
+    "selected_stressed_no_taker_profit_usd": -2.08277,
+    "raw_YES_EV_usd": 0.023539298200000003,
+    "raw_NO_EV_usd": -0.09056929820000015,
+    "ten_YES_shares_below_route_USD1_minimum": true,
+    "illustrative_NO_maker_trigger": 0.73,
+    "separate_R_threshold_pair_dated_44pairs_cost": 43.69807,
+    "separate_R_threshold_pair_not_current": true
+  },
+  "evaluated_utc": "2026-10-18T02:56:46.549511+00:00",
+  "question": "Will oil be below $80 on November 2 and the Democrats win the Senate?",
+  "market_id": "5611043",
+  "valuation_author": "primary_operator",
+  "original_index": 2962,
+  "report_sha256": "28c3e560eb7947d87bbb656e2451487a05fbc3f77c6e2b041b464d7bc6976da0"
+}
