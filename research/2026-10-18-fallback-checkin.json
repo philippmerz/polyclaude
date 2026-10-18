@@ -1,0 +1,258 @@
+{
+  "reviewed_at": "2026-10-18T09:47:38.078353+00:00",
+  "fallback": true,
+  "bankroll_command": {
+    "name": "bankroll",
+    "args": [
+      "/home/polyclaude/polyclaude/.venv/bin/python",
+      "scripts/bankroll.py"
+    ],
+    "start": "2026-10-18T09:36:31.058989+00:00",
+    "end": "2026-10-18T09:36:46.387136+00:00",
+    "returncode": 0,
+    "streams": [
+      {
+        "path": "logs/checkin_20261018T0934_fallback/bankroll.stdout",
+        "sha256": "752b6c03303dc43a4c43ce085d14ffe02b537f33758e0b99bd51f9b8b19e97b1",
+        "bytes": 1348
+      },
+      {
+        "path": "logs/checkin_20261018T0934_fallback/bankroll.stderr",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "bytes": 0
+      }
+    ]
+  },
+  "bankroll": {
+    "total_authoritative": 196.43,
+    "prior_tick_total": 196.48,
+    "delta": -0.05,
+    "gas_reported": 5.83,
+    "pm_mid_reported": 32.47,
+    "pm_depth_reported": 30.31,
+    "open_cost_reported": 31.41,
+    "settled_residual_reported": 19.53,
+    "trading_mid_derived": 190.6,
+    "whole_account_depth_derived": 194.27,
+    "trading_depth_derived": 188.44,
+    "derived_values_precision": "rounded sequential components; not synchronized NAV or certified liquidation",
+    "vm_api_costs": "unreconciled and excluded"
+  },
+  "fill": {
+    "receipt_path": "data/checkin_20261018T0934_fallback/michigan_receipt_rpc.json",
+    "receipt_sha256": "450e15a98a37bc7e0b6bd45bb796d2ff96cc4233d0cafccb99fd8c9e62337af4",
+    "status": 1,
+    "block": 95724529,
+    "transaction_hash": "0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916",
+    "activity_time": "2026-10-18T02:55:41+00:00",
+    "order_hash_present_in_receipt_topics": true,
+    "wallet_pusd_net_raw": -1550000,
+    "wallet_michigan_no_net_raw": 5000000,
+    "gas_paid_by_project_wallet": false,
+    "activity": {
+      "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "size": 5,
+      "usdcSize": 1.55,
+      "transactionHash": "0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916",
+      "price": 0.31,
+      "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "side": "BUY",
+      "outcome": "No",
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026"
+    },
+    "limits": "Original exact-authenticated-order HTTP200/null and distinct asset-filtered trade history empty are not MATCHED proofs. Two ad-hoc reporters failed before preserving their raw receipt; original exact timestamps/body metadata remain unknown. This separately timed raw RPC receipt establishes the purchase directly."
+  },
+  "positions": {
+    "openai_hle_no": {
+      "shares_or_pairs": 9,
+      "rounded_fee_net_exit_usd": 1.92,
+      "central_p": 0.25,
+      "policy_stress_p": 0.15,
+      "upper_p": 0.38,
+      "days_to_metadata_end": 74.79955927832177,
+      "constant_rate_cost_free_redeployment_usd": 1.932122824831209,
+      "central_terminal_ev_usd": 2.25,
+      "stress_terminal_ev_usd": 1.3499999999999999,
+      "scope": "rounded indicative sequential quotes; constant Aave rate is a sensitivity, excludes conversion/gas/withdrawal costs"
+    },
+    "michigan_senate_no": {
+      "shares_or_pairs": 5,
+      "rounded_fee_net_exit_usd": 1.51,
+      "central_p": 0.44,
+      "policy_stress_p": 0.34,
+      "upper_p": 0.7,
+      "days_to_metadata_end": 16.79955927832176,
+      "constant_rate_cost_free_redeployment_usd": 1.5121360820509175,
+      "central_terminal_ev_usd": 2.2,
+      "stress_terminal_ev_usd": 1.7000000000000002,
+      "scope": "rounded indicative sequential quotes; constant Aave rate is a sensitivity, excludes conversion/gas/withdrawal costs"
+    },
+    "clarity_complete_pair": {
+      "shares_or_pairs": 29,
+      "rounded_fee_net_exit_usd": 26.88,
+      "days_to_metadata_end": 75.79955927832177,
+      "constant_rate_cost_free_redeployment_usd": 27.051995782826946,
+      "scope": "rounded indicative sequential quotes; constant Aave rate is a sensitivity, excludes conversion/gas/withdrawal costs",
+      "criteria_consistent_conditional_floor_usd": 29,
+      "middle_band_conditional_payout_usd": 58,
+      "probability": "not estimated; .50 member weights are paired-floor bookkeeping, not independent forecasts",
+      "risks": "floor is conditional on consistent interpretation/settlement, platform and collateral operation; settlement delay remains"
+    }
+  },
+  "constant_aave_rate": 0.03119,
+  "joint_terminal_states": [
+    {
+      "clarity_payout": 29,
+      "openai_payout": 0,
+      "michigan_payout": 0,
+      "trump_payout": 0,
+      "trading_terminal_usd": 187.13,
+      "all_pending_fill_and_lose_usd": 173.96
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 0,
+      "michigan_payout": 0,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 187.46,
+      "all_pending_fill_and_lose_usd": 174.29
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 0,
+      "michigan_payout": 5,
+      "trump_payout": 0,
+      "trading_terminal_usd": 192.13,
+      "all_pending_fill_and_lose_usd": 178.96
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 0,
+      "michigan_payout": 5,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 192.46,
+      "all_pending_fill_and_lose_usd": 179.29
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 9,
+      "michigan_payout": 0,
+      "trump_payout": 0,
+      "trading_terminal_usd": 196.13,
+      "all_pending_fill_and_lose_usd": 182.96
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 9,
+      "michigan_payout": 0,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 196.46,
+      "all_pending_fill_and_lose_usd": 183.29
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 9,
+      "michigan_payout": 5,
+      "trump_payout": 0,
+      "trading_terminal_usd": 201.13,
+      "all_pending_fill_and_lose_usd": 187.96
+    },
+    {
+      "clarity_payout": 29,
+      "openai_payout": 9,
+      "michigan_payout": 5,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 201.46,
+      "all_pending_fill_and_lose_usd": 188.29
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 0,
+      "michigan_payout": 0,
+      "trump_payout": 0,
+      "trading_terminal_usd": 216.13,
+      "all_pending_fill_and_lose_usd": 202.96
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 0,
+      "michigan_payout": 0,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 216.46,
+      "all_pending_fill_and_lose_usd": 203.29
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 0,
+      "michigan_payout": 5,
+      "trump_payout": 0,
+      "trading_terminal_usd": 221.13,
+      "all_pending_fill_and_lose_usd": 207.96
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 0,
+      "michigan_payout": 5,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 221.46,
+      "all_pending_fill_and_lose_usd": 208.29
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 9,
+      "michigan_payout": 0,
+      "trump_payout": 0,
+      "trading_terminal_usd": 225.13,
+      "all_pending_fill_and_lose_usd": 211.96
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 9,
+      "michigan_payout": 0,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 225.46,
+      "all_pending_fill_and_lose_usd": 212.29
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 9,
+      "michigan_payout": 5,
+      "trump_payout": 0,
+      "trading_terminal_usd": 230.13,
+      "all_pending_fill_and_lose_usd": 216.96
+    },
+    {
+      "clarity_payout": 58,
+      "openai_payout": 9,
+      "michigan_payout": 5,
+      "trump_payout": 0.33,
+      "trading_terminal_usd": 230.46,
+      "all_pending_fill_and_lose_usd": 217.29
+    }
+  ],
+  "conditional_log_sensitivities": {
+    "openai_hle_no": {
+      "conditional_log_hold_breakeven_p_min": 0.21806372275087185,
+      "conditional_log_hold_breakeven_p_max": 0.21897318542984553,
+      "scope": "conditional common p in each enumerated co-state; not a calibrated joint distribution, portfolio optimum, or independence claim"
+    },
+    "michigan_senate_no": {
+      "conditional_log_hold_breakeven_p_min": 0.3047475874081426,
+      "conditional_log_hold_breakeven_p_max": 0.30542736899822315,
+      "scope": "conditional common p in each enumerated co-state; not a calibrated joint distribution, portfolio optimum, or independence claim"
+    }
+  },
+  "pending_buy_risk": 13.17,
+  "uncommitted_pusd": 10.27689,
+  "decision": "Retain OpenAI NO9 and Michigan NO5; retain complete Clarity29/29; no adds, new orders, asset sales, burns or transfers. Original numerical priors/group topology unchanged. OpenAI stress prefers exit; central/upper hold; Michigan central/.34 policy stress hold but .20 range case prefers exit. No probability improvement inferred from price or small fill.",
+  "joint_limitations": "Clarity floor conditional on consistent settlement/admin/collateral operation. Shared US politics exposures receive no hedge credit. Pending both-side outcomes are not modeled as independent; all-pending-fill-and-lose is a stress, not forecast.",
+  "maker_consideration": "MI ordinary public-information maker sale at >=.44 would be eligible; no order added during fallback while exact-authenticated-order endpoint is anomalous and Oct20 catalyst management needs current attention. OpenAI hidden-information sale requires a justified premium strictly above .25; none underwritten. Trump .33 below5share minimum, no replacement sell.",
+  "alerts": "9 public alerts after last journal; 0 MATERIAL/CRITICAL impacts; titles individually reviewed as leads, no verified held thesis break.",
+  "state_hygiene": "Missing Michigan insurance auto-fixed. Remaining eight orphan warnings are seven live pending bids plus canceled IPO review_required; retain all; no stale actionable triggers.",
+  "weekly_due": "2026-10-23",
+  "next_existing_check": "2026-10-18T10:00:00Z",
+  "next_existing_full_check": "2026-10-18T14:00:00Z",
+  "completed_at": "2026-10-18T10:01:05.216381+00:00",
+  "next_check_after_completion": "2026-10-18T14:00:00Z",
+  "validation": "10 performance-chart checks pass; protected forecasts/groups/decisions unchanged; one material fallback Telegram sent"
+}

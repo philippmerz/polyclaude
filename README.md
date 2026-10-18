@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 200 recorded observations from Apr-25
-through Oct-17. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 201 recorded observations from Apr-25
+through Oct-18. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -65,7 +65,7 @@ reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
 was delivered in chat and Telegram. The [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
-remains the dated inspection record for that checkpoint. At the 03:04 UTC checkpoint, the frozen 3,000-market review had **209 valued, 3 blocked, 327 factual exclusions and 2,461 pending** across 539 canonical records. Case 92 is blocked, not valued: its complete post-creation CME active-month daily-high history is unresolved, so no probability was saved. Case 96 is now active. The live [index](research/2026-10-17-deep-review/INDEX.md) and [checkpoint](notes/deep_review_checkpoint.json) govern current status.
+remains the dated inspection record for that checkpoint. At the 03:14 UTC checkpoint, the frozen 3,000-market review had **210 valued, 3 blocked, 327 factual exclusions and 2,460 pending** across 540 canonical records, with no active case. Case 92 remains blocked because its complete post-creation CME active-month daily-high history is unresolved; case 96 is valued at 0.5% YES with no entry. These are review counts, not a new milestone notification. The live [index](research/2026-10-17-deep-review/INDEX.md) and [checkpoint](notes/deep_review_checkpoint.json) govern current status.
 
 Nine valuations were added after milestone 200: 1602, 1607, 1826, 1910, 2058,
 2077, 2153, 2822 and 2962. All 15 exact conditions in the compound source
@@ -87,7 +87,7 @@ could not establish whether $147.27 had already been exceeded; its current price
 and headline search do not prove no prior breach. The 03:00 CME browser timestamp
 is approximate page-read time, not a timed HTTP capture; packet 0238 retains its
 separate timed receipt. See [case 92](research/2026-10-17-deep-review/evaluations/0092.md)
-and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json).
+and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json). Case 96 was completed at 0.5% YES, with no entry; its full rule, forecast, source analysis and dated quote economics are in [case 0096](research/2026-10-17-deep-review/evaluations/0096.md). Audit [0316](data/deep_review_20261017/ledger_audit_0316.json) checks its frozen identity and report hash, the 540-record ledger, CSV/checkpoint and protected financial files.
 
 Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
 review of four recent channel images/poster did not establish an authenticated,
@@ -145,50 +145,41 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — October 18, 02:01 UTC
+## Last audited snapshot — October 18, 09:36 UTC
 
-The authoritative bankroll command ran02:01:09.646–02:01:25.558UTC; root risk
-judgment was saved02:05:52.761UTC. Component marks were
-rounded and sequential, not synchronized NAV or a certified full-account
-liquidation; VM/API costs are excluded. The separate positions command marked
-Polymarket at $30.80, $0.18 below the bankroll PM midpoint because the observation
-windows differ.
+The authoritative `bankroll.py` ran 09:36:31–09:36:46 UTC. Marks and books are
+sequential, rounded observations, not synchronized NAV or certified liquidation.
+VM/API costs remain unreconciled and excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.48 |
+| Total marked bankroll | **$196.43** (−$0.05 since 02:01) |
 | Separately funded gas | $5.83 |
-| Trading midpoint / indicative depth | $190.65 / $188.42 |
-| Polymarket midpoint / fee-net indicative depth | $30.98 / $28.75 |
-| Whole-account approximate depth | $194.25 |
-| Remaining open-position cost | $29.86 |
-| Settled accounting residual | $19.53 |
+| Trading midpoint / indicative depth | $190.60 / $188.44 |
+| Polymarket midpoint / fee-net indicative depth | $32.47 / $30.31 |
+| Whole-account approximate depth | $194.27 |
+| Open-position cost / accounting residual | $31.41 / $19.53 |
 
-The 02:00 risk review retained OpenAI HLE NO 9 shares with 25% central, 15% stress
-and 38% upper probabilities, with no add; the observed OpenAI HLE maximum remains
-53.6 against the 55% rule. It retained the complete 29/29 Clarity group, with no
-add or legwise sale: captured fee-net paired exit was $26.83184 against its $29
-payout floor. Gemini NO 4.034750 remains final, with no rebook, grade or burn.
-Hormuz dust remains because point gas exceeds its payout; no simulation or
-broadcast was made. The review recorded zero asset actions. See the
-[full risk record](data/checkin_20261018T0200_risk.json),
-[source comparison](data/checkin_20261018T0200_sources.json), and
-[routine record](data/checkin_20261018T0200_routine.json).
+The fallback verified **Michigan Senate NO 5 at 31¢**, $1.55 net spent, in the
+[02:55:41 UTC receipt](https://polygonscan.com/tx/0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916).
+There are five open PM legs: Michigan NO5, OpenAI HLE NO9, Clarity 29/29 and
+Trump NO0.33. Retain them with no add; OpenAI's central/stress exit comparison
+remains sensitive. No new order, sale, transfer or winning redemption occurred.
 
-The source pass captured 30 public GETs with hashed bodies: 65 HLE objects, five
-held criteria, 256 Senate rows, four House query feeds, four cited official pages,
-and four existing pending-bid RSS feeds. The three direct OpenAI-page 403s are
-coverage gaps. No full review should infer no news from those gaps or bounded
-feeds.
+**Seven remaining BUY bids were LIVE and zero-filled:** four House bids, Idaho,
+Sedgwick and Messi; $13.17 committed, pUSD23.446890, arithmetic free10.276890.
+Michigan's fill reservation was reconciled and its claim insurance added.
+Numerical priors/group topology are unchanged. The current held HLE API has65
+unchanged model objects; OpenAI's maximum remains53.6<55. Access gaps remain.
 
-The complete position-state audit reported nine prior-orphan flags: eight are
-attached to currently LIVE bids, including Messi; one is the canceled IPO prior
-marked review-required. Preserve them; do not delete or close them as if they
-were positions. Four canonical current daemons passed the health probe. Disk
-headroom was about 224 MiB, above the 180 MiB research floor and 128 MiB critical
-threshold. The direct quota check succeeded with 20 of 100 used and reset at
-October 24, 20:41 UTC. The last pushed commit is `4257f65` (through 189 valuations and DEC-0213); the focused 200-valuation commit is pending. No financial record or unrelated runtime state was changed.
+All required discovery profiles ran once with explicit caps and unreviewed cases;
+no new entry was certified. Four daemons passed exact-one/current-code checks.
+Quota headroom was75%; Ostium has no trade, limit or allowance. Weekly P&L is
+next due October23. See the [fallback check and risk record](research/2026-10-18-fallback-checkin.md),
+[source facts](research/2026-10-18-fallback-sources.md),
+[discovery coverage](research/2026-10-18-fallback-discovery.md) and
+[order policy/current fill](notes/resting_orders.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

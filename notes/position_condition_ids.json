@@ -1,15 +1,7 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-10-06",
+ "_refreshed": "2026-10-18",
  "positions": [
-  {
-   "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
-   "outcome": "No",
-   "size": 102.0847,
-   "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
-   "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
-   "negativeRisk": false
-  },
   {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
    "outcome": "Yes",
@@ -29,10 +21,18 @@
   {
    "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
    "outcome": "No",
-   "size": 19,
+   "size": 9,
    "conditionId": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
    "asset": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
    "negativeRisk": false
+  },
+  {
+   "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+   "outcome": "No",
+   "size": 5,
+   "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+   "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+   "negativeRisk": true
   },
   {
    "slug": "trump-out-as-president-before-2027",

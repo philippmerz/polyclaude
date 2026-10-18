@@ -1,5 +1,50 @@
 # Standing resting orders (GTC post-only makers)
 
+## October 18 09:34 UTC fallback — Michigan filled; seven BUY bids remain
+
+**Michigan Senate NO5 at31c filled02:55:41UTC for1.55pUSD net.**
+Original order`0x3ea751ba39f53e9d1e64110de282b01c01b6c34ad40d2b443b19c59125240283`
+appears in the [successful receipt](https://polygonscan.com/tx/0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916),
+block95724529: wallet +5NO/−1.55pUSD; project wallet paid no transaction gas.
+Fixed-block95740712 held5NO and23.446890pUSD; indexed totalBought5 independently
+confirmed. This is the original DEC-0211 purchase, not a new fallback order,
+profit or resolved forecast. Complete09:36:38 authenticated open pagination
+had seven remaining BUY orders, all LIVE/zero-filled; no SELL order.
+
+| Remaining BUY | Shares @ limit | Pending cash | Existing pull |
+|---|---:|---:|---|
+| ME-02 Democratic YES |10@38c|3.80|Before known releases/debates/Nov3; review each tick|
+| CA-06 Democratic NO |50@3c|1.50|Same|
+| MT-01 Democratic YES |10@33c|3.30|Same|
+| NY-01 Democratic YES |10@12c|1.20|Same|
+| Todd Achilles Idaho YES |34@3c|1.02|Oct19 22UTC; earlier material uncertainty|
+| Sedgwick Democratic Senate YES |5@20c|1.00|Oct19 10UTC|
+| Messi Global Athletes TOP5 YES |5@27c|1.35|Nov1 22UTC; earlier method/list/catalyst change|
+
+Total pending13.17, arithmetic uncommitted10.276890pUSD. The vetted locked
+reconciler retired only Michigan's fully indexed reservation (8→7); its claim
+insurance was added. Seven live-bid priors plus the canceled IPO review-required
+prior explain the eight remaining orphan-prior judgments; preserve them.
+ME-02 retains its literal historical`me-01`slug and exact CID/tokens.
+
+Retain Michigan5NO/noadd at unchanged44%central/34%policy stress; current
+sources and exit/joint-state sensitivities are in the
+[fallback risk record](../research/2026-10-18-fallback-checkin.md).
+The official [Detroit Economic Club](https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/)
+program is Oct20 15–18UTC, with solo stages from16UTC. The old Oct23 BUY pull is
+no longer applicable after full fill. Any future resting order must be pulled
+before this earlier known program. No new maker sale was submitted.
+
+The authenticated exact-order endpoint returned200/null and the distinct
+asset-filtered trade query returned no rows; those are not MATCHED proof.
+The saved raw on-chain receipt proves this economic fill. Other bids retain
+their cancel-first/current-source rules. The official Kansas debate is
+Oct21 19CT/Oct22 00UTC; the earlier Sedgwick pull still precedes it, the
+Oct19 in-person opening and23UTC rally. Idaho's routine Oct18–19 campaign
+stops alone establish no binary release; the Oct20 forum timezone remains
+unverified, so keep the earlier Oct19 22UTC pull. Older entries below are dated.
+
+
 ## October 18 01:59 UTC — Messi bid verified, unfilled
 
 **Eight post-only BUY bids are LIVE and zero-filled**, independently checked at01:58:50–01:59:01UTC, Polygon95722257. All11 reviewed candidates' both outcome balances are0. pUSD24.996890, full pending14.72, arithmetic uncommitted10.276890; allowance, CTFapproval and venueblocked=false/FI02 passed. These are commitments, not purchases or profit. The existing seven bids remain unchanged; IPO stays canceled.

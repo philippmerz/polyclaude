@@ -30930,3 +30930,71 @@ The 02:00 order/account and held-risk figures in the context remain dated snapsh
 The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
 
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
+
+
+## October 18 03:14 UTC — case 96 completed; no new money
+
+The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
+
+Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.
+
+
+## October 18 03:18 UTC — historical discovery snapshot archive
+
+A scoped reversible archive compressed nine completed Oct13–16 public thin-tail discovery snapshots from87,270,228 to18,601,056 bytes, reclaiming68,669,172 bytes. All9 entries and symlink aliases verified; two restore/hash/recompress/archive-only roundtrips passed. Financial files and prior archive manifests remained unchanged; no active `data/snapshots` input was altered. The manifest explicitly does not assert HTTP receipt binding. Free space increased from179,765,248 to248,283,136 bytes (236.78 MiB), above the180 MiB research floor. See [completion receipt](../data/deep_review_20261017/public_discovery_archive_completed_0318.json), [manifest](../research/2026-10-17-deep-review/ARCHIVED_PUBLIC_DISCOVERY_SNAPSHOTS.json) and [reader](../scripts/public_snapshot_archive.py).
+
+
+## October 18 09:34 UTC — bounded fallback check; Michigan maker fill verified
+
+- Authoritative bankroll09:36:31–46UTC **196.43**, −.05 vs02:01; gas5.83,
+  trading midpoint/indicative depth190.60/188.44, whole approximate depth194.27,
+  PM midpoint/fee-net depth32.47/30.31, open cost31.41, reported residual19.53.
+  Rounded sequential components are not synchronized NAV, cash profit or certified
+  liquidation; VM/API costs excluded. [Full financial/risk record](../research/2026-10-18-fallback-checkin.md).
+- Original DEC0211 Michigan NO5@.31 filled02:55:41 for1.55pUSD net. Receipt
+  `0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916`,
+  status1/block95724529, includes original order hash and wallet−1.55pUSD/+5NO;
+  project paid no transaction gas. Fixedblock95740712 confirmed5NO/pUSD23.446890.
+  Indexed totalBought5 plus complete open inventory let the vetted locked
+  reconciler retire only this reservation8→7; claim insurance added Michigan.
+  Seven BUY bids LIVE/zero-filled,13.17pending/free10.276890. No new asset order.
+- Retain OpenAI NO9 at.25central/.15stress/.38upper; source65objects unchanged,
+  OpenAImax53.6<55. Captured exit~1.92 vs2.25central/1.35stress; idealized free
+  constant3.119% Aave redeployment1.9321. Central hold/stress exit remains explicit,
+  not a recovery forecast. Michigan NO5 retained at.44/.34, range.20–.70;
+  exit1.51/carry1.5121 vs2.20/1.70, with low-range1.00 favoring exit. No add.
+- Clarity29/29 held complete: same literal first-final-passage criteria preserve
+  conditional29floor/58middle-band payout. Exit26.88/cost-freecarry27.052<29.
+  Joint16 held payout states give minimum trading wealth187.13, or173.96 under
+  all13.17pending-fill-and-lose stress; shared politics gets no hedge credit.
+  Kelly midpoint/rho ranks Michigan+$14.76 but is not a joint model or add license.
+  Numerical priors/groups preserved; only fresh narrative/date metadata changed.
+- Consumed9public alerts after local03:18journal,0MATERIAL/CRITICAL impacts;
+  official Kansas debate isOct21 19CT/Oct22 00UTC. SedgwickOct19 10UTC,
+  IdahoOct19 22UTC and MessiNov1 22UTC pulls retained, earlier material uncertainty.
+  Michigan Oct20 solo candidate program15–18UTC is now verified; old filled-BUY
+  Oct23pull is obsolete. [Source facts/gaps](../research/2026-10-18-fallback-sources.md)
+  include Congress/OpenAI403 and partial ballot pages; no universal no-news claim.
+- State audit fixed Michigan; remaining8prior flags=7livebidpriors+canceledIPO
+  review_required; preserved. Coverage silent; no actionable orphan trigger.
+  Ostium0trades/0limits/0allowance/no diff. Redeem-all0/5winning,1losing skipped,
+  no broadcast/burn. No overdue decisions; passive fill stays originalDEC0211,
+  ungraded. WeeklyOct23 due; concluded methodology experiment not rerun.
+- All required scans ran once: primary1000fetched/603eligible/80kept/523omitted,
+  10pagecap; thin-tail50165unique/2648kept/0topomitted,20eventpagecap. All141
+  emitted batches received bounded factual review; all cases remain unvalued,
+  with252currentrows outside delta queues and upstream omissions unreviewed.
+  Sports no verified>3pp case; structural0positives in incomplete quoted slices.
+  [Coverage and raw-output receipts](../research/2026-10-18-fallback-discovery.md).
+- Four canonical daemons exact-one/current code, no restart. Quota25%used/75%
+  headroom. Exact-auth MIorder returned200/null and targeted trades empty;
+  two ad-hoc reporters lost unsaved payloads, metadata unknown. Saved raw RPC
+  receipt proved the fill; no order replay. Full receipts under
+  data/checkin_20261018T0934_fallback/ and logs/checkin_20261018T0934_fallback/.
+- README/performance/handoff refreshed; separate uncommitted deep-review work
+  preserved. Local04:45checkpoint212valued/3blocked/328factual/2457pending,
+  not work performed by fallback. No goal, extra timer or idle follow-up.
+- Validation: all10 existing performance-chart checks pass. One material fallback
+  Telegram summary sent (message1208, single part); no flat heartbeat.
+- Completed after10:00UTC; final editorial review uses this run's dated evidence.
+  Next existing check is14:00UTC; no added timer or idle continuation.
