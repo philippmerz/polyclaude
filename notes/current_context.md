@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-18T15:27:31.322034+00:00"
+reviewed_at: "2026-10-18T15:32:01.440902+00:00"
 valid_until: "2026-10-18T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
@@ -12,7 +12,7 @@ source_hashes:
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
   notes/backlog.md: fdf764ecc3699fadeec30359b1bc46bcd093d6f2d7cb2aeb42ddeadce9d1e65d
   notes/resting_orders.md: d0d67efa92e9c648966a69cd240033a459ce515673ae089d543e91d546ab11c6
-  notes/journal.md: 9bd9b95c646a84a8588d84c996f0e02fa2775f39f91784c1b8f9d48b75cb9a22
+  notes/journal.md: 598920dec63841705aea549f898f77d2f1139436e58348c3e9fdc8cf431bf74f
 ---
 
 ## Research checkpoint — October 18
@@ -23,7 +23,7 @@ Recent187/194/197 forecasts36/91/43%YES concern a named future hourly odds rank,
 
 ## Actual money — final dated proof
 
-**Messi DEC-0213 filled:**5 Global Athletes TOP5 YES at27¢/$1.35, Polygon95752007 at14:22:38; authenticated maker match, receipt +5CTF/−1.35pUSD/no project gas, indexed cumulative buys5 agree. Root14:44 exact reconciliation retired only its reservation9→8. Retain5/noadd, central60/stress40/range20–90%; dated fee-net exit1.20312 vs hold3/2/low1, log-growth break-even24.38–24.67%. Low range favors exit. Google2026 endpoints404/2025-only growth methodology do not establish current absence/cutoff/rank; MLS Oct17 brace is athlete news. Original Nov1 BUY pull is obsolete. [Full source/hold/joint risk](../research/2026-10-18-messi-fill.md).
+**Messi DEC-0213 filled:**5 Global Athletes TOP5 YES at27¢/$1.35, Polygon95752007 at14:22:38; authenticated maker match, receipt +5CTF/−1.35pUSD/no project gas, indexed cumulative buys5 agree. Root14:44 exact reconciliation retired only its reservation9→8. Retain5/noadd, central60/stress40/range20–90%; dated fee-net exit1.20312 vs hold3/2/low1, log-growth break-even24.38–24.67%. Low range favors exit. Google2026 endpoints404/2025-only growth methodology do not establish current absence/cutoff/rank; Aug31 retirement/Oct6 farewell already modeled; today's alert repeats it. Nov1 pull obsolete. [Full source/hold/joint risk](../research/2026-10-18-messi-fill.md).
 
 **Film DEC-0216 CANCELED UNFILLED.** One13NO8¢/$1.04 bid accepted once, canceled14:52:45. Root14:58:02 after315s grace proved terminal canceled/trades0/both cases183+2161CTFs0/cash unchanged; only film reservation9→8 retired. No film holding, cash spend, PnL, add/repost/secondleg. FinalPolygon95753423: **8LIVE zero-matched BUYs/$16.12**, pUSD22.096890/**free5.976890**,8reservations/no entry block. [Exact final proof](../data/deep_review_20261017/film2161_cancel_reconcile_1500.json), [entry/outcome](../research/2026-10-17-deep-review/film2161_entry_1450.md). Compound modelNO7.28% reverses8¢ despite central42/selected17; estimatedFriday/weekend gaps remain. Temporary film feed/Tier1 term removed after zero-exposure proof; other watcher config preserved, normal reload asynchronous. No forced poll/state edit/restart.
 
@@ -33,6 +33,6 @@ Retain HLE OpenAI NO9/noadd central25/stress15/upper38; cached65rows/max53.6 unc
 
 ## Completed check and next existing boundary
 
-[14UTC eleven-step check](../research/2026-10-18-1400-checkin.md) completed once; do not rerun scanners merely to resume research. Separate authoritative bankroll completed14:45:12: **195.90 total/gas5.69/trading mid190.21/depth188.19**, whole approximate depth193.88, PM33.43/31.41,cost32.76,residual19.53. Rounded sequential marks, not synchronized NAV/certified proceeds or audited cash profit; VM/API excluded. Same-snapshot CSV now203observations; chart tests10/10. Eight-bid+held conditional bookkeeping minimum169.66 is not guaranteed wealth. Claim insurance6indexed+1deindexed; final read-only audit CLEAN. 15:21 account unchanged; Kiley Q3cash520K/Pan613K: retainCA06NO3c/noadd. LaLota filing reviewed. Pages203rows live15:05. Delayed crons covered; no replay.
+[14UTC eleven-step check](../research/2026-10-18-1400-checkin.md) completed once; do not rerun scanners merely to resume research. Separate authoritative bankroll completed14:45:12: **195.90 total/gas5.69/trading mid190.21/depth188.19**, whole approximate depth193.88, PM33.43/31.41,cost32.76,residual19.53. Rounded sequential marks, not synchronized NAV/certified proceeds or audited cash profit; VM/API excluded. CSV203observations; chart10/10. Eight-bid+held conditional bookkeeping minimum169.66 is not guaranteed wealth. Claim insurance6indexed+1deindexed; final read-only audit CLEAN. 15:21 account unchanged; Kiley Q3cash520K/Pan613K: retainCA06NO3c/noadd. LaLota filing reviewed. Pages203rows live15:05. 15:26 athlete alerts datedAug31/Sep28; no change.
 
-Seven capped scanner outputs and all87context batches audited factually, no exchange-wide absence claim. UMA41tracked=39uniqueIDs; Four daemons exactlyone/currentcode at14UTC; Ostium0trades/limits/allowance. Next already-scheduled check**18UTC**, OpenRouterpull22UTC; weeklyOct23/monthlyNov12. Latest inbound62572748 EXPIRED; resendTG1213 already sent, do not reread/reply. Material updateTG1239 sent. Use Git log for record backups.
+Seven capped scanner outputs and all87context batches audited factually, no exchange-wide absence claim. UMA41tracked=39uniqueIDs; Four daemons exactlyone/currentcode at14UTC; Ostium0trades/limits/allowance. Next already-scheduled check**18UTC**, OpenRouterpull22UTC; weeklyOct23/monthlyNov12. Latest inbound62572751 EXPIRED; resendTG1244 already sent, do not reread/reply. Material updateTG1239 sent. Use Git log for record backups.
