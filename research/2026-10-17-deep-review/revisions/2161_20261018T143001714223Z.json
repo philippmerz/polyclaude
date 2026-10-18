@@ -1,0 +1,171 @@
+{
+  "review_index": 2161,
+  "condition_id": "0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6",
+  "criteria_sha256": "e3afa3931ec150523d53fc8e68aaf2daca7251b40e42fce73aba5e57c2b73e5b",
+  "status": "valued",
+  "literal_analysis": "FullSep18–Oct31finaldailyNumbersgross;150inclusive160exclusive/higherboundarybracket;domesticasreported;bothsourcesiffinalityambiguous;Nov30ETalternatecrediblefallback. Descriptions183/2161byte-identical, titlebracketsdiffer.",
+  "evidence": [
+    {
+      "url": "https://www.the-numbers.com/movie/Resident-Evil-(2026)",
+      "observed_utc": "2026-10-18T14:06:11.353908+00:00",
+      "finding": "Full29dailyrows stillthroughOct16,cumulative144557955; literalnamedsource/window. NoOct17row."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/release/rl3744759809/?ref_=bo_rl_tab#tabs",
+      "observed_utc": "2026-10-18T14:06:32.607254+00:00",
+      "finding": "Oct16daily1600000 explicitlyestimated; Oct15notestimated; noOct17row."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/weekend/",
+      "observed_utc": "2026-10-18T14:07:25.309600+00:00",
+      "finding": "Oct16–18weekendblank, notzero; publicationtime/dataasofretainseparatevintages."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/release/rl3744759809/weekend/",
+      "observed_utc": "2026-10-18T14:06:12.798222+00:00",
+      "finding": "PriorOct9–11final8.563m weekend supportsdatedanchors, notnewweekendactual."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/calendar/2026-10-23/",
+      "observed_utc": "2026-10-18T14:30:01.412299+00:00",
+      "finding": "Primary calendar displayedwideClayface/WildwoodamongseveralOct23wideopenings. Source reviewedthisrun; notprovenfutureResidentEvilscreencount. Oct23sixthweekendfromSep18, notworkerfourth."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.58,
+    "low": 0.15,
+    "high": 0.95,
+    "method": "Primary joint box-office partition model with explicit added competitive-screen-loss branch, revised after quotes.",
+    "reasoning": "VerifiedOct23wideClayface/Wildwoodcalendar adds25%branchwith30%furthergrosslossfromOct23;75%originalmodel. Uncalibratedbranchweights, notmeasuredscreenallocation. Mixedpartitions below150.0425%,150to16057.69075%,160to17039.6425%,>=1702.62425%; rounded183YES40%,2161YES58%/NO42%.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_2161_2280.json.gz",
+    "quote_observed_utc": "2026-10-18T01:02:05.365+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 44,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.58,
+        "best_bid": 0.878,
+        "best_ask": 0.904,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.594,
+        "received_utc": "2026-10-18T01:02:05.365+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.904,
+            "fee_usd": 0.043391999999999986
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.083400000000001,
+        "fee_usd": 0.0434,
+        "break_even_probability_before_carry": 0.9083400000000001,
+        "break_even_probability_with_idealized_carry": 0.91170931359291,
+        "central_expected_profit_usd": -3.283400000000001,
+        "default_10pp_stressed_profit_usd": -4.283400000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.48,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.72644
+      },
+      "No": {
+        "probability": 0.42000000000000004,
+        "best_bid": 0.096,
+        "best_ask": 0.122,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.594,
+        "received_utc": "2026-10-18T01:02:05.365+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.122,
+            "fee_usd": 0.05355800000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.27356,
+        "fee_usd": 0.05356,
+        "break_even_probability_before_carry": 0.127356,
+        "break_even_probability_with_idealized_carry": 0.1278284027367931,
+        "central_expected_profit_usd": 2.9264400000000004,
+        "default_10pp_stressed_profit_usd": 1.9264400000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.32000000000000006,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.9166
+      }
+    }
+  },
+  "verdict": "PRIORITY ONE-FAMILY FOLLOW-UP: prefer2161NO at comparable cost; actual25ppreserveNO17% aftercompetitionrevision, no order from record.",
+  "reopen_condition": "CurrentpassiveNO2161≤8c and allsource/fee/identity/cash/caps/monitoringgates; one1.04familycashcap, cancelremainderbeforethisrunhandoff or earlieruncertainty.",
+  "current_description_sha256": "4c5bea36d6417540273192906a8136c5592ad5bd0645e0b5941493ca0df6044d",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "40613434179692166793278109226224812051377342363313158411201704091775622526849",
+    "24671477204883739787066624255297557183814086376200478865423964321493406699324"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0001",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0027",
+      "receipt_path": "logs/deep_review_20261017/quotes_2161_2280/req_0027.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2161_2280/req_0027.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; append-onlyforecast/source revision beforeanyfinancialorder",
+  "extra": {
+    "shared_model": "research/2026-10-17-deep-review/models/film183_2161_joint_1430.json",
+    "source_packet": "data/deep_review_20261017/film183_current_facts_1410.json",
+    "actual_entry_reserve": 0.25,
+    "selected_no": 0.24,
+    "selected_yes": 0.26,
+    "family_cash_cap": 1.04,
+    "no_independent_signal_or_hedge_claim": true,
+    "forecast_transfer_after_own_midpoint_seen": true,
+    "current_shared_model": "research/2026-10-17-deep-review/models/film183_2161_competition_1440.json",
+    "selected_side_probabilities": {
+      "Yes": 0.32999999999999996,
+      "No": 0.17000000000000004
+    },
+    "one_family_cash_cap": 1.04,
+    "performed_after_own_quotes": true,
+    "independent_new_strategy_advisories_read": true
+  },
+  "evaluated_utc": "2026-10-18T14:30:01.714517+00:00",
+  "question": "Will the total domestic gross for Resident Evil be between 150m and 160m by October 31?",
+  "market_id": "4893303",
+  "valuation_author": "primary_operator",
+  "original_index": 2161,
+  "report_sha256": "0cbf3514781dabbc8fa88bce8103d1b30b22998bb85c45cb148a12470cfdcd3f",
+  "revision_reason": "New-to-analysisverifiedOct23wide-releasecompetition; addexplicitquarterextra-screenlossbranch, preservejointpartition/dominance andraiseactualentryreserve25pp.",
+  "prior_report_sha256": "8e8802b140cb412aaf643707ba11ec435cdc42f2957d7dcce8463591f9ee94b0",
+  "report_path": "revisions/2161_20261018T143001714223Z.md",
+  "revision_path": "revisions/2161_20261018T143001714223Z.json"
+}

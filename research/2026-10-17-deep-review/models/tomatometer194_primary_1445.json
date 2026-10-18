@@ -1,0 +1,57 @@
+{
+  "schema": "tomatometer194_primary.v1",
+  "forecast_adopted_utc": "2026-10-18T14:31:12.698971+00:00",
+  "before_own_PM_quote": true,
+  "source_packet": "data/deep_review_20261017/film194_sources_1415.json",
+  "source_observed": "OfficialRTtitlepage99%/110Reviews, rootwebreadagainthisrun; newestfeaturedreviewrelative9min. Exactservercutoff/AllCriticstabnotexposed, rawGET403. Browserlinkedreviewsroutewasemptyclient-shell.",
+  "current_fresh_count_hypothesis": 109,
+  "current_rotten_count_hypothesis": 1,
+  "count_inference_note": "109/110 rounds99.09to99 undernearestinteger assumption; visibleaggregate doesnotindependentlypublishrawfresh/rotten counts. Differentrounding/taborrevisionsbelongtosourcefork.",
+  "criterion": "DisplayedAllCriticsTomatometer>=96Oct19 10ET(14UTC), notaudience98%. SourceunavailablewaitthroughOct23 23:59ET, thenNO. EndDate23:59Zmetadataisnot10ETthreshold.",
+  "paths_per_branch": 250000,
+  "seed": 19420261018,
+  "branches": [
+    {
+      "label": "ordinary_review_flow",
+      "weight": 0.85,
+      "mean_added_reviews": 25,
+      "late_bad_probability_beta": [
+        1.5,
+        109.5
+      ],
+      "mean_late_bad_probability": 0.013474932474499117,
+      "p_displayed96plus": 0.999868,
+      "p_unrounded96plus": 0.99956
+    },
+    {
+      "label": "late_negative_cluster",
+      "weight": 0.12,
+      "mean_added_reviews": 60,
+      "late_bad_probability_beta": [
+        3,
+        17
+      ],
+      "mean_late_bad_probability": 0.1499760597207552,
+      "p_displayed96plus": 0.387204,
+      "p_unrounded96plus": 0.31856
+    }
+  ],
+  "source_metric_revision_fork": {
+    "weight": 0.03,
+    "p_yes": 0.5
+  },
+  "raw_p_yes": 0.91135228,
+  "adopted_p_yes": 0.91,
+  "sensitivity_range": [
+    0.7,
+    0.995
+  ],
+  "actual_entry_reserve": 0.15,
+  "model_limits": [
+    "Reviewcountandflow weights/negative-clusterbeta and3%sourcefork are judgment, notfittedreviewhistory or independentcritics.",
+    "TitlepageTomatometerconsistentwithcriterion, butAllCriticssubview/notexactscoretimestampunconfirmed.",
+    "Reviewselection/deletions, coordinatedcritics/publisherlags/rounding can alterdisplay sharply.",
+    "No moviequalitysubjectivethesisor officialscorefinalityinvented. RT andMojowide-releasedatesdifferOct16vsOct23, so releasecalendarisnotusedasprovenreview-arrivalrate.",
+    "No currentexecutablePMquoteoraccountaction; laterquotecomparisondatedseparately."
+  ]
+}

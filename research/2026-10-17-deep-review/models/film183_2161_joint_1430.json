@@ -1,0 +1,59 @@
+{
+  "created_utc": "2026-10-18T14:23:07.903677+00:00",
+  "schema": "resident_evil_joint_band_transfer.v1",
+  "source_model": "research/2026-10-17-deep-review/models/film183_primary_1410.json",
+  "source_model_reproduced_exactly": true,
+  "original183_inband": 0.46001,
+  "partitions": {
+    "below150": 0.00022,
+    "150inclusive160exclusive": 0.508495,
+    "160inclusive170exclusive": 0.46001,
+    "atleast170": 0.031275
+  },
+  "case2161": {
+    "review_index": 2161,
+    "market_id": "4893303",
+    "condition_id": "0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6",
+    "criteria_sha256": "e3afa3931ec150523d53fc8e68aaf2daca7251b40e42fce73aba5e57c2b73e5b",
+    "p_yes_150to160": 0.51,
+    "p_no_outside150to160": 0.49,
+    "unrounded_no": 0.49150499999999997,
+    "actual_entry_reserve": 0.25,
+    "selected_no": 0.24,
+    "range_no": [
+      0.1,
+      0.9
+    ]
+  },
+  "dominance": {
+    "full_descriptions_identical": true,
+    "resolutionSource_identical": true,
+    "frozen_titles_different_brackets": true,
+    "truth_table": [
+      {
+        "final_gross": "<150m",
+        "YES183": 0,
+        "NO2161": 1
+      },
+      {
+        "final_gross": "[150m,160m)",
+        "YES183": 0,
+        "NO2161": 0
+      },
+      {
+        "final_gross": "[160m,170m)",
+        "YES183": 1,
+        "NO2161": 1
+      },
+      {
+        "final_gross": ">=170m",
+        "YES183": 0,
+        "NO2161": 1
+      }
+    ],
+    "condition": "Same actualfinalsourcegross/interpretation/fallbackandcollateral honored; independentdisputes/settlementforks/execution costs can defeat practical payoffcomparison. Thisisdirectionalcoverage,notriskfreearbitrage."
+  },
+  "price_context": "Transfer performed AFTER observing case2161 impliedNOmid in14UTCscanner; not claimedpriceblind. Original183modelhadbeenforecastbeforeownquote. No currentexecution certificate or order.",
+  "entry_plan": "One film-family pilot only: prefer dominant NO2161 if currentprice/fee/liquidity and allgates at leastasfavorable; absolute$1.04cashcap acrossfamily, no secondleg/add/repost. Anyunfilledremaindercanceledbeforethisrunhandoff; news/datauncertaintycancelsfirst.",
+  "source_estimate_limit": "LatestOct16$1.6mprovisional, weekendmissingnotzero; finalityrequiredonlyforsettlement, not invented as entryfactualwin. Fullcashcanlose."
+}

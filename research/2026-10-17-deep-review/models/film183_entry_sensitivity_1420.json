@@ -1,0 +1,79 @@
+{
+  "created_utc": "2026-10-18T14:20:04.474891+00:00",
+  "source": "primarybase29rows independentlyreconciled fresh14:06 TheNumbers/Mojo packet",
+  "primary_p_yes_unchanged": 0.46,
+  "performed_after_own_quotes": true,
+  "actual_prospective_entry_reserve": 0.25,
+  "selected_yes": 0.21,
+  "absolute_cash_cap": 1.04,
+  "paths_per_scenario": 100000,
+  "seed": 1831420,
+  "results": [
+    {
+      "scenario": "noHalloween",
+      "regime_weights_ordinary_weak_strong": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "future_Halloween_uplift": false,
+      "future_oct23onward_extra_multiplier": 1,
+      "oct16_and_future_Friday_estimate_multiplier": 1,
+      "p_160inclusive170exclusive": 0.43661,
+      "median_millions": 159.62626829788195
+    },
+    {
+      "scenario": "weakHeavy",
+      "regime_weights_ordinary_weak_strong": [
+        0.25,
+        0.7,
+        0.05
+      ],
+      "future_Halloween_uplift": false,
+      "future_oct23onward_extra_multiplier": 1,
+      "oct16_and_future_Friday_estimate_multiplier": 1,
+      "p_160inclusive170exclusive": 0.18314,
+      "median_millions": 156.26718377498938
+    },
+    {
+      "scenario": "extraScreenLoss30pct",
+      "regime_weights_ordinary_weak_strong": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "future_Halloween_uplift": false,
+      "future_oct23onward_extra_multiplier": 0.7,
+      "oct16_and_future_Friday_estimate_multiplier": 1,
+      "p_160inclusive170exclusive": 0.19834,
+      "median_millions": 157.24504778986412
+    },
+    {
+      "scenario": "FridayEstimate20pctLower",
+      "regime_weights_ordinary_weak_strong": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "future_Halloween_uplift": false,
+      "future_oct23onward_extra_multiplier": 1,
+      "oct16_and_future_Friday_estimate_multiplier": 0.8,
+      "p_160inclusive170exclusive": 0.3733,
+      "median_millions": 158.9718650828943
+    },
+    {
+      "scenario": "weakAndScreenLoss",
+      "regime_weights_ordinary_weak_strong": [
+        0.25,
+        0.7,
+        0.05
+      ],
+      "future_Halloween_uplift": false,
+      "future_oct23onward_extra_multiplier": 0.7,
+      "oct16_and_future_Friday_estimate_multiplier": 0.8,
+      "p_160inclusive170exclusive": 0.06353,
+      "median_millions": 154.01907115262668
+    }
+  ],
+  "interpretation": "Stressscenariosareprimaryassumptions, notvalidatedtailfrequencies. Theweak+screenbreakcanreverse8c entry. SourceestimatedFriday isexplicitlyperturbed; thisdoesnotclaimactualfuturetheaterallocation/Halloweenpromotion. Allcashcanlose."
+}

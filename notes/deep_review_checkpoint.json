@@ -1,19 +1,16 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-18T13:46:20.691217+00:00",
+  "updated_utc": "2026-10-18T14:34:03.608104+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 252,
-  "completed_valuations": 250,
+  "completed_in_depth_reviews": 256,
+  "completed_valuations": 254,
   "blocked_after_in_depth_review": 2,
   "factual_exclusions": 331,
-  "pending": 2417,
+  "pending": 2413,
   "active_indices": [],
   "next_pending_indices": [
-    187,
-    194,
     196,
-    197,
     200,
     201,
     204,
@@ -39,15 +36,18 @@
     247,
     248,
     249,
-    250
+    250,
+    251,
+    252,
+    253
   ],
-  "base_records": 583,
+  "base_records": 587,
   "base_record_counts": {
     "excluded_factual": 331,
-    "valued": 249,
-    "blocked_after_review": 3
+    "blocked_after_review": 3,
+    "valued": 253
   },
-  "revisions_written": 22,
+  "revisions_written": 24,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -58,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 583,
-  "ledger_sha256": "32412e8f80258ccf37fde39ce7df67261fe4eeb4d25fa20fbcee6c04be0de0fe",
-  "revisions_sha256": "5d6c1c69da0c26545423db81f1995c1c937e0a375b40b28adbbcaf196e900ba1",
+  "evaluations_written": 587,
+  "ledger_sha256": "1d0bc648a414c99b8ba9b4e03d1dec29c87c1aac29dace32a97a8b36bc2b18d2",
+  "revisions_sha256": "f0f9c0c7fc9d3532951075f50c4d385eb1aa73494897bf96626bb7d74809eb6d",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-18T14:28:53.923690+00:00",
+  "schema": "resident_evil_competition_revision.v1",
+  "underlying_model": "research/2026-10-17-deep-review/models/film183_primary_1410.json",
+  "shared_new_source": "https://www.boxofficemojo.com/calendar/2026-10-23/",
+  "source_read_utc": "Web-rendered calendar read in this active run before the model creation timestamp; exact HTTP request time not exposed by the web renderer.",
+  "new_to_analysis_facts": "Oct23calendarlistsClayface(Warner,horror/scifi/thriller,wide)andWildwood(wide),withseveralotherwidetitles. NotnewnewsorprovenResidentEvilscreenallocation. Oct23isthesixthweekendfromSep18, notthecatalystworkersfourth.",
+  "source_caveat": "NumbersandMojoreleasedatesforothermoviescandiffer; noanalyzedfixedtheatercountorprecisedemandmigration. Do notderiveallcompetitionpressuresfromtitlesalone.",
+  "regime_update": "75%retainsoriginalgrossmodel,25%additional30%grossreductionfromOct23. Existingweekdaydecayalreadycapturesordinarycompetition; extraquarterbranchspecificallypricesunmodeledcrowdedwide-horrorreleasecalendar. Branchweightandmagnitudearejudgment,notmeasuredprobabilities.",
+  "performed_after_own_quotes": true,
+  "seed": 18321611440,
+  "paths_per_branch": 200000,
+  "base_partitions": {
+    "below150": 0.000245,
+    "150inclusive160exclusive": 0.510775,
+    "160inclusive170exclusive": 0.45633,
+    "atleast170": 0.03265
+  },
+  "extra_screenloss_partitions": {
+    "below150": 0.000965,
+    "150inclusive160exclusive": 0.775305,
+    "160inclusive170exclusive": 0.21671,
+    "atleast170": 0.00702
+  },
+  "mixed_partitions": {
+    "below150": 0.00042500000000000003,
+    "150inclusive160exclusive": 0.5769075,
+    "160inclusive170exclusive": 0.396425,
+    "atleast170": 0.0262425
+  },
+  "adopted": {
+    "183_yes": 0.4,
+    "2161_yes": 0.58,
+    "2161_no": 0.42
+  },
+  "actual_entry_reserve": 0.25,
+  "absolute_family_cash_cap": 1.04,
+  "meaning": "Onefamily/opportunity. Jointpartitionssum1; noindependentprojectionsorhedgecredit. Allcashcanloseandstrongcompoundscreenlossmodelcanreverse8cNOentry."
+}

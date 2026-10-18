@@ -1,0 +1,151 @@
+{
+  "schema": "ossoff187_primary.v1",
+  "forecast_adopted_before_own_pm_quote_utc": "2026-10-18T13:56:24.360782+00:00",
+  "candidate_order": [
+    "jon_ossoff",
+    "alexandria_ocasio_cortez",
+    "gavin_newsom"
+  ],
+  "source_raw_sha256": {
+    "jon_ossoff": "c97b9349d2d608befa44f9e3b3b07f3e8e85b588f1dd63e952321fee73c673f5",
+    "alexandria_ocasio_cortez": "8ca33fe50e8ea946465152c6b9de3739151626b28d08585aec9fd1b36d0968f5",
+    "gavin_newsom": "84e2f3fc88fd493b764f8e069e5e0187e60e769bf889ecf3d265fb618806d811"
+  },
+  "current_published_values": [
+    0.143,
+    0.144,
+    0.141
+  ],
+  "daily_same_hour_values": [
+    [
+      0.167,
+      0.155,
+      0.142
+    ],
+    [
+      0.161,
+      0.154,
+      0.139
+    ],
+    [
+      0.147,
+      0.154,
+      0.138
+    ],
+    [
+      0.151,
+      0.151,
+      0.142
+    ],
+    [
+      0.147,
+      0.15,
+      0.142
+    ],
+    [
+      0.143,
+      0.15,
+      0.142
+    ],
+    [
+      0.143,
+      0.144,
+      0.141
+    ]
+  ],
+  "daily_nonoverlapping_change_count": 6,
+  "empirical_daily_log_change_mean": [
+    -0.02585819702614134,
+    -0.012268636223874344,
+    -0.0011778612038487364
+  ],
+  "covariance_50percent_diagonal_shrinkage": [
+    [
+      0.0015610837973103879,
+      -0.0002016415104243464,
+      0.00020225100944767615
+    ],
+    [
+      -0.0002016415104243464,
+      0.00024727594522328043,
+      -2.221174927189913e-05
+    ],
+    [
+      0.00020225100944767615,
+      -2.221174927189913e-05,
+      0.00027322924574938595
+    ]
+  ],
+  "horizon_hours": 315,
+  "paths_per_regime": 60000,
+  "seed": 18720261018,
+  "regimes": [
+    {
+      "regime": "driftless",
+      "weight": 0.6,
+      "daily_log_drift": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "top_three_leader_probabilities": {
+        "jon_ossoff": 0.4254,
+        "alexandria_ocasio_cortez": 0.40753333333333336,
+        "gavin_newsom": 0.16706666666666667
+      },
+      "terminal_top_tie_frequency": 0.031016666666666668
+    },
+    {
+      "regime": "quarter_recent_log_trend",
+      "weight": 0.25,
+      "daily_log_drift": [
+        -0.006464549256535335,
+        -0.003067159055968586,
+        -0.0002944653009621841
+      ],
+      "top_three_leader_probabilities": {
+        "jon_ossoff": 0.26686666666666664,
+        "alexandria_ocasio_cortez": 0.3614833333333333,
+        "gavin_newsom": 0.37165
+      },
+      "terminal_top_tie_frequency": 0.03841666666666667
+    },
+    {
+      "regime": "half_mean_reversion_to_week_mean",
+      "weight": 0.15,
+      "daily_log_drift": [
+        0.0020860954365936294,
+        0.0018340187716894465,
+        -4.094418272691498e-05
+      ],
+      "top_three_leader_probabilities": {
+        "jon_ossoff": 0.4603833333333333,
+        "alexandria_ocasio_cortez": 0.44265,
+        "gavin_newsom": 0.09696666666666667
+      },
+      "terminal_top_tie_frequency": 0.02578333333333333
+    }
+  ],
+  "conditional_top_three_ossoff": 0.3910141666666666,
+  "other_candidate_overtake_allowance": 0.08,
+  "source_disruption_weight": 0.03,
+  "source_disruption_ossoff_assumption": 0.25,
+  "raw_p_yes": 0.3564410423333333,
+  "adopted_p_yes": 0.36,
+  "sensitivity_range": [
+    0.1,
+    0.65
+  ],
+  "entry_model_reserve": 0.2,
+  "literal_notes": "Exact Oct31 noonET hourly source print, one-tenth-pp comparison, prior differing window tie-break then alphabetical. Simulation retains full hourly ranking and stable ordering on rounded ties; starts from observed current unique ordering. NO_PRINT/prior-value, Nov7 missing-source and48h correction rules remain source-risk branch, not modeled as guaranteed payout. Individual nomination PM quote is input to named index but own derivative YES/NO quote is excluded.",
+  "limitations": [
+    "Only six daily increments in seven-day history; neither daily drift nor covariance is reliable future calibration.",
+    "Gaussian log-value diffusion and 60/25/15 scenario weights,50% covariance shrinkage,8% other-candidate and3% outage branches are explicit primary assumptions.",
+    "Display rounding/stickiness, changing venue membership/lagged liquidity weights, campaign news, debate/announcement cycles can overwhelm tiny current gap.",
+    "No official Ossoff calendar retrieved; no absence of future political catalyst is claimed.",
+    "Source reliability page metrics unavailable; hourly flags do not prove later corrections absent.",
+    "Candidates are not normalized to sum1; no direct probability-of-nomination interpretation.",
+    "All other candidates are represented by an assumed overtaking branch, not a fitted16-dimensional model.",
+    "No current executable PM quote, account checks or order authority follows."
+  ]
+}

@@ -1,28 +1,20 @@
 # Dated primary corrections and live follow-up
 
+**Final financial follow-up, October18 14:58:02 UTC:** film DEC-0216 is **canceled unfilled**, terminal canceled/confirmed trade matches0/both film cases CTF0 after300s grace. Only its reservation9→8 was retired; **eight LIVE/zero-matched BUYs, $16.12 pending, pUSD22.096890/free5.976890**, fixed Polygon95753423. No film holding, cash spend, realized PnL or add/repost; temporary film feed/keyword retired after proof. The14:50 acceptance below is dated history. Messi remains5YES/noadd. [Final outcome](film2161_entry_1450.md).
+
+
 Canonical evaluation files remain immutable observations. Read this file with the index and candidate follow-up before interpreting current probabilities or acting.
 
 
-## Current review pointer — October 18, 13:46 UTC
+## Current review pointer — October 18, 14:50 UTC
 
-The effective checkpoint records **250 valued, 2 blocked, 331 factual exclusions
-and 2,417 pending** across the 3,000 frozen conditions; no cases are active.
-There are 583 immutable base records and 22 append-only revisions, with each
-condition counted once. The [checkpoint](../../notes/deep_review_checkpoint.json)
-and live [index](INDEX.md) govern.
+The checkpoint remains **254 valued, 2 blocked, 331 factual exclusions and 2,413 pending**, with no active case: 587 base records and 24 revisions; next pending index 196. The [checkpoint](../../notes/deep_review_checkpoint.json) and [index](INDEX.md) govern.
 
-Case 154’s latest revision is **63% YES, 30–85% range, 20-point reserve**; entry
-is deferred. Case 182 is **36% YES**. Case 35 is revised to **57% YES**, and case
-112 remains **11% YES** after a source-only refresh. See the [154 revision](revisions/0154_20261018T132229289334Z.md),
-[182 evaluation](evaluations/0182.md), and [35](revisions/0035_20261018T133807876978Z.md)
-and [112](revisions/0112_20261018T133808603216Z.md) revisions. None of these
-research updates authorizes an order.
+**Messi fill:** five Global Athletes top-five YES shares filled at 27¢ ($1.35) at 14:22:38 UTC. The vetted reconciliation retired only that reservation (9→8); keep the 60% central / 40% selected-stress forecast and 20–90% range, with no add. See [fill and hold summary](../../research/2026-10-18-messi-fill.md).
 
-**Case 137 BOI DEC-0215:** the dated post-submit proof records BUY 15 NO at 7¢,
-LIVE with zero matched at 13:03:57 UTC ($1.05 remaining risk). No add or repost.
-The actual reserve is 20 points, selecting NO 12%. Pull by October 19 22:00 UTC,
-or cancel sooner if material evidence becomes uncertain. Case 112’s existing
-October 18 22:00 UTC review/pull remains unchanged. The proof is [here](../../data/deep_review_20261017/boi137_postsubmit_1305.json).
+**Resident Evil:** case 183 is 40% YES; case 2161 is 58% YES / 42% NO. The one-family cap is $1.04; NO2161 at 8¢ was accepted for 13 shares (order `0xdbe03b86d79d069826291fb0b61aa13d03e41720284fde2b9b92716c28e84dd2`). Independent proof at 14:50:51 UTC records it LIVE, 0 matched, and both film outcomes at zero CTF balance. Nine BUYs were LIVE/0 matched, $17.16 pending, pUSD $22.096890 and $4.936890 free at that fixed-block read. No add, repost, or second family leg. Cancel every unfilled remainder before the active run ends, earlier if material evidence changes or uncertainty arises. See [entry decision](../../research/2026-10-17-deep-review/film2161_entry_1450.md) and [post-entry proof](../../data/deep_review_20261017/film2161_postentry_1455.json).
+
+Other recent valuations: case 187 36% YES (hourly nomination-odds leader, not nomination winner); case 194 91% YES (All Critics source/view limitation); case 197 43% YES conditional on its October 18 14:15 UTC spot snapshot. Case 35 is 57% YES under the [joint OpenRouter refresh](models/openrouter182_joint_refresh_1400.json). These are research observations, not live market prices. The last dated review/pull times are case 112 today, October 18 at 22:00 UTC; BOI137 and Idaho October 19 at 22:00 UTC; Sedgwick October 19 at 10:00 UTC. Revalidate state and all gates before any further action.
 
 ## Prior pointer — October 18, 12:15 UTC (superseded)
 

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 201 recorded observations from Apr-25
+The local performance CSV now has 203 recorded observations from Apr-25
 through Oct-18. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -54,44 +54,52 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — October18
+## Active in-depth review — October 18
 
-The operator authorized primary valuations across the frozen3,000-condition
-universe; surface screens carry no rejection authority. At the13:46UTC checkpoint:
-**250 valued, 2 blocked, 331 factual exclusions and2,417 pending**, with583
-immutable base records and22 append-only revisions. No case is active; next is187.
-The [live index](research/2026-10-17-deep-review/INDEX.md) and
-[resume checkpoint](notes/deep_review_checkpoint.json) update after every evaluation.
-The [first100](research/2026-10-17-deep-review/MILESTONE_100.md) and
-[milestone200](research/2026-10-17-deep-review/MILESTONE_200.md) reports remain dated
-inspection records; the operator has been notified. Continue the authorized queue.
+The frozen 3,000-condition review has **254 valuations, 2 blocked reviews,
+331 factual exclusions and 2,413 pending** at14:34 UTC: 587 immutable base
+records plus24 append-only revisions, no active case, next196. The
+[Offline audit](data/deep_review_20261017/ledger_audit_1455.json) verifies exact
+identities, every base report and revision chain, and the complete index.
+Each evaluation is saved/indexed immediately. The
+[live index](research/2026-10-17-deep-review/INDEX.md),
+[checkpoint](notes/deep_review_checkpoint.json) and
+[first100](research/2026-10-17-deep-review/MILESTONE_100.md)/
+[200](research/2026-10-17-deep-review/MILESTONE_200.md) reports preserve progress;
+both milestones were notified. Screens have no rejection authority.
 
-**Latest new bid:** [Bank of Israel case137, DEC-0215](research/2026-10-17-deep-review/boi_entry_1255.md),
-15 no-change NO at7¢/$1.05. Independent13:03:57UTC proof found it LIVE and unfilled;
-this is commitment, not holding or profit. Primary change32%, actual20-point
-reserve selects12%; full premium can be lost. Pull **Oct19 22UTC**, earlier on
-uncertainty, no add/repost. At that dated check nine BUY bids committed$17.47,
-pUSD23.446890 left$5.976890 after all bids. Full identities and controls are in
-[resting orders](notes/resting_orders.md); a later fill is not ruled out.
+**New holding:** original DEC-0213 **Messi Global Athletes top-five YES5 at27¢ /
+$1.35** filled14:22:38 UTC. Authenticated match, successful chain receipt,
+indexed cumulative buys and fixed balances agree. The original bid reservation
+was reconciled; no repeat BUY. Retain5/noadd under an unfitted60% forecast,
+40% selected stress and20–90% broad range. The ranking is Google's internal
+search growth; MLS news is not a rank measurement.
+[Fill, current sources and hold/exit sensitivity](research/2026-10-18-messi-fill.md).
 
-**OpenRouter:** [joint source refresh](research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json)
-values adjacent September–October bands35/182 at57%/36%YES, and later November
-band112 at unchanged11%YES. The53-week token chart includesOthers; current
-partial153.997T and UI164.747Tpace are different quantities. Neither cache time
-nor pace proves cutoff. DEC-0214's5NO65¢/$3.25 bid retains its **today22UTC pull**,
-earlier uncertainty cancel first; source refresh is not account verification.
-R2's52-week request-share chart is separate; [current dependent model](research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md)
-retains Google90% with endpoint completeness/cutoff gaps. No R2 order approved.
+**Resident Evil:** one finite **NO150–160m pilot13 at8¢ / $1.04** was accepted
+LIVE/zero-matched at14:50:51, then **canceled unfilled before handoff**. After300s grace, terminal detail,
+exhausted trades, zero film CTF and unchanged cash agree; eight BUYs/$16.12
+remain, free5.976890pUSD. No film cash was spent. The shared model is42%NO, selected17%; compound
+weak-retention/screen-loss/Friday stress7.28% reverses entry. This is an
+unvalidated strategy class; noadd/repost/second film leg.
+[Entry and final outcome](research/2026-10-17-deep-review/film2161_entry_1450.md).
 
-NVIDIA154's [recent-volatility revision](research/2026-10-17-deep-review/models/nvidia154_recentvol_revision_1325.json)
-is63%YES; entry deferred after20-point reserve and source/calendar review.
-Ocean152 and other dated research leads need fresh entry gates. Closed cases162,
-174 and190 were excluded only after exact identity/nonaccepting/zero-balance
-checks;190's hourly source and final payout were not inferred from all-row
-weather data. [Current corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
-and [candidate follow-up](research/2026-10-17-deep-review/candidate_followup.md)
-index the reports. Next existing full operational check14UTC; entry/source checks
-do not replace it. Weekly/monthly reviews are dueOct23/Nov12.
+**Existing bid deadlines:** OpenRouter112 pulls **today22UTC**; Sedgwick
+**Oct19 10UTC**, Bank of Israel137 and Idaho **Oct19 22UTC**, earlier on
+load-bearing uncertainty. [Exact identities and management](notes/resting_orders.md).
+Bank of Israel remains15NO7¢/$1.05, and OpenRouter5NO65¢/$3.25 in dated proofs.
+OpenRouter's [joint token model](research/2026-10-17-deep-review/models/openrouter182_joint_refresh_1400.json)
+values cases35/182/112 at57%/36%/11%YES; its53-point token chart differs from
+the [R2 request-share model](research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md).
+Current partial/pace are not final cutoff measurements. No R2 order.
+
+Other new valuations187/194/197 are36%/91%/43%YES: future named odds rank,
+All Critics score with source-view gaps, and exact terminal spot candle at
+a dated14:15 price. They do not establish a current executable edge.
+[Current revisions](research/2026-10-17-deep-review/CURRENT_REVISIONS.md) and
+[candidate follow-up](research/2026-10-17-deep-review/candidate_followup.md) index
+full reports. The [14UTC check](research/2026-10-18-1400-checkin.md) completed
+once; weekly/monthly reviews are dueOct23/Nov12.
 
 ## Mandate and constraints
 
@@ -113,41 +121,45 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 18, 09:36 UTC
+## Last account snapshot — October 18, 14:45 UTC
 
-The authoritative `bankroll.py` ran 09:36:31–09:36:46 UTC. Marks and books are
-sequential, rounded observations, not synchronized NAV or certified liquidation.
-VM/API costs remain unreconciled and excluded.
+Authoritative `bankroll.py` completed **14:45:12 UTC**, after the Messi fill.
+These are rounded sequential marks and indicative depth, neither synchronized
+NAV nor certified proceeds. VM/API costs remain excluded.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | **$196.43** (−$0.05 since 02:01) |
-| Separately funded gas | $5.83 |
-| Trading midpoint / indicative depth | $190.60 / $188.44 |
-| Polymarket midpoint / fee-net indicative depth | $32.47 / $30.31 |
-| Whole-account approximate depth | $194.27 |
-| Open-position cost / accounting residual | $31.41 / $19.53 |
+| Total marked bankroll | **$195.90** (−$0.25 from13:56) |
+| Separately funded gas | $5.69 |
+| Trading midpoint / indicative depth | $190.21 / **$188.19** |
+| Polymarket midpoint / fee-net indicative depth | $33.43 / $31.41 |
+| Whole-account approximate depth | $193.88 |
+| Open-position cost / accounting residual | $32.76 / $19.53 |
 
-The fallback verified **Michigan Senate NO 5 at 31¢**, $1.55 net spent, in the
-[02:55:41 UTC receipt](https://polygonscan.com/tx/0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916).
-There are five open PM legs: Michigan NO5, OpenAI HLE NO9, Clarity 29/29 and
-Trump NO0.33. Retain them with no add; OpenAI's central/stress exit comparison
-remains sensitive. No new order, sale, transfer or winning redemption occurred.
+Retain Michigan NO5, OpenAI HLE NO9, Clarity29/29, Messi YES5 and Trump NO0.33;
+noadd. HLE's15% stress, Michigan's20% low range and Messi's20% low range favor
+exit; central comparisons favor holding. Clarity's floor is conditional on
+common interpretation, collateral and settlement. Gemini4.03475 losing CTF
+tokens have verified zero redemption value; nothing was burned or regraded.
 
-**Seven remaining BUY bids were LIVE and zero-filled:** four House bids, Idaho,
-Sedgwick and Messi; $13.17 committed, pUSD23.446890, arithmetic free10.276890.
-Michigan's fill reservation was reconciled and its claim insurance added.
-Numerical priors/group topology are unchanged. The current held HLE API has65
-unchanged model objects; OpenAI's maximum remains53.6<55. Access gaps remain.
+Independent **14:44:36** proof after the fill found eight remaining BUYs
+committing **$16.12**, pUSD22.096890/free5.976890; only the Messi reservation
+was retired9→8. The later film pilot temporarily reserved another$1.04; its
+[terminal outcome](research/2026-10-17-deep-review/film2161_entry_1450.md) is
+separate from this account mark. No sale, transfer or winning redemption.
 
-All required discovery profiles ran once with explicit caps and unreviewed cases;
-no new entry was certified. Four daemons passed exact-one/current-code checks.
-Quota headroom was75%; Ostium has no trade, limit or allowance. Weekly P&L is
-next due October23. See the [fallback check and risk record](research/2026-10-18-fallback-checkin.md),
-[source facts](research/2026-10-18-fallback-sources.md),
-[discovery coverage](research/2026-10-18-fallback-discovery.md) and
-[order policy/current fill](notes/resting_orders.md).
+The [14UTC check](research/2026-10-18-1400-checkin.md) preserves source gaps,
+32 later [Messi joint states](research/2026-10-18-messi-fill.md) and capped
+scanner coverage. Claim insurance covers six indexed holdings plus one
+deindexed claim. Four daemons run once with current code; Ostium has zero
+trades, limits and allowance. HLE's cached65-row body matches the morning
+baseline, while the uncached request returned403; no current-absence guarantee.
+All87 scanner context batches were reviewed factually; capped zeros do not
+establish an exchange-wide absence of opportunity.
+
+[Performance chart](https://philippmerz.github.io/polyclaude/) and
+[recorded CSV methodology](docs/README.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

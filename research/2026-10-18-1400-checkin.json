@@ -1,0 +1,264 @@
+{
+  "schema": "polyclaude_checkin.v1",
+  "written_utc": "2026-10-18T14:17:35.471734+00:00",
+  "scheduled_boundary": "2026-10-18T14:00:00Z",
+  "bankroll_capture_window_utc": [
+    "2026-10-18T13:56:24.522247520Z",
+    "2026-10-18T13:56:39.114213128Z"
+  ],
+  "bankroll": {
+    "authoritative_tool": "scripts/bankroll.py",
+    "raw_log": "logs/deep_review_20261017/bankroll_1400.log",
+    "total_mark": 196.15,
+    "trading_capital": 170,
+    "separately_funded_gas": 5.75,
+    "trading_mark": 190.4,
+    "pm_mark": 32.28,
+    "pm_fee_net_indicative_depth": 30.56,
+    "approximate_whole_depth": 194.43,
+    "approximate_trading_depth": 188.68,
+    "open_pm_cost": 31.41,
+    "reported_settled_accounting_residual": 19.53,
+    "limitations": "Rounded sequential component marks/depth, not synchronized NAV, certified liquidation or independently audited cash profit; VM/API costs unreconciled and excluded."
+  },
+  "account_proof": "data/deep_review_20261017/account_readonly_1400.json",
+  "operations_proof": "data/deep_review_20261017/operations_1400.json",
+  "public_primary_source_proof": "data/deep_review_20261017/portfolio_sources_1400.json",
+  "public_rule_fee_depth_proof": "data/deep_review_20261017/portfolio_public_1410.json",
+  "exit_judgments": {
+    "hle": {
+      "shares": 9,
+      "central_p_no": 0.25,
+      "stress_p_no": 0.15,
+      "upper_p_no": 0.38,
+      "terminal_ev_central_stress_upper": [
+        2.25,
+        1.35,
+        3.42
+      ],
+      "indicative_sell_net": 1.91822,
+      "idealized_free_redeploy_75d": 1.9303641439558048,
+      "decision": "retain9/noadd; central/upper favorhold, stressfavorsexit. Probabilityofterminalzero75% atcentral, notrecoveryforecast. Existingrange/sourcegapsremain; no newfreezeorbenchmarktransitionverified.",
+      "maker_policy": "No ask at/belowfair on hiddeninformation class; no newmakerask without repricing jump-risk premium."
+    },
+    "michigan": {
+      "shares": 5,
+      "central_p_no": 0.44,
+      "stress_p_no": 0.34,
+      "range_low_no": 0.2,
+      "terminal_ev_central_stress_range_low": [
+        2.2,
+        1.7,
+        1.0
+      ],
+      "indicative_sell_net": 1.458,
+      "idealized_free_redeploy_17d": 1.4600871477961217,
+      "decision": "retain5/noadd; central and34%stress favorhold; broad20%range casefavorsexit. October20program window retained."
+    },
+    "clarity_pair": {
+      "shares_each": 29,
+      "conditional_floor": 29,
+      "51_to58_Yea_payout": 58,
+      "indicative_pair_exit": 26.879960000000004,
+      "has_stale_leg": true,
+      "oldest_leg_book_age_seconds": 754.9965219497681,
+      "idealized_free_redeploy_76d": 27.0524117994701,
+      "decision": "retaincomplete29/29/noadd/nolegwiseexit; bothmatchingliteralrules reread; conditionalfloor beatsdatedpairedexit+idealizedcarry. Onebook754.997soldso notcurrentexecutioncertificate."
+    },
+    "trump_dust": {
+      "shares": 0.33,
+      "minimum_route_shares": 5,
+      "decision": "belowminimum,nocontriveddustsale"
+    }
+  },
+  "joint_states": [
+    {
+      "clarity": 29,
+      "hle": 0,
+      "michigan": 0,
+      "trump": 0,
+      "non_gas_trading_terminal": 187.12,
+      "after_all_pending_fill_and_lose": 169.65
+    },
+    {
+      "clarity": 29,
+      "hle": 0,
+      "michigan": 0,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 187.45,
+      "after_all_pending_fill_and_lose": 169.98
+    },
+    {
+      "clarity": 29,
+      "hle": 0,
+      "michigan": 5,
+      "trump": 0,
+      "non_gas_trading_terminal": 192.12,
+      "after_all_pending_fill_and_lose": 174.65
+    },
+    {
+      "clarity": 29,
+      "hle": 0,
+      "michigan": 5,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 192.45,
+      "after_all_pending_fill_and_lose": 174.98
+    },
+    {
+      "clarity": 29,
+      "hle": 9,
+      "michigan": 0,
+      "trump": 0,
+      "non_gas_trading_terminal": 196.12,
+      "after_all_pending_fill_and_lose": 178.65
+    },
+    {
+      "clarity": 29,
+      "hle": 9,
+      "michigan": 0,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 196.45,
+      "after_all_pending_fill_and_lose": 178.98
+    },
+    {
+      "clarity": 29,
+      "hle": 9,
+      "michigan": 5,
+      "trump": 0,
+      "non_gas_trading_terminal": 201.12,
+      "after_all_pending_fill_and_lose": 183.65
+    },
+    {
+      "clarity": 29,
+      "hle": 9,
+      "michigan": 5,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 201.45,
+      "after_all_pending_fill_and_lose": 183.98
+    },
+    {
+      "clarity": 58,
+      "hle": 0,
+      "michigan": 0,
+      "trump": 0,
+      "non_gas_trading_terminal": 216.12,
+      "after_all_pending_fill_and_lose": 198.65
+    },
+    {
+      "clarity": 58,
+      "hle": 0,
+      "michigan": 0,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 216.45,
+      "after_all_pending_fill_and_lose": 198.98
+    },
+    {
+      "clarity": 58,
+      "hle": 0,
+      "michigan": 5,
+      "trump": 0,
+      "non_gas_trading_terminal": 221.12,
+      "after_all_pending_fill_and_lose": 203.65
+    },
+    {
+      "clarity": 58,
+      "hle": 0,
+      "michigan": 5,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 221.45,
+      "after_all_pending_fill_and_lose": 203.98
+    },
+    {
+      "clarity": 58,
+      "hle": 9,
+      "michigan": 0,
+      "trump": 0,
+      "non_gas_trading_terminal": 225.12,
+      "after_all_pending_fill_and_lose": 207.65
+    },
+    {
+      "clarity": 58,
+      "hle": 9,
+      "michigan": 0,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 225.45,
+      "after_all_pending_fill_and_lose": 207.98
+    },
+    {
+      "clarity": 58,
+      "hle": 9,
+      "michigan": 5,
+      "trump": 0,
+      "non_gas_trading_terminal": 230.12,
+      "after_all_pending_fill_and_lose": 212.65
+    },
+    {
+      "clarity": 58,
+      "hle": 9,
+      "michigan": 5,
+      "trump": 0.33,
+      "non_gas_trading_terminal": 230.45,
+      "after_all_pending_fill_and_lose": 212.98
+    }
+  ],
+  "non_pm_trading_component_from_same_bankroll_mark": 158.12,
+  "joint_minimum_conditional_on_clarity_floor": 187.12,
+  "joint_minimum_with_all_9_pending_fill_and_full_loss": 169.65,
+  "conditional_log_growth_break_even": {
+    "hle_no_range": [
+      0.21786624371572638,
+      0.21888221938650831
+    ],
+    "michigan_no_range": [
+      0.29429181377566177,
+      0.29503205260847937
+    ],
+    "assumption": "Uses same conditional p across eachco-state, idealizedcostfreeredeploy. Different co-state-specific probabilities/timing/collateral risks can reverse ranking; not a fittedlossdistribution or guaranteedfloor."
+  },
+  "carry_sensitivity": {
+    "annual_rate": 0.03119,
+    "dated_utc": "2026-10-18 09:41:35–36UTC",
+    "status": "LastverifiedliveAavequote reused as variable constant-rate sensitivity; old discoveryhurdlecache3.0544% isOct17, notafresh14UTCyieldquote."
+  },
+  "new_state_operations": [
+    "Added exact asset metadata for9 livependingpriors, preservedall numericalpriors/management/otherfields; fullauditcleanafterverification.",
+    "Added deliberatecanceled/reentry note forAnthropicprior, noorder/positionrestored.",
+    "Refreshedclaiminsurancesnapshot; noackholdsremoved."
+  ],
+  "orders_and_trades": "No newaccountoperation in thischeck. NineexistingbidsLIVEunfilled17.47; direct112/137andzeroCTF verified14:00.55; nochangeprobabilities.",
+  "redemption": "Guardedsweep0/5winning,1losing/uncertainrow,noTX. GeminiNO4.03475CTF residue atblock95751137, denominator1/numerators[1,0], redemptionvalue0; no burn/regrade.",
+  "scans_proof": "data/deep_review_20261017/scans_1400.json",
+  "context_proofs": [
+    "data/deep_review_20261017/context_batches_audit_A_1405.json",
+    "data/deep_review_20261017/context_batches_audit_B_1405.json"
+  ],
+  "scan_review": "Rootreadall7rawscanneroutputs; delegatedfactualaudit accountsforall3primary+84thinbatches(43+1466rows), nohash/identity/criteriachangeamongfrozenmatches. Sixexecution-termchangeskeptforfreshgates. Cappeddiscovery/consistency/sportscoverageincomplete; noexchange-widezero orsurface-screenrejections.",
+  "source_corrections": [
+    "UPDATING comparesHLEwithJuly3; Grok4.7unscoredalreadyin09:34baseline.13:56cached65rowsidentical; uncached13:59GET403. No currentthresholdabsencecertificate.",
+    "UMA41cacheentries/39uniqueIDs, oneIDappears3times; differenceisnot2failedrefreshes.",
+    "OpenRouterpartialrose153.997→154.871T,53points/noOct19ortargetweeks/noobservedcutoff; normalpartialadvanceisnotnewcompleteweek. Case11211%YES prior/22UTCpullunchanged."
+  ],
+  "source_rotation": "Rootre-readfullheldliteralrules; officialSenatemenu256votes/noobservedqualifyingfinalpassage. BOIOct20publicationtimesremainunknown; Oct2116Israel=13UTCandNov23nextmeeting verified. Fournewalertsreviewedagainstdated13:40packet, no newverifiedpoll/withdrawal/policy/benchmark event.",
+  "followup": "Case18346%modelvs~8.7%newscan requires freshentryunderwriting; weekenddata provisional/absent. Newstrategyclasspairedadvisories read; noorderorstandingauthorizationfromtrigger. Actualprospective25ppreserve selectsYES21%, absolutecashcap1.04; monitoring/livegatesnotyetcompleted.",
+  "next_existing_boundaries": [
+    "18UTCperiodic/review as dispatched",
+    "TODAYOct18 22UTC pull112 beforeMondaynewweek",
+    "Oct19 10UTC Sedgwickpull",
+    "Oct19 22UTC BOI/Idahopulls",
+    "Oct23weekly/Nov12monthly; methodologyconcludednoautorerun"
+  ],
+  "later_same_run_followup": {
+    "asof": "2026-10-18T14:58:02.700629+00:00",
+    "Messi_original_fill_report": "research/2026-10-18-messi-fill.md",
+    "separate_bankroll_completed": "2026-10-18T14:45:12Z",
+    "separate_bankroll_total": 195.9,
+    "film_outcome": "Canceled unfilled after300s grace, no film purchase or PnL",
+    "film_report": "research/2026-10-17-deep-review/film2161_entry_1450.md",
+    "final_account_proof": "data/deep_review_20261017/film2161_cancel_reconcile_1500.json",
+    "remaining_BUYs": 8,
+    "pending": 16.12,
+    "pusd": 22.09689,
+    "free_after_bids": 5.97689,
+    "no_synchronized_NAV_or_new_valuation_claim": true
+  }
+}

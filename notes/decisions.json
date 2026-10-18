@@ -1,5 +1,5 @@
 {
-  "next_id": 216,
+  "next_id": 217,
   "decisions": [
     {
       "id": 1,
@@ -4519,13 +4519,28 @@
         "deep-review",
         "maker",
         "google-year-in-search-2026",
-        "pending-zero-fill",
-        "uncalibrated-model"
+        "uncalibrated-model",
+        "confirmed-filled"
       ],
       "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
       "outcome": null,
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "fill_verification": {
+        "verified_utc": "2026-10-18T14:47:39.316479+00:00",
+        "filled_utc": "2026-10-18T14:22:38Z",
+        "shares": 5,
+        "price": 0.27,
+        "cash_spent_pusd": 1.35,
+        "order_id": "0xe68b1d971df62cc31e25cba2aafe00a38ba8ae7b739eb27ff5e20ddaf59bb1d4",
+        "transaction_hash": "0x47a102cb8049499b1456b98f9bbf59a79accec5ffee3eae10be790f56d280ac8",
+        "block": 95752007,
+        "status": 1,
+        "project_paid_transaction_gas": false,
+        "indexed_totalBought": 5,
+        "reconciliation": "Only exact reservation retired9to8 via vetted lock; proof data/deep_review_20261017/messi_reconcile_1450.json",
+        "management": "Retain5YES; no add/repost. Forecast60% and20pp reserve unchanged. Original BUY pull obsolete after full fill; source/exit-risk report research/2026-10-18-messi-fill.md. This is original DEC-0213 fill, not new trade decision or forecast grade."
+      }
     },
     {
       "id": 214,
@@ -4570,6 +4585,42 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 216,
+      "timestamp": "2026-10-18T14:52:04Z",
+      "type": "open_position",
+      "thesis": "One bounded film-family pilot: NO outside the150m-inclusive/160m-exclusive final domestic-gross band, 13 shares at8c,1.04pUSD full-fill risk. Primary shared modelNO42%, actual25pp reserve17%; uncalibrated decay/Friday/competition assumptions. Exact complement stress7.2825% reverses8c before costs. Both independent advisories/catalyst review and full source/rule/fee/account/cap/venue gates read; no hedge credit/add/repost/secondleg. Authoritative bankroll195.90 used. Order accepted LIVE, not a holding or profit.",
+      "confidence": "low",
+      "prediction": "Independent14:50:51UTC full exhausted inventory and direct detail agree: order0xdbe03b86d79d069826291fb0b61aa13d03e41720284fde2b9b92716c28e84dd2 LIVE13/0matched, exactCID0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6. FixedPolygon95753136 both183/2161outcomes0; pUSD22.096890,9BUY17.16/free4.936890,9reservations/noentryblock. Cancel every unfilled share before this active run ends, earlier on updated source or uncertainty. Latest14:47 sources throughOct16, estimatedFriday and unpublishedweekend. Research/management: research/2026-10-17-deep-review/film2161_entry_1450.md; proof data/deep_review_20261017/film2161_postentry_1455.json. Never replay writer.",
+      "size_usd": 1.04,
+      "resolution_at": "2026-11-30",
+      "tags": [
+        "polymarket",
+        "deep-review",
+        "box-office",
+        "maker",
+        "uncalibrated-model",
+        "canceled-unfilled"
+      ],
+      "slug": "will-the-total-domestic-gross-for-resident-evil-be-between-150m-and-160m-by-october-31",
+      "outcome": "CANCELED UNFILLED. Root 14:58:02UTC terminal canceled status, exhaustive confirmed trade matches0, zero film CTF balances and unchanged cash prove no purchase, investment PnL or market-outcome grade. Original accepted commitment remains recorded.",
+      "calibration_delta": null,
+      "lesson": null,
+      "terminal_verification": {
+        "verified_utc": "2026-10-18T14:58:02.700629+00:00",
+        "cancel_verified_at": "2026-10-18T14:52:45.160600+00:00",
+        "terminal_status": "CANCELED",
+        "matched_shares": 0,
+        "trade_matches": 0,
+        "grace_elapsed_seconds": 315.154917,
+        "fixed_block": 95753423,
+        "film_balances_zero": true,
+        "cash_spent": 0,
+        "only_film_reservation_retired": true,
+        "proof": "data/deep_review_20261017/film2161_cancel_reconcile_1500.json",
+        "no_repost": true
+      }
     }
   ]
 }

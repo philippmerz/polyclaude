@@ -27,6 +27,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+   "outcome": "Yes",
+   "size": 5,
+   "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+   "negativeRisk": false
+  },
+  {
    "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
    "outcome": "No",
    "size": 5,

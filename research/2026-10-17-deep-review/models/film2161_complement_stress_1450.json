@@ -1,0 +1,111 @@
+{
+  "created_utc": "2026-10-18T14:46:29.722975+00:00",
+  "schema": "resident_evil_complement_stress.v1",
+  "root_authored": true,
+  "source_model": "research/2026-10-17-deep-review/models/film183_primary_1410.json",
+  "paths_per_case": 200000,
+  "seed_common_random_numbers": 18321611448,
+  "results": [
+    {
+      "scenario": "no_halloween",
+      "regime_weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "extra_post_Oct23_multiplier": 1,
+      "estimated_Friday_multiplier": 1,
+      "Halloween_multiplier": 1,
+      "partitions": {
+        "below150": 0.000285,
+        "150inclusive160exclusive": 0.537365,
+        "160inclusive170exclusive": 0.43685,
+        "atleast170": 0.0255
+      },
+      "p_NO2161": 0.462635,
+      "median_millions": 159.63725306612784,
+      "13share_8cent_expected_profit_before_costs": 4.974255
+    },
+    {
+      "scenario": "weak_heavy",
+      "regime_weights": [
+        0.25,
+        0.7,
+        0.05
+      ],
+      "extra_post_Oct23_multiplier": 1,
+      "estimated_Friday_multiplier": 1,
+      "Halloween_multiplier": 1,
+      "partitions": {
+        "below150": 0.00081,
+        "150inclusive160exclusive": 0.805565,
+        "160inclusive170exclusive": 0.18152,
+        "atleast170": 0.012105
+      },
+      "p_NO2161": 0.19443500000000002,
+      "median_millions": 156.25307887231807,
+      "13share_8cent_expected_profit_before_costs": 1.4876550000000002
+    },
+    {
+      "scenario": "screen_loss30",
+      "regime_weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "extra_post_Oct23_multiplier": 0.7,
+      "estimated_Friday_multiplier": 1,
+      "Halloween_multiplier": 1,
+      "partitions": {
+        "below150": 0.00099,
+        "150inclusive160exclusive": 0.796825,
+        "160inclusive170exclusive": 0.19714,
+        "atleast170": 0.005045
+      },
+      "p_NO2161": 0.203175,
+      "median_millions": 157.24007946146884,
+      "13share_8cent_expected_profit_before_costs": 1.6012749999999998
+    },
+    {
+      "scenario": "friday_minus20",
+      "regime_weights": [
+        0.7,
+        0.2,
+        0.1
+      ],
+      "extra_post_Oct23_multiplier": 1,
+      "estimated_Friday_multiplier": 0.8,
+      "Halloween_multiplier": 1,
+      "partitions": {
+        "below150": 0.00052,
+        "150inclusive160exclusive": 0.608055,
+        "160inclusive170exclusive": 0.37152,
+        "atleast170": 0.019905
+      },
+      "p_NO2161": 0.391945,
+      "median_millions": 158.9403923949992,
+      "13share_8cent_expected_profit_before_costs": 4.055285
+    },
+    {
+      "scenario": "weak_screen_friday",
+      "regime_weights": [
+        0.25,
+        0.7,
+        0.05
+      ],
+      "extra_post_Oct23_multiplier": 0.7,
+      "estimated_Friday_multiplier": 0.8,
+      "Halloween_multiplier": 1,
+      "partitions": {
+        "below150": 0.007,
+        "150inclusive160exclusive": 0.927175,
+        "160inclusive170exclusive": 0.064075,
+        "atleast170": 0.00175
+      },
+      "p_NO2161": 0.07282500000000003,
+      "median_millions": 154.02496278046067,
+      "13share_8cent_expected_profit_before_costs": -0.09327499999999966
+    }
+  ],
+  "interpretation": "Stress reprojects every gross partition for NO2161. It does not substitute P(YES183) for P(NO2161): below150 and >=170 tails also win. All scenario weights/multipliers are judgment, not calibrated probabilities or observed theater allocations. Prior central NO42 and selected17 remain dated underwriting; compound weak/screen/Friday scenario can reverse 8cent entry. Friday reduction changes both provisional cumulative and future Friday anchors. No source refresh, new quote or trade."
+}

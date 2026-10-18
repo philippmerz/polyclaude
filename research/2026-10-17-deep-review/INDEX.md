@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T13:46:20.691217+00:00
+Updated: 2026-10-18T14:34:03.608104+00:00
 
-**250 valuations saved; first milestone100:** 250 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2417 pending.
+**254 valuations saved; first milestone100:** 254 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2413 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -194,17 +194,20 @@ Each report below is written before moving to the next evaluation. Related contr
 |180|[Will Mohammed bin Salman cease to be the de facto leader of Saudi Arabia by December 31, 2026?](evaluations/0180.md)|valued|Noentryapproved; conditionalNOmaker<=76c aftercurrentsecurity/literal/executiongates.|
 |181|[Saints vs. Giants](revisions/0181_20261018T134536609416Z.md)|valued|Noentryapproved; mismatched-time odds and missing officialfinalinactives, conditional32cmakerceilingeitheroutcome.|
 |182|[Will OpenRouter process between 625T and 675T tokens from Sep 28 to Oct 25?](evaluations/0182.md)|valued|Noentryapproved; conditionalmakerYES18c/NO46c requiresfreshjointportfolio/source/executiongates.|
-|183|[Will the total domestic gross for Resident Evil be between 160m and 170m by October 31?](evaluations/0183.md)|valued|Noentryapproved; selectedside−3pp researchceiling pendingweekendactuals/finalityandallgates.|
+|183|[Will the total domestic gross for Resident Evil be between 160m and 170m by October 31?](revisions/0183_20261018T143001030197Z.md)|valued|PRIORITY ONE-FAMILY FOLLOW-UP: prefer2161NO at comparable cost; actual25ppreserveNO17% aftercompetitionrevision, no order from record.|
 |184|[Will "Norm: The Tale of Norm Macdonald" be the top US Netflix movie this week?](evaluations/0184.md)|valued|Both asks nonpositive central EV; no entry|
 |185|[Will Flávio Bolsonaro win Brazil, Gadi Eizenkot become Israeli PM, and Democrats win the US Senate?](evaluations/0185.md)|valued|Noentryapproved; finalIsraelCECfile andlongsettlement/payout/sourcegaps; selectedNO−3ppresearchceiling/allgates.|
 |186|[Will the Republican Party win the VA-01 House seat?](evaluations/0186.md)|valued|YES has a thin maker price/model difference; local candidate uncertainty and carry can erase it|
+|187|[Jon Ossoff Democratic nomination odds leader on October 31?](evaluations/0187.md)|valued|NO ENTRY: YES central edge fails20-point model reserve; NO lacks central edge; current-source/old-book mismatch.|
 |188|[Olbia: Jacob Fearnley vs Luca Nardi](evaluations/0188.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |189|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 50% or higher?](evaluations/0189.md)|valued|NO small central edge consumed by uncertainty; no entry|
 |190|[Will the highest temperature in New York City be between 62-63°F on October 17?](evaluations/0190.md)|excluded_factual|Factual exclusion: exact market closed/nonaccepting, both wallet balances zero; no payout inferred.|
 |191|[Will "Norm: The Tale of Norm Macdonald" be the #2 global Netflix movie this week?](evaluations/0191.md)|valued|YES negative central EV; NO nominal edge vanishes tocost/uncertainty; no entry|
 |192|[Will Aleksandar Vučić be the next Prime Minister of Serbia?](evaluations/0192.md)|valued|Formal next-PM event valued separately from largest-list result; long fallback and normal reserve defeat captured asks|
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
+|194|[Will "You Can See Everything" score at least 96 on the Rotten Tomatoes Tomatometer?](evaluations/0194.md)|valued|NO ENTRY: currenthighscoredoesnotremoveuncertainty; bothdatedsides failactual15-pointreserve.|
 |195|[Spread: Galatasaray SK (-1.5)](evaluations/0195.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|197|[Will the price of Ethereum be above $2,400 on October 19?](evaluations/0197.md)|valued|NO ENTRY: datedsource/old-booktimemismatch and no proven directional edge; currentboth-sidegatesneeded.|
 |198|[Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?](evaluations/0198.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |199|[Will Anthropic IPO by December 31, 2026?](evaluations/0199.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
 |202|[Villarreal CF vs. Elche CF: O/U 0.5](evaluations/0202.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -494,6 +497,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |2152|[Will Calcio Padova vs. Virtus Entella end in a draw?](evaluations/2152.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2153|[Will there be no Hormuz agreement?](evaluations/2153.md)|valued|YES centralnegative; NO small central counter-thesis but20-point reserve/cashminimum fail. Noentry; futureYES71c illustrative only.|
 |2160|[Hibernian FC vs. Falkirk FC: O/U 3.5](evaluations/2160.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|2161|[Will the total domestic gross for Resident Evil be between 150m and 160m by October 31?](revisions/2161_20261018T143001714223Z.md)|valued|PRIORITY ONE-FAMILY FOLLOW-UP: prefer2161NO at comparable cost; actual25ppreserveNO17% aftercompetitionrevision, no order from record.|
 |2164|[Will Marcus Semien win the 2026 AL Platinum Glove award?](evaluations/2164.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2172|[Will Rot-Weiss Essen win on 2026-10-17?](evaluations/2172.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2176|[FK Dinamo Makhachkala vs. FK Akron Tolyatti: O/U 2.5](evaluations/2176.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

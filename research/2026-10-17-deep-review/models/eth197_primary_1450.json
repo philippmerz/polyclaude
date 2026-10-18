@@ -1,0 +1,90 @@
+{
+  "schema": "eth197_terminal_primary.v1",
+  "forecast_saved_utc": "2026-10-18T14:33:18.080450+00:00",
+  "before_own_PM_quote": true,
+  "source_packet": "data/deep_review_20261017/eth197_sources_1425.json",
+  "root_all9prior_and_tail_hashes_verified": true,
+  "prior_hashes": [
+    "f10a8cbad6585a3dd9bc0798717d3ad38675c82c17dfd9e2cb122a42d655eec1",
+    "2a9f5bda2ecb0cc6b773102eab0c5351e934090bfa2da2db39a21b3d659c35b0",
+    "b8b5e8c25a0349f1e83081d16957a9bdb068df071c5bc51b7245814f1c7ef88d",
+    "ba92644e8b9512734a0dcf0e27758f73d491ec1bac694e88b778b08ea433d7d2",
+    "ded6c1839d84cb5d0e352c925386400fe552828f599bf93cdb0cdc572d2a27cf",
+    "834bbaf2f9838eccdf4a4e50beb8a773c65733bb83972e8037ee120639107068",
+    "33efbbda442fb51a7b85e854e8290af52c76c0d7fb779341ce796bd3bbb60ca3",
+    "1410685639f831c7a9e196934741b0904557a8dcb5bfa2488545bf523e420384",
+    "127be7fbe38bb9a346da2afdad1898d18908d4aa992d5bd38ef30a7d442f56f6"
+  ],
+  "root_closed_hourly_count": 8798,
+  "root_annualized_vols": {
+    "24": 0.46408904794577094,
+    "168": 0.5008241468529367,
+    "720": 0.42264394595134785
+  },
+  "latest_closed_minute": {
+    "source": "GET https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&limit=5",
+    "request_receipt": {
+      "name": "eth_recent_1m",
+      "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1m&limit=5",
+      "requested_utc": "2026-10-18T14:15:03.718724+00:00",
+      "received_utc": "2026-10-18T14:15:04.357199+00:00",
+      "status": 200,
+      "headers": {
+        "Content-Type": "application/json;charset=UTF-8",
+        "Content-Length": "829",
+        "Date": "Sun, 18 Oct 2026 14:15:04 GMT",
+        "x-mbx-used-weight-1m": "5"
+      },
+      "body_bytes": 829,
+      "sha256_uncompressed": "3457a78bf5b2786d0dd03a1f204b8fcc5010bd9b24dab55704a457e9ef1b728c",
+      "gzip_path": "logs/deep_review_20261017/eth197_sources_1425/eth_recent_1m.body.json.gz",
+      "gzip_bytes": 292,
+      "sha256_gzip": "77ce7c699ddf670e9c1b405383c0ac077a36306de5b68399e857595570940a9d"
+    },
+    "rows_returned": 5,
+    "latest_completed_open_time_ms": 1792332840000,
+    "latest_completed_close_time_ms": 1792332899999,
+    "latest_completed_open_utc": "2026-10-18T14:14:00+00:00",
+    "latest_completed_close_utc": "2026-10-18T14:14:59.999000+00:00",
+    "latest_completed_close_usdt": 2387.63,
+    "latest_completed_low_usdt": 2387.22,
+    "age_at_server_ms": 2687,
+    "unfinished_or_not_yet_closed_rows_in_response": 1,
+    "price_semantics": "Latest completed Binance ETHUSDT 1m candle Close; this is the newest closed-bar reference, not a live trade/tick quote."
+  },
+  "reference_price": 2387.63,
+  "target_utc": "2026-10-19T16:00:00Z",
+  "remaining_hours_at_source_reference": 25.750000277757646,
+  "gaussian_zero_log_drift_scenarios": [
+    {
+      "weight": 0.8,
+      "annual_log_volatility": 0.5,
+      "p_terminal_above2400": 0.4244107921246243
+    },
+    {
+      "weight": 0.15,
+      "annual_log_volatility": 1.0,
+      "p_terminal_above2400": 0.4620338601485671
+    },
+    {
+      "weight": 0.05,
+      "annual_log_volatility": 1.8,
+      "p_terminal_above2400": 0.47888562788153577
+    }
+  ],
+  "raw_p_yes": 0.43277799411606127,
+  "adopted_p_yes": 0.43,
+  "sensitivity_range": [
+    0.15,
+    0.75
+  ],
+  "actual_entry_reserve": 0.2,
+  "limits": [
+    "Conditionedon14:15sourceprice, notcurrentquoteattimeoflaterreport; simultaneousspot/bookrevalidationneeded.",
+    "Notriskneutraloptionprobability: nooptionchain/fundingflowsorindependentdirectionalalpha.",
+    "50/100/180%volmixture80/15/5andzerologdriftareassumptions; fatjumps/conditionalcorrelation/skewcanbreakGaussianmodel.",
+    "TerminalBinancespot1mClose>2400, nottouchbarrier/derivatives/index; exactclosing-minute/chartlabelmustbereconciledusingadjacentbarsatsettlement.",
+    "There are8,798 closed hourly observations. These are not8,798 independent forecasts; the stated24/168/720-return volatility windows govern the recent diagnostics.",
+    "Liquidity/fee/account/venueeligiblegatesnotestablishedbythismodel."
+  ]
+}

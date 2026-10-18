@@ -1,5 +1,45 @@
 # Standing resting orders (GTC post-only makers)
 
+## October 18 14:58:02 UTC — film canceled unfilled; eight BUYs remain
+
+**No film order or holding remains.** DEC-0216 was canceled before handoff;
+terminal canceled status, exhausted confirmed trade history0, both film cases'
+CTFs0 and unchanged22.096890pUSD agree after the required300-second grace.
+Only its reservation was retired9→8. Eight other BUYs remain LIVE/zero-matched,
+**$16.12 pending / $5.976890 cash after all bids**, fixed Polygon
+95753423. [Exact final proof and risk record](../research/2026-10-17-deep-review/film2161_entry_1450.md).
+No automatic add, repost or second film leg. Its temporary feed/keyword were
+retired; no restart, forced poll or watcher-state edit.
+
+Messi original DEC-0213 holds5YES at27¢/$1.35; keep noadd. Its original Nov1
+BUY pull is obsolete after full fill. OpenRouter112 pulls **today22UTC**;
+Sedgwick **Oct19 10UTC**, BOI/Idaho **Oct19 22UTC**, earlier uncertainty cancels
+first. Dated acceptance and earlier financial snapshots follow.
+
+## October 18 14:50 UTC — finite film pilot; Messi holding verified
+
+**DEC-0216 LIVE BUY: 13 Resident Evil $150–160m NO at8¢ / $1.04**, zero matched,
+independently verified14:50:51. Order
+`0xdbe03b86d79d069826291fb0b61aa13d03e41720284fde2b9b92716c28e84dd2`;
+CID`0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6`.
+Both film cases183/2161 outcome balances are0 atPolygon95753136.
+Nine BUY commitments17.16, pUSD22.096890/free4.936890; nine linked reservations.
+**Cancel every unfilled share before this active run ends**, earlier on source
+change/uncertainty. One family/$1.04 full-loss cap, noadd/repost/secondleg.
+NO42% central/17% selected stress is uncalibrated; compound stress7.28%
+reverses8¢. Friday remains estimated and weekend unpublished.
+[Entry, exact token, sources and final outcome](../research/2026-10-17-deep-review/film2161_entry_1450.md).
+
+**Messi original DEC-0213 is fully filled:** YES5 at27¢/$1.35, successful
+Polygon95752007 at14:22:38; authenticated maker trade, receipt and indexed
+totalBought5 agree. Root independently proved +5CTF/−1.35pUSD/no project gas.
+At14:44:36 the vetted locked reconciler retired only that reservation9→8;
+eight other bids16.12/free5.976890 preceded the new film pilot.
+Retain5YES/noadd; original Nov1 BUY pull is obsolete after full fill.
+[Source, exit and joint-risk review](../research/2026-10-18-messi-fill.md).
+OpenRouter112 still pulls **today22UTC**, BOI/Idaho Oct19 22UTC, Sedgwick Oct19 10UTC;
+earlier load-bearing uncertainty cancels first. Earlier snapshots below are dated.
+
 ## October 18 13:03 UTC — Bank of Israel bid verified; nine BUYs remain
 
 **New LIVE BUY: 15 NO at 7¢, 1.05 pUSD full-fill risk**, DEC-0215. NO means a

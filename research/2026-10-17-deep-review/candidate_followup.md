@@ -1,22 +1,18 @@
 # Candidate follow-up — dated, not an execution certificate
 
+**Final financial follow-up, October18 14:58:02 UTC:** film DEC-0216 is **canceled unfilled**, terminal canceled/confirmed trade matches0/both film cases CTF0 after300s grace. Only its reservation9→8 was retired; **eight LIVE/zero-matched BUYs, $16.12 pending, pUSD22.096890/free5.976890**, fixed Polygon95753423. No film holding, cash spend, realized PnL or add/repost; temporary film feed/keyword retired after proof. The14:50 acceptance below is dated history. Messi remains5YES/noadd. [Final outcome](film2161_entry_1450.md).
 
-## Current research pointer — October 18, 13:46 UTC
 
-The effective checkpoint records **250 valued, 2 blocked, 331 factual exclusions
-and 2,417 pending**, with no active case: 583 base records and 22 revisions,
-counted once. The [checkpoint](../../notes/deep_review_checkpoint.json) and
-[index](INDEX.md) govern. Case 154 is 63% YES with a 20-point reserve and entry
-deferred. Case 182 is 36% YES; case 35 is revised to 57% YES; case 112 remains
-11% YES after source-only review. See [154](revisions/0154_20261018T132229289334Z.md),
-[182](evaluations/0182.md), [35](revisions/0035_20261018T133807876978Z.md), and
-[112](revisions/0112_20261018T133808603216Z.md).
 
-Case 137 BOI DEC-0215 was observed LIVE and unfilled at 13:03:57 UTC: 15 NO at
-7¢ ($1.05). This is a dated proof, not current state; no add or repost. The
-actual 20-point reserve selects NO 12%. Pull by the existing October 19 22:00 UTC
-deadline, earlier if evidence becomes uncertain. Case 112’s existing 22:00 UTC
-review/pull is unchanged. See [BOI order proof](../../data/deep_review_20261017/boi137_postsubmit_1305.json).
+## Current research pointer — October 18, 14:50 UTC
+
+The checkpoint remains **254 valued, 2 blocked, 331 factual exclusions and 2,413 pending**, with no active case: 587 base records and 24 revisions; next pending index 196. The [checkpoint](../../notes/deep_review_checkpoint.json) and [index](INDEX.md) govern.
+
+**Messi fill:** five Global Athletes top-five YES shares filled at 27¢ ($1.35) at 14:22:38 UTC. The vetted reconciliation retired only that reservation (9→8); keep the 60% central / 40% selected-stress forecast and 20–90% range, with no add. See [fill and hold summary](../../research/2026-10-18-messi-fill.md).
+
+**Resident Evil:** case 183 is 40% YES; case 2161 is 58% YES / 42% NO. The one-family cap is $1.04; NO2161 at 8¢ was accepted for 13 shares (order `0xdbe03b86d79d069826291fb0b61aa13d03e41720284fde2b9b92716c28e84dd2`). Independent proof at 14:50:51 UTC records it LIVE, 0 matched, and both film outcomes at zero CTF balance. Nine BUYs were LIVE/0 matched, $17.16 pending, pUSD $22.096890 and $4.936890 free at that fixed-block read. No add, repost, or second family leg. Cancel every unfilled remainder before the active run ends, earlier if material evidence changes or uncertainty arises. See [entry decision](../../research/2026-10-17-deep-review/film2161_entry_1450.md) and [post-entry proof](../../data/deep_review_20261017/film2161_postentry_1455.json).
+
+Other recent valuations: case 187 36% YES (hourly nomination-odds leader, not nomination winner); case 194 91% YES (All Critics source/view limitation); case 197 43% YES conditional on its October 18 14:15 UTC spot snapshot. Case 35 is 57% YES under the [joint OpenRouter refresh](models/openrouter182_joint_refresh_1400.json). These are research observations, not live market prices. The last dated review/pull times are case 112 today, October 18 at 22:00 UTC; BOI137 and Idaho October 19 at 22:00 UTC; Sedgwick October 19 at 10:00 UTC. Revalidate state and all gates before any further action.
 
 ## Prior research pointer — October 18, 12:15 UTC (superseded)
 
