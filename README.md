@@ -65,7 +65,7 @@ reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
 was delivered in chat and Telegram. The [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
-remains the dated inspection record for that checkpoint. At the 03:14 UTC checkpoint, the frozen 3,000-market review had **210 valued, 3 blocked, 327 factual exclusions and 2,460 pending** across 540 canonical records, with no active case. Case 92 remains blocked because its complete post-creation CME active-month daily-high history is unresolved; case 96 is valued at 0.5% YES with no entry. These are review counts, not a new milestone notification. The live [index](research/2026-10-17-deep-review/INDEX.md) and [checkpoint](notes/deep_review_checkpoint.json) govern current status.
+remains the dated inspection record for that checkpoint. At the 03:04 UTC checkpoint, the frozen 3,000-market review had **209 valued, 3 blocked, 327 factual exclusions and 2,461 pending** across 539 canonical records. Case 92 is blocked, not valued: its complete post-creation CME active-month daily-high history is unresolved, so no probability was saved. Case 96 is now active. The live [index](research/2026-10-17-deep-review/INDEX.md) and [checkpoint](notes/deep_review_checkpoint.json) govern current status.
 
 Nine valuations were added after milestone 200: 1602, 1607, 1826, 1910, 2058,
 2077, 2153, 2822 and 2962. All 15 exact conditions in the compound source
@@ -87,7 +87,7 @@ could not establish whether $147.27 had already been exceeded; its current price
 and headline search do not prove no prior breach. The 03:00 CME browser timestamp
 is approximate page-read time, not a timed HTTP capture; packet 0238 retains its
 separate timed receipt. See [case 92](research/2026-10-17-deep-review/evaluations/0092.md)
-and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json). Case 96 was completed at 0.5% YES, with no entry; its full rule, forecast, source analysis and dated quote economics are in [case 0096](research/2026-10-17-deep-review/evaluations/0096.md). Audit [0316](data/deep_review_20261017/ledger_audit_0316.json) checks its frozen identity and report hash, the 540-record ledger, CSV/checkpoint and protected financial files.
+and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json).
 
 Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
 review of four recent channel images/poster did not establish an authenticated,

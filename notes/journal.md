@@ -30932,18 +30932,6 @@ The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pendin
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
 
 
-## October 18 03:14 UTC — case 96 completed; no new money
-
-The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
-
-Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.
-
-
-## October 18 03:18 UTC — historical discovery snapshot archive
-
-A scoped reversible archive compressed nine completed Oct13–16 public thin-tail discovery snapshots from87,270,228 to18,601,056 bytes, reclaiming68,669,172 bytes. All9 entries and symlink aliases verified; two restore/hash/recompress/archive-only roundtrips passed. Financial files and prior archive manifests remained unchanged; no active `data/snapshots` input was altered. The manifest explicitly does not assert HTTP receipt binding. Free space increased from179,765,248 to248,283,136 bytes (236.78 MiB), above the180 MiB research floor. See [completion receipt](../data/deep_review_20261017/public_discovery_archive_completed_0318.json), [manifest](../research/2026-10-17-deep-review/ARCHIVED_PUBLIC_DISCOVERY_SNAPSHOTS.json) and [reader](../scripts/public_snapshot_archive.py).
-
-
 ## October 18 09:34 UTC — bounded fallback check; Michigan maker fill verified
 
 - Authoritative bankroll09:36:31–46UTC **196.43**, −.05 vs02:01; gas5.83,
