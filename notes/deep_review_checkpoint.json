@@ -1,21 +1,18 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-18T20:03:58.129445+00:00",
+  "updated_utc": "2026-10-18T20:23:10.762443+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 283,
-  "completed_valuations": 279,
+  "completed_in_depth_reviews": 284,
+  "completed_valuations": 280,
   "blocked_after_in_depth_review": 4,
-  "factual_exclusions": 338,
-  "pending": 2379,
+  "factual_exclusions": 343,
+  "pending": 2373,
   "active_indices": [
-    260
+    262
   ],
   "next_pending_indices": [
-    260,
-    261,
     262,
-    263,
     264,
     266,
     268,
@@ -25,9 +22,6 @@
     276,
     278,
     280,
-    281,
-    284,
-    285,
     286,
     287,
     288,
@@ -41,15 +35,21 @@
     297,
     298,
     299,
-    300
+    300,
+    301,
+    302,
+    304,
+    305,
+    306,
+    307
   ],
-  "base_records": 621,
+  "base_records": 627,
   "base_record_counts": {
     "blocked_after_review": 5,
-    "excluded_factual": 338,
-    "valued": 278
+    "valued": 279,
+    "excluded_factual": 343
   },
-  "revisions_written": 28,
+  "revisions_written": 31,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -60,8 +60,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 621,
-  "ledger_sha256": "3b59fb6bc0fb95012691e381124e466d518afb1bef7dbb2bda3e89597ec46342",
-  "revisions_sha256": "76ec62d42ccd6feff2d13a42b299f4bbe310ad47820d62d52da5f61e24ab5ad5",
+  "evaluations_written": 627,
+  "ledger_sha256": "56fb27164a49f4badcc62cdb7417a34a72ee42c89aa013d07fb35c02ebb8fc52",
+  "revisions_sha256": "8c7b9bcdd88221e894e6780506978d6b37eb7aff34b3679f92814df32fda3695",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

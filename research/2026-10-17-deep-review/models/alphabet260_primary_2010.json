@@ -1,0 +1,46 @@
+{
+  "review_index": 260,
+  "adopted_utc": "2026-10-18T20:07:19.036697+00:00",
+  "condition_id": "0x0f5fcde4109ac8d2672d822d50b8768696833baaf8959884c6016e2b0ad3e4a5",
+  "criteria_sha256": "bff707203cec4c9f2476578aeae701a65bd8cb45155e5f41cbff8ab4241692b2",
+  "p_yes": 0.585341165,
+  "range": [
+    0.25,
+    0.9
+  ],
+  "entry_reserve_pp": 20,
+  "literal": "Exactlythird worldwidecompanymarketcap onOct31marketclose, consensuscredible reporting. Rank1/2or4+lose. Oct31Saturday has noexplicitnontradingdayfallback; modeledOct30USregularclose, companylevelAlphabetclassescombined/BvaluedlikeA. These are conventionsensitivity, notbindingruleclarification.",
+  "same_path_joint": {
+    "outcome_order": [
+      "NVDA",
+      "AAPL",
+      "MSFT",
+      "Alphabet",
+      "Other"
+    ],
+    "third_place_probabilities": [
+      0.033019965,
+      0.04551398499999999,
+      0.329824885,
+      0.585341165,
+      0.0063
+    ],
+    "sum": 1
+  },
+  "method": "Same100kdraw/cell seed19620261018, recent20/long89centereddailycovariance,10sessions. Independent8%logearningsshocksMSFT/Alphabet,3%NVDAevent, Apple0incrementalbeforeNov2call; equalwindowweights. Root reviewedcode/inputs and all16MSFTreproductionassertions.",
+  "primary_sensitivity": "Alphabetbaseexactthird61.1215%;Gaussianwithoutnewearningsshocks72.5-89.1%, correlatedearnings61.3-69.6%,wideearnings43.9-46.6%,MSFT+5%relative44.8-48.5%,MSFT-5%69.7-77.7%. Models choices notindependentalpha or empirical posterior.",
+  "joint_fork_adoption": "Primary adopts .95*(.98*4firmrankvector+.02*uniform5inclOther)+.05*[.1,.1,.5,.25,.05]. Previous196outsider/conventionfork describedonlyitsmarginal; new5stateforknormalizesall. MSFTraw32.9825%stillround33; useexactjointforfamilyallocation, notsumroundedreports. Asymmetricconsensusforkweightsarejudgment: shareclassaggregationchange canfavorMSFT; not fittedtoPMprices.",
+  "source_dates": "Oct16NASDAQcloses340.59GOOGL/336.91GOOG corrected from mislabelledOct14collectorfields; originalmodelalreadycorrect. Issuerdatedsharecounts/currentvendors differ, notOctober31shares. VendorAlphabet4.120T vsissuer4.1451T; two sourcesnotcredibleconsensusproof.",
+  "events": "MSFT/AlphabetOct28earnings, NVDAOct21GTC; pricejumps/changeinrelativegrowthpossible. No earningsbeat or directionalreturnforecast implied.",
+  "main_limitations": "Historicalcovariance/8%earningsshockscale/windowweightsfixedsharesuncalibrated; Saturdayvendor/shareclass/outsiderforks subjective.20ppreserve notfloor; broad25%YESupside90% allowsmodelbreaks. ExistingHLE/OpenRouter shareAI/techregime; noindependencehedgecredit.",
+  "source_units": [
+    "data/deep_review_20261017/work/0260_facts.json",
+    "data/deep_review_20261017/work/0260_joint_diagnostic.json",
+    "data/deep_review_20261017/work/0196_price_date_correction.json"
+  ],
+  "inputs_sha256": "32dafab53f6f77deb6ef862d670824e3f9fe7b5366393d3a27f688d32f2cfca7",
+  "code": "research/2026-10-17-deep-review/models/marketcap_joint_2005.py",
+  "own_case_quotes_accessed_before_model": false,
+  "old196_quotes_known": true,
+  "action": "Researchonly; fullcurrentvenue/source/fees/depth/account/catalyst/cap/challenge gatesbeforemoney."
+}

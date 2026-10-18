@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T20:03:58.129445+00:00
+Updated: 2026-10-18T20:23:10.762443+00:00
 
-**279 valuations saved; first milestone100:** 279 valued; 4 blocked after in-depth review. 338 factual exclusions separately; 2379 pending.
+**280 valuations saved; first milestone100:** 280 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2373 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -207,7 +207,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |194|[Will "You Can See Everything" score at least 96 on the Rotten Tomatoes Tomatometer?](evaluations/0194.md)|valued|NO ENTRY: currenthighscoredoesnotremoveuncertainty; bothdatedsides failactual15-pointreserve.|
 |195|[Spread: Galatasaray SK (-1.5)](evaluations/0195.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-|196|[Will Microsoft be the third-largest company in the world by market cap on October 31?](evaluations/0196.md)|valued|NO ENTRY: YES positivecentral fails actual20pp reserve; NO negativecentral.|
+|196|[Will Microsoft be the third-largest company in the world by market cap on October 31?](revisions/0196_20261018T202310554635Z.md)|valued|NO ENTRY unchanged: coherent updated shared rank model gives32.9411%YES; both dated taker sides fail20ppreserve.|
 |197|[Will the price of Ethereum be above $2,400 on October 19?](evaluations/0197.md)|valued|NO ENTRY: datedsource/old-booktimemismatch and no proven directional edge; currentboth-sidegatesneeded.|
 |198|[Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?](evaluations/0198.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |199|[Will Anthropic IPO by December 31, 2026?](evaluations/0199.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
@@ -271,6 +271,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |257|[Will Satoshi move any Bitcoin in 2026?](evaluations/0257.md)|blocked_after_review|BLOCKED AFTER IN-DEPTH REVIEW: missing requiredsource transaction/label history; notfactualirrelevance/marketclosure/small-modelrejection. Noentry or inventedp.|
 |258|[Will Elon Musk post 80-99 tweets from October 20 to October 27, 2026?](evaluations/0258.md)|valued|NO ENTRY: dated0.3cYES positivecentralEV but fails15ppuncertainty reserve;99.9cNO negativecentral. Quietweek model may be wrong bymorethanprice; no high-p bond/K5shortcut.|
 |259|[Will the Democratic Party win the CT-05 House seat?](evaluations/0259.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|260|[Will Alphabet be the third-largest company in the world by market cap on October 31?](revisions/0260_20261018T202309940497Z.md)|valued|NO ENTRY:5NO20c selected profit4.7552c below5c ops before carry after event-covariance adjustment; larger size can amortizeops but remains fragile to uncalibrated event sigma. Both taker sides fail reserve.|
+|261|[Spread: Notre Dame (-10.5)](evaluations/0261.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
+|263|[Will the highest temperature in Wuhan be 21°C on October 18?](evaluations/0263.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |267|[Charleston Southern vs. Clemson](evaluations/0267.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |269|[Will the highest temperature in Shanghai be 28°C on October 17?](evaluations/0269.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -279,8 +282,11 @@ Each report below is written before moving to the next evaluation. Related contr
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |279|[Spread: Paris Saint-Germain FC (-1.5)](evaluations/0279.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|281|[Will the highest temperature in Amsterdam be 14°C on October 17?](evaluations/0281.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |282|[Will the Democrats win the Ohio Senate race in 2026?](evaluations/0282.md)|valued|No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.|
 |283|[Will the Democratic Party win the NV-03 House seat?](evaluations/0283.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|284|[Will it rain in Seattle, WA on October 16?](evaluations/0284.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
+|285|[Senators vs. Flyers](evaluations/0285.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |291|[Florida vs. Texas](evaluations/0291.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |303|[FC Bayern München vs. RB Leipzig: O/U 4.5](evaluations/0303.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -634,4 +640,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 260
+Active indices: 262

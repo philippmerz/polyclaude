@@ -1,0 +1,87 @@
+{
+  "review_index": 196,
+  "market_id": "5166967",
+  "condition_id": "0x27802b8b0d6d500d6ccaf122c1efbc542b8473c765782bfe6d9b5cb425f76232",
+  "criteria_sha256": "620c8206d7ba64cb5cec9e25d2b466f109345abf878f3eef145c40b44deb0f05",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to the third-largest company in the world by market cap on October 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting. Exactly-third/calendar/universe/shareclass forks explicit.",
+  "evidence": [
+    {
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-06-01&todate=2026-10-16&limit=120",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "90 common Close/Last sessions through Oct16; MSFT529.05/NVDA214.13/AAPL343.46/GOOGL340.59/GOOG336.91. Root verified raw gzip hashes and date rows."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "Dated filed shares, one Alphabet A/B/C company; B=A and constant quarterly shares remain assumptions."
+    },
+    {
+      "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "MSFT Oct28 afterclose earnings before assumed Oct30 endpoint; Alphabet also Oct28, Apple Nov2 beyond window."
+    },
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-18T17:46:44.952663+00:00",
+      "finding": "Secondary worldwide coverage: MSFT fourth, Alphabet third; CMC Alphabet4.120T differs from explicit4.145T class arithmetic. Listed SpaceX is not excluded as private. Vendor cap timestamps and October shares remain unharmonized."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.329824885,
+    "low": 0.08,
+    "high": 0.65,
+    "method": "Explicit normalized five-outcome shared-rank family with unchanged basepath MSFT16cells and coherent outsider/consensus branches.",
+    "reasoning": "Core32.3335%MSFTthird unchanged;95%*(98%core+2%uniform5)+5%consensusMSFT.5 =>32.9824885% vs old33.0774885%, both display33%. ExactvectorNVIDIA3.302%,Apple4.5514%,MSFT32.9825%,Alphabet58.5341%,Other.63%sums1. Uncalibrated parameters retained; no price-dateinput change.",
+    "calibration": "Subjective parameters, not posterior/calibratedfloor."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "source": "prior196 dated economics retained; no newquote",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "actual_entry_reserve_pp": 20,
+    "sides": {
+      "Yes": {
+        "probability": 0.329824885,
+        "selected_stress_probability": 0.129824885,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "taker_cost_usd": 2.16636,
+        "central_expected_profit_usd": 1.1318888500000002,
+        "selected_stress_profit_usd": -0.86811115,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6701751149999999,
+        "selected_stress_probability": 0.4701751149999999,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "taker_cost_usd": 8.064,
+        "central_expected_profit_usd": -1.3622488500000003,
+        "selected_stress_profit_usd": -3.362248850000001,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY, unchanged. Raw probability slightly revised to keep all third-place company outcomes coherent; historical price inputs were already correct, no newstockprice/account/asset action.",
+  "reopen_condition": "YES<=10c or NO<=44c research triggers plus harmonizedcap/weekend/event-tail support and fresh portfolio/execution gates.",
+  "extra": {
+    "family_model": "research/2026-10-17-deep-review/models/alphabet260_primary_2010.json",
+    "diagnostic": "data/deep_review_20261017/work/0260_joint_diagnostic.json",
+    "source_correction_audit": "data/deep_review_20261017/work/0196_price_date_correction.json",
+    "actual_entry_reserve_pp": 20,
+    "priority_followup": true,
+    "entry_approved": false,
+    "rounded_p_yes_unchanged": 0.33
+  },
+  "evaluated_utc": "2026-10-18T20:10:34.678160+00:00",
+  "question": "Will Microsoft be the third-largest company in the world by market cap on October 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 196,
+  "revision_reason": "Normalize shared third-place company/outsider states for260; unchanged observedprice inputs and rounded196forecast/no-entry.",
+  "prior_report_sha256": "a2804b1d0223cff50f14432a1b890f09a7acd280fe684be7b2dcd693f14c3e88",
+  "report_sha256": "888004c79a3096026c568ed97acc48333f621abf18a2cbb23f1711d896f55939",
+  "report_path": "revisions/0196_20261018T201034677858Z.md",
+  "revision_path": "revisions/0196_20261018T201034677858Z.json"
+}

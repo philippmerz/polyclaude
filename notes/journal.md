@@ -31288,3 +31288,13 @@ No financial/daemon action, command replay, new valuation, CSV row or Telegram. 
 -257rootreadArkham53lineUI/defaultUSD>=1filter, no transactionrows. Aggregate1.096MBTCholdings cannotauditJan9onwardOutflow/Swaps orlabelhistory. Temporary403 notpermanentfallback; no inventedtiny/50%prior, bothsidecostsonly/EVnull.
 -258rootSHA/sumbinschecked7nonoverlap168hcompletedwindows;90%NBordinary+8%quiet+2%sourcefailure model2.9766%→3%. Zero7hits permits34.8%upper, notimpossibility;15ppreservefails0.3cYEScentraledge. APIexportaggregatebodydiscarded byworker; exactwindow347match notrootreproducible/typeaudit. Rawhistogramsretained;178countsafteroldlastSyncflag.
 - Latest12-casepubliccapture19:58:33:12exactidentities/12compactfees,20booksreturned/fouromitted, no prices inferredforomissions; primary futurecase quotes still unread. Namedunits<=6KB/rawarraysseparate.196source-dateaudit foundpreservedmodelalreadycorrect; no needlessrevision.260extension will preserveoldmodel and compare shared rank probabilities with coherent outsider/calendar branches before adoption.
+
+
+## 2026-10-18T20:24Z — rank-model audit; compact continuation
+
+280valued/4blocked/343factual exclusions/2,373pending;627base+31revisions;active262. Every finished evaluation indexed before continuation. Small per-case facts/models/reports and separate raw arrays avoid bulk-history ingestion.
+
+-260Alphabetexactthird: adopted shared event-adjusted model59.049%YES/40.951%NO,20ppreserve, noentry. OfficialJuly22Alphabet/July29MSFT after-close releases identify next-session returns already inside89-day covariance; remove those2jointrows, retain87/recent20unchanged, keep judgmental8%forward shocks. One confounded historicaljump per issuer is not calibration.5NO20c selectedprofit4.755c<5cops beforecarry;largersize couldamortizecost but not repair modelrisk.196shared p32.941%YES/noentry. [New model](../research/2026-10-17-deep-review/models/marketcap_primary_event_adjusted_2028.json); immutableoldrecords+linkedrevisions preserved.
+-Entry dryrun only:20cpassive price, missing explicit cluster mapping stops preview. No submission/reservation/account change. No false independentcluster created. Catalyst script completed; unmeasured75%persistence claim notadopted.
+-261/263/281/284/285 exactGammafullbindings independentlychecked againstSHAverifiedrawbodies:closed/nonaccepting20:19. Recorded separatelyasfactualexclusions; no payout/winner forecast.262fullGoogleGlobalActors rules/source-method read; historical/catalyst factcollection pending before ownquotes/model.
+-No newfinancialmark/TG. Last18UTCsafety remainsdated; next22heldreview unchanged.

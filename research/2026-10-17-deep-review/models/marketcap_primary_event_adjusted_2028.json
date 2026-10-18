@@ -1,0 +1,36 @@
+{
+  "adopted_utc": "2026-10-18T20:23:09.513264+00:00",
+  "company_order": [
+    "NVDA",
+    "AAPL",
+    "MSFT",
+    "Alphabet",
+    "Other"
+  ],
+  "rank_third_probabilities": [
+    0.031260375,
+    0.04253944,
+    0.32941059,
+    0.5904895949999999,
+    0.0063
+  ],
+  "sum": 0.9999999999999998,
+  "core_probabilities": [
+    0.024125,
+    0.03624,
+    0.32289,
+    0.616745,
+    0
+  ],
+  "primary_change": "Remove verified next-session July23Alphabet/July30MSFT joint return rows from long89-session covariance, retain87; recent20 unchanged. This reduces double counting when forward discrete earnings shocks are added. Entire-session deletion also removes other news; sensitivity, not guaranteed clean separation.",
+  "unchanged_assumptions": "10forward sessions; zero log drift; 100k draws/cell; equal20/87row covariance windows; independent8% MSFT/Alphabet forward log shocks,3%NVDA/0Apple; normalized five-state outsider/convention fork. Forward sigma remains judgment, not calibrated from one observed jump each.",
+  "historical_event_facts": "Verified primary after-close releases July22Alphabet andJuly29MSFT. Next-session log moves\u22127.2836%aggregateAlphabet/+14.4159%MSFT; confounded and sparse. EarlierQ1pricesmissing, not zeros.",
+  "method_summary": "data/deep_review_20261017/work/0260_event_exclusion_sensitivity_2026.json",
+  "arrays": "data/deep_review_20261017/work/0260_event_exclusion_rank_marginals_2026.json",
+  "arrays_sha256": "5f7d54d1dcb30902326ea5bacb4f38646dd8d23a942adb3e02349027fb77815d",
+  "event_history": "data/deep_review_20261017/work/0260_earnings_event_history.json",
+  "reserve_pp": 20,
+  "no_entry": "Alphabet5NO20c risk1: selected profit0.047552025<0.05built-inops before~0.0017datedcarry;10NO2 could amortizeops but still fails uncalibrated6%countermodel and consumes operationalfloat. No size escalation to rescue a fragile edge. MSFT bothsidesfail20ppreserve.",
+  "own_prices_known_at_revision": true,
+  "revision_rationale_not_quote_fit": "Verified historical event dates permit background/event separation; shocks/window/forkweights unchanged, and all family marginals updated together."
+}

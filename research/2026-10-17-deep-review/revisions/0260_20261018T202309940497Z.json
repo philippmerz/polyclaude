@@ -1,0 +1,200 @@
+{
+  "review_index": 260,
+  "condition_id": "0x0f5fcde4109ac8d2672d822d50b8768696833baaf8959884c6016e2b0ad3e4a5",
+  "criteria_sha256": "bff707203cec4c9f2476578aeae701a65bd8cb45155e5f41cbff8ab4241692b2",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to the third-largest company in the world by market cap on October 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting.\nExactlythird worldwidecompanymarketcap onOct31marketclose, consensuscredible reporting. Rank1/2or4+lose. Oct31Saturday has noexplicitnontradingdayfallback; modeledOct30USregularclose, companylevelAlphabetclassescombined/BvaluedlikeA. These are conventionsensitivity, notbindingruleclarification.",
+  "evidence": [
+    {
+      "url": "https://api.nasdaq.com/api/quote/GOOGL/historical",
+      "observed_utc": "2026-10-18T17:47:59Z",
+      "finding": "Correct Oct16GOOGL340.59/GOOG336.91, prior mislabeled collector fields not used by model; root verified dated row/hash."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "observed_utc": "2026-10-18T20:07:19Z",
+      "finding": "Dated July15 cover-class shares, modeled total A+B+C12.230B. Not Oct31 share count; unlistedB aggregation affects rank."
+    },
+    {
+      "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
+      "observed_utc": "2026-10-18T20:20:01.160428+00:00",
+      "finding": "Fresh primary release-date notice confirms Oct28 earnings; relative event volatility remains uncalibrated."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-18T20:20:01.160434+00:00",
+      "finding": "Official Oct27–28 FOMC calendar, additional common valuation event, no directional forecast."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/investor/earnings/fy-2026-q4/press-release-webcast",
+      "observed_utc": "2026-10-18T20:19:12.873475+00:00",
+      "finding": "Official after-close July29 release; matchedJuly30Nasdaqprice return+14.4159%log."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000066/googexhibit991q22026.htm",
+      "observed_utc": "2026-10-18T20:19:13.189339+00:00",
+      "finding": "Official after-close July22 release; matchedJuly23fixedclasscap return−7.2836%log. One confounded event, not sigma calibration."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.5904895949999999,
+    "low": 0.25,
+    "high": 0.9,
+    "method": "Shared normalized rank model with sourced July earnings sessions removed from background covariance.",
+    "reasoning": "Remove verified next-session July23Alphabet/July30MSFT joint return rows from long89-session covariance, retain87; recent20 unchanged. This reduces double counting when forward discrete earnings shocks are added. Entire-session deletion also removes other news; sensitivity, not guaranteed clean separation. 10forward sessions; zero log drift; 100k draws/cell; equal20/87row covariance windows; independent8% MSFT/Alphabet forward log shocks,3%NVDA/0Apple; normalized five-state outsider/convention fork. Forward sigma remains judgment, not calibrated from one observed jump each. Verified primary after-close releases July22Alphabet andJuly29MSFT. Next-session log moves−7.2836%aggregateAlphabet/+14.4159%MSFT; confounded and sparse. EarlierQ1pricesmissing, not zeros."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 20,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.5904895949999999,
+        "selected_stress_probability": 0.39048959499999986,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792353488452",
+        "book_age_seconds_at_receipt": 25.426,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 8.0,
+            "fee": 0.064,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.8
+              }
+            ],
+            "net": 8.064
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 7.9,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.79
+              }
+            ],
+            "net": 7.83364
+          }
+        },
+        "taker_cost_usd": 8.064,
+        "central_expected_profit_usd": -2.1591040500000016,
+        "selected_stress_profit_usd": -4.159104050000002,
+        "break_even_before_carry": 0.8064,
+        "break_even_constant_carry": 0.8077726341343452,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.40951040500000013,
+        "selected_stress_probability": 0.20951040500000012,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792353488452",
+        "book_age_seconds_at_receipt": 25.426,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.1,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.21
+              }
+            ],
+            "net": 2.16636
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.0,
+            "fee": 0.06401,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.2
+              }
+            ],
+            "net": 1.93599
+          }
+        },
+        "taker_cost_usd": 2.16636,
+        "central_expected_profit_usd": 1.9287440500000015,
+        "selected_stress_profit_usd": -0.07125594999999896,
+        "break_even_before_carry": 0.216636,
+        "break_even_constant_carry": 0.21700475244088296,
+        "current_execution_authorization": false
+      }
+    },
+    "maker_hypothetical": {
+      "side": "No",
+      "quantity": 5,
+      "price": 0.2,
+      "risk_usd": 1,
+      "maker_fee_assumed": 0,
+      "central_profit_before_ops_usd": 1.0475520250000006,
+      "selected_profit_before_ops_usd": 0.04755202500000055,
+      "built_in_op_cost_usd": 0.05,
+      "constant_20day_alternative_carry_usd": 0.0017021752658050726,
+      "execution_approved": false,
+      "diagnostic_summary": "data/deep_review_20261017/work/0260_event_vol_summary.json",
+      "dry_run_result": "NEED_REVIEW missing explicit correlation cluster; selected-price arithmetic passes; no writer invoked. This missing configuration is not the substantive investment rejection."
+    }
+  },
+  "verdict": "NO ENTRY:5NO20c selected profit4.7552c below5c ops before carry after event-covariance adjustment; larger size can amortizeops but remains fragile to uncalibrated event sigma. Both taker sides fail reserve.",
+  "reopen_condition": "Better calibrated incremental event risk, improved price or new relative-cap/convention evidence; revalue both sides and family allocation, complete current gates. No larger size merely to amortize fixed ops.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/alphabet260_primary_2010.json",
+    "diagnostic_summary": "data/deep_review_20261017/work/0260_event_vol_summary.json",
+    "actual_entry_reserve_pp": 20,
+    "entry_approved": false,
+    "priority_followup": true,
+    "candidate_maker_passed_selected_arithmetic": true,
+    "financial_mutation": false,
+    "family_model": "research/2026-10-17-deep-review/models/marketcap_primary_event_adjusted_2028.json",
+    "event_adjustment_adopted": true
+  },
+  "evaluated_utc": "2026-10-18T20:23:09.940836+00:00",
+  "question": "Will Alphabet be the third-largest company in the world by market cap on October 31?",
+  "market_id": "5166969",
+  "valuation_author": "primary_operator",
+  "original_index": 260,
+  "report_sha256": "ec7ae95dde48561ea33bdaec031685240de97b7549c0ac497395ffc2b5d61bc8",
+  "report_path": "revisions/0260_20261018T202309940497Z.md",
+  "revision_reason": "Verified July earnings-session dates permit background-covariance adjustment with shared-family normalization; forecasts/costs updated consistently.",
+  "prior_report_sha256": "9ae9ebc2b8720053e6e59980906a15b64347659c8193e24ff4897774f7f2964f",
+  "revision_path": "revisions/0260_20261018T202309940497Z.json"
+}

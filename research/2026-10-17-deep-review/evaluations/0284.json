@@ -1,0 +1,41 @@
+{
+  "review_index": 284,
+  "condition_id": "0x54b726cd75da95b89ff361db35cdb4421b054fa27a730c544a1e63877ae2a363",
+  "criteria_sha256": "c13bf2cb98481005bbae753f6918e95ed9b0dc5da2d21d5dbd8952303803df1f",
+  "status": "excluded_factual",
+  "literal_analysis": "This market will resolve to \"Yes\" if Seattle, WA records measurable precipitation on October 16, 2026. Otherwise, this market will resolve to \"No\".\n\nMeasurable precipitation means 0.01 inches or more as reported by the PRECIPITATION (IN) figure in the NWS Daily Climate Report (CLI) for the city's station.\n\nA report of trace (\"T\") does not qualify.\n\nThe PRECIPITATION (IN) figure measures total liquid-equivalent precipitation and does not distinguish between precipitation types.\n\nThe observation period is the NWS climate day for KSEA: midnight to midnight local standard time. The final CLI report for a climate day is issued the following morning.\n\nThis market will resolve according to the NWS Daily Climate Report as published by 2:00 PM ET on the day following the observation date. If multiple versions of the report are issued, the last version published before that time governs. If no figure has been published by that time, this market will resolve to \"No\".\n\nThe resolution source for this market is the NWS Daily Climate Report (CLI) for KSEA, published at https://forecast.weather.gov/product.php?site=NWS&product=CLI&issuedby=SEA.\nPrimary read full literal clauses. Current exact-bound contract closed/nonaccepting; exclusion is unavailable entry route, not a price/forecast or settlement assertion.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5727075",
+      "observed_utc": "2026-10-18T20:19:19.673234+00:00",
+      "finding": "Independent raw SHA/full binding checks passed; closed true and acceptingOrders false. UMA metadata not final payout proof."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "reason": "Closed nonaccepting route; no new price-independent forecast required for factual exclusion."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "entry_available": false,
+    "central_ev_usd": null,
+    "observation_only": true
+  },
+  "verdict": "FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.",
+  "reopen_condition": "Only exact contract reopens/accepts orders, then full renewed valuation/execution gates.",
+  "extra": {
+    "status_unit": "data/deep_review_20261017/work/gamma_status_0281_0284.json",
+    "raw_sha256": "5b34099151cb361525c1ccf86f5fc9e9ad33d8ff5ce28c3a4256c3d39bb6d16e",
+    "financial_mutation": false
+  },
+  "evaluated_utc": "2026-10-18T20:21:10.027988+00:00",
+  "question": "Will it rain in Seattle, WA on October 16?",
+  "market_id": "5727075",
+  "valuation_author": "primary_operator",
+  "original_index": 284,
+  "report_sha256": "7d0fa5d838ceb6b35edb9070d00ac36116b4eb9a222356946986c2e59c00bc35"
+}
