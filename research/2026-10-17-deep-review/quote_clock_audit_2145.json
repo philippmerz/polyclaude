@@ -1,0 +1,151 @@
+{
+  "schema": "deep_review_quote_age_audit.v2",
+  "records_audited": 38,
+  "valid_records": 38,
+  "cases": [
+    196,
+    200,
+    201,
+    204,
+    206,
+    208,
+    218,
+    227,
+    228,
+    229,
+    235,
+    236,
+    238,
+    241,
+    242,
+    244,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    257,
+    258,
+    260,
+    262,
+    264,
+    266,
+    268,
+    272,
+    274,
+    275,
+    276
+  ],
+  "packets": {
+    "data/deep_review_20261017/quotes_resume_1745.json": {
+      "exists": true,
+      "packet_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+      "records": 25,
+      "valid_records": 25,
+      "errors": [],
+      "receipt_coverage": {
+        "transport_entries": 1,
+        "legacy_books_entries": 1,
+        "typed_books_batches": 0,
+        "request_body_captured": false
+      }
+    },
+    "data/deep_review_20261017/quotes_resume_2000.json": {
+      "exists": true,
+      "packet_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+      "records": 12,
+      "valid_records": 12,
+      "errors": [],
+      "receipt_coverage": {
+        "transport_entries": 25,
+        "legacy_books_entries": 0,
+        "typed_books_batches": 1,
+        "request_body_captured": true
+      }
+    },
+    "data/deep_review_20261017/quotes_resume_2140.json": {
+      "exists": true,
+      "packet_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+      "records": 1,
+      "valid_records": 1,
+      "errors": [],
+      "receipt_coverage": {
+        "transport_entries": 27,
+        "legacy_books_entries": 0,
+        "typed_books_batches": 1,
+        "request_body_captured": true
+      }
+    }
+  },
+  "historical_side_rows": 76,
+  "effective_cases": [
+    196,
+    200,
+    201,
+    204,
+    206,
+    208,
+    218,
+    227,
+    228,
+    229,
+    235,
+    236,
+    238,
+    241,
+    242,
+    244,
+    246,
+    247,
+    248,
+    249,
+    250,
+    251,
+    252,
+    253,
+    257,
+    258,
+    260,
+    262,
+    264,
+    266,
+    268,
+    272,
+    274,
+    275,
+    276
+  ],
+  "gate_crossings": [
+    {
+      "case": 275,
+      "record_type": "evaluation",
+      "record_path": "evaluations.jsonl:634",
+      "outcome": "Yes",
+      "old_gamma_anchor_age_seconds": -1.333,
+      "correct_book_age_seconds": 0.165
+    },
+    {
+      "case": 275,
+      "record_type": "evaluation",
+      "record_path": "evaluations.jsonl:634",
+      "outcome": "No",
+      "old_gamma_anchor_age_seconds": -1.333,
+      "correct_book_age_seconds": 0.165
+    }
+  ],
+  "standalone_freshness_verdict_cases": [],
+  "verdict_mentions_freshness_cases": [
+    200,
+    275
+  ],
+  "interpretation": "Case 275 is the only crossing: both sides move from -1.333s (first-Gamma anchor) to +0.165s (matching books receipt). Its verdict also cites independent reserve/probability and NO-side EV reasons; it is not timestamp-only. Case 274 moves 1.877s to 3.375s and remains inside the gate. Packet 1745 uses a validated legacy CLOB response body/hash plus global batch receive time, but does not preserve a request body or per-book request id; this provenance limitation is explicit. No other packet receipt gaps or hash mismatches were found. No record was edited.",
+  "method": "Every named packet was exact-frozen/Gamma checked. Each book was bound to the SHA-verified response row and transport receipt; modern packets additionally verify request-id, requested-token list, and per-row time.",
+  "full_rows_path": "data/deep_review_20261017/work/quote_age_audit_all_2145_rows.json",
+  "full_rows_sha256": "7e09142538a3ce671df0511f8db77a413d3b8a27ed69e55877dcf84053e5ac8c",
+  "primary_reviewed_utc": "2026-10-18T21:45:45.923869+00:00",
+  "root_test_result": "5 self-contained focused tests passed; independent real-packet275/274/276 ages/costs reproduced.",
+  "entry_consequence": "No new entry/exit/cancel/repost. Only275gatechanges; price/probability/reserve already independently reject. Execution always separately requires live gates."
+}

@@ -1,0 +1,88 @@
+{
+  "review_index": 286,
+  "market_id": "676790",
+  "condition_id": "0x579100804f34edc384d933b88ff8f403aa79bafd5018bb26f0a89285e1ddff29",
+  "criteria_sha256": "83a9b6787c824b5965c6c068cde873ae473e3edc3e5f3fe8b147f5291e2a43e9",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:18:09.134357+00:00",
+  "literal_analysis": "Actualfirstpublicstock sale bynamedcompany onrecognizedexchangecompletedbyDec31ET; announcements/privateSeriesD/secondaryOTCnotautomaticYES. M&A/ceaseNO. FrenchSAS andaffiliateidentitydated, notindefinitelegalbar.",
+  "evidence": [
+    {
+      "url": "https://mistral.ai/news/mistral-makes-sovereign-open-weight-ai-to-frontier/",
+      "observed_utc": "2026-10-18T20:16:50.581206+00:00",
+      "finding": "Sep8official3BSeriesD/>21Bpostmoneyprivatefinancing, notqualifyingIPO."
+    },
+    {
+      "url": "https://www.timeslive.co.za/news/sci-tech/2026-09-08-french-ai-company-mistral-hits-21bn-valuation-in-funding-round/",
+      "observed_utc": "2026-10-18T22:16:38.293Z",
+      "finding": "Sep8directCFOinterview optionalIPO/noactivediscussionsthen, dated40daysnotcurrentbar."
+    },
+    {
+      "url": "https://www.lemonde.fr/en/economy/article/2026/09/24/arthur-mensch-ceo-of-french-start-up-mistral-ai-ai-is-software-it-can-be-controlled_6757890_19.html",
+      "observed_utc": "2026-10-18T22:17:30.824470+00:00",
+      "finding": "RootSep24interviewread futurelisting/Europepreference, nospecific2026completiondate; browseronly/no rawtransportreceipt."
+    },
+    {
+      "url": "https://legal.mistral.ai/terms/mistral-ai-affiliates/",
+      "observed_utc": "2026-10-18T20:16:50.938570+00:00",
+      "finding": "Jul28FranceSAS952418325/affiliateidentities; no currentconversion/readinessfinding."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0563,
+    "low": 0,
+    "high": 0.25,
+    "method": "Mutuallyexclusive latentcurrentreadiness states plus conditional74daycompletion/qualifyinginterpretation. Primaryjudgmentalweights/conditionalrates, notempiricalIPOhazardcalibration.",
+    "reasoning": "88%ordinaryfunded×.01 +8%quietmaterialprep×.35 +3%quietnearlaunch×.65 +1%nonqualifying×0=.0563; directdatedinterviews/privatefunding informjudgment, noabsence-basedzero. 2.01–12.91prepmasssensitivity/broad0–25unfitted.",
+    "model_path": "models/mistral286_primary_2218.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "detail_path": "data/deep_review_20261017/work/0286_economics_2218.json",
+    "detail_sha256": "99f6bf0e5e82f5d80e3282af2be4566b42daf3d64416bc050b27990795908ec3",
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "actual_entry_reserve_pp": 10,
+    "hypothetical_gross_shares": 10,
+    "sides": {
+      "Yes": {
+        "probability": 0.0563,
+        "selected_stress_probability": 0,
+        "best_bid": 0.015,
+        "best_ask": 0.024,
+        "book_age_seconds_at_receipt": 16.84500002861023,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 0.24936999999999998,
+        "central_expected_profit_usd": 0.3136300000000001,
+        "selected_stress_profit_usd": -0.24936999999999998,
+        "break_even_constant_carry": 0.025096549714148885
+      },
+      "No": {
+        "probability": 0.9437,
+        "selected_stress_probability": 0.8437,
+        "best_bid": 0.976,
+        "best_ask": 0.985,
+        "book_age_seconds_at_receipt": 16.84500002861023,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 9.85592,
+        "central_expected_profit_usd": -0.41891999999999996,
+        "selected_stress_profit_usd": -1.41892,
+        "break_even_constant_carry": 0.9918979278127853
+      }
+    },
+    "no_current_execution_authorization": true
+  },
+  "verdict": "NO ENTRY: YEScentralpositive butselected0fails2.49%fee-inclusivecost;NOcentralnegative at98.56%cost. Fullreview/valued, notfactualexclusion.",
+  "reopen_condition": "Datedcurrentfiling/admission/timetable/issuerconversion/managementplan orprice versusindependentlyreservedforecast withfreshgates.",
+  "question": "Mistral AI IPO before 2027?",
+  "valuation_author": "primary_operator",
+  "original_index": 286,
+  "report_sha256": "35a17136a60bdb31d1b5ca2acaa24ca2f9f96c74ab88c65b66bc72d358af29cf"
+}

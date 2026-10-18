@@ -1,0 +1,84 @@
+{
+  "review_index": 280,
+  "market_id": "676741",
+  "condition_id": "0x55a5a4b50b7947482e95af8f638fa0b8d9a46740c5cd04c6799443e83565176a",
+  "criteria_sha256": "91e4cdee243e29f64aa55d5ff702ab5dd3c37e9f4067a90baeab84344e942b5a",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:10:53.570631+00:00",
+  "literal_analysis": "Largest globally by marketcap at Dec31,2026 marketclose/consensuscredible reporting. Rank1, notOct31rank1 orOct31exactthird; samefirmfacts do not substitute timehorizon/share-class/convention.",
+  "evidence": [
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-18T12:38:23.942175Z",
+      "finding": "Secondarytop10 ranksNVDA5.170T/AAPL5.012T/Alphabet4.120T/MSFT3.928T; Oct16closemappinginferred, datedshares/globalconsensusgap remains."
+    },
+    {
+      "url": "https://investor.apple.com/investor-relations/",
+      "observed_utc": "2026-10-18T20:54:12.762177+00:00",
+      "finding": "OfficialindexedAppleIRNov2FY26Q4callinsideDec31window; direct403/JSshellcapturelimit retained."
+    },
+    {
+      "url": "https://www.nyse.com/trade/hours-calendars",
+      "observed_utc": "2026-10-18T22:10:03.020152+00:00",
+      "finding": "2026Nov26/Dec25closed,Nov27/Dec24earlycloses;52futurecloseobservations countinghalfdayfullvariance. Rootbrowserofficialsource."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.4000935,
+    "low": 0.1,
+    "high": 0.8,
+    "method": "Fullfourfirmcorrelatedzero-logdrift52sessionrankpath; equal20/87covariance,8%allfirmshocks,normalizedfive-stateconventionfork.",
+    "reasoning": "Adopt equal20/87-row correlated four-firm zero-logdrift rank-1 model with independent8% terminal logshocks onallfour; AppleNov2 event included unlikeOct31case.52sessions includesNov26/Dec25closures; twohalfday sessionsfullvariance. Main statisticalmodel=baselinewithoutdirectionalalpha; longerhorizon permitsother-rival upsets. FixeddatedSECsharecounts/AlphabetBproxy, historicalcovariance and judgmental event/forkweights are not calibratedprobability or guaranteedbound.",
+    "model_path": "models/apple280_primary_2210.json",
+    "actual_entry_reserve_pp": 20
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "detail_path": "data/deep_review_20261017/work/0280_economics_2212.json",
+    "detail_sha256": "b2e41f4c28110aa5d3b39b633242d147bde0e649b11f4f7fcd1dc97cf9133d90",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "hypothetical_gross_shares": 10,
+    "actual_entry_reserve_pp": 20,
+    "horizon_days": 75,
+    "sides": {
+      "Yes": {
+        "probability": 0.4000935,
+        "selected_stress_probability": 0.20009349999999998,
+        "best_bid": 0.283,
+        "best_ask": 0.285,
+        "book_age_seconds_at_receipt": 18.447999954223633,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 2.93457,
+        "central_expected_profit_usd": 1.0663650000000002,
+        "selected_stress_profit_usd": -0.9336350000000002,
+        "break_even_constant_carry": 0.29533457069675545
+      },
+      "No": {
+        "probability": 0.5999065,
+        "selected_stress_probability": 0.3999065,
+        "best_bid": 0.715,
+        "best_ask": 0.717,
+        "book_age_seconds_at_receipt": 18.447999954223633,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 7.25117,
+        "central_expected_profit_usd": -1.2521050000000002,
+        "selected_stress_profit_usd": -3.2521050000000002,
+        "break_even_constant_carry": 0.729756379639672
+      }
+    },
+    "no_current_execution_authorization": true
+  },
+  "verdict": "NO ENTRY: YEScentralpositive butselected20.01%fails29.35%fee-inclusivecost;NOcentralnegative. Bothsidespass/no financial action.",
+  "reopen_condition": "Matchedcaps/sharecounts/event/convention evidence ormateriallylowerprice versusindependentreservedforecast withallfreshgates.",
+  "question": "Will Apple be the largest company in the world by market cap on December 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 280,
+  "report_sha256": "7872da3c84a235096563fa45b8df566fdcb26ad270373c7a1686d86292d5c49e"
+}

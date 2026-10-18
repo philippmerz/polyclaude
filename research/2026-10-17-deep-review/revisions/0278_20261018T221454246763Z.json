@@ -1,0 +1,179 @@
+{
+  "review_index": 278,
+  "market_id": "5713706",
+  "condition_id": "0x440cc1b3d8e8d396db4caae7ba165fddd3a000bf9ce454694d59d78561a31295",
+  "criteria_sha256": "2dbaa1efdea571a129affc2a4775fa46db6557953f92ad639812b8284a677cf3",
+  "status": "valued",
+  "literal_analysis": "Exact#2 US NetflixTV forOct12–18 in expectedOct20 15ETupdate; chartRank, titlealphabeticalties; OtherifnotupdatedbyOct23 23:59ET. Notglobal/daily/top2/rank1. BostonS11sameUSseriesidentifiedbyofficialseason/city, notNetherlandsorallseasonviewsaggregation.",
+  "evidence": [
+    {
+      "url": "https://www.netflix.com/tudum/top10/united-states/tv",
+      "observed_utc": "2026-10-18T21:50:20.093981+00:00",
+      "finding": "CapturedchartprecedingOct5–11, Below1/EastofEden2; targetOct12–18unobserved."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/top10/data/all-weeks-countries.tsv",
+      "observed_utc": "2026-10-18T21:50:20.093981+00:00",
+      "finding": "Rootverifiedraw/gziphash, extractedcountryUS/TV/seasonfirstweeks; LIBS2–10rank2twoof9, notcalibration. DatasetendsOct4; fullfetchmetadataunavailable."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/articles/love-is-blind-season-11-release-date-news",
+      "observed_utc": "2026-10-18T21:50:20.093981+00:00",
+      "finding": "OfficialS11BostonOct14first5episodes, nextOct21; not6."
+    },
+    {
+      "url": "https://www.netflix.com/tudum/articles/new-on-netflix",
+      "observed_utc": "2026-10-18T21:50:20.093981+00:00",
+      "finding": "BelowOct8/DiplomatS4Oct15/newS11Oct14 inofficialcalendar, notcurrentviewcounts."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.65,
+    "low": 0.35,
+    "high": 0.99,
+    "method": "Primarysource-drivenrevisionusingdatedUSdailyproxies/cumulative-vs-dailycompetitorlogic, explicitjudgmentalmixture, nofit/calibration.",
+    "reasoning": "NewdatedUSdailyproxyearlyLIB#2thenlate#3,Diplomat#3then#2 supportslaunch-weekcumulativeleadmissingfrominitialhistoricalmixture; pYESraised31.1→65. No weeklyviewcounts/dailytoweeklycalibration, soreserveincreased15→25ratherthanretainfalseprecision.",
+    "model_path": "models/netflix278_after_daily_2155.json",
+    "actual_entry_reserve_pp": 25
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2140.json",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "gamma_received_utc": "2026-10-18T21:39:26.120+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 6.0,
+    "actual_entry_reserve_pp": 25,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.65,
+        "selected_stress_probability": 0.4,
+        "best_bid": 0.973,
+        "best_ask": 0.991,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792359567623",
+        "book_received_utc": "2026-10-18T21:39:27.743+00:00",
+        "book_age_seconds_at_receipt": 0.12000012397766113,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.91,
+            "fee": 0.00446,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.991
+              }
+            ],
+            "net": 9.91446
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.73,
+            "fee": 0.01314,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.973
+              }
+            ],
+            "net": 9.71686
+          }
+        },
+        "taker_cost_usd": 9.91446,
+        "central_expected_profit_usd": -3.41446,
+        "selected_stress_profit_usd": -5.91446,
+        "break_even_before_carry": 0.991446,
+        "break_even_constant_carry": 0.9919519831234691,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.35,
+        "selected_stress_probability": 0.09999999999999998,
+        "best_bid": 0.009,
+        "best_ask": 0.027,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792359567623",
+        "book_received_utc": "2026-10-18T21:39:27.743+00:00",
+        "book_age_seconds_at_receipt": 0.12000012397766113,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.27,
+            "fee": 0.01314,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.027
+              }
+            ],
+            "net": 0.28314
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.09,
+            "fee": 0.00446,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.009
+              }
+            ],
+            "net": 0.08553999999999999
+          }
+        },
+        "taker_cost_usd": 0.28314,
+        "central_expected_profit_usd": 3.21686,
+        "selected_stress_profit_usd": 0.7168599999999998,
+        "break_even_before_carry": 0.028314,
+        "break_even_constant_carry": 0.02832845001155676,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: one cappedUSD1maker attempt SKIP at2c>1chardcap; auth/reservations/CTFsunchanged. Candidateclosed/no retry; noholding/spend/financialwriter.",
+  "reopen_condition": "Freshindependent source/price/conditional-fillrisk evidence withallcurrentgates; noautomaticretry/repost orreplay ofdatedattempt.",
+  "question": "Will \"Love Is Blind: Boston\" be the #2 US Netflix show this week?",
+  "valuation_author": "primary_operator",
+  "original_index": 278,
+  "revision_reason": "Completed one bounded financialfollow-up: primary1c cap rejectedcurrent2c; independentaccount/chainprove noentry. No probability change or retries.",
+  "prior_report_sha256": "425d1c763d3ddd5996f628e03209c15534864878fb366c8cb04fa420a2d8416e",
+  "revision_path": "revisions/0278_20261018T221454246763Z.json",
+  "entry_followup": {
+    "primary_cap_raw": 0.01,
+    "single_attempt_receipt": "data/deep_review_20261017/work/0278_execute_once_receipt.json",
+    "post_skip_proof": "data/deep_review_20261017/work/0278_after_skip_2215.json",
+    "post_skip_sha256": "6145ded7248c53840b9afcf64bed5f314b89fa0cf9971590c6c6da4d1e8de3dc",
+    "financial_state_changed": false,
+    "candidate_closed": true,
+    "outcome_report": "research/2026-10-17-deep-review/netflix278_entry_outcome_2215.md"
+  },
+  "evaluated_utc": "2026-10-18T22:14:54.247059+00:00",
+  "report_sha256": "bb8a675a19e6b0d29255851f16d34bdc5809bbeb7ce10f22da94092c8cdc600b",
+  "report_path": "revisions/0278_20261018T221454246763Z.md"
+}

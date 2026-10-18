@@ -16,6 +16,8 @@ A complete valuation explains resolution rules and timing/fallback/rounding, cit
 
 Research records do not authorize execution. Any later action needs current exact venue identity, fresh eligible books and fee data, current bankroll and open commitments, portfolio/correlation limits, and the vetted execution path. Revalidate at decision time; dated quotes and account snapshots are not live gates.
 
+For saved-quote math use `scripts/deep_review_economics.py` with an explicit packet path. Gamma economics fields and books must bind to hash-verified raw receipts; [binding audit](gamma_binding_audit_2226.md). Book age uses its matching CLOB response, never Gamma time. [Clock erratum](quote_clock_audit_2145.md) covers older helper output; prices/probabilities stay unchanged and material corrections append.
+
 ## Records and progress
 
 Every case starts pending. Use `scripts/deep_review_ledger.py start --index N` before work. After each finished case—not a batch—save the primary-authored input and run `record --input PATH`. This writes immutable base JSON/Markdown, append-only ledger, effective index, progress, and checkpoint. Partial work stays in bounded work/source directories. Verify saved identity, hashes, status, and checkpoint before moving on.
@@ -29,3 +31,6 @@ At each authorized milestone, report valued, blocked, excluded, and pending coun
 ## Resume and safety
 
 After interruption or compaction, read the checkpoint and resume packet, then inspect the selected case and latest verified revision. Refresh the compact handoff after material checks or decisions. Historical notes/archive are evidence only; do not replay old trades, snapshots, deadlines, or instructions. Preserve unrelated changes and immutable financial records. This protocol creates no indefinite goal, timer, watcher, or idle continuation.
+Sourceorigination matters: directmanagement interviews carried by crediblepublishers are primaryevidence; issuer-domain-only searches can miss them. An emptynewsroom/filingsearch is boundedcoverage, not proof ofabsence.
+
+Creation-date clauses require a verified creation timestamp; do not assume a title or effective date defines the full event window.

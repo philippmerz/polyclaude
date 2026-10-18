@@ -1,0 +1,171 @@
+{
+  "review_index": 275,
+  "market_id": "5394325",
+  "condition_id": "0xc471650d86824b9990dbad861bdb416588a914bd88fffcee65ed8e5b843eaa93",
+  "criteria_sha256": "c7e5eeef988420a29c503f56dd479f1a06db9c9f854024406b8da7914f112a75",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T21:45:46.422920+00:00",
+  "literal_analysis": "Final domestic weekend25M<=gross<30M; preview amount already included in Friday total. Ambiguous finality waits for both designated sites; fallback after Oct23 23:59ET, not immediate resolution on passed GammaendDate.",
+  "evidence": [
+    {
+      "url": "https://www.the-numbers.com/movie/Street-Fighter-(2026)",
+      "observed_utc": "2026-10-18T21:36:28.938011+00:00",
+      "finding": "Root verified title and datedweekend31M/currentdaily13+10.8+7.2; no explicitfinal label."
+    },
+    {
+      "url": "https://www.the-numbers.com/?v=1.0.26",
+      "observed_utc": "2026-10-18T21:36:28.938011+00:00",
+      "finding": "SHA-verified directOct18 article explicitlyattributes31M to Paramount Sundayprojection; matching old forecasts not independent."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/title/tt27419420/",
+      "observed_utc": "2026-10-18T21:36:28.938011+00:00",
+      "finding": "Current31M opening display, finality not established. Older13M snapshot superseded; not sourceabsence."
+    },
+    {
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/09",
+      "observed_utc": "2026-10-18T21:36:28.938011+00:00",
+      "finding": "One of three bounded estimate→opening pairs; rawtitlehashes verified but old Sundayarticle evidence is renderedexcerpts, not serverbody archive."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.06864306149345953,
+    "low": 0.01,
+    "high": 0.3,
+    "method": "Primary mixture of routine/atypical final-revision widths and small source fork; judgmental, not calibrated to3comparisons.",
+    "reasoning": "Most final revisions should be much smaller than1M given accrued weekend receipts. A meaningful heavy-tail component covers frontloaded fandom and poor comparison coverage. Sigma0.5M/1.5M and80/18/2 weights are primary judgments, deliberately broader than three observed errors; they are not fitted estimates or confidence bounds. No repeat of pre-release37.6M forecast as fresh information.",
+    "model_path": "models/streetfighter275_primary_2138.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_capture_utc": "2026-10-18T19:58:35.378+00:00",
+    "gamma_received_utc": "2026-10-18T19:58:34.635+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 6.0,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.06864306149345953,
+        "selected_stress_probability": 0,
+        "best_bid": 0.02,
+        "best_ask": 0.038,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353515211",
+        "book_received_utc": "2026-10-18T19:58:35.376+00:00",
+        "book_age_seconds_at_receipt": 0.16499996185302734,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.38,
+            "fee": 0.01828,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.038
+              }
+            ],
+            "net": 0.39828
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.2,
+            "fee": 0.0098,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.02
+              }
+            ],
+            "net": 0.1902
+          }
+        },
+        "taker_cost_usd": 0.39828,
+        "central_expected_profit_usd": 0.2881506149345953,
+        "selected_stress_profit_usd": -0.39828,
+        "break_even_before_carry": 0.039828,
+        "break_even_constant_carry": 0.03984832616586433,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9313569385065404,
+        "selected_stress_probability": 0.8313569385065405,
+        "best_bid": 0.962,
+        "best_ask": 0.98,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353515211",
+        "book_received_utc": "2026-10-18T19:58:35.376+00:00",
+        "book_age_seconds_at_receipt": 0.16499996185302734,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.8,
+            "fee": 0.00981,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.98
+              }
+            ],
+            "net": 9.80981
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.62,
+            "fee": 0.01828,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.962
+              }
+            ],
+            "net": 9.601719999999998
+          }
+        },
+        "taker_cost_usd": 9.80981,
+        "central_expected_profit_usd": -0.4962406149345959,
+        "selected_stress_profit_usd": -1.496240614934596,
+        "break_even_before_carry": 0.9809810000000001,
+        "break_even_constant_carry": 0.981481642324891,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES positive centralEV but selected0 after unchanged10pp ordinaryreserve; NO centralnegative. At original matching receipt, books pass age0.165s; they are now dated research, not live gates. No financial action.",
+  "reopen_condition": "New actual/revised gross or finality confirmation/source dispute, or fee-inclusive price below independently selectedprobability with fresh full gates.",
+  "question": "Will \"Street Fighter\" Opening Weekend Box Office be between 25m and 30m?",
+  "valuation_author": "primary_operator",
+  "original_index": 275,
+  "report_sha256": "288216e380b3729c6ee9c9bcddbef54b5f6151dbdf7cc133a96f25b13a7e89b5",
+  "report_path": "revisions/0275_20261018T214546422619Z.md",
+  "clock_correction": "FirstGamma19:58:33.878 was wrong age anchor; matchingCLOBbook19:58:35.376 gives+.165seconds, rawrow/hashvalidated. No forecast/price/reserve change.",
+  "revision_reason": "Correct book age to matching CLOB receipt: +0.165s passes, not -1.333s; unchanged valuation/no-entry decision.",
+  "prior_report_sha256": "de4fb84a64d7bc9c7fead81270f72408ff93bb17bda6c313b6454660f0021df7",
+  "revision_path": "revisions/0275_20261018T214546422619Z.json"
+}

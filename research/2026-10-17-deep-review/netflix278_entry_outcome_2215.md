@@ -1,0 +1,10 @@
+#278 — closed unplaced:1¢cap rejected2¢quote
+
+**No Netflix order, holding, spend or reservation. No retry/add/repost.** One mandatoryvettedcall **22:12:18.457–22:12:20.033UTC**, rc0, returned **SKIP: signedrawBUYlimit.0200 exceedsmax-price.0100**. Actualmakerbook wasbid.010/ask.028; commoncentgrid chose2¢. The earlier1¢dryrun was dated, not an available persistent offer.
+
+- [Primaryone-attemptdecision](netflix278_entry_review_2215.md) tightened previous2¢cap to1¢ for conditional-fill/modelrisk;35%NO/25ppreserve unchanged. No price chase. The cap guard returned beforeentrylock/reservation/CLOBwriter; rc0 alone was not treated as execution proof.
+- Independentcompleteauthinventory22:13:41–42: **6LIVEBUY/$11.82/0matched**, sixfullycovering exactreservations, no278order. FixedPolygon**95770850/22:13:42UTC**: pUSD18.846890/both278CTF0. ExactCID/criteria/tokens verified. [Post-skipproof](../../data/deep_review_20261017/work/0278_after_skip_2215.json); rawauth0600/per-pageHTTPtiminggap retained. No trade-query/prune/cancel/financialwriter.
+- Requirednewstargetcoverage was established: existingnormalpoll emitted bothshowtitles22:06 after22:02config, no forcedpoll/restart. Coverage does not exposeNetflixinternalweeklyviewingcounts. AfterSKIP, removed onlythenewcandidateprior andoneaddedfeed/twoterms; **allotherpriors/configdeep-equalHEAD**, originalconfigSHA34c8a416…e9c6d restored. No unrelated/unheld RSS topic retained for this closedattempt; rawRSSTelegram remains disabled.
+- Forecast remainsYES65/NO35/rangeYES35–99;25ppreserve/selectedNO10. Currentfinancialdecision is **noentry** despite positive conditional modelEV at2¢. Fill-weighted/adverse-selectionEV remains uncalibrated; primarydoesnotwidenriskcap toforceatrade. No plannedNetflixpull nowexists. ExistingSedgwickOct19 10/Idaho22pulls unchanged.
+
+Model/daily-source revision remains preserved; this smalloutcome pluslatestappendrevision closesfinancialfollow-up. Reopenonlyfreshindependent source/price/conditional-risk evidence andfullcurrentgates; neverreplaythisdatedcall orplan.

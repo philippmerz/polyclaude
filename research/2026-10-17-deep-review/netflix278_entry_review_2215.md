@@ -1,0 +1,13 @@
+#278 — one bounded maker attempt authorized
+
+**Primary approves one USD1 ordinary post-only NO attempt, rawcap1¢, no retry/add/repost.** No order exists at this editorial decision. Exact market5713706/CID`0x440cc1b3d8e8d396db4caae7ba165fddd3a000bf9ce454694d59d78561a31295`; [latest fullcase](revisions/0278_20261018T215434468645Z.md).
+
+- Unchanged65%YES/35%NO,25ppreserve/selectedNO10%, broadNO1–65. Main uncertainty is nearly completed weekly season views, unobserved margins and source-to-series mapping. Daily ordinal rows cannot identify final weekly#2. FullUSD1 can be lost; no empirical hedge credit.
+- At1¢/100grossshares, conditional-on-fill central/selected terminal EV35/10 minus1cashcost before operations. This is **not fill-weighted expected profit**: maker fill probability and conditional information selection are unmeasured. A90%relative reduction in centralNO leaves3.5%, still above1¢; a99%YES conditional state eliminates nominaledge. Tinycashrisk limits damage; it does not prove conditionaledge.
+- Tighten prior2¢cap to1¢: keep cost at the broad1%NO endpoint beforecarry, accept SKIP if current commoncentgrid requires more. No price chase to obtain an investment. USD1 is the routefloor, about0.51% of21:54gross196.04; fullpendingrisk11.82 and existing holdings receive no diversification/hedge credit. Idealized3.1525%Aave carry on1 for4days is under0.00035 before realrouting costs.
+- Mandatorycatalyst rc0/full774criteria; its32%YES advisory lacked dailyproxy, not adopted. Primaryseason/dailycountercase/skeptic read; [source-revised model](models/netflix278_after_daily_2155.json). Publicidentity/rules/fees/eligibilityFIallowed/zero delay checked21:50; freshvettedwriter must recheck beforeplace.
+- Auth/chain22:04:54: no278order/indexedposition/bothCTFs0;6otherLIVEBUY11.82/6matchingreservations, pUSD18.846890/free7.026890. No replay of priorcancel/fill records.
+- Corrected singleRSSfeed normalpoll emitted exactLoveIsBlind22:06:32 andDiplomat22:06:35 after22:02config, no restart/forcedpoll. [Coverageevidence](../../data/deep_review_20261017/work/0278_news_coverage_2200.json). This covers public catalysts, not Netflixinternal viewing counts; partial/informed-fillrisk remains priced in reserve andcashcap.
+- Ifrested: reviewexisting02UTC and pullOct19**10UTC** withSedgwick, cancelFIRST onload-bearing uncertainty; noindefiniteorder. Verifypostresultagainstauthinventory/reservations/indexedpositions/fixedchain; ambiguousresponse halts/no automaticretry. Skip means closedattempt, not scheduledresubmission.
+
+Result belongs in a separate small outcome record immediately after the vetted call; this dated plan is not future execution authority.

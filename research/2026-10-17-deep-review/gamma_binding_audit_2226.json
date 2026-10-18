@@ -1,0 +1,54 @@
+{
+  "schema": "deep_review_gamma_binding_audit.v1",
+  "audited_records": 42,
+  "evaluations": 36,
+  "revisions": 6,
+  "source_binding_failures": 0,
+  "packet_hash_mismatches": 0,
+  "packet_hash_missing": 2,
+  "fee_curve_mismatches": 0,
+  "fee_curve_missing": 1,
+  "cost_mismatch_records": 0,
+  "cost_mismatch_fields": 0,
+  "freshness_gate_changed_records": 1,
+  "freshness_gate_changed_outcomes": 2,
+  "gamma_timestamp_mismatches": 0,
+  "records_without_cost_recompute_inputs": 0,
+  "detail_path": "logs/deep_review_20261017/gamma_binding_audit_rows_2220.json",
+  "detail_sha256": "62a377b95207f892d79d1c45fd8948c9f2e829cc68264fb60982e60d78a110f3",
+  "status_counts": {
+    "blocked_after_review": 2,
+    "valued": 34
+  },
+  "packet_hash_missing_records": [
+    {
+      "source": "evaluation",
+      "location": "evaluations.jsonl:620",
+      "index": 257,
+      "status": "blocked_after_review"
+    },
+    {
+      "source": "revision",
+      "location": "revisions/0228_20261018T190020686447Z.json",
+      "index": 228,
+      "status": "valued"
+    }
+  ],
+  "cost_incomparable_records": [],
+  "freshness_gate_changes": [
+    {
+      "index": 275,
+      "record": "research/2026-10-17-deep-review/evaluations.jsonl:634",
+      "status": "valued",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "recorded_gate": false,
+      "verified_gate": true,
+      "reason": "saved age used Gamma receive time; verified age uses matching CLOB books receipt. Stored fill costs and fee curve still match."
+    }
+  ],
+  "integrity_result": "All 42 referenced records bind current_gamma exactly to the hash-verified market response; IDs, slugs, CIDs, status, endpoint and receipt time validate. Zero actual packet-hash disagreements, fee-curve mismatches, cost mismatches or Gamma timestamp mismatches. Two records omit an expected packet hash as detailed above. Case228 revision omits serialized fee_curve; fees were independently recomputed from bound Gamma curve and stored side costs match.",
+  "limitations": "Offline only; receipt/raw hashes verify local capture consistency, not independent network authenticity. Cost comparison uses saved hypothetical quantity/fills and exact captured Gamma curve. No financial records modified."
+}

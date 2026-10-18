@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T21:40:30.959393+00:00
+Updated: 2026-10-18T22:26:45.197745+00:00
 
-**288 valuations saved; first milestone100:** 288 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2365 pending.
+**292 valuations saved; first milestone100:** 292 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2361 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -286,15 +286,19 @@ Each report below is written before moving to the next evaluation. Related contr
 |272|[Will the ECB announce no change at the October 2026 meeting?](revisions/0272_20261018T211341467717Z.md)|valued|NO ENTRY after source/model audit:85%YES/15%NO,unchanged15ppreserve/selectedNO0. CentralNOedgepositivebutunreliable; nofinancialwriter.|
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |274|[Will OpenAI have the best AI model at the end of December 2026?](evaluations/0274.md)|valued|NO ENTRY: YES positive central EV but selected probability0 after unchanged20pp reserve; NO central negative. No order writer or hedge credit.|
-|275|[Will "Street Fighter" Opening Weekend Box Office be between 25m and 30m?](evaluations/0275.md)|valued|NO ENTRY: YES positive centralEV but selected0 after10pp ordinaryreserve; NO centralnegative. Books also fail timestamp gate. No financial action.|
+|275|[Will "Street Fighter" Opening Weekend Box Office be between 25m and 30m?](revisions/0275_20261018T214546422619Z.md)|valued|NO ENTRY: YES positive centralEV but selected0 after unchanged10pp ordinaryreserve; NO centralnegative. At original matching receipt, books pass age0.165s; they are now dated research, not live gates. No financial action.|
 |276|[Netanyahu out by end of 2026?](evaluations/0276.md)|valued|NO ENTRY: YES marginalcentralpositive but selected24%fails41c; NO centralnegative. No financial action or independenthedgecredit.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|278|[Will "Love Is Blind: Boston" be the #2 US Netflix show this week?](revisions/0278_20261018T221454246763Z.md)|valued|NO ENTRY: one cappedUSD1maker attempt SKIP at2c>1chardcap; auth/reservations/CTFsunchanged. Candidateclosed/no retry; noholding/spend/financialwriter.|
 |279|[Spread: Paris Saint-Germain FC (-1.5)](evaluations/0279.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|280|[Will Apple be the largest company in the world by market cap on December 31?](evaluations/0280.md)|valued|NO ENTRY: YEScentralpositive butselected20.01%fails29.35%fee-inclusivecost;NOcentralnegative. Bothsidespass/no financial action.|
 |281|[Will the highest temperature in Amsterdam be 14°C on October 17?](evaluations/0281.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |282|[Will the Democrats win the Ohio Senate race in 2026?](evaluations/0282.md)|valued|No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.|
 |283|[Will the Democratic Party win the NV-03 House seat?](evaluations/0283.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |284|[Will it rain in Seattle, WA on October 16?](evaluations/0284.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |285|[Senators vs. Flyers](evaluations/0285.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
+|286|[Mistral AI IPO before 2027?](evaluations/0286.md)|valued|NO ENTRY: YEScentralpositive butselected0fails2.49%fee-inclusivecost;NOcentralnegative at98.56%cost. Fullreview/valued, notfactualexclusion.|
+|287|[Will Missouri enact a data center moratorium by December 31, 2026?](evaluations/0287.md)|valued|NO ENTRY: YEScentralpositivebutselected0fails2.18%fee-inclusivecost;NOcentralnegative at98.0785%cost. Fullreview/valued; notlawabsenceproof orfactualexclusion.|
 |291|[Florida vs. Texas](evaluations/0291.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |303|[FC Bayern München vs. RB Leipzig: O/U 4.5](evaluations/0303.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -647,5 +651,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 278

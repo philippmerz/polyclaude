@@ -1,0 +1,88 @@
+{
+  "review_index": 287,
+  "market_id": "5126791",
+  "condition_id": "0x544545e36d64d4b261bc1e6021bd93363ca1ef5f0e9a30c739110da921115fea",
+  "criteria_sha256": "edcdcef3990ed8394f91afe3bf1087f8320c81e2b70c8c947ae09cfb8926a255",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T22:26:44.791053+00:00",
+  "literal_analysis": "PostSep29creation statutory/constitutional enactedmandatorydefaultstatewidepause includingALLnew>100MW/facility; enactmentnotfutureeffect. Local/EO/agency/discretion/incentive-only/restrictionsnotqualifying. Objectivelytriggeredpausecanqualify; referendumelectiondayascertified; laterinvaliditynotundo.",
+  "evidence": [
+    {
+      "url": "https://documents.house.mo.gov/billtracking/bills261/sumpdf/HB3369I.pdf",
+      "observed_utc": "2026-10-18T20:17:00Z",
+      "finding": "IntroducedlocalStLouis-onlypause, notqualifyingstatewideenactment; statusindexedcommittee/staleconflict."
+    },
+    {
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?constit=y&section=III++20%28a%29",
+      "observed_utc": "2026-10-18T22:22:33.855812+00:00",
+      "finding": "Rootofficialtext: regularpassagedeadlineMay15/adjournMay30; predatesrawboundSep29marketcreation."
+    },
+    {
+      "url": "https://revisor.mo.gov/main/OneSection.aspx?constit=y&section=III++20%28b%29",
+      "observed_utc": "2026-10-18T22:22:33.855812+00:00",
+      "finding": "3/4eachhousecanpetitionspecial30days; GovernorIV9proclamationroute60days; possiblefuturestatute, notEOqualifier."
+    },
+    {
+      "url": "https://www.sos.mo.gov/petitions/2026BallotMeasures",
+      "observed_utc": "2026-10-18T22:19:44Z",
+      "finding": "IndexedcertifiedballotlistnonDC; rawopeninternalerror, notexhaustivelaterlaw/ballotabsence."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.04476,
+    "low": 0,
+    "high": 0.3,
+    "method": "Primary mutuallyexclusive dominantregimes forpostcreation qualifyingstatutory/constitutional enactment byDec31ET. Explicituncalibrated weights/conditionalrates; notempiricallawpassagerate orproofabsence.",
+    "reasoning": "Lowenactmentprobability followscalendar/qualifiedscope/datetime, notbroadDCsentiment orlocalmoratoriumcount. KnownHB3369StLouislocal;HB3390zoning25MWpermitsconditions;HB2239reporting/coolingAI>=100MWfrom2027, allintroduced/statusstaleconflict. Noqualifyingpostcreationactestablished; noexhaustivecurrentlegislativestatusclaim. Weightedregimes=.04476;backlashweight/conditionaljoint14.452%,uncalibrated.",
+    "model_path": "models/missouri287_primary_2225.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "detail_path": "data/deep_review_20261017/work/0287_economics_2226.json",
+    "detail_sha256": "3ed435c0799905e151a5327bfc14b1eb3e5d536ddcc9af7322b9cf838b2a9775",
+    "quote_capture_utc": "2026-10-18T21:39:27.746+00:00",
+    "quote_file_sha256": "d6ea510d3cd9764c8c035013cb291f0a605403b7c2f737cc4801adcf5c1aad28",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "actual_entry_reserve_pp": 10,
+    "hypothetical_gross_shares": 10,
+    "sides": {
+      "Yes": {
+        "probability": 0.04476,
+        "selected_stress_probability": 0,
+        "best_bid": 0.02,
+        "best_ask": 0.021,
+        "book_age_seconds_at_receipt": 25.861999988555908,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 0.21823,
+        "central_expected_profit_usd": 0.22937,
+        "selected_stress_profit_usd": -0.21823,
+        "break_even_constant_carry": 0.02196262599397968
+      },
+      "No": {
+        "probability": 0.95524,
+        "selected_stress_probability": 0.85524,
+        "best_bid": 0.979,
+        "best_ask": 0.98,
+        "book_age_seconds_at_receipt": 25.861999988555908,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 9.80785,
+        "central_expected_profit_usd": -0.25544999999999973,
+        "selected_stress_profit_usd": -1.2554499999999997,
+        "break_even_constant_carry": 0.9870601720893258
+      }
+    },
+    "no_current_execution_authorization": true
+  },
+  "verdict": "NO ENTRY: YEScentralpositivebutselected0fails2.18%fee-inclusivecost;NOcentralnegative at98.0785%cost. Fullreview/valued; notlawabsenceproof orfactualexclusion.",
+  "reopen_condition": "Datedqualifyingmandatoryalllargefacilitybill/call/enactment/certifiedballot orprice versusindependentreservedforecast plusfreshgates.",
+  "question": "Will Missouri enact a data center moratorium by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 287,
+  "report_sha256": "8ca5f880620eb0a83ca18432f3a1b47a03258e3d897bfa07aa867f1173cf4d8c"
+}
