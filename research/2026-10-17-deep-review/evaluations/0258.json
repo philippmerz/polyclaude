@@ -1,0 +1,164 @@
+{
+  "review_index": 258,
+  "condition_id": "0xaceb2a1c91e5f68cda1ee3461af58795ed2fcad71d68d64f0c3458a7576a897f",
+  "criteria_sha256": "ae16df93c49dd0f47c307e66698aee2764048c12e16994eeccd2180b422b15ff",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the number of times Elon Musk (@elonmusk), posts on X from October 20 12:00 PM ET to October 27, 2026 12:00 PM ET.\n\nFor the purposes of this market, only main feed posts, quote posts and reposts will count.\n\nReplies will NOT count towards the total - however, replies on the main feed such as https://x.com/elonmusk/status/1786073478711353576 will be counted by the tracker.\n\nDeleted posts will count as long as they remain available long enough to be captured by the tracker (~5 minutes).\n\nCommunity reposts which are not counted by the tracker not count toward the total.\n\nThe resolution source for this market is the 'Post Counter' figure for posts found at https://xtracker.polymarket.com. Individual posts can be viewed by clicking \"Export Data\". If the tracker does not update correctly in accordance with the rules, X itself may be used as a secondary resolution source.\nInteger80-99inclusive, exactOct20 16Z-Oct27 16Zfuture7dwindow. Main/quote/reposts count, normalreplies excluded, trackedmainfeedreply-style exception, captureddeletions count. Emptyfuturemetrics notzero.",
+  "evidence": [
+    {
+      "url": "https://xtracker.polymarket.com/api/users/elonmusk/trackings?platform=X&activeOnly=false",
+      "observed_utc": "2026-10-18T19:59:03.829303+00:00",
+      "finding": "228periodmetadata; rootSHAchecked8archiveddetails. Seven168bin fullweeklytotals347,326,222,200,204,176,226; oldest169binanomaly190excluded, notpricebased."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/cfff4aad-56c6-4841-bc2f-d51e910bec08?includeStats=true",
+      "observed_utc": "2026-10-18T19:59:19.536767+00:00",
+      "finding": "Latest347rootverifiedsumbins,178countsafterreportedlastSyncOct13; syncflagnotcollectionstopproof. Completedflag is not dataaccuracycertificate."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/users/elonmusk/posts?platform=X&startDate=2026-10-09T16%3A00%3A00Z&endDate=2026-10-16T15%3A59%3A59Z",
+      "observed_utc": "2026-10-18T20:01:46.031196+00:00",
+      "finding": "Workeronlyaggregate381rows/347exactwindow/178afterlastSync; no type/paginationfields,34outsidewindow. Rawbodydiscarded, so rootcannotindependentlyreproduceexportaggregation; metadatahashretained. No proof ofposttypes."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.001,
+    "high": 0.35,
+    "method": "Overdispersednegativebinomial ordinary-mode mixture plus explicitquietweek andsource-failure branches.",
+    "reasoning": "90%ordinary50/50all7mean243/recent2mean336.5, sameMOMshape14.26534;8%roundedlognormalquietmedian90/logsigma.25;2%uniform0-500sourcefailure. Mass2.9766%rounded3. Zero7hits notimpossibility: Laplace11.1%,Jeffreys6.25%,one-sided95%upper34.8% challenge lowtail. Weights/independence/phase/typebindingnotcalibrated. Model savedbefore ownquotes."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 15,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "selected_stress_probability": 0,
+        "best_bid": 0.001,
+        "best_ask": 0.003,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353471746",
+        "book_age_seconds_at_receipt": 42.132,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.03,
+            "fee": 0.0015,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.003
+              }
+            ],
+            "net": 0.0315
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.01,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.001
+              }
+            ],
+            "net": 0.0095
+          }
+        },
+        "taker_cost_usd": 0.0315,
+        "central_expected_profit_usd": 0.26849999999999996,
+        "selected_stress_profit_usd": -0.0315,
+        "break_even_before_carry": 0.00315,
+        "break_even_constant_carry": 0.003154020534033112,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.97,
+        "selected_stress_probability": 0.82,
+        "best_bid": 0.997,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353471746",
+        "book_age_seconds_at_receipt": 42.132,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.99,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.999
+              }
+            ],
+            "net": 9.9905
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.97,
+            "fee": 0.0015,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.997
+              }
+            ],
+            "net": 9.9685
+          }
+        },
+        "taker_cost_usd": 9.9905,
+        "central_expected_profit_usd": -0.29050000000000153,
+        "selected_stress_profit_usd": -1.7905000000000015,
+        "break_even_before_carry": 0.9990500000000001,
+        "break_even_constant_carry": 1.0003251474685018,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: dated0.3cYES positivecentralEV but fails15ppuncertainty reserve;99.9cNO negativecentral. Quietweek model may be wrong bymorethanprice; no high-p bond/K5shortcut.",
+  "reopen_condition": "Verifiedmatchingcount semantics/fullpostexport, source-sync/reconciliation improvement or actualOct20targetprogress with updated remaining-time model; genuinepostingregimechange. No automatedbid on tinyprice/3%prior; allcurrentfees/source/account/caps beforemoney.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/musk258_primary_2005.json",
+    "actual_entry_reserve_pp": 15,
+    "priority_followup": true,
+    "entry_approved": false,
+    "future_window_started": false,
+    "source_arrays_separate": true
+  },
+  "evaluated_utc": "2026-10-18T20:03:57.379499+00:00",
+  "question": "Will Elon Musk post 80-99 tweets from October 20 to October 27, 2026?",
+  "market_id": "5794258",
+  "valuation_author": "primary_operator",
+  "original_index": 258,
+  "report_sha256": "a027bf3c2e1abb808cf8a3fa0a9bd79402c199dad53d94867e7326e45974ed1a"
+}

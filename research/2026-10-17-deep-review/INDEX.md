@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T19:47:31.767498+00:00
+Updated: 2026-10-18T20:03:58.129445+00:00
 
-**277 valuations saved; first milestone100:** 277 valued; 3 blocked after in-depth review. 337 factual exclusions separately; 2383 pending.
+**279 valuations saved; first milestone100:** 279 valued; 4 blocked after in-depth review. 338 factual exclusions separately; 2379 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -265,7 +265,11 @@ Each report below is written before moving to the next evaluation. Related contr
 |251|[Will North Carolina enact a data center moratorium by December 31, 2026?](evaluations/0251.md)|valued|NO ENTRY: dated3.2cYES central EV positive but fails15pp uncertainty reserve;97.3cNO negative central EV. Retain research candidate; proposal/advocacy is not enactment.|
 |252|[Clarity Act (H.R.3633) signed into law in 2026?](evaluations/0252.md)|valued|NO ENTRY: dated5.1cYES has central positive EV but fails15ppuncertainty reserve;95cNO negative. Keep actionable research candidate for current bipartisan-deal evidence, no automated bid. Existing protected29/29threshold pair unchanged.|
 |253|[Will 3 Fed rate hikes happen in 2026?](evaluations/0253.md)|valued|NO ENTRY: datedYES10.3c negativecentralEV;NO89.8c positivecentralEV but fails10ppclassreserve. Not an impossible event; exactlytwofuturehikeunits remains feasible.|
+|254|[Will Strategy (MSTR) beat quarterly earnings?](evaluations/0254.md)|valued|NO ENTRY: both sides negative central EV at returned98.9cYES/5.9cNO asks; both books5625s old despite freshHTTP, fail180sgate. Strong earnings thesis already priced; no maker/holdings/account action.|
+|255|[LoL: MVK Esports vs FURIA Esports (BO5) - Worlds Play-In](evaluations/0255.md)|excluded_factual|FACTUAL EXCLUSION: exact venue route closed/nonaccepting, not a forecast/model rejection. No current financial exposure or redemption action inferred.|
 |256|[Will Z.ai have the second highest OpenRouter market share the week of October 12?](revisions/0256_20261018T120931763267Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
+|257|[Will Satoshi move any Bitcoin in 2026?](evaluations/0257.md)|blocked_after_review|BLOCKED AFTER IN-DEPTH REVIEW: missing requiredsource transaction/label history; notfactualirrelevance/marketclosure/small-modelrejection. Noentry or inventedp.|
+|258|[Will Elon Musk post 80-99 tweets from October 20 to October 27, 2026?](evaluations/0258.md)|valued|NO ENTRY: dated0.3cYES positivecentralEV but fails15ppuncertainty reserve;99.9cNO negativecentral. Quietweek model may be wrong bymorethanprice; no high-p bond/K5shortcut.|
 |259|[Will the Democratic Party win the CT-05 House seat?](evaluations/0259.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |267|[Charleston Southern vs. Clemson](evaluations/0267.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -630,4 +634,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 254
+Active indices: 260

@@ -1,0 +1,175 @@
+{
+  "review_index": 254,
+  "condition_id": "0x55acc0d3b528f61e55ee6a6cfb63e2f7d04fc8da7522224fe210544ef6903e3a",
+  "criteria_sha256": "c2914575fc8c18f2277b19dcb3023d0ef55cb2ddee88709459864b962259b9f6",
+  "status": "valued",
+  "literal_analysis": "As of market creation, Strategy is estimated to release earnings on October 29, 2026. The Street consensus estimate for Strategy's GAAP EPS for the relevant quarter is $8.67 as of market creation. This market will resolve to \"Yes\" if Strategy reports GAAP EPS greater than $8.67 for the relevant quarter in its next quarterly earnings release. Otherwise, it will resolve to \"No.\" The resolution source will be the GAAP EPS listed in the company’s official earnings documents.\n\nIf Strategy releases earnings without GAAP EPS, then the market will resolve according to the GAAP EPS figure reported by SeekingAlpha. If no such figure is published within 96h of market close (4:00:00pm ET) on the day earnings are announced, the market will resolve to “No”.\n\nIf the company does not release earnings within 45 calendar days of the estimated earnings date, this market will resolve to “No.”\n\nNote: Subsequent restatements, corrections, or revisions made to the initially announced GAAP EPS figure will not qualify for resolution, except in the case of obvious and immediate mistakes (e.g., fat finger errors, as with Lyft's (LYFT) earnings release in February 2024).\nNote: The strike prices used in these markets reflect the selected street consensus estimate for GAAP EPS as of market creation.\nNote: All figures will be rounded to the nearest cent using standard rounding.\nNote: For the purposes of this market, IFRS EPS will be treated as GAAP EPS.\nNote: GAAP EPS refers to diluted GAAP EPS, unless this is not published, in which case it refers to basic GAAP EPS.\nNote: All figures are expressed in USD, unless otherwise indicated.\nNote: For primarily internationally listed companies, this market refers specifically to the shares traded in the United States on U.S. stock exchanges such as the NYSE or Nasdaq. In cases where the company trades in the U.S. through an American Depositary Receipt (ADR) or American Depositary Share (ADS), this market will refer to the ADR/ADS.\n\nQ3quarternextOct29release; diluted first/basiconlyifomitted. Positive rawEPS>=8.675rounds8.68. EstimatedGAAPgain not EPS; unaudited preliminary update not finalqualifying earnings. 45day no-release deadlineDec13; 96hourfallback measuredfromannouncementday16ET.",
+  "evidence": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526413164/mstr-20261005.htm",
+      "observed_utc": "2026-10-18",
+      "finding": "Rootread rendered SEC8K and verified directSECbodySHA; Q3estgain20.91B/tax1.88B,70.82Bcarryingvalue,847666Sep30BTC. KPMGnotreviewed/audited;4.12Ballowance release included, notaddagain."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1050446/000105044626000044/mstr-20260630.htm",
+      "observed_utc": "2026-10-18T19:49:17.480105+00:00",
+      "finding": "RootSHAcheckedQ210Qtables: nonBTCoperatingloss15.585M;preferred400.661M;GAAPweighted352.534Mlossdenominator, companyassumeddiluted401.3M distinct. NotQ3sharecount orprofit."
+    },
+    {
+      "url": "https://www.strategy.com/investor-relations/events-presentations",
+      "observed_utc": "2026-10-18T19:49:40.699538+00:00",
+      "finding": "Oct29Q3webinar17ET; exactearningsreleasepublicationtime not established."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5778692",
+      "observed_utc": "2026-10-18T19:54:48.086708+00:00",
+      "finding": "FreshGETexactID/CID/fullquestion/criteria/source/endDate/outcomes/tokensmatched; openaccepting. Compactfee agreesGamma. Returnedbooks are5625s old, fail180sgate."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.94,
+    "low": 0.7,
+    "high": 0.999,
+    "method": "Primary source-tied accounting headroom, explicit finalaccounting/sourcevariance and publication/quarterbinding process scenarios.",
+    "reasoning": "20.91Bminus1.88B=19.03B beforeotheritems;550Mshares need4.77125Bcommon earnings,14.26Bheadroom.94/4/2valid/material/severe regimes at99.5/50/5%beat plus.998*.995*.995process=>94.4867%, conservatively94. Deductions/dilution/taxunknown; no EPS or calibratedfloor manufactured. Model savedbefore owncasequotes."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_case254_1956.json",
+    "quote_file_sha256": "dc4af6d43b7570c8e6561e2e82d9b22d09c4f9f762fddbe44c39e0f4af45b95d",
+    "quote_observed_utc": "2026-10-18T19:54:48.086708+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 62,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.94,
+        "selected_stress_probability": 0.7899999999999999,
+        "best_bid": 0.941,
+        "best_ask": 0.989,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792347662688",
+        "book_age_seconds_at_receipt": 5625.398708007812,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.89,
+            "fee": 0.00544,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.989
+              }
+            ],
+            "net": 9.89544
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.41,
+            "fee": 0.02776,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.941
+              }
+            ],
+            "net": 9.38224
+          }
+        },
+        "taker_cost_usd": 9.89544,
+        "central_expected_profit_usd": -0.4954400000000021,
+        "selected_stress_profit_usd": -1.9954400000000012,
+        "break_even_before_carry": 0.9895440000000001,
+        "break_even_constant_carry": 0.9947749079488288,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.06000000000000005,
+        "selected_stress_probability": 0,
+        "best_bid": 0.011,
+        "best_ask": 0.059,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792347662688",
+        "book_age_seconds_at_receipt": 5625.398708007812,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.59,
+            "fee": 0.02776,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.059
+              }
+            ],
+            "net": 0.61776
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.10999999999999999,
+            "fee": 0.00544,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.011
+              }
+            ],
+            "net": 0.10455999999999999
+          }
+        },
+        "taker_cost_usd": 0.61776,
+        "central_expected_profit_usd": -0.017759999999999443,
+        "selected_stress_profit_usd": -0.61776,
+        "break_even_before_carry": 0.061776,
+        "break_even_constant_carry": 0.0621025590710942,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: both sides negative central EV at returned98.9cYES/5.9cNO asks; both books5625s old despite freshHTTP, fail180sgate. Strong earnings thesis already priced; no maker/holdings/account action.",
+  "reopen_condition": "Qualifying primaryQ3EPS or changed filed estimate/accounting/sharecount; genuinely current makerYES<=77c with remaining costs/source/catalyst/account/eligibility/family/caps gates. Late release/omission followsliteral fallback; no automatic bid.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/mstr254_primary_1955.json",
+    "actual_entry_reserve_pp": 15,
+    "source_audit": "Corrected StrategyHTTP200pagearchive supports shell/title only, notnumericfacts; directSEC8Krawhashverified separately.",
+    "accounting_challenge_units": [
+      "data/deep_review_20261017/work/0254_accounting_bridge_1950.json",
+      "data/deep_review_20261017/work/0254_accounting_mechanisms_2005.json"
+    ],
+    "entry_approved": false,
+    "priority_followup": true,
+    "fee_Gamma_compact_agree": true,
+    "new_class_measured_tail_required_for_K5": false,
+    "no_bond_K5_shortcut_used": true
+  },
+  "evaluated_utc": "2026-10-18T19:55:45.894628+00:00",
+  "question": "Will Strategy (MSTR) beat quarterly earnings?",
+  "market_id": "5778692",
+  "valuation_author": "primary_operator",
+  "original_index": 254,
+  "report_sha256": "3fa5e2a16ea6339898c3b805eff3860f7260b9e95a2803a66626013d5f5f7b98"
+}

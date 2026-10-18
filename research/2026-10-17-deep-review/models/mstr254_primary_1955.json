@@ -1,0 +1,66 @@
+{
+  "schema": "primary_mstr254_eps_bridge.v1",
+  "review_index": 254,
+  "condition_id": "0x55acc0d3b528f61e55ee6a6cfb63e2f7d04fc8da7522224fe210544ef6903e3a",
+  "criteria_sha256": "c2914575fc8c18f2277b19dcb3023d0ef55cb2ddee88709459864b962259b9f6",
+  "adopted_utc": "2026-10-18T19:53:44.179610+00:00",
+  "p_yes": 0.94,
+  "range": [
+    0.7,
+    0.999
+  ],
+  "entry_reserve_pp": 15,
+  "literal": "NextQ3 initial dilutedGAAPEPS, standard cents, >8.67USD means rawpositiveEPS>=8.675underhalfup. Basic only if dilutedomitted; officialdocumentsfirst/SeekingAlpha96hafterannouncementday16ETfallback; noearnings45daysafterOct29=>NO. Laterrevisionsnotusedexceptobviousimmediateerror.",
+  "official_data": "Oct5filed8KestimatesQ3digitalgain20.91B,relateddeferredtax1.88B(6Bbefore4.12Bvaluationallowancerelease),carryingvalue70.82B;847666BTCatSep30. Notaudited/reviewed orfinalGAAPEPS. Q3 alreadyended; OctBTCprice/purchases not substituted.",
+  "source_binding": {
+    "sec_url": "https://www.sec.gov/Archives/edgar/data/1050446/000119312526413164/mstr-20261005.htm",
+    "raw_sha256": "05e1c59d367f32ca4af730eba03af1af4694e68a240ff41df03505caca1084e9",
+    "raw_gzip": "logs/deep_review_20261017/case254_sec_2005/sec_8k.body.gz",
+    "q2_10q_sha256": "51d815978454c7a431eca215f04f43d87d098b8668faa38c20fb2b1d17e080bc",
+    "root_checked": "RawQ2tables/SEC8Kdigits+KPMGqualification; shellonlyStrategycapture corrected."
+  },
+  "arithmetic_headroom_only": {
+    "digital_gain_less_associated_tax_B": 19.03,
+    "required_common_earnings_B_at_350M": 3.03625,
+    "at_401p3M": 3.4812775,
+    "at_550M": 4.771250000000001,
+    "headroom_B_at_550M": 14.25875,
+    "severe_sensitivity_EPS_6Btax_1p5Bprefs_0p5Botherloss_550Mshares": 23.472727272727273
+  },
+  "accounting_caveats": "UnknownQ3weightedGAAPdiluteddenominator; Q2loss352.534Mexcludedantidilutiveconversions,401.3Mcompanyassumedmetric notGAAP. Preferreddividends/conversionnumerator, stockcomp, debtmodifications/tax/otherlosses needbridge. Arithmetic14.26Bheadroom notnetincome orprobabilityfloor. Q2preferred400.661M, nonBTCoperatingloss15.585M are scalechecks, notQ3forecasts.",
+  "primary_scenarios": [
+    {
+      "weight": 0.94,
+      "name": "issuerestimates broadlyvalid,ordinary GAAPbridge",
+      "p_EPS_beats": 0.995
+    },
+    {
+      "weight": 0.04,
+      "name": "material unanticipated final-accounting variance",
+      "p_EPS_beats": 0.5
+    },
+    {
+      "weight": 0.02,
+      "name": "severe accounting/source failure",
+      "p_EPS_beats": 0.05
+    }
+  ],
+  "conditional_process_factors": {
+    "correctQ3binding": 0.998,
+    "timelyearningswithin45days": 0.995,
+    "GAAPorvalidfallbackpublication": 0.995
+  },
+  "raw_p_yes": 0.9448673856849998,
+  "reasoning": "Large source-tied accounting cushion supports highYES independently of liveBTC/consensus/PMprice. Explicit6%accountingvariance/failure mix and processfailure risk gives94.486% ->94%conservative rounding. Conditional judgments, not empirical probabilities/independence claims.",
+  "no_high_p_shortcut": "Future unaudited earnings/documentation tail is not a measured first-hand tail; useordinary15ppreserve, noK5bondlicense.",
+  "source_units": [
+    "data/deep_review_20261017/work/0254_q3_facts_2000.json",
+    "data/deep_review_20261017/work/0254_accounting_bridge_1950.json",
+    "data/deep_review_20261017/work/0254_accounting_mechanisms_2005.json",
+    "data/deep_review_20261017/work/0254_eps_bridge.json",
+    "data/deep_review_20261017/work/0254_tax_accounting.json",
+    "data/deep_review_20261017/work/0254_share_denominators.json"
+  ],
+  "own_case_quotes_accessed_before_model": false,
+  "scope": "Primaryresearchforecast only. Currenttwo-sidedfees/depth/rules/account/venueeligibility/catalysts/newclasschallenge/correlation/minimacaps remain required beforemoney."
+}

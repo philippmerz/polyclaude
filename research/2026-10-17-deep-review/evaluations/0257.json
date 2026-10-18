@@ -1,0 +1,87 @@
+{
+  "review_index": 257,
+  "condition_id": "0x3b0107a80edd066fe987784d7ab5963c177888433efbec10689951c17320606c",
+  "criteria_sha256": "0accda2a40731a09ee459c84001efd13dd0efa02e9685c6dfc60f5da672b923b",
+  "status": "blocked_after_review",
+  "literal_analysis": "This market will resolve to “Yes” if any wallet labeled as belonging to Satoshi Nakamoto on Arkham’s Intel Explorer shows an “Outflow” or “Swaps” transaction at any time between January 9, 2026, 1:00 PM ET and December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No.”\n\nThe resolution source for this market is Arkham’s Intel Explorer, specifically the entity page for Satoshi Nakamoto available at https://intel.arkm.com/explorer/entity/satoshi-nakamoto\n\nIf Arkham becomes permanently unavailable, this market will resolve based on a consensus of credible sources.\n\n\n\nNoamountfloor; labeluniverse/direction/category matter, not identityor Satoshi-era narratives. Selftransfers/newlabels canmatter; strictJan9start, permanentunavailabilityfallbacknottemporary403. RootreadrenderedArkhamUI withUSD>=1filterandnorows, notzeroactivity.",
+  "evidence": [
+    {
+      "url": "https://arkm.com/explorer/entity/satoshi-nakamoto",
+      "observed_utc": "2026-10-18",
+      "finding": "Rootwebredirectread53lineentityUI/OUTFLOWtab/defaultUSD>=1filter, butnoholdings/transfers. Worker directGET403. No wallet/address/history audit; dynamicemptyrows notnooutflowproof."
+    },
+    {
+      "url": "https://info.arkm.com/research/who-owns-the-most-bitcoin-top-btc-holders-2026",
+      "observed_utc": "2026-10-18",
+      "finding": "ArkhamOct15researchstates1.096MBTCgroupedPatoshi22kblocks and includeshistoricalspendingaddresses; aggregateholdings not2026completeoutflowhistory."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1144471",
+      "observed_utc": "2026-10-18T19:58:33.878+00:00",
+      "finding": "Latest publicbatch exactfrozenidentity/rulesmatched; source insufficiency independent of marketprice."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "low": null,
+    "high": null,
+    "method": "Literal source/elapsed-history observability audit.",
+    "reasoning": "Cannot separate alreadyqualifyingevent/labelhistory from futurekey-usehazard withonlyaggregateholdings and dynamicUI. Invented small p or neutral50% would obscure criticalmissingobservation.",
+    "required_evidence": "Timestamped completeentitylabel/addressuniverse plus qualifyingtransactions/absence auditthroughcapture coveringelapsedliteralwindow, or bindingcurrentofficialclassification export and label-changehistory."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "probability": null,
+    "EV": null,
+    "reason": "Source-historyblock; prices only, no neutral/implied probability substituted.",
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "central_expected_profit_usd": null,
+        "cost": 0.32038,
+        "minimum_shares": "5",
+        "best_bid": 0.029,
+        "best_ask": 0.03,
+        "full_10share_ask_depth": true,
+        "gross": 0.3,
+        "fee": 0.02038,
+        "book_timestamp": "1792353512166"
+      },
+      "No": {
+        "probability": null,
+        "central_expected_profit_usd": null,
+        "cost": 9.729719999999999,
+        "minimum_shares": "5",
+        "best_bid": 0.97,
+        "best_ask": 0.971,
+        "full_10share_ask_depth": true,
+        "gross": 9.709999999999999,
+        "fee": 0.01972,
+        "book_timestamp": "1792353512166"
+      }
+    }
+  },
+  "verdict": "BLOCKED AFTER IN-DEPTH REVIEW: missing requiredsource transaction/label history; notfactualirrelevance/marketclosure/small-modelrejection. Noentry or inventedp.",
+  "reopen_condition": "Complete timestampedArkhamOutflow/Swapsexport includingallamounts/exactwindow or documentedpermanentfailure with validconsensusfallback; independentlyverifylabels/times/assets beforeforecast.",
+  "extra": {
+    "block_unit": "data/deep_review_20261017/work/0257_primary_block_decision.json",
+    "priority_followup": true,
+    "entry_approved": false,
+    "no_neutral_or_implied_prior": true
+  },
+  "evaluated_utc": "2026-10-18T19:59:48.894363+00:00",
+  "question": "Will Satoshi move any Bitcoin in 2026?",
+  "market_id": "1144471",
+  "valuation_author": "primary_operator",
+  "original_index": 257,
+  "report_sha256": "60f951b12fde7c42d15ba9d6d1a6ac93dc30d4f78fc4beadab39eddff4ac9996"
+}

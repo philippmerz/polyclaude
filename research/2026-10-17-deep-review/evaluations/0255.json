@@ -1,0 +1,51 @@
+{
+  "review_index": 255,
+  "condition_id": "0x276b505d7bced5a20bf3f91d35dd425d90d3881b3daddbc49433b9f045f101e0",
+  "criteria_sha256": "28dfb5a7e9882faa3adc1e618078133433d5ff5582536e7a2eb01c0d1f94a00d",
+  "status": "excluded_factual",
+  "literal_analysis": "This market refers to the LoL Lower Bracket Final match between MVK Esports and FURIA Esports in the Worlds Play-In, initially scheduled for October 17, 2026 at 2:00 PM ET.\n\nThis market will resolve to \"MVK Esports\" if MVK Esports win the match against FURIA Esports.\n\nThis market will resolve to \"FURIA Esports\" if FURIA Esports win the match against MVK Esports.\n\nIf the match is canceled (not played at all) or ends in a tie, this market will resolve to 50-50.\n\nIf the match is postponed, it must be rescheduled to a start time on or before October 31, 2026 at 11:59 PM ET (14 calendar days after the originally scheduled start of October 17, 2026 at 2:00 PM ET). If, by that deadline, the most recently announced rescheduled start time is on or before the deadline, this market resolves based on the result of the match as played. Otherwise, this market resolves 50-50, regardless of whether the match is subsequently played.\n\nIf the match begins but is not completed, and one team wins due to the opponent's forfeiture, disqualification, or walkover, this market will resolve to the team who wins. \n\nIf the match ends in a forfeit, disqualification, or walkover (team withdraws before the start and the other wins automatically), this market will resolve to 50-50. \n\nThe resolution source for this market will be official information from https://gol.gg/esports/home. However, if https://gol.gg/esports/home has not published final results within 2 hours after the event’s conclusion, a consensus of credible reporting may be used instead including video evidence.\n\nIn cases where a team’s listed name includes minor discrepancies from the resolution source, this market will resolve based on the underlying real-world match rather than exact name matching. Recognizable abbreviations, alternate or erroneous spellings, sponsor tags, affiliate or academy designations, regional identifiers, and minor formatting differences will be treated as referring to the same team, provided the intended team can be clearly and uniquely identified within the relevant competition. If a listed team name has no reasonable connection to any participating team, or if it matches or could reasonably refer to another team in the same competition such that the intended team cannot be unambiguously determined, this market will resolve 50-50.\nUnderlying unique realmatch controls overminornameformat, but source dateOct15vsfrozeninitialOct17remains unresolved. PostponementdeadlineOct31/cancelandpre-startforfeit50-50clauses read. Do not infer settlementwinner from score/date alone.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5791529",
+      "observed_utc": "2026-10-18T19:56:05.188087+00:00",
+      "finding": "Root verified SHA archivedbody; current exactID/CID/question/fullcriteria/source/endDate/outcomes/tokens. closedtrue/acceptingfalse; UMAproposed/proposedmetadata not payoutproof."
+    },
+    {
+      "url": "https://gol.gg/game/stats/83593/page-summary/",
+      "observed_utc": "2026-10-18T19:10:00Z",
+      "finding": "Sourcepacket listsMVK3wins/FURIA0, BO5dateOct15. OriginalOct17schedule difference unexplained; no winner-adjudication claim needed for closedroute exclusion."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "reasoning": "No active exact entry route; no manufactured pregame probability or finalpayout assertion."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route_closed": true,
+    "quote_observed_utc": "2026-10-18T19:56:05.188087+00:00",
+    "sides": {
+      "MVK Esports": {
+        "cost": null,
+        "reason": "exact market closed/notaccepting"
+      },
+      "FURIA Esports": {
+        "cost": null,
+        "reason": "exact market closed/notaccepting"
+      }
+    }
+  },
+  "verdict": "FACTUAL EXCLUSION: exact venue route closed/nonaccepting, not a forecast/model rejection. No current financial exposure or redemption action inferred.",
+  "reopen_condition": "ExactCIDrouteagainaccepting with clarifiedunderlyingmatch/date; permittedtechnicalcorrection, if any. Revalidate bothsides/fullrules beforeforecast/action.",
+  "extra": {
+    "source_unit": "data/deep_review_20261017/work/0255_current_gamma_1958.json",
+    "entry_approved": false,
+    "unresolved_source_date_difference": true
+  },
+  "evaluated_utc": "2026-10-18T19:56:37.316837+00:00",
+  "question": "LoL: MVK Esports vs FURIA Esports (BO5) - Worlds Play-In",
+  "market_id": "5791529",
+  "valuation_author": "primary_operator",
+  "original_index": 255,
+  "report_sha256": "ab4b349eeadda2fce033e1747060926f3083aaa7cbaf410e1ecc048804993ae4"
+}

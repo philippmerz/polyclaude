@@ -1,0 +1,38 @@
+{
+  "review_index": 258,
+  "condition_id": "0xaceb2a1c91e5f68cda1ee3461af58795ed2fcad71d68d64f0c3458a7576a897f",
+  "criteria_sha256": "ae16df93c49dd0f47c307e66698aee2764048c12e16994eeccd2180b422b15ff",
+  "adopted_utc": "2026-10-18T20:03:06.053060+00:00",
+  "p_yes": 0.03,
+  "range": [
+    0.001,
+    0.35
+  ],
+  "entry_reserve_pp": 15,
+  "literal": "Integer80-99 inclusive main/quote/reposts inOct20noonET-Oct27noonET; actualfixedUTC16Zstart/end. Replyexclusionexceptmainfeedstyle, deletioncaptured~5min, communityrepost exclusions; namedXTrackerPostCounter, Xsecondaryifincorrect. Windowfuture, no currentcount==0 claim.",
+  "data": "Seven168bin nonoverlapFrinoon7d completedwindow totals347,326,222,200,204,176,226; rootrawSHAverifiedsums/times. Older190excludedbecause169bins/daysElapsed8 mismatch, not outcome/pricefilter.7dlengthdoesnotproveTueanchorequivalence/independence.",
+  "primary_model": {
+    "ordinary_weight": 0.9,
+    "ordinary_equal_mixture": "negativebinomialmomentfit7weeks mean243/r14.26534 and same shape recent2mean336.5",
+    "quiet_week_weight": 0.08,
+    "quiet_week": "rounded lognormalmedian90/logsigma.25, no observedquietweek; explicit behavioral-downshift risk",
+    "source_failure_weight": 0.02,
+    "source_failure": "uniforminteger0-500, 20/501bandmass; assumption, not outage estimate",
+    "raw_band_mass": 0.029765643884403708,
+    "adopted_rounding": "2.9766%->3%YES"
+  },
+  "nonparametric_challenges": {
+    "zero_hits_in_7_ClopperPearson_upper95_one_sided": 0.3481636551311609,
+    "Beta1_1_predictive": 0.1111111111111111,
+    "Jeffreys_predictive": 0.0625
+  },
+  "source_limits": "CompletedAPIflags nottrackingaccuracycertificate. UserlastSyncOct13 yetlateststatshas178countsafterthatflag; oldflagnotcollectionstopproof. Exportworkerfound347exact-windowrowsmatchingstats/no type orpaginationfields,34extraout-of-windowrows; exactUTClocalfilternecessary. Exportbodydiscarded: aggregationnot independentlyrawreproducible; metadatahashretained, no fabricatedbodyclaim. Typecompositionnotindependentlyverified. Priorhourlyrawarraysretained/rootverified.",
+  "uncertainty": "7samplezero empiricalhitsdoesnotimplyimpossibility. Laplace11.1%/Jeffreys6.25% alternatives and35%one-sidedzero7upper show sensitivity; regimeweights/processmodelunvalidated.15ppreserve notcalibratedfloor; nohigh-pK5shortcut.",
+  "source_units": [
+    "data/deep_review_20261017/work/0258_facts_weekly_1959.json",
+    "data/deep_review_20261017/work/0258_root_history_checks.json",
+    "data/deep_review_20261017/work/0258_posts_api_check.json",
+    "data/deep_review_20261017/work/0258_count_model_diagnostic.json"
+  ],
+  "own_case_quotes_accessed_before_model": false
+}

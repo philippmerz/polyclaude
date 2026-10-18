@@ -1,29 +1,31 @@
 ---
-reviewed_at: "2026-10-18T19:50:11.350499+00:00"
+reviewed_at: "2026-10-18T20:05:32.593393+00:00"
 valid_until: "2026-10-18T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 56fd28a1f6dbe5415de2213eed8f1acea84390c40737bb515e72542f3134c875
+  README.md: a4e1924cfb9d6bbd4cea30761292afa14c00169af82d6fa29e6dcca693d2dae9
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
   strategy/02_operations.md: 916783a6be5eb5856416e535412d10c82b71335ef863186b9556ca66248c7a31
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: ef886eb204508764502844529de4ec5b3c8dfa3dcf355f8284a2c78e3d07c9b5
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 7ad28f2cd29e72ce7f39aa3cb1edbc33633933f6bde9893072c72d994ee33518
+  notes/backlog.md: 00653d42c374ab747eeb0cea1e2b5f945bf4771c1fa2b66ac44d1439d9135ba2
   notes/resting_orders.md: 1daf45c297b47faa8ebec367241b50cf3d89482ccd3a857509800779dbc7ab42
-  notes/journal.md: da20bdc20023a0c658492fd7882576a867b3ee7e3cbcce260aeec1b031475b2a
+  notes/journal.md: d7bcd6acd59db5a36344812e094e3fff0b832e144cd0f2e6443c67aeb6f1af3d
 ---
 
 ## Active finite review — October18
 
-Explicit operator `/goal`: finish remaining frozen3,000 in-depth reviews; repair substantive method limits before forcing coverage. **277valued/3blocked/337factual exclusions/2,383pending;617base+28revisions;254active.** [Checkpoint](deep_review_checkpoint.json) controls dynamic counts. First100/200notified; next material milestone300. No new goal/timer/idle watcher.
+Explicit operator `/goal`: finish remaining frozen3,000 in-depth reviews; repair substantive method limits before forcing coverage. **279valued/4blocked/338factual exclusions/2,379pending;621base+28revisions;260active.** [Checkpoint](deep_review_checkpoint.json) controls dynamic counts. First100/200notified; next material milestone300. No new goal/timer/idle watcher.
 
 [Small resume](../research/2026-10-17-deep-review/RESUME.md) → `.venv/bin/python scripts/deep_review_resume.py --index N` (8KBhard cap). Read selected full rules/latest MD/named small model/source unit only; save/index EACH result before next. Cheap facts cannot reject. Do not load whole INDEX/ledger/journal/backlog/followup. Workpointer source_paths are run-relative `work/NNNN_facts.json`; validate helper before handoff. Raw arrays/receipts stay separate.
 
-**Active254:** Strategy nextQ3 diluted GAAP EPS, rounded cents, strictly>$8.67; estimated releaseOct29,45day no-release fallback; if omitted use SeekingAlpha within96h of announcement-day16ET; no subsequent revisions except obvious immediate error. Full rules read; no ownquotes/forecast yet. Official Q2 accounting and Sept30 BTC inventory/mark bridge facts requested from existing workers. This is on-chain PM research, not brokerage work.
+**Active260:** Alphabet exactlythird worldwide marketcapOct31marketclose; Saturday with no explicit fallback/vendor/share-class convention. Full literal/sourcefacts read; same frozen window as valued196MSFTthird and pending268NVDAthird. Rootread196model/code; offline same-path all-company rank extension requested, oldoutputs preserved. No260/268probability/ownquotesread yet. Workunit `work/0260_facts.json`; next diagnostic `work/0260_joint_diagnostic.json` if finished.196price-dateaudit confirms model alreadycorrectOct16inputs, no p revision needed.
 
-249–253 saved/noentry: Iran80%YES,OpenRouter25010%,NCmoratorium7%,HR3633signing17%,exact3Fedhikes7%. Individual MDs carry reasoning. NC/Clarity dated cheapYES central edges fail predeclared15ppreserves; keep factual reopening triggers. 248blocked: CDC4410needs+490byOct31; one onset vintage/regional delay cannot identify national publication nowcast, no inventedp. Annual20824% is separate dated assumption-led model. Prepared255–275 scoped facts via selected helper; no inherited forecasts.17:42quote capture is stale research, not execution proof.
+Latest completed25494%YES/noentry: SEC Q3gain/tax estimates implylargeEPSheadroom, but19:54YES98.9c/NO5.9c centralnegative and books5625sold.255exactclosedroute excluded;257Arkhamlabel/Outflowhistory blocked, costonly/EVnull;258Musk3%YES,15ppreserve,0.3cYEScentralpositivebutuncertainquietweekmass. Seven168hweeklyhistograms verified; exportbodydiscarded byworker/typebindingunverified. Individual MD/models carry full reasoning.248CDCpublicationnowcast remains separatelyblocked. NC251/Clarity252cheapYES retain source-basedreopening triggers; no additions.
+
+Freshreadonly12-case capture `data/deep_review_20261017/quotes_resume_2000.json` at19:58:33:12exactidentities/fees,20booksreturned/4omitted, freshthen. It matches local `resume_case_tools` schema; set its QUOTE_PATH explicitly. Do not reveal nextcaseprices before primary model. Recheck currentfullgates beforemoney; no oldsnapshot is execution authority. Prepared261–275smallfactualunits via selected helper; no inherited forecasts.
 
 ## Held state / next boundary
 
