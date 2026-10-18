@@ -31298,3 +31298,12 @@ No financial/daemon action, command replay, new valuation, CSV row or Telegram. 
 -Entry dryrun only:20cpassive price, missing explicit cluster mapping stops preview. No submission/reservation/account change. No false independentcluster created. Catalyst script completed; unmeasured75%persistence claim notadopted.
 -261/263/281/284/285 exactGammafullbindings independentlychecked againstSHAverifiedrawbodies:closed/nonaccepting20:19. Recorded separatelyasfactualexclusions; no payout/winner forecast.262fullGoogleGlobalActors rules/source-method read; historical/catalyst factcollection pending before ownquotes/model.
 -No newfinancialmark/TG. Last18UTCsafety remainsdated; next22heldreview unchanged.
+
+
+## 2026-10-18 20:58 UTC — four valuations persisted; common rank and survey corrections
+
+- Saved262Chalamet18%YES/264NATO5%YES/266Brazil79%YES/268Apple35.073%YES; allnoentry, unchangeduncertaintyreserves. Checkpoint284valued/4blocked/343excluded/2369pending;631base+32revisions;272ECBactive. Eachcompletedcaseindexedbeforethenext.
+- Brazil raw-receipt/actual-rate audit22meetings:26-day-lead median25cut signalsTP4/FP1/FN2/TN15;4/5signalscorrect. Pointforecastsnotprobabilities. Newevidenceremovesinitial63%model'sduplicategenericriskregime→79%; selectedNO1%fails9/10c. Current13.75registryverified; priorfailed400/stalefieldtablespreserved/superseded. Noentrywriter/prior/reservationchange.
+- Shared four-firmrankmodelalignsNVDA154largest62.693%/Apple268largest35.073% withMSFT196third32.941%/Alphabet260third59.049%; append-only154revision, othersunchanged. Fullentity/rank/date/descriptionguardprevents substringlargest/third-largestmismatch. Forwardshocks/forkweightsremainjudgmental; AppleindexedIRNov2call/direct403JSshelllimitexplicit.
+- Saved20:41read-onlyfinancialmark195.83/gas5.58/tradingmid190.25/depth187.89;PM36.73/34.37,residual19.54;sevenBUYs12.87/pUSD18.846890/free5.976890unchanged. SourceSHAverified; CSV206throwfromsavedoutputwithoutnetworkrequests. SequentialroundeddepthnotNAV/proceeds/auditedprofit. Publicsource:research/2026-10-18-2041-readonly-account.md. Fullheldreviewstill18UTC,next22UTC.
+- Protocolcompacted9.5→5.7KB; exactoriginalarchived. Compacthandoff refreshed; no fullhistoryingestionneeded. NoTGnoise/newwatcher; nextmaterialmilestone300.

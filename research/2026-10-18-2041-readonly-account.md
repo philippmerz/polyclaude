@@ -1,0 +1,7 @@
+# October18 20:41 read-only account observation
+
+- **20:41:11.643–20:41:27.271UTC bankroll output:** total195.83/gas5.58/trading midpoint190.25USD. PM midpoint36.73 versus indicative fee-net depth34.37; trading depth187.89/whole approximate depth193.47. Sequential rounded estimates, not synchronized NAV or certified proceeds. VM/API costs excluded.
+- Accounting residual19.54 against170external trading capital; this is the repository residual, not independently audited cash profit. PM cost36.01; unrealized midpoint+0.72 versus indicative depth−1.65.
+- Independent read-only20:41–43 account/chain audit: sevenuniqueLIVEBUYs/12.87pending, sevenmatchingreservations; fixedPolygon95767176 had pUSD18.846890/freeafterallBUYs5.976890, no Brazil266shares/order/reservation. Claim auditCLEAN sevenindexed+onedeindexed. Pretty/compactreservationhash difference reconciled; no semanticfinancialchange.
+- This was Brazil266 candidate preflight, not a complete held-source/risk review; existing22UTC held review remains due. Final Brazil79%YES/21%NO/20ppreserve failed the NOprice; no order/reservation/prior/mappingwriter ran. No new portfolio allocation in this follow-up.
+- Provenance: saved bankroll plain-text output was1362bytes despite a `.json.gz` label; raw SHA256`36b6034cbd9a5508d3bfbb130663441cb57aee49c2bcfa984e99428c637801bf` independently verified after decompression. Complete raw/receipts remain private/ignored; no credentials or account-provider headers published. CSV uses20:41:27Z output-completion anchor, not a synchronized market timestamp.

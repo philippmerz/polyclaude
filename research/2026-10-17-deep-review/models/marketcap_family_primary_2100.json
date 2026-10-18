@@ -1,0 +1,29 @@
+{
+  "adopted_utc": "2026-10-18T20:56:24.256179+00:00",
+  "rank1": {
+    "NVDA": 0.626931055,
+    "AAPL": 0.35072969499999995,
+    "MSFT": 0.00540132,
+    "Alphabet": 0.013137929999999999,
+    "Other": 0.0038
+  },
+  "rank3": {
+    "NVDA": 0.031260375,
+    "AAPL": 0.04253944,
+    "MSFT": 0.32941059,
+    "Alphabet": 0.5904895949999999,
+    "Other": 0.0063
+  },
+  "scope": "Frozen154NVDA/largest,196MSFT/third,260Alphabet/third,268Apple/largest. Full exactsemanticbindingschecked. Commonfamily,notfourindependentopportunities.",
+  "source_summary": "data/deep_review_20261017/work/marketcap_shared_rank_fork_2125.json",
+  "summary_sha256": "3ec42470eaf342d0a781d5bd073aa085e00b694a28e8e2e2c5c61c0a112ffd37",
+  "source_arrays": "data/deep_review_20261017/work/0260_event_exclusion_rank_marginals_2026.json",
+  "source_arrays_sha256": "5f7d54d1dcb30902326ea5bacb4f38646dd8d23a942adb3e02349027fb77815d",
+  "formula": ".95*(.98*four_firm_base + .02*uniform_permutation_5) + .05*weighted_alternative_permutations",
+  "method": "10sessionscorrelatedfour-firmzero-logdrift; equal20/87event-excluded covariance;8%MSFT/Alphabetand3%NVDAlogeventshocks/0extraApple. Sparsehistoricaleventsnotcalibratedforwardshocks.",
+  "convention_tail": "SaturdayOct31assumedOct30regularUSclose; five-statepermutationforknotempiricalglobaltail. FixeddatedSECsharecounts/AlphabetA-Bproxy/FX/vendorconsensus unresolved.",
+  "probability_scope": "Commonmarginalforecasts,notguaranteedfloors. Twentyppentryreserveforfourcasesunchanged.",
+  "case154_change": "Oldtwo-firm20/59pairedbootstrap63%rounded replacedbysame4firmfamily62.6931055%; different windows/shock/convention assumptions. Roundedcentral63unchanged butmethodandexactpdisclosed. Noentry.",
+  "case268_adoption": "Primary35.0729695%YES adoptedbeforeown268quotes;10-70%range. AppleindexedIRNov2calendar/direct403JSshelllimitexplicit.",
+  "case196_260": "Exactthird32.941059%MSFT/59.0489595%Alphabetunchanged frommostrecentrevision."
+}

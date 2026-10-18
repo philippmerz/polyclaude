@@ -1,0 +1,52 @@
+{
+  "review_index": 262,
+  "adopted_utc": "2026-10-18T20:26:56.619681+00:00",
+  "market_id": "2977655",
+  "condition_id": "0x62feb3ad1e330b8ea5499e2c37e9b7d29d737fee70d4473e2598326e0c60cabe",
+  "criteria_sha256": "f2f2c4e471c3d05c3c09527e84c51624573cef0e44b64ab8871847f3611c0021",
+  "p_yes": 0.18,
+  "raw_p_yes": 0.18468750000000003,
+  "range": [
+    0.02,
+    0.6
+  ],
+  "reserve_pp": 20,
+  "own_quotes_accessed_before_model": false,
+  "literal": "Exactindividual#1 in official2026GlobalActors YearinSearchlist. Published list governs regardlesstitle wording/navigation. No list byMar31,2027 23:59ET\u2192Other/NO. Rule operationalendDec31 doesnot shorten listfallback.",
+  "model_kind": "Explicit subjective latent-year/publication mixture; no empirical rank series or estimated search counts. Not random selection from displayed top10.",
+  "regimes": [
+    {
+      "weight": 0.75,
+      "name": "Existing-year ordinary growth pattern, early cutoff",
+      "p_chalamet_rank1": 0.1,
+      "basis": "Not in displayed2023\u201325GlobalActors top10 despitepriorhighvisibility. March2026USOscarattention strong but MichaelBJordan higher atfinalpoint; neitherannualYoY nor global. Priorprominence mayraisebaseline; unknownactualglobalgrowth."
+    },
+    {
+      "weight": 0.15,
+      "name": "Unobserved/current or remaining pre-cutoff Chalamet outlier",
+      "p_chalamet_rank1": 0.55,
+      "basis": "MartySupremeattention, awards/controversy/newpublicity or earlyDunecampaign can dominate;15% is judgment over latent/futureattention, not independent news hazard."
+    },
+    {
+      "weight": 0.1,
+      "name": "Later cutoff or differentlyselected category series",
+      "p_chalamet_rank1": 0.3,
+      "basis": "2026method/cutoff notannounced; a later measurement window couldincludeDec18Dunerelease.10%weight/.30conditionaljudgment, noassumednamedtraileruplift."
+    }
+  ],
+  "publication_probability": 0.985,
+  "arithmetic": ".985*(.75*.10+.15*.55+.10*.30)=0.18468750000000003; roundDOWNto.18",
+  "primary_source_findings": [
+    "Google2025method usesJan1\u2013Nov25growthvs samepriorperiod;2026methodcanchange.2025releasedDec4. Dec18release is afterthatdatedprecedentcutoff, not a proven2026ineligibleevent.",
+    "HistoricalGlobalActors#1Renner2023/KattWilliams2024/MikeyMadison2025; variedcountries/genders/attentionmodes, cannot restrict pool tofiveOscarBestActor nominees.",
+    "OfficialAcademy2026Chalametnominee/MichaelBJordanwinner;LegendaryconfirmsDunePart3Dec18Warnerrelease. Nomination/release not annualgrowthmeasurement.",
+    "OfficialGoogleOscarschart PastyearUS weeklyMar16,2025\u2013Mar15,2026; lastpointChalamet84/Jordan100. Term/topic/normalizationdenominatorunknown;DiCaprioallzeroswarning. Never treat84as84%chance orglobalannualrank."
+  ],
+  "limitations": "No current global2026versus2025 comparable actorinterest series; directExplore429 notzero. Threeannualtop10listsarefewselectedobservations, not rankp calibration. Source-based rankingstory remains weak; methodweights subjective. Broad60%YEScounterstate can reverseNOentry.20ppselectedreserve is a decisionstress, not probabilityfloor.",
+  "source_units": [
+    "data/deep_review_20261017/work/0262_facts_1940.json",
+    "data/deep_review_20261017/work/0262_facts_expansion_2023_2026.json",
+    "data/deep_review_20261017/work/0262_academy_actor_chart_interpretation.json"
+  ],
+  "action": "Ownquotes/economicsnext; no order authorized by this researchfile."
+}

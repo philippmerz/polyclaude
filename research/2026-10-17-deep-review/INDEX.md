@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T20:23:10.762443+00:00
+Updated: 2026-10-18T20:57:10.425709+00:00
 
-**280 valuations saved; first milestone100:** 280 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2373 pending.
+**284 valuations saved; first milestone100:** 284 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2369 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -165,7 +165,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |151|[Will the Democratic Party win the NV-04 House seat?](evaluations/0151.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |152|[Will Trump rename an ocean by December 31, 2026?](evaluations/0152.md)|valued|Evaluate exactdatedtwo-sided economics atselectedYES9.5/NO60.5; anyedge is a follow-up case, not a trade approval.|
 |153|[Will Venezia FC win on 2026-10-17?](evaluations/0153.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-|154|[Will NVIDIA be the largest company in the world by market cap on October 31, 2026?](revisions/0154_20261018T132229289334Z.md)|valued|Entry deferred after recent-volatility/adversarial revision; no order. ResearchNOmaker<=14c only after all gates.|
+|154|[Will NVIDIA be the largest company in the world by market cap on October 31, 2026?](revisions/0154_20261018T205624682506Z.md)|valued|NO ENTRY: coherent62.693%YES/37.307%NO; selected17.307%NO below dated19cask, YESfailscentral; noprice/financialmutation.|
 |155|[Will the price of Bitcoin be above $84,000 on October 19?](evaluations/0155.md)|valued|No entry approved; temporal quote mismatch and no directional edge.|
 |156|[Will "Ice Age" be the top US Netflix movie this week?](evaluations/0156.md)|valued|Both asks negative central EV; no entry|
 |157|[Will Steve Hilton win the California Governor Election in 2026?](evaluations/0157.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
@@ -273,9 +273,13 @@ Each report below is written before moving to the next evaluation. Related contr
 |259|[Will the Democratic Party win the CT-05 House seat?](evaluations/0259.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |260|[Will Alphabet be the third-largest company in the world by market cap on October 31?](revisions/0260_20261018T202309940497Z.md)|valued|NO ENTRY:5NO20c selected profit4.7552c below5c ops before carry after event-covariance adjustment; larger size can amortizeops but remains fragile to uncalibrated event sigma. Both taker sides fail reserve.|
 |261|[Spread: Notre Dame (-10.5)](evaluations/0261.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
+|262|[Will Timothée Chalamet be the #1 searched actor on Google this year?](evaluations/0262.md)|valued|NO ENTRY; preserve positive-point-EV cheapYES researchcandidate. No globalannualgrowth calibration;20ppreserve fails, NOcentralnegative.|
 |263|[Will the highest temperature in Wuhan be 21°C on October 18?](evaluations/0263.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
+|264|[NATO article 5 before 2027?](evaluations/0264.md)|valued|NO ENTRY: both dated taker sidesnegativecentralEV;5cYES/95cNOpassivearithmeticnotpositivebeforecost and fail10ppreserve.|
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|266|[Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?](evaluations/0266.md)|valued|NO ENTRY: final21%NO central edge positive but selected1%NO fails9c/10c; YESfailscentral. Nofinancialwriter.|
 |267|[Charleston Southern vs. Clemson](evaluations/0267.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|268|[Will Apple be the largest company in the world by market cap on October 31, 2026?](evaluations/0268.md)|valued|NO ENTRY: centralYES positive but20ppreservedYES15.07% fails21.6c maker/22.6c taker; NOfailscentral.|
 |269|[Will the highest temperature in Shanghai be 28°C on October 17?](evaluations/0269.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |270|[Will oil be below $80 on November 2 and the Republicans win the Senate?](evaluations/0270.md)|valued|Noentry: YESmodestpositiveexpectedpayoutbut20ppreservefails/ten-sharecashfloor; NOnegativecentral. Wholemarket50–50fallbackdistinctfrom546.|
 |271|[Will the Democratic Party win the MT-01 House seat?](evaluations/0271.md)|valued|Potential small passive YES source revalidation|
@@ -640,4 +644,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 262
+Active indices: 272

@@ -1,0 +1,182 @@
+{
+  "review_index": 154,
+  "condition_id": "0xe09c250c2d5ba126bb97b417c55185419600555e9679c9b78cc1a9a4b6e8d151",
+  "criteria_sha256": "360c1026311ad1e628d03dbaecd02dce28fc0a1c23bcd8e193fc209870471898",
+  "status": "valued",
+  "literal_analysis": "Full frozen largest-company-worldwide marketcap onOct31asofmarketclose/credible-reporting rule read. Saturday/public-private/sharecount/FX forks retained; modeledFriday not promised by literal.",
+  "evidence": [
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-18T12:38:23.942175+00:00",
+      "finding": "Worldwide company-cap ranking NVDA5.170T/Apple5.012T; snapshot time absent; current values not synchronized official sharecounts."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1045810/000104581026000075/nvda-20260726.htm",
+      "observed_utc": "2026-10-18T12:38:24.207554+00:00",
+      "finding": "Rounded24.1B common shares asofAug21 and disclosed repurchases, not exact October outstanding."
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?range=3mo&interval=1d&events=div%252Csplits&includeAdjustedClose=true",
+      "observed_utc": "2026-10-18T12:59:29.626780+00:00",
+      "finding": "Raw vendor adjusted/unadjusted daily series independently hashed/reparsed, paired with same-query AAPL; events encoding gap retained."
+    },
+    {
+      "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "observed_utc": "2026-10-18T13:13:38.013447+00:00",
+      "finding": "Primary issuer-hosted corrected transcript page15 names GTCBerlinOct21 and next fiscalQ3callNov17."
+    },
+    {
+      "url": "https://investor.apple.com/investor-relations/default.aspx",
+      "observed_utc": "2026-10-18T13:00:19.571991+00:00",
+      "finding": "Official-page indexed nextcallNov2; direct403/dynamic omissions. Not an Oct29 assumed event."
+    },
+    {
+      "url": "https://www.nyse.com/publicdocs/nyse/ICE_NYSE_2026_Yearly_Trading_Calendar.pdf",
+      "observed_utc": "2026-10-18T12:38:25.099949+00:00",
+      "finding": "October31Saturday, regularUSsession precedingFriday; market rule itself lacks explicit fallback."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.626931055,
+    "low": 0.3,
+    "high": 0.85,
+    "method": "10sessionscorrelatedfour-firmzero-logdrift; equal20/87event-excluded covariance;8%MSFT/Alphabetand3%NVDAlogeventshocks/0extraApple. Sparsehistoricaleventsnotcalibratedforwardshocks. .95*(.98*four_firm_base + .02*uniform_permutation_5) + .05*weighted_alternative_permutations",
+    "reasoning": "Oldtwo-firm20/59pairedbootstrap63%rounded replacedbysame4firmfamily62.6931055%; different windows/shock/convention assumptions. Roundedcentral63unchanged butmethodandexactpdisclosed. Noentry. Commonrank1NVDA/Apple andrank3MSFT/Alphabet nowcome fromsame normalizedfork. Range/reserveunchanged; priceprocess/issuernews/tail conventions uncalibrated. Ownold154quotesknown; revisionforfamilycoherence, notquote-fit.",
+    "calibration": "Judgmentalcorrelatedprice/event/conventionmixture,notempiricalprobabilitycalibration."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 13.5,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.626931055,
+        "best_bid": 0.81,
+        "best_ask": 0.828,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 32.821,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.828,
+            "fee_usd": 0.056966400000000014
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.336969999999999,
+        "fee_usd": 0.05697,
+        "break_even_probability_before_carry": 0.8336969999999999,
+        "break_even_probability_with_idealized_carry": 0.8346445994482276,
+        "central_expected_profit_usd": -2.067659449999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.426931055,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.038440000000001,
+        "selected_stress_probability": 0.426931055,
+        "selected_stress_profit_usd": -4.067659449999999
+      },
+      "No": {
+        "probability": 0.373068945,
+        "best_bid": 0.172,
+        "best_ask": 0.19,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 32.821,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.19,
+            "fee_usd": 0.06156000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.9615699999999998,
+        "fee_usd": 0.06157,
+        "break_even_probability_before_carry": 0.19615699999999997,
+        "break_even_probability_with_idealized_carry": 0.19637995661969035,
+        "central_expected_profit_usd": 1.76911945,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.17306894499999997,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.6630299999999998,
+        "selected_stress_probability": 0.17306894499999997,
+        "selected_stress_profit_usd": -0.23088054999999996
+      }
+    },
+    "actual_entry_reserve_pp": 20,
+    "revaluation_utc": "2026-10-18T20:56:24.256179+00:00",
+    "revaluation_reason": "Same savedOct17quote; commonfamilyforecast update only, no freshvenue/accountcall."
+  },
+  "verdict": "NO ENTRY: coherent62.693%YES/37.307%NO; selected17.307%NO below dated19cask, YESfailscentral; noprice/financialmutation.",
+  "reopen_condition": "New relative-cap/sharecount/event/scope source or refreshed liveprice; recomputecommonfamily. ResearchNOmaker<=14c onlysubjecttofullcurrentgates.",
+  "current_description_sha256": "2c45ef9a21870e6b68a0188357f2bb66bbfb132529d3e0f7b23e0e218c3d92e7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "47269584724486146635720045337031423127877600369133041974495637867678771074555",
+    "4838125637334705542173889316081496273672608137129505235601784688056788006093"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0060",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_model": "research/2026-10-17-deep-review/models/nvidia154_primary_1315.json",
+    "actual_entry_reserve_pp": 20,
+    "selected_yes": 0.426931055,
+    "selected_no": 0.17306894499999997,
+    "priority_followup": false,
+    "sources_priceblind_before_own_PM": true,
+    "current_primary_model": "research/2026-10-17-deep-review/models/marketcap_family_primary_2100.json",
+    "advisories": [
+      "research/2026-10-17-deep-review/advisories/nvidia154_support_1340.md",
+      "research/2026-10-17-deep-review/advisories/nvidia154_skeptic_1340.md"
+    ],
+    "financial_mutation": false,
+    "related_cases": [
+      196,
+      260,
+      268
+    ]
+  },
+  "question": "Will NVIDIA be the largest company in the world by market cap on October 31, 2026?",
+  "market_id": "5180413",
+  "valuation_author": "primary_operator",
+  "original_index": 154,
+  "evaluated_utc": "2026-10-18T20:56:24.682817+00:00",
+  "revision_reason": "Use coherent common rank1/rank3 family for NVDA154 and Apple268 alongside unchangedMSFT196/Alphabet260; disclose changedtwo-firmbootstrapmethod/exactp and correctactual20ppstructured economics.",
+  "prior_report_sha256": "4fc6fe189f3600a6672ef295a5a5a36fc7a35e8e715f9224a5ef98d88de88369",
+  "report_sha256": "49c3db53738e1b6622d9d9d6f2295347fdc0c9ecd0d3dae180cf8fb4eeddda2d",
+  "report_path": "revisions/0154_20261018T205624682506Z.md",
+  "revision_path": "revisions/0154_20261018T205624682506Z.json"
+}

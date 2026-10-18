@@ -1,0 +1,166 @@
+{
+  "review_index": 264,
+  "condition_id": "0xe7743a393cd98bb7a7cd011361b74a0fd12bac3412643873f4661fcc431ed165",
+  "criteria_sha256": "040a8e05b7228cd26b80c438a3b36ee6cf08a68a606bdba4e82b230871d7e163",
+  "status": "valued",
+  "literal_analysis": "If any NATO member country invokes Article 5 of the North Atlantic Treaty at any time between November 5, 2025 and December 31, 2026, 11:59 PM ET, this market will resolve to \"Yes\". Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from NATO (nato.int), however a consensus of credible media will also suffice.\nNew invocation by ANYNATOmemberNov5,2025–Dec31,2026 23:59ET. OfficialNATOprimary/crediblemediaconsensusallowed. Existing2001invocation/anniversary/ordinaryArticle5commitment statements are not new invocation in window. Article4consultation/deployment/Ukraineaid not automaticYES. 75%strictcollectivepoliticalinvocation/25%crediblememberformalinvocation accepted beforefullCouncilprocess. LoosebranchdoesnotcountordinaryArticle4/discussion/threat. Any-memberlanguage creates distinct semanticrisk, not knownsettlementstandard.",
+  "evidence": [
+    {
+      "url": "https://www.nato.int/en/what-we-do/introduction-to-nato/collective-defence-and-article-5",
+      "observed_utc": "2026-10-18T20:26:08.851833+00:00",
+      "finding": "Historical9/11onlyinvocation/Article4distinct;Age2392cachednotfreshuniversalnonoccurrenceproof."
+    },
+    {
+      "url": "https://www.nato.int/en/news-and-events/events/transcripts/2026/10/14/speech-by-nato-secretary-general-at-tallinn-university-of-technology",
+      "observed_utc": "2026-10-18T20:26:08.723454+00:00",
+      "finding": "OfficialOct14securitycontext:Russiathybridthreat,nonoimminentmilitarythreatassessment, deliberatelyambiguoushybridArticle4/5threshold. Rootfreshread."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.3,
+    "method": "Explicit dependent escalation regimes, strict/loose invocation fork and missedelapsedqualifier sensitivity.",
+    "reasoning": ".005+.995*(.75*0.033100000000000004+.25*0.0683)=0.0466905, roundedUPto.05 Onehistoricinvocation/77years is not stationaryPoissonbase for2026. Allregimeweights/conditionalrates/semanticweights/missedfork are subjective. Dailyincidentratesmustnotbeindependentlymultipliedinto75dayeventcount. Majorattack/cyber/hybrid/terrorismsurprise canchangeprobabilityrapidly. Broad30%YEScounterstate reversesNOvaluation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 82,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "selected_stress_probability": 0,
+        "best_bid": 0.042,
+        "best_ask": 0.051,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353513773",
+        "book_age_seconds_at_receipt": 0.105,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.51,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.051
+              }
+            ],
+            "net": 0.51
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.41500000000000004,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.042
+              },
+              {
+                "shares": 5.0,
+                "price": 0.041
+              }
+            ],
+            "net": 0.41500000000000004
+          }
+        },
+        "taker_cost_usd": 0.51,
+        "central_expected_profit_usd": -0.010000000000000009,
+        "selected_stress_profit_usd": -0.51,
+        "break_even_before_carry": 0.051000000000000004,
+        "break_even_constant_carry": 0.0513568650295503,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.95,
+        "selected_stress_probability": 0.85,
+        "best_bid": 0.949,
+        "best_ask": 0.958,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353513773",
+        "book_age_seconds_at_receipt": 0.105,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.585,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.958
+              },
+              {
+                "shares": 5.0,
+                "price": 0.959
+              }
+            ],
+            "net": 9.585
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.49,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.949
+              }
+            ],
+            "net": 9.49
+          }
+        },
+        "taker_cost_usd": 9.585,
+        "central_expected_profit_usd": -0.08500000000000085,
+        "selected_stress_profit_usd": -1.0850000000000009,
+        "break_even_before_carry": 0.9585000000000001,
+        "break_even_constant_carry": 0.9652069633494895,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: both dated taker sidesnegativecentralEV;5cYES/95cNOpassivearithmeticnotpositivebeforecost and fail10ppreserve.",
+  "reopen_condition": "Materialescalation/formalrequest orcurrentqualifyingsourceevidence; rederivejointstrict/loose/elapsedforecastbeforemoney.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/nato264_primary_2031.json",
+    "actual_entry_reserve_pp": 10,
+    "entry_approved": false,
+    "financial_mutation": false,
+    "subjective_not_calibrated": true
+  },
+  "evaluated_utc": "2026-10-18T20:30:49.836387+00:00",
+  "question": "NATO article 5 before 2027?",
+  "market_id": "665243",
+  "valuation_author": "primary_operator",
+  "original_index": 264,
+  "report_sha256": "240de708d5bfa541391357bbfbf7605d2164657375a82d132f7e922414e54ede"
+}

@@ -1,0 +1,47 @@
+{
+  "review_index": 266,
+  "adopted_utc": "2026-10-18T20:48:49.322995+00:00",
+  "p_yes": 0.79,
+  "p_no": 0.21,
+  "raw_p_yes": 0.788,
+  "range_yes": [
+    0.45,
+    0.97
+  ],
+  "entry_reserve_pp": 20,
+  "selected_no": 0.01,
+  "prior_working_model": "research/2026-10-17-deep-review/models/brazil266_primary_2038.json",
+  "change_reason": "Do not add a separate25%genericadverseregime to a core likelihood whose proxy-error sample already spans26daysofdata/news uncertainty. KnownSepIPCAandFocusbothOct9 haveunknownfieldingorder; countingasindependentnewshockisunsupported. Currentregistry13.75referenceaccessgapresolved.",
+  "historical_inputs": {
+    "completed_ordinary_meetings": 22,
+    "period": "2024\u2013Sep2026",
+    "lead_days": 26,
+    "baseCalculo": 0,
+    "predict_exact25": 5,
+    "actual25_when_predicted": 4,
+    "false_positive_hold": 1,
+    "classification": {
+      "TP": 4,
+      "FP": 1,
+      "FN": 2,
+      "TN": 15
+    },
+    "positive_examples": "2024Jun19expected\u221225actual0;2026Apr29/Jun17/Aug5/Sep16expected\u221225andactual\u221225."
+  },
+  "primary_bridge": "Use.80astransparentworkingconditionalcutlikelihood, informed by4of5matchedpointclassifications and4of4recent2026signals; multiply.985meetingcompletionbeforefallback\u2192.788, roundUP.79. This is expertjudgment, not fittedprobabilitycalibration orbinomialconfidencebound.",
+  "sensitivity_not_posterior": {
+    "unsmoothed_4of5": 0.8,
+    "uniform_Beta1_predictive_if_exchangeable": 0.7142857142857143,
+    "Jeffreys_predictive_if_exchangeable": 0.75,
+    "recent2026_uniform_Beta1_if_exchangeable": 0.8333333333333334,
+    "note": "Only5positives, sequential/small/nonstationarysample; priors and exchangeabilitynotidentified. Somealternativecentralchoices couldsupportNO, but chosenprimary20ppmargin doesnot. Noneareguaranteedfloors."
+  },
+  "source_registry": "data/deep_review_20261017/work/0266_current_rate_registry_2041.json",
+  "source_calibration": "data/deep_review_20261017/work/0266_focus_calibration_verified_20261018.json",
+  "independent_audit": "data/deep_review_20261017/work/0266_focus_calibration_independent_audit_20261018.json",
+  "table": "logs/deep_review_20261017/case0266_sources/focus_calibration_corrected/verified_clean_meeting_table.json",
+  "old_failed_attempts": "Failed22HTTP400requests andstale-statusderivedtable retained; clean verified artifacts govern. No absentresponsecountsaszero.",
+  "catalysts": "Mandatorycatalyst_check completed; officialhistory5of6recent2026cutsconsistent, upcomingFocus/election/inflation require currentverification. Unverifiedthird-partyDI79%andcalendarexacttimesnotusedasindependentprobabilityinputs.",
+  "decision": "NO ENTRY at9cmaker/10ctakerNO; stillpositivecentralEV but selected1%NO failsprice andops. YES90/91alsofailscentral/reserve. No reservation/order/prior/mappingchange. Primaryreserve20unchangedafterquotes.",
+  "as_of_price_caveat": "Ownmarketquotesknownbeforethissource-drivenrevision; rawinitialblindmodelpreserved. No lowerprice/order inventedtopasstool."
+}

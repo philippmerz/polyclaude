@@ -1,0 +1,179 @@
+{
+  "review_index": 262,
+  "condition_id": "0x62feb3ad1e330b8ea5499e2c37e9b7d29d737fee70d4473e2598326e0c60cabe",
+  "criteria_sha256": "f2f2c4e471c3d05c3c09527e84c51624573cef0e44b64ab8871847f3611c0021",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the individual ranked #1 in Google’s official Year in Search Global \"Actors\" list for 2026.\n\nThe specified list is expected to be displayed on the Google Trends Year in Search hub, with location selected to Global. The navigation procedure as of market creation involves going to trends.withgoogle.com/year-in-search/ and clicking through Global → Entertainment → Actors. The 2026 page is expected to appear using the same navigation once released (as the 2025 page currently shows the specified ranking). This market will resolve based on the specified list regardless of navigation procedure.\n\nThis market may resolve as soon as the specified list for 2026 is released. If Google does not release the specified list by March 31, 2027, 11:59 PM ET, this market will resolve to “Other.”\n\nThe resolution source for this market will be the specified list as published by Google.\nExactindividual#1 in official2026GlobalActors YearinSearchlist. Published list governs regardlesstitle wording/navigation. No list byMar31,2027 23:59ET→Other/NO. Rule operationalendDec31 doesnot shorten listfallback.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-18T20:29:29.602423+00:00",
+      "finding": "Rootfreshprimary:2025trendingYoYJan1–Nov25, notabsolutevolume;2026methodunknown."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "observed_utc": "2026-10-18T19:39:38.100603+00:00",
+      "finding": "OfficialGlobalActorscategoryhistoricaltop10;MikeyMadison#1andChalametabsent. Rootrawhashchecked2023/24/25, absenceonlycensoredrank."
+    },
+    {
+      "url": "https://www.oscars.org/oscars/ceremonies/2026",
+      "observed_utc": "2026-10-18T20:23:00Z",
+      "finding": "Chalametleadingactor nominee/MichaelBJordanwinner;notGooglelikelihoodproxy."
+    },
+    {
+      "url": "https://trends.withgoogle.com/trends/academy-awards-2026/embed/chart/dbd94d32-182c-462e-9ca5-7a5345541421/",
+      "observed_utc": "2026-10-18T20:24:33.468663+00:00",
+      "finding": "OfficialchartPastyearUS,53weeklypointsMar2025–Mar2026;finalChalamet84/Jordan100indexed, notannualglobalgrowth."
+    },
+    {
+      "url": "https://www.legendary.com/film/dune-part-three/",
+      "observed_utc": "2026-10-18T20:29:29.602472+00:00",
+      "finding": "RootfreshofficialDec18release/Warner; beyond2025precedentNov25cutoff, notproofof2026exclusion."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.18,
+    "low": 0.02,
+    "high": 0.6,
+    "method": "Explicit subjective latent-year/publication mixture; no empirical rank series or estimated search counts. Not random selection from displayed top10.",
+    "reasoning": ".985*(.75*.10+.15*.55+.10*.30)=0.18468750000000003; roundDOWNto.18 No current global2026versus2025 comparable actorinterest series; directExplore429 notzero. Threeannualtop10listsarefewselectedobservations, not rankp calibration. Source-based rankingstory remains weak; methodweights subjective. Broad60%YEScounterstate can reverseNOentry.20ppselectedreserve is a decisionstress, not probabilityfloor."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 165,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.18,
+        "selected_stress_probability": 0,
+        "best_bid": 0.007,
+        "best_ask": 0.017,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353415819",
+        "book_age_seconds_at_receipt": 98.059,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.17,
+            "fee": 0.00836,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.017
+              }
+            ],
+            "net": 0.17836000000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.07,
+            "fee": 0.00348,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.007
+              }
+            ],
+            "net": 0.06652000000000001
+          }
+        },
+        "taker_cost_usd": 0.17836000000000002,
+        "central_expected_profit_usd": 1.6216399999999997,
+        "selected_stress_profit_usd": -0.17836000000000002,
+        "break_even_before_carry": 0.017836,
+        "break_even_constant_carry": 0.018088020973052146,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8200000000000001,
+        "selected_stress_probability": 0.6200000000000001,
+        "best_bid": 0.983,
+        "best_ask": 0.993,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353415820",
+        "book_age_seconds_at_receipt": 98.058,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.93,
+            "fee": 0.00348,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.993
+              }
+            ],
+            "net": 9.93348
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.83,
+            "fee": 0.00836,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.983
+              }
+            ],
+            "net": 9.82164
+          }
+        },
+        "taker_cost_usd": 9.93348,
+        "central_expected_profit_usd": -1.7334799999999984,
+        "selected_stress_profit_usd": -3.7334799999999984,
+        "break_even_before_carry": 0.9933479999999999,
+        "break_even_constant_carry": 1.0073839121742207,
+        "current_execution_authorization": false
+      }
+    },
+    "horizon_note": "165day conservative planning through source-nonpublication fallbackApr1UTC; expectedearlyDecpublicationmayreturncapitalsooner. Dec31Gammaend metadata doesnot overrideMar31ETwrittenfallback. Rates/exit/funding not guaranteed."
+  },
+  "verdict": "NO ENTRY; preserve positive-point-EV cheapYES researchcandidate. No globalannualgrowth calibration;20ppreserve fails, NOcentralnegative.",
+  "reopen_condition": "MatchingglobalYoYactor data,2026method/cutoff ordecisivecategoryevidence; notmoreUSvolume/nonspecificfame. Revaluewithfullcurrentgates beforemoney.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/chalamet262_primary_2030.json",
+    "balanced_advisories": [
+      "research/2026-10-17-deep-review/advisories/chalamet262_skeptic_2028.md",
+      "research/2026-10-17-deep-review/advisories/chalamet262_constructive_2026.md"
+    ],
+    "actual_entry_reserve_pp": 20,
+    "priority_followup": true,
+    "entry_approved": false,
+    "numerical_weights_subjective": true,
+    "financial_mutation": false
+  },
+  "evaluated_utc": "2026-10-18T20:29:29.661514+00:00",
+  "question": "Will Timothée Chalamet be the #1 searched actor on Google this year?",
+  "market_id": "2977655",
+  "valuation_author": "primary_operator",
+  "original_index": 262,
+  "report_sha256": "9308098787ff817c5b5d9878ad8c2f8c2275549771ff4ff939d7ced3065b132b"
+}

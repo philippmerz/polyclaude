@@ -1,0 +1,52 @@
+{
+  "adopted_utc": "2026-10-18T20:54:12.762177+00:00",
+  "case268_descriptor": {
+    "entity": "Apple",
+    "rank": "largest",
+    "market_id": "5180417",
+    "condition_id": "0xb4401733eed8e257ceba7f6133de1793bb7d409d1e44864a789c31824460a374",
+    "criteria_sha256": "d867aa402f924d494a1cc64518ebdc5054b94962b789e2e9902d692b46d22b64",
+    "full_rule": "This market will resolve to the largest company in the world by market cap on October 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting."
+  },
+  "own268_quotes_unread_at_adoption": true,
+  "p_yes": 0.35072969499999995,
+  "p_no": 0.649270305,
+  "range_yes": [
+    0.1,
+    0.7
+  ],
+  "reserve_pp": 20,
+  "selected_yes": 0.15072969499999994,
+  "selected_no": 0.44927030500000004,
+  "primary_judgment": "Adopt common family rank1 marginal; not rank3. Equal20/87-row covariance windows,10forward sessions,zero logdrift;8%MSFT/Alphabet and3%NVDA discrete forward log shocks are judgmental. Apple additional scheduled-earnings shock0 because official investor page lists Nov2 afterOct31; ordinary surprise risk remains in background/sensitivity. Subjective convention/outsider permutation fork retains same rank3 branch. No calibratedfloor/independenceclaim.",
+  "shared_rank_summary": "data/deep_review_20261017/work/marketcap_shared_rank_fork_2125.json",
+  "summary_sha256": "3ec42470eaf342d0a781d5bd073aa085e00b694a28e8e2e2c5c61c0a112ffd37",
+  "input_sha256": "5f7d54d1dcb30902326ea5bacb4f38646dd8d23a942adb3e02349027fb77815d",
+  "common_rank1": {
+    "NVDA": 0.626931055,
+    "AAPL": 0.35072969499999995,
+    "MSFT": 0.00540132,
+    "Alphabet": 0.013137929999999999,
+    "Other": 0.0038
+  },
+  "common_rank3": {
+    "NVDA": 0.031260375,
+    "AAPL": 0.04253944,
+    "MSFT": 0.32941059,
+    "Alphabet": 0.5904895949999999,
+    "Other": 0.0063
+  },
+  "scope_limits": "Four leading companies with dated fixed outstanding sharecounts; AlphabetcombinedA/B/CusesdatedproxyforunlistedB. SaturdayOct31closeassumedOct30regularUSsession, not explicitfallback. Otheraggregate tail/convention massnotempiricallycalibrated; no globalcompany census or synchronizedNAV.",
+  "window_sensitivity_apple_rank1_before_fork": {
+    "20returns_8pct": 0.3297,
+    "87returns_8pct": 0.37799,
+    "20returns_0pct": 0.33289,
+    "87returns_0pct": 0.38566
+  },
+  "reserve_reason": "20ppjudgmentuncertaintyreserveunchangedfromfamily; sharecount/issuernews/priceprocess/convention/outsider errors material, not measured bound.",
+  "family_update_required": "154 should use same commonNVDA rank1=.626931055 (oldrounded63%);196/260rank3 unchanged. Distinctcontractsnotindependentopportunities.",
+  "model_code": "research/2026-10-17-deep-review/models/marketcap_shared_rank_2125.py",
+  "semantic_guard": "Full exactid/CID/title/company/rank/date/description checks; largest never inferred as substring ofthird-largest. Rootfourpositive/twelvewrongentity-rank-date negativespassed.",
+  "event_calendar_verified_by_root_browser": "https://investor.apple.com/investor-relations/ ; retrieved2026-10-18~20:54, scheduledNov2. Directreceiptbeingarchived.",
+  "calendar_source_limit": "Root official-domain search results dated2/5days earlier list Nov2; root webopen yields48lineJSshell/direct403. Date is indexed official-page evidence, not independently complete current HTML. AdditionalAppleeventrisk remains sensitivity/reserve."
+}

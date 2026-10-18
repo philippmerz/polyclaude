@@ -1,0 +1,53 @@
+{
+  "review_index": 266,
+  "adopted_utc": "2026-10-18T20:36:41.432699+00:00",
+  "market_id": "3347919",
+  "condition_id": "0xf034f3da3402772dc6ef9a165da8fb7fa193dab98bed8de2b23c91f348d0faad",
+  "criteria_sha256": "a1e3719bc2efec33c5066fc9d7866453f262bcb4b25c828b253b25569750f31b",
+  "p_yes": 0.63,
+  "raw_p_yes": 0.631409625,
+  "range": [
+    0.25,
+    0.85
+  ],
+  "reserve_pp": 20,
+  "own_quotes_accessed_before_model": false,
+  "literal": "COPOMNov3\u20134meeting-specific SelicTARGETchange from premeetingreference. Yes nominal25cut includesactualdecrease>0and<37.5bp underrounding;exact37.5rounds50/NO. Rangeusesupperbound; emergencychangesnotfromthismeetingexcluded; canceled/delayedpastnextmeeting\u2192NoChange/NO. BCBcentralbank/COPOMidentifiedbyofficiallink despite looseBankofBraziltitle.",
+  "official_context": "LatestlocatedSept16statement13.75% and conditionalcautiouscalibration, notpromise25nexttime. SepIPCA+.82%monthlyreleasedOct9; supply/fiscal/FX/expectationsrisksupside. AnnualFocusOct9median13.25%2026/12%2027notmeetingdistribution.",
+  "meeting_source": "OfficialFocusExpectativasMercadoSelic R7/2026latestOct9: base0n137mean13.5584 median13.5 SD.1141 min13.5 max14; base1n48mean13.5313 median13.5 SD.0972 samebounds. Officialcalendarindexed8meetings/seventhNov3\u20134; directcalendarJSshell, ordinalmappingnotrawcalendarrows. Basecodegroupsemanticsunknown andnotindependent.",
+  "opinion_bound": "Ifreference13.75andreportedmean/minexact, Markovboundsatleast76.64%base0and87.48%base1pointforecastsinthequalifyingtargetinterval; describesOPINIONS, notdecisionprobability. No25bpgridassumptionneeded; rounding/minprecisionandoutdatedreferencebreakbridge.",
+  "normal_core": {
+    "cut25": 0.78,
+    "hold": 0.205,
+    "larger_cut": 0,
+    "hike": 0.015
+  },
+  "information_regime_break": {
+    "cut25": 0.25,
+    "hold": 0.55,
+    "larger_cut": 0.02,
+    "hike": 0.18
+  },
+  "regime_weights": {
+    "cautious_cut_consensus_continues": 0.75,
+    "inflation_fiscal_FX_or_activity_break": 0.25
+  },
+  "meeting_proceeds_before_next": 0.985,
+  "reference_mapping_uncertainty_guard": 0.99,
+  "joint_policy_distribution_raw": {
+    "cut25": 0.631409625,
+    "hold": 0.30886243750000003,
+    "larger_cut": 0.00487575,
+    "hike": 0.05485218749999999
+  },
+  "arithmetic": ".985*.99*(.75*.78+.25*.25)=0.631409625, roundto.63; failedprocess/referenceguard assignedholdforconservativeYESforecast.",
+  "judgment": "Surveymean/medianandqualifierbiasanchorcut25asmodal, notfrequentistprobability. .78coreand75/25regimes subjective; referenceshifts/emergency/unannouncedschedulecountcouldaltertargetbridge. Sharplyhawkishnormalbranchmeaninflation/FXriskcanreverseYES. Broad25%YEScounterstateincluded, notguaranteedfloor.",
+  "access_gaps": "TwoSGS432routesHTTP200HTMLerror, no currentrate/no-intervening-changeproof; Sept16isdatedlatestlocatedcommunication. Currentpremeetingreferenceandmappingmustbeverifiedbeforecapital. No assumptionHTTP200meansvaliddata.",
+  "source_units": [
+    "data/deep_review_20261017/work/0266_facts_expansion_20261018.json",
+    "data/deep_review_20261017/work/0266_meeting_focus_20261018.json",
+    "data/deep_review_20261017/work/0266_survey_opinion_bounds.json",
+    "data/deep_review_20261017/work/0266_sourcecheck_20261018.json"
+  ],
+  "action": "Researchworkingprior; currentreference/source/catalyst andallmoneygatesbeforeanyentry."
+}

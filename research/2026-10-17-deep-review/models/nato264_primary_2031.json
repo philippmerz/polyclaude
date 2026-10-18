@@ -1,0 +1,50 @@
+{
+  "review_index": 264,
+  "adopted_utc": "2026-10-18T20:30:15.513291+00:00",
+  "market_id": "665243",
+  "condition_id": "0xe7743a393cd98bb7a7cd011361b74a0fd12bac3412643873f4661fcc431ed165",
+  "criteria_sha256": "040a8e05b7228cd26b80c438a3b36ee6cf08a68a606bdba4e82b230871d7e163",
+  "p_yes": 0.05,
+  "raw_p_yes": 0.0466905,
+  "range": [
+    0.005,
+    0.3
+  ],
+  "reserve_pp": 10,
+  "own_quotes_accessed_before_model": false,
+  "literal": "New invocation by ANYNATOmemberNov5,2025\u2013Dec31,2026 23:59ET. OfficialNATOprimary/crediblemediaconsensusallowed. Existing2001invocation/anniversary/ordinaryArticle5commitment statements are not new invocation in window. Article4consultation/deployment/Ukraineaid not automaticYES.",
+  "strict_loose": "75%strictcollectivepoliticalinvocation/25%crediblememberformalinvocation accepted beforefullCouncilprocess. LoosebranchdoesnotcountordinaryArticle4/discussion/threat. Any-memberlanguage creates distinct semanticrisk, not knownsettlementstandard.",
+  "regimes": [
+    {
+      "weight": 0.91,
+      "name": "Managed deterrence/no acute escalation",
+      "strict_invocation": 0.01,
+      "loose_member_invocation": 0.03
+    },
+    {
+      "weight": 0.08,
+      "name": "Acute hybrid or limited cross-border incident",
+      "strict_invocation": 0.2,
+      "loose_member_invocation": 0.4
+    },
+    {
+      "weight": 0.01,
+      "name": "Major armed attack on an ally",
+      "strict_invocation": 0.8,
+      "loose_member_invocation": 0.9
+    }
+  ],
+  "strict_future": 0.033100000000000004,
+  "loose_future": 0.0683,
+  "blended_future": 0.04190000000000001,
+  "elapsed_missed_qualifier_fork": 0.005,
+  "formula": ".005+.995*(.75*0.033100000000000004+.25*0.0683)=0.0466905, roundedUPto.05",
+  "sources": "OfficialSep24characterizes9/11onlyhistoricalinvocation;Oct14RutteacknowledgesRussianhybridattacks but saysnoimminentmilitarythreat, leaveshybridArt4/5thresholdambiguous. Currenttopicpagecachedabout19:46Oct18, notexhaustivefreshmemberannouncementledger.",
+  "risk": "Onehistoricinvocation/77years is not stationaryPoissonbase for2026. Allregimeweights/conditionalrates/semanticweights/missedfork are subjective. Dailyincidentratesmustnotbeindependentlymultipliedinto75dayeventcount. Majorattack/cyber/hybrid/terrorismsurprise canchangeprobabilityrapidly. Broad30%YEScounterstate reversesNOvaluation.",
+  "reserve_reason": "10ppordinaryinstance/catalyst stress, noK5tailshortcut: currentofficialnoimminentthreat helpscontext but doesnotmeasurefutureattacktail or ambiguousmemberqualifier.",
+  "source_units": [
+    "data/deep_review_20261017/work/0264_facts.json",
+    "data/deep_review_20261017/work/0264_article5_followup_2026-10-18.json"
+  ],
+  "action": "Pricecomparisonnext, allnewfinancialgatesbeforeaction."
+}

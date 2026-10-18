@@ -1,0 +1,183 @@
+{
+  "review_index": 266,
+  "condition_id": "0xf034f3da3402772dc6ef9a165da8fb7fa193dab98bed8de2b23c91f348d0faad",
+  "criteria_sha256": "a1e3719bc2efec33c5066fc9d7866453f262bcb4b25c828b253b25569750f31b",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the change in basis points in the target for the Selic rate resulting from the November 2026 meeting of the Bank of Brazil’s Monetary Policy Committee (COPOM), relative to the level it was prior to this meeting.\n\nThe resolution source will be official information from the Bank of Brazil, including the statement or release from its November 2026 Monetary Policy Committee meeting, scheduled for November 3-4, 2026, as listed on the official Bank of Brazil calendar (https://www.bcb.gov.br/en/about/bcb-calendar?categoria=Monetary%20Policy%20Committee%20(Copom)). This market may resolve as soon as the statement or release of the Bank of Brazil's November 2026 Monetary Policy Committee meeting with relevant data is issued. \n\nIf the specified rate is defined by an upper and lower bound, the relevant change will be the change to the upper bound. \n\nIf the specified rate is changed to a level not expressed in the displayed options, the change will be rounded according to the following guidelines. Increases or decreases of less than 25 bps will be rounded to 25 bps (e.g. an increase or decrease of 10 bps would be considered to be an increase or decrease of 25 bps). Increases or decreases of greater than 25 bps will be rounded to the nearest 25 bps and will be rounded away from 0 in cases of equidistance (e.g., an increase or decrease of 37.5 bps would be considered to be an increase or decrease of 50 bps). Displayed options of “Increase” or “Decrease” will include policy rate increases or decreases of any size.\n\nIf the specified meeting is postponed to a date and time before the start of the next scheduled meeting, this market will resolve based on the outcome of that postponed meeting.  If the specified meeting is cancelled, or postponed such that no decision is announced by the start of the next scheduled meeting, this market will resolve to the “No Change” bracket. Emergency changes to the specified rate not resulting from the specified meeting will not be considered.\nPrimary interpretation: November2026 COPOM target delta relative to premeeting level; BCB official source. Any decrease strictly between0 and37.5bp qualifies after rounding;37.5 rounds50/NO. Emergency changes outside this meeting excluded. Delay beyond next scheduled meeting/cancellation→No Change/NO; otherwise postponed meeting counts. Upper bound if interval. End-date metadata does not truncate after-close decision. “Bank of Brazil” title maps by COPOM/source to central bank, not commercial Banco do Brasil.",
+  "evidence": [
+    {
+      "url": "https://www.bcb.gov.br/api/servico/sitebcb/historicotaxasjuros",
+      "observed_utc": "2026-10-18T20:39:41.741543+00:00",
+      "finding": "Official registry289rows; one open-ended target13.75 effectiveSep17 after281Sep16. Previous target14.00. Full raw hash validated; response cache age unretained. Supports present reference, not guaranteed future premeeting rate."
+    },
+    {
+      "url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic?$filter=Indicador%20eq%20%27Selic%27%20and%20Reuniao%20eq%20%27R7/2026%27&$orderby=Data%20desc&$top=10&$format=json",
+      "observed_utc": "2026-10-18T20:34:00Z",
+      "finding": "Latest returned Oct9 R7/2026: base0 n137/median13.50/mean13.5584/min13.50/max14.00; base1 n48/median13.50. Groups not independent; raw code semantics unverified. Meeting-level point forecasts, not cut probabilities."
+    },
+    {
+      "url": "https://olinda.bcb.gov.br/olinda/servico/Expectativas/versao/v1/odata/ExpectativasMercadoSelic",
+      "observed_utc": "2026-10-18T20:47:10.039087+00:00",
+      "finding": "Independent raw-receipt/hash and actual-rate audit:22 ordinary2024-Sep2026meetings, latest base0 sample at >=26-day lead. Median-implied rounded25cut TP4/FP1/FN2/TN15. Five positive predictions:2024Jun19hold;2026Apr29/Jun17/Aug5/Sep16all25cuts. Small sequential sample, not probability calibration. Clean verified table supersedes failed400/stale metadata artifacts."
+    },
+    {
+      "url": "https://api.sidra.ibge.gov.br/values/t/1737/n1/all/v/63/p/202609?formato=json",
+      "observed_utc": "2026-10-18T20:31:30Z",
+      "finding": "Official Sep IPCA monthly0.82%, releasedOct9, same date as latest Focus record; fielding order unknown. Cannot treat it as independent new post-survey shock."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.79,
+    "low": 0.45,
+    "high": 0.97,
+    "method": "Meeting-level Focus point forecast plus independently audited26-day historical classification error; explicit judgment bridge, not fitted probability calibration.",
+    "reasoning": "Conditional .80 times judgment .985 timely meeting gives .788, roundedUP.79. Historical4/5 median-implied25cuts occurred (4/4recent2026); n5 sequential/nonstationary and not event probabilities. Initial63%YES generic adverse-regime model superseded after correcting uncertainty double count and resolving reference. Reserve20pp unchanged; some alternative central models could support NO."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 25,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.79,
+        "selected_stress_probability": 0.5900000000000001,
+        "best_bid": 0.9,
+        "best_ask": 0.91,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792353502349",
+        "book_age_seconds_at_receipt": 11.529,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.1,
+            "fee": 0.04095,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.91
+              }
+            ],
+            "net": 9.14095
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.0,
+            "fee": 0.045,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.9
+              }
+            ],
+            "net": 8.955
+          }
+        },
+        "taker_cost_usd": 9.14095,
+        "central_expected_profit_usd": -1.2409499999999998,
+        "selected_stress_profit_usd": -3.2409499999999998,
+        "break_even_before_carry": 0.914095,
+        "break_even_constant_carry": 0.9160403510265607,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.20999999999999996,
+        "selected_stress_probability": 0.009999999999999953,
+        "best_bid": 0.09,
+        "best_ask": 0.1,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792353502349",
+        "book_age_seconds_at_receipt": 11.529,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 1.0,
+            "fee": 0.04501,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.1
+              }
+            ],
+            "net": 1.04501
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.8999999999999999,
+            "fee": 0.04096,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.09
+              }
+            ],
+            "net": 0.8590399999999999
+          }
+        },
+        "taker_cost_usd": 1.04501,
+        "central_expected_profit_usd": 1.0549899999999997,
+        "selected_stress_profit_usd": -0.9450100000000005,
+        "break_even_before_carry": 0.104501,
+        "break_even_constant_carry": 0.10472339606127001,
+        "current_execution_authorization": false
+      }
+    },
+    "passive_no_hypothesis": {
+      "price": 0.09,
+      "shares": 12,
+      "principal_usd": 1.08,
+      "central_expected_profit_usd": 1.44,
+      "selected_stress_profit_usd": -0.96,
+      "note": "Fee-free post-only arithmetic only; unsigned, never sent. Eleven shares would miss actual USD1 signed minimum. Final model fails reserve; no entry gates or maker fill inferred."
+    },
+    "preflight_file": "data/deep_review_20261017/boi266_execution_preflight_20261018.json",
+    "preflight_note": "Filename inherited boi label; contents bind exact Brazil266. 20:41-43 read-only identity/fee/book/account/claim/reservation audit passed; not execution authorization. Quotes now stale; no writer.",
+    "current_price_revalidation_required": true
+  },
+  "verdict": "NO ENTRY: final21%NO central edge positive but selected1%NO fails9c/10c; YESfailscentral. Nofinancialwriter.",
+  "reopen_condition": "UpdatedR7Focus/explicitBCBguidance/material post-survey data or better executable price; rederive forecast and all current entry gates. Existing22UTC held review unchanged.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/brazil266_primary_after_history_2052.json",
+    "initial_model": "research/2026-10-17-deep-review/models/brazil266_primary_2038.json",
+    "actual_entry_reserve_pp": 20,
+    "entry_approved": false,
+    "financial_mutation": false,
+    "subjective_not_calibrated": true,
+    "catalyst_audit": "logs/deep_review_20261017/catalyst_0266_2040.txt",
+    "clean_classification": "data/deep_review_20261017/work/0266_focus_calibration_verified_20261018.json",
+    "independent_audit": "data/deep_review_20261017/work/0266_focus_calibration_independent_audit_20261018.json"
+  },
+  "evaluated_utc": "2026-10-18T20:52:48.838852+00:00",
+  "question": "Will the Bank of Brazil decrease the target for the Selic rate by 25 bps at the November meeting?",
+  "market_id": "3347919",
+  "valuation_author": "primary_operator",
+  "original_index": 266,
+  "report_sha256": "55ad2dd24302550189d696f6cf52575e3e24c5bd4fb5ad2ee7b1d4fa6cf87c3b"
+}
