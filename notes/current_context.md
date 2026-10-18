@@ -1,25 +1,25 @@
 ---
-reviewed_at: "2026-10-18T16:59:28.506511+00:00"
+reviewed_at: "2026-10-18T17:24:28.052700+00:00"
 valid_until: "2026-10-18T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 99eaba807166337207c27326f294be970c355afd5b3b5bffd343c46fdf01fa5b
+  README.md: 845c9dcf39269a03b13cdd5085a8e39daa13469b67545402d7ee5a47ed33c7bf
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
-  strategy/02_operations.md: e85f93a752ad761090b42f0474c46d838e1843e78b0bfc94587b94473f8d6c8f
+  strategy/02_operations.md: 916783a6be5eb5856416e535412d10c82b71335ef863186b9556ca66248c7a31
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
-  scripts/README.md: b9124afebd5272a0db13c3b47a7e48174b8b22f926a5cde1c3343a0ec81fa804
+  scripts/README.md: 9b704bd40e4824a76b40592e7d9ace05d91d8d5626e98cfa615e6f759918a93f
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: bd105d8923b2b780f833c529086618e7ff62765e30bf618f860ed82fe52bd380
+  notes/backlog.md: 1d6607b449ad00e47237cca9fa0ca577de4150abe07162e93754f7cc583d6b71
   notes/resting_orders.md: d0d67efa92e9c648966a69cd240033a459ce515673ae089d543e91d546ab11c6
-  notes/journal.md: c6dc3b05598859c1e2979c3a80752d74eec1bb782b1859774c869cc9cf96c046
+  notes/journal.md: 53773198deaa7db8b77fc7647d7c2991d5eeefea57451804bfd2c82e9cd85028
 ---
 
-## Current bounded check — October 18
+## Current work — October 18
 
-**16:34 full check completed once; no asset action/new fill.** [Full record](../research/2026-10-18-1634-checkin.md). Do not replay scanners or entry/cancel writers while resuming. Next existing review18UTC; OpenRouter pull22UTC. No new durable goal, timer or idle continuation.
+**News relevance/delivery repair complete.** Raw RSS Telegram sends remain off. Both tiers validate classifier impacts against current holding/liveBUY IDs; research/minor topics do not request portfolio review. Unknown inventory/filter and infrastructure leads stay explicitly unknown. Pending IDs survive deferral until dispatch acknowledgment. Queued is not reviewed; journal recency is not acknowledgment. Ordinary cooldown90min, critical/safety bypass. Queue/fallback receive exact IDs.64 tests pass; news PID40455 current since17:19, normal progress verified17:21; four daemons exactlyone/currentcode. DEC0218; all217 prior records preserved. [Routing proof](../research/2026-10-18-news-review-routing.md). No asset action, extra Telegram, production test tick or new timer/goal.
 
-**Alert flood repaired:**63 public Tier1 detections in about18h bypassed relevance review; delivery count unknown. Raw RSS Telegram sender removed. Internal alerts/critical records/review wakeups remain; agent sends reviewed material findings/actions/decisions. News restarted16:54:30 PID37974; all4daemons exactlyone/currentcode.27notification/doctrine tests pass. Material summaryTG1252 delivered once; latest inbound62572751 EXPIRED/resend1244 already handled. Never reread or duplicate replies. [Policy](../strategy/02_operations.md).
+Actual16:34 full check completed once; do not replay scans/asset writers on resume. Next existing review18UTC, OpenRouterpull22UTC. Latest inbound62572751 EXPIRED/resendTG1244 already handled; materialcheck/initialrepairTG1252 sent once. Never reread or duplicate replies.
 
 ## Account and risk — dated observations
 
@@ -33,11 +33,11 @@ Retain/noadd: **HLE NO9 p25/stress15/upper38; MI NO5 p44/stress34/range20–70; 
 
 **Remaining pulls:** OpenRouter1125NO65c/$3.25 **TODAY22UTC**; Sedgwick5YES20c/$1 **Oct19 10UTC**; BOI13715NO7c/$1.05 andIdaho34YES3c/$1.02 **Oct19 22UTC**, before unknown-timeOct20 releases/forum. FourHouse bidsME02/CA06/MT01/NY01 unchanged; preserve historicalME-01slug mapping. Everyexistingtick/earliernews review; cancel first onload-bearing uncertainty, no automaticadd/repost. [Exact IDs/policies](resting_orders.md).
 
-## Sources and checks
+## Dated sources and tools
 
-SixfullGamma criteria/identities unchanged. HLE65cached/maxOpenAI53.6 unchanged; uncached16:44returned403, Diamond separate, currentinventory unknown beyondcache. Senate234Sep15 procedural49–50, notfinalpassage; directXML/HTMLgap. MIofficialOct20program15–18UTC/main16. KCURinquiry requestpublishedOct15/about2020conduct; noofficialfinding/newpoll. Harris/KileyarticleOct8. Local3/MotherJones/Bloomberg/Rischopinion bodies unverified. OpenRouterOct12partial157.072746975956T/53points notfinaltargetweeksorR2rank; BOIdirectschedulechallenge/priorOct20unknownreleasetimes. Forecasts unchanged. [Sources](../data/checkin_20261018T1634_sources.json).
+No new financial/source sweep during routing repair. Six full Gamma identities/criteria matched16:34. HLE65/OpenAI53.6 is cached; uncached16:44returned403, Diamond separate, current inventory unknown beyond cache. Senate234 is procedural, not final passage; direct access gaps persist. MI officialOct20program15–18UTC/main16. BOI Oct20 release times unknown. Other dated headlines/body gaps, OpenRouter partial-token versusR2 distinction and current source limits are in the [completed check](../research/2026-10-18-1634-checkin.md).
 
-MessiYES falsely UNCOVERED due binary-anchor mismatch fixed;107regressions pass (oldcode3counterexamplefailures), one livehurdle covers3holdings/no flags; financial priors unchanged. Kellyusesdated195.90cache/advisory/noadd. UMA42tracked/40distinct refreshed/0alerts; no watchlisthit, cruxgap, overduedecision or Ostiumchange. Ostium0trades/limits/allowance. DEC0217 records verified fixes; prior216records preserved. WeeklyOct23/monthlyNov12, completed20/20experiment no rerun.
+Messi YES hurdle coverage fixed,107 regressions passed; financial priors unchanged. Kelly used dated195.90 cache, advisory/noadd. At16:34: UMA42tracked/40distinct refreshed/0alerts; no watchlist hit/crux gap/overdue decision; Ostium0trades/limits/allowance. WeeklyOct23/monthlyNov12 not due;20/20 methodology experiment complete.
 
 ## Finite research checkpoint
 

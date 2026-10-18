@@ -4,7 +4,7 @@ Quick map for any agent (or human) reading the repo cold. For deeper context: [`
 
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 
-- `news_watcher.py` — polls configured RSS feeds. Tier 1 persists internal alerts and can trigger a review; Tier 2 uses the scoped relevance filter. No raw RSS Telegram messages; the reviewing agent reports material findings/actions. Config: `news_watcher_config.json`.
+- `news_watcher.py` — polls configured RSS feeds; validates classifier impacts against live exposure IDs. Research-only topics stay internal; material/critical and explicit unknown/safety cases qualify for review. Pending alert IDs persist until dispatch acknowledgment; queued does not mean reviewed. No raw RSS Telegram messages. Config: `news_watcher_config.json`.
 - `telegram_listener.py` — long-polls Telegram, durably spools authorized messages, and submits them to the live operator's ordered conversation queue.
 - `heartbeat_watch.py` — hourly probe; alerts if any daemon stalls > 30 min or any headless model worker runs > 60 min.
 
@@ -16,7 +16,7 @@ The former Sunday stock/brokerage review and missed-week catch-up are retired.
 on-demand research supporting accessible on-chain opportunities and held
 positions; they do not create a recurring stock or brokerage workflow.
 
-- `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow.
+- `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow. Optional `POLYCLAUDE_DISPATCH_RECEIPT` records the actual lock/queue/fallback boundary; no receipt claims review completion.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
 
 ## Sleeve clients (libraries imported by other scripts)

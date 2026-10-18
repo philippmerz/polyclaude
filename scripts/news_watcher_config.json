@@ -1,5 +1,5 @@
 {
-  "_comment": "Feeds + internal review tiers for the polyclaude news watcher. Keywords match case-insensitively against feed titles + summaries. Tier 1 persists an alert and can trigger a review tick; Tier 2 uses the scoped relevance filter. No raw RSS Telegram pings; reviewed material findings/actions are reported by the agent. Daemon re-reads config every poll.",
+  "_comment": "Feeds + internal recall tiers. Both tiers classify against current exposure; a keyword alone is not an investment alert. Tier 1 retains research leads. Material/critical current-exposure impacts and explicit unknown/safety cases qualify for review, with dispatch acknowledgment tracked separately. No raw RSS Telegram pings. Daemon re-reads config every poll.",
   "poll_interval_seconds": 300,
   "alert_cooldown_seconds": 1800,
   "max_entries_per_feed": 30,

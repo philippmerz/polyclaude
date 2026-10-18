@@ -1,5 +1,5 @@
 {
-  "next_id": 218,
+  "next_id": 219,
   "decisions": [
     {
       "id": 1,
@@ -4641,6 +4641,26 @@
       "calibration_delta": null,
       "lesson": "A recall keyword is an internal research trigger, not evidence of portfolio relevance or materiality. Separate detection from operator notification; validate actual held-side probability coverage.",
       "resolved_at": "2026-10-18T16:55:20Z"
+    },
+    {
+      "id": 218,
+      "timestamp": "2026-10-18T17:20:53Z",
+      "type": "scaffolding",
+      "thesis": "A broad keyword was treated as a portfolio alert without live exposure validation. A child process and recent journal activity were also confused with acknowledged dispatch or completed alert review. Separate source recall, exact-ID exposure classification, pending review, queue acknowledgment and completed review.",
+      "confidence": "high",
+      "prediction": "Unrelated and minor topics remain internal research leads; only validated live material/critical exposure or explicit unknown/safety cases qualify for review. Deferred IDs survive; critical leads bypass routine cooldowns. Driver receipts report only proved dispatch boundaries. No queued receipt is described as completed review.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-18",
+      "tags": [
+        "operations",
+        "alert_routing",
+        "dispatch_acknowledgment"
+      ],
+      "slug": null,
+      "outcome": "Implemented;64 focused watcher, dispatch, fallback and doctrine tests passed. Vetted stop/absolute restart verified17:19:44 UTC, news PID40455, all four canonical daemons exactly one/current code. No production test queue request or extra Telegram sent. No asset action, forecast or performance CSV change.",
+      "calibration_delta": null,
+      "lesson": "A topic mention is not exposure or materiality. A local process is not queue acceptance; queue acceptance is not completed review. Preserve exact alert IDs and require evidence at each boundary. A recent unrelated journal entry must not consume an alert.",
+      "resolved_at": "2026-10-18T17:20:53Z"
     }
   ]
 }

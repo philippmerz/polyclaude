@@ -154,11 +154,12 @@ wealth cells, held-source gaps and all77 scanner-context batches; capped scans
 do not establish exchange-wide absence. Claim insurance is CLEAN6indexed plus
 one deindexed claim. Ostium has zero trades, limits and allowance.
 
-**Alert repair:** raw RSS headlines now stay internal, including Tier1; review
-wakeups remain active. The news watcher was restarted once/current-code at16:54.
-Material findings/actions/decisions are reported after review. The separate
-Messi YES hurdle-coverage bug is fixed;107 advisory and27 notification/doctrine
-tests pass. No forecast or holding changed.
+**News monitoring:** raw RSS headlines stay internal. Portfolio impacts require
+actual live exposure IDs; research-only topics do not request portfolio review.
+Pending reviews retain their alert IDs until dispatch acknowledgment; queued
+means accepted for delivery, not completed review. The watcher runs current code
+since17:19;64 focused tests pass. [Routing and verification](research/2026-10-18-news-review-routing.md).
+The separate Messi YES hurdle-coverage correction passed107 advisory tests.
 
 [Performance chart](https://philippmerz.github.io/polyclaude/) and
 [recorded CSV methodology](docs/README.md).

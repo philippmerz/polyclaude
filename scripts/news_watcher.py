@@ -3,11 +3,11 @@
 Long-running daemon: polls a configurable list of RSS feeds every N seconds,
 matches entry titles + summaries against tiered keyword lists, and:
 
-- Tier 1 (book-resolving events: Trump dies, regime falls, aliens confirmed,
-  peace deal signed, etc.) → persist a structured alert and may wake the
-  scheduled check-in immediately, subject to existing cooldowns.
-- Tier 2 (notable but not resolution-shifting) → filter and persist qualifying
-  alerts for the next scheduled check-in to review.
+- Tier 1 (broad recall, including research topics) → classify against current
+  exposure; persist research leads without claiming an investment alert.
+- Tier 2 → filter and persist qualifying internal detections.
+- Material/critical current-exposure impacts and explicit uncertainty/safety
+  cases qualify for review. Track queue acknowledgment separately from review.
 
 The watcher is detection-only: RSS matches never send Telegram messages.
 
@@ -26,9 +26,11 @@ import hashlib
 import json
 import math
 import os
+import re as _re
 import signal
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -115,26 +117,137 @@ def _normalize_title(title: str) -> str:
     return " ".join(title.lower().split()).strip()
 
 
-def fire_cron_tick() -> None:
-    """Spawn the daily check-in as a detached background process."""
+def fire_cron_tick(reason: str = "") -> dict:
+    """Request a review and report only the dispatch boundary actually proved.
+
+    A child PID proves a driver exists, not that a prompt was queued or read.
+    The driver writes its own acknowledgment after checking the lock/queue.
+    Keep an unconfirmed receipt for the next normal polling cycle to inspect;
+    never kill a possibly active fallback just because acknowledgment is slow.
+    """
+    receipt_path = None
     try:
-        subprocess.Popen(
-            ["/bin/bash", str(CRON_SCRIPT)],
+        directory = _REPO_ROOT / "logs" / "cron"
+        directory.mkdir(parents=True, exist_ok=True)
+        fd, filename = tempfile.mkstemp(prefix="news_dispatch_", suffix=".json", dir=directory)
+        os.close(fd)
+        receipt_path = Path(filename)
+        env = os.environ.copy()
+        env["POLYCLAUDE_DISPATCH_RECEIPT"] = str(receipt_path)
+        child = subprocess.Popen(
+            ["/bin/bash", str(CRON_SCRIPT), reason],
             stdout=subprocess.DEVNULL,
             stderr=subprocess.DEVNULL,
             start_new_session=True,
+            env=env,
         )
-        print("[watcher] auto-triggered daily_checkin.sh (Tier-1 event)", flush=True)
+        deadline = time.monotonic() + 20
+        while time.monotonic() < deadline:
+            receipt = _dispatch_receipt(receipt_path)
+            if receipt is not None:
+                return receipt
+            if child.poll() is not None:
+                break
+            time.sleep(0.1)
+        return {"status": "unconfirmed", "why": "no_dispatch_acknowledgment",
+                "receipt_path": str(receipt_path.relative_to(_REPO_ROOT))}
     except Exception as e:
-        print(f"[watcher] failed to spawn cron tick: {e}", flush=True)
+        result = {"status": "failed", "why": "driver_request_failed",
+                  "detail": _secrets.scrub(str(e))[:160]}
+        if receipt_path is not None:
+            result["receipt_path"] = str(receipt_path.relative_to(_REPO_ROOT))
+        return result
 
 
-# --- smart filter for Tier-2 alerts ---------------------------------------
+def _dispatch_receipt(path: Path) -> dict | None:
+    """Read only this request's local dispatch acknowledgment, never an inbox."""
+    try:
+        record = json.loads(path.read_text())
+        if not isinstance(record, dict) or record.get("status") not in {
+                "queued", "deferred", "failed", "fallback_starting"}:
+            return None
+        return {**{k: record.get(k) for k in ("status", "why", "tick_id", "returncode")},
+                "receipt_path": str(path.relative_to(_REPO_ROOT))}
+    except (OSError, ValueError):
+        return None
+
+
+def _dispatch_pending_reviews(state: dict, review_alerts: list[dict], now: float) -> None:
+    """Retain qualified alert IDs until the queue acknowledges their dispatch.
+
+    Journal recency is not proof that these alerts were read. An unconfirmed
+    request is checked for a late receipt, not blindly repeated. Critical and
+    infrastructure-safety leads bypass the ordinary 90-minute request cooldown.
+    """
+    pending = {r["alert_id"]: r for r in state.get("pending_review_alerts", [])
+               if isinstance(r, dict) and isinstance(r.get("alert_id"), str)}
+    pending.update({r["alert_id"]: r for r in review_alerts})
+    state["pending_review_alerts"] = list(pending.values())
+    if not pending:
+        return
+    previous = state.get("last_review_dispatch", {})
+    dispatched_ids = list(pending)
+    newly_critical = any(r.get("critical") and key not in previous.get("alert_ids", [])
+                         for key, r in pending.items())
+    if previous.get("status") == "unconfirmed" and not newly_critical:
+        dispatched_ids = previous.get("alert_ids", [])
+        path = (_REPO_ROOT / previous.get("receipt_path", "")).resolve()
+        directory = (_REPO_ROOT / "logs" / "cron").resolve()
+        result = (_dispatch_receipt(path) if path.parent == directory
+                  and path.name.startswith("news_dispatch_") else None)
+        if result is None:
+            result = {**previous, "status": "unconfirmed"}
+        elif result["status"] in {"queued", "fallback_starting"}:
+            for alert_id in dispatched_ids:
+                pending.pop(alert_id, None)
+            state["last_cron_trigger"] = now
+    else:
+        last = max(state.get("last_cron_trigger", 0), state.get("last_cron_request", 0))
+        critical = any(r.get("critical") for r in pending.values())
+        if not critical and now - last < 5400:
+            result = {"status": "deferred", "why": "review_request_cooldown"}
+        else:
+            save_state(state)  # Pending IDs survive a driver/daemon interruption.
+            reason = (
+                "NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs "
+                + ",".join(dispatched_ids[:50])
+                + (f" (plus {len(dispatched_ids)-50} IDs in logs/news_dispatch.jsonl)."
+                   if len(dispatched_ids) > 50 else ".")
+                + " Read related alerts even if they predate the latest journal entry. "
+                "Relevance is provisional; verify sources, current exposure and any action. "
+                "A queued review is not a completed review."
+            )
+            state["last_cron_request"] = now
+            result = fire_cron_tick(reason)
+            if result.get("status") in {"queued", "fallback_starting"}:
+                state["last_cron_trigger"] = now
+                pending.clear()
+    record = {**result, "alert_ids": dispatched_ids}
+    if record != previous:
+        try:
+            path = _REPO_ROOT / "logs" / "news_dispatch.jsonl"
+            path.parent.mkdir(parents=True, exist_ok=True)
+            with path.open("a") as stream:
+                stream.write(json.dumps({"ts": dt.datetime.now(dt.timezone.utc).isoformat(),
+                                         **record}) + "\n")
+        except OSError as exc:
+            print(f"[watcher] dispatch-log append failed: {_secrets.scrub(str(exc))[:120]}", flush=True)
+        print(f"[watcher] review dispatch {record.get('status')}: {record.get('why')}; "
+              f"{len(dispatched_ids)} alert(s); completion not asserted", flush=True)
+    state["last_review_dispatch"] = record
+    state["pending_review_alerts"] = list(pending.values())
+
+
+# --- current exposure and scoped relevance filter -------------------------
 
 # In-process cache of formatted positions; refreshed every 5 min so the
 # agent always sees roughly-current book without hammering data-api.
-_POSITIONS_CACHE: dict = {"text": None, "ts": 0.0, "polymarket_available": False}
+_POSITIONS_CACHE: dict = {
+    "text": None, "ts": 0.0, "polymarket_available": False,
+    "exposures": [], "ostium_available": False, "ostium_open_trades": 0,
+}
 _POSITIONS_CACHE_TTL_SECONDS = 300
+_CONDITION_ID_RE = _re.compile(r"^0x[0-9a-fA-F]{64}$")
 
 
 def _positions_summary_blocking() -> str:
@@ -149,6 +262,8 @@ def _positions_summary_blocking() -> str:
 
     lines: list[str] = ["Polymarket sleeve (held positions):"]
     available = True
+    exposures: list[dict] = []
+    _POSITIONS_CACHE["exposures"] = exposures
     try:
         addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
         r = httpx.get(
@@ -165,7 +280,19 @@ def _positions_summary_blocking() -> str:
                 continue
             cur = float(p.get("curPrice") or 0)
             cost = float(p.get("initialValue") or 0)
-            lines.append(f"- {p['outcome']} {cur:.3f} (${cost:.2f}) — {p['title'][:70]}")
+            size = float(p.get("size") or 0)
+            cid = str(p.get("conditionId") or "")
+            if not math.isfinite(size) or size < 0:
+                raise RuntimeError("held position has invalid quantity")
+            if size > 0:
+                if not _CONDITION_ID_RE.fullmatch(cid):
+                    available = False
+                    lines.append("  (held position omitted: missing valid condition ID)")
+                    continue
+                exposures.append({"condition_id": cid.lower(), "kind": "held",
+                                  "title": str(p.get("title") or "")[:120]})
+                lines.append(f"- {p.get('outcome', 'position')} {cur:.3f} (${cost:.2f}) "
+                             f"— {str(p.get('title') or '')[:70]}; condition={cid}")
     except Exception as e:
         available = False
         lines.append(f"  (positions read failed: {_secrets.scrub(str(e))[:120]})")
@@ -180,6 +307,9 @@ def _positions_summary_blocking() -> str:
     # here after the trade closed and caused an Aug-27 alert to fabricate a
     # portfolio impact. Unknown state is explicitly non-actionable: absence of
     # a successful read is not permission to resurrect a remembered position.
+    _POSITIONS_CACHE["exposures"] = exposures
+    _POSITIONS_CACHE["ostium_available"] = False
+    _POSITIONS_CACHE["ostium_open_trades"] = 0
     lines.append("\n" + _ostium_positions_summary_blocking())
 
     text = "\n".join(lines)
@@ -221,6 +351,13 @@ def _pending_buy_summary_blocking() -> str:
                 or remaining <= 0 or not 0 < price < 1
                 or abs(risk - remaining * price) > 1e-8):
             raise RuntimeError("pending BUY remaining quantity/commitment is invalid")
+        cid = str(row["conditionId"])
+        if not _CONDITION_ID_RE.fullmatch(cid):
+            raise RuntimeError("pending BUY has invalid condition ID")
+        _POSITIONS_CACHE.setdefault("exposures", []).append({
+            "condition_id": cid.lower(), "kind": "pending_buy",
+            "title": str(row.get("question") or "")[:120],
+        })
         question = str(row.get("question") or "")
         slug = str(row.get("slug") or "")
         if not question or not slug:
@@ -252,6 +389,10 @@ def _ostium_positions_summary_blocking() -> str:
             if line.strip().lower().startswith("open trades:")
         )
         count = int(count_line.split(":", 1)[1].strip())
+        if count < 0:
+            raise RuntimeError("negative open-trade count")
+        _POSITIONS_CACHE["ostium_available"] = True
+        _POSITIONS_CACHE["ostium_open_trades"] = count
         if count == 0:
             return "Crypto/Ostium sleeve: no open trades."
         trade_lines = [
@@ -265,6 +406,8 @@ def _ostium_positions_summary_blocking() -> str:
             f"- {line}" for line in trade_lines[:count]
         )
     except Exception as exc:
+        _POSITIONS_CACHE["ostium_available"] = False
+        _POSITIONS_CACHE["ostium_open_trades"] = 0
         detail = _secrets.scrub(str(exc))[:120]
         return (
             "Crypto/Ostium sleeve: live status unavailable "
@@ -302,7 +445,7 @@ def _fetch_article_body(url: str, max_chars: int = 4000) -> str | None:
 
 
 def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: str = "") -> tuple[bool, str, list[dict]]:
-    """Ask a fast scoped worker whether to retain Tier-2 news and score impact.
+    """Classify news for internal retention and exact-ID exposure impact.
 
     Returns (should_retain_internally, one_line_reason, per_position_impacts).
     Each impact is {"position": str, "level": NONE|MINOR|MATERIAL|CRITICAL, "reason": str}.
@@ -327,15 +470,14 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
         "  - SUPPRESS = recycled noise (rephrasing of existing facts, opinion pieces, generic topic mentions).\n\n"
         "FOLLOWING LINES (only if SEND, only for IMPACTED positions): one line per "
         "materially-affected position, in this exact format:\n"
-        "  IMPACT: <short-position-key>: <MINOR|MATERIAL|CRITICAL>: <one-line directional reason>\n"
+        "  IMPACT: <exact 0x condition ID>: <MINOR|MATERIAL|CRITICAL>: <one-line causal reason>\n"
         "  - MINOR = thesis still holds; tiny mark-to-market drift expected.\n"
         "  - MATERIAL = thesis pressure or confirmation; consider rebalance/scale on next tick.\n"
         "  - CRITICAL = thesis-invalidating or thesis-resolving; urgent re-evaluation.\n"
-        "Use a short kebab-case position-key DERIVED from each position's title "
-        "in the list above (e.g., 'Iran-peace deal by May 31' → 'iran-peace'; "
-        "'Atletico Madrid top-4 La Liga' → 'atletico-top4'). Skip positions where "
-        "the news has no causal channel — don't fabricate connections. If a "
-        "position is no longer in the list above, do NOT score it.\n\n"
+        "Use only the exact condition ID printed for a live held position or pending BUY. "
+        "Never invent a key from a title. For a live Ostium trade only, use the key "
+        "ostium if the inventory explicitly reports open trades. Skip any position "
+        "without a direct causal channel.\n\n"
         "Pending BUY orders can fill until canceled. Treat news affecting their "
         "market as relevant even with no held shares; assess whether it calls "
         "for cancellation or re-evaluation. Do not add their unfilled quantity "
@@ -352,10 +494,15 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
         out = (r.stdout or "").strip()
         lines = [l.strip() for l in out.splitlines() if l.strip()]
         first_line = lines[0] if lines else ""
-    except (subprocess.TimeoutExpired, FileNotFoundError) as e:
+    except Exception as e:
         return (True, f"agent unavailable: {_secrets.scrub(str(e))[:120]}", [])
 
     impacts: list[dict] = []
+    unsupported = False
+    allowed = {x["condition_id"] for x in _POSITIONS_CACHE.get("exposures", [])}
+    if (_POSITIONS_CACHE.get("ostium_available") and
+            _POSITIONS_CACHE.get("ostium_open_trades", 0) > 0):
+        allowed.add("ostium")
     for line in lines[1:]:
         # IMPACT: <key>: <LEVEL>: <reason>
         if not line.upper().startswith("IMPACT:"):
@@ -364,11 +511,16 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
             _, rest = line.split(":", 1)
             parts = [p.strip() for p in rest.split(":", 2)]
             if len(parts) < 3:
+                unsupported = True
                 continue
-            key, level, reason = parts[0], parts[1].upper(), parts[2]
+            key, level, reason = parts[0].lower(), parts[1].upper(), parts[2]
             if level not in ("MINOR", "MATERIAL", "CRITICAL", "NONE"):
+                unsupported = True
                 continue
             if level == "NONE":
+                continue
+            if key.lower() not in allowed:
+                unsupported = True
                 continue
             impacts.append({"position": key, "level": level, "reason": reason[:240]})
         except Exception:
@@ -401,6 +553,11 @@ def _agent_filter_tier2(feed_name: str, kw: str, title: str, summary: str, url: 
             print(f"[watcher] tier2-CRITICAL re-val SKIPPED body_len={body_len} (kept CRITICAL) url={url[:80]}",
                   flush=True)
 
+    if impacts and not retain_decision:
+        unsupported = True
+    if unsupported:
+        retain_decision = True
+        send_reason = f"{send_reason}; UNKNOWN relevance: unsupported impact key discarded"
     return (retain_decision, send_reason, impacts)
 
 
@@ -491,8 +648,6 @@ def entry_id(entry) -> str:
     return hashlib.sha1(base.encode("utf-8", errors="ignore")).hexdigest()
 
 
-import re as _re
-
 _KW_REGEX_CACHE: dict[str, _re.Pattern] = {}
 
 
@@ -539,7 +694,7 @@ def poll_once(config: dict, state: dict) -> int:
     now = time.time()
 
     new_alerts = 0
-    tier1_fired = False
+    review_alerts: list[dict] = []
 
     for feed in config["feeds"]:
         try:
@@ -578,26 +733,61 @@ def poll_once(config: dict, state: dict) -> int:
             # Per-keyword detection cooldown to avoid repeating a hot story.
             cooldown_key = f"t{tier}:{kw}"
             last = last_alerts.get(cooldown_key, 0)
-            if now - last < cooldown:
-                continue
+            routine_cooldown = now - last < cooldown
             # Cooldown records detection, independent of any outbound channel.
             last_alerts[cooldown_key] = now
-            # Tier-2 goes through the scoped filter; Tier-1 detections are kept
-            # and can wake the scheduled check-in subject to existing gates.
+            # Both tiers use the same fast exposure classifier. Tier 1 remains
+            # in the research log regardless of its SEND/SUPPRESS verdict.
             agent_reason = None
             impacts: list[dict] = []
-            if tier == 2:
-                retain, agent_reason, impacts = _agent_filter_tier2(feed["name"], kw, title, summary, link)
-                if not retain:
-                    print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
-                          f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
-                    continue
+            retain, agent_reason, impacts = _agent_filter_tier2(
+                feed["name"], kw, title, summary, link
+            )
+            if tier == 2 and not retain:
+                print(f"[watcher] suppressed tier2 kw={kw!r} feed={feed['name']} "
+                      f"reason={agent_reason[:120]!r} title={title[:80]!r}", flush=True)
+                continue
+
+            unknown = ("unavailable" in (agent_reason or "").lower()
+                       or "unparseable" in (agent_reason or "").lower()
+                       or "unknown relevance" in (agent_reason or "").lower()
+                       or not _POSITIONS_CACHE.get("polymarket_available", False)
+                       or not _POSITIONS_CACHE.get("ostium_available", False))
+            safety_terms = (
+                "hack", "exploit", "drained", "rug", "depeg", "depegged",
+                "loses peg", "breaks peg", "insolvent", "bankrupt", "sequencer",
+                "chain halt", "withdrawal halted", "exchange frozen", "shutdown",
+                "polymarket halted", "polymarket banned", "polymarket frozen",
+            )
+            safety_headline = tier == 1 and any(
+                term in kw.lower() for term in safety_terms
+            )
+            material = any(i.get("level") in ("MATERIAL", "CRITICAL") for i in impacts)
+            minor = any(i.get("level") == "MINOR" for i in impacts)
+            if material:
+                relevance = "portfolio_material_critical"
+            elif safety_headline:
+                relevance = "safety_unknown"
+            elif unknown:
+                relevance = "unknown"
+            elif minor:
+                relevance = "minor"
+            else:
+                relevance = "research_only"
+            review_required = relevance in (
+                "portfolio_material_critical", "safety_unknown", "unknown"
+            )
+            # A routine article must not hide a new critical development about
+            # the same entity. Apply the headline cooldown after classification.
+            if routine_cooldown and not review_required:
+                continue
 
             # Persist retained detections for the next check-in to review. A
             # Tier-2 SEND verdict means internal retention, not a message.
             # Unknown impacts stay attached as empty rather than dropping the
             # alert; the check-in decides what matters.
-            _append_news_alert({
+            alert_record = {
+                "alert_id": eid,
                 "ts": dt.datetime.utcnow().isoformat(timespec="seconds") + "Z",
                 "tier": tier,
                 "feed": feed["name"],
@@ -606,41 +796,22 @@ def poll_once(config: dict, state: dict) -> int:
                 "link": link,
                 "agent_reason": agent_reason,
                 "impacts": impacts,
-            })
+                "relevance": relevance,
+                "review_required": review_required,
+            }
+            _append_news_alert(alert_record)
             print(f"[watcher] alert tier{tier} kw={kw!r} feed={feed['name']} title={title[:80]!r}", flush=True)
             new_alerts += 1
-            if tier == 1:
-                tier1_fired = True
+            if review_required:
+                review_alerts.append({
+                    "alert_id": eid, "title": title[:120],
+                    "relevance": relevance,
+                    "critical": (any(i.get("level") == "CRITICAL" for i in impacts)
+                                 or relevance == "safety_unknown"),
+                })
 
-    if tier1_fired:
-        # Rate-limit auto-cron firing so a multi-headline event doesn't spawn
-        # several simultaneous check-ins.
-        last_trigger = state.get("last_cron_trigger", 0)
-        # 90-min minimum between auto-fires (raised from 30 2026-06-11: during an
-        # active war week every fresh headline phrasing re-fires tier-1; the first
-        # fire engages the session, repeat fires within the hour are delta-noise.
-        # Marks/UMA can't move faster than this matters.)
-        self_cooldown_ok = now - last_trigger >= 5400
-        # Cross-source recency (2026-07-20): the self-cooldown is blind to a
-        # SCHEDULED cron tick or an actively-working session. Journal mtime is
-        # the shared "a tick just produced output" signal — if any tick ran in
-        # the last 35 min, this auto-fire is redundant churn (the 02:00 cron
-        # tick → 02:23 duplicate-fire case). Alert detection and logging above
-        # are untouched; only the redundant full-tick SPAWN is skipped,
-        # so Tier-1 sensitivity is fully preserved during active conflict.
-        tick_recent = False
-        try:
-            jmtime = (_SCRIPT_DIR.parent / "notes" / "journal.md").stat().st_mtime
-            tick_recent = (now - jmtime) < 2100
-        except Exception:
-            pass
-        if self_cooldown_ok and not tick_recent:
-            fire_cron_tick()
-            state["last_cron_trigger"] = now
-        elif tier1_fired and tick_recent:
-            print("[watcher] tier-1 fire SUPPRESSED — a tick produced output "
-                  f"{int((now - jmtime) // 60)}min ago (cross-source recency); "
-                  "alert logged, no redundant spawn", flush=True)
+    # Existing polls retry qualified pending IDs even without a new headline.
+    _dispatch_pending_reviews(state, review_alerts, now)
 
     state["seen_ids"] = list(seen)
     state["last_alerts"] = last_alerts

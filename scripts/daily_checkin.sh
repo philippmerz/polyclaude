@@ -11,6 +11,22 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 LOG_DIR="${POLYCLAUDE_DIR}/logs/cron"
 mkdir -p "${LOG_DIR}"
+TS=$(date -u +%Y%m%dT%H%M%SZ)
+
+# Optional local acknowledgement for the cron caller. This records only the
+# dispatch boundary, never the prompt or its private runtime contents.
+write_dispatch_receipt() {
+    local status="$1" why="$2" rc="$3" receipt="${POLYCLAUDE_DISPATCH_RECEIPT:-}" tmp
+    [[ -n "${receipt}" ]] || return 0
+    tmp=$(mktemp "${receipt}.tmp.XXXXXX" 2>/dev/null) || return 0
+    if ! printf '{"status":"%s","why":"%s","tick_id":"%s","returncode":%s}\n' \
+        "${status}" "${why}" "${TS}" "${rc}" >"${tmp}"; then
+        rm -f -- "${tmp}" 2>/dev/null || true
+        return 0
+    fi
+    chmod 600 "${tmp}" 2>/dev/null || true
+    mv -f -- "${tmp}" "${receipt}" 2>/dev/null || rm -f -- "${tmp}" 2>/dev/null || true
+}
 
 # Cross-tick lockout. Without this, a Tier-1 news_watcher firing during a
 # scheduled cron window can spawn a parallel daily_checkin.sh that resumes
@@ -22,10 +38,10 @@ exec 9>"${LOCK_FILE}"
 if ! flock -n 9; then
     echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: lock held by another tick, exiting" \
         >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "deferred" "checkin_lock_held" 0
     exit 0
 fi
 
-TS=$(date -u +%Y%m%dT%H%M%SZ)
 # Optional $1 = why this tick fired (opportunity_watch/news_watcher pass a reason;
 # plain cron passes nothing). Surfaced in the prompt so a daemon-fired tick is
 # distinguishable from a scheduled one (2026-07-28: stale-ARB-trigger fires read
@@ -45,6 +61,7 @@ CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (11-step list 
 if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
     echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS set — skipping operator queue" \
         >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "fallback_starting" "operator_forced_headless" 0
 else
     INJECT_RC=0
     "${SCRIPT_DIR}/inject_prompt.sh" "${CRON_MSG}" >/dev/null 2>&1 || INJECT_RC=$?
@@ -52,6 +69,7 @@ else
       0)
         echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queued to operator; exiting" \
             >> "${LOG_DIR}/peer_skips.log"
+        write_dispatch_receipt "queued" "operator_queue_accepted" 0
         exit 0
         ;;
       69)
@@ -60,6 +78,7 @@ else
         # automatic path allowed to start another asset-capable worker.
         echo "$(date -u +%Y%m%dT%H%M%SZ) cron: no live operator — using headless fallback" \
             >> "${LOG_DIR}/peer_skips.log"
+        write_dispatch_receipt "fallback_starting" "operator_absent" 69
         ;;
       *)
         # A timeout can mean the queue accepted the message before the caller
@@ -67,6 +86,7 @@ else
         # both the interactive operator and a fresh autonomous process.
         echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queue failed rc=${INJECT_RC}; no headless fallback (exact-one safety)" \
             >> "${LOG_DIR}/peer_skips.log"
+        write_dispatch_receipt "failed" "operator_queue_failed" "${INJECT_RC}"
         exit "${INJECT_RC}"
         ;;
     esac
@@ -88,7 +108,7 @@ BOUNDED RUN CONTRACT (operator-authorized 2026-09-08): Complete this due checkli
 RESOURCE PRE-FLIGHT: Run `./scripts/check_usage.sh --brief` before expensive discretionary research. Use the main-Codex headroom to reserve the primary context for portfolio/risk judgment and route bounded routine work to cheaper subagents. Never skip required safety checks or delay a thesis-break exit to save quota. This probe calls the read-only app-server account endpoint directly; do not inject `/usage` as a conversational turn.
 
 1. Mark portfolio + wallet state for both sleeves (scripts/positions.py, scripts/wallet_status.py, scripts/crypto_status.py, scripts/ostium_client.py status). ALSO run `.venv/bin/python scripts/bankroll.py` — the single authoritative total-bankroll number (PM MTM + Aave aTokens + pUSD + stables + natives across both sleeves, with WARNINGs for anything unvalued). Use its TOTAL as the tick's bankroll mark; never hand-assemble the aggregate. Lesson source: 2026-05-29 (-12%% misreport vs true -4.6%) and 2026-06-10 ($75.68 idle reported as ~$22 for 5 days — status scripts were aToken-blind). ALSO run `.venv/bin/python scripts/uma_status_check.py` — alerts on umaResolutionStatus changes (proposed/disputed) for held markets, large outcomePrice moves (>5pp), and positions that disappeared from data-api but show dispute on gamma. Lesson source: 2026-05-09 R-U miss — when DEC-0018 went into UMA dispute, I framed it as benign monitoring lag for 18+ hours; this check would have caught the dispute on the next cron tick. ALSO run `.venv/bin/python scripts/ostium_state_diff.py` — alerts on Ostium open-trades count changes (OPENED/CLOSED) since prior tick. Lesson source: 2026-05-12 gold (XAU/USD LONG 5x) auto-closed at TP $4769 (+$1.17 realized) but I didn't proactively flag it; operator had to ask. This diff catches TP/SL triggers + manual closes. ALSO run `.venv/bin/python scripts/crux_coverage_check.py --quiet` — prints ONLY held positions with no matching news keyword (silent when all are covered, so it is not flag-fatigue). Lesson source: three coverage gaps found by hand and only because I happened to think of that market — HLE and Greenland had ZERO of 217 keywords (2026-08-11), and the touchscreen-MacBook leg (largest position) had four keywords that were all announcement phrasings, none of which fires on a ship/pre-order headline (2026-08-14) even though the market resolves on PURCHASABLE, not unveiling. NOTE the check proves nothing is UNWATCHED; it does NOT prove the keyword covers the resolution CRUX — that is the criteria-read rotation's job. ALSO run this one-liner to catch a daemon running STALE CODE — `for d in news_watcher heartbeat_watch telegram_listener opportunity_watch; do pid=$(pgrep -f "$d.py start" | head -1); [ -z "$pid" ] && { echo "DOWN $d"; continue; }; s=$(date -d "$(ps -o lstart= -p $pid)" +%s); m=$(stat -c %Y scripts/$d.py); [ "$m" -gt "$s" ] && echo "STALE $d (edited after start — RESTART IT)"; done` — a long-lived daemon does NOT pick up code edits, only config reloads. Lesson source 2026-08-14: the Gamescom listing-watch fix was applied to a daemon that had been running since Aug-11, so it sat INERT while looking healthy; caught only by diffing process start against file mtime. Restart with `.venv/bin/python scripts/<d>.py stop` then — CRITICALLY — an ABSOLUTE-PATH start: `setsid nohup /home/polyclaude/polyclaude/.venv/bin/python3 /home/polyclaude/polyclaude/scripts/<d>.py start >> /home/polyclaude/polyclaude/logs/<d>.log 2>&1 < /dev/null &`. The absolute form is REQUIRED, not cosmetic: daemon_keepalive.sh's alive() matches the exact cmdline `^<python> <ABSOLUTE script path> start$`, so a relative-path start is INVISIBLE to it and the */10 keepalive spawns a DUPLICATE within 10 minutes — two daemons then race on the same state file, which is where seen_listings and alert cooldowns live. That happened 2026-08-14 11:20 from exactly this mistake. Then VERIFY: new pid postdates the edit, and `pgrep -cf '<d>.py start'` shows exactly one — the first restart attempt that day silently did not take at all.
-2. NEWS-ALERT CONSUMPTION: read tail of `notes/news_alerts.jsonl` for any entries timestamped after the last journal entry. Each line is a structured news event with per-position impact scoring (MINOR/MATERIAL/CRITICAL). For every MATERIAL/CRITICAL impact, evaluate whether the agent's read is correct and whether to act (size up, scale down, close). For CRITICAL impacts especially, verify with primary sources before acting. Note the alert + your decision in the journal.
+2. NEWS-ALERT CONSUMPTION: read tail of `notes/news_alerts.jsonl` for any entries timestamped after the last journal entry, plus every alert ID explicitly referenced by a news-review request even if older. Relevance is provisional: research-only topics are not portfolio alerts; pending BUYs are unfilled commitments; unknown inventory/filter/safety cases are not proved holdings. Each relevant line may carry per-position impact scoring (MINOR/MATERIAL/CRITICAL). For every MATERIAL/CRITICAL impact, evaluate whether the classifier's read is correct and whether to act (size up, scale down, close). For CRITICAL impacts especially, verify with primary sources before acting. Note the exact alert IDs + decision in the journal. A dispatch receipt proves queued/deferred/failed/fallback status only; never infer completed review from queue acceptance, a child PID or journal recency.
 3. Scan for catalysts on active positions (beyond what's in news_alerts); decide hold/adjust/add/close. Run `.venv/bin/python scripts/check_marginal_apy.py` — flags any held NO/YES position whose marginal-APY-to-resolution falls below the Aave hurdle (i.e., capital is better deployed elsewhere even at near-zero P(YES) belief). For any flagged CLOSE_CANDIDATE: verify with carry math, close if confirmed, free capital for redeployment. Lesson source: 2026-05-08 DEC-0001 (Jesus 2027 NO) closed at 2.5% marginal APY for +\$0.19 realized; the hold-to-resolution alternative was below stablecoin yield. ALSO run `.venv/bin/python scripts/watchlist_monitor.py --hits-only --auto-revet` for the project crypto watchlist. Only explicit project-routed crypto candidates are monitored; off-chain stock quotes, personal-brokerage routes and their alerts are retired. ENTRY_TRIGGER_HIT [PROJECT_REVIEW] is an observation: use any fresh fundamental vet as an input, independently verify the thesis, exact instrument/chain/venue, lawful funding route, current buy/sell depth, fees, gas, horizon and joint portfolio risk before an allocation through vetted execution paths. Configuration: notes/watchlist_triggers.json; current candidate notes: notes/longterm_watchlist.md.
 3b. STATE HYGIENE: run `.venv/bin/python scripts/position_state_audit.py --fix` — reconciles every position-referencing file (conditionId claim-insurance snapshot, armed opportunity triggers, Kelly priors, acked-holds) against the LIVE book. Auto-fixes the snapshot + expired holds; REPORTS judgment items (armed actionable triggers, orphan priors) for you to resolve THIS tick. Lesson source: 2026-07-28 — an ARB price trigger left armed after the position was sold fired every 5 min for hours, telegramming the operator and burning 90-min-cooldown ticks on an add already ruled out.
 3c. EXIT ROUTING: run `.venv/bin/python scripts/exit_analysis.py` — for every position it computes central Bernoulli hold EV (fee-free resolution: `p × $1 + (1-p) × $0` per share) vs TAKER-SELL net (walks every REAL bid-book prefix so an EV-improving partial trim is not hidden by worse lower bids, and charges each actual fill using `rate × [p × (1−p)]^exponent`; `scripts/pm_fees.py` reads the authoritative structured `feeSchedule`, with the 0.07 cap retained only for legacy compatibility) vs the MAKER breakeven (= fair, since post-only pays no fee). Act on any SELL-TAKER verdict after the stated hidden-info verification. A HOLD-CANDIDATE verdict is only a central-arithmetic screen, never a recovery thesis or complete decision: before finalizing it, explicitly compare executable exit plus redeployment with a pessimistic p case, the marginal-hurdle check, the Kelly advisory, and explicit joint terminal states for material correlated exposure. `portfolio_kelly.py` uses midpoint prices and a rho heuristic; do not call it a full joint loss-distribution model. For ordinary public-information positions, consider resting a maker sell AT fair (free option, fills only if someone pays >= fair). On hidden-info-class positions, never rest a sell at or below fair: an informed up-spike can mean fair JUMPED. A premium-to-fair sell (strictly above fair) is allowed only when the premium explicitly compensates that jump risk; thesis-break exits remain active judgments, and scheduled-catalyst pull rules still apply (doctrine in notes/resting_orders.md). Lesson sources: Prime-SDCC taker exit gave up ~\$2 vs holding (2026-07-24); Fed's maker route avoided the taker-fee breakeven gap (2026-07-28); operator correction 2026-09-21: a binary loss is terminal, so central EV must never read as expected price recovery.
@@ -149,7 +169,7 @@ Then do the check-in below. Be CONSERVATIVE: you lack the conversation context t
 
 --- SCHEDULED CHECK-IN ---
 "
-  printf '%s' "${PRIMER}${PROMPT}" | \
+  printf '%s' "${PRIMER}${PROMPT}${REASON_SUFFIX}" | \
     "${HOME}/.local/bin/polyclaude-agent" run \
       --profile main --effort max --access autonomous \
       --cwd "${POLYCLAUDE_DIR}" --timeout 7200 \

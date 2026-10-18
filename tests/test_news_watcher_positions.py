@@ -19,7 +19,7 @@ import polyclaude_enter  # noqa: E402
 
 def _pending_buy(**changes) -> dict:
     return {
-        "orderId": "order-swift-no", "asset": "token-no", "conditionId": "0xswift",
+        "orderId": "order-swift-no", "asset": "token-no", "conditionId": "0x" + "a" * 64,
         "question": "Will Taylor Swift release a Japanese album?", "slug": "swift-japanese-album",
         "originalShares": 10.0, "matchedShares": 4.0, "remainingShares": 6.0,
         "price": 0.56, "risk": 3.3600000000000003, **changes,
@@ -32,6 +32,7 @@ def _mock_inventory(monkeypatch, tmp_path, *, positions=None, orders=None) -> No
     monkeypatch.setattr(news_watcher._secrets, "path", lambda _name: wallet)
     monkeypatch.setattr(news_watcher, "_POSITIONS_CACHE", {
         "text": None, "ts": 0.0, "polymarket_available": False,
+        "exposures": [], "ostium_available": True, "ostium_open_trades": 0,
     })
     monkeypatch.setattr(news_watcher.httpx, "get", lambda *_a, **_kw: SimpleNamespace(
         raise_for_status=lambda: None, json=lambda: positions or [],
@@ -43,6 +44,7 @@ def _mock_inventory(monkeypatch, tmp_path, *, positions=None, orders=None) -> No
 def test_partial_buy_is_additional_to_held_and_order_duplicates_removed(monkeypatch, tmp_path):
     buy = _pending_buy()
     held = {"outcome": "NO", "curPrice": 0.55, "initialValue": 2.24,
+            "size": 4.0, "conditionId": "0x" + "b" * 64,
             "title": buy["question"], "asset": buy["asset"]}
     _mock_inventory(monkeypatch, tmp_path, positions=[held], orders=[buy, dict(buy)])
     text = news_watcher._positions_summary_blocking()
@@ -51,6 +53,8 @@ def test_partial_buy_is_additional_to_held_and_order_duplicates_removed(monkeypa
     assert "capped commitment=$3.3600000000000003" in text
     assert "slug=swift-japanese-album" in text and "asset=token-no" in text
     assert "NO 0.550 ($2.24)" in text
+    assert "condition=" + held["conditionId"] in text
+    assert len(news_watcher._POSITIONS_CACHE["exposures"]) == 2
     assert "remaining=10.0" not in text
     assert news_watcher._POSITIONS_CACHE["polymarket_available"] is True
 
@@ -113,12 +117,48 @@ def test_pending_buy_only_prompt_has_cancellation_channel(monkeypatch, tmp_path)
 
     def agent(prompt, **_kwargs):
         prompts.append(prompt)
-        return SimpleNamespace(returncode=0, stdout="SEND: album announcement\n")
+        return SimpleNamespace(returncode=0, stdout=(
+            "SEND: album announcement\nIMPACT: " + _pending_buy()["conditionId"]
+            + ": MATERIAL: market is directly affected\n"
+        ))
 
     monkeypatch.setattr(news_watcher, "run_agent", agent)
     assert news_watcher._agent_filter_tier2("RSS", "Taylor Swift", "New album", "")[0] is True
     assert "swift-japanese-album" in prompts[0]
     assert "cancellation or re-evaluation" in prompts[0]
+    assert "exact condition ID" in prompts[0]
+    result = news_watcher._agent_filter_tier2("RSS", "Taylor Swift", "New album", "")
+    assert result[2][0]["position"] == _pending_buy()["conditionId"]
+
+
+@pytest.mark.parametrize("changes", [{"size": 0}, {"redeemable": True}])
+def test_zero_quantity_or_settled_loser_is_not_exposure(monkeypatch, tmp_path, changes):
+    zero = {"outcome": "YES", "curPrice": 0, "initialValue": 4.0,
+            "size": 10.0, "conditionId": "0x" + "c" * 64, "title": "Final market", **changes}
+    _mock_inventory(monkeypatch, tmp_path, positions=[zero])
+    news_watcher._positions_summary_blocking()
+    assert news_watcher._POSITIONS_CACHE["exposures"] == []
+
+
+def test_unresolved_zero_mark_still_has_live_exposure(monkeypatch, tmp_path):
+    held = {"outcome": "YES", "curPrice": 0, "size": 10,
+            "conditionId": "0x" + "c" * 64, "title": "Still unresolved", "redeemable": False}
+    _mock_inventory(monkeypatch, tmp_path, positions=[held])
+    news_watcher._positions_summary_blocking()
+    assert news_watcher._POSITIONS_CACHE["exposures"][0]["condition_id"] == held["conditionId"]
+
+
+def test_classifier_discards_arbitrary_impact_id(monkeypatch, tmp_path):
+    _mock_inventory(monkeypatch, tmp_path)
+    news_watcher._positions_summary_blocking()
+    monkeypatch.setattr(news_watcher, "run_agent", lambda *_a, **_kw: SimpleNamespace(
+        returncode=0,
+        stdout="SEND: unrelated\nIMPACT: 0x" + "f" * 64 + ": CRITICAL: invented\n",
+    ))
+    retain, reason, impacts = news_watcher._agent_filter_tier2("RSS", "topic", "title", "")
+    assert retain is True
+    assert "unsupported impact key discarded" in reason
+    assert impacts == []
 
 
 def test_title_dedup_state_survives_daily_guid_refresh(monkeypatch, tmp_path) -> None:

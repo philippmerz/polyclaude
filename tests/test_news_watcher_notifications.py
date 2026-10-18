@@ -15,6 +15,7 @@ import pytest
 sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 
 import news_watcher  # noqa: E402
+_REAL_FILTER = news_watcher._agent_filter_tier2
 
 
 def _entry(entry_id: str, title: str, summary: str = "A new report.") -> dict:
@@ -28,7 +29,7 @@ def _entry(entry_id: str, title: str, summary: str = "A new report.") -> dict:
 
 def _poll_harness(monkeypatch, tmp_path, feeds, *, now=2_000_000.0):
     """Provide feed, state, clock, alert-log, and cron fakes; no I/O escapes."""
-    by_url = {url: entries for url, entries in feeds.items()}
+    by_url = feeds  # Follow replacements between simulated polling cycles.
     monkeypatch.setattr(
         news_watcher.feedparser,
         "parse",
@@ -40,7 +41,15 @@ def _poll_harness(monkeypatch, tmp_path, feeds, *, now=2_000_000.0):
     cron_ticks = []
     monkeypatch.setattr(news_watcher, "_append_news_alert", lambda r: alerts.append(copy.deepcopy(r)))
     monkeypatch.setattr(news_watcher, "save_state", lambda s: saved_states.append(copy.deepcopy(s)))
-    monkeypatch.setattr(news_watcher, "fire_cron_tick", lambda: cron_ticks.append(True))
+    monkeypatch.setattr(news_watcher, "fire_cron_tick", lambda reason="": (
+        cron_ticks.append(True) or {"status": "queued", "reason": "test", "tick_id": "test"}
+    ))
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2",
+                        lambda *_a, **_kw: (True, "SEND: no exposure impact", []))
+    monkeypatch.setattr(news_watcher, "_POSITIONS_CACHE", {
+        "text": "empty but verified", "ts": now, "polymarket_available": True,
+        "exposures": [], "ostium_available": True, "ostium_open_trades": 0,
+    })
     monkeypatch.setattr(
         news_watcher.httpx,
         "post",
@@ -58,6 +67,7 @@ def _poll_harness(monkeypatch, tmp_path, feeds, *, now=2_000_000.0):
     journal.write_text("old check-in\n")
     os.utime(journal, (now - 7200, now - 7200))
     monkeypatch.setattr(news_watcher, "_SCRIPT_DIR", script_dir)
+    monkeypatch.setattr(news_watcher, "_REPO_ROOT", tmp_path)
     return alerts, saved_states, cron_ticks
 
 
@@ -71,7 +81,7 @@ def _config(feed_names, *, tier1=None, tier2=None, cooldown=1800):
     }
 
 
-def test_tier1_arbitrary_keywords_persist_once_and_wake_one_checkin(monkeypatch, tmp_path):
+def test_tier1_research_persists_deduplicates_and_does_not_wake(monkeypatch, tmp_path):
     feeds = {
         "https://feed.invalid/a": [
             _entry("one", "Unheld nuclear test reported"),
@@ -96,7 +106,9 @@ def test_tier1_arbitrary_keywords_persist_once_and_wake_one_checkin(monkeypatch,
     ]
     assert [r["tier"] for r in alerts] == [1, 1]
     assert [r["matched"] for r in alerts] == ["nuclear test", "treaty signed"]
-    assert len(cron) == 1
+    assert [r["relevance"] for r in alerts] == ["research_only", "research_only"]
+    assert [r["review_required"] for r in alerts] == [False, False]
+    assert len(cron) == 0
     assert state["last_alerts"] == {"t1:nuclear test": 2_000_000.0, "t1:treaty signed": 2_000_000.0}
     assert set(state["seen_ids"]) == {
         news_watcher.entry_id(e)
@@ -117,7 +129,7 @@ def test_tier1_arbitrary_keywords_persist_once_and_wake_one_checkin(monkeypatch,
     feeds["https://feed.invalid/b"] = [_entry("four", "Unheld nuclear test reported")]
     assert news_watcher.poll_once(config, state) == 0
     assert len(alerts) == 2
-    assert len(cron) == 1
+    assert len(cron) == 0
     assert "t1:nuclear test" in state["last_alerts"]
 
 
@@ -128,6 +140,7 @@ def test_tier2_failed_inventory_filter_is_retained_internally(monkeypatch, tmp_p
     monkeypatch.setattr(news_watcher, "_POSITIONS_CACHE", {
         "text": "position lookup unavailable", "ts": now, "polymarket_available": False,
     })
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2", _REAL_FILTER)
     monkeypatch.setattr(
         news_watcher,
         "run_agent",
@@ -142,14 +155,20 @@ def test_tier2_failed_inventory_filter_is_retained_internally(monkeypatch, tmp_p
     assert alerts[0]["tier"] == 2
     assert "inventory unavailable" in alerts[0]["agent_reason"]
     assert alerts[0]["impacts"] == []
+    assert alerts[0]["relevance"] == "unknown"
+    assert alerts[0]["review_required"] is True
     assert state["last_alerts"]["t2:Taylor Swift"] == now
-    assert cron == []
+    assert len(cron) == 1
 
 
 def test_tier2_critical_impact_is_retained_for_internal_review(monkeypatch, tmp_path):
     feeds = {"https://feed.invalid/critical": [_entry("critical-1", "Taylor Swift announces an album") ]}
     alerts, _saved, cron = _poll_harness(monkeypatch, tmp_path, feeds)
-    critical = {"position": "swift-album", "level": "CRITICAL", "reason": "resolution event"}
+    cid = "0x" + "1" * 64
+    monkeypatch.setitem(news_watcher._POSITIONS_CACHE, "exposures", [
+        {"condition_id": cid, "kind": "held", "title": "Taylor Swift"},
+    ])
+    critical = {"position": cid, "level": "CRITICAL", "reason": "resolution event"}
     monkeypatch.setattr(
         news_watcher,
         "_agent_filter_tier2",
@@ -162,8 +181,62 @@ def test_tier2_critical_impact_is_retained_for_internal_review(monkeypatch, tmp_
 
     assert alerts[0]["impacts"] == [critical]
     assert alerts[0]["agent_reason"] == "SEND: retain for review"
+    assert alerts[0]["relevance"] == "portfolio_material_critical"
+    assert alerts[0]["review_required"] is True
     assert state["last_alerts"]["t2:Taylor Swift"] == 2_000_000.0
-    assert cron == []
+    assert len(cron) == 1
+
+
+def test_tier1_current_pending_buy_material_impact_qualifies_review(monkeypatch, tmp_path):
+    feeds = {"https://feed.invalid/buy": [_entry("buy-impact", "Treaty signed by the parties")]}
+    alerts, _saved, cron = _poll_harness(monkeypatch, tmp_path, feeds)
+    cid = "0x" + "2" * 64
+    monkeypatch.setitem(news_watcher._POSITIONS_CACHE, "exposures", [
+        {"condition_id": cid, "kind": "pending_buy", "title": "Treaty outcome"},
+    ])
+    impact = {"position": cid, "level": "MATERIAL", "reason": "changes pending market thesis"}
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2", lambda *_a, **_kw: (
+        True, "SEND: pending buy is directly affected", [impact]
+    ))
+    state = {"seen_ids": [], "last_alerts": {}, "last_cron_trigger": 0, "seen_titles": {}}
+    config = _config([("RSS", "https://feed.invalid/buy")], tier1=["treaty signed"])
+    assert news_watcher.poll_once(config, state) == 1
+    assert alerts[0]["relevance"] == "portfolio_material_critical"
+    assert alerts[0]["review_required"] is True
+    assert cron == [True]
+
+
+def test_infrastructure_safety_unknown_is_retained_for_review(monkeypatch, tmp_path):
+    feeds = {"https://feed.invalid/safety": [_entry("hack", "Ostium exploit reported")]}
+    alerts, _saved, cron = _poll_harness(monkeypatch, tmp_path, feeds)
+    monkeypatch.setattr(news_watcher, "_POSITIONS_CACHE", {
+        "text": "inventory unavailable", "ts": 2_000_000.0,
+        "polymarket_available": False, "exposures": [],
+        "ostium_available": False, "ostium_open_trades": 0,
+    })
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2", _REAL_FILTER)
+    state = {"seen_ids": [], "last_alerts": {}, "last_cron_trigger": 0, "seen_titles": {}}
+    config = _config([("RSS", "https://feed.invalid/safety")], tier1=["ostium exploit"])
+    assert news_watcher.poll_once(config, state) == 1
+    assert alerts[0]["relevance"] == "safety_unknown"
+    assert alerts[0]["impacts"] == []
+    assert alerts[0]["review_required"] is True
+    assert cron == [True]
+
+
+def test_unsupported_impact_key_cannot_claim_portfolio_relevance(monkeypatch, tmp_path):
+    feeds = {"https://feed.invalid/id": [_entry("invented", "Unheld nuclear test reported")]}
+    alerts, _saved, cron = _poll_harness(monkeypatch, tmp_path, feeds)
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2", lambda *_a, **_kw: (
+        True, "SEND: UNKNOWN relevance: unsupported impact key discarded", []
+    ))
+    state = {"seen_ids": [], "last_alerts": {}, "last_cron_trigger": 0, "seen_titles": {}}
+    config = _config([("RSS", "https://feed.invalid/id")], tier1=["nuclear test"])
+    assert news_watcher.poll_once(config, state) == 1
+    assert alerts[0]["relevance"] == "unknown"
+    assert alerts[0]["review_required"] is True
+    assert not any(i["level"] in ("MATERIAL", "CRITICAL") for i in alerts[0]["impacts"])
+    assert cron == [True]
 
 
 def test_tier2_suppression_advances_detection_cooldown_without_persisting(monkeypatch, tmp_path):
@@ -181,8 +254,27 @@ def test_tier2_suppression_advances_detection_cooldown_without_persisting(monkey
     assert news_watcher.poll_once(config, state) == 0
     assert state["last_alerts"]["t2:Taylor Swift"] == 2_000_000.0
     assert alerts == []
-    # A different headline matching the same keyword is held by the detection cooldown.
+    # A new headline is classified before the routine cooldown can suppress it.
     feeds["https://feed.invalid/suppressed"] = [_entry("suppressed-2", "Taylor Swift album update")]
     assert news_watcher.poll_once(config, state) == 0
-    assert calls == [True]
+    assert calls == [True, True]
     assert alerts == [] and cron == []
+
+
+def test_routine_headline_cannot_mask_later_critical_same_keyword(monkeypatch, tmp_path):
+    feeds = {"https://feed.invalid/update": [_entry("routine", "Taylor Swift album rumor")]}
+    alerts, _saved, cron = _poll_harness(monkeypatch, tmp_path, feeds)
+    cid = "0x" + "2" * 64
+    verdicts = iter([
+        (False, "SUPPRESS: routine rumor", []),
+        (True, "SEND: source confirms event", [
+            {"position": cid, "level": "CRITICAL", "reason": "resolving event"}]),
+    ])
+    monkeypatch.setattr(news_watcher, "_agent_filter_tier2", lambda *_a, **_kw: next(verdicts))
+    state = {}
+    config = _config([("RSS", "https://feed.invalid/update")], tier2=["Taylor Swift"])
+    assert news_watcher.poll_once(config, state) == 0
+    feeds["https://feed.invalid/update"] = [_entry("confirmed", "Taylor Swift album released")]
+    assert news_watcher.poll_once(config, state) == 1
+    assert alerts[0]["review_required"] is True
+    assert cron == [True]
