@@ -660,3 +660,27 @@ The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; th
 The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
 
 Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.
+
+
+## October 18 periodic 15:18 — CA06 fundraising follow-up
+
+At15:21:12 all eight bids remain LIVE/zero-matched, $16.12 total; indexed
+positions/reservations match15:06. The new15:16:14 Kiley headline concerns an
+October15 Q3 filing, not a new poll or current campaign balance. Direct FEC
+summary captures at15:20/15:24 show September30 cash **Kiley519,859 versus
+Pan612,834.97**, debt58,007.57/100,661.61. Kiley's cycle receipts3,570,594.13
+and Pan's2,312,760.90 have different coverage starts; do not compare them as
+quarterly flows. The linked filing is captured; its first-three-page table was
+not parsed. Current official summaries establish the same-asof cash comparison.
+
+Root retains CA06NO50@3c/$1.50, **15% central/5% selected stress**, noadd. The
+newly consumed finance data was not an explicit original model input; cash
+remaining for both campaigns does not establish a campaign shutdown or change
+the poll/map/caucus binding. No fitted finance-to-vote coefficient is claimed.
+An assumed extra2pp Pan-favorable structural-margin shift would lower modeled
+NO to12.04% and reverse3c after the10pp reserve; no such shift is inferred from
+this filing. The1% scenario endpoint still loses. Cancel first on load-bearing
+new evidence or uncertainty; retain existing checks/pull policies. No forecast,
+order, valuation count or financial record changed. [Root evidence/judgment](../../data/periodic_20261018T1518_kiley_judgment.json),
+[official Kiley summary](https://www.fec.gov/data/candidate/H2CA03157/?cycle=2026&election_full=true),
+[official Pan summary](https://www.fec.gov/data/candidate/H6CA03158/?cycle=2026&election_full=true).
