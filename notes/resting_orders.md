@@ -1,5 +1,13 @@
 # Standing resting orders (GTC post-only makers)
 
+## Current — October18 21:21UTC
+
+**BOI137 DEC0215 canceledunfilled; DEC0219.** Original15NO@7c/$1.05 canceled21:15:22.705517; after364s terminal/trades/index/bothCTFs prove0filled. Onlymatchingreservationretired7→6; other6rows unchanged. **Six LIVEBUYs/$11.82pending**, pUSD18.846890/free7.026890 at fixed95768759/21:21:26UTC. Noholding/spend/PnL orrepost. [Final proof/primary](../research/2026-10-18-boi-cancel.md). OldOct19 22UTCBOIBUYpullcompleteearly.
+
+Remainingpulls: SedgwickOct19 10UTC, IdahoOct19 22UTC; fourHousebids unchanged. Existingheldreview22UTCremains. OpenRouter112filled5NO/Messi5YESretainnoadd; oldBUYpullsobsolete. Filmcanceledunfilled. Earlierfinancialsnapshots/instructionsbelowarehistoricalevidenceonly; currentcontextgoverns.
+
+## Historical — October18 17:48UTC
+
 **Latest fill/reconciliation — October18 17:48UTC:** OpenRouter112 DEC0214 original5NO65¢/$3.25 is **fully filled**, successful receipt+indexed buys+CTFs agree. Only its reservation retired8→7; **seven LIVE BUYs/$12.87 pending**, pUSD18.846890/free5.976890 at fixedblock95760237. Retain5NO/noadd; old today22UTC BUY pull is obsolete, holding review at existing18/22checks/earliermaterialnews. Insurance auditrc0 CLEAN7indexed+1deindexed. Film remains canceled unfilled. [Exact proof/hold judgment](../research/2026-10-18-openrouter-fill.md). Earlier snapshots below are dated history.
 
 

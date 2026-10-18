@@ -1,0 +1,35 @@
+{
+  "adopted_utc": "2026-10-18T21:12:22.696437+00:00",
+  "review_index": 272,
+  "p_yes": 0.85,
+  "p_no": 0.15,
+  "range_yes": [
+    0.5,
+    0.98
+  ],
+  "reserve_pp": 15,
+  "selected_yes": 0.7,
+  "selected_no": 0,
+  "initial_model": "research/2026-10-17-deep-review/models/ecb272_primary_2105.json",
+  "revision_reason": "New6pairhistoricalsourceauditandrootfullSMAp12macrobasedcomparisonunderminegenericenergy-broadening25%regimeand4%unconditionedcutmass. OldAugSMAalreadyincludedheadline3.2Q3/3.3Q4,core2.5and66.7%upside-riskrespondents. Currentheadline3.8singlemonthnotmatchedquarterlyforecastsurprise. Stableunderlying/wagescurrentfactsweighpause; no independentnewdeteriorationlinkquantifiesinitial30%change.",
+  "primary_bridge": "Adopt85%hold/14.5%hike/.5%cutworkingoutcomemixtureinclfallback, informedbyold81.3%meeting-specificholdand4of4hold-modalpredictionscorrectin6completed2026pairs. +3.7ppholdadjustmentisprimaryjudgmentwithcurrentstableunderlying/transmission, notfittedlikelihood/posterior/confidencebound. Historical6of6modalcorrectdoesnotjustify100%futureprobability.",
+  "history_diagnostics": {
+    "n": 6,
+    "brier": 0.08438716666666667,
+    "modal_correct": 6,
+    "holds_when_hold_modal": "4/4",
+    "forecast_mean_hold": 0.6858333333333334,
+    "actual_hold": "4/6"
+  },
+  "sensitivity": "Old81.3%anchoritselfgives18.7%NO/selected3.7%NO, approximatelydated3.5cmakerbeforeoperations/carry andminimumticketcost; unsupportedgenericfuture-regimepenaltymustnotmanufactureedge. Strong90-97%holdcountermodelmaterial;50%lowforkallowsfurtherenergyshock.",
+  "source_units": [
+    "work/0272_root_history_macro_audit.json",
+    "work/0272_historical_second_meeting_facts.json",
+    "work/0272_sma_second_table_audit.json",
+    "work/0272_facts_expansion_20261018.json"
+  ],
+  "decision": "NO ENTRY. Reserve15unchangedfrombeforeownquotes; selectedNO0fails3.5/4c. CentralNOstillpositive,notfactualrejection. Ownquotesknownbeforethissourcedrevision; preservedinitialmodelandledgerevidence.",
+  "catalyst": "Mandatorytoolrc0;55%YESadvisorynotadopted. OfficialOct8accountlocatescurveversussurveydivergence, notOctoberprobability;updatedsurveyunavailable.",
+  "financial_followup": "Publicvenue21:06exactfullbindings/fees5%exponent1/zeroDelay/geoFIallowed. Authaccount21:10sevenBUY12.87/7reservations/targetnone/claimsCLEAN; temporaryPOAmiddlewarereadfixedblock95768331targetCTF0/pUSD18.846890/free5.976890/approvalandallowance/gas47.7086. Initialheadererrorpreservedthenresolved. No candidateclassification/prior/mapping/reservation/dryrun/orderwriter.",
+  "no_execution_authorization": true
+}

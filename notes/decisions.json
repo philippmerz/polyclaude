@@ -1,5 +1,5 @@
 {
-  "next_id": 219,
+  "next_id": 220,
   "decisions": [
     {
       "id": 1,
@@ -4661,6 +4661,30 @@
       "calibration_delta": null,
       "lesson": "A topic mention is not exposure or materiality. A local process is not queue acceptance; queue acceptance is not completed review. Preserve exact alert IDs and require evidence at each boundary. A recent unrelated journal entry must not consume an alert.",
       "resolved_at": "2026-10-18T17:20:53Z"
+    },
+    {
+      "id": 219,
+      "timestamp": "2026-10-18T21:24:00.356202+00:00",
+      "type": "cancel",
+      "thesis": "BOI137 source-baselineauditweakensunfilledcheapNOunderwriting: nearlyanticipatedCPI/currentconditionalholdview didnotjustifyoldordinary-easingregimemass. Followexistingcancel-FIRSTonloadbearingforecastuncertainty.",
+      "confidence": "high onverifiedcancel/no-fill; forecastjudgmental",
+      "prediction": "Jointcut18/hold80/hike2,20ppreserve;137NO/607YESselected0. Noadd/repost; newmatchedpolicyevidencerequiredbeforere-entry.",
+      "size_usd": 0.0,
+      "cancelled_commitment_usd": 1.05,
+      "resolution_at": "2026-10-21",
+      "tags": [
+        "risk_management",
+        "cancel",
+        "forecast_baseline",
+        "no_fill"
+      ],
+      "slug": "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision",
+      "order_id": "0x7d652a83630f8497951d6ec19e96e6c84d845b704e9b17cba0286c33ffc15bbd",
+      "outcome": "CANCELED UNFILLED. After364s,terminal0matched/fulltrades0/indexnone/bothCTF0; onlyreservation7\u21926retired,other6unchanged.6BUY11.82,pUSD18.846890/free7.026890at95768759/21:21:26UTC. No sale/spend/realizedPnL.",
+      "calibration_delta": null,
+      "lesson": "Comparecurrentobservationswithforecastbaseline/fielding/units/horizon beforeaddingregimepenalties. Pointforecastsandconditionalmacroopinionsarenotindependentoutcomelikelihoods.",
+      "resolved_at": "2026-10-18T21:21:26.679256+00:00",
+      "research_report": "research/2026-10-18-boi-cancel.md"
     }
   ]
 }

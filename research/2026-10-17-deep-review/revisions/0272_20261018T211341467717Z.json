@@ -1,0 +1,202 @@
+{
+  "review_index": 272,
+  "condition_id": "0xf97e2e2b845a3e5ce0646ce7563cca294f58b1c23affc38010386c08627075ac",
+  "criteria_sha256": "68ca4cf2a11da0a01938d1478c36976d22fe8e760429758d60ed0f455087390a",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the change in basis points in the deposit facility rate resulting from the October 2026 meeting of the European Central Bank, relative to the level it was prior to this meeting.\n\nThe resolution source will be official information from the European Central Bank, including the statement or release from its October 2026 meeting, scheduled for October 28-29, 2026, as listed on the official European Central Bank calendar (https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html). This market may resolve as soon as the statement or release of the European Central Bank's October 2026 meeting with relevant data is issued.\n\nIf the specified rate is defined by an upper and lower bound, the relevant change will be the change to the upper bound.\n\nIf the specified rate is changed to a level not expressed in the displayed options, the change will be rounded according to the following guidelines. Increases or decreases of less than 25 bps will be rounded to 25 bps (e.g. an increase or decrease of 10 bps would be considered to be an increase or decrease of 25 bps). Increases or decreases of greater than 25 bps will be rounded to the nearest 25 bps and will be rounded away from 0 in cases of equidistance (e.g., an increase or decrease of 37.5 bps would be considered to be an increase or decrease of 50 bps). Displayed options of “Increase” or “Decrease” will include policy rate increases or decreases of any size.\n\nIf the specified meeting is postponed to a date and time before the start of the next scheduled meeting, this market will resolve based on the outcome of that postponed meeting. If the specified meeting is cancelled, or postponed such that no decision is announced by the start of the next scheduled meeting, this market will resolve to the “No Change” bracket. Emergency changes to the specified rate not resulting from the specified meeting will not be considered.\nPrimary: DFRmeeting-specificzerochange; unrelatedemergencyexcluded; cancellation/delaypastnext→YES. Readfullrule.",
+  "evidence": [
+    {
+      "url": "https://www.ecb.europa.eu/press/pr/date/2026/html/ecb.mp260910~314e508016.en.html",
+      "observed_utc": "2026-10-18T19:46:00.457949+00:00",
+      "finding": "Sep10+25bpDFR2.50effectiveSep16; datadependent/no precommitment. Fullcurrentratetable/calendarcaptured separately."
+    },
+    {
+      "url": "https://www.ecb.europa.eu/press/key/date/2026/html/ecb.sp261017~7015ea3099.en.html",
+      "observed_utc": "2026-10-18T20:37:58.076953+00:00",
+      "finding": "Oct17Lagarde3.8headline/core2.5; underlyingbroadlystable/no materialwageresponse, energyshocklarge/measured/data-dependent. NotOctcommitment."
+    },
+    {
+      "url": "https://ec.europa.eu/eurostat/en/web/products-euro-indicators/w/2-16102026-ap",
+      "observed_utc": "2026-10-18T20:37:57.641397+00:00",
+      "finding": "SepfinalHICP3.8annual/.6monthly, nextflashNov4aftermeeting. Energycontribution1.71pp/services1.52pp, not fullcomponentinflationrates."
+    },
+    {
+      "url": "https://www.ecb.europa.eu/stats/ecb_surveys/sma/shared/pdf/ecb.smar260911_september.en.pdf",
+      "observed_utc": "2026-10-18T20:57:27.821929+00:00",
+      "finding": "RootPDFp2OctmodalDFR2.50P25/median/P75n69; p5secondmeetingaverage81.3%0bp/18.2%+25/.3%-25/.2%+50n68. QuestionnaireexplicitlySep/Octconfirmssecond=Oct29. Aug24-26fielding, notcurrentprobability; Octanswersunpublishedincapturedindex."
+    },
+    {
+      "url": "https://www.ecb.europa.eu/stats/ecb_surveys/sma/shared/pdf/ecb.smar260911_september.en.pdf",
+      "observed_utc": "2026-10-18T21:13:41.257153+00:00",
+      "finding": "RootfullPDFp12:oldheadlineQ3P25/median/P753.0/3.2/3.3;Q43.1/3.3/3.6;coreQ3median2.5/Q4median2.5,66.7%respondents2026inflationrisksup. September3.8singlemonthnotmatchedquarterlybaseline. SixseparatehistoricalPDFrawhashesverified; all6modaldecisionscorrect(hold4/hike2), tinysequentialsample notcurrentcalibration."
+    },
+    {
+      "url": "https://www.ecb.europa.eu/press/accounts/2026/html/ecb.mg261008~a10153d090.en.html",
+      "observed_utc": "2026-10-18T21:08:00Z",
+      "finding": "Oct8releaseofSep9-10meeting:curvepriced2-3furtherhikesbyend2027vs survey2.50plateau; riskpremia/fieldingtime mayexplaingap. NeithergivesOctdecisionprobability. Neutralguidanceneitherlasthikenorpredeterminedtighteningcycle."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.85,
+    "low": 0.5,
+    "high": 0.98,
+    "method": "Official dated October SMA probability benchmark, six matched historical second-meeting observations, and explicit current-data-versus-baseline judgment. Not fitted calibration.",
+    "reasoning": "Old81.3%holdalreadyembeddedQ3/Q4headline3.2/3.3,core2.5andupsideinflationrisks. CurrentSepmonthly3.8isnotmatchedquarterlysurprise; stableunderlying/no materialwages do notsupportinitial25%energy-broadeningand4.4%cutmass. Six2026pairs6/6modalcorrect,4/4hold-modalcorrect/Brier.08439descriptiveonly. Adopt85%hold/14.5%hike/.5%cutinclfallback;3.7ppholdadjustmentto81.3isjudgment,notposterior/floor. Reserve15unchanged,selectedNO0; ownquotesknownatnewsource-drivenrevision."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 30,
+    "horizon_days": 15,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.85,
+        "selected_stress_probability": 0.7,
+        "best_bid": 0.96,
+        "best_ask": 0.965,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353499030",
+        "book_age_seconds_at_receipt": 14.848,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 30,
+            "gross": 28.95,
+            "fee": 0.05067,
+            "fills": [
+              {
+                "shares": 30,
+                "price": 0.965
+              }
+            ],
+            "net": 29.00067
+          },
+          "bids": {
+            "complete": true,
+            "filled": 30,
+            "gross": 28.799999999999997,
+            "fee": 0.05761,
+            "fills": [
+              {
+                "shares": 30,
+                "price": 0.96
+              }
+            ],
+            "net": 28.742389999999997
+          }
+        },
+        "taker_cost_usd": 29.00067,
+        "central_expected_profit_usd": -3.5006699999999995,
+        "selected_stress_profit_usd": -8.00067,
+        "break_even_before_carry": 0.966689,
+        "break_even_constant_carry": 0.9679228431822015,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.15000000000000002,
+        "selected_stress_probability": 0,
+        "best_bid": 0.035,
+        "best_ask": 0.04,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353499030",
+        "book_age_seconds_at_receipt": 14.848,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 30,
+            "gross": 1.2,
+            "fee": 0.0576,
+            "fills": [
+              {
+                "shares": 30,
+                "price": 0.04
+              }
+            ],
+            "net": 1.2576
+          },
+          "bids": {
+            "complete": true,
+            "filled": 30,
+            "gross": 1.05,
+            "fee": 0.05067,
+            "fills": [
+              {
+                "shares": 30,
+                "price": 0.035
+              }
+            ],
+            "net": 0.99933
+          }
+        },
+        "taker_cost_usd": 1.2576,
+        "central_expected_profit_usd": 3.242400000000001,
+        "selected_stress_profit_usd": -1.2576,
+        "break_even_before_carry": 0.04192,
+        "break_even_constant_carry": 0.041973505011640655,
+        "current_execution_authorization": false
+      }
+    },
+    "maker_hypothesis": {
+      "outcome": "No",
+      "price": 0.035,
+      "shares": 30,
+      "principal_usd": 1.05,
+      "central_expected_profit_usd": 3.45,
+      "selected_stress_profit_usd": -1.05,
+      "approved": false
+    },
+    "venue_preflight": "data/deep_review_20261017/work/0272_venue_preflight_2110.json",
+    "account_preflight": "data/deep_review_20261017/work/0272_account_preflight_2115.json",
+    "resolved_chain_followup": "data/deep_review_20261017/work/0272_chain_preflight_poa_followup.json"
+  },
+  "verdict": "NO ENTRY after source/model audit:85%YES/15%NO,unchanged15ppreserve/selectedNO0. CentralNOedgepositivebutunreliable; nofinancialwriter.",
+  "reopen_condition": "New currentmeeting-specificprobability/guidance ormatchedincoming-data surprise beyondoldsurveybaseline, thenrederiveforecastandallcurrentgates. Noautomaticbid ornewtimer.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/ecb272_primary_2105.json",
+    "actual_entry_reserve_pp": 15,
+    "entry_approved": false,
+    "financial_mutation": false,
+    "followup_active": false,
+    "blind_before_own_quote": true,
+    "current_model": "research/2026-10-17-deep-review/models/ecb272_primary_after_audit_2120.json",
+    "catalyst": "logs/deep_review_20261017/catalyst_0272_2110.txt",
+    "selected_no": 0,
+    "advisories": [
+      "research/2026-10-17-deep-review/advisories/ecb272_constructive_2110.md",
+      "research/2026-10-17-deep-review/advisories/ecb272_skeptic_2110.md"
+    ]
+  },
+  "evaluated_utc": "2026-10-18T21:13:41.468007+00:00",
+  "question": "Will the ECB announce no change at the October 2026 meeting?",
+  "market_id": "3081965",
+  "valuation_author": "primary_operator",
+  "original_index": 272,
+  "report_sha256": "1007e22217dbbaf6906fecf040c45894ac628910659b63fdf0324a63d332908b",
+  "report_path": "revisions/0272_20261018T211341467717Z.md",
+  "revision_reason": "New matched six-meeting SMA history/fullreport macrobaseline reveal unsupported genericenergy/cut-regime update;85%holdjudgment,15ppreserve unchanged,NOentrydeclinedafterboundedcurrentgates.",
+  "prior_report_sha256": "8032d430632a3813ff8c162c35d2be01440245864b8ddd8cdf39d00e757acec3",
+  "revision_path": "revisions/0272_20261018T211341467717Z.json"
+}

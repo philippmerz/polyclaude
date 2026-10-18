@@ -1,0 +1,59 @@
+{
+  "adopted_utc": "2026-10-18T21:01:48.466538+00:00",
+  "review_index": 272,
+  "market_id": "3081965",
+  "condition_id": "0xf97e2e2b845a3e5ce0646ce7563cca294f58b1c23affc38010386c08627075ac",
+  "criteria_sha256": "68ca4cf2a11da0a01938d1478c36976d22fe8e760429758d60ed0f455087390a",
+  "p_yes": 0.7,
+  "p_no": 0.3,
+  "range_yes": [
+    0.35,
+    0.93
+  ],
+  "reserve_pp": 15,
+  "selected_yes": 0.55,
+  "selected_no": 0.15,
+  "own_market_quotes_unread": true,
+  "full_rule": "This market will resolve according to the change in basis points in the deposit facility rate resulting from the October 2026 meeting of the European Central Bank, relative to the level it was prior to this meeting.\n\nThe resolution source will be official information from the European Central Bank, including the statement or release from its October 2026 meeting, scheduled for October 28-29, 2026, as listed on the official European Central Bank calendar (https://www.ecb.europa.eu/press/calendars/mgcgc/html/index.en.html). This market may resolve as soon as the statement or release of the European Central Bank's October 2026 meeting with relevant data is issued.\n\nIf the specified rate is defined by an upper and lower bound, the relevant change will be the change to the upper bound.\n\nIf the specified rate is changed to a level not expressed in the displayed options, the change will be rounded according to the following guidelines. Increases or decreases of less than 25 bps will be rounded to 25 bps (e.g. an increase or decrease of 10 bps would be considered to be an increase or decrease of 25 bps). Increases or decreases of greater than 25 bps will be rounded to the nearest 25 bps and will be rounded away from 0 in cases of equidistance (e.g., an increase or decrease of 37.5 bps would be considered to be an increase or decrease of 50 bps). Displayed options of “Increase” or “Decrease” will include policy rate increases or decreases of any size.\n\nIf the specified meeting is postponed to a date and time before the start of the next scheduled meeting, this market will resolve based on the outcome of that postponed meeting. If the specified meeting is cancelled, or postponed such that no decision is announced by the start of the next scheduled meeting, this market will resolve to the “No Change” bracket. Emergency changes to the specified rate not resulting from the specified meeting will not be considered.",
+  "current_reference": "OfficialDFR2.50%effectiveSep16, latestformalSep10+25decision; noOctoberdecisionasofcapture. Meeting-specificdelta not absolute2.50target ifpremeetingratechanges.",
+  "old_sma_distribution": "FieldedAug24-26,n68; October-row average81.3%hold/18.2%+25/.3%-25/.2%+50. RootverifiedreportPDFp5; questionnaireexplicitlySep/Oct, noteventualfirst/secondnonzerochange. Septemberfirst84.8%+25isalreadyrealized andnotindependentlikelihood.",
+  "current_evidence": "SepHICP3.8%annual/.6%monthly; LagardeOct17core2.5/broadunderlyingstable/nomaterialwageresponse, energyshocklarge/notlookthrough/measuredresponse. This justifies substantialadditionalhikeprobability butnotdeterministichike. OctoberSMAquestionnaireblank; resultsnotpublicincapturedindex/scheduledNov2afterdecision.",
+  "regimes": [
+    {
+      "name": "measured_pause_after_Sep_hike",
+      "weight": 0.65,
+      "hold": 0.85,
+      "hike": 0.145,
+      "cut": 0.005
+    },
+    {
+      "name": "energy_broadening_faster_response",
+      "weight": 0.25,
+      "hold": 0.35,
+      "hike": 0.645,
+      "cut": 0.005
+    },
+    {
+      "name": "growth_financial_weakness",
+      "weight": 0.1,
+      "hold": 0.55,
+      "hike": 0.05,
+      "cut": 0.4
+    }
+  ],
+  "raw_outcome_probabilities": {
+    "hold": 0.6965250000000001,
+    "hike": 0.2591975,
+    "cut": 0.04427750000000001
+  },
+  "bridge": "Allregimeweights/conditionalreactionprobabilitiesand.5%fallbackareprimaryjudgment,notestimatedfrequencies. Jointcompetingpolicy-reactionforksuseold81.3%holdasdatedbenchmark,notguarantee. Rawhold69.6525%roundedUP70%YES; notindependentlymultiplieddata/surveyweights.",
+  "reserve_reason": "15pppolicyuncertaintyreserveprespecifiedbeforeownprices: actualdatedrespondent-probabilitydistributionandmechanicalofficialsettlement, but8weekoldfielding/currentenergysupplyreaction/publicforecastcalibrationnotvalidated. Notfloororclaimallrangeendpointsprofitable.",
+  "counterstates": "Hold90-93%/nofurtherhikeuntilDec reversesmostNOtrades; hold35-50%ifshockbroadens favorsNO. Source/meeting/cancellationrulesremainexplicit.",
+  "source_units": [
+    "work/0272_facts.json",
+    "work/0272_facts_expansion_20261018.json",
+    "work/0272_sma_facts_2100.json",
+    "work/0272_sma_second_table_audit.json"
+  ],
+  "no_execution_authorization": true
+}

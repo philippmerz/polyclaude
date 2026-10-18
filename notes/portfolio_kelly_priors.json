@@ -1207,134 +1207,134 @@
   "current_assessment": "Oct-8 source reread: both live descriptions are byte-identical, SHA-25635bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693, unchanged from Sep-30. Both operational ends remain Jan-2 04:59Z, while the literal qualifying cutoff is before Jan-1. Strict over50/over58 thresholds use only the first full-Senate final-passage vote; cloture, motions to proceed, amendments, later reconsideration and post-announcement tally changes are excluded. No qualifying vote gives both NO; qualifying voice/unanimous passage without a prior recorded final vote gives both YES. For every stated branch, equal over50YES plus over58NO has a criteria-consistent logical payout floor of $1 per pair ($29 for29/29), with a 51-58Yea bonus branch. The current Senate256-row capture contains only Sep15 rejected cloture on the motion to proceed for HR3633, not qualifying final passage. The stored0.50 leg values are conservative paired-floor accounting weights, not separately calibrated forecasts or independent trade authority. HOLD the complete pair / NO ADD; never transact one leg independently.",
   "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  },
-  "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016": {
-    "p_yes": 0.61,
-    "p_no": 0.39,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
-    "asset": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
-    "market_id": "3006483",
-    "criteria_sha256": "be6894cd24dea1d67a28832e4a2d2c2b47cde13076fc75f47f98898c3d80127b",
-    "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
-    "current_assessment": "PrimaryPYES0.61, scenario range0.15\u20130.95; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0123.md",
-    "balanced_reviews": [
-      "research/2026-10-17-deep-review/house_pilot_skeptic.md",
-      "research/2026-10-17-deep-review/house_pilot_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_me02_latest_news.json",
-    "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
-    "key_facts": [
-      {
-        "claim": "Current exact official ME02 ballot is DunlapD versus LePageR and write-in. Market/CLOB full text and parentevent726881 are ME02 despite the ME01 historical slug.",
-        "source": "https://www1.maine.gov/sos/sites/maine.gov.sos/files/inline-files/sample%202.pdf",
-        "source_date": "2026-10-17",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "TulchinOct12\u201314,n500LV,Dunlap50LePage46U4; client/mode/weights undisclosed. Primary61% is uncalibrated and not the poll percentage.",
-        "source": "https://static01.nyt.com/newsgraphics/documenttools/0cdb44a57dfd2687/fddf7303-full.pdf",
-        "source_date": "2026-10-16",
-        "checked": "2026-10-17"
-      }
-    ]
-  },
-  "will-the-democratic-party-win-the-ca-06-house-seat": {
-    "p_yes": 0.85,
-    "p_no": 0.15,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
-    "asset": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
-    "market_id": "1280973",
-    "criteria_sha256": "0b76eddff30827c21a87e3439efb3a7e7c59f45824efbb9d09a9df43052a757d",
-    "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
-    "current_assessment": "PrimaryPYES0.85, scenario range0.35\u20130.99; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0032.md",
-    "balanced_reviews": [
-      "research/2026-10-17-deep-review/house_pilot_skeptic.md",
-      "research/2026-10-17-deep-review/house_pilot_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_ca06_latest_news.json",
-    "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
-    "key_facts": [
-      {
-        "claim": "Official final ballot: PanDEM,KileyNPP; no other candidate/writein.",
-        "source": "https://elections.yolocounty.gov/392/Federal",
-        "source_date": "2026-08-27",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "OriginalILCSeptemberpoll preparedbyMainFrame, mixedphone/SMS/webpanel,927LV,Pan36.7Kiley36.5U26.7. SponsorbacksKiley; not a freshOctoberpoll.",
-        "source": "https://cdn.prod.website-files.com/68d1c32ec01e1d1f6a86e801/6abaf0a470c7a5a2ba247b56_151dca06e31c001b9edb70b5ac86f8e9_CA06_Summary_Topline___Independent_Leadership_Council.pdf",
-        "source_date": "2026-09-06",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "October16CNN direct reelection interview: Kiley says he will caucus with neither side; noDemocraticpledge. FrozenrulemeasuresintentafterallHousecalls andhasnoexplicitneitherfallback.",
-        "source": "https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01",
-        "source_date": "2026-10-16",
-        "checked": "2026-10-17"
-      }
-    ]
-  },
-  "will-the-democratic-party-win-the-mt-01-house-seat": {
-    "p_yes": 0.47,
-    "p_no": 0.53,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
-    "asset": "94033987553817825990709512567031751048276730850154145976615728913102874968691",
-    "market_id": "942843",
-    "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
-    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
-    "balanced_reviews": [
-      "logs/deep_review_20261017/house_next_skeptic.md",
-      "logs/deep_review_20261017/house_next_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
-    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
-    "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
-    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  },
-  "will-the-democratic-party-win-the-ny-01-house-seat": {
-    "p_yes": 0.31,
-    "p_no": 0.69,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
-    "asset": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
-    "market_id": "1284219",
-    "criteria_sha256": "6556ecdbb26a287df55a95288b671d1fd456db5b0540495121231e61ad3d79c6",
-    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0409.md",
-    "balanced_reviews": [
-      "logs/deep_review_20261017/house_next_skeptic.md",
-      "logs/deep_review_20261017/house_next_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
-    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
-    "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
-    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  },
+ "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016": {
+  "p_yes": 0.61,
+  "p_no": 0.39,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+  "asset": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+  "market_id": "3006483",
+  "criteria_sha256": "be6894cd24dea1d67a28832e4a2d2c2b47cde13076fc75f47f98898c3d80127b",
+  "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
+  "current_assessment": "PrimaryPYES0.61, scenario range0.15\u20130.95; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0123.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/house_pilot_skeptic.md",
+   "research/2026-10-17-deep-review/house_pilot_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_me02_latest_news.json",
+  "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+  "key_facts": [
+   {
+    "claim": "Current exact official ME02 ballot is DunlapD versus LePageR and write-in. Market/CLOB full text and parentevent726881 are ME02 despite the ME01 historical slug.",
+    "source": "https://www1.maine.gov/sos/sites/maine.gov.sos/files/inline-files/sample%202.pdf",
+    "source_date": "2026-10-17",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "TulchinOct12\u201314,n500LV,Dunlap50LePage46U4; client/mode/weights undisclosed. Primary61% is uncalibrated and not the poll percentage.",
+    "source": "https://static01.nyt.com/newsgraphics/documenttools/0cdb44a57dfd2687/fddf7303-full.pdf",
+    "source_date": "2026-10-16",
+    "checked": "2026-10-17"
+   }
+  ]
+ },
+ "will-the-democratic-party-win-the-ca-06-house-seat": {
+  "p_yes": 0.85,
+  "p_no": 0.15,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+  "asset": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+  "market_id": "1280973",
+  "criteria_sha256": "0b76eddff30827c21a87e3439efb3a7e7c59f45824efbb9d09a9df43052a757d",
+  "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
+  "current_assessment": "PrimaryPYES0.85, scenario range0.35\u20130.99; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0032.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/house_pilot_skeptic.md",
+   "research/2026-10-17-deep-review/house_pilot_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_ca06_latest_news.json",
+  "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+  "key_facts": [
+   {
+    "claim": "Official final ballot: PanDEM,KileyNPP; no other candidate/writein.",
+    "source": "https://elections.yolocounty.gov/392/Federal",
+    "source_date": "2026-08-27",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "OriginalILCSeptemberpoll preparedbyMainFrame, mixedphone/SMS/webpanel,927LV,Pan36.7Kiley36.5U26.7. SponsorbacksKiley; not a freshOctoberpoll.",
+    "source": "https://cdn.prod.website-files.com/68d1c32ec01e1d1f6a86e801/6abaf0a470c7a5a2ba247b56_151dca06e31c001b9edb70b5ac86f8e9_CA06_Summary_Topline___Independent_Leadership_Council.pdf",
+    "source_date": "2026-09-06",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "October16CNN direct reelection interview: Kiley says he will caucus with neither side; noDemocraticpledge. FrozenrulemeasuresintentafterallHousecalls andhasnoexplicitneitherfallback.",
+    "source": "https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01",
+    "source_date": "2026-10-16",
+    "checked": "2026-10-17"
+   }
+  ]
+ },
+ "will-the-democratic-party-win-the-mt-01-house-seat": {
+  "p_yes": 0.47,
+  "p_no": 0.53,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
+  "asset": "94033987553817825990709512567031751048276730850154145976615728913102874968691",
+  "market_id": "942843",
+  "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
+  "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
+  "balanced_reviews": [
+   "logs/deep_review_20261017/house_next_skeptic.md",
+   "logs/deep_review_20261017/house_next_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
+  "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
+  "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
+  "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
+ },
+ "will-the-democratic-party-win-the-ny-01-house-seat": {
+  "p_yes": 0.31,
+  "p_no": 0.69,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+  "asset": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+  "market_id": "1284219",
+  "criteria_sha256": "6556ecdbb26a287df55a95288b671d1fd456db5b0540495121231e61ad3d79c6",
+  "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0409.md",
+  "balanced_reviews": [
+   "logs/deep_review_20261017/house_next_skeptic.md",
+   "logs/deep_review_20261017/house_next_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
+  "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
+  "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
+  "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
+ },
  "will-anthropic-have-the-highest-ipo-market-cap-2026-673": {
   "p_yes": 0.24,
   "p_no": 0.76,
@@ -1403,7 +1403,7 @@
   "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
   "market_id": "630805",
   "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
-  "rationale": "Primary currentfirst-partyIA MI48D/46R Oct9–10notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30–80specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
+  "rationale": "Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
   "current_assessment": "Oct-18 fallback: original DEC-0211 maker BUY filled 5 NO at .31, $1.55 net pUSD, at02:55:41UTC. Polygon receipt0x755f0bd530de3bd25f3f2a6dec18af06f41229b19ee25a629f1abeb20376d916/status1/block95724529 contains the order hash, +5 NO and -1.55pUSD; project wallet paid no transaction gas. Fixed-block95740712 balance5NO/pUSD23.446890 and indexed totalBought5 confirm acquisition. Vetted reconciliation retired only this reservation; seven remaining bids13.17/free10.276890. Retain5/noadd at existing NO.44 central/.34 policy stress/.20-.70 range; captured fee-net exit~1.51 vs2.20 central/1.70 policy stress/1.00 low range. Cost-free constant3.119% Aave comparison~1.5121. Root joint-state sensitivities in research/2026-10-18-fallback-checkin.json; no calibrated joint optimum or price recovery claim. Exact-auth-order HTTP200/null and targeted authenticated trade empty are not terminal MATCHED proof; the raw on-chain receipt proves the economic fill. Original forecast/entry observation preserved.",
   "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
   "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
@@ -1427,7 +1427,7 @@
   "condition_id": "0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5",
   "asset": "36188675263105076384129304581287560611497377961272296678113273811602118139553",
   "criteria_sha256": "23e4ab42d59e5c1fc683a1b8f3095fe91f17f75b3bfd5a2cd1403b7fdd31c5fc",
-  "rationale": "PrimaryfullSedgwickDemocraticSenatecountypluralityrulesread; currentKSsource-model31Dplusoriginal2024countyrelativeD+2.288/sourceextra5ppSD givesrawD49.0879/R49.9121/Other1. RoundedD49/R50/Other1; rangeD15–85,reserve15pp, notcalibratedfloor. Original2022countyrelative+2.172 supportsgeography, notdirect2026countyforecast. Bothindependentadvisoriesread; currentfirst-partyIApollsources, finalballot403/timeoutandSienainstrumentgapsretained.",
+  "rationale": "PrimaryfullSedgwickDemocraticSenatecountypluralityrulesread; currentKSsource-model31Dplusoriginal2024countyrelativeD+2.288/sourceextra5ppSD givesrawD49.0879/R49.9121/Other1. RoundedD49/R50/Other1; rangeD15\u201385,reserve15pp, notcalibratedfloor. Original2022countyrelative+2.172 supportsgeography, notdirect2026countyforecast. Bothindependentadvisoriesread; currentfirst-partyIApollsources, finalballot403/timeoutandSienainstrumentgapsretained.",
   "current_assessment": "LIVE unfilled post-only BUY YES5@.20/1.00pUSD; independently01:13:10-17UTC/block95720430, exactorder 0xf13217b0e8b865d920d2ef56624f344e37284712737e479ba408a15e47c8e955. Sevenpending13.37/free11.626890; all8candidatebothbalances0. Commitment, not purchase/profit. DEC0212.",
   "research_report": "research/2026-10-17-deep-review/evaluations/2054.md",
   "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
@@ -1441,32 +1441,32 @@
   "monitoring": "Existing32ndfeed warmed01:01:46; all30cachedtitlesseen before4terms promotion01:04:26;18IDsretainedunder5000cap. Normalpostpromotionpoll/save01:09:01verified, sameconfigSHA/alivedaemon. No manualpoll/stateedit/restart/newdaemon/timer. Nonexhaustive discoverycoverage."
  },
  "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026": {
- "p_yes": 0.6,
- "p_no": 0.4,
- "cluster": "google-year-in-search-2026",
- "rho_within": 0.5,
- "cluster_frac": 0.18,
- "verified": "2026-10-18",
- "criteria_read": "2026-10-18",
- "market_id": "4425465",
- "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
- "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
- "criteria_sha256": "22fc97fb7ab20da997bd8ef2b3f59a35a53fa3bc10951d074431ffeae64659af",
- "rationale": "Primary exactofficial2026GlobalAthletesTOP5rules; WorldCup8goals/internationalfarewellOctober6 aremajor2026events. InternalGooglegrowth/baseline/aliases/fullfield unmeasured. CompatiblejointscenarioMessi60/McGregor40;range20–90/reserve20. Independentchampion/skepticread, notprobabilitycertification. Fullcashloss possible.",
- "current_assessment": "DEC-0213 existing post-only BUY fully filled:5 YES@27c,1.35pUSD. Confirmed matched order, exhaustive authenticated trade, successful Polygon95752007 at2026-10-18T14:22:38Z and indexed totalBought5. Independent root receipt verifies +5CTF/-1.35pUSD and no project transaction gas; fixed95752886 at14:44:36 holds5YES/pUSD22.096890. Original commitment became holding, not a new order or resolved profit. No add/repost.",
- "research_report": "research/2026-10-17-deep-review/evaluations/0210.md",
- "current_revision": "research/2026-10-17-deep-review/models/google_athletes_method_0158.md",
- "balanced_reviews": [
-  "research/2026-10-17-deep-review/advisories/messi_entry_champion.md",
-  "research/2026-10-17-deep-review/advisories/messi_entry_skeptic.md"
- ],
- "latest_source_packet": "data/deep_review_20261017/messi_fill_source_1445.json",
- "management": "Retain5YES/no add or repost. Review each existing tick/earlier material news for Google list, methodology, cutoff, missing-source and athlete/competitor evidence. Full loss1.35 possible; ordinary December may fit January, missing-list NO can lock until March31,2027 23:59ET. Original Nov1 22UTC BUY pull is obsolete after full fill; any future resting sale requires fresh fair value and pull before known source/catalysts. No measured hedge against other categories.",
- "monitoring": "Warmup01:47; current30broadRSS+20existingGoogleBlognormalbaselineverified0189;3terms promoted01:54:05, normalpostpromotioncycle01:55:22>=309s frompriorverified0192. Sameconfig/alivedaemon; no manualpoll/stateedit/restart/newdaemon/timer. CurrentRSSwindowchangedfromold30; obsoleteYahooNYCFCitemnotmanuallymarkedseen. Nonexhaustivediscoverycoverage.",
- "divergence_ack": "2026-10-18",
- "divergence_ack_reason": "Fresh exact full Gamma rule and Google methodology re-read after fill. Keep unfitted primary60%YES/40% selected stress/range20–90: Oct17 brace/MVP story is athlete news, not measured Google internal growth. Official2026 routes404 and2025-only method do not prove global absence. Root14:45:30 quote5YES fee-net exit1.20312 versus centralhold3/stress2/lowrange1; low range favors sale. Correlated alternative-opportunity/log-growth sensitivity recorded in research/2026-10-18-messi-fill.md; divergence does not authorize enlarging."
-},
-"will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
+  "p_yes": 0.6,
+  "p_no": 0.4,
+  "cluster": "google-year-in-search-2026",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "4425465",
+  "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+  "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+  "criteria_sha256": "22fc97fb7ab20da997bd8ef2b3f59a35a53fa3bc10951d074431ffeae64659af",
+  "rationale": "Primary exactofficial2026GlobalAthletesTOP5rules; WorldCup8goals/internationalfarewellOctober6 aremajor2026events. InternalGooglegrowth/baseline/aliases/fullfield unmeasured. CompatiblejointscenarioMessi60/McGregor40;range20\u201390/reserve20. Independentchampion/skepticread, notprobabilitycertification. Fullcashloss possible.",
+  "current_assessment": "DEC-0213 existing post-only BUY fully filled:5 YES@27c,1.35pUSD. Confirmed matched order, exhaustive authenticated trade, successful Polygon95752007 at2026-10-18T14:22:38Z and indexed totalBought5. Independent root receipt verifies +5CTF/-1.35pUSD and no project transaction gas; fixed95752886 at14:44:36 holds5YES/pUSD22.096890. Original commitment became holding, not a new order or resolved profit. No add/repost.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0210.md",
+  "current_revision": "research/2026-10-17-deep-review/models/google_athletes_method_0158.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/messi_entry_champion.md",
+   "research/2026-10-17-deep-review/advisories/messi_entry_skeptic.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/messi_fill_source_1445.json",
+  "management": "Retain5YES/no add or repost. Review each existing tick/earlier material news for Google list, methodology, cutoff, missing-source and athlete/competitor evidence. Full loss1.35 possible; ordinary December may fit January, missing-list NO can lock until March31,2027 23:59ET. Original Nov1 22UTC BUY pull is obsolete after full fill; any future resting sale requires fresh fair value and pull before known source/catalysts. No measured hedge against other categories.",
+  "monitoring": "Warmup01:47; current30broadRSS+20existingGoogleBlognormalbaselineverified0189;3terms promoted01:54:05, normalpostpromotioncycle01:55:22>=309s frompriorverified0192. Sameconfig/alivedaemon; no manualpoll/stateedit/restart/newdaemon/timer. CurrentRSSwindowchangedfromold30; obsoleteYahooNYCFCitemnotmanuallymarkedseen. Nonexhaustivediscoverycoverage.",
+  "divergence_ack": "2026-10-18",
+  "divergence_ack_reason": "Fresh exact full Gamma rule and Google methodology re-read after fill. Keep unfitted primary60%YES/40% selected stress/range20\u201390: Oct17 brace/MVP story is athlete news, not measured Google internal growth. Official2026 routes404 and2025-only method do not prove global absence. Root14:45:30 quote5YES fee-net exit1.20312 versus centralhold3/stress2/lowrange1; low range favors sale. Correlated alternative-opportunity/log-growth sensitivity recorded in research/2026-10-18-messi-fill.md; divergence does not authorize enlarging."
+ },
+ "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
   "p_yes": 0.12,
   "p_no": 0.88,
   "cluster": "ai-ships-fast-short",
@@ -1483,17 +1483,17 @@
   "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md",
   "current_revision": "research/2026-10-17-deep-review/models/openrouter250_112_primary_1940.json",
   "balanced_reviews": [
-    "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
-    "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
+   "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
+   "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
   ],
   "latest_source_packet": "data/deep_review_20261017/work/0250_source_update_1800.json",
   "management": "Filledholding, no originalrestingBUY remains. OldOct18 22UTCBUYpull obsolete; existing22UTCheldreview and earliermaterialnews remain. Re-underwrite currentexit/hold on source/rule/measurement/method/regimechanges; fullcurrentgates beforemoney. Noadd/repost. AnynewweeklyTotalrequiresrevaluation; WeeklyPace not realizedtotal/cutoff. Full3.25entrycost canbelost; noindependence orhedgecredit.",
   "monitoring": "Existing exposure-aware newsrouting; PID40455progressverified17:21 after17:19restart, rawRSS Telegramoff, queued/deferred is not reviewed. Current scopedsourcechecks remain required; cache/cooldown/cappedfeed/private-unannouncedchange gaps retained. No newdaemon/timer/manualpoll.",
   "latest_catalyst": "NextheldreviewOct18 22UTC. Oct19 nextweeklydisplay canfinalize currentnon-targetOct12week and updategrowthinput; targetweeksOct26/Nov2/Nov9/Nov16, finalfirstNov23display/Nov27ETfallback. No unfilledBUYpull."
-},
+ },
  "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
-  "p_yes": 0.68,
-  "p_no": 0.32,
+  "p_yes": 0.8,
+  "p_no": 0.2,
   "cluster": "israel-monetary-oct21",
   "rho_within": 0.75,
   "cluster_frac": 0.1,
@@ -1503,40 +1503,43 @@
   "condition_id": "0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b",
   "asset": "114660857161931670198834046480178945397435960531104080936469579382607930952728",
   "criteria_sha256": "1cff9cdfb89b719e76174822a50b1920c895e0337ce083d383ea4203b3bd5aa0",
-  "rationale": "Primary dependentcut29/hold68/hike3 source-evidencerevision; one policyforecast. NOchange includescutorhike. NewCiti attributedreport supports cautious/neutral-regimethesis; not officialguidanceorindependentsurvey. Actualentryreserve20pp\u2192NO12%, not ledger15ppcomparison. RangeYEShold35\u201397%,allpremiumcanlose. rho.75/10%floor sizingassumptions, nohedgecredit.",
-  "current_assessment": "LIVE unfilled post-only BUY15NO@7c/1.05pUSD, order0x7d652a83630f8497951d6ec19e96e6c84d845b704e9b17cba0286c33ffc15bbd, DEC0215. Independent13:03:57UTC full inventory/direct detail agree15original/0matched/15remaining. Polygon95748861 at13:03:59 both137CTF0; pUSD23.446890, nine BUY commitments17.47, cash after all bids5.976890; nine reservations/no reconciliation block. Commitment not holding/profit. Actual risk1.05, noadd/repost; never replay writer.",
-  "research_report": "research/2026-10-17-deep-review/models/boi_oct21_adversarial_revision_1245.md",
+  "rationale": "Rootforecast-baselineaudit:jointcut18/hold80/hike2, actual20ppreserveunchanged; nearlyanticipatedCPI\u2212.5vs\u2212.4doesnotsupportoldordinaryeasingregimeweight. No mechanicalindependentprobabilitystackingclaim; sourceconditionaloverlap/FX-oilquantificationgapsmatter. NotCiti/OISphysicalprobabilityinference.",
+  "current_assessment": "CANCELED UNFILLED21:15:22,final21:21:26after364s:terminalCANCELED15/0matched,confirmedtrades0/indexnone/bothCTF0 atPolygon95768759,pUSD18.846890. Onlymatchingreservationretired7\u21926,6LIVEBUY11.82/free7.026890. Noholding/spend/PnL; neverreplayentry/cancel/retirement.",
+  "research_report": "research/2026-10-17-deep-review/models/boi_oct21_baseline_revision_2122.json",
   "latest_source_packet": "data/deep_review_20261017/boi137_entry_preparation_1255.json",
-  "management": "CancelFIRSTonuncertainloadbearingsource/decision/FX/energy/CPI/forecast/role/policyfacts. Pull anyacceptedbidat existingOct19 22UTCcheck beforeunknownOct20activity/expectationsrelease; earliermaterialnews. Noadd/repost.",
-  "monitoring": "Existing PID449/code, 36 feeds. Corrected Google14day feed nine IDs/titles normally seen12:50:59 after config12:47:46. Tier1 promoted12:53:40; ordinary post-promotion saves12:56:11 and13:01:21, all9 stillseen, no manualpoll/stateedit/restart/newtimer. No per-feed HTTP-success telemetry; 30/feed cap, caching/cooldowns, unannounced/private changes and nonexhaustive coverage remain."
+  "management": "NO ADD/REPOST. OriginalOct19 22UTCBUYpullcompletedearly. Reopenonlynewmatchedpolicy/dataevidenceandallcurrentgates; noBOIexposure. Otherportfolioheldreview22UTCunchanged.",
+  "monitoring": "Existing PID449/code, 36 feeds. Corrected Google14day feed nine IDs/titles normally seen12:50:59 after config12:47:46. Tier1 promoted12:53:40; ordinary post-promotion saves12:56:11 and13:01:21, all9 stillseen, no manualpoll/stateedit/restart/newtimer. No per-feed HTTP-success telemetry; 30/feed cap, caching/cooldowns, unannounced/private changes and nonexhaustive coverage remain.",
+  "actual_entry_reserve_pp": 20,
+  "latest_financial_record": "research/2026-10-18-boi-cancel.md",
+  "note": "CLOSED unfilled: original15NO@7c canceled21:15:22; after364s terminal/trades/index/bothCTF0 verified21:21:26,onlyreservationretired7\u21926. Noholding/spend/PnL, no automaticre-entry. Updatedprobabilitiesare researchonly; fullcurrentgates/newmatchedsourcebeforeanyre-entry."
  },
-  "will-the-total-domestic-gross-for-resident-evil-be-between-150m-and-160m-by-october-31": {
- "p_yes": 0.58,
- "p_no": 0.42,
- "cluster": "box-office-resident-evil-oct31",
- "rho_within": 0.75,
- "cluster_frac": 0.05,
- "verified": "2026-10-18",
- "criteria_read": "2026-10-18",
- "market_id": "4893303",
- "condition_id": "0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6",
- "asset": "24671477204883739787066624255297557183814086376200478865423964321493406699324",
- "criteria_sha256": "e3afa3931ec150523d53fc8e68aaf2daca7251b40e42fce73aba5e57c2b73e5b",
- "rationale": "Primary42%NOaftercompetitionrevision;initial49%NO outside150–160m from exactly reproduced183sharedgrossmodel;YES51%,NO10–90%sensitivity. Actual25ppentryreserve selectsNO17%. Descriptions183/2161byteidentical,NO2161coversall183YESwinningstatesplus<150and>=170tails conditionalcommonsource/interpretation. Existing49.1505%rawNO is uncalibrated; no riskfreefloor orindependent signal. SourceFridayestimated/weekendunpublished; allcashcanlose. Advisorypairread. Rho.75 and5%broadriskfloor are conservative sizing assumptions,notmeasuredconsumer/political/AIcorrelations. Noexistingfilmbucketposition/bidverified14UTC; onefilmeventcluster, nohedgecredit. VerifiedOct23wideClayface/Wildwoodcalendar adds25%extra30%gross-lossbranch; adoptedcurrentYES58/NO42 afterquotes. Branchweightsuncalibrated, noindependentvoteorhedge.",
- "note": "Closed canceled-unfilled pilot; re-entry research candidate only. No film holding, open film order or add/repost authorization. Fresh gross/estimated-Friday, competition, uncertainty, quote and every execution gate required for a new deliberate decision; no automatic repeat.",
- "current_assessment": "DEC-0216 CLOSED unfilled at14:58:02UTC after guarded cancel and300s grace: terminal canceled, confirmed trade matches0, both film cases CTF0, cash unchanged22.096890. Only film reservation9to8 retired;8BUY16.12/free5.976890. No film holding, purchase, realized PnL or market-outcome grade. Research centralNO42/selected17 remains dated, not new entry authority.",
- "research_report": "research/2026-10-17-deep-review/evaluations/2161.md",
- "current_revision": "research/2026-10-17-deep-review/models/film183_2161_competition_1440.json",
- "latest_source_packet": "data/deep_review_20261017/film2161_final_sources_1450.json",
- "balanced_reviews": [
-  "research/2026-10-17-deep-review/advisories/film183_champion_1415.md",
-  "research/2026-10-17-deep-review/advisories/film183_skeptic_1415.md"
- ],
- "entry_uncertainty_reserve": 0.25,
- "maximum_family_cash_risk": 1.04,
- "management": "Closed canceled-unfilled pilot. No automatic add/reprice/repost/secondleg. Re-entry requires a deliberate new gross/Friday-estimate, competition, retention and risk judgment plus every current execution gate; the old forecast or cheap quote alone is not authority. No risk-free floor or measured hedge credit.",
- "monitoring": "Temporary one-feed/Tier1 film monitoring was warmed and verified before the finite pilot, then removed after terminal zero fill/exposure proof14:58. Existing watcher config returned to its prior baseline; ordinary reload is asynchronous. A new deliberate entry needs its own current source/event coverage, not stale monitoring claims. No new daemon, timer, forced poll or state edit.",
- "settlement": "Sep18–Oct31dailyNumbersfinaldata; ifambiguousNumbers+Mojo; alternatecrediblefallbackafterNov30 23:59ET, potentialdelaybeyond44daycarry. OrdinarysettlementfitsJanuary, notguaranteed.",
- "entry_report": "research/2026-10-17-deep-review/film2161_entry_1450.md"
-}
+ "will-the-total-domestic-gross-for-resident-evil-be-between-150m-and-160m-by-october-31": {
+  "p_yes": 0.58,
+  "p_no": 0.42,
+  "cluster": "box-office-resident-evil-oct31",
+  "rho_within": 0.75,
+  "cluster_frac": 0.05,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "4893303",
+  "condition_id": "0x5e18ff95a169f8c44dc63dcd6eb0c2e83f1000646a76f51c12d9974daca1c0d6",
+  "asset": "24671477204883739787066624255297557183814086376200478865423964321493406699324",
+  "criteria_sha256": "e3afa3931ec150523d53fc8e68aaf2daca7251b40e42fce73aba5e57c2b73e5b",
+  "rationale": "Primary42%NOaftercompetitionrevision;initial49%NO outside150\u2013160m from exactly reproduced183sharedgrossmodel;YES51%,NO10\u201390%sensitivity. Actual25ppentryreserve selectsNO17%. Descriptions183/2161byteidentical,NO2161coversall183YESwinningstatesplus<150and>=170tails conditionalcommonsource/interpretation. Existing49.1505%rawNO is uncalibrated; no riskfreefloor orindependent signal. SourceFridayestimated/weekendunpublished; allcashcanlose. Advisorypairread. Rho.75 and5%broadriskfloor are conservative sizing assumptions,notmeasuredconsumer/political/AIcorrelations. Noexistingfilmbucketposition/bidverified14UTC; onefilmeventcluster, nohedgecredit. VerifiedOct23wideClayface/Wildwoodcalendar adds25%extra30%gross-lossbranch; adoptedcurrentYES58/NO42 afterquotes. Branchweightsuncalibrated, noindependentvoteorhedge.",
+  "note": "Closed canceled-unfilled pilot; re-entry research candidate only. No film holding, open film order or add/repost authorization. Fresh gross/estimated-Friday, competition, uncertainty, quote and every execution gate required for a new deliberate decision; no automatic repeat.",
+  "current_assessment": "DEC-0216 CLOSED unfilled at14:58:02UTC after guarded cancel and300s grace: terminal canceled, confirmed trade matches0, both film cases CTF0, cash unchanged22.096890. Only film reservation9to8 retired;8BUY16.12/free5.976890. No film holding, purchase, realized PnL or market-outcome grade. Research centralNO42/selected17 remains dated, not new entry authority.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/2161.md",
+  "current_revision": "research/2026-10-17-deep-review/models/film183_2161_competition_1440.json",
+  "latest_source_packet": "data/deep_review_20261017/film2161_final_sources_1450.json",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/film183_champion_1415.md",
+   "research/2026-10-17-deep-review/advisories/film183_skeptic_1415.md"
+  ],
+  "entry_uncertainty_reserve": 0.25,
+  "maximum_family_cash_risk": 1.04,
+  "management": "Closed canceled-unfilled pilot. No automatic add/reprice/repost/secondleg. Re-entry requires a deliberate new gross/Friday-estimate, competition, retention and risk judgment plus every current execution gate; the old forecast or cheap quote alone is not authority. No risk-free floor or measured hedge credit.",
+  "monitoring": "Temporary one-feed/Tier1 film monitoring was warmed and verified before the finite pilot, then removed after terminal zero fill/exposure proof14:58. Existing watcher config returned to its prior baseline; ordinary reload is asynchronous. A new deliberate entry needs its own current source/event coverage, not stale monitoring claims. No new daemon, timer, forced poll or state edit.",
+  "settlement": "Sep18\u2013Oct31dailyNumbersfinaldata; ifambiguousNumbers+Mojo; alternatecrediblefallbackafterNov30 23:59ET, potentialdelaybeyond44daycarry. OrdinarysettlementfitsJanuary, notguaranteed.",
+  "entry_report": "research/2026-10-17-deep-review/film2161_entry_1450.md"
+ }
 }

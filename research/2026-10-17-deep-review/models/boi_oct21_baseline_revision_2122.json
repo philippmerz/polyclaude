@@ -1,0 +1,34 @@
+{
+  "adopted_utc": "2026-10-18T21:18:38.065816+00:00",
+  "scope": "ExactBOIOct21policyevent;137YEShold/NOcutorhike,607YESanydecrease. Samefullwrittenrules/officialsource/noannouncementfallbackNOchange.",
+  "outcome_distribution": {
+    "cut": 0.18,
+    "hold": 0.8,
+    "hike": 0.02
+  },
+  "reserve_pp": 20,
+  "137_selected_no": 0,
+  "607_selected_yes": 0,
+  "ranges": {
+    "137_yes_hold": [
+      0.35,
+      0.98
+    ],
+    "607_yes_anycut": [
+      0.01,
+      0.6
+    ]
+  },
+  "prior_model": "research/2026-10-17-deep-review/models/boi_oct21_adversarial_revision_1245.json",
+  "reason": "Auditexplicitforecastbaselineandbranchsupportbeforeunfilledbidpersists. GlobalSourceOct13hold3.25alreadyanticipatedCPI−.4m/m/~1.7y/y; actual−.5/1.6only.1ppsofter. Knownlowinflation/activity/FX/oilconditionedviewcannotbeusedagainasfreshindependentcutimpulse. Thirtypercentordinaryeasingbranchwith75%conditionalcutisnotempiricallyormatched-surpriseanchored; firstmodelalreadyoverweightedthatmechanism.",
+  "not_a_mechanical_stacking_error": "EarlierrevisiondoesNOTliterallymultiplyindependentCiti/CPI/FX/oilprobabilities. Problemisunsupportedregimemass/overlappingconditionalinformationandunverifiedcurrentFX/oilmagnitudes. CitiispostCPIsecondaryattributionnotaccessibledirectbanknote/independentpoll.",
+  "primary_bridge": "Adopt18cut/80hold/2hikeasroundedprimaryjudgment favoringconditionalholdafteralreadydeliveredSeptembercut, near-neutralclaimedsetting,strongactivityandnearlyanticipatedCPI. Stillallowsmaterialeasingduelowinflation. No probabilityderivedfromnumberofanalysts or5bpOISimplied20%binaryback-calculation. Notfittedposterior ornewBOIguidance.",
+  "changes": "Prior29/68/3superseded; actual20ppreserveunchanged,notold15ppledgercomparison. Both137NO20%and607YES18%failreservedprice. Distinctcontractsdependentsubstitutes,nodiversificationcredit.",
+  "financial_action": "RootcancelFIRST15NO@7c/risk1.05viaexactvettedclob_v2cancel21:15:22verifiedoutofbook. Terminal/trade/CTFproofand300sreservationgracenecessarybeforefinalreleasedcommitmentclaim; noadd/repost/neworder. No sale/PnLclaimed.",
+  "sources": [
+    "work/0137_baseline_source_audit_2120.json",
+    "research/2026-10-17-deep-review/advisories/boi137_doublecount_audit_2115.md",
+    "data/deep_review_20261017/boi137_entry_preparation_1255.json"
+  ],
+  "no_future_execution_authorization": true
+}
