@@ -1,0 +1,96 @@
+{
+  "schema": "polyclaude.primary_forecast.v1",
+  "review_index": 276,
+  "created_utc": "2026-10-18T21:39:06.297796+00:00",
+  "market_id": "567688",
+  "condition_id": "0xd1796c09d0d6f876f8580086ae9808ec991784e3a74b25a1830a25de71a78c96",
+  "criteria_sha256": "b2efb8798ca5170033db4c523282d86c3000436ce2c57f2b862e027d348b422e",
+  "own_quotes_read": false,
+  "p_yes": 0.44,
+  "p_yes_mixture_raw": 0.439538,
+  "p_no": 0.56,
+  "range_yes": [
+    0.2,
+    0.75
+  ],
+  "actual_entry_reserve_pp": 20,
+  "exact_rule": "Any actual cessation for any period OR announcement of resignation/removal before Dec31ET immediatelyYES even if effective later. Election loss/negotiation/caretaker status alone not automaticcessation. Not nextPM-electionwinner contract or Oct31 window.",
+  "method": "Shared prior coalition outcome scenarios from185, with explicit separate current-calendar/announcement map, not1−P(nextNetanyahu). Four98%-political subregimes plus2% disjoint qualifying non-election crisis residual, all primaryjudgments.",
+  "scenarios": [
+    {
+      "name": "ordinary_weak_incumbent_bloc",
+      "weight": 0.45,
+      "Eizenkot_or_Bennett_timing_or_announcement": 0.85,
+      "Other_qualifying_by_cutoff": 0.2,
+      "Netanyahu_still_next_but_transient_or_announcement": 0.01,
+      "next_pm_conditional": {
+        "Netanyahu": 0.2,
+        "Eizenkot": 0.55,
+        "Bennett": 0.2,
+        "Other": 0.05
+      },
+      "p_exit_by_deadline": 0.6495
+    },
+    {
+      "name": "right_majority_or_switchers",
+      "weight": 0.25,
+      "Eizenkot_or_Bennett_timing_or_announcement": 0.85,
+      "Other_qualifying_by_cutoff": 0.2,
+      "Netanyahu_still_next_but_transient_or_announcement": 0.01,
+      "next_pm_conditional": {
+        "Netanyahu": 0.85,
+        "Eizenkot": 0.05,
+        "Bennett": 0.05,
+        "Other": 0.05
+      },
+      "p_exit_by_deadline": 0.10350000000000001
+    },
+    {
+      "name": "stalemate_repeat_election",
+      "weight": 0.2,
+      "Eizenkot_or_Bennett_timing_or_announcement": 0.25,
+      "Other_qualifying_by_cutoff": 0.1,
+      "Netanyahu_still_next_but_transient_or_announcement": 0.02,
+      "next_pm_conditional": {
+        "Netanyahu": 0.2,
+        "Eizenkot": 0.3,
+        "Bennett": 0.2,
+        "Other": 0.3
+      },
+      "p_exit_by_deadline": 0.159
+    },
+    {
+      "name": "leader_change_other",
+      "weight": 0.1,
+      "Eizenkot_or_Bennett_timing_or_announcement": 0.9,
+      "Other_qualifying_by_cutoff": 0.65,
+      "Netanyahu_still_next_but_transient_or_announcement": 0.03,
+      "next_pm_conditional": {
+        "Netanyahu": 0.05,
+        "Eizenkot": 0.3,
+        "Bennett": 0.35,
+        "Other": 0.3
+      },
+      "p_exit_by_deadline": 0.7815
+    }
+  ],
+  "political_exit_probability": 0.4281,
+  "disjoint_other_trigger_probability": 0.02,
+  "source_bridge": {
+    "current_office": "PMOindex/Oct15event stillnamesNetanyahu; latest3days directbodygap. No departurefound inboundedsearch, not exhaustiveabsence.",
+    "election": "OfficialCEC Oct27vote/Nov4results; rootverified currentpublisherpollbodyhashes. i24DirectPollsOct18 coalition57/opposition49/Arab14; otherpollstersLikud18vs25, no simplecoalitionmajority/houseeffects unresolved. These do not assign winner probabilities.",
+    "timing": "Knesset officialformationlexicon indexedtext: Presidentassignswithin7daysofpublishedresults, firstcandidate28days+atmost14extension; confidence/formation startsnewgov, outgoingcontinuesuntilthen. If resultsNov4/assignmentlatestNov11, fullfirstwindowendsDec23 beforeconfidence; laterattemptscanextendbeyondDec31. Directlaw/lexiconblockedgeo; indexedtextnotfullcurrentPDF.",
+    "announcement": "Writtencontractannouncementfork cantriggerYES earlier than legalhandover, whilecaretakercontinuity alone supportsNO. Timelybranch probabilities incorporateboth, notindependentadds.",
+    "other_limit": "Other in185 containsother-person andno-formationfallback paths; onlypart mappedtoqualifyingdeparture, notall1−Netanyahu."
+  },
+  "source_units": [
+    "work/0276_facts.json",
+    "work/0276_facts_expansion_20261018.json",
+    "work/0276_legal_latest_2140.json",
+    "work/0294_facts_2140.json"
+  ],
+  "family_anchor": "models/compound185_primary_1415.json; different linked oath deadline into2027, notchangedbythis2026exitvaluation. Sharedscenarioassumptions, noindependentforecastcredit.",
+  "uncertainty": "20–75% is broadprimarysensitivity, notconfidenceinterval. No fitted coalition/timingmodel; officialbodyaccessgaps/cross-pollhouseeffects/turnout andcoalitionredlinesmaterial.2%othertrigger notempiricalhazardestimate.",
+  "portfolio": "No directIsraeli electionholding; globalriskfactor may correlatewithBOIresearch andUS-electionbids. BOIbidnowcanceled; nohedgecredits.",
+  "no_execution_authorization": true
+}

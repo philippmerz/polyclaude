@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T21:24:00.936606+00:00
+Updated: 2026-10-18T21:40:30.959393+00:00
 
-**285 valuations saved; first milestone100:** 285 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2368 pending.
+**288 valuations saved; first milestone100:** 288 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2365 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -285,6 +285,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |271|[Will the Democratic Party win the MT-01 House seat?](evaluations/0271.md)|valued|Potential small passive YES source revalidation|
 |272|[Will the ECB announce no change at the October 2026 meeting?](revisions/0272_20261018T211341467717Z.md)|valued|NO ENTRY after source/model audit:85%YES/15%NO,unchanged15ppreserve/selectedNO0. CentralNOedgepositivebutunreliable; nofinancialwriter.|
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|274|[Will OpenAI have the best AI model at the end of December 2026?](evaluations/0274.md)|valued|NO ENTRY: YES positive central EV but selected probability0 after unchanged20pp reserve; NO central negative. No order writer or hedge credit.|
+|275|[Will "Street Fighter" Opening Weekend Box Office be between 25m and 30m?](evaluations/0275.md)|valued|NO ENTRY: YES positive centralEV but selected0 after10pp ordinaryreserve; NO centralnegative. Books also fail timestamp gate. No financial action.|
+|276|[Netanyahu out by end of 2026?](evaluations/0276.md)|valued|NO ENTRY: YES marginalcentralpositive but selected24%fails41c; NO centralnegative. No financial action or independenthedgecredit.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |279|[Spread: Paris Saint-Germain FC (-1.5)](evaluations/0279.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |281|[Will the highest temperature in Amsterdam be 14°C on October 17?](evaluations/0281.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
@@ -645,4 +648,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 274
+Active indices: 278

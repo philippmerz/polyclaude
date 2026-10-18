@@ -1,0 +1,158 @@
+{
+  "review_index": 274,
+  "market_id": "2431414",
+  "condition_id": "0xccc84033ab481e4c1ed49fce3889e54a9f6c127b819a3bc17bbf2359d1e4c2bd",
+  "criteria_sha256": "b42a9a9b9f6b2e8d794e02391fe96d7a085e1d39a8bd4af6296ebe8d75626b3e",
+  "status": "valued",
+  "evaluated_utc": "2026-10-18T21:30:53.108221+00:00",
+  "literal_analysis": "OpenAI must own the top-ranked model in Text Overall RAW/style-off at Dec31 2026 17UTC, rank then exact underlying score then company alphabetical; temporary outage delays check, permanent outage alternative. No GA condition. Current board and other metrics do not settle future event.",
+  "evidence": [
+    {
+      "url": "https://arena.ai/leaderboard/chat/text?scoring=raw",
+      "observed_utc": "2026-10-18T21:30:53.108221+00:00",
+      "finding": "Root-read Oct15 RAW snapshot: Google1532 preliminary/top; best OpenAI1471 rank28; not Dec31 observation."
+    },
+    {
+      "url": "https://arena.ai/company/leaderboard-changelog",
+      "observed_utc": "2026-10-18T21:30:53.108221+00:00",
+      "finding": "Dated model additions, not historical ranks or a full future release calendar; no captured newer TextRAW snapshot."
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "observed_utc": "2026-10-18T21:30:53.108221+00:00",
+      "finding": "Sep30 official staged rollout, no dated GA schedule; board already includes model so GA is not an exclusion."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.17775000000000002,
+    "low": 0.03,
+    "high": 0.55,
+    "method": "Primary conditional scenario mixture, explicitly judgmental and not calibrated to release/rank-switch history. 74 calendar days from review;77 days from source snapshot to cutoff.",
+    "reasoning": "Four conditional scenarios in primary model; .35*.005+.45*.22+.18*.40+.02*.25=.17775. Joint admission/quality/timing/rival response, judgmental not calibrated; raw61-point current gap cannot determine future winner.",
+    "model_path": "models/arena274_primary_2135.json",
+    "actual_entry_reserve_pp": 20
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_2000.json",
+    "quote_file_sha256": "3ce7057ca46f7a9d8c1b7b055d9585a48383a8556da0e937ad6c91f6f29ef424",
+    "quote_observed_utc": "2026-10-18T19:58:33.878+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 74,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.17775000000000002,
+        "selected_stress_probability": 0,
+        "best_bid": 0.069,
+        "best_ask": 0.088,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353512001",
+        "book_age_seconds_at_receipt": 1.877,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.8799999999999999,
+            "fee": 0.03211,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.088
+              }
+            ],
+            "net": 0.9121099999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.6900000000000001,
+            "fee": 0.0257,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.069
+              }
+            ],
+            "net": 0.6643000000000001
+          }
+        },
+        "taker_cost_usd": 0.9121099999999999,
+        "central_expected_profit_usd": 0.8653900000000004,
+        "selected_stress_profit_usd": -0.9121099999999999,
+        "break_even_before_carry": 0.09121099999999999,
+        "break_even_constant_carry": 0.09178677262655648,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8222499999999999,
+        "selected_stress_probability": 0.62225,
+        "best_bid": 0.912,
+        "best_ask": 0.931,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792353512001",
+        "book_age_seconds_at_receipt": 1.877,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.31,
+            "fee": 0.0257,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.931
+              }
+            ],
+            "net": 9.335700000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.120000000000001,
+            "fee": 0.03211,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.912
+              }
+            ],
+            "net": 9.087890000000002
+          }
+        },
+        "taker_cost_usd": 9.335700000000001,
+        "central_expected_profit_usd": -1.1132000000000009,
+        "selected_stress_profit_usd": -3.113200000000001,
+        "break_even_before_carry": 0.9335700000000001,
+        "break_even_constant_carry": 0.9394631932658818,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES positive central EV but selected probability0 after unchanged20pp reserve; NO central negative. No order writer or hedge credit.",
+  "reopen_condition": "Dated TextRAW rank update, serious contender release/admission, changed source semantics, or prices crossing independently justified selected probabilities with current live gates.",
+  "question": "Will OpenAI have the best AI model at the end of December 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 274,
+  "report_sha256": "af293a168c3f638d6218699efa7caff11ea4ae1a91ca1a7649113312b0c6e262"
+}

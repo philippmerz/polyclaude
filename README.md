@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 205 recorded observations from Apr-25
+The local performance CSV now has 206 recorded observations from Apr-25
 through Oct-18. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October 18
 
-At21:22UTC the finite `/goal` review has **285 valuations,4 blocked reviews,343 factual exclusions and2,368 pending**;632immutable base records+35append-only revisions;case274active. [Checkpoint](notes/deep_review_checkpoint.json) governs dynamic counts. Save/index each completed evaluation immediately. First100/200notified; next milestone300.
+At21:43UTC the finite `/goal` review has **288 valuations,4 blocked reviews,343 factual exclusions and2,365 pending**;635immutable base records+35append-only revisions;case278active. [Checkpoint](notes/deep_review_checkpoint.json) governs dynamic counts. Save/index each completed evaluation immediately. First100/200notified; next milestone300.
 
 Use [RESUME.md](research/2026-10-17-deep-review/RESUME.md) and `.venv/bin/python scripts/deep_review_resume.py` (8KBhard cap). Load one full rule/latest report and small named model/source units; raw arrays and historical indexes stay separate. [Brazil266](research/2026-10-17-deep-review/evaluations/0266.md) moved from blind63% to79%YES after independently audited survey-error evidence corrected uncertainty double counting; NO fails the unchanged20ppreserve. [Apple268](research/2026-10-17-deep-review/evaluations/0268.md)35.07%YES also fails reserved price. The [common rank model](research/2026-10-17-deep-review/models/marketcap_family_primary_2100.json) aligns NVDA154largest62.69% with Applelargest/MSFT196third/Alphabet260third; full rank semantics now validated. Chalamet262/NATO264 also pass; no new allocation. Latest [20:41 account observation](research/2026-10-18-2041-readonly-account.md):195.83total/190.25tradingmid/187.89indicative tradingdepth; sevenBUYs12.87 unchanged. These are sequential rounded marks, not certified proceeds/profit. CSV206rows, current observation appended from saved data. PublishedCSVverified21:01byte-identical. [BOI137bid](research/2026-10-18-boi-cancel.md)wasthen canceledunfilled/onlyreservation7→6retired21:21;6BUYs11.82/free7.026890, noPnL. ECB272now85%YES/15%NO/noentry after matchedforecast-baselineaudit.
 

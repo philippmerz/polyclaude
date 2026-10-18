@@ -1,0 +1,52 @@
+{
+  "schema": "polyclaude.primary_forecast.v1",
+  "review_index": 275,
+  "created_utc": "2026-10-18T21:35:58.064060+00:00",
+  "market_id": "5394325",
+  "condition_id": "0xc471650d86824b9990dbad861bdb416588a914bd88fffcee65ed8e5b843eaa93",
+  "criteria_sha256": "c7e5eeef988420a29c503f56dd479f1a06db9c9f854024406b8da7914f112a75",
+  "p_yes": 0.06864306149345953,
+  "p_no": 0.9313569385065404,
+  "range_yes": [
+    0.01,
+    0.3
+  ],
+  "entry_reserve_pp": 10,
+  "own_clob_quotes_read": false,
+  "quote_exposure_limit": "A broad web search incidentally surfaced third-party related bracket odds; these were not inputs. This is not a claim of complete price blindness.",
+  "literal": "Final domestic weekend25M<=gross<30M; preview amount already included in Friday total. Ambiguous finality waits for both designated sites; fallback after Oct23 23:59ET, not immediate resolution on passed GammaendDate.",
+  "branches": [
+    {
+      "label": "Routine Sunday-to-final revision",
+      "weight": 0.8,
+      "gross_millions_mean": 31,
+      "sigma_millions": 0.5,
+      "p_yes_conditional": 0.02275013194817921,
+      "conditional_distribution": "Illustrative normal around displayed Sunday estimate; not fitted to three comparisons."
+    },
+    {
+      "label": "Atypical frontloading/reporting revision",
+      "weight": 0.18,
+      "gross_millions_mean": 31,
+      "sigma_millions": 1.5,
+      "p_yes_conditional": 0.2524608663050898,
+      "conditional_distribution": "Illustrative normal around displayed Sunday estimate; not fitted to three comparisons."
+    },
+    {
+      "label": "Exceptional source/accounting/adjudication fork",
+      "weight": 0.02,
+      "p_yes_conditional": 0.25,
+      "distribution_limit": "Judgmental residual; no observed permanent source failure/final amount known."
+    }
+  ],
+  "baseline_and_evidence": {
+    "current": "Root SHA-verified direct TheNumbers Oct18 article explicitly labels31M Paramount Sunday-morning projection; same31 previously Fridaymodel/Saturdaystudio projection. Not independent confirmations. TN title/weekend andBOM current display31M, not explicitlyfinal.",
+    "root_preview_clarification": "Friday13M includes Thursday4M, per Oct17 article. The standalone P row is not added to13+10.8+7.2; it is not evidence that opening excludes previews.",
+    "required_revision": "YES needs >1Mdownward adjustment (>3.225806%); exact30M is NO. If Fri/Sat23.8 unchanged, Sunday needs<6.2M vs7.2 estimate.",
+    "three_comps": "Signed estimate→later opening differences: −.19398M,+.002526M,+.305825M. Raw title body/gzip hashes root-verified; old Sunday prose is rendered-excerpt evidence, not preserved server bytes.",
+    "comparability_limit": "Three bounded-search pairs, none game-action; descriptive only, no calibrated error distribution/no random sample. Positive mean not used to bias forecast."
+  },
+  "reasoning": "Most final revisions should be much smaller than1M given accrued weekend receipts. A meaningful heavy-tail component covers frontloaded fandom and poor comparison coverage. Sigma0.5M/1.5M and80/18/2 weights are primary judgments, deliberately broader than three observed errors; they are not fitted estimates or confidence bounds. No repeat of pre-release37.6M forecast as fresh information.",
+  "sensitivity": "Small1%YES represents narrow routine revisions;30% allows a much wider/skewed reporting error. Not a formal confidence interval. Ordinary10pp absolute reserve retained; this is not a measured tail for claiming calibrated bond-fade scaling.",
+  "no_execution_authorization": true
+}

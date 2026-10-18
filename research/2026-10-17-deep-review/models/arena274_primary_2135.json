@@ -1,0 +1,68 @@
+{
+  "schema": "polyclaude.primary_forecast.v1",
+  "review_index": 274,
+  "created_utc": "2026-10-18T21:30:13.606082+00:00",
+  "market_id": "2431414",
+  "condition_id": "0xccc84033ab481e4c1ed49fce3889e54a9f6c127b819a3bc17bbf2359d1e4c2bd",
+  "criteria_sha256": "b42a9a9b9f6b2e8d794e02391fe96d7a085e1d39a8bd4af6296ebe8d75626b3e",
+  "price_blind_primary": true,
+  "own_outcome_quotes_read": false,
+  "p_yes": 0.17775000000000002,
+  "p_no": 0.8222499999999999,
+  "plausible_p_yes_range": [
+    0.03,
+    0.55
+  ],
+  "actual_entry_reserve_pp": 20,
+  "method": "Primary conditional scenario mixture, explicitly judgmental and not calibrated to release/rank-switch history. 74 calendar days from review;77 days from source snapshot to cutoff.",
+  "branches": [
+    {
+      "label": "No new OpenAI contender capable of materially changing raw-chat competitiveness",
+      "weight": 0.35,
+      "p_yes_conditional": 0.005,
+      "bridge": "Existing best row trails leader61 raw points; rescoring/preliminary reversal alone is not a credible central path past many rival models. The small residual permits data/ranking surprises."
+    },
+    {
+      "label": "One material OpenAI contender reaches Text RAW before cutoff",
+      "weight": 0.45,
+      "p_yes_conditional": 0.22,
+      "bridge": "A serious release can improve the gap but must beat Google, Anthropic and other challengers at the final instant. This is the joint chance after quality, admission, timing and rival responses, not four independent probabilities."
+    },
+    {
+      "label": "Multiple material OpenAI iterations reach Text RAW",
+      "weight": 0.18,
+      "p_yes_conditional": 0.4,
+      "bridge": "More attempts raise final leadership chance; these attempts and rival releases share frontier progress and are not independent draws. Admission late in December and limited votes remain relevant."
+    },
+    {
+      "label": "Leaderboard/source/provider-mapping disruption changes comparison",
+      "weight": 0.02,
+      "p_yes_conditional": 0.25,
+      "bridge": "Includes delayed first check or alternative-source/provider semantics. No observed permanent outage; low weight is a judgment, not frequency evidence."
+    }
+  ],
+  "source_baseline": {
+    "snapshot": "2026-10-15",
+    "cutoff": "2026-12-31T17:00:00Z",
+    "mode": "Text Overall RAW / style off; historical no-style route redirects to scoring=raw",
+    "leader": "Google Gemini4ArgonHigh1532±9 preliminary/4904 votes",
+    "best_openai": "GPT5.5High1471±4/rank28/69401 votes",
+    "rank_gap_points": 61,
+    "recent_openai_additions": "GPT6AstraMax Sep11; Sol/LunaMax Sep25; addition does not establish a high rank",
+    "future_calendar": "No complete dated frontier release/admission calendar found. GA is not a written requirement. No Oct16-18 RAW snapshot captured."
+  },
+  "sensitivity": {
+    "p_yes_low_scenario": 0.03,
+    "p_yes_high_scenario": 0.55,
+    "low_meaning": "OpenAI mostly remains behind in raw conversational preference despite coding/reasoning progress; incumbent/rival response dominates.",
+    "high_meaning": "A major chat-focused late release overtakes and survives rival response. Requires new evidence; not ruled out by existing score intervals.",
+    "uncertainty": "Branch weights and conditional win chances are not empirical estimators; range is not a confidence interval. No multiplication of model count as independent competitors."
+  },
+  "portfolio_relation": "Related to held OpenAI HLE>=55 NO via release/progress, but different metric and horizon; joint hedge efficacy unknown. No independent hedge credit. OpenRouter token-use exposure also shares industry-release factor.",
+  "sources": [
+    "https://arena.ai/leaderboard/chat/text?scoring=raw",
+    "https://arena.ai/company/leaderboard-changelog",
+    "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/"
+  ],
+  "reopen": "Dated new Text RAW snapshot or major contender release/admission, changed source/mode, or fee-inclusive prices crossing selected probabilities with current full gates."
+}

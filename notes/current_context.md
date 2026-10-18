@@ -1,46 +1,48 @@
 ---
-reviewed_at: "2026-10-18T21:24:00.356202+00:00"
+reviewed_at: "2026-10-18T21:43:08.229826+00:00"
 valid_until: "2026-10-18T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 19ca5aa53570b34428e39f9aa9e2547a746798fb6484cbca5166d3ad0fbacc77
+  README.md: 3448bb5c5b963c71cf3b79cfcfe780d7293c61193dd5a9c702bf419ccc210191
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
   strategy/02_operations.md: 916783a6be5eb5856416e535412d10c82b71335ef863186b9556ca66248c7a31
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: ef886eb204508764502844529de4ec5b3c8dfa3dcf355f8284a2c78e3d07c9b5
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: ce13645188aaa3d84de5058346f1c7dbd5472106b04464ee3b759a5daa444b43
+  notes/backlog.md: 5c6399074d0bd8ca3d53171c92fe07a1270bb1d56609d12e4c7d8207cf5c8186
   notes/resting_orders.md: 16b61fc1adcc01b71cd2bdc93cf4c7cc79ad679841683abafe76d310ce17bf63
-  notes/journal.md: b68d0c36beede690171bcb1ab5664df1b1cd35a90fa40787a0355c417f9a0c2f
+  notes/journal.md: 26bb50ade8bbfb2b9172d46d74157b182364f19867f0bdbea226724aabc4b577
 ---
 
-## Active finite review — October18
+## Finite goal / resume
 
-Explicit `/goal`: finishremainingfrozen3,000in-depthreviews;repairsubstantivelimitsbeforeforcingcoverage. **285valued/4blocked/343excluded/2,368pending;632base+35revisions;274active.** [Checkpoint](deep_review_checkpoint.json)governs. First100/200notified; next300. No newgoal/timer/idlecontinuation.
+Explicit `/goal`: finish remaining frozen3,000 deep reviews; repair substantive limits before forcing coverage. **288 valued /4 blocked /343 factual exclusions /2,365 pending;635 immutable base +35 revisions;278 active.** [Checkpoint](deep_review_checkpoint.json) governs newer counts. First100/200 notified; next300. No new timer or idle loop.
 
-[Resume](../research/2026-10-17-deep-review/RESUME.md)→`.venv/bin/python scripts/deep_review_resume.py --index N` (8KBhardcap). Onefullrule/latestMD+namedsmallmodel/sourceunit;persist/indexEACHresultbeforenext. Cheapfacts cannotreject. No fullINDEX/ledger/journal/backlog/followupingestion. Rawarrays/receiptsseparate;pointersrun-relative`work/...`. Protocol<6KB/exactpriorarchived; compareforecastbaseline/fielding/units/horizonbeforeaddingregimepenalties.
+[RESUME](../research/2026-10-17-deep-review/RESUME.md) → `.venv/bin/python scripts/deep_review_resume.py --index N` (8KB hard cap). Read one full rule/latest report + named small source/model units. Save/index EACH completion; append revisions, never overwrite base. Cheap collectors supply facts, never rejection/p. Protocol<6KB; exact prior archived. Compare forecast fielding/baseline/units/horizon before adding regime penalties. No bulk INDEX/ledger/journal/backlog/followup ingestion; raw arrays separate; work pointers run-relative `work/...`.
 
-**Active274:** OpenAIownstopmodelatDec31,2026 12ET/17UTC; ArenaTextRAW/styleoffRank→unroundedscore→companyalphabetical. Sourceoutagedelaysfirstcheck;permanentoutagealternative. Fullrulesread;`work/0274_facts{,_expansion_20261018}.json`. Oct15snapshotGoogleGemini4ArgonHigh#1RAW1532±9prelim/4904votes,AnthropicOpus5.5#2/Fable5.1#3;416models/8,834,211votes. Defaulttoggleunknown; explicitno-style routescoring=rawverifiedrendered/direct403. CurrentnotDec31; topOpenAI/providerhistory/releasecoverageincomplete. No primaryp/own274quoteadopted.
+**Active278:** LoveIsBlindBoston must rankexact#2USNetflixTV onOct20 weekly update forOct12–18; notglobal/daily/#1. NoupdatebyOct23 23:59ET→Other. Fullrulesread, officialOct14releasefirstFIVEepisodes. CurrentUSchartstillOct5–11; newseasonhistoricalrank/competitorfacts pending. `work/0278_facts.json`; no primaryp/ownquoteadopted.
 
-**BOIcancelFINAL:** [proof/DEC0219](../research/2026-10-18-boi-cancel.md). Original15NO7c/$1.05cancel-FIRST21:15:22.705517;after364s terminalCANCELED0matched/exhaustivetrades0/indexnone/bothCTFs0. **Onlyreservation7→6retired,other6exactlypreserved. SixLIVEBUYs11.82,pUSD18.846890/free7.026890**,fixed95768759/21:21:26. No holding/sale/spend/PnL/add/repost. OldOct19 22BOIBUYpullcomplete; doNOTrepeatcancel/retirement. New[primary](../research/2026-10-17-deep-review/models/boi_oct21_baseline_revision_2122.json)18cut/80hold/2hike,20ppactualreserveunchanged;137NO/607YESselected0,bothappendrevised,canonical137priorupdated/otherspreserved. OldCPI−.4forecastholdviewalreadyconditionedmacro,actual−.5only.1softer; unsupportedordinary-easingmass/conditionaloverlap,notliteralprobabilitystacking. Citioriginalnote/quantifiedFX-oil/wagesunverified. `work/0137_postcancel_final_2122.json`/`0137_baseline_source_audit_2120.json`.
+274OpenAI17.775%YES/20ppreserve,275StreetFighter6.8643%YES/10ppreserve,276Netanyahu44%YES/20ppreserve saved/noentry. 276Dec31ET announcementfork differs from185formal-next-PM oath; currentpoll18vs25Likud/57governingbloc and formationcalendar mapped explicitly. Small reports/models via helper.
 
-**ECB272FINALNOENTRY:** [newmodel](../research/2026-10-17-deep-review/models/ecb272_primary_after_audit_2120.json)85%YES/15%NO/15ppreserve/selectedNO0. Savedinitial70thenappendrevised:oldSMAalreadyheadline3.2Q3/3.3Q4,core2.5/upsideinflationrisks;singlemonth3.8notmatchedquarterlysurprise.6matched2026secondmeetingSMAforecasts6/6modalcorrect/4of4hold-modal/Brier.08439descriptive,notcalibration. Pairedadvisories/catalyst/currentpublic+auth+chaincheckscomplete;initialPOAheadererrorresolved. NoECBclassification/prior/mapping/reservation/orderwriter. `work/0272_resume.json`cleansourcepointers. Brazil266similarpointforecasterroraudit→79%YES/20ppreserve/noentry;4/5median25cutcallsnotprobabilitycalibration.
+**Clock repair underway:** old researchhelper used firstGamma receipt.275age−1.333s actually+.165;2741.877→3.375 at actualbookreceipt19:58:35.376. No valuation-driven action change. Newhelper requires explicitpath and matchedreceipt; root requested row-order/actualfield/rawpayload binding fixes+self-containedtests before adoption. Auditmustcover1745and2000packets; append materialcorrections, neveroverwritebase. Fresh276–296publiccapture21:39:27.743 has13exactGamma/13fees/26books; futurepricesunreadbeforemodels. Preparedfacts278–296 are not adopted forecasts.
 
-Othercompleted262Chalamet18%YES/20ppreserve;264NATO5%YES/10ppreserve;268Applelargest35.073%YES/20ppreserve,allnoentry. [Commonrankmodel](../research/2026-10-17-deep-review/models/marketcap_family_primary_2100.json):154NVDAlargest62.693/196MSFTthird32.941/260Alphabetthird59.049%YES. Exactentity/rank/date/fullcriteriaguard;relatednotindependent.20/87event-excludedcovariance/8%forwardshocksjudgmental,AppleindexedNov2IR/direct403JSshellgapexplicit.
+## Financial safety / completed actions
 
-Quoteplanning`data/deep_review_20261017/quotes_resume_2000.json`19:58,12cases/20books/4omitted; helperQUOTE_PATHmustoverrideold17:42default. Prepared275–288factsselectedhelperonly;noauthoritativeforecast.21casestatusmanifest`work/gamma_status_2025_manifest.json`;261/263/281/284/285closed/nonacceptingfactualexclusions,notpayoutproof.
+**BOI cancellation FINAL; do not replay.** [DEC0219 proof](../research/2026-10-18-boi-cancel.md): original15NO7c/$1.05 canceled21:15:22.705517, after364s terminalCANCELED0matched/fulltrades0/indexnone/bothCTFs0. Only reservation7→6 retired; other6 deep-equal. **Six LIVE BUY11.82; pUSD18.846890/free7.026890** at Polygon95768759/21:21:26. Released commitment, no holding/sale/spend/PnL/add/repost. Read-only state audit passed after explicit closed-prior note. `work/0137_postcancel_final_2122.json`. OldBOI Oct19pull complete.
 
-## Held / boundaries
+BOI137/607 append-revised18cut/80hold/2hike,20ppreserve/selected0. ECB272 initial70→85%YES,15ppreserve/selectedNO0/noentry. Matched source-baseline audit removed unsupported regime mass; old forecasts/financial records preserved. Evidence via case helper and DEC0219. No ECB writer.
 
-Lastfullfinancialmark20:41:11–27:195.83total/5.58gas/190.25tradingmid/187.89indicative tradingdepth;PM36.73/34.37,residual19.54,wholedepth193.47. Roundedsequential,notNAV/proceeds/auditedprofit;VM/APIexcluded. [Source](../research/2026-10-18-2041-readonly-account.md). CSV206/public21:01byte-identicalafter301→merz.page. CancelaloneaddsnoCSVmark. Completeheldsource/riskreviewstill[18UTC](../research/2026-10-18-1800-checkin.md);**next22UTC**.
+Last complete financial mark20:41:11–27: **195.83 gross /5.58 gas /190.25 trading mid /187.89 indicative trading depth**;PM36.73/34.37,residual19.54,whole depth193.47. Sequential rounded marks, not NAV/proceeds/auditedprofit; VM/API excluded. [Source](../research/2026-10-18-2041-readonly-account.md). CSV206; public21:01 byte-identical after redirect→merz.page. Cancel adds no CSV mark.
 
-OpenRouteroriginal5NO65c/$3.25filled17:37:42/maker-chain-index-CTFproof;onlyreservation8→7retiredthen. [Latestresearch](../research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md)12%YES/88%NO/selected73,retain5/noadd;20%plateaumodeexplicit. BroadNO20–99.5/concentrated750Tfavorsale.17:45exit3.15392/5vswealth/carrybreak-even63.56–63.82%NO. Canonicalpriorfilled/newp;old22BUYpullobsolete,22heldreviewremains. PartialOct12chart158.105T/cache16:59/52completed,targetOct26/Nov2/9/16absent.
+## Held / next existing boundary
 
-Otherretain/noadd:HLE9NO25/selected15/upper38;MI5NO44/34/range20–70;Messi5YES60/40/range20–90;Clarity29NO>58+29YES>50conditionalfloor29/middle58;TrumpNO.33<5min. HLE15/MI-Messi20adversefavorsale;noempiricaljointhedgeprobability. FilmDEC0216canceledunfilled14:58/noassets/spend;MessiDEC0213filled14:22:38/oldNov1pullobsolete.
+Full held/source review last[18UTC](../research/2026-10-18-1800-checkin.md); **next22UTC**. Prepared `work/2200_check_plan.json` is plan only: bankroll→full non-TG status→exit/account/fixed-chain/source review; inspect call paths. No full scanner repetition just for resume. Latest account21:21 is not22 source/risk review.
 
-RemainingBUYpulls:SedgwickOct19 10UTC/IdahoOct19 22UTC;fourHouseME02/CA06/MT01/NY01unchanged/sameelectionfactorNV246. Cancelfirstonearlierloadbearinguncertainty. [ExactIDs](resting_orders.md). WeeklyOct23/monthlyNov12notdue.
+OpenRouter original5NO65c filled17:37:42, maker/chain/indexCTF proved; only reservation8→7 retired then. [Latest112](../research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md):88%NO/selected73, retain5/noadd;20%plateau branch, broadNO20–99.5.17:45 exit3.15392/5 vs wealth/carry break-even63.56–63.82%; concentrated750T favors sale. PartialOct12 unfinished158.105T/cache16:59/52completed, targetweeks absent. Old22 BUYpull obsolete;22heldreview remains.
 
-18heldsixGammabindingsunchanged;UMA0alerts(41refresh/43cache≠2failures),hurdle4clear/0flag3protected,watchlistnohit. HLE18:04cacheHIT/Age2799/65rows/OpenAIAccuracy53.6<55/identical16:38;backendunknown/Diamondseparate. Senate234rejectedcloture≠finalpassage,last256Sep30. MichiganOct20Q&A15–18UTCnotnecessarilydebate. MLSMessi2G1A/23G15A,936headlineunverified/notGooglerank. BOIdirectantibot/dategapsretained.
+Other retain/noadd: HLE9NO25/selected15/rangeup38; MI5NO44/34/range20–70; Messi5YES60/40/range20–90; Clarity29NO>58+29YES>50 conditional floor29/middle58; TrumpNO.33<5min. HLE15/MI-Messi20 endpoints favor sale; no empirical joint hedge. Film canceledunfilled14:58; Messi filled14:22:38, no old Nov1BUYpull. Remaining [BUY pulls/IDs](resting_orders.md):SedgwickOct19 10UTC;IdahoOct19 22UTC; fourHouse bids share election factor/NV246. Earlier load-bearing uncertainty cancels FIRST. WeeklyOct23/monthlyNov12 notdue.
 
-Newsroutingfixed/rawRSSTGoff;materialactualheld/authBUYIDs,researchinternal,queued≠reviewed. PID40455since17:19/progress17:21;64focused+169moneyhookcheckspassed. No newfeed/restart/testtick. TG1253lastmaterial;nextverifiedaction/milestoneonly. Inbound62572751EXPIRED/resendTG1244handled,noreplay. Seven16:34scansmapping/cap/unquotedgaps,donotrepeatallmerelyresume. Usage21:00 54%used/46%headroom/resetOct24 20:41;repositorydirectprobe beforeexpensivediscretionarywork.
+18sources: six heldGamma fingerprints unchanged,UMA0alerts/hurdle0flags. HLE18:04 cached65rows/Accuracy53.6<55/Age2799, backendunknown; Diamond distinct. Senate234cloture≠finalClaritypassage,last256Sep30. Other source gaps in18UTCcheck.
+
+News routing fixed: rawRSS TG off; material actualheld/authBUY linkage, research internal, queued≠reviewed. PID40455 since17:19/progress17:21;64focused+169moneyhook checks passed. No restart/testtick/newfeed. TG1255 BOI material update sent21:30; next verified action/milestone only. Inbound62572751EXPIRED/resend1244 handled, no replay. Usage21:34 56%used/44%headroom; repository direct probe before unusually expensive research. Preserve unrelated runtime dirty files; no private inbox/history/search/credential output.
