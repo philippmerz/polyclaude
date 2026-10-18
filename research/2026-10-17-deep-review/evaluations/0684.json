@@ -1,0 +1,148 @@
+{
+  "review_index": 684,
+  "condition_id": "0x4de72138204727d2821bff847d8158819ab5b591db1b5b263676126cbb3a0430",
+  "criteria_sha256": "1d7e7667518088d93b4087dff8683a8ac834ac6c0f7ccc1738d3b7eabf8f9eca",
+  "status": "valued",
+  "literal_analysis": "Fullpartywinner/replacement/Independent/runoff/callselsecertificationread; exactreportedDarlineGrahamnotmemorysubstitution; noLAcalendarrebind.",
+  "evidence": [
+    {
+      "url": "https://www.rasmussenreports.com/public_content/politics/elections/election_2026/election_2026_south_carolina_senate",
+      "observed_utc": "2026-10-18T00:14:12.287809+00:00",
+      "finding": "OriginalOct5–8n837LVGraham49/Andrews45; exactpublicationdate/completeinstrumentunrecovered Reusedevidenceindex, notnewHTTPreceipt; originaldates/hashes inpacket."
+    },
+    {
+      "url": "https://insideradvantage.com/insideradvantage-south-carolina-senate-graham-leads-by-one-point/",
+      "observed_utc": "2026-10-18T00:14:12.287850+00:00",
+      "finding": "OriginalOct2Sep28–29n1200LV46/45 andtwo namedminors5%; notknownsameballotastwo-namepublictopline Reusedevidenceindex, notnewHTTPreceipt; originaldates/hashes inpacket."
+    },
+    {
+      "url": "https://apnews.com/article/darline-graham-annie-andrews-debate-south-carolina-0081ef5fd2c7b5b54141bc52d52509d4",
+      "observed_utc": "2026-10-18T00:14:12.287853+00:00",
+      "finding": "OriginalOct12reportidentifiesnominee/candidate/Whitenerdebate; direct403/browserbody, notofficialfullfield Reusedevidenceindex, notnewHTTPreceipt; originaldates/hashes inpacket."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.13,
+    "low": 0.03,
+    "high": 0.4,
+    "method": "Primary exactSC originalpoll+structural/shared-error model",
+    "reasoning": "RawD13.04round13 beforeprices, wide3–40range/10ppreserve; minorfield,mode,nomineeverificationgapsretained, no calibratedposterior.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0601_0720.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:59.668+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.13,
+        "best_bid": 0.15,
+        "best_ask": 0.16,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 6.68,
+        "received_utc": "2026-10-17T21:00:59.668+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.16,
+            "fee_usd": 0.053759999999999995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.6537600000000001,
+        "fee_usd": 0.05376,
+        "break_even_probability_before_carry": 0.16537600000000002,
+        "break_even_probability_with_idealized_carry": 0.16578558216616307,
+        "central_expected_profit_usd": -0.3537600000000001,
+        "default_10pp_stressed_profit_usd": -1.35376,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.03,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.449
+      },
+      "No": {
+        "probability": 0.87,
+        "best_bid": 0.84,
+        "best_ask": 0.85,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 6.68,
+        "received_utc": "2026-10-17T21:00:59.668+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.85,
+            "fee_usd": 0.051000000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.55101,
+        "fee_usd": 0.05101,
+        "break_even_probability_before_carry": 0.855101,
+        "break_even_probability_with_idealized_carry": 0.8572188050011379,
+        "central_expected_profit_usd": 0.1489899999999995,
+        "default_10pp_stressed_profit_usd": -0.8510099999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.77,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.34624
+      }
+    }
+  },
+  "verdict": "No entry: YESnegativecentral; NOsmallcentralvaluefails10ppreserve. FuturemakerYES<=.02x50 orNO<=.75x10subjectfreshallgates.",
+  "reopen_condition": "Newtransparentoriginalpoll/currentfinalfield/candidatechange orbetterprice andcompletecurrentvenue/account/monitoringproof.",
+  "current_description_sha256": "8194e81ff39d309088624af1535c0929e3024d9c65de1ce0e9ad8037b06d0bc4",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "30718966535311015751929217398361750334834655110246828806892843311659716192347",
+    "33485925353171072312284533208639606685310281710515007938376691890027292332545"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0176",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0194",
+      "receipt_path": "logs/deep_review_20261017/quotes_0601_0720/req_0194.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0601_0720/req_0194.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "source_packets": [
+      "data/deep_review_20261017/senate_sc_la_mechanics_followup.json",
+      "data/deep_review_20261017/senate_next_named_sources_index.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0684_primary_before_quote.json"
+  },
+  "evaluated_utc": "2026-10-18T00:14:12.500939+00:00",
+  "question": "Will the Democrats win the South Carolina Senate race in 2026?",
+  "market_id": "630924",
+  "valuation_author": "primary_operator",
+  "original_index": 684,
+  "report_sha256": "77ef7f30c9cf7be9ab9772e3b0429a147586bf18207e4279676e133f296f865e"
+}

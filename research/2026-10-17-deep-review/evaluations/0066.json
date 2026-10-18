@@ -1,0 +1,157 @@
+{
+  "review_index": 66,
+  "condition_id": "0xa34edb6c898232378a9cc08744842df2cd89d278ba45b012bed3ac10c7241c4d",
+  "criteria_sha256": "1cd13c0ef791fa236b3ca9e7d571089a7dbf2c447c8450b60e3896edc541534e",
+  "status": "valued",
+  "literal_analysis": "Fullindividualrulesread; FranceFootball2026Yamalwinner, no2026declarationbyDec31ET=>Other; FIFAGoldenBall and teamWorldCup distinct.",
+  "evidence": [
+    {
+      "url": "https://ballondor.com/news/posts/check-all-the-criteria-and-full-regulations-to-understand-ballon-dor-2026-trophy",
+      "observed_utc": "2026-10-17T22:38:00+00:00",
+      "finding": "2026periodAug3,2025–Jul19,2026; threeorderedcriteria,100nationaljournalists,30nominees/rank10,15/12/.../1points; no statedballotdeadline."
+    },
+    {
+      "url": "https://ballondor.com/news/posts/mens-ballon-dor-discover-the-ballon-dor-2026-nominees",
+      "observed_utc": "2026-10-17T23:33:00+00:00",
+      "finding": "All30rowsreviewed, notvoterank; Yamal25g20a/teamtitles; undefinedstatcompetitiondenominators."
+    },
+    {
+      "url": "https://www.fifa.com/fr/tournaments/mens/worldcup/canadamexicousa2026/articles/recompenses-coupe-du-monde-2026-rodri-kylian-mbappe-pau-cubarsi-unai-simon",
+      "observed_utc": "2026-10-17T23:47:19.039298+00:00",
+      "finding": "Primaryofficialindexedrendering confirmsRodriGoldenBall, notYamal; MessiSilver/MbappeBronze+Boot,CubarsiYouth. Directpagezero/shellnotarticleproof."
+    },
+    {
+      "url": "https://www.uefa.com/uefachampionsleague/news/02a5-20c1d7bf915e-f9e703cf0108-1000--khvicha-kvaratskhelia-named-2025-26-uefa-champions-league-player-of-the-season/",
+      "observed_utc": "2026-10-17T23:47:19.039337+00:00",
+      "finding": "Primaryreadcurrent2025/26KvaratskheliaPOTS16apps10g6a; previousseasonDembeleawardnotcurrent."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.26,
+    "low": 0.05,
+    "high": 0.6,
+    "method": "Primary explicit three-regime full30nominee judgment plus2% no-timelywinner branch; not calibratedjury/consensusmodel",
+    "reasoning": "All30originalnominees/orderedcriteria/WorldCupindividualhonors/currentUCLawards compared beforeprices. ConditionalY15/20/55weighted40/35/25%, times98%timely gives.26215rounded.26;20ppreserve selected forunfitted/privatevoterisk.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.03,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 10,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.26,
+        "best_bid": 0.274,
+        "best_ask": 0.275,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.533,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.275,
+            "fee_usd": 0.0598125
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.80982,
+        "fee_usd": 0.05982,
+        "break_even_probability_before_carry": 0.280982,
+        "break_even_probability_with_idealized_carry": 0.2812137755443477,
+        "central_expected_profit_usd": -0.20982000000000012,
+        "default_10pp_stressed_profit_usd": -1.2098200000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.16,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.68032
+      },
+      "No": {
+        "probability": 0.74,
+        "best_bid": 0.725,
+        "best_ask": 0.726,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.533,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.726,
+            "fee_usd": 0.0596772
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.31968,
+        "fee_usd": 0.05968,
+        "break_even_probability_before_carry": 0.731968,
+        "break_even_probability_with_idealized_carry": 0.7325717834510576,
+        "central_expected_profit_usd": 0.08032000000000039,
+        "default_10pp_stressed_profit_usd": -0.9196799999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.64,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.19018
+      }
+    }
+  },
+  "verdict": "No entry: YES negativecentral; NOcentral+.08032/10shares fails20ppreserve. MakerresearchonlyYES<=.04 orNO<=.52, with renewedindependentforecast/currentallgates.",
+  "reopen_condition": "Actualverifiedjury/officialwinner/cancellation/candidate information, transparentexpertconsensusorcalibratedforecast, or materialfreshnetpricechange; fullallgatereviewbeforefunds.",
+  "current_description_sha256": "d054d6123c18688a0f685c15d2df96eabc6e3277bf22e2611a3cc01951df967f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "10466835326554416965099784068156829774726248334728156046559014834812912458273",
+    "115364229170068359509280114761107502298430910856477421813089992309112580316620"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0089",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0089.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0089.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.2,
+    "raw_model_probability": 0.26215,
+    "tracked_model": "research/2026-10-17-deep-review/models/ballon_primary_2026.json",
+    "source_packets": [
+      "data/deep_review_20261017/ballon_fullfield_original_facts.json",
+      "data/deep_review_20261017/ballon_decisive_awards_followup.json"
+    ],
+    "private_jury_model_unvalidated": true,
+    "no_bookie_consensus_or_expert_skill_claim": true
+  },
+  "evaluated_utc": "2026-10-17T23:47:19.299014+00:00",
+  "question": "Will Lamine Yamal win the 2026 Ballon d'Or?",
+  "market_id": "608545",
+  "valuation_author": "primary_operator",
+  "original_index": 66,
+  "report_sha256": "c76d5a1c836475560aa1c06086f04c885980a3fd28c01e8d3e93a42a5f9026d7"
+}

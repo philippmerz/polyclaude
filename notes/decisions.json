@@ -1,5 +1,5 @@
 {
-  "next_id": 209,
+  "next_id": 211,
   "decisions": [
     {
       "id": 1,
@@ -4398,9 +4398,10 @@
         "pending-zero-fill"
       ],
       "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "CANCELED UNFILLED. At23:59:27UTC independent auth statusCANCELED, size_matched0 and bothCTFbalances0; no funded investment or realizedP&L. SeeDEC0209 and all_pilots_ipo_cancel_verify_0000.json.",
+      "calibration_delta": "Not gradeable as a filled investment; research probability remains unresolved. Cancellation is operational risk control, not an outcome win.",
+      "lesson": "Pull a resting bid first when fresh material figures create uncertainty; distinguish annual runrate,quarterlyrecognized revenue and headlinepublication/eventdates before re-entry.",
+      "resolved_at": "2026-10-18T00:00:43Z"
     },
     {
       "id": 208,
@@ -4418,6 +4419,46 @@
         "no-order"
       ],
       "slug": "will-a-team-from-lck-south-korea-win-lol-worlds-2026-115",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 209,
+      "timestamp": "2026-10-18T00:00:43Z",
+      "type": "skip",
+      "thesis": "Canceled unfilled case158 Anthropic-largest2026IPO NO5@.62 order 0x22dc43713b55396bed6dfe7983285ca79ca5167c1c8cbb0b377a0081db13a597 after new revenue/cap headlines created uncertainty about a load-bearing valuation input. Vetted cancel returned200 and completeinventoryverified removal. Independent authorderCANCELED,zero matched, bothIPOCTFbalances0 atPolygon95717478. FourHousebidsremainLIVE/zero-filled; no sale/realizedprofit. Numeric24/76prior retained only as dated research, entryreviewblocked pending exact quarterly/runrate and eventdate verification.",
+      "confidence": "high",
+      "prediction": "No newIPOinvestment until current revenue/metric/IPO-cap source checks and primary revaluation complete. Cancel-first safety decision; not a forecast that the underlying NOwillwin and not a closed filled position.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-18",
+      "tags": [
+        "deep-review",
+        "cancel-unfilled",
+        "ipo-safety-cancel-20261017"
+      ],
+      "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 210,
+      "timestamp": "2026-10-18T00:09:31Z",
+      "type": "open_position",
+      "thesis": "Posted exact1870ToddAchillesIdahoSenate YES34@.03, cashcommitment1.02pUSD. Order 0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de. PrimarypYES.20/NO.80, range1\u201380%,15ppreserve; originalATR/Peak25/75sourcejudgment, bothadvisories+officialfinalportalread. LIVEzero-matched, allcandidateCTFbalances0, independentfullinventory5pending10.82/free14.176890 atPolygon95717828. Unfilledcommitment, notpurchase/profit. Source-regimeadversePeak-onlyEV\u2212.458/maximumloss1.02 explicitlyaccepted; no measuredHousehedge. Prior.99attemptdefinitivelyblockedbeforeclaim/sign/post; provenunusedreservationremovedwithallotherrowsunchanged. Helperminimumguardfixed/33testspassed; new1.02legitimatebudget, writerunchanged.",
+      "confidence": "low",
+      "prediction": "Conditionalongenuinefill, namedIndependentPYES=.20 is uncalibrated primaryjudgment. Revieweach existingtick/earliermaterialnews; cancel first on load-bearingpoll/field/ballot/withdrawaluncertainty; pullby00:00UTCOct20aheadforum andbeforeNov3. No returnclaim or gradingunlessfilled.",
+      "size_usd": 1.02,
+      "resolution_at": "2026-11-25",
+      "tags": [
+        "deep-review",
+        "maker",
+        "us-politics",
+        "pending-zero-fill",
+        "source-regime-risk"
+      ],
+      "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

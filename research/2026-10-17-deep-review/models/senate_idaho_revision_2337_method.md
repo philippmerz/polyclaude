@@ -84,3 +84,30 @@ Polling and voting/caucus calendars, source/hidden-information risks, January
 timing and shared election exposure remain relevant. A primary valuation can
 be complete despite subjectivity; a source gap may still block a particular
 entry until the necessary current evidence and execution checks are obtained.
+
+## 23:44 official candidate-list addendum
+
+The [official public portal API follow-up](../../../data/deep_review_20261017/idaho_official_ballot_addendum.json)
+now returns `isFinalList=true`, with Achilles Independent, Risch Republican and
+Loesby Libertarian each Approved for the November3,2026 general Senate election;
+Roth is Withdrawn. These are final portal records, not a separately certified
+county ballot. The exact Natalie Fleming query returns no row; it does not
+enumerate every differently named entrant or write-in. This conflicts with her
+3% test option in Peak and weakens the claim that its broader test is more
+representative of the final field. It does not establish a forged memo or a
+31-point electorate trend. The primary retains20% and25/75 as a conservative
+rounded research judgment based principally on the later likely-voter screen,
+not on the extra tested name. Moving all3 Fleming points to Achilles would
+still leave a22-point deficit in that poll; it cannot by itself reconcile ATR.
+No current money prior or trade follows from this factual clarification alone.
+
+The vetted single-market entry helper requires a nominal deployment of at
+least1USD and floors a fine-tick maker price to cents. A possible executable
+proposal is therefore33shares at3c (0.99 cash risk), rather than the initial
+10-share research illustration. This is a separate primary sizing decision,
+below0.6% of the dated conservative188.56 trading-depth reference. At that size,
+central expected profit is5.61,15-point policy-stress profit0.66, Peak-only
+profit−0.4444 and the1% range endpoint−0.66, before cost/carry. Worst loss is
+0.99, not the full33-share payout. Do not change precision/minimum guards to
+force a smaller order. The new proposal still needs current full execution
+checks and dependable candidate-news monitoring before submission.

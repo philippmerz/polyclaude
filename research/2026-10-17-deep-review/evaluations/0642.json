@@ -1,0 +1,148 @@
+{
+  "review_index": 642,
+  "condition_id": "0xe655180a65e17b6959aa722821312de23513cba6c6d2e3a55f47f198977316bf",
+  "criteria_sha256": "44ec3b06978e83670431dd2acfe1214905e2acc094007264adaa7c280cbd5350",
+  "status": "valued",
+  "literal_analysis": "FullindividualNov3specialpartywinner/runoff/replacement/Independent/callselsecertificationread; notregularseat/governor/control.",
+  "evidence": [
+    {
+      "url": "https://www.mdwcommunications.com/media/florida-statewide-poll-october-2026.html",
+      "observed_utc": "2026-10-18T00:12:51.679201+00:00",
+      "finding": "OriginalMDW/EDGEOct14/Oct4–10n2351LV,Moody47.6/Nixon42.4,sponsor-turnout online context preserved Evaluationindex timestamp; originalreceipt/source dates in linkedpacket, no newfetch."
+    },
+    {
+      "url": "https://www2.stetson.edu/today/2026/10/stetson-poll-donalds-moody-maintain-double-digit-leads/",
+      "observed_utc": "2026-10-18T00:12:51.679370+00:00",
+      "finding": "OriginalStetsonOct13/Oct1–9nonprobmodeledturnout:Moody52/Nixon41,reported4.2notclassicalMOE Evaluationindex timestamp; originalreceipt/source dates in linkedpacket, no newfetch."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-18T00:12:51.679376+00:00",
+      "finding": "Primaryshared-error35seatmodel, correctspecialseatandcurrentNixonidentity; rawR96.108 Evaluationindex timestamp; originalreceipt/source dates in linkedpacket, no newfetch."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.96,
+    "low": 0.85,
+    "high": 0.995,
+    "method": "Primary exactFloridaSpecialoriginaltwo-poll/structural/shared-error model",
+    "reasoning": "CorrectMoody/NixonnotVindman; rawR96.108rounded96 beforeprice,85–99.5range/10ppreserve; source/turnout/finalfieldrisksremain.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0601_0720.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:50.981+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.96,
+        "best_bid": 0.9,
+        "best_ask": 0.91,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.429,
+        "received_utc": "2026-10-17T21:00:50.981+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.91,
+            "fee_usd": 0.03275999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.13276,
+        "fee_usd": 0.03276,
+        "break_even_probability_before_carry": 0.913276,
+        "break_even_probability_with_idealized_carry": 0.9155378854149617,
+        "central_expected_profit_usd": 0.4672400000000003,
+        "default_10pp_stressed_profit_usd": -0.5327599999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.86,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.964
+      },
+      "No": {
+        "probability": 0.040000000000000036,
+        "best_bid": 0.09,
+        "best_ask": 0.1,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 5.429,
+        "received_utc": "2026-10-17T21:00:50.981+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.1,
+            "fee_usd": 0.036000000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.03601,
+        "fee_usd": 0.03601,
+        "break_even_probability_before_carry": 0.10360100000000001,
+        "break_even_probability_with_idealized_carry": 0.1038575857318877,
+        "central_expected_profit_usd": -0.6360099999999997,
+        "default_10pp_stressed_profit_usd": -1.03601,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.8672399999999999
+      }
+    }
+  },
+  "verdict": "RepublicanYES positivecentral but fails10ppreserve; NOnegativecentral. FuturemakerYES<=.84x10onlyafterfreshallgates.",
+  "reopen_condition": "Newindependenttransparentpoll/currentfieldchange orbetterprice withsourceandfullaccount/venue/monitoringproof.",
+  "current_description_sha256": "abee5a06f7ce6d3ce6e0365565f6b7e600c56cf9949a93677416ee50e7ac7159",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "47848555635748009983462962481545341194026880518141560747711492227563791266566",
+    "93154595056268120397334102801062018916555787278126869430194069115332749753248"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0087",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0108",
+      "receipt_path": "logs/deep_review_20261017/quotes_0601_0720/req_0108.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0601_0720/req_0108.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "source_packets": [
+      "data/deep_review_20261017/senate_secondary_battlegrounds_fl_sc.json",
+      "data/deep_review_20261017/senate_specials_independent_correction.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0642_primary_before_quote.json"
+  },
+  "evaluated_utc": "2026-10-18T00:12:51.992787+00:00",
+  "question": "Will the Republicans win the Florida Senate race in 2026?",
+  "market_id": "631045",
+  "valuation_author": "primary_operator",
+  "original_index": 642,
+  "report_sha256": "b00c2e83c6ce645d26a7098c4d0567dd4f900553e16476fcb46928b6cc162bae"
+}

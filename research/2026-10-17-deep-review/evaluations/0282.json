@@ -1,0 +1,150 @@
+{
+  "review_index": 282,
+  "condition_id": "0x968a1a79e001d49fa3ee1429e3b95eb01797587740f86d4e6becf3ab1b275bfb",
+  "criteria_sha256": "ce1d0eaada23a6685d133720c39584e247ce2031fdde481d15959dc878f4ff0c",
+  "status": "valued",
+  "literal_analysis": "FullOhio2026specialpartywinner rulesread; all3AP/Fox/NBCcallselseofficialcertification, independentexcluded, partyreplacementcounts; January2029termnotpayoutdeadline.",
+  "evidence": [
+    {
+      "url": "https://www.bgsu.edu/arts-and-sciences/democracy-and-public-policy-research-network/bgsu-poll.html",
+      "observed_utc": "2026-10-17T23:55:58.552807+00:00",
+      "finding": "Original Sep29–Oct9 university/YouGov1000LV Brown48/Husted42, shareMOE3.95; perceivedwinner48/48 is separate. Datedrelease facts from capturedsourcepacket, notnewpoll today."
+    },
+    {
+      "url": "https://www.ohiosos.gov/elections/elections-administration/directives",
+      "observed_utc": "2026-10-17T23:55:58.552846+00:00",
+      "finding": "Captured qualification/directive source identifiesBrownD/HustedR andOhio special; notnew fullfinalballotsearch."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-17T23:55:58.552849+00:00",
+      "finding": "Primary Ohio exactstate inputs/currentpoll/prior and originalClerkpersonalcontext; rawDwin.7466167 anduncalibratedsensitivitylimits."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.75,
+    "low": 0.45,
+    "high": 0.9,
+    "method": "Primary standalone Ohio special-election state model from original poll and explicit national/personal prior",
+    "reasoning": "BGSU48–42 currentvoteintention, notperceivedwinner tie; sharedmodelraw.7466167 rounded.75 beforebook.10ppreserve, broad45–90range, no fittedcalibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json.gz",
+    "quote_observed_utc": "2026-10-17T20:37:27.150+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.75,
+        "best_bid": 0.65,
+        "best_ask": 0.66,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.316,
+        "received_utc": "2026-10-17T20:37:27.150+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.66,
+            "fee_usd": 0.08975999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.689760000000001,
+        "fee_usd": 0.08976,
+        "break_even_probability_before_carry": 0.668976,
+        "break_even_probability_with_idealized_carry": 0.6706328343604337,
+        "central_expected_profit_usd": 0.8102399999999994,
+        "default_10pp_stressed_profit_usd": -0.1897600000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.65,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.409
+      },
+      "No": {
+        "probability": 0.25,
+        "best_bid": 0.34,
+        "best_ask": 0.35,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.316,
+        "received_utc": "2026-10-17T20:37:27.150+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.35,
+            "fee_usd": 0.09099999999999998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.591,
+        "fee_usd": 0.091,
+        "break_even_probability_before_carry": 0.35910000000000003,
+        "break_even_probability_with_idealized_carry": 0.359989373040037,
+        "central_expected_profit_usd": -1.0910000000000002,
+        "default_10pp_stressed_profit_usd": -2.091,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.15,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.3102400000000003
+      }
+    }
+  },
+  "verdict": "No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.",
+  "reopen_condition": "Neworiginalpoll/nominee/ballot/candidatefacts or lowerfreshfee-netprice; separate source/calendar/correlation/allgate reviewbeforelaterentry.",
+  "current_description_sha256": "bf934fe9a18e4cb3b4d4ff72edb4834614488d0cd9e91253ce32260c850e2577",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "83018072688154066292491996133599479395547801317505487833443670253228061205312",
+    "79825167762459488478206414509755176562349257846652439268369145558426777722770"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0088",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0109",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0109.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0109.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "raw_model_probability": 0.7466166666666667,
+    "shared_model_not_independent_signal": true,
+    "tracked_method": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+    "current_revision": "research/2026-10-17-deep-review/models/senate_idaho_revision_2337_method.md",
+    "source_packets": [
+      "data/deep_review_20261017/senate_current_state_sources.json",
+      "data/deep_review_20261017/election_2024_baseline_addendum.json"
+    ]
+  },
+  "evaluated_utc": "2026-10-17T23:55:58.801455+00:00",
+  "question": "Will the Democrats win the Ohio Senate race in 2026?",
+  "market_id": "631057",
+  "valuation_author": "primary_operator",
+  "original_index": 282,
+  "report_sha256": "6d19a8ac47422584b410bc7990d042d0a47571eb2d2f634c9af227ddb2e7f10c"
+}

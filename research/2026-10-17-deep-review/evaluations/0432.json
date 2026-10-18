@@ -1,0 +1,148 @@
+{
+  "review_index": 432,
+  "condition_id": "0xd50c016598c499fceea10a1a714e48d9b4953487fe215daeaf916068fae722f1",
+  "criteria_sha256": "4c70e0b7ed1ac2562325e3e1b6a08892183f661c1f42ab98127e491ac405b9fd",
+  "status": "valued",
+  "literal_analysis": "Completeindividualrulesread: party nominee/replacement inclusive runoff, IndependentnotD/R, unanimousAP/Fox/NBCelsecertification. Currentprimarynomineesnotfullfinalfield.",
+  "evidence": [
+    {
+      "url": "https://d3nkl3psvxxpe9.cloudfront.net/documents/ttw_ia_20261006_lv.pdf",
+      "observed_utc": "2026-10-18T00:06:13Z",
+      "finding": "Primary read original PDF through browser;2245IowaLV,Oct6–12,±3.1,Turek47/Hinson46 with conditional wording and allocatedundecideds. No raw-byte capture; readtimeapproxindex, browseractualreceipt notsaved."
+    },
+    {
+      "url": "https://maristpoll.marist.edu/polls/2026-midterm-elections-in-iowa-october-2026/",
+      "observed_utc": "2026-10-17T21:34:55.940353+00:00",
+      "finding": "OriginalOct8–11release Turek47/Hinson44,±6.6SenateshareMOE; originalrawgzipreceiptreused, notnewfetch."
+    },
+    {
+      "url": "https://sos.iowa.gov/sites/default/files/2026-07/3.%20Winner%20Report.pdf",
+      "observed_utc": "2026-10-17T23:52:59Z",
+      "finding": "OfficialprimarywinnersTurekD/HinsonR frombrowserextraction, direct403; completeNovgeneralballotunverified. Timestamp is sourcepacketindex, rawreceipt remainsauthority."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.42,
+    "low": 0.15,
+    "high": 0.7,
+    "method": "Primary source-led35contest structural/poll model with datedIowa originaladdition",
+    "reasoning": "Shared national+poll+regional+futureerrors; raw41.592 rounds42, range15–70 and10ppreserve; inputfacts/assumptions distinguished; no venuepriceinput.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0361_0480.json.gz",
+    "quote_observed_utc": "2026-10-17T20:59:58.287+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.42,
+        "best_bid": 0.41,
+        "best_ask": 0.42,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.235,
+        "received_utc": "2026-10-17T20:59:58.287+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.42,
+            "fee_usd": 0.09744000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 4.29745,
+        "fee_usd": 0.09745,
+        "break_even_probability_before_carry": 0.42974500000000004,
+        "break_even_probability_with_idealized_carry": 0.4308093375580359,
+        "central_expected_profit_usd": -0.09745000000000026,
+        "default_10pp_stressed_profit_usd": -1.0974500000000011,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.31999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.00324
+      },
+      "No": {
+        "probability": 0.5800000000000001,
+        "best_bid": 0.58,
+        "best_ask": 0.59,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 3.235,
+        "received_utc": "2026-10-17T20:59:58.287+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.59,
+            "fee_usd": 0.09676000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.99677,
+        "fee_usd": 0.09677,
+        "break_even_probability_before_carry": 0.599677,
+        "break_even_probability_with_idealized_carry": 0.6011622034434148,
+        "central_expected_profit_usd": -0.196769999999999,
+        "default_10pp_stressed_profit_usd": -1.196769999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4800000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 5.70256
+      }
+    }
+  },
+  "verdict": "No entry: both dated asks negative central EV. MakerresearchYES<=.30 orNO<=.46 x10 onlyafterfreshallgates.",
+  "reopen_condition": "Transparentnewpoll, officialfinalballot/currentcandidatechange, materiallybetterprice and fullycurrentexecution/monitoring.",
+  "current_description_sha256": "58f62beb03999f98d3f056b12e6586ee5b82454aec960a937df5c4d4728e0d59",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "90689690530039118737607894922148077480097700217322320781526913496162509181445",
+    "105412116375859456386463067772529895223931027977055063584054608854983174999392"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0146",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0155",
+      "receipt_path": "logs/deep_review_20261017/quotes_0361_0480/req_0155.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0361_0480/req_0155.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/ia_ks_final_field_followup_0010.json",
+      "data/deep_review_20261017/senate_current_state_sources.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "case_specific_reserve_for_entry": 0.1,
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0432_primary_before_quote.json"
+  },
+  "evaluated_utc": "2026-10-18T00:07:27.058184+00:00",
+  "question": "Will the Democrats win the Iowa Senate race in 2026?",
+  "market_id": "630733",
+  "valuation_author": "primary_operator",
+  "original_index": 432,
+  "report_sha256": "5a1bdc50dba01165dc3c6518addcce298351f4f1ce3fb57496335a45075fdf47"
+}

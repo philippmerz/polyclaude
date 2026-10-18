@@ -64,7 +64,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 63,0xe0b0ce172e37768c6559fbaa3191f7641f8ecfef2247b00276a00aab495463ca,4425470,Will Conor McGregor rank in Google’s Top 5 Most Searched Athletes of 2026?,pending,,,,
 64,0xfed2dd1e83691ca08b8bc08d2bed09cb19003730f2be47da6a467ee37df96fbb,2771185,Mojtaba Khamenei seen in public by December 31?,pending,,,,
 65,0x1a02615c097c6878f1ccd60918183fab160db6cf35ed8bfe69ce7c2eaf89f72f,5713618,"Will ""Animals"" be the #2 US Netflix movie this week?",valued,2026-10-17T19:21:39.858821+00:00,0.025,Both asks negative central EV; no entry,evaluations/0065.md
-66,0xa34edb6c898232378a9cc08744842df2cd89d278ba45b012bed3ac10c7241c4d,608545,Will Lamine Yamal win the 2026 Ballon d'Or?,pending,,,,
+66,0xa34edb6c898232378a9cc08744842df2cd89d278ba45b012bed3ac10c7241c4d,608545,Will Lamine Yamal win the 2026 Ballon d'Or?,valued,2026-10-17T23:47:19.299014+00:00,0.26,"No entry: YES negativecentral; NOcentral+.08032/10shares fails20ppreserve. MakerresearchonlyYES<=.04 orNO<=.52, with renewedindependentforecast/currentallgates.",evaluations/0066.md
 67,0x16248fb1d6b56e9b851f45fadb1e501c0a82c51a60c9808c6f51f052d3684820,5476380,US imports Russian diesel by October 31?,valued,2026-10-17T22:14:06.215279+00:00,0.14,"YES centralvaluepositive but failsordinary10ppreserve; NOcentralnegative. Future<=3cmaker/evidencewatchonly, noentry.",evaluations/0067.md
 68,0xfaa433e162e020c56c522acb2f9f7215ce6e4e4391c4fb42beba14275c0a43fe,788518,New pandemic in 2026?,valued,2026-10-17T22:18:13.789776+00:00,0.03,"Bothsidesvalued; YEScentralnegative, NOtinycentralgrossfailscarry/opsandordinary10ppreserve; noentry.",evaluations/0068.md
 69,0x1f5f165979a6a16362e3367dcfe46670dd9799013ea4d68f7218348ae44af1b0,5349365,Mississippi State vs. LSU,excluded_factual,2026-10-17T20:37:08.797846+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0069.md
@@ -80,7 +80,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 79,0x2173d9ae4c753eec50f8abe86d3eb88579285c14c2dc4a3baa71430411fcc868,5713578,"Will ""Ice Age: Collision Course"" be the #2 global Netflix movie this week?",valued,2026-10-17T19:21:41.024999+00:00,0.115,"YES central value, proxy/model error consumes robust edge; no entry",evaluations/0079.md
 80,0x5f5e121333f1a684aeeee44941b753473795e334342eecaff975879ea58e5ec9,5611882,Will oil be at least $85 on November 2 and the Democrats win the Senate?,pending,,,,
 81,0x7fd71c48a98bb515664cadb1f62cf1f27b770fe9cc1216571e183b982a48e42a,943542,Will the Democratic Party win the NC-11 House seat?,valued,2026-10-17T19:38:13.764265+00:00,0.7,SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding,evaluations/0081.md
-82,0xd2986625b0fb44c14b67cd32257ca63d386a70443697eb9bb3e4f71e11e79cc2,5777948,Will Vinícius Júnior attend the 2026 Ballon d'Or ceremony?,pending,,,,
+82,0xd2986625b0fb44c14b67cd32257ca63d386a70443697eb9bb3e4f71e11e79cc2,5777948,Will Vinícius Júnior attend the 2026 Ballon d'Or ceremony?,blocked_after_review,2026-10-17T23:50:20.687079+00:00,,"Blockedafterreview, notvalued/excluded. NoRSVP/delegation/availabilitybase; bothsidespricedconditionally, combinedaskslose; illustrativeYESedgeisnotfunded.",evaluations/0082.md
 83,0xf093b6791f0e55f8c6a73c70c4f25ab1aae8b820c2079ba2b3714177866afdf9,5349259,Florida Atlantic vs. Army,excluded_factual,2026-10-17T20:37:09.113557+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0083.md
 84,0x467ef775ebe832ade5a37b54bfa571a2d2a4eae879cf8e91afebc3b3417d63b2,5730331,NVIDIA (NVDA) Q3 adjusted gross margin 73% to 75%?,valued,2026-10-17T21:15:22.460263+00:00,0.73,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0084.md
 85,0xab672afc72b856677255efc0f7ddefd8308269b9b4633a9ff8f3a177e4f21bcc,5720862,Will the highest temperature in Beijing be 15°C on October 17?,excluded_factual,2026-10-17T18:44:03.225519+00:00,,Factual exclusion: exact venue market closed to new orders; not an investment rejection.,evaluations/0085.md
@@ -280,7 +280,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 279,0xe572b77607dec5a56e240983b7384a4945b34e4594f628b9f928ed7be7c79475,5267438,Spread: Paris Saint-Germain FC (-1.5),excluded_factual,2026-10-17T20:37:15.288379+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0279.md
 280,0x55a5a4b50b7947482e95af8f638fa0b8d9a46740c5cd04c6799443e83565176a,676741,Will Apple be the largest company in the world by market cap on December 31?,pending,,,,
 281,0x79349ad97dd549e68b2b8f7ecacc60c9e3c118cd13311776adb37eacfe490687,5720940,Will the highest temperature in Amsterdam be 14°C on October 17?,pending,,,,
-282,0x968a1a79e001d49fa3ee1429e3b95eb01797587740f86d4e6becf3ab1b275bfb,631057,Will the Democrats win the Ohio Senate race in 2026?,pending,,,,
+282,0x968a1a79e001d49fa3ee1429e3b95eb01797587740f86d4e6becf3ab1b275bfb,631057,Will the Democrats win the Ohio Senate race in 2026?,valued,2026-10-17T23:55:58.801455+00:00,0.75,No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.,evaluations/0282.md
 283,0xe2bd695096385d8878a0e7b5e144b94c7a2320a027b0dfd551d4d5a7fc8bc267,942894,Will the Democratic Party win the NV-03 House seat?,valued,2026-10-17T21:09:28.887144+00:00,0.92,Both sides valued; captured asks do not clear ordinary uncertainty reserve,evaluations/0283.md
 284,0x54b726cd75da95b89ff361db35cdb4421b054fa27a730c544a1e63877ae2a363,5727075,"Will it rain in Seattle, WA on October 16?",pending,,,,
 285,0x283e63ad0d90d293be88ccea89bca34fe26c5a9563de7fe2e2e26d6481acbc0b,4761407,Senators vs. Flyers,pending,,,,
@@ -346,7 +346,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 345,0xea2d50c908379c24ef3cb35ecdccd36ba93365f8b599c2e6df242c70d176c4b8,5286639,Will New York Red Bulls win on 2026-10-17?,pending,,,,
 346,0xc36f13fb975afe21daa6b863e055b80a0322186fd8af361e4c1a315c92c48d35,2363843,Will Pope Leo XIV be TIME Person of the Year 2026?,pending,,,,
 347,0x8b0989561ef71c300d58ca7d9276d9ba5efc3dffb85c25192b633485421b3b99,5742127,Solana Up or Down on October 17?,excluded_factual,2026-10-17T20:37:18.948959+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0347.md
-348,0x5554740293afa7aafd5fed10fd2de43a898e2884c1f98bd65185e703f371b9db,634893,Will an independent win the Nebraska Senate race in 2026?,pending,,,,
+348,0x5554740293afa7aafd5fed10fd2de43a898e2884c1f98bd65185e703f371b9db,634893,Will an independent win the Nebraska Senate race in 2026?,valued,2026-10-17T23:57:39.749515+00:00,0.25,No entry: YESnegativecentral; NOsmallcentral+.21936/10sharesfails10ppreserve. MakerwatchYES<=.13 orNO<=.63/<=10shares withfreshsources/allgates.,evaluations/0348.md
 349,0x2e8f33b84686fac2bb77eb7d1276f2d844f8d9952150a9581a75cf05161aeaf4,4470027,Will the Central Bank of Colombia make no change to the monetary policy interest rate at the October meeting?,pending,,,,
 350,0xdb0bd84336d779d0d738612dcd43331ba39380d9bf00af79665e22c702a181d8,5778679,Will Amazon (AMZN) beat quarterly earnings?,pending,,,,
 351,0xc413350d967ef79d0585c40fa65693a7c5206dd93ba42b5cae31f23a54162bf0,5350150,Spread: Pittsburgh (-6.5),pending,,,,
@@ -430,7 +430,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 429,0x889e5ee38c76c755643f981b761ce71b70ec79e54160da2a46c9e38aa08bd25e,5263922,Will SV Werder Bremen vs. SC Paderborn 07 end in a draw?,excluded_factual,2026-10-17T20:37:22.230140+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0429.md
 430,0x1889c867f870b77d3beb6c768dc165c47771094956f286f8891e70b8d2768413,4662691,Will Frank Ocean be featured on GTA VI: The Album?,pending,,,,
 431,0xdb018a01cb1f57281c656ffcfdb0e99215410836f82868cb09d4eb25a1504b2c,4188133,Pete Hegseth out as Secretary of Defense by October 31?,pending,,,,
-432,0xd50c016598c499fceea10a1a714e48d9b4953487fe215daeaf916068fae722f1,630733,Will the Democrats win the Iowa Senate race in 2026?,pending,,,,
+432,0xd50c016598c499fceea10a1a714e48d9b4953487fe215daeaf916068fae722f1,630733,Will the Democrats win the Iowa Senate race in 2026?,valued,2026-10-18T00:07:27.058184+00:00,0.42,No entry: both dated asks negative central EV. MakerresearchYES<=.30 orNO<=.46 x10 onlyafterfreshallgates.,evaluations/0432.md
 433,0x79361c2379eda2645213973ee61ab00b51ef78eaa142ebc0363e24d8e0666acd,3388092,Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?,pending,,,,
 434,0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117,5154842,Will there be between 35 and 59 tornadoes in the US in October 2026?,pending,,,,
 435,0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0,5351685,Northern Illinois vs. Wyoming: O/U 41.5,pending,,,,
@@ -442,7 +442,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 441,0x4aac02964a330d36b7685fb08613c98f6b65af6772cc022d04504b91261fac02,5481968,Spread: Golden State Valkyries (-2.5),pending,,,,
 442,0x0633afa0896db4747af4cb1d6370f7439343432348d529773b8dc9217b7517c4,5763816,Will OpenRouter process at least 775T tokens from Oct 26 to Nov 22?,pending,,,,
 443,0xdaf0dab5fe0237adb57e8c4a6597ed6d80c6251211eb844405c10d04307c7341,5720679,Will the highest temperature in Paris be 16°C on October 17?,pending,,,,
-444,0x54e4e816cc5868e2f933c6bbc597e3313bdad382be3ecf7eaa4d8fa5c3f1a1bd,630693,Will the Republicans win the Georgia Senate race in 2026?,pending,,,,
+444,0x54e4e816cc5868e2f933c6bbc597e3313bdad382be3ecf7eaa4d8fa5c3f1a1bd,630693,Will the Republicans win the Georgia Senate race in 2026?,valued,2026-10-18T00:10:42.364301+00:00,0.11,"YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.",evaluations/0444.md
 445,0x9508269931569b2958d92a4450513e8d056ac855b964847e7528f43853d83ee7,2953634,Will China GDP growth in Q3 2026 be between 4.3% and 4.6%?,pending,,,,
 446,0x21846a156b073b0a3abc55e677cb730b8b872f5d7ee3fbadf9b78ebef0552d12,3940925,Will the Bank of Korea hold at the October 2026 meeting?,pending,,,,
 447,0x35e0cce3dcc5c0fd84e75d429850d356f8b9ab4c42a18e72577ac50d533aa97e,5349886,Spread: Bowling Green (-6.5),excluded_factual,2026-10-17T20:37:22.543067+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0447.md
@@ -496,7 +496,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 495,0xeee07559885cad65cdef04c98036dc2944fd90e98ea471ea6dfca8797283d698,5343891,Wisconsin vs. UCLA,pending,,,,
 496,0xefc427531b0d2084dd5a685b373979f16475109209c3ba38cb4b4ba687267f1f,5730333,NVIDIA (NVDA) Q3 adjusted gross margin 77%+?,valued,2026-10-17T21:15:23.517743+00:00,0.01,Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve,evaluations/0496.md
 497,0x17bd8f0102d1f84e1fcf376e5026a2578c78d0454b5319e324e4ec4339444da2,5794314,"Will Ethereum reach $2,500 on October 17?",pending,,,,
-498,0xd59f25520a8c0ea44a9c9741a97c8c3d769e21f1479b9a14e1a9d475e91f522a,630884,Will the Republicans win the North Carolina Senate race in 2026?,pending,,,,
+498,0xd59f25520a8c0ea44a9c9741a97c8c3d769e21f1479b9a14e1a9d475e91f522a,630884,Will the Republicans win the North Carolina Senate race in 2026?,valued,2026-10-18T00:11:57.546145+00:00,0.12,YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.,evaluations/0498.md
 499,0x29d75600ba2e46ce9dd262e813ee710a64c83c2e0c4edfa025019d00a46ae05b,5180509,Will the US confirm that aliens exist by October 31?,pending,,,,
 500,0x8dd87b12575f6d1ff9084aff987f94365c696f9b922bfaf889068c4e2ea5cca3,5620530,Will Jack Doherty post again on X by October 31?,pending,,,,
 501,0x902e9f2e34cebb81810ae959e204c640be81b6ec23c1ca3a7ecc19728e9053e8,4367453,Spread: Ravens (-3.5),pending,,,,
@@ -640,7 +640,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 639,0xdf167ba62c0eb2ba0a52dc801ee0e617f8924b0dc9ca1811ae7b90a006684e7b,5785485,Exact Score: Any Other Score?,pending,,,,
 640,0x8c22beccaf5dd8d898570039f70d332bc993d8cb1edcb19dd24647a010fec557,2363833,Will Reid Wiseman be TIME Person of the Year 2026?,pending,,,,
 641,0x85647246dede70416c9c71ea851d87facf4b5efe58c685f4acc5ea94a9487c10,2252540,Tesla and SpaceX merger officially announced by December 31?,pending,,,,
-642,0xe655180a65e17b6959aa722821312de23513cba6c6d2e3a55f47f198977316bf,631045,Will the Republicans win the Florida Senate race in 2026?,pending,,,,
+642,0xe655180a65e17b6959aa722821312de23513cba6c6d2e3a55f47f198977316bf,631045,Will the Republicans win the Florida Senate race in 2026?,valued,2026-10-18T00:12:51.992787+00:00,0.96,RepublicanYES positivecentral but fails10ppreserve; NOnegativecentral. FuturemakerYES<=.84x10onlyafterfreshallgates.,evaluations/0642.md
 643,0x6ea68ca7c29391d5aab46db8247a8709e10a79b0951242c9863fe41f6b9455cd,4386087,Will two people dissent the October Fed decision?,pending,,,,
 644,0x33e4ca5c0a91d6a6120d716435fd301b7e32310e19857ca680b199722c675f67,3866009,"Will Hyperliquid dip to $60 by December 31, 2026?",pending,,,,
 645,0xd2bd37d31e7e35f5601e4a36095aa25559db4451b56d829faa36eba3055ce062,5239732,Will Amed Sportif win on 2026-10-17?,excluded_factual,2026-10-17T20:37:28.918268+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0645.md
@@ -682,7 +682,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 681,0x3ada0e2e01e26aebd9d482a499691a2fa26b04583f804ec2da362e6b1b7fdb69,5354936,Louisiana Tech vs. Louisiana-Monroe: O/U 55.5,pending,,,,
 682,0x33f4b3a76fc6adb0f0f705808bfa133bd48ca1b79b9a7f952182555206351913,2363834,Will Shehbaz Sharif be TIME Person of the Year 2026?,pending,,,,
 683,0x0aeafd983d87efa8403ca903513950b4b1906f442219c28e5486b66b87545a69,5332539,Will Together win the third-most seats in the 2026 Israeli legislative election?,pending,,,,
-684,0x4de72138204727d2821bff847d8158819ab5b591db1b5b263676126cbb3a0430,630924,Will the Democrats win the South Carolina Senate race in 2026?,pending,,,,
+684,0x4de72138204727d2821bff847d8158819ab5b591db1b5b263676126cbb3a0430,630924,Will the Democrats win the South Carolina Senate race in 2026?,valued,2026-10-18T00:14:12.500939+00:00,0.13,No entry: YESnegativecentral; NOsmallcentralvaluefails10ppreserve. FuturemakerYES<=.02x50 orNO<=.75x10subjectfreshallgates.,evaluations/0684.md
 685,0x696f452c786fbb6017c29be17d0d91cdf504983acdc5e8a501e2736a155bba18,4178757,Will the 5-year Treasury yield dip below 4.45% before 2027?,pending,,,,
 686,0x78aa25c8d6dc6115152cf788b4414622e7b47175677dbaabe25141a2efcd878f,4188124,Zack Polanski out as Green Party Leader by October 31?,pending,,,,
 687,0x9cd051a8c7c840eb7cca6d6898c90ecc41cdceb51a275a2c8656b14c9edb674b,5354180,Spread: Oklahoma (-6.5),pending,,,,
@@ -784,7 +784,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 783,0x3d58c0167d813f991812e95f5eb9d223deea4f8d714cfbbafdf8cfd1499f6652,5790765,"European Open, Qualification: Nishesh Basavareddy vs Edas Butvilas",excluded_factual,2026-10-17T20:37:34.143780+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0783.md
 784,0xdac4cf74e0c55c2f400c1f248e62f4e4cdce9aa899c5ebd9bf23c21c6a70ab4e,4662687,Will Playboi Carti be featured on GTA VI: The Album?,pending,,,,
 785,0x2b8712801deae96e18cd7e09099b1d9ccea4f89c9d3c02d123ed483c0e7d3814,5729395,Will the highest temperature in Mexico City be 14°C on October 17?,pending,,,,
-786,0x44b642636473fb07f0c2319a1d25729a36134969076ffdbb8979cbfdda612b14,630818,Will the Democrats win the Minnesota Senate race in 2026?,pending,,,,
+786,0x44b642636473fb07f0c2319a1d25729a36134969076ffdbb8979cbfdda612b14,630818,Will the Democrats win the Minnesota Senate race in 2026?,valued,2026-10-18T00:15:20.312131+00:00,0.8,No entry: YESnegativecentral; NOpositivecentralfails10ppreserve. FuturemakerYES<=.68x10 orNO<=.08x15subjectfreshallgates.,evaluations/0786.md
 787,0x22e57dd34faf1c8b1fb91197955e95ccc4e18b6b19e79efabfbf39288c0c8c99,3566403,Will UK GDP growth in Q3 2026 be negative?,pending,,,,
 788,0x21676c8216804518838fd71e05dbc3f8ea90d5e3f7095bbedbcb71acdf4504a1,5787991,"Will ""You Can See Everything"" score at least 99 on the Rotten Tomatoes Tomatometer?",pending,,,,
 789,0x1ea9c61656d0b93c6a2b91bfe7abad1f6d8c19588074a98462cc7a94f7c996ed,5350649,Bryant vs. Maine,pending,,,,
@@ -1048,7 +1048,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1047,0xbd35657f5ce1d3b9b2dbea70d09abbee67e7efa6508d1830da43b2e912dfbec7,5475109,Will 25-29 ships transit the Strait of Hormuz between October 12-October 18?,pending,,,,
 1048,0xac1f4c6b43fe9c2f3489ab3d48bcb1cd06976c86b0b8a6d6207c1117df50dcee,5794584,Exact Score: Any Other Score?,pending,,,,
 1049,0xeeb16f1a9b0136c6b1ad5eee41c1b2a0042a2c446dbb208010ef3fad37ee57f8,5774569,Will the highest temperature in Buenos Aires be 17°C on October 18?,pending,,,,
-1050,0x460d3942d385cdeda20519c0c5ad804ae48dc18efc9a82e1f1be87a29e69adb3,630746,Will the Democrats win the Kansas Senate race in 2026?,pending,,,,
+1050,0x460d3942d385cdeda20519c0c5ad804ae48dc18efc9a82e1f1be87a29e69adb3,630746,Will the Democrats win the Kansas Senate race in 2026?,valued,2026-10-18T00:16:41.690658+00:00,0.33,YES negativecentral; NOpositivecentralfails10ppreserve. FuturemakerYES<=.21x10 orNO<=.55x10subjectfreshallgates.,evaluations/1050.md
 1051,0x9cf563d7b55aa9aa876d5d7e55126347eee473f0ae56d799e325fdef2bf25297,2589811,Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?,pending,,,,
 1052,0x99a6c97f1d0dc3865ac4644986edad64a2226fe089f34df17c8544a7e8bcc031,5730954,Will Micron Q1 DRAM revenue be above $48B?,pending,,,,
 1053,0xd420b362b6cf16c0f1fd26b081012f79faeb1bc3b6677aa5422b201dc12e138e,5627715,Spread: Utah (-15.5),pending,,,,

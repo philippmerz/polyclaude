@@ -69,6 +69,25 @@ def test_maker_preflight_preserves_passive_price_without_taker_ceiling() -> None
         entry._single_buy_preflight(0.192, 0.001, 0.20, maker=True)
 
 
+@pytest.mark.parametrize(
+    ("budget", "price", "expected_shares", "expected_cash", "should_pass"),
+    [
+        (1.00, 0.03, 33, 0.99, False),
+        (1.02, 0.03, 34, 1.02, True),
+        (1.00, 0.50, 2, 1.00, True),
+    ],
+)
+def test_signed_buy_cash_floor_uses_final_integer_share_amount(
+        budget: float, price: float, expected_shares: int,
+        expected_cash: float, should_pass: bool) -> None:
+    shares = round(budget / price)
+    signed_cash = round(shares * price, 2)
+
+    assert shares == expected_shares
+    assert signed_cash == pytest.approx(expected_cash)
+    assert (entry._signed_buy_cash_error(signed_cash) is None) is should_pass
+
+
 def test_cli_help_explains_signed_live_max_price() -> None:
     result = subprocess.run(
         [sys.executable, str(REPO_ROOT / "scripts" / "polyclaude_enter.py"), "--help"],
@@ -287,6 +306,72 @@ def test_execute_rechecks_live_ask_and_never_submits_above_cap(
     assert "hard price cap at execution" in output
     assert "0.3100 exceeds --max-price 0.3000" in output
     assert submitted == []
+
+
+def test_subminimum_signed_cash_skips_before_reservation_and_writer(
+        monkeypatch, capsys, tmp_path: Path) -> None:
+    notes = tmp_path / "notes"
+    notes.mkdir()
+    (notes / "portfolio_kelly_priors.json").write_text(json.dumps({
+        "cash-floor-test": {"cluster": "explicit-independent-cash-floor-test"},
+    }))
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    market = {
+        "question": "Will the cash-floor test resolve YES?",
+        "slug": "cash-floor-test",
+        "id": "1",
+        "umaResolutionStatus": None,
+        "endDate": "2026-12-31T00:00:00Z",
+        "outcomePrices": json.dumps([0.03, 0.97]),
+        "outcomes": json.dumps(["Yes", "No"]),
+        "clobTokenIds": json.dumps(["yes-token", "no-token"]),
+        "orderPriceMinTickSize": 0.01,
+        "takerBaseFee": None,
+        "negRisk": False,
+        "conditionId": "0xcashfloortest",
+        "events": [{"id": "event-cash-floor-test"}],
+    }
+    monkeypatch.setattr(entry, "fetch_market_by_slug_or_question", lambda _q: market)
+    monkeypatch.setattr(entry, "_existing_exposure", lambda *_args: None)
+    monkeypatch.setattr(entry, "_fetch_live_positions", lambda: [])
+    monkeypatch.setattr(entry, "_fetch_open_buy_commitments", lambda: [])
+    monkeypatch.setattr(entry, "_sibling_markets", lambda *_args: None)
+    monkeypatch.setattr(entry, "_single_entry_cap_state", lambda *_args: {
+        "ticket_after": 1.0, "ticket_cap": 15.0,
+        "cluster": "explicit-independent-cash-floor-test",
+        "cluster_after": 1.0, "cluster_cap": 30.0,
+    })
+    asks = iter([0.03, 0.03])
+    monkeypatch.setattr(entry, "_best_ask", lambda _token: next(asks))
+    monkeypatch.setattr(
+        entry.httpx,
+        "get",
+        lambda *_args, **_kwargs: (_ for _ in ()).throw(RuntimeError("no book")),
+    )
+    monkeypatch.setattr(entry, "_acquire_entry_lock", lambda: object())
+    submitted = []
+    monkeypatch.setattr(
+        entry.subprocess,
+        "run",
+        lambda *args, **kwargs: submitted.append((args, kwargs)),
+    )
+    monkeypatch.setattr(
+        sys,
+        "argv",
+        [
+            "polyclaude_enter.py", "--slug", "cash-floor-test", "--side", "YES",
+            "--my-p", "0.80", "--edge-haircut", "0.10", "--usd", "1",
+            "--bankroll", "100", "--execute",
+            "--taker-urgency", "cash-floor guard regression",
+        ],
+    )
+
+    assert entry.main() == 0
+    output = capsys.readouterr().out
+    assert "signed BUY cash amount $0.99 is below the $1 minimum" in output
+    assert "no reservation or order sent" in output
+    assert submitted == []
+    assert not (tmp_path / ".entry_reservations.json").exists()
 
 
 def test_execute_taker_without_price_cap_fails_closed_if_final_ask_unavailable(

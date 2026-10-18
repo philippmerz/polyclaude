@@ -9,10 +9,10 @@
     "method": "gzip.compress"
   },
   "path_resolution": "The original .json path maps to archive_path. Immutable reports may retain original_path; this manifest records the archival mapping.",
-  "entry_count": 12,
-  "original_total_bytes": 15281192,
-  "archive_total_bytes": 2453936,
-  "bytes_reclaimed_after_original_removal": 12827256,
+  "entry_count": 16,
+  "original_total_bytes": 21555001,
+  "archive_total_bytes": 3278896,
+  "bytes_reclaimed_after_original_removal": 18276105,
   "hash_algorithm": "SHA-256 over exact original bytes and exact gzip archive bytes",
   "entries": [
     {
@@ -158,6 +158,55 @@
       "original_index_end": 2040,
       "legacy_reference_preserved": "data/deep_review_20261017/quotes_1921_2040.json",
       "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1081_1200.json",
+      "archive_path": "data/deep_review_20261017/quotes_1081_1200.json.gz",
+      "original_bytes": 1595625,
+      "original_sha256": "fe3759c30f15069d98a843c328760950ca5e0f0ce0c5ecd7ad5d3324e4a847f5",
+      "archive_bytes": 216559,
+      "archive_sha256": "71375dcd0038e59eaf66636df62182e2304916a0699d2ed49fcaefe3a819a4b6",
+      "original_index_start": 1081,
+      "original_index_end": 1200,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1081_1200.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1321_1440.json",
+      "archive_path": "data/deep_review_20261017/quotes_1321_1440.json.gz",
+      "original_bytes": 1532929,
+      "original_sha256": "d0deab32bf230d52d00d703e12de52804eaa023a767ee1f50cb77d4a28502483",
+      "archive_bytes": 207616,
+      "archive_sha256": "10ee729c2e830477f7ff66aa2ed18a16f5361baa33b0aeab1ea550f1dbef1605",
+      "original_index_start": 1321,
+      "original_index_end": 1440,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1321_1440.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1441_1560.json",
+      "archive_path": "data/deep_review_20261017/quotes_1441_1560.json.gz",
+      "original_bytes": 1526744,
+      "original_sha256": "d531bd329a0fde6487008fd0d85a4c44a0c86520a064d8973515f29ff8618cae",
+      "archive_bytes": 207468,
+      "archive_sha256": "a9440052ba03cebf12160c898a4d4a8412e9f0b6a415432b1bc5092245f79b42",
+      "original_index_start": 1441,
+      "original_index_end": 1560,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1441_1560.json",
+      "round_trip_verified_before_write": true
+    },
+    {
+      "original_path": "data/deep_review_20261017/quotes_1801_1920.json",
+      "archive_path": "data/deep_review_20261017/quotes_1801_1920.json.gz",
+      "original_bytes": 1618511,
+      "original_sha256": "7674d3e7fa7facd5019a60a7196602fb2742230a583833460baac2e5192c4120",
+      "archive_bytes": 193317,
+      "archive_sha256": "9cec820e970f29aea43811ef90f7367ac42fe52b5d1c84c609bdf488f765863a",
+      "original_index_start": 1801,
+      "original_index_end": 1920,
+      "legacy_reference_preserved": "data/deep_review_20261017/quotes_1801_1920.json",
+      "round_trip_verified_before_write": true
     }
-  ]
+  ],
+  "last_extended_utc": "2026-10-18T00:12:41.892642+00:00"
 }

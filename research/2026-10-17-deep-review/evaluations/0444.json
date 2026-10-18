@@ -1,0 +1,149 @@
+{
+  "review_index": 444,
+  "condition_id": "0x54e4e816cc5868e2f933c6bbc597e3313bdad382be3ecf7eaa4d8fa5c3f1a1bd",
+  "criteria_sha256": "9c1bcdea1385fbffa1046397e1e19c3f185e17d3395e90c1e3a892fadcba4bcc",
+  "status": "valued",
+  "literal_analysis": "Completeparty/replacement/Independent/runoff/callselsecertification rulesread; RepublicanwinnernotHouse/control/firstplurality; finalfieldgapretained.",
+  "evidence": [
+    {
+      "url": "https://www.thetrafalgargroup.org/wp-content/uploads/2026/10/GA-General-Report-1010.pdf",
+      "observed_utc": "2026-10-18T00:10:42.087168+00:00",
+      "finding": "ReusedoriginalfieldOct7–9n1101LV/51Ossoff43Collins,±2.9shareMOE/5.5response. This timestamp is evaluationindex, not originalHTTPtime; exactreceipts/fullpagetext preserved in senate_four_state_followup."
+    },
+    {
+      "url": "https://apnews.com/article/a24587d1fcdba58dfd036aa83f0a4d12",
+      "observed_utc": "2026-10-18T00:10:42.087207+00:00",
+      "finding": "DatedJune16 originalAPnominationreportreused; not completefinalofficialballot/currentwithdrawalcertificate."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-18T00:10:42.087210+00:00",
+      "finding": "Primarysource-ledstructural/pollformulaforGA, rawR11.405; separateIowarevisionchangesonlyIowa. No calibratedrunofftransitionmodel."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11,
+    "low": 0.03,
+    "high": 0.35,
+    "method": "Primary originalGA poll+structural/sharederror model, eventualpartywinner approximated includingrunoff",
+    "reasoning": "Trafalgar51/43 andwidepoll/turnout/sourceuncertainty; rawR11.405rounded11 beforeprice,3–35range/10ppreserve. YESpositivecentralretainedaswatch, noordinary-reserveentry.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0361_0480.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:02.289+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.11,
+        "best_bid": 0.04,
+        "best_ask": 0.042,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.148,
+        "received_utc": "2026-10-17T21:00:02.289+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.042,
+            "fee_usd": 0.016094400000000002
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.43610000000000004,
+        "fee_usd": 0.0161,
+        "break_even_probability_before_carry": 0.04361,
+        "break_even_probability_with_idealized_carry": 0.043826282861798085,
+        "central_expected_profit_usd": 0.6639,
+        "default_10pp_stressed_profit_usd": -0.33610000000000007,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.009999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.38464000000000004
+      },
+      "No": {
+        "probability": 0.89,
+        "best_bid": 0.958,
+        "best_ask": 0.96,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.148,
+        "received_utc": "2026-10-17T21:00:02.289+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.96,
+            "fee_usd": 0.015360000000000013
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.61537,
+        "fee_usd": 0.01537,
+        "break_even_probability_before_carry": 0.9615370000000001,
+        "break_even_probability_with_idealized_carry": 0.9663057221757565,
+        "central_expected_profit_usd": -0.7153700000000001,
+        "default_10pp_stressed_profit_usd": -1.71537,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.79,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.5639
+      }
+    }
+  },
+  "verdict": "YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.",
+  "reopen_condition": "Additionaltransparentindependentpoll/currentfinalfield thatsharpensforecast, materialcandidateturnoutnews, betterprice with allgates.",
+  "current_description_sha256": "d9337001920aae6055a1a6db4d04a43149b1ccfc3adcfc190d3f45510c111494",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "43777191461245536274027792855557351629362906569064322165760098912770293918104",
+    "61124290990237905740819218004087985253159695156484630843664573685734418084158"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0179",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0198",
+      "receipt_path": "logs/deep_review_20261017/quotes_0361_0480/req_0198.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0361_0480/req_0198.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/senate_four_state_followup.json",
+      "data/deep_review_20261017/senate_next_named_sources_index.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "case_specific_reserve_for_entry": 0.1,
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0444_primary_before_quote.json",
+    "positive_central_evidence_watch": true
+  },
+  "evaluated_utc": "2026-10-18T00:10:42.364301+00:00",
+  "question": "Will the Republicans win the Georgia Senate race in 2026?",
+  "market_id": "630693",
+  "valuation_author": "primary_operator",
+  "original_index": 444,
+  "report_sha256": "81a0aded1a60d1bf9d4dc0b50afd5dda110548b97c6c20d37d5d86259df13bab"
+}

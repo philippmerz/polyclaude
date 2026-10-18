@@ -450,6 +450,17 @@ def _single_buy_preflight(reference_price: float, tick: float,
     return signed_price
 
 
+def _signed_buy_cash_error(clean_usd: float) -> str | None:
+    """Reject a BUY whose exact two-decimal signed cash is below the CLOB floor."""
+    try:
+        amount = float(clean_usd)
+    except (TypeError, ValueError):
+        return "signed BUY cash amount is not numeric"
+    if not math.isfinite(amount) or amount < 1.0:
+        return f"signed BUY cash amount ${amount:.2f} is below the $1 minimum"
+    return None
+
+
 def _single_taker_route_error(*, execute: bool, maker: bool,
                               urgency: str | None) -> str | None:
     """Reject an unintentional single-market taker entry.
@@ -3171,6 +3182,10 @@ def main() -> int:
               f"{final_cap_error}")
         return 0
     clean_usd = round(target_shares * buy_price, 2)
+    signed_cash_error = _signed_buy_cash_error(clean_usd)
+    if signed_cash_error:
+        print(f"\nDECISION: SKIP — {signed_cash_error}; no reservation or order sent.")
+        return 0
     reservation_record = {
         "conditionId": str(m.get("conditionId") or "").lower(),
         "slug": slug,

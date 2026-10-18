@@ -64,22 +64,20 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was sent in chat and Telegram. At23:40UTC,157 valuations,1 blocked and327 factual
-exclusions are saved;2,515 remain pending. Every
-case updates the index before the next. Current MNI estimate37% and IPO-largest
-24%YES/76%NO are explicit uncalibrated judgments; original reports staydated.
-At22:47:42 five post-only bids were independently verified LIVE/zero matched:
-ME02YES10@38c,CA06NO50@3c,MT01YES10@33c,NY01YES10@12c,and
-Anthropic-largestIPO NO5@62c. Fullpending **$12.90**, uncommitted12.096890pUSD;
-all candidate outcome balances0. These are commitments, not purchases/profit.
-Read [current entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
-[current corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md), and
-[resting-order management](notes/resting_orders.md). No ISRG/Spotify order.
-Last full held-thesis review22:00; review bids each tick and earlier material news.
-The35-contest Senate model now gives D56/R43/Other1 after recovering the newer
-Idaho pollster memo, with wide specification ranges.
-House control, both standalone Senate claims, DD and RR are saved separately;
-none produced an additional order at the captured quotes.
+was sent in chat and Telegram. At00:17UTC October18,167valuations,2blocked and327
+factualexclusions are saved;2,504remainpending, no active case. Everycase updates the
+index before the next. Fivepost-onlyBUYbids were independently verified LIVE,
+zero-matched:ME02YES10@38c,CA06NO50@3c,MT01YES10@33c,NY01YES10@12c,
+andToddAchillesIdahoSenateYES34@3c. Pending **$10.82**, uncommitted14.176890pUSD;
+allcandidatebalances0. These are commitments, not purchases/profit. Anthropic
+largestIPO NO5@62c was canceledzero-fill on unresolvedrevenueinputs; its old24/76
+forecast requires review. Idaho20%central is speculative;maximumcashloss1.02,
+source-regimeadversescenariosnegative. **Pullby00:00UTCOct20** beforeknownforum.
+Read [entryfollow-up](research/2026-10-17-deep-review/candidate_followup.md),
+[corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md) and
+[restingorders](notes/resting_orders.md). Lastfullheld-thesischeck22:00;
+reviewbidseachtick/earliernews. CurrentSenatemodel D56/R43/Other1,DD52/RR15,
+withwidespecificationranges; chambers producednoorder. NoISRG/Spotifyorder.
 
 ## Mandate and constraints
 

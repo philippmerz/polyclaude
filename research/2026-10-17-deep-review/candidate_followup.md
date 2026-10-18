@@ -283,3 +283,125 @@ checks and source/monitoring/factor decision afterballot status. Existing5bids
 remain last verified22:47:42zero-filled; no new fill/profit claim. All prospective
 IDrisk joinsUSpolitics alongside4Housebids; nocaucusintent notmeasuredhedge.
 CurrentSenateD56/R43/Other1 andDD51/RR15 are linkedresearchrevisions only.
+
+
+## 2026-10-17T23:54:07.293256+00:00 —158valued,2blocked; Idaho entryproposal only
+
+Case66 Yamal is saved at26% with5–60%range/20ppreserve afterall30nominees,
+RodriWorldCupGoldenBall andKvaratskhelia2025/26UCLPOTScomparison. Bothside
+economicssaved; noawardorder. Case82 Viniciusattendance is blockedafterfull
+nomination/calendar/RSVPfollowup, NOT countedasvaluation orfactualexclusion.
+Primaryrejected unsupported39%delegation scenario ratherthanmanufacture a
+forecast; itsconditionalYESedge is notfunded. Current158valued/2blocked/327
+excluded/2513pending; noactivecase. SourcepacketVINIschedulehasaClasicoOct25,
+notattendanceplan; originalUEFAvenueclaimLondonPalladiumunsupported.
+
+1870 officialpublicportal showsAchillesI/RischR/LoesbyLApproved forNov3GENERAL,
+RothWithdrawn, finalflagtrue. ExactFlemingquery0 isnota fullallname/writein
+certification; itweakensPeak'sbroader-testargument butdoesnotexplain31ppmargin
+conflict. Currentp20%retained; newcanonicalcandidatepriorrecordsENTRYPROPOSAL,
+notposition. Proposedvettedminimum:nominal1USD ->33YES@3c/.99risk, replacing
+initial10shareillustration; no precision/minimumguardbypass. CentralEV5.61/
+15ppstress.66/Peakonly−.4444 beforecosts. Datedconservativewealth188.56;
+notcalibratedjointportfoliooptimum. Preview2352passedprice/caps, WOULD_REST
+only. No neworder/reservation/decision yet.
+
+Existingwatcherfeed30 nowIdahoRSScandidatefeed; first30currententriesallseen
+23:51:58 before4broadtier1terms promoted23:53:17. No directstateedit/restart/
+newtimer. MUST prove nextnormalcycle afterthatprior-state-save+300s andpromotion
+beforeanysubmit. Read idaho_news_promotion_2354.json andnormalruntimeproof;
+sourcecoveragefirst30/50bounded. EarlieroneGETprepfailedbeforecapturingresponse;
+thatlostresponseunknown, not200oroldbaseline. Rootseparatecurrentverification
+afterdaemonwarmuphasactualrawreceipt. RecentOct7no-caucusstatementalready
+known; NBC/IMEheadline-onlybodiesunavailable, notproofnonmaterial.
+
+Account6casepreflight2354readonlywasstarted; inspectactualcompletedreceipt
+all_pilots_idaho_preflight_2354.json beforeclaimingstate. Existing5bidslast
+independentlyzero-filled22:47:42 pending12.90/free12.096890. Actualexecuteonly
+throughmandatorypolyclaude_enter withallfreshgates; thenindependentlyverify
+completeinventory/exactbalances beforeDEC/orderdocs/Telegram. Cancelbefore
+knownOct20Kelloggforum byconservative00:00UTCOct20; timezoneunverified.
+
+Threeadditionalquotes1081–1200/1321–1440/1441–1560capturedonce126attemptseach;
+exactGamma100/101/102 of120 (missingmetadataexplicit), books/failures/gapsand
+feesretained. No omissioniszero/price rejection. Rawresponsehashauditspassed;
+lastdisk263MiB, floor180. First100alreadyTG1163; lastpushedc9f2e6d at157valued,
+new66/82andprior/config/entryproposalhandoffawaitnextfocusedcommit.
+
+
+## 2026-10-18T00:00:43.102963+00:00 — IPO bid canceled, with zero fills
+
+The Anthropic-largest-2026-IPO NO5@62c bid is **CANCELED**, not a holding or
+a sale. New revenue headlines created uncertainty about a valuation input.
+The vetted cancel succeeded; independent authenticated order status is
+CANCELED with zero matched shares, and both IPO outcome balances are zero.
+Proof window23:59:23–27UTC, Polygon95717478. DEC0209 records the cancellation;
+DEC0207 is marked canceled/unfilled rather than graded as an investment.
+
+Four House bids remain LIVE and zero-filled: ME02YES10@38c, CA06NO50@3c,
+MT01YES10@33c and NY01YES10@12c. pUSD24.996890; live pending9.80 and arithmetic
+free15.196890. The old canceled-order reservation may remain through its
+normal grace/trade reconciliation, so guarded spendability can be lower;
+no reservation was manually removed. Exact prior order IDs stay in dated
+records below. No profit or loss was realized from this unfilled cancellation.
+
+The old IPO24/76 numeric research prior is marked review_required, not a
+current re-entry recommendation. Verify whether16.8B is quarterly recognized
+revenue or annualized runrate, its actual event date, and its effect on the
+first-day market-cap model. No repost before primary revaluation/current gates.
+The Idaho33YES@3c proposal remains unsubmitted. Its news normal-cycle reload
+was verified23:57:08 after baseline/promotion; current funds/source/order
+verification still precedes submission. Current review count160valued,2blocked,
+327excluded,2511pending; no active case. First100 already delivered.
+
+Receipt: data/deep_review_20261017/all_pilots_ipo_cancel_verify_0000.json
+(private0600). New source investigation: ipo_revenue_alert_followup_2359.json.
+
+
+## October18 00:09UTC — IPO canceled; Idaho tiny maker verified
+
+**October18 00:08:07–12UTC — five LIVE bids, all unfilled.**
+
+| Contract | Shares | Limit | Pending cash |
+|---|---:|---:|---:|
+| ME-02 Democratic YES |10|.38|$3.80|
+| CA-06 Democratic NO |50|.03|$1.50|
+| MT-01 Democratic YES |10|.33|$3.30|
+| NY-01 Democratic YES |10|.12|$1.20|
+| Todd Achilles Idaho Senate YES |34|.03|$1.02|
+
+Complete authenticated inventory:5orders, all LIVE/zero matched; all six reviewed
+candidates' two-outcome CTF balances0 atPolygon95717828. pUSD24.996890,
+pending10.82, arithmetic uncommitted14.176890. Allowance/approval sufficient;
+venueblocked=false/FI02. A reservation awaiting normal reconciliation may make
+spendability more conservative. These are commitments, **not purchases or profit**.
+The IPO NO5@.62 order was canceled with zero fills before this new order;
+old24/76IPO forecast is dated/review_required, not current entry authority.
+
+NewIdaho order `0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de`, market630707,
+CID`0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301`,
+YESasset`109865291951183941149765892685776097643915392898762342965012269207177841238467`.
+Exactslug `will-person-a-win-the-idaho-senate-race-in-2026`; preserve identity.
+DEC0210. Current primaryYES20%, range1–80%,15point policyreserve;
+centralEV5.78/stress0.68/Peak-only−0.458/range1%−0.68, maximumloss1.02.
+No calibrated source-regime probability or measured hedge against House risk.
+The initial.99cash attempt failed the writer minimum before claim/sign/post;
+its unused reservation was proven/reconciled, not silently erased. Final signed
+cash minimum now skips before reservation;33focusedtests passed, writer guard
+unchanged. Separately selected1.02budget posted34shares, no guard bypass.
+
+**Idaho management:** review each existingtick and earlier materialnews. Cancel
+first on uncertain/changed load-bearingpoll, candidate/withdrawal/ballot facts;
+pull before known releases/debates/election windows. KnownOct20Kelloggforum
+has unverifiedtimezone/participants: **cancel no later than00:00UTCOct20**,
+and revalue beforeNov3. NamedIndependent win is distinct from party/caucus/control.
+Thin exit means size is the principal loss limit; no dependable later exit claimed.
+The existingnewswatcher ingested30baselineitems before fourtier1terms promoted
+23:53:17; its subsequent normalcycle23:57:08 proves reload. No newtimer/daemon.
+
+Proof: private0600 `data/deep_review_20261017/all_pilots_idaho_postexecution_0014.json`
+and `idaho_auth_order_verify_0014.json`; execution `logs/deep_review_20261017/idaho_execute_0013.log`.
+EarlierHouseorderIDs/management remain in dated records below. The two newer
+MT01 headlines are policy/opinion framing; originalbodies unavailable atconsent,
+no newpoll/ballot/withdrawal/healthfact verified. Retain existingHousejudgments;
+this boundedaccess result is not globalabsenceofnews.

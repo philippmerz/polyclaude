@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-17T23:38:46.302796+00:00
+Updated: 2026-10-18T00:16:41.828772+00:00
 
-**157 valuations saved; first milestone100:** 157 valued; 1 blocked after in-depth review. 327 factual exclusions separately; 2515 pending.
+**167 valuations saved; first milestone100:** 167 valued; 2 blocked after in-depth review. 327 factual exclusions separately; 2504 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -72,6 +72,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |61|[Strait of Hormuz traffic returns to normal by December 31?](evaluations/0061.md)|valued|YES price/model difference clears default reserve, but uncertainty and December hold-only prevent entry|
 |62|[Real Betis Balompié vs. FC Barcelona: O/U 3.5](evaluations/0062.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |65|[Will "Animals" be the #2 US Netflix movie this week?](evaluations/0065.md)|valued|Both asks negative central EV; no entry|
+|66|[Will Lamine Yamal win the 2026 Ballon d'Or?](evaluations/0066.md)|valued|No entry: YES negativecentral; NOcentral+.08032/10shares fails20ppreserve. MakerresearchonlyYES<=.04 orNO<=.52, with renewedindependentforecast/currentallgates.|
 |67|[US imports Russian diesel by October 31?](evaluations/0067.md)|valued|YES centralvaluepositive but failsordinary10ppreserve; NOcentralnegative. Future<=3cmaker/evidencewatchonly, noentry.|
 |68|[New pandemic in 2026?](evaluations/0068.md)|valued|Bothsidesvalued; YEScentralnegative, NOtinycentralgrossfailscarry/opsandordinary10ppreserve; noentry.|
 |69|[Mississippi State vs. LSU](evaluations/0069.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -85,6 +86,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |78|[US-Iran Hormuz Agreement by October 31?](evaluations/0078.md)|valued|Mutual acceptance event valued; YES central difference fails normal uncertainty reserve|
 |79|[Will "Ice Age: Collision Course" be the #2 global Netflix movie this week?](evaluations/0079.md)|valued|YES central value, proxy/model error consumes robust edge; no entry|
 |81|[Will the Democratic Party win the NC-11 House seat?](evaluations/0081.md)|valued|SmallmakerNO follow-up candidate; balancedreview andfullfreshgates outstanding|
+|82|[Will Vinícius Júnior attend the 2026 Ballon d'Or ceremony?](evaluations/0082.md)|blocked_after_review|Blockedafterreview, notvalued/excluded. NoRSVP/delegation/availabilitybase; bothsidespricedconditionally, combinedaskslose; illustrativeYESedgeisnotfunded.|
 |83|[Florida Atlantic vs. Army](evaluations/0083.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |84|[NVIDIA (NVDA) Q3 adjusted gross margin 73% to 75%?](evaluations/0084.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |85|[Will the highest temperature in Beijing be 15°C on October 17?](evaluations/0085.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
@@ -193,6 +195,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |279|[Spread: Paris Saint-Germain FC (-1.5)](evaluations/0279.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|282|[Will the Democrats win the Ohio Senate race in 2026?](evaluations/0282.md)|valued|No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.|
 |283|[Will the Democratic Party win the NV-03 House seat?](evaluations/0283.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |291|[Florida vs. Texas](evaluations/0291.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |303|[FC Bayern München vs. RB Leipzig: O/U 4.5](evaluations/0303.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -208,6 +211,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |337|[Will the Democratic Party win the FL-26 House seat?](evaluations/0337.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |341|[Will the highest temperature in Singapore be 32°C on October 17?](evaluations/0341.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |347|[Solana Up or Down on October 17?](evaluations/0347.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|348|[Will an independent win the Nebraska Senate race in 2026?](evaluations/0348.md)|valued|No entry: YESnegativecentral; NOsmallcentral+.21936/10sharesfails10ppreserve. MakerwatchYES<=.13 orNO<=.63/<=10shares withfreshsources/allgates.|
 |359|[Will MrBeast's next video get between 270 and 280 million views on week 2?](evaluations/0359.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |375|[European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri](evaluations/0375.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -224,11 +228,14 @@ Each report below is written before moving to the next evaluation. Related contr
 |423|[Counter-Strike: ENCE vs Phantom - Map 2 Winner](evaluations/0423.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |424|[NVIDIA (NVDA) Q3 adjusted gross margin 75% to 77%?](evaluations/0424.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |429|[Will SV Werder Bremen vs. SC Paderborn 07 end in a draw?](evaluations/0429.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|432|[Will the Democrats win the Iowa Senate race in 2026?](evaluations/0432.md)|valued|No entry: both dated asks negative central EV. MakerresearchYES<=.30 orNO<=.46 x10 onlyafterfreshallgates.|
+|444|[Will the Republicans win the Georgia Senate race in 2026?](evaluations/0444.md)|valued|YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.|
 |447|[Spread: Bowling Green (-6.5)](evaluations/0447.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |453|[Will PSV win on 2026-10-17?](evaluations/0453.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
+|498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |545|[Will the highest temperature in Kuala Lumpur be 32°C on October 17?](evaluations/0545.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -242,11 +249,13 @@ Each report below is written before moving to the next evaluation. Related contr
 |603|[Will Norwich City FC win on 2026-10-17?](evaluations/0603.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |609|[LKP Motor Lublin vs. WKS Slask Wroclaw: O/U 2.5](evaluations/0609.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |629|[Will the price of Solana be above $105 on October 17?](evaluations/0629.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|642|[Will the Republicans win the Florida Senate race in 2026?](evaluations/0642.md)|valued|RepublicanYES positivecentral but fails10ppreserve; NOnegativecentral. FuturemakerYES<=.84x10onlyafterfreshallgates.|
 |645|[Will Amed Sportif win on 2026-10-17?](evaluations/0645.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |657|[Will Southampton FC win on 2026-10-17?](evaluations/0657.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |663|[Will Dalian Yingbo FC win on 2026-10-17?](evaluations/0663.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |669|[Cricket World Cup League 2: Canada vs Nepal](evaluations/0669.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |680|[Will MrBeast say "Sponsor" or "Sponsored" during his next video?](evaluations/0680.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|684|[Will the Democrats win the South Carolina Senate race in 2026?](evaluations/0684.md)|valued|No entry: YESnegativecentral; NOsmallcentralvaluefails10ppreserve. FuturemakerYES<=.02x50 orNO<=.75x10subjectfreshallgates.|
 |693|[Will Stoke City FC win on 2026-10-17?](evaluations/0693.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |705|[Will Sheffield Wednesday FC win on 2026-10-17?](evaluations/0705.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |710|[Will the price of XRP be above $0.90 on October 17?](evaluations/0710.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -257,6 +266,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |746|[Will Aurora Win the Thunderpick World Championship 2026?](evaluations/0746.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |777|[RC Strasbourg Alsace vs. Paris Saint-Germain FC: O/U 8.5 Total Corners](evaluations/0777.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |783|[European Open, Qualification: Nishesh Basavareddy vs Edas Butvilas](evaluations/0783.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|786|[Will the Democrats win the Minnesota Senate race in 2026?](evaluations/0786.md)|valued|No entry: YESnegativecentral; NOpositivecentralfails10ppreserve. FuturemakerYES<=.68x10 orNO<=.08x15subjectfreshallgates.|
 |795|[Bristol City FC vs. Sheffield United FC: O/U 2.5](evaluations/0795.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |801|[Dota 2: Stray Team vs Stariy bog Team - Game 1 Winner](evaluations/0801.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |807|[Counter-Strike: EAC Extra vs RoundsGG (BO3) - European Pro League Regular Playoffs](evaluations/0807.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -279,6 +289,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |1014|[Will the lowest temperature in Shanghai be 23°C on October 17?](evaluations/1014.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1023|[Will Wrexham AFC win on 2026-10-17?](evaluations/1023.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1033|[Exact Score: Brentford FC 0 - 3 Liverpool FC?](evaluations/1033.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|1050|[Will the Democrats win the Kansas Senate race in 2026?](evaluations/1050.md)|valued|YES negativecentral; NOpositivecentralfails10ppreserve. FuturemakerYES<=.21x10 orNO<=.55x10subjectfreshallgates.|
 |1058|[Mantova 1911 vs. Palermo FC: O/U 2.5](evaluations/1058.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1063|[Will Palermo FC win on 2026-10-17?](evaluations/1063.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |1083|[Will Benevento Calcio win on 2026-10-17?](evaluations/1083.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

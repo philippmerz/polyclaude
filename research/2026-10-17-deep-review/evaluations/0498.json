@@ -1,0 +1,154 @@
+{
+  "review_index": 498,
+  "condition_id": "0xd59f25520a8c0ea44a9c9741a97c8c3d769e21f1479b9a14e1a9d475e91f522a",
+  "criteria_sha256": "65bcfddc4106228493474c81a14008bd21915cb6b9518809da2190d770ffa29e",
+  "status": "valued",
+  "literal_analysis": "Fullindividualpartywinner/replacement/Independent/runoff/unanimouscallscertificationread; WhatleyRnotRcontrol. Completefinalfieldunverified.",
+  "evidence": [
+    {
+      "url": "https://www.highpoint.edu/blog/2026/09/hpu-poll-127-north-carolina-likely-voters-weigh-in-on-u-s-senate-race-and-more/",
+      "observed_utc": "2026-10-18T00:11:57.305195+00:00",
+      "finding": "ReusedSept24originalrelease/Sept6–16field;706LV,50Cooper42Whatley,±3.9nonprobcredibilityinterval. Timestampisevaluationindex, actualsourcecapturereceiptinsavedpacket."
+    },
+    {
+      "url": "https://er.ncsbe.gov/?election_dt=03/03/2026",
+      "observed_utc": "2026-10-18T00:11:57.305234+00:00",
+      "finding": "SavedofficialMarch3primarywinnerbindingCooperD/WhatleyR,notfullfinalgeneralfieldornewcurrentwithdrawalsearch."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-18T00:11:57.305238+00:00",
+      "finding": "PrimaryNCstructural/poll/sharednationalerrormodel; rawR11.832%,noindependentforecastcalibration."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.03,
+    "high": 0.35,
+    "method": "Primary originalHPU+structural/shared-error statewinner model",
+    "reasoning": "R12beforequote fromraw11.832,3–35range/10ppreserve; datednonprobpoll,currentfieldgap andlatecycleuncertainty retained. Bothsides,source/evidencewatchpositiveYES.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0481_0600.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:14.625+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "best_bid": 0.032,
+        "best_ask": 0.043,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 31.686,
+        "received_utc": "2026-10-17T21:00:14.625+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 9.1,
+            "price": 0.043,
+            "fee_usd": 0.014978963999999996
+          },
+          {
+            "shares": 0.9000000000000004,
+            "price": 0.044,
+            "fee_usd": 0.0015143040000000004
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 0.44739999999999996,
+        "fee_usd": 0.0165,
+        "break_even_probability_before_carry": 0.044739999999999995,
+        "break_even_probability_with_idealized_carry": 0.04485080632083334,
+        "central_expected_profit_usd": 0.7525999999999999,
+        "default_10pp_stressed_profit_usd": -0.24740000000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.01999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.3076
+      },
+      "No": {
+        "probability": 0.88,
+        "best_bid": 0.957,
+        "best_ask": 0.968,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 31.686,
+        "received_utc": "2026-10-17T21:00:14.625+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.968,
+            "fee_usd": 0.012390400000000011
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.6924,
+        "fee_usd": 0.0124,
+        "break_even_probability_before_carry": 0.9692399999999999,
+        "break_even_probability_with_idealized_carry": 0.971640489906225,
+        "central_expected_profit_usd": -0.8923999999999985,
+        "default_10pp_stressed_profit_usd": -1.8923999999999985,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.78,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.552599999999998
+      }
+    }
+  },
+  "verdict": "YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.",
+  "reopen_condition": "Newtransparentoriginalpoll/currentfield sharpenforecast ormateriallybetterpassiveprice, verifiedcurrentaccount/venue/monitoring.",
+  "current_description_sha256": "0debb1d0ba2b2b3a2106baf3f0b7c6e12657e48efe8214766a69de30bb1ad784",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "62831517509825405761763142539845746280269675872170259538293560849475982647892",
+    "66273785459475184474276423059036741814958495126134511275805524603240865775761"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0019",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0022",
+      "receipt_path": "logs/deep_review_20261017/quotes_0481_0600/req_0022.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0481_0600/req_0022.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "source_packets": [
+      "data/deep_review_20261017/senate_current_state_sources.json",
+      "data/deep_review_20261017/senate_next_named_sources_index.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0498_primary_before_quote.json",
+    "positive_central_evidence_watch": true
+  },
+  "evaluated_utc": "2026-10-18T00:11:57.546145+00:00",
+  "question": "Will the Republicans win the North Carolina Senate race in 2026?",
+  "market_id": "630884",
+  "valuation_author": "primary_operator",
+  "original_index": 498,
+  "report_sha256": "586fa90b625c628e182633248a328ebcc1c9180efbcf2ef61ffdc3e4b4c84606"
+}

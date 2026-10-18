@@ -1,0 +1,148 @@
+{
+  "review_index": 786,
+  "condition_id": "0x44b642636473fb07f0c2319a1d25729a36134969076ffdbb8979cbfdda612b14",
+  "criteria_sha256": "56304f92186d65a0b5a8d7e5a56be6b9b9dc44787bbff5b1d06a421d17f07359",
+  "status": "valued",
+  "literal_analysis": "Fullparty/replacement/Independent/runoff/callselsecertificationread; FlanaganDFLSenatenotKlobuchargovernor, fullfinalfieldgap.",
+  "evidence": [
+    {
+      "url": "https://kstp.com/kstp-news/top-news/kstp-surveyusa-poll-swing-in-senate-and-ag-races-klobuchar-up-slightly-on-demuth/",
+      "observed_utc": "2026-10-18T00:15:20.099388+00:00",
+      "finding": "OriginalSenateleaddifference+3; embeddedfullresponseunrecovered, field/n/MOEsecondary only; governorpartseparate Reusedsourceindex, notnewHTTPtime; originalreceiptsinpacket."
+    },
+    {
+      "url": "https://www.axios.com/local/twin-cities/2026/10/16/minnesota-senate-debate-2026-watch-listen-time",
+      "observed_utc": "2026-10-18T00:15:20.099431+00:00",
+      "finding": "DatedOct16originalreportidentifiesDFL/GOPnominees; notofficialfullballot Reusedsourceindex, notnewHTTPtime; originalreceiptsinpacket."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-18T00:15:20.099434+00:00",
+      "finding": "PrimaryexplicitMNstructural/pollmodelwithsourceextra3.5/pollweightcap.6; rawD79.9467 beforequote Reusedsourceindex, notnewHTTPtime; originalreceiptsinpacket."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.8,
+    "low": 0.5,
+    "high": 0.95,
+    "method": "Primary exactMinnesota open-seat originallead/structural/shared-error model",
+    "reasoning": "RawD79.9467rounded80 beforeprice,50–95range/10ppreserve; incompletemethod/responsefield retained, cap60notcalibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0721_0840.json.gz",
+    "quote_observed_utc": "2026-10-17T21:11:53.279+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.8,
+        "best_bid": 0.86,
+        "best_ask": 0.87,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.969,
+        "received_utc": "2026-10-17T21:11:53.279+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.87,
+            "fee_usd": 0.04524
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.745239999999999,
+        "fee_usd": 0.04524,
+        "break_even_probability_before_carry": 0.8745239999999999,
+        "break_even_probability_with_idealized_carry": 0.876689909408146,
+        "central_expected_profit_usd": -0.745239999999999,
+        "default_10pp_stressed_profit_usd": -1.7452399999999981,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.7000000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.55184
+      },
+      "No": {
+        "probability": 0.19999999999999996,
+        "best_bid": 0.13,
+        "best_ask": 0.14,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 10.969,
+        "received_utc": "2026-10-17T21:11:53.279+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.14,
+            "fee_usd": 0.04816
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.4481600000000001,
+        "fee_usd": 0.04816,
+        "break_even_probability_before_carry": 0.144816,
+        "break_even_probability_with_idealized_carry": 0.1451746617826956,
+        "central_expected_profit_usd": 0.5518399999999994,
+        "default_10pp_stressed_profit_usd": -0.44816000000000056,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.09999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.25476
+      }
+    }
+  },
+  "verdict": "No entry: YESnegativecentral; NOpositivecentralfails10ppreserve. FuturemakerYES<=.68x10 orNO<=.08x15subjectfreshallgates.",
+  "reopen_condition": "Fulloriginaltable/method andtransparentnewpoll/currentfieldchange orbetterprice, pluscurrentvenue/account/monitoring.",
+  "current_description_sha256": "78da3dfd0a9a7b041ff08025b286d8165a100297dcf0b7144babe84672315f9c",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "5210147086444382339849101722545511095151948730486562412029285471203011774407",
+    "31436003141911636826257012170104365274669938022228084492450613161428480917013"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0135",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0152",
+      "receipt_path": "logs/deep_review_20261017/quotes_0721_0840/req_0152.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0721_0840/req_0152.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "source_packets": [
+      "data/deep_review_20261017/senate_four_state_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/0786_primary_before_quote.json",
+    "positive_central_evidence_watch": true
+  },
+  "evaluated_utc": "2026-10-18T00:15:20.312131+00:00",
+  "question": "Will the Democrats win the Minnesota Senate race in 2026?",
+  "market_id": "630818",
+  "valuation_author": "primary_operator",
+  "original_index": 786,
+  "report_sha256": "027527d00784cb7bc30b6a933abb7539ac5ce1fa66ea88a8bc2df2f5667ec45f"
+}

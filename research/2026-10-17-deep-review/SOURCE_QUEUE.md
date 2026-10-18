@@ -1,3 +1,20 @@
+## Current pointer — October18 00:17UTC
+
+167valuations/2blocked/327factual/2504pending. Sevennew standaloneSenatecases
+432/444/498/642/684/786/1050savedindividually; no neworderfromthem. Original
+sourceindex notes below are dated, not currentmoney authority. Currentmoney:
+fourHouse+Idaho34YES@3c, allfiveLIVEzero-fill at00:08; IPOcanceledzero-fill,
+old24/76review_required. See resting_orders andCURRENT_REVISIONS.
+
+Readyneworiginalfactualpackets: google_time_historical_facts_0018.json has
+25completeofficialhistoricalGoogle top10tables/2021–25TIMEeditorialselections;
+currentGoogle/TIMEcasesstillpending primaryvaluation. county_ks_xlsx_addendum_0022.json
+has exact2024officialSedgwick/Leavenworthpresidentialtotals/denominators;
+not2026Senatevotes. Texascountyreturnsgap/FortBendsluginDentoncase binding
+isincounty_senate_baseline_sources_0020.json. AKfullfinalfield/Jr eligibility/
+Dienerstatus remainunresolved in alaska_final_field_followup_0010.json.
+Allpacketpaths are underdata/deep_review_20261017/. No cheapforecasts/rejections.
+
 # Retrieved evidence for unfinished valuations
 
 October17 continuation index. These packets contain **facts, not authoritative
@@ -205,3 +222,47 @@ certifiedballot/currentgates. No order yet. Read senate_idaho_revision_2337_meth
 for recoveredoriginalPeakmemo and currentD56/R43/Other1, DD51/RR15. Oldcases
 stayimmutable; no canonicalmoneypriorchanged. Case1870 is no longer pending
 valuation, only concreteentryfollowup. Source/fact assistants own no forecasts.
+
+
+## 2026-10-17T23:54:07.293256+00:00 —158valued,2blocked; Idaho entryproposal only
+
+Case66 Yamal is saved at26% with5–60%range/20ppreserve afterall30nominees,
+RodriWorldCupGoldenBall andKvaratskhelia2025/26UCLPOTScomparison. Bothside
+economicssaved; noawardorder. Case82 Viniciusattendance is blockedafterfull
+nomination/calendar/RSVPfollowup, NOT countedasvaluation orfactualexclusion.
+Primaryrejected unsupported39%delegation scenario ratherthanmanufacture a
+forecast; itsconditionalYESedge is notfunded. Current158valued/2blocked/327
+excluded/2513pending; noactivecase. SourcepacketVINIschedulehasaClasicoOct25,
+notattendanceplan; originalUEFAvenueclaimLondonPalladiumunsupported.
+
+1870 officialpublicportal showsAchillesI/RischR/LoesbyLApproved forNov3GENERAL,
+RothWithdrawn, finalflagtrue. ExactFlemingquery0 isnota fullallname/writein
+certification; itweakensPeak'sbroader-testargument butdoesnotexplain31ppmargin
+conflict. Currentp20%retained; newcanonicalcandidatepriorrecordsENTRYPROPOSAL,
+notposition. Proposedvettedminimum:nominal1USD ->33YES@3c/.99risk, replacing
+initial10shareillustration; no precision/minimumguardbypass. CentralEV5.61/
+15ppstress.66/Peakonly−.4444 beforecosts. Datedconservativewealth188.56;
+notcalibratedjointportfoliooptimum. Preview2352passedprice/caps, WOULD_REST
+only. No neworder/reservation/decision yet.
+
+Existingwatcherfeed30 nowIdahoRSScandidatefeed; first30currententriesallseen
+23:51:58 before4broadtier1terms promoted23:53:17. No directstateedit/restart/
+newtimer. MUST prove nextnormalcycle afterthatprior-state-save+300s andpromotion
+beforeanysubmit. Read idaho_news_promotion_2354.json andnormalruntimeproof;
+sourcecoveragefirst30/50bounded. EarlieroneGETprepfailedbeforecapturingresponse;
+thatlostresponseunknown, not200oroldbaseline. Rootseparatecurrentverification
+afterdaemonwarmuphasactualrawreceipt. RecentOct7no-caucusstatementalready
+known; NBC/IMEheadline-onlybodiesunavailable, notproofnonmaterial.
+
+Account6casepreflight2354readonlywasstarted; inspectactualcompletedreceipt
+all_pilots_idaho_preflight_2354.json beforeclaimingstate. Existing5bidslast
+independentlyzero-filled22:47:42 pending12.90/free12.096890. Actualexecuteonly
+throughmandatorypolyclaude_enter withallfreshgates; thenindependentlyverify
+completeinventory/exactbalances beforeDEC/orderdocs/Telegram. Cancelbefore
+knownOct20Kelloggforum byconservative00:00UTCOct20; timezoneunverified.
+
+Threeadditionalquotes1081–1200/1321–1440/1441–1560capturedonce126attemptseach;
+exactGamma100/101/102 of120 (missingmetadataexplicit), books/failures/gapsand
+feesretained. No omissioniszero/price rejection. Rawresponsehashauditspassed;
+lastdisk263MiB, floor180. First100alreadyTG1163; lastpushedc9f2e6d at157valued,
+new66/82andprior/config/entryproposalhandoffawaitnextfocusedcommit.

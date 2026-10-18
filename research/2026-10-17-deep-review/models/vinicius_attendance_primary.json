@@ -1,0 +1,38 @@
+{
+  "authored_by": "primary",
+  "generated_utc": "2026-10-17T23:49:18.310204+00:00",
+  "case": 82,
+  "status": "EXPLORATORY ONLY; primary rejected these unsupported delegation/attendanceweights as an authoritative probability. Case82 blocked_after_review, not a completedvaluation.",
+  "regimes": [
+    {
+      "name": "substantialclubdelegation",
+      "weight": 0.4,
+      "p_vini_present_given": 0.85
+    },
+    {
+      "name": "restrictedorabsentclubdelegation",
+      "weight": 0.5,
+      "p_vini_present_given": 0.1
+    },
+    {
+      "name": "otheravailabilityorlogisticsfailure",
+      "weight": 0.1,
+      "p_vini_present_given": 0.1
+    }
+  ],
+  "p_ceremony_qualifies_by_Nov30": 0.98,
+  "qualifying_event_branch_is_judgment": true,
+  "range": [
+    0.05,
+    0.9
+  ],
+  "entry_reserve": 0.2,
+  "sources": [
+    "data/deep_review_20261017/ballon_fullfield_original_facts.json",
+    "data/deep_review_20261017/vinicius_attendance_followup.json"
+  ],
+  "limits": "No2026RSVP/delegation/travel/availability,nopastofficialattendancecounts,nocalibratedconditionalprobabilities. Historicalboycottsecondarynotusedas2026fact; previousnightClassicoisnotproofattendanceimpossible.",
+  "rounded_yes_is_not_adopted_forecast": 0.39,
+  "raw_yes_is_not_adopted_forecast": 0.392,
+  "reason_not_adopted": "No2026RSVP/delegation/travel/playeravailability or originalhistoricalnominee-attendancedataset grounds the40/50/10 regimeweights. Quantifying ignorance in arbitraryweights would manufacture a forecast."
+}

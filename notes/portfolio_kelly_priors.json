@@ -1207,130 +1207,130 @@
   "current_assessment": "Oct-8 source reread: both live descriptions are byte-identical, SHA-25635bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693, unchanged from Sep-30. Both operational ends remain Jan-2 04:59Z, while the literal qualifying cutoff is before Jan-1. Strict over50/over58 thresholds use only the first full-Senate final-passage vote; cloture, motions to proceed, amendments, later reconsideration and post-announcement tally changes are excluded. No qualifying vote gives both NO; qualifying voice/unanimous passage without a prior recorded final vote gives both YES. For every stated branch, equal over50YES plus over58NO has a criteria-consistent logical payout floor of $1 per pair ($29 for29/29), with a 51-58Yea bonus branch. The current Senate256-row capture contains only Sep15 rejected cloture on the motion to proceed for HR3633, not qualifying final passage. The stored0.50 leg values are conservative paired-floor accounting weights, not separately calibrated forecasts or independent trade authority. HOLD the complete pair / NO ADD; never transact one leg independently.",
   "latest_catalyst": "Sep-22 topology reconciliation: live Gamma reports both event legs at endDate 2027-01-02T04:59Z while the stored topology used Jan-1; no archived raw snapshot establishes when or whether that metadata changed. Their identical text still admits only a qualifying vote before Jan-1. Both remain event 769594, active, open, negRisk=false and UMA-unproposed. Updating the stored operational end date restores validation without changing the semantic cutoff or $29 floor."
  },
-  "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016": {
-    "p_yes": 0.61,
-    "p_no": 0.39,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
-    "market_id": "3006483",
-    "criteria_sha256": "be6894cd24dea1d67a28832e4a2d2c2b47cde13076fc75f47f98898c3d80127b",
-    "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
-    "current_assessment": "PrimaryPYES0.61, scenario range0.15\u20130.95; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0123.md",
-    "balanced_reviews": [
-      "research/2026-10-17-deep-review/house_pilot_skeptic.md",
-      "research/2026-10-17-deep-review/house_pilot_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_me02_latest_news.json",
-    "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
-    "key_facts": [
-      {
-        "claim": "Current exact official ME02 ballot is DunlapD versus LePageR and write-in. Market/CLOB full text and parentevent726881 are ME02 despite the ME01 historical slug.",
-        "source": "https://www1.maine.gov/sos/sites/maine.gov.sos/files/inline-files/sample%202.pdf",
-        "source_date": "2026-10-17",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "TulchinOct12\u201314,n500LV,Dunlap50LePage46U4; client/mode/weights undisclosed. Primary61% is uncalibrated and not the poll percentage.",
-        "source": "https://static01.nyt.com/newsgraphics/documenttools/0cdb44a57dfd2687/fddf7303-full.pdf",
-        "source_date": "2026-10-16",
-        "checked": "2026-10-17"
-      }
-    ]
-  },
-  "will-the-democratic-party-win-the-ca-06-house-seat": {
-    "p_yes": 0.85,
-    "p_no": 0.15,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
-    "market_id": "1280973",
-    "criteria_sha256": "0b76eddff30827c21a87e3439efb3a7e7c59f45824efbb9d09a9df43052a757d",
-    "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
-    "current_assessment": "PrimaryPYES0.85, scenario range0.35\u20130.99; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0032.md",
-    "balanced_reviews": [
-      "research/2026-10-17-deep-review/house_pilot_skeptic.md",
-      "research/2026-10-17-deep-review/house_pilot_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_ca06_latest_news.json",
-    "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
-    "key_facts": [
-      {
-        "claim": "Official final ballot: PanDEM,KileyNPP; no other candidate/writein.",
-        "source": "https://elections.yolocounty.gov/392/Federal",
-        "source_date": "2026-08-27",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "OriginalILCSeptemberpoll preparedbyMainFrame, mixedphone/SMS/webpanel,927LV,Pan36.7Kiley36.5U26.7. SponsorbacksKiley; not a freshOctoberpoll.",
-        "source": "https://cdn.prod.website-files.com/68d1c32ec01e1d1f6a86e801/6abaf0a470c7a5a2ba247b56_151dca06e31c001b9edb70b5ac86f8e9_CA06_Summary_Topline___Independent_Leadership_Council.pdf",
-        "source_date": "2026-09-06",
-        "checked": "2026-10-17"
-      },
-      {
-        "claim": "October16CNN direct reelection interview: Kiley says he will caucus with neither side; noDemocraticpledge. FrozenrulemeasuresintentafterallHousecalls andhasnoexplicitneitherfallback.",
-        "source": "https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01",
-        "source_date": "2026-10-16",
-        "checked": "2026-10-17"
-      }
-    ]
-  },
-  "will-the-democratic-party-win-the-mt-01-house-seat": {
-    "p_yes": 0.47,
-    "p_no": 0.53,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
-    "market_id": "942843",
-    "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
-    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
-    "balanced_reviews": [
-      "logs/deep_review_20261017/house_next_skeptic.md",
-      "logs/deep_review_20261017/house_next_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
-    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
-    "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
-    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  },
-  "will-the-democratic-party-win-the-ny-01-house-seat": {
-    "p_yes": 0.31,
-    "p_no": 0.69,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
-    "market_id": "1284219",
-    "criteria_sha256": "6556ecdbb26a287df55a95288b671d1fd456db5b0540495121231e61ad3d79c6",
-    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0409.md",
-    "balanced_reviews": [
-      "logs/deep_review_20261017/house_next_skeptic.md",
-      "logs/deep_review_20261017/house_next_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
-    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
-    "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
-    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  },
+ "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016": {
+  "p_yes": 0.61,
+  "p_no": 0.39,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+  "market_id": "3006483",
+  "criteria_sha256": "be6894cd24dea1d67a28832e4a2d2c2b47cde13076fc75f47f98898c3d80127b",
+  "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
+  "current_assessment": "PrimaryPYES0.61, scenario range0.15\u20130.95; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0123.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/house_pilot_skeptic.md",
+   "research/2026-10-17-deep-review/house_pilot_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_me02_latest_news.json",
+  "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+  "key_facts": [
+   {
+    "claim": "Current exact official ME02 ballot is DunlapD versus LePageR and write-in. Market/CLOB full text and parentevent726881 are ME02 despite the ME01 historical slug.",
+    "source": "https://www1.maine.gov/sos/sites/maine.gov.sos/files/inline-files/sample%202.pdf",
+    "source_date": "2026-10-17",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "TulchinOct12\u201314,n500LV,Dunlap50LePage46U4; client/mode/weights undisclosed. Primary61% is uncalibrated and not the poll percentage.",
+    "source": "https://static01.nyt.com/newsgraphics/documenttools/0cdb44a57dfd2687/fddf7303-full.pdf",
+    "source_date": "2026-10-16",
+    "checked": "2026-10-17"
+   }
+  ]
+ },
+ "will-the-democratic-party-win-the-ca-06-house-seat": {
+  "p_yes": 0.85,
+  "p_no": 0.15,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+  "market_id": "1280973",
+  "criteria_sha256": "0b76eddff30827c21a87e3439efb3a7e7c59f45824efbb9d09a9df43052a757d",
+  "rationale": "Primary per-condition deep review and independent skeptic/champion; current small-maker pilot candidate, not a calibrated lower bound. Same US-politics factor; declared18% existing-risk buffer is conservative, actual full-fill caps still checked live.",
+  "current_assessment": "PrimaryPYES0.85, scenario range0.35\u20130.99; ordinary10pp reserve. Read CURRENT_REVISIONS for recovered CA06 original-poll/caucus evidence and historical ME01-slug/actual ME02 binding. No position is assumed from this prior.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0032.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/house_pilot_skeptic.md",
+   "research/2026-10-17-deep-review/house_pilot_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_ca06_latest_news.json",
+  "next_scheduled_catalyst": "2026-11-03 general election; pull resting bids before outcome-release window; cancel/revalue earlier on new poll, candidate, ballot or caucus information.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+  "key_facts": [
+   {
+    "claim": "Official final ballot: PanDEM,KileyNPP; no other candidate/writein.",
+    "source": "https://elections.yolocounty.gov/392/Federal",
+    "source_date": "2026-08-27",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "OriginalILCSeptemberpoll preparedbyMainFrame, mixedphone/SMS/webpanel,927LV,Pan36.7Kiley36.5U26.7. SponsorbacksKiley; not a freshOctoberpoll.",
+    "source": "https://cdn.prod.website-files.com/68d1c32ec01e1d1f6a86e801/6abaf0a470c7a5a2ba247b56_151dca06e31c001b9edb70b5ac86f8e9_CA06_Summary_Topline___Independent_Leadership_Council.pdf",
+    "source_date": "2026-09-06",
+    "checked": "2026-10-17"
+   },
+   {
+    "claim": "October16CNN direct reelection interview: Kiley says he will caucus with neither side; noDemocraticpledge. FrozenrulemeasuresintentafterallHousecalls andhasnoexplicitneitherfallback.",
+    "source": "https://transcripts.cnn.com/show/arena/date/2026-10-16/segment/01",
+    "source_date": "2026-10-16",
+    "checked": "2026-10-17"
+   }
+  ]
+ },
+ "will-the-democratic-party-win-the-mt-01-house-seat": {
+  "p_yes": 0.47,
+  "p_no": 0.53,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
+  "market_id": "942843",
+  "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
+  "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
+  "balanced_reviews": [
+   "logs/deep_review_20261017/house_next_skeptic.md",
+   "logs/deep_review_20261017/house_next_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
+  "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
+  "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
+  "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
+ },
+ "will-the-democratic-party-win-the-ny-01-house-seat": {
+  "p_yes": 0.31,
+  "p_no": 0.69,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+  "market_id": "1284219",
+  "criteria_sha256": "6556ecdbb26a287df55a95288b671d1fd456db5b0540495121231e61ad3d79c6",
+  "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0409.md",
+  "balanced_reviews": [
+   "logs/deep_review_20261017/house_next_skeptic.md",
+   "logs/deep_review_20261017/house_next_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
+  "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
+  "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
+  "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
+  "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
+ },
  "will-anthropic-have-the-highest-ipo-market-cap-2026-673": {
   "p_yes": 0.24,
   "p_no": 0.76,
@@ -1343,7 +1343,7 @@
   "market_id": "1321564",
   "criteria_sha256": "af74aad95b40190289dc2a25fe684eba0633d25e5ee21cdda21c86f6efa07e01",
   "rationale": "Primary current timing/first-close scenario revision24/76, exact full rules read, independent skeptic/champion read. Approx2.10456T SpaceX comparator uses SECbase shares and corroborated secondary unadjusted close; exactexchange historical table inaccessible. Strong-demandbranch retained; no unmeasured rival-survival discount. Uncalibrated, not guaranteed floor.",
-  "current_assessment": "Small passive NO pilot only, ordinary10pp reserve. Maxrawlimit.63, atmost5shares/about3.20pUSD; no order or position assumed by this prior. BroadYESrange.01-.80 is sensitivity, not a confidence interval.",
+  "current_assessment": "NO LIVE ORDER: canceled originalNO5@.62,zero matched/zerooutcomebalances independentlyverified23:59:27UTCblock95717478.24/76numbers below remain datedprior, NOT currententryauthorization. Revenue alert metric/eventdate investigationpending; rereviewbeforeanyneworder.",
   "research_report": "research/2026-10-17-deep-review/evaluations/0158.md",
   "current_revision": "research/2026-10-17-deep-review/CURRENT_REVISIONS.md",
   "tracked_model": "research/2026-10-17-deep-review/models/ai_ipo_current_revision.py",
@@ -1358,6 +1358,32 @@
   ],
   "next_scheduled_catalyst": "PublicS1/roadshow/offer-range/pricing/firsttrade/cancellation/safety-governance or rivalIPO news; no exactnextdateproved. Cancel/revalue on materialnewfacts and pull before any known information window, including first trading session. Before year-end confirm literal first-close treatment and settlement.",
   "monitoring": "Existing29thIPO/valuationRSS; baseline30seen before broadAnthropic/Claude-maker/Dario-Amodei tier1promotion. Normalpostpromotioncycle must be verified before an order.",
-  "correlation_caveat": "Same conservative factor cluster as heldOpenAIHLE_NO9, not an IPO holding or measured hedge. Declared5%existingrisk buffer; current hardcaps must count full pending risk."
+  "correlation_caveat": "Same conservative factor cluster as heldOpenAIHLE_NO9, not an IPO holding or measured hedge. Declared5%existingrisk buffer; current hardcaps must count full pending risk.",
+  "review_required": true,
+  "latest_catalyst": "NewOct17 22:24/23:16revenue/headlinealerts: Anthropicquarterlyvsannualized16.8B/OpenAIestimatecut20B ambiguity; cancel-first originalmaker beforeverification. No claim headline is issueractual."
+ },
+ "will-person-a-win-the-idaho-senate-race-in-2026": {
+  "p_yes": 0.2,
+  "p_no": 0.8,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-17",
+  "criteria_read": "2026-10-17",
+  "condition_id": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+  "market_id": "630707",
+  "criteria_sha256": "03d6fc81c34d9e4cba1a253c012997e68126c4deb51ef1f9fc0b8128755a1889",
+  "rationale": "Primary exact namedIndependent winner and originalATR/Peak regime valuation25/75 selected before quotes.20%central/1\u201380%judgmentrange;15pppolicyreserve is NOT Peak-only floor (1.65%). Both independent advisories read. Official finalportal shows AchillesIApproved2026GENERAL; not separatecountyballot. ExactFlemingqueryempty weakensPeakfieldrepresentativeness; notproofnonexistentcandidate/forgedmemo. No Dcontrol hedge.",
+  "current_assessment": "LIVEunfilled post-onlyBUY YES34@.03/1.02pUSD; independentlyverified00:08:07\u201312UTC Polygon95717828; allcandidatebalances0, totalfivebids10.82. Commitmentnotposition/profit. 0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+  "research_report": "research/2026-10-17-deep-review/evaluations/1870.md",
+  "current_revision": "research/2026-10-17-deep-review/models/senate_idaho_revision_2337_method.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/idaho_followup_skeptic.md",
+   "research/2026-10-17-deep-review/advisories/idaho_followup_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/idaho_official_ballot_addendum.json",
+  "management": "Cancel first on changed/uncertaincandidate/withdrawal/ballot/poll instrument/load-bearingfacts; review eachtick/earliermaterialnews. Pull before knownOct20Kelloggforum; timezoneparticipantsunverified, conservative00:00UTCOct20latest. Revalue beforeNov3election. No measuredhedge; includeallHousependingrisk.",
+  "monitoring": "Existingwatcher Idaho candidatefeed baseline30/30seenbeforetier1promotion23:53:17; subsequentnormalcycle23:57:08verified. No newdaemon/timer/stateedit. Broad ToddAchilles/Risch/IdahoSenate/Loesbyterms passdirecttier1.",
+  "latest_catalyst": "Futureindependentlikely-voterpoll/questionnaire/candidatechanges; Oct20forumtimezone/participantsunverified, conservativepullby00:00UTCOct20. ElectionNov3. ExactclaimnamedIndependent,notcaucus."
  }
 }

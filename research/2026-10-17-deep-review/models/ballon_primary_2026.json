@@ -1,0 +1,109 @@
+{
+  "authored_by": "primary",
+  "generated_utc": "2026-10-17T23:46:29.510167+00:00",
+  "status": "Uncalibrated full-field judgment before quotes, not expert jury probability model or execution authority",
+  "source_facts_sha256": "763e2b59cdf52cc728c566bbd4dc3f9c8a0dd9ede5d6b2779c076ed77eb015a0",
+  "regimes": {
+    "world_cup_individual_dominance": {
+      "weight": 0.4,
+      "p": {
+        "Rodri": 0.5,
+        "Lamine Yamal": 0.15,
+        "Kylian Mbappé": 0.1,
+        "Lionel Messi": 0.08,
+        "Pau Cubarsí": 0.04,
+        "Fabián Ruiz": 0.03,
+        "Khvicha Kvaratskhelia": 0.03,
+        "Harry Kane": 0.03,
+        "Ousmane Dembélé": 0.01,
+        "Vitinha": 0.01,
+        "remaining_nominees": 0.02
+      }
+    },
+    "season_attacking_output": {
+      "weight": 0.35,
+      "p": {
+        "Rodri": 0.08,
+        "Lamine Yamal": 0.2,
+        "Kylian Mbappé": 0.18,
+        "Lionel Messi": 0.03,
+        "Pau Cubarsí": 0.01,
+        "Fabián Ruiz": 0.01,
+        "Khvicha Kvaratskhelia": 0.16,
+        "Harry Kane": 0.23,
+        "Ousmane Dembélé": 0.05,
+        "Vitinha": 0.03,
+        "remaining_nominees": 0.02
+      }
+    },
+    "new_star_and_rounded_season_recognition": {
+      "weight": 0.25,
+      "p": {
+        "Rodri": 0.12,
+        "Lamine Yamal": 0.55,
+        "Kylian Mbappé": 0.06,
+        "Lionel Messi": 0.02,
+        "Pau Cubarsí": 0.01,
+        "Fabián Ruiz": 0.01,
+        "Khvicha Kvaratskhelia": 0.1,
+        "Harry Kane": 0.05,
+        "Ousmane Dembélé": 0.04,
+        "Vitinha": 0.02,
+        "remaining_nominees": 0.02
+      }
+    }
+  },
+  "timely_2026_winner_probability": 0.98,
+  "timely_probability_judgment_not_measured": true,
+  "winner_probabilities": {
+    "Jude Bellingham": 0.00098,
+    "Pau Cubarsí": 0.02156,
+    "Marc Cucurella": 0.00098,
+    "Ousmane Dembélé": 0.030869999999999998,
+    "Luis Díaz": 0.00098,
+    "Bruno Fernandes": 0.00098,
+    "Gabriel": 0.00098,
+    "Erling Haaland": 0.00098,
+    "Achraf Hakimi": 0.00098,
+    "Harry Kane": 0.1029,
+    "Khvicha Kvaratskhelia": 0.09114,
+    "Lamine Yamal": 0.26215,
+    "Sadio Mané": 0.00098,
+    "Marquinhos": 0.00098,
+    "Lautaro Martínez": 0.00098,
+    "Kylian Mbappé": 0.11564,
+    "Nuno Mendes": 0.00098,
+    "Lionel Messi": 0.04655,
+    "João Neves": 0.00098,
+    "Michael Olise": 0.00098,
+    "Willian Pacho": 0.00098,
+    "Julián Quiñones": 0.00098,
+    "Declan Rice": 0.00098,
+    "Rodri": 0.25284,
+    "Fabián Ruiz": 0.01764,
+    "William Saliba": 0.00098,
+    "Ferran Torres": 0.00098,
+    "Dayot Upamecano": 0.00098,
+    "Vinícius Jr.": 0.00098,
+    "Vitinha": 0.01911,
+    "__no_winner_by_2026_12_31__": 0.02
+  },
+  "raw_yamal_yes": 0.26215,
+  "primary_rounded_yamal_yes": 0.26,
+  "primary_range": [
+    0.05,
+    0.6
+  ],
+  "entry_reserve": 0.2,
+  "full_source_packets": [
+    "data/deep_review_20261017/ballon_fullfield_original_facts.json",
+    "data/deep_review_20261017/ballon_decisive_awards_followup.json"
+  ],
+  "limitations": [
+    "Allregimewinnerallocations/weights are primaryjudgment, notmeasuredjuryballots, trainingorbacktest.",
+    "Noexpert-vote/bookieconsensus orverifiedprivateshortlist hasbeenobtained.",
+    "YamalWCindividualstatlinegap;nominee57/25/20notWCtotals.",
+    "No votingdeadlineinoriginalregulationstext; assumejuryclosedunsupported, do notclaim.",
+    "Other20nomineesgetnonzeromass,but2%aggregate isjudgmentnotempiricalbound."
+  ]
+}

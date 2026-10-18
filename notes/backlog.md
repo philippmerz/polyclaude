@@ -1,3 +1,15 @@
+## Current — October18 00:09UTC
+
+Finite primaryreview continues:161valued/2blocked/327factual/2510pending,444active.
+First100alreadyreported. Save/index eachcase before next; checkpointauthority.
+FiveunfilledLIVEbids now fourHouse+Idaho34YES@3c/1.02risk, pending10.82/free14.176890.
+IPO NO5@62c canceledzero-fill on unresolvedrevenueinputs; review_required, no repost.
+Idaho cancel first on materialuncertainty, eachtickreview, **pullby00:00UTCOct20**
+beforeforum; beforeNov3. ExactIDs/proofs inresting_orders/current_context.
+Minimum-roundingfailureprovennosubmit/reconciled; minimalguard/33testspassed.
+No newwatcher/timer/goal; existingnextfull02:00. Offline ledger489recordsauditpassed;
+newIowacase432is490threcord. Oldsource/quotetimesarehistorical, notcurrentgates.
+
 ## Research checkpoint — October17 23:34UTC
 
 157 valuations,1 blocked review and327 factual exclusions are saved;2,515 remain
@@ -4931,3 +4943,32 @@ certifiedballot/currentgates. No order yet. Read senate_idaho_revision_2337_meth
 for recoveredoriginalPeakmemo and currentD56/R43/Other1, DD51/RR15. Oldcases
 stayimmutable; no canonicalmoneypriorchanged. Case1870 is no longer pending
 valuation, only concreteentryfollowup. Source/fact assistants own no forecasts.
+
+
+## 2026-10-18T00:00:43.102963+00:00 — IPO bid canceled, with zero fills
+
+The Anthropic-largest-2026-IPO NO5@62c bid is **CANCELED**, not a holding or
+a sale. New revenue headlines created uncertainty about a valuation input.
+The vetted cancel succeeded; independent authenticated order status is
+CANCELED with zero matched shares, and both IPO outcome balances are zero.
+Proof window23:59:23–27UTC, Polygon95717478. DEC0209 records the cancellation;
+DEC0207 is marked canceled/unfilled rather than graded as an investment.
+
+Four House bids remain LIVE and zero-filled: ME02YES10@38c, CA06NO50@3c,
+MT01YES10@33c and NY01YES10@12c. pUSD24.996890; live pending9.80 and arithmetic
+free15.196890. The old canceled-order reservation may remain through its
+normal grace/trade reconciliation, so guarded spendability can be lower;
+no reservation was manually removed. Exact prior order IDs stay in dated
+records below. No profit or loss was realized from this unfilled cancellation.
+
+The old IPO24/76 numeric research prior is marked review_required, not a
+current re-entry recommendation. Verify whether16.8B is quarterly recognized
+revenue or annualized runrate, its actual event date, and its effect on the
+first-day market-cap model. No repost before primary revaluation/current gates.
+The Idaho33YES@3c proposal remains unsubmitted. Its news normal-cycle reload
+was verified23:57:08 after baseline/promotion; current funds/source/order
+verification still precedes submission. Current review count160valued,2blocked,
+327excluded,2511pending; no active case. First100 already delivered.
+
+Receipt: data/deep_review_20261017/all_pilots_ipo_cancel_verify_0000.json
+(private0600). New source investigation: ipo_revenue_alert_followup_2359.json.
