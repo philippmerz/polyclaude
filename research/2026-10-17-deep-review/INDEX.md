@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T14:34:03.608104+00:00
+Updated: 2026-10-18T18:20:08.695382+00:00
 
-**254 valuations saved; first milestone100:** 254 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2413 pending.
+**259 valuations saved; first milestone100:** 259 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2408 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -207,12 +207,17 @@ Each report below is written before moving to the next evaluation. Related contr
 |193|[Will the Democratic Party win the NC-01 House seat?](evaluations/0193.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |194|[Will "You Can See Everything" score at least 96 on the Rotten Tomatoes Tomatometer?](evaluations/0194.md)|valued|NO ENTRY: currenthighscoredoesnotremoveuncertainty; bothdatedsides failactual15-pointreserve.|
 |195|[Spread: Galatasaray SK (-1.5)](evaluations/0195.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|196|[Will Microsoft be the third-largest company in the world by market cap on October 31?](evaluations/0196.md)|valued|NO ENTRY: YES positivecentral fails actual20pp reserve; NO negativecentral.|
 |197|[Will the price of Ethereum be above $2,400 on October 19?](evaluations/0197.md)|valued|NO ENTRY: datedsource/old-booktimemismatch and no proven directional edge; currentboth-sidegatesneeded.|
 |198|[Will Billie Jean – Michael Jackson be the #2 song in the US for 2026?](evaluations/0198.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |199|[Will Anthropic IPO by December 31, 2026?](evaluations/0199.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
+|200|[Will Pep Guardiola be the next head coach of the England national team?](evaluations/0200.md)|valued|YES central tail-value lead; lower-tail support/minimum size/freshness incomplete. NO has no ask; no entry.|
+|201|[Will Saudi Aramco be the largest company in the world by market cap on December 31?](evaluations/0201.md)|valued|No entry: central rare-tail lead lacks supported floor; actual20pp reserve and expensive/unquoted NO do not support allocation.|
 |202|[Villarreal CF vs. Elche CF: O/U 0.5](evaluations/0202.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |203|[Will Alex Pretti be the #1 searched passing on Google this year?](evaluations/0203.md)|valued|Noentry; staleatcapturebothbooks, YESpositivecentralbutfails20ppreserve and10sharecashminimum;NOnegativecentral.|
+|204|[Will "Grand Theft Auto VI Launch Trailer" get between 60 and 80 million views on week 1?](evaluations/0204.md)|valued|NO ENTRY: small positivecentralYES fails actual25pp uncertaintyreserve; NOnegativecentral; asynchronousquotes.|
 |205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
+|206|[Kanye West performs in Russia by October 31?](evaluations/0206.md)|valued|NO ENTRY: central YES tail positive but unsupported downside probability, lower sensitivity fails fees; NO negative central.|
 |207|[Will the Democratic Party win the NH-01 House seat?](evaluations/0207.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |210|[Will Lionel Messi rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0210.md)|valued|Priority tiny maker investigation <=28c; no order or prior until current source/identity/fee/account/risk/monitoring proof. Dated YES ask passes selected stress, not current execution.|
 |212|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 global Netflix movie this week?](evaluations/0212.md)|valued|YES negative central EV, NO offereddepth absent; no entry|
@@ -599,3 +604,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 208

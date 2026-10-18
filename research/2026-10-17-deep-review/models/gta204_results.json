@@ -1,0 +1,190 @@
+{
+  "written_utc": "2026-10-18T18:10:46.808466+00:00",
+  "review_index": 204,
+  "before_reading_own_PM_quote": true,
+  "source_packet": "data/deep_review_20261017/gta204_counter_followup_1810.json",
+  "source_packet_sha256": "fca038b187eda57b704584461a6f553c384e4f859ebec71b6ac442d6c3c47994",
+  "views": 42636582,
+  "observed_counter_delta": 88061,
+  "observation_seconds": 990.475101,
+  "observed_counter_rate_million_per_day_equivalent": 7.6816372186624005,
+  "method": "C(t)=A*(1-exp(-k*t))+b*t fitted to cumulative counter and an uncertain smoothed daily rate; negative k retains growth states. Age uniform2.25-4.25days and rate logfactor represent unknown date-only timezone, diurnal/batching effects; they are assumptions, not measured uncertainty distributions.",
+  "base": {
+    "n": 50000,
+    "sigma_log_smoothed_rate": 0.35,
+    "floor_max_million_per_day": 4,
+    "pace_multiplier": 1,
+    "unknown_burst_weight": 0.1,
+    "probability_below60_60to80_atleast80": [
+      0.40204,
+      0.47252,
+      0.12544
+    ],
+    "median_million": 62.09357392703498,
+    "p05_p95_million": [
+      51.59068944708321,
+      94.46010514431946
+    ],
+    "negative_decay_growth_fraction": 0.0813
+  },
+  "sensitivity": {
+    "narrower_short_rate": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.2,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.3626666666666667,
+        0.6044,
+        0.032933333333333335
+      ],
+      "median_million": 61.876703320596626,
+      "p05_p95_million": [
+        54.19865485841138,
+        77.42070988524544
+      ],
+      "negative_decay_growth_fraction": 0.0162
+    },
+    "wider_short_rate": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.6,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.4307,
+        0.3214,
+        0.2479
+      ],
+      "median_million": 62.49188317678151,
+      "p05_p95_million": [
+        48.31347801851107,
+        179.8704618804439
+      ],
+      "negative_decay_growth_fraction": 0.18893333333333334
+    },
+    "no_floor": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 0,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.5095333333333333,
+        0.3703666666666667,
+        0.1201
+      ],
+      "median_million": 59.707768073811806,
+      "p05_p95_million": [
+        48.60560758148692,
+        94.36107223998545
+      ],
+      "negative_decay_growth_fraction": 0.08106666666666666
+    },
+    "larger_floor": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 6,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.3518,
+        0.5156,
+        0.1326
+      ],
+      "median_million": 63.65599539259617,
+      "p05_p95_million": [
+        51.565810265479804,
+        95.12805469411342
+      ],
+      "negative_decay_growth_fraction": 0.0813
+    },
+    "slower_smoothed_pace": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 0.6,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.8363666666666667,
+        0.15806666666666666,
+        0.005566666666666667
+      ],
+      "median_million": 53.582645043171226,
+      "p05_p95_million": [
+        47.256027330992985,
+        67.38940650486074
+      ],
+      "negative_decay_growth_fraction": 0.0028
+    },
+    "faster_smoothed_pace": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 1.4,
+      "unknown_burst_weight": 0.1,
+      "probability_below60_60to80_atleast80": [
+        0.12503333333333333,
+        0.4606,
+        0.41436666666666666
+      ],
+      "median_million": 75.1134352659733,
+      "p05_p95_million": [
+        56.39182758473496,
+        157.93305914047093
+      ],
+      "negative_decay_growth_fraction": 0.2989
+    },
+    "no_new_promotion": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0,
+      "probability_below60_60to80_atleast80": [
+        0.43656666666666666,
+        0.45626666666666665,
+        0.10716666666666666
+      ],
+      "median_million": 61.25961886140247,
+      "p05_p95_million": [
+        51.4110412581384,
+        92.4441997640696
+      ],
+      "negative_decay_growth_fraction": 0.0798
+    },
+    "larger_promotion": {
+      "n": 30000,
+      "sigma_log_smoothed_rate": 0.35,
+      "floor_max_million_per_day": 4,
+      "pace_multiplier": 1,
+      "unknown_burst_weight": 0.3,
+      "probability_below60_60to80_atleast80": [
+        0.33116666666666666,
+        0.5146333333333334,
+        0.1542
+      ],
+      "median_million": 64.33102220853931,
+      "p05_p95_million": [
+        52.11073525725298,
+        96.88573969621623
+      ],
+      "negative_decay_growth_fraction": 0.07806666666666667
+    }
+  },
+  "primary_p_yes": 0.47,
+  "primary_range": [
+    0.1,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 25,
+  "calibration": "No historical first-day trajectory or holdout fit; this is sensitivity-led primary judgment, not calibrated posterior/lower bound.",
+  "limits": [
+    "Two cumulative observations over16.5min do not identify a whole-day view intensity or intrinsic counter freshness.",
+    "Date-onlyOct15 publication does not establish exact 168hour cutoff; no deadline time invented.",
+    "Floor, smoothing factor, promotion chance and stationary release-curve shape are subjective; major source/model errors can reverse the bucket forecast.",
+    "Only exact official video/channel counter counts; Trailer1/2, allplatform totals, reuploads and comments not substituted.",
+    "Counter filtering/revisions, deletion/unavailability and unforeseen promotions can alter final source, not captured by a guaranteed bound."
+  ]
+}

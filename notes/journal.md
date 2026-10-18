@@ -31215,3 +31215,25 @@ No financial/daemon action, command replay, new valuation, CSV row or Telegram. 
 - **64 focused tests passed** after final code changes; bash syntax/diff checks passed. Offline cases exercised stale/canceled exposure, invalid classifier IDs, unknown inventory, deferred persistence, request failure/lock, late acknowledgment, critical-after-routine and fallback reason forwarding. A copied feed dictionary in the test harness initially hid replacement headlines; it is corrected. An early test-only dispatch log was moved to the run's offline-fixture archive; no production alert/receipt was removed.
 - Vetted stop/absolute detachedstart under keepalive lock verified **17:19:44**, news PID37974→**40455**; all4canonicaldaemons exactlyone/currentcode. At17:21:58 news remained alive/testedhash matched/state advanced after restart, age123.604s; metadata only, no private state reset or forced poll. [Proof](../data/news_review_routing_20261018/verification.json). DEC0218 records the operational correction; all217 prior records preserved.
 - No asset writer, forecast or performanceCSV change; financial observations retain their16:35/16:38 dates. No production test check-in or extra Telegram sent. Research254valued/2blocked/331excluded/2,413pending,next196 unchanged. Existing18UTC review, OpenRouterpull22UTC; SedgwickOct19 10UTC andBOI/IdahoOct19 22UTC. No goal, new schedule or idle continuation.
+
+
+## 2026-10-18T17:54:27.981059+00:00 — finite review resumed; OpenRouter original bid filled
+
+- Operator requested finite `/goal` for remaining3,000 review, permits substantive architecture repairs/scope reassessment; occasional materialTelegram. Small informationalunits/dense machinehandoffs, not full history reloads. [Resume](../research/2026-10-17-deep-review/RESUME.md).
+- Case196 saved/indexed immediately: Microsoft exact-third33%YES,8–65%range/20ppentryreserve; noentry at dated21cYES/80cNO asks. 255valued/2blocked/331factualexclusions/2,412pending, noactive; next200. Source collector Oct14/16 misattribution independently corrected from original rawdate/hash; model unchanged.
+- OpenRouterDEC0214 original5NO65c/$3.25 filled17:37:42; chain/indexed/authmatches verified, onlyreservation8→7 retired;7BUYs12.87pending/pUSD18.846890/free5.976890. Retain5/noadd under89%NO/74selected, adverse20low still favors exit; old22BUYpull obsolete, existing held reviews remain. No newBUY/sale/cancel/funding. [Fill/risk/source/proofs](../research/2026-10-18-openrouter-fill.md).
+
+
+## 2026-10-18T18:00UTC — required held review during finite research goal
+
+- Bankroll18:00:09.543–25.099:195.62total/gas5.67/trading189.95mid/187.79indicative depth, PM36.42/34.26,cost36.01/accountingresidual19.54. Sequential/rounded, notNAV/profit, VM/APIexcluded. CSV205rows.
+- SevenLIVEBUY12.87/sevenmatchingreservations, pUSD18.846890/free5.976890; noadditionalfills or assetactions. HLEcached53.6/65rows/Age2799s, exactbackendfreshnessunknown; otherheldsources/criteria and currentprimaryp unchanged, countercasesretained. [18review/proofs](../research/2026-10-18-1800-checkin.md).
+- Cases200/201saved after196,257valued/2blocked/331excluded/2410pending,204active. Read-only8KBresumehelper8tests passed. Goal/fillTG1253 sentonce; noadditionalroutineTG. Continuefinitequeue, saveeachcase immediately.
+
+
+## 2026-10-18 18:22 UTC — small-unit resume and five new valuations saved
+
+- Case 204: exact GTA launch trailer 60–80m in first 168h, 47% YES / 10–85% range / 25pp selected reserve; no entry. Two counters over 990.475s do not identify a whole-day rate. [Case](../research/2026-10-17-deep-review/evaluations/0204.md).
+- Case 206: qualifying promoted Ye performance anywhere in Russia by Oct31, 5% YES / 0.5–30% range; no entry. Announced St Petersburg cancellation does not settle other invitation/club events. [Case](../research/2026-10-17-deep-review/evaluations/0206.md).
+- 259 valued / 2 blocked / 331 exclusions / 2,408 pending; 592 base + 24 revisions; 208 active. Each result was recorded before starting the next. Offline incremental audit passed exact identities, report hashes and counts for 196/200/201/204; collector capture timestamps cannot audit primary quote-access timing.
+- Read-only resume helper preserves full selected rules and fails on hash/count mismatch or >8KB; eight focused tests passed. Large raw evidence remains separate. No new financial action beyond the previously reconciled original OpenRouter fill; 18UTC observations retain their dates. Continue active finite goal.

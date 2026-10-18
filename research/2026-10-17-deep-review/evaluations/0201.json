@@ -1,0 +1,159 @@
+{
+  "review_index": 201,
+  "condition_id": "0x899f8c70dae5b6d09a19ebe324e248ce8bf48002f06216fa7d937b935f4c1734",
+  "criteria_sha256": "4702fd204e136d2ed3f310bc21ae2226397bebc9297f8960778434f71bc3dfbd",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to the largest company in the world by market cap on December 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting. Largest/all companies, companycap not float or enterprise value; multicountry close/FX/shares forks explicit.",
+  "evidence": [
+    {
+      "url": "https://www.aramco.com/en/investors",
+      "observed_utc": "2026-10-18T17:51:48.942180+00:00",
+      "finding": "Official H1 report/share facts and Nov3Q3results; Q1issued242bn is dated, current net treasury units unknown; detailed receipt/access limits in Aramco201packet."
+    },
+    {
+      "url": "https://www.google.com/finance/quote/2222:TADAWUL",
+      "observed_utc": "2026-10-18T18:03:19.898927+00:00",
+      "finding": "Root browser vendor quoteSAR25.80 asofOct18 15:19:36GMT+3, displayedcap6.24TSAR; 242bnissued×price reconciles, conflicting44.66B field not used."
+    },
+    {
+      "url": "https://www.aramco.com/en/news-media/speeches/2026/remarks-by-amin-h-nasser-at-25th-wpc-energy-conference",
+      "observed_utc": "2026-10-18T18:03:19.898927+00:00",
+      "finding": "Official Oct12CEO speech describes current Hormuz/infrastructure disruption and company export resilience; known current crisis is not assumed a future upside shock."
+    },
+    {
+      "url": "https://www.sama.gov.sa/en-US/MediaCenter/News/Pages/news-557.aspx",
+      "observed_utc": "2026-10-18T17:51:48.942180+00:00",
+      "finding": "Official stated3.75SAR/USD peg; H1report uses samefixedconversion, not a verified futureFX guarantee."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.01,
+    "low": 0.0001,
+    "high": 0.12,
+    "method": "Primary finite-horizon relative-cap scenario judgment; beating current NVDA comparison is necessary, not sufficient; conditional rank factors explicit and uncalibrated.",
+    "reasoning": "Explicit ordinary/oilrotation/extreme/scope mixture; source-constrained cap~1.665T versus~5.17T leader. Tail/correlation/rank assumptions subjective; source limits retained.",
+    "calibration": "Not a fitted posterior or lower bound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.01,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339777",
+        "book_age_seconds_at_receipt": 8.061958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.01,
+            "fee": 0.0004,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.001
+              }
+            ],
+            "net": 0.0104
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 0.0104,
+        "central_expected_profit_usd": 0.08960000000000001,
+        "selected_stress_profit_usd": -0.0104,
+        "break_even_before_carry": 0.00104,
+        "break_even_constant_carry": 0.0010466540362800195,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.99,
+        "selected_stress_probability": 0.79,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339777",
+        "book_age_seconds_at_receipt": 8.061958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.99,
+            "fee": 0.0004,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.999
+              }
+            ],
+            "net": 9.9896
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry: central rare-tail lead lacks supported floor; actual20pp reserve and expensive/unquoted NO do not support allocation.",
+  "reopen_condition": "Supported source-aligned cap and joint oil/leader-tail model; independent challenge, scaled exact books and portfolio gates. NO<=76c research only.",
+  "extra": {
+    "model": "data/deep_review_20261017/work/0201_primary_before_quote_1805.json",
+    "source_packet": "data/deep_review_20261017/aramco201_facts_1800.json",
+    "actual_entry_reserve_pp": 20,
+    "priority_followup": false,
+    "family": "company-cap-rank"
+  },
+  "evaluated_utc": "2026-10-18T18:03:20.096405+00:00",
+  "question": "Will Saudi Aramco be the largest company in the world by market cap on December 31?",
+  "market_id": "676744",
+  "valuation_author": "primary_operator",
+  "original_index": 201,
+  "report_sha256": "e597d43bb1e4637f9dec0c9ca557dcff7015e9814accbcc29a021cb2fa3d8628"
+}

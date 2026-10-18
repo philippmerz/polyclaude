@@ -1,0 +1,171 @@
+{
+  "review_index": 196,
+  "condition_id": "0x27802b8b0d6d500d6ccaf122c1efbc542b8473c765782bfe6d9b5cb425f76232",
+  "criteria_sha256": "620c8206d7ba64cb5cec9e25d2b466f109345abf878f3eef145c40b44deb0f05",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to the third-largest company in the world by market cap on October 31, 2026, as of market close.\n\nThe resolution source for this market will be a consensus of credible reporting. Exactly-third/calendar/universe/shareclass forks explicit.",
+  "evidence": [
+    {
+      "url": "https://api.nasdaq.com/api/quote/MSFT/historical?assetclass=stocks&fromdate=2026-06-01&todate=2026-10-16&limit=120",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "90 common Close/Last sessions through Oct16; MSFT529.05/NVDA214.13/AAPL343.46/GOOGL340.59/GOOG336.91. Root verified raw gzip hashes and date rows."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1652044/000165204426000071/goog-20260630.htm",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "Dated filed shares, one Alphabet A/B/C company; B=A and constant quarterly shares remain assumptions."
+    },
+    {
+      "url": "https://news.microsoft.com/source/2026/10/07/microsoft-announces-quarterly-earnings-release-date-69/",
+      "observed_utc": "2026-10-17T18:54:29+00:00",
+      "finding": "MSFT Oct28 afterclose earnings before assumed Oct30 endpoint; Alphabet also Oct28, Apple Nov2 beyond window."
+    },
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-18T17:46:44.952663+00:00",
+      "finding": "Secondary worldwide coverage: MSFT fourth, Alphabet third; CMC Alphabet4.120T differs from explicit4.145T class arithmetic. Listed SpaceX is not excluded as private. Vendor cap timestamps and October shares remain unharmonized."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.33,
+    "low": 0.08,
+    "high": 0.65,
+    "method": "Primary four-company joint-rank return/earnings sensitivity plus outsider and consensus branches",
+    "reasoning": "Independent earnings recent20/89 .32386/.32281; equalwindow,2%outside,5%scope ->.330774885. Uncalibrated primary assumptions; forecast saved before own quote.",
+    "calibration": "Not a fitted posterior or lower bound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 15,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.33,
+        "selected_stress_probability": 0.13,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345333166",
+        "book_age_seconds_at_receipt": 14.672958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.1,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.21
+              }
+            ],
+            "net": 2.16636
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.0,
+            "fee": 0.06401,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.2
+              }
+            ],
+            "net": 1.93599
+          }
+        },
+        "taker_cost_usd": 2.16636,
+        "central_expected_profit_usd": 1.1336400000000002,
+        "selected_stress_profit_usd": -0.86636,
+        "break_even_before_carry": 0.216636,
+        "break_even_constant_carry": 0.21691250552723723,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6699999999999999,
+        "selected_stress_probability": 0.4699999999999999,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345333166",
+        "book_age_seconds_at_receipt": 14.672958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 8.0,
+            "fee": 0.064,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.8
+              }
+            ],
+            "net": 8.064
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 7.9,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.79
+              }
+            ],
+            "net": 7.83364
+          }
+        },
+        "taker_cost_usd": 8.064,
+        "central_expected_profit_usd": -1.3640000000000008,
+        "selected_stress_profit_usd": -3.3640000000000008,
+        "break_even_before_carry": 0.8064,
+        "break_even_constant_carry": 0.8074292567124767,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: YES positivecentral fails actual20pp reserve; NO negativecentral.",
+  "reopen_condition": "YES<=10c or NO<=44c research triggers plus harmonizedcap/weekend/event-tail support and fresh portfolio/execution gates.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/marketcap196_results.json",
+    "factual_packet": "data/deep_review_20261017/marketcap196_facts_1745.json",
+    "factual_correction": "data/deep_review_20261017/marketcap196_price_discrepancy.json",
+    "primary_before_quote": "data/deep_review_20261017/work/0196_primary_before_quote_1755.json",
+    "actual_entry_reserve_pp": 20,
+    "family": "company-cap-rank",
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T17:52:54.997467+00:00",
+  "question": "Will Microsoft be the third-largest company in the world by market cap on October 31?",
+  "market_id": "5166967",
+  "valuation_author": "primary_operator",
+  "original_index": 196,
+  "report_sha256": "a2804b1d0223cff50f14432a1b890f09a7acd280fe684be7b2dcd693f14c3e88"
+}

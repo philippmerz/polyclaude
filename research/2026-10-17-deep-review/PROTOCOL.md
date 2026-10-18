@@ -1,11 +1,13 @@
 # Resume protocol and operator scope
 
+**Small-unit onboarding:** read [RESUME.md](RESUME.md) and `scripts/deep_review_resume.py` output before loading historical indexes. October18 operator explicitly requested a finite `/goal` and permits method repair/scope reassessment on substantive limitations. Latest account state is `notes/current_context.md`/`notes/resting_orders.md`; historical money instructions below cannot reopen completed work.
+
 **Final financial follow-up, October18 14:58:02 UTC:** film DEC-0216 is **canceled unfilled**, terminal canceled/confirmed trade matches0/both film cases CTF0 after300s grace. Only its reservation9→8 was retired; **eight LIVE/zero-matched BUYs, $16.12 pending, pUSD22.096890/free5.976890**, fixed Polygon95753423. No film holding, cash spend, realized PnL or add/repost; temporary film feed/keyword retired after proof. The14:50 acceptance below is dated history. Messi remains5YES/noadd. [Final outcome](film2161_entry_1450.md).
 
 
 Operator authorized a continuous, finite in-depth review of all but clearly irrelevant conditions in the frozen 3,000-market universe on October 17. First 100 completed valuations is the inspection milestone; blocked cases and exclusions remain separate. Continue useful research through compaction; do not stop after building tracking. No token scarcity shortcut. Do not create an indefinite goal, new watcher, or idle continuation.
 
-1. Read `notes/deep_review_checkpoint.json`, this protocol, `progress.json`, and the active case files/drafts. The original diagnostic's `completed` status is distinct from this active new review.
+1. Read `notes/deep_review_checkpoint.json`, [RESUME.md](RESUME.md), the bounded `deep_review_resume.py` packet, and selected active case files/drafts. The original diagnostic's `completed` status is distinct from this active new review.
 2. All 3,000 exact conditions start pending. Ignore old model screening verdicts for exclusion. Preserve exact condition, market, outcome-token IDs and full criteria hash. Use original index ordering; grouping common sources is permitted, with each affected condition indexed explicitly. Do not restrict research to the previous 255 flags.
 3. Exclude only a documented, factual reason (e.g. completed/closed event with no live position route; an already certain event priced near 99.8% at current relevant quotes; inaccessible or beyond-project-horizon cases only after reading exact rules). Record exclusions separately; never count them toward 100 substantive reviews. A title, cheap-model interpretation, liquidity or favorite-price screen cannot reject a case.
 4. Primary operator reads the complete literal rules and owns evidence interpretation, forecasts and valuation. Cheap agents may retrieve bounded factual sources/quotes, but cannot weed out candidates or supply authoritative investment judgments. Share a source model across exact related instruments only where the relation is proved. Do not count one family as many independent forecasts.
@@ -33,7 +35,7 @@ Operator authorized a continuous, finite in-depth review of all but clearly irre
     and `notes/resting_orders.md`; none of these dated research observations
     replaces a current execution check.
 
-Current corrections: read [CURRENT_REVISIONS.md](CURRENT_REVISIONS.md) and [candidate_followup.md](candidate_followup.md) alongside canonical reports. Older immutable scenario ranges/quotes do not overwrite these dated corrections.
+Current corrections: use the selected case’s latest verified revision pointer in `deep_review_resume.py`. Query [CURRENT_REVISIONS.md](CURRENT_REVISIONS.md) / [candidate_followup.md](candidate_followup.md) only for that case or family; do not ingest their full histories. Older scenario ranges/quotes remain dated evidence.
 
 
 ## Historical review pointer — October 18, 14:50 UTC (superseded)

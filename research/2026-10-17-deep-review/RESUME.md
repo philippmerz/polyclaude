@@ -1,0 +1,14 @@
+# Finite 3,000-market review — small resume units
+
+Operator explicitly requested `/goal` October18: continue the remaining review; occasional material Telegram progress; repair or investigate substantive limitations rather than force3,000 completions. No new timer/watcher. Each scheduled tick retains its own bounded safety work.
+
+1. Read `notes/current_context.md` for latest dated portfolio/active-task pointers; check expiry/hashes. Then `notes/deep_review_checkpoint.json` for exact counts/active/next.
+2. Run `.venv/bin/python scripts/deep_review_resume.py` (default active else first pending), or `--index N`. Default8,000UTF8byte hard cap; complete literal rules/identity, effective report/revision pointers and hashes. It never calls network/account/writers. Oversize or integrity failure must be resolved; no truncating exact rules to fit.
+3. Load only the selected report/draft and its named model/source unit. Optional `data/deep_review_20261017/work/NNNN_resume.json` holds small scoped path pointers. Read raw source excerpts/rows as needed for actual verification; collector summaries are leads, not proof. Keep date/configuration/hash bindings exact.
+4. Pending: `deep_review_ledger.py start --index N`; primary reads full exact rules/evidence, reasons p/range and both-side economics. Source families may share facts/models, never substitute one contract for another. Cheap workers cannot reject substantive cases. No fixed pass count; factual exclusions/blocked reviews/valuations separate.
+5. Save one primary final JSON and call `record --input PATH` **before next evaluation**. Immutable base reports; explicit append-only `revise` with predecessorSHA for changed conclusions. Preserve drafts and source receipts immediately. A case report is a small informational unit; avoid dumping large arrays when only a dated row/statistic is needed.
+6. Promising entries compete with known candidates/cash/held risks. Before money moves, independently revalidate exact identity, source, eligibility, funding, fees, depth, thesis/catalysts, exposure and vetted execution gates. Research output is never later execution authorization.
+
+Do **not** ingest fullINDEX.md/index.csv, evaluations.jsonl, CURRENT_REVISIONS.md, candidate_followup.md, SOURCE_QUEUE.md or the full journal on each resume. They are historical indexes, not a required context blob. Query the chosen exact case/family; latest immutable revision plus current account state governs. Dates in historical prose do not refresh observations or reactivate completed actions. First100/200 milestones already notified.
+
+Use dense machine records and short linked summaries. Target checkpoint/resume units≤8KB; large raw evidence stays separately indexed. This adds no probability model, screening rejection or automatic investment rank.

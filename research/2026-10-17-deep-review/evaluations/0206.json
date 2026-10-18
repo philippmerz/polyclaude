@@ -1,0 +1,168 @@
+{
+  "review_index": 206,
+  "condition_id": "0xfd155fdd279dc1f5aaa451285a2f98777fcf7d37719d630aa7918472e5d57ce2",
+  "criteria_sha256": "0b997b429001a108b69d1dcfa8196788d4003d116ba707c1597d713268fcc9a5",
+  "status": "valued",
+  "literal_analysis": "Ye, formerly known as Kanye West, is scheduled to perform in Russia in October 2026.\n\nThis market will resolve to \"Yes\" if Kanye West performs live in-person on-stage in front of a live audience in Russia by October 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe performance must take place at an event that was announced or promoted in advance, and held at a venue such as an arena, stadium, festival ground, concert hall, theater, or club, and is open to an audience by ticket, invitation, or other controlled entry.\n\nThe resolution source for this market will be a consensus of credible reporting. No start-date proof; Octobercontext/prospectivecreation, qualifying other promoted invitationevents retained.",
+  "evidence": [
+    {
+      "url": "https://tour.yeezy.com/",
+      "observed_utc": "2026-10-18T18:06:35.444609+00:00",
+      "finding": "Official current tour lists JakartaOct24/HoustonOct31, noRussia; omission is not non-performance proof."
+    },
+    {
+      "url": "https://www.fontanka.ru/2026/10/10/76692987/",
+      "observed_utc": "2026-10-18T18:12:43.149638+00:00",
+      "finding": "Oct10 on-scene arena/refund report supports announcedOct10 no-show, not all Russia/Oct11."
+    },
+    {
+      "url": "https://www.interfax.ru/amp/1119485",
+      "observed_utc": "2026-10-18T18:19:55.077912+00:00",
+      "finding": "Sept30 cancellation of announcedOct10/11 attributed SayAgency; public linked Telegram onlyembed shell, original text not directlyverified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.3,
+    "method": "Primary cancellation/current-tour evidence plus explicit unobserved/new-event/scope branches",
+    "reasoning": "Announced October10/11 shows canceled per organizer attribution and Oct10 on-scene account. Official current tour has JakartaOct24/HoustonOct31 but omission is not absence proof. Broad invitation-only/club eligibility and historical-scope ambiguity retain tails. Weights are judgment sensitivities, not a calibrated statistical bound. No own PM prices read before this saved draft; quote packet was captured earlier by collector and its earlier timing alone cannot audit read access.",
+    "raw_scenario_probability": 0.0494,
+    "calibration": "Judgment weights, not calibrated bounds"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 20,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "selected_stress_probability": 0,
+        "best_bid": 0.004,
+        "best_ask": 0.005,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339002",
+        "book_age_seconds_at_receipt": 8.836958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.05,
+            "fee": 0.00249,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.005
+              }
+            ],
+            "net": 0.05249
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.04,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.004
+              }
+            ],
+            "net": 0.038
+          }
+        },
+        "taker_cost_usd": 0.05249,
+        "central_expected_profit_usd": 0.44751,
+        "selected_stress_profit_usd": -0.05249,
+        "break_even_before_carry": 0.005249,
+        "break_even_constant_carry": 0.005257934717970212,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.95,
+        "selected_stress_probability": 0.75,
+        "best_bid": 0.995,
+        "best_ask": 0.996,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339002",
+        "book_age_seconds_at_receipt": 8.836958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.96,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.996
+              }
+            ],
+            "net": 9.962000000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.95,
+            "fee": 0.00249,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.995
+              }
+            ],
+            "net": 9.94751
+          }
+        },
+        "taker_cost_usd": 9.962000000000002,
+        "central_expected_profit_usd": -0.4620000000000015,
+        "selected_stress_profit_usd": -2.4620000000000015,
+        "break_even_before_carry": 0.9962000000000002,
+        "break_even_constant_carry": 0.9978957069997951,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: central YES tail positive but unsupported downside probability, lower sensitivity fails fees; NO negative central.",
+  "reopen_condition": "New qualifying-event evidence or independently supported low-end probability plus fresh exact book/fees; YES<=0.3c/NO<=70c research only.",
+  "extra": {
+    "source_packets": [
+      "data/deep_review_20261017/kanye206_current_facts_1806.json",
+      "data/deep_review_20261017/kanye206_postevent_facts_1815.json"
+    ],
+    "primary_draft": "data/deep_review_20261017/work/0206_primary_before_quote_1820.json",
+    "actual_entry_reserve_pp": 20,
+    "family": "named-live-performance",
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-18T18:19:55.144815+00:00",
+  "question": "Kanye West performs in Russia by October 31?",
+  "market_id": "3719741",
+  "valuation_author": "primary_operator",
+  "original_index": 206,
+  "report_sha256": "27cb81d4e36498dc2782fe69b706a27f9244c4f7e25c078597cc894bc950f270"
+}

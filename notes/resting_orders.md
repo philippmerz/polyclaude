@@ -1,5 +1,8 @@
 # Standing resting orders (GTC post-only makers)
 
+**Latest fill/reconciliation — October18 17:48UTC:** OpenRouter112 DEC0214 original5NO65¢/$3.25 is **fully filled**, successful receipt+indexed buys+CTFs agree. Only its reservation retired8→7; **seven LIVE BUYs/$12.87 pending**, pUSD18.846890/free5.976890 at fixedblock95760237. Retain5NO/noadd; old today22UTC BUY pull is obsolete, holding review at existing18/22checks/earliermaterialnews. Insurance auditrc0 CLEAN7indexed+1deindexed. Film remains canceled unfilled. [Exact proof/hold judgment](../research/2026-10-18-openrouter-fill.md). Earlier snapshots below are dated history.
+
+
 ## October 18 14:58:02 UTC — film canceled unfilled; eight BUYs remain
 
 **No film order or holding remains.** DEC-0216 was canceled before handoff;

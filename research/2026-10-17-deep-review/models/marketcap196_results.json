@@ -1,0 +1,220 @@
+{
+  "created_utc": "2026-10-18T17:45:09.914163+00:00",
+  "review_index": 196,
+  "before_reading_own_PM_quote": true,
+  "seed": 19620261018,
+  "samples_per_cell": 100000,
+  "input_path": "research/2026-10-17-deep-review/models/marketcap_inputs.json",
+  "input_sha256": "32dafab53f6f77deb6ef862d670824e3f9fe7b5366393d3a27f688d32f2cfca7",
+  "history_dates": [
+    "06/10/2026",
+    "10/16/2026"
+  ],
+  "latest_caps_trillion": [
+    5.160533,
+    5.0125170628,
+    3.92848484201355,
+    4.145076339999999
+  ],
+  "full_joint_rank_not_pairwise_product": true,
+  "future_sessions": 10,
+  "main_assumptions": "Zero log drift, fixed dated issuer shares, last regular Oct30 close for Saturday Oct31; equal subjective recent20/long89 window weights; 8% MSFT and Alphabet independent earnings log-SD and 3% NVDA event SD, Apple0 before Nov2 call.",
+  "results": [
+    {
+      "returns": 20,
+      "company_order": [
+        "NVDA",
+        "AAPL",
+        "MSFT",
+        "Alphabet"
+      ],
+      "daily_sd": [
+        0.0156289705972823,
+        0.010240371178043493,
+        0.013998616713993219,
+        0.014262375146224337
+      ],
+      "scenarios": {
+        "gaussian": {
+          "MSFT_rank_1_to_4": [
+            0.0,
+            0.0,
+            0.10875,
+            0.89125
+          ],
+          "p_exact_third": 0.10875
+        },
+        "vector_bootstrap": {
+          "MSFT_rank_1_to_4": [
+            0.0,
+            0.0,
+            0.10904,
+            0.89096
+          ],
+          "p_exact_third": 0.10904
+        },
+        "earnings_independent": {
+          "MSFT_rank_1_to_4": [
+            0.00111,
+            0.00582,
+            0.32386,
+            0.66921
+          ],
+          "p_exact_third": 0.32386
+        },
+        "earnings_correlated": {
+          "MSFT_rank_1_to_4": [
+            0.00088,
+            0.00535,
+            0.27241,
+            0.72136
+          ],
+          "p_exact_third": 0.27241
+        },
+        "wide_earnings": {
+          "MSFT_rank_1_to_4": [
+            0.03294,
+            0.04211,
+            0.33593,
+            0.58902
+          ],
+          "p_exact_third": 0.33593
+        },
+        "student_t5": {
+          "MSFT_rank_1_to_4": [
+            8e-05,
+            0.00087,
+            0.0872,
+            0.91185
+          ],
+          "p_exact_third": 0.0872
+        },
+        "MSFT_relative_minus5pct": {
+          "MSFT_rank_1_to_4": [
+            0.00015,
+            0.0013,
+            0.19463,
+            0.80392
+          ],
+          "p_exact_third": 0.19463
+        },
+        "MSFT_relative_plus5pct": {
+          "MSFT_rank_1_to_4": [
+            0.00594,
+            0.02065,
+            0.46342,
+            0.50999
+          ],
+          "p_exact_third": 0.46342
+        }
+      }
+    },
+    {
+      "returns": 89,
+      "company_order": [
+        "NVDA",
+        "AAPL",
+        "MSFT",
+        "Alphabet"
+      ],
+      "daily_sd": [
+        0.023024489541693817,
+        0.01775638469680046,
+        0.023265681235131005,
+        0.020517310746679354
+      ],
+      "scenarios": {
+        "gaussian": {
+          "MSFT_rank_1_to_4": [
+            9e-05,
+            0.00413,
+            0.25169,
+            0.74409
+          ],
+          "p_exact_third": 0.25169
+        },
+        "vector_bootstrap": {
+          "MSFT_rank_1_to_4": [
+            0.00201,
+            0.01207,
+            0.20472,
+            0.7812
+          ],
+          "p_exact_third": 0.20472
+        },
+        "earnings_independent": {
+          "MSFT_rank_1_to_4": [
+            0.00521,
+            0.02387,
+            0.32281,
+            0.64811
+          ],
+          "p_exact_third": 0.32281
+        },
+        "earnings_correlated": {
+          "MSFT_rank_1_to_4": [
+            0.00438,
+            0.02176,
+            0.29981,
+            0.67405
+          ],
+          "p_exact_third": 0.29981
+        },
+        "wide_earnings": {
+          "MSFT_rank_1_to_4": [
+            0.04054,
+            0.0601,
+            0.32281,
+            0.57655
+          ],
+          "p_exact_third": 0.32281
+        },
+        "student_t5": {
+          "MSFT_rank_1_to_4": [
+            0.00157,
+            0.00943,
+            0.20832,
+            0.78068
+          ],
+          "p_exact_third": 0.20832
+        },
+        "MSFT_relative_minus5pct": {
+          "MSFT_rank_1_to_4": [
+            0.00141,
+            0.00892,
+            0.21831,
+            0.77136
+          ],
+          "p_exact_third": 0.21831
+        },
+        "MSFT_relative_plus5pct": {
+          "MSFT_rank_1_to_4": [
+            0.01641,
+            0.05392,
+            0.42547,
+            0.5042
+          ],
+          "p_exact_third": 0.42547
+        }
+      }
+    }
+  ],
+  "main_4company_probability": 0.323335,
+  "subjective_outside_company_branch": {
+    "weight": 0.02,
+    "conditional_p": 0.25
+  },
+  "subjective_consensus_calendar_branch": {
+    "weight": 0.05,
+    "conditional_p": 0.5
+  },
+  "primary_raw_p_yes": 0.330774885,
+  "primary_p_yes": 0.33,
+  "calibrated_posterior_or_lower_bound": false,
+  "limitations": [
+    "Historical covariance may change; no option-implied event distribution or directional alpha.",
+    "Window weights, earnings shocks, outsider and adjudication branches are primary assumptions.",
+    "Exact-third can lose on both overperformance to rank1/2 and underperformance to rank4+.",
+    "Actual October share counts, worldwide inclusion and Saturday convention are not specified by the two-sentence rule."
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "review_index": 204,
+  "condition_id": "0x5d3143945da3dc365e94e0e162d8b93210d0ac1546b1b5b138702cbf627a7ad0",
+  "criteria_sha256": "0639d74e7af2d23bf02a71767e78c72ff3031598d9fafdfbeda460c0aa70dfd4",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the number of views the Grand Theft Auto VI Launch Trailer video gets in the first 7 days after being posted on the Rockstar Games YouTube channel. This market may not resolve until the 7 days are complete, regardless of whether a strike is reached earlier.\n\nIf the reported value falls exactly between two brackets, then this market will resolve to the higher range bracket.\n\nThe resolution source for this market is Rockstar Games' YouTube channel (https://www.youtube.com/@RockstarGames), specifically the 'views' counter for the described video.\n\nNote: This market refers only to the \"Grand Theft Auto VI Launch Trailer\" video posted by Rockstar Games (see: https://www.youtube.com/watch?v=rz1B4B2yBZY). Exactly60inclusive80exclusive; same video only, whole7days required; date-only postinghour unresolved.",
+  "evidence": [
+    {
+      "url": "https://www.youtube.com/watch?v=rz1B4B2yBZY",
+      "observed_utc": "2026-10-18T18:05:57.289433+00:00",
+      "finding": "Exact official video/channel and rawcounter42,636,582; +88,061 vs17:49 over990.475s. Date-onlyOct15, no exactuploadtime; counterfreshness unproven."
+    },
+    {
+      "url": "https://www.rockstargames.com/VI",
+      "observed_utc": "2026-10-18T17:50:09.500426+00:00",
+      "finding": "Official landingpage Oct15launchtrailercard corroborates date, not exact168hour deadline or futureviews. LinkedNewswire redirected to storearticle, not launchannouncement evidence."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.47,
+    "low": 0.1,
+    "high": 0.85,
+    "method": "Primary two-counter release-curve projection with uncertain age/diurnal smoothing/floor/promotion branches",
+    "reasoning": "Exactviews42.636582m and observed88,061/990.475s identify conditional curve, not dayrate.50kassumption draws47.252%60–80m; sensitivity15.8–60.4%; broader10–85range retains misspecification. Saved before ownquote.",
+    "calibration": "Unvalidated model shape and weights, no measured lower bound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 5,
+    "actual_entry_reserve_pp": 25.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.47,
+        "selected_stress_probability": 0.21999999999999997,
+        "best_bid": 0.411,
+        "best_ask": 0.419,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345347756",
+        "book_age_seconds_at_receipt": 0.082958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 4.1899999999999995,
+            "fee": 0.12172,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.419
+              }
+            ],
+            "net": 4.311719999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 4.109999999999999,
+            "fee": 0.12104,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.411
+              }
+            ],
+            "net": 3.9889599999999996
+          }
+        },
+        "taker_cost_usd": 4.311719999999999,
+        "central_expected_profit_usd": 0.38827999999999996,
+        "selected_stress_profit_usd": -2.1117199999999996,
+        "break_even_before_carry": 0.43117199999999994,
+        "break_even_constant_carry": 0.43135536557476833,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.53,
+        "selected_stress_probability": 0.28,
+        "best_bid": 0.581,
+        "best_ask": 0.589,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345347756",
+        "book_age_seconds_at_receipt": 0.082958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 5.89,
+            "fee": 0.12104,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.589
+              }
+            ],
+            "net": 6.0110399999999995
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 5.81,
+            "fee": 0.12172,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.581
+              }
+            ],
+            "net": 5.68828
+          }
+        },
+        "taker_cost_usd": 6.0110399999999995,
+        "central_expected_profit_usd": -0.7110399999999988,
+        "selected_stress_profit_usd": -3.2110399999999992,
+        "break_even_before_carry": 0.601104,
+        "break_even_constant_carry": 0.601359632973513,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: small positivecentralYES fails actual25pp uncertaintyreserve; NOnegativecentral; asynchronousquotes.",
+  "reopen_condition": "Supported multi-day counter/decay/cutoff model and independent challenge, then fresh exact scaledbooks; YES<=20c or NO<=25c research only.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/gta204_results.json",
+    "source_packets": [
+      "data/deep_review_20261017/gta204_facts_1800.json",
+      "data/deep_review_20261017/gta204_counter_followup_1810.json"
+    ],
+    "actual_entry_reserve_pp": 25,
+    "priority_followup": false,
+    "family": "named-video-firstweek-views"
+  },
+  "evaluated_utc": "2026-10-18T18:12:45.402418+00:00",
+  "question": "Will \"Grand Theft Auto VI Launch Trailer\" get between 60 and 80 million views on week 1?",
+  "market_id": "5732710",
+  "valuation_author": "primary_operator",
+  "original_index": 204,
+  "report_sha256": "dfdb7ccbcdc883826118f6a27cf76ae5bec9d85dc5d9ff129f74762c8bdd5c24"
+}
