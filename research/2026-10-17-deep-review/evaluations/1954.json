@@ -1,0 +1,146 @@
+{
+  "review_index": 1954,
+  "condition_id": "0x71e9f5312aac62bdc9b87fa8d171fa929eca6243d815298c4c7d61303f7d53dd",
+  "criteria_sha256": "4299e6867b11b55780f4ea2c330c10c1678ae6e352234a00cdaddd83d1e59f25",
+  "status": "valued",
+  "literal_analysis": "RepublicannomineeNE2026Senatewinner/runoffs/replacement;IndependentsnotR/D;unanimousAPFoxNBCelsecertification;fullrulesread.",
+  "evidence": [
+    {
+      "url": "https://sos.nebraska.gov/sites/default/files/doc/elections/2026/Final_Statewide_General_Candidate_Filing_List_9.11.26.pdf",
+      "observed_utc": "2026-10-17T23:53:01+00:00",
+      "finding": "Official final five Senate rows: RickettsR, MarvinLMNOW, RichardsNWP, ConboyAmericaFirst, OsbornByPetition; noDnominee inthese5rows. Hashpreserved."
+    },
+    {
+      "url": "https://backend.natpublicaffairs.com/media/Nebraska_General_Election_Memo_100926.pdf",
+      "observed_utc": "2026-10-17T23:57:39.522778+00:00",
+      "finding": "Captured originalOctober12memo Oct2–5,statewide600+weightedNE02oversample200, full5candidateR46/I43, headtohead49/46; questionsnotindependentpolls."
+    },
+    {
+      "url": "https://rollcall.com/2026/09/24/who-would-this-independent-caucus-with-everybody/",
+      "observed_utc": "2026-10-17T23:57:39.522814+00:00",
+      "finding": "Datedcurrentcycleeverybodyquote namesnoD/Rparty anddoesnotalterIndependentwinnerdefinition."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.75,
+    "low": 0.35,
+    "high": 0.95,
+    "method": "OriginalNPAfive-candidateballot+officialfinalfield/state/PVI/personaloverperformanceNEprojection, sameunderlyingforecastas348",
+    "reasoning": "ApproxR75 beforeprice, minorwinnernotindependentlyestimated;NPAremainderandoversample handled, broad35–95range/10ppreserve.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1921_2040.json.gz",
+    "quote_observed_utc": "2026-10-17T21:14:36.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.75,
+        "best_bid": 0.72,
+        "best_ask": 0.73,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 20.961,
+        "received_utc": "2026-10-17T21:14:36.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.73,
+            "fee_usd": 0.07884000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.37885,
+        "fee_usd": 0.07885,
+        "break_even_probability_before_carry": 0.737885,
+        "break_even_probability_with_idealized_carry": 0.7397124993752372,
+        "central_expected_profit_usd": 0.12115000000000009,
+        "default_10pp_stressed_profit_usd": -0.8788499999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.65,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.1193599999999995
+      },
+      "No": {
+        "probability": 0.25,
+        "best_bid": 0.27,
+        "best_ask": 0.28,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 20.961,
+        "received_utc": "2026-10-17T21:14:36.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.28,
+            "fee_usd": 0.08064
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.88064,
+        "fee_usd": 0.08064,
+        "break_even_probability_before_carry": 0.288064,
+        "break_even_probability_with_idealized_carry": 0.2887774401431501,
+        "central_expected_profit_usd": -0.3806400000000001,
+        "default_10pp_stressed_profit_usd": -1.38064,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.15,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.62116
+      }
+    }
+  },
+  "verdict": "Neitherdatedaskclears10ppreserve; illustrativeYES63/NO13only, noorder.",
+  "reopen_condition": "Freshoriginalballot/nominee/polling ortruepassive63/13priceswithappropriatesmallcashsizing/currentallgates.",
+  "current_description_sha256": "f342a1cb0d0f4d365dd18c82411bdb79fab5adcbfe2f338813a06ad3d448222f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "92576281548134350814800877416860562553699794074017301653635964206220838638047",
+    "20545755397554366279105844241414821565747450256261992143596340747510834590543"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0060",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0069",
+      "receipt_path": "logs/deep_review_20261017/quotes_1921_2040/req_0069.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1921_2040/req_0069.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "same_outcome_family_case": 348,
+    "not_independent_bet": true,
+    "case_specific_reserve_for_entry": 0.1,
+    "priority_followup": false,
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_results.json"
+  },
+  "evaluated_utc": "2026-10-18T01:02:50.690533+00:00",
+  "question": "Will the Republicans win the Nebraska Senate race in 2026?",
+  "market_id": "634892",
+  "valuation_author": "primary_operator",
+  "original_index": 1954,
+  "report_sha256": "b235d94370e5641fbbf2cb7f1ffc0bd81f390e3229fd0a193ed427228400d507"
+}

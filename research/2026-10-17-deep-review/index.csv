@@ -538,7 +538,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 537,0xf729ae84aa42bb19311a84b869f8e2a6fe502bcd77a7c9fa405d719e11212a79,5776037,Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs,excluded_factual,2026-10-17T20:37:24.277940+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/0537.md
 538,0xd654268918dbd45e86b518726e53d90c1534508dc5cb9abbd1d9cbe53c74e549,4425463,Will Lamine Yamal rank in Google’s Top 5 Most Searched Athletes of 2026?,pending,,,,
 539,0x8c4652baffaaea885d58ad8e45421d82eafb99ad3422e5b746f55ddbf6d0a3d8,5776842,"Will the price of Bitcoin be above $74,000 on October 23?",pending,,,,
-540,0xbaf847be29b7b8679baf52020057dd27a35bddea65c7e7bad6f1ab6c11b24e99,5790794,Will the Republicans win Sedgwick County in the Kansas Senate race in 2026?,pending,,,,
+540,0xbaf847be29b7b8679baf52020057dd27a35bddea65c7e7bad6f1ab6c11b24e99,5790794,Will the Republicans win Sedgwick County in the Kansas Senate race in 2026?,valued,2026-10-18T00:42:34.246940+00:00,0.49,"NOprioritymakerfollowup only; captured40ctakerfails15ppstress, noorder.",evaluations/0540.md
 541,0x35597e4e103ac82e2fa2e545c1d3166d3ab46d330b6ebb848cbf5da37dea23dd,3251602,No change in Bank of Japan’s interest rates after the October 2026 meeting?,pending,,,,
 542,0x44764fbb38283d568e5a8151dd2cbb29372969b9ee0d116d1882f5448c2f800b,5730953,Will Micron Q1 DRAM revenue be above $46B?,pending,,,,
 543,0x5c19f205507ce03ff5f3be08a8090a5969ea6870cc07b902a4ca2e61dfe48fdd,2243897,"Russia x Ukraine ceasefire agreement by December 31, 2026?",pending,,,,
@@ -1338,7 +1338,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1337,0x1234b197e14ff6db37fd503cf7224104512b35cd73001fdfc244516f60d0cf16,5648401,Amphenol (APH) Q3 organic sales growth 36%+?,pending,,,,
 1338,0x11e5f704fb5723dfbec3b47c829d1cb12dc3e99c5d7c9ff2cc53100a26ceea13,5608052,Will HJK Helsinki win on 2026-10-17?,excluded_factual,2026-10-17T20:37:52.588703+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1338.md
 1339,0x545b69b45d60ed2d1b1405b8388db1771e7e51a3db8e8a9a92413bf4f68223c3,5653746,"Will the price of Bitcoin be between $78,000 and $80,000 on October 20?",pending,,,,
-1340,0xd103195d48bf6183e28c4140bd374dd3e907e8f8d411374cb4d2d124ec4c216d,630832,Will the Republicans win the Montana Senate race in 2026?,pending,,,,
+1340,0xd103195d48bf6183e28c4140bd374dd3e907e8f8d411374cb4d2d124ec4c216d,630832,Will the Republicans win the Montana Senate race in 2026?,valued,2026-10-18T00:20:13.765299+00:00,0.94,No entry: YES small positive central EV fails10ppreserve; NO negativecentral. FuturemakerYES82c x5 only after renewed source/current execution checks.,evaluations/1340.md
 1341,0x13e25fbed1aa16c649cae4073286235e1d52d6c1cc688ae9b48cf1c3babe77e1,3566409,Will UK GDP growth in Q3 2026 be at least 1.0%?,pending,,,,
 1342,0x07d0533a8ca56e8e87bd73f3052ca934505484c04243fdb42bddccfb776c43ec,5155050,Will a 9.0+ earthquake occur worldwide by October 31?,pending,,,,
 1343,0xc84624dce0f9486dd4355396f5a4661531b563e3534139c3ea5bbdce135fe951,5244377,Will SK Slavia Praha win on 2026-10-17?,excluded_factual,2026-10-17T20:37:52.919385+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1343.md
@@ -1428,7 +1428,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1427,0x257eb5b37c72f3ced894d85acc7fc9f095d425a0461ecd378e96bd1255df24c1,701710,"Will Dogecoin reach $0.44 by December 31, 2026?",pending,,,,
 1428,0x0e189b998de2fc343b8d88db864cad6b0f23d84bd54026739bf2561db237d1cc,5350722,Holy Cross vs. Harvard: O/U 49.5,pending,,,,
 1429,0x78a5be9b2ca414ffea0ac2a5fb8acd8f17a1361365fa423741cbc412db4313b8,2365820,Ink FDV above $100M one day after launch?,pending,,,,
-1430,0x2583a7108ae2ed57936ca2a784c06d250fb68ff0f8d14e657215ba0bc354ba19,5790787,Will the Republicans win Leavenworth County in the Kansas Senate race in 2026?,pending,,,,
+1430,0x2583a7108ae2ed57936ca2a784c06d250fb68ff0f8d14e657215ba0bc354ba19,5790787,Will the Republicans win Leavenworth County in the Kansas Senate race in 2026?,valued,2026-10-18T00:45:20.151367+00:00,0.88,"Neitherdatedaskclears15ppreserve; futureYES70c/5share conditionaltrigger, noorder.",evaluations/1430.md
 1431,0x2368d2604c9c2b95bc98c51bd50c66e5351caebf05b9fe79d3398c387fe29a89,616909,Will 7 Fed rate cuts happen in 2026?,pending,,,,
 1432,0x4205c67ce0f32de4215713bc3729195b25a186e8fc2d364b87c582ec5390747a,5684894,Will KLA Corp (KLAC) Q1 total revenues be above $3.95B?,pending,,,,
 1433,0x6da73287835d7f5eab7d1dad64306b13278ae1f98025bceef5e225a54550e06b,5270684,Will Modena FC 2018 win on 2026-10-17?,excluded_factual,2026-10-17T20:37:55.989205+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1433.md
@@ -1543,7 +1543,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1542,0x004230fb1f54a139d50ba2041e062a01461c931a6725ce482e3a9ab61b2925bb,716826,Extended FDV above $800M one day after launch?,pending,,,,
 1543,0x2a5ff6f4aa42bfd54266a795ff3900665eab4315a8dc121235b70feeaa40d99c,5792394,M15 Quito: Mwendwa Mbithi vs Lucas Andrade Da Silva,excluded_factual,2026-10-17T20:37:58.473377+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1543.md
 1544,0xe4278a5b6d057ef4657bb15671843ff730797d04e1b2fe8f0b05a3b48215e159,5739745,Will the price of Solana be above $100 on October 22?,pending,,,,
-1545,0xd38f97117caf693a23a0b1ec6af94d172678bc826dde109534ea8019b7aca254,5166740,Will the Republicans win Macomb County in the Michigan Senate race in 2026?,pending,,,,
+1545,0xd38f97117caf693a23a0b1ec6af94d172678bc826dde109534ea8019b7aca254,5166740,Will the Republicans win Macomb County in the Michigan Senate race in 2026?,valued,2026-10-18T01:16:03.940632+00:00,0.9,No currententry; centralYESedge doesnotclearselected5xstress;NOnegative. Keep pending newfacts/currentpricetrigger48c illustrativeonly.,evaluations/1545.md
 1546,0xa7a82d6aefa526184a2a1980243ad9aa0bcc31b0dcde4b0a99922c5042a4ff36,5194862,Will the 2-year Treasury yield hit 5.25% in October?,pending,,,,
 1547,0x5c1ca64f372a0b36304ead231d81cc4bbbdbb153d21ac5f9a3c219928141233e,5730342,Walmart (WMT) Q3 US eCommerce sales growth 25% to 29%?,pending,,,,
 1548,0x3cf5b0e545eb77682b34b11b343ac374f4eece86465fbef96bce619420b46b85,5246948,Will NEOM SC win on 2026-10-17?,excluded_factual,2026-10-17T20:37:58.801549+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1548.md
@@ -1836,7 +1836,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1835,0xcdfdda9aae523787fc18389b8c418a291a478de394b579657b5d6427dec195f9,4397291,Will Wenbo win Worlds 2026 Finals MVP?,pending,,,,
 1836,0x340c1c3ad87ec9d60450284665ba1a386a213d818a9042fdfcc8e20e0521f624,4329893,Cowboys vs. Packers,pending,,,,
 1837,0x3392d482621c56ea88b671505df166ab696f540e35f775f459cd1531e9175855,1067835,Will Lighter reach $10 before 2027?,pending,,,,
-1838,0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4,630805,Will the Democrats win the Michigan Senate race in 2026?,pending,,,,
+1838,0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4,630805,Will the Democrats win the Michigan Senate race in 2026?,valued,2026-10-18T00:21:37.607449+00:00,0.55,"Priority small passive NO lead<=33c x10, max3.30cashrisk; dated takerNO passes10ppreserve. Newer evidence/independent reviews/current allgates required, no order.",evaluations/1838.md
 1839,0xad9aae8e10ec6b2e62d0132949cfdd4f79869b1b38fdec027816c7eb88bd51d4,5475110,Will 30-34 ships transit the Strait of Hormuz between October 12-October 18?,pending,,,,
 1840,0xc103e2edcc35f80692c84165eaf303fa7b63ddf4d2334263f885caea36252f5c,5352598,Akron vs. Miami (OH): O/U 45.5,pending,,,,
 1841,0x992813f53b0d91bcafab3fff6a82637aefb24f1d517509c653bc1cef27b91af4,5720461,Will the lowest temperature in Jeddah be 33°C on October 17?,pending,,,,
@@ -1884,11 +1884,11 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1883,0x6902084f56c2370bc13080fbaec7462cf5ef3b7c915c85645fe946365a685b2f,5345790,"Will ""Whalefall"" score at least 90 on the Rotten Tomatoes Tomatometer?",pending,,,,
 1884,0x21d938daae3a59ed85e1a3e2f7da8923f71b3759bd3e4b31e0e8d6ba85a8967f,5286812,Will San Jose Earthquakes win on 2026-10-17?,pending,,,,
 1885,0x2680935d85a7fffaa408f082ed87361efcf0d0b3613425e609a02804d987aa12,5154694,Will OpenAI’s valuation be between $1.10T and $1.20T at the end of November 2026?,pending,,,,
-1886,0x66bbf6d55e0296278858b3147689f3df9259374f158f9f028b608baa322a639c,630772,Will the Democrats win the Maine Senate race in 2026?,pending,,,,
+1886,0x66bbf6d55e0296278858b3147689f3df9259374f158f9f028b608baa322a639c,630772,Will the Democrats win the Maine Senate race in 2026?,valued,2026-10-18T00:25:48.873618+00:00,0.63,No entry: YES small positive central EV fails10ppreserve; NO negativecentral. FuturemakerYES<=51c x10 orNO<=25c x5 subject fresh allgates.,evaluations/1886.md
 1887,0xb0182d96cae36c678a284bbc15eb43eff0773641f20f681c4e6ea4bf61e21f14,5730884,Will Salesforce Q3 current RPO growth (CC) be below 13%?,pending,,,,
 1888,0x00147681abf16d5341e802c1de5fa04c5e36af3de4d5c08731669c53ad7738d2,5273157,Will Aberdeen FC win on 2026-10-17?,excluded_factual,2026-10-17T20:38:12.597572+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1888.md
 1889,0x0cd137a1fc7a27ea4819e794c9c4c8620c12021bfd0a3687880d86a8b3853334,5731423,"Will Trump's approval rating be at least 39.0 on October 23, 2026?",pending,,,,
-1890,0x57599a84bf50c94b958adb020aa2a25bf02e26453e500d3b739d86e6b783774c,630845,Will the Republicans win the New Hampshire Senate race in 2026?,pending,,,,
+1890,0x57599a84bf50c94b958adb020aa2a25bf02e26453e500d3b739d86e6b783774c,630845,Will the Republicans win the New Hampshire Senate race in 2026?,valued,2026-10-18T00:31:53.170018+00:00,0.11,Both captured asks negative central EV; futuremakerNO<=77c x10 only after renewed source/current allgates.,evaluations/1890.md
 1891,0x074bfb7533e8f912817bfb7fa42ffbbdfee04f433b3e219f5cfcd6d61380baa4,5648357,Coca-Cola (KO) Q3 organic revenue (non-GAAP) growth 8%+?,pending,,,,
 1892,0x3ac98df0825ddab9e7e376b1ec0635be32dbeb3e6dec464e2ab2e3a1307cc237,5263939,RC Strasbourg Alsace leading at halftime?,excluded_factual,2026-10-17T20:38:12.957180+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1892.md
 1893,0x1e977ee8f04d3c395b4b5bc58e777e53d8eb7662e45ceccc9cd106a8b0daf5b9,5330803,U.S. anti-cartel operation outside of the U.S. by December 31?,pending,,,,
@@ -1912,7 +1912,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1911,0xc4705cfbb2ff109ea11055bc02caf0bb7f8c0ed93d444032d05e6afb90ea2e88,5730124,Will Booking (BKNG) Q3 gross bookings be above $55B?,pending,,,,
 1912,0x4635ff4d17ce51433f1d00095a66c2cc6996dfed46f10b3e6fbaacf1c7feb924,5691377,Will SV Waldhof Mannheim 07 win on 2026-10-17?,pending,,,,
 1913,0x84fdbd1bb95c529f8eaf01d68ffc29b2a1d9bd8465a0722a73f75efc6c091d23,5171301,Will Hyperliquid reach $108 in October?,pending,,,,
-1914,0x771873c365f87bffd990644e4b688aebc1be7f18396d2eab64b996ff66e88669,631058,Will the Republicans win the Ohio Senate race in 2026?,pending,,,,
+1914,0x771873c365f87bffd990644e4b688aebc1be7f18396d2eab64b996ff66e88669,631058,Will the Republicans win the Ohio Senate race in 2026?,valued,2026-10-18T00:54:58.644662+00:00,0.25,"Bothdatedaskfailsrobustgate; researchYES13c/NO63c only, noorder.",evaluations/1914.md
 1915,0x898dadf08cabb75a000ffa5ff913b937c5610d8709c22f0263bd06d03be4a9f7,676779,Ripple Labs IPO before 2027?,pending,,,,
 1916,0x06a3504b0d04154b41a44be282b53158338297c987e991bf89a9b03ee548c3a0,5693699,Will Bruno Fernandes finish in the top 2 of the 2026 Ballon d'Or?,pending,,,,
 1917,0x147963ea8c3a4e90a99748264dba6f2621ce67a705296570be38305c84f045fb,5177551,"Will Donald Trump publicly praise Dario Amodei by October 31, 2026?",pending,,,,
@@ -1952,7 +1952,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 1951,0x3854ad55e298ce2b6a7aeb6d8cb166d9bd2e503830dc6508b0033dd06e38ec35,5777943,Will Cristiano Ronaldo attend the 2026 Ballon d'Or ceremony?,pending,,,,
 1952,0x0cc6e546c4a827c68d27a009efe42277f68b43a142ea24006cc4cff2c3f25c30,5289182,Will Club Santos Laguna win on 2026-10-17?,pending,,,,
 1953,0xfe7fb23281d756567dae3fffc911825f82234e30f4dd5e1f9463985e9df57feb,5795960,Will the highest temperature in Guangzhou be 34°C on October 19?,pending,,,,
-1954,0x71e9f5312aac62bdc9b87fa8d171fa929eca6243d815298c4c7d61303f7d53dd,634892,Will the Republicans win the Nebraska Senate race in 2026?,pending,,,,
+1954,0x71e9f5312aac62bdc9b87fa8d171fa929eca6243d815298c4c7d61303f7d53dd,634892,Will the Republicans win the Nebraska Senate race in 2026?,valued,2026-10-18T01:02:50.690533+00:00,0.75,"Neitherdatedaskclears10ppreserve; illustrativeYES63/NO13only, noorder.",evaluations/1954.md
 1955,0x31737f1d0518093bef85d1d574565e083c354a8633130841b13a41c4c4604ca2,3866625,"Will XRP reach $6.00 by December 31, 2026?",pending,,,,
 1956,0x3ef215aa6fa81ca475ba736670e7bad2808be83884ad7110fe908e83039559cd,5540584,Bursaspor vs. Bahcesehir Koleji,excluded_factual,2026-10-17T20:38:15.077941+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/1956.md
 1957,0x14b23d1c11d09c0fa32580ade510c650c83cba17a08a25c352459b0d3058125c,5798084,Will the highest temperature in Chicago be between 66-67°F on October 19?,pending,,,,
@@ -2052,7 +2052,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2051,0x8bbd0ee690c935ca8505a872279ad99fc0d248808b6b476c87ec72e02e09a066,5707474,"Will ""Sense and Sensibility"" score at least 72 on the Rotten Tomatoes Tomatometer?",pending,,,,
 2052,0x9e4b42bc6448046aec84f0aed9c87fd6fabf71fa5a4937d939451074f5c3adf8,5678159,Jeremiyah Love: Rushing Yards O/U 19.5,pending,,,,
 2053,0x284c11566675c2764eeca776d2e0834fefc1430514b7b55adbb690d2fbbf678e,678691,Will 2026 rank as the sixth-hottest year on record or lower?,pending,,,,
-2054,0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5,5790793,Will the Democrats win Sedgwick County in the Kansas Senate race in 2026?,pending,,,,
+2054,0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5,5790793,Will the Democrats win Sedgwick County in the Kansas Senate race in 2026?,valued,2026-10-18T00:43:30.924825+00:00,0.5,"YESpriorityfollowup; dated21ctaker and20cmaker clear15pppolicyreserve, noorder.",evaluations/2054.md
 2055,0x479585f7feee703a717b5c0fad059999fbf4e87d10f920a281565881058b3aa6,2870615,"Will the Ornn B200 Index be less than $3.00 on December 31, 2026?",pending,,,,
 2056,0xb348b22ca7eb2f4576c9bfc9a81318d05c3db0266d02c242a23a170b6ad7cdfb,5273601,Will Barnet FC win on 2026-10-17?,excluded_factual,2026-10-17T20:38:25.743305+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2056.md
 2057,0x2dc5b4353fe863db7a4151dbb81cb040d2c86f55558633fcd200c6d3c7518e41,2846149,"Will Russia capture Oleksiievo-Druzhkivka by December 31, 2026?",pending,,,,
@@ -2508,7 +2508,7 @@ index,condition_id,market_id,question,status,evaluated_utc,p_yes,verdict,report
 2507,0x4b5a5c874a3386e02a9005fa7b7ff85f7cbef9fdada24d2dd6cc5d0267d80fdf,5660868,Will Hyperliquid reach $84 in October?,pending,,,,
 2508,0xdb395666e9b2a4ce49cbd02b0e9e43589b59293f7f38435585729a4a949dd8fd,5273613,Will Exeter City FC win on 2026-10-17?,excluded_factual,2026-10-17T20:40:17.508001+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2508.md
 2509,0x9a9e9d8079183bc098e39f0d6aecaba9b37542da39fa5ba65e293fd94b0423c5,5564856,"Will the price of Ethereum be between $2,300 and $2,400 on October 18?",pending,,,,
-2510,0x7a230d6227b37fed0864785fb2ef4c19fc35ba7ef2c98ff069b092fc9f109398,5790786,Will the Democrats win Leavenworth County in the Kansas Senate race in 2026?,pending,,,,
+2510,0x7a230d6227b37fed0864785fb2ef4c19fc35ba7ef2c98ff069b092fc9f109398,5790786,Will the Democrats win Leavenworth County in the Kansas Senate race in 2026?,valued,2026-10-18T00:48:58.084621+00:00,0.11,"Neitherdatedaskclears15ppreserve; futureNO71c/5shareconditionaltrigger, noorder.",evaluations/2510.md
 2511,0x3b1961a856b69f9033b4b8660398c807a99c3124abb1fb3ff8845d47a51026be,4950232,"Will ""You Can See Everything"" score at least 92 on the Rotten Tomatoes Tomatometer?",pending,,,,
 2512,0x7fad3ae148ec5e8e362f325eaef1b32f2c97ea05d81cf82ecb3c0334786b474f,5687775,Rayong FC leading at halftime?,excluded_factual,2026-10-17T20:40:18.986141+00:00,,Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.,evaluations/2512.md
 2513,0x357ee5e692658d4dae5b7fe59bae12cef029f2ebffb5452f4d439a1934d84211,2232194,"Will Russia enter Kramatorsk by December 31, 2026?",pending,,,,

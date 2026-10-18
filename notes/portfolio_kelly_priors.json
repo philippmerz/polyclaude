@@ -1385,5 +1385,52 @@
   "management": "Cancel first on changed/uncertaincandidate/withdrawal/ballot/poll instrument/load-bearingfacts; review eachtick/earliermaterialnews. Pull before knownOct20Kelloggforum; timezoneparticipantsunverified, conservative00:00UTCOct20latest. Revalue beforeNov3election. No measuredhedge; includeallHousependingrisk.",
   "monitoring": "Existingwatcher Idaho candidatefeed baseline30/30seenbeforetier1promotion23:53:17; subsequentnormalcycle23:57:08verified. No newdaemon/timer/stateedit. Broad ToddAchilles/Risch/IdahoSenate/Loesbyterms passdirecttier1.",
   "latest_catalyst": "Futureindependentlikely-voterpoll/questionnaire/candidatechanges; Oct20forumtimezone/participantsunverified, conservativepullby00:00UTCOct20. ElectionNov3. ExactclaimnamedIndependent,notcaucus."
+ },
+ "will-the-democrats-win-the-michigan-senate-race-in-2026": {
+  "p_yes": 0.56,
+  "p_no": 0.44,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+  "market_id": "630805",
+  "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
+  "rationale": "Primary currentfirst-partyIA MI48D/46R Oct9–10notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30–80specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
+  "current_assessment": "Retain LIVEunfilledNO5@31c/1.55risk, authenticatedzero-filledordercheck0100 aftersourceupdate. NewNO44central/.34stress impliesEV.65/.15 before.05operations/~.004carry; negativeNO20rangecase−.55/fullcashloss1.55. No neworder/size/cancel. Futurecomparablerawcap32c, notold33c; do not addaftercompactionwithoutallnewgates. Total6pendinglastfullproof12.37/free12.626890, notnewfullinventoryatthissource-onlyrevision.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
+  "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
+   "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/kansas_poll_articles_followup.json",
+  "management": "Revieweach existingtick/earliermaterialnews;cancel firstonchanged/uncertainloadbearingpoll/candidate/withdrawal/health/ballot/turnoutfacts. Pullbeforeknownreleases/debates/votingwindows; scheduledpullOct23 22:00UTCbeforeOct24earlyvotingopening,andbeforeNov3. Existing5House/Idahocommitmentscount;nohedgecredit. Ongoingabsentee votingbeganSep24; no claimnotyetvoting.",
+  "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage."
+ },
+ "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
+  "p_yes": 0.49,
+  "p_no": 0.51,
+  "cluster": "us-politics",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "5790793",
+  "condition_id": "0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5",
+  "criteria_sha256": "23e4ab42d59e5c1fc683a1b8f3095fe91f17f75b3bfd5a2cd1403b7fdd31c5fc",
+  "rationale": "PrimaryfullSedgwickDemocraticSenatecountypluralityrulesread; currentKSsource-model31Dplusoriginal2024countyrelativeD+2.288/sourceextra5ppSD givesrawD49.0879/R49.9121/Other1. RoundedD49/R50/Other1; rangeD15–85,reserve15pp, notcalibratedfloor. Original2022countyrelative+2.172 supportsgeography, notdirect2026countyforecast. Bothindependentadvisoriesread; currentfirst-partyIApollsources, finalballot403/timeoutandSienainstrumentgapsretained.",
+  "current_assessment": "LIVE unfilled post-only BUY YES5@.20/1.00pUSD; independently01:13:10-17UTC/block95720430, exactorder 0xf13217b0e8b865d920d2ef56624f344e37284712737e479ba408a15e47c8e955. Sevenpending13.37/free11.626890; all8candidatebothbalances0. Commitment, not purchase/profit. DEC0212.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/2054.md",
+  "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/sedgwick_entry_champion.md",
+   "research/2026-10-17-deep-review/advisories/sedgwick_entry_skeptic.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/kansas_poll_articles_followup.json",
+  "settlement_interpretation": "Parent1202293hasnamedD/R,4placeholders,explicitOther; verifiedNegRisk. OfficialcurrentdocsstandardNo-to-all-otherYes conversion supportsOtherexcludingDYES, butisnotexactcaseadjudicationpromise. UnderwriteourDYESOtherbranchat0, soaninvalid/splitOtherpayoutdoesnotreduceassumedOtherpayoff. NevertradeplaceholdersorOtherorclaimRNOexactlyDYES. March31latency/UMAadmin/disputeriskremain.",
+  "management": "Revieweach existingtick/earliermaterialnews,cancelfirstonuncertainloadbearingpoll/candidate/ballot/health/turnoutfacts. PullatOct19 10:00UTCexistingtick,beforecountyOct19 13UTCinpersonopeningandTrumpOct19 23UTCrally. NexstarTuesday/Oct21weekdayconflictunresolved; earlierpullliesbeforebothpossibledebates. Anyreentryneedsfreshcalendar/newfacts;beforeNov3. No measuredhedgeagainstexistingUSpoliticsrisk.",
+  "monitoring": "Existing32ndfeed warmed01:01:46; all30cachedtitlesseen before4terms promotion01:04:26;18IDsretainedunder5000cap. Normalpostpromotionpoll/save01:09:01verified, sameconfigSHA/alivedaemon. No manualpoll/stateedit/restart/newdaemon/timer. Nonexhaustive discoverycoverage."
  }
 }

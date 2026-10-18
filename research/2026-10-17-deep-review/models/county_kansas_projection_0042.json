@@ -1,0 +1,425 @@
+{
+  "authored_by": "primary_operator",
+  "generated_utc": "2026-10-18T00:41:10.879308+00:00",
+  "price_inputs": false,
+  "current_state_results": "senate_michigan_revision_0029_results.json",
+  "local_residual_sd_pp": 5.0,
+  "other_or_delayed_fallback_probability": 0.01,
+  "status": "Uncalibrated county-relative projection; not a fitted forecast or entryauthority",
+  "counties": {
+    "Sedgwick": {
+      "source_votes": {
+        "pres2024": {
+          "D": 90506,
+          "R": 120118,
+          "total": 214152
+        },
+        "sen2022": {
+          "D": 58815,
+          "R": 90856,
+          "L": 4446,
+          "total": 154117
+        }
+      },
+      "historical_relative_D_minus_R_pp": {
+        "pres2024": 2.2880190456595475,
+        "sen2022": 2.1723492352319376
+      },
+      "central_lean_basis": "pres2024 only; sen2022 is a sensitivity, not an independent likelihood or learned weight",
+      "scenarios": {
+        "central": {
+          "mean_D_minus_R_pp": 0.14573405539964002,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.5031310128473556,
+          "R_winner": 0.4868689871526444,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_no_mean_poll_bias": {
+          "mean_D_minus_R_pp": 1.3247656788968478,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.5684892550440446,
+          "R_winner": 0.4215107449559554,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_adverse_mean_poll_bias": {
+          "mean_D_minus_R_pp": -1.0332975680975682,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.43754876254784636,
+          "R_winner": 0.5524512374521536,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D6": {
+          "mean_D_minus_R_pp": -0.19663221287000443,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.4840298367378186,
+          "R_winner": 0.5059701632621814,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D10": {
+          "mean_D_minus_R_pp": 0.4881003236692849,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.5222131803928488,
+          "R_winner": 0.4677868196071512,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stronger_structural_prior": {
+          "mean_D_minus_R_pp": -1.1146045504759363,
+          "margin_sd_pp": 6.93710212855622,
+          "D_winner": 0.43181374905604375,
+          "R_winner": 0.5581862509439562,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_weaker_structural_prior": {
+          "mean_D_minus_R_pp": 1.0516956518127738,
+          "margin_sd_pp": 7.17968047767782,
+          "D_winner": 0.5526473475164299,
+          "R_winner": 0.43735265248357014,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_wider_common_error": {
+          "mean_D_minus_R_pp": 0.14573405539964002,
+          "margin_sd_pp": 8.13036260615893,
+          "D_winner": 0.5020790200130829,
+          "R_winner": 0.4879209799869171,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 5.0
+        },
+        "state_stacked_adverse_D": {
+          "mean_D_minus_R_pp": -1.3756638363672122,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.41872196564940495,
+          "R_winner": 0.5712780343505951,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stacked_favorable_D": {
+          "mean_D_minus_R_pp": 1.6671319471664927,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.5871687801701873,
+          "R_winner": 0.4028312198298128,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_pres2024": {
+          "mean_D_minus_R_pp": 0.14573405539964002,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.5031310128473556,
+          "R_winner": 0.4868689871526444,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_sen2022": {
+          "mean_D_minus_R_pp": 0.030064244972030085,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.49667750288003026,
+          "R_winner": 0.4933224971199697,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_minus5": {
+          "mean_D_minus_R_pp": -4.85426594460036,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.24395783593810516,
+          "R_winner": 0.7460421640618948,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_plus5": {
+          "mean_D_minus_R_pp": 5.14573405539964,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.758713986893078,
+          "R_winner": 0.231286013106922,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd3": {
+          "mean_D_minus_R_pp": 0.14573405539964002,
+          "margin_sd_pp": 5.839759935787379,
+          "D_winner": 0.5048552181114002,
+          "R_winner": 0.4851447818885998,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 3.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd8": {
+          "mean_D_minus_R_pp": 0.14573405539964002,
+          "margin_sd_pp": 9.439427742592631,
+          "D_winner": 0.5010973818226723,
+          "R_winner": 0.4889026181773277,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 8.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_adverse_D": {
+          "mean_D_minus_R_pp": -6.375663836367212,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.18202739615074376,
+          "R_winner": 0.8079726038492562,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_favorable_D": {
+          "mean_D_minus_R_pp": 6.667131947166492,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.8186110975022038,
+          "R_winner": 0.17138890249779618,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        }
+      }
+    },
+    "Leavenworth": {
+      "source_votes": {
+        "pres2024": {
+          "D": 13732,
+          "R": 22055,
+          "total": 36547
+        },
+        "sen2022": {
+          "D": 9444,
+          "R": 16570,
+          "L": 843,
+          "total": 26857
+        }
+      },
+      "historical_relative_D_minus_R_pp": {
+        "pres2024": -6.657834277073686,
+        "sen2022": -3.570721503261744
+      },
+      "central_lean_basis": "pres2024 only; sen2022 is a sensitivity, not an independent likelihood or learned weight",
+      "scenarios": {
+        "central": {
+          "mean_D_minus_R_pp": -8.800119267333594,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.10581944818500152,
+          "R_winner": 0.8841805518149984,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_no_mean_poll_bias": {
+          "mean_D_minus_R_pp": -7.621087643836386,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.1394038771583049,
+          "R_winner": 0.8505961228416951,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_adverse_mean_poll_bias": {
+          "mean_D_minus_R_pp": -9.979150890830802,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.0785039583914796,
+          "R_winner": 0.9114960416085204,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D6": {
+          "mean_D_minus_R_pp": -9.142485535603239,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.09726268853136667,
+          "R_winner": 0.8927373114686333,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D10": {
+          "mean_D_minus_R_pp": -8.457752999063949,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.11490643619526456,
+          "R_winner": 0.8750935638047355,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stronger_structural_prior": {
+          "mean_D_minus_R_pp": -10.06045787320917,
+          "margin_sd_pp": 6.93710212855622,
+          "D_winner": 0.07276094587311532,
+          "R_winner": 0.9172390541268847,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_weaker_structural_prior": {
+          "mean_D_minus_R_pp": -7.8941576709204595,
+          "margin_sd_pp": 7.17968047767782,
+          "D_winner": 0.1344142917312473,
+          "R_winner": 0.8555857082687527,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_wider_common_error": {
+          "mean_D_minus_R_pp": -8.800119267333594,
+          "margin_sd_pp": 8.13036260615893,
+          "D_winner": 0.13814704859486923,
+          "R_winner": 0.8518529514051307,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 5.0
+        },
+        "state_stacked_adverse_D": {
+          "mean_D_minus_R_pp": -10.321517159100445,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.0716708625207163,
+          "R_winner": 0.9183291374792837,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stacked_favorable_D": {
+          "mean_D_minus_R_pp": -7.278721375566741,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.15038296422841585,
+          "R_winner": 0.8396170357715841,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_pres2024": {
+          "mean_D_minus_R_pp": -8.800119267333594,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.10581944818500152,
+          "R_winner": 0.8841805518149984,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_sen2022": {
+          "mean_D_minus_R_pp": -5.713006493521652,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.20770300600014927,
+          "R_winner": 0.7822969939998508,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_minus5": {
+          "mean_D_minus_R_pp": -13.800119267333594,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.02535410668440479,
+          "R_winner": 0.9646458933155952,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_plus5": {
+          "mean_D_minus_R_pp": -3.800119267333594,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.2927231423738154,
+          "R_winner": 0.6972768576261846,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd3": {
+          "mean_D_minus_R_pp": -8.800119267333594,
+          "margin_sd_pp": 5.839759935787379,
+          "D_winner": 0.06525494384585652,
+          "R_winner": 0.9247450561541435,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 3.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd8": {
+          "mean_D_minus_R_pp": -8.800119267333594,
+          "margin_sd_pp": 9.439427742592631,
+          "D_winner": 0.17384186941335628,
+          "R_winner": 0.8161581305866438,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 8.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_adverse_D": {
+          "mean_D_minus_R_pp": -15.321517159100445,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.015058371869484862,
+          "R_winner": 0.9749416281305151,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_favorable_D": {
+          "mean_D_minus_R_pp": -2.2787213755667413,
+          "margin_sd_pp": 7.078332862166586,
+          "D_winner": 0.37001566901550487,
+          "R_winner": 0.6199843309844951,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        }
+      }
+    }
+  },
+  "source_packets": [
+    "data/deep_review_20261017/county_ks_xlsx_addendum_0022.json",
+    "data/deep_review_20261017/county_ks_xlsx_integrity_0025.json",
+    "logs/deep_review_20261017/county_ks_2022_state_primary_0041/receipt.json"
+  ],
+  "2022_integrity_note": "Primary inspected originalsheet3row367 COUNTY TOTALS and excluded it from precinctsum: correctSedgwickD58815/R90856/L4446. Agent0039doublecountsTOTALandisnotused. Complete correctedlocaladdendumtofollow. OfficialstatewidePDF supplies exactdenominator ratherthan partialworkbooksum.",
+  "source_hashes": {
+    "research/2026-10-17-deep-review/models/county_margin_projection.py": "06d688fa5b9b461b0edd1fbb225384213391d14d2b8188fc7ac5993a571c01ee",
+    "research/2026-10-17-deep-review/models/senate_michigan_revision_0029_results.json": "4a8e1f19c034e36bd4a3bee99c1c93a263af701797179b56ac8c7d4e6262ed9e"
+  }
+}

@@ -1,0 +1,164 @@
+{
+  "review_index": 1545,
+  "condition_id": "0xd38f97117caf693a23a0b1ec6af94d172678bc826dde109534ea8019b7aca254",
+  "criteria_sha256": "67add739f018ab898dab71a35fc22b1dbba43601ca647788889b6dc6322eae51",
+  "status": "valued",
+  "literal_analysis": "ExactRepublicanMacombNov3Senateplurality;last-namealphabeticaltie;replacementparty;March31Other;credibleconsensus/officialfallback;fullrulesread.",
+  "evidence": [
+    {
+      "url": "https://pastelections.macombgov.org/contest/12337",
+      "observed_utc": "2026-10-18T01:06:55Z",
+      "finding": "OriginalSenate countyCSV308precincts reconcileexactcandidate/aggregate fields, county not statewide."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T20:02:53Z",
+      "finding": "Original statewideMIcandidate and recap totals reconcile; primaryreadextractedpage36/38evidence."
+    },
+    {
+      "file": "research/2026-10-17-deep-review/models/county_MI_TX_projection_0120.json",
+      "finding": "Primary no-pricecountyprojection; commonstate/national/localuncertainty and alternatehistoricalanchor.",
+      "url": "https://insideradvantage.com/",
+      "observed_utc": "2026-10-18T00:55:00Z"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.9,
+    "low": 0.5,
+    "high": 0.99,
+    "method": "Original2024same-officecountyrelativelean + source-ledcurrentMIstate distribution +local5ppSD/1%Other; uncalibrated.",
+    "reasoning": "RawR90.40975%; broadscenario variation. Conservative5x-tail stress50% fails capturedYES despitepositivecentral. Fullrulebeforeforecastbeforequote.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1441_1560.json.gz",
+    "quote_observed_utc": "2026-10-17T23:50:29.471+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.9,
+        "best_bid": 0.62,
+        "best_ask": 0.64,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 23.403,
+        "received_utc": "2026-10-17T23:50:29.471+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.64,
+            "fee_usd": 0.09216
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.49216,
+        "fee_usd": 0.09216,
+        "break_even_probability_before_carry": 0.649216,
+        "break_even_probability_with_idealized_carry": 0.6508238953148444,
+        "central_expected_profit_usd": 2.50784,
+        "default_10pp_stressed_profit_usd": 1.5078399999999998,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.10576
+      },
+      "No": {
+        "probability": 0.09999999999999998,
+        "best_bid": 0.36,
+        "best_ask": 0.38,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 23.403,
+        "received_utc": "2026-10-17T23:50:29.471+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.38,
+            "fee_usd": 0.09424
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.89424,
+        "fee_usd": 0.09424,
+        "break_even_probability_before_carry": 0.389424,
+        "break_even_probability_with_idealized_carry": 0.3903884756523067,
+        "central_expected_profit_usd": -2.89424,
+        "default_10pp_stressed_profit_usd": -3.89424,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.50784
+      }
+    }
+  },
+  "verdict": "No currententry; centralYESedge doesnotclearselected5xstress;NOnegative. Keep pending newfacts/currentpricetrigger48c illustrativeonly.",
+  "reopen_condition": "Neworiginalstate/countyinstrument, turnout/candidate/ballot/criteriachange, beforeknownvoting/debate/poll; fullyfreshgatedmakerbelowselectedstress.",
+  "current_description_sha256": "8ed8eecb313a2f26f4bb44a4e3098b68073fd2e433c9c10cfec586d8ff41c1b3",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "27601288138264382054960220284596904435658811241928210895393424672018227434034",
+    "105989937823206178850499759853694830704196667176357295813413199538312357223082"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0002",
+      "receipt_path": "logs/deep_review_20261017/quotes_1441_1560/req_0002.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1441_1560/req_0002.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_identity_match_count": 1,
+      "status": "exact_market_and_condition_identity_validated",
+      "received_utc": "2026-10-17T23:50:29.044+00:00",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0006",
+      "receipt_path": "logs/deep_review_20261017/quotes_1441_1560/req_0006.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1441_1560/req_0006.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "requests": [
+        {
+          "request_id": "req_0006",
+          "receipt_path": "logs/deep_review_20261017/quotes_1441_1560/req_0006.receipt.json",
+          "body_path": "logs/deep_review_20261017/quotes_1441_1560/req_0006.body.json.gz",
+          "http_status": 200,
+          "parse_status": "ok",
+          "received_utc": "2026-10-17T23:50:29.471+00:00",
+          "error": null
+        }
+      ]
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/county_MI_TX_method_0120.md",
+    "tail_multiplier": 5,
+    "selected_entry_stress_yes": 0.5,
+    "selected_entry_stressed_taker_profit_usd": -1.49216,
+    "default_table_10pp_not_entry_policy": true,
+    "illustrative_maker_trigger_yes": 0.48,
+    "no_execution_authority": true
+  },
+  "evaluated_utc": "2026-10-18T01:16:03.940632+00:00",
+  "question": "Will the Republicans win Macomb County in the Michigan Senate race in 2026?",
+  "market_id": "5166740",
+  "valuation_author": "primary_operator",
+  "original_index": 1545,
+  "report_sha256": "0d6760a447e8f57661e05c73c720ef3916e1f0848ab5ba67cd33e9c6e9d40268"
+}

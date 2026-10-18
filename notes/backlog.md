@@ -1,3 +1,32 @@
+## Current — October18 01:16UTC
+
+Finite primary review continues:178valued/2blocked/327factual/2493pending,
+no active case. First100 already reported chat/TG1163. Save/index each case
+before the next; checkpoint overrides dated narrative snapshots. All25 quote
+archives cover3,000exactconditions; absent/stale/omitted books remain gaps.
+
+Seven LIVE zero-filled bids verified01:13:10–17UTC/block95720430; pending13.37,
+free11.626890pUSD, all8candidatebothbalances0. NewSedgwickDYES5@20c/risk1.00,
+DEC0212. CurrentSedgwickD49/R50/Other1, MichiganD56/NO44. Read current source
+revision/model and restingorders for exactIDs and broaduncertainty. PullSedgwick
+atOct19 10UTC before13UTCopening/23UTCrally; debateweekday/dateconflict unresolved.
+IdahopullOct19 22UTC; MichiganOct23 22UTC. Everyexistingtick/earliernews review;
+cancel first on load-bearing uncertainty. IPOcanceledzero-fill/review_required,
+no oldpriorrepost. Lastfullheldcheck22:00, next02:00. No newtimer/durablegoal.
+
+MI/TX county original2024Senate/state totals now reconcile. PrimaryMacombR90
+case1545 saved; D9/R90/Other1 and conservative5x-tailstress; no currententry.
+2598D/648TarrantD/2110TarrantR next common-source cases; each fullrule separate.
+See models/county_MI_TX_method_0120 and SOURCE_QUEUE. Dentonofficialreturns
+remain factualfollowup, never normalize its FortBendslugs into a different claim.
+
+Audit0112 verified506records at177valued, all3,000CSVstatuses and25archives;
+new1545 adds507threcord.190historicalpublicHTML bodies losslesslyarchived,
+154.8MB reclaimed; exactrestore verification passed. Activeoperatorlog untouched.
+Free~276MiB,180MiBnewresearchfloor/128critical/512warning. Preserve unrelated
+runtime changes. Focusedcommit/push due; financialrecordwriters already applied,
+never replay. Direct quota probe only, no conversational /usage.
+
 ## Current — October18 00:09UTC
 
 Finite primaryreview continues:161valued/2blocked/327factual/2510pending,444active.

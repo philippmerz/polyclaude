@@ -405,3 +405,115 @@ EarlierHouseorderIDs/management remain in dated records below. The two newer
 MT01 headlines are policy/opinion framing; originalbodies unavailable atconsent,
 no newpoll/ballot/withdrawal/healthfact verified. Retain existingHousejudgments;
 this boundedaccess result is not globalabsenceofnews.
+
+
+## October18 00:46UTC — Michigan tiny maker independently verified
+
+**Six LIVE post-only BUY bids, all zero-filled**, checked00:46:26–31UTC at
+Polygon95719361. All eight reviewed candidates' two-outcome balances are0.
+
+| Contract | Shares | Limit | Pending cash |
+|---|---:|---:|---:|
+| ME-02 Democratic YES |10|.38|3.80|
+| CA-06 Democratic NO |50|.03|1.50|
+| MT-01 Democratic YES |10|.33|3.30|
+| NY-01 Democratic YES |10|.12|1.20|
+| Todd Achilles Idaho Senate YES |34|.03|1.02|
+| Michigan Democratic Senate NO |5|.31|1.55|
+
+pUSD24.996890; total pending12.37; arithmetic uncommitted12.626890. Current
+eligibility response blocked=false/FI02; allowance/CTF approval sufficient.
+Commitments are **not purchases, holdings or profit**. Complete authenticated
+pagination and separate exact-order endpoint agree. New order`0x3ea751ba39f53e9d1e64110de282b01c01b6c34ad40d2b443b19c59125240283`,
+market630805/CID`0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4`,
+NOasset`64025664961497419708095468282573682984741903075312816516046832361290996190088`.
+Exactslug`will-the-democrats-win-the-michigan-senate-race-in-2026`. DEC-0211.
+
+Primary Michigan YES55/NO45, D30–80% judgment range,10pp reserve: five31c NO
+shares give central EV.70/policy-stress.20 before about.00430-day constant-Aave
+carry and ordinary.05 operating allowance. NO20% range endpoint loses.55;
+maximum cashloss1.55. The reserve is not a range floor, and candidate/bias,
+turnout and shared-cycle errors are uncalibrated. No measured House/Idaho hedge.
+New original Rasmussen798LV/Oct12–14 D46/R44 adds recency, not a controlled trend;
+original YouGov3949LV/Sept22–Oct4 D49/R48 allocates undecideds. Official current
+six-candidate listing remains. Both independent advisories were read. Fundraising
+receipts D30.7M/R9.7M but periodendcash D3.8M/R6.5M are mixed and older-period
+facts, not a quantified vote shift; primary halved proposalcash instead of
+inventing another probability adjustment. Original cases/models remain dated.
+
+**Michigan management:** review each existing tick and earlier material news;
+cancel first if load-bearing poll/candidate/withdrawal/health/ballot facts
+change or become uncertain. Pull before known releases/debates/election windows.
+**Cancel at the existing22:00UTC October23 tick**, before October24 in-person
+early-vote opening, and revalue before November3. Absentee voting is already
+ongoing since September24. Thirty baseline feed titles were seen through72h
+dedup before four candidate terms were promoted00:38:44; normalcycle00:43:18
+proved reload.18IDs survived5000-IDcap; do not claim30persistedIDs. No manual
+poll/stateedit/restart/newdaemon/timer. Direct tier1 avoids cheap-model suppression
+but does not prove exhaustive news coverage. Similarity hints for Macomb/Oakland
+are different county claims; **never route them as Michigan duplicates**.
+
+Idaho retains its tiny1.02risk: the00:33generic Trippi interview title could not
+be opened in bounded public lookups and establishes no specific new poll,
+caucus, health or withdrawal fact. This is not universal no-news. Existing
+**Idaho pull by00:00UTC October20** remains; use the preceding22:00Oct19 tick.
+IPO158 remains canceledzero-fill/review_required; do not repost its old24/76.
+
+Evidence: private0600 `data/deep_review_20261017/all_pilots_michigan_postexecution_0047.json`
+and `michigan_auth_order_verify_0047.json`; executionlog
+`logs/deep_review_20261017/michigan_entry_execute_0046.log`. Exact prior House/Idaho
+order IDs remain in dated records. This is a bounded entry follow-up, not another
+full held-thesis check; last was October17 22:00, next existing October18 02:00.
+
+
+## 2026-10-18T01:06:52.182740+00:00 — Sedgwick2054tinyproposal prepared, no order
+
+CurrentprimaryYES49%,range15–85/reserve15pp afterIAoriginals. Nominal1.05USD/rawcap23c/maxsignedcash1.20; at20c5shares/1.00, at23c5/1.15. Bothadvisoriesread. ParentOtherverified andofficialNegRiskdocs supportstandardmutuallyexclusive interpretation, butnot anexactcaseadjudicationpromise; modelassumesDYESOtherpayout0, avoidingrelianceonOtherNOcashflow. No placeholder/Othertrade. Candidatepriornowappendedwithallotherrecordsunchanged; not a holdingororder.
+
+32ndexistingwatcherRSSfeedbaselineall30titlesseenbefore4termspromotion01:04:26;18exactIDsretainedunder5000cap, laternormalreloadpending. No manualpoll/stateedit/restart/newdaemon/timer. Finalgeneralballot403/timeoutgap and inaccessibleoriginalSienainstrumentremain; officialprimarywinners/currentcampaign/debate/rallyreportingsupportintendedmatchup, notuniversalnochanges.
+
+Conservativepull**Oct19 10:00UTCexistingtick**, beforeSedgwickinpersonstarts13UTCandTrumpremarks23UTCinParkCity. GOPeventRSVP/no cancellationat01:02ispoint-in-time, notfuturecertainty. Nexstarweekday/dateconflictremains:TuesdayOct21dated2026; actualOct21Wednesday. Earlierpullprotectsbothpossibledebatewindows; anylaterreentryneedsdateclarificationorconservativeearliestpull. Allfreshpublic/account/books/fees/UMA/legal/capgatesandnormalreloadmustpassbeforenewentry. Source/modelupdateisnotauthorityaftercompaction.
+
+
+## October18 01:13UTC — Sedgwick tiny bid verified, not filled
+
+Seven post-only BUY bids are LIVE and zero-filled at01:13:10–17UTC,
+Polygon95720430. All eight reviewed candidates' both-outcome CTF balances are0.
+pUSD24.996890, pending13.37, arithmetic uncommitted11.626890; current allowance,
+CTF approval and venue geoblock check passed. This is commitment, not profit.
+
+New: **Sedgwick County Democratic Senate YES5@20c,1.00pUSD**, DEC0212.
+Order `0xf13217b0e8b865d920d2ef56624f344e37284712737e479ba408a15e47c8e955`; market5790793;
+CID`0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5`;
+YESasset`36188675263105076384129304581287560611497377961272296678113273811602118139553`;
+exactslug`will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026`.
+The existing four House, Idaho YES34@3c and Michigan NO5@31c bids are unchanged.
+Exact earlier IDs remain below. Anthropic-largestIPO stays canceledzero-fill.
+
+Primary49%YES, range15–85%,15pp reserve; five20c shares give centralEV1.45,
+selected34%stressEV.70, range15%EV−.25 and maximum cashloss1.00 before costs.
+Original latestIA release is now incorporated; both independent advisories read.
+No county2026poll, calibrated posterior, measured hedge or guaranteedrangefloor.
+Finalballotnotice403/timeout and originalinstrument gaps remain. Other/fallback
+branch is underwritten at zero DYES payout; officialNegRisk structure supports
+that inference but does not promise exact-case adjudication. March31 fallback
+can delay beyond January. Do not trade placeholder/Other children or call
+Republican NO an exact duplicate. Full Gamma/criteria/CID/token/open/UMA,
+structured Gamma/compactfee parity and bothfreshbooks passed. Legacy1000basefee
+fields were not substituted for the4%/exponent1/taker-only schedule.
+
+**Pull at the existing October19 10:00UTC tick**, before county in-personopening
+13UTC and Trump rallyremarks23UTC. Mail already active. Nexstar's Tuesday/Oct21
+weekday conflict remains unresolved; this pull is earlier than either debate
+interpretation. Review each existing tick/earlier materialnews; cancel first on
+load-bearing poll/candidate/ballot/health/turnout uncertainty. Revalue before any
+reentry, known release/debate and November3. Shared USpolitics risk counts fully.
+
+Thirty baseline titles were seen before four keyword promotions01:04:26;
+normalpoll/save01:09:01 proved reload, sameconfig/alivedaemon. Eighteen IDs survive
+5000-IDcap. No manualpoll/stateedit/restart/newdaemon/timer. Discovery not exhaustive.
+Read-only proof: `data/deep_review_20261017/all_pilots_sedgwick_postentry_0119.json`
+and `sedgwick_exact_order_0119.json` (private0600). Executionlog
+`logs/deep_review_20261017/sedgwick_entry_execute_0118.log`. Never replay it or
+this recordingwriter. This entry verification is not the full held-thesischeck;
+last Oct17 22:00, next existing Oct18 02:00.

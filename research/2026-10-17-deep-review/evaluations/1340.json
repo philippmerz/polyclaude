@@ -1,0 +1,162 @@
+{
+  "review_index": 1340,
+  "condition_id": "0xd103195d48bf6183e28c4140bd374dd3e907e8f8d411374cb4d2d124ec4c216d",
+  "criteria_sha256": "c250eb11b74f1a5489a2967cd2ddd3cd19b16e60abd6dc90520a9b976e0a6b43",
+  "status": "valued",
+  "literal_analysis": "Complete individual party/replacement/Independent/runoff/calls-certification rules read; Senate Alme is not House Flint; final ballot gap retained.",
+  "evidence": [
+    {
+      "url": "https://candidatefiling.mt.gov/candidatefiling/CandidateList.aspx?e=450002987",
+      "observed_utc": "2026-10-18T00:20:13.547909+00:00",
+      "finding": "Official2026 Senate filings: AlmeR/BodnarI/BankheadD/AustinL plus Woodman write-in; FILED is not final certification Reused source index; original source and capture dates remain in the packet."
+    },
+    {
+      "url": "https://www.montanarightnow.com/elections/montana-senate-race-kurt-alme-tops-bodnar-and-bankhead-in-new-poll-findings/article_cd8401fb-0470-492c-a53a-c7dfe39552ff.html",
+      "observed_utc": "2026-10-18T00:20:13.547951+00:00",
+      "finding": "Original commissioning-partner Sept28 report:45.1/26.1/18.9, remainder/method precision incomplete Reused source index; original source and capture dates remain in the packet."
+    },
+    {
+      "url": "research/2026-10-17-deep-review/models/senate_primary_method.md",
+      "observed_utc": "2026-10-18T00:20:13.547954+00:00",
+      "finding": "Explicit four-way primary margin model and subjective consolidation branch; rawR94.233%, not a fitted voter-share model Reused source index; original source and capture dates remain in the packet."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.94,
+    "low": 0.7,
+    "high": 0.995,
+    "method": "Primary four-candidate Montana margin/consolidation model",
+    "reasoning": "RawAlme94.233 rounded94 before quote; broad70–99.5range/10ppreserve; actual split field, source and consolidation risks retained.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_1321_1440.json.gz",
+    "quote_observed_utc": "2026-10-17T23:50:17.345+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 35,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.94,
+        "best_bid": 0.91,
+        "best_ask": 0.92,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 38.848,
+        "received_utc": "2026-10-17T23:50:17.345+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.92,
+            "fee_usd": 0.029439999999999987
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.22944,
+        "fee_usd": 0.02944,
+        "break_even_probability_before_carry": 0.922944,
+        "break_even_probability_with_idealized_carry": 0.925611351551663,
+        "central_expected_profit_usd": 0.17055999999999827,
+        "default_10pp_stressed_profit_usd": -0.82944,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.84,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.06724
+      },
+      "No": {
+        "probability": 0.06000000000000005,
+        "best_bid": 0.08,
+        "best_ask": 0.09,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 38.848,
+        "received_utc": "2026-10-17T23:50:17.345+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.09,
+            "fee_usd": 0.032760000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.9327699999999999,
+        "fee_usd": 0.03277,
+        "break_even_probability_before_carry": 0.09327699999999998,
+        "break_even_probability_with_idealized_carry": 0.09354657491536264,
+        "central_expected_profit_usd": -0.33276999999999934,
+        "default_10pp_stressed_profit_usd": -0.9327699999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.77056
+      }
+    }
+  },
+  "verdict": "No entry: YES small positive central EV fails10ppreserve; NO negativecentral. FuturemakerYES82c x5 only after renewed source/current execution checks.",
+  "reopen_condition": "Transparent new original poll/final field/consolidation evidence, better passive price and complete current account/venue/monitoring.",
+  "current_description_sha256": "95a54b9a4bb92e8766f5cce4da6e2715757381c4dc0d575254504f0ba3a2ea91",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "102325039069045369431277041414667266705633344716966967751024692805337688459829",
+    "58046186222956557148380567481022348507421740788139654872430510492438761636276"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_1321_1440/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1321_1440/req_0001.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_identity_match_count": 1,
+      "status": "exact_market_and_condition_identity_validated",
+      "received_utc": "2026-10-17T23:50:17.034+00:00",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0003",
+      "receipt_path": "logs/deep_review_20261017/quotes_1321_1440/req_0003.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_1321_1440/req_0003.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "requests": [
+        {
+          "request_id": "req_0003",
+          "receipt_path": "logs/deep_review_20261017/quotes_1321_1440/req_0003.receipt.json",
+          "body_path": "logs/deep_review_20261017/quotes_1321_1440/req_0003.body.json.gz",
+          "http_status": 200,
+          "parse_status": "ok",
+          "received_utc": "2026-10-17T23:50:17.345+00:00",
+          "error": null
+        }
+      ]
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "case_specific_reserve_for_entry": 0.1,
+    "source_packets": [
+      "data/deep_review_20261017/senate_montana_field_followup.json"
+    ],
+    "tracked_model": "research/2026-10-17-deep-review/models/senate_iowa_revision_0012_results.json",
+    "before_quote_primary_forecast": "data/deep_review_20261017/work/1340_primary_before_quote.json"
+  },
+  "evaluated_utc": "2026-10-18T00:20:13.765299+00:00",
+  "question": "Will the Republicans win the Montana Senate race in 2026?",
+  "market_id": "630832",
+  "valuation_author": "primary_operator",
+  "original_index": 1340,
+  "report_sha256": "696dcdfc73b936e113153f56d6fc8b541df50fdb05ca4aaa4ea71a40ed9538a8"
+}

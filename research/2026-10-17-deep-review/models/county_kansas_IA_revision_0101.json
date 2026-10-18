@@ -1,0 +1,383 @@
+{
+  "authored_by": "primary_operator",
+  "source_current_model": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_results.json",
+  "supersedes": "county_kansas_projection_0042.json",
+  "counties": {
+    "Sedgwick": {
+      "historical_relative_D_minus_R_pp": {
+        "pres2024": 2.2880190456595475,
+        "sen2022": 2.1723492352319376
+      },
+      "scenarios": {
+        "central": {
+          "mean_D_minus_R_pp": -0.07204540368048695,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.49087922734556994,
+          "R_winner": 0.49912077265443006,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_no_mean_poll_bias": {
+          "mean_D_minus_R_pp": 1.183716199763382,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.5623759434742278,
+          "R_winner": 0.42762405652577223,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_adverse_mean_poll_bias": {
+          "mean_D_minus_R_pp": -1.3278070071243562,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.41951767533619555,
+          "R_winner": 0.5704823246638044,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D6": {
+          "mean_D_minus_R_pp": -0.3325663600070268,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.47598524670601744,
+          "R_winner": 0.5140147532939825,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D10": {
+          "mean_D_minus_R_pp": 0.18847555264605287,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.5057790715761805,
+          "R_winner": 0.48422092842381953,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stronger_structural_prior": {
+          "mean_D_minus_R_pp": -1.0423799096852724,
+          "margin_sd_pp": 6.813522768251138,
+          "D_winner": 0.43481224945057395,
+          "R_winner": 0.555187750549426,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_weaker_structural_prior": {
+          "mean_D_minus_R_pp": 0.5780031185242187,
+          "margin_sd_pp": 6.966673873341416,
+          "D_winner": 0.5277304476786786,
+          "R_winner": 0.46226955232132133,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_wider_common_error": {
+          "mean_D_minus_R_pp": -0.07204540368048695,
+          "margin_sd_pp": 7.979932034006292,
+          "D_winner": 0.4914342864843938,
+          "R_winner": 0.4985657135156062,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 5.0
+        },
+        "state_stacked_adverse_D": {
+          "mean_D_minus_R_pp": -1.5883279634508956,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.40494578189916985,
+          "R_winner": 0.5850542181008301,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stacked_favorable_D": {
+          "mean_D_minus_R_pp": 1.4442371560899219,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.5770089945417538,
+          "R_winner": 0.41299100545824613,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_pres2024": {
+          "mean_D_minus_R_pp": -0.07204540368048695,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.49087922734556994,
+          "R_winner": 0.49912077265443006,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_sen2022": {
+          "mean_D_minus_R_pp": -0.18771521410809688,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.4842644020760741,
+          "R_winner": 0.5057355979239259,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_minus5": {
+          "mean_D_minus_R_pp": -5.072045403680487,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.2289953814911326,
+          "R_winner": 0.7610046185088674,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_plus5": {
+          "mean_D_minus_R_pp": 4.927954596319513,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.7546636648110597,
+          "R_winner": 0.23533633518894032,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd3": {
+          "mean_D_minus_R_pp": -0.07204540368048695,
+          "margin_sd_pp": 5.6284380841721795,
+          "D_winner": 0.4899446435005162,
+          "R_winner": 0.5000553564994838,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 3.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd8": {
+          "mean_D_minus_R_pp": -0.07204540368048695,
+          "margin_sd_pp": 9.310172676559754,
+          "D_winner": 0.4919437458288752,
+          "R_winner": 0.4980562541711248,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 8.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_adverse_D": {
+          "mean_D_minus_R_pp": -6.5883279634508956,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.16830737118052666,
+          "R_winner": 0.8216926288194734,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_favorable_D": {
+          "mean_D_minus_R_pp": 6.444237156089922,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.8164126756250332,
+          "R_winner": 0.17358732437496682,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        }
+      }
+    },
+    "Leavenworth": {
+      "historical_relative_D_minus_R_pp": {
+        "pres2024": -6.657834277073686,
+        "sen2022": -3.570721503261744
+      },
+      "scenarios": {
+        "central": {
+          "mean_D_minus_R_pp": -9.017898726413721,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.09481994760325026,
+          "R_winner": 0.8951800523967497,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_no_mean_poll_bias": {
+          "mean_D_minus_R_pp": -7.762137122969851,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.1291742769648113,
+          "R_winner": 0.8608257230351887,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_adverse_mean_poll_bias": {
+          "mean_D_minus_R_pp": -10.27366032985759,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.06771080672658697,
+          "R_winner": 0.9222891932734131,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D6": {
+          "mean_D_minus_R_pp": -9.27841968274026,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.08862416674511969,
+          "R_winner": 0.9013758332548804,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_generic_D10": {
+          "mean_D_minus_R_pp": -8.757377770087182,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.10132862799223837,
+          "R_winner": 0.8886713720077616,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stronger_structural_prior": {
+          "mean_D_minus_R_pp": -9.988233232418505,
+          "margin_sd_pp": 6.813522768251138,
+          "D_winner": 0.07061864388953758,
+          "R_winner": 0.9193813561104625,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_weaker_structural_prior": {
+          "mean_D_minus_R_pp": -8.367850204209015,
+          "margin_sd_pp": 6.966673873341416,
+          "D_winner": 0.11370273321049036,
+          "R_winner": 0.8762972667895096,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_wider_common_error": {
+          "mean_D_minus_R_pp": -9.017898726413721,
+          "margin_sd_pp": 7.979932034006292,
+          "D_winner": 0.12793068863542748,
+          "R_winner": 0.8620693113645725,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 5.0
+        },
+        "state_stacked_adverse_D": {
+          "mean_D_minus_R_pp": -10.534181286184129,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.06292133042295578,
+          "R_winner": 0.9270786695770442,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "state_stacked_favorable_D": {
+          "mean_D_minus_R_pp": -7.501616166643312,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.13726447825024668,
+          "R_winner": 0.8527355217497533,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_pres2024": {
+          "mean_D_minus_R_pp": -9.017898726413721,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.09481994760325026,
+          "R_winner": 0.8951800523967497,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "historical_sen2022": {
+          "mean_D_minus_R_pp": -5.930785952601779,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.19324335857168437,
+          "R_winner": 0.7967566414283156,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_minus5": {
+          "mean_D_minus_R_pp": -14.017898726413721,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.020961342556153614,
+          "R_winner": 0.9690386574438464,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_D_plus5": {
+          "mean_D_minus_R_pp": -4.017898726413721,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.2775202727972664,
+          "R_winner": 0.7124797272027336,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd3": {
+          "mean_D_minus_R_pp": -9.017898726413721,
+          "margin_sd_pp": 5.6284380841721795,
+          "D_winner": 0.05400984203694459,
+          "R_winner": 0.9359901579630554,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 3.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "local_sd8": {
+          "mean_D_minus_R_pp": -9.017898726413721,
+          "margin_sd_pp": 9.310172676559754,
+          "D_winner": 0.16470694020246193,
+          "R_winner": 0.8252930597975381,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 8.0,
+          "local_shift_pp": 0.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_adverse_D": {
+          "mean_D_minus_R_pp": -15.534181286184129,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.012111860425907178,
+          "R_winner": 0.9778881395740928,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": -5.0,
+          "national_sd_pp": 3.0
+        },
+        "stacked_favorable_D": {
+          "mean_D_minus_R_pp": -2.501616166643312,
+          "margin_sd_pp": 6.905021018603766,
+          "D_winner": 0.35498219724941016,
+          "R_winner": 0.6350178027505898,
+          "other_or_fallback": 0.01,
+          "local_sd_pp": 5.0,
+          "local_shift_pp": 5.0,
+          "national_sd_pp": 3.0
+        }
+      }
+    }
+  }
+}

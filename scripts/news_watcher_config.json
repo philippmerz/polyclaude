@@ -123,6 +123,14 @@
     {
       "name": "Idaho Senate Achilles and Risch news",
       "url": "https://news.google.com/rss/search?q=%22Todd+Achilles%22+OR+%22Jim+Risch%22+OR+%22Idaho+Senate%22+after%3A2026-09-17&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "Michigan Senate Rogers and El-Sayed news",
+      "url": "https://news.google.com/rss/search?q=%28%22Mike+Rogers%22+OR+%22Abdul+El-Sayed%22+OR+%22Abdul+ElSayed%22+OR+%22Michigan+Senate%22%29+after%3A2026-10-03&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "Kansas Senate Hamilton Marshall and Sedgwick election news",
+      "url": "https://news.google.com/rss/search?q=%28%22Adam+Hamilton%22+OR+%22Roger+Marshall%22+OR+%28%22Sedgwick%22+AND+%28%22Senate%22+OR+%22election%22+OR+%22voting%22%29%29%29+after%3A2026-10-03&hl=en-US&gl=US&ceid=US%3Aen"
     }
   ],
   "tier1_keywords": [
@@ -283,7 +291,15 @@
     "Todd Achilles",
     "Risch",
     "Idaho Senate",
-    "Loesby"
+    "Loesby",
+    "Mike Rogers",
+    "El-Sayed",
+    "Abdul ElSayed",
+    "Michigan Senate",
+    "Adam Hamilton",
+    "Roger Marshall",
+    "Kansas Senate",
+    "Sedgwick"
   ],
   "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux — the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Sep-23 added exact GPT-6 Sol/Luna names after OpenAI's 'Introducing' title evaded the generic release verbs. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
   "tier2_keywords": [

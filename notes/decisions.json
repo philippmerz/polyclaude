@@ -1,5 +1,5 @@
 {
-  "next_id": 211,
+  "next_id": 213,
   "decisions": [
     {
       "id": 1,
@@ -4459,6 +4459,49 @@
         "source-regime-risk"
       ],
       "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 211,
+      "timestamp": "2026-10-18T00:48:19Z",
+      "type": "open_position",
+      "thesis": "Posted Michigan Senate Democratic-NO5@.31,1.55pUSD commitment, exactcase1838/market630805/CID0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4. Order 0x3ea751ba39f53e9d1e64110de282b01c01b6c34ad40d2b443b19c59125240283. Independently LIVE/zero-filled; all8candidates bothCTFbalances0 atPolygon95719361, complete6pending12.37/free12.626890. PrimaryYES55/NO45 after originalYouGov/Rasmussen and official6-candidate listing, broadD30\u201380range/10ppreserve. Bothadvisoriesread; mixedfundraisingdoesnotquantifyvotes. Reducednominalsize1.55/maxcash1.75 tolimituncalibrated/shared-electionrisk. CentralEV.70/policy-stress.20/NO20rangeendpoint\u2212.55/maxloss1.55 beforecarry/op. No measuredhedge or calibratedportfoliooptimum. Unfilledcommitment,notpurchase/profit.",
+      "confidence": "low",
+      "prediction": "Conditionalongenuinefill andliteralresolution primaryP(NO)=.45, selectedstress.35 not a provenrangefloor. Revieweach existingtick/earliermaterialnews,cancelfirstonloadbearinguncertainty,pullattheexisting22:00UTCOct23tickbeforeOct24earlyvotingopening andbeforeNov3/knownrelease/debate. Existingmonitoringbaseline/promotion/normalreloadproved. NoPnLgradeunlessfilled.",
+      "size_usd": 1.55,
+      "resolution_at": "2026-11-25",
+      "tags": [
+        "deep-review",
+        "maker",
+        "us-politics",
+        "pending-zero-fill",
+        "uncalibrated-election-model"
+      ],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 212,
+      "timestamp": "2026-10-18T01:14:18Z",
+      "type": "open_position",
+      "thesis": "Posted Sedgwick County Kansas Senate Democratic YES5@.20,1.00pUSD commitment, exact2054/market5790793/CID0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5. Order 0xf13217b0e8b865d920d2ef56624f344e37284712737e479ba408a15e47c8e955. Independently LIVE/zero-filled, all8candidatebothCTFbalances0 atPolygon95720430; complete7pending13.37/free11.626890. PrimaryYES49/range15-85/reserve15pp from original statewideIA/Emerson/Trafalgar and exact2024/2022county-relative returns; no county2026poll. Both advisories read; uncalibrated/sharedUSpoliticsrisk, not measuredhedge. Five20c shares centralEV1.45/selected34pctEV.70/range15pctEV-.25/fullcashloss1.00, beforecosts. Other branch underwritten at zero DYES payout, standardNegRisk inference not exactcaseadjudicationpromise. Finalgeneralballot403/timeout and originalquestionnaire gaps retained. This is unfilledcommitment, not holding/profit.",
+      "confidence": "low",
+      "prediction": "Conditional on fill, primaryP(DYES)=.49. Revieweach existingtick/earliermaterialnews; cancel first onloadbearingpoll/candidate/ballot/health/turnoutuncertainty. PULL Oct19 10:00UTCexistingtick beforeinpersonopening13UTC/Trump23UTCrally, earlierthanbothpossibleNexstarTuesdayOct21dates. Mailalreadyactive. Monitoringbaseline/promoted4terms/postpromotionnormalpoll01:09:01verified. No PnLgrade unlessfilled.",
+      "size_usd": 1.0,
+      "resolution_at": "2026-11-25",
+      "tags": [
+        "deep-review",
+        "maker",
+        "us-politics",
+        "county-election",
+        "pending-zero-fill",
+        "uncalibrated-model"
+      ],
+      "slug": "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

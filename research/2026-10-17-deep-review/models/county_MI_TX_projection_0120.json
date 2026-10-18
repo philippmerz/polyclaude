@@ -1,0 +1,440 @@
+{
+  "authored_by": "primary_operator",
+  "generated_utc": "2026-10-18T01:13:33.348733+00:00",
+  "model": "Exact county-minus-state 2024 Senate lean central; same-year presidential lean sensitivity, unchanged5pp localSD and1%Other. No venue quote inputs.",
+  "county_parameters": {
+    "Macomb": {
+      "state": "MI",
+      "presidential_county_D_R_allvotes": [
+        214977,
+        284660,
+        510076
+      ],
+      "presidential_state_D_R_allvotes": [
+        2736533,
+        2816636,
+        5664186
+      ],
+      "senate_county_D_R_allvotes": [
+        217665,
+        265883,
+        499790
+      ],
+      "senate_state_D_R_allvotes": [
+        2712686,
+        2693680,
+        5577187
+      ],
+      "relative_lean_pp": {
+        "2024_presidential": -12.247096091713667,
+        "2024_senate": -9.988433128052673
+      },
+      "central_anchor": "2024_senate",
+      "anchor_judgment": "Latest Senate contest offers same office/year and exact RepublicanRogers inMacomb; Senatecandidates2026differelsewhere. Othercontestsnotequalbuttheirgeographyissensitivity. Kansas2022Senateolderthan2024prescentral; notsamevintage. No knowncounty2026poll."
+    },
+    "Tarrant": {
+      "state": "TX",
+      "presidential_county_D_R_allvotes": [
+        384501,
+        426626,
+        826076
+      ],
+      "presidential_state_D_R_allvotes": [
+        4835250,
+        6393597,
+        11388674
+      ],
+      "senate_county_D_R_allvotes": [
+        401742,
+        399927,
+        821935
+      ],
+      "senate_state_D_R_allvotes": [
+        5031249,
+        5990741,
+        11291854
+      ],
+      "relative_lean_pp": {
+        "2024_presidential": 8.583895270332384,
+        "2024_senate": 8.718025534552403
+      },
+      "central_anchor": "2024_senate",
+      "anchor_judgment": "Latest Senate contest offers same office/year and exact RepublicanRogers inMacomb; Senatecandidates2026differelsewhere. Othercontestsnotequalbuttheirgeographyissensitivity. Kansas2022Senateolderthan2024prescentral; notsamevintage. No knowncounty2026poll."
+    }
+  },
+  "projections": {
+    "Macomb": {
+      "central": {
+        "mean_D_minus_R_pp": -9.327004016187598,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.08590248358651824,
+        "R_winner": 0.9040975164134818,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_no_mean_poll_bias": {
+        "mean_D_minus_R_pp": -8.048758135708631,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.11891525422364997,
+        "R_winner": 0.87108474577635,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_adverse_mean_poll_bias": {
+        "mean_D_minus_R_pp": -10.605249896666564,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.0602714591538996,
+        "R_winner": 0.9297285408461003,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_generic_D6": {
+        "mean_D_minus_R_pp": -9.5635417436767,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.08062880670082832,
+        "R_winner": 0.9093711932991717,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_generic_D10": {
+        "mean_D_minus_R_pp": -9.090466288698494,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.0914297488478709,
+        "R_winner": 0.8985702511521291,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_stronger_structural_prior": {
+        "mean_D_minus_R_pp": -8.891774472964745,
+        "margin_sd_pp": 6.774994728607853,
+        "D_winner": 0.0937389907789233,
+        "R_winner": 0.8962610092210767,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_weaker_structural_prior": {
+        "mean_D_minus_R_pp": -9.612564699737867,
+        "margin_sd_pp": 6.905368843402549,
+        "D_winner": 0.08113526457893112,
+        "R_winner": 0.9088647354210688,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_wider_common_error": {
+        "mean_D_minus_R_pp": -9.327004016187598,
+        "margin_sd_pp": 7.93537341600556,
+        "D_winner": 0.11872402267725125,
+        "R_winner": 0.8712759773227488,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 5.0
+      },
+      "state_stacked_adverse_D": {
+        "mean_D_minus_R_pp": -10.841787624155666,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.05626335530872129,
+        "R_winner": 0.9337366446912787,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_stacked_favorable_D": {
+        "mean_D_minus_R_pp": -7.8122204082195275,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.12589409955255043,
+        "R_winner": 0.8641059004474496,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "historical_2024_presidential": {
+        "mean_D_minus_R_pp": -11.585666979848591,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.045013390825544355,
+        "R_winner": 0.9449866091744556,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "historical_2024_senate": {
+        "mean_D_minus_R_pp": -9.327004016187598,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.08590248358651824,
+        "R_winner": 0.9040975164134818,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "local_D_minus5": {
+        "mean_D_minus_R_pp": -14.327004016187598,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.01810482308916982,
+        "R_winner": 0.9718951769108302,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": -5.0,
+        "national_sd_pp": 3.0
+      },
+      "local_D_plus5": {
+        "mean_D_minus_R_pp": -4.327004016187598,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.2612639064031918,
+        "R_winner": 0.7287360935968081,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 5.0,
+        "national_sd_pp": 3.0
+      },
+      "local_sd3": {
+        "mean_D_minus_R_pp": -9.327004016187598,
+        "margin_sd_pp": 5.565083220532084,
+        "D_winner": 0.04640172008929656,
+        "R_winner": 0.9435982799107034,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 3.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "local_sd8": {
+        "mean_D_minus_R_pp": -9.327004016187598,
+        "margin_sd_pp": 9.272009019163416,
+        "D_winner": 0.15565206795900985,
+        "R_winner": 0.8343479320409901,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 8.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "stacked_adverse_D": {
+        "mean_D_minus_R_pp": -15.841787624155666,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.010298700654041844,
+        "R_winner": 0.9797012993459582,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": -5.0,
+        "national_sd_pp": 3.0
+      },
+      "stacked_favorable_D": {
+        "mean_D_minus_R_pp": -2.8122204082195275,
+        "margin_sd_pp": 6.853477310931127,
+        "D_winner": 0.3373723730426142,
+        "R_winner": 0.6526276269573859,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 5.0,
+        "national_sd_pp": 3.0
+      }
+    },
+    "Tarrant": {
+      "central": {
+        "mean_D_minus_R_pp": 8.055232367119,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8693360082131499,
+        "R_winner": 0.12066399178685007,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_no_mean_poll_bias": {
+        "mean_D_minus_R_pp": 9.308529856820869,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.9018971644032752,
+        "R_winner": 0.0881028355967248,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_adverse_mean_poll_bias": {
+        "mean_D_minus_R_pp": 6.801934877417134,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.829133206935017,
+        "R_winner": 0.16086679306498294,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_generic_D6": {
+        "mean_D_minus_R_pp": 7.792083022800993,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8615419799274249,
+        "R_winner": 0.1284580200725751,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_generic_D10": {
+        "mean_D_minus_R_pp": 8.31838171143701,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8767916984450879,
+        "R_winner": 0.1132083015549121,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_stronger_structural_prior": {
+        "mean_D_minus_R_pp": 7.7221074471371995,
+        "margin_sd_pp": 6.817678246764841,
+        "D_winner": 0.8626081326776163,
+        "R_winner": 0.1273918673223837,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_weaker_structural_prior": {
+        "mean_D_minus_R_pp": 8.278908843624661,
+        "margin_sd_pp": 6.973422226738311,
+        "D_winner": 0.8736031081157488,
+        "R_winner": 0.11639689188425116,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_wider_common_error": {
+        "mean_D_minus_R_pp": 8.055232367119,
+        "margin_sd_pp": 7.984801927679184,
+        "D_winner": 0.8350349544864162,
+        "R_winner": 0.15496504551358387,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 5.0
+      },
+      "state_stacked_adverse_D": {
+        "mean_D_minus_R_pp": 6.538785533099126,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8196943822668592,
+        "R_winner": 0.17030561773314085,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "state_stacked_favorable_D": {
+        "mean_D_minus_R_pp": 9.571679201138876,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.9078134706548004,
+        "R_winner": 0.08218652934519952,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "historical_2024_presidential": {
+        "mean_D_minus_R_pp": 7.921102102898982,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8654058208345833,
+        "R_winner": 0.12459417916541668,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "historical_2024_senate": {
+        "mean_D_minus_R_pp": 8.055232367119,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.8693360082131499,
+        "R_winner": 0.12066399178685007,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "local_D_minus5": {
+        "mean_D_minus_R_pp": 3.0552323671190003,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.6640854601695972,
+        "R_winner": 0.32591453983040275,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": -5.0,
+        "national_sd_pp": 3.0
+      },
+      "local_D_plus5": {
+        "mean_D_minus_R_pp": 13.055232367119,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.9608583089801501,
+        "R_winner": 0.029141691019849883,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 5.0,
+        "national_sd_pp": 3.0
+      },
+      "local_sd3": {
+        "mean_D_minus_R_pp": 8.055232367119,
+        "margin_sd_pp": 5.635340435525543,
+        "D_winner": 0.9143217337899125,
+        "R_winner": 0.0756782662100874,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 3.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "local_sd8": {
+        "mean_D_minus_R_pp": 8.055232367119,
+        "margin_sd_pp": 9.31434709597346,
+        "D_winner": 0.7983668543373562,
+        "R_winner": 0.19163314566264372,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 8.0,
+        "local_shift_pp": 0.0,
+        "national_sd_pp": 3.0
+      },
+      "stacked_adverse_D": {
+        "mean_D_minus_R_pp": 1.5387855330991256,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.582222308979027,
+        "R_winner": 0.40777769102097294,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": -5.0,
+        "national_sd_pp": 3.0
+      },
+      "stacked_favorable_D": {
+        "mean_D_minus_R_pp": 14.571679201138876,
+        "margin_sd_pp": 6.910648437322594,
+        "D_winner": 0.9726846281484309,
+        "R_winner": 0.01731537185156904,
+        "other_or_fallback": 0.01,
+        "local_sd_pp": 5.0,
+        "local_shift_pp": 5.0,
+        "national_sd_pp": 3.0
+      }
+    }
+  },
+  "source_files_sha256": {
+    "data/deep_review_20261017/official_2024_state_senate_totals_addendum_0051.json": "c5bffa3faf6981e79467e0fe52cf8ca465dcf5fa8c48e7e676f70e4918b06f65",
+    "data/deep_review_20261017/macomb_2024_senate_returns_followup_0054.json": "481d9dfc470d756963134264346a46ad14da4b65dc133bb485fa05202b6bb170",
+    "data/deep_review_20261017/macomb_county_case_followup_0048.json": "cdb5e3dd73f18c2e70fd66a3cf8051f6dcb743c182605d6b7734832431de3a67",
+    "data/deep_review_20261017/county_2024_senate_returns_followup_0050.json": "d54fcd9f8862f6d0eff116f1fce74dad813c7093aabd4c045ecf925d18e81f6b",
+    "data/deep_review_20261017/tx_county_canvass_followup_0035.json": "e4d4c085814b01d95643d644ecaf32d7640da219d9e5eb8f5b4a1712a72880a3",
+    "research/2026-10-17-deep-review/models/senate_IA_revision_0059_results.json": "682945aaa1faf181dc081698716a4a756811a63f105dc7b64366d2ce6f67a667",
+    "research/2026-10-17-deep-review/models/county_margin_projection.py": "06d688fa5b9b461b0edd1fbb225384213391d14d2b8188fc7ac5993a571c01ee"
+  }
+}

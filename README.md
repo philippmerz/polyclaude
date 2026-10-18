@@ -64,20 +64,29 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was sent in chat and Telegram. At00:17UTC October18,167valuations,2blocked and327
-factualexclusions are saved;2,504remainpending, no active case. Everycase updates the
-index before the next. Fivepost-onlyBUYbids were independently verified LIVE,
-zero-matched:ME02YES10@38c,CA06NO50@3c,MT01YES10@33c,NY01YES10@12c,
-andToddAchillesIdahoSenateYES34@3c. Pending **$10.82**, uncommitted14.176890pUSD;
-allcandidatebalances0. These are commitments, not purchases/profit. Anthropic
-largestIPO NO5@62c was canceledzero-fill on unresolvedrevenueinputs; its old24/76
-forecast requires review. Idaho20%central is speculative;maximumcashloss1.02,
-source-regimeadversescenariosnegative. **Pullby00:00UTCOct20** beforeknownforum.
-Read [entryfollow-up](research/2026-10-17-deep-review/candidate_followup.md),
-[corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md) and
-[restingorders](notes/resting_orders.md). Lastfullheld-thesischeck22:00;
-reviewbidseachtick/earliernews. CurrentSenatemodel D56/R43/Other1,DD52/RR15,
-withwidespecificationranges; chambers producednoorder. NoISRG/Spotifyorder.
+was sent in chat and Telegram. At01:16UTC October18, **178 valuations,2 blocked
+and327 factual exclusions** are saved;2,493 remain pending, no active case.
+Each case updates the index before the next. All3,000 have archived public
+quote captures; missing/stale books remain explicit gaps, never zero prices.
+
+Seven post-only BUY bids were independently verified LIVE, zero-filled at
+01:13:10–17UTC/block95720430: ME02YES10@38c, CA06NO50@3c, MT01YES10@33c,
+NY01YES10@12c, ToddAchillesIdahoYES34@3c, MichiganDemocraticSenateNO5@31c,
+and **SedgwickCountyDemocraticSenateYES5@20c**. Pending13.37pUSD;
+uncommitted11.626890; all eight reviewed candidates' both balances0. These are
+commitments, not purchases/profit. Michigan currentNO44% and SedgwickYES49%
+are uncalibrated judgments with broad ranges. No measured portfolio hedge.
+
+Pull Sedgwick at **Oct19 10:00UTC**, before in-personopening13UTC/Trump23UTC
+rally. Nexstar's Tuesday/Oct21 weekday conflict remains unresolved; the pull
+precedes either debate interpretation. Pull Idaho atOct19 22:00UTC before its
+Oct20forum; Michigan atOct23 22:00UTC beforeOct24 in-personvoting. Review every
+existing tick/earlier materialnews. AnthropiclargestIPO NO5@62c remains
+canceledzero-fill/review_required; no repost. Read [entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
+[corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md), and
+[resting orders](notes/resting_orders.md). LastfullheldcheckOct17 22:00,
+nextOct18 02:00. Current Senatecontrol D53/R46/Other1, DD49/RR16;
+no chamber/ISRG/Spotify order. [Current source revision](research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md).
 
 ## Mandate and constraints
 

@@ -1,0 +1,135 @@
+{
+  "review_index": 2510,
+  "condition_id": "0x7a230d6227b37fed0864785fb2ef4c19fc35ba7ef2c98ff069b092fc9f109398",
+  "criteria_sha256": "2d51250e15b5b4a2abd6bb48c1338c9922611cf8b884b64a76faf416f30f9764",
+  "status": "valued",
+  "literal_analysis": "DemocraticLeavenworthcountySenateplurality,partyreplacement,alphabeticaltie,March31Otherfallback;completeindividualrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.sos.ks.gov/elections/24elec/2024-Presidential-Results.xlsx",
+      "observed_utc": "2026-10-18T00:15:57.085364Z",
+      "finding": "OfficialLeavenworthD13732/R22055/other760,total36547; directintegercountyvsstategeography, not2026poll."
+    },
+    {
+      "url": "https://www.sos.ks.gov/elections/22elec/2022-General-Election-US-Senate-Results-By-Precinct.xlsx",
+      "observed_utc": "2026-10-18T00:38:15.034Z",
+      "finding": "Leavenworth92precincts:D9444/R16570/L843,total26857, no targetmissingcells/duplicatekeys."
+    },
+    {
+      "url": "https://www.sos.ks.gov/elections/22elec/2022-General-Official-Vote-Totals.pdf",
+      "observed_utc": "2026-10-18T00:40:45.265405Z",
+      "finding": "Primaryindependent2022statePDFread:602976R/372214D/29766L; exactdenominator1004956."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11,
+    "low": 0.01,
+    "high": 0.4,
+    "method": "SameLeavenworthstatepluscountygeographicmodelas1430, not independent;15ppentryreserve",
+    "reasoning": "D11/R88/Other1; currentstate/local uncertainty andold2022anchor sensitivity retained; NOincludesR+Other.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_2401_2520.json.gz",
+    "quote_observed_utc": "2026-10-18T00:41:53.010+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.11,
+        "best_bid": 0.2,
+        "best_ask": 0.24,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.717,
+        "received_utc": "2026-10-18T00:41:53.010+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.24,
+            "fee_usd": 0.07296
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.47296,
+        "fee_usd": 0.07296,
+        "break_even_probability_before_carry": 0.24729600000000002,
+        "break_even_probability_with_idealized_carry": 0.24790847116488157,
+        "central_expected_profit_usd": -1.37296,
+        "default_10pp_stressed_profit_usd": -2.37296,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.009999999999999995,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.936
+      },
+      "No": {
+        "probability": 0.89,
+        "best_bid": 0.76,
+        "best_ask": 0.8,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.717,
+        "received_utc": "2026-10-18T00:41:53.010+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.8,
+            "fee_usd": 0.064
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.064,
+        "fee_usd": 0.064,
+        "break_even_probability_before_carry": 0.8064,
+        "break_even_probability_with_idealized_carry": 0.8083971885811356,
+        "central_expected_profit_usd": 0.8360000000000003,
+        "default_10pp_stressed_profit_usd": -0.1639999999999997,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.79,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.5270399999999995
+      }
+    }
+  },
+  "verdict": "Neitherdatedaskclears15ppreserve; futureNO71c/5shareconditionaltrigger, noorder.",
+  "reopen_condition": "Neworiginalcounty/statepoll/ballot/candidateevidenceorpassiveNO<=71c withfullfreshgates; YESneedsvaluationratherthanreservefittedtoprice.",
+  "current_description_sha256": "24bf10978c77c27475ca6ecadb65de83d550b98e033eef27e319ba8ff18efc0e",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "57807506484677216590583560154608656181318168354510482684091064451667519744884",
+    "16514636754476215387783615031412530004032874956919828190924263458198812639961"
+  ],
+  "source_receipt_references": {
+    "gamma": "req_0002",
+    "books": "req_0006",
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/county_kansas_method_0042.md",
+    "tracked_model": "research/2026-10-17-deep-review/models/county_kansas_projection_0042.json",
+    "case_specific_reserve_for_entry": 0.15,
+    "same_outcome_family_case": 1430,
+    "priority_followup": false,
+    "chronology_note": "PointD11/R88/Other1 fixed in primary calculations andcounty method before reading the agent price notification. The00:41:53 book capture can predate the finalmethod file; no assertion alloriginalquote receipts postdate the forecast. Thisworkfile is writtenafteragentnotice, with unchangedpoint."
+  },
+  "evaluated_utc": "2026-10-18T00:48:58.084621+00:00",
+  "question": "Will the Democrats win Leavenworth County in the Kansas Senate race in 2026?",
+  "market_id": "5790786",
+  "valuation_author": "primary_operator",
+  "original_index": 2510,
+  "report_sha256": "5d3d786a9f5949c56af808ec11f2a29f3eb65485642bec4f56f462e3823bec6b"
+}
