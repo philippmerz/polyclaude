@@ -1,26 +1,31 @@
 ---
-reviewed_at: "2026-10-18T10:01:05.216381+00:00"
+reviewed_at: "2026-10-18T10:42:24+00:00"
 valid_until: "2026-10-18T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 2c2348a13205858942060e80b53d5b18810416578e47955ea1ce099dfd0668b0
+  README.md: ca4cb9847df4a8fcc3d64b163b7622524e60ccc43c1bc1ee8936996e360bba45
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: c031b04a7476fe916ea8e155fd797611848c890cab5ec1bc4507db1752ce8cf6
   strategy/02_operations.md: b984653caee9886b3f00f788ed32e3bdbb12f43bffada683bf78ca88ff8a7499
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
-  scripts/README.md: c6d21912d160548e89640f40a0a4999107c850ebcd578928529360b52315ea21
+  scripts/README.md: ac5c48d4c8dee61f038954ab63f9ab1a454cd7b44de2fca1dc77223c42d221c2
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 666966a9207db83e82656394ff05c5b570614f7d1a1b13b334a2665dc349b7d8
+  notes/backlog.md: 1a1595cfb327aa4659ae0eccda554553ee956420a9037002a692cbd133e86700
   notes/resting_orders.md: 419b1ef6afaa8c76211ce19ff842001a7d93eb9ddb4537d7889bb6a246273b51
-  notes/journal.md: e44cf64fc3a74ae5a0555f895de8c6c3ae2263715267b56f05531002d2f27434
+  notes/journal.md: 415af4923e83b363f5b1878380a5d8f46c8f8ed452b0122d8a7ec53bfab1d0d1
 ---
 
-**Separate active research:** the local 04:45 checkpoint records 212 valued,
-3 blocked, 328 factual exclusions and 2,457 pending across 543 records; no active
-case, next112. These pre-existing uncommitted records were not advanced by fallback.
+**Separate active research:** the 10:39 checkpoint records 213 valued, 3 blocked,
+328 factual exclusions and 2,456 pending across 544 records; active 113 is included
+in pending. Five appended records after pushed HEAD `33e9fac` are audited in
+[ledger audit 1039](../data/deep_review_20261017/ledger_audit_1039.json). Case 112 is
+priority research, not entry approval. OpenRouter rows are per model variant, not
+daily observations; rolling-week response sums do not provide the fixed weekly
+settlement totals missing for blocked case 35. These updates are separate from the
+fallback; no account check occurred in this curation.
 [Checkpoint](deep_review_checkpoint.json), [index](../research/2026-10-17-deep-review/INDEX.md)
 and [protocol](../research/2026-10-17-deep-review/PROTOCOL.md) govern resumption.
-Case92 still needs complete roll-correct post-creation CME active-month highs;
+Case 92 still needs complete roll-correct post-creation CME active-month highs;
 a current quote/headline search does not prove no breach. Preserve unrelated edits.
 
 ## Completed fallback: dated account and receipts

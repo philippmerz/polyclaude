@@ -1,0 +1,52 @@
+{
+  "schema": "independent_champion_advisory.v1",
+  "review_index": 112,
+  "market_id": "5763815",
+  "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+  "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+  "created_utc": "2026-10-18T10:39:24Z",
+  "role": "advisory_only_primary_operator_owns_valuation_and_decision",
+  "reviewed_files": [
+    "research/2026-10-17-deep-review/evaluations/0112.json",
+    "research/2026-10-17-deep-review/evaluations/0112.md",
+    "data/deep_review_20261017/work/0112_primary_before_quote.json",
+    "data/deep_review_20261017/work/0112_post_quote_countermodel.json",
+    "data/deep_review_20261017/openrouter112_source_followup_1030.json"
+  ],
+  "source_facts": {
+    "capture_utc": "2026-10-18T10:30:21.906721Z",
+    "rolling_week_api_rows": 649,
+    "derived_rolling_week_sum_T": 168.339264961301,
+    "four_week_unchanged_equivalent_T": 673.357059845204,
+    "official_displayed_deepseek_T": 35.9,
+    "previous_snapshot_displayed_deepseek_T": 36.8,
+    "fixed_week_history_obtained": false,
+    "daily_panel_obtained": false,
+    "historical_daily_dataset_http_status": 401,
+    "source_packet_sha256": "0ea520069d39cc43653d2e9cb6b13739b5eaa307586d8a65762854d0dee669dc",
+    "body_sha256": [
+      "d460e20cfcf832397ce133a162c4bbf706c5956e9a9a61b46910fa70c7ee0492",
+      "0ea6d152a62a55d25fd1ad213e20c0789a754f59b99c0ce955355fa5f7c90ccb"
+    ]
+  },
+  "primary_claims_reviewed": {
+    "central_p_yes": 0.09,
+    "sensitivity": [0.005, 0.8],
+    "reserve_absolute": 0.15,
+    "pre_price_scenario_weights": {
+      "steady": 0.4,
+      "adoption": 0.4,
+      "disruption": 0.15,
+      "source_chart_uncertainty": 0.05
+    },
+    "post_quote_750T_log_sigma_bucket_probability": {
+      "0.03": 0.7335745882248493,
+      "0.05": 0.4951464432726514,
+      "0.1": 0.2612066728170105
+    }
+  },
+  "advisory_conclusion": "The NO thesis is coherent if aggregate traffic stays near the observed rolling-week level or declines; the reference four-week equivalent is below 725T. It is not calibrated because fixed-week historical totals/revisions are missing. A low-volatility distribution concentrated near 750T reverses the side; YES or cash remains a credible counter-thesis. Current quote/execution conditions and all operational/correlation gates require fresh review.",
+  "no_new_forecast_or_action": true,
+  "canonical_evaluation_edited": false,
+  "portfolio_files_edited": false
+}

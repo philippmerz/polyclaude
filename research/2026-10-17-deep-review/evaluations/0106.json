@@ -1,0 +1,157 @@
+{
+  "review_index": 106,
+  "condition_id": "0xb64fa36d494b1e16ffba88664a1a12c15a01e58ed0cfa8bc2824e1c8df2356f9",
+  "criteria_sha256": "4a278dc5b9f6b6e6d4051d115872397e0acca720cc401296456886ec959123c7",
+  "status": "valued",
+  "literal_analysis": "FullHKOAbsoluteDailyMaxOct17/one-decimal/initialprintcutoff/7dayerroneouscorrection/nodataOct24lowestclausesread. ProvisionalHKO29.2notfinal; parentlowest24and28labelbound; no inventedrounding.",
+  "evidence": [
+    {
+      "url": "https://www.weather.gov.hk/cis/dailyExtract/dailyExtract_202610.xml",
+      "observed_utc": "2026-10-18T03:27:18.462913+00:00",
+      "finding": "SpecifiedDailyExtractOctoberXMLonlyOct1–15; Oct17finalrow/initialpublicationabsent. LastModifiedOct16 andrawhashmatchespriorcapture."
+    },
+    {
+      "url": "https://www.weather.gov.hk/wxinfo/dailywx/yeswx/DYN_DAT_MINDS_RYES20261017.json",
+      "observed_utc": "2026-10-18T03:29:38.708626+00:00",
+      "finding": "PrimaryreadexactofficialOct17publicsummaryJSON: HKOheadquartersmax29.2/min26.8; ownnoteprovisional/limitedvalidation. ThisisnotfinalDailyExtract."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/events?slug=highest-temperature-in-hong-kong-on-october-17-2026",
+      "observed_utc": "2026-10-18T03:30:47.374117+00:00",
+      "finding": "Exactparent1192288andthisCID/tokensbound; lowest24Corbelow,alllabelsread; noexplicitdecimalroundingruleinparent."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.01,
+    "low": 0.0001,
+    "high": 0.3,
+    "method": "Primary post-observation but pre-final-publication source/settlement scenario model; provisional HKO29.2C is a proxy, not the specified finalized Daily Extract.",
+    "reasoning": "Primary read official Oct17 daily-summaryJSON reporting HKOheadquarters29.2C/max26.8C/min andprovisionalwarning, plusexactparentlowest24Corbelow. Current specifiedDailyExtract hasnoOct17row. Ordinary interpretationsof28labelallmiss29.2; exactboundarymappingnotasserted. Scenario90%timelyfinalconsistentwithprovisional givesYES0,5%nodatafallbacklowest24 givesYES0,4%meaningfulsource/initialpublicationcorrection givesYES25%,1%nonstandardinterpretation/adjudicationgivesYES20%; weighted1.2%,rounded1%. Weightsarejudgment,notfittedpublication/errorfrequencies. Sensitivity0.01–30% andordinary10pointreserve preserve source/initialprint/rangeuncertainty; no measuredtail exemption.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 14,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.01,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 729.817,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.002,
+            "fee_usd": 0.000998
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.021,
+        "fee_usd": 0.001,
+        "break_even_probability_before_carry": 0.0021000000000000003,
+        "break_even_probability_with_idealized_carry": 0.0021024255379325863,
+        "central_expected_profit_usd": 0.079,
+        "default_10pp_stressed_profit_usd": -0.021,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.0095
+      },
+      "No": {
+        "probability": 0.99,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 729.817,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0004995000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.9905,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.9990500000000001,
+        "break_even_probability_with_idealized_carry": 1.0002039207959765,
+        "central_expected_profit_usd": -0.09050000000000047,
+        "default_10pp_stressed_profit_usd": -1.0905000000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.89,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.979000000000001
+      }
+    }
+  },
+  "verdict": "NO centralnegative at99.9c; YES small central tail failsuncertainty/minimum. Both oldbooksstaleat729.817sreceipt; noentry. Future86c NO markerillustrative.",
+  "reopen_condition": "FinalOct17DailyExtractandinitialprint/clarificationorcurrentNO<=86c,thenindependentforecast,currentfreshbooks/fees/UMA/account/correlation/minima;beforepublication/correctiondeadline.",
+  "current_description_sha256": "576781d8a11c90539caa5cbf73c523e5a6aaf84acd504c54f1e972b6b4ca0fc7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "97187664593812877434402038253657844219057850510854868369370677181002049687032",
+    "54860155003461366409210174242316827828788462588561902415596050604054833015974"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0131",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0131.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0131.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0106_primary_before_quote.json",
+    "primary_followup": "data/deep_review_20261017/hko106_primary_followup_0330.json",
+    "source_packet": "data/deep_review_20261017/hko106_current_sources_0328.json",
+    "case_specific_reserve_for_entry": 0.1,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.89,
+    "selected_stressed_yes_taker_profit_usd": -0.021,
+    "selected_stressed_no_taker_profit_usd": -1.0905,
+    "both_quote_books_failed_freshness_at_original_receipt": true,
+    "raw_scenario_p_yes": 0.012,
+    "priority_followup": false,
+    "future_NO_maker_trigger": 0.86,
+    "future_NO_hypothetical_shares": 5,
+    "final_source_observation_still_missing": true
+  },
+  "evaluated_utc": "2026-10-18T04:43:35.147680+00:00",
+  "question": "Will the highest temperature in Hong Kong be 28°C on October 17?",
+  "market_id": "5720766",
+  "valuation_author": "primary_operator",
+  "original_index": 106,
+  "report_sha256": "d9cfb55c428884438366b3b4c3905911221b875a85a2346e7fb16ba71fc80018"
+}

@@ -1,0 +1,149 @@
+{
+  "review_index": 96,
+  "condition_id": "0x0b4cc3b739e1dfe5d73274740e7308b6fb389c5af040c3a174923d928d134bee",
+  "criteria_sha256": "7cf6b0a58829dd854acc21eff92b25944169263365e2968ddc8458f071cb8318",
+  "status": "valued",
+  "literal_analysis": "Yes iff Second Coming occurs by2026-12-31 23:59 ET; otherwiseNo. Consensus of credible sources, no named tribunal or operational test. Historical created2025-11-25; normal January resolution fits project evaluation, but consensus disputes may delay payout. Not interchangeable with Rapture, date prediction, clergy appearance, AI video or a religious leader's assertion.",
+  "evidence": [
+    {
+      "url": "https://www.vatican.va/content/francesco/en/audiences/2013/documents/papa-francesco_20130424_udienza-generale.html",
+      "observed_utc": "2026-10-18T03:14:25.479499+00:00",
+      "finding": "Full returned rendered audience text read approximately03:14UTC; future return/unknown date is doctrine, not quantified event hazard. Timestamp is editorial review, not HTTP receipt."
+    },
+    {
+      "url": "https://news-europe.churchofjesuschrist.org/article/sunday-afternoon-session-october-2026-general-conference",
+      "observed_utc": "2026-10-18T03:14:25.479499+00:00",
+      "finding": "Official October4 2026 conference summary, full returned text read; preparation for future Second Coming, not a claim of completed event or proof of global absence."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.005,
+    "low": 0.0001,
+    "high": 0.15,
+    "method": "Primary subjective forecast of a consensus-adjudicated payout, with broad theological and oracle uncertainty; no empirical supernatural-event frequency is asserted.",
+    "reasoning": "The complete rule requires an actual Second Coming by December31 23:59 ET, with credible-source consensus; private visions, predictions, a claimant or a prediction date passing are not by themselves sufficient. The 2013 Vatican teaching treats the date as unknown, and an October4 2026 official LDS conference report treats the return as future. These sources describe beliefs and limited contemporary observations, not proof of global absence or a measurable hazard. With about75 days remaining, my judgment is a very low chance of a widely evidenced event accepted under this rule. The 0.5% payout forecast includes a nonzero adjudication/false-consensus tail and is deliberately rounded, not statistically fitted. A 0.01–15% sensitivity range and ordinary10point entry reserve acknowledge that the event and adjudication are not calibrated. No multiplicative measured-tail exemption is used.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.005,
+        "best_bid": 0.012,
+        "best_ask": 0.013,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.556,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.013,
+            "fee_usd": 0.006415499999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.13642,
+        "fee_usd": 0.00642,
+        "break_even_probability_before_carry": 0.013642000000000001,
+        "break_even_probability_with_idealized_carry": 0.013726623872806168,
+        "central_expected_profit_usd": -0.08642000000000001,
+        "default_10pp_stressed_profit_usd": -0.13642,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.11406999999999999
+      },
+      "No": {
+        "probability": 0.995,
+        "best_bid": 0.987,
+        "best_ask": 0.988,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1.556,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.988,
+            "fee_usd": 0.005928000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.885929999999998,
+        "fee_usd": 0.00593,
+        "break_even_probability_before_carry": 0.9885929999999998,
+        "break_even_probability_with_idealized_carry": 0.9947254269380638,
+        "central_expected_profit_usd": 0.06407000000000096,
+        "default_10pp_stressed_profit_usd": -0.935929999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.895,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.863579999999999
+      }
+    }
+  },
+  "verdict": "NO central edge is about six cents per ten shares before carry and loses under selected uncertainty; no entry. Future86c NO maker threshold is illustrative only.",
+  "reopen_condition": "Credible corroborated event/claimant or adjudication shift; otherwise NO<=86c with independent current forecast and all execution/correlation/cost gates.",
+  "current_description_sha256": "f5313ab2321ae531dde9bf453915ce4e4ad9361e83d2d48c90c16089eeb9d2be",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "69324317355037271422943965141382095011871956039434394956830818206664869608517",
+    "51797157743046504218541616681751597845468055908324407922581755135522797852101"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0120",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0120.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0120.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0096_primary_before_quote.json",
+    "source_artifact": "logs/deep_review_20261017/jesus96_primary_web_0314.json",
+    "case_specific_reserve_for_entry": 0.1,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.895,
+    "selected_stressed_yes_taker_profit_usd": -0.13642,
+    "selected_stressed_no_taker_profit_usd": -0.93593,
+    "NO_upper_15pct_YES_sensitivity_profit_usd": -1.38593,
+    "future_NO_maker_trigger": 0.86,
+    "future_NO_hypothetical_shares": 5,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T03:14:55.066791+00:00",
+  "question": "Will Jesus Christ return before 2027?",
+  "market_id": "703258",
+  "valuation_author": "primary_operator",
+  "original_index": 96,
+  "report_sha256": "3c69b9396215c8f511e98e76b5da31888be1794ffce957930b3846314b5a0b94"
+}

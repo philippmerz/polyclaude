@@ -1,0 +1,148 @@
+{
+  "review_index": 101,
+  "condition_id": "0x483cdcb2604d5762339a7fcd4b2e5e5eb6fd375f19c9413061dd4d3668fba7cd",
+  "criteria_sha256": "5184fed53dc6e880ec3d90a44932015673b8d44f0d52939f186f7cc97d7015e7",
+  "status": "valued",
+  "literal_analysis": "FullOct13–20noonETrule/inclusive260–279 and all mainfeed/reply/delete/community/secondary-source clauses read. Counter277partial, only0–2furtherposts absentrepair; notfinalorcertain.",
+  "evidence": [
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/c4b9edbd-d600-4401-ade5-ec8070db8047?includeStats=true",
+      "observed_utc": "2026-10-18T03:23:16.759213+00:00",
+      "finding": "ExactOct13–20noonETcounter277, partial notfinal. lastSync metadata stale and latesterror unexplained; primary read capturedtrackingpayload."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/users/elonmusk/posts?startDate=2026-10-13T16%3A00%3A00Z&endDate=2026-10-20T15%3A59%3A59Z&timezone=EST",
+      "observed_utc": "2026-10-18T03:23:24.727477+00:00",
+      "finding": "Primary independently filtered277uniqueplatformIDs inexactUTCwindow, matchingcounter; row-levelpostclassificationnotexposed. Latestincluded02:18:06UTC."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/docs",
+      "observed_utc": "2026-10-18T03:23:51.803075+00:00",
+      "finding": "OfficialpublicGETJSONtracker/exportAPI documented; interval and exactposttypes muststillfollowfullrule."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.015,
+    "low": 0.0001,
+    "high": 0.2,
+    "method": "Primary conditional remaining-post count mixture; correlated overlapping counters are context, not independent fitted samples.",
+    "reasoning": "ExacttrackerwindowandAPIcounter277 agree with277unique exported IDs inside exactUTCinterval. To finish260–279 without correction requires0–2additionalqualifyingposts in about2.5days. Completedoverlapping7daycounters347/364 imply about50.8posts/day; currentpaceis faster. Ordinaryactivebranch96% uses an explicitly uncalibrated negative-binomial remainingcount with shape2 and that average rate; abrupt realposting-haltbranch2% assigns50% to0–2posts; counter/rule/adjudicationrepairbranch2% assigns20% tofinal260–279. WeightedYESisabout1.5%, rounded. These branches/weights/shape are judgmental stress construction, not estimated eventrates. PubliclastSyncError and stale lastSync mean no measured-tail exemption; use10pointreserve and0.01–20% sensitivity. Trackeroutagealone doesnotguaranteefrozen277 because Xsecondaryappliesiftrackerupdatesincorrectly.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 3,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.015,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 17.105,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.0004995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0105,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.0010500000000000002,
+        "break_even_probability_with_idealized_carry": 0.0010502597612232435,
+        "central_expected_profit_usd": 0.13949999999999999,
+        "default_10pp_stressed_profit_usd": -0.0105,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.985,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 17.105,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.885,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9895
+      }
+    }
+  },
+  "verdict": "NO has no captured ask; YES tiny central-positive tail fails10pointreserve and actual ticket minimum. Noentry; future85c NO maker threshold illustrative.",
+  "reopen_condition": "Reliable counter/export/X reconciliation or genuine NO<=85c quote, then independently update exactterminalbucket forecast and all current cost/size/account/correlation gates; beforeOct20noonET cutoff.",
+  "current_description_sha256": "6ab036c611f4d7b90445f7101112a56362c0c94b3c2d0021db19149fe921eea2",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "33484541046256665146456684286416049494722262471211126353318888658491024745055",
+    "36889733104292339989562181774354744009697674145148915247181196707209733039312"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0126",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0126.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0126.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0101_primary_before_quote.json",
+    "source_packet": "data/deep_review_20261017/xtracker101_current_sources.json",
+    "primary_export_check": "data/deep_review_20261017/xtracker101_primary_export_check.json",
+    "raw_mixture_p_yes": 0.015331780812572601,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.885,
+    "case_specific_reserve_for_entry": 0.1,
+    "selected_stressed_yes_taker_profit_usd": -0.0105,
+    "no_taker_ask_for_NO": true,
+    "future_NO_maker_trigger": 0.85,
+    "future_NO_hypothetical_shares": 5,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T03:26:24.290692+00:00",
+  "question": "Will Elon Musk post 260-279 tweets from October 13 to October 20, 2026?",
+  "market_id": "5479386",
+  "valuation_author": "primary_operator",
+  "original_index": 101,
+  "report_sha256": "78d766236022cea616cf2fff108bc1dbcdf6ac8fba8c450662e1f6793b7044f0"
+}

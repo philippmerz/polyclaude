@@ -2,6 +2,25 @@
 
 Canonical evaluation files remain immutable observations. Read this file with the index and candidate follow-up before interpreting current probabilities or acting.
 
+
+## Current review pointer — October 18, 10:39 UTC
+
+The checkpoint is 213 valued, 3 blocked, 328 factual exclusions and 2,456 pending across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` pass frozen identity/status, CSV and report-hash checks: 96, 101, 106, 112 valued; 97 factually excluded after official final MLB results. [Audit 1039](../../data/deep_review_20261017/ledger_audit_1039.json) and the live index/checkpoint govern. Case 112 is priority research only: 9% YES, 0.5–80% range after a post-quote concentrated countermodel, and a 15-point reserve that is not a floor; no entry is approved. Case 92 remains blocked on complete post-creation CME active-month High history. The preliminary CME CL option crosscheck challenges low-oil mass but is not a physical ICE CLL probability.
+
+**OpenRouter source-grain correction — October 18, 10:40 UTC.** The public `period=week` API returns one row per model variant; the row date is not a daily usage observation. Prior 174.020765561738T and current 168.339264961301T are rolling-week response sums, not five daily observations or exact displayed settlement totals. DeepSeek rows 36.824610T/35.888676T match rounded chart labels 36.8T/35.9T. Fixed UTC Monday–Sunday history for case 35 remains missing, not zero; case 35 stays blocked. See [case 112 source packet](../../data/deep_review_20261017/openrouter112_source_followup_1030.json), [case 35](evaluations/0035.md), [case 112](evaluations/0112.md) and [audit1039](../../data/deep_review_20261017/ledger_audit_1039.json).
+
+**October18, approximately03:25UTC — oil option proxy crosscheck.** Primary
+verified the DEC26 LO put rows and corrected the mixed-month extraction. The
+[new crosscheck](models/oil_option_proxy_crosscheck_0325.md) derives total
+volatility and put-spread sensitivities from the preliminary October 16 CME
+settlements. These challenge the earlier model's low-oil mass, especially below85,
+but are not physical November2 ICE CLL probabilities. Chapter310 supports a
+formula-derived November17 LO expiry under the stated ordinary-calendar
+assumptions; a dated listed-calendar row remains unverified. No central forecast,
+selected reserve or financial prior was changed. Read this before treating an
+old positive compound central EV as an entry signal; case 92's historical High
+gap remains unresolved.
+
 **October17 21:54UTC — Spotify joint update, case2 and ten new children.**
 The current primary MNI US annual #2 estimate is **37%**, superseding the
 immutable case2's42% observation. All seven missing early weekly cells were
@@ -68,7 +87,7 @@ counting the same poll twice or inferring a legal domicile finding.
 ME-02YES10@.38 and case32CA-06NO50@.03 were actually posted through
 `polyclaude_enter.py --maker`, then independently verified LIVE/zero matched,
 with zero CTF balances at block95710019. Pending risk5.30pUSD, not a purchase
-or profit until a fill. New CNN October16 direct interview confirms Kiley's
+or profit until a fill. New CNN October 16 direct interview confirms Kiley's
 neither-caucus intent; primary retains the conservative15%NO point with its
 existing uncertainty, not a guaranteed literal outcome. Exact current records
 and management are in candidate_followup and notes/resting_orders.
@@ -386,7 +405,7 @@ All489previousrecords+7new=496verifiedagainstimmutableJSON/MD/ledger/frozenIDhas
 
 New minnesota_original_method_followup_0024.json recovers the KSTP-embedded chart:718 likely voters, ±4.2 *credibility interval*, fieldOctober9–12 (not the secondaryOctober8–12), Flanagan45/Tafoya42/Whiting2/Simonetti2/undecided9. Its generic footer instead names a2024AnnualPublicSentimentSurvey/GlobalInsightsResearchGroup. Do not treat that footer as the2026poll's recruitment, weighting or random-sampling methodology. The primary retains80%D/50–95range/10ppreserve: the+3 original headline and endpoint date are unchanged, full method remains uncertain, so3.5source-extra/capped weight are not reduced. This clarification is not a new completed case or an order.
 
-Officialprimary results identify Flanagan/Tafoya as their party winners, not a full final general ballot. MPR reports an hourlongOctober16 debate; event listing noon–1p.m. is displayed local time. Additional named contenders are factual field context, not automatically a Democratic or Republican winner. Old report/source metadata remain dated with this explicit correction.
+Officialprimary results identify Flanagan/Tafoya as their party winners, not a full final general ballot. MPR reports an hourlongOctober 16 debate; event listing noon–1p.m. is displayed local time. Additional named contenders are factual field context, not automatically a Democratic or Republican winner. Old report/source metadata remain dated with this explicit correction.
 
 
 ## October18 00:46UTC — Michigan tiny maker independently verified
@@ -609,3 +628,10 @@ all archived bytes remain recoverable through their manifests/readers. Disk was
 The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
 
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](evaluations/0092.md), [source packet 0238](../../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
+
+
+## October 18 03:14 UTC — case 96 completed; no new money
+
+The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
+
+Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.

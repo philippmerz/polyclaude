@@ -1,0 +1,156 @@
+{
+  "review_index": 97,
+  "condition_id": "0x26b5ef627ebddd730da4491dfac7f4ac22e4b4a73c4ac0fa8ea211d9da6af3a4",
+  "criteria_sha256": "ddbaf986e8565e0a12b54061b5ab2b98ba119bc7c8a62331aa83786647105c71",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rescheduled Game4 rule read; final official exactgame satisfies Rays win, no cancellation/tie/fallback branch. Current winner purchase asks absent; retain as factual exclusion, not completedvaluation.",
+  "evidence": [
+    {
+      "url": "https://statsapi.mlb.com/api/v1/schedule?gamePks=849816&sportId=1&hydrate=team%2Clinescore",
+      "observed_utc": "2026-10-18T03:19:07.885142+00:00",
+      "finding": "Primary read hash-bound exact ALCS Game4 final schedule: game849816, TampaBay7/Cleveland3, Final/GameOver, notGame5 orseries."
+    },
+    {
+      "url": "https://statsapi.mlb.com/api/v1/game/849816/boxscore",
+      "observed_utc": "2026-10-18T03:19:16.713356+00:00",
+      "finding": "Primary read post-final official team statistics, nineinnings and sevenversusthree runs, same exactopponents."
+    },
+    {
+      "url": "https://clob.polymarket.com/books",
+      "observed_utc": "2026-10-18T03:20:40.995419+00:00",
+      "finding": "Both exactcondition/outcometoken books: winnerasksabsent/bid99.9c; loseras k0.1c/no bids. Receipt freshness is not later execution eligibility."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.9995,
+    "low": 0.99,
+    "high": 1.0,
+    "method": "Primary official-result adjudication forecast, not a pregame prediction or fitted team-strength model.",
+    "reasoning": "Primary verified exact final Game4 official MLB schedule and post-final boxscore raw bytes/hashes: gamePk849816, Oct17/18 UTC, TampaBay7-Cleveland3 after9innings. Fullrule postponentswait and50/50cancel/tie do not apply. Published governing official statistics are already available, so no24h fallback wait. Sports event outcome is now observed; .05% central residual and1pp selectedreserve are deliberately conservative oracle/data/identity error sensitivities, not estimated historical error frequencies. This exception to ordinary10pp applies only to firsthand fully completed official result and short remaining adjudication horizon; it does not transfer to pregame or long-horizon contracts.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/mlb97_fresh_two_sided_0321.json",
+    "quote_observed_utc": "2026-10-18T03:20:40.995419+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 2,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Tampa Bay Rays": {
+        "probability": 0.9995,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.6904189586639404,
+        "received_utc": "2026-10-18T03:20:40.995419+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8995000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9895
+      },
+      "Cleveland Guardians": {
+        "probability": 0.0004999999999999449,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.6904189586639404,
+        "received_utc": "2026-10-18T03:20:40.995419+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.0004995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0105,
+        "fee_usd": 0.0005,
+        "break_even_probability_before_carry": 0.0010500000000000002,
+        "break_even_probability_with_idealized_carry": 0.0010501731670093078,
+        "central_expected_profit_usd": -0.005500000000000551,
+        "default_10pp_stressed_profit_usd": -0.0105,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      }
+    }
+  },
+  "verdict": "Factual exclusion: exact game completed with official Rays7–3 final; no winning asks and losing side has negative EV. Not a completed valuation count.",
+  "reopen_condition": "Reopen only on material official result/criteria change or a genuinely available winning-side price<=98c after all current execution and account gates.",
+  "current_description_sha256": "172ffbfe4268050aab871756bf4e2a1cd4c7d97377bf5f791e7cbd76c3cf8ce7",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "91683183963257916680594532559326295765393957646687893681765316288063853356557",
+    "99570794046264010626030442529177831454269863205377409076937872789021409019328"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "url": "https://gamma-api.polymarket.com/markets?id=5557832",
+      "status": 200,
+      "started_utc": "2026-10-18T03:20:11.520542+00:00",
+      "received_utc": "2026-10-18T03:20:12.047261+00:00",
+      "sha256": "6e850488e65234f3cd48d8add6e44a1f16b28166806b54f194633281a0ed1ecd",
+      "gzip_path": "logs/deep_review_20261017/mlb97_market_status_0320/gamma.body.gz",
+      "gzip_sha256": "a8feee64420316534dd74779915387b888fe8d735fc162f17e680adf265d82f9",
+      "http_date": "Sun, 18 Oct 2026 03:20:12 GMT"
+    },
+    "books": {
+      "name": "books",
+      "method": "POST",
+      "url": "https://clob.polymarket.com/books",
+      "request_json": [
+        {
+          "token_id": "91683183963257916680594532559326295765393957646687893681765316288063853356557"
+        },
+        {
+          "token_id": "99570794046264010626030442529177831454269863205377409076937872789021409019328"
+        }
+      ],
+      "started_utc": "2026-10-18T03:20:40.946796+00:00",
+      "received_utc": "2026-10-18T03:20:40.995419+00:00",
+      "status": 200,
+      "http_date": "Sun, 18 Oct 2026 03:20:40 GMT",
+      "raw_sha256": "c983864c53222f4aef5b3204b1c4d7bbf99dba7b8bd7d8b7d00a53f0fe271ac3",
+      "gzip_sha256": "3841c3d66b50ae45f8ef25f4f537fbd9470fee42d18ecd722a69bca8cb5cb556",
+      "gzip_path": "logs/deep_review_20261017/mlb97_market_status_0320/books.body.gz"
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/mlb97_current_sources_0319.json",
+    "primary_before_quote": "data/deep_review_20261017/work/0097_primary_before_quote.json",
+    "current_quote_packet": "data/deep_review_20261017/mlb97_fresh_two_sided_0321.json",
+    "case_specific_reserve_for_entry": 0.01,
+    "factual_exclusion_reason": "completed official event plus absent winning-side asks and terminal losing-side quote",
+    "no_asset_action": true
+  },
+  "evaluated_utc": "2026-10-18T03:21:21.784115+00:00",
+  "question": "Tampa Bay Rays vs. Cleveland Guardians",
+  "market_id": "5557832",
+  "valuation_author": "primary_operator",
+  "original_index": 97,
+  "report_sha256": "3db9815cb715b7bb53b9f0beb7f70c22e9bf262b0e9a3c0a0602506ad0c0dbe8"
+}

@@ -1,0 +1,249 @@
+{
+  "schema": "public_gamma_discovery_snapshot_archive.v1",
+  "created_utc": "2026-10-18T03:17:27.181326+00:00",
+  "scope": "Exact nine completed Oct 13–16 check-in thin-tail snapshots listed in scripts/public_snapshot_archive.py; no data/snapshots, Oct 17+, or other files.",
+  "provenance": {
+    "producer_script": "scripts/discover_markets.py",
+    "producer_script_sha256": "c43810fef68020174f467b8ff35542d9f0338ba4478db388972dd69477d7dd1d",
+    "producer_script_size_bytes": 35091,
+    "public_endpoint": "https://gamma-api.polymarket.com",
+    "description": "Gamma-derived local discovery snapshots; archive metadata does not assert an HTTP receipt or exact request response binding.",
+    "http_receipts_asserted": false
+  },
+  "compression": {
+    "format": "gzip",
+    "level": 6,
+    "mtime": 0,
+    "deterministic_within_runtime": true
+  },
+  "hash_algorithm": "SHA-256 over exact original bytes and exact gzip bytes",
+  "reader": "scripts/public_snapshot_archive.py read_verified_path(original_path) verifies the original or adjacent gzip. Restore recreates the exact original and refuses changed existing files.",
+  "alias_handling": "Existing shortlist_latest.json symlinks are preserved unchanged and verified by path/target/mode/mtime. They are not rewritten to gzip; while the original is archived, each existing alias is dangling, so direct filesystem/JSON reads through it require restore first.",
+  "entry_count": 9,
+  "original_total_bytes": 87270228,
+  "gzip_total_bytes": 18601056,
+  "entries": [
+    {
+      "original_path": "logs/checkin_20261014T0200/discovery/snapshots/shortlist_20261014T020425380830Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261014T0200/discovery/snapshots/shortlist_20261014T020425380830Z_thin_tail.json.gz",
+      "original_size_bytes": 9799104,
+      "original_sha256": "46e349cedd8217f5d47db198f7fad59136ab213e7a7baca559e686d75278acd7",
+      "gzip_size_bytes": 2081747,
+      "gzip_sha256": "47e982f55b1cccb0ae872a57e61054a8ae4c856001acfd50ca16ca5557cb6ab7",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1791943465583626349,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261014T0200/discovery/snapshots/shortlist_20261014T020425380830Z_thin_tail.meta.json",
+        "size_bytes": 1480,
+        "sha256": "09f201a701b5f55b0a58b23cb1df160f456d7b1b1b47b1689493b56dfa2fa5e1",
+        "mode_octal": "0o600",
+        "mtime_ns": 1791943465603626306
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261014T0200/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261014T020425380830Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1791943465603626306
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261013T0200/discovery/snapshots/shortlist_20261013T020442113512Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261013T0200/discovery/snapshots/shortlist_20261013T020442113512Z_thin_tail.json.gz",
+      "original_size_bytes": 9762568,
+      "original_sha256": "2d89417caa7b1fba633ece640c468d5b9b62abfd9c7f45ac8f95fe2f4e96b564",
+      "gzip_size_bytes": 2081941,
+      "gzip_sha256": "14a4f052a159e9b04c29320c37fb4880c034be89852cb7a3081243da0a3c384a",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1791857082320774244,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261013T0200/discovery/snapshots/shortlist_20261013T020442113512Z_thin_tail.meta.json",
+        "size_bytes": 1479,
+        "sha256": "2bd2254e7cdd8f1f900c23f8bb670047197cdee368226f99475c1f76aa738be0",
+        "mode_octal": "0o600",
+        "mtime_ns": 1791857082340774201
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261013T0200/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261013T020442113512Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1791857082340774201
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261015T1400/discovery/snapshots/shortlist_20261015T140224824104Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261015T1400/discovery/snapshots/shortlist_20261015T140224824104Z_thin_tail.json.gz",
+      "original_size_bytes": 9732861,
+      "original_sha256": "dd202554ff0eae8b19626bc6c6dbb77434108e044d47f7ffb5f4b1c6b7d97db2",
+      "gzip_size_bytes": 2043046,
+      "gzip_sha256": "e0cfa743fd95009a78864e51d4fc3ba14c0d98fcae647030145f776ddf4231d2",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1792072944992233877,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261015T1400/discovery/snapshots/shortlist_20261015T140224824104Z_thin_tail.meta.json",
+        "size_bytes": 1478,
+        "sha256": "a90188182382c1391717681acb7ee8e73df7a0ea3a8855d90fc11a138537ba11",
+        "mode_octal": "0o600",
+        "mtime_ns": 1792072945012233834
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261015T1400/discovery/snapshots/shortlist_latest.json",
+        "present": false
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261016T0200/discovery/snapshots/shortlist_20261016T020207340252Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261016T0200/discovery/snapshots/shortlist_20261016T020207340252Z_thin_tail.json.gz",
+      "original_size_bytes": 9710750,
+      "original_sha256": "fce3cb004a1881fea161ade4d24d57290f951e3fde6eb3d92bde2ab293299266",
+      "gzip_size_bytes": 2060574,
+      "gzip_sha256": "c7d586f29fcd4480e5bebbcd917914bf57824f0563118a90e7a6f8cebe9ecd21",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1792116127561486868,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261016T0200/discovery/snapshots/shortlist_20261016T020207340252Z_thin_tail.meta.json",
+        "size_bytes": 1479,
+        "sha256": "57917df925fa9adf10baf32ce92d5ff179d5cdd1b7bc8daaff448e142feefe2e",
+        "mode_octal": "0o600",
+        "mtime_ns": 1792116127581486824
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261016T0200/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261016T020207340252Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1792116127581486824
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261013T1400/discovery/snapshots/shortlist_20261013T140234104643Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261013T1400/discovery/snapshots/shortlist_20261013T140234104643Z_thin_tail.json.gz",
+      "original_size_bytes": 9670006,
+      "original_sha256": "e94f36ccc84e7f70dfb63aebbeb04012d839a267574bfc227d68584185b60927",
+      "gzip_size_bytes": 2065840,
+      "gzip_sha256": "490132e9df7b29fb90910f48f5768815d44dd9eaa8eda8350d12defc6131a02b",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1791900154262597726,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261013T1400/discovery/snapshots/shortlist_20261013T140234104643Z_thin_tail.meta.json",
+        "size_bytes": 1480,
+        "sha256": "0083fd97fe07de1204616b82c85cad0c9fdeb7bc16ae39123afe210b3c50607c",
+        "mode_octal": "0o600",
+        "mtime_ns": 1791900154282597682
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261013T1400/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261013T140234104643Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1791900154282597682
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261016T0014/discovery/snapshots/shortlist_20261016T001703271816Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261016T0014/discovery/snapshots/shortlist_20261016T001703271816Z_thin_tail.json.gz",
+      "original_size_bytes": 9666567,
+      "original_sha256": "443974634984f775cd8a7d5cd8038695e154e663475a2e64fe06d140e7f08cc3",
+      "gzip_size_bytes": 2064666,
+      "gzip_sha256": "6eaa839ddcdf332d5f22972fb05995d9a20f00a0f4df3e3e8ddc4a1e7134af84",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1792109823507380645,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261016T0014/discovery/snapshots/shortlist_20261016T001703271816Z_thin_tail.meta.json",
+        "size_bytes": 1480,
+        "sha256": "84600172b650819655b1c11edf4711358b9d0658cc55cdddf564ba2aafebf2da",
+        "mode_octal": "0o600",
+        "mtime_ns": 1792109823523380610
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261016T0014/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261016T001703271816Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1792109823527380601
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261014T1400/discovery/snapshots/shortlist_20261014T140226311832Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261014T1400/discovery/snapshots/shortlist_20261014T140226311832Z_thin_tail.json.gz",
+      "original_size_bytes": 9653873,
+      "original_sha256": "e40953e26fc279cf9c543053f8d25d6cb4fcdb2746fd3ce2f4b3fe0575c6568f",
+      "gzip_size_bytes": 2063893,
+      "gzip_sha256": "b4c4c1ee922529953915a2bff4c650735cc1cc5476e952e172aa4182f977a338",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1791986546529284783,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261014T1400/discovery/snapshots/shortlist_20261014T140226311832Z_thin_tail.meta.json",
+        "size_bytes": 1479,
+        "sha256": "bc3ec98fff27d17445e5b1fc0ae53a1cc77110947d466ad6828ed7b0065825c7",
+        "mode_octal": "0o600",
+        "mtime_ns": 1791986546557284722
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261014T1400/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261014T140226311832Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1791986546557284722
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261015T0200/discovery/snapshots/shortlist_20261015T020152718331Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261015T0200/discovery/snapshots/shortlist_20261015T020152718331Z_thin_tail.json.gz",
+      "original_size_bytes": 9642945,
+      "original_sha256": "82665dbbd58f74857d3c3b43b3b3c547ffdd6b06687131a4afec28d47fe309b4",
+      "gzip_size_bytes": 2052524,
+      "gzip_sha256": "d1332dd12dffbf783adfa13887508571fc7ac8c60105236b3ea4f11caddbe74d",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1792029712938740114,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261015T0200/discovery/snapshots/shortlist_20261015T020152718331Z_thin_tail.meta.json",
+        "size_bytes": 1480,
+        "sha256": "54d55ab53bd8a1867486646ab1b014180a5c7662e46ba56efd9accde85e4d227",
+        "mode_octal": "0o600",
+        "mtime_ns": 1792029712962740061
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261015T0200/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261015T020152718331Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1792029712962740061
+      },
+      "http_receipt": null
+    },
+    {
+      "original_path": "logs/checkin_20261016T1400/discovery/snapshots/shortlist_20261016T140204941589Z_thin_tail.json",
+      "archive_path": "logs/checkin_20261016T1400/discovery/snapshots/shortlist_20261016T140204941589Z_thin_tail.json.gz",
+      "original_size_bytes": 9631554,
+      "original_sha256": "64ad35742389771c8e1ec3dac8e570aafb5b35b07bf3f21f550ccfd71c1600cd",
+      "gzip_size_bytes": 2086825,
+      "gzip_sha256": "2fbd05af696e8d23b8ea9a2ea2e72e7354b1a03b2d1499e6624c6b2a80c199cf",
+      "original_mode_octal": "0o600",
+      "original_mtime_ns": 1792159325267036920,
+      "existing_meta_sidecar": {
+        "path": "logs/checkin_20261016T1400/discovery/snapshots/shortlist_20261016T140204941589Z_thin_tail.meta.json",
+        "size_bytes": 1477,
+        "sha256": "511c5900bc25cb094e49a21c93fa745baf28468e78edf1b5dbc2ff0820a5c254",
+        "mode_octal": "0o600",
+        "mtime_ns": 1792159325295036858
+      },
+      "symlink_alias": {
+        "path": "logs/checkin_20261016T1400/discovery/snapshots/shortlist_latest.json",
+        "present": true,
+        "target": "shortlist_20261016T140204941589Z_thin_tail.json",
+        "mode_octal": "0o777",
+        "mtime_ns": 1792159325295036858
+      },
+      "http_receipt": null
+    }
+  ]
+}

@@ -27271,7 +27271,7 @@ logs/checkin_20261010T1400_{routine,sources,root}/.
 
 Reviewed the backlog and recent journal; no new public alert after 14:00,
 watchlist hit, overdue decision or due dated action. Monthly emergency/fee
-drill Oct12 and weekly P&L Oct16 remain future tasks; methodology is concluded.
+drill Oct12 and weekly P&L Oct 16 remain future tasks; methodology is concluded.
 Copper/Base candidates remain manual/on demand. Issuer credential rotation
 remains unverified/access-gated. No new goal, watcher or idle follow-up.
 
@@ -27908,7 +27908,7 @@ publication}.json; logs/periodic_20261011T2200/.
 
 Backlog/recent journal reviewed. No new public alert after 22:00, watch hit,
 overdue decision or new portfolio trigger. The due monthly emergency/fee
-drill completed below; next Nov12. Weekly P&L is next Oct16. Copper/Base remain manual candidates;
+drill completed below; next Nov12. Weekly P&L is next Oct 16. Copper/Base remain manual candidates;
 issuer rotation unverified/access-gated; retired off-chain Sunday review stays
 retired. No new goal, watcher, idle follow-up, trade/fill, actual cancel or
 on-chain broadcast. One material monthly Telegram summary follows verified
@@ -28003,7 +28003,7 @@ used the wrong scale, corrected offline with canonical pm_fees; actual risk
 and writer fee calculations were correct. The first local root audit used
 system Python without httpx; re-run offline in project venv, no venue repeat.
 No pricing/execution code changed. Current monthly runbook now requires
-current tick/minimum validation. Next monthly Nov12; weeklyP&LOct16.
+current tick/minimum validation. Next monthly Nov12; weeklyP&LOct 16.
 
 Polygon block 95,376,922: known CTF/pUSD47.319630 unchanged,
 archived debut0; native aUSDC 85.073270,
@@ -28028,7 +28028,7 @@ publication}.json; logs/checkin_20261012T0200/.
 Backlog/recent journal reviewed. No new public alert after 02:00, watch hit,
 overdue decision or due dated task. Monthly diagnostic PASS at02:00 and its
 one-part Telegram delivery receipt verified; no repeat due. Next drill Nov12,
-weekly P&L Oct16. Copper/Base remain manual candidates;
+weekly P&L Oct 16. Copper/Base remain manual candidates;
 issuer rotation unverified/access-gated; retired off-chain Sunday review stays
 retired. No new goal, watcher, idle follow-up, financial operation or Telegram.
 
@@ -28216,7 +28216,7 @@ Periodic backlog/recent journal reviewed after bounded on-demand architecture wo
 The light tick ran at10:48 UTC; full discovery/redemption scans remain due at14:00,
 not repeated here. Method/architecture work is completed and Telegram delivery
 verified; the shadow core establishes neither a live strategy nor a new schedule.
-Monthly diagnostic passed at02:00; nextNov12. Weekly P&L Oct16 future.
+Monthly diagnostic passed at02:00; nextNov12. Weekly P&L Oct 16 future.
 Copper/Base manual access/thesis blockers remain; off-chain retirement applies.
 No new public alert after06:00 (therefore none after latest10:40 journal), watch
 hit or overdue decision. No asset/prior change, idle follow-up, new goal or Telegram.
@@ -28517,7 +28517,7 @@ Operations, preservation and closeout:
 - Finalhealth14:54:14: four exact-one canonical absolute-path daemons current;
   disk1159.08MiB above512warning/128critical, MemAvailable1197.67MiB.
   No code edit, cleanup or restart. Monthly drill alreadyPASS,nextNov12;
-  weeklyP&LOct16, Saturday experiment concluded; off-chain/Sunday work retired.
+  weeklyP&LOct 16, Saturday experiment concluded; off-chain/Sunday work retired.
 - Final receipt audit independently revalidated routine/source/inventory/quotes/
   central joint cases,60 additional artifact hashes, corrected thin-tail counts,
   four cash receipts/unit deltas and final empty orders. Preserved original192
@@ -28651,7 +28651,7 @@ Operations, preservation and closeout:
   simulation or broadcast. Eighteen inventory/12 quote receipts independently checked.
 - Finalhealth18:15:36: four exact-one canonical absolute daemons current;
   disk1140.71MiB>512warning/128critical, MemAvailable1204.55MiB. No cleanup/restart.
-  Monthly drill alreadyPASS,nextNov12; weeklyP&LOct16; Saturday test concluded;
+  Monthly drill alreadyPASS,nextNov12; weeklyP&LOct 16; Saturday test concluded;
   off-chain/Sunday work retired. No full discovery or redemption scan due at light tick.
 - README/backlog/journal and one recorded CSV point updated; seven protected
   financial/prior/watchlist/flow/benchmark records and historical CSV rows retained.
@@ -28727,7 +28727,7 @@ Operations, preservation and closeout:
 - README/backlog/current handoff and one dated CSV point updated; historical
   CSV bytes/seven protected financial/prior/watchlist/flow/benchmark records
   retained. No full discovery/redemption scan due, material Telegram, new timer,
-  watcher or goal. Next existing Oct13 02:00; weeklyOct16/monthlyNov12 future;
+  watcher or goal. Next existing Oct13 02:00; weeklyOct 16/monthlyNov12 future;
   manual copper/Base access/writer/return-thesis blockers unchanged. Evidence:
   data/periodic_20261012T2200_{routine,sources,root_inventory,aave_rate,exit_quotes,
   risk,root_receipt_audit,postflight_health,poll_metadata}.json;
@@ -28828,7 +28828,7 @@ Operations, preservation and closeout:
   Routine news/heartbeat state metadata25s/28.3m within limits, contents not read.
   Financial/prior/decision/watchlist/flow/benchmark records/history unchanged;
   one dated CSV point,README/backlog/handoff updated. No tracked-code/asset change,
-  material Telegram,new timer/goal or idle follow-up. Nextexisting06:00, weeklyOct16,
+  material Telegram,new timer/goal or idle follow-up. Nextexisting06:00, weeklyOct 16,
   monthlyNov12; manual copper/Base blockers unchanged. Evidence:data/checkin_
   20261013T0200_{routine,sources,root_inventory,aave_rate,exit_quotes,risk,redeem_check,
   root_receipt_audit,discovery,discovery_receipt_audit,sports_sources,sports_books,
@@ -28898,7 +28898,7 @@ Operations, preservation and closeout:
   Original seven financial/prior/watchlist/flow/benchmark records and prior CSV
   bytes retained. One dated CSV point/README/backlog/handoff refreshed; no code/
   asset change, discovery rerun, quiet Telegram, new timer/goal or idle follow-up.
-  Next existing10:00, weeklyOct16/monthlyNov12 future. Manual copper/Base route/
+  Next existing10:00, weeklyOct 16/monthlyNov12 future. Manual copper/Base route/
   writer/January thesis and issuer-account credential rotation remain blockers.
   Evidence:data/periodic_20261013T0600_{routine,sources,root_inventory,aave_rate,
   exit_quotes,risk,diamond_revalidation,root_receipt_audit,postflight_health,
@@ -28955,7 +28955,7 @@ Operations, preservation and closeout:
  77s/~26.8min withinlimits; privatecontents unread. No restart/cleanup. Original
   seven protected records/prior journal andCSV bytes preserved, oneCSV observation/
   README/backlog/handoff refreshed. No code/asset change, quietTelegram, newgoal/
-  timer or idle follow-up. Next14:00, weeklyOct16/monthlyNov12 future; manual
+  timer or idle follow-up. Next14:00, weeklyOct 16/monthlyNov12 future; manual
   copper/Base funding/writer/Januarythesis and issuer-account rotation blockers
   unchanged. Evidence:data/periodic_20261013T1000_{routine,sources,root_inventory,aave_rate,
   exit_quotes,risk,root_receipt_audit,postflight_health,final_alerts}.json;
@@ -29062,7 +29062,7 @@ Operations, preservation and closeout:
   128critical, MemAvailable1123.13MiB. No cleanup/new watcher/timer/goal or idle follow-up.
 - Telegram1141 delivered once. One final CSV observation/README/backlog/handoff
   refreshed; original journal/CSV prefix and six protected records retained. Next
-  existing18:00, weeklyOct16, monthlyNov12; manual copper/Base route/writer/January
+  existing18:00, weeklyOct 16, monthlyNov12; manual copper/Base route/writer/January
   thesis and issuer-account credential rotation remain external blockers.
   Evidence:data/checkin_20261013T1400_*.json;logs/checkin_20261013T1400/;
   logs/fee_quote_validation_20261013.json. Required chart/packet/publication checks
@@ -29140,7 +29140,7 @@ Operations, preservation and closeout:
   new entries; that does not prove no news. Seven protected records, all196
   decision objects, prior journal/CSV prefix preserved. One CSV point/README/
   backlog/handoff updated; material Telegram1142 delivered once.
-  Next existing22:00, weeklyOct16/monthlyNov12; manual copper/Base access/writer/
+  Next existing22:00, weeklyOct 16/monthlyNov12; manual copper/Base access/writer/
   January thesis and issuer-account credential rotation remain external blockers.
   No discovery rerun, watcher, goal or idle follow-up. Evidence:
   data/periodic_20261013T1800_*.json;logs/periodic_20261013T1800/.
@@ -29222,7 +29222,7 @@ Operations, preservation and closeout:
   since18:05; latest sampled newsOct9/opportunitySep30, not complete news evidence. Six protected records, original196 decisions and prior
   journal/175-row CSV bytes retained; one new dated point and handoff refreshed.
   Material Telegram message1143 acknowledged (one575-char part). Next existingOct14 02:00,
-  weeklyOct16/monthlyNov12; no discovery rerun, new watcher/timer/goal or idle work.
+  weeklyOct 16/monthlyNov12; no discovery rerun, new watcher/timer/goal or idle work.
   Evidence:data/periodic_20261013T2200_*.json;logs/periodic_20261013T2200/.
 
 
@@ -29332,7 +29332,7 @@ Operations, preservation and closeout:
   journal and176-row CSV prefix preserved; one new dated performance point.
   README/backlog/handoff refreshed after current review. Material Telegram
   message1144 acknowledged once (605chars).
-  Weekly P&L Oct9→Oct16, monthlyNov12 future; method experiment concluded.
+  Weekly P&L Oct9→Oct 16, monthlyNov12 future; method experiment concluded.
   Next existing06:00. Manual copper/Base route and issuer-account rotation
   blockers unchanged; no new watcher/timer/durable goal or idle follow-up.
   Evidence:data/checkin_20261014T0200_*.json;logs/checkin_20261014T0200/.
@@ -29410,7 +29410,7 @@ Operations, preservation and closeout:
   parsed separately; coverage remains limited.
 - Material Telegram1145 acknowledged once (532chars).
   README/backlog/handoff refreshed after review. No full discovery/redemption
-  rerun due for this light check. WeeklyOct16/monthlyNov12 future, experiment
+  rerun due for this light check. WeeklyOct 16/monthlyNov12 future, experiment
   concluded. Manual route/credential blockers unchanged. Next existing10:00;
   no new watcher/timer/durable goal or idle follow-up. Evidence:
   data/periodic_20261014T0600_*.json;logs/periodic_20261014T0600/.
@@ -29482,7 +29482,7 @@ Operations, preservation and closeout:
   Five protected financial/strategy records unchanged after scoped grades/CSV.
 - Material Telegram1146 acknowledged once,513chars. README/backlog/handoff
   refreshed; full discovery/redemption rerun not due. Next existing14:00,
-  weeklyOct16/monthlyNov12 future. Manual route/credential blockers unchanged.
+  weeklyOct 16/monthlyNov12 future. Manual route/credential blockers unchanged.
   Ten chart tests and all four bounded context packets pass. Closing public
   alert tails remain clear in their limited scope. No new watcher/timer/durable
   goal or idle continuation. Evidence:
@@ -29564,7 +29564,7 @@ Operations, preservation and closeout:
   context packets pass; publication verification follows this record commit,
   with immutable-head/live CSV receipts retained. Telegram quiet: no material
   portfolio change, earlier1146 not repeated.
-  Next existing18:00; weeklyOct16/monthlyNov12 future, methodology concluded.
+  Next existing18:00; weeklyOct 16/monthlyNov12 future, methodology concluded.
   Manual route/credential blockers unchanged; no timer, durable goal or idle work.
   Evidence:data/checkin_20261014T1400_*.json;logs/checkin_20261014T1400/.
 
@@ -29619,7 +29619,7 @@ Operations, preservation and closeout:
   3041 selected unique unreviewed. Silver minute-history qualification remains
   unknown after419; no new request or unsupported inference/entry. Manual
   copper/Base routes and issuer-account rotation blockers unchanged. Weekly
-  Oct16/monthlyNov12 future; experiment concluded. No new timer/goal/idle work.
+  Oct 16/monthlyNov12 future; experiment concluded. No new timer/goal/idle work.
 - One CSV point appended, original180-row/journal prefix and199 decision
   objects preserved. README/backlog/handoff refreshed with separate as-of times;
   Ten chart tests/four context packets pass; publication verification follows
@@ -29695,7 +29695,7 @@ Operations, preservation and closeout:
   No restart or private state-content read. Full14:00 discovery remains dated/
   capped: five criteria reviews/3041 selected unique unreviewed; silver minute
   qualification unknown after419, no repeat. Manual route/credential blockers
-  unchanged; weeklyOct16/monthlyNov12 future; experiment concluded.
+  unchanged; weeklyOct 16/monthlyNov12 future; experiment concluded.
 - One material decision follow-up Telegram1147 acknowledged once,472chars;
   watcher headline was not resent as a heartbeat. Original181-point CSV/journal
   prefix/all199 decisions preserved. README/backlog/handoff updated; ten chart
@@ -29799,7 +29799,7 @@ Operations, preservation and closeout:
   512warning/128critical, MemAvailable937.76MiB; news/heartbeat freshness passes.
   No code change/restart. Closing sampled public tails have no newer item after
  22:02. Manual copper/Base funding/access/writer/thesis and issuer-account
-  rotation remain external blockers. WeeklyOct16/monthlyNov12 future; method
+  rotation remain external blockers. WeeklyOct 16/monthlyNov12 future; method
   experiment concluded. No retired equity review or new timer/goal/idle work.
 - One CSV point appended, original182-point CSV/journal prefix and original
   199 decisions preserved. README/backlog/handoff refreshed; ten chart tests
@@ -29868,7 +29868,7 @@ Operations, preservation and closeout:
 - Prior02discovery remains dated/capped:3030selectedunique/fourliteralreviews/
   3026unreviewed. SportsDEC200size0 has no numericalforecast; no new fixture/
   price check or skipgrading. Manual copper/Base funding/access/writer/January
-  thesis and issuerrotation remain external blockers. WeeklyOct16/monthlyNov12
+  thesis and issuerrotation remain external blockers. WeeklyOct 16/monthlyNov12
   future; methodexperiment concluded. No retiredstockreview/newtimer/goal/idlework.
 - One CSV point/original183-point and journalprefix/all200 decisions preserved.
   README/backlog/handoff refreshed; chart/context checks and immutablepublication
@@ -29931,7 +29931,7 @@ Operations, preservation and closeout:
 - Prior02discovery remains dated/capped:3030selectedunique/fourliteralreviews/
   3026unreviewed. SportsDEC200size0 has no numericalforecast; no new fixture/
   price check or skipgrading. Manual copper/Base funding/access/writer/January
-  thesis and issuerrotation remain external blockers. WeeklyOct16/monthlyNov12
+  thesis and issuerrotation remain external blockers. WeeklyOct 16/monthlyNov12
   future; methodexperiment concluded. No retiredstockreview/newtimer/goal/idlework.
 - One CSV point/original184-point and journalprefix/all200 decisions preserved.
   README/backlog/handoff refreshed; chart/context checks and immutablepublication
@@ -30029,7 +30029,7 @@ Operations, preservation and closeout:
   149unquoted/200legs,no structuralpositive. Favorite1000/10pagecap,22walked/
   12profile/10outside/no walkcap omission; no populationprobability. July3→65
   sourcefreeze changes persist, not new. Manualroute/credential blockers unchanged;
-  weeklyOct16/monthlyNov12 future, experiment concluded. No newtimer/goal/idlework.
+  weeklyOct 16/monthlyNov12 future, experiment concluded. No newtimer/goal/idlework.
 - One CSV point/original185-point and journalprefix/original200 decisions preserved plus size0DEC201.
   README/backlog/handoff refreshed; chart/context checks and immutablepublication
   verification follow. Telegramquiet: no new material action/position/prior change.
@@ -30095,7 +30095,7 @@ Operations, preservation and closeout:
   four literal reviews/3045 unreviewed. ETH size0DEC201 unchanged; no unheld
   source rerun/forecast grading. Manual route/issuer-rotation blockers unchanged.
 - README/backlog/handoff refreshed; original186 CSV rows/201 decisions/journal
-  prefix preserved. Existing22:00/weeklyOct16/monthlyNov12 boundaries remain;
+  prefix preserved. Existing22:00/weeklyOct 16/monthlyNov12 boundaries remain;
   no timer, durable goal or idle continuation. Material diagnostic incident sent
   once as Telegram1148; publication and offline verification follow.
   Evidence:data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/.
@@ -30123,7 +30123,7 @@ Operations, preservation and closeout:
 - Hormuz point gas .004666476 exceeds payout .003571; no resimulation. Full14
   scan remains capped at3049 selected/four literal/3045 unreviewed; no full scan
   or redeem-all. Four daemons, disk770.21875MiB. Manual route/issuer rotation
-  blockers unchanged; weeklyOct16/monthlyNov12 future.
+  blockers unchanged; weeklyOct 16/monthlyNov12 future.
 - The prior18 wrapper incident and old10 raw evidence damage remain dated and
   unrepaired; no repeat notification. A risk helper stopped read-only before
   routine JSON was ready, then completed after readiness without repeating an
@@ -30137,7 +30137,7 @@ Operations, preservation and closeout:
   $18.68. Trading midpoint/depth $190.68/$189.28; whole approximate depth
   $195.29. Trading marks are flat versus22:00. Residual is rounded
   accounting/carry, not audited cash profit; VM/API excluded.
-- Weekly interval Oct9 02:03:23.556584–Oct16 00:17:42.244707 UTC, 6.926419 days.
+- Weekly interval Oct9 02:03:23.556584–Oct 16 00:17:42.244707 UTC, 6.926419 days.
   Trading midpoint +$10.60 (+5.89% of $180.08), depth +$12.44 (+7.03% of
   $176.84), before unreconciled VM/API costs. No contribution is documented;
   capital ledger is not an exhaustive on-chain inflow audit. Oct13 converted
@@ -30332,8 +30332,8 @@ Evidence: `data/checkin_20261016T0200_root_judgment.json`,
 - Coverage is explicit: 2,716 first-pass rows remain screened/unpriced; 255 were flagged as source candidates. Seventy-three contracts received full literal/shared-rule or PDF review. Seventeen family investigations link 42 rows at unequal depth; only 38 of the 255 source flags have such follow-up, leaving 217 without it. Stored rules/hashes are not evidence that every literal was read. All 3,000 valid ledger rows bind distinct condition IDs, questions, criteria and displayed-view hashes. The [CSV](../research/2026-10-17-primary-market-review.csv), [audit/cases](../research/2026-10-17-primary-market-review.json) and [complete frozen public rules](../research/2026-10-17-primary-market-review-rules.jsonl.gz) preserve those distinctions.
 - A production category-routing defect was found and fixed in `scripts/discover_markets.py`: substring ETH matched “whether”, generic `$1` matched ordinary dollar thresholds, and “primary” matched resolution boilerplate. Question-first token-boundary patterns retain explicit crypto/election cues and sports metadata. The frozen replay changes 971 labels, without changing original experiment selection. This is not 971 gold-set corrections or a proven ROI gain. All 47 focused discovery/context-batch checks passed. The matched pre-fix usual profiles selected 80 primary and 2,525 thin-tail rows from the identical 54,695 input; the sample overlaps were 63/1,084, union 1,115, leaving 1,885 outside both. The separate 14:00 routine selected 2,691 unique conditions but documented only four full literal reviews, two carried. This confirms a review-depth gap; it does not isolate cheaper-model ability in a controlled comparison.
 - No new entry was justified by the detailed checks, and no order, transfer, financial prior or decision record was changed. Identical Ally titles hide EPS strikes 1.43/1.38 and can lose both bought legs. Hormuz no-agreement titles use different deadlines. A genuine cross-date compound implication proved a conditional paired floor, but fresh .324/.657 asks cost .998775 after fees: only .12265% floor return before gas/carry, with settlement potentially beyond 17 days. The extra-paying state remains unpriced and the vetted same-event numeric pair writer does not cover this cross-event PDF structure or its maker partial-fill risk. Arizona has an Other/March31 fallback; the refreshed Macomb pair costs over one before fees. These are specific instrument/economic findings, not a market-wide absence claim.
-- Source-backed leads remain distinguishable from trades: KSEA's official October16 CLI reports 0.00 inches, but the winning NO had no ask and its payload was stale; a current HTTP Date did not repair it. CDC's official count is 4,410 as of October 15, but a couple of prints do not calibrate outbreak/reporting risk. Micron guidance is 61.5B total revenue, not DRAM, and the margin-bin distribution remains uncalibrated. RT score models are sensitive to assumed new-review counts and their cheap snapshot quotes were not verified current offers. The selected PortWatch feed ended October 11, so it does not resolve the current week. The FDIC list's latest failure predates this contract's creation. The named 1W headline gross remains uncaptured; no authenticated/purchase/claim route was called. Other case limits and exact identities are in the audit.
-- Lake NO below 4,189.3 was the strongest new underwriting lead. The exact USGS series shows a 4,189.4 annual low and 4,189.8 latest daily mean. In 26 historical years, an October16-level anchor has 0/26 adverse .6ft declines, but the prior 14-day minimum anchor has 4/26 adverse .2ft declines. Neither is a calibrated posterior; the rebound, regime and provisional-data risks matter. Primary judgment declined a hypothetical five-share .81 maker entry: roughly 81.5% win probability is required with the dated 75-day Aave hurdle, and the default 10-point uncertainty haircut is not cleared robustly. The short-horizon K=5 exception is unsupported. The repository-required new-strategy champion and skeptic were used only for this follow-up; both independently declined. None of the 3,000 primary screens was delegated.
+- Source-backed leads remain distinguishable from trades: KSEA's official October 16 CLI reports 0.00 inches, but the winning NO had no ask and its payload was stale; a current HTTP Date did not repair it. CDC's official count is 4,410 as of October 15, but a couple of prints do not calibrate outbreak/reporting risk. Micron guidance is 61.5B total revenue, not DRAM, and the margin-bin distribution remains uncalibrated. RT score models are sensitive to assumed new-review counts and their cheap snapshot quotes were not verified current offers. The selected PortWatch feed ended October 11, so it does not resolve the current week. The FDIC list's latest failure predates this contract's creation. The named 1W headline gross remains uncaptured; no authenticated/purchase/claim route was called. Other case limits and exact identities are in the audit.
+- Lake NO below 4,189.3 was the strongest new underwriting lead. The exact USGS series shows a 4,189.4 annual low and 4,189.8 latest daily mean. In 26 historical years, an October 16-level anchor has 0/26 adverse .6ft declines, but the prior 14-day minimum anchor has 4/26 adverse .2ft declines. Neither is a calibrated posterior; the rebound, regime and provisional-data risks matter. Primary judgment declined a hypothetical five-share .81 maker entry: roughly 81.5% win probability is required with the dated 75-day Aave hurdle, and the default 10-point uncertainty haircut is not cleared robustly. The short-horizon K=5 exception is unsupported. The repository-required new-strategy champion and skeptic were used only for this follow-up; both independently declined. None of the 3,000 primary screens was delegated.
 - Local helper errors were corrected before claims or execution: Aave percentage/fraction units in an offline replay; an unread 200-row placeholder batch removed and later actually read; an explicit-fee-free flag misinterpreted as mismatch; and a date-replacement comparison. Invalid receipts remain local and are excluded from final coverage. The exporter reconciles CSV counts, exact identities, rule hashes, view hashes and follow-up membership. These incidents are not attributed to the production scanner.
 - Closing full status ran once at 17:15, rc0, with no stderr, watch hits or UMA alerts. OpenAI NO 9 and Clarity 29/29 remain; advisory marks are not fresh executable liquidation quotes. A configured direct HLE fetch at 17:17 returned all 65 full objects identical to 14:00; the status tool's UPDATING verdict compares against July3, not a new transition. The whole-account bankroll remains the dated 14:17 snapshot, not a new certification. Closing public last-80 tails had no rows strictly after 14:00. At 17:21 disk was 367.49 MiB, below 512 warning and above 128 critical; capacity remains unresolved, with no deletion or restart. Local receipts are under `logs/primary_review_20261017T1616/` and `data/primary_review_20261017T1616/`.
 - The finite experiment is complete. Future authorized opportunity work should use exact source-family queues with explicit unpriced/reviewed states and reuse valid source work; do not automatically repeat the broad screen or treat missing forecasts as rejects. No new controller, watcher, durable goal or idle follow-up was created. Existing scheduled checks handle the next run.
@@ -30365,7 +30365,7 @@ Evidence: `data/checkin_20261016T0200_root_judgment.json`,
 - Read `research/2026-10-17-deep-review/MILESTONE_100.md` for the reviewable report and exact links.100 rows share family evidence and are not100 independent forecasts. Transparent subjective scenario models are identified as uncalibrated; ranges are sensitivities, not guaranteed probability floors.
 - The strongest small-maker research candidates are ME-02 YES (primary61%,10shares at no more than39c subject to a genuinely resting current price) and CA-06 NO (primary15%,at most50shares at no more than3.3c, with the vetted helper's actual3c rounding). Both independent skeptic/champion reviews are saved. New local source coverage, fresh account/UMA/fees/depth/correlation and all entry checks remain necessary; no order or reservation was made. Press-secretary permanent successor YES33% is another judgmental timing lead.
 - Actual earlier candidate dry runs remain dated: USNetflix runner-up27c maker exceeded its initial20c cap; global runner-up NO passed price but stopped at missing cluster; CA-04 minimum stressed-dollar edge failed; the four-title Netflix union failed equal-share depth/worst signed cost. These are specific constraints, not a market-wide no-opportunity finding.
-- New transition cases preserve named winner/valid-vote bands, fixed formal confidence/oath definitions, personal-exit creation windows, certified ballot-list identities and actual2027/2028 fallback horizons. They are not prematurely certain from incumbency, designation, old dismissal or current party-seat projections. Case35OpenRouter remains unpriced because rolling7-day observations cannot reconstruct fixed calendar weeks.
+- New transition cases preserve named winner/valid-vote bands, fixed formal confidence/oath definitions, personal-exit creation windows, certified ballot-list identities and actual2027/2028 fallback horizons. They are not prematurely certain from incumbency, designation, old dismissal or current party-seat projections. case 35OpenRouter remains unpriced because rolling7-day observations cannot reconstruct fixed calendar weeks.
 - Separate20:10–20:11 all3,000-ID metadata refresh matched identities:325closed/resolved/no-new-order,2,675open/accepting,99scalarproposed/3disputed among the latter. Those325 have not all been entered as exclusions yet. Tesla3is currently disputed and new-entry blocked despite open books; future1244/2354likewise. No canonical old valuation or holding was silently rewritten.
 - Latest portfolio safety check remains18:00, bankroll components18:04. This research timestamp is not fresh NAV, funding, account or thesis verification. No asset/prior change. Next light safety check22:00; held-position alerts still take priority. Source assistants completed bounded USchamber, Spotifyannual and Iran-event packets; root retains all valuation decisions.
 - First100 report committed/pushed as b416a0f; precommit money-math regression169checks passed. Operator was notified in chat and Telegram message1163. All116 ledger records/identities/rule hashes/report hashes verified; model points match the seven new political-transition records. Milestone notification flag and receipt are persisted; continuing the finite queue.
@@ -30376,7 +30376,7 @@ Evidence: `data/checkin_20261016T0200_root_judgment.json`,
 - Posted through mandatory polyclaude_enter maker path once each: ME-02YES10@.38,3.80pUSD (order0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37); CA-06NO50@.03,1.50pUSD (order0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd). Both returned200/success/live and were independently confirmed as the complete LIVE inventory with zero matched. These are pending commitments, not filled positions, trade profit or assumed shares. No funding transfer.
 - At Polygon95710019, both candidate balances0, pUSD24.996890; full pending5.30, uncommitted19.696890. Required exchange allowance/operator approval sufficient. Two vetted full-fill reservations map to the exactorderIDs/assets/CIDs. DEC-0203/0204 appended with unfilled-status caveat. Actual loss at full fills may be the entire5.30.
 - Primary P(ME02YES)=.61 andP(CA06NO)=.15 retained after direct source rereads, ordinary10pp reserve, balanced skeptic/champion and conservative shared us-politics existing-risk buffer18%. Full-fill ticket/cluster caps passed current account; bankroll refreshed196.20 with gas5.88, PMmid/depth30.65/28.75 and settled residual19.53 at its own earlier component window. That is not synchronized NAV or a new held-thesis check. Existing OpenAI9NO/Clarity29/29 priors unchanged.
-- ME-02's apparentME01slug was independently bound by current Gamma fulltext,parent726881,CLOBquestion/CID and both tokens to actualME02; an initially inferred slug failed safely before any order. CA-06 originalILC14-pagePDF corrects archivalBullfinch attribution toMainFrame and discloses mixedphone/SMS/webpanel methods; source/wording gaps are superseded explicitly, not silently rewriting immutable reports. Root read the newestCNNOct16 direct neither-caucus answer. Future all-House-call intent and no explicitneitherfallback remain risks; no guarantee ofNOifKileywins.
+- ME-02's apparentME01slug was independently bound by current Gamma fulltext,parent726881,CLOBquestion/CID and both tokens to actualME02; an initially inferred slug failed safely before any order. CA-06 originalILC14-pagePDF corrects archivalBullfinch attribution toMainFrame and discloses mixedphone/SMS/webpanel methods; source/wording gaps are superseded explicitly, not silently rewriting immutable reports. Root read the newestCNNOct 16 direct neither-caucus answer. Future all-House-call intent and no explicitneitherfallback remain risks; no guarantee ofNOifKileywins.
 - Configured existing watcher with23feeds (newPressHerald/BDN/currentexact-candidateCA06news), and observed it processing all3. The initial small-model filter lacked candidate exposure and one summary mislabeled a House race; candidate names/surnames are nowtier1 to send futureitems directly toprimary. Existingcooldown/dedup limits remain. No newdaemon/schedule/restart. Initial pendingbid review22:00UTC, earlier relevant news; CANCELFIRSTifchanged/uncertain, pull beforeknowncatalysts. Record management innotes/resting_orders andcandidate_followup.
 - Disk review preserved all evidence/financial/runtime dependencies. Removed only71.63MiB redundanttemporaryPDFpackages/downloadcache after assistants finished; retained/tmp/pypdf,.venv,node_modules, allrecords. Free335.88MiB afterward, still below512warning/above128critical. Metadata-onlyreceipt saved. Direct quota probe showednew100%headroom, resetOct24 20:41UTC; no conversational/usage injection.
 
@@ -30430,7 +30430,7 @@ Fourprior-orphan warnings bind to four LIVE zero-filled bids, no falseclosure
 or deletion. Eightfinancialrecord hashes unchanged; audit snapshot/holds also
 unchanged. Full inventory22:00:15/block95712710, bothsidesallcandidates0,
 pUSD24.996890/pending9.80/free15.196890; retain allfour tinycorrelated pilots.
--KnownCApowder alert20:52 is Oct16recirculation, no verified withdrawal/ballot/
+-KnownCApowder alert20:52 is Oct 16recirculation, no verified withdrawal/ballot/
 caucus change; MT21:38alert is NRCCOct13partisandebateclaim, not electionresult
 or freshpoll. Root consumed both. Bounded feeds/officialpages reveal no new
 thesisbreak; Maine page links its ballot and Suffolk punctuation-normalized
@@ -30932,6 +30932,18 @@ The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pendin
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
 
 
+## October 18 03:14 UTC — case 96 completed; no new money
+
+The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
+
+Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.
+
+
+## October 18 03:18 UTC — historical discovery snapshot archive
+
+A scoped reversible archive compressed nine completed Oct13–16 public thin-tail discovery snapshots from87,270,228 to18,601,056 bytes, reclaiming68,669,172 bytes. All9 entries and symlink aliases verified; two restore/hash/recompress/archive-only roundtrips passed. Financial files and prior archive manifests remained unchanged; no active `data/snapshots` input was altered. The manifest explicitly does not assert HTTP receipt binding. Free space increased from179,765,248 to248,283,136 bytes (236.78 MiB), above the180 MiB research floor. See [completion receipt](../data/deep_review_20261017/public_discovery_archive_completed_0318.json), [manifest](../research/2026-10-17-deep-review/ARCHIVED_PUBLIC_DISCOVERY_SNAPSHOTS.json) and [reader](../scripts/public_snapshot_archive.py).
+
+
 ## October 18 09:34 UTC — bounded fallback check; Michigan maker fill verified
 
 - Authoritative bankroll09:36:31–46UTC **196.43**, −.05 vs02:01; gas5.83,
@@ -30984,5 +30996,39 @@ The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; th
   not work performed by fallback. No goal, extra timer or idle follow-up.
 - Validation: all10 existing performance-chart checks pass. One material fallback
   Telegram summary sent (message1208, single part); no flat heartbeat.
-- Completed after10:00UTC; final editorial review uses this run's dated evidence.
+- Completed after 10:00 UTC; final editorial review uses this run's dated evidence.
   Next existing check is14:00UTC; no added timer or idle continuation.
+
+
+## October 18 10:30 UTC — offline deep-review audit
+
+Checkpoint:212 valued, 3 blocked, 328 factual exclusions,2,457 pending across 543
+records; active 112 is included in pending. Rows 96, 97, 101, 106 append after pushed
+HEAD `33e9fac`; their identities/statuses and JSON-to-Markdown hashes match the
+frozen universe, ledger and CSV. Case 97 was factually excluded after official MLB
+final-result verification. [Audit 1030](../data/deep_review_20261017/ledger_audit_1030.json).
+Case 92 remains blocked on incomplete post-creation CME active-month High history.
+
+The preliminary Oct 16 CME CL DEC26 option crosscheck challenges old low-oil mass,
+but its American-option model sensitivities are not physical ICE CLL probabilities.
+No dated compound forecast, reserve or financial record changed. Fallback account
+facts remain in the separate 09:36 report; no live account check occurred in this
+audit. Resume active 112; next existing operational check is 14:00 UTC.
+
+
+## October 18 10:40 UTC — case 112 and OpenRouter source correction
+
+Case 112 is saved at 9% YES, range 0.5–80% after a concentrated countermodel, with
+a 15-point reserve that is not a floor. Its dated quote economics support priority
+investigation only; no entry is approved.
+
+The OpenRouter public `period=week` API rows are per model variant, not a daily
+panel. Prior 174.020765561738T/current 168.339264961301T are rolling-week response
+sums, not five daily observations or displayed settlement totals. DeepSeek's
+36.824610T/35.888676T rows match chart-rounded 36.8T/35.9T. case 35's required fixed
+Monday–Sunday history remains missing, not zero. See [source follow-up](../data/deep_review_20261017/openrouter112_source_followup_1030.json)
+and [audit1039](../data/deep_review_20261017/ledger_audit_1039.json).
+
+Checkpoint:213 valued,3 blocked,328 factual exclusions,2,456 pending across 544
+records; active 113 is included in pending. Resume 113; next operational check14:00UTC.
+No account check or financial action occurred in this curation.

@@ -44,6 +44,7 @@ positions; they do not create a recurring stock or brokerage workflow.
   Choose `--profile prior36` or `--profile more-html` for verification/restoration;
   each profile has its own immutable manifest and rejects out-of-scope paths. Together with the base manifest, the verified set covers 307 receipt-linked
   public HTML bodies; this is scoped evidence archiving, not general cleanup.
+- `public_snapshot_archive.py` — exact allowlist archive for nine completed Oct 13–16 thin-tail discovery snapshots. `verify` checks the manifest and gzip identities; `restore ORIGINAL_PATH` restores one original without overwriting changed bytes; `read_verified_path()` can verify/read original or archived bytes. Existing `shortlist_latest.json` symlinks are preserved, but direct JSON reads through them require restore while the target is archived. The manifest does not assert original HTTP receipt binding. Completion: `data/deep_review_20261017/public_discovery_archive_completed_0318.json` (two restore/recompress roundtrips; 68,669,172 bytes reclaimed).
 - `wallet_status.py` — Polymarket-sleeve MATIC + USDC balance on Polygon.
 - `exit_analysis.py` — held-position/group sale planning. Taker candidates meet the same book’s live `min_order_size`, including the minimum crossing inside a bid level; missing/invalid minimum leaves the book unpriced. Quotes still need all current execution gates before an order.
 - `positions.py` — Polymarket open positions with mark-to-market P&L.

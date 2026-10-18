@@ -1,6 +1,21 @@
 # Candidate follow-up — dated, not an execution certificate
 
-**Latest verified inventory: October17 22:15:59UTC.** Five LIVE post-only
+
+## Current research pointer — October 18, 10:39 UTC
+
+The checkpoint is 213 valued, 3 blocked, 328 factual exclusions and 2,456 pending across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` are audited at [1039](../../data/deep_review_20261017/ledger_audit_1039.json): 96, 101, 106, 112 valued; 97 factually excluded after official MLB final results. Case 112 records 9% YES, a 0.5–80% range after concentrated-countermodel review and a 15-point reserve that is not a floor. Its dated NO 10-share ask walk is not a current quote or entry approval.
+
+OpenRouter API rows are by model variant, not daily observations. Prior 174.020765561738T/current 168.339264961301T are rolling-week response sums, not five daily observations or displayed fixed-week settlement totals. DeepSeek's 36.824610T/35.888676T rows match chart-rounded 36.8T/35.9T. case 35 remains blocked on missing fixed UTC Monday–Sunday history, not zero; see the [source correction](../../data/deep_review_20261017/openrouter112_source_followup_1030.json). Case 92 remains blocked on unresolved post-creation CME active-month High history. CME CL options challenge old low-oil mass, not physical ICE CLL probability. The separate fallback account reading was at 09:36 UTC and remains dated, not live state.
+
+October18, approximately03:25UTC: [oil-option proxy crosscheck](models/oil_option_proxy_crosscheck_0325.md)
+now supplies corrected preliminary DEC26 CME option premiums, derived total
+volatilities and explicit expiry/calendar/model limitations. It challenges the
+old low-oil probabilities without establishing a replacement ICE CLL forecast.
+No reserve reduction, financial prior, funding or order follows. Existing
+compound reports remain dated observations; rework the distribution before
+promoting their central EV to a current entry decision.
+
+**Historical inventory (October17 22:15:59 UTC; superseded by the Oct18 fallback report).** Five LIVE post-only
 BUYs, all zero matched and zero candidate outcome balances: ME02YES10@.38,
 CA06NO50@.03,MT01YES10@.33,NY01YES10@.12,IPO158NO5@.62. Full pending12.90,
 uncommitted12.096890pUSD atPolygon95713340. These are commitments, not fills or
@@ -604,3 +619,10 @@ primary probability yet.
 The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
 
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](evaluations/0092.md), [source packet 0238](../../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
+
+
+## October 18 03:14 UTC — case 96 completed; no new money
+
+The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
+
+Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.

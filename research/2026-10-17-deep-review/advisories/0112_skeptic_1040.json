@@ -1,0 +1,60 @@
+{
+  "schema": "independent_case_advisory.v1",
+  "created_utc": "2026-10-18T10:40:00Z",
+  "role": "bounded skeptic; no independent forecast, screening, or execution authority",
+  "identity": {
+    "review_index": 112,
+    "market_id": "5763815",
+    "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+    "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30"
+  },
+  "conclusion": "Primary's NO thesis has a coherent scale argument but is not independently supported by settlement-grain historical data. Its own concentrated 750T countermodel reverses the sign. A 5-share maker proposal is small and has no-fill optionality, yet its edge remains shape-dependent; further evidence of the exact chart aggregation and fixed-week dispersion would improve the case.",
+  "factual_basis": {
+    "rule": "Displayed totals for weeks beginning Oct 26, Nov 2, Nov 9, Nov 16 UTC; sampled at first display of Nov 23 or Nov 27 23:59 ET fallback. YES iff total >=725T and <775T; exact boundaries go to higher bracket.",
+    "official_source": "OpenRouter page defines rolling This Week, prompt+completion, separate variants, private requests excluded; current frontend response is aggregate rows, not a daily panel.",
+    "capture_utc": "2026-10-18T10:30:21.906721Z",
+    "rolling_total_T": 168.339264961301,
+    "four_week_flat_equivalent_T": 673.357059845204,
+    "source_and_model_limit": "No matched historical fixed Monday-Sunday chart series or empirical dispersion recovered; current rolling totals and row date labels cannot substitute. Rounding/display boundary mass and revision timing remain unresolved."
+  },
+  "independent_arithmetic": {
+    "five_NO_maker_at_0_64": {
+      "principal_usd": 3.2,
+      "maker_fee_assumption": "zero only if passive maker fill and taker-only curve is verified at execution",
+      "EV_at_primary_NO_0_91_usd_pre_carry": 1.35,
+      "EV_at_selected_NO_stress_0_76_usd_pre_carry": 0.6,
+      "EV_at_concentrated_model_NO_0_266425_usd_pre_carry": -1.867875
+    },
+    "concentrated_countermodel": {
+      "median_T": 750,
+      "log_sigma": 0.03,
+      "primary_reported_p_yes": 0.7335745882248493,
+      "illustrative_five_yes_taker_at_0_36_plus_0_009216_fee_per_share_EV_usd": 1.8217929411242465
+    },
+    "comparison_limits": "Uses dated Oct 17 quote and primary's probabilities/scenario only; no current execution or account certification. Cash carry is variable and not guaranteed."
+  },
+  "strongest_support": [
+    "Current 168.339T rolling scale gives 673.357T for four flat weekly equivalents, below the 725T lower boundary.",
+    "The 5% weekly growth scenario moves the four-week total above 775T, also a NO outcome; only midrange totals resolve YES.",
+    "A passive 64c NO avoids taker fees if actually maker-filled and no fill retains cash."
+  ],
+  "material_challenges": [
+    "The settlement series is not the captured rolling seven-day source; settlement-binding and historical fixed-week validation are missing.",
+    "The scenario weights and dispersion are unfit assumptions; the 750T/sigma .03 countermodel yields 73.36% YES and reverses the side.",
+    "Variants, free-tier/model changes, Others aggregation, private-request exclusion, display rounding and first-display revisions can alter the measured bucket.",
+    "Full primary range .005–.80 YES includes substantial NO loss scenarios; the chosen 15pp reserve is not a floor or demonstrated tail control.",
+    "Other OpenRouter brackets share usage/adoption drivers and AI exposure can overlap HLE; no diversification credit is established."
+  ],
+  "evidence_that_would_change_view": {
+    "support_NO": "Reproducible same-rule daily/fixed-week chart captures showing stable distributions away from 725–775T, with validated displayed-row/rounding/Other mapping.",
+    "weaken_NO": "A reliable same-rule fixed-week series concentrating near 750T; evidence of changed ranking coverage or a mismatch between accessible source and frozen settlement rule."
+  },
+  "sources": [
+    "https://openrouter.ai/rankings?view=week",
+    "data/deep_review_20261017/openrouter112_source_followup_1030.json",
+    "research/2026-10-17-deep-review/evaluations/0112.md",
+    "data/deep_review_20261017/work/0112_post_quote_countermodel.json",
+    "research/2026-10-17-deep-review/evaluations/0112.json"
+  ],
+  "actions_taken": "No network requests; no changes to case, forecast, portfolio, orders, account, or configuration."
+}

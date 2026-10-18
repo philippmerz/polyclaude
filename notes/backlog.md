@@ -1,4 +1,4 @@
-## Current — October 18, 02:34 UTC
+## Historical checkpoint — October 18, 02:34 UTC
 
 The finite primary review has **200 valued, 2 blocked, 327 factual exclusions and
 2,471 pending** across 529 canonical records. The active case is 1602, a Hormuz/oil/
@@ -8,7 +8,7 @@ authoritatively track progress. Save each completed case before starting another
 
 Eleven cases were added after the prior 189-valuation checkpoint: 12, 26, 64, 80,
 169, 270, 546, 722, 728, 1192 and 1197. The shared [Hormuz/oil/Senate method](../research/2026-10-17-deep-review/models/hormuz_oil_senate_method_0206.md)
-and [24-scenario joint table](../research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json)
+and [five-specification, twelve-cell joint table](../research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json)
 show the common inputs and case-specific rules. Case 169’s literal cutoff is
 October 23; neighboring titles or variants do not alter it. The 722 YES / 728 NO
 floor pair had dated cost $9.98776 against a $10 payout floor, only $0.01224 before
@@ -414,7 +414,7 @@ Save each case before beginning another. Resume from
   no new routine incident. The historical18 wrapper/10 raw-capture damage remains
   documented without restoration or repeat Telegram notice. No holds, priors or
   decisions changed: 201 total,125 resolved,76 pending,next202. Manual route and
-  issuer-rotation blockers remain; weeklyOct16/monthlyNov12 are future.
+  issuer-rotation blockers remain; weeklyOct 16/monthlyNov12 are future.
 
 ## Oct-15 18:00 light check — completed; positions retained, diagnostic incident recorded
 
@@ -430,7 +430,7 @@ Save each case before beginning another. Resume from
   alert in sampled public tails. Three OpenAI403 gaps keep coverage partial.
 - Four current daemons/disk776.51MiB above warning. Hormuz gas-negative;
   no resimulation. Full discovery/redeem-all not due;14 coverage remains partial.
-  One Telegram incident notice. Next22:00; weeklyOct16/monthlyNov12 future;
+  One Telegram incident notice. Next22:00; weeklyOct 16/monthlyNov12 future;
   manual route/rotation blockers unchanged. No new timer/goal/idle follow-up.
   Evidence:journal~18:05;data/periodic_20261015T1800_*.json;logs/periodic_20261015T1800/.
 
@@ -448,7 +448,7 @@ Save each case before beginning another. Resume from
   no newsim; requiredredeem-all0/4/no broadcast. Discovery10typesrc0/fourliteral
   reviews/3045selectedunreviewed; ETH hourlydiagnostic is not qualifying1m proof,
   proxy+uncertainty/fees fail. Size0DEC201; ledger201/125resolved/76pending.
-  Telegramquiet, next18:00, weeklyOct16/monthlyNov12 future; manualblockers
+  Telegramquiet, next18:00, weeklyOct 16/monthlyNov12 future; manualblockers
   unchanged, no newtimer/goal. Evidence:journal~14:01/data/checkin_20261015T1400_*.json.
 
 ## Oct-15 10:00 light check — completed; positions retained, no new alert
@@ -463,7 +463,7 @@ Save each case before beginning another. Resume from
   KnownCTF/pUSD unchanged, Aaveinterest accrued; Gfinal0/no burn/rebook.
 - Fourcurrentdaemons/disk829.35MiB above warning. Hormuzgas-negative,
   no newsim. Full discovery/redeem-all not due; last02scope remains partial.
-  Telegramquiet, next14:00, weeklyOct16/monthlyNov12 future; manualblockers
+  Telegramquiet, next14:00, weeklyOct 16/monthlyNov12 future; manualblockers
   unchanged, no newtimer/goal. Evidence:journal~10:02/data/periodic_20261015T1000_*.json.
 
 ## Oct-15 06:00 light check — completed; positions retained, no new alert
@@ -478,7 +478,7 @@ Save each case before beginning another. Resume from
   KnownCTF/pUSD unchanged, Aaveinterest accrued; Gfinal0/no burn/rebook.
 - Fourcurrentdaemons/disk840.76MiB above warning. Hormuzgas-negative,
   no newsim. Full discovery/redeem-all not due; last02scope remains partial.
-  Telegramquiet, next10:00, weeklyOct16/monthlyNov12 future; manualblockers
+  Telegramquiet, next10:00, weeklyOct 16/monthlyNov12 future; manualblockers
   unchanged, no newtimer/goal. Evidence:journal~06:02/data/periodic_20261015T0600_*.json.
 
 ## Oct-15 02:00 full check — completed; positions retained, four candidate cases declined
@@ -499,7 +499,7 @@ Save each case before beginning another. Resume from
   Size0 DEC0200/no numeric outcome forecast; ledger200/125resolved/75pending.
 - Four current daemons/disk869.55MiB above warning; Hormuz gas-negativepoint,
   no new simulation. Telegram quiet; Witt alert already reviewed/notified22.
-  Next06:00, weeklyOct16/monthlyNov12; manual blockers unchanged, no timer/goal.
+  Next06:00, weeklyOct 16/monthlyNov12; manual blockers unchanged, no timer/goal.
   Evidence:journal~02:01,data/checkin_20261015T0200_*.json,current run logs.
 
 ## Oct-14 22:00 light check — completed; Witt alert reviewed, pair retained
@@ -515,7 +515,7 @@ Save each case before beginning another. Resume from
   configured fee ceiling exceeds payout, no broadcast. MaterialTelegram1147 sent.
 - Four current daemons/disk883.93MiB above warning. Full discovery/redeem-all/
   silver repeats not due; manual blockers unchanged. NextOct15 02:00,
-  weeklyOct16/monthlyNov12. No new timer/goal/idle work. Evidence:journal~22:02.
+  weeklyOct 16/monthlyNov12. No new timer/goal/idle work. Evidence:journal~22:02.
 
 ## Oct-14 18:00 light check — completed; unchanged positions, no new alert
 
@@ -528,7 +528,7 @@ Save each case before beginning another. Resume from
   G final0 reconfirmed at95530401; no burn, new decision or prior/asset change.
 - One CSV point; original180 rows/history preserved. Four current daemons,
   disk892.43MiB above warning. Telegram quiet; full discovery/redemption/silver
-  reruns not due. Manual blockers unchanged. Next22:00; weeklyOct16/monthlyNov12.
+  reruns not due. Manual blockers unchanged. Next22:00; weeklyOct 16/monthlyNov12.
   No new timer/goal/idle work. Evidence:journal~18:01/current periodic artifacts.
 
 ## Oct-14 14:00 full check — completed; positions retained, silver unverified
@@ -544,7 +544,7 @@ Save each case before beginning another. Resume from
   candle established or source-outage proof. DEC0199 size0/no numeric forecast.
 - Derived candidate fees corrected offline to4/5% Gamma, original receipts
   preserved. No production-code/restart change; Telegram quiet. Next18:00,
-  weeklyOct16/monthlyNov12; manual blockers unchanged, no new timer/goal.
+  weeklyOct 16/monthlyNov12; manual blockers unchanged, no new timer/goal.
   Evidence:journal~14:02/data/checkin_20261014T1400_*.json/current logs.
 
 ## Oct-14 10:00 light check — completed; Gemini final YES, history preserved
@@ -560,7 +560,7 @@ Save each case before beginning another. Resume from
   guard; no fresh execution quote. Conditional stress exit remains explicit.
 - Routine19 once:18rc0/auditrc1, necessary audit/summary follow-ups rc0.
   Sources17 primary+documented onboarding reads;65 raw objects unchanged.
-  Material Telegram1146 sent. Next existing14:00; weeklyOct16/monthlyNov12.
+  Material Telegram1146 sent. Next existing14:00; weeklyOct 16/monthlyNov12.
   Full discovery not due; manual blockers unchanged; no new timer/goal/idle work.
   Evidence:journal~10:02/data/periodic_20261014T1000_*.json/current logs.
 
@@ -576,7 +576,7 @@ Save each case before beginning another. Resume from
   follow-up source receipts. KnownCTF/pUSD unchanged, aUSDC122.073900/live3.0679%.
   Four current daemons,961.57MiB disk above warning; no code change/restart.
 - One CSV point/journal/handoff updated, material Telegram1145 sent. Next
-  existing10:00, weeklyOct16/monthlyNov12. No full discovery rerun, new timer/
+  existing10:00, weeklyOct 16/monthlyNov12. No full discovery rerun, new timer/
   goal or idle follow-up. Manual route/credential blockers unchanged.
   Evidence:journal~06:02/data/periodic_20261014T0600_*.json/current logs.
 
@@ -594,7 +594,7 @@ Save each case before beginning another. Resume from
 - KnownCTF/pUSD22.571890 unchanged; aUSDC122.072190/live3.0834%. Four current
   daemons,979.40MiB disk above warning. No production-code or probability change.
 - One CSV point, journal/dashboard/handoff updated; material Telegram1144 sent.
-  Next existing06:00, weeklyOct16/monthlyNov12. Manual route/credential blockers
+  Next existing06:00, weeklyOct 16/monthlyNov12. Manual route/credential blockers
   unchanged; no new watcher/timer/goal or idle continuation.
   Evidence:journal~02:04/data/checkin_20261014T0200_*.json/current logs.
 
@@ -613,7 +613,7 @@ Save each case before beginning another. Resume from
   KnownCTF/pUSD22.571890 unchanged, aUSDC122.070431/live variable3.0823%.
   Four daemons current,1017.75MiB disk above warning; news freshness stat verified.
   One CSV point/handoff refreshed, material Telegram recorded separately. Next
-  existingOct14 02:00, weeklyOct16/monthlyNov12; no new timer/goal/idle work.
+  existingOct14 02:00, weeklyOct 16/monthlyNov12; no new timer/goal/idle work.
   Evidence:journal~22:03/data/periodic_20261013T2200_*.json/current logs.
 
 ## Oct-13 18:00 light check — completed; material source changes reviewed, no action
@@ -632,7 +632,7 @@ Save each case before beginning another. Resume from
   CompleteClarity29/29 retained, idealized carry below29floor; no add.
   Consistency guard/watcher audit found no provable execution defect; no rerun.
 - Records/history preserved; one CSV point/handoff refreshed and material Telegram
-  summary recorded. Next22:00, weeklyOct16/monthlyNov12; manual external blockers
+  summary recorded. Next22:00, weeklyOct 16/monthlyNov12; manual external blockers
   unchanged, no new timer/goal/idle follow-up. Evidence:journal~18:05/current logs.
 
 ## Oct-13 14:00 full check — completed; Gemini sale verified, no new entry
@@ -651,7 +651,7 @@ Save each case before beginning another. Resume from
 - Post-sale token/cash/tx/orders verified; snapshot fix followed byCLEAN audit.
   Six protected records and original forecasts/history retained. News restarted
   for changed imported module; four daemons current,1052.43MiB disk above warning.
-  Telegram1141 sent once; oneCSV point/handoff refreshed. Next18:00, weeklyOct16,
+  Telegram1141 sent once; oneCSV point/handoff refreshed. Next18:00, weeklyOct 16,
   monthlyNov12; manual access/credential blockers unchanged, no new timer/goal.
   Evidence:journal~15:08,data/checkin_20261013T1400_*.json,current run logs.
 
@@ -670,7 +670,7 @@ Save each case before beginning another. Resume from
   aUSDC122.065248, variable3.0889% vs cached3.0149%/23.85h. Retain gas-negative dust.
 - Four canonical daemons current,1073.79MiB disk above warning. Records/history
   preserved, one CSV point/handoff refreshed. No discovery rerun, quiet Telegram,
-  timer/goal or idle follow-up. Next14:00, weeklyOct16/monthlyNov12 future;
+  timer/goal or idle follow-up. Next14:00, weeklyOct 16/monthlyNov12 future;
   manual copper/Base routes and issuer credential rotation remain external blockers.
   Evidence:journal~10:02,data/periodic_20261013T1000_*.json,current run logs.
 
@@ -693,7 +693,7 @@ Save each case before beginning another. Resume from
  7.8106% vs8% remains narrow; no add. Clarity28.5691/28.7622<29, keep29/29.
 - Four canonical daemons current;1083.64MiB disk above warning. Records/history
   preserved, one CSV point/handoff refreshed; no discovery rerun, Telegram,
-  goal/timer or idle follow-up. Next10:00, weeklyOct16/monthlyNov12 future;
+  goal/timer or idle follow-up. Next10:00, weeklyOct 16/monthlyNov12 future;
   manual copper/Base routes and unverified issuer credential rotation remain
   external blockers. Evidence: journal~06:02 and logs/periodic_20261013T0600/.
 
@@ -722,7 +722,7 @@ Save each case before beginning another. Resume from
   Source/operator timestamps and50-50 branches remain unpriced, not certified.
 - Four canonical daemons current;1097.20MiB disk above warning. Original financial
   records/history preserved; one CSV point and current handoff updated. No new
-  goal/timer or quiet Telegram. Next06:00; weeklyOct16/monthlyNov12 future;
+  goal/timer or quiet Telegram. Next06:00; weeklyOct 16/monthlyNov12 future;
   manual copper/Base blockers unchanged. Evidence:journal~02:03/current run logs.
 
 ## Oct-12 22:00 light check — completed; HOLD / NO ADD
@@ -744,7 +744,7 @@ Save each case before beginning another. Resume from
   Hormuz winning dust remains gas-negative; no new simulation/broadcast.
 - Four canonical daemons current;1125.24MiB disk above warning. Seven protected
   records/history unchanged, one dated CSV point appended and handoff refreshed.
-  No quiet Telegram or new goal/timer; next existing Oct13 02:00, weeklyOct16,
+  No quiet Telegram or new goal/timer; next existing Oct13 02:00, weeklyOct 16,
   monthlyNov12. Manual copper/Base blockers and off-chain retirement remain.
 
 ## Oct-12 18:00 light check — completed; HOLD / NO ADD
@@ -765,7 +765,7 @@ Save each case before beginning another. Resume from
 - Four daemons current;1140.71MiB disk above warning. Seven financial/prior/
   watchlist/flow/benchmark records preserved and one CSV row appended. Current
   handoff refreshed for22:00. No Telegram, new timer/watcher/goal or idle follow-up;
-  weeklyOct16, monthlyNov12, manual copper/Base blockers unchanged.
+  weeklyOct 16, monthlyNov12, manual copper/Base blockers unchanged.
 
 ## Oct-12 requested loss cleanup — completed at15:36
 
@@ -810,7 +810,7 @@ Save each case before beginning another. Resume from
 - Receipt audit passed; prior 192 decision objects and six protected records
   preserved. One CSV observation and current handoff refreshed. Four daemons
   current; 1159.08 MiB disk above warning. Material Telegram1137 delivered;
-  10 chart checks pass. Next existing check18:00, weeklyOct16, monthlyNov12;
+  10 chart checks pass. Next existing check18:00, weeklyOct 16, monthlyNov12;
   Saturday experiment complete; manual copper/Base access blockers unchanged.
 
 ## Oct-12 compact onboarding — completed; existing cadence only
@@ -848,7 +848,7 @@ Save each case before beginning another. Resume from
   HOLD complete29/29; never act on a single member. No new numeric prior.
 - Four daemons current;1248.47MiB disk above warning, no cleanup/restart.
   No asset action/Telegram/idle follow-up. Full14:00 future; monthlyNov12,
-  weeklyP&LOct16; architecture shadow complete, manual copper/Base blockers remain.
+  weeklyP&LOct 16; architecture shadow complete, manual copper/Base blockers remain.
 
 ## Oct-12 finite-context architecture — shadow prototype completed
 
@@ -899,7 +899,7 @@ Save each case before beginning another. Resume from
 - Three OpenAI direct403 pages: wider releases partial/unobserved. Four
   daemons current, 1481.21 MiB disk above warning; no cleanup/restart.
 - No asset action/Telegram/new follow-up. Monthly PASS/delivery verified;
-  nextNov12, weeklyP&LOct16;
+  nextNov12, weeklyP&LOct 16;
   copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-12 02:00 full check — monthly diagnostic PASS; HOLD / NO ADD
@@ -918,7 +918,7 @@ Save each case before beginning another. Resume from
   daemons current, 1491.20 MiB disk above warning; no cleanup/restart.
 - Monthly diagnostic PASS (two writer probes/no fill or actual cancel);
   fees covered, nextNov12. One material Telegram summary follows publication.
-  No portfolio action/new follow-up; weeklyP&LOct16;
+  No portfolio action/new follow-up; weeklyP&LOct 16;
   copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-11 22:00 light check — HOLD / NO ADD; no new action due
@@ -934,7 +934,7 @@ Save each case before beginning another. Resume from
   No discovery/redemption scan due at light tick; retain Hormuz dust claim.
 - Three OpenAI direct403 pages: wider releases partial/unobserved. Four
   daemons current, 1512.98 MiB disk above warning; no cleanup/restart.
-- No asset action/Telegram/new follow-up. DrillOct12/P&LOct16 future;
+- No asset action/Telegram/new follow-up. DrillOct12/P&LOct 16 future;
   copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-11 18:00 light check — HOLD / NO ADD; no new action due
@@ -950,7 +950,7 @@ Save each case before beginning another. Resume from
   No discovery/redemption scan due at light tick; retain Hormuz dust claim.
 - Three OpenAI direct403 pages: wider releases partial/unobserved. Four
   daemons current, 1522.07 MiB disk above warning; no cleanup/restart.
-- No asset action/Telegram/new follow-up. DrillOct12/P&LOct16 future;
+- No asset action/Telegram/new follow-up. DrillOct12/P&LOct 16 future;
   copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-11 14:00 full check — HOLD / NO ADD; no validated entry
@@ -969,7 +969,7 @@ Save each case before beginning another. Resume from
   Marginal hurdle2.99% cached4h; independently checked live reserve3.0308%.
 - Three OpenAI direct403 pages: wider releases partial/unobserved. Four
   daemons current, 1533.85 MiB disk above warning; no cleanup/restart.
-- No asset action/Telegram/new follow-up. DrillOct12/P&LOct16 future;
+- No asset action/Telegram/new follow-up. DrillOct12/P&LOct 16 future;
   copper/Base manual only; issuer rotation unverified/access-gated.
 
 ## Oct-10 14:00 full check — HOLD / NO ADD; no new action due
@@ -1016,7 +1016,7 @@ Save each case before beginning another. Resume from
   validation, above 128 critical/below 512 warning. Sources/records retained,
   imports and unchanged four daemons verified. No automated deletion/restart.
 - One material capacity summary via Telegram after verification; no asset
-  action. Drill Oct12/P&L Oct16 future; Base remains manual/on-demand.
+  action. Drill Oct12/P&L Oct 16 future; Base remains manual/on-demand.
 
 ## Oct-10 06:00 light check — HOLD / NO ADD; no new action due
 
@@ -1029,7 +1029,7 @@ Save each case before beginning another. Resume from
   files verified. Wider OpenAI release coverage partial/unobserved. No new alert.
 - State CLEAN, inventory unchanged, orders/UMA/Ostium/overdue0, watch no hits.
   Four daemons current; free143.85 MiB above128 critical/below512 warning,
-  no safe cleanup. No action/Telegram. DrillOct12/P&LOct16 future; Base manual.
+  no safe cleanup. No action/Telegram. DrillOct12/P&LOct 16 future; Base manual.
 
 ## Oct-10 02:00 full check — HOLD / NO ADD; Gemini quote stale
 
@@ -1044,7 +1044,7 @@ Save each case before beginning another. Resume from
   Critical sources checked; three OpenAI pages blocked. No new public alert.
 - Orders/UMA/Ostium/overdue0, state CLEAN, inventory unchanged. Four daemons
   current. Free154.52 MiB above128 critical/below512 warning; no safe cleanup.
-  No asset action/new Telegram. DrillOct12/P&LOct16 future, Base manual only.
+  No asset action/new Telegram. DrillOct12/P&LOct 16 future, Base manual only.
 
 ## Oct-9 22:00 periodic check — HOLD / NO ADD; no new action due
 
@@ -1060,7 +1060,7 @@ Save each case before beginning another. Resume from
   24HTTP200/six403; critical checks passed, broader OpenAI coverage partial.
   Orders/UMA/Ostium/overdue0, CLEAN state, no watch/public-alert trigger.
 - Four daemons current; disk176.54 MiB above128 critical/below512 warning,
-  no safe cleanup. DrillOct12/P&LOct16 not due; manual Base candidates and
+  no safe cleanup. DrillOct12/P&LOct 16 not due; manual Base candidates and
   rotation limitation unchanged. No new Telegram, monitor or idle follow-up.
 
 ## Oct-9 18:00 periodic check — HOLD / NO ADD; no new action due
@@ -1079,7 +1079,7 @@ Save each case before beginning another. Resume from
 - Orders/UMA/Ostium/overdue0, state CLEAN, no watch trigger. Inventory unchanged,
   aUSDC85.056763/rate3.1702%. Four daemons current; capacity189.88 MiB above128
   critical/below512 warning, no safe cleanup. No asset action or new Telegram.
-  DrillOct12/P&LOct16 not due; manual Base candidates and rotation limitation
+  DrillOct12/P&LOct 16 not due; manual Base candidates and rotation limitation
   remain as recorded. No new idle follow-up or durable goal.
 
 ## Oct-9 14:00 full check — AA confirmation; Gemini prior .08, HOLD / NO ADD
@@ -1098,7 +1098,7 @@ Save each case before beginning another. Resume from
   Direct-source audit retains six403; available named held sources checked.
 - Orders/UMA/Ostium/overdue0; state CLEAN. Four daemons current. Capacity206.12
   MiB above128 critical/below512 warning; no safe cleanup. No asset action.
-  Weekly P&L next Oct16; monthly drill Oct12. Base candidates remain manual.
+  Weekly P&L next Oct 16; monthly drill Oct12. Base candidates remain manual.
 
 ## Oct-9 11:10 Base stock-token review — cheap quotes; manual candidates only
 
@@ -5042,3 +5042,44 @@ Receipt: data/deep_review_20261017/all_pilots_ipo_cancel_verify_0000.json
 The checkpoint is 209 valued, 3 blocked, 327 factual exclusions and 2,461 pending across 539 canonical records; case 96 is active. Case 92 was reviewed against its full rule and is blocked, not valued or rejected. YES requires an official CME active-month CL daily High strictly above $147.27 after the April 30 creation time through the eligible final day. The relevant May–October active-contract series with expiry rolls is not established, so a future-only forecast would omit the possibility that the event already qualified. A current price near $99 and absence of a found headline do not establish no breach.
 
 The case JSON labels the CME Daily Bulletin browser observation at 03:00 UTC; that is approximate page-read time, not an exact timed HTTP receipt. The browser interface provides no such receipt. The separately timed agent packet 0238 remains distinct. Case 92's immutable report records this limitation; see [case 0092](../research/2026-10-17-deep-review/evaluations/0092.md), [source packet 0238](../data/deep_review_20261017/oil_terminal_data_followup_0238.json), and [audit 0305](../data/deep_review_20261017/ledger_audit_0305.json). No order or financial prior was added.
+
+
+## October 18 03:14 UTC — case 96 completed; no new money
+
+The review now has 210 valued, 3 blocked, 327 factual exclusions and 2,460 pending across 540 canonical records; no case is active. Case 96 (market 703258, exact question “Will Jesus Christ return before 2027?”) is valued at 0.5% YES. The report distinguishes the literal Second Coming rule from a Rapture/date prediction or self-claimant, describes source consensus limits, and retains broad event/consensus uncertainty. Its dated two-sided quote analysis does not support entry; no financial prior, order or reservation was created. This advances the review by one valuation but is not a new 100-case milestone or Telegram notification.
+
+Audit 0316 verifies the exact frozen market/condition/criteria, JSON-to-Markdown report hash, append after pushed HEAD `178bd90`, 3,000 unique CSV rows, checkpoint/progress, and all eight protected financial files against the 02:00 baseline. The current count and next queue are in the live checkpoint. See [case 0096](evaluations/0096.md) and [audit 0316](../../data/deep_review_20261017/ledger_audit_0316.json). No commit/push or financial action was made by this update.
+
+
+## October 18 10:30 UTC — deep-review audit and fallback boundary
+
+The frozen review checkpoint is 212 valued, 3 blocked, 328 factual exclusions and
+2,457 pending across 543 records; active 112 is included in pending. Four rows (96, 97,
+101, 106) append cleanly after pushed HEAD `33e9fac`: 96/101/106 valued, 97 factually
+excluded after official final MLB results. Their frozen IDs, report hashes, CSV
+status and ledger prefix pass [audit 1030](../data/deep_review_20261017/ledger_audit_1030.json).
+Case 92 remains blocked because the complete post-creation CME active-month High
+series is unresolved.
+
+The Oct 16 preliminary CME CL DEC26 American-option crosscheck challenges the prior
+low-oil mass but is not a physical ICE Europe WTI/Pyth CLL forecast; preserve dated
+compound cases until an explicit updated joint model is saved. The separate fallback
+account check was at 09:36 UTC; details and the Michigan fill are in its dated
+[report](../research/2026-10-18-fallback-checkin.md). This research audit did not
+check live account state or alter financial records.
+
+
+## October 18 10:40 UTC — OpenRouter source-grain correction and case 112
+
+Case 112 is valued at 9% YES with a 0.5–80% sensitivity range after a post-quote
+concentrated near-750T countermodel; its selected 15-point reserve is not an entry
+floor. The dated NO 10-share ask walk is not a current quote or an approved order. See
+[case 112](../research/2026-10-17-deep-review/evaluations/0112.md) and [source facts](../data/deep_review_20261017/openrouter112_source_followup_1030.json).
+
+The public `period=week` endpoint returns one rolling-week row per model variant.
+The 174.020765561738T prior and 168.339264961301T current response sums are not
+five daily observations or displayed fixed-week settlement totals. DeepSeek rows
+match rounded chart labels 36.8T/35.9T. case 35 remains blocked on missing fixed
+UTC Monday–Sunday history, not zero. The 10:39 checkpoint is 213 valued, 3 blocked,
+328 excluded and 2,456 pending across 544 records; active 113 is included in pending.
+See [audit1039](../data/deep_review_20261017/ledger_audit_1039.json).

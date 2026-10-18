@@ -1,0 +1,99 @@
+{
+  "schema": "primary_cme_option_proxy_crosscheck.v1",
+  "written_utc": "2026-10-18T03:23:48.009112+00:00",
+  "author": "primary_operator",
+  "source_trade_date": "2026-10-16",
+  "publication_status": "PRELIMINARY",
+  "futures_basis": "NYMEX CL DEC26, not ICE Europe WTI/Pyth CLL",
+  "F_settlement": 99.02,
+  "source_pdf_raw_sha256": "60c956d6df1f8a6c90b32ed71c80e4a38ae06ec3ba39078d4536911597cc1ea5",
+  "corrected_row_packet": "data/deep_review_20261017/oil_terminal_data_followup_0238_correction.json",
+  "futures_formula_source": "data/deep_review_20261017/oil_cme_rulebook_followup_0238.json",
+  "option_formula_source": "logs/deep_review_20261017/cme310_primary_rendered_0323.json",
+  "expiry_derivation": {
+    "CLZ6": "2026-11-20 if ordinary calendar formula applies; no captured dated listed-calendar row",
+    "LO_DEC26": "2026-11-17 derived as third business day before CLZ6, assuming no special announced expiry/holiday override",
+    "style": "American; exercise into underlying futures. Black76 European model only an approximation, not venue exact pricing.",
+    "days": "32 calendar days from Oct16 toNov17 and17 toNov2 are rough time ratios; exact session times/DST ignored in this illustrative proxy."
+  },
+  "single_strike_fits": [
+    {
+      "strike": 80,
+      "put_settlement_usd_per_barrel": 0.52,
+      "discount_assumption": 1.0,
+      "Black76_single_strike_total_sigma_sqrtT": 0.15412483704365376,
+      "model_option_expiry_cdf": 0.0956318969690162,
+      "illustrative_annualized_vol_at_32days": 0.5205279732130301,
+      "illustrative_Nov2_CDF_at_17over32_variance_ratio": 0.032697864847117675,
+      "calibrated_physical_or_ICE_CLL_probability": false
+    },
+    {
+      "strike": 85,
+      "put_settlement_usd_per_barrel": 0.99,
+      "discount_assumption": 1.0,
+      "Black76_single_strike_total_sigma_sqrtT": 0.14455111814431493,
+      "model_option_expiry_cdf": 0.16258364232159778,
+      "illustrative_annualized_vol_at_32days": 0.4881945181361392,
+      "illustrative_Nov2_CDF_at_17over32_variance_ratio": 0.08130091377474147,
+      "calibrated_physical_or_ICE_CLL_probability": false
+    },
+    {
+      "strike": 100,
+      "put_settlement_usd_per_barrel": 6.04,
+      "discount_assumption": 1.0,
+      "Black76_single_strike_total_sigma_sqrtT": 0.13956963523906118,
+      "model_option_expiry_cdf": 0.555807078762,
+      "illustrative_annualized_vol_at_32days": 0.47137048607223075,
+      "illustrative_Nov2_CDF_at_17over32_variance_ratio": 0.5587001656478316,
+      "calibrated_physical_or_ICE_CLL_probability": false
+    }
+  ],
+  "finite_put_spread_slopes": [
+    {
+      "center": 80,
+      "strikes": [
+        79.5,
+        80.5
+      ],
+      "premiums": [
+        0.49,
+        0.56
+      ],
+      "premium_difference_per_strike_width": 0.07000000000000006
+    },
+    {
+      "center": 85,
+      "strikes": [
+        84.5,
+        85.5
+      ],
+      "premiums": [
+        0.93,
+        1.06
+      ],
+      "premium_difference_per_strike_width": 0.13
+    }
+  ],
+  "put_call_parity_sanity": {
+    "strike": 100,
+    "put": 6.04,
+    "call": 5.07,
+    "put_minus_call": 0.9699999999999998,
+    "strike_minus_F": 0.980000000000004,
+    "limit": "Rounded preliminary American premiums and discount/early exercise differ; approximate sanity check, not exact arbitrage."
+  },
+  "old_joint_model_comparison": {
+    "path": "research/2026-10-17-deep-review/models/hormuz_oil_senate_joint_0206.json",
+    "central_Nov2_probability_under80": 0.08466,
+    "central_Nov2_probability_under85": 0.1906,
+    "interpretation": "Old weights are a subjective physical diplomacy/Senate scenario model. The proxy crosscheck suggests old low-oil mass may be optimistic; different horizons, risk measures, exercise style and instrument basis prevent a direct replacement by these numbers."
+  },
+  "primary_decision": "No new financial action. Keep all original dated cases unchanged and selected reserves intact. Do not treat old positive central compound EV as current entry approval. Exact CLL observation history/current distribution, diplomacy and Senate dependence still matter; publish an explicit new forecast if changing those weights.",
+  "limits": [
+    "No CVOL numeric observation was captured. Fitting total volatility from option premiums is an explicit derived calculation, not a CVOL quote.",
+    "Single-strike Black CDFs differ from spread slopes because fitting each strike with a separate volatility is not a smooth arbitrage-free smile distribution.",
+    "A spread slope only approximates an expiry risk-neutral digital for European options with discount/rounding/smile qualifications; these American preliminary settlements add exercise/model uncertainty.",
+    "Neither slope nor Black CDF is a real-world November2 ICE CLL probability or an October intraday barrier-hit probability.",
+    "No historical May\u2013October CME active-month High path recovered; case92 remains blocked."
+  ]
+}

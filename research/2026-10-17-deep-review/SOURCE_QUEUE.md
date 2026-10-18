@@ -1,16 +1,10 @@
-## Current pointer — October 18, 03:04 UTC
+## Current pointer — October 18, 10:39 UTC
 
-The canonical review has **209 valued, 3 blocked, 327 factual exclusions and 2,461 pending** across 539 records; case 96 is active. Case 92 is blocked, not rejected: the full rule requires CME active-month daily High strictly above $147.27 after April 30 creation, and the complete correctly rolled May–October series is not established. No probability was saved. The 03:00 UTC CME Daily Bulletin `observed_utc` is an approximate browser read time, not a timed HTTP receipt; the separate timed packet 0238 is preserved. Current [index](INDEX.md), [checkpoint](../../notes/deep_review_checkpoint.json), and [audit 0305](../../data/deep_review_20261017/ledger_audit_0305.json) govern status.
+The canonical review has **213 valued, 3 blocked, 328 factual exclusions and 2,456 pending** across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` were audited: 96, 101, 106, 112 valued; 97 factually excluded after official final MLB results. See [audit 1039](../../data/deep_review_20261017/ledger_audit_1039.json), live [index](INDEX.md) and [checkpoint](../../notes/deep_review_checkpoint.json). Case 92 remains blocked because its full post-creation CME active-month High history is unresolved.
 
-Nine valuations were appended after milestone 200: 1602, 1607, 1826, 1910, 2058,
-2077, 2153, 2822 and 2962. All 15 conditions in the original compound manifest
-are now completed; their common Senate/oil/agreement drivers remain dependent.
-Case 2153's agreement cutoff is October 23, whereas case 2077 has November 2.
-Case 1910 uses a whole-market 50–50 non-session branch; case 2058 uses the prior
-trading-day close. Both reports retain raw expected payouts and raw EVs. CME CL is
-a dated proxy, not ICE Europe WTI/Pyth CLL. See [audit 0244](../../data/deep_review_20261017/ledger_audit_0244.json),
-[oil source packet 0230](../../data/deep_review_20261017/oil_barrier_primary_facts_0230.json),
-and [terminal-data packet 0238](../../data/deep_review_20261017/oil_terminal_data_followup_0238.json).
+**OpenRouter source-grain correction.** The `period=week` API returns one row per model variant; a row's date label is not a daily activity bucket. The prior 174.020765561738T and current 168.339264961301T are response-derived rolling-week sums, not five daily observations, not five-day usage totals and not exact displayed settlement totals. DeepSeek's prior/current values 36.824610T/35.888676T match rounded chart values 36.8T/35.9T. Historical fixed Monday–Sunday totals required by case 35 remain unavailable, not zero; case 35 remains blocked. See [originals and correction](../../data/deep_review_20261017/openrouter112_source_followup_1030.json), [fixed-week follow-up](../../data/deep_review_20261017/openrouter_fixed_week_followup.json), [case 35](evaluations/0035.md) and [case 112](evaluations/0112.md).
+
+Case 112's exact future four-week rule remains unobservable today. Primary recorded 9% YES, 0.5–80% range after a concentrated near-750T countermodel, and a 15-point selected reserve that is not an entry floor. Its historical NO 10-share ask walk cost of $6.78844 and 76%-stress EV of +$0.81156 are dated economics, not a current quote or approval. Independent review/current gates remain before any proposal. Case 92's 03:00 Bulletin browser timestamp is approximate page-read time, not a timed HTTP receipt.
 
 ## Historical milestone-200 pointer — October 18, 02:42 UTC
 
