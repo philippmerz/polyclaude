@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-18T19:02:30.445283+00:00",
+  "index": 238,
+  "identity": {
+    "id": "4662692",
+    "conditionId": "0xc613d3515fa3e87e6e0f9c2d0ae0a83d2271530caf877e8c4f4d80b393fb36c0",
+    "criteria_sha256": "c17658f933153bf00fdee88a180fc7c171cda5c59682b1d384ab840f26ecd19d"
+  },
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/gta238_facts_1830.json",
+  "root_checks": [
+    "Read full exactalbum/creditedtrack/Nov26ETfallback rules",
+    "Verified gzip publicmusic rawhash; BadBunnyoccurrence only EoO/Cocoteo radio metadata",
+    "Root browserread officialmusic page/retailer linked byRockstar; selectedsingles/6retailerfeatures notfull34credits",
+    "Officialartist/Rockstar scoped2queries no results; boundedsearch != absenceproof"
+  ],
+  "branches": [
+    {
+      "weight": 0.35,
+      "name": "broader flagshipLatin collaboration roster",
+      "conditional_album_credit": 0.6
+    },
+    {
+      "weight": 0.65,
+      "name": "radio license with album concentrated elsewhere",
+      "conditional_album_credit": 0.15
+    }
+  ],
+  "assumed_album_released_by_deadline": 0.97,
+  "raw_yes": 0.298275,
+  "p_yes": 0.3,
+  "range": [
+    0.05,
+    0.75
+  ],
+  "entry_reserve_pp": 25,
+  "reasoning": "34 original tracks and multiple Latin acts in selectedsingles make a major Latinartist plausible; actualradio affiliation modestlysupports commercialconnection but not participation in anoriginalalbum. Many unannouncedcredits remain; selectivepromotion cannot be treated as randomsampling or absenceproof. Albumreleasebydeadline=.97 and35/65 rosterregimes are explicit primaryjudgment, not inferred from prices or fittedcatalogue inclusionrates.",
+  "limitations": "No completed officialcredits, comparableartist calibration or contractualaccess. Modeluncertainty large; roster/regime probabilities/range/reserve are subjective. PhysicalNov20shipping differsfromNov19digitalrelease and Nov26marketdeadline."
+}

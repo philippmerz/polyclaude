@@ -1,0 +1,158 @@
+{
+  "review_index": 241,
+  "condition_id": "0xb9893108d4eabeb598556b4ab817c8d3392afe593ec5de915b47e8427c607ba1",
+  "criteria_sha256": "d371a80d70d55c3ac59b194df235354a599405f4a777121fb93ea1ba2c2568f5",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to “Yes” if a human case of pneumonic plague outside the Russian Federation is confirmed and established as epidemiologically linked to the outbreak associated with the Irkutsk Anti-Plague Research Institute by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nA \"confirmed case\" is a case explicitly identified by a qualifying source as laboratory-confirmed Yersinia pestis infection with pneumonic (pulmonary) involvement, or explicitly announced as a confirmed pneumonic plague case. A bubonic or septicemic case that progresses to pneumonic plague qualifies. \n\nAn epidemiological link means a qualifying source states that the case acquired its infection from a person, animal, sample or material connected to the Irkutsk outbreak, or that the case travelled from Irkutsk Oblast within the incubation period and is being investigated as part of that outbreak. \n\nResolution is based on the date a qualifying source publishes the confirmation and the link, not the date of exposure, symptom onset or laboratory result. A report published after the deadline does not count even if the infection occurred earlier.\n\nThe primary resolution source for this market will be the WHO and the national public health authority of the country reporting the case; however, a consensus of credible reporting may also be used.",
+  "evidence": [
+    {
+      "url": "https://www.who.int/emergencies/disease-outbreak-news/item/2026-DON620/",
+      "observed_utc": "2026-10-18T18:37:48.775694+00:00",
+      "finding": "Oct10DON viaRussianNFP: negativeplague/high-threattests andnoadditionalcases; causeunknown,labexposurecannotfullyexcluded. WHOcannotindependentlyjudgefollowupdurationforunknowncause. RootcheckedrawSHA/fullpage; eightdayreportlag."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5369960",
+      "observed_utc": "2026-10-18T18:37:48.998564+00:00",
+      "finding": "ExactCID/fullfrozencriteria/tokens match; open/accepting. Foreignauthoritycoveragebounded, notglobalabsenceproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.02,
+    "low": 0.001,
+    "high": 0.25,
+    "method": "Primary source-reliability/hiddenevent regimes; jointqualifyingforeignpublication probability with explicitunknownetiology/confirmation/link/deadline.",
+    "reasoning": "94/5/1% accuratecontainment/missedlimitedplague/materiallyhiddenevent branches at0.2/15/65% qualifyingforeignpublication respectively=>1.588%, roundedup2%. Noepidemiologicalcalibration or assumedindependentchain; absentdiagnosis/opaqueNFPkeepsuppertail."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 80,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.02,
+        "selected_stress_probability": 0,
+        "best_bid": 0.041,
+        "best_ask": 0.042,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345304340",
+        "book_age_seconds_at_receipt": 43.498958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.42000000000000004,
+            "fee": 0.02012,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.042
+              }
+            ],
+            "net": 0.44012000000000007
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.41000000000000003,
+            "fee": 0.01966,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.041
+              }
+            ],
+            "net": 0.39034
+          }
+        },
+        "taker_cost_usd": 0.44012000000000007,
+        "central_expected_profit_usd": -0.24012000000000006,
+        "selected_stress_profit_usd": -0.44012000000000007,
+        "break_even_before_carry": 0.04401200000000001,
+        "break_even_constant_carry": 0.044312430542192804,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.98,
+        "selected_stress_probability": 0.88,
+        "best_bid": 0.958,
+        "best_ask": 0.959,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345304340",
+        "book_age_seconds_at_receipt": 43.498958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.59,
+            "fee": 0.01966,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.959
+              }
+            ],
+            "net": 9.60966
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.58,
+            "fee": 0.02012,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.958
+              }
+            ],
+            "net": 9.55988
+          }
+        },
+        "taker_cost_usd": 9.60966,
+        "central_expected_profit_usd": 0.19034000000000084,
+        "selected_stress_profit_usd": -0.8096599999999992,
+        "break_even_before_carry": 0.960966,
+        "break_even_constant_carry": 0.9675256550124705,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: datedNOcentral+$0.19034/10 beforecarry/operations fails10ppentryreserve; YESnegative. WHOuncertaintyretained, nozero-riskclaim.",
+  "reopen_condition": "NewWHO/nationalhealthdiagnosis/foreignlinkedcase or crediblecontradictoryconsensus; freshmakerNO<=84c/YES<=0.1c onlyresearchthresholds subject toallgates/source/newclassreview.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/plague241_primary_1905.json",
+    "source_packet": "data/deep_review_20261017/plague241_factual_sources_1845.json",
+    "actual_entry_reserve_pp": 10,
+    "entry_approved": false,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T19:05:18.997638+00:00",
+  "question": "Russia pneumonic plague spreads abroad?",
+  "market_id": "5369960",
+  "valuation_author": "primary_operator",
+  "original_index": 241,
+  "report_sha256": "4aa2acf1c40f45dbc4600c280456bb2371c4787b485f05ce8c39ccdcae641f65"
+}

@@ -1,0 +1,164 @@
+{
+  "review_index": 244,
+  "condition_id": "0xa55aba6f5c78f51112da71f57888efba75e85840a9afafe42ab9f3dedf8fc338",
+  "criteria_sha256": "837cb1fd397231d63266dbbb4fab3e227297083b3bbd7e9e52c5eb9768998ce4",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to “Yes” if the listed person, group, entity, or thing is TIME Person of the Year for 2026. Otherwise, this market will resolve to “No”.\n\nA listed option will be considered TIME Person of the Year if they/it are explicitly named as Person of the Year. \n\nAdditionally, the following rules apply:\n\nIf multiple people are explicitly named person of the year, both people will be considered TIME Person of the Year.\n\nIf the TIME Person of the Year is a concept, group or thing, a person may still be considered Person of the Year if they are also explicitly named person of the year, or if they are directly associated with the concept, group or thing named as person of the Year and are pictured on any official TIME cover announcing the Person of the Year. For example, in 2025 when TIME Person of the Year was “Architects of AI” the option for Sam Altman would have resolved to “Yes” as he was associated with the concept and is pictured on the Cover. However, if Sam Altman were Person of the Year, and ChatGPT was shown on the cover, this would not qualify for ChatGPT because ChatGPT is not a person.\n\nIf the TIME Person of the Year is a specific concept, group, entity, or thing (e.g. artificial intelligence), listed concepts or entities will be considered Person of the Year only if they are synonymous with the announced TIME Person of the Year. For example, if ChatGPT were Person of the Year, options for AI or LLMs would resolve to “No” because, while they are conceptually linked, they are not synonymous.\n\nIf TIME uses language that does not refer to a specific, commonly-recognized, concept, group, entity, or thing (e.g. 2011’s “The Protester” or 2017’s “The Silence Breakers”), the TIME Person of the Year feature article will be used to determine the meaning of the language defining TIME Person of the Year. In such cases, listed concepts, groups, or things will be considered TIME Person of the Year if they can be reasonably understood as equivalent to the meaning of the language used to define TIME Person of the Year. For example, the option for “The Me Too Movement” would have resolved to “Yes” in 2017. \n\nIf for any reason the TIME's Person of the Year is not announced by June 30, 2027, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source for this market will be the TIME magazine cover or covers announcing the 2026 TIME Person of the Year; however, the TIME Person of the Year Feature article may also be used. Collectoronly-explicitly-namedsummary corrected: associatedpersonpicturedongroup/conceptPOYcover canqualify. June30,2027fallback isbeyondprojecthorizon, noforcedDec31interpretation.",
+  "evidence": [
+    {
+      "url": "https://mediakit.time.com/",
+      "observed_utc": "2026-10-18T19:01:02.816105+00:00",
+      "finding": "RootrawSHAverified expectedmainDec10/calendarconflictingpromorows; no candidate/coverannouncement inferred."
+    },
+    {
+      "url": "https://time.com/article/2026/09/30/can-james-talarico-make-texas-competitive-again/",
+      "observed_utc": "2026-10-18T19:09:43.930074+00:00",
+      "finding": "TIMEownSep30profile oncompetitiveTexasSenatecandidate establisheseditorialattention, notPOYpromise. Fullbodyread, rawsaved/hashbound; unrelatednewslettermarketingpreamble notcandidateevidence."
+    },
+    {
+      "url": "https://www.fec.gov/data/candidate/S6TX00479/?cycle=2026&election_full=true",
+      "observed_utc": "2026-10-18",
+      "finding": "Officialcandidateoverview identity corroborates; no inferenceofelection/awardwin."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.06,
+    "low": 0.005,
+    "high": 0.3,
+    "method": "PrimaryjointTexas-election/editorial-choice/associatedgroupcover tree; notPOYsinglewinnernormalization or pricefit.",
+    "reasoning": "50%winregime:4%directPOY+.12grouproute*.60cover;loss:0.2%direct+.02group*.20cover. Weighted5.9%→6%. Scenarioelectionchance/editorialprobabilitiesuncalibrated,15ppreserve; covergroup route prevents falseexplicit-name-onlyNO."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 65,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.06,
+        "selected_stress_probability": 0,
+        "best_bid": 0.022,
+        "best_ask": 0.046,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345258816",
+        "book_age_seconds_at_receipt": 89.022958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.45999999999999996,
+            "fee": 0.02195,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.046
+              }
+            ],
+            "net": 0.48195
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.21999999999999997,
+            "fee": 0.01076,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.022
+              }
+            ],
+            "net": 0.20923999999999998
+          }
+        },
+        "taker_cost_usd": 0.48195,
+        "central_expected_profit_usd": 0.11804999999999999,
+        "selected_stress_profit_usd": -0.48195,
+        "break_even_before_carry": 0.048195,
+        "break_even_constant_carry": 0.04846212901675555,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.94,
+        "selected_stress_probability": 0.7899999999999999,
+        "best_bid": 0.954,
+        "best_ask": 0.978,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345258816",
+        "book_age_seconds_at_receipt": 89.022958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.78,
+            "fee": 0.01076,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.978
+              }
+            ],
+            "net": 9.790759999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.54,
+            "fee": 0.02195,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.954
+              }
+            ],
+            "net": 9.518049999999999
+          }
+        },
+        "taker_cost_usd": 9.790759999999999,
+        "central_expected_profit_usd": -0.3907600000000002,
+        "selected_stress_profit_usd": -1.8907599999999993,
+        "break_even_before_carry": 0.9790759999999998,
+        "break_even_constant_carry": 0.9845026959064,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: datedYESsmallcentraledge fails15ppeditorial/modelreserve; NOnegativecentral. Fullgrouprule/sourcecalendarandJun2027fallbackretained.",
+  "reopen_condition": "OfficialTIMEshortlist/cover/editorialannouncement or decisiveTexasresult; recomputeallqualifyingroutes/currentmakerquotes andJanuaryliquidity. MakerNO<=75c researchonly; no positiveYESpassescurrentselectedstress.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/time244_primary_1910.json",
+    "source_packet": "data/deep_review_20261017/case244_facts_1900.json",
+    "collector_literal_summary_corrected": true,
+    "actual_entry_reserve_pp": 15,
+    "entry_approved": false,
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T19:10:13.573870+00:00",
+  "question": "Will James Talarico be TIME Person of the Year 2026?",
+  "market_id": "2363845",
+  "valuation_author": "primary_operator",
+  "original_index": 244,
+  "report_sha256": "60fdc26bc357f5131a1c6df56a032ff62ec0716c38d746b06d03ade904a0fa1f"
+}

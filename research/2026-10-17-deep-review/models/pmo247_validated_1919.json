@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-18T19:18:50.186281+00:00",
+  "index": 247,
+  "ordering": "Post-own-quote revision of UNRECORDED draft model: root inspectedcomputedhistorydiagnosticsandfound1.127/0.797hourlogratiojumps. Original92%draftretained; do notclaimnewmodelbeforepriceaccess.",
+  "predecessor_draft": "research/2026-10-17-deep-review/models/pmo247_primary_1918.json",
+  "source_unit": "data/deep_review_20261017/work/0247_primary_source_unit.json",
+  "outcome_mapping": {
+    "first": "No change",
+    "second": "Hike25bps",
+    "p_yes": "meanfirstunitpayoutincludinghalftie, notFedactualrateprobability"
+  },
+  "source_values": {
+    "latest_no_change": 0.865,
+    "latest_hike25": 0.131,
+    "latest_window_end": "2026-10-18T19:00:00Z",
+    "gap_min_week": 0.05300000000000005,
+    "max_abs_hour_logratio_change": 1.127395151367312,
+    "last24_sigma": 0.004246012665140637,
+    "last72_sigma": 0.09632116976125128,
+    "full_sigma": 0.12011127749896124,
+    "hours_to_target": 213.0
+  },
+  "diffusion_sensitivities": [
+    {
+      "lookback": "167increments",
+      "hours": 167,
+      "sigma_hour": 0.12011127749896124,
+      "vol_mult": 1,
+      "weight": 0.4,
+      "p_nochange_leads": 0.8592072826515469
+    },
+    {
+      "lookback": "167increments",
+      "hours": 167,
+      "sigma_hour": 0.12011127749896124,
+      "vol_mult": 2,
+      "weight": 0.1,
+      "p_nochange_leads": 0.7048434318286207
+    },
+    {
+      "lookback": "last72increments",
+      "hours": 72,
+      "sigma_hour": 0.09632116976125128,
+      "vol_mult": 1,
+      "weight": 0.4,
+      "p_nochange_leads": 0.9103173487934388
+    },
+    {
+      "lookback": "last72increments",
+      "hours": 72,
+      "sigma_hour": 0.09632116976125128,
+      "vol_mult": 2,
+      "weight": 0.1,
+      "p_nochange_leads": 0.7490030890797765
+    }
+  ],
+  "diffusion_mean_probability_first_leads": 0.8531945046688341,
+  "source_fork": {
+    "weight": 0.05,
+    "p_first_given_not_split": 0.9,
+    "why": "NO_PRINT/cessationgenerallyusesalreadyobservedearlierNochangeleader;mapping/correction/earlydecisionsstilluncertain"
+  },
+  "joint_settlement": {
+    "first_full": 0.85040157075878,
+    "second_full": 0.14359842924122,
+    "half_half": 0.006
+  },
+  "raw_expected_first_payout": 0.85340157075878,
+  "p_yes": 0.85,
+  "range": [
+    0.5,
+    0.995
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "Initial99%baselinewasinadequatelyinformedbycomputeddata: same168hourhistoryhadbigjumpsandnear-equalitydespiteNochangealwaysleading. Replacewithzero-driftlogratioendpointdiffusion50/50fullweek/72hvol plus80/20ordinary/doublevol; no fitteddrift or last24calmcherrypick. Resultremainsjudgment/sensitivity, no calibration. NeitherknownCPIrepetitionnorabsenceoffuturejumpsassumed; sourceforkandexplicit0.6%tie shrinksmeantowardhalf.",
+  "limitations": "Strongnonstationarity/jumps, serialcorrelation,cross-venueweightsnotcoherentmartingale, only7daysonevintage. Endpointnormality/volmixture/tie weightsunestimated; broad50–99.5range notbounds. Futuretarget12ET=16Z,Nov3fallback/48hcorrection/earlyother-winner50–50 preserved.",
+  "rounding": "Rawmean85.340157% roundedto85%; jointfirstfull85.040157%,secondfull14.359843%,split0.6%."
+}

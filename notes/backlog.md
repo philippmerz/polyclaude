@@ -1,4 +1,11 @@
-## Current — October 18, 17:23 UTC
+## Current — October 18, 19:24 UTC
+
+- **Finite review active:**272valued/3blocked/337factual exclusions/2,388pending,612immutablebase+27revisions;249active. [Checkpoint](deep_review_checkpoint.json) governs currentcounts; [smallresume](../research/2026-10-17-deep-review/RESUME.md) loads onlyselectedcase, notthishistory. Save/indexeveryresultbeforethenext.
+- **18UTC safety review completed:**195.62total/5.67gas/189.95tradingmid/187.79indicativetradingdepth; sevenLIVEzero-filledBUYs/$12.87/sevenmatchingreservations,pUSD18.846890/free5.976890. Roundedsequential18UTCobservations, notnewNAV/profit. [Datedreview](../research/2026-10-18-1800-checkin.md).
+- **OpenRouter original5NO bid filled17:37:42:** exactchain/indexed/CTF/authproof, reservationretired8→7. Retain5/noadd,89%NO/74selected; adverse20%NOcase favorssale. [Fill/risks](../research/2026-10-18-openrouter-fill.md). **Old22UTCunfilled-BUYpull iscomplete/obsolete**; existingheldreview22UTCremains. Otherheldretain/noaddunchanged, filmcanceledunfilled/Messifilled; no replay.
+- **Nextboundaries:**heldreview22UTC; SedgwickBUYpullOct19 10UTC,BOI137/IdahoOct19 22UTC; earlierloadbearinguncertaintycancelfirst. [ExactIDs](resting_orders.md). Alertqualification/deliveryrepairbelowiscomplete; no newfeed/timer/research-onlyTelegram. WeeklyOct23/monthlyNov12notdue.
+
+## Historical checkpoint — October 18, 17:23 UTC
 
 - **Alert qualification/delivery fixed:** exact current exposure IDs now constrain portfolio impacts; unrelated topics remain research leads. Pending IDs survive deferral, recent journal activity is not acknowledgment, and driver receipts distinguish queued/deferred/failed/unconfirmed/fallback-starting from completed review.64 focused tests pass; news watcher PID40455 current since17:19, normal progress verified17:21. No extra Telegram/test tick, asset action or new financial mark. [Full follow-up](../research/2026-10-18-news-review-routing.md).
 - **16:34 full check complete:** no asset action; eight LIVE/zero-matched BUYs/$16.12, pUSD22.096890/free5.976890, eight reservations unchanged. Authoritative16:37:51–16:38:06 mark195.94/gas5.68/trading190.26mid/188.24indicative depth;64 conditional wealth cells, not guaranteed wealth. [Full check and gaps](../research/2026-10-18-1634-checkin.md).

@@ -1,0 +1,48 @@
+{
+  "review_index": 243,
+  "condition_id": "0x73e9f7676d9ee9f03496df1a03c1d42dd3594e70b9b1981a000676a1d21b46f1",
+  "criteria_sha256": "3ded2b9487942b3e987853eddebfc9069bf933cc8e147dc2198f6fc82eb89650",
+  "status": "excluded_factual",
+  "literal_analysis": "In the upcoming game, scheduled for October 17, 2026\nIf AS Roma wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5258769",
+      "observed_utc": "2026-10-18T19:00:02.743188+00:00",
+      "finding": "Rootrawhash/exactbindingclosed/nonacceptingverified; UMAproposed/proposed not independentsettlementproof."
+    },
+    {
+      "url": "https://www.legaseriea.it/serie-a/news/roma-genoa-2026-2027-2-0-cronaca-risultato-gol",
+      "observed_utc": "2026-10-18T19:00:03.430887+00:00",
+      "finding": "OfficialrecapRoma-Genoa2–0, rawSHAchecked; separateofficialcommentary/EventScheduledmetadata conflict retained, notusedtoinventsettlement."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "reasoning": "Exactclosedentryroute excluded, no newfootballforecastneeded."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "route": "closed/nonaccepting",
+        "cost": null
+      },
+      "No": {
+        "route": "closed/nonaccepting",
+        "cost": null
+      }
+    }
+  },
+  "verdict": "FACTUAL EXCLUSION: exactclosed/nonaccepting completedmatch entryroute; source-metadataconflict andunverifiedpayout retained.",
+  "reopen_condition": "Exactroute returnsacceptingorders or officialmaterialresultcorrection beforepermittedsettlementboundary; revalidatecurrentprimaryresultandbooks.",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/case243_facts_1900.json",
+    "root_raw_checks": true
+  },
+  "evaluated_utc": "2026-10-18T19:07:50.564403+00:00",
+  "question": "Will AS Roma win on 2026-10-17?",
+  "market_id": "5258769",
+  "valuation_author": "primary_operator",
+  "original_index": 243,
+  "report_sha256": "e065aa037c6a2d123bf5f15c36e71fa4f6d63851da978af567d650c342e674b2"
+}

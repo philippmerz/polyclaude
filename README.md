@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October 18
 
-At 19:04 UTC the finite `/goal` review has **266 valuations, 2 blocked reviews, 334 factual exclusions and 2,398 pending**; 602 immutable base records plus 27 revisions; next case238. The [checkpoint](notes/deep_review_checkpoint.json) governs current counts. Each finished case is saved/indexed immediately; screens have no rejection authority. First100/200 milestones were notified. Treasury daily-path validation revised three related forecasts; none clears the uncertainty/cost test. [Small resume](research/2026-10-17-deep-review/RESUME.md).
+At 19:26 UTC the finite `/goal` review has **272 valuations, 3 blocked reviews, 337 factual exclusions and 2,388 pending**; 612 immutable base records plus 27 revisions; case249 active. The [checkpoint](notes/deep_review_checkpoint.json) governs current counts. Each finished case is saved/indexed immediately; screens have no rejection authority. First100/200 milestones were notified. Treasury daily-path validation revised three related forecasts; none clears the uncertainty/cost test. [Small resume](research/2026-10-17-deep-review/RESUME.md).
 
 Use [RESUME.md](research/2026-10-17-deep-review/RESUME.md) and `.venv/bin/python scripts/deep_review_resume.py` (8 KB hard limit, eight integrity tests). Read one case’s full rules, verified report/revision and scoped evidence pointers. Large raw arrays stay separate; do not load all historical indexes. Ten valuations added since the goal resumed; no new allocations. Active case 235 is receiving additional rate-model validation before its verdict; a positive central estimate is not entry authority.
 

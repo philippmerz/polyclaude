@@ -1,0 +1,34 @@
+{
+  "created_utc": "2026-10-18T19:06:26.572664+00:00",
+  "index": 242,
+  "before_own_PM_quotes": true,
+  "rule": "MeetingDec2026 change relativeimmediatelyprior, upperboundifrange, decreases37.5bp+roundto50; emergencyoutsideidentifiedmeetingexcluded; cancellation/postponementrules count. Current0% nothardlowerbound or fixedDecpremeetingreference.",
+  "source_packet": "data/deep_review_20261017/case242_facts_1850.json",
+  "source_analysis": "RootfullSNBSep24decision/rawSHAchecked:0%unchanged, August0.8%inflation, energyhigher, mediumtermpressureonlyslightlyhigher; conditional2026/27/28forecast0.7/0.8/0.8%, assumes0policy, notcommitment. Swissfrancdepreciationratherthanappreciationprovidescurrentsupport. Nov/Decdata andglobalshocks remainunseen; newestCPI notindependentlyretrieved.",
+  "branches": [
+    {
+      "weight": 0.8,
+      "name": "baseline/inflationresilience",
+      "conditional_rounded50pluscut": 0.02
+    },
+    {
+      "weight": 0.15,
+      "name": "growth/disinflationweakness",
+      "conditional_rounded50pluscut": 0.2
+    },
+    {
+      "weight": 0.05,
+      "name": "currency/financialshock",
+      "conditional_rounded50pluscut": 0.7
+    }
+  ],
+  "raw_p_yes": 0.08099999999999999,
+  "p_yes": 0.08,
+  "range": [
+    0.01,
+    0.4
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "0policyandstablepositiveinflationwithrisingenergyargueagainstlargeDecembercut; notimpossibleinnegative-rateframework. Shockweightsincludeabsence/cancellation/meeting-boundaryuncertaintywithinconditionalprobabilities. Frameworksubjective, notpolicyoption-impliedprobabilities/calibratedSNBfrequencies.",
+  "limitations": "Nearly8weekhorizon; no exactrecentFX/shocks/latestSwissCPIcapture or forward-rateinstrument. OlderAprilnegative-rateframework isstructuralcontext only."
+}

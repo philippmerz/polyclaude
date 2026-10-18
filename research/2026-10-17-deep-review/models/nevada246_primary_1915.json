@@ -1,0 +1,78 @@
+{
+  "created_utc": "2026-10-18T19:14:33.606443+00:00",
+  "index": 246,
+  "before_own_PM_quotes": true,
+  "source_packets": [
+    "data/deep_review_20261017/case246_facts_1900.json",
+    "data/deep_review_20261017/case246_poll_facts_1915.json",
+    "data/deep_review_20261017/work/0246_emerson_root_addendum.json"
+  ],
+  "root_noble_workbook_question_rows": "data/deep_review_20261017/work/0246_noble_root_rows.json",
+  "root_emerson_addendum": {
+    "url": "https://emersoncollegepolling.com/nevada-2026-poll-ford-and-lombardo/",
+    "observed_utc": "2026-10-18",
+    "transport": "primarypublisher websearch text read; independenthttpxGET not200",
+    "httpx_exact_status": null,
+    "httpx_raw_archived": false,
+    "metadata_gap": "GET assertionfailedbeforearchival; exactstatus/time/bodywere notretained. No repeatrequest solely toreconstruct lostmetadata.",
+    "primary_search_facts": {
+      "publication": "Sep10,2026",
+      "field_dates": "Sep5–8,2026",
+      "n_LV": 680,
+      "R": 42,
+      "D": 44,
+      "undecided": 11,
+      "credibility_interval_pp": 3.7,
+      "collection": "probability-basedConsensusStrategiesMMS/text-to-web andPureSpectrumpanel;voterfilematched;Englishsurvey",
+      "weighting": "gender/education/race/age/region usingCensus/voterfile"
+    }
+  },
+  "polls": [
+    {
+      "pollster": "Noble",
+      "field_dates": "Sep22–26",
+      "n_LV": 708,
+      "R": 0.42,
+      "D": 0.4,
+      "third_DanielleFord": 0.07,
+      "other": 0.01,
+      "none": 0.02,
+      "undecided": 0.09,
+      "note": "roundedtoplinessum101%; no silentrenormalization/precisionclaim",
+      "weight": 0.6666666666666666
+    },
+    {
+      "pollster": "Emerson/KLAS",
+      "field_dates": "Sep5–8",
+      "n_LV": 680,
+      "R": 0.42,
+      "D": 0.44,
+      "undecided": 0.11,
+      "weight": 0.3333333333333333,
+      "note": "Roundedprimarypublisherwebsearch text;44.2secondarysnippetnotused"
+    }
+  ],
+  "mean_R_minus_D_share": 0.006666666666666666,
+  "uncertainty_components": {
+    "weighted_independent_sampling_variance": 0.0006549584579594549,
+    "common_poll_bias_sd": 0.03,
+    "turnout_thirdparty_allocation_sd": 0.025,
+    "age_remaining_campaign_sd": 0.02
+  },
+  "margin_sd": 0.050793291466092794,
+  "approx_probability_before_disruption": 0.5522115953697874,
+  "disruption_mixture": {
+    "weight": 0.01,
+    "conditional_R": 0.5,
+    "scope": "smallthirdcandidate/replacement/recognitionfork sensitivity, not measured"
+  },
+  "raw_p_yes": 0.5516894794160895,
+  "p_yes": 0.55,
+  "range": [
+    0.2,
+    0.85
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "LatestLVsurveyR+2 andolderindependentsurveyD+2 supportnear-tossup, not treating42%voteshareaswinprobability. Latestpollweighted2/3withoutpretendingnormalparametersestimated; sharedbias/turnout/age termskeepuncertaintywide. Incumbency/namefavorability andnationalpartydrag crosscut; no arbitraryadditionalmarginadjustment. Freshprimaryballotlistblocked, partyreplacementand3-sourcecall/certificationrulesretained.",
+  "limitations": "OnlytwoSeptLVpolls, newestfieldend22daysold. Mixedopt-in/probability-panelmethods; weights/errorSDs judged notfitted, noindependentpollaveragingofsystematicerror. Normalmarginapproxignoresdetailedjointthirdcandidate distribution; large7%thirdpartyandundecideds makeallocationsuncertain. General election factor correlatedwithfourHousependingtheses. Losthttpxstatus/body not reconstructed."
+}

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T19:00:20.891834+00:00
+Updated: 2026-10-18T19:25:56.530650+00:00
 
-**266 valuations saved; first milestone100:** 266 valued; 2 blocked after in-depth review. 334 factual exclusions separately; 2398 pending.
+**272 valuations saved; first milestone100:** 272 valued; 3 blocked after in-depth review. 337 factual exclusions separately; 2388 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -249,7 +249,17 @@ Each report below is written before moving to the next evaluation. Related contr
 |235|[Will the 30-year Treasury yield dip below 4.90% before 2027?](evaluations/0235.md)|valued|NO ENTRY: historical/blockvalidation weakensinitial17%to11%; centralYESupside fails15ppreserve, NOnegativecentral.|
 |236|[Will XRP reach $2.40 in October?](evaluations/0236.md)|valued|NO ENTRY: YESnegativecentral; NOtinycentralexcessconsumedbycarry/operations andfails10ppreserve.|
 |237|[Will FC Internazionale Milano win on 2026-10-17?](evaluations/0237.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|238|[Will Bad Bunny be featured on GTA VI: The Album?](evaluations/0238.md)|valued|NO ENTRY: NO centraledge18.75c/grossshare beforecarry fails25pp roster/modelreserve; YESnegativecentrally. Incompletecredits preserve a researchcandidate, not a rejection or allocation.|
+|239|[Will the highest temperature in Cape Town be 16°C on October 17?](evaluations/0239.md)|excluded_factual|FACTUAL EXCLUSION: exactmarketclosed/nonaccepting; no temperatureoutcome or settlementproof inferred.|
 |240|[NATO x Russia military clash by October 31, 2026?](evaluations/0240.md)|valued|New attack-drone incident deeply assessed against exact exclusion; semantic/target uncertainty not a source-known arbitrage|
+|241|[Russia pneumonic plague spreads abroad?](evaluations/0241.md)|valued|NO ENTRY: datedNOcentral+$0.19034/10 beforecarry/operations fails10ppentryreserve; YESnegative. WHOuncertaintyretained, nozero-riskclaim.|
+|242|[Will the Swiss National Bank decrease the SNB policy rate by 50+ bps at the December meeting?](evaluations/0242.md)|valued|NO ENTRY: tinyYESaskofferslargecentralmodelEV butunmeasured8weekshockforecastfailsselecteduncertaintytest; NOasksabsent. Preserveasresearchcandidate, not price-basedexclusion.|
+|243|[Will AS Roma win on 2026-10-17?](evaluations/0243.md)|excluded_factual|FACTUAL EXCLUSION: exactclosed/nonaccepting completedmatch entryroute; source-metadataconflict andunverifiedpayout retained.|
+|244|[Will James Talarico be TIME Person of the Year 2026?](evaluations/0244.md)|valued|NO ENTRY: datedYESsmallcentraledge fails15ppeditorial/modelreserve; NOnegativecentral. Fullgrouprule/sourcecalendarandJun2027fallbackretained.|
+|245|[Will the highest temperature in London be 13°C on October 17?](evaluations/0245.md)|excluded_factual|FACTUAL EXCLUSION: exactclosed/nonacceptingentryroute. No maximumtemperature/outcomeorchainsettlementclaim.|
+|246|[Will the Republicans win the Nevada governor race in 2026?](evaluations/0246.md)|valued|NO ENTRY: YEShasdatedcentral+$1.20255/10 butselected40%YESstress−$0.29745 beforecarry/operations; NOnegative. Preservecurrentpollupdate/pricecandidate, no blanketrejection.|
+|247|[No change or Hike 25 bps favored on October 27?](evaluations/0247.md)|valued|NO ENTRY: firstoutcomeisnegativecentral; secondhasdatedcentraledge butfails15ppselectedand10ppdefaultafterfee. Quote/source/modelcomparisoncomplete, sourcegapresolvedwithoutguessingunderlyingFOMCdecision.|
+|248|[Will there be at least 4900 measles cases in the U.S. by October 31, 2026?](evaluations/0248.md)|blocked_after_review|BLOCKED AFTER IN-DEPTH REVIEW: unresolvednationalcounterpublication/backfillmapping couldchangetwo-weekthresholdverdict; no invented50%prior, no sourcegap-as-factualexclusion.|
 |256|[Will Z.ai have the second highest OpenRouter market share the week of October 12?](revisions/0256_20261018T120931763267Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |259|[Will the Democratic Party win the CT-05 House seat?](evaluations/0259.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -614,3 +624,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 249

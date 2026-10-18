@@ -31247,9 +31247,25 @@ No financial/daemon action, command replay, new valuation, CSV row or Telegram. 
 - Public chart GET18:29:09 matches local CSV byte-for-byte, 205 rows, including18UTC195.62 total/189.95 tradingmark. `data/deep_review_20261017/chart_deploy_1830.json`. No new financial mark/request implied. Usage read18:28:47%used/53%headroom, resetsOct24; no budget-induced safety delay. Goal/fillTG1253 remains last material message.
 
 
-## 2026-10-18 19:04 UTC — Treasury validation and two further valuations
+## 2026-10-18 19:01 UTC — Treasury validation and two further valuations
 
 - 266 valued /2 blocked /334 factual exclusions /2,398 pending;602 immutable base+27 revisions, next238. Every case saved/indexed before next. No new financial action;18UTC account observations retain their dates.
 -23530Yr<4.90: original Gaussian16.5828% versus demeaned5-day block bootstrap4.5363%; primary equal-model blend10.5596%→11%YES,1–65% sensitivity/15pp reserve. Dated8cYES ask has central edge but fails uncertainty stress.236XRP2.40:0.4%YES,0.001–30% sensitivity; no entry. Separate reports/models preserve source-vintage and forecast-before-price exceptions.
 - Same-family append-only repairs:1305Yr>=5.10 YES59→55%;17210Yr<4.60 24→17% with5%source-query fork retained;2285Yr<4.50 32→24%. No side clears15pp stress at dated fees/depth. [Shared compact validation](../research/2026-10-17-deep-review/models/treasury_family_validation_1900.json); originals remain immutable, latest pointers via selected resume helper. Historical51-publication windows overlap; model weights/ranges uncalibrated.
 - Compact case resume packets retain exact rules/hash chains; related evidence is linked instead of copied across handoffs. No full ledger/journal ingestion needed.238/239/241 have bounded source packets; no inherited verdict.
+
+
+## 2026-10-18 19:12 UTC — four compact evaluations and three entryroute exclusions
+
+- 270 valued /2 blocked /337 factual exclusions /2,391 pending;609 immutable base+27 revisions,246 active.238album30%YES,241linkedforeignplague2%,242SNB50+cut8%,244TalaricoPOY6%; none passes selecteduncertainty/cost test. Exactrules/sourcevintages/fee-depthmath/alternatives remain in single-case records and small model files.
+-238NO has datedcentraledge but incompletecredits and25pprosterreserve prevententry; radioEoO isnotanoriginalalbumcredit.242YES0.2cask giveslargecentralmodelEV but unmeasuredshockweights faildefault10ppaswellasselected15pp; preserve researchcandidate, do not labelcheapaskirrelevant.244collectoronly-explicit-name summary corrected: associatedgroupPOYcoverpicturedpersoncanqualify.
+-239/243/245 entryrouteexclusions eachrootverifiedexactrawGamma/criteria/closed/nonaccepting. NOAAmeasurementgaps andconflictingUMA/officialsportsmetadata remainexplicit; no winner/payoutinferred. Newsourcefacts246–255 saved asboundedseparate units; no inheritedverdicts. Usage19:08probe49%used/51%headroom, resetsOct24; no requiredsafetydelay.
+
+
+## 2026-10-18 19:26 UTC — counterpublication gap kept separate; six valuations since prior commit
+
+- 272valued/3blocked/337factualexclusions/2,388pending;612immutablebase+27revisions,249active. All10newcaserecords since48bf2de were saved/indexed individually; no newallocation, source/financialobservationsretain theirdates.
+-246RepublicanNevada55%YES,20–85range/15ppreserve: primaryNobleRV/LVworkbookrows rootverified; newlyfoundcorrectEmersonSeptemberrelease readthroughprimarypublishersearch, directGETnot200metadataunretained/notreconstructed. Dated42cYEScentraledgefailsselected40%afterfees; preservefreshpoll/maker<=37ctrigger. SharednationalturnoutfactorcorrelateswithfourHousependingbets.
+-247publisherhourlycomparison85%meanfirstpayout(Nochange), notactualFOMCdecisionprobability. RootresolveddynamicHTMLwithlinkedJSON/168pairedhours/methodology; largein-samplejumpsinvalidatedinitial92%draft, correctedAFTERownquoteaccessandBEFOREcasecompletion. Half-tiestateexplicit. Bothsidesfailselectedcosttest; secondalsofailstenppdefaultafterfee.
+-248blocked: CDCcounter4410asofOct15needs+490byOct31; onsetlevels/backfillnotnationalpublicationincrements. OriginalCDCMMWRregionaldelaystudyread, notmechanicallytransferred; historicalcountercachedsnippetsconflict/notused. Probabilities/EVnull, bothsidecostsdated, notinvented50%prior. [Case](../research/2026-10-17-deep-review/evaluations/0248.md).
+- Currentbacklogheadupdatedto18UTCaccount/originalOpenRouterfill; old22unfilledBUYpullobsolete, heldreview22remains. Smallworkpointershape documentedandfourincompatibleworkingpacketsnormalizedwithoutdeletingfacts; selectedhelperchecks248/250/254/255pass,4.3–6.0KB. No broadhistoryreadneeded.

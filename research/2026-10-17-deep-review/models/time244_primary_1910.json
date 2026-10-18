@@ -1,0 +1,37 @@
+{
+  "created_utc": "2026-10-18T19:09:44.013590+00:00",
+  "index": 244,
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/case244_facts_1900.json",
+  "root_addendum": {
+    "url": "https://time.com/article/2026/09/30/can-james-talarico-make-texas-competitive-again/",
+    "http_status": 200,
+    "received_utc": "2026-10-18T19:09:43.930074+00:00",
+    "raw_sha256": "390e9ac337de684f7219238357d28c944815965fdf9b0da7c0187712cedb4ea4",
+    "raw_gzip": "logs/deep_review_20261017/case244_root/time_feature.html.gz"
+  },
+  "literal_correction": "Collectoronly-explicitly-namedsummary incomplete: group/conceptaward plus directlyassociatedTalarico picturedonANYofficialPOYcoveralsoqualifies. Fullfrozenrulescontrol, notsummary.",
+  "root_source_analysis": "TIMEownSep30profile establisheseditorialinterest inTexasSenatecandidate, notPOYpromise; officialFECcandidatepage supportsidentity. Profilebodyread, genericnewsletteradvertorialpreamble disregardedforcandidatefacts. MediaKitexpectedmainDec10 withconflictingrows; June30,2027fallback beyondprojecthorizon isnotimplicitlyDec31.",
+  "event_tree": {
+    "texas_win_judgment": 0.5,
+    "if_win": {
+      "direct_named_poy": 0.04,
+      "group_poy": 0.12,
+      "talarico_cover_given_group": 0.6
+    },
+    "if_loss": {
+      "direct_named_poy": 0.002,
+      "group_poy": 0.02,
+      "talarico_cover_given_group": 0.2
+    }
+  },
+  "raw_p_yes": 0.059,
+  "p_yes": 0.06,
+  "range": [
+    0.005,
+    0.3
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "CompetitiveSenatecampaign anddirectTIMEprofile makebothindividual/groupcoverroutesplausible. Individualaward competeswithgloballeaders,technologyandotherstories; Texaswinneededformost butnotallpaths.50%Texaswin isexplicitscenariojudgment, not calibratedelectionforecast. OutcomesnotmutuallyexclusivelabelsacrossallPOYcontracts; groupcoverpath canmake severalYES.",
+  "limitations": "Editorchoice/covercompositionunobservable. No reliablePOYfrequencyfit or officialshortlist; datecalendarisnotguarantee. 1.5monthtoexpectedaward butfallbackcouldrunthroughJun2027; do notassumeprojecthorizoncompliance. Sensitivitylow notempiricallowerbound."
+}

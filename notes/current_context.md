@@ -1,31 +1,33 @@
 ---
-reviewed_at: "2026-10-18T19:00:59.099803+00:00"
+reviewed_at: "2026-10-18T19:26:41.772846+00:00"
 valid_until: "2026-10-18T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 375bbae8c4360a1a5a8cba534efa6254e2314a6c16d07feef9c2a6309c2b978c
+  README.md: d6a2f2ae2e7872b877d462f2a00a3a8462fd81951a05777d09df55cf01180ee8
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
   strategy/02_operations.md: 916783a6be5eb5856416e535412d10c82b71335ef863186b9556ca66248c7a31
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: ef886eb204508764502844529de4ec5b3c8dfa3dcf355f8284a2c78e3d07c9b5
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 1d6607b449ad00e47237cca9fa0ca577de4150abe07162e93754f7cc583d6b71
+  notes/backlog.md: d526aaf5f200b7ebee5589d6ffd83c208e13f520e06793dc06151146cddddc33
   notes/resting_orders.md: 1daf45c297b47faa8ebec367241b50cf3d89482ccd3a857509800779dbc7ab42
-  notes/journal.md: da2bd1897166cae878f84eb67300664f51ef30da1e4f84d36d35ae7f192c3406
+  notes/journal.md: b6454f76e95dc4c95eedc04075969b944c608e107be4d9b0527e7306718cde89
 ---
 
 ## Active finite review goal — October18
 
-Operator requested `/goal`: finish remaining frozen3,000 review, occasional materialTelegram, repair substantive limitations instead of forcing coverage. **266 valued /2 blocked /334 exclusions /2,398 pending;602 base+27 revisions; noactive, next238.** [Checkpoint](deep_review_checkpoint.json) governs dynamiccounts. First100/200notified. No newgoal/timer/idlewatcher.
+Operator requested `/goal`: finish remainingfrozen3,000review, occasionalmaterialTelegram, repairsubstantivelimitations instead of forcingcoverage. **272valued/3blocked/337exclusions/2,388pending;612base+27revisions;249active.** [Checkpoint](deep_review_checkpoint.json) governs dynamiccounts. First100/200notified; nextmaterialmilestone300. No newgoal/timer/idlewatcher.
 
-[RESUME.md](../research/2026-10-17-deep-review/RESUME.md) → `.venv/bin/python scripts/deep_review_resume.py` (8KBhardcap,8integritytests). Read selected fullrules/latest effectiveMD and named model/source only. Save/index EACH result before next; cheapfacts cannot reject substantivecases. Do not reload fullINDEX/ledger/followup/journal. Raw arrays stay separate. Scoped `work/NNNN_resume.json` links partialfacts/drafts; canonicalstatus governs completion. Collector capture time alone cannot audit primary quote-access ordering.
+[RESUME.md](../research/2026-10-17-deep-review/RESUME.md) → `.venv/bin/python scripts/deep_review_resume.py` (8KBhardcap/8integritytests). Read selectedfullrules/latestMD/namedmodel/sourceunit only; save/indexEACHcase before next. Cheapfacts cannotreject. Do not reload fullINDEX/ledger/followup/journal/backlog. Workpointerrequires top-levelreview_index andscopedsource_paths; malformedpackets248/250/254/255werepreservedseparatelyandnormalized. Rawreceipts/arrays stayseparate. Collector timestamps cannotauditprimaryquoteordering.
 
-**Last235/236 saved:**30Yrstrictly<4.90 before2027 YES11%,range1–65/reserve15. OriginalGaussian16.5828% vs5daybootstrap4.5363%, equalblend10.5596%; datedYES8c failsuncertaintystress. XRP2.4October YES0.4%,range0.001–30/reserve10; noentry. [235](../research/2026-10-17-deep-review/evaluations/0235.md), [236](../research/2026-10-17-deep-review/evaluations/0236.md).
+**Active249:** exactUS-initiatedair/surface-to-surfacestrikeimpactIranland/internalwaters byNov3ET, notterritorialsea/airspace/intercepts/artillery/threats. Rulehasnoexplicitstartdate; creationOct9 01:16Z vspriorAug/Sepstrikes isinterpretationfork, notautomaticNO. Fullrulesread, `data/deep_review_20261017/case249_facts_1910.json`; noownquotes/forecastyet. Oct10shiphitGulfofOman lackscoordinates/landimpact, Oct16almost-stoppedretrospective lacksdatedoperationlog. Primarysourcecoverageincomplete, notabsenceproof.
 
-Same-family repairs130/172/228: YES55/17/24% (was59/24/32),15ppreserve;172 retains5%2025source-queryfork. Allfail datedselectedstress, noallocations. [Compact validation](../research/2026-10-17-deep-review/models/treasury_family_validation_1900.json); latest immutable revisions through `--index N`. Overlapping historicalwindows dependent; weights/ranges uncalibrated. Existingoriginals preserved.
+**Last248blocked:** CDCcounter4410asofOct15 needs+490byOct31; twofuturecounterupdates ≠twofullmatureonsetweeks. RegionalMMWR2–3daydelay/92.8%within14daysnotnationalcounterlag; cachedpriorcounterexcerptsconflict. No manufacturedpointp/50%prior; bothsidecostssaved, EVnull. [Case248](../research/2026-10-17-deep-review/evaluations/0248.md). Annual20824%remainsdatedassumption-ledforecast, notOct31nowcast.
 
-Next238BadBunnyGTAalbum,239closedCapeTownweather,241linkedforeignpneumonicplague; bounded factualunits linked by scoped workresume.238radioEoO≠albumcredit/nine selectedsingles≠full34tracklist.241WHOOct10 no ongoingtransmission evidence/contactswell, causeunknown; notglobalabsenceproof. No forecasts inherited.30case17:42quotes `data/deep_review_20261017/quotes_resume_1745.json` are stale research, notexecutionchecks.
+Last246NVRepublican55%YES,20–85range/15ppreserve; dated42caskedgefailsselected40%. Preservefreshprimarypoll/maker<=37ctrigger, samefactorasfourHousebids.247PMOmeanfirstpayout85%/half-tiestate, dynamicfeedgapresolved; 168hourjumpsrequiredpost-quote92→85draftcorrection BEFORErecord. No newallocations. Treasury130/172/228 repairs55/17/24%YES/15ppreserve: [compactmodel](../research/2026-10-17-deep-review/models/treasury_family_validation_1900.json). Othercaseconclusions stayinindividualMDs, notthishandoff.
+
+Prepared250–255factualunits only; no inheritedforecasts.250latestTopModelscapture17:45/cache16:59sourceupdatein `work/0250_source_update_1800.json`;52completedweeksunchanged/partial158.105052T, targetweeksnotstarted. UsejointheldOpenRoutermodel beforeallocation.17:42quotes `data/deep_review_20261017/quotes_resume_1745.json` arestaleresearch, notexecutionchecks. No globalscannerrepeatmerelytoresume.
 
 ## Account / safety — dated18UTC
 

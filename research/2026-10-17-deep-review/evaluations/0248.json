@@ -1,0 +1,159 @@
+{
+  "review_index": 248,
+  "condition_id": "0x2f369a34df6731f3434b9b3b373618b6bf8c0a972d052e6f325746044fe85207",
+  "criteria_sha256": "2e4d62a2eda94d4d8591797a95836ca3e1a1ff658021a0b77e203aa624593bf0",
+  "status": "blocked_after_review",
+  "literal_analysis": "This market will resolve to \"Yes\" if there have been the specified amount or more confirmed cases of Measles (Rubeola) in humans in the territory of the United States of America in 2026, according to the CDC case counter by October 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe resolution source for this market will be the CDC Measles (Rubeola) counter 'Total Cases' in 2026 (see: https://www.cdc.gov/measles/data-research/index.html) at the resolution time. If the counter becomes unavailable, another credible source will be used.\n\nNote: Only cases reported by the CDC Measles (Rubeola) counter will qualify, regardless of reports from U.S. State agencies or other sources. ItisCDCconfirmedcounteravailableatOct31cutoff, noteventual2026rash-onsetcount. State/probablevaluesnoteligibleunlessliteralcounterunavailablefallback.",
+  "evidence": [
+    {
+      "url": "https://www.cdc.gov/measles/data-research/index.html",
+      "observed_utc": "2026-10-18T18:22:58.827738+00:00",
+      "finding": "Counter4410 asofOct15Thursdaynoon/updateOct16; latestonsetbuckets130/50(partial), mature6weeklevel211.916. Exactrawhashreverified; +490qualifyingcountergap."
+    },
+    {
+      "url": "https://www.cdc.gov/mmwr/volumes/75/wr/mm7533a1.htm",
+      "observed_utc": "2026-10-18",
+      "finding": "RootreadAug27SouthCarolinanowcastingstudy: medianonset-to-publichealthreport2–3days/92.8%within14days, recentbackfill/righttruncationand36.7%contactsreportedbeforerash; notnationalCDCcounterdelayestimate. DirectworkerGET403/browserofficialread; nofalse localrawclaim."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5326398",
+      "observed_utc": "2026-10-18T19:05:01.023182+00:00",
+      "finding": "CurrentexactGammaid/CID/fullcriteriaopen/accepting, rawresponsehashinsourcepacket; no displayedpricesscreen."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Investigatedcounter-vintageandnowcastingmap; no defensibleprimarypointadopted.",
+    "reasoning": "Nationalrash-onset/reporting/CDCcounter-publicationvintagemapping over2futureupdates. SinglecurrentvintageandlocalSCdelaynotidentification; priornationalcountersearchsnippetsconflict.",
+    "blocking_fact": "Nationalrash-onset/reporting/CDCcounter-publicationvintagemapping over2futureupdates. SinglecurrentvintageandlocalSCdelaynotidentification; priornationalcountersearchsnippetsconflict."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 17,
+    "actual_entry_reserve_pp": null,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "best_bid": 0.38,
+        "best_ask": 0.39,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343652",
+        "book_age_seconds_at_receipt": 4.186958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 3.9000000000000004,
+            "fee": 0.09516,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.39
+              }
+            ],
+            "net": 3.9951600000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 3.8,
+            "fee": 0.09424,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.38
+              }
+            ],
+            "net": 3.7057599999999997
+          }
+        },
+        "taker_cost_usd": 3.9951600000000003,
+        "break_even_before_carry": 0.39951600000000004,
+        "break_even_constant_carry": 0.40009396556925936,
+        "current_execution_authorization": false,
+        "probability": null,
+        "central_expected_profit_usd": null
+      },
+      "No": {
+        "best_bid": 0.61,
+        "best_ask": 0.62,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343652",
+        "book_age_seconds_at_receipt": 4.186958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 6.2,
+            "fee": 0.09424,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.62
+              }
+            ],
+            "net": 6.29424
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 6.1,
+            "fee": 0.09516,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.61
+              }
+            ],
+            "net": 6.00484
+          }
+        },
+        "taker_cost_usd": 6.29424,
+        "break_even_before_carry": 0.629424,
+        "break_even_constant_carry": 0.6303345652851587,
+        "current_execution_authorization": false,
+        "probability": null,
+        "central_expected_profit_usd": null
+      }
+    },
+    "forecast_status": "UNPRICED probability; costscomputedwithoutadoptedforecast. Internalneutralplaceholderremoved, never50%belief."
+  },
+  "verdict": "BLOCKED AFTER IN-DEPTH REVIEW: unresolvednationalcounterpublication/backfillmapping couldchangetwo-weekthresholdverdict; no invented50%prior, no sourcegap-as-factualexclusion.",
+  "reopen_condition": "Verifiedearlier/currentCDCcountervintages orvalidnationalreporting/nowcastdata identifiesshort-horizonincrement/backfilldistribution; thenownp/range, freshbothsidebooksandallgates. Existingregularreviews suffice; no newtimer/researchalert.",
+  "extra": {
+    "source_unit": "data/deep_review_20261017/work/0248_delay_facts.json",
+    "primary_block_decision": "data/deep_review_20261017/work/0248_primary_block_decision.json",
+    "entry_approved": false,
+    "priority_followup": true,
+    "related_case_208": "Annual24%forecastretainsitsdatedassumption-ledstatus; unmeasured0–350backfill/10–11week equivalentsnotvalidOct31nowcast."
+  },
+  "evaluated_utc": "2026-10-18T19:25:37.499192+00:00",
+  "question": "Will there be at least 4900 measles cases in the U.S. by October 31, 2026?",
+  "market_id": "5326398",
+  "valuation_author": "primary_operator",
+  "original_index": 248,
+  "report_sha256": "6f725e35e604753aac842cd8ae75da89377ea7b57c32b46a04b7db1c1002a529"
+}

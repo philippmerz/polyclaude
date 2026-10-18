@@ -1,0 +1,163 @@
+{
+  "review_index": 238,
+  "condition_id": "0xc613d3515fa3e87e6e0f9c2d0ae0a83d2271530caf877e8c4f4d80b393fb36c0",
+  "criteria_sha256": "c17658f933153bf00fdee88a180fc7c171cda5c59682b1d384ab840f26ecd19d",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the listed artist is confirmed as a featured or credited artist on \"Grand Theft Auto VI: The Album\", scheduled for release on November 19, 2026. Otherwise, this market will resolve to \"No\".\n\nTo qualify as \"featured\", the listed artist must be credited on at least one track on the album according to Rockstar Games' official tracklist or artist announcements (https://www.rockstargames.com/VI/music). If this information is unavailable from Rockstar's official sources, official album credits listed on major streaming platforms (e.g., Spotify, Apple Music) may be used instead.\n\nIf the album fails to release by November 26, 2026, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source of this market will be Rockstar Games' official GTA VI: The Album page (https://www.rockstargames.com/VI/music) and associated official Rockstar announcements, or official album credits listed on major streaming platforms (e.g., Spotify, Apple Music). Radio licensing/trailer use does not satisfy anoriginalalbumtrack credit; release deadline isNov26 23:59ET, notGamma midnight endDate.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-18T18:32:53.617307+00:00",
+      "finding": "Officialalbum futureNov19/34originaltracks; nine explicitlyselectedsingles. BadBunny EoO isradio metadata, notalbumcredit; incompletecredits cannot exclude him. Rootverified rawSHA and context."
+    },
+    {
+      "url": "https://www.gtavi-thealbum.com/products/grand-theft-auto-vi-the-album-standard-vinyl?variant=71303749763325",
+      "observed_utc": "2026-10-18",
+      "finding": "Rootfollowed officialRockstar retailerlink;34originaltracks, physicalshipsNov20, onlysixfeaturedtracks listed. Notcompleteartistcredits, notdigitalrelease date. Browserobservation daylabel."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4662692",
+      "observed_utc": "2026-10-18T18:32:53+00:00",
+      "finding": "Exactfullcriteria/CID/tokens/currentopen/accepting in sourcedpacket; roundedcapturewindowlabel, not exactGammaGET. Dated17:42quote independentbelow."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.3,
+    "low": 0.05,
+    "high": 0.75,
+    "method": "Primary explicit roster-regime judgment plus independentreleaseeligibilityfactor; incomplete officialcredits andradio-vs-album distinction, not market-price inference.",
+    "reasoning": "35% broadLatincollaborationregime at60% credit plus65% radio-only/concentratedalbumregime at15%;97% assumedtimelyrelease =>29.8275%, rounded30. No empirical artistinclusioncalibration; broad5–75range and25ppselectedreserve. Allparameters savedbeforeownprice read."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 42,
+    "actual_entry_reserve_pp": 25.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.3,
+        "selected_stress_probability": 0.04999999999999999,
+        "best_bid": 0.5,
+        "best_ask": 0.55,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345309228",
+        "book_age_seconds_at_receipt": 38.610958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 5.5,
+            "fee": 0.12375,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.55
+              }
+            ],
+            "net": 5.62375
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 5.0,
+            "fee": 0.125,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.5
+              }
+            ],
+            "net": 4.875
+          }
+        },
+        "taker_cost_usd": 5.62375,
+        "central_expected_profit_usd": -2.6237500000000002,
+        "selected_stress_profit_usd": -5.12375,
+        "break_even_before_carry": 0.5623750000000001,
+        "break_even_constant_carry": 0.5643871298051295,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7,
+        "selected_stress_probability": 0.44999999999999996,
+        "best_bid": 0.45,
+        "best_ask": 0.5,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345309228",
+        "book_age_seconds_at_receipt": 38.610958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 5.0,
+            "fee": 0.125,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.5
+              }
+            ],
+            "net": 5.125
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 4.5,
+            "fee": 0.12376,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.45
+              }
+            ],
+            "net": 4.37624
+          }
+        },
+        "taker_cost_usd": 5.125,
+        "central_expected_profit_usd": 1.875,
+        "selected_stress_profit_usd": -0.625,
+        "break_even_before_carry": 0.5125,
+        "break_even_constant_carry": 0.5143336813071863,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: NO centraledge18.75c/grossshare beforecarry fails25pp roster/modelreserve; YESnegativecentrally. Incompletecredits preserve a researchcandidate, not a rejection or allocation.",
+  "reopen_condition": "CompleteRockstar/eligibleofficialstreamingcredits, explicitBadBunnyannouncement or freshmakerNO<=41c/YES<=1c with allcost/source/correlation/newclassgates; no alert/trade automation.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/gta238_primary_1903.json",
+    "source_packet": "data/deep_review_20261017/gta238_facts_1830.json",
+    "actual_entry_reserve_pp": 25,
+    "entry_approved": false,
+    "priority_followup": true
+  },
+  "evaluated_utc": "2026-10-18T19:03:06.169393+00:00",
+  "question": "Will Bad Bunny be featured on GTA VI: The Album?",
+  "market_id": "4662692",
+  "valuation_author": "primary_operator",
+  "original_index": 238,
+  "report_sha256": "63953868fe3a524e86090fb5da7478579fef747152f5c7227d5ae5fa464625f3"
+}

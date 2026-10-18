@@ -1,0 +1,176 @@
+{
+  "review_index": 247,
+  "condition_id": "0x982789e6c22e905bb4d4d126308d00cd155b1e6437fbefc476b139cb518e2842",
+  "criteria_sha256": "e88de67d762e7e847e49fa8fc90b7ebeb3ca199e955a191b2dc7a1bef3cf1476",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"No change\" if the \"No change\" option's hourly odds value is higher than the \"Hike 25 bps\" option's hourly odds value in the \"Fed Rate Decision October 2026\" listing on PredictionMarketOdds.com for the \"Time Window (ET)\" ending at 12:00 PM ET on October 27, 2026.\n\nThis market will resolve to \"Hike 25 bps\" if the \"Hike 25 bps\" option's hourly odds value is higher than the \"No change\" option's hourly odds value in the \"Fed Rate Decision October 2026\" listing on PredictionMarketOdds.com for the \"Time Window (ET)\" ending at 12:00 PM ET on October 27, 2026.\n\nIf the \"No change\" option's and the \"Hike 25 bps\" option's hourly odds values are equal for that \"Time Window (ET)\", this market will resolve 50-50.\n\nAn hourly odds value is the value in the \"Odds of Happening\" column that PredictionMarketOdds.com publishes for an option for a one-hour \"Time Window (ET)\", as shown on the listing page and in the \"Odds History\" graph. Hourly odds values are compared at the precision published by PredictionMarketOdds.com (one tenth of a percent).\n\nIf PredictionMarketOdds.com publishes \"NO_PRINT\" for an option for the specified window, that option's most recent published hourly odds value before the specified window will be used. If PredictionMarketOdds.com has not published anything for the specified window for an option (neither an hourly odds value nor \"NO_PRINT\"), this market will remain open until a value or \"NO_PRINT\" for that window is published, and may remain open until November 3, 2026, 11:59 PM ET for that purpose. If nothing has been published for the specified window by that time, that option's most recent published hourly odds value before the specified window will be used. If PredictionMarketOdds.com permanently ceases publishing hourly odds values for the \"No change\" option or the \"Hike 25 bps\" option in the \"Fed Rate Decision October 2026\" listing before the specified window, including by removing either option from the listing, this market will resolve based on the hourly odds values published up to that point.\n\nIf no hourly odds value is published for either of the options between market creation and the end of the specified window, this market will resolve 50-50.\n\nIf the underlying market is officially decided before the listed date and time, this market will resolve in favor of the listed option which resolves \"Yes\". If the winning outcome is neither listed option, this market will resolve 50-50.\n\nIf a published hourly odds value is clearly erroneous as a result of a technical or operational error, this market may remain open for up to an additional 48 hours after that value is first published to allow for a correction. A corrected value will be used in place of the original. If no correction is published within that period, the original value will stand, and revisions published after that period will not be considered.\n\nThe resolution source for this market is PredictionMarketOdds.com, specifically the hourly odds values for the \"No change\" option and the \"Hike 25 bps\" option in the \"Fed Rate Decision October 2026\" listing at https://predictionmarketodds.com/fed-october-2026.html and on each option's detail page, reached by clicking the option's name in the listing. Prices shown on any individual prediction market will not be considered. Outcomes areNochange/Hike25, notYes/No. Ledgerp_yesmeanfirstassetpayoutincludes0.5tie; futurewindowOct27noonET=16UTC, notGamma12UTC.",
+  "evidence": [
+    {
+      "url": "https://predictionmarketodds.com/latest/fed_october_2026.json",
+      "observed_utc": "2026-10-18T19:15:58.390426+00:00",
+      "finding": "Source19UTC Oct18Nochange0.865vsHike25 .131;168pairedcontiguoushours/allfirstleads butlargejumps/minnear-equality. Rawverified/checks/metadata inunit."
+    },
+    {
+      "url": "https://predictionmarketodds.com/methodology.html",
+      "observed_utc": "2026-10-18T19:15:58.309899+00:00",
+      "finding": "Rootreadhourlymedians/laggedliquidityweightmethodology; no singleexchangeprice substitute."
+    },
+    {
+      "url": "https://predictionmarketodds.com/details/fed_october_2026__no_change.json",
+      "observed_utc": "2026-10-18T19:16:26.299856+00:00",
+      "finding": "Source19UTC Oct18Nochange0.865vsHike25 .131;168pairedcontiguoushours/allfirstleads butlargejumps/minnear-equality. Rawverified/checks/metadata inunit."
+    },
+    {
+      "url": "https://predictionmarketodds.com/details/fed_october_2026__hike_25bps.json",
+      "observed_utc": "2026-10-18T19:16:26.281152+00:00",
+      "finding": "Source19UTC Oct18Nochange0.865vsHike25 .131;168pairedcontiguoushours/allfirstleads butlargejumps/minnear-equality. Rawverified/checks/metadata inunit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.85,
+    "low": 0.5,
+    "high": 0.995,
+    "method": "Firstassetexpectedpayout; pairedpublisherlogratioendpointdiffusion withfullweek/72hourlookbacks/base-doublevol plusexplicitfallback/tie states.",
+    "reasoning": "Samehistorycontainsnear-equalityand1.127/0.797hourlylogratiojumps, so initial92%draftoverstatesstablebaselineconfidence.213futurehours/50:50lookbacks×80:20volstress +5%sourcefork/0.6%split givesmean85.3402%→85. RootrevisedbeforecanonicalrecordbutAFTERownquoteaccess; sourcevariabilitycorrection, no pricefitclaim.",
+    "joint_payout_states": {
+      "first_full": 0.85040157075878,
+      "second_full": 0.14359842924122,
+      "half_half": 0.006
+    }
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 19,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "No change": {
+        "probability": 0.85,
+        "selected_stress_probability": 0.7,
+        "best_bid": 0.95,
+        "best_ask": 0.96,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345319140",
+        "book_age_seconds_at_receipt": 28.698958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.6,
+            "fee": 0.01921,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.96
+              }
+            ],
+            "net": 9.619209999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.95
+              }
+            ],
+            "net": 9.47624
+          }
+        },
+        "taker_cost_usd": 9.619209999999999,
+        "central_expected_profit_usd": -1.119209999999999,
+        "selected_stress_profit_usd": -2.619209999999999,
+        "break_even_before_carry": 0.9619209999999999,
+        "break_even_constant_carry": 0.9634764240736414,
+        "current_execution_authorization": false
+      },
+      "Hike 25 bps": {
+        "probability": 0.15000000000000002,
+        "selected_stress_probability": 2.7755575615628914e-17,
+        "best_bid": 0.04,
+        "best_ask": 0.05,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345319140",
+        "book_age_seconds_at_receipt": 28.698958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.05
+              }
+            ],
+            "net": 0.52376
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.4,
+            "fee": 0.0192,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.04
+              }
+            ],
+            "net": 0.3808
+          }
+        },
+        "taker_cost_usd": 0.52376,
+        "central_expected_profit_usd": 0.9762400000000002,
+        "selected_stress_profit_usd": -0.5237599999999998,
+        "break_even_before_carry": 0.052376,
+        "break_even_constant_carry": 0.05246069187311749,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: firstoutcomeisnegativecentral; secondhasdatedcentraledge butfails15ppselectedand10ppdefaultafterfee. Quote/source/modelcomparisoncomplete, sourcegapresolvedwithoutguessingunderlyingFOMCdecision.",
+  "reopen_condition": "NewPMOhourlygap/vol/fallbackstatus or Fedmacroinformation andfreshmakerNochange<=67c; Hike25onlyafterindependentmodel/sourcevalidation supportpositiveuncertaintystress. Full3-stateportfolio/fee/depthgatesbeforemoney.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/pmo247_validated_1919.json",
+    "superseded_unrecorded_draft": "research/2026-10-17-deep-review/models/pmo247_primary_1918.json",
+    "source_unit": "data/deep_review_20261017/work/0247_primary_source_unit.json",
+    "actual_entry_reserve_pp": 15,
+    "entry_approved": false,
+    "priority_followup": false,
+    "raw_mean_first_payout": 0.85340157075878,
+    "own_price_access_before_final_model": true
+  },
+  "evaluated_utc": "2026-10-18T19:19:39.040236+00:00",
+  "question": "No change or Hike 25 bps favored on October 27?",
+  "market_id": "4913924",
+  "valuation_author": "primary_operator",
+  "original_index": 247,
+  "report_sha256": "59ef011361b09e573f2586ada5250fb0962af8348805e61c6cfead9849463ad4"
+}

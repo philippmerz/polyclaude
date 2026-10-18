@@ -1,0 +1,76 @@
+{
+  "created_utc": "2026-10-18T19:17:26.225566+00:00",
+  "index": 247,
+  "before_own_PM_quotes": true,
+  "full_literal_bound": true,
+  "outcome_mapping": {
+    "first_asset": "No change",
+    "second_asset": "Hike25bps",
+    "ledger_p_yes": "expectedunitpayoutoffirstasset includinghalfTIE; notprobabilityFedactuallyleavesratesunchanged"
+  },
+  "source_unit": "data/deep_review_20261017/work/0247_primary_source_unit.json",
+  "checks": {
+    "aligned_hourly_windows": 168,
+    "contiguous": true,
+    "start": "2026-10-11T20:00:00Z",
+    "end": "2026-10-18T19:00:00Z",
+    "no_change_range": [
+      0.523,
+      0.869
+    ],
+    "hike25_range": [
+      0.125,
+      0.47
+    ],
+    "latest": {
+      "window_end": "2026-10-18T19:00:00Z",
+      "no_change": 0.865,
+      "hike25": 0.131
+    },
+    "no_change_leader_count": 168,
+    "ties": 0,
+    "hourly_log_ratio_change_sd": 0.12011127749896124,
+    "last_log_ratio": 1.8875321837307277,
+    "market_createdAt": "2026-09-24T19:53:40.821219Z",
+    "source_noprint_count": 0,
+    "target_ET": "2026-10-27T12:00:00America/New_York",
+    "target_UTC": "2026-10-27T16:00:00+00:00"
+  },
+  "branches": [
+    {
+      "name": "currentregimepersists",
+      "weight": 0.75,
+      "p_first": 0.99,
+      "p_second": 0.008,
+      "p_split": 0.002
+    },
+    {
+      "name": "hawkishmacro/repricingjump",
+      "weight": 0.2,
+      "p_first": 0.65,
+      "p_second": 0.34,
+      "p_split": 0.01
+    },
+    {
+      "name": "source/earlydecision/fallbackfork",
+      "weight": 0.05,
+      "p_first": 0.9,
+      "p_second": 0.05,
+      "p_split": 0.05
+    }
+  ],
+  "joint_settlement": {
+    "Nochangefullpayout": 0.9175,
+    "Hike25fullpayout": 0.07650000000000001,
+    "half_half": 0.006
+  },
+  "raw_expected_first_payout": 0.9205,
+  "p_yes": 0.92,
+  "range": [
+    0.6,
+    0.995
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "Currentpublisher0.865vs0.131 and168/168leaderhours showlarge observedgap; forecastiswhethergapstayspositiveatfuturetarget, not0.865ascurrentrateprediction. Stable7dayhistorysupportsbaseline, but9dayforecastneedsunmeasuredmacrojumprisk.5%sourceforklargelyfreezesobservedNochangeleaderunderliteralNO_PRINT/cessationfallback ratherthanalloutages=>50/50. Weightsunestimated; groupconfidence/rawdiffusionalonecannotcalibrateeventjumps.",
+  "limitations": "Hourlysamplesseriallycorrelated; roundingcancreatefuturetie. Mixedvenuepublishernotcoherentmartingale, no generic2q-1boundused. Underlyingearlydecisionotherwinnercouldsplit; technical48hcorrection; targetOct27noonET=16Z, notGamma12Z. First/secondpayout3states neededforactualKelly/correlation."
+}

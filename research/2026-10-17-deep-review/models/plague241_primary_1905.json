@@ -1,0 +1,39 @@
+{
+  "created_utc": "2026-10-18T19:04:51.663533+00:00",
+  "index": 241,
+  "before_own_PM_quotes": true,
+  "primary_source_packet": "data/deep_review_20261017/plague241_factual_sources_1845.json",
+  "rule_binding": "ConfirmedhumanpneumonicY.pestis outsideRussia AND epidemiologicalIrkutsklink qualifyingpublicationbyDec31ET; bubonicprogressioncanqualify; outbreakpressrumour or isolatedunlinkedforeignplague cannot. Credibleconsensusfallback preserved.",
+  "root_checks": [
+    "Fullfrozenrules read",
+    "WHOOct10DON rawSHA verified/fullpageindependentlyread",
+    "WHOOct10 expresslycannot independentlyassess followupduration sufficientforallplausiblecauses; sourcecauseunknown, labexposurecannotfullyexcluded",
+    "WHOsearchafterOct10 foundsameDON, notexhaustiveforeignsurveillance; directRPNlinkfailedinbrowser"
+  ],
+  "branches": [
+    {
+      "weight": 0.94,
+      "name": "reportedno-plague/noadditionalcases broadlyaccurate",
+      "conditional_qualifying_foreign_publication": 0.002
+    },
+    {
+      "weight": 0.05,
+      "name": "missedlaboratoryplague/limitedchain",
+      "conditional_qualifying_foreign_publication": 0.15
+    },
+    {
+      "weight": 0.01,
+      "name": "materiallywider hiddenevent/reportingfailure",
+      "conditional_qualifying_foreign_publication": 0.65
+    }
+  ],
+  "raw_p_yes": 0.01588,
+  "p_yes": 0.02,
+  "range": [
+    0.001,
+    0.25
+  ],
+  "entry_reserve_pp": 10,
+  "reasoning": "RussianNFP negatives/contactfollowup communicatedviaWHO weighagainstactualplague andexportedqualifyingcase; unknownetiology and nonindependentassessment retain nonzerodisclosure/attributiontail. Conditionalprobabilitiesalreadyinclude diagnosis,foreignspread,linkanddeadlinepublication; not multiplyunjustifiedindependence. Round1.588% upwardto2% forsourceopacity. Weightsarejudgment, notempiricalepidemiologicalprediction.",
+  "limitations": "NoindependentRussianclinicaldata/currentforeignauthoritycasecoverage; newestloadbearingWHOreportOct10,eightdaysold. Generaldiseasefact-sheetaccess notusedtonumericallyoverruleeventuncertainty. Probabilityrange/reserve notconfidencebounds."
+}

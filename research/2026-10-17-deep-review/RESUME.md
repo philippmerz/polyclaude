@@ -12,3 +12,5 @@ Operator explicitly requested `/goal` October18: continue the remaining review; 
 Do **not** ingest fullINDEX.md/index.csv, evaluations.jsonl, CURRENT_REVISIONS.md, candidate_followup.md, SOURCE_QUEUE.md or the full journal on each resume. They are historical indexes, not a required context blob. Query the chosen exact case/family; latest immutable revision plus current account state governs. Dates in historical prose do not refresh observations or reactivate completed actions. First100/200 milestones already notified.
 
 Use dense machine records and short linked summaries. Target checkpoint/resume units≤8KB; large raw evidence stays separately indexed. This adds no probability model, screening rejection or automatic investment rank.
+
+Work-pointer shape: `{"review_index":248,"source_paths":["work/0248_facts.json"],"phase":"facts saved; primary forecast pending"}`. Paths are relative to the research-run or data-run directory; raw log receipts belong inside the linked factual unit. Do not put a whole helper packet under `NNNN_resume.json` or omit the top-level case identity. Preserve an incompatible source packet separately before normalizing its pointer.
