@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-18T17:24:28.052700+00:00"
+reviewed_at: "2026-10-18T17:31:48.113612+00:00"
 valid_until: "2026-10-18T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
@@ -41,4 +41,4 @@ Messi YES hurdle coverage fixed,107 regressions passed; financial priors unchang
 
 ## Finite research checkpoint
 
-**254valued/2blocked/331factualexclusions/2,413pending** fromfrozen3000;587immutablebase+24append-only revisions, noactivecase,next196. [Checkpoint](deep_review_checkpoint.json), [index](../research/2026-10-17-deep-review/INDEX.md), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md). Save/index each completed evaluation before next. First100/200 notified. Sevenrequiredscans/all77batches audited factually; selected-but-unemitted34primary/1,331thin remainunreviewed. Caps/mappingerrors/189unquoted consistencygroups prevent exchange-widezero claims. [Batch audit](../data/checkin_20261018T1634_batches_audit.json).
+**254valued/2blocked/331factualexclusions/2,413pending** fromfrozen3000;587immutablebase+24append-only revisions, noactivecase,next196. [Checkpoint](deep_review_checkpoint.json), [index](../research/2026-10-17-deep-review/INDEX.md), [protocol](../research/2026-10-17-deep-review/PROTOCOL.md). Save/index each evaluation before the next. First100/200 notified. [17:29 recovery audit](../data/deep_review_20261017/ledger_audit_handoff_1729.json) passed all3,000 identities/report hashes/revisions; no new valuation. Superseded film instructions are now explicit history in protocol/source queue. Next196 is Microsoft **third** by market cap Oct31. Sevenrequiredscans/all77batches audited factually; selected-but-unemitted34primary/1,331thin remainunreviewed. Caps/mappingerrors/189unquoted consistencygroups prevent exchange-widezero claims. [Batch audit](../data/checkin_20261018T1634_batches_audit.json).
