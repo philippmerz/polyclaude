@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-18T14:59:52.204351+00:00"
+reviewed_at: "2026-10-18T15:09:54.886807+00:00"
 valid_until: "2026-10-18T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
@@ -12,7 +12,7 @@ source_hashes:
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
   notes/backlog.md: aed7b3de0ed24b8ef8fcb593b11fdceba76dad7e9a460d163dcbd5826310f75e
   notes/resting_orders.md: d0d67efa92e9c648966a69cd240033a459ce515673ae089d543e91d546ab11c6
-  notes/journal.md: d6d874d6dad2eca94b23dcfdda9affe8cae55e7807144184ea6880b33b023da5
+  notes/journal.md: 34cf5fa7983cfdc53955fdf1ff9cab782794d63d5ead7f5125771116739d869a
 ---
 
 ## Research checkpoint — October 18
@@ -33,6 +33,6 @@ Retain HLE OpenAI NO9/noadd central25/stress15/upper38; cached65rows/max53.6 unc
 
 ## Completed check and next existing boundary
 
-[14UTC eleven-step check](../research/2026-10-18-1400-checkin.md) completed once; do not rerun scanners merely to resume research. Separate authoritative bankroll completed14:45:12: **195.90 total/gas5.69/trading mid190.21/depth188.19**, whole approximate depth193.88, PM33.43/31.41,cost32.76,residual19.53. Rounded sequential marks, not synchronized NAV/certified proceeds or audited cash profit; VM/API excluded. Same-snapshot CSV now203observations; chart tests10/10. Eight-bid+held conditional bookkeeping minimum169.66 is not guaranteed wealth. Claim insurance6indexed+1deindexed; final read-only audit CLEAN.
+[14UTC eleven-step check](../research/2026-10-18-1400-checkin.md) completed once; do not rerun scanners merely to resume research. Separate authoritative bankroll completed14:45:12: **195.90 total/gas5.69/trading mid190.21/depth188.19**, whole approximate depth193.88, PM33.43/31.41,cost32.76,residual19.53. Rounded sequential marks, not synchronized NAV/certified proceeds or audited cash profit; VM/API excluded. Same-snapshot CSV now203observations; chart tests10/10. Eight-bid+held conditional bookkeeping minimum169.66 is not guaranteed wealth. Claim insurance6indexed+1deindexed; final read-only audit CLEAN. Periodic15:06 account unchanged; LaLota's new article repeats the already-priced Oct15 Q3 filing. Pages CSV203rows verified live15:05; no new valuation.
 
-Seven capped scanner outputs and all87context batches audited factually, no exchange-wide absence claim. UMA41tracked=39uniqueIDs; unscored Grok old, not new. Four daemons exactlyone/currentcode at14UTC; Ostium0trades/limits/allowance. Next already-scheduled check**18UTC**, OpenRouterpull22UTC; weeklyOct23/monthlyNov12. Last directquota38used/62headroom, resetOct24 20:41UTC. Latest inbound62572748 EXPIRED; resendTG1213 already sent, do not reread/reply. Material updateTG1239 sent. Prior backup1e7ead2 pushed; use Git log for the latest record commit.
+Seven capped scanner outputs and all87context batches audited factually, no exchange-wide absence claim. UMA41tracked=39uniqueIDs; Four daemons exactlyone/currentcode at14UTC; Ostium0trades/limits/allowance. Next already-scheduled check**18UTC**, OpenRouterpull22UTC; weeklyOct23/monthlyNov12. Latest inbound62572748 EXPIRED; resendTG1213 already sent, do not reread/reply. Material updateTG1239 sent. Use Git log for record backups.
