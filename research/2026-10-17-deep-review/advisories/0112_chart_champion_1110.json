@@ -1,0 +1,118 @@
+{
+  "schema": "openrouter112_chart_champion_audit.v1",
+  "written_utc": "2026-10-18",
+  "status": "Independent advisory only; no revised probability, screening decision, or trade authority.",
+  "paths": {
+    "draft_model": "data/deep_review_20261017/work/openrouter_joint_model_draft_1105.json",
+    "chart_source_addendum": "data/deep_review_20261017/openrouter112_model_rankings_chart_addendum_1050.json",
+    "cutoff_refresh": "data/deep_review_20261017/openrouter_current_cutoff_1103.json",
+    "prior_report": "data/deep_review_20261017/work/0112_final.json",
+    "advisory": "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
+    "chart_display_semantics_followup": "data/deep_review_20261017/openrouter_chart_display_semantics_1100.json",
+    "chart_display_semantics_followup_sha256": "72222bb2baedaec755e00b27e4d4a8455c090252ec6487f1b6a0799667fd8c29",
+    "chart_response_raw_sha256": "ae15872fa2989fb09ee1e7267bfa34a2fabab1c508e2f7179bc527f2aea2d7d0"
+  },
+  "literal_claim": {
+    "range_T": "[725,775)",
+    "weeks": [
+      "2026-10-26",
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16"
+    ],
+    "settlement": "At first display of week 2026-11-23, or 2026-11-27 23:59 ET fallback; chart rounding applies; exact boundary goes higher."
+  },
+  "observed_chart": {
+    "point_count": 53,
+    "label_range": [
+      "2025-10-13",
+      "2026-10-12"
+    ],
+    "series": "nine models plus Others; derived sum, no explicit total field",
+    "last_4_completed_levels_T": {
+      "2026-09-14": 128.895269979077,
+      "2026-09-21": 145.845105335054,
+      "2026-09-28": 165.856049857563,
+      "2026-10-05": 171.842501724714
+    },
+    "last_4_completed_growth_pct": [
+      13.150083287562374,
+      13.720682964668086,
+      3.6094262900220775
+    ],
+    "last_4_completed_growth_mean_pct": 10.160064180750846,
+    "last_4_completed_growth_sample_sd_pct": 5.680188252115142,
+    "last_12_completed_labels_range": [
+      "2026-07-20",
+      "2026-10-05"
+    ],
+    "last_12_completed_growth_mean_pct": 10.693180513631278,
+    "last_12_completed_growth_sample_sd_pct": 8.877332853365806,
+    "2026-10-12_partial_sum_T": 152.318277309168,
+    "archived_first_display_snapshots": false,
+    "display_rounding_rule_recovered": false,
+    "oct12_point_cutoff": "Unknown; the endpoint has no per-point observation-cutoff metadata. The separate ranking leaderboard says its own data are through Oct 17; this cannot be transferred to the Top Models chart.",
+    "oct12_label_week_state_at_capture": "Week labeled 2026-10-12 had not reached Sunday 23:59 UTC when captured on 2026-10-18 at 10:34 UTC; not a completed weekly total.",
+    "growth_return_convention": "Arithmetic/simple percent changes; windows below differ from root model log-return windows.",
+    "last_4_completed_levels_window": "Four levels Sep 14–Oct 5, yielding three simple percentage changes.",
+    "last_12_completed_labels_window": "Twelve levels Jul 20–Oct 5, yielding eleven simple percentage changes.",
+    "root_model_log_return_comparison": {
+      "last4_log_returns": "Five levels Sep 7–Oct 5 yield four log returns; sample mean 0.0760647486 and sample SD 0.0582724950 in log units.",
+      "last12_log_returns": "Thirteen levels Jul 13–Oct 5 yield twelve log returns; sample mean 0.0839198568 and sample SD 0.0918841151 in log units.",
+      "note": "These are different estimators and windows; do not compare as identical statistics."
+    }
+  },
+  "draft": {
+    "p_yes": 0.107915,
+    "p_no": 0.892085,
+    "mean_T": 852.7046194802099,
+    "median_T": 802.5207870216258,
+    "p05_T": 402.81873795737454,
+    "p95_T": 1444.1538402880508,
+    "cutoff_sensitivity_p_yes": {
+      "full_sunday": 0.10748,
+      "remaining_sunday": 0.1134
+    },
+    "single_regime_sensitivity_p_yes": {
+      "moderation_only": 0.17052,
+      "historical_only": 0.08856,
+      "boom_only": 0.00456,
+      "disruption_only": 0.01398
+    },
+    "assumptions_not_fit": [
+      "Regime weights 45/35/10/10",
+      "Weekly drift/dispersion",
+      "Shared regime over five future weeks",
+      "Weekly innovation correlation 0.25",
+      "Additive rounding/revision-tail distribution"
+    ],
+    "not_calibrated": true
+  },
+  "countermodel": {
+    "center_T": 750,
+    "log_sigma": 0.03,
+    "p_yes": 0.7336,
+    "status": "Strong structural counter-thesis; center/variance are assumptions, not directly estimated from the chart."
+  },
+  "dated_hypothetical_economics": {
+    "quote_utc": "2026-10-17T18:35:27.845Z",
+    "NO_bid": 0.64,
+    "NO_ask": 0.67,
+    "not_current_execution_certificate": true,
+    "shares": 5,
+    "price_scenario": 0.64,
+    "max_loss_usd": 3.2,
+    "draft_gross_expected_profit_before_costs_usd": 1.2604250000000001,
+    "15pp_stress_p_no": 0.742085,
+    "stressed_gross_expected_profit_before_costs_usd": 0.5104249999999999,
+    "at_68c_stressed_gross_profit_usd": 0.31042499999999973,
+    "countermodel_expected_profit_at_64_usd": -1.8680000000000003
+  },
+  "limitations": [
+    "No new web/API/market/account requests.",
+    "Advisory is not a new forecast or trading recommendation.",
+    "Historical weekly changes are descriptive and may be affected by trend and chart revision; they do not calibrate future four-week variance.",
+    "Case 35 unrelated except that source capture corrects shared Top Models chart source mechanics.",
+    "Top Models chart point cutoff for Oct 12 is unknown. Do not transfer the separate rankings leaderboard through-Oct-17 date to this endpoint; see openrouter_chart_display_semantics_1100.json."
+  ]
+}

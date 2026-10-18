@@ -1,0 +1,11 @@
+# OpenRouter R2 revision from daily text-request evidence
+
+Primary source-led revision, 2026-10-18T12:09:30.599168+00:00. The prior joint model is preserved. Google R2 changes from80% to90%, OpenAI13.15% to7.67%, DeepSeek3.05% to1.03%, ZAI1.4% to0.4%; residual labs/fallback total0.9%. These are dependent forecasts, not independent bets or calibrated tiny frequencies.
+
+The October17 text-day endpoint returned406 distinct model-variant rows. Their Google/OpenAI sums are204,399,302/154,821,839 (Google+49,577,463). No exhaustion or intraday-cutoff guarantee exists. The weekly API observation remains Google ahead by105,490,013 and DeepSeek ahead of Google by250,376,082. A further0.88b requests would require OpenAI's share to exceed Google's by about12pp to reverse the gap. Remaining volume is not known; prior-week volume and cache time do not establish completion.
+
+The source evidence strengthens ordinary continuation:80% ordinary with conditionalGoogle98.5%/OpenAI1.4%/DeepSeek0.1%;15% large reallocation/backfill with68/27/3/1/residual1%;5% publication/method/tie fork with20/50/10/5/residual15%. Weights and conditional probabilities are subjective. The exact formal source remains Percentage request share forOct12–18UTC, excludingStealth/Others; literal Absolute/token tie language remains a potential fork. Freeze firstOct19 display; fallbackOct23ET/noDataOther.
+
+The revision was made **after** seeing11:45 market quotes; it is not backdated as a price-blind forecast. The independent daily source and UI binding supply the revision reason. The15pp selected entry reserve remains: GoogleYES75%/NO0%, OpenAIYES0%/NO77.33%. Google at near99¢ has no YES edge; a hypothetical1¢ GoogleNO quote is not supported by this selected stress. No order is approved. High-NO minor-lab point forecasts do not establish a measured failure tail or a high-confidence bond license. No hedge/independence credit against other ranks, token-volume, weeks or HLE.
+
+The11:45 Google books were65minutes old at receipt; OpenAI's1¢ask had a float-boundary maker bug. The reviewed exact-decimal helper now fails closed when no positive cent-grid bid can stay below that ask, before funds are reserved or an order is signed. This code fix is not an investment signal and does not change any existing order. Existing case112's separate5NO65¢ order and its22:00UTC pull remain separate.

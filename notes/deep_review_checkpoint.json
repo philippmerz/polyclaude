@@ -1,22 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-18T10:39:04.459408+00:00",
+  "updated_utc": "2026-10-18T12:11:19.361686+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 216,
-  "completed_valuations": 213,
-  "blocked_after_in_depth_review": 3,
+  "completed_in_depth_reviews": 232,
+  "completed_valuations": 230,
+  "blocked_after_in_depth_review": 2,
   "factual_exclusions": 328,
-  "pending": 2456,
+  "pending": 2440,
   "active_indices": [
-    113
+    133
   ],
   "next_pending_indices": [
-    113,
-    119,
-    124,
-    130,
-    131,
     133,
     136,
     137,
@@ -41,8 +36,20 @@
     190,
     194,
     196,
-    197
+    197,
+    200,
+    201,
+    204,
+    206,
+    208
   ],
+  "base_records": 560,
+  "base_record_counts": {
+    "blocked_after_review": 3,
+    "valued": 229,
+    "excluded_factual": 328
+  },
+  "revisions_written": 15,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -53,7 +60,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 544,
-  "ledger_sha256": "78bd04c5cdd894c66d1f35a633684081bb876be57fcfeea83b83fe7d5cc5b080",
+  "evaluations_written": 560,
+  "ledger_sha256": "45e8481c599f73422ae44dfb93875037b9776a7d2647a7a975de63218e429a0d",
+  "revisions_sha256": "bf913bf014e163a41e00c0479afc67ab38ec141f2545efb2ebf9e58fce57c1b8",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

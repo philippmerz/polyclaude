@@ -1,0 +1,150 @@
+{
+  "review_index": 448,
+  "condition_id": "0xc52c5192b045fd97d19563af411b18c521f7f7a4bbd5cdec6d86f1717114a262",
+  "criteria_sha256": "bab2ec9ecbada1099f7eb1d63970df5a772ac9abd9ffe8cb42fdf797fe897dd2",
+  "status": "valued",
+  "literal_analysis": "ExactnamedlabR2,Oct12-18UTCPercentage;skipStealth/Others;Absolute/alphabeticaltie;firstOct19display/Oct23ETfallback/noDataOther. Allliteralread; currentrequest/tokenwordingtieforkretained.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings#market-share",
+      "observed_utc": "2026-10-18T11:33:39.004+00:00",
+      "finding": "Primary read browser tooltip and view: currentpartialOct12 vscompleteOct5; Percentage/Absolute andtextrequests scope; namedlabs/excludedOthers distinctions. data/deep_review_20261017/openrouter119_binding_1130.json."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/modality-chart?routeSegment=text",
+      "observed_utc": "2026-10-18T11:36:19.536438+00:00",
+      "finding": "52weeklyrequestpoints; everymodel/providerweeklysum matches. DeepSeek: 1,497,903,548 current displayed requests (24.0419% unrounded-derived share). RawSHAf5a0e9cb72268eda712f870e66bca526a53ef5c846bdd119be6de9fd0285fb6d; cutoffunknown."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5598490",
+      "observed_utc": "2026-10-17T21:00:02.289+00:00",
+      "finding": "Exact capturedCID/question/outcomes/tokens andfullcommonliteraldescription matchfrozen; this is datedOctober17identity/fees/bookreceipt, notcurrentexecution."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0305,
+    "low": 0.001,
+    "high": 0.25,
+    "method": "Primaryjointconditionalrank2scenarios70/20/10, measuredcurrentrequestcounts; subjectivefuture/revisiontails, notcalibrated",
+    "reasoning": "DeepSeek has 1,497,903,548 current displayed requests (24.0419% unrounded-derived share). Its primary runner-up probability is3.05%YES, sensitivity0.1–25%. This is one projection of the joint rank2 distribution, not an independent forecast. Google/OpenAI/DeepSeek are the current leading competitors. Low-rank or undisplayed labs need a very large late reallocation, source revision, or interpretation fork; absence from top-nine does not mean zero usage. Subjective residual-tail mass is explicitly uncalibrated. The ordinary15pp instance sensitivity is YES0.0000/NO0.8195, not a guaranteed floor or a measured five-times-tail license. Both sides and missing depth are priced below. The old1cYES offer has central expected gain0.20104 per10gross shares, but only0.305 expected payout and no defensible positive entry reserve after source/jump uncertainty; the venue1USDminimum requires much more quantity than this descriptive walk. Do not turn a tiny central edge into a certified tail floor.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0361_0480.json.gz",
+    "quote_observed_utc": "2026-10-17T21:00:02.289+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 6,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.0305,
+        "best_bid": 0.001,
+        "best_ask": 0.01,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 11.974,
+        "received_utc": "2026-10-17T21:00:02.289+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.01,
+            "fee_usd": 0.00396
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.10396000000000001,
+        "fee_usd": 0.00396,
+        "break_even_probability_before_carry": 0.010396,
+        "break_even_probability_with_idealized_carry": 0.010401250047745903,
+        "central_expected_profit_usd": 0.20104,
+        "default_10pp_stressed_profit_usd": -0.10396000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.009600000000000001
+      },
+      "No": {
+        "probability": 0.9695,
+        "best_bid": 0.99,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 11.974,
+        "received_utc": "2026-10-17T21:00:02.289+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0003996000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.990400000000001,
+        "fee_usd": 0.0004,
+        "break_even_probability_before_carry": 0.9990400000000002,
+        "break_even_probability_with_idealized_carry": 0.9995445217102799,
+        "central_expected_profit_usd": -0.2954000000000008,
+        "default_10pp_stressed_profit_usd": -1.2954000000000008,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8695,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.896040000000001
+      }
+    }
+  },
+  "verdict": "No entry certified: dated quotes have insufficient robust dollar edge or missing NO depth; preserve both sides and reopen on changed price/source.",
+  "reopen_condition": "Revalue actual displayed request-share rank and full settlement forks on changed late traffic/method/publication, then current minimum-size depth/fees/portfolio/coverage. No high-NO bond entry without measured tail; no independent hedge credit.",
+  "current_description_sha256": "e6c425ee1fbf147061e608d032dfbae1587cc162f1a74a8235f00679aa995c4f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "104895816226867955713601920109686737362048379479976882527294268803703171198004",
+    "50960199406785434255825015258591284599452804283879025375630927646379644509229"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0184",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0198",
+      "receipt_path": "logs/deep_review_20261017/quotes_0361_0480/req_0198.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0361_0480/req_0198.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "joint_model": "research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.json",
+    "before_own_price_assumptions_created_utc": "2026-10-18T11:39:17.653037+00:00",
+    "source_packets": [
+      "data/deep_review_20261017/openrouter119_binding_1130.json",
+      "data/deep_review_20261017/openrouter119_modality_chart_1136.json"
+    ],
+    "priority_followup": false,
+    "case_specific_reserve_for_entry": 0.15,
+    "range_is_not_probability_floor": true
+  },
+  "evaluated_utc": "2026-10-18T11:43:31.596617+00:00",
+  "question": "Will DeepSeek have the second highest OpenRouter market share the week of October 12?",
+  "market_id": "5598490",
+  "valuation_author": "primary_operator",
+  "original_index": 448,
+  "report_sha256": "a174f4d63e160bdc9ecdd1e11f218b47fbeabd5458ec1f5b24afe6767309ea7e"
+}

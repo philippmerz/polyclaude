@@ -1,3 +1,29 @@
+## Current — October 18, 12:15 UTC
+
+The 3,000-condition review has **230 valued, 2 blocked, 328 factual exclusions and
+2,440 pending**. Case 133 is active (one index row is `in_progress`, included in
+pending). There are 560 immutable base records and 15 revisions. [Audit 1215](../data/deep_review_20261017/ledger_audit_1215.json)
+validates identities, report/revision hashes and checkpoint/index. Cases 124, 130
+and 131 are valued at 7%, 59% and 21% YES; none added an order. Case 35 is now valued at 60% YES ([revision](../research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md)); its 53-point Top Models token chart includes Others, distinct from the R2 request-share chart’s 52-week series through partial Oct. 12.
+
+**Case 112:** DEC-0214 remains LIVE and unfilled: five NO at 65¢ ($3.25), last
+verified in the 11:50 snapshot; all eight bids totaled $16.42 there. That proof is
+dated, not a fresh account check. Review at the existing 22:00 UTC check or earlier
+on uncertainty; cancel first. Do not add or reprice.
+
+All 12 OpenRouter R2 cases share the [daily-text revision model](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md):
+Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, across subjective
+dependent branches. The 406-row Oct. 17 endpoint has no exhaustion or cutoff
+guarantee. The revision followed the 11:45 quotes, not price-blind. Case 119’s 52-week request-share
+chart differs from the default token-share API; its 11:45 book was already ~65 minutes
+old. A passive 1¢ price on that stale capture is not a fresh underwritten quote;
+selected NO is 0% after reserve. Case 358’s 1¢ ask has no positive cent-grid passive
+maker price. No R2 order was added.
+
+Keep management within existing checks; add no timer. See [resting orders](resting_orders.md),
+[case 112 entry/pull plan](../research/2026-10-17-deep-review/openrouter_entry_1131.md)
+and [model](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md).
+
 ## Historical checkpoint — October 18, 02:34 UTC
 
 The finite primary review has **200 valued, 2 blocked, 327 factual exclusions and

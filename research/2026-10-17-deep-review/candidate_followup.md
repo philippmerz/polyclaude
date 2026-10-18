@@ -1,11 +1,32 @@
 # Candidate follow-up — dated, not an execution certificate
 
 
-## Current research pointer — October 18, 10:39 UTC
+## Current research pointer — October 18, 12:15 UTC
 
-The checkpoint is 213 valued, 3 blocked, 328 factual exclusions and 2,456 pending across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` are audited at [1039](../../data/deep_review_20261017/ledger_audit_1039.json): 96, 101, 106, 112 valued; 97 factually excluded after official MLB final results. Case 112 records 9% YES, a 0.5–80% range after concentrated-countermodel review and a 15-point reserve that is not a floor. Its dated NO 10-share ask walk is not a current quote or entry approval.
+The effective review has **230 valued, 2 blocked, 328 factual exclusions and
+2,440 pending**; case 133 is active. There are 560 immutable base records and 15
+revisions, counted once. [Audit 1215](../../data/deep_review_20261017/ledger_audit_1215.json)
+validates identities, report/revision hashes, checkpoint and index. Cases 124,
+130 and 131 are valued at 7%, 59% and 21% YES; none added an order. Case 35 is valued at 60% YES ([revision](revisions/0035_20261018T111634872634Z.md)) from the 53-point Top Models token chart including Others, distinct from the R2 request-share chart’s 52-week series through partial Oct. 12. Case 113 stays 53% YES with its timestamp-only correction.
 
-OpenRouter API rows are by model variant, not daily observations. Prior 174.020765561738T/current 168.339264961301T are rolling-week response sums, not five daily observations or displayed fixed-week settlement totals. DeepSeek's 36.824610T/35.888676T rows match chart-rounded 36.8T/35.9T. case 35 remains blocked on missing fixed UTC Monday–Sunday history, not zero; see the [source correction](../../data/deep_review_20261017/openrouter112_source_followup_1030.json). Case 92 remains blocked on unresolved post-creation CME active-month High history. CME CL options challenge old low-oil mass, not physical ICE CLL probability. The separate fallback account reading was at 09:36 UTC and remains dated, not live state.
+All 12 exact R2 lab cases share the [daily-text primary model](models/openrouter_lab_rank2_daily_revision_1215.md).
+Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%; subjective,
+dependent branches. The 406-row Oct. 17 endpoint is not proven exhaustive or
+cutoff-complete. The revision followed the 11:45 quotes, not price-blind;
+
+Case 112 DEC-0214 remains LIVE/unfilled NO 5 at 65¢ ($3.25), last verified in the
+11:50 snapshot; eight bids there totaled $16.42. That proof is dated, not a new
+check. Pull at the existing 22:00 UTC check or earlier on uncertainty; cancel first.
+Case 119’s request-share chart differs from the default token-share API; its 11:45
+book was already ~65 minutes old. A passive 1¢ price on that stale capture is not a
+fresh underwritten quote; selected NO is 0% after reserve. Case 358’s 1¢ ask has no
+positive cent-grid passive maker price. No R2 order is approved. See the [case 119
+revision](revisions/0119_20261018T120931166457Z.md), [model](models/openrouter_lab_rank2_daily_revision_1215.md),
+[112 entry/pull plan](openrouter_entry_1131.md) and [dated account/order proof](../../data/deep_review_20261017/openrouter112_postsubmit_1152.json).
+
+Anonymous public Pyth history follow-up (no cookie or API key) recovers 13,440 eligible CLLX6 plus 2,640 CLLZ6 minute bars, without a high at or above $105 in the retrieved sample. Earlier broad HTTP 200 responses returned 4,081 X6 and 1,881 Z6 bars but omitted earlier intervals; narrow requested windows recovered the gaps, and the exact truncation/capping mechanism is unproven. The independent calendar check found 16,080 expected eligible regular-session minutes with zero missing/extras after excluding the old X6 roll-boundary bar. Special-notice/global and event-window coverage remain qualified. See [history packet](../../data/deep_review_20261017/pyth113_history_gap_retrieval_1100.json) and [case 113 revision](revisions/0113_20261018T105834003724Z.md).
+
+The [112 independent account/order verification](../../data/deep_review_20261017/openrouter112_postsubmit_1152.json) is a dated 11:50 UTC snapshot, not a live check. The next operational boundary remains 14:00 UTC.
 
 October18, approximately03:25UTC: [oil-option proxy crosscheck](models/oil_option_proxy_crosscheck_0325.md)
 now supplies corrected preliminary DEC26 CME option premiums, derived total

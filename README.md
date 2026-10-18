@@ -64,8 +64,18 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was delivered in chat and Telegram. The [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
-remains the dated inspection record for that checkpoint. At the 10:39 UTC checkpoint, the frozen 3,000-market review had **213 valued, 3 blocked, 328 factual exclusions and 2,456 pending** across 544 records; case 113 is active and included in pending. This is progress, not a new milestone notification. Since pushed HEAD `33e9fac`, five records were appended: cases 96, 101, 106 and 112 valued; 97 factually excluded after official final MLB results. Case 112 is a priority investigation, not entry approval; its 9% YES estimate has a 0.5–80% sensitivity range after a concentrated countermodel, and the 15-point reserve is not a floor. Case 92 remains blocked because its complete post-creation CME active-month daily-high history is unresolved. The live [index](research/2026-10-17-deep-review/INDEX.md), [checkpoint](notes/deep_review_checkpoint.json) and [audit 1039](data/deep_review_20261017/ledger_audit_1039.json) govern status.
+and [milestone-200 report](research/2026-10-17-deep-review/MILESTONE_200.md)
+remain dated inspection records. At the 12:15 UTC checkpoint, the frozen review has
+**230 valued, 2 blocked, 328 factual exclusions and 2,440 pending**; case 133 is
+active and included in pending. It contains 560 immutable base records and 15
+append-only revisions, each condition counted once. [Audit 1215](data/deep_review_20261017/ledger_audit_1215.json)
+checks record/revision identities and hashes, the checkpoint and all 3,000 index
+rows (2,439 pending plus active 133). Cases 124, 130 and 131 were valued at 7%,
+59% and 21% YES; none added an order. Case 35 is now valued at 60% YES
+([revision](research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md));
+case 113 keeps its timestamp-only correction.
+The [effective index](research/2026-10-17-deep-review/INDEX.md) and
+[checkpoint](notes/deep_review_checkpoint.json) govern resumption.
 
 Nine valuations were added after milestone 200: 1602, 1607, 1826, 1910, 2058,
 2077, 2153, 2822 and 2962. All 15 exact conditions in the compound source
@@ -87,7 +97,17 @@ could not establish whether $147.27 had already been exceeded; its current price
 and headline search do not prove no prior breach. The 03:00 CME browser timestamp
 is approximate page-read time, not a timed HTTP capture; packet 0238 retains its
 separate timed receipt. See [case 92](research/2026-10-17-deep-review/evaluations/0092.md)
-and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json). Case 96 was completed at 0.5% YES, with no entry; its full rule, forecast, source analysis and dated quote economics are in [case 0096](research/2026-10-17-deep-review/evaluations/0096.md). Audit [0316](data/deep_review_20261017/ledger_audit_0316.json) checks its frozen identity and report hash, the 540-record ledger, CSV/checkpoint and protected financial files. The newer [oil option proxy crosscheck](research/2026-10-17-deep-review/models/oil_option_proxy_crosscheck_0325.md) adds preliminary CME CL DEC26 American-option sensitivities; they challenge the low-oil mass but do not estimate physical ICE Europe WTI/Pyth CLL probabilities or replace the dated joint cases. The separate [Oct. 18 fallback](research/2026-10-18-fallback-checkin.md) completed at 10:00 UTC; its 09:36 bankroll and order figures are dated, not a live account check. OpenRouter source correction: the public weekly API is a rolling-week, one-row-per-model-variant ranking; its 174.020765T and 168.339265T row sums are neither five daily observations nor displayed settlement totals. The DeepSeek rows match rounded displays 36.8T/35.9T. case 35 remains blocked on unavailable fixed Monday–Sunday history, not zero; see [case 112 source follow-up](data/deep_review_20261017/openrouter112_source_followup_1030.json).
+and [incremental audit 0305](data/deep_review_20261017/ledger_audit_0305.json). Case 96 was completed at 0.5% YES, with no entry; its full rule, forecast, source analysis and dated quote economics are in [case 0096](research/2026-10-17-deep-review/evaluations/0096.md). The newer [oil option proxy crosscheck](research/2026-10-17-deep-review/models/oil_option_proxy_crosscheck_0325.md) adds preliminary CME CL DEC26 American-option sensitivities. They challenge the low-oil mass but do not estimate physical ICE Europe WTI/Pyth CLL probabilities or replace the dated joint cases.
+
+The separate [Oct. 18 fallback](research/2026-10-18-fallback-checkin.md) completed at 10:00 UTC. Its 09:36 bankroll and order figures are dated, not a live account check.
+
+OpenRouter’s official Top Models chart supplies 53 consecutive weekly points (Oct. 13, 2025–Oct. 12, 2026), including Others. Case 35 is valued at 60% YES ([revision](research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md)); this token chart is distinct from the R2 request-share chart’s 52-week series through partial Oct. 12. UI inspection confirmed the displayed total is rounded independently from the series lines; “Weekly Pace” is a separate projection, and `cachedAt` is a forecast reference, not a proven observation cutoff.
+
+**Case 112:** 11% YES/89% NO with a 15-point reserve. DEC-0214 was last verified at 11:50 UTC as a LIVE, unfilled five-share NO bid at 65¢ ($3.25 risk). The same dated inventory showed eight bids totaling $16.42; block 95,745,917 showed $23.446890 pUSD, zero case balances and $7.026890 after bids. This is not a newer account check. Pull at the existing 22:00 UTC check or earlier on uncertainty; cancel first.
+
+**OpenRouter R2:** The 12 exact cases now share the [daily-text revision model](research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md): Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, in subjective dependent branches. The Oct. 17 endpoint returned 406 model-variant rows totaling 204,399,302 Google and 154,821,839 OpenAI requests; it is not guaranteed exhaustive or cutoff-complete. This revision followed the 11:45 quotes, not price-blind.
+
+Case 119’s request-share chart differs from the default token-share API. Its 11:45 book was already about 65 minutes old; the helper computes a passive 1¢ price on that stale capture, not a fresh underwritten quote. Case 119’s selected NO is 0% after reserve. Case 358’s 1¢ ask has no positive cent-grid passive maker price. No new order was approved. See the [chart audit](data/deep_review_20261017/openrouter_chart_display_semantics_1100.json), [case 119 revision](research/2026-10-17-deep-review/revisions/0119_20261018T120931166457Z.md), [case 112 revision](research/2026-10-17-deep-review/revisions/0112_20261018T111722752018Z.md) and [catalyst check](data/deep_review_20261017/openrouter112_catalyst_1120.json); catalyst claims remain advisory.
 
 Case 64 is valued at 30% YES, with a 5–80% range and a 20-point reserve. Root’s
 review of four recent channel images/poster did not establish an authenticated,

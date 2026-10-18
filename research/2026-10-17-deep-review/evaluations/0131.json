@@ -1,0 +1,199 @@
+{
+  "review_index": 131,
+  "condition_id": "0x15e8b539b6e6bed3285dbabb6fa3de5c528e562a089edda1ba7c0dcb5a073657",
+  "criteria_sha256": "0ed36ea1e59500d6ca692c97555731bc8b2e417cd2cd4e29929cb33c4c823fb4",
+  "status": "valued",
+  "literal_analysis": "Complete literal read: ceases Albania PM for any period fromMar5 creation–Dec31ET; predeadline resignation/removal announcement qualifies even if effective later; official/credible reporting. Protest or task delegation alone does not suffice.",
+  "evidence": [
+    {
+      "url": "https://www.kryeministria.al/newsroom/reagim-i-kryeministrit-edi-rama-5/",
+      "observed_utc": "2026-10-18T11:55:58+00:00",
+      "finding": "The official page labels the statement as a response by Prime Minister Edi Rama and dates it Oct 16. Rama characterizes the disturbances as political opposition activity rather than a student protest, while acknowledging that students and citizens have legitimate demands for better living conditions and that problems need addressing. The page makes no resignation/removal announcement. Source date: 2026-10-16. Receipt/rendering limitations in data/deep_review_20261017/albania131_current_facts_1155.json"
+    },
+    {
+      "url": "https://apnews.com/article/albania-protests-edi-rama-jared-kushner-9f0ce30c446aa9f273068b98d9f40b14",
+      "observed_utc": "2026-10-18T11:55:58+00:00",
+      "finding": "AP reported clashes near the PM’s office as anti-government protests entered a fifth day; it attributed figures of 167 arrests and 132 injured officers to police, and reported seven officers suspended pending investigations. It said protests call for Rama’s resignation amid allegations of corruption and opposition to a proposed coastal development linked to an investment firm founded by Jared Kushner. AP reported that Rama has ruled out resigning. These are attributed claims/reporting, not a court finding or a resignation notice. Source date: 2026-10-17. Receipt/rendering limitations in data/deep_review_20261017/albania131_current_facts_1155.json"
+    },
+    {
+      "url": "https://www.parlament.al/lajme/e7e07a4c-1e7a-43e3-b2f4-c6940368a55a",
+      "observed_utc": "2026-10-18T11:55:58+00:00",
+      "finding": "The official rendered notice says the Conference considered a draft work programme for Oct 19–Nov 27 and draft calendar for Oct 19–Nov 6, did not reach agreement, and referred the matter to a plenary vote. The notice does not give that vote’s date/time or state that it is a confidence vote. This is the clearest official near-term institutional catalyst located. Source date: 2026-10-13. Receipt/rendering limitations in data/deep_review_20261017/albania131_current_facts_1155.json"
+    },
+    {
+      "url": "https://www.parlament.al/struktura/332f2692-f708-41aa-8059-2b8d2143bca1",
+      "observed_utc": "2026-10-18T11:55:58+00:00",
+      "finding": "The rendered official listing includes a Democratic Party group leader’s request for an urgent interpellation with Prime Minister Edi Rama about institutional responsibilities concerning former intelligence-service director Vlora Hyseni. The source extract identifies an interpellation request/document; it does not identify a no-confidence motion or removal vote, and no disposition was confirmed in this bounded pass. Source date: 2026-10-15. Receipt/rendering limitations in data/deep_review_20261017/albania131_current_facts_1155.json"
+    },
+    {
+      "url": "https://www.kryeministria.al/en/newsroom/kryeministri-rama-mberriti-ne-qendren-europiane-te-konventave-per-mbylljen-e-negociatave-per-kapitullin-e-20-te-ndermarrjet-dhe-politikat-industriale/",
+      "observed_utc": "2026-10-18T11:55:58+00:00",
+      "finding": "The Oct13 government page calls Rama Prime Minister and reports he spoke on Albania’s EU-accession negotiations; he said the government’s plan was ambitious and that it intended to close more chapters within the year. It is a dated in-office marker and not a confidence/resignation announcement. Source date: 2026-10-13. Receipt/rendering limitations in data/deep_review_20261017/albania131_current_facts_1155.json"
+    },
+    {
+      "url": "https://kqz.gov.al/lajme/raportimi-i-kshz-ne-kuvendin-e-shqiperise-mbi-veprimtarine-e-kqz-per-vitin-2025",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "The CEC report gives final 2025 parliamentary allocation: Socialist Party of Albania 83 seats; Democratic Party–Alliance for a Great Albania coalition 50; Social Democratic Party 3; Mundësia 2; Lëvizja Bashkë 1; Nisma Shqipëria Bëhet coalition 1. These sum to 140. This is certified/election allocation, not a current roll-call count. Source date: 2026-06-30; election held 2025-05-11. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    },
+    {
+      "url": "https://www.parlament.al/deputet/269a0381-45b7-40e7-b95e-9f93d27201c0",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "The Parliament profile identifies Koçeku as elected for Shkodër, political subject “PS” according to KQZ, and current parliamentary group “Deputies outside parliamentary groups.” Thus at least one PS-elected member remains an MP but has left the PS parliamentary group. This is a directly observed current affiliation change, not a resignation of her parliamentary mandate. Source date: current profile read 2026-10-18; browser result crawled last week. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    },
+    {
+      "url": "https://www.investing.com/news/world-news/our-land-our-albania-young-lawmaker-demands-new-future-as-protests-rage-4955350",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "Reuters describes Koçeku as an independent MP who joined protests calling for Rama to step down; it reports Rama told Reuters he would not step down and said governments change through elections. This is attributed secondary reporting and does not establish a no-confidence motion or vote. Source date: published 2026-10-17 04:43; updated 10:48 UTC. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    },
+    {
+      "url": "https://parlament.al/lajme/f5eacb71-bb12-4c01-a8d3-22924f98d06d",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "The Parliament report says a territorial-administration bill passed 85–34 (no abstentions). It also says a Democratic Party request for a parliamentary debate on institutional responsibilities related to the former intelligence-service director was rejected 76–36 (no abstentions), and an urgent interpellation request was rejected 74–26 (no abstentions). These were bills/debate/interpellation procedural votes, not a confidence or no-confidence vote. Source date: 2026-10-08. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    },
+    {
+      "url": "https://ntv.al/te-gjithe-ne-rresht-reforma-e-territorit-miratohet-me-85-vota/",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "The report attributes the 85 affirmative votes to all Socialist parliamentary-group members plus three MPs affiliated with Tom Doshi. Its implication is a reported 82-member PS group at that vote, consistent with the one PS-elected member who had left the group. This attribution is secondary and concerns support for that territorial bill, not a confidence vote or guaranteed future coalition support. Source date: 2026-10-09; publication clock timezone not specified in the source excerpt. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    },
+    {
+      "url": "https://www.parlament.al/lajme/e7e07a4c-1e7a-43e3-b2f4-c6940368a55a",
+      "observed_utc": "2026-10-18T12:07:20.344437+00:00",
+      "finding": "The official notice says the Conference discussed a proposed parliamentary programme for Oct. 19–Nov. 27 and calendar for Oct. 19–Nov. 6, failed to agree, and sent them to plenary vote. The notice does not call that vote a confidence question. Source date: 2026-10-13. Receipt/rendering limitations in data/deep_review_20261017/albania131_parliament_control_1210.json"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.21,
+    "low": 0.05,
+    "high": 0.6,
+    "method": "Primary subjective regime scenarios, not an empirical survival model.",
+    "reasoning": "Rama remains in office and rejects resignation in Oct16 official/Oct17 wire statements. Certified2025 PS83/140 is historical; current official member profile shows Koceku outside parliamentary groups. Oct8 policy bill85 votes and secondary82PS+3 attribution support recent institutional resilience, but predate current unrest and are not confidence votes/current guaranteed support. Oct17 wires describe violent multi-day youth protests and corruption/land-development grievances, a substantive near-term exit risk. Any formal departure for any period, or predeadline resignation/removal announcement effective later, qualifies. Parliament need not actually remove him beforeyearend. Primary assigns70/25/5 contained/escalation/crisis regimes, probabilities6/50/90, yielding21.2%, rounded21. A broad5–60% range recognizes unmeasured elite/security shifts and source gaps.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.21,
+        "best_bid": 0.27,
+        "best_ask": 0.28,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.105,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.28,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.8000000000000003,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.28,
+        "break_even_probability_with_idealized_carry": 0.2817726644011768,
+        "central_expected_profit_usd": -0.7000000000000002,
+        "default_10pp_stressed_profit_usd": -1.7000000000000004,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.10999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.6236
+      },
+      "No": {
+        "probability": 0.79,
+        "best_bid": 0.72,
+        "best_ask": 0.73,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.105,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 6.18,
+            "price": 0.73,
+            "fee_usd": 0.0
+          },
+          {
+            "shares": 3.8200000000000003,
+            "price": 0.75,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 7.3764,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.7376400000000001,
+        "break_even_probability_with_idealized_carry": 0.7423099577460145,
+        "central_expected_profit_usd": 0.5236000000000001,
+        "default_10pp_stressed_profit_usd": -0.47639999999999993,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.6900000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.199999999999999
+      }
+    }
+  },
+  "verdict": "No entry: YES28c negative centrally; NO10-share cost7.37640 yields+$0.52360 central but-$0.97640 at selected64% stress. Historical83 seats not treated as current unchanged support.",
+  "reopen_condition": "Re-review actual confidence motion/result, further PS defections, party/security change or official departure notice; fresh makerNO<=63c/5shares only with current conservative probability and all gates. Unresolved programme vote is not confidence proof.",
+  "current_description_sha256": "e2f098dfd8abc085522588a32268eb881fb34b08019c697358181fcd6a6a46cf",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "145045208111386316454715843654273728653285860323010151305513018102171278805",
+    "104599705860847796247766398935959507190415800100871258779442628086318203743297"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0012",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0131_primary_before_quote_1220.json",
+    "source_packets": [
+      "data/deep_review_20261017/albania131_current_facts_1155.json",
+      "data/deep_review_20261017/albania131_parliament_control_1210.json"
+    ],
+    "raw_p_yes": 0.212,
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_stress_yes": 0.06,
+    "selected_stress_no": 0.64,
+    "selected_yes_taker_profit_usd": -2.2,
+    "selected_no_taker_profit_usd": -0.9764,
+    "priority_followup": false,
+    "entry_approved": false
+  },
+  "evaluated_utc": "2026-10-18T12:11:18.753200+00:00",
+  "question": "Edi Rama out as Albania PM in 2026?",
+  "market_id": "1503873",
+  "valuation_author": "primary_operator",
+  "original_index": 131,
+  "report_sha256": "0e0e044c4ac851860318901d0ccccfabec78d4fb2dbc029baf2b30f4af2177e4"
+}

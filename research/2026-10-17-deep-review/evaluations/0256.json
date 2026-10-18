@@ -1,0 +1,150 @@
+{
+  "review_index": 256,
+  "condition_id": "0xf7569590d5ed9df4a0d4ae209b9e3f4d508c322a2c4f44d7ef56f009b3159a86",
+  "criteria_sha256": "79f6eca9b11a235e4ba7c7a5f6dc73dd8727d0ea9696b97ba0791a06c69a6d4b",
+  "status": "valued",
+  "literal_analysis": "ExactnamedlabR2,Oct12-18UTCPercentage;skipStealth/Others;Absolute/alphabeticaltie;firstOct19display/Oct23ETfallback/noDataOther. Allliteralread; currentrequest/tokenwordingtieforkretained.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings#market-share",
+      "observed_utc": "2026-10-18T11:33:39.004+00:00",
+      "finding": "Primary read browser tooltip and view: currentpartialOct12 vscompleteOct5; Percentage/Absolute andtextrequests scope; namedlabs/excludedOthers distinctions. data/deep_review_20261017/openrouter119_binding_1130.json."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/modality-chart?routeSegment=text",
+      "observed_utc": "2026-10-18T11:36:19.536438+00:00",
+      "finding": "52weeklyrequestpoints; everymodel/providerweeklysum matches. Z.ai: 780,662,003 current displayed requests (12.5299% unrounded-derived share). RawSHAf5a0e9cb72268eda712f870e66bca526a53ef5c846bdd119be6de9fd0285fb6d; cutoffunknown."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5598509",
+      "observed_utc": "2026-10-17T20:37:19.553+00:00",
+      "finding": "Exact capturedCID/question/outcomes/tokens andfullcommonliteraldescription matchfrozen; this is datedOctober17identity/fees/bookreceipt, notcurrentexecution."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.014,
+    "low": 0.0005,
+    "high": 0.3,
+    "method": "Primaryjointconditionalrank2scenarios70/20/10, measuredcurrentrequestcounts; subjectivefuture/revisiontails, notcalibrated",
+    "reasoning": "Z.ai has 780,662,003 current displayed requests (12.5299% unrounded-derived share). Its primary runner-up probability is1.4%YES, sensitivity0.05–30%. This is one projection of the joint rank2 distribution, not an independent forecast. Google/OpenAI/DeepSeek are the current leading competitors. Low-rank or undisplayed labs need a very large late reallocation, source revision, or interpretation fork; absence from top-nine does not mean zero usage. Subjective residual-tail mass is explicitly uncalibrated. The ordinary15pp instance sensitivity is YES0.0000/NO0.8360, not a guaranteed floor or a measured five-times-tail license. Both sides and missing depth are priced below. The old1.1cYES offer earns only0.02564 central per10gross shares before operations, below0.05;15pp stress loses the cost. Current roughly99cNO also lacks central edge. Neither side is dismissed by title or a small-model screen.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0241_0360.json.gz",
+    "quote_observed_utc": "2026-10-17T20:37:19.553+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 6,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.014,
+        "best_bid": 0.001,
+        "best_ask": 0.011,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 28.633,
+        "received_utc": "2026-10-17T20:37:19.553+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.011,
+            "fee_usd": 0.0043516
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.11435999999999999,
+        "fee_usd": 0.00436,
+        "break_even_probability_before_carry": 0.011435999999999998,
+        "break_even_probability_with_idealized_carry": 0.0114417752545231,
+        "central_expected_profit_usd": 0.025640000000000024,
+        "default_10pp_stressed_profit_usd": -0.11435999999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.009600000000000001
+      },
+      "No": {
+        "probability": 0.986,
+        "best_bid": 0.989,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 28.633,
+        "received_utc": "2026-10-17T20:37:19.553+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0003996000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.990400000000001,
+        "fee_usd": 0.0004,
+        "break_even_probability_before_carry": 0.9990400000000002,
+        "break_even_probability_with_idealized_carry": 0.9995445217102799,
+        "central_expected_profit_usd": -0.13040000000000163,
+        "default_10pp_stressed_profit_usd": -1.1304000000000016,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.886,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.88564
+      }
+    }
+  },
+  "verdict": "No entry certified: dated quotes have insufficient robust dollar edge or missing NO depth; preserve both sides and reopen on changed price/source.",
+  "reopen_condition": "Revalue actual displayed request-share rank and full settlement forks on changed late traffic/method/publication, then current minimum-size depth/fees/portfolio/coverage. No high-NO bond entry without measured tail; no independent hedge credit.",
+  "current_description_sha256": "e6c425ee1fbf147061e608d032dfbae1587cc162f1a74a8235f00679aa995c4f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "23864884866183648850794673093459931598435967612533112717226622303482826549158",
+    "1345235010357458069182647529780705497309167400293524402979805410255661892341"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0016",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0021",
+      "receipt_path": "logs/deep_review_20261017/quotes_0241_0360/req_0021.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0241_0360/req_0021.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "joint_model": "research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.json",
+    "before_own_price_assumptions_created_utc": "2026-10-18T11:39:17.653037+00:00",
+    "source_packets": [
+      "data/deep_review_20261017/openrouter119_binding_1130.json",
+      "data/deep_review_20261017/openrouter119_modality_chart_1136.json"
+    ],
+    "priority_followup": false,
+    "case_specific_reserve_for_entry": 0.15,
+    "range_is_not_probability_floor": true
+  },
+  "evaluated_utc": "2026-10-18T11:43:29.745998+00:00",
+  "question": "Will Z.ai have the second highest OpenRouter market share the week of October 12?",
+  "market_id": "5598509",
+  "valuation_author": "primary_operator",
+  "original_index": 256,
+  "report_sha256": "85f6d6415437e519349de5b47f92093fd94b6eab0090b1a4d824dc77369e18e3"
+}

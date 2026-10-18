@@ -1,0 +1,78 @@
+{
+  "authored_utc": "2026-10-18T12:05:14.703343+00:00",
+  "review_index": 130,
+  "primary_owner": true,
+  "source_packet": "data/deep_review_20261017/treasury130_current_facts_1145.json",
+  "source_raw_sha256": "e3ef955c9440a363dabb2ad4440030fcf03354b17182253551667528953e2d06",
+  "root_reparsed_all_199_rows": true,
+  "historical_diagnostics": [
+    {
+      "n_changes": 20,
+      "daily_sd_percentage_points": 0.05844250435932281,
+      "daily_mean_percentage_points": 0.005499999999999972
+    },
+    {
+      "n_changes": 40,
+      "daily_sd_percentage_points": 0.053615439796903495,
+      "daily_mean_percentage_points": 0.013500000000000002
+    },
+    {
+      "n_changes": 60,
+      "daily_sd_percentage_points": 0.05088371588605617,
+      "daily_mean_percentage_points": 0.007999999999999991
+    },
+    {
+      "n_changes": 198,
+      "daily_sd_percentage_points": 0.04921829067953049,
+      "daily_mean_percentage_points": 0.005808080808080806
+    }
+  ],
+  "last_observation": {
+    "date": "2026-10-16",
+    "5yr_pct": "4.89"
+  },
+  "qualifying_window_max": {
+    "date": "2026-09-30",
+    "pct": 5.09
+  },
+  "prior_hit_found": false,
+  "future_daily_observations_assumed": 51,
+  "calendar_note": "Weekdays Oct19–Dec31 excluding Nov11, Nov26 and Dec25; planning assumption, not certified publication calendar.",
+  "latent_threshold": 5.095,
+  "threshold_note": "Approximate two-decimal displayed-rate rounding; sensitivity around this convention is smaller than regime uncertainty. Only actual published 5 Yr>=5.10 qualifies.",
+  "paths_per_branch": 100000,
+  "seed": 20261018130,
+  "branches": [
+    {
+      "name": "plateau",
+      "weight": 0.45,
+      "daily_drift_pp": 0,
+      "daily_sd_pp": 0.055,
+      "daily_observation_hit_probability": 0.54722
+    },
+    {
+      "name": "renewed inflation/term premium",
+      "weight": 0.35,
+      "daily_drift_pp": 0.0035,
+      "daily_sd_pp": 0.065,
+      "daily_observation_hit_probability": 0.71861
+    },
+    {
+      "name": "growth shock/easing",
+      "weight": 0.2,
+      "daily_drift_pp": -0.005,
+      "daily_sd_pp": 0.07,
+      "daily_observation_hit_probability": 0.46592
+    }
+  ],
+  "raw_mixture_p_yes": 0.5909465,
+  "p_yes": 0.59,
+  "low": 0.25,
+  "high": 0.85,
+  "entry_reserve": 0.15,
+  "selected_stress_yes": 0.44,
+  "selected_stress_no": 0.26,
+  "probability_basis": "Primary subjective regime mixture with vol near observed5–6bp daily moves. Zero/positive/negative future drifts and weights are deliberately assumed, not estimated transition probabilities. September Fed hike and October14 energy-led CPI support renewed inflation branch; weak payrolls and recent yield retreat support easing branch. Avoid mechanically extrapolating the40-day1.35bp/day trend.",
+  "limitations": "One source vintage, no revision history; iid Gaussian daily shocks with piecewise fixed regime, no stochastic volatility or calibrated event jumps, approximate51-day calendar/rounding. Range and reserve are judgment sensitivities, not confidence intervals/bounds. No off-chain Treasury trade contemplated; this is an on-chain exact named-source condition.",
+  "ordering": "Complete literal, official series, all199 source rows and macro facts read/reparsed; this file saved before own-price economics call for130."
+}

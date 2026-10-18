@@ -1,0 +1,179 @@
+{
+  "review_index": 113,
+  "condition_id": "0x33f529b87bb00a1ff2a948694a0b72cb67f8e267246c9e7658bb6198eb2d9af4",
+  "criteria_sha256": "0944ccf0c6c9c187dd1b301445b591145d33dfaac1c61ca6c4d7dec970b1e11f",
+  "status": "valued",
+  "literal_analysis": "Entireunrounded105inclusivePythCLL1mactiveICEtouch/Octoberqualifyingsessions/finalthreesessionroll/conditionalICEfallback/structuraladjustments/notradeNO read; rootappliedroll andfullminutecoverage.",
+  "evidence": [
+    {
+      "url": "https://app.pyth.com/explore?search=CLL",
+      "observed_utc": "2026-10-18T10:52:39.756817+00:00",
+      "finding": "Anonymous public UI history plus narrow windows recovered exact X6/Z6 minute path. Primary verified16080 active regular-session bars, no>=105, lastZ6close99.0475; source receipts and every timestamp retained. Broad-response truncation and earlier419 are not nonexistence proof."
+    },
+    {
+      "url": "https://www.ice.com/products/213/WTI-Crude-Futures/expiry",
+      "observed_utc": "2026-10-17T22:58:20.897320+00:00",
+      "finding": "Official Nov26LTD Oct19 andDec26LTD Nov19 bind literal third-to-last-session roll toOct15 under normalcalendar; separately reread via browserOct18, no invented timedreceipt for browser."
+    },
+    {
+      "url": "https://www.ice.com/publicdocs/Trading_Schedule.pdf",
+      "observed_utc": "2026-10-18T10:53:00.964036+00:00",
+      "finding": "July2026ICEschedulehasnoOctoberspecialhoursrow; latercircularcoverageincomplete. Primary observedminutegrid matchesregularcalendar."
+    },
+    {
+      "url": "https://www.eia.gov/outlooks/steo/report/global_oil.php",
+      "observed_utc": "2026-10-18T10:52:51.546443+00:00",
+      "finding": "Primary read datedOct6/Oct1forecast: estimatedSeptember4.8m b/d shutins, forecastQ4 4.5m and0.7m inventorydraw, easingprices/workarounds versusconflictvolatility. BrentbasisnotCLL; not105crossingP."
+    },
+    {
+      "url": "https://www.cmegroup.com/daily_bulletin/current/Section63_Energy_Options_Products.pdf",
+      "observed_utc": "2026-10-18T02:55:37.513720+00:00",
+      "finding": "Actual timed public HTTP receipt for Oct16 PRELIMINARY DEC26 AmericanLO option bulletin: received02:55:37.513720UTC, rawSHA60c956d6…7cc1ea5. European/unitdiscount/formulaexpiry approximation yields47–52%annualsigma; differentCMEbasis, notphysicalPythvol. Supersedes the original arbitrary02:45 editorial approximation."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4951227",
+      "observed_utc": "2026-10-18T10:46:17.936304+00:00",
+      "finding": "Exact current fulltext/CID/outcomes/tokens match; open/acceptingmetadata, noownpricesdisplayed. Notexecutionstatuscertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.53,
+    "low": 0.2,
+    "high": 0.8,
+    "method": "Primary subjective barrier model anchored by exact roll-correct Pyth minute history and last99.0475 close, with separately labelled CME option-volatility proxy and supply/conflict jump uncertainty.",
+    "reasoning": "All16080 expected regular-session active-contract minutes Oct1–16 are present and no High>=105; exclude oldX6 Oct15 boundary row. Future-only barrier model is now justified for captured source path, subject to laterrevisions. Last eligible historical close99.0475 atOct16 21:59Z. From that priced Friday close to finalOctoberFridayOct30 close is14calendar days, including unobserved weekend/open risk; not a claim14daysremain fromSunday. Approximate diffusion parameterization places option-derived totalvariance into eligible-session path, not an assertion weekend/closed highs qualify. 50% annualvol is a judgement near47–52% derived October16CMECLDEC26American-option proxy, not measured Pyth physicalvol. EIAOct6 forecasts easing fromearlyOctober but ongoing MiddleEast shut-ins/inventorydraws/tanker risk; Brent105forecast is notWTIbarrier. Illustrative80%diffusion/10%immediateup15%/10%immediatedown15% mixture gives~53%touch; weights/jumps/driftareunfitted. Roundingto53%and20–80 sensitivity recognize volatility, physical/riskneutral, monitoring, basis, newsandadjudicationrisk; reserve15points not floor.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:27.845+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 17,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.53,
+        "best_bid": 0.47,
+        "best_ask": 0.48,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.725,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.48,
+            "fee_usd": 0.09984
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 4.89984,
+        "fee_usd": 0.09984,
+        "break_even_probability_before_carry": 0.48998400000000003,
+        "break_even_probability_with_idealized_carry": 0.49068541908486624,
+        "central_expected_profit_usd": 0.4001600000000005,
+        "default_10pp_stressed_profit_usd": -0.5998399999999995,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.43000000000000005,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 4.600359999999999
+      },
+      "No": {
+        "probability": 0.47,
+        "best_bid": 0.52,
+        "best_ask": 0.53,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 4.725,
+        "received_utc": "2026-10-17T18:35:27.845+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.53,
+            "fee_usd": 0.09963999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 5.399640000000001,
+        "fee_usd": 0.09964,
+        "break_even_probability_before_carry": 0.5399640000000001,
+        "break_even_probability_with_idealized_carry": 0.5407369661677539,
+        "central_expected_profit_usd": -0.6996400000000014,
+        "default_10pp_stressed_profit_usd": -1.6996400000000005,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.37,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 5.10016
+      }
+    }
+  },
+  "verdict": "No entry: datedYEScentral edge0.40016 per10 becomes-1.09984 at15ppselectedreserve; NOcentralnegative. Recoveredcompletehistorysupports53%touchforecast, notcurrentexecution.",
+  "reopen_condition": "Freshsource/forecastandallgates; illustrativepassiveYES<=34c orNO<=28c with5sharepilotonlyifprimaryriskassessmentholds; anyverified105hit/sourcechangeforcesrevaluation.",
+  "current_description_sha256": "bfff6022b8048b8840406ce693acc027d9c7c383e9c2b7f13fa27a61f91c0b62",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "92486150847481559635821292273831823790692101017511327793926232995659212100399",
+    "57735192572067100354658864807181782307429092536711511792912600421054437746861"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0138",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0138.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0138.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0146",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0146.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0113_primary_before_quote.json",
+    "primary_coverage_check": "data/deep_review_20261017/work/0113_primary_history_check_1055.json",
+    "history_packet": "data/deep_review_20261017/pyth113_history_gap_retrieval_1100.json",
+    "public_bootstrap_packet": "data/deep_review_20261017/pyth113_public_ui_bootstrap_1050.json",
+    "forward_source_packet": "data/deep_review_20261017/oil113_forward_primary_facts_1055.json",
+    "current_nonprice_identity": "data/deep_review_20261017/oil113_current_identity_1048.json",
+    "option_proxy_crosscheck": "research/2026-10-17-deep-review/models/oil_option_proxy_crosscheck_0325.json",
+    "raw_mixture_p_yes": 0.5302351944130314,
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_stress_yes": 0.38,
+    "selected_stress_no": 0.32,
+    "selected_stressed_yes_taker_profit_usd": -1.09984,
+    "selected_stressed_no_taker_profit_usd": -2.19964,
+    "priority_followup": false,
+    "source_access_inference_corrected": true,
+    "entry_approved": false,
+    "cme_options_exact_receipt": "logs/deep_review_20261017/oil_terminal_data_followup_0238/request_receipts.json#cme_energy_options_current"
+  },
+  "evaluated_utc": "2026-10-18T10:58:34.004059+00:00",
+  "question": "Will WTI Crude Oil (WTI) hit (HIGH) $105 in October?",
+  "market_id": "4951227",
+  "valuation_author": "primary_operator",
+  "original_index": 113,
+  "report_sha256": "bb6cc7ba33eea0e610d7e628f8a79ac3e141a5d92d084d520b5c0e786f480d2e",
+  "revision_reason": "Replace unsupported CME editorial timestamp with the actual timed public receipt; no forecast, economics or financial change.",
+  "prior_report_sha256": "c0bf45836ff748f8e8681faea34f59db922bbbb83dbc956ecc7603cec73a67ca",
+  "report_path": "revisions/0113_20261018T105834003724Z.md",
+  "revision_path": "revisions/0113_20261018T105834003724Z.json"
+}

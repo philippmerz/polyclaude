@@ -1,0 +1,150 @@
+{
+  "review_index": 724,
+  "condition_id": "0xa939bcdf31960bfbd8714c62f0d1d29d03ed6796a861bb0cbec97f0f0bbb2046",
+  "criteria_sha256": "01fff7a79c01cc8817628760917b4401b2a1ca3555caf22f00fdbdd5e44f5dbe",
+  "status": "valued",
+  "literal_analysis": "ExactnamedlabR2,Oct12-18UTCPercentage;skipStealth/Others;Absolute/alphabeticaltie;firstOct19display/Oct23ETfallback/noDataOther. Allliteralread; currentrequest/tokenwordingtieforkretained.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings#market-share",
+      "observed_utc": "2026-10-18T11:33:39.004+00:00",
+      "finding": "Primary read browser tooltip and view: currentpartialOct12 vscompleteOct5; Percentage/Absolute andtextrequests scope; namedlabs/excludedOthers distinctions. data/deep_review_20261017/openrouter119_binding_1130.json."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/modality-chart?routeSegment=text",
+      "observed_utc": "2026-10-18T11:36:19.536438+00:00",
+      "finding": "52weeklyrequestpoints; everymodel/providerweeklysum matches. Nvidia: not separately displayed in current top-nine named labs; it may be inside537,445,681 Others requests. RawSHAf5a0e9cb72268eda712f870e66bca526a53ef5c846bdd119be6de9fd0285fb6d; cutoffunknown."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5598527",
+      "observed_utc": "2026-10-17T21:11:42.557+00:00",
+      "finding": "Exact capturedCID/question/outcomes/tokens andfullcommonliteraldescription matchfrozen; this is datedOctober17identity/fees/bookreceipt, notcurrentexecution."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0005,
+    "low": 1e-05,
+    "high": 0.08,
+    "method": "Primaryjointconditionalrank2scenarios70/20/10, measuredcurrentrequestcounts; subjectivefuture/revisiontails, notcalibrated",
+    "reasoning": "Nvidia has not separately displayed in current top-nine named labs; it may be inside537,445,681 Others requests. Its primary runner-up probability is0.05%YES, sensitivity0.001–8%. This is one projection of the joint rank2 distribution, not an independent forecast. Google/OpenAI/DeepSeek are the current leading competitors. Low-rank or undisplayed labs need a very large late reallocation, source revision, or interpretation fork; absence from top-nine does not mean zero usage. Subjective residual-tail mass is explicitly uncalibrated. The ordinary15pp instance sensitivity is YES0.0000/NO0.8495, not a guaranteed floor or a measured five-times-tail license. Both sides and missing depth are priced below. At the old99.9cNO ask, ten shares have only0.00460 central EV before carry/operations, below the0.05cost hurdle; the low YES side also lacks central edge.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0721_0840.json.gz",
+    "quote_observed_utc": "2026-10-17T21:11:42.557+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 6,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.0005,
+        "best_bid": 0.001,
+        "best_ask": 0.009,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.619,
+        "received_utc": "2026-10-17T21:11:42.557+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.009,
+            "fee_usd": 0.0035676
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.09357,
+        "fee_usd": 0.00357,
+        "break_even_probability_before_carry": 0.009357,
+        "break_even_probability_with_idealized_carry": 0.009361725345975224,
+        "central_expected_profit_usd": -0.08857,
+        "default_10pp_stressed_profit_usd": -0.09357,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.009600000000000001
+      },
+      "No": {
+        "probability": 0.9995,
+        "best_bid": 0.991,
+        "best_ask": 0.999,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.619,
+        "received_utc": "2026-10-17T21:11:42.557+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.999,
+            "fee_usd": 0.0003996000000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.990400000000001,
+        "fee_usd": 0.0004,
+        "break_even_probability_before_carry": 0.9990400000000002,
+        "break_even_probability_with_idealized_carry": 0.9995445217102799,
+        "central_expected_profit_usd": 0.0045999999999999375,
+        "default_10pp_stressed_profit_usd": -0.9954000000000001,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.8995000000000001,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.90643
+      }
+    }
+  },
+  "verdict": "No entry certified: dated quotes have insufficient robust dollar edge or missing NO depth; preserve both sides and reopen on changed price/source.",
+  "reopen_condition": "Revalue actual displayed request-share rank and full settlement forks on changed late traffic/method/publication, then current minimum-size depth/fees/portfolio/coverage. No high-NO bond entry without measured tail; no independent hedge credit.",
+  "current_description_sha256": "e6c425ee1fbf147061e608d032dfbae1587cc162f1a74a8235f00679aa995c4f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "93665309678710764035666744174510204868348158039802570197714949569212952147328",
+    "65689133806525501578695321493606100557439591282234115777279150951909062682980"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0004",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0721_0840/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0721_0840/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "joint_model": "research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.json",
+    "before_own_price_assumptions_created_utc": "2026-10-18T11:39:17.653037+00:00",
+    "source_packets": [
+      "data/deep_review_20261017/openrouter119_binding_1130.json",
+      "data/deep_review_20261017/openrouter119_modality_chart_1136.json"
+    ],
+    "priority_followup": false,
+    "case_specific_reserve_for_entry": 0.15,
+    "range_is_not_probability_floor": true
+  },
+  "evaluated_utc": "2026-10-18T11:43:36.450551+00:00",
+  "question": "Will Nvidia have the second highest OpenRouter market share the week of October 12?",
+  "market_id": "5598527",
+  "valuation_author": "primary_operator",
+  "original_index": 724,
+  "report_sha256": "603705b5e064d85749a15768b8d0aba6da327296192a2a71e7ba9f781c39f0a7"
+}

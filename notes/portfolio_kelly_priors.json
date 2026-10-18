@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-10-11",
+ "_updated": "2026-10-18",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1455,5 +1455,29 @@
   "latest_source_packet": "data/google_current_release_check_0191.json",
   "management": "Revieweach existingtick/earliermaterialnews; cancelfirstonnewGooglemethod/cutoff/list, unknownsourcechangeornewathlete/competitorfactthatunderminesthesis. PullbyNov1 22UTCexistingtick, earlierknownrelease/catalyst. Unannouncedpublicationornewscanstillcausefullcashloss. NormalDecembermayfitJanuary,March31missing-listNOcanlocklonger. NoindependenceorhedgeagainstotherGooglecategories.",
   "monitoring": "Warmup01:47; current30broadRSS+20existingGoogleBlognormalbaselineverified0189;3terms promoted01:54:05, normalpostpromotioncycle01:55:22>=309s frompriorverified0192. Sameconfig/alivedaemon; no manualpoll/stateedit/restart/newdaemon/timer. CurrentRSSwindowchangedfromold30; obsoleteYahooNYCFCitemnotmanuallymarkedseen. Nonexhaustivediscoverycoverage."
- }
+ },
+"will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
+  "p_yes": 0.11,
+  "p_no": 0.89,
+  "cluster": "ai-ships-fast-short",
+  "rho_within": 0.75,
+  "cluster_frac": 0.1,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "5763815",
+  "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+  "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+  "rationale": "Primary PYES11%/NO89%, rawYES10.7795%; broad YES0.5-80% sensitivity. All four future calendar-week displayed Totals; 53-point actual chart/history independently bound. Subjective joint growth/regime model, not calibrated floor. Actual entry reserve15pp gives NO74%. Low-variance total centered750T can give73.36%YES and reverse the trade. Read both independent chart advisories; no hedge credit with HLE/other AI risks. rho.75 and10% declared cluster floor are conservative sizing assumptions, not measured exposure/correlation.",
+  "current_assessment": "LIVE unfilledpost-onlyBUY5NO@65c/3.25pUSD, order0x65cc9610fa83badf53ece3522f378d3c8175fe508a91c17903e91b4417332d6c, DEC0214. Independent11:50:21-22UTC completeinventory8BUY/0SELL allLIVE,total16.42; exactauthdetail200matchesCID/NOasset/5original/0matched/5remaining. FixedPolygon95745917 timestamp11:50:23bothCTF0,pUSD23.446890,availableafterallbids7.026890;8matchingreservations,noblocks/orphans. Commitmentnotposition/profit. Retaincentral11/89,15ppreserveNO74; noadd/maxcash3.25. PullOct18 22UTC/earlieruncertainty. DoNOTreplayexecutionwriter.",
+  "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T111722752018Z.md",
+  "current_revision": "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md",
+  "balanced_reviews": [
+    "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
+    "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
+  ],
+  "latest_source_packet": "data/deep_review_20261017/openrouter112_catalyst_primary_1125.json",
+  "management": "Any bid: reverify every existing tick and earlier relevant news; cancel FIRST on uncertain source/rule/measurement/method/pricing/routing/release/forecast facts. Pull by2026-10-18 22:00UTC existing tick, beforeOct19 weekly display; earlier publication or known catalyst. No automatic add/repost. New weekly Totals require revaluation; forecast Weekly Pace is not a realized total or data cutoff. Worst case full3.25cashloss on the actual five-share65c commitment; no independence/hedge credit.",
+  "monitoring": "ExistingPID449/currentcode,35feeds. Googlefeed11:26:09/officialRSS11:28:47 warmedagainstcapturedfirst30IDs/titles; Tier1OpenRouter promoted11:38:13, postpromotionstate11:43:34(>300s) consistentwithnormalreload. Fullsource/data/book rechecks remainmanualexistingticks. 30/feedcap,sourcecaching/cooldowns/unannouncedrouting/privatechanges remain gaps; noperfeedHTTPsuccess telemetry. No newdaemon/timer/manualpoll/stateedit.",
+  "latest_catalyst": "PullOct18 22UTCbeforeOct19firstweeklydisplay; ElevenLabsdiscountendsOct19 15UTC; firsttargetweekOct26. FinalNov23display/Nov27ETfallback. Currentfuturelaunchdatesnotestablishedbyboundedofficialnews; unannouncedchanges remain."
+}
 }

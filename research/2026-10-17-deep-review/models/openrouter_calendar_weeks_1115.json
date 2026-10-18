@@ -1,0 +1,407 @@
+{
+  "schema": "primary_openrouter_joint_model.v2",
+  "written_utc": "2026-10-18T11:12:57.253983+00:00",
+  "status": "Primary revised source-based joint model. Canonical original cases remain dated; separate revision records adopt probabilities. Known old own-market quotes acknowledged; no fresh current own-book read. No entry approved by this model.",
+  "source_packets": [
+    "data/deep_review_20261017/openrouter112_model_rankings_chart_addendum_1050.json",
+    "data/deep_review_20261017/openrouter_current_cutoff_1103.json",
+    "data/deep_review_20261017/openrouter_chart_live_display_1113.json"
+  ],
+  "constants": {
+    "known_completed_Sep28_plus_Oct5_T": 337.698551582277,
+    "partial_Oct12_raw_T": 152.318277309168,
+    "separate_leaderboard_latest_complete_day_T": 18.33824279449,
+    "ui_pace_added_T": 12.55064685175
+  },
+  "cutoff_model": "45% chart data through prior completeUTCday so oneSundayvolume remains;45% observed official chartpace additional12.550647T is a noisy remaining-volume proxy;10% remaining0\u201336T. These are explicit unresolved-cutoff scenarios, not identified backend fact. Day18.338T is supporteddayresponse-derived aggregate, not history panel.",
+  "growth_regimes": [
+    [
+      "moderation",
+      0.45,
+      0.035,
+      0.065
+    ],
+    [
+      "historical_growth",
+      0.35,
+      0.08,
+      0.095
+    ],
+    [
+      "release_boom",
+      0.1,
+      0.2,
+      0.1
+    ],
+    [
+      "disruption",
+      0.1,
+      -0.15,
+      0.15
+    ]
+  ],
+  "growth_correlation": "One regime shared across5futureweeks; weeklyGaussian innovation correlation.25 via sharednormal. Dispersions near recent12wkSD.092/4wk.058 but weights/drifts/not backtested; moderation reflects latestgrowth3.6% andcurrentpossible plateau.",
+  "revision_and_rounding_sensitivity": "95%Normal(0,2T),5%Normal(0,10T) additive4weektotal; subjective, not verifieddisplayroundingbound or revisiondistribution.",
+  "base": {
+    "current_week": {
+      "n": 200000,
+      "p_in_band": 1.0,
+      "mean_T": 168.64724697687197,
+      "median_T": 168.06124617373035,
+      "p05_T": 159.7174879378035,
+      "p95_T": 180.1362064303612
+    },
+    "case35": {
+      "n": 200000,
+      "p_in_band": 0.5954,
+      "mean_T": 684.763647416538,
+      "median_T": 683.6414944253107,
+      "p05_T": 645.3728583646671,
+      "p95_T": 727.7423023346281
+    },
+    "case112": {
+      "n": 200000,
+      "p_in_band": 0.107795,
+      "mean_T": 858.2603320780873,
+      "median_T": 807.8959302684788,
+      "p05_T": 405.4855884310245,
+      "p95_T": 1453.4039111329078
+    },
+    "regime_counts_and_hits": {
+      "moderation": {
+        "n": 89826,
+        "hit35": 55162,
+        "hit112": 15184
+      },
+      "historical_growth": {
+        "n": 70008,
+        "hit35": 47331,
+        "hit112": 5969
+      },
+      "release_boom": {
+        "n": 20274,
+        "hit35": 13019,
+        "hit112": 81
+      },
+      "disruption": {
+        "n": 19892,
+        "hit35": 3568,
+        "hit112": 325
+      }
+    }
+  },
+  "sensitivity": {
+    "full_sunday": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 171.22860640377758,
+        "median_T": 170.6357467861755,
+        "p05_T": 164.47337433889606,
+        "p95_T": 180.10642413226847
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.68826,
+        "mean_T": 690.0270291385244,
+        "median_T": 688.8433208125091,
+        "p05_T": 652.8902009707299,
+        "p95_T": 730.7967977117928
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.10748,
+        "mean_T": 870.3727442141678,
+        "median_T": 819.5427216842421,
+        "p05_T": 413.32305677692875,
+        "p95_T": 1466.3001712155422
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 22587,
+          "hit35": 17062,
+          "hit112": 3793
+        },
+        "historical_growth": {
+          "n": 17367,
+          "hit35": 13170,
+          "hit112": 1472
+        },
+        "release_boom": {
+          "n": 5019,
+          "hit35": 3046,
+          "hit112": 12
+        },
+        "disruption": {
+          "n": 5027,
+          "hit35": 1135,
+          "hit112": 97
+        }
+      }
+    },
+    "remaining_sunday": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 165.6762759660083,
+        "median_T": 164.87741620850707,
+        "p05_T": 159.36924750514171,
+        "p95_T": 174.7316050005165
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.51888,
+        "mean_T": 678.7434426505115,
+        "median_T": 677.5677353301135,
+        "p05_T": 642.2670823874461,
+        "p95_T": 719.0886076617447
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.1117,
+        "mean_T": 843.5596541526801,
+        "median_T": 793.8474261854957,
+        "p05_T": 397.1176134283942,
+        "p95_T": 1431.3303619652017
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 22463,
+          "hit35": 10756,
+          "hit112": 3886
+        },
+        "historical_growth": {
+          "n": 17391,
+          "hit35": 10849,
+          "hit112": 1591
+        },
+        "release_boom": {
+          "n": 5103,
+          "hit35": 3678,
+          "hit112": 39
+        },
+        "disruption": {
+          "n": 5043,
+          "hit35": 661,
+          "hit112": 69
+        }
+      }
+    },
+    "moderation_only": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 168.62039108055797,
+        "median_T": 168.03494595985413,
+        "p05_T": 159.71502609394682,
+        "p95_T": 180.0330738799635
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.6149,
+        "mean_T": 681.325554256477,
+        "median_T": 680.2666782100243,
+        "p05_T": 654.8190961311129,
+        "p95_T": 711.5263538415342
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.16986,
+        "mean_T": 773.103987351708,
+        "median_T": 762.9693107112206,
+        "p05_T": 594.1639447511799,
+        "p95_T": 984.5691209944879
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 50000,
+          "hit35": 30745,
+          "hit112": 8493
+        },
+        "historical_growth": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "release_boom": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "disruption": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        }
+      }
+    },
+    "historical_only": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 168.64005296141357,
+        "median_T": 168.0607129136583,
+        "p05_T": 159.73473549772234,
+        "p95_T": 180.13454958494927
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.67566,
+        "mean_T": 689.9266807846412,
+        "median_T": 688.6036384462586,
+        "p05_T": 656.0854060035659,
+        "p95_T": 728.6450814681176
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.08598,
+        "mean_T": 922.3794931990242,
+        "median_T": 896.8102894424721,
+        "p05_T": 622.4045937919476,
+        "p95_T": 1307.4592316139756
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "historical_growth": {
+          "n": 50000,
+          "hit35": 33783,
+          "hit112": 4299
+        },
+        "release_boom": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "disruption": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        }
+      }
+    },
+    "boom_only": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 168.65265394132345,
+        "median_T": 168.08788570764227,
+        "p05_T": 159.71710987769205,
+        "p95_T": 180.0234278520236
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.6431,
+        "mean_T": 713.359168588699,
+        "median_T": 711.7283966564893,
+        "p05_T": 674.5227521652109,
+        "p95_T": 757.1115518925833
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.00418,
+        "mean_T": 1439.4057535590132,
+        "median_T": 1392.081899507057,
+        "p05_T": 935.329899939808,
+        "p95_T": 2101.3336005710185
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "historical_growth": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "release_boom": {
+          "n": 50000,
+          "hit35": 32155,
+          "hit112": 209
+        },
+        "disruption": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        }
+      }
+    },
+    "disruption_only": {
+      "current_week": {
+        "n": 50000,
+        "p_in_band": 1.0,
+        "mean_T": 168.61567863378517,
+        "median_T": 168.07831090235297,
+        "p05_T": 159.73604042598052,
+        "p95_T": 179.91031109507625
+      },
+      "case35": {
+        "n": 50000,
+        "p_in_band": 0.17738,
+        "mean_T": 653.0291609651302,
+        "median_T": 651.2321324292208,
+        "p05_T": 615.0022790894238,
+        "p95_T": 697.2882390849676
+      },
+      "case112": {
+        "n": 50000,
+        "p_in_band": 0.01458,
+        "mean_T": 430.28301753829805,
+        "median_T": 406.60551419297354,
+        "p05_T": 237.92382410463273,
+        "p95_T": 702.6430909611153
+      },
+      "regime_counts_and_hits": {
+        "moderation": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "historical_growth": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "release_boom": {
+          "n": 0,
+          "hit35": 0,
+          "hit112": 0
+        },
+        "disruption": {
+          "n": 50000,
+          "hit35": 8869,
+          "hit112": 729
+        }
+      }
+    }
+  },
+  "calibration": "Not calibrated posterior, no holdout fit. Historical data provide scale/dispersion context; chosen regime/cutoff weights remain primary judgment.",
+  "joint_risk": "Same futureweeklypaths used for bothcontracts. Sharedtraffic/source/adjudication drivers, no independent forecasts or hedgecredit.",
+  "primary_adopted_p_yes": {
+    "35": 0.6,
+    "112": 0.11
+  },
+  "primary_ranges_and_reserves": {
+    "35": {
+      "low": 0.15,
+      "high": 0.85,
+      "reserve": 0.15
+    },
+    "112": {
+      "low": 0.005,
+      "high": 0.8,
+      "reserve": 0.15
+    }
+  },
+  "strong_countermodel": {
+    "total_median_T": 750,
+    "log_sigma": 0.03,
+    "p_yes": 0.7335745882248493,
+    "note": "Separate model-shape sensitivity, not ignored or mechanically mixed into primary central belief. 15ppentryreserve corresponds roughly24%weight on this alternative relative to11%YES; not a guaranteed calibrationbound."
+  }
+}

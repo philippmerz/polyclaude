@@ -151,12 +151,107 @@ def conservative_sell_fee(
 
 
 def maker_rest_price(best_bid: float, best_ask: float | None, tick: float) -> float:
-    """Where a passive maker BUY actually rests: best_bid+tick, capped one tick
-    under the ask, floored to the 2-dec amount grid (CLOB maker-USD precision —
-    flooring keeps the bid passive; ceiling could cross and turn it taker).
+    """Return the best valid passive maker BUY price on both venue grids.
+
+    CLOB prices must respect the market tick and the signed USD amount's
+    two-decimal precision. Their common grid is the integer LCM of those two
+    increments. Use ``Decimal(str(...))`` so a decimal boundary such as
+    ``.009 + .001 == .01`` is not turned into a false strict inequality by
+    binary floating-point arithmetic.
+
+    Prefer one tick above the best bid when that common-grid price is strictly
+    below the ask. If that cannot fit, use the highest positive common-grid
+    price strictly below the ask. With no ask, use the first common-grid price
+    at/above bid+tick, capped below the binary payout of $1. Raise when no
+    positive valid passive price exists; callers must fail closed before
+    reserving or signing an order.
     """
-    px = best_bid + tick if (best_ask is None or best_bid + tick < best_ask) else best_bid
-    return round(math.floor(round(px * 100, 6)) / 100, 2)
+
+    def decimal_value(value: object, name: str, *, optional: bool = False) -> Decimal | None:
+        if optional and value is None:
+            return None
+        if isinstance(value, bool):
+            raise ValueError(f"invalid {name}: expected a finite decimal")
+        try:
+            number = Decimal(str(value))
+        except Exception as exc:
+            raise ValueError(f"invalid {name}: expected a finite decimal") from exc
+        if not number.is_finite():
+            raise ValueError(f"invalid {name}: expected a finite decimal")
+        return number
+
+    bid_d = decimal_value(best_bid, "best bid")
+    ask_d = decimal_value(best_ask, "best ask", optional=True)
+    tick_d = decimal_value(tick, "tick")
+    assert bid_d is not None and tick_d is not None
+    if not Decimal("0") <= bid_d < Decimal("1"):
+        raise ValueError("invalid best bid: must be in [0, 1)")
+    if ask_d is not None and not Decimal("0") < ask_d <= Decimal("1"):
+        raise ValueError("invalid best ask: must be in (0, 1]")
+    if not Decimal("0") < tick_d <= Decimal("1"):
+        raise ValueError("invalid tick: must be in (0, 1]")
+
+    # Scale all finite decimals to exact integer units. At least two decimal
+    # places are required for the cash grid; additional places come from the
+    # observed tick and book prices.
+    decimals = [bid_d, tick_d] + ([] if ask_d is None else [ask_d])
+    places = max(2, *(max(0, -value.as_tuple().exponent) for value in decimals))
+    scale = 10 ** places
+
+    def units(value: Decimal) -> int:
+        sign, digits, exponent = value.as_tuple()
+        coefficient = int("".join(map(str, digits)) or "0")
+        shift = exponent + places
+        if shift < 0:  # guarded by `places`, retained as a fail-closed invariant
+            raise ValueError("price precision exceeds the common decimal scale")
+        return (-coefficient if sign else coefficient) * (10 ** shift)
+
+    bid_units = units(bid_d)
+    tick_units = units(tick_d)
+    ask_units = None if ask_d is None else units(ask_d)
+    cent_units = scale // 100
+    if tick_units <= 0 or cent_units <= 0:
+        raise ValueError("invalid tick: no representable positive price grid")
+    if bid_units % tick_units:
+        raise ValueError("invalid best bid: price is not aligned to the market tick")
+    if ask_units is not None and ask_units % tick_units:
+        raise ValueError("invalid best ask: price is not aligned to the market tick")
+
+    # A common-grid price is simultaneously a multiple of the venue tick and
+    # one cent. All quantities are integers at the exact decimal scale above.
+    grid_units = math.lcm(tick_units, cent_units)
+
+    def ceil_grid(value_units: int) -> int:
+        return ((value_units + grid_units - 1) // grid_units) * grid_units
+
+    desired_units = bid_units + tick_units
+    candidate_units = ceil_grid(desired_units)
+    if ask_units is None:
+        if candidate_units < scale:
+            rest_units = candidate_units
+        else:
+            # The common grid may place bid+tick exactly at $1. A valid binary
+            # maker price must remain below $1, so use the highest grid point
+            # below the payout boundary instead.
+            rest_units = ((scale - 1) // grid_units) * grid_units
+    else:
+        max_passive_units = ((ask_units - 1) // grid_units) * grid_units
+        if candidate_units <= max_passive_units:
+            rest_units = candidate_units
+        else:
+            # This also preserves bb when bb+tick equals ask, while staying
+            # strictly passive when the ask is between tick/cent grid points.
+            rest_units = max_passive_units
+
+    if rest_units <= 0:
+        raise ValueError("no positive price on both grids is strictly below the ask/payout")
+    if rest_units >= scale:
+        raise ValueError("no valid binary maker price below $1")
+    if rest_units % tick_units or rest_units % cent_units:
+        raise ValueError("internal error: maker price is not on both venue grids")
+    if ask_units is not None and rest_units >= ask_units:
+        raise ValueError("no valid maker price strictly below the best ask")
+    return float(Decimal(rest_units) / Decimal(scale))
 
 
 def effective_entry_cost(mark: float, taker_bps: int, maker_px: float | None = None

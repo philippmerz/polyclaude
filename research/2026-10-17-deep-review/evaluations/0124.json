@@ -1,0 +1,181 @@
+{
+  "review_index": 124,
+  "condition_id": "0xd595eb9b81885ff018738300c79047e3ec89e87294424f57a29a7fa9162bf116",
+  "criteria_sha256": "5b4061c95b851ce01148b2efb7df26056b04c6b668767b3e0e608f4d12023ca5",
+  "status": "valued",
+  "literal_analysis": "Full literal read: official US majority-territory sovereignty/formal governance action by Dec31 ET; joint US–Denmark announcement qualifies before transfer; social posts do not; official sources or credible actual-sovereignty consensus. Security access alone fails; unilateral-action/adjudication fork explicitly valued.",
+  "evidence": [
+    {
+      "url": "https://www.inatsisartut.gl/da/samlinger/oversigt-over-samlinger/2025/em2026/dagsorden/2x/",
+      "observed_utc": "2026-10-18T11:34:45+00:00",
+      "finding": "EM2026 item 249 is Naalakkersuisut’s decision proposal for Greenland to enter the Sep 22 defense-agreement amendment. The agenda records first hearing on Oct 12, referral to the Foreign and Security Policy Committee, and second hearing scheduled for Nov 3, 2026. This is a concrete upcoming parliamentary event before the market deadline. Limit: Agenda states planned date/status as of the captured page; it does not show a final vote or later change."
+    },
+    {
+      "url": "https://www.inatsisartut.gl/media/mk4nthqt/pkt249_em2026_forsvarsaftale_besl-33_da.pdf",
+      "observed_utc": "2026-10-18T11:34:47+00:00",
+      "finding": "The proposal says the trilateral foreign-minister technical high-level working group was established Jan 14, 2026 to address US security concerns; its result was an amendment/supplement to the 1951 Greenland defense agreement signed Sept 22. It states ratification requires parliamentary treatment in Greenland and Denmark; the Danish government expects to wait for Greenland’s parliamentary process before second reading of its Folketing proposal; no US parliamentary ratification is expected. Entry into force is on diplomatic note notifying the US that Greenlandic and Danish parliamentary procedures are complete. Its stated purpose is defense/security cooperation and US access, with respect for Greenlanders and self-determination. Limit: The proposal describes procedure and scope; it does not itself establish ratification, entry into force, transfer, or an agreement for US sovereignty."
+    },
+    {
+      "url": "https://www.inatsisartut.gl/da/samlinger/oversigt-over-samlinger/2025/em2026/dagsorden/12/",
+      "observed_utc": "2026-10-18T11:34:46+00:00",
+      "finding": "Item 87, a separate member motion asking Naalakkersuisut to provide an estimated schedule for when an agreement transferring sovereignty over Greenland would be circulated to Inatsisartut for consent, is marked “Forkastet” (rejected) on Oct 13. The agenda does not say Greenland’s independence process ended; it records this particular request was rejected. Limit: This was a member motion about a potential sovereignty-transfer agreement, separate from item 249’s defense pact. Rejection is not an official agreement/announcement of transfer or proof no future negotiations will occur."
+    },
+    {
+      "url": "https://www.inatsisartut.gl/media/1g2caqxc/pkt87_fm2026_bf33_tidsramme_statsdannelse_sn_1beh_da.pdf",
+      "observed_utc": "2026-10-18T11:34:48+00:00",
+      "finding": "The Naalakkersuisut chair’s response says the coalition’s independence policy is to proceed cautiously, involve the population, and take steps at its own pace and on its own terms; it says the §21 Commission began March 18 and has one year to work on a path to independence, and recommends rejecting the motion for a schedule. The Oct 13 agenda records the motion was subsequently rejected. Limit: This is a dated response from April, not a fresh Oct 18 statement; it concerns Greenlandic independence procedure, not US sovereignty negotiations."
+    },
+    {
+      "url": "https://stm.dk/statsministeren/taler/statsminister-mette-frederiksens-tale-ved-folketingets-aabning-den-6-oktober-2026/",
+      "observed_utc": "2026-10-18T11:34:49+00:00",
+      "finding": "In a dated parliamentary speech, Frederiksen called the recent US arrangement “not an agreement about Greenland, but an agreement with Greenland,” said it fully respected the Kingdom’s sovereignty and Greenlanders’ right to determine their future, and described it as strengthening Arctic/North Atlantic security. This is Denmark’s own characterization as of Oct 6. Limit: Speech is not an update on whether either legislature has since completed procedures; avoid treating rhetoric as a separate legal act."
+    },
+    {
+      "url": "https://www.whitehouse.gov/briefings-statements/2026/10/presidential-message-on-leif-erikson-day/",
+      "observed_utc": "2026-10-18T11:34:49+00:00",
+      "finding": "The President’s message says the September agreement gives the US “permanent control over security in Greenland” and frames this as recognition of Greenland as a US national-security partner. It does not state that Greenland will come under US sovereignty or formal US governance/jurisdiction. Preserve the wording as a US official characterization distinct from territorial sovereignty. Limit: The statement is an official US source but its quoted phrase concerns security, not an explicit transfer of sovereignty under the frozen criteria."
+    },
+    {
+      "url": "https://naalakkersuisut.gl/Nyheder/2026/09/2209_aftale?sc_lang=da",
+      "observed_utc": "2026-10-18T11:34:50+00:00",
+      "finding": "Greenland’s government described the signed arrangement as strengthening Arctic/North Atlantic security, quoted its premier on self-determination, and stated parliamentary procedures were still needed before it entered into force. The Danish statement reproduced there says it respects Danish sovereignty, territorial integrity, and Greenlandic self-determination. Limit: Signing-day status only; later Oct12 proposal and legislative calendar provide the newer process evidence."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Primary subjective 50/50 strict and broader official-action interpretation; no fitted frequency claim.",
+    "reasoning": "Strict branch 2% qualifying future joint sovereignty announcement by Dec31; broader branch 12% allows an official US unilateral governance/jurisdiction act, abrupt deal or adverse adjudication of control language. Equal weights give 7% YES. Existing Sep22 agreement explicitly preserves Danish sovereignty and self-determination; territorial security access does not itself satisfy majority formal US governance. Oct9 security-control rhetoric is not an explicit sovereignty transfer. Announcement before the deadline can qualify even if transfer is later, so the forecast does not require physical accession by year end. Nov3 hearing is a defense-pact catalyst, not proof that a sovereignty transfer is scheduled. Branch probabilities and weights are judgment, not empirical calibration.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false,
+      "explicit_fee_free": true
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 75,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "best_bid": 0.023,
+        "best_ask": 0.024,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.016,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.024,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.24,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.024,
+        "break_even_probability_with_idealized_carry": 0.02415194266295801,
+        "central_expected_profit_usd": 0.4600000000000001,
+        "default_10pp_stressed_profit_usd": -0.24,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.22999999999999998
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "best_bid": 0.976,
+        "best_ask": 0.977,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 7.016,
+        "received_utc": "2026-10-17T19:02:38.874+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.977,
+            "fee_usd": 0.0
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.77,
+        "fee_usd": 0.0,
+        "break_even_probability_before_carry": 0.977,
+        "break_even_probability_with_idealized_carry": 0.9831853325712488,
+        "central_expected_profit_usd": -0.47000000000000064,
+        "default_10pp_stressed_profit_usd": -1.4700000000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.83,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.76
+      }
+    }
+  },
+  "verdict": "No entry. YES2.4c central +$0.46/10 is negative in strict2% and lower1% scenarios; NO97.7c is negative centrally and at selected65% stress. No empirical tail floor supports a cheap-YES ticket.",
+  "reopen_condition": "Re-review Nov3 defense hearing or any new full official agreement/decree/sovereignty announcement; illustrative NO<=64c only with freshly defensible conservative probability and all current gates. YES needs evidence establishing a lower probability above net cost, not rhetoric alone.",
+  "current_description_sha256": "5137529b9bb776afcb40c866ec2608055cf24305df45e7a70efbdca7bdce92cc",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "5161623255678193352839985156330393796378434470119114669671615782853260939535",
+    "57216272564529548464686463691236811991956032201293786790337952253964682584376"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0004",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0024",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0024.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0124_primary_before_quote_1205.json",
+    "source_packets": [
+      "data/deep_review_20261017/greenland124_current_facts_1135.json",
+      "data/deep_review_20261017/geopolitics_extension_sources.json"
+    ],
+    "full_english_agreement_read_by_primary": "logs/deep_review_20261017/geopolitics_extension_sources/greenland_wh_agreement.body.gz",
+    "branch_weights": {
+      "strict": 0.5,
+      "broader": 0.5
+    },
+    "branch_p_yes": {
+      "strict": 0.02,
+      "broader": 0.12
+    },
+    "selected_stress_no": 0.65,
+    "selected_stress_yes": 0,
+    "tail_stress_is_not_calibrated_bound": true,
+    "selected_stressed_no_taker_profit_usd": -3.27,
+    "priority_followup": false,
+    "entry_approved": false
+  },
+  "evaluated_utc": "2026-10-18T12:02:55.816625+00:00",
+  "question": "Will Trump acquire Greenland before 2027?",
+  "market_id": "997488",
+  "valuation_author": "primary_operator",
+  "original_index": 124,
+  "report_sha256": "04513e0910a63ad1dd4e762fe740f6b4be0d20488a67724f0fe6184354fa791c"
+}

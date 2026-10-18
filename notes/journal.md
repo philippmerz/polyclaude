@@ -31032,3 +31032,84 @@ and [audit1039](../data/deep_review_20261017/ledger_audit_1039.json).
 Checkpoint:213 valued,3 blocked,328 factual exclusions,2,456 pending across 544
 records; active 113 is included in pending. Resume 113; next operational check14:00UTC.
 No account check or financial action occurred in this curation.
+
+
+## October 18 11:03 UTC — historical chart recovery and source-revision audit
+
+The effective deep-review ledger now counts 214 valued, 3 blocked, 328 factual
+exclusions and 2,455 pending across the 3,000 frozen conditions. It retains 545
+immutable base evaluations plus one verified source-timestamp revision for case
+113; no condition is double-counted and no case is active. Audit [1102](../data/deep_review_20261017/ledger_audit_1102.json)
+checks base identities/report hashes, revision predecessor/JSON/Markdown hashes,
+all 3,000 index rows and protected financial records against HEAD `0bd98ef`.
+The case 113 correction replaces an approximate CME bulletin time with the actual
+02:55:37.513720 UTC receipt. Its 53% YES forecast and economics are unchanged; no
+entry or account action was approved or taken.
+
+The official OpenRouter Top Models chart’s no-argument caller/API binding yielded
+53 consecutive weekly points from 2025-10-13 through 2026-10-12, with ten series
+including Others. This supersedes the earlier statement that no historical
+weekly chart series had been recovered. It informs but does not settle the exact
+first-display/revision/cutoff rules. Cases 35 and 112 are being recalibrated;
+case 35 remains blocked/not yet valued and no new case 112 forecast or entry approval
+exists. The earlier `period=week` API grain note remains valid: it is model-level
+rolling-week rows, not a daily panel.
+
+The Pyth public narrow-window follow-up recovered 13,440 eligible CLLX6 plus 2,640
+CLLZ6 minute bars, with no observed high at or above $105 in the retrieved sample.
+Earlier broad HTTP 200 history responses returned 4,081 X6 and 1,881 Z6 bars but omitted earlier intervals; narrow windows recovered the requested gaps, and the exact truncation/capping mechanism is unproven. The independent regular-session calendar check found 16,080 expected eligible minutes with zero missing/extras after excluding the old X6 roll-boundary bar. Special-notice/global coverage, future event windows and session/oracle interpretation remain qualified. The 14:00 UTC operational boundary
+is unchanged; fallback account facts remain dated at 09:36 UTC, with no new
+account check here.
+
+## 2026-10-18 11:27 UTC — Deep-review ledger and OpenRouter current pointers
+
+Re-audited the 545 immutable base records and three append-only revisions; the effective queue is 215 valued, 2 blocked, 328 factual exclusions and 2,455 pending. Cases 35 and 112 now stand at revised 60% and 11% YES; case 113 stays 53% with timestamp-only correction. The live chart separates rounded total from rounded component rows and shows Weekly Pace as a separate projection; `cachedAt` does not prove cutoff. Case 112 maker, catalyst, account and coverage review remains in progress; no order, prior or reservation exists. Risks: partial-week projection, unresolved cutoff/revision mechanics and future-week model uncertainty. See [ledger audit](../data/deep_review_20261017/ledger_audit_1130.json), [case 35](../research/2026-10-17-deep-review/revisions/0035_20261018T111634872634Z.md), [case 112](../research/2026-10-17-deep-review/revisions/0112_20261018T111722752018Z.md), [case 113](../research/2026-10-17-deep-review/revisions/0113_20261018T105834003724Z.md), [chart display audit](../data/deep_review_20261017/openrouter_chart_display_semantics_1100.json) and [catalyst-check handoff](../data/deep_review_20261017/openrouter112_catalyst_1120.json). The catalyst report is advisory; it does not supply an authoritative probability or action.
+
+## 2026-10-18 11:52 UTC — 12 lab valuations; OpenRouter maker verified
+
+- Effective research:227valued/2blocked/328factualexclusions/2443pending,557immutablebase+3revisions. Twelve exactlabR2conditions shareoneprimaryjointmodel; eachreport/index saved immediately. Case119Google80%YES; actualrequestchart52weeks/partialOct12 differsfromdefaulttoken-shareAPI/priorOct5table. Primarysource/forecast ownership retained; [method](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.md).
+- DEC0214: posted5OpenRouter725–775T-bandNO@65c/3.25pUSD, exactorder0x65cc9610fa83badf53ece3522f378d3c8175fe508a91c17903e91b4417332d6c. Independent11:50 fullinventory+directdetail: LIVE5/0matched,8pending16.42,8matchingreservations/noorphans/blocks. Polygon95745917 bothCTF0/pUSD23.446890/free7.026890. Unfilledcommitment,notposition/profit. [Entry/risk/pull22UTC](../research/2026-10-17-deep-review/openrouter_entry_1131.md); noadd, cancelfirstonuncertainty.
+- Actualfuture-volumeNO89%,15ppreserve74%; currentpartialpoint153.155972T andsame-model10.7365%YES retainrounded11%. Existing52completedpointsunchanged. Concentrated750Tcountermodelcanreversetrade/full3.25loss. Currentexactfees/books/venueallowedflag passed; advisorylargeKellywasnotallocated. HLE65objectsunchanged/maxOpenAI53.6;Diamondseparate/403gapsretained.
+- Existingwatcher35feeds: officialdisclosedOpenRouterRSS+GoogleRSS warmed; Tier1OpenRouter11:38:13 bypassescheapfilter. Normalpostpromotionstate11:43:34; no newdaemon/timer/manualpoll/stateedit. 30/feedcap,sharedseenstate/no perfeedHTTPtelemetry/caching/privatechanges remainexplicitlimits.
+- Current119quotes differfromoldreport: YES97/99.2c hasnoentryedge; NO.8/3c books~65mold, makerhelperreturns0 duecentprecision. Case358YES.9/1c helperfloatboundarycanreturnask1c; no119/358orderapproved. Preservecurrentobservations/technicalfollowup; do notlowerreserves orclaimoldbidslive.
+- The one-time reader reported an expired notification; no original text was revealed. A generic resend request was sent once. Independent authorized research did not infer or act on the unrevealed content; private notification metadata remains outside tracked records.
+
+## 2026-10-18 11:55 UTC — OpenRouter order and research handoff
+
+The effective 3,000-condition review has 227 valued, 2 blocked, 328 factual exclusions
+and 2,443 pending. It contains 557 immutable base records and three append-only
+revisions; case 124 is active. [Audit 1155](../data/deep_review_20261017/ledger_audit_1155.json)
+verifies base identities and report hashes, revision links and hashes, checkpoint
+and the unique 3,000-row effective index. The checkpoint includes active case 124
+in pending; the index therefore shows 2,442 pending plus one in progress.
+
+DEC-0214 is a LIVE, unfilled OpenRouter NO bid: five shares at 65¢, $3.25 full-fill
+risk. Independent full authenticated pagination and direct order detail confirmed
+zero matched shares. All eight BUY orders have matching LIVE reservations; total
+remaining risk is $16.42, with no orphan, mismatch or reconciliation block. At
+Polygon block 95,745,917 (11:50:23 UTC), both case112 token balances were zero and
+pUSD was $23.446890, leaving $7.026890 after current bids. This is an unfilled
+commitment, not a holding, fill or profit. Pull at the existing Oct. 18 22:00 UTC
+check, or earlier if a load-bearing source, methodology, model, price or routing
+fact becomes uncertain; cancel first. No automatic add or repricing. See the
+[entry and risk plan](../research/2026-10-17-deep-review/openrouter_entry_1131.md),
+[resting-order record](resting_orders.md), and [independent verification](../data/deep_review_20261017/openrouter112_postsubmit_1152.json).
+
+Twelve exact OpenRouter R2 lab conditions share the [primary model](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.md); they are not twelve independent forecasts. Case119’s actual request-share chart contains 52
+weeks through a partial Oct. 12 and is distinct from the default token-share API.
+Its quote snapshot is about 65 minutes old and the helper returned no maker quote.
+Case358’s float-boundary helper issue is under bounded engineering follow-up; no
+new order is approved. The OpenRouter 53-week Top Models chart includes Others;
+its “Weekly Pace” is separate and `cachedAt` does not prove the observation cutoff.
+The `period=week` API remains rolling-week model-variant data, not daily data.
+The existing watcher has 35 feeds. Its normal state write at 11:43:34 followed the
+11:38:13 Tier 1 OpenRouter promotion, but per-feed fetch status is not exposed and
+captured RSS snapshots predate feed addition; do not claim exhaustive coverage.
+
+## 2026-10-18 12:12 UTC — Three primary valuations and source-led R2 revision
+
+- Review checkpoint: **230 valued, 2 blocked, 328 factual exclusions, 2,440 pending**; 560 immutable base records plus 15 append-only revisions. Case 133 is active. Each new evaluation and revision saved its report, hash and index immediately.
+- New cases: Greenland 124 **7% YES** (security agreement preserves Danish sovereignty; strict branch defeats the dated cheap-YES edge); Treasury 130 **59% YES** (all 199 official rows independently reparsed, no 5.10% hit, 51-day daily-publication model); Albania 131 **21% YES** (violent protests versus recent institutional support, historical 83-seat result corrected for current independent MP). Both sides priced; no order approved. See [124](../research/2026-10-17-deep-review/evaluations/0124.md), [130](../research/2026-10-17-deep-review/evaluations/0130.md), [131](../research/2026-10-17-deep-review/evaluations/0131.md).
+- The independent Oct17 text-day request variants show Google ahead of OpenAI by 49,577,463 requests; no completeness/cutoff guarantee. Primary R2 model revised Google **80%→90%**, OpenAI **13.15%→7.67%**; all 12 related cases have append-only revisions. The new forecast followed already-seen 11:45 quotes and is not described as price-blind. Earlier Google 55c/4c proposals are superseded; the 15pp selected stress gives Google YES75%/NO0%. [Current joint model](../research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.md).
+- Maker-price fix: exact decimal/tick/cent-grid arithmetic prevents the .009+.001 float boundary from matching a 1c ask and rejects before reservation/signing when no passive positive price exists. It also permits a valid 1c bid under a 3c ask. The first legal common-grid price may be higher than the old floor; the exact posted-price cap and sizing still apply. Independent code review found no blocking defect; **53 focused tests passed**, plus the reported **169 money-math checks**. No existing order was changed by this fix.
+- Financial facts remain the **dated 11:50 verification**, not a new account check: OpenRouter112 unfilled 5NO65c/$3.25; eight LIVE BUY commitments/$16.42, pUSD23.446890/free7.026890, both112 token balances0. Actual commitment worst-case loss corrected to$3.25 in its management prior. Pull112 at **Oct18 22:00UTC**, cancel first on uncertainty. Next full operational boundary14:00UTC. No new financial action in these three reviews or R2 revisions.

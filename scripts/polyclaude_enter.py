@@ -2846,7 +2846,14 @@ def main() -> int:
         if maker_bb is None:
             print("  empty bid side — maker entry aborted (use the taker path)")
             return 1
-        maker_px = maker_rest_price(maker_bb, maker_ba, tick)
+        try:
+            maker_px = maker_rest_price(maker_bb, maker_ba, tick)
+        except ValueError as exc:
+            # A resting price must exist on both the market-tick and signed
+            # two-decimal cash grids, strictly below any displayed ask. Fail
+            # here, before sizing, reservations, locks, or order signing.
+            print(f"\nDECISION: NEED_REVIEW — no valid passive maker price: {exc}")
+            return 2
     if maker_px is not None:
         cost_eff, fee_per_share = maker_px, 0.0
     else:

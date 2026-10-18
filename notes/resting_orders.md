@@ -1,5 +1,32 @@
 # Standing resting orders (GTC post-only makers)
 
+## October 18 11:50 UTC — OpenRouter bid verified; eight BUYs remain
+
+**New LIVE BUY:5NO at65c,3.25pUSD full-fill risk**, order
+`0x65cc9610fa83badf53ece3522f378d3c8175fe508a91c17903e91b4417332d6c`.
+Market5763815/CID`0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1`;
+NOasset`69361310336830576230613545878669264146295166638950702624315653157292183550426`.
+NO pays when four displayed weekly token Totals fall outside the725T-inclusive/
+775T-exclusive band for Oct26–Nov22. CentralNO89%,15ppentryreserve74%, broadYES.5–80%
+sensitivity; subjective growth/variance assumptions, no probability floor or hedge.
+DEC0214; [primary entry record](../research/2026-10-17-deep-review/openrouter_entry_1131.md).
+
+**Pull October18 22:00UTC**, before Monday's first new-week chart display, or
+earlier source/model/method/routing/pricing/release uncertainty. Review each
+existing tick/earlier material news; cancel FIRST on uncertainty, no automatic
+add or repost. Official and Google RSS feed baselines plus direct Tier1OpenRouter
+were added to the existing watcher; normal post-promotion state11:43:34 verified.
+Caps/caching/cooldowns/unannounced changes remain gaps; inspect the actual chart.
+
+Independent11:50:21–22UTC full authenticated inventory/direct exact order agree:
+LIVE5original/0matched/5remaining, frozenCID+NOasset+price+side match. Eight BUYs,
+zero SELLs, allLIVE, total16.42; eight matching reservations, no mismatch/orphan/
+reconciliation block. Polygon95745917, timestamp11:50:23: pUSD23.446890, both
+candidate balances0, allowance/approval sufficient; uncommitted7.026890.
+This is an unfilled commitment, not a holding or profit. No claim-insurance
+holding was fabricated. [Verification](../data/deep_review_20261017/openrouter112_postsubmit_1152.json).
+No other bid changed; the fallback inventory below remains dated09:36.
+
 ## October 18 09:34 UTC fallback — Michigan filled; seven BUY bids remain
 
 **Michigan Senate NO5 at31c filled02:55:41UTC for1.55pUSD net.**

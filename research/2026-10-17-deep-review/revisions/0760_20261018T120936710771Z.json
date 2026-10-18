@@ -1,0 +1,157 @@
+{
+  "review_index": 760,
+  "condition_id": "0xf04a6ae5d640d19693417efc223320305db19557bafffbfe9512e4170b062fe7",
+  "criteria_sha256": "f4634f1ae26bdeb42f40e1a9a33254f52cceafbb48fe15f10b6041dcbafb75dc",
+  "status": "valued",
+  "literal_analysis": "ExactnamedlabR2,Oct12-18UTCPercentage;skipStealth/Others;Absolute/alphabeticaltie;firstOct19display/Oct23ETfallback/noDataOther. Allliteralread; currentrequest/tokenwordingtieforkretained.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings#market-share",
+      "observed_utc": "2026-10-18T11:33:39.004+00:00",
+      "finding": "Primary read browser tooltip and view: currentpartialOct12 vscompleteOct5; Percentage/Absolute andtextrequests scope; namedlabs/excludedOthers distinctions. data/deep_review_20261017/openrouter119_binding_1130.json."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/modality-chart?routeSegment=text",
+      "observed_utc": "2026-10-18T11:36:19.536438+00:00",
+      "finding": "52weeklyrequestpoints; everymodel/providerweeklysum matches. Tencent: not separately displayed in current top-nine named labs; it may be inside537,445,681 Others requests. RawSHAf5a0e9cb72268eda712f870e66bca526a53ef5c846bdd119be6de9fd0285fb6d; cutoffunknown."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5598498",
+      "observed_utc": "2026-10-17T21:11:45.711+00:00",
+      "finding": "Exact capturedCID/question/outcomes/tokens andfullcommonliteraldescription matchfrozen; this is datedOctober17identity/fees/bookreceipt, notcurrentexecution."
+    },
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/modality-models?routeSegment=text&view=day",
+      "observed_utc": "2026-10-18T11:57:43.136650+00:00",
+      "finding": "Text-only daily variant count rows dateOct17; Google204399302/OpenAI154821839, gap49577463. All406 keys unique; totals not certified exhaustive; cutoff absent. RawSHAd84c6f2f58b8d5da26df10cbab2c8b0ba1f93c91955899510f9a0f406bdf303d"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.000375,
+    "low": 0.0001,
+    "high": 0.08,
+    "method": "Primary80/15/5 joint rank2 scenarios updated from independent Oct17 text-request variants and verified weekly chart binding; subjective tails.",
+    "reasoning": "Oct17 returned text-request variants show Google204,399,302 versus OpenAI154,821,839, +49,577,463, rather than evidence of an OpenAI late surge. Combined with the independent weekly105,490,013 Google lead and exact request-chart binding, this reduces the primary large-reallocation/publication-fork weights20/10 to15/5 and raises ordinary70 to80. Typical completion strongly retains Google second; weights remain subjective and heavy-tail scenarios explicitly remain. APEC/token totals/default author API are not substitutes. With0.88b additional eligible requests OpenAI needs a12pp share advantage; with1b needs10.55pp; with2b needs5.27pp. This is conservation arithmetic, not a bound on remaining volume. Exact case 760, lab tencent, PYES=0.000375. Fifteen-point entry reserve gives YES0/NO0.849625. No source-completeness or calibrated probability floor is claimed.",
+    "calibration": "Branch weights and conditional probabilities are explicit primary judgments, not fitted frequencies/posteriors/bounds. Minor-lab residual allocations are bookkeeping of a joint tail, not precise measured event rates."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0721_0840.json.gz",
+    "quote_observed_utc": "2026-10-17T21:11:45.711+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 6,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.000375,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.482,
+        "received_utc": "2026-10-17T21:11:45.711+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.001,
+            "fee_usd": 0.00039960000000000006
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.0104,
+        "fee_usd": 0.0004,
+        "break_even_probability_before_carry": 0.00104,
+        "break_even_probability_with_idealized_carry": 0.001040525206777197,
+        "central_expected_profit_usd": -0.00665,
+        "default_10pp_stressed_profit_usd": -0.0104,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.999625,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 0.482,
+        "received_utc": "2026-10-17T21:11:45.711+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": false,
+        "fills": [],
+        "filled_gross_shares": 0,
+        "taker_cost_usd": null,
+        "fee_usd": null,
+        "break_even_probability_before_carry": null,
+        "break_even_probability_with_idealized_carry": null,
+        "central_expected_profit_usd": null,
+        "default_10pp_stressed_profit_usd": null,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.899625,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.9896
+      }
+    }
+  },
+  "verdict": "No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.",
+  "reopen_condition": "Re-review actual firstOct19 chart/current weekly request data, any material source/routing/release/method change, or a genuinely favorable fresh both-sided book after an honest primary stress assessment. Earlier55c/4c proposals are superseded. No automatic bid/add/repost; no sibling hedge credit.",
+  "current_description_sha256": "e6c425ee1fbf147061e608d032dfbae1587cc162f1a74a8235f00679aa995c4f",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "90735122195420101233935778220090170347475231929415980312994365583637350718966",
+    "26620632390907434984238868947435450781396451401157840330019631473164866120490"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0065",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0066",
+      "receipt_path": "logs/deep_review_20261017/quotes_0721_0840/req_0066.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0721_0840/req_0066.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "joint_model": "research/2026-10-17-deep-review/models/openrouter_lab_rank2_daily_revision_1215.json",
+    "before_own_price_assumptions_created_utc": "2026-10-18T11:39:17.653037+00:00",
+    "source_packets": [
+      "data/deep_review_20261017/openrouter119_binding_1130.json",
+      "data/deep_review_20261017/openrouter119_modality_chart_1136.json",
+      "data/deep_review_20261017/openrouter119_daily_request_control_1200.json"
+    ],
+    "priority_followup": false,
+    "case_specific_reserve_for_entry": 0.15,
+    "range_is_not_probability_floor": true,
+    "primary_revision_after_own_prices_seen": true,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.849625,
+    "entry_approved": false
+  },
+  "evaluated_utc": "2026-10-18T12:09:36.711057+00:00",
+  "question": "Will Tencent have the second highest OpenRouter market share the week of October 12?",
+  "market_id": "5598498",
+  "valuation_author": "primary_operator",
+  "original_index": 760,
+  "report_sha256": "1bc9be74076bf2207579c7d697709532ac2aa2607abd6d6e9a8506611370fa42",
+  "report_path": "revisions/0760_20261018T120936710771Z.md",
+  "revision_reason": "Independent Oct17 text-day request variants and verified metric binding strengthen Google continuation; explicit primary joint model80/15/5 replaces70/20/10. No current order approval.",
+  "prior_report_sha256": "4b8f96386f999b76d846eb2e2895ed78995a58d868acad282fe81865f05f6cb0",
+  "revision_path": "revisions/0760_20261018T120936710771Z.json"
+}

@@ -1,5 +1,5 @@
 {
-  "next_id": 214,
+  "next_id": 215,
   "decisions": [
     {
       "id": 1,
@@ -4523,6 +4523,28 @@
         "uncalibrated-model"
       ],
       "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 214,
+      "timestamp": "2026-10-18T11:52:00Z",
+      "type": "open_position",
+      "thesis": "Primary OpenRouter fixed calendar-week band model retains11%YES/89%NO after current rawchartrevalidation;15ppentryreserve gives74%NO. Subjective broad growth/regime/source model; low-variance750Tcountermodel reverses the trade. Posted5NO@65c post-only as a3.25pUSD full-fill commitment, NOTaheldpositionorprofit; noadd/sharedAIrisk.",
+      "confidence": "medium",
+      "prediction": "NO wins if displayed weeklyTotals forOct26/Nov2/9/16 sum outside[725,775)T, fixedwhenNov23firstdisplays orNov27ETfallback. As11:50:21-22UTC: exactorder0x65cc9610fa83badf53ece3522f378d3c8175fe508a91c17903e91b4417332d6c LIVE5/0matched; bothCTF0 atPolygon95745917. PullOct18 22UTC beforeOct19display/earlierrelevantnews oruncertainty. Full3.25cashloss possible; total8pending16.42/free7.026890pUSD. Datedsource/risk/verification: research/2026-10-17-deep-review/openrouter_entry_1131.md anddata/deep_review_20261017/openrouter112_postsubmit_1152.json.",
+      "size_usd": 3.25,
+      "resolution_at": "2026-11-28T00:00:00Z",
+      "tags": [
+        "polymarket",
+        "openrouter",
+        "deep-review",
+        "maker",
+        "pending-fill",
+        "ai-ships-fast-short"
+      ],
+      "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

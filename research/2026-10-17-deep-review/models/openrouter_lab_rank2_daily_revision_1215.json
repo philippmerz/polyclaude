@@ -1,0 +1,197 @@
+{
+  "authored_utc": "2026-10-18T12:09:30.599168+00:00",
+  "primary_owner": true,
+  "revises_model": "research/2026-10-17-deep-review/models/openrouter_lab_rank2_1140.json",
+  "new_source": "data/deep_review_20261017/openrouter119_daily_request_control_1200.json",
+  "new_source_raw_sha256": "d84c6f2f58b8d5da26df10cbab2c8b0ba1f93c91955899510f9a0f406bdf303d",
+  "ordering": "This revision follows observation of11:45 own quotes and11:57 independently captured daily text-request data. It is not represented as price-blind. The reason is new daily source evidence and previously verified UI metric binding; no new own quote was requested to set these probabilities.",
+  "weekly_counts_unchanged_observation": {
+    "label": "2026-10-12",
+    "counts": {
+      "deepseek": 1497903548,
+      "google": 1247527466,
+      "openai": 1142037453,
+      "z-ai": 780662003,
+      "qwen": 330208442,
+      "anthropic": 292329779,
+      "xiaomi": 153222431,
+      "meta-llama": 124667044,
+      "mistralai": 124381682,
+      "Others": 537445681
+    },
+    "total": 6230385529,
+    "google_openai_gap": 105490013,
+    "deepseek_google_gap": 250376082,
+    "ratio_to_prior_complete_total": 0.9567658999666704,
+    "data_through": "unknown; cachedAtnotcutoff;95.68%priorvolume isNOT95.68%completion"
+  },
+  "daily_bucket": {
+    "date_label": "2026-10-17 00:00:00",
+    "rows": 406,
+    "unique_model_variant_pairs": 406,
+    "duplicate_model_variant_pairs": 0,
+    "rows_missing_author_slug": 0,
+    "returned_row_count_sum": 880194388,
+    "returned_provider_count_sum_matches_row_count_sum": true,
+    "provider_grouping": "author/provider = first component of each model_permaslug before `/`, matching the saved UI definition of Market Share by model author."
+  },
+  "daily_google_openai_comparison": {
+    "google_request_count_sum": 204399302,
+    "google_variant_rows": 40,
+    "openai_request_count_sum": 154821839,
+    "openai_variant_rows": 78,
+    "difference_google_minus_openai": 49577463
+  },
+  "branches": [
+    {
+      "name": "ordinary completion",
+      "weight": 0.8,
+      "conditional_rank2": {
+        "google": 0.985,
+        "openai": 0.014,
+        "deepseek": 0.001
+      }
+    },
+    {
+      "name": "large late reallocation/backfill",
+      "weight": 0.15,
+      "conditional_rank2": {
+        "google": 0.68,
+        "openai": 0.27,
+        "deepseek": 0.03,
+        "z-ai": 0.01,
+        "residual": 0.01
+      }
+    },
+    {
+      "name": "publication/revision/method/tie fork",
+      "weight": 0.05,
+      "conditional_rank2": {
+        "google": 0.2,
+        "openai": 0.5,
+        "deepseek": 0.1,
+        "z-ai": 0.05,
+        "residual": 0.15
+      }
+    }
+  ],
+  "probabilities": {
+    "google": 0.9,
+    "openai": 0.0767,
+    "deepseek": 0.0103,
+    "z-ai": 0.004,
+    "anthropic": 0.0015,
+    "qwen": 0.001125,
+    "meta-llama": 0.00075,
+    "xiaomi": 0.0005625,
+    "tencent": 0.000375,
+    "nvidia": 0.0001875,
+    "x-ai": 0.0001875,
+    "minimax": 0.0001875,
+    "unlisted_lab_including_mistral": 0.000375,
+    "missing_data_or_other_resolution_fork": 0.0037499999999999994
+  },
+  "reasoning": "Oct17 returned text-request variants show Google204,399,302 versus OpenAI154,821,839, +49,577,463, rather than evidence of an OpenAI late surge. Combined with the independent weekly105,490,013 Google lead and exact request-chart binding, this reduces the primary large-reallocation/publication-fork weights20/10 to15/5 and raises ordinary70 to80. Typical completion strongly retains Google second; weights remain subjective and heavy-tail scenarios explicitly remain. APEC/token totals/default author API are not substitutes. With0.88b additional eligible requests OpenAI needs a12pp share advantage; with1b needs10.55pp; with2b needs5.27pp. This is conservation arithmetic, not a bound on remaining volume.",
+  "source_limits": "All406 returned rows are unique model/variant keys and datedOct17; no endpoint total, omitted-row metadata, completeness flag or intraday cutoff. Weekly6.23b/previous6.51b is not a completion fraction. cachedAt is not a cutoff. No claim that Sunday data or final first-Monday display is observed.",
+  "calibration": "Branch weights and conditional probabilities are explicit primary judgments, not fitted frequencies/posteriors/bounds. Minor-lab residual allocations are bookkeeping of a joint tail, not precise measured event rates.",
+  "entry_reserve": 0.15,
+  "entry_approved": false,
+  "cases": {
+    "119": {
+      "lab": "google",
+      "p_yes": 0.9,
+      "range": [
+        0.6,
+        0.995
+      ]
+    },
+    "256": {
+      "lab": "z-ai",
+      "p_yes": 0.004,
+      "range": [
+        0.0001,
+        0.2
+      ]
+    },
+    "358": {
+      "lab": "openai",
+      "p_yes": 0.0767,
+      "range": [
+        0.002,
+        0.35
+      ]
+    },
+    "448": {
+      "lab": "deepseek",
+      "p_yes": 0.0103,
+      "range": [
+        0.0005,
+        0.15
+      ]
+    },
+    "520": {
+      "lab": "minimax",
+      "p_yes": 0.0001875,
+      "range": [
+        1e-05,
+        0.1
+      ]
+    },
+    "562": {
+      "lab": "xiaomi",
+      "p_yes": 0.0005625,
+      "range": [
+        0.0001,
+        0.1
+      ]
+    },
+    "604": {
+      "lab": "qwen",
+      "p_yes": 0.001125,
+      "range": [
+        0.0001,
+        0.12
+      ]
+    },
+    "646": {
+      "lab": "x-ai",
+      "p_yes": 0.0001875,
+      "range": [
+        1e-05,
+        0.1
+      ]
+    },
+    "688": {
+      "lab": "meta-llama",
+      "p_yes": 0.00075,
+      "range": [
+        0.0001,
+        0.15
+      ]
+    },
+    "724": {
+      "lab": "nvidia",
+      "p_yes": 0.0001875,
+      "range": [
+        1e-05,
+        0.08
+      ]
+    },
+    "760": {
+      "lab": "tencent",
+      "p_yes": 0.000375,
+      "range": [
+        0.0001,
+        0.08
+      ]
+    },
+    "796": {
+      "lab": "anthropic",
+      "p_yes": 0.0015,
+      "range": [
+        0.0001,
+        0.2
+      ]
+    }
+  }
+}

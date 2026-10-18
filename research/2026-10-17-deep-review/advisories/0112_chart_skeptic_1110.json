@@ -1,0 +1,24 @@
+{
+  "schema": "openrouter112_chart_skeptic_advisory.v1",
+  "scope": "Offline independent challenge; no new probability, quote, account call, or action.",
+  "sources": {
+    "case_report": {
+      "path": "research/2026-10-17-deep-review/evaluations/0112.md",
+      "sha256": "8cd14a0d800424e493a5be0b70ec789dc9f164ce20defe05de2ff01e9f209599"
+    },
+    "joint_model_draft": {
+      "path": "data/deep_review_20261017/work/openrouter_joint_model_draft_1105.json",
+      "sha256": "00552e968279c9f36fcab9ecf699fd17700e9bb29d42df5b0d9d7fd0e200869b"
+    },
+    "chart_addendum": {
+      "path": "data/deep_review_20261017/openrouter112_model_rankings_chart_addendum_1050.json",
+      "sha256": "d693afc801ecf8208ec5f56e6b7e5bd7beb218291d652dc2fdd7bcf675987d12"
+    },
+    "cutoff_check": {
+      "path": "data/deep_review_20261017/openrouter_current_cutoff_1103.json",
+      "sha256": "9167eba25919e419ebf7d191e22ab89a7066a674fdf66ae504072f1678806c1d"
+    }
+  },
+  "advisory_path": "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md",
+  "advisory_sha256": "3dfd8ccc3cd655da05206bd6a51acd83f1c1b341614339a5e103572d2d21891c"
+}

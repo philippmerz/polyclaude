@@ -135,9 +135,18 @@
     {
       "name": "Google Year in Search, Messi and Mbappe athlete news",
       "url": "https://news.google.com/rss/search?q=%28%22Lionel+Messi%22+OR+%22Kylian+Mbappe%22+OR+%22Kylian+Mbapp%C3%A9%22+OR+%22Year+in+Search%22%29&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "OpenRouter traffic, routing and model news",
+      "url": "https://news.google.com/rss/search?q=%22OpenRouter%22+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "OpenRouter official blog",
+      "url": "https://openrouter.ai/blog/feed.xml"
     }
   ],
   "tier1_keywords": [
+    "OpenRouter",
     "trump dies",
     "trump dead",
     "president trump killed",

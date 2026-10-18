@@ -1,10 +1,25 @@
-## Current pointer — October 18, 10:39 UTC
+## Current pointer — October 18, 12:15 UTC
 
-The canonical review has **213 valued, 3 blocked, 328 factual exclusions and 2,456 pending** across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` were audited: 96, 101, 106, 112 valued; 97 factually excluded after official final MLB results. See [audit 1039](../../data/deep_review_20261017/ledger_audit_1039.json), live [index](INDEX.md) and [checkpoint](../../notes/deep_review_checkpoint.json). Case 92 remains blocked because its full post-creation CME active-month High history is unresolved.
+The effective review has **230 valued, 2 blocked, 328 factual exclusions and
+2,440 pending**; case 133 is active and included in pending. There are 560 immutable
+base records and 15 append-only revisions. [Audit 1215](../../data/deep_review_20261017/ledger_audit_1215.json),
+the [index](INDEX.md) and [checkpoint](../../notes/deep_review_checkpoint.json)
+govern. Cases 124, 130 and 131 are valued at 7%, 59% and 21% YES; none added an
+order. Case 35 is valued at 60% YES ([revision](revisions/0035_20261018T111634872634Z.md)) from the 53-point Top Models token chart including Others; it differs from the R2 52-week request-share chart through partial Oct. 12. Case 92 remains blocked on post-creation CME active-month High history.
 
-**OpenRouter source-grain correction.** The `period=week` API returns one row per model variant; a row's date label is not a daily activity bucket. The prior 174.020765561738T and current 168.339264961301T are response-derived rolling-week sums, not five daily observations, not five-day usage totals and not exact displayed settlement totals. DeepSeek's prior/current values 36.824610T/35.888676T match rounded chart values 36.8T/35.9T. Historical fixed Monday–Sunday totals required by case 35 remain unavailable, not zero; case 35 remains blocked. See [originals and correction](../../data/deep_review_20261017/openrouter112_source_followup_1030.json), [fixed-week follow-up](../../data/deep_review_20261017/openrouter_fixed_week_followup.json), [case 35](evaluations/0035.md) and [case 112](evaluations/0112.md).
-
-Case 112's exact future four-week rule remains unobservable today. Primary recorded 9% YES, 0.5–80% range after a concentrated near-750T countermodel, and a 15-point selected reserve that is not an entry floor. Its historical NO 10-share ask walk cost of $6.78844 and 76%-stress EV of +$0.81156 are dated economics, not a current quote or approval. Independent review/current gates remain before any proposal. Case 92's 03:00 Bulletin browser timestamp is approximate page-read time, not a timed HTTP receipt.
+All 12 exact OpenRouter R2 cases now share the [daily-text revision model](models/openrouter_lab_rank2_daily_revision_1215.md):
+Google 90%, OpenAI 7.67%, DeepSeek 1.03%, ZAI 0.4%, residual 0.9%, in dependent
+subjective branches. The 406-row Oct. 17 endpoint has no exhaustion/cutoff
+guarantee. The model revision followed the 11:45 quotes, not price-blind; Case 112 DEC-0214 was last
+verified at 11:50 as LIVE/unfilled NO 5 at 65¢ ($3.25); all eight bids totaled
+$16.42 in that dated snapshot. Review at the existing 22:00 UTC check or earlier on
+uncertainty; cancel first, no add/reprice. Case 119’s 52-week request-share chart
+differs from the token-share API; its 11:45 book was already ~65 minutes old. A
+passive 1¢ price on that stale capture is not a fresh underwritten quote; selected
+NO is 0% after reserve. Case 358’s 1¢ ask has no positive cent-grid passive maker
+price. No R2 order was added. See [case 119 revision](revisions/0119_20261018T120931166457Z.md),
+[model](models/openrouter_lab_rank2_daily_revision_1215.md) and [112 entry/pull
+instructions](openrouter_entry_1131.md).
 
 ## Historical milestone-200 pointer — October 18, 02:42 UTC
 

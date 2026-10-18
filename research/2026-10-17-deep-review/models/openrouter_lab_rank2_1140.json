@@ -1,0 +1,252 @@
+{
+  "created_utc": "2026-10-18T11:39:17.653037+00:00",
+  "primary_owner": true,
+  "source_sha256": "f5a0e9cb72268eda712f870e66bca526a53ef5c846bdd119be6de9fd0285fb6d",
+  "source_packet": "data/deep_review_20261017/openrouter119_modality_chart_1136.json",
+  "before_own_quote_review": true,
+  "binding": "All12frozenR2labconditions shareexactfull descriptionSHAe6c425ee1fbf147061e608d032dfbae1587cc162f1a74a8235f00679aa995c4f; individualquestion/CID/token identity in work/openrouter_lab_rank2_binding_1135.json. Currenttext-requestPercentagechart, notnoargtoken-shareAPI.",
+  "current_partial_week": {
+    "label": "2026-10-12",
+    "counts": {
+      "deepseek": 1497903548,
+      "google": 1247527466,
+      "openai": 1142037453,
+      "z-ai": 780662003,
+      "qwen": 330208442,
+      "anthropic": 292329779,
+      "xiaomi": 153222431,
+      "meta-llama": 124667044,
+      "mistralai": 124381682,
+      "Others": 537445681
+    },
+    "total": 6230385529,
+    "google_openai_gap": 105490013,
+    "deepseek_google_gap": 250376082,
+    "ratio_to_prior_complete_total": 0.9567658999666704,
+    "data_through": "unknown; cachedAtnotcutoff;95.68%priorvolume isNOT95.68%completion"
+  },
+  "branches": [
+    {
+      "name": "ordinary completion",
+      "weight": 0.7,
+      "conditional_rank2": {
+        "google": 0.95,
+        "openai": 0.045,
+        "deepseek": 0.005
+      }
+    },
+    {
+      "name": "large late reallocation or backfill",
+      "weight": 0.2,
+      "conditional_rank2": {
+        "google": 0.55,
+        "openai": 0.35,
+        "deepseek": 0.06,
+        "z-ai": 0.02,
+        "residual": 0.02
+      }
+    },
+    {
+      "name": "publication, revision, method or tie fork",
+      "weight": 0.1,
+      "conditional_rank2": {
+        "google": 0.25,
+        "openai": 0.3,
+        "deepseek": 0.15,
+        "z-ai": 0.1,
+        "residual": 0.2
+      }
+    }
+  ],
+  "probabilities": {
+    "google": 0.7999999999999999,
+    "openai": 0.1315,
+    "deepseek": 0.0305,
+    "z-ai": 0.014000000000000002,
+    "anthropic": 0.004,
+    "qwen": 0.003,
+    "meta-llama": 0.002,
+    "xiaomi": 0.0015,
+    "tencent": 0.001,
+    "nvidia": 0.0005,
+    "x-ai": 0.0005,
+    "minimax": 0.0005,
+    "unlisted_lab_including_mistral": 0.001,
+    "missing_data_or_other_resolution_fork": 0.01
+  },
+  "cases": {
+    "119": {
+      "lab": "google",
+      "p_yes": 0.7999999999999999,
+      "range": [
+        0.35,
+        0.98
+      ]
+    },
+    "256": {
+      "lab": "z-ai",
+      "p_yes": 0.014000000000000002,
+      "range": [
+        0.0005,
+        0.3
+      ]
+    },
+    "358": {
+      "lab": "openai",
+      "p_yes": 0.1315,
+      "range": [
+        0.01,
+        0.6
+      ]
+    },
+    "448": {
+      "lab": "deepseek",
+      "p_yes": 0.0305,
+      "range": [
+        0.001,
+        0.25
+      ]
+    },
+    "520": {
+      "lab": "minimax",
+      "p_yes": 0.0005,
+      "range": [
+        1e-05,
+        0.1
+      ]
+    },
+    "562": {
+      "lab": "xiaomi",
+      "p_yes": 0.0015,
+      "range": [
+        0.0001,
+        0.1
+      ]
+    },
+    "604": {
+      "lab": "qwen",
+      "p_yes": 0.003,
+      "range": [
+        0.0001,
+        0.12
+      ]
+    },
+    "646": {
+      "lab": "x-ai",
+      "p_yes": 0.0005,
+      "range": [
+        1e-05,
+        0.1
+      ]
+    },
+    "688": {
+      "lab": "meta-llama",
+      "p_yes": 0.002,
+      "range": [
+        0.0001,
+        0.15
+      ]
+    },
+    "724": {
+      "lab": "nvidia",
+      "p_yes": 0.0005,
+      "range": [
+        1e-05,
+        0.08
+      ]
+    },
+    "760": {
+      "lab": "tencent",
+      "p_yes": 0.001,
+      "range": [
+        0.0001,
+        0.08
+      ]
+    },
+    "796": {
+      "lab": "anthropic",
+      "p_yes": 0.004,
+      "range": [
+        0.0001,
+        0.2
+      ]
+    }
+  },
+  "recent8_completed_diagnostic": [
+    {
+      "week": "2026-08-17",
+      "rank2": "google",
+      "total": 4276810123,
+      "google_share": 0.21790003628833068,
+      "openai_share": 0.19042696181908564
+    },
+    {
+      "week": "2026-08-24",
+      "rank2": "google",
+      "total": 4711498234,
+      "google_share": 0.21519344858996714,
+      "openai_share": 0.19681889113491707
+    },
+    {
+      "week": "2026-08-31",
+      "rank2": "openai",
+      "total": 5098699163,
+      "google_share": 0.19761000125513778,
+      "openai_share": 0.20009693205741308
+    },
+    {
+      "week": "2026-09-07",
+      "rank2": "deepseek",
+      "total": 5547635900,
+      "google_share": 0.18585822458175383,
+      "openai_share": 0.2359227677504935
+    },
+    {
+      "week": "2026-09-14",
+      "rank2": "google",
+      "total": 5390641785,
+      "google_share": 0.18579892857785207,
+      "openai_share": 0.1702009422241734
+    },
+    {
+      "week": "2026-09-21",
+      "rank2": "google",
+      "total": 5463551777,
+      "google_share": 0.20509158158198598,
+      "openai_share": 0.17866255649104285
+    },
+    {
+      "week": "2026-09-28",
+      "rank2": "google",
+      "total": 6439799319,
+      "google_share": 0.21455478681198326,
+      "openai_share": 0.1819998628749195
+    },
+    {
+      "week": "2026-10-05",
+      "rank2": "openai",
+      "total": 6511922644,
+      "google_share": 0.17845241083610144,
+      "openai_share": 0.18583477033699236
+    }
+  ],
+  "overtake_required_new_request_share_differentials": [
+    {
+      "remaining_requests": 300000000,
+      "openai_minus_google_share_required": 0.35163337666666666,
+      "google_minus_deepseek_share_required_for_google_first": 0.83458694
+    },
+    {
+      "remaining_requests": 1000000000,
+      "openai_minus_google_share_required": 0.105490013,
+      "google_minus_deepseek_share_required_for_google_first": 0.250376082
+    },
+    {
+      "remaining_requests": 2000000000,
+      "openai_minus_google_share_required": 0.0527450065,
+      "google_minus_deepseek_share_required_for_google_first": 0.125188041
+    }
+  ],
+  "calibration": "Allweightsandconditionalprobabilities areprimaryjudgment, notfittedposteriors, dailyvolatilityestimatesorcoveragebounds. Residualminorlaballocations aresubjectivejointtailweights, notmeasured0.05%frequencies.",
+  "entry": "Google selectedYES.65 after15pp instance reserve; noapprovalfrommodel. HighNOprobability siblings arenot licensedfive-times-tailbondfades merelybecausethepointestimateislarge; tailmeasurement/finalgatesmandatory. No independence/hedgecreditbetweenrank2cases, otherranks,weeks,tokenvolume,HLE."
+}

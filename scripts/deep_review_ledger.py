@@ -1,65 +1,298 @@
 #!/usr/bin/env python3
-"""Persist primary-authored evaluations and rebuild a resumable index. No network/trading."""
+"""Persist primary evaluations and dated append-only revisions. No network/trading."""
 from pathlib import Path
-from datetime import datetime,timezone
-import argparse,csv,gzip,hashlib,io,json,os
-ROOT=Path(__file__).resolve().parents[1]
-RUN=ROOT/'research/2026-10-17-deep-review'
-RULES=ROOT/'research/2026-10-17-primary-market-review-rules.jsonl.gz'
-POINTER=ROOT/'notes/deep_review_checkpoint.json'
-STATES={'valued','blocked_after_review','excluded_factual'}
-def now():return datetime.now(timezone.utc).isoformat()
-def atomic(path,data):
- path.parent.mkdir(parents=True,exist_ok=True);tmp=path.with_name(path.name+'.tmp')
- with tmp.open('w') as f:f.write(data);f.flush();os.fsync(f.fileno())
- os.replace(tmp,path)
-def dump(path,value):atomic(path,json.dumps(value,ensure_ascii=False,indent=2)+'\n')
+from datetime import datetime, timezone
+import argparse
+import csv
+import gzip
+import hashlib
+import io
+import json
+import os
+import re
+
+ROOT = Path(__file__).resolve().parents[1]
+RUN = ROOT / "research/2026-10-17-deep-review"
+RULES = ROOT / "research/2026-10-17-primary-market-review-rules.jsonl.gz"
+POINTER = ROOT / "notes/deep_review_checkpoint.json"
+STATES = {"valued", "blocked_after_review", "excluded_factual"}
+REVISION_SCHEMA = "deep_review_revision.v1"
+
+
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
+def atomic(path, data):
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_name(path.name + ".tmp")
+    with tmp.open("w", encoding="utf-8") as f:
+        f.write(data)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, path)
+
+
+def dump(path, value):
+    atomic(path, json.dumps(value, ensure_ascii=False, indent=2) + "\n")
+
+
 def universe():
- with gzip.open(RULES,'rt') as f:return {int(x['review_index']):x for x in map(json.loads,f)}
+    with gzip.open(RULES, "rt", encoding="utf-8") as f:
+        return {int(x["review_index"]): x for x in map(json.loads, f)}
+
+
+def validate_record(x, frozen, *, revision=False):
+    i = int(x["review_index"])
+    assert i == int(frozen["review_index"]), "review index mismatch"
+    assert x["status"] in STATES, "invalid status"
+    if revision:
+        assert str(x.get("market_id", "")) == str(frozen["id"]), "market id mismatch"
+    elif x.get("market_id") is not None:
+        assert str(x["market_id"]) == str(frozen["id"]), "market id mismatch"
+    assert x["condition_id"].lower() == frozen["conditionId"].lower(), "condition id mismatch"
+    assert (x["criteria_sha256"] == frozen["criteria_sha256"] or
+            (not revision and x.get("criteria_change_explained"))), "criteria fingerprint mismatch"
+    for field in ["literal_analysis", "evidence", "forecast", "economics", "verdict", "reopen_condition"]:
+        assert x.get(field), field
+    assert isinstance(x["evidence"], list) and all(
+        e.get("url") and e.get("observed_utc") and e.get("finding") for e in x["evidence"]
+    ), "evidence rows require URL, observed_utc and finding"
+    if x["status"] == "valued":
+        f = x["forecast"]
+        assert 0 <= f["p_yes"] <= 1 and 0 <= f["low"] <= f["p_yes"] <= f["high"] <= 1, "invalid probability/range"
+        assert f.get("reasoning") and f.get("method"), "forecast reasoning/method required"
+        assert x["economics"].get("both_sides_considered") is True, "both outcomes required"
+    return i
+
+
+def _base_records():
+    records = {}
+    frozen_by_index = universe()
+    for p in sorted((RUN / "evaluations").glob("*.json")):
+        x = json.loads(p.read_text())
+        i = int(x["review_index"])
+        assert i not in records, f"duplicate base record {i}"
+        frozen = frozen_by_index[i]
+        assert str(x.get("market_id", frozen["id"])) == str(frozen["id"]), f"base market id mismatch {i}"
+        assert x["condition_id"].lower() == frozen["conditionId"].lower(), f"base condition id mismatch {i}"
+        assert (x["criteria_sha256"] == frozen["criteria_sha256"] or x.get("criteria_change_explained")), f"base criteria mismatch {i}"
+        md = p.with_suffix(".md")
+        assert md.exists(), f"missing base report {md}"
+        assert hashlib.sha256(md.read_bytes()).hexdigest() == x["report_sha256"], f"base report hash mismatch {i}"
+        x["report_path"] = f"evaluations/{i:04d}.md"
+        records[i] = x
+    return records
+
+
+def _revision_path(rel):
+    p = Path(rel)
+    assert not p.is_absolute() and ".." not in p.parts, "unsafe revision path"
+    candidate = RUN
+    for part in p.parts:
+        candidate = candidate / part
+        assert not candidate.is_symlink(), "symlink in revision path"
+    full = (RUN / p).resolve()
+    full.relative_to(RUN.resolve())
+    return full
+
+
+def _apply_revisions(records, frozen_by_index):
+    ledger = RUN / "revisions.jsonl"
+    rows = [] if not ledger.exists() else [json.loads(line) for line in ledger.read_text().splitlines() if line.strip()]
+    effective = dict(records)
+    for number, row in enumerate(rows, 1):
+        assert row.get("schema") == REVISION_SCHEMA, f"bad revision schema at row {number}"
+        i = int(row["review_index"])
+        previous = effective.get(i)
+        assert previous is not None, f"revision has no base record: {i}"
+        assert row.get("prior_report_sha256") == previous["report_sha256"], f"revision predecessor mismatch: {i}"
+        path = _revision_path(row["revision_path"])
+        raw_json = path.read_bytes()
+        assert hashlib.sha256(raw_json).hexdigest() == row.get("revision_json_sha256"), f"revision JSON hash mismatch: {i}"
+        x = json.loads(raw_json)
+        frozen = frozen_by_index[i]
+        assert int(x["review_index"]) == i, f"revision index mismatch: {i}"
+        validate_record(x, frozen, revision=True)
+        assert x.get("revision_reason") == row["reason"] and bool(row["reason"].strip()), "revision reason mismatch/empty"
+        assert x.get("prior_report_sha256") == previous["report_sha256"], "revision JSON predecessor mismatch"
+        md_path = _revision_path(x["report_path"])
+        md = md_path.read_bytes()
+        assert hashlib.sha256(md).hexdigest() == x["report_sha256"] == row["report_sha256"], f"revision report hash mismatch: {i}"
+        effective[i] = x
+    return effective, rows
+
+
 def rebuild(active=None):
- u=universe();records={}
- for p in sorted((RUN/'evaluations').glob('*.json')):
-  x=json.loads(p.read_text());i=x['review_index'];assert i not in records;assert p.with_suffix('.md').exists();assert hashlib.sha256(p.with_suffix('.md').read_bytes()).hexdigest()==x['report_sha256'];records[i]=x
- counts={s:sum(x['status']==s for x in records.values()) for s in STATES};pending=[i for i in u if i not in records]
- old=json.loads((RUN/'progress.json').read_text()) if (RUN/'progress.json').exists() else {}
- active=old.get('active_indices',[]) if active is None else active
- active=[i for i in active if i not in records]
- progress={'schema':'polyclaude.deep_review.v1','updated_utc':now(),'scope':'All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.','universe':len(u),'completed_in_depth_reviews':counts['valued']+counts['blocked_after_review'],'completed_valuations':counts['valued'],'blocked_after_in_depth_review':counts['blocked_after_review'],'factual_exclusions':counts['excluded_factual'],'pending':len(pending),'active_indices':active,'next_pending_indices':pending[:30],'milestone':100,'milestone_notified':old.get('milestone_notified',False),'execution_authority':'Research records are observations, never later execution authorization.'}
- rows=[]
- for i,r in u.items():
-  v=records.get(i,{});rows.append({'index':i,'condition_id':r['conditionId'],'market_id':r['id'],'question':r['question'],'status':v.get('status','in_progress' if i in active else 'pending'),'evaluated_utc':v.get('evaluated_utc',''),'p_yes':v.get('forecast',{}).get('p_yes',''),'verdict':v.get('verdict',''),'report':f'evaluations/{i:04d}.md' if v else ''})
- buf=io.StringIO(newline='');w=csv.DictWriter(buf,fieldnames=list(rows[0]),lineterminator="\n");w.writeheader();w.writerows(rows);atomic(RUN/'index.csv',buf.getvalue())
- lines=['# In-depth market review — live index','',f"Updated: {progress['updated_utc']}",'',f"**{progress['completed_valuations']} valuations saved; first milestone100:** {counts['valued']} valued; {counts['blocked_after_review']} blocked after in-depth review. {counts['excluded_factual']} factual exclusions separately; {len(pending)} pending.",'','Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.','', 'Read the [first100 inspection report](MILESTONE_100.md), [dated corrections](CURRENT_REVISIONS.md) and [candidate follow-up](candidate_followup.md) with the original observations. A [spacing-normalized reader snapshot](reader/INDEX.md) is available for older reports; the complete canonical queue is below.','', 'Each report below is written before moving to the next evaluation. Related contracts may share evidence, but each probability, literal binding and economic evaluation is explicit. Observations are dated; orders need fresh execution checks.','', '| Index | Market | Status | Verdict |','|---:|---|---|---|']
- for i,v in sorted(records.items()):
-  title=u[i]['question'].replace('|','/');verdict=v['verdict'].replace('|','/');lines.append(f"|{i}|[{title}](evaluations/{i:04d}.md)|{v['status']}|{verdict}|")
- if active:lines+=['', 'Active indices: '+', '.join(map(str,active))]
- atomic(RUN/'INDEX.md','\n'.join(lines)+'\n');dump(RUN/'progress.json',progress)
- ledger=(RUN/'evaluations.jsonl')
- pointer={**progress,'run_directory':str(RUN.relative_to(ROOT)),'index':'research/2026-10-17-deep-review/INDEX.md','progress':'research/2026-10-17-deep-review/progress.json','queue':'research/2026-10-17-deep-review/index.csv','protocol':'research/2026-10-17-deep-review/PROTOCOL.md','original_frozen_rules':str(RULES.relative_to(ROOT)),'original_rules_sha256':hashlib.sha256(RULES.read_bytes()).hexdigest(),'evaluations_written':len(records),'ledger_sha256':hashlib.sha256(ledger.read_bytes()).hexdigest() if ledger.exists() else None,'resume':'Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected.'}
- dump(POINTER,pointer);return progress
+    u = universe()
+    base = _base_records()
+    effective, revisions = _apply_revisions(base, u)
+    counts = {s: sum(x["status"] == s for x in effective.values()) for s in STATES}
+    base_counts = {s: sum(x["status"] == s for x in base.values()) for s in STATES}
+    pending = [i for i in u if i not in effective]
+    old = json.loads((RUN / "progress.json").read_text()) if (RUN / "progress.json").exists() else {}
+    active = old.get("active_indices", []) if active is None else active
+    active = [i for i in active if i not in effective]
+    progress = {
+        "schema": "polyclaude.deep_review.v1", "updated_utc": now(),
+        "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
+        "universe": len(u), "completed_in_depth_reviews": counts["valued"] + counts["blocked_after_review"],
+        "completed_valuations": counts["valued"], "blocked_after_in_depth_review": counts["blocked_after_review"],
+        "factual_exclusions": counts["excluded_factual"], "pending": len(pending),
+        "active_indices": active, "next_pending_indices": pending[:30],
+        "base_records": len(base), "base_record_counts": base_counts,
+        "revisions_written": len(revisions), "milestone": 100,
+        "milestone_notified": old.get("milestone_notified", False),
+        "execution_authority": "Research records are observations, never later execution authorization.",
+    }
+    rows = []
+    for i, r in u.items():
+        v = effective.get(i, {})
+        rows.append({
+            "index": i, "condition_id": r["conditionId"], "market_id": r["id"], "question": r["question"],
+            "status": v.get("status", "in_progress" if i in active else "pending"),
+            "evaluated_utc": v.get("evaluated_utc", ""), "p_yes": v.get("forecast", {}).get("p_yes", ""),
+            "verdict": v.get("verdict", ""), "report": v.get("report_path", ""),
+        })
+    buf = io.StringIO(newline="")
+    w = csv.DictWriter(buf, fieldnames=list(rows[0]), lineterminator="\n")
+    w.writeheader()
+    w.writerows(rows)
+    atomic(RUN / "index.csv", buf.getvalue())
+
+    lines = ["# In-depth market review — live index", "", f"Updated: {progress['updated_utc']}", "",
+             f"**{counts['valued']} valuations saved; first milestone100:** {counts['valued']} valued; "
+             f"{counts['blocked_after_review']} blocked after in-depth review. "
+             f"{counts['excluded_factual']} factual exclusions separately; {len(pending)} pending.", "",
+             "Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.", "",
+             "Read the [first100 inspection report](MILESTONE_100.md), [dated corrections](CURRENT_REVISIONS.md) and [candidate follow-up](candidate_followup.md) with the original observations. A [spacing-normalized reader snapshot](reader/INDEX.md) is available for older reports; the complete canonical queue is below.", "",
+             "Each report below is written before moving to the next evaluation. Related contracts may share evidence, but each probability, literal binding and economic evaluation is explicit. Observations are dated; orders need fresh execution checks.", "",
+             "| Index | Market | Status | Verdict |", "|---:|---|---|---|"]
+    for i, v in sorted(effective.items()):
+        title = u[i]["question"].replace("|", "/")
+        verdict = v["verdict"].replace("|", "/")
+        lines.append(f"|{i}|[{title}]({v['report_path']})|{v['status']}|{verdict}|")
+    if active:
+        lines += ["", "Active indices: " + ", ".join(map(str, active))]
+    atomic(RUN / "INDEX.md", "\n".join(lines) + "\n")
+    dump(RUN / "progress.json", progress)
+
+    base_ledger = RUN / "evaluations.jsonl"
+    revision_ledger = RUN / "revisions.jsonl"
+    pointer = {
+        **progress, "run_directory": str(RUN.relative_to(ROOT)),
+        "index": "research/2026-10-17-deep-review/INDEX.md",
+        "progress": "research/2026-10-17-deep-review/progress.json",
+        "queue": "research/2026-10-17-deep-review/index.csv",
+        "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
+        "original_frozen_rules": str(RULES.relative_to(ROOT)),
+        "original_rules_sha256": hashlib.sha256(RULES.read_bytes()).hexdigest(),
+        # Preserve established meaning: this counts immutable base evaluations only.
+        "evaluations_written": len(base),
+        "ledger_sha256": hashlib.sha256(base_ledger.read_bytes()).hexdigest() if base_ledger.exists() else None,
+        "revisions_sha256": hashlib.sha256(revision_ledger.read_bytes()).hexdigest() if revision_ledger.exists() else None,
+        "revisions_written": len(revisions),
+        "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected.",
+    }
+    dump(POINTER, pointer)
+    return progress
+
 
 def record(path):
- x=json.loads(Path(path).read_text());u=universe();i=int(x['review_index']);r=u[i];assert x['status'] in STATES
- assert x['condition_id'].lower()==r['conditionId'].lower()
- assert x['criteria_sha256']==r['criteria_sha256'] or x.get('criteria_change_explained')
- for field in ['literal_analysis','evidence','forecast','economics','verdict','reopen_condition','report_markdown']:
-  assert x.get(field),field
- assert isinstance(x['evidence'],list) and all(e.get('url') and e.get('observed_utc') and e.get('finding') for e in x['evidence'])
- if x['status']=='valued':
-  f=x['forecast'];assert 0<=f['p_yes']<=1 and 0<=f['low']<=f['p_yes']<=f['high']<=1 and f.get('reasoning') and f.get('method')
-  assert x['economics'].get('both_sides_considered') is True
- x['evaluated_utc']=x.get('evaluated_utc',now());x['question']=r['question'];x['market_id']=r['id'];x['valuation_author']='primary_operator';x['original_index']=i
- dest=RUN/'evaluations'/f'{i:04d}.json';assert not dest.exists(),f'already recorded {i}; revisions must be explicit'
- report=x.pop('report_markdown').rstrip()+'\n';x['report_sha256']=hashlib.sha256(report.encode()).hexdigest();atomic(dest.with_suffix('.md'),report);dump(dest,x)
- with (RUN/'evaluations.jsonl').open('a') as f:f.write(json.dumps(x,ensure_ascii=False)+'\n');f.flush();os.fsync(f.fileno())
- return rebuild()
+    x = json.loads(Path(path).read_text())
+    u = universe()
+    i = int(x["review_index"])
+    assert x.get("report_markdown"), "report_markdown required"
+    validate_record(x, u[i])
+    x["evaluated_utc"] = x.get("evaluated_utc", now())
+    x["question"] = u[i]["question"]
+    x["market_id"] = u[i]["id"]
+    x["valuation_author"] = "primary_operator"
+    x["original_index"] = i
+    dest = RUN / "evaluations" / f"{i:04d}.json"
+    assert not dest.exists(), f"already recorded {i}; use revise"
+    report = x.pop("report_markdown").rstrip() + "\n"
+    x["report_sha256"] = hashlib.sha256(report.encode()).hexdigest()
+    atomic(dest.with_suffix(".md"), report)
+    dump(dest, x)
+    with (RUN / "evaluations.jsonl").open("a", encoding="utf-8") as f:
+        f.write(json.dumps(x, ensure_ascii=False) + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+    return rebuild()
+
+
+def revise(path, prior_report_sha256, reason):
+    reason = reason.strip()
+    assert reason, "revision reason is required"
+    u = universe()
+    base = _base_records()
+    effective, rows = _apply_revisions(base, u)
+    x = json.loads(Path(path).read_text())
+    i = int(x["review_index"])
+    assert i in effective, "cannot revise a condition without a base evaluation"
+    previous = effective[i]
+    assert re.fullmatch(r"[0-9a-f]{64}", prior_report_sha256 or ""), "prior report SHA-256 required"
+    assert prior_report_sha256 == previous["report_sha256"], "provided predecessor hash is stale or mismatched"
+    assert x.get("report_markdown"), "report_markdown required"
+    validate_record(x, u[i], revision=True)
+    report = x.pop("report_markdown").rstrip() + "\n"
+    report_sha = hashlib.sha256(report.encode()).hexdigest()
+    assert report_sha != previous["report_sha256"], "duplicate revision report"
+    stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
+    relbase = f"revisions/{i:04d}_{stamp}"
+    md_rel = relbase + ".md"
+    json_rel = relbase + ".json"
+    md_path = _revision_path(md_rel)
+    json_path = _revision_path(json_rel)
+    assert not md_path.exists() and not json_path.exists(), "duplicate revision path"
+    x["evaluated_utc"] = now()
+    x["question"] = u[i]["question"]
+    x["market_id"] = u[i]["id"]
+    x["valuation_author"] = "primary_operator"
+    x["original_index"] = i
+    x["revision_reason"] = reason
+    x["prior_report_sha256"] = prior_report_sha256
+    x["report_sha256"] = report_sha
+    x["report_path"] = md_rel
+    x["revision_path"] = json_rel
+    json_payload = json.dumps(x, ensure_ascii=False, indent=2) + "\n"
+    row = {"schema": REVISION_SCHEMA, "review_index": i, "revision_path": json_rel,
+           "report_sha256": report_sha, "prior_report_sha256": prior_report_sha256,
+           "revision_json_sha256": hashlib.sha256(json_payload.encode("utf-8")).hexdigest(),
+           "reason": reason, "revision_utc": x["evaluated_utc"]}
+    # Create immutable artifacts first; the append-only ledger is the commit point.
+    atomic(md_path, report)
+    atomic(json_path, json_payload)
+    ledger = RUN / "revisions.jsonl"
+    with ledger.open("a", encoding="utf-8") as f:
+        f.write(json.dumps(row, ensure_ascii=False) + "\n")
+        f.flush()
+        os.fsync(f.fileno())
+    return rebuild()
+
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('command',choices=['init','start','record','rebuild']);p.add_argument('--index',type=int);p.add_argument('--input');a=p.parse_args()
- (RUN/'evaluations').mkdir(parents=True,exist_ok=True)
- if a.command=='record':out=record(a.input)
- elif a.command=='start':
-  assert a.index in universe();old=json.loads((RUN/'progress.json').read_text());out=rebuild(sorted(set(old.get('active_indices',[])+[a.index])))
- else:out=rebuild()
- print(json.dumps(out))
-if __name__=='__main__':main()
+    p = argparse.ArgumentParser()
+    p.add_argument("command", choices=["init", "start", "record", "revise", "rebuild"])
+    p.add_argument("--index", type=int)
+    p.add_argument("--input")
+    p.add_argument("--prior-report-sha256")
+    p.add_argument("--reason")
+    a = p.parse_args()
+    (RUN / "evaluations").mkdir(parents=True, exist_ok=True)
+    if a.command == "record":
+        out = record(a.input)
+    elif a.command == "revise":
+        out = revise(a.input, a.prior_report_sha256, a.reason)
+    elif a.command == "start":
+        assert a.index in universe()
+        old = json.loads((RUN / "progress.json").read_text())
+        out = rebuild(sorted(set(old.get("active_indices", []) + [a.index])))
+    else:
+        out = rebuild()
+    print(json.dumps(out))
+
+
+if __name__ == "__main__":
+    main()

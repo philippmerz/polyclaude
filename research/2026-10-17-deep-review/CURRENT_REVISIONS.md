@@ -3,11 +3,42 @@
 Canonical evaluation files remain immutable observations. Read this file with the index and candidate follow-up before interpreting current probabilities or acting.
 
 
-## Current review pointer — October 18, 10:39 UTC
+## Current review pointer — October 18, 12:15 UTC
 
-The checkpoint is 213 valued, 3 blocked, 328 factual exclusions and 2,456 pending across 544 records; active 113 is included in pending. Five rows appended after pushed HEAD `33e9fac` pass frozen identity/status, CSV and report-hash checks: 96, 101, 106, 112 valued; 97 factually excluded after official final MLB results. [Audit 1039](../../data/deep_review_20261017/ledger_audit_1039.json) and the live index/checkpoint govern. Case 112 is priority research only: 9% YES, 0.5–80% range after a post-quote concentrated countermodel, and a 15-point reserve that is not a floor; no entry is approved. Case 92 remains blocked on complete post-creation CME active-month High history. The preliminary CME CL option crosscheck challenges low-oil mass but is not a physical ICE CLL probability.
+The effective review has **230 valued, 2 blocked, 328 factual exclusions and
+2,440 pending** across 3,000 conditions; case 133 is active and included in pending
+(2,439 pending index rows plus one active row). There are 560 immutable base
+records and 15 append-only revisions, each condition counted once. [Audit 1215](../../data/deep_review_20261017/ledger_audit_1215.json),
+the live [index](INDEX.md) and [checkpoint](../../notes/deep_review_checkpoint.json)
+govern. Cases 124, 130 and 131 are valued at 7%, 59% and 21% YES; no orders were
+added. Case 35 is valued at 60% YES ([revision](revisions/0035_20261018T111634872634Z.md)); its 53-point Top Models token chart includes Others, distinct from the R2 request-share chart’s 52-week series through partial Oct. 12. Case 92 remains blocked on unresolved post-creation CME active-month High
+history.
 
-**OpenRouter source-grain correction — October 18, 10:40 UTC.** The public `period=week` API returns one row per model variant; the row date is not a daily usage observation. Prior 174.020765561738T and current 168.339264961301T are rolling-week response sums, not five daily observations or exact displayed settlement totals. DeepSeek rows 36.824610T/35.888676T match rounded chart labels 36.8T/35.9T. Fixed UTC Monday–Sunday history for case 35 remains missing, not zero; case 35 stays blocked. See [case 112 source packet](../../data/deep_review_20261017/openrouter112_source_followup_1030.json), [case 35](evaluations/0035.md), [case 112](evaluations/0112.md) and [audit1039](../../data/deep_review_20261017/ledger_audit_1039.json).
+**OpenRouter daily-text revision.** All 12 exact R2 lab cases now share [this
+primary model](models/openrouter_lab_rank2_daily_revision_1215.md). Google R2
+changes 80%→90%, OpenAI 13.15%→7.67%, DeepSeek 3.05%→1.03%, ZAI 1.4%→0.4%; residual
+labs/fallback total 0.9%. The Oct. 17 endpoint returned 406 distinct model-variant
+rows: Google 204,399,302 and OpenAI 154,821,839. It is not guaranteed exhaustive or
+cutoff-complete. The revision followed the 11:45 quotes, not price-blind. “APEC” in
+model reasoning is clerical, not a factual/scenario claim. No prices establish a
+forecast. See [case 119 revision](revisions/0119_20261018T120931166457Z.md) and
+[model record](models/openrouter_lab_rank2_daily_revision_1215.json).
+
+Case 112 remains 11% YES/89% NO with a 15-point reserve. DEC-0214 was last verified
+at 11:50 as LIVE/unfilled, five NO at 65¢ ($3.25); eight bids totaled $16.42 in that
+dated snapshot. That account proof is not a newer check. Review/pull at the existing
+22:00 UTC check or earlier on uncertainty; cancel first, no add/reprice.
+
+Case 119’s 52-week request-share chart differs from the default token-share API.
+Its 11:45 book was already about 65 minutes old; the reviewed helper computes a
+passive 1¢ price on that capture, but there is no fresh underwritten quote. Selected
+NO is 0% after reserve. Case 358’s 1¢ ask has no positive cent-grid passive price.
+No R2 order is approved. The old `period=week` API remains rolling-week
+model-variant data, not daily observations.
+
+**Pyth history update — October 18, 10:52 UTC.** Five bounded anonymous public history windows complete the relevant retrieved October sample: 13,440 eligible CLLX6 bars plus 2,640 CLLZ6 bars, with no observed high at or above $105. Earlier broad HTTP 200 history responses returned 4,081 X6 and 1,881 Z6 bars but omitted earlier intervals; narrow windows recovered the requested gaps. The exact truncation or capping mechanism is unproven. The regular-session calendar check found 16,080 expected eligible minutes with no missing or extra bars after excluding the old X6 roll-boundary bar. Special-notice/global coverage, the future October event window, and exact exchange-session interpretation remain qualified. See [history packet](../../data/deep_review_20261017/pyth113_history_gap_retrieval_1100.json) and [case 113 revision](revisions/0113_20261018T105834003724Z.md).
+
+The [OpenRouter API grain note from 10:40](../../data/deep_review_20261017/openrouter112_source_followup_1030.json) remains valid: `period=week` API rows are model variants, not daily observations. Its earlier conclusion that no fixed-week history had been recovered is superseded by the chart addendum above. The rolling API totals are not five daily observations or settlement totals.
 
 **October18, approximately03:25UTC — oil option proxy crosscheck.** Primary
 verified the DEC26 LO put rows and corrected the mixed-month extraction. The
