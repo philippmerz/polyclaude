@@ -1,0 +1,155 @@
+{
+  "review_index": 203,
+  "condition_id": "0xfaaba1147e130488789332bb1d7de205a8b4c4570484a9a28bae34ee93a6e5f7",
+  "criteria_sha256": "b102e99bc27d822135c4201095150efdaa85b6574547e77314a115cf44084444",
+  "status": "valued",
+  "literal_analysis": "Full2026GlobalGooglePassingsrank1/releaseasavailable/March31 23:59ETOther/changednavigation;notUSPeople.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "finding": "OriginalGooglecurrentmethodologyread:2025YoYtrafficgrowth/internaltools,notabsolutevolume;2025windownot2026policy.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://www.ag.state.mn.us/Office/Communications/2026/01/24_Pretti.asp",
+      "finding": "OriginalstateAttorneyGeneralJan24statement identifiesAlexPretti fatalshooting; eligibilityevent,notrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://www.dollyparton.com/news/official-announcement-dolly-parton-passes-away-at-80",
+      "finding": "OriginalofficialAug25announcementread; Partondied2026, competitorcontextnotrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://apnews.com/article/8de8054f3abd4688f894c657467ee3dd",
+      "finding": "APbrowsersearchreportbodyexcerpt statesIranianstateTV/IRNAconfirmedKhameneideathafterFeb28attack; seriousglobalcompetitor,notGooglecategoryrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15,
+    "low": 0.02,
+    "high": 0.5,
+    "method": "ExplicitjointGlobalPassingsscenario masses withoriginal2026eligibleevent/currentcompetitors/historicalcategory/method; uncalibrated.",
+    "reasoning": "Pretti15%fromonewinnerdistribution,Norris25/others60;2–50range,20ppreserve floorsYESstress0. Originalfatalshootingdoesnotmeasureglobalrank.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:53.680+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.15,
+        "best_bid": 0.012,
+        "best_ask": 0.015,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1861.099,
+        "received_utc": "2026-10-17T19:02:53.680+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.015,
+            "fee_usd": 0.0073875
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.15739,
+        "fee_usd": 0.00739,
+        "break_even_probability_before_carry": 0.015739,
+        "break_even_probability_with_idealized_carry": 0.015817057233704197,
+        "central_expected_profit_usd": 1.34261,
+        "default_10pp_stressed_profit_usd": 0.34260999999999986,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.11406999999999999
+      },
+      "No": {
+        "probability": 0.85,
+        "best_bid": 0.985,
+        "best_ask": 0.988,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 1861.099,
+        "received_utc": "2026-10-17T19:02:53.680+00:00",
+        "passed_180s_at_receipt": false,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.988,
+            "fee_usd": 0.005928000000000005
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.885929999999998,
+        "fee_usd": 0.00593,
+        "break_even_probability_before_carry": 0.9885929999999998,
+        "break_even_probability_with_idealized_carry": 0.9934959058287902,
+        "central_expected_profit_usd": -1.3859299999999983,
+        "default_10pp_stressed_profit_usd": -2.3859299999999983,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.75,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.84261
+      }
+    }
+  },
+  "verdict": "Noentry; staleatcapturebothbooks, YESpositivecentralbutfails20ppreserve and10sharecashminimum;NOnegativecentral.",
+  "reopen_condition": "Originalglobalmeasurements/competitornews/Googlemethod-cutoff-list/adjudication; illustrativeNO63cneedsnewcurrentgates.",
+  "current_description_sha256": "e5fd6ceba548aad9e1cbd48ca2390ddbfc8ccd90aaef035379c61776d230cdb1",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "3150040737635342376723101626293808571725883629813453073676930745260069904298",
+    "16638098447998954968126166874001470450427073083518461485085696001258648483881"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0176",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0195",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0195.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/google_passings_method_0137.md",
+    "same_winner_distribution_as": 56,
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stressed_yes_taker_profit_usd": -0.15739,
+    "selected_stressed_no_taker_profit_usd": -3.38593,
+    "both_books_stale_at_capture": true,
+    "ten_YES_shares_below_route_USD1_minimum": true,
+    "illustrative_maker_trigger_NO": 0.63,
+    "default_10pp_table_not_entry_policy": true
+  },
+  "evaluated_utc": "2026-10-18T01:29:21.074902+00:00",
+  "question": "Will Alex Pretti be the #1 searched passing on Google this year?",
+  "market_id": "2965271",
+  "valuation_author": "primary_operator",
+  "original_index": 203,
+  "report_sha256": "1a86d59442ae453df6eb3cfce2547cff17951fd2276fcaf4245e01fb6c0e5432"
+}

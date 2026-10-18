@@ -1,0 +1,165 @@
+{
+  "review_index": 77,
+  "condition_id": "0x7d689cfd2843645633eedffcb394e52adb5aa8b492b6b472a3bd3be539969b0f",
+  "criteria_sha256": "9544b5acaae07d4329f029535ec820b4e968ab6c3e24e5334d811bda7466f40b",
+  "status": "valued",
+  "literal_analysis": "Full2026GoogleUSPeople rank1, releaseearly, navigationindependent, March31 2027 23:59ET missing-listOther.",
+  "evidence": [
+    {
+      "url": "https://www.justice.gov/usao-sdny/human-trafficking-and-sexual-exploitation-minors",
+      "observed_utc": "2026-10-18T01:48:44.762646+00:00",
+      "finding": "Original DOJ text: two transporting-for-prostitution convictions July2,2025;50-month sentence October3. Charges distinguished from convictions. This is prior-year event evidence, not a measured search baseline."
+    },
+    {
+      "url": "https://www.wbur.org/news/2026/09/29/lindsay-clancy-hearing-retrial-motion-to-dismiss",
+      "observed_utc": "2026-10-18T01:48:44.762646+00:00",
+      "finding": "Primary read original reporter account of September29 hearing: retry undecided then, motions under advisement, next reported hearingNovember2. Dated secondary court reporting, not live official docket."
+    },
+    {
+      "url": "https://trends.google.com/trends/",
+      "observed_utc": "2026-10-17T21:31:02Z",
+      "finding": "Original42-weekUS five-term normalized response read; alias/baseline/rank gaps and partialfinalbin explicit."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-18T01:48:44.762646+00:00",
+      "finding": "Captured2025growth/internaltools method is not a2026ranking orwindow guarantee."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/us/",
+      "observed_utc": "2026-10-18T01:48:44.762646+00:00",
+      "finding": "OfficialUSPeople2021–25tables read;2025Robinson#2correctsGlobal#4conflation."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.35,
+    "method": "Primary unfitted compatible USPeoplewinner scenarios, exact selected-query measurements and2025legalbaseline facts; no ownquote inputs.",
+    "reasoning": "USPeople rank1/Other fallback. Prior2025legal events verifiedDOJ;2026selectedSeanCombs-termweakbutalias/internalsandappealshockunknown. Primary5% fromcompatibleunfittedwinnerdistribution, notownprices.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:22.533+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "best_bid": 0.028,
+        "best_ask": 0.199,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.822,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.199,
+            "fee_usd": 0.0796995
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.0697,
+        "fee_usd": 0.0797,
+        "break_even_probability_before_carry": 0.20697000000000002,
+        "break_even_probability_with_idealized_carry": 0.20799646328608917,
+        "central_expected_profit_usd": -1.5697,
+        "default_10pp_stressed_profit_usd": -2.0697,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.26639
+      },
+      "No": {
+        "probability": 0.95,
+        "best_bid": 0.801,
+        "best_ask": 0.972,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 2.822,
+        "received_utc": "2026-10-17T18:35:22.533+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.972,
+            "fee_usd": 0.013608000000000014
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.733609999999999,
+        "fee_usd": 0.01361,
+        "break_even_probability_before_carry": 0.9733609999999999,
+        "break_even_probability_with_idealized_carry": 0.9781883630507368,
+        "central_expected_profit_usd": -0.23360999999999876,
+        "default_10pp_stressed_profit_usd": -1.2336099999999988,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.85,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.9303
+      }
+    }
+  },
+  "verdict": "Bothdatedasks andordinaryNOmaker failselected20ppreserve. Noentry; illustrativefutureNO70cneedsfreshrevaluation/gates, not executabletoday.",
+  "reopen_condition": "OfficialGoogle2026method/list/comparablealiasinclusiveYoYdata, currentcourt/appealorcompetitornews andfunding/bookchanges.",
+  "current_description_sha256": "1dd93a2ed328338be39b74de88bb4683cc446dc8136c26236d8cc7bb3c21c129",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "15120853710355724043868781163367813864765950286091257704081985289107031591328",
+    "111092021311241618698803122342753233256832581357919972990332340966411970051948"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0100",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0100.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0100.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0104",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0104.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0077_primary_before_quote.json",
+    "tracked_method": "research/2026-10-17-deep-review/models/google_us_people_method_0180.md",
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0.0,
+    "selected_stress_no": 0.75,
+    "selected_stressed_yes_taker_profit_usd": -2.0697,
+    "selected_stressed_no_taker_profit_usd": -2.23361,
+    "compact_descriptor_missing_in_dated_batch": true,
+    "illustrative_NO_maker_trigger": 0.7,
+    "no_measured_tail_or_tail_multiplier": true,
+    "alias_complete_series_available": false,
+    "full_2025_baseline_available": false
+  },
+  "evaluated_utc": "2026-10-18T01:49:43.876179+00:00",
+  "question": "Will Sean 'Diddy' Combs be the #1 searched person on Google in the US this year?",
+  "market_id": "3251359",
+  "valuation_author": "primary_operator",
+  "original_index": 77,
+  "report_sha256": "9b978d52b03b2a98dfeb98f49df4aa5014b214d9f6cbb2a91eaeab9222fdd7a8"
+}

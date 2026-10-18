@@ -1,0 +1,55 @@
+{
+  "authored_by": "primary_operator",
+  "generated_utc": "2026-10-18T01:26:16.971774+00:00",
+  "method": "Explicitjudgmentalwinnerregimes,nounretrievedGooglemeasurements,nopriceinputs",
+  "scenarios": {
+    "central": {
+      "Norris": 0.25,
+      "Pretti": 0.15,
+      "Parton": 0.2,
+      "Khamenei": 0.1,
+      "other_current": 0.1,
+      "late_or_unobserved": 0.18,
+      "missing_or_delayed_list_Other": 0.02
+    },
+    "Norris_strong": {
+      "Norris": 0.45,
+      "Pretti": 0.08,
+      "Parton": 0.15,
+      "Khamenei": 0.1,
+      "other_current": 0.05,
+      "late_or_unobserved": 0.15,
+      "missing_or_delayed_list_Other": 0.02
+    },
+    "Norris_weaker": {
+      "Norris": 0.1,
+      "Pretti": 0.2,
+      "Parton": 0.25,
+      "Khamenei": 0.15,
+      "other_current": 0.1,
+      "late_or_unobserved": 0.18,
+      "missing_or_delayed_list_Other": 0.02
+    },
+    "US_shock_strong": {
+      "Norris": 0.1,
+      "Pretti": 0.4,
+      "Parton": 0.1,
+      "Khamenei": 0.1,
+      "other_current": 0.1,
+      "late_or_unobserved": 0.18,
+      "missing_or_delayed_list_Other": 0.02
+    }
+  },
+  "central_ranges": {
+    "Norris": [
+      0.05,
+      0.65
+    ],
+    "Pretti": [
+      0.02,
+      0.5
+    ]
+  },
+  "reserve": 0.2,
+  "method_file": "research/2026-10-17-deep-review/models/google_passings_method_0137.md"
+}

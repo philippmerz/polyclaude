@@ -1,19 +1,39 @@
-## Current pointer — October18 00:17UTC
+## Current pointer — October 18, 02:05 UTC
 
-167valuations/2blocked/327factual/2504pending. Sevennew standaloneSenatecases
-432/444/498/642/684/786/1050savedindividually; no neworderfromthem. Original
-sourceindex notes below are dated, not currentmoney authority. Currentmoney:
-fourHouse+Idaho34YES@3c, allfiveLIVEzero-fill at00:08; IPOcanceledzero-fill,
-old24/76review_required. See resting_orders andCURRENT_REVISIONS.
+The canonical review contains **189 valued, 2 blocked, 327 factual exclusions and
+2,482 pending**; 518 records are saved. Case98 TIME/Mamdani is complete at12%
+with its [qualification-route model](models/time_mamdani_method_0203.md).
+Active case12 is the October23Hormuz/oil/Democratic Senate combination; the
+complete four-page attached PDF has been read. Full literal rules and sources,
+not titles or old screens, govern. See [checkpoint](../../notes/deep_review_checkpoint.json).
 
-Readyneworiginalfactualpackets: google_time_historical_facts_0018.json has
-25completeofficialhistoricalGoogle top10tables/2021–25TIMEeditorialselections;
-currentGoogle/TIMEcasesstillpending primaryvaluation. county_ks_xlsx_addendum_0022.json
-has exact2024officialSedgwick/Leavenworthpresidentialtotals/denominators;
-not2026Senatevotes. Texascountyreturnsgap/FortBendsluginDentoncase binding
-isincounty_senate_baseline_sources_0020.json. AKfullfinalfield/Jr eligibility/
-Dienerstatus remainunresolved in alaska_final_field_followup_0010.json.
-Allpacketpaths are underdata/deep_review_20261017/. No cheapforecasts/rejections.
+Case 147, Sydney Sweeney / Global Actors #1, is
+complete at 15% with a 2–60% range and a 20-point entry reserve; its record is
+[evaluation 0147](evaluations/0147.md). It has no order, prior or reservation.
+
+For case 147, consult [Google’s 2026 catalyst sources](../../data/deep_review_20261017/google_2026_catalysts_sources.json),
+[competitor coverage](../../data/deep_review_20261017/google_2026_competitor_sources.json),
+[historical category results](../../data/deep_review_20261017/google_historical_category_sources.json),
+[the actor follow-up](../../data/deep_review_20261017/google_actors_primary_followup_0187.json),
+and the shared [Athletes method](models/google_athletes_method_0158.md) and
+[scenarios](models/google_athletes_scenarios_0158.json). These concern a different
+Google category and are not a TIME forecast. For case 98’s editorial and
+historical context, use the [TIME source index](../../data/deep_review_20261017/google_time_primary_fact_index.json),
+[official historical facts](../../data/deep_review_20261017/google_time_historical_facts_0018.json),
+and [primary source index](../../data/deep_review_20261017/google_time_primary_read_index_0130.json).
+Google Year in Search rankings, public polls and TIME’s editorial selection are
+different measures; do not treat one as another’s probability.
+
+The 02:00 held-source pass is complete. Its 30 public requests found unchanged
+65-object HLE, five held Gamma criteria and 256 Senate rows against the 22:00
+baseline; three direct OpenAI pages returned 403. Read
+[the source record](../../data/checkin_20261018T0200_sources.json) and
+[the root risk review](../../data/checkin_20261018T0200_risk.json) for live portfolio
+and source facts. These periodic sources do not replace current case-specific
+quote gates. The source table and dated entries below reflect earlier queue
+snapshots; their pending labels are superseded by the current checkpoint and
+index. They are historical evidence, not a shortlist or a basis for rejecting
+pending markets.
 
 # Retrieved evidence for unfinished valuations
 

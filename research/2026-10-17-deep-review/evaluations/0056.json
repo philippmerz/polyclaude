@@ -1,0 +1,164 @@
+{
+  "review_index": 56,
+  "condition_id": "0xe168981c04a53559e115f5d4c60c1f6b42df19415883583446943c2fdbe1318d",
+  "criteria_sha256": "7b9c6e95e83cf8e3ae1e3e5730934c421f47997fa4d1db617809052a63dff0dc",
+  "status": "valued",
+  "literal_analysis": "Full2026GlobalGooglePassingsrank1listregardlessnavigation;releaseasavailable/March31 23:59ETOtherfallback;Dec31metadata notcutoff.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "finding": "OriginalGooglecurrentmethodologyread:2025YoYtrafficgrowth/internaltools,notabsolutevolume;2025windownot2026policy.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://www.ag.state.mn.us/Office/Communications/2026/01/24_Pretti.asp",
+      "finding": "OriginalstateAttorneyGeneralJan24statement identifiesAlexPretti fatalshooting; eligibilityevent,notrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://www.dollyparton.com/news/official-announcement-dolly-parton-passes-away-at-80",
+      "finding": "OriginalofficialAug25announcementread; Partondied2026, competitorcontextnotrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://apnews.com/article/chuck-norris-dies-b92804d43c6eee0d9e3fb31583d7f877",
+      "finding": "OriginalAPbrowsertext/familyreportedMarch19deathread; directHTTPcapture403isnotbodyabsenceinthewebreader.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    },
+    {
+      "url": "https://apnews.com/article/8de8054f3abd4688f894c657467ee3dd",
+      "finding": "APbrowsersearchreportbodyexcerpt statesIranianstateTV/IRNAconfirmedKhameneideathafterFeb28attack; seriousglobalcompetitor,notGooglecategoryrank.",
+      "observed_utc": "2026-10-18T01:26:16.971774+00:00"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.25,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Explicitjointscenario winnerweights fromoriginaleligibility/methodology/historicalcategories/currentcompetitors; nounretrievedglobalseriesorcalibration.",
+    "reasoning": "Norris25/Pretti15/Parton20/Khamenei10/currentother10/later18/missing2 sums100; broad5–65. Currenteventeligibility notvolumeorannualrank.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:20.223+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.25,
+        "best_bid": 0.009,
+        "best_ask": 0.11,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 118.248,
+        "received_utc": "2026-10-17T18:35:20.223+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.11,
+            "fee_usd": 0.04895
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 1.1489500000000001,
+        "fee_usd": 0.04895,
+        "break_even_probability_before_carry": 0.11489500000000001,
+        "break_even_probability_with_idealized_carry": 0.11546481929388422,
+        "central_expected_profit_usd": 1.3510499999999999,
+        "default_10pp_stressed_profit_usd": 0.35104999999999986,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.15,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.08553999999999999
+      },
+      "No": {
+        "probability": 0.75,
+        "best_bid": 0.89,
+        "best_ask": 0.991,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 118.248,
+        "received_utc": "2026-10-17T18:35:20.223+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.991,
+            "fee_usd": 0.004459500000000004
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.91446,
+        "fee_usd": 0.00446,
+        "break_even_probability_before_carry": 0.991446,
+        "break_even_probability_with_idealized_carry": 0.9963630552212395,
+        "central_expected_profit_usd": -2.41446,
+        "default_10pp_stressed_profit_usd": -3.41446,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.65,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 8.85105
+      }
+    }
+  },
+  "verdict": "No order. TakerYESfails20ppreserve,NOnegativecentral; tiny<=3c/1.05maxcashmakerfollowupneedsbalancedreview/allfreshgates.",
+  "reopen_condition": "Newglobalcomparableoriginalseries/competitor death/Googlemethod-cutoff-list/Othermapping; beforeknownpublication/release andcurrentgatedpassiveentry.",
+  "current_description_sha256": "e5fd6ceba548aad9e1cbd48ca2390ddbfc8ccd90aaef035379c61776d230cdb1",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "108045070905228863939926129255665132010517882639404823015083967888059166531838",
+    "86360782699112066061160873404286677616312983256952570015683175634655800881614"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0078",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0078.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0078.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0083",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0083.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/google_passings_method_0137.md",
+    "tracked_model": "research/2026-10-17-deep-review/models/google_passings_scenarios_0137.json",
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stressed_YES_taker_profit_usd": -0.64895,
+    "selected_stressed_NO_taker_profit_usd": -4.41446,
+    "compact_fee_descriptor_missing_in_dated_batch": true,
+    "priority_followup": true,
+    "prospective_nominal_cash": 1.02,
+    "prospective_raw_cap": 0.03,
+    "prospective_signed_cash_cap": 1.05,
+    "default_10pp_table_not_entry_policy": true
+  },
+  "evaluated_utc": "2026-10-18T01:27:41.624372+00:00",
+  "question": "Will Chuck Norris be the #1 searched passing on Google this year?",
+  "market_id": "2965253",
+  "valuation_author": "primary_operator",
+  "original_index": 56,
+  "report_sha256": "1d400c2c4e95c50232b2ff732dd2571cf812605236d2167a8ac94d6b7897c8ab"
+}

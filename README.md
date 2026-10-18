@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-17. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-18. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 ## Start here
@@ -53,10 +53,10 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — Oct 17
+## Active in-depth review — October 18
 
 The operator authorized primary in-depth valuations across the frozen 3,000-market
-universe, retaining all candidates beyond clearly factual exclusions. The
+universe, retaining candidates beyond documented factual exclusions. The
 [live index](research/2026-10-17-deep-review/INDEX.md) and
 [resume checkpoint](notes/deep_review_checkpoint.json) update after each completed
 evaluation. The first 100 substantive reviews are an inspection milestone; valued,
@@ -64,29 +64,41 @@ blocked and factual exclusions are reported separately. Earlier screens do not
 reject markets or count as completed valuations.
 
 The [first100 inspection report](research/2026-10-17-deep-review/MILESTONE_100.md)
-was sent in chat and Telegram. At01:16UTC October18, **178 valuations,2 blocked
-and327 factual exclusions** are saved;2,493 remain pending, no active case.
-Each case updates the index before the next. All3,000 have archived public
-quote captures; missing/stale books remain explicit gaps, never zero prices.
+was delivered in chat and Telegram. The checkpoint now records **189 valued,
+2 blocked and 327 factual exclusions**; 2,482 remain pending, with case 12
+(Hormuz/oil/Democratic Senate combination) active. Mamdani case98 is saved
+with its explicit group-cover model. The 518 canonical records are indexed
+for continuation. All 3,000 conditions
+have archived public quote captures; missing, stale or omitted books remain
+explicit gaps, never zero prices.
 
-Seven post-only BUY bids were independently verified LIVE, zero-filled at
-01:13:10–17UTC/block95720430: ME02YES10@38c, CA06NO50@3c, MT01YES10@33c,
-NY01YES10@12c, ToddAchillesIdahoYES34@3c, MichiganDemocraticSenateNO5@31c,
-and **SedgwickCountyDemocraticSenateYES5@20c**. Pending13.37pUSD;
-uncommitted11.626890; all eight reviewed candidates' both balances0. These are
-commitments, not purchases/profit. Michigan currentNO44% and SedgwickYES49%
-are uncalibrated judgments with broad ranges. No measured portfolio hedge.
+**Eight post-only BUY bids are LIVE and zero-filled**, independently verified
+at 02:01:40 UTC. Pending cash is $14.72; arithmetic uncommitted pUSD is
+$10.276890. The separate fixed-block proof at01:58:50–01:59:01/block95722257
+confirmed all11 reviewed candidates have zero balances in both outcomes. The newest bid is Lionel Messi Global Athletes
+TOP 5 YES, 5 shares at 27¢ ($1.35; DEC-0213). The other seven bids are the four
+House bids, Idaho YES 34 at 3¢, Michigan Senate NO 5 at 31¢ and Sedgwick County
+YES 5 at 20¢. These are commitments, not purchases or profit; full identities,
+proofs and pull plans are in [resting orders](notes/resting_orders.md).
 
-Pull Sedgwick at **Oct19 10:00UTC**, before in-personopening13UTC/Trump23UTC
-rally. Nexstar's Tuesday/Oct21 weekday conflict remains unresolved; the pull
-precedes either debate interpretation. Pull Idaho atOct19 22:00UTC before its
-Oct20forum; Michigan atOct23 22:00UTC beforeOct24 in-personvoting. Review every
-existing tick/earlier materialnews. AnthropiclargestIPO NO5@62c remains
-canceledzero-fill/review_required; no repost. Read [entry follow-up](research/2026-10-17-deep-review/candidate_followup.md),
-[corrections](research/2026-10-17-deep-review/CURRENT_REVISIONS.md), and
-[resting orders](notes/resting_orders.md). LastfullheldcheckOct17 22:00,
-nextOct18 02:00. Current Senatecontrol D53/R46/Other1, DD49/RR16;
-no chamber/ISRG/Spotify order. [Current source revision](research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md).
+The [02:00 full held-source check](data/checkin_20261018T0200_sources.json)
+found no change in 65 raw HLE model objects, the five held Gamma criteria, 256
+Senate rows, or the compared Google article cores and AA HLE pair. The mounted
+leaderboard still lists Gemini Argon at 55.6 and OpenAI Astra at 53.6; Diamond
+is a separate metric. Gamma outcome-price snapshots moved from 75.5% to 77.5%
+for OpenAI HLE 55%, from 5.5% to 5.0% for Clarity over 50, and from 8.0% to 7.5%
+for Clarity over 58; these are API snapshots, not executable quotes. Gemini's
+market remains resolved and closed. Three direct OpenAI pages returned HTTP 403
+and remain coverage gaps. The bounded public alert review found no material or
+critical held match; this does not establish global absence of news. No source
+discovery was added.
+
+Continue saving and indexing each primary valuation before beginning the next.
+The last full held-source check completed
+at 02:00 UTC; the next existing check is 06:00 UTC. Weekly and monthly reviews
+are not due until October 23 and November 12. Entry verification does not replace
+a scheduled full review. See [current revisions](research/2026-10-17-deep-review/CURRENT_REVISIONS.md)
+and [root risk](data/checkin_20261018T0200_risk.json) for current judgments.
 
 ## Mandate and constraints
 
@@ -108,52 +120,51 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last bankroll snapshot — 2026-10-17 ~22:00 UTC
+## Last bankroll snapshot — October 18, 02:01 UTC
 
-Bankroll own-component window22:00:36–22:00:52UTC. Rounded sequential marks
-are not synchronized NAV or a freshness-certified liquidation; VM/API costs
-are excluded. The separate positions command marked PM at30.80 rather than
-bankroll's30.94 because its observation window differs.
+The authoritative bankroll command ran02:01:09.646–02:01:25.558UTC; root risk
+judgment was saved02:05:52.761UTC. Component marks were
+rounded and sequential, not synchronized NAV or a certified full-account
+liquidation; VM/API costs are excluded. The separate positions command marked
+Polymarket at $30.80, $0.18 below the bankroll PM midpoint because the observation
+windows differ.
 
 | Measure | Value |
 |---|---:|
 | Trading capital reference | $170.00 |
-| Total marked bankroll | $196.37 |
-| Separately funded gas | $5.76 |
-| Trading midpoint / indicative depth | $190.61 / $188.56 |
-| PM midpoint / indicative depth | $30.94 / $28.89 |
-| Whole-account approximate depth | $194.32 |
+| Total marked bankroll | $196.48 |
+| Separately funded gas | $5.83 |
+| Trading midpoint / indicative depth | $190.65 / $188.42 |
+| Polymarket midpoint / fee-net indicative depth | $30.98 / $28.75 |
+| Whole-account approximate depth | $194.25 |
 | Remaining open-position cost | $29.86 |
 | Settled accounting residual | $19.53 |
 
-Since18:00, trading midpoint/depth changed−$0.03/−$0.11; settled residual is
-unchanged. Retain OpenAI HLE NO9 with priors25%/15%/38%; current23c/26c
-book passed at20.00s byPOST, fee-net full exit2.00624. The conditional central
-and upper cases hold; stress exits9. This is not calibrated joint optimization.
-Clarity29/29 retains its conditional29 floor, but both books failed180s on
-GETandPOST (about340/423s); there is **no current paired-exit price certificate**.
-Keep both/noadd. AtPolygon95712709, pUSD24.996890/aUSDC122.112198 and live
-variable Aave3.05351963%. Gemini50 is finalYES; losingNO4.034750 remains
-zero value/no burn. Retain Hormuz0.003571dust: point gas0.00460968 exceeds
-payout using dated175036units and roundedFX, not a new simulation.
+The 02:00 risk review retained OpenAI HLE NO 9 shares with 25% central, 15% stress
+and 38% upper probabilities, with no add; the observed OpenAI HLE maximum remains
+53.6 against the 55% rule. It retained the complete 29/29 Clarity group, with no
+add or legwise sale: captured fee-net paired exit was $26.83184 against its $29
+payout floor. Gemini NO 4.034750 remains final, with no rebook, grade or burn.
+Hormuz dust remains because point gas exceeds its payout; no simulation or
+broadcast was made. The review recorded zero asset actions. See the
+[full risk record](data/checkin_20261018T0200_risk.json),
+[source comparison](data/checkin_20261018T0200_sources.json), and
+[routine record](data/checkin_20261018T0200_routine.json).
 
-All26 sampled sources were captured/hashed;65HLE objects, five Gamma rules,
-256Senate rows and article/AA comparisons match18:00. OpenAI maximum53.6<55;
-Diamond is separate. Three direct OpenAI pages returned403 coverage gaps.
-Root consumed the knownCA06powder alert and Oct13partisanMTdebate release;
-neither established a ballot/withdrawal change. No universal no-news claim.
+The source pass captured 30 public GETs with hashed bodies: 65 HLE objects, five
+held criteria, 256 Senate rows, four House query feeds, four cited official pages,
+and four existing pending-bid RSS feeds. The three direct OpenAI-page 403s are
+coverage gaps. No full review should infer no news from those gaps or bounded
+feeds.
 
-Nineteen routine command types ran once;38timed streams verified. Eighteen
-returned0; state audit returned1 for four priors attached to verified LIVE,
-unfilled bids. These are expected pending-order judgments, not lost holdings;
-no prior deletion or false closure note. Eight financial records were unchanged.
-All four daemons are current; disk193.88MiB remains below512warning/above128
-critical.81decisions pending,0overdue. WeeklyOct23/monthlyNov12 remain due;
-next existing scheduled check02:00UTC. The finite in-depth review continues.
-See [root judgment](data/periodic_20261017T2200_root_judgment.json),
-[risk](data/periodic_20261017T2200_risk.json),
-[sources](data/periodic_20261017T2200_sources.json),
-[routine](data/periodic_20261017T2200_routine.json), and [journal](notes/journal.md).
+The complete position-state audit reported nine prior-orphan flags: eight are
+attached to currently LIVE bids, including Messi; one is the canceled IPO prior
+marked review-required. Preserve them; do not delete or close them as if they
+were positions. Four canonical current daemons passed the health probe. Disk
+headroom was about 224 MiB, above the 180 MiB research floor and 128 MiB critical
+threshold. The direct quota check succeeded with 20 of 100 used and reset at
+October 24, 20:41 UTC. The last pushed commit is `63181ff` (178 valuations); the focused commit
+is pending. No financial record or unrelated runtime state was changed.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

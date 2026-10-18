@@ -1,0 +1,203 @@
+{
+  "review_index": 147,
+  "condition_id": "0x1d570125ddac9394c638e2c1949b80accd170899a8d494ca9559a587c9fca94f",
+  "criteria_sha256": "ee08e3a1a5ae9ecec2ad58310314e8405d5120302eea0738cf594e39c7e9fe76",
+  "status": "valued",
+  "literal_analysis": "Fullofficial2026GlobalActors rank1/notUSPeople;releaseearly/changednavigation/March31 2027 23:59ET missing-listOther.",
+  "evidence": [
+    {
+      "url": "https://press.wbd.com/ca/media-release/hbo-0/euphoria/season-three-hbo-original-drama-series-euphoria-debuts-april-12",
+      "finding": "Original116627-bytebody/gzipmaintextread:April12premiere,eightweeklyeps, Sweeneyregularbutmanycostars. May31finale isinferredweeklyarithmetic, notexplicitdateinthisbody.",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00"
+    },
+    {
+      "url": "https://www.netflix.com/tudum/articles/gundam-live-action-movie-release-date-news",
+      "finding": "RootbrowserreadcurrentApril20article:productionstart, Sweeney/Centineo; no2026release date asserted. Directlargebodyearliernotretained.",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00"
+    },
+    {
+      "url": "https://www.oscars.org/oscars/ceremonies/2026",
+      "finding": "RootreadoriginalMarch15,2026ceremony honoring2025films; Jordanleadingwinner/otheractingnominees.",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00"
+    },
+    {
+      "url": "https://investors.ae.com/press-releases/news-details/2025/Sydney-Sweeney-Has-Great-American-Eagle-Jeans/default.aspx",
+      "finding": "RootreadfulloriginalissuerreleaseJuly23,2025campaign; prior-yeareventnotmeasuredGooglebaselineor2026release.",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00"
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00",
+      "finding": "Rootreadcomplete2021–25GlobalActorstop10s; historicalwinners/actorscope illustrative, not2026probabilitycalibration."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-18T01:55:22.142350+00:00",
+      "finding": "Captured2025growth/internaltoolsmethod;2026windowandcomparableglobalseries remainunknown."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15,
+    "low": 0.02,
+    "high": 0.6,
+    "method": "Primary GlobalActors rank-one compatible qualitative scenarios from originalHBO ensemble2026release, Netflixproduction-only announcement, officialAcademycompetitors, originalAEOJuly2025campaign, fivehistoricalglobaltop10s. No2026globalseries/baseline/internalmethod/fullfield.",
+    "reasoning": "Euphoria8episodereturn offersactual2026news, yetsharedcostars andprior2025campaigncanraisethebaseline; Gundamproductionnotrelease. Historicalwinnersshowoff-screen shocks andinternationalactors canwin. Sweeneyseriouscandidate15notirrelevant; sourceuncertaintywide2–60/20ppreserve, noownprices.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:42.265+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.15,
+        "best_bid": 0.01,
+        "best_ask": 0.034,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.866,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.034,
+            "fee_usd": 0.016422
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.35643,
+        "fee_usd": 0.01643,
+        "break_even_probability_before_carry": 0.035643,
+        "break_even_probability_with_idealized_carry": 0.03581977069578236,
+        "central_expected_profit_usd": 1.14357,
+        "default_10pp_stressed_profit_usd": 0.14356999999999986,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.04999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.09343
+      },
+      "No": {
+        "probability": 0.85,
+        "best_bid": 0.966,
+        "best_ask": 0.99,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 24.866,
+        "received_utc": "2026-10-17T19:02:42.265+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 8.3,
+            "price": 0.99,
+            "fee_usd": 0.0041085000000000045
+          },
+          {
+            "shares": 1.6999999999999993,
+            "price": 0.991,
+            "fee_usd": 0.0007581150000000005
+          }
+        ],
+        "filled_gross_shares": 10.0,
+        "taker_cost_usd": 9.90657,
+        "fee_usd": 0.00487,
+        "break_even_probability_before_carry": 0.990657,
+        "break_even_probability_with_idealized_carry": 0.9955701421926232,
+        "central_expected_profit_usd": -1.4065700000000003,
+        "default_10pp_stressed_profit_usd": -2.4065700000000003,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.75,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.64357
+      }
+    }
+  },
+  "verdict": "Noentry: selected20ppreservefailsonYES despitepositivecentralEV;tenYESbelow$1routefloor, NOnegativecentral. Retainmeasurementfollowup, futureNO62ctriggeronly.",
+  "reopen_condition": "Comparableoriginalglobalalias-inclusiveYoY/fullfielddata, official2026Googlemethod/list ormaterialactor/competitornews andfreshquotes.",
+  "current_description_sha256": "fa6468ca85b46a9aeff21e48bc905d6d40204fc94c1ad2e5fc6635272cdb7ac9",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "32085690789004860180405332272419197034852253627931724216935377717822304142891",
+    "113341735455384311257453402187173490450430894879008893433703861473339006166105"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0052",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0068",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0068.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0147_primary_before_quote.json",
+    "scenarios": {
+      "central": [
+        0.15,
+        0.2,
+        0.1,
+        0.1,
+        0.15,
+        0.18,
+        0.1,
+        0.02
+      ],
+      "Sweeney_strong": [
+        0.45,
+        0.1,
+        0.05,
+        0.05,
+        0.1,
+        0.13,
+        0.1,
+        0.02
+      ],
+      "broader_field": [
+        0.05,
+        0.15,
+        0.1,
+        0.1,
+        0.2,
+        0.28,
+        0.1,
+        0.02
+      ]
+    },
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.65,
+    "selected_stressed_yes_taker_profit_usd": -0.35643,
+    "selected_stressed_no_taker_profit_usd": -3.40657,
+    "ten_YES_shares_below_route_USD1_minimum": true,
+    "illustrative_NO_maker_trigger": 0.62,
+    "priority_source_followup": "Matchedglobalquery/entitygrowthvsprior-yearandfullfield, notanotherfameheadline",
+    "finale_date_is_arithmetic_not_explicit_source_date": true
+  },
+  "evaluated_utc": "2026-10-18T01:57:24.500039+00:00",
+  "question": "Will Sydney Sweeney be the #1 searched actor on Google this year?",
+  "market_id": "2977650",
+  "valuation_author": "primary_operator",
+  "original_index": 147,
+  "report_sha256": "2c3464d1addb8c47a928b27e014f1a8a2d0324429cef129a0cbd8d87ce5cbc67"
+}

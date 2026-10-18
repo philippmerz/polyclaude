@@ -1,0 +1,164 @@
+{
+  "review_index": 2110,
+  "condition_id": "0x89d9127787966c2789ee272a854cf69ef85a4e1c4d99c30fc526a619b988b491",
+  "criteria_sha256": "665d2e5eeb51f88782dcac2781b9d7202ddc615d3d11f35c7a3c6df88007e016",
+  "status": "valued",
+  "literal_analysis": "FullRepublicanTarrantSenateNov3countyplurality;lastnametie/replacementparty/March31Other/consensusofficialfallback;allread.",
+  "evidence": [
+    {
+      "url": "https://ballotverifier.tarrantcountytx.gov/",
+      "observed_utc": "2026-10-18T00:54:40.646132+00:00",
+      "finding": "Locatorforofficial2024Senatecontest621; originalCSV693precinctsandallchoice/ballotsums preservedin county_2024_senate_returns_followup_0050; exactreceipt time inpacket,notarbitrarilynew2026returns."
+    },
+    {
+      "url": "https://clerk.house.gov/member_info/electionInfo/2024/statistics2024.pdf",
+      "observed_utc": "2026-10-17T20:02:53.609+00:00",
+      "finding": "OfficialTexasstatewideSenatecandidate/recappp67/70 exacttotals reconcile, notcountysummary."
+    },
+    {
+      "url": "https://www.tarrantcountytx.gov/en/elections/calendar/november-3--2026--joint-general-and-special-election---early-vot.html",
+      "observed_utc": "2026-10-18T01:16:32Z",
+      "finding": "Officialcurrentearlyvotehours capturedincontext0118; timezoneunprinted, nominee/debatecoveragegapsexplicit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.01,
+    "high": 0.55,
+    "method": "Sameoriginal2024Senatecountyrelative/currentTXsource+local5SD/O1jointmodel648; uncalibrated, fullnewliteral andownprice.",
+    "reasoning": "RawR12.06640; RYEScheapcentralpositivebut15ppreservezero; NO88negativeatcapturedask. Geography/sourceerrorsshareDcounterpart.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_2041_2160.json.gz",
+    "quote_observed_utc": "2026-10-18T00:20:23.354+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "best_bid": 0.033,
+        "best_ask": 0.061,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 22.271,
+        "received_utc": "2026-10-18T00:20:23.354+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.061,
+            "fee_usd": 0.0229116
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 0.63292,
+        "fee_usd": 0.02292,
+        "break_even_probability_before_carry": 0.063292,
+        "break_even_probability_with_idealized_carry": 0.06344875354622673,
+        "central_expected_profit_usd": 0.5670799999999999,
+        "default_10pp_stressed_profit_usd": -0.43292000000000014,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.01999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 0.31723
+      },
+      "No": {
+        "probability": 0.88,
+        "best_bid": 0.939,
+        "best_ask": 0.967,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 22.271,
+        "received_utc": "2026-10-18T00:20:23.354+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.967,
+            "fee_usd": 0.012764400000000013
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 9.68277,
+        "fee_usd": 0.01277,
+        "break_even_probability_before_carry": 0.9682769999999999,
+        "break_even_probability_with_idealized_carry": 0.9706751048707541,
+        "central_expected_profit_usd": -0.8827699999999989,
+        "default_10pp_stressed_profit_usd": -1.882769999999999,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.78,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 9.36708
+      }
+    }
+  },
+  "verdict": "No entry: bothsidesfail15ppreserve; illustrativeNO71cneedsfreshfacts/currentgates.",
+  "reopen_condition": "Originalcurrentcounty/stateinstrument/candidate/ballot/turnout/ruleschange; beforeearlyopening/knownrelease/debate/Nov3.",
+  "current_description_sha256": "b593bd4591a3d27288f30c1fc3ee173701e9e62261633fd58fef53e1ff09d676",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "74722516452337492159647558744585830121618934616149933670302632345217211752303",
+    "9638811470654960228262402185248661131666272989989939885701115731297630185319"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0001.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_identity_match_count": 1,
+      "status": "exact_market_and_condition_identity_validated",
+      "received_utc": "2026-10-18T00:20:22.928+00:00",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0005",
+      "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0005.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0005.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "requests": [
+        {
+          "request_id": "req_0005",
+          "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0005.receipt.json",
+          "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0005.body.json.gz",
+          "http_status": 200,
+          "parse_status": "ok",
+          "received_utc": "2026-10-18T00:20:23.354+00:00",
+          "error": null
+        }
+      ]
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/county_MI_TX_method_0120.md",
+    "same_county_as": 648,
+    "case_specific_reserve_for_entry": 0.15,
+    "selected_stressed_yes_profit_usd": -0.63292,
+    "selected_stressed_no_profit_usd": -2.38277,
+    "default_10pp_table_not_entry_policy": true,
+    "hypothetical_YES10shares_below_route_USD1_minimum": true,
+    "illustrative_maker_trigger_no": 0.71
+  },
+  "evaluated_utc": "2026-10-18T01:21:05.679569+00:00",
+  "question": "Will the Republicans win Tarrant County in the Texas Senate race in 2026?",
+  "market_id": "4063958",
+  "valuation_author": "primary_operator",
+  "original_index": 2110,
+  "report_sha256": "f9db43024dde902e388ca239a6e21840e825e8cc904e830da6a9c7ad3e5bea3c"
+}

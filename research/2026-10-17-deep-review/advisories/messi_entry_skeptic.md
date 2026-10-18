@@ -1,0 +1,22 @@
+# Case 210 — independent skeptic advisory
+
+**Scope:** frozen market 4425465, condition `0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69`. The event is Messi appearing in the top five of Google’s official **Global Athletes** Year in Search 2026 list. No forecast or execution authority is supplied here.
+
+## Strongest positive case
+
+Messi had two unusually large, globally broadcast catalysts in 2026: Argentina’s World Cup campaign, where he scored eight goals and reached the final, and his Argentina international farewell on October 6 (the FIFA article was published October 7). The August 31 announcement concerned international duty, not club football. Multiple countries and languages could produce broad search growth. The 2025 Global Athletes leaders spanned several sports, so the World Cup is a credible driver, though not proof of rank.
+
+At five shares, a 27¢ fill costs $1.35 and a 28¢ fill costs $1.40 before other costs. At the primary’s selected 40% stress value, gross expected profit is $0.65/$0.60; at its 20% range floor the positions lose $0.35/$0.40, and a NO result loses the full stake. This is attractive only if the high primary scenario survives the method and full-field uncertainty.
+
+## Skeptical evidence and falsifiers
+
+- Google’s captured 2025 method is year-over-year search-traffic growth using internal tools—not total volume—and gives no reproducible formula. Its November 25 cutoff and December 4 publication are not established for 2026. No comparable global 2026 series was retrieved. Messi’s fame can raise both searches and the prior-year baseline; neither effect identifies his growth rank.
+- Messi is absent from displayed 2021–25 Global Athletes top tens, but that is context, not proof of low interest or future ineligibility. Past methods/cutoffs are not all verified identical. A window excluding either catalyst or comparable global data showing his growth below five other athletes would weaken the case; method-consistent data placing him within five would strengthen it.
+- The model’s 60% comes from subjective joint masses: 22% both Messi/McGregor, 38% Messi only, 18% McGregor only, 20% neither despite a list, and 2% missing-list NO. It does not allocate the other three top-five places to a full field; Mbappé, other World Cup stars, Olympic standouts, tennis/cricket athletes, and late breakouts remain largely in residual buckets. FIFA’s indexed official text says Mbappé won the Golden Boot with ten goals to Messi’s eight; the direct FIFA HTTP response was only a small shell, so the indexed text—not that shell—is the evidence. The bounded Olympics search did not verify Vonn/Leerdam results.
+- Google’s query-to-person grouping, language/transliteration handling, and exact 2026 algorithm are unknown. World Cup prominence alone is not a category rank. Top-five placement depends on relative growth across the complete field, not only these two cases.
+- The 20–90% range includes a loss even after the 20-point reserve. On the dated Oct. 17 book YES was 26¢ bid / 28¢ ask. A post-only buy at 28¢ would have been marketable against that ask and should reject or take, depending on venue behavior; only 27¢ was below the recorded ask. Refresh the book and verify helper tick/post-only behavior. Fills can be partial or selectively adverse; full loss is $1.35–$1.40.
+- Missing the list by March 31, 2027 resolves **NO**, unlike Passings’ “Other”; publication may resolve the market earlier. The Oct. 17 2026-hub 404 does not establish a December release. Monitor official list/method changes and pull before known publication; an unannounced release still creates adverse-selection risk.
+
+**Crux:** Messi’s World Cup and farewell must generate enough global year-over-year athlete-query growth to beat the full field. The catalysts make 60% plausible, but the unmeasured growth rank does not validate it. At selected 40%, proposed prices leave only $0.60–$0.65 gross cushion; the range includes a loss and 28¢ was not a post-only limit against the observed ask. Preserve the full-stake loss case; no independent probability or action is proposed.
+
+**Reviewed offline:** frozen rule and `evaluations/0210.json/.md`; `models/google_athletes_method_0158.md` and `google_athletes_scenarios_0158.json`; `data/deep_review_20261017/google_time_primary_read_index_0130.json` and `google_athletes_primary_followup_0158.json`. No network reads or financial/configuration writes.

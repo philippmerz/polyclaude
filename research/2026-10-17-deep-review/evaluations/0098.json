@@ -1,0 +1,188 @@
+{
+  "review_index": 98,
+  "condition_id": "0x9c08dd09883c33419b3dc35ee73720c0f69c33246c1c8370f9572279707a40d5",
+  "criteria_sha256": "6fba7c02be797884c5ca66abfc4d762c8e2007b26d5b51ce0d11693442ca9b8e",
+  "status": "valued",
+  "literal_analysis": "Full explicit/multiple named and direct-association PLUS announcing-cover routes; not single exclusive winner, mere relation or poll; featurearticle interpretation read. MissingJune30,2027 23:59ET paysNO.",
+  "evidence": [
+    {
+      "url": "https://time.com/3626016/person-of-the-year-faq/",
+      "observed_utc": "2026-10-18T02:09:48.639702+00:00",
+      "finding": "Primary read actual article: impact can be good or ill; private editors select, reader poll does not determine winner;2001Giuliani historical cover is a local-office counterexample, not a base rate."
+    },
+    {
+      "url": "https://time.com/7339576/person-of-the-year-2025-editors-letter/",
+      "observed_utc": "2026-10-18T02:09:48.639702+00:00",
+      "finding": "Primary actual body read: fall newsroom nominations debated/narrowed in2025, not2026private nominee evidence."
+    },
+    {
+      "url": "https://time.com/person-of-the-year/",
+      "observed_utc": "2026-10-18T02:01:37Z",
+      "finding": "Bounded current open redirected to2025AIArchitects; targeted search found no2026Mamdani shortlist/announcement, not absence proof."
+    },
+    {
+      "url": "https://www.nyc.gov/mayors-office",
+      "observed_utc": "2026-10-18T02:09:48.639702+00:00",
+      "finding": "Earlier original capture establishesJanuary1,2026mayoralty/news throughOctober15; newer open did not expose a dated body, no newer event asserted."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.01,
+    "high": 0.5,
+    "method": "Primary disjoint qualification-route model for private TIME editorial selection, with explicit group-cover branch; unfitted source-grounded judgment, not independent winner shares.",
+    "reasoning": "Mamdani current NYC mayoralty and first-year political narrative plausibly support individual or qualifying collective covers. A local office is not disqualifying (historical Giuliani), but no measured current finalist probability or private editorial evidence is available. Global political, cultural, business and unforeseen stories compete. Public poll/Google People/TIME100 do not satisfy the frozen rule. Group association PLUS qualifying announcement cover is required for non-named collective route. Uncertainty is broad and correlated across TIME children; missing announcement paysNO.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0001_0120.json.gz",
+    "quote_observed_utc": "2026-10-17T18:35:25.007+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "best_bid": 0.28,
+        "best_ask": 0.29,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 22.255,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.29,
+            "fee_usd": 0.10294999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.00295,
+        "fee_usd": 0.10295,
+        "break_even_probability_before_carry": 0.300295,
+        "break_even_probability_with_idealized_carry": 0.3017843066265456,
+        "central_expected_profit_usd": -1.8029499999999998,
+        "default_10pp_stressed_profit_usd": -2.80295,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.01999999999999999,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 2.6992000000000003
+      },
+      "No": {
+        "probability": 0.88,
+        "best_bid": 0.71,
+        "best_ask": 0.72,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 22.255,
+        "received_utc": "2026-10-17T18:35:25.007+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.72,
+            "fee_usd": 0.1008
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 7.300799999999999,
+        "fee_usd": 0.1008,
+        "break_even_probability_before_carry": 0.7300799999999998,
+        "break_even_probability_with_idealized_carry": 0.7337008161371597,
+        "central_expected_profit_usd": 1.4992000000000019,
+        "default_10pp_stressed_profit_usd": 0.49920000000000186,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.78,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.99705
+      }
+    }
+  },
+  "verdict": "Noentry: YESnegativecentral, NOpositivecentralbutfails20ppselectedreserve atasks/ordinarymaker. FutureNO64ctriggeronly.",
+  "reopen_condition": "Original current TIMEfinalist/selection/qualifyingcover or substantive candidate/competitor news; freshNO<=64c with full execution checks.",
+  "current_description_sha256": "2a41dadc7ef95fd067cf83ab83411d788e838376d62bfa78ee5fb64c4aa02161",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "75219721190829533004296881569889865263645607082195400521306397405990606723860",
+    "114169068717289116554861249264824916099637224786297311464587351996474994462411"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0122",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0122.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0122.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0125",
+      "receipt_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0001_0120/req_0125.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "primary_before_quote": "data/deep_review_20261017/work/0098_primary_before_quote.json",
+    "tracked_method": "research/2026-10-17-deep-review/models/time_mamdani_method_0203.md",
+    "scenarios": {
+      "central": {
+        "sole_explicitly_named": 0.04,
+        "multiple_explicitly_named": 0.02,
+        "associated_group_and_announcing_cover_without_prior_named_routes": 0.06,
+        "announcement_without_Mamdani_qualification": 0.86,
+        "no_announcement_by_June30_2027": 0.02
+      },
+      "strong_direct_story": {
+        "sole_explicitly_named": 0.1,
+        "multiple_explicitly_named": 0.05,
+        "associated_group_and_announcing_cover_without_prior_named_routes": 0.15,
+        "announcement_without_Mamdani_qualification": 0.68,
+        "no_announcement_by_June30_2027": 0.02
+      },
+      "global_other_stories": {
+        "sole_explicitly_named": 0.01,
+        "multiple_explicitly_named": 0.005,
+        "associated_group_and_announcing_cover_without_prior_named_routes": 0.025,
+        "announcement_without_Mamdani_qualification": 0.94,
+        "no_announcement_by_June30_2027": 0.02
+      },
+      "group_cover_heavy": {
+        "sole_explicitly_named": 0.02,
+        "multiple_explicitly_named": 0.02,
+        "associated_group_and_announcing_cover_without_prior_named_routes": 0.25,
+        "announcement_without_Mamdani_qualification": 0.69,
+        "no_announcement_by_June30_2027": 0.02
+      }
+    },
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0,
+    "selected_stress_no": 0.68,
+    "selected_stressed_yes_taker_profit_usd": -3.00295,
+    "selected_stressed_no_taker_profit_usd": -0.5008,
+    "independent_compact_descriptor_gap": true,
+    "multiple_qualifying_people_possible": true,
+    "illustrative_NO_maker_trigger": 0.64
+  },
+  "evaluated_utc": "2026-10-18T02:11:14.713251+00:00",
+  "question": "Will Zohran Mamdani be TIME Person of the Year 2026?",
+  "market_id": "2363844",
+  "valuation_author": "primary_operator",
+  "original_index": 98,
+  "report_sha256": "5517c9ac37f183d4f843461f62361072ce5152030b73aaba0da046afb2b5f8ea"
+}

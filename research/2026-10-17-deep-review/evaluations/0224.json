@@ -1,0 +1,166 @@
+{
+  "review_index": 224,
+  "condition_id": "0x2579c53c318675bde886ceb1ad73605d293c27b6eb3b7d878481299d73af1765",
+  "criteria_sha256": "56c3fe9b1d93b8956dabfd25a8fc4ad907ff1c096d824840cfa90fd9891c8676",
+  "status": "valued",
+  "literal_analysis": "Fullofficial2026USPeople rank1/navigationindependent/earlyrelease/March31 2027 23:59ET missing-listOther.",
+  "evidence": [
+    {
+      "url": "https://www.wbur.org/news/2026/09/29/lindsay-clancy-hearing-retrial-motion-to-dismiss",
+      "observed_utc": "2026-10-18T01:48:44.762646+00:00",
+      "finding": "Primary read original reporter account of September29 hearing: retry undecided then, motions under advisement, next reported hearingNovember2. Dated secondary court reporting, not live official docket."
+    },
+    {
+      "url": "https://trends.google.com/trends/",
+      "observed_utc": "2026-10-17T21:31:02Z",
+      "finding": "Full42-weekUS five-term normalized response read. Clancy trial-windowburst isnotYoYorannualrank;aliases/fullfield/partialbin gaps retained."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-18T01:50:07.216626+00:00",
+      "finding": "Published2025growth/internaltools method doesnotdisclose2026windoworannualcategoryscores."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/us/",
+      "observed_utc": "2026-10-18T01:50:07.216626+00:00",
+      "finding": "OfficialhistoricalUSPeople top10s read;rank-oneprecedents areillustrative,notcalibration."
+    },
+    {
+      "url": "https://apnews.com/article/lindsay-clancy-trial-holdout-juror-interview-c471a59abaaf76d60af93064d7a7e318",
+      "observed_utc": "2026-10-18T01:50:07.216626+00:00",
+      "finding": "DatedsecondaryOctober15status fromsavedpacket;directopeninaccessible/currentofficialdocketnotrecovered."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.4,
+    "low": 0.1,
+    "high": 0.8,
+    "method": "Primary explicitcompatibleUSPeoplewinnerdistribution; observed2026queryburst plusdatedlegalcatalysts, unmeasuredYoY/fullfield. Noownquoteinputs.",
+    "reasoning": "FullUSPeople rank1 withMarch31missingOther matches sharedmodel; actual2026trial/mistrial, observedselectedweeklyburst, Nov2datedhearinglead, unknownYoY/internalmethod/fullfield. Central40explicitunfittedwinnerdistribution, notpriceinputs.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:57.939+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 60,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.4,
+        "best_bid": 0.33,
+        "best_ask": 0.35,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.995,
+        "received_utc": "2026-10-17T19:02:57.939+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.35,
+            "fee_usd": 0.11374999999999999
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 3.61375,
+        "fee_usd": 0.11375,
+        "break_even_probability_before_carry": 0.361375,
+        "break_even_probability_with_idealized_carry": 0.36316723157950653,
+        "central_expected_profit_usd": 0.38625,
+        "default_10pp_stressed_profit_usd": -0.6137499999999996,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.30000000000000004,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 3.1894500000000003
+      },
+      "No": {
+        "probability": 0.6,
+        "best_bid": 0.65,
+        "best_ask": 0.67,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 8.995,
+        "received_utc": "2026-10-17T19:02:57.939+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.67,
+            "fee_usd": 0.11055000000000001
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 6.810560000000001,
+        "fee_usd": 0.11056,
+        "break_even_probability_before_carry": 0.6810560000000001,
+        "break_even_probability_with_idealized_carry": 0.6844336826582149,
+        "central_expected_profit_usd": -0.8105600000000006,
+        "default_10pp_stressed_profit_usd": -1.8105600000000006,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.5,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 6.38625
+      }
+    }
+  },
+  "verdict": "Noentry: bothasks/ordinarymakersfail20ppreserve. FutureYES17c orNO35cneedindependentcurrentrevaluation; noorder/prior.",
+  "reopen_condition": "ComparablealiasinclusiveYoY/fullfieldseries, officialGooglemethod/list, court/competitorchanges andfreshquotes/funding.",
+  "current_description_sha256": "1dd93a2ed328338be39b74de88bb4683cc446dc8136c26236d8cc7bb3c21c129",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "33696247488822974131928740143868739241132193919821106427743020304048913402615",
+    "60264564718249094470444019701766805470854775375246088619038057145894245373497"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "list_request_id": "req_0220",
+      "status": "exact_identity_match",
+      "list_http": 200,
+      "list_parse": "ok"
+    },
+    "books": {
+      "request_id": "req_0239",
+      "receipt_path": "logs/deep_review_20261017/quotes_0121_0240/req_0239.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_0121_0240/req_0239.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "error": null
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "none; record is a dated research evaluation",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/google_us_people_method_0180.md",
+    "primary_before_quote": "data/deep_review_20261017/work/0224_primary_before_quote.json",
+    "same_winner_distribution_as": 77,
+    "case_specific_reserve_for_entry": 0.2,
+    "selected_stress_yes": 0.2,
+    "selected_stress_no": 0.4,
+    "selected_stressed_yes_taker_profit_usd": -1.61375,
+    "selected_stressed_no_taker_profit_usd": -2.81056,
+    "illustrative_maker_triggers": {
+      "YES": 0.17,
+      "NO": 0.35
+    },
+    "reported_hearing": "2026-11-02, datedWBURnotlivecourtdocket",
+    "full_2025_baseline_available": false,
+    "default_10pp_table_not_entry_policy": true
+  },
+  "evaluated_utc": "2026-10-18T01:50:43.662449+00:00",
+  "question": "Will Lindsay Clancy be the #1 searched person on Google in the US this year?",
+  "market_id": "3251368",
+  "valuation_author": "primary_operator",
+  "original_index": 224,
+  "report_sha256": "b68884b8f833c9d89895d47d32f6e70e28e9868f81fe0e782f306b1667a0c808"
+}

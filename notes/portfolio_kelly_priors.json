@@ -1432,5 +1432,28 @@
   "settlement_interpretation": "Parent1202293hasnamedD/R,4placeholders,explicitOther; verifiedNegRisk. OfficialcurrentdocsstandardNo-to-all-otherYes conversion supportsOtherexcludingDYES, butisnotexactcaseadjudicationpromise. UnderwriteourDYESOtherbranchat0, soaninvalid/splitOtherpayoutdoesnotreduceassumedOtherpayoff. NevertradeplaceholdersorOtherorclaimRNOexactlyDYES. March31latency/UMAadmin/disputeriskremain.",
   "management": "Revieweach existingtick/earliermaterialnews,cancelfirstonuncertainloadbearingpoll/candidate/ballot/health/turnoutfacts. PullatOct19 10:00UTCexistingtick,beforecountyOct19 13UTCinpersonopeningandTrumpOct19 23UTCrally. NexstarTuesday/Oct21weekdayconflictunresolved; earlierpullliesbeforebothpossibledebates. Anyreentryneedsfreshcalendar/newfacts;beforeNov3. No measuredhedgeagainstexistingUSpoliticsrisk.",
   "monitoring": "Existing32ndfeed warmed01:01:46; all30cachedtitlesseen before4terms promotion01:04:26;18IDsretainedunder5000cap. Normalpostpromotionpoll/save01:09:01verified, sameconfigSHA/alivedaemon. No manualpoll/stateedit/restart/newdaemon/timer. Nonexhaustive discoverycoverage."
+ },
+ "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026": {
+  "p_yes": 0.6,
+  "p_no": 0.4,
+  "cluster": "google-year-in-search-2026",
+  "rho_within": 0.5,
+  "cluster_frac": 0.18,
+  "verified": "2026-10-18",
+  "criteria_read": "2026-10-18",
+  "market_id": "4425465",
+  "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+  "criteria_sha256": "22fc97fb7ab20da997bd8ef2b3f59a35a53fa3bc10951d074431ffeae64659af",
+  "rationale": "Primary exactofficial2026GlobalAthletesTOP5rules; WorldCup8goals/internationalfarewellOctober6 aremajor2026events. InternalGooglegrowth/baseline/aliases/fullfield unmeasured. CompatiblejointscenarioMessi60/McGregor40;range20–90/reserve20. Independentchampion/skepticread, notprobabilitycertification. Fullcashloss possible.",
+  "current_assessment": "LIVE unfilled post-only BUY YES5@27c/1.35pUSD, exactorder 0xe68b1d971df62cc31e25cba2aafe00a38ba8ae7b739eb27ff5e20ddaf59bb1d4. Independently01:58:50–01:59:01UTC/block95722257; all11candidatebothbalances0, complete8pending14.72/free10.276890. DEC0213. Noadd, fullcashloss1.35, nofillorprofitassumed.",
+  "research_report": "research/2026-10-17-deep-review/evaluations/0210.md",
+  "current_revision": "research/2026-10-17-deep-review/models/google_athletes_method_0158.md",
+  "balanced_reviews": [
+   "research/2026-10-17-deep-review/advisories/messi_entry_champion.md",
+   "research/2026-10-17-deep-review/advisories/messi_entry_skeptic.md"
+  ],
+  "latest_source_packet": "data/google_current_release_check_0191.json",
+  "management": "Revieweach existingtick/earliermaterialnews; cancelfirstonnewGooglemethod/cutoff/list, unknownsourcechangeornewathlete/competitorfactthatunderminesthesis. PullbyNov1 22UTCexistingtick, earlierknownrelease/catalyst. Unannouncedpublicationornewscanstillcausefullcashloss. NormalDecembermayfitJanuary,March31missing-listNOcanlocklonger. NoindependenceorhedgeagainstotherGooglecategories.",
+  "monitoring": "Warmup01:47; current30broadRSS+20existingGoogleBlognormalbaselineverified0189;3terms promoted01:54:05, normalpostpromotioncycle01:55:22>=309s frompriorverified0192. Sameconfig/alivedaemon; no manualpoll/stateedit/restart/newdaemon/timer. CurrentRSSwindowchangedfromold30; obsoleteYahooNYCFCitemnotmanuallymarkedseen. Nonexhaustivediscoverycoverage."
  }
 }

@@ -1,0 +1,75 @@
+{
+  "authored_by": "primary_operator",
+  "written_utc": "2026-10-18T01:48:44.762646+00:00",
+  "status": "Unfitted scenario assumptions, no own quote inputs",
+  "cases_pending_literal_confirmation": [
+    224
+  ],
+  "order": [
+    "Combs",
+    "Clancy",
+    "Trump",
+    "Mamdani",
+    "Robinson",
+    "other_current",
+    "later_or_unobserved",
+    "missing_list_Other"
+  ],
+  "scenarios": {
+    "central": [
+      0.05,
+      0.4,
+      0.03,
+      0.03,
+      0.02,
+      0.27,
+      0.18,
+      0.02
+    ],
+    "appeal_shock": [
+      0.2,
+      0.25,
+      0.03,
+      0.03,
+      0.02,
+      0.25,
+      0.2,
+      0.02
+    ],
+    "broader_field": [
+      0.08,
+      0.15,
+      0.05,
+      0.05,
+      0.05,
+      0.4,
+      0.2,
+      0.02
+    ],
+    "Clancy_strong": [
+      0.03,
+      0.6,
+      0.02,
+      0.02,
+      0.01,
+      0.15,
+      0.15,
+      0.02
+    ]
+  },
+  "points": {
+    "Combs": 0.05,
+    "Clancy": 0.4
+  },
+  "ranges": {
+    "Combs": [
+      0.005,
+      0.35
+    ],
+    "Clancy": [
+      0.1,
+      0.8
+    ]
+  },
+  "instance_reserve": 0.2
+}

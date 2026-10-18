@@ -1,31 +1,43 @@
-## Current — October18 01:16UTC
+## Current — October 18, 02:05 UTC
 
-Finite primary review continues:178valued/2blocked/327factual/2493pending,
-no active case. First100 already reported chat/TG1163. Save/index each case
-before the next; checkpoint overrides dated narrative snapshots. All25 quote
-archives cover3,000exactconditions; absent/stale/omitted books remain gaps.
+The finite primary review has **189 valued, 2 blocked, 327 factual exclusions and
+2,482 pending** across 518 canonical records. Mamdani case98 is saved; case12
+(Hormuz/oil/Democratic Senate combination) is active, with its full four-page
+PDF read. Primary source/model work precedes own prices. The checkpoint and index remain authoritative;
+save each finished valuation before starting another.
 
-Seven LIVE zero-filled bids verified01:13:10–17UTC/block95720430; pending13.37,
-free11.626890pUSD, all8candidatebothbalances0. NewSedgwickDYES5@20c/risk1.00,
-DEC0212. CurrentSedgwickD49/R50/Other1, MichiganD56/NO44. Read current source
-revision/model and restingorders for exactIDs and broaduncertainty. PullSedgwick
-atOct19 10UTC before13UTCopening/23UTCrally; debateweekday/dateconflict unresolved.
-IdahopullOct19 22UTC; MichiganOct23 22UTC. Everyexistingtick/earliernews review;
-cancel first on load-bearing uncertainty. IPOcanceledzero-fill/review_required,
-no oldpriorrepost. Lastfullheldcheck22:00, next02:00. No newtimer/durablegoal.
+Eight post-only bids were independently verified LIVE and zero-filled at
+02:01:40 UTC. Pending cash is $14.72 and arithmetic uncommitted pUSD is $10.276890;
+the separate01:58:50–01:59:01/block95722257 proof showed all11 reviewed
+candidates have zero balances in both outcomes. The new order is
+Messi Global Athletes TOP 5 YES 5 at 27¢ ($1.35, DEC-0213); the other seven are the
+four House bids, Idaho, Michigan Senate and Sedgwick County. See
+[resting orders](resting_orders.md) for exact IDs, proofs and pull plans. The
+canceled Anthropic IPO prior remains review-required; the state audit's nine
+orphan flags are eight live-order priors plus that canceled IPO prior. Do not
+remove them as cleanup.
 
-MI/TX county original2024Senate/state totals now reconcile. PrimaryMacombR90
-case1545 saved; D9/R90/Other1 and conservative5x-tailstress; no currententry.
-2598D/648TarrantD/2110TarrantR next common-source cases; each fullrule separate.
-See models/county_MI_TX_method_0120 and SOURCE_QUEUE. Dentonofficialreturns
-remain factualfollowup, never normalize its FortBendslugs into a different claim.
+The 02:00 full held review is complete. Retain OpenAI HLE NO 9 and the complete
+Clarity 29/29 group, with no add; Gemini50 is finalYES, losingNO4.034750 at zero with no action, and
+Hormuz dust remains because gas exceeds payout. No asset action occurred during
+the review. The bounded source pass found the 65 HLE objects, five held criteria,
+256 Senate rows, compared articles and AA HLE pair unchanged from 22:00. Three
+OpenAI direct pages returned 403; these are coverage gaps. The sampled public
+alert tail contained no material or critical held match, not a global no-news
+finding. The next existing light check is06:00UTC; weekly October 23 and monthly
+November 12 checks are not due.
 
-Audit0112 verified506records at177valued, all3,000CSVstatuses and25archives;
-new1545 adds507threcord.190historicalpublicHTML bodies losslesslyarchived,
-154.8MB reclaimed; exactrestore verification passed. Activeoperatorlog untouched.
-Free~276MiB,180MiBnewresearchfloor/128critical/512warning. Preserve unrelated
-runtime changes. Focusedcommit/push due; financialrecordwriters already applied,
-never replay. Direct quota probe only, no conversational /usage.
+The full bankroll record is $196.48 total, $5.83 separately funded gas, $190.65
+trading midpoint / $188.42 indicative depth, $30.98 Polymarket midpoint / $28.75
+fee-net depth, $194.25 approximate whole-account depth, $29.86 open-position cost
+and $19.53 settled residual. These sequential marks are not synchronized NAV or
+cash profit; VM/API costs are excluded. Disk is about 224 MiB, with a 180 MiB
+research floor and 128 MiB critical threshold. The direct quota check succeeded:
+20 of 100 used, resetting October 24 at 20:41 UTC. The last pushed commit is
+`63181ff` (178 valuations); the focused commit remains pending. See the
+[02:00 risk record](../data/checkin_20261018T0200_risk.json),
+[source capture](../data/checkin_20261018T0200_sources.json), and
+[checkpoint](deep_review_checkpoint.json).
 
 ## Current — October18 00:09UTC
 

@@ -1,0 +1,50 @@
+{
+  "authored_by": "primary_operator",
+  "generated_utc": "2026-10-18T01:35:07.662742+00:00",
+  "status": "Explicituncalibratedjointscenario,noGooglemeasurementsorpriceinputs",
+  "scenarios": {
+    "central": {
+      "both_top5": 0.22,
+      "Messi_only": 0.38,
+      "McGregor_only": 0.18,
+      "neither_with_list": 0.2,
+      "missing_list_NO": 0.02
+    },
+    "novelty_dominant": {
+      "both_top5": 0.1,
+      "Messi_only": 0.35,
+      "McGregor_only": 0.15,
+      "neither_with_list": 0.38,
+      "missing_list_NO": 0.02
+    },
+    "comebacks_strong": {
+      "both_top5": 0.35,
+      "Messi_only": 0.4,
+      "McGregor_only": 0.2,
+      "neither_with_list": 0.03,
+      "missing_list_NO": 0.02
+    },
+    "other_breakouts_strong": {
+      "both_top5": 0.05,
+      "Messi_only": 0.25,
+      "McGregor_only": 0.1,
+      "neither_with_list": 0.58,
+      "missing_list_NO": 0.02
+    }
+  },
+  "primary_points": {
+    "McGregor": 0.4,
+    "Messi": 0.6
+  },
+  "judgment_ranges": {
+    "McGregor": [
+      0.1,
+      0.8
+    ],
+    "Messi": [
+      0.2,
+      0.9
+    ]
+  },
+  "reserve": 0.2
+}

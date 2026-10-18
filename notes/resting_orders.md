@@ -1,5 +1,22 @@
 # Standing resting orders (GTC post-only makers)
 
+## October 18 01:59 UTC — Messi bid verified, unfilled
+
+**Eight post-only BUY bids are LIVE and zero-filled**, independently checked at01:58:50–01:59:01UTC, Polygon95722257. All11 reviewed candidates' both outcome balances are0. pUSD24.996890, full pending14.72, arithmetic uncommitted10.276890; allowance, CTFapproval and venueblocked=false/FI02 passed. These are commitments, not purchases or profit. The existing seven bids remain unchanged; IPO stays canceled.
+
+New **LionelMessi 2026GoogleGlobalAthletes TOP5 YES5@27c,1.35pUSD**, DEC0213. Market4425465/CID`0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69`; order`0xe68b1d971df62cc31e25cba2aafe00a38ba8ae7b739eb27ff5e20ddaf59bb1d4`; YESasset`107362396213618806325753097259713785352730185699997736827082034877187570305865`; exactslug`will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026`.
+
+Primary60%/range20–90%/20ppreserve; five27cshares centralEV1.65, selected40%EV.65, range20%EV−.35 and fullcashloss1.35, before costs. The primary read both balanced advisories. WorldCup/farewell sources support events, not Google's internal growth rank; baseline/aliases/complete field/2026cutoff remain unknown. Shared Google method/release risk counts fully, with no hedge credit. Missing list throughMarch31,2027 23:59ET paysNO and can lock capital beyondJanuary. November1 pull is before historicalDecember season, not a guarantee of anticipating an unannounced publication.
+
+**Pull at the existing November1 22UTC tick**, earlier on a known publication, cutoff, method or material athlete/competitor change. Review each existing tick/earlier news; cancel first on load-bearing uncertainty. A passive fill can follow adverse information and lose the full stake. Do not add from old prices. Keep SedgwickOct19 10UTC, IdahoOct19 22UTC and MichiganOct23 22UTC pull plans unchanged.
+
+Current official2026 route404/methodology2025-only revalidated01:54:53–54 (data/google_current_release_check_0191.json); this is not proof of no alternate page. Vetted preview and execution enforced exact identity/status, currentfee/book/account and full-fill caps; actual five27c/$1.35 stayed below raw28c and separately planned$1.50cash ceiling. Current authoritative bankroll196.17 was used for execution caps, with$2.00indicative PMmid/depth difference, not a liquidation certificate. Tool similarity hints for MessiPeople andVozinhaAthletes are different propositions, not fungible duplicates; no substitution.
+
+Monitoring: current broadRSS30 plus existing GoogleBlog20 all normally seen before three keyword promotions01:54:05; postpromotion normal save01:55:22, sameconfig/alivedaemon/>309seconds sinceprior. OriginalYahooNYCFC item shifted out of first30, not manually marked seen; an old-news alert can still recur. No manual poll/state edit/restart/newdaemon/timer. Norris bid deferred for stale books/no financialprior; McGregor current18c bid declined/no order.
+
+Private0600 proof: `data/deep_review_20261017/all_pilots_messi_postentry_0197.json` and `messi_exact_order_0197.json` (owner fields omitted). Execution log`logs/deep_review_20261017/messi_entry_execute_0196.log`. Never replay execution or this writer. This is entry verification, not the due02:00 full held-thesis check.
+
+
 ## October18 01:13UTC — Sedgwick tiny bid verified, not filled
 
 Seven post-only BUY bids are LIVE and zero-filled at01:13:10–17UTC,
