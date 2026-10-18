@@ -1,0 +1,169 @@
+{
+  "review_index": 250,
+  "condition_id": "0x6235b4a515e2c041e70b3d24012593881a9c6cb5fb9c1e1d94b7a47119fdb0f9",
+  "criteria_sha256": "3ea1752f6b45ff8a3caa98c6fb4ef0851df4193e06bebe037c68c33295bf2acb",
+  "status": "valued",
+  "literal_analysis": "This market will resolve according to the total number of tokens processed on OpenRouter for the four weeks of October 26 to November 22, 2026.\n\nThe total number of tokens is the sum of the weekly totals displayed in the Top Models chart on OpenRouter's AI Model Rankings page (https://openrouter.ai/rankings#top-models) for the weeks of October 26, November 2, November 9 and November 16, 2026. OpenRouter's weeks run from 12:00 AM UTC on Monday to 11:59 PM UTC on Sunday, and a week's figures continue to update until the following week's figures are first displayed.\n\nThis market will resolve according to the totals displayed for those four weeks once the figures for the week of November 23, 2026 are first displayed. If the figures for the week of November 23, 2026 have not been displayed by 11:59 PM ET on November 27, 2026, this market will resolve according to the totals displayed for those four weeks at that time.\n\nThis market will resolve based on the totals as displayed on the chart, including any rounding applied by OpenRouter. If the total falls exactly on the boundary between two brackets, this market will resolve to the higher bracket.\n\nThe resolution source for this market is https://openrouter.ai/rankings.\nPrimary interpretation: [625,675)T, fixed four weekly displayed Totals. Identical source/window to held112 [725,775); both YES impossible under consistent interpretation. No atomic execution guarantee.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T17:45:43.275127+00:00",
+      "finding": "Root SHA checked actual 53-point Top Models payload; 52 completed unchanged; current partial158.105052T; future target weeks absent. Cache time not usage cutoff."
+    },
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-18T11:06:24.407Z",
+      "finding": "Reused primary rendered-chart semantics: weekly rounded Total differs from rounded line sum and from separate Weekly Pace forecast."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5763813",
+      "observed_utc": "2026-10-18T17:42:27.838959+00:00",
+      "finding": "Dated capture exact CID/tokens/fullcriteria match frozen; negRisk metadata alone does not establish atomic combination path."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.1,
+    "low": 0.01,
+    "high": 0.85,
+    "method": "Primary five-regime same-path total model with explicit20%plateau, shared innovations and source-cutoff/rounding sensitivities.",
+    "reasoning": "Add plateau20%, proportionally rescale old regimes; latest partial/correct UI remaining proxy. Raw10.271%250 and11.5545%112 -> coherent rounded10/12/78joint states. 650T concentrated countermodel80.026%YES; no calibrated floor. Primary model saved before own250 quote access.",
+    "calibration": "Judgmental, not holdout-calibrated."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 41,
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.1,
+        "selected_stress_probability": 0,
+        "best_bid": 0.03,
+        "best_ask": 0.11,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343459",
+        "book_age_seconds_at_receipt": 4.379958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 1.1,
+            "fee": 0.03916,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.11
+              }
+            ],
+            "net": 1.1391600000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.3,
+            "fee": 0.01164,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.03
+              }
+            ],
+            "net": 0.28836
+          }
+        },
+        "taker_cost_usd": 1.1391600000000002,
+        "central_expected_profit_usd": -0.13916000000000017,
+        "selected_stress_profit_usd": -1.1391600000000002,
+        "break_even_before_carry": 0.11391600000000002,
+        "break_even_constant_carry": 0.11431386048249943,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9,
+        "selected_stress_probability": 0.7,
+        "best_bid": 0.89,
+        "best_ask": 0.97,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343459",
+        "book_age_seconds_at_receipt": 4.379958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.7,
+            "fee": 0.01165,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.97
+              }
+            ],
+            "net": 9.711649999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 8.9,
+            "fee": 0.03916,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.89
+              }
+            ],
+            "net": 8.86084
+          }
+        },
+        "taker_cost_usd": 9.711649999999999,
+        "central_expected_profit_usd": -0.7116499999999988,
+        "selected_stress_profit_usd": -2.711649999999999,
+        "break_even_before_carry": 0.9711649999999998,
+        "break_even_constant_carry": 0.9745568692324742,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: both sides negative central EV at dated11cYES/97cNO asks. Semantic NO-pair payout floor does not make these prices arbitrage. Existing112 remains retain/noadd under separately revised12%YES.",
+  "reopen_condition": "First completed target weekly Totals, source/cutoff/measurement change or materially cheaper prices. Fresh current full execution/source/account/joint-family gates required before any order; no automatic maker bid.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/openrouter250_112_primary_1940.json",
+    "primary_joint_states": {
+      "250_yes_112_no": 0.1,
+      "250_no_112_yes": 0.12,
+      "both_no": 0.78
+    },
+    "actual_entry_reserve_pp": 20,
+    "priority_followup": false,
+    "entry_approved": false,
+    "no_high_p_bond_shortcut": true
+  },
+  "evaluated_utc": "2026-10-18T19:39:24.023297+00:00",
+  "question": "Will OpenRouter process between 625T and 675T tokens from Oct 26 to Nov 22?",
+  "market_id": "5763813",
+  "valuation_author": "primary_operator",
+  "original_index": 250,
+  "report_sha256": "fecd09fa78ab5fa5ee44f6ae7d67c30d4f958dd0b6478a68347231f5abb31af5"
+}

@@ -1,0 +1,72 @@
+{
+  "review_index": 253,
+  "adopted_utc": "2026-10-18T19:46:44.971736+00:00",
+  "condition_id": "0x3a2bbd8defe7f688106ed3d18ce823181d86204f50504c5cfe77342ab826b37f",
+  "criteria_sha256": "c65d1ec2dab9a28d4495da11e1a4b2aba892278a97488712c3d7f8dbc040250c",
+  "p_yes": 0.07,
+  "range": [
+    0.005,
+    0.4
+  ],
+  "entry_reserve_pp": 10,
+  "literal": "Exactly3 positive25bp-equivalent hike units in calendar2026, not3 meetings or netrate change. One observedSep16announced/Sep17effective+25 counts.50counts2;1-24bpcounts1; emergencycounts; cuts do not subtract. Morethan3earlyNO. LiteralDec31ET deadline overrides23:59UTCendDate metadata.",
+  "shared_model": "research/2026-10-17-deep-review/models/fed_primary_scenario.json",
+  "base_exact3_paths": [
+    {
+      "Oct": "+25",
+      "Dec": "+25",
+      "p": 0.05
+    },
+    {
+      "Oct": "+50",
+      "Dec": "hold",
+      "p": 0.0032500000000000003
+    },
+    {
+      "Oct": "+50",
+      "Dec": "-25",
+      "p": 0.00025
+    },
+    {
+      "Oct": "+50",
+      "Dec": "-50",
+      "p": 0.00025
+    },
+    {
+      "Oct": "hold",
+      "Dec": "+50",
+      "p": 0.0158
+    }
+  ],
+  "base_total_count_distribution": {
+    "2": 0.743,
+    "3": 0.06955,
+    "4": 0.00125,
+    "1": 0.18620000000000003
+  },
+  "nonstandard_emergency_branch": {
+    "weight": 0.02,
+    "conditional_total_hike_count_distribution": {
+      "1": 0.2,
+      "2": 0.5,
+      "3": 0.2,
+      "4": 0.1
+    },
+    "assumption": "Judgmental residual including emergency and unusual small/large changes, not observedfrequency."
+  },
+  "adopted_raw_count_distribution": {
+    "1": 0.18647600000000003,
+    "2": 0.73814,
+    "3": 0.072159,
+    "4": 0.003225
+  },
+  "raw_p_yes": 0.072159,
+  "reasoning": "Scheduledsame-policy-path tree gives6.955%exact3, not81.38%any further hike.2%nonstandard mixture gives7.2159%, round7. Full jointdistribution sums1; impliedanyfurtherhike81.3524% preserves prior88rounded81 without pretending independence.",
+  "source_evidence": "CurrentFedtable one25bp increase; Sep16unanimous tightening; SEP12of18at4.125,4at4.375,2at3.875. Dots are individual end-year judgments, not pathprobabilities or independentvotes. PriorprimaryOct14CPI.6mom/3.7yoy vsOct2payroll29k/unemployment4.2 informs shared timing tree.",
+  "source_units": [
+    "data/deep_review_20261017/case253_facts_1910.json",
+    "research/2026-10-17-deep-review/evaluations/0088.md"
+  ],
+  "limits": "No current validated futures-implieddistribution. Reusedsharedprimarytree datedOct17; SepSEP/CPI/payroll historical evidence, not commitments.1-24bp rule and unmodeled26-49bp counting outsidetree retained as interpretationrisk.40%upper allows faster tightening.10pp classdefaultreserve is sensitivity, not guaranteedfloor.",
+  "own_case_quotes_accessed_before_model": false
+}

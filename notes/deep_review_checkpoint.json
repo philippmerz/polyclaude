@@ -1,22 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-18T19:25:56.530650+00:00",
+  "updated_utc": "2026-10-18T19:47:31.767498+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 275,
-  "completed_valuations": 272,
+  "completed_in_depth_reviews": 280,
+  "completed_valuations": 277,
   "blocked_after_in_depth_review": 3,
   "factual_exclusions": 337,
-  "pending": 2388,
+  "pending": 2383,
   "active_indices": [
-    249
+    254
   ],
   "next_pending_indices": [
-    249,
-    250,
-    251,
-    252,
-    253,
     254,
     255,
     257,
@@ -41,15 +36,20 @@
     287,
     288,
     289,
-    290
+    290,
+    292,
+    293,
+    294,
+    295,
+    296
   ],
-  "base_records": 612,
+  "base_records": 617,
   "base_record_counts": {
-    "excluded_factual": 337,
-    "valued": 271,
-    "blocked_after_review": 4
+    "blocked_after_review": 4,
+    "valued": 276,
+    "excluded_factual": 337
   },
-  "revisions_written": 27,
+  "revisions_written": 28,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -60,8 +60,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 612,
-  "ledger_sha256": "a8dd1f985c1af7767bd1387bf3cb0c0cc99295a969745bf6a157df5f6347a3ac",
-  "revisions_sha256": "df1f0038e4fdd5ef5762e84bd0b652e9c84397e78b9b2270e708463e9d8d8403",
+  "evaluations_written": 617,
+  "ledger_sha256": "896c8cd1e6aeb175356599d6ce21b7ff7e113bce197402d08498e120a5fdc7e5",
+  "revisions_sha256": "76ec62d42ccd6feff2d13a42b299f4bbe310ad47820d62d52da5f61e24ab5ad5",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

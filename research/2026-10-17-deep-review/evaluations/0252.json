@@ -1,0 +1,180 @@
+{
+  "review_index": 252,
+  "condition_id": "0x9cb23d04b2ded06147482076688b69b487a8d982c63ebdda2ab3678cf27cf390",
+  "criteria_sha256": "801bfa0ff9d9e790a9ce0ee3e992c9fae74cb600cc78b4ee3b0e8fc47601c7dc",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the Digital Asset Market Clarity Act of 2025 (H.R.3633) is passed by both chambers of the U.S. Congress and signed into law by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source is Congress.gov’s legislation tracker (https://www.congress.gov/bill/119th-congress/house-bill/3633) and other official information from the government of the United States, however other credible reporting may be used.\nRequires signed exactHR3633, not preliminary Senate procedure, committee report, substitute standalone bill number or executive regulatory relief. Current held>50/>58final-vote pair is distinct and protected.",
+  "evidence": [
+    {
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.htm",
+      "observed_utc": "2026-10-18",
+      "finding": "Root read procedural question and rejected motion;Sep15vote23449-50-1,3/5required. Not finalpassage. Exact rollcall includes Republican opposition;7Dem statement is not sufficient60vote commitment."
+    },
+    {
+      "url": "https://www.govinfo.gov/app/details/BILLS-119hr3633rs",
+      "observed_utc": "2026-10-18",
+      "finding": "Official Senate-reported June1amended version; version package not current wholebill action tracker."
+    },
+    {
+      "url": "https://www.warner.senate.gov/newsroom/press-releases/warner-statement-on-clarity-act/",
+      "observed_utc": "2026-10-18",
+      "finding": "Sep15 primary account: supports regulatory framework but opposed cloture over presidential crypto conflict/ethics; wants negotiated yes, not unconditional vote."
+    },
+    {
+      "url": "https://www.gillibrand.senate.gov/news/press/release/gillibrand-colleagues-issue-statement-on-continued-commitment-to-pass-clarity-act/",
+      "observed_utc": "2026-10-18",
+      "finding": "Sep16sevenDem senators commit to further bipartisan work, requiring consumer/ethics safeguards. Not passage endorsement of present text, no verifiedOctdeadline deal."
+    },
+    {
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633/all-actions",
+      "observed_utc": "2026-10-18",
+      "finding": "Root current official tracker open failed; Congress.gov current complete action history unobserved. Reused18:01 Senate menu latest256Sep30/no later qualifying final vote, not no-action proof."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1163699",
+      "observed_utc": "2026-10-18T17:42:27.838959+00:00",
+      "finding": "Root compared dated captured CID/question/full description to frozen252; exact binding. No current execution certificate."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.17,
+    "low": 0.02,
+    "high": 0.6,
+    "method": "Primary conditional legislative chain with explicit incomplete-current-history fork.",
+    "reasoning": ".5%already-qualifying unobserved fork; otherwise.35viabledeal*.70cloture*.98Senatefinal*.90Houseconcurrence*.80presidentialsignature*.95timelycompletion=>16.8407%round17. SevenDem commitment to work supports revival but not votes; current ethics disagreement directly affects signature. Conditional weights uncalibrated.",
+    "calibration": "No empirical legislative holdout/base-rate estimate."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 85,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.17,
+        "selected_stress_probability": 0.020000000000000018,
+        "best_bid": 0.05,
+        "best_ask": 0.051,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345317956",
+        "book_age_seconds_at_receipt": 29.882958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.51,
+            "fee": 0.01936,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.051
+              }
+            ],
+            "net": 0.52936
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.5,
+            "fee": 0.019,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.05
+              }
+            ],
+            "net": 0.481
+          }
+        },
+        "taker_cost_usd": 0.52936,
+        "central_expected_profit_usd": 1.1706400000000001,
+        "selected_stress_profit_usd": -0.3293599999999999,
+        "break_even_before_carry": 0.052936000000000004,
+        "break_even_constant_carry": 0.0533200125984777,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.83,
+        "selected_stress_probability": 0.6799999999999999,
+        "best_bid": 0.949,
+        "best_ask": 0.95,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345317956",
+        "book_age_seconds_at_receipt": 29.882958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.5,
+            "fee": 0.01901,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.95
+              }
+            ],
+            "net": 9.51901
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.49,
+            "fee": 0.01936,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.949
+              }
+            ],
+            "net": 9.47064
+          }
+        },
+        "taker_cost_usd": 9.51901,
+        "central_expected_profit_usd": -1.2190100000000008,
+        "selected_stress_profit_usd": -2.719010000000001,
+        "break_even_before_carry": 0.951901,
+        "break_even_constant_carry": 0.9588063569688587,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: dated5.1cYES has central positive EV but fails15ppuncertainty reserve;95cNO negative. Keep actionable research candidate for current bipartisan-deal evidence, no automated bid. Existing protected29/29threshold pair unchanged.",
+  "reopen_condition": "Named negotiating coalition/revised ethics agreement with credible60vote support and current Senate schedule, actualfinalpassage, Houseconcurrence/signature developments. Re-underwrite fullchain and account/family/fees/books/current gates before entry.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/clarity252_primary_1950.json",
+    "source_unit": "data/deep_review_20261017/work/0252_primary_sources_1950.json",
+    "actual_entry_reserve_pp": 15,
+    "priority_followup": true,
+    "entry_approved": false,
+    "protected_held_pair_unmodified": true
+  },
+  "evaluated_utc": "2026-10-18T19:45:17.779936+00:00",
+  "question": "Clarity Act (H.R.3633) signed into law in 2026?",
+  "market_id": "1163699",
+  "valuation_author": "primary_operator",
+  "original_index": 252,
+  "report_sha256": "831343cc7547b30cb6045ed83a3f1593aaa9f17a8f5301fa9d63d626beeb2d69"
+}

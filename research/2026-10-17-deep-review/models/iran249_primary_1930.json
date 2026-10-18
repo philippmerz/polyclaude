@@ -1,0 +1,49 @@
+{
+  "created_utc": "2026-10-18T19:29:51.815501+00:00",
+  "index": 249,
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/case249_facts_1910.json",
+  "related_primary": "research/2026-10-17-deep-review/evaluations/0055.md",
+  "literal": "Eligible US air/surface-to-surface munition impacts Iran land/internal waters by Nov3 23:59ET=Nov4 04:59Z. Maritime territory/airspace/intercepts/artillery/minor weapons/threats excluded. Three full IRST disputed-incident days may extend settlement.",
+  "start_window": {
+    "createdAt": "2026-10-09T01:16:01.403913Z",
+    "interpretation": "Prospective after creation is the working read, although no express start clause. The dated case55 sibling audit supports venue practice; it is not binding precedent for249.",
+    "adverse_oldhistory_fork": 0.02,
+    "p_yes_in_adverse_fork": 0
+  },
+  "missed_postcreation_qualifier_probability": 0.08,
+  "missed_history_reason": "Oct9–18 is shorter than55 Sep17–Oct18, but there is no comprehensive operational log. Munition eligibility without impact coordinates and the imprecise near-pause retrospective leave8% subjective missed-history mass, not absence proof.",
+  "future_days": 16.395233617372686,
+  "branches": [
+    {
+      "name": "planned restraint",
+      "weight": 0.75,
+      "q14_hit": 0.03,
+      "q_future_hit": 0.03504172400973815
+    },
+    {
+      "name": "maritime confrontation",
+      "weight": 0.2,
+      "q14_hit": 0.2,
+      "q_future_hit": 0.22996611684139523
+    },
+    {
+      "name": "broad escalation",
+      "weight": 0.05,
+      "q14_hit": 0.75,
+      "q_future_hit": 0.8027873815798747
+    }
+  ],
+  "future_hit": 0.1124138854545764,
+  "raw_p_yes": 0.800247640874154,
+  "p_yes": 0.8,
+  "range": [
+    0.2,
+    0.98
+  ],
+  "entry_reserve_pp": 15,
+  "reasoning": "AP Oct8 attributed a pre-midterms nonattack pledge; the Oct16 attributed near-pause supports restraint. Shipping confrontation, retaliation and election-day wording prevent certainty. Transfer55 common regimes but rescale horizon and use8% rather than10% missed history: .98*.92*(1-future_hit), rounded80%. These are conditional judgments, not independent contract bets.",
+  "source_authentication_caveat": "Public TG @U_S_CENTCOM self-identifies as official, but root could not independently authenticate control via centcom.mil. Official homepage403 and scoped searches empty. Treat as claimed-CENTCOM/republication, not independently verified first-party evidence; no assertion it is fake. AP/reporting coverage remains bounded.",
+  "related_condition_comparison": "55: Sep17 creation to Oct31 20:29Z.249: Oct9 creation to Nov4 04:59Z under prospective interpretation. Windows cross; neither contains the other, so no monotonicity arbitrage or independent hedge.",
+  "limitations": "Regime weights, hazard scaling,8% missed history and2% scope fork uncalibrated;20–98% is sensitivity, not bounds. A pledge is not an operational log or binding future conduct. Election day may extend beyond the wording of the pledge."
+}

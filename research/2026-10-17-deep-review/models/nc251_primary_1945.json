@@ -1,0 +1,39 @@
+{
+  "review_index": 251,
+  "adopted_utc": "2026-10-18T19:41:57.524179+00:00",
+  "condition_id": "0xab449b45ddb6c2682ec7e931dfb18705cf611cddf42ae35aa300c79453913dca",
+  "criteria_sha256": "040bac7c75038bf8a7f3a907fdfd44987c1b45615611a2e67b6f71d3c1985df5",
+  "p_yes": 0.07,
+  "range": [
+    0.005,
+    0.45
+  ],
+  "entry_reserve_pp": 15,
+  "sources": "data/deep_review_20261017/work/0251_primary_source_addendum_1945.json",
+  "literal": "PostOct5 creation enactment byDec31ET of mandatory statutory/constitutional statewide default halt meeting100MWscope. Local, discretionaryexecutive, tax-only, passage/intent insufficient; effective date/repeal later irrelevant.",
+  "primary_chain": {
+    "already_qualifying_enacted_but_unobserved": 0.01,
+    "conditional_future_regimes": [
+      {
+        "weight": 0.8,
+        "name": "restricted existing legislative agenda and tariff response",
+        "p_qualifying_enactment": 0.005
+      },
+      {
+        "weight": 0.15,
+        "name": "eligible conference/changed calendar political compromise",
+        "p_qualifying_enactment": 0.2
+      },
+      {
+        "weight": 0.05,
+        "name": "crisis/strong statewide backlash",
+        "p_qualifying_enactment": 0.5
+      }
+    ],
+    "future_conditional": 0.059,
+    "raw_total": 0.06841
+  },
+  "reasoning": "Referral sinceMay and restricted remaining sessions plus actual tariff alternative favor no qualifying statute; bipartisan proposed moratorium andOct7mobilization retain nonzero pathways.1%historyfork explicitly covers incomplete postcreation catalog, not source-certified absence.7%rounded from6.841%.",
+  "limitations": "Weights conditional probabilities and1%historyfork are uncalibrated primary judgments, not frequencies or legal certainty.45%upper scenario allows rapid political reversal; selected15pp reserve is not an empirical bound.",
+  "own_case_quotes_accessed_before_model": false
+}

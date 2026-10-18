@@ -1,0 +1,169 @@
+{
+  "review_index": 249,
+  "condition_id": "0x613613192c69d90cee89758c260a019368fc1f4a596b4d300c39b6235d2b643f",
+  "criteria_sha256": "a35ea08362d004cfd645499651bec8abe6d3b4503071f2d8d1b321bffe5b53d9",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to “No” if the United States takes a qualifying military action against Iran by November 3, 2026, 11:59 PM ET. Otherwise this market will resolve to “Yes.”\n\nA qualifying military action refers to an air strike or a surface-to-surface missile strike, initiated by the United States, that directly impacts Iran. An air strike includes bombs, air-to-surface missiles, and air-launched drones. A surface-to-surface missile strike includes one-way attack drones and surface-to-surface missiles such as cruise or ballistic missiles.\n\nThe following actions do not constitute a qualifying military action:\nMunitions destroyed or intercepted before impact;\nSurface-to-air missile strikes;\nSmall-arms fire;\nGround incursions;\nCyber operations;\nNaval gunfire and artillery fire;\nHowitzers, artillery pieces, mortars, and rocket artillery (e.g. MLRS systems);\nMinor surface-to-surface strikes, including short range loitering munitions, FPV drones, and ATGM strikes;\nAny threat, authorization, or announcement of force that has not been executed.\n\nAny munition that is intercepted or destroyed before impact does not constitute a qualifying military action. Debris, fragments, or any wreckage from intercepted munitions that land on Iran do not constitute a military action regardless of any damage incurred.\n\n“Iran” refers to the terrestrial territory of Iran, including its internal waters. Iran’s maritime territory and airspace are not encompassed. Where territorial borders are disputed, all territory claimed by and under the de facto control of Iran as of market creation will qualify.\n\nThe occurrence, attribution, and timing of a qualifying military action will be primarily determined based on a consensus of information available from the resolution sources. Where multiple sources conflict regarding the occurrence, attribution, or timing of a relevant military action, this market will remain open until the earlier of: i) the confirmation of the occurrence, attribution, and timing of the action based on a consensus of information available from the resolution sources or ii) 3 full calendar days (Iran Standard Time) from the date of the first credibly reported evidence of the action. If this period would extend past the end date, this market will remain open to allow for 3 full calendar days to pass. At the end of the third calendar day, if conflicting reports remain, the incident will be adjudicated based on the totality of information available from the resolution sources at that time. No single statement, denial, or presentation of evidence will govern where it is contradicted by the totality of information.\n\nThe resolution sources for this market will be official information from the governments and militaries of the United States and Iran and a consensus of credible reporting.",
+  "evidence": [
+    {
+      "url": "https://apnews.com/article/trump-iran-war-midterms-attack-422b1799a1a06466279ac265f560e014",
+      "observed_utc": "2026-10-17",
+      "finding": "Reused Oct8 AP-attributed Trump pledge against attacks before midterms; policy statement, not immutable promise or operational log."
+    },
+    {
+      "url": "https://www.axios.com/2026/10/16/iran-backed-militias-sending-money-irgc-centcom",
+      "observed_utc": "2026-10-17",
+      "finding": "Reused Oct16 attributed almost-completely-stopped launcher-strike retrospective; no event dates/coordinates, cannot prove no qualifying impact."
+    },
+    {
+      "url": "https://t.me/s/U_S_CENTCOM",
+      "observed_utc": "2026-10-18",
+      "finding": "Root read public Oct6 dhow/Oct10 precision ship-impact claims, not Iran-land proof. Self-labelled official handle not independently authenticated; centcom.mil homepage403/scoped searches empty. Not verified first-party attribution."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5447182",
+      "observed_utc": "2026-10-18T19:06:21.985551+00:00",
+      "finding": "Current exactCID/fullcriteria/tokens open/accepting, createdOct9 01:16:01.403913Z; worker capture timestamp identifies packet, not synchronized execution."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.8,
+    "low": 0.2,
+    "high": 0.98,
+    "method": "Primary explicit scope/missed-history/future-regime conditional chain, transferred from related55 with distinct creation and cutoff.",
+    "reasoning": "2% adverse old-history scope fork; conditional8% already-occurred unverified postcreation qualifier. Remaining16.395d future-regime risk11.2414% from75/20/5 weights and3/20/75%14day probabilities. .98*.92*(1-.112414)=80.0248%→80%. Uncalibrated, broad sensitivity retained; no unknown-history-as-zero claim."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 23,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.8,
+        "selected_stress_probability": 0.65,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343730",
+        "book_age_seconds_at_receipt": 4.108958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 8.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.8
+              }
+            ],
+            "net": 8.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 7.9,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.79
+              }
+            ],
+            "net": 7.9
+          }
+        },
+        "taker_cost_usd": 8.0,
+        "central_expected_profit_usd": 0.0,
+        "selected_stress_profit_usd": -1.5,
+        "break_even_before_carry": 0.8,
+        "break_even_constant_carry": 0.801566201068842,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.19999999999999996,
+        "selected_stress_probability": 0.04999999999999996,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345343730",
+        "book_age_seconds_at_receipt": 4.108958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.1,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.21
+              }
+            ],
+            "net": 2.1
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.2
+              }
+            ],
+            "net": 2.0
+          }
+        },
+        "taker_cost_usd": 2.1,
+        "central_expected_profit_usd": -0.10000000000000053,
+        "selected_stress_profit_usd": -1.6000000000000005,
+        "break_even_before_carry": 0.21000000000000002,
+        "break_even_constant_carry": 0.21041112778057106,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: dated YES is zero central EV before carry; NO negative; both fail15pp uncertainty reserve. Windows cross with55, no monotonicity arbitrage.",
+  "reopen_condition": "Dated attributable eligible US munition impact/location proof; binding scope clarification, detailed strike chronology or policy reversal. Fresh makerYES<=62c/NO<=2c only after source/correlation/current execution gates; no automatic bid.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/iran249_primary_1930.json",
+    "source_packet": "data/deep_review_20261017/case249_facts_1910.json",
+    "actual_entry_reserve_pp": 15,
+    "entry_approved": false,
+    "priority_followup": false,
+    "source_authentication_caveat": "Public TG @U_S_CENTCOM self-identifies as official, but root could not independently authenticate control via centcom.mil. Official homepage403 and scoped searches empty. Treat as claimed-CENTCOM/republication, not independently verified first-party evidence; no assertion it is fake. AP/reporting coverage remains bounded."
+  },
+  "evaluated_utc": "2026-10-18T19:30:33.239076+00:00",
+  "question": "US-Iran ceasefire continues through the midterms?",
+  "market_id": "5447182",
+  "valuation_author": "primary_operator",
+  "original_index": 249,
+  "report_sha256": "2da8da024ac3b1268830a1d76806d63bde5ce6127643e57b5e58e75ab33d6a86"
+}

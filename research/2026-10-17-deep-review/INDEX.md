@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T19:25:56.530650+00:00
+Updated: 2026-10-18T19:47:31.767498+00:00
 
-**272 valuations saved; first milestone100:** 272 valued; 3 blocked after in-depth review. 337 factual exclusions separately; 2388 pending.
+**277 valuations saved; first milestone100:** 277 valued; 3 blocked after in-depth review. 337 factual exclusions separately; 2383 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -123,7 +123,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |109|[Will the Democratic Party win the NH-02 House seat?](evaluations/0109.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |110|[Will XRP reach $2.60 by December 31, 2026?](evaluations/0110.md)|valued|Both asks negative central EV; no supported maker tailentry|
 |111|[Will Villarreal CF win on 2026-10-17?](evaluations/0111.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
-|112|[Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?](revisions/0112_20261018T133808603216Z.md)|valued|Retain11%YES/89%NO; existingDEC0214 unfilledbid lastdatedaccountproofonly, pulltoday22UTC/earlieruncertainty; noadd/repost.|
+|112|[Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?](revisions/0112_20261018T194055677692Z.md)|valued|RETAIN5NO/noadd;12%YES/88%NO, selected73%NO. Prior17:45 indicative sale/Aave wealth grid requires63.56-63.82%NO; central/selected favor hold, broad20%NO favors sale. Original BUY fully filled17:37:42; obsolete22UTC BUY-pull removed, existing22UTC held review retained. No transaction.|
 |113|[Will WTI Crude Oil (WTI) hit (HIGH) $105 in October?](revisions/0113_20261018T105834003724Z.md)|valued|No entry: datedYEScentral edge0.40016 per10 becomes-1.09984 at15ppselectedreserve; NOcentralnegative. Recoveredcompletehistorysupports53%touchforecast, notcurrentexecution.|
 |114|[Will Drop Dead – Olivia Rodrigo be the #2 song in the US for 2026?](evaluations/0114.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |115|[Will the Republicans win the Michigan Senate race in 2026?](evaluations/0115.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
@@ -260,6 +260,11 @@ Each report below is written before moving to the next evaluation. Related contr
 |246|[Will the Republicans win the Nevada governor race in 2026?](evaluations/0246.md)|valued|NO ENTRY: YEShasdatedcentral+$1.20255/10 butselected40%YESstress−$0.29745 beforecarry/operations; NOnegative. Preservecurrentpollupdate/pricecandidate, no blanketrejection.|
 |247|[No change or Hike 25 bps favored on October 27?](evaluations/0247.md)|valued|NO ENTRY: firstoutcomeisnegativecentral; secondhasdatedcentraledge butfails15ppselectedand10ppdefaultafterfee. Quote/source/modelcomparisoncomplete, sourcegapresolvedwithoutguessingunderlyingFOMCdecision.|
 |248|[Will there be at least 4900 measles cases in the U.S. by October 31, 2026?](evaluations/0248.md)|blocked_after_review|BLOCKED AFTER IN-DEPTH REVIEW: unresolvednationalcounterpublication/backfillmapping couldchangetwo-weekthresholdverdict; no invented50%prior, no sourcegap-as-factualexclusion.|
+|249|[US-Iran ceasefire continues through the midterms?](evaluations/0249.md)|valued|NO ENTRY: dated YES is zero central EV before carry; NO negative; both fail15pp uncertainty reserve. Windows cross with55, no monotonicity arbitrage.|
+|250|[Will OpenRouter process between 625T and 675T tokens from Oct 26 to Nov 22?](evaluations/0250.md)|valued|NO ENTRY: both sides negative central EV at dated11cYES/97cNO asks. Semantic NO-pair payout floor does not make these prices arbitrage. Existing112 remains retain/noadd under separately revised12%YES.|
+|251|[Will North Carolina enact a data center moratorium by December 31, 2026?](evaluations/0251.md)|valued|NO ENTRY: dated3.2cYES central EV positive but fails15pp uncertainty reserve;97.3cNO negative central EV. Retain research candidate; proposal/advocacy is not enactment.|
+|252|[Clarity Act (H.R.3633) signed into law in 2026?](evaluations/0252.md)|valued|NO ENTRY: dated5.1cYES has central positive EV but fails15ppuncertainty reserve;95cNO negative. Keep actionable research candidate for current bipartisan-deal evidence, no automated bid. Existing protected29/29threshold pair unchanged.|
+|253|[Will 3 Fed rate hikes happen in 2026?](evaluations/0253.md)|valued|NO ENTRY: datedYES10.3c negativecentralEV;NO89.8c positivecentralEV but fails10ppclassreserve. Not an impossible event; exactlytwofuturehikeunits remains feasible.|
 |256|[Will Z.ai have the second highest OpenRouter market share the week of October 12?](revisions/0256_20261018T120931763267Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |259|[Will the Democratic Party win the CT-05 House seat?](evaluations/0259.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |265|[Will the Democratic Party win the NV-01 House seat?](evaluations/0265.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -625,4 +630,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 249
+Active indices: 254

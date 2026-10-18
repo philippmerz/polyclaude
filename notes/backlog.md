@@ -1,9 +1,10 @@
-## Current — October 18, 19:24 UTC
+## Current — October18,19:49UTC
 
-- **Finite review active:**272valued/3blocked/337factual exclusions/2,388pending,612immutablebase+27revisions;249active. [Checkpoint](deep_review_checkpoint.json) governs currentcounts; [smallresume](../research/2026-10-17-deep-review/RESUME.md) loads onlyselectedcase, notthishistory. Save/indexeveryresultbeforethenext.
-- **18UTC safety review completed:**195.62total/5.67gas/189.95tradingmid/187.79indicativetradingdepth; sevenLIVEzero-filledBUYs/$12.87/sevenmatchingreservations,pUSD18.846890/free5.976890. Roundedsequential18UTCobservations, notnewNAV/profit. [Datedreview](../research/2026-10-18-1800-checkin.md).
-- **OpenRouter original5NO bid filled17:37:42:** exactchain/indexed/CTF/authproof, reservationretired8→7. Retain5/noadd,89%NO/74selected; adverse20%NOcase favorssale. [Fill/risks](../research/2026-10-18-openrouter-fill.md). **Old22UTCunfilled-BUYpull iscomplete/obsolete**; existingheldreview22UTCremains. Otherheldretain/noaddunchanged, filmcanceledunfilled/Messifilled; no replay.
-- **Nextboundaries:**heldreview22UTC; SedgwickBUYpullOct19 10UTC,BOI137/IdahoOct19 22UTC; earlierloadbearinguncertaintycancelfirst. [ExactIDs](resting_orders.md). Alertqualification/deliveryrepairbelowiscomplete; no newfeed/timer/research-onlyTelegram. WeeklyOct23/monthlyNov12notdue.
+- **Finite review active:**277valued/3blocked/337factual exclusions/2,383pending;617immutable base+28revisions;254active. [Checkpoint](deep_review_checkpoint.json) controls dynamic counts. [Small resume](../research/2026-10-17-deep-review/RESUME.md) loads one selected case; save/index each result before the next.
+- **Current research:**249US–Iran80%YES;250OpenRouter10%;251NCmoratorium7%;252Claritysigning17%;253exact3Fedhikes7%, all no-entry. NC/Clarity central-positive candidates retain evidence-based reopening conditions.254StrategyGAAP EPS literal rules read; official accounting/BTC bridge facts in progress, no forecast/ownquote access yet.
+- **Held OpenRouter revised:**explicit plateau mode ->12%YES/88%NO, selected73%NO; retain5/noadd. Canonical prior updated and obsolete unfilled-bid state removed. [Latest revision](../research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md); original5NO65c/$3.25 fill17:37:42 remains dated verified fact, no new transaction.
+- **Last safety proof18UTC:**195.62total/5.67gas/189.95tradingmid/187.79indicative tradingdepth;7LIVEzero-filledBUYs/$12.87,7matching reservations,pUSD18.846890/free5.976890. Rounded sequential estimates, not freshNAV/profit. [Review](../research/2026-10-18-1800-checkin.md).
+- **Next boundaries:**held review22UTC; SedgwickBUYpullOct19 10UTC,BOI137/IdahoOct19 22UTC; cancel first on earlier load-bearing uncertainty. [IDs](resting_orders.md). Old OpenRouter22BUYpull obsolete after fill. WeeklyOct23/monthlyNov12 not due; no newtimer/feed.
 
 ## Historical checkpoint — October 18, 17:23 UTC
 

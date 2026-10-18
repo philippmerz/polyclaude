@@ -1,0 +1,175 @@
+{
+  "review_index": 251,
+  "condition_id": "0xab449b45ddb6c2682ec7e931dfb18705cf611cddf42ae35aa300c79453913dca",
+  "criteria_sha256": "040bac7c75038bf8a7f3a907fdfd44987c1b45615611a2e67b6f71d3c1985df5",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the State of North Carolina enacts a law or constitutional provision that establishes a statewide moratorium on new data centers between market creation and the specified date, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nA statewide moratorium on new data centers refers to a binding policy with legal force that generally prohibits or suspends the approval, permitting, construction, grid interconnection, or operation of all new data centers, or a subset of data centers that includes all new data centers with an interconnection capacity above 100 MW per facility (requested or nameplate), throughout the state. Suspensions of tax incentives, exemption certifications, or economic development awards alone will not qualify, nor will a moratorium adopted by a local government or limited to part of the state. Specific exemptions (e.g., for specified applications, executed agreements, or interconnection requests) do not prevent a measure from generally applying to all new data centers, or a qualifying subset of new data centers, provided that data center approval, permitting, construction, grid interconnection, or operation is prohibited by default, rather than permitted subject to conditions or restrictions. Conditions on the resumption or termination of a suspension do not make a measure one that permits subject to conditions; a measure that suspends approvals, permitting, construction, or interconnection until a specified condition is satisfied qualifies.\n\nEnactment occurs when a bill becomes law under the state's constitution and laws, whether by gubernatorial signature, veto override, becoming law without signature, approval at a statewide referendum election, or any other legal mechanism by which statutes can be enacted. For an initiated or referred statute or constitutional amendment, or other voter referendum, the relevant law is considered to have been enacted on the election day on which it was approved, as reflected in the certified results, regardless of when the measure is certified or takes effect. Passage by one or both chambers, or a Governor's announced intent to sign, is not enactment.\n\nExecutive orders, agency orders, and other measures which are not statutory or constitutional do not qualify as enactment regardless of legal force. A provision removed by line-item veto is not enacted unless the veto is overridden as to that item. The operative text of the measure at enactment controls; provisions amended out before enactment do not qualify.\n\nThe moratorium provision must be mandatory on its face. A statute that merely authorizes a state agency or the Governor to impose a moratorium at their discretion does not qualify. A statute that directs suspension of approvals or interconnection upon a specified condition qualifies only if the condition is objectively determinable and is not deferred to be determined by the implementing agency's findings, certifications, or completion of its own proceedings.\n\nThis market resolves based on the date of enactment, not the effective date. Resolution will not be affected by failure to implement a law, judicial invalidation, repeal, or expiry that follows a relevant enactment, or an effective date that comes after the date of enactment.\n\nThe primary resolution source will be official information from the state government of North Carolina; however, a consensus of credible reporting may also be used.\nPrimary: HB1189 Edition1 appears mandatory and substantively qualifying if enacted, not enacted proof. Postcreation window beginsOct5; restriction/default and100MWcoverage matter, not generic opposition to data centers.",
+  "evidence": [
+    {
+      "url": "https://www.ncleg.gov/BillLookUp/2025/H1189/True",
+      "observed_utc": "2026-10-18",
+      "finding": "Official web open initially reported164lines/crawl5daysago, but root did not obtain a readable status-body excerpt; follow-up offset open returned403. LastMay5referral rests on bounded official indexed excerpt/worker facts, not root full-current-history audit."
+    },
+    {
+      "url": "https://www.ncleg.gov/sessions/2025/bills/house/html/h1189v1.html",
+      "observed_utc": "2026-10-18",
+      "finding": "Root read full proposed Edition1: >=100MW designed load, mandatory state/local siting-permit haltAug1 2026-Aug1 2028, no agency-discretion condition. Text substantively qualifies if enacted; current source is proposal, not sessionlaw."
+    },
+    {
+      "url": "https://ncleg.gov/EnactedLegislation/Resolutions/HTML/2025-2026/Res2026-6.html",
+      "observed_utc": "2026-10-18",
+      "finding": "RatifiedAug6; Oct26-28,Nov16-19,Nov30-Dec18 sessions restricted to listed business, including preAug6conference/concurrence, vetoes, constitution and adjournment amendments; sine dieDec18. Standalone new moratorium not generally open; amended resolution/eligible vehicles/extra session remain possible, no impossibility proof."
+    },
+    {
+      "url": "https://www.ncwarn.org/2026/10/statewide-pressure-on-governor-for-2-year-freeze-on-data-centers-nc-warn-news-release/",
+      "observed_utc": "2026-10-18",
+      "finding": "Oct7 advocacy petition asks governor for2yearfreeze; firsthand evidence of campaign only, not state endorsement or qualifying enactment. Executive freeze alone excluded by market."
+    },
+    {
+      "url": "https://ncdoj.gov/attorney-general-jeff-jackson-proposes-framework-to-ensure-data-centers-pay-their-fair-share-for-energy-costs/",
+      "observed_utc": "2026-10-18",
+      "finding": "Sep14 official proposal is large-load tariff/rateclass, not mandatory statewide construction/permitting prohibition."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.005,
+    "high": 0.45,
+    "method": "Primary explicit incomplete-history fork plus restricted-agenda/compromise/crisis legislative regimes.",
+    "reasoning": "1%unobserved postcreation qualifying enactment; otherwise80/15/5regimes with .5/20/50%future enactment =>6.841%rounded7. Restricted agenda and tariff alternative weigh against; genuine proposed mandatory moratorium/bipartisan sponsorship and petition preserve political reversal. All weights judgmental.",
+    "calibration": "Not a calibrated legislative base rate; no exhaustive enacted-law catalog."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 80,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "selected_stress_probability": 0,
+        "best_bid": 0.027,
+        "best_ask": 0.032,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345327168",
+        "book_age_seconds_at_receipt": 20.670958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.32,
+            "fee": 0.0124,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.032
+              }
+            ],
+            "net": 0.33240000000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.27,
+            "fee": 0.01051,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.027
+              }
+            ],
+            "net": 0.25949
+          }
+        },
+        "taker_cost_usd": 0.33240000000000003,
+        "central_expected_profit_usd": 0.36760000000000004,
+        "selected_stress_profit_usd": -0.33240000000000003,
+        "break_even_before_carry": 0.033240000000000006,
+        "break_even_constant_carry": 0.033466899736946484,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "selected_stress_probability": 0.7799999999999999,
+        "best_bid": 0.968,
+        "best_ask": 0.973,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345327168",
+        "book_age_seconds_at_receipt": 20.670958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.73,
+            "fee": 0.01051,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.973
+              }
+            ],
+            "net": 9.74051
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.68,
+            "fee": 0.0124,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.968
+              }
+            ],
+            "net": 9.6676
+          }
+        },
+        "taker_cost_usd": 9.74051,
+        "central_expected_profit_usd": -0.4405100000000015,
+        "selected_stress_profit_usd": -1.9405100000000015,
+        "break_even_before_carry": 0.974051,
+        "break_even_constant_carry": 0.9806999745990511,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: dated3.2cYES central EV positive but fails15pp uncertainty reserve;97.3cNO negative central EV. Retain research candidate; proposal/advocacy is not enactment.",
+  "reopen_condition": "Current official enacted-law/history proof, committee/chamber/conference advancement or changed allowed-business resolution with qualifying operative text; strong governor/legislative support. Revalue before any maker proposal and all current execution checks; no automatic bid.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/nc251_primary_1945.json",
+    "source_addendum": "data/deep_review_20261017/work/0251_primary_source_addendum_1945.json",
+    "actual_entry_reserve_pp": 15,
+    "priority_followup": true,
+    "entry_approved": false,
+    "positive_central_EV_not_execution_approval": true
+  },
+  "evaluated_utc": "2026-10-18T19:42:30.376891+00:00",
+  "question": "Will North Carolina enact a data center moratorium by December 31, 2026?",
+  "market_id": "5347188",
+  "valuation_author": "primary_operator",
+  "original_index": 251,
+  "report_sha256": "eb10de863cc17c9481cc3255cb234a03c0beef5f81be40d466e5a2ca7d01c648"
+}

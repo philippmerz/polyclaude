@@ -1,0 +1,92 @@
+{
+  "review_index": 112,
+  "market_id": "5763815",
+  "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+  "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+  "status": "valued",
+  "literal_analysis": "Exact rules reread with250: [725,775)T from Oct26/Nov2/Nov9/Nov16 displayed weekly Totals, firstNov23 display/Nov27ET fallback, higher boundary wins. Identical description to disjoint250[625,675). Separate pace overlay not settlement.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-18T17:45:43.275127+00:00",
+      "finding": "Root SHA verified 52 completed unchanged; partialOct12 158.105T, all target weeks absent. CachedAt16:59not proven cutoff."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5763815",
+      "observed_utc": "2026-10-18T17:45:16.836952+00:00",
+      "finding": "Dated captured exactCID/full rules/tokens and compact fee descriptor; not current execution proof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.005,
+    "high": 0.8,
+    "method": "Primary joint250/112 total model:20%plateau plus80%old regimes; latest partial/UI remaining proxy, shared future paths.",
+    "reasoning": "Raw11211.5545%→12%YES versus prior11%; coherent joint250YES10%/112YES12%/neither78%. Concentrated750T/logsigma.03 countermodel73.357%YES remains adverse.15pp reserve is sensitivity, not floor.",
+    "calibration": "Judgmental, not holdout-calibrated."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "source": "data/deep_review_20261017/openrouter112_fill_1750.json",
+    "quote_observed_utc": "2026-10-18T17:45:16.836952+00:00",
+    "dated_research_only": true,
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 41,
+    "alternative_apy_constant_sensitivity": 0.031525,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1,
+      "taker_only": true
+    },
+    "actual_entry_reserve_pp": 15,
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "selected_stress_probability": 0,
+        "best_ask": 0.36,
+        "best_bid": 0.33,
+        "minimum_shares": 5.0,
+        "full_10share_depth_at_best_ask": true,
+        "taker_cost_usd": 3.6921599999999994,
+        "central_expected_profit_usd": -2.4921599999999993,
+        "selected_stress_profit_usd": -3.6921599999999994,
+        "carry_break_even_probability": 0.37050551557205746
+      },
+      "No": {
+        "probability": 0.88,
+        "selected_stress_probability": 0.73,
+        "best_ask": 0.67,
+        "best_bid": 0.64,
+        "minimum_shares": 5.0,
+        "full_10share_depth_at_best_ask": true,
+        "taker_cost_usd": 6.7884400000000005,
+        "central_expected_profit_usd": 2.0115600000000002,
+        "selected_stress_profit_usd": 0.5115599999999993,
+        "carry_break_even_probability": 0.681214915423486
+      }
+    }
+  },
+  "verdict": "RETAIN5NO/noadd;12%YES/88%NO, selected73%NO. Prior17:45 indicative sale/Aave wealth grid requires63.56-63.82%NO; central/selected favor hold, broad20%NO favors sale. Original BUY fully filled17:37:42; obsolete22UTC BUY-pull removed, existing22UTC held review retained. No transaction.",
+  "reopen_condition": "First completed target week, changed measurement/method/regime or actionable current prices with full source/account/execution/family gates. No add/repost from dated economics.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/openrouter250_112_primary_1940.json",
+    "held_NO_shares": 5,
+    "cost_usd": 3.25,
+    "hold_sensitivity_source": "data/deep_review_20261017/openrouter112_fill_hold_1755.json",
+    "no_resting_BUY_after_verified_fill": true,
+    "actual_entry_reserve_pp": 15,
+    "selected_no": 0.73,
+    "priority_followup": true,
+    "entry_approved": false,
+    "counter_p_yes": 0.7335745882248493
+  },
+  "evaluated_utc": "2026-10-18T19:40:55.678026+00:00",
+  "question": "Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?",
+  "valuation_author": "primary_operator",
+  "original_index": 112,
+  "revision_reason": "Joint250 review exposes omitted plateau regime; explicitly revise held112 prior and obsolete unfilled-bid status, no transaction.",
+  "prior_report_sha256": "3581340114f23a4cfb310e3d00b5f28a2bb39749a02f661ae36e8895b677987c",
+  "report_sha256": "3c6dab17f562fa581d7c0a312e8dfe12e87b797205588e62f6af7e4f5282346b",
+  "report_path": "revisions/0112_20261018T194055677692Z.md",
+  "revision_path": "revisions/0112_20261018T194055677692Z.json"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "primary_openrouter250_112_joint.v1",
+  "adopted_utc": "2026-10-18T19:38:54.960346+00:00",
+  "cases": {
+    "250": {
+      "condition_id": "0x6235b4a515e2c041e70b3d24012593881a9c6cb5fb9c1e1d94b7a47119fdb0f9",
+      "criteria_sha256": "3ea1752f6b45ff8a3caa98c6fb4ef0851df4193e06bebe037c68c33295bf2acb",
+      "band_T": "[625,675)",
+      "p_yes": 0.1,
+      "range": [
+        0.01,
+        0.85
+      ],
+      "entry_reserve_pp": 20
+    },
+    "112": {
+      "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+      "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+      "band_T": "[725,775)",
+      "p_yes": 0.12,
+      "range": [
+        0.005,
+        0.8
+      ],
+      "entry_reserve_pp": 15
+    }
+  },
+  "literal": "Identical four UTC weeks Oct26/Nov2/Nov9/Nov16. Sum displayed weekly Totals when Nov23 first appears; Nov27 23:59ET fallback. Higher boundary included; lower-band upper boundary excluded. Weekly pace/rolling model leaderboard are not outcome totals.",
+  "source": "17:45:43Z actual chart capture, cachedAt16:59:52Z; 52 completed points unchanged, partial Oct12 158.105052T. Target weeks absent; cache time not verified usage cutoff.",
+  "source_unit": "data/deep_review_20261017/work/0250_source_update_1800.json",
+  "calculation_unit": "data/deep_review_20261017/work/0250_plateau_sensitivity_1925.json",
+  "calculation_code": "research/2026-10-17-deep-review/models/openrouter250_plateau_sensitivity_1925.py",
+  "source_hash": "2a92e2f0fce306e19633eddc61392a82f2ebd71050c842fa5c83975ab76e9beb",
+  "prior_method_limit": "Old four regimes put no explicit mass on flat log growth; a 165.3T current-week UI pace proxy versus171.84T prior complete week makes omission material, although incomplete week and unknown usage cutoff cannot establish contraction.",
+  "primary_parameter_choice": "20% explicit plateau(mu0,sigma.05/week),80% old regime weights proportionally rescaled to36/28/8/8; correlated innovations .25,200k seed20261018182. This is primary judgment before own250 quote access, not an empirical regime fit.",
+  "raw_joint": {
+    "250_yes": 0.10271,
+    "112_yes": 0.115545,
+    "neither": 0.781745
+  },
+  "adopted_joint": {
+    "250_yes_112_no": 0.1,
+    "250_no_112_yes": 0.12,
+    "both_no": 0.78,
+    "both_yes": 0
+  },
+  "rounding": "10.271% to10%250;11.5545% to12%112. Held112 change11% to12% is explicit conservative rounding, no silent replacement.",
+  "cutoff_and_noise": "25% prior complete-day proxy18.338T remaining,65% latest UI-derived7.19035T,10%uniform0-36T; aggregate revision/rounding95%N(0,2T)/5%N(0,10T). All judgments; no backend cutoff or measured revision distribution.",
+  "countermodels": {
+    "250_concentrated_650T_logsigma03_pYES": 0.80026,
+    "112_concentrated_750T_logsigma03_pYES": 0.7335745882248493,
+    "interpretation": "Both economically plausible concentration countermodels reverse respective NO thesis. Entry reserves and sensitivity endpoints are not proven probability floors. No high-p bond/K5 shortcut."
+  },
+  "portfolio": "Equal NO amounts have semantic total payout >= one share under consistent adjudication, and negatively dependent band failures. This does not certify current atomic negRisk topology, one-leg fill safety, common settlement or profitable prices. Existing112 5NO held; no new transaction authorized by this research record.",
+  "hold_sensitivity": "At prior17:45 indicative112 net exit3.15392/5 and constant Aave3.1525%, prior96 wealth/carry cells required63.56-63.82%NO. New central88%/selected73% still favor retain;20%NO adverse counterstate favors exit. Reuse is dated sensitivity, not current executable proceeds.",
+  "fresh_own250_books_read_before_model": false,
+  "old112_quotes_and_holdings_known": true,
+  "reopen": "First completed target weeks, source methodology/cutoff changes, or price allowing adequate margin after uncertainty and joint risk. Recheck all venue/account/source gates before money."
+}

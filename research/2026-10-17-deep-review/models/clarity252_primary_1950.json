@@ -1,0 +1,29 @@
+{
+  "review_index": 252,
+  "condition_id": "0x9cb23d04b2ded06147482076688b69b487a8d982c63ebdda2ab3678cf27cf390",
+  "criteria_sha256": "801bfa0ff9d9e790a9ce0ee3e992c9fae74cb600cc78b4ee3b0e8fc47601c7dc",
+  "adopted_utc": "2026-10-18T19:44:42.408907+00:00",
+  "p_yes": 0.17,
+  "range": [
+    0.02,
+    0.6
+  ],
+  "entry_reserve_pp": 15,
+  "literal": "ExactH.R.3633 passed both chambers and signed byDec31 23:59ET. Cloture, committee, alternate bill number, executive crypto rules alone fail.",
+  "primary_conditional_chain": {
+    "unobserved_already_qualified_fork": 0.005,
+    "viable_bipartisan_HR3633_deal_by_midDecember": 0.35,
+    "cloture_given_deal": 0.7,
+    "Senate_final_given_cloture": 0.98,
+    "House_concurrence_given_Senate": 0.9,
+    "presidential_signature_given_ethics_compromise": 0.8,
+    "completion_before_year_end_given_process": 0.95,
+    "future_product": 0.16422839999999997,
+    "raw_total": 0.16840725799999998
+  },
+  "reasoning": "49vs60procedural failure persists; ethics conflict remains substantive, not scheduling-only. SevenDem negotiators and prior committee work make revival plausible; discounted for narrow remaining calendar, House amendments and presidential ethics resistance. Chain weights are subjective and conditional, not claims of independence. Rounded16.8405%\u219217%.",
+  "source_unit": "data/deep_review_20261017/work/0252_primary_sources_1950.json",
+  "scope": "Official action tracker inaccessible; Senate menu includes no later final vote but is incomplete for all congressional action. Lowprobability observation fork is judgment, not measuredmissing-data frequency. Range and reserve are sensitivity, not statistical bounds.",
+  "held_pair": "Retain complete29/29pair unchanged. Pair has conditional29floor/58middle payout under common final-vote settlement; no assumption of zero payout or independent hedge.",
+  "own_case_quotes_accessed_before_model": false
+}
