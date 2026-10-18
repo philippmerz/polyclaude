@@ -1,0 +1,155 @@
+{
+  "review_index": 235,
+  "saved_utc": "2026-10-18T18:47:25.432536+00:00",
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/treasury235_facts_1830.json",
+  "raw_calculation": {
+    "case_id": 235,
+    "input": {
+      "source_gzip": "logs/deep_review_20261017/treasury228/treasury_2026_daily_par_curve.html.gz",
+      "source_raw_sha256": "ee0d1c24c4b7e8bd7e0e84d048117c5cd4bbea4dfb2f41dcba33af32717bd5f5",
+      "column": "30 Yr",
+      "source_rows": 199,
+      "window_observations_sep2_oct16": 31,
+      "latest_observation": {
+        "date": "2026-10-16",
+        "30yr_pct": 5.43
+      }
+    },
+    "parameters": {
+      "n_paths_per_regime": 100000,
+      "seed": 20261018235,
+      "starting_level_pct": 5.43,
+      "published_event": "official Treasury Daily Treasury Par Yield Curve Rates, 30 Yr column strictly <4.90%",
+      "latent_threshold_pct": 4.895,
+      "threshold_note": "Approximate latent proxy for two-decimal published strict <4.90%; daily-close comparisons only.",
+      "future_publication_days": 51,
+      "future_window": "Oct19-Dec31 2026",
+      "calendar_assumption": "51 weekdays excluding Nov11, Nov26, Dec25; actual release schedule may vary.",
+      "regime_weights_note": "Scenario weights are explicit assumptions, not estimated probabilities.",
+      "method": "100,000 iid Gaussian daily changes per branch with specified branch drift/sigma; accumulate from 5.43 and test only daily closes."
+    },
+    "primary_scenario_computations": {
+      "regimes": [
+        {
+          "name": "plateau",
+          "weight": 0.45,
+          "drift_pp_per_day": 0.0,
+          "sigma_pp_per_day": 0.05,
+          "n_paths": 100000,
+          "future_publications": 51,
+          "event_fraction": 0.11488
+        },
+        {
+          "name": "inflation",
+          "weight": 0.35,
+          "drift_pp_per_day": 0.0035,
+          "sigma_pp_per_day": 0.06,
+          "n_paths": 100000,
+          "future_publications": 51,
+          "event_fraction": 0.10168
+        },
+        {
+          "name": "easing",
+          "weight": 0.2,
+          "drift_pp_per_day": -0.005,
+          "sigma_pp_per_day": 0.065,
+          "n_paths": 100000,
+          "future_publications": 51,
+          "event_fraction": 0.39272
+        }
+      ],
+      "weighted_scenario_average": 0.165828
+    },
+    "zero_drift_sigma075_sensitivity": {
+      "parameters": {
+        "name": "zero_drift_sigma_0.075",
+        "drift_pp_per_day": 0.0,
+        "sigma_pp_per_day": 0.075
+      },
+      "n_paths": 100000,
+      "future_publications": 51,
+      "event_fraction": 0.28088
+    },
+    "publication_count_sensitivities": {
+      "48": {
+        "regimes": [
+          {
+            "name": "plateau",
+            "weight": 0.45,
+            "drift_pp_per_day": 0.0,
+            "sigma_pp_per_day": 0.05,
+            "n_paths": 100000,
+            "future_publications": 48,
+            "event_fraction": 0.10451
+          },
+          {
+            "name": "inflation",
+            "weight": 0.35,
+            "drift_pp_per_day": 0.0035,
+            "sigma_pp_per_day": 0.06,
+            "n_paths": 100000,
+            "future_publications": 48,
+            "event_fraction": 0.09206
+          },
+          {
+            "name": "easing",
+            "weight": 0.2,
+            "drift_pp_per_day": -0.005,
+            "sigma_pp_per_day": 0.065,
+            "n_paths": 100000,
+            "future_publications": 48,
+            "event_fraction": 0.36989
+          }
+        ],
+        "weighted_scenario_average": 0.1532285
+      },
+      "53": {
+        "regimes": [
+          {
+            "name": "plateau",
+            "weight": 0.45,
+            "drift_pp_per_day": 0.0,
+            "sigma_pp_per_day": 0.05,
+            "n_paths": 100000,
+            "future_publications": 53,
+            "event_fraction": 0.12195
+          },
+          {
+            "name": "inflation",
+            "weight": 0.35,
+            "drift_pp_per_day": 0.0035,
+            "sigma_pp_per_day": 0.06,
+            "n_paths": 100000,
+            "future_publications": 53,
+            "event_fraction": 0.10576
+          },
+          {
+            "name": "easing",
+            "weight": 0.2,
+            "drift_pp_per_day": -0.005,
+            "sigma_pp_per_day": 0.065,
+            "n_paths": 100000,
+            "future_publications": 53,
+            "event_fraction": 0.40643
+          }
+        ],
+        "weighted_scenario_average": 0.17317950000000001
+      }
+    },
+    "limitations": [
+      "Computational scenario outputs only; no adopted probability, forecast, range, or decision.",
+      "Gaussian daily changes, drift, regime weights, and publication-day calendar are assumptions.",
+      "No intraday or between-close first-passage is modeled."
+    ]
+  },
+  "calculation_sha256": "edd8015fffadd9054176ddd86cb7f0410588e622255454b062b9b2d35e93f799",
+  "primary_p_yes": 0.17,
+  "low": 0.03,
+  "high": 0.65,
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.02,
+  "selected_no": 0.68,
+  "method": "Root-authored three macroregimes as228 but exact30Yrstart5.43/downstrict4.90; sigmas.05/.06/.065pp/day based30Yrhistory, notborrowed5Yrvalues. 51daily-onlypublications, latent4.895.",
+  "calibration": "Regimeweights45/35/20, drifts0/.0035/-.005 are unestimated assumptions; range/reserve notcalibrated bounds. Same macro risk/sharedsource butnoautomaticcomplementarity to5/10Yrcontracts."
+}

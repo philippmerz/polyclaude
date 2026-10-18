@@ -1,0 +1,103 @@
+{
+  "review_index": 130,
+  "market_id": "4178748",
+  "condition_id": "0x8934fde98c0de180274d65947e23dd30d5d2fd12b7b89f008d635cf5b87917aa",
+  "criteria_sha256": "008b9d9497f1d72de50ee1f96c66317ff7ac77a1dcfd642b263ed9c2ec26657c",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the Treasury 5-year yield reaches or is higher than the listed value for any date between September 3, 2026 and December 31, 2026. Otherwise this market will resolve to \"No\".\n\nThis market will resolve as soon as the Treasury 5-year yield reaches or is higher than the listed value, or once data is available for December 31, 2026. If no qualifying value is published and data is not available for December 31, 2026 by January 14, 2027, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source for this market is the Department of the treasury, specifically the data listed under \"Daily Treasury Par Yield Curve Rates\" for the column \"5 Yr\" (see: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026). Exact column, inclusive/strict inequality, eligibility window and missing-data rules preserved; no intraday substitutions.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-18T11:44:48+00:00",
+      "finding": "Primary SHA-checked and reparsed all199 rows/5 Yr column; qualifying-window30 rows max5.09Sep30, latest4.89Oct16, no>=5.10 in this vintage. Single snapshot lacks revision history."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-17",
+      "finding": "Reused official-source macro packet: September16 +25bp to3.75–4.00%; not a direct forecast of five-year daily yields."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2024",
+      "observed_utc": "2026-10-18",
+      "finding": "Exact5Yr/10Yr table, raw SHA256 ca02e03fe537ff82e030450964df327af64e076ebe80b36d0a1789e129cd9b37; year-specific volatility/serial correlation and dependent51-publication windows checked. Receipts/diagnostics in shared model; this day label is not an exact new GET."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2025",
+      "observed_utc": "2026-10-18",
+      "finding": "Exact5Yr/10Yr table, raw SHA256 4f64e5ef9a1bb52a47cf457940270b75f0452e2757093025a149cf5852733dfe; year-specific volatility/serial correlation and dependent51-publication windows checked. Receipts/diagnostics in shared model; this day label is not an exact new GET."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-18",
+      "finding": "Exact5Yr/10Yr table, raw SHA256 ee0d1c24c4b7e8bd7e0e84d048117c5cd4bbea4dfb2f41dcba33af32717bd5f5; year-specific volatility/serial correlation and dependent51-publication windows checked. Receipts/diagnostics in shared model; this day label is not an exact new GET."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.55,
+    "low": 0.2,
+    "high": 0.85,
+    "method": "Equal-weight original Gaussian regime and5-day demeaned2026 moving-block bootstrap, same51 daily publications and primary45/35/20 drifts;172 retains5% interpretation fork.",
+    "reasoning": "Conditional Gaussian=0.590946500, bootstrap=0.507991667; final raw=0.549469083, adopted55%. Volatility and serial-dependence assumptions change tail values materially; neither model alone is calibrated. Shared family repair after235 validation, not price-based rejection.",
+    "calibration": "Uncalibrated model weights/range/reserve; not confidence intervals or guaranteed bounds."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_0121_0240.json.gz",
+    "quote_observed_utc": "2026-10-17T19:02:38.874+00:00",
+    "horizon_days": 89,
+    "alternative_rate_fraction": 0.03119,
+    "alternative_rate_asof": "2026-10-18T09:41:35-09:41:36 UTC; dated Aave Polygon USDC supply APY3.119%, new supply live. Variable constant-rate sensitivity, not free funding or a forecast.",
+    "dated_quote_caveat": "Unchanged original walked10-gross-share cost incl rounded repository fees; now stale. No new execution proof. Constant dated variable Aave APY sensitivity excludes operational costs; original quote/fills remain in immutable base.",
+    "sides": {
+      "Yes": {
+        "probability": 0.55,
+        "selected_stress_probability": 0.4,
+        "taker_cost_usd": 6.879340000000001,
+        "gross_shares": 10,
+        "best_ask": 0.677,
+        "best_bid": 0.651,
+        "fee_usd": 0.10934,
+        "central_expected_profit_usd": -1.379340000000001,
+        "selected_stress_profit_usd": -2.879340000000001,
+        "break_even_before_carry": 0.687934,
+        "break_even_constant_carry": 0.6931053045383738,
+        "minimum_shares": 5.0,
+        "quote_is_current_execution_certificate": false
+      },
+      "No": {
+        "probability": 0.44999999999999996,
+        "selected_stress_probability": 0.29999999999999993,
+        "taker_cost_usd": 3.6041099999999995,
+        "gross_shares": 10,
+        "best_ask": 0.349,
+        "best_bid": 0.323,
+        "fee_usd": 0.11361,
+        "central_expected_profit_usd": 0.8958900000000005,
+        "selected_stress_profit_usd": -0.6041100000000004,
+        "break_even_before_carry": 0.3604109999999999,
+        "break_even_constant_carry": 0.3631202643189314,
+        "minimum_shares": 5.0,
+        "quote_is_current_execution_certificate": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: same-family model repair changes forecast; both dated sides fail selected15pp uncertainty stress after fees, before extra costs. No portfolio change.",
+  "reopen_condition": "New official5Yr>=5.10, macro/source regime change, or fresh maker YES<=37c/NO<=27c after all current gates; research thresholds only.",
+  "extra": {
+    "model": "research/2026-10-17-deep-review/models/treasury_family_validation_1900.json",
+    "base_report_preserved": "evaluations/0130.md",
+    "actual_entry_reserve_pp": 15,
+    "entry_approved": false,
+    "priority_followup": false,
+    "new_quotes_fetched": false
+  },
+  "evaluated_utc": "2026-10-18T19:00:19.522591+00:00",
+  "question": "Will the 5-year Treasury yield hit 5.10% before 2027?",
+  "valuation_author": "primary_operator",
+  "original_index": 130,
+  "revision_reason": "Same-family model repair:235 validation exposed daily-volatility/serial-dependence sensitivity; mix original Gaussian and observed5-day block bootstrap, preserve exact source/window.",
+  "prior_report_sha256": "f6cb10ff2dbaf8ab5216f6fd42ff13428e0b92056937297a915b7f6ca79523b6",
+  "report_sha256": "4dbd6aefa9ccb1d0096d982fafaa84ab1872ce01ea6f86363ddc48541eeccf40",
+  "report_path": "revisions/0130_20261018T190019522305Z.md",
+  "revision_path": "revisions/0130_20261018T190019522305Z.json"
+}

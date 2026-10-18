@@ -1,0 +1,50 @@
+{
+  "review_index": 209,
+  "condition_id": "0x7155af0778fe2cd75830fc5f9d4dfed68f1d0d3d9ff6b5d5141f2c40b7eea473",
+  "criteria_sha256": "8115b24866e24da7d481e9f36d2c6ea33da9ee9a998376e56133d4ad25b34496",
+  "status": "excluded_factual",
+  "literal_analysis": "In the upcoming game, scheduled for October 17, 2026\nIf Motherwell FC wins, this market will resolve to \"Yes\".\nOtherwise, this market will resolve to \"No\".\nIf the game is postponed, this market will remain open until the game has been completed.\nIf the game is canceled entirely, with no make-up game, this market will resolve \"No\".\nThis market refers only to the outcome within the first 90 minutes of regular play plus stoppage time.\n\nThe primary resolution source for this market is the official statistics of the event as recognized by the governing body or event organizers. However, if the governing body or event organizers have not published final match statistics within 2 hours after the event's conclusion, data from Flashscore may be used; if Flashscore data is unavailable, data from Sofascore may be used; if neither is available, a consensus of credible reporting may be used instead. All markets will settle based on the official final result as recognized by the governing body or event organizers. Revisions to officially declared final scores made after market resolution will not be accounted for in determining the outcome. If no acceptable data is available within 24 hours of the event's conclusion, this market will resolve 50-50, or to \"Draw\" where applicable. Fullrule read: regular90minutes+stoppage only; postponed waits, permanentcancellationNO, officialresultsource and fallback windows apply.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5273152",
+      "observed_utc": "2026-10-18T18:20:44.566604+00:00",
+      "finding": "Exactidentity/description match; closedtrue, acceptingOrdersfalse, scalarUMAresolved. Active=true is not acceptingtrading authority."
+    },
+    {
+      "url": "https://spfl.co.uk/clubs/kilmarnock/results",
+      "observed_utc": "2026-10-18T18:20:56.543311+00:00",
+      "finding": "OfficialSPFL Premiership Oct17 Kilmarnock3–2Motherwell, noMotherwellwin; leaguefinalnotpenaltyadvancement."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Factual completed/closed entry-route exclusion, not a new ex-ante valuation",
+    "reasoning": "Officialfinal and exactclosed/nonacceptingvenue; no liveentryroute. Exclusions notcountedasvaluations."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "cost": null,
+        "explicit_failure": "Closed/nonaccepting exactmarket; dated17:42noCLOBbook"
+      },
+      "No": {
+        "cost": null,
+        "explicit_failure": "Closed/nonaccepting exactmarket; dated17:42noCLOBbook"
+      }
+    },
+    "current_execution_authorization": false
+  },
+  "verdict": "FACTUAL EXCLUSION: completed Oct17 match and exact closed/nonaccepting market; no live entry route.",
+  "reopen_condition": "Only if same exact market is officially reopened/accepting orders, with currentsource and full gates; do not replayanotherfixture.",
+  "extra": {
+    "source_packet": "data/deep_review_20261017/match209_facts_1820.json",
+    "exclusion_reason": "completed_closed_no_entry_route"
+  },
+  "evaluated_utc": "2026-10-18T18:25:58.643423+00:00",
+  "question": "Will Motherwell FC win on 2026-10-17?",
+  "market_id": "5273152",
+  "valuation_author": "primary_operator",
+  "original_index": 209,
+  "report_sha256": "662f4bc759fde7fb4a660815154905451d854124469cf7e69a265781954a4bd5"
+}

@@ -1,0 +1,181 @@
+{
+  "review_index": 229,
+  "condition_id": "0x4e96bc6fd2d52bc367e5e9fcce4ba2db29c6e6329d7a5bd612a6d5d5ebb56c20",
+  "criteria_sha256": "3cf0d1371559be341182fc167b4b238b8836e31275a6a63cedf0eab0eeb3cafb",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the listed player finishes in the top 8 of Titled Tuesday on October 20, 2026, according to the final standings published by the tournament organizer. Otherwise, this market will resolve to \"No\".\n\nIf the listed player does not play, their corresponding market will resolve to \"No\".\n\nIf this tournament is postponed after November 3, 2026, 11:59 PM ET, canceled, or final standings have not been published within this timeframe, this market will resolve to \"No\".\n\nThe resolution source for this market will be official information from the tournament organizer, Chess.com (https://www.chess.com/events/info/2026-titled-tuesday-blitz); however, a consensus of credible reporting may also be used. Exactone2026event/current5+0/11roundSwiss; top8notwin; nonplay/cancel/Nov3noresultNO.",
+  "evidence": [
+    {
+      "url": "https://www.chess.com/article/view/titled-tuesday",
+      "observed_utc": "2026-10-18T18:41:09.803038+00:00",
+      "finding": "Records18sinceFeb2022/2in2026; 5+0singleweeklyformat, notpooleddouble-era."
+    },
+    {
+      "url": "https://www.chess.com/news/view/caruana-wins-titled-tuesday-october-13-2026",
+      "observed_utc": "2026-10-18",
+      "finding": "Primarybrowserverifiedrank17/8seed10/rating3271/top8cut9. Exactbrowserrequesttimestampunavailable, date-only observation."
+    },
+    {
+      "url": "https://www.chess.com/news/view/so-wins-titled-tuesday-september-29-2026",
+      "observed_utc": "2026-10-18",
+      "finding": "Officialtable21/8seed4/rating3288/top8cut9. Browserdate-only; directrawreceipt alsoinsourcepack."
+    },
+    {
+      "url": "https://www.chess.com/official-event-rules",
+      "observed_utc": "2026-10-18",
+      "finding": "Official2026scheduleoneweekly11roundSwiss; Oct20start11ET; no announcedparticipationguarantee. Exactbrowserrequesttimestampunknown."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.23,
+    "low": 0.04,
+    "high": 0.6,
+    "method": "Primary half-point rounded normal score sensitivity plus top8 score/tiebreak threshold/participation; not a fittedSwisspairingsmodel.",
+    "reasoning": "Halfpointscore8.15±1.05assumption/cutofftiebranchesgives25.598%conditional;90%participation/99.5%completion=>22.923%rounded23%; unknownparticipation/Swissfield/variance broaden4–60%.",
+    "raw_model_probability": 0.22922816359950712,
+    "calibration": "Assumption-based model, not fitted Swiss/ELO or measured lower bound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 16,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.23,
+        "selected_stress_probability": 0.08000000000000002,
+        "best_bid": 0.1,
+        "best_ask": 0.27,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345225756",
+        "book_age_seconds_at_receipt": 122.082958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.95,
+            "fee": 0.10368,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.27
+              },
+              {
+                "shares": 5.0,
+                "price": 0.32
+              }
+            ],
+            "net": 3.05368
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 1.0,
+            "fee": 0.04501,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.1
+              }
+            ],
+            "net": 0.95499
+          }
+        },
+        "taker_cost_usd": 3.05368,
+        "central_expected_profit_usd": -0.7536799999999997,
+        "selected_stress_profit_usd": -2.2536799999999997,
+        "break_even_before_carry": 0.305368,
+        "break_even_constant_carry": 0.3057837611515279,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.77,
+        "selected_stress_probability": 0.62,
+        "best_bid": 0.73,
+        "best_ask": 0.9,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345225756",
+        "book_age_seconds_at_receipt": 122.082958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.0,
+            "fee": 0.045,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.9
+              }
+            ],
+            "net": 9.045
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.050000000000001,
+            "fee": 0.10368,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.73
+              },
+              {
+                "shares": 5.0,
+                "price": 0.68
+              }
+            ],
+            "net": 6.946320000000001
+          }
+        },
+        "taker_cost_usd": 9.045,
+        "central_expected_profit_usd": -1.3449999999999998,
+        "selected_stress_profit_usd": -2.8449999999999998,
+        "break_even_before_carry": 0.9045,
+        "break_even_constant_carry": 0.9057314845090415,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: bothdepth/feeasksnegativecentral andfail15ppreserve; broadspread, unvalidatedscoremodel.",
+  "reopen_condition": "Supportedparticipation/score distribution+newclasschallenge+freshgates; makerYES<=6c/NO<=58cresearchonly.",
+  "extra": {
+    "family": "TitledTuesday-player-top8",
+    "actual_entry_reserve_pp": 15,
+    "model": "research/2026-10-17-deep-review/models/sarana229_primary_1850.json",
+    "source_packets": [
+      "data/deep_review_20261017/case229_facts_1830.json",
+      "data/deep_review_20261017/case229_titled_tuesday_addendum_1845.json"
+    ],
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T18:45:47.758793+00:00",
+  "question": "Will Aleksei Sarana finish in the Top 8 of Titled Tuesday on October 20?",
+  "market_id": "5659994",
+  "valuation_author": "primary_operator",
+  "original_index": 229,
+  "report_sha256": "a898970b28b81def5b3108cb1db1c5c3cc52872ac9f8babd936238f45eac0624"
+}

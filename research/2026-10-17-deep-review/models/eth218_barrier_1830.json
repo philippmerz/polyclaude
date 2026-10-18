@@ -1,0 +1,75 @@
+{
+  "review_index": 218,
+  "calculated_utc": "2026-10-18T18:31:17.745899+00:00",
+  "own_PM_Gamma_midpoint_exposed_before_forecast": true,
+  "own_CLOB_book_not_read_before_forecast": true,
+  "method_transfer": "Use Oct17 prespecified crypto_primary_method:25/50/25 weights on20/60/180realizedvol,80%base/20%doublevol,zero logdrift; no lookback/weight chosen from case218PMprice.",
+  "source_packets": [
+    "data/deep_review_20261017/eth218_unit_1825.json",
+    "data/deep_review_20261017/crypto_218_225_facts_1821.json"
+  ],
+  "root_verified_minute_gzip_sha256": "de0d5f40f1971a26261169fc54729eb2b1e6db4335b0f9da9b4c1104c9b1f83d",
+  "root_verified_daily_gzip_sha256": "78aacf141e0f1b8f8aa24532ddf4cf3211fb0ce395abb5afc7721e4e5bbc79f5",
+  "latest_complete_1m_close": 2365.27,
+  "source_bar_end": "2026-10-18T18:20:59.999000+00:00",
+  "expiry_exclusive": "2026-11-01T04:00:00+00:00",
+  "remaining_days": 13.402083344907407,
+  "historical_eligible_minutes": 25341,
+  "historical_no_hit_max": 2777.33,
+  "branches": [
+    {
+      "n": 20,
+      "annual_sigma": 0.36216704567776664,
+      "weight": 0.2,
+      "p_touch": 1.425049731799678e-09
+    },
+    {
+      "n": 20,
+      "annual_sigma": 0.7243340913555333,
+      "weight": 0.05,
+      "p_touch": 0.0024755659680127046
+    },
+    {
+      "n": 60,
+      "annual_sigma": 0.6051934123965815,
+      "weight": 0.4,
+      "p_touch": 0.00029223978463034525
+    },
+    {
+      "n": 60,
+      "annual_sigma": 1.210386824793163,
+      "weight": 0.1,
+      "p_touch": 0.07013439144130541
+    },
+    {
+      "n": 180,
+      "annual_sigma": 0.5053808834915079,
+      "weight": 0.2,
+      "p_touch": 1.441495369552543e-05
+    },
+    {
+      "n": 180,
+      "annual_sigma": 1.0107617669830158,
+      "weight": 0.05,
+      "p_touch": 0.030103813004059437
+    }
+  ],
+  "raw_p_yes": 0.008762187282335339,
+  "adopted_p_yes": 0.009,
+  "primary_range": [
+    0.0001,
+    0.35
+  ],
+  "actual_entry_reserve_pp": 10,
+  "stress_sigma1p8_positive_logdrift1": 0.25335629500358625,
+  "formula": "a=ln(K/S); P(maxlogreturn>=a)=Phi((mu*T-a)/(sigma*sqrt(T)))+exp(2*mu*a/sigma^2)*Phi((-mu*T-a)/(sigma*sqrt(T))). Tyears, physical model zero logdrift, not riskneutral pricing.",
+  "limits": [
+    "No fitted jump/skew/regime weights, calibrated bound or options-implied volatility.",
+    "No historical mean extrapolation; dailyvol includes ordinaryweekdays and is not forecast of future13days.",
+    "Sourcefutureminuteprints and venue/USDT/badwick/corrections can diverge from diffusion.",
+    "OfficialHoodiOct26testnet is not a scheduled mainnetactivation; EFpage44.5hcache. FedOct27\u201328riskalreadyinsidehorizon.",
+    "PartialOctober18dailybar excluded from realizedvol; historicalcompleted1m notliveexecutionprice."
+  ],
+  "range_adoption_utc": "2026-10-18T18:32:26.921164+00:00",
+  "range_reason": "High broadened20\u219235% to include explicit180%vol/+1annual-logdrift sensitivity25.34%, before first own CLOB read; Gamma midpoint was already exposed."
+}

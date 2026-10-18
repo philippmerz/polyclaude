@@ -1,0 +1,64 @@
+{
+  "review_index": 236,
+  "saved_utc": "2026-10-18T18:55:18.821591+00:00",
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/xrp236_facts_1835.json",
+  "source_daily_series_gzip_sha256": "157b2518875dac20997c9a517cdfa3ef1013a5ab94444140320238822831e5c8",
+  "latest_finalized_reference": 1.2725,
+  "reference_bar_close": "2026-10-18T18:30:59.999000+00:00",
+  "remaining_days": 13.395138900462962,
+  "return_needed": 0.8860510805500983,
+  "historical_max_enclosing_UTCdaily_high": 1.555,
+  "no_prior_touch_basis": "EnclosingUTCdailyHighboundsallconstituentexactXRPUSDT1mHigh; startincludesextra4hours, allmaxbelow2.4. Aggregation/revisionconsistencyassumption, nofullminutearchive.",
+  "branches": [
+    {
+      "lookback": 20,
+      "annual_sigma": 0.3731397615140074,
+      "weight": 0.2,
+      "hit_probability": 6.923734909035455e-19
+    },
+    {
+      "lookback": 20,
+      "annual_sigma": 0.7462795230280148,
+      "weight": 0.05,
+      "hit_probability": 9.077474201434335e-06
+    },
+    {
+      "lookback": 60,
+      "annual_sigma": 0.8031096796648083,
+      "weight": 0.4,
+      "hit_probability": 3.7233587973308294e-05
+    },
+    {
+      "lookback": 60,
+      "annual_sigma": 1.6062193593296166,
+      "weight": 0.1,
+      "hit_probability": 0.039207352996832937
+    },
+    {
+      "lookback": 180,
+      "annual_sigma": 0.5652431221548587,
+      "weight": 0.2,
+      "hit_probability": 4.643187469176981e-09
+    },
+    {
+      "lookback": 180,
+      "annual_sigma": 1.1304862443097174,
+      "weight": 0.05,
+      "hit_probability": 0.003392457144522311
+    }
+  ],
+  "method": "PrespecifiedOct17physicalzerologdrift20/60/180volmixture25/50/25,80%ordinary20%doublevol, continuousupperpassageapproximatesfinalminuteHigh.",
+  "raw_p_yes": 0.004105706394446299,
+  "adopted_p_yes": 0.004,
+  "low": 1e-05,
+  "high": 0.3,
+  "actual_entry_reserve_pp": 10,
+  "extreme_sigma1p8_logdrift1": 0.07966578749525585,
+  "limits": [
+    "Unfittedjump/skew/regimemixture; tinyordinarytailnotmeasuredfloor.",
+    "No claimpartialOct18dayiscomplete; excludeitfrom370closed-dayvolsample.",
+    "Sanitized18:31Gammaextractonly/fullrawdiscardedbycollector: extractioncannotbeindependentlyverifiedagainstdiscardedHTTPbody. Separate17:42exactbindingavailable; freshfullgatesbeforetrade.",
+    "Samecrypto/macrofactors asETH/BTC; nohedgecredit."
+  ]
+}

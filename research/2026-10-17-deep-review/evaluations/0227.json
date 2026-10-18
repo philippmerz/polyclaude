@@ -1,0 +1,167 @@
+{
+  "review_index": 227,
+  "condition_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+  "criteria_sha256": "6c3a5fe5de73d396b68cf77989c23bf5b8c19e530b4fc1fe35f76456e848ec89",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to “Yes” if Donald Trump resigns or is removed as President or otherwise ceases to be the President of the United States for any period of time by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nAn announcement of Donald Trump's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nOnly permanent removal from office will qualify. Temporary removal (e.g. temporary invocation of the 25th Amendment under Section 3 or a Section 4 invocation not sustained by both Houses of Congress) or impeachment without removal will not count.\n\nA sustained invocation of the Twenty-Fifth Amendment, Section 4 (i.e., if both Houses of Congress, by two-thirds vote, uphold the Vice President and Cabinet’s determination of presidential inability) will qualify for a \"Yes\" resolution. \n\nThe resolution source for this market will be a consensus of credible reporting. Permanentnarrowing/advanceannouncement trigger explicit; temporary25th/impeachmentalone excluded.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/news/",
+      "observed_utc": "2026-10-18T18:28:23.513782+00:00",
+      "finding": "Oct16officialpresidentialactivity, noqualifyingannouncementamongboundedentries; noabsenceproof."
+    },
+    {
+      "url": "https://www.whitehouse.gov/administration/donald-j-trump/",
+      "observed_utc": "2026-10-18T18:28:23.716991+00:00",
+      "finding": "Officialcurrentprofilelabels45th/47thPresident; notmedical/Congress/cabinetverification."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/666861",
+      "observed_utc": "2026-10-18T18:28:03.687877+00:00",
+      "finding": "Exactcondition/criteriaopen/nonproposed, matchingheldNOdusttoken."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.005,
+    "high": 0.2,
+    "method": "Office-continuity/political-stress/unobserved-qualification scenarios; monitoring-tail class from existing philosophy, not fitted individual health forecast.",
+    "reasoning": "Explicit94/5/1regimes with1.2/22/50%conditionalexit =2.728%rounded3%; notmeasuredindividualhealthorcalibration; prior97%NOknown.",
+    "raw_scenario_probability": 0.027280000000000002,
+    "calibration": "Judgment scenario weights, not calibrated tail floor."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 82,
+    "actual_entry_reserve_pp": 5.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "selected_stress_probability": 0,
+        "best_bid": 0.037,
+        "best_ask": 0.039,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339692",
+        "book_age_seconds_at_receipt": 8.146958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.39,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.039
+              }
+            ],
+            "net": 0.39
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.37,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.037
+              }
+            ],
+            "net": 0.37
+          }
+        },
+        "taker_cost_usd": 0.39,
+        "central_expected_profit_usd": -0.09000000000000002,
+        "selected_stress_profit_usd": -0.39,
+        "break_even_before_carry": 0.039,
+        "break_even_constant_carry": 0.03927289678730317,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.97,
+        "selected_stress_probability": 0.9199999999999999,
+        "best_bid": 0.961,
+        "best_ask": 0.963,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345339692",
+        "book_age_seconds_at_receipt": 8.146958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.629999999999999,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.963
+              }
+            ],
+            "net": 9.629999999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.61,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.961
+              }
+            ],
+            "net": 9.61
+          }
+        },
+        "taker_cost_usd": 9.629999999999999,
+        "central_expected_profit_usd": 0.07000000000000028,
+        "selected_stress_profit_usd": -0.4299999999999997,
+        "break_even_before_carry": 0.9629999999999999,
+        "break_even_constant_carry": 0.969738451440332,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO NEW ENTRY/ADD: NOtinycentraledge consumedbycarry/operations, fails5ppstress; YESnegativecentral. Existing0.33NOdust below5min.",
+  "reopen_condition": "Actual qualifyingpermanentexitannouncement/constitutional/sourcechange; currentexactgatesandbook; NO<=90c/YES<=1cresearchonly.",
+  "extra": {
+    "family": "US-presidential-continuity",
+    "actual_entry_reserve_pp": 5,
+    "existing_public_prior_no": 0.97,
+    "existing_prior_changed": false,
+    "held_dust_size": 0.33,
+    "source_packet": "data/deep_review_20261017/case227_facts_1825.json",
+    "primary_draft": "data/deep_review_20261017/work/0227_primary_before_quote_1835.json"
+  },
+  "evaluated_utc": "2026-10-18T18:35:59.948939+00:00",
+  "question": "Trump out as President before 2027?",
+  "market_id": "666861",
+  "valuation_author": "primary_operator",
+  "original_index": 227,
+  "report_sha256": "f8400d3fbf619f1adce905ee62f21275033ad9edff5f9d5028d05b14a0abc6ba"
+}

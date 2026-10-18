@@ -1,0 +1,214 @@
+{
+  "written_utc": "2026-10-18T18:24:03.738919+00:00",
+  "review_index": 208,
+  "before_reading_own_PM_quote": true,
+  "source_path": "logs/deep_review_20261017/measles208_facts_1815/weekly_2026_aligned.json",
+  "source_sha256": "6a7254c53b72fa12aec886538beec1d029383ea54008c76b3f52705cfcef04e3",
+  "counter": 4410,
+  "threshold": 7500,
+  "gap": 3090,
+  "cdc_asof": "2026-10-15T12:00:00-04:00",
+  "source_last_two_buckets_excluded_from_level_fit": [
+    {
+      "week_start": "2026-10-04",
+      "week_end": "2026-10-10",
+      "cases": 130,
+      "cumulative_through_week_bucket": 4360
+    },
+    {
+      "week_start": "2026-10-11",
+      "week_end": "2026-10-17",
+      "cases": 50,
+      "cumulative_through_week_bucket": 4410
+    }
+  ],
+  "level_fit_rows": [
+    {
+      "week_start": "2026-08-23",
+      "week_end": "2026-08-29",
+      "cases": 235,
+      "cumulative_through_week_bucket": 3188
+    },
+    {
+      "week_start": "2026-08-30",
+      "week_end": "2026-09-05",
+      "cases": 202,
+      "cumulative_through_week_bucket": 3390
+    },
+    {
+      "week_start": "2026-09-06",
+      "week_end": "2026-09-12",
+      "cases": 237,
+      "cumulative_through_week_bucket": 3627
+    },
+    {
+      "week_start": "2026-09-13",
+      "week_end": "2026-09-19",
+      "cases": 190,
+      "cumulative_through_week_bucket": 3817
+    },
+    {
+      "week_start": "2026-09-20",
+      "week_end": "2026-09-26",
+      "cases": 223,
+      "cumulative_through_week_bucket": 4040
+    },
+    {
+      "week_start": "2026-09-27",
+      "week_end": "2026-10-03",
+      "cases": 190,
+      "cumulative_through_week_bucket": 4230
+    }
+  ],
+  "weekly_level": 211.9157686595753,
+  "recent10_week_mean": 185.2,
+  "base_10weeks": {
+    "p_yes": 0.2201475,
+    "scenarios": [
+      {
+        "name": "declining",
+        "weight": 0.35,
+        "growth_mean": -0.06,
+        "growth_sd": 0.04,
+        "growth_persistence": 0.85,
+        "actual_weight": 0.35,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 10,
+          "p_counter_at_least7500": 0.0307,
+          "median_total": 6247.397537720735,
+          "p05_p95_total": [
+            5596.579606416809,
+            7294.166620328944
+          ]
+        }
+      },
+      {
+        "name": "plateau",
+        "weight": 0.45,
+        "growth_mean": 0,
+        "growth_sd": 0.04,
+        "growth_persistence": 0.85,
+        "actual_weight": 0.45,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 10,
+          "p_counter_at_least7500": 0.12525,
+          "median_total": 6659.740487608129,
+          "p05_p95_total": [
+            5840.744387711195,
+            7962.622875797122
+          ]
+        }
+      },
+      {
+        "name": "renewed_expansion",
+        "weight": 0.2,
+        "growth_mean": 0.12,
+        "growth_sd": 0.06,
+        "growth_persistence": 0.98,
+        "actual_weight": 0.2,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 10,
+          "p_counter_at_least7500": 0.7652,
+          "median_total": 8674.681366248495,
+          "p05_p95_total": [
+            6530.172509098344,
+            13826.239296314609
+          ]
+        }
+      }
+    ]
+  },
+  "base_11weeks": {
+    "p_yes": 0.284875,
+    "scenarios": [
+      {
+        "name": "declining",
+        "weight": 0.35,
+        "growth_mean": -0.06,
+        "growth_sd": 0.04,
+        "growth_persistence": 0.85,
+        "actual_weight": 0.35,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 11,
+          "p_counter_at_least7500": 0.06005,
+          "median_total": 6406.030625536105,
+          "p05_p95_total": [
+            5687.099167900361,
+            7581.27895473905
+          ]
+        }
+      },
+      {
+        "name": "plateau",
+        "weight": 0.45,
+        "growth_mean": 0,
+        "growth_sd": 0.04,
+        "growth_persistence": 0.85,
+        "actual_weight": 0.45,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 11,
+          "p_counter_at_least7500": 0.21275,
+          "median_total": 6868.842934161554,
+          "p05_p95_total": [
+            5958.114645042325,
+            8396.622337154959
+          ]
+        }
+      },
+      {
+        "name": "renewed_expansion",
+        "weight": 0.2,
+        "growth_mean": 0.12,
+        "growth_sd": 0.06,
+        "growth_persistence": 0.98,
+        "actual_weight": 0.2,
+        "result": {
+          "n": 20000,
+          "future_week_equivalents": 11,
+          "p_counter_at_least7500": 0.8406,
+          "median_total": 9364.600034558342,
+          "p05_p95_total": [
+            6707.814217979332,
+            16313.36205822292
+          ]
+        }
+      }
+    ]
+  },
+  "publication_interpretation_weight_strict10_full11": [
+    0.75,
+    0.25
+  ],
+  "raw_mixture_p_yes": 0.236329375,
+  "sensitivities": {
+    "all11weeks": 0.284875,
+    "no_prior_backfill": 0.19063000000000002,
+    "higher_level250": 0.416595,
+    "lower_level150": 0.104325,
+    "expansion_weight40pct": 0.425715,
+    "persistent_growth_shift5pp": 0.4469275
+  },
+  "primary_p_yes": 0.24,
+  "primary_range": [
+    0.05,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "calibration": "Scenario probabilities follow subjective growth/regime/backfill assumptions; no calibrated epidemiological posterior or low-end bound.",
+  "limits": [
+    "Rash-onset buckets are revised and recent completeness is unknown; dropping two buckets does not prove earlier maturity.",
+    "Current state outbreaks can diverge; no assumption that all probable/state-reported cases will enter CDC.",
+    "Ten/eleven week equivalents approximate publication/cutoff uncertainty, not an exact modeled release calendar.",
+    "Branch weights, growth persistence, 20% starting-level uncertainty and 0\u2013350 backfill are judgments, not fitted frequencies.",
+    "No seasonal winter multiplier: CDC says measles is not seasonal; travel/undervaccinated clusters can still change spread.",
+    "Negative revisions, source outage/fallback and adjudication can change the published counter outcome."
+  ],
+  "primary_adoption_utc": "2026-10-18T18:24:24.738923+00:00",
+  "context_packet": "data/deep_review_20261017/active208_measles_context.json",
+  "context_interpretation": "Utah527diagnosed2026/0last3weeks asofOct13 is contextual, not CDCconfirmedsubstitute or proof of no national growth; PAcurrentdashboardunavailable. National recentweeklyplateau plus expansionregime retained. No winterseasonality assumed."
+}

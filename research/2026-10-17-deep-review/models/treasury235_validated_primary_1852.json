@@ -1,0 +1,22 @@
+{
+  "review_index": 235,
+  "adopted_utc": "2026-10-18T18:53:25.334421+00:00",
+  "own_prices_known_before_updated_adoption": true,
+  "initial_prequote_model": "research/2026-10-17-deep-review/models/treasury235_primary_1850.json",
+  "initial_p_yes": 0.17,
+  "initial_Gaussian_raw": 0.165828,
+  "bootstrap_raw": 0.04536333333333334,
+  "validation_file": "data/deep_review_20261017/work/0235_model_validation.json",
+  "validation_sha256": "838bb1bfae086fddab062235eee823f80e7626a9a9c9a3368dfa2e51fd324295",
+  "primary_method_blend_weights": [
+    0.5,
+    0.5
+  ],
+  "blend_raw": 0.10559566666666667,
+  "primary_p_yes": 0.11,
+  "low": 0.01,
+  "high": 0.65,
+  "actual_entry_reserve_pp": 15,
+  "reasoning": "Originalrecent/stressedGaussianparameters are plausiblefuturevolregimes but overstatefatdownsidetail vsdemeaned2026five-dayblocks. Three-yearhistoryhasrare51daydrawdowns, fewindependentsamples; notzero-tailproof. Retain50%originalforforwardshock/low2026volmayunderpredict and50%empiricalshape. Weightsjudgmentnotfittedorprice-derived; boundedvalidationplan/presetparameterssavedbeforeoutput. Forecastupdateafterownquotesexplicit, initialdraftpreserved.",
+  "source_asof": "2026-10-16 latestofficialrow, actualcaptures18:29/18:49\u201318:50; notnewquotes or executions"
+}

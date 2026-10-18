@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T18:20:08.695382+00:00
+Updated: 2026-10-18T19:00:20.891834+00:00
 
-**259 valuations saved; first milestone100:** 259 valued; 2 blocked after in-depth review. 331 factual exclusions separately; 2408 pending.
+**266 valuations saved; first milestone100:** 266 valued; 2 blocked after in-depth review. 334 factual exclusions separately; 2398 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -141,7 +141,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |127|[Bitcoin Up or Down - October 17, 11AM ET](evaluations/0127.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |128|[Will "The Widower: 'Til Death Do Us Part" be the top US Netflix movie this week?](evaluations/0128.md)|valued|Both offered sides negative central EV; no entry|
 |129|[Iran leadership change by October 31?](evaluations/0129.md)|valued|Personal de-facto leadership tail valued, with latent/current-state uncertainty explicit|
-|130|[Will the 5-year Treasury yield hit 5.10% before 2027?](evaluations/0130.md)|valued|No entry: datedYESnegative centrally; NO+$0.49589/10 centrally becomes-$1.00411 at selected26% stress. Wide model/horizon risk prevents order.|
+|130|[Will the 5-year Treasury yield hit 5.10% before 2027?](revisions/0130_20261018T190019522305Z.md)|valued|NO ENTRY: same-family model repair changes forecast; both dated sides fail selected15pp uncertainty stress after fees, before extra costs. No portfolio change.|
 |131|[Edi Rama out as Albania PM in 2026?](evaluations/0131.md)|valued|No entry: YES28c negative centrally; NO10-share cost7.37640 yields+$0.52360 central but-$0.97640 at selected64% stress. Historical83 seats not treated as current unchanged support.|
 |132|[West Indies Tour of India T20s: India vs West Indies](evaluations/0132.md)|valued|No entry: both captured asks lose after5%curve fees at50/50payout, and both booksstale918s. Researchwatcheach<=.39for<=10shares with freshallgatechecks.|
 |133|[Will Trump meet with Lai Ching-te in 2026?](evaluations/0133.md)|valued|No entry. DatedYES+$0.12611/10 depends on unmeasured encounter tail and loses at lower scenario; NO96.5c negative centrally and selected75%stress. Call/APECcalendar not confirmed inpersonLai meeting.|
@@ -183,7 +183,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |169|[Will there be a Hormuz agreement and the Democrats win the Senate?](evaluations/0169.md)|valued|Noentry: cheapYESpositivecentralbutfails15ppreserveandten-share$1cashminimum; NOnegativecentral. FutureNO79ctriggeronly.|
 |170|[Will Swim – BTS be the #2 song in the US for 2026?](evaluations/0170.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |171|[Will Aleksandar Vučić – United Serbia win the most seats in the 2026 Serbian parliamentary election?](evaluations/0171.md)|valued|Exact ballot-list contest deeply valued with poll disagreement retained; no ordinary-reserved entry|
-|172|[Will the 10-year Treasury yield dip below 4.6% before 2027?](evaluations/0172.md)|valued|Noentryapproved; datedtwo-sidedvaluation,15ppreserve andsource/query/eventreviewrequired.|
+|172|[Will the 10-year Treasury yield dip below 4.6% before 2027?](revisions/0172_20261018T190020110233Z.md)|valued|NO ENTRY: same-family model repair changes forecast; both dated sides fail selected15pp uncertainty stress after fees, before extra costs. No portfolio change.|
 |173|[Will Hyperliquid dip to $60 in October?](evaluations/0173.md)|valued|Noentryapproved; unresolved primary unlock calendar and uncalibrated future barrier risk.|
 |174|[Ohio State vs. Indiana](evaluations/0174.md)|excluded_factual|Factual exclusion: completed and closed, no held outcome balance/live entry route.|
 |175|[OpenAI IPO before 2027?](evaluations/0175.md)|valued|Both sides valued; captured routes fail ordinary reserve or scale/fee economics|
@@ -219,25 +219,35 @@ Each report below is written before moving to the next evaluation. Related contr
 |205|[Will "Transformers One" be the #2 US Netflix movie this week?](evaluations/0205.md)|valued|Both asks negative central EV; no entry|
 |206|[Kanye West performs in Russia by October 31?](evaluations/0206.md)|valued|NO ENTRY: central YES tail positive but unsupported downside probability, lower sensitivity fails fees; NO negative central.|
 |207|[Will the Democratic Party win the NH-01 House seat?](evaluations/0207.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
+|208|[Will there be at least 7500 measles cases in the U.S. in 2026?](evaluations/0208.md)|valued|NO ENTRY: YESnegativecentral; NOzeroEVbeforecarry and negative under15ppreserve.|
+|209|[Will Motherwell FC win on 2026-10-17?](evaluations/0209.md)|excluded_factual|FACTUAL EXCLUSION: completed Oct17 match and exact closed/nonaccepting market; no live entry route.|
 |210|[Will Lionel Messi rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0210.md)|valued|Priority tiny maker investigation <=28c; no order or prior until current source/identity/fee/account/risk/monitoring proof. Dated YES ask passes selected stress, not current execution.|
+|211|[Will the highest temperature in Helsinki be 12°C on October 17?](evaluations/0211.md)|excluded_factual|FACTUAL EXCLUSION: exact closed/nonaccepting market; source temperature unresolved and no entry route.|
 |212|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 global Netflix movie this week?](evaluations/0212.md)|valued|YES negative central EV, NO offereddepth absent; no entry|
 |213|[Will the Republicans win the Maine Senate race in 2026?](evaluations/0213.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |214|[Will the Republican Party win the VA-02 House seat?](evaluations/0214.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |215|[Will fewer than 170 ships transit the Bab el-Mandeb Strait between October 19-October 25?](evaluations/0215.md)|valued|NO maker around .78 is a concrete short-window watch; refresh data and test adverse regime before entry|
 |216|[Will Hamburger SV win on 2026-10-17?](evaluations/0216.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |217|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 45% or higher?](evaluations/0217.md)|valued|Priority makerNO research lead; release/protocol uncertainty and current gates outstanding|
+|218|[Will Ethereum reach $3,600 in October?](evaluations/0218.md)|valued|NO ENTRY: smallcentralYEStailupside fails actual10ppuncertaintyreserve/lowprobabilitysupport; NOnegativecentral.|
 |219|[Will Beauty And A Beat – Justin Bieber & Nicki Minaj be the #2 song in the US for 2026?](evaluations/0219.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |220|[Will the Democrats win the New Hampshire Senate race in 2026?](evaluations/0220.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
 |221|[Will the Republican Party win the NY-22 House seat?](evaluations/0221.md)|valued|Both sides deeply valued; no entry at dated economics after uncertainty reserve and costs|
 |222|[Intuitive Surgical (ISRG) Q3 da Vinci procedure growth 12.5% to 15%?](evaluations/0222.md)|valued|Both sides valued; captured routes do not clear ordinary uncertainty reserve or are unavailable|
 |223|[Will Galatasaray SK win on 2026-10-17?](evaluations/0223.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |224|[Will Lindsay Clancy be the #1 searched person on Google in the US this year?](evaluations/0224.md)|valued|Noentry: bothasks/ordinarymakersfail20ppreserve. FutureYES17c orNO35cneedindependentcurrentrevaluation; noorder/prior.|
+|225|[Will the price of Bitcoin be between $78,000 and $80,000 on October 18?](evaluations/0225.md)|excluded_factual|FACTUAL EXCLUSION: elapsed exact closed/nonaccepting market; no liveentryroute.|
 |226|[Will "Ice Age: Dawn of the Dinosaurs" be the #2 US Netflix movie this week?](evaluations/0226.md)|valued|Tiny YES central edge, unsupported floor/minimum-size exposure; no entry|
+|227|[Trump out as President before 2027?](evaluations/0227.md)|valued|NO NEW ENTRY/ADD: NOtinycentraledge consumedbycarry/operations, fails5ppstress; YESnegativecentral. Existing0.33NOdust below5min.|
+|228|[Will the 5-year Treasury yield dip below 4.50% before 2027?](revisions/0228_20261018T190020686447Z.md)|valued|NO ENTRY: same-family model repair changes forecast; both dated sides fail selected15pp uncertainty stress after fees, before extra costs. No portfolio change.|
+|229|[Will Aleksei Sarana finish in the Top 8 of Titled Tuesday on October 20?](evaluations/0229.md)|valued|NO ENTRY: bothdepth/feeasksnegativecentral andfail15ppreserve; broadspread, unvalidatedscoremodel.|
 |230|[Bologna FC 1909 vs. FC Internazionale Milano: O/U 2.5](evaluations/0230.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |231|[NVIDIA (NVDA) Q3 adjusted gross margin <71%?](evaluations/0231.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |232|[Will an AI lab announce another Millennium Prize solution by December 31, 2026?](evaluations/0232.md)|valued|Announcement event deeply valued; NO central difference lacks default reserve and December entry policy remains|
 |233|[Will hate that i made you love me – Ariana Grande be the #2 song in the US for 2026?](evaluations/0233.md)|valued|Both sides valued; captured routes fail ordinary reserve, central cost, available depth or practical minimum/operations|
 |234|[Will the Democrats win the Michigan governor race in 2026?](evaluations/0234.md)|valued|Both sides valued; no entry after fees, default uncertainty reserve and carry|
+|235|[Will the 30-year Treasury yield dip below 4.90% before 2027?](evaluations/0235.md)|valued|NO ENTRY: historical/blockvalidation weakensinitial17%to11%; centralYESupside fails15ppreserve, NOnegativecentral.|
+|236|[Will XRP reach $2.40 in October?](evaluations/0236.md)|valued|NO ENTRY: YESnegativecentral; NOtinycentralexcessconsumedbycarry/operations andfails10ppreserve.|
 |237|[Will FC Internazionale Milano win on 2026-10-17?](evaluations/0237.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |240|[NATO x Russia military clash by October 31, 2026?](evaluations/0240.md)|valued|New attack-drone incident deeply assessed against exact exclusion; semantic/target uncertainty not a source-known arbitrage|
 |256|[Will Z.ai have the second highest OpenRouter market share the week of October 12?](revisions/0256_20261018T120931763267Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
@@ -604,5 +614,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 208

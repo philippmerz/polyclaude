@@ -1,0 +1,83 @@
+{
+  "review_index": 229,
+  "forecast_saved_utc": "2026-10-18T18:44:44.393519+00:00",
+  "before_own_PM_quotes": true,
+  "method": "Primary half-point rounded normal score sensitivity plus top8 score/tiebreak threshold/participation; not a fittedSwisspairingsmodel.",
+  "assumed_score_mean": 8.15,
+  "assumed_score_sd": 1.05,
+  "assumed_participation": 0.9,
+  "assumed_event_completion_publication": 0.995,
+  "threshold_scenarios": [
+    {
+      "cutoff_points": 8.5,
+      "weight": 0.15,
+      "tie_qualifies_fraction": 0.5,
+      "conditional_probability": 0.3729587195162112
+    },
+    {
+      "cutoff_points": 9,
+      "weight": 0.8,
+      "tie_qualifies_fraction": 0.7,
+      "conditional_probability": 0.24292033187853168
+    },
+    {
+      "cutoff_points": 9.5,
+      "weight": 0.05,
+      "tie_qualifies_fraction": 0.6,
+      "conditional_probability": 0.11395550737491789
+    }
+  ],
+  "conditional_top8": 0.2559778487990029,
+  "raw_p_yes": 0.22922816359950712,
+  "adopted_p_yes": 0.23,
+  "low": 0.04,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 15,
+  "sensitivities": [
+    {
+      "mean": 7.7,
+      "sd": 0.95,
+      "participation": 0.75,
+      "p_yes": 0.09007496135783849
+    },
+    {
+      "mean": 8.6,
+      "sd": 1.15,
+      "participation": 0.98,
+      "p_yes": 0.4011574770245417
+    }
+  ],
+  "evidence_inputs": {
+    "oct13_rank_score_seed_rating": [
+      17,
+      8,
+      10,
+      3271
+    ],
+    "sept29_rank_score_seed_rating": [
+      21,
+      8,
+      4,
+      3288
+    ],
+    "oct13_and_sept29_top8_cutoff_score": 9,
+    "two2026wins": [
+      "2026-05-19",
+      "2026-06-16"
+    ],
+    "records_18wins_scope": "Feb1,2022\u2013present, not all-career; earlier singleera2additionalwins notpooled",
+    "current2026singleevent": "DoubleweeklyeraendedAug26,2025; current5+0/11roundSwiss",
+    "oct6_participation_or_place": "Unknown; rootverifiedsavedrawhash butfoundnoHTMLtable toindependentlyreproduceworkerpartialtableinterpretation; notusedasloss/nonplay"
+  },
+  "source_packets": [
+    "data/deep_review_20261017/case229_facts_1830.json",
+    "data/deep_review_20261017/case229_titled_tuesday_addendum_1845.json"
+  ],
+  "primary_browser_verification": "Officialrecords table2wins2026/18since2022, Oct13articleSarana17/8seed10/rating3271/top8cut9; browserrequestexacttimestampnotinstrumented, thesearecompilationtimeobservations.",
+  "limits": [
+    "Two recentfinishscorepoints and annualwins do not calibrate expectedscore/variance/participation or futuretiebreaks.",
+    "Incompleteannualresults/Oct20entrylist, field/scheduling/fairplay sourcechanges; normalapproxignoresSwissadaptation.",
+    "Older two-sessionformatnotpooled; no doublingcurrentTop8chance.",
+    "Range4\u201360%/15ppreservejudgment, not calibrated confidence interval; newclassrequiresindependentchallenge beforefunding."
+  ]
+}

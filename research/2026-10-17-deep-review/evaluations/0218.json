@@ -1,0 +1,171 @@
+{
+  "review_index": 218,
+  "condition_id": "0x5d60d17384adb894fc709f6e356dbfb15bf95f111ef6461f65ee12b8fe74cbf3",
+  "criteria_sha256": "bcdb3a33f089c2beeb8a6df9501564280d92a8510d3b95d314155f24f9da49b6",
+  "status": "valued",
+  "literal_analysis": "This market will immediately resolve to \"Yes\" if any Binance 1 minute candle for ETH/USDT during the month specified in the title (from 00:00 AM ET on the first day to 11:59 PM ET on the last), has a final High price equal to or greater than the price specified in the title. Otherwise, this market will resolve to \"No.\"\n\nThe resolution source for this market is Binance, specifically the ETH/USDT High prices available at https://www.binance.com/en/trade/ETH_USDT, with the chart settings on \"1m\" for one-minute candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market. Inclusive firsttouch on final1mHigh, exactETmonth; nohitthroughobservedwindowonly. Currentdescriptionterminalwhitespaceonly.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-18T18:21:13+00:00",
+      "finding": "25341contiguousfinalETHUSDT1mcandles exactOct1ETstart, max2777.33; latestcompleteclose2365.27, rootgziphashverified."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines?symbol=ETHUSDT&interval=1d&startTime=1792195200000&endTime=1792195200000&limit=1",
+      "observed_utc": "2026-10-18T18:28:25.076686+00:00",
+      "finding": "ExactfinalOct17dailyrowreplacesoldpartial;370closedbars/hashandvolwindowverified."
+    },
+    {
+      "url": "https://blog.ethereum.org/en/2026/10/16/glamsterdam-hoodi-announcement",
+      "observed_utc": "2026-10-18T18:28:33.132499+00:00",
+      "finding": "HoodiOct26testnet/mainnetTBD; Age160149s cached, notfreshpublicationatcapture."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-18T13:11:53.910592+00:00",
+      "finding": "DatedofficialOct27–28FOMCcalendar reused."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.009,
+    "low": 0.0001,
+    "high": 0.35,
+    "method": "Transferred prespecified physical first-passage volatility mixture",
+    "reasoning": "Exactpastnohit,2365.27to3600+52.2%in13.402days;25/50/25lookbacks20/60/180,80/20base/doublevol,zero logdrift gives.00876219. Uncalibratedjump/skew/extremegrowthregimes broadensrange.",
+    "raw_model_probability": 0.008762187282335339,
+    "own_PM_Gamma_midpoint_exposed_before_forecast": true,
+    "calibration": "No measured low-end bound, no fitted jump/regime or optionchain."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 17,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.009,
+        "selected_stress_probability": 0,
+        "best_bid": 0.002,
+        "best_ask": 0.003,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345327474",
+        "book_age_seconds_at_receipt": 20.364958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.03,
+            "fee": 0.0021,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.003
+              }
+            ],
+            "net": 0.0321
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 0.02,
+            "fee": 0.0014,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.002
+              }
+            ],
+            "net": 0.018600000000000002
+          }
+        },
+        "taker_cost_usd": 0.0321,
+        "central_expected_profit_usd": 0.0579,
+        "selected_stress_profit_usd": -0.0321,
+        "break_even_before_carry": 0.0032099999999999997,
+        "break_even_constant_carry": 0.0032146437926824515,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.991,
+        "selected_stress_probability": 0.891,
+        "best_bid": 0.997,
+        "best_ask": 0.998,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792345327474",
+        "book_age_seconds_at_receipt": 20.364958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.98,
+            "fee": 0.0014,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.998
+              }
+            ],
+            "net": 9.9814
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 9.97,
+            "fee": 0.0021,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.997
+              }
+            ],
+            "net": 9.9679
+          }
+        },
+        "taker_cost_usd": 9.9814,
+        "central_expected_profit_usd": -0.07140000000000057,
+        "selected_stress_profit_usd": -1.0714000000000006,
+        "break_even_before_carry": 0.99814,
+        "break_even_constant_carry": 0.9995839735912966,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: smallcentralYEStailupside fails actual10ppuncertaintyreserve/lowprobabilitysupport; NOnegativecentral.",
+  "reopen_condition": "Independently supported tail/source model plus freshscaledbooks/underlying/catalysts; YES<=0.1c/NO<=86cresearchonly.",
+  "extra": {
+    "family": "Binance-crypto-monthly-touch",
+    "actual_entry_reserve_pp": 10,
+    "model": "research/2026-10-17-deep-review/models/eth218_barrier_1830.json",
+    "priority_followup": false,
+    "criteria_text_delta": "terminalwhitespaceonly, nosemanticdifference"
+  },
+  "evaluated_utc": "2026-10-18T18:33:20.229515+00:00",
+  "question": "Will Ethereum reach $3,600 in October?",
+  "market_id": "5170758",
+  "valuation_author": "primary_operator",
+  "original_index": 218,
+  "report_sha256": "243e1f9e95cc4c8b59fdc61bc31379604a93ee592faad52682fb8f326cb45f8e"
+}

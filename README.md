@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October 18
 
-The finite `/goal` review has **259 valuations, 2 blocked reviews, 331 factual exclusions and 2,408 pending**; 592 immutable base records plus 24 revisions, case 208 active. The [checkpoint](notes/deep_review_checkpoint.json) governs current counts. Save/index each finished case immediately; screens have no rejection authority. First 100/200 milestones were notified.
+At 19:04 UTC the finite `/goal` review has **266 valuations, 2 blocked reviews, 334 factual exclusions and 2,398 pending**; 602 immutable base records plus 27 revisions; next case238. The [checkpoint](notes/deep_review_checkpoint.json) governs current counts. Each finished case is saved/indexed immediately; screens have no rejection authority. First100/200 milestones were notified. Treasury daily-path validation revised three related forecasts; none clears the uncertainty/cost test. [Small resume](research/2026-10-17-deep-review/RESUME.md).
 
-Use the [small resume guide](research/2026-10-17-deep-review/RESUME.md) and `.venv/bin/python scripts/deep_review_resume.py` (8 KB hard limit). It supplies one case’s complete rules and verified report/revision pointers; source summaries still require date/identity verification. Eight focused tests pass. Cases 196 Microsoft exact-third, 200 Pep England coach, 201 Aramco largest, 204 GTA first-week views and 206 Ye Russia performance are saved; no new allocations from them.
+Use [RESUME.md](research/2026-10-17-deep-review/RESUME.md) and `.venv/bin/python scripts/deep_review_resume.py` (8 KB hard limit, eight integrity tests). Read one case’s full rules, verified report/revision and scoped evidence pointers. Large raw arrays stay separate; do not load all historical indexes. Ten valuations added since the goal resumed; no new allocations. Active case 235 is receiving additional rate-model validation before its verdict; a positive central estimate is not entry authority.
 
 **Original OpenRouterDEC0214 filled:**5NO65c/$3.25 at17:37:42, exactauthtrade/successfulreceipt/indexedbuys/CTFs verified. Only its reservation retired8→7; retain5/noadd under89%NO/74selected with adverse20%NO countercase. Old today22UTC BUYpull obsolete; existingholding reviews remain. [Fill/source/risk](research/2026-10-18-openrouter-fill.md).
 

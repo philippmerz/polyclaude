@@ -1,0 +1,160 @@
+{
+  "review_index": 228,
+  "condition_id": "0x334931805ae11470f59f662e303a65f7c196e2f934749b3fcf0540c959b27b5a",
+  "criteria_sha256": "5cb60aa5bc5792d50a8c41ae4d897b66883c1d56788632d7948c7a0c0a3fe9b7",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the Treasury 5-year yield is lower than the listed value for any date between September 3, 2026 and December 31, 2026. Otherwise this market will resolve to \"No\".\n\nThis market will resolve as soon as the Treasury 5-year yield is lower than the listed value, or once data is available for December 31, 2026. If no qualifying value is published and data is not available for December 31, 2026 by January 14, 2027, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source for this market is the Department of the treasury, specifically the data listed under \"Daily Treasury Par Yield Curve Rates\" for the column \"5 Yr\" (see: https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026). Exact5Yrstrictbelow4.50anypublishedSep3–Dec31; Jan14missingdatafallback; intraday/Fedtargetnoteligible.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-18T18:29:00+00:00",
+      "finding": "199official2026rows; eligible30Sep3–Oct16,min4.52/latest4.89, nohit. Exactreceipt timestampinrawsourcepointer; this roundedfield identifiescapturewindow, notinstrumentedexactGETtime."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-18T13:11:53.910592+00:00",
+      "finding": "DatedofficialOct27–28calendarreused; no newmacroGET."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.32,
+    "low": 0.08,
+    "high": 0.75,
+    "method": "Same root-authored regime weights/drifts as5Yruppercase130, exact5Yrdownbarrier4.50, dailyonlynotintraday. Publicationcount/rounding/sourcefallback explicit.",
+    "reasoning": "Root-regime daily51publicationpaths32.09135%mixture, rounded32%;3branches27.891/23.592/56.416. Weights/driftsunestimated, broadsource/regimeerror retained.",
+    "raw_model_probability": 0.32091349999999996,
+    "calibration": "Scenario weights/range/reserve are judgment, not calibrated bound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_resume_1745.json",
+    "quote_file_sha256": "86c6af56ce0e8b2ecc9fce71f8074795cba3aa7c879e659b616d4df18daf7b34",
+    "quote_observed_utc": "2026-10-18T17:42:27.838959+00:00",
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 90,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.32,
+        "selected_stress_probability": 0.17,
+        "best_bid": 0.27,
+        "best_ask": 0.28,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345338085",
+        "book_age_seconds_at_receipt": 9.753958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.8000000000000003,
+            "fee": 0.1008,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.28
+              }
+            ],
+            "net": 2.9008000000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 2.7,
+            "fee": 0.09856,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.27
+              }
+            ],
+            "net": 2.60144
+          }
+        },
+        "taker_cost_usd": 2.9008000000000003,
+        "central_expected_profit_usd": 0.2991999999999999,
+        "selected_stress_profit_usd": -1.2008,
+        "break_even_before_carry": 0.29008,
+        "break_even_constant_carry": 0.29230857966360924,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6799999999999999,
+        "selected_stress_probability": 0.5299999999999999,
+        "best_bid": 0.72,
+        "best_ask": 0.73,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792345338085",
+        "book_age_seconds_at_receipt": 9.753958984375,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10,
+            "gross": 7.3,
+            "fee": 0.09856,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.73
+              }
+            ],
+            "net": 7.39856
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10,
+            "gross": 7.199999999999999,
+            "fee": 0.1008,
+            "fills": [
+              {
+                "shares": 10,
+                "price": 0.72
+              }
+            ],
+            "net": 7.0992
+          }
+        },
+        "taker_cost_usd": 7.39856,
+        "central_expected_profit_usd": -0.5985600000000009,
+        "selected_stress_profit_usd": -2.098560000000001,
+        "break_even_before_carry": 0.739856,
+        "break_even_constant_carry": 0.7455400459031967,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO ENTRY: modestcentralYESedge fails15ppentryreserve; NOnegativecentral.",
+  "reopen_condition": "Majorpolicy/sourceyieldmove/modelvalidation plus freshexactbooks; makerYES<=14c/NO<=49cresearchonly.",
+  "extra": {
+    "family": "US-Treasury-daily-par-curve-barriers",
+    "actual_entry_reserve_pp": 15,
+    "model": "research/2026-10-17-deep-review/models/treasury228_primary_1838.json",
+    "source_packet": "data/deep_review_20261017/treasury228_facts_1830.json",
+    "priority_followup": false
+  },
+  "evaluated_utc": "2026-10-18T18:39:30.962646+00:00",
+  "question": "Will the 5-year Treasury yield dip below 4.50% before 2027?",
+  "market_id": "4178758",
+  "valuation_author": "primary_operator",
+  "original_index": 228,
+  "report_sha256": "8182f149175024f75568c8709c141a05b454b5b6398303e5c51a3c82ef0120df"
+}

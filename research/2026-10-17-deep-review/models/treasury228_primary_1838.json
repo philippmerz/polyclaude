@@ -1,0 +1,179 @@
+{
+  "review_index": 228,
+  "adopted_utc": "2026-10-18T18:38:27.779204+00:00",
+  "before_own_PM_quotes": true,
+  "source_packet": "data/deep_review_20261017/treasury228_facts_1830.json",
+  "calculation_file": "data/deep_review_20261017/work/0228_model_calc.json",
+  "calculation_sha256": "f1b3413e7a20501a50630f2202395a7d9847d1ae0d17a96f60edd7d2930bc6c2",
+  "source_raw_sha256": "ee0d1c24c4b7e8bd7e0e84d048117c5cd4bbea4dfb2f41dcba33af32717bd5f5",
+  "raw_model_p_yes": 0.32091349999999996,
+  "primary_p_yes": 0.32,
+  "low": 0.08,
+  "high": 0.75,
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.17,
+  "selected_no": 0.53,
+  "method": "Same root-authored regime weights/drifts as5Yruppercase130, exact5Yrdownbarrier4.50, dailyonlynotintraday. Publicationcount/rounding/sourcefallback explicit.",
+  "raw_calculation": {
+    "case_id": 228,
+    "input": {
+      "raw_source_gzip": "logs/deep_review_20261017/treasury228/treasury_2026_daily_par_curve.html.gz",
+      "raw_source_sha256": "ee0d1c24c4b7e8bd7e0e84d048117c5cd4bbea4dfb2f41dcba33af32717bd5f5",
+      "rows": 199,
+      "first_observation": {
+        "date": "2026-01-02",
+        "5yr_pct": 3.74
+      },
+      "last_observation": {
+        "date": "2026-10-16",
+        "5yr_pct": 4.89
+      },
+      "rows_rehashed_and_reparsed": true
+    },
+    "parameters": {
+      "n_paths_per_regime": 100000,
+      "seed": 20261018228,
+      "starting_level_pct": 4.89,
+      "strict_published_condition": "Daily Treasury 5 Yr column <4.50%",
+      "latent_threshold_pct": 4.495,
+      "threshold_note": "Approximate latent proxy for official two-decimal publication strictly below 4.50%; compare only simulated daily closes.",
+      "future_publications": 51,
+      "future_window": "Oct 19-Dec 31 2026",
+      "calendar_note": "51 assumed publication days excluding Nov 11, Nov 26, and Dec 25; schedule assumption, not guarantee.",
+      "regime_weights_note": "Weights are explicitly supplied scenario assumptions, not estimated probabilities.",
+      "method": "For each regime, draw 100,000 paths of iid Gaussian daily changes with the regime drift/sigma; accumulate from 4.89 and test only the 51 end-of-day levels."
+    },
+    "daily_change_diagnostics": {
+      "20": {
+        "n_changes": 20,
+        "mean_pp_per_day": 0.005499999999999972,
+        "sample_sd_pp_per_day": 0.05844250435932281,
+        "min_change_pp": -0.08999999999999986,
+        "max_change_pp": 0.16000000000000014
+      },
+      "40": {
+        "n_changes": 40,
+        "mean_pp_per_day": 0.013500000000000002,
+        "sample_sd_pp_per_day": 0.053615439796903495,
+        "min_change_pp": -0.08999999999999986,
+        "max_change_pp": 0.16000000000000014
+      },
+      "60": {
+        "n_changes": 60,
+        "mean_pp_per_day": 0.007999999999999991,
+        "sample_sd_pp_per_day": 0.05088371588605617,
+        "min_change_pp": -0.08999999999999986,
+        "max_change_pp": 0.16000000000000014
+      },
+      "all_199_rows": {
+        "n_changes": 198,
+        "mean_pp_per_day": 0.005808080808080806,
+        "sample_sd_pp_per_day": 0.04921829067953049,
+        "min_change_pp": -0.10000000000000053,
+        "max_change_pp": 0.16000000000000014
+      }
+    },
+    "regime_simulations": [
+      {
+        "name": "plateau",
+        "weight": 0.45,
+        "drift_pp_per_day": 0.0,
+        "sigma_pp_per_day": 0.055,
+        "n_paths": 100000,
+        "future_publications": 51,
+        "event_fraction": 0.27891
+      },
+      {
+        "name": "inflation",
+        "weight": 0.35,
+        "drift_pp_per_day": 0.0035,
+        "sigma_pp_per_day": 0.065,
+        "n_paths": 100000,
+        "future_publications": 51,
+        "event_fraction": 0.23592
+      },
+      {
+        "name": "easing",
+        "weight": 0.2,
+        "drift_pp_per_day": -0.005,
+        "sigma_pp_per_day": 0.07,
+        "n_paths": 100000,
+        "future_publications": 51,
+        "event_fraction": 0.56416
+      }
+    ],
+    "weighted_scenario_average": 0.32091349999999996,
+    "base_sensitivity": {
+      "parameters": {
+        "name": "zero_drift_sigma_0.075",
+        "drift_pp_per_day": 0.0,
+        "sigma_pp_per_day": 0.075
+      },
+      "n_paths": 100000,
+      "future_publications": 51,
+      "event_fraction": 0.41513
+    },
+    "publication_count_sensitivities": {
+      "48": {
+        "regimes": [
+          {
+            "name": "plateau",
+            "weight": 0.45,
+            "drift_pp_per_day": 0.0,
+            "sigma_pp_per_day": 0.055,
+            "event_fraction": 0.26738
+          },
+          {
+            "name": "inflation",
+            "weight": 0.35,
+            "drift_pp_per_day": 0.0035,
+            "sigma_pp_per_day": 0.065,
+            "event_fraction": 0.22869
+          },
+          {
+            "name": "easing",
+            "weight": 0.2,
+            "drift_pp_per_day": -0.005,
+            "sigma_pp_per_day": 0.07,
+            "event_fraction": 0.54337
+          }
+        ],
+        "weighted_event_fraction": 0.3090365
+      },
+      "53": {
+        "regimes": [
+          {
+            "name": "plateau",
+            "weight": 0.45,
+            "drift_pp_per_day": 0.0,
+            "sigma_pp_per_day": 0.055,
+            "event_fraction": 0.28716
+          },
+          {
+            "name": "inflation",
+            "weight": 0.35,
+            "drift_pp_per_day": 0.0035,
+            "sigma_pp_per_day": 0.065,
+            "event_fraction": 0.24496
+          },
+          {
+            "name": "easing",
+            "weight": 0.2,
+            "drift_pp_per_day": -0.005,
+            "sigma_pp_per_day": 0.07,
+            "event_fraction": 0.57385
+          }
+        ],
+        "weighted_event_fraction": 0.32972799999999997
+      }
+    },
+    "limitations": [
+      "This is a computational scenario output only, not an adopted probability or forecast.",
+      "Independent Gaussian daily increments and regime weights are assumptions; volatility/drift may change.",
+      "The event tests published daily observations only, with no intraday first-passage.",
+      "Actual Treasury publication dates may differ from the 51-day calendar assumption."
+    ]
+  },
+  "macro_basis": "Priorofficialsourcepacket datedOct17: Sep16Fed+25bp/3.75\u20134.00target, SepCPI3.7headline/2.6core, payrolls29k, nextFOMCOct27\u201328. Not freshnewmacroGET; dotsarenotprobabilities. No extrapolating40dayuptrend.",
+  "limits": "Unestimatedregimeweights/drift; iidGaussianpublications, no calibratedjumps/meanreversion. 51calendarassumption/latentrounding approximations. PriorhistnohitobservedonlythroughOct16. Range/reservejudgmentnotconfidencebounds; entirefuturemissingfallbackcanchangeoutcome."
+}

@@ -31237,3 +31237,19 @@ No financial/daemon action, command replay, new valuation, CSV row or Telegram. 
 - Case 206: qualifying promoted Ye performance anywhere in Russia by Oct31, 5% YES / 0.5–30% range; no entry. Announced St Petersburg cancellation does not settle other invitation/club events. [Case](../research/2026-10-17-deep-review/evaluations/0206.md).
 - 259 valued / 2 blocked / 331 exclusions / 2,408 pending; 592 base + 24 revisions; 208 active. Each result was recorded before starting the next. Offline incremental audit passed exact identities, report hashes and counts for 196/200/201/204; collector capture timestamps cannot audit primary quote-access timing.
 - Read-only resume helper preserves full selected rules and fails on hash/count mismatch or >8KB; eight focused tests passed. Large raw evidence remains separate. No new financial action beyond the previously reconciled original OpenRouter fill; 18UTC observations retain their dates. Continue active finite goal.
+
+
+## 2026-10-18 18:48 UTC — ten valuations saved since finite goal resumed
+
+- 264 valued / 2 blocked / 334 factual exclusions / 2,400 pending; 600 immutable base + 24 revisions; 235 active. Each case recorded before next. New completed cases since prior commit: 208 CDC count24% YES; 218 ETH3600touch0.9%; 227 Trumpout3%; 228 5Yrbelow4.50 32%; 229 SaranaTop8 23%. No new allocations; existing TrumpNO0.33 dust unchanged. Exact uncertainty, current-source limits and dated fee/depth math stay in each case.
+- Three factual exclusions 209/211/225 are closed/nonaccepting exact markets, not model rejects or extra completed valuations. Helsinki temperature/source gap remains explicit; BTC scalar/array UMA metadata conflict is not chain settlement proof. Root independently verified closed identities and exact BTC candle; ETH minute hash/contiguity/start/end checks in `data/deep_review_20261017/root_source_checks_1840.json`.
+- Case235 primary17% vs dated8cask prompts bounded daily-rate path validation before final verdict. Future236/238/239/241 factual units and active235 draft pointers are saved in scoped `work/NNNN_resume.json`; none is silently completed. Daily OHLC domination can reuse no-hit proof instead of downloading whole minute histories repeatedly; aggregation/source-vintage caveat retained.
+- Public chart GET18:29:09 matches local CSV byte-for-byte, 205 rows, including18UTC195.62 total/189.95 tradingmark. `data/deep_review_20261017/chart_deploy_1830.json`. No new financial mark/request implied. Usage read18:28:47%used/53%headroom, resetsOct24; no budget-induced safety delay. Goal/fillTG1253 remains last material message.
+
+
+## 2026-10-18 19:04 UTC — Treasury validation and two further valuations
+
+- 266 valued /2 blocked /334 factual exclusions /2,398 pending;602 immutable base+27 revisions, next238. Every case saved/indexed before next. No new financial action;18UTC account observations retain their dates.
+-23530Yr<4.90: original Gaussian16.5828% versus demeaned5-day block bootstrap4.5363%; primary equal-model blend10.5596%→11%YES,1–65% sensitivity/15pp reserve. Dated8cYES ask has central edge but fails uncertainty stress.236XRP2.40:0.4%YES,0.001–30% sensitivity; no entry. Separate reports/models preserve source-vintage and forecast-before-price exceptions.
+- Same-family append-only repairs:1305Yr>=5.10 YES59→55%;17210Yr<4.60 24→17% with5%source-query fork retained;2285Yr<4.50 32→24%. No side clears15pp stress at dated fees/depth. [Shared compact validation](../research/2026-10-17-deep-review/models/treasury_family_validation_1900.json); originals remain immutable, latest pointers via selected resume helper. Historical51-publication windows overlap; model weights/ranges uncalibrated.
+- Compact case resume packets retain exact rules/hash chains; related evidence is linked instead of copied across handoffs. No full ledger/journal ingestion needed.238/239/241 have bounded source packets; no inherited verdict.
