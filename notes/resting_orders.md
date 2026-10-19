@@ -1,8 +1,8 @@
-# Current resting orders — October19 03:34UTC
+# Current resting orders — October19 03:53UTC
 
 **Five LIVE BUYs/$10.82 reserved; no SELL orders.** FixedPolygon95780191/02:07:14 pUSD20.451290/free9.631290 arithmetic; freshlockedreconciliation02:10:38. Sequentialobservations/notNAV. Only293+296reservations retired7→5, other5exact. [Proof](../data/deep_review_20261017/work/pull293296_reconcile_0210.json).
 
-Latest authenticated read03:34:17: allfive LIVE/unfilled; exact identities/prices/sizes and currentreservations match the02:10 proof. [Root verification](../data/deep_review_20261017/work/delayed1828_final_orders_root_0335.json). MT01profiles re-reviewed through the specified19:59 alert/no materialchange identified; originalbid unchanged. [Latest source disposition](../research/2026-10-19-delayed-1959-2134-news-review.md). No new chain/cash mark or reconciliation mutation.
+Latest authenticated read03:53:00: allfive LIVE/0matched; exact serialized inventory matches03:10/03:34 and currentreservations match verifiedbaseline. [Root proof](../data/deep_review_20261017/work/periodic_0352_root_verified.json). MT01profile review left originalbid unchanged; [source disposition](../research/2026-10-19-delayed-1959-2134-news-review.md). No new chain/cash mark or reconciliation mutation.
 
 - **Idaho:** original34YES3c/$1.02, pullALLunfilled at existingOct19 22UTC, earliermaterialpoll/candidate/ballot/turnoutuncertainty CANCELFIRST. Noautorepost/add; onfillfreshholding/exitreview. Exactidentity/currentreservation in the proof above.
 - FourHousebids unchanged; exactcurrentfullIDs/assets/risk in authenticatedproof+reservationinventory linkedabove. TreatunfilledBUYs as contingent promises, not purchases/profit.
