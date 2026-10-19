@@ -1,0 +1,19 @@
+{
+  "line": 1111,
+  "id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+  "ts": "2026-10-19T18:26:06Z",
+  "title": "Who's winning Michigan Senate race? Latest polls show tightening race - Detroit Free Press",
+  "line_sha256_no_nl": "98d490c5b6f8e18ed8c568827d423a0aebe1c806462fd583b8e0553aceaee961",
+  "line_sha256_with_nl": "bf4a4865c684350539205e96811ada731debb05883276464a93770d1ae4ee4c9",
+  "review": "data/deep_review_20261017/work/periodic1838_primary_review.json",
+  "review_sha256": "6b13bedf9b819a59bcc9bbfd5ed4d4a3b4f073f26a2dd595eb90aef573b53a8d",
+  "facts": "Free Press alert URL returned Google News shell (HTTP 200); publisher body, poll ID/date/toplines unresolved. Rasmussen Oct12\u201314, n=798, release Oct16 (El-Sayed 46, Rogers 44, Christensen 2, Long 2, Marsh 1, undecided 5) repeats already-underwritten wave. No new measured poll established; bounded access gap, not proof none exists.",
+  "unit": "data/deep_review_20261017/work/mi1826_poll_facts.json",
+  "unit_sha256": "fbbe43859cdd64cc8c958ebccbf17cdeb5a143a94cae7d916b3db3946d5c92f2",
+  "rasmussen_review": "data/deep_review_20261017/work/periodic1838_mi_sources.json",
+  "rasmussen_review_sha256": "808dce4f449698e1fad5523add829e560a51f07b3ab7bf02bb5d10fcf0a4069e",
+  "capture_verification": "Google News shell and both Rasmussen receipts/bodies hash-verified; paths/status/times/raw/gzip hashes are in the bound source units.",
+  "completed_primary_review_utc": "2026-10-19T18:45:39.236361+00:00",
+  "schema": "delayed_tick_alert_completion.v1",
+  "tick_id": "20261019T191427Z"
+}

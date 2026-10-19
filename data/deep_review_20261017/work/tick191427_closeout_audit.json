@@ -1,0 +1,52 @@
+{
+  "schema": "tick191427_closeout_audit.v1",
+  "verified_utc": "2026-10-19T19:33:18.608420+00:00",
+  "requested_alerts_hash_matched": 3,
+  "review_and_source_unit_hashes_match": true,
+  "third_alert_completed_primary_review_bound": true,
+  "relevant_5share_NO_identity_binding_verified": [
+    112,
+    1838
+  ],
+  "journal_prefix_unchanged": true,
+  "new_journal_links_resolve": true,
+  "handoff_source_hashes_match": true,
+  "financial_orders_priors_decisions_checkpoint_unchanged": true,
+  "no_new_NAV_or_research_case": true,
+  "source_and_inventory_observation_times_retained": true,
+  "secret_pattern_check_pass": true,
+  "owned_artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/tick191427_completed_review.json",
+      "sha256": "7b5721ad3099e8e3adadbb69d4041fefa4f1ddde77a674658c9c3d7dcb5a57d8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_checklist.json",
+      "sha256": "5549a5ad068f29d18311e696439b48d88113e735bd82fa1fb1aab82f217d296a"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_daemons.json",
+      "sha256": "cbfa238bfc79bdad888cc0d731a1ecee729e7a9857f54a6a3390706b26fd318b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_alert_01.json",
+      "sha256": "9bedb186d002bf82127a4a2a2f43688489d86703a2c61c4a0d4416037f36be28"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_alert_02.json",
+      "sha256": "a43a1f1c3d65ff231cc725ada110d0d86c31ef0e8e60722b30806333f61422fd"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_alert_03.json",
+      "sha256": "1f37543a92e3633d1ae5aba043e20fe142a8954da0f7e249eb79c78035b85050"
+    },
+    {
+      "path": "notes/journal.md",
+      "sha256": "7951e78e0ffe15c23146be55d82fefd2ff6e9955e252bfecf13a8edbf940b8d7"
+    },
+    {
+      "path": "notes/current_context.md",
+      "sha256": "bd63ca6d1fa3603543ada606efff08d8cf2836f2c77b77733764248015217896"
+    }
+  ]
+}

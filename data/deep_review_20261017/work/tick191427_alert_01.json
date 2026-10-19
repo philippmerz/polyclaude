@@ -1,0 +1,17 @@
+{
+  "line": 1110,
+  "id": "5dc0d83066b111f8ce28b74a901b40936dd99f85",
+  "ts": "2026-10-19T18:15:18Z",
+  "title": "Z.ai Ox Alpha Model\u2019s Secret Run Breaks OpenRouter Records - News Anyway",
+  "line_sha256_no_nl": "526c99614a4555fd3ab8db59e38cd09259bba935d5ce64fa0fd9937e50691d16",
+  "line_sha256_with_nl": "7491b1a3dc208831358ba66fe8c9e3aac1ab1963246702b160f6acf845d9aabe",
+  "review": "data/deep_review_20261017/work/periodic1815_primary_review.json",
+  "review_sha256": "7d87c0df4aba541c20e13fd3c7d597f82ada01b2c9195e8267351e75f3e548f9",
+  "facts": "Oct7 article; 23T/six days describes one Ox Alpha run, not weekly platform total. Official OpenRouter corroborates model identity/release, not the 23T claim. Existing five-NO retained; no new target-week measurement.",
+  "unit": "data/deep_review_20261017/work/openrouter_1815_alert_facts.json",
+  "unit_sha256": "1ed7285e35cfb4f6e3d5ee2ea819ef998a01b73545f69a38e7ca4549b02a70e9",
+  "capture_verification": "Three existing read_capture receipts and compressed bodies checked against their raw/gzip hashes; exact paths and values are in the bound facts unit.",
+  "completed_primary_review_utc": "2026-10-19T18:22:01.743046Z",
+  "schema": "delayed_tick_alert_completion.v1",
+  "tick_id": "20261019T191427Z"
+}

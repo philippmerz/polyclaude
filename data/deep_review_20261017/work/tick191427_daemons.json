@@ -1,0 +1,35 @@
+{
+  "schema": "tick191427_daemon_read.v1",
+  "observed_utc": "2026-10-19T19:29:34.022480+00:00",
+  "daemons": [
+    {
+      "daemon": "news_watcher",
+      "canonical_process_count": 1,
+      "script_sha256": "650baf55a25e5bff3fa5b16406abcde7facfb35f7e4bb6fcf4b0de7f0da69d23",
+      "process_start_before_script_mtime": false,
+      "code_current_by_mtime": true
+    },
+    {
+      "daemon": "heartbeat_watch",
+      "canonical_process_count": 1,
+      "script_sha256": "e57102de71428c0e9332654fc46c15fa5075c79305ffe870f65da2d4423eb8ab",
+      "process_start_before_script_mtime": false,
+      "code_current_by_mtime": true
+    },
+    {
+      "daemon": "telegram_listener",
+      "canonical_process_count": 1,
+      "script_sha256": "08b60004758f0abea432af30df529cefa268e6eea7bc29141e61016ae09285c5",
+      "process_start_before_script_mtime": false,
+      "code_current_by_mtime": true
+    },
+    {
+      "daemon": "opportunity_watch",
+      "canonical_process_count": 1,
+      "script_sha256": "0757c4f0a4e19f35c144de2a5d260014b5091c327e3a5636c9638b100c2bf383",
+      "process_start_before_script_mtime": false,
+      "code_current_by_mtime": true
+    }
+  ],
+  "limits": "Exact canonical command/process and script timing only; not a new feed-progress or watcher-private-state audit. No code change or restart."
+}

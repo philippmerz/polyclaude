@@ -1,0 +1,18 @@
+{
+  "line": 1115,
+  "id": "d1944e5ccd89687ba23ef59d536b4b392da6b9a1",
+  "ts": "2026-10-19T18:42:22Z",
+  "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - The Detroit News",
+  "line_sha256_no_nl": "4224a3c76978f1a737d29624213de94b21a982cdf6cf10c46301e49798952b93",
+  "line_sha256_with_nl": "17db49b6f4519b92dda2bdd8e57a8373238d227b0399c6e84fc3be45985d15b2",
+  "delta": "data/deep_review_20261017/work/periodic1916_news_delta.json",
+  "delta_sha256": "5ba6ff715089fa97e6c61c891a0e786b546976be4170fbf79cc273fd847778c6",
+  "facts": "Existing Detroit News/AOL and NewsNation/AOL reports concern the same Oct17 Caro exchange; no poll/ballot change. Exact Detroit News destination page for this alert was not resolved; those related captures are not proof of that page\u2019s contents.",
+  "related_evidence": "Same Oct17 Caro exchange appears in the already-bound delayed1959 and delayed2134 source units; exact alert destination body remains unresolved.",
+  "completed_primary_review": "research/2026-10-19-1916-periodic.md",
+  "completed_primary_review_sha256": "d598a13c368e8343fa38adee63a56c8d1ba97aa4f1cc01cddd0fb4c38dc9d0d6",
+  "completed_primary_adoption_utc": "2026-10-19T19:22:27.155422+00:00",
+  "adoption_evidence": "notes/journal.md in commit051b667,19:22:27entry; related coverage does not prove exactalertarticlecontent",
+  "schema": "delayed_tick_alert_completion.v1",
+  "tick_id": "20261019T191427Z"
+}

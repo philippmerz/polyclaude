@@ -1,0 +1,63 @@
+{
+  "schema": "tick191427_completed_review_index.v1",
+  "assembled_utc": "2026-10-19T19:30:22Z",
+  "scope": "Offline proof from saved public alerts, prior source reviews and sanitized 19:17 inventory; no new network/account call.",
+  "public_alert_log": {
+    "path": "notes/news_alerts.jsonl",
+    "sha256": "51d71f3a3f01f505b8bfcdafd6a3aed77cc85acd1606c2123d44452f52b0b985",
+    "bytes": 871572,
+    "latest_ts": "2026-10-19T19:03:41Z",
+    "no_newer_row_in_file": true
+  },
+  "inventory": {
+    "path": "data/deep_review_20261017/work/periodic1916_account_verification.json",
+    "sha256": "5b124f794477a331e783cb9da43656d1f6055758f8d4f027183a3236e57ee6f0",
+    "reviewed_utc": "2026-10-19T19:19:37.928393+00:00",
+    "orders_window": [
+      "2026-10-19T19:17:21.814121Z",
+      "2026-10-19T19:17:22.006453Z"
+    ],
+    "positions_window": [
+      "2026-10-19T19:17:21.817722Z",
+      "2026-10-19T19:17:22.061906Z"
+    ],
+    "live_orders": 4,
+    "matched_shares": 0,
+    "remaining_buy_risk_usd": 7.52,
+    "order_terms_unchanged": true,
+    "position_identities_outcomes_sizes_totalBought_unchanged": true,
+    "reservations_byte_identical": true,
+    "reservation_bindings_exact": true,
+    "positive_positions_including_legacy_claim": 8,
+    "limit": "Dated19:17indexed inventory, not a new fullcheck/NAV/on-chain audit. Root verified exact condition/outcome/asset and5shares for each relevant OpenRouterNO and MichiganNO row from the saved hash-bound body, against decoded frozen criteria/token lists.",
+    "relevant_held_NO_shares": {
+      "OpenRouter": 5,
+      "Michigan": 5
+    },
+    "positions_raw_sha256_verified": "20907e6db36cf1dd9774318345ce868c52d399f026e31a5eddf2662ef260076e",
+    "frozen_review_indices_verified": [
+      112,
+      1838
+    ]
+  },
+  "summary": "Three requested alert rows match the public log; no logged alert after 19:03:41Z. The 19:17 sanitized inventory matched 18:38 order/position/reservation identities and showed 4 live orders, zero matched, $7.52 remaining buy risk. This does not establish a full check or NAV.",
+  "root_verified_utc": "2026-10-19T19:32:51.175312+00:00",
+  "alert_units": [
+    {
+      "id": "5dc0d83066b111f8ce28b74a901b40936dd99f85",
+      "path": "data/deep_review_20261017/work/tick191427_alert_01.json",
+      "sha256": "9bedb186d002bf82127a4a2a2f43688489d86703a2c61c4a0d4416037f36be28"
+    },
+    {
+      "id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "path": "data/deep_review_20261017/work/tick191427_alert_02.json",
+      "sha256": "a43a1f1c3d65ff231cc725ada110d0d86c31ef0e8e60722b30806333f61422fd"
+    },
+    {
+      "id": "d1944e5ccd89687ba23ef59d536b4b392da6b9a1",
+      "path": "data/deep_review_20261017/work/tick191427_alert_03.json",
+      "sha256": "1f37543a92e3633d1ae5aba043e20fe142a8954da0f7e249eb79c78035b85050"
+    }
+  ],
+  "verification_limit": "Original source and observation times remain unchanged; this proves completed reviews, not queue acceptance or current-source freshness. No new data requests or financial action."
+}
