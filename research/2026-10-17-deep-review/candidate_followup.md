@@ -1,7 +1,8 @@
-# Candidate follow-up index — 2026-10-19 02:22 UTC
+# Candidate follow-up index — 2026-10-19 04:18 UTC
 
 This short index points to current case records. The archived file below preserves the full earlier analysis as dated history, not current instructions.
 
+- **271 — MT01:** original10YES33c canceledunfilled/DEC228, onlytargetreservation retired5→4; noautomaticrepost. NewAmericanPulse/NonStopLocal poll missing from valuation's inputset; originalmethodology remainsunverified429. Historical47%/selected37% is research-only; sourcecoverage/dedupe and fresh underwriting before future entry. [Outcome](mt01_271_canceled_outcome_0413.md).
 - **302 — Mastercard:** unplaced YES maker candidate; taker quote fails selected15pp reserve, no order/prior. [Case](evaluations/0302.md), [resume](../../data/deep_review_20261017/work/0302_resume.json).
 - **300 — Delcy:** closed unplaced,19c passive>18c cap; zero financialcalls/no prior. YES74.592%/selected59.592% remains research judgment. [Outcome](delcy300_unplaced_outcome_0120.md). No automaticretry.
 - **299 — Whalefall:** original DEC222 filled6NO17c/$1.02 at01:04:56; DEC223 retain/no add. Both02:14 sources remain $8m estimates;01:58 indicative net exit0.81544. [Latest review](../2026-10-19-0200-checkin.md), [fill proof](whalefall299_filled_outcome_0135.md). Original02UTC BUY pull obsolete; next held review06UTC.

@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-19T02:12:40.422290+00:00",
+  "_updated": "2026-10-19T04:13:38.822057+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1187,30 +1187,6 @@
       }
     ]
   },
-  "will-the-democratic-party-win-the-mt-01-house-seat": {
-    "p_yes": 0.47,
-    "p_no": 0.53,
-    "cluster": "us-politics",
-    "rho_within": 0.5,
-    "cluster_frac": 0.18,
-    "verified": "2026-10-17",
-    "criteria_read": "2026-10-17",
-    "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
-    "asset": "94033987553817825990709512567031751048276730850154145976615728913102874968691",
-    "market_id": "942843",
-    "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
-    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
-    "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
-    "balanced_reviews": [
-      "logs/deep_review_20261017/house_next_skeptic.md",
-      "logs/deep_review_20261017/house_next_champion.md"
-    ],
-    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
-    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
-    "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
-    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
-  },
   "will-the-democratic-party-win-the-ny-01-house-seat": {
     "p_yes": 0.31,
     "p_no": 0.69,
@@ -1614,5 +1590,34 @@
     "note": "Closed unfilled Oct19 scheduled02UTC pull; no automatic re-entry. Numericalpriorunchanged, noholding/spend/PnL.",
     "current_assessment": "DEC226cancelled originalpendingBUY; exactterminal/trades/index/CTFs0 rootverifiedafter300s. Onlytargetreservationretired; futureentryrequiresallfreshgates.",
     "latest_financial_outcome": "research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md"
+  },
+  "_closed_20261019_mt01_271": {
+    "p_yes": 0.47,
+    "p_no": 0.53,
+    "cluster": "us-politics",
+    "rho_within": 0.5,
+    "cluster_frac": 0.18,
+    "verified": "2026-10-17",
+    "criteria_read": "2026-10-17",
+    "condition_id": "0xe0fbb3e61e61b14f5fef15ffdd0e2a0c6cf4336bb5b15877fe3e3c9fdcc6bc7f",
+    "asset": "94033987553817825990709512567031751048276730850154145976615728913102874968691",
+    "market_id": "942843",
+    "criteria_sha256": "1ab09b2bb4670e5221aa26446d352a4a5537b2e00caecc17ae06bcd42c078c71",
+    "rationale": "Primary deep review, official same-map history and current candidate facts; transparent national/PVI/poll mixture is uncalibrated. Tiny maker candidate only, not a proven floor. Both independent advisory reviews read.",
+    "research_report": "research/2026-10-17-deep-review/evaluations/0271.md",
+    "balanced_reviews": [
+      "logs/deep_review_20261017/house_next_skeptic.md",
+      "logs/deep_review_20261017/house_next_champion.md"
+    ],
+    "latest_source_packet": "data/deep_review_20261017/house_three_candidate_followup.json",
+    "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
+    "current_assessment": "DEC228 cancellation verified terminal0/exhaustedorders+trades/index/CTFs after300s; onlyMTreservation5to4, other4exact. Poll appears lateSep19-24/314LV, distinctfromoriginalRutgers; originalquestionnaire/mode/weighting/MOE unverified429. New primary underwriting before any future entry.",
+    "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
+    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+    "financial_status": "CANCELED_ZERO_FILL",
+    "note": "Original10YES33c bid canceled04:04:03 under new unassessed AmericanPulse/NonStopLocal poll-source uncertainty. No acquisition/spend/PnL; no automatic repost. Numerical47/53 prior unchanged as historical research, not current entry authority.",
+    "previous_current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
+    "latest_financial_outcome": "research/2026-10-17-deep-review/mt01_271_canceled_outcome_0413.md",
+    "verification": "data/deep_review_20261017/work/mt01_root_verified_0412.json"
   }
 }

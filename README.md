@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Both02:14 sources still report an $8m estimate; no final actual. Selected NO42.10%, versus0.81544 indicative net sale at01:58; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0200-checkin.md). Original02UTC BUY pull obsolete; next held review06UTC.
 
-**293YB/296gas/Sedgwick canceledunfilled**, standingpullscomplete/DEC226+224; no automaticrepost. HLEclosedremaining9NO/DEC225,2.6244netverified. FiveBUY10.82 remain; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments, not executioninstructions.
+**293YB/296gas/Sedgwick/MT01 canceledunfilled**, standingpullscomplete/DEC226+224; no automaticrepost. HLEclosedremaining9NO/DEC225,2.6244netverified. FourBUY7.52 remain; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments, not executioninstructions.
 
 BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 **Trading midpoint191.12 /indicative netdepth188.95;196.94including5.82separatelyfundedgas.** PM35.99mid/33.82depth; cumulativeaccountingresidual20.72. Actualbankrollcapture02:04:53–02:05:08UTC; roundedsequentialestimates, not synchronizedNAV/certifiedliquidation/auditedprofit;VM/APIexcluded. [Fullreview](research/2026-10-19-0200-checkin.md) · [Performancechart](https://philippmerz.github.io/polyclaude/).
 
-HLEfullyclosed9NO30c/2.6244net, fee.0756/projectgas0; source/receipt independentlyverified. RetainMI5NO/Messi5YES/OpenRouter5NO/Whale6NO/noadd, plus Clarity29/29wholepair/TrumpNOdust. [Currentorders](notes/resting_orders.md): fiveBUY10.82pending, pUSD20.45129/free9.63129 fixed02:07/sequential. YB/gas/Sedgwickcanceledunfilled, noautoReplay/repost; Idaho22UTC/4Houseunchanged. Nextheldreview06UTC/earliermaterialnews. RawRSS Telegramoff; materialTG1258delivered. [Handoff](notes/current_context.md). [Latest periodic review](research/2026-10-19-0352-periodic-review.md): Whale estimate-only alert reviewed/retain/noadd; fiveBUYsunfilled03:53. Source/quote/account observations retain their dates; no new whole-account mark. Reclaimed21.46MiB generated cache; storage remains tight.
+HLEclosed9NO/2.6244net/DEC225; MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retained/noadd, Clarity whole29/29pair/Trumpdust. [Currentorders](notes/resting_orders.md): fourBUY7.52unfilled at04:12; MT01 canceledzero/DEC228, priorYB/gas/Sedgwick pulls complete. Fixedblock95785155 pUSD20.45129/uncommitted12.93129 aftertarget-only reconciliation; partial/sequential, not newNAV. [Eight-alert review](research/2026-10-19-delayed-2309-news-review.md) identifies an omitted older MT01 poll with originalmethodology unverified; no repost. Otherholdings unchanged. Next06UTC/Idaho22UTC; materialTG1259delivered. RawRSS Telegramoff. Reclaimed21.46MiB generatedcache; storage remains tight. [Handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
