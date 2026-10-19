@@ -1,0 +1,97 @@
+{
+  "schema": "discovery_detail.v1",
+  "created_utc": "2026-10-19T14:31:16Z",
+  "passes": [
+    {
+      "kind": "primary",
+      "args": "default profile",
+      "liquidity_floor_usd": 20000,
+      "volume24_floor_usd": 500,
+      "top_cap": 80,
+      "fetch": {
+        "duplicate_market_rows": 2,
+        "endpoint": "markets",
+        "fetched_market_rows": 998,
+        "malformed_rows": 0,
+        "max_pages": 10,
+        "pages_attempted": 10,
+        "pages_succeeded": 10,
+        "pagination_complete": false,
+        "response_rows": 1000,
+        "stop_reason": "page_cap"
+      },
+      "filters": {
+        "eligible_before_top": 635,
+        "filter_accounting_complete": true,
+        "filter_rejections": {
+          "horizon": 49,
+          "liquidity": 293,
+          "missing_deadline": 2,
+          "past_deadline": 18,
+          "spread": 1
+        },
+        "input_markets": 998,
+        "selected": 80,
+        "selection_complete": false,
+        "top_omitted": 555
+      },
+      "snapshot": {
+        "kind": "primary",
+        "path": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261019T142811400461Z_primary.json",
+        "sha256": "65e619085754e6193766d730934ec69189a7903ae4745a7967778202b7c20dcb",
+        "bytes": 263222,
+        "selected_snapshot_rows": 80,
+        "current_proof_sha256": "65e619085754e6193766d730934ec69189a7903ae4745a7967778202b7c20dcb",
+        "previous_proof_sha256": "bf2adaaee91c4119d53d5f4897a8945c4c9e59ebe82fe2f62e1c5ba85b9d45de",
+        "context_integrity_verified": true
+      }
+    },
+    {
+      "kind": "thin_tail",
+      "args": "--min-liquidity 500 --min-vol24 20 --max-pages 20 --via-events --clears-hurdle-only --top 3000",
+      "liquidity_floor_usd": 500,
+      "volume24_floor_usd": 20,
+      "top_cap": 3000,
+      "fetch": {
+        "duplicate_market_rows": 60,
+        "endpoint": "events",
+        "fetched_market_rows": 38729,
+        "malformed_rows": 0,
+        "max_pages": 20,
+        "pages_attempted": 20,
+        "pages_succeeded": 20,
+        "pagination_complete": false,
+        "response_rows": 2000,
+        "stop_reason": "page_cap"
+      },
+      "filters": {
+        "eligible_before_top": 3265,
+        "filter_accounting_complete": true,
+        "filter_rejections": {
+          "horizon": 305,
+          "liquidity": 14845,
+          "missing_deadline": 26,
+          "not_tradable": 6180,
+          "past_deadline": 714,
+          "spread": 802,
+          "volume": 9664,
+          "win_assumed_hurdle": 2928
+        },
+        "input_markets": 38729,
+        "selected": 3000,
+        "selection_complete": false,
+        "top_omitted": 265
+      },
+      "snapshot": {
+        "kind": "thin_tail",
+        "path": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261019T142816176046Z_thin_tail.json",
+        "sha256": "dcc5f67880e1d702bd7b067833854b72eaefb839459c858e1ff0880e6dfcf0fa",
+        "bytes": 9661829,
+        "selected_snapshot_rows": 3000,
+        "current_proof_sha256": "dcc5f67880e1d702bd7b067833854b72eaefb839459c858e1ff0880e6dfcf0fa",
+        "previous_proof_sha256": "8e701753c8f0eda65fc42030cf794f490193434af0ef2e414bf1dacc213a7171",
+        "context_integrity_verified": true
+      }
+    }
+  ]
+}

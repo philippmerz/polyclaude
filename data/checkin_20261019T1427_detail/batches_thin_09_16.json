@@ -1,0 +1,165 @@
+{
+  "schema": "batch_audit.v1",
+  "kind": "thin_tail",
+  "range": [
+    9,
+    16
+  ],
+  "batches": [
+    {
+      "batch_id": 9,
+      "declared_market_rows": 16,
+      "parsed_market_rows": 16,
+      "rank_range": [
+        41,
+        287
+      ],
+      "status_counts": {
+        "new_to_snapshot": 4,
+        "context_unchanged": 11,
+        "changed": 1
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 4,
+        "best_bid": 1
+      },
+      "section_sha256": "b3523e8c99e1ac8dbcf4b8d7bf6aa5e6cae578ae32ee39a00c0972df99d993bc"
+    },
+    {
+      "batch_id": 10,
+      "declared_market_rows": 5,
+      "parsed_market_rows": 5,
+      "rank_range": [
+        45,
+        45
+      ],
+      "status_counts": {
+        "new_to_snapshot": 1,
+        "context_unchanged": 4
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 1
+      },
+      "section_sha256": "f0fa8f4ef8276f742d55ec7fff9629646dceff176116e3b6e33ec89a405ec002"
+    },
+    {
+      "batch_id": 11,
+      "declared_market_rows": 24,
+      "parsed_market_rows": 24,
+      "rank_range": [
+        47,
+        289
+      ],
+      "status_counts": {
+        "new_to_snapshot": 1,
+        "changed": 2,
+        "context_unchanged": 21
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 1,
+        "best_bid": 2
+      },
+      "section_sha256": "798fdd918e216bb7c2c86176f311efed1e1e02e5d031989578ee003fcb209c0b"
+    },
+    {
+      "batch_id": 12,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        48,
+        53
+      ],
+      "status_counts": {
+        "new_to_snapshot": 5,
+        "context_unchanged": 13
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 5
+      },
+      "section_sha256": "3a7de5178b5f023f44f975ac11b59c8c30aa82e8126b272943a65b168400784b"
+    },
+    {
+      "batch_id": 13,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        54,
+        228
+      ],
+      "status_counts": {
+        "new_to_snapshot": 8,
+        "context_unchanged": 9,
+        "changed": 3
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 8,
+        "best_ask": 3,
+        "best_bid": 2,
+        "no_price": 3,
+        "yes_price": 3,
+        "outcome_prices": 3,
+        "spread": 1
+      },
+      "section_sha256": "3cfa121a666d6bfb7a6ea21b67f48c7e60acab6601aa1c7d675e81e2b6b66312"
+    },
+    {
+      "batch_id": 14,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        62,
+        270
+      ],
+      "status_counts": {
+        "new_to_snapshot": 9,
+        "changed": 4,
+        "context_unchanged": 7
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 9,
+        "best_ask": 4,
+        "best_bid": 4,
+        "no_price": 4,
+        "yes_price": 4,
+        "outcome_prices": 4
+      },
+      "section_sha256": "de7f6c2be74dec124d55becccc1d6ffd144eb9f19cb515ddbeecf31ae45ff78a"
+    },
+    {
+      "batch_id": 15,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        69,
+        175
+      ],
+      "status_counts": {
+        "new_to_snapshot": 8,
+        "context_unchanged": 12
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 8
+      },
+      "section_sha256": "b104c9bc6570138e60c64567a5e33d5da292a18a45958916cbd3d5a66385ad78"
+    },
+    {
+      "batch_id": 16,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        74,
+        285
+      ],
+      "status_counts": {
+        "new_to_snapshot": 9,
+        "context_unchanged": 9,
+        "changed": 1
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 9,
+        "spread": 1
+      },
+      "section_sha256": "eef0966d433e1ad2b82cad209572559f0f7b2270bcbda40310cbd3ba3125b567"
+    }
+  ]
+}

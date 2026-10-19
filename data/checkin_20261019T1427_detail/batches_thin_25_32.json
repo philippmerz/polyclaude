@@ -1,0 +1,171 @@
+{
+  "schema": "batch_audit.v1",
+  "kind": "thin_tail",
+  "range": [
+    25,
+    32
+  ],
+  "batches": [
+    {
+      "batch_id": 25,
+      "declared_market_rows": 16,
+      "parsed_market_rows": 16,
+      "rank_range": [
+        164,
+        294
+      ],
+      "status_counts": {
+        "new_to_snapshot": 6,
+        "context_unchanged": 9,
+        "changed": 1
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 6,
+        "best_ask": 1
+      },
+      "section_sha256": "5833f39e67ae15f9fc167811852088ed1c711800c1209e410a8f3250b81ff3e5"
+    },
+    {
+      "batch_id": 26,
+      "declared_market_rows": 17,
+      "parsed_market_rows": 17,
+      "rank_range": [
+        172,
+        267
+      ],
+      "status_counts": {
+        "new_to_snapshot": 4,
+        "changed": 4,
+        "context_unchanged": 9
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 4,
+        "best_ask": 4,
+        "best_bid": 4,
+        "no_price": 4,
+        "yes_price": 4,
+        "outcome_prices": 4
+      },
+      "section_sha256": "4112743279a24678233d9aa8bc8a979f179e2ea3e6880c6434b5b3a45a796b4d"
+    },
+    {
+      "batch_id": 27,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        179,
+        187
+      ],
+      "status_counts": {
+        "new_to_snapshot": 6,
+        "context_unchanged": 12
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 6
+      },
+      "section_sha256": "c50c92818a052f2bc06d3f388c1c6f7b00589b0673f334ab399d4ec712b8a595"
+    },
+    {
+      "batch_id": 28,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        190,
+        193
+      ],
+      "status_counts": {
+        "new_to_snapshot": 4,
+        "context_unchanged": 16
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 4
+      },
+      "section_sha256": "001b04cfbda372b04aa964c666e2f75607512dff82e4c1b3c173b1867dde110e"
+    },
+    {
+      "batch_id": 29,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        194,
+        197
+      ],
+      "status_counts": {
+        "new_to_snapshot": 4,
+        "context_unchanged": 14
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 4
+      },
+      "section_sha256": "0fcf78d8198ad73c8c1af347b4cf96aa974e8c478971fe578049b9a027409c6a"
+    },
+    {
+      "batch_id": 30,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        198,
+        206
+      ],
+      "status_counts": {
+        "new_to_snapshot": 2,
+        "context_unchanged": 12,
+        "changed": 5
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 2,
+        "best_ask": 5,
+        "best_bid": 5,
+        "no_price": 5,
+        "yes_price": 5,
+        "outcome_prices": 5,
+        "spread": 1
+      },
+      "section_sha256": "eef809f22bf82efd2f9383828802c49c658e17a0cf78c6230b13255a88a5ee31"
+    },
+    {
+      "batch_id": 31,
+      "declared_market_rows": 14,
+      "parsed_market_rows": 14,
+      "rank_range": [
+        208,
+        275
+      ],
+      "status_counts": {
+        "changed": 4,
+        "context_unchanged": 10
+      },
+      "changed_field_counts": {
+        "best_ask": 4,
+        "best_bid": 3,
+        "no_price": 3,
+        "yes_price": 3,
+        "outcome_prices": 3,
+        "spread": 1
+      },
+      "section_sha256": "820ccd4683127092b5645a2c011093e25e91625a34279c3abd41ffb8ef1b6509"
+    },
+    {
+      "batch_id": 32,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        215,
+        258
+      ],
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 14
+      },
+      "changed_field_counts": {
+        "best_ask": 4,
+        "best_bid": 4,
+        "no_price": 4,
+        "spread": 2,
+        "yes_price": 4,
+        "outcome_prices": 4
+      },
+      "section_sha256": "d9cbca7d6efed96d3f28efe677fd51b43c85742c99dd0059569e932cb6952111"
+    }
+  ]
+}

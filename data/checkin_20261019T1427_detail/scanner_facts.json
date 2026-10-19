@@ -1,0 +1,93 @@
+{
+  "schema": "routine_scanner_facts.v1",
+  "sports": {
+    "markets_meeting_threshold": 51,
+    "consensus_attempted": 3,
+    "consensus_failures": 2,
+    "failure_reasons": [
+      "AEK 1x2 outcome mapping: YES side does not match team named as winning in the question/rule",
+      "Commanders–49ers O/U: no non-Polymarket bookmaker source has exact O/U 52.5 odds"
+    ],
+    "valid_observation": {
+      "game": "PARIVISION vs magic BO3",
+      "delta_pp": -2.9,
+      "source": "high/bwin",
+      "volume24h_usd": 255802
+    },
+    "trigger_gt3pp_and_vol_gt50k": false,
+    "inplay_skipped": 1
+  },
+  "macro": {
+    "markets_over_volume_threshold": 7,
+    "consensus": "disabled"
+  },
+  "event_monotonicity": {
+    "events_to_inspect": 1422,
+    "multimarket_events_inspected": 1182,
+    "pages": "15/15; cap reached",
+    "midpoint_flags": 1,
+    "flag": "Papertrade token launch date series; midpoint +1.35pp, live edge -3.63pp; artifact/mid-only",
+    "live_provisional": 0
+  },
+  "consistency": {
+    "generated_utc": "20261019T142936Z",
+    "open_markets_scanned": 5000,
+    "events_fetched": 660,
+    "events_processed": 653,
+    "pages": 33,
+    "neg_risk_retained": 2755,
+    "stop": "market_cap",
+    "coverage_complete": false,
+    "midpoint_groups_gt0_5pp": 277,
+    "live_groups_relevant": 185,
+    "requested": 20,
+    "attempted": 20,
+    "validated_nonpositive": 16,
+    "failed": 4,
+    "unquoted_eligible_groups": 165,
+    "failed_reasons_reported": [
+      "one no-asks failure for market 2495308"
+    ],
+    "failed_reason_details_unavailable_for_remaining": 3,
+    "actionable": 0,
+    "positive_live_depth": 0,
+    "OpenRouter_weekly_observation": {
+      "event_id": "1216187",
+      "title": "#1 AI lab by OpenRouter market share week of October 19?",
+      "status": "midpoint-only; no positive live depth",
+      "scope": "One-week market differs from held four-week sum."
+    }
+  },
+  "favorite_fade": {
+    "markets_fetched": 1000,
+    "pages": "10/10 max-page cap",
+    "rough_survivors": 71,
+    "selected_for_book_walk": 40,
+    "valid_books": 40,
+    "outside_profile": 15,
+    "walk_cap_omissions": 31,
+    "rows_emitted": 25,
+    "missing_or_invalid_books": 0
+  },
+  "exact_CIDs": {
+    "scope": "Only the two previously supplied CIDs checked in this pass; no exchange-wide absence claim.",
+    "rhine": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+    "rhine_snapshot_occurrences": {
+      "primary": 0,
+      "thin_tail": 1
+    },
+    "rhine_emitted_context_occurrences": {
+      "primary": 0,
+      "thin_tail": 0
+    },
+    "rhine_market_id": "4294627",
+    "rhine_question": "Will the Rhine River return to normal levels between October 1 and October 31, 2026?",
+    "rhine_criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11",
+    "rhine_prior_snapshot_criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11",
+    "idaho": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+    "idaho_snapshot_occurrences": {
+      "primary": 0,
+      "thin_tail": 0
+    }
+  }
+}

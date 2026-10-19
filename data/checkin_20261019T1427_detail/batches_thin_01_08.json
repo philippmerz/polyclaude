@@ -1,0 +1,178 @@
+{
+  "schema": "batch_audit.v1",
+  "kind": "thin_tail",
+  "range": [
+    1,
+    8
+  ],
+  "batches": [
+    {
+      "batch_id": 1,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        1,
+        249
+      ],
+      "status_counts": {
+        "changed": 3,
+        "new_to_snapshot": 7,
+        "context_unchanged": 8
+      },
+      "changed_field_counts": {
+        "tick": 1,
+        "best_ask": 3,
+        "best_bid": 2,
+        "no_price": 3,
+        "yes_price": 3,
+        "outcome_prices": 3,
+        "new_to_snapshot": 7,
+        "spread": 1
+      },
+      "section_sha256": "2b0c1419d219331e205368789b78c2523b81c686ef38b459b857d83cafb1145f"
+    },
+    {
+      "batch_id": 2,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        7,
+        273
+      ],
+      "status_counts": {
+        "new_to_snapshot": 5,
+        "changed": 2,
+        "context_unchanged": 12
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 5,
+        "best_ask": 2,
+        "best_bid": 2,
+        "no_price": 2,
+        "yes_price": 2,
+        "outcome_prices": 2
+      },
+      "section_sha256": "7a593fd9ee47274a88b96c34e9a4c9db7c03e23548c9d2a4b31aca87651e677c"
+    },
+    {
+      "batch_id": 3,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        11,
+        266
+      ],
+      "status_counts": {
+        "new_to_snapshot": 9,
+        "changed": 3,
+        "context_unchanged": 7
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 9,
+        "best_ask": 3,
+        "best_bid": 3,
+        "no_price": 3,
+        "yes_price": 3,
+        "outcome_prices": 3
+      },
+      "section_sha256": "e8d15f5c6caacd66edb93f7153eaef3bb6dc3d0309e852c70bd94516cceb1c4e"
+    },
+    {
+      "batch_id": 4,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        18,
+        223
+      ],
+      "status_counts": {
+        "new_to_snapshot": 8,
+        "changed": 1,
+        "context_unchanged": 11
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 8,
+        "best_ask": 1,
+        "best_bid": 1,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "53b44c888d8e6c6ddca19ed0f2c18cc2fdd3b7074800eddc11b1005468a24d81"
+    },
+    {
+      "batch_id": 5,
+      "declared_market_rows": 12,
+      "parsed_market_rows": 12,
+      "rank_range": [
+        24,
+        139
+      ],
+      "status_counts": {
+        "new_to_snapshot": 5,
+        "context_unchanged": 7
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 5
+      },
+      "section_sha256": "fd38f2610ec2efe6315b59874199f6d1022b739831bb9906a56164fb90ebf56d"
+    },
+    {
+      "batch_id": 6,
+      "declared_market_rows": 13,
+      "parsed_market_rows": 13,
+      "rank_range": [
+        28,
+        75
+      ],
+      "status_counts": {
+        "new_to_snapshot": 3,
+        "context_unchanged": 10
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 3
+      },
+      "section_sha256": "21019d691a2acdb74bc2d34ebfb44109bdc69f05a918b2acb4d6546a40715360"
+    },
+    {
+      "batch_id": 7,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        31,
+        156
+      ],
+      "status_counts": {
+        "new_to_snapshot": 16,
+        "context_unchanged": 4
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 16
+      },
+      "section_sha256": "282bc4d6db16224494fce6819787793fe1140ea08d95fa516ba05636b57c6a13"
+    },
+    {
+      "batch_id": 8,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        34,
+        234
+      ],
+      "status_counts": {
+        "new_to_snapshot": 8,
+        "context_unchanged": 10,
+        "changed": 1
+      },
+      "changed_field_counts": {
+        "new_to_snapshot": 8,
+        "best_ask": 1,
+        "best_bid": 1,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "88995fcb8622c04b15f771a20041d6ffff59ffde42708475a150e72af0caba34"
+    }
+  ]
+}

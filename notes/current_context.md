@@ -1,38 +1,37 @@
 ---
-reviewed_at: "2026-10-19T14:11:29.171843+00:00"
+reviewed_at: "2026-10-19T14:42:02.810335+00:00"
 valid_until: "2026-10-19T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: c54acd58705664b0e236859c1ad4e72b17fcc4937937f20f5702b26c7c202383
+  README.md: 457bc24f81d0da190a8434263da79c59ae4a5c101c10922622ac8c5e4171de2a
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: dc7363153537eca480dc7658f6388f93816e555d22a055d37656509f6d6e5ce1
-  notes/resting_orders.md: 29a8568018efd7f429fe8db16fc0c96329699d71eb25178f6825dbf6be13a6d1
-  notes/journal.md: 5e8338cb589b5f8aaacaeddd13445823940532f5466ef551604302152d1134f8
+  notes/backlog.md: cb6241b382687755932e7c05e86dc407d0652c4ed397dfb1408e012546039936
+  notes/resting_orders.md: d3e0ac8f9396ffa6069dca40b6e5eb1d4837438f936bc7ca14708ca2817f9f8d
+  notes/journal.md: 425ab636d3850a98f259881ce7fa3fe077a4d467177659b72315af540ff37d2a
 ---
 
 ## Resume
 
-**333 valued / 7 blocked / 364 factual-only / 2,296 pending; 704 base + 60 revisions; next index 353.** No valuation credit at this check. [Checkpoint](deep_review_checkpoint.json) · [effective review](../research/2026-10-19-manual-research.md). Index 353 still needs the exact ISW Ukrainian Settlements boundary and qualifying shading/persistence; 355/356 remain facts-only. Cases 317/340 are withdrawn and unplaced. Canceled orders stay closed; never replay them. [Order history](resting_orders.md).
+**333 valued / 7 blocked / 364 factual-only / 2,296 pending; 704 base + 60 revisions; next index 353.** No valuation credit at the Oct19 14:27 check. [Checkpoint](deep_review_checkpoint.json) · [effective review](../research/2026-10-19-manual-research.md). Case353 retains the exact ISW Ukrainian Settlements boundary gate; 355/356 remain facts-only. Cases317/340 are withdrawn and unplaced. Canceled orders stay closed and must never be replayed. [Order history](resting_orders.md).
 
 ## Latest portfolio check
 
-[October 19 14:00 check-in](../research/2026-10-19-1400-checkin.md): bankroll window 14:01:47.886–14:02:02.920 UTC; $196.29 including $5.79 separate gas, trading midpoint $190.50 / indicative depth $187.49, PM $35.36 / $32.35. Rounded sequential inputs are not synchronized NAV or certified proceeds. $20.73 residual is accounting arithmetic, not audited cash profit. No new order, fill, prior or position change.
+[October19 14:27 check-in](../research/2026-10-19-1427-checkin.md): authoritative bankroll window 14:30:21.173767–14:30:36.207726Z; $196.26 incl $5.78 separate gas, trading midpoint $190.48 / indicative depth $187.45, PM $35.34 / $32.31. Rounded sequential inputs are not synchronized NAV or certified proceeds. $20.73 residual is accounting arithmetic, not audited cash profit. No additions, new maker exits, orders or numerical-prior changes.
 
-Four authenticated BUYs remain live/zero-matched with four matching reservations and $7.52 full-fill risk; eight position identities, sizes and totalBought are unchanged, with four mark changes. [Account proof](../data/deep_review_20261017/work/tick1400_account.json) · [current orders](resting_orders.md). Idaho 34 YES / $1.02 remains under existing terms; all-unfilled pull Oct19 22:00 UTC and cancel-first on material new poll, candidate, ballot or turnout evidence.
+Four authenticated BUYs remain LIVE/zero-matched; four exact reservations/$7.52 total full-fill risk. Eight position identities, sizes and totalBought are unchanged; marks changed. Idaho 34 YES/$1.02 remains under existing terms; all-unfilled pull Oct19 22:00 UTC and cancel-first on material poll/candidate/ballot/turnout evidence. [Account proof](../data/deep_review_20261017/work/tick1427_account.json) · [orders](resting_orders.md).
 
-## Held positions and evidence limits
+## Held rules and evidence limits
 
-- Literal scope: MI is U.S. Senate/Democratic nominee (NO includes any non-D winner); Messi is Google2026 Global Athletes Top5, with Mar31'27 fallback, not US People. OR sums weekly labels Oct26/Nov2/Nov9/Nov16, not the current Oct19 partial. Clarity uses first qualifying final passage, not cloture. [Exact rules](../data/deep_review_20261017/work/tick1253_root_current_rules.json) · [current source limits](../data/deep_review_20261017/work/tick1400_catalyst_core.json).
-- MI NO, Messi YES, OpenRouter NO and Whalefall NO: retain/no add. Current selected terminal diagnostics $1.70 / $2.00 / $3.65 / $2.5261 versus indicative fee-net exits $1.46 / $1.20 / $3.00 / $0.41; these are conditional model outputs, not offers or recovery guarantees. Broad adverse cases remain material; no automatic Kelly additions or maker-at-fair for hidden information.
-- Whalefall Oct16–18 gross remains $8m estimated, not final. Strict rule is less than $8m; exactly $8m final resolves NO. Clarity remains only as whole 29/29 pair, conditional $29 floor versus $26.28 estimated whole-pair exit, with venue/oracle/adjudication risk.
-- Michigan headline review found no new measured general-election voter intent or ballot change. Q3 fundraising figures are article-reported, not raw-FEC verified. ABC item is an Aug5 primary projection; Oct21 debate is scheduled, not an outcome. Alert review watermark is 14:04:37 UTC; later writing time does not imply later alerts were reviewed. [Alert IDs and source limits](../data/deep_review_20261017/work/tick1400_alert_delta.json).
-- HLE board is UPDATING versus July3 archive; Grok4.7 unscored. This is not a new resolving-score observation. No winning redeemables; dry-run skipped only the losing/uncertain zero-value Gemini HLE NO row. No overdue decisions, hurdle/watchlist hits, UMA alerts or Ostium trades.
+- MI is the U.S. Senate/Democratic nominee race. Messi is Google2026 **Global Athletes Top5**, not US People; fallback is March31, 2027. OpenRouter counts the four exact weekly labels (Oct26/Nov2/Nov9/Nov16), not the current partial week. Clarity uses the first qualifying final passage, not cloture. [Frozen rules](../data/deep_review_20261017/work/tick1253_root_current_rules.json).
+- Retain MI NO, Messi YES, OpenRouter NO, Whalefall NO and the whole Clarity 29/29 pair; no add/no maker-at-fair on hidden information. Current selected diagnostics are $1.70/$2.00/$3.65/$2.5261 vs exit-analysis $1.46/$1.20/$3.00/$0.37; Clarity conditional floor $29 vs whole-pair exit $26.28 after $0.16 fee. Not offers or recovery guarantees. Whalefall $8m remains estimated, not final; strict less-than means exactly $8m final resolves NO.
+- News was reviewed through 14:32:22Z, not later editorial time. No new measured MI voter-intent or ballot fact; fundraising figures are article-reported, not raw-FEC verified. Fox coverage published Oct18 documents the Oct17 JFK interview; KSNV/KBAK/KBOI/WBMA/KDBC titles recur; bodies and independent corroboration are unverified. Newsweek publisher body/date unverified. No verified final Whalefall gross. [Alert/source review](../data/deep_review_20261017/work/tick1427_root_news_review.json) · [Michigan facts](../data/deep_review_20261017/work/tick1427_michigan_news_facts.json) · [Whalefall facts](../data/deep_review_20261017/work/tick1427_whalefall_facts.json) · [alert delta](../data/deep_review_20261017/work/tick1427_alert_delta.json).
+- HLE is “UPDATING” versus July3 archive and Grok4.7 unscored; this is not a new threshold reading. No winning redeemables; dry-run skipped only losing/uncertain zero-value Gemini HLE NO. Four daemons single/canonical. No overdue decisions, watchlist triggers, hurdle flags, UMA alerts or Ostium change.
 
 ## Operations
 
-All 12 captured CLI checks returned rc0. Four daemons were single/canonical; no restart. Full next check Oct20 02:00 UTC. Idaho pull Oct19 22:00 UTC. Weekly P&L not due until Oct23. Off-chain brokerage/Sunday catch-up remain retired. Scheduled runs end after the due check; no indefinite goal or idle follow-up. See [operations record](../data/deep_review_20261017/work/tick1400_ops.json) and [raw CLI manifest](../data/deep_review_20261017/work/tick1400_cli_manifest.json).
+All 13 captured CLI commands rc0; insurance audit clean (7 indexed + 1 deindexed claim); no transaction broadcast. Four BUYs/$7.52 remain; Idaho pull Oct19 22:00 UTC. Next full check Oct20 02:00 UTC; weekly P&L due Oct23, monthly Nov12. Source packets retain actual response clocks and hashes; compute these fields from receipts, never transcribe them. Scheduled runs are bounded; no indefinite goal or idle follow-up. See [operations](../data/deep_review_20261017/work/tick1427_ops.json), [CLI manifest](../data/deep_review_20261017/work/tick1427_cli_manifest.json), and [scan summary](../data/checkin_20261019T1427_public_summary.json). Off-chain brokerage/Sunday catch-up remain retired.

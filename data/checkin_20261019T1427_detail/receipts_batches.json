@@ -1,0 +1,52 @@
+{
+  "schema": "cli_receipts.v1",
+  "receipts": [
+    {
+      "name": "polymarket_consistency_scan",
+      "argv": [
+        ".venv/bin/python",
+        "scripts/polymarket_consistency_scan.py"
+      ],
+      "start_utc": "2026-10-19T14:28:59.765682Z",
+      "end_utc": "2026-10-19T14:29:36.402425Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1427/scans/polymarket_consistency_scan.stdout",
+        "bytes": 1193,
+        "sha256": "fbd948c5c4d1677cf9c4ea14e144a89874893632601ab0e6e921a80c0a287f27"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1427/scans/polymarket_consistency_scan.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "sports_pm_scan",
+      "argv": [
+        ".venv/bin/python",
+        "scripts/sports_pm_scan.py",
+        "--hours",
+        "36",
+        "--with-consensus",
+        "--consensus-top-n",
+        "3"
+      ],
+      "start_utc": "2026-10-19T14:28:16.571575Z",
+      "end_utc": "2026-10-19T14:28:56.074502Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1427/scans/sports_pm_scan.stdout",
+        "bytes": 1741,
+        "sha256": "f40d7a45fe196a8ed364ff56b52437395893832e7270b51a2e3d34d086e41c41"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1427/scans/sports_pm_scan.stderr",
+        "bytes": 536,
+        "sha256": "d0c6955eee71ab1e96c8cb5ae3a036b79258bca35bc6819f556e4e5b365f6480"
+      }
+    }
+  ]
+}

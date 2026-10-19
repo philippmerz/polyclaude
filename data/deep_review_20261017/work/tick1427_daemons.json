@@ -1,0 +1,64 @@
+{
+  "observed_utc": "2026-10-19T14:31:32.157223Z",
+  "news_status_rc": 0,
+  "news_status_receipt": "logs/tick1427_private/cli/news_watcher_status.stdout.txt.gz",
+  "daemon_metadata": {
+    "news_watcher.py": {
+      "count": 1,
+      "single": true,
+      "script_mtime_utc": "2026-10-18T22:58:44.443045Z",
+      "processes": [
+        {
+          "script": "news_watcher.py",
+          "pid": 148881,
+          "create_time_utc": "2026-10-19T05:28:37.310000Z",
+          "script_mtime_precedes_start": true
+        }
+      ]
+    },
+    "heartbeat_watch.py": {
+      "count": 1,
+      "single": true,
+      "script_mtime_utc": "2026-10-02T14:31:39.989785Z",
+      "processes": [
+        {
+          "script": "heartbeat_watch.py",
+          "pid": 450,
+          "create_time_utc": "2026-10-18T09:33:44.960000Z",
+          "script_mtime_precedes_start": true
+        }
+      ]
+    },
+    "telegram_listener.py": {
+      "count": 1,
+      "single": true,
+      "script_mtime_utc": "2026-09-10T18:34:57.001351Z",
+      "processes": [
+        {
+          "script": "telegram_listener.py",
+          "pid": 451,
+          "create_time_utc": "2026-10-18T09:33:44.990000Z",
+          "script_mtime_precedes_start": true
+        }
+      ]
+    },
+    "opportunity_watch.py": {
+      "count": 1,
+      "single": true,
+      "script_mtime_utc": "2026-09-29T10:07:53.974910Z",
+      "processes": [
+        {
+          "script": "opportunity_watch.py",
+          "pid": 425,
+          "create_time_utc": "2026-10-18T09:33:44.720000Z",
+          "script_mtime_precedes_start": true
+        }
+      ]
+    }
+  },
+  "news_state_metadata_only": {
+    "mtime_utc": "2026-10-19T14:27:06.061071Z",
+    "bytes": 556220
+  },
+  "note": "Process argument strings and state contents were not retained or printed; state file stat only."
+}

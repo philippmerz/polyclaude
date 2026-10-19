@@ -1,0 +1,47 @@
+{
+  "schema": "batch_audit.v1",
+  "kind": "thin_tail",
+  "range": [
+    41,
+    42
+  ],
+  "batches": [
+    {
+      "batch_id": 41,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        281,
+        292
+      ],
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 13
+      },
+      "changed_field_counts": {
+        "best_ask": 2,
+        "best_bid": 3,
+        "spread": 1
+      },
+      "section_sha256": "f0bf5f74827ce0bff950266feef6267648924532334cff139c0d08cc0d6c7e46"
+    },
+    {
+      "batch_id": 42,
+      "declared_market_rows": 5,
+      "parsed_market_rows": 5,
+      "rank_range": [
+        293,
+        296
+      ],
+      "status_counts": {
+        "changed": 2,
+        "context_unchanged": 3
+      },
+      "changed_field_counts": {
+        "best_ask": 1,
+        "best_bid": 1
+      },
+      "section_sha256": "3242a355a28e571e8e85eaad899610787eabf64f3b4a2cfbd96308942638873e"
+    }
+  ]
+}

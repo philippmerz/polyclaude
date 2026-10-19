@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 215 recorded observations from Apr-25
+The local performance CSV now has 216 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -86,15 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 19 14:00 UTC
+## Last audited snapshot — October 19 14:27 UTC
 
-**Account $196.29 including $5.79 separately funded gas; trading midpoint $190.50 / indicative depth $187.49.** PM sleeve $35.36 / $32.35. Bankroll window 14:01:47.886–14:02:02.920 UTC; rounded, sequential inputs, not synchronized NAV or certified proceeds. The $20.73 residual is accounting arithmetic, not audited cash profit; VM/API excluded. [Check-in](research/2026-10-19-1400-checkin.md).
+**Authoritative bankroll $196.26 including $5.78 separate gas; trading midpoint $190.48 / indicative depth $187.45; PM $35.34 / $32.31.** Capture window 14:30:21.173767–14:30:36.207726 UTC. Rounded sequential inputs are not synchronized NAV or certified proceeds; the $20.73 residual is accounting arithmetic, not audited cash profit. [Check-in](research/2026-10-19-1427-checkin.md).
 
-Four authenticated BUYs remain live/zero-matched with four exact reservations and $7.52 full-fill risk; eight position identities, sizes and totalBought are unchanged. Idaho 34 YES at 3¢/$1.02 remains under its existing terms with a binding 22:00 UTC pull and cancel-first on material poll/candidate/ballot/turnout evidence. [Current orders](notes/resting_orders.md).
+Four authenticated BUYs remain live/zero-matched with four exact reservations and $7.52 full-fill risk; eight position identities, sizes and total-bought quantities are unchanged, while marks changed. Idaho 34 YES at 3¢/$1.02 remains under existing terms, with an all-unfilled 22:00 UTC pull and cancel-first on material poll/candidate/ballot/turnout evidence. [Current orders](notes/resting_orders.md).
 
-MI, Messi, OpenRouter and Whalefall remain/no-add; Clarity remains only as the whole 29/29 pair. No new poll, final Whalefall result, fill or valuation credit was verified. The Oct16–18 $8m weekend is still an estimate; exactly $8m final does not meet the strict less-than-$8m rule. No automatic Kelly additions or maker-at-fair on hidden information. [Risk decision](data/deep_review_20261017/work/tick1400_root_risk.json) · [source delta](data/deep_review_20261017/work/tick1400_alert_delta.json).
+Retain current holdings; no additions, new maker exits, orders or numerical-prior changes. MI remains U.S. Senate; Messi is Global Athletes Top5 (not US People; March 31 fallback); OpenRouter uses the four specified weekly labels; Clarity uses the first qualifying final passage. Whalefall is still an $8m estimate, not final. Case 353 retains its exact ISW boundary gate; 355/356 remain facts-only. Cases 317/340 are withdrawn and unplaced; canceled orders stay closed and must never be replayed. [Risk decision](data/deep_review_20261017/work/tick1427_root_risk.json) · [current orders/history](notes/resting_orders.md).
 
-All 12 required CLI checks returned rc0; no overdue decisions, watchlist/hurdle hits, UMA alerts, Ostium trades or winning redeemables. Bounded discovery was page-capped; omitted candidates remain unreviewed, not rejected. Four daemons were single/canonical; no restart. News review watermark: 14:04:37 UTC. Next full check Oct20 02:00 UTC. Weekly P&L is not due until Oct23. [Operations](data/deep_review_20261017/work/tick1400_ops.json).
+All 13 captured CLI checks returned rc0; no overdue decisions, watchlist triggers, hurdle flags, UMA alerts, Ostium change or winning redeemables. Scans were page-capped; omitted candidates remain unreviewed, not rejected. Four daemons were single/canonical. News review watermark: 14:32:22 UTC. Next full check Oct20 02:00 UTC; Idaho pull Oct19 22:00 UTC. Weekly P&L is not due until Oct23. [Operations](data/deep_review_20261017/work/tick1427_ops.json) · [scan summary](data/checkin_20261019T1427_public_summary.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

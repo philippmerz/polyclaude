@@ -1,0 +1,62 @@
+{
+  "schema": "batch_audit.v1",
+  "aggregate": {
+    "kind": "primary",
+    "batch_count": 1,
+    "emitted_rows": 17,
+    "unique_market_ids": 17,
+    "unique_condition_ids": 17,
+    "duplicate_market_id_rows": 0,
+    "rank_range": [
+      1,
+      11
+    ],
+    "status_counts": {
+      "changed": 9,
+      "new_to_snapshot": 2,
+      "context_unchanged": 6
+    },
+    "changed_field_counts": {
+      "tick": 5,
+      "best_ask": 9,
+      "best_bid": 9,
+      "outcome_prices": 9,
+      "new_to_snapshot": 2,
+      "no_price": 1,
+      "yes_price": 1
+    },
+    "semantic_context_incomplete_rows": 0,
+    "missing_criteria_proof_rows": 0,
+    "source_integrity_verified": true,
+    "prior_omitted_warning": [
+      "- 2 prior market(s) are absent from the current filtered shortlist; omission is not evidence of closure or resolution"
+    ],
+    "source_stdout_sha256": "573e38915222d2f6df9045d7c916f3dfd3af1972b34d4b0a897e4eca92bbd223"
+  },
+  "batches": [
+    {
+      "batch_id": 1,
+      "declared_market_rows": 17,
+      "parsed_market_rows": 17,
+      "rank_range": [
+        1,
+        11
+      ],
+      "status_counts": {
+        "changed": 9,
+        "new_to_snapshot": 2,
+        "context_unchanged": 6
+      },
+      "changed_field_counts": {
+        "tick": 5,
+        "best_ask": 9,
+        "best_bid": 9,
+        "outcome_prices": 9,
+        "new_to_snapshot": 2,
+        "no_price": 1,
+        "yes_price": 1
+      },
+      "section_sha256": "81ca026ceb8b285f742b948a992b99eb1e79a805aba76e26fe58e64bd018e433"
+    }
+  ]
+}

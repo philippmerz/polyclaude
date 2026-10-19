@@ -1,0 +1,57 @@
+{
+  "schema": "cli_receipts.v1",
+  "receipts": [
+    {
+      "name": "discover_primary",
+      "argv": [
+        ".venv/bin/python",
+        "scripts/discover_markets.py"
+      ],
+      "start_utc": "2026-10-19T14:28:10.469824Z",
+      "end_utc": "2026-10-19T14:28:11.487490Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1427/scans/discover_primary.stdout",
+        "bytes": 5921,
+        "sha256": "32b13f9e571013babd4c7949e48577706334a5c0605b641661dab9bfb9f59110"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1427/scans/discover_primary.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "discover_thin_tail",
+      "argv": [
+        ".venv/bin/python",
+        "scripts/discover_markets.py",
+        "--min-liquidity",
+        "500",
+        "--min-vol24",
+        "20",
+        "--max-pages",
+        "20",
+        "--via-events",
+        "--clears-hurdle-only",
+        "--top",
+        "3000"
+      ],
+      "start_utc": "2026-10-19T14:28:11.488235Z",
+      "end_utc": "2026-10-19T14:28:16.571131Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1427/scans/discover_thin_tail.stdout",
+        "bytes": 9537,
+        "sha256": "61d20f0ab9d26e00aaf2d8c37712547dbf69688714bb12dfe9ca922c072110af"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1427/scans/discover_thin_tail.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "compiled_utc": "2026-10-19T14:29:28.545503Z",
+  "scope": "Single read-only post-status inventory. Captures are SDK/helper result serialization with call-window times, not raw wire bodies.",
+  "orders": {
+    "status_code": 200,
+    "pagination_terminal": true,
+    "count": 4,
+    "buy_count": 4,
+    "matched_buy_shares": 0.0,
+    "open_buy_full_notional_usd": 7.52,
+    "same_terms_as_1400": true,
+    "terms_sha256": "1f0ce1d3ebf8c18550e7fced8d425775933770a461567821c59c24f3c3656d68",
+    "receipt": {
+      "path": "logs/tick1427_private/account_reads_02/open_orders.receipt.json",
+      "body_path": "logs/tick1427_private/account_reads_02/open_orders.body.json.gz",
+      "raw_sha256": "2a001cc730c9189ff33aa2100cef2e085b7567ff25387921d2a615e450309bcf",
+      "gzip_sha256": "8cf75b03a19c7f051f5a26f2ce59e4008fdc294ba18048d1d26f24c4c5a6cc36",
+      "started_utc": "2026-10-19T14:29:09.281694Z",
+      "received_utc": "2026-10-19T14:29:09.527558Z"
+    }
+  },
+  "positions": {
+    "count": 8,
+    "same_frozen_identity_outcome_size_totalBought_redeemable_as_1400": true,
+    "core_sha256": "a735f4bb70fc4d091f90fe9cd9f9ac897e901fa3285052694816ce409fc87421",
+    "mark_changes_excluded_from_comparison": true,
+    "receipt": {
+      "path": "logs/tick1427_private/account_reads_02/positions.receipt.json",
+      "body_path": "logs/tick1427_private/account_reads_02/positions.body.json.gz",
+      "raw_sha256": "4a741c70522f3e03fa78aa9be8acaccf8bf11473d63b2622fee57910618d45f7",
+      "gzip_sha256": "d797074f9ce49081d840f52ef3616dc9a4558abab740420043246159a4b6a7f2",
+      "started_utc": "2026-10-19T14:29:09.537041Z",
+      "received_utc": "2026-10-19T14:29:09.953884Z"
+    }
+  },
+  "reservations": {
+    "count": 4,
+    "same_order_condition_asset_shares_risk_state_as_1400": true,
+    "core_sha256": "97764d228ec4e4cc2edeceaf973c7cbcb71674d96bd204d7116d77b8594ee0be",
+    "receipt": {
+      "path": "logs/tick1427_private/account_reads_02/reservations.receipt.json",
+      "body_path": "logs/tick1427_private/account_reads_02/reservations.body.json.gz",
+      "raw_sha256": "e39f6976abd7c2505b9917cdbc945ac28ce686eedc392f86f525c9c55ee60c6a",
+      "gzip_sha256": "60b304df9898c8b35d2248b6a50983acea4393dd981e96723f4b33aa6916fd39",
+      "started_utc": "2026-10-19T14:29:09.963921Z",
+      "received_utc": "2026-10-19T14:29:09.968466Z"
+    }
+  },
+  "baseline": "logs/periodic_20261019T1400_account_private_140103 and data/deep_review_20261017/work/tick1400_account.json",
+  "issues": []
+}

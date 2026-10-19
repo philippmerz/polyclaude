@@ -1,0 +1,183 @@
+{
+  "schema": "batch_audit.v1",
+  "kind": "thin_tail",
+  "range": [
+    33,
+    40
+  ],
+  "batches": [
+    {
+      "batch_id": 33,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        225,
+        280
+      ],
+      "status_counts": {
+        "changed": 10,
+        "context_unchanged": 10
+      },
+      "changed_field_counts": {
+        "best_ask": 9,
+        "best_bid": 8,
+        "no_price": 7,
+        "yes_price": 7,
+        "outcome_prices": 7,
+        "spread": 1
+      },
+      "section_sha256": "038d702073b93674b62941a83954ac23d7113705bd7619b968ae6a4eacc174bb"
+    },
+    {
+      "batch_id": 34,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        233,
+        284
+      ],
+      "status_counts": {
+        "changed": 7,
+        "context_unchanged": 11
+      },
+      "changed_field_counts": {
+        "best_ask": 6,
+        "best_bid": 6,
+        "no_price": 6,
+        "yes_price": 6,
+        "outcome_prices": 6
+      },
+      "section_sha256": "8ad7b0f9cbabb967f309f134618c022b50d1cc1cecebc289afe9d51f4098e442"
+    },
+    {
+      "batch_id": 35,
+      "declared_market_rows": 19,
+      "parsed_market_rows": 19,
+      "rank_range": [
+        239,
+        288
+      ],
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 13
+      },
+      "changed_field_counts": {
+        "best_ask": 5,
+        "best_bid": 5,
+        "no_price": 4,
+        "yes_price": 4,
+        "outcome_prices": 4,
+        "spread": 1
+      },
+      "section_sha256": "076d3f53f66f94c7050354df95f256c9a2de45707f86af8c62957247b1c37c58"
+    },
+    {
+      "batch_id": 36,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        246,
+        253
+      ],
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 15
+      },
+      "changed_field_counts": {
+        "best_ask": 2,
+        "spread": 3,
+        "no_price": 2,
+        "yes_price": 2,
+        "outcome_prices": 2,
+        "best_bid": 3
+      },
+      "section_sha256": "0a2be09aa2250b2f25b3bfa353771939f54bec9e93aa7f81f619a85f3d656a1a"
+    },
+    {
+      "batch_id": 37,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        254,
+        259
+      ],
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 15
+      },
+      "changed_field_counts": {
+        "best_ask": 2,
+        "spread": 3,
+        "best_bid": 2,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "8b3298bd580efac42978ee4bebcfdbf5658c1f945ca16e032f3a330cc7668f0f"
+    },
+    {
+      "batch_id": 38,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        260,
+        260
+      ],
+      "status_counts": {
+        "changed": 1,
+        "context_unchanged": 17
+      },
+      "changed_field_counts": {
+        "best_ask": 1,
+        "best_bid": 1,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "f3a89790d56518b7241c8303029997396b89dcb4c5d92bfa50aa68491dc87b75"
+    },
+    {
+      "batch_id": 39,
+      "declared_market_rows": 20,
+      "parsed_market_rows": 20,
+      "rank_range": [
+        261,
+        295
+      ],
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 14
+      },
+      "changed_field_counts": {
+        "best_bid": 4,
+        "best_ask": 3,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "609c4c1a3f5c1c923c3cac451441c478b6f55a40d9c9d043c6596c6d102fc8a9"
+    },
+    {
+      "batch_id": 40,
+      "declared_market_rows": 18,
+      "parsed_market_rows": 18,
+      "rank_range": [
+        268,
+        279
+      ],
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 13
+      },
+      "changed_field_counts": {
+        "best_ask": 3,
+        "best_bid": 2,
+        "spread": 2,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "section_sha256": "4f5370b3f2d908323c833bdde2eeb7e6d6c4419df6c6bd0e057f9e2472d38fee"
+    }
+  ]
+}
