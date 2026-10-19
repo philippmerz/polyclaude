@@ -1,0 +1,167 @@
+{
+  "review_index": 317,
+  "condition_id": "0x8ab4ef09c4d357811b4250f8fd9acfb662c3cfdee847188800873c8c23aefdd3",
+  "criteria_sha256": "2d42efce67a50d391f18c4a7c57ad2acc89e506481a217da00839d21a4a21482",
+  "status": "valued",
+  "literal_analysis": "Qualifyingcomprehensivecrypto-marketstructurefederallaw byDec31ET;3jointsubstantivetests/stablecoin-only,agencyrules,EO,tax/CBDConlyexcluded. Bicameralpassage/signatureorotherformal enactment; notheldSenatevotecountpair.",
+  "evidence": [
+    {
+      "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3633.xml",
+      "observed_utc": "2026-10-19T08:42:36.193921Z",
+      "finding": "OfficialSep17modifiedsnapshotrecordsSep15failedmotion-to-proceedcloture/reconsideration/amendment; notenactment/finalpassage/currentOct19certification."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CCAL-119hcal-2026-10-13/html/CCAL-119hcal-2026-10-13-pt9.htm",
+      "observed_utc": "2026-10-19T08:50:00Z",
+      "finding": "Oct13historyHousepassedJul172025/SenateBankingreportedJun12026. LaterindexmodOct16isnotcompletecurrentstatus; otherqualifyingbillsunresolved."
+    },
+    {
+      "url": "https://www.dailypress.senate.gov/",
+      "observed_utc": "2026-10-19T12:07:15.709005Z",
+      "finding": "Rootread/hashverifiednobusinessexpectedatproformasthroughNov5; Nov9returnanotherbill. Notno-lawproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.29,
+    "low": 0.1,
+    "high": 0.8,
+    "method": "Legislative enactment scenario revised for actual procedural tally and current business calendar, not failed-fetch absence.",
+    "reasoning": "Original40%forecast used45%futuremainSenatepassage without current floor/coalition evidence. Root verifiedGovInfo failedSep15cloture49–50, reconsideration/amendment, and actualOct19SenateDailyPress schedule: no business expected throughNov5, returnNov9foranotherbill. This leaves lame-duckroute but more calendar/coalitionwork than primary40%modeltreated. Revise mainSenatebranch45→30%, otherconditionals/status-gapmassunchanged=>28.565%,round29%. Weightchange is judgment, not statisticalvoteprojection. CommitteeandHouseprogresssupportnonzerochance; negotiationscancontinueofffloor. Failedfetches/lackhitsdoNOTcausepdroporproveabsenceofotherlaw.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0317_primary_1222.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_317_0852.json",
+    "quote_file_sha256": "89385da3cddcac3c6c316c360105f42d0836ecf5bc7be9975bacd406fcde26ca",
+    "quote_capture_utc": "2026-10-19T08:50:36.589506+00:00",
+    "gamma_received_utc": "2026-10-19T08:50:36.369753+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.29,
+        "selected_stress_probability": 0.08999999999999997,
+        "best_bid": 0.096,
+        "best_ask": 0.103,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792399787115",
+        "book_received_utc": "2026-10-19T08:50:36.502411+00:00",
+        "book_age_seconds_at_receipt": 49.38741087913513,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.03,
+            "fee": 0.03696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.103
+              }
+            ],
+            "net": 1.0669600000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.96,
+            "fee": 0.03472,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.096
+              }
+            ],
+            "net": 0.92528
+          }
+        },
+        "taker_cost_usd": 1.0669600000000001,
+        "central_expected_profit_usd": 1.8330399999999998,
+        "selected_stress_profit_usd": -0.16696000000000044,
+        "break_even_before_carry": 0.10669600000000001,
+        "break_even_constant_carry": 0.1073695222304664,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.71,
+        "selected_stress_probability": 0.51,
+        "best_bid": 0.897,
+        "best_ask": 0.904,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792399787115",
+        "book_received_utc": "2026-10-19T08:50:36.502411+00:00",
+        "book_age_seconds_at_receipt": 49.38741087913513,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.040000000000001,
+            "fee": 0.03472,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.904
+              }
+            ],
+            "net": 9.074720000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.97,
+            "fee": 0.03696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.897
+              }
+            ],
+            "net": 8.93304
+          }
+        },
+        "taker_cost_usd": 9.074720000000001,
+        "central_expected_profit_usd": -1.9747200000000014,
+        "selected_stress_profit_usd": -3.9747200000000014,
+        "break_even_before_carry": 0.9074720000000001,
+        "break_even_constant_carry": 0.9132004487284042,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Unplacedcandidatewithdrawn: primary40→29% afteractual49–50cloture/currentproformaNov9calendar; selected9%belowdated9.6/10.3. Noentry; heldvotecountpairdistinct.",
+  "reopen_condition": "Substantivenegotiatedtext/currentcoalition-floorplan/otherqualifyingenactmentroute, thenfreshentryunderwriting.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T12:21:54.713966+00:00",
+  "question": "Crypto Market Structure legislation becomes law in 2026?",
+  "market_id": "3190125",
+  "valuation_author": "primary_operator",
+  "original_index": 317,
+  "report_sha256": "0a8f21d186435455bf57a227670a63f117396baf1e8452e2d4556f3cd9ff47ae",
+  "revision_reason": "Actual49–50failedcloture and currentproforma/Nov9calendar lower mainSenatepassagebranch; withdrawunplacedcandidate, preservefullrule/otherlawcoveragegaps/heldpairidentity.",
+  "prior_report_sha256": "37328d83b79f28ed402a2f3ecb70eb2268c0981efffeb6fa555581ba6bead545",
+  "report_path": "revisions/0317_20261019T122154712878Z.md",
+  "revision_path": "revisions/0317_20261019T122154712878Z.json"
+}

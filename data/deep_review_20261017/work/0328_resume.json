@@ -1,0 +1,13 @@
+{
+  "review_index": 328,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0328_google_people_facts.json",
+    "work/0328_google_trends_followup_1112.json",
+    "work/0328_trends_1120_facts.json"
+  ],
+  "model_path": "research/2026-10-17-deep-review/models/0328_primary_block_1123.json",
+  "input": "data/deep_review_20261017/work/0328_primary_block_input_1123.json",
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0328.md",
+  "effective_report_sha256": "941c73b914247d2e61897708a5c07a468e64a3401838bfd71c9f8e57859ca082"
+}

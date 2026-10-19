@@ -1,0 +1,32 @@
+{
+  "schema": "primary_case0322_model.v1",
+  "authored_utc": "2026-10-19T10:55:04.021005+00:00",
+  "p_yes": 0.14,
+  "range_yes": [
+    0.02,
+    0.5
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.71,
+  "literal": "AnyMoonshotKimi>=65 HLEAccuracy/equivalent byDec31ET, officialagi.safe.ai; full2026window,notonlypost-marketcreation. Othermetricsnotqualifying. Officialelsewhere fallbackconditionalonsourceunavailable, noofficialalt\u2192NO.",
+  "current_evidence": "OfficialAPI65rows/KimiK3=41.08,K2.6=35.48,K2.5=25.4,K2=21.4. APIAge1576s/byteidenticalpriorOct18,notnewboardupdate. IssuerK3HLE-Full43.5withouttools/56withtools are differentconfig/metric,neither65.",
+  "method": "Explicitunfittedrelease/threshold/official-source-admission event tree; no extrapolated score treatedasprobability.",
+  "tree": {
+    "material_update_or_already_unobserved_release_by_cutoff": 0.65,
+    "threshold65_matchingmetric_given_update": 0.25,
+    "official_qualifying_record_given65": 0.75,
+    "no_material_update": 0.35,
+    "qualifying_remeasurement_tools_or_configuration_withoutnewweights": 0.08,
+    "official_admission_this_branch": 0.5,
+    "computed_p": 0.13587500000000002
+  },
+  "rounding": "13.5875% rounded14%; exactdecimalisnotprecisionclaim. Branchesdefineddisjointupdate vsno-update.",
+  "forecast_bridge": "Threeobserved2026releasefamiliesJan29/Apr20/Jul16 suggest possible furtherrelease during~73remainingdays, not an announced schedule. Currentboard41.08 requires+23.92pp; K3issuer56withtools is nearer butnotautomaticallyofficialboardmetric. Missedupdates andtool/config changesallowYES; admission/time/sourcefalldelaycanproduceNOevenwithcapability.",
+  "dependence": "Release/score/officialadmission correlated; product is conditional judgment,not independentestimatedevents. No proof currentpagecoversallhistoricalqualifyingrecords; no existing65+ observed in boundedAPI/issuerpass.",
+  "reserve_reason": "10pp ordinarymodeluncertainty+5pp hiddenrelease/scoreconditional-fillandadjudicationrisk. Not a calibratedfloor; higheruncertaintydoesnotclaimzeroYESphysically.",
+  "source_and_horizon_limits": "Cachedresponse/releaseDate notscorepublicationclock; frontendUPDATINGalone notunavailabilityproof. Sourcecanchange/restructureandmarketcanwait/fallbackafterDec31; normalJanresolutionnotguaranteed.",
+  "sensitivity": "Betternewmodel,larger65conditionalorrapidtoolsadmissioncanmakeYES30\u201350%; nofurtherrelease/slowofficialupdatescanmake2%. Preannouncedpubliccapabilityorofficial65postingwoulddemandimmediaterevision, nottailfading.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

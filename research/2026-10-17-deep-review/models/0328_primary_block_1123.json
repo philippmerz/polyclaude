@@ -1,0 +1,27 @@
+{
+  "schema": "primary_case0328_blocked.v1",
+  "authored_utc": "2026-10-19T11:22:12.297013+00:00",
+  "adopted_probability": null,
+  "exact_metric": "Google official2026 UnitedStates People rank1; trending growth not total volume, category/region exact.",
+  "verified_sources": [
+    "work/0328_google_people_facts.json",
+    "work/0328_google_trends_followup_1112.json",
+    "work/0328_trends_1120_facts.json"
+  ],
+  "substantive_hypothesis": "A nationally salient missing-person case with a small prior-year baseline could lead annual trending growth; lack of fame is not a rejection. Nancy and Savannah are different queries. Living/deceased-category treatment and late major new candidates may reverse the result.",
+  "primary_evidence_read": "Root hash-verified/read original2025Google method and currentFBIbody. Historical2021–25USPeople leaders span crime, celebrity, sports and politics; not an exchangeable base-rate sample for Nancy. No death finding assumed from missing status.",
+  "blocker": "No matched Nancy same-window prior/current-year measurement or otherwise defensible relative-growth/People-eligibility model against the 2026 field. Existing selected5-term series excludesNancy. Fresh ordinary37h-later matched request11:18got429, stopped/no workaround. InternalYISranking cannot be reconstructed from normalized index alone even with public data.",
+  "decision_boundaries": {
+    "selected_reserve_pp_if_ordinary_instance": 15,
+    "YES_join_maker_before_carry_p_required": 0.22299999999999998,
+    "YES_taker_before_carry_p_required": 0.25554,
+    "NO_join_maker_before_carry_max_p_yes": -0.049000000000000044,
+    "NO_taker_before_carry_max_p_yes": -0.0803839999999999
+  },
+  "scenario_probabilities_only": [
+    0.05,
+    0.15,
+    0.35
+  ],
+  "no_point_forecast_or_entry": true
+}

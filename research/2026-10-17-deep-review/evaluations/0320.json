@@ -1,0 +1,163 @@
+{
+  "review_index": 320,
+  "condition_id": "0xd2c852aa9907e39c7152a8329d95728d34f1c356485631a76bc68e73fa8786e0",
+  "criteria_sha256": "71860a2a7079a09ed4dcc4c52465025a56854dba8a3c70d1b70224034669543d",
+  "status": "valued",
+  "literal_analysis": "Exactofficialseed1–4in2026–27CFPbracket;notqualification/champion/APrank. Cancellation/noDec20bracketNO;selectionDec6beforeprojectend.",
+  "evidence": [
+    {
+      "url": "https://lsusports.net/sports/fb/schedule/season/2026",
+      "observed_utc": "2026-10-19T10:43:36.668092Z",
+      "finding": "Official5–2record/sevenresults/fiveremainingopponents;fullbodyhashverified."
+    },
+    {
+      "url": "https://lsusports.net/news/2026/10/18/oct-18-football-national-rankings",
+      "observed_utc": "2026-10-19T10:46:27.505490Z",
+      "finding": "LSUAP18/Coaches17;ordinal,notprobability."
+    },
+    {
+      "url": "https://collegefootballplayoff.com/sports/2026/8/9/bracket-place-holder",
+      "observed_utc": "2026-10-19T10:44:00.499738Z",
+      "finding": "12teamfield,rankingseed1–4byes;Dec6selection;fullparagraphread/hashverified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.001,
+    "high": 0.2,
+    "method": "Unfittedlatentstrength+conference/committeebranches.",
+    "reasoning": "Twoexistinglosses,AP18andfivegamesincludingthreehighlyrankedopponents/threeaway. Weightedstrengthsweepandtop4branches≈2.4%,rounded3%;rangebroad,power/injury/tiebreakgaps explicit.",
+    "actual_entry_reserve_pp": 10,
+    "model_path": "research/2026-10-17-deep-review/models/0320_primary_1050.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1043_0320_0322_0324.json",
+    "quote_file_sha256": "cb98aeed4304c9199249de82bd7eac2b0baaf5eef341eef5a5ea427e037b9c03",
+    "quote_capture_utc": "2026-10-19T10:43:52.153792+00:00",
+    "gamma_received_utc": "2026-10-19T10:43:51.567260+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 63.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "selected_stress_probability": 0,
+        "best_bid": 0.05,
+        "best_ask": 0.07,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792406631490",
+        "book_received_utc": "2026-10-19T10:43:52.004127+00:00",
+        "book_age_seconds_at_receipt": 0.5141270160675049,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.7000000000000001,
+            "fee": 0.03255,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.07
+              }
+            ],
+            "net": 0.73255
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.05
+              }
+            ],
+            "net": 0.47624
+          }
+        },
+        "taker_cost_usd": 0.73255,
+        "central_expected_profit_usd": -0.43255000000000005,
+        "selected_stress_profit_usd": -0.73255,
+        "break_even_before_carry": 0.073255,
+        "break_even_constant_carry": 0.07364850167211393,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.97,
+        "selected_stress_probability": 0.87,
+        "best_bid": 0.93,
+        "best_ask": 0.95,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792406631490",
+        "book_received_utc": "2026-10-19T10:43:52.004127+00:00",
+        "book_age_seconds_at_receipt": 0.5141270160675049,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.95
+              }
+            ],
+            "net": 9.52376
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.3,
+            "fee": 0.03255,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.93
+              }
+            ],
+            "net": 9.26745
+          }
+        },
+        "taker_cost_usd": 9.52376,
+        "central_expected_profit_usd": 0.17623999999999995,
+        "selected_stress_profit_usd": -0.82376,
+        "break_even_before_carry": 0.9523759999999999,
+        "break_even_constant_carry": 0.9574918494093394,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentryatcurrenttaker/joinmakerselectedeconomics;NOcentralpositivebutstressnegative. HypotheticalcheaperNOrequiresfreshreview,notcap/liquidityrejection.",
+  "reopen_condition": "Game/injury/CFPcommittee/formatnewsormaterialcheaperNOquote,thenfreshsource/conditionalfill/accountgates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T10:50:41.962391+00:00",
+  "question": "Will LSU be a top 4 seed in the 2027 College Football Playoffs?",
+  "market_id": "3362505",
+  "valuation_author": "primary_operator",
+  "original_index": 320,
+  "report_sha256": "2b2fd0cadcb5237caca19672a32471f67a88be6d775f175d498ee889673b6b16"
+}

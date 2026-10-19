@@ -1,0 +1,16 @@
+{
+  "review_index": 349,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "model_path": "research/2026-10-17-deep-review/models/0349_primary_1230.json",
+  "economics": "data/deep_review_20261017/work/0349_economics_1230.json",
+  "input": "data/deep_review_20261017/work/0349_primary_input_1230.json",
+  "source_paths": [
+    "work/0349_facts_1218.json",
+    "work/0349_source_followup_1220.json",
+    "work/0349_directional_facts_1225.json",
+    "work/0349_minutes_pdf_receipt_1230.json"
+  ],
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0349.md",
+  "effective_report_sha256": "f56a3888a938c83563660f508edfdd539e0055cba1e02e5fc7476ae9be1d0422",
+  "postvaluation_source_capture": "One ordinary PDF GET succeeded12:36:38.610UTC, rawSHA20bd14592b6b130cb9dfea3b21798e130573aa072948a4214a8a18b1a2194863; separate pointer capsule preserves receipt. No new content/probability/economics action."
+}

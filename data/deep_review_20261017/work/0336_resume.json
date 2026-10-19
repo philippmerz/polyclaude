@@ -1,0 +1,12 @@
+{
+  "review_index": 336,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0336_authority_facts_1120.json"
+  ],
+  "model_path": "research/2026-10-17-deep-review/models/0336_primary_1142.json",
+  "input": "data/deep_review_20261017/work/0336_primary_input_1142.json",
+  "economics": "work/0336_economics_1141.json",
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0336.md",
+  "effective_report_sha256": "b06301fef7e372ee670436e63dec469786e3543ae07f9467bd4913d049bb9a5f"
+}

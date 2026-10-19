@@ -1,0 +1,27 @@
+{
+  "schema": "deep_review.public_pdf_receipt.v1",
+  "compiled_utc": "2026-10-19T12:36:50.679938+00:00",
+  "review_index": 349,
+  "market_id": "4470027",
+  "conditionId": "0x2e8f33b84686fac2bb77eb7d1276f2d844f8d9952150a9581a75cf05161aeaf4",
+  "frozen_criteria_sha256": "f355db538e8c80321238ce5b0e20d96b8a877c05b2beb4102fef15705d74318d",
+  "source_url": "https://www.banrep.gov.co/es/print/pdf/node/66378",
+  "capture": {
+    "receipt": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.receipt.json",
+    "body_gzip": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.body.json.gz",
+    "started_utc": "2026-10-19T12:36:37.293409Z",
+    "received_utc": "2026-10-19T12:36:38.609947Z",
+    "timing_basis": "call_window",
+    "status": 200,
+    "content_type": "application/pdf",
+    "raw_bytes": 15420,
+    "raw_sha256": "20bd14592b6b130cb9dfea3b21798e130573aa072948a4214a8a18b1a2194863",
+    "gzip_sha256": "2133fd69f1ea7629362567208d34c7a197b85f695746029f13690709d057e84f",
+    "body_representation": "http_body",
+    "hash_scope": "supplied_bytes_only_not_wire_authentication",
+    "pdf_magic": "%PDF-1.7"
+  },
+  "read_status": "One ordinary GET; HTTP200 PDF, no challenge, no retry. Root has separately browser-read the three-page PDF; this capsule only adds durable raw capture and does not independently extract/interpret text.",
+  "root_read_facts_to_attach": "Per root: minutes show one of the four members in the +25bp majority initially preferred +50bp but joined +25; July ISE annual growth 1.1% versus June 3.5%; earthquake recovery, El Niño and fiscal measures are identified as information for future decisions. Use the captured PDF itself for direct verification.",
+  "relation_to_existing": "Supplements, does not overwrite work/0349_directional_facts_1225.json or work/0349_source_followup_1220.json."
+}

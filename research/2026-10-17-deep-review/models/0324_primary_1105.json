@@ -1,0 +1,62 @@
+{
+  "schema": "primary_case0324_model.v1",
+  "authored_utc": "2026-10-19T11:05:26.623318+00:00",
+  "p_yes": 0.4,
+  "range_yes": [
+    0.1,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.25,
+  "selected_no": 0.45,
+  "literal": "Lula mostvalidAPrunoffvotes, notnationalorfirst-roundwinner; tie alphabeticalfullnames meansnotassumeLulawins. NoresultbyJune302027Other;October25normalcasefitsJan,disputedcasecanoutlastit.",
+  "evidence": "RootindependentlyreproducedcompleteTSEAPBUfile/signedSHA512:267474totalrows,13996presidentialrows,1914sections;nominal464875/Lula212503/Flavio212278,other40094;blank4415/null7272/turnout476562. No duplicatedsection/office/type/candidatekeys.",
+  "denominator_limit": "BUfileNominal-coded votes,notseparatefinallegalvalidtable. LeonardoAvalanche17votesstatusunverified; excluding17doesnotflip225Lula first-roundlead. Noinferenceofrunoffwinnerfromfirst-roundtie.",
+  "regimes": [
+    {
+      "name": "opposition-lean transfers",
+      "weight": 0.45,
+      "other_fraction_to_Lula": 0.25,
+      "other_fraction_to_Flavio": 0.65,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.4825175180722647,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.12190857381308601,
+      "weighted_p": 0.054858858215888706
+    },
+    {
+      "name": "balanced transfers",
+      "weight": 0.4,
+      "other_fraction_to_Lula": 0.45,
+      "other_fraction_to_Flavio": 0.45,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.5002437164375938,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.5064816342435376,
+      "weighted_p": 0.20259265369741508
+    },
+    {
+      "name": "Lula-favoring transfer/turnout regime",
+      "weight": 0.15,
+      "other_fraction_to_Lula": 0.65,
+      "other_fraction_to_Flavio": 0.25,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.5179699148029231,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.8845403859173799,
+      "weighted_p": 0.13268105788760698
+    }
+  ],
+  "computed_p": 0.39013256980091077,
+  "rounding": "Roughly39% mixture rounded40%, notprecisionclaim.",
+  "method": "Unfittedother-votetransfer/turnoutmixture, GaussianresidualonfinalLulashare; notbinomialpopulationcountsampling oroldpollMOE.",
+  "forecast_bridge": "Near-even425kfirst-roundtop2base,40kothernominalvoters. Theirtransfer, differentialretention/newturnout/blankconversion dominate225votemargin. MajorityofothernominalvotesfromCury/Renan/Caiado; partylabelsverified,butpreferences/endorsementsnotmeasured. Regimeweights/transfers/98%retention/1.5ppsd are analystjudgments.",
+  "poll_context": "RealTimeAPSep3\u20137n1600secondarybody45Flavio/41Lula(+6blank/8DK),notpost-Oct4. AtlasAPSep27\u2013Oct2secondary50.7Lula/43.5Flavio conflicts;fieldworkentirelybeforeOct4,notstraddling. ExactAtlasquestion/denominatororiginalPDFpending; nopost-first-roundAPpollverifiedinboundedpass,notproofnoneexists. NotBayesianindependentmeasurements/doublecountedvoterchange.",
+  "reserve_reason": "10pp model +5pp unobservedpost-roundtransfer/measurement/source/conditional-fill uncertainty. Stressnotcalibratedfloor; broad10\u201365range includesbothdirections.",
+  "sensitivity": "Changingregimeweightsorlargefirst-roundcrossoverscanputYESnear10%or65%. P>=rough41%couldchangejoinmaker26ceconomicsbeforeallcosts; newcrediblepost-roundpoll materiallyvaluablesource,notcurrentauthorization.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

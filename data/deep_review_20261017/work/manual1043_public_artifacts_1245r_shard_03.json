@@ -1,0 +1,166 @@
+{
+  "entries": [
+    {
+      "body_raw_bytes": 74018,
+      "body_raw_sha256": "50d47fbbf8432ebde8d247a6264d0352701db4df8ef6a9e87731150b1ebcf3f3",
+      "bytes": 11351,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/banking_progress.body.json.gz",
+      "sha256": "63c61b81a6f5121edaeee89216f57d29613fe571bb5eb2a1501fe258867d7d28"
+    },
+    {
+      "bytes": 409,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/banking_progress.intent.json",
+      "sha256": "63f629195a00adc283837f8ccd2302db3d0ad4982c017c097296a3c685d36a62"
+    },
+    {
+      "bytes": 929,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/banking_progress.receipt.json",
+      "sha256": "965078b9d024a97873c478afc5a2b40fa8a743feadc94f79a975ccdd10672b5a"
+    },
+    {
+      "body_raw_bytes": 29104,
+      "body_raw_sha256": "c78d6b2ee8dc438e27577d32d31efa7391551b1a7eec3154ce90d852a5e39300",
+      "bytes": 5338,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/bulk_index.body.json.gz",
+      "sha256": "59611a7fa6f91cf9955a4a53a271ddb3d8deb57a0a7175ccf1c38466185f9003"
+    },
+    {
+      "bytes": 310,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/bulk_index.intent.json",
+      "sha256": "8c6fe80cc30b3b9e66a03c6f3a7e0445dad2c29a3ba79ce5972520dea1b5d9e3"
+    },
+    {
+      "bytes": 799,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/bulk_index.receipt.json",
+      "sha256": "5efdab9c266b810baddf5bac88883a00eca0be4de68a3778e8d8f8e5233cd387"
+    },
+    {
+      "body_raw_bytes": 58608,
+      "body_raw_sha256": "3a4361797b517b651ad365932965636ab353ed5f3795cf28b02f67031f2fdda6",
+      "bytes": 8955,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/hr3633_xml.body.json.gz",
+      "sha256": "43d9cef967b811eeef49780911e5b5a3e66d54e2252659635ac1d43c5f7ecf50"
+    },
+    {
+      "bytes": 342,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/hr3633_xml.intent.json",
+      "sha256": "aea2b32a69d9adea458a3cf0e4e1b94d764719fdadcec258657ffc59b11eccfa"
+    },
+    {
+      "bytes": 864,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/hr3633_xml.receipt.json",
+      "sha256": "7448572b240d60fae38759d859ffc59da769a79160bf0a6b9c038d5f41e9e8fb"
+    },
+    {
+      "body_raw_bytes": 299578,
+      "body_raw_sha256": "f5788ee1f2815f00566b3db96e6ac665eeb2b5274431ee8259b8d0ddfb936191",
+      "bytes": 45575,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/lummis_update.body.json.gz",
+      "sha256": "1ff5684c36cbc39c3d3ff8353c8def399e7b3140010d30cea4ce0d119ad26650"
+    },
+    {
+      "bytes": 356,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/lummis_update.intent.json",
+      "sha256": "39bef489f47ecc551a6781bfb010e4426c5003d462bd8e331ea5a300a6d1178b"
+    },
+    {
+      "bytes": 875,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_govinfo_0900/lummis_update.receipt.json",
+      "sha256": "d8afcf556de39b42a0df1e06155e568b1532572fd2a6d9003756e7b49f3a50bc"
+    },
+    {
+      "body_raw_bytes": 914190,
+      "body_raw_sha256": "63273fbd004859db4efd6347d868d094c0b78123a20c88d7c13ccd8cf46cf9bc",
+      "bytes": 42088,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_context.body.json.gz",
+      "sha256": "f224c62165aeb5373b40ca7e530d4edfb6929e1e25ac01efb8dc79c97f0da3ec"
+    },
+    {
+      "bytes": 370,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_context.intent.json",
+      "sha256": "fb6eb950eee98d16b172c6566a461ad41a377b9ad3b0cffbf52f3a7bd5df581f"
+    },
+    {
+      "bytes": 861,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_context.receipt.json",
+      "sha256": "96cd60d5d5940c590116b87fd294dcfae12633e02accd90b5f509a2bd30e7a01"
+    },
+    {
+      "body_raw_bytes": 3081,
+      "body_raw_sha256": "b1d09dd76065ce69f5053c9876ddec9bd7bd05b0e90d1b72526b5c42ed49964c",
+      "bytes": 785,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_text.body.json.gz",
+      "sha256": "d1b7a7b560573f49a04e2657fda707269b7c58a13758a1e2780030a175ec4769"
+    },
+    {
+      "bytes": 379,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_text.intent.json",
+      "sha256": "4f2d44169440b6066eea715c6ceb781bb4db51fa3076084a5d8359fa855fb969"
+    },
+    {
+      "bytes": 899,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/cri_text.receipt.json",
+      "sha256": "8e77e60a8f804498bd37271ebfb80f8430fd53725ea84d6faa97e97d95e0bf07"
+    },
+    {
+      "body_raw_bytes": 457576,
+      "body_raw_sha256": "7e484f3aa475c59c375a59db9394cda12aa4693513e1d12c9fd981db4f3173f3",
+      "bytes": 91591,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/house_calendar.body.json.gz",
+      "sha256": "869ccfae2538d99467316b1047ed95c4bfbab333e3cc9aa4c365c955923dc4d8"
+    },
+    {
+      "bytes": 383,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/house_calendar.intent.json",
+      "sha256": "b24003cf7bfce32ee07b3d482b21f317883a07f32301f86cca9ede103cead114"
+    },
+    {
+      "bytes": 911,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/house_calendar.receipt.json",
+      "sha256": "ae92c0dcd41d0881199066a3121d8b9e13f50fc71b93e9016b46cb234bb05619"
+    },
+    {
+      "body_raw_bytes": 7727,
+      "body_raw_sha256": "74faa45652119e66ec8ef86e811c5c0330044535d4d774cbdc3d930f20822169",
+      "bytes": 1862,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/senate_calendar.body.json.gz",
+      "sha256": "f0b0d2a1bae7833eb2f1e194d857983142e077cb31bdb7da8b13a860bc5873ad"
+    },
+    {
+      "bytes": 384,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/senate_calendar.intent.json",
+      "sha256": "abca86e2523a17b0c1ef112be9f4a039ed649ffc2e74ef43227ad8f6527ec094"
+    },
+    {
+      "bytes": 911,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_oct13_0900/senate_calendar.receipt.json",
+      "sha256": "cb4b110d00cf7b03e663a828c24562bf030a848c588b2b7681933b20e79e197c"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

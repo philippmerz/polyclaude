@@ -1,0 +1,36 @@
+{
+  "schema": "primary_case0343_model.v1",
+  "authored_utc": "2026-10-19T12:08:14.701015+00:00",
+  "p_yes": 0.22,
+  "range_yes": [
+    0.05,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "method": "Mutually exclusive first-trigger regime / formal-announcement forecast; not historical invocation frequency.",
+  "regimes": [
+    {
+      "name": "Election-related confrontation is first material trigger",
+      "weight": 0.25,
+      "formal_invocation_given_trigger": 0.45
+    },
+    {
+      "name": "Non-election disorder or court-limit confrontation first",
+      "weight": 0.3,
+      "formal_invocation_given_trigger": 0.25
+    },
+    {
+      "name": "No material escalation / routine administration",
+      "weight": 0.45,
+      "formal_invocation_given_trigger": 0.05
+    }
+  ],
+  "computed_formal_probability": 0.21,
+  "other_documentation_interpretation_given_no_formal": 0.01,
+  "computed_total": 0.2179,
+  "reasoning": "Direct Oct1 Trump transcript says he had not used it and could, not a binding promise. Formal Act authority is distinct from Title32/DC deployment and generic emergency declaration. The October14 litigation/October18shooting give current institutional and disorder catalysts, but no verified qualifying announcement. Political willingness and trigger severity dominate; this administration is not a stationary sample of prior US years.21% regime mixture plus1% residual documentation/adjudication tail=>21.79%, rounded22%. Subjective uncalibrated weights; wide5\u201365 stress may change economics.",
+  "literal": "Trump officially announces InsurrectionAct1807 legalauthority for active-duty deployment or federalizingGuard inresponsecivil disorder/insurrection/rebellion, byDec31 23:59ET. Threat/nonexclusion/stateofemergency/Title32Guard alone notqualifying. Formal declaration can count even if laterjudiciallyblocked; modeldoesnotconditiononlawfulness/winninglitigation.",
+  "reserve_reason": "10ppordinaryfuturedecisionmodel+5ppcourtpath/shortfuseevent/sourceinterpretation; selectedYES7/NO63. No K5tail exception: futureexecutivediscretion unmeasured.",
+  "source_limits": "OfficialUScode252direct500, APbody403; boundedsearchnotcompleteabsence. TIMEinterviewprimarybody rootread/hash874867\u2026d873, WhiteHousememo86d387\u2026b3d4 andEOe67d\u20261ff verified. DCOAGpartyaccountnotjudgment; WaPoreportednonlifethreateninglocalGuardshootingnotformalact.",
+  "no_execution_authority": true
+}

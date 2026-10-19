@@ -1,0 +1,114 @@
+{
+  "schema": "case324_atlas_original_source_followup.v1",
+  "compiled_utc": "2026-10-19T11:05:00Z",
+  "identity": {
+    "review_index": 324,
+    "market_id": "5329577",
+    "condition_id": "0x0d9c9c308211e9008331e33be346c44c50da2d879ff6a739676ab553ea5b5297",
+    "criteria_sha256": "8ebb9d14997b0dec92979e6d3f36a95feb44e0cb436afa2c076b251473981167"
+  },
+  "source_article": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-507-e-flavio-435-em-2o-turno-no-ap-diz-atlasintel/",
+  "browser_rendered_link": "Poder360 article browser rendering exposed an “íntegra” link (link ID 53), described as a 4 MB PDF. The exact target URL was not retained locally in the browser text output; do not guess it.",
+  "direct_article_attempt": {
+    "status": 403,
+    "receipt": "logs/deep_review_20261017/0324_transfer/poder360_atlas/page.receipt.json",
+    "raw_sha256": "235e78ed358e223490ef9a8a51211d014e34fb3aa64b05b29e3bf476bd2df102"
+  },
+  "authorized_pdf_get": "Not executed: exact linked URL was not available in retained local browser rendering or the captured HTTP403 response. No additional request was made.",
+  "secondary_report_facts": {
+    "pollster": "AtlasIntel",
+    "article_display_date": "2026-10-04 10:42",
+    "reported_release": "Oct3",
+    "field_dates": "2026-09-27 through 2026-10-02 (entirely before Oct4 first round)",
+    "sample": 800,
+    "AP_runoff_scenario_pct": {
+      "Lula": 50.7,
+      "Flávio Bolsonaro": 43.5
+    },
+    "reported_moe": "±3 percentage points; 95% confidence",
+    "registrations": [
+      "AP-01238/2026",
+      "BR-02298/2026"
+    ]
+  },
+  "unverified_from_original_pdf": [
+    "Exact question wording/scenario",
+    "Whether percentages are all respondents or valid-only",
+    "Undecided/blank/no-answer treatment",
+    "Interview mode and weighting/design details"
+  ],
+  "source_gap": "The article PDF was not captured, so these remain secondary-reported facts. Direct 403 is an access gap, not evidence of poll unavailability.",
+  "browser_resolution": {
+    "source_page_ref": "turn3170view1",
+    "link_id": 53,
+    "pdf_ref": "turn3178view0",
+    "resolved_url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-AtlasIntel-Amapa-3out2026.pdf",
+    "rendering_identity": "Pesquisa Atlas - Eleições Amapá 2026 - 261003; PDF, 36 pages"
+  },
+  "authorized_direct_capture": {
+    "status": 200,
+    "requested_and_final_url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-AtlasIntel-Amapa-3out2026.pdf",
+    "receipt": "logs/deep_review_20261017/0324_atlas_pdf/pdf.receipt.json",
+    "gzip_body": "logs/deep_review_20261017/0324_atlas_pdf/pdf.body.json.gz",
+    "captured_raw_pdf": "logs/deep_review_20261017/0324_atlas_pdf/poll.pdf",
+    "call_window_utc": [
+      "2026-10-19T11:04:19.053136Z",
+      "2026-10-19T11:04:19.635997Z"
+    ],
+    "http_status": 200,
+    "response_content_type": "application/pdf",
+    "raw_bytes": 3725073,
+    "raw_sha256": "2211fbf49607c106ac583a33a4b2010e05214d832c300419837b221722193e59",
+    "gzip_sha256": "b19e921bc5afaf8155069f90ef341507ee7cad4afd23be1a9c5c0bd27d74a41e",
+    "last_modified_header": "Sun, 04 Oct 2026 09:58:01 GMT"
+  },
+  "original_pdf_facts": {
+    "cover": "AtlasIntel Amapá 10/2026; label “PESQUISA ATLAS 27/09-02/10/2026”.",
+    "profile_page_pdf5": {
+      "target_population": "Amapá electorate",
+      "sample_size": 818,
+      "method": "Atlas RDR / random digital recruitment",
+      "mode_detail": "organic recruitment during routine web navigation, geo-located in AP, any device; PDF describes post-stratification including sex, age, education, income, region and prior electoral behavior.",
+      "reported_margin": "±3 percentage points",
+      "confidence": "95%",
+      "field_dates": "2026-09-27 to 2026-10-02",
+      "registration": [
+        "AP-01238/2026",
+        "BR-02298/2026"
+      ]
+    },
+    "runoff_question_pdf26": "“Em um eventual segundo turno nas eleições presidenciais, se esses fossem os candidatos, em quem você votaria?”",
+    "all_respondent_scenario_pdf26": {
+      "Lula_PT_pct": 50.7,
+      "Flavio_Bolsonaro_PL_pct": 43.5,
+      "Branco_Nulo_Nao_sei_pct": 5.8,
+      "basis": "Chart totals 100.0%; these are all-response scenario percentages as shown."
+    },
+    "valid_votes_scenario_pdf27": {
+      "Lula_PT_pct": 53.8,
+      "Flavio_Bolsonaro_PL_pct": 46.2,
+      "basis": "Separate chart explicitly labelled Votos válidos; totals 100%."
+    },
+    "article_vs_pdf_sample_discrepancy": "Poder360 article reports 800 respondents; original Atlas PDF profile page reports 818. Preserve both reported values; unresolved why they differ."
+  },
+  "visual_extraction": {
+    "method": "Existing isolated pypdf 6.21.1 extracted page image XObjects from captured PDF; manual visual reading of the chart labels on PDF pages 26 and 27.",
+    "images": [
+      {
+        "path": "logs/deep_review_20261017/0324_atlas_pdf/extracted_images/page26_Image26.jpg",
+        "sha256": "a7c6531dbd05d2cb04ec4c82aff0368d47df7f565a15c7e110f758e21cfe304e"
+      },
+      {
+        "path": "logs/deep_review_20261017/0324_atlas_pdf/extracted_images/page27_Image27.jpg",
+        "sha256": "bf0059752941c58b81620bb4dfcf2a67c5041cad0242006359bd488fcda01d1b"
+      }
+    ]
+  },
+  "resolved_gaps": [
+    "Exact question and hypothetical runoff framing now verified from PDF.",
+    "All-response vs valid-vote denominator now separately verified; all-response chart includes 5.8% blank/null/unsure, valid-votes chart renormalizes to 53.8/46.2.",
+    "The PDF confirms fieldwork ended Oct2, entirely before Oct4 first-round vote; not a post-first-round runoff poll.",
+    "Sample discrepancy between article n=800 and PDF profile n=818 remains unresolved.",
+    "No post-first-round AP-specific poll or official AP 2022 runoff transfer baseline obtained in this bounded pass."
+  ]
+}

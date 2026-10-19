@@ -1,0 +1,1 @@
+{"name":"statistics","request":{"call_window_label":"case320 LSU factual source pass","method":"GET","read_only":true,"scope":"Official LSU current football season statistics/results index","url":"https://lsusports.net/fbstats"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T10:43:36.697149Z","timing_basis":"call_window"}

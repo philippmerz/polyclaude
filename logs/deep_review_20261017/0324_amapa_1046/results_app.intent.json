@@ -1,0 +1,1 @@
+{"name":"results_app","request":{"call_window_label":"case324 Amapa factual source pass","method":"GET","read_only":true,"scope":"Official TSE 2026 results application landing page","url":"https://resultados.tse.jus.br/oficial/app/index.html"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T10:45:26.399185Z","timing_basis":"call_window"}

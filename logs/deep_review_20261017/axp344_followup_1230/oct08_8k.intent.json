@@ -1,0 +1,1 @@
+{"name":"oct08_8k","request":{"method":"GET","operation":"SEC 8-K primary filing text","read_only":true,"scope":"AXP SEC current-report primary source","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496226000376/axp-20261008.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:06:17.941007Z","timing_basis":"call_window"}

@@ -1,0 +1,36 @@
+{
+  "schema": "deep_review.facts_directional_addendum.v1",
+  "compiled_utc": "2026-10-19T12:26:10.686916+00:00",
+  "review_index": 349,
+  "market_id": "4470027",
+  "conditionId": "0x2e8f33b84686fac2bb77eb7d1276f2d844f8d9952150a9581a75cf05161aeaf4",
+  "frozen_criteria_sha256": "f355db538e8c80321238ce5b0e20d96b8a877c05b2beb4102fef15705d74318d",
+  "scope": "Source facts only: August-versus-September inflation sequence and September board rationale. No probability, market-price analysis, or decision.",
+  "sources": [
+    {
+      "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica",
+      "publisher": "DANE",
+      "source_render": "Official DANE page surfaced by a bounded official-domain web search at 2026-10-19T12:25Z; no retained raw HTTP body/receipt in this addendum.",
+      "published_or_observation": "August 2026 observation; DANE page reports publication 2026-09-07.",
+      "fact": "August CPI monthly 0.39%, year-to-date 5.35%, annual 6.24%; annual rate 1.14 percentage points above August 2025 (5.10%). Compare September official observation in work/0349_source_followup_1220.json: monthly 0.37%, YTD 5.74%, annual 6.29% (+1.11pp y/y). Thus monthly rate eased 0.02pp Aug→Sep while annual inflation rose 0.05pp; this is observed sequence, not October CPI."
+    },
+    {
+      "url": "https://www.banrep.gov.co/es/noticias/junta-directiva/minutas-banrep-septiembre-2026",
+      "publisher": "Banco de la República",
+      "publication_date": "2026-10-05",
+      "source_render": "Official BanRep page surfaced in browser-rendered official search result at 2026-10-19T12:25Z; direct GET anti-bot challenge remains as recorded in work/0349_source_followup_1220.json. No new raw body/receipt.",
+      "fact": "Four directors backed +25bp, two favored holding, and one initially favored +50bp. The majority argued that headline/core inflation remained above 6%, expectations were unanchored, demand exceeded output and Niño/energy/oil/FX risks could reinforce inflation; it considered inflation-risk management supportive of a declining 2027 path. The two hold voters emphasized a highly restrictive real ex-post rate (about 6%), 275bp of hikes since end-2025, transmission lags, supply/indexation-driven persistence, and costs of further increases. The +50bp voter saw upside risks and argued delay could make later disinflation more costly. Minutes say future Niño effects, post-earthquake recovery and fiscal measures matter for subsequent decisions. This documents a split and conditional arguments, not a commitment to another hike or hold."
+    },
+    {
+      "url": "https://www.banrep.gov.co/es/publicaciones-serie?keys=&page=0&tid=2457&title=Encuesta+de+expectativas",
+      "publisher": "Banco de la República",
+      "source_render": "Official publications listing surfaced in same bounded browser search; no October-2026 Monthly Survey of Analysts results located in the bounded results. Do not interpret this as proof of non-publication.",
+      "fact": "The load-bearing expectation figure visible in the September minutes is September-survey end-2026 analyst inflation expectations of 6.8%; two-year expectations were 4.0%. October survey values and any October rate-path expectation remain unverified in this pass."
+    }
+  ],
+  "limits": [
+    "DANE August values and minutes rationale are browser-rendered official evidence, not newly archived raw HTTP captures; parent can treat source timing/hash as unavailable.",
+    "No October monthly expectation-survey statistic is asserted.",
+    "September CPI is newer than August, but no October CPI release is included."
+  ]
+}

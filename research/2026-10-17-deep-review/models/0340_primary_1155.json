@@ -1,0 +1,79 @@
+{
+  "schema": "primary_case0340_model.v1",
+  "authored_utc": "2026-10-19T11:44:57.774591+00:00",
+  "p_yes": 0.5,
+  "range_yes": [
+    0.15,
+    0.95
+  ],
+  "actual_entry_reserve_pp": 25,
+  "selected_yes": 0.25,
+  "selected_no": 0.25,
+  "literal": "Credited/featuredARTISTonGTA6TheAlbumtrack, viaRockstarofficialtracklist/artistannouncement; conditionalmajorplatformcreditsfallback. Game/radioinclusionisnotsamealbumcredit. AlbumnotreleasedbyNov26 23:59ET→NO. Performervswriter/samplecreditinterpretationexplicituncertainty.",
+  "primary_evidence_bridge": "Rootread/hashverifiedRockstarcurrent34originaltracks/selected9singles/SEPARATEradiosections; Apple/Spotifyprereleasepartlyunknowncreditsnotanexhaustiveexclusion. RootreadInsiderGamingSep17articleclaims27albumtracks, tablemixes6currentalbumsingles+21oldertrailer/game/radio tracks, includingSkrilla; nooutboundprimarycreditlink. PCGamerattributesRockstardeveloperKodakinspirationforgamebutoriginalDazeduncaptured; notalbumpledge.",
+  "regimes": [
+    {
+      "name": "Secondaryrounduppartlyconflatesalbumwithlicensedgame/radio",
+      "weight": 0.7,
+      "future_Kodak_album_artist_probability": 0.3,
+      "conditional_writer_sample_or_othercredit_ifno_performer": 0.05,
+      "qualifying_credit_probability": 0.335,
+      "album_release_bycutoff": 0.94,
+      "weighted_p": 0.22043
+    },
+    {
+      "name": "Secondaryalbumclaimreflectsvalidadvancecreditinformation",
+      "weight": 0.3,
+      "qualifying_credit_probability": 0.98,
+      "album_release_bycutoff": 0.94,
+      "weighted_p": 0.27636
+    }
+  ],
+  "computed_p": 0.49678999999999995,
+  "rounding": "49.679%→50%, explicitunfittedsource-reliability/curation/release model. Not empiricalfrequency or proofarticlewrong/albumexcludesKodak.",
+  "crux": "Doespublishedsecondary27-rowtableactuallybindtoofficial34-trackalbum vs21licensedpreviewtracks? LaterofficialartistcreditscanconfirmYES; unknown25platformartistfieldsarenotNO. Originalwordingdoesnotguaranteeallnewcompositions, so oldSkrillaalone doesnotproveineligibility.",
+  "reserve_reason": "10pp ordinarymodel+10pp source/category/role/curationuncertainty+5pp conditionalfill/leakrisk. Selected25%NOdecisionstressnotphysicalconfidencefloor; realNOcanbe5%ifvalidsecondarycredit/lateannouncement.",
+  "flow_evidence": "Onepublic100-rowpageOct4–Oct19notcomplete.13SELL-labelledNOprints12–20c/255.803shares;4last48h includesOct18 9.923077NO@13c, Oct18 20+10.07@16c, Oct19 10.57@20c. YESBUY33rows/14priced80–88, twoinlast48h. TheseareAPIreportedroles, mayduplicatefills/actors; notindependenttrialsorownfillprobability. Supportsordinarycandidateflow, notguaranteednoninformedseller.",
+  "conditionalfill_sensitivity": [
+    {
+      "q_normal_if_NO": 0.1,
+      "if_YES_informed_fill": 1,
+      "p_NO_given_fill": 0.09090909090909091
+    },
+    {
+      "q_normal_if_NO": 0.25,
+      "if_YES_informed_fill": 1,
+      "p_NO_given_fill": 0.2
+    },
+    {
+      "q_normal_if_NO": 0.5,
+      "if_YES_informed_fill": 1,
+      "p_NO_given_fill": 0.3333333333333333
+    },
+    {
+      "q_normal_if_NO": 0.75,
+      "if_YES_informed_fill": 1,
+      "p_NO_given_fill": 0.42857142857142855
+    },
+    {
+      "q_normal_if_NO": 1,
+      "if_YES_informed_fill": 1,
+      "p_NO_given_fill": 0.5
+    }
+  ],
+  "fill_interpretation": "Atqnormal10%conditionalNO9.1%wouldloseat13c;50%gives33.3%beforeadditionalmodelrisk. No empiricalqestimated; observedordinaryNOselling+one-monthwindowpermits a tinyprobe but cannotboundtail. Full1.04lossmustbeacceptable, cancelafterverifiedmaterialunassessedevidence, noassumptionwatcherbeatsinformedtraders.",
+  "candidate_only": {
+    "outcome": "No",
+    "maker_price": 0.13,
+    "gross_shares": 8,
+    "committed_cost_usd": 1.04,
+    "normal_selected_terminal_EV": 2,
+    "selected_profit_if_filled_beforecarry": 0.96,
+    "size_basis": "~0.5%dated196.31account, notcurrentaccountcert; deliberatelyfarbelowquarterKelly/ticketcaps. Costcannotexceedcurrentunreservedfunds/fullportfoliofactorbudget.",
+    "route": "Nonurgentpost-onlymaker; no takingmerelybecausepositiveEV.",
+    "possible_named_pull": "BeforeearliestglobalNov19release/creditrevealrisk; currentpreentrymustsetexistingreview/catalystconditions, notnext-cronexpiry."
+  },
+  "next_action": "Concretecandidateadvancestofreshsource/currentaccount/criteria/fees/eligibility/full-fill/correlation/coverage/vettedwriterreview; noresearchartifactauthorizesanorder.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

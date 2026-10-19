@@ -1,0 +1,149 @@
+{
+  "review_index": 352,
+  "market_id": "5763812",
+  "condition_id": "0x5c1af819b4f93f4fdfb9389478ab381d8b4eed221ed8a0db5cad0cdfb9c418b7",
+  "criteria_sha256": "6a4aca71a493c91b3b731927bd33e409c7b4d2862d1a56a4bde181f6ddfa8c7d",
+  "status": "valued",
+  "literal_analysis": "YES only if sum of displayed TopModelsweekly totals for Oct26,Nov2,Nov9,Nov16 is strictly<625T; exactly625 goes higher/NO. Freeze whenNov23firstdisplayed, fallbackNov27 23:59ET. WeeksMon00UTC\u2013Sun23:59UTC; weekly totals mayupdate untilnextfirstdisplay. Currentweekpace/modelrank are not measured target. API rawsum is modelinput; finaldisplayrounding governs.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-19T12:17:09.273714+00:00",
+      "finding": "Root verified captured anonymous chart SHA/weeklyseries/Oct12sum; targetfutureweeks absent. Raw API precision distinct from displayed final rounding."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Completed-week anchor substituted into the existing joint regime/path model; primary adopts lower-tail forecast after paired diagnostic and structural countermodel review.",
+    "reasoning": "Oct12 observed raw164.043985914931T replaces uncertain partial-plus-remainder. Five generated weeks Oct19..Nov16, lastfour sum; Oct19 partial not extrapolated. Parent200k paths/seed/regime weights/correlated innovations/revision noise retained, consuming original uncertainty draws for pairing. <625 probability16.901\u219220.1895%, rounded20. Regime weights and future growth are unfitted; concentrated plateau/decline or renewed release-growth countermodels can move tail widely. Raw API not automatically rule-displayed rounding at finalfreeze.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0352_primary_1242.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1218_0349_0350_0352.json",
+    "quote_file_sha256": "cb966d6a8b58d0db202f8206ea56ef626a244ad8f86a9e9b3da3b6a3b6a75fff",
+    "quote_capture_utc": "2026-10-19T12:17:33.664739+00:00",
+    "gamma_received_utc": "2026-10-19T12:17:33.447787+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 40.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.2,
+        "selected_stress_probability": 0,
+        "best_bid": 0.11,
+        "best_ask": 0.14,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792412253213",
+        "book_received_utc": "2026-10-19T12:17:33.568805+00:00",
+        "book_age_seconds_at_receipt": 0.3558049201965332,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.7000000000000001,
+            "fee": 0.02408,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.14
+              }
+            ],
+            "net": 0.7240800000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.55,
+            "fee": 0.01958,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.11
+              }
+            ],
+            "net": 0.53042
+          }
+        },
+        "taker_cost_usd": 0.7240800000000001,
+        "central_expected_profit_usd": 0.27591999999999994,
+        "selected_stress_profit_usd": -0.7240800000000001,
+        "break_even_before_carry": 0.144816,
+        "break_even_constant_carry": 0.14530942401655608,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8,
+        "selected_stress_probability": 0.6000000000000001,
+        "best_bid": 0.86,
+        "best_ask": 0.89,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792412253213",
+        "book_received_utc": "2026-10-19T12:17:33.568805+00:00",
+        "book_age_seconds_at_receipt": 0.3558049201965332,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.45,
+            "fee": 0.01958,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.89
+              }
+            ],
+            "net": 4.4695800000000006
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.3,
+            "fee": 0.02408,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.86
+              }
+            ],
+            "net": 4.27592
+          }
+        },
+        "taker_cost_usd": 4.4695800000000006,
+        "central_expected_profit_usd": -0.46958000000000055,
+        "selected_stress_profit_usd": -1.46958,
+        "break_even_before_carry": 0.8939160000000002,
+        "break_even_constant_carry": 0.8969617934426013,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry: YES20/selected0 andNO80/60; even10pphaircut fails both bids. Held112 retain/noadd unchanged; no financial-prior mutation.",
+  "reopen_condition": "Completed weekly/source/adoption evidence or adequate current quote margin; conditional-fill/account gates.",
+  "portfolio_action": "none; existing distinct1125NOretain/noadd unchanged",
+  "report_markdown": "# 352 \u2014 OpenRouter below625T: lower-tail risk, no current entry\n\n- **YES20%/NO80%; scenarioYES5\u201365%; selected0%/60% after20pp reserve. No entry.** [Primary model](../models/0352_primary_1242.json) \u00b7 [both-side economics](../../../data/deep_review_20261017/work/0352_economics_1242.json).\n- Full rule uses displayed **TopModelsweeklytotals** forOct26,Nov2,Nov9,Nov16, frozen onceNov23firstappears; fallbackNov27 23:59ET. Exactly625T is higherbracket/NO. WeeklyUTCMonday\u2013Sunday, subsequent display/revision and displayed rounding matter. This is not current rolling pace or an individual model ranking.\n- [Original chart extraction](../../../data/deep_review_20261017/work/0352_chart_weekly_totals_1220.json), receipt12:17:09.273714:53weeklyrows/10series includingOthers; root verified rawSHA and summedOct12 **164.043985914931T**. It differs from09:33 by0.000006585049T. Oct19 **10.7853820115T is partial**; no extrapolation. Allfourtargetweeks/Nov23absent. HTTPAge194 andbodycachedAt11:43:35 are separate cache facts, not an invented usage cutoff. [Displayed semantics](../../../data/deep_review_20261017/openrouter_chart_display_semantics_1100.json) remain distinct from exact raw sums.\n- [Paired model code](../models/openrouter352_oct12_anchor_sensitivity_1230.py) \u00b7 [result](../../../data/deep_review_20261017/work/0352_oct12_anchor_sensitivity_1230.json):200kdraws/seed20261018182. Old uncertainOct12draw is still consumed, then replaced with completed164.043985914931T. Same5futureweeklyreturns/commoninnovations/noise; sumweeks2\u20135. Parent replay exactly reproduced; five mutuallyexclusive buckets total200k. <625 rises16.901\u219220.1895% (+3.2885pp), adopted20%. Other diagnostic buckets11.9745/12.9500/11.3725/43.5135%; they are not automatic replacements of older adopted sibling priors.\n- Model regimes moderation36%,historicalgrowth28%,releaseboom8%,disruption8%,plateau20%; weeklylogmeans3.5/8/20/\u221215/0%, SD6.5/9.5/10/15/5%, innovationcorrelation.25, revisionnoise95%N(0,2T)/5%N(0,10T). These unfitted assumptions dominate sampling precision. Flat164T gives656T/NO; sustained150T gives600T/YES; renewedgrowth pushes total higher. No empirical future-tail/conditional-fill floor is established. Wide5\u201365% scenarios and20pp reserve preserve this risk; even10pp yieldsYES10/NO70 below currentbids11/86beforecost.\n- Dated12:17 YES11/14c,NO86/89c;4%nonlinear/taker-only,min5/tick1c. Five-share taker costs 0.72408/4.46958; selected values0/3.00. Passive improvement12/87c also fails. No quantity makes a negative selected-unit edge acceptable.\n- **Held1125NO: retain/noadd assessment unchanged.** Anchor diagnostic[725,775)YES11.3725% differs from parent11.5545% by\u22120.182pp, small beside model uncertainty; existing adoptedYES12/NO88 andselectedNO73 remain dated judgments. This is not a new liveexit quote/account observation or financial-prior update. Another ORposition would share growth/source/adjudication risk, not diversify independently.\n- Reopen on new completedweeklydata, concrete adoption/definition change, or sufficiently favorable quote, with exact source/rounding/current execution gates. No new order/watcher.\n"
+}

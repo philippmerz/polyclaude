@@ -1,0 +1,1 @@
+{"name":"gtanews_album_report","request":{"call_window_label":"case340_new_album_report","method":"GET","read_only":true,"scope":"public secondary album report and linked-source context","url":"https://gtanews.fr/en/articles/gta-6-the-album-official-soundtrack-34-tracks/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:52:12.345368Z","timing_basis":"call_window"}

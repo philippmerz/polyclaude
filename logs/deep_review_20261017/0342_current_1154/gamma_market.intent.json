@@ -1,0 +1,1 @@
+{"name":"gamma_market","request":{"call_window_label":"case342_gamma_metadata","method":"GET","read_only":true,"scope":"exact frozen market identity, creation and current status only","url":"https://gamma-api.polymarket.com/markets/5468002"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:54:47.727098Z","timing_basis":"call_window"}

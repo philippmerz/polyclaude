@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T08:54:45.412321+00:00
+Updated: 2026-10-19T12:39:38.841024+00:00
 
-**316 valuations saved; first milestone100:** 316 valued; 6 blocked after in-depth review. 364 factual exclusions separately; 2314 pending.
+**333 valuations saved; first milestone100:** 333 valued; 7 blocked after in-depth review. 364 factual exclusions separately; 2296 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -328,24 +328,42 @@ Each report below is written before moving to the next evaluation. Related contr
 |314|[Will fewer than 170 ships transit the Bab el-Mandeb Strait between October 12-October 18?](evaluations/0314.md)|valued|Both takers failcentralEV. NOmaker61c is pricecandidate but deferred forfeeparity andunverifiedelapsedweek/conditionalinformationrisk; notpermanentrejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |316|[Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0316.md)|valued|NOcandidate onlargeafterreserveedge; datedbookfails180sso noentryauthority. Maker10shares<=14cdiagnosticrequiresneweligiblecapture/accounts/portfolio/catalystgates.|
-|317|[Crypto Market Structure legislation becomes law in 2026?](evaluations/0317.md)|valued|YESpricecandidateclearsselecteddatedeconomics; currentSenate/coalition/statusgapneedsadversarialverificationbeforeanyentry. NOfailscentral.|
+|317|[Crypto Market Structure legislation becomes law in 2026?](revisions/0317_20261019T122154712878Z.md)|valued|Unplacedcandidatewithdrawn: primary40→29% afteractual49–50cloture/currentproformaNov9calendar; selected9%belowdated9.6/10.3. Noentry; heldvotecountpairdistinct.|
 |318|[Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election?](evaluations/0318.md)|blocked_after_review|Blocked_after_review onnamedsource-bindingfacts; noteligibilityexclusionorprobabilityrejection.|
 |319|[Will the upper bound of the target federal funds rate be ≤1.0% at the end of 2026?](evaluations/0319.md)|valued|Noentrybothsidesatdatedquotes;YEScentralpennygainbeforeoperationsnotadequate,NOcentral/stressfail. NoK5licensetoforcebondfade.|
+|320|[Will LSU be a top 4 seed in the 2027 College Football Playoffs?](evaluations/0320.md)|valued|Noentryatcurrenttaker/joinmakerselectedeconomics;NOcentralpositivebutstressnegative. HypotheticalcheaperNOrequiresfreshreview,notcap/liquidityrejection.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|322|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 65% or higher?](evaluations/0322.md)|valued|Bothsidesfailselectedstress/currentmaker; YEScentralgainnotrobusttoactualsource/model/conditionalfilluncertainty. Notfactualrejection.|
 |323|[Will the highest temperature in Wuhan be 29°C on October 17?](evaluations/0323.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|324|[Will Lula win the most votes in the second round of the Brazil presidential election from Amapá?](revisions/0324_20261019T111337775197Z.md)|valued|YEScentralpositivecontrarianhypothesisbutbothcurrenttaker/joinmakerfailactual15ppstress;newpost-roundevidenceorcheapercurrentroutecouldchangejudgment.|
 |325|[Will the Democratic Party win the AZ-02 House seat?](evaluations/0325.md)|valued|Potential small passive YES source revalidation|
+|326|[Amphenol (APH) Q3 organic sales growth 24% to 28%?](evaluations/0326.md)|valued|Both current taker/join-maker sides fail selected stress. Guidance alone is not expected organic growth; no entry.|
 |327|[Wrexham AFC vs. Preston North End FC: O/U 2.5](evaluations/0327.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|328|[Will Nancy Guthrie be the #1 searched person on Google in the US this year?](evaluations/0328.md)|blocked_after_review|Blocked on relative annual growth/category evidence; not rejected, valued or factual-excluded. Bothsidecosts/conditionalvaluation scenarios preserved; noentry.|
 |329|[Will the price of Ethereum be between $2,400 and $2,500 on October 17?](evaluations/0329.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|330|[Will Dan Sullivan win the Alaska Senate race in 2026?](revisions/0330_20261019T115655498768Z.md)|valued|Provisional YES35%, broad10–75; both dated routes fail15pp decision stress. No entry; substantive valued revision replaces block without hiding remaining gaps.|
+|331|[Will the OpenAI spy be accused of working for Saudi Arabia by December 31?](evaluations/0331.md)|valued|CurrentYEScentralasknegative/joinmakerthin; bothsidesfailselected15ppstress. Noentry; unobservedfiling/hearingriskisnotexoneration.|
+|332|[Will a 8.5+ earthquake occur worldwide by October 31?](evaluations/0332.md)|valued|NOcentralpassivevaluepotential exists, but currentaskfailscentral and makerconditional-fillriskunmeasured; selected15ppstressfailsbothroutes. Noentry.|
 |333|[Amed Sportif vs. Konyaspor: O/U 2.5](evaluations/0333.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |334|[NVIDIA (NVDA) Q3 adjusted gross margin 71% to 73%?](evaluations/0334.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |335|[Will the highest temperature in Chongqing be 23°C on October 17?](evaluations/0335.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|336|[Will Reza Pahlavi lead Iran in 2026?](evaluations/0336.md)|valued|No entry. YEScentralnegative; NOsmallcentralgainfailsdatedcashcarry evenzerofees, andbothsidesfail15ppstress. Feeendpointparityunknownexplicit.|
 |337|[Will the Democratic Party win the FL-26 House seat?](evaluations/0337.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|338|[Will Meta (META) beat quarterly earnings?](evaluations/0338.md)|valued|CheapYESnotunexplained: post-Q2$10BQ3legalaccrualchangesGAAP. CurrentYEScentralnegative; NOcentralpositivebutcurrenttaker/makerfailactualstress. Noentry.|
 |339|[Penguins vs. Golden Knights](evaluations/0339.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
+|340|[Will Kodak Black be featured on GTA VI: The Album?](revisions/0340_20261019T115656232594Z.md)|valued|Withdraw unplaced NO13c candidate: newly examined album-specific leak raises primaryYES50→66%; NO9% selected fails13c. No order/prior/config/reservation change.|
 |341|[Will the highest temperature in Singapore be 32°C on October 17?](evaluations/0341.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|342|[Will Russia and Ukraine hold any diplomatic meeting by November 30, 2026?](evaluations/0342.md)|valued|No entry: both dated sides fail15pp reserve even optimistic zero fees; exact physical/authorization/window source limitations priced.|
+|343|[Insurrection Act invoked by December 31?](evaluations/0343.md)|valued|No entry: YES22% central/7% selected;NO78%/63%; datedbothsidesfail15ppstress despitepossible centralYESvalue.|
+|344|[Will American Express (AXP) beat quarterly earnings?](evaluations/0344.md)|valued|No entry: centralYES76%/NO24%; selected56/4 after20ppreserve; dated bothmaker/taker fail. Reserve/recognition and conditionalfills are load-bearing, not automatic exclusions.|
 |345|[Will New York Red Bulls win on 2026-10-17?](evaluations/0345.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
+|346|[Will Pope Leo XIV be TIME Person of the Year 2026?](evaluations/0346.md)|valued|No entry: editorialYES14%/NO86%, selected0/71; both datedroutesfail15ppreserve, NOtakernegativeevencentrally.|
 |347|[Solana Up or Down on October 17?](evaluations/0347.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |348|[Will an independent win the Nebraska Senate race in 2026?](evaluations/0348.md)|valued|No entry: YESnegativecentral; NOsmallcentral+.21936/10sharesfails10ppreserve. MakerwatchYES<=.13 orNO<=.63/<=10shares withfreshsources/allgates.|
+|349|[Will the Central Bank of Colombia make no change to the monetary policy interest rate at the October meeting?](evaluations/0349.md)|valued|Noentry: NO59central/44selected; maker44ctiesbeforecost,43cjoinfailsminimum-sizecost/Kelly; HOLD26selectedfails53/57.|
+|350|[Will Amazon (AMZN) beat quarterly earnings?](evaluations/0350.md)|valued|Noentry: YES61central/41selected,NO39/19; both passive and taker dated prices fail. Private GAAP mark uncertainty remains explicit.|
 |351|[Spread: Pittsburgh (-6.5)](evaluations/0351.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|352|[Will OpenRouter process less than 625T tokens from Oct 26 to Nov 22?](evaluations/0352.md)|valued|Noentry: YES20/selected0 andNO80/60; even10pphaircut fails both bids. Held112 retain/noadd unchanged; no financial-prior mutation.|
 |354|[Will LOUD win VALORANT Champions 2026?](evaluations/0354.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |357|[Sharks vs. Red Wings](evaluations/0357.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |358|[Will OpenAI have the second highest OpenRouter market share the week of October 12?](revisions/0358_20261018T120932318539Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|

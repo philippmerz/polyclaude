@@ -1,0 +1,131 @@
+{
+  "schema": "openrouter352_oct12_anchor_sensitivity.v1",
+  "compiled_utc": "2026-10-19T12:36:23.278798+00:00",
+  "scope": "Unadopted paired mathematical sensitivity. Consumes parent current-week uncertainty draws, then replaces week0 with the observed completed Oct12 raw total. No Oct19 extrapolation, adopted probability, or action.",
+  "identity": {
+    "review_index": 352,
+    "condition_id": "0x5c1af819b4f93f4fdfb9389478ab381d8b4eed221ed8a0db5cad0cdfb9c418b7",
+    "market_id": "5763812",
+    "criteria_sha256": "6a4aca71a493c91b3b731927bd33e409c7b4d2862d1a56a4bde181f6ddfa8c7d"
+  },
+  "inputs": {
+    "draws": 200000,
+    "seed": 20261018182,
+    "branches": [
+      [
+        "moderation",
+        0.36,
+        0.035,
+        0.065
+      ],
+      [
+        "historical_growth",
+        0.28,
+        0.08,
+        0.095
+      ],
+      [
+        "release_boom",
+        0.08,
+        0.2,
+        0.1
+      ],
+      [
+        "disruption",
+        0.08,
+        -0.15,
+        0.15
+      ],
+      [
+        "plateau",
+        0.2,
+        0.0,
+        0.05
+      ]
+    ],
+    "same_cutoff_weights": {
+      "prior_complete_day_18T_remaining": 0.25,
+      "latest_UI_remaining_proxy": 0.65,
+      "uniform_0_to_36T": 0.1
+    },
+    "innovation_correlation": 0.25,
+    "revision_noise": "same paired noise: 95% N(0,2T), 5% N(0,10T)",
+    "parent_partial_T": 158.105052314724,
+    "parent_remaining_proxy_T": 7.190350000721907,
+    "observed_completed_2026_10_12_T": 164.043985914931,
+    "ignored_partial_2026_10_19_T": 10.7853820115
+  },
+  "hashes": {
+    "parent_model_sha256": "c6b5bf6bcd4684d52613037ee9a181766767637ba11b4979d5c7d34f131f20bc",
+    "chart_summary_sha256": "ec98ae205b518c402b58e55b85e1afbd953e62ad02738c24b328d64774b856dc",
+    "chart_raw_sha256": "c5dc8f8c5c0b62365aced777c25b1c152e1769ea89cfb4962e219a3a0429e523"
+  },
+  "bucket_ranges_T": {
+    "lt625": "(-inf,625)",
+    "625_675": "[625,675)",
+    "675_725": "[675,725)",
+    "725_775": "[725,775)",
+    "ge775": "[775,inf)"
+  },
+  "parent_replay": {
+    "counts": {
+      "lt625": 33802,
+      "625_675": 20542,
+      "675_725": 24420,
+      "725_775": 23109,
+      "ge775": 98127
+    },
+    "fractions": {
+      "lt625": 0.16901,
+      "625_675": 0.10271,
+      "675_725": 0.1221,
+      "725_775": 0.115545,
+      "ge775": 0.490635
+    },
+    "asserted_exact_against_parent": true
+  },
+  "oct12_anchor": {
+    "counts": {
+      "lt625": 40379,
+      "625_675": 23949,
+      "675_725": 25900,
+      "725_775": 22745,
+      "ge775": 87027
+    },
+    "fractions": {
+      "lt625": 0.201895,
+      "625_675": 0.119745,
+      "675_725": 0.1295,
+      "725_775": 0.113725,
+      "ge775": 0.435135
+    },
+    "paired_delta_vs_parent": {
+      "lt625": 0.032885,
+      "625_675": 0.01703500000000001,
+      "675_725": 0.007400000000000004,
+      "725_775": -0.0018199999999999883,
+      "ge775": -0.055499999999999994
+    }
+  },
+  "paired_bucket_transition_counts": {
+    "ge775->ge775": 86542,
+    "625_675->625_675": 14109,
+    "725_775->725_775": 12904,
+    "625_675->lt625": 5879,
+    "725_775->675_725": 8032,
+    "ge775->725_775": 9287,
+    "lt625->lt625": 33392,
+    "675_725->675_725": 15137,
+    "ge775->675_725": 2177,
+    "675_725->625_675": 7656,
+    "675_725->lt625": 1073,
+    "725_775->625_675": 1653,
+    "625_675->675_725": 554,
+    "675_725->725_775": 554,
+    "lt625->625_675": 410,
+    "725_775->ge775": 485,
+    "725_775->lt625": 35,
+    "ge775->625_675": 121
+  },
+  "target_window": "Each simulated path keeps five generated weeks as Oct19, Oct26, Nov2, Nov9, Nov16; sum of generated weeks 2\u20135 (Oct26\u2013Nov16) is compared with the same four-week band."
+}

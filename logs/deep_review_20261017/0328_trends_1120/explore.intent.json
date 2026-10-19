@@ -1,0 +1,1 @@
+{"name":"explore","request":{"method":"GET","query_sha256":"0216c99d53ec31337eaef30756aa6e333622056d280376c4eb8f98113630dac5","read_only":true,"scope":"exact-term US matched-year public Google Trends comparison","url":"https://trends.google.com/trends/api/explore"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:18:15.384243Z","timing_basis":"call_window"}

@@ -1,0 +1,60 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 353,
+  "market_id": "1397281",
+  "condition_id": "0x627ed310dc3977b2d71d96a4f2fccd6050553f6f165efd6c29578f5678f3f863",
+  "criteria_sha256": "fa1ad965dc91949d44c2d4480d566fa467aecffad7784297c6599eded967739f",
+  "question": "Will Russia capture all of Kostyantynivka by December 31, 2026?",
+  "frozen_rule_facts": {
+    "source": "ISW Ukraine map; DeepStateMap only if ISW map unavailable; credible reporting only if both maps permanently unavailable. Qualifying shades: Assessed Russian-Controlled Terrain and Assessed Russian Advances. Infiltration and claimed Russian territory do not qualify. Entire municipality must be shaded (tiny border mismatch exception), and qualifying shading persists through the next full ISW daily map update. Negotiated de jure control alone does not count; actual control required."
+  },
+  "current_primary_map": {
+    "story_url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+    "observed_utc": "2026-10-19T12:37:37.565682Z",
+    "http": 200,
+    "raw_sha256": "3602d0d8cd3e60c65e0825a27188094904caa458abc5932530d82ad58a42d17b",
+    "gzip_sha256": "29e2a0652bddb3321172259eb1c773b54f333043c6adbe9153349600732a1401",
+    "raw_path": "logs/deep_review_20261017/case353_facts_1235/isw_storymap/isw_storymap.body.json.gz",
+    "page_metadata_dateModified": "2026-10-18T19:56:24.988Z",
+    "story_map_title": "Interactive Map: Russia’s Invasion of Ukraine",
+    "map_view_caption": "Assessed Control of Terrain in Ukraine as of October 18, 2026, 4:00 PM ET",
+    "embedded_webmap_id": "9f04944a2fe84edab9da31750c2b15eb",
+    "current_layer_observations": {
+      "data_item_observed_utc": "2026-10-19T12:38:39.429006Z",
+      "data_item_http": 200,
+      "data_item_size_bytes": 4334589,
+      "data_item_raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+      "data_item_gzip_sha256": "f5ff33a5d21d4c86c3707a52028b9dbc18f6b1e8542ccc5ccf156fb59b1f17d7",
+      "data_item_path": "logs/deep_review_20261017/case353_facts_1235/isw_webmap_item_data_complete/isw_webmap_item_data_complete.body.json.gz",
+      "layer_counts_and_data_dates": {
+        "Assessed Russian-Controlled Terrain": {
+          "feature_count": 10,
+          "all_pub_date": "2026-10-18"
+        },
+        "Assessed Russian Advances": {
+          "feature_count": 53,
+          "all_pub_date": "2026-10-18"
+        },
+        "Assessed Russian Infiltration Areas": {
+          "feature_count": 180,
+          "all_pub_date": "2026-10-18"
+        }
+      }
+    }
+  },
+  "municipality_boundary_binding": {
+    "service": "https://services5.arcgis.com/SaBe5HMtmnbqSWlu/arcgis/rest/services/Ukrainian_Settlements_Updated_view/FeatureServer/0",
+    "boundary_name_field": "ADM4_EN",
+    "name_query": "Kostyantynivka returned three matches; the target is the feature in ADM2_EN=Kramatorskyi and ADM1_EN=Donetska (OBJECTID 5889; GlobalID 0c841ab0-cbfa-4ea0-afb0-7b3d7d2ec2b4), not same-name settlements in Zaporizka or Sumska.",
+    "query_receipt": "logs/deep_review_20261017/case353_facts_1235/kostyantynivka_municipality_query/kostyantynivka_municipality_query.receipt.json",
+    "query_raw_sha256": "ff1447d52f88f2aaaec8d87f0695f3a5bf185e6b7b83a610e046c939e4da5734",
+    "query_gzip_sha256": "36a1400e0bcfbd1fcd4fe47ff15a65e73382287152a3f3be20906f9d88fc53cd",
+    "query_body": "logs/deep_review_20261017/case353_facts_1235/kostyantynivka_municipality_query/kostyantynivka_municipality_query.body.json.gz",
+    "returned_features": 3
+  },
+  "access_gaps_and_limits": [
+    "The story map and complete ArcGIS layer payload were directly retrieved; the ISW prose index page direct GET returned HTTP 403. No map-wide geometric coverage computation was performed, so this packet does not state whether the target municipality is completely shaded.",
+    "An initial ArcGIS data request was locally capped at 4,000,000 bytes and is preserved as a partial response; a distinct complete second capture (4,334,589 bytes, JSON parsed successfully) is the usable payload.",
+    "A Sept 2026 ISW search result reported 72.23% Russian presence in the town including infiltrations; it is stale relative to the Oct18 map and does not establish the contract’s qualifying complete-capture condition."
+  ]
+}

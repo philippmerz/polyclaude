@@ -1,0 +1,160 @@
+{
+  "entries": [
+    {
+      "bytes": 702,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_followup_1220/banrep_minutes_index.receipt.json",
+      "sha256": "e54c776152f080c6198fbb9f4658a5276b7317be1461a7ca9c2c0d3fb1696422"
+    },
+    {
+      "body_raw_bytes": 83269,
+      "body_raw_sha256": "8ae4bd138cd894300de489ef51ce1f98ee433085cb9fa383f5193a50dbe67b77",
+      "bytes": 15450,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_followup_1220/dane_september_2026_cpi.body.gz",
+      "sha256": "2b483722a08732f980d02b9088421190e4ffe27838fc98abb2643ee439f389dc"
+    },
+    {
+      "bytes": 869,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_followup_1220/dane_september_2026_cpi.receipt.json",
+      "sha256": "c8be07db23a3cc794fae54d7a173c3d8dfffe0c42dc2e8683a261468689291f8"
+    },
+    {
+      "body_raw_bytes": 15420,
+      "body_raw_sha256": "20bd14592b6b130cb9dfea3b21798e130573aa072948a4214a8a18b1a2194863",
+      "bytes": 14044,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.body.json.gz",
+      "sha256": "2133fd69f1ea7629362567208d34c7a197b85f695746029f13690709d057e84f"
+    },
+    {
+      "bytes": 329,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.intent.json",
+      "sha256": "aa8356f717e5ae747b5a38d24b3097fd6d9b1345db8b19e154de151a270810ee"
+    },
+    {
+      "bytes": 847,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.receipt.json",
+      "sha256": "9df519e163d724becd8552a272f9678b246a09ea696f4c4a6aa3ce1d8970e71f"
+    },
+    {
+      "body_raw_bytes": 173620,
+      "body_raw_sha256": "690f1dc2bf7031ec1ef7e83d499f1c9fd1d864aeec44ffd888a3e3592a970e29",
+      "bytes": 37152,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/amazon_q3_2026_earnings_notice.body.gz",
+      "sha256": "9bc3ceacafe1f1a344ea5689aa800af07507825f2ae0adfcfd5b65383cfaab80"
+    },
+    {
+      "bytes": 804,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/amazon_q3_2026_earnings_notice.receipt.json",
+      "sha256": "a926ccc7edc30c974fbc77d16b43e93bda0dd9adbdcac367ece5e9871189f508"
+    },
+    {
+      "body_raw_bytes": 5896,
+      "body_raw_sha256": "7d67dd180f3301368926fb132fae67949c518aa4ed147523038628e89ca54374",
+      "bytes": 3359,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_q2_release.body.json.gz",
+      "sha256": "161efe4935d0d36b5c0e4644506fce9cd217e223c3be4e44537a78b437740df0"
+    },
+    {
+      "bytes": 416,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_q2_release.intent.json",
+      "sha256": "5d9df18768392b90dec0d58d8be664ec8902058538c9ca43581f1a5387a23c30"
+    },
+    {
+      "bytes": 912,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_q2_release.receipt.json",
+      "sha256": "6387ee1ee6f93546f8a5826f2c444ff5165ab81a662d88b50dd8d4f82f0b6c2a"
+    },
+    {
+      "body_raw_bytes": 159904,
+      "body_raw_sha256": "1f5bb6be4033e2378bfa0d14e0d9276a08d8dfb070b263f59ca0e77d68ced058",
+      "bytes": 25253,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_sec_submissions.body.json.gz",
+      "sha256": "9136e126207d65bc38a59f860cc8a14d90de85d0f825391ef1405361a9e1551d"
+    },
+    {
+      "bytes": 350,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_sec_submissions.intent.json",
+      "sha256": "ca444fbe1609e051f03d0d899b0dd99e3ddfa373b44e09d1d9607ef71a2fc2c7"
+    },
+    {
+      "bytes": 870,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_facts_1230/amazon_sec_submissions.receipt.json",
+      "sha256": "53cf7ad79107a3cccf3cfaa8fe6aa6647047a588036c7e0ff4dbe1ff3d6766de"
+    },
+    {
+      "body_raw_bytes": 107149,
+      "body_raw_sha256": "f190ab32851466277182d16251267c697a582e9b1d16443970bac55c68289a74",
+      "bytes": 18771,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_incremental_1230/anthropic_public_benefit_oct18.body.json.gz",
+      "sha256": "8b8099fff0cd2c360df199adffc8f319ee314c32f95a3656a4b5002d222462d4"
+    },
+    {
+      "bytes": 406,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_incremental_1230/anthropic_public_benefit_oct18.intent.json",
+      "sha256": "efd25c47e1040ecd1ee4b9898cd59b67fadc03954f7ffea19e9d2320361c3a1c"
+    },
+    {
+      "bytes": 991,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_incremental_1230/anthropic_public_benefit_oct18.receipt.json",
+      "sha256": "d8c1751b0907f3a78be8a2711356e06c8eb4efc4f54351292bc3fac1dadc3397"
+    },
+    {
+      "body_raw_bytes": 47372,
+      "body_raw_sha256": "878cd477d6aeacf02871e9ad55b25c821a8c1a98f8bcd491515a14321741151f",
+      "bytes": 4803,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_q2_8k_1235/amazon_q2_8k.body.json.gz",
+      "sha256": "3c8675e664db4290bbdba16009d113a712120654436649f731cef4615b1da4da"
+    },
+    {
+      "bytes": 349,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_q2_8k_1235/amazon_q2_8k.intent.json",
+      "sha256": "3739f90a2486db76749e7a465d4ac6ce161064352ddcc0400004d739d2135fa1"
+    },
+    {
+      "bytes": 898,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_q2_8k_1235/amazon_q2_8k.receipt.json",
+      "sha256": "2a549e42c7826b83041d3074888770072c8ccfc543acca430e74e72a45c1c23f"
+    },
+    {
+      "body_raw_bytes": 42935,
+      "body_raw_sha256": "a94e104173a7f9f1d63641d89811964e3365822eb2b55c58fac4ad6e5ce870e6",
+      "bytes": 4990,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep09_8k.body.json.gz",
+      "sha256": "c9a39f3c9343eab9b38035c168aca57bcdac1c5c5361ccedc25fe81e13edeca0"
+    },
+    {
+      "bytes": 374,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep09_8k.intent.json",
+      "sha256": "504c622ba32a2774881b924227f93aed8036d88462ee3266f31cb8742d1fbef6"
+    },
+    {
+      "bytes": 926,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep09_8k.receipt.json",
+      "sha256": "37af6d0de7d49d6f12a1cb4c19cb94a106c6e64f2cfdc9764a01befc0314c1c4"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

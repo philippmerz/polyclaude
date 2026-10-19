@@ -1,0 +1,32 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 317,
+  "market_id": "3190125",
+  "condition_id": "0x8ab4ef09c4d357811b4250f8fd9acfb662c3cfdee847188800873c8c23aefdd3",
+  "frozen_criteria_sha256": "2d42efce67a50d391f18c4a7c57ad2acc89e506481a217da00839d21a4a21482",
+  "observed_utc": "2026-10-19T12:18:06.683730Z",
+  "scope": "Bounded primary-source follow-up on the Sep15 H.R.3633 cloture vote and whether a later substantive compromise is evidenced. No valuation or bill-universe inventory.",
+  "roll_call": {
+    "official_parent_record": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3633.xml",
+    "captured_receipt": "logs/deep_review_20261017/317_followup_1209/billstatus.receipt.json",
+    "captured_body": "logs/deep_review_20261017/317_followup_1209/billstatus.body.json.gz",
+    "raw_sha256": "3a4361797b517b651ad365932965636ab353ed5f3795cf28b02f67031f2fdda6",
+    "recorded_action": "GovInfo action dated 2026-09-15: cloture on motion to proceed not invoked, Yea-Nay 49-50, Senate Record Vote 234; Tillis motion to reconsider entered; a Senate amendment was submitted that day. The record dates the vote 2026-09-15T19:08:40Z. This was procedural cloture, not passage of the bill.",
+    "underlying_rollcall_url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.xml",
+    "underlying_rollcall_receipt": "logs/deep_review_20261017/clarity317_followup_1225/senate_rollcall_234.receipt.json",
+    "underlying_rollcall_http": 403,
+    "underlying_rollcall_raw_sha256": "cbffd777f9242025546db9f38950029561a62cb553eeb8ad17b1583a9be99919",
+    "limitation": "Direct Senate XML returned HTTP 403; vote tally/date are taken from the captured GovInfo official bill-status record, not the inaccessible Senate body."
+  },
+  "negotiation_status": {
+    "latest_dated_official_statement_found": "2026-09-15 Senate Banking Committee Chairman Tim Scott page: https://www.banking.senate.gov/newsroom/majority/icymi-chairman-scott-discusses-historic-clarity-act-procedural-vote-housing-affordability-on-fox-business",
+    "source_basis": "A targeted official-domain search surfaced the Senate Banking result. It says Scott described the procedural vote as an opportunity to continue negotiations; the page is dated the same day as the failed cloture vote. Search result/render was not separately captured as an HTTP body in this pass.",
+    "post_sep15_compromise": "None established by this bounded check. Two targeted searches scoped to Senate Banking and Agriculture official newsroom pages for October 2026 market-structure negotiations surfaced no later-dated substantive compromise statement. This is a search-scope gap, not proof negotiations stopped, no agreement exists, or the bill cannot move by Dec31.",
+    "other_sources": "Previously captured GovInfo XML is last modified 2026-09-17, with no later H.R.3633 action; Oct19 Senate Daily Press schedule listed H.R.2347 for Nov9 and no H.R.3633 vote. These do not exclude later schedule changes or another qualifying bill."
+  },
+  "source_gaps": [
+    "Congress.gov exact bill/status access previously returned 403 (see 0317_facts_0837.json).",
+    "No post-Sep15 official negotiating text, joint statement, sponsor coalition, rider plan, or new markup agreement was confirmed in the bounded search.",
+    "No exhaustive survey of potentially qualifying bills was performed."
+  ]
+}

@@ -1,0 +1,159 @@
+{
+  "review_index": 342,
+  "market_id": "5468002",
+  "condition_id": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+  "criteria_sha256": "16630f8619f7d07cd7f2bf35b8008cf02456261203da0ecb8c1d595f077d6036",
+  "status": "valued",
+  "literal_analysis": "ByNov30 23:59ET, deliberate official authorized RussiaUkraine diplomacy in person incl indirect physical mediator; govt acknowledgment or credible-media consensus. Remote calls/chance greetings excluded. Treat Oct9 creation as operative normal start; no explicit textual start means loose/adjudication uncertainty, not automatic FebYES.",
+  "evidence": [
+    {
+      "url": "https://www.president.gov.ua/en/news/prezident-proviv-rozmovu-z-predstavnikami-prezidenta-ssha-106949",
+      "observed_utc": "2026-10-19T11:56:33Z",
+      "finding": "Root browser read officialOct18phone/UkraineUSFlorida/unspecifiednextsteps; no rawbodyhash."
+    },
+    {
+      "url": "https://commonslibrary.parliament.uk/research-briefings/cbp-12198/",
+      "observed_utc": "2026-10-19T12:02:22.403190+00:00",
+      "finding": "DatedSep15expectedOctUAEproposal acceptedinprinciple/no date, not held event; root read."
+    },
+    {
+      "url": "https://www.wsj.com/world/russia/putin-floats-a-summit-with-trump-and-xi-to-decide-ukraines-fate-1cf6acc1",
+      "observed_utc": "2026-10-19T12:02:22.403190+00:00",
+      "finding": "Original visible excerptOct19proposalexcludingUkraine; no full bodyhash, paidwall bypass or meeting confirmation."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.56,
+    "low": 0.2,
+    "high": 0.9,
+    "method": "Unfitted current-negotiation regime / broad eligible meeting / settlement-scope mixture;56.12% rounded56%.",
+    "reasoning": "Physical event is easier than a peace deal but requires actual official authorization and deliberate diplomacy. September accepted-in-principle UAE plan and October18 continuing Ukraine-US dialogue support a thaw branch; no date/authorized physical Russian-Ukrainian meeting identified since Oct9 creation. October19 proposed Putin-Trump-Xi-only summit may divert process. Explicit nonpolitical/humanitarian meeting tail and indirect-meeting interpretation prevent equating no peace summit with NO. Weights are subjective, not event frequencies or a complete archive.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0342_primary_1203.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342.json",
+    "quote_file_sha256": "1e16963cb79ea3f24b0cb8bb1cd03ebd2662bfc927c6e2009779bad2b4582cf0",
+    "quote_capture_utc": "2026-10-19T11:29:02.313506+00:00",
+    "gamma_received_utc": "2026-10-19T11:29:02.086873+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 43.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.56,
+        "selected_stress_probability": 0.41000000000000003,
+        "best_bid": 0.5,
+        "best_ask": 0.53,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792409338505",
+        "book_received_utc": "2026-10-19T11:29:02.210340+00:00",
+        "book_age_seconds_at_receipt": 3.7053399085998535,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.300000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.53
+              }
+            ],
+            "net": 5.300000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.5
+              }
+            ],
+            "net": 5.0
+          }
+        },
+        "taker_cost_usd": 5.300000000000001,
+        "central_expected_profit_usd": 0.2999999999999998,
+        "selected_stress_profit_usd": -1.2000000000000002,
+        "break_even_before_carry": 0.53,
+        "break_even_constant_carry": 0.531941527290012,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.43999999999999995,
+        "selected_stress_probability": 0.2899999999999999,
+        "best_bid": 0.47,
+        "best_ask": 0.5,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792409338505",
+        "book_received_utc": "2026-10-19T11:29:02.210340+00:00",
+        "book_age_seconds_at_receipt": 3.7053399085998535,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.5
+              }
+            ],
+            "net": 5.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.699999999999999,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.47
+              }
+            ],
+            "net": 4.699999999999999
+          }
+        },
+        "taker_cost_usd": 5.0,
+        "central_expected_profit_usd": -0.6000000000000005,
+        "selected_stress_profit_usd": -2.1000000000000005,
+        "break_even_before_carry": 0.5,
+        "break_even_constant_carry": 0.5018316295188792,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry: both dated sides fail15pp reserve even optimistic zero fees; exact physical/authorization/window source limitations priced.",
+  "reopen_condition": "Actual authorized physical meeting, dated qualifying plan or process breakdown; current interpretation and full live gates.",
+  "portfolio_action": "none",
+  "report_markdown": "# 342 \u2014 Russia\u2013Ukraine meeting: broad predicate, no robust entry\n\n- **Primary YES56%, scenario20\u201390%; selected YES41%/NO29% after15pp reserve. No entry.** [Primary model](../models/0342_primary_1203.json) \u00b7 [dated economics](../../../data/deep_review_20261017/work/0342_economics_1203.json).\n- The exact rule requires deliberate, authorized official diplomacy **in person**, including qualifying indirect mediation; government acknowledgment or credible-media consensus. Phone calls/chance greetings/planned meetings do not qualify. Any deliberate official meeting can be easier than peace; humanitarian diplomacy may qualify, while a prisoner handover alone is not automatically a meeting.\n- [Exact Gamma/source follow-up](../../../data/deep_review_20261017/work/0342_current_meeting_followup_1156.json) places creation Oct9 17:28:35.966833Z. Normal operative interpretation starts then; the text lacks an express start date, leaving interpretation risk. No automatic YES from older January/February/September events. Deadline Nov30 23:59ET matters beyond a metadata minute.\n- Root read Ukraine official Oct18 statement: Zelensky **phoned** US envoys, discussed Ukrainian\u2013American Florida talks and preparation of further diplomacy; no Russian participants/date specified. Official White House captions place separate Moscow/Kyiv contacts Sep5/6, before creation. These establish process, not a qualifying post-creation event or proof none happened.\n- [Dated plan/current delta](../../../data/deep_review_20261017/work/0342_diplomacy_delta_1200.json): Commons Sep15 says UAE trilaterals accepted in principle for October without date/seniority settled; original linked ISW403. Original WSJ visible opening Oct19 proposes Putin\u2013Trump\u2013Xi next month **excluding Zelensky**; no held Russia\u2013Ukraine meeting. Kremlin stalled/MFA403/TASS wrong-body gaps prevent an exhaustive negative claim.\n- Primary regimes:45% thaw with80% qualifying political meeting,40% impasse/allied-only with20%,15% third-power-only track with10% \u219245.5%. Add15% conditional other authorized humanitarian diplomacy \u219253.675% strict.85% strict/15% looser-shuttle/window interpretation at70% gives56.12%, rounded56%. All weights are subjective; range20\u201390 retains large current-process/model errors. No fitted hazard or independent repetitions of shared reporting.\n- Dated11:29 YES50/53c, NO47/50c: tenYES gross5.30 versus selected terminal4.10; tenNO5.00 versus2.90. Both sides fail even joining bids. **15pp reserve**=10future-model+5date/authorization/source gaps. Gamma says fees disabled but compact descriptor absent; zero-fee arithmetic is optimistic, authority=false. No current signed-fee/execution certificate; any nonnegative fee worsens the skip.\n- Reopen on actual authorized physical talks, a reliable dated plan with both parties, or material breakdown. Recheck mediator/window/adjudication interpretation and all live gates. No order, prior or watcher added; failed retrieval is unknown, not evidence of absence.\n"
+}

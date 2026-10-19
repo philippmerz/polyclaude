@@ -1,0 +1,29 @@
+{
+  "schema": "deep_review.facts.v1",
+  "review_index": 352,
+  "market_id": "5763812",
+  "conditionId": "0x5c1af819b4f93f4fdfb9389478ab381d8b4eed221ed8a0db5cad0cdfb9c418b7",
+  "criteria_sha256": "6a4aca71a493c91b3b731927bd33e409c7b4d2862d1a56a4bde181f6ddfa8c7d",
+  "source": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart (anonymous no-argument endpoint; page context https://openrouter.ai/rankings#top-models)",
+  "frozen_question": "Will OpenRouter process less than 625T tokens from Oct 26 to Nov 22?",
+  "facts": [
+    "The exact frozen rule sums four displayed Top Models chart weekly totals for Monday UTC weeks starting Oct 26, Nov 2, Nov 9 and Nov 16; the source determines first display of week Nov 23 or fallback cutoff Nov 27 ET. Total includes chart rounding.",
+    "Fresh no-argument API response at 2026-10-19 12:17:09Z returned 53 weekly x rows from 2025-10-20 through 2026-10-19; API cachedAt field converts to 2026-10-19 11:43:35.226Z. The four target-week labels (Oct 26–Nov 16) and Nov 23 follow-on display are absent from this response.",
+    "The endpoint row schema is x date plus per-model/“Others” token counts. Existing captured chart semantics at work/openrouter_chart_display_semantics_1100.json document UI tooltips sum series into rounded T totals and the default caller uses this no-argument endpoint. That is display-method evidence; future weeks cannot yet be observed."
+  ],
+  "gaps": [
+    "Outcome weeks are all future at capture; no observed target total or target-week chart display.",
+    "Current-week Oct 19 row is not treated as a complete week or extrapolated. This factual capture makes no completion/forecast claim."
+  ],
+  "receipts": [
+    "logs/deep_review_20261017/facts_0349_0350_0352_1218/openrouter_top_models_chart.receipt.json",
+    "Prior UI/source semantics: data/deep_review_20261017/openrouter_chart_display_semantics_1100.json"
+  ],
+  "quote_ref": "work/quotes_1218_facts_0349_0350_0352.json",
+  "timestamp_correction": {
+    "prior_label_value": "2026-10-19T12:18:42.601984Z",
+    "reason": "Prior value was derived from file creation mtime and mislabeled as capture time. That mtime is retained as filesystem metadata only; source observations remain the request/response receipt clocks already listed."
+  },
+  "compiled_utc": "2026-10-19T12:20:10.962434+00:00",
+  "filesystem_write_time_utc_before_this_correction": "2026-10-19T12:19:06.665931Z"
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "primary_case0326_model.v1",
+  "authored_utc": "2026-10-19T11:15:52.278109+00:00",
+  "p_yes": 0.16,
+  "range_yes": [
+    0.03,
+    0.45
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.01,
+  "selected_no": 0.69,
+  "reference": "Yes: first official Q3 organic growth in [24,28), not total sales growth. Most precise actually reported same metric governs; missing/late metric to lowest bracket→NO here.",
+  "reported_precision_branch": {
+    "integer_nearest_rounding_judgment": 0.92,
+    "continuous_or_more_precise_same_metric": 0.08,
+    "normal_qualifying_release": 0.98,
+    "missing_or_late_nonqualifying": 0.02,
+    "interval_integer_latent": [
+      23.5,
+      27.5
+    ],
+    "interval_continuous": [
+      24,
+      28
+    ],
+    "limitation": "Current issuer tables report whole percentages; no authority to reconstruct a new official metric from rounded sales components. Precision weights/normal distributions are explicit analyst judgments, not learned issuer rounding frequencies."
+  },
+  "q3_prior_year_sales_b": 6.1944,
+  "guidance_2026_b": [
+    9.3,
+    9.4
+  ],
+  "historical_guide_midpoint_beats": {
+    "Q3_2025": 0.13658715596330273,
+    "Q1_2026": 0.09641726618705038,
+    "Q2_2026": 0.0746134969325154
+  },
+  "historical_limits": "Only3 selected recent quarters, non-IID fast-growth/acquisition regime; not a calibrated error distribution. Q1 guidance already included0.9B CCS. Sales beats combine organic, acquisition and FX; cannot assign whole beat to organic.",
+  "regimes": [
+    {
+      "name": "near guidance",
+      "weight": 0.3,
+      "total_sales_b": 9.35,
+      "acquisition_sales_b": 1.4,
+      "fx_pp": 1.0,
+      "implied_organic_mean_pp": 27.341728012398306,
+      "residual_sd_pp": 3.0,
+      "p_bracket_integer_rounded": 0.42086605331244187,
+      "p_bracket_continuous": 0.45418106867699326,
+      "weighted_p": 0.1270593763624818
+    },
+    {
+      "name": "moderate beat",
+      "weight": 0.5,
+      "total_sales_b": 9.75,
+      "acquisition_sales_b": 1.45,
+      "fx_pp": 1.0,
+      "implied_organic_mean_pp": 32.99199276766112,
+      "residual_sd_pp": 3.5,
+      "p_bracket_integer_rounded": 0.05496361797143451,
+      "p_bracket_continuous": 0.07179569000197739,
+      "weighted_p": 0.02815509186693897
+    },
+    {
+      "name": "large beat",
+      "weight": 0.15,
+      "total_sales_b": 10.15,
+      "acquisition_sales_b": 1.55,
+      "fx_pp": 1.0,
+      "implied_organic_mean_pp": 37.83507684360066,
+      "residual_sd_pp": 4.0,
+      "p_bracket_integer_rounded": 0.004717022555255579,
+      "p_bracket_continuous": 0.006699385545460901,
+      "weighted_p": 0.0007313417391708007
+    },
+    {
+      "name": "setback",
+      "weight": 0.05,
+      "total_sales_b": 8.9,
+      "acquisition_sales_b": 1.35,
+      "fx_pp": 1.0,
+      "implied_organic_mean_pp": 20.88428257781223,
+      "residual_sd_pp": 4.0,
+      "p_bracket_integer_rounded": 0.207507726471309,
+      "p_bracket_continuous": 0.18038499285949172,
+      "weighted_p": 0.01026689538911818
+    }
+  ],
+  "computed_p": 0.16288845125055554,
+  "rounding": "Computed16.29%, rounded16%; unfitted analyst joint regimes, not calibrated predictive precision.",
+  "bridge": "Q2 actual organic30% vs Q1 33%; Q3 prior-year base6.1944B (not Q2 5.6503). Q2 acquisition24pp≈1.3561B; keeping absolute dollars yields only21.9pp at Q3 base, not24. Full-year CCS4.6B guidance does not allocate Q3. Regimes make acquisition revenue rise with upside sales to avoid treating all sales beats as organic. Orders/bill1.23 supports upside but is not a recognized-revenue forecast.",
+  "reserve_reason": "10pp ordinary instance plus5pp absent quarter-specific acquisition/FX/precision and conditional-fill uncertainty. Even default10pp leaves selectedYES7%, below12c join maker. Broad sensitivity can reverse value.",
+  "sensitivity": "A dominant near-guidance organic trajectory or substantially higher acquisition contribution can raise bracket chance toward35–45%; strong organic continuation/large sales beats can lower it toward3%. Changes in regime weights are model uncertainty; not evidence-based calibrated confidence bounds.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

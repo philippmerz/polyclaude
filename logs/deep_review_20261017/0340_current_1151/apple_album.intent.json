@@ -1,0 +1,1 @@
+{"name":"apple_album","request":{"call_window_label":"case340_current_music_pages","method":"GET","read_only":true,"scope":"public current album/artist listing","url":"https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:52:00.755195Z","timing_basis":"call_window"}

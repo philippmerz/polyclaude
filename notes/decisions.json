@@ -1,5 +1,5 @@
 {
-  "next_id": 234,
+  "next_id": 235,
   "decisions": [
     {
       "id": 1,
@@ -5087,6 +5087,26 @@
       "calibration_delta": null,
       "lesson": "A short-lived unfilled bid can create operational churn without validating the forecast. Review times and hard expiries are separate choices; quote lifecycle must serve expected return and monitored risk.",
       "resolved_at": "2026-10-19T10:31:36Z"
+    },
+    {
+      "id": 234,
+      "timestamp": "2026-10-19T11:57:37Z",
+      "type": "skip",
+      "thesis": "Case340 Kodak GTA VI album NO13c candidate withdrawn before any order. Newly examined Sept18 Kodak/Don Toliver unfinished album-track relay raises primary YES50\u219266%; source is unauthenticated and not final credit, but radio-only thesis was incomplete. Keep25pp reserve: NO9% selected vs13c costs1.04/8 shares, selected EV0.72 before carry. Fresh Gamma identity/fee parity matched11:51; books293.64sec old and full-credit alert coverage unproven. No prior/config/reservation/order change. Original candidate/model immutable; effective revision/model0340_primary_1200.json. New source chain is one report, not independent corroboration; no future fill assumption.",
+      "confidence": "low",
+      "prediction": "No trade. Reopen on material credit evidence and robust conditional-fill economics, then all live gates. This unplaced forecast is not a filled-trade calibration trial.",
+      "size_usd": 0,
+      "resolution_at": "2026-11-27T04:59:00Z",
+      "tags": [
+        "deep-review",
+        "case-340",
+        "source-revision",
+        "unplaced"
+      ],
+      "slug": "will-kodak-black-be-featured-on-gta-vi-the-album",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

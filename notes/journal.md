@@ -31596,3 +31596,127 @@ NewAmericanPulse/NonStopLocal polling claim identified inBozemanreport index, ex
 - LatestRhine313/Haaland316 bids were placed09:04–09:07 and canceled10:00 under original next-check expiry; research priors unchanged/zero fills. Cancellations honored existing pulls, but the preceding lifetime choice lacked an identified catalyst/staleness reason. Earlier MT01/Sedgwick cancellations identified unassessed polling/source gaps; no claim every cancellation was unnecessary.
 - DEC233 records the process correction: scheduled review reassesses current price, evidence, conditional fill economics, full-fill exposure and monitoring; retain only if still justified. Future hard expiry needs concrete economic/operational reason. Resolve or price known load-bearing gaps before posting; required cancel-first and all entry gates remain. No automatic repost, change to existing explicit pulls or financial action. Longer-quote profitability/fill benefit unmeasured. [Evidence](../data/deep_review_20261017/work/quote_lifetime_correction_1030.json).
 - Active lessons/resting-order guidance/backlog updated. All232 prior decision rows unchanged; no position/prior/reservation/research-count or performance observation changed. No new bankroll/CSV. Direct Telegram reply follows; compact handoff refreshed with original financial/source dates retained.
+
+
+## 2026-10-19T11:02:02.733554+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[320, 322]; total318valued/6blocked/364factual/2312pending, next324. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:05:38.744444+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[324]; total319valued/6blocked/364factual/2311pending, next326. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:16:38.681120+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[326]; total320valued/6blocked/364factual/2310pending, next328. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:22:34.055332+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[328]; total320valued/7blocked/364factual/2309pending, next330. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:23:57.842034+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[330]; total320valued/8blocked/364factual/2308pending, next331. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:25:56.569228+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[331]; total321valued/8blocked/364factual/2307pending, next332. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:33:35.950277+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[332]; total322valued/8blocked/364factual/2306pending, next336. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:35:46.218503+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[336]; total323valued/8blocked/364factual/2305pending, next338. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:40:46.893173+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[338]; total324valued/8blocked/364factual/2304pending, next340. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:44:58.422425+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[340]; total325valued/8blocked/364factual/2303pending, next342. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T11:57:37.317652+00:00 — Manual source review: Kodak candidate withdrawn, Alaska valued
+
+- DEC234: case340 unplaced NO13c candidate withdrawn after newly examined Sept18 album-specific Kodak/Don Toliver leak chain. PrimaryYES50→66%; unchanged25pp reserve gives selectedNO9%, below13c. Full source/conditional-fill uncertainty remains; no order/prior/config/reservation change. [Effective revisions](../research/2026-10-17-deep-review/revisions.jsonl) preserve original50% model.
+- Case330 original InsiderAdvantage RanksChoice50/48 publisher supports provisionalYES35%/range10–75;15pp reserve gives20%, both dated sides fail. Earlier block preserved; no claim current ballot/RCV tabs complete. Totals326valued/7blocked/364factual/2303pending;59revisions.
+- Read-only pre-entry11:46:58–11:47:38: roundedaccount196.52 including5.78gas, pUSD20.45;4LIVE/0matchedBUY7.52 and matchingreservations; no340position/order; UMA44tracked/42refreshed/0alerts; auditCLEAN7indexed+1deindexed. Not a synchronized NAV or new audited profit/CSVanchor.
+- Five newer alerts reviewed against exposure with publisher gaps retained. TheMeg/NetflixUK headline supplies no Whale final gross; Messi plant story no USsearch measurement; WNEM exact body unresolved. No verified thesis break or numericalpriorchange established. [Small decision/source index](../data/deep_review_20261017/work/0340_entry_final_review.json). No candidate-only watcher or standaloneheadlineTelegram.
+
+
+## 2026-10-19T12:02:56.836450+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[342]; total327valued/7blocked/364factual/2302pending, next343. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:08:15.683976+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[343]; total328valued/7blocked/364factual/2301pending, next344. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:11:50.226507+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[346]; total329valued/7blocked/364factual/2300pending, next344. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:16:07.719785+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[344]; total330valued/7blocked/364factual/2299pending, next349. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:21:54.400962+00:00 — Adversarial follow-up withdraws unplaced Clarity enactment candidate
+
+- Case317researchYES40→29%, unchanged20ppreserve gives9%selectedbelowdated9.6/10.3c. ActualGovInfoSep15cloture49–50/currentDailyPressnobusinessuntilNov9 reducefuturemainSenatebranch45→30%; notinferencefromfailedfetches. Alternatives/statusgap retained; no verifiednewcoalition/otherbillclaim. [Effective revision index](../research/2026-10-17-deep-review/revisions.jsonl).
+- Exactenactmentpredicate isdistinctfromheldClarity29/29firstfinalpassagepair; proceduralvoteisnotitsfinalvote. Noorder/prior/reservation/watcherchange or legwiseaction; priorfloor/option/venue/adjudicationanalysisretained, no currentexitquotecertified.
+
+
+## 2026-10-19T12:30:51.894912+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[349]; total331valued/7blocked/364factual/2298pending, next350. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:38:26.755382+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[350]; total332valued/7blocked/364factual/2297pending, next352. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:39:39.027286+00:00 — Manual research continues between safety checks
+
+- Newly completed/indexed cases[352]; total333valued/7blocked/364factual/2296pending, next353. Every immutable case report/source/model/economics saved before moving on. [Active map](../research/2026-10-19-manual-research.md). No current financial observation, order, prior, reservation or position change.
+-14UTC full portfolio check is independent; it does not defer active manual research. Telegram1266 confirmed immediate resumption. Native goal metadata/control does not prevent this turn from advancing the finite queue; no duplicate goal/private-state edits.
+
+
+## 2026-10-19T12:47:34.738690+00:00 — Immediate manual continuation:18 reviews saved, archive checked
+
+- Authenticated Telegram62572753 was read once and answered1266 at10:43; manual research continued immediately. Added18 case reviews320,322,324,326,328,330,331,332,336,338,340,342,343,344,346,349,350,352; effective17valued/1blocked. Totals333valued/7blocked/364factual/2,296pending;704base+60revisions. Four appended revisions317/324/330/340 preserve predecessors; unplaced317/340candidates withdrawn from source reassessment, no orders. [Effective batch map](../research/2026-10-19-manual-research.md).
+- All704effective report MDhashes/local links,3,000-row identities, checkpoint/progress/ledger hashes and append-only prior ledger/journal prefixes pass. [Audit](../data/deep_review_20261017/work/ledger_audit_closeout_1235.json). Source archive675files/29,000,878bytes uses small hash shards; public quote copies preserve Gamma/fees/books while excluding private geoblock/account captures. Prospective archive-clock labels explicitly corrected; publisher frontend-key patterns classified without exposing values or querying endpoints. [Archive master](../data/deep_review_20261017/work/manual1043_public_artifacts.json) · [Public config classification](../data/deep_review_20261017/work/public_capture_api_key_classification_1243.json).
+- Latest direct quota96%used/4%headroom, resetOct24 20:41; primary capacity reserved for portfolio/risk. No new financial writer/order/prior/reservation/position; read-only11:47account observation remains dated, not a freshNAV.14UTCfull check andIdaho22UTCpull remain binding.
+- Next353needs exact ISW UkrainianSettlements municipality/qualifying shading/persistence underwriting; genericADM4boundary is not automatically the rule boundary.353/355/356source facts saved only, no valuations.355oneOct6–7field Datafolhapoll is not current election outcome;356Q2production4.070M is not Q3. [Small phase](../data/deep_review_20261017/work/manual1043_RESUME.json). Finite queue remains authorized; no new durable goal or idlefollowup.

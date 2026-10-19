@@ -1,0 +1,18 @@
+{
+  "name": "banrep_september_decision",
+  "url": "https://www.banrep.gov.co/es/noticias/junta-directiva/junta-directiva-septiembre-2026",
+  "started_utc": "2026-10-19T12:17:08.051559+00:00",
+  "received_utc": "2026-10-19T12:17:08.901741+00:00",
+  "http_status": 200,
+  "error": null,
+  "body_bytes": 15375,
+  "body_sha256": "66bcc6e5562bd579b42ca39796e5657480458c07593163f3fe050f2908079db1",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_september_decision.body.gz",
+  "gzip_sha256": "6ece05484b6279329b0e695263195b82657bdfd899e97c68f144e20e55305a14",
+  "headers_filtered": {
+    "content-type": "text/html; charset=UTF-8",
+    "content-length": "15375",
+    "date": "Mon, 19 Oct 2026 12:17:08 GMT",
+    "cache-control": "no-store, no-cache, must-revalidate"
+  }
+}

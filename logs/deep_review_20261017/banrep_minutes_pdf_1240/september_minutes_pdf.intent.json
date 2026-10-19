@@ -1,0 +1,1 @@
+{"name":"september_minutes_pdf","request":{"method":"GET","read_only":true,"scope":"single exact public BanRep September minutes PDF capture; no bypass or retry","url":"https://www.banrep.gov.co/es/print/pdf/node/66378"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:36:37.293409Z","timing_basis":"call_window"}

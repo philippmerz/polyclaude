@@ -1,0 +1,12 @@
+{
+  "entries": [
+    {
+      "bytes": 1240,
+      "kind": "corrected_quote_copy_redaction_map",
+      "path": "data/deep_review_20261017/work/quote_public_portability_map_1245r.json",
+      "sha256": "37be234a739f789428c92e048df4a3bb9d9fb29cac4715ffe3d2283507b266bc"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

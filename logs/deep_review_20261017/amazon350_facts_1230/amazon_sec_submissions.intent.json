@@ -1,0 +1,1 @@
+{"name":"amazon_sec_submissions","request":{"method":"GET","read_only":true,"scope":"Amazon Q2 2026 original issuer earnings release / current SEC filing index for post-Q2 filings","url":"https://data.sec.gov/submissions/CIK0001018724.json"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:20:45.179088Z","timing_basis":"call_window"}

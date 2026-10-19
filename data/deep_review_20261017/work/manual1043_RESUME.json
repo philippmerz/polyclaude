@@ -1,0 +1,137 @@
+{
+  "schema": "finite_manual_research_resume.v1",
+  "updated_utc": "2026-10-19T12:47:34.850780+00:00",
+  "phase": "Latest18-case manual batch complete/indexed; finite research remains authorized; next353",
+  "completed_this_run": [
+    320,
+    322,
+    324,
+    326,
+    328,
+    330,
+    331,
+    332,
+    336,
+    338,
+    340,
+    342,
+    343,
+    344,
+    346,
+    349,
+    350,
+    352
+  ],
+  "active_index": 353,
+  "next_after_active": 355,
+  "source_paths_by_case": {
+    "320": [
+      "work/0320_resume.json"
+    ],
+    "322": [
+      "work/0322_resume.json"
+    ],
+    "324": [
+      "work/0324_resume.json"
+    ],
+    "326": [
+      "work/0326_resume.json"
+    ],
+    "328": [
+      "work/0328_resume.json"
+    ],
+    "330": [
+      "work/0330_resume.json"
+    ],
+    "331": [
+      "work/0331_resume.json"
+    ],
+    "332": [
+      "work/0332_resume.json"
+    ],
+    "336": [
+      "work/0336_resume.json"
+    ],
+    "338": [
+      "work/0338_resume.json"
+    ],
+    "340": [
+      "work/0340_resume.json"
+    ],
+    "342": [
+      "work/0342_resume.json"
+    ],
+    "343": [
+      "work/0343_resume.json"
+    ],
+    "344": [
+      "work/0344_resume.json"
+    ],
+    "346": [
+      "work/0346_resume.json"
+    ],
+    "349": [
+      "work/0349_resume.json"
+    ],
+    "350": [
+      "work/0350_resume.json"
+    ],
+    "352": [
+      "work/0352_resume.json"
+    ]
+  },
+  "quotes": "work/quotes_1043_0320_0322_0324.json",
+  "quote_ordering_correction": "Use economics helper sorting/maxbid-minask. Original compactcapsulefirst-rowerror preserved separately; rawquotesunchanged.",
+  "goal_control": "Native goal last observed blocked; no resume tool. This is not a blocker to current active manual work; no duplicate goal/private state edit. Continue finite queue, save each completion immediately.",
+  "documented_completions": [
+    320,
+    322,
+    324,
+    326,
+    328,
+    330,
+    331,
+    332,
+    336,
+    338,
+    340,
+    342,
+    343,
+    344,
+    346,
+    349,
+    350,
+    352
+  ],
+  "next_pending_indices": [
+    353,
+    355,
+    356,
+    360,
+    361,
+    362
+  ],
+  "scope": "Active manual continuation of finite3000 review. Save every completed evaluation immediately; safety checks remain independent.",
+  "quotes_by_cases": {
+    "320/322/324": "work/quotes_1043_0320_0322_0324.json",
+    "326/328/330": "work/quotes_1056_0326_0328_0330.json",
+    "331/332/336": "work/quotes_1120_0331_0332_0336.json",
+    "338/340/342": "work/quotes_1132_0338_0340_0342.json"
+  },
+  "entry340_phase": "COMPLETE: unplaced candidate withdrawn/DEC234; do not post. Effective revision/model1200 and0340_resume.json.",
+  "pending_fact_units": {
+    "353": "work/0353_resume.json",
+    "355": "work/0355_resume.json",
+    "356": "work/0356_resume.json"
+  },
+  "latest_main_quota": {
+    "probe_completed_by_utc": "2026-10-19T12:47:34.961917+00:00",
+    "used_pct": 96,
+    "headroom_pct": 4,
+    "reset_utc": "2026-10-24T20:41Z",
+    "policy": "Refresh directrepositoryprobe before expensive new work; preserve primary capacity for portfolio/risk; never defer required safetyexit."
+  },
+  "next_bounded_step": "Next353: exactISWUkrainianSettlements boundary/qualifying shading/persistence; genericADM4notautomaticruleboundary. Pendingfacts355356 not valuations. No replay completed cases, no automatic317/340candidate bid.",
+  "archive_master": "work/manual1043_public_artifacts.json",
+  "closeout_audit": "work/ledger_audit_closeout_1235.json"
+}

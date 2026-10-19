@@ -1,0 +1,29 @@
+{
+  "review_index": 330,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0330_alaska_facts.json",
+    "work/0330_alaska_followup_1118.json",
+    "work/0330_insideradvantage_original_1128.json",
+    "work/0330_callthemap_poll_highlights_1125.json",
+    "work/0330_callthemap_poll_rows_1125.json"
+  ],
+  "input": "data/deep_review_20261017/work/0330_primary_revision_1200.json",
+  "model": "research/2026-10-17-deep-review/models/0330_primary_block_1125.json",
+  "updated_utc": "2026-10-19T11:56:55.094806+00:00",
+  "model_path": "research/2026-10-17-deep-review/models/0330_primary_1200.json",
+  "economics": "data/deep_review_20261017/work/0330_economics_1200.json",
+  "revision_ledger_row": {
+    "schema": "deep_review_revision.v1",
+    "review_index": 330,
+    "revision_path": "revisions/0330_20261019T115655498768Z.json",
+    "report_sha256": "b1ead4e278763c3479b55ebbb30c5ee608e2c9afb41271889e10820cd2e80b29",
+    "prior_report_sha256": "1a77a80b539626ecea25b52ed59a2b095a706929edd03c2bc1798e084213b0e8",
+    "revision_json_sha256": "a75f049d6594051ce4a87c7e64f9a6e1276460c91649a0b9696b93a885048e74",
+    "reason": "Original InsiderAdvantage rank-choice-labelled publisher and complete directory rows support a provisional primary valuation; source gaps are priced rather than treated as automatic exclusion.",
+    "revision_utc": "2026-10-19T11:56:55.499518+00:00"
+  },
+  "next_action": "Material original current RCV tabs/official candidate-field evidence or measured turnout/poll change; reassess both sides and current correlated election exposure before any entry.",
+  "effective_report": "research/2026-10-17-deep-review/revisions/0330_20261019T115655498768Z.md",
+  "effective_report_sha256": "b1ead4e278763c3479b55ebbb30c5ee608e2c9afb41271889e10820cd2e80b29"
+}

@@ -1,0 +1,162 @@
+{
+  "entries": [
+    {
+      "body_raw_bytes": 5768,
+      "body_raw_sha256": "26d54c90ad23b4dbc0c872b4944bbcbc50b2fd2c2dac1a7a8088cf2df0695e4d",
+      "bytes": 3320,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/congress_search.body.json.gz",
+      "sha256": "38fa7558e30fb53857cbbd755eafc8d99c8378aefbbc54b9d784bd5eee3fcb74"
+    },
+    {
+      "bytes": 365,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/congress_search.intent.json",
+      "sha256": "0b1dd9a214a8e1fb62d9d8ed2bd89de3c345caff887bed7c23f870dc196ba698"
+    },
+    {
+      "bytes": 859,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/congress_search.receipt.json",
+      "sha256": "a91d3e078623eacb604e35c4e8e76da0475ac9ed0ac6d6efc216b90fd7431447"
+    },
+    {
+      "body_raw_bytes": 5750,
+      "body_raw_sha256": "2f2fbe62d952457de06e468e535ece2cf6f9a02eb372675785969ab5ad715531",
+      "bytes": 3328,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_actions.body.json.gz",
+      "sha256": "d15a2d0aa974c70edc9f5a6a0f36036df1709d897da01bf48c835bb9b1025b7b"
+    },
+    {
+      "bytes": 378,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_actions.intent.json",
+      "sha256": "8eb70a29583c1b2dc452ce95b05cd7104a8a927a982dcd03565850912e41ab61"
+    },
+    {
+      "bytes": 871,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_actions.receipt.json",
+      "sha256": "0865bf4c682bed4654e3bb12db73375284aab1756534d64c858d106427df7b23"
+    },
+    {
+      "body_raw_bytes": 5692,
+      "body_raw_sha256": "745669e2be1bf73c1ffad560353ce5a7ba9b775b113c4665b368b7769647dde2",
+      "bytes": 3299,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_bill.body.json.gz",
+      "sha256": "13e532318dfcb987fe20c3b6ff4e47343c95602b4d91137be534de1237b13fa3"
+    },
+    {
+      "bytes": 386,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_bill.intent.json",
+      "sha256": "9307590d05da7a13f3e8825218a3393d2320f135bf2cc0159ec769f35398240e"
+    },
+    {
+      "bytes": 876,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/hr3633_bill.receipt.json",
+      "sha256": "4ceb5de28f00694d3a97018c9f598e0c4444bee89bf207c6ac51e8984088dbfe"
+    },
+    {
+      "body_raw_bytes": 263967,
+      "body_raw_sha256": "af3befdbe82742ad5f59ab9d809ef5aab353660f904fc3181778da333ea8d777",
+      "bytes": 38356,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/whitehouse_actions.body.json.gz",
+      "sha256": "eecf072a14de99f20e2493541593fac7acd5e0323211cfb5f71095045776032f"
+    },
+    {
+      "bytes": 406,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/whitehouse_actions.intent.json",
+      "sha256": "3e23dd99a40449ece60a7d4cb139e1ccd172b10aca476c59aea29037643f5582"
+    },
+    {
+      "bytes": 952,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_official_0840/whitehouse_actions.receipt.json",
+      "sha256": "b6429e66798ab55d4ea366d205506006e4dc7cb2453d393d2c226abbdfa19bde"
+    },
+    {
+      "bytes": 1737,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_followup_1225/parsed.json",
+      "sha256": "dd047bfaedde270d262121d8ea50965bce501737e74820bbd39d1a8584a40f94"
+    },
+    {
+      "body_raw_bytes": 507,
+      "body_raw_sha256": "cbffd777f9242025546db9f38950029561a62cb553eeb8ad17b1583a9be99919",
+      "bytes": 313,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_followup_1225/senate_rollcall_234.body.json.gz",
+      "sha256": "5942c2f7c3daa70fb75709e76ac256c2481f78bc50213922036957eab560b1ba"
+    },
+    {
+      "bytes": 358,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_followup_1225/senate_rollcall_234.intent.json",
+      "sha256": "9722a310c60f1b5d2ee000dfa54d0dd1f705a0f37109b4c6370e83f00772e496"
+    },
+    {
+      "bytes": 901,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/clarity317_followup_1225/senate_rollcall_234.receipt.json",
+      "sha256": "31fd5f4e564cbec9ea97700d0c1e1ad56f1d64351d70ac65e32c5e264593b6c1"
+    },
+    {
+      "body_raw_bytes": 454051,
+      "body_raw_sha256": "0374f4d633cc48d362af70b488fec45a92b7d45e30d1f92824645011e44debf9",
+      "bytes": 65352,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_calendar.body.gz",
+      "sha256": "24cf89e966d511a4e53c2eae6e6df5304c493baef53f656a58b3b6bfd707f611"
+    },
+    {
+      "bytes": 693,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_calendar.receipt.json",
+      "sha256": "aaa64519450a13234207c922f9a9a7141945c598179add2bafee2aab54d499b7"
+    },
+    {
+      "body_raw_bytes": 15411,
+      "body_raw_sha256": "0e02ac6dd598ef7c18e97b09b01ace83fed0006f5f63992ccca6eb8d1b43fbc0",
+      "bytes": 5521,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_october_policy_meeting_detail.body.gz",
+      "sha256": "bfac65fbae737745fd1b6fcf083f65adff2e18390f4e805bcce04ad1930b3762"
+    },
+    {
+      "bytes": 783,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_october_policy_meeting_detail.receipt.json",
+      "sha256": "374c4e47607ce305606690da0cd3b8c138883b3228ac77725e9b21f20a2a6445"
+    },
+    {
+      "body_raw_bytes": 15375,
+      "body_raw_sha256": "66bcc6e5562bd579b42ca39796e5657480458c07593163f3fe050f2908079db1",
+      "bytes": 5499,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_september_decision.body.gz",
+      "sha256": "6ece05484b6279329b0e695263195b82657bdfd899e97c68f144e20e55305a14"
+    },
+    {
+      "bytes": 795,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_september_decision.receipt.json",
+      "sha256": "5d445e7f891bbb53137bd5d9bce716f702bc431356a6dd2afed3787ffa6e02f2"
+    },
+    {
+      "body_raw_bytes": 15228,
+      "body_raw_sha256": "1fe5cab9a198289a884875e2671bce02588bbbde08497effc75ba47445db6986",
+      "bytes": 5468,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_followup_1220/banrep_minutes_index.body.gz",
+      "sha256": "1d98dad083115901f462642ae4d56115b654d46ac8ef011d0ee2e7ea09a88e58"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

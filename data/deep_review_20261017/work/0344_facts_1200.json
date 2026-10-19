@@ -1,0 +1,83 @@
+{
+  "captured_review_utc": "2026-10-19T12:00:39Z",
+  "conditionId": "0x139005d3b4536984949e6c59a46bac1dac9b35f43d0f8c715c2c6965f6f32072",
+  "criteria_sha256": "6c8df3f6cbbe9c34b197b530ee43a58a2700023939720c973cf5be5a163f1b49",
+  "current_primary_facts": "AmEx IR company page direct GET 200; title confirms “American Express Plans Live Audio Webcast of Third-Quarter 2026 Earnings Conference Call,” but body is a sparse/dynamic shell and does not expose schedule in captured HTML. Company release distribution indexed by search says results/presentation planned ~7:00 a.m. ET and call 8:30 a.m. ET Fri Oct 23; direct BusinessWire page GET timed out, so preserve this as indexed announcement detail, not captured body. Official SEC exhibit for AmEx Q2 results captured 200: Q2 2026 diluted EPS $4.53; release dated July 24 2026. This is a prior-quarter comparator, not the Q3 resolving result.",
+  "frozen_rule": "For the next quarterly earnings release, diluted GAAP EPS must be strictly greater than $4.53 (standard nearest-cent rounding). If company omits GAAP EPS, SeekingAlpha fallback; if no figure in 96 hours after market close on announcement day, NO. If no earnings release within 45 calendar days of estimated earnings date, NO. Frozen estimated date Oct 23 2026.",
+  "id": "5778595",
+  "public_quote_packet": "work/quotes_1158_0343_0344_0346.json",
+  "public_quote_packet_sha256": "c30370dedb306ea2cb92a81c6a20c7f1b62d8bae00f01b64ac6f7b32537e10c9",
+  "question": "Will American Express (AXP) beat quarterly earnings?",
+  "quote_capture_manifest": "logs/deep_review_20261017/quotes_1158_0343_0344_0346/capture_manifest.json",
+  "quote_capture_manifest_sha256": "1437b9341b315bd0f9046a626769de1dd0d3fc1f85f619f7bb5b2b3bcfe1cfb7",
+  "quote_snapshot": {
+    "accepting_orders": true,
+    "active": true,
+    "books": [
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.91",
+          "size": "144.37"
+        },
+        "best_bid": {
+          "price": "0.88",
+          "size": "125.5"
+        },
+        "book_timestamp_epoch_ms": "1792411129771",
+        "outcome": "Yes",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      },
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.12",
+          "size": "125.5"
+        },
+        "best_bid": {
+          "price": "0.09",
+          "size": "144.37"
+        },
+        "book_timestamp_epoch_ms": "1792411129771",
+        "outcome": "No",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      }
+    ],
+    "capture_errors": [],
+    "closed": false,
+    "condition_id": "0x139005d3b4536984949e6c59a46bac1dac9b35f43d0f8c715c2c6965f6f32072",
+    "criteria_exact_match": true,
+    "fee": {
+      "e": 1.0,
+      "r": 0.05,
+      "to": true
+    },
+    "fee_gamma_parity": true,
+    "fee_received_utc": "2026-10-19T11:58:51.940257+00:00",
+    "fee_status": 200,
+    "gamma_updated_at": "2026-10-19T11:55:13.434143Z",
+    "identity_checks": {
+      "condition_id": true,
+      "description": true,
+      "endDate": true,
+      "market_id": true,
+      "outcomes": true,
+      "question": true,
+      "resolutionSource": true,
+      "slug": true,
+      "token_ids": true
+    },
+    "market_id": "5778595",
+    "min_size": 5,
+    "min_tick": 0.01,
+    "neg_risk": false
+  },
+  "review_index": 344,
+  "source_receipts": [
+    "logs/deep_review_20261017/facts_1158_343_344_346/axp_ir_q3_webcast.receipt.json (200, page title)",
+    "logs/deep_review_20261017/facts_1158_343_344_346/axp_q3_businesswire.receipt.json (timeout; empty body)",
+    "logs/deep_review_20261017/facts_1158_343_344_346/axp_sec_q2_release.receipt.json (200)",
+    "SEC Q2 exhibit: https://www.sec.gov/Archives/edgar/data/4962/000000496226000318/q226exhibit991.htm",
+    "Issuer IR: https://ir.americanexpress.com/news/investor-relations-news/news-details/2026/American-Express-Plans-Live-Audio-Webcast-of-Third-Quarter-2026-Earnings-Conference-Call/default.aspx"
+  ]
+}

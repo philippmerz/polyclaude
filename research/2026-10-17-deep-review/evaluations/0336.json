@@ -1,0 +1,163 @@
+{
+  "review_index": 336,
+  "condition_id": "0xaa5cdb6830cbfa2ca711b7cf93bd42cf4f8e062d44ea188c0b8ec1fb2924c083",
+  "criteria_sha256": "a4be0f8bb6d597c7232c3d72356f079c0c7a62c0a7495ee9b6e17a5ee9fe47c1",
+  "status": "valued",
+  "literal_analysis": "Pahlavi byDec31exercisesprimaryIranstateexecutiveauthorityincludingarmedforces/nationalinstitutions; notforeignrecognition/exileleadership/ceremony/nominationalone. Wholeterritorialunanimity/formaltitleunnecessary; noindividualauthorityalonequalifiesNOunlessPahlavimeetstest.",
+  "evidence": [
+    {
+      "url": "https://rezapahlavi.org/en",
+      "observed_utc": "2026-10-19T11:20:14.715289+00:00",
+      "finding": "Site lists Oct 2, 2026 as his latest statement at capture; describes a proposed transition from the Islamic Republic and lists “maximum defections” and “maximum organization” as strategy pillars. Page does not report appointment to Iranian office or exercise of domestic governing authority."
+    },
+    {
+      "url": "https://irna.com/en/news/86295908/",
+      "observed_utc": "2026-10-19T11:20:15.132194+00:00",
+      "finding": "Parliament approved Mehrdad Akhlaghi Ketabchi as defense and armed-forces-logistics minister; IRNA reports 237 votes for and 15 against, 277 members present. President Masoud Pezeshkian nominated him Oct 5. He succeeded acting minister Majid Ibn al-Reza, who had served since Feb 28."
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/10/18/who-is-mehrdad-akhlagh-irans-new-tech-focused-defence-minister",
+      "observed_utc": "2026-10-19T11:20:15.251100+00:00",
+      "finding": "Corroborates Oct 18 minister appointment; says parliament had convened online since the Feb 28 war began, and reports the minister-designate consulted senior military officials including IRGC commander-in-chief Ahmad Vahidi. This is reporting on institutions/contacts, not direct proof of nationwide command effectiveness."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.02,
+    "low": 0.003,
+    "high": 0.12,
+    "method": "Unfittedeffective-authoritytransition/consolidationtreeplusfragmented-but-primaryinterpretationmixture.",
+    "reasoning": "Exiletransitionplatformnotarmycontrol; reportedcurrentinstitutionalappointmentsdespitewar. Furtherstatebreakaloneinsufficient; Pahlavileadership+consolidation+sourcequalificationsyield~1.6%rounded2.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0336_primary_1142.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336.json",
+    "quote_file_sha256": "102a27951028618dcdaaa7a408cb0fbeaa96112dfa5e34bcb3b948536ab2461a",
+    "quote_capture_utc": "2026-10-19T11:17:29.539030+00:00",
+    "gamma_received_utc": "2026-10-19T11:17:29.314160+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.02,
+        "selected_stress_probability": 0,
+        "best_bid": 0.022,
+        "best_ask": 0.025,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792408648001",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 1.4129719734191895,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.25,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.025
+              }
+            ],
+            "net": 0.25
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.21999999999999997,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.022
+              }
+            ],
+            "net": 0.21999999999999997
+          }
+        },
+        "taker_cost_usd": 0.25,
+        "central_expected_profit_usd": -0.04999999999999999,
+        "selected_stress_profit_usd": -0.25,
+        "break_even_before_carry": 0.025,
+        "break_even_constant_carry": 0.025159952795192776,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.98,
+        "selected_stress_probability": 0.83,
+        "best_bid": 0.975,
+        "best_ask": 0.978,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792408648001",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 1.4129719734191895,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.78,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.978
+              }
+            ],
+            "net": 9.78
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.75,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.975
+              }
+            ],
+            "net": 9.75
+          }
+        },
+        "taker_cost_usd": 9.78,
+        "central_expected_profit_usd": 0.02000000000000135,
+        "selected_stress_profit_usd": -1.4800000000000004,
+        "break_even_before_carry": 0.978,
+        "break_even_constant_carry": 0.9842573533479413,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry. YEScentralnegative; NOsmallcentralgainfailsdatedcashcarry evenzerofees, andbothsidesfail15ppstress. Feeendpointparityunknownexplicit.",
+  "reopen_condition": "VerifieddomesticPahlaviexecutive/militarycontrolorconsequentialsecurityfracture/transitionsteps/newlawfulafter-costroute; freshsource/fee/portfolio/fullgates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T11:35:45.806560+00:00",
+  "question": "Will Reza Pahlavi lead Iran in 2026?",
+  "market_id": "1472548",
+  "valuation_author": "primary_operator",
+  "original_index": 336,
+  "report_sha256": "b06301fef7e372ee670436e63dec469786e3543ae07f9467bd4913d049bb9a5f"
+}

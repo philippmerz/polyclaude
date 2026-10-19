@@ -1,0 +1,82 @@
+{
+  "captured_review_utc": "2026-10-19T12:00:39Z",
+  "conditionId": "0xc36f13fb975afe21daa6b863e055b80a0322186fd8af361e4c1a315c92c48d35",
+  "criteria_sha256": "e85ea4843fd02156f63733f711a9c471e113cde46d25add2db3a689e3b7c1d3e",
+  "current_primary_facts": "Vatican’s official biography says Robert Francis Prevost was elected Pope on May 8, 2025 and chose Leo XIV. TIME’s official 2025 announcement names “The Architects of AI” and is dated Dec 11, 2025. No 2026 winner/current 2026 announcement was found in the bounded TIME search; that is not evidence of the eventual result or a complete absence check.",
+  "frozen_rule": "YES if TIME explicitly names Pope Leo XIV Person of the Year. If multiple people are explicitly named, each qualifies; special group/concept and cover rules apply. If no announcement by June 30 2027 11:59 PM ET, NO. Resolution uses TIME cover(s), with feature article also usable.",
+  "id": "2363843",
+  "public_quote_packet": "work/quotes_1158_0343_0344_0346.json",
+  "public_quote_packet_sha256": "c30370dedb306ea2cb92a81c6a20c7f1b62d8bae00f01b64ac6f7b32537e10c9",
+  "question": "Will Pope Leo XIV be TIME Person of the Year 2026?",
+  "quote_capture_manifest": "logs/deep_review_20261017/quotes_1158_0343_0344_0346/capture_manifest.json",
+  "quote_capture_manifest_sha256": "1437b9341b315bd0f9046a626769de1dd0d3fc1f85f619f7bb5b2b3bcfe1cfb7",
+  "quote_snapshot": {
+    "accepting_orders": true,
+    "active": true,
+    "books": [
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.15",
+          "size": "250"
+        },
+        "best_bid": {
+          "price": "0.14",
+          "size": "51.84"
+        },
+        "book_timestamp_epoch_ms": "1792411131096",
+        "outcome": "Yes",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      },
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.86",
+          "size": "51.84"
+        },
+        "best_bid": {
+          "price": "0.85",
+          "size": "250"
+        },
+        "book_timestamp_epoch_ms": "1792411131096",
+        "outcome": "No",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      }
+    ],
+    "capture_errors": [],
+    "closed": false,
+    "condition_id": "0xc36f13fb975afe21daa6b863e055b80a0322186fd8af361e4c1a315c92c48d35",
+    "criteria_exact_match": true,
+    "fee": {
+      "e": 1.0,
+      "r": 0.05,
+      "to": true
+    },
+    "fee_gamma_parity": true,
+    "fee_received_utc": "2026-10-19T11:58:52.050361+00:00",
+    "fee_status": 200,
+    "gamma_updated_at": "2026-10-19T11:55:13.434143Z",
+    "identity_checks": {
+      "condition_id": true,
+      "description": true,
+      "endDate": true,
+      "market_id": true,
+      "outcomes": true,
+      "question": true,
+      "resolutionSource": true,
+      "slug": true,
+      "token_ids": true
+    },
+    "market_id": "2363843",
+    "min_size": 5,
+    "min_tick": 0.01,
+    "neg_risk": false
+  },
+  "review_index": 346,
+  "source_receipts": [
+    "logs/deep_review_20261017/facts_1158_343_344_346/vatican_pope_bio.receipt.json (200)",
+    "logs/deep_review_20261017/facts_1158_343_344_346/time_2025_poy.receipt.json (200)",
+    "Vatican: https://www.vatican.va/content/leo-xiv/en/biography/documents/biografia_leone-xiv.html",
+    "TIME 2025: https://time.com/7339685/person-of-the-year-2025-ai-architects/"
+  ]
+}

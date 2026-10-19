@@ -1,0 +1,14 @@
+{
+  "review_index": 332,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0332_usgs_facts.json",
+    "work/0332_usgs_historical_events.json",
+    "work/quotes_1132_0338_0340_0342_facts.json"
+  ],
+  "model_path": "research/2026-10-17-deep-review/models/0332_primary_1137.json",
+  "input": "data/deep_review_20261017/work/0332_primary_input_1137.json",
+  "economics": "data/deep_review_20261017/work/0332_economics_1137.json",
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0332.md",
+  "effective_report_sha256": "d7abba1c290c1d9c144d228289dcb9f5f0d20f614e79338e1d74501522ca6df9"
+}

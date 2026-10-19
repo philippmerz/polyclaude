@@ -1,0 +1,110 @@
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "checkpoint": {
+    "updated_utc": "2026-10-19T10:43:00.191972+00:00",
+    "universe": 3000,
+    "completed_in_depth_reviews": 322,
+    "completed_valuations": 316,
+    "blocked_after_in_depth_review": 6,
+    "factual_exclusions": 364,
+    "pending": 2314,
+    "base_records": 686,
+    "revisions_written": 56,
+    "active_indices": [
+      320
+    ],
+    "next_pending_indices": [
+      320,
+      322,
+      324,
+      326,
+      328,
+      330,
+      331,
+      332,
+      336,
+      338,
+      340,
+      342,
+      343,
+      344,
+      346,
+      349,
+      350,
+      352,
+      353,
+      355,
+      356,
+      360,
+      361,
+      362,
+      364,
+      366,
+      367,
+      368,
+      370,
+      371
+    ]
+  },
+  "checkpoint_hashes": {
+    "checkpoint": {
+      "sha256": "94806a92e8f655764a2e1bbce6ec4a6e10e6dbcec633c8bcd1ea3482db89acd5",
+      "path": "notes/deep_review_checkpoint.json"
+    },
+    "progress": {
+      "sha256": "e6630130bcd9ce35111595003c7c287625830b48e6ad023f79e102ac4436b43a",
+      "path": "research/2026-10-17-deep-review/progress.json"
+    },
+    "frozen_rules_gzip": {
+      "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+      "path": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
+      "checkpoint_declared_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+      "matches_checkpoint": true
+    },
+    "base_ledger": {
+      "sha256": "1216814d8db7c988ba79b40df219417ff5da1ae847526c76bd34322ce8229d61",
+      "path": "research/2026-10-17-deep-review/evaluations.jsonl",
+      "checkpoint_declared_sha256": "1216814d8db7c988ba79b40df219417ff5da1ae847526c76bd34322ce8229d61",
+      "matches_checkpoint": true
+    },
+    "revision_ledger": {
+      "sha256": "02903ddcc0cff18ec5708cac2cf602b9b8a2cfabc04a4f3198674032591282ba",
+      "path": "research/2026-10-17-deep-review/revisions.jsonl",
+      "checkpoint_declared_sha256": "02903ddcc0cff18ec5708cac2cf602b9b8a2cfabc04a4f3198674032591282ba",
+      "matches_checkpoint": true
+    },
+    "queue_index": {
+      "sha256": "4213a7ec28a96e889ee7b9d50d6eab76874c9c4a6997d29afa7464a77029e22d",
+      "path": "research/2026-10-17-deep-review/index.csv"
+    }
+  },
+  "selected_review_index": 320,
+  "case": {
+    "review_index": 320,
+    "id": "3362505",
+    "conditionId": "0xd2c852aa9907e39c7152a8329d95728d34f1c356485631a76bc68e73fa8786e0",
+    "question": "Will LSU be a top 4 seed in the 2027 College Football Playoffs?",
+    "slug": "will-lsu-be-a-top-4-seed-in-the-2027-college-football-playoffs-20260803204017367",
+    "description": "This market will resolve to \"Yes\" if the above team is seeded No. 1, No. 2, No. 3, or No. 4 in the 2026-27 College Football Playoff bracket, and \"No\" otherwise.\n\nIf the 2026-27 College Football Playoff is canceled, or an official bracket is not released by December 20, 2026, 11:59 PM ET, all outcomes in this market will resolve to \"No.\"\n\nThe resolution source for this market will be official information from the College Football Playoff (collegefootballplayoff.com); however, a consensus of credible reporting may also be used.",
+    "resolutionSource": "",
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "clobTokenIds": [
+      "63513724631042685794767748713541569136181205762932913281059018711656184325975",
+      "110323096999326484619811015900792841973450207165105134714980062614616731909324"
+    ],
+    "endDate": "2026-12-21T04:59:00Z",
+    "criteria_sha256": "71860a2a7079a09ed4dcc4c52465025a56854dba8a3c70d1b70224034669543d"
+  },
+  "effective_case": {
+    "status": "in_progress",
+    "evaluated_utc": null,
+    "report_pointer": null,
+    "latest_revision": null,
+    "verified_artifacts": []
+  },
+  "optional_work_pointers": null,
+  "packet_bytes": 3832
+}

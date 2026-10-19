@@ -1,0 +1,37 @@
+{
+  "schema": "primary_case0349_model.v1",
+  "authored_utc": "2026-10-19T12:30:51.027816+00:00",
+  "p_yes": 0.41,
+  "range_yes": [
+    0.2,
+    0.75
+  ],
+  "actual_entry_reserve_pp": 15,
+  "method": "Joint policy-reaction regimes plus explicit cancellation fallback; no independent-director vote multiplication.",
+  "regimes": [
+    {
+      "name": "Hawk majority persists",
+      "weight": 0.55,
+      "conditional_hold": 0.2
+    },
+    {
+      "name": "Pause to observe cumulative tightening/weakactivity",
+      "weight": 0.35,
+      "conditional_hold": 0.75
+    },
+    {
+      "name": "New fiscal/external/growth shock",
+      "weight": 0.1,
+      "conditional_hold": 0.3
+    }
+  ],
+  "normal_hold_probability": 0.40249999999999997,
+  "cancel_or_postponed_beyond_next_meeting": 0.01,
+  "computed_yes": 0.408475,
+  "reasoning": "Sepmajority4+25,one+50,twohold; annualCPI6.24Aug\u21926.29Sepstillabove3target/Septemberyearendexpectation6.8supportsrenewedhike. But275bp cumulativehikes/realrate~6/lags/weakJulyISE1.1vsJune3.5/quake-recoverypressuremakepausecredible.55%persistinghawks20%hold,35%pause-regime75%hold,10%newshocks30%hold=>40.25%;1%cancellationfallback=>40.8475%,rounded41. Allweightsjudgmentunfitted, notthreeindependentvotes ormarketquoteconvertedtoprior.",
+  "literal": "October2026meetingchangevspriorrate12.25; anynonnullsub25bpchangerounds25, upperboundifrange, tieawayfromzero. Onlyspecifiedmeetingmatters; emergencyoutsidechangesexcluded. Timelypostponedmeetingcounts;cancelornodecisionbeforenextscheduledmeeting\u2192HOLD. Oct30metadata00Znotactualmeetingtime.",
+  "source_verified": "Rootreadfullofficial3pagePDFviahttps://www.banrep.gov.co/es/print/pdf/node/66378. DirectnormalGETstoHTMLchallengecapturedseparately, browserPDFnotrawHTTP. Septemberminutesoneofmajorityoriginallysought50thenagreed25. DANESeptmonthly.37/YTD5.74/annual6.29, Augmonthly.39/annual6.24. OfficialcalendarOct30/silenceOct24\u201330. NoOctoberdecisionorsurveymeasured; Sept6.8expectationnotsubstitutedasOctober.",
+  "reserve_reason": "15pp=10ordinaryfutureCBreactionmodel+5jointvoters/lag/fiscal/newdatauncertainty; selectedHOLD26/NO44. No empiricalconditionalfillfloor.",
+  "sizing_and_cost": "AtdatedNO43/47c, post-onlyimprovement44c equalsselectedNO44%beforecost. Joining43c offersonly.05gross forminimum5shares, below.05operationalhurdleplus11daycarry. QuarterKellywithselected44/cost43 gives190*.25*(.44-.43)/(1-.43)=.8333USD,below5share2.15minimum; donotrounduptoticketmerelytoclearmin. NominalcentralNO59doesnotresolve modeluncertainty.",
+  "no_execution_authority": true
+}

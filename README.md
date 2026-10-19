@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**316 valued /6 blocked /364 factual exclusions /2,314 pending**;686 immutable base cases +56 append-only revisions. Five newvaluations and one sourceblock individuallysaved; next320. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. [Resume](research/2026-10-17-deep-review/RESUME.md): one fullrule/latestreport, named2–5KBunits/8KBcap. Nativegoalrecordstillblocked despiteinteractiveoperatorresumption; tools havenoresumeoperation, so automaticcontinuation requiresapp/systemcontrol. [Current review and decisions](research/2026-10-19-goal-resumed.md).
+**333 valued /7 blocked /364 factual /2,296 pending;704 base+60 revisions,next353.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. Manual research is active; completed cases are saved/indexed individually. The14UTC portfolio check is independent and does not pause research. [Current work](research/2026-10-19-manual-research.md) · [small resume](research/2026-10-17-deep-review/RESUME.md). First100/200/300 notified; next400/material findings.
 
 **Rhine313/Haaland316 bids canceled unfilled at existing10UTC pulls** (DEC231/232); no purchases/profit, no repost. Independent terminal/trade/CTF checks and post-grace reconciliation retired only their3.95 commitments. Four older BUYs/7.52 remain; Idaho22UTC pull unchanged. [Current orders/proofs](notes/resting_orders.md).
 

@@ -1,0 +1,88 @@
+{
+  "schema": "primary_case0320_model.v1",
+  "authored_utc": "2026-10-19T10:50:41.725912+00:00",
+  "p_yes": 0.03,
+  "range_yes": [
+    0.001,
+    0.2
+  ],
+  "selected_stress_yes": 0,
+  "selected_stress_no": 0.87,
+  "actual_entry_reserve_pp": 10,
+  "literal_contract": "LSU official seed1\u20134 in2026\u201327CFP bracket, not playoff qualification/champion. No official bracket byDec20 23:59ET/cancellation\u2192NO.",
+  "factual_anchor": "OfficialLSU5\u20132/SEC2\u20132 throughOct17; AP18/Coaches17 onOct18; remainingawayAuburn,homeAlabama,homeTexas,awayTennessee,awayArkansas. Source pages and full officialCFPformat/seedparagraph independently read/hashverified.",
+  "method": "Unfitted latent-team-strength mixture and explicit committee/conference route; no ranking-to-probability lookup or market-derived prior.",
+  "regimes": [
+    {
+      "name": "stronger late-season LSU",
+      "weight": 0.25,
+      "game_win": [
+        0.78,
+        0.68,
+        0.7,
+        0.6,
+        0.86
+      ],
+      "champ_berth_given_sweep": 0.45,
+      "champ_win": 0.58,
+      "seed4_if_champ": 0.95,
+      "seed4_if_champ_loss": 0.03,
+      "seed4_no_champ": 0.2,
+      "seed4_given_four_wins": 0.005,
+      "sweep_probability": 0.19158048000000003,
+      "exactly_four_wins_probability": 0.3852048,
+      "seed4_given_sweep": 0.36361999999999994,
+      "weighted_top4_contribution": 0.017897129534399998
+    },
+    {
+      "name": "current middle top25 quality",
+      "weight": 0.5,
+      "game_win": [
+        0.62,
+        0.48,
+        0.55,
+        0.4,
+        0.75
+      ],
+      "champ_berth_given_sweep": 0.3,
+      "champ_win": 0.45,
+      "seed4_if_champ": 0.9,
+      "seed4_if_champ_loss": 0.01,
+      "seed4_no_champ": 0.15,
+      "seed4_given_four_wins": 0.002,
+      "sweep_probability": 0.049104,
+      "exactly_four_wins_probability": 0.213492,
+      "seed4_given_sweep": 0.22815000000000002,
+      "weighted_top4_contribution": 0.005815030800000001
+    },
+    {
+      "name": "regression/injuries or stronger field",
+      "weight": 0.25,
+      "game_win": [
+        0.45,
+        0.3,
+        0.35,
+        0.22,
+        0.6
+      ],
+      "champ_berth_given_sweep": 0.18,
+      "champ_win": 0.32,
+      "seed4_if_champ": 0.8,
+      "seed4_if_champ_loss": 0.002,
+      "seed4_no_champ": 0.08,
+      "seed4_given_four_wins": 0.001,
+      "sweep_probability": 0.0062369999999999995,
+      "exactly_four_wins_probability": 0.06003,
+      "seed4_given_sweep": 0.11192479999999999,
+      "weighted_top4_contribution": 0.00018952624439999997
+    }
+  ],
+  "computed_mixture_top4": 0.023901686578799996,
+  "headline_rounding": "Round roughly2.4% mixture to3%; uncertainty dominates hundredths. Existing three-loss route approximated within four-win branch; additional<=3win extremechaos not separately fitted and covered by broad range, not declared impossible.",
+  "dependence": "Games assumed conditionally independent within each strength regime; latent regime couples games. Conference berth/opponent/committee/other-team outcomes not a fully simulated joint season; probabilities are expert scenario assumptions.",
+  "why_inputs": "Strong results include51\u201310Clemson/35\u20136A&M/31\u20130MissState; losses atOleMiss/Kentucky and0\u20132away. Three upcoming ranked opponents and three away games make sweep unlikely; starting withtwo losses andmany0/1loss contenders means sweep does not guarantee top4. Current CFP byes follow rankings, not four champion labels.",
+  "source_gaps": "ESPN202, APdirect403 laterclosedbyofficialLSUpolltable; SagarinTLSfailure and separatewebtimeout. No calibratedcurrentpowerdistribution, fullSECtiebreaksimulation orofficialinjuryreport. Ranks are ordinalvotes, not pointstrength.",
+  "sensitivity": "Materially stronger LSU, chaos among higher teams orconferencechampionship gives higherYES; adverse0.1\u201320%range subjective, not a calibrated confidence bound. No short measured-tail/bond-fade license.",
+  "quotes_known_before_model": true,
+  "no_execution_authority": true
+}

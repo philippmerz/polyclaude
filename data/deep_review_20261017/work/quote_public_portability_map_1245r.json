@@ -1,0 +1,25 @@
+{
+  "correction_note": "Reissued with actual writer UTC; the prior 12:45:00Z label was prospective and is preserved in the prior file for audit.",
+  "created_utc": "2026-10-19T12:43:23Z",
+  "schema": "quote_public_portability_map.v1",
+  "source_copies": [
+    {
+      "original_path": "data/deep_review_20261017/work/quotes_1218_0349_0350_0352.json",
+      "original_sha256": "cb966d6a8b58d0db202f8206ea56ef626a244ad8f86a9e9b3da3b6a3b6a75fff",
+      "public_copy_bytes": 32309,
+      "public_copy_path": "data/deep_review_20261017/work/quotes_1218_0349_0350_0352_public.json",
+      "public_copy_sha256": "b59dd17cbb066488041f12dae4fa725bbc960df8e947804142e990b4036c1ee8",
+      "public_receipts_retained": "All seven public Gamma, fee and books receipt references are retained with their unchanged public capture bodies.",
+      "redactions": [
+        "/geoblock (complete geographic/private response object)",
+        "/clob_transport_receipts[type=geoblock] (private request and receipt path)"
+      ],
+      "scope_indices": [
+        349,
+        350,
+        352
+      ]
+    }
+  ],
+  "validation": "The original packet and private geoblock source were not copied or modified; only the designated geoblock object/row were removed."
+}

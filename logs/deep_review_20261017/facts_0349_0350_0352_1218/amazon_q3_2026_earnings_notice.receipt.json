@@ -1,0 +1,18 @@
+{
+  "name": "amazon_q3_2026_earnings_notice",
+  "url": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report",
+  "started_utc": "2026-10-19T12:17:08.903350+00:00",
+  "received_utc": "2026-10-19T12:17:09.177570+00:00",
+  "http_status": 200,
+  "error": null,
+  "body_bytes": 173620,
+  "body_sha256": "690f1dc2bf7031ec1ef7e83d499f1c9fd1d864aeec44ffd888a3e3592a970e29",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/amazon_q3_2026_earnings_notice.body.gz",
+  "gzip_sha256": "9bc3ceacafe1f1a344ea5689aa800af07507825f2ae0adfcfd5b65383cfaab80",
+  "headers_filtered": {
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 12:15:14 GMT",
+    "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate",
+    "age": "115"
+  }
+}

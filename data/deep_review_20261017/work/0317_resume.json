@@ -3,14 +3,20 @@
   "source_paths": [
     "work/0317_facts_0837.json",
     "work/0317_govinfo_status_0845.json",
-    "work/0317_govinfo_late_records_0850.json"
+    "work/0317_govinfo_late_records_0850.json",
+    "work/0317_negotiation_followup_1218.json"
   ],
-  "phase": "Official-source fact passes complete. GovInfo BILLSTATUS provides H.R.3633 action history through Sep15; the Oct13 calendars and Oct16 Congressional Record Index provide later-dated record coverage. No enactment or other-bill conclusion.",
-  "updated_utc": "2026-10-19T08:48:33Z",
+  "phase": "COMPLETE revised29%/unplacedcandidatewithdrawn; nofinancialaction",
+  "updated_utc": "2026-10-19T12:18:06.683730Z",
   "load_bearing_unknowns": [
-    "The latest fetched official records are dated/modified Oct10–16; the retrieval does not certify intervening events after each record or status as of Oct19.",
-    "Current inventory/status of other legislation meeting the frozen three-part market-structure definition remains unestablished.",
-    "The records show committee and procedural activity, not proof of enactment or a future Senate floor date."
+    "Latest H.R.3633 bill-status body remains Sep17-vintage; no post-Sep15 substantive compromise was established by bounded official-source searches.",
+    "Direct Senate roll-call XML returned 403; GovInfo official bill-status action record states 49-50 and record vote 234.",
+    "Congress.gov access gap remains; potentially qualifying other bills were not inventoried.",
+    "No conclusion that negotiations ceased or that later passage is impossible."
   ],
-  "next_bounded_step": "Primary reviewer may seek a newer exact official status record if required; do not treat these H.R.3633-focused records as an exhaustive bill inventory."
+  "next_bounded_step": "COMPLETE revisedYES29%; candidatewithdrawn unplaced. Reopen only substantive coalition/text/floor evidence plus current economics/gates; never replay older candidate.",
+  "model_path": "research/2026-10-17-deep-review/models/0317_primary_1222.json",
+  "input": "data/deep_review_20261017/work/0317_primary_revision_1222.json",
+  "economics": "data/deep_review_20261017/work/0317_economics_1222.json",
+  "primary_reassessed_utc": "2026-10-19T12:21:54.400962+00:00"
 }

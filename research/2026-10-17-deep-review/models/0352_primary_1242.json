@@ -1,0 +1,43 @@
+{
+  "schema": "primary_case0352_model.v1",
+  "authored_utc": "2026-10-19T12:39:38.291589+00:00",
+  "p_yes": 0.2,
+  "range_yes": [
+    0.05,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 20,
+  "method": "Completed-week anchor substituted into the existing joint regime/path model; primary adopts lower-tail forecast after paired diagnostic and structural countermodel review.",
+  "reasoning": "Oct12 observed raw164.043985914931T replaces uncertain partial-plus-remainder. Five generated weeks Oct19..Nov16, lastfour sum; Oct19 partial not extrapolated. Parent200k paths/seed/regime weights/correlated innovations/revision noise retained, consuming original uncertainty draws for pairing. <625 probability16.901\u219220.1895%, rounded20. Regime weights and future growth are unfitted; concentrated plateau/decline or renewed release-growth countermodels can move tail widely. Raw API not automatically rule-displayed rounding at finalfreeze.",
+  "literal": "YES only if sum of displayed TopModelsweekly totals for Oct26,Nov2,Nov9,Nov16 is strictly<625T; exactly625 goes higher/NO. Freeze whenNov23firstdisplayed, fallbackNov27 23:59ET. WeeksMon00UTC\u2013Sun23:59UTC; weekly totals mayupdate untilnextfirstdisplay. Currentweekpace/modelrank are not measured target. API rawsum is modelinput; finaldisplayrounding governs.",
+  "source_chart_raw_sha256": "c5dc8f8c5c0b62365aced777c25b1c152e1769ea89cfb4962e219a3a0429e523",
+  "paired_diagnostic_path": "data/deep_review_20261017/work/0352_oct12_anchor_sensitivity_1230.json",
+  "diagnostic_result": {
+    "counts": {
+      "lt625": 40379,
+      "625_675": 23949,
+      "675_725": 25900,
+      "725_775": 22745,
+      "ge775": 87027
+    },
+    "fractions": {
+      "lt625": 0.201895,
+      "625_675": 0.119745,
+      "675_725": 0.1295,
+      "725_775": 0.113725,
+      "ge775": 0.435135
+    },
+    "paired_delta_vs_parent": {
+      "lt625": 0.032885,
+      "625_675": 0.01703500000000001,
+      "675_725": 0.007400000000000004,
+      "725_775": -0.0018199999999999883,
+      "ge775": -0.055499999999999994
+    }
+  },
+  "structural_countermodels": "Flat164Tfutureweeks gives656T/NO; modestplateauaround150Tgives600/YES. Renewedgrowthfrom164raisesNO, disruption/adoptionlossraisesYES. Four-weekinterval and growth-regime dependence dominate MC sampling error. No K5futurelower-tail criterion established.",
+  "reserve_reason": "20pp=10unfitted future-growth/model regime uncertainty+5source/display-revision uncertainty+5conditional-fill risk; not a calibrated floor. Even ordinary10pp haircut givesYES10/NO70, below11/86c bids before carry.",
+  "sibling_review": "Old250YES10/112YES12 are dated adopted judgments, not newly adopted joint partition. Current-anchor raw sensitivities are25011.9745% and11211.3725%. For held112, shift -0.182pp from parent11.5545% is immaterial relative model uncertainty; keep prior judgmentYES12/NO88, selectedNO73, retain/noadd from prior dated exit underwriting. No claimed new exit quote or numerical financial-prior mutation. Unheld250 may use this new source/model pointer on next reassessment; no automatic entry.",
+  "portfolio": "Already held5NOin distinct112[725,775)contract; cannot count a second ORposition as independent diversification. No new order/prior/watcher.",
+  "no_execution_authority": true
+}

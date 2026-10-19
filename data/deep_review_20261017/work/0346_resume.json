@@ -1,0 +1,14 @@
+{
+  "review_index": 346,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "input": "data/deep_review_20261017/work/0346_primary_input_1212.json",
+  "model_path": "research/2026-10-17-deep-review/models/0346_primary_1212.json",
+  "economics": "data/deep_review_20261017/work/0346_economics_1212.json",
+  "source_paths": [
+    "work/0346_facts_1200.json",
+    "work/0346_time_vatican_expansion_1205.json"
+  ],
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0346.md",
+  "effective_report_sha256": "40d97dec1a5bb75b26f28058d6f001fc185a74bdbe1e2cc4dedf354c4a33a01e",
+  "presentation_erratum": "Report taker-cost display8.66020 differs by0.00001 from immutable economics8.66021 (conservative feeceil). Underlying economics/forecast/decision unchanged; economics artifact is full-precision authority."
+}

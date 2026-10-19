@@ -1,0 +1,1 @@
+{"name":"latest","request":{"call_window_label":"latest","method":"GET","read_only":true,"scope":"case342_official_public_fact_check","url":"https://www.president.gov.ua/en/news/last"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:30:27.937591Z","timing_basis":"call_window"}

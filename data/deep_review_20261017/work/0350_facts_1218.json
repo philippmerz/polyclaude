@@ -1,0 +1,28 @@
+{
+  "schema": "deep_review.facts.v1",
+  "review_index": 350,
+  "market_id": "5778679",
+  "conditionId": "0xdb0bd84336d779d0d738612dcd43331ba39380d9bf00af79665e22c702a181d8",
+  "criteria_sha256": "7a1c5c4a0bff9cb4286d241ca769070bb139886b522d2daf1edf73d6c7109dc3",
+  "source": "https://www.aboutamazon.com/news/company-news/amazon-earnings-q3-2026-report",
+  "frozen_question": "Will Amazon (AMZN) beat quarterly earnings?",
+  "facts": [
+    "Amazon’s official company-news article, published 2026-10-15 20:14:12Z, says it will share Q3 2026 results on Oct 29 and hold its conference call at 2:00 p.m. PT / 5:00 p.m. ET.",
+    "The captured page title says “Q2 2026 results will be reported October 29,” but the body and article text explicitly say Q3 2026; preserve this title/body mismatch.",
+    "The frozen $2.00 threshold is the market-creation estimate; the operative rule is reported GAAP diluted EPS strictly greater than $2.00 (basic if diluted unavailable), with official company documents first and specified Seeking Alpha/fallback clauses."
+  ],
+  "gaps": [
+    "The Oct 29 release/call is future as of capture; no Q3 EPS result is available in this source.",
+    "This task captured the issuer event notice, not updated analyst consensus or the final release."
+  ],
+  "receipts": [
+    "logs/deep_review_20261017/facts_0349_0350_0352_1218/amazon_q3_2026_earnings_notice.receipt.json"
+  ],
+  "quote_ref": "work/quotes_1218_facts_0349_0350_0352.json",
+  "timestamp_correction": {
+    "prior_label_value": "2026-10-19T12:18:42.601984Z",
+    "reason": "Prior value was derived from file creation mtime and mislabeled as capture time. That mtime is retained as filesystem metadata only; source observations remain the request/response receipt clocks already listed."
+  },
+  "compiled_utc": "2026-10-19T12:20:10.962182+00:00",
+  "filesystem_write_time_utc_before_this_correction": "2026-10-19T12:19:06.665931Z"
+}

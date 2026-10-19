@@ -1,0 +1,1474 @@
+{
+  "capture_errors": [],
+  "cases": [
+    {
+      "access_status": "gamma_identity_exact",
+      "books": [
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.999",
+                "size": "4100"
+              },
+              {
+                "price": "0.998",
+                "size": "2010"
+              },
+              {
+                "price": "0.997",
+                "size": "11339.98"
+              },
+              {
+                "price": "0.996",
+                "size": "500"
+              },
+              {
+                "price": "0.979",
+                "size": "412"
+              },
+              {
+                "price": "0.978",
+                "size": "4545"
+              },
+              {
+                "price": "0.62",
+                "size": "1000"
+              },
+              {
+                "price": "0.55",
+                "size": "60"
+              },
+              {
+                "price": "0.45",
+                "size": "500"
+              },
+              {
+                "price": "0.42",
+                "size": "100"
+              },
+              {
+                "price": "0.419",
+                "size": "5"
+              },
+              {
+                "price": "0.32",
+                "size": "5"
+              },
+              {
+                "price": "0.25",
+                "size": "500"
+              },
+              {
+                "price": "0.249",
+                "size": "5"
+              },
+              {
+                "price": "0.248",
+                "size": "11.81"
+              },
+              {
+                "price": "0.111",
+                "size": "0.75"
+              }
+            ],
+            "asset_id": "49769967003519456679101484259424647843456880988636700483825891547813075255833",
+            "bids": [
+              {
+                "price": "0.001",
+                "size": "100"
+              },
+              {
+                "price": "0.002",
+                "size": "10"
+              },
+              {
+                "price": "0.003",
+                "size": "406.66"
+              },
+              {
+                "price": "0.004",
+                "size": "243"
+              },
+              {
+                "price": "0.051",
+                "size": "50"
+              },
+              {
+                "price": "0.052",
+                "size": "22.6"
+              }
+            ],
+            "hash": "7c8cf53c05634e47cbfc8640e2ccdaf7d673e229",
+            "last_trade_price": "0.889",
+            "market": "0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.001",
+            "timestamp": "1792408829275"
+          },
+          "http_status": 200,
+          "outcome": "Yes",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "49769967003519456679101484259424647843456880988636700483825891547813075255833"
+        },
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.999",
+                "size": "100"
+              },
+              {
+                "price": "0.998",
+                "size": "10"
+              },
+              {
+                "price": "0.997",
+                "size": "406.66"
+              },
+              {
+                "price": "0.996",
+                "size": "243"
+              },
+              {
+                "price": "0.949",
+                "size": "50"
+              },
+              {
+                "price": "0.948",
+                "size": "22.6"
+              }
+            ],
+            "asset_id": "69629224702935303603364409057486058961533170853603388311050383183266673914932",
+            "bids": [
+              {
+                "price": "0.001",
+                "size": "4100"
+              },
+              {
+                "price": "0.002",
+                "size": "2010"
+              },
+              {
+                "price": "0.003",
+                "size": "11339.98"
+              },
+              {
+                "price": "0.004",
+                "size": "500"
+              },
+              {
+                "price": "0.021",
+                "size": "412"
+              },
+              {
+                "price": "0.022",
+                "size": "4545"
+              },
+              {
+                "price": "0.38",
+                "size": "1000"
+              },
+              {
+                "price": "0.45",
+                "size": "60"
+              },
+              {
+                "price": "0.55",
+                "size": "500"
+              },
+              {
+                "price": "0.58",
+                "size": "100"
+              },
+              {
+                "price": "0.581",
+                "size": "5"
+              },
+              {
+                "price": "0.68",
+                "size": "5"
+              },
+              {
+                "price": "0.75",
+                "size": "500"
+              },
+              {
+                "price": "0.751",
+                "size": "5"
+              },
+              {
+                "price": "0.752",
+                "size": "11.81"
+              },
+              {
+                "price": "0.889",
+                "size": "0.75"
+              }
+            ],
+            "hash": "ca4a669d47d27b3d002d345cc56cd8567b3ad637",
+            "last_trade_price": "0.889",
+            "market": "0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.001",
+            "timestamp": "1792408829275"
+          },
+          "http_status": 200,
+          "outcome": "No",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "69629224702935303603364409057486058961533170853603388311050383183266673914932"
+        }
+      ],
+      "capture_errors": [],
+      "criteria_exact_match": true,
+      "current_gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "acceptingOrders": true,
+        "acceptingOrdersTimestamp": "2026-10-16T15:34:13Z",
+        "active": true,
+        "approved": true,
+        "archived": false,
+        "automaticallyActive": true,
+        "bestAsk": 0.111,
+        "bestBid": 0.052,
+        "clearBookOnStart": true,
+        "clobRewards": [
+          {
+            "assetAddress": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "conditionId": "0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5",
+            "endDate": "2500-12-31",
+            "id": "4049808",
+            "rewardsAmount": 0,
+            "rewardsDailyRate": 5,
+            "startDate": "2026-10-18"
+          }
+        ],
+        "clobTokenIds": "[\"49769967003519456679101484259424647843456880988636700483825891547813075255833\", \"69629224702935303603364409057486058961533170853603388311050383183266673914932\"]",
+        "closed": false,
+        "comboStatus": "disabled",
+        "competitive": 0.8509608092126719,
+        "conditionId": "0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5",
+        "createdAt": "2026-10-16T15:34:04.297286Z",
+        "cyom": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-10-16T15:34:09.070635Z",
+        "description": "As of market creation, Meta is estimated to release earnings on October 21, 2026. The Street consensus estimate for Meta's GAAP EPS for the relevant quarter is $6.31 as of market creation. This market will resolve to \"Yes\" if Meta reports GAAP EPS greater than $6.31 for the relevant quarter in its next quarterly earnings release. Otherwise, it will resolve to \"No.\" The resolution source will be the GAAP EPS listed in the company’s official earnings documents.\n\nIf Meta releases earnings without GAAP EPS, then the market will resolve according to the GAAP EPS figure reported by SeekingAlpha. If no such figure is published within 96h of market close (4:00:00pm ET) on the day earnings are announced, the market will resolve to “No”.\n\nIf the company does not release earnings within 45 calendar days of the estimated earnings date, this market will resolve to “No.”\n\nNote: Subsequent restatements, corrections, or revisions made to the initially announced GAAP EPS figure will not qualify for resolution, except in the case of obvious and immediate mistakes (e.g., fat finger errors, as with Lyft's (LYFT) earnings release in February 2024).\nNote: The strike prices used in these markets reflect the selected street consensus estimate for GAAP EPS as of market creation.\nNote: All figures will be rounded to the nearest cent using standard rounding.\nNote: For the purposes of this market, IFRS EPS will be treated as GAAP EPS.\nNote: GAAP EPS refers to diluted GAAP EPS, unless this is not published, in which case it refers to basic GAAP EPS.\nNote: All figures are expressed in USD, unless otherwise indicated.\nNote: For primarily internationally listed companies, this market refers specifically to the shares traded in the United States on U.S. stock exchanges such as the NYSE or Nasdaq. In cases where the company trades in the U.S. through an American Depositary Receipt (ADR) or American Depositary Share (ADS), this market will refer to the ADR/ADS.\n",
+        "enableOrderBook": true,
+        "endDate": "2026-10-21T21:00:00Z",
+        "endDateIso": "2026-10-21",
+        "eventStartTime": "2026-10-21T21:00:00Z",
+        "fallbackResolutionType": "none",
+        "featured": false,
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.05,
+          "rebateRate": 0.25,
+          "takerOnly": true
+        },
+        "feeType": "economics_fees",
+        "feesEnabled": true,
+        "funded": false,
+        "hasReviewedDates": true,
+        "holdingRewardsEnabled": false,
+        "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-quarterly-earnings-gaap-eps-04-29-2026-6pt62-_8vjRPAhoX3h.png",
+        "id": "5776325",
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/meta-quarterly-earnings-gaap-eps-04-29-2026-6pt62-_8vjRPAhoX3h.png",
+        "lastTradePrice": 0.111,
+        "liquidity": "1293.42699",
+        "liquidityClob": 1293.42699,
+        "liquidityNum": 1293.42699,
+        "makerBaseFee": 1000,
+        "manualActivation": false,
+        "marketMakerAddress": "",
+        "negRisk": false,
+        "negRiskOther": false,
+        "new": false,
+        "oneDayPriceChange": 0.016,
+        "orderMinSize": 5,
+        "orderPriceMinTickSize": 0.001,
+        "outcomePrices": "[\"0.0815\", \"0.9185\"]",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "pendingDeployment": false,
+        "question": "Will Meta (META) beat quarterly earnings?",
+        "questionID": "0xb0d8a3fa71bf0bc02c603d59aaa3d494803136bc99dd31531134b69185e75070",
+        "ready": false,
+        "resolutionSource": "https://seekingalpha.com/symbol/META/earnings",
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "rewardsMaxSpread": 4.5,
+        "rewardsMinSize": 50,
+        "rfqEnabled": false,
+        "showGmpOutcome": false,
+        "showGmpSeries": false,
+        "slug": "meta-quarterly-earnings-gaap-eps-10-21-2026-6pt31",
+        "spread": 0.059,
+        "startDate": "2026-10-16T15:34:13Z",
+        "startDateIso": "2026-10-16",
+        "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
+        "takerBaseFee": 1000,
+        "umaBond": "500",
+        "umaResolutionStatuses": "[]",
+        "umaReward": "5",
+        "updatedAt": "2026-10-19T11:21:14.110219Z",
+        "version": "v1",
+        "volume": "3434.46391",
+        "volume1mo": 3434.46391,
+        "volume1moClob": 3434.46391,
+        "volume1wk": 3434.46391,
+        "volume1wkClob": 3434.46391,
+        "volume1yr": 3434.46391,
+        "volume1yrClob": 3434.46391,
+        "volume24hr": 490.550706,
+        "volume24hrClob": 490.550706,
+        "volumeClob": 3434.46391,
+        "volumeNum": 3434.46391
+      },
+      "frozen_identity": {
+        "condition_id": "0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5",
+        "criteria_sha256": "268b30f9b2960041ddf8ef2c1a8dac64c1d89a6acfaf05ec8f6827bce8b57028",
+        "market_id": "5776325",
+        "question": "Will Meta (META) beat quarterly earnings?"
+      },
+      "gamma_receipt": {
+        "path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_gamma.receipt.json",
+        "raw_sha256": "194aeb98aacfccef86379c148b222272dc08c912becad234152b723caefb4bf9",
+        "received_utc": "2026-10-19T11:29:01.812158+00:00",
+        "status_code": 200
+      },
+      "identity_checks": {
+        "condition_id": true,
+        "description": true,
+        "endDate": true,
+        "market_id": true,
+        "outcomes": true,
+        "question": true,
+        "resolutionSource": true,
+        "slug": true,
+        "token_ids": true
+      },
+      "optionalfee_descriptor": {
+        "descriptor": {
+          "e": 1.0,
+          "r": 0.05,
+          "to": true
+        },
+        "gzip_sha256": "4939a630be3b720a1d743641ff14f37a3df7fd1f3a297641879e7d646e43b182",
+        "http_status": 200,
+        "raw_sha256": "5d2b7e4fd04a336cfd35dc5cd2d6a2135ebc07e1f5d3afd972c646beea15602c",
+        "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_fee.receipt.json",
+        "received_utc": "2026-10-19T11:29:01.916143+00:00",
+        "structured_gamma_parity": true
+      },
+      "review_index": 338
+    },
+    {
+      "access_status": "gamma_identity_exact",
+      "books": [
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "80.02"
+              },
+              {
+                "price": "0.98",
+                "size": "2010.78"
+              },
+              {
+                "price": "0.97",
+                "size": "250"
+              },
+              {
+                "price": "0.96",
+                "size": "153"
+              },
+              {
+                "price": "0.95",
+                "size": "10.36"
+              },
+              {
+                "price": "0.9",
+                "size": "21"
+              },
+              {
+                "price": "0.89",
+                "size": "51.01"
+              },
+              {
+                "price": "0.88",
+                "size": "74.66"
+              }
+            ],
+            "asset_id": "86162224776343888886171117538586024970725460762072739326955806353276889875249",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "160.31"
+              },
+              {
+                "price": "0.02",
+                "size": "11.44"
+              },
+              {
+                "price": "0.04",
+                "size": "12"
+              },
+              {
+                "price": "0.05",
+                "size": "10.04"
+              },
+              {
+                "price": "0.1",
+                "size": "21"
+              },
+              {
+                "price": "0.41",
+                "size": "61"
+              },
+              {
+                "price": "0.79",
+                "size": "89.14"
+              },
+              {
+                "price": "0.8",
+                "size": "17.42"
+              }
+            ],
+            "hash": "9db2be5d1098f118a5f980da7e53ade01d76b520",
+            "last_trade_price": "0.200",
+            "market": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792409320990"
+          },
+          "http_status": 200,
+          "outcome": "Yes",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "86162224776343888886171117538586024970725460762072739326955806353276889875249"
+        },
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "160.31"
+              },
+              {
+                "price": "0.98",
+                "size": "11.44"
+              },
+              {
+                "price": "0.96",
+                "size": "12"
+              },
+              {
+                "price": "0.95",
+                "size": "10.04"
+              },
+              {
+                "price": "0.9",
+                "size": "21"
+              },
+              {
+                "price": "0.59",
+                "size": "61"
+              },
+              {
+                "price": "0.21",
+                "size": "89.14"
+              },
+              {
+                "price": "0.2",
+                "size": "17.42"
+              }
+            ],
+            "asset_id": "105394105339110726116352184253965536170478608741551277757086274171372291499398",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "80.02"
+              },
+              {
+                "price": "0.02",
+                "size": "2010.78"
+              },
+              {
+                "price": "0.03",
+                "size": "250"
+              },
+              {
+                "price": "0.04",
+                "size": "153"
+              },
+              {
+                "price": "0.05",
+                "size": "10.36"
+              },
+              {
+                "price": "0.1",
+                "size": "21"
+              },
+              {
+                "price": "0.11",
+                "size": "51.01"
+              },
+              {
+                "price": "0.12",
+                "size": "74.66"
+              }
+            ],
+            "hash": "a2a8f12d1911d4dc3af0c23fd103360261b36cee",
+            "last_trade_price": "0.200",
+            "market": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792409320990"
+          },
+          "http_status": 200,
+          "outcome": "No",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "105394105339110726116352184253965536170478608741551277757086274171372291499398"
+        }
+      ],
+      "capture_errors": [],
+      "criteria_exact_match": true,
+      "current_gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "acceptingOrders": true,
+        "acceptingOrdersTimestamp": "2026-09-17T22:37:53Z",
+        "active": true,
+        "approved": true,
+        "archived": false,
+        "automaticallyActive": true,
+        "bestAsk": 0.88,
+        "bestBid": 0.82,
+        "clearBookOnStart": true,
+        "clobRewards": [
+          {
+            "assetAddress": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "conditionId": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "endDate": "2500-12-31",
+            "id": "2192672",
+            "rewardsAmount": 0,
+            "rewardsDailyRate": 1,
+            "startDate": "2026-10-19"
+          }
+        ],
+        "clobTokenIds": "[\"86162224776343888886171117538586024970725460762072739326955806353276889875249\", \"105394105339110726116352184253965536170478608741551277757086274171372291499398\"]",
+        "closed": false,
+        "comboStatus": "disabled",
+        "competitive": 0.8908685968819599,
+        "conditionId": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+        "createdAt": "2026-09-17T22:37:26.267784Z",
+        "customLiveness": 0,
+        "cyom": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-09-17T22:37:42.990114Z",
+        "description": "This market will resolve to \"Yes\" if the listed artist is confirmed as a featured or credited artist on \"Grand Theft Auto VI: The Album\", scheduled for release on November 19, 2026. Otherwise, this market will resolve to \"No\".\n\nTo qualify as \"featured\", the listed artist must be credited on at least one track on the album according to Rockstar Games' official tracklist or artist announcements (https://www.rockstargames.com/VI/music). If this information is unavailable from Rockstar's official sources, official album credits listed on major streaming platforms (e.g., Spotify, Apple Music) may be used instead.\n\nIf the album fails to release by November 26, 2026, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source of this market will be Rockstar Games' official GTA VI: The Album page (https://www.rockstargames.com/VI/music) and associated official Rockstar announcements, or official album credits listed on major streaming platforms (e.g., Spotify, Apple Music).",
+        "enableOrderBook": true,
+        "endDate": "2026-11-26T00:00:00Z",
+        "endDateIso": "2026-11-26",
+        "fallbackResolutionType": "none",
+        "featured": false,
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.05,
+          "rebateRate": 0.25,
+          "takerOnly": true
+        },
+        "feeType": "culture_fees",
+        "feesEnabled": true,
+        "funded": false,
+        "groupItemThreshold": "7",
+        "groupItemTitle": "Kodak Black",
+        "hasReviewedDates": true,
+        "holdingRewardsEnabled": false,
+        "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gta-vi-released-before-june-2026-igCgZsDMejF1.jpg",
+        "id": "4662688",
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gta-vi-released-before-june-2026-igCgZsDMejF1.jpg",
+        "lastTradePrice": 0.8,
+        "liquidity": "274.3754",
+        "liquidityClob": 274.3754,
+        "liquidityNum": 274.3754,
+        "makerBaseFee": 1000,
+        "manualActivation": false,
+        "marketMakerAddress": "",
+        "negRisk": false,
+        "negRiskOther": false,
+        "new": false,
+        "oneDayPriceChange": -0.005,
+        "oneMonthPriceChange": 0.41,
+        "oneWeekPriceChange": 0.02,
+        "orderMinSize": 5,
+        "orderPriceMinTickSize": 0.01,
+        "outcomePrices": "[\"0.85\", \"0.15\"]",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "pendingDeployment": false,
+        "question": "Will Kodak Black be featured on GTA VI: The Album?",
+        "questionID": "0x84faaa1f91a3b0b3bb4f58ea06343b308b7922613d05439140ed612e492cec5b",
+        "ready": false,
+        "resolutionSource": "https://www.rockstargames.com/VI/music",
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "rewardsMaxSpread": 6.5,
+        "rewardsMinSize": 20,
+        "rfqEnabled": false,
+        "showGmpOutcome": false,
+        "showGmpSeries": false,
+        "slug": "will-kodak-black-be-featured-on-gta-vi-the-album",
+        "spread": 0.06,
+        "startDate": "2026-09-17T22:37:53Z",
+        "startDateIso": "2026-09-17",
+        "takerBaseFee": 1000,
+        "umaBond": "500",
+        "umaResolutionStatuses": "[]",
+        "umaReward": "5",
+        "updatedAt": "2026-10-19T11:25:12.377119Z",
+        "version": "v1",
+        "volume": "5662.099303999999",
+        "volume1mo": 4209.809789000001,
+        "volume1moClob": 4209.809789000001,
+        "volume1wk": 878.9752290000001,
+        "volume1wkClob": 878.9752290000001,
+        "volume1yr": 5662.099303999999,
+        "volume1yrClob": 5662.099303999999,
+        "volume24hr": 124.57215199999999,
+        "volume24hrClob": 124.57215199999999,
+        "volumeClob": 5662.099303999999,
+        "volumeNum": 5662.099303999999
+      },
+      "frozen_identity": {
+        "condition_id": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+        "criteria_sha256": "3e3c5b576cf7433d0a4f3bb818c55d1cdec38d1997cbfb4e9db5a4f9e568df35",
+        "market_id": "4662688",
+        "question": "Will Kodak Black be featured on GTA VI: The Album?"
+      },
+      "gamma_receipt": {
+        "path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_gamma.receipt.json",
+        "raw_sha256": "1dfa263d86e88842b3f0d48b49b539a4808425b0c84599cd2c83478fdbc84379",
+        "received_utc": "2026-10-19T11:29:02.009508+00:00",
+        "status_code": 200
+      },
+      "identity_checks": {
+        "condition_id": true,
+        "description": true,
+        "endDate": true,
+        "market_id": true,
+        "outcomes": true,
+        "question": true,
+        "resolutionSource": true,
+        "slug": true,
+        "token_ids": true
+      },
+      "optionalfee_descriptor": {
+        "descriptor": {
+          "e": 1.0,
+          "r": 0.05,
+          "to": true
+        },
+        "gzip_sha256": "88eae847203baa3919dc4011e88e26bead3ee75361decf4020cb76d11bd9e559",
+        "http_status": 200,
+        "raw_sha256": "282d4e3a16164ebef1906fd26ba45919105a19b24da5fea9e4bae62b245583d6",
+        "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_fee.receipt.json",
+        "received_utc": "2026-10-19T11:29:02.064496+00:00",
+        "structured_gamma_parity": true
+      },
+      "review_index": 340
+    },
+    {
+      "access_status": "capture_gap_or_mismatch",
+      "books": [
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "19.86"
+              },
+              {
+                "price": "0.98",
+                "size": "150010"
+              },
+              {
+                "price": "0.97",
+                "size": "506.05"
+              },
+              {
+                "price": "0.95",
+                "size": "52005"
+              },
+              {
+                "price": "0.94",
+                "size": "6301.23"
+              },
+              {
+                "price": "0.93",
+                "size": "35714.28"
+              },
+              {
+                "price": "0.92",
+                "size": "8035.71"
+              },
+              {
+                "price": "0.91",
+                "size": "22227.81"
+              },
+              {
+                "price": "0.9",
+                "size": "6111.1"
+              },
+              {
+                "price": "0.89",
+                "size": "299.25"
+              },
+              {
+                "price": "0.88",
+                "size": "1140.9"
+              },
+              {
+                "price": "0.87",
+                "size": "256.7"
+              },
+              {
+                "price": "0.84",
+                "size": "598.09"
+              },
+              {
+                "price": "0.8",
+                "size": "200"
+              },
+              {
+                "price": "0.79",
+                "size": "476"
+              },
+              {
+                "price": "0.78",
+                "size": "127.1"
+              },
+              {
+                "price": "0.76",
+                "size": "10"
+              },
+              {
+                "price": "0.73",
+                "size": "80"
+              },
+              {
+                "price": "0.72",
+                "size": "138.88"
+              },
+              {
+                "price": "0.71",
+                "size": "18.43"
+              },
+              {
+                "price": "0.63",
+                "size": "177.63"
+              },
+              {
+                "price": "0.6",
+                "size": "42.56"
+              },
+              {
+                "price": "0.59",
+                "size": "200.09"
+              },
+              {
+                "price": "0.55",
+                "size": "60"
+              },
+              {
+                "price": "0.54",
+                "size": "1011.48"
+              },
+              {
+                "price": "0.53",
+                "size": "100"
+              }
+            ],
+            "asset_id": "86594604081986996401875992231371238089117001652956711390845504794892511143833",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "23969.96"
+              },
+              {
+                "price": "0.02",
+                "size": "88160"
+              },
+              {
+                "price": "0.03",
+                "size": "101805.73"
+              },
+              {
+                "price": "0.04",
+                "size": "44256"
+              },
+              {
+                "price": "0.05",
+                "size": "52750"
+              },
+              {
+                "price": "0.06",
+                "size": "26900"
+              },
+              {
+                "price": "0.08",
+                "size": "50021"
+              },
+              {
+                "price": "0.09",
+                "size": "10505.69"
+              },
+              {
+                "price": "0.1",
+                "size": "29636.37"
+              },
+              {
+                "price": "0.11",
+                "size": "18181.81"
+              },
+              {
+                "price": "0.12",
+                "size": "14222.81"
+              },
+              {
+                "price": "0.13",
+                "size": "3200.13"
+              },
+              {
+                "price": "0.14",
+                "size": "5892.86"
+              },
+              {
+                "price": "0.15",
+                "size": "114.36"
+              },
+              {
+                "price": "0.16",
+                "size": "4687.5"
+              },
+              {
+                "price": "0.18",
+                "size": "4166.67"
+              },
+              {
+                "price": "0.2",
+                "size": "13000"
+              },
+              {
+                "price": "0.21",
+                "size": "2925"
+              },
+              {
+                "price": "0.22",
+                "size": "1363"
+              },
+              {
+                "price": "0.25",
+                "size": "100"
+              },
+              {
+                "price": "0.26",
+                "size": "20"
+              },
+              {
+                "price": "0.27",
+                "size": "10000"
+              },
+              {
+                "price": "0.28",
+                "size": "2558.21"
+              },
+              {
+                "price": "0.3",
+                "size": "10"
+              },
+              {
+                "price": "0.34",
+                "size": "500"
+              },
+              {
+                "price": "0.37",
+                "size": "60"
+              },
+              {
+                "price": "0.42",
+                "size": "100"
+              },
+              {
+                "price": "0.44",
+                "size": "514"
+              },
+              {
+                "price": "0.45",
+                "size": "313.01"
+              },
+              {
+                "price": "0.46",
+                "size": "15.21"
+              },
+              {
+                "price": "0.47",
+                "size": "200"
+              },
+              {
+                "price": "0.48",
+                "size": "223.83"
+              },
+              {
+                "price": "0.49",
+                "size": "830"
+              },
+              {
+                "price": "0.5",
+                "size": "242.52"
+              }
+            ],
+            "hash": "94f02a39013138fc8a8f0b30d2806d5259124ecd",
+            "last_trade_price": "0.500",
+            "market": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792409338505"
+          },
+          "http_status": 200,
+          "outcome": "Yes",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "86594604081986996401875992231371238089117001652956711390845504794892511143833"
+        },
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "23969.96"
+              },
+              {
+                "price": "0.98",
+                "size": "88160"
+              },
+              {
+                "price": "0.97",
+                "size": "101805.73"
+              },
+              {
+                "price": "0.96",
+                "size": "44256"
+              },
+              {
+                "price": "0.95",
+                "size": "52750"
+              },
+              {
+                "price": "0.94",
+                "size": "26900"
+              },
+              {
+                "price": "0.92",
+                "size": "50021"
+              },
+              {
+                "price": "0.91",
+                "size": "10505.69"
+              },
+              {
+                "price": "0.9",
+                "size": "29636.37"
+              },
+              {
+                "price": "0.89",
+                "size": "18181.81"
+              },
+              {
+                "price": "0.88",
+                "size": "14222.81"
+              },
+              {
+                "price": "0.87",
+                "size": "3200.13"
+              },
+              {
+                "price": "0.86",
+                "size": "5892.86"
+              },
+              {
+                "price": "0.85",
+                "size": "114.36"
+              },
+              {
+                "price": "0.84",
+                "size": "4687.5"
+              },
+              {
+                "price": "0.82",
+                "size": "4166.67"
+              },
+              {
+                "price": "0.8",
+                "size": "13000"
+              },
+              {
+                "price": "0.79",
+                "size": "2925"
+              },
+              {
+                "price": "0.78",
+                "size": "1363"
+              },
+              {
+                "price": "0.75",
+                "size": "100"
+              },
+              {
+                "price": "0.74",
+                "size": "20"
+              },
+              {
+                "price": "0.73",
+                "size": "10000"
+              },
+              {
+                "price": "0.72",
+                "size": "2558.21"
+              },
+              {
+                "price": "0.7",
+                "size": "10"
+              },
+              {
+                "price": "0.66",
+                "size": "500"
+              },
+              {
+                "price": "0.63",
+                "size": "60"
+              },
+              {
+                "price": "0.58",
+                "size": "100"
+              },
+              {
+                "price": "0.56",
+                "size": "514"
+              },
+              {
+                "price": "0.55",
+                "size": "313.01"
+              },
+              {
+                "price": "0.54",
+                "size": "15.21"
+              },
+              {
+                "price": "0.53",
+                "size": "200"
+              },
+              {
+                "price": "0.52",
+                "size": "223.83"
+              },
+              {
+                "price": "0.51",
+                "size": "830"
+              },
+              {
+                "price": "0.5",
+                "size": "242.52"
+              }
+            ],
+            "asset_id": "57507987271281459057514072612350659893335564942493082138677300004806573927051",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "19.86"
+              },
+              {
+                "price": "0.02",
+                "size": "150010"
+              },
+              {
+                "price": "0.03",
+                "size": "506.05"
+              },
+              {
+                "price": "0.05",
+                "size": "52005"
+              },
+              {
+                "price": "0.06",
+                "size": "6301.23"
+              },
+              {
+                "price": "0.07",
+                "size": "35714.28"
+              },
+              {
+                "price": "0.08",
+                "size": "8035.71"
+              },
+              {
+                "price": "0.09",
+                "size": "22227.81"
+              },
+              {
+                "price": "0.1",
+                "size": "6111.1"
+              },
+              {
+                "price": "0.11",
+                "size": "299.25"
+              },
+              {
+                "price": "0.12",
+                "size": "1140.9"
+              },
+              {
+                "price": "0.13",
+                "size": "256.7"
+              },
+              {
+                "price": "0.16",
+                "size": "598.09"
+              },
+              {
+                "price": "0.2",
+                "size": "200"
+              },
+              {
+                "price": "0.21",
+                "size": "476"
+              },
+              {
+                "price": "0.22",
+                "size": "127.1"
+              },
+              {
+                "price": "0.24",
+                "size": "10"
+              },
+              {
+                "price": "0.27",
+                "size": "80"
+              },
+              {
+                "price": "0.28",
+                "size": "138.88"
+              },
+              {
+                "price": "0.29",
+                "size": "18.43"
+              },
+              {
+                "price": "0.37",
+                "size": "177.63"
+              },
+              {
+                "price": "0.4",
+                "size": "42.56"
+              },
+              {
+                "price": "0.41",
+                "size": "200.09"
+              },
+              {
+                "price": "0.45",
+                "size": "60"
+              },
+              {
+                "price": "0.46",
+                "size": "1011.48"
+              },
+              {
+                "price": "0.47",
+                "size": "100"
+              }
+            ],
+            "hash": "3d7284fd7d4eb2fdfc845ac60e46949782c1630a",
+            "last_trade_price": "0.500",
+            "market": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792409338505"
+          },
+          "http_status": 200,
+          "outcome": "No",
+          "received_utc": "2026-10-19T11:29:02.210340+00:00",
+          "request_id": "books_batch_01_07",
+          "request_raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+          "token_id": "57507987271281459057514072612350659893335564942493082138677300004806573927051"
+        }
+      ],
+      "capture_errors": [
+        "fee:ValueError:compact response has no fee descriptor fd"
+      ],
+      "criteria_exact_match": true,
+      "current_gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "acceptingOrders": true,
+        "acceptingOrdersTimestamp": "2026-10-09T17:28:43Z",
+        "active": true,
+        "approved": true,
+        "archived": false,
+        "automaticallyActive": true,
+        "bestAsk": 0.54,
+        "bestBid": 0.53,
+        "clearBookOnStart": true,
+        "clobRewards": [
+          {
+            "assetAddress": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "conditionId": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+            "endDate": "2500-12-31",
+            "id": "3396665",
+            "rewardsAmount": 0,
+            "rewardsDailyRate": 5,
+            "startDate": "2026-10-14"
+          }
+        ],
+        "clobTokenIds": "[\"86594604081986996401875992231371238089117001652956711390845504794892511143833\", \"57507987271281459057514072612350659893335564942493082138677300004806573927051\"]",
+        "closed": false,
+        "comboStatus": "disabled",
+        "competitive": 0.9987764987889834,
+        "conditionId": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+        "createdAt": "2026-10-09T17:28:35.966833Z",
+        "cyom": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-10-09T17:28:38.949598Z",
+        "description": "This market will resolve to \"Yes\" if there is a diplomatic meeting between representatives of Russia and Ukraine by the listed date, 11:59 PM ET. Otherwise, this market will resolve to “No”.\n\nA diplomatic meeting refers to a deliberate meeting between representatives of the listed countries who are acting in an official capacity and are authorized to engage in negotiation or diplomacy regarding Russia-Ukraine relations on behalf of their governments. Meetings conducted indirectly, for example, through designated mediators, facilitators, or interlocutors acting with the knowledge and authorization of the relevant governments, will qualify. \n\nBrief greetings, chance encounters, or talks otherwise not deliberately aimed at diplomacy or negotiation will not count.\n\nThe meeting must be in-person (including indirect in-person meetings) and must be publicly acknowledged by either government or reported by a consensus of credible media. Remote meetings, phone calls, or other meetings where the relevant parties are not present will not count.\n\nThe resolution sources for this market will be official information from the governments of Russia and Ukraine, and a consensus of credible reporting.",
+        "enableOrderBook": true,
+        "endDate": "2026-12-01T04:59:00Z",
+        "endDateIso": "2026-12-01",
+        "fallbackResolutionType": "none",
+        "featured": false,
+        "feeType": null,
+        "feesEnabled": false,
+        "funded": false,
+        "groupItemThreshold": "5",
+        "groupItemTitle": "November 30",
+        "hasReviewedDates": true,
+        "holdingRewardsEnabled": false,
+        "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/russia-x-ukraine-diplomatic-meeting-by-2anNp08yc15i.jpg",
+        "id": "5468002",
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/russia-x-ukraine-diplomatic-meeting-by-2anNp08yc15i.jpg",
+        "lastTradePrice": 0.54,
+        "liquidity": "40670.0838",
+        "liquidityClob": 40670.0838,
+        "liquidityNum": 40670.0838,
+        "manualActivation": false,
+        "marketMakerAddress": "",
+        "negRisk": false,
+        "negRiskOther": false,
+        "new": false,
+        "oneDayPriceChange": 0.03,
+        "oneWeekPriceChange": -0.09,
+        "orderMinSize": 5,
+        "orderPriceMinTickSize": 0.01,
+        "outcomePrices": "[\"0.535\", \"0.465\"]",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "pendingDeployment": false,
+        "question": "Will Russia and Ukraine hold any diplomatic meeting by November 30, 2026?",
+        "questionID": "0xf0decdb4bede8b66c5dc7e7af29c7af6e891e1acd2b24cd51cb311ec1e7a0d34",
+        "ready": false,
+        "resolutionSource": "",
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "rewardsMaxSpread": 6.5,
+        "rewardsMinSize": 20,
+        "rfqEnabled": false,
+        "showGmpOutcome": false,
+        "showGmpSeries": false,
+        "slug": "will-russia-and-ukraine-hold-any-diplomatic-meeting-by-november-30-2026",
+        "spread": 0.01,
+        "startDate": "2026-10-09T17:28:43Z",
+        "startDateIso": "2026-10-09",
+        "submitted_by": "0xAC9930b2AE455a671b62dE86876A7e8587825294",
+        "umaBond": "500",
+        "umaResolutionStatuses": "[]",
+        "umaReward": "5",
+        "updatedAt": "2026-10-19T11:23:14.309362Z",
+        "version": "v1",
+        "volume": "34013.066694999994",
+        "volume1mo": 34013.066694999994,
+        "volume1moClob": 34013.066694999994,
+        "volume1wk": 29926.024193999998,
+        "volume1wkClob": 29926.024193999998,
+        "volume1yr": 34013.066694999994,
+        "volume1yrClob": 34013.066694999994,
+        "volume24hr": 3812.8524380000003,
+        "volume24hrClob": 3812.8524380000003,
+        "volumeClob": 34013.066694999994,
+        "volumeNum": 34013.066694999994
+      },
+      "frozen_identity": {
+        "condition_id": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+        "criteria_sha256": "16630f8619f7d07cd7f2bf35b8008cf02456261203da0ecb8c1d595f077d6036",
+        "market_id": "5468002",
+        "question": "Will Russia and Ukraine hold any diplomatic meeting by November 30, 2026?"
+      },
+      "gamma_receipt": {
+        "path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_gamma.receipt.json",
+        "raw_sha256": "b00b2f9b6cf48765f1c3ff522465fed6589e2476402696ee5e913946dca9a286",
+        "received_utc": "2026-10-19T11:29:02.086873+00:00",
+        "status_code": 200
+      },
+      "identity_checks": {
+        "condition_id": true,
+        "description": true,
+        "endDate": true,
+        "market_id": true,
+        "outcomes": true,
+        "question": true,
+        "resolutionSource": true,
+        "slug": true,
+        "token_ids": true
+      },
+      "optionalfee_descriptor": {
+        "error": "ValueError",
+        "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_fee.receipt.json",
+        "status_code": 200
+      },
+      "review_index": 342
+    }
+  ],
+  "clob_transport_receipts": [
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_gamma.body.json.gz",
+      "gzip_sha256": "5ff082816444b0a738e4d0ac176366199910c8a2806ea1a01623dcb2922d4664",
+      "method": "GET",
+      "raw_bytes": 5037,
+      "raw_sha256": "194aeb98aacfccef86379c148b222272dc08c912becad234152b723caefb4bf9",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_gamma.receipt.json",
+      "received_utc": "2026-10-19T11:29:01.812158+00:00",
+      "request_id": "0338_gamma_01",
+      "started_utc": "2026-10-19T11:29:01.717886+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://gamma-api.polymarket.com/markets/5776325"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_fee.body.json.gz",
+      "gzip_sha256": "4939a630be3b720a1d743641ff14f37a3df7fd1f3a297641879e7d646e43b182",
+      "method": "GET",
+      "raw_bytes": 460,
+      "raw_sha256": "5d2b7e4fd04a336cfd35dc5cd2d6a2135ebc07e1f5d3afd972c646beea15602c",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0338_fee.receipt.json",
+      "received_utc": "2026-10-19T11:29:01.916143+00:00",
+      "request_id": "0338_fee_02",
+      "started_utc": "2026-10-19T11:29:01.813327+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://clob.polymarket.com/clob-markets/0x7b65580e98a1d9276c1b6fe0856c26a888ca6ad16fcce602bc0acc3bbc8057b5"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_gamma.body.json.gz",
+      "gzip_sha256": "e0bb1ce5e5f37618a6fe751f4f2c38fa5d0e9798a9e0a13ba3e9b889e33ba7db",
+      "method": "GET",
+      "raw_bytes": 4113,
+      "raw_sha256": "1dfa263d86e88842b3f0d48b49b539a4808425b0c84599cd2c83478fdbc84379",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_gamma.receipt.json",
+      "received_utc": "2026-10-19T11:29:02.009508+00:00",
+      "request_id": "0340_gamma_03",
+      "started_utc": "2026-10-19T11:29:01.917044+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://gamma-api.polymarket.com/markets/4662688"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_fee.body.json.gz",
+      "gzip_sha256": "88eae847203baa3919dc4011e88e26bead3ee75361decf4020cb76d11bd9e559",
+      "method": "GET",
+      "raw_bytes": 460,
+      "raw_sha256": "282d4e3a16164ebef1906fd26ba45919105a19b24da5fea9e4bae62b245583d6",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0340_fee.receipt.json",
+      "received_utc": "2026-10-19T11:29:02.064496+00:00",
+      "request_id": "0340_fee_04",
+      "started_utc": "2026-10-19T11:29:02.010476+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://clob.polymarket.com/clob-markets/0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_gamma.body.json.gz",
+      "gzip_sha256": "6c81745f51d91a4d3c2a8628dc00b12978f54f163a6bf74060816777abbac176",
+      "method": "GET",
+      "raw_bytes": 4247,
+      "raw_sha256": "b00b2f9b6cf48765f1c3ff522465fed6589e2476402696ee5e913946dca9a286",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_gamma.receipt.json",
+      "received_utc": "2026-10-19T11:29:02.086873+00:00",
+      "request_id": "0342_gamma_05",
+      "started_utc": "2026-10-19T11:29:02.065207+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://gamma-api.polymarket.com/markets/5468002"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_fee.body.json.gz",
+      "gzip_sha256": "78479f71303a1f0ccc4c7113e7e49933adfe46d66bb70fe766b9267f221ffdc4",
+      "method": "GET",
+      "raw_bytes": 405,
+      "raw_sha256": "1569a20bab1aacd905db2256c7a3cb4517d188dafabcbc769b2a8e31af16f573",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/0342_fee.receipt.json",
+      "received_utc": "2026-10-19T11:29:02.158672+00:00",
+      "request_id": "0342_fee_06",
+      "started_utc": "2026-10-19T11:29:02.087640+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://clob.polymarket.com/clob-markets/0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/books_batch_01.body.json.gz",
+      "gzip_sha256": "2b433faa92f686e5920fd7e1f7c1e8bfc394fc674fff6025ac8fe2c2798e1be4",
+      "method": "POST",
+      "raw_bytes": 8325,
+      "raw_sha256": "8c3ebfaaba9f120159de737165531f9f52022d88e25a385199f4848ea732986f",
+      "receipt_path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/public/books_batch_01.receipt.json",
+      "received_utc": "2026-10-19T11:29:02.210340+00:00",
+      "request_id": "books_batch_01_07",
+      "started_utc": "2026-10-19T11:29:02.159279+00:00",
+      "status_code": 200,
+      "type": "books_batch",
+      "url": "https://clob.polymarket.com/books"
+    }
+  ],
+  "created_utc": "2026-10-19T11:29:02.313506+00:00",
+  "freshness_note": "Compute age from matched receipt; no price or freshness gate is implied here.",
+  "freshness_threshold_seconds": 180,
+  "gamma_host_blocked_http": {},
+  "host_blocked_http": {},
+  "schema": "polyclaude.deep_review_quote_resume.v1",
+  "scope_indices": [
+    338,
+    340,
+    342
+  ],
+  "source_rules_path": "research/2026-10-17-primary-market-review-rules.jsonl.gz"
+}

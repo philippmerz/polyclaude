@@ -1,0 +1,25 @@
+{
+  "schema": "primary_case0317_model.v2",
+  "authored_utc": "2026-10-19T12:21:54.400962+00:00",
+  "p_yes": 0.29,
+  "range_yes": [
+    0.1,
+    0.8
+  ],
+  "actual_entry_reserve_pp": 20,
+  "method": "Legislative enactment scenario revised for actual procedural tally and current business calendar, not failed-fetch absence.",
+  "branches": {
+    "alreadyqualifies_status_or_otherlaw_gap": 0.03,
+    "future_main_Senate_passage": 0.3,
+    "timelyHouseconcurrence_given_Senate": 0.85,
+    "timelyenactment_given_bicameral": 0.95,
+    "mainbill_stalls": 0.67,
+    "otherqualifyinglaw_givenstalls": 0.02
+  },
+  "computed_yes": 0.28565,
+  "reasoning": "Original40%forecast used45%futuremainSenatepassage without current floor/coalition evidence. Root verifiedGovInfo failedSep15cloture49\u201350, reconsideration/amendment, and actualOct19SenateDailyPress schedule: no business expected throughNov5, returnNov9foranotherbill. This leaves lame-duckroute but more calendar/coalitionwork than primary40%modeltreated. Revise mainSenatebranch45\u219230%, otherconditionals/status-gapmassunchanged=>28.565%,round29%. Weightchange is judgment, not statisticalvoteprojection. CommitteeandHouseprogresssupportnonzerochance; negotiationscancontinueofffloor. Failedfetches/lackhitsdoNOTcausepdroporproveabsenceofotherlaw.",
+  "reserve_reason": "Unchanged20pp=15legislative/currentstatus/substantivescopemodelerror+5conditionalmakerfills. SelectedYES9/NO51. Wide10\u201380rangeunchanged, notconfidenceinterval.",
+  "literal": "AnyfederalenactedcomprehensivemarketstructurelawbyDec31ETmeetingframework+agencydelineation+assetclassdefinitions; notonlyHR3633. Markup/proceed/cloture/finalSenatepassage alone notenactment. Stablecoin/CBDC/tax-only/agencyrulesexcluded.",
+  "held_pair_boundary": "ResearchenactmentclaimdiffersfromheldClarityfirstfinalpassage-count29/29protectedpair. Procedural49\u201350isNOTitsfinalvote. No unilaterallegactionorhedgecredit. Priorconditional29floor/58middlevsdated26.84netexit, venue/adjudicationriskremains; no newgroupquote/actionhere.",
+  "no_execution_authority": true
+}

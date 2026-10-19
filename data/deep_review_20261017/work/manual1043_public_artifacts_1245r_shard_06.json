@@ -1,0 +1,166 @@
+{
+  "entries": [
+    {
+      "body_raw_bytes": 59981,
+      "body_raw_sha256": "05041f26867b1390fdcfc6295bb5a5ac4ae0529ea792677db4e50aeb7c23d6fb",
+      "bytes": 7410,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep14_8k.body.json.gz",
+      "sha256": "8dd75de00a09104309dfe525a8f0b6fcff183b456f9ce7146f70e3dd4c76c132"
+    },
+    {
+      "bytes": 375,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep14_8k.intent.json",
+      "sha256": "df36228bdd1d5cd5f983f520f78f86929ddcdc26adcd244b716071505754c3ce"
+    },
+    {
+      "bytes": 927,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep14_8k.receipt.json",
+      "sha256": "20dd3ba3e5f84602cb8d3d3fe27b2a2ffe70ce8bb8a07893c26ac748086fd0c8"
+    },
+    {
+      "body_raw_bytes": 5893,
+      "body_raw_sha256": "61a7ab11a40afe5bc7dd26e71fffdbbd4bdd04d1a063c7e718155e912c39be28",
+      "bytes": 3360,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q1_2026.body.json.gz",
+      "sha256": "986df58bf0a01c2fa9a3ee822bda5275b7a65e9de57c9c8718b79c0e12e90d71"
+    },
+    {
+      "bytes": 375,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q1_2026.intent.json",
+      "sha256": "5a271ac614ebc82c18946169b7cf2d8c19b792473e3bc8d3d861cc3c0ad369b5"
+    },
+    {
+      "bytes": 866,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q1_2026.receipt.json",
+      "sha256": "10c38ffe51efc4530f733465548b453b2daea809afa81093751bd7490a73243d"
+    },
+    {
+      "body_raw_bytes": 5917,
+      "body_raw_sha256": "4a1a6538d9187fdeed6b3e1b2eefd032ed7416cac1c759d16a183714a4e8bf11",
+      "bytes": 3373,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q2_2025.body.json.gz",
+      "sha256": "333f744f037b16785c612ccf523840fb84a89ffb7d5f760d750df8550132b9d3"
+    },
+    {
+      "bytes": 376,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q2_2025.intent.json",
+      "sha256": "cdf7d457193e8785d0dc2e87b866b6f5365c006fc0b34da1af2ec12497bdede1"
+    },
+    {
+      "bytes": 867,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q2_2025.receipt.json",
+      "sha256": "6d8448b2a46c480c6d11d97537e85f3427cf5c65e3290f450c1dacc3a27d97a7"
+    },
+    {
+      "body_raw_bytes": 5917,
+      "body_raw_sha256": "8bbc9c5ee3cdcb5e9c6db0acb75c28c12884a158224075c4e6e9b280dcac6ac0",
+      "bytes": 3380,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q4_2025.body.json.gz",
+      "sha256": "60d9ec68c19f5dd66ce4bd558c00b9c1432c3d393c98a718e1561356054657db"
+    },
+    {
+      "bytes": 376,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q4_2025.intent.json",
+      "sha256": "ec14dc65a7037f7f82dcd298265cc1334a3452166244a24de307ea4e012111d1"
+    },
+    {
+      "bytes": 867,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/amazon350_guidance_history_1250/q4_2025.receipt.json",
+      "sha256": "d597498091a76f15df4b6003cd5b768fc880bdf9e90465f6b7a6271a2bd312ff"
+    },
+    {
+      "body_raw_bytes": 24665,
+      "body_raw_sha256": "c5dc8f8c5c0b62365aced777c25b1c152e1769ea89cfb4962e219a3a0429e523",
+      "bytes": 6265,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/openrouter_top_models_chart.body.gz",
+      "sha256": "8304f7f31ea84f4490bda0e04064ec0d5bf8d791da1adeb6f094b890b72d9c1e"
+    },
+    {
+      "bytes": 793,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/openrouter_top_models_chart.receipt.json",
+      "sha256": "f5a3f54c7e5cc24bde2820fae7bd08ee80e4ca3d3a96513472144f82f2e5e559"
+    },
+    {
+      "bytes": 4307,
+      "kind": "source_only_facts_capsule",
+      "path": "data/deep_review_20261017/work/0353_facts_1240.json",
+      "sha256": "b8c6529b0763ca849ddfd6fb0656da150996530f9bf2ab9ad7bcd165bbb907c8"
+    },
+    {
+      "bytes": 4845,
+      "kind": "source_only_facts_capsule",
+      "path": "data/deep_review_20261017/work/0355_facts_1240.json",
+      "sha256": "52d65cde71071763b346ad8e2094c67cf0af97a4f78a794fdce839ece07ae87b"
+    },
+    {
+      "bytes": 3280,
+      "kind": "source_only_facts_capsule",
+      "path": "data/deep_review_20261017/work/0356_facts_1240.json",
+      "sha256": "ee09d53c07ff86c41ab5671a0e920c36fd4a76ce4ebfc9d6a373fa8ae969e915"
+    },
+    {
+      "bytes": 54844,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case353_facts_1235/isw_storymap/isw_storymap.body.json.gz",
+      "sha256": "29e2a0652bddb3321172259eb1c773b54f333043c6adbe9153349600732a1401"
+    },
+    {
+      "bytes": 869,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case353_facts_1235/isw_storymap/isw_storymap.receipt.json",
+      "sha256": "579bf97d7007cd03fb716d10bb35db66012eda6814d0262d56ffc4bbf8f93c40"
+    },
+    {
+      "bytes": 1532281,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case353_facts_1235/isw_webmap_item_data_complete/isw_webmap_item_data_complete.body.json.gz",
+      "sha256": "f5ff33a5d21d4c86c3707a52028b9dbc18f6b1e8542ccc5ccf156fb59b1f17d7"
+    },
+    {
+      "bytes": 30779,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_runoff/datafolha_df_runoff.body.json.gz",
+      "sha256": "0b26c75ea63101838ca779708196e336e9c0348ffa30aee300ef1a223b854c19"
+    },
+    {
+      "bytes": 916,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_runoff/datafolha_df_runoff.receipt.json",
+      "sha256": "879145096f3d7587bc2eeef46c9ab298ac63a868ba8a40cb556e25afd0e9d478"
+    },
+    {
+      "bytes": 1354160,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_report_pdf/datafolha_df_report_pdf.body.json.gz",
+      "sha256": "84a1023219d10ffca6883ec45450bf2d4b89806e055c750fe558e8e1bfd52a8d"
+    },
+    {
+      "bytes": 953,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_report_pdf/datafolha_df_report_pdf.receipt.json",
+      "sha256": "11495522332c01359d5a60f1b890c282155623c6cb83963b923e3c38a3c644b9"
+    },
+    {
+      "bytes": 24673,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case355_facts_1235/tse_runoff_pair/tse_runoff_pair.body.json.gz",
+      "sha256": "e68cd204ed94ca6b361ecbb597cba0e6a9f248591138a06496effdc025f378d2"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

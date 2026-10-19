@@ -1,0 +1,1 @@
+{"name":"q3_2025","request":{"method":"GET","operation":"SEC 10-Q primary filing","read_only":true,"scope":"AXP quarterly SEC filing full text","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496225000222/axp-20250930.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:39.603438Z","timing_basis":"call_window"}

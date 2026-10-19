@@ -1,0 +1,21 @@
+{
+  "name": "dc_oag_oct14",
+  "url": "https://oag.dc.gov/release/attorney-general-schwalb-issues-statement-0",
+  "request_start_utc": "2026-10-19T12:05:06.029803+00:00",
+  "response_end_utc": "2026-10-19T12:05:06.344714+00:00",
+  "status": 200,
+  "error": null,
+  "body_bytes": 53677,
+  "body_sha256": "cc5b18fb19baae554c6ac1dd07122f6d4b96c0d79ae9129bdc0b947b304fcd78",
+  "gzip_path": "logs/deep_review_20261017/facts_0343_current_1240/dc_oag_oct14.body.gz",
+  "gzip_sha256": "b632dc61fe98c74cc9243b232179398e94cb38398a0fd73aa680da24a28c29d4",
+  "response_headers_filtered": {
+    "content-length": "53677",
+    "cache-control": "max-age=2764800, public",
+    "content-type": "text/html; charset=UTF-8",
+    "etag": "W/\"1792391503\"",
+    "last-modified": "Mon, 19 Oct 2026 06:31:43 GMT",
+    "age": "20003",
+    "date": "Mon, 19 Oct 2026 12:05:06 GMT"
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"q2_2026_10q","request":{"method":"GET","operation":"SEC quarterly report full text","read_only":true,"scope":"AXP Q2 2026 10-Q contingencies and financial statements","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496226000322/axp-20260630.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:10:11.843763Z","timing_basis":"call_window"}

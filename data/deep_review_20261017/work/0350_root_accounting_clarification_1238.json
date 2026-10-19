@@ -1,0 +1,13 @@
+{
+  "schema": "primary_case0350_source_clarification.v1",
+  "compiled_utc": "2026-10-19T12:38:25.807737+00:00",
+  "source": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+  "browser_read_utc": "2026-10-19T12:38:25.807737+00:00",
+  "findings": [
+    "Original table Q2 AFS-debt reclassification dash/zero;H1 4.479B. This resolves earlier helper capsule statement that Q2 was not separately disclosed.",
+    "Q2 equity upward adjustments50.486B/H1 62.814B, primarilyAnthropic observable-price adjustments; cost/measurement-alternative preferred interests are not continuously marked to every headline.",
+    "Subsequent21.3B OpenAI preferred purchase is funding, not a disclosed Q3 P&L gain."
+  ],
+  "provenance": "Ordinary browser-rendered original10Q; no claimed local successful HTTP body/hash. Earlier direct403 receipts retained; companyfacts separately retained.",
+  "raw_body_sha256": null
+}

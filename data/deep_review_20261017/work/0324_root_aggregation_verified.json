@@ -1,0 +1,33 @@
+{
+  "schema": "root_independent_ap_aggregation.v1",
+  "raw_zip_sha256": "4d15319c3a20984e421982e8cf61edd0e73cf53a82da658b8b6d00622ad84a92",
+  "published_sha512_match_reproduced": true,
+  "raw_csv_rows": 267474,
+  "filtered_presidential_rows": 13996,
+  "unique_sections": 1914,
+  "duplicate_section_office_type_candidate_keys": 0,
+  "nominal_total": 464875,
+  "sum_section_turnout": 476562,
+  "types": {
+    "1": 464875,
+    "2": 4415,
+    "3": 7272
+  },
+  "Lula": 212503,
+  "Flavio": 212278,
+  "all13_candidate_totals_match": true,
+  "metadata_filter": {
+    "ANO_ELEICAO": "2026",
+    "CD_ELEICAO": "6257",
+    "DT_PLEITO": "2026-10-04 00:00:00",
+    "NR_TURNO": "1",
+    "SG_UF": "AP",
+    "CD_CARGO_PERGUNTA": "1",
+    "DS_CARGO_PERGUNTA": "Presidente"
+  },
+  "archive_members": [
+    "bweb_1t_AP_051020261403.csv",
+    "_leiame-boletimurnaweb.pdf"
+  ],
+  "limit": "CompletecapturedBUfile,notseparateTSEfinallegalvalid-votetotalization;17nominal-codedLeonardoAvalanchevotesregistrationtreatmentunverified."
+}

@@ -1,0 +1,187 @@
+{
+  "schema": "case324_amapa_transfer_source_facts.v1",
+  "captured_utc": "2026-10-19T10:53:47.645429Z",
+  "scope": "Bounded source facts only; no forecast or recommendation.",
+  "identity": {
+    "review_index": 324,
+    "market_id": "5329577",
+    "condition_id": "0x0d9c9c308211e9008331e33be346c44c50da2d879ff6a739676ab553ea5b5297",
+    "criteria_sha256": "8ebb9d14997b0dec92979e6d3f36a95feb44e0cb436afa2c076b251473981167"
+  },
+  "current_ap_first_round_reference": {
+    "source_unit": "data/deep_review_20261017/work/0324_ap_totals_followup.json",
+    "official_tse_zip_sha256": "4d15319c3a20984e421982e8cf61edd0e73cf53a82da658b8b6d00622ad84a92",
+    "official_tse_sha512_matched": true,
+    "result": "Lula 212503 nominal votes; Flávio Bolsonaro 212278; margin 225; n=464875 nominal candidate-coded votes; blank 4415, null 7272.",
+    "denominator_note": "Shares are BU-file nominal-coded shares, not an independently retrieved final valid-vote totalization. Exact candidate/party rows are in the linked source unit.",
+    "party_facts_from_same_official_bu_csv": [
+      {
+        "candidate": "ESCRITOR AUGUSTO CURY",
+        "party": "AVANTE",
+        "votes": 19057
+      },
+      {
+        "candidate": "RENAN SANTOS",
+        "party": "MISSÃO",
+        "votes": 11342
+      },
+      {
+        "candidate": "RONALDO CAIADO",
+        "party": "PSD",
+        "votes": 8304
+      },
+      {
+        "candidate": "ZEMA",
+        "party": "NOVO",
+        "votes": 341
+      },
+      {
+        "candidate": "SAMARA",
+        "party": "UP",
+        "votes": 508
+      },
+      {
+        "candidate": "CLARIANA BARAO",
+        "party": "DC",
+        "votes": 229
+      },
+      {
+        "candidate": "HERTZ DIAS",
+        "party": "PSTU",
+        "votes": 132
+      },
+      {
+        "candidate": "EDMILSON COSTA",
+        "party": "PCB",
+        "votes": 62
+      },
+      {
+        "candidate": "RUI COSTA PIMENTA",
+        "party": "PCO",
+        "votes": 53
+      },
+      {
+        "candidate": "VETERINÁRIO WILSON GRASSI",
+        "party": "DEMOCRATA",
+        "votes": 49
+      },
+      {
+        "candidate": "LEONARDO AVALANCHE",
+        "party": "PRTB",
+        "votes": 17,
+        "caveat": "BU-coded nominal row; registration/final-totalization treatment unresolved in earlier unit."
+      }
+    ],
+    "method": "Offline extraction of SG_PARTIDO/NM_PARTIDO from the already captured, checksum-verified AP TSE BU ZIP; no additional source request."
+  },
+  "ap_specific_2026_runoff_scenarios": [
+    {
+      "pollster": "Real Time Big Data",
+      "reported_by": "CNN Brasil (secondary report)",
+      "url": "https://www.cnnbrasil.com.br/eleicoes/real-time-big-data-lula-e-flavio-empatam-no-1o-e-no-2o-turnos-no-amapa/",
+      "article_published": "2026-09-08 07:08 BRT (CNN displayed); updated same time",
+      "field_dates": "2026-09-03 through 2026-09-07",
+      "sample": 1600,
+      "question_context": "CNN says stimulated first-round and hypothetical second-round scenarios; exact questionnaire text not captured.",
+      "runoff_result_pct_of_respondents_as_reported": {
+        "Flávio Bolsonaro": 45,
+        "Lula": 41,
+        "blank_or_null": 6,
+        "undecided_or_no_answer": 8
+      },
+      "uncertainty": "±2 percentage points; 95% confidence, per CNN.",
+      "registry": "BR-09519/2026; CNN says the institute commissioned the survey itself.",
+      "receipt": "logs/deep_review_20261017/0324_transfer/cnn_realtime/page.receipt.json",
+      "body": "logs/deep_review_20261017/0324_transfer/cnn_realtime/page.body.json.gz",
+      "http_status": 200,
+      "call_window_utc": [
+        "2026-10-19T10:53:15.881894Z",
+        "2026-10-19T10:53:16.508467Z"
+      ],
+      "raw_sha256": "e31a6444a4660bf54963e6188cf8177b22242f44eb4467c4e25aebae24f18f9f",
+      "gzip_sha256": "c7115eb7c39cf1b9eba87e770380972ad07481de84cba7adb959c4d6c2b250d1",
+      "limit": "Pre-first-round fieldwork; no question wording/mode/design effect retrieved. Not a poll after the Oct4 first round."
+    },
+    {
+      "pollster": "AtlasIntel",
+      "reported_by": "Original AtlasIntel poll PDF (captured) plus Poder360 secondary report.",
+      "url": "https://www.poder360.com.br/poder-eleicoes-2026/lula-tem-507-e-flavio-435-em-2o-turno-no-ap-diz-atlasintel/",
+      "article_published": "2026-10-04 10:42 (Poder360 display; article says survey released Oct3)",
+      "field_dates": "2026-09-27 through 2026-10-02; entirely before the Oct4 first-round vote.",
+      "sample": 800,
+      "runoff_result_pct_as_reported": {
+        "Lula": 50.7,
+        "Flávio Bolsonaro": 43.5
+      },
+      "uncertainty": "±3 percentage points; 95% confidence per Poder360.",
+      "registrations": [
+        "AP-01238/2026",
+        "BR-02298/2026"
+      ],
+      "funding": "Poder360 says R$75,000, paid from institute funds.",
+      "questionnaire_and_denominator": "Original PDF now captured: exact hypothetical-runoff wording; all-response chart 50.7/43.5/5.8 (blank/null/unsure) and separately labelled valid-votes chart 53.8/46.2. PDF says n=818; article says n=800, discrepancy unresolved.",
+      "direct_capture": {
+        "article_http_status": 403,
+        "article_receipt": "logs/deep_review_20261017/0324_transfer/poder360_atlas/page.receipt.json",
+        "original_pdf_http_status": 200,
+        "original_pdf_receipt": "logs/deep_review_20261017/0324_atlas_pdf/pdf.receipt.json",
+        "original_pdf_body": "logs/deep_review_20261017/0324_atlas_pdf/pdf.body.json.gz",
+        "original_pdf_url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-AtlasIntel-Amapa-3out2026.pdf",
+        "original_pdf_raw_sha256": "2211fbf49607c106ac583a33a4b2010e05214d832c300419837b221722193e59",
+        "original_pdf_gzip_sha256": "b19e921bc5afaf8155069f90ef341507ee7cad4afd23be1a9c5c0bd27d74a41e"
+      },
+      "limit": "Fieldwork Sep27–Oct2 is entirely before Oct4, not post-first-round. Actual mode/question/denominator now verified from original PDF; discrepancy between article n=800 and PDF n=818 remains unresolved.",
+      "sample_pdf": 818,
+      "sample_article": 800,
+      "sample_discrepancy": "PDF profile page says 818; Poder360 article says 800; unresolved.",
+      "method": "Atlas Random Digital Recruitment (RDR), organic web-navigation recruitment in geo-located Amapá, any device; PDF describes post-stratification.",
+      "question": "Em um eventual segundo turno nas eleições presidenciais, se esses fossem os candidatos, em quem você votaria?",
+      "all_respondent_scenario_pct": {
+        "Lula": 50.7,
+        "Flávio Bolsonaro": 43.5,
+        "Branco/Nulo/Não sei": 5.8
+      },
+      "valid_votes_scenario_pct": {
+        "Lula": 53.8,
+        "Flávio Bolsonaro": 46.2
+      },
+      "original_pdf_receipt": "logs/deep_review_20261017/0324_atlas_pdf/pdf.receipt.json",
+      "original_pdf_body": "logs/deep_review_20261017/0324_atlas_pdf/pdf.body.json.gz",
+      "original_pdf_raw_sha256": "2211fbf49607c106ac583a33a4b2010e05214d832c300419837b221722193e59",
+      "original_pdf_gzip_sha256": "b19e921bc5afaf8155069f90ef341507ee7cad4afd23be1a9c5c0bd27d74a41e",
+      "interpretive_limit": "A specific AP hypothetical matchup was measured before the first round; not a post-first-round poll or direct measurement of the Oct25 realized electorate."
+    }
+  ],
+  "historical_2022_ap_baseline": {
+    "status": "Not obtained in this bounded pass.",
+    "search_lead": "Official TSE page on 2022 second-round national totals was surfaced: https://www.tse.jus.br/comunicacao/noticias/2022/Outubro/100-das-secoes-totalizadas-confira-como-ficou-o-quadro-eleitoral-apos-o-2o-turno/ ; it is national aggregate, not an AP state result. No AP-specific 2022 TSE dataset/page was fetched.",
+    "constraint": "No further request/search budget used; this is not an inference that AP-specific historical results are unavailable."
+  },
+  "eliminated_candidates_and_endorsements": {
+    "verified_parties": "The first-round AP BU file identifies parties as in current_ap_first_round_reference; party affiliation itself is not voter-transfer evidence.",
+    "endorsement_lead": "A bounded search surfaced an Oct10 El País report about endorsements for the runoff, including national-level endorsements attributed to Caiado and Zema; direct GET returned HTTP403. No full source body or AP-specific endorsement by Cury, Renan Santos, Caiado, or Zema was verified. Do not translate national endorsements/party labels into AP voter movement.",
+    "blocked_source_receipt": "logs/deep_review_20261017/0324_transfer/elpais_endorsements/page.receipt.json",
+    "blocked_status": 403,
+    "blocked_raw_sha256": "47604cc63ba08e2cfafa7534a53f40e95dc8f8eb948aa8901643bed09ec7acfc",
+    "blocked_gzip_sha256": "a8773c355176a1dd27c0e8382626b76d1b5d4c3bac091edd3175982df415ddce"
+  },
+  "search_budget_and_limits": {
+    "followup_queries_used": [
+      "Amapá pesquisa segundo turno Lula Flávio Bolsonaro presidente outubro 2026 pollster",
+      "Amapá 2026 Flávio Lula segundo turno apoio candidato presidencial Caiado Zema eleição",
+      "site:tse.jus.br Amapá 2022 segundo turno presidente Lula Bolsonaro votação válida"
+    ],
+    "query_count": 3,
+    "direct_get_count": 3,
+    "summary": "No additional searches or GETs. No AP-specific polling after Oct4 confirmed in captured material; this bounded search is not proof none exists. No official AP 2022 transfer baseline was extracted. Endorsement evidence is incomplete and national, not AP-specific."
+  },
+  "compiled_utc": "2026-10-19T11:06:05Z",
+  "corrections": [
+    {
+      "recorded_utc": "2026-10-19T11:03:27Z",
+      "field": "AtlasIntel fieldwork interpretation",
+      "prior_wording": "straddled Oct4 first-round date by two days",
+      "corrected_wording": "Sep27–Oct2 fieldwork is entirely before Oct4 first round. Raw captures unchanged."
+    }
+  ]
+}

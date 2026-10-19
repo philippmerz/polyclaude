@@ -1,0 +1,80 @@
+{
+  "captured_review_utc": "2026-10-19T12:00:39Z",
+  "conditionId": "0xf59fe744e8f73124ccd8b351b101c51cd29bb449dab73b83ed74d05603b0dfb2",
+  "criteria_sha256": "0ed1c45d01820f29a7e4614e7c2bd9432dbf676e9f142f3897464715c7e01afe",
+  "current_primary_facts": "10 USC Chapter 13 contains §§251–255; the official House U.S. Code search result for §252 describes presidential use of militia/armed forces to enforce federal authority. This statutory text is context, not evidence that the contract trigger happened. Exact §252 request capture returned HTTP 500 (body/hash in facts log); no bypass/retry. Bounded official-source search did not surface a dated formal invocation announcement; this is a limited search gap, not proof none occurred.",
+  "frozen_rule": "YES requires the President formally announcing use of the Insurrection Act as legal authority to deploy active-duty forces or federalize the National Guard in response to civil disorder, insurrection, or rebellion, by Dec 31 2026 11:59 PM ET; resolution consensus of credible reporting.",
+  "id": "1117275",
+  "public_quote_packet": "work/quotes_1158_0343_0344_0346.json",
+  "public_quote_packet_sha256": "c30370dedb306ea2cb92a81c6a20c7f1b62d8bae00f01b64ac6f7b32537e10c9",
+  "question": "Insurrection Act invoked by December 31?",
+  "quote_capture_manifest": "logs/deep_review_20261017/quotes_1158_0343_0344_0346/capture_manifest.json",
+  "quote_capture_manifest_sha256": "1437b9341b315bd0f9046a626769de1dd0d3fc1f85f619f7bb5b2b3bcfe1cfb7",
+  "quote_snapshot": {
+    "accepting_orders": true,
+    "active": true,
+    "books": [
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.17",
+          "size": "82.59"
+        },
+        "best_bid": {
+          "price": "0.12",
+          "size": "126.66"
+        },
+        "book_timestamp_epoch_ms": "1792411042660",
+        "outcome": "Yes",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      },
+      {
+        "available": true,
+        "best_ask": {
+          "price": "0.88",
+          "size": "126.66"
+        },
+        "best_bid": {
+          "price": "0.83",
+          "size": "82.59"
+        },
+        "book_timestamp_epoch_ms": "1792411042660",
+        "outcome": "No",
+        "received_utc": "2026-10-19T11:58:52.099994+00:00"
+      }
+    ],
+    "capture_errors": [],
+    "closed": false,
+    "condition_id": "0xf59fe744e8f73124ccd8b351b101c51cd29bb449dab73b83ed74d05603b0dfb2",
+    "criteria_exact_match": true,
+    "fee": {
+      "e": 1.0,
+      "r": 0.04,
+      "to": true
+    },
+    "fee_gamma_parity": true,
+    "fee_received_utc": "2026-10-19T11:58:51.820476+00:00",
+    "fee_status": 200,
+    "gamma_updated_at": "2026-10-19T11:51:13.312013Z",
+    "identity_checks": {
+      "condition_id": true,
+      "description": true,
+      "endDate": true,
+      "market_id": true,
+      "outcomes": true,
+      "question": true,
+      "resolutionSource": true,
+      "slug": true,
+      "token_ids": true
+    },
+    "market_id": "1117275",
+    "min_size": 5,
+    "min_tick": 0.01,
+    "neg_risk": false
+  },
+  "review_index": 343,
+  "source_receipts": [
+    "logs/deep_review_20261017/facts_1158_343_344_346/usc_10_252.receipt.json (HTTP 500)",
+    "Official source page: https://uscode.house.gov/view.xhtml?edition=prelim&num=0&req=granuleid%3AUSC-prelim-title10-section252"
+  ]
+}

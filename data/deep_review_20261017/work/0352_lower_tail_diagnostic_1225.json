@@ -1,0 +1,98 @@
+{
+  "schema": "openrouter352_lower_tail_diagnostic.v1",
+  "compiled_utc": "2026-10-19T12:26:46.874555+00:00",
+  "scope": "Unadopted diagnostic only; identical 200,000 draws and RNG call order to existing model, with deterministic non-overlapping total buckets added. No probabilities adopted or action inferred.",
+  "shared_path": {
+    "draws": 200000,
+    "seed": 20261018182,
+    "branches": [
+      [
+        "moderation",
+        0.36,
+        0.035,
+        0.065
+      ],
+      [
+        "historical_growth",
+        0.28,
+        0.08,
+        0.095
+      ],
+      [
+        "release_boom",
+        0.08,
+        0.2,
+        0.1
+      ],
+      [
+        "disruption",
+        0.08,
+        -0.15,
+        0.15
+      ],
+      [
+        "plateau",
+        0.2,
+        0.0,
+        0.05
+      ]
+    ],
+    "same_cutoff_weights": {
+      "prior_complete_day_18T_remaining": 0.25,
+      "latest_UI_remaining_proxy": 0.65,
+      "uniform_0_to_36T": 0.1
+    },
+    "innovation_correlation": 0.25,
+    "rounding_noise": "95% N(0,2T), 5% N(0,10T)"
+  },
+  "input_hashes": {
+    "source_model_sha256": "c6b5bf6bcd4684d52613037ee9a181766767637ba11b4979d5c7d34f131f20bc",
+    "source_results_sha256": "ae704871f494b337823642c3f91d0a0b0b7b77edcc282f3202507c958d7126b0",
+    "chart_summary_sha256": "ec98ae205b518c402b58e55b85e1afbd953e62ad02738c24b328d64774b856dc",
+    "adopted_model_sha256": "86202f0603e890a5610a3fd38507e2588d784a7eee1f15313f7630a0c4e6b268",
+    "chart_body_sha256": "c5dc8f8c5c0b62365aced777c25b1c152e1769ea89cfb4962e219a3a0429e523"
+  },
+  "base_replay": {
+    "partial_week_T": 158.105052314724,
+    "remaining_proxy_T": 7.190350000721907,
+    "250_yes": 0.10271,
+    "112_yes": 0.115545,
+    "exact_match_adopted_raw_joint": {
+      "250": true,
+      "112": true
+    }
+  },
+  "partition_T": {
+    "lt625": "(-inf,625)",
+    "625_675": "[625,675)",
+    "675_725": "[675,725)",
+    "725_775": "[725,775)",
+    "ge775": "[775,inf)"
+  },
+  "partition": {
+    "counts": {
+      "lt625": 33802,
+      "625_675": 20542,
+      "675_725": 24420,
+      "725_775": 23109,
+      "ge775": 98127
+    },
+    "fractions": {
+      "lt625": 0.16901,
+      "625_675": 0.10271,
+      "675_725": 0.1221,
+      "725_775": 0.115545,
+      "ge775": 0.490635
+    },
+    "reconstructed_existing_fractions": {
+      "250_yes": 0.10271,
+      "112_yes": 0.115545,
+      "neither": 0.781745
+    }
+  },
+  "optional_current_anchor": {
+    "performed": false,
+    "reason": "A sensitivity using the newly complete Oct12 week and Oct19 partial would require an additional intrawweek usage-cutoff assumption. This was omitted rather than silently reusing yesterday's cutoff proxy."
+  },
+  "source_timing_note": "New 12:17 chart snapshot revises Oct12 raw weekly sum from the 09:33 capture by +0.000006585049T and Oct19 is still partial; see work/0352_chart_weekly_totals_1220.json. This replay intentionally reproduces the model's frozen 17:45 input, not the newer source snapshot."
+}

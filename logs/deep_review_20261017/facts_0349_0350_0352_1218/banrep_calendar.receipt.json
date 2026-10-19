@@ -1,0 +1,17 @@
+{
+  "name": "banrep_calendar",
+  "url": "https://www.banrep.gov.co/es/calendario-eventos",
+  "started_utc": "2026-10-19T12:17:07.061132+00:00",
+  "received_utc": "2026-10-19T12:17:08.043168+00:00",
+  "http_status": 200,
+  "error": null,
+  "body_bytes": 454051,
+  "body_sha256": "0374f4d633cc48d362af70b488fec45a92b7d45e30d1f92824645011e44debf9",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_calendar.body.gz",
+  "gzip_sha256": "24cf89e966d511a4e53c2eae6e6df5304c493baef53f656a58b3b6bfd707f611",
+  "headers_filtered": {
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 12:17:07 GMT",
+    "cache-control": "max-age=86400, public"
+  }
+}

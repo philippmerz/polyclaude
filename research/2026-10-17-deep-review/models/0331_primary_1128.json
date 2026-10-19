@@ -1,0 +1,44 @@
+{
+  "schema": "primary_case0331_model.v1",
+  "authored_utc": "2026-10-19T11:25:56.002754+00:00",
+  "p_yes": 0.24,
+  "range_yes": [
+    0.05,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.09,
+  "selected_no": 0.61,
+  "target": "Publicdefinitivefederal/OpenAIattributionincreation–Dec31ETwindow toSaudiGOV/intelligence/security/stateaffiliatedentity forAlfozanincident, notnationality/suspicion/association. Allegationcountswithoutconviction/truth, laterretractionirrelevant.",
+  "source_bridge": "RootreadfulloriginalDOJOct13/SHAverified: allegedUSBdevices, encryptedcontents, access/logs/spouseaccountDIYprompts, wiretapcharge5yrmaximum; NSD/counterintelligenceagencyframing. Neitherstate-sponsorednorstate-independentconduct established; no FARA/espionagechargeorSaudi-stateattributioninthisrelease. Cannot infer exonerationorassumeSaudiemploymentfromnationality.",
+  "regimes": [
+    {
+      "name": "Saudi-stateorstate-affiliatedtasking",
+      "weight": 0.35,
+      "public_qualifying_attribution_by_cutoff_conditional": 0.63,
+      "weighted_p": 0.2205
+    },
+    {
+      "name": "Otherstate/privateorganizationtasking",
+      "weight": 0.25,
+      "stillqualifyingSaudiattribution_conditional": 0.03,
+      "weighted_p": 0.0075
+    },
+    {
+      "name": "Self-directed/indeterminatesponsor",
+      "weight": 0.4,
+      "stillqualifyingSaudiattribution_conditional": 0.04,
+      "weighted_p": 0.016
+    }
+  ],
+  "computed_p": 0.244,
+  "rounding": "24.4%→24%, broad unfitted analyst event tree, not an empirical sponsorship base rate. Branches actual-motive hypotheses need not equal eventual allegation truth.",
+  "crux": "Futurecasefilings/forensics/devices/communicationsmayyieldattributionordeliberatenondisclosure; multipleofficialspeakersandSaudi-stateaffiliatesmakepathbroaderthanconvictionbutnarrowerthangenericforeignthreatquote. Unknownsealedcomplaint/materialfilingsareunobserved, not absent.",
+  "reserve_reason": "10pp ordinarymodel+5pp legalstatement/source+conditional-fill risk. PossibleOct19detentionhearingonlyindexedsecondaryofficialsnippet, bodyinterstitial/dateclockunverified; no belowfairrestingorderwithoutcurrentcatalystreassessment.",
+  "sensitivity": "Ifdeviceforensicsclearly showSauditaskinganddisclosureexpected, YEScanexceed65%; noemergentties/sealedinvestigationcanleave~5%. Noassumptionthathearingoccursorresolvesstateconnection.",
+  "sources": [
+    "work/0331_sources_facts.json"
+  ],
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

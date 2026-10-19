@@ -1,0 +1,1 @@
+{"name":"time_poy_tag","request":{"call_window_label":"time_poy_tag","method":"GET","read_only":true,"scope":"case346_time_vatican_official_context","url":"https://replatform.time.com/tag/person-of-the-year-2/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:23.889786Z","timing_basis":"call_window"}

@@ -1,0 +1,70 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 350,
+  "market_id": "5778679",
+  "condition_id": "0xdb0bd84336d779d0d738612dcd43331ba39380d9bf00af79665e22c702a181d8",
+  "criteria_sha256": "7a1c5c4a0bff9cb4286d241ca769070bb139886b522d2daf1edf73d6c7109dc3",
+  "observed_utc": "2026-10-19T12:22:31.979279Z",
+  "Q2_2026_GAAP": {
+    "period": "Apr1-Jun30 2026",
+    "diluted_EPS_USD": 5.75,
+    "net_income_USD_B": 62.647,
+    "sales_USD_B": 200.606,
+    "operating_income_USD_B": 27.461,
+    "other_income_expense_net_USD_B": 53.415,
+    "nonoperating_income_USD_B": 53.396,
+    "pretax_income_USD_B": 80.857,
+    "tax_provision_USD_B": 18.199,
+    "weighted_avg_diluted_shares_B": 10.903
+  },
+  "Anthropic_accounting": "Amazon 10-Q says Q2 other-income net gain $53.4B (H1 $69.1B) was primarily upward observable-price adjustments to Anthropic nonvoting preferred and reclassification of gains on Anthropic convertible debt converted to preferred in Q1. H1 tax provision included $15.9B discrete expense primarily from Anthropic investment revaluation. 10-Q does not split the total $53.4B among components. Private-company equity investment carrying value, primarily Anthropic and OpenAI, was $122.3B at Jun30 vs $16.2B Dec31; observable changes/impairments go to Level 3 other income.",
+  "Q3_2026_guidance": "Q2 release guides sales $197–202B (+9–12% y/y) and operating income $22.5–26.5B; no EPS outlook. Guide assumes no energy-derivative remeasurement impact and no new business acquisitions, restructurings, or legal settlements concluded. Next results scheduled Oct29 (previous issuer notice).",
+  "post_Q2_8Ks_checked": "SEC submissions response received 2026-10-19T12:20:45.469695Z listed Sep9 and Sep14 8-Ks through Oct19. Neither reports new Q3 EPS guidance or Anthropic fair-value update; no exhaustive current-news scan.",
+  "sources": [
+    {
+      "url": "https://data.sec.gov/api/xbrl/companyfacts/CIK0001018724.json",
+      "receipt": "logs/deep_review_20261017/marketcap196_facts_1745/receipts.json",
+      "body": "logs/deep_review_20261017/marketcap196_facts_1745/amazon_companyfacts.body.gz",
+      "basis": "SEC XBRL values for accession 0001018724-26-000026; raw hash/received time in receipt."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "receipt": "logs/deep_review_20261017/marketcap196_facts_1745/receipts.json",
+      "basis": "Direct GET 403; official 10-Q browser-rendered. SEC companyfacts raw is retained."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000024/amzn-20260730.htm",
+      "receipt": "logs/deep_review_20261017/amazon350_q2_8k_1235/amazon_q2_8k.receipt.json",
+      "body": "logs/deep_review_20261017/amazon350_q2_8k_1235/amazon_q2_8k.body.json.gz",
+      "basis": "Direct HTTP 200; 8-K current report. Official release content was browser-rendered via issuer IR page."
+    },
+    {
+      "url": "https://data.sec.gov/submissions/CIK0001018724.json",
+      "receipt": "logs/deep_review_20261017/amazon350_facts_1230/amazon_sec_submissions.receipt.json",
+      "body": "logs/deep_review_20261017/amazon350_facts_1230/amazon_sec_submissions.body.json.gz",
+      "basis": "HTTP 200; filing list used to identify both post-Q2 8-Ks."
+    },
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Second-Quarter-Results/default.aspx",
+      "receipt": "logs/deep_review_20261017/amazon350_facts_1230/amazon_q2_release.receipt.json",
+      "basis": "Direct GET 403; official page browser-rendered."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm",
+      "receipt": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep09_8k.receipt.json",
+      "body": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep09_8k.body.json.gz",
+      "basis": "HTTP 200; director appointment, no financial update."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000110465926107526/tm2624614d5_8k.htm",
+      "receipt": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep14_8k.receipt.json",
+      "body": "logs/deep_review_20261017/amazon350_8k_followup_1231/amazon_sep14_8k.body.json.gz",
+      "basis": "HTTP 200; £4.242B note offering closed, estimated £4.235B proceeds before expenses."
+    }
+  ],
+  "limits": [
+    "Q2 10-Q direct request returned 403; retain browser-rendered official text and SEC companyfacts capture distinction. Q2 results release official browser page likewise had direct 403.",
+    "Post-Q2 review covered two 8-Ks listed in current SEC submissions feed; neither changes Q3 EPS/accounting outlook. No exhaustive news/events search.",
+    "GAAP EPS is sensitive to Q3 investment valuation changes; Q2 actual gain is not a Q3 estimate."
+  ]
+}

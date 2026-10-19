@@ -1,0 +1,37 @@
+{
+  "review_index": 344,
+  "observed_utc": "2026-10-19T12:06:39Z",
+  "identity_pointer": "work/0344_facts_1200.json; exact frozen ID/CID/hash unchanged",
+  "q4_2025_original_guidance_and_comparator": {
+    "sec_8k": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000037/axp-20260130.htm",
+    "sec_exhibit_99_1": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000037/q425exhibit991.htm",
+    "release_date": "2026-01-30",
+    "receipt": "logs/deep_review_20261017/axp344_followup_1230/exhibit/q4_2025_exhibit_99_1.receipt.json",
+    "body": "logs/deep_review_20261017/axp344_followup_1230/exhibit/q4_2025_exhibit_99_1.body.json.gz",
+    "raw_sha256": "58ddad4cf990734ea084af31655d5ac0e5fc1d664d9bc3f000b7f530b7507ed6",
+    "facts": "Q4'25 GAAP diluted EPS $3.53; revenue net of interest $18.980B; net income $2.462B; average diluted shares 688M; provision for credit losses $1.4B (rounded release narrative). FY'25 GAAP diluted EPS $15.38. FY'26 original guidance: revenue growth 9%–10%, EPS $17.30–$17.90; Q2'26 later raised revenue guidance to 10% while retaining the same EPS range. Exhibit separately labels FY'24 adjusted EPS excluding an Accertify transaction gain as $13.35 versus FY'24 GAAP EPS $14.01; that is annual, prior-year context, not an alternate Q3'26 EPS measure."
+  },
+  "october_2026_issuer_filings": [
+    {
+      "date": "2026-10-08",
+      "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000376/axp-20261008.htm",
+      "receipt": "logs/deep_review_20261017/axp344_followup_1230/oct08_8k.receipt.json",
+      "body": "logs/deep_review_20261017/axp344_followup_1230/oct08_8k.body.json.gz",
+      "raw_sha256": "dc3094015d3a69bdd46b0bd8c6a713b086a46fc98792765327fe75f2b00bce7a",
+      "facts": "Item 7.01: AXP and American Express Travel Related Services consented to Federal Reserve orders; American Express National Bank (AENB) consented to an OCC order and agreed to a $350M civil money penalty. Company says a portion was reserved in prior periods, the penalty does not affect previously supplied FY2026 guidance, consent orders impose no asset cap, and remediation costs are not anticipated to affect FY2027 guidance. This is a quantified legal/regulatory item with explicit issuer guidance treatment."
+    },
+    {
+      "date": "2026-10-15",
+      "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000383/axp-20261015.htm",
+      "receipt": "logs/deep_review_20261017/axp344_followup_1230/oct15_8k.receipt.json",
+      "body": "logs/deep_review_20261017/axp344_followup_1230/oct15_8k.body.json.gz",
+      "raw_sha256": "3c0b73dde25b2fec3513f9c41534f4ce06ae5b5b39550311bb814b764e3c284f",
+      "facts": "Item 7.01 supplies preliminary Sep 2026 U.S. consumer/small-business delinquency and principal-only write-off statistics. Sep consumer principal-only net write-off rate 1.5% (Aug 1.7%); small-business 2.1% (Aug 2.2%); combined average-card balance shown as $160.9B. These are preliminary portfolio indicators, not reported companywide Q3 GAAP EPS or a replacement EPS figure."
+    }
+  ],
+  "interpretation_limits": [
+    "Oct 8 explicitly says the penalty does not change previously provided FY2026 guidance; Oct 15 statistics do not state Q3 GAAP EPS.",
+    "No new analyst consensus or Q3 EPS forecast was fetched. The $4.53 rule threshold remains strictly above, and exactly matched Q2'26 actual diluted EPS.",
+    "Q4'25 is descriptive seasonality history only; it does not supply a Q3'26 earnings estimate."
+  ]
+}

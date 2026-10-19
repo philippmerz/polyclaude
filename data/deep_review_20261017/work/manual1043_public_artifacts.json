@@ -1,0 +1,50 @@
+{
+  "allowlisted_entry_count": 675,
+  "allowlisted_file_bytes": 29000878,
+  "case_indices": [
+    "0317",
+    "0320",
+    "0322",
+    "0324",
+    "0326",
+    "0328",
+    "0330",
+    "0331",
+    "0332",
+    "0336",
+    "0338",
+    "0340",
+    "0342",
+    "0343",
+    "0344",
+    "0346",
+    "0349",
+    "0350",
+    "0352",
+    "0353",
+    "0355",
+    "0356"
+  ],
+  "coverage_snapshot_utc": "2026-10-19T12:43:23Z",
+  "created_utc": "2026-10-19T12:43:23Z",
+  "exclusions_manifest": {
+    "b": 9144,
+    "h": "72321b1625a1fbc6c99b12672ee13ac958426421dc1b9a977be0a6372f9815fa",
+    "p": "data/deep_review_20261017/work/manual1043_public_artifacts_exclusions.json"
+  },
+  "hashing": {
+    "algorithm": "SHA-256",
+    "body_raw_sha256": "For gzip source bodies, SHA-256 over decompressed bytes; gzip file hash is also listed.",
+    "file_sha256": "Exact on-disk bytes."
+  },
+  "quote_packets": "Original combined packets remain excluded; sanitized public copies retain public Gamma/fee/book data, with redactions recorded in portability map.",
+  "schema": "manual_public_artifact_allowlist.v1",
+  "scope": "Public manual archive through revised 0317, final 0349/0350/0352, source-only 0353/0355/0356 and ledger closeout audit. Includes immutable review/model/input/economics/fact records and public source captures; mutable resumes/progress/checkpoint/ledgers and private quote geoblock/account data excluded. Browser-only source reads have no fabricated body hashes.",
+  "shard_manifest": {
+    "b": 13248,
+    "h": "503c98e843572221cf6c673eab37d20de8b11db39ed1c56e7d7b9ff885e4c501",
+    "n": 59,
+    "p": "data/deep_review_20261017/work/manual1043_public_artifacts_shards_1245r.json"
+  },
+  "unique_decompressed_body_bytes": 61818891
+}

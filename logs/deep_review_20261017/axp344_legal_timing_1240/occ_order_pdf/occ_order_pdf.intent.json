@@ -1,0 +1,1 @@
+{"name":"occ_order_pdf","request":{"method":"GET","operation":"Official regulator source","read_only":true,"scope":"OCC AmEx National Bank consent order PDF","url":"https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-87a.pdf"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:10:44.750680Z","timing_basis":"call_window"}

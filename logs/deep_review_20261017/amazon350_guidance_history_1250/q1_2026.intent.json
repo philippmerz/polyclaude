@@ -1,0 +1,1 @@
+{"name":"q1_2026","request":{"method":"GET","read_only":true,"scope":"Amazon historical financial-guidance/results official IR release","url":"https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/default.aspx"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:30:17.555589Z","timing_basis":"call_window"}

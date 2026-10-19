@@ -1,0 +1,15 @@
+{
+  "review_index": 344,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "input": "data/deep_review_20261017/work/0344_primary_input_1218.json",
+  "model_path": "research/2026-10-17-deep-review/models/0344_primary_1218.json",
+  "economics": "data/deep_review_20261017/work/0344_economics_1218.json",
+  "source_paths": [
+    "work/0344_facts_1200.json",
+    "work/0344_earnings_detail_1205.json",
+    "work/0344_guidance_legal_followup_1210.json",
+    "work/0344_legal_timing_1211.json"
+  ],
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0344.md",
+  "effective_report_sha256": "9f8cd384b040085d5361af779b5d0424645be0ee72b89a97968097e611de655f"
+}

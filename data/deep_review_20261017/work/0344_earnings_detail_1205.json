@@ -1,0 +1,50 @@
+{
+  "review_index": 344,
+  "observed_utc": "2026-10-19T12:05:27Z",
+  "frozen_identity": {
+    "market_id": "5778595",
+    "condition_id": "0x139005d3b4536984949e6c59a46bac1dac9b35f43d0f8c715c2c6965f6f32072",
+    "criteria_sha256": "6c8df3f6cbbe9c34b197b530ee43a58a2700023939720c973cf5be5a163f1b49",
+    "literal_trigger": "Next AXP quarterly release: diluted GAAP EPS strictly greater than $4.53 (nearest-cent standard rounding); otherwise NO. Initial announced figure controls except obvious/immediate error. Frozen estimated release date Oct 23, 2026; 45-calendar-day fallback and Seeking Alpha/96h fallback clauses remain as captured in work/0344_facts_1200.json."
+  },
+  "source_findings": [
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000318/q226exhibit991.htm",
+      "source_date": "2026-07-24",
+      "capture": "logs/deep_review_20261017/facts_1158_343_344_346/axp_sec_q2_release.body.gz",
+      "receipt": "logs/deep_review_20261017/facts_1158_343_344_346/axp_sec_q2_release.receipt.json",
+      "raw_sha256": "6417babb1188c31f220ddb0add3c3a72c2cecff64cfe7c7f20bb58731b328eaf",
+      "facts": "Q2'26 net income $3.110B; revenue net of interest $19.637B (+10% YoY); diluted EPS $4.53 (+11%); average diluted shares 679M; provision for credit losses $1.1B (release narrative rounded to $0.1B). FY26 guidance after Q2: EPS $17.30–$17.90; revenue growth 10%. The market's $4.53 threshold therefore equals the preceding quarter's actual diluted EPS; it is not a newly observed Q3 result. Release describes EPS as common-shareholder income measure; no separate adjusted-EPS figure is shown in captured summary."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000192/axp-20260331.htm",
+      "source_date": "2026-04-23",
+      "capture": "logs/deep_review_20261017/axp344_deepfacts_1220/filings/q1_2026.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_deepfacts_1220/filings/q1_2026.receipt.json",
+      "raw_sha256": "f62226aa66fa16388aff5dbcf500b2be1e6447cf3348856dc7b997d634ae54cf",
+      "facts": "Q1'26 revenue net of interest $18.907B; provision for credit losses $1.251B; net income $2.971B; diluted GAAP EPS $4.28; average diluted shares 686M. EPS note uses net income less $14M preferred dividends and $19M participating-award allocation, divided by diluted shares. The Q1 10-Q does not state full-year EPS guidance."
+    },
+    {
+      "source": "https://www.sec.gov/Archives/edgar/data/4962/000000496225000222/axp-20250930.htm",
+      "source_date": "2025-10-17",
+      "capture": "logs/deep_review_20261017/axp344_deepfacts_1220/filings/q3_2025.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_deepfacts_1220/filings/q3_2025.receipt.json",
+      "raw_sha256": "b7263e585318156be4fd0579561af2991912677fa220f4c73a89d972613ba96b",
+      "facts": "Same-season Q3'25 revenue net of interest $18.426B; provision $1.287B; net income $2.902B; diluted EPS $4.14; average diluted shares 693M. Its EPS note defines common-share numerator deductions as $14M preferred dividends and $20M participating-award allocation. Historical comparator only, not a Q3'26 estimate."
+    },
+    {
+      "source": "https://data.sec.gov/submissions/CIK0000004962.json",
+      "capture": "logs/deep_review_20261017/axp344_deepfacts_1220/sec_submissions.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_deepfacts_1220/sec_submissions.receipt.json",
+      "raw_sha256": "d8c938a069d2f4aaa7e4c7d31fafa9b031284cef711777cf4e8c2e33cc7cb703",
+      "facts": "SEC recent-filings index showed AXP 8-K filings dated Oct 15 and Oct 8, 2026; their contents were not fetched in this bounded pass, so no claim that they contain no guidance/legal/one-off developments."
+    }
+  ],
+  "schedule_and_gaps": {
+    "captured_issuer_page": "logs/deep_review_20261017/facts_1158_343_344_346/axp_ir_q3_webcast.body.gz (HTTP 200, title only; page shell did not expose event date/time in retained HTML)",
+    "indexed_company_event": "Prior bounded browser index showed an AXP Q3 2026 earnings call for Oct 23, 2026 at 8:30 a.m. ET and planned results around 7:00 a.m. ET; this detail is search-index/browser output, not independently present in the retained page body. Frozen rule's estimated date remains Oct 23; company release within 45 days is the literal trigger.",
+    "guidance_cutoff": "Captured Q2 release is latest full issuer guidance in this source set: FY26 EPS $17.30–$17.90 and revenue growth 10%. Q1-to-Q2 guidance change was not independently compared because Q1 earnings-release exhibit was not captured.",
+    "newer_updates": "No post-Q2 guidance, legal, or one-off update was established. The Oct 15/Oct 8 8-K submissions were identified but not inspected; this is an explicit source gap, not evidence of no update.",
+    "forecast_scope": "No analyst forecast beyond the frozen $4.53 criterion was retrieved or inferred."
+  }
+}

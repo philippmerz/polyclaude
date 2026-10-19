@@ -1,0 +1,71 @@
+{
+  "schema": "primary_case0324_model.v2",
+  "authored_utc": "2026-10-19T11:13:14.835111+00:00",
+  "p_yes": 0.4,
+  "range_yes": [
+    0.1,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.25,
+  "selected_no": 0.45,
+  "literal": "Lula mostvalidAPrunoffvotes, notnationalorfirst-roundwinner; tie alphabeticalfullnames meansnotassumeLulawins. NoresultbyJune302027Other;October25normalcasefitsJan,disputedcasecanoutlastit.",
+  "evidence": "RootindependentlyreproducedcompleteTSEAPBUfile/signedSHA512:267474totalrows,13996presidentialrows,1914sections;nominal464875/Lula212503/Flavio212278,other40094;blank4415/null7272/turnout476562. No duplicatedsection/office/type/candidatekeys.",
+  "denominator_limit": "BUfileNominal-coded votes,notseparatefinallegalvalidtable. LeonardoAvalanche17votesstatusunverified; excluding17doesnotflip225Lula first-roundlead. Noinferenceofrunoffwinnerfromfirst-roundtie.",
+  "regimes": [
+    {
+      "name": "opposition-lean transfers",
+      "weight": 0.45,
+      "other_fraction_to_Lula": 0.25,
+      "other_fraction_to_Flavio": 0.65,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.4825175180722647,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.12190857381308601,
+      "weighted_p": 0.054858858215888706
+    },
+    {
+      "name": "balanced transfers",
+      "weight": 0.4,
+      "other_fraction_to_Lula": 0.45,
+      "other_fraction_to_Flavio": 0.45,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.5002437164375938,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.5064816342435376,
+      "weighted_p": 0.20259265369741508
+    },
+    {
+      "name": "Lula-favoring transfer/turnout regime",
+      "weight": 0.15,
+      "other_fraction_to_Lula": 0.65,
+      "other_fraction_to_Flavio": 0.25,
+      "other_abstain": 0.1,
+      "symmetric_base_retention": 0.98,
+      "conditional_mean_Lula_valid_share": 0.5179699148029231,
+      "unmeasured_share_sd": 0.015,
+      "conditional_p_Lula_wins": 0.8845403859173799,
+      "weighted_p": 0.13268105788760698
+    }
+  ],
+  "computed_p": 0.39013256980091077,
+  "rounding": "Roughly39% mixture rounded40%, notprecisionclaim.",
+  "method": "Unfittedother-votetransfer/turnoutmixture, GaussianresidualonfinalLulashare; notbinomialpopulationcountsampling oroldpollMOE.",
+  "forecast_bridge": "Near-even425kfirst-roundtop2base,40kothernominalvoters. Theirtransfer, differentialretention/newturnout/blankconversion dominate225votemargin. MajorityofothernominalvotesfromCury/Renan/Caiado; partylabelsverified,butpreferences/endorsementsnotmeasured. Regimeweights/transfers/98%retention/1.5ppsd are analystjudgments.",
+  "poll_context": "Original Atlas PDF pp5/22/23/26/27: n818, RDR digital, Sep27–Oct2, ±3pp/95%; runoff all-response50.7Lula/43.5Flavio/5.8blank-null-DK; valid53.8/46.2. Secondary n800 differs; original governs sample. Entirely pre-Oct4. First-round valid46.3/39.3 versus actual nominal45.711858/45.663458; 7pp poll gap vs0.0484pp later actual. Original hypothetical runoff is not a measured post-first-round preference.",
+  "reserve_reason": "10pp model +5pp unobservedpost-roundtransfer/measurement/source/conditional-fill uncertainty. Stressnotcalibratedfloor; broad10–65range includesbothdirections.",
+  "sensitivity": "Changingregimeweightsorlargefirst-roundcrossoverscanputYESnear10%or65%. P>=rough41%couldchangejoinmaker26ceconomicsbeforeallcosts; newcrediblepost-roundpoll materiallyvaluablesource,notcurrentauthorization.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true,
+  "revision_scope": "Original Atlas question, denominator and first-round comparator verified; p and reserve unchanged; no financial action.",
+  "bias_diagnostic": {
+    "first_round_poll_valid_margin_pp": 7.0,
+    "first_round_actual_nominal_margin_pp": 0.04840010755579457,
+    "runoff_poll_valid_margin_pp": 7.6,
+    "runoff_margin_less_first_round_error_pp": 0.6484001075557941,
+    "interpretation": "About0.65pp after a naive shared-error subtraction; NOT an estimated correction or posterior. Different dates, candidate sets/denominators and correlated subgroup errors; one sample cannot establish stable pollster bias."
+  },
+  "why_p_unchanged": "Original closes source/configuration gaps; it does not measure Oct25 transfers. Its already-contradicted first-round baseline prevents naive adoption of the +7.6pp hypothetical runoff lead. The primary transfer mixture remains an explicitly broad/unfitted judgment; neither independent polling likelihood nor fixed bias correction is claimed."
+}

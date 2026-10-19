@@ -1,0 +1,28 @@
+{
+  "review_index": 340,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0340_kodak_gta_album_facts.json",
+    "work/0340_credit_followup_1150.json",
+    "work/0340_credit_claim_check_1200.json",
+    "work/0340_public_trades_1210.json",
+    "work/0340_current_source_addendum_1152.json"
+  ],
+  "model_path": "research/2026-10-17-deep-review/models/0340_primary_1200.json",
+  "input": "data/deep_review_20261017/work/0340_primary_revision_1200.json",
+  "economics": "data/deep_review_20261017/work/0340_economics_1200.json",
+  "updated_utc": "2026-10-19T11:56:55.094806+00:00",
+  "revision_ledger_row": {
+    "schema": "deep_review_revision.v1",
+    "review_index": 340,
+    "revision_path": "revisions/0340_20261019T115656232594Z.json",
+    "report_sha256": "dac122b980edc9661540f5cdbc107e2b332eae96487990c8bb35f69fa0091177",
+    "prior_report_sha256": "f15b5444b71fec96bed9fc69322c4d9940727ab7fa7152c918d4ab741b0bdaa3",
+    "revision_json_sha256": "16730e6a79d12f5d657101df849ac99cfd512e477c9e3aca3c3dcec37e938547",
+    "reason": "Newly examined album-specific Kodak/Don Toliver leak relay changes source likelihood and withdraws unplaced NO candidate; correct separate Justice score count and record stale books/coverage gaps.",
+    "revision_utc": "2026-10-19T11:56:56.233281+00:00"
+  },
+  "next_action": "Official complete artist credits or reliable direct album-specific evidence changes p enough to clear robust conditional-fill economics; then all fresh execution/source-coverage/correlation gates. No automatic bid/repost or candidate-only watcher.",
+  "effective_report": "research/2026-10-17-deep-review/revisions/0340_20261019T115656232594Z.md",
+  "effective_report_sha256": "dac122b980edc9661540f5cdbc107e2b332eae96487990c8bb35f69fa0091177"
+}

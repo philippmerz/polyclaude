@@ -1,0 +1,164 @@
+{
+  "entries": [
+    {
+      "bytes": 6523,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/models/0350_primary_1238.json",
+      "sha256": "9cfdf9d96116ca6358deb1acdb7b64e2ba20f2709909b473ccf7c4749f7d14e1"
+    },
+    {
+      "bytes": 6418,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/evaluations/0352.json",
+      "sha256": "da43342f7460c359f4f489afec6ddbcf9cce11b476bb71ef841dfa7c2b501103"
+    },
+    {
+      "bytes": 3149,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/evaluations/0352.md",
+      "sha256": "c033aabcdba0653eb09343e007d35695933564166c723d962d2274a3752892a0"
+    },
+    {
+      "bytes": 3289,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/models/0352_primary_1242.json",
+      "sha256": "63802e338c50fdd980b2e3c427501b30d81cea5b9abd52dc072aa0f49022d887"
+    },
+    {
+      "bytes": 4995,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/models/openrouter352_oct12_anchor_sensitivity_1230.py",
+      "sha256": "02fdaaf93e1d206322b863d468a213437321ae73d6acbf02f173e6046bb2bd08"
+    },
+    {
+      "bytes": 7359,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/revisions/0317_20261019T122154712878Z.json",
+      "sha256": "e3f2426d6071110466691c176cd77cafd37cf2b2cb3ce8669daaf8ab810ed8e3"
+    },
+    {
+      "bytes": 3163,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/revisions/0317_20261019T122154712878Z.md",
+      "sha256": "0a8f21d186435455bf57a227670a63f117396baf1e8452e2d4556f3cd9ff47ae"
+    },
+    {
+      "bytes": 2087,
+      "kind": "case_capsules_and_immutable_reviews",
+      "path": "research/2026-10-17-deep-review/models/0317_primary_1222.json",
+      "sha256": "67cd5fe2c78b795f8113d6ec513603b4e715849e18ebb7ad45a471e2791d5c0b"
+    },
+    {
+      "bytes": 32309,
+      "kind": "sanitized_public_quote_packet_copy",
+      "path": "data/deep_review_20261017/work/quotes_1218_0349_0350_0352_public.json",
+      "sha256": "b59dd17cbb066488041f12dae4fa725bbc960df8e947804142e990b4036c1ee8"
+    },
+    {
+      "bytes": 942,
+      "kind": "quote_copy_redaction_and_validation_map",
+      "path": "data/deep_review_20261017/work/quote_public_portability_map_1245.json",
+      "sha256": "81c7d2e47856cabc9c429093ae88a7eb9deb167ce85411470dd453060973af49"
+    },
+    {
+      "body_raw_bytes": 5376,
+      "body_raw_sha256": "84ad23526a15624043fa55c76739efda17aef67272a0f4c9c4cc2b100b29b94a",
+      "bytes": 2261,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0349_gamma.body.json.gz",
+      "sha256": "858ef5022bade364b9c2de8779289c500eb6816db6ea4bb0fae31976fd1e6118"
+    },
+    {
+      "bytes": 704,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0349_gamma.receipt.json",
+      "sha256": "bd0de8ffbda3f618f012f920865e5071f513f77bcd3f781dc9b2b19ce2b8b811"
+    },
+    {
+      "body_raw_bytes": 469,
+      "body_raw_sha256": "ddba2ceb04141d75722a10e00faeb14f092941ea4640ad965e1b84993dd0e6ca",
+      "bytes": 315,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0349_fee.body.json.gz",
+      "sha256": "dadc61ed36fc3df3ee76d56dd084696f14a043e8154c947ac078f0593b6ccc2e"
+    },
+    {
+      "bytes": 660,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0349_fee.receipt.json",
+      "sha256": "41f7ac287e06e2c3bd6a9c4a5d2e3799d1709627972154571557453ecf9290c6"
+    },
+    {
+      "body_raw_bytes": 5068,
+      "body_raw_sha256": "a5d491c4f8213443ca568b25744e6445f04ad413dcf46c3a61f71eff069fbf75",
+      "bytes": 2315,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0350_gamma.body.json.gz",
+      "sha256": "f4438ebffe00809b0209a91fa46ff39228763f96ccc41479341e81b017e69d30"
+    },
+    {
+      "bytes": 692,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0350_gamma.receipt.json",
+      "sha256": "fc9ebbbb26e8269b8039ba3fed83ebc2a6129dea05b1f5332f170792f88275e9"
+    },
+    {
+      "body_raw_bytes": 460,
+      "body_raw_sha256": "2443db4af40e6e5499199d0abad6dffe2c60e10e1882c885c807e3d559744d14",
+      "bytes": 309,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0350_fee.body.json.gz",
+      "sha256": "dec1f5e7aeb35fd720d0e9f92324c05c08bc48de2b202f2a6b039f8b7f5ecfd0"
+    },
+    {
+      "bytes": 660,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0350_fee.receipt.json",
+      "sha256": "64a4d7cc3b4fed3c30b67bb92166e947280616441a6c5019ce35a2b76ff82584"
+    },
+    {
+      "body_raw_bytes": 4269,
+      "body_raw_sha256": "fd0c1e48201a01aed765264f3f467f145cdd2e99728d20d50a014d6532acd7b0",
+      "bytes": 1921,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0352_gamma.body.json.gz",
+      "sha256": "8a8970d1a8c9eb5e0aaedab513f59d915fa1f0e44c0f58d962e92854be899741"
+    },
+    {
+      "bytes": 692,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0352_gamma.receipt.json",
+      "sha256": "0efd4ab68be8d6a60fe3a7d0c8e80986b11f912a2f4bab37b2e5bfb6a72b5226"
+    },
+    {
+      "body_raw_bytes": 469,
+      "body_raw_sha256": "9628e5ec1d84b19ee2016493136cbc7de8434dacb2cb9a80a793a39e0dec50e7",
+      "bytes": 314,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0352_fee.body.json.gz",
+      "sha256": "839700a23f56cb19e65e8f6d4f0f175487feab2ea971b9b70b6cf9b94b935f18"
+    },
+    {
+      "bytes": 660,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/0352_fee.receipt.json",
+      "sha256": "dda8315ef12f643f2c00f86c4f51d329518e35087b45f8dae95f77c5a26ab1c8"
+    },
+    {
+      "body_raw_bytes": 6623,
+      "body_raw_sha256": "ec43bd9e882ac79ec25407f21d7f3414a6b0f04962b5c6b674f6fc7d8ab55203",
+      "bytes": 1488,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/books_batch_01.body.json.gz",
+      "sha256": "1e68af5df79f603c52d03a349b3ed83ebaf39311792574f0242882d25be948da"
+    },
+    {
+      "bytes": 1156,
+      "kind": "public_source_captures",
+      "path": "logs/deep_review_20261017/quotes_1218_0349_0350_0352/public/books_batch_01.receipt.json",
+      "sha256": "a936ffc28f82a097a1444ce5db8e22b01a9138b22d90efaf27a250f9defdff3a"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

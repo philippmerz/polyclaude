@@ -1,0 +1,67 @@
+{
+  "schema": "primary_case0344_model.v1",
+  "authored_utc": "2026-10-19T12:16:07.075674+00:00",
+  "p_yes": 0.76,
+  "range_yes": [
+    0.25,
+    0.98
+  ],
+  "actual_entry_reserve_pp": 20,
+  "method": "Issuer annual-GAAP-guidance residual with seasonal allocation and unknown legal-expense timing mixture; not stock-price research.",
+  "verified_inputs": {
+    "Q1_26_GAAP_EPS": 4.28,
+    "Q2_26_GAAP_EPS": 4.53,
+    "FY26_guide": [
+      17.3,
+      17.9
+    ],
+    "Q3_25_GAAP_EPS": 4.14,
+    "Q4_25_GAAP_EPS": 3.53,
+    "FY25_GAAP_EPS": 15.38,
+    "Q2_26_shares_millions": 679,
+    "modeled_Q3_shares_millions": 676,
+    "Q3_26_latent_rounding_threshold": 4.535
+  },
+  "seasonal_Q3_fraction": 0.5397653194263363,
+  "FY_remaining_EPS_proxy_midpoint": 8.79,
+  "baseline_Q3_EPS": 4.744537157757496,
+  "predictive_SD": 0.21840908549477156,
+  "SD_components": {
+    "annualguide_uniform_halfwidth": 0.3,
+    "Q3_H2_allocation_SD": 0.0175,
+    "other_quarter_EPS_SD": 0.12,
+    "annual_vs_sumquarter_EPS_proxy_error_SD": 0.03
+  },
+  "legal_expense_scenarios": {
+    "penalty_total_millions": 350,
+    "unreserved_amount_uniform_millions": [
+      0,
+      350
+    ],
+    "reason": "Amount reserved and accounting quarter are undisclosed. Uniform bounds are subjective ignorance scenarios, not reported balances. Additional remediation could exceed this modeled penalty; model/range retains that risk.",
+    "tax_effect_sensitivity": [
+      {
+        "weight": 0.8,
+        "assumed_tax_shield": 0
+      },
+      {
+        "weight": 0.2,
+        "assumed_tax_shield": 0.25
+      }
+    ],
+    "tax_note": "Hypothetical expense effects, no tax-law determination.",
+    "Q3_recognition_weight": 0.6,
+    "Q4_recognition_weight": 0.25,
+    "no_incremental_H2_effect_or_offset_weight": 0.15,
+    "conditional_yes_Q3": 0.663400918757548,
+    "conditional_yes_Q4": 0.9299314293317259,
+    "conditional_yes_no_incremental": 0.8313161528935804,
+    "accounting_bridge": "RetainedFYguide already includes totalyearcost. For incrementalper-sharechargeL3inQ3, Q3=f*G\u2212(1\u2212f)*L3; ifQ4chargeL4, Q3=f*G+f*L4. Subtractingfullpenaltyagainfromguidanceallocwoulddoublecount. AnnualEPSnotexactsumquarters; proxyerrorincluded."
+  },
+  "computed_yes": 0.7552208315214973,
+  "reasoning": "Q2 guidance17.3\u201317.9 retained afterOct8$350Mpenalty; subtracting4.28+4.53 is an approximateH2EPS8.49\u20139.09 bridge. Priorseasonallocation4.14/(4.14+3.53) impliesbase4.7445. Quarterallocation/operatingvariation and unquantified penalty recognition produce mixture about76%YES. Oct15principalwriteoffs improvedbutnotcompanyQ3profit. Alltimeweights, SDs and lossallocation subjective/unfitted, not new issuerEPS forecast.",
+  "reserve_reason": "20pp=10ordinarymodel +5unknownreserve/quarterallocation +5earningsprivateinformation/conditionalfill risk. SelectedYES56/NO4. Even15pp givesNO9%, onlyequalto9cbidbeforecost; lower10ppwouldshowpaperNOvaluebutomitsloadbearinguncertainty. No calibrated conditionalfill bound.",
+  "literal": "NextquarterlyQ3_26officialinitialGAAPdilutedEPS roundednearestcentmuststrictlyexceed4.53, latent>=4.535. Q2actual4.53notYES. AdjustedEPSnotdefault; basiciffnodiluted; SeekingAlphafallback/96h and45daynoreleaseNO. Oct15creditstatsnotquarterlyEPSrelease.",
+  "sensitivity": "Alternativeflatnetmargin/revenue+10%/shares693\u2192676 extrapolation gives4.14*1.10*693/676=4.6684 beforeincrementalpenalty. ItcouldlowerQ3p; notindependentcorroborationoradoptedissuerforecast. LegalallQ3/Q4andnewoperatingcostssubstantiallychangeoutcome;25\u201398%range.",
+  "no_execution_authority": true
+}

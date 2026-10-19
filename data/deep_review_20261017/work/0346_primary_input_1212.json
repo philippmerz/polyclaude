@@ -1,0 +1,159 @@
+{
+  "review_index": 346,
+  "market_id": "2363843",
+  "condition_id": "0xc36f13fb975afe21daa6b863e055b80a0322186fd8af361e4c1a315c92c48d35",
+  "criteria_sha256": "e85ea4843fd02156f63733f711a9c471e113cde46d25add2db3a689e3b7c1d3e",
+  "status": "valued",
+  "literal_analysis": "TIME2026namesLeoexplicitly, orqualifyinggroup/conceptdirectassociationANDLeoactuallypicturedonofficialPOYcover; multipleexplicitpeopleeachqualify. Mereinsidefeaturemention/readerpollnotautomaticYES. Cover/featurecontrols;noannouncementbyJun30_2027_ET\u2192NO, notDec31metadataautomaticexpiry.",
+  "evidence": [
+    {
+      "url": "https://time.com/4586372/time-person-of-the-year-facts/",
+      "observed_utc": "2026-10-19T12:04:23.869020Z",
+      "finding": "Rootread/hashverifiededitorialinfluencemethod, notreaderpoll."
+    },
+    {
+      "url": "https://time.com/7345087/pope-leo-war-diplomacy-vatican-venezuela-trump-russia-ukraine/",
+      "observed_utc": "2026-10-19T12:04:24.796182Z",
+      "finding": "Rootread/hashverifiedJan9_2026Leodiplomacycoverage; notPOYselection."
+    },
+    {
+      "url": "https://press.vatican.va/content/leo-xiv/en/speeches/2026/january/documents/20260109-corpo-diplomatico.html",
+      "observed_utc": "2026-10-19T12:04:25.347287Z",
+      "finding": "Rootread/hashverifiedoriginalJan9diplomaticcorpsaddress."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.03,
+    "high": 0.4,
+    "method": "Editorial winner-scenario partition with explicit group-cover qualification; not reader poll or pope base-rate fit.",
+    "reasoning": "Leo electedMay2025, so2026isnotautomaticallyhisnewpopeyear. FirstAmericanpapacy/diplomacy can embody2026, supportedbyTIMEJan9coverage/Vaticanaddress, butmoralprominenceorspeakingaboutwarisnotdemonstratedcausalsuccessorTIMEselection.45%groupbranchallowsleaders/peacemakers/religiousconceptssubjecttocoverrule; notallfaithcoveragequalifies.10%soloconomination+.45*.08=13.6%, rounded14. Subjective uncalibrated weights; no published2026shortlist/winner identified in boundedsourcechecks, notexhaustiveabsence.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0346_primary_1212.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1158_0343_0344_0346.json",
+    "quote_file_sha256": "c30370dedb306ea2cb92a81c6a20c7f1b62d8bae00f01b64ac6f7b32537e10c9",
+    "quote_capture_utc": "2026-10-19T11:58:52.202559+00:00",
+    "gamma_received_utc": "2026-10-19T11:58:51.995365+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 60.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "selected_stress_probability": 0,
+        "best_bid": 0.14,
+        "best_ask": 0.15,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792411131096",
+        "book_received_utc": "2026-10-19T11:58:52.099994+00:00",
+        "book_age_seconds_at_receipt": 1.0039939880371094,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.5,
+            "fee": 0.06375,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.15
+              }
+            ],
+            "net": 1.56375
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.06021,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.14
+              }
+            ],
+            "net": 1.33979
+          }
+        },
+        "taker_cost_usd": 1.56375,
+        "central_expected_profit_usd": -0.16374999999999984,
+        "selected_stress_profit_usd": -1.56375,
+        "break_even_before_carry": 0.156375,
+        "break_even_constant_carry": 0.15717489298586723,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.86,
+        "selected_stress_probability": 0.71,
+        "best_bid": 0.85,
+        "best_ask": 0.86,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792411131096",
+        "book_received_utc": "2026-10-19T11:58:52.099994+00:00",
+        "book_age_seconds_at_receipt": 1.0039939880371094,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.6,
+            "fee": 0.06021,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.86
+              }
+            ],
+            "net": 8.66021
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.5,
+            "fee": 0.06375,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.85
+              }
+            ],
+            "net": 8.43625
+          }
+        },
+        "taker_cost_usd": 8.66021,
+        "central_expected_profit_usd": -0.06020999999999965,
+        "selected_stress_profit_usd": -1.5602099999999997,
+        "break_even_before_carry": 0.8660209999999999,
+        "break_even_constant_carry": 0.8704508904781052,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry: editorialYES14%/NO86%, selected0/71; both datedroutesfail15ppreserve, NOtakernegativeevencentrally.",
+  "reopen_condition": "ActualTIME2026shortlist/editorialsignalsorLeomaterialrole/event; exactgroupcovercriteria andcurrentfreshgates.",
+  "portfolio_action": "none",
+  "report_markdown": "# 346 \u2014 TIME Person of the Year: Leo has a path, no priced edge\n\n- **Primary Leo YES14%, scenario3\u201340%; selected YES0%/NO71% after15pp reserve. No entry.** [Primary model](../models/0346_primary_1212.json) \u00b7 [dated economics](../../../data/deep_review_20261017/work/0346_economics_1212.json).\n- Full rule includes more than a solo winner: explicit co-naming qualifies, and a directly associated person pictured on an official **group/concept POY cover** can qualify. Mere mention, reader vote, ordinary magazine cover or generic association is insufficient. Feature can interpret ambiguous collective labels. Deadline for no-announcement fallback is **June30,2027 23:59ET**, not metadataDec31; settlement may extend beyond January.\n- Root read/hash-verified [TIMEmethod and current-year original coverage](../../../data/deep_review_20261017/work/0346_time_vatican_expansion_1205.json). TIME chooses editorial influence, including harmful influence, rather than a popularity/virtue contest. Leo's Jan9 peace/diplomacy criticism is real2026 salience; original Vatican address discusses Ukraine/Venezuela and offers diplomatic support. Those statements do not prove decisive outcomes or an editorial choice.\n- [Original context](../../../data/deep_review_20261017/work/0346_facts_1200.json): Leo electedMay8,2025, so2026 is not simply the new-pope election year. TIME2025 chose Architects of AI; that group precedent illuminates this rule, not a2026award. A2013 finalist page distinguishes a reader poll from the editorial result and does not by itself prove that year's winner. No complete2026shortlist/winner announcement was identified in bounded checks;401/access limits remain unknown.\n- Unfitted partition:10% Leo explicitly named,45% other named individual,45% group/concept selection with8% conditional Leo direct association plus cover/naming qualification \u219213.6%, rounded14%. The first-American papacy and diplomacy give him a meaningful path; many rival political, cultural and technological narratives remain. These weights are subjective, not fitted from pope wins, source counts or market odds. Broad3\u201340% alternatives capture unobserved editor preference and future events.\n- Dated11:58 YES14/15c, NO85/86c,5% nonlinear/taker-only,min5/tick1c. TenNO taker costs8.66020, already above central terminal8.60. Joining85c has only0.10 gross central gain before variable carry/operations; selected7.10 terminal value fails8.50cost.15pp reserve covers10ordinary+5editorial/cover/timing uncertainty. No tail-measurement exception for a future editor decision.\n- Reopen on an actual TIME shortlist/editorial indicator or material Leo role/event, then re-evaluate exact cover/group evidence and both-side net economics. No order, numeric portfolio prior or watcher added; no reader-poll proxy or automaticDecemberexit.\n"
+}

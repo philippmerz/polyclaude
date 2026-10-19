@@ -1,0 +1,168 @@
+{
+  "schema": "primary_case0350_model.v1",
+  "authored_utc": "2026-10-19T12:38:25.807737+00:00",
+  "p_yes": 0.61,
+  "range_yes": [
+    0.2,
+    0.98
+  ],
+  "actual_entry_reserve_pp": 20,
+  "method": "GAAP EPS bridge: operating-income guidance adjusted for sparse historical conservatism; nonoperating valuation regimes; tax sensitivity integrated by midpoint quadrature.",
+  "reasoning": "Prior guides were exceeded, so22.5\u201326.5B is not a realized ceiling. Use24.5+3.5=28B operating mean/2.7B subjective SD, diluted shares10.903B, tax uniform19\u201327%, and nonoperating regimes55%N(0,1),25%N(4,2),15%N(15,8),5%N(-5,3) billion. EPS>2.00 after cent rounding requires latent>=2.005. Computed60.54% rounds61%; all distributions/weights subjective, sparse history not calibration. Private valuation/discrete tax uncertainty is load-bearing; neither Q2 giant gain nor absence of public financing can be extrapolated as certainty.",
+  "literal": "Next Q3 initially announced diluted GAAP EPS strictly>$2.00; standard cent rounding means latent>=2.005, equality2.00NO. Basic only if diluted absent, then specified SeekingAlpha/96h fallback; no release within45calendar days of estimatedOct29=>NO. Later restatements excluded except obvious immediate error; event notice bodyQ3Oct29/call17ET, anomalousQ2page title preserved. Not a stock-price contract.",
+  "operating_income_guide_B": [
+    22.5,
+    26.5
+  ],
+  "oi_sd_B": 2.7,
+  "tax_grid": {
+    "low": 0.19,
+    "high": 0.27,
+    "midpoints": 101,
+    "interpretation": "Subjective forecast interval, not issuer tax guidance; Q2 discrete tax expense cannot be repeated mechanically."
+  },
+  "diluted_shares_B": 10.903,
+  "raw_eps_threshold": 2.005,
+  "nonoperating_regimes": [
+    {
+      "name": "No new material observable valuation event",
+      "weight": 0.55,
+      "other_income_mean_B": 0,
+      "other_income_sd_B": 1
+    },
+    {
+      "name": "Modest positive nonoperating result",
+      "weight": 0.25,
+      "other_income_mean_B": 4,
+      "other_income_sd_B": 2
+    },
+    {
+      "name": "Large favorable investment mark",
+      "weight": 0.15,
+      "other_income_mean_B": 15,
+      "other_income_sd_B": 8
+    },
+    {
+      "name": "Impairment or adverse nonoperating item",
+      "weight": 0.05,
+      "other_income_mean_B": -5,
+      "other_income_sd_B": 3
+    }
+  ],
+  "primary_computation": {
+    "operating_midpoint_adjustment_B": 3.5,
+    "p_yes": 0.605437651701573,
+    "conditional_probabilities": [
+      {
+        "name": "No new material observable valuation event",
+        "p_above_rounded_threshold": 0.4451013232582978
+      },
+      {
+        "name": "Modest positive nonoperating result",
+        "p_above_rounded_threshold": 0.8493124625370606
+      },
+      {
+        "name": "Large favorable investment mark",
+        "p_above_rounded_threshold": 0.957149151565581
+      },
+      {
+        "name": "Impairment or adverse nonoperating item",
+        "p_above_rounded_threshold": 0.09462871080813876
+      }
+    ]
+  },
+  "guidance_bias_sensitivity": [
+    {
+      "operating_midpoint_adjustment_B": 0,
+      "p_yes": 0.31673544923539954,
+      "conditional_probabilities": [
+        {
+          "name": "No new material observable valuation event",
+          "p_above_rounded_threshold": 0.09617449983386404
+        },
+        {
+          "name": "Modest positive nonoperating result",
+          "p_above_rounded_threshold": 0.5097518126539056
+        },
+        {
+          "name": "Large favorable investment mark",
+          "p_above_rounded_threshold": 0.9042406785402083
+        },
+        {
+          "name": "Impairment or adverse nonoperating item",
+          "p_above_rounded_threshold": 0.015308387645333054
+        }
+      ]
+    },
+    {
+      "operating_midpoint_adjustment_B": 2,
+      "p_yes": 0.46871634435578896,
+      "conditional_probabilities": [
+        {
+          "name": "No new material observable valuation event",
+          "p_above_rounded_threshold": 0.2619821992679901
+        },
+        {
+          "name": "Modest positive nonoperating result",
+          "p_above_rounded_threshold": 0.7260822207600985
+        },
+        {
+          "name": "Large favorable investment mark",
+          "p_above_rounded_threshold": 0.9384350506123145
+        },
+        {
+          "name": "Impairment or adverse nonoperating item",
+          "p_above_rounded_threshold": 0.04680643953045177
+        }
+      ]
+    },
+    {
+      "operating_midpoint_adjustment_B": 3.5,
+      "p_yes": 0.605437651701573,
+      "conditional_probabilities": [
+        {
+          "name": "No new material observable valuation event",
+          "p_above_rounded_threshold": 0.4451013232582978
+        },
+        {
+          "name": "Modest positive nonoperating result",
+          "p_above_rounded_threshold": 0.8493124625370606
+        },
+        {
+          "name": "Large favorable investment mark",
+          "p_above_rounded_threshold": 0.957149151565581
+        },
+        {
+          "name": "Impairment or adverse nonoperating item",
+          "p_above_rounded_threshold": 0.09462871080813876
+        }
+      ]
+    },
+    {
+      "operating_midpoint_adjustment_B": 5,
+      "p_yes": 0.73888970240195,
+      "conditional_probabilities": [
+        {
+          "name": "No new material observable valuation event",
+          "p_above_rounded_threshold": 0.6409189961758497
+        },
+        {
+          "name": "Modest positive nonoperating result",
+          "p_above_rounded_threshold": 0.9286939481532469
+        },
+        {
+          "name": "Large favorable investment mark",
+          "p_above_rounded_threshold": 0.9709719313885855
+        },
+        {
+          "name": "Impairment or adverse nonoperating item",
+          "p_above_rounded_threshold": 0.17129955517266202
+        }
+      ]
+    }
+  ],
+  "accounting_correction": "Root re-read 10Qtable: Q2 standalone AFS-debt reclassification is dash/zero;4.479B is H1/Q1, not an additional Q2 gain. Q2 private-equity upward adjustments50.486B, primarilyAnthropic. 21.3B subsequentOpenAI funding is capital investment, not a disclosed Q3 earnings gain.",
+  "reserve_reason": "20pp=10ordinary operating/guidance-model uncertainty+5unreported investment-mark/tax source uncertainty+5conditional private-earnings fill. Not an empirical conditional-fill floor.",
+  "decision": "No entry: selectedYES41/NO19 below dated49/57 and43/51c. Neither cheap NO from treating guidance as ceiling nor confident YES from repeating Q2 gains is underwritten.",
+  "no_execution_authority": true
+}

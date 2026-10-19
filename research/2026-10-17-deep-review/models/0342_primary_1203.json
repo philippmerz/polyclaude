@@ -1,0 +1,44 @@
+{
+  "schema": "primary_case0342_model.v1",
+  "authored_utc": "2026-10-19T12:02:22.403190+00:00",
+  "p_yes": 0.56,
+  "range_yes": [
+    0.2,
+    0.9
+  ],
+  "regimes": [
+    {
+      "name": "Negotiation thaw / planned trilateral track progresses",
+      "weight": 0.45,
+      "physical_authorized_ack_meeting": 0.8
+    },
+    {
+      "name": "Continued impasse or allied/bilateral-only contacts",
+      "weight": 0.4,
+      "physical_authorized_ack_meeting": 0.2
+    },
+    {
+      "name": "Putin-Trump-Xi track excludes Ukraine",
+      "weight": 0.15,
+      "physical_authorized_ack_meeting": 0.1
+    }
+  ],
+  "political_meeting_probability": 0.45500000000000007,
+  "conditional_other_deliberate_humanitarian_diplomatic_meeting_if_no_political": 0.15,
+  "strict_probability": 0.5367500000000001,
+  "interpretation_mixture": {
+    "strict_window_and_physical_parties_weight": 0.85,
+    "looser_authorized_shuttle_or_lower_window_interpretation_weight": 0.15,
+    "loose_yes": 0.7
+  },
+  "computed": 0.5612375000000001,
+  "method": "Unfitted current-negotiation regime / broad eligible meeting / settlement-scope mixture;56.12% rounded56%.",
+  "reasoning": "Physical event is easier than a peace deal but requires actual official authorization and deliberate diplomacy. September accepted-in-principle UAE plan and October18 continuing Ukraine-US dialogue support a thaw branch; no date/authorized physical Russian-Ukrainian meeting identified since Oct9 creation. October19 proposed Putin-Trump-Xi-only summit may divert process. Explicit nonpolitical/humanitarian meeting tail and indirect-meeting interpretation prevent equating no peace summit with NO. Weights are subjective, not event frequencies or a complete archive.",
+  "actual_entry_reserve_pp": 15,
+  "reserve_reason": "10pp ordinary future-event model plus5pp incomplete date/physical-authorization/source coverage. SelectedYES41/NO29; lower-case20% and upper90% can reverse central views.",
+  "literal": "ByNov30 23:59ET, deliberate official authorized RussiaUkraine diplomacy in person incl indirect physical mediator; govt acknowledgment or credible-media consensus. Remote calls/chance greetings excluded. Treat Oct9 creation as operative normal start; no explicit textual start means loose/adjudication uncertainty, not automatic FebYES.",
+  "source_limits": "Ukraine officialOct18 browser rendering; no new local bodyhash. US envoys visited MoscowSep5/KyivSep6, before creation. CommonsSep15 proposal not held event. WSJ visible openingOct19 proposal excludes Zelensky; no paidwall bypass/no full body. Kremlin stalled/MFA403/no exhaustive absence claim.",
+  "fee_limit": "Gamma feesEnabled=false but compactfd missing; economics zero is optimistic gross placeholder/authoritative=false, not current signed fee certificate. Both sides fail stress even at zero fee.",
+  "quote_file": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342.json",
+  "no_execution_authority": true
+}

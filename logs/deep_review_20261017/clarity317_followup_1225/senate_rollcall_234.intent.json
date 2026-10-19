@@ -1,0 +1,1 @@
+{"name":"senate_rollcall_234","request":{"method":"GET","read_only":true,"scope":"Official Senate roll-call vote 234 referenced by GovInfo H.R.3633 record","url":"https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.xml"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:17:18.444192Z","timing_basis":"call_window"}

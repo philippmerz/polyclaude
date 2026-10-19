@@ -1,0 +1,1 @@
+{"name":"time_2013_finalists","request":{"call_window_label":"original_2013_finalists","method":"GET","read_only":true,"scope":"case346_time_reader_poll_vs_editor_choice","url":"https://time.com/archive/7258885/top-ten-finalists-for-person-of-the-year/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:57.805098Z","timing_basis":"call_window"}

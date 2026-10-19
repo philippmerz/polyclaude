@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-19T11:53:48.875949+00:00",
+  "schema": "quote_public_portability_map.v1",
+  "source_copies": [
+    {
+      "original_path": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342.json",
+      "original_sha256": "1e16963cb79ea3f24b0cb8bb1cd03ebd2662bfc927c6e2009779bad2b4582cf0",
+      "public_copy_bytes": 52255,
+      "public_copy_path": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342_public.json",
+      "public_copy_sha256": "ef72276a8e45947d36b81dc1dae3e69ed20e7680a9c3810712688da62488e46a",
+      "public_receipts_retained": "All seven Gamma, fee and books HTTP receipts retained verbatim; public capture body references remain unchanged.",
+      "redactions": [
+        "/geoblock (complete object: geographic fields, response hash, and private receipt reference)",
+        "/clob_transport_receipts[geoblock] (private request metadata and private receipt path)"
+      ],
+      "scope_indices": [
+        338,
+        340,
+        342
+      ]
+    }
+  ],
+  "validation": "Only designated geoblock object and its geoblock receipt row removed; JSON walk found no remaining country/region/geoblock/private-receipt fields or private paths."
+}

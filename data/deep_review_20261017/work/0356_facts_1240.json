@@ -1,0 +1,52 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 356,
+  "market_id": "5684759",
+  "condition_id": "0x63a9c8ed7a860406a2bf24a75c51251b9799b8784c420e4c94b430420c1b6645",
+  "criteria_sha256": "a33a152482355507c9608cab31d7654cd7b753b84757d66ae5e604d159631b1c",
+  "question": "Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?",
+  "frozen_rule_facts": {
+    "metric": "Worldwide net oil-equivalent production, in the company’s official Q3 earnings materials; above 4.1M; if stated as range use midpoint; if no earnings by Nov30 2026 or metric omitted, No; most numerically precise official version controls."
+  },
+  "latest_official_report": {
+    "release_date": "2026-07-31",
+    "source": "https://chevroncorp.gcs-web.com/node/38551",
+    "metric_name": "Net Oil-Equivalent Production",
+    "unit": "MBOED (thousand barrels of oil equivalent per day)",
+    "reported_values": {
+      "Q2_2026": 4070,
+      "Q1_2026": 3858,
+      "Q2_2025": 3396,
+      "YTD_2026": 3965,
+      "YTD_2025": 3374
+    },
+    "interpretation": "Q2 reported 4.070 million BOE/day, 30,000 below the contract’s 4.1M threshold; Q3 value is not in this report. Q2 production was reported 20% higher year-on-year, largely from legacy Hess, Permian Basin and Gulf of America growth. Q2 international upstream production increase was partly offset by Partitioned Zone curtailments between Saudi Arabia and Kuwait due to the Middle East conflict. These are historical report facts, not Q3 guidance."
+  },
+  "scheduled_report_event": {
+    "official_notice": "https://chevroncorp.gcs-web.com/news-releases/news-release-details/advisory-chevron-corporations-3q-2026-earnings-conference-call",
+    "notice_date": "2026-10-01",
+    "event": "Q3 2026 earnings call scheduled Friday 2026-10-30 at 11:00 ET / 10:00 CT. This is call timing; report publication timestamp not separately stated in the notice."
+  },
+  "receipts": [
+    {
+      "body": "logs/deep_review_20261017/case356_facts_1235/chevron_q2_gcs_release/chevron_q2_gcs_release.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case356_facts_1235/chevron_q2_gcs_release/chevron_q2_gcs_release.receipt.json",
+      "http": 200,
+      "received_utc": "2026-10-19T12:38:18.874572Z",
+      "raw_sha256": "e1017b8dccdb02762bbadd5c2d52350efc843d6cd26ad9b21030039144806620",
+      "gzip_sha256": "9f9d08baa7046590e08a2c48951425e34b7e68247e6295ee9c7e0f4e62dbec85"
+    },
+    {
+      "body": "logs/deep_review_20261017/case356_facts_1235/chevron_q3_call_notice/chevron_q3_call_notice.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case356_facts_1235/chevron_q3_call_notice/chevron_q3_call_notice.receipt.json",
+      "http": 200,
+      "received_utc": "2026-10-19T12:39:49.310698Z",
+      "raw_sha256": "ad734dba083185b2b5dd5ddd1aa08d964137fc1000030ded65e87852c69d1ef4",
+      "gzip_sha256": "f128a022383d66031fab387cefa15a6e486c5be29e1675c2c421204213fad270"
+    }
+  ],
+  "limits": [
+    "Chevron.com primary newsroom direct GET returned 403, but identical company release on Chevron’s official GCS investor-relations site returned HTTP200.",
+    "No Q3 production guidance/value was captured in this bounded pass; the latest official actual remains Q2 and the Q3 release is pending."
+  ]
+}

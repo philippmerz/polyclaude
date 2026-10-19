@@ -1,0 +1,35 @@
+{
+  "schema": "primary_case0346_model.v1",
+  "authored_utc": "2026-10-19T12:11:49.413894+00:00",
+  "p_yes": 0.14,
+  "range_yes": [
+    0.03,
+    0.4
+  ],
+  "actual_entry_reserve_pp": 15,
+  "method": "Editorial winner-scenario partition with explicit group-cover qualification; not reader poll or pope base-rate fit.",
+  "regimes": [
+    {
+      "name": "Leo explicitly named as individual or named coperson",
+      "weight": 0.1,
+      "qualifies": 1
+    },
+    {
+      "name": "Other named individual without Leo",
+      "weight": 0.45,
+      "qualifies": 0
+    },
+    {
+      "name": "Group/concept editorial selection",
+      "weight": 0.45,
+      "conditional_Leo_direct_association_AND_officialcover_or_explicitname": 0.08
+    }
+  ],
+  "computed_yes": 0.136,
+  "reasoning": "Leo electedMay2025, so2026isnotautomaticallyhisnewpopeyear. FirstAmericanpapacy/diplomacy can embody2026, supportedbyTIMEJan9coverage/Vaticanaddress, butmoralprominenceorspeakingaboutwarisnotdemonstratedcausalsuccessorTIMEselection.45%groupbranchallowsleaders/peacemakers/religiousconceptssubjecttocoverrule; notallfaithcoveragequalifies.10%soloconomination+.45*.08=13.6%, rounded14. Subjective uncalibrated weights; no published2026shortlist/winner identified in boundedsourcechecks, notexhaustiveabsence.",
+  "literal": "TIME2026namesLeoexplicitly, orqualifyinggroup/conceptdirectassociationANDLeoactuallypicturedonofficialPOYcover; multipleexplicitpeopleeachqualify. Mereinsidefeaturemention/readerpollnotautomaticYES. Cover/featurecontrols;noannouncementbyJun30_2027_ET\u2192NO, notDec31metadataautomaticexpiry.",
+  "reserve_reason": "10ppordinarymodel+5ppunobservededitorialchoice/groupcover/announcementtiming; selectedYES0/NO71. This is uncertain future editorial outcome, no measured-tail exception.",
+  "source_verified": "Rootread/hashverifiedTIMEmethod261a\u2026daf4, currentyearLeocoverage8c66\u2026b78a, originalVaticanJan9speechbb75\u202633. VaticanMay8_2025electionandTIME2025AIselectionarehistoricalcontext, not2026prediction.2013finalists/readerpollnotprimaryevidenceofactualwinner.",
+  "counterfactual": "NOcentral86%justabove85cbid, but86caskplus5%nonlinearfeealreadyexceedscentral86%winEV; maker1ctinygain beforetime/costfails15ppstressby14pp. No sunk-cost/favoritepopulationcurveused.",
+  "no_execution_authority": true
+}

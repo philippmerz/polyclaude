@@ -1,0 +1,94 @@
+{
+  "capture_dir": "logs/deep_review_20261017/facts_0343_followup_1210/",
+  "conditionId": "0xf59fe744e8f73124ccd8b351b101c51cd29bb449dab73b83ed74d05603b0dfb2",
+  "criteria_sha256": "0ed1c45d01820f29a7e4614e7c2bd9432dbf676e9f142f3897464715c7e01afe",
+  "frozen_trigger_reminder": "Frozen rule requires an official presidential invocation of the Act itself as legal authority for active-duty deployment or federalization of National Guard in response to civil disorder/insurrection/rebellion. A threat or a domestic Guard deployment under a different stated authority is not by itself proof of this exact event.",
+  "market_id": "1117275",
+  "new_primary_and_reporting_facts": [
+    {
+      "fact": "In the midterms discussion, Trump said “I don’t rule anything out or in. We’ll see. You mean the Insurrection Act? Yeah. No, I’ve never used it. I could use it.” This is a direct statement of non-exclusion/possible future use, not an invocation or deployment order. The transcript date is 32 days before Nov. 3 midterms.",
+      "source": "TIME interview transcript, published 2026-10-01; direct transcript captured HTTP 200."
+    },
+    {
+      "fact": "The memorandum directs DoD to mobilize the DC National Guard and put members into active service, citing presidential authority under the Constitution and U.S./DC law. The text captured does not identify the Insurrection Act as its authority; it concerns DC crime. This demonstrates why Guard deployment alone is not the contract trigger.",
+      "source": "White House Presidential Memorandum, “Restoring Law and Order in the District of Columbia,” 2025-08-11; direct capture HTTP 200."
+    },
+    {
+      "fact": "A specialized DCNG public-safety unit is described as subject to activation under Title 32; the Secretary of Defense was also directed to make state Guard forces available for civil-disturbance assistance “as appropriate under law.” This order does not itself state an Insurrection Act invocation.",
+      "source": "White House EO 14339, 2025-08-25; direct capture HTTP 200."
+    },
+    {
+      "fact": "Search-result excerpt described a court hearing about the continuing D.C. Guard deployment and administration arguments about authority/limits. Because direct body retrieval was blocked, treat this as an access-limited current-reporting lead only; it does not establish any Insurrection Act use.",
+      "source": "AP report on D.C. National Guard deployment court appeal, dated 2026-10-14; direct GET returned 403."
+    }
+  ],
+  "receipts": [
+    {
+      "body_bytes": 296639,
+      "body_sha256": "87486793bc7724de5eedfd919ecf73470337dc1a92a703b78fefe60696fdd873",
+      "error": null,
+      "gzip_path": "logs/deep_review_20261017/facts_0343_followup_1210/time_oct1_interview_transcript.body.gz",
+      "gzip_sha256": "09e46db019f348bcacb6160bbded19728287f86e7d113ccfc6e618bed9d5a40a",
+      "name": "time_oct1_interview_transcript",
+      "request_start_utc": "2026-10-19T12:03:50.910152+00:00",
+      "response_end_utc": "2026-10-19T12:03:51.353059+00:00",
+      "status": 200,
+      "url": "https://ca.time.com/donald-trump-2026-interview-transcript/"
+    },
+    {
+      "body_bytes": 293029,
+      "body_sha256": "86d387c03cdbc7608c9ea33b5c28d98b7531bfc5c53510d82d043cb58549b3d4",
+      "error": null,
+      "gzip_path": "logs/deep_review_20261017/facts_0343_followup_1210/whitehouse_dc_guard_memo_2025_08_11.body.gz",
+      "gzip_sha256": "2f05cdf88c5fc7deaf190b71fa052d6649f4cb7bc7cf3f7edb477703dcb4f31c",
+      "name": "whitehouse_dc_guard_memo_2025_08_11",
+      "request_start_utc": "2026-10-19T12:03:51.367026+00:00",
+      "response_end_utc": "2026-10-19T12:03:52.153224+00:00",
+      "status": 200,
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/08/restoring-law-and-order-in-the-district-of-columbia/"
+    },
+    {
+      "body_bytes": 301122,
+      "body_sha256": "e67d028ecf2e355647c01b05d1d0f8723bad37db97fe0e625571a8927af851ff",
+      "error": null,
+      "gzip_path": "logs/deep_review_20261017/facts_0343_followup_1210/whitehouse_eo14339_2025_08_25.body.gz",
+      "gzip_sha256": "5b2fb81e2ef62431ed96c1e3771a6df1fefa57c5e1b4d05300b83d27b358082b",
+      "name": "whitehouse_eo14339_2025_08_25",
+      "request_start_utc": "2026-10-19T12:03:52.160985+00:00",
+      "response_end_utc": "2026-10-19T12:03:52.895406+00:00",
+      "status": 200,
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/08/additional-measures-to-address-the-crime-emergency-in-the-district-of-columbia/"
+    },
+    {
+      "body_bytes": 556,
+      "body_sha256": "60f7e75dc5d874bfa68fb1c6cdae1a7bfef7ad94ed986b6acc65b5921bb39f88",
+      "error": "HTTPError",
+      "gzip_path": "logs/deep_review_20261017/facts_0343_followup_1210/dcng_activation_2025_08_23.body.gz",
+      "gzip_sha256": "c445d660a2888504ef5db5e1e218760b7afcff8672e0a5206adc8933efdf3394",
+      "name": "dcng_activation_2025_08_23",
+      "request_start_utc": "2026-10-19T12:03:52.903379+00:00",
+      "response_end_utc": "2026-10-19T12:03:59.028147+00:00",
+      "status": 403,
+      "url": "https://dc.ng.mil/Public-Affairs/News-Release/Article/4284259/dc-national-guard-activated-to-support-law-enforcement-in-district-of-columbia/"
+    },
+    {
+      "body_bytes": 5595,
+      "body_sha256": "5f7feb6bd8e91106e06b03593dad0ff6605d44c0dba58390dccd7589f8834f9a",
+      "error": "HTTPError",
+      "gzip_path": "logs/deep_review_20261017/facts_0343_followup_1210/ap_dc_guard_appeal_2026_10_14.body.gz",
+      "gzip_sha256": "8691384d1163c7d7076cfd05c3fcd783510bf719d66cba432b2e674aa7ff7bd9",
+      "name": "ap_dc_guard_appeal_2026_10_14",
+      "request_start_utc": "2026-10-19T12:03:59.029178+00:00",
+      "response_end_utc": "2026-10-19T12:03:59.112846+00:00",
+      "status": 403,
+      "url": "https://apnews.com/article/79578459490a2fa1a18d5460cff69029"
+    }
+  ],
+  "review_index": 343,
+  "reviewed_utc": "2026-10-19T12:04:17Z",
+  "source_gaps": [
+    "The D.C. Guard official activation news release direct GET returned 403; no retry/bypass.",
+    "The official U.S. Code §252 direct request previously returned HTTP 500; prior capture remains in work/0343_facts_1200.json and logs/facts_1158_343_344_346/.",
+    "Bounded official searches found no dated 2026 presidential proclamation/order explicitly invoking the Act; this is not comprehensive proof of absence. No current Oct. protest/civil-disorder event was independently verified in this pass."
+  ]
+}

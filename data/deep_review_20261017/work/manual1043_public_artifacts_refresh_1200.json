@@ -1,0 +1,95 @@
+{
+  "allowlist_manifest": "data/deep_review_20261017/work/manual1043_public_artifacts.json",
+  "allowlist_sha256": "b2c5050d1a8add8603e43a70e85753ef8c8fcf119a701839065e1241edc5c142",
+  "current_allowlisted_entries": 365,
+  "current_allowlisted_file_bytes": 23066999,
+  "current_unique_decompressed_body_bytes": 36777858,
+  "deferred_mutable_resume_paths": [
+    "data/deep_review_20261017/work/0320_resume.json",
+    "data/deep_review_20261017/work/0322_resume.json",
+    "data/deep_review_20261017/work/0324_resume.json",
+    "data/deep_review_20261017/work/0326_resume.json",
+    "data/deep_review_20261017/work/0328_resume.json",
+    "data/deep_review_20261017/work/0330_resume.json",
+    "data/deep_review_20261017/work/0331_resume.json",
+    "data/deep_review_20261017/work/manual1043_RESUME.json"
+  ],
+  "exclusions_sha256": "72321b1625a1fbc6c99b12672ee13ac958426421dc1b9a977be0a6372f9815fa",
+  "included_public_capture_groups": [
+    "0330_insideradvantage_original_1128",
+    "0340_current_1151",
+    "0340_album_leak_source_1152",
+    "0340_album_leak_1152",
+    "0340_claim_check_1200",
+    "0340_rss_probe_1152",
+    "entry340_alert_followup_1155",
+    "quotes_0340_current_1151/public"
+  ],
+  "mutable_resume_excluded": "data/deep_review_20261017/work/0330_resume.json",
+  "new_entries": 56,
+  "new_entry_bytes": 951559,
+  "new_quote_copy": "data/deep_review_20261017/work/quotes_0340_current_1151_public.json",
+  "new_quote_copy_bytes": 14902,
+  "new_quote_copy_sha256": "179c784759779ec49e4e768739d0756a3995bcd68c6553156d33dea81feba773",
+  "new_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_1200_update.json",
+  "old_shard_preserved_unmodified": {
+    "bytes": 1713,
+    "path": "data/deep_review_20261017/work/manual1043_public_artifacts_0330_work_and_research.json",
+    "sha256": "7a2ff3ee68a542935d668f2f50180de5bf0458ed392cea7299043b07b06da274"
+  },
+  "original_quote_packet_sha256": "98f3cf848b28a357d3b5493330357cff69f90f788841b8ff0525717e618506f1",
+  "private_account_or_geoblock_captures_added": false,
+  "resume_shards_replaced": [
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0320_work_and_research.json",
+      "old_shard_sha256": "c7ceaa92068dc8c03bccc72c487a290eb88ac3f4e17859b7d3cecb81d2ce677d",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0320_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0320_work_and_research_current_public.json"
+    },
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0322_work_and_research.json",
+      "old_shard_sha256": "6fd8b94c74c31e7415aff654d8a0cdbf6c2f4ebd7f2a2d1c7461d4f76675a9e8",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0322_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0322_work_and_research_current_public.json"
+    },
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0324_work_and_research.json",
+      "old_shard_sha256": "1eb9fe72899f0768bedeb45c7eafaeb1885638954f03ade9c58666f672d5b60c",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0324_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0324_work_and_research_current_public.json"
+    },
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0326_work_and_research.json",
+      "old_shard_sha256": "16adf227d3c17da72130209acfa47a93ef7b1dd3cb4753bad8302c4a015fbf5d",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0326_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0326_work_and_research_current_public.json"
+    },
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0328_work_and_research.json",
+      "old_shard_sha256": "c6e402ec5fa1699cbbdadbb5a4145b280b8dceab7b7a0e67cbe115f6bedddd97",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0328_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0328_work_and_research_current_public.json"
+    },
+    {
+      "old_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_0331_work_and_research.json",
+      "old_shard_sha256": "5c40c6dbfbe5c7c2110fd561b4d99a8e1362f14e3f27c66b0599efe0863ef16f",
+      "removed_paths": [
+        "data/deep_review_20261017/work/0331_resume.json"
+      ],
+      "replacement": "data/deep_review_20261017/work/manual1043_public_artifacts_0331_work_and_research_current_public.json"
+    }
+  ],
+  "schema": "manual1043_public_artifact_refresh_receipt.v1",
+  "shard_index_sha256": "44fea4c3534bd48b43a9930d218bd192614d6a85a55a1a5c1b3358ef10f52be6",
+  "updated_utc": "2026-10-19T12:01:13.717893+00:00"
+}

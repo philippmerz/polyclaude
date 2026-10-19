@@ -1,0 +1,19 @@
+{
+  "schema": "primary_case0330_model.v2",
+  "range_yes": [
+    0.1,
+    0.75
+  ],
+  "method": "Primary poll-to-final-margin scenario with shared error; original rank-choice-labelled publisher now available.",
+  "reasoning": "Original InsiderAdvantage Oct9–10 headline explicitly labels rank choice Peltola50/Sullivan48. Root verified full publisher body/hash and all25 directory rows. Use Sullivan final-margin center−2pp, total predictive SD5pp, giving P(margin>0)=34.46% rounded35%. Five points is subjective shared polling/turnout/RCV/remaining-campaign uncertainty, not sampling SE or fitted calibration. Latest secondary PPP48/47 direction is consistent; no 25-independent-poll precision or partisan numerical correction.",
+  "computed_normal_win_probability": 0.3445782583896758,
+  "source_limits": "Directory IA48.2/42.6 and alternate50.9/45 disagree with publisher50/48; do not mix rounds. ASR Senate/governor attribution conflict remains. Current ballot bodies failed TLS; official indexed two Sullivan names and June eligibility conflict unresolved. Incumbent DanS Sullivan is this predicate; wrong-name/transfers/status uncertainty widens range/reserve, not a claim either field is certified. Original question, transfer rule and complete tabs remain missing.",
+  "information_change": "Original publisher final-like Ranks Choice label supplies enough direction for a provisional forecast, replacing earlier blocked status. No new instrument certainty asserted. Missing data remain explicit and can materially change p.",
+  "reserve_reason": "15pp=10pp ordinary model +5pp unresolved poll-round/ballot/turnout interpretation; selectedYES20/NO50. No extra margin manufactured from directory average D+1.9.",
+  "counterfactual": "At dated25c maker/27c ask, central YES can be positive. Selected20% fails even25c join, and26c improved maker. NO central65% also below73/75c. TenYES taker selected loss0.77885 before carry. A current executable conclusion would require fresh books/account gates.",
+  "verdict": "Provisional YES35%, broad10–75; both dated routes fail15pp decision stress. No entry; substantive valued revision replaces block without hiding remaining gaps.",
+  "reopen_condition": "Material original current RCV tabs/official candidate-field evidence or measured turnout/poll change; reassess both sides and current correlated election exposure before any entry.",
+  "authored_utc": "2026-10-19T11:56:39.639728+00:00",
+  "p_yes": 0.35,
+  "actual_entry_reserve_pp": 15.0
+}

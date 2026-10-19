@@ -1,0 +1,1 @@
+{"name":"q3_2025","request":{"method":"GET","operation":"SEC filing directory listing","read_only":true,"scope":"AXP earnings filing directory index","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496225000218/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:32.187678Z","timing_basis":"call_window"}

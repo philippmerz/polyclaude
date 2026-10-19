@@ -1,0 +1,24 @@
+{
+  "schema": "primary_case0330_blocked.v1",
+  "authored_utc": "2026-10-19T11:23:57.186240+00:00",
+  "adopted_probability": null,
+  "positive_hypothesis": "If a correctly bound late47Sullivan/48Peltola poll is approximately representative, transfers and ordinary poll error can leave Sullivan a competitive win chance, enough to make25–27c worth substantive underwriting. Price/liquidity are not a rejection.",
+  "load_bearing_gaps": [
+    "OriginalOct14–15PPP question/configuration, first-choice vs finalRCV, actual option identities/undecideds not retrieved. Januarypoll is notOctoberpoll.",
+    "Current certified ballot candidate identities unresolved in directprimarybody: searchrendering lists DanS.Sullivanincumbent and DanielJ.SullivanJr, priorJuneineligibilitydetermination conflicts; cannot allocate transfers from a potentiallydifferentfield."
+  ],
+  "primary_diagnostics": "A one-point first-choice difference is smaller than even simple random-sample uncertainty atn578; registered-voter/house/turnout/design and transfer errors remain. Cannot read47% asP(win), combine Republicanvote shares as guaranteedtransfer, or substitute governorASR54/46. No unsupported partisan bias correction/incumbency prior fitted to force a trade.",
+  "unadopted_scenarios_p_yes": [
+    0.25,
+    0.45,
+    0.65
+  ],
+  "actual_reserve_pp_if_ordinary": 15,
+  "thresholds": {
+    "YES_joinmaker_p_required": 0.4,
+    "YES_taker_p_required": 0.42788500000000007,
+    "NO_joinmaker_max_p_yes": 0.12,
+    "NO_taker_max_p_yes": 0.09249999999999992
+  },
+  "not_valuation_or_rejection": true
+}

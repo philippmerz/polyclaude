@@ -1,0 +1,48 @@
+{
+  "entries": [
+    {
+      "bytes": 948,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case355_facts_1235/tse_runoff_pair/tse_runoff_pair.receipt.json",
+      "sha256": "2b067b54aef821fda95f9678dba48b63f7e0fa0f7c2eaa40c8f14b8046a731b6"
+    },
+    {
+      "bytes": 26332,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case356_facts_1235/chevron_q2_gcs_release/chevron_q2_gcs_release.body.json.gz",
+      "sha256": "9f9d08baa7046590e08a2c48951425e34b7e68247e6295ee9c7e0f4e62dbec85"
+    },
+    {
+      "bytes": 944,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case356_facts_1235/chevron_q2_gcs_release/chevron_q2_gcs_release.receipt.json",
+      "sha256": "0e62b0b1a93e240bc6bdf6b3b5f89d51d5bfc612aa95064fc59286253a13a257"
+    },
+    {
+      "bytes": 4486,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case356_facts_1235/chevron_q3_call_notice/chevron_q3_call_notice.body.json.gz",
+      "sha256": "f128a022383d66031fab387cefa15a6e486c5be29e1675c2c421204213fad270"
+    },
+    {
+      "bytes": 1033,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case356_facts_1235/chevron_q3_call_notice/chevron_q3_call_notice.receipt.json",
+      "sha256": "e5a666698d1d8b1afc4543a38b8eaeed087d7f1d48a4de30ac05ccb8a4beae38"
+    },
+    {
+      "bytes": 952,
+      "kind": "public_transport_receipt",
+      "path": "logs/deep_review_20261017/case353_facts_1235/isw_webmap_item_data_complete/isw_webmap_item_data_complete.receipt.json",
+      "sha256": "3b2cf57f0dc02735a9796cd48249df9e8831ea00259f219b759110e611dfde7d"
+    },
+    {
+      "bytes": 4899,
+      "kind": "public_audit_capsule",
+      "path": "data/deep_review_20261017/work/ledger_audit_closeout_1235.json",
+      "sha256": "256f404efe2ca7717eb7f3d2853fa8c3678ddf139f67c13c6295a7464dcce029"
+    }
+  ],
+  "group": "refresh_1245_corrected",
+  "schema": "manual_public_artifact_allowlist.shard.v1"
+}

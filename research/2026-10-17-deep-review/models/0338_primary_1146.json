@@ -1,0 +1,79 @@
+{
+  "schema": "primary_case0338_model.v1",
+  "authored_utc": "2026-10-19T11:40:46.281731+00:00",
+  "p_yes": 0.05,
+  "range_yes": [
+    0.005,
+    0.3
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.8,
+  "literal": "NextreleaseGAAPdilutedEPS (basicifnodiluted), nearestcent strictly>6.31 so latent6.315roundsto6.32; no adjustedEPSsubstitute. Noearningswithin45daysOct21→NO; omittedGAAPconditionalSeekingAlpha96h; immediateobviousmistakeexception.",
+  "verified_schedule": "Oct12issuerannouncement: afterUSmarketcloseOct21, call16:30ET/20:30UTC, notguaranteedpublicationatcallclock.",
+  "expense_bridge": {
+    "Q1_costs_b": 33.439,
+    "Q2_costs_b": 42.026,
+    "YTD_costs_b": 75.465,
+    "July_FY_expense_range_b": [
+      165,
+      169
+    ],
+    "July_remaining_b": [
+      89.535,
+      93.535
+    ],
+    "Aug26_additional_Q3_charge_b": 10,
+    "additive_FY_arithmetic_not_issuer_revised_range": [
+      175,
+      179
+    ],
+    "remaining_additive_arithmetic": [
+      99.535,
+      103.535
+    ],
+    "assumed_Q3_share_of_precharge_H2_costs": 0.45,
+    "implied_base_Q3_costs_b": 41.19075,
+    "with_new_charge_b": 51.19075
+  },
+  "accounting_regimes": [
+    {
+      "name": "chargeasannounced",
+      "weight": 0.88,
+      "legal_expense_b": 10,
+      "net_nonoperating_gain_b": 0,
+      "EPS_mean": 3.7021706936866714,
+      "EPS_sd": 1.2439594699922056,
+      "conditional_p_reported_above6_31": 0.01784623975367139,
+      "weighted_p": 0.015704690983230823
+    },
+    {
+      "name": "partialordelayedcharge",
+      "weight": 0.07,
+      "legal_expense_b": 6,
+      "net_nonoperating_gain_b": 0,
+      "EPS_mean": 5.011601714731099,
+      "EPS_sd": 1.2439594699922056,
+      "conditional_p_reported_above6_31": 0.14736953912922224,
+      "weighted_p": 0.010315867739045557
+    },
+    {
+      "name": "largefavorableGAAPitem",
+      "weight": 0.05,
+      "legal_expense_b": 10,
+      "net_nonoperating_gain_b": 8,
+      "EPS_mean": 6.321032735775526,
+      "EPS_sd": 1.2439594699922056,
+      "conditional_p_reported_above6_31": 0.5019347124979394,
+      "weighted_p": 0.025096735624896973
+    }
+  ],
+  "computed_p": 0.05111729434717335,
+  "rounding": "~5.1%→5%, uncalibrated accounting/one-off scenario mixture. Forecasttailrisknotvalidatedbytheseweights.",
+  "positive_NO_thesis": "Post-Q2originalAug26legalaccrualabout10BchangesGAAP, regardlesscashinstallments. NormalguideconsistentEPS~3.7, wellbelow6.31. FirstQ1taxbenefit8.03B cannotbe carriedforwardorchargedagain; Q32025tax15.93B isdifferentquarter.",
+  "uncertainty": "Effective tax rate guidance15–17 conditionalontaxlandscape; exactdeductibility/recognizedcharge/transcriptdetailsunverified. Nooperatingearningsguide:45%H2split, revenue62.5, nonoperatinggain/SDalljudgment. Privateinvestmentrevaluation/taxbenefitcouldadd8B+ and reverseEPS. Missinglargecurrentitemnotprovenabsent.",
+  "reserve_reason": "10pp ordinaryforecastplus5pp legal/tax/one-offprecision/conditionalfill uncertainty. Even10pp givesNO85% below88.9cmaker, so additionalreserve isnotmanufacturedtochangeverdict. No measuredtailK5license for futureGAAPcharges/gains.",
+  "sensitivity": "Expenseallocation~40%/45%/50%ofH2beforecharge and61–64Brevenuearemeaningful. Atbase16%tax/2.566Bshares, requiredpositivepretaxnonopgain~8Btoearn6.315. A muchsmallerchargeoraQ1-scaleunexpectedtaxbenefitcanproduceYES;1–30%scenariosplausible, not confidencebounds.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

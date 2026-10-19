@@ -1,0 +1,17 @@
+{
+  "name": "banrep_minutes_index",
+  "url": "https://www.banrep.gov.co/es/minutas",
+  "started_utc": "2026-10-19T12:20:27.298856+00:00",
+  "received_utc": "2026-10-19T12:20:28.279740+00:00",
+  "http_status": 200,
+  "error": null,
+  "raw_bytes": 15228,
+  "raw_sha256": "1fe5cab9a198289a884875e2671bce02588bbbde08497effc75ba47445db6986",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_followup_1220/banrep_minutes_index.body.gz",
+  "gzip_sha256": "1d98dad083115901f462642ae4d56115b654d46ac8ef011d0ee2e7ea09a88e58",
+  "headers_filtered": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Mon, 19 Oct 2026 12:20:28 GMT",
+    "cache-control": "no-store, no-cache, must-revalidate"
+  }
+}

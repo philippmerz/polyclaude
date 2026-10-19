@@ -1,0 +1,54 @@
+{
+  "schema": "case328_matched_trends.v1",
+  "terms": [
+    "Nancy Guthrie",
+    "Savannah Guthrie",
+    "Lindsay Clancy",
+    "Sean Combs",
+    "Tyler Robinson"
+  ],
+  "geo": "US",
+  "window": "2025-01-01 2026-10-18",
+  "prior_rate_limit": "Prior different-term request Oct17 22:20 had429/noRetryAfter; this one ordinary bounded read after~37h, stop immediately if restricted. No identity/cookie/proxy/challenge workaround.",
+  "captures": [
+    {
+      "receipt": "logs/deep_review_20261017/0328_trends_1120/explore.receipt.json",
+      "body": "logs/deep_review_20261017/0328_trends_1120/explore.body.json.gz",
+      "status": 429,
+      "raw_sha256": "ab08b87913a3ab9d68e52cab2f2ef0fa5034bc576d605659f6c00b6ff74b9375",
+      "received_utc": "2026-10-19T11:18:15.462581Z"
+    }
+  ],
+  "query": {
+    "comparisonItem": [
+      {
+        "keyword": "Nancy Guthrie",
+        "geo": "US",
+        "time": "2025-01-01 2026-10-18"
+      },
+      {
+        "keyword": "Savannah Guthrie",
+        "geo": "US",
+        "time": "2025-01-01 2026-10-18"
+      },
+      {
+        "keyword": "Lindsay Clancy",
+        "geo": "US",
+        "time": "2025-01-01 2026-10-18"
+      },
+      {
+        "keyword": "Sean Combs",
+        "geo": "US",
+        "time": "2025-01-01 2026-10-18"
+      },
+      {
+        "keyword": "Tyler Robinson",
+        "geo": "US",
+        "time": "2025-01-01 2026-10-18"
+      }
+    ],
+    "category": 0,
+    "property": ""
+  },
+  "gap": "No comparable timeline; failed/rate-limited request is not ranking evidence. No retry."
+}

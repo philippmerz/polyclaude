@@ -1,0 +1,9 @@
+{
+  "alert_id": "0fb8961fe74321d8b02de1bef7818cb833fc35ad",
+  "alert_utc": "2026-10-19T11:27:23Z",
+  "held_exposure": "No direct relationship to held positions or pending buys identified.",
+  "publisher": "WECT",
+  "result": "WECT source page not retrieved. A WRAL page with the exact same headline was captured HTTP 200, body SHA 85603282658b001dd2bf2a983070eace50af996024eb4e755f40a321d05edb24; gzip+receipt: logs/deep_review_20261017/entry340_alert_followup_1155/wral_related_gas.*. Posted 2026-10-18T20:50:20Z. It attributes low NC average prices to the recent gas-tax suspension and notes price/oil uncertainty. This is matching coverage from WRAL, not proof of the WECT page body.",
+  "reviewed_utc": "2026-10-19T11:53:21Z",
+  "title": "North Carolina has the lowest gas prices in the country. Some say it’s still too high"
+}

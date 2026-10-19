@@ -1,0 +1,9 @@
+{
+  "review_index": 320,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "report_path": "research/2026-10-17-deep-review/evaluations/0320.md",
+  "report_sha256": "2b2fd0cadcb5237caca19672a32471f67a88be6d775f175d498ee889673b6b16",
+  "next_index": 322,
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0320.md",
+  "effective_report_sha256": "2b2fd0cadcb5237caca19672a32471f67a88be6d775f175d498ee889673b6b16"
+}

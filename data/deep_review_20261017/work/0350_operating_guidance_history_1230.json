@@ -1,0 +1,74 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 350,
+  "market_id": "5778679",
+  "condition_id": "0xdb0bd84336d779d0d738612dcd43331ba39380d9bf00af79665e22c702a181d8",
+  "criteria_sha256": "7a1c5c4a0bff9cb4286d241ca769070bb139886b522d2daf1edf73d6c7109dc3",
+  "observed_utc": "2026-10-19T12:30:30Z",
+  "scope": "Historical Amazon operating-income guidance versus actuals; operating income is distinct from non-operating Anthropic fair-value gains and from the frozen GAAP diluted-EPS outcome.",
+  "comparisons": [
+    {
+      "forecast_issued": "2026-02-05",
+      "forecast_for": "Q1 2026",
+      "source": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/",
+      "guidance_oi_usd_b": [
+        16.5,
+        21.5
+      ],
+      "actual_oi_usd_b": 23.9,
+      "actual_vs_upper_usd_b": 2.4,
+      "notes": "Release says guide included about $1B higher year-over-year Amazon Leo costs and investment in quick commerce / lower prices internationally; assumes no additional acquisitions, restructurings or legal settlements."
+    },
+    {
+      "forecast_issued": "2026-04-29",
+      "forecast_for": "Q2 2026",
+      "source": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/",
+      "guidance_oi_usd_b": [
+        20.0,
+        24.0
+      ],
+      "actual_oi_usd_b": 27.461,
+      "actual_vs_upper_usd_b": 3.461,
+      "notes": "Guide assumed Prime Day in Q2 and no additional acquisitions, restructurings or legal settlements. Actual is from prior Q2 source capsule / SEC companyfacts; Q2 Anthropic investment gains are non-operating and do not explain operating-income excess."
+    },
+    {
+      "forecast_issued": "2025-07-31",
+      "forecast_for": "Q3 2025",
+      "source": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/",
+      "guidance_oi_usd_b": [
+        15.5,
+        20.5
+      ],
+      "actual_oi_usd_b": 17.4,
+      "actual_vs_upper_usd_b": -3.1,
+      "notes": "Reported actual was within guidance. Q3 release subsequently disclosed $2.5B FTC settlement charge and $1.8B estimated severance; without those, operating income would have been $21.7B, $1.2B above guide ceiling. It also reported $9.5B Anthropic pre-tax investment gain in non-operating income, separate from OI."
+    }
+  ],
+  "interpretation_limits": [
+    "Two sequential 2026 actual quarters exceeded the preceding top-of-range OI guidance, while one 2025 comparison landed inside the range before special-charge adjustment; this is a tiny, nonstationary sample, not a calibrated forecast-error distribution.",
+    "Do not treat current Q3 2026 OI guidance $22.5–26.5B as a realized ceiling or assume past overages repeat.",
+    "Operating income comparisons say nothing direct about Q3 GAAP EPS because Anthropic/OpenAI marks, taxes, diluted shares and other non-operating items can dominate EPS."
+  ],
+  "source_access": [
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-Fourth-Quarter-Results/",
+      "browser_observation": "Official IR page browser-rendered; dated Feb 5, 2026; guidance and Q4 actual found in lines 51, 118–121. Direct ordinary GET returned 403.",
+      "capture": "logs/deep_review_20261017/amazon350_guidance_history_1250/q4_2025.receipt.json"
+    },
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2026/Amazon-com-Announces-First-Quarter-Results/",
+      "browser_observation": "Official IR page browser-rendered; dated Apr 29, 2026; Q1 actual and Q2 guidance found in lines 49, 106–110. Direct ordinary GET returned 403.",
+      "capture": "logs/deep_review_20261017/amazon350_guidance_history_1250/q1_2026.receipt.json"
+    },
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Second-Quarter-Results/",
+      "browser_observation": "Official IR page browser-rendered; dated Jul 31, 2025; Q2 actual and Q3 guidance found in lines 49, 99–101. Direct ordinary GET returned 403.",
+      "capture": "logs/deep_review_20261017/amazon350_guidance_history_1250/q2_2025.receipt.json"
+    },
+    {
+      "url": "https://ir.aboutamazon.com/news-release/news-release-details/2025/Amazon-com-Announces-Third-Quarter-Results/",
+      "browser_observation": "Official IR page browser-rendered; dated Oct 30, 2025; Q3 OI, charge-adjusted OI, and $9.5B non-operating Anthropic gain found in lines 49–54. No direct GET performed in this bounded pass."
+    }
+  ],
+  "captured_direct_failures": "All three current-pass official IR GETs were HTTP 403. Their bounded response hashes and body sizes are in the receipt files above; no error body is treated as release content."
+}

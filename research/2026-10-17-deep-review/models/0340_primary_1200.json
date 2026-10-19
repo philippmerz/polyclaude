@@ -1,0 +1,48 @@
+{
+  "schema": "primary_case0340_model.v2",
+  "range_yes": [
+    0.25,
+    0.98
+  ],
+  "method": "Source-scope thesis updated for newly examined album-specific leak relay; explicit subjective likelihood ratio, not new official credit.",
+  "reasoning": "Prior exact-credit/release mixture49.679%YES omitted a Sept18 report of an unfinished Kodak Black/Don Toliver album session. Root traced article to GTASixInfo relay attributing TexFunz2. Source/media and final inclusion unverified. Treat observed album-specific report as subjective LR2 favoring qualifying YES versus NO, discounted for shared reporting and abandoned demos; prior odds updated to66.38%, rounded66%. Article and relay are one evidence chain, not independent confirmations.",
+  "prior_model": "research/2026-10-17-deep-review/models/0340_primary_1155.json",
+  "prior_yes": 0.49679,
+  "subjective_report_likelihood_ratio": 2,
+  "posterior_yes": 0.6638072141048511,
+  "likelihood_ratio_sensitivities": [
+    {
+      "LR": 0.5,
+      "posterior_yes": 0.330486093094112
+    },
+    {
+      "LR": 1,
+      "posterior_yes": 0.49679
+    },
+    {
+      "LR": 1.5,
+      "posterior_yes": 0.5969144381385699
+    },
+    {
+      "LR": 2,
+      "posterior_yes": 0.6638072141048511
+    },
+    {
+      "LR": 3,
+      "posterior_yes": 0.7475847470379919
+    },
+    {
+      "LR": 5,
+      "posterior_yes": 0.8315423345251007
+    }
+  ],
+  "source_status": "Report published Sept18, examined now; not a newly occurring event. Original TexFunz2 post/media not authenticated; copyright removal does not authenticate attribution or final album credit. Partial official pages still cannot exclude Kodak. Fresh Rockstar eight album singles plus standalone Justice score; previous nine-album-single description overcounted score. No full-credit claim.",
+  "reserve_reason": "Keep actual25pp reserve10ordinary+10source/category/credit/release+5conditional fill. SelectedNO9% andYES41%; actual conditional fill can be worse, no calibrated lower bound.",
+  "counterfactual": "Candidate NO13c×8 cost1.04, selected terminal EV0.72 =>−0.32 before carry/operations; central2.72 remains positive but insufficient for uncertain adverse fills. At dated11:29 ask20c taker1.66401, selected−0.94401. YES80/88c fails centrally. Prior LR needs below~1.653 for NO to pass13c under unchanged25pp reserve; no assumption that headline detection outruns informed traders.",
+  "live_gates": "Exact Gamma/CID/assets/criteria and5%taker schedule matched11:51. Both book snapshots were293.64sec old at receipt, failing180sec freshness; no current execution certificate. Existing watcher has no demonstrated complete-credit coverage. A candidate RSS feed worked but is not configured and incomplete. These are additional unresolved entry gates, not reasons to retry quotes after economics fails.",
+  "verdict": "Withdraw unplaced NO13c candidate: newly examined album-specific leak raises primaryYES50→66%; NO9% selected fails13c. No order/prior/config/reservation change.",
+  "reopen_condition": "Official complete artist credits or reliable direct album-specific evidence changes p enough to clear robust conditional-fill economics; then all fresh execution/source-coverage/correlation gates. No automatic bid/repost or candidate-only watcher.",
+  "authored_utc": "2026-10-19T11:56:55.094806+00:00",
+  "p_yes": 0.66,
+  "actual_entry_reserve_pp": 25.0
+}

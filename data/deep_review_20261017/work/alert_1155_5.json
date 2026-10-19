@@ -1,0 +1,9 @@
+{
+  "alert_id": "2b5409bdacda89093376d859b818174b2dacdf17",
+  "alert_utc": "2026-10-19T11:27:27Z",
+  "held_exposure": "Whalefall YES/NO exposure exists; this is streaming news for a different film and contains no new Whalefall box-office measure.",
+  "publisher": "IMDb / linked FandomWire article",
+  "result": "FandomWire page matching the exact headline captured HTTP 200; raw SHA 07a931ade7881160cfb8d24134bf057b3edd77f5dc1171a218d88c0b5cacf3d4; gzip+receipt: logs/deep_review_20261017/entry340_alert_followup_1155/fandomwire_whale.*. Published 2026-10-19 05:30 -04:00. Article is about The Meg being available on Netflix UK (not Netflix US); says Whalefall opened in theaters Oct 16. No Whalefall gross, estimate, audience count, or box-office forecast is reported.",
+  "reviewed_utc": "2026-10-19T11:53:21Z",
+  "title": "Forget Whalefall, Jason Statham’s 113-Minute Sea Thriller is Officially Streaming on Netflix"
+}

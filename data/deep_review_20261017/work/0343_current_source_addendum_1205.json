@@ -1,0 +1,49 @@
+{
+  "schema": "case343.source_addendum.v1",
+  "compiled_utc": "2026-10-19T12:05:28.799487+00:00",
+  "review_index": 343,
+  "market_id": "1117275",
+  "conditionId": "0xf59fe744e8f73124ccd8b351b101c51cd29bb449dab73b83ed74d05603b0dfb2",
+  "frozen_criteria_sha256": "0ed1c45d01820f29a7e4614e7c2bd9432dbf676e9f142f3897464715c7e01afe",
+  "frozen_trigger": "President formally announces use of the Insurrection Act as legal authority for active-duty deployment or federalizing the National Guard in response to civil disorder, insurrection, or rebellion, by 2026-12-31 11:59 PM ET.",
+  "new_sources": [
+    {
+      "url": "https://oag.dc.gov/release/attorney-general-schwalb-issues-statement-0",
+      "publisher": "District of Columbia Office of the Attorney General",
+      "published_utc": "2026-10-14T12:00:00Z",
+      "captured_utc": "2026-10-19T12:05:06.029803Z/12:05:06.344714Z",
+      "http_status": 200,
+      "body_bytes": 53677,
+      "body_sha256": "cc5b18fb19baae554c6ac1dd07122f6d4b96c0d79ae9129bdc0b947b304fcd78",
+      "gzip_path": "logs/deep_review_20261017/facts_0343_current_1240/dc_oag_oct14.body.gz",
+      "gzip_sha256": "b632dc61fe98c74cc9243b232179398e94cb38398a0fd73aa680da24a28c29d4",
+      "facts": "OAG says D.C. Circuit heard the federal government appeal on Oct 14, after Judge Jia Cobb granted a preliminary injunction on Nov 20, 2025 finding the deployment illegal; the circuit had temporarily stayed the injunction. This is the plaintiff government office’s account/position, not a final appellate disposition or an Insurrection Act invocation. OAG describes litigation about the ongoing Guard deployment and District self-government."
+    },
+    {
+      "url": "https://www.washingtonpost.com/dc-md-va/2026/10/19/national-guard-member-shot-while-responding-fight-dc-police-say/",
+      "publisher": "The Washington Post",
+      "published_utc": "2026-10-19T08:45:57.810Z",
+      "event_time": "late Sunday Oct 18; exact time not stated in captured article",
+      "captured_utc": "2026-10-19T12:05:06.347420Z/12:05:06.654744Z",
+      "http_status": 200,
+      "body_bytes": 897417,
+      "body_sha256": "c149bdf0961ce2eb1dc14e878710f708c92fbfa776b1c2aad1f76cf0db97d21d",
+      "gzip_path": "logs/deep_review_20261017/facts_0343_current_1240/washingtonpost_oct19_dc_guard_incident.body.gz",
+      "gzip_sha256": "6e020a4807fe267d03f706f93d90e3b24cc472431ab84892ddb014d53e1710b7",
+      "facts": "Article attributes to interim D.C. police chief Jeffery Carroll that a Guard member was shot in the leg while troops tried to intervene in a Southeast D.C. fight; the member and alleged shooter had non-life-threatening injuries. It reports a local incident, not presidential invocation or a new deployment authority."
+    }
+  ],
+  "existing_relevant_evidence": [
+    "work/0343_facts_1200.json",
+    "work/0343_invocation_followup_1215.json",
+    "logs/deep_review_20261017/facts_0343_followup_1210/time_oct1_interview_transcript.body.gz (TIME published 2026-10-01; direct statement: Trump said he had never used the Act and could use it; prior packet records exact excerpt)",
+    "logs/deep_review_20261017/facts_0343_followup_1210/whitehouse_dc_guard_memo_2025_08_11.body.gz",
+    "logs/deep_review_20261017/facts_0343_followup_1210/whitehouse_eo14339_2025_08_25.body.gz"
+  ],
+  "bounded_access_gaps": [
+    "AP Oct 14 appeal-hearing article direct request previously returned 403; retained in work/0343_invocation_followup_1215.json.",
+    "No new direct retrieval of The Hill Oct 1 article was attempted; the captured TIME interview transcript is a first-person source for the quoted non-exclusion/possibility statement.",
+    "This limited packet does not establish that no later formal invocation occurred; it adds no such announcement. OAG/AP/WaPo items concern litigation, claimed authority, or a local incident and are not themselves proof of the frozen trigger."
+  ],
+  "scope": "Factual addendum only; no forecast, probability, market-price, eligibility, or action conclusion."
+}

@@ -1,0 +1,92 @@
+{
+  "as_of_utc": "2026-10-19T10:46:28.124252Z",
+  "case_index": 320,
+  "identity": "LSU page title: “Oct. 18 Football National Rankings”; date shown in both tables: Oct. 18, 2026.",
+  "limits": "Only these two requested GETs were attempted. No inference from missing poll rows beyond the page’s explicit tables/list; no prediction or forecast generated.",
+  "official_lsu_page": {
+    "AP_Top_25": {
+      "Alabama": {
+        "rank": 13,
+        "record": "5-2"
+      },
+      "Arkansas": "not listed in top 25 or displayed AP others-receiving-votes list",
+      "Auburn": "others receiving votes, 61 points",
+      "Georgia": {
+        "rank": 5,
+        "record": "6-1"
+      },
+      "Kentucky": {
+        "rank": 12,
+        "record": "6-1"
+      },
+      "LSU": {
+        "points": 529,
+        "rank": 18,
+        "record": "5-2"
+      },
+      "Ole_Miss": {
+        "rank": 7,
+        "record": "5-1"
+      },
+      "Tennessee": {
+        "rank": 11,
+        "record": "6-1"
+      },
+      "Texas": {
+        "rank": 19,
+        "record": "4-2"
+      }
+    },
+    "Coaches_Top_25": {
+      "Alabama": {
+        "rank": 13,
+        "record": "5-2"
+      },
+      "Arkansas": "not listed in displayed top 25; no vote count available in page text",
+      "Auburn": "not in displayed top 25; page has an “Others Receiving Votes” heading but no vote list text captured beneath it",
+      "Georgia": {
+        "rank": 4,
+        "record": "6-1"
+      },
+      "Kentucky": {
+        "rank": 12,
+        "record": "6-1"
+      },
+      "LSU": {
+        "points": 569,
+        "rank": 17,
+        "record": "5-2"
+      },
+      "Ole_Miss": {
+        "rank": 7,
+        "record": "5-1"
+      },
+      "Tennessee": {
+        "rank": 11,
+        "record": "6-1"
+      },
+      "Texas": {
+        "rank": 18,
+        "record": "4-2"
+      }
+    },
+    "captured_status": 200,
+    "limitations": "Poll placements/records reflect this dated page; they do not report CFP committee rankings or playoff seedings.",
+    "url": "https://lsusports.net/news/2026/10/18/oct-18-football-national-rankings"
+  },
+  "provenance_index": "data/deep_review_20261017/work/0320_power_capture_index.json",
+  "sagarin_attempt": {
+    "error_type": "URLError",
+    "observed": "TLS certificate verification failed (self-signed certificate); response body empty. No retry.",
+    "status": null,
+    "unavailable": [
+      "displayed-through date",
+      "LSU rating",
+      "PREDICTOR values for requested teams",
+      "home-advantage value",
+      "method notes"
+    ],
+    "url": "https://sagarin.com/sports/cfsend.htm"
+  },
+  "scope": "Official Oct. 18 LSU-published poll tables; attempted current Sagarin CFB table exactly once. Facts only; AP/Coaches poll ranks are ordinal votes, not point-strength estimates or top-four probabilities."
+}

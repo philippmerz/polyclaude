@@ -1,0 +1,33 @@
+{
+  "added_entries": 32,
+  "added_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_1145_update.json",
+  "allowlisted_entries": 316,
+  "allowlisted_file_bytes": 22117970,
+  "exclusions_sha256": "5357532f00571430d997105ec4bf055bd4914132d7b6aea223c42c4c2ebfaec9",
+  "included_cases": [
+    "0320",
+    "0322",
+    "0324",
+    "0326",
+    "0328",
+    "0330",
+    "0331",
+    "0332",
+    "0336",
+    "0338",
+    "0340"
+  ],
+  "manifest": "data/deep_review_20261017/work/manual1043_public_artifacts.json",
+  "manifest_sha256": "513523236ac94ee151f1366eaa8b34ce4e1e493b401fded10ed961421056f1da",
+  "private_originals_preserved": true,
+  "quote_copy": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342_public.json",
+  "quote_copy_bytes": 52255,
+  "quote_copy_sha256": "ef72276a8e45947d36b81dc1dae3e69ed20e7680a9c3810712688da62488e46a",
+  "quote_shard": "data/deep_review_20261017/work/manual1043_public_artifacts_quote_public_copies_1132.json",
+  "refreshed_utc": "2026-10-19T11:53:48.889974+00:00",
+  "schema": "manual1043_public_artifact_refresh_receipt.v1",
+  "shard_index_sha256": "7e6059c91556680d5d426ad59a9887cedd4742124f1160ab4256fbef673e51c4",
+  "source_packet_sha256": "1e16963cb79ea3f24b0cb8bb1cd03ebd2662bfc927c6e2009779bad2b4582cf0",
+  "unique_decompressed_body_bytes": 32015312,
+  "updated_utc": "2026-10-19T11:54:07.701602+00:00"
+}

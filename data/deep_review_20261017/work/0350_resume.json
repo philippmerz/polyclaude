@@ -1,0 +1,32 @@
+{
+  "review_index": 350,
+  "source_paths": [
+    "work/0350_facts_1218.json",
+    "work/0350_q2_gaap_context_1225.json",
+    "work/0350_investment_accounting_followup_1225.json",
+    "work/0350_operating_guidance_history_1230.json",
+    "work/0350_root_accounting_clarification_1238.json"
+  ],
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "updated_utc": "2026-10-19T12:30:30Z",
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "load_bearing_unknowns": [
+    "Q2 standalone debt reclassification resolved as dash/zero by primary original-table read; H1/Q1=4.479B. Q3 marks remain unknown.",
+    "No Q3 Anthropic/OpenAI valuation update is quantified in the reviewed sources.",
+    "Q3 GAAP EPS and investment marks remain unreported until Oct29 release.",
+    "Q3 2026 operating-income guide accuracy is unknown until Oct29; prior guidance overages are a small, nonstationary sample."
+  ],
+  "primary_model": "research/2026-10-17-deep-review/models/0350_primary_1238.json",
+  "economics_path": "data/deep_review_20261017/work/0350_economics_1238.json",
+  "primary_reassessed_utc": "2026-10-19T12:38:25.807737+00:00",
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0350.md",
+  "effective_report_sha256": "a90a5c7a8624704fdf0ab74efb99cc9496020ceb77ca891491b3f2695fd2ef85",
+  "evidence_clock_erratum": {
+    "field": "base350evidence[2].observed_utc",
+    "recorded_coarse_value": "2026-10-19T12:17:08Z",
+    "actual_notice_started_utc": "2026-10-19T12:17:08.903350+00:00",
+    "actual_notice_received_utc": "2026-10-19T12:17:09.177570+00:00",
+    "receipt": "logs/deep_review_20261017/facts_0349_0350_0352_1218/amazon_q3_2026_earnings_notice.receipt.json",
+    "meaning": "Coarse source label precedes receipt completion; use actual transport times above. No probability/economics/action effect; immutable base preserved."
+  }
+}

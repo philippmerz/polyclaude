@@ -1,0 +1,1 @@
+{"name":"q1_2026","request":{"method":"GET","operation":"SEC 10-Q primary filing","read_only":true,"scope":"AXP quarterly SEC filing full text","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496226000192/axp-20260331.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:39.308476Z","timing_basis":"call_window"}

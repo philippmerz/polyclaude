@@ -1,0 +1,1 @@
+{"name":"billstatus","request":{"call_window_label":"billstatus","method":"GET","read_only":true,"scope":"case317_clarity_status_schedule_followup","url":"https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3633.xml"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:07:13.759395Z","timing_basis":"call_window"}

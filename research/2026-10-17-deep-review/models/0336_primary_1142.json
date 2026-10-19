@@ -1,0 +1,36 @@
+{
+  "schema": "primary_case0336_model.v1",
+  "authored_utc": "2026-10-19T11:35:45.595564+00:00",
+  "p_yes": 0.02,
+  "range_yes": [
+    0.003,
+    0.12
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0,
+  "selected_no": 0.83,
+  "literal": "Pahlavi byDec31exercisesprimaryIranstateexecutiveauthorityincludingarmedforces/nationalinstitutions; notforeignrecognition/exileleadership/ceremony/nominationalone. Wholeterritorialunanimity/formaltitleunnecessary; noindividualauthorityalonequalifiesNOunlessPahlavimeetstest.",
+  "evidence_bridge": "Rootread/hashverifiedofficialPahlavisitefuturetransitionpillars/latestOct2; Oct18IRNA+independentAJministerappointmentunderPezeshkian/237–15parliamentonline/IRGCconsultations. War/leadershiplossalreadyoccurred, but reportedinstitutionalreplacements persist. Those sourcesnotacompletecontrolaudit/proofnoearlierqualifyingauthority.",
+  "strict_tree": {
+    "further_governance_break_by_cutoff": 0.2,
+    "Pahlavi_primary_leader_given_break": 0.15,
+    "consolidates_relevant_domestic_institutions_given_selected": 0.4,
+    "credible_reporting_given_consolidation": 0.9,
+    "no_break_negotiated_effective_transfer": 0.0028,
+    "computed_strict": 0.013600000000000001
+  },
+  "interpretation_mixture": {
+    "strict_weight": 0.9,
+    "fragmented_but_primary_wartime_authority_weight": 0.1,
+    "fragmented_qualifying_p": 0.04,
+    "excluded_symbolic_nomination_not_counted": true,
+    "computed": 0.01624
+  },
+  "rounding": "1.624%→2%, explicitunfittedshort-horizontransition/consolidationtree; not anempiricalregimechangebase rate.",
+  "crux": "Securitydefections/chain-of-command transfer+domesticPahlavicapacity, notjust collapseofincumbent. Sourcecollectionnotfull2026history; noalreadyqualifyingauthorityobservedhere, notprovenabsence. Fragmentationdoesnotautomaticallyqualify; residualadjudicationrisk.",
+  "reserve_reason": "10pp futureinstance+5pp opaquecommand/war-source/adjudicationconditionalfillrisk. No measuredtailnear-resolutionvariable tolicenseK5.",
+  "fee_scope": "Compactfeeendpoint200withoutfd; actualGammafeesEnabled=false. Economicsfallbackzero curve has authoritative=false, descriptorparitynotverified; researchsensitivityonly, entrymustresolvefees. Zero-feecasealreadyfailsselected/carry so nofalsefeecertification needed.",
+  "sensitivity": "Rapidmajorsecuritydefections/credibletransitioncommandcouldputYES>12%; continuedcoherentincumbentinstitutionsorcompetingoppositionleadership<0.3%. Treebranches/weightsnotcalibratedprobabilityfloors.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}

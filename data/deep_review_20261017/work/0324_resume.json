@@ -1,0 +1,12 @@
+{
+  "review_index": 324,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "primary_input": "work/0324_primary_input_1105.json",
+  "source_paths": [
+    "work/0324_ap_totals_followup.json",
+    "work/0324_root_aggregation_verified.json",
+    "work/0324_transfer_facts.json"
+  ],
+  "effective_report": "research/2026-10-17-deep-review/revisions/0324_20261019T111337775197Z.md",
+  "effective_report_sha256": "a88efc8574fc6f15995ee83dfa610d833d3701b801cc92a5ccf0675182b00a0a"
+}

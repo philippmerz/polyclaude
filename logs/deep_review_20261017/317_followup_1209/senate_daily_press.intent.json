@@ -1,0 +1,1 @@
+{"name":"senate_daily_press","request":{"call_window_label":"senate_daily_press","method":"GET","read_only":true,"scope":"case317_clarity_status_schedule_followup","url":"https://www.dailypress.senate.gov/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:07:14.814926Z","timing_basis":"call_window"}

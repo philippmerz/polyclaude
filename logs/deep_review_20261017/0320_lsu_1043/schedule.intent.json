@@ -1,0 +1,1 @@
+{"name":"schedule","request":{"call_window_label":"case320 LSU factual source pass","method":"GET","read_only":true,"scope":"Official LSU 2026 football schedule and results","url":"https://lsusports.net/sports/fb/schedule/season/2026"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T10:43:35.697956Z","timing_basis":"call_window"}

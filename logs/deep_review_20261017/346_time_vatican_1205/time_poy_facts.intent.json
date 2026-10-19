@@ -1,0 +1,1 @@
+{"name":"time_poy_facts","request":{"call_window_label":"time_poy_facts","method":"GET","read_only":true,"scope":"case346_time_vatican_official_context","url":"https://time.com/4586372/time-person-of-the-year-facts/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:22.672204Z","timing_basis":"call_window"}

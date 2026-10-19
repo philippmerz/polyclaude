@@ -1,0 +1,11 @@
+{
+  "alert_id": "5cd76edd2e1619e284644c6d4f1c627b67319eb0",
+  "alert_utc": "2026-10-19T11:06:01Z",
+  "evidence": "search result only for Aug 5 item; no body receipt for exact alert item",
+  "held_exposure": "MI Senate NO; alert text alone does not establish race change",
+  "publisher": "WNEM",
+  "result": "Exact publisher body not retrieved. Alert link is a Google News wrapper; direct wrapper response was generic Google News HTML. Targeted search surfaced a distinct Aug 5 WNEM article about the primary and Rogers, not the Oct 19 Morning Extra item. No new poll, candidate change, or race fact verified from this alert.",
+  "reviewed_utc": "2026-10-19T11:53:21Z",
+  "source_gap": "Exact WNEM segment/article URL/body and publication/event date remain unverified.",
+  "title": "WNEM Morning Extra: Michigan Senate race draws national attention 15 days before midterms"
+}

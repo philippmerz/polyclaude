@@ -1,0 +1,392 @@
+{
+  "capture_errors": [],
+  "cases": [
+    {
+      "access_status": "gamma_identity_exact",
+      "books": [
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "80.02"
+              },
+              {
+                "price": "0.98",
+                "size": "2010.78"
+              },
+              {
+                "price": "0.97",
+                "size": "250"
+              },
+              {
+                "price": "0.96",
+                "size": "153"
+              },
+              {
+                "price": "0.95",
+                "size": "10.36"
+              },
+              {
+                "price": "0.9",
+                "size": "21"
+              },
+              {
+                "price": "0.89",
+                "size": "51.01"
+              },
+              {
+                "price": "0.88",
+                "size": "74.66"
+              }
+            ],
+            "asset_id": "86162224776343888886171117538586024970725460762072739326955806353276889875249",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "160.31"
+              },
+              {
+                "price": "0.02",
+                "size": "11.44"
+              },
+              {
+                "price": "0.04",
+                "size": "12"
+              },
+              {
+                "price": "0.05",
+                "size": "10.04"
+              },
+              {
+                "price": "0.1",
+                "size": "21"
+              },
+              {
+                "price": "0.41",
+                "size": "61"
+              },
+              {
+                "price": "0.79",
+                "size": "69.14"
+              },
+              {
+                "price": "0.8",
+                "size": "78.84"
+              },
+              {
+                "price": "0.82",
+                "size": "17.42"
+              }
+            ],
+            "hash": "bbd305e970cb6dbeb1ef35d8945769ba9cfcf9e1",
+            "last_trade_price": "0.200",
+            "market": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792410421829"
+          },
+          "http_status": 200,
+          "outcome": "Yes",
+          "received_utc": "2026-10-19T11:51:55.468861+00:00",
+          "request_id": "books_batch_01_03",
+          "request_raw_sha256": "b4d4e6719af2ab6ec0b2684e9cce04817f3e591f3b569c8a5ed6de6b6af9ea00",
+          "token_id": "86162224776343888886171117538586024970725460762072739326955806353276889875249"
+        },
+        {
+          "availability_status": "returned_in_http_200",
+          "available": true,
+          "book": {
+            "asks": [
+              {
+                "price": "0.99",
+                "size": "160.31"
+              },
+              {
+                "price": "0.98",
+                "size": "11.44"
+              },
+              {
+                "price": "0.96",
+                "size": "12"
+              },
+              {
+                "price": "0.95",
+                "size": "10.04"
+              },
+              {
+                "price": "0.9",
+                "size": "21"
+              },
+              {
+                "price": "0.59",
+                "size": "61"
+              },
+              {
+                "price": "0.21",
+                "size": "69.14"
+              },
+              {
+                "price": "0.2",
+                "size": "78.84"
+              },
+              {
+                "price": "0.18",
+                "size": "17.42"
+              }
+            ],
+            "asset_id": "105394105339110726116352184253965536170478608741551277757086274171372291499398",
+            "bids": [
+              {
+                "price": "0.01",
+                "size": "80.02"
+              },
+              {
+                "price": "0.02",
+                "size": "2010.78"
+              },
+              {
+                "price": "0.03",
+                "size": "250"
+              },
+              {
+                "price": "0.04",
+                "size": "153"
+              },
+              {
+                "price": "0.05",
+                "size": "10.36"
+              },
+              {
+                "price": "0.1",
+                "size": "21"
+              },
+              {
+                "price": "0.11",
+                "size": "51.01"
+              },
+              {
+                "price": "0.12",
+                "size": "74.66"
+              }
+            ],
+            "hash": "6f21e14c2538ea50a1d2651ad3ab98ac4e5b3ce9",
+            "last_trade_price": "0.200",
+            "market": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "min_order_size": "5",
+            "neg_risk": false,
+            "tick_size": "0.01",
+            "timestamp": "1792410421829"
+          },
+          "http_status": 200,
+          "outcome": "No",
+          "received_utc": "2026-10-19T11:51:55.468861+00:00",
+          "request_id": "books_batch_01_03",
+          "request_raw_sha256": "b4d4e6719af2ab6ec0b2684e9cce04817f3e591f3b569c8a5ed6de6b6af9ea00",
+          "token_id": "105394105339110726116352184253965536170478608741551277757086274171372291499398"
+        }
+      ],
+      "capture_errors": [],
+      "criteria_exact_match": true,
+      "current_gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "acceptingOrders": true,
+        "acceptingOrdersTimestamp": "2026-09-17T22:37:53Z",
+        "active": true,
+        "approved": true,
+        "archived": false,
+        "automaticallyActive": true,
+        "bestAsk": 0.88,
+        "bestBid": 0.82,
+        "clearBookOnStart": true,
+        "clobRewards": [
+          {
+            "assetAddress": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+            "conditionId": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+            "endDate": "2500-12-31",
+            "id": "2192672",
+            "rewardsAmount": 0,
+            "rewardsDailyRate": 1,
+            "startDate": "2026-10-19"
+          }
+        ],
+        "clobTokenIds": "[\"86162224776343888886171117538586024970725460762072739326955806353276889875249\", \"105394105339110726116352184253965536170478608741551277757086274171372291499398\"]",
+        "closed": false,
+        "comboStatus": "disabled",
+        "competitive": 0.8908685968819599,
+        "conditionId": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+        "createdAt": "2026-09-17T22:37:26.267784Z",
+        "customLiveness": 0,
+        "cyom": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-09-17T22:37:42.990114Z",
+        "description": "This market will resolve to \"Yes\" if the listed artist is confirmed as a featured or credited artist on \"Grand Theft Auto VI: The Album\", scheduled for release on November 19, 2026. Otherwise, this market will resolve to \"No\".\n\nTo qualify as \"featured\", the listed artist must be credited on at least one track on the album according to Rockstar Games' official tracklist or artist announcements (https://www.rockstargames.com/VI/music). If this information is unavailable from Rockstar's official sources, official album credits listed on major streaming platforms (e.g., Spotify, Apple Music) may be used instead.\n\nIf the album fails to release by November 26, 2026, 11:59 PM ET, this market will resolve to \"No\".\n\nThe resolution source of this market will be Rockstar Games' official GTA VI: The Album page (https://www.rockstargames.com/VI/music) and associated official Rockstar announcements, or official album credits listed on major streaming platforms (e.g., Spotify, Apple Music).",
+        "enableOrderBook": true,
+        "endDate": "2026-11-26T00:00:00Z",
+        "endDateIso": "2026-11-26",
+        "fallbackResolutionType": "none",
+        "featured": false,
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.05,
+          "rebateRate": 0.25,
+          "takerOnly": true
+        },
+        "feeType": "culture_fees",
+        "feesEnabled": true,
+        "funded": false,
+        "groupItemThreshold": "7",
+        "groupItemTitle": "Kodak Black",
+        "hasReviewedDates": true,
+        "holdingRewardsEnabled": false,
+        "icon": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gta-vi-released-before-june-2026-igCgZsDMejF1.jpg",
+        "id": "4662688",
+        "image": "https://polymarket-upload.s3.us-east-2.amazonaws.com/gta-vi-released-before-june-2026-igCgZsDMejF1.jpg",
+        "lastTradePrice": 0.8,
+        "liquidity": "233.725",
+        "liquidityClob": 233.725,
+        "liquidityNum": 233.725,
+        "makerBaseFee": 1000,
+        "manualActivation": false,
+        "marketMakerAddress": "",
+        "negRisk": false,
+        "negRiskOther": false,
+        "new": false,
+        "oneDayPriceChange": -0.005,
+        "oneMonthPriceChange": 0.41,
+        "oneWeekPriceChange": 0.02,
+        "orderMinSize": 5,
+        "orderPriceMinTickSize": 0.01,
+        "outcomePrices": "[\"0.85\", \"0.15\"]",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "pendingDeployment": false,
+        "question": "Will Kodak Black be featured on GTA VI: The Album?",
+        "questionID": "0x84faaa1f91a3b0b3bb4f58ea06343b308b7922613d05439140ed612e492cec5b",
+        "ready": false,
+        "resolutionSource": "https://www.rockstargames.com/VI/music",
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "rewardsMaxSpread": 6.5,
+        "rewardsMinSize": 20,
+        "rfqEnabled": false,
+        "showGmpOutcome": false,
+        "showGmpSeries": false,
+        "slug": "will-kodak-black-be-featured-on-gta-vi-the-album",
+        "spread": 0.06,
+        "startDate": "2026-09-17T22:37:53Z",
+        "startDateIso": "2026-09-17",
+        "takerBaseFee": 1000,
+        "umaBond": "500",
+        "umaResolutionStatuses": "[]",
+        "umaReward": "5",
+        "updatedAt": "2026-10-19T11:51:13.312013Z",
+        "version": "v1",
+        "volume": "5662.099303999999",
+        "volume1mo": 4209.809789000001,
+        "volume1moClob": 4209.809789000001,
+        "volume1wk": 878.9752290000001,
+        "volume1wkClob": 878.9752290000001,
+        "volume1yr": 5662.099303999999,
+        "volume1yrClob": 5662.099303999999,
+        "volume24hr": 124.57215200000002,
+        "volume24hrClob": 124.57215200000002,
+        "volumeClob": 5662.099303999999,
+        "volumeNum": 5662.099303999999
+      },
+      "frozen_identity": {
+        "condition_id": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+        "criteria_sha256": "3e3c5b576cf7433d0a4f3bb818c55d1cdec38d1997cbfb4e9db5a4f9e568df35",
+        "market_id": "4662688",
+        "question": "Will Kodak Black be featured on GTA VI: The Album?"
+      },
+      "gamma_receipt": {
+        "path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_gamma.receipt.json",
+        "raw_sha256": "bb19e6afc4798d2c2563a1dc2a13ccaa71ee5e1bec84c7471368fcd646bd8cb8",
+        "received_utc": "2026-10-19T11:51:55.330464+00:00",
+        "status_code": 200
+      },
+      "identity_checks": {
+        "condition_id": true,
+        "description": true,
+        "endDate": true,
+        "market_id": true,
+        "outcomes": true,
+        "question": true,
+        "resolutionSource": true,
+        "slug": true,
+        "token_ids": true
+      },
+      "optionalfee_descriptor": {
+        "descriptor": {
+          "e": 1.0,
+          "r": 0.05,
+          "to": true
+        },
+        "gzip_sha256": "88eae847203baa3919dc4011e88e26bead3ee75361decf4020cb76d11bd9e559",
+        "http_status": 200,
+        "raw_sha256": "282d4e3a16164ebef1906fd26ba45919105a19b24da5fea9e4bae62b245583d6",
+        "receipt_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_fee.receipt.json",
+        "received_utc": "2026-10-19T11:51:55.422792+00:00",
+        "structured_gamma_parity": true
+      },
+      "review_index": 340
+    }
+  ],
+  "clob_transport_receipts": [
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_gamma.body.json.gz",
+      "gzip_sha256": "bb568f64274f5e99524c09dcc93f9ad9935e0054171f84fe5d84ced7432cb3c3",
+      "method": "GET",
+      "raw_bytes": 4110,
+      "raw_sha256": "bb19e6afc4798d2c2563a1dc2a13ccaa71ee5e1bec84c7471368fcd646bd8cb8",
+      "receipt_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_gamma.receipt.json",
+      "received_utc": "2026-10-19T11:51:55.330464+00:00",
+      "request_id": "0340_gamma_01",
+      "started_utc": "2026-10-19T11:51:55.213358+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://gamma-api.polymarket.com/markets/4662688"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_fee.body.json.gz",
+      "gzip_sha256": "88eae847203baa3919dc4011e88e26bead3ee75361decf4020cb76d11bd9e559",
+      "method": "GET",
+      "raw_bytes": 460,
+      "raw_sha256": "282d4e3a16164ebef1906fd26ba45919105a19b24da5fea9e4bae62b245583d6",
+      "receipt_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/0340_fee.receipt.json",
+      "received_utc": "2026-10-19T11:51:55.422792+00:00",
+      "request_id": "0340_fee_02",
+      "started_utc": "2026-10-19T11:51:55.331197+00:00",
+      "status_code": 200,
+      "type": "http",
+      "url": "https://clob.polymarket.com/clob-markets/0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6"
+    },
+    {
+      "gzip_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/books_batch_01.body.json.gz",
+      "gzip_sha256": "d9a1f6b864db67afe2aff776cc5a8444f4e53d8f37815ee6fbd1e1b27d4f7d51",
+      "method": "POST",
+      "raw_bytes": 1761,
+      "raw_sha256": "b4d4e6719af2ab6ec0b2684e9cce04817f3e591f3b569c8a5ed6de6b6af9ea00",
+      "receipt_path": "logs/deep_review_20261017/quotes_0340_current_1151/public/books_batch_01.receipt.json",
+      "received_utc": "2026-10-19T11:51:55.468861+00:00",
+      "request_id": "books_batch_01_03",
+      "started_utc": "2026-10-19T11:51:55.423452+00:00",
+      "status_code": 200,
+      "type": "books_batch",
+      "url": "https://clob.polymarket.com/books"
+    }
+  ],
+  "created_utc": "2026-10-19T11:51:55.469830+00:00",
+  "freshness_note": "Compute age from matched receipt; no price or freshness gate is implied here.",
+  "freshness_threshold_seconds": 180,
+  "gamma_host_blocked_http": {},
+  "host_blocked_http": {},
+  "schema": "polyclaude.deep_review_quote_resume.v1",
+  "scope_indices": [
+    340
+  ],
+  "source_rules_path": "research/2026-10-17-primary-market-review-rules.jsonl.gz"
+}

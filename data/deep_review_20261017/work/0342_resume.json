@@ -1,0 +1,16 @@
+{
+  "review_index": 342,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "source_paths": [
+    "work/0342_ru_ukraine_meeting_facts.json",
+    "work/0342_current_meeting_followup_1156.json",
+    "work/0342_diplomacy_delta_1200.json"
+  ],
+  "quotes": "work/quotes_1132_0338_0340_0342.json",
+  "crux": "CreationOct9; explicit endNov30ET, startnotliteral. PriorFeb/Sept contextnotautomaticYES. OfficialOct18phone/USteammeetingnotprovenjointauthorizedphysicalRussiaUkraine. Need exactphysical/mediatorinterpretation plus boundedcurrentoriginals.",
+  "input": "data/deep_review_20261017/work/0342_primary_input_1203.json",
+  "model_path": "research/2026-10-17-deep-review/models/0342_primary_1203.json",
+  "economics": "data/deep_review_20261017/work/0342_economics_1203.json",
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0342.md",
+  "effective_report_sha256": "b05f1433de1243608fa18c256d6480728bcd99d2eccaa525eb5c23d95cb352ec"
+}

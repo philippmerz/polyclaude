@@ -1,0 +1,46 @@
+{
+  "schema": "case342_current_facts_followup.v1",
+  "observed_utc": "2026-10-19T11:56:53Z",
+  "identity": {
+    "review_index": 342,
+    "market_id": "5468002",
+    "condition_id": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+    "criteria_sha256": "16630f8619f7d07cd7f2bf35b8008cf02456261203da0ecb8c1d595f077d6036",
+    "question": "Will Russia and Ukraine hold any diplomatic meeting by November 30, 2026?",
+    "created_at_utc": "2026-10-09T17:28:35.966833Z",
+    "end_date_utc": "2026-12-01T04:59:00Z",
+    "description_matches_frozen": true,
+    "current_status": {"active": true, "closed": false, "acceptingOrders": true, "enableOrderBook": true, "umaResolutionStatus": null, "umaResolutionStatuses": []},
+    "gamma_capture": {"path": "logs/deep_review_20261017/0342_current_1154/gamma_market.body.json.gz", "receipt": "logs/deep_review_20261017/0342_current_1154/gamma_market.receipt.json", "http_status": 200, "received_utc": "2026-10-19T11:54:47.925557Z", "raw_sha256": "9122a70b97f9b2cc3e8c2fe358764a6ec9b438addd7292d337a74ebb375c6232", "gzip_sha256": "515cdbc9e84b3700f6e45d4f2aef6975eb32180f028cdb32c3a1018684b5c0c8"}
+  },
+  "rule": "Intentional official-capacity representatives authorized for Russia-Ukraine diplomacy; a designated mediator may qualify only with both governments' knowledge and authorization. Must be in person and publicly acknowledged by either government or credible-media consensus. Remote calls, chance greetings, and merely proposed talks do not qualify.",
+  "window_note": "Gamma creation is Oct 9. The frozen description gives an end deadline but no express start date; this packet records creation time without deciding whether earlier events satisfy literal settlement wording.",
+  "reused_prior_facts": {
+    "packet": "data/deep_review_20261017/work/0342_ru_ukraine_meeting_facts.json",
+    "scope": "It records Feb 17 Geneva negotiations and Sep 6/7 Ukraine-US envoy contacts, all before Gamma creation; the Geneva account does not establish Russia-Ukraine representatives met in person, and the Kyiv account describes Ukraine-US talks plus proposed trilateral talks.",
+    "prior_direct_access_gaps": "Official Ukraine Geneva and latest-page direct GETs returned 403 on Oct 19 at 11:30Z; browser-rendered text was used instead. Receipts: logs/deep_review_20261017/case342_public_1132/"
+  },
+  "current_official_observations": [
+    {
+      "url": "https://www.president.gov.ua/en/news/prezident-proviv-rozmovu-z-predstavnikami-prezidenta-ssha-106949",
+      "parent_index": "https://www.president.gov.ua/en/news/last",
+      "page_date": "2026-10-18 17:58 (site display; timezone unstated)",
+      "browser_observed_utc": "2026-10-19T11:56:33Z",
+      "method": "Official-site browser rendering; no new raw HTTP body/hash. Prior direct latest-page 403 is documented above.",
+      "facts": "The President's Office says Zelensky had a phone call with US envoys Witkoff and Kushner and discussed the results of a meeting between Ukrainian and American teams in Florida. It says next diplomatic steps were being prepared, without naming Russian participants, an in-person Russia-Ukraine meeting, or a date for one."
+    },
+    {
+      "url": "https://www.whitehouse.gov/gallery/u-s-envoys-visit-russia-and-ukraine/",
+      "browser_observed_utc": "2026-10-19T11:56:33Z",
+      "method": "Official White House browser rendering; no local raw body/hash retained.",
+      "facts": "Official photo captions say US envoys met Putin in Moscow on Sep 5 and travelled to Kyiv to meet Zelensky on Sep 6. These were separate US-Russia and US-Ukraine contacts, dated before Gamma creation; source does not describe a joint or mediated Russia-Ukraine meeting."
+    }
+  ],
+  "bounded_gaps": {
+    "kremlin_direct_index": {"url": "https://en.kremlin.ru/events/president/news", "intent": "logs/deep_review_20261017/0342_current_official_1154/kremlin_news.intent.json", "started_utc": "2026-10-19T11:55:34.212037Z", "result": "Direct request stalled; it was terminated without a response, status, or body. This is not an HTTP denial or evidence of no event."},
+    "russian_mfa": "Not requested after the Kremlin index stalled.",
+    "search_coverage": "Bounded official-domain web searches for Kremlin/MFA and Ukraine Oct 2026 talks surfaced the Ukraine current-news page but no Kremlin/MFA result. Not an exhaustive search or proof of absence.",
+    "upcoming_talks": "The Oct 18 Ukrainian page says next diplomatic steps are being prepared but gives no date, participants from Russia, or confirmed meeting. No dated qualifying future meeting established in reviewed material."
+  },
+  "conclusion_limit": "Factual-source packet only. It does not resolve a qualifying meeting or assign probability."
+}

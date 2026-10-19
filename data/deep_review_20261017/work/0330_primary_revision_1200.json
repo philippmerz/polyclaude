@@ -1,0 +1,164 @@
+{
+  "review_index": 330,
+  "condition_id": "0x741bb46008b72234857c5118c8365ab3c2f69dbf28b30b59de04f173b8a778de",
+  "criteria_sha256": "1bd0be8b74d4a3af087c1279d823b8f03b04d948d47eb0daa0fcd616444cbe4e",
+  "status": "valued",
+  "literal_analysis": "Nov3 Alaska Senate winner includingrunoffs; allAP/Fox/NBCcallsame elseofficialcert, noJul312027confirmed→Other. DanSullivan exactCID distinct fromotherSullivannames/governor.",
+  "evidence": [
+    {
+      "url": "https://www.callthemap.com/polls/SEN-AK",
+      "observed_utc": "2026-10-19T10:57:55.907042Z",
+      "finding": "Root read/hashverifiedsecondaryPPP(D)Oct14–15,n578RV,48Peltola/47DanSullivan; originalinstrumentmissing."
+    },
+    {
+      "url": "https://www.publicpolicypolling.com/polls/democratic-senate-prospects-looking-up/",
+      "observed_utc": "2026-10-19T11:18:07.554900Z",
+      "finding": "Root read/hashverifiedoriginalPPPJan22DSCC49Peltola/47Sullivan; notOctoberpoll."
+    },
+    {
+      "url": "https://www.elections.alaska.gov/candidates/?election=26genr",
+      "observed_utc": "2026-10-19T11:18:07.040495Z",
+      "finding": "DirectTLSfailed, no body; officialsearch listsbothSullivannamesbutpriorJuneeligibilityconflictcurrentballotnotclosed."
+    },
+    {
+      "url": "https://insideradvantage.com/insideradvantage-u-s-senate-surveys-alaska-ranks-choice-peltola-50-sullivan-48-kansas-hamilton-48-marshall-47-michigan-el-sayed-48-rogers-46/",
+      "observed_utc": "2026-10-19T11:26:58.273635+00:00",
+      "finding": "Root independently read/hash-verified publisher headline and body: Oct9–10,1200LV, weighted, MOE2.83%, headline labels Alaska Ranks Choice50/48. Original wording/round not supplied; directory disagreement retained."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.35,
+    "low": 0.1,
+    "high": 0.75,
+    "method": "Primary poll-to-final-margin scenario with shared error; original rank-choice-labelled publisher now available.",
+    "reasoning": "Original InsiderAdvantage Oct9–10 headline explicitly labels rank choice Peltola50/Sullivan48. Root verified full publisher body/hash and all25 directory rows. Use Sullivan final-margin center−2pp, total predictive SD5pp, giving P(margin>0)=34.46% rounded35%. Five points is subjective shared polling/turnout/RCV/remaining-campaign uncertainty, not sampling SE or fitted calibration. Latest secondary PPP48/47 direction is consistent; no 25-independent-poll precision or partisan numerical correction.",
+    "actual_entry_reserve_pp": 15.0,
+    "model_path": "research/2026-10-17-deep-review/models/0330_primary_1200.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+    "quote_file_sha256": "e975c0e361296c4098621dda83c5273611c07ce9e503dddc750ae0e8664b2f2b",
+    "quote_capture_utc": "2026-10-19T10:56:00.580349+00:00",
+    "gamma_received_utc": "2026-10-19T10:56:00.381003+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 18.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.35,
+        "selected_stress_probability": 0.19999999999999998,
+        "best_bid": 0.25,
+        "best_ask": 0.27,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792407360000",
+        "book_received_utc": "2026-10-19T10:56:00.483378+00:00",
+        "book_age_seconds_at_receipt": 0.48337793350219727,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.7,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.27
+              }
+            ],
+            "net": 2.7788500000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.5,
+            "fee": 0.075,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.25
+              }
+            ],
+            "net": 2.425
+          }
+        },
+        "taker_cost_usd": 2.7788500000000003,
+        "central_expected_profit_usd": 0.7211499999999997,
+        "selected_stress_profit_usd": -0.7788500000000005,
+        "break_even_before_carry": 0.27788500000000005,
+        "break_even_constant_carry": 0.27831067186746955,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.65,
+        "selected_stress_probability": 0.5,
+        "best_bid": 0.73,
+        "best_ask": 0.75,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792407360000",
+        "book_received_utc": "2026-10-19T10:56:00.483378+00:00",
+        "book_age_seconds_at_receipt": 0.48337793350219727,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.5,
+            "fee": 0.075,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.75
+              }
+            ],
+            "net": 7.575
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.3,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.73
+              }
+            ],
+            "net": 7.22115
+          }
+        },
+        "taker_cost_usd": 7.575,
+        "central_expected_profit_usd": -1.0750000000000002,
+        "selected_stress_profit_usd": -2.575,
+        "break_even_before_carry": 0.7575000000000001,
+        "break_even_constant_carry": 0.7586603592839058,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Provisional YES35%, broad10–75; both dated routes fail15pp decision stress. No entry; substantive valued revision replaces block without hiding remaining gaps.",
+  "reopen_condition": "Material original current RCV tabs/official candidate-field evidence or measured turnout/poll change; reassess both sides and current correlated election exposure before any entry.",
+  "portfolio_action": "none",
+  "report_markdown": "# 330 — Alaska Senate: original publisher permits a provisional valuation\n\n- **Primary Sullivan YES35%; scenario10–75%; selected YES20%/NO50% after15pp reserve. No entry.** The earlier blocked report remains immutable. [Primary model](../models/0330_primary_1200.json) · [dated economics](../../../data/deep_review_20261017/work/0330_economics_1200.json).\n- Root independently read/hash-verified the [original poll publisher](../../../data/deep_review_20261017/work/0330_insideradvantage_original_1128.json): Oct9–10,1,200 likely voters, demographic/party weights, stated MOE2.83%; headline labels Alaska **Ranks Choice**, Peltola50/Sullivan48. The full question, transfer method/round and tabs remain unavailable. This is stronger than a directory first-choice number, enough for a provisional forecast with explicit model risk.\n- Root also read all25 [directory rows](../../../data/deep_review_20261017/work/0330_callthemap_poll_rows_1125.json) and verified original body SHA03b258…26b. They are not25 independent polls: repeated ASR dates, shared methods, different rounds and age. Latest secondary PPP Oct14–15 shows48/47; directory IA48.2/42.6 and alternate50.9/45 conflict with publisher50/48. Do not average these as interchangeable final margins or import the directory's D+1.9 as a forecast.\n- Use final Sullivan margin center−2pp and **subjective** predictive SD5pp for shared poll error, turnout, remaining campaign and RCV uncertainty: normal P(win)=34.46%, rounded35%. This is an uncalibrated scenario, not sampling precision from n1,200 or inferred from the quote. A center near0 or+2 would materially lift p; range10–75 retains those alternatives. No numerical partisan-bias adjustment is asserted.\n- Exact contract is November3 Senate winner, including runoffs; early call requires AP/Fox/NBC all agree, otherwise certification; unconfirmed by July31,2027→Other. Current ballot pages failed TLS; two similar Sullivan names/June eligibility conflict and poll-round binding remain unresolved. These widen the scenario/reserve and require review before a trade. No downloaded certified-ballot claim; an unrelated governor poll supplies no Senate evidence.\n- At dated10:56 YES25/27c and NO73/75c, tenYES taker cost2.77885. Central YES35% can offer value, but selected20% fails25c join and26c improved maker; selected taker profit−0.77885 before carry/operations. NO65% fails even centrally. **15pp reserve** includes10ordinary+5source/round/field uncertainty. Broader source confirmation could reopen this contrarian thesis; this is a reviewed skip, not a mechanical exclusion for missing data.\n",
+  "market_id": "634974"
+}

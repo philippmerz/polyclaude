@@ -1,0 +1,39 @@
+{
+  "schema": "bounded-public-facts-v1",
+  "review_index": 342,
+  "frozen_identity": {
+    "market_id": "5468002",
+    "condition_id": "0xeec3372bdb747d77f77200e3e7fb6f77df50ccf15cbb25675dfdc35fc16e0daf",
+    "question": "Will Russia and Ukraine hold any diplomatic meeting by November 30, 2026?",
+    "criteria_sha256": "16630f8619f7d07cd7f2bf35b8008cf02456261203da0ecb8c1d595f077d6036",
+    "created_at_utc": "2026-10-09T17:28:35.966833Z",
+    "end_date_utc": "2026-12-01T04:59:00Z"
+  },
+  "operative_rule": "Deliberate official-capacity representatives authorized to negotiate/diplomacy; designated mediators may qualify if governments know and authorize; must be in-person and publicly acknowledged by either government or consensus credible media. Remote/phone does not count.",
+  "facts": [
+    {
+      "event_date": "2026-02-17",
+      "publication_date": "2026-02-18 11:45 (page display; timezone unspecified)",
+      "issuer": "Office of the President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/prezident-viznachiv-podalshi-kroki-ta-poziciyi-ukrayinskoyi-102921",
+      "reported": "Zelensky met Ukraine's negotiating group after meetings with American and Russian sides in Geneva on Feb 17; he referred to 'conversations with the current representatives of Russia.' The page separately says Ukrainian and American delegations met UK, France, Germany, Italy and Switzerland representatives.",
+      "limits": "Supports a publicly acknowledged Geneva negotiation sequence involving Russian and Ukrainian government sides and U.S. participation. Does not specify that Russian and Ukrainian representatives met each other in the same room, identify authorization for the U.S. to mediate between them, or expressly describe a trilateral/indirect Russia-Ukraine meeting. Exact qualifying status unresolved; page calls Geneva but does not explicitly state in-person attendance. Event precedes market creation on Oct 9."
+    },
+    {
+      "event_date": "2026-09-06/07",
+      "issuer": "Office of the President of Ukraine",
+      "url": "https://www.president.gov.ua/en/news/vidnovlennya-peregovornogo-procesu-ye-vazhlivim-i-ukrayina-v-106273",
+      "reported": "Zelensky met U.S. envoys in Kyiv; page says U.S. team had talks with Russia's head and Ukraine then discussed possibilities to restart negotiations. It also says envoys discussed arranging trilateral talks.",
+      "limits": "The described Kyiv meetings were Ukraine-U.S.; text does not say Russian representatives were present. A prospective trilateral format is not itself a held meeting."
+    }
+  ],
+  "current_evidence_limit": "Official Ukraine site latest-news snippets available via browser showed items dated through Oct 18, including a conversation with U.S. presidential envoys, not an identified Russia-Ukraine meeting. This bounded page view is not a comprehensive search and cannot establish no later qualifying meeting.",
+  "capture": {
+    "directory": "logs/deep_review_20261017/case342_public_1132/",
+    "direct_gets": [
+      {"name":"geneva","status":403,"raw_sha256":"cbd13aad3c5488e46c0d5165b5b2aedc7cc15ecef8524a9c1ad1b4a56a542b13","gzip_sha256":"e1dbcc212488880c85e416e29b08faa13f115282a4d74457577868e79a9bef0a","received_utc":"2026-10-19T11:30:27.926445Z"},
+      {"name":"latest","status":403,"raw_sha256":"adddf075ff003dad01b8c3dd94daba6226b5b3acf25620132801b0927bbb3ca3","gzip_sha256":"357a8f4fba042f94fd0aad91063ee5297ad53c73c73d300734e1b9df37af653a","received_utc":"2026-10-19T11:30:28.043862Z"}
+    ],
+    "body_source": "Browser-readable official pages, opened 2026-10-19; direct-call receipts are 403 bodies and do not bind the browser-rendered text."
+  }
+}

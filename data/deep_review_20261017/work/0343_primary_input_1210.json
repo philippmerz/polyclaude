@@ -1,0 +1,159 @@
+{
+  "review_index": 343,
+  "market_id": "1117275",
+  "condition_id": "0xf59fe744e8f73124ccd8b351b101c51cd29bb449dab73b83ed74d05603b0dfb2",
+  "criteria_sha256": "0ed1c45d01820f29a7e4614e7c2bd9432dbf676e9f142f3897464715c7e01afe",
+  "status": "valued",
+  "literal_analysis": "Trump officially announces InsurrectionAct1807 legalauthority for active-duty deployment or federalizingGuard inresponsecivil disorder/insurrection/rebellion, byDec31 23:59ET. Threat/nonexclusion/stateofemergency/Title32Guard alone notqualifying. Formal declaration can count even if laterjudiciallyblocked; modeldoesnotconditiononlawfulness/winninglitigation.",
+  "evidence": [
+    {
+      "url": "https://ca.time.com/donald-trump-2026-interview-transcript/",
+      "observed_utc": "2026-10-19T12:03:51.353059+00:00",
+      "finding": "Rootread/hashverifiedOct1interview: neverused/coulduse, notformalannouncement."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/08/additional-measures-to-address-the-crime-emergency-in-the-district-of-columbia/",
+      "observed_utc": "2026-10-19T12:03:52.895406+00:00",
+      "finding": "Rootread/hashverified2025EO14339Title32/DCmeasures distinctfromActauthority."
+    },
+    {
+      "url": "https://oag.dc.gov/release/attorney-general-schwalb-issues-statement-0",
+      "observed_utc": "2026-10-19T12:05:06.344714Z",
+      "finding": "OAGOct14partyaccountofappeal, notformalinvocation/finalcourtdecision."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.22,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Mutually exclusive first-trigger regime / formal-announcement forecast; not historical invocation frequency.",
+    "reasoning": "Direct Oct1 Trump transcript says he had not used it and could, not a binding promise. Formal Act authority is distinct from Title32/DC deployment and generic emergency declaration. The October14 litigation/October18shooting give current institutional and disorder catalysts, but no verified qualifying announcement. Political willingness and trigger severity dominate; this administration is not a stationary sample of prior US years.21% regime mixture plus1% residual documentation/adjudication tail=>21.79%, rounded22%. Subjective uncalibrated weights; wide5\u201365 stress may change economics.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0343_primary_1210.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1158_0343_0344_0346.json",
+    "quote_file_sha256": "c30370dedb306ea2cb92a81c6a20c7f1b62d8bae00f01b64ac6f7b32537e10c9",
+    "quote_capture_utc": "2026-10-19T11:58:52.202559+00:00",
+    "gamma_received_utc": "2026-10-19T11:58:51.737024+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.22,
+        "selected_stress_probability": 0.07,
+        "best_bid": 0.12,
+        "best_ask": 0.17,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792411042660",
+        "book_received_utc": "2026-10-19T11:58:52.099994+00:00",
+        "book_age_seconds_at_receipt": 89.4399938583374,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7000000000000002,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.17
+              }
+            ],
+            "net": 1.75645
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.2,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.12
+              }
+            ],
+            "net": 1.15776
+          }
+        },
+        "taker_cost_usd": 1.75645,
+        "central_expected_profit_usd": 0.4435500000000001,
+        "selected_stress_profit_usd": -1.05645,
+        "break_even_before_carry": 0.175645,
+        "break_even_constant_carry": 0.17675376520366531,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.78,
+        "selected_stress_probability": 0.63,
+        "best_bid": 0.83,
+        "best_ask": 0.88,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792411042660",
+        "book_received_utc": "2026-10-19T11:58:52.099994+00:00",
+        "book_age_seconds_at_receipt": 89.4399938583374,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.8,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.88
+              }
+            ],
+            "net": 8.84224
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.299999999999999,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.83
+              }
+            ],
+            "net": 8.243549999999999
+          }
+        },
+        "taker_cost_usd": 8.84224,
+        "central_expected_profit_usd": -1.0422399999999996,
+        "selected_stress_profit_usd": -2.5422400000000005,
+        "break_even_before_carry": 0.884224,
+        "break_even_constant_carry": 0.8898056949155725,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry: YES22% central/7% selected;NO78%/63%; datedbothsidesfail15ppstress despitepossible centralYESvalue.",
+  "reopen_condition": "FormalActannouncement or credibleimminentplan/materialpoliticalcourt-disorderchange, exactrulesandfreshgates.",
+  "portfolio_action": "none",
+  "report_markdown": "# 343 \u2014 Insurrection Act: formal announcement risk, no entry\n\n- **Primary YES22%, scenario5\u201365%; selected YES7%/NO63% after15pp reserve. No entry.** [Primary model](../models/0343_primary_1210.json) \u00b7 [both-side economics](../../../data/deep_review_20261017/work/0343_economics_1210.json).\n- Literal trigger is Trump's formal announcement of **Insurrection Act authority** for active-duty deployment or Guard federalization in response to disorder, byDec31 23:59ET. Threats, a generic emergency or Guard deployment under another authority are insufficient. A formally announced use may qualify even if courts later block implementation; this is a settlement forecast, not a legal-validity opinion.\n- Root read/hash-verified [original sources](../../../data/deep_review_20261017/work/0343_invocation_followup_1215.json). In the Oct1 TIME interview Trump said he had not used the Act but might use it. This reports his statement as ofOct1, not proof no later action. White House Aug2025 DC memorandum and EO14339 specify DC/Title32 structures without the Act; these are counterexamples to treating soldiers on streets as automatic YES.\n- [Current addendum](../../../data/deep_review_20261017/work/0343_current_source_addendum_1205.json): DCOAG describes Oct14 appellate hearing and stayed preliminary injunction; it is the litigating party's account, not a new final judgment. WaPo reports a Guard member shot while intervening in an Oct18 local fight, with non-life-threatening injury; no new authority/Act invocation reported. The incident may create political salience without meeting this predicate. AP403/UScode500 and bounded search leave coverage gaps, not proof of absence.\n- Subjective first-trigger regimes through year-end:25% election confrontation\u00d745% formal use,30% other disorder/court confrontation\u00d725%,45% routine/no escalation\u00d75% \u219221%. Add1% documentation/adjudication tail conditional on no formal use \u219221.79%, rounded22%. These are uncalibrated political judgments, not a historical base rate or independence claim for correlated triggers. Wide5\u201365% alternatives retain possible regime escalation.\n- Dated11:58 YES12/17c and NO83/88c,4% nonlinear/exponent1/taker-only,min5/tick1c. YES central can have value; selected7% fails even12c join, and NO63% fails83c.15pp reserve includes10ordinary+5legal-path/short-fuse/source uncertainty. No measured-tail exception for future presidential discretion. Fees/carry worsen the skip; no new order, prior or watcher.\n- Reopen on actual formal presidential authority, a credible specific imminent plan, material election/disorder escalation or new litigation forcing a different authority. Check literal declaration and contemporary books rather than converting a headline into a trade.\n"
+}

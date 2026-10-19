@@ -1,0 +1,1 @@
+{"name":"amazon_sep09_8k","request":{"method":"GET","read_only":true,"scope":"Official SEC Amazon 8-K filed after Q2 2026, check for material investment/accounting update","url":"https://www.sec.gov/Archives/edgar/data/1018724/000101872426000036/amzn-20260908.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:21:18.768689Z","timing_basis":"call_window"}

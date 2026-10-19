@@ -1,0 +1,9 @@
+{
+  "alert_id": "e1caba4b23115abbd10efcdb5f7aa480156acfd2",
+  "alert_utc": "2026-10-19T11:27:14Z",
+  "held_exposure": "No direct causal evidence for Whale, MI, or Messi holdings.",
+  "publisher": "The Decoder",
+  "result": "Publisher page captured HTTP 200; raw SHA 754f3e5096aebe9a9728f878cba928cb50b4899736cc7f0d27afe4ad42723b18; gzip+receipt: logs/deep_review_20261017/entry340_alert_followup_1155/decoder_candidate.*. Published 2026-10-19T11:19:12Z. Captured page headline differs: “Anthropic plans fund for workers threatened by AI, Musk counters with SpaceX shares for children.” It describes an Anthropic worker fund structured as a wholly owned LLC subsidiary; article says company retains control, ahead of IPO. This verifies topic, not alert’s precise framing.",
+  "reviewed_utc": "2026-10-19T11:53:21Z",
+  "title": "Anthropic cushions its upcoming IPO with a discretionary fund for workers its models might replace"
+}

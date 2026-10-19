@@ -1,0 +1,174 @@
+{
+  "review_index": 340,
+  "condition_id": "0x8d0d8ebbce741b5ce6b30ef38407ffeb7abe876ec17d47c6a7a9b05dbca1e6c6",
+  "criteria_sha256": "3e3c5b576cf7433d0a4f3bb818c55d1cdec38d1997cbfb4e9db5a4f9e568df35",
+  "status": "valued",
+  "literal_analysis": "Credited/featuredARTISTonGTA6TheAlbumtrack, viaRockstarofficialtracklist/artistannouncement; conditionalmajorplatformcreditsfallback. Game/radioinclusionisnotsamealbumcredit. AlbumnotreleasedbyNov26 23:59ET→NO. Performervswriter/samplecreditinterpretationexplicituncertainty.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-19T11:28:47.493702Z",
+      "finding": "Rootoriginalbody/hash00ee…e2d: separatealbum/radio,34originaltracks/selected9singles, notcompletecredits."
+    },
+    {
+      "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+      "observed_utc": "2026-10-19T11:34:31.554858Z",
+      "finding": "Rootbody/hashverifiedprerelease34tracks/incompletecredits; noKodak/Kapristringisnotexclusion."
+    },
+    {
+      "url": "https://insider-gaming.com/every-confirmed-artist-song-for-grand-theft-auto-6-the-album/",
+      "observed_utc": "2026-10-19T11:38:26.440047Z",
+      "finding": "Rootfullarticle/hashc291…908a claims27confirmedalbumrowsincludingKodakSkrilla; tablemixingolderpreviewtracks/unlinkedprimarycreditisload-bearingambiguity."
+    },
+    {
+      "url": "https://data-api.polymarket.com/trades",
+      "observed_utc": "2026-10-19T11:42:48.253424+00:00",
+      "finding": "Public100-rowcapturein0340_public_trades_1210.json; ordinaryNOSELL-labelledrows13–20c, role/coverage/conditionalfilllimits; noaccountquery."
+    },
+    {
+      "url": "https://gtanews.fr/en/articles/gta-6-the-album-official-soundtrack-34-tracks/",
+      "observed_utc": "2026-10-19T11:52:12.738Z",
+      "finding": "Newly examined Sep18 album-specific unfinished Kodak/Don Toliver leak report; secondary/relay, not final official credit. Root source hash verified."
+    },
+    {
+      "url": "https://x.com/GTASixInfo/status/2101054901728231530",
+      "observed_utc": "2026-10-19T11:52:32.459Z",
+      "finding": "Root read/hash-verified original relay posted Sep18 21:04:58Z. Attributes TexFunz2; disabled media cannot authenticate final credit. Not independent corroboration of its reporting descendants."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.66,
+    "low": 0.25,
+    "high": 0.98,
+    "method": "Source-scope thesis updated for newly examined album-specific leak relay; explicit subjective likelihood ratio, not new official credit.",
+    "reasoning": "Prior exact-credit/release mixture49.679%YES omitted a Sept18 report of an unfinished Kodak Black/Don Toliver album session. Root traced article to GTASixInfo relay attributing TexFunz2. Source/media and final inclusion unverified. Treat observed album-specific report as subjective LR2 favoring qualifying YES versus NO, discounted for shared reporting and abandoned demos; prior odds updated to66.38%, rounded66%. Article and relay are one evidence chain, not independent confirmations.",
+    "actual_entry_reserve_pp": 25.0,
+    "model_path": "research/2026-10-17-deep-review/models/0340_primary_1200.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342.json",
+    "quote_file_sha256": "1e16963cb79ea3f24b0cb8bb1cd03ebd2662bfc927c6e2009779bad2b4582cf0",
+    "quote_capture_utc": "2026-10-19T11:29:02.313506+00:00",
+    "gamma_received_utc": "2026-10-19T11:29:02.009508+00:00",
+    "hypothetical_gross_shares": 8.0,
+    "horizon_days": 40.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 25.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.66,
+        "selected_stress_probability": 0.41000000000000003,
+        "best_bid": 0.8,
+        "best_ask": 0.88,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792409320990",
+        "book_received_utc": "2026-10-19T11:29:02.210340+00:00",
+        "book_age_seconds_at_receipt": 21.22034001350403,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 8.0,
+            "gross": 7.04,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 8.0,
+                "price": 0.88
+              }
+            ],
+            "net": 7.08224
+          },
+          "bids": {
+            "complete": true,
+            "filled": 8.0,
+            "gross": 6.4,
+            "fee": 0.064,
+            "fills": [
+              {
+                "shares": 8.0,
+                "price": 0.8
+              }
+            ],
+            "net": 6.336
+          }
+        },
+        "taker_cost_usd": 7.08224,
+        "central_expected_profit_usd": -1.8022399999999994,
+        "selected_stress_profit_usd": -3.8022399999999994,
+        "break_even_before_carry": 0.88528,
+        "break_even_constant_carry": 0.8882963684494583,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.33999999999999997,
+        "selected_stress_probability": 0.08999999999999997,
+        "best_bid": 0.12,
+        "best_ask": 0.2,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792409320990",
+        "book_received_utc": "2026-10-19T11:29:02.210340+00:00",
+        "book_age_seconds_at_receipt": 21.22034001350403,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 8.0,
+            "gross": 1.6,
+            "fee": 0.06401,
+            "fills": [
+              {
+                "shares": 8.0,
+                "price": 0.2
+              }
+            ],
+            "net": 1.66401
+          },
+          "bids": {
+            "complete": true,
+            "filled": 8.0,
+            "gross": 0.96,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 8.0,
+                "price": 0.12
+              }
+            ],
+            "net": 0.9177599999999999
+          }
+        },
+        "taker_cost_usd": 1.66401,
+        "central_expected_profit_usd": 1.0559899999999998,
+        "selected_stress_profit_usd": -0.9440100000000002,
+        "break_even_before_carry": 0.20800125,
+        "break_even_constant_carry": 0.20870996182896698,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Withdraw unplaced NO13c candidate: newly examined album-specific leak raises primaryYES50→66%; NO9% selected fails13c. No order/prior/config/reservation change.",
+  "reopen_condition": "Official complete artist credits or reliable direct album-specific evidence changes p enough to clear robust conditional-fill economics; then all fresh execution/source-coverage/correlation gates. No automatic bid/repost or candidate-only watcher.",
+  "portfolio_action": "none",
+  "report_markdown": "# 340 — Kodak Black album: new evidence withdraws the unplaced NO candidate\n\n- **Primary YES66%/NO34%; scenario YES25–98%; selected YES41%/NO9% after unchanged25pp reserve. No entry.** Earlier50% forecast/candidate remains immutable. [Revised model](../models/0340_primary_1200.json) · [dated economics](../../../data/deep_review_20261017/work/0340_economics_1200.json) · [fresh source audit](../../../data/deep_review_20261017/work/0340_current_source_addendum_1152.json).\n- The exact criterion requires album artist credit, not game/radio inclusion. The earlier27-song roundup could conflate them, but a newly examined **September18** evidence chain describes an unfinished Kodak Black/Don Toliver album track. Root read and verified the captured article and linked GTASixInfo post. Both trace to TexFunz2; they are one chain. The original media/source is unverified, and a copyright removal is not official authentication or final credit. This report predates today's forecast; the information gap was ours.\n- Apply a transparent **subjective LR2** to the prior49.679%YES mixture: posterior66.38%, rounded66%. The report is more likely if an album credit ultimately qualifies, while abandoned demos/misattribution remain credible. LR is discounted judgment, not measured forecasting skill. LR1.5 gives59.69%, LR3 gives74.76%; source uncertainty is material and broad25–98% scenarios remain.\n- Retain25pp stress: NO9% selected implies0.72 expected terminal value for8NO versus1.04 candidate cost at13c, **−0.32 before carry/operations**. Central EV alone remains positive; conditional fills may be substantially worse. YES fails at dated80/88c. The former tiny-size rationale does not rescue a failed entry gate.\n- Fresh11:51 metadata matches exact CID/assets/criteria and current5% taker schedule. The captured books were293.64seconds old at receipt, beyond180seconds; no executable current-price claim. Current partial Rockstar page lists **eight album singles plus a separate Justice score single**; the earlier nine-album-single count overcounted that score. Apple partial credits still prove no exclusion. No complete tracklist was captured.\n- Existing news feeds do not demonstrate full-credit coverage. A targeted RSS query worked but was incomplete and is unconfigured; no new watcher is needed for this unplaced candidate. No order, prior, reservation or config changed. Reopen only on material source/credit evidence and robust economics, followed by all fresh account/legal/cost/correlation/monitoring gates.\n",
+  "market_id": "4662688"
+}

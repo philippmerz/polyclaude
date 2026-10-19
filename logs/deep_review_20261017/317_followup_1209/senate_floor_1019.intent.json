@@ -1,0 +1,1 @@
+{"name":"senate_floor_1019","request":{"call_window_label":"senate_floor_1019","method":"GET","read_only":true,"scope":"case317_clarity_status_schedule_followup","url":"https://www.senate.gov/legislative/LIS/floor_activity/10_19_2026_Senate_Floor.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:07:14.082880Z","timing_basis":"call_window"}

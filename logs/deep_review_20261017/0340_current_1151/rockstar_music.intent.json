@@ -1,0 +1,1 @@
+{"name":"rockstar_music","request":{"call_window_label":"case340_current_music_pages","method":"GET","read_only":true,"scope":"public current album/artist listing","url":"https://www.rockstargames.com/VI/music"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:52:00.635890Z","timing_basis":"call_window"}

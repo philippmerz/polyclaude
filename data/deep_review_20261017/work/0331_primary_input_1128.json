@@ -1,0 +1,153 @@
+{
+  "review_index": 331,
+  "condition_id": "0xad8766930faedb3abbe8e047e3290cc8e1981dc332ffadb6be80e5e0dee5faf8",
+  "criteria_sha256": "5d9e34749d7d5d151048f52160e01b9de345a4054e28c444e7df8cf55320463a",
+  "status": "valued",
+  "literal_analysis": "Publicdefinitivefederal/OpenAIattributionincreation–Dec31ETwindow toSaudiGOV/intelligence/security/stateaffiliatedentity forAlfozanincident, notnationality/suspicion/association. Allegationcountswithoutconviction/truth, laterretractionirrelevant.",
+  "evidence": [
+    {
+      "url": "https://www.justice.gov/opa/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai",
+      "observed_utc": "2026-10-19T11:17:26.576385Z",
+      "finding": "Rootfullbody/hashverifiedOct13allegedrecordingdevices/wiretapcharge/NSDframing; noSaudi-stateattributioninthisrelease, notproofabsentelsewhere."
+    },
+    {
+      "url": "https://www.justice.gov/usao-ndca/pr/saudi-national-arrested-installing-surreptitious-audio-recording-device-openai-san",
+      "observed_utc": "2026-10-19T11:17:34.923213Z",
+      "finding": "HTTP200interstitialnotarticle; indexedOct19hearingnotdirectbodyconfirmed, nochallengebypass."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.24,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Explicitunfittedmotives-to-public-attributionbranchmixture.",
+    "reasoning": "Observedcovertdevice/counterintelligenceframing supports sponsorinvestigation,butneithernationalitynorforeign-threatboilerplatequalifies. Conditionalpublicattributiontree24.4%rounded24; broadsource/motiveuncertainty.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0331_primary_1128.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336.json",
+    "quote_file_sha256": "102a27951028618dcdaaa7a408cb0fbeaa96112dfa5e34bcb3b948536ab2461a",
+    "quote_capture_utc": "2026-10-19T11:17:29.539030+00:00",
+    "gamma_received_utc": "2026-10-19T11:17:29.020950+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.24,
+        "selected_stress_probability": 0.09,
+        "best_bid": 0.23,
+        "best_ask": 0.27,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792408648943",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 0.47097182273864746,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.7,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.27
+              }
+            ],
+            "net": 2.7788500000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.3000000000000003,
+            "fee": 0.07084,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.23
+              }
+            ],
+            "net": 2.2291600000000003
+          }
+        },
+        "taker_cost_usd": 2.7788500000000003,
+        "central_expected_profit_usd": -0.37885000000000035,
+        "selected_stress_profit_usd": -1.8788500000000004,
+        "break_even_before_carry": 0.27788500000000005,
+        "break_even_constant_carry": 0.2796629392996858,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.76,
+        "selected_stress_probability": 0.61,
+        "best_bid": 0.73,
+        "best_ask": 0.77,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792408648943",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 0.47097182273864746,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.7,
+            "fee": 0.07084,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.77
+              }
+            ],
+            "net": 7.77084
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.3,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.73
+              }
+            ],
+            "net": 7.22115
+          }
+        },
+        "taker_cost_usd": 7.77084,
+        "central_expected_profit_usd": -0.1708400000000001,
+        "selected_stress_profit_usd": -1.67084,
+        "break_even_before_carry": 0.777084,
+        "break_even_constant_carry": 0.7820558703159832,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "CurrentYEScentralasknegative/joinmakerthin; bothsidesfailselected15ppstress. Noentry; unobservedfiling/hearingriskisnotexoneration.",
+  "reopen_condition": "Currentofficialfiling/statementforSaudi-stateattributionorforensic/proceduralupdate, thenprimaryrevisionandfreshquote/catalyst/fullgates.",
+  "portfolio_action": "none",
+  "report_markdown": "# 331 — Saudi-state allegation in OpenAI case: YES24%, no entry\n\n- **Primary YES24%, scenario5–65%; selected YES9%/NO61% after15pp reserve.** [Primary model](../models/0331_primary_1128.json) · [both-side economics](../../../data/deep_review_20261017/work/0331_economics_1128.json). No order/prior/watch change; no conclusion about alleged offender's guilt or actual sponsor.\n- Entire exact rule requires a definitive public allegation by US federal government/authorized representative or OpenAI, within creation–Dec31ET, that AbdulrahmanAlfozan acted for Saudi government/intelligence/security/state-affiliated entity in this incident. Nationality, contacts, cooperation, speculation or generic ties do not qualify. Conviction/true attribution unnecessary; later retraction cannot undo a qualifying statement. Broad state-affiliate wording matters; not just Saudi intelligence service.\n- [Original DOJ/source bindings](../../../data/deep_review_20261017/work/0331_sources_facts.json), root read full body/SHAe5db…a3d0: Oct9arrest/Oct13appearance, alleged two recording devices, encrypted USB recorder, unauthorized conference-room access and DIY chatbot prompts; wiretap charge, NSD/counterintelligence framing. Release does **not** state Saudi-state tasking. Foreign-threat boilerplate/nationality are not that assertion; absence in one release proves neither global absence nor self-directed motive. Complaint itself not linked/retrieved.\n- Primary disjoint motive hypotheses35% Saudi-state-affiliate tasking×63% public qualifying allegation;25% other sponsor×3% still Saudi attribution;40% self-directed/indeterminate×4%. Sum24.4%→24%. These are subjective conditional judgments, not independent measured frequencies or an empirical nationality-based base rate. Future forensics, charging changes and deliberate nondisclosure dominate; actual motive and eventual public allegation can differ.5–65% sensitivity permits large reversals.\n- DOJ district-page GET returned bot interstitial, not body; official search excerpt suggests Oct19 detention hearing, exact procedure/time unconfirmed. Source gap is unobserved, not proof no upcoming statement; no repeated/challenge workaround. This is a possible near-term catalyst requiring refreshed review before any resting bid, not authorization to assume its outcome.\n- Dated11:17 sorted YES23/27c, NO73/77c,4% curve/exponent1/taker-only/min5/tick1c. TenYEScost2.77885, central-0.37885/selected-1.87885; tenNO7.77084, central-0.17084/selected-1.67084. Maker23/73c also fails15pp stress. Compare75dayvariableAave3.1525% plus operations/funding/settlement tail, not annualized headline returns.\n- Reopen on exact official filings/authorized public attribution, verified procedural/forensic change or materially changed after-cost economics. A qualifying state allegation could make YES nearly settled, but only current source/criteria/account/legal/depth/full-fill/correlation/vetted route gates authorize action. No unsupported bond-tail K5 or rumor-baseddirection assumed.\n"
+}

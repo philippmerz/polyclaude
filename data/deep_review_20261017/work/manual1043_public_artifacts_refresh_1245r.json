@@ -1,0 +1,72 @@
+{
+  "added_entries": 155,
+  "included_audit": "data/deep_review_20261017/work/ledger_audit_closeout_1235.json",
+  "limits": "Historic 1215 shards and prior 1245 shards preserved. New shards deduplicate paths against historic shards. Source transport clocks remain captured; manifest clock is actual writer clock. No mutable resume/progress/ledger or private captures included.",
+  "new_combined_index": {
+    "b": 13248,
+    "h": "503c98e843572221cf6c673eab37d20de8b11db39ed1c56e7d7b9ff885e4c501",
+    "n": 59,
+    "p": "data/deep_review_20261017/work/manual1043_public_artifacts_shards_1245r.json"
+  },
+  "new_master_sha256": "ce5622aaecf63ddc8c1cf2c88abf7969543e50ceffdebbce2efe114496a9048c",
+  "new_shards": [
+    {
+      "b": 7069,
+      "h": "f3ad1c64a6d8e8c9c58b4b2d33087f9a3c5cbf67e9a645fd95a1254114571aea",
+      "n": 28,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_01.json"
+    },
+    {
+      "b": 7112,
+      "h": "20ba7a2b91c7bc40a87276f37afc0c58394f12d1e4abda6cc27b177c8733f79f",
+      "n": 24,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_02.json"
+    },
+    {
+      "b": 7067,
+      "h": "08c1e56e5638e0928eb288f760e2295328b5ef01ea53794f96423999642b2c73",
+      "n": 24,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_03.json"
+    },
+    {
+      "b": 7096,
+      "h": "11fd094c978fdbc9b5133b18f9b8cc16e3d3fe2c9329ba57a714912b73db646f",
+      "n": 23,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_04.json"
+    },
+    {
+      "b": 7033,
+      "h": "c8036b507da9e2cff795bcd913d2322ad96662573dc1dcd99f090ed265cf5f49",
+      "n": 23,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_05.json"
+    },
+    {
+      "b": 7161,
+      "h": "fb1f624394d42192a39a3eded1f44635f4b91835f1706b6038a03d7437402a8b",
+      "n": 25,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_06.json"
+    },
+    {
+      "b": 2023,
+      "h": "c67b8cae4c52a5ab1ae26b01fac979eccfaa1d8ed1bfd965e01877ddb9b063d9",
+      "n": 7,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_07.json"
+    },
+    {
+      "b": 373,
+      "h": "a29f3c1d95fbe48cc07bd8ad63f3efad34a715692e24ceb99d68912041f175bd",
+      "n": 1,
+      "p": "data/deep_review_20261017/work/manual1043_public_artifacts_1245r_shard_08.json"
+    }
+  ],
+  "prior_index": "data/deep_review_20261017/work/manual1043_public_artifacts_shards_1215.json",
+  "removed_duplicate_new_path": "data/deep_review_20261017/work/0317_status_followup_1209.json",
+  "schema": "manual_public_artifact_allowlist_refresh.v1",
+  "source_only_cases_added": [
+    "0353",
+    "0355",
+    "0356"
+  ],
+  "timestamp_correction": "Prior quote_public_portability_map_1245.json retains prospective 12:45:00Z label; corrected copy is timestamped with actual writer UTC and explicitly records the correction.",
+  "updated_utc": "2026-10-19T12:43:23Z"
+}

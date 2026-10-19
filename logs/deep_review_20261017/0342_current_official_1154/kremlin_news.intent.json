@@ -1,0 +1,1 @@
+{"name":"kremlin_news","request":{"call_window_label":"case342_current_official_index","method":"GET","read_only":true,"scope":"current public Russian government news index for diplomatic-event statements","url":"https://en.kremlin.ru/events/president/news"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:55:34.212037Z","timing_basis":"call_window"}

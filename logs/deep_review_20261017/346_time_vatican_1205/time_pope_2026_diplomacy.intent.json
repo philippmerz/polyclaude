@@ -1,0 +1,1 @@
+{"name":"time_pope_2026_diplomacy","request":{"call_window_label":"time_pope_2026_diplomacy","method":"GET","read_only":true,"scope":"case346_time_vatican_official_context","url":"https://time.com/7345087/pope-leo-war-diplomacy-vatican-venezuela-trump-russia-ukraine/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:04:24.339147Z","timing_basis":"call_window"}

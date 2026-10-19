@@ -1,0 +1,1 @@
+{"name":"google_news_album_query","request":{"call_window_label":"case340_album_rss_probe","method":"GET","read_only":true,"scope":"bounded public RSS coverage probe only; not watcher configuration","url":"https://news.google.com/rss/search"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T11:53:50.466802Z","timing_basis":"call_window"}

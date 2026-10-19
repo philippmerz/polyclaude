@@ -1,0 +1,32 @@
+{
+  "receipt": {
+    "schema": "read_capture.response.v1",
+    "name": "senate_rollcall_234",
+    "timing_basis": "call_window",
+    "started_utc": "2026-10-19T12:17:18.444192Z",
+    "received_utc": "2026-10-19T12:17:19.165371Z",
+    "response_status": 403,
+    "error_type": null,
+    "headers": {
+      "content-length": "507",
+      "content-type": "text/html",
+      "cache-control": "max-age=0, no-cache",
+      "date": "Mon, 19 Oct 2026 12:17:19 GMT"
+    },
+    "body_representation": "http_body",
+    "hash_scope": "supplied_bytes_only_not_wire_authentication",
+    "request": {
+      "read_only": true,
+      "method": "GET",
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.xml",
+      "scope": "Official Senate roll-call vote 234 referenced by GovInfo H.R.3633 record"
+    },
+    "raw_bytes": 507,
+    "raw_sha256": "cbffd777f9242025546db9f38950029561a62cb553eeb8ad17b1583a9be99919",
+    "gzip_sha256": "5942c2f7c3daa70fb75709e76ac256c2481f78bc50213922036957eab560b1ba",
+    "body_path": "senate_rollcall_234.body.json.gz"
+  },
+  "url_final": "https://www.senate.gov/legislative/LIS/roll_call_votes/vote1192/vote_119_2_00234.xml",
+  "status": 403,
+  "text": "<HTML><HEAD>\n<TITLE>Access Denied</TITLE>\n</HEAD><BODY>\n<H1>Access Denied</H1>\n \nYou don't have permission to access \"http&#58;&#47;&#47;www&#46;senate&#46;gov&#47;&#36;&#40;SERVE&#95;403&#41;&#47;legislative&#47;LIS&#47;roll&#95;call&#95;votes&#47;vote1192&#47;vote&#95;119&#95;2&#95;00234&#46;xml&#63;\" on this server.<P>\nReference&#32;&#35;18&#46;b751c317&#46;1792412239&#46;946f0dc0\n<P>https&#58;&#47;&#47;errors&#46;edgesuite&#46;net&#47;18&#46;b751c317&#46;1792412239&#46;946f0dc0</P>\n</BODY>\n</HTML>\n"
+}

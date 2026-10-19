@@ -1,0 +1,17 @@
+{
+  "name": "pcgamer",
+  "url": "https://www.pcgamer.com/games/grand-theft-auto/big-new-gta-6-gameplay-details-revealed-including-specifics-about-jason-and-lucia-character-swapping-play-as-a-couple-or-go-off-and-cause-chaos-independently/",
+  "method": "GET",
+  "started_utc": "2026-10-19T11:38:25.992091+00:00",
+  "received_utc": "2026-10-19T11:38:26.249464+00:00",
+  "elapsed_s": 0.317,
+  "status": 200,
+  "error_type": null,
+  "content_type": "text/html; charset=utf-8",
+  "date": "Mon, 19 Oct 2026 11:38:26 GMT",
+  "age": "261338",
+  "body_bytes": 1997858,
+  "body_sha256": "766df5b86d7ee11b2d42053d1cc203d1aab22231cb359f6b83136079fa596076",
+  "body_gzip_path": "logs/deep_review_20261017/0340_claim_check_1200/pcgamer.body.gz",
+  "body_gzip_sha256": "c1f3344da609e5159d1dedc6081bdd2adfe095db36d4bd3812a7f1c175017612"
+}

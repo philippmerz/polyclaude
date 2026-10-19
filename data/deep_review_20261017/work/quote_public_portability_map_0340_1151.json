@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-19T11:58:09.754874+00:00",
+  "schema": "quote_public_portability_map.v1",
+  "source_copies": [
+    {
+      "original_path": "data/deep_review_20261017/quotes_0340_current_1151.json",
+      "original_sha256": "98f3cf848b28a357d3b5493330357cff69f90f788841b8ff0525717e618506f1",
+      "public_copy_bytes": 14902,
+      "public_copy_path": "data/deep_review_20261017/work/quotes_0340_current_1151_public.json",
+      "public_copy_sha256": "179c784759779ec49e4e768739d0756a3995bcd68c6553156d33dea81feba773",
+      "public_receipts_retained": "All three Gamma, fee and public books receipts retained in the copy.",
+      "redactions": [
+        "/geoblock field (null; removed)",
+        "/clob_transport_receipts[geoblock] (none present)"
+      ],
+      "scope_indices": [
+        340
+      ],
+      "timestamp_limit": "Book snapshot age at receipt is 293.64 seconds (captured in source addendum); this is historical public quote context, not an execution certificate."
+    }
+  ],
+  "validation": "No geographic/private geoblock response or private account payload copied."
+}

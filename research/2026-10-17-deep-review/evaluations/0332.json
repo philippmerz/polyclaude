@@ -1,0 +1,158 @@
+{
+  "review_index": 332,
+  "condition_id": "0x11d01d09738f8831494c0f6a3b9712ccbc717ef01458208a8dab13779c5e0594",
+  "criteria_sha256": "998da57a1bbfcd556473457907da290f0f595bd266a0025faae8b72c5ddecb48",
+  "status": "valued",
+  "literal_analysis": "Preferred USGS>=8.5, origins exactcreationSep30throughNov1 03:59:59Z; third-dayrevision/possibleoneweekextension; noothersources, sourceunavailabilityNOunlessresumesasrule.",
+  "evidence": [
+    {
+      "url": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+      "observed_utc": "2026-10-19T11:18:12.119871Z",
+      "finding": "Rootraw/hashverifiedexactstartquery>=8.0count0throughOct19 11:17:59; historic1900–2025>=8.5has17uniqueearthquakefeatures/mw-mww; notfutureabsence."
+    },
+    {
+      "url": "https://data-api.polymarket.com/trades",
+      "observed_utc": "2026-10-19T11:28:48.282730Z",
+      "finding": "Rootraw/hashverified93publictraderows;3SELL-labelledNOprintsdo notidentifyownfillrate orcounterpartynews/queue. No account query."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.006,
+    "low": 0.001,
+    "high": 0.03,
+    "method": "Unfitted stationaryGamma-Poisson remaining globalhazard plus explicitrevision/nonstationarity allowance; separateconditional-fill diagnostics.",
+    "reasoning": "17events/126years yields~0.47%remainingPoisson/~0.48%GammaPoisson for12.69days; roundup0.6%allowsunmeasuredrevision/regimerisk. Currentzero>=8doesnotpredictfuture; passivefillselectionuncertain.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0332_primary_1137.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336.json",
+    "quote_file_sha256": "102a27951028618dcdaaa7a408cb0fbeaa96112dfa5e34bcb3b948536ab2461a",
+    "quote_capture_utc": "2026-10-19T11:17:29.539030+00:00",
+    "gamma_received_utc": "2026-10-19T11:17:29.194365+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 17.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.006,
+        "selected_stress_probability": 0,
+        "best_bid": 0.003,
+        "best_ask": 0.065,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792408478219",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 171.19497179985046,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.65,
+            "fee": 0.03039,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.065
+              }
+            ],
+            "net": 0.68039
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.03,
+            "fee": 0.0015,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.003
+              }
+            ],
+            "net": 0.028499999999999998
+          }
+        },
+        "taker_cost_usd": 0.68039,
+        "central_expected_profit_usd": -0.62039,
+        "selected_stress_profit_usd": -0.68039,
+        "break_even_before_carry": 0.068039,
+        "break_even_constant_carry": 0.06813742959823095,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.994,
+        "selected_stress_probability": 0.844,
+        "best_bid": 0.935,
+        "best_ask": 0.997,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792408478219",
+        "book_received_utc": "2026-10-19T11:17:29.413972+00:00",
+        "book_age_seconds_at_receipt": 171.19497179985046,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.97,
+            "fee": 0.0015,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.997
+              }
+            ],
+            "net": 9.9715
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.350000000000001,
+            "fee": 0.03039,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.935
+              }
+            ],
+            "net": 9.31961
+          }
+        },
+        "taker_cost_usd": 9.9715,
+        "central_expected_profit_usd": -0.031500000000001194,
+        "selected_stress_profit_usd": -1.5315000000000012,
+        "break_even_before_carry": 0.9971500000000001,
+        "break_even_constant_carry": 0.9985925413935535,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NOcentralpassivevaluepotential exists, but currentaskfailscentral and makerconditional-fillriskunmeasured; selected15ppstressfailsbothroutes. Noentry.",
+  "reopen_condition": "MaterialUSGSpreferred-magnitudechange or currentbook/ordinaryflowevidence enablingconditional-fillriskbound, thenfullfreshentrygates; neverunconditionalpblindmaker.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T11:33:35.483930+00:00",
+  "question": "Will a 8.5+ earthquake occur worldwide by October 31?",
+  "market_id": "5155049",
+  "valuation_author": "primary_operator",
+  "original_index": 332,
+  "report_sha256": "d7abba1c290c1d9c144d228289dcb9f5f0d20f614e79338e1d74501522ca6df9"
+}

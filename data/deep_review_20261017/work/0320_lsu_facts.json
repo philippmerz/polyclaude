@@ -1,0 +1,133 @@
+{
+  "schema": "case320_lsu_season_facts.v1",
+  "captured_utc": "2026-10-19T10:43:38Z",
+  "frozen_identity": {
+    "review_index": 320,
+    "market_id": "3362505",
+    "condition_id": "0xd2c852aa9907e39c7152a8329d95728d34f1c356485631a76bc68e73fa8786e0",
+    "question": "Will LSU be a top 4 seed in the 2027 College Football Playoffs?",
+    "literal_rule": "Yes if LSU is seeded No. 1–4 in the 2026–27 CFP bracket. If CFP is canceled or official bracket not released by Dec. 20, 2026, 11:59 PM ET, all outcomes resolve No. Source: official CFP information or consensus of credible reporting.",
+    "criteria_sha256": "71860a2a7079a09ed4dcc4c52465025a56854dba8a3c70d1b70224034669543d"
+  },
+  "as_of": "Official LSU 2026 schedule/statistics pages captured Oct. 19, 2026 UTC; displayed through game dated Oct. 17.",
+  "record": {
+    "overall": "5–2",
+    "SEC": "2–2",
+    "page_displayed_streak": "W1",
+    "home": "5–0",
+    "away": "0–2"
+  },
+  "completed_results_2026": [
+    {
+      "date": "Sep 5",
+      "opponent": "Clemson",
+      "site": "home, Tiger Stadium",
+      "result": "W 51–10"
+    },
+    {
+      "date": "Sep 12",
+      "opponent": "Louisiana Tech",
+      "site": "home, Tiger Stadium",
+      "result": "W 45–14"
+    },
+    {
+      "date": "Sep 19",
+      "opponent": "Ole Miss",
+      "site": "away, Oxford",
+      "result": "L 24–32"
+    },
+    {
+      "date": "Sep 26",
+      "opponent": "Texas A&M",
+      "site": "home, Tiger Stadium",
+      "result": "W 35–6"
+    },
+    {
+      "date": "Oct 3",
+      "opponent": "McNeese",
+      "site": "home, Tiger Stadium",
+      "result": "W 63–14"
+    },
+    {
+      "date": "Oct 10",
+      "opponent": "Kentucky",
+      "site": "away, Lexington",
+      "result": "L 34–35 OT"
+    },
+    {
+      "date": "Oct 17",
+      "opponent": "Mississippi State",
+      "site": "home, Tiger Stadium",
+      "result": "W 31–0"
+    }
+  ],
+  "remaining_regular_season_schedule_as_displayed": [
+    {
+      "date": "Oct 24",
+      "opponent": "Auburn",
+      "site": "away, Jordan-Hare Stadium",
+      "kickoff": "11:00 AM CT"
+    },
+    {
+      "date": "Nov 7",
+      "opponent": "Alabama",
+      "site": "home, Tiger Stadium",
+      "kickoff": "TBA"
+    },
+    {
+      "date": "Nov 14",
+      "opponent": "Texas",
+      "site": "home, Tiger Stadium",
+      "kickoff": "TBA"
+    },
+    {
+      "date": "Nov 21",
+      "opponent": "Tennessee",
+      "site": "away, Knoxville",
+      "kickoff": "TBA"
+    },
+    {
+      "date": "Nov 28",
+      "opponent": "Arkansas",
+      "site": "away, Fayetteville",
+      "kickoff": "TBA"
+    }
+  ],
+  "injuries": "These retrieved schedule/statistics/game-recap sources did not provide a current official injury-status list; no injury claim made.",
+  "sources": [
+    {
+      "url": "https://lsusports.net/sports/fb/schedule/season/2026",
+      "receipt": "logs/deep_review_20261017/0320_lsu_1043/schedule.receipt.json",
+      "body": "logs/deep_review_20261017/0320_lsu_1043/schedule.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T10:43:36.668092Z",
+      "raw_sha256": "5839fd6f23f4afd79d968e94c40d20d494246c5cea2527992735485c53c777f3",
+      "gzip_sha256": "8d07ebaf4eeeb972032fcb1663e2ea93095612dc39e137b3cf35cc8bf58c1d75",
+      "raw_bytes": 802651,
+      "facts": "Official 2026 schedule page shows overall/SEC record, seven completed results, and remaining opponent/date/site entries."
+    },
+    {
+      "url": "https://lsusports.net/fbstats",
+      "receipt": "logs/deep_review_20261017/0320_lsu_1043/statistics.receipt.json",
+      "body": "logs/deep_review_20261017/0320_lsu_1043/statistics.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T10:43:37.235082Z",
+      "raw_sha256": "684b5f95deead6a415a53e4485d6b547c56c643662c1141a2cc8189164fbc475",
+      "gzip_sha256": "f9165eb399668ecb61f782b185ae205f4f3f95cbb5ff42b5dcda3efe9b8cba8a",
+      "raw_bytes": 1264181,
+      "facts": "Official 2026 statistics index independently displays record 5–2, SEC 2–2, and results through Oct. 17."
+    },
+    {
+      "url": "https://lsusports.net/news/2026/10/17/football-completes-shutout-vs-no-16-mississippi-state-31-0",
+      "receipt": "logs/deep_review_20261017/0320_lsu_1043/oct17_recap.receipt.json",
+      "body": "logs/deep_review_20261017/0320_lsu_1043/oct17_recap.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T10:43:37.846362Z",
+      "raw_sha256": "caa5fb33d5866068e11026b1b4cc339b0c72b5d882f7dcfb8d676b2c8d7991eb",
+      "gzip_sha256": "3a601c0b70e8fac389106e2ac10f9cc17a1e2976d373dd9417bc5d9ff7355b54",
+      "raw_bytes": 643884,
+      "facts": "Official LSU recap confirms Oct. 17 31–0 win over Mississippi State."
+    }
+  ],
+  "limits": "No CFP committee ranking/seed forecast fetched. The collected official LSU sources establish record/results/schedule, not LSU’s eventual CFP seed. Dates and kickoff times are as displayed on the captured schedule page."
+}

@@ -1,0 +1,11 @@
+{
+  "review_index": 322,
+  "phase": "COMPLETE; effective immutable report saved; do not record twice",
+  "primary_input": "work/0322_primary_input_1055.json",
+  "source_paths": [
+    "work/0322_kimi_hle_facts.json",
+    "work/0322_economics_1055.json"
+  ],
+  "effective_report": "research/2026-10-17-deep-review/evaluations/0322.md",
+  "effective_report_sha256": "ece8df29c1b52fbc004aa93908712721ccee5f787faa5144fd12028f79460d0a"
+}

@@ -1,0 +1,139 @@
+{
+  "schema": "case324_atlas_first_round_poll_facts.v1",
+  "compiled_utc": "2026-10-19T11:11:34Z",
+  "scope": "Offline extraction from already-captured original AtlasIntel PDF and already-captured official TSE BU totals; factual comparison only, no forecast.",
+  "identity": {
+    "review_index": 324,
+    "market_id": "5329577",
+    "condition_id": "0x0d9c9c308211e9008331e33be346c44c50da2d879ff6a739676ab553ea5b5297",
+    "criteria_sha256": "8ebb9d14997b0dec92979e6d3f36a95feb44e0cb436afa2c076b251473981167"
+  },
+  "original_atlas_pdf": {
+    "url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-AtlasIntel-Amapa-3out2026.pdf",
+    "title": "Pesquisa Atlas - Eleições Amapá 2026 - 261003",
+    "sha256": "2211fbf49607c106ac583a33a4b2010e05214d832c300419837b221722193e59",
+    "capture_receipt": "logs/deep_review_20261017/0324_atlas_pdf/pdf.receipt.json",
+    "captured_gzip_body": "logs/deep_review_20261017/0324_atlas_pdf/pdf.body.json.gz",
+    "pdf_pages": 36,
+    "poll_period": "2026-09-27 through 2026-10-02",
+    "respondent_profile": {
+      "n": 818,
+      "target": "Amapá electorate",
+      "method": "Atlas RDR (random digital recruitment)",
+      "mode": "organic recruitment during routine web navigation in geolocated territory, any device",
+      "margin": "±3 percentage points",
+      "confidence": "95%",
+      "registration": [
+        "AP-01238/2026",
+        "BR-02298/2026"
+      ]
+    },
+    "page_questions": {
+      "pdf_page_22_all_response": "Em quem você vai votar no primeiro turno das eleições presidenciais?",
+      "pdf_page_23_valid_vote": "Em quem você vai votar no primeiro turno das eleições presidenciais? [Votos válidos]"
+    },
+    "all_response_chart_page22_pct": [
+      {
+        "candidate": "Lula (PT)",
+        "pct": 44.5
+      },
+      {
+        "candidate": "Flávio Bolsonaro (PL)",
+        "pct": 37.8
+      },
+      {
+        "candidate": "Escritor Augusto Cury (Avante)",
+        "pct": 7.9
+      },
+      {
+        "candidate": "Renan Santos (Missão)",
+        "pct": 3.2
+      },
+      {
+        "candidate": "Ronaldo Caiado (PSD)",
+        "pct": 2.0
+      },
+      {
+        "candidate": "Outros",
+        "pct": 0.7
+      },
+      {
+        "candidate": "Voto branco/nulo",
+        "pct": 3.3
+      },
+      {
+        "candidate": "Não sei",
+        "pct": 0.6
+      }
+    ],
+    "other_footnote": "Atlas PDF page22 names Rui Costa Pimenta (PCO) 0.5%, Zema (Novo) 0.2%, Edmilson Costa (PCB) 0%, Hertz Dias (PSTU) 0% as constituents of “Outros”; remaining other-candidate values are not separately enumerated in this chart.",
+    "valid_vote_chart_page23_pct": [
+      {
+        "candidate": "Lula (PT)",
+        "pct": 46.3
+      },
+      {
+        "candidate": "Flávio Bolsonaro (PL)",
+        "pct": 39.3
+      },
+      {
+        "candidate": "Escritor Augusto Cury (Avante)",
+        "pct": 8.3
+      },
+      {
+        "candidate": "Renan Santos (Missão)",
+        "pct": 3.3
+      },
+      {
+        "candidate": "Ronaldo Caiado (PSD)",
+        "pct": 2.0
+      },
+      {
+        "candidate": "Outros",
+        "pct": 0.7
+      }
+    ],
+    "chart_denominators": "Page22 all-response percentages sum to 100.0 including blank/null and unsure. Page23 is separately labeled valid votes; displayed one-decimal figures sum to 99.9 from rounding.",
+    "chart_images": [
+      {
+        "page": 22,
+        "path": "logs/deep_review_20261017/0324_atlas_pdf/extracted_images/page22_Image23.jpg",
+        "sha256": "3a1f27f2b11825279e150cb2d3d558836517209c9755dcb59e9168c49bb153bd"
+      },
+      {
+        "page": 23,
+        "path": "logs/deep_review_20261017/0324_atlas_pdf/extracted_images/page23_Image24.jpg",
+        "sha256": "574bdcffda1ab8a4c084fd0472e5b329e339516cfde60ef2244344bdee4b0954"
+      }
+    ],
+    "extraction": "pypdf 6.21.1 from existing isolated /tmp/polyclaude_pdf_read; page charts extracted as embedded JPEGs and read visually. No new requests."
+  },
+  "official_tse_first_round_actual": {
+    "source_unit": "data/deep_review_20261017/work/0324_ap_totals_followup.json",
+    "captured_BU_zip_sha256": "4d15319c3a20984e421982e8cf61edd0e73cf53a82da658b8b6d00622ad84a92",
+    "published_SHA512_matched": true,
+    "election_date": "2026-10-04",
+    "official_BU_nominal_denominator": 464875,
+    "nominal_vote_share_pct": {
+      "Lula": 45.711858,
+      "Flávio Bolsonaro": 45.663458,
+      "Escritor Augusto Cury": 4.099382,
+      "Renan Santos": 2.439796,
+      "Ronaldo Caiado": 1.786287
+    },
+    "counts": {
+      "Lula": 212503,
+      "Flávio Bolsonaro": 212278,
+      "Escritor Augusto Cury": 19057,
+      "Renan Santos": 11342,
+      "Ronaldo Caiado": 8304
+    },
+    "actual_first_round_margin": "Lula +225 nominal votes over Flávio in the 2026-10-04 AP official BU aggregation.",
+    "denominator_caveat": "Official ZIP BU aggregation; this packet does not independently verify separate final TSE state-totalization table. Earlier unit records one 17-vote BU-coded candidate row whose registration/final-totalization status was unresolved; it does not affect Lula/Flávio 225-vote difference."
+  },
+  "comparison_limits": [
+    "Atlas pre-first-round poll and actual election are different dates; the poll is not a measurement of post-first-round campaign effects or Oct25 runoff electorate.",
+    "All-response and valid-votes tables are distinct denominators. For actual comparison, TSE rates above are nominal BU-file shares, so use care comparing them with Atlas valid-only percentages.",
+    "Atlas poll shows a substantially wider Lula-Flávio first-round gap than the later 225-vote TSE margin; this is a factual contrast, not a model correction or forecast."
+  ]
+}

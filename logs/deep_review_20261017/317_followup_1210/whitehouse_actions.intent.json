@@ -1,0 +1,1 @@
+{"name":"whitehouse_actions","request":{"call_window_label":"whitehouse_actions","method":"GET","read_only":true,"scope":"case317_clarity_status_schedule_followup","url":"https://www.whitehouse.gov/presidential-actions/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:07:26.236910Z","timing_basis":"call_window"}

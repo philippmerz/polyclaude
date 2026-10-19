@@ -1,0 +1,31 @@
+{
+  "schema": "deep_review.facts.v1",
+  "review_index": 349,
+  "market_id": "4470027",
+  "conditionId": "0x2e8f33b84686fac2bb77eb7d1276f2d844f8d9952150a9581a75cf05161aeaf4",
+  "criteria_sha256": "f355db538e8c80321238ce5b0e20d96b8a877c05b2beb4102fef15705d74318d",
+  "source": "https://www.banrep.gov.co/es/calendario-eventos",
+  "frozen_question": "Will the Central Bank of Colombia make no change to the monetary policy interest rate at the October meeting?",
+  "facts": [
+    "The live official calendar page captured Oct 19 includes the October 2026 Board meeting titled “Reunión de la Junta Directiva de octubre de 2026 - Decisión sobre la tasa de interés de intervención,” with start 2026-10-30 08:30 and end 13:00 in embedded calendar data. The time-zone field was not shown in the captured event record.",
+    "The same calendar page lists the Sept 30, 2026 Board decision as increasing the monetary-policy rate by 25 bp to 12.25%, effective Oct 1; minutes are listed as published Oct 5. The linked detailed September page returned an anti-bot challenge (HTTP 200 body), so its body did not independently load.",
+    "The frozen resolution is strictly the official October-meeting change versus the pre-meeting upper bound when a band is used; emergency changes outside the specified meeting do not count. The exact market supplies the Oct 30 date and official calendar URL."
+  ],
+  "gaps": [
+    "No October decision or outcome exists as of capture; the specified meeting is future.",
+    "Static captured calendar provides no explicit timezone for 08:30–13:00.",
+    "Linked September detail body inaccessible behind bot challenge; calendar listing provides the dated rate figure but not full decision rationale."
+  ],
+  "receipts": [
+    "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_calendar.receipt.json",
+    "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_september_decision.receipt.json",
+    "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_october_policy_meeting_detail.receipt.json"
+  ],
+  "quote_ref": "work/quotes_1218_facts_0349_0350_0352.json",
+  "timestamp_correction": {
+    "prior_label_value": "2026-10-19T12:18:42.601984Z",
+    "reason": "Prior value was derived from file creation mtime and mislabeled as capture time. That mtime is retained as filesystem metadata only; source observations remain the request/response receipt clocks already listed."
+  },
+  "compiled_utc": "2026-10-19T12:20:10.961801+00:00",
+  "filesystem_write_time_utc_before_this_correction": "2026-10-19T12:19:06.665931Z"
+}

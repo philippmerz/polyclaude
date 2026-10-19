@@ -1,0 +1,1 @@
+{"name":"occ_page","request":{"method":"GET","operation":"Official regulator source","read_only":true,"scope":"OCC Oct 8 enforcement release","url":"https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-87.html"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:10:43.864829Z","timing_basis":"call_window"}

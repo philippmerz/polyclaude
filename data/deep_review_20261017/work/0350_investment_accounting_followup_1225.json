@@ -1,0 +1,76 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 350,
+  "market_id": "5778679",
+  "condition_id": "0xdb0bd84336d779d0d738612dcd43331ba39380d9bf00af79665e22c702a181d8",
+  "frozen_criteria_sha256": "7a1c5c4a0bff9cb4286d241ca769070bb139886b522d2daf1edf73d6c7109dc3",
+  "observed_utc": "2026-10-19T12:25:36.597943Z",
+  "q2_anthropic_accounting": {
+    "method": "Anthropic convertible notes were available-for-sale debt at fair value, with unrealized changes in AOCI (Level 3). Converted nonvoting preferred is not equity-method; recorded at cost/measurement alternative with observable-price-change or impairment adjustments to Level 3 fair value in Other income. This is event-based observable-price adjustment, not a routine quoted-market mark.",
+    "q2_preferred_mark_usd_b": 50.5,
+    "h1_preferred_mark_usd_b": 62.8,
+    "preferred_carrying_usd_b": {
+      "2025-12-31": 14.8,
+      "2026-06-30": 92.5
+    },
+    "reclassification": "Q2 10-Q gives $4.5B rounded H1 reclassification gains for note conversions in Q1 2026; it does not separately state a Q2-only reclassification. Q1 10-Q table records $4.479B in Q1. Do not add the H1 amount again to Q2 EPS.",
+    "q2_other_income_expense_net_usd_b": 53.415,
+    "q2_total_nonoperating_income_usd_b": 53.396,
+    "other_income_components": "Q2 other-income net total includes the $50.5B preferred mark plus other valuation, warrant, FX and reclassification items. SEC Q2 disclosure says $53.4B Q2/$69.1B H1 mainly from preferred-price adjustments and reclassification; it does not provide a precise standalone-Q2 reclass split."
+  },
+  "q2_eps_denominator_and_tax": {
+    "diluted_weighted_avg_shares": 10903000000,
+    "interest_income_usd": 1295000000,
+    "interest_expense_usd": 1314000000,
+    "pretax_income_usd": 80857000000,
+    "tax_provision_usd": 18199000000,
+    "derived_tax_rate_pct": 22.5076,
+    "tax_rate_note": "Derived provision / pretax income; Amazon says interim provision uses estimated annual effective rate plus discrete items and is updated quarterly. H1 included $15.9B discrete expense primarily from Anthropic valuation; standalone Q2 discrete amount not identified here."
+  },
+  "post_q2_investments_and_updates": [
+    {
+      "date": "Q2 2026",
+      "source": "Q2 10-Q, Anthropic note",
+      "fact": "Amazon invested $5B each in Series G and Series H Anthropic nonvoting preferred in Q2. The related facility was initially capped at $20B and the Series H investment reduced remaining facility availability to $15B."
+    },
+    {
+      "date": "subsequent to 2026-06-30",
+      "source": "Q2 10-Q, OpenAI note",
+      "fact": "Amazon invested the remaining $21.3B of its OpenAI Series C commitment after quarter-end; no post-June valuation or Q3 P&L amount disclosed in this source."
+    },
+    {
+      "date": "2026-10-18",
+      "source": "Anthropic official announcement https://www.anthropic.com/news/public-benefit-fund",
+      "fact": "Subject to stockholder approval, 5% of Anthropic shares to be committed to a wholly owned public-benefit LLC; board may add 2% for each 50% rise in company value above an undisclosed baseline. The page gives no financing-round price/value or Amazon-specific accounting update."
+    }
+  ],
+  "financing_window_check": "Targeted official-domain search for Anthropic/OpenAI financing surfaced OpenAI’s Feb27 $110B announcement and Mar31 close at $852B post-money, both before Jul1. The displayed Anthropic news index had Oct18 benefit-fund and other announcements, not a priced funding round. This bounded search does not prove no private or unannounced financing occurred Jul1–Sep30.",
+  "sources": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000026/amzn-20260630.htm",
+      "receipt": "logs/deep_review_20261017/marketcap196_facts_1745/receipts.json",
+      "basis": "Official Q2 10-Q; direct GET 403, browser-rendered. Note 2 pp11–12 and MD&A pp32–33 give method, $50.5B Q2 mark, $4.5B H1 reclass, H1 tax and Q3 guide."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000014/amzn-20260331.htm",
+      "basis": "Q1 10-Q official search result displayed exact Q1 other-income table: reclassification $4.479B and upward private-equity adjustment $12.328B. No separate GET/raw capture in this follow-up."
+    },
+    {
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "receipt": "logs/deep_review_20261017/amazon350_incremental_1230/anthropic_public_benefit_oct18.receipt.json",
+      "body": "logs/deep_review_20261017/amazon350_incremental_1230/anthropic_public_benefit_oct18.body.json.gz",
+      "http": 200,
+      "received_utc": "2026-10-19T12:24:27.997548Z",
+      "raw_sha256": "f190ab32851466277182d16251267c697a582e9b1d16443970bac55c68289a74"
+    },
+    {
+      "url": "https://openai.com/index/accelerating-the-next-phase-ai/",
+      "basis": "Official OpenAI result states Mar31 close of $122B committed capital at $852B post-money; predates Q3."
+    }
+  ],
+  "gaps": [
+    "No standalone Q2 reclassification figure; Q1 precision and H1 rounded value are preserved without assigning the difference to Q2.",
+    "No Q3 Anthropic/OpenAI revaluation amount or Q3 EPS disclosure before Oct29 release.",
+    "Official financing search was bounded; private or unannounced financings remain unknown."
+  ]
+}

@@ -1,0 +1,91 @@
+{
+  "schema": "public_quote_copy_portability_map.v1",
+  "created_utc": "2026-10-19T11:29:19+00:00",
+  "source_copies": [
+    {
+      "original_path": "data/deep_review_20261017/work/quotes_1043_0320_0322_0324.json",
+      "original_sha256": "cb98aeed4304c9199249de82bd7eac2b0baaf5eef341eef5a5ea427e037b9c03",
+      "public_copy_path": "data/deep_review_20261017/work/quotes_1043_0320_0322_0324_public.json",
+      "public_copy_sha256": "19b7bb97b8e61df20f045664ff84960f17577bef084e67ef9d1585f3f0c17962",
+      "public_copy_bytes": 57620,
+      "redactions": [
+        "/geoblock (whole object: geographic fields and private receipt path/hash)",
+        "/clob_transport_receipts[7] (private/geoblock request entry)"
+      ]
+    },
+    {
+      "original_path": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+      "original_sha256": "e975c0e361296c4098621dda83c5273611c07ce9e503dddc750ae0e8664b2f2b",
+      "public_copy_path": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330_public.json",
+      "public_copy_sha256": "d18cbe4f584ffbc58e75feb6bd0b9a6aa412d2aaa4739fa945455b025d43814d",
+      "public_copy_bytes": 57738,
+      "redactions": [
+        "/geoblock (whole object: geographic fields and private receipt path/hash)",
+        "/clob_transport_receipts[7] (private/geoblock request entry)"
+      ]
+    },
+    {
+      "original_path": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336.json",
+      "original_sha256": "102a27951028618dcdaaa7a408cb0fbeaa96112dfa5e34bcb3b948536ab2461a",
+      "public_copy_path": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336_public.json",
+      "public_copy_sha256": "138ba52aaaeb2e9803e23d0d74f715ab2281fc1518d7aa4e2b85eb33d11a32d1",
+      "public_copy_bytes": 75504,
+      "redactions": [
+        "/geoblock (whole object: geographic fields and private receipt path/hash)",
+        "/clob_transport_receipts[7] (private/geoblock request entry)"
+      ]
+    }
+  ],
+  "economics_helper_validation": {
+    "helper": "scripts/deep_review_economics.py",
+    "method": "Offline original-vs-copy comparison. Full outputs were identical after removing only quote_file and quote_file_sha256 fields.",
+    "cases": [
+      {
+        "review_index": 320,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": false
+      },
+      {
+        "review_index": 322,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": false
+      },
+      {
+        "review_index": 324,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": false
+      },
+      {
+        "review_index": 326,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": false
+      },
+      {
+        "review_index": 328,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": true
+      },
+      {
+        "review_index": 330,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": true
+      },
+      {
+        "review_index": 331,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": false
+      },
+      {
+        "review_index": 332,
+        "result": "identical except quote_file and quote_file_sha256",
+        "diagnostic_only": true
+      },
+      {
+        "review_index": 336,
+        "result": "helper output identical on both files; not accepted as fee-endpoint validated",
+        "observed": "Gamma feesEnabled=false, feeSchedule=null; public fee endpoint descriptor is an error object (ValueError/status 200), unchanged; no descriptor filled"
+      }
+    ],
+    "limitations": "Saved model p_yes used where present. For 328, 330, 332 no adopted p_yes existed in the model snapshot, so diagnostic p=0.5 was used only to test copy equivalence. For 336, the helper uses explicit Gamma feesEnabled=false; the separately fetched fee descriptor remains an error and is not promoted to verified endpoint parity."
+  }
+}

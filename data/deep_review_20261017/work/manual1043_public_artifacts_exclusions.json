@@ -1,0 +1,155 @@
+{
+  "availability_gaps": [
+    "Index 330 has a blocked model/input and resume, not an adopted valuation.",
+    "Index 0330 remains blocked_after_review and is not valued; retain its block model and evaluation as a blocked record."
+  ],
+  "created_utc": "2026-10-19T11:29:44+00:00",
+  "deduplicated_body_aliases": [
+    {
+      "body_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical_body_path": "logs/deep_review_20261017/0320_power_1050/sagarin_cfb.body.json.gz",
+      "omitted_path": "logs/deep_review_20261017/0326_aph_1100/q2_10q.body.json.gz",
+      "reason": "decompressed body bytes identical; receipt remains included"
+    },
+    {
+      "body_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical_body_path": "logs/deep_review_20261017/0320_power_1050/sagarin_cfb.body.json.gz",
+      "omitted_path": "logs/deep_review_20261017/0328_google_people_1105/yis_2026_us.body.json.gz",
+      "reason": "decompressed body bytes identical; receipt remains included"
+    },
+    {
+      "body_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical_body_path": "logs/deep_review_20261017/0320_power_1050/sagarin_cfb.body.json.gz",
+      "omitted_path": "logs/deep_review_20261017/0330_alaska_1100/official_sample_ballots.body.gz",
+      "reason": "decompressed body bytes identical; receipt remains included"
+    },
+    {
+      "body_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical_body_path": "logs/deep_review_20261017/0320_power_1050/sagarin_cfb.body.json.gz",
+      "omitted_path": "logs/deep_review_20261017/0330_alaska_followup_1115/candidate_list.body.gz",
+      "reason": "decompressed body bytes identical; receipt remains included"
+    },
+    {
+      "body_raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "identical_body_path": "logs/deep_review_20261017/0320_power_1050/sagarin_cfb.body.json.gz",
+      "omitted_path": "logs/deep_review_20261017/0330_alaska_followup_1115/sample_ballots_index.body.gz",
+      "reason": "decompressed body bytes identical; receipt remains included"
+    }
+  ],
+  "excluded_artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/quotes_1043_0320_0322_0324.json",
+      "reason": "Combined quote packet contains geoblock.country/region and a private receipt path; preserved unchanged, excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+      "reason": "Combined quote packet contains geoblock.country/region and a private receipt path; preserved unchanged, excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1120_0331_0332_0336.json",
+      "reason": "Combined quote packet contains geoblock.country/region and a private receipt path; preserved unchanged, excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1043_facts.json",
+      "reason": "Quote fact summary includes geolocation fields; excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1043_facts_original_ordering_error.json",
+      "reason": "Quote fact summary includes geolocation fields; excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1056_facts.json",
+      "reason": "Quote fact summary includes geolocation fields; excluded."
+    },
+    {
+      "path": "logs/deep_review_20261017/quotes_1043_0320_0322_0324/private/",
+      "reason": "Private geoblock payload and receipt, excluded."
+    },
+    {
+      "path": "logs/deep_review_20261017/quotes_1056_0326_0328_0330/private/",
+      "reason": "Private geoblock payload and receipt, excluded."
+    },
+    {
+      "path": "logs/deep_review_20261017/quotes_1120_0331_0332_0336/private/",
+      "reason": "Private geoblock payload and receipt, excluded."
+    },
+    {
+      "path": "logs/deep_review_20261017/0324_atlas_pdf/poll.pdf",
+      "reason": "Uncompressed duplicate of included original Atlas PDF gzip body."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0324_ap_totals_followup.json (decompressed underlying CSV)",
+      "reason": "Large derived extraction not allowlisted; official TSE ZIP gzip body, published SHA capture and root aggregation capsule are included."
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0331*, 0332*, 0336* and evaluations/0331*, 0332*, 0336*",
+      "reason": "No model/evaluation files existed at the snapshot; factual capsules and public receipts are included."
+    },
+    {
+      "path": "data/deep_review_20261017/work/quotes_1132_0338_0340_0342.json",
+      "reason": "Combined quote packet contains geographic response/private geoblock metadata; unchanged original preserved but excluded. Sanitized public copy is allowlisted separately."
+    },
+    {
+      "path": "logs/deep_review_20261017/quotes_1132_0338_0340_0342/private/",
+      "reason": "Private geoblock request/response/receipt excluded."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0338_meta_date_followup.json",
+      "reason": "Superseded incomplete date-search capsule; exact issuer Oct 12 Q3 announcement is captured in 0338_meta_exact_date_fact.json. Original remains unchanged outside allowlist."
+    },
+    {
+      "path": "data/deep_review_20261017/quotes_0340_current_1151.json",
+      "reason": "Original current quote packet kept outside the public allowlist per instruction; sanitized public copy is allowlisted."
+    },
+    {
+      "path": "logs/deep_review_20261017/quotes_0340_current_1151/private/",
+      "reason": "Private geoblock/account transport material excluded; only public Gamma, fee and books capture bodies/receipts are allowlisted."
+    },
+    {
+      "path": "data/deep_review_20261017/work/*0340*preentry* and logs/deep_review_20261017/*0340*preentry*/",
+      "reason": "Pre-entry live-account packets/raw captures are private operator material; not included or enumerated."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0330_resume.json",
+      "reason": "Mutable manual resume/progress artifact excluded from current public archive refresh until primary declares it final; preceding shard file was preserved unchanged but superseded in active shard index."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0320_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0322_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0324_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0326_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0328_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0331_resume.json",
+      "reason": "Mutable resume/progress artifact excluded from current public archive until primary declares handoff final; old shard is preserved unchanged and active index points to a replacement without this file."
+    }
+  ],
+  "historical_snapshot_notes": [
+    "The 2026-10-19T11:29Z exclusion snapshot said models/evaluations for indices 0331, 0332, 0336 were unavailable at that time. 0331 was subsequently included; current refresh adds final 0332 and 0336 model/evaluation artifacts. This dated note preserves the earlier snapshot rather than asserting current absence."
+  ],
+  "public_quote_copies": {
+    "copy_paths": [
+      "data/deep_review_20261017/work/quotes_1043_0320_0322_0324_public.json",
+      "data/deep_review_20261017/work/quotes_1056_0326_0328_0330_public.json",
+      "data/deep_review_20261017/work/quotes_1120_0331_0332_0336_public.json"
+    ],
+    "mapping_path": "data/deep_review_20261017/work/quote_public_portability_map.json",
+    "redactions": "Only the complete geoblock object and its private/geoblock transport-receipt entry were removed; Gamma, fee, book, identity, public receipt and other capture fields remain."
+  },
+  "schema": "manual_public_artifact_allowlist.exclusions.v1",
+  "updated_utc": "2026-10-19T12:01:13.717893+00:00"
+}

@@ -1,0 +1,18 @@
+{
+  "name": "dane_september_2026_cpi",
+  "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica",
+  "started_utc": "2026-10-19T12:20:28.281459+00:00",
+  "received_utc": "2026-10-19T12:20:29.721450+00:00",
+  "http_status": 200,
+  "error": null,
+  "raw_bytes": 83269,
+  "raw_sha256": "8ae4bd138cd894300de489ef51ce1f98ee433085cb9fa383f5193a50dbe67b77",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_followup_1220/dane_september_2026_cpi.body.gz",
+  "gzip_sha256": "2b483722a08732f980d02b9088421190e4ffe27838fc98abb2643ee439f389dc",
+  "headers_filtered": {
+    "date": "Mon, 19 Oct 2026 12:20:29 GMT",
+    "content-type": "text/html; charset=utf-8",
+    "cache-control": "max-age=0, no-cache, no-store, must-revalidate",
+    "last-modified": "Mon, 19 Oct 2026 12:14:04 GMT"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "name": "banrep_october_policy_meeting_detail",
+  "url": "https://www.banrep.gov.co/es/noticias/calendario-actividades-junta-directiva/reunion-octubre-2026",
+  "started_utc": "2026-10-19T12:17:59.618661+00:00",
+  "received_utc": "2026-10-19T12:18:00.655431+00:00",
+  "status": 200,
+  "error": null,
+  "bytes": 15411,
+  "sha256": "0e02ac6dd598ef7c18e97b09b01ace83fed0006f5f63992ccca6eb8d1b43fbc0",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_october_policy_meeting_detail.body.gz",
+  "gzip_sha256": "bfac65fbae737745fd1b6fcf083f65adff2e18390f4e805bcce04ad1930b3762",
+  "headers_filtered": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Mon, 19 Oct 2026 12:18:00 GMT",
+    "cache-control": "no-store, no-cache, must-revalidate"
+  }
+}

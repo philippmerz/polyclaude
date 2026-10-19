@@ -1,0 +1,173 @@
+{
+  "review_index": 326,
+  "condition_id": "0xaea3d3c0be56a78de2a00d5741c0f939760e8ed482346370b3a80ffd2482b133",
+  "criteria_sha256": "028c93bbc17b7b59d7c6f167ddc74702d77a568a1d978f894beb22f90def831d",
+  "status": "valued",
+  "literal_analysis": "First official organic metric in24inclusive–28exclusive, most precise same scope; midpoint/boundary/missing/late rules, no later revisions. Not total growth.",
+  "evidence": [
+    {
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Second-Quarter-2026-Results/default.aspx",
+      "observed_utc": "2026-10-19T10:56:05.750730Z",
+      "finding": "q2_release: issuer total/organic/acquisition/FX table and/or guidance, root read/body hash verified."
+    },
+    {
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-First-Quarter-2026-Results/default.aspx",
+      "observed_utc": "2026-10-19T10:56:06.224488Z",
+      "finding": "q1_release: issuer total/organic/acquisition/FX table and/or guidance, root read/body hash verified."
+    },
+    {
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2025/Amphenol-Reports-Record-Third-Quarter-2025-Results-and-Announces-Dividend-Increase/default.aspx",
+      "observed_utc": "2026-10-19T10:59:21.768463Z",
+      "finding": "q3_2025_release: issuer total/organic/acquisition/FX table and/or guidance, root read/body hash verified."
+    },
+    {
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2026/Amphenol-Reports-Record-Fourth-Quarter-and-Full-Year-2025-Results/default.aspx",
+      "observed_utc": "2026-10-19T11:11:27.033092Z",
+      "finding": "q4_2025_release: issuer total/organic/acquisition/FX table and/or guidance, root read/body hash verified."
+    },
+    {
+      "url": "https://investors.amphenol.com/news-and-events/news-details/2025/Amphenol-Reports-Record-Second-Quarter-2025-Results/default.aspx",
+      "observed_utc": "2026-10-19T11:11:27.385284Z",
+      "finding": "q2_2025_release: issuer total/organic/acquisition/FX table and/or guidance, root read/body hash verified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.16,
+    "low": 0.03,
+    "high": 0.45,
+    "method": "Unfitted joint sales/acquisition/FX mixture and reported-precision/late-metric branches.",
+    "reasoning": "Three recent sales beats7.5–13.7% rule out guidance as expectation; quarter base/acquisition dollars matter. Joint model16.29% rounded16 with wide3–45% sensitivity.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0326_primary_1118.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+    "quote_file_sha256": "e975c0e361296c4098621dda83c5273611c07ce9e503dddc750ae0e8664b2f2b",
+    "quote_capture_utc": "2026-10-19T10:56:00.580349+00:00",
+    "gamma_received_utc": "2026-10-19T10:56:00.128935+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 10.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.16,
+        "selected_stress_probability": 0.010000000000000009,
+        "best_bid": 0.12,
+        "best_ask": 0.16,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792407360332",
+        "book_received_utc": "2026-10-19T10:56:00.483378+00:00",
+        "book_age_seconds_at_receipt": 0.15137791633605957,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.6,
+            "fee": 0.05376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.16
+              }
+            ],
+            "net": 1.6537600000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.2,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.12
+              }
+            ],
+            "net": 1.15776
+          }
+        },
+        "taker_cost_usd": 1.6537600000000001,
+        "central_expected_profit_usd": -0.05376000000000003,
+        "selected_stress_profit_usd": -1.55376,
+        "break_even_before_carry": 0.16537600000000002,
+        "break_even_constant_carry": 0.16551668962423474,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.84,
+        "selected_stress_probability": 0.69,
+        "best_bid": 0.84,
+        "best_ask": 0.88,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792407360332",
+        "book_received_utc": "2026-10-19T10:56:00.483378+00:00",
+        "book_age_seconds_at_receipt": 0.15137791633605957,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.8,
+            "fee": 0.04224,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.88
+              }
+            ],
+            "net": 8.84224
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.4,
+            "fee": 0.05376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.84
+              }
+            ],
+            "net": 8.34624
+          }
+        },
+        "taker_cost_usd": 8.84224,
+        "central_expected_profit_usd": -0.44223999999999997,
+        "selected_stress_profit_usd": -1.9422400000000009,
+        "break_even_before_carry": 0.884224,
+        "break_even_constant_carry": 0.8849762321394842,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Both current taker/join-maker sides fail selected stress. Guidance alone is not expected organic growth; no entry.",
+  "reopen_condition": "Official Q3 bridge or material recognized-sales/precision/guidance evidence, or changed quote economics, then fresh full gates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T11:16:37.927284+00:00",
+  "question": "Amphenol (APH) Q3 organic sales growth 24% to 28%?",
+  "market_id": "5648398",
+  "valuation_author": "primary_operator",
+  "original_index": 326,
+  "report_sha256": "a31561a1c499249e002f1a5ae9a17be5c7bfbe0120824eafba1cd27a4be07034"
+}

@@ -1,0 +1,172 @@
+{
+  "review_index": 324,
+  "condition_id": "0x0d9c9c308211e9008331e33be346c44c50da2d879ff6a739676ab553ea5b5297",
+  "criteria_sha256": "8ebb9d14997b0dec92979e6d3f36a95feb44e0cb436afa2c076b251473981167",
+  "status": "valued",
+  "literal_analysis": "APstatevalidrunoffvotelead,alphabeticaltiebreak,credibleconsensus/TSEambiguity,June2027Otherfallback. Notnational/first-roundresult.",
+  "evidence": [
+    {
+      "url": "https://www.tse.jus.br/eleicoes/eleicoes-2026-content/propostas-de-governo-dos-candidatos-ao-cargo-de-presidente-da-republica-eleicoes-2026-segundo-turno",
+      "observed_utc": "2026-10-19T10:45:28.047877Z",
+      "finding": "OfficialFlavio22/Lula13round2list,originalbodyread/hashverified."
+    },
+    {
+      "url": "https://cdn.tse.jus.br/estatistica/sead/eleicoes/eleicoes2026/buweb/bweb_1t_AP_051020261403.zip",
+      "observed_utc": "2026-10-19T10:51:06Z",
+      "finding": "OfficialSHA512matched;rootreproduced13,996Presidentrows/1,914sections/nominal464875,225Lulamargin;legaldenominatorcaveat."
+    },
+    {
+      "url": "https://www.cnnbrasil.com.br/eleicoes/real-time-big-data-lula-e-flavio-empatam-no-1o-e-no-2o-turnos-no-amapa/",
+      "observed_utc": "2026-10-19T10:53:16.508467Z",
+      "finding": "SecondaryoriginalCNNbodyreportsoldAPhypotheticalrunoffpoll;fielddatesnotpostOct4."
+    },
+    {
+      "url": "https://static.poder360.com.br/uploads/2026/10/Pesquisa-AtlasIntel-Amapa-3out2026.pdf",
+      "observed_utc": "2026-10-19T11:04:19.636Z",
+      "finding": "Original PDF SHA2211fbf4…; root visually read charts22/26, valid23/27 independently extracted. Profile818; hypotheticalrunoff, all-response versus valid distinguished; first-round contrast preserves poll miss."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.4,
+    "low": 0.1,
+    "high": 0.65,
+    "method": "Unfittedtransfer/turnoutregimemixturewithnormalresidual.",
+    "reasoning": "Primary transfer mixture unchanged at40% (10–65range), original Atlas now verified n818 and questions; same poll overstated first-round margin by ~6.95pp versus later official BU result. No post-round measure/new independent likelihood; source closure alone does not establish a runoff shift.",
+    "actual_entry_reserve_pp": 15,
+    "model_path": "research/2026-10-17-deep-review/models/0324_primary_1115.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1043_0320_0322_0324.json",
+    "quote_file_sha256": "cb98aeed4304c9199249de82bd7eac2b0baaf5eef341eef5a5ea427e037b9c03",
+    "quote_capture_utc": "2026-10-19T10:43:52.153792+00:00",
+    "gamma_received_utc": "2026-10-19T10:43:51.881695+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 8.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.4,
+        "selected_stress_probability": 0.25,
+        "best_bid": 0.26,
+        "best_ask": 0.27,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792406615508",
+        "book_received_utc": "2026-10-19T10:43:52.004127+00:00",
+        "book_age_seconds_at_receipt": 16.496127128601074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.7,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.27
+              }
+            ],
+            "net": 2.7788500000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.6,
+            "fee": 0.07696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.26
+              }
+            ],
+            "net": 2.52304
+          }
+        },
+        "taker_cost_usd": 2.7788500000000003,
+        "central_expected_profit_usd": 1.2211499999999997,
+        "selected_stress_profit_usd": -0.27885000000000026,
+        "break_even_before_carry": 0.27788500000000005,
+        "break_even_constant_carry": 0.2780741070598091,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6,
+        "selected_stress_probability": 0.44999999999999996,
+        "best_bid": 0.73,
+        "best_ask": 0.74,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792406615508",
+        "book_received_utc": "2026-10-19T10:43:52.004127+00:00",
+        "book_age_seconds_at_receipt": 16.496127128601074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.4,
+            "fee": 0.07696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.74
+              }
+            ],
+            "net": 7.47696
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.3,
+            "fee": 0.07885,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.73
+              }
+            ],
+            "net": 7.22115
+          }
+        },
+        "taker_cost_usd": 7.47696,
+        "central_expected_profit_usd": -1.47696,
+        "selected_stress_profit_usd": -2.97696,
+        "break_even_before_carry": 0.747696,
+        "break_even_constant_carry": 0.7482048241257752,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YEScentralpositivecontrarianhypothesisbutbothcurrenttaker/joinmakerfailactual15ppstress;newpost-roundevidenceorcheapercurrentroutecouldchangejudgment.",
+  "reopen_condition": "Source-boundAPpost-roundpoll/originalsurvey/transferorcredibleturnoutupdate/materialquotechange,thenfreshfullgates.",
+  "portfolio_action": "none",
+  "market_id": "5329577",
+  "evaluated_utc": "2026-10-19T11:13:37.775965+00:00",
+  "question": "Will Lula win the most votes in the second round of the Brazil presidential election from Amapá?",
+  "valuation_author": "primary_operator",
+  "original_index": 324,
+  "revision_reason": "Original Atlas PDF verified; sample818, runoff denominators and first-round miss; p40/reserve15 unchanged.",
+  "prior_report_sha256": "a32a29e9eb0221fc7916d5e31e72a5a1eef97659d595f510b9d4dc9691a9f5c2",
+  "report_sha256": "a88efc8574fc6f15995ee83dfa610d833d3701b801cc92a5ccf0675182b00a0a",
+  "report_path": "revisions/0324_20261019T111337775197Z.md",
+  "revision_path": "revisions/0324_20261019T111337775197Z.json"
+}

@@ -1,0 +1,52 @@
+{
+  "review_index": 344,
+  "observed_utc": "2026-10-19T12:11:16Z",
+  "scope": "Facts only: timing, disclosed accounting, and official orders for Oct 8 financial-crimes matter. No EPS estimate or resolution judgment.",
+  "q1_q2_filing_checks": [
+    {
+      "period_end": "2026-03-31",
+      "filed": "2026-04-23",
+      "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000192/axp-20260331.htm",
+      "body": "logs/deep_review_20261017/axp344_deepfacts_1220/filings/q1_2026.body.json.gz",
+      "raw_sha256": "f62226aa66fa16388aff5dbcf500b2be1e6447cf3348856dc7b997d634ae54cf",
+      "finding": "This filing predates the Oct 8 orders. It contains a general AML/CFT compliance discussion, but no disclosure found here of active regulator reviews, an expected enforcement action, or a financial-crimes penalty. The Note 7 contingent legal-proceedings range was $0–$220M in excess of any accruals for matters where loss was reasonably possible and estimable; it is aggregate, not attributed to the later AML penalty."
+    },
+    {
+      "period_end": "2026-06-30",
+      "filed": "2026-07-24",
+      "url": "https://www.sec.gov/Archives/edgar/data/4962/000000496226000322/axp-20260630.htm",
+      "body": "logs/deep_review_20261017/axp344_legal_timing_1240/q2_2026_10q.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_legal_timing_1240/q2_2026_10q.receipt.json",
+      "raw_sha256": "169bc2117a6db1deba89759aba579823d4af2419499e54771fcb6c9aae87f6cd",
+      "finding": "The filing predates the Oct 8 orders, but does disclose the underlying regulator reviews: AXP said it had been engaging with regulators over aspects of its AML programs and expected enforcement action that could include civil money penalties and further inquiries. It reports no amount or quarter for that expected penalty. Note 7 gives an aggregate $0–$260M reasonably possible loss range in excess of accruals for disclosed legal/tax proceedings; it does not attribute this range to AML."
+    }
+  ],
+  "regulator_primary_sources": [
+    {
+      "source": "OCC NR 2026-87, October 8, 2026",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-87.html",
+      "body": "logs/deep_review_20261017/axp344_legal_timing_1240/occ_page/occ_page.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_legal_timing_1240/occ_page/occ_page.receipt.json",
+      "raw_sha256": "e8aeda55869bfd57344a99424a1b0601e9aa3dfaba08a3ce5ec72a4c6c26490e",
+      "finding": "OCC says it assessed a $350M civil money penalty against American Express National Bank for BSA/AML program deficiencies and issued a cease-and-desist order. It describes systemic monitoring/reporting failures involving approximately $13B of suspected trade-based money-laundering activity over about a decade; this $13B is described as suspected activity processed, not as the penalty or a company loss."
+    },
+    {
+      "source": "OCC Consent Order AA-ENF-2026-46, signed October 8, 2026",
+      "url": "https://www.occ.gov/news-issuances/news-releases/2026/nr-occ-2026-87a.pdf",
+      "body": "logs/deep_review_20261017/axp344_legal_timing_1240/occ_order_pdf/occ_order_pdf.body.json.gz",
+      "receipt": "logs/deep_review_20261017/axp344_legal_timing_1240/occ_order_pdf/occ_order_pdf.receipt.json",
+      "raw_sha256": "410c6e98c1e0660cedba27b65fa0f1aac0b9a365d638c2734ea944be2002ae27",
+      "finding": "Order concerns AENB. It finds deficient BSA/AML risk assessment, customer due diligence, identification, SAR monitoring/reporting, audit/testing, staffing and training; the bank neither admits nor denies the findings. The order says it is effective upon issuance; signature/date blocks show Oct 8. It requires remediation/action-plan work, including a plan within 90 days, but contains no $350M fine amount or financial-statement recognition period; OCC's release reports the separate penalty."
+    },
+    {
+      "source": "Federal Reserve Board release, October 8, 2026, 4:30 p.m. EDT",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/enforcement20261008a.htm",
+      "access": "Official release was opened/read in browser; no separate local raw-body receipt in this capsule.",
+      "finding": "Fed states concurrent enforcement action against AXP and American Express Travel Related Services Co.; OCC separately acted against the national bank. Fed release supplies no penalty amount or accounting quarter."
+    }
+  ],
+  "issuer_disclosure_limit": "AXP's Oct 8 SEC 8-K says the $350M OCC penalty was agreed by AENB; only 'a portion' was reserved in prior periods; it gives no dollar amount of that prior reserve, no quarter/date attribution, and no remaining charge recognition schedule. Q2 10-Q disclosed the expected AML enforcement risk but gave no specific expected penalty amount. The $0–$260M aggregate Q2 contingent-loss range is not allocated to AML and cannot be equated with the $350M OCC amount. The Oct 8 filing says the penalty does not impact previously supplied FY2026 guidance. No tax treatment inferred.",
+  "q2_aml_disclosure_exact_paraphrase": "As of June 30, AXP said it had been engaging with regulators on certain aspects of its AML programs and expected an enforcement action, potentially with civil money penalties and further regulatory inquiries; it said it was cooperating and making program enhancements. The Q1 10-Q has a general AML/CFT compliance discussion but no comparable disclosure of this active review or expected enforcement.",
+  "request_count": 3,
+  "request_window_note": "Three new ordinary GETs: Q2 10-Q, OCC release and linked OCC order PDF. The Fed release was read via web page rendering, not an archived raw-body capture. No further regulator requests made."
+}

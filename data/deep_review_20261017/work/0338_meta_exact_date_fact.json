@@ -1,0 +1,16 @@
+{
+  "schema":"case338_exact_date_fact.v1",
+  "review_index":338,
+  "captured_utc":"2026-10-19T11:31:59.053863Z",
+  "issuer_publication_date":"2026-10-12",
+  "url":"https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-to-Announce-Third-Quarter-2026-Results/default.aspx",
+  "title":"Meta to Announce Third Quarter 2026 Results",
+  "issuer_statement":"Meta said Q3 2026 financial results will be released after market close Wednesday, October 21, 2026; conference call at 1:30 p.m. PT / 4:30 p.m. ET the same day.",
+  "status":200,
+  "raw_sha256":"20945c2b4e72bdd04932833c00bb758b4a745d7816f8ab21554bb536cd4e2933",
+  "gzip_sha256":"0d5b9c3e55c23a1d3d8aa01a2a0069cf30e9df40ca4742e3693d08aee8a6e3cf",
+  "raw_bytes":56715,
+  "receipt":"logs/deep_review_20261017/0338_meta_exactdate_1145/q3_announcement.receipt.json",
+  "body":"logs/deep_review_20261017/0338_meta_exactdate_1145/q3_announcement.body.json.gz",
+  "scope":"Confirms issuer schedule only; no Q3 results/EPS values in this announcement. This supplements the earlier bounded check, whose two requests failed to locate the newly indexed announcement URL."
+}

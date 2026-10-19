@@ -1,0 +1,79 @@
+{
+  "review_index": 330,
+  "condition_id": "0x741bb46008b72234857c5118c8365ab3c2f69dbf28b30b59de04f173b8a778de",
+  "criteria_sha256": "1bd0be8b74d4a3af087c1279d823b8f03b04d948d47eb0daa0fcd616444cbe4e",
+  "status": "blocked_after_review",
+  "literal_analysis": "Nov3 Alaska Senate winner includingrunoffs; allAP/Fox/NBCcallsame elseofficialcert, noJul312027confirmed→Other. DanSullivan exactCID distinct fromotherSullivannames/governor.",
+  "evidence": [
+    {
+      "url": "https://www.callthemap.com/polls/SEN-AK",
+      "observed_utc": "2026-10-19T10:57:55.907042Z",
+      "finding": "Root read/hashverifiedsecondaryPPP(D)Oct14–15,n578RV,48Peltola/47DanSullivan; originalinstrumentmissing."
+    },
+    {
+      "url": "https://www.publicpolicypolling.com/polls/democratic-senate-prospects-looking-up/",
+      "observed_utc": "2026-10-19T11:18:07.554900Z",
+      "finding": "Root read/hashverifiedoriginalPPPJan22DSCC49Peltola/47Sullivan; notOctoberpoll."
+    },
+    {
+      "url": "https://www.elections.alaska.gov/candidates/?election=26genr",
+      "observed_utc": "2026-10-19T11:18:07.040495Z",
+      "finding": "DirectTLSfailed, no body; officialsearch listsbothSullivannamesbutpriorJuneeligibilityconflictcurrentballotnotclosed."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Substantive poll/RCV/identity audit with price thresholds andcounterfactualcosts, no adoptedp.",
+    "reasoning": "OriginalOctquestion+currentballotnames transferbindingmissing; late48/47couldsupporta trade butcannotbeassignedfinalwinprobabilityfromsecondaryfirst-choiceunknownround.",
+    "model_path": "research/2026-10-17-deep-review/models/0330_primary_block_1125.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+    "quote_file_sha256": "e975c0e361296c4098621dda83c5273611c07ce9e503dddc750ae0e8664b2f2b",
+    "quote_capture_utc": "2026-10-19T10:56:00.580349+00:00",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "hypothetical_shares": 10,
+    "prices": {
+      "Yes": {
+        "best_bid": 0.25,
+        "best_ask": 0.27,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "taker_cost_usd": 2.7788500000000003,
+        "break_even_before_carry": 0.27788500000000005
+      },
+      "No": {
+        "best_bid": 0.73,
+        "best_ask": 0.75,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "taker_cost_usd": 7.575,
+        "break_even_before_carry": 0.7575000000000001
+      }
+    },
+    "unadopted_scenarios_file": "data/deep_review_20261017/work/0330_economic_scenarios_1125.json",
+    "primary_forecast": null,
+    "decision_thresholds": {
+      "YES_joinmaker_p_required": 0.4,
+      "YES_taker_p_required": 0.42788500000000007,
+      "NO_joinmaker_max_p_yes": 0.12,
+      "NO_taker_max_p_yes": 0.09249999999999992
+    },
+    "carry": "18dayvariableAave3.1525%/funding/operations; certification-delayJuly2027tailnotautomaticJanuaryexit."
+  },
+  "verdict": "Blocked on current ballot and original late poll/RCV configuration; competitive contrarian hypothesis remains, not no-edge/rejection/valuation.",
+  "reopen_condition": "OriginalOctoberpoll/question-levelequivalent reliableevidence andcurrentcertifiedfield/RCVbinding; then primaryp/model,bothsidesfreshentryeconomics.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T11:23:57.385996+00:00",
+  "question": "Will Dan Sullivan win the Alaska Senate race in 2026?",
+  "market_id": "634974",
+  "valuation_author": "primary_operator",
+  "original_index": 330,
+  "report_sha256": "1a77a80b539626ecea25b52ed59a2b095a706929edd03c2bc1798e084213b0e8"
+}

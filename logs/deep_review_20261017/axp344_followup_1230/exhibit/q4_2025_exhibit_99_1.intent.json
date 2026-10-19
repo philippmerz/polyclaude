@@ -1,0 +1,1 @@
+{"name":"q4_2025_exhibit_99_1","request":{"method":"GET","operation":"SEC 8-K Exhibit 99.1","read_only":true,"scope":"AXP Q4 2025 earnings release exhibit","url":"https://www.sec.gov/Archives/edgar/data/4962/000000496226000037/q425exhibit991.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T12:06:37.926413Z","timing_basis":"call_window"}

@@ -1,0 +1,20 @@
+{
+  "name": "washingtonpost_oct19_dc_guard_incident",
+  "url": "https://www.washingtonpost.com/dc-md-va/2026/10/19/national-guard-member-shot-while-responding-fight-dc-police-say/",
+  "request_start_utc": "2026-10-19T12:05:06.347420+00:00",
+  "response_end_utc": "2026-10-19T12:05:06.654744+00:00",
+  "status": 200,
+  "error": null,
+  "body_bytes": 897417,
+  "body_sha256": "c149bdf0961ce2eb1dc14e878710f708c92fbfa776b1c2aad1f76cf0db97d21d",
+  "gzip_path": "logs/deep_review_20261017/facts_0343_current_1240/washingtonpost_oct19_dc_guard_incident.body.gz",
+  "gzip_sha256": "6e020a4807fe267d03f706f93d90e3b24cc472431ab84892ddb014d53e1710b7",
+  "response_headers_filtered": {
+    "content-type": "text/html; charset=utf-8",
+    "etag": "\"yfsrago4lvj84a\"",
+    "last-modified": "Monday, 19-Oct-2026 08:53:09 GMT",
+    "cache-control": "max-age=60",
+    "expires": "Mon, 19 Oct 2026 12:06:06 GMT",
+    "date": "Mon, 19 Oct 2026 12:05:06 GMT"
+  }
+}

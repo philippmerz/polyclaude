@@ -1,0 +1,45 @@
+{
+  "schema": "deep_review.facts_followup.v1",
+  "compiled_utc": "2026-10-19T12:21:14.314162+00:00",
+  "review_index": 349,
+  "market_id": "4470027",
+  "conditionId": "0x2e8f33b84686fac2bb77eb7d1276f2d844f8d9952150a9581a75cf05161aeaf4",
+  "criteria_sha256": "f355db538e8c80321238ce5b0e20d96b8a877c05b2beb4102fef15705d74318d",
+  "scope": "Facts only for the frozen October 2026 BanRep policy-rate decision; no probability, quote valuation, or action.",
+  "new_facts": [
+    {
+      "topic": "Official meeting/calendar and baseline rate",
+      "source": "https://www.banrep.gov.co/es/calendario-eventos",
+      "receipt": "logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_calendar.receipt.json",
+      "raw_sha256": "0374f4d633cc48d362af70b488fec45a92b7d45e30d1f92824645011e44debf9",
+      "http_status": 200,
+      "started_utc": "2026-10-19T12:17:07.061132+00:00",
+      "received_utc": "2026-10-19T12:17:08.043168+00:00",
+      "fact": "Captured official calendar page states current rate 12.25%, applicable from Oct 1; lists Sept 30 decision +25bp to 12.25%, and minutes published Oct 5. It embeds the Oct 30 2026 Board meeting “decision on intervention rate,” 08:30–13:00; timezone is not labeled in the event payload. Calendar shows policy silence Oct24–30. This confirms scheduled date and prior-rate baseline, not the Oct decision."
+    },
+    {
+      "topic": "September inflation observation",
+      "source": "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica",
+      "receipt": "logs/deep_review_20261017/facts_0349_followup_1220/dane_september_2026_cpi.receipt.json",
+      "raw_sha256": "8ae4bd138cd894300de489ef51ce1f98ee433085cb9fa383f5193a50dbe67b77",
+      "http_status": 200,
+      "started_utc": "2026-10-19T12:20:28.281459+00:00",
+      "received_utc": "2026-10-19T12:20:29.721450+00:00",
+      "last_modified": "Mon, 19 Oct 2026 12:14:04 GMT",
+      "fact": "DANE page labels the observation September 2026 and publication 7 Oct 2026: monthly CPI 0.37%, year-to-date 5.74%, 12-month 6.29%; 12-month rate was 1.11 pp above Sep 2025 (5.18%). This is Sep data, not an October inflation observation."
+    },
+    {
+      "topic": "September Board minutes and expectations (limited browser-render evidence)",
+      "source": "https://www.banrep.gov.co/es/noticias/junta-directiva/minutas-banrep-septiembre-2026",
+      "publication_date": "2026-10-05",
+      "browser_source": "Official BanRep search/open rendering surfaced during this pass; browser tool did not expose a raw response receipt or exact retrieval timestamp. It is not an archived body capture.",
+      "fact": "Official page rendering states the Sep decision was +25bp to 12.25%; four directors supported +25, two preferred no change, and one preferred +50. It reports analyst year-end 2026 inflation expectations at 6.8% in the September survey, with the minutes discussing inflation pressures and depreciation. These are reported vote and survey facts, not current October decision probabilities or a forecast adopted here."
+    }
+  ],
+  "access_gaps": [
+    "Direct ordinary GET to the linked BanRep September decision page returned an anti-bot challenge (HTTP 200); its receipt/raw body are at logs/deep_review_20261017/facts_0349_0350_0352_1218/banrep_september_decision.receipt.json and body.gz. Direct GET to the Oct meeting detail page also returned the challenge, saved in that directory. No bypass/retry was attempted.",
+    "Direct GET to BanRep minutes index returned the same challenge body (HTTP 200); receipt is logs/deep_review_20261017/facts_0349_followup_1220/banrep_minutes_index.receipt.json. Browser-rendered official result supplied vote split and expectations but lacks a locally retained raw receipt; preserve that distinction.",
+    "No Oct 2026 decision exists yet in this evidence; next meeting is scheduled Oct30. Frozen cancellation/postponement fallback and exclusion of emergency non-meeting changes remain as written in the contract."
+  ],
+  "existing_capture": "work/0349_facts_1218.json"
+}

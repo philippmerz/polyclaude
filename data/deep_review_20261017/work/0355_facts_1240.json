@@ -1,0 +1,92 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 355,
+  "market_id": "5329628",
+  "condition_id": "0xcd9b47eddae5baffb141ad5df392117f2d9e65c1709d2dccdfef108ec49b557a",
+  "criteria_sha256": "f9ada2ce0942ec945350441aba49a766669d9d6550bf972555c604df2e325612",
+  "question": "Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Federal District?",
+  "frozen_rule_facts": {
+    "metric": "Federal District second-round presidential candidate with the most valid votes; official TSE result if credible reporting is ambiguous; tie-breaks alphabetical by listed full-name; fallback Other if result not definitive by June30 2027 11:59PM ET."
+  },
+  "official_election_facts": {
+    "TSE_runoff_pair_url": "https://www.tse.jus.br/comunicacao/noticias/2026/Outubro/flavio-bolsonaro-e-lula-vao-disputar-o-2o-turno-para-a-presidencia-da-republica",
+    "published_updated": "2026-10-05 00:29 / 00:36 Brasília time per TSE page",
+    "national_first_round_tally_as_of": "99.99% urns by 2026-10-05 00:11 Brasília time",
+    "candidates": [
+      "Flávio Bolsonaro (PL)",
+      "Luiz Inácio Lula da Silva (PT)"
+    ],
+    "national_first_round_valid_votes": {
+      "Flávio Bolsonaro": 56104268,
+      "share_pct": 47.03,
+      "Lula": 53876617,
+      "share_pct_lula": 45.16,
+      "total_valid": 125272513
+    },
+    "local_first_round_context": "Datafolha article attributes DF first-round valid-vote shares to TSE: Flávio 51.31%, Lula 38.11%. A standalone DF TSE final-totalization table was not fetched in this pass."
+  },
+  "primary_poll": {
+    "pollster": "Datafolha",
+    "article_url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/no-distrito-federal-flavio-bolsonaro-pl-lidera-com-49-das-intencoes-de-voto-de-2o-turno-lula-pt-tem-43.shtml",
+    "article_displayed_release": "2026-10-13 12:31 (site local clock)",
+    "PDF_original_url": "https://media.folha.uol.com.br/datafolha/2026/10/13/mgtwpma4tlgmkxt5yn8k-wiymmi3ricmufdlbtuk5e8.pdf",
+    "PDF_cover_date": "09 Oct 2026",
+    "field_dates": "2026-10-06 through 2026-10-07",
+    "population": "voters age 16+ in the Federal District; all regions",
+    "sample": 910,
+    "method": "face-to-face interviews at population-flow points; structured questionnaire; at least 20% of each interviewer’s material checked",
+    "sponsors": [
+      "Folha de S.Paulo",
+      "TV Globo"
+    ],
+    "registrations": [
+      "DF-03365/2026",
+      "BR-09856/2026"
+    ],
+    "margin_error_pp": 3,
+    "confidence_pct": 95,
+    "question": "“If the second round were today, whom would you vote for?”; stimulated, single response.",
+    "all_respondent_pct": {
+      "Flávio Bolsonaro": 49,
+      "Lula": 43,
+      "blank_null_none": 6,
+      "undecided": 2
+    },
+    "valid_vote_pct": {
+      "Flávio Bolsonaro": 54,
+      "Lula": 46
+    },
+    "article_says": "First Datafolha poll in the DF runoff; it is a survey, not an election result."
+  },
+  "receipts": [
+    {
+      "body": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_runoff/datafolha_df_runoff.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_runoff/datafolha_df_runoff.receipt.json",
+      "http": 200,
+      "received_utc": "2026-10-19T12:37:39.528684Z",
+      "raw_sha256": "8f2bde5a7394d72dad4ea9d3c9fc4a3c027d9544c771221dfa81d0ea9ee149d6",
+      "gzip_sha256": "0b26c75ea63101838ca779708196e336e9c0348ffa30aee300ef1a223b854c19"
+    },
+    {
+      "body": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_report_pdf/datafolha_df_report_pdf.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case355_facts_1235/datafolha_df_report_pdf/datafolha_df_report_pdf.receipt.json",
+      "http": 200,
+      "received_utc": "2026-10-19T12:38:18.515936Z",
+      "raw_sha256": "e435f656a2a82ebadd1fd647363fdfe010eff55d8526ee9cf3387ad9712f5023",
+      "gzip_sha256": "84a1023219d10ffca6883ec45450bf2d4b89806e055c750fe558e8e1bfd52a8d"
+    },
+    {
+      "body": "logs/deep_review_20261017/case355_facts_1235/tse_runoff_pair/tse_runoff_pair.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case355_facts_1235/tse_runoff_pair/tse_runoff_pair.receipt.json",
+      "http": 200,
+      "received_utc": "2026-10-19T12:37:39.807176Z",
+      "raw_sha256": "1b7f5b9994afd7bdd14972f056656f2bf26b35abdd6756f40652a720e160289b",
+      "gzip_sha256": "e68cd204ed94ca6b361ecbb597cba0e6a9f248591138a06496effdc025f378d2"
+    }
+  ],
+  "limits": [
+    "The poll article reports the first-round DF share as sourced to TSE, but no separate DF totalization table was retrieved.",
+    "This pass captured one local runoff poll released Oct13; no inference is made that no other local polls exist.",
+    "The PDF cover date (Oct9) differs from article publication display (Oct13); field dates are clearly Oct6–7."
+  ]
+}

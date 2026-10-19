@@ -1,0 +1,86 @@
+{
+  "review_index": 328,
+  "condition_id": "0xb013c7a4b9470f2a153f55469c3bc7f39bed88e6a934b1849a322f1611058861",
+  "criteria_sha256": "dd005c65a3165a2fb2e3ca497833b65ec42e77cdb5f36d5c3406c4f0d8c28132",
+  "status": "blocked_after_review",
+  "literal_analysis": "Google official2026 UnitedStates People rank1; trending growth not total volume, category/region exact. Officiallistmayresolveearly, noMar312027list→Other; navigationchangeirrelevant.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-17T20:59:54.574301Z",
+      "finding": "Root read/hashverified2025growth+People/Passings method;2026cutoffunverified."
+    },
+    {
+      "url": "https://www.fbi.gov/wanted/kidnap/nancy-guthrie/",
+      "observed_utc": "2026-10-19T10:58:13Z",
+      "finding": "OriginalFBIbody/hashverifiedlastseenJan31, vulnerablemissingadult; no annualsearchranking or death finding."
+    },
+    {
+      "url": "https://trends.google.com/trends/api/explore",
+      "observed_utc": "2026-10-19T11:18:15.462581Z",
+      "finding": "ExactNancy/Savannah/Lindsay/Combs/Tyler matched2025–26USquery429, no timeline/retry/bypass."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Substantive source/configuration review; conditionalhypotheses andbreak-even thresholds, no adoptedp.",
+    "reasoning": "No matched Nancy same-window prior/current-year measurement or otherwise defensible relative-growth/People-eligibility model against the 2026 field. Existing selected5-term series excludesNancy. Fresh ordinary37h-later matched request11:18got429, stopped/no workaround. InternalYISranking cannot be reconstructed from normalized index alone even with public data.",
+    "model_path": "research/2026-10-17-deep-review/models/0328_primary_block_1123.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1056_0326_0328_0330.json",
+    "quote_file_sha256": "e975c0e361296c4098621dda83c5273611c07ce9e503dddc750ae0e8664b2f2b",
+    "quote_capture_utc": "2026-10-19T10:56:00.580349+00:00",
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "hypothetical_shares": 10,
+    "prices": {
+      "Yes": {
+        "best_bid": 0.073,
+        "best_ask": 0.101,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "taker_cost_usd": 1.0554000000000001,
+        "break_even_before_carry": 0.10554000000000001
+      },
+      "No": {
+        "best_bid": 0.899,
+        "best_ask": 0.927,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "taker_cost_usd": 9.30384,
+        "break_even_before_carry": 0.9303839999999999
+      }
+    },
+    "scenario_file": "data/deep_review_20261017/work/0328_economic_scenarios_1123.json",
+    "chosen_probability": null,
+    "scenario_p_yes": [
+      0.05,
+      0.15,
+      0.35
+    ],
+    "no_selected_forecast": true,
+    "conditional_thresholds": {
+      "selected_reserve_pp_if_ordinary_instance": 15,
+      "YES_join_maker_before_carry_p_required": 0.22299999999999998,
+      "YES_taker_before_carry_p_required": 0.25554,
+      "NO_join_maker_before_carry_max_p_yes": -0.049000000000000044,
+      "NO_taker_before_carry_max_p_yes": -0.0803839999999999
+    },
+    "cost_limits": "74dayvariableAave3.1525% sensitivity beforefunding/operations; March2027fallback can outlastJanuary. No measured short-horizon tail/K5license."
+  },
+  "verdict": "Blocked on relative annual growth/category evidence; not rejected, valued or factual-excluded. Bothsidecosts/conditionalvaluation scenarios preserved; noentry.",
+  "reopen_condition": "Official2026USPeople result, Googleoriginalinsight/adequate exactNancy contemporary+YoY proxy andcategory/competitor evidence sufficient forprimaryprobability, then fullfreshgates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T11:22:12.439616+00:00",
+  "question": "Will Nancy Guthrie be the #1 searched person on Google in the US this year?",
+  "market_id": "3251369",
+  "valuation_author": "primary_operator",
+  "original_index": 328,
+  "report_sha256": "941c73b914247d2e61897708a5c07a468e64a3401838bfd71c9f8e57859ca082"
+}

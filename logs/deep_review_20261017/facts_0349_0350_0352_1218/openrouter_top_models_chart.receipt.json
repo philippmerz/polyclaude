@@ -1,0 +1,18 @@
+{
+  "name": "openrouter_top_models_chart",
+  "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+  "started_utc": "2026-10-19T12:17:09.182295+00:00",
+  "received_utc": "2026-10-19T12:17:09.273714+00:00",
+  "http_status": 200,
+  "error": null,
+  "body_bytes": 24665,
+  "body_sha256": "c5dc8f8c5c0b62365aced777c25b1c152e1769ea89cfb4962e219a3a0429e523",
+  "gzip_path": "logs/deep_review_20261017/facts_0349_0350_0352_1218/openrouter_top_models_chart.body.gz",
+  "gzip_sha256": "8304f7f31ea84f4490bda0e04064ec0d5bf8d791da1adeb6f094b890b72d9c1e",
+  "headers_filtered": {
+    "date": "Mon, 19 Oct 2026 12:17:09 GMT",
+    "content-type": "application/json",
+    "age": "194",
+    "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+  }
+}
