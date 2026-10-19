@@ -1,0 +1,166 @@
+{
+  "review_index": 370,
+  "market_id": "2431418",
+  "condition_id": "0x67adc22bcf8c1c7ff1a96cfa71d4221f5cc2ae6dc746989741d58bc8f3aa46f8",
+  "criteria_sha256": "5621fc4ad57c33feae883db35ea963fa3456e918043f05ba261b6c170fc87e76",
+  "status": "valued",
+  "literal_analysis": "DeepSeekownsTextRankfirst/StyleControlOFFDec31noonET; rank/exactscore/companyalphabetical; temporaryoutagewaitfirstlater/permanentalternate. Coding/agent/bestever/GA notsubstitute.",
+  "evidence": [
+    {
+      "url": "https://arena.ai/leaderboard/chat/text?scoring=raw",
+      "observed_utc": "2026-10-19T15:59:19Z",
+      "finding": "RenderedOct15snapshotGoogle1532prelim/DS1463rank38; rawroute403/defaultcheckboxstateunexposed, notDec31observation."
+    },
+    {
+      "url": "https://arena.ai/company/leaderboard-changelog",
+      "observed_utc": "2026-10-19T15:59:19.442731Z",
+      "finding": "DeepSeek1017addedWebDevOct18,notTextininspectednotableupdates; noexhaustivecalendar."
+    },
+    {
+      "url": "https://api-docs.deepseek.com/updates/",
+      "observed_utc": "2026-10-19T17:43:54.945493Z",
+      "finding": "OfficialAPIFlash1017availability/benchmarkclaims, notverifiedTextleadership."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0584,
+    "low": 0.005,
+    "high": 0.3,
+    "method": "Primaryprice-blind jointcompany-winnerallocation conditionedonexisting274OpenAIreleasebranches; allsubjective, notcalibrated.",
+    "reasoning": ".35*.08+.45*.05+.18*.035+.02*.08=.0584; exactlyonewinner/companymarginalssum1, OpenAI.17775preserved. Quality/admission/timing/rivalresponse jointlyjudged;20ppprequoteuncertaintyreserve, broad0.5–30%."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0370_quote_1745.json",
+    "quote_file_sha256": "d41159eb10042c41ff2754cdcd60ccbb358ffe16b27d0c3261c1ead93bf2a2e1",
+    "quote_capture_utc": "2026-10-19T17:43:55.577240+00:00",
+    "gamma_received_utc": "2026-10-19T17:43:55.441593+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 73.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.0584,
+        "selected_stress_probability": 0,
+        "best_bid": 0.003,
+        "best_ask": 0.004,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792431811015",
+        "book_received_utc": "2026-10-19T17:43:55.576222+00:00",
+        "book_age_seconds_at_receipt": 24.561221837997437,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.04,
+            "fee": 0.0016,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.0416
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.03,
+            "fee": 0.0012,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.003
+              }
+            ],
+            "net": 0.0288
+          }
+        },
+        "taker_cost_usd": 0.0416,
+        "central_expected_profit_usd": 0.5424,
+        "selected_stress_profit_usd": -0.0416,
+        "break_even_before_carry": 0.00416,
+        "break_even_constant_carry": 0.004185904176047951,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9416,
+        "selected_stress_probability": 0.7416,
+        "best_bid": 0.996,
+        "best_ask": 0.997,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792431811015",
+        "book_received_utc": "2026-10-19T17:43:55.576222+00:00",
+        "book_age_seconds_at_receipt": 24.561221837997437,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.97,
+            "fee": 0.0012,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.997
+              }
+            ],
+            "net": 9.971200000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.96,
+            "fee": 0.0016,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.996
+              }
+            ],
+            "net": 9.958400000000001
+          }
+        },
+        "taker_cost_usd": 9.971200000000001,
+        "central_expected_profit_usd": -0.555200000000001,
+        "selected_stress_profit_usd": -2.555200000000001,
+        "break_even_before_carry": 0.9971200000000001,
+        "break_even_constant_carry": 1.0033290317358015,
+        "current_execution_authorization": false
+      }
+    },
+    "route_limitations": {
+      "signed_taker_limit": 0.01,
+      "minimum_signed_cash_usd": 1,
+      "illustrative_min_integer_shares_at_limit": 100,
+      "worst_fee_inclusive_risk_per_100": 1.0396,
+      "best_ask_100share_cost_if_full": 0.41594,
+      "positive_passive_cent_grid_price_below_ask_available": false,
+      "current_execution_authorization": false
+    }
+  },
+  "verdict": "Noentry; p/reserveunchangedafterpairedsource/methodreview. CentralcheapYESleadretained; noempiricallowerbound. Cent-grid/$1signedcashroute differsfrom10shareheadlinecost; strictsignedriskgatesremain.",
+  "reopen_condition": "Primarysource-basedprobability/conditionalfillbounds, documentedreservejustification/pairedmethodaudit, newTextRAW/release/sourceevidence; thenfreshroute/fee/depth/account/portfolio/eligibilitygates.",
+  "portfolio_action": "NONE; researchleadonly; nofinancialprior/order/reservationchange.",
+  "report_markdown": "# 0370 — DeepSeek first on Text Arena atDecember31 check\n\n**YES5.84% / NO94.16%; broadYES0.5–30%, uncalibrated.**20pp prequote reserve selectsYES0/NO74.16. No entry under that forecast/gate. YESat.4c is a materially interesting central-EV lead; investigate whether its uncertainty can be bounded rather than silently rejecting the whole market.\n\nLiteral endpoint: TextLeaderboard Rank, StyleControlOFF, Dec31 **12:00ET/17UTC**. Rank ties use exact underlying unrounded score, then company alphabetical as listed. Temporary sourceoutage waits for first latercheck; permanentoutage uses another source. This is final company ownership/rank, not a model’s best-ever rank, coding/agent leaderboard or release/GA condition.\n\n[OfficialArena facts/receipts](../../../data/deep_review_20261017/work/0370_facts_1559.json): rendered raw-route snapshot datedOct15, retrievedOct19; Google1532±9preliminary/4904votes, bestDeepSeek1463±6/rank38, Pro1451±4/rank49.416models/8.83mvotes do not mean independent competitors. The defaultcheckboxstate is unexposed and directrawGET403; do not call this a wire-verified style-off table. Unroundedtievalues/futurecalendar unavailable. Oct18Flash1017addition listedWebDev, notText.\n\n[OfficialDeepSeekupdates](https://api-docs.deepseek.com/updates/) captured17:43:54UTC confirms Flash1017 availability and claimed benchmark/agent improvements. These are issuerclaims, not Textleadership or a dated future winningrelease. [Releasecapsule](../../../data/deep_review_20261017/work/0370_deepseek_releases_1744.json). A new admitted model with genuinely better chat preference is a live path; the69-point snapshotgap cannot itself determine its probability.\n\n[Primaryjointmodel](../models/arena370_primary_1744.json) allocates one company-first winner within the already-adopted [274OpenAI branches](../models/arena274_primary_2135.json): no materialOpenAIcontender35%, one45%, multiple18%, disruption2%. ConditionalDeepSeek shares8/5/3.5/8% yield5.84%. NoOpenAIcontender does **not** mean no DeepSeekrelease. Joint marginals sum1: Google43.05%, Anthropic26.94%, OpenAI17.775%, DeepSeek5.84%, xAI4.065%, Other2.33%. Quality/admission/timing/rivalresponse are joint judgments, not independent factors or fitted rank-turnover frequencies. No new empirical calibration claimed; known primary274marginal remains coherent.\n\nBroad0.5–30% allows a weak release/admission path or a major late challenger.20ppreserve fixedbeforequotes covers10frontierquality/timing,5source/configuration/rank,5conditionalfills. It may be conservative enough to erase this small central probability; its adequacy is a research question, not evidenceYEScannotwin. K5bond licence is unavailable: future first-place loss tail is unmeasured and can change regime within73days. A lower reserve needs independent evidence/justification, not the appeal of a cheap quote.\n\nBothsides10grossshares,17:43:55UTC: YESbid.3c/ask.4c, cost.0416incl.0016fee, centralEV+.5424/selected−.0416. NObid99.6c/ask99.7c, cost9.9712incl.0012fee, central−.5552/selected−2.5552. ExactGamma/compactfee4%p(1−p)agree; matchedbookage24.56s/min5shares/tick.1c. [Economics](../../../data/deep_review_20261017/work/0370_economics_1745.json). Neither currentcompetitive maker side clears selectedp. A5-shareYESnotional is not proof of route minimum, fillability or acceptable monitoring/capital cost.\n\nCash/datedvariableAave3.1525%, heldrisks andfourBUYcommitments7.52 remain alternatives. AIrelease/usefactor overlapsheldOR5NO; no hedge credit. HLE9NO/DEC225isclosed, legacyclaimdistinct. Before allocation: independently substantiate probability/conditionalfills, exactsource/ownership/rules, lawfulvenue/funding/currentaccount, route minimum, fees/depth/caps and operationalcost. No financialprior/order/reservation change. Reopen on that evidence, newTextRAW/admitted release or a source change; paired factual challenge of the reserve/forecast is warranted before moving money.\n\nPrimarypairedfollow-up: [source/path challenge](../../../data/deep_review_20261017/work/0370_primary_method_followup.json) finds no measured lower probability floor; broad0.5% is only a sensitivity.20pp is not uniquely calibrated and remains unchanged. Vetted signed BUY rounds.004ask to.01 for amount precision, has$1signedcashfloor, and no positive passive cent price belowask. Atleast100shares@1csign1notional; fee-inclusive worstcase1.0396, versus.41594if100fullyfillat.004. Price improvement is not guaranteed. Do not treat5shares/.02or headline.4c as an executable plan, nor remove precision safeguards to make one. Source-only championCID transcription corrected against frozenCID before adoption, priorlocalbytes retained. No newentryclass, p/prior/orderchange or globalblock; continuequeue whilekeepingthismarketeligible.\n"
+}

@@ -1,0 +1,101 @@
+{
+  "files": [
+    {
+      "bytes": 12729,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0372_quote_1754.json",
+      "sha256": "e2ec377ce07925c35f584f3e50ad48c322ac830cae78daa7dbe190b6b253d031",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 421,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0372_resume.json",
+      "sha256": "b7baacbc9524cf11438413421890f6d626bb5819478578a7ef7f860249b57129",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 5804,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0386_facts_1737.json",
+      "sha256": "e4825930fffde404d258a082c9ac1f0c272e6c547ce50c5fec8e8bfb3ad41aaf",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 847,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0386_resume.json",
+      "sha256": "437840df3ebfecee9f54bd6fa2f6b5db79d23280a32e0cdb5d9b28693fc4f38b",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 4091,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0388_facts_1737.json",
+      "sha256": "3ac872dd6dcbfbb85957ea4982759d2917e87e9a836ed1673a6b9124628c98e8",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 303,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0388_resume.json",
+      "sha256": "0a4a684cd55bd423f4f1d2ddfb67e39b0202e1da1b9df69a246e12d638c51ebf",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 5717,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0391_facts.json",
+      "sha256": "757092d6bfa05c97beceb6badfb478693cea0a781faa650edf4bbb1e0f6e3285",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 703,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0391_resume.json",
+      "sha256": "6ce87baa28d08bd9836f68f11647664edb3c873cacebb70d8ad035960d2f6b68",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 5229,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0394_facts_1743.json",
+      "sha256": "5a3f56ffc9f0a0f01d952e99b596d4b24118a2e9ba963c7a0dd0158dabba9699",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 772,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0394_resume.json",
+      "sha256": "d1856a64b3fb91405501cb86888b3596796c0491062bad513ce02df549e40400",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 5393,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0396_facts_1744.json",
+      "sha256": "feb48ab1fb05eb5b8d23663c2553f5fc4ec0d311f992ba08753d7e221020cd0e",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 303,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0396_resume.json",
+      "sha256": "dd90ee12f8d50a90cccc34c1db80571098eace1d0df47e17b32b8a3fd5791a55",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

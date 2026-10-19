@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "bytes": 7989,
+      "decompressed_sha256": "3d116975e20ac2bf6016ab2068151c4c9b75ebcbcdb57b593b6a9c251d68f0af",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case368_noaa_1545/noaa_earth_shape.body.json.gz",
+      "sha256": "61488982ce37e827b22d353772b206750dcd4938c771c7c82868031c460c1695",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 822,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case368_noaa_1545/noaa_earth_shape.receipt.json",
+      "sha256": "84c87d1574a021c3be0a31731b6889e7d86d34215dd070950d73bdedeeedef64",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 16900,
+      "decompressed_sha256": "ff843a4755a5726fbc04b887ce70d140a2b40bf6da95097cde66b35db11163de",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case386_congress_20261019/june_nonbinding_resolution.body.json.gz",
+      "sha256": "9d4a9839445b51858b3765ff6cd4e8764da536e80a4faac0e1d132759f9f3f10",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 916,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case386_congress_20261019/june_nonbinding_resolution.receipt.json",
+      "sha256": "92d09e6cef46dd1c961271ad78e98f64dd2804ab0fcf605556b5d07a53b2e4a9",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 5888,
+      "decompressed_sha256": "5e1616cbe927dea3c6ed05e8931ebc924d1fd9cbe4f35e1effddbb2218b02bd9",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/boe_election_decree.body.json.gz",
+      "sha256": "512e259719d9a595299475dcfc603f18b3ccb992ca34ff4c4e4fbbd6a4105f1a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 824,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/boe_election_decree.receipt.json",
+      "sha256": "7575b340860a72510a96c0cb5009b40494a7c63b86d44eec567aca7f62c61da0",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 28399,
+      "decompressed_sha256": "397e597bf5c96c8ddfa8a30ddbf663400223903f030e523f781732d9c2c978ee",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/constitution_article101.body.json.gz",
+      "sha256": "28f51b11155cd240792d7193fa71031ed697090201fa8c4438a1b9ad4e50380a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 905,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/constitution_article101.receipt.json",
+      "sha256": "ee9581f8f459dc9e2c762aaf4d44f53370f34f1c736ae92e92c66cace00d681f",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 12966,
+      "decompressed_sha256": "f9b18d05284bf3362e9f27950ce13711e3542421192982fe24da50f368f30ec6",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/moncloa_agenda.body.json.gz",
+      "sha256": "1a4d48fd73044b0e4557b5a0adb34b0ffe358a59a65360730777bdbc30bde701",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 882,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case386_sources_20261019/moncloa_agenda.receipt.json",
+      "sha256": "8621c3be2f58a2f88712200ee9bf767dd3d8651ea5564be5e1f402e9442600cb",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 398542,
+      "decompressed_sha256": "2c0caeb2513eed4990c01551fad9b0b0cd0049818ba5d561dbb61bdb017abeb8",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case394_nasdaq_calendar_20261019/nasdaq_2026_calendar.body.json.gz",
+      "sha256": "a50bfcf8c2edde10ea3755825f89b1b6f4da3122583b36f85ffb78802a58e3b7",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 869,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case394_nasdaq_calendar_20261019/nasdaq_2026_calendar.receipt.json",
+      "sha256": "37d06ca288d9a470a37e64fe97b92cc8a90c06e4c15d288935f05b4568711ad7",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

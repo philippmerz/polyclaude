@@ -1,0 +1,73 @@
+{
+  "schema": "light1800_primary_risk.v1",
+  "reviewed_utc": "2026-10-19T18:08:28.812374+00:00",
+  "financial_observation": {
+    "producer_window_utc": [
+      "2026-10-19T18:03:14.695934+00:00",
+      "2026-10-19T18:03:29.060593+00:00"
+    ],
+    "total": 195.66,
+    "gas_separate": 5.8,
+    "trading_mid": 189.86,
+    "trading_depth_indicative": 185.98,
+    "PM_mid": 34.72,
+    "PM_depth_indicative": 30.84,
+    "accounting_residual": 20.73,
+    "limits": "Rounded sequential observations, not synchronized NAV, audited cash profit or guaranteed liquidation proceeds; VM/API excluded."
+  },
+  "decision": "Retain current holdings and4exactunfilledBUYs; no addition/newmaker/order/prior/reservation/transaction. Price marks do not establish recovery.",
+  "source_decisions": {
+    "Whale": "18:02 Numbers/Mojo8m both still estimated; neither worldwide17.5m nor headline8m settles strict domestic criterion. No newly finalized amount. Same prior57.1022NO/selected42.1022; broad2% adverse allows loss.",
+    "OR": "18:02 retrieved chart/cachedAt17:49:44.699 has Oct12completed164.044T and Oct19partial17.789T, including Others. Completed weekly baseline already known before this check; partial progression is not a new completed observation or target result. Target labelsOct26/Nov2/9/16 absent. Retain88NO/selected73, unfitted plateau/regime risk and no hedge credit.",
+    "Messi": "Google Global Athletes Top5, not award wins/individual headlines. Retain60YES/selected40; broad20% favors exit, March31 fallback remains.",
+    "MI": "USSenate NO44/selected34, broadNO20 favors sale; USA body/date and original Times poll gaps retained. No measured poll or ballot/withdrawal change established.",
+    "Clarity": "Whole29/29pair only. Fresh CLI net23.96/fee.22 vsconditional29 floor/58 middle. One-year10% exit sensitivity26.356<29; venue/oracle/system can break floor. Official18:02 schedule GET403;12:07adjournmentuntilNov9 is dated schedule, not proof no passage."
+  },
+  "held_exit_comparison": "data/deep_review_20261017/work/light1800_held_comparison.json",
+  "ordinary_risk": "Selected terminalOR3.65/Messi2/Whale2.526129/MI1.70 exceeds fresh18:03 fee-net exits3.00242/1.20312/.37176/1.458 and one-year10% cash sensitivity; every best bid is below selected probability, so no better prefix reverses. Broad adverse20% OR/Messi/MI and2% Whale favor sale. Full binary loss is possible; no guaranteed recovery/interval floor.",
+  "Kelly_and_maker": "Post-bankroll Kelly on195.66 remains midpoint/rho advisory, not joint optimum or automatic size-up. No hidden-information maker at/below fair.",
+  "pending": {
+    "count": 4,
+    "risk": 7.52,
+    "matched_shares": 0,
+    "account_binding": "18:03:40.937124\u201341.620748UTC authenticated CLI JSON serialization; status200/pagination exhausted, not rawHTTP. 18:04:53.426902\u2013.631992 indexedHTTPbody and four local reservations equal17:02.",
+    "Idaho": "63070734YES3c/$1.02; Oct19 22UTC pull ALL unfilled, earlier material poll/candidate/ballot/turnout uncertainty cancel-first; noadd/repost. Tiny full loss accepted; no new qualifying uncertainty verified."
+  },
+  "joint_terminal_bookkeeping": {
+    "nonPM_exgas": 155.14,
+    "all_ordinary_and_four_bids_lose_pair29": 176.62,
+    "same_pair0": 147.62,
+    "limits": "Other assets/access constant, not calibrated joint probabilities or guaranteed wealth."
+  },
+  "alerts": [
+    {
+      "id": "cc4e27e2f23386ca343375ff1973816baa2770d4",
+      "decision": "Retain MI5NO/no add. Disavowal framing could help Democrat/hurt NO, but USA Today body/date remain inaccessible; related CNN/ABC17 coverage does not prove identity. No measured electoral update; primary NO44/selected34 unchanged."
+    },
+    {
+      "id": "ef1955c177be072a077fba9b99d5d2476d4d0b24",
+      "decision": "Classifier CRITICAL finality implication not established. Fresh Numbers chart_estimate and Mojo Estimated=true show8m, not final. Exact8m FINAL would pay NO. Retain6NO/noadd; no probability change or resolution claim."
+    },
+    {
+      "id": "f2dba2d759b6bb26c06c74b656beff5fc128aa55",
+      "decision": "Mbappe award lead, no verified Google Global Athletes growth/rank measure; no forecast or trade change."
+    },
+    {
+      "id": "2102d631e0fb475df4eba1f26e7f17626f20ca18",
+      "decision": "Kansas debate-watch lead; no held/pending Kansas exposure, canceled Sedgwick remains closed. No trade or restored alert."
+    },
+    {
+      "id": "29c6cbdb9fef13b7c037287a0b411d800c0b35ed",
+      "decision": "Messi plant headline body/date not retrieved after consent; no Google Global Athletes rank inference. Retain5YES/noadd."
+    }
+  ],
+  "prior_requested_ids": [
+    "2f1cd958e63e0205b1db466f6469d37a6661b2cb",
+    "ffa1251d18e4af071b22d377a72656bef2467226",
+    "49b78be779d9309a29fcbb99660fb74400afbdc8"
+  ],
+  "prior_requested_review": "Already completedtick1648 risk/final-followup; no archive instruction replay.",
+  "news_latest_reviewed_utc": "2026-10-19T17:53:33Z",
+  "ops": "17invokedcommandsrc0/34streams hashes+gzipverified; nestedstatuschildrc not individually exposed, no failuremarker. UMA0alerts/hurdle0flagged/auditclean/0winningredeemable/Ostium0; fourcanonicalabsolute daemons/codecurrent. ThreeCWDs outside repo are compatible with __file__-derived paths; no restart.",
+  "next": "Existing22UTC light ANDIdahoall-unfilledpull; fullOct20 02UTC/earliermaterialevent. WeeklyOct23/monthlyNov12 notdue. Endboundedrun; no newgoal/lifecyclemutation/timer/idlefollowup/TG."
+}

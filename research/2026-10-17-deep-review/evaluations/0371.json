@@ -1,0 +1,144 @@
+{
+  "review_index": 371,
+  "market_id": "2299953",
+  "condition_id": "0xdc7c8ada1b8d28300cdc783578e8754d2570a3da067965be15bba638cb94f83a",
+  "criteria_sha256": "3510a50b352decc0ef46120cf284d1dab39f97380b7334cf32cf7575dec35a38",
+  "status": "blocked_after_review",
+  "literal_analysis": "AnyoriginalNPMcapitalizationHIGH>=2.5TsinceMay19creation throughDec31; nextdaypublication/Jan4wait, coveragecessation/IPOofficialprice+intradayHIGH×shares, acquisitionconsiderationexcluded, ordinaryrevisionsignored.",
+  "evidence": [
+    {
+      "url": "https://fe.secondmarket.com/companies/company-3e197763-4ff8-4d8c-bd1f-cc2792937757/data",
+      "observed_utc": "2026-10-19T16:45:26.116440Z",
+      "finding": "200clientredirectunsupported, no dailyNPMhistory; officialJSreviewdoesnotverifypublicexport."
+    },
+    {
+      "url": "https://www.nasdaqprivatemarket.com/company/anthropic/",
+      "observed_utc": "2026-10-19T17:47:39.441932Z",
+      "finding": "PrimarybodyOct1dated82.86per-shareprint, notmarketcapMAX/sharecount/coverageproof; marketingwidgetsnotresolvingindex."
+    }
+  ],
+  "forecast": {
+    "status": "UNPRICED",
+    "reasoning": "NooriginalpublishedNPMcapitalizationMAXsinceMay19/currentcomparablesharecountorIPOcontinuity; alreadyhitversusfutureunknown dominates, no fabricatedp from funding/marketingproxy. Sourcegapnotnegativeevent."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0371_quote_1751.json",
+    "quote_file_sha256": "e585959402b1415401049fdefa095ca85a8cd3fdcfab1b13b07dfae689fd2659",
+    "quote_capture_utc": "2026-10-19T17:49:56.669077+00:00",
+    "gamma_received_utc": "2026-10-19T17:49:56.544708+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 78.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "best_bid": 0.24,
+        "best_ask": 0.26,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792432187141",
+        "book_received_utc": "2026-10-19T17:49:56.668114+00:00",
+        "book_age_seconds_at_receipt": 9.527113914489746,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.6,
+            "fee": 0.07696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.26
+              }
+            ],
+            "net": 2.6769600000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.4,
+            "fee": 0.07296,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.24
+              }
+            ],
+            "net": 2.3270399999999998
+          }
+        },
+        "taker_cost_usd": 2.6769600000000002,
+        "break_even_before_carry": 0.26769600000000005,
+        "break_even_constant_carry": 0.26947748636467433,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "best_bid": 0.74,
+        "best_ask": 0.76,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792432187141",
+        "book_received_utc": "2026-10-19T17:49:56.668114+00:00",
+        "book_age_seconds_at_receipt": 9.527113914489746,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.6,
+            "fee": 0.07296,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.76
+              }
+            ],
+            "net": 7.67296
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.4,
+            "fee": 0.07696,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.74
+              }
+            ],
+            "net": 7.323040000000001
+          }
+        },
+        "taker_cost_usd": 7.67296,
+        "break_even_before_carry": 0.767296,
+        "break_even_constant_carry": 0.7724022674140409,
+        "current_execution_authorization": false
+      }
+    },
+    "scope": "Pure observed hypothetical10sharecost/fee/depth and threshold calculation; the helper neutralprobability input was discarded, not a forecast. HistoricalHIGH/fullinitialconditions unavailable, so neither side receives a valuation/expectedprofit."
+  },
+  "verdict": "Blockedafterreview/noentry, notvalued orrejected. Bothsidecostandconditionalbreak-even preserved; noimmediatebuybothfloor.",
+  "reopen_condition": "OriginalNPMdailycapitalizationhistory/authoritativequalifyingHIGH pluscoverage/IPO/sharecountfacts enablingdefensibleprobability, thenfreshcurrentexecutiongates.",
+  "portfolio_action": "NONE",
+  "evaluated_utc": "2026-10-19T17:50:46.475944+00:00",
+  "question": "Will Anthropic's valuation hit (HIGH) $2.5T by December 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 371,
+  "report_sha256": "4ef0600178d9920a85c160cf438d588f5cad6608bc82e6a575323c826a97633b"
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "deep_review_case_champion_facts.v1",
+  "review_index": 370,
+  "source_only": true,
+  "case_identity": {
+    "market_id": "2431418",
+    "condition_id": "0x67adc22bcf8c1c7ff1a96cfa71d4221f5cc2ae6dc746989741d58bc8f3aa46f8",
+    "criteria_sha256": "5621fc4ad57c33feae883db35ea963fa3456e918043f05ba261b6c170fc87e76",
+    "operative_population": "LMArena Text Arena, Leaderboard tab, Rank section, Style Control off; check 2026-12-31 12:00 ET. Rank first, underlying unrounded Arena score on rank ties, then alphabetical company name."
+  },
+  "official_deepseek_update_2026_10_17": {
+    "url": "https://api-docs.deepseek.com/updates/",
+    "received_utc": "2026-10-19T17:43:54.945493Z",
+    "status": 200,
+    "raw_sha256": "9abda5ba89b86be5d82ad045864dbe5047e0908b45c161d8a4631d4d5fcb6f18",
+    "gzip_sha256": "6fb6c0db3e48de769f62b1db9d761b44230161d65f2328793cb9927160b2fc38",
+    "gzip_path": "logs/deep_review_20261017/case0370_deepseek_1744/official_updates.body.json.gz",
+    "claims": "DeepSeek-V4.1-Flash-1017 (dated Oct17) upgraded official web/app and API; API name/pricing unchanged. Reported HLE w/o tools 42.6, with 44.0*; footnote says * is pure-text HLE subset. This is publisher benchmark reporting, not Arena RAW score/rank. Update page notes reduced runtime/output length and a performance-cost improvement."
+  },
+  "official_pro_availability": {
+    "url": "https://api-docs.deepseek.com/news/news260813/",
+    "published": "2026-08-13",
+    "received_utc": "2026-10-19T17:46:42.016582Z",
+    "status": 200,
+    "raw_sha256": "4ec9c3b7bc0ccb3e0244bb40bc2c1a47b743f0d61a5b467026c7d90fc881168c",
+    "gzip_sha256": "3e8b1ca6d3d977aa300989bf0019a8168c111692fe9790f5f8ef7ebc6232c5f4",
+    "gzip_path": "logs/deep_review_20261017/case0370_champion_1810/deepseek_v4pro_release.body.json.gz",
+    "finding": "Official GA release says V4-Pro was available on app/web and API. The updates page states API provision continued after Sep14, 2026. Captured release page itself did not provide an upcoming release roadmap; no future model/date commitment verified."
+  },
+  "arena_primary_facts": {
+    "sources": "Existing work/0370_facts_1559.json and work/0274_provider_history_2125.json; official changelog capture logs/deep_review_20261017/case0370_refresh_1559/changelog.body.json.gz.",
+    "latest_rendered_snapshot": "Oct15 2026, 8,834,211 votes, 416 models. DeepSeek-V4.1-Flash-20260910 (Max) displayed rank38 score1463±6, 12,793 model votes; DeepSeek-V4-Pro displayed rank49 score1451±4, 57,594 votes. Snapshot method was rendered scoring=raw URL, but UI Style Control state and unrounded score are not directly archived/verified. This is interim, not Dec31.",
+    "admission_changelog": "Sep25 changelog lists DeepSeek V4.1 Flash Max added to Text Arena (along with several other models); the Oct18 1017 Flash changelog entry is Code Arena: WebDev only. Changelog records additions, not resulting ranks or provider turnover."
+  },
+  "path_and_limitations": {
+    "potentially_relevant": "Official continued Flash iteration and existing Text Arena admission establish a real development/deployment path; however the Oct17 published HLE numbers are below60 and not the market metric, and no evidence here shows DeepSeek leading Text Arena or a planned further Pro/Text Arena release. The Pro product remains available; its HLE-with-tools result (42.7/60.0, listed in existing official updates capture) is also not Arena RAW rank evidence.",
+    "historical_turnover": "Existing targeted official page/changelog reads found no dated historical RAW-rank series or rank-change history; changelog is additions-only. Current Oct15 snapshot and vote counts do not establish rank/admission intervals or Dec31 future rank.",
+    "source_access": "Earlier current leaderboard raw-route GET returned403; current table was browser-rendered. No extra leaderboard fetch was made in this bounded task. Exact Style Control state and unrounded tie-break values remain unverified."
+  },
+  "no_forecast_or_recommendation": true,
+  "editorial_correction": {
+    "utc": "2026-10-19T17:49:28.090188+00:00",
+    "reason": "Collector hand-entered CID omitted finalhex8; primary binds fullCID to frozenexactcase before adoption. Sources/forecast unchanged.",
+    "prior_local_artifact": "data/deep_review_20261017/work/0370_champion_path_facts_before_identity_correction.json",
+    "prior_sha256": "77ed51e4f8177019fd96b1a07d4cc5a7de38f39c090585a90f018e23a48a4990"
+  }
+}

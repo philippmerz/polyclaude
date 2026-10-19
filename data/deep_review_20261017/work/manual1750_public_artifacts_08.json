@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "bytes": 1003,
+      "decompressed_sha256": "976c57affc31475af4df29258573a6fb42f2dcdc2eaa33f5e85ffd365949c845",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/books_batch_01.body.json.gz",
+      "sha256": "b281987268fd56ac86f9fe210c789dba0bfcc429ab19aecb306799fcc14fe739",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 776,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/books_batch_01.receipt.json",
+      "sha256": "662c6b14f548e4cc488c0c4a7d244fa70d2dbabec463597e641f4835ca115bb5",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1905,
+      "decompressed_sha256": "280326c07dc439bec0d00cb7dc3d8c268da125c52cdeca39b4ffd5be84c7a30b",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0388_current_173712/gamma.body.json.gz",
+      "sha256": "9d6a88e2e70aef5ebb1f217d46002a1d40907e4b367097d043d62b64653ef532",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 71,
+      "decompressed_sha256": "a56aae3d12feb94722b421bbcbb340b4087ffbe9dfb21a95a71fa625eaf5f057",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0388_current_173712/hle_api.body.json.gz",
+      "sha256": "1b977baef37273521b20a0993424ecd5ce890ea162c8238df0eeeef729d3f102",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 37938,
+      "decompressed_sha256": "514f6c49609448ca9b61686a66d0969033f6914dc8085b098d51dc0d3529aa08",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0388_current_173712/hle_page.body.json.gz",
+      "sha256": "a01f322fb6d2345a4054849c109da6f600e5a5b0d530d659e19d929a85502f4a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 971,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0391_federal_register_1740/2026_status_reference_nrc_rule.receipt.json",
+      "sha256": "4bbca27e9e8d089c09a29b552cdd3a12f9a7404751002dab9fd150e1d22a19ea",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 969,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0391_federal_register_1740/initial_2020_sanctions_notice.receipt.json",
+      "sha256": "4d7bf4841e107ed6dd1ed488b2c809076f05620ca312cdd394040a456f1b2f7b",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 870,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0391_sources_1730/ddtc_turkey_caatsa.receipt.json",
+      "sha256": "a309a20f94be90e939c4059979ae5732987ad54d7814da3b9d1d42a1e9e51f43",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 987,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0391_sources_1730/ofac_caatsa_program.receipt.json",
+      "sha256": "816a8f8bf69b326c66979e53360167024476241882837f1d84d859e35ff5e126",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 958,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0391_sources_1730/state_2020_turkey_action.receipt.json",
+      "sha256": "facf05ec3e467e40ed311205c8d41477bef13e25bf1637ddada0a10c68a450ee",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3267,
+      "decompressed_sha256": "5a9b9b614f1983f92b6562059583cc94b416bfcee51412e60fc5c553c8f74ef9",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0396_facts_1745/ap_aden_airport.body.json.gz",
+      "sha256": "3c462133ac086f49b04ddb49fd9d0ec3b12fd950dfdedd7abc443a6e99ba6c06",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 20299,
+      "decompressed_sha256": "c91e6e5e24971e361710c92aef846717104f5c66ccf446e196254a69f3f54322",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0396_facts_1745/un_dppa_oct9.body.json.gz",
+      "sha256": "d0f7f0f45f2d4530fde6e559f2b535281cddc517012112e4b89988e4d68e0724",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

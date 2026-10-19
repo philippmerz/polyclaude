@@ -1,0 +1,1 @@
+{"name":"weekly_chart","request":{"method":"GET","read_only":true,"scope":"18UTC current weekly OpenRouter Top Models resolving chart","url":"https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:02:20.991639Z","timing_basis":"call_window"}

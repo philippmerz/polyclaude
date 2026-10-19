@@ -1,0 +1,85 @@
+{
+  "schema": "deep_review.case0391_facts.v1",
+  "review_index": 391,
+  "market_id": "2883733",
+  "conditionId": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8",
+  "question": "Will the U.S. lift CAATSA sanctions on Turkey by December 31, 2026?",
+  "identity": {
+    "createdAt_utc": "2026-07-11T18:48:28.024538Z",
+    "endDate_utc": "2027-01-01T04:59:00Z",
+    "active": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "archived": false,
+    "identity_exact_in_existing_capture": true,
+    "gamma_received_utc": "2026-10-19T02:55:44.538687+00:00",
+    "gamma_status": 200,
+    "gamma_raw_sha256": "aac52bb563d00ad20ab68b9e0dc31af17a8f43621cf88e6ca9fc9f3f47cb7b5b",
+    "gamma_gzip_sha256": "3904aa19fa57addab6c3b170ba6b76ed6c5beb6a6d21df62f803584c538cf6f7",
+    "gamma_receipt": "logs/deep_review_20261017/terminal_status_batch_0305/0391_gamma.receipt.json"
+  },
+  "literal_rule_scope": "YES only if the federal government issues a Section231 measure by Dec31 ET that reverses/removes/waives/terminates/suspends US CAATSA penalties on Turkey, SSB or covered Turkish officials, including partial or temporary relief or entity-/individual-level relief. Statement of intent, negotiations, future announcement without issuance, and F-35/NDAA-only changes do not qualify. Case description cites a Reuters Jul7 report of Trump intent; reported intent itself is nonqualifying.",
+  "source_facts": [
+    {
+      "publisher": "State archived 2020 action page",
+      "url": "https://2017-2021.state.gov/the-united-states-sanctions-turkey-under-caatsa-231/",
+      "status": 200,
+      "received_utc": "2026-10-19T17:37:03.399928Z",
+      "raw_sha256": "359e3b8b6b844d69fa29bd39c40f970af1586af0500dcda1f98a302721eafe1d",
+      "gzip_sha256": "bdfacce8d80ccdd6de774c9208791a44fbb761ef00d34a75d5ed41c8c9f5e858",
+      "receipt": "logs/deep_review_20261017/case0391_sources_1730/state_2020_turkey_action.receipt.json",
+      "fact_or_limit": "HTTP200, but body is a technical-difficulties page; no usable content."
+    },
+    {
+      "publisher": "Treasury OFAC CAATSA program page",
+      "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/countering-americas-adversaries-through-sanctions-act-related-sanctions",
+      "status": 200,
+      "received_utc": "2026-10-19T17:37:03.741351Z",
+      "raw_sha256": "71f471ebbd5a83bb1540f8349ed7821fd4cd0fb790fdbc07f68b680449cb69fa",
+      "gzip_sha256": "3ce225357933fe3353c1d8e1dc2031bfae4c26be56b2f235de7106d1344cc3f3",
+      "receipt": "logs/deep_review_20261017/case0391_sources_1730/ofac_caatsa_program.receipt.json",
+      "fact_or_limit": "Current program page; visible recent actions include Feb24 2026 Russia-related CAATSA designations, not a Turkey/SSB relief instrument."
+    },
+    {
+      "publisher": "State DDTC public portal page",
+      "url": "https://www.pmddtc.state.gov/ddtc_public",
+      "status": 200,
+      "received_utc": "2026-10-19T17:37:05.212453Z",
+      "raw_sha256": "4612ef28a09da7a41338db5fd350baca632059b1288e940745ed5b5214d93b0e",
+      "gzip_sha256": "7b8e93c76aaf80696a3b8f4fcd627c71da4b77f070abbeac36ce483ecca3aa34",
+      "receipt": "logs/deep_review_20261017/case0391_sources_1730/ddtc_turkey_caatsa.receipt.json",
+      "fact_or_limit": "HTTP200 client-rendered shell; no Turkey/CAATSA text rendered, so no status conclusion."
+    },
+    {
+      "publisher": "Federal Register State Department sanctions notice",
+      "url": "https://public-inspection.federalregister.gov/2021-07048.pdf",
+      "status": 200,
+      "received_utc": "2026-10-19T17:37:27.761107Z",
+      "raw_sha256": "0cbfd616c8f5012740252e66a90c737ce248af037a0667c0ef4f8ac28333b745",
+      "gzip_sha256": "d16ba6ba4ca554d9b39f4aeab5dd2252d440332ecc5d9e49f8ee2ac94cbd48df",
+      "receipt": "logs/deep_review_20261017/case0391_federal_register_1740/initial_2020_sanctions_notice.receipt.json",
+      "fact_or_limit": "State notice names SSB and four officials (Demir, Yigit, Gencoglu, Deniz); sanctions under CAATSA231 effective Dec14 2020."
+    },
+    {
+      "publisher": "Federal Register NRC rule status reference",
+      "url": "https://public-inspection.federalregister.gov/2026-07917.pdf",
+      "status": 200,
+      "received_utc": "2026-10-19T17:37:28.218444Z",
+      "raw_sha256": "f59f2c3a67b9979936904f7f64b77130927f4f254451fcb45fe2b1f78ecfc571",
+      "gzip_sha256": "e766de854a4265b88d4072350974f41ec2f9b7855fade1acd610a19b2e836af6",
+      "receipt": "logs/deep_review_20261017/case0391_federal_register_1740/2026_status_reference_nrc_rule.receipt.json",
+      "fact_or_limit": "Published Apr23 2026; says SSB was subject to CAATSA231 sanctions on Jul9 2024 only, not current Oct2026 status."
+    }
+  ],
+  "dated_synthesis": [
+    "The Federal Register State notice (2021) dates the SSB/officials sanctions to Dec14 2020; the 2026 NRC rule recites SSB was sanctioned as of Jul9 2024, not after that date.",
+    "No issued Turkey/SSB/covered-official CAATSA231 relief instrument was established in these captures. This is a bounded gap, not proof none exists: State archived page was a technical-difficulties shell; DDTC was an unrendered shell; no full docket/list-history audit was done.",
+    "Frozen case text cites a secondary Reuters Jul7 report of Trump intent. Intent/negotiations do not qualify under this market rule; no current negotiation status was independently retrieved."
+  ],
+  "coverage_limits": [
+    "No direct October 2026 government negotiation/status statement was captured.",
+    "No legal advice, probability, PM price or decision."
+  ],
+  "assembled_utc": "2026-10-19T17:37:59.952312Z"
+}

@@ -1,0 +1,1 @@
+{"name":"compute_methodology","request":{"method":"GET","read_only":true,"scope":"case374 linked official Ornn compute-index methodology","url":"https://data.ornn.com/methodology"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:56:21.811719Z","timing_basis":"call_window"}

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T17:21:13.173190+00:00
+Updated: 2026-10-19T18:02:44.080835+00:00
 
-**340 valuations saved; first milestone100:** 340 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2288 pending.
+**345 valuations saved; first milestone100:** 345 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2282 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -378,8 +378,14 @@ Each report below is written before moving to the next evaluation. Related contr
 |364|[Will Tesla be the largest company in the world by market cap on October 31, 2026?](evaluations/0364.md)|valued|Noentry: YESsmallcentralpositivebutactual20ppstressnegative; NOaskabsent. RemoteNObidrequiresfreshconditional-fill/earnings/riskreview, notautomatic.|
 |365|[Will the price of Ethereum be above $2,500 on October 18?](evaluations/0365.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |366|[Will OpenAI announce another Millennium Prize solution by December 31, 2026?](evaluations/0366.md)|valued|No entry. YEScentralpositivebutfails25ppreserve; NOnegativeevencentral. Competitive makerpricingalsofails; remoteceilingnotorderauthority. Cash/currentheldriskandfourBUYcommitmentsremainalternatives.|
+|367|[Will the US capture another world leader in 2026?](evaluations/0367.md)|valued|Noentry. YESpositivecentral at3.9c butprequote15ppreserve fails; NOnegativeevenoptimisticzero-feecentral. Feeparityunverifiedexplicit; notliquidity/price-basedexclusion.|
+|368|[Is Earth flat?](evaluations/0368.md)|valued|Noentry. Bothdatedsidesfail5ppselectedprobability. Stalebook9730snotexecutionready; NOoptimisticcentralcarryfailsdatedcashhurdleevenbeforefunding. Notfactualexcluded.|
 |369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|370|[Will DeepSeek have the best AI model at the end of December 2026?](revisions/0370_20261019T174937815114Z.md)|valued|Noentry; p/reserveunchangedafterpairedsource/methodreview. CentralcheapYESleadretained; noempiricallowerbound. Cent-grid/$1signedcashroute differsfrom10shareheadlinecost; strictsignedriskgatesremain.|
+|371|[Will Anthropic's valuation hit (HIGH) $2.5T by December 31?](evaluations/0371.md)|blocked_after_review|Blockedafterreview/noentry, notvalued orrejected. Bothsidecostandconditionalbreak-even preserved; noimmediatebuybothfloor.|
+|372|[Will Olivia Chow win the 2026 Toronto mayoral election?](evaluations/0372.md)|valued|Noentry: YESnegativecentral; NOpositivecentralbutfails15ppprequoteselectedforecast/currentmaker. Actualsinglepoll/candidate/turnoutgapspriced, notignored.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|374|[Will the Ornn B200 Index be at least $7.00 on December 31, 2026?](evaluations/0374.md)|valued|No entry: YES negative central; NO central positive but fails prequote20pp selected forecast and competitive maker prices. Remains eligible for new evidence/price.|
 |375|[European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri](evaluations/0375.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |377|[Will the highest temperature in Guangzhou be 33°C on October 17?](evaluations/0377.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|

@@ -1,0 +1,106 @@
+{
+  "files": [
+    {
+      "bytes": 766,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_refresh_1559/raw_text.receipt.json",
+      "sha256": "a81708ff1236d7d5bdd7d6c369dc733f0460de34721c03ae7b0378226238948b",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 815,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0371_npm_marketing_1748/npm_marketing.receipt.json",
+      "sha256": "e2c915a884ef5bfe9b5d6c116e162de64646f55e5215803c0b37e603eee2e768",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 311,
+      "decompressed_sha256": "7b5c81299371afbb89c443185df62154cee84d263ef64cd00543e00d13467d34",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/0371_fee.body.json.gz",
+      "sha256": "1cd3e75e3e86ec171a0ffc245c0f77e92e42c6e7e132176e15c3b8dbc2325e0a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 653,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/0371_fee.receipt.json",
+      "sha256": "6e1e1cf552a07c8e7f92b3cd25fc86544e685bc4ccc91c0cd9c1e2df1003a695",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2617,
+      "decompressed_sha256": "575daf227994c60852983ec39608976aa1ca8564dcf4473f88e29bdfd9985be4",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/0371_gamma.body.json.gz",
+      "sha256": "2ef9eef05c2737cadcbb4dca3311bd0a36db54a8f73a99bbaf15e2b47d56af92",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 697,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/0371_gamma.receipt.json",
+      "sha256": "a1265dbed7312bb91fb6eeea877af56878064b82ac4a00d7b2cacfb323061281",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 738,
+      "decompressed_sha256": "90391a50f7a1241e4f910743af483f2c4fc2446008056d2e1bf5cc8f835a393b",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/books_batch_01.body.json.gz",
+      "sha256": "90940d3fb197a021c597c1cf2fbff9d09973866c03463dfd3b88f7b586385de4",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 776,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0371_quote_1751/public/books_batch_01.receipt.json",
+      "sha256": "98d631c0fabe2aeb38b23e4a2069d85e6104ce95c945de45a89414945488eade",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 314,
+      "decompressed_sha256": "d954c99e6c3bd129a0dce73898155b0c942e5094202546c01ba66b22d8ff84ef",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/0372_fee.body.json.gz",
+      "sha256": "f8eba9c21d2769f4091d79cdcbb2f69dda82f4cdc403d2a1f8aa37c632b8beaa",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 653,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/0372_fee.receipt.json",
+      "sha256": "84dd88e8f952bb735ff43490b8eb846ffe399519dbe7c7880dd7733d3b5f125e",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1873,
+      "decompressed_sha256": "fd23f97c3a8896ea8a437c648d439ce785bbc27dec3fbd486c2a5fdbac0df777",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/0372_gamma.body.json.gz",
+      "sha256": "c2c900a32f0be28a74864b5199f246595f7d161ab9f96d201dde0c729beeddfb",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 697,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0372_quote_1754/public/0372_gamma.receipt.json",
+      "sha256": "6192ca1938862a8cf9dc3dd48aae3049b25862649e8204b102bd8712fea3144e",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

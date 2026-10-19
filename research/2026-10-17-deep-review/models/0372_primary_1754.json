@@ -1,0 +1,51 @@
+{
+  "schema": "primary_price_blind_poll_scenario.v1",
+  "review_index": 372,
+  "created_utc": "2026-10-19T17:53:35.315172+00:00",
+  "frozen_criteria_sha256": "aeda7e0b70a64cec8fd9bea0d4c07c47696d71698d6e53585d05231bc9ba4ff3",
+  "baseline": "OriginalPallasOct14field/Oct16release,732eligibleadultsIVRnotlikelyvoterfilter;52Chow46Bradford3otherrounded/12undecided. Normalizeddecidedtotal101forarithmetic, notreplacingpublishednumbers.",
+  "primary_observations": "Poll saysAlexander droppedout butofficialOct19candidateJSONActive; politicalwithdrawalvsballotgap unresolved. Satisfaction39/dissatisfied49 andBradfordgains contextualizeconsolidation, samepollnotindependentdatapoints. Twofreshnesssearchesfoundnonewerfieldedpollinreturnedmaterial, notcomprehensiveabsence.",
+  "margin_model": {
+    "distribution": "Studentt5marginerror",
+    "scale_percentage_points": 5.5,
+    "implied_sd_pp": 7.1004694680469305,
+    "reason": "Samplingmarginerrorrough3.8–4pp(eligible/decidedsampleunclear), plus unmeasuredhouse/nonresponse/geography/likely-voter/latecampaign andprompt uncertainty. Heavyerror judgementnotfittedTorontoerrorfrequency; individualMOE3.6notmarginMOE."
+  },
+  "branches": [
+    {
+      "weight": 0.55,
+      "label": "Undecidedsplit50:50/third-partysharepersists",
+      "margin_pp": 5.227722772277228,
+      "chow_beats_bradford_probability": 0.8072454593464901
+    },
+    {
+      "weight": 0.35,
+      "label": "Undecidedsplit65:35Bradford;otherpollshareconsolidates80:20Bradford",
+      "margin_pp": 0.05940594059405946,
+      "chow_beats_bradford_probability": 0.5041000666012702
+    },
+    {
+      "weight": 0.1,
+      "label": "Undecidedsplit65:35Chow/otherunchanged",
+      "margin_pp": 8.827722772277228,
+      "chow_beats_bradford_probability": 0.9153041601337082
+    }
+  ],
+  "pair_margin_probability": 0.711950441964385,
+  "nonstandard_or_other_winner_mass": 0.01,
+  "formula_probability": 0.7048309375447411,
+  "adopted_p_yes": 0.7,
+  "broad_range": [
+    0.3,
+    0.95
+  ],
+  "actual_entry_reserve_pp": 15,
+  "reserve_reason": "10pollster/turnout/undecided/prompt/binarymargin assumptions +5lateweek/candidate-ballot/sourceandconditionalfill. Broaderadversescenario canbeworse; fixedbeforequotes.",
+  "method": "Primaryscenario-weightedheavy-tailmarginprojection, notsurveypercentaswinprobability ornaivebinomial. Allmixtureweights/scalessubjective; no historicalcalibrationclaim.",
+  "literal_timing": "ElectionOct26;becomesnextmayor/temporaryplaceholderexcluded;unknownbyJun30Other. OrdinaryOct26nightresolutionexpectednotguaranteed;8daycarrybaseandslippedJan/Juncontingencies.",
+  "sources": [
+    "work/0372_facts_1645.json",
+    "work/0372_freshness_1752.json"
+  ],
+  "portfolio": "Municipalturnout notidenticalUSSenate/House/Idaho exposure but politicalforecasting/modelriskshared; noindependenthedgecredit. Cash/knownheldrisks/fourBUY7.52compete, currentstate/eligibilityneededbeforeentry."
+}

@@ -1,0 +1,169 @@
+{
+  "review_index": 367,
+  "market_id": "1115638",
+  "condition_id": "0x173e1e71d57e728e99544c38da074e38e079e1f2865b332c10ad5ae7f84385b8",
+  "criteria_sha256": "1fd3c9032227b31d88191e61f2dd9ee7e711779a7d5857f9e5a07c0c42234a7e",
+  "status": "valued",
+  "literal_analysis": "Additional servingUNhead physicalcustody byUSdirectground action; title/Jan5creation implies postMaduro, description lacksstart so smalladjudicationtail; temporarycustodyqualifies, support/nonstate/formerleader/deathnotcapture. DeadlineDec31ET.",
+  "evidence": [
+    {
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202600005/html/DCPD-202600005.htm",
+      "observed_utc": "2026-10-19T17:37:41.114687Z",
+      "finding": "Jan4datedprimaryremarks establish priorcapability/cooperation/threats; notimminentOctoberoperation."
+    },
+    {
+      "url": "https://www.marketscreener.com/news/cuba-and-us-maintain-channels-of-communication-but-no-negotiations-diplomat-says-ce785dd8da8ef623",
+      "observed_utc": "2026-10-19T17:37:57Z",
+      "finding": "Oct5originalReutersinterview bodyrendered; pressure/contactsdonotensureUSgroundcustody. Direct403/toolwindow distinguished."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1115638",
+      "observed_utc": "2026-10-19T16:46:07.726739Z",
+      "finding": "VerifiedJan5creation/title/frozenidentity; notJanuaryoffice-statusdetermination."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.02,
+    "high": 0.45,
+    "method": "Primaryprice-blind geopoliticalregime/capture-and-adjudicationmixture, subjective/uncalibrated.",
+    "reasoning": "70%managedpressure×3%+25%regimecrisis×20%+5%directescalation×60%=10.1future;98%future+2%backwardMaduroqualification90%=11.698≈12. Fullrecognition/custody/USgroundconstraints; boundedcoverage/secretoperations broadenuncertainty;15ppactualreservefixedbeforequotes."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0367_quote_1740.json",
+    "quote_file_sha256": "367781ece6ec6b78388034b1462d0636aa3948764915d8f1bad6f62c3c931d86",
+    "quote_capture_utc": "2026-10-19T17:39:00.813762+00:00",
+    "gamma_received_utc": "2026-10-19T17:39:00.663177+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "selected_stress_probability": 0,
+        "best_bid": 0.024,
+        "best_ask": 0.039,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792431493001",
+        "book_received_utc": "2026-10-19T17:39:00.812864+00:00",
+        "book_age_seconds_at_receipt": 47.811864137649536,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.39,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.039
+              }
+            ],
+            "net": 0.39
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.24,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.024
+              }
+            ],
+            "net": 0.24
+          }
+        },
+        "taker_cost_usd": 0.39,
+        "central_expected_profit_usd": 0.8099999999999999,
+        "selected_stress_profit_usd": -0.39,
+        "break_even_before_carry": 0.039,
+        "break_even_constant_carry": 0.039246188863576795,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.88,
+        "selected_stress_probability": 0.73,
+        "best_bid": 0.961,
+        "best_ask": 0.976,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792431493001",
+        "book_received_utc": "2026-10-19T17:39:00.812864+00:00",
+        "book_age_seconds_at_receipt": 47.811864137649536,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.76,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.976
+              }
+            ],
+            "net": 9.76
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.61,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.961
+              }
+            ],
+            "net": 9.61
+          }
+        },
+        "taker_cost_usd": 9.76,
+        "central_expected_profit_usd": -0.9599999999999991,
+        "selected_stress_profit_usd": -2.46,
+        "break_even_before_carry": 0.976,
+        "break_even_constant_carry": 0.9821610341243835,
+        "current_execution_authorization": false
+      }
+    },
+    "fee_endpoint_limit": "Gamma feesEnabled=false supports zero-fee baseline; independent compact endpoint lacked fd, so curve authoritative=false. This is an optimistic planning case, not verified fee exemption or execution-ready quote.",
+    "fee_sensitivity": {
+      "rate": 0.07,
+      "exponent": 1,
+      "Yes_10share_cost": 0.41624,
+      "No_10share_cost": 9.7764,
+      "convention": "Ceiling5dp conservative legacy-cap sensitivity, not a verified current fee. Actualfees require fresh confirmation before any action."
+    }
+  },
+  "verdict": "Noentry. YESpositivecentral at3.9c butprequote15ppreserve fails; NOnegativeevenoptimisticzero-feecentral. Feeparityunverifiedexplicit; notliquidity/price-basedexclusion.",
+  "reopen_condition": "Verifiedqualifyingcustody, materialtargetstatus/operation/catalyst orruleclarification; freshbothsideconditionalforecast/cost/portfolioexecutiongates atchangedprices.",
+  "portfolio_action": "NONE; nofinancialprior/order/reservationchange.",
+  "evaluated_utc": "2026-10-19T17:40:14.631989+00:00",
+  "question": "Will the US capture another world leader in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 367,
+  "report_sha256": "9a547bc268f78da867e9a22073ab5122449e2c4d7ba6ca07e6e0ea9535b48561"
+}

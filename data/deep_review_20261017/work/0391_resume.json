@@ -1,0 +1,15 @@
+{
+  "review_index": 391,
+  "phase": "FACTS_ONLY_COMPLETE; valuation pending",
+  "source_paths": [
+    "work/0391_facts.json"
+  ],
+  "source_pointers": [
+    "https://ofac.treasury.gov/sanctions-programs-and-country-information/countering-americas-adversaries-through-sanctions-act-related-sanctions",
+    "https://public-inspection.federalregister.gov/2021-07048.pdf",
+    "https://public-inspection.federalregister.gov/2026-07917.pdf"
+  ],
+  "unit_sha256": "757092d6bfa05c97beceb6badfb478693cea0a781faa650edf4bbb1e0f6e3285",
+  "conditionId": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8"
+}

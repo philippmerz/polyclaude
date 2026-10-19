@@ -1,0 +1,21 @@
+{
+  "schema": "case0367_selected_browser.v1",
+  "review_index": 367,
+  "call_window": {
+    "before": {
+      "current_time": "2026-10-19 17:37:55 UTC"
+    },
+    "after": {
+      "current_time": "2026-10-19 17:37:57 UTC"
+    }
+  },
+  "representation": "Brief primary paraphrase of selected public web-rendered Reuters article; not raw HTTP, a complete article copy or independent wire timing. Direct403 preserved separately. Original tool-selection bytes kept only in ignored local file.",
+  "url": "https://www.marketscreener.com/news/cuba-and-us-maintain-channels-of-communication-but-no-negotiations-diplomat-says-ce785dd8da8ef623",
+  "article_publication_display": "Oct5 2026 16:07EDT/modified17:32EDT",
+  "finding": "In an original Reuters interview, Cuba’s Washington diplomat described communication channels without formal negotiations; State disputed that characterization and said talks continued. The report describes pressure and defensive preparations alongside Trump’s expectation military action might be unnecessary. Those attributed statements do not establish an intended or completed capture of a serving head of state.",
+  "selected_local_provenance": {
+    "sha256": "98d4d941e651da429ab4ee573b42024d1661a2f62cad21cdd3714eb092739201",
+    "local_path_not_for_staging": "data/deep_review_20261017/work/0367_cuba_browser_1738_selected_local.json"
+  },
+  "editorial_recorded_utc": "2026-10-19T17:55:18.652250+00:00"
+}

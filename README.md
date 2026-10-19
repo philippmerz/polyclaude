@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 219 recorded observations from Apr-25
+The local performance CSV now has 220 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**340 valued /8 blocked /364 factual /2,288 pending;712 base+62 revisions,next367; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.366 is saved with no entry;367/368/370/371/372/374/376/378/379/380/382/383/384 have facts only. Initial355/356 candidates remain withdrawn before orders. [Research closeout](research/2026-10-19-1721-research-closeout.md) · [Small resume](research/2026-10-17-deep-review/RESUME.md). Scanner coverage earns no valuation credit.
+**345 valued /9 blocked /364 factual /2,282 pending;718 base+63 revisions, next376/no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. Five further valuations and one source-blocked review are saved; no new entry. DeepSeek370's fine-tick route constraint was investigated without changing execution safeguards. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1800-checkin.md). Scanner coverage earns no valuation credit.
 
-**Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC pull binding.** Canceled orders stay closed and must never be replayed. [Current orders/proofs](notes/resting_orders.md).
+**Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC all-unfilled pull binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
 
-**Whalefall6NO/$1.02 retained without adding.** Numbers/Mojo16:53 show8mESTIMATE, not final; exactly8mFINAL paysNO. Worldwide17.5m is a different metric. HLE9NO closed/DEC225; the separate legacyGeminiNO is a zero-value/uncertain claim. OpenRouter5NO retained; specified four weekly labels govern. [Latest source review](research/2026-10-19-1648-checkin.md).
+**Whalefall6NO/$1.02 retained without adding.** Fresh18:02 Numbers/Mojo8m remains estimated; exactly8m FINAL paysNO. OpenRouter5NO is governed by four future weekly labels. ClosedHLE9NO/DEC225 and the zero-value/uncertain legacyGemini claim are distinct. [Source review](data/deep_review_20261017/work/light1800_sources.json).
 
 ## Mandate and constraints
 
@@ -82,15 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 16:48 queued tick
+## Last audited snapshot — October19 18:00 UTC
 
-**Bankroll $195.38 incl $5.83 separate gas; trading midpoint $189.55 / indicative depth $186.02; PM $34.41 / $30.88.** Producer17:01:48.512167–17:02:03.246022UTC; rounded sequential inputs are not synchronized NAV/certified proceeds.20.73 residual is accounting arithmetic, not audited cash profit; VM/API excluded. CSV219 observations uses the same check-window anchor. [Check-in](research/2026-10-19-1648-checkin.md).
+**Bankroll $195.66 incl $5.80 separate gas; trading midpoint $189.86 / indicative depth $185.98; PM $34.72 / $30.84.** Producer18:03:14.695934–29.060593UTC. Rounded sequential inputs are not synchronized NAV/certified proceeds;20.73 residual is accounting arithmetic, not audited profit. VM/API excluded. CSV220 observations uses the same producer/check-window anchor. [Check-in](research/2026-10-19-1800-checkin.md).
 
-Authenticated orders/positions17:02:19–20UTC HTTP200 match prior state: four LIVE/zero-matched BUYs/four exact reservations/$7.52 and eight position identities/sizes/totalBought unchanged. Local reservation bytes17:02:20 also unchanged. No trade, numerical-prior change, new maker or addition. Idaho34YES3c/$1.02 retains Oct19 22UTC all-unfilled pull and earlier cancel-first rule. [Orders](notes/resting_orders.md) · [Account](data/deep_review_20261017/work/tick1648_account.json).
+Four LIVE/zero-matched BUYs/four matching reservations/$7.52 and eight positive-size positions match17:02. Orders18:03:40–41 are authenticated CLI serialization; indexed positions18:04:53 HTTP200. No trade or numerical-prior change. Idaho34YES3c/$1.02 retains22UTC all-unfilled pull/earlier cancel-first. [Orders](notes/resting_orders.md) · [ops/account provenance](data/deep_review_20261017/work/light1800_ops.json).
 
-All three named alerts reviewed with older related coverage. Whalefall16:53Numbers/Mojo8mESTIMATE is not final;17.5mworldwide is a different metric. NewsNation repeats Oct17exchange; WWMT body/date and Times original-poll gaps remain explicit. OR17:01weeklychart has no target-week result. News reviewed through16:48:24UTC. [Primary risk](data/deep_review_20261017/work/tick1648_root_risk.json).
-
-15invoked CLIcommands rc0/30streams verified; nested status childrc not separately exposed, complete output has no failure marker. No new hurdle/UMA/redemption/Ostium/overdue issue; four daemons single/canonical/code-current.39context batches/687rows catalog-reviewed, no valuation credit. Consistency12validated/8failed(2stale/6noasks)/171unquoted; incomplete, not exchange-wide absence. No routine Telegram. Existing light18UTC/Idaho22UTC/fullOct20 02UTC; weeklyP&LOct23. [Operations](data/deep_review_20261017/work/tick1648_ops.json) · [Scan](data/checkin_20261019T1648_public_summary.json).
+Whale8m is still estimated; OROct19 partial is not a target-week result. USA Today body/date and original MI poll gaps remain. News reviewed through17:53:33; no verified new thesis break.17invoked commands rc0/34streams verified; no new UMA/hurdle/Ostium/redemption/overdue issue; four single canonical/code-current daemons. No repeated discovery or routine Telegram. Existing22UTC light/Idaho pull/fullOct20 02UTC; weeklyOct23. [Primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

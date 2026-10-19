@@ -1,0 +1,1 @@
+{"name":"risk_disclosure","request":{"method":"GET","read_only":true,"scope":"case374 Ornn index construction and publication methodology","url":"https://onboard.ornnai.com/risk-disclosure"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:55:54.941804Z","timing_basis":"call_window"}

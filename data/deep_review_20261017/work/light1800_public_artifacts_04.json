@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/1838_gamma.receipt.json",
+      "bytes": 698,
+      "sha256": "01bf19158ef5a21033533b54e2f95f3279cd5761db0b7a5a66935208ce4c9072"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/books_batch_01.body.json.gz",
+      "bytes": 2649,
+      "sha256": "e9b0fafe2b3bee9f7b05d3b8f83854cd098700f0956e6970712716fe5b24e133"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/books_batch_01.receipt.json",
+      "bytes": 1336,
+      "sha256": "f04826ced20be7fa1e29b58f8ea90d493402e82060c43bcb73a4df1b608af91d"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_or/weekly_chart.body.json.gz",
+      "bytes": 6058,
+      "sha256": "55a80bc5666d3aadbb9c6cf3500ef21a9cbb7fa63e21180b2ac649245c71f293"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_or/weekly_chart.intent.json",
+      "bytes": 320,
+      "sha256": "a4bff0317c6a864fd0bf51c77af48aa2484149c0a58b597bd92a98e9bee8e319"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_or/weekly_chart.receipt.json",
+      "bytes": 903,
+      "sha256": "70c2526409d123ed9f92759ce846c513d3695ab19a9a9a6b3bba7ab3578c2456"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/mojo.body.json.gz",
+      "bytes": 54288,
+      "sha256": "2d897289f584f02b25e6a4791994247997808f8cf5a33f33637d6b67dbe8d141"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/mojo.intent.json",
+      "bytes": 302,
+      "sha256": "63efdb72c855eaa792ed68984880a011b3b57dece8590c6bda27d82d07f2ee64"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/mojo.receipt.json",
+      "bytes": 834,
+      "sha256": "295e3110e33e20fa719d3b6bf956778861f1e49782ebb9ca2a4acecc570796f1"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/numbers.body.json.gz",
+      "bytes": 8507,
+      "sha256": "55579c5e3fcaf84cde0b9aa48e93ee17a2209fb04aab54f74f4a032f80fd22b6"
+    }
+  ]
+}

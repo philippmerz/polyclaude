@@ -1,0 +1,25 @@
+{
+  "schema": "primary_case0370_method_followup.v1",
+  "review_index": 370,
+  "reviewed_utc": "2026-10-19T17:49:28.090567+00:00",
+  "classification": "Potentiallimitationinvestigated; no global research block or new strategyclass.",
+  "primary_conclusions": [
+    "Jointmarginalsconsistent but5.84%notempiricallycalibrated. Factualchampion confirmsrealiteration/admissionpath; nofutureTextroadmap/historicalrankturnover bound establishes a robustlow-end probability. Broad0.5%scenario is not a measuredlowerfloor.",
+    "Skepticcorrectlynotesclass10ppdefault rests onsmallN revisions;20ppscenarioreserve is not uniquelyempiricallycorrect. Lackofjustificationforlowerreserve doesnotproveallfuturelongshotsuninvestable. Keepmarketeligible; noquote-drivenhaircutreduction.",
+    "Vettedcent-grid/$1signedcashroute changesimplementablecost:ask.004 signs.01, no positivecentpassivemaker belowask; >=100integer sharesat.01 neededto sign1notional beforefees, not5share/.02route. Bestasks mayimproveactualfills butgate/reservation mustuseworst signedfee-inclusive1.0396per100shares, notpromise.41594bestcase.",
+    "No independentpositive lowerprobabilitybound atthatroute/cost orcurrenteligibility/account gates established; unchangedpYES.0584/NO.9416 and20ppreserve/noentry. Do notchangeexecutionamountprecision safetymerelytoreachheadlineprice.",
+    "Source/route limitations localtothiscase andalreadyfail-closedwriter, notevidence3kvaluationledgerisinvalid. Wider original-indexreview cancontinue; reopenwithnewmeasurement/conditionalforecast orseparatelyvettedprecisionimprovement."
+  ],
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/work/0370_skeptic_gate_ops.json",
+      "sha256": "cbb89edcbebaf391b289fc0bebb87339f1ff09fa4810fcb152487dc80c324202"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0370_champion_path_facts.json",
+      "sha256": "16f706be52acc201f374ae1a5a69f1662525404d85a34feffb1b2e2ef70c3639"
+    }
+  ],
+  "financial_mutations": 0,
+  "network_calls_in_primary_followup": 0
+}

@@ -1,0 +1,26 @@
+{
+  "schema": "bounded_research_integrity.v1",
+  "checked_utc": "2026-10-19T18:04:49.836571+00:00",
+  "base_reports": 718,
+  "revision_chain_rows": 63,
+  "counts": {
+    "excluded_factual": 364,
+    "blocked_after_review": 9,
+    "valued": 345
+  },
+  "new_case_indices": [
+    367,
+    368,
+    370,
+    371,
+    372,
+    374
+  ],
+  "new_primary_record_forecast_identity_and_links": "pass",
+  "all_base_json_equal_ledger_and_report_hashes": "pass",
+  "append_only_HEAD_prefixes": "pass",
+  "0374_saved_quote_economics_reproduced": "pass with original saved dated Aave alternative; separate light check refreshed cache, which is not silently substituted",
+  "0374_mixture_arithmetic": "pass",
+  "financial_mutations": 0,
+  "new_cases_after_374": 0
+}

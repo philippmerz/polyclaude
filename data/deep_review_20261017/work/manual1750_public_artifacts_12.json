@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "bytes": 1982,
+      "decompressed_sha256": "63a66b1f18e3d080d7b513872b547b57bd3cdf0aeaa6ce43bba5256a5a51e214",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0396_gamma.body.json.gz",
+      "sha256": "6a5fdfce4dd3238ef3e8998366186b6ad7d29b073cfb072b960d38fe5be2e3bc",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2317,
+      "decompressed_sha256": "a043588e5a6d0db5eac55eec86ed1a71f61534c830f23c03c1e1bb6ed06c6bba",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0398_gamma.body.json.gz",
+      "sha256": "f61125da22e6876a7d3ebade6e9ac720e3a8b35c13df131e0b40ed2adf31022c",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 757,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0398_gamma.receipt.json",
+      "sha256": "92fe7c5947f0c5284335f86b00d784fd7a6917d28f45d0f86faf96128be0fd47",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 93952,
+      "decompressed_sha256": "8a0a09c201e0a76386620839bee02b319690a7d0346e5b84be2d7ab702b69320",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/tesla_q2_2026_10q.body.gz",
+      "sha256": "1277fd795ca99032fb24f13639d703fc6d2e1bde1a6f2fd2e98057ccbb475860",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1099046,
+      "decompressed_sha256": "cbb27bdf33bf020b69c6d6882aefa00ee069fae6c00a6c612d547bb5d4d5f802",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/tesla_alien_cap_sources/sec_companyfacts_sharecounts_4issuers.body.gz",
+      "sha256": "be62ffdc2d75a4593df1af8924ea34070915c2bcb6db3231db61d5349126735a",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 6876,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0367.json",
+      "sha256": "ebb34d714a024065dbcfed68ed78d83ca5134d06dab55e55a4cd5cdd18a3465c",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3920,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0367.md",
+      "sha256": "9a547bc268f78da867e9a22073ab5122449e2c4d7ba6ca07e6e0ea9535b48561",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 6008,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0368.json",
+      "sha256": "f3de389ce0d9505ebcff0ce9414969f8c1df6be5a1a6015283a934a136cc8311",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2933,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0368.md",
+      "sha256": "6945d85b3903713bfd2d0b54bef2c1ffc9d503499625e2420c39fcf4d88e18bb",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 6256,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0370.json",
+      "sha256": "7466b3415127bccf991d57a0bd8b06f6c2e0229dfa88e3864488c33baa954eec",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3960,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0370.md",
+      "sha256": "3816cd12b566cd96879815474f0b1281be542ab43dba9e42ba1eb89292cc24b6",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 5637,
+      "git_ignored": false,
+      "kind": "evaluation",
+      "path": "research/2026-10-17-deep-review/evaluations/0371.json",
+      "sha256": "9c93eb08ff39b79ab076a6287a005accbeaee5af56a9e49841fb01ccf0c15a03",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

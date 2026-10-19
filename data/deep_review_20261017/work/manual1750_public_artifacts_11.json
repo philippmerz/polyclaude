@@ -1,0 +1,108 @@
+{
+  "files": [
+    {
+      "bytes": 96598,
+      "decompressed_sha256": "9f2b9628972740e76cdb517cb06c2f3bb1200b9be835233a4327eeab3935654e",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/cases372_378_sources/372/pallas_oct14_poll/pallas_oct14_poll.body.json.gz",
+      "sha256": "d0ae1c024d5bd56bfc20d739bca065cc52be71001bceb036ae64d4ea28dd6091",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 861,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/cases372_378_sources/372/pallas_oct14_poll/pallas_oct14_poll.receipt.json",
+      "sha256": "579d5acb547ace5a845a6e183a2d859901a3d42e878b9e1f1db3449e0995b562",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2895,
+      "decompressed_sha256": "20753fd6cde15b0e275ec24c5cc0ce73327f36e3dafeadc07ba8dcaaffe8ac22",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/cases372_378_sources/372/toronto_mayor_candidates/mayor_candidates.body.json.gz",
+      "sha256": "ac17b3a919a06348ea714515b2a8c128768ccc0fac5e06c8fa38f8883453eed2",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1019,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/cases372_378_sources/372/toronto_mayor_candidates/mayor_candidates.receipt.json",
+      "sha256": "086206ed8e00b38f76032a948d813bd13d185267f5ed3029efe764a23ad2b362",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 39967,
+      "decompressed_sha256": "4f3ef482168274bb7299ac6433476b7935bf25c163bf6b23d616942b786792ba",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/market_cap_history_sources/official_ir_aapl_earnings.body.gz",
+      "sha256": "476f0dcfcc1a4cc9be3d5e15f7ecd142d7dfd42ef6ed94ce092169f8b53831d0",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 17164,
+      "decompressed_sha256": "254615ea8e41b56eeafd3fe9fdc9475eda1c2e6066be88261e18d408f339bd63",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/market_cap_history_sources/official_ir_alphabet_earnings.body.gz",
+      "sha256": "083b1a3fbc55f41a56c4d6d70f16d4c707f1c53ade4864575517cf5aecc8caf9",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 22582,
+      "decompressed_sha256": "4ae003475796b25e6fffadd11411cb61b52bd0488c8d90a124e50990df794ce5",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/market_cap_history_sources/official_ir_msft_earnings.body.gz",
+      "sha256": "0e40f6becfec5f034099fc9a5d0ebbb9b9aa801a35367748b262a14b034c9cce",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 26920,
+      "decompressed_sha256": "843052bf178b029b4cacf0d2c51b6dcadccfbdb6fbb82b37f59fe0e1fb4c67fc",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/market_cap_history_sources/official_ir_nvda_earnings.body.gz",
+      "sha256": "be3f1f5f72126e7a804670ae163ed0ce2490c8ee8ca66c47cc2a15e0f455ab2b",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 2605,
+      "decompressed_sha256": "a51be2fd49fa11aa1c4eb7f1d58fd1544e278f5f8b281444c3017098926bc1b4",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0200/0371_gamma.body.json.gz",
+      "sha256": "a5383b8e9487bbc09446c753f48406f3aa447ac70ea80da3b7cb4458ec1fb0ba",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 756,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0386_gamma.receipt.json",
+      "sha256": "4ea8f4d04c539a9b440072152ec637009a40cddef802565aba087b02ebc6a01e",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 739,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0391_gamma.receipt.json",
+      "sha256": "20a9a60d0f221f2ba9fd8ea27994eaa117e6cb6b955e0dd07b2adea13ed5268c",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 739,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/terminal_status_batch_0305/0394_gamma.receipt.json",
+      "sha256": "70b59116498e7553a21df36d51a0c5bb58a8f5fc434f2de2f94e6f0e46675c40",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

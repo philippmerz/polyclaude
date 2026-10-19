@@ -1,0 +1,19 @@
+{
+  "error": null,
+  "gzip_path": "logs/deep_review_20261017/terminal_status_batch_0305/0394_gamma.body.json.gz",
+  "gzip_sha256": "3c418edd6fce4315eb4d819bd000a5a91752510e8d0ec2f728e8e6bd9b94eea9",
+  "headers": {
+    "cache-control": "public, max-age=300",
+    "content-type": "application/json",
+    "date": "Mon, 19 Oct 2026 02:55:44 GMT",
+    "last-modified": "Mon, 19 Oct 2026 02:55:44 GMT"
+  },
+  "method": "GET",
+  "raw_bytes": 3053,
+  "raw_sha256": "77322b9391ce5ece96a8c8fe9476bc5b71f3064a1e109df4bdca872e7385f4bf",
+  "received_utc": "2026-10-19T02:55:44.671285+00:00",
+  "review_index": 394,
+  "started_utc": "2026-10-19T02:55:44.596677+00:00",
+  "status_code": 200,
+  "url": "https://gamma-api.polymarket.com/markets/5166970"
+}

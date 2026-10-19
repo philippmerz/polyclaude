@@ -1,0 +1,75 @@
+{
+  "schema": "primary_joint_arena_model.v1",
+  "review_index": 370,
+  "created_utc": "2026-10-19T17:43:54.982477+00:00",
+  "price_blind_primary": true,
+  "same_endpoint_case274": "OpenAITextRAWDec31 17UTC exactsame company-firstranking; reuse OpenAI branchweights/conditionalprobabilities as dated primaryforecast, not independentcoin. No contemporaneous evidence in reviewedfacts requires changing its marginal.",
+  "branches": [
+    {
+      "weight": 0.35,
+      "OpenAI_branch": "No material OpenAI contender",
+      "company_first": {
+        "OpenAI": 0.005,
+        "Google": 0.57,
+        "Anthropic": 0.29,
+        "DeepSeek": 0.08,
+        "xAI": 0.035,
+        "Other": 0.02
+      }
+    },
+    {
+      "weight": 0.45,
+      "OpenAI_branch": "One material OpenAI contender",
+      "company_first": {
+        "OpenAI": 0.22,
+        "Google": 0.4,
+        "Anthropic": 0.27,
+        "DeepSeek": 0.05,
+        "xAI": 0.04,
+        "Other": 0.02
+      }
+    },
+    {
+      "weight": 0.18,
+      "OpenAI_branch": "Multiple material OpenAI iterations",
+      "company_first": {
+        "OpenAI": 0.4,
+        "Google": 0.25,
+        "Anthropic": 0.23,
+        "DeepSeek": 0.035,
+        "xAI": 0.05,
+        "Other": 0.035
+      }
+    },
+    {
+      "weight": 0.02,
+      "OpenAI_branch": "Source/provider comparison disruption",
+      "company_first": {
+        "OpenAI": 0.25,
+        "Google": 0.3,
+        "Anthropic": 0.25,
+        "DeepSeek": 0.08,
+        "xAI": 0.07,
+        "Other": 0.05
+      }
+    }
+  ],
+  "joint_company_first_marginals": {
+    "OpenAI": 0.17775000000000002,
+    "Google": 0.4305,
+    "Anthropic": 0.26940000000000003,
+    "DeepSeek": 0.0584,
+    "xAI": 0.04065,
+    "Other": 0.0233
+  },
+  "p_yes": 0.0584,
+  "low": 0.005,
+  "high": 0.3,
+  "actual_entry_reserve_pp": 20,
+  "method": "Primary subjective allocation of exactly one company-first winner inside prior274 conditional scenarios; no score-gap-to-win-frequency fit, no independent-model multiplication.",
+  "evidence_bridge": "Oct15renderedraw-routeGoogle1532±9preliminary vsbestDeepSeek1463±6/rank38; manyrivals, not a probability orDec31result. Oct18DeepSeek1017admission isWebDev, notText. OfficialAPIupdates/releaseclaims showcontinuing iterations; no completefutureTextrelease/admission calendar.",
+  "causal_bridge": "DeepSeek can win witha newlyadmitted materiallybetterchat model, favorablelatetiming and limitedrivalresponse. NoOpenAIcontender branch stillpermitsDeepSeekrelease; originalOpenAI-conditionedbranches mustnotberenamed no-global-innovation. StrongerOpenAI iteration environments sharefrontierprogress but leave lessfirst-place massforDeepSeek.",
+  "limits": "StyleOffspecified; rawrouteobservations/browsercheckboxstategap, preliminaryscores/unroundedties, modelownershipmapping andsourcefallback remain. Raw69pointsgapnotstatisticalzscore; voteCIsnotfuturecompetitionuncertainty.",
+  "reserve_reason": "10ppfrontierrelease/quality/timing plus5source/configuration/rank and5conditionalfills. Broadadversecasescanbeworse. NO>90centraldoesnotlicenseK5: futurewinner tailnotmeasured and73days allowsregimechange.",
+  "portfolio": "AIrelease/usefactor overlapsheldOR5NO; no measuredhedge. ClosedHLE9NO/DEC225notcurrentholding; legacyGeminiuncertainclaimdistinct. Cash/datedAave andcurrent4BUYcommitments compete; freshfinancialgatesbeforeanyentry."
+}

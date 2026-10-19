@@ -1,0 +1,38 @@
+{
+  "review_index": 367,
+  "compiled_utc": "2026-10-19T17:37:41.269494+00:00",
+  "sources": [
+    {
+      "url": "https://www.govinfo.gov/content/pkg/DCPD-202600005/html/DCPD-202600005.htm",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/case0367_primary_1738/govinfo_jan04.receipt.json",
+      "received_utc": "2026-10-19T17:37:41.114687Z",
+      "raw_sha256": "a10b5d2039e6882f960d5e4b5778aae4a2ab9279db58f4d480b259c0f33e19a5",
+      "gzip_sha256": "a6c3e6aeea7e9eefd7b5852d69206263fe9b9294a9a65740b295adf8f47badd2",
+      "excerpts": [
+        " got everything back. Q. And the—— The President. We got everything back and nobody killed. Interim President Delcy Rodriguez Gomez of Venezuela Q. The next question is who's in charge of Venezuela right now. Have you spoken to the newly sworn-in President there, Rodríguez? And what are your thoughts on the entire situation? When you said the U.S. would run Venezuela—— The President. We're dealing with the people. We're dealing with the people that just got sworn in. And don't ask me w",
+        " Do you want to? The President. Yes, at the right time, I will. Venezuela-U.S. Relations Q. Did the U.S. give Delcy Rodríguez any guarantees in exchange for cooperating with your administration? The President. No. No, but she's cooperating. Transitional Administration of Venezuela Q. Is she—are you going to demand free and fair elections in the short term in Venezuela? The President. Well, it depends, you know, what you're talking. We have to do one thing in Venezuela: bring it back. I",
+        " Venezuela/Status of Political Prisoners/Oil Supply and Refining Q. Now, are you—are you going to demand that Delcy Rodríguez let opposition figures return or free any political prisoners? The President. We haven't gotten to that yet. Right now what we want to do is fix up the oil, fix up the country, bring the country back, and then have elections. Q. Now, is it fair—— The President. We'd better bring the country back. Otherwise, you're just going to have—you're going to have a mess t",
+        "o do was amazing. They knew we were coming. We had part of the—a good part of the navy, and they were able to capture this man alive. No military in the world could have done it. And as to this Commander in Chief, he did something people talked about doing. You just wait for Cuba. Cuba is a communist dictatorship that's killed priests and nuns. They've preyed on their own people. Their days are numbered. We're going to wake up one day—I hope in '26—in our backyard, we're going to have ",
+        "They don't have anything. They don't have a military. All they do is run around shooting people and trying to capture ships. You know, we don't let them take ships anymore. You know why? We use the same exact missile on them that we use on the drug carriers, and it's very effective. Q . So—— The President. Do you notice there's nobody capturing ships anymore? Because as they head out to go capture the ship—and the ship doesn't want to fire back, because it's very flammable stuff in man",
+        "at we use on the drug carriers, and it's very effective. Q . So—— The President. Do you notice there's nobody capturing ships anymore? Because as they head out to go capture the ship—and the ship doesn't want to fire back, because it's very flammable stuff in many cases. And the insurance companies don't want—because they've—you know, they build a billion-dollar ship, and they don't want anybody firing rockets into the ship. But we're hitting them so hard. And it's very similar. Same m",
+        " an operation by the U.S. in Colombia? The President. It sounds good to me, yes. Q. Secretary Rubio mentioned Cuba—— The President. You know why? Because they kill a lot of people. Yes. Cuba/U.S. Military Operation in Venezuela Q. Secretary Rubio mentioned Cuba yesterday in his remarks. Does the U.S. have a plan to do a similar action in Cuba? The President. Well, Cuba always survived because of Venezuela. Now they won't have that money coming in. They won't have the income coming in. ",
+        "yes. Q. Secretary Rubio mentioned Cuba—— The President. You know why? Because they kill a lot of people. Yes. Cuba/U.S. Military Operation in Venezuela Q. Secretary Rubio mentioned Cuba yesterday in his remarks. Does the U.S. have a plan to do a similar action in Cuba? The President. Well, Cuba always survived because of Venezuela. Now they won't have that money coming in. They won't have the income coming in. You know, a lot of Cubans were killed yesterday. You know that. A lot of Cub",
+        "ecause they kill a lot of people. Yes. Cuba/U.S. Military Operation in Venezuela Q. Secretary Rubio mentioned Cuba yesterday in his remarks. Does the U.S. have a plan to do a similar action in Cuba? The President. Well, Cuba always survived because of Venezuela. Now they won't have that money coming in. They won't have the income coming in. You know, a lot of Cubans were killed yesterday. You know that. A lot of Cubans were killed, the bodyguards. Q. Do you know how many? Does the admi"
+      ]
+    },
+    {
+      "url": "https://www.marketscreener.com/news/cuba-and-us-maintain-channels-of-communication-but-no-negotiations-diplomat-says-ce785dd8da8ef623",
+      "status": 403,
+      "receipt": "logs/deep_review_20261017/case0367_primary_1738/cuba_reuters_oct05.receipt.json",
+      "received_utc": "2026-10-19T17:37:41.257529Z",
+      "raw_sha256": "f15d42968dfe896a9b8457b453317adab7fbb10f320fa8a19257c3e81f386b28",
+      "gzip_sha256": "320f04b7a6ce5320e0f5969033e8b9942f9e691109247cb3444a7b9357cf0f4a",
+      "excerpts": [
+        "Access Denied Access Denied You don't have permission to access \"http://www.marketscreener.com/news/cuba-and-us-maintain-channels-of-communication-but-no-negotiations-diplomat-says-ce785dd8da8ef623\" on this server. Reference #18.7dde4568.1792431461.994ee4f https://errors.edgesuite.net/18.7dde4568.1792431461.994ee4f",
+        "ermission to access \"http://www.marketscreener.com/news/cuba-and-us-maintain-channels-of-communication-but-no-negotiations-diplomat-says-ce785dd8da8ef623\" on this server. Reference #18.7dde4568.1792431461.994ee4f https://errors.edgesuite.net/18.7dde4568.1792431461.994ee4f"
+      ]
+    }
+  ],
+  "scope": "Bounded primary presidential remarks and original Reuters interview; no comprehensive event census or operational intelligence."
+}

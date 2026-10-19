@@ -1,0 +1,148 @@
+{
+  "review_index": 368,
+  "market_id": "2473336",
+  "condition_id": "0x1c5722c325bc563b74e5f07a92d7a1f89b435676f9296006c718511d6c638575",
+  "criteria_sha256": "0288475a8e9cc55667b9e041a19a3e1b871c4ff97a4d1fc67a8fa6775755f523",
+  "status": "valued",
+  "literal_analysis": "PublicconclusiveglobalEarthflatproof byDec31ET/credibleconsensus; localapproximation/geoidnotperfectsphere/isolatedhoax insufficient. Scientificconfidence separateoraclepayout; ordinaryJan/disputetail.",
+  "evidence": [
+    {
+      "url": "https://oceanservice.noaa.gov/facts/earth-round.html/geoid.html",
+      "observed_utc": "2026-10-19T15:54:51.723648Z",
+      "finding": "Verifiedtitle/body:ellipsoid/geoid/rotationalbulge/satelliteandgeodeticmeasurements. Onecurrentpage notliteraturecensus orfutureadjudicationmeasurement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0005,
+    "low": 0,
+    "high": 0.02,
+    "method": "Primaryprice-blind scientificandsemantic/oracle-tailjudgment, notmarketprice orretiredpopulationcalibration.",
+    "reasoning": "Physicalglobalflat-proof chance negligible across73daysgivenmutuallyconsistentgeodesy;0.05%YESdominatedunmeasuredadjudication/semantics.5ppactualtail/monitoringreserve;K5measured-tail licence notmet. Broad0–2explicituncertainty."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0368_quote_1741.json",
+    "quote_file_sha256": "2f6db839c553a4688dfe3b6955200866e31bc4b22d49c485cad165ac4d895d1d",
+    "quote_capture_utc": "2026-10-19T17:40:54.949834+00:00",
+    "gamma_received_utc": "2026-10-19T17:40:54.823542+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 5.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.0005,
+        "selected_stress_probability": 0,
+        "best_bid": 0.004,
+        "best_ask": 0.006,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792421924612",
+        "book_received_utc": "2026-10-19T17:40:54.948918+00:00",
+        "book_age_seconds_at_receipt": 9730.336918115616,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.06,
+            "fee": 0.00299,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.006
+              }
+            ],
+            "net": 0.06299
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.04,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.038
+          }
+        },
+        "taker_cost_usd": 0.06299,
+        "central_expected_profit_usd": -0.05799000000000001,
+        "selected_stress_profit_usd": -0.06299,
+        "break_even_before_carry": 0.006299000000000001,
+        "break_even_constant_carry": 0.006338762657735135,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9995,
+        "selected_stress_probability": 0.9495,
+        "best_bid": 0.994,
+        "best_ask": 0.996,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792421924612",
+        "book_received_utc": "2026-10-19T17:40:54.948918+00:00",
+        "book_age_seconds_at_receipt": 9730.336918115616,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.96,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.996
+              }
+            ],
+            "net": 9.962000000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.94,
+            "fee": 0.00299,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.994
+              }
+            ],
+            "net": 9.937009999999999
+          }
+        },
+        "taker_cost_usd": 9.962000000000002,
+        "central_expected_profit_usd": 0.032999999999999474,
+        "selected_stress_profit_usd": -0.4670000000000005,
+        "break_even_before_carry": 0.9962000000000002,
+        "break_even_constant_carry": 1.0024885473306464,
+        "current_execution_authorization": false
+      }
+    },
+    "execution_limit": "BothmatchingCLOBbooktimestamps are9730.34s old atfreshHTTP receipt, failing180s. Dated indicative economics, not current executability; no entry pursued because selected economics alreadyfail andNOcarry is worse even beforefunding."
+  },
+  "verdict": "Noentry. Bothdatedsidesfail5ppselectedprobability. Stalebook9730snotexecutionready; NOoptimisticcentralcarryfailsdatedcashhurdleevenbeforefunding. Notfactualexcluded.",
+  "reopen_condition": "Substantiveconclusivepublicproof/credibleconsensus orrule/statuschange; otherwisefreshbothsideconditionalnetcost/portfolio/eligibilitygates atchangedprices.",
+  "portfolio_action": "NONE",
+  "report_markdown": "# 0368 — Public conclusive proof Earth is flat\n\n**YES0.05% / NO99.95%; broadYES0–2%, judgmental.**5pp tail/monitoring reserve selectsYES0/NO94.95. No entry on either dated side. This remains a valuation, not a price-based factual exclusion.\n\nRule requires public **conclusive proof** of a globally flat Earth byDec31 23:59ET, using consensus credible reporting. Local-plane approximations, a non-perfect sphere, a hoax or an isolated claim are not this proposition. OrdinaryJanuary resolution fits the project; dispute/source/venue issues can delay or impair payment.\n\n[NOAA](https://oceanservice.noaa.gov/facts/earth-round.html/geoid.html) describes measured ellipsoid/geoid geometry, rotational bulge and satellite observations. Primary re-read verifies the captured page title/body and rawSHA; [receipt-bound facts](../../../data/deep_review_20261017/work/0368_facts_1555.json) retain its15:54:51UTC observation and unavailable publication date. One page is not a full literature search. The scientific forecast rests on mutually consistent global geodesy/observation, not on ignorance of future headlines.\n\n[Price-blindmodel](../models/0368_primary_1741.json) gives negligible physical-overturn chance; nearly all0.05%YES is an uncalibrated semantic/adjudication/misresolution sensitivity. This is not measured oracle-failure frequency or the retired favorite-population forecast. Broad0–2% is not a hard floor/ceiling.5pp class reserve explicitly covers payout uncertainty and conditionalfills; the K5bond shortcut is unavailable because future resolving consensus/oracle error was not measured first-hand over this73-day horizon. Scientific confidence alone does not certify payout certainty.\n\nBothoutcomes10shares,17:40:54UTC capture: YESbid.4c/ask.6c, buy.06299incl.00299fee, central−.05799/selected−.06299. NObid99.4c/ask99.6c, buy9.962incl.002fee, central+.033/selected−.467. Structuredfee5%p(1−p)matches compactdescriptor; min5shares/tick.1c. **Bothbooktimestamps are9730s old**, failing180s; costs are dated indicative observations, not certified fills. [Economics](../../../data/deep_review_20261017/work/0368_economics_1741.json).\n\nAt the dated3.1525%variableAave sensitivity, NOcost plus74-daycarry is10.02489: even a certain10payout loses to cash before funding/gas/operations. Joining99.4cmaker also fails centralcarry; lower speculativequeueprices need a new conditional-fill forecast and fresh quote. Actualselected94.95% rejects both competitive sides independently of that datedhurdle. Do not translate stalebook failure into substantive rejection or assume fee-free proceeds/eligibility.\n\nCash and other known opportunities compete; no meaningful measured hedge or guaranteedfloor. Reopen on a substantive qualifying scientific/consensus claim, rule/status change, or prices with fresh verified positive net economics and portfolio/funding/venue gates. No financialprior/order/reservation change.\n"
+}

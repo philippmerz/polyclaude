@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "data/deep_review_20261017/work/manual1800_RESUME.json",
+      "bytes": 1986,
+      "sha256": "48f92e56dce5fb48a7a21eef05fd5bac9626ad830fd314e436ee16708eb100b9"
+    },
+    {
+      "path": "data/deep_review_20261017/work/manual1800_integrity.json",
+      "bytes": 749,
+      "sha256": "188f0c1e6302444cafe42bfc8c6ed0080b79920b414482c3ecd00d6b3f6f0c3c"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/billstatus.body.json.gz",
+      "bytes": 8955,
+      "sha256": "43d9cef967b811eeef49780911e5b5a3e66d54e2252659635ac1d43c5f7ecf50"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/billstatus.intent.json",
+      "bytes": 341,
+      "sha256": "776cf9161dc8d16e95db43bac25c8de60ed681504b67dee0976d766b8c034dfa"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/billstatus.receipt.json",
+      "bytes": 868,
+      "sha256": "bf486ac319a9c2b4c3563805a1c07d2788f433370dd5db3468e6cca2a22b6287"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_daily_press.body.json.gz",
+      "bytes": 44413,
+      "sha256": "5e3b6784aa60942390615a807662f9240f75494c98dd514ddf881a0186a8350d"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_daily_press.intent.json",
+      "bytes": 316,
+      "sha256": "283adc737321309675d75c47ccebf82a5cc0df7a46570d9ab812b7c88fb3f297"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_daily_press.receipt.json",
+      "bytes": 845,
+      "sha256": "c12cebdee90b35957aabdfb31da3829bcf720accf25dc889beb168a0bc61543f"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_floor_1019.body.json.gz",
+      "bytes": 227,
+      "sha256": "3f44aa63eadf303d10d73eae0332e7d21b10aa3a68da9ea21c475ee87bda5f3e"
+    },
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_floor_1019.intent.json",
+      "bytes": 361,
+      "sha256": "a85a803410b1902831e016bef52084b7fe297141740285bc8054e84424b543f5"
+    }
+  ]
+}

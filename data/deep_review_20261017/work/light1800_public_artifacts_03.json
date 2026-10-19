@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0210_fee.receipt.json",
+      "bytes": 655,
+      "sha256": "c7dd2fd61d4f3fb1bdf05ffae8c966be233eab5d0b6d55419dc166342919e4e9"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0210_gamma.body.json.gz",
+      "bytes": 1854,
+      "sha256": "9cfac6aa1bb06ad125ce780bb4a01b1e393912d0633ea63c23f674076ca68742"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0210_gamma.receipt.json",
+      "bytes": 698,
+      "sha256": "98450e11ce61cae2c1374ca5ddcb376c70d9f7f27be4ec27ae278a202a8e5938"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0299_fee.body.json.gz",
+      "bytes": 313,
+      "sha256": "d20af58850650e24011623aea4d44750f926fcd590829846f1c07a02b16d0252"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0299_fee.receipt.json",
+      "bytes": 655,
+      "sha256": "432a01d6590f809f289f984274ee91fdb47f308ad445129453ad394aebd1674e"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0299_gamma.body.json.gz",
+      "bytes": 2004,
+      "sha256": "4d1178f4b3e444c484fb830a9d8d3316b1f354fc4cda9b6e0ef8e8f73b0bd567"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0299_gamma.receipt.json",
+      "bytes": 699,
+      "sha256": "45d4356ef76ca30b9eaf345757ac398d7b4b35ef59ec5f454a98025422d223c7"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/1838_fee.body.json.gz",
+      "bytes": 315,
+      "sha256": "f8731ad86a55eae49eecc541b8dd16e47d08efdf98fe7afb11ac0c2ebe3ea824"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/1838_fee.receipt.json",
+      "bytes": 655,
+      "sha256": "06dd4300b10912d2f60c74190abae17f13d32b59830fb929e0fae33a4a6c723b"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/1838_gamma.body.json.gz",
+      "bytes": 2142,
+      "sha256": "238ec7a0a6e07d1561e357fe843f78b98e24fc7013a9f1072d8d7fc83f62e12a"
+    }
+  ]
+}

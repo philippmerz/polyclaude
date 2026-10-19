@@ -1,0 +1,101 @@
+{
+  "files": [
+    {
+      "bytes": 419,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0370_resume.json",
+      "sha256": "7cf9b539db4b0a985358e5cf669349b8312183c51092e6478bcf31afe42ccae2",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 11189,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0370_revision_input_1750.json",
+      "sha256": "41f3fc8b8a1a72da905aa1166fffc49629be66eb08381abc45d83d26a4bb61c5",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3479,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0370_skeptic_gate_ops.json",
+      "sha256": "cbb89edcbebaf391b289fc0bebb87339f1ff09fa4810fcb152487dc80c324202",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3402,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_costs_1751.json",
+      "sha256": "00e2f46ead63f2a7b9faec07f42d69e9246ea8ade9e2158a8dc1d07e8fa4b6f9",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3416,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_facts_1647.json",
+      "sha256": "92594926f15c827866b87f0569988a1a69e8ae4199c5b5d6477e1617496db80f",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 3377,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_marketing_followup_1748.json",
+      "sha256": "f99c57763d0f4951f2bec425c8ebe9f5a4c26da7426cde7ee7dfb55e253a1027",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 8767,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_primary_input_1752.json",
+      "sha256": "982559c5107707cc9fab95ed693a79941acffd9eb3430c708dd9bff5c48b64e3",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 13292,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_quote_1751.json",
+      "sha256": "e585959402b1415401049fdefa095ca85a8cd3fdcfab1b13b07dfae689fd2659",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 340,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0371_resume.json",
+      "sha256": "31c7cd309404a1c51f56ab7796387d00dc34f1e8e780ef3e0fe9973cfc45c787",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 3578,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0372_economics_1754.json",
+      "sha256": "4bbf3673e305239252f5c82eacd448f97ef05380230c326d0ee1bedf4c771810",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 4288,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0372_facts_1645.json",
+      "sha256": "b5052425a295c1a403fe73ae1cdf450fa038faa7d8c83a709cae23f2cf9c4523",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 4188,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0372_freshness_1752.json",
+      "sha256": "6bd1b15c8a5b9dae3ed06721bc6e86cad7f54683b9e772b71e561d877178001f",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

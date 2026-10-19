@@ -1,0 +1,65 @@
+{
+  "schema": "scoped_public_archive_manifest.v1",
+  "compiled_utc": "2026-10-19T18:12:00.472338+00:00",
+  "scope": "Named18UTC public source/quote/economics/risk/financial-summary units and exact public raw source receipts; original exact-hash quote and public summaries retained for linked reproduction. No raw private account/CLI, operator, provider, consent or daemon state.",
+  "file_count": 52,
+  "shards": [
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_00.json",
+      "bytes": 1988,
+      "sha256": "48fbf803f5a26f2648f4baa67200b702e3c63c08777dcf11b034711815d4b414",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_01.json",
+      "bytes": 2086,
+      "sha256": "04957f678bc84b8604993dd52f81a1f8b38c25a89c6637f2c015b34e394a788e",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_02.json",
+      "bytes": 2155,
+      "sha256": "d7618181cecfdf5708f960fce5afd25692d491256708f3c1e8f19bb8db35ae15",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_03.json",
+      "bytes": 2175,
+      "sha256": "1e58c0b241cb26b21fc9a30440ae5902aa96acc789c99657706ee79ea57898c0",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_04.json",
+      "bytes": 2079,
+      "sha256": "d4c385103af85f8368bd66f076d1300c499eb6fe651e2df3e55f04ae47ab7573",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_public_artifacts_05.json",
+      "bytes": 453,
+      "sha256": "102be9e13305313ba668ef4cd3cd3d2e09cf690c05f91dafc8c89c2e4268db7e",
+      "files": 2
+    }
+  ],
+  "root_public_summary_review": "Primary read original ops/source/risk/phase/bankroll summaries before inclusion: public amounts, positions/counts, daemon status, hashes and capture-path metadata only; no credentials or operator messages. A path/hash pointing to a deliberately private capture is metadata, not publication of its body.",
+  "exclusions": [
+    {
+      "path": "logs/deep_review_20261017/light1800_messi/",
+      "reason": "Google consent response body/receipt remains local; public fact records only retrieval failure/hash/clock."
+    },
+    {
+      "path": "logs/checkin_20261019T1800_private/",
+      "reason": "Private raw CLI/account bodies omitted; public summary supplies representation, hash and clock limits."
+    },
+    {
+      "path": "data/deep_review_20261017/work/*_public.json derivatives",
+      "reason": "Collector draft derivatives omitted where original named summary was directly verified public-safe; no duplicated or changed exact-hash quote."
+    }
+  ],
+  "verification": {
+    "files_hash_and_size": true,
+    "gzip_payloads_decompressed": 16,
+    "public_transport_header_audit": "Collector16receipts checked for auth/cookie/token-header fields; none. Primary preserves original request/body receipt bindings; no HTTP status guessed."
+  },
+  "staging_index": "data/deep_review_20261017/work/light1800_public_stage_paths.json"
+}

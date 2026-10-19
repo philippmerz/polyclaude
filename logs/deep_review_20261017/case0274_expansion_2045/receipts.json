@@ -1,0 +1,81 @@
+{
+  "run_started_utc": "2026-10-18T20:52:24.048014+00:00",
+  "run_finished_utc": "2026-10-18T20:52:25.562861+00:00",
+  "requests": [
+    {
+      "name": "default_text",
+      "url": "https://arena.ai/leaderboard/chat/text",
+      "final_url": "https://arena.ai/leaderboard/chat/text",
+      "method": "GET",
+      "started_utc": "2026-10-18T20:52:24.136945+00:00",
+      "finished_utc": "2026-10-18T20:52:24.195724+00:00",
+      "http_status": 403,
+      "headers": {
+        "date": "Sun, 18 Oct 2026 20:52:24 GMT",
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "body_bytes": 5600,
+      "body_sha256": "425ea9f8866b1b659512c66b7d8c8cd54dffa5613342040aeefa673a2fcbfa87",
+      "gzip_path": "logs/deep_review_20261017/case0274_expansion_2045/default_text.body.gz",
+      "gzip_sha256": "d12fa1a809e8cdc8821dec4ae1447cfa280dd450dba3319cc3181e405355ed38",
+      "error": null
+    },
+    {
+      "name": "no_style_text",
+      "url": "https://arena.ai/leaderboard/chat/text?scoring=raw",
+      "final_url": "https://arena.ai/leaderboard/chat/text?scoring=raw",
+      "method": "GET",
+      "started_utc": "2026-10-18T20:52:24.196209+00:00",
+      "finished_utc": "2026-10-18T20:52:24.241373+00:00",
+      "http_status": 403,
+      "headers": {
+        "date": "Sun, 18 Oct 2026 20:52:24 GMT",
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "body_bytes": 5672,
+      "body_sha256": "8fa8f059eb5b2ec118706b98a56c969dd6f88f8be7eb2cafeb0df5c90c51f345",
+      "gzip_path": "logs/deep_review_20261017/case0274_expansion_2045/no_style_text.body.gz",
+      "gzip_sha256": "eeadcf30632b78b33f0b38689421e2c6d3b836e9370e5afc8283b4c8f5dee72f",
+      "error": null
+    },
+    {
+      "name": "style_method",
+      "url": "https://arena.ai/blog/style-control",
+      "final_url": "https://arena.ai/blog/style-control",
+      "method": "GET",
+      "started_utc": "2026-10-18T20:52:24.241806+00:00",
+      "finished_utc": "2026-10-18T20:52:25.183392+00:00",
+      "http_status": 200,
+      "headers": {
+        "date": "Sun, 18 Oct 2026 20:52:24 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cf-cache-status": "DYNAMIC",
+        "age": "0",
+        "cache-control": "private, no-cache, no-store, max-age=0, must-revalidate"
+      },
+      "body_bytes": 294345,
+      "body_sha256": "c3784ac5c65207af1049ec5b06b1f33a1a0b10f23217d42571d7f8d53ecc8bc9",
+      "gzip_path": "logs/deep_review_20261017/case0274_expansion_2045/style_method.body.gz",
+      "gzip_sha256": "ebe8d6c9e9291a0233a44f3ab95dc022ce86537d000751c04e571a1045901de1",
+      "error": null
+    },
+    {
+      "name": "google_argon_release",
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "final_url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/",
+      "method": "GET",
+      "started_utc": "2026-10-18T20:52:25.192542+00:00",
+      "finished_utc": "2026-10-18T20:52:25.530153+00:00",
+      "http_status": 200,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "date": "Sun, 18 Oct 2026 20:52:25 GMT"
+      },
+      "body_bytes": 1013503,
+      "body_sha256": "4becb189d1fd27885646db0c25fedcceb31d525632b643db75e88a5542685c06",
+      "gzip_path": "logs/deep_review_20261017/case0274_expansion_2045/google_argon_release.body.gz",
+      "gzip_sha256": "0837288c276d4c71bb2981f4a8bb5bb9aa422b325d22e49e914ea9ddc2d34dc6",
+      "error": null
+    }
+  ]
+}

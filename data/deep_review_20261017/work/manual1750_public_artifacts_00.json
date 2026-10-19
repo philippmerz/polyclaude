@@ -1,0 +1,101 @@
+{
+  "files": [
+    {
+      "bytes": 2037,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0304_catalysts_0100.json",
+      "sha256": "4565d3070b432841ae2e25c3b2f5634acdfb38ff7ba8eda29a9d3dd05ef4c7b7",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 5598,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0364_facts_1551.json",
+      "sha256": "1c276526228ebc36021ec20961cfcbe9e3903cd9347d5e5ae5517039a5e28e23",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 1463,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0364_primary_refresh_1646.json",
+      "sha256": "0e2b8073c905f0e79316fb2c48e49cd15789701fa7adc6f38fc0fdcea890e85c",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 1441,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_cuba_browser_1738.json",
+      "sha256": "6babae7116683d4cc48b2ebf2f53eed4023ec12818a15529ce2fdad16f81f105",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 4002,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_economics_1740.json",
+      "sha256": "1f00798e86494d9f393b05a51ef25d439482741d098255ce92c7b90663285c9d",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2459,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_facts_1555.json",
+      "sha256": "d6ecf5939aa23709dc2c1f25084edac57595ec7160d89738363d38658ef1f14c",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 5061,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_followup_1646.json",
+      "sha256": "2b58212e203c1769c44fd5433523f4b43c6507234bf83bbaf039aa0496985426",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 2645,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_other_capture_search_1555.json",
+      "sha256": "d90b4e0fbb75818c509241e85bab46e55c2c8eb3b1fe8a24751132c1b5621167",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 10558,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_primary_input_1741.json",
+      "sha256": "0abbd2151ff3d32d05f0532c30c6350c317a18a6523958957d3586b0fc797c4c",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 6444,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_primary_sources_1738.json",
+      "sha256": "b3014874de6420eefa1e3f7f2dce007de33b3b352d960988491fb02d3b0db508",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 14516,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_quote_1740.json",
+      "sha256": "367781ece6ec6b78388034b1462d0636aa3948764915d8f1bad6f62c3c931d86",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 417,
+      "git_ignored": false,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0367_resume.json",
+      "sha256": "107b1e3aa56cf76edf520115b74af5d968e9293087ef3e2dedde3fe2ee42730e",
+      "tracked_in_HEAD": true
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

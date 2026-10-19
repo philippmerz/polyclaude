@@ -1,0 +1,15 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/numbers.intent.json",
+      "bytes": 309,
+      "sha256": "53539ed81051dc3a1c9718222fa078716e46038f28d3436271b9ca4b1988affc"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_whale/numbers.receipt.json",
+      "bytes": 820,
+      "sha256": "8412664eed22eb5db709b151b2f7fbecd9f72c772f1624b1d4ec6736ee7add1f"
+    }
+  ]
+}

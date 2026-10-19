@@ -1,0 +1,26 @@
+{
+  "schema": "bounded_closeout_audit.v1",
+  "checked_utc": "2026-10-19T18:13:13.255404+00:00",
+  "staged_files_checked": 265,
+  "staged_bytes_equal_working_files": true,
+  "sensitive_path_or_credential_shape_findings": [],
+  "public_runtime_field_false_positives": "Manual1750 narrow audit classified RTE Gigya and Apple Q4 public-page runtime fields; no operator credential evidence. No values printed.",
+  "new_source_manifests": {
+    "data/deep_review_20261017/work/manual1750_public_artifacts.json": "17f90a8091ea3cd575a2afd2deb09f7d6fefd0bfa6b343e75c8836431a51759a",
+    "data/deep_review_20261017/work/0374_public_closure.json": "5579af4109e482662de925335d5ba020b28bb37875f7d5e3d667f741ac650f97",
+    "data/deep_review_20261017/work/light1800_public_artifacts.json": "ccd797c9c08b7e4250167316b2f0fb54b80912a2937cd24c7c702e6584f1de3a"
+  },
+  "maintained_markdown_local_links": "pass",
+  "handoff_source_hashes": 11,
+  "handoff_reviewed_at": "2026-10-19T18:10:43.123119Z",
+  "handoff_valid_until": "2026-10-19T22:00:00Z",
+  "context_packet_all4scopes": "rc0; all within12KB in prior validation",
+  "performance_chart_tests": "10/10 passed",
+  "CSV_rows": 220,
+  "prior219_rows_preserved": true,
+  "research_integrity": "work/manual1800_integrity.json:718base+63revision chain verified",
+  "production_code_changes": 0,
+  "financial_actions": 0,
+  "no_new_case_after374": true,
+  "unrelated_runtime_and0332_draft_changes": "preserved unstaged"
+}

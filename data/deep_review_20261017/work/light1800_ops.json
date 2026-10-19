@@ -1,0 +1,142 @@
+{
+  "all_cli_stdout_stderr_captured_before_parse": true,
+  "bankroll": {
+    "age": "0.0h per producer",
+    "caveat": "Sequential producer values; subtracting gas is not audited profit or synchronized NAV.",
+    "delta_vs_1702_usd": 0.28,
+    "pm_mid_usd": 34.72,
+    "pm_net_depth_usd_indicative": 30.84,
+    "realized_split_usd": 20.73,
+    "safe_stdout_path": "data/deep_review_20261017/work/light1800_bankroll.stdout.txt",
+    "safe_stdout_sha256": "7cc59f9ea5ffae25cf19c0ec3c17e7c82a7c728b4ae5a1551dddd56fb551bb61",
+    "separate_gas_in_total_usd": 5.8,
+    "total_usd": 195.66,
+    "trading_total_minus_gas_usd": 189.86,
+    "vs_1702_total_usd": 195.38,
+    "window_utc": [
+      "2026-10-19T18:03:14.695934+00:00",
+      "2026-10-19T18:03:29.060593+00:00"
+    ]
+  },
+  "cli_command_count": 17,
+  "cli_failures": [],
+  "compiled_utc": "2026-10-19T18:07:18.713243+00:00",
+  "daemons": {
+    "all_code_mtime_precedes_start": true,
+    "all_expected_exactly_one": true,
+    "canonical_script_argv": {
+      "heartbeat_watch.py": "scripts/heartbeat_watch.py",
+      "news_watcher.py": "scripts/news_watcher.py",
+      "opportunity_watch.py": "scripts/opportunity_watch.py",
+      "telegram_listener.py": "scripts/telegram_listener.py"
+    },
+    "counts": {
+      "heartbeat_watch.py": 1,
+      "news_watcher.py": 1,
+      "opportunity_watch.py": 1,
+      "telegram_listener.py": 1
+    },
+    "cwd_note": "Resolved canonical script paths; cwd may be outside repository."
+  },
+  "exit_analysis": {
+    "net_proceeds_usd": {
+      "clarity_fee": 0.22,
+      "clarity_full_exit_net": 23.96,
+      "messi_net_usd": 1.2,
+      "michigan_net_usd": 1.46,
+      "openrouter_net_usd": 3.0,
+      "whalefall_net_usd": 0.37
+    },
+    "rc": 0,
+    "selected_values_not_recommendations": true
+  },
+  "exposure_compare_1702": {
+    "baseline": "data/deep_review_20261017/work/tick1648_account.json",
+    "condition_asset_side_size_totalBought_exactly_match_1702": true,
+    "current_order_set_exactly_matches_1702": true,
+    "live_buy_count": 4,
+    "matched_shares": 0.0,
+    "new_fill_or_delta_detected": false,
+    "orders_capture_utc": [
+      "2026-10-19T18:03:40.937124+00:00",
+      "2026-10-19T18:03:41.620748+00:00"
+    ],
+    "orders_http_status": 200,
+    "orders_stdout_sha256": "483ac424f071532578164b7e6f814a0f80b47e9a9fe1835c39314d99a3375fb6",
+    "pagination_exhausted": true,
+    "positions_count": 8,
+    "remaining_buy_risk_usd": 7.52,
+    "representation": "vetted authenticated CLI JSON serialization (not raw HTTP bytes)",
+    "reservation_hash_sha256": "e39f6976abd7c2505b9917cdbc945ac28ce686eedc392f86f525c9c55ee60c6a",
+    "reservation_ids_and_terms_bind_each_current_order": true,
+    "reservations_count": 4
+  },
+  "full_status": {
+    "flags": [
+      "# 3 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)"
+    ],
+    "hle_freshness": "UPDATING vs Jul 3 baseline; expected gpt-6/Gemini present, Grok 4.7 unscored; added 21 and changed 3 rows, not a new accuracy measurement.",
+    "kelly_pre_bankroll_is_stale_by_order": true,
+    "rc": 0,
+    "uma_line": "# uma_status_check: 44 positions tracked, 42 Gamma markets refreshed, 0 alerts; positions_fetch_ok=True"
+  },
+  "hurdle_after_status": {
+    "header": "# marginal-APY scan (EXPECTED-edge vs prior) @ 2026-10-19T18:03:35+00:00",
+    "rc": 0,
+    "summary": "# 3 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)"
+  },
+  "kelly_after_bankroll": {
+    "rc": 0,
+    "stderr_note": "# bankroll $195.66 from cache (age 0.0h)\n# portfolio_kelly: 6 held rows, 3 protected group(s), bankroll=$195.66, kelly_frac=0.5",
+    "summary": "TOTAL: cost=$35.50  kelly_optimal=$194.71  delta=$+159.21"
+  },
+  "limitations": [
+    "Orders are vetted authenticated CLI JSON serialization, not saved raw HTTP bytes; status 200 and exhausted cursor are preserved.",
+    "Balances are from the bankroll producer; no independent fixed-block Polygon proof was taken.",
+    "The current indexed positions receipt was captured before the existing reader parsed it; no owner/address or auth material is in this summary."
+  ],
+  "other_checks": {
+    "crux_quiet": 0,
+    "crypto": 0,
+    "marginal_hurdle": 0,
+    "news_watcher": {
+      "last_cron_trigger_utc": "2026-10-19T17:42:09.652594+00:00",
+      "status_output": "watcher pid=148881 seen=5000"
+    },
+    "ostium_diff": 0,
+    "ostium_status": 0,
+    "pending_decisions": 0,
+    "wallet": 0,
+    "watchlist_hits": 0
+  },
+  "position_state_audit_fix": {
+    "acked_holds_dropped": 0,
+    "rc": 0,
+    "result": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\nposition state CLEAN (7 indexed positions, 1 deindexed claim row(s))"
+  },
+  "positions_display": {
+    "api_rows": 8,
+    "data_api_capture_utc": [
+      "2026-10-19T18:04:53.426902+00:00",
+      "2026-10-19T18:04:53.631992+00:00"
+    ],
+    "data_api_status": 200,
+    "gzip_sha256": "87d585847a9802b390c8caf9c3dba7a2b064197438099f01e13768c85fdf5187",
+    "open_cost_usd": 35.59,
+    "open_mid_usd": 34.71,
+    "response_sha256": "3970bd555af2ad2e8ce11ff4fc51c56f1a52725b6ddb15199907fbbb46ea02d5",
+    "source_window_utc": [
+      "2026-10-19T18:03:41.628367+00:00",
+      "2026-10-19T18:03:43.192202+00:00"
+    ]
+  },
+  "private_cli_manifest": "logs/checkin_20261019T1800_private/manifest.json",
+  "private_cli_manifest_sha256": "de8b0669102fdad9d79d5f4dfb2c210bcc3c0d5a290d15bf7747ce3d1c5b075a",
+  "redeem_all_dry_run": {
+    "rc": 0,
+    "result": "found 0/7 winning redeemable positions; skipped 1 losing/uncertain row(s)",
+    "tx_sent": false,
+    "winning_claims": 0
+  },
+  "schema": "light_boundary_ops.v1"
+}

@@ -1,0 +1,1 @@
+{"name":"0374_ornn_dashboard","request":{"method":"GET","operation":"official_public_resolution_source","read_only":true,"scope":"Ornn B200 official dashboard","url":"https://dashboard.ornnai.com"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:45:33.600543Z","timing_basis":"call_window"}

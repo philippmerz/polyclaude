@@ -1,0 +1,107 @@
+{
+  "files": [
+    {
+      "bytes": 951,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_champion_1810/deepseek_v4pro_release.receipt.json",
+      "sha256": "a11cb5172968e02ac56936cb40238a22fb695433cbdb9679c768ab6ac0d35c58",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 12567,
+      "decompressed_sha256": "9abda5ba89b86be5d82ad045864dbe5047e0908b45c161d8a4631d4d5fcb6f18",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_deepseek_1744/official_updates.body.json.gz",
+      "sha256": "6fb6c0db3e48de769f62b1db9d761b44230161d65f2328793cb9927160b2fc38",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 864,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_deepseek_1744/official_updates.receipt.json",
+      "sha256": "0240ede897a33fadbe25f05f74465fe0358351e557af03b150ec0c1ddb711608",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 312,
+      "decompressed_sha256": "db734697e20019ac13f10d7f58351f41b6a7c58f057cd52538f8382d049cf31a",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/0370_fee.body.json.gz",
+      "sha256": "6ce7355a1f8ae7f3e3aed7d416f331fd2e9d7741cbfa658901f3f891eb0ab10f",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 653,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/0370_fee.receipt.json",
+      "sha256": "37e0a91284b271309d81f55cbcdeba3d478774e6879b8871a55b6f38b3d2b142",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2120,
+      "decompressed_sha256": "08e7ec67800ed7a1503f9991fe705fa9fcf0f4bf18227d6fe980177e2f9b1ae3",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/0370_gamma.body.json.gz",
+      "sha256": "52173fae0c001b79e142508a29cafe08538d5d449289a6c14ad7d3c99c053e06",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 685,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/0370_gamma.receipt.json",
+      "sha256": "565313a4f42eeadffc175491e6e216b4ac6e04de77ed30afa95215f9fd0ffa14",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1189,
+      "decompressed_sha256": "b29048d94dfae7b983dca38cd8e5921a3650c7f31e86dc16a9251c78d8f866ce",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/books_batch_01.body.json.gz",
+      "sha256": "dc6f0a7031803bb057b00d51fe71aba2e549767b0cd3c125f8c2bd51510b0643",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 776,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_quote_1745/public/books_batch_01.receipt.json",
+      "sha256": "fe1fc7e74ecafb53965aa2b2f4a39c536e38567c1d83de369699a0ace869c5a7",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 122015,
+      "decompressed_sha256": "e16bffc75fc28fa5dcbd20182318f0eecc157c67f0508cad27f3bb85d459158d",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_refresh_1559/changelog.body.json.gz",
+      "sha256": "6005469d0e1b886901fcd2e00ea20273c889579585db559cb71aa297483ed7cc",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 862,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0370_refresh_1559/changelog.receipt.json",
+      "sha256": "a621b2d337729494a3cb51d5181ca627a97a45fc949134336179c40c5fd3645a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3247,
+      "decompressed_sha256": "6101f4d511107169396bfcb569eadf7ae2ce2649f65ac8256c0069a4f3b9ae44",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0370_refresh_1559/raw_text.body.json.gz",
+      "sha256": "61e9c94c238971871f731eccec3015d13886ff6ffe3565c23149f586987e8fd6",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

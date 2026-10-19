@@ -1,0 +1,50 @@
+{
+  "schema": "primary_ornn_terminal_regime_model.v1",
+  "review_index": 374,
+  "created_utc": "2026-10-19T17:57:57.894463+00:00",
+  "criteria_sha256": "ff81d78869526071edbeeef1390ab95ff2c2813c9b63abca27eb9e354757acdd",
+  "price_blind_primary": true,
+  "literal": "FinalizedDec31B200dailychartindex>=7; equalityYES, nextdaypointfinalizes, Jan7ETlatestavailablefallback. CurrentHIGHirrelevant, nohistorymissingfirst9dayconcernforpastHIGH.",
+  "source_bridge": "Officialtransaction-basedon-demandGPU-hourVWwinsorizedindex, notphysicalB200ownershipprice orprovideradvertisedoffer; rollinghourlive anddailysourcehistorydistinct, dailyaggregation/samplecounts/qualityflags notpublic. Contractfinalizationoverridessourcerevisionpolicyforpayoff.",
+  "history_diagnostic": "92dailyJul19–Oct18,latestprovisional8.54;30daymean7.839/min7.33,92daymean6.903/min5.68. Recordedmaxdrawdown20.45%, thresholdrequires18.03%declinefromlatest. Dailylogsd2.04%/13nonoverlapweeklysd8.37% describehistory, notfuture tail.",
+  "branches": [
+    {
+      "weight": 0.5,
+      "regime": "Demandtightness/currentprovidertransactionmix persists",
+      "terminal_index_median": 8.6,
+      "log_sigma": 0.18,
+      "p_at_least_7": 0.8736098916426658
+    },
+    {
+      "weight": 0.3,
+      "regime": "Balanced supply/demand and reversion towardrecentlongmean",
+      "terminal_index_median": 7.4,
+      "log_sigma": 0.2,
+      "p_at_least_7": 0.6094359607016808
+    },
+    {
+      "weight": 0.2,
+      "regime": "Capacity/pricecompetition orprovider/methodology normalization",
+      "terminal_index_median": 5.8,
+      "log_sigma": 0.25,
+      "p_at_least_7": 0.2259627133145511
+    }
+  ],
+  "regime_mixture_probability": 0.6648282766947473,
+  "source_or_finalization_branch": {
+    "weight": 0.02,
+    "conditional_yes": 0.6,
+    "reason": "Delayed/latestavailable fallback, coverage/methodology/sourcechange can make dailyvalue differ; uncalibratedsensitivity, noobservedpermanentoutage."
+  },
+  "formula_p_yes": 0.6635317111608524,
+  "adopted_p_yes": 0.66,
+  "broad_range": [
+    0.2,
+    0.95
+  ],
+  "method": "Primary anchored terminal-lognormalregime mixture; weights/medians/sigmasjudgmental, nota fittedforecast orstationaryrandomwalk. Noextrapolationofrecentpositive dailymean, noIIDpathmeasurementlicense.",
+  "actual_entry_reserve_pp": 20,
+  "reserve_reason": "10pp74dayregime/capacity/demand uncertainty;5providercomposition/dailyaggregation/source/finality;5conditionalfill/unknowninformation. Broadadversemoreextreme. Fixedbeforeownquote.",
+  "portfolio": "GPUrentaldemand/indexmethodology sharesAIindustrydriverwithheldOR5NO andAIcandidatefamily, notindependenthedge. Otherassets/currentcommitments anddatedvariableAavecompare; funding/fees/gas/depth/eligibility/route/account/caps needed atanyentry.",
+  "catalysts": "Verifiednewfinalizedseries andprovider/methodologycoveragechanges;AIcomputecapacity/demand developments,Dec31/Jan1finalization/Jan7deadline; noverifiedspecificfuturecapacityscheduleinthisreview."
+}

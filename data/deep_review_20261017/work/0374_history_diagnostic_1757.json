@@ -1,0 +1,97 @@
+{
+  "schema": "primary_ornn_history_diagnostic.v1",
+  "review_index": 374,
+  "compiled_utc": "2026-10-19T17:56:48.782465+00:00",
+  "source_raw_sha256": "c1e5bff6d7f5f134a500bd1b8c4c74548c1e489104b2609a5566c2e1c7b7170f",
+  "observations": 92,
+  "last12": [
+    {
+      "timestamp": "2026-10-07T20:00:00.000Z",
+      "index_value": 7.56
+    },
+    {
+      "timestamp": "2026-10-08T20:00:00.000Z",
+      "index_value": 7.51
+    },
+    {
+      "timestamp": "2026-10-09T20:00:00.000Z",
+      "index_value": 7.46
+    },
+    {
+      "timestamp": "2026-10-10T20:00:00.000Z",
+      "index_value": 7.53
+    },
+    {
+      "timestamp": "2026-10-11T20:00:00.000Z",
+      "index_value": 7.45
+    },
+    {
+      "timestamp": "2026-10-12T20:00:00.000Z",
+      "index_value": 7.33
+    },
+    {
+      "timestamp": "2026-10-13T20:00:00.000Z",
+      "index_value": 7.83
+    },
+    {
+      "timestamp": "2026-10-14T20:00:00.000Z",
+      "index_value": 7.88
+    },
+    {
+      "timestamp": "2026-10-15T20:00:00.000Z",
+      "index_value": 7.92
+    },
+    {
+      "timestamp": "2026-10-16T20:00:00.000Z",
+      "index_value": 8.12
+    },
+    {
+      "timestamp": "2026-10-17T20:00:00.000Z",
+      "index_value": 8.48
+    },
+    {
+      "timestamp": "2026-10-18T20:00:00.000Z",
+      "index_value": 8.54
+    }
+  ],
+  "windows": {
+    "7": {
+      "mean": 8.014285714285714,
+      "min": 7.33,
+      "max": 8.54,
+      "log_return": 0.15278549190191817
+    },
+    "14": {
+      "mean": 7.765714285714285,
+      "min": 7.33,
+      "max": 8.54,
+      "log_return": 0.12321344453954512
+    },
+    "30": {
+      "mean": 7.839333333333333,
+      "min": 7.33,
+      "max": 8.54,
+      "log_return": 0.13923514907081067
+    },
+    "60": {
+      "mean": 7.2348333333333334,
+      "min": 6.01,
+      "max": 8.54,
+      "log_return": 0.2175969015662204
+    },
+    "92": {
+      "mean": 6.902826086956522,
+      "min": 5.68,
+      "max": 8.54,
+      "log_return": 0.17904823144898546
+    }
+  },
+  "daily_log_return_mean": 0.001967562982955876,
+  "daily_log_return_sd": 0.02040136105949094,
+  "weekly_nonoverlapping_log_return_sd": 0.08371690418449827,
+  "weekly_sample_count": 13,
+  "maximum_historical_drawdown": -0.20448179271708689,
+  "threshold_decline_from_latest": -0.18032786885245888,
+  "zero_drift_73day_iid_logvol_diagnostic": 0.1743093053018658,
+  "limits": "Historicaldescriptivearithmeticonly. Notmeasuredfuture tail/rank or IIDmodel; shortchangingproviderindex/regime/targetfinalization canbreak extrapolation. LatestOct18point provisionalpendingnextpublishedpoint; targetDec31notalreadyhit."
+}

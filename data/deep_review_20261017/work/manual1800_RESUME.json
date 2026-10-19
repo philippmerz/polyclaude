@@ -1,0 +1,64 @@
+{
+  "schema": "finite_review_phase.v1",
+  "updated_utc": "2026-10-19T18:08:28.812374+00:00",
+  "counts": {
+    "completed_valuations": 345,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2282,
+    "base_records": 718,
+    "revisions_written": 63,
+    "active_indices": []
+  },
+  "next_index": 376,
+  "completed_since_manual1721": [
+    367,
+    368,
+    370,
+    371,
+    372,
+    374
+  ],
+  "valued_cases": [
+    367,
+    368,
+    370,
+    372,
+    374
+  ],
+  "blocked_case": {
+    "index": 371,
+    "gap": "Original NasdaqPrivateMarket capitalization HIGH history/current capitalization and share-count/IPO continuity unavailable. Public per-share price is not capitalization."
+  },
+  "entries": 0,
+  "local_limitation": {
+    "index": 370,
+    "finding": "Fine-tick subcent ask signs at1c; $1 signedBUY floor and no positive passive cent-grid below .004. Primary model lacks independently supported conditional lower tail. Investigated; no safety guard bypass or global block.",
+    "latest_report": "research/2026-10-17-deep-review/revisions/0370_20261019T174937815114Z.md"
+  },
+  "next_facts_pointer": "data/deep_review_20261017/work/0376_resume.json",
+  "facts_only_following": [
+    376,
+    378,
+    379,
+    380,
+    382,
+    383,
+    384,
+    386,
+    388,
+    391,
+    394,
+    396,
+    398
+  ],
+  "read_one_case_only": true,
+  "integrity": "data/deep_review_20261017/work/manual1800_integrity.json",
+  "public_proof_manifests": [
+    "data/deep_review_20261017/work/manual1750_public_artifacts.json",
+    "data/deep_review_20261017/work/0374_public_closure.json"
+  ],
+  "financial_check": "research/2026-10-19-1800-checkin.md",
+  "source_and_financial_clocks": "Source18:02, quote18:03:16.922856, producer18:03:14\u201329/account18:03\u201304. Editorial clock does not refresh them.",
+  "bounded_contract": "Stop after completed check/necessary preservation. No next case started in closeout, new goal, timer or idle self-followup."
+}

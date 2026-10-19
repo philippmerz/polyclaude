@@ -1,0 +1,152 @@
+{
+  "review_index": 368,
+  "market_id": "2473336",
+  "condition_id": "0x1c5722c325bc563b74e5f07a92d7a1f89b435676f9296006c718511d6c638575",
+  "criteria_sha256": "0288475a8e9cc55667b9e041a19a3e1b871c4ff97a4d1fc67a8fa6775755f523",
+  "status": "valued",
+  "literal_analysis": "PublicconclusiveglobalEarthflatproof byDec31ET/credibleconsensus; localapproximation/geoidnotperfectsphere/isolatedhoax insufficient. Scientificconfidence separateoraclepayout; ordinaryJan/disputetail.",
+  "evidence": [
+    {
+      "url": "https://oceanservice.noaa.gov/facts/earth-round.html/geoid.html",
+      "observed_utc": "2026-10-19T15:54:51.723648Z",
+      "finding": "Verifiedtitle/body:ellipsoid/geoid/rotationalbulge/satelliteandgeodeticmeasurements. Onecurrentpage notliteraturecensus orfutureadjudicationmeasurement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0005,
+    "low": 0,
+    "high": 0.02,
+    "method": "Primaryprice-blind scientificandsemantic/oracle-tailjudgment, notmarketprice orretiredpopulationcalibration.",
+    "reasoning": "Physicalglobalflat-proof chance negligible across73daysgivenmutuallyconsistentgeodesy;0.05%YESdominatedunmeasuredadjudication/semantics.5ppactualtail/monitoringreserve;K5measured-tail licence notmet. Broad0–2explicituncertainty."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0368_quote_1741.json",
+    "quote_file_sha256": "2f6db839c553a4688dfe3b6955200866e31bc4b22d49c485cad165ac4d895d1d",
+    "quote_capture_utc": "2026-10-19T17:40:54.949834+00:00",
+    "gamma_received_utc": "2026-10-19T17:40:54.823542+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 5.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.0005,
+        "selected_stress_probability": 0,
+        "best_bid": 0.004,
+        "best_ask": 0.006,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792421924612",
+        "book_received_utc": "2026-10-19T17:40:54.948918+00:00",
+        "book_age_seconds_at_receipt": 9730.336918115616,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.06,
+            "fee": 0.00299,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.006
+              }
+            ],
+            "net": 0.06299
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.04,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.038
+          }
+        },
+        "taker_cost_usd": 0.06299,
+        "central_expected_profit_usd": -0.05799000000000001,
+        "selected_stress_profit_usd": -0.06299,
+        "break_even_before_carry": 0.006299000000000001,
+        "break_even_constant_carry": 0.006338762657735135,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9995,
+        "selected_stress_probability": 0.9495,
+        "best_bid": 0.994,
+        "best_ask": 0.996,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792421924612",
+        "book_received_utc": "2026-10-19T17:40:54.948918+00:00",
+        "book_age_seconds_at_receipt": 9730.336918115616,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.96,
+            "fee": 0.002,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.996
+              }
+            ],
+            "net": 9.962000000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.94,
+            "fee": 0.00299,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.994
+              }
+            ],
+            "net": 9.937009999999999
+          }
+        },
+        "taker_cost_usd": 9.962000000000002,
+        "central_expected_profit_usd": 0.032999999999999474,
+        "selected_stress_profit_usd": -0.4670000000000005,
+        "break_even_before_carry": 0.9962000000000002,
+        "break_even_constant_carry": 1.0024885473306464,
+        "current_execution_authorization": false
+      }
+    },
+    "execution_limit": "BothmatchingCLOBbooktimestamps are9730.34s old atfreshHTTP receipt, failing180s. Dated indicative economics, not current executability; no entry pursued because selected economics alreadyfail andNOcarry is worse even beforefunding."
+  },
+  "verdict": "Noentry. Bothdatedsidesfail5ppselectedprobability. Stalebook9730snotexecutionready; NOoptimisticcentralcarryfailsdatedcashhurdleevenbeforefunding. Notfactualexcluded.",
+  "reopen_condition": "Substantiveconclusivepublicproof/credibleconsensus orrule/statuschange; otherwisefreshbothsideconditionalnetcost/portfolio/eligibilitygates atchangedprices.",
+  "portfolio_action": "NONE",
+  "evaluated_utc": "2026-10-19T17:41:35.889587+00:00",
+  "question": "Is Earth flat?",
+  "valuation_author": "primary_operator",
+  "original_index": 368,
+  "report_sha256": "6945d85b3903713bfd2d0b54bef2c1ffc9d503499625e2420c39fcf4d88e18bb"
+}

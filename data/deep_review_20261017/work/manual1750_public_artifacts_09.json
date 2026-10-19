@@ -1,0 +1,106 @@
+{
+  "files": [
+    {
+      "bytes": 1851,
+      "decompressed_sha256": "566bbcc5ea55415e4a9f373880cd868d695bafd527897bccb4c353f559079663",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0396_followup_1747/anaween_map.body.json.gz",
+      "sha256": "12d678013c4f73a9263da746415025b922c34dd848972d5f422b72eeca111004",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 21601,
+      "decompressed_sha256": "e39f2fff3ad7553799511a0b26a1e05872e6a20e92c28a6a3057fdb6a60f8208",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0396_followup_1747/rte_mayyun.body.json.gz",
+      "sha256": "d0268e14df9b5c60c86b7b9587c7f925d16c2047784156b6b227adb85bddc4dc",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 931,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0398_sources_1750/q2_2026_10q.receipt.json",
+      "sha256": "a5f31d556c9a9b81ad7ebb9a7737d3857da8318ad6cfbde0a5a6f79af1ad77f8",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 916,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0398_sources_1750/q2_2026_release.receipt.json",
+      "sha256": "e6c2cd94d40ed5fd4518be01a8fe3ca0de3f2f92371aea0127927530943caceb",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 913,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0398_sources_1750/q3_2025_10q/q3_2025_10q.receipt.json",
+      "sha256": "5c453ee72d6cf8a2be7fa0371f36acb8ccfe5ae7d445f4c65eab20825fabc221",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 915,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0398_sources_1750/q3_2025_release.receipt.json",
+      "sha256": "e67c935c30841683770dd740831be500353de281e41c823709f5f19f724954d6",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 2158,
+      "decompressed_sha256": "18c087a8a5b6524beae6b4e7f9dd5cfc87f6910c279740626a1bbd504e55057c",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case367_gamma_1646/gamma_market_367.body.json.gz",
+      "sha256": "b72ae0faf070565e0d6f32499e8f9bba60188a9e6786c2b82d2ddb2bb4521684",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 890,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case367_gamma_1646/gamma_market_367.receipt.json",
+      "sha256": "2427f0388948ed76be7bfebe751abae86415f4c007a7d1fc0c1cc83fddce0b78",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 20,
+      "decompressed_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case367_un_document_1646/un_venezuela_2026_19.body.json.gz",
+      "sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 901,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case367_un_document_1646/un_venezuela_2026_19.receipt.json",
+      "sha256": "4eba32f74a60baef71ca7273b9d6510e4db7c8957ba7c87f51911d79d7eb96eb",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 43716,
+      "decompressed_sha256": "0793ed7330ffd875341c923170bbc657359d437ae8f22f03ac85d30d764bc712",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case367_whitehouse_1555/whitehouse_rubio_maduro_jan04.body.json.gz",
+      "sha256": "38ad3b6aa2f919e5b2a15ef36d44ca0a46efa52d36b44ea16bbc835ba3f3f6a6",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 1026,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case367_whitehouse_1555/whitehouse_rubio_maduro_jan04.receipt.json",
+      "sha256": "6df31916ad2028e7268eff4fc403ceb3fc73674efc736f88796016f7ebd0ba09",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

@@ -1,0 +1,41 @@
+{
+  "data_evidence_is_ignored_or_tracked": true,
+  "manifest_paths": [
+    "data/deep_review_20261017/work/manual1750_public_artifacts.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_00.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_01.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_02.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_03.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_04.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_05.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_06.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_07.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_08.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_09.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_10.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_11.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_12.json",
+    "data/deep_review_20261017/work/manual1750_public_artifacts_13.json",
+    "data/deep_review_20261017/work/manual1750_staging_paths.json"
+  ],
+  "purpose": "Review-only exact safe files; no staging performed.",
+  "safe_staging_paths": [
+    "research/2026-10-17-deep-review/evaluations/0367.json",
+    "research/2026-10-17-deep-review/evaluations/0367.md",
+    "research/2026-10-17-deep-review/evaluations/0368.json",
+    "research/2026-10-17-deep-review/evaluations/0368.md",
+    "research/2026-10-17-deep-review/evaluations/0370.json",
+    "research/2026-10-17-deep-review/evaluations/0370.md",
+    "research/2026-10-17-deep-review/evaluations/0371.json",
+    "research/2026-10-17-deep-review/evaluations/0371.md",
+    "research/2026-10-17-deep-review/evaluations/0372.json",
+    "research/2026-10-17-deep-review/evaluations/0372.md",
+    "research/2026-10-17-deep-review/models/0367_primary_1739.json",
+    "research/2026-10-17-deep-review/models/0368_primary_1741.json",
+    "research/2026-10-17-deep-review/models/0372_primary_1754.json",
+    "research/2026-10-17-deep-review/models/arena370_primary_1744.json",
+    "research/2026-10-17-deep-review/revisions/0370_20261019T174937815114Z.json",
+    "research/2026-10-17-deep-review/revisions/0370_20261019T174937815114Z.md"
+  ],
+  "schema": "scoped_public_staging_index.v1"
+}

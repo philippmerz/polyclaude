@@ -1,8 +1,8 @@
-# Current resting orders — October19 16:48 queued tick
+# Current resting orders — October19 18:00 UTC
 
-**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated orders17:02:19.678163–19.799590UTC and positions17:02:19.810067–20.000595UTC HTTP200; pagination exhausted. Exact order/CID/asset/size/price records and eight positive-size position identities/sizes/totalBought equal16:31. Raw local reservations17:02:20.011348–20.026337UTC exactly match previous four records. Dated observation, not a guarantee against later fills. [Account](../data/deep_review_20261017/work/tick1648_account.json).
+**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated orders18:03:40.937124–41.620748UTC are CLI JSON serialization, not raw HTTP; status200/pagination exhausted. Indexed positions18:04:53.426902–.631992UTC HTTP200: eight condition/asset/outcome/size/totalBought identities equal17:02. Four local reservations bind exact current orders and equal prior objects. Dated observations, not protection against later fills. [Account/provenance](../data/deep_review_20261017/work/light1800_ops.json).
 
-Retain exact terms, noadd/repost. No newly verified pending-candidate poll/ballot/source failure. Idaho63070734YES3c/$1.02 retains Oct19 22UTC all-unfilled pull and earlier material-evidence cancel-first rule. Marking and risk comparisons use17:01–02 sequential inputs, not synchronized NAV or future execution authorization. [Primary review](../research/2026-10-19-1648-checkin.md).
+Retain exact terms, no add/repost. No newly verified pending-candidate poll/ballot/turnout change. Idaho63070734YES3c/$1.02 retains **Oct19 22UTC pull ALL unfilled**, earlier material poll/candidate/ballot/turnout uncertainty cancel-first. Marking/risk use18:03 sequential observations, not synchronized NAV or future entry approval. [Primary review](../research/2026-10-19-1800-checkin.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|
@@ -29,7 +29,7 @@ Canceled orders remain closed. Reposting or changing an existing specific pull i
 
 - **MT01 case271 canceled unfilled/DEC228:** original10YES33c/$3.30, one vetted cancel04:04:03; after300s terminal0/trades/index/bothCTFs0 verified. New AmericanPulse poll-source uncertainty; no adverse probability adopted. Only its reservation retired; historical47/37 prior archived. No replay/repost. [Outcome](../research/2026-10-17-deep-review/mt01_271_canceled_outcome_0413.md).
 - **293YB/296gas canceled unfilled/DEC226**, [outcome](../research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md); **Sedgwick2054 canceled unfilled/DEC224**, [outcome](../research/2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md). Former pulls complete; no automatic retries.
-- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222**, retain/noadd; old BUYpull obsolete. [Latest held review](../research/2026-10-19-1253-checkin.md); next existing14UTC/earlier material actual/source news.
+- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222**, retain/noadd; old BUYpull obsolete. [Latest held review](../research/2026-10-19-1800-checkin.md); next existing22UTC/earlier material actual/source news.
 - BOI/earlier film canceled; OpenRouter/Messi/MI original BUYs filled, old pulls obsolete.278/294/300closedunplaced. Unfilled commitments are contingent promises, never purchases/profit.
 
 Full earlier financial history is byte-identical in [archive](resting_orders_20261019T0210_archive.md), SHA256 `e761aecc21d3672b3152e7e72c1e7e13201486cc3b73d8bea6945b0243f2841d`; later dated journal/outcomes supplement it. Never replay archived instructions.

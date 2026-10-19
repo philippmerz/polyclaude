@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "data/deep_review_20261017/work/light1800_bankroll.stdout.txt",
+      "bytes": 1348,
+      "sha256": "7cc59f9ea5ffae25cf19c0ec3c17e7c82a7c728b4ae5a1551dddd56fb551bb61"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_economics_0112.json",
+      "bytes": 3559,
+      "sha256": "de69fe7a02cf1c2424fdbff6d155c39a73981290820cbd42c4fb8e21020623f4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_economics_0210.json",
+      "bytes": 3591,
+      "sha256": "7b37c6e839feddb918187c9c56899527200c4d80982fb91ea059e30d2d6f9108"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_economics_0299.json",
+      "bytes": 3666,
+      "sha256": "f2e628d8916eb2b174b5f9d682666caa67e339763c3e01bca19082da362b0311"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_economics_1838.json",
+      "bytes": 3599,
+      "sha256": "1de143dc58e65892e822357779dec5bb9afe20136a5fc83cdf3d1e64549a39e0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_held_comparison.json",
+      "bytes": 4765,
+      "sha256": "e39f7efa468278a421eb56b192ab9a015058e96fd17597bb59eb9198f9aafc0d"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_held_public.json",
+      "bytes": 44415,
+      "sha256": "c5be664e5245f0a614bfeeac433bcbcf21417a24b840c2268575906be26bdac0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_ops.json",
+      "bytes": 5705,
+      "sha256": "ea92b6d6a4b512f12dcbabf8ba0ab2c78a4143941b024a7de092441c48d40ae8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_root_risk.json",
+      "bytes": 5483,
+      "sha256": "1dc69d8a05eefeda3249edfb337c77e35a7e4547a222963d3de5f3d07f04ccc7"
+    },
+    {
+      "path": "data/deep_review_20261017/work/light1800_sources.json",
+      "bytes": 5801,
+      "sha256": "f0ef4f8d58b205d5fcb04815003da3498c6a395a079d937ef60868430fcb69ca"
+    }
+  ]
+}

@@ -1,0 +1,143 @@
+{
+  "case_indices": [
+    367,
+    368,
+    370,
+    371,
+    372,
+    386,
+    388,
+    391,
+    394,
+    396,
+    398
+  ],
+  "compiled_utc": "2026-10-19T17:55:50.287378+00:00",
+  "exclusions": [
+    {
+      "path": "logs/deep_review_20261017/0371_npm_public_js/0371_npm_public_js.body.json.gz",
+      "reason": "outside scoped public closure or path marked private/sensitive"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0274_expansion_2045/receipts.json (same source family; prior raw and default page GETs returned 403).",
+      "reason": "outside scoped public closure or path marked private/sensitive"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0370_champion_path_facts_before_identity_correction.json",
+      "reason": "wrong-ID pre-correction copy; local original preserved but not for public staging."
+    },
+    {
+      "path": "data/deep_review_20261017/work/0367_cuba_browser_1738_selected_local.json",
+      "reason": "selected/local-only browser artifact; public paraphrase/metadata unit included instead."
+    },
+    {
+      "path": "logs/deep_review_20261017/0371_npm_public_js/0371_npm_public_js.body.json.gz",
+      "reason": "raw frontend JavaScript bundle excluded; metadata/current public JSON fact is preserved."
+    }
+  ],
+  "file_count": 166,
+  "known_gaps": [
+    "No standalone 0371_primary model file existed at manifest time; included the saved primary input/evaluation/quote/economics/source units.",
+    "371 marketing JavaScript frontend bundle is explicitly excluded (not required for the public 82.86 Oct 1 fact); public npm JSON body is included; no consent/private capture included.",
+    "0370 pre-identity-correction champion file explicitly excluded; only corrected 0370_champion_path_facts.json included.",
+    "Case 372 valuation/model/economics/quote included where present; evaluation or revision files are included only if they existed at manifest compilation."
+  ],
+  "schema": "scoped_public_archive_manifest.v1",
+  "scope": "Selected on-chain public research artifacts only: completed 367/368/370 and latest 370 revision; 371 research inputs; 372 primary/freshness bundle; factual source units 386/388/391/394/396/398. No financial/account/provider/operator/consent/private artifacts. No staging or commit performed.",
+  "shards": [
+    {
+      "bytes": 3472,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_00.json",
+      "sha256": "fcd678d8102016e42382f2f5464c49e3ed8ef1d4d6ada3be0f8c3736d7ae8bd8"
+    },
+    {
+      "bytes": 3469,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_01.json",
+      "sha256": "4927c9156ad3af2c072ff385f144010372e0bf50cc0c2156dd663b87612ed0e9"
+    },
+    {
+      "bytes": 3450,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_02.json",
+      "sha256": "357fb074c0201f2daedca5102f48abc3b6396b9865803bb3fd333c816a398216"
+    },
+    {
+      "bytes": 3380,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_03.json",
+      "sha256": "30b12cd66bfa98ff45547e6c2ce19a0aa712ea0cd057d9ae21c8e8ba7d270cfc"
+    },
+    {
+      "bytes": 4037,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_04.json",
+      "sha256": "6465933865e25f9612225b9d95583d63e98310cb9b9d35f9359ec8db5e570f44"
+    },
+    {
+      "bytes": 4397,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_05.json",
+      "sha256": "97996da4cebd07c61a4a48bdfb80ccf5cb872c6610e59865ca8c023fb7cafe4f"
+    },
+    {
+      "bytes": 4379,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_06.json",
+      "sha256": "aff2163ee3b5cdebffde48483729c538cffd2e1a5b4b4481ad5d3c7664ad2dff"
+    },
+    {
+      "bytes": 4271,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_07.json",
+      "sha256": "d0f7b467feb434f79c67e3115b843263d63ce315bc66d94853d380549eb41355"
+    },
+    {
+      "bytes": 4425,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_08.json",
+      "sha256": "657032d84e43f6f2f694708bca8d78b1f1804e55c3a480bfa79267d6092e2023"
+    },
+    {
+      "bytes": 4319,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_09.json",
+      "sha256": "b7a5c80a92b88daddb1c634bd62d44d430efff0b4aab6def688d3b8c1ee7bb6a"
+    },
+    {
+      "bytes": 4481,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_10.json",
+      "sha256": "5ad876c8cb846ae19373501f1f28863e54cb97ea9e698dc83d69d7c8f0c4fef5"
+    },
+    {
+      "bytes": 4637,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_11.json",
+      "sha256": "a751111d30e9225941433b16a5736572b2e4253a6e07d8984c448e33f167d507"
+    },
+    {
+      "bytes": 3972,
+      "files": 12,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_12.json",
+      "sha256": "699602fcf8e93ba024a3a0a93b1fa3dbc73a26f257e8cd81a96c2444ad235ef7"
+    },
+    {
+      "bytes": 3007,
+      "files": 10,
+      "path": "data/deep_review_20261017/work/manual1750_public_artifacts_13.json",
+      "sha256": "3d4a052610c4cc358f681cfa176b13623880c64da18813f689fc48fc8d45ede0"
+    },
+    {
+      "bytes": 2437,
+      "files": 1,
+      "path": "data/deep_review_20261017/work/manual1750_staging_paths.json",
+      "sha256": "2863fef4d140b76f694aaf1253331355d1afe1bc835636355cdf4e8472deea1e"
+    }
+  ],
+  "staging_index": "data/deep_review_20261017/work/manual1750_staging_paths.json",
+  "total_bytes": 4128360,
+  "verification": "SHA-256 computed from each listed file; gzip captures decompressed to verify validity and record content hash. Receipt JSON with sensitive header keys omitted; source hash/receipt metadata remains in the corresponding fact packet.",
+  "verified_gzip_count": 50
+}

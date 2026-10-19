@@ -1,0 +1,105 @@
+{
+  "files": [
+    {
+      "bytes": 5919,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0398_facts.json",
+      "sha256": "ec5d6d1678bcb04f5d19cf299334a4cb18567158dbb54293fcdf2da5f8703754",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 678,
+      "git_ignored": true,
+      "kind": "public_fact_unit",
+      "path": "data/deep_review_20261017/work/0398_resume.json",
+      "sha256": "19e77c7357a88079e3a711e00d5394b806d8b16e8feec40d90a42ff23ef48d1a",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 891,
+      "decompressed_sha256": "caeed7b4db20026af0d468872049c297d3fae0c41ee61a39f1f7ad44f74a9d21",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/0371_npm_data/0371_npm_data.body.json.gz",
+      "sha256": "74349573bb4050901ac28686cf118b722d6cc67a4806c0f15defc126539f48a1",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 916,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/0371_npm_data/0371_npm_data.receipt.json",
+      "sha256": "5f4ba1ae0ba4205216e55817cd826a9f22c453592ac6fd602d72953918e59787",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 3491,
+      "git_ignored": true,
+      "kind": "public_source_capture",
+      "path": "logs/deep_review_20261017/case0274_expansion_2045/receipts.json",
+      "sha256": "bfbdb7565df1a201e930d7ae6026c4cd89f293aea6054f97a0ce0bc9ad27a594",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 26848,
+      "decompressed_sha256": "eaa3893c371ffc08fa3e9918edd8ade0ddabe0479b4a9c5eaae78806e7e8f404",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0364_primary_1646/ranks.body.json.gz",
+      "sha256": "f88c71636b0d5f0507d6e461c0c377fa0328c62b4e6dbe97ba249fc11ca1a103",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 768,
+      "git_ignored": false,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0364_primary_1646/ranks.receipt.json",
+      "sha256": "3c2b5a646b625a3e66d7377d7e363d5c41e0ac8cc2463d0f33c38100eeb42088",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 298,
+      "decompressed_sha256": "fb4ce10cbae72a7623dd1bba0e39bd61883d7878df027ebc077a4103f629c48a",
+      "git_ignored": false,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0364_primary_1646/tesla_ir.body.json.gz",
+      "sha256": "ce7004e9b77736fe9b1313dacac85a2da254f90edd8c82b967100e0bcf8c28ca",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 820,
+      "git_ignored": false,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0364_primary_1646/tesla_ir.receipt.json",
+      "sha256": "16fa49b4618d8d47f1b0dbf024e61c1a0aed236338a26ba0d6569997dbf10ccf",
+      "tracked_in_HEAD": true
+    },
+    {
+      "bytes": 827,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0367_primary_1738/cuba_reuters_oct05.receipt.json",
+      "sha256": "f4a41acc3152218d943a3cdc4fdd6d8bdf9cb964d51e0ff63184bed595a4d33f",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 786,
+      "git_ignored": true,
+      "kind": "public_source_receipt",
+      "path": "logs/deep_review_20261017/case0367_primary_1738/govinfo_jan04.receipt.json",
+      "sha256": "5bc5d3c4b9cf899042b38d90f92e25c9b00efe2f55a4106a938b6c4ce42940a0",
+      "tracked_in_HEAD": false
+    },
+    {
+      "bytes": 285,
+      "decompressed_sha256": "51bf6d33aeef2eff5dd0f50db4bf4ea3d8c7945c4dff64a475aa67e06c17a44b",
+      "git_ignored": true,
+      "kind": "public_source_capture_gzip",
+      "path": "logs/deep_review_20261017/case0367_quote_1740/public/0367_fee.body.json.gz",
+      "sha256": "f3610ffb0607ec5c04bd0c3c102eef59cb6f9e32a85823c807bb6b9d68ae35c5",
+      "tracked_in_HEAD": false
+    }
+  ],
+  "schema": "scoped_public_archive_shard.v1"
+}

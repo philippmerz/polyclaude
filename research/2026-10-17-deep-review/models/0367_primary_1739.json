@@ -1,0 +1,49 @@
+{
+  "schema": "primary_price_blind_model.v1",
+  "review_index": 367,
+  "created_utc": "2026-10-19T17:38:51.234806+00:00",
+  "market_id": "1115638",
+  "criteria_sha256": "1fd3c9032227b31d88191e61f2dd9ee7e711779a7d5857f9e5a07c0c42234a7e",
+  "rule_binding": "Serving UN-member head of state, actual detention, direct US ground action, throughDec31 23:59ET. Title another and Jan5 creation afterJan3Maduro strongly imply an additional later event; literal description omits start, retaining interpretation tail. Foreign-only action, support alone, killed leaders, former leaders/non-state militants do not qualify.",
+  "evidence_bridge": [
+    "Jan4 officialUS account establishes actual special-operation capability and threats toward other governments; it is a dated precedent, not an imminent Oct operation or a frequency estimate. Rubio not-head-of-state assertion is a US political recognition position, not a neutral consensus determination.",
+    "Oct5 original Reuters interview reports Cuban official describes contacts without formal negotiations while State spokesperson says talks continue. Pressure and defensive preparations coexist with presidential suggestion military may not be needed. Negotiations/regime distress need not produce custody of the then-active head.",
+    "Boundedofficial/searchcoverage found no verified later qualifyingcapture in reviewedmaterial; not exhaustive absence, currentsecretplanning unknown."
+  ],
+  "future_regimes": [
+    {
+      "weight": 0.7,
+      "regime": "Managed coercion/state continuity/diplomatic path",
+      "qualifying_capture_probability": 0.03
+    },
+    {
+      "weight": 0.25,
+      "regime": "Acute target-regime crisis but leadership often resigns/dies/flees or is detained by others",
+      "qualifying_capture_probability": 0.2
+    },
+    {
+      "weight": 0.05,
+      "regime": "Direct US intervention/escalation with realistic leadership custody opportunity",
+      "qualifying_capture_probability": 0.6
+    }
+  ],
+  "future_probability": 0.101,
+  "backward_interpretation_sensitivity": {
+    "weight": 0.02,
+    "conditional_maduro_qualifies": 0.9,
+    "note": "Subjective rare adjudication route, not established criteria interpretation. CreatedAt/title favors future-only; broaddescription and disputedheadstatus prevent a mathematicalNO floor."
+  },
+  "mixture_p_yes": 0.11698,
+  "adopted_p_yes": 0.12,
+  "broad_range": [
+    0.02,
+    0.45
+  ],
+  "method": "Primary subjective geopolitical/event-and-adjudication mixture; all weights/conditional odds uncalibrated, no independent-target multiplication or market implied prior.",
+  "actual_entry_reserve_pp": 15,
+  "reserve_reason": "10pp opaque operations/crisis timing and incomplete past-event coverage;5pp recognition/window adjudication and conditional maker-fill selection. Broader adverse cases can be worse than selected probability. Fixed before own quote.",
+  "selected_p_yes": 0,
+  "selected_p_no": 0.73,
+  "portfolio_and_alternative": "No measured hedge against domestic election orClarity risks; US administration decisions can correlate. Cash variableAave3.1525%datedOct18, current small held risks and4pendingBUY7.52 compete; no new probability authorizes entry.",
+  "catalysts": "Specific confirmed custody operation, credible on-ground mobilization/official negotiations/status change, or market clarification; no verified scheduled capture. Revalidate exactfacts/eligibility/account/cost/depth at any action."
+}

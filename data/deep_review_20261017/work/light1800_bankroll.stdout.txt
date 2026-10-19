@@ -1,0 +1,19 @@
+PM positions MTM                       $    34.72
+polygon pm POL (47.7086):       $     4.39
+polygon pm USDC:            $     0.11
+polygon pm pUSD:            $    20.45
+polygon pm aUSDC.e:         $     3.50
+polygon pm aUSDC:           $   122.13
+polygon crypto POL (1.9914):       $     0.18
+arbitrum crypto ETH (0.0004):       $     1.01
+arbitrum crypto aUSDC:      $     7.90
+base crypto ETH (0.0001):       $     0.22
+base crypto USDC:           $     1.05
+--------------------------------------------------
+TOTAL BANKROLL                         $   195.66
+vs reference $170                         +25.66  (+15.1%)
+  REALIZED (settled cash)                 +20.73  (+12.2% of ref) <- the metric that counts
+  (gas tokens excluded)                     5.80  — separately deposited, not trading P&L
+  unrealized (marked)                      -0.87  — NOT return until closed or resolved
+  unrealized (realizable)                  -4.75  — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote
+WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $3.88 (mid $34.72 vs $30.84) — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return.

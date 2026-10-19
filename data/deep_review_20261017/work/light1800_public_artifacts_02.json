@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "entries": [
+    {
+      "path": "logs/deep_review_20261017/317_followup_1209/senate_floor_1019.receipt.json",
+      "bytes": 889,
+      "sha256": "b858c42c163ea456b24518fabaf7476c87ba22e47d0204e88d1a74308590e9f2"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_clarity/senate_daily_press.body.json.gz",
+      "bytes": 274,
+      "sha256": "3d8aba4276a7fc59d3b4339824384e730aa7192650d3beedc9db44948564cd24"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_clarity/senate_daily_press.intent.json",
+      "bytes": 297,
+      "sha256": "8ffe861957bba058c91514af9c912a5f17b49136c4d19c0aa4c064ed62aea227"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_clarity/senate_daily_press.receipt.json",
+      "bytes": 839,
+      "sha256": "29082ffca0032480aa3781dd8f81c69d564b5feae372464d00d405d25ef811f6"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/capture_manifest.json",
+      "bytes": 5917,
+      "sha256": "ffcb4bb04bf49dfa15d9e0d1292abcd3096f595b59ff2ef2165f1b24cc966b70"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0112_fee.body.json.gz",
+      "bytes": 311,
+      "sha256": "7d270dadeeff5e7b20a999c4b5bfe3cdf66844126d12a69407c4cbd4bc5dac4d"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0112_fee.receipt.json",
+      "bytes": 655,
+      "sha256": "b92d94acdbcd491b8273ebacb05647c85ec3f97463110e830d2406a92edf8cbd"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0112_gamma.body.json.gz",
+      "bytes": 1961,
+      "sha256": "eb6832c58e0cb7d7daff7063433798d2c8fe271eb8a40219e9de8d76819b925c"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0112_gamma.receipt.json",
+      "bytes": 699,
+      "sha256": "9d4fbc526cc70ffdc29c5288f2e1171b325ed3a94c0f4e24f173ecd07d35b52a"
+    },
+    {
+      "path": "logs/deep_review_20261017/light1800_held_public/public/0210_fee.body.json.gz",
+      "bytes": 311,
+      "sha256": "85910775b71915bd5ce98b395eab396012b657842282bacee7a4cbddccdac437"
+    }
+  ]
+}

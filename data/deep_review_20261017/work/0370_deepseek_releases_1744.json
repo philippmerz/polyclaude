@@ -1,0 +1,20 @@
+{
+  "review_index": 370,
+  "url": "https://api-docs.deepseek.com/updates/",
+  "status": 200,
+  "received_utc": "2026-10-19T17:43:54.945493Z",
+  "receipt": "logs/deep_review_20261017/case0370_deepseek_1744/official_updates.receipt.json",
+  "raw_sha256": "9abda5ba89b86be5d82ad045864dbe5047e0908b45c161d8a4631d4d5fcb6f18",
+  "gzip_sha256": "6fb6c0db3e48de769f62b1db9d761b44230161d65f2328793cb9927160b2fc38",
+  "excerpts": [
+    {
+      "term": "V4.1 Flash",
+      "text": "ritative and trustworthy information for users and LLMs. For usage details, see the Search & Fetch guide . DeepSeek-V4.1-Flash-1017 Update ​ DeepSeek V4.1 Flash has been upgraded to DeepSeek-V4.1-Flash-1017. The official web and APP models have also been updated to the new version. The API calling method and pricing remain unchanged — simply use deepseek-flash to access the latest model. Performance–cost Pareto improvement Compared with the previous DeepSeek V4.1, the new model delivers substantial improvements across benchmarks: HLE (w/o tools): 42.6 (44.0*) Terminal-Bench 4.0: 42.3 DeepSWE v1.1: 77.0 ProgramBench: 29.1 NL2Repo-Bench: 68.2 Automation-Bench v1.0.6: 60.5 Agents' Last Exam: 35.4 Apex Bench v1.1: "
+    },
+    {
+      "term": "1017",
+      "text": "hanisms, ensuring authoritative and trustworthy information for users and LLMs. For usage details, see the Search & Fetch guide . DeepSeek-V4.1-Flash-1017 Update ​ DeepSeek V4.1 Flash has been upgraded to DeepSeek-V4.1-Flash-1017. The official web and APP models have also been updated to the new version. The API calling method and pricing remain unchanged — simply use deepseek-flash to access the latest model. Performance–cost Pareto improvement Compared with the previous DeepSeek V4.1, the new model delivers substantial improvements across benchmarks: HLE (w/o tools): 42.6 (44.0*) Terminal-Bench 4.0: 42.3 DeepSWE v1.1: 77.0 ProgramBench: 29.1 NL2Repo-Bench: 68.2 Automation-Bench v1.0.6: 60.5 Agents' Last Exam:"
+    }
+  ],
+  "scope": "OfficialAPIreleaseclaims; noTextArenaadmission/dateorleadershipinferred."
+}

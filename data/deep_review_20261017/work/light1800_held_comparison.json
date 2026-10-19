@@ -1,0 +1,133 @@
+{
+  "schema": "light1800_primary_hold_comparison.v1",
+  "reviewed_utc": "2026-10-19T18:03:44.068603+00:00",
+  "quote_file": "data/deep_review_20261017/work/light1800_held_public.json",
+  "quote_sha256": "c5be664e5245f0a614bfeeac433bcbcf21417a24b840c2268575906be26bdac0",
+  "rows": [
+    {
+      "index": 112,
+      "held_outcome": "No",
+      "shares": 5,
+      "central_probability": 0.88,
+      "selected_probability": 0.73,
+      "central_terminal": 4.4,
+      "selected_terminal": 3.65,
+      "full_indicative_sell": {
+        "complete": true,
+        "filled": 5.0,
+        "gross": 3.05,
+        "fee": 0.04758,
+        "fills": [
+          {
+            "shares": 5.0,
+            "price": 0.61
+          }
+        ],
+        "net": 3.00242
+      },
+      "best_bid": 0.61,
+      "all_bid_prices_below_selected": true,
+      "book_received_utc": "2026-10-19T18:03:16.921597+00:00",
+      "book_age_seconds_at_receipt": 11.835597038269043,
+      "passed_180s_at_receipt": true,
+      "exit_plus_10pct_one_year_sensitivity": 3.302662,
+      "broad_adverse_terminal": 1.0,
+      "forecast_rederived_this_check": false,
+      "basis": "Dated primary forecasts retained pending current source judgment; fee-net full depth newly captured. No order or execution authorization."
+    },
+    {
+      "index": 210,
+      "held_outcome": "Yes",
+      "shares": 5,
+      "central_probability": 0.6,
+      "selected_probability": 0.39999999999999997,
+      "central_terminal": 3.0,
+      "selected_terminal": 1.9999999999999998,
+      "full_indicative_sell": {
+        "complete": true,
+        "filled": 5.0,
+        "gross": 1.25,
+        "fee": 0.04688,
+        "fills": [
+          {
+            "shares": 5.0,
+            "price": 0.25
+          }
+        ],
+        "net": 1.20312
+      },
+      "best_bid": 0.25,
+      "all_bid_prices_below_selected": true,
+      "book_received_utc": "2026-10-19T18:03:16.921597+00:00",
+      "book_age_seconds_at_receipt": 71.92059707641602,
+      "passed_180s_at_receipt": true,
+      "exit_plus_10pct_one_year_sensitivity": 1.3234320000000002,
+      "broad_adverse_terminal": 1.0,
+      "forecast_rederived_this_check": false,
+      "basis": "Dated primary forecasts retained pending current source judgment; fee-net full depth newly captured. No order or execution authorization."
+    },
+    {
+      "index": 299,
+      "held_outcome": "No",
+      "shares": 6,
+      "central_probability": 0.5710215523792391,
+      "selected_probability": 0.4210215523792391,
+      "central_terminal": 3.4261293142754345,
+      "selected_terminal": 2.5261293142754346,
+      "full_indicative_sell": {
+        "complete": true,
+        "filled": 6.0,
+        "gross": 0.39,
+        "fee": 0.01824,
+        "fills": [
+          {
+            "shares": 6.0,
+            "price": 0.065
+          }
+        ],
+        "net": 0.37176000000000003
+      },
+      "best_bid": 0.065,
+      "all_bid_prices_below_selected": true,
+      "book_received_utc": "2026-10-19T18:03:16.921597+00:00",
+      "book_age_seconds_at_receipt": 0.034596920013427734,
+      "passed_180s_at_receipt": true,
+      "exit_plus_10pct_one_year_sensitivity": 0.4089360000000001,
+      "broad_adverse_terminal": 0.12,
+      "forecast_rederived_this_check": false,
+      "basis": "Dated primary forecasts retained pending current source judgment; fee-net full depth newly captured. No order or execution authorization."
+    },
+    {
+      "index": 1838,
+      "held_outcome": "No",
+      "shares": 5,
+      "central_probability": 0.43999999999999995,
+      "selected_probability": 0.33999999999999997,
+      "central_terminal": 2.1999999999999997,
+      "selected_terminal": 1.6999999999999997,
+      "full_indicative_sell": {
+        "complete": true,
+        "filled": 5.0,
+        "gross": 1.5,
+        "fee": 0.042,
+        "fills": [
+          {
+            "shares": 5.0,
+            "price": 0.3
+          }
+        ],
+        "net": 1.458
+      },
+      "best_bid": 0.3,
+      "all_bid_prices_below_selected": true,
+      "book_received_utc": "2026-10-19T18:03:16.921597+00:00",
+      "book_age_seconds_at_receipt": 0.07359695434570312,
+      "passed_180s_at_receipt": true,
+      "exit_plus_10pct_one_year_sensitivity": 1.6038000000000001,
+      "broad_adverse_terminal": 1.0,
+      "forecast_rederived_this_check": false,
+      "basis": "Dated primary forecasts retained pending current source judgment; fee-net full depth newly captured. No order or execution authorization."
+    }
+  ],
+  "limits": "74 days is only a uniform carry sensitivity, not each exact resolution duration. One-year10% sensitivity dominates dated3.1525% cash for these expected windows, not guaranteed yield. All binary holdings can lose; selected cases are not calibrated interval floors."
+}
