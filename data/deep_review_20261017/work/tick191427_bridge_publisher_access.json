@@ -1,0 +1,15 @@
+{
+  "status": 200,
+  "received_utc": "2026-10-19T19:53:31.186430Z",
+  "receipt": "logs/checkin_20261019T191427_closeout/bridge_publisher/author.receipt.json",
+  "raw_sha256": "c8d32e7b597b47f20b9d399f73211f23a54ef014e07dc9e62e09820f8f2c5ce1",
+  "gzip_sha256": "fa4e4493bae2cb6c342dd2045986914a7d878a6b4870560f630a7828cf7cff95",
+  "page_title": "Lauren Gibbons, Author at Bridge Michigan",
+  "matching_source_urls": [
+    "https://bridgemi.com/michigan-government/fact-check-jd-vance-attacks-abdul-el-sayed-in-michigan/",
+    "https://bridgemi.com/michigan-government/fact-check-abdul-el-sayed-and-mike-rogers-debate-trump-tariffs-war-more/",
+    "https://bridgemi.com/michigan-government/amid-mass-proliferation-flock-cameras-emerge-as-key-issue-in-michigan-election/",
+    "https://bridgemi.com/michigan-government/fact-check-no-evidence-abdul-el-sayed-pledged-support-to-muslim-brotherhood/"
+  ],
+  "finding": "Four related fact-check/Flock links in this author index; no exact target article identified. This is not a complete publisher search or proof the article is absent."
+}

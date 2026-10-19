@@ -1,0 +1,48 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 383,
+  "created_utc": "2026-10-19T19:48:13Z",
+  "market": {
+    "id": "1397270",
+    "condition_id": "0xf691956d44187f9296718a26b10c03d3b85e3369e2098ab2188f765ef4dc97b7",
+    "frozen_criteria_sha256": "e2fe769c24d9a11a56bb59f378666b5c5a1beec3111ee9b8189ff75793f4e799",
+    "createdAt": "2026-02-19T12:25:03.975602Z"
+  },
+  "wording_correction": {
+    "prior_phrase": "“Prior Oct18 geometry is for another case’s Kostyantynivka polygon and cannot be used as Lyman evidence.”",
+    "clarification": "That means the Kostyantynivka-specific intersection ratio is not transferable to the Lyman target. The underlying ISW polygon feature collections are nationwide, so they can be overlaid with a separately proven Lyman station-icon footprint. That exact icon footprint is not currently georeferenced here; the prior point locator is only approximate."
+  },
+  "official_storymap_refresh": {
+    "url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+    "status": 200,
+    "request_received_utc": "2026-10-19T19:47:51.217534Z",
+    "response_date": "Mon, 19 Oct 2026 18:54:25 GMT",
+    "age_seconds": "3206",
+    "etag": "\"a66pqf8wx15310\"",
+    "raw_sha256": "aa552f9f685283a9b466081fe6b42f4583cf4d97c832938dbf759ffd38af65f9",
+    "gzip_sha256": "b40df0c66a3c74a0a8532724cfff0a23deb7c99f732ce8e25c1053f0bccf8921",
+    "body": "logs/deep_review_20261017/case383_map_refresh_1935/story/isw_story_1936.body.json.gz",
+    "receipt": "logs/deep_review_20261017/case383_map_refresh_1935/story/isw_story_1936.receipt.json",
+    "page_dateModified": "2026-10-19T13:06:18.598Z",
+    "embedded_map_caption": "Assessed Control of Terrain in Ukraine as of October 18, 2026, 4:00 PM ET",
+    "limitation": "HTTP response was a 3,206-second cached page. Story-page modification is not a later map-data observation."
+  },
+  "map_item_revalidation": {
+    "body": "logs/deep_review_20261017/case383_map_refresh_1935/isw_item_data_1935.body.json.gz",
+    "receipt": "logs/deep_review_20261017/case383_map_refresh_1935/isw_item_data_1935.receipt.json",
+    "received_utc": "2026-10-19T19:34:51.249997Z",
+    "raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+    "etag": "\"1a150e298f0\"",
+    "same_raw_sha_as_prior_2026_10_19_1238": true,
+    "nationwide_layer_dates": "All embedded features in advances (53), controlled (10), and infiltration (180) layers carry pub_date 2026-10-18."
+  },
+  "bounded_isw_searches": {
+    "queries": [
+      "site:understandingwar.org Lyman rail station October 19 2026 ISW map",
+      "site:understandingwar.org/research/russia-ukraine October 18, 2026 Lyman; October 19, 2026 Lyman ISW"
+    ],
+    "result": "Search results surfaced older unrelated references: Oct9 2025 discussion of the northeastern Yampil railway station, and Jun21 2026 reporting of the Brusyn Train Station southwest of Lyman. Neither is the named central Lyman rail station icon. No official Oct17–19 Lyman daily assessment/history URL was surfaced by these two targeted searches. Search output was browser representation; no raw search response receipt exists."
+  },
+  "history_and_status_gap": "No original ISW daily map snapshots spanning the market start (Feb19 12:25:03Z) through the Oct18 layer date or official map revision-history endpoint was recovered in this bounded pass. The current item is one Oct18 snapshot. Therefore prior qualifying shading, next-full-update persistence, and exact station-icon overlap remain unknown; no event-absence claim follows.",
+  "scope": "Facts and source-binding only; no probability, market-quote review, or resolution conclusion."
+}

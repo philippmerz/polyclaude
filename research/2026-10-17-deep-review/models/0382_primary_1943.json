@@ -1,0 +1,109 @@
+{
+  "schema": "primary_openrouter382_model.v1",
+  "created_utc": "2026-10-19T19:41:14.567039+00:00",
+  "review_index": 382,
+  "price_status": "Root adopted before any fresh own-contract quote. Historical frozen prices may exist but were not used.",
+  "literal": "DisplayedSep28/Oct5/Oct12 totals166+172+164=502T. YESstrictfourweek<575; Oct19display>=73T givesNO; boundary575NO. FirstOct26display/fallbackOct30 23:59ET. Weeklyupdatewording is not permanent immutability warranty.",
+  "measured": {
+    "prior_week_raw_T": 164.043985914931,
+    "current_week_raw_T": 19.47091593494,
+    "current_week_displayed_T": 19.5,
+    "current_UI_pace_T": 172,
+    "pace_is_not_observed_final": true,
+    "past_three_raw_sum_T": 501.742537497208,
+    "past_three_displayed_sum_T": 502,
+    "forecast_raw_threshold_proxy_T": 73,
+    "rounding_sensitivity_T": [
+      72.5,
+      73.5
+    ]
+  },
+  "primary_branches": [
+    {
+      "name": "ordinary",
+      "weight": 0.9,
+      "model": "ln(final/164.043985914931)~t4(location.02,scale.10), truncated above observed19.47091593494",
+      "basis": "Recent12log-returnSD.087 and current-vintage50min-.252; moderation drift and heavier t tail are primary judgments."
+    },
+    {
+      "name": "sharp_demand_regime",
+      "weight": 0.06,
+      "model": "Lognormal median120T/logsigma.28, truncated above observed partial",
+      "basis": "A new routing/pricing/model-demand regime can reduce volume despite recent high levels."
+    },
+    {
+      "name": "prolonged_outage_or_reporting",
+      "weight": 0.03,
+      "model": "FinalUniform(observedpartial,100T)",
+      "basis": "Unfitted judgment about multi-day service/telemetry interruption; not estimated from uptime or zero historical collapses."
+    },
+    {
+      "name": "major_source_revision_or_interpretation",
+      "weight": 0.01,
+      "conditional_p_yes": 0.5,
+      "basis": "Unmeasured retrospective corrections/chart/first-display interpretation; no assumption source or weeklyarchive is infallible."
+    }
+  ],
+  "calculated": {
+    "p_yes": 0.027724026657892305,
+    "weights": [
+      0.8999999999999999,
+      0.06,
+      0.03,
+      0.01
+    ],
+    "conditional_p_yes": [
+      0.0005623768694410437,
+      0.037939420361935434,
+      0.6647174084559746,
+      0.5
+    ]
+  },
+  "sensitivity": {
+    "threshold72_5": 0.027402738429238797,
+    "threshold73_5": 0.028050270848595477,
+    "cat1pct": 0.014440926026161632,
+    "cat10pct": 0.07421487886894966,
+    "correction10pct": 0.11916426495069997
+  },
+  "primary_adopted_p_yes": 0.03,
+  "broad_range_yes": [
+    0.002,
+    0.2
+  ],
+  "reserve": {
+    "selected_NO": 0.85,
+    "selected_YES": 0,
+    "equivalent_common_reserve": 0.12,
+    "rule": "K5 arithmetic1-5*.03=.85NO; conservative selection also below ordinary10pp=.87NO. No claim that future outage/reporting tail frequencies are calibrated or licensed merely by arithmetic."
+  },
+  "tail_license": "Resolving UI/API are first-hand and horizonshort, but future multi-day outage/reporting probabilities are judgmental. No new near-certain bond-fade permission from current uptime/history; any candidate entry needs independent current tail/economic verification.",
+  "portfolio_joint_bookkeeping": [
+    {
+      "382": "No",
+      "held112": "No",
+      "weight": 0.855
+    },
+    {
+      "382": "No",
+      "held112": "Yes",
+      "weight": 0.115
+    },
+    {
+      "382": "Yes",
+      "held112": "No",
+      "weight": 0.025
+    },
+    {
+      "382": "Yes",
+      "held112": "Yes",
+      "weight": 0.005
+    }
+  ],
+  "joint_limit": "Illustrative weights reconcile382YES3% and existingheld112YES12%, not calibrated correlation/hedge. Transient current outage then future725-775rebound can lose bothNOs. Existing112prior/position unchanged; recent partial movement adds no completed-week surprise.",
+  "source_hashes": {
+    "data/deep_review_20261017/work/0382_chart_facts_1940.json": "aca47e25bb58bd04d7fb1851d955ef505ee646486f0753a32e60d23f31b1804a",
+    "data/deep_review_20261017/work/0382_status_rendered_1942.json": "cc40a1ea7e1113dbe87913f04a82b124379a9444cc1ab9268ad7f024f5ed4126",
+    "data/deep_review_20261017/work/0382_facts_1834.json": "090e9d9471a37f9ed9087779cd9b7a647bf232a56ce9cdf210153368ce1304c5"
+  }
+}

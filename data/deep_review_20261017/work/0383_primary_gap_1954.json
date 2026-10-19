@@ -1,0 +1,21 @@
+{
+  "schema": "primary_case_gap.v1",
+  "review_index": 383,
+  "saved_utc": "2026-10-19T19:55:12.670667+00:00",
+  "status": "UNPRICED_ACTIVE_NOT_COMPLETED",
+  "market_id": "1397270",
+  "condition_id": "0xf691956d44187f9296718a26b10c03d3b85e3369e2098ab2188f765ef4dc97b7",
+  "criteria_sha256": "e2fe769c24d9a11a56bb59f378666b5c5a1beec3111ee9b8189ff75793f4e799",
+  "literal": "Any part of the central Lyman station ICON qualifying under ISW controlled-terrain/advances shading since creation through Dec31 23:59ET; persist through next full daily update. A later loss does not reverse an earlier qualification. Infiltration/claims excluded; actual negotiated control alternative retained.",
+  "verified": "Root inspected contract images and independently overlaid approximate OSM station locator plus 500m/1km sensitivities on Oct18 nationwide per-feature EPSG4326 geometry. Locator/buffers outside qualifying polygons.",
+  "gap": "No exact rendered-icon footprint or complete Feb19-to-Oct18 qualification/next-full-cycle history. A present-day outside result cannot rule out an earlier irreversible YES. Search results for other stations are not a substitute.",
+  "source_units": [
+    "work/0383_station_facts_1725.json",
+    "work/0383_station_map_refresh_1935.json",
+    "work/0383_primary_geometry_1950.json",
+    "work/0383_map_history_addendum_1948.json"
+  ],
+  "next": "Resume383 first; decide whether bounded historical-source recovery can support pricing. Otherwise record a precisely unpriced local block with both-side conditional costs before moving to384. No adopted probability, fresh own-contract quote, final report or valuation credit yet.",
+  "not_a_global_block": true,
+  "no_money_or_goal_mutation": true
+}

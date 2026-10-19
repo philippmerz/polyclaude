@@ -1,0 +1,93 @@
+{
+  "schema": "primary_chart_facts.v1",
+  "created_utc": "2026-10-19T19:38:13.021672+00:00",
+  "review_index": 382,
+  "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+  "capture": {
+    "schema": "anonymous_browser_public_response.v1",
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "method": "GET",
+    "started_utc": "2026-10-19T19:37:07.077Z",
+    "received_utc": "2026-10-19T19:37:23.035Z",
+    "status": 200,
+    "timing_basis": "page_call_window_and_body_completion_not_wire",
+    "headers": {
+      "date": "Mon, 19 Oct 2026 19:37:22 GMT",
+      "age": "92",
+      "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600",
+      "content-type": "application/json"
+    },
+    "raw_bytes": 24669,
+    "raw_sha256": "01c655f031f617efd341987eeee1c2b5e45fa76b738d37580c0d6dd736e0dbde",
+    "gzip_sha256": "a56a159f7a9bffeeb07c9704920c0158a3bfe5ffa0ca28e2fc783badcf25fae5",
+    "gzip_path": "chart_1.body.json.gz"
+  },
+  "cachedAt_utc": "2026-10-19T19:19:06.792000+00:00",
+  "points": 53,
+  "latest_rows": [
+    {
+      "label": "2026-09-28",
+      "T": 165.856049857563,
+      "series": 10,
+      "displayed_total": "166T",
+      "observed_utc": "2026-10-19T19:37:25.647Z",
+      "screenshot_sha256": "d685c034aab871883c48226a81e5beeeb518e3f2834195bed9009788b771ddb8"
+    },
+    {
+      "label": "2026-10-05",
+      "T": 171.842501724714,
+      "series": 10,
+      "displayed_total": "172T",
+      "observed_utc": "2026-10-19T19:37:25.991Z",
+      "screenshot_sha256": "d406ce4bf8c2492cd8029ac5ec2de87c2be1d8d63f2aa39a032fc713151c3ff3"
+    },
+    {
+      "label": "2026-10-12",
+      "T": 164.043985914931,
+      "series": 10,
+      "displayed_total": "164T",
+      "observed_utc": "2026-10-19T19:37:26.323Z",
+      "screenshot_sha256": "16cf934b3821348699b196fe0d58cd8062bf66f6257bd2b155a990acae4ddcdd"
+    },
+    {
+      "label": "2026-10-19",
+      "T": 19.47091593494,
+      "series": 10,
+      "displayed_total": "19.5T",
+      "observed_utc": "2026-10-19T19:37:26.653Z",
+      "screenshot_sha256": "1b131fbbadc7f4633af17f8255b57e7dd6c3a4524ec1607474c0fb141bab85ae"
+    }
+  ],
+  "first_three_displayed_sum_T": 502,
+  "weekly_history_descriptive_only": {
+    "12": {
+      "n": 12,
+      "mean_log_return": 0.08658136427119845,
+      "SD_log_return": 0.08709316910373352,
+      "minimum_log_return": -0.046443771006857586,
+      "maximum_log_return": 0.21463232860823847,
+      "drops_beyond_50pct": 0
+    },
+    "26": {
+      "n": 26,
+      "mean_log_return": 0.08004652728006546,
+      "SD_log_return": 0.0786772206994031,
+      "minimum_log_return": -0.0783818609218952,
+      "maximum_log_return": 0.21463232860823847,
+      "drops_beyond_50pct": 0
+    },
+    "50": {
+      "n": 50,
+      "mean_log_return": 0.06786719303331389,
+      "SD_log_return": 0.09959378825471968,
+      "minimum_log_return": -0.2519562083074011,
+      "maximum_log_return": 0.2832503073926499,
+      "drops_beyond_50pct": 0
+    }
+  },
+  "limits": [
+    "Raw data were saved before parsing; fresh anonymous UI shows all four Total labels, excluding the separate Weekly Pace overlay.",
+    "History is one current-vintage series, not original weekly snapshots or a calibrated seven-day outage/reporting-tail forecast.",
+    "Past labels are unchanged versus18:17 but rule promises weekly updates until next label; it does not guarantee perpetual immutable history."
+  ]
+}

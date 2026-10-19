@@ -1,0 +1,13 @@
+{
+  "status": 200,
+  "received_utc": "2026-10-19T19:53:14.335711Z",
+  "raw_sha256": "fb1658dc3eff87b9888bc9a06ddf50b896d779b068844b6bac8bcc97e907c331",
+  "gzip_sha256": "1cbff3f425ced36a4b2158e15d2535dd9d6e6c56269591d944c50a28ed27a383",
+  "title": "Google News",
+  "canonical": [
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa191SjNmdFlkcGI0UF81RERYdUdYWDZZdkw2dWJ2YjlpUkE1ZVdWRlMtNFpiaEI4TWtKRVd5M1BnNm1oVU83RVNjVU8zbG9xYTZ2b09lblVWLXFGN0pDVUEyUTR0S0ZGcEYxODBmdUlndmg2Wk1Jd2RzWVVKUVFpUGxnbTNWSDYzSHBHWWxTY1BKYnZoSFdHV3ZCVzdDZHBKZnNTWTFSZDdBOEQtNVo0dEZEM1FENzQ",
+    "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa191SjNmdFlkcGI0UF81RERYdUdYWDZZdkw2dWJ2YjlpUkE1ZVdWRlMtNFpiaEI4TWtKRVd5M1BnNm1oVU83RVNjVU8zbG9xYTZ2b09lblVWLXFGN0pDVUEyUTR0S0ZGcEYxODBmdUlndmg2Wk1Jd2RzWVVKUVFpUGxnbTNWSDYzSHBHWWxTY1BKYnZoSFdHV3ZCVzdDZHBKZnNTWTFSZDdBOEQtNVo0dEZEM1FENzQ?hl=en-US&gl=US&ceid=US%3Aen"
+  ],
+  "links": [],
+  "text_excerpt": "Google News"
+}

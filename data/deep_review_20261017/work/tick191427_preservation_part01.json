@@ -1,0 +1,96 @@
+{
+  "schema": "bounded_artifact_hash_shard.v1",
+  "prepared_utc": "2026-10-19T19:59:46.923806+00:00",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 14421,
+      "sha256": "dd63ca00742e406ea48ebd9bfb9868f44b29fa12fe82982a8bd41529391fff88"
+    },
+    {
+      "path": "notes/backlog.md",
+      "bytes": 3324,
+      "sha256": "74d4c3081fa7dc977ead03ba99f2b2cc65e8068f84b123ae2dd8aca519b9415c"
+    },
+    {
+      "path": "notes/current_context.md",
+      "bytes": 6418,
+      "sha256": "9d2aa11276ee6f47d243f6c6d5225fd2410ef65d7499264e824daee81bb61d06"
+    },
+    {
+      "path": "notes/journal.md",
+      "bytes": 2518071,
+      "sha256": "ccaa8c495f1b4ba45f8310fd9e67461473cc91a8883497f24d6734d0d28d823f"
+    },
+    {
+      "path": "notes/deep_review_checkpoint.json",
+      "bytes": 2049,
+      "sha256": "947d5ba27323eb59156edaedfd4bc782a34fd46f8c91d5cbfc4b91a21536086b"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/INDEX.md",
+      "bytes": 157566,
+      "sha256": "1d178a6a42cb51c904a1be293578a3c15fc73bfbebab0eda4bb3a4c2fb10d3c1"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/index.csv",
+      "bytes": 577750,
+      "sha256": "8a041f7afdd8530b1aad57b56677dceba8bfe1c75f106fa60b8819a4b44c22d2"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/progress.json",
+      "bytes": 1125,
+      "sha256": "3bb55d5cde91a51e70ee9a4fb2a0348736c8825ec9cce7f0103fb5f9d0cdbefc"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations.jsonl",
+      "bytes": 3329303,
+      "sha256": "7c86d66803c6fe3ab25ee7d3217730acc288cb8f5e27c02429699c1b3e14e0eb"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0382.json",
+      "bytes": 6326,
+      "sha256": "cbe68235e8f91b0112003bad340d902a02bb295c07ba86080888131574f5c18a"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0382.md",
+      "bytes": 4949,
+      "sha256": "73c7f0eb2f4c82b1052b0990731219cea4588fc74af8b4cb180835b9bc1625da"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0382_primary_1943.json",
+      "bytes": 4238,
+      "sha256": "ceb1fe799ce15febacc2a4c574f7237b65293428706655fa1752b0150ad75f7d"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/RESUME.md",
+      "bytes": 4728,
+      "sha256": "d5d790477f4706329202e112f7afb2b9a842ed7621c9711ba29ca7241e6a21cb"
+    },
+    {
+      "path": "research/2026-10-19-1956-closeout.md",
+      "bytes": 2939,
+      "sha256": "bfbfd98a97bf427360a9e52e7b621efe1bf5f88f3ed3d15013b1646d4babe3ec"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_economics_100_1945.json",
+      "bytes": 3672,
+      "sha256": "86bbc7302ddfd0dc20bc1b75a4c28e81906744617ae130d138b1580093ecdd39"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_economics_1943.json",
+      "bytes": 3292,
+      "sha256": "9afe263faf660c30d3ea221b3d47c56e7fb96424b4ef5e91b70eee7765b5a41d"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_quote_1943.json",
+      "bytes": 11187,
+      "sha256": "d7044ce27e9db2fd547f6938ef0f6d5ec7782865c48447b3ef2372e6894c7dc0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_chart_facts_1940.json",
+      "bytes": 3455,
+      "sha256": "aca47e25bb58bd04d7fb1851d955ef505ee646486f0753a32e60d23f31b1804a"
+    }
+  ]
+}

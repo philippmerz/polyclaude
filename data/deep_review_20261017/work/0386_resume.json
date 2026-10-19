@@ -1,1 +1,21 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":386,"phase":"FACTS_ONLY_COMPLETE; primary may review exact rule and source facts; valuation/entry remain pending","source_paths":["work/0386_facts_1737.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:38:05.595433+00:00","unit_sha256":"e4825930fffde404d258a082c9ac1f0c272e6c547ce50c5fec8e8bfb3ad41aaf","source_capture_root":"logs/deep_review_20261017","source_pointers":["https://www.lamoncloa.gob.es/gobierno/agenda/paginas/agenda.aspx","https://www.boe.es/buscar/doc.php","https://constitucion.congreso.es/detalle-articulo","https://www.congreso.es/es/notas-de-prensa"],"conditionId":"0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1","criteria_sha256":"115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 386,
+  "phase": "Facts-only legal/election timeline refresh saved; valuation and entry remain pending. No resolution conclusion.",
+  "source_paths": [
+    "work/0386_facts_1935.json",
+    "work/0386_facts_1737.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T19:36:29.254560Z",
+  "unit_sha256": "cfdcfdf656c695a9607a2fa500861d10684eb6d017811fdfd3a1f335ab833967",
+  "source_capture_root": "logs/deep_review_20261017",
+  "source_pointers": [
+    "https://www.lamoncloa.gob.es/gobierno/agenda/paginas/agenda.aspx",
+    "https://www.boe.es/buscar/doc.php",
+    "https://www.boe.es/buscar/act.php?id=BOE-A-1997-25336",
+    "https://www.congreso.es/constitucion/ficheros/c78/cons_ingl.pdf"
+  ],
+  "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+  "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395"
+}

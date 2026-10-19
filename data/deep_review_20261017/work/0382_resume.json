@@ -1,20 +1,26 @@
 {
   "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 382,
-  "phase": "Facts updated with current 18:17 UTC public chart capture; valuation pending. No forecast or entry authority.",
+  "phase": "VALUED_COMPLETE_2026-10-19T19:43:36Z; noentry",
   "source_paths": [
+    "work/0382_chart_facts_1940.json",
+    "work/0382_status_rendered_1942.json",
     "work/0382_facts_1834.json",
     "work/0382_rows_1817.json",
-    "work/0382_facts.json"
+    "work/0382_facts.json",
+    "work/0382_status_facts_1940.json"
   ],
   "source_pointers": [
-    "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart"
+    "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "https://status.openrouter.ai/",
+    "https://status.openrouter.ai/history"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-19T18:53:40.165529Z",
+  "updated_utc": "2026-10-19T19:44:03.169615+00:00",
   "source_capture_root": "logs/deep_review_20261017",
   "unit_sha256": "090e9d9471a37f9ed9087779cd9b7a647bf232a56ce9cdf210153368ce1304c5",
   "rows_sha256": "f6f5a8ff6ac390ccd1e00c6630c977b79542f9c1e786bcb66b88413d8037c98a",
   "frozen_conditionId": "0xb6ae15a0ea806a324647b4155680e176c0340e0f4db48a5f139fb8675830ce2c",
-  "criteria_sha256": "08348899964ba4703d02142c16ec4d9077d30b204d6f3bad1be4895fdd77d869"
+  "criteria_sha256": "08348899964ba4703d02142c16ec4d9077d30b204d6f3bad1be4895fdd77d869",
+  "report": "research/2026-10-17-deep-review/evaluations/0382.md"
 }

@@ -1,0 +1,62 @@
+{
+  "schema": "primary_station_geographic_check.v1",
+  "review_index": 383,
+  "computed_utc": "2026-10-19T19:46:39.340247+00:00",
+  "source_body": "logs/deep_review_20261017/case383_map_refresh_1935/isw_item_data_1935.body.json.gz",
+  "source_raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+  "approx_OSM_station_coordinate": {
+    "latitude": 48.9648101,
+    "longitude": 37.8267391
+  },
+  "root_visual_check": "Provided market zoom/context images both point to Krasnyi Lyman railway-station icon by Pryvokzalna/Donetska streets, not Brusyn station or whole Lyman. No exact raster geotransform is supplied.",
+  "method": "Root recomputed full Ukrainian embedded layer geometry independently: per-feature4326 rings use even-odd fill via symmetric_difference/make_valid, features unioned; local fixed-latitude metric projection for approximate distances/buffers. Globalmap3857 is not substituted for feature4326.",
+  "results": [
+    {
+      "title": "Assessed Russian Advances",
+      "features": 53,
+      "geometry_wkids": [
+        4326
+      ],
+      "locator_intersects": false,
+      "approx_nearest_distance_km": 3.629580396249076,
+      "within500m_intersects": false,
+      "within1000m_intersects": false,
+      "feature_dates": [
+        "2026-10-18"
+      ]
+    },
+    {
+      "title": "Assessed Russian-Controlled Terrain",
+      "features": 10,
+      "geometry_wkids": [
+        4326
+      ],
+      "locator_intersects": false,
+      "approx_nearest_distance_km": 15.680426098019552,
+      "within500m_intersects": false,
+      "within1000m_intersects": false,
+      "feature_dates": [
+        "2026-10-18"
+      ]
+    },
+    {
+      "title": "Assessed Russian Infiltration Areas",
+      "features": 180,
+      "geometry_wkids": [
+        4326
+      ],
+      "locator_intersects": false,
+      "approx_nearest_distance_km": 2.515378816714057,
+      "within500m_intersects": false,
+      "within1000m_intersects": false,
+      "feature_dates": [
+        "2026-10-18"
+      ]
+    }
+  ],
+  "limits": [
+    "The same full-country polygons are reusable for this station; prior source origination in a Kostyantynivka task does not limit them to that city.",
+    "This is a locator/buffer geometric observation at Oct18 layer date, not a proven rendered-icon footprint or complete Feb19\u2013Oct18 history/next-cycle persistence.",
+    "A1km buffer is an explicit location/footprint sensitivity, not an identified contract boundary."
+  ]
+}

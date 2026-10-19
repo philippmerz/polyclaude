@@ -1,1 +1,15 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":383,"phase":"FACTS_ONLY_SAVED_NO_VALUATION","source_paths":["work/0383_station_facts_1725.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:23:38.117458Z","source_capture_root":"logs/deep_review_20261017"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 383,
+  "phase": "PRIMARY_RULE_AND_GEOMETRY_SAVED_UNPRICED; historical qualification/persistence unresolved",
+  "source_paths": [
+    "work/0383_station_facts_1725.json",
+    "work/0383_station_map_refresh_1935.json",
+    "work/0383_primary_geometry_1950.json",
+    "work/0383_map_history_addendum_1948.json",
+    "work/0383_primary_gap_1954.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T19:55:12.670667+00:00",
+  "source_capture_root": "logs/deep_review_20261017"
+}

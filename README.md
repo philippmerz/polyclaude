@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**349 valued /9 blocked /364 factual /2,278 pending;722 base+64 revisions, active382.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. New378(SC governor),379(Colombia December rate) and380(exact October PPI) were saved individually; none clears selected entry economics.382 remains unvalued with facts saved. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1916-periodic.md). Scanner coverage earns no valuation credit.
+**350 valued /9 blocked /364 factual /2,277 pending;723 base+64 revisions, active383.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.382(OpenRouter displayed four-week total below575T) was saved individually at19:43UTC; positive central YES economics fail the selected uncertainty case, and NO has no ask. No entry.383(Lyman station) remains unpriced: current locator geometry does not establish the contract's historical icon/persistence condition. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1956-closeout.md). Scanner coverage earns no valuation credit.
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC all-unfilled pull binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 Four LIVE/zero-matched BUYs/four matching reservations/$7.52 and eight positive-size positions match17:02. Orders18:03:40–41 are authenticated CLI serialization; indexed positions18:04:53 HTTP200. No trade or numerical-prior change. Idaho34YES3c/$1.02 retains22UTC all-unfilled pull/earlier cancel-first. [Orders](notes/resting_orders.md) · [ops/account provenance](data/deep_review_20261017/work/light1800_ops.json).
 
-Whale19:19 Numbers/Mojo8m remains estimated; OROct19 partial is not a target-week result. News reviewed through19:03:41; town-hall reporting establishes no measured electoral change. Michigan5NO/no add/prior unchanged; earlier poll-body/date gaps remain.19:17 authenticated orders/indexed positions/reservations unchanged. Quick status returned0/no hurdle flag or watchlist hit; nested child rc not exposed. No new total NAV/CSV row. [Periodic review](research/2026-10-19-1916-periodic.md).18UTC full checks/daemon evidence remain dated. Existing22UTC light AND Idaho all-unfilled pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
+Whale19:19 Numbers/Mojo8m remains estimated; OROct19 partial is not a target-week result. Alerts reviewed through19:52:47; exact Bridge/Gander bodies remain unavailable and no measured electoral change is verified. Michigan5NO/no add/prior unchanged; earlier poll-body/date gaps remain.19:17 authenticated orders/indexed positions/reservations unchanged. Quick status returned0/no hurdle flag or watchlist hit; nested child rc not exposed. No new total NAV/CSV row. [Periodic review](research/2026-10-19-1916-periodic.md).18UTC full checks/daemon evidence remain dated. Existing22UTC light AND Idaho all-unfilled pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

@@ -1,0 +1,96 @@
+{
+  "schema": "bounded_artifact_hash_shard.v1",
+  "prepared_utc": "2026-10-19T19:59:46.923806+00:00",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/0382_status_rendered_1942.json",
+      "bytes": 1465,
+      "sha256": "cc40a1ea7e1113dbe87913f04a82b124379a9444cc1ab9268ad7f024f5ed4126"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_facts_1834.json",
+      "bytes": 3089,
+      "sha256": "090e9d9471a37f9ed9087779cd9b7a647bf232a56ce9cdf210153368ce1304c5"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_rows_1817.json",
+      "bytes": 4180,
+      "sha256": "f6f5a8ff6ac390ccd1e00c6630c977b79542f9c1e786bcb66b88413d8037c98a"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_facts.json",
+      "bytes": 4626,
+      "sha256": "26ecb0145c7a97c5338be9aa86514fc3db5bf0d7a1d7d305d91f81d9c5c4af8d"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_status_facts_1940.json",
+      "bytes": 3072,
+      "sha256": "339c82b1b08c29641a53b9ccb4d52cb55e4c2ed60c49756af739b76b9dd966b1"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0382_resume.json",
+      "bytes": 1146,
+      "sha256": "3b0f72d3fc8b0c0cbcedb4859d6c498f4f976ce7a92cce6a25d7bce3d9a37378"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_map_history_addendum_1948.json",
+      "bytes": 3699,
+      "sha256": "7343b3c7985cb26cbe4be6b3e504883f74d3dbd75c0f03011ba0bb8ef72e1797"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_primary_geometry_1950.json",
+      "bytes": 2480,
+      "sha256": "8e13b7cce2de8dffd095bdece7772e93b8840fc599ac2545b24134beb88d8cac"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_station_facts_1725.json",
+      "bytes": 4687,
+      "sha256": "d55bfc12fe7c9d78193041cfb13dd46d482384dd6d8618dbc97d408a22a0546e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_station_map_refresh_1935.json",
+      "bytes": 3720,
+      "sha256": "a8ca03460b73be4d01d8f7e16d84122473c985064d8898ec9adf4d4cbb9918d4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_primary_gap_1954.json",
+      "bytes": 1724,
+      "sha256": "0bd60f8bbc691087b6a4c0a6524b442b9f14a4b04fa75cca54e96167a62b1170"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_resume.json",
+      "bytes": 591,
+      "sha256": "1040aadb40c9c72bdc569ab580e1deb5ba9749cb75f3581a9296632d762a26b3"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0384_facts.json",
+      "bytes": 5373,
+      "sha256": "9356a48f475093a8fcb43be5de0dd564dafbb3d925dadb15ad103bfc74785cc1"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0384_facts_followup_1858.json",
+      "bytes": 3440,
+      "sha256": "2d0d966147f362eb9dfacffcbb4f9a128053c1195e41695b4043bc55ac94f3b7"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0384_facts_followup_1935.json",
+      "bytes": 3446,
+      "sha256": "4bb89b5e348eb0a87014378ca6be6d151c51cf37dcfdb31fdd68fcdf2cadeddd"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0384_resume.json",
+      "bytes": 1106,
+      "sha256": "6ad6feab5c14a73edf1e7893b00dfb1589db918cc67112888c72cfe59dfe1cb3"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0386_facts_1737.json",
+      "bytes": 5804,
+      "sha256": "e4825930fffde404d258a082c9ac1f0c272e6c547ce50c5fec8e8bfb3ad41aaf"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0386_facts_1935.json",
+      "bytes": 4751,
+      "sha256": "cfdcfdf656c695a9607a2fa500861d10684eb6d017811fdfd3a1f335ab833967"
+    }
+  ]
+}

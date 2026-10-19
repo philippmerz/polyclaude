@@ -1,0 +1,96 @@
+{
+  "schema": "bounded_artifact_hash_shard.v1",
+  "prepared_utc": "2026-10-19T19:59:46.923806+00:00",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/0386_resume.json",
+      "bytes": 988,
+      "sha256": "391f5cdd6e44be3a1981185ddcb1ff5844d118fb3156950374d619c08a7f1ed6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_bridge_access.json",
+      "bytes": 953,
+      "sha256": "f605c43f209e4a31a34bbea69e2f878aeb418d51fb247e37ad4e5e03bfb1d797"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_bridge_publisher_access.json",
+      "bytes": 1082,
+      "sha256": "d9777ff45cdb54e0c08ea53fd1465a6759c141b496defc36222c8b515cfbfcd1"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_gander_access.json",
+      "bytes": 476,
+      "sha256": "8a31be5c75db2e6e0eae5b995c8e71f091fbe3ea6331a461f4b11237c53b27dc"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_final_alert_review.json",
+      "bytes": 4661,
+      "sha256": "bb81c5d206d2c75226e9925666f013d5d4f651ed525d32f8a2866db5a8139752"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_research_preservation.json",
+      "bytes": 2306,
+      "sha256": "5c141620a0a273da7701139c806d252a3cc570cb159a2edbfe180e6f1d10b81e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_final_RESUME.json",
+      "bytes": 1850,
+      "sha256": "af28f82d9b1e559dcdb9ec1e344f18e9abe34e1a1c77ee99ee8da3e99b66cb91"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/capture_manifest.json",
+      "bytes": 2100,
+      "sha256": "fc0eee10874460d3780c9929a7f70be26e5ebceb747b157e20a84e5cb777d837"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/0382_gamma.receipt.json",
+      "bytes": 692,
+      "sha256": "5bc8a5d384cb25cadf9ea013c8b14c3fd28a5ba25602ee342a190528ab98d046"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/0382_gamma.body.json.gz",
+      "bytes": 1890,
+      "sha256": "1f928f429df3e16d145722be9cd4f8556d0fa009a0dba45d9e380162183c7f74"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/0382_fee.receipt.json",
+      "bytes": 649,
+      "sha256": "3763f2fef70b0684e4f5a3ca99327544ade3fdcae3de047445d403f7ae7aee41"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/0382_fee.body.json.gz",
+      "bytes": 310,
+      "sha256": "7cf3ae77abda4ec262f3906dc87555a33339584b5d1ae8c683b3ef26f752fbc2"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/books_batch_01.receipt.json",
+      "bytes": 772,
+      "sha256": "2c76c8415be8deb33f765f2c1c5cad3eef1dc3f90cff9fc78abd18735040fb7e"
+    },
+    {
+      "path": "logs/deep_review_20261017/0382_quote_1943/public/books_batch_01.body.json.gz",
+      "bytes": 667,
+      "sha256": "609e3e3a7e24b4ec6201875acb8d314b018d3a1a3010cc866dff1880cbf354a1"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0382_chart_1940/chart_1.receipt.json",
+      "bytes": 773,
+      "sha256": "d0d6ae5c38a6ee885986561e3aa586b778f5bd65802d2b9e4669c7fd23e1fa92"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0382_chart_1940/chart_1.body.json.gz",
+      "bytes": 5909,
+      "sha256": "a56a159f7a9bffeeb07c9704920c0158a3bfe5ffa0ca28e2fc783badcf25fae5"
+    },
+    {
+      "path": "logs/checkin_20261019T191427_closeout/bridge/bridge_alert.receipt.json",
+      "bytes": 1070,
+      "sha256": "db9d2f6b0046db1119155306653988a7c30b4055df99ad400856e84a4174cf17"
+    },
+    {
+      "path": "logs/checkin_20261019T191427_closeout/bridge_publisher/author.receipt.json",
+      "bytes": 836,
+      "sha256": "ed299bfa403f22d1eb4e6e75c761d4fdc8b728dcea7d980addc154a6d44b4eec"
+    }
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "alert_id": "8dfc44d0637ea271769746f8165f714f60bac47a",
+  "status": 200,
+  "received_utc": "2026-10-19T19:55:43.658539Z",
+  "receipt": "logs/checkin_20261019T191427_closeout/gander/alert.receipt.json",
+  "raw_sha256": "24d2c3b6c83b6c255e420df4aca187a1b944a6b3aab79bddb0733581a8436ab6",
+  "gzip_sha256": "448be8b6104da76033c7587da08413a144a3307fff5ec2ef8bc1322ee4efd7bc",
+  "page_title": "Google News",
+  "text_excerpt": "Google News",
+  "source_article_verified": false
+}

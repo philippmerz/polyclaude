@@ -1,0 +1,42 @@
+{
+  "schema": "bounded_research_resume.v1",
+  "reviewed_utc": "2026-10-19T19:56:28.536411+00:00",
+  "counts": {
+    "completed_valuations": 350,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2277,
+    "base_records": 723,
+    "revisions_written": 64,
+    "active_indices": [
+      383
+    ]
+  },
+  "latest_completed": {
+    "index": 382,
+    "report": {
+      "path": "research/2026-10-17-deep-review/evaluations/0382.md",
+      "sha256": "73c7f0eb2f4c82b1052b0990731219cea4588fc74af8b4cb180835b9bc1625da"
+    },
+    "result": "NO97/YES3, broadYES0.2\u201320; selectedNO85/YES0. Both-side economics do not justify entry. Held112 has different dates/prior unchanged."
+  },
+  "active": {
+    "index": 383,
+    "resume": "data/deep_review_20261017/work/0383_resume.json",
+    "gap": {
+      "path": "data/deep_review_20261017/work/0383_primary_gap_1954.json",
+      "sha256": "0bd60f8bbc691087b6a4c0a6524b442b9f14a4b04fa75cca54e96167a62b1170",
+      "no_valuation_or_rejection_credit": true
+    },
+    "phase": "Primary rule/location work saved; no probability/fresh own-contract quote/final report. Not a completed valuation or rejection."
+  },
+  "facts_ready": [
+    384,
+    386,
+    388
+  ],
+  "safety": "ExistingOct19 22UTC light ANDIdaho63070734YES3c/1.02 pullALLunfilled; earliermaterialpoll/candidate/ballot/turnoutuncertainty cancel-first/noadd/repost. FullOct20 02UTC.",
+  "financial": "Lastcompleteproducer18:03:14\u201329UTC/CSV220 and19:17 account evidence retain dates; no newNAV.",
+  "news": "Exact three requested IDs previously completed;3later rows reviewed through19:52:47 with two exactMIarticle-body gaps.",
+  "run_contract": "End bounded check after preservation. No goal lifecycle mutation, newtimer/watcher or idle follow-up; do not continue research merely because this tick is quiet."
+}

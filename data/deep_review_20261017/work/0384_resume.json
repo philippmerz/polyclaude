@@ -3,17 +3,19 @@
   "phase": "FACTS_ONLY_COMPLETE; valuation pending",
   "source_paths": [
     "work/0384_facts.json",
-    "work/0384_facts_followup_1858.json"
+    "work/0384_facts_followup_1858.json",
+    "work/0384_facts_followup_1935.json"
   ],
   "source_pointers": [
     "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
     "https://apnews.com/article/ilhan-omar-justice-department-investigation-search-42c86bdbd54679e974e32ac4a924b402",
     "https://www.justice.gov/usao-dc",
-    "https://omar.house.gov/media/press-releases"
+    "https://omar.house.gov/media/press-releases",
+    "https://democrats-judiciary.house.gov/media-center/press-releases/release-ranking-member-raskin-statement-on-federal-search-conducted-on-rep-ilhan-omar-s-home"
   ],
   "unit_sha256": "9356a48f475093a8fcb43be5de0dd564dafbb3d925dadb15ad103bfc74785cc1",
   "conditionId": "0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c",
   "criteria_sha256": "1e7b54110de2f4cdaf0f59d7d4a142df55c0201d2c214ee3ee73fea34a33debd",
   "addendum_sha256": "2d0d966147f362eb9dfacffcbb4f9a128053c1195e41695b4043bc55ac94f3b7",
-  "updated_utc": "2026-10-19T18:58:55.617481Z"
+  "updated_utc": "2026-10-19T19:35:25.238312Z"
 }

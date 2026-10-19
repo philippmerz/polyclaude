@@ -1,0 +1,66 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 383,
+  "created_utc": "2026-10-19T19:36:02Z",
+  "market_id": "1397270",
+  "condition_id": "0xf691956d44187f9296718a26b10c03d3b85e3369e2098ab2188f765ef4dc97b7",
+  "criteria_sha256": "e2fe769c24d9a11a56bb59f378666b5c5a1beec3111ee9b8189ff75793f4e799",
+  "source_identity": "ISW StoryMap embeds ArcGIS webmap item 9f04944a2fe84edab9da31750c2b15eb; this refresh fetched that exact public item data URL, not an independent rendered-map screenshot.",
+  "refresh": {
+    "url": "https://www.arcgis.com/sharing/rest/content/items/9f04944a2fe84edab9da31750c2b15eb/data",
+    "status": 200,
+    "started_utc": "2026-10-19T19:34:50.228147Z",
+    "received_utc": "2026-10-19T19:34:51.249997Z",
+    "http_date": "Mon, 19 Oct 2026 19:34:50 GMT",
+    "cache_control": "max-age=0, must-revalidate",
+    "etag": "\"1a150e298f0\"",
+    "raw_bytes": 4334589,
+    "raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+    "gzip_sha256": "f5ff33a5d21d4c86c3707a52028b9dbc18f6b1e8542ccc5ccf156fb59b1f17d7",
+    "body": "logs/deep_review_20261017/case383_map_refresh_1935/isw_item_data_1935.body.json.gz",
+    "receipt": "logs/deep_review_20261017/case383_map_refresh_1935/isw_item_data_1935.receipt.json",
+    "receipt_sha256": "c5c8a749185ba4ef53fb1fb746f1c6caea2696966199c8c628bafcfed21a6e50"
+  },
+  "comparison_to_prior": {
+    "prior_received_utc": "2026-10-19T12:38:39.429006Z",
+    "prior_http_date": "Mon, 19 Oct 2026 12:38:38 GMT",
+    "prior_raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+    "same_raw_sha256": true,
+    "same_etag": false,
+    "meaning": "The map-item configuration/data body is unchanged from the Oct19 12:38:39Z capture; this is not evidence of a newer dated battlefield layer."
+  },
+  "embedded_map": {
+    "webmap_item": "9f04944a2fe84edab9da31750c2b15eb",
+    "story_map_caption_as_read_in_prior_facts": "Assessed Control of Terrain in Ukraine as of October 18, 2026, 4:00 PM ET",
+    "qualifying_and_excluded_layers": [
+      {
+        "id": "isw_fc_0",
+        "title": "Assessed Russian Advances",
+        "features": 53,
+        "pub_dates": [
+          "2026-10-18"
+        ]
+      },
+      {
+        "id": "isw_fc_2",
+        "title": "Assessed Russian-Controlled Terrain",
+        "features": 10,
+        "pub_dates": [
+          "2026-10-18"
+        ]
+      },
+      {
+        "id": "isw_fc_4",
+        "title": "Assessed Russian Infiltration Areas",
+        "features": 180,
+        "pub_dates": [
+          "2026-10-18"
+        ]
+      }
+    ],
+    "layer_data_date": "2026-10-18 for every captured feature in all three layers"
+  },
+  "exact_rule_facts": "Frozen rule counts any part of the Lyman rail-station icon shaded by Assessed Russian-Controlled Terrain or Assessed Russian Advances, and requires shading to persist through the next full ISW update. Claimed Russian Territory and Assessed Russian Infiltration Areas do not count. Settlement de jure status alone does not qualify.",
+  "unresolved_binding": "Prior station facts locate the named Krasnyi Lyman station approximately, but the provided market images have no georeferenced station-icon footprint or scale. No exact pixel-to-map geometry or rendered current icon intersection is established by this ArcGIS item-data GET. Prior Oct18 geometry is for another case’s Kostyantynivka polygon and cannot be used as Lyman evidence.",
+  "conclusion_limit": "This confirms only that the same official webmap item body was revalidated at 19:34Z and that its embedded qualifying-layer features remain dated Oct18. It does not establish current Lyman icon shading, a next-cycle persistent change, capture, or non-capture."
+}

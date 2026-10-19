@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T19:13:20.043427+00:00
+Updated: 2026-10-19T19:44:03.517772+00:00
 
-**349 valuations saved; first milestone100:** 349 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2278 pending.
+**350 valuations saved; first milestone100:** 350 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2277 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -393,6 +393,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |379|[Will the Central Bank of Colombia make no change to the monetary policy interest rate at the December meeting?](evaluations/0379.md)|valued|Noentry; YESask57/NO44andcompetitive56/43failselected38/32. SmallNOcentral+.08839 doesnotpassforecast/carry/operations stress.|
 |380|[Will PPI YoY be 6.6% in October?](evaluations/0380.md)|valued|Noentry; bothcurrentasks failcentralandselected; broadspread/centgrid/floor/conditionalinformationaddcosts. K5arithmeticisnotmeasured-tail licence.|
 |381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|382|[Will OpenRouter process less than 575T tokens from Sep 28 to Oct 25?](evaluations/0382.md)|valued|Noentry. YEScentralpositive butselectednegative/unmeasuredrare-eventweights; NOnoask/competitive99cmakerfailscentral. No arbitraryprofitfloor or missingask=zero.|
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |387|[Georgia State vs. James Madison](evaluations/0387.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |389|[Will the highest temperature in Madrid be 23°C on October 17?](evaluations/0389.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
@@ -735,4 +736,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 382
+Active indices: 383

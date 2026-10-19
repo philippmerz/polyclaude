@@ -1,0 +1,11 @@
+{
+  "schema": "bounded_artifact_hash_shard.v1",
+  "prepared_utc": "2026-10-19T19:59:46.923806+00:00",
+  "artifacts": [
+    {
+      "path": "logs/checkin_20261019T191427_closeout/gander/alert.receipt.json",
+      "bytes": 1062,
+      "sha256": "32e007d2e7a93bafec1268bf2ddfa43de2851259cd79036e98539ad1566f43a5"
+    }
+  ]
+}

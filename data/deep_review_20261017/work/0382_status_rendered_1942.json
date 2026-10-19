@@ -1,0 +1,25 @@
+{
+  "schema": "primary_status_rendered_facts.v1",
+  "review_index": 382,
+  "observed_utc": "2026-10-19T19:38:15.151Z",
+  "url": "https://status.openrouter.ai/",
+  "page_status": 200,
+  "source_representation": "Live rendered public DOM, not raw status API. Prior HTTP pages were client shells; cached search preview is not current incident status.",
+  "observation": "AllSystemsOperational; six gateway APIs each100.00%uptime andOperational; web/applicationOperational. Displayed90-day periodJul22\u2013Oct19,2026. No active reporting-delay notice in this rendered view.",
+  "limits": [
+    "Self-reported metrics are not a forward outage probability or evidence of complete incident history; component uptime need not cover rankings telemetry.",
+    "An older search preview mentioned Oct15 reporting delays; current rendering does not establish their exact resolution time or completeness of backfill."
+  ],
+  "dom": {
+    "path": "logs/deep_review_20261017/case0382_status_browser_1942/rendered_dom.json",
+    "sha256": "bc5a32fd397b75ee6e845cf8163cec272c8b2013ea17adcea1ce5b8328adb9d7"
+  },
+  "receipt": {
+    "path": "logs/deep_review_20261017/case0382_status_browser_1942/receipt.json",
+    "sha256": "14328634c1fcbf1499e6fea30d837c699d845b307fd4c2fc71efdddcf112f082"
+  },
+  "screenshot": {
+    "path": "logs/deep_review_20261017/case0382_status_browser_1942/status.png",
+    "sha256": "316b426daf2420660d0d5b1fb57c05ecfb79935b189ce09bc5dbc7f5f2d19f4f"
+  }
+}

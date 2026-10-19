@@ -1,0 +1,55 @@
+{
+  "schema": "bounded_research_preservation_audit.v1",
+  "reviewed_utc": "2026-10-19T19:56:28.536411+00:00",
+  "completed_case": 382,
+  "counts": {
+    "completed_valuations": 350,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2277,
+    "base_records": 723,
+    "revisions_written": 64,
+    "active_indices": [
+      383
+    ]
+  },
+  "append_only": {
+    "research/2026-10-17-deep-review/evaluations.jsonl": {
+      "prior_bytes": 3324333,
+      "prior_sha256": "58d4a84948474abce2b20883608850b37c659f0eea769e3a918b8c420020321b",
+      "current_bytes": 3329303,
+      "current_sha256": "7c86d66803c6fe3ab25ee7d3217730acc288cb8f5e27c02429699c1b3e14e0eb",
+      "new_lines": 1
+    },
+    "research/2026-10-17-deep-review/revisions.jsonl": {
+      "prior_bytes": 39255,
+      "prior_sha256": "83ec3027a5afe8f5eafcb4d5a480fba62e172de84f5491d6b910dd3b0b59e8b8",
+      "current_bytes": 39255,
+      "current_sha256": "83ec3027a5afe8f5eafcb4d5a480fba62e172de84f5491d6b910dd3b0b59e8b8",
+      "new_lines": 0
+    }
+  },
+  "report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0382.md",
+    "sha256": "73c7f0eb2f4c82b1052b0990731219cea4588fc74af8b4cb180835b9bc1625da"
+  },
+  "model": {
+    "path": "research/2026-10-17-deep-review/models/0382_primary_1943.json",
+    "sha256": "ceb1fe799ce15febacc2a4c574f7237b65293428706655fa1752b0150ad75f7d",
+    "source_hashes_verified": true,
+    "precedes_fresh_quote": true,
+    "mixture_probability_recomputed": 0.027724026657892305
+  },
+  "quote_manifest": {
+    "path": "logs/deep_review_20261017/0382_quote_1943/capture_manifest.json",
+    "sha256": "fc0eee10874460d3780c9929a7f70be26e5ebceb747b157e20a84e5cb777d837",
+    "all_public_raw_gzip_hashes_verified": true
+  },
+  "economics": "100YES gross1.05682+fee.04182=1.09864; central+1.90136/selected-1.09864; noYESbid/noNOask. No current execution certificate.",
+  "pending_case383": {
+    "path": "data/deep_review_20261017/work/0383_primary_gap_1954.json",
+    "sha256": "0bd60f8bbc691087b6a4c0a6524b442b9f14a4b04fa75cca54e96167a62b1170",
+    "no_valuation_or_rejection_credit": true
+  },
+  "scope": "Preserve already-completed382 and pending source facts; no next case started, financial producer/CSV row, account/trade/prior/reservation/goal/timer mutation."
+}

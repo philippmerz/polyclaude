@@ -1,0 +1,35 @@
+{
+  "schema": "bounded_commit_preservation_manifest.v2",
+  "prepared_utc": "2026-10-19T19:59:46.923806+00:00",
+  "journal_append_prefix": {
+    "bytes": 2515717,
+    "sha256": "7951e78e0ffe15c23146be55d82fefd2ff6e9955e252bfecf13a8edbf940b8d7"
+  },
+  "handoff_bytes": 6418,
+  "artifact_count": 55,
+  "parts": [
+    {
+      "path": "data/deep_review_20261017/work/tick191427_preservation_part01.json",
+      "bytes": 3303,
+      "sha256": "d70a86d1dbd4f59bda6db0f82151d11e9a55941003bcb4c970576afe8bc7f8ba"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_preservation_part02.json",
+      "bytes": 3537,
+      "sha256": "fc8135828a855a5507e422cc279cd128e25faae3b9dec4a043d1311568692e8c"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_preservation_part03.json",
+      "bytes": 3748,
+      "sha256": "9c2278d303796a09fbcd2faae75ee69869ac27bd08e18fb92d5278dd3d245948"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick191427_preservation_part04.json",
+      "bytes": 322,
+      "sha256": "86dce1d40637b10ead06968433a231a654d27081b2da9088f4f5377c2d59eee6"
+    }
+  ],
+  "exclusions": "No source HTML/ISW bulk geometry/screenshots/status DOM/account/consent/inbox/transcript/private data; no financial caches, alert feeds, inject log or unrelated0332draft. Public numeric chart, quote/fee/books and safe receipts are explicitly selected.",
+  "validation": "Case382 selected resume/report/local links/source-model hashes/prequote clock/quote receipt raw and gzip/arithmetic/append-only base+revision prefixes pass.383/384/386 resume packets each below8000bytes. Context sources match; declared expiry22UTC.",
+  "limit": "Manifest binds this preparation snapshot, not later external state. No financial or goal lifecycle operation."
+}

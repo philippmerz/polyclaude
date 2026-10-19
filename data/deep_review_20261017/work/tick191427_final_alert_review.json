@@ -1,0 +1,64 @@
+{
+  "schema": "bounded_tick_alert_closeout.v1",
+  "tick_id": "20261019T191427Z",
+  "reviewed_utc": "2026-10-19T19:56:28.536411+00:00",
+  "read_cutoff_utc": "2026-10-19T19:55:23Z",
+  "reviewed_alert_watermark_utc": "2026-10-19T19:52:47Z",
+  "prior_completion_proof": "data/deep_review_20261017/work/tick191427_completed_review.json",
+  "prior_proof_sha256": "7b5721ad3099e8e3adadbb69d4041fefa4f1ddde77a674658c9c3d7dcb5a57d8",
+  "additional_alerts": [
+    {
+      "line": 1118,
+      "alert_id": "3793f8b8a83e5f69b4012d3d505cdf3f8d2ae10d",
+      "ts": "2026-10-19T19:30:29Z",
+      "line_sha256_no_nl": "bc852c7c118b71430b49e2a6bc436b7331d19d8c5976bc1d3ea9708b088b78b3",
+      "topic": "Michigan campaign fact-check",
+      "source_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa191SjNmdFlkcGI0UF81RERYdUdYWDZZdkw2dWJ2YjlpUkE1ZVdWRlMtNFpiaEI4TWtKRVd5M1BnNm1oVU83RVNjVU8zbG9xYTZ2b09lblVWLXFGN0pDVUEyUTR0S0ZGcEYxODBmdUlndmg2Wk1Jd2RzWVVKUVFpUGxnbTNWSDYzSHBHWWxTY1BKYnZoSFdHV3ZCVzdDZHBKZnNTWTFSZDdBOEQtNVo0dEZEM1FENzQ?oc=5",
+      "source_body_verified": false
+    },
+    {
+      "line": 1119,
+      "alert_id": "0433e947954e093da82b609dfc4ec85fc0c0b4f6",
+      "ts": "2026-10-19T19:30:39Z",
+      "line_sha256_no_nl": "0bbaad55d69dacd6a1e3a410c3486948279888bf146781f10d84573bc53f09cc",
+      "topic": "Venezuela labor meeting",
+      "source_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNMVdaZmtjQ2VqT3ZRbC1wRG9IUVJUekNZNmRhQktIN2xzdm9ySmc5dHF6TlAzNWpNa1ZtYlNGSHMwdEdUdi1PWTRnemxfV3cwakJhYWVTN183Z3MwRmFsdGNUbTRZancwVzdmUFVSeWVvN3hEMUdNcVBsbEdRelktaTFrYVYwTEpaRVJWckNZaVU5QkpIVE85RGtFd1YyV08wZHNDRTRUekZKM0RlRkFOam93MGFVWUg3S2dBS25KQ1c3aE16T3M0THFueUczOFE?oc=5",
+      "source_body_verified": false
+    },
+    {
+      "line": 1120,
+      "alert_id": "8dfc44d0637ea271769746f8165f714f60bac47a",
+      "ts": "2026-10-19T19:52:47Z",
+      "line_sha256_no_nl": "41314a924d0b3b3d63fb7fdafef2a4e92496e81d981e79643f0339416c7727fb",
+      "topic": "Michigan campaign exchange",
+      "source_url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2d0UnlINGlDSW4ybnpXMHF0b0Jpcm1QX3BiQnRJR3hYbmtSdmZZNmJQYWJldjEyQldsOGg3U1ZjNUZSXzRlWngtTU1oN3Bsc2pPY0pMNFh0Sk9DTW9lM1EyRVNqazhseWdWdXQxX0dNUThQSmxOTjRHVU9Vb0hoa2JsTDdRNm1NX29yZnp3d01OZXQxX2VEOUV5V3NVTlNsTW51T0xHeEJza3FJNHExcXJkMVgwNWVGOW41T0pZMA?oc=5",
+      "source_body_verified": false
+    }
+  ],
+  "source_checks": {
+    "Michigan": [
+      {
+        "path": "data/deep_review_20261017/work/tick191427_bridge_access.json",
+        "sha256": "f605c43f209e4a31a34bbea69e2f878aeb418d51fb247e37ad4e5e03bfb1d797"
+      },
+      {
+        "path": "data/deep_review_20261017/work/tick191427_bridge_publisher_access.json",
+        "sha256": "d9777ff45cdb54e0c08ea53fd1465a6759c141b496defc36222c8b515cfbfcd1"
+      },
+      {
+        "path": "data/deep_review_20261017/work/tick191427_gander_access.json",
+        "sha256": "8a31be5c75db2e6e0eae5b995c8e71f091fbe3ea6331a461f4b11237c53b27dc"
+      }
+    ],
+    "bounded_search": "Two browser-tool searches for exact Bridge title/domain and Rogers/Patriot Act/Flock; no exact original recovered. Search previews/other campaign articles were not adopted as this article or election measurements."
+  },
+  "root_decision": {
+    "Michigan": "Retain existing5NO/NO44 selected34 unchanged, no add. Bridge and Gander headlines may affect campaign narratives; net electoral effect is unmeasured. Both exact article bodies/dates unresolved after Google shells; publisher index does not establish absence. No assumption that Gander is necessarily the same Caro event. Broad NO20 adverse case/full binary loss remain accepted as in dated18UTC risk decision. Access failure does not prove no new poll exists. Reopen on identifiable material race evidence, not inferred numerical headline impact.",
+    "Venezuela": "No Venezuela holding or pending BUY in dated exact19:17 inventory. Generic meeting headline identifies no direct current-exposure channel; research only. Presidency assertion is not independently adopted.",
+    "requested_three": "Completed primary reviews already verified, preserving original times/source gaps; no repeat source/account/scanner calls for those same triggers.",
+    "money_prior_order_reservation_changes": false,
+    "Telegram": "No verified material new finding/action; no routine message."
+  },
+  "inventory_limit": "19:17 authenticated orders/indexed positions/reservations are latest checked inventory, not fresh NAV/on-chain proof. No agent money operations since; current run issues none.",
+  "bounded_limit": "Only rows through fixed19:55:23 read cutoff are covered; later arrivals are not silently marked reviewed."
+}
