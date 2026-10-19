@@ -1,8 +1,8 @@
-# Current resting orders — October19 12:55UTC
+# Current resting orders — October 19 14:00 UTC
 
-**Four LIVE/zero-matched BUYs/$7.52 reserved; no SELL orders.** Authenticated12:55:53–54 inventory exhausts pagination; four exact order/CID/asset/size/price matches and four live reservations. All8 position identities/sizes/basis/totalBought match09:56. [Current account](../data/deep_review_20261017/work/tick125300_account.json) · [exact identities](../data/deep_review_20261017/work/tick0956_account.json). Later fills remain possible; commitments are not purchases/profit.
+**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** The authenticated 14:00 inventory exhausted pagination and matched four exact order/CID/asset/size/price records to four live reservations. Eight position rows remain unchanged in identity, size and total bought. [Current account](../data/deep_review_20261017/work/tick1400_account.json) · [operations](../data/deep_review_20261017/work/tick1400_ops.json). This is a dated observation, not a guarantee against later fills.
 
-Wallet12:57pUSD20.451290; arithmeticunreserved12.931290, not queriedCLOBspendable/allowance authority. Separate account/chain/quote observations are not synchronizedNAV. Earlier313/316CTFs0 and post300s reconciliation remain dated completed proofs, never replay. [Reconciliation](../data/deep_review_20261017/work/tick0956_reconciled.json).
+Bankroll window 14:01:47.886–14:02:02.920 UTC: pUSD/account details are in the linked proof; the portfolio snapshot is rounded/sequential, not synchronized NAV. Idaho 630707 remains 34 YES at 3¢/$1.02, all-unfilled pull at Oct19 22:00 UTC, cancel-first on material poll/candidate/ballot/turnout evidence. [Primary review](../research/2026-10-19-1400-checkin.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|

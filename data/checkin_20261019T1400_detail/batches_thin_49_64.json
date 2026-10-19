@@ -1,0 +1,186 @@
+{
+  "schema": "batch_audit_shard.v1",
+  "kind": "thin_tail",
+  "range": [
+    49,
+    64
+  ],
+  "batches": [
+    {
+      "batch": 49,
+      "declared_markets": 20,
+      "parsed_rows": 20,
+      "ranked_triggers": 10,
+      "status_counts": {
+        "changed": 10,
+        "context_unchanged": 10
+      },
+      "sha256": "92965227a292b3b37f7ff07743c5ca99841fad6c0a384de647b2471f0cd41f58"
+    },
+    {
+      "batch": 50,
+      "declared_markets": 12,
+      "parsed_rows": 12,
+      "ranked_triggers": 5,
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 7
+      },
+      "sha256": "669550edc28c2b39381ba34a490f722fdbf03f81a208a55370bab5a8d1b1a3c9"
+    },
+    {
+      "batch": 51,
+      "declared_markets": 19,
+      "parsed_rows": 19,
+      "ranked_triggers": 5,
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 14
+      },
+      "sha256": "4fce71d7f3c2a269eee552ae54c3293bf413afd1d569b125c4a7c98332180e66"
+    },
+    {
+      "batch": 52,
+      "declared_markets": 19,
+      "parsed_rows": 19,
+      "ranked_triggers": 9,
+      "status_counts": {
+        "changed": 9,
+        "context_unchanged": 10
+      },
+      "sha256": "d820ff0af5be416166dc20ac7cce07b4086d8c28850ec1d08caf348ff2ea82c9"
+    },
+    {
+      "batch": 53,
+      "declared_markets": 18,
+      "parsed_rows": 18,
+      "ranked_triggers": 11,
+      "status_counts": {
+        "changed": 11,
+        "context_unchanged": 7
+      },
+      "sha256": "29b9e4322856e7367179861930eca59673d801ae955ba92b639fbb5b5613fe57"
+    },
+    {
+      "batch": 54,
+      "declared_markets": 19,
+      "parsed_rows": 19,
+      "ranked_triggers": 3,
+      "status_counts": {
+        "changed": 3,
+        "context_unchanged": 16
+      },
+      "sha256": "07b0923ed67fac96167bb55785f8a576eea4f78af69c227bd9cd190964b2bd79"
+    },
+    {
+      "batch": 55,
+      "declared_markets": 18,
+      "parsed_rows": 18,
+      "ranked_triggers": 3,
+      "status_counts": {
+        "changed": 3,
+        "context_unchanged": 15
+      },
+      "sha256": "9987c065dced4fc9bf0a30b6a9ee07548288cf73e9b7065d38129958e41543cd"
+    },
+    {
+      "batch": 56,
+      "declared_markets": 16,
+      "parsed_rows": 16,
+      "ranked_triggers": 6,
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 10
+      },
+      "sha256": "11119a532f1aedd4b8fd14a0495b66e43ae99ce04311c11e80b4ce335f67f5e0"
+    },
+    {
+      "batch": 57,
+      "declared_markets": 19,
+      "parsed_rows": 19,
+      "ranked_triggers": 6,
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 13
+      },
+      "sha256": "c7c2ea20d6ee3489be1ea4814d7273f6c70c02adbc4314130990a5251c050336"
+    },
+    {
+      "batch": 58,
+      "declared_markets": 12,
+      "parsed_rows": 12,
+      "ranked_triggers": 6,
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 6
+      },
+      "sha256": "a6c8ed0e162615c4309f9ffaa7bb8aabca35d4e31f67f81a77b72e1fc34224ba"
+    },
+    {
+      "batch": 59,
+      "declared_markets": 20,
+      "parsed_rows": 20,
+      "ranked_triggers": 6,
+      "status_counts": {
+        "changed": 6,
+        "context_unchanged": 14
+      },
+      "sha256": "27cac5e04b22aaae98a9465e6758a3203b06a3852d1b113d6c130e7759c56d3d"
+    },
+    {
+      "batch": 60,
+      "declared_markets": 18,
+      "parsed_rows": 18,
+      "ranked_triggers": 7,
+      "status_counts": {
+        "changed": 7,
+        "context_unchanged": 11
+      },
+      "sha256": "bb8e96eb7fa3c1c9a6f3e85398f8c3089516a34822923270a498874177c66701"
+    },
+    {
+      "batch": 61,
+      "declared_markets": 20,
+      "parsed_rows": 20,
+      "ranked_triggers": 10,
+      "status_counts": {
+        "changed": 10,
+        "context_unchanged": 10
+      },
+      "sha256": "c7fa9edfe41fbc1a4b760c68f5a80693e273fee99e09832d3cbfdb7d472b9a18"
+    },
+    {
+      "batch": 62,
+      "declared_markets": 11,
+      "parsed_rows": 11,
+      "ranked_triggers": 5,
+      "status_counts": {
+        "changed": 5,
+        "context_unchanged": 6
+      },
+      "sha256": "3d42fc51d588d5ddde91949445b41cf3d1978566680688122d80f965b180f3df"
+    },
+    {
+      "batch": 63,
+      "declared_markets": 20,
+      "parsed_rows": 20,
+      "ranked_triggers": 4,
+      "status_counts": {
+        "changed": 4,
+        "context_unchanged": 16
+      },
+      "sha256": "2ebe038b783d6438a0488de40e4c381c31dcf1c5b54e3d8b3b14042fa240b741"
+    },
+    {
+      "batch": 64,
+      "declared_markets": 2,
+      "parsed_rows": 2,
+      "ranked_triggers": 1,
+      "status_counts": {
+        "changed": 1,
+        "context_unchanged": 1
+      },
+      "sha256": "37b7706cb9f6dea1fb1654330d7d52a3b3da57a5eb6e9b9ecf3fec62635f037c"
+    }
+  ]
+}

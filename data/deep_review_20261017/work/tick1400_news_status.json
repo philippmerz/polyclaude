@@ -1,0 +1,24 @@
+{
+  "schema": "tick1400_news_status.v1",
+  "compiled_utc": "2026-10-19T14:02:27.487957Z",
+  "capture_dir": "logs/periodic_20261019T1400_news_status_private",
+  "started_utc": "2026-10-19T14:02:27.198965Z",
+  "received_utc": "2026-10-19T14:02:27.468426Z",
+  "rc": 0,
+  "stdout_sha256": "119ddabafaf0e78168edd273d73b5e984d9e48efe05f8f80fcee03934f0cdf8d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "metadata_only": true,
+  "status_parse_ok": true,
+  "pid": 148881,
+  "seen_id_count": 5000,
+  "last_cron_trigger_utc": "2026-10-19T12:52:35.826878Z",
+  "note": "last_cron_trigger field is not last poll",
+  "state_metadata_only": {
+    "mtime_utc": "2026-10-19T13:58:59.976843Z",
+    "age_seconds": 207.5,
+    "bytes": 551933,
+    "mode": "0o600",
+    "poll_interval_seconds": 300,
+    "contents_read": false
+  }
+}

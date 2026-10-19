@@ -1,0 +1,58 @@
+{
+  "schema": "tick1400_whalefall_source_facts.v1",
+  "captured_utc": "2026-10-19T14:04:44.905499Z",
+  "instrument": {
+    "market_id": "5394247",
+    "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+    "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+    "metric": "The Numbers weekend box-office performance final 3-day domestic gross Oct16–18 2026; strictly below $8m. Exactly $8m FINAL is not below threshold."
+  },
+  "finding": "All three captured pages show $8,000,000 for Oct16–18; The Numbers weekend row is class chart_estimate, Box Office Mojo labels it Estimated. No final/sub-$8m revision appears in this bounded check; it does not prove no final amount exists elsewhere.",
+  "preview_note": "The film page shows a separate Oct15 $0.9m preview row and Oct16–18 daily values $3.1m/$2.8m/$2.1m. Do not add the separate preview row again to the reported $8m weekend total; the weekend total governs and typically includes Thursday previews.",
+  "alert": "New IMDb title alert id 068114f2ec76de44411de61ecb7394e62de94e80 at 13:53:27Z says “sinks”; publisher body not fetched and title supplies no weekend amount/finality.",
+  "pages": [
+    {
+      "name": "numbers_weekend",
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+      "status": 200,
+      "started_utc": "2026-10-19T14:02:01.266585Z",
+      "received_utc": "2026-10-19T14:02:01.982769Z",
+      "http_date": "Mon, 19 Oct 2026 14:02:01 GMT",
+      "age": null,
+      "raw_sha256": "3b4b8915b7ad163fb6861cad0b73719c062e3ae7b09ab751a3afe49563401572",
+      "gzip_sha256": "ffe969db538eae0c89777d7594f39a53d6db95207108997c631d99717298593e",
+      "body": "logs/deep_review_20261017/tick1400_sources/numbers_weekend.body.json.gz",
+      "receipt": "logs/deep_review_20261017/tick1400_sources/numbers_weekend.receipt.json",
+      "finding": "Rank4 $8m/3065 theaters; Whalefall gross td class chart_estimate."
+    },
+    {
+      "name": "numbers_film",
+      "url": "https://www.the-numbers.com/movie/Whalefall-(2026)",
+      "status": 200,
+      "started_utc": "2026-10-19T14:02:01.992794Z",
+      "received_utc": "2026-10-19T14:02:02.306009Z",
+      "http_date": "Mon, 19 Oct 2026 14:02:02 GMT",
+      "age": null,
+      "raw_sha256": "db702465279831a14ca1df6c9e55d53f89729304952332a8f0e671c15b22cc46",
+      "gzip_sha256": "411628c4f09912dcb6bb7b0717766550a1b52f98e310c06d6897eef837b3197f",
+      "body": "logs/deep_review_20261017/tick1400_sources/numbers_film.body.json.gz",
+      "receipt": "logs/deep_review_20261017/tick1400_sources/numbers_film.receipt.json",
+      "finding": "Film page repeats weekend $8m and has separate daily/preview rows."
+    },
+    {
+      "name": "bom_weekend",
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "status": 200,
+      "started_utc": "2026-10-19T14:02:02.317536Z",
+      "received_utc": "2026-10-19T14:02:03.169401Z",
+      "http_date": "Mon, 19 Oct 2026 14:02:02 GMT",
+      "age": null,
+      "raw_sha256": "19257df40edd750038da5611063815f933e82692439370a1ddadc8da803409c1",
+      "gzip_sha256": "0757009f9a4358a6783abe78290b821538ed2ec021321968ea83224873c5e828",
+      "body": "logs/deep_review_20261017/tick1400_sources/bom_weekend.body.json.gz",
+      "receipt": "logs/deep_review_20261017/tick1400_sources/bom_weekend.receipt.json",
+      "finding": "Oct16–18 $8m/3065 theaters; page key labels Estimated."
+    }
+  ],
+  "related_alert_history": "data/deep_review_20261017/work/tick1253_alert_delta.json"
+}

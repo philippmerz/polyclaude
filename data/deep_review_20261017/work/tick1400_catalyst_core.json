@@ -1,0 +1,77 @@
+{
+  "schema": "tick1400_named_catalyst_facts.v1",
+  "captured_utc": "2026-10-19T14:04:44.905499Z",
+  "openrouter_four_week_chart": {
+    "instrument": "Sum of displayed weekly totals labeled Oct26, Nov2, Nov9, Nov16; no Oct19 current row substituted.",
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "status": 200,
+    "received_utc": "2026-10-19T14:02:03.364738Z",
+    "date_header": "Mon, 19 Oct 2026 14:02:03 GMT",
+    "age_seconds": null,
+    "raw_sha256": "bd7fde5e47f95c64ce8577df6e3869f21977aeff508095cabaf635d470302bd1",
+    "gzip_sha256": "64d43c5115af16a7b66f1b08ee7906517a8fabbbb472f7753b6abe0a92461202",
+    "row_count": 53,
+    "series_per_row": 10,
+    "last_label": "2026-10-19",
+    "cachedAt_utc": "2026-10-19T13:44:52.530000Z",
+    "completed_sums_T": {
+      "2026-10-05": 171.842501724714,
+      "2026-10-12": 164.043985914931
+    },
+    "current_partial_sum_T": 12.986236405554,
+    "target_labels_present": [],
+    "change_vs_1253": {
+      "Oct12_T": 0.0,
+      "Oct19partial_T": 1.136730367149
+    },
+    "limit": "No target week labels or cutoff. Oct19 is partial; cachedAt/Age are response metadata."
+  },
+  "clarity_senate": {
+    "scope": "First full Senate final-passage vote on qualifying crypto market-structure legislation; procedural/cloture is not final passage.",
+    "url": "https://www.senate.gov/legislative/floor_activity_pail.htm",
+    "http": 200,
+    "received_utc": "2026-10-19T14:02:04.715736Z",
+    "raw_sha256": "c2d5b6464f1d2cb44fe1e7fad53ac4603fad1f9719be5a6fc4677efa45b6d9ef",
+    "gzip_sha256": "1605a096870b890961c9645ef99df946f9e505503421cfbc020f21966dad9585",
+    "finding": "Floor page lists Thu Oct22 pro forma 9am; prior Mon Oct19 was pro forma. No final-passage entry shown; this is not a full vote audit."
+  },
+  "idaho_achilles": {
+    "candidate": "Reused exact official API query 13:00:08Z, HTTP200, raw SHA b646c647c899ee06471a4ebc6d8f934dd02c294e30a36e3be6cfdf1de17ee442: final-list=true, Achilles approved Independent for Nov3 general; Risch Republican, Loesby Libertarian, Roth withdrawn. No change evidenced since that snapshot.",
+    "poll": "Peak Insights memo: field Sep28–30, n500, Risch49/Achilles24/Fleming3/None6/DK15; sponsor unnamed. No new Idaho alert in this pass. No newer poll established, not a global absence claim.",
+    "source_refs": [
+      "data/deep_review_20261017/idaho_literal_source_followup.json",
+      "data/deep_review_20261017/work/tick1253_fresh_primary_status.json"
+    ]
+  },
+  "limits": "Facts only; no probabilities or actions. Alert detection time is not publisher publication/event time.",
+  "messi_yis_global_athletes": {
+    "instrument": "Messi = Google YIS Global > Trending > Athletes Top5, not US People.",
+    "alerts": [
+      {
+        "ts": "2026-10-19T13:20:20Z",
+        "id": "1bfc394620c144b18904e98f906afcedfd2841bb",
+        "feed": "Google Year in Search, Messi and Mbappe athlete news",
+        "title": "STUNNERS from Kylian Mbappe, Lamine Yamal & Michael Olise! Best goals from across Europe - Sky Sports",
+        "link": "https://news.google.com/rss/articles/CBMi1AFBVV95cUxNcFJHWkN0ZHRDOFdEdjVDbUFpSmxvRWpudjdEVkRQR2RpM09KaGFwc0RicDJWSWZRZ2tiYUdhbkJHeDZLZ1I2MEY2WnI4VDlTS1ZmN0NZeEE1OFRoTUk3UjA3X1lleFh0cnQ5YnZLc2t4bjFMOUpwU0Q5blVpaUJGbW1YdVZnOE5BSHlERU5kNzR1bzlkQ1h0d2NwaWxWYkRyeGU4NXZjT1hNZnlmZHhiT1VQTWxzMjBRM2FpNi1yRkJwckxNMWlrV0V0TDRqdWxWTHRQYQ?oc=5",
+        "line_sha256": "fbd33d2b23376c7133a5a6ea5311023d84c160f6633a1beb8d37cdb9815a8a0b"
+      },
+      {
+        "ts": "2026-10-19T13:36:45Z",
+        "id": "61488832100c059d185d9f083207a06ebe0a5122",
+        "feed": "Google Year in Search, Messi and Mbappe athlete news",
+        "title": "Newly Discovered Andean Plant Species Named After Lionel Messi - Kurdistan24",
+        "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxONTYxeGZhcHJJWDJ5dHFwaHU5RTBHcmxTazJaQWExc3JHbUxSMFZ4TUEtUGdsd3I1Ujc3QXdyNnhmc1ZzcW1MZzlxUVBvOWY3c1pfVUYtLVNoRGI0Mml2d1lISllqNWxPdldueExwTnA3ejk4NVp6RUc2Szc0b0NuUDlxc1B3WVM4c0VXNVBwSDB3Rl9TM3E3Si1jNnJUUmxpNVBrMm92ZWh5UQ?oc=5",
+        "line_sha256": "ac5ab1d02c1b61a3d490c0b5ac1dbcee1751272755ae7fadcfb52dbd02346cdd"
+      }
+    ],
+    "hub": {
+      "url": "https://trends.withgoogle.com/year-in-search/",
+      "final_url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "status": 200,
+      "received_utc": "2026-10-19T14:02:04.100089Z",
+      "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+      "gzip_sha256": "e76dfa6470d76515e756d38944c1fe485a83146e6e75315ccc969efd41bb803f",
+      "finding": "Hub redirected to 2025; prior 2026 route 404. Neither proves no 2026 list elsewhere. Messi market is Global Athletes Top5, not US People; plant/football alert titles do not establish rank/list."
+    }
+  }
+}

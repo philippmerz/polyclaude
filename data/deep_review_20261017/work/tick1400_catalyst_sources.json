@@ -1,0 +1,12 @@
+{
+  "schema": "tick1400_catalyst_index.v1",
+  "captured_utc": "2026-10-19T14:04:44.905499Z",
+  "units": {
+    "Michigan": "data/deep_review_20261017/work/tick1400_michigan_facts.json",
+    "Whalefall": "data/deep_review_20261017/work/tick1400_whalefall_facts.json",
+    "Messi/OR/Clarity/Idaho": "data/deep_review_20261017/work/tick1400_catalyst_core.json",
+    "alert delta": "data/deep_review_20261017/work/tick1400_alert_delta.json",
+    "Michigan alert verification": "data/deep_review_20261017/work/tick1400_michigan_alert_followup.json"
+  },
+  "limit": "Source facts only; no probability or action."
+}

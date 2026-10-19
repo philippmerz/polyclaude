@@ -1,0 +1,39 @@
+{
+  "schema": "scanner_receipts.v1",
+  "commands": [
+    {
+      "name": "discover_primary",
+      "start_utc": "2026-10-19T14:00:56.960675Z",
+      "end_utc": "2026-10-19T14:00:58.179955Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/discover_primary.stdout",
+        "bytes": 5915,
+        "sha256": "ff123d53693d8e77180c8882f8d3c4928e548ddef84a40301db9dea9ce67192e"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/discover_primary.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "discover_thin_tail",
+      "start_utc": "2026-10-19T14:00:58.180626Z",
+      "end_utc": "2026-10-19T14:01:03.765824Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/discover_thin_tail.stdout",
+        "bytes": 9484,
+        "sha256": "c98e40e941c9d7b946a2b9456a18c70b41bff5ce08ff5ce45be6c2cf32b47054"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/discover_thin_tail.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

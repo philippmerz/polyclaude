@@ -1,0 +1,47 @@
+{
+  "schema": "batch_audit_shard.v1",
+  "summary": {
+    "kind": "primary",
+    "batch_count": 1,
+    "row_count": 20,
+    "unique_market_ids": 20,
+    "unique_condition_ids": 20,
+    "duplicate_market_rows": 0,
+    "rank_range": [
+      1,
+      16
+    ],
+    "status_counts": {
+      "changed": 6,
+      "new_to_snapshot": 10,
+      "context_unchanged": 4
+    },
+    "changed_field_counts": {
+      "tick": 1,
+      "best_ask": 4,
+      "best_bid": 5,
+      "outcome_prices": 3,
+      "new_to_snapshot": 10,
+      "no_price": 1,
+      "yes_price": 1
+    },
+    "semantic_context_incomplete_rows": 0,
+    "missing_criteria_proof_rows": 0,
+    "source_integrity_verified": true,
+    "markdown_stdout_sha256": "e585a47411722b97840ff939bb8dd591546d8df188d35705ae967cd5167b09e2"
+  },
+  "batches": [
+    {
+      "batch": 1,
+      "declared_markets": 20,
+      "parsed_rows": 20,
+      "ranked_triggers": 16,
+      "status_counts": {
+        "changed": 6,
+        "new_to_snapshot": 10,
+        "context_unchanged": 4
+      },
+      "sha256": "9ab9a6209019536dd0c771d5823615b4a59cf994e73ba47cfdb932981fb5a9ef"
+    }
+  ]
+}

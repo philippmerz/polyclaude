@@ -1,0 +1,37 @@
+{
+  "schema": "tick1400_michigan_alert_followup.v1",
+  "captured_utc": "2026-10-19T14:06:58.801668Z",
+  "market_scope": "Held instrument is Michigan Senate El-Sayed vs Rogers in the Nov3 2026 general election.",
+  "abc_alert": {
+    "id": "63be18a0cbc53832bb8996a65eec5f48d33fbcb8",
+    "alert_utc": "2026-10-19T14:04:31Z",
+    "title": "El-Sayed projected to win high-stakes Michigan Senate Democratic primary, as 5 states hold elections - ABC News",
+    "publisher_url": "https://www.goodmorningamerica.com/news/story/high-stakes-michigan-senate-race-primaries-5-states-135365946",
+    "http": 200,
+    "requested_utc": "2026-10-19T14:06:24.284175Z",
+    "received_utc": "2026-10-19T14:06:24.761532Z",
+    "raw_sha256": "5b644927595ef43225feaac412359ad05fc139b6fb47284b7ed91828440d0d69",
+    "gzip_sha256": "4613f16bcc7b25c0e504861756ba1f55d7bee02a751e3e8c63df435da55f70d0",
+    "body": "logs/deep_review_20261017/tick1400_abc/abc_primary.body.json.gz",
+    "receipt": "logs/deep_review_20261017/tick1400_abc/abc_primary.receipt.json",
+    "publisher_text": "By ABC News; published Aug5 2026, 4:04pm. ABC says AP projected El-Sayed to win the Michigan Democratic Senate primary, after which he faced Mike Rogers in the November general. Thus the alert is a two-and-a-half-month-old primary result, not a new Oct19 result or new general-election poll."
+  },
+  "kbak_alert": {
+    "id": "122ce9ea5e4040f91e9846c4a04ae722a6910f07",
+    "alert_utc": "2026-10-19T14:04:27Z",
+    "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - KBAK",
+    "publisher_link_attempt": {
+      "status": 200,
+      "final_url_host": "consent.google.com",
+      "requested_utc": "2026-10-19T14:06:38.191248Z",
+      "received_utc": "2026-10-19T14:06:38.366340Z",
+      "raw_sha256": "0c44df413f4e6c595caf7bda7dad8e5a3eaa02603a097c02b15bc0f1619e5957",
+      "gzip_sha256": "a237573a4931dae74ed9026f5b26b7c88bd8dd8f44f55f2f7beeabb658be125e",
+      "body": "logs/deep_review_20261017/tick1400_kbak/kbak_alert_link.body.json.gz",
+      "receipt": "logs/deep_review_20261017/tick1400_kbak/kbak_alert_link.receipt.json",
+      "limitation": "The supplied Google News link ended at consent.google.com; KBAK publisher body was not accessed."
+    },
+    "comparison": "Alert title matches Fox News Oct18 coverage of the Oct17 MS NOW interview already captured in tick1400_michigan_facts.json. No separate event or new poll was established."
+  },
+  "interpretation_limit": "This identifies the ABC alert as historical primary-result coverage, not a new Nov3 general-election measurement. No probability or portfolio inference."
+}

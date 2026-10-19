@@ -1,0 +1,86 @@
+{
+  "schema": "routine_discovery_scan_facts.v1",
+  "sports": {
+    "fetch_threshold_passed": 53,
+    "consensus_attempted": 3,
+    "consensus_failures": 2,
+    "failure_reasons": [
+      "AEK 1x2 YES/NO mapping unestablished",
+      "Commanders-49ers O/U: no fresh timestamped non-Polymarket bookie source"
+    ],
+    "valid_consensus_observation": {
+      "match": "PARIVISION vs magic BO3",
+      "delta_pp": -2.9,
+      "bookmaker": "high/bwin",
+      "volume24h_usd": 252432
+    },
+    "delta_gt3pp_and_volume_gt50k": 0,
+    "inplay_skipped": 4
+  },
+  "macro": {
+    "markets_over_volume_threshold": 7,
+    "consensus": "disabled"
+  },
+  "event_monotonicity": {
+    "events_to_inspect": 1410,
+    "multimarket_inspected": 1167,
+    "pages": "15/15 page cap",
+    "midpoint_flags": 1,
+    "flag": "Will Papertrade launch a token by ___? midpoint +1.40pp, live edge -4.60pp, mid-only artifact",
+    "provisional_positive": 0
+  },
+  "consistency": {
+    "generated_utc": "20261019T140225Z",
+    "markets_scanned": 5009,
+    "events_fetched": 660,
+    "events_processed": 652,
+    "pages": 33,
+    "neg_risk_retained": 2749,
+    "stop": "market_cap",
+    "coverage_complete": false,
+    "midpoint_groups_over_0_5pct": 282,
+    "groups_relevant": 191,
+    "requested": 20,
+    "attempted": 20,
+    "validated": 12,
+    "eligible_unquoted": 171,
+    "candidate_status_counts": {
+      "not_quoted": 91,
+      "quoted_nonpositive": 12,
+      "quote_failed": 8,
+      "unquoted_leg_cap": 171
+    },
+    "quote_failure_reasons": {
+      "no asks for market 2495308": 1,
+      "book validation failed for 5765623: CLOB book is stale (436.8s)": 1,
+      "no asks for market 5640228": 1,
+      "no asks for market 5855308": 1,
+      "no asks for market 5863894": 1,
+      "no asks for market 5858681": 1,
+      "no asks for market 5855521": 1,
+      "no asks for market 5653765": 1
+    },
+    "actionable": 0,
+    "positive_live_depth_observations": 0
+  },
+  "favorite_fade": {
+    "markets_fetched": 1000,
+    "pages": "10/10 max-pages",
+    "rough_survivors": 77,
+    "selected_walks": 40,
+    "valid_books": 40,
+    "outside_profile": 16,
+    "walk_cap_omissions": 37,
+    "profile_rows": 24
+  },
+  "exact_prior_CIDs": {
+    "scope": "Only supplied CIDs searched in these bounded snapshots and outputs.",
+    "rhine": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+    "rhine_market_id": "4294627",
+    "rhine_question": "Will the Rhine River return to normal levels between October 1 and October 31, 2026?",
+    "rhine_changed_field": "best_bid",
+    "rhine_context_criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11",
+    "idaho": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+    "idaho_match_count_in_both_snapshots_and_context": 0
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "schema": "scanner_receipts.v1",
+  "commands": [
+    {
+      "name": "event_monotonicity_scan",
+      "start_utc": "2026-10-19T14:01:43.048132Z",
+      "end_utc": "2026-10-19T14:01:46.223066Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/event_monotonicity_scan.stdout",
+        "bytes": 649,
+        "sha256": "a3c82e49484219521fd036c05aeb0b4c04628e64bad68bbac8bbf54a3878b4f1"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/event_monotonicity_scan.stderr",
+        "bytes": 178,
+        "sha256": "10baf8647aa308fa6ca125985e168d23bcdb9a83397c0774cda2392ba69f9500"
+      }
+    },
+    {
+      "name": "favorite_fade_scan",
+      "start_utc": "2026-10-19T14:02:25.368726Z",
+      "end_utc": "2026-10-19T14:02:26.135840Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/favorite_fade_scan.stdout",
+        "bytes": 2804,
+        "sha256": "c9b0761fa8344da70bdc43c476b58bb65c4c3b9b647937d2be46064947548c51"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/favorite_fade_scan.stderr",
+        "bytes": 568,
+        "sha256": "de807b7eb91511a39d6dc6fb3fb11a7c757a1c081fbbe79b99068859a87ca760"
+      }
+    },
+    {
+      "name": "macro_pm_scan",
+      "start_utc": "2026-10-19T14:01:42.531818Z",
+      "end_utc": "2026-10-19T14:01:43.047650Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/macro_pm_scan.stdout",
+        "bytes": 680,
+        "sha256": "ece3684980bf6435eddee8f4046e9e39d0c26c7d0e27292de34b3a4eac25bbf5"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/macro_pm_scan.stderr",
+        "bytes": 106,
+        "sha256": "2d7cf4c780c9c2bb2cd2684faa47461c929532bc6973476a242059363233182d"
+      }
+    },
+    {
+      "name": "market_context_primary",
+      "start_utc": "2026-10-19T14:02:26.136253Z",
+      "end_utc": "2026-10-19T14:02:26.552013Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/market_context_primary.stdout",
+        "bytes": 12147,
+        "sha256": "e585a47411722b97840ff939bb8dd591546d8df188d35705ae967cd5167b09e2"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/market_context_primary.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    },
+    {
+      "name": "market_context_thin_tail",
+      "start_utc": "2026-10-19T14:02:26.552444Z",
+      "end_utc": "2026-10-19T14:02:27.068175Z",
+      "returncode": 0,
+      "timed_out": false,
+      "stdout": {
+        "path": "logs/checkin_20261019T1400/scans/market_context_thin_tail.stdout",
+        "bytes": 463994,
+        "sha256": "25eb21da786ea88182da6c1b1b9a0a1142ec9ce9b4dcbfc6dba1c8af724a591c"
+      },
+      "stderr": {
+        "path": "logs/checkin_20261019T1400/scans/market_context_thin_tail.stderr",
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    }
+  ]
+}

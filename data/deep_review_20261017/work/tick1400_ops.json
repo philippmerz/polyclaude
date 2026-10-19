@@ -1,0 +1,123 @@
+{
+  "schema": "tick1400_ops_closeout.v1",
+  "compiled_utc": "2026-10-19T14:02:46.840377Z",
+  "account": {
+    "unit": "work/tick1400_account.json",
+    "sha256": "ef06fe7810ae5e8d0bd22781b3b171fe7cab41d0a51961bc65fa0ae55b9b9349",
+    "orders": "4 live BUYs; 0 matched; $7.52 full risk; exact terms/reservations unchanged vs 12:53",
+    "reservation_sha256": "d2d709c50435264e6f0bf7f099e6cb0dd1dc56af832a98183c39dfff628110fc",
+    "positions": "8 positive rows; 7 unresolved +1 redeemable; sizes/totalBought/redemption flags unchanged; four market marks changed only; no fill/add"
+  },
+  "operations": {
+    "cli_manifest": "work/tick1400_cli_manifest.json",
+    "sha256": "cab15282ab756af226074a778580e407de35a6361f631ffaf9802f86c4be8766",
+    "private_capture_dir": "logs/periodic_20261019T1400_cli_private_140114",
+    "window": [
+      "2026-10-19T14:01:14.580287Z",
+      "2026-10-19T14:02:11.260589Z"
+    ],
+    "all_rc0": true,
+    "commands": [
+      "full_status",
+      "wallet",
+      "crypto",
+      "bankroll",
+      "ostium_diff",
+      "crux",
+      "watchlist_revet",
+      "insurance_fix",
+      "exit_analysis",
+      "kelly_after_bankroll",
+      "decisions_pending",
+      "redeem_dry_run"
+    ],
+    "bankroll_usd": 196.29,
+    "bankroll_received_utc": "2026-10-19T14:02:02.920889Z",
+    "gas_separate_usd": 5.79,
+    "realized_pnl_usd": 20.73,
+    "pm_cost_usd": 35.59,
+    "pm_mid_usd": 35.36,
+    "pm_net_depth_estimate_usd": 32.35,
+    "depth_caveat": "indicative, not synchronized/freshness-verified; midpoint overstates net depth by $3.00",
+    "pUSD": 20.45129,
+    "resting_risk": 7.52,
+    "deployable_pUSD": 12.93129,
+    "ostium": "bankroll.py invokes ostium_client.py status (call path inspected); ostium_state_diff rc0, zero open trades/no change",
+    "insurance": "audit --fix rc0; snapshot refreshed, 7 indexed +1 deindexed claim, 0 acked holds dropped; audit clean",
+    "redeem": "dry-run rc0; 0/7 winners, only Gemini HLE NO 4.0347 at value 0 skipped as losing/uncertain; no broadcast",
+    "decisions_pending": "none",
+    "watchlist": "no hits; auto-revet rc0 empty",
+    "crux": "rc0 empty output",
+    "UMA": "44 tracked, 42 Gamma markets refreshed, 0 alerts; no assumption that 2 is a failure",
+    "HLE": "UPDATING vs Jul-3 archive; Grok 4.7 unscored/excluded from accuracy threshold"
+  },
+  "exit_walk": {
+    "file": "logs/periodic_20261019T1400_cli_private_140114/exit_analysis_stdout.body.json.gz",
+    "rows": [
+      {
+        "position": "Clarity Act pair",
+        "exit_net": 26.28,
+        "fees": 0.16,
+        "fair_floor": 29.0,
+        "note": "group-level; member actions suppressed"
+      },
+      {
+        "position": "Whalefall <8m NO",
+        "shares": 6,
+        "hold_at_fair": 3.43,
+        "fee_net_exit": 0.41,
+        "fair": 0.571,
+        "central_delta": 3.02
+      },
+      {
+        "position": "Messi YES",
+        "shares": 5,
+        "hold_at_fair": 3.0,
+        "fee_net_exit": 1.2,
+        "fair": 0.6,
+        "central_delta": 1.8
+      },
+      {
+        "position": "Michigan Senate NO",
+        "shares": 5,
+        "hold_at_fair": 2.2,
+        "fee_net_exit": 1.46,
+        "fair": 0.44,
+        "central_delta": 0.74
+      },
+      {
+        "position": "OpenRouter NO",
+        "shares": 5,
+        "hold_at_fair": 4.4,
+        "fee_net_exit": 3.0,
+        "fair": 0.88,
+        "central_delta": 1.4
+      }
+    ],
+    "caveat": "model-centered arithmetic; not a complete portfolio decision."
+  },
+  "kelly": "post-bankroll call rc0; scale-in candidates were suppressed by ticket cap: Michigan +$15.80, OpenRouter +$55.96, Whalefall +$48.01, Messi +$39.36; no orders placed.",
+  "news": {
+    "unit": "work/tick1400_news_status.json",
+    "sha256": "764bef87713a3fd5cbff00a7ebfb9f85522160b30926587a6d06bc0ed5bec221",
+    "status_rc": 0,
+    "pid": 148881,
+    "state_mtime_utc": "2026-10-19T13:58:59.976843Z",
+    "state_age_seconds": 207.5,
+    "poll_interval_seconds": 300,
+    "state_contents_read": false,
+    "alerts": [
+      "13:14Z Bridge Michigan El-Sayed fundraising-record headline flagged; relevance to held Michigan Senate NO, no inference from title.",
+      "13:53Z Whalefall box-office headline flagged; title not treated as final gross."
+    ]
+  },
+  "daemons": {
+    "unit": "work/tick1400_daemons.json",
+    "sha256": "337488aeff1547fcd214dd3a4961c9816e463a641b6bb482616005bfadd94853",
+    "one_each": true,
+    "mtimes_precede_starts": true,
+    "cwd_note": "all resolve canonical absolute script; news watcher cwd repo, other 3 non-repo (root guidance permits absolute-path startup)"
+  },
+  "weekly_pnl": "not due until Oct23; no report/change.",
+  "no_financial_writes": true
+}

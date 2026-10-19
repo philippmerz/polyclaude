@@ -1,0 +1,194 @@
+{
+  "schema": "tick1400_cli_manifest.v1",
+  "private_capture_dir": "logs/periodic_20261019T1400_cli_private_140114",
+  "commands": [
+    {
+      "name": "full_status",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/polyclaude_status.py"
+      ],
+      "started_utc": "2026-10-19T14:01:14.580287Z",
+      "received_utc": "2026-10-19T14:01:37.581837Z",
+      "rc": 0,
+      "stdout_bytes": 5682,
+      "stderr_bytes": 0,
+      "stdout_sha256": "637d702ab415542223199efb47cd7e969318eccb6b1894fff899e62d6b937147",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "wallet",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/wallet_status.py"
+      ],
+      "started_utc": "2026-10-19T14:01:37.602362Z",
+      "received_utc": "2026-10-19T14:01:41.187474Z",
+      "rc": 0,
+      "stdout_bytes": 274,
+      "stderr_bytes": 0,
+      "stdout_sha256": "d6846ff2bb53b351322d91e8c962f3202798fffef772d388e23c23188c3b8368",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "crypto",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/crypto_status.py"
+      ],
+      "started_utc": "2026-10-19T14:01:41.207696Z",
+      "received_utc": "2026-10-19T14:01:47.860428Z",
+      "rc": 0,
+      "stdout_bytes": 309,
+      "stderr_bytes": 0,
+      "stdout_sha256": "f0167bff0707e010eb3b326d45850284f465047a76b27e8e6de38f17ceef8ab4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "bankroll",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/bankroll.py"
+      ],
+      "started_utc": "2026-10-19T14:01:47.886444Z",
+      "received_utc": "2026-10-19T14:02:02.920889Z",
+      "rc": 0,
+      "stdout_bytes": 1348,
+      "stderr_bytes": 0,
+      "stdout_sha256": "a4201b3121b2d659f0a97bbec5780c676d3b08629e5ae37c425595840d5c1a0e",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ostium_diff",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/ostium_state_diff.py"
+      ],
+      "started_utc": "2026-10-19T14:02:02.938859Z",
+      "received_utc": "2026-10-19T14:02:05.665684Z",
+      "rc": 0,
+      "stdout_bytes": 60,
+      "stderr_bytes": 0,
+      "stdout_sha256": "fba5ef73181c8e4711004e02b44b8c9337a232d84d38f6a2d9742982d243eb39",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "crux",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/crux_coverage_check.py",
+        "--quiet"
+      ],
+      "started_utc": "2026-10-19T14:02:05.686647Z",
+      "received_utc": "2026-10-19T14:02:06.098501Z",
+      "rc": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "watchlist_revet",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/watchlist_monitor.py",
+        "--hits-only",
+        "--auto-revet"
+      ],
+      "started_utc": "2026-10-19T14:02:06.120476Z",
+      "received_utc": "2026-10-19T14:02:06.388850Z",
+      "rc": 0,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "insurance_fix",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/position_state_audit.py",
+        "--fix"
+      ],
+      "started_utc": "2026-10-19T14:02:06.407136Z",
+      "received_utc": "2026-10-19T14:02:07.473783Z",
+      "rc": 0,
+      "stdout_bytes": 166,
+      "stderr_bytes": 0,
+      "stdout_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "exit_analysis",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/exit_analysis.py"
+      ],
+      "started_utc": "2026-10-19T14:02:07.496141Z",
+      "received_utc": "2026-10-19T14:02:09.114716Z",
+      "rc": 0,
+      "stdout_bytes": 1857,
+      "stderr_bytes": 0,
+      "stdout_sha256": "76a0c8c50a2b625b76556b843abb854da25c32cdf2a4d60a5411cd9faac3193c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "kelly_after_bankroll",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/portfolio_kelly.py",
+        "--constrained"
+      ],
+      "started_utc": "2026-10-19T14:02:09.139028Z",
+      "received_utc": "2026-10-19T14:02:09.989581Z",
+      "rc": 0,
+      "stdout_bytes": 2651,
+      "stderr_bytes": 128,
+      "stdout_sha256": "079a5bbd3635c4459664ad253f85f6f605e4beabfe52100cd11c0e407d8af2f7",
+      "stderr_sha256": "c1ba96a50d534009f4f2160e71526f2709603fda8551db0f59a1d44b7237d263"
+    },
+    {
+      "name": "decisions_pending",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/decisions.py",
+        "pending"
+      ],
+      "started_utc": "2026-10-19T14:02:10.019877Z",
+      "received_utc": "2026-10-19T14:02:10.109424Z",
+      "rc": 0,
+      "stdout_bytes": 23,
+      "stderr_bytes": 0,
+      "stdout_sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "redeem_dry_run",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/clob_v2.py",
+        "redeem-all",
+        "--dry-run"
+      ],
+      "started_utc": "2026-10-19T14:02:10.136268Z",
+      "received_utc": "2026-10-19T14:02:11.260589Z",
+      "rc": 0,
+      "stdout_bytes": 290,
+      "stderr_bytes": 0,
+      "stdout_sha256": "f3f19cdb2f113fbd3a30caf6adfce4686b917c5d428adf05484703111148d0c6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

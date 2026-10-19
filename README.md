@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 214 recorded observations from Apr-25
+The local performance CSV now has 215 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**333 valued /7 blocked /364 factual /2,296 pending;704 base+60 revisions,next353.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. Latest manual batch saved; each completed case is indexed individually. Scheduled checks remain bounded; the next full portfolio check is14UTC. [Current work](research/2026-10-19-manual-research.md) · [small resume](research/2026-10-17-deep-review/RESUME.md). First100/200/300 notified; next400/material findings.
+**333 valued /7 blocked /364 factual /2,296 pending;704 base+60 revisions,next353.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. No valuation credit this run. The next full portfolio check is Oct20 02:00 UTC. [Current work](research/2026-10-19-manual-research.md) · [small resume](research/2026-10-17-deep-review/RESUME.md). First100/200/300 notified; next400/material findings.
 
 **Rhine313/Haaland316 bids canceled unfilled at existing10UTC pulls** (DEC231/232); no purchases/profit, no repost. Independent terminal/trade/CTF checks and post-grace reconciliation retired only their3.95 commitments. Four older BUYs/7.52 remain; Idaho22UTC pull unchanged. [Current orders/proofs](notes/resting_orders.md).
 
@@ -86,13 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 12:57UTC
+## Last audited snapshot — October 19 14:00 UTC
 
-**Trading midpoint $190.58 / indicative net depth $185.99; account $196.41 including $5.83 separate gas.** PM35.44mid/30.85netdepth;20.73 cumulative accounting residual. Authoritative12:57:19–35producer is rounded/sequential, not synchronized NAV, freshness-certified proceeds or audited cash profit; VM/API excluded. [Completed check](research/2026-10-19-1253-checkin.md).
+**Account $196.29 including $5.79 separately funded gas; trading midpoint $190.50 / indicative depth $187.49.** PM sleeve $35.36 / $32.35. Bankroll window 14:01:47.886–14:02:02.920 UTC; rounded, sequential inputs, not synchronized NAV or certified proceeds. The $20.73 residual is accounting arithmetic, not audited cash profit; VM/API excluded. [Check-in](research/2026-10-19-1400-checkin.md).
 
-Four BUYs/$7.52 remain LIVE/zero-matched at12:55 with four exact reservations; position identities/sizes/basis unchanged. Idaho22UTC pull remains binding. MI Senate/Messi Global Athletes/OpenRouter/Whale retain/noadd; Clarity whole29/29 only. Whalefall12:54still8mESTIMATE on Numbers/Mojo, not final; exactly8mFINALwinsourNO. [Exact orders](notes/resting_orders.md) · [primary risk](data/deep_review_20261017/work/tick1253_root_risk.json).
+Four authenticated BUYs remain live/zero-matched with four exact reservations and $7.52 full-fill risk; eight position identities, sizes and totalBought are unchanged. Idaho 34 YES at 3¢/$1.02 remains under its existing terms with a binding 22:00 UTC pull and cancel-first on material poll/candidate/ballot/turnout evidence. [Current orders](notes/resting_orders.md).
 
-No financial action, numericalprior change, winning redeemable, UMA alert, hurdle flag or watchlist hit. Four daemons healthy. Capped discovery/failed quotes leave unreviewed markets; no exchange-wide-zero claim. No new valuation credit;333valued/7blocked,next353. [Compact handoff](notes/current_context.md).
+MI, Messi, OpenRouter and Whalefall remain/no-add; Clarity remains only as the whole 29/29 pair. No new poll, final Whalefall result, fill or valuation credit was verified. The Oct16–18 $8m weekend is still an estimate; exactly $8m final does not meet the strict less-than-$8m rule. No automatic Kelly additions or maker-at-fair on hidden information. [Risk decision](data/deep_review_20261017/work/tick1400_root_risk.json) · [source delta](data/deep_review_20261017/work/tick1400_alert_delta.json).
+
+All 12 required CLI checks returned rc0; no overdue decisions, watchlist/hurdle hits, UMA alerts, Ostium trades or winning redeemables. Bounded discovery was page-capped; omitted candidates remain unreviewed, not rejected. Four daemons were single/canonical; no restart. News review watermark: 14:04:37 UTC. Next full check Oct20 02:00 UTC. Weekly P&L is not due until Oct23. [Operations](data/deep_review_20261017/work/tick1400_ops.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
