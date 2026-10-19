@@ -163,6 +163,10 @@
     {
       "name": "Venezuela presidency, Delcy Rodriguez and transition news",
       "url": "https://news.google.com/rss/search?q=%28%22Delcy+Rodr%C3%ADguez%22+OR+%22Delcy+Rodriguez%22+OR+Maduro%29+%28Venezuela+OR+presidency+OR+president+OR+presidenta+OR+election+OR+elections+OR+transition+OR+transici%C3%B3n+OR+elecciones%29+when%3A14d&hl=es-419&gl=VE&ceid=VE%3Aes-419"
+    },
+    {
+      "name": "Dolly Parton Global Passings rank news",
+      "url": "https://news.google.com/rss/search?q=%28%22Dolly+Parton%22+OR+%22Google+Passings%22%29+when%3A14d&hl=en-US&gl=US&ceid=US%3Aen"
     }
   ],
   "tier1_keywords": [
@@ -354,7 +358,9 @@
     "fuel tax",
     "gas prices",
     "Delcy",
-    "Maduro"
+    "Maduro",
+    "Dolly Parton",
+    "Google Passings"
   ],
   "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux — the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Sep-23 added exact GPT-6 Sol/Luna names after OpenAI's 'Introducing' title evaded the generic release verbs. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
   "tier2_keywords": [

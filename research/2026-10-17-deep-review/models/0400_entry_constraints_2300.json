@@ -1,0 +1,47 @@
+{
+  "schema": "primary_case_entry_constraint_projection.v1",
+  "review_index": 400,
+  "created_utc": "2026-10-19T22:59:49.975399+00:00",
+  "primary_forecast_path": "research/2026-10-17-deep-review/models/0400_primary_2255.json",
+  "primary_forecast_sha256": "4ad6eae8daea3936799b1b655be7063d22eabe3659ae8e74e7cae4ee8a88d828",
+  "primary_forecast_was_before_current_quotes": true,
+  "current_quotes_seen_for_entry_constraints": true,
+  "p_yes": 0.2,
+  "p_no": 0.8,
+  "broad_yes": [
+    0.05,
+    0.55
+  ],
+  "base_reserve_pp": 20,
+  "conditional_fill_reserve_pp": 5,
+  "additional_January_evaluation_missinglist_haircut_pp": 2,
+  "actual_entry_reserve_pp": 27,
+  "selected_yes": 0,
+  "selected_no": 0.53,
+  "reason": "Physicalwinnerforecastunchanged. Apply alreadyexplicit2%missing-list cashflowbranch atzeroJanuaryvalue inadditionto25ppmodel/conditionalfillreserve; not additionalindependentdeathorprobabilityevidence.",
+  "intended_trade": {
+    "side": "NO",
+    "shares": 5,
+    "raw_limit_max": 0.46,
+    "max_cash_risk": 2.3,
+    "route": "vettedpost-onlymaker",
+    "manual_size_reason": "Tiny5shareunit under both point and selectedfractionalKelly; no automaticadd; broadNO45/full2.30loss possible."
+  },
+  "management": {
+    "review": "Each existingtick/earliermaterialGooglelist/method/cutoff/death/competitor/comparison/venueevent; cancel-firstbeforeunassessedmaterialinputs.",
+    "source_staleness_limit": "Oct23 22UTC hardpull if notcanceledsooner. Fourdayconditionalquote budget because no currentcomparableGlobalseries and winnerpool/rank canchange; source-validitylimit, not automaticcronexpiry. Freshunderwritingbeforeanyrepost.",
+    "add_repost_chase": "none",
+    "any_fill": "Freshsource/hold-vs-netexit/joint-riskreview; dustpossible."
+  },
+  "alternative": "SamechainvariableAave3.2035%dated18:02; cashroutefees/funding/pausecurrentchecksrequiredifallocated. Known3politicalbids andMessiGoogle source risk included; no independencehedgecredit.",
+  "portfolio_projection": {
+    "dated_trading_mid_base": 189.69,
+    "all_ordinary_holdings_and_old_bids_lose_Clarity29_floor_before": 177.64,
+    "same_with_new_NO_losing_2_30": 175.34,
+    "pair0_before": 148.64,
+    "same_with_new_NO_losing_and_pair0": 146.34,
+    "limits": "Otherassetsconstant, notprobabilities/guaranteedliquidation. Tinynewrisk1.21%ofdatedtrading; currentbankroll/accountstillrequired."
+  },
+  "economics_path": "data/deep_review_20261017/work/0400_economics_entry_2300.json",
+  "execution_authority": false
+}

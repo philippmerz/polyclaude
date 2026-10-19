@@ -1,0 +1,158 @@
+{
+  "review_index": 398,
+  "market_id": "5778688",
+  "condition_id": "0x7d28e63e97000c6737b3588909043805bcabdfed1c80dcce6f44de4a4ad3e062",
+  "criteria_sha256": "2c783f15cb34ecb496073497174791e9511a8fc9b80133f76ad6b2275726c50e",
+  "status": "valued",
+  "literal_analysis": "Nextquarter initialofficialdilutedGAAP EPS rounded>0.31; raw0.315boundary, splitadjusted. Exact96hfallback/45dayrelease/initialreport rules and unconfirmedOct29/Nov5dates analyzed inreport.",
+  "evidence": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465926092193/mnst-20260630x10q.htm",
+      "observed_utc": "2026-10-19T17:43:27.188836Z",
+      "finding": "Rootrawhash/tableverified; Q2split-proforma EPS0.30/shares1976.957m, not pre-split0.59."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/865752/000110465925107944/mnst-20250930x10q.htm",
+      "observed_utc": "2026-10-19T17:44:09.842222Z",
+      "finding": "Rootrawhash/tableverified; Q3sales2197.139m/netincome524.455m/diluted984.966mpre-split."
+    },
+    {
+      "url": "https://www.fool.com/earnings/call-transcripts/2026/08/13/monster-mnst-q2-2026-earnings-call-transcript/",
+      "observed_utc": "2026-10-19T22:46:59.477174Z",
+      "finding": "Issuer-calltranscriptJulyallbrand sales estimate+13.9%; Q4pricing notQ3; aluminumcost pressure, not a currentQ3GAAPestimate."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2923147198176203,
+    "low": 0.15,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 20,
+    "method": "Price-blind primary split-adjusted revenue-margin-tax-share conditionalEPSmixture, unfitted.",
+    "reasoning": "Five explicitbranches; raw>=0.315 reports0.32, not0.31. HistoricalJulyslowdown usedonce; model/GAAP/conditionalfill uncertainty20pp reserve.",
+    "model_path": "models/0398_primary_2251.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0398_quote_2253.json",
+    "quote_file_sha256": "32b05c4c8ebabc28b169ea5e60f0a15080d6dab0487e0421b9dbbacd60abe96e",
+    "quote_capture_utc": "2026-10-19T22:50:19.006699+00:00",
+    "gamma_received_utc": "2026-10-19T22:50:18.786663+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 17.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.2923147198176203,
+        "selected_stress_probability": 0.0923147198176203,
+        "best_bid": 0.13,
+        "best_ask": 0.14,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792450193251",
+        "book_received_utc": "2026-10-19T22:50:18.907693+00:00",
+        "book_age_seconds_at_receipt": 25.65669298171997,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.06021,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.14
+              }
+            ],
+            "net": 1.4602100000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.3,
+            "fee": 0.05655,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.13
+              }
+            ],
+            "net": 1.24345
+          }
+        },
+        "taker_cost_usd": 1.4602100000000002,
+        "central_expected_profit_usd": 1.462937198176203,
+        "selected_stress_profit_usd": -0.5370628018237973,
+        "break_even_before_carry": 0.146021,
+        "break_even_constant_carry": 0.14623560994758905,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7076852801823796,
+        "selected_stress_probability": 0.5076852801823797,
+        "best_bid": 0.86,
+        "best_ask": 0.87,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792450193251",
+        "book_received_utc": "2026-10-19T22:50:18.907693+00:00",
+        "book_age_seconds_at_receipt": 25.65669298171997,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.7,
+            "fee": 0.05655,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.87
+              }
+            ],
+            "net": 8.756549999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.6,
+            "fee": 0.06021,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.86
+              }
+            ],
+            "net": 8.53979
+          }
+        },
+        "taker_cost_usd": 8.756549999999999,
+        "central_expected_profit_usd": -1.6796971981762026,
+        "selected_stress_profit_usd": -3.6796971981762017,
+        "break_even_before_carry": 0.8756549999999999,
+        "break_even_constant_carry": 0.876941967447532,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry. YESpositivecentral but20ppselectednegative at14c andjoining13c; NOnegativecentral/selected. Lowernoncompetitivecashbids not currentlyunderwritten.",
+  "reopen_condition": "FreshmeasuredQ3/GAAP/margin evidence or independently supported improvedmaker economics withall livegates; no automaticentry.",
+  "report_markdown": "#398 Monster Beverage quarterly GAAP EPS — no entry\n\n**Primary YES 29.23%/NO 70.77%; broadYES15–65%,20pp actual entry allowance.** Both current sides fail selected economics; YES has positive central paper EV. This is an on-chain EPS-contract valuation, not a stock allocation.\n\n## Exact rule\n\nNext quarterly diluted GAAP EPS must be strictly greater than0.31 after standard cent rounding: normally reported0.32+, raw continuous-model boundary0.315. BasicEPS only if diluted absent; adjustedEPS does not substitute. Official initial company documents control; SeekingAlpha fallback only if officialGAAP absent, and no fallback within96h of announcementday16:00ET givesNO. No qualifying release within45calendar days after estimatedOct29 givesNO (Dec13); fallback can extend toDec17. Immediateobvious errors excepted, later revisions ignored. USD/common shares, not an ADR. Oct29 is creation estimate; secondaryNov5date explicitly unconfirmed. Normal17day holding and59daydelay sensitivity are not guaranteed dates.\n\n## Source bridge\n\n- Root verified savedSECQ2-2026/Q3-2025body hashes and actualtables; [facts](../../../data/deep_review_20261017/work/0398_facts.json), [dated addendum](../../../data/deep_review_20261017/work/0398_addendum_2250.json). Aug2026two-for-one split makes oldQ2reported0.59 approximately0.30; priorQ3normalized524.455/(2*984.966)≈0.26624. Comparing0.59 directly with0.31 would be wrong.\n- AtQ2split-proforma1976.957m diluted shares, raw0.315 requires netincome622.741m, about18.74%aboveQ3-2025. The collector's612.856m is the arithmetic for raw0.31, **not** the qualifying rounded-beat threshold.\n- Q3-2025sales2197.139m/OPM30.7%; Q2-2026sales2537.473m/OPM29.2%, netincome584.540m. Dated issuer-call Julyallbrand sales estimate+13.9%reportedFX; unknownAug/Sept and margins matter. Management's selectiveQ4pricing is not Q3revenue; aluminumcost pressure remains. Transcript is third-party text of a first-hand issuer call, not independent currentQ3 results. SEC recentfiling check endsOct9; issuerIR403 and unconfirmedcalendar are bounded gaps, not exhaustive absence.\n\n## Primary forecast before quotes\n\n[Model](../models/0398_primary_2251.json) saved before currentbooks:65%continuation/20%demand-marginpressure/13%upside/1.5%specialGAAPcharge/0.5%noqualifyingreport. Revenue-growth,OPM,tax,shares bridge gives branch EPSmeans0.30395/0.26440/0.34230; normal branch widths0.018/0.022/0.023 are explicit unfitted assumptions. Threshold integration yields 29.23%YES, **not** a calibrated posterior. Ordinary growth16% bridges datedJuly13.9%and unknown latermonths; no second slowdown penalty against an already anticipated forecast. Sensitivity15–65% covers materially different demand/margin/dispersion judgments.20pp reserve includes ordinary10pp plus10pp for sparsequarterdata, unfitteddispersion, GAAP and conditionalmakerselection; not a first-hand measuredtail exception.\n\n## Both sides and alternatives\n\n22:50:18UTC exactGamma/rules/tokens, feeparity and bothbooks verified; book25.66s old atreceipt. Minimum5shares/tick1c, authoritative5%curve. [Receipt-bound economics](../../../data/deep_review_20261017/work/0398_economics_2253.json):10YES14c costs1.46021/centralprofit+1.46294/selected−0.53706;10NO87c costs8.75655/central−1.67970/selected−3.67970. Ordinarymakerjoining13cYES risks1.30 vsselectedpayout0.92315;86cNO risks8.60 vs5.07685. Neither passes. A sub-book9cYES or50cNO limit is not a currently supported executable opportunity; changed-source/adversefill and reportingdate risks need fresh underwriting.\n\nA same-chain variableAave3.2035% dated18:02 baseline earns roughly0.0022 on1.46021 over17days before routecosts; slowerresolution worsens capital efficiency. Currenthelds/threepoliticalbids already carry model/venue risks; EPS would diversify driver risk but does not repair selected negative EV. ModestpapercentralYESedge merits source follow-up, not automatic Kelly spending. No prior/order/watch/decision-row/moneychange.\n\nReopen on measuredQ3revenue/margin/GAAPguidance, defensibleforecast-error data or a newly justified lower makerprice, with current source/account/eligibility/fees/depth/conditionalfill/clusterchecks. Pull any future earningsquote before its named announcement boundary; this record creates no order or deadline.\n"
+}

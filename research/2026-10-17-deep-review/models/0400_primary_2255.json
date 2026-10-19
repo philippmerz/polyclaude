@@ -1,0 +1,87 @@
+{
+  "schema": "primary_global_passings_named_child.v1",
+  "review_index": 400,
+  "created_utc": "2026-10-19T22:54:09.799460+00:00",
+  "price_blind": true,
+  "p_yes": 0.2,
+  "p_no": 0.8,
+  "broad_yes": [
+    0.05,
+    0.55
+  ],
+  "base_model_reserve_pp": 20,
+  "conditional_maker_fill_reserve_pp": 5,
+  "actual_entry_reserve_pp": 25,
+  "selected_yes": 0,
+  "selected_no": 0.55,
+  "scenarios": {
+    "shared_central": {
+      "Norris": 0.25,
+      "Pretti": 0.15,
+      "Parton": 0.2,
+      "Khamenei": 0.1,
+      "HaydenPanettiere": 0.08,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    },
+    "Parton_strong": {
+      "Norris": 0.13,
+      "Pretti": 0.08,
+      "Parton": 0.55,
+      "Khamenei": 0.05,
+      "HaydenPanettiere": 0.03,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.12,
+      "missing_list_Other": 0.02
+    },
+    "Parton_weak": {
+      "Norris": 0.3,
+      "Pretti": 0.2,
+      "Parton": 0.05,
+      "Khamenei": 0.12,
+      "HaydenPanettiere": 0.1,
+      "other_current": 0.03,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    }
+  },
+  "shared_model_path": "research/2026-10-17-deep-review/models/google310_primary_0300.json",
+  "family_binding": "Root verified byte-identical fullGlobalPassings2026rank1 descriptions for56/203/310/400; conditions/tokens distinct. Same latentwinnerdistribution, not newindependentmeasurement.",
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/work/0400_facts_1826.json",
+      "sha256": "724c1737b73ff6ebc4edff1a208abeedf81402ec2de20ed434c955863f1a6196"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0400_addendum_2250.json",
+      "sha256": "605e59ccb7e0d8e39165e1b7b54035d32dac3229b5771f144416813d69dcd850"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google310_primary_0300.json",
+      "sha256": "1324428c7af984fd2a445a8ad2e3a3d87a7b1d89af3125c05083b847b0cb62d2"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google_passings_method_0137.md",
+      "sha256": "c86c6be8af6bcc5fd2813c730be5e6294a2c22aaf20bd9be9ffe15db95a24138"
+    }
+  ],
+  "root_verified_captures": [
+    {
+      "path": "logs/deep_review_20261017/google_time_sources/google_methodology.html.gz",
+      "raw_sha256": "ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830"
+    },
+    {
+      "path": "logs/deep_review_20261017/google_2026_competitor_sources/dolly_parton_passing.body.gz",
+      "raw_sha256": "bb4de3ee894918888543d4b264f83c43e6c23a816e89420eb179751c25ca3c7d"
+    }
+  ],
+  "reasoning": [
+    "OfficialAug25deathannouncement establisheseligibility and internationalmusic/philanthropy recognition, notrank. Priorfamily20%Partonmass retained: sourceaddendum adds no comparable2026globalgrowthordering. Her establishedsearchbaseline canlimitgrowth; otherglobalicons/politicalevents and later/unobservedwinners compete.",
+    "Allweighttablesnormalize. Parton20%is explicitprimaryjudgment, not a fittedposterior, measuredGooglevalue or newindependentforecast. ExistingHayden8%splitfromotherbucketretained; avoid cross-childoverconfidence.",
+    "Official2025definition is fastestyearoveryearsearchgrowth usinginternaltools, nottotalvolume; itsJan1-Nov25window doesnotestablish2026cutoff/aliases/formula. Direct2026route404 and priorTrends429 are accesslimitations, notzerointerest/cancellationproof. No repeatedrate-limitquery/workaround.",
+    "Broad5–55%Parton winner scenarios show sensitivity; selected25ppreserve retains20ppfamilymodelerror plus5ppunknowncomparativeinformation/conditionalmakerfill. No measured-bond-tail exception. No price inputs.",
+    "NormalDecemberpublication~60daysfitsJanuary; March31missing-listOtherfallback~164days canexceedevaluation. ExpectedNO80 assumesstandardnamed-childOthercomplement; separatelystressmissing2%atzeropayout→NO78 and delayedcashflow/voidrisk, no guaranteedfloor."
+  ],
+  "execution_authority": false
+}

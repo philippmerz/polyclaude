@@ -1,0 +1,29 @@
+{
+  "schema": "polyclaude.google_trends_global_comparison.v1",
+  "review_index": 400,
+  "captured_utc": "2026-10-19T22:55:42Z",
+  "scope": "One ordinary public Google Trends comparison attempt; factual access result only.",
+  "comparison_request": {
+    "terms_exact": ["Dolly Parton", "Chuck Norris", "Alex Pretti", "Ali Khamenei", "Hayden Panettiere"],
+    "geo": "GLOBAL (empty geo)",
+    "time": "2025-01-01 through 2026-10-19",
+    "category": 0,
+    "property": "Web Search (empty property)",
+    "endpoint": "https://trends.google.com/trends/api/explore",
+    "query_sha256": "e6b47a8a02c901ed2efabe5113dea7b1e1e293fca087a6ca0a0264a0d5618299"
+  },
+  "response": {
+    "http_status": 429,
+    "request_started_utc": "2026-10-19T22:55:42.916741Z",
+    "response_received_utc": "2026-10-19T22:55:42.998083Z",
+    "raw_bytes": 1701,
+    "raw_sha256": "3aef8296ef15a7acae73aea42f341a5cacb1bae45affe6ef949f42335f654806",
+    "gzip_sha256": "af4c1a8ba1a5670b5f7c0ff4528e18dc5896672ce4add09ce243e22e90bda6e2",
+    "body_path": "logs/deep_review_20261017/case0400_comparison_2256/explore/explore.body.json.gz",
+    "receipt_path": "logs/deep_review_20261017/case0400_comparison_2256/explore/explore.receipt.json",
+    "body_representation": "http_body",
+    "timing_basis": "call_window"
+  },
+  "result": "No comparison values or usable widgets returned. No timeline request was made. This 429 is an access gap; it does not indicate zero interest, relative rank, or Google Year in Search annual rank.",
+  "interpretation_limits": "If available, this endpoint's normalized exact-term series would remain distinct from total query counts and Google's official annual Year in Search Global Passings ranking. No alternate route or retry used."
+}

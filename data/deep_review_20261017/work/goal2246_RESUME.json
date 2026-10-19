@@ -1,0 +1,79 @@
+{
+  "schema": "finite_review_phase.v1",
+  "updated_utc": "2026-10-19T23:15:48.914673+00:00",
+  "scope": "Authorized finite3k research continuation after completed22UTC/tick work, not idle scheduledextension.",
+  "counts": {
+    "completed_valuations": 359,
+    "blocked_after_in_depth_review": 11,
+    "factual_exclusions": 364,
+    "pending": 2266,
+    "base_records": 734,
+    "revisions_written": 65,
+    "active_indices": []
+  },
+  "completed_this_phase": [
+    {
+      "index": 398,
+      "status": "valued/noentry",
+      "report": "research/2026-10-17-deep-review/evaluations/0398.md",
+      "sha256": "68bc28e11c4a030172f799d01f25793c124f99f322eb3208b1ee64326ab1594f",
+      "model": "research/2026-10-17-deep-review/models/0398_primary_2251.json"
+    },
+    {
+      "index": 400,
+      "status": "valued; DEC239LIVE_UNFILLED5NO46c/max2.30; not purchased",
+      "report": "research/2026-10-17-deep-review/evaluations/0400.md",
+      "sha256": "6e3415927a7b518f6242edaa3e0ba43e097594559df779a2f77a48f48e0f3953",
+      "model": "research/2026-10-17-deep-review/models/0400_primary_2255.json",
+      "entry_constraints": "research/2026-10-17-deep-review/models/0400_entry_constraints_2300.json"
+    }
+  ],
+  "next_indices": [
+    402,
+    403,
+    404
+  ],
+  "prepared_facts": [
+    "data/deep_review_20261017/work/0400_addendum_2250.json",
+    "data/deep_review_20261017/work/0402_addendum_2250.json"
+  ],
+  "next_safety": "ExistingfullOct20 02UTC/earliermaterialsource/fill; no newtimer.",
+  "current_exposure": "23:05:58-59 exhaustive4LIVEzero-matchedBUY8.80; original3 exact unchanged; target5NO46c/2.30.8indexedrows/no candidate/CTF0; fourreservations.22:58:50-22:59:05pre-entryproducer195.55 incl5.84gas/trading189.71mid187.14depth.",
+  "notification": "TG1272 materialfinding sentonce; first100/200notified. Nextchosenprogress400valued/material/blockearlier.",
+  "next": "Finish scopedvalidation/commit/push and end this boundedrun. On separatelyauthorized finite-researchcontinuation, start402 then403/404; no idlewait ornewtimer.",
+  "phase": "400LIVE_UNFILLED verified; financialrecords/TG1272/CSV224saved; chart10/ledgerhistory/privacy/contextvalidationpass. Scopedcommit/push/remoteverification then end; do not resubmit or start402 in this scheduledrun.",
+  "watcher_config_added": {
+    "feed": "Dolly Parton Global Passings rank news",
+    "keywords": [
+      "Dolly Parton",
+      "Google Passings"
+    ],
+    "shared_keyword_keep_if_canceled": "Year in Search remains useful toheldMessi; Dolly/Passings/feedunique."
+  },
+  "submission": {
+    "index": 400,
+    "execution": true,
+    "submitted_once": true,
+    "started_utc": "2026-10-19T23:04:43.394850+00:00",
+    "received_utc": "2026-10-19T23:04:46.643235+00:00",
+    "returncode": 0,
+    "classified_state": "ambiguous",
+    "accepted_live": true,
+    "venue_status": "live",
+    "order_id": "0x4db0d4e96ab66c488da15c35e8ad0029be3ff4d542c29760bfd8233b8af8afbc",
+    "condition_id": "0x7c0b6291b3448d77362635d310d8b45b788f84490a1a18d0da4231a60a296c99",
+    "asset": "78402357217138824308023022670298280441371390463012529963495285810848335137453",
+    "planned_shares": 5,
+    "limit": 0.46,
+    "max_planned_cash": 2.3,
+    "makingAmount": "",
+    "takingAmount": "",
+    "private_receipt_dir": "logs/deep_review_20261017/case0400_submit_230443",
+    "raw_sha256": "1e22fc0abf3c05ba4435a91957f33960f63cb0ab8dae849c360bdc0695d88d85",
+    "note": "Venueacknowledgment is not fill/cumulativebalanceproof; independentlyreconcile next. No retry fromintent orreturncode alone."
+  },
+  "poststate_proof": "data/deep_review_20261017/work/0400_postentry_2306.json",
+  "decision_id": 239,
+  "ops_proof": "data/deep_review_20261017/work/0400_postentry_ops_2313.json",
+  "performance_append_proof": "data/deep_review_20261017/work/0400_performance_append_2313.json"
+}

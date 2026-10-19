@@ -1,6 +1,6 @@
-# Current resting orders — October19 22:18 UTC
+# Current resting orders — October19 23:06 UTC
 
-**Three LIVE/zero-matched BUYs /6.50 remaining risk; three reservations.** Exhaustive authenticated orders,126trades, indexedpositions and selectedCTFs verified22:18:42. OnlySánchez reservation4→3 after300s affirmative proof; allotherreservationrecords exact. Eightpositive indexed identities/size/totalBought unchanged since22:07; IdahoYES0/SpainYES-NO0/WhaleNO6. Serialized method-call windows are not rawHTTP or later-fill protection. [Verification](../data/deep_review_20261017/work/light2200_sanchez_reconciled_2218.json).
+**Four LIVE/zero-matched BUYs /8.80 remaining risk; four reservations.** Independent authenticated orders/detail/exhaustive126trades/indexedpositions/PartonNO CTF reads23:05:58–59 confirm new5NO46c/2.30 unfilled; originalthree exact IDs/CIDs/assets/terms/status unchanged. Eight indexed rows, no candidate identity, CTF0. Contingent commitments are not purchases or profit. Separate method-call windows are not atomic or protection against later fills. [Poststate proof](../data/deep_review_20261017/work/0400_postentry_2306.json) · [DEC239 and execution record](../research/2026-10-19-parton400-maker.md).
 
 22:33:44–45 bounded authenticatedorders/index follow-up: exactthreeorderIDs/CIDs/assets/terms/status unchanged/zero matched/6.50. No cancellation/trade/reservation mutation. This does not refresh22:18terminal/trades/CTFproof or22:22financial producer. [Follow-up](../research/2026-10-19-2232-periodic-check.md).
 
@@ -9,8 +9,11 @@
 |ME02|10YES/38c/3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|HistoricalME01slug never overridesME02CID/asset|
 |CA06|50NO/3c/1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
 |NY01|10YES/12c/1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
+|Parton400/DEC239|5NO/46c/2.30|0x4db0d4e96ab66c488da15c35e8ad0029be3ff4d542c29760bfd8233b8af8afbc|Shared Google/Messi cluster; hard pull Oct23 22UTC for source-staleness/conditional-quote budget|
 
 Review each scheduled check/earliermaterialnews: retain only if price, source freshness, full-fill correlation/caps and conditional-fill economics remain justified. Cancel-first on newly unassessed material poll/candidate/ballot/turnout evidence. A scheduled check alone is not a hard expiry; no chase/add/automaticrepost/taker fallback. Any fill requires fresh holding/source/fee-netexit/joint-risk review; partials can become dust. NextfullOct20 02UTC, not a newly invented pull deadline.
+
+Parton: cancel-first on material unassessed Google list/method/cutoff/preview/comparison, Dolly/competitor or venue evidence. Physical NO80% is an uncalibrated shared categorical estimate, not measured rank; 27pp reserve gives selectedNO53%, broadNO45–95%. Full2.30loss possible. Hard pull **2026-10-23 22UTC** bounds a four-day quote without a comparable Global series; fresh underwriting before any repost. New two keywords and one feed supplement shared Google coverage. Any fill invokes the review above; hidden-information sells require strictly above fresh fair value unless a verified thesis break justifies exit.
 
 ## Quote lifetime — clarified October19
 

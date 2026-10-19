@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T22:09:39.677771+00:00
+Updated: 2026-10-19T23:01:32.567636+00:00
 
-**357 valuations saved; first milestone100:** 357 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2268 pending.
+**359 valuations saved; first milestone100:** 359 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2266 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -409,7 +409,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |395|[Will the highest temperature in Qingdao be 23°C on October 17?](evaluations/0395.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |396|[Houthis enter Aden by December 31, 2026?](evaluations/0396.md)|valued|Valued/noentry; bothcurrenttakersnegativeevencentral, selectednegative andordinaryimprovingmakerscannotclearallowance. Specificsource/geometryerratum preserved, noglobalblock.|
 |397|[Will Susie Wiles leave the Trump administration before 2027?](evaluations/0397.md)|valued|Valued/noentry: modest central NO paper edge fails selected case and ordinary improving maker; initial omitted-news draft withdrawn before money.|
+|398|[Will Monster Beverage (MNST) beat quarterly earnings?](evaluations/0398.md)|valued|Noentry. YESpositivecentral but20ppselectednegative at14c andjoining13c; NOnegativecentral/selected. Lowernoncompetitivecashbids not currentlyunderwritten.|
 |399|[Will Leyton Orient FC win on 2026-10-17?](evaluations/0399.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|400|[Will Dolly Parton be the #1 searched passing on Google this year?](evaluations/0400.md)|valued|Pursue tiny5NOpost-only<=46c/max2.30risk onlyafterfinalcurrentidentity/source/funding/caps/eligibility/gates. NOselectedpaperpositive, YESfails. Noorderplacedbythisrecord/noexecutioncertificate.|
 |401|[Will the highest temperature in San Francisco be between 86-87°F on October 17?](evaluations/0401.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |405|[Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?](evaluations/0405.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |407|[Will the highest temperature in Warsaw be 14°C on October 17?](evaluations/0407.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|

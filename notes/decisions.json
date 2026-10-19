@@ -1,5 +1,5 @@
 {
-  "next_id": 239,
+  "next_id": 240,
   "decisions": [
     {
       "id": 1,
@@ -5201,6 +5201,44 @@
       "calibration_delta": null,
       "lesson": "Inspect missing original poll instruments and dated coalition context before fresh entry; a source publication date is not a fieldwork date. Cancel-first when load-bearing evidence is unassessed; preserve numerical research and never grade an unexecuted order as a trade.",
       "resolved_at": "2026-10-19T22:19:18Z"
+    },
+    {
+      "id": 239,
+      "timestamp": "2026-10-19T23:10:32Z",
+      "type": "open_position",
+      "thesis": "Resting UNFILLED five-share Parton Global Passings NO maker bid at 0.46, maximum contingent cash2.30; not a purchase or profit. Shared categorical physical NO80% is subjective, not measured Google rank; 27pp reserve (20 model,5 conditional fill,2 January delay) gives selected NO53%. Shared Google/Messi cluster, rho0.75; no hedge credit. Vetted exact identity/fees/book/collateral/caps passed; 23:05:58 poststate confirms LIVE0matched/exhausted126trades/no candidate indexed row/CTF0. Full2.30 loss possible, broadNO45% can fail this price.",
+      "confidence": "low",
+      "prediction": "If filled under unchanged information: NO central80%, selected53%, broadNO45-95%. No calibration trial or realized trade until actual fill. Official 2026 Global Passings rank1 is literal event; no list by Mar31 2027 resolves Other. Cancel first on material unassessed sources; hard pull Oct23 22UTC for source-staleness/conditional-quote budget. No chase/add/repost/taker fallback.",
+      "size_usd": 2.3,
+      "resolution_at": "2026-12-20",
+      "tags": [
+        "deep-review",
+        "maker",
+        "google",
+        "conditional-fill"
+      ],
+      "slug": "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "financial_status": "LIVE_UNFILLED",
+      "side": "NO",
+      "planned_shares": 5,
+      "limit_price": 0.46,
+      "max_contingent_cash_usd": 2.3,
+      "matched_shares_verified": 0,
+      "order_id": "0x4db0d4e96ab66c488da15c35e8ad0029be3ff4d542c29760bfd8233b8af8afbc",
+      "condition_id": "0x7c0b6291b3448d77362635d310d8b45b788f84490a1a18d0da4231a60a296c99",
+      "asset": "78402357217138824308023022670298280441371390463012529963495285810848335137453",
+      "submitted_utc": "2026-10-19T23:04:43.394850Z/23:04:46.643235Z",
+      "verified_call_window_utc": "2026-10-19T23:05:58.017876Z/23:05:59.446329Z",
+      "physical_p_no": 0.8,
+      "edge_haircut": 0.27,
+      "selected_p_no": 0.53,
+      "hard_pull_utc": "2026-10-23T22:00:00Z",
+      "poststate_proof": "data/deep_review_20261017/work/0400_postentry_2306.json",
+      "report": "research/2026-10-17-deep-review/evaluations/0400.md",
+      "management_record": "notes/resting_orders.md"
     }
   ]
 }

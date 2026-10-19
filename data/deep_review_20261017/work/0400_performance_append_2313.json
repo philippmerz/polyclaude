@@ -1,0 +1,11 @@
+{
+  "schema": "performance_append.v1",
+  "previous_rows": 223,
+  "new_rows": 224,
+  "previous_bytes": 128778,
+  "previous_sha256": "5d662a3455828c1e6c2ac4fb27e8ddc4b9a5e428aa9b0d29684b1678d96873af",
+  "new_sha256": "51da210dfbb24691e95a8015d37eea984a6252432a03cf7717aa7c89c882abe7",
+  "prefix_preserved": true,
+  "producer_body_sha256": "65483eb5c7c76e11d4b8d4908362fcd633baaecdc34c47637b567bd78376c7eb",
+  "financial_record": "research/2026-10-19-2258-financial-snapshot.md:3"
+}

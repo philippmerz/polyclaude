@@ -1,0 +1,99 @@
+{
+  "schema": "primary_split_adjusted_GAAP_EPS_scenarios.v1",
+  "review_index": 398,
+  "created_utc": "2026-10-19T22:50:05.867314+00:00",
+  "price_blind": true,
+  "probability_reference_outcome": "Yes",
+  "beat_raw_EPS_threshold": 0.315,
+  "rounding": "Official dilutedGAAP EPS must round to >=0.32; raw0.315 is continuous-model boundary. Equal0.31 isNO.",
+  "inputs": {
+    "Q3_2025_sales_m": 2197.139,
+    "Q3_2025_net_income_m": 524.455,
+    "Q2_2026_split_proforma_shares_m": 1976.957,
+    "net_income_m_needed_at_threshold_fixed_shares": 622.7414550000001,
+    "Q3_2025_net_income_growth_needed": 0.18740684138772634
+  },
+  "scenarios": [
+    {
+      "name": "continuation",
+      "weight": 0.65,
+      "sales_growth": 0.16,
+      "operating_margin": 0.3,
+      "net_interest_m": 25,
+      "tax_rate": 0.239,
+      "shares_m": 1976.957,
+      "eps_sd": 0.018,
+      "sales_m": 2548.68124,
+      "net_income_m": 600.8889270919999,
+      "eps_mean": 0.3039463817837211,
+      "yes_probability": 0.2695779607268197
+    },
+    {
+      "name": "demand_margin_pressure",
+      "weight": 0.2,
+      "sales_growth": 0.1,
+      "operating_margin": 0.282,
+      "net_interest_m": 20,
+      "tax_rate": 0.25,
+      "shares_m": 1990,
+      "eps_sd": 0.022,
+      "sales_m": 2416.8529000000003,
+      "net_income_m": 526.1643883500001,
+      "eps_mean": 0.26440421525125635,
+      "yes_probability": 0.010729538744162579
+    },
+    {
+      "name": "upside_leverage",
+      "weight": 0.13,
+      "sales_growth": 0.24,
+      "operating_margin": 0.312,
+      "net_interest_m": 28,
+      "tax_rate": 0.232,
+      "shares_m": 1970,
+      "eps_sd": 0.023,
+      "sales_m": 2724.45236,
+      "net_income_m": 674.32637669376,
+      "eps_mean": 0.34229765314404065,
+      "yes_probability": 0.8823574883499125
+    },
+    {
+      "name": "special_GAAP_charge",
+      "weight": 0.015,
+      "eps_mean": 0.1,
+      "eps_sd": 0.1,
+      "yes_probability": 0.015777607391090527
+    },
+    {
+      "name": "no_qualifying_report",
+      "weight": 0.005,
+      "yes_probability": 0
+    }
+  ],
+  "p_yes": 0.2923147198176203,
+  "p_no": 0.7076852801823796,
+  "broad_yes": [
+    0.15,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0.0923147198176203,
+  "selected_no": 0.5076852801823797,
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/work/0398_facts.json",
+      "sha256": "ec5d6d1678bcb04f5d19cf299334a4cb18567158dbb54293fcdf2da5f8703754"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0398_addendum_2250.json",
+      "sha256": "105613561acef58e66632f14911ad99933338a3bb27661d649cd194a17c7a549"
+    }
+  ],
+  "reasoning": [
+    "Model starts from samequarter2197.139m sales and Q2split-adjustedshare denominator, notpre-split0.59. CurrentQ2salesgrowth20.2%/Q2margin29.2% and Q3prior30.7%margin anchor ranges.",
+    "Ordinary16%salesgrowth bridges observedJuly~13.9%reportedallbrand managementestimate with unknownAugust/September; no Q4priceincrease assumed inQ3.30%OPM allows some seasonalleverage vsQ2 while belowpriorQ3. No separate slowdown-surprise penalty added: Julyinformation was alreadypublicAug6 beforemarketcreation.",
+    "Pressure/upside branch means projectdemand/margin/tax/shares coherently. Weights and conditionalEPS widths are primaryjudgment, not fittedfrequencies or calibratedprobabilities. Explicit smallGAAP/reporting branches addressone-off/omission/deadline failure; not comprehensivelegalguarantee.",
+    "20ppselectedreserve=10ppordinarydefault+10pp for unobservedquarterresults/unfitteddispersion/GAAP and conditionalmakerselection. Broad15–65% is a sensitivityrange, notconfidenceinterval; not everyarbitraryendpoint mustclear.",
+    "CreationOct29date is estimate; secondaryNov5also unconfirmed. Forecastnormalreporting16–18days, stress max45daysafterOct29 plus96hfallback. Deadline impliesDec13/possibleDec17data window, notOctober29automaticNO."
+  ],
+  "execution_authority": false
+}

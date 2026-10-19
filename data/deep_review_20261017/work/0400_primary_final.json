@@ -1,0 +1,164 @@
+{
+  "review_index": 400,
+  "market_id": "2965274",
+  "condition_id": "0x7c0b6291b3448d77362635d310d8b45b788f84490a1a18d0da4231a60a296c99",
+  "criteria_sha256": "a063abcb3e8a04fa9ce479cae78a665c2ce53cddcaba2f6790f8834789245e60",
+  "status": "valued",
+  "literal_analysis": "Official2026GlobalPassingsrank1, notvolume/U.S./weeklypeak. NormalDecember vsMar31,2027Otherfallback/earlyrelease; distinctchildfullrulesbound toshared56/203/310categoricalmodel.",
+  "evidence": [
+    {
+      "url": "https://www.dollyparton.com/news/official-announcement-dolly-parton-passes-away-at-80",
+      "observed_utc": "2026-10-17T21:32:20.775220Z",
+      "finding": "RootverifiedoriginalbodySHA; Aug25death establisheseligibility, notrank."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-17T20:59:54.574301Z",
+      "finding": "Rootverified2025growth/internaltools method; exact2026scope/aliases/formula unknown."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "observed_utc": "2026-10-19T22:58:26.793926Z",
+      "finding": "404onthisrouteonly; currenthub200/no exposed2026links; no globalabsence/rank claim."
+    },
+    {
+      "url": "https://trends.google.com/trends/api/explore",
+      "observed_utc": "2026-10-19T23:01:32.151150+00:00",
+      "finding": "Oneordinaryglobalcomparison429after20h, no timeline/values/rank; stopped."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2,
+    "low": 0.05,
+    "high": 0.55,
+    "actual_entry_reserve_pp": 27,
+    "method": "Sharedprimarycategoricalwinnerjudgment, price-blindphysicalforecast; separateconditionalfill/Januarytimingprojection.",
+    "reasoning": "SharedParton20%retainedwithoutnewcomparableordering; explicitnormalisedcompetitor/future/Othermasses. Uncalibrated;20+5+2ppreserveNO53, broadNO45/fullcashlosspossible.",
+    "model_path": "models/0400_primary_2255.json",
+    "entry_constraints_path": "models/0400_entry_constraints_2300.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0400_quote_2255.json",
+    "quote_file_sha256": "904f26f5fff99d0e1d474dfc9569b97d94f5ac58946feb66cc54c31bef21eae2",
+    "quote_capture_utc": "2026-10-19T22:54:10.464502+00:00",
+    "gamma_received_utc": "2026-10-19T22:54:10.233569+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 60.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 27.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.2,
+        "selected_stress_probability": 0,
+        "best_bid": 0.53,
+        "best_ask": 0.55,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792450429468",
+        "book_received_utc": "2026-10-19T22:54:10.350953+00:00",
+        "book_age_seconds_at_receipt": 20.88295316696167,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.75,
+            "fee": 0.06188,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.55
+              }
+            ],
+            "net": 2.81188
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.6500000000000004,
+            "fee": 0.06228,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.53
+              }
+            ],
+            "net": 2.5877200000000005
+          }
+        },
+        "taker_cost_usd": 2.81188,
+        "central_expected_profit_usd": -1.81188,
+        "selected_stress_profit_usd": -2.81188,
+        "break_even_before_carry": 0.562376,
+        "break_even_constant_carry": 0.5652986091709706,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8,
+        "selected_stress_probability": 0.53,
+        "best_bid": 0.45,
+        "best_ask": 0.47,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792450429468",
+        "book_received_utc": "2026-10-19T22:54:10.350953+00:00",
+        "book_age_seconds_at_receipt": 20.88295316696167,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.3499999999999996,
+            "fee": 0.06228,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.47
+              }
+            ],
+            "net": 2.4122799999999995
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.25,
+            "fee": 0.06188,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.45
+              }
+            ],
+            "net": 2.18812
+          }
+        },
+        "taker_cost_usd": 2.4122799999999995,
+        "central_expected_profit_usd": 1.5877200000000005,
+        "selected_stress_profit_usd": 0.23772000000000082,
+        "break_even_before_carry": 0.4824559999999999,
+        "break_even_constant_carry": 0.48496327330147404,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Pursue tiny5NOpost-only<=46c/max2.30risk onlyafterfinalcurrentidentity/source/funding/caps/eligibility/gates. NOselectedpaperpositive, YESfails. Noorderplacedbythisrecord/noexecutioncertificate.",
+  "reopen_condition": "Each existingtick/materialGoogle/candidate/competitor/method/source/venueinput; cancel-firstunassessedchanges; Oct23 22UTCsource-stalenesshardpull; noautomaticadd/repost/chase/taker.",
+  "report_markdown": "#400 Dolly Parton Global Passings rank1 — small NO maker candidate\n\n**Primary YES20%/NO80%; broadYES5–55%, actualentryreserve27pp→selectedNO53%.** NO passes both-side paper comparison; pursue only a tiny5share post-onlybid≤46c/≤2.30risk through current execution gates. This record places no order.\n\n## Literal contract and evidence\n\nGoogle's official2026 **Global Passings rank1** controls; not U.S.People, absolute searches, a weeklypeak or an obituarypopularity list. Early settlement is possible upon list release. If no specifiedlist byMar31,2027 23:59ET, resolveOther; normalDecember mayfitJanuary, fallback maynot. Namedchild NO is not a guaranteed payout; Other/void/delay/oraclerisk is explicitly stressed.\n\nRoot read complete rule and verified its description byte-identical to56/203/310, with distinct condition/token identities. The categorical winner model is shared, not four independent forecasts. [Small facts](../../../data/deep_review_20261017/work/0400_facts_1826.json) · [addendum](../../../data/deep_review_20261017/work/0400_addendum_2250.json). Root hash-verified Dolly's officialAug25deathannouncement; eventeligibility does not establish rank. Knownentertainment/politicalcompetitors and future/unobserved events remain substantial. No source says celebrityrecognition equals Google's growth score.\n\nRoot hash-verified officialGoogle2025method body: fastest prior-year searchgrowth/internaltools, not total volume. Its exactwindow/formula/aliases are not established2026rules. Fresh22:58official2026route404/hub200 show only those routes/no exposed2026links; not exhaustiveabsence of an alternative/futurelist. [Finalsource check](../../../data/deep_review_20261017/work/0400_final_sourcecheck.json). One ordinaryGlobalfive-name2025–2026comparison after20h returned429; stopped/no timeline/proxy/retry. No values/rank/zero-interest conclusion. [Comparisonreceipt](../../../data/deep_review_20261017/work/0400_comparison_2256.json).\n\n## Primary probability and risk price\n\n[Price-blind model](../models/0400_primary_2255.json): Norris25/Pretti15/Parton20/Khamenei10/Hayden8/othercurrent2/later-unobserved18/missinglistOther2%, sum100. Parton's internationalmusic/philanthropy recognition merits meaningful mass; other globalicons/politicalshocks and an established searchbaseline resist claiming dominance. No newly observed ordering justifies changing the previously authored20%Parton weight. These are explicit primaryjudgment masses, not calibratedfrequencies or measuredGooglescores. NormalizedPartonweak5/strong55 scenarios expose fragility.\n\n[Entryconstraints](../models/0400_entry_constraints_2300.json) keep physical20/80 forecast unchanged afterquotes.20ppfamily/model reserve+5ppconditionalmakerfill+2ppzero-January-value stress on missinglist branch=27pp. NO53 is the selected entry comparison; broadNO45 can make even46c unattractive. No measured high-confidence bond-fade licence. Full2.30loss remains possible and a fill may follow new information.\n\n## Economics, size and alternatives\n\n22:54:10 exactGamma/rules/tokens/fees/bothbooks verified;20.88sbookageatreceipt/min5shares/tick1c/5%taker-onlycurve. [Bothsides](../../../data/deep_review_20261017/work/0400_economics_entry_2300.json):5YES55c costs2.81188/central−1.81188/selected−2.81188.5NO47c costs2.41228/central+1.58772/selected+.23772 beforecarry. Ordinarymaker46c risks2.30/central+1.70/selected+.35, zero makerfee. Current5NOexit45c nets2.18812, not a guaranteed futureexit. Finalrewalk/maxprice/postonly guards still apply; no taker urgency/fallback.\n\nFresh22:58:50–22:59:05authoritativeproducer195.55incl5.84gas; pUSD20.45/13.95after3oldBUY6.50. Root exactorder comparison unchanged/candidateindexabsent/CTFNO0. [Pre-entry evidence](../../../data/deep_review_20261017/work/0400_preentry_2300.json). Tiny5shares chosen below point/selectedfractionalKelly and caps; sharedGoogle/venue risk withMessi5YES gets no independence credit. Knowncash/3politicalbids/held riskscompared. Same-chainvariableAave3.2035%dated18:02 costs~.012on2.30over60days (~.033over164d), sensitivitynotforecast; operationalbuffer.05. These costs leave selectedmakeredgepositive.\n\nJointstress withordinaryholdings/oldbidslose andClarity29: dated177.64trading→175.34 ifnew2.30lost; pair0 148.64→146.34, otherassetsconstant. Scenarios are not probabilities or promisedliquidation. Any fill needs freshholding/source/netexit/jointrisk review; partials can become dust. No automaticadd/repost/chase.\n\nReview existingticks and earliernewdeath/competitor/Googlemethod/cutoff/list/preview/comparison/venueinformation; cancel-first on materialunassessedinput. HardpullOct23 22UTC because an unmeasured winnerdistribution supports only a fourday conditionalquote budget before freshunderwriting; this source-stalenesslimit is not automaticcronexpiry. This plan creates no newtimer. A futureGooglepublication should neverbe treated as a reason to buy afterresolutioninformation.\n"
+}
