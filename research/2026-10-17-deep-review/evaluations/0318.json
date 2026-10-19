@@ -1,0 +1,39 @@
+{
+  "review_index": 318,
+  "condition_id": "0x43cedce4a6af0136d37d53408fc965388baee3145db6da72a5b5da8d2746ced3",
+  "criteria_sha256": "ebbb47a9ac73b7956068ac4a2510e2826d4b0bb7dc9eb082d45e7a8eb2b435c2",
+  "status": "blocked_after_review",
+  "literal_analysis": "Nov3AlaskaGovwinner;allAP/Fox/NBCsamecallorofficialcert;Jul312027Otherfallback. FullRCV/candidatefieldandquestionbinding needed. Exactbinaryidentitiespreserved.",
+  "evidence": [
+    {
+      "url": "https://www.elections.alaska.gov/election-candidates/",
+      "observed_utc": "2026-10-19T08:38:11.938128+00:00",
+      "finding": "NormalTLSfailsincludingoneordinarysystemCAretry; officialindexedcandidateleadnotcurrentcapturedcertification."
+    },
+    {
+      "url": "https://alaskasurveyresearch.com/",
+      "observed_utc": "2026-10-19T08:37:28.394570+00:00",
+      "finding": "403;secondaryASR48/27/15/10firstchoiceand54KJT/46WilsonfinalRCVattributionsnotoriginalquestion/method; regionalprimaryoriginationpassdidnotclosegap."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "low": null,
+    "high": null,
+    "method": "Not adopted: load-bearing currentfield/originalRCVpollbinding unresolved aftertwo substantivepasses.",
+    "reasoning": "Averagingfirstchoice/finalRCV/combinedRepublicans orusingother-seatpollwouldcreateafalseestimate."
+  },
+  "economics": {
+    "both_sides_considered": false,
+    "reason": "No defensible adoptedp; bothsidesremainunpriced,notrejected. Noordersorfinancialprior."
+  },
+  "verdict": "Blocked_after_review onnamedsource-bindingfacts; noteligibilityexclusionorprobabilityrejection.",
+  "reopen_condition": "OriginalASRquestion-levelpoll/crediblepollsterinterviewpluscurrentballot/RCVconfirmation,thenprimaryvaluation/bothsides/currentgates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T08:54:44.601814+00:00",
+  "question": "Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election?",
+  "market_id": "635016",
+  "valuation_author": "primary_operator",
+  "original_index": 318,
+  "report_sha256": "4b9efec367decfa4779970ef2b6a63f29ee8d7d4f3c92ef6e03297bfba354ae5"
+}

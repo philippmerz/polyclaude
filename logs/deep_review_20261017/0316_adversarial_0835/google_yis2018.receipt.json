@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_adversarial_0835/google_yis2018.body.gz",
+  "error": null,
+  "final_url": "https://trends.withgoogle.com/year-in-search/2018/",
+  "gzip_bytes": 63794,
+  "gzip_sha256": "22f53a9382856d1e8602f9a6e86423944d1a4c4843b9b05461e856b17885f60a",
+  "headers": {
+    "cache-control": "max-age=300",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:32:25 GMT"
+  },
+  "method": "GET",
+  "name": "google_yis2018",
+  "raw_bytes": 542955,
+  "raw_sha256": "39251586c69aa3882eda1ccdaf2dfdfbf3b643b1a29e403456e42d243da13be2",
+  "received_utc": "2026-10-19T08:32:25.768130+00:00",
+  "requested_url": "https://trends.withgoogle.com/year-in-search/2018/",
+  "started_utc": "2026-10-19T08:32:21.185524+00:00",
+  "status_code": 200
+}

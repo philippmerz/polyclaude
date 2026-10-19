@@ -1,0 +1,77 @@
+{
+  "schema": "bounded_entry_followup_resume.v1",
+  "phase": "COMPLETE: BOTH_LIVE_UNFILLED_INDEPENDENTLY_VERIFIED09:09; DO_NOT_REPOST",
+  "indices": [
+    313,
+    316
+  ],
+  "physical_priors": {
+    "313_yes": 0.84,
+    "316_yes": 0.35
+  },
+  "actual_entry_reserves_pp": {
+    "313": 20,
+    "316": 25
+  },
+  "planned_only": {
+    "313": "5YES maker<=54c, preview53c/$2.65; negRiskTRUE",
+    "316": "10NO maker<=14c/$1.40; negRiskFALSE"
+  },
+  "pull_boundary": "Anyunfillednewbids cancelatEXISTINGOct19 10UTCcheck;earliermaterialuncertaintycancel-first;noautopost/add/repost/taker",
+  "completed": [
+    "313/314/316/317/319 valued;318blocked;everycaseindexed/checkpoint316valued6blocked364factual2314pending",
+    "Facts-onlycatalysttooladded;3focusedtestspasswithPYTHONPATH=scripts;no modelprobabilitiesused",
+    "Freshstatus08:37/bankroll196.61incl5.86gas;PM35.62mid/33.75depth;trading190.75/depth188.88 roundedsequential",
+    "Authaccount08:40:8positions,4BUY7.52zero-match;bothcandidateCTFoutcomeszero",
+    "Wallet20.451290pUSD/7.52committed/12.931290deployable;negRiskTRUEandFALSEexchangeapprovalsverified separately",
+    "Fresh08:42publicexactidentities/fees/geoblockfalse;bookages62.94s313/74.78s316;datednotcurrentexecutionauthority",
+    "Newcandidatepriorsregisteredwithclusters;alloldentriesunchanged;313Rhine/316GooglesharedMessi;financialstatusRESEARCH_CANDIDATE_NO_ORDER",
+    "Bothvettedentrydryrunsclearafterclusterregistration;fixedmanualsizing,notKellyrecommendation",
+    "Whale08:40source8mESTIMATEstill,globalflopheadlinenotdomesticchange;MInewstownsamedatedevent/spendclaimunverified;retain/noadd"
+  ],
+  "monitoring": {
+    "warmup_utc": "2026-10-19T08:46:32.385892Z",
+    "feeds": [
+      "Rhine Kaub water level",
+      "Erling Haaland Google athlete"
+    ],
+    "configsha": "7c705515b4933afdef46732ba1342db545a111e3dc4b00932bfb63bb022d5278",
+    "last_checked_state_save": "08:46:25Z beforewarmup,soingestionnotyetproven",
+    "daemon": "canonicalnews148881;codepredatesstart;hotreloadnormalcycles;rawTelegramoff",
+    "required": "Normalpost-warmupsaveseescurrentfirst30feedIDs/titlehashesbeforepromotingterms;thenproveanormalpost-promotionreloadbeforeplacement. Nomanualpoll/stateedit/restart/newdaemon/timer.",
+    "promotion_proof": "data/deep_review_20261017/work/entry0858_terms_promotion.json",
+    "tier1terms_added": [
+      "Kaub",
+      "Erling Haaland"
+    ]
+  },
+  "next": "Existing10UTC: cancelALLunfillednewRhine/Haalandorders;earliermaterialuncertaintycancelfirst. Ifanyfill,source/holdingreunderwrite. Nextresearch320. Nativegoalblockedrequiresapp/systemresume.",
+  "goal_control": "Operatorresumedinteractivework;nativeget_goalstillblocked08:42andtoolsdonotexposeresume. Do notmarkcomplete/createanothergoal/edprivategoalstate; automaticcontinuationneedsappuser/systemcontrol.",
+  "rhine_order_id": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+  "rhine_proof": "data/deep_review_20261017/work/0313_root_order_verified_0905.json",
+  "haaland_execution_log": "logs/deep_review_20261017/entry_0838/haaland_execute.txt",
+  "post_entry_proof": "data/deep_review_20261017/work/post_entry0909_root_verified.json",
+  "decisions": {
+    "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026": 229,
+    "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026": 230
+  },
+  "actual_orders": [
+    {
+      "index": 313,
+      "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+      "shares": 5.0,
+      "price": 0.53,
+      "risk": 2.6500000000000004,
+      "matched": 0
+    },
+    {
+      "index": 316,
+      "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+      "shares": 10.0,
+      "price": 0.13,
+      "risk": 1.3,
+      "matched": 0
+    }
+  ],
+  "sibling_route_audit": "data/deep_review_20261017/work/entry0927_sibling_route_audit.json"
+}

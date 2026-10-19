@@ -1,0 +1,210 @@
+{
+  "captured_utc": "2026-10-19T08:40:47.178633+00:00",
+  "positions_count": 8,
+  "position_financial_rows": [
+    {
+      "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+      "outcome": "Yes",
+      "size": 29,
+      "initialValue": 2.3199,
+      "totalBought": 29,
+      "redeemable": false,
+      "curPrice": 0.045
+    },
+    {
+      "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+      "outcome": "No",
+      "size": 29,
+      "initialValue": 25.8099,
+      "totalBought": 29,
+      "redeemable": false,
+      "curPrice": 0.93
+    },
+    {
+      "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+      "outcome": "No",
+      "size": 6,
+      "initialValue": 1.02,
+      "totalBought": 6,
+      "redeemable": false,
+      "curPrice": 0.135
+    },
+    {
+      "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+      "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+      "outcome": "Yes",
+      "size": 5,
+      "initialValue": 1.35,
+      "totalBought": 5,
+      "redeemable": false,
+      "curPrice": 0.265
+    },
+    {
+      "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "outcome": "No",
+      "size": 5,
+      "initialValue": 1.55,
+      "totalBought": 5,
+      "redeemable": false,
+      "curPrice": 0.295
+    },
+    {
+      "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+      "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
+      "outcome": "No",
+      "size": 5,
+      "initialValue": 3.25,
+      "totalBought": 5,
+      "redeemable": false,
+      "curPrice": 0.655
+    },
+    {
+      "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+      "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+      "outcome": "No",
+      "size": 4.0347,
+      "initialValue": 0.6394,
+      "totalBought": 161.0947,
+      "redeemable": true,
+      "curPrice": 0
+    },
+    {
+      "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+      "outcome": "No",
+      "size": 0.33,
+      "initialValue": 0.2907,
+      "totalBought": 28.33,
+      "redeemable": false,
+      "curPrice": 0.9605
+    }
+  ],
+  "open_buys": [
+    {
+      "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "conditionId": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+      "asset": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+      "originalShares": 34.0,
+      "matchedShares": 0.0,
+      "remainingShares": 34.0,
+      "price": 0.03,
+      "risk": 1.02,
+      "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
+      "question": "Will Todd Achilles win the Idaho Senate race in 2026?",
+      "eventIds": [
+        "57643"
+      ]
+    },
+    {
+      "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "conditionId": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "asset": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "originalShares": 10.0,
+      "matchedShares": 0.0,
+      "remainingShares": 10.0,
+      "price": 0.12,
+      "risk": 1.2,
+      "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
+      "question": "Will the Democratic Party win the NY-01 House seat?",
+      "eventIds": [
+        "191557"
+      ]
+    },
+    {
+      "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "conditionId": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "asset": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "originalShares": 50.0,
+      "matchedShares": 0.0,
+      "remainingShares": 50.0,
+      "price": 0.03,
+      "risk": 1.5,
+      "slug": "will-the-democratic-party-win-the-ca-06-house-seat",
+      "question": "Will the Democratic Party win the CA-06 House seat?",
+      "eventIds": [
+        "190897"
+      ]
+    },
+    {
+      "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "conditionId": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "asset": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "originalShares": 10.0,
+      "matchedShares": 0.0,
+      "remainingShares": 10.0,
+      "price": 0.38,
+      "risk": 3.8,
+      "slug": "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016",
+      "question": "Will the Democratic Party win the ME-02 House seat?",
+      "eventIds": [
+        "726881"
+      ]
+    }
+  ],
+  "merged_commitments": [
+    {
+      "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "conditionId": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "slug": "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016",
+      "question": "Will the Democratic Party win the ME-02 House seat?",
+      "eventIds": [
+        "726881"
+      ],
+      "asset": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "risk": 3.8,
+      "remainingShares": 10.0,
+      "reservationId": "1792270288866840753-48c4e9d4",
+      "submissionState": "live",
+      "cluster": null
+    },
+    {
+      "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "conditionId": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "slug": "will-the-democratic-party-win-the-ca-06-house-seat",
+      "question": "Will the Democratic Party win the CA-06 House seat?",
+      "eventIds": [
+        "190897"
+      ],
+      "asset": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "risk": 1.5,
+      "remainingShares": 50.0,
+      "reservationId": "1792270316592572015-fc54aec2",
+      "submissionState": "live",
+      "cluster": null
+    },
+    {
+      "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "conditionId": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
+      "question": "Will the Democratic Party win the NY-01 House seat?",
+      "eventIds": [
+        "191557"
+      ],
+      "asset": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "risk": 1.2,
+      "remainingShares": 10.0,
+      "reservationId": "1792272900263701705-71e35e1a",
+      "submissionState": "live",
+      "cluster": null
+    },
+    {
+      "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "conditionId": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+      "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
+      "question": "Will Todd Achilles win the Idaho Senate race in 2026?",
+      "eventIds": [
+        "57643"
+      ],
+      "asset": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+      "risk": 1.02,
+      "remainingShares": 34.0,
+      "reservationId": "1792282073257552169-98c5c301",
+      "submissionState": "live",
+      "cluster": null
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_current_sources_0826/fifa_haaland_round16.body.gz",
+  "error": null,
+  "final_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexico2026/articles/matchday-20-round-up-review-highlights",
+  "gzip_bytes": 1882,
+  "gzip_sha256": "9e2ff81d3f68866ecc679b84ed6c7e85a523286cfcdbf1dfb9f5469fecc7fb01",
+  "headers": {
+    "cache-control": "public, max-age=60",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:26:22 GMT"
+  },
+  "http_status": 200,
+  "method": "GET",
+  "name": "fifa_haaland_round16",
+  "raw_bytes": 4553,
+  "raw_sha256": "bc10e8e15cd89e1582fc61a9736b13b13bc6c586a07f325f9651ecf53481235d",
+  "received_utc": "2026-10-19T08:26:22.416013+00:00",
+  "requested_url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexico2026/articles/matchday-20-round-up-review-highlights",
+  "started_utc": "2026-10-19T08:26:21.660022+00:00"
+}

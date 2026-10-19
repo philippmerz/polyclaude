@@ -1,0 +1,17 @@
+{
+  "body_sha256": "ec4622453a1eb61cc22e32abf166d2c7607561bea19107d68ceeec0039b46420",
+  "captured_bytes": 98658,
+  "content_type": "text/html;charset=utf-8",
+  "final_url": "https://www.israelnationalnews.com/news/434811",
+  "gzip_path": "logs/deep_review_20261017/held_michigan_0810/inn.body.gz",
+  "gzip_sha256": "e3272ee5d5b45607f5d677c8a6b0c902acb3c53d0bb7c6d449b9191499fa7ab2",
+  "name": "inn",
+  "received_utc": [
+    "2026-10-19T08:41:11.201301+00:00",
+    "2026-10-19T08:41:11.285835+00:00"
+  ],
+  "redirects": [],
+  "requested_url": "https://www.israelnationalnews.com/news/434811",
+  "status": 200,
+  "truncated": false
+}

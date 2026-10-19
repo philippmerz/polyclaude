@@ -1,0 +1,1 @@
+{"name":"station_page","request":{"call_window_label":"case313 Kaub archive navigation","method":"GET","read_only":true,"scope":"Official Kaub station metadata page and public long-term raw-data download link","url":"https://pegelonline.wsv.de/gast/stammdaten"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:23:16.937168Z","timing_basis":"call_window"}

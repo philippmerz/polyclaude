@@ -1,0 +1,1 @@
+{"name":"bulk_index","request":{"call_window_label":"case317 follow-up","method":"GET","read_only":true,"scope":"public official legislative status","url":"https://www.govinfo.gov/bulkdata/BILLSTATUS"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:42:35.550340Z","timing_basis":"call_window"}

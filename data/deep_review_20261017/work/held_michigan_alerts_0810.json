@@ -1,0 +1,39 @@
+{
+  "schema": "held_michigan_alert_source_check.v1",
+  "captured_utc": "2026-10-19T08:41:11Z",
+  "scope": "Public source facts only. No probability, market-price, or position recommendation.",
+  "frozen_market": {
+    "index": 1838,
+    "market_id": "630805",
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
+    "prior_context": "work/held_michigan_sources_0150.json; held 5 NO context. Parent reports current pDem 56%; this source audit makes no update."
+  },
+  "checks": [
+    {
+      "alert_id": "e46af719870ada9fff6c0fcad7f88994fc99700d",
+      "alert_utc": "2026-10-19T08:09:01Z",
+      "headline": "Republican Group Invests Another $4.7 Million in Michigan Senate Race as El-Sayed and Rogers Race Narrows",
+      "source": "The New York Sun",
+      "publisher_body_status": "UNVERIFIED: alert Google News URL redirected to Google consent page (HTTP 200), not the publisher article. Search did not surface this exact story. No source-body capture or attributed investment statement was obtained.",
+      "capture": "logs/deep_review_20261017/held_michigan_0810/nyt_sun.receipt.json",
+      "raw_sha256": "f3b9e2ba370e3a1e92d8e047882d43f02d0c6dec06966eb8723f117b57e221b9",
+      "gzip_sha256": "ef67fdf2f29aced30ef887f991bacb424884e2907ecb4c4731960f748d3c4b2e",
+      "fact_status": "The $4.7M amount, spending group, whether it is incremental, spend type, timing, and 'race narrows' basis remain unverified; headline alone is not evidence of a new measured poll or new spend relative to previous announcements."
+    },
+    {
+      "alert_id": "f9f38cd626ecbd2e5e10ce64c2a87463b5ea0a97",
+      "alert_utc": "2026-10-19T07:31:38Z",
+      "source": "Israel National News",
+      "url": "https://www.israelnationalnews.com/news/434811",
+      "published_local": "2026-10-19T05:38:21 (site metadata; article page timezone not explicitly encoded)",
+      "published_utc_conversion": "Approximately 02:38Z if the displayed local time is GMT+3; preserve as publisher-local rather than treating conversion as verified metadata.",
+      "body_facts": "The article says the exchange occurred at a campaign town hall on Saturday; in a four-minute social video an attendee asked whether El-Sayed would disavow the Muslim Brotherhood. It reports his response 'Sure. Yeah, absolutely,' followed by his challenge about why he was asked and his view that the question implied assumptions about his Muslim identity/loyalty. It gives no poll, polling method, withdrawal, ballot change, or measured voter effect.",
+      "relation_to_prior": "Matches the already-reported Oct17 Caro exchange in work/delayed1959_michigan_facts_0340.json and the same event described by NewsNation in work/delayed2134_michigan_facts_0347.json. Treat as repeat coverage of that event, not a newly occurring statement or independent electoral measurement.",
+      "capture": "logs/deep_review_20261017/held_michigan_0810/inn.receipt.json",
+      "raw_sha256": "ec4622453a1eb61cc22e32abf166d2c7607561bea19107d68ceeec0039b46420",
+      "gzip_sha256": "e3272ee5d5b45607f5d677c8a6b0c902acb3c53d0bb7c6d449b9191499fa7ab2"
+    }
+  ],
+  "limitations": "One targeted batched search and two GETs were used. New York Sun article/body and the alleged incremental investment remain unresolved; bounded failure to obtain the publisher body is not evidence that the headline is false."
+}

@@ -1,0 +1,23 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 317,
+  "price_blind": true,
+  "p_yes": 0.4,
+  "low": 0.1,
+  "high": 0.8,
+  "event": "Comprehensive crypto-market-structure legislation enacted as US federal law byDec31 2026ET; all3substantive tests, not stablecoin-only/rules/executiveaction",
+  "primary_bridge": "3% current-status/other-qualifying-law gap branch alreadyqualifying;45% future mainSenatepassage branch, with85% timelyHouseconcurrence and95% timelyenactment conditional on that; remaining52% mainbillstalled branch with2% otherqualifyinglaw. .03+.45*.85*.95+.52*.02=.403775,rounded40%. Branches sum1; conditionals explicit judgment, not legislative hazard calibration.",
+  "evidence_bridge": "HousepassedJul172025; SenateBankingreportedamendedbillJun12026; GovInfoSep17snapshotrecordsfailedSep15clotureonthemotiontoproceed/reconsideration/amendment. Oct13Househistory/SenatecalendarandOct16CongressionalRecordIndexextenddatedevidencebutdoNOTcertifyfullcurrentenactmentstatusorotherbills. Committeeprogressgivesarealroute,failedcloture/bicameralamendment/calendarfrictionprecludesnearcertainty. CurrentCongressHTML403 andboundedWhiteHouselisting/searcharecoveragegaps,notproofnoneenacted.",
+  "scope_caution": "Agencytaxonomy/rules maymeetanalogouspolicygoalsbutarenotlegislationunderthiscontract; GENIUS/STABLE/antiCBDC/tax-only laws expresslyexcluded. A differentcomprehensivebillcouldqualify. HeldClaritySenatevotecountpair is NOT this lawclaim and cloture is NOTfinalpassage.",
+  "entry_reserve_pp": 20,
+  "reserve_reason": "15pp unmeasuredlegislative/currentstatus/scopeerror+5ppconditionalpassivefillsensitivity; selectedYES20/NO40. Wide10-80rangeisnotaconfidenceinterval.",
+  "timing": "StatutoryenactmentbyDec31ET,verification/redemptionmayrunintoJanuary;75daycarrydiagnostic. Politicalelection/lame-duck/dealtext and floor-notice catalysts can change the forecast abruptly.",
+  "dependence": "Materialsame-billfactorwithheldClarityvotecountpair; NOmayoffsetsomepassagebonusbutnocalibratedjointdistributionorhedgecredit. CompareRhine/GooglecandidateedgesandAavebeforeallocating.",
+  "source_units": [
+    "data/deep_review_20261017/work/0317_facts_0837.json",
+    "data/deep_review_20261017/work/0317_govinfo_status_0845.json",
+    "data/deep_review_20261017/work/0317_govinfo_late_records_0850.json"
+  ],
+  "execution_authority": false,
+  "constructed_utc": "2026-10-19T08:50:35.925560+00:00"
+}

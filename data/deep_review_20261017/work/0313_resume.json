@@ -1,0 +1,23 @@
+{
+  "review_index": 313,
+  "source_paths": [
+    "work/0313_facts_0235.json",
+    "work/0313_start_forecast_0310.json",
+    "work/0313_earlier_window_0315.json",
+    "work/0313_history_gap_followup_0320.json",
+    "work/0313_history_root_verified_0315.json",
+    "work/0313_history_resume_0820.json",
+    "work/0313_history_archive_0825.json",
+    "work/0313_forecast_followup_0828.json",
+    "work/0313_0316_current_refresh_0900.json"
+  ],
+  "phase": "Official forecast sources now captured: ELWIS current deterministic display through Oct23, a BfG probabilistic 14-day PDF through Oct31 (daily-mean threshold probabilities), and a dated 6-week weekly-mean product. Probabilities do not directly represent any-15-minute-reading market triggers. Historical source findings remain in linked units; facts only. One bounded official-source refresh on Oct19 08:56Z: current Kaub snapshot, BfG PDF unchanged by SHA, and Google YIS hub redirect observed.",
+  "updated_utc": "2026-10-19T08:56:53Z",
+  "load_bearing_unknowns": [
+    "Frozen contract interpretation of the pre-October Sep6 market start versus the title's October period remains for the primary reviewer.",
+    "The newly parsed WSV archive metadata labels quality unchecked; source observations are not a separate quality certification.",
+    "14-day probability is for daily means, not any qualifying instantaneous reading; 6-week product reports weekly means and its Oct29–Nov4 low class spans both sides of 77cm.",
+    "The 14-day PDF is initialized Oct18, while the current ELWIS short-range display says Oct19 07:00 and only displays through Oct23. No official 14-day forecast initialized on Oct19 was retrieved."
+  ],
+  "next_bounded_step": "Source pass complete. Primary reviewer may compare daily/weekly forecast products with the separately captured observations and exact frozen rule; no contract probability or market quote supplied."
+}

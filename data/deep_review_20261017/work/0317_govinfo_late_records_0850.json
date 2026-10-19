@@ -1,0 +1,52 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 317,
+  "market_id": "3190125",
+  "condition_id": "0x8ab4ef09c4d357811b4250f8fd9acfb662c3cfdee847188800873c8c23aefdd3",
+  "frozen_criteria_sha256": "2d42efce67a50d391f18c4a7c57ad2acc89e506481a217da00839d21a4a21482",
+  "observed_utc": "2026-10-19T08:48:33Z",
+  "scope": "Four bounded official GovInfo records for H.R. 3633: CRI entry/context and its 3 KB text, the Oct 13 Senate calendar cover/special orders, and the Oct 13 House bill history. These sources do not inventory all potentially qualifying bills.",
+  "sources": [
+    {
+      "name": "Congressional Record Index 2026 H.R.3633 entry",
+      "url": "https://www.govinfo.gov/content/pkg/CRI-2026/html/CRI-2026-DIGITAL-ASSET-MARKET-CLARITY-BCF18C.htm",
+      "context_url": "https://www.govinfo.gov/app/details/CRI-2026/CRI-2026-DIGITAL-ASSET-MARKET-CLARITY-BCF18C/context",
+      "context_receipt": "logs/deep_review_20261017/clarity317_oct13_0900/cri_context.receipt.json",
+      "context_body": "logs/deep_review_20261017/clarity317_oct13_0900/cri_context.body.json.gz",
+      "context_sha256": "63273fbd004859db4efd6347d868d094c0b78123a20c88d7c13ccd8cf46cf9bc",
+      "context_received_utc": "2026-10-19T08:48:23.319765Z",
+      "context_http_status": 200,
+      "context_bytes": 914190,
+      "text_receipt": "logs/deep_review_20261017/clarity317_oct13_0900/cri_text.receipt.json",
+      "text_body": "logs/deep_review_20261017/clarity317_oct13_0900/cri_text.body.json.gz",
+      "text_sha256": "b1d09dd76065ce69f5053c9876ddec9bd7bd05b0e90d1b72526b5c42ed49964c",
+      "text_received_utc": "2026-10-19T08:48:31.822971Z",
+      "text_http_status": 200,
+      "text_last_modified": "Fri, 16 Oct 2026 21:56:29 GMT",
+      "finding": "The record indexes H.R.3633 Senate remarks and procedural references through Sep16, 2026: motion-to-proceed cloture references dated Aug7/Sep15, proceedings dated Sep15–16, and the Senate Banking report reference dated Jun1. This is an index of Congressional Record entries, not a bill-status or enactment certification."
+    },
+    {
+      "name": "Senate calendar cover and special orders, Oct13 2026",
+      "url": "https://www.govinfo.gov/content/pkg/CCAL-119scal-2026-10-13/html/CCAL-119scal-2026-10-13-pt0.htm",
+      "receipt": "logs/deep_review_20261017/clarity317_oct13_0900/senate_calendar.receipt.json",
+      "body": "logs/deep_review_20261017/clarity317_oct13_0900/senate_calendar.body.json.gz",
+      "http_status": 200,
+      "received_utc": "2026-10-19T08:48:32.123636Z",
+      "last_modified": "Sat, 10 Oct 2026 05:24:28 GMT",
+      "raw_sha256": "74faa45652119e66ec8ef86e811c5c0330044535d4d774cbdc3d930f20822169",
+      "finding": "The Oct13 calendar special-orders section lists H.R.3633, Order No.423, and reproduces a Sep15 order waiving the mandatory quorum call in relation to cloture on the motion to proceed. This is a dated calendar entry, not a future floor date."
+    },
+    {
+      "name": "House calendar history of bills, Oct13 2026",
+      "url": "https://www.govinfo.gov/content/pkg/CCAL-119hcal-2026-10-13/html/CCAL-119hcal-2026-10-13-pt9.htm",
+      "receipt": "logs/deep_review_20261017/clarity317_oct13_0900/house_calendar.receipt.json",
+      "body": "logs/deep_review_20261017/clarity317_oct13_0900/house_calendar.body.json.gz",
+      "http_status": 200,
+      "received_utc": "2026-10-19T08:48:32.629924Z",
+      "last_modified": "Sat, 10 Oct 2026 05:22:14 GMT",
+      "raw_sha256": "7e484f3aa475c59c375a59db9394cda12aa4693513e1d12c9fd981db4f3173f3",
+      "finding": "The H.R.3633 history states House passage July17 2025, receipt/referral in Senate Sep18 2025, and Senate Banking report with amendment June1 2026. It gives no later H.R.3633 bill-history event in this dated document."
+    }
+  ],
+  "temporal_and_scope_limits": "The index text HTTP Last-Modified is Oct16; the two Oct13 calendars were last modified Oct10. Retrieval was Oct19. These records extend the available dated coverage beyond the Sep17 XML Last-Modified, but do not certify developments after their own dates or the state of other potentially qualifying bills. No inference of universal non-enactment or no other qualifying bill is made."
+}

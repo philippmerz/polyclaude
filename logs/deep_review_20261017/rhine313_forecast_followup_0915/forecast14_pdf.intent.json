@@ -1,0 +1,1 @@
+{"name":"forecast14_pdf","request":{"call_window_label":"case313 official Kaub forecast source check","method":"GET","read_only":true,"scope":"Official BfG-linked Kaub probabilistic 14-day forecast PDF","url":"https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:28:43.141526Z","timing_basis":"call_window"}

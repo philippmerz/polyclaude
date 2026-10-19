@@ -1,0 +1,48 @@
+{
+  "records": [
+    {
+      "case": 313,
+      "status": "valued",
+      "report_sha256": "e303fb5c06abcd78f0346dbbab3daf54e30d719c51a7d2dcd8f913fc0660de26",
+      "json_bytes": 6156,
+      "md_bytes": 3549
+    },
+    {
+      "case": 314,
+      "status": "valued",
+      "report_sha256": "b0b9ccb479c035565b342903ff121966cdff85be1397afde0406ddda1aa3dc0b",
+      "json_bytes": 6099,
+      "md_bytes": 3572
+    },
+    {
+      "case": 316,
+      "status": "valued",
+      "report_sha256": "df52c240b712c53d3bdb11e1727b8cd00ae5ca82b4ee37f3b41ed94c46e33add",
+      "json_bytes": 6577,
+      "md_bytes": 4117
+    },
+    {
+      "case": 317,
+      "status": "valued",
+      "report_sha256": "37328d83b79f28ed402a2f3ecb70eb2268c0981efffeb6fa555581ba6bead545",
+      "json_bytes": 6118,
+      "md_bytes": 3540
+    },
+    {
+      "case": 318,
+      "status": "blocked_after_review",
+      "report_sha256": "4b9efec367decfa4779970ef2b6a63f29ee8d7d4f3c92ef6e03297bfba354ae5",
+      "json_bytes": 2095,
+      "md_bytes": 3296
+    },
+    {
+      "case": 319,
+      "status": "valued",
+      "report_sha256": "22b6637e264d93da04df6045477c497538c0dde592c01a04e637475579e636fb",
+      "json_bytes": 5927,
+      "md_bytes": 3196
+    }
+  ],
+  "all_frozen_identities_reports_match": true,
+  "checkpoint": "316valued6blocked364factual2314pending"
+}

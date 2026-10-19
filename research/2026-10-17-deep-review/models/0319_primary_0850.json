@@ -1,0 +1,19 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 319,
+  "price_blind": true,
+  "p_yes": 0.01,
+  "low": 0.001,
+  "high": 0.12,
+  "event": "Rounded upperbound <=1% afterDec2026FOMC; noDecemberdecision usesDec31currentupperbound",
+  "observed_bridge": "Latest capturedSep16officialstatement raisedupperbound3.75to4.00. Reaching<=1 requiresroughly300bpnetcuts before/attheDec8-9decision; ordinary25/50bpcutsatOct27-28andDec8-9arenotenough. Roundingpermitsunroundedupperbound<1.125%,whichstillrequires>287.5bp; exact1.125roundsawayto1.25andloses.",
+  "primary_mixture": "2% severecrisis/fastemergency-easingregime with40% chanceofsuchdeepratecuts byDecember;98% ordinary/stagflation/gradual-easingregime with0.1%thresholdchance. .02*.4+.98*.001=.00898,rounded1%. Weightsareprimaryjudgment,notfittedhazardratesorprobabilitiesinSEP.",
+  "current_evidence": "SepSEPparticipant2026median4.1%,range3.9-4.4 supportsordinarybranchbutisnotaprobabilitydistribution/guarantee. SepCPIreleasedOct14+0.6%m/m/+3.7%y/y,core+0.3/+2.6,gasoline+9.1; SepemploymentreleasedOct2payroll+29k,unemployment4.2: weakjobsbutinflationconstraint. Emergencyunscheduledcutsremainlegally/operationallypossible; noknowncurrentcrisisabsenceclaimfromboundedarchive.",
+  "entry_reserve_pp": 15,
+  "reserve_reason": "10pp unmeasuredregime/modeluncertainty+5ppconditionalpassivefillsensitivity. NOselected84%; currentrateisfirsthandmeasurementbutdoesNOTmeasure75-dayemergency-crisistail. NoK=5bond-taillicensefromSEP/currentratealone.",
+  "timing": "Decemberstatementmayresolveearly,normalJanuaryredeemablefitsproject; fallbackDec31ET.75-daycarrydiagnostic.",
+  "dependence": "SharesFed/inflation/recessionregimeriskwithTreasury/crypto/electionexposures; no independentdiversificationorhedgecredit. TreasuryyieldthresholdprobabilitiescannotbetransferredtoFedpolicy.",
+  "source_unit": "data/deep_review_20261017/work/0319_facts_resume_0837.json",
+  "execution_authority": false,
+  "constructed_utc": "2026-10-19T08:49:10.099907+00:00"
+}

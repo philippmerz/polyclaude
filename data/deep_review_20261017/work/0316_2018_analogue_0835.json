@@ -1,0 +1,37 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "review_index": 316,
+  "observed_utc": "2026-10-19T08:32:26Z",
+  "scope": "Historical-method and public Trends proxy facts only; no ranking forecast, probability, price or decision.",
+  "frozen_identity_ref": "work/0316_facts_resume_0820.json",
+  "google_2018_primary_page": {
+    "url": "https://trends.withgoogle.com/year-in-search/2018/",
+    "http_status": 200,
+    "received_utc": "2026-10-19T08:32:25.768130+00:00",
+    "raw_bytes": 542955,
+    "raw_sha256": "39251586c69aa3882eda1ccdaf2dfdfbf3b643b1a29e403456e42d243da13be2",
+    "gzip_sha256": "22f53a9382856d1e8602f9a6e86423944d1a4c4843b9b05461e856b17885f60a",
+    "body": "logs/deep_review_20261017/0316_adversarial_0835/google_yis2018.body.gz",
+    "global_athletes_top10": [
+      "Tristan Thompson", "Alexis Sánchez", "Lindsey Vonn", "Shaun White", "Khabib Nurmagomedov",
+      "Kawhi Leonard", "Naomi Osaka", "Philippe Coutinho", "Conor McGregor", "Harry Kane"
+    ],
+    "method_link": "/year-in-search/data-methodology/",
+    "method_limit": "The 2018 page itself gives no data cutoff or method parameters. The linked/current methodology source retained in google_time_sources.json describes 2025 only; it says 2025 lists used fastest YoY search-interest growth Jan 1-Nov 25 vs matching 2024 dates with Google Trends and internal tools. It does not establish the 2018 or 2026 cutoff/method."
+  },
+  "global_trends_proxy": {
+    "request": "GET https://trends.google.com/trends/api/explore?hl=en-US&tz=0&req=<comparisonItem: Erling Haaland, Lionel Messi, Kylian Mbappe; geo empty/global; time 2025-01-01 2026-10-18 for each; category 0; property empty>",
+    "http_status": 429,
+    "received_utc": "2026-10-19T08:32:25.851673+00:00",
+    "raw_bytes": 1701,
+    "raw_sha256": "043271312c18d014dd0572e0c46f7799a46a6989fde7803545b6a6a9bfd010b5",
+    "gzip_sha256": "9d95cc523b989925326541ff6572f8bf79f76143178953436d1c687d5bfe1e77",
+    "body": "logs/deep_review_20261017/0316_adversarial_0835/trends_explore.body.gz",
+    "result": "No comparison values obtained; no widget request or retry made after 429. If accessible, normalized Trends values would remain a term-growth proxy, not Google’s internal YoY category rank."
+  },
+  "limits": [
+    "The 2018 global Athletes list includes Harry Kane at rank 10; it is a different year and cannot establish Haaland's 2026 rank.",
+    "No 2018 category-specific cutoff was found in the retained page; don't transfer 2025 Nov 25 to 2018 or 2026.",
+    "No Haaland/Messi/Mbappe Trends time series was retrieved; the single global explore request returned 429 and was not retried."
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "review_index": 319,
+  "source_paths": [
+    "work/0319_facts_resume_0837.json",
+    "work/0319_http_receipts_0837.json"
+  ],
+  "phase": "Bounded official fact pass complete; current frozen identity, latest captured FOMC decision/remaining meeting dates, September SEP, and reused official CPI/employment facts documented. No forecast or eligibility decision.",
+  "updated_utc": "2026-10-19T08:39:31.671986Z",
+  "load_bearing_unknowns": [
+    "Fresh FOMC archive completeness after Oct17 not re-captured; direct BLS CPI retrieval in this pass returned 403, though prior official 200 capture is preserved.",
+    "No PPI or exhaustive macro-release inventory captured in this bounded pass."
+  ],
+  "next_bounded_step": "Primary reviewer may use these dated source facts; distinguish SEP projection from resolution outcome and retain the archive recency limitation."
+}

@@ -1,0 +1,73 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 317,
+  "market_id": "3190125",
+  "condition_id": "0x8ab4ef09c4d357811b4250f8fd9acfb662c3cfdee847188800873c8c23aefdd3",
+  "frozen_criteria_sha256": "2d42efce67a50d391f18c4a7c57ad2acc89e506481a217da00839d21a4a21482",
+  "observed_utc": "2026-10-19T08:42:40Z",
+  "scope": "One official-source follow-up on H.R. 3633 and two dated Senate statements. Facts only. This is not an inventory of all bills that could meet the frozen definition.",
+  "official_bulk_data_documentation": {
+    "url": "https://github.com/usgpo/bill-status",
+    "retrieved_by": "single targeted official-domain web search; no separate GET receipt",
+    "documented_entry": "https://www.govinfo.gov/bulkdata/BILLSTATUS",
+    "documentation_fact": "The GPO bill-status project describes BILLSTATUS XML bulk data as public and its data-update job as recurring every four hours. This is documentation of feed cadence, not a guarantee that this particular record was current at retrieval."
+  },
+  "hr3633_record": {
+    "url": "https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3633.xml",
+    "receipt": "logs/deep_review_20261017/clarity317_govinfo_0900/hr3633_xml.receipt.json",
+    "body": "logs/deep_review_20261017/clarity317_govinfo_0900/hr3633_xml.body.json.gz",
+    "http_status": 200,
+    "received_utc": "2026-10-19T08:42:36.193921Z",
+    "http_date": "Mon, 19 Oct 2026 08:42:36 GMT",
+    "http_last_modified": "Thu, 17 Sep 2026 20:25:06 GMT",
+    "raw_sha256": "3a4361797b517b651ad365932965636ab353ed5f3795cf28b02f67031f2fdda6",
+    "gzip_sha256": "43d9cef967b811eeef49780911e5b5a3e66d54e2252659635ac1d43c5f7ecf50",
+    "recorded_dates_and_actions": [
+      {
+        "date": "2026-05-14",
+        "action": "Senate Banking ordered the bill reported with a substitute amendment."
+      },
+      {
+        "date": "2026-06-01",
+        "action": "Reported by Senate Banking with a substitute amendment; placed on Senate Legislative Calendar, General Orders, Calendar No. 423."
+      },
+      {
+        "date": "2026-08-08",
+        "action": "Motion to proceed made; cloture motion presented."
+      },
+      {
+        "date": "2026-09-15",
+        "action": "Cloture on the motion to proceed was not invoked; a motion to reconsider was entered."
+      },
+      {
+        "date": "2026-09-15",
+        "action": "A Senate amendment was submitted."
+      }
+    ],
+    "scope_limit": "The XML contains no later H.R.3633 action than 2026-09-15; HTTP Last-Modified is 2026-09-17. The retrieval is Oct19, but this feed snapshot does not certify intervening events after its recorded data. This single bill-status record cannot establish status of other bills."
+  },
+  "first_person_senate_updates": [
+    {
+      "url": "https://www.banking.senate.gov/newsroom/majority/chairman-scott-senate-banking-committee-advance-clarity-act-in-historic-bipartisan-vote",
+      "receipt": "logs/deep_review_20261017/clarity317_govinfo_0900/banking_progress.receipt.json",
+      "body": "logs/deep_review_20261017/clarity317_govinfo_0900/banking_progress.body.json.gz",
+      "published_date": "2026-05-14",
+      "http_status": 200,
+      "received_utc": "2026-10-19T08:42:36.735152Z",
+      "raw_sha256": "50d47fbbf8432ebde8d247a6264d0352701db4df8ef6a9e87731150b1ebcf3f3",
+      "finding": "The committee majority release says Chairman Tim Scott led a successful bipartisan markup advancing H.R. 3633. It is the committee-stage event, not enactment or Senate floor passage."
+    },
+    {
+      "url": "https://www.lummis.senate.gov/press-releases/lummis-releases-updated-clarity-act-text/",
+      "receipt": "logs/deep_review_20261017/clarity317_govinfo_0900/lummis_update.receipt.json",
+      "body": "logs/deep_review_20261017/clarity317_govinfo_0900/lummis_update.body.json.gz",
+      "published_date": "2026-07-22",
+      "page_modified_metadata": "2026-07-22T16:49:28+00:00",
+      "http_status": 200,
+      "received_utc": "2026-10-19T08:42:39.708099Z",
+      "raw_sha256": "f5788ee1f2815f00566b3db96e6ac665eeb2b5274431ee8259b8d0ddfb936191",
+      "finding": "Senator Lummis said she released updated H.R. 3633 text reflecting merged Banking and Agriculture Committee work products. Her dated statement also called the coming weeks a last opportunity; it is not proof that a later schedule or agreement was reached."
+    }
+  ],
+  "interpretation_boundary": "This adds a documented Sep15 Senate procedural failure/reconsideration motion and submitted amendment after the prior June committee/calendar context. It does not establish enactment, a future floor date, or the absence of another qualifying bill."
+}

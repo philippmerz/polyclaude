@@ -1,0 +1,39 @@
+# bankroll $196.61 from cache (age 0.2h)
+# polyclaude_enter: looking up 'will-erling-braut-haaland-rank-in-googles-top-5-mo'...
+
+Market: Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?
+  slug: will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026
+  market_id: 4425460
+  umaResolutionStatus: None
+  outcomePrices: YES=0.845 NO=0.155
+  endDate: 2026-12-31T23:59:00Z
+  negRisk: False
+  [mark] gamma-mid 0.1550 → live ask 0.1800 (+2.5pp) — using live ask for the gate
+  [maker] gate + sizing run on the POSTED rest price 0.14 (bid 0.130 / ask 0.18), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.
+  [price cap] preview signed raw BUY limit 0.1400 <= 0.1400; execution will refresh and re-check
+  [capital caps] ticket $1.40/$29.49; cluster google-year-in-search-2026 $2.75/$58.98
+
+=== EXIT LIQUIDITY (what leaving would cost) ===
+  best bid 0.130 / ask 0.180 — spread 5.0pp
+  0 shares bid within 5% of your entry = 0% of this position
+  !! THIN EXIT: a thesis-break rule on this leg is aspirational, not actionable.
+     Size it as hold-to-resolution — entry size is the only loss control you get.
+
+=== KELLY ANALYSIS ===
+  Buying NO @ $0.1800, P(NO wins) = 0.6500
+  Edge: +51.00pp
+  Full Kelly: 59.3% of bankroll
+  ρ-discount: 1.0000 (ρ=0.5, cluster_frac=0.0)
+  × Kelly fraction: 0.25
+  Kelly $: $29.15
+  Manual override: $1.40
+  → Deploy: $1.40 (10.00 shares)
+  Profit if win: +$8.60 (= 614.3%)
+
+  Sensitivity (full-Kelly under p ±0.05):
+    p=0.5500 (-0.10): full_K=47.7% → $23.43
+    p=0.6000 (-0.05): full_K=53.5% → $26.29
+    p=0.7000 (+0.05): full_K=65.1% → $32.01
+
+DECISION: WOULD_REST $1.40 of NO @ 0.14 post-only (ask 0.1800; fill not guaranteed)
+  Re-run with --execute to actually post the order.

@@ -1,0 +1,70 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "indices": [
+    313,
+    316
+  ],
+  "captured_utc": "2026-10-19T08:56:53Z",
+  "scope": "One refresh per named official source; facts only, no probabilities or market data.",
+  "identities": [
+    {
+      "index": 313,
+      "market_id": "4294627",
+      "condition_id": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+      "criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11"
+    },
+    {
+      "index": 316,
+      "market_id": "4425460",
+      "condition_id": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+      "criteria_sha256": "963de8f189aa6c96bb2ad6ed9a9bee5f51db475ba4004d6a028dfc4b2c888d21"
+    }
+  ],
+  "kaub_station": {
+    "url": "https://pegelonline.wsv.de/webservices/rest-api/v2/stations/1d26e504-7f9e-480a-b52c-5932be6549ab.json?includeTimeseries=true&includeCurrentMeasurement=true&includeCharacteristicValues=true&includeForecastTimeseries=true",
+    "receipt": "logs/deep_review_20261017/313_316_current_sources_0900/kaub_station.receipt.json",
+    "body": "logs/deep_review_20261017/313_316_current_sources_0900/kaub_station.body.json.gz",
+    "http_status": 200,
+    "received_utc": "2026-10-19T08:56:51.925486Z",
+    "raw_sha256": "fe7117554ec65fb9e501154e326320ca7cdd5ad8b57889824b0b3f3e6397087a",
+    "gzip_sha256": "33c37d7a88d8d258418b1d7c709f2f0ce40f4ed7a142d4f792aaad9a29d413eb",
+    "station": "25700100 KAUB, RHEIN",
+    "series": "WASSERSTAND ROHDATEN, cm",
+    "latest_reading_cm": 12.0,
+    "reading_time_local": "2026-10-19T10:45:00+02:00",
+    "threshold_cm": 77,
+    "threshold_characteristic": "GlW, validFrom 2023-01-01",
+    "scope_note": "One current snapshot; latest observation is about 11 minutes before capture. It is a reading and threshold fact, not full-window completeness."
+  },
+  "bfg_14day_pdf": {
+    "url": "https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf",
+    "receipt": "logs/deep_review_20261017/313_316_current_sources_0900/bfg14_pdf.receipt.json",
+    "body": "logs/deep_review_20261017/313_316_current_sources_0900/bfg14_pdf.body.json.gz",
+    "http_status": 200,
+    "received_utc": "2026-10-19T08:56:52.299883Z",
+    "last_modified": "Sun, 18 Oct 2026 09:45:05 GMT",
+    "raw_bytes": 271886,
+    "raw_sha256": "b1b19629cc1235051c0eda720887f38841e12d5d8fc591ae50461e1b0267736e",
+    "gzip_sha256": "e8323de70a4291b247527401aabe02b7cb9d4ce1c4e7c076e7282de6beddc974",
+    "comparison": "raw SHA matches the prior Oct19 08:28 capture exactly; no byte change. The previously extracted printed issue time and daily-mean GlW=77cm row remain the same source version; see work/0313_forecast_followup_0828.json. No new PDF extraction was needed."
+  },
+  "google_year_in_search_hub": {
+    "url": "https://trends.withgoogle.com/year-in-search/",
+    "receipt": "logs/deep_review_20261017/313_316_current_sources_0900/google_yis_hub.receipt.json",
+    "body": "logs/deep_review_20261017/313_316_current_sources_0900/google_yis_hub.body.json.gz",
+    "http_status": 301,
+    "location": "2025/",
+    "received_utc": "2026-10-19T08:56:52.522223Z",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "redirected_page_url": "https://trends.withgoogle.com/year-in-search/2025/",
+    "redirect_receipt": "logs/deep_review_20261017/313_316_current_sources_0900/google_yis_hub_redirect.receipt.json",
+    "redirect_body": "logs/deep_review_20261017/313_316_current_sources_0900/google_yis_hub_redirect.body.json.gz",
+    "redirect_status": 200,
+    "redirect_received_utc": "2026-10-19T08:56:52.918778Z",
+    "redirected_raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+    "redirected_gzip_sha256": "e76dfa6470d76515e756d38944c1fe485a83146e6e75315ccc969efd41bb803f",
+    "finding": "The hub redirected to its 2025 page. The 2025 response hash matches the retained earlier 2025 page body. This route result does not show a 2026 list and does not establish that no 2026 list exists elsewhere."
+  },
+  "limits": "One observation snapshot, one unchanged forecast PDF, and one normal Google hub redirect chain only. No inference of full-period threshold absence or universal Google-list absence."
+}

@@ -1,0 +1,46 @@
+{
+  "schema": "price_blind_facts.v1",
+  "index": 313,
+  "market_id": "4294627",
+  "condition_id": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+  "frozen_criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11",
+  "captured_utc": "2026-10-19T08:28:43.875203Z",
+  "scope": "Bounded official forecast-source retrieval for Kaub station 25700100; no contract probability or verdict.",
+  "current_elwis_page": {
+    "url": "https://www.elwis.de/DE/dynamisch/Wasserstaende/Pegelvorhersage:KAUB",
+    "receipt": "logs/deep_review_20261017/rhine313_forecast_followup_0915/elwis_current.receipt.json",
+    "status": 200,
+    "received_utc": "2026-10-19T08:28:43.127052Z",
+    "raw_sha256": "bb7fbb78d8072f0df08f691474e1b48e259fc8b0fc16e7a24d51c3e270a27b82",
+    "gzip_sha256": "1842ad65ed26f082f97854af903be2de7d9fcd3c6973a5c55a69efd0fd3d9d3b",
+    "finding": "Page says deterministic ELWIS forecast/estimate was issued 2026-10-19 07:00 and displays through Oct23. This is the short-range product, distinct from linked probabilistic forecasts; the table's compact columns were not mapped to exact forecast timestamps in this pass."
+  },
+  "probabilistic_14day": {
+    "url": "https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf",
+    "receipt": "logs/deep_review_20261017/rhine313_forecast_followup_0915/forecast14_pdf.receipt.json",
+    "status": 200,
+    "received_utc": "2026-10-19T08:28:43.516677Z",
+    "raw_bytes": 271886,
+    "raw_sha256": "b1b19629cc1235051c0eda720887f38841e12d5d8fc591ae50461e1b0267736e",
+    "gzip_sha256": "e8323de70a4291b247527401aabe02b7cb9d4ce1c4e7c076e7282de6beddc974",
+    "forecast_issued_as_printed": "2026-10-18 00:00 MEZ",
+    "horizon": "Oct18–31, daily means (each 00:00 to 00:00 next day).",
+    "metric": "Printed table gives probability of undershooting fixed water-level thresholds, based on daily mean; values for GlW=77 cm by date Oct18–31 are [100,100,100,100,100,100,99,77,51,29,23,23,28,35] percent.",
+    "method": "PDF says it uses current measurements at about 50 Rhine-basin gauges and over 900 weather stations; ECMWF ENS (51 members), deterministic ICON-EU for the first five forecast days and ICON for days 6–7; BfG hydrologic, hydraulic and statistical models; EMOS calibration from 53 underlying water-level forecasts. Probabilities are calculated on daily means. It cautions meteorological uncertainty increases with horizon and that the estimates are automated and based partly on mostly unchecked observations.",
+    "interpretation_limit": "These are daily-mean threshold probabilities, not the probability that any 15-minute W reading reaches 77 cm, nor a direct probability of the market's first qualifying timestamp. Do not invert the daily-mean undershoot row into contract odds. PDF says a 80% undershoot probability means statistical undershoot in 8/10 cases; it also describes the plotted 5th–95th percentile band as leaving 5% in each tail on average."
+  },
+  "probabilistic_6week": {
+    "url": "https://vorhersage.bafg.de/6-Wochen-Vorhersage/Rhein-Kaub_6Wochen_Wasserstand.pdf",
+    "receipt": "logs/deep_review_20261017/rhine313_forecast_followup_0915/forecast6week_pdf.receipt.json",
+    "status": 200,
+    "received_utc": "2026-10-19T08:28:43.875203Z",
+    "raw_bytes": 544452,
+    "raw_sha256": "b0c044f5e06693029c6fe558725a690fc8f0535fbee9fcbf6e82706a38fe1b8e",
+    "gzip_sha256": "ac6fa79d228d1aae087c29a7de575ca22d142d2075f231b483e99ec12d3cdcee",
+    "forecast_issued": "2026-10-15",
+    "horizon": "Six weeks / 46 forecast days; weekly-mean levels through Nov25. Week3 is Oct29–Nov4.",
+    "method": "PDF describes 101 equally likely ECMWF sub-seasonal weather scenarios processed through a water-balance model using hydrologic history and future weather, then a current rating curve. It compares current forecast with a 30-member climatological forecast and 1991–2020 observations; the skill scale is retrospectively assessed on 2016–2023 forecasts. It says this product focuses on medium/low water, gives weekly means, and uncertainty increases with lead time.",
+    "threshold_limit": "Week3 text classes are low <105 cm, somewhat lower <137, medium <172, somewhat higher <212, and high >212. GlW=77 cm lies within the broad low class; the text class boundaries do not identify the fraction below/above 77. The PDF graphical ensemble shares were not numerically extracted here."
+  },
+  "limits": "The 14-day PDF is the only captured official probabilistic product spanning every October date through Oct31. It is dated Oct18, not a forecast initialized Oct19; the current ELWIS deterministic page is newer but only displays to Oct23. The 6-week product is dated Oct15 and uses weekly means. Forecasts are not observations or exact-any-reading event probabilities."
+}

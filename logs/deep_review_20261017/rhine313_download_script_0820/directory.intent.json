@@ -1,0 +1,1 @@
+{"name":"directory","request":{"call_window_label":"case313 Kaub older history source followup","method":"GET","read_only":true,"scope":"Official WSV-linked station download modal JavaScript only","url":"https://pegelonline.wsv.de/js/wiski-download-modal.js"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:23:33.075447Z","timing_basis":"call_window"}

@@ -1,0 +1,158 @@
+{
+  "review_index": 313,
+  "condition_id": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+  "criteria_sha256": "c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11",
+  "status": "valued",
+  "literal_analysis": "Kaub25700100 W>=77cm firstreading; Berlin dates; titleOct1-31 vsdescriptionmarketstartSep6 preserved, no observedconflictingcrossing. Nov1 source evidence /Nov2 missingdatafallback. Transientqualifiers count.",
+  "evidence": [
+    {
+      "url": "https://pegelonline.wsv.de/gast/stammdaten?pegelnr=25700100",
+      "observed_utc": "2026-10-19T08:25:42.821779Z",
+      "finding": "ExactWSVarchive KaubW/cm:1182continuouspoststartreadings,max36. Rootreproduced. SeparateAPIthroughOct19 has noobserved>=77/two30mingaps/uncheckedquality."
+    },
+    {
+      "url": "https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf",
+      "observed_utc": "2026-10-19T08:28:43.516677Z",
+      "finding": "Oct18-issuedprobabilisticdailymeans throughOct31; below77prob23%Oct28/29. RootfullPDFread. Not any-readingeventodds; EMOS/commonweathermodelrisk."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.84,
+    "low": 0.5,
+    "high": 0.97,
+    "method": "Explicitdailymean-to-any-readingjointjudgment,98%mapping/2%adjudicationbranch; noindependentdaymultiplication.",
+    "reasoning": "Primary .77+.23*.35 physicalproxy,then.98*.8505+.02*.5=.84349.20ppreserveincludes15model/5conditionalmakerfill. Scenariorangeuncalibrated.",
+    "model_path": "research/2026-10-17-deep-review/models/0313_primary_0831.json",
+    "actual_entry_reserve_pp": 20
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_313_0831.json",
+    "quote_file_sha256": "50f4e9fd851fc14f34869f8216f99401a8680b85581a74bbab8f1db02b459704",
+    "quote_capture_utc": "2026-10-19T08:31:12.975303+00:00",
+    "gamma_received_utc": "2026-10-19T08:31:12.720967+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 17.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.84,
+        "selected_stress_probability": 0.6399999999999999,
+        "best_bid": 0.52,
+        "best_ask": 0.58,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792398660916",
+        "book_received_utc": "2026-10-19T08:31:12.865911+00:00",
+        "book_age_seconds_at_receipt": 11.949911117553711,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.8,
+            "fee": 0.12181,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.58
+              }
+            ],
+            "net": 5.92181
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.2,
+            "fee": 0.1248,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.52
+              }
+            ],
+            "net": 5.075200000000001
+          }
+        },
+        "taker_cost_usd": 5.92181,
+        "central_expected_profit_usd": 2.4781900000000006,
+        "selected_stress_profit_usd": 0.4781899999999988,
+        "break_even_before_carry": 0.592181,
+        "break_even_constant_carry": 0.5930376871633916,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.16000000000000003,
+        "selected_stress_probability": 0,
+        "best_bid": 0.42,
+        "best_ask": 0.48,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792398660916",
+        "book_received_utc": "2026-10-19T08:31:12.865911+00:00",
+        "book_age_seconds_at_receipt": 11.949911117553711,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.8,
+            "fee": 0.1248,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.48
+              }
+            ],
+            "net": 4.924799999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.2,
+            "fee": 0.12181,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.42
+              }
+            ],
+            "net": 4.07819
+          }
+        },
+        "taker_cost_usd": 4.924799999999999,
+        "central_expected_profit_usd": -3.324799999999999,
+        "selected_stress_profit_usd": -4.924799999999999,
+        "break_even_before_carry": 0.4924799999999999,
+        "break_even_constant_carry": 0.4931924532773375,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YESmaker candidate; five-share54c ceiling diagnostic clearsselectedreserve/carry. Noentryyet; freshvettedportfolio/executionchecksrequired. NOunattractive.",
+  "reopen_condition": "NewBfG initialization/materialweather/sourceorwindowchange; freshbooks/fees/eligibleaccount/pullplan beforeanyorder.",
+  "portfolio_action": "none; researchcandidatependingconcreteverification",
+  "evaluated_utc": "2026-10-19T08:34:13.558420+00:00",
+  "question": "Will the Rhine River return to normal levels between October 1 and October 31, 2026?",
+  "market_id": "4294627",
+  "valuation_author": "primary_operator",
+  "original_index": 313,
+  "report_sha256": "e303fb5c06abcd78f0346dbbab3daf54e30d719c51a7d2dcd8f913fc0660de26"
+}

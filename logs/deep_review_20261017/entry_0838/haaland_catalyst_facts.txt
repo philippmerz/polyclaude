@@ -1,0 +1,36 @@
+# resolution criteria fetched (971 chars)
+# injected 2 live headlines into prompt
+# catalyst_check: Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?
+# resolve=2026-12-31 (73 days)  profile=fast
+# spawning scoped research worker ...
+Source inventory (retrieved 2026-10-19 UTC)
+
+Contract parsing:
+
+- Entity: Erling Braut Haaland, likely displayed by Google as “Erling Haaland.”
+- Metric: rank 1–5 in Google’s official Year in Search “Athletes” list; Google’s methodology calls this “top trending,” not raw total searches.
+- Geography: Global.
+- Window: the 2026 Year in Search list. Google’s currently published methodology for 2025 used Jan. 1–Nov. 25, compared with the same prior-year period; the 2026 window is not yet documented.
+- Source: Google Trends Year in Search hub, Global → Trending → Athletes.
+- Fallback: No if the list is not released by March 31, 2027, 11:59 PM ET. Market creation does not truncate the annual window.
+
+Evidence:
+
+- Google’s official 2025 Global Athletes list, published Dec. 4, 2025: Terence Crawford, Rory McIlroy, Shedeur Sanders, Shai Gilgeous-Alexander, Jalen Hurts, Manny Pacquiao, Alexander Ovechkin, Cooper Flagg, Stefon Diggs, Cam Skattebo. Haaland is absent. [Google Year in Search 2025](https://trends.withgoogle.com/year-in-search/2025/?article_id=432919950.0). Body read; exact list and Global configuration observed. This is prior-year context, not 2026 qualifying evidence.
+
+- Google’s methodology says Year in Search lists measure queries with the fastest increase in interest, comparing Jan. 1–Nov. 25, rather than total search volume. [Google methodology](https://trends.withgoogle.com/year-in-search/data-methodology/). Body read; 2026’s exact dates remain unresolved.
+
+- No 2026 official Global Athletes list was retrieved. Direct 2026 hub URLs were inaccessible to the retrieval tool. This is a retrieval gap, not evidence that Google has not published the list. [2026 URL attempt](https://trends.withgoogle.com/year-in-search/2026/). Unrendered/inaccessible page.
+
+- Relevant 2026 catalyst: UEFA reported on Nov. 17, 2025 that Norway qualified for the 2026 World Cup after beating Italy 4–1, with Haaland scoring twice. [UEFA qualification report](https://www.uefa.com/european-qualifiers/news/029f-1f382495cf4c-7074e93ef11f-1000--european-qualifiers-portugal-and-norway-seal-world-cup-qua/). Body read; observed event, not a forecast.
+
+- UEFA reported Mar. 31, 2026 that Haaland finished European World Cup qualifying as top scorer with 16 goals, scoring in all eight matches. [UEFA scorer report](https://www.uefa.com/european-qualifiers/news/0297-1d5d6735f8d7-9bf819c5c8e9-1000--european-qualifiers-top-scorer-erling-haaland/). Body read; exact unit is goals, not Google searches.
+
+- FIFA scheduled the 2026 World Cup for June 11–July 19, 2026. [FIFA schedule](https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/fifa-world-cup-2026-hosts-cities-dates-usa-mexico-canada?pubDate=20260513). Indexed excerpt only/body did not render. This is a scheduled-event fact; it does not establish Haaland’s Google ranking.
+
+Lead checks:
+
+- “Suspended fuel tax lifts NC…” is unrelated to Haaland or the contract and supplies no qualifying evidence.
+- The stated Sky Sports “Lamine Yamal and Kylian Mbappe…” lead was not verified to an original Sky Sports page in retrieval. Search returned unrelated secondary material; treat the lead as unverified and contract-irrelevant unless the original source is located.
+
+Bottom line for the analyst: no already-existing qualifying evidence for 2026 was found; the controlling evidence remains the unreleased or unretrieved official Google 2026 Global Athletes list.

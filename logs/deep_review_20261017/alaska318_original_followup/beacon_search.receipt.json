@@ -1,0 +1,16 @@
+{
+  "body_sha256": "6fc631a9a0a249ccdac9bd0688152acc89e6098518ca6f79a7c9600f5d560ffc",
+  "bytes": 5547,
+  "content_type": "text/html; charset=UTF-8",
+  "final_url": "https://alaskabeacon.com/?s=Kreiss-Tomkins",
+  "gzip_path": "logs/deep_review_20261017/alaska318_original_followup/beacon_search.body.gz",
+  "gzip_sha256": "98313b9e12a131658c75f53d4f199221e6635f943f9c5f0a60e212b60cd48361",
+  "received_utc": [
+    "2026-10-19T08:48:56.581996+00:00",
+    "2026-10-19T08:48:56.716082+00:00"
+  ],
+  "redirects": [],
+  "requested_url": "https://alaskabeacon.com/?s=Kreiss-Tomkins",
+  "status": 403,
+  "truncated": false
+}

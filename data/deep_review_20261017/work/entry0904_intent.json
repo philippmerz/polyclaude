@@ -1,0 +1,56 @@
+{
+  "created_utc": "2026-10-19T09:04:49.080958+00:00",
+  "author": "primary_operator",
+  "scope": "Two smallpostonlypilotbids only; not taker/repost/add. No existing holding changed.",
+  "indices": [
+    313,
+    316
+  ],
+  "probability_yes": {
+    "313": 0.84,
+    "316": 0.35
+  },
+  "actual_reserves_pp": {
+    "313": 20,
+    "316": 25
+  },
+  "manual_maximums": {
+    "313": "5YES<=54c /<=2.70pUSD",
+    "316": "<=10NO<=14c /<=1.40pUSD"
+  },
+  "current_preview": {
+    "313": "5YES53c/2.65",
+    "316": "10NO13c/1.30"
+  },
+  "bankroll_snapshot": "196.61incl5.86gas08:41:46;trading190.75/depth~188.88rounded",
+  "old_orders": "4LIVE0matched7.52at08:40;toolrechecksagainstcurrentpositions/opencommitments",
+  "funds": "20.451290pUSD/7.52oldcommitment/12.931290deployable;bothcorrectexchangesapproved;baselinecandidateCTFs0",
+  "selected_margin": {
+    "313": "5*(.64-.53)=.55beforecarry/operations",
+    "316": "10*(.40-.13)=2.70beforecarry/operations"
+  },
+  "risks": "BfGdailymean-to-anyreadingproxy/forecastmodel error;Googleinternalgrowth/fullfieldandconditionalfillsunmeasured. BroadRhine50%branchwouldprefercash. SharedGoogle/Messi/venuefactor;nocalibratedjointoptimum/hedgecredit. Entireproposed~3.95canlose.",
+  "alternative": "Aave3.1525%variableconstant-sensitivity:~.0038Rhine17days/~.0083Google75days;gas/funding/monitoringnotfree. Manualtinysizes,notpointKelly29-32USDrecommendations.",
+  "source_refresh": "work/0313_0316_current_refresh_0900.json;BfGPDFunchanged,WSV12cm,Googlehub2025route",
+  "monitoring_proof": "work/entry0902_normal_reload.json;existingdaemon/normalbaseline/reloadverified,no forcedpoll/newtimer",
+  "pull": "AllunfillednewbidsCANCEL at existingOct19 10UTC,earliermaterialsource/forecast/list/interpretation/eligibilityuncertaintycancelfirst;noautopost/add/taker. Onfillimmediateholdingreunderwrite.",
+  "current_execution_gate": [
+    {
+      "index": 313,
+      "outcome": "Yes",
+      "best_bid": 0.52,
+      "best_ask": 0.56,
+      "age": 87.711923122406,
+      "fresh_exact_public_gate": true
+    },
+    {
+      "index": 316,
+      "outcome": "No",
+      "best_bid": 0.12,
+      "best_ask": 0.19,
+      "age": 41.13492298126221,
+      "fresh_exact_public_gate": true
+    }
+  ],
+  "no_submission_yet": true
+}

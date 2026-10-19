@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T03:03:56.116127+00:00
+Updated: 2026-10-19T08:54:45.412321+00:00
 
-**311 valuations saved; first milestone100:** 311 valued; 5 blocked after in-depth review. 364 factual exclusions separately; 2320 pending.
+**316 valuations saved; first milestone100:** 316 valued; 6 blocked after in-depth review. 364 factual exclusions separately; 2314 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -324,7 +324,13 @@ Each report below is written before moving to the next evaluation. Related contr
 |310|[Will Hayden Panettiere be the #1 searched passing on Google this year?](evaluations/0310.md)|valued|NOENTRY: YESfailscentral; NOtakerfails20/25ppreserve;68cmakerhaspositivebase20ppdiagnosticbutfails25ppconditionalfillstress/carry. Noorder/prior/watcher.|
 |311|[Will the highest temperature in Tel Aviv be 26°C on October 17?](evaluations/0311.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
 |312|[Will Kimi Antonelli be the 2026 F1 Drivers' Champion?](evaluations/0312.md)|valued|NOENTRY: YESfailscentral/reserve; NOpositivecentralonlyunderfragileproportionaldevig,failsdefaultreserve/powercountermodel. No order/prior/watcher.|
+|313|[Will the Rhine River return to normal levels between October 1 and October 31, 2026?](evaluations/0313.md)|valued|YESmaker candidate; five-share54c ceiling diagnostic clearsselectedreserve/carry. Noentryyet; freshvettedportfolio/executionchecksrequired. NOunattractive.|
+|314|[Will fewer than 170 ships transit the Bab el-Mandeb Strait between October 12-October 18?](evaluations/0314.md)|valued|Both takers failcentralEV. NOmaker61c is pricecandidate but deferred forfeeparity andunverifiedelapsedweek/conditionalinformationrisk; notpermanentrejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|316|[Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0316.md)|valued|NOcandidate onlargeafterreserveedge; datedbookfails180sso noentryauthority. Maker10shares<=14cdiagnosticrequiresneweligiblecapture/accounts/portfolio/catalystgates.|
+|317|[Crypto Market Structure legislation becomes law in 2026?](evaluations/0317.md)|valued|YESpricecandidateclearsselecteddatedeconomics; currentSenate/coalition/statusgapneedsadversarialverificationbeforeanyentry. NOfailscentral.|
+|318|[Will Jonathan Kreiss-Tomkins win the 2026 Alaska governor election?](evaluations/0318.md)|blocked_after_review|Blocked_after_review onnamedsource-bindingfacts; noteligibilityexclusionorprobabilityrejection.|
+|319|[Will the upper bound of the target federal funds rate be ≤1.0% at the end of 2026?](evaluations/0319.md)|valued|Noentrybothsidesatdatedquotes;YEScentralpennygainbeforeoperationsnotadequate,NOcentral/stressfail. NoK5licensetoforcebondfade.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |323|[Will the highest temperature in Wuhan be 29°C on October 17?](evaluations/0323.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |325|[Will the Democratic Party win the AZ-02 House seat?](evaluations/0325.md)|valued|Potential small passive YES source revalidation|
@@ -692,5 +698,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 313

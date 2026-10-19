@@ -1,0 +1,1 @@
+{"name":"congress_search","request":{"call_window_label":"case317 official legislative source check","method":"GET","read_only":true,"scope":"Official Congress.gov search page for related 119th-Congress legislation","url":"https://www.congress.gov/search"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:37:12.359901Z","timing_basis":"call_window"}

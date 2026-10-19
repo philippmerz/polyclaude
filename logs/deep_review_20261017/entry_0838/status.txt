@@ -1,0 +1,75 @@
+
+================================================================================
+# POLYCLAUDE STATUS — 2026-10-19T08:37 UTC
+================================================================================
+
+## Positions (PM sleeve)
+side  entry   mark   shares    cost     mtm  maxpay   pnl%  market
+No    0.890  0.935    29.00   25.81   27.11   29.00   5.06  Will over 58 Senators vote for the Clarity Act?
+No    0.650  0.655     5.00    3.25    3.27    5.00   0.77  Will OpenRouter process between 725T and 775T tokens from Oc
+Yes   0.080  0.045    29.00    2.32    1.30   29.00 -43.75  Will over 50 Senators vote for the Clarity Act?
+No    0.310  0.295     5.00    1.55    1.48    5.00  -4.84  Will the Democrats win the Michigan Senate race in 2026?
+Yes   0.270  0.265     5.00    1.35    1.32    5.00  -1.85  Will Lionel Messi rank in Google’s Top 5 Most Searched Athle
+No    0.170  0.135     6.00    1.02    0.81    6.00 -20.59  Will "Whalefall" Opening Weekend Box Office be less than 8m?
+No    0.881  0.961     0.33    0.29    0.32    0.33   8.98  Trump out as President before 2027?
+
+OPEN TOTAL  cost $35.59  mtm $35.62  max-payout $79.33  unrealised P&L $+0.03  (+0.09%)
+Max payout if every held outcome wins: $79.33  (+122.90%)
+RESOLVED rows excluded from open P&L: 1  visible-row P&L $-0.64 (not cumulative; use bankroll.py)
+REALIZABLE (depth-walked, NET of taker fees): $33.75  (-5.18%)  — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; midpoints overstate by $1.88
+   thin book: will-openrouter-process-between-725t-and-775 mark 0.655 vs avg-fill 0.600 (5.5pp to exit the full position)
+
+## Hurdle scan (marginal APY + drawdown guard)
+# 3 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)
+
+## Watchlist hits
+(no triggers hit)
+
+## HLE resolving chart (live API vs Jul-3 pre-market archive)
+[mode] HLE resolving chart API: all model rows + accuracy + calibration
+[coverage] all expected items present: gpt-6,gemini
+[unscored HLE rows] ['grok 4.7'] — identities retained for change detection; excluded from accuracy thresholds
+[live vs 20260703] added ['fable 5', 'fable 5.1', 'gemini 3.7 flash', 'gemini 3.8 flash', 'gemini 4 argon', 'glm 5.2', 'glm 5.3', 'gpt-5.6 luna', 'gpt-5.6 sol', 'gpt-5.6 terra', 'gpt-6 astra', 'gpt-6.1 sol', 'grok 4.5', 'grok 4.6', 'grok 4.7', 'kimi k3', 'muse spark 1.1', 'muse spark 1.3', 'muse wonder', 'opus 5', 'opus 5.5'] | removed NONE | changed [('gpt-5.5', ('43.56', '41.93'), ('43.8', '41.79')), ('kimi k2.6', ('29.9', '63.18'), ('35.48', '58.19')), ('opus 4.5', ('25.8', '44.5'), ('25.8', '56.92'))]
+VERDICT: compared inventory is UPDATING — any freeze-based thesis needs re-evaluation
+
+## UMA status check
+# uma_status_check: 44 positions tracked, 42 Gamma markets refreshed, 1 alerts; positions_fetch_ok=True
+
+  [PRICE_MOVE] will-over-58-senators-vote-for-the-clarity-act-20260729193533309
+    YES moved 0.1550 → 0.0650 (-9.0pp) [vol24 n/a; spread 3.0pp; quote context incomplete — walk the book before believing]
+
+## Kelly portfolio (constrained)
+TOTAL: cost=$35.50  kelly_optimal=$195.23  delta=$+159.73
+  Bankroll utilization (cost): 18.1%
+  Kelly-optimal utilization:   99.6%
+
+Recommended actions (delta > $5 = scale-in candidate):
+  TICKET_CAP will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026: suppressed scale-in; current gross $3.25, 15% cap $29.41, headroom $26.16 < requested $55.90. Entry gate also rechecks pending BUYs.
+  TICKET_CAP will-whalefall-opening-weekend-box-office-be-less-than-8m: suppressed scale-in; current gross $1.02, 15% cap $29.41, headroom $28.39 < requested $47.71. Entry gate also rechecks pending BUYs.
+  TICKET_CAP will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026: suppressed scale-in; current gross $1.35, 15% cap $29.41, headroom $28.06 < requested $39.32. Entry gate also rechecks pending BUYs.
+  +$ 16.80  No @ $0.295  edge=14.50pp  Will the Democrats win the Michigan Senate race in
+
+Over-sized (delta < -$5) — choose the maker route by information class:
+  (none)
+[stderr] # bankroll $196.09 from cache (age 1.7h) # portfolio_kelly: 6 held rows, 3 protected group(s), bankroll=$196.09, kelly_frac=0.5
+
+## Brownian-bridge fair-value (time-decay-adjusted)
+(no TRIM candidates)
+(no SCALE_UP candidates)
+
+Non-actionable/unmodeled (6): add immutable bb_entry_p and bb_mode=survival|occurrence to a reviewed prior before this tool may signal.
+
+## News alerts (last 6h)
+  2026-10-19T07:05 t1 shekel: U.S. Dollar to Israeli New Shekel - USD/ILS Exchange Rate Chart - FORE
+  2026-10-19T07:05 t1 AAA gas: Gas Prices Not Budging Much as Crude Oil Remains High - AAA Gas Prices
+  2026-10-19T07:05 t1 gasoline: Soaring gasoline prices: US consumer inflation hotter than expected as
+  2026-10-19T07:31 t1 El-Sayed: Watch: El-Sayed rejects Muslim Brotherhood, challenges questioner's mo [⚠]
+  2026-10-19T07:47 t1 Whalefall: Josh Brolin’s Whalefall Sinks at Box Office, Flops Hard Globally - Yah [⚠]
+  2026-10-19T07:52 t1 Anthropic: Perennial tips future Anthropic and OpenAI IPOs with new launch - Inve
+  2026-10-19T08:03 t1 gas prices: Gas Prices Break Unwanted Record Under Donald Trump - Newsweek
+  2026-10-19T08:03 t1 Delcy: Presidenta (E) de Venezuela Delcy Rodríguez califica como “extraordina
+  2026-10-19T08:09 t1 El-Sayed: Republican Group Invests Another $4.7 Million in Michigan Senate Race  [⚠]
+  2026-10-19T08:25 t1 Lionel Messi: Lionel Messi gets his own flower as endangered plant species discovere
+
+================================================================================
+

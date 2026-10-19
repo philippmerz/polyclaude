@@ -1,0 +1,16 @@
+{
+  "body_sha256": "c03ee875aedf622b39c508dae4ec0c891d2187594385969b434cc202c0d57db0",
+  "bytes": 269587,
+  "content_type": "text/html;charset=UTF-8",
+  "final_url": "https://alaskapublic.org/?s=Kreiss-Tomkins",
+  "gzip_path": "logs/deep_review_20261017/alaska318_original_followup/apm_search.body.gz",
+  "gzip_sha256": "6739f52802a7abbaf114c9a4fba7fd9ea9c52965d66d100e536ba881e9efe143",
+  "received_utc": [
+    "2026-10-19T08:48:56.717059+00:00",
+    "2026-10-19T08:48:57.316890+00:00"
+  ],
+  "redirects": [],
+  "requested_url": "https://alaskapublic.org/?s=Kreiss-Tomkins",
+  "status": 200,
+  "truncated": false
+}

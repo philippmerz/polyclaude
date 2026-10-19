@@ -1,0 +1,28 @@
+{
+  "body_sha256": "f3b9e2ba370e3a1e92d8e047882d43f02d0c6dec06966eb8723f117b57e221b9",
+  "captured_bytes": 35734,
+  "content_type": "text/html; charset=utf-8",
+  "final_url": "https://consent.google.com/ml?continue=https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc%3D5&gl=FI&hl=en-US&cm=2&pc=n&src=1&escs=AUjHKwccBMzJ1yaSPy-EM-YHTZIPL9VBCaR_U5CMKpX-WE5pIxZWrP_rglGOil8eKUOo99iOB1SJgFz7QakUEbeetTr7RvKPEhfB",
+  "gzip_path": "logs/deep_review_20261017/held_michigan_0810/nyt_sun.body.gz",
+  "gzip_sha256": "ef67fdf2f29aced30ef887f991bacb424884e2907ecb4c4731960f748d3c4b2e",
+  "name": "nyt_sun",
+  "received_utc": [
+    "2026-10-19T08:41:11.035481+00:00",
+    "2026-10-19T08:41:11.199718+00:00"
+  ],
+  "redirects": [
+    {
+      "location": "https://consent.google.com/m?continue=https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc%3D5&gl=FI&m=0&pc=n&cm=2&hl=en-US&src=1",
+      "status": 302,
+      "url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc=5"
+    },
+    {
+      "location": "https://consent.google.com/ml?continue=https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc%3D5&gl=FI&hl=en-US&cm=2&pc=n&src=1&escs=AUjHKwccBMzJ1yaSPy-EM-YHTZIPL9VBCaR_U5CMKpX-WE5pIxZWrP_rglGOil8eKUOo99iOB1SJgFz7QakUEbeetTr7RvKPEhfB",
+      "status": 302,
+      "url": "https://consent.google.com/m?continue=https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc%3D5&gl=FI&m=0&pc=n&cm=2&hl=en-US&src=1"
+    }
+  ],
+  "requested_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQSjdwbWQwWFhkMDFsQ25rb1Mtb0RRVmhuZF84cllRWEgyVXljYUJ6bXp0dnNLS3EtMW14c05xSGZCLUJ2RG5YSHpOWVo3THZNSlVXaGxLZC04WXVDVXFseWhEcmpxd0stLTRoVmNfZ2xyMV9UVHMzX1UzUm96dUYzZ3dfbEVIR1BwWXJPX2JEeTN4dkRMblJCVkF5Wi1KNlgwZXd1VVNBVHhkV1NjVG5mTFVBNXFOVVlIcXVtNGEyVHh4V1IxN0JMSkc3RExiNnc?oc=5",
+  "status": 200,
+  "truncated": false
+}

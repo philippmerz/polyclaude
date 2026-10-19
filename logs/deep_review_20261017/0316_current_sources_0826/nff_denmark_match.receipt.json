@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_current_sources_0826/nff_denmark_match.body.gz",
+  "error": null,
+  "final_url": "https://www.fotball.no/landslag/norge-a-herrer/2026/disse-starter-mot-danmark/",
+  "gzip_bytes": 22688,
+  "gzip_sha256": "7de3ea45fbca0c4c1102de39a5341596497dc83932b4afe374622c61b13544ff",
+  "headers": {
+    "cache-control": "public, max-age=300, s-maxage=600, stale-while-revalidate=30, stale-if-error=86400",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:26:22 GMT"
+  },
+  "http_status": 200,
+  "method": "GET",
+  "name": "nff_denmark_match",
+  "raw_bytes": 133912,
+  "raw_sha256": "1a63cc37f18ff625581f5bf71b9f972e8a925d25f9bd0e7f411fc6a2b833705b",
+  "received_utc": "2026-10-19T08:26:22.869646+00:00",
+  "requested_url": "https://www.fotball.no/landslag/norge-a-herrer/2026/disse-starter-mot-danmark/",
+  "started_utc": "2026-10-19T08:26:22.416651+00:00"
+}

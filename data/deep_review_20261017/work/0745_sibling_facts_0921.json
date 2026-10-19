@@ -1,0 +1,64 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "review_index": 745,
+  "observed_utc": "2026-10-19T09:22:16.277922Z",
+  "scope": "Sibling-contract fact check only; no forecast, quote assessment, rejection, ledger write, or order action.",
+  "frozen_identity": {
+    "market_id": "4294628",
+    "conditionId": "0x93bea8cddd9c3df9019d6e3868aa86058377e8a274c6c1060c4a317110c88172",
+    "criteria_sha256": "4d500b2752c5fc192b876205d6038d67d1e69924bae43d713c541cd655ba0318",
+    "question": "Will the Rhine River fail to return to normal levels before November 1, 2026?",
+    "slug": "will-the-rhine-river-fail-to-return-to-normal-levels-before-november-1-2026",
+    "description_literal": "Resolve by date (Berlin time) when Kaub gauge 25700100 first reaches or exceeds 77 cm per WSV PegelOnline. Single reading suffices; transient spikes count. Trigger applies to a qualifying reading on/after market start. If Nov1+ readings are available but none before Nov1, resolve to the stated “No return before November 1, 2026” outcome; if unavailable by Nov2 23:59 Berlin and none earlier, same fallback.",
+    "resolution_source": "https://www.pegelonline.wsv.de/gast/stammdaten?pegelnr=25700100",
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "clobTokenIds": [
+      "1662989494601911345651686121309795734750258892670527807520385346667399608132",
+      "109647185104247774540195228336473813211827927476152411535493458314741476858009"
+    ],
+    "endDate": "2026-11-01T23:59:00Z"
+  },
+  "current_gamma": {
+    "url": "https://gamma-api.polymarket.com/markets/4294628",
+    "received_utc": "2026-10-19T09:21:18.713629Z",
+    "http_status": 200,
+    "body_sha256": "6e3943abcc5300e201f8608e1bc81d2061096ef1f44c60a4b12114aadbe9beeb",
+    "gzip_body": "logs/deep_review_20261017/case0745_sibling_0921/gamma_4294628.body.gz",
+    "gzip_sha256": "5022fa4ca8c8892c188b6248c072dff350f7f316ce1fe2c39d2065b4e21ed108",
+    "all_frozen_fields_exact_match": true,
+    "createdAt": "2026-09-06T16:26:43.456127Z",
+    "startDate": "2026-09-06T16:26:59Z",
+    "updatedAt": "2026-10-19T09:17:13.00767Z",
+    "acceptingOrders": true,
+    "closed": false,
+    "active": true,
+    "umaResolutionStatus": null,
+    "negRisk": true,
+    "feesEnabled": true,
+    "minimumTickSize": null,
+    "minimumOrderSize": null
+  },
+  "comparison_with_313": {
+    "313_identity": "4294627 / 0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652; question “return to normal levels between October 1 and October 31, 2026”; frozen criteria c02a36b7cbff1c5e71fbeb2ee8e6e7581aac18ea76d53e2a9b67abe174e2ed11.",
+    "relationship": "Not the same contract/title/window. Both frozen descriptions use Kaub 25700100, 77 cm GlW, first qualifying observation on/after market start, but 745 asks about no return before Nov1 whereas 313 names Oct1–31. Current Gamma startDate for 745 is Sep6 16:26:59Z; 313 captured startDate is Sep6 16:26:59Z as well, earlier than its title’s Oct1 start. The shared early start creates the same title-vs-rule date-scope ambiguity; do not mark them duplicates or infer outcome mapping from titles.",
+    "source_scope": "313 report 0313.md uses WSV history and BfG daily-mean probabilities; its Oct19 refresh says the Oct18-issued BfG 14-day PDF was byte-identical and spans Oct18–31. Daily-mean probabilities are not the sibling rule’s any-single-reading trigger. Thus it is relevant context, not standalone qualifying-event evidence for 745; no factual conflict identified in the inspected packets.",
+    "source_refs": [
+      "data/deep_review_20261017/work/0313_0316_current_refresh_0900.json",
+      "data/deep_review_20261017/work/0313_forecast_followup_0828.json",
+      "data/deep_review_20261017/work/0313_resume.json",
+      "research/2026-10-17-deep-review/evaluations/0313.md"
+    ]
+  },
+  "review_state": {
+    "effective_status": "pending",
+    "latest_report": null,
+    "source": "scripts/deep_review_resume.py --index 745"
+  },
+  "limits": [
+    "No books or fee descriptor captured; not needed for this factual sibling audit.",
+    "Current status is Gamma metadata only; no outcome prices were used or emitted."
+  ]
+}

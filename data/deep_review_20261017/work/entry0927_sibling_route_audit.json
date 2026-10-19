@@ -1,0 +1,51 @@
+{
+  "schema": "deep_review.primary_route_audit.v1",
+  "observed_utc": "2026-10-19T09:25:35.047056+00:00",
+  "indices": [
+    313,
+    745
+  ],
+  "scope": "Related-contract warning follow-up, not an independent valuation or trade instruction. Case745 remains pending; no valuation credit.",
+  "facts": "Exact current Gamma identity/rule bindings and structured fees match frozen contracts. Descriptions byte-identical; same Kaub25700100/77cm first-reading/start/fallback wording. Titles/groupItemTitles distinguish Oct1-31 return (313) from no return beforeNov1 (745). Same startSep6 16:26:59Z. Thus YES745 is not YES313.",
+  "interpretation": "Subject to consistent first-date adjudication and no earlier qualifying crossing, NO745 covers a return beforeNov1 and overlaps YES313. Earlier-window/title ambiguity and missing samples remain; not unconditional fungibility or a guaranteed hedge.",
+  "prices": {
+    "313": {
+      "Yes": {
+        "bid": 0.53,
+        "ask": 0.56
+      },
+      "No": {
+        "bid": 0.44,
+        "ask": 0.47
+      }
+    },
+    "745": {
+      "Yes": {
+        "bid": 0.44,
+        "ask": 0.47
+      },
+      "No": {
+        "bid": 0.53,
+        "ask": 0.56
+      }
+    }
+  },
+  "fee_descriptors": {
+    "313": {
+      "r": 0.05,
+      "e": 1.0,
+      "to": true
+    },
+    "745": {
+      "r": 0.05,
+      "e": 1.0,
+      "to": true
+    }
+  },
+  "decision": "313YES and745NO both bid53c/ask56c at the matched09:25:35UTC response. No cheaper equivalent route established. Retain existing DEC229 terms/deadline; no new order, conversion, add or financial prior. Any future reroute needs current gates and no duplicate exposure.",
+  "source_paths": [
+    "data/deep_review_20261017/work/0745_sibling_facts_0921.json",
+    "data/deep_review_20261017/quotes_313_745_route_0927.json"
+  ],
+  "quotes_sha256": "c86e9e0fe436f774743ae42bdfac9bfcf19f73131404bbe6d724b10163c4ea57"
+}

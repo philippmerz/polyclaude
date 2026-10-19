@@ -1,0 +1,121 @@
+{
+  "started_utc": "2026-10-19T09:09:30.620474+00:00",
+  "completed_utc": "2026-10-19T09:09:33.667485+00:00",
+  "new_orders": [
+    {
+      "index": 313,
+      "order": {
+        "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+        "conditionId": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+        "asset": "19084872616962411893665279455695701352433114098006020241350661698518933473122",
+        "originalShares": 5.0,
+        "matchedShares": 0.0,
+        "remainingShares": 5.0,
+        "price": 0.53,
+        "risk": 2.6500000000000004,
+        "slug": "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+        "question": "Will the Rhine River return to normal levels between October 1 and October 31, 2026?",
+        "eventIds": [
+          "976810"
+        ]
+      },
+      "ctf_balances": {
+        "19084872616962411893665279455695701352433114098006020241350661698518933473122": 0.0,
+        "86006311808069604181016902065305702598289476091939867213751308592840390092285": 0.0
+      },
+      "result": "LIVE_UNFILLED_NOT_HOLDING"
+    },
+    {
+      "index": 316,
+      "order": {
+        "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+        "conditionId": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+        "asset": "21344240354098108351843424713534394837006651055727639290239200588246460759867",
+        "originalShares": 10.0,
+        "matchedShares": 0.0,
+        "remainingShares": 10.0,
+        "price": 0.13,
+        "risk": 1.3,
+        "slug": "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
+        "question": "Will Erling Braut Haaland rank in Google\u2019s Top 5 Most Searched Athletes of 2026?",
+        "eventIds": [
+          "996210"
+        ]
+      },
+      "ctf_balances": {
+        "72257742731710757631814812995930297810474685632113794047520846137551021660945": 0.0,
+        "21344240354098108351843424713534394837006651055727639290239200588246460759867": 0.0
+      },
+      "result": "LIVE_UNFILLED_NOT_HOLDING"
+    }
+  ],
+  "all_open_buy_count": 6,
+  "all_open_remaining_risk": 11.47,
+  "funds": {
+    "balance": 20.45129,
+    "committed": 11.47,
+    "deployable": 8.98129,
+    "allowance": 1.157920892373162e+71,
+    "ctf_approved": true
+  },
+  "positions_count": 8,
+  "all_existing_position_identities_sizes_basis_totalBought_unchanged": true,
+  "reservation_count": 6,
+  "reservations": [
+    {
+      "id": null,
+      "conditionId": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "asset": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "shares": 10.0,
+      "risk": 3.8,
+      "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "submissionState": "live"
+    },
+    {
+      "id": null,
+      "conditionId": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "asset": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "shares": 50.0,
+      "risk": 1.5,
+      "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "submissionState": "live"
+    },
+    {
+      "id": null,
+      "conditionId": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "asset": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "shares": 10.0,
+      "risk": 1.2,
+      "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "submissionState": "live"
+    },
+    {
+      "id": null,
+      "conditionId": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+      "asset": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+      "shares": 34.0,
+      "risk": 1.02,
+      "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "submissionState": "live"
+    },
+    {
+      "id": null,
+      "conditionId": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+      "asset": "19084872616962411893665279455695701352433114098006020241350661698518933473122",
+      "shares": 5.0,
+      "risk": 2.6500000000000004,
+      "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+      "submissionState": "live"
+    },
+    {
+      "id": null,
+      "conditionId": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+      "asset": "21344240354098108351843424713534394837006651055727639290239200588246460759867",
+      "shares": 10.0,
+      "risk": 1.3,
+      "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+      "submissionState": "live"
+    }
+  ],
+  "scope": "Sequential authenticated order/account and chain reads;not fixedblock; later fills remain possible. No cashdebit/newtokens/profit observed."
+}

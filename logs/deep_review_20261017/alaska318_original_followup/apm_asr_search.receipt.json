@@ -1,0 +1,15 @@
+{
+  "body_sha256": "4b3ddbd83de88523cdf1d8d7603857bad1d23937a253bcc25c1425a4d0b59fa3",
+  "bytes": 269599,
+  "content_type": "text/html;charset=UTF-8",
+  "final_url": "https://alaskapublic.org/?s=Alaska+Survey+Research",
+  "gzip_path": "logs/deep_review_20261017/alaska318_original_followup/apm_asr_search.body.gz",
+  "gzip_sha256": "50a6c172653ad741aab6bce3ba7bffafef48b2f4ce89448497dffb24a83e3ff5",
+  "received_utc": [
+    "2026-10-19T08:49:06.132963+00:00",
+    "2026-10-19T08:49:06.616340+00:00"
+  ],
+  "requested_url": "https://alaskapublic.org/?s=Alaska+Survey+Research",
+  "status": 200,
+  "truncated": false
+}

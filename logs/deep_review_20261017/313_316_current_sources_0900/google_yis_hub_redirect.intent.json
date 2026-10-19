@@ -1,0 +1,1 @@
+{"name":"google_yis_hub_redirect","request":{"call_window_label":"case313/316 prospective source refresh","method":"GET","read_only":true,"scope":"Official Google hub redirect destination (one follow only)","url":"https://trends.withgoogle.com/year-in-search/2025/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:56:52.536735Z","timing_basis":"call_window"}

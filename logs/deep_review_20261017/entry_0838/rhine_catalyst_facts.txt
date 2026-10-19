@@ -1,0 +1,38 @@
+# resolution criteria fetched (1630 chars)
+# injected 1 live headlines into prompt
+# catalyst_check: Will the Rhine River return to normal levels between October 1 and October 31, 2026?
+# resolve=2026-10-31 (12 days)  profile=fast
+# spawning scoped research worker ...
+## Source inventory
+
+- **Entity / metric / geography:** Kaub gauge, station `25700100` (UUID `1d26e504-7f9e-480a-b52c-5932be6549ab`), Rhine at river km 546.23; relative water level in centimeters. PegelOnline reports `GlW = 77 cm`, valid from 2023-01-01.  
+  Dates: page read/retrieved 2026-10-19; current reading timestamp 2026-10-19 10:15 CEST.  
+  [PegelOnline Kaub master data](https://pegelonline.wsv.de/gast/stammdaten?pegelnr=25700100) — body read.  
+  **Observation:** 12 cm, well below the 77 cm threshold.
+
+- **Current Kaub observation:** PegelOnline’s current-level table showed 10 cm at 2026-10-19 07:30 CEST.  
+  [PegelOnline current water levels](https://pegelonline.wsv.de/gast/pegelinformationen) — indexed excerpt read.  
+  This is an observation, not a forecast.
+
+- **Recent official forecast:** ELWIS/BfG’s deterministic forecast issued 2026-10-19 07:00 predicted Kaub around 10–20 cm through 2026-10-23, far below 77 cm.  
+  [ELWIS Kaub forecast](https://www.elwis.de/DE/dynamisch/Wasserstaende/Pegelvorhersage:KAUB) — body read.  
+  **Forecast, not observation.**
+
+- **14-day probabilistic forecast:** BfG forecast issued 2026-10-18 showed the probability of *remaining below* GlW 77 cm at 100% for Oct. 18–23, 99% Oct. 24, 77% Oct. 25, 51% Oct. 26, 29% Oct. 27, 23% Oct. 28–29, 28% Oct. 30, and 35% Oct. 31. These are based on daily mean values, not individual readings; therefore they cannot themselves trigger the rule.  
+  [BfG 14-day Kaub forecast PDF](https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf) — PDF body read.  
+  **Forecast, not observation.**
+
+- **Six-week forecast:** BfG forecast issued 2026-10-15 categorized the Oct. 29–Nov. 4 weekly period using thresholds all above 105 cm; the forecast documentation states these are weekly means and uncertain. It does not provide a qualifying individual reading.  
+  [BfG six-week Kaub forecast PDF](https://vorhersage.bafg.de/6-Wochen-Vorhersage/Rhein-Kaub_6Wochen_Wasserstand.pdf) — PDF body read.  
+  **Forecast, not observation.**
+
+- **Historical/current raw-data availability:** PegelOnline listed daily Kaub files for every date from 2026-10-01 through 2026-10-19.  
+  [Kaub raw-data directory](https://www.pegelonline.wsv.de/webservices/files/Wasserstand%2BRohdaten/RHEIN/1d26e504-7f9e-480a-b52c-5932be6549ab) — directory body read.  
+  The individual CSV files were not readable through the retrieval tool: some returned cache misses and others unsupported `text/csv` content. Thus I cannot certify from the rendered data that no transient reading ≥77 cm occurred earlier in October.
+
+- **Rule-relevant evidence identified:** No readable primary-source body showed a Kaub observation at or above 77 cm between Oct. 1 and Oct. 19. However, this is not evidence of absence because the daily raw measurement contents were not successfully rendered. The earliest qualifying reading, if any, remains unresolved.
+
+- **Fallback:** If no qualifying timestamp before 2026-11-01 Berlin time exists, the rule requires “No return before November 1, 2026.” The source-side condition is not yet testable from the current retrieval because future Nov. 1+ readings do not yet exist.
+
+- **Unverified news lead:** The NerdWallet item concerns U.S. gasoline prices, published/updated Oct. 12, 2026; it contains no Kaub, Rhine, WSV, PegelOnline, or water-level evidence and is contract-irrelevant.  
+  [NerdWallet article](https://www.nerdwallet.com/finance/learn/are-gas-prices-going-down) — body/indexed excerpt read.

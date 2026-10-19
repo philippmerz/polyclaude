@@ -1,0 +1,15 @@
+{
+  "warmup_utc": "2026-10-19T08:46:32.385892+00:00",
+  "feed_names": [
+    "Rhine Kaub water level",
+    "Erling Haaland Google athlete"
+  ],
+  "tier1_terms_not_yet_added": [
+    "Kaub",
+    "Erling Haaland"
+  ],
+  "config_before_sha256": "bcfaefc65069ce57092c05efa801368679dc2aa80375445c43611a93fe0bcfb6",
+  "config_after_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "no_order_yet": true,
+  "no_manual_poll_state_edit_restart_newdaemon_timer": true
+}

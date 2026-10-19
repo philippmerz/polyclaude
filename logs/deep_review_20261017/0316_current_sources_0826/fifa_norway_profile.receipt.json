@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_current_sources_0826/fifa_norway_profile.body.gz",
+  "error": null,
+  "final_url": "https://www.fifa.com/en/news/articles/norway-team-profile-history",
+  "gzip_bytes": 1882,
+  "gzip_sha256": "9e2ff81d3f68866ecc679b84ed6c7e85a523286cfcdbf1dfb9f5469fecc7fb01",
+  "headers": {
+    "cache-control": "public, max-age=60",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:26:21 GMT"
+  },
+  "http_status": 200,
+  "method": "GET",
+  "name": "fifa_norway_profile",
+  "raw_bytes": 4553,
+  "raw_sha256": "bc10e8e15cd89e1582fc61a9736b13b13bc6c586a07f325f9651ecf53481235d",
+  "received_utc": "2026-10-19T08:26:21.659377+00:00",
+  "requested_url": "https://www.fifa.com/en/news/articles/norway-team-profile-history",
+  "started_utc": "2026-10-19T08:26:20.776992+00:00"
+}

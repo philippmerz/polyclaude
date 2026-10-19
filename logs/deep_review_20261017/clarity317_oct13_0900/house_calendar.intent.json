@@ -1,0 +1,1 @@
+{"name":"house_calendar","request":{"call_window_label":"case317 Oct13 GovInfo follow-up","method":"GET","read_only":true,"scope":"public official congressional record","url":"https://www.govinfo.gov/content/pkg/CCAL-119hcal-2026-10-13/html/CCAL-119hcal-2026-10-13-pt9.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:48:32.134715Z","timing_basis":"call_window"}

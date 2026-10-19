@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_current_sources_0826/nff_senior_team.body.gz",
+  "error": "body_over_2MB_not_saved",
+  "final_url": "https://www.fotball.no/landslag/norge-a-herrer/",
+  "gzip_bytes": 20,
+  "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+  "headers": {
+    "cache-control": "public, max-age=300, s-maxage=600, stale-while-revalidate=30, stale-if-error=86400",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:26:23 GMT"
+  },
+  "http_status": 200,
+  "method": "GET",
+  "name": "nff_senior_team",
+  "raw_bytes": 0,
+  "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "received_utc": "2026-10-19T08:26:24.078241+00:00",
+  "requested_url": "https://www.fotball.no/landslag/norge-a-herrer/",
+  "started_utc": "2026-10-19T08:26:22.875557+00:00"
+}

@@ -1,0 +1,16 @@
+[
+  {
+    "index": 313,
+    "call_started": "2026-10-19T09:04:49.081275+00:00",
+    "call_completed": "2026-10-19T09:04:53.711007+00:00",
+    "upper_book_age_at_call_completion_s": 151.87800712240602,
+    "conservative_bound_under180": true
+  },
+  {
+    "index": 316,
+    "call_started": "2026-10-19T09:07:14.193363+00:00",
+    "call_completed": "2026-10-19T09:07:18.722105+00:00",
+    "upper_book_age_at_call_completion_s": 153.32510497444153,
+    "conservative_bound_under180": true
+  }
+]

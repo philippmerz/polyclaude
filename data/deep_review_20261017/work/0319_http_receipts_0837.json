@@ -1,0 +1,64 @@
+{
+  "capture_utc": "2026-10-19T08:37:59.911905+00:00",
+  "capture_method": "direct unauthenticated urllib GET; response bytes gzip-compressed before parsing",
+  "items": [
+    {
+      "name": "fed_sep16_statement",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "final_url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "started_utc": "2026-10-19T08:37:58.993681+00:00",
+      "received_utc": "2026-10-19T08:37:59.219260+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "http_date": "Mon, 19 Oct 2026 08:37:59 GMT",
+      "last_modified": "Wed, 16 Sep 2026 18:00:17 GMT",
+      "cache_control": null,
+      "body_bytes": 82636,
+      "body_sha256": "8fde612fa182f8b9fc52c6674aff43a5d9bf093e33eb354493388a26da130a0d",
+      "gzip_path": "logs/deep_review_20261017/case0319_0837/fed_sep16_statement.body.gz",
+      "gzip_bytes": 12340,
+      "gzip_sha256": "1b37c7867cbbcd1827a7d86ee781bb89f3f853582df0e478981ed90c9a9a5219"
+    },
+    {
+      "name": "fed_2026_calendar",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "final_url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "started_utc": "2026-10-19T08:37:59.221204+00:00",
+      "received_utc": "2026-10-19T08:37:59.440732+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "http_date": "Mon, 19 Oct 2026 08:37:59 GMT",
+      "last_modified": "Wed, 07 Oct 2026 18:00:37 GMT",
+      "cache_control": null,
+      "body_bytes": 165751,
+      "body_sha256": "5a4ccef41a54398cfa019182d8703f8cd1a712b5a0af4f7878df022db4aded3a",
+      "gzip_path": "logs/deep_review_20261017/case0319_0837/fed_2026_calendar.body.gz",
+      "gzip_bytes": 16029,
+      "gzip_sha256": "34b40dd82f6813d6baf2581183047b9d2f3128cbb76adcd1c6ba43ef555e5e45"
+    },
+    {
+      "name": "fed_sep16_projection",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "final_url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "started_utc": "2026-10-19T08:37:59.443250+00:00",
+      "received_utc": "2026-10-19T08:37:59.662156+00:00",
+      "http_status": 200,
+      "content_type": "text/html",
+      "http_date": "Mon, 19 Oct 2026 08:37:59 GMT",
+      "last_modified": "Wed, 16 Sep 2026 18:00:27 GMT",
+      "cache_control": null,
+      "body_bytes": 241231,
+      "body_sha256": "cd7b245f481a5e848b41cf8f5d2810df50dc732086ea91939987f2b91c7f967f",
+      "gzip_path": "logs/deep_review_20261017/case0319_0837/fed_sep16_projection.body.gz",
+      "gzip_bytes": 31585,
+      "gzip_sha256": "691e240b49101449b913a2041587f3c21ab1ef93a77640d8ed561d38597da066"
+    },
+    {
+      "name": "bls_sep_cpi_release",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "started_utc": "2026-10-19T08:37:59.666135+00:00",
+      "received_utc": "2026-10-19T08:37:59.910652+00:00",
+      "error": "HTTPError: HTTP Error 403: Forbidden"
+    }
+  ]
+}

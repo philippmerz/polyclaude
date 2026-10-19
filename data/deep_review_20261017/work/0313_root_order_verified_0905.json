@@ -1,0 +1,33 @@
+{
+  "observed_utc": "2026-10-19T09:06:04.509384+00:00",
+  "order": {
+    "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+    "conditionId": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+    "asset": "19084872616962411893665279455695701352433114098006020241350661698518933473122",
+    "originalShares": 5.0,
+    "matchedShares": 0.0,
+    "remainingShares": 5.0,
+    "price": 0.53,
+    "risk": 2.6500000000000004,
+    "slug": "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+    "question": "Will the Rhine River return to normal levels between October 1 and October 31, 2026?",
+    "eventIds": [
+      "976810"
+    ]
+  },
+  "both_candidate_ctf": {
+    "19084872616962411893665279455695701352433114098006020241350661698518933473122": 0.0,
+    "86006311808069604181016902065305702598289476091939867213751308592840390092285": 0.0
+  },
+  "funds": {
+    "balance": 20.45129,
+    "committed": 10.17,
+    "deployable": 10.28129,
+    "allowance": 1.157920892373162e+71,
+    "ctf_approved": true
+  },
+  "remaining_order_count": 5,
+  "all_open_risk": 10.17,
+  "result": "LIVE_UNFILLED;notapurchase/profit;no replay",
+  "scope": "Sequentialauthenticatedordersandchainreads;notfixedblock."
+}

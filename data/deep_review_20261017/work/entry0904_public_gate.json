@@ -1,0 +1,18 @@
+[
+  {
+    "index": 313,
+    "outcome": "Yes",
+    "best_bid": 0.52,
+    "best_ask": 0.56,
+    "age": 87.711923122406,
+    "fresh_exact_public_gate": true
+  },
+  {
+    "index": 316,
+    "outcome": "No",
+    "best_bid": 0.12,
+    "best_ask": 0.19,
+    "age": 41.13492298126221,
+    "fresh_exact_public_gate": true
+  }
+]

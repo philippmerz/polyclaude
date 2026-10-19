@@ -1,0 +1,64 @@
+{
+  "schema": "news_feed_warmup_final_check.v1",
+  "observed_utc": "2026-10-19T08:57:24.739192+00:00",
+  "warmup_utc": "2026-10-19T08:46:32.385892+00:00",
+  "expected_config_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "current_config_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "same_config": true,
+  "config_mtime_utc": "2026-10-19T08:46:32.381819+00:00",
+  "watcher_code_sha256": "650baf55a25e5bff3fa5b16406abcde7facfb35f7e4bb6fcf4b0de7f0da69d23",
+  "watcher_code_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+  "daemon_pid_file_value": "148881",
+  "canonical_process_count": 1,
+  "state_mtime_utc": "2026-10-19T08:57:00.552443+00:00",
+  "state_saved_after_warmup": true,
+  "feeds": [
+    {
+      "feed": "Rhine Kaub water level",
+      "url": "https://news.google.com/rss/search?q=%28%22Kaub%22+OR+%22Rhine+River%22%29+%28%22water+level%22+OR+Pegel+OR+BfG+OR+ELWIS%29&hl=en-US&gl=US&ceid=US%3Aen",
+      "final_url": "https://news.google.com/rss/search?q=%28%22Kaub%22+OR+%22Rhine+River%22%29+%28%22water+level%22+OR+Pegel+OR+BfG+OR+ELWIS%29&hl=en-US&gl=US&ceid=US%3Aen",
+      "started_utc": "2026-10-19T08:57:24.536975+00:00",
+      "received_utc": "2026-10-19T08:57:24.585075+00:00",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "http_date": "Mon, 19 Oct 2026 08:56:59 GMT",
+      "cache_control": "no-cache, no-store, max-age=0, must-revalidate",
+      "raw_bytes": 93412,
+      "raw_sha256": "dca5b757435e4aae02b6705686c6e7bc529337e0037927256e4c7640603b585a",
+      "gzip_path": "logs/deep_review_20261017/entry0848_final/kaub.xml.gz",
+      "gzip_bytes": 19135,
+      "gzip_sha256": "e3db3f06ab0b83a54db2e436843a9211c094b5a69c9a8d52a5a037056bcbd700",
+      "bozo": false,
+      "feed_entries_total": 71,
+      "selected_count": 30,
+      "matches": {
+        "ids": 30,
+        "normalized_titles": 30
+      }
+    },
+    {
+      "feed": "Erling Haaland Google athlete",
+      "url": "https://news.google.com/rss/search?q=%22Erling+Haaland%22&hl=en-US&gl=US&ceid=US%3Aen",
+      "final_url": "https://news.google.com/rss/search?q=%22Erling+Haaland%22&hl=en-US&gl=US&ceid=US%3Aen",
+      "started_utc": "2026-10-19T08:57:24.626710+00:00",
+      "received_utc": "2026-10-19T08:57:24.668953+00:00",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "http_date": "Mon, 19 Oct 2026 08:57:00 GMT",
+      "cache_control": "no-cache, no-store, max-age=0, must-revalidate",
+      "raw_bytes": 137602,
+      "raw_sha256": "438e3838d77507618de8580d6567544fb8ff08990295c989d025e72dd12836dd",
+      "gzip_path": "logs/deep_review_20261017/entry0848_final/haaland.xml.gz",
+      "gzip_bytes": 28686,
+      "gzip_sha256": "9d939afd7b09ff79946532541f7bbbb63ce3471eefb0ad1392054133f3d173d5",
+      "bozo": false,
+      "feed_entries_total": 100,
+      "selected_count": 30,
+      "matches": {
+        "ids": 28,
+        "normalized_titles": 30
+      }
+    }
+  ],
+  "no_poll_or_state_edit_or_restart_or_config_change": true
+}

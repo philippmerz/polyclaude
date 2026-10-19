@@ -22,8 +22,8 @@ Examples:
 
 Output: text written to stdout, also appended to notes/catalyst_log.md.
 
-Per philosophy edge source #1, bond-like fades require a *modelled* fair
-value, not intuition. This script is the model.
+Use --facts-only when the primary analyst owns the forecast. This mode gathers
+source evidence without delegating probabilities or investment decisions.
 """
 
 from __future__ import annotations
@@ -154,13 +154,46 @@ End with the report only. Do NOT add commentary outside the report. Be terse —
 
 
 
+FACTS_PROMPT_TEMPLATE = """Collect source facts for the primary analyst's catalyst check.
+
+Market question: {question}
+Resolution date: {resolve_date} ({days_to_resolve} days from today {today_iso})
+{resolution_block}
+
+Read the complete literal rule. Identify the exact entity, metric, geography,
+date window, source, fallback and any already-existing qualifying evidence.
+Check dated primary sources for current facts, scheduled events and contrary
+evidence relevant to that rule. Earlier events can matter when the rule permits
+them; market creation alone does not truncate an annual ranking window.
+
+Return a concise source inventory: claim; event/publication/retrieval dates;
+direct URL; whether you read the body or only an indexed excerpt; exact units
+and configuration; failures, gaps and unresolved interpretations. Forecasts
+published by a source must be labeled forecasts, not observations. Missing
+retrievals and unrendered pages are not evidence of absence. News-feed titles
+are unverified leads until their source and contract relevance are checked.
+
+Do not estimate probabilities, rank or reject candidates, recommend an action,
+or use market prices. The primary analyst alone performs those judgments.
+"""
+
+
+def _news_lead_block(headlines: str) -> str:
+    return (
+        "\nUNVERIFIED NEWS LEADS (title matches from the project's feed; verify "
+        "the original source, date, entity and literal-rule relevance before "
+        "using them as evidence; they may be stale or unrelated):\n"
+        + headlines + "\n"
+    )
+
+
 def _recent_alert_headlines(question: str, max_lines: int = 6) -> str | None:
     """Latest news_alerts.jsonl titles sharing keywords with the question.
 
     2026-06-12 lesson: model web search can lag breaking news by hours — twice
     in 24h it reasoned from a stale world-state (missed live strikes, then missed
-    the deal-pivot). The alerts file has the freshest verified headlines; inject
-    them so the model anchors on live state."""
+    the deal-pivot). Titles are leads, not verified facts; a keyword match does
+    not establish source authenticity, recency or relevance to the contract."""
     import json as _json
     import re as _re
     try:
@@ -195,9 +228,8 @@ def main() -> int:
     p.add_argument("question", help="The Polymarket market question, in quotes.")
     p.add_argument("resolve_date", help="Resolution date, ISO format YYYY-MM-DD.")
     p.add_argument("--window-start", default=None,
-                   help="Market creation date (ISO). For 'by DATE' markets created mid-stream, "
-                        "only events AFTER this date can resolve YES — without it the check "
-                        "counts pre-creation events (2026-07-18 Beirut miss: 85%% vs market 27%%).")
+                   help="Creation/start metadata (ISO), applied when the literal rule "
+                        "uses that start. It does not override an explicit annual window.")
     p.add_argument("--profile", choices=["research", "fast"], default="research",
                    help="Model workload profile (default: research).")
     p.add_argument("--slug", default=None,
@@ -206,6 +238,9 @@ def main() -> int:
                    help="Reasoning effort level (default: medium).")
     p.add_argument("--no-log", action="store_true",
                    help="Skip writing the result to notes/catalyst_log.md.")
+    p.add_argument("--facts-only", action="store_true",
+                   help="Collect sourced facts only; the primary analyst retains "
+                        "probabilities and investment decisions.")
     args = p.parse_args()
 
     try:
@@ -237,21 +272,19 @@ def main() -> int:
 
     headlines = _recent_alert_headlines(args.question)
     if headlines:
-        resolution_block += (
-            "\nLATEST VERIFIED HEADLINES (from the project's live news feed — your "
-            "websearch may lag these; treat them as ground truth for current state):\n"
-            + headlines + "\n")
+        resolution_block += _news_lead_block(headlines)
         print(f"# injected {headlines.count(chr(10)) + 1} live headlines into prompt", file=sys.stderr)
 
     if args.window_start:
         resolution_block += (
-            f"\n**WINDOW START: this market was created {args.window_start}. Only events "
-            f"occurring AFTER that datetime can satisfy the resolution criteria — events "
-            f"before it, however similar, DO NOT count toward YES. If your qualifying "
-            f"catalyst predates the window start, P(YES) must be based solely on the "
-            f"probability of a NEW qualifying event inside the window.**\n")
+            f"\nCREATION/START METADATA supplied by the caller: {args.window_start}. "
+            "Exclude earlier events only when the literal criteria require an "
+            "on/after-creation or on/after-start event. An explicit annual ranking "
+            "or other stated evidence window remains controlling; creation alone "
+            "does not remove earlier events from that window. State any ambiguity.\n")
 
-    prompt = PROMPT_TEMPLATE.format(
+    template = FACTS_PROMPT_TEMPLATE if args.facts_only else PROMPT_TEMPLATE
+    prompt = template.format(
         question=args.question,
         resolve_date=args.resolve_date,
         days_to_resolve=days,

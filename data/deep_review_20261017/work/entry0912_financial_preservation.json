@@ -1,0 +1,14 @@
+{
+  "all_previous_decisions_unchanged": true,
+  "new_decisions": [
+    229,
+    230
+  ],
+  "all_previous_priors_unchanged_except_updated_metadata": true,
+  "new_prior_slugs": [
+    "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+    "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026"
+  ],
+  "decisions_sha256": "6421929d1b78752c57b61c6a5fc93670d96f24325b5b606b183100f95d8a5dcd",
+  "priors_sha256": "bbf08ae1a32b34f376e8a95a1a7fb4b7f64db0589f1e8661fcc13ea5b7828591"
+}

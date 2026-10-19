@@ -2,6 +2,8 @@
 
 Operator explicitly requested `/goal` October18: continue the remaining review; occasional material Telegram progress; repair or investigate substantive limitations rather than force3,000 completions. No new timer/watcher. Each scheduled tick retains its own bounded safety work.
 
+**Oct19 interactive resumption:**316valued/6blocked/364factual/2,314pending; next320. Five newvaluations313/314/316/317/319 and318sourceblock individuallysaved. **313/316 nowALREADYPOSTED/verifiedLIVE0matched09:09: DEC2295YES53c/2.65 andDEC23010NO13c/1.30. DoNOTreplay.** `data/deep_review_20261017/work/entry0848_RESUME.json` linksphase/proofs; existing10UTCmustcancelallunfillednewremainder,earlieruncertaintycancel-first. Nativegoalstillblocked despiteoperatorresumption; tool hasnoresume operation. App/systemcontrol needed forautomaticcontinuation; nofakecompletion/duplicateunfinishedgoal.
+
 1. Read `notes/current_context.md` for latest dated portfolio/active-task pointers; check expiry/hashes. Then `notes/deep_review_checkpoint.json` for exact counts/active/next.
 2. Run `.venv/bin/python scripts/deep_review_resume.py` (default active else first pending), or `--index N`. Default8,000UTF8byte hard cap; complete literal rules/identity, effective report/revision pointers and hashes. It never calls network/account/writers. Oversize or integrity failure must be resolved; no truncating exact rules to fit.
 3. Load only the selected report/draft and its named model/source unit. Optional `data/deep_review_20261017/work/NNNN_resume.json` holds small scoped path pointers. Read raw source excerpts/rows as needed for actual verification; collector summaries are leads, not proof. Keep date/configuration/hash bindings exact.

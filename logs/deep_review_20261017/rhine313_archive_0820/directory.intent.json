@@ -1,0 +1,1 @@
+{"name":"directory","request":{"call_window_label":"case313 Kaub older history source followup","method":"GET","read_only":true,"scope":"Official WSV Wasserstand Rohdaten directory listing only","url":"https://pegelonline.wsv.de/webservices/files/Wasserstand+Rohdaten"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:21:52.747805Z","timing_basis":"call_window"}

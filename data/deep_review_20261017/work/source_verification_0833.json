@@ -1,0 +1,55 @@
+{
+  "schema": "primary_source_verification.v1",
+  "verified_utc": "2026-10-19T08:32:41.302415+00:00",
+  "receipts": [
+    {
+      "receipt": "logs/deep_review_20261017/portwatch314_0820/target_window.receipt.json",
+      "raw_sha256": "c53ef10d869afeee183a8d1426db6430199b6a9b74dbceb29f29b6434628f18f",
+      "gzip_sha256": "724e044bae939f38351636167df7fcb091af67e883ba95b08c04286913df6920",
+      "bytes": 131,
+      "status_code": null,
+      "received_utc": "2026-10-19T08:22:35.243621+00:00"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/portwatch314_0820/latest_observation.receipt.json",
+      "raw_sha256": "f41e9cd3ddb9bfe714181f02d20283623433bf011191e450b5c7150e4d8fa296",
+      "gzip_sha256": "cedc6fdb39a0da5bc8ba31ae269feafc3f3c30cc9f0f12d895b69fb387c0e0ea",
+      "bytes": 1696,
+      "status_code": null,
+      "received_utc": "2026-10-19T08:22:36.999544+00:00"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/0316_current_sources_0826/nff_denmark_match.receipt.json",
+      "raw_sha256": "1a63cc37f18ff625581f5bf71b9f972e8a925d25f9bd0e7f411fc6a2b833705b",
+      "gzip_sha256": "7de3ea45fbca0c4c1102de39a5341596497dc83932b4afe374622c61b13544ff",
+      "bytes": 133912,
+      "status_code": null,
+      "received_utc": "2026-10-19T08:26:22.869646+00:00"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_range_zip_0825/range_zip.receipt.json",
+      "raw_sha256": "0c46f46c004ce7ed749001a35e8d6242a3501a8ebc4d5aac2aa4b353366f6c19",
+      "gzip_sha256": "afc73e7c40133b83fc11c95efb1b10cd72ca7b12910842244e1ce9b84d5dfcf3",
+      "bytes": 5886,
+      "status_code": 200,
+      "received_utc": "2026-10-19T08:25:42.821779Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_forecast_followup_0915/forecast14_pdf.receipt.json",
+      "raw_sha256": "b1b19629cc1235051c0eda720887f38841e12d5d8fc591ae50461e1b0267736e",
+      "gzip_sha256": "e8323de70a4291b247527401aabe02b7cb9d4ce1c4e7c076e7282de6beddc974",
+      "bytes": 271886,
+      "status_code": 200,
+      "received_utc": "2026-10-19T08:28:43.516677Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_forecast_followup_0915/elwis_current.receipt.json",
+      "raw_sha256": "bb7fbb78d8072f0df08f691474e1b48e259fc8b0fc16e7a24d51c3e270a27b82",
+      "gzip_sha256": "1842ad65ed26f082f97854af903be2de7d9fcd3c6973a5c55a69efd0fd3d9d3b",
+      "bytes": 81444,
+      "status_code": 200,
+      "received_utc": "2026-10-19T08:28:43.127052Z"
+    }
+  ],
+  "scope": "Body hash/status verification; root separately read full BfG PDF text/browser source, exact contract and source summaries. Not an execution certificate."
+}

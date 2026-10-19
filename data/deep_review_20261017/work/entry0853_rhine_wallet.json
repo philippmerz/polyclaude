@@ -1,0 +1,13 @@
+{
+  "observed_utc": "2026-10-19T08:51:54.764498+00:00",
+  "neg_risk": true,
+  "exchange": "0xe2222d279d744050d28e00520010520000310F59",
+  "funds": {
+    "balance": 20.45129,
+    "committed": 7.52,
+    "deployable": 12.93129,
+    "allowance": 1.157920892373162e+71,
+    "ctf_approved": true
+  },
+  "scope": "Correct313negRiskexchange approvals; prior0844Falseproofapplies316only. Sequentialreader,notfixedblock."
+}

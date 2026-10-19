@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_adversarial_0835/trends_explore.body.gz",
+  "error": null,
+  "final_url": "https://trends.google.com/trends/api/explore?hl=en-US&tz=0&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Erling+Haaland%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%2C%7B%22keyword%22%3A%22Lionel+Messi%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%2C%7B%22keyword%22%3A%22Kylian+Mbappe%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D",
+  "gzip_bytes": 835,
+  "gzip_sha256": "9d95cc523b989925326541ff6572f8bf79f76143178953436d1c687d5bfe1e77",
+  "headers": {
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:32:25 GMT"
+  },
+  "method": "GET",
+  "name": "trends_explore",
+  "raw_bytes": 1701,
+  "raw_sha256": "043271312c18d014dd0572e0c46f7799a46a6989fde7803545b6a6a9bfd010b5",
+  "received_utc": "2026-10-19T08:32:25.851673+00:00",
+  "requested_url": "https://trends.google.com/trends/api/explore?hl=en-US&tz=0&req=%7B%22comparisonItem%22%3A%5B%7B%22keyword%22%3A%22Erling+Haaland%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%2C%7B%22keyword%22%3A%22Lionel+Messi%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%2C%7B%22keyword%22%3A%22Kylian+Mbappe%22%2C%22geo%22%3A%22%22%2C%22time%22%3A%222025-01-01+2026-10-18%22%7D%5D%2C%22category%22%3A0%2C%22property%22%3A%22%22%7D",
+  "started_utc": "2026-10-19T08:32:25.800822+00:00",
+  "status_code": 429
+}

@@ -1,0 +1,52 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "review_index": 316,
+  "observed_utc": "2026-10-19T08:26:24Z",
+  "scope": "Official football/method facts only; no odds, ranking forecast, eligibility decision or market-price analysis.",
+  "frozen_identity_ref": "work/0316_facts_resume_0820.json",
+  "nff_direct": {
+    "url": "https://www.fotball.no/landslag/norge-a-herrer/2026/disse-starter-mot-danmark/",
+    "title": "Haaland-dobbel da Norge slo Danmark",
+    "published": "2026-09-24",
+    "http": 200,
+    "captured_utc": "2026-10-19T08:26:22.869646+00:00",
+    "fact": "NFF reports Norway beat Denmark 3-2 in the Nations League at Ullevaal. Haaland scored twice; his 74th-minute winner was his 64th senior-team goal. The article named Portugal as next fixture when published; its later result was not checked.",
+    "raw_sha256": "1a63cc37f18ff625581f5bf71b9f972e8a925d25f9bd0e7f411fc6a2b833705b",
+    "gzip_sha256": "7de3ea45fbca0c4c1102de39a5341596497dc83932b4afe374622c61b13544ff",
+    "body": "logs/deep_review_20261017/0316_current_sources_0826/nff_denmark_match.body.gz",
+    "receipt": "logs/deep_review_20261017/0316_current_sources_0826/nff_denmark_match.receipt.json"
+  },
+  "fifa_search_index_only": [
+    {
+      "url": "https://www.fifa.com/en/news/articles/norway-team-profile-history",
+      "snippet": "Published 2026-06-02; Norway qualified after 28 years away and Haaland scored 16 qualifying goals.",
+      "direct_get": 200,
+      "body_sha256": "bc10e8e15cd89e1582fc61a9736b13b13bc6c586a07f325f9651ecf53481235d",
+      "body": "logs/deep_review_20261017/0316_current_sources_0826/fifa_norway_profile.body.gz"
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexico2026/articles/matchday-20-round-up-review-highlights",
+      "snippet": "FIFA search result: Norway beat Senegal 3-2 on June 22; Haaland scored twice and Norway advanced to the Round of 32.",
+      "direct_get": 200,
+      "body_sha256": "bc10e8e15cd89e1582fc61a9736b13b13bc6c586a07f325f9651ecf53481235d",
+      "body": "logs/deep_review_20261017/0316_current_sources_0826/fifa_haaland_round16.body.gz"
+    },
+    {
+      "url": "https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/statistics/player-statistics?searchOverlay=1",
+      "snippet": "Indexed FIFA player table lists Haaland seventh in goals, fourth in tournament ranking (seven goals); no direct GET in this pass."
+    }
+  ],
+  "fifa_access_limit": "Both direct FIFA responses were identical 4,553-byte generic shells with no extractable article text. Search snippets are locators, not captured-body proof. NFF home page response exceeded 2 MB cap and was not saved/parsed. The prior direct Man City profile returned 403; no retry.",
+  "google_yis": {
+    "official_method": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+    "captured_body": "data/deep_review_20261017/google_time_sources.json#google.official_methodology; raw SHA256 ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830; captured 2026-10-17T20:59:53Z",
+    "definition_2025": "Top trending queries ranked by fastest increase in search interest/traffic Jan 1-Nov 25, 2025 vs same 2024 dates, using Google Trends plus internal tools; not total search volume.",
+    "2026_unknown": "Checked official hub currently redirected to /2025/; no 2026 list, cutoff, publication timing or method established. This does not prove no 2026 list exists elsewhere.",
+    "history": "Retained official global Athletes top-ten tables: Haaland absent in 2021-24; displayed 2025 top ten also omits him. Historical context only, not 2026 exclusion. Tables: data/deep_review_20261017/google_historical_category_sources.json; 2025 raw page SHA256 1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc."
+  },
+  "limits": [
+    "Dated World Cup achievements are search catalysts, not Google category-rank evidence.",
+    "No Haaland search-growth measure or official 2026 Year in Search rank was retrieved.",
+    "A repeated Man City GET occurred during a capture-script collision; its response/status was not retained or used. No further GET was made."
+  ]
+}

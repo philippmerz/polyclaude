@@ -1,0 +1,72 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "review_index": 316,
+  "observed_utc": "2026-10-19T08:23:27Z",
+  "scope": "Bounded primary facts only; no odds, forecast, market-price assessment, or eligibility decision.",
+  "frozen_identity": {
+    "id": "4425460",
+    "conditionId": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+    "question": "Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?",
+    "criteria_sha256": "963de8f189aa6c96bb2ad6ed9a9bee5f51db475ba4004d6a028dfc4b2c888d21",
+    "frozen_rules_source": "research/2026-10-17-primary-market-review-rules.jsonl.gz#review_index=316",
+    "literal_scope": "YES only if Haaland is in the top five of Google's official 2026 Year in Search Global Athletes list. Otherwise NO; if no list by March 31, 2027 23:59 ET, NO. The resolving source is Google's published list."
+  },
+  "current_market_metadata": {
+    "source": "https://gamma-api.polymarket.com/markets/4425460",
+    "captured_utc": "2026-10-19T08:22:28.628748+00:00",
+    "http_status": 200,
+    "exact_frozen_identity": true,
+    "raw_sha256": "e2e08c4df5b7cb66b16234278d26879451a4e207b38f868155bb2699fc4cda5f",
+    "gzip_sha256": "0c25314384b14d1df43722239fb2c03a49da39a361d3b61423c07965a11c9fe0",
+    "raw_body": "logs/deep_review_20261017/status_0316_0820/0316_gamma.body.json.gz",
+    "receipt": "logs/deep_review_20261017/status_0316_0820/0316_gamma.receipt.json",
+    "metadata": {
+      "active": true,
+      "closed": false,
+      "acceptingOrders": true,
+      "startDate": "2026-09-09T22:12:22Z",
+      "createdAt": "2026-09-09T22:11:57.633873Z",
+      "endDate": "2026-12-31T23:59:00Z",
+      "umaResolutionStatus": null
+    },
+    "scope_note": "No outcome prices or books copied. Gamma omits UMA status; terminal helper classified unknown/nonterminal-candidate, not a resolution finding."
+  },
+  "primary_sources": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/",
+      "captured_utc": "2026-10-19T08:22:48.470330+00:00",
+      "status": 301,
+      "location": "2025/",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "body": "logs/deep_review_20261017/0316_sources_0820/google_yis_hub.body.gz",
+      "finding": "The official hub URL redirected to its 2025 page on this request. This does not establish that no 2026 list exists elsewhere."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "captured_utc": "2026-10-19T08:22:56.246711+00:00",
+      "status": 200,
+      "content_type": "text/html; charset=utf-8",
+      "raw_bytes": 1201698,
+      "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+      "gzip_sha256": "e76dfa6470d76515e756d38944c1fe485a83146e6e75315ccc969efd41bb803f",
+      "body": "logs/deep_review_20261017/0316_sources_0820/google_yis_2025.body.gz",
+      "finding": "The published 2025 Global Athletes top five are Terence Crawford, Rory McIlroy, Shedeur Sanders, Shai Gilgeous-Alexander, and Jalen Hurts. Validation context only; not evidence of 2026 ranking or relative search volume."
+    },
+    {
+      "url": "https://www.mancity.com/players/erling-haaland",
+      "captured_utc": "2026-10-19T08:22:48.657451+00:00",
+      "status": 403,
+      "raw_bytes": 910442,
+      "raw_sha256": "2675f90aaa31fb0b6a52d83a7071210c9da1487227b2bd49e762b6ad26d3c5f5",
+      "gzip_sha256": "071c46af8f55ac9c209ed55f3163b349f3dd65dad461350c42a191aebc6f17da",
+      "body": "logs/deep_review_20261017/0316_sources_0820/mancity_haaland_profile.body.gz",
+      "finding": "First direct official player-profile fetch was denied; no Haaland-specific current performance or schedule facts extracted."
+    }
+  ],
+  "access_correction": "A script rerun after saving the 2025 page issued a second request to the same Man City URL before an O_EXCL collision prevented storing a second body/receipt. Its status and exact time were not retained; it is not used as evidence. No further request was made.",
+  "gaps": [
+    "This bounded pass did not establish whether Google has published any 2026 list beyond the observed hub redirect.",
+    "No current first-party Haaland activity/catalyst facts were obtained because the profile request returned 403; this is an access gap, not a claim of no events."
+  ]
+}

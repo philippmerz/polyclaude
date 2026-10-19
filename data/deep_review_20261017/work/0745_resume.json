@@ -1,0 +1,14 @@
+{
+  "review_index": 745,
+  "source_paths": [
+    "work/0745_sibling_facts_0921.json",
+    "work/0745_gamma_receipt_0921.json"
+  ],
+  "phase": "Exact sibling contract and current Gamma metadata recorded; no report/valuation exists; no order or quote assessment.",
+  "updated_utc": "2026-10-19T09:22:16.278248Z",
+  "load_bearing_unknowns": [
+    "Any BfG daily-mean forecast is not an observed instantaneous >=77cm qualifying reading.",
+    "Title-vs-startDate scope ambiguity is present in both related contracts and requires primary review."
+  ],
+  "next_bounded_step": "Primary reviewer may assess the sibling literal rule independently; do not collapse it into case313."
+}

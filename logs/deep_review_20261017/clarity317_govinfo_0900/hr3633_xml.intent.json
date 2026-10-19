@@ -1,0 +1,1 @@
+{"name":"hr3633_xml","request":{"call_window_label":"case317 follow-up","method":"GET","read_only":true,"scope":"public official legislative status","url":"https://www.govinfo.gov/bulkdata/BILLSTATUS/119/hr/BILLSTATUS-119hr3633.xml"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:42:35.914187Z","timing_basis":"call_window"}

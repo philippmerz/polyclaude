@@ -1,0 +1,12 @@
+{
+  "observed_utc": "2026-10-19T09:03:22.506781+00:00",
+  "state_mtime_utc": "2026-10-19T09:02:14.779759+00:00",
+  "promotion_utc": "2026-10-19T08:58:06.478483+00:00",
+  "state_after_promotion": true,
+  "same_config": true,
+  "config_sha256": "7c705515b4933afdef46732ba1342db545a111e3dc4b00932bfb63bb022d5278",
+  "canonical_pid": 148881,
+  "daemon_alive": true,
+  "no_manual_poll_state_edit_restart_newdaemon_timer": true,
+  "passed": true
+}

@@ -84,6 +84,11 @@ provisional and requires an independent fresh rewalk before any action.
   execution defaults to maker-or-skip: `--execute` with a taker route requires a
   logged `--taker-urgency` naming the short-lived reason that justifies fee and
   slippage. Multi-leg bundles retain their separately guarded taker-only path.
+- `catalyst_check.py --facts-only --slug EXACT_SLUG` — collect dated source
+  evidence while the primary analyst owns probabilities and selection. Feed
+  title matches remain unverified leads in both modes; missing bodies are gaps.
+  Pass a separately reviewed `--my-p` to the entry tool; this mode provides no
+  automatic forecast or execution authority.
 - `clob_v2.py` — authenticated order, cancel, sell and redemption client. Its
   read-only `orders` display adds a canonical slug only after an exact
   condition-ID plus token-ID match against `notes/position_condition_ids.json`;

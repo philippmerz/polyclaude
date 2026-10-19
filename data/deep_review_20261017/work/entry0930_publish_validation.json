@@ -1,0 +1,19 @@
+{
+  "schema": "deep_review.publish_validation.v1",
+  "checked_utc": "2026-10-19T09:28:19.119499+00:00",
+  "staged_files_before_this_manifest": 366,
+  "private_or_unrelated_paths": [],
+  "potential_credential_fields_in_staged_content": [],
+  "previous_financial_records_preserved": true,
+  "current_decisions_and_priors_match_independent_preservation_proof": true,
+  "csv_historical_prefix_preserved": true,
+  "csv_appended_rows": 1,
+  "focused_tests": "3passed earlier this same chunk; code/tests unchanged since successful run; PYTHONPATH=scripts",
+  "authored_whitespace_check": "passed, raw logs excluded to preserve captured bytes",
+  "raw_receipt_whitespace": "Financial/source capture output retains original trailing whitespace/blank lines. Not an authored-code failure.",
+  "handoff_bytes": 7392,
+  "packet_bytes": 11047,
+  "handoff_source_mismatches": [],
+  "public_web_bodies_left_local_only": "Three unchanged Google HTML captures include a publicly served GoogleMaps browser key. Their source URLs and raw-byte hashes/receipts are retained; bodies are preserved locally but excluded from publication. No operator credential was found.",
+  "sibling_route_audit": "work/entry0927_sibling_route_audit.json;745pending/noextraorderorvaluationcredit"
+}

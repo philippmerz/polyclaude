@@ -1,0 +1,25 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 314,
+  "constructed_utc": "2026-10-19T08:29:42.245485+00:00",
+  "price_blind": true,
+  "event": "IMF PortWatch Bab el-Mandeb total Oct12-18 inclusive <170, including its literal revision/fallback rules",
+  "p_yes": 0.1,
+  "low": 0.02,
+  "high": 0.35,
+  "baseline": "23 complete Monday-Sunday weeks through Oct11; none <170, minimum173. Last8 totals206,184,178,191,173,190,207,198: mean190.875/sampleSD12.380. Normal continuity-corrected tail4.2% is a sensitivity only, not a fitted predictive distribution or zero-tail license.",
+  "primary_bridge": "Use6% stable-regime tail, enlarged from4.2% for small sample, parameter uncertainty, serial dependence and heavier tails. Within95% ordinary-reporting branch assign2% chance of a materially restrictive week with80% under170; remaining98% uses6%. Separate5% substantial regime/source/fallback branch has50% under170. Total .95*(.98*.06+.02*.8)+.05*.5=.09606, rounded10%. These weights are transparent judgments, not empirical event frequencies.",
+  "current_evidence": "08:22 exact target query0rows/latestOct11, not zero counts. MARAD active regional threat advisory cites Aug24, not target-week disruption. UKMTO dated search leads are incomplete; missing rendered details do not establish no attacks. No surprise penalty is added just because the pre-existing regional warning remains high.",
+  "resolution_risk": "14-calendar-day fallback most naturally runs from final target dateOct18 (aboutNov1); partial/no-week-data interpretation remains ambiguous. Clerical correction can add3ET calendar days. Use20-day carry sensitivity rather than treating elapsed APIend as settled.",
+  "range_meaning": "Scenario range, not confidence interval. Sustained route disruption, publication/revision choices or falling underlying traffic can make the central model wrong.",
+  "entry_reserve_pp": 15,
+  "reserve_reason": "10pp unmeasured short-week/source-model error plus5pp conditional passive-fill sensitivity. Selected NO75% is not the35% YES scenario endpoint inverted; no claim every scenario passes.",
+  "dependence": "Same Bab weekly/closure family and broader Middle East shipping shocks; no independent diversification claim.",
+  "evidence_units": [
+    "data/deep_review_20261017/work/0314_resume_facts_0820.json",
+    "data/deep_review_20261017/work/0314_incident_context_0827.json",
+    "research/2026-10-17-deep-review/models/shipping_method.md",
+    "research/2026-10-17-deep-review/models/bab_weekly_observations.json"
+  ],
+  "execution_authority": false
+}

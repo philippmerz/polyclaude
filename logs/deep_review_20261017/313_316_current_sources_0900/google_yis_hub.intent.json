@@ -1,0 +1,1 @@
+{"name":"google_yis_hub","request":{"call_window_label":"case313/316 prospective source refresh","method":"GET","read_only":true,"scope":"Official Google Year in Search hub and current redirect target","url":"https://trends.withgoogle.com/year-in-search/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:56:52.321937Z","timing_basis":"call_window"}

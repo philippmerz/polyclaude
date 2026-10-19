@@ -1,0 +1,55 @@
+# bankroll $196.61 from cache (age 0.4h)
+# polyclaude_enter: looking up 'will-the-rhine-river-return-to-normal-levels-betwe'...
+  cmd: .venv/bin/python scripts/clob_v2.py buy 19084872616962411893665279455695701352433114098006020241350661698518933473122 0.53 2.65 --post-only --reservation-id 1792400692238585459-acc23652 --neg-risk true
+
+Market: Will the Rhine River return to normal levels between October 1 and October 31, 2026?
+  slug: will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026
+  market_id: 4294627
+  umaResolutionStatus: None
+  outcomePrices: YES=0.545 NO=0.455
+  endDate: 2026-10-31T23:59:00Z
+  negRisk: True
+
+!! SIBLING MARKET(S) FOUND (content-similarity >=0.7):
+!!   id=4294628 will-the-rhine-river-fail-to-return-to-normal-levels-before-november-1-2026 — YES mid=0.45 taker_fee=1000bps | different deadline — term-structure sibling, NOT fungible
+!!   TRUE-DUP + cheaper book on YES → verify criteria truly identical (descriptions/editions/definitions — implication-study trap), then route there.
+  [mark] gamma-mid 0.5450 → live ask 0.5600 (+1.5pp) — using live ask for the gate
+  [maker] gate + sizing run on the POSTED rest price 0.53 (bid 0.520 / ask 0.56), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.
+  [price cap] preview signed raw BUY limit 0.5300 <= 0.5400; execution will refresh and re-check
+  [capital caps] ticket $2.65/$29.49; cluster rhine-kaub-waterlevel-2026 $2.65/$58.98
+
+=== EXIT LIQUIDITY (what leaving would cost) ===
+  best bid 0.520 / ask 0.560 — spread 4.0pp
+  211 shares bid within 5% of your entry = 100% of this position
+
+=== KELLY ANALYSIS ===
+  Buying YES @ $0.5600, P(YES wins) = 0.8400
+  Edge: +31.00pp
+  Full Kelly: 66.0% of bankroll
+  ρ-discount: 1.0000 (ρ=0.2, cluster_frac=0.0)
+  × Kelly fraction: 0.25
+  Kelly $: $32.42
+  Manual override: $2.65
+  → Deploy: $2.65 (5.00 shares)
+  Profit if win: +$2.35 (= 88.7%)
+
+  Sensitivity (full-Kelly under p ±0.05):
+    p=0.7400 (-0.10): full_K=44.7% → $21.96
+    p=0.7900 (-0.05): full_K=55.3% → $27.19
+    p=0.8900 (+0.05): full_K=76.6% → $37.65
+
+# Executing BUY 5 shares (YES) @ 0.53 (tick 0.01) for $2.65 [RESTING post-only BID (record in notes/resting_orders.md)]
+signing v2 BUY order: token=1908487261696241... price=0.53 usd_size=2.65 neg_risk=True
+posting...
+{
+  "status_code": 200,
+  "body": {
+    "errorMsg": "",
+    "orderID": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+    "takingAmount": "",
+    "makingAmount": "",
+    "status": "live",
+    "success": true
+  }
+}
+

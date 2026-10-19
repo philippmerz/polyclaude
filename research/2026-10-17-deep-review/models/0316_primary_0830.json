@@ -1,0 +1,32 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 316,
+  "constructed_utc": "2026-10-19T08:29:42.245839+00:00",
+  "price_blind": true,
+  "event": "Haaland in official Google2026 GLOBAL ATHLETES top5; no qualifying list byMar31 2027 23:59ET paysNO",
+  "p_yes": 0.35,
+  "low": 0.1,
+  "high": 0.7,
+  "primary_bridge": "40% novelty/cross-sport-dominant ranking regime with15% Haaland inclusion;40% World-Cup-heavy regime with50% inclusion;18% broad established-star regime with50% inclusion;2% no qualifying list with0%. Sum35%. These are qualitative primary weights, not measured Google search growth or a calibrated posterior.",
+  "why_plausible": "First World Cup, FIFA indexed articleJul10 reports7goals and two againstBrazil; FIFA Sep25 article confirms Norway quarter-final campaign. NFF capturedSep24 body verifies two Denmark goals and64th international goal. This supplies actual new global-event attention beyond generic fame. Goal-of-round fan voting is NOT Google-rank data.",
+  "why_not_near_certain": "Google2025 ranks fastest YoY growth using internal tools; Haaland's established2025 fame/qualifying year raises comparison baseline. Strong same-sport rivals Messi/Mbappe and other sports can occupy five slots. Historical2021-25 tables omitHaaland; those differing events/windows are context, not failure trials.2026 cutoff/formula unknown; no comparable global2026growth series obtained.",
+  "source_representation": "NFF and Google bodies captured; additional root-read official FIFA browser-search text is archived as a browser representation, not a successfully downloaded FIFA article. Direct FIFA GETs returned generic shells. Do not transfer measured-looking certainty from the football statistics.",
+  "joint_sensitivity_with_held_messi": {
+    "both": 0.2,
+    "messi_only": 0.4,
+    "haaland_only": 0.15,
+    "neither_with_list": 0.23,
+    "no_list": 0.02
+  },
+  "joint_limit": "Compatible margins Messi60%/Haaland35%; not estimated dependence or full five-slot field. Shared release/cutoff/fame model and finite slots make portfolio dependence material.",
+  "entry_reserve_pp": 25,
+  "reserve_reason": "20pp annual unmeasured-ranking model reserve plus5pp conditional passive-fill sensitivity; actual same reserve used in both-side economics. Range wider than selected stress.",
+  "timing": "Normal December release usually fits project horizon; fallback throughMar31 2027 can lock capital beyond it.75-day carry sensitivity is normal-case only; tail164-day scenario needed if a candidate clears entry.",
+  "evidence_units": [
+    "data/deep_review_20261017/work/0316_facts_resume_0820.json",
+    "data/deep_review_20261017/work/0316_worldcup_catalysts_0826.json",
+    "research/2026-10-17-deep-review/models/google_athletes_method_0158.md",
+    "logs/deep_review_20261017/0316_primary_browser_0830.json"
+  ],
+  "execution_authority": false
+}

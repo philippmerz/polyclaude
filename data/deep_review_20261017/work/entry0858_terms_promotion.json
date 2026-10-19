@@ -1,0 +1,14 @@
+{
+  "promoted_utc": "2026-10-19T08:58:06.478483+00:00",
+  "terms_added": [
+    "Kaub",
+    "Erling Haaland"
+  ],
+  "normal_baseline_proof": "data/deep_review_20261017/work/entry0848_monitor_final_0857.json",
+  "baseline_state_save": "2026-10-19T08:57:00.552Z",
+  "config_before_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "config_after_sha256": "7c705515b4933afdef46732ba1342db545a111e3dc4b00932bfb63bb022d5278",
+  "no_order_yet": true,
+  "requires_later_normal_reload": true,
+  "no_manual_poll_state_edit_restart_newdaemon_timer": true
+}

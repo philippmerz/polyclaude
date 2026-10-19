@@ -1,0 +1,26 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 313,
+  "price_blind": true,
+  "event": "Kaub W station25700100 first qualifying >=77cm reading in the literal applicable start window throughOct31 Berlin; transient sample sufficient",
+  "p_yes": 0.84,
+  "low": 0.5,
+  "high": 0.97,
+  "observed_baseline": "Official archive closes Sep6 market-start throughSep18:1182post-start15min samples,max36cm,no gaps. Separate API extendsSep18-Oct19,allbelow77; known30min gapsSep28/Oct17 and unchecked quality remain. October-title vsSep6-start ambiguity does not currently produce conflicting observed results; hypothetical missed readings are not disproved.",
+  "load_bearing_forecast": "Official BfG14-day PDF issuedOct18 00:00MEZ, root-read full2pages, spansOct18-31. GlW77 daily-mean undershoot probabilities fall to23% Oct28/29. The complement77% concerns ONE DAILY MEAN and is not itself contract odds. A mean>=77 implies at least one underlying threshold crossing if same physical series/faithful reporting; it is a useful forecast proxy, not a calibrated lower bound on true contract probability.",
+  "primary_bridge": "Start from77% forecast daily-mean reach probability onOct28. Among remaining23%, assign35% chance of some qualifying instantaneous reading on another day or intraday while that day's mean stays<77. Physical event proxy=.77+.23*.35=.8505. Give98% weight to faithful metric/publication/window mapping and2% to data/adjudication branch with50% YES. Result84.349%,rounded84%. Conditional35% and2% mapping weight are primary judgments, NOT EMOS-derived joint probabilities. Do not multiply daily marginal probabilities as independent.",
+  "competing_scenarios": "Drier/revised weather or shared model error can keep every reading<77; the Oct18 forecast is not Oct19 initialization.6-week product is older, weekly means and<105low-class, so it adds no precise77cm event odds. Current short-range estimate throughOct23 being low is anticipated by14-day model, not contradictory new evidence. Wet branch raisesKaub sufficiently lateOct. No exact storm timing/source certainty claimed.",
+  "range_meaning": "50-97% is an explicit model/mapping scenario range, not confidence interval or empirical calibrated event guarantee.",
+  "entry_reserve_pp": 20,
+  "reserve_reason": "15pp event-proxy/model/date uncertainty plus5pp conditional maker-fill sensitivity; selectedYES64%. Applying toNO16% giveszero selectedNOprobability. No arbitrary requirement that every scenario endpoint passes.",
+  "timing": "ObservedNov1timestamp needed forNO; missing-data fallbackNov2 23:59Berlin.17-day carry diagnostic includes modest settlement delay. Pull/reprice on materialforecast/WSVthreshold/resolution changes; no newwatcher created.",
+  "dependence": "Distinct Rhine hydrology from held election/Google/usage/movie exposures; model and venue risks still shared. No measured covariance or diversification credit assumed.",
+  "evidence_units": [
+    "data/deep_review_20261017/work/0313_history_archive_0825.json",
+    "data/deep_review_20261017/work/0313_forecast_followup_0828.json",
+    "data/deep_review_20261017/work/0313_facts_0235.json",
+    "data/deep_review_20261017/work/0313_earlier_window_0315.json"
+  ],
+  "execution_authority": false,
+  "constructed_utc": "2026-10-19T08:31:12.316937+00:00"
+}

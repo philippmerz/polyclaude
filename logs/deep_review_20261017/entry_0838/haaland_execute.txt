@@ -1,0 +1,53 @@
+# bankroll $196.61 from cache (age 0.4h)
+# polyclaude_enter: looking up 'will-erling-braut-haaland-rank-in-googles-top-5-mo'...
+  cmd: .venv/bin/python scripts/clob_v2.py buy 21344240354098108351843424713534394837006651055727639290239200588246460759867 0.13 1.3 --post-only --reservation-id 1792400836968375171-1fe9f209
+
+Market: Will Erling Braut Haaland rank in Google’s Top 5 Most Searched Athletes of 2026?
+  slug: will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026
+  market_id: 4425460
+  umaResolutionStatus: None
+  outcomePrices: YES=0.845 NO=0.155
+  endDate: 2026-12-31T23:59:00Z
+  negRisk: False
+  [mark] gamma-mid 0.1550 → live ask 0.1900 (+3.5pp) — using live ask for the gate
+  [maker] gate + sizing run on the POSTED rest price 0.13 (bid 0.120 / ask 0.19), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.
+  [price cap] preview signed raw BUY limit 0.1300 <= 0.1400; execution will refresh and re-check
+  [capital caps] ticket $1.30/$29.49; cluster google-year-in-search-2026 $3.27/$58.98
+
+=== EXIT LIQUIDITY (what leaving would cost) ===
+  best bid 0.120 / ask 0.190 — spread 7.0pp
+  0 shares bid within 5% of your entry = 0% of this position
+  !! THIN EXIT: a thesis-break rule on this leg is aspirational, not actionable.
+     Size it as hold-to-resolution — entry size is the only loss control you get.
+
+=== KELLY ANALYSIS ===
+  Buying NO @ $0.1900, P(NO wins) = 0.6500
+  Edge: +52.00pp
+  Full Kelly: 59.8% of bankroll
+  ρ-discount: 0.9950 (ρ=0.5, cluster_frac=0.01)
+  × Kelly fraction: 0.25
+  Kelly $: $29.23
+  Manual override: $1.30
+  → Deploy: $1.30 (10.00 shares)
+  Profit if win: +$8.70 (= 669.2%)
+
+  Sensitivity (full-Kelly under p ±0.05):
+    p=0.5500 (-0.10): full_K=48.3% → $23.61
+    p=0.6000 (-0.05): full_K=54.0% → $26.42
+    p=0.7000 (+0.05): full_K=65.5% → $32.04
+
+# Executing BUY 10 shares (NO) @ 0.13 (tick 0.01) for $1.3 [RESTING post-only BID (record in notes/resting_orders.md)]
+signing v2 BUY order: token=2134424035409810... price=0.13 usd_size=1.3 neg_risk=False
+posting...
+{
+  "status_code": 200,
+  "body": {
+    "errorMsg": "",
+    "orderID": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+    "takingAmount": "",
+    "makingAmount": "",
+    "status": "live",
+    "success": true
+  }
+}
+

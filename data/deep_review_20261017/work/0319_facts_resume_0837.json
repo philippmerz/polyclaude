@@ -1,0 +1,67 @@
+{
+  "schema": "deep_review.factual_unit.v1",
+  "review_index": 319,
+  "observed_utc": "2026-10-19T08:39:21.220372Z",
+  "scope": "Official factual sources only; no forecast, valuation, probability, or eligibility decision.",
+  "frozen_identity": {
+    "id": "1168832",
+    "conditionId": "0x857a2ae8088bc256184d6684adfdc7832d072e526c1e8f0d218c1160770c20e9",
+    "question": "Will the upper bound of the target federal funds rate be ≤1.0% at the end of 2026?",
+    "criteria_sha256": "56a876b76142cd880bd4b31ac1735e6870fe30659696da0185f665677f5a83ea",
+    "frozen_rules_source": "research/2026-10-17-primary-market-review-rules.jsonl.gz#review_index=319",
+    "literal_resolution": "Resolve to target-range upper bound after Dec 8–9 2026 FOMC statement; absent a December decision by Dec 31 23:59 ET, use then-current upper bound. Round to nearest 25 bp; ties away from zero."
+  },
+  "official_rate_facts": {
+    "latest_decision_in_captured_sources": {
+      "date": "2026-09-16",
+      "fact": "FOMC raised target range 25 bp to 3.75–4.00%; upper bound 4.00%.",
+      "direct_capture": "logs/deep_review_20261017/case0319_0837/fed_sep16_statement.body.gz",
+      "http_status": 200,
+      "body_sha256": "8fde612fa182f8b9fc52c6674aff43a5d9bf093e33eb354493388a26da130a0d",
+      "gzip_sha256": "1b37c7867cbbcd1827a7d86ee781bb89f3f853582df0e478981ed90c9a9a5219",
+      "received_utc": "2026-10-19T08:37:59.219260Z",
+      "published": "2026-09-16"
+    },
+    "year_to_date_actions_through_oct17": "Official statement set: Jan28, Mar18, Apr29, Jun17, Jul29 held at 3.50–3.75%; Sep16 raised to 3.75–4.00%. Net 2026 upper-bound change +25 bp. Existing archive last updated Sep16 (FOMC) / Oct16 (full Fed press); this is evidence through Oct17, not a fresh Oct19 archive read.",
+    "scheduled_remaining_meetings": {
+      "date": "2026-10-27/28",
+      "note": "FOMC calendar lists as next scheduled meeting.",
+      "direct_capture": "logs/deep_review_20261017/case0319_0837/fed_2026_calendar.body.gz",
+      "http_status": 200,
+      "body_sha256": "5a4ccef41a54398cfa019182d8703f8cd1a712b5a0af4f7878df022db4aded3a",
+      "gzip_sha256": "34b40dd82f6813d6baf2581183047b9d2f3128cbb76adcd1c6ba43ef555e5e45",
+      "received_utc": "2026-10-19T08:37:59.440732Z"
+    },
+    "resolution_meeting": {
+      "date": "2026-12-08/09",
+      "projection_materials_scheduled": true
+    },
+    "sep_projection_not_outcome": {
+      "published": "2026-09-16",
+      "2026_federal_funds_rate_median_percent": 4.1,
+      "central_tendency_percent": "4.1–4.4",
+      "full_range_percent": "3.9–4.4",
+      "direct_capture": "logs/deep_review_20261017/case0319_0837/fed_sep16_projection.body.gz",
+      "http_status": 200,
+      "body_sha256": "cd7b245f481a5e848b41cf8f5d2810df50dc732086ea91939987f2b91c7f967f",
+      "gzip_sha256": "691e240b49101449b913a2041587f3c21ab1ef93a77640d8ed561d38597da066",
+      "received_utc": "2026-10-19T08:37:59.662156Z",
+      "caveat": "Participant projections, not outcome or probability distribution."
+    }
+  },
+  "recent_official_macro_facts": {
+    "US_CPI": "BLS September 2026 CPI release published Oct 14: CPI-U +0.6% m/m seasonally adjusted and +3.7% y/y; core CPI +0.3% m/m and +2.6% y/y; gasoline +9.1% m/m. Original successful official capture from Oct17, status 200, body SHA b9f981390c08f4a530d839495fce582124015b979bac0398bfcc35ffde0544e4, gzip logs/deep_review_20261017/macro_election_sources/bls_cpi_sep.body.gz. This pass’s single direct request to that same official archive returned HTTP 403 at 08:37:59Z; prior captured original remains available and is not replaced.",
+    "US_employment": "BLS September employment report released Oct2: payrolls +29,000; unemployment rate 4.2%. Reused official source unit/receipt in data/deep_review_20261017/macro_election_sources.json and logs/deep_review_20261017/macro_election_sources/bls_employment_sep.receipt.json; not recaptured in this pass.",
+    "coverage_limit": "No PPI body or exhaustive release inventory captured."
+  },
+  "reused_source_packet": {
+    "path": "data/deep_review_20261017/macro_followup_sources.json",
+    "sha256": "c3b8251a8d0ef8e0c6b132f830ff1ce1f443a6cb2a847e0124fd50f42f176d52",
+    "as_of_utc": "2026-10-17"
+  },
+  "new_capture_receipts": "work/0319_http_receipts_0837.json",
+  "access_gaps": [
+    "BLS CPI direct GET on Oct19 returned 403; reused preserved Oct17 official 200 capture.",
+    "Fed FOMC archive not recaptured after Oct17; no claim about archive completeness after that date."
+  ]
+}

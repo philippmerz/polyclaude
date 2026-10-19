@@ -1,0 +1,1 @@
+{"name":"hr3633_actions","request":{"call_window_label":"case317 official legislative source check","method":"GET","read_only":true,"scope":"Official Congress.gov H.R.3633 action history","url":"https://www.congress.gov/bill/119th-congress/house-bill/3633/all-actions"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:37:12.261354Z","timing_basis":"call_window"}

@@ -1,0 +1,1 @@
+{"name":"elwis_current","request":{"call_window_label":"case313 official Kaub forecast source check","method":"GET","read_only":true,"scope":"Current official ELWIS Kaub forecast page","url":"https://www.elwis.de/DE/dynamisch/Wasserstaende/Pegelvorhersage:KAUB"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T08:28:42.766672Z","timing_basis":"call_window"}

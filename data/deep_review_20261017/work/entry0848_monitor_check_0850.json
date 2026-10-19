@@ -1,0 +1,82 @@
+{
+  "schema": "news_feed_warmup_verification.v1",
+  "observed_utc": "2026-10-19T08:48:52.971318+00:00",
+  "warmup_utc": "2026-10-19T08:46:32.385892+00:00",
+  "config_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "config_mtime_utc": "2026-10-19T08:46:32.381819+00:00",
+  "watcher_script_sha256": "650baf55a25e5bff3fa5b16406abcde7facfb35f7e4bb6fcf4b0de7f0da69d23",
+  "watcher_script_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+  "daemon": {
+    "pid_file_value": "148881",
+    "matching_canonical_process_count": 1,
+    "process_observed": true,
+    "started_utc": "2026-10-19 05:28:37 UTC",
+    "script_predates_start": true
+  },
+  "normal_ingestion_check": {
+    "state_file_mtime_utc": "2026-10-19T08:46:25.781833+00:00",
+    "state_save_after_warmup": false,
+    "result": "pending_normal_cycle",
+    "reason": "The sole observed project state save predates the 08:46:32Z feed/config addition. Current IDs and normalized titles were not present at this earlier state snapshot; this is not an ingestion failure."
+  },
+  "watcher_rules": {
+    "entries_cap": 30,
+    "selection": "news_watcher._newest_entries_first, then configured 30-entry cap",
+    "state_comparison": "news_watcher.entry_id plus _normalize_title against load_state() seen_ids/seen_titles; state read only",
+    "feed_only": "No Kaub or Erling Haaland tier-1 term was added in this configuration; feed baselines only.",
+    "telegram": "news_watcher.py contains no direct Telegram send; it may request the existing gated daily-checkin dispatch."
+  },
+  "feeds": [
+    {
+      "feed": "Rhine Kaub water level",
+      "url": "https://news.google.com/rss/search?q=%28%22Kaub%22+OR+%22Rhine+River%22%29+%28%22water+level%22+OR+Pegel+OR+BfG+OR+ELWIS%29&hl=en-US&gl=US&ceid=US%3Aen",
+      "final_url": "https://news.google.com/rss/search?q=%28%22Kaub%22+OR+%22Rhine+River%22%29+%28%22water+level%22+OR+Pegel+OR+BfG+OR+ELWIS%29&hl=en-US&gl=US&ceid=US%3Aen",
+      "started_utc": "2026-10-19T08:48:27.723987+00:00",
+      "received_utc": "2026-10-19T08:48:28.231989+00:00",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "http_date": "Mon, 19 Oct 2026 08:48:28 GMT",
+      "cache_control": "no-cache, no-store, max-age=0, must-revalidate",
+      "last_modified": null,
+      "raw_bytes": 93412,
+      "raw_sha256": "546039b5414f9128abb08336564ed02c35aaef93926053b97e3fec39452035ea",
+      "gzip_path": "logs/deep_review_20261017/entry0848_feed_verify/kaub.xml.gz",
+      "gzip_bytes": 19135,
+      "gzip_sha256": "f6924f071a29ab5bc5ce452142f9d59ba6e69ffee88672fa908be739f1668f02",
+      "feedparser_bozo": false,
+      "feed_entries_total": 71,
+      "selected_count": 30,
+      "state_match": {
+        "seen_id_count": 0,
+        "seen_normalized_title_count": 0,
+        "selected_count": 30
+      }
+    },
+    {
+      "feed": "Erling Haaland Google athlete",
+      "url": "https://news.google.com/rss/search?q=%22Erling+Haaland%22&hl=en-US&gl=US&ceid=US%3Aen",
+      "final_url": "https://news.google.com/rss/search?q=%22Erling+Haaland%22&hl=en-US&gl=US&ceid=US%3Aen",
+      "started_utc": "2026-10-19T08:48:28.282575+00:00",
+      "received_utc": "2026-10-19T08:48:28.723761+00:00",
+      "http_status": 200,
+      "content_type": "application/xml; charset=utf-8",
+      "http_date": "Mon, 19 Oct 2026 08:48:28 GMT",
+      "cache_control": "no-cache, no-store, max-age=0, must-revalidate",
+      "last_modified": null,
+      "raw_bytes": 137602,
+      "raw_sha256": "3bc5e35e6e92ab4de1b167207cdf141d47fe95b25c0a750a033436f4ec084e0c",
+      "gzip_path": "logs/deep_review_20261017/entry0848_feed_verify/haaland.xml.gz",
+      "gzip_bytes": 28695,
+      "gzip_sha256": "95347d1e14c5da85ae0904b7b6d79390c3094932fb2f52eab881c8d889d02795",
+      "feedparser_bozo": false,
+      "feed_entries_total": 100,
+      "selected_count": 30,
+      "state_match": {
+        "seen_id_count": 0,
+        "seen_normalized_title_count": 0,
+        "selected_count": 30
+      }
+    }
+  ],
+  "no_mutation": true
+}

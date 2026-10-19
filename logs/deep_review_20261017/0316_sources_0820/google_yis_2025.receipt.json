@@ -1,0 +1,20 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_sources_0820/google_yis_2025.body.gz",
+  "error": null,
+  "final_url": "https://trends.withgoogle.com/year-in-search/2025/",
+  "gzip_bytes": 128722,
+  "gzip_sha256": "e76dfa6470d76515e756d38944c1fe485a83146e6e75315ccc969efd41bb803f",
+  "headers": {
+    "cache-control": "max-age=300",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:22:55 GMT"
+  },
+  "http_status": 200,
+  "method": "GET",
+  "name": "google_yis_2025",
+  "raw_bytes": 1201698,
+  "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+  "received_utc": "2026-10-19T08:22:56.246711+00:00",
+  "requested_url": "https://trends.withgoogle.com/year-in-search/2025/",
+  "started_utc": "2026-10-19T08:22:53.038986+00:00"
+}

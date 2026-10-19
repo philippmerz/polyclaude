@@ -1,0 +1,21 @@
+{
+  "request": {
+    "method": "GET",
+    "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0/query?f=json&where=portname+%3D+%27Bab+el-Mandeb+Strait%27+AND+date+%3E%3D+DATE+%272026-10-12%27+AND+date+%3C%3D+DATE+%272026-10-18%27&outFields=date%2Cportid%2Cportname%2Cn_total%2Cn_cargo%2Cn_tanker%2Cn_container%2Cn_dry_bulk%2Cn_general_cargo%2Cn_roro&returnGeometry=false&orderByFields=date+ASC%2Cportid+ASC&resultRecordCount=100&returnExceededLimitFeatures=true"
+  },
+  "started_utc": "2026-10-19T02:35:10.453981+00:00",
+  "received_utc": "2026-10-19T02:35:10.898340+00:00",
+  "http_status": 200,
+  "headers": {
+    "Date": "Mon, 19 Oct 2026 02:35:10 GMT",
+    "Cache-Control": "public, max-age=30, s-maxage=30",
+    "Last-Modified": "Wed, 14 Oct 2026 12:39:44 GMT",
+    "ETag": "sd2066_829105120",
+    "Content-Type": "application/json; charset=utf-8"
+  },
+  "raw_bytes": 131,
+  "raw_sha256": "c53ef10d869afeee183a8d1426db6430199b6a9b74dbceb29f29b6434628f18f",
+  "gzip_path": "logs/deep_review_20261017/portwatch314_0240/target_daily.body.json.gz",
+  "gzip_bytes": 110,
+  "gzip_sha256": "724e044bae939f38351636167df7fcb091af67e883ba95b08c04286913df6920"
+}

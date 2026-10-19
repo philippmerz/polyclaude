@@ -1,0 +1,57 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 317,
+  "market_id": "3190125",
+  "condition_id": "0x8ab4ef09c4d357811b4250f8fd9acfb662c3cfdee847188800873c8c23aefdd3",
+  "frozen_criteria_sha256": "2d42efce67a50d391f18c4a7c57ad2acc89e506481a217da00839d21a4a21482",
+  "frozen_identity_sha256": "3553b6484342ed84911d463ceb7a104f5b77ab2d2b30517da30becfbc5fbb24d",
+  "observed_utc": "2026-10-19T08:37:12Z",
+  "literal_rule": "Crypto market-structure legislation becomes U.S. federal law by Dec31 2026 11:59 PM ET. Qualifying legislation must (1) establish a comprehensive digital-asset framework beyond stablecoins alone, (2) delineate federal-agency oversight, and (3) define/classify digital assets as securities, commodities, or other categories. Examples include H.R.3633/CLARITY and FIT21. Stablecoin-only, activity-specific bans, CBDC-only, tax-only, appropriations, executive orders, agency rules/guidance do not qualify. Passage in both chambers plus presidential signature or another formal enactment mechanism is required; a Senate vote or committee action alone is not enactment.",
+  "current_official_access": [
+    {
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633",
+      "receipt": "logs/deep_review_20261017/clarity317_official_0840/hr3633_bill.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-19T08:37:12.248917Z",
+      "raw_sha256": "745669e2be1bf73c1ffad560353ce5a7ba9b775b113c4665b368b7769647dde2",
+      "finding": "Current Congress.gov bill page inaccessible on this ordinary GET; no status inferred."
+    },
+    {
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633/all-actions",
+      "receipt": "logs/deep_review_20261017/clarity317_official_0840/hr3633_actions.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-19T08:37:12.346398Z",
+      "raw_sha256": "2f2fbe62d952457de06e468e535ece2cf6f9a02eb372675785969ab5ad715531",
+      "finding": "Current official action history inaccessible; no latest action/schedule established."
+    },
+    {
+      "url": "https://www.congress.gov/search?q=crypto%20market%20structure&congress=119",
+      "receipt": "logs/deep_review_20261017/clarity317_official_0840/congress_search.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-19T08:37:12.434370Z",
+      "raw_sha256": "26d54c90ad23b4dbc0c872b4944bbcbc50b2fd2c2dac1a7a8088cf2df0695e4d",
+      "finding": "Official Congress search page inaccessible; no related bill inventory established."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/",
+      "receipt": "logs/deep_review_20261017/clarity317_official_0840/whitehouse_actions.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-19T08:37:12.791290Z",
+      "raw_sha256": "af3befdbe82742ad5f59ab9d809ef5aab353660f904fc3181778da333ea8d777",
+      "finding": "Captured presidential-actions listing contained no text match for H.R.3633, CLARITY, or digital asset. This listing/search is bounded and does not establish universal absence of enactment."
+    }
+  ],
+  "search_coverage": {
+    "official_queries": [
+      "site:congress.gov H.R.3633 119th Congress House bill 3633 current status Senate latest 2026",
+      "site:congress.gov crypto market structure legislation Senate bill CLARITY Act 2026 status"
+    ],
+    "result": "Congress.gov search access was blocked; results surfaced an official Oct15 2025 Senate Record discussing Senate work on a separate market-structure text, but that is historical and not a current 2026 schedule or status. No later exact-status result found in the bounded search."
+  },
+  "prior_primary_context": {
+    "source_unit": "work/0252_primary_sources_1950.json",
+    "as_of": "2026-10-18",
+    "scope_note": "That existing unit records a Senate-reported amended H.R.3633 package dated June1 and Sep15–16 senators' statements supporting further bipartisan work with requested safeguards; it expressly does not establish a current deadline agreement or passage. No held Senate vote-count pair was used here."
+  },
+  "limits": "Four ordinary official GETs used, plus two official-domain searches. H.R.3633 current status/action history and current inventory of other qualifying bills remain unverified because Congress.gov returned 403 and the accessible White House page is only a bounded presidential-actions listing. No conclusion of no enactment or no current schedule is drawn."
+}

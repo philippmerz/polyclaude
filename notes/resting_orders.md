@@ -1,8 +1,17 @@
-# Current resting orders — October19 06:57UTC
+# Current resting orders — October19 09:09UTC
 
-**Four LIVE/unfilled BUYs/$7.52 reserved; no SELL orders.** Fresh authenticated inventory06:57:03, terminal cursor exhausted; all order rows/CIDs/assets/terms and reservations unchanged. [Current root proof](../data/deep_review_20261017/work/tick0654_root_audit.json) · [Exact IDs/detail](../data/deep_review_20261017/work/tick0654_ops.json).
+**Six LIVE/zero-matched BUYs/$11.47 reserved; no SELL orders.** NewRhine/Haaland3.95plusoldfour7.52; authenticatedorders/currentchainreads09:09:30–33, terminalcursor exhausted. Allold8indexed financialrowsunchanged; allfournewcandidateCTFoutcomes0. [Rootproof/exactCID+assets](../data/deep_review_20261017/work/post_entry0909_root_verified.json) · [decision/source/risk](../research/2026-10-19-goal-resumed.md). Unfilledordersarenotpurchases,profit orfillguarantees; laterfillspossible.
 
-Wallet06:55 pUSD20.451290; commitments7.520000/deployable12.931290. Separate sequential cash observation, not NAV/new fixed-block proof. Historical fixedPolygon95785155 and04:12:52 MT-only reservation retirement5→4 remain in [reconciliation](../data/deep_review_20261017/work/mt01_reconcile_0413.json).
+Wallet09:09 pUSD20.451290; commitments11.470000/deployable8.981290. Sequentialcash/account/chainreads,notNAV/fixed-blockproof. Sixreservationsmatchfull-fillcommitments. Historical fixedPolygon95785155/MT-onlyretirement5→4 remainsin[reconciliation](../data/deep_review_20261017/work/mt01_reconcile_0413.json).
+
+**CANCEL ALL unfilled new remainder at existingOct19 10UTC; earliermaterialuncertaintyCANCEL FIRST. Noautomaticrepost/add/taker.** Anypartial/fullfill needsfreshholding/source/fee-netexit/portfoliojudgment; subminimum5sharepartials canbedust.
+
+|Newbid|Shares/limit/risk|OrderID|Deadline|
+|---|---|---|---|
+|DEC229/case313 Rhine|5YES/53c/2.65|`0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261`|Oct19 10UTC|
+|DEC230/case316 Haaland|10NO/13c/1.30|`0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237`|Oct19 10UTC|
+
+RhineprimaryYES84%/selected64%,range50–97; Kaub25700100/77cm, datedofficialBfGdailymean-to-any-readingbridge. HaalandNO65%/selected40%,YESrange10–70; official2026GlobalAthletestop5growth, sharedMessi/internalGoogle/finite-slotrisk. Theseareunfittedjudgments,noprobabilityfloor orhedgecredit. Currentforecasts/feedsnotguaranteedexhaustive. Structuredfees/eligiblebooks/source/exchangeapprovals/currentcaps/funds andnormalwatcherreload verifiedbeforeposts. Nomakerfee paid; entire3.95canloseonfuturefill.
 
 - **Idaho:** original34YES3c/$1.02; existingOct19 22UTC pullALLunfilled. Earlier material poll/candidate/ballot/turnout uncertainty CANCEL FIRST. No automatic repost/add; fresh holding judgment on fill.
 - Three House bids remain: NY01$1.20/CA06$1.50/ME02$3.80. Exact IDs/assets/current records in root proof above; ME02's historical slug saysME01, so CID/token identity governs. No add/repost/taker fallback.

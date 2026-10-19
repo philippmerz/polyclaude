@@ -1,0 +1,53 @@
+{
+  "schema": "case0318_poll_provenance_followup.v1",
+  "captured_utc": "2026-10-19T08:49Z",
+  "identity": {
+    "index": 318,
+    "market_id": "635016",
+    "condition_id": "0x43cedce4a6af0136d37d53408fc965388baee3145db6da72a5b5da8d2746ced3",
+    "criteria_sha256": "ebbb47a9ac73b7956068ac4a2510e2826d4b0bb7dc9eb082d45e7a8eb2b435c2"
+  },
+  "search_scope": "Two targeted web-search queries for ASR/Kreiss-Tomkins polling and AlaskaBeacon/AlaskaPublicMedia/ADN coverage; no auth, bypass, or retry. Results did not return direct regional original polling coverage. ADN was reported blocked by robots in search; Alaska Beacon normal search GET returned 403. Alaska Public Media search pages were fetched normally.",
+  "methodology_findings_secondary_attribution_only": [
+    {
+      "source": "Search result citing ASR social post",
+      "url": "https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election",
+      "reported": "Oct 1–3, 2026; n=1,512 likely voters; weighted MOE ±3.0%; text-to-online plus ASR Survey Panel.",
+      "status": "Secondary transcription of a pollster social item; original ASR post/toplines/interview was not retrieved. Treat wording and method as not independently source-verified."
+    },
+    {
+      "source": "On Point Politics Alaska gubernatorial poll page",
+      "url": "https://www.onpointpolitics.us/polls/ak/governor",
+      "reported": "ASR row lists 54–46 for Kreiss-Tomkins vs Wilson as 'Super F' (Oct 3, n=1,512 LV).",
+      "status": "Aggregator labeling; does not establish whether this was a separately worded head-to-head question or the poll's RCV final round."
+    },
+    {
+      "source": "Wikipedia poll-table transcription; also repeated by search results from Call the Map and RealClearPolitics",
+      "urls": ["https://en.wikipedia.org/wiki/2026_Alaska_gubernatorial_election", "https://www.callthemap.com/governors/alaska", "https://www.realclearpolitics.com/polls/governor/general/2026/alaska/wilson-vs-kreiss-tompkins/"] ,
+      "reported": "The table separates first-choice/rounds: first-choice KJT 48, Wilson 27, Bronson 15, Taylor 10; round 2 KJT 50, Wilson 30, Bronson 20; round 3 KJT 54, Wilson 46. Thus 54–46 is represented as the third/final RCV round, not a result to substitute for the initial four-candidate choice.",
+      "status": "Secondary transcriptions agree on the distinction, but no original questionnaire/report was obtained to verify exact prompt, rankings collected, transfer rules, or whether 54–46 was independently asked."
+    }
+  ],
+  "regional_publisher_checks": [
+    {
+      "publisher": "Alaska Beacon",
+      "requested_url": "https://alaskabeacon.com/?s=Kreiss-Tompkins",
+      "status": 403,
+      "receipt": "logs/deep_review_20261017/alaska318_original_followup/beacon_search.receipt.json",
+      "finding": "No page results retrieved."
+    },
+    {
+      "publisher": "Alaska Public Media",
+      "requested_urls": ["https://alaskapublic.org/?s=Kreiss-Tompkins", "https://alaskapublic.org/?s=Alaska+Survey+Research"],
+      "status": "200 for both normal GETs",
+      "receipts": ["logs/deep_review_20261017/alaska318_original_followup/apm_search.receipt.json", "logs/deep_review_20261017/alaska318_original_followup/apm_asr_search.receipt.json"],
+      "finding": "Captured search results surfaced a Taylor withdrawal story, not ASR poll coverage or pollster interview. This bounded site search does not prove no such story exists."
+    },
+    {
+      "publisher": "Anchorage Daily News",
+      "status": "Search tool reported adn.com blocked by robots.txt; no GET attempted."
+    }
+  ],
+  "bottom_line": "Secondary tables clarify representation: 48/27/15/10 is the first-choice field and 54/46 appears as the third/final RCV round. Original ASR questionnaire, exact wording, collection/weighting details, and regional-publisher attribution remain unverified. Do not treat the two rows as competing poll results or use the governor poll as a Senate poll.",
+  "prior_facts": "work/0318_facts_0840.json"
+}

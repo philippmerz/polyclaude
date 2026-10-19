@@ -1,0 +1,34 @@
+{
+  "schema": "polyclaude.root_source_verification.v1",
+  "review_index": 313,
+  "reviewed_utc": "2026-10-19T03:10:42.785962+00:00",
+  "reads_only": true,
+  "source_unit": "work/0313_history_gap_followup_0320.json",
+  "evidence": [
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_history_gap_0320/guide.receipt.json",
+      "status": 200,
+      "raw_sha256": "a4e82ff96a5e62cccd2248f708e1d109c00c9dbd5be76f95ec5207a31265743b",
+      "gzip_sha256": "81d34d32a57f9f55737871dc8cc2371f32a5fb781d05bbcd885ebe51db0710b5",
+      "request_started_utc": "2026-10-19T03:06:22.268926Z",
+      "response_received_utc": "2026-10-19T03:06:22.626748Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_history_gap_0320/downloads.receipt.json",
+      "status": 200,
+      "raw_sha256": "0ff704be76dabd1e4eebb769d91c06badadf5acac4d8c103dcd22df7477b839e",
+      "gzip_sha256": "f525992493575811a43164b552a52ad59ff0bb97ba32fe0495ca0cb8e80128c4",
+      "request_started_utc": "2026-10-19T03:06:34.752700Z",
+      "response_received_utc": "2026-10-19T03:06:35.038827Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/rhine313_history_gap_0320/files_directory.receipt.json",
+      "status": 200,
+      "raw_sha256": "5e3961aa0aec15ffb7c6325fba6fc607c0063792ad23df47a90a30764d4ed43f",
+      "gzip_sha256": "c98c9b5092b8fe9651973453c8df8ed29867c6eb331913c3fcbb77e343f5ee44",
+      "request_started_utc": "2026-10-19T03:06:46.520139Z",
+      "response_received_utc": "2026-10-19T03:06:46.814427Z"
+    }
+  ],
+  "conclusion": "Official guide/downloads raw text supports 30-day API history and older unchecked raw-data availability; exact Kaub Sep6\u201318 rows not retrieved. API listing start alone does not settle contract interpretation. No adopted probability or numeric market quote."
+}

@@ -1,0 +1,19 @@
+# bankroll $196.61 from cache (age 0.1h)
+# polyclaude_enter: looking up 'will-the-rhine-river-return-to-normal-levels-betwe'...
+
+Market: Will the Rhine River return to normal levels between October 1 and October 31, 2026?
+  slug: will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026
+  market_id: 4294627
+  umaResolutionStatus: None
+  outcomePrices: YES=0.545 NO=0.455
+  endDate: 2026-10-31T23:59:00Z
+  negRisk: True
+
+!! SIBLING MARKET(S) FOUND (content-similarity >=0.7):
+!!   id=4294628 will-the-rhine-river-fail-to-return-to-normal-levels-before-november-1-2026 — YES mid=0.455 taker_fee=1000bps | different deadline — term-structure sibling, NOT fungible
+!!   TRUE-DUP + cheaper book on YES → verify criteria truly identical (descriptions/editions/definitions — implication-study trap), then route there.
+  [mark] gamma-mid 0.5450 → live ask 0.5700 (+2.5pp) — using live ask for the gate
+  [maker] gate + sizing run on the POSTED rest price 0.53 (bid 0.520 / ask 0.57), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.
+  [price cap] preview signed raw BUY limit 0.5300 <= 0.5400; execution will refresh and re-check
+
+DECISION: NEED_REVIEW — cannot prove ticket/cluster caps: candidate lacks a configured correlation cluster; add an explicit unique cluster only after confirming independence

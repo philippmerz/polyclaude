@@ -1,0 +1,24 @@
+{
+  "schema": "news_feed_warmup_followup.v1",
+  "observed_utc": "2026-10-19T08:51:44.965906+00:00",
+  "previous_proof": "work/entry0848_monitor_check_0850.json",
+  "previous_proof_sha256": "47f44aad6c5371f09fbd905d65b7f53409a67a22e4f684eb088a92fd65166678",
+  "warmup_utc": "2026-10-19T08:46:32.385892+00:00",
+  "config_sha256_now": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "expected_config_sha256": "9e784fd8ae486e7c4804d120d70958e3d8fbb1fa99c032a66b785543b1cd8138",
+  "daemon": {
+    "pid": 148881,
+    "matching_canonical_process_count": 1,
+    "process_alive": true,
+    "script_sha256": "650baf55a25e5bff3fa5b16406abcde7facfb35f7e4bb6fcf4b0de7f0da69d23"
+  },
+  "state_file_mtime_utc": "2026-10-19T08:46:25.781833+00:00",
+  "state_after_warmup": false,
+  "result": "pending_normal_cycle",
+  "interpretation": "At this check the state file had not been saved since before feed addition. No post-warmup ingestion result is available; prior zero matches came from the same pre-warmup snapshot and are not an ingestion failure. No additional RSS GET was made; latest captured feed bodies remain the 08:48:28Z responses referenced in the previous proof.",
+  "rss_capture_refs": [
+    "logs/deep_review_20261017/entry0848_feed_verify/kaub.xml.gz",
+    "logs/deep_review_20261017/entry0848_feed_verify/haaland.xml.gz"
+  ],
+  "no_poll_state_mutation_restart_or_config_change": true
+}

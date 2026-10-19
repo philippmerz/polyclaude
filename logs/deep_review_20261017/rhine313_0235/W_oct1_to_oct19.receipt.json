@@ -1,0 +1,16 @@
+{
+  "url": "https://pegelonline.wsv.de/webservices/rest-api/v2/stations/1d26e504-7f9e-480a-b52c-5932be6549ab/W/measurements.json?start=2026-10-01T00%3A00%3A00%2B02%3A00&end=2026-10-19T23%3A59%3A59%2B02%3A00",
+  "started_utc": "2026-10-19T02:30:16.925252+00:00",
+  "received_utc": "2026-10-19T02:30:17.932147+00:00",
+  "status": 200,
+  "headers": {
+    "Date": "Mon, 19 Oct 2026 02:30:17 GMT",
+    "Cache-Control": "no-transform",
+    "Content-Type": "application/json;charset=UTF-8"
+  },
+  "raw_bytes": 126590,
+  "raw_sha256": "b9140e92634f49c8399300aedfc75ea4f776dde0611d3957a95728afc51d6e52",
+  "gzip_path": "logs/deep_review_20261017/rhine313_0235/W_oct1_to_oct19.body.json.gz",
+  "gzip_bytes": 5316,
+  "gzip_sha256": "9c653401b1b35261575ad2239f4cb3e0bc10e6380629d213321e34ee42a3eaa1"
+}

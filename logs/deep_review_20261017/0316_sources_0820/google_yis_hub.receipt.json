@@ -1,0 +1,21 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_sources_0820/google_yis_hub.body.gz",
+  "error": null,
+  "final_url": "https://trends.withgoogle.com/year-in-search/",
+  "gzip_bytes": 20,
+  "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+  "headers": {
+    "cache-control": "max-age=300",
+    "content-type": "text/html; charset=utf-8",
+    "date": "Mon, 19 Oct 2026 08:22:48 GMT",
+    "location": "2025/"
+  },
+  "http_status": 301,
+  "method": "GET",
+  "name": "google_yis_hub",
+  "raw_bytes": 0,
+  "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "received_utc": "2026-10-19T08:22:48.470330+00:00",
+  "requested_url": "https://trends.withgoogle.com/year-in-search/",
+  "started_utc": "2026-10-19T08:22:48.143770+00:00"
+}

@@ -1,0 +1,19 @@
+{
+  "body_path": "logs/deep_review_20261017/0316_sources_0820/mancity_haaland_profile.body.gz",
+  "error": null,
+  "final_url": "https://www.mancity.com/players/erling-haaland",
+  "gzip_bytes": 655831,
+  "gzip_sha256": "071c46af8f55ac9c209ed55f3163b349f3dd65dad461350c42a191aebc6f17da",
+  "headers": {
+    "content-type": "text/html; charset=UTF-8",
+    "date": "Mon, 19 Oct 2026 08:22:48 GMT"
+  },
+  "http_status": 403,
+  "method": "GET",
+  "name": "mancity_haaland_profile",
+  "raw_bytes": 910442,
+  "raw_sha256": "2675f90aaa31fb0b6a52d83a7071210c9da1487227b2bd49e762b6ad26d3c5f5",
+  "received_utc": "2026-10-19T08:22:48.657451+00:00",
+  "requested_url": "https://www.mancity.com/players/erling-haaland",
+  "started_utc": "2026-10-19T08:22:48.470896+00:00"
+}

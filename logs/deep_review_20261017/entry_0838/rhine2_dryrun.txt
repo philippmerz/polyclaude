@@ -1,0 +1,41 @@
+# bankroll $196.61 from cache (age 0.2h)
+# polyclaude_enter: looking up 'will-the-rhine-river-return-to-normal-levels-betwe'...
+
+Market: Will the Rhine River return to normal levels between October 1 and October 31, 2026?
+  slug: will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026
+  market_id: 4294627
+  umaResolutionStatus: None
+  outcomePrices: YES=0.545 NO=0.455
+  endDate: 2026-10-31T23:59:00Z
+  negRisk: True
+
+!! SIBLING MARKET(S) FOUND (content-similarity >=0.7):
+!!   id=4294628 will-the-rhine-river-fail-to-return-to-normal-levels-before-november-1-2026 — YES mid=0.45 taker_fee=1000bps | different deadline — term-structure sibling, NOT fungible
+!!   TRUE-DUP + cheaper book on YES → verify criteria truly identical (descriptions/editions/definitions — implication-study trap), then route there.
+  [mark] gamma-mid 0.5450 → live ask 0.5700 (+2.5pp) — using live ask for the gate
+  [maker] gate + sizing run on the POSTED rest price 0.53 (bid 0.520 / ask 0.57), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.
+  [price cap] preview signed raw BUY limit 0.5300 <= 0.5400; execution will refresh and re-check
+  [capital caps] ticket $2.70/$29.49; cluster rhine-kaub-waterlevel-2026 $2.70/$58.98
+
+=== EXIT LIQUIDITY (what leaving would cost) ===
+  best bid 0.520 / ask 0.570 — spread 5.0pp
+  261 shares bid within 5% of your entry = 100% of this position
+
+=== KELLY ANALYSIS ===
+  Buying YES @ $0.5700, P(YES wins) = 0.8400
+  Edge: +31.00pp
+  Full Kelly: 66.0% of bankroll
+  ρ-discount: 1.0000 (ρ=0.2, cluster_frac=0.0)
+  × Kelly fraction: 0.25
+  Kelly $: $32.42
+  Manual override: $2.70
+  → Deploy: $2.70 (5.09 shares)
+  Profit if win: +$2.39 (= 88.7%)
+
+  Sensitivity (full-Kelly under p ±0.05):
+    p=0.7400 (-0.10): full_K=44.7% → $21.96
+    p=0.7900 (-0.05): full_K=55.3% → $27.19
+    p=0.8900 (+0.05): full_K=76.6% → $37.65
+
+DECISION: WOULD_REST $2.70 of YES @ 0.53 post-only (ask 0.5700; fill not guaranteed)
+  Re-run with --execute to actually post the order.

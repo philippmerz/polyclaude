@@ -1,0 +1,62 @@
+{
+  "schema": "bounded_whalefall_source_refresh.v1",
+  "alert": {
+    "alert_id": "ea975f2ccc52da372c51e20231a8b656bfb92219",
+    "ts": "2026-10-19T07:47:35Z",
+    "feed": "Whalefall box-office and opening-weekend updates",
+    "title": "Josh Brolin’s Whalefall Sinks at Box Office, Flops Hard Globally - Yahoo",
+    "google_news_link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxPdFhnbGs5OWtQbVhvbFo3V0Y4U1NhRmxnVW9sSE5QeWM4SUphMmllMFhYOFlPLWJTeXZmVnhaOGRhRTdOeElYTHV4bE56N3l4dVpzcks0ZThmU2t3V1JGcTk4QTdwblhiTVNWUWhaSzlLWGNPeXREOEJNaHRBMm1vWldZRDBROW1CM1c2akV6M0lBakpBcWNRNWJjRXJYdDQ?oc=5",
+    "public_row": "notes/news_alerts.jsonl:1023"
+  },
+  "market_identity": {
+    "review_index": 299,
+    "market_id": "5394247",
+    "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+    "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+    "literal_metric": "Final domestic opening-weekend gross for Whalefall, Oct16–18 2026; strict less than $8,000,000. Exactly $8,000,000 is not less. Estimates are not final settlement values."
+  },
+  "publisher_article": {
+    "source": "ComingSoon original page matching the alert headline; Yahoo-linked body was not separately fetched, so syndication identity is not independently bound.",
+    "url": "https://www.comingsoon.net/movies/news/2209240-whalefall-box-office-flop-crash-worldwide",
+    "receipt": "logs/deep_review_20261017/whale0717_safety_0840/comingsoon_article.receipt.json",
+    "status": 200,
+    "received_utc": "2026-10-19T08:39:22.861664Z",
+    "raw_sha256": "6bfd29c517f8aa18d705749676c85e125efed98a51e9302655d31112413e8686",
+    "published": "2026-10-19T02:42:48Z (page displays Oct18 19:42:48 PDT)",
+    "modified": "2026-10-19T06:16:00Z",
+    "reported_facts": "The article says the film opened domestically at $8m in 3,065 theaters, citing Box Office Mojo; it separately reports $9.5m international and $17.5m worldwide. It also reports $900,000 Thursday previews and a $10m–$12m tracking expectation. These are article claims; the global total is not this market’s domestic Oct16–18 metric."
+  },
+  "current_named_source_rows": [
+    {
+      "source": "The Numbers weekend chart",
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+      "receipt": "logs/deep_review_20261017/whale0717_safety_0840/the_numbers_weekend.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-19T08:39:21.120213Z",
+      "raw_sha256": "02ea3c84bdbff9ea6554999e6e41cfe3b85efa1952a8cba824780032430fb1a5",
+      "row": "Rank 4, new release, Whalefall, $8,000,000, 3,065 theaters; gross cell class is chart_estimate."
+    },
+    {
+      "source": "The Numbers Whalefall film page",
+      "url": "https://www.the-numbers.com/movie/Whalefall-(2026)",
+      "receipt": "logs/deep_review_20261017/whale0717_safety_0840/the_numbers_film.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-19T08:39:21.843511Z",
+      "raw_sha256": "43c0b2a9d4b1fc06178f3856d3bf03146b25d42d0b31ce055b9573590978641f",
+      "weekend_row": "Oct16 $8,000,000, rank 4; gross cell estimate and cumulative cell chart_estimate.",
+      "daily_rows": "Oct15 preview $900,000 (rank P, estimate); Oct16 $3,100,000; Oct17 $2,800,000; Oct18 $2,100,000. Each daily gross is estimate; cumulative estimates are $3.1m, $5.9m, $8.0m. Preview is separately listed and excluded from the Oct16–18 weekend total."
+    },
+    {
+      "source": "Box Office Mojo exact release weekend page",
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "receipt": "logs/deep_review_20261017/whale0717_safety_0840/mojo_weekend.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-19T08:39:22.698154Z",
+      "raw_sha256": "20143cfc8751ce781deadad225609e44ec0481290f7d1a6c41618d25d0ae4935",
+      "weekend_row": "Oct16–18, rank 4, $8,000,000, 3,065 theaters; row has mojo-annotation-isEstimated class and the page’s legend labels that annotation Estimated."
+    }
+  ],
+  "result": "No change from earlier snapshots: both named domestic sources still show exactly $8m as an estimate. No verified below-$8m domestic value or final status observed. The current publisher headline/body repeats an $8m domestic figure and discusses worldwide gross; it does not report a new lower domestic observation or establish finality. This bounded pass does not prove that no later final source exists.",
+  "capture_directory": "logs/deep_review_20261017/whale0717_safety_0840/",
+  "search": "One exact-title publisher search identified the ComingSoon page above; no further search or GET was made."
+}
