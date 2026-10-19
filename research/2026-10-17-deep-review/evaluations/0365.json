@@ -1,0 +1,44 @@
+{
+  "review_index": 365,
+  "market_id": "5564834",
+  "condition_id": "0x80f7b7390121e0682803c2670211044c2dbeb71b679277ff1f3806550965b089",
+  "criteria_sha256": "093313b93bb6cbe973470fc1f7983b975e6e1ebf8b4d000cf3bc1150c04100b0",
+  "status": "excluded_factual",
+  "literal_analysis": "ETH/USDT Binance1minute candle closing at noonET Oct18: final Close strictly greater than2500 resolvesYES, equality/lowerNO. Only Binance pair and source precision count, not another exchange. No independent candle value certified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5564834",
+      "observed_utc": "2026-10-19T01:57:45.358239+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0365.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:12.534433+00:00",
+  "question": "Will the price of Ethereum be above $2,500 on October 18?",
+  "valuation_author": "primary_operator",
+  "original_index": 365,
+  "report_sha256": "dad9fb79a9333aef552731020c01cfd1dab2527f0c537fbfd20ae6016d6e4c68"
+}

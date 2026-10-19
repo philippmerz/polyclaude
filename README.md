@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**308 valued /4 blocked /348 factual exclusions /2,340 pending**;660 immutable base cases +55 append-only revisions. Next308; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (TG1256). Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; entire revision history verified while emitted metadata is bounded. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
+**310 valued /5 blocked /355 factual exclusions /2,330 pending**;670 immutable base cases +56 append-only revisions. Active312; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; full revision chain verified with bounded emitted metadata. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
 
 **Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Both02:14 sources still report an $8m estimate; no final actual. Selected NO42.10%, versus0.81544 indicative net sale at01:58; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0200-checkin.md). Original02UTC BUY pull obsolete; next held review06UTC.
 

@@ -1,0 +1,72 @@
+{
+  "schema": "primary_route_scenario.v1",
+  "index": 308,
+  "created_utc": "2026-10-19T02:35:06.398450+00:00",
+  "market_id": "666593",
+  "condition_id": "0xb5395470c9b87f5ae8ffc719c1376aa89b493adf083e01cb8064e683fbaa18fc",
+  "criteria_sha256": "0db293d06d8144ceba437695caaa626ee0eef764eefe98a2cb9d135b3ac888c3",
+  "price_blind": true,
+  "p_yes": 0.2540982500000001,
+  "p_no": 0.7459017499999999,
+  "broad_range_yes": [
+    0.06,
+    0.55
+  ],
+  "actual_entry_reserve_pp": 10,
+  "selected_stress_yes": 0.15409825000000008,
+  "selected_stress_no": 0.6459017499999999,
+  "formula": "pYES=1-(1-past_sourcegap)*(1-trip*agreement*encounter)*(1-other_route_given_no_regional). Conditional branches avoid double counting regional/offroute.",
+  "primary_parameters": {
+    "trump_regional_trip": 0.9,
+    "bilateral_accommodation_given_trip": 0.3,
+    "qualifying_encounter_given_accommodation": 0.75,
+    "other_inperson_route_if_not_regional": 0.06,
+    "already_qualifying_unobserved_or_source_gap": 0.005
+  },
+  "low_parameters": {
+    "trump_regional_trip": 0.7,
+    "bilateral_accommodation_given_trip": 0.1,
+    "qualifying_encounter_given_accommodation": 0.55,
+    "other_inperson_route_if_not_regional": 0.02,
+    "already_qualifying_unobserved_or_source_gap": 0.001
+  },
+  "high_parameters": {
+    "trump_regional_trip": 0.95,
+    "bilateral_accommodation_given_trip": 0.55,
+    "qualifying_encounter_given_accommodation": 0.9,
+    "other_inperson_route_if_not_regional": 0.12,
+    "already_qualifying_unobserved_or_source_gap": 0.02
+  },
+  "sensitivity_p_yes": [
+    0.05867226999999997,
+    0.5431436000000001
+  ],
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0308_facts_0120.json",
+      "sha256": "af4f2b37a2f292518dd35e1f85e49c5a75c34b18df737599234ef5fd7f184cd2"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0308_sources_0230.json",
+      "sha256": "950d883cbe930db48edff036dafb6a38fceeb5db6225fa4e93d092c4e82a44ec"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0308_sources_0235.json",
+      "sha256": "0d13d7172ab5ac89168cb23f16b6ef311d1f3ff0ad7837b7ce08defebf14db79"
+    }
+  ],
+  "bridge": [
+    "WhiteHouseSep25 reciprocalAPEC/G20 intent and officialNov18–19Shenzhen calendar support high Trumpregionalpresence, not Kimattendance. Trip90% is subjective intention-to-attendance allowance, not observed frequency.",
+    "CBSAug19 direct Trumpremarks said he expectedmeeting; reportedstaffoutreach. Counterevidence: nuclear-precondition conflict, no mutualappointment in boundedofficialreview, newerAPOct14/Sep16 browser reports of continuing conditionality/rebuffs. Agreement30% integrates these once; no separate missile penalty.",
+    "Conditional any-inperson encounter75% because no policydeal required, surpriseDMZ-style encounter can qualify; 25% allows logistics/illness/breakdown even after accommodation. Other6% is residual74dayendyear route without successful regionalencounter, not an independent duplicate summit.",
+    "Past/sourcegap0.5% acknowledges fullJan1window and incomplete search; publicly important meeting would ordinarily draw crediblecoverage, but no universalabsence claim.",
+    "Competing optimistic normalization(.95,.55,.90,.12,.02) yields about54%; hardstandoff(.70,.10,.55,.02,.001) about6%. Numbers/weights are primary subjective judgments, not empirically calibrated or market-implied."
+  ],
+  "limits": [
+    "No mutually confirmed currentappointment, no directcurrentKCNA itinerary. USintent≠agreement; missiles/talks can coexist.",
+    "No inferencethat a telephonecall/virtualmeeting/policyannouncement meets inpersonrule. APIendDateJan2 does not extendDec31 23:59ET deadline.",
+    "Use default10pp instance/catalyst reserve; broad6–55% range is scenario uncertainty, not required universalworstcase gate or calibratedinterval.",
+    "Dependencies: Trumphealth/office/foreignpolicy/security shocks overlapexistingTrumpdust/Clarity and broaderUSpolitics; not independent diversification."
+  ],
+  "execution_authority": false
+}

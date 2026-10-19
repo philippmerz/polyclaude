@@ -1,0 +1,44 @@
+{
+  "review_index": 354,
+  "market_id": "4593871",
+  "condition_id": "0x5a6c2ecba45c16b027997d05d28abc979fdb10b793c45b6174aa0f393988dde9",
+  "criteria_sha256": "927ead06a3f7a5e5ab0e42c299890d25788edcc93179241ade6a1d254430f86f",
+  "status": "excluded_factual",
+  "literal_analysis": "LOUD to win VALORANT Champions2026, scheduledSep24–Oct18 Shanghai. Winner afterNov17 23:59ET, cancellation or no declared winner by cutoff resolvesOther. Multiple winners: first listed team name alphabetically. Riot official information or credible consensus permitted. No independent tournament outcome certified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4593871",
+      "observed_utc": "2026-10-19T01:57:44.748783+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0354.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:10.793587+00:00",
+  "question": "Will LOUD win VALORANT Champions 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 354,
+  "report_sha256": "ed7c82640d43e6649bba76985616930379b4ff749fb4e1c49318c5e0c6a93d7e"
+}

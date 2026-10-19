@@ -1,0 +1,51 @@
+{
+  "index": 309,
+  "created_utc": "2026-10-19T02:42:23.814471+00:00",
+  "adopted_probability": null,
+  "status": "Primary source/criterion review complete; no defensible adopted H2H forecast before own numeric market quotes.",
+  "official_inputs": [
+    {
+      "name": "ballondor_2026_regulations",
+      "raw_sha256": "7b7e470159687d535ec625d86ec1528e5fd1d6f4011d8de92937a66af89f173f",
+      "gzip_sha256": "f37470bdadaf1710606917e1313024d66a8c3985d098a7ef7554478386298e87",
+      "checked_terms": [
+        "2025",
+        "2026",
+        "100",
+        "15",
+        "12",
+        "10"
+      ]
+    },
+    {
+      "name": "ballondor_2026_men_nominees",
+      "raw_sha256": "2f1d0b0542a2caf4594e40355a77d3b3a5432fd54270605336abf1db28009c1c",
+      "gzip_sha256": "b56c7dfe57eb95e9527ab6c292363b5d859c7647cd34af26a36e5a6019106da6",
+      "checked_terms": [
+        "Mbapp",
+        "Yamal"
+      ]
+    }
+  ],
+  "external_benchmark_unit": "data/deep_review_20261017/work/0309_external_benchmark_0250.json",
+  "external_unit_sha256": "5574de25b670d198fbf0b044610368da0039298268953238cd9d98cbf4abf69c",
+  "diagnostics_only": {
+    "bet365_Oct14_winner_fractional_odds": {
+      "Yamal": "5/4",
+      "Mbappe": "16/1"
+    },
+    "winner_odds_ratio_under_unverified_Plackett_Luce_H2H_Mbappe": 0.11688311688311688,
+    "exchange_parent_browser_Mbappe_ratio_bounds_under_same_unverified_model": [
+      0.07692307692307691,
+      0.11532385466034756
+    ]
+  },
+  "why_not_adopt": [
+    "The exact payoffs depend on ordering BOTH official final placements; another player can win while either Yamal or Mbappe ranks higher. Winner odds ratios require an unverified ordinal random-utility/IIA model. They are not observed H2H probabilities.",
+    "Bet365 article is Oct14 with unspecified timezone; captured Betfair page is a JS shell; browser quotes not archived transport data. Two Betfair surfaces are one operator, not independent consensus. OddscheckerUS futureOct27label rejected as Oct19forecast input.",
+    "Official stats and WorldCup/club awards inform competing narratives but are not measured jury ranking gaps or a validated voting model. Existingcase66 winner mass cannot be divided into a conditional ranking without a new assumption.",
+    "Case309 deadlineNov9/half-payoutfallback differs from66Dec31/Other. Equal placement also50/50. No unannounced vote deadline or private ballot visibility inferred."
+  ],
+  "completion_condition": "Usable exact-placement bookmaker consensus/expert rank evidence, or justified empirical ordinal-ballot model tied to this year, then source-based timely/tie branches and both-side economics.",
+  "execution_authority": false
+}

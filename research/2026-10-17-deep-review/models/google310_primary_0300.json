@@ -1,0 +1,100 @@
+{
+  "schema": "primary_global_rank_winner_scenarios.v1",
+  "index": 310,
+  "created_utc": "2026-10-19T02:46:59.371758+00:00",
+  "price_blind": true,
+  "criteria_sha256": "d8400d152897f987952a1ef9db34197f288517fa23d0b16fb907578cc0232548",
+  "market_id": "2965275",
+  "condition_id": "0x5c040b1560960d62fdfb74886cff47a3ae2a22ae6f54b3769de05a7c4d3392c0",
+  "p_yes": 0.08,
+  "p_no": 0.92,
+  "broad_yes": [
+    0.01,
+    0.35
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0,
+  "selected_no": 0.72,
+  "scenarios": {
+    "central": {
+      "Norris": 0.25,
+      "Pretti": 0.15,
+      "Parton": 0.2,
+      "Khamenei": 0.1,
+      "HaydenPanettiere": 0.08,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    },
+    "Hayden_strong": {
+      "Norris": 0.15,
+      "Pretti": 0.08,
+      "Parton": 0.12,
+      "Khamenei": 0.07,
+      "HaydenPanettiere": 0.35,
+      "other_current": 0.03,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    },
+    "Hayden_weak": {
+      "Norris": 0.3,
+      "Pretti": 0.15,
+      "Parton": 0.22,
+      "Khamenei": 0.1,
+      "HaydenPanettiere": 0.01,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    },
+    "later_winner_dominates": {
+      "Norris": 0.15,
+      "Pretti": 0.1,
+      "Parton": 0.15,
+      "Khamenei": 0.05,
+      "HaydenPanettiere": 0.03,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.48,
+      "missing_list_Other": 0.02
+    }
+  },
+  "family_binding": "Full description byte-identical tocase56 GlobalPassings2026 rank1; different namedchild/identity; separate own quotes/status required.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0310_facts_0135.json",
+      "sha256": "84fc8fb6860b11009aea1ad0a3de4b3910472f7b144271299638851f3fdde3ce"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0310_person_facts_0250.json",
+      "sha256": "7f2ae5329aa44d28534f7bd44faa5e9c6aaff752859cf933db6b91a2caf16a5f"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0310_method_slice_0255.json",
+      "sha256": "0a6de49bb0be99bc2fdb1b493c94ba360eb904e8888549a12bf7880e3539163c"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0310_comparison_0255.json",
+      "sha256": "4786f726f962e4cd418ebe10b956a0f274a55077ba6b89c1889301e8fdf16673"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google_passings_method_0137.md",
+      "sha256": "c86c6be8af6bcc5fd2813c730be5e6294a2c22aaf20bd9be9ffe15db95a24138"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google_passings_scenarios_0137.json",
+      "sha256": "bc23de121f4d9e68aa8ca74c9c0da8fd07123fffae25aa081439cf5a7bc8bc1a"
+    }
+  ],
+  "reasoning": [
+    "APAug17originalbrowser identifies actorHaydenPanettiere deathAug16 2026; newerSep22/29APcoverage renews attention. Rootbrowsersearchread these, directAPGET403 retained. No private/medical speculation needed; eventeligibility is not Google rank.",
+    "Source-verified2025method fastestgrowth/sameperiodprior-year/internaltools, nottotalvolume;2026exactcutoff/formula notpublishedincheckedroute. 2025GlobalPassings includedMichelleTrachtenberg#4; earlierMatthewPerry/LiamPayne#1 show entertainment shock can lead, not calibratedHaydenprobability.",
+    "8% allocates a named candidate from the existing10%other_current bucket, leaving2%other_current. KnownNorris25/Pretti15/Parton20/Khamenei10 masses unchanged; late/unobserved18%/Other2% preserve undiscoveredcompetition. Alltablesnormalized; do not treat siblingNOs as independent.",
+    "Hayden TV/film internationalrecognition plus unexpectedyoungdeath justify meaningfulcurrentcontenderweight; Norrisglobalmeme/Partonmusic/politicalevents and laterdeaths argueagainstdominance. Relativeweights subjective, not measuredsearchgrowth/posterior.",
+    "Onecurrentglobalfive-termTrendsrequest429; stopped/no workaround. No inferredzerointerest, globalcomparisonseries or finalcategoryranking. 2026route404/hub2025 are boundedcoverage, not evidence of cancellation."
+  ],
+  "risk": [
+    "Primary92%NO is uncalibrated broad-rank judgment, NOT a first-hand measured bond-fade tail. No tail-multiplicative exception claimed. Use inherited20pp instance/model reserve; selectedNO72%, broad35%YES meansNO65% may still favor opposite economics.",
+    "Googlemethod/alias/omittedcompetitor uncertainty and possiblelatepublication; normalDecemberrelease fitsJanuary but March31 2027Otherfallback can exceedprojectevaluation.",
+    "A missinglistOtherpayout and eventaugmentation/negRisk require current exactmapping at execution; no tradingroute assumed from this paper."
+  ],
+  "execution_authority": false
+}

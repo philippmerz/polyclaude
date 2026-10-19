@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T02:24:04.263956+00:00
+Updated: 2026-10-19T02:51:22.796342+00:00
 
-**308 valuations saved; first milestone100:** 308 valued; 4 blocked after in-depth review. 348 factual exclusions separately; 2340 pending.
+**310 valuations saved; first milestone100:** 310 valued; 5 blocked after in-depth review. 355 factual exclusions separately; 2330 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -319,6 +319,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |305|[Will the highest temperature in Seoul (Incheon) be 20°C on October 18?](evaluations/0305.md)|excluded_factual|Factualexclude becauseexactvenueexplicitlyclosed/resolved/nonaccepting. Notanindependent NOAAresultcertification. No order/prior/forecast orprobabilityscreen.|
 |306|[Will Chiang Wan-an win the next Taipei Mayor election?](evaluations/0306.md)|valued|NOENTRY. YESpositivecentral but15pp-selectedprob57.885% below63.9324c fee-cost andordinary62cmaker. NO38.9424cfee-cost exceeds27.115%central. Othercandidates/cashpreferableunderchosenuncertainty, notrejectionfromheadlineapproval/support; allsource/modelunitsretained.|
 |307|[Will the 30-year Treasury yield hit 5.80% before 2027?](evaluations/0307.md)|valued|NOENTRY: YESpositivecentralEVbutfails15ppreservebothpassiveandtaker; NOfailscentral/stress. No order/prior/watcher.|
+|308|[Will Trump meet with Kim Jong Un in 2026?](evaluations/0308.md)|valued|NOENTRY: YESfailscentral; NOsmallpositivecentralEVbutfailsdefault10ppreservebothpassiveandtaker. No order/prior/watcher.|
+|309|[Ballon d'Or 2026: Kylian Mbappé or Lamine Yamal to finish higher?](revisions/0309_20261019T025122487555Z.md)|blocked_after_review|BLOCKEDAFTERREVIEW: namedrankingforecastunsupported; bothcostsreviewed/noentry. Notcheapmodelrejection/factualexclusion/completedvaluation.|
+|310|[Will Hayden Panettiere be the #1 searched passing on Google this year?](evaluations/0310.md)|valued|NOENTRY: YESfailscentral; NOtakerfails20/25ppreserve;68cmakerhaspositivebase20ppdiagnosticbutfails25ppconditionalfillstress/carry. Noorder/prior/watcher.|
 |311|[Will the highest temperature in Tel Aviv be 26°C on October 17?](evaluations/0311.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -335,11 +338,18 @@ Each report below is written before moving to the next evaluation. Related contr
 |345|[Will New York Red Bulls win on 2026-10-17?](evaluations/0345.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
 |347|[Solana Up or Down on October 17?](evaluations/0347.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |348|[Will an independent win the Nebraska Senate race in 2026?](evaluations/0348.md)|valued|No entry: YESnegativecentral; NOsmallcentral+.21936/10sharesfails10ppreserve. MakerwatchYES<=.13 orNO<=.63/<=10shares withfreshsources/allgates.|
+|351|[Spread: Pittsburgh (-6.5)](evaluations/0351.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|354|[Will LOUD win VALORANT Champions 2026?](evaluations/0354.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|357|[Sharks vs. Red Wings](evaluations/0357.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |358|[Will OpenAI have the second highest OpenRouter market share the week of October 12?](revisions/0358_20261018T120932318539Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |359|[Will MrBeast's next video get between 270 and 280 million views on week 2?](evaluations/0359.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|363|[Will Brighton & Hove Albion FC win on 2026-10-18?](evaluations/0363.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|365|[Will the price of Ethereum be above $2,500 on October 18?](evaluations/0365.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |375|[European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri](evaluations/0375.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |377|[Will the highest temperature in Guangzhou be 33°C on October 17?](evaluations/0377.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |393|[Dota 2: Yellow Submarine vs Spirit Academy - Game 2 Winner](evaluations/0393.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |395|[Will the highest temperature in Qingdao be 23°C on October 17?](evaluations/0395.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -673,4 +683,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 308
+Active indices: 312

@@ -1,0 +1,44 @@
+{
+  "review_index": 363,
+  "market_id": "5311859",
+  "condition_id": "0x491b785c82d65c7ab9c65bb51df9e58e9b3fc53dbc8b4ee1aef49db0244b6560",
+  "criteria_sha256": "2db1c87d8cb260238a4b359acc6e68bd8e9ee9d9c775379c57e89bb08e44286f",
+  "status": "excluded_factual",
+  "literal_analysis": "BrightonOct18: YES only a win within90minutes+stoppage; otherwiseNO. Postponement remains open; cancellation without makeupNO. Organizer final result, after2h Flashscore→Sofascore→consensus; no acceptable24h data50–50/Draw where applicable. Postresolution score revisions ignored. No independent score certified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5311859",
+      "observed_utc": "2026-10-19T01:57:45.203063+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0363.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:11.954714+00:00",
+  "question": "Will Brighton & Hove Albion FC win on 2026-10-18?",
+  "valuation_author": "primary_operator",
+  "original_index": 363,
+  "report_sha256": "a5e3407e3ab529047d89ed80c6d8736957ea22f61860f44fd46f8ad1b2c33884"
+}

@@ -45,19 +45,31 @@ def universe():
         return {int(x["review_index"]): x for x in map(json.loads, f)}
 
 
-def _validate_economics_forecast_consistency(x):
+def _validate_economics_forecast_consistency(x, frozen):
     """Check standard side probabilities only for new record/revision writes."""
     economics = x.get("economics")
     sides = economics.get("sides") if isinstance(economics, dict) else None
     if not isinstance(sides, dict):
         return
-    yes = sides.get("Yes")
-    no = sides.get("No")
+    if not any(isinstance(side, dict) and "probability" in side for side in sides.values()):
+        return  # Preserve older compact economics records.
+    labels = frozen.get("outcomes", ["Yes", "No"])
+    labels = json.loads(labels) if isinstance(labels, str) else labels
+    assert (isinstance(labels, list) and len(labels) == 2
+            and len(set(labels)) == 2 and set(sides) == set(labels)), "economic outcomes must match both frozen labels"
+    reference = economics.get("probability_reference_outcome")
+    if reference is None:
+        assert set(labels) == {"Yes", "No"}, "named economic outcomes require an explicit probability reference"
+        reference = "Yes"
+    assert isinstance(reference, str) and reference in labels, "economic probability reference must match a frozen label"
+    forecast_reference = x["forecast"].get("probability_reference_outcome")
+    if forecast_reference is not None or reference != "Yes" or set(labels) != {"Yes", "No"}:
+        assert forecast_reference == reference, "economic probability reference does not match forecast"
+    other = next(label for label in labels if label != reference)
+    yes = sides.get(reference)
+    no = sides.get(other)
     yes = yes if isinstance(yes, dict) else {}
     no = no if isinstance(no, dict) else {}
-    if "probability" not in yes and "probability" not in no:
-        return  # Preserve older compact economics records.
-
     assert "probability" in yes and "probability" in no, "both economic side probabilities required"
     forecast = x["forecast"]
     p_yes = forecast["p_yes"]
@@ -113,7 +125,7 @@ def validate_record(x, frozen, *, revision=False, validate_economics_forecast=Fa
         assert f.get("reasoning") and f.get("method"), "forecast reasoning/method required"
         assert x["economics"].get("both_sides_considered") is True, "both outcomes required"
         if validate_economics_forecast:
-            _validate_economics_forecast_consistency(x)
+            _validate_economics_forecast_consistency(x, frozen)
     return i
 
 

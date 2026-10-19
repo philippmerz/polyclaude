@@ -1,0 +1,44 @@
+{
+  "review_index": 357,
+  "market_id": "4761417",
+  "condition_id": "0xb13b9c8d4e8263f2e24401d7c37f352bb37e74c2f1487f8e0cf85d07f0abc6ac",
+  "criteria_sha256": "27e77ff2b89ffdb2cde905ca57aea1929f65dd707d47fc2a92cb34380e12b3fe",
+  "status": "excluded_factual",
+  "literal_analysis": "Oct17 NHL Sharks–Red Wings winner, including overtime and shootout; shootout adds one goal to winning score. Postponement stays open; cancellation without makeup50–50. NHL scores source. No independent game result certified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4761417",
+      "observed_utc": "2026-10-19T01:57:44.953908+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Sharks": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "Red Wings": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0357.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:11.377197+00:00",
+  "question": "Sharks vs. Red Wings",
+  "valuation_author": "primary_operator",
+  "original_index": 357,
+  "report_sha256": "b69f22b17bb422ae42ac3f4524ce2035898e9388fb9b66859ba878b680869892"
+}

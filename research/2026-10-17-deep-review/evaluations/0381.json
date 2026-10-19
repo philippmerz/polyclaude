@@ -1,0 +1,44 @@
+{
+  "review_index": 381,
+  "market_id": "4761377",
+  "condition_id": "0x17b6a6ace6aac7391c64f6313d27460db75cf053f18b38c6506e03a4ac7f6490",
+  "criteria_sha256": "3d69ce3f12eaa07ef8191fc1ee5106bd33ef1bc5743e3bfecdd988a0ad1487fc",
+  "status": "excluded_factual",
+  "literal_analysis": "Oct17 NHL Devils–Capitals winner including overtime and shootout; shootout adds one goal to winner. Postponement remains open; cancellation without makeup50–50. NHL scores source. No independent game result certified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4761377",
+      "observed_utc": "2026-10-19T01:57:46.023666+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Devils": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "Capitals": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0381.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:13.692628+00:00",
+  "question": "Devils vs. Capitals",
+  "valuation_author": "primary_operator",
+  "original_index": 381,
+  "report_sha256": "59f7f8913103c48a4c3aa948bd3edd1b895a71f955fe19b49fdb29edc2195f28"
+}

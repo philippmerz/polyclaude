@@ -1,0 +1,160 @@
+{
+  "review_index": 309,
+  "market_id": "5141816",
+  "condition_id": "0xa3cf5e6b27c672d56f3c883139ae87a2dcef9d16a373decab50621cb793b3af4",
+  "criteria_sha256": "e82481b97891edaea3ada45d0a9d1e924cb20ac21dd92178356a7181cb8f61a7",
+  "status": "blocked_after_review",
+  "literal_analysis": "Mbappé higherofficialplacement=>Mbappé;Yamalhigher=>Yamal;sameplacement50/50. PostponedbeyondNov9 23:59ET/canceled/bothplacementsunpublishedbycutoff50/50. FranceFootball/UEFA/credibleconsensus; exactnamedtokens, notwinnercontract66, APIJan1notcutoff.",
+  "evidence": [
+    {
+      "url": "https://ballondor.com/news/posts/check-all-the-criteria-and-full-regulations-to-understand-ballon-dor-2026-trophy",
+      "observed_utc": "2026-10-17T22:30:38.017876+00:00",
+      "finding": "Reference period Aug 3, 2025–Jul 19, 2026, including international competitions. Criteria order: individual performance; collective performances/titles; class/fair play. 100 journalists from top-100 FIFA-ranked men’s countries rank 10 of 30 nominees using 15/12/10/8/7/5/4/3/2/1 points. No ballot deadline stated in captured text."
+    },
+    {
+      "url": "https://ballondor.com/news/posts/mens-ballon-dor-discover-the-ballon-dor-2026-nominees",
+      "observed_utc": "2026-10-17T22:30:38.197810+00:00",
+      "finding": "30 nominees; page list order is not voting rank, and displayed statistics have no defined competition denominator. Mbappé: France/Real Madrid, 60 matches, 58 goals, 13 assists, 8 yellow, no trophy listed. Yamal: Spain/Barcelona, 57 matches, 25 goals, 20 assists, six yellow, World Cup/Liga/Spanish Super Cup listed. These are source-listed context only, not official final placements."
+    },
+    {
+      "url": "https://www.uefa.com/ballondor/news/02a5-20bba5196317-e0e34001e13b-1000--2026-ballon-d-or-ceremony-date-and-host-city-announced/",
+      "observed_utc": "2026-10-17T22:30:38.588808+00:00",
+      "finding": "Existing official capture states ceremony Oct 26, London. A fresh direct GET at 01:07:24Z returned HTTP 403; no new source body was available. Venue was not established in saved official source."
+    },
+    {
+      "url": "https://news.bet365.com/en-gb/article/ballon-dor-2026-odds/2026071510064112092",
+      "observed_utc": "2026-10-19T02:40:28Z",
+      "finding": "ArticleupdatedOct14timezoneunstated; winneroddsY5/4/M16/1, not H2Hplacementconsensus. Directbody200; Betfairdirectshell/403gapsseparate."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "probability_reference_outcome": "Mbappé",
+    "method": "No adopted forecast after primaryrule/officialsource/externalbenchmarkreview.",
+    "reasoning": "Winner-to-ranking/IIAconversion not justified; no exactH2Hconsensus/empiricalordinalballotmodel. Privatefutureunknown alone is not blocker; absentdefensibleconditionalrankingbase is. Diagnostics saved explicitlyunadopted.",
+    "model_path": "models/ballon309_reference_limit_0250.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_309_0250.json",
+    "quote_file_sha256": "6bc3c95edfa4aad6cebb43b357b5d04e54a80e1133e3be20156cb67ead556800",
+    "quote_capture_utc": "2026-10-19T02:42:24.589012+00:00",
+    "gamma_received_utc": "2026-10-19T02:42:24.314179+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 22.0,
+    "probability_reference_outcome": "Mbappé",
+    "actual_entry_reserve_pp": null,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Mbappé": {
+        "best_bid": 0.56,
+        "best_ask": 0.57,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792377711566",
+        "book_received_utc": "2026-10-19T02:42:24.454501+00:00",
+        "book_age_seconds_at_receipt": 32.888500928878784,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.699999999999999,
+            "fee": 0.12256,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.57
+              }
+            ],
+            "net": 5.822559999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.6000000000000005,
+            "fee": 0.1232,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.56
+              }
+            ],
+            "net": 5.476800000000001
+          }
+        },
+        "taker_cost_usd": 5.822559999999999,
+        "break_even_before_carry": 0.5822559999999999,
+        "break_even_constant_carry": 0.5833463046769694,
+        "current_execution_authorization": false
+      },
+      "Yamal": {
+        "best_bid": 0.43,
+        "best_ask": 0.44,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792377711566",
+        "book_received_utc": "2026-10-19T02:42:24.454501+00:00",
+        "book_age_seconds_at_receipt": 32.888500928878784,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.4,
+            "fee": 0.12321,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.44
+              }
+            ],
+            "net": 4.523210000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.3,
+            "fee": 0.12256,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.43
+              }
+            ],
+            "net": 4.17744
+          }
+        },
+        "taker_cost_usd": 4.523210000000001,
+        "break_even_before_carry": 0.4523210000000001,
+        "break_even_constant_carry": 0.4531679946239996,
+        "current_execution_authorization": false
+      }
+    },
+    "adopted_probability": null,
+    "probability_semantics": "No adopted event or expected-payout forecast. Costs/break-even only; internal0.5 arithmetic placeholder removed from saved economic record."
+  },
+  "verdict": "BLOCKEDAFTERREVIEW: namedrankingforecastunsupported; bothcostsreviewed/noentry. Notcheapmodelrejection/factualexclusion/completedvaluation.",
+  "reopen_condition": "DirectexactH2H/rankconsensus or justifiedempiricalordinalmodel plus Nov9/tiehalfpayout handling; laterpublishedofficialrankingrequiresfreshstatus/identity/gates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T02:43:10.333545+00:00",
+  "question": "Ballon d'Or 2026: Kylian Mbappé or Lamine Yamal to finish higher?",
+  "valuation_author": "primary_operator",
+  "original_index": 309,
+  "report_sha256": "9bae0fb5b51d9baeb0f91988df62806932ea13ef7c847cd380893f098b720635"
+}

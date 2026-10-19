@@ -349,8 +349,16 @@ def economics(
     reserve: float = 0.20,
     days: float = 15,
     quantity: float = 10,
+    *,
+    reference_outcome: str | None = None,
 ) -> dict:
-    """Compute hypothetical both-side economics from an explicit saved packet."""
+    """Compute hypothetical economics; p_yes belongs to reference_outcome.
+
+    Legacy Yes/No markets keep their historical mapping when no reference is
+    supplied. Markets with other labels require an explicit exact label.
+    """
+    if reference_outcome is not None and not isinstance(reference_outcome, str):
+        raise ValueError("reference_outcome must be an exact outcome label string")
     try:
         p_yes = float(p_yes)
         reserve = float(reserve)
@@ -368,6 +376,25 @@ def economics(
         raise ValueError("quantity must be finite and positive")
     capture, case, path = quote(index, quote_path)
     gamma = case["current_gamma"]
+    outcomes = gamma.get("outcomes")
+    if isinstance(outcomes, str):
+        try:
+            outcomes = json.loads(outcomes)
+        except json.JSONDecodeError as exc:
+            raise ValueError("captured outcomes are malformed") from exc
+    if (not isinstance(outcomes, list) or len(outcomes) != 2
+            or any(not isinstance(label, str) for label in outcomes)
+            or len(set(outcomes)) != 2):
+        raise ValueError("economics requires exactly two distinct string outcome labels")
+    if reference_outcome is None:
+        if set(outcomes) != {"Yes", "No"}:
+            raise ValueError("reference_outcome is required unless outcomes are exactly Yes/No")
+        probability_reference = "Yes"
+    else:
+        if reference_outcome not in outcomes:
+            raise ValueError("reference_outcome must exactly match one captured outcome label")
+        probability_reference = reference_outcome
+    other_outcome = next(label for label in outcomes if label != probability_reference)
     hurdle = json.loads((ROOT / "notes/aave_hurdle.json").read_text(encoding="utf-8"))
     gamma_receipt_utc = case.get("_verified_gamma_received_utc")
     if not gamma_receipt_utc:
@@ -382,6 +409,7 @@ def economics(
         "gamma_received_utc": gamma_receipt_utc,
         "hypothetical_gross_shares": quantity,
         "horizon_days": days,
+        "probability_reference_outcome": probability_reference,
         "actual_entry_reserve_pp": reserve * 100,
         "fee_curve": asdict(curve),
         "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
@@ -392,7 +420,7 @@ def economics(
         },
         "sides": {},
     }
-    probabilities = {"Yes": p_yes, "No": 1 - p_yes}
+    probabilities = {probability_reference: p_yes, other_outcome: 1 - p_yes}
     for row in case["books"]:
         probability = probabilities[row["outcome"]]
         book = row.get("book")

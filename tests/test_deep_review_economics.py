@@ -47,7 +47,9 @@ class DeepReviewEconomicsTests(unittest.TestCase):
         received_epoch_ms = int(datetime.fromisoformat(received).replace(tzinfo=timezone.utc).timestamp() * 1000)
         books = []
         returned = []
-        for outcome, token in (("Yes", "yes-token"), ("No", "no-token")):
+        frozen_outcomes = json.loads(self.frozen["outcomes"])
+        frozen_tokens = json.loads(self.frozen["clobTokenIds"])
+        for outcome, token in zip(frozen_outcomes, frozen_tokens):
             book = {
                 "market": self.frozen["conditionId"], "asset_id": token,
                 "timestamp": str(received_epoch_ms - book_age_ms), "hash": f"hash-{token}",
@@ -67,7 +69,7 @@ class DeepReviewEconomicsTests(unittest.TestCase):
         receipt = {
             "request_id": "batch-1", "method": "POST", "url": "https://clob.polymarket.com/books",
             "status_code": 200, "received_utc": received,
-            "json_request_body": [{"token_id": "yes-token"}, {"token_id": "no-token"}],
+            "json_request_body": [{"token_id": token} for token in frozen_tokens],
             "gzip_path": "book.json.gz", "gzip_sha256": hashlib.sha256(compressed).hexdigest(),
             "raw_sha256": hashlib.sha256(raw_body).hexdigest(),
         }
@@ -138,6 +140,34 @@ class DeepReviewEconomicsTests(unittest.TestCase):
         result = economics.economics(275, 0.7, path)
         self.assertEqual(result["sides"]["Yes"]["probability"], 0.7)
         self.assertAlmostEqual(result["sides"]["No"]["probability"], 0.3)
+        self.assertEqual(result["probability_reference_outcome"], "Yes")
+
+    def test_explicit_named_reference_survives_reversed_book_order(self):
+        self.frozen["outcomes"] = '["Kylian Mbappe", "Lamine Yamal"]'
+        self.frozen["clobTokenIds"] = '["mbappe-token", "yamal-token"]'
+        path, _, _ = self.make_packet(reversed_books=True)
+        result = economics.economics(275, 0.7, path, reference_outcome="Lamine Yamal")
+        self.assertEqual(result["probability_reference_outcome"], "Lamine Yamal")
+        self.assertEqual(result["sides"]["Lamine Yamal"]["probability"], 0.7)
+        self.assertAlmostEqual(result["sides"]["Kylian Mbappe"]["probability"], 0.3)
+
+    def test_non_yes_no_labels_require_exact_reference(self):
+        self.frozen["outcomes"] = '["Mbappe", "Yamal"]'
+        self.frozen["clobTokenIds"] = '["mbappe-token", "yamal-token"]'
+        path, _, _ = self.make_packet()
+        with self.assertRaisesRegex(ValueError, "reference_outcome is required"):
+            economics.economics(275, 0.7, path)
+        with self.assertRaisesRegex(ValueError, "exactly match"):
+            economics.economics(275, 0.7, path, reference_outcome="mbappe")
+        with self.assertRaisesRegex(ValueError, "label string"):
+            economics.economics(275, 0.7, path, reference_outcome=1)
+
+    def test_more_than_two_labels_fails_before_probability_assignment(self):
+        self.frozen["outcomes"] = '["A", "B", "C"]'
+        self.frozen["clobTokenIds"] = '["a-token", "b-token", "c-token"]'
+        path, _, _ = self.make_packet()
+        with self.assertRaisesRegex(ValueError, "exactly two"):
+            economics.economics(275, 0.7, path, reference_outcome="A")
 
     def test_exact_frozen_identity_and_hashed_returned_book_are_checked(self):
         path, packet, case = self.make_packet()

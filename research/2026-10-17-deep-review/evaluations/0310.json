@@ -1,0 +1,184 @@
+{
+  "review_index": 310,
+  "market_id": "2965275",
+  "condition_id": "0x5c040b1560960d62fdfb74886cff47a3ae2a22ae6f54b3769de05a7c4d3392c0",
+  "criteria_sha256": "d8400d152897f987952a1ef9db34197f288517fa23d0b16fb907578cc0232548",
+  "status": "valued",
+  "literal_analysis": "Googleofficial2026GlobalTrendingPassingsrank1only; mayresolveonrelease; no listbyMar31 2027 23:59ET=>Other. Navigationnotfixed, geography/categorymatter. Samefullrule56notprobabilitytransfer; APIendDec31midnightnotmissinglistcutoff.",
+  "evidence": [
+    {
+      "url": "https://apnews.com/article/1d660d3989916c3fa00421d05e4d78e7",
+      "observed_utc": "2026-10-19T02:42:08Z",
+      "finding": "APAug17browserreport identifies actor/deathAug16; rootindependentlyreadindexedreport. Direct403gapexplicit; no searchrank inferred."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-17T20:59:54.574301+00:00",
+      "finding": "2025fastestYoYgrowth/internaltools,notabsolutevolume;2026cutoff/formulaunknown. Rawhashindependentlyverifiedincurrentboundedcomparison."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "observed_utc": "2026-10-19T01:28:18.332348+00:00",
+      "finding": "404onlyonthesecheckedroutes;hub→2025,notabsenceofeventual2026list."
+    },
+    {
+      "url": "https://trends.google.com/trends/api/explore",
+      "observed_utc": "2026-10-19T02:45:36Z",
+      "finding": "Oneordinaryglobalfive-termrequest429,no widget/series/followon/workaround; no zerointerest inference."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Normalizedprimarywinnerregimes;namedHayden8%frompreviousothercurrent10%,notmeasuredGoogledata.",
+    "reasoning": "Eligibleevent/recognitionpluscompetingicons/politicalshocks/later/unobservedwinners; noglobalgrowthseries/2026methodknown. Base20ppmodelreserve+5ppsubjectiveconditionalmakerfillstress=25ppactualentryreserve. Physicalforecastunchangedafterprices; selectedNO67 versusbroadlow65. No measuredhighconfidencebond-taillicense.",
+    "model_path": "models/google310_primary_0300.json",
+    "base_model_reserve_pp": 20,
+    "conditional_fill_reserve_pp": 5,
+    "actual_entry_reserve_pp": 25
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_310_0300.json",
+    "quote_file_sha256": "69b7565a763558fd08684b74f3e029bf0b80bdd67a0e07e644ef7d86db17a881",
+    "quote_capture_utc": "2026-10-19T02:47:00.037960+00:00",
+    "gamma_received_utc": "2026-10-19T02:46:59.772732+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 25.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "selected_stress_probability": 0,
+        "best_bid": 0.25,
+        "best_ask": 0.32,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792378012059",
+        "book_received_utc": "2026-10-19T02:46:59.894042+00:00",
+        "book_age_seconds_at_receipt": 7.8350419998168945,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.2,
+            "fee": 0.10881,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.32
+              }
+            ],
+            "net": 3.3088100000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.5,
+            "fee": 0.09376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.25
+              }
+            ],
+            "net": 2.40624
+          }
+        },
+        "taker_cost_usd": 3.3088100000000003,
+        "central_expected_profit_usd": -2.5088100000000004,
+        "selected_stress_profit_usd": -3.3088100000000003,
+        "break_even_before_carry": 0.33088100000000004,
+        "break_even_constant_carry": 0.33299801363304726,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.92,
+        "selected_stress_probability": 0.67,
+        "best_bid": 0.68,
+        "best_ask": 0.75,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792378012059",
+        "book_received_utc": "2026-10-19T02:46:59.894042+00:00",
+        "book_age_seconds_at_receipt": 7.8350419998168945,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.5,
+            "fee": 0.09376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.75
+              }
+            ],
+            "net": 7.59376
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.800000000000001,
+            "fee": 0.10881,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.68
+              }
+            ],
+            "net": 6.691190000000001
+          }
+        },
+        "taker_cost_usd": 7.59376,
+        "central_expected_profit_usd": 1.6062400000000014,
+        "selected_stress_profit_usd": -0.8937599999999994,
+        "break_even_before_carry": 0.7593759999999999,
+        "break_even_constant_carry": 0.7642345725520923,
+        "current_execution_authorization": false
+      }
+    },
+    "uncertainty_components_pp": {
+      "base_unmeasured_annual_ranking_model": 20,
+      "unmeasured_conditional_maker_fill_selection": 5
+    },
+    "base_reserve_economics_file": "data/deep_review_20261017/work/0310_economics_0300.json",
+    "maker_selection_diagnostic": {
+      "quantity": 5,
+      "reference_bid_no": 0.68,
+      "cost_before_operations": 3.4,
+      "selected_20pp_expected_payout": 3.6,
+      "selected_25pp_expected_payout": 3.35,
+      "constant_carry_cost_75d": 0.021753580146217377,
+      "note": "Five extra pp is explicit subjective fill-selection stress, not measured seller information. Base20pp has small passive edge; ~3.6pp lower conditional payout probability erases it after carry. No reduction in physical forecast due to quote."
+    }
+  },
+  "verdict": "NOENTRY: YESfailscentral; NOtakerfails20/25ppreserve;68cmakerhaspositivebase20ppdiagnosticbutfails25ppconditionalfillstress/carry. Noorder/prior/watcher.",
+  "reopen_condition": "Comparableglobalgrowth/rank/officialmethod/listmaterialevidence orrobustlybetterpassivequote; currentOther/augmentation/accounts/gates.",
+  "portfolio_action": "none; researchonly",
+  "evaluated_utc": "2026-10-19T02:49:50.772384+00:00",
+  "question": "Will Hayden Panettiere be the #1 searched passing on Google this year?",
+  "valuation_author": "primary_operator",
+  "original_index": 310,
+  "report_sha256": "3e88043fadc29d121db31660642104fa0da423a0f213d68ad53cbf8fc9b5a708"
+}

@@ -1,0 +1,172 @@
+{
+  "review_index": 308,
+  "market_id": "666593",
+  "condition_id": "0xb5395470c9b87f5ae8ffc719c1376aa89b493adf083e01cb8064e683fbaa18fc",
+  "criteria_sha256": "0db293d06d8144ceba437695caaa626ee0eef764eefe98a2cb9d135b3ac888c3",
+  "status": "valued",
+  "literal_analysis": "YES for ANY in-person encounter in which Kim Jong Un and Donald Trump are both present and interact, Jan1–Dec31 2026 23:59ET; consensus credible reporting. No treaty/substantive talks required; phone/video/announcement alone insufficient. Full earlier2026 window considered; APIendDateJan2 does not extend literal cutoff. No mutually confirmed appointment in bounded current review, not universal absence proof.",
+  "evidence": [
+    {
+      "url": "https://www.cbsnews.com/news/trump-kim-jong-un-north-korea-meeting-nuclear-weapons/",
+      "observed_utc": "2026-10-19T01:07:24.305823Z",
+      "finding": "Root verified original body/hash: Aug19Trump expected meetinglater2026 and reportedstaffoutreach, but neither government confirmed THEN; Kimopposeddenuclearizationpremise. Notcurrentmutualconfirmation."
+    },
+    {
+      "url": "https://www.apec.org/",
+      "observed_utc": "2026-10-19T01:07:24.305823Z",
+      "finding": "OfficialNov18–19Shenzhenleaderscalendar, not eitherpersonattendance/meetingproof."
+    },
+    {
+      "url": "https://www.whitehouse.gov/fact-sheets/2026/09/fact-sheet-president-donald-j-trump-advances-a-fair-and-reciprocal-relationship-with-china-while-hosting-historic-state-visit/",
+      "observed_utc": "2026-10-19T02:27:07.319674Z",
+      "finding": "Rootraw/gziphash+bodyread: Sep25Trump/Xireciprocalsummitattendanceintent; NorthKoreadiscussed. Does not announce Kimmeeting."
+    },
+    {
+      "url": "https://down.mofa.go.kr/us-en/brd/m_4497/view.do?seq=761929",
+      "observed_utc": "2026-10-19T02:27:10.055697Z",
+      "finding": "Oct8officialreprint ofSep22LeeUNGAaspirationforrenewedUS-DPRKdialogue, notappointment; rootbody/hashread."
+    },
+    {
+      "url": "https://apnews.com/article/a9c469a236ade7921e7dee2456542740",
+      "observed_utc": "2026-10-19T02:34:00Z",
+      "finding": "Oct14browserreportcontext: Northcontinuestests/possibletalksconditionalondroppingdenuclearizationprecondition. DirectGET403; no archivedarticlebody/scheduleconfirmed. Source-accesslimitsretained."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2540982500000001,
+    "low": 0.05,
+    "high": 0.55,
+    "method": "pYES=1-(1-past_sourcegap)*(1-trip*agreement*encounter)*(1-other_route_given_no_regional). Conditional branches avoid double counting regional/offroute.",
+    "reasoning": "Primary route tree25.41%YES: .90regionalTrip × .30bilateralAccommodation × .75qualifyingEncounter; otherendyearroute6% onlyifregionalroutefails; .5%past/sourcegap. OfficialAPECNov18–19 plus WHSep25attendanceintention support trip, not Kimattendance. CBSAug19directTrumpmeetingexpectation/staffoutreach counterbalanced by nuclear-preconditionconflict/currentunconfirmedstatus. NewerAPbrowsercontext conditionality/rebuffs (direct403) is not a separately doublecounted missile penalty. Branches subjective/unfitted; ~6–54%competing scenarios, broad5–55%; default10ppinstance reserve, no worstcaseuniversal gate.",
+    "model_path": "models/kim308_primary_0240.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_308_0240.json",
+    "quote_file_sha256": "ec6d924b4a8bb91593f030ae7716cf745d8a696efbb41b1af2f525cc49914f5d",
+    "quote_capture_utc": "2026-10-19T02:35:06.989528+00:00",
+    "gamma_received_utc": "2026-10-19T02:35:06.760752+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.2540982500000001,
+        "selected_stress_probability": 0.15409825000000008,
+        "best_bid": 0.29,
+        "best_ask": 0.31,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792377291051",
+        "book_received_utc": "2026-10-19T02:35:06.884033+00:00",
+        "book_age_seconds_at_receipt": 15.833032846450806,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.1,
+            "fee": 0.08556,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.31
+              }
+            ],
+            "net": 3.18556
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.9,
+            "fee": 0.08236,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.29
+              }
+            ],
+            "net": 2.81764
+          }
+        },
+        "taker_cost_usd": 3.18556,
+        "central_expected_profit_usd": -0.6445774999999991,
+        "selected_stress_profit_usd": -1.6445774999999994,
+        "break_even_before_carry": 0.318556,
+        "break_even_constant_carry": 0.3205941569050172,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7459017499999999,
+        "selected_stress_probability": 0.6459017499999999,
+        "best_bid": 0.69,
+        "best_ask": 0.71,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792377291051",
+        "book_received_utc": "2026-10-19T02:35:06.884033+00:00",
+        "book_age_seconds_at_receipt": 15.833032846450806,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.1,
+            "fee": 0.08237,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.71
+              }
+            ],
+            "net": 7.18237
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.8999999999999995,
+            "fee": 0.08557,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.69
+              }
+            ],
+            "net": 6.81443
+          }
+        },
+        "taker_cost_usd": 7.18237,
+        "central_expected_profit_usd": 0.27664749999999927,
+        "selected_stress_profit_usd": -0.7233524999999998,
+        "break_even_before_carry": 0.718237,
+        "break_even_constant_carry": 0.7228323606304349,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NOENTRY: YESfailscentral; NOsmallpositivecentralEVbutfailsdefault10ppreservebothpassiveandtaker. No order/prior/watcher.",
+  "reopen_condition": "Mutually confirmed itinerary/credibleencounter/materialpreconditionchange orfreshquote robustlybelowprimaryceiling; revalidatecurrentcriteria/accounts/dependence/gates.",
+  "portfolio_action": "none; datedresearchonly",
+  "evaluated_utc": "2026-10-19T02:36:46.318447+00:00",
+  "question": "Will Trump meet with Kim Jong Un in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 308,
+  "report_sha256": "832547c57f6ffdbebe342093a9976c1f4cbe0c55250cd44ace545eb21d86f43d"
+}

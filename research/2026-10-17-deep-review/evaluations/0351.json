@@ -1,0 +1,44 @@
+{
+  "review_index": 351,
+  "market_id": "5350150",
+  "condition_id": "0xc413350d967ef79d0585c40fa65693a7c5206dd93ba42b5cae31f23a54162bf0",
+  "criteria_sha256": "f3744546fb8153e093b9157b1d3719a8b15da87fd0762d9fe152b2d9c4bbb45b",
+  "status": "excluded_factual",
+  "literal_analysis": "October17 college football Pittsburgh minus6.5: Pittsburgh requires a win by at least7 points, otherwise Boston College. Postponement stays open; cancellation without makeup resolves50–50. NCAA source. No independently certified score or winner asserted.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350150",
+      "observed_utc": "2026-10-19T01:57:44.597489+00:00",
+      "finding": "Root independently rehashed raw/gzip/receipt clocks and exact full frozen identity/rules/assets. Explicit closed=true, acceptingOrders=false, current UMA=resolved and exact binary terminal pair. Terminal/nontrading venue status is observed, not inferred from date, title, price level or missing book."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No event forecast for independently verified terminal/nontrading venue case.",
+    "reasoning": "Primary full literal-rule review plus exact captured status proves present venue ineligibility, not the underlying event outcome."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Pittsburgh": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      },
+      "Boston College": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exact venue terminal/nontrading; no book queried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0200/case_0351.json",
+    "execution_authority": false
+  },
+  "verdict": "Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.",
+  "reopen_condition": "Explicit venue correction/reopening, followed by exact full rule/source/eligibility review; no automatic replay.",
+  "evaluated_utc": "2026-10-19T02:33:10.188243+00:00",
+  "question": "Spread: Pittsburgh (-6.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 351,
+  "report_sha256": "56fffdf7e9d3f7221a0ce21293013a2ad62520638be3afec2cf0ccc80dd8600a"
+}

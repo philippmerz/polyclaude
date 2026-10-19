@@ -233,6 +233,44 @@ def test_source_update_with_current_probabilities_and_reserve_is_accepted(review
     assert revised["economics"]["sides"]["No"]["probability"] == pytest.approx(1 - p_yes)
 
 
+def _named_record_fixture():
+    frozen = {**_frozen(1), "outcomes": '["Mbappé", "Yamal"]'}
+    payload = _record_input(1, "valued", "Exact named outcomes.")
+    payload["forecast"]["probability_reference_outcome"] = "Mbappé"
+    economics = _standard_economics(0.6)
+    economics["probability_reference_outcome"] = "Mbappé"
+    economics["sides"] = {"Yamal": economics["sides"]["No"], "Mbappé": economics["sides"]["Yes"]}
+    payload["economics"] = economics
+    return payload, frozen
+
+
+def test_named_outcomes_bind_reference_and_complement_by_exact_label():
+    payload, frozen = _named_record_fixture()
+    ledger.validate_record(payload, frozen, validate_economics_forecast=True)
+
+
+@pytest.mark.parametrize("tamper", ["reference", "forecast_reference", "side_label", "probability", "stress"])
+def test_named_outcome_mismatch_stops_before_record(review_run: Path, tmp_path: Path, monkeypatch, tamper):
+    payload, frozen = _named_record_fixture()
+    monkeypatch.setattr(ledger, "universe", lambda: {1: frozen})
+    if tamper == "reference":
+        del payload["economics"]["probability_reference_outcome"]
+    elif tamper == "forecast_reference":
+        payload["forecast"]["probability_reference_outcome"] = "Yamal"
+    elif tamper == "side_label":
+        payload["economics"]["sides"]["Mbappe"] = payload["economics"]["sides"].pop("Mbappé")
+    elif tamper == "probability":
+        payload["economics"]["sides"]["Yamal"]["probability"] = 0.3
+    else:
+        payload["economics"]["sides"]["Yamal"]["selected_stress_probability"] = 0.3
+    source = _write_input(tmp_path / "named-invalid.json", payload)
+    with pytest.raises(AssertionError):
+        ledger.record(source)
+    assert not (review_run / "evaluations.jsonl").exists()
+    assert not (review_run / "evaluations" / "0001.json").exists()
+    assert not (review_run / "evaluations" / "0001.md").exists()
+
+
 @pytest.mark.parametrize("tamper", ["json", "markdown"])
 def test_rebuild_detects_tampered_revision_artifact(review_run: Path, tmp_path: Path, tamper: str):
     _, base_record = _save_base(review_run, tmp_path)
