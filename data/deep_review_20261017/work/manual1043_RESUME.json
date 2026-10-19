@@ -133,5 +133,13 @@
   },
   "next_bounded_step": "Next353: exactISWUkrainianSettlements boundary/qualifying shading/persistence; genericADM4notautomaticruleboundary. Pendingfacts355356 not valuations. No replay completed cases, no automatic317/340candidate bid.",
   "archive_master": "work/manual1043_public_artifacts.json",
-  "closeout_audit": "work/ledger_audit_closeout_1235.json"
+  "closeout_audit": "work/ledger_audit_closeout_1235.json",
+  "operator_delivery": {
+    "update_id": 62572753,
+    "reader": "Previously revealed through one-time reader; do not reread or duplicate original reply.",
+    "initial_reply_message_id": 1266,
+    "batch_progress_message_id": 1267,
+    "progress_delivery_confirmed_by_utc": "2026-10-19T12:49:58.099032+00:00",
+    "verified_pushed_research_commit": "e23a4c0b0fb5d4c512d9d78edcc66fd6efd9ffbe"
+  }
 }
