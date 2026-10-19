@@ -15,12 +15,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 SESSION_NAME="operator"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
-LOG_DIR="${POLYCLAUDE_DIR}/logs/operator"
-LOG_FILE="${LOG_DIR}/operator_$(date -u +%Y%m%dT%H%M%SZ).log"
 
 export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-mkdir -p "${LOG_DIR}"
-chmod 700 "${POLYCLAUDE_DIR}/logs" "${LOG_DIR}"
 
 if tmux has-session -t "=${SESSION_NAME}" 2>/dev/null; then
     echo "operator session already running."
@@ -45,15 +41,14 @@ if ! timeout 15 "${RUNNER}" status >/dev/null; then
     exit 78
 fi
 
-printf -v CHILD_CMD '%q interactive --workdir %q' \
+# Codex keeps its own session history; do not duplicate the terminal transcript.
+printf -v CHILD_CMD 'exec %q interactive --workdir %q' \
     "${RUNNER}" "${POLYCLAUDE_DIR}"
-printf -v TMUX_CMD '%q -q -f -e -c %q %q' /usr/bin/script "${CHILD_CMD}" "${LOG_FILE}"
 
 echo "starting operator session"
 echo "  attach: pc-attach"
-echo "  log:    ${LOG_FILE}"
 
-tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}" "${TMUX_CMD}"
+tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}" "${CHILD_CMD}"
 
 operator_live=0
 for _ in {1..120}; do
@@ -69,6 +64,5 @@ if [[ "${operator_live}" != "1" ]]; then
     exit 70
 fi
 
-chmod 600 "${LOG_FILE}" 2>/dev/null || true
 echo "blank operator ready; automated prompts are held until your first input."
 echo "Attach with pc-attach. Detach with Ctrl-B then D; do not exit the agent."

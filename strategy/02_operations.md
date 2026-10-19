@@ -2,6 +2,14 @@
 
 Single canonical home for the project's operational infrastructure. Other docs reference this file rather than restate it.
 
+## Operator session history
+
+`scripts/operator_start.sh` starts the private interactive runtime directly in
+tmux. Codex's native history is the session transcript. Operator directive
+2026-10-19: disable duplicate terminal recording and remove the old operator
+transcript files. Do not reintroduce `script`, `tee`, or tmux output capture for
+the interactive session, or create `logs/operator/` transcripts.
+
 ## Cron — autonomous check-in driver
 
 - **Schedule (UTC):** `0 2 * * *` and `0 14 * * *` — symmetric 12h spacing. The 14:00 anchor catches the US-morning news cycle; 02:00 fills the otherwise-quiet window and catches Asia-morning + late-US news.

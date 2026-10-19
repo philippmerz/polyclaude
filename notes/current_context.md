@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-19T07:06:17.290671+00:00"
+reviewed_at: "2026-10-19T07:44:13.721267+00:00"
 valid_until: "2026-10-19T10:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 9e87da7d7f51bb0f029e9086d16730c3337a01d0b6aa84d366e19fa6164b00fa
+  README.md: 5e54207fd588e7026607e9cea9544f8d90cb2baa96faa3fb6d397d0a60c451cb
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
-  strategy/02_operations.md: 35959b43ce34c0960717d3da854b39dac0f1b3d487ab4de6cb34062a6251b428
+  strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
-  scripts/README.md: 7f6acda494f135755c2404d9b228372702449c4687d5a91ec30f6ef044893013
+  scripts/README.md: d108e81ad5effe05e56024f61e4e45e1b02dceb7570802aad1811cca9df18689
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 9f5490d9b63c303ac31520faaf7f39daae7b7674c7e618962d0d9ea1c80d1c0f
+  notes/backlog.md: 35b2f29744b1960a41d6e5346bbb540c8e6a0566e1b9687e11fa1fe188bc521f
   notes/resting_orders.md: d572e9f798a6ab7f2830f0e8b3af689a0cdc6774de01ba6e1c708180d1642b8a
-  notes/journal.md: 79963899821104a14dbdd5fa9f57aee16fdbdf44e358685b6cfca8a4722012b5
+  notes/journal.md: 046a509456dff75d2cb445c8d33fb29a82e98e765c65afc09d73b527ba75a11f
 ---
 
 ## Resume
@@ -49,5 +49,6 @@ source_hashes:
 ## Next / limits
 
 - Existing held review10UTC; Idaho22UTC/earlier material uncertainty cancel-first. WeeklyOct23/monthlyNov12 not due; methodology20/20 concluded. No stocks/brokerage/new timer/idle/goal continuation. Four canonical/current daemons unchanged; no new material thesis finding/action/TG, previous incident1260 delivered. Raw RSS Telegram off/material reviewed findings only.
-- **Discovery BLOCKED below180MiB floor**: initial~183MiB fell before preflight; no scanner/new batch/3k credit/cleanup/sudo retry. Prior APTcache325080KiB needs admin cleanup/disk expansion. Preserve records; required safety/exits active, propagate `PYTHONDONTWRITEBYTECODE=1`. [Blocker/prior capped coverage](../data/deep_review_20261017/work/tick0654_discovery.json):02:19primary1000fetched/528eligible/80selected/448omitted; thin43416fetched/3222eligible/3000selected/222omitted, pagecaps/134oldbatches; no exchange-wide zero. Quota79%used/21%headroom dispatcher/resetOct24 20:41; refresh before expensive research.
+- **Storage block cleared07:43UTC:** disabled duplicate operator recording live and for future starts;3transcripts removed/~538MiB reclaimed, native Codex history untouched/session PID retained. Free space~1.33GiB, above180MiB floor. [Policy](../strategy/02_operations.md) prohibits duplicate `script`/tee/tmux capture; use Codex native history. No new discovery/financial mark during maintenance. Last06:54/older page-capped scans remain incomplete: [coverage](../data/deep_review_20261017/work/tick0654_discovery.json). No3k valuation credit/exchange-wide zero/goal resume. Propagate `PYTHONDONTWRITEBYTECODE=1`. Quota snapshot79%used/21%headroom/resetOct24 20:41; refresh before expensive research.
+
 -313Rhine pending title/start ambiguity/Sep6–18 gaps/no adoptedp; `work/0313_resume.json` links units.314PortWatch0rows not7zero days;312F1 saved/noentry, terminal cases factual. Label binding31tests+169moneychecks passed22c1fce; writers unchanged. No inbox reads; Telegram literal stdin only.

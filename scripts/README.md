@@ -2,6 +2,10 @@
 
 Quick map for any agent (or human) reading the repo cold. For deeper context: [`../README.md`](../README.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
 
+`operator_start.sh` starts the interactive runtime directly in tmux, retaining
+the blank-session prompt gate. Codex owns session history; the launcher creates
+no duplicate terminal transcript.
+
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 
 - `news_watcher.py` — polls configured RSS feeds; validates classifier impacts against live exposure IDs. Research-only topics stay internal; material/critical and explicit unknown/safety cases qualify for review. Pending alert IDs persist until dispatch acknowledgment; queued does not mean reviewed. No raw RSS Telegram messages. Config: `news_watcher_config.json`.

@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 **Trading midpoint $190.22 / indicative net depth $184.65; account $196.09 including $5.87 separately funded gas.** PM $35.09 midpoint / $29.52 net bid-depth; cumulative accounting residual $20.73. Authoritative bankroll window06:55:58–06:56:15UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Full check](research/2026-10-19-0654-checkin.md).
 
-No trades/fills; four BUYs/$7.52 LIVE/zero matched06:57. MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add; Clarity whole29/29 and Trump dust unchanged. A wide-book Clarity price alert received fresh two-market rule/resolution/book checks: criteria unchanged, no proposal/dispute reported; retain whole pair. Named OpenRouter link reaches consent/no new verified thesis input. [Current orders](notes/resting_orders.md). Four daemons healthy; discovery remains incomplete below180MiB disk floor. Next10UTC/Idaho22UTC; [handoff](notes/current_context.md).
+No trades/fills; four BUYs/$7.52 LIVE/zero matched06:57. MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add; Clarity whole29/29 and Trump dust unchanged. A wide-book Clarity price alert received fresh two-market rule/resolution/book checks: criteria unchanged, no proposal/dispute reported; retain whole pair. Named OpenRouter link reaches consent/no new verified thesis input. [Current orders](notes/resting_orders.md). Four daemons healthy. Duplicate operator recording is disabled and its three transcripts removed; disk headroom is now about1.33GiB. The last discovery pass remains incomplete. Next10UTC/Idaho22UTC; [handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
