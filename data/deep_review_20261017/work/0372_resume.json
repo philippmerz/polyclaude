@@ -1,0 +1,12 @@
+{
+  "review_index": 372,
+  "phase": "FACTS_ONLY_COMPLETE; valuation remains pending",
+  "source_paths": [
+    "work/0372_facts_1645.json"
+  ],
+  "source_pointers": [
+    "https://www.toronto.ca/city-government/elections/",
+    "https://www.toronto.ca/data/elections/candidate_list/mayorCandidates_2026.json",
+    "https://pallas-data.ca/2026/10/16/pallas-toronto-poll-chow-52-bradford-46-as-mayoral-race-tightens/"
+  ]
+}

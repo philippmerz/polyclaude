@@ -1,0 +1,57 @@
+{
+  "schema": "deep_review_facts.v1",
+  "review_index": 371,
+  "compiled_utc": "2026-10-19T16:48:09.953810Z",
+  "frozen_identity": {
+    "id": "2299953",
+    "conditionId": "0xdc7c8ada1b8d28300cdc783578e8754d2570a3da067965be15bba638cb94f83a",
+    "question": "Will Anthropic's valuation hit (HIGH) $2.5T by December 31?",
+    "slug": "will-anthropics-valuation-hit-high-2pt5t-by-december-31-169",
+    "criteria_sha256": "3510a50b352decc0ef46120cf284d1dab39f97380b7334cf32cf7575dec35a38",
+    "identity_exact_in_existing_gamma_capture": true
+  },
+  "literal_metric": {
+    "source": "Nasdaq Private Market (NPM) Price",
+    "threshold": "$2.5T",
+    "rule": "Any NPM Price on any date from market creation through 2026-12-31 reaching at least threshold qualifies. NPM publishes trading-day values at 13:00 ET on the following calendar day. This is not a company financing/round valuation substitute."
+  },
+  "market_dates": {
+    "gamma_createdAt": "2026-05-19T04:16:46.168388Z",
+    "gamma_startDate": "2026-05-19T05:01:39.949Z",
+    "endDate": "2027-01-05T04:59:00Z",
+    "gamma_capture_started_utc": "2026-10-19T01:57:45.638273+00:00",
+    "gamma_capture_received_utc": "2026-10-19T01:57:45.690694+00:00",
+    "gamma_capture_status": null,
+    "gamma_raw_sha256": "a51be2fd49fa11aa1c4eb7f1d58fd1544e278f5f8b281444c3017098926bc1b4",
+    "gamma_gzip_sha256": "a5383b8e9487bbc09446c753f48406f3aa447ac70ea80da3b7cb4458ec1fb0ba",
+    "gamma_body_path": "logs/deep_review_20261017/terminal_status_batch_0200/0371_gamma.body.json.gz"
+  },
+  "public_npm_attempt": {
+    "url": "https://fe.secondmarket.com/companies/company-3e197763-4ff8-4d8c-bd1f-cc2792937757/data",
+    "started_utc": "2026-10-19T16:45:25.542651Z",
+    "received_utc": "2026-10-19T16:45:26.116440Z",
+    "http_status": 200,
+    "raw_sha256": "caeed7b4db20026af0d468872049c297d3fae0c41ee61a39f1f7ad44f74a9d21",
+    "gzip_sha256": "74349573bb4050901ac28686cf118b722d6cc67a4806c0f15defc126539f48a1",
+    "raw_bytes": 2095,
+    "body_path": "logs/deep_review_20261017/0371_npm_data/0371_npm_data.body.json.gz",
+    "finding": "200 HTML loads a client-side `window.location.href=\"/unsupported.html\"`; no NPM observation/history is present in captured body."
+  },
+  "public_frontend_review": {
+    "url": "https://fe.secondmarket.com/index-C3Vyu3rN.js",
+    "started_utc": "2026-10-19T16:45:42.455550Z",
+    "received_utc": "2026-10-19T16:45:43.531936Z",
+    "http_status": 200,
+    "raw_sha256": "dc19c9cc1f48f1a674912b9fd3e6ee303501bba04de82072780003960e0e9059",
+    "gzip_sha256": "1f33a268bdfa3d2baf46b71c5032696e8a55f8ebf1f4bbc37e4bf5842ec9baed",
+    "raw_bytes": 4453807,
+    "body_path": "logs/deep_review_20261017/0371_npm_public_js/0371_npm_public_js.body.json.gz",
+    "finding": "The linked 4.45MB official frontend bundle contains authenticated/account API families and company pricing endpoints; it does not establish a documented unauthenticated historical NPM Price export. No guessed API or auth/protected route was called."
+  },
+  "load_bearing_unknowns": [
+    "Current/latest NPM Price unknown.",
+    "Maximum NPM Price from market creation through current date unknown.",
+    "No qualifying-period daily values were retrievable from this public direct page attempt; this is an access/source gap, not evidence that the threshold has not been reached."
+  ],
+  "scope": "Facts only; no Polymarket quotes, probability, or trade judgment."
+}

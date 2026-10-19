@@ -1,11 +1,14 @@
 {
   "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 364,
-  "phase": "FACTS_ONLY_SAVED_NO_VALUATION",
+  "phase": "PRIMARY_VALUATION_SAVED_NO_ENTRY",
   "source_paths": [
-    "work/0364_facts_1551.json"
+    "work/0364_facts_1551.json",
+    "work/0364_primary_refresh_1646.json",
+    "work/0364_economics_1648.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
   "updated_utc": "2026-10-19T15:52:11Z",
-  "source_capture_root": "logs/deep_review_20261017"
+  "source_capture_root": "logs/deep_review_20261017",
+  "primary_report": "research/2026-10-17-deep-review/evaluations/0364.md"
 }

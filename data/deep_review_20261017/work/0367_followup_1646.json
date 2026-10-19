@@ -1,0 +1,74 @@
+{
+  "schema": "price_blind_facts_addendum.v1",
+  "review_index": 367,
+  "created_utc": "2026-10-19T16:47:00Z",
+  "market_identity": {
+    "id": "1115638",
+    "condition_id": "0x173e1e71d57e728e99544c38da074e38e079e1f2865b332c10ad5ae7f84385b8",
+    "criteria_sha256": "1fd3c9032227b31d88191e61f2dd9ee7e711779a7d5857f9e5a07c0c42234a7e",
+    "question": "Will the US capture another world leader in 2026?",
+    "frozen_description_sha256": "3cc266aa51bb38936ba32be4a47b40c38c636f42927b4e0d1972af080de7df7f",
+    "slug": "will-the-us-capture-another-world-leader-in-2026",
+    "deadline": "2026-12-31 23:59 ET"
+  },
+  "frozen_rule_scope": "“Another” active head of state of a UN member state at capture; physical detention/custody such that not free to leave; direct on-the-ground participation by U.S. government personnel required (support/intelligence/logistics/advisory alone insufficient); interim heads count if widely recognized; contractors only when confirmed under U.S. direction. Resolution source is consensus credible reporting.",
+  "gamma_current_nonprice": {
+    "request_url": "https://gamma-api.polymarket.com/markets/1115638",
+    "status": 200,
+    "started_utc": "2026-10-19T16:46:07.648286Z",
+    "received_utc": "2026-10-19T16:46:07.726739Z",
+    "cache_age_seconds": "238",
+    "raw_bytes": 4492,
+    "raw_sha256": "18c087a8a5b6524beae6b4e7f9dd5cfc87f6910c279740626a1bbd504e55057c",
+    "gzip_sha256": "b72ae0faf070565e0d6f32499e8f9bba60188a9e6786c2b82d2ddb2bb4521684",
+    "capture_paths": [
+      "logs/deep_review_20261017/case367_gamma_1646/gamma_market_367.receipt.json",
+      "logs/deep_review_20261017/case367_gamma_1646/gamma_market_367.body.json.gz"
+    ],
+    "identity_match_frozen": true,
+    "createdAt": "2026-01-05T18:38:55.173406Z",
+    "startDate": "2026-01-05T19:12:28.716Z",
+    "updatedAt": "2026-10-19T16:41:12.933088Z",
+    "active": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "umaResolutionStatus": null,
+    "resolutionSource": ""
+  },
+  "maduro_prior_event_source": {
+    "publisher": "The White House",
+    "published_display": "January 4, 2026",
+    "url": "https://www.whitehouse.gov/releases/2026/01/rubio-this-is-our-hemisphere-and-president-trump-will-not-allow-our-security-to-be-threatened/",
+    "summary": "The prior captured White House statement reports Maduro was apprehended and quotes Secretary Rubio saying U.S. forces were on the ground for about two hours during the capture; Rubio also said Maduro was not head of state. This is the administration’s account, not independent adjudication of the frozen status criterion.",
+    "received_utc": "2026-10-19T15:50:19.607233Z",
+    "status": 200,
+    "raw_sha256": "0793ed7330ffd875341c923170bbc657359d437ae8f22f03ac85d30d764bc712",
+    "gzip_sha256": "38ad3b6aa2f919e5b2a15ef36d44ca0a46efa52d36b44ea16bbc835ba3f3f6a6",
+    "capture_paths": [
+      "logs/deep_review_20261017/case367_whitehouse_1555/whitehouse_rubio_maduro_jan04.receipt.json",
+      "logs/deep_review_20261017/case367_whitehouse_1555/whitehouse_rubio_maduro_jan04.body.json.gz"
+    ]
+  },
+  "un_status_source_check": {
+    "search_scope": "One targeted UN Digital Library search found a January 8 identical-letter annex to the Security Council from Venezuela’s Permanent Representative. Search snippet attributes to an ALBA communiqué the description of Maduro as constitutional president/head of state on Jan 3. This is an attributed Venezuelan/ALBA position transmitted in a UN document, not a UN finding. A separate targeted UN Press search did not surface a relevant 2026 status determination.",
+    "direct_document_url": "https://digitallibrary.un.org/record/4099073/files/A_80_592--S_2026_19-EN.pdf",
+    "status": 202,
+    "started_utc": "2026-10-19T16:46:41.396786Z",
+    "received_utc": "2026-10-19T16:46:41.997769Z",
+    "content_type": "text/html; charset=UTF-8",
+    "raw_bytes": 0,
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "capture_paths": [
+      "logs/deep_review_20261017/case367_un_document_1646/un_venezuela_2026_19.receipt.json",
+      "logs/deep_review_20261017/case367_un_document_1646/un_venezuela_2026_19.body.json.gz"
+    ],
+    "access_result": "HTTP 202, zero-byte body; document text unavailable in this capture; no UN adjudication verified."
+  },
+  "other_capture_scope": "The prior targeted White House/DOJ/State search at 15:54Z surfaced no additional named capture of another serving UN-member head of state and no specific later operation to capture one. It was not exhaustive. This follow-up did not perform a comprehensive event search; no conclusion that no other event occurred.",
+  "limits": [
+    "Gamma timestamps and status are current metadata, not evidence about January 3 office status.",
+    "The UN document access failed at the captured URL; search snippet is not a substitute for the document body.",
+    "No probability, market price, or eligibility determination."
+  ]
+}

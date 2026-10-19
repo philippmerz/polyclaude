@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T16:04:36.100068+00:00
+Updated: 2026-10-19T16:48:53.410493+00:00
 
-**338 valuations saved; first milestone100:** 338 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2290 pending.
+**339 valuations saved; first milestone100:** 339 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2289 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -375,6 +375,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |361|[Will UK GDP growth in Q3 2026 be between 0.4% and 0.5%?](evaluations/0361.md)|valued|Noentry: YES15/selected5 fails19cask, NO85/75 centralmodestedge but fails82cask and81cbid after10ppuncertainty.|
 |362|[Will "Sense and Sensibility" score at least 78 on the Rotten Tomatoes Tomatometer?](evaluations/0362.md)|blocked_after_review|Blockedforhistoricalcutoffevidence, not excludedorpricedreject. Primaryreviewcompletewithexplicitgap; continuetothenextcase.|
 |363|[Will Brighton & Hove Albion FC win on 2026-10-18?](evaluations/0363.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|364|[Will Tesla be the largest company in the world by market cap on October 31, 2026?](evaluations/0364.md)|valued|Noentry: YESsmallcentralpositivebutactual20ppstressnegative; NOaskabsent. RemoteNObidrequiresfreshconditional-fill/earnings/riskreview, notautomatic.|
 |365|[Will the price of Ethereum be above $2,500 on October 18?](evaluations/0365.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -722,3 +723,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 366

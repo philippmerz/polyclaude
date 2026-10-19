@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**338 valued /8 blocked /364 factual /2,290 pending;710 base+62 revisions,next364.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. Five new valuations and one explicit source gap were saved in the [latest research batch](research/2026-10-19-manual1536-research.md); initial355/356 candidates were withdrawn before orders. Facts ready364/366/367/368/370. [Small resume](research/2026-10-17-deep-review/RESUME.md). No valuation credit from the scheduled check.
+**339 valued /8 blocked /364 factual /2,289 pending;711 base+62 revisions,active/next366.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.364 is saved with no entry;366/367/368/370/371/372/374/378 have factual packets only. Initial355/356 candidates remain withdrawn before orders. [Latest closeout](research/2026-10-19-1653-closeout.md) · [Small resume](research/2026-10-17-deep-review/RESUME.md). Scanner coverage earns no valuation credit.
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC pull binding.** Canceled orders stay closed and must never be replayed. [Current orders/proofs](notes/resting_orders.md).
 
-**Whalefall6NO/$1.02 retained without adding.** Numbers/Mojo16:31 show8mESTIMATE, not final; exactly8mFINAL paysNO. Worldwide17.5m is a different metric. HLE9NO closed/DEC225; the separate legacyGeminiNO is a zero-value/uncertain claim. OpenRouter5NO retained; specified four weekly labels govern. [Current primary judgment](research/2026-10-19-1559-checkin.md).
+**Whalefall6NO/$1.02 retained without adding.** Numbers/Mojo16:53 show8mESTIMATE, not final; exactly8mFINAL paysNO. Worldwide17.5m is a different metric. HLE9NO closed/DEC225; the separate legacyGeminiNO is a zero-value/uncertain claim. OpenRouter5NO retained; specified four weekly labels govern. [Latest source review](research/2026-10-19-1653-closeout.md).
 
 ## Mandate and constraints
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 Authenticated orders/positions at16:31:41–42UTC match prior state: four LIVE/zero-matched BUYs/four reservations/$7.52 full-fill risk and eight position identities/sizes/totalBought unchanged. No trade, numerical-prior change, new maker exit or addition. Idaho34YES3c/$1.02 retains its Oct19 22UTC all-unfilled pull and earlier cancel-first rule. [Orders](notes/resting_orders.md) · [account](data/deep_review_20261017/work/tick1615_account.json).
 
-Named NY01/Whalefall alerts reviewed; both weekend sources still show8mESTIMATE, not final.17.5mworldwide is not the domestic criterion. NewsNation repeats old coverage; a newer Times polling headline has unverified publisher/data after bounded attempts. News review through16:37:19UTC. [Risk/source limits](data/deep_review_20261017/work/tick1615_root_risk.json).
+Named NY01/Whalefall alerts reviewed; both weekend sources still show8mESTIMATE at16:53, not final.17.5mworldwide is not the domestic criterion. NewsNation repeats old coverage; a newer Times polling headline has unverified publisher/data after bounded attempts. News review through16:48:24UTC. [Risk/source limits](data/deep_review_20261017/work/tick1615_root_risk.json) · [bounded follow-up](research/2026-10-19-1653-closeout.md).
 
 All14 routine output pairs inspected; processrc unavailable, no visible runtime error. Two quiet safety checks independently verified rc0; status reports no hurdle/UMA/redemption/Ostium/overdue-decision issue. Four daemons single/canonical/code-current. Discovery incomplete with14unexplained quote failures; no exchange-wide absence claim. No routine Telegram. Existing light18UTC, Idaho22UTCpull, fullcheckOct20 02UTC; weeklyP&LOct23. [Operations](data/deep_review_20261017/work/tick1615_ops.json) · [scan](data/checkin_20261019T1615_public_summary.json).
 

@@ -1,9 +1,9 @@
 ---
-reviewed_at: "2026-10-19T16:42:05.427320Z"
+reviewed_at: "2026-10-19T16:58:32.603220Z"
 valid_until: "2026-10-19T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 64adfbe1945896011f1cca75c6e37b9ebe971c064f951811120d5f8bbbab4fc7
+  README.md: d34420cd3ffad865394716e54e92c79c42f2e6023f4782f15e2a59fbee5906c1
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
@@ -12,12 +12,12 @@ source_hashes:
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
   notes/backlog.md: 24cacf6277830cf2d5e19ed05f47bedee39ee14d7f81f70c6b5357ea7e308f47
   notes/resting_orders.md: 32600db41aa4dadc2839c3c2b38b162e8417a63ede06890483ba1dabc146cd0d
-  notes/journal.md: 68a470938ce46a652c72b170b16352e9c37a21a829aa34de0f2daad6da59bd1c
+  notes/journal.md: 230be679f8a08de03713d2b401f8a0452b9c96c7c23a141b5aa45dffbc5e84a9
 ---
 
 ## Resume
 
-**338 valued /8 blocked /364 factual /2,290 pending;710 base+62 revisions,next364.** [Checkpoint](deep_review_checkpoint.json) · [latest six-case batch](../research/2026-10-19-manual1536-research.md) · [small phase](../data/deep_review_20261017/work/manual1536_RESUME.json).353/355/356/360/361 valued,362 historical-cutoff gap; initial355/356 candidates withdrawn before orders. Facts ready364/366/367/368/370; primary underwriting pending. Cases317/340 withdrawn/unplaced; canceled orders stay closed.
+**339 valued /8 blocked /364 factual /2,289 pending;711 base+62 revisions,active/next366.** [Checkpoint](deep_review_checkpoint.json) · [latest closeout](../research/2026-10-19-1653-closeout.md) · [small phase](../data/deep_review_20261017/work/manual1647_RESUME.json).364saved/noentry.366/367/368/370/371/372/374/378facts only;366primaryp/economics pending. Initial355/356leads withdrawn before orders. Canceled orders stay closed.
 
 Native goal was active at preceding interactive checkpoint; this bounded scheduled run made no lifecycle change or idle follow-up. Continue finite research in its authorized context. Notify Telegram if global progress becomes blocked; individual source gaps do not stop queue. Earlier recovery already sent as Telegram1269.
 
@@ -33,9 +33,9 @@ Authenticated HTTP200 orders16:31:41.481495–41.597242UTC and positions16:31:41
 
 - Retain MI5NO/Messi5YES/OR5NO/Whale6NO and wholeClarity29/29. Noadd/newmaker/prior change/trade. Selected terminal1.70/2/3.65/2.5261 vs current roundedCLIexits1.46/1.20/3/.49. Broad adverse cases may favor sale; full binary loss remains. No price-recovery thesis, hidden-info maker-at-fair or automatic midpoint/rho Kelly additions. [Primary risk/joint states](../data/deep_review_20261017/work/tick1615_root_risk.json).
 - MI is US Senate; Messi is Google2026 GlobalAthletesTop5/fallbackMar31’27. OR uses displayedOct26/Nov2/Nov9/Nov16 totals, NO outside[725,775), not current partial. Exact Gamma/fee checks112/210/299/1838 retain actual16:20clock in prior `tick1559_rule_<four-digit-index>.json`; no fresh execution certificate implied.
-- Whale: final domesticOct16–18 strict<8m; exactly8mFINALpaysNO. Numbers16:31:31/Mojo16:31:33 still8mESTIMATE.7dc141…17.5mWORLDWIDE alert is a metric/held-side classifier error. No Thursday-preview double addition or final inferred. [Current sources](../data/deep_review_20261017/work/tick1615_source_review.json).
+- Whale: final domesticOct16–18 strict<8m; exactly8mFINALpaysNO. Numbers16:53:37.258632/Mojo16:53:37.965650 still8mESTIMATE.7dc141…/49b78…17.5mWORLDWIDE alerts confuse metrics; neither establishes domestic final. No Thursday-preview double addition or final inferred. [Latest sources](../data/deep_review_20261017/work/alert49b78_whale_facts_1653.json).
 - NY01 WLIW53b1…body/date unavailable; separate NewsdayOct17 fundraising and officialSep30 cumulative finances already underwritten. No new measured poll/ballot failure. Retain existing10YES12c/$1.20 promise, noadd/repost.
-- NewsNationffa125…repeats sameOct18URL/ID/Oct17exchange; capped AOL body retains Oct18publication/update clocks, no new request. TheTimesd572…16:37polling headline was manually reviewed despite research_only; publisher/date/survey/fielddates/toplines unverified after bounded attempts, not evidence no poll exists. No numeric substitute. News reviewed through16:37:19UTC. [Times access gap](../data/deep_review_20261017/work/tick1615_michigan_times_followup.json).
+- NewsNationffa125…repeats sameOct18URL/ID/Oct17exchange; capped AOL body retains Oct18publication/update clocks, no new request. TheTimesd572…16:37polling headline was manually reviewed despite research_only; publisher/date/survey/fielddates/toplines unverified after bounded attempts, not evidence no poll exists. No numeric substitute. News reviewed through16:48:24UTC; newer Venezuela policy/power headlines have no identified exposure channel. [Times access gap](../data/deep_review_20261017/work/tick1615_michigan_times_followup.json).
 - Clarity wholepaironly: conditional29floor/58middle vs24.94CLIexit/.20fee. First qualifying final Senate passage, not proforma/cloture; venue/oracle/system risk can break floor. No legwise action.
 
 ## Operations

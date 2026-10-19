@@ -1,11 +1,13 @@
 {
-  "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 366,
-  "phase": "FACTS_ONLY_SAVED_NO_VALUATION",
+  "phase": "FACTS_ONLY; scope follow-up appended; valuation pending",
   "source_paths": [
-    "work/0366_millennium_facts_1551.json"
+    "work/0366_millennium_facts_1551.json",
+    "work/0366_scope_followup_1650.json"
   ],
-  "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-19T15:52:26.758605Z",
-  "source_capture_root": "logs/deep_review_20261017"
+  "source_pointers": [
+    "https://github.com/openai/math",
+    "https://github.com/openai/math/blob/main/history.md",
+    "https://openai.com/index/sharing-ai-progress-in-mathematics/"
+  ]
 }

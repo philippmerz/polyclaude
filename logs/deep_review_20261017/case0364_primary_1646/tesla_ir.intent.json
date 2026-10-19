@@ -1,0 +1,1 @@
+{"name":"tesla_ir","request":{"method":"GET","read_only":true,"scope":"onchain_PM364_settlement_forecast_only","url":"https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:45:49.863379Z","timing_basis":"call_window"}

@@ -1,0 +1,73 @@
+{
+  "review_index": 372,
+  "market_id": "1812607",
+  "conditionId": "0x1295040186326703b63b9c7d719f8c5bb88ee6fa9672e3924f90ef74ee7b0459",
+  "question": "Will Olivia Chow win the 2026 Toronto mayoral election?",
+  "criteria_sha256": "aeda7e0b70a64cec8fd9bea0d4c07c47696d71698d6e53585d05231bc9ba4ff3",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-10-27T03:59:00Z",
+  "frozen_description": "The 2026 Toronto mayoral election is currently scheduled to be held on October 26, 2026.\n\nThis market will resolve according to the candidate who becomes the next mayor of Toronto as a result of this election.\n\nTemporary, interim, or placeholder mayors appointed before the election will not be considered.\n\nIf the result of this election isn't known by June 30, 2027, 11:59 PM ET, the market will resolve to \"Other\".\n\nThe primary resolution source for this market will be a consensus of credible reporting; however, if there is any ambiguity in the results, this market will resolve according to official information from Toronto.",
+  "toronto_election_calendar": {
+    "url": "https://www.toronto.ca/city-government/elections/",
+    "received_utc": "2026-10-19T16:46:11.552357Z",
+    "status": 200,
+    "raw_sha256": "d0f1db6dc24a68bf9b39f40d0be183612c2e04d6c28ad3b8f1f3a448de892381",
+    "gzip_sha256": "804e5d388b1f038bb1e90ff202665346ee91b2190f31562a28859a8d6740843d",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/372/toronto_elections/toronto_elections.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/372/toronto_elections/toronto_elections.body.json.gz",
+    "finding": "City page schedules Monday Oct 26, 2026; polls open 10 a.m.–8 p.m."
+  },
+  "candidate_list": {
+    "url": "https://www.toronto.ca/data/elections/candidate_list/mayorCandidates_2026.json",
+    "received_utc": "2026-10-19T16:46:57.644908Z",
+    "status": 200,
+    "last_modified": "Mon, 19 Oct 2026 16:34:06 GMT",
+    "raw_sha256": "20753fd6cde15b0e275ec24c5cc0ce73327f36e3dafeadc07ba8dcaaffe8ac22",
+    "gzip_sha256": "ac17b3a919a06348ea714515b2a8c128768ccc0fac5e06c8fa38f8883453eed2",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/372/toronto_mayor_candidates/mayor_candidates.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/372/toronto_mayor_candidates/mayor_candidates.body.json.gz",
+    "seq": "1792426980700",
+    "candidate_count": 53,
+    "listed_entries": [
+      {
+        "name": "Alexander, Chris",
+        "dateNomination": "29-Jul-2026",
+        "status": "Active"
+      },
+      {
+        "name": "Bradford, Brad",
+        "dateNomination": "01-May-2026",
+        "status": "Active"
+      },
+      {
+        "name": "Chow, Braeden",
+        "dateNomination": "21-May-2026",
+        "status": "Active"
+      },
+      {
+        "name": "Chow, Olivia",
+        "dateNomination": "25-May-2026",
+        "status": "Active"
+      }
+    ],
+    "caveat": "Official JSON lists Olivia Chow, Brad Bradford and Chris Alexander as Active at retrieval; a seq value is present but no timestamp semantics are documented in this capture."
+  },
+  "latest_original_poll": {
+    "pollster": "Pallas Data",
+    "url": "https://pallas-data.ca/2026/10/16/pallas-toronto-poll-chow-52-bradford-46-as-mayoral-race-tightens/",
+    "published": "2026-10-16",
+    "field_date": "2026-10-14",
+    "received_utc": "2026-10-19T16:46:21.232297Z",
+    "status": 200,
+    "raw_sha256": "9f2b9628972740e76cdb517cb06c2f3bb1200b9be835233a4327eeab3935654e",
+    "gzip_sha256": "d0ae1c024d5bd56bfc20d739bca065cc52be71001bceb036ae64d4ea28dd6091",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/372/pallas_oct14_poll/pallas_oct14_poll.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/372/pallas_oct14_poll/pallas_oct14_poll.body.json.gz",
+    "topline": "Among decided/leaning: Chow 52%, Bradford 46%, another candidate 3%; undecided separately 12%. As reported, those figures do not sum to 100%.",
+    "method": "732 Toronto adults eligible to vote municipally; automated telephone IVR on landlines and cellphones; weighted by age/gender to 2021 Census; stated MOE ±3.6 percentage points at 95% confidence, larger for subgroups."
+  },
+  "scope": "Factual source packet only; no forecast."
+}

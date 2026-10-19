@@ -1,0 +1,1 @@
+{"name":"ranks","request":{"method":"GET","read_only":true,"scope":"onchain_PM364_settlement_forecast_only","url":"https://companiesmarketcap.com/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:45:49.440518Z","timing_basis":"call_window"}

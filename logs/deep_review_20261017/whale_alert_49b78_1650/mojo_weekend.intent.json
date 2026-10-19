@@ -1,0 +1,1 @@
+{"name":"mojo_weekend","request":{"method":"GET","read_only":true,"scope":"Fresh named Whalefall release weekend table","url":"https://www.boxofficemojo.com/release/rl1608024065/weekend/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:53:37.270639Z","timing_basis":"call_window"}

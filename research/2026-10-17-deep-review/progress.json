@@ -1,16 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-19T16:04:36.100068+00:00",
+  "updated_utc": "2026-10-19T16:48:53.410493+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 346,
-  "completed_valuations": 338,
+  "completed_in_depth_reviews": 347,
+  "completed_valuations": 339,
   "blocked_after_in_depth_review": 8,
   "factual_exclusions": 364,
-  "pending": 2290,
-  "active_indices": [],
+  "pending": 2289,
+  "active_indices": [
+    366
+  ],
   "next_pending_indices": [
-    364,
     366,
     367,
     368,
@@ -39,13 +40,14 @@
     404,
     406,
     408,
-    410
+    410,
+    412
   ],
-  "base_records": 710,
+  "base_records": 711,
   "base_record_counts": {
+    "excluded_factual": 364,
     "blocked_after_review": 10,
-    "valued": 336,
-    "excluded_factual": 364
+    "valued": 337
   },
   "revisions_written": 62,
   "milestone": 100,

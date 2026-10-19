@@ -1,0 +1,12 @@
+{
+  "review_index": 299,
+  "phase": "FACTS_ONLY_ALERT_UPDATE; latest captured sources remain estimates",
+  "source_paths": [
+    "work/alert49b78_whale_facts_1653.json",
+    "work/tick1615_source_review.json"
+  ],
+  "source_pointers": [
+    "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+    "https://www.boxofficemojo.com/release/rl1608024065/weekend/"
+  ]
+}

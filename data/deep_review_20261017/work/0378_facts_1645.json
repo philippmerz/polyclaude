@@ -1,0 +1,68 @@
+{
+  "review_index": 378,
+  "market_id": "629641",
+  "conditionId": "0x1b7fa10e6b102c964bbd4a7cb0a4b7a341e17fcb9f8a2c8a5d6a3b30dfb5c394",
+  "question": "Will the Republicans win the South Carolina governor race in 2026?",
+  "criteria_sha256": "6fb2fb94b055d876f4e8bc82cee728fa05da9929c9c432296ba560bbe6923458",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "endDate": "2026-11-04T04:59:00Z",
+  "frozen_description": "This market will resolve according to the winner of the 2026 South Carolina gubernatorial election.\n\nA candidate shall be considered to represent a party in the event that he or she is the nominee of the party in question. Candidates other than the Democratic or Republican nominee (e.g., Greens, Libertarian, independent) may be added at a later date.\n\nCandidates who run as independents will not be encompassed by the \"Democrat\" or \"Republican\" options regardless of any affiliation they may have with the party.\n\nThe candidates may be named in the contract for the convenience of traders. In the event that any named candidate is replaced as the nominee of their respective party prior to election day, the name in the contract will be updated and the market will resolve based on the replacement nominee of the party.\n\nThe resolution source for this market is the Associated Press, Fox News, and NBC. This market will resolve once all three sources call the race for the same candidate. If all three sources haven't called the race in this state for the same candidate, this market will resolve based on the official certification.",
+  "election_calendar": {
+    "url": "https://scvotes.gov/candidates/2026-candidate-information/",
+    "received_utc": "2026-10-19T16:46:22.438033Z",
+    "status": 200,
+    "raw_sha256": "1e26c5d810db7c0f9d8b079b0b1f6855164ae4df37327df47657a964cfc5adff",
+    "gzip_sha256": "5058389e6821eaa462afd5f169ff8f7485d7e4ae74c37daba44cde162c862f60",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/378/sc_candidate_calendar/sc_candidate_calendar.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/378/sc_candidate_calendar/sc_candidate_calendar.body.json.gz",
+    "facts": [
+      "Primary June 9, 2026; runoff June 23; general election Nov 3, 2026.",
+      "Major-party nominations occur through primary/runoff; parties can also nominate by convention. Petition, independent and write-in routes are possible. Other-party status is not automatically the party nominee."
+    ]
+  },
+  "official_results_index": {
+    "url": "https://scvotes.gov/elections-statistics/election-results/",
+    "received_utc": "2026-10-19T16:46:23.692890Z",
+    "status": 200,
+    "raw_sha256": "f10f987de09474116bf3b749bcb3ed96aab012e38474695701984e85b0d569a5",
+    "gzip_sha256": "cef9da81ec4b36aa77206385be3e26b3cb80bfc716435d55a0d12517f61cd2dc",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/378/sc_election_results/sc_election_results.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/378/sc_election_results/sc_election_results.body.json.gz",
+    "gap": "Index links 2026 primary/runoff results; detailed JS-rendered destination did not expose candidate result in captured view."
+  },
+  "nomination_reporting_secondary": {
+    "url": "https://apnews.com/article/6df5a35cf20af9ee1e0453192017f17a",
+    "date": "2026-06-23",
+    "finding": "AP reported Alan Wilson won Republican runoff; Jermaine Johnson won Democratic nomination outright. No direct official result-table capture confirming names."
+  },
+  "poll": {
+    "pollster": "Resonance Media Services",
+    "publisher_host": "FITSNews PDF host",
+    "url": "https://www.fitsnews.com/wp-content/uploads/securepdfs/2026/10/Resonance-Governor-Poll-Summary-Oct-5-2026.pdf",
+    "published": "2026-10-05",
+    "field_dates": "2026-09-29 through 2026-10-03",
+    "received_utc": "2026-10-19T16:46:23.936150Z",
+    "status": 200,
+    "raw_sha256": "1e5a02f4d21057369c702b0b1edca0fe01807a104ffd184ac0b4c4374ba8a0ee",
+    "gzip_sha256": "b4554636c37428da40ca81b00c4840374a655516b5f80b5c08d4f7fac17639b2",
+    "receipt": "logs/deep_review_20261017/cases372_378_sources/378/resonance_sc_oct5_memo/resonance_sc_oct5_memo.receipt.json",
+    "body": "logs/deep_review_20261017/cases372_378_sources/378/resonance_sc_oct5_memo/resonance_sc_oct5_memo.body.json.gz",
+    "question": "If the election for Governor were held today, who would you vote for? All voters.",
+    "topline": {
+      "Alan Wilson": 45.17,
+      "Jermaine Johnson": 35.03,
+      "undecided": 15.84,
+      "reported_lead_points": 10.14
+    },
+    "method": "638 South Carolina voters drawn from registered voter list; live callers, respondents asked for by name; stated MOE 3.7%."
+  },
+  "limits": [
+    "No later original poll was found in this bounded pass; not a universal absence claim.",
+    "Exact final governor ballot/third-party nominee status was not independently established.",
+    "Poll memo’s other-party references do not establish ballot qualification."
+  ],
+  "scope": "Factual source packet only; no forecast."
+}
