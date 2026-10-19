@@ -1,0 +1,29 @@
+{
+  "schema": "periodic1916_closeout_audit.v1",
+  "created_utc": "2026-10-19T19:25:00.388742+00:00",
+  "public_artifacts_verified": 141,
+  "public_manifest": "data/deep_review_20261017/work/periodic1916_public_artifacts.json",
+  "doc_links_resolve": true,
+  "journal_prefix_unchanged": true,
+  "financial_csv_220_unchanged": true,
+  "financial_priors_orders_decisions_equal_head": true,
+  "current_context_packet_status": "within_declared_validity",
+  "current_context_packet_bytes": 9965,
+  "current_context_source_mismatches": [],
+  "counts": {
+    "completed_valuations": 349,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2278,
+    "base_records": 722,
+    "revisions_written": 64,
+    "active_indices": [
+      382
+    ]
+  },
+  "case380_resume_phase_corrected": true,
+  "case382_unvalued": true,
+  "diff_check_pass": true,
+  "no_new_financial_producer_or_trade": true,
+  "immutable_case_audit": "data/deep_review_20261017/work/periodic1916_research_audit.json"
+}

@@ -1,0 +1,1 @@
+{"name":"ppi_schedule","request":{"method":"GET","operation":"Official BLS PPI publication schedule","read_only":true,"url":"https://www.bls.gov/schedule/news_release/ppi.htm"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:17:17.624750Z","timing_basis":"call_window"}

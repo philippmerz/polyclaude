@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "logs/deep_review_20261017/case380_eia_energy_1910/gulf_gasoline_daily.intent.json",
+      "bytes": 483,
+      "sha256": "f5f571a6918dcc02c4350021b3a79ad82a0c8e0fa83f8c89e64570f60cca351f"
+    },
+    {
+      "path": "logs/deep_review_20261017/case380_eia_energy_1910/gulf_gasoline_daily.receipt.json",
+      "bytes": 1100,
+      "sha256": "f9b806ed467d8cd5292f7e5989a8c36dbc7c30d93fd3e7487d6bc493a1c55943"
+    },
+    {
+      "path": "logs/deep_review_20261017/case380_eia_energy_1910/wti_daily.intent.json",
+      "bytes": 473,
+      "sha256": "5e4230ab46edb6446413f56e5630a0d5934f318f968f2420bfa83912181dba8b"
+    },
+    {
+      "path": "logs/deep_review_20261017/case380_eia_energy_1910/wti_daily.receipt.json",
+      "bytes": 1079,
+      "sha256": "8a9e7a43908adaf90c64f2771096c243722788469754a68de4c450dd808adba1"
+    },
+    {
+      "path": "logs/deep_review_20261017/case380_history_1859/ppi_history_2017_2026.intent.json",
+      "bytes": 456,
+      "sha256": "2211a545940df3ce4f3814e32f207ce28e17a53ac78965fa99b3253f7be95f61"
+    },
+    {
+      "path": "logs/deep_review_20261017/case380_history_1859/ppi_history_2017_2026.receipt.json",
+      "bytes": 1027,
+      "sha256": "10b40a993d8eee4acea574f73c2664ceca5c83d6d8fcbd32ce6b844340ae6dff"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_response.json",
+      "bytes": 24609,
+      "sha256": "ae15872fa2989fb09ee1e7267bfa34a2fabab1c508e2f7179bc527f2aea2d7d0"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_response_checked.json",
+      "bytes": 24609,
+      "sha256": "ae15872fa2989fb09ee1e7267bfa34a2fabab1c508e2f7179bc527f2aea2d7d0"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/receipts.json",
+      "bytes": 2281,
+      "sha256": "20d1b2033f2c3ca77ead831e27270f9d4dbeb3b16b9445219a2a491c56c29b6b"
+    }
+  ]
+}

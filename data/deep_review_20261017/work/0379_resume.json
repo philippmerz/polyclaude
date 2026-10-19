@@ -1,1 +1,17 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":379,"phase":"Facts collected; primary may proceed after reading exact frozen rule and source unit. No valuation or entry authority.","source_paths":["work/0379_facts_1717.json","work/0349_facts_1218.json","work/0349_source_followup_1220.json","work/0349_directional_facts_1225.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:19:59.978638Z","source_capture_root":"logs/deep_review_20261017"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 379,
+  "phase": "VALUED_COMPLETE_2026-10-19T19:01:46Z; noentry",
+  "source_paths": [
+    "work/0379_vote_eme_followup_1858.json",
+    "work/0379_facts_1717.json",
+    "work/0349_facts_1218.json",
+    "work/0349_source_followup_1220.json",
+    "work/0349_directional_facts_1225.json",
+    "work/0379_facts_current_1853.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T19:08:12.684340+00:00",
+  "source_capture_root": "logs/deep_review_20261017",
+  "report": "research/2026-10-17-deep-review/evaluations/0379.md"
+}

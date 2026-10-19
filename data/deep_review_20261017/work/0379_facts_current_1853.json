@@ -1,0 +1,41 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 379,
+  "market_id": "5785091",
+  "conditionId": "0xf4f152e30e83a89063caec7ffa180411bf3dcd7c1f88fe54c51e3391773601b6",
+  "criteria_sha256": "ec828dc14c4a107090ab662d147762b3d8ea360f240ff0c362e8a973ed3c5a17",
+  "compiled_utc": "2026-10-19T18:53:27.711275+00:00",
+  "scope": "Bounded current primary facts for December 2026 BanRep no-change rule; no forecast, market prices, or decision.",
+  "rule_binding": "Rate change vs pre-meeting level (upper bound if band); emergency non-meeting change excluded. Cancellation or postponement with no decision before next scheduled meeting maps No Change; qualifying postponement before next meeting follows that meeting.",
+  "current_primary_facts": [
+    {
+      "topic": "Rate level/calendar",
+      "as_of": "2026-10-19 source retrieval",
+      "fact": "BanRep lists 12.25% effective 1 Oct after the 30 Sep +25bp decision. The scheduled 30 Oct meeting precedes the frozen 18 Dec meeting. Calendar displays 18 Dec 08:30–13:00 but supplies no timezone; minutes are listed for 23 Dec. No December result exists yet.",
+      "source_url": "https://www.banrep.gov.co/es/calendario-eventos",
+      "receipt_path": "logs/deep_review_20261017/case379_facts_1700/banrep_calendar.receipt.json",
+      "body_path": "logs/deep_review_20261017/case379_facts_1700/banrep_calendar.body.json.gz",
+      "receipt_sha256": "31ec55f8fd01f5930426c81db1af0b44d9390cbed46c68cd666fc24899f77309"
+    },
+    {
+      "topic": "Last board decision",
+      "fact": "30 Sep vote: four +25bp, two hold, one initially +50bp then agreed +25bp. Majority cited inflation above 6%, expectations, demand/output, depreciation and El Niño/energy/fiscal risks; dissenters cited restrictive real rates and lags. This describes the prior decision, not December guidance.",
+      "source_url": "https://www.banrep.gov.co/es/noticias/junta-directiva/minutas-banrep-septiembre-2026",
+      "source_capture": "Existing 0379 facts unit; its minutes capture predates this addendum."
+    },
+    {
+      "topic": "Latest inflation/activity in captured source set",
+      "fact": "Sep CPI released 7 Oct: headline y/y 6.29%; named core IPC excluding food and regulated prices 6.03%. Latest ISE is Aug, bulletin dated 19 Oct: seasonally/calendar-adjusted index 125.65, -0.11% y/y and -3.11% m/m; original Jan–Aug +2.27%. ISE is monthly activity, not GDP.",
+      "source_urls": [
+        "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica",
+        "https://www.dane.gov.co/index.php/estadisticas-por-tema/cuentas-nacionales/indicador-de-seguimiento-a-la-economia-ise/historicos-ise-comunicados-y-boletines"
+      ],
+      "source_capture": "Existing 0379 facts unit; no re-fetch."
+    }
+  ],
+  "known_gaps": [
+    "The October monthly analyst-expectations endpoint returned a 200 Radware challenge page; it does not establish whether a newer October survey exists. September meeting minutes report analyst end-2026 inflation expectation 6.8% and 2-year 4.0%; July Monetary Policy Report exists (published 4 Aug) but the numeric projection was not extracted.",
+    "The December meeting calendar entry has no timezone. Emergency non-meeting moves are excluded by the frozen rule."
+  ],
+  "retrieval_note": "This addendum reuses the captured 19 Oct official-source receipts; it makes no new HTTP request and does not assert current facts beyond those capture times."
+}

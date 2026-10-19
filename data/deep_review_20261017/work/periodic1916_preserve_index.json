@@ -1,0 +1,38 @@
+{
+  "audit_reference": "data/deep_review_20261017/work/periodic1916_research_audit.json",
+  "created_utc": "2026-10-19T19:21:55.537496+00:00",
+  "exclusions": [
+    "No account/order/reservation/status or geoblock bodies; no credentials/operator material; no unrelated 0332 draft. Full copyrighted article/PDF/XLSX bodies remain local. Government data arrays remain local with fact capsules/hash metadata retained."
+  ],
+  "path_counts": {
+    "data/deep_review_20261017/work/periodic1916_preserve_0378.json": {
+      "candidate": 25,
+      "local_only": 3
+    },
+    "data/deep_review_20261017/work/periodic1916_preserve_0379.json": {
+      "candidate": 20,
+      "local_only": 1
+    },
+    "data/deep_review_20261017/work/periodic1916_preserve_0380.json": {
+      "candidate": 27,
+      "local_only": 5
+    },
+    "data/deep_review_20261017/work/periodic1916_preserve_382.json": {
+      "candidate": 16,
+      "local_only": 4
+    },
+    "data/deep_review_20261017/work/periodic1916_preserve_384_388.json": {
+      "candidate": 25,
+      "local_only": 10
+    }
+  },
+  "purpose": "Explicit candidate paths only; not a staging or commit instruction. Work/resume paths may change during parent closeout, so no final hashes are bound.",
+  "schema": "polyclaude.preservation_path_index.v1",
+  "shards": [
+    "data/deep_review_20261017/work/periodic1916_preserve_0378.json",
+    "data/deep_review_20261017/work/periodic1916_preserve_0379.json",
+    "data/deep_review_20261017/work/periodic1916_preserve_0380.json",
+    "data/deep_review_20261017/work/periodic1916_preserve_382.json",
+    "data/deep_review_20261017/work/periodic1916_preserve_384_388.json"
+  ]
+}

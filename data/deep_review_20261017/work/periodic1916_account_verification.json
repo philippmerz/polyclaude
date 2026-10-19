@@ -1,0 +1,47 @@
+{
+  "schema": "periodic1916_account_verification.v1",
+  "reviewed_utc": "2026-10-19T19:19:37.928393+00:00",
+  "observation_windows": {
+    "orders": {
+      "started_utc": "2026-10-19T19:17:21.814121Z",
+      "received_utc": "2026-10-19T19:17:22.006453Z",
+      "response_status": 200,
+      "body_representation": "sdk_result_serialization",
+      "raw_sha256": "2a001cc730c9189ff33aa2100cef2e085b7567ff25387921d2a615e450309bcf"
+    },
+    "positions": {
+      "started_utc": "2026-10-19T19:17:21.817722Z",
+      "received_utc": "2026-10-19T19:17:22.061906Z",
+      "response_status": 200,
+      "body_representation": "http_body",
+      "raw_sha256": "20907e6db36cf1dd9774318345ce868c52d399f026e31a5eddf2662ef260076e"
+    },
+    "quick_status": {
+      "started_utc": "2026-10-19T19:17:21.814929Z",
+      "received_utc": "2026-10-19T19:17:25.015207Z",
+      "body_representation": "supplied_bytes",
+      "raw_sha256": "33f2b214388f0c1eb6d047dbb1e84ef0be8ec0f9d73c71439b4af8121f04e5db",
+      "outer_returncode": 0,
+      "nested_child_returncodes_not_exposed": true,
+      "failure_marker_present": false,
+      "hurdle_flags": 0,
+      "watchlist_hits": 0
+    }
+  },
+  "comparison": {
+    "baseline": "data/deep_review_20261017/work/periodic1838_account_verification.json",
+    "exact_order_terms_unchanged": true,
+    "exact_position_identities_outcomes_sizes_totalBought_unchanged": true,
+    "live_orders": 4,
+    "matched_shares": 0,
+    "remaining_buy_risk_usd": 7.52,
+    "positive_positions_including_legacy_claim": 8,
+    "reservations_byte_identical": true,
+    "exact_reservation_bindings": true
+  },
+  "limits": [
+    "Orders are vetted authenticated result serialization, not raw HTTP. Indexed positions are public API observations, not a new on-chain balance audit.",
+    "Quick status is narrower than full check; its PM-only mark/depth is not a new account NAV or financial CSV anchor.",
+    "No order, reservation, position or financial-prior mutation; account/status bodies stay private."
+  ]
+}

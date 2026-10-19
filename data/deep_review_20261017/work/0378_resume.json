@@ -1,7 +1,8 @@
 {
   "review_index": 378,
-  "phase": "FACTS_ONLY_COMPLETE; valuation remains pending",
+  "phase": "VALUED_COMPLETE_2026-10-19T18:56:13Z; noentry",
   "source_paths": [
+    "work/0378_ballot_poll_detail_1852.json",
     "work/0378_freshness_1836.json",
     "work/0378_facts_1645.json"
   ],
@@ -11,5 +12,6 @@
     "https://www.fitsnews.com/wp-content/uploads/securepdfs/2026/10/Resonance-Governor-Poll-Summary-Oct-5-2026.pdf",
     "https://apnews.com/article/6df5a35cf20af9ee1e0453192017f17a"
   ],
-  "updated_utc": "2026-10-19T18:35:39.249226Z"
+  "updated_utc": "2026-10-19T18:59:07.051324+00:00",
+  "report": "research/2026-10-17-deep-review/evaluations/0378.md"
 }

@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "README.md",
+      "bytes": 14248,
+      "sha256": "20c5981a0418b320f792456bfda344a2c3efa6dcceef0af8a07a65e10cf07d99"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_ballot_poll_detail_1852.json",
+      "bytes": 4140,
+      "sha256": "88c360b9e2b2480a6bb5cec0756b8ad71bf8d08afc0aa16d59c6848d66f54186"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_calendar_read_1856.json",
+      "bytes": 696,
+      "sha256": "b92a8d29e43b262ea2c3a04bf8367f35eedc52826145f6e34ba5ef403a78e1c9"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_economics_15_1856.json",
+      "bytes": 3660,
+      "sha256": "bf502a640496e1541cde8624af1f6e3e85ae63b2f8c352b3b321f93ee37abea8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_economics_1855.json",
+      "bytes": 3646,
+      "sha256": "85963b22e3182080380e1036cff8eb323f53b5c6786330864e7211ea479f8cba"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_facts_1645.json",
+      "bytes": 5061,
+      "sha256": "5fed82c4ca736ff0d38c3c39ed778e97cf31aabea3898115468096542c635385"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_freshness_1836.json",
+      "bytes": 3565,
+      "sha256": "a4095fd4f74295f1e8913607b5043f9c7c1ec5cef6a681a45fcb67d347971151"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_primary_input_1857.json",
+      "bytes": 10216,
+      "sha256": "410ecb18d8d6990746bb3ee1e30f3c3c676c301624dfee3723ba65d34ad73bf8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0378_quote_1855.json",
+      "bytes": 11390,
+      "sha256": "ca45c0e8a7a09b79a22b88e2b1272477583734297c55c7ceb8396230992fe7cf"
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "review_index": 378,
+  "market_id": "629641",
+  "condition_id": "0x1b7fa10e6b102c964bbd4a7cb0a4b7a341e17fcb9f8a2c8a5d6a3b30dfb5c394",
+  "criteria_sha256": "6fb2fb94b055d876f4e8bc82cee728fa05da9929c9c432296ba560bbe6923458",
+  "status": "valued",
+  "literal_analysis": "Rnomineeplurality2026SCgovernor; independentsexcluded/replacementsinheritparty; AP/Fox/NBCunanimouscall elseofficialcertification. Notvote>50%; Nov4metadata notsettlement guarantee.",
+  "evidence": [
+    {
+      "url": "https://www.fitsnews.com/wp-content/uploads/securepdfs/2026/10/Resonance-Governor-Poll-Summary-Oct-5-2026.pdf",
+      "observed_utc": "2026-10-19T16:46:23.936150Z",
+      "finding": "OriginalOct5memo/Sep29\u2013Oct3/n638RVlivecalls; rootrawhash/text/chart verifies45.17R/35.03D/15.84U/2.85Addison/1.11Hakim. Oneoldwave, minorpartiesunstated, no LVscreen/fullweighting/response retrieved."
+    },
+    {
+      "url": "https://scvotes.gov/candidates/2026-candidate-information/",
+      "observed_utc": "2026-10-19T16:46:22.438033Z",
+      "finding": "OfficialNov3general/cert\u226410days; earlyvotingweekdayinternallyinconsistent/notused. Currentfullgovernorrosterunretrieved; countylist403/snippetonly. Replacement/currentballot/sourceuncertaintypriced."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.8,
+    "low": 0.45,
+    "high": 0.995,
+    "method": "Primarypriceblind Studentt5margin/undecided/minortransfer mixture with explicit5%nonstandardbranch; notpollshareorhistoricalcalibration.",
+    "reasoning": "55/25/15weights with R\u2212D11.724/3.408/\u22121.344pp and5%branchR40 yields79.604%\u219280;5ppscale/SD6.45 includesfuture/turnout/nonresponse. Actual15ppreserve picks65YES/5NO; broad45\u201399.5notlowerbound."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0378_quote_1855.json",
+    "quote_file_sha256": "ca45c0e8a7a09b79a22b88e2b1272477583734297c55c7ceb8396230992fe7cf",
+    "quote_capture_utc": "2026-10-19T18:54:36.670217+00:00",
+    "gamma_received_utc": "2026-10-19T18:54:36.550544+00:00",
+    "hypothetical_gross_shares": 15.0,
+    "horizon_days": 16.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.8,
+        "selected_stress_probability": 0.65,
+        "best_bid": 0.93,
+        "best_ask": 0.94,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792436070363",
+        "book_received_utc": "2026-10-19T18:54:36.669325+00:00",
+        "book_age_seconds_at_receipt": 6.306325197219849,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 14.1,
+            "fee": 0.03385,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.94
+              }
+            ],
+            "net": 14.133849999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 13.950000000000001,
+            "fee": 0.03906,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.93
+              }
+            ],
+            "net": 13.910940000000002
+          }
+        },
+        "taker_cost_usd": 14.133849999999999,
+        "central_expected_profit_usd": -2.133849999999999,
+        "selected_stress_profit_usd": -4.383849999999999,
+        "break_even_before_carry": 0.9422566666666666,
+        "break_even_constant_carry": 0.9435600016316646,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.19999999999999996,
+        "selected_stress_probability": 0.04999999999999996,
+        "best_bid": 0.06,
+        "best_ask": 0.07,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792436070363",
+        "book_received_utc": "2026-10-19T18:54:36.669325+00:00",
+        "book_age_seconds_at_receipt": 6.306325197219849,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 1.05,
+            "fee": 0.03907,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.07
+              }
+            ],
+            "net": 1.08907
+          },
+          "bids": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 0.8999999999999999,
+            "fee": 0.03384,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.06
+              }
+            ],
+            "net": 0.8661599999999999
+          }
+        },
+        "taker_cost_usd": 1.08907,
+        "central_expected_profit_usd": 1.9109299999999991,
+        "selected_stress_profit_usd": -0.33907000000000054,
+        "break_even_before_carry": 0.07260466666666666,
+        "break_even_constant_carry": 0.07270509386876167,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry; NOcentraledgepositive but15sharecurrentask7c/competitivebid6c failselectedNO5%, YES94/93fail65. Lot/routefloors and conditionalfill evidence required, no automaticdistantmaker.",
+  "reopen_condition": "Verifiednewpoll/currentballot/turnout/candidate/source changes or independentlyunderwritten conditionalprice; allcurrentexecutiongates.",
+  "portfolio_action": "None; no financialprior/order/reservation/position write. SharedUSpolitics/no measuredhedge; cash/knownalternatives compete.",
+  "report_markdown": "# 0378 \u2014 Republicans win South Carolina governor\n\n**YES80% / NO20%; broad YES45\u201399.5%. No entry.** Pre-quote15pp reserve selectsYES65/NO5. The NO side has a central edge but fails the selected forecast at current taker and competitive maker prices.\n\nFull rule: winner of2026SCgovernor election; actual party nominee counts, replacements inherit party, independents excluded regardless previous affiliation. AP/Fox/NBC must all call the same candidate; otherwise official certification. Plurality win, not Wilson vote share>50%. Nov4 API end is not guaranteed settlement time; normal certification fits January, disputed calls can delay.\n\nOriginal [Resonance memo](https://www.fitsnews.com/wp-content/uploads/securepdfs/2026/10/Resonance-Governor-Poll-Summary-Oct-5-2026.pdf), publishedOct5/fieldSep29\u2013Oct3:638registered-list voters, live callers/byname, stated individual-shareMOE3.7%. Root verified rawPDFhash/text and the embedded chart: Wilson(R)45.17/Johnson(D)35.03/U15.84/Addison2.85/Hakim1.11=100. Minor parties are unstated; their support is not automatically Democratic. [Facts/chart details](../../../data/deep_review_20261017/work/0378_ballot_poll_detail_1852.json).\n\nThe latest original poll found in bounded searches remains that wave,16days old at review; not proof no newer poll exists. SecondaryOct17index lists it plus two earlier polls, not an independent likelihood. OfficialSCVotes confirms Nov3 election/certification\u226410days, but final governor roster remains unreadable; county official-list snippet names Wilson/Johnson active, underlyingGET403. An early-voting weekday conflicts with2026calendar and is not used. [Freshness](../../../data/deep_review_20261017/work/0378_freshness_1836.json) \u00b7 [calendar caveat](../../../data/deep_review_20261017/work/0378_calendar_read_1856.json).\n\n[Primary model](../models/0378_primary_1855.json), saved18:54:27 before own quote: Student-t5 R\u2212D margin error/5pp scale (SD6.45; naive multinomial samplingSD3.52 alone omits turnout/nonresponse/house/age).55%scenario gives Wilson55% of undecideds/minors persist\u2192meanlead11.724pp;25% gives35% undecideds plus halfminor support toD\u21923.408pp;15% gives20% undecideds/halfminors toD\u2192\u22121.344pp. Remaining5% latecandidate/ballot/campaign/source branch assigns R40% conditional. Weighted79.604% rounded80. Transfer weights/error are judgments, not poll-calibrated frequencies; source partyID/nameawareness are the same poll, not extra independent evidence.\n\nScale4\u20136.5 yields R81.32\u201376.95%; different undecided/late-regime weights produce wider outcomes. Single oldRVpoll, incomplete ballot/coverage and conditional informed fills justify actual15pp reserve (ordinary10+5instance uncertainty), fixed before prices. Broad45\u201399.5% is not a guaranteed interval/floor; no remembered historic state margin or market probability supplies the forecast.\n\nBoth outcomes15shares, **18:54:36UTC** exactGamma/authoritative4%p(1\u2212p) fees/books, age6.31s/min5/tick1c: YES93/94c costs14.13385, central\u22122.13385/selected\u22124.38385; NO6/7c costs1.08907, central+1.91093/selected\u2212.33907.15NO has1.05signedgross, clearing the route's$1floor; the earlier10NO paper walk was below it. Competitive maker93cYES/6cNO also exceeds selected65/5. [15-share economics](../../../data/deep_review_20261017/work/0378_economics_15_1856.json). VariableAave3.2035% dated18:02/16day carry barely raises break-even; funding, operations, adjudication and worse later fills remain costs.\n\nCash, known candidates and existing fourBUY7.52 compete. SCpolitical risk overlaps MI5NO/ME02/CA06/NY01/Idaho; no measured hedge credit. A distantNO4c would need\u226525shares for$1signedgross and a newly underwritten conditional forecast; do not rest it from today's unconditional model. Reopen on verified current poll/ballot/turnout/candidate changes or source-supported prices; all eligibility/account/funding/fees/depth/caps gates before money. No order, prior, reservation or position change.\n"
+}

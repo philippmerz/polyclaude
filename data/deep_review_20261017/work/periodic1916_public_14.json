@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "research/2026-10-17-deep-review/evaluations.jsonl",
+      "bytes": 3324333,
+      "sha256": "58d4a84948474abce2b20883608850b37c659f0eea769e3a918b8c420020321b"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0378.json",
+      "bytes": 6420,
+      "sha256": "3a827bf99f82fae3d218bacb3d7c06d6615e969baa27d2e5c16a8fd87853b151"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0378.md",
+      "bytes": 3974,
+      "sha256": "d0acb8cf61f1cf0351cfe2e63e31f238b3475f0912becc7c06b0ba34a6cb6f3a"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0379.json",
+      "bytes": 6702,
+      "sha256": "85d64b3c503c1a97d3b886aa3ce937f929ee9d44c6fd4d483552f276803f4e4e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0379.md",
+      "bytes": 4335,
+      "sha256": "288674a7ad0b1622852d96c77c13d0d80a47328d7b13039639cbafbe85d3b3dd"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0380.json",
+      "bytes": 6545,
+      "sha256": "6eadf99e13c5f0413f022ddec322f110969afbc3343eb2bd9f9454b860955b5b"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0380.md",
+      "bytes": 4670,
+      "sha256": "de90ef61127ef523777e3c3cb3ae6e612429449cc88cb9821b01f734b57a916b"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/index.csv",
+      "bytes": 577535,
+      "sha256": "38ea57fd7d835acebb84d92a4426d8fe926248567e87cf93adbd2cd276039f89"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0378_primary_1855.json",
+      "bytes": 3774,
+      "sha256": "9b215d63215342e6f27a6028f24e2ad3c6e4c7f55e7cdc8648129d5eca912055"
+    }
+  ]
+}

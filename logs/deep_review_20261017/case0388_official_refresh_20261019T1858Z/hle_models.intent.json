@@ -1,0 +1,1 @@
+{"name":"hle_models","request":{"method":"GET","read_only":true,"scope":"Official HLE leaderboard model API current read-only status/score rows","url":"https://dashboard.safe.ai/api/models"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:58:22.024032Z","timing_basis":"call_window"}

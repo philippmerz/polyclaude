@@ -1,0 +1,56 @@
+{
+  "schema": "deep_review.fact_unit.v1",
+  "index": 382,
+  "captured_utc": "2026-10-19T18:34:19Z",
+  "identity": {
+    "market_id": "5326399",
+    "conditionId": "0xb6ae15a0ea806a324647b4155680e176c0340e0f4db48a5f139fb8675830ce2c",
+    "criteria_sha256": "08348899964ba4703d02142c16ec4d9077d30b204d6f3bad1be4895fdd77d869",
+    "question": "Will OpenRouter process less than 575T tokens from Sep 28 to Oct 25?"
+  },
+  "operative_rule": "Resolution sums four exact weekly totals displayed on the Top Models chart, Monday labels Sep 28, Oct 5, Oct 12, and Oct 19, 2026. Weeks run Monday 00:00 through Sunday 23:59 UTC; each completed week continues to update until the following week is first displayed. Lock on first display of Oct 26; fallback is Oct 30 23:59 ET. Resolution uses chart display totals including rounding; exact-boundary tie goes to higher bracket.",
+  "source": {
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "http_status": 200,
+    "started_utc": "2026-10-19T18:17:34.525640Z",
+    "received_utc": "2026-10-19T18:17:34.678895Z",
+    "http_date": "Mon, 19 Oct 2026 18:17:34 GMT",
+    "cache_age_seconds": "171",
+    "body_cachedAt_raw_ms": 1792433405133,
+    "body_cachedAt_utc": "2026-10-19T18:10:05.133000Z",
+    "raw_bytes": 24668,
+    "raw_sha256": "82845dfc247b57c62339540d344299742ced737732b929843bd041c1beec0897",
+    "gzip_sha256": "1250bff197773864610663f2120298176c1e190f2b4698bd33958ba5f0f1d0aa",
+    "receipt": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.receipt.json",
+    "body": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.body.json.gz"
+  },
+  "observations": {
+    "rows": "Four requested Monday labels are present with ten series each, including Others. Sep 28, Oct 5, and Oct 12 weeks had ended by the 18:17 UTC call; Oct 19–25 was partial at capture. Row sums are raw API values in the linked array file, not verified text-rendered UI totals.",
+    "comparison_to_prior_1701": {
+      "2026-09-28": {
+        "prior_1701_raw_sum_tokens": 165856049857563,
+        "current_1817_raw_sum_tokens": 165856049857563,
+        "raw_sum_unchanged": true
+      },
+      "2026-10-05": {
+        "prior_1701_raw_sum_tokens": 171842501724714,
+        "current_1817_raw_sum_tokens": 171842501724714,
+        "raw_sum_unchanged": true
+      },
+      "2026-10-12": {
+        "prior_1701_raw_sum_tokens": 164043985914931,
+        "current_1817_raw_sum_tokens": 164043985914931,
+        "raw_sum_unchanged": true
+      },
+      "2026-10-19": {
+        "prior_1701_raw_sum_tokens": 16617272842070,
+        "current_1817_raw_sum_tokens": 18173045694762,
+        "raw_sum_unchanged": false
+      }
+    },
+    "display_limit": "The API response contains exact series values and cachedAt but does not establish the rendered UI rounding; use the frozen chart-display rule. Do not equate raw API sum to exact displayed settlement value without a matching UI capture."
+  },
+  "row_array_path": "work/0382_rows_1817.json",
+  "no_valuation": true,
+  "assembled_utc": "2026-10-19T18:53:40.165529Z"
+}

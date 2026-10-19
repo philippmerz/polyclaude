@@ -1,1 +1,20 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":388,"phase":"FACTS_ONLY_SAVED_NO_VALUATION","source_paths":["work/0388_facts_1737.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:37:42.295460Z","source_capture_root":"logs/deep_review_20261017"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 388,
+  "phase": "Current facts update saved; primary may assess under exact rule. No valuation or entry authority.",
+  "source_paths": [
+    "work/0388_facts_1858.json",
+    "work/0388_facts_1737.json",
+    "work/0298_hle_refresh_0005.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T18:59:05.768455Z",
+  "source_capture_root": "logs/deep_review_20261017",
+  "source_pointers": [
+    "https://agi.safe.ai/",
+    "https://dashboard.safe.ai/api/models"
+  ],
+  "frozen_conditionId": "0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e",
+  "criteria_sha256": "4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba",
+  "unit_sha256": "e4f8ec2de4ae45cc71100eb9bf97cbddef18af52aa8a75d2e04f9769160db700"
+}

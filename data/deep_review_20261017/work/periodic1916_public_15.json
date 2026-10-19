@@ -1,0 +1,35 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "research/2026-10-17-deep-review/models/0379_primary_1900.json",
+      "bytes": 4727,
+      "sha256": "22225dcaa07f6c46897c0fff9963b106fb76665141de016e4854292c3d9a46e8"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0380_primary_1911.json",
+      "bytes": 5082,
+      "sha256": "7522021bf70fde085b00ced217b45531d18abe98304eeb876e7563401a2c20d5"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.json",
+      "bytes": 10958,
+      "sha256": "9a16caa45e9ba5c055b20554c685d8c1a3e1f19dcb6e762a2bf5cd82403505e4"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md",
+      "bytes": 6269,
+      "sha256": "655e817f5a8253fe8d4f0ec3d1163f612b7e3ed14e8f15df3e1526ebbf7b6d2a"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/progress.json",
+      "bytes": 1125,
+      "sha256": "fb48e2dc555186de33130857d726cdfd8a87d00308b48db2b5a2d7d7b1e9c20a"
+    },
+    {
+      "path": "research/2026-10-19-1916-periodic.md",
+      "bytes": 4371,
+      "sha256": "d598a13c368e8343fa38adee63a56c8d1ba97aa4f1cc01cddd0fb4c38dc9d0d6"
+    }
+  ]
+}

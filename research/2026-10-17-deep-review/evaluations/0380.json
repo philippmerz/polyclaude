@@ -1,0 +1,161 @@
+{
+  "review_index": 380,
+  "market_id": "5765623",
+  "condition_id": "0xb42f311b98078adf1b2367ffcc718b1a5f8e28e01939dff0d8882bdf4ee65730",
+  "criteria_sha256": "4f704972182e6aa9d355c05905eb2078d0eeeb41ad10c48b0e6019963ff5b112",
+  "status": "valued",
+  "literal_analysis": "ExactlyOct2026totalfinaldemandNSAannual6.6inBLSone-decimalheadline; notthreshold/core/SAmonth. Nov13firstreport,nextDec15deadline/fallbackmostrecentpreviousmonthavailable, nottodaySepbyfiat. Officialheadlinecontrolsroundties.",
+  "evidence": [
+    {
+      "url": "https://www.bls.gov/news.release/archives/ppi_10152026.htm",
+      "observed_utc": "2026-10-19T17:17:17.547026Z",
+      "finding": "Rootfullmetric/technicalnote:SepSA1.3/annualNSA6.3; energy10.8/gas20.3/services.8. ReferenceTuesdayweek13th/Oct13alreadyelapsed; confidentialinputsnotpublic."
+    },
+    {
+      "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/",
+      "observed_utc": "2026-10-19T19:03:40.079563Z",
+      "finding": "117consecutiveNSA/SAmonths2017Jan–2026Sep/currentvintage; rawhash/overlapverified. Sep159.613/Oct25base150.439givesOctmonthlybin.425877–.520129. Revisedhistory≠firstprint/tailcalibration."
+    },
+    {
+      "url": "https://www.eia.gov/dnav/pet/hist/EER_EPMRU_PF4_RGC_DPGD.htm",
+      "observed_utc": "2026-10-19T19:07:19.184358Z",
+      "finding": "RootverifieddailyrowsGulfgasOct13=3.403vsSep8/15=3.531/3.834;WTI100.86vs94.21/107.02. SpotnotPPI/passthrough; Septreferenceweeknotassumed."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.02,
+    "high": 0.2,
+    "method": "Primarypriceblind exact-roundingbin integration of3Studentt5 monthlyNSA scenarios, historicalSA/seasonal bridge/EIAdirection/delaybranch.",
+    "reasoning": "60/25/15partialretracement/persistence/reversal, normalNSAcenter.64827minus.20adjustment;98%normal+2%delay5%exact→6.6204rounded7. K5NOstress65/equivalent28pp diagnosticonly; no first-handOctoberresolvingtail licence. Broad2–20notCI."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0380_quote_1911.json",
+    "quote_file_sha256": "1c11aac0f4ac94477ab7afea21af8b2f29dc1d43598b4c846558370d8432eded",
+    "quote_capture_utc": "2026-10-19T19:11:00.926324+00:00",
+    "gamma_received_utc": "2026-10-19T19:11:00.783122+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 26.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 28.000000000000004,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "selected_stress_probability": 0,
+        "best_bid": 0.01,
+        "best_ask": 0.099,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792437059616",
+        "book_received_utc": "2026-10-19T19:11:00.925407+00:00",
+        "book_age_seconds_at_receipt": 1.3094069957733154,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.99,
+            "fee": 0.0446,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.099
+              }
+            ],
+            "net": 1.0346
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.1,
+            "fee": 0.00496,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.01
+              }
+            ],
+            "net": 0.09504
+          }
+        },
+        "taker_cost_usd": 1.0346,
+        "central_expected_profit_usd": -0.3345999999999999,
+        "selected_stress_profit_usd": -1.0346,
+        "break_even_before_carry": 0.10346,
+        "break_even_constant_carry": 0.10369264853307285,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "selected_stress_probability": 0.6499999999999999,
+        "best_bid": 0.901,
+        "best_ask": 0.99,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792437059616",
+        "book_received_utc": "2026-10-19T19:11:00.925407+00:00",
+        "book_age_seconds_at_receipt": 1.3094069957733154,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.9,
+            "fee": 0.00496,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.99
+              }
+            ],
+            "net": 9.90496
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.01,
+            "fee": 0.0446,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.901
+              }
+            ],
+            "net": 8.965399999999999
+          }
+        },
+        "taker_cost_usd": 9.90496,
+        "central_expected_profit_usd": -0.6049600000000019,
+        "selected_stress_profit_usd": -3.4049600000000018,
+        "break_even_before_carry": 0.990496,
+        "break_even_constant_carry": 0.9927233095052632,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry; bothcurrentasks failcentralandselected; broadspread/centgrid/floor/conditionalinformationaddcosts. K5arithmeticisnotmeasured-tail licence.",
+  "reopen_condition": "VerifiedOctinputs/nowcast/basevintage/reportorpricewithdefensibleconditionalmargin; allcurrentexecutiongates. No automaticmaker/bondfade frompointprobability.",
+  "portfolio_action": "None; cashandknownalternatives preferred; no measuredportfoliohedge/order/prior/reservation/positionchange.",
+  "evaluated_utc": "2026-10-19T19:12:23.522723+00:00",
+  "question": "Will PPI YoY be 6.6% in October?",
+  "valuation_author": "primary_operator",
+  "original_index": 380,
+  "report_sha256": "de90ef61127ef523777e3c3cb3ae6e612429449cc88cb9821b01f734b57a916b"
+}

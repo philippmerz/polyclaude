@@ -1,0 +1,60 @@
+{
+  "review_index": 379,
+  "compiled_utc": "2026-10-19T18:58:53.693877Z",
+  "scope": "Source-only vote-chronology and October EME availability audit; no probability or decision.",
+  "identity": {
+    "market_id": "5785091",
+    "condition_id": "0xf4f152e30e83a89063caec7ffa180411bf3dcd7c1f88fe54c51e3391773601b6",
+    "criteria_sha256": "ec828dc14c4a107090ab662d147762b3d8ea360f240ff0c362e8a973ed3c5a17"
+  },
+  "findings": [
+    {
+      "topic": "Sep 30 official announcement vs Oct 5 minutes",
+      "fact": "BanRep’s Sep 30 press release says the Board decided by majority to raise the rate 25bp to 12.25%, and reports: four directors voted for that decision, two to leave it unchanged, and one to raise 50bp. The Oct 5 minutes separately say that one member “initially” voted for 50bp but, during discussion, joined the 25bp decision so that a majority would be reached. These statements describe different stages of the deliberation; the inspected prose gives no separate final roll-call table, so I do not report an independently tabulated final 5–2 count."
+    },
+    {
+      "topic": "October EME survey availability",
+      "fact": "BanRep’s current rendered EME historical-results page (observed 2026-10-19 about 18:58 UTC) lists monthly results for Jan–Jun 2026, then Dec–Oct 2025; it shows no Jul–Oct 2026 results on that listing. This is page coverage only, not proof no October survey exists elsewhere. The earlier direct GET to the same official listing was HTTP 200 Radware challenge (receipt below); it is not a successful data capture. The Sep minutes report Sept-survey expectations of 6.8% year-end-2026 inflation and 4.0% two-year inflation, but not an October EME rate-change distribution."
+    }
+  ],
+  "sources": [
+    {
+      "name": "Sep30 press release",
+      "url": "https://www.banrep.gov.co/es/noticias/junta-directiva/junta-directiva-septiembre-2026",
+      "status": 200,
+      "started_utc": "2026-10-19T18:58:12.653267Z",
+      "received_utc": "2026-10-19T18:58:13.584951Z",
+      "body_gz": "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.body.json.gz",
+      "raw_sha256": "09c37cb208ccbe35c6c7814f3d44fbec378cd1d1db42c6c6a808063cc17778c3",
+      "gzip_sha256": "72c00b1fc8464ec04ade7d17b8224560a60a85f597e5d74c73fa744d8e7b3e3e"
+    },
+    {
+      "name": "Sep minutes PDF, existing root-captured receipt",
+      "url": "https://www.banrep.gov.co/es/print/pdf/node/66378",
+      "status": 200,
+      "received_utc": "2026-10-19T12:36:38.609947Z",
+      "body_gz": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.body.json.gz",
+      "raw_sha256": "20bd14592b6b130cb9dfea3b21798e130573aa072948a4214a8a18b1a2194863",
+      "gzip_sha256": "2133fd69f1ea7629362567208d34c7a197b85f695746029f13690709d057e84f"
+    },
+    {
+      "name": "EME listing failed-content capture",
+      "url": "https://www.banrep.gov.co/es/resultados-mensuales-expectativas-analistas-economicos",
+      "status": 200,
+      "received_utc": "2026-10-19T17:17:39.063271Z",
+      "body_gz": "logs/deep_review_20261017/case379_facts_1700/banrep_eme_listing.body.json.gz",
+      "raw_sha256": "7d30453bb9ee274a6277ad58d6e4ae230ef76dbfc14a7fe2ea85a8bdf20fadb0",
+      "note": "HTTP200 challenge page, not underlying EME content."
+    },
+    {
+      "name": "BanRep EME listing rendered observation",
+      "url": "https://www.banrep.gov.co/es/resultados-mensuales-expectativas-analistas-economicos",
+      "observed_utc": "2026-10-19T18:58Z (web-rendered official page; no separate raw HTTP receipt)",
+      "lines": "538–555 of rendered source result"
+    }
+  ],
+  "linked_existing": [
+    "work/0379_facts_1717.json",
+    "work/0379_facts_current_1853.json"
+  ]
+}

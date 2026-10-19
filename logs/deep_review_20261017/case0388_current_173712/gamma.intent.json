@@ -1,0 +1,1 @@
+{"name":"gamma","request":{"method":"GET","read_only":true,"scope":"case388 exact public source status/identity","url":"https://gamma-api.polymarket.com/markets/3072321"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:37:12.495669Z","timing_basis":"call_window"}

@@ -1,0 +1,1 @@
+{"name":"mojo","request":{"call_window_label":"periodic1916_whalefall_current_actual","method":"GET","read_only":true,"scope":"named box-office source finality and date-window check","url":"https://www.boxofficemojo.com/release/rl1608024065/weekend/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T19:19:17.794678Z","timing_basis":"call_window"}

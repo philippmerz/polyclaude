@@ -1,0 +1,94 @@
+{
+  "schema": "primary_PPI380_exact_bin.v1",
+  "created_utc": "2026-10-19T19:11:00.350934+00:00",
+  "own_quote_unread": true,
+  "review_index": 380,
+  "metric": "Oct2026totalfinaldemandNSA12monthPPI reportedone decimal exactly6.6, notthreshold/core/SAmonthly. Officialreleasedheadline controls, indexderivedbinonlyforecastapproximation.",
+  "timing": "BLSprices generallyeffectiveTuesdayofweekcontaining13th; Oct13Tuealreadyelapsed. Forecastunobservedconfidentialreferenceprices/publication, notremainingOctdaypricepath. Sep13Sunday/weekstartunresolved\u2014EIAbothSep8/Sep15baselines, no inventedreference. Nov13firstrelease08:30ET; nextDec15deadline/fallbackmostrecentpreviousmonthavailable, notautomatictodaySep6.3.",
+  "index_inputs": {
+    "Sep2026_NSA_preliminary": 159.613,
+    "Oct2025_NSA_current_vintage": 150.439,
+    "target_yoy_approx_bin": [
+      6.55,
+      6.65
+    ],
+    "target_october_index": [
+      160.29275449999997,
+      160.4431935
+    ],
+    "implied_nsa_mom_pct_bin": [
+      0.42587665165116917,
+      0.5201289995175884
+    ]
+  },
+  "history_bridge": {
+    "observations_per_series": 117,
+    "coverage": "Jan2017\u2013Sep2026/NSAandSA",
+    "SA_forecast_blend": "0.5last6mean(.574507)+0.5last3median(.470291)=.522399%",
+    "October_seasonal_factor_median9years": 1.0012521493336282,
+    "implied_baseline_NSA_mean_pct": 0.6482681876094576,
+    "rolling_revised_history_error_n": 104,
+    "error_SD_pp": 0.39932761550717205,
+    "error_normalized_MAD_pp": 0.3781827052875163,
+    "caveat": "Revisedvintages, not first-printforecastcalibration. Currentone-monthenergyregime notestimatedfrom104exchangeablesamples."
+  },
+  "current_facts_bridge": "SepheadlineSA+1.3/NSAderived+1.11368%; goods+2.6/services+.8/energy+10.8/gasoline+20.3. EIAGulfgasolineOct13=3.403 vsSep8=3.531/Sep15=3.834; WTI100.86 vs94.21/107.02. Gasoline spotfellonbothbaselines, crudeambiguous. Spot\u2260producertransactionPPI; noidentifiedpassthroughcoefficient.",
+  "primary_adjustment": "Subtract.20pp from historicalNSAcenter forenergyretracement, with\u00b1.20center/scale sensitivity. Threebranchweights and+0.6/\u22120.7shiftsareprimaryjudgments, not fittofuturePPIorquotes. .4ppnormal t5scale roundsuprevised-historyMAD .378/permitsfirstprint/base-revisionerror; shockscales.65.",
+  "scenarios": [
+    {
+      "name": "partial_energy_retracement",
+      "weight": 0.6,
+      "nsa_mom_mean_pct": 0.4482681876094576,
+      "t5_scale_pp": 0.4,
+      "conditional_exact_bin_probability": 0.0889969200767683
+    },
+    {
+      "name": "persistent_services_energy",
+      "weight": 0.25,
+      "nsa_mom_mean_pct": 1.0482681876094575,
+      "t5_scale_pp": 0.65,
+      "conditional_exact_bin_probability": 0.035574232356544
+    },
+    {
+      "name": "larger_energy_margin_reversal",
+      "weight": 0.15,
+      "nsa_mom_mean_pct": -0.2517318123905424,
+      "t5_scale_pp": 0.65,
+      "conditional_exact_bin_probability": 0.02828935178396419
+    }
+  ],
+  "normal_exact_bin_probability": 0.0665351129027916,
+  "source_delay_branch": {
+    "weight": 0.02,
+    "conditional_exact_6_6": 0.05,
+    "meaning": "Publication/vintage/fallbackothermonth riskjudgment, not2025frequencyorautomaticNO; Oct25missingseparatereportdoesnotremovecurrentindex150.439."
+  },
+  "raw_exact_bin_probability": 0.06620441064473577,
+  "adopted_yes": 0.07,
+  "adopted_no": 0.93,
+  "broad_yes_range": [
+    0.02,
+    0.2
+  ],
+  "center_scale_sensitivity": {
+    "mean_shift-0.2_scale1": 0.058738720563804116,
+    "mean_shift0.2_scale1": 0.059854507317369444,
+    "mean_shift0_scale0.75": 0.08272117495433012,
+    "mean_shift0_scale1.5": 0.0472682824999834
+  },
+  "entry_stress": {
+    "actual_common_reserve_pp": 28,
+    "selected_yes": 0,
+    "selected_no": 0.65,
+    "basis": "NO93 K5arithmetic1\u22125*.07=.65; equivalent28ppreserve, ordinaryYES10ppalsozero. ArithmeticstressONLY, no licensedbond-fade entry becauseOctoberresolvingvariable/tailnotfirsthandmeasured. No firstrelease/archive/Octriskdataestablish calibratedtail.",
+    "not_lower_bound": true
+  },
+  "source_hashes": {
+    "data/deep_review_20261017/work/0380_facts_1720.json": "1f2da3f599c24b8c00c18e854455fcb8814c7a9fc2ab34fb78c23bb8492b62dd",
+    "data/deep_review_20261017/work/0380_facts_current_1853.json": "d2c2267a5d84f64211e8c434d87d61d7d0319c84171e8210486ee1dd95ee74f8",
+    "data/deep_review_20261017/work/0380_history_facts_1903.json": "4342753cb78afdcfd28208bf870e25c89b95eebddaeb77350d20f3e7764c7ade",
+    "data/deep_review_20261017/work/0380_primary_history_stats_1906.json": "dc56f26d74d697b2d7c1917cb0a88b7206ff97c265cd75d20d4482af62e3c3a5",
+    "data/deep_review_20261017/work/0380_eia_energy_facts_1907.json": "5086ff78ff5586f19ec0b67c46370e76336bae9abf59e65595d78d1e41d9a40b"
+  },
+  "limits": "One-decimalbinprobabilitydependsstronglyondispersion/seasonality/energy/services/revisions. Monthly3-decimalindexroundingandhalftiesdo notoverrideofficialheadline; noOctoberfirstprintorconsensusmeasurement. Broad2\u201320%notCI/floor, privateinformationcanselectfills. Forecastnotcalibratedchanceofsourcecapturebeingright."
+}

@@ -1,0 +1,31 @@
+{
+  "candidate_paths": [
+    "data/deep_review_20261017/work/0382_resume.json",
+    "data/deep_review_20261017/work/0382_facts.json",
+    "data/deep_review_20261017/work/0382_facts_1834.json",
+    "data/deep_review_20261017/work/0382_rows_1817.json",
+    "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.json",
+    "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md",
+    "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.body.json.gz",
+    "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.intent.json",
+    "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.receipt.json",
+    "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.body.json.gz",
+    "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.intent.json",
+    "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt.json",
+    "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt-extra.json",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_response.json",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_response_checked.json",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/receipts.json"
+  ],
+  "coverage": "Pending cases 382; explicit paths only, no hashes or staging decision.",
+  "exclusions": [
+    "No current Gamma/status bodies, account/order/reservation/geoblock bodies, credentials, operator material, or unrelated 0332 draft. Full copyrighted article/PDF/XLSX bodies and screenshots stay local."
+  ],
+  "local_only_source_bodies_and_visuals": [
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct12_probe.png",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct5_probe.png",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_hover_final.png",
+    "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_viewport.png"
+  ],
+  "schema": "polyclaude.preservation_path_candidates.v1"
+}

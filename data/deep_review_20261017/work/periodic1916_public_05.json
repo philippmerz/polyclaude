@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_382.json",
+      "bytes": 2090,
+      "sha256": "c74f7f08a90314cdde3f0b2778ca4401e3d1c58a8e30cacc55d62433ef99ac86"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_384_388.json",
+      "bytes": 3326,
+      "sha256": "7f7850bf23bb63c95f01d0bfdd3990ab8d8674fbdf993fceeaaa6890c2afbd01"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_index.json",
+      "bytes": 1658,
+      "sha256": "6be25eb81e8745b27012ea398c662afba18d4bd870f1f318c11e8902448adc67"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_research_audit.json",
+      "bytes": 5102,
+      "sha256": "81c7774aafd3c3cc47a03f0378012dd2e2d28e97271dc42426c84787be7f64ed"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_whale_facts.json",
+      "bytes": 3208,
+      "sha256": "d0f2d560597fc13813689509301b16900f9f925ab0cb2d00d9665234f87acee6"
+    },
+    {
+      "path": "logs/deep_review_20261017/0378_quote_1855/capture_manifest.json",
+      "bytes": 2099,
+      "sha256": "abcb215a41348a05803408b333e194bff86779b57ddb3d21f1d4e4c6fceb3fb1"
+    },
+    {
+      "path": "logs/deep_review_20261017/0378_quote_1855/public/0378_fee.body.json.gz",
+      "bytes": 314,
+      "sha256": "2e5fb0a1e5bc6d2098378cc44db42823a6e83b86995aafd40f5cb32b396c27f4"
+    },
+    {
+      "path": "logs/deep_review_20261017/0378_quote_1855/public/0378_fee.receipt.json",
+      "bytes": 649,
+      "sha256": "3fb74697e2e22071021fff1913fa4f686a316ea39d43996020a93fbe98c87ee6"
+    },
+    {
+      "path": "logs/deep_review_20261017/0378_quote_1855/public/0378_gamma.body.json.gz",
+      "bytes": 1999,
+      "sha256": "38767947e077d1915dd1750eebc7e80f24cb4a9f312fb8c9fae048ac6242a3e0"
+    }
+  ]
+}

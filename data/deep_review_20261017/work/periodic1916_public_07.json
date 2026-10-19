@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "logs/deep_review_20261017/0379_quote_1900/public/books_batch_01.receipt.json",
+      "bytes": 772,
+      "sha256": "baf5b4d39bb710fee17731649936da365aeafe46bd6648f9f19b3fc1054d98b8"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/capture_manifest.json",
+      "bytes": 2100,
+      "sha256": "78b384a4b2ea0d67323e67a112d9563d163bb67c66f62c1d5a47a4440be6f3d1"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/0380_fee.body.json.gz",
+      "bytes": 312,
+      "sha256": "223b5db7899347fef746aa9a87eeb2f9979996d585adb2e7ce43388d1b17aa58"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/0380_fee.receipt.json",
+      "bytes": 649,
+      "sha256": "cf308c7350a96ce600c7a0be830dc1c58285731a56ebcfb8e8f4222f7906a0c7"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/0380_gamma.body.json.gz",
+      "bytes": 1939,
+      "sha256": "d77485f12be7e4df0cb7922ba13580174a7d7e6aad2c0703e13d54942627f32a"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/0380_gamma.receipt.json",
+      "bytes": 681,
+      "sha256": "54ae750604b55dd089df29edf91f3d5d02ff830bb4e9ef4746973c98d753e69d"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/books_batch_01.body.json.gz",
+      "bytes": 654,
+      "sha256": "e0983d575ec2165ee085c584e0cf3f3c950557eb6fb1f78b50f306ef0aaf9683"
+    },
+    {
+      "path": "logs/deep_review_20261017/0380_quote_1911/public/books_batch_01.receipt.json",
+      "bytes": 773,
+      "sha256": "b54da72b703ea4846fbf8ec3f5a6da0053cf8af716c0da9ecd07b8b5a8f95d25"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/county_candidate_list/candidate_listing.intent.json",
+      "bytes": 383,
+      "sha256": "7db1fe74b11c6e72056125c804f0b7cc0de018c12a663e4a7ac656e6d9e2f9ab"
+    }
+  ]
+}

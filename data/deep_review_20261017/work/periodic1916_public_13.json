@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.intent.json",
+      "bytes": 332,
+      "sha256": "f998d5777c97771b137ec5afe91dd48840b45e3abed0c0ec859b73751072560b"
+    },
+    {
+      "path": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt-extra.json",
+      "bytes": 85,
+      "sha256": "228bcf01ae3f8825d24994011edd3b99f39f379171a9f343ea16a1e97e001112"
+    },
+    {
+      "path": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt.json",
+      "bytes": 963,
+      "sha256": "76e77407b3f0488110a95fae5bd381869021a6d4ef3f6a981f863561ddff07b6"
+    },
+    {
+      "path": "notes/backlog.md",
+      "bytes": 3070,
+      "sha256": "0d1c581792d58d10e7a4b7006f606bce322c1a00d76828e4d3f1241deae566df"
+    },
+    {
+      "path": "notes/current_context.md",
+      "bytes": 6330,
+      "sha256": "ee38e71d90e763f8687326ba3c31d0eed893572fc9fd904de6934792e2ba908a"
+    },
+    {
+      "path": "notes/deep_review_checkpoint.json",
+      "bytes": 2049,
+      "sha256": "00903c7f3fb0bde5a55ea2b1200eabf22154ccfcfab77d2e29bc2f584674c4d4"
+    },
+    {
+      "path": "notes/journal.md",
+      "bytes": 2514085,
+      "sha256": "79213816bce070b1db671039e4f8cd1d45ea788a7c714175e2c77e458d9791d1"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/INDEX.md",
+      "bytes": 157299,
+      "sha256": "abcd15ecc19cbefae390ff91443e74959737f89ea33dabf1b90f03a9e309cfed"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/RESUME.md",
+      "bytes": 4368,
+      "sha256": "93caf26cb95e95c4727fae0054e347f00c846efe046e5c42116ae12bbf6199d6"
+    }
+  ]
+}

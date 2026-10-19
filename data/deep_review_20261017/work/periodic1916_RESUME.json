@@ -1,0 +1,48 @@
+{
+  "schema": "bounded_periodic_resume.v1",
+  "updated_utc": "2026-10-19T19:21:41.319496+00:00",
+  "counts": {
+    "completed_valuations": 349,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2278,
+    "base_records": 722,
+    "revisions_written": 64,
+    "active_indices": [
+      382
+    ]
+  },
+  "checkpoint_sha256": "00903c7f3fb0bde5a55ea2b1200eabf22154ccfcfab77d2e29bc2f584674c4d4",
+  "completed_since_previous_closeout": [
+    378,
+    379,
+    380
+  ],
+  "reports": {
+    "378": "research/2026-10-17-deep-review/evaluations/0378.md",
+    "379": "research/2026-10-17-deep-review/evaluations/0379.md",
+    "380": "research/2026-10-17-deep-review/evaluations/0380.md"
+  },
+  "new_cases_started_by_this_tick": [],
+  "next_case": {
+    "review_index": 382,
+    "phase": "in_progress; literal rule read, facts saved; no adopted forecast, economics or final report",
+    "pointer": "data/deep_review_20261017/work/0382_resume.json",
+    "cautions": [
+      "Weekly figures update until the next week first displays; final contract samples four displayed totals at Oct26 first display or Oct30 23:59ET fallback. Do not replace literal wording with an unsupported all-weeks-unlocked assumption.",
+      "Raw API series sums do not prove rendered/rounded chart totals.",
+      "Held OR5NO concerns Oct26/Nov2/Nov9/Nov16 and is not this Sep28/Oct5/Oct12/Oct19 contract."
+    ]
+  },
+  "facts_only_next_pointers": [
+    "data/deep_review_20261017/work/0383_resume.json",
+    "data/deep_review_20261017/work/0384_resume.json",
+    "data/deep_review_20261017/work/0386_resume.json",
+    "data/deep_review_20261017/work/0388_resume.json"
+  ],
+  "account_verification": "data/deep_review_20261017/work/periodic1916_account_verification.json",
+  "financial_anchor": "18:03:14.695934\u201329.060593UTC producer; CSV220 unchanged; current quickstatus is not new NAV",
+  "news_reviewed_through_utc": "2026-10-19T19:03:41Z",
+  "next_safety": "ExistingOct19 22UTC light AND Idaho630707 pull ALL unfilled; earlier material uncertainty cancel-first/noadd/repost. FullOct20 02UTC.",
+  "bounded_run": "No new goal/lifecycle mutation/timer/idle followup; end after verification/preservation. No global block or milestone Telegram."
+}

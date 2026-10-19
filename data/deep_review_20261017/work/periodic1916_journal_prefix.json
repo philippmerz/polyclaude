@@ -1,0 +1,7 @@
+{
+  "schema": "journal_prefix.v1",
+  "path": "notes/journal.md",
+  "bytes_before_append": 2511571,
+  "sha256_before_append": "7cee83dd74c9df13ebedef06db119595c4f4141585d0fb49a83563f63ac365b8",
+  "head_commit": "e2afa9c"
+}

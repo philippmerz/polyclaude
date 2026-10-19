@@ -1,0 +1,88 @@
+{
+  "schema": "periodic1916_public_artifacts.v1",
+  "created_utc": "2026-10-19T19:24:16.769081+00:00",
+  "artifact_count": 141,
+  "shards": [
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_00.json",
+      "bytes": 1747,
+      "sha256": "807d3a7e01e94a8f519e3f775fcf7442c7f7b1061d26472515c3dd02af68a1aa"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_01.json",
+      "bytes": 1775,
+      "sha256": "bc86863274a96845565c5dc2d7d2f682d8dec1907f1f6429209c35f537c926c6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_02.json",
+      "bytes": 1794,
+      "sha256": "1e5342c317a0349acff48967e6b51535a8c095eeac88a92510d606bb53c34d8d"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_03.json",
+      "bytes": 1731,
+      "sha256": "ff6216da8430056eaa5d0fb3c0c1eb77744e193e9abc822110fddc34533dafa0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_04.json",
+      "bytes": 1814,
+      "sha256": "1d5f322cfa49dd801373b0d76443f80eca9eeeb6a8456d3f5268a9813007c58c"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_05.json",
+      "bytes": 1869,
+      "sha256": "54f9a9f0d26852e8e1955ba6e013d7c70ec12371388e960cf7619df67a591cd6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_06.json",
+      "bytes": 1924,
+      "sha256": "bb27b44a438288ce2ccead5cefde33e34eb4d5c2e6003839adfba3fee081a045"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_07.json",
+      "bytes": 1953,
+      "sha256": "114447b93d294ffe708252d910b99257bb2933aa6863eb47a458375f43e1f7b6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_08.json",
+      "bytes": 2031,
+      "sha256": "5fb93546c1d99874af1fb8eded228027563955c1627ce2df022340d7ff54b8ee"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_09.json",
+      "bytes": 2026,
+      "sha256": "a771f0ce3aabe61d681d663c5035ce196dd07c38fab38272b78b471aff6863bd"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_10.json",
+      "bytes": 1937,
+      "sha256": "6038722028fb46fb34a431bacf0ea73b3a512050c50029456bd91eb87b556833"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_11.json",
+      "bytes": 2017,
+      "sha256": "8e1d14660f062f54fab26bd281da82a00970acb5e0ba06bc53f386c6176d7023"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_12.json",
+      "bytes": 1898,
+      "sha256": "2b1cdda1529d3346be6fb79e13af06a12ff014ec92e8b34ed8831da8111885ed"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_13.json",
+      "bytes": 1667,
+      "sha256": "d136c1c1eda50b86c6fba40be74883ab61a6a82a9712dea0f8e9758a2586e6f5"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_14.json",
+      "bytes": 1752,
+      "sha256": "7f1c7b9e85f846648f6eecbdc042bbefc4ff478b90461581c1735f742a750d4b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_public_15.json",
+      "bytes": 1229,
+      "sha256": "f1ff6d284baf200db26702afda908f55de1c54af534920d1913b65751b7032c5"
+    }
+  ],
+  "limits": "Explicit selected research/quote evidence, two numeric OpenRouter API chart arrays and safe source metadata only. Full copyrighted article, account, status, browser, consent and geoblock bodies stay local. Prior manifests are not rewritten."
+}

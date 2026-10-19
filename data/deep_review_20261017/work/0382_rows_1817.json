@@ -1,0 +1,101 @@
+{
+  "schema": "openrouter.week_rows.v1",
+  "review_index": 382,
+  "capture_receipt": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.receipt.json",
+  "body_path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.body.json.gz",
+  "body_sha256": "82845dfc247b57c62339540d344299742ced737732b929843bd041c1beec0897",
+  "rows": [
+    {
+      "week_label_utc_monday": "2026-09-28",
+      "week_window_utc": [
+        "2026-09-28T00:00:00Z",
+        "2026-10-04T23:59:59Z"
+      ],
+      "status_at_capture": "full_week_elapsed_but_chart_can_still_revise_until_next_label",
+      "series_count_including_Others": 10,
+      "series_tokens": {
+        "stealth/space-bunny-alpha": 38661199699827,
+        "deepseek/deepseek-v4.1-flash-20260910": 25609444658511,
+        "z-ai/glm-5.3-flash-20260826": 9733199290942,
+        "xiaomi/mimo-v2.6-flash-20260921": 9625490726409,
+        "tencent/hy4-preview-20260827": 6509715185518,
+        "openai/gpt-6-luna-20260922": 6180526500332,
+        "deepseek/deepseek-v4-flash-20260731": 5990763579941,
+        "nvidia/nemotron-3-ultra-550b-a55b-20260604:free": 5649070874604,
+        "openai/gpt-5.6-luna-20260709": 4374515211495,
+        "Others": 53522124129984
+      },
+      "raw_sum_tokens": 165856049857563,
+      "raw_sum_T": "165.856049857563"
+    },
+    {
+      "week_label_utc_monday": "2026-10-05",
+      "week_window_utc": [
+        "2026-10-05T00:00:00Z",
+        "2026-10-11T23:59:59Z"
+      ],
+      "status_at_capture": "full_week_elapsed_but_chart_can_still_revise_until_next_label",
+      "series_count_including_Others": 10,
+      "series_tokens": {
+        "deepseek/deepseek-v4.1-flash-20260910": 40972763531010,
+        "z-ai/glm-5.3-flash-20260826": 12235607464492,
+        "xiaomi/mimo-v2.6-flash-20260921": 11457378265672,
+        "stepfun/step-5-preview-20261008": 8836310984404,
+        "tencent/hy4-preview-20260827": 8279453201884,
+        "openai/gpt-6-luna-20260922": 7079365865386,
+        "nvidia/nemotron-3-ultra-550b-a55b-20260604:free": 6873214466397,
+        "anthropic/claude-opus-5.5-20260921": 5018734917431,
+        "deepseek/deepseek-v4-flash-20260731": 4916132482232,
+        "Others": 66173540545806
+      },
+      "raw_sum_tokens": 171842501724714,
+      "raw_sum_T": "171.842501724714"
+    },
+    {
+      "week_label_utc_monday": "2026-10-12",
+      "week_window_utc": [
+        "2026-10-12T00:00:00Z",
+        "2026-10-18T23:59:59Z"
+      ],
+      "status_at_capture": "full_week_elapsed_but_chart_can_still_revise_until_next_label",
+      "series_count_including_Others": 10,
+      "series_tokens": {
+        "deepseek/deepseek-v4.1-flash-20260910": 32832415061947,
+        "z-ai/glm-5.3-flash-20260826": 12231280348768,
+        "stepfun/step-5-preview-20261008": 11466859348981,
+        "xiaomi/mimo-v2.6-flash-20260921": 9938687166943,
+        "tencent/hy4-preview-20260827": 7554812092790,
+        "openai/gpt-6-luna-20260922": 6208028392675,
+        "anthropic/claude-opus-5.5-20260921": 6182515811719,
+        "z-ai/glm-5.3-20260816": 5192182103497,
+        "nvidia/nemotron-3-ultra-550b-a55b-20260604:free": 4968934320550,
+        "Others": 67468271267061
+      },
+      "raw_sum_tokens": 164043985914931,
+      "raw_sum_T": "164.043985914931"
+    },
+    {
+      "week_label_utc_monday": "2026-10-19",
+      "week_window_utc": [
+        "2026-10-19T00:00:00Z",
+        "2026-10-25T23:59:59Z"
+      ],
+      "status_at_capture": "partial",
+      "series_count_including_Others": 10,
+      "series_tokens": {
+        "deepseek/deepseek-v4.1-flash-20261017": 2709620586939,
+        "deepseek/deepseek-v4.1-flash-20260910": 2133112351814,
+        "z-ai/glm-5.3-flash-20260826": 1332411365135,
+        "tencent/hy4-preview-20260827": 1265335542488,
+        "xiaomi/mimo-v2.6-flash-20260921": 964107613731,
+        "anthropic/claude-opus-5.5-20260921": 796445895366,
+        "openai/gpt-6-luna-20260922": 653517966225,
+        "nvidia/nemotron-3-ultra-550b-a55b-20260604:free": 613912851596,
+        "z-ai/glm-5.3-20260816": 568718815343,
+        "Others": 7135862706125
+      },
+      "raw_sum_tokens": 18173045694762,
+      "raw_sum_T": "18.173045694762"
+    }
+  ]
+}

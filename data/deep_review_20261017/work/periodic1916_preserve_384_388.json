@@ -1,0 +1,46 @@
+{
+  "candidate_paths": [
+    "data/deep_review_20261017/work/0384_resume.json",
+    "data/deep_review_20261017/work/0384_facts.json",
+    "data/deep_review_20261017/work/0384_facts_followup_1858.json",
+    "data/deep_review_20261017/work/0388_resume.json",
+    "data/deep_review_20261017/work/0388_facts_1737.json",
+    "data/deep_review_20261017/work/0388_facts_1858.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.intent.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.receipt.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.intent.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.receipt.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.intent.json",
+    "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.receipt.json",
+    "logs/deep_review_20261017/case0384_followup_1858/omar_press_list.intent.json",
+    "logs/deep_review_20261017/case0384_followup_1858/omar_press_list.receipt.json",
+    "logs/deep_review_20261017/case0384_followup_1858/usao_dc_news.intent.json",
+    "logs/deep_review_20261017/case0384_followup_1858/usao_dc_news.receipt.json",
+    "logs/deep_review_20261017/terminal_status_batch_0305/0384_gamma.receipt.json",
+    "logs/deep_review_20261017/case0388_current_173712/gamma.intent.json",
+    "logs/deep_review_20261017/case0388_current_173712/gamma.receipt.json",
+    "logs/deep_review_20261017/case0388_current_173712/hle_api.intent.json",
+    "logs/deep_review_20261017/case0388_current_173712/hle_api.receipt.json",
+    "logs/deep_review_20261017/case0388_current_173712/hle_page.intent.json",
+    "logs/deep_review_20261017/case0388_current_173712/hle_page.receipt.json",
+    "logs/deep_review_20261017/case0388_official_refresh_20261019T1858Z/hle_models.intent.json",
+    "logs/deep_review_20261017/case0388_official_refresh_20261019T1858Z/hle_models.receipt.json"
+  ],
+  "coverage": "Pending cases 384_388; explicit paths only, no hashes or staging decision.",
+  "exclusions": [
+    "No current Gamma/status bodies, account/order/reservation/geoblock bodies, credentials, operator material, or unrelated 0332 draft. Full copyrighted article/PDF/XLSX bodies and screenshots stay local."
+  ],
+  "local_only_source_bodies_and_visuals": [
+    "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.body.json.gz",
+    "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.body.json.gz",
+    "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.body.json.gz",
+    "logs/deep_review_20261017/case0384_followup_1858/omar_press_list.body.json.gz",
+    "logs/deep_review_20261017/case0384_followup_1858/usao_dc_news.body.json.gz",
+    "logs/deep_review_20261017/case0388_current_173712/gamma.body.json.gz",
+    "logs/deep_review_20261017/case0388_current_173712/hle_api.body.json.gz",
+    "logs/deep_review_20261017/case0388_current_173712/hle_page.body.json.gz",
+    "logs/deep_review_20261017/case0388_official_refresh_20261019T1858Z/hle_models.body.json.gz",
+    "logs/deep_review_20261017/case0298_hle_0005/api_models.json.gz"
+  ],
+  "schema": "polyclaude.preservation_path_candidates.v1"
+}

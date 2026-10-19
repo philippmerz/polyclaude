@@ -1,0 +1,157 @@
+{
+  "review_index": 379,
+  "market_id": "5785091",
+  "condition_id": "0xf4f152e30e83a89063caec7ffa180411bf3dcd7c1f88fe54c51e3391773601b6",
+  "criteria_sha256": "ec828dc14c4a107090ab662d147762b3d8ea360f240ff0c362e8a973ed3c5a17",
+  "status": "valued",
+  "literal_analysis": "SpecifiedDecembermeetingchangevsimmediatelypreDecember/upperboundifrange; nonzeroalwaysNO despite25bprounding. Emergencyoutsideexcluded; timelypostponementcounts/cancel-nodecisionbefore nextmeetingYES. Oct30intervening; Dec18metadata00Znotmeetingclock.",
+  "evidence": [
+    {
+      "url": "https://www.banrep.gov.co/es/noticias/junta-directiva/junta-directiva-septiembre-2026",
+      "observed_utc": "2026-10-19T18:58:13.584951Z",
+      "finding": "Rootverifiedrawpress12.25effectiveOct1/4+25/2hold/1+50; fullOct5minutes describeinitial50joining25, notindependentfinalvotes. Inflation/supply/fiscalFXvsrealrate/lagarguments."
+    },
+    {
+      "url": "https://www.banrep.gov.co/es/calendario-eventos",
+      "observed_utc": "2026-10-19T17:17:38.091668Z",
+      "finding": "Oct30andDec18meetings/Dec23minutes; timezoneomitted, API00Znotdecisiontime. OctEMEnotverified; September6.8/4expectationsnotOctober."
+    },
+    {
+      "url": "https://www.dane.gov.co/index.php/estadisticas-por-tema/precios-y-costos/indice-de-precios-al-consumidor-ipc/ipc-informacion-tecnica",
+      "observed_utc": "2026-10-19T17:18:12.281770Z",
+      "finding": "RootverifiedSepheadline6.29/monthly.37; namedcoreXLSXrow1026.03/Aug6.12, workbookupdatedOct13. AugISEPDF\u22123.11MoM/\u2212.11YoYpreliminarynotGDP; priorhikecaseopposedbylatestactivity."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.53,
+    "low": 0.25,
+    "high": 0.8,
+    "method": "Primarypriceblind jointOctoberDecemberreactionregimepaths, notcurrentrateunchangedorindependentvotes.",
+    "reasoning": "45/40/15persistentinflation/lagspause/FXsupplyshock; normalDecH52.44 plus1%cancel-nodecisionfallback\u219252.9156rounded53. Actual15ppreserve selects38YES/32NO, broad25\u201380notfloor; noOctconsensusinvented."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0379_quote_1900.json",
+    "quote_file_sha256": "532c9ad16cbe3f2b26ecf93d0c1f551db77c7dbc49abca72a39acd48bdde475b",
+    "quote_capture_utc": "2026-10-19T19:00:47.967172+00:00",
+    "gamma_received_utc": "2026-10-19T19:00:47.829644+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 60.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.53,
+        "selected_stress_probability": 0.38,
+        "best_bid": 0.56,
+        "best_ask": 0.57,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792436432442",
+        "book_received_utc": "2026-10-19T19:00:47.966346+00:00",
+        "book_age_seconds_at_receipt": 15.524346113204956,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.8499999999999996,
+            "fee": 0.06128,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.57
+              }
+            ],
+            "net": 2.9112799999999996
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.8000000000000003,
+            "fee": 0.0616,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.56
+              }
+            ],
+            "net": 2.7384000000000004
+          }
+        },
+        "taker_cost_usd": 2.9112799999999996,
+        "central_expected_profit_usd": -0.2612799999999993,
+        "selected_stress_profit_usd": -1.0112799999999997,
+        "break_even_before_carry": 0.5822559999999999,
+        "break_even_constant_carry": 0.5852819234488184,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.47,
+        "selected_stress_probability": 0.31999999999999995,
+        "best_bid": 0.43,
+        "best_ask": 0.44,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792436432442",
+        "book_received_utc": "2026-10-19T19:00:47.966346+00:00",
+        "book_age_seconds_at_receipt": 15.524346113204956,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.2,
+            "fee": 0.06161,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.44
+              }
+            ],
+            "net": 2.26161
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.15,
+            "fee": 0.06128,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.43
+              }
+            ],
+            "net": 2.08872
+          }
+        },
+        "taker_cost_usd": 2.26161,
+        "central_expected_profit_usd": 0.08838999999999952,
+        "selected_stress_profit_usd": -0.6616100000000005,
+        "break_even_before_carry": 0.452322,
+        "break_even_constant_carry": 0.45467267005958967,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry; YESask57/NO44andcompetitive56/43failselected38/32. SmallNOcentral+.08839 doesnotpassforecast/carry/operations stress.",
+  "reopen_condition": "VerifiedOct30decision/newCPI,activity,expectations/fiscalFXandDecschedule orindependentlyunderwrittenconditionalprice; currentallgatesbeforeorders.",
+  "portfolio_action": "None; cash/knownalternatives preferred, no measuredhedge againstpoliticalAIrisks; no prior/order/reservation/position change.",
+  "report_markdown": "# 0379 \u2014 Colombia December rate unchanged\n\n**YES53% / NO47%; broad YES25\u201380%. No entry.** Actual15pp reserve selectsYES38/NO32; both current taker prices and competitive maker bids fail.\n\nFull rule measures the **December meeting change against the rate immediately before that meeting**, not against today's12.25%. Upperbound governs a range. Any nonzero sub25bp move rounds to25; other moves round nearest25/halfway awayfromzero, so NO includes every hike/cut size. Emergency changes outside the specified meeting do not score. A postponed meeting before the next scheduled meeting counts; cancellation/no decision by that next meeting paysNoChange. Dec18midnight API end is not the local decision clock, and fallback settlement can extend past earlyJanuary.\n\nRoot read [BanRep September minutes](https://www.banrep.gov.co/es/print/pdf/node/66378) in full and the originalSep30press release. Announcement reports4+25/2hold/1+50; minutes say the initial50bp voter joined25 during discussion. These are stages of one deliberation, not independent director probabilities or a separately tabulated final rollcall. Majority cites inflation/expectations/excessdemand/FX,fiscal,Ni\u00f1o risks; dissent cites realrate~6%,275bp cumulative tightening, policy lags/weak activity and reconstruction. [Vote/survey audit](../../../data/deep_review_20261017/work/0379_vote_eme_followup_1858.json).\n\nCurrent12.25% effectiveOct1, with **Oct30 before Dec18**. DANESeptember headline6.29%/monthly.37 versusAugust6.24/.39; named core excludingfood/regulados6.12\u21926.03, Septembermonthly.26. Root decoded originalXLSX row102/columnF; workbookupdatedOct13, not automaticallyOct7headlinepublication. LatestAugISE preliminarySA/CA125.65/\u2212.11%y/y/\u22123.11%m/m, originalJan\u2013Aug+2.27%; monthly activity is notGDP or a durable collapse. [Verified source reads](../../../data/deep_review_20261017/work/0379_primary_reads_1900.json).\n\nOctoberEME/rate-path consensus remains unverified: direct200wasRadwarechallenge; renderedofficiallisting lacksJuly\u2013October2026 entries but is not globalabsence proof. Septminutes'6.8%yearend/4%two-year expectations are September data. Calendar listsOct30/Dec18 08:30\u201313:00 withouttimezone andDec23minutes. [Dated facts](../../../data/deep_review_20261017/work/0379_facts_1717.json).\n\n[Primary joint model](../models/0379_primary_1900.json), saved19:00:47 before own quote:45%persistentinflation/40%demand-lagspause/15%supply-fiscalFXshock regimes. Each has a full October increase/hold/decrease distribution and December distribution conditional on that October action. NormalDecemberhold52.44%;1%cancellation/no-decision fallback gives52.9156%, rounded53. AllDecember outcomes sum1. Unfitted conditional probabilities represent reaction judgments, not empiricaltransition frequencies or independent board flips. Latest activity supports more pause weight without ignoring stickyinflation; repeated supply/FX risk can force another hike even afterOctoberhike.\n\nA15pp shift to conditional Decemberhold probabilities spans38.07\u201367.77%; broad25\u201380 allows different regimes/source/board specifications. Actual15pp reserve (ordinary10+5instance forecast/coverage/conditional-fill uncertainty) was fixed before prices, not a guaranteedfloor. Older349October41 is a datedJulyISE-based forecast, not December53 or independent corroboration; current latentOctober44.35 only bridges these December paths.\n\nBoth outcomes5shares, **19:00:47UTC** exactGamma/authoritative5%p(1\u2212p), books15.52s old/min5/tick1c: YES56/57c costs2.91128, central\u2212.26128/selected\u22121.01128; NO43/44c costs2.26161, central+.08839/selected\u2212.66161. Joining56cYES/43cNO still exceeds selected38/32 before fill/carry/operations. Both lots clear$1signedBUYfloor. [Economics](../../../data/deep_review_20261017/work/0379_economics_1900.json). DatedvariableAave3.2035%/60days raisesNO break45.2322\u219245.4673%; postponement can cost longer, funding/operations notfree.\n\nCash and known candidates beat the selected entries; Colombia macro exposure has no measured hedge against current political/AI positions. No distant passive bid from unconditional probabilities: reviewOct30, subsequentCPI/activity/expectations/fiscalFX andDecembercalendar before any freshorder. Source/method gaps remain local; no neworder, financialprior, reservation or position.\n"
+}

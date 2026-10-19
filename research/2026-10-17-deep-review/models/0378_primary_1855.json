@@ -1,0 +1,70 @@
+{
+  "schema": "primary_sc_governor378.v1",
+  "created_utc": "2026-10-19T18:54:27.927124+00:00",
+  "own_quote_unread": true,
+  "review_index": 378,
+  "source_basis": "OriginalOct5ResonancePDF/fieldSep29\u2013Oct3/n638RV; root verified bodyhash,text and extracted ballot chart. Wilson45.17/Johnson35.03/U15.84/Addison2.85/Hakim1.11. Candidatepartiesforlasttwo not stated; finalofficialfullballotunretrieved.",
+  "interpretation": "Rnominee plurality wins, not Rvote>50%. AP/Fox/NBCsamecall elseofficialcertification; replacements inheritparty, independents excluded. Minor candidates are separate, not automatically Democrats.",
+  "poll_lead_pp": 10.14,
+  "sampling_margin_standard_error_pp": 3.5226940922696652,
+  "margin_error": {
+    "distribution": "Student t, df5",
+    "scale_pp": 5,
+    "standard_deviation_pp": 6.454972243679028,
+    "meaning": "Sampling marginSDabout3.52pp plus turnout/nonresponse/house/age/futurecampaign dispersion. Field ended16daysago/election15daysaway. Scale/weights are primaryjudgment, not historicalcalibration. SamepollpartyID/nameawareness not independentmeasurements or another likelihood."
+  },
+  "scenario_rows": [
+    {
+      "scenario": "modest_R_undecided_tilt",
+      "weight": 0.55,
+      "undecided_share_to_R": 0.55,
+      "minor_support_moved_to_D_pp": 0,
+      "mean_R_minus_D_pp": 11.724000000000002,
+      "conditional_R_win": 0.9670074046360018
+    },
+    {
+      "scenario": "D_consolidation",
+      "weight": 0.25,
+      "undecided_share_to_R": 0.35,
+      "minor_support_moved_to_D_pp": 1.98,
+      "mean_R_minus_D_pp": 3.408,
+      "conditional_R_win": 0.7371120004822853
+    },
+    {
+      "scenario": "late_heavy_D_consolidation",
+      "weight": 0.15,
+      "undecided_share_to_R": 0.2,
+      "minor_support_moved_to_D_pp": 1.98,
+      "mean_R_minus_D_pp": -1.343999999999999,
+      "conditional_R_win": 0.3994111082278487
+    }
+  ],
+  "nonstandard_branch": {
+    "weight": 0.05,
+    "conditional_R_win": 0.4,
+    "meaning": "Latecandidate/ballot/campaign/adjudication branch not represented by ordinarymargin. Subjective; fullballotgap priced rather than declaredimpossible."
+  },
+  "raw_R_win_probability": 0.7960437389045497,
+  "adopted_yes": 0.8,
+  "adopted_no": 0.2,
+  "broad_yes_range": [
+    0.45,
+    0.995
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.65,
+  "selected_no": 0.05,
+  "reserve_reason": "Ordinary10pp model/conditionalinformation allowance plus5pp singleoldRVpoll/finalballotcoverage gap. Stress is uncertainty in forecast specification/fill selection, not another calibratedmargin likelihood. Broad alternatives can be worse; no guaranteedlowerbound.",
+  "scale_sensitivity": {
+    "4": 0.8131852104849294,
+    "5": 0.7960437389045497,
+    "6.5": 0.7694558877675236
+  },
+  "competing_model": "Balancedundecided/no minorshift on samepoll gives higher Rwin likelihood; a later verified poll/turnoutshift can move probability materially. No current market price fitted any parameter. No rememberedhistoricstatevote assumed as newevidence.",
+  "source_hashes": {
+    "data/deep_review_20261017/work/0378_facts_1645.json": "5fed82c4ca736ff0d38c3c39ed778e97cf31aabea3898115468096542c635385",
+    "data/deep_review_20261017/work/0378_freshness_1836.json": "a4095fd4f74295f1e8913607b5043f9c7c1ec5cef6a681a45fcb67d347971151",
+    "data/deep_review_20261017/work/0378_ballot_poll_detail_1852.json": "88c360b9e2b2480a6bb5cec0756b8ad71bf8d08afc0aa16d59c6848d66f54186"
+  },
+  "limits": "Not pollshare=winchance; onefieldwave, unknown weighting, response/design/LVscreen and fullcandidateprompt, no globalproof no laterpoll; thirdpartycandidatequalification gaps; transferweights/error/structuralbranch uncalibrated. Probabilityrange is subjective model sensitivity, not a confidenceinterval."
+}

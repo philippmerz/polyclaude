@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/0380_economics_1911.json",
+      "bytes": 3578,
+      "sha256": "237c1d9ed039617ee9689a400f9cc213c56bfcc115d871679dfdc51f68d05463"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_eia_energy_facts_1907.json",
+      "bytes": 3161,
+      "sha256": "5086ff78ff5586f19ec0b67c46370e76336bae9abf59e65595d78d1e41d9a40b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_facts_1720.json",
+      "bytes": 6398,
+      "sha256": "1f2da3f599c24b8c00c18e854455fcb8814c7a9fc2ab34fb78c23bb8492b62dd"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_facts_current_1853.json",
+      "bytes": 5006,
+      "sha256": "d2c2267a5d84f64211e8c434d87d61d7d0319c84171e8210486ee1dd95ee74f8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_history_facts_1903.json",
+      "bytes": 3296,
+      "sha256": "4342753cb78afdcfd28208bf870e25c89b95eebddaeb77350d20f3e7764c7ade"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_primary_history_stats_1906.json",
+      "bytes": 883,
+      "sha256": "dc56f26d74d697b2d7c1917cb0a88b7206ff97c265cd75d20d4482af62e3c3a5"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_primary_input_1913.json",
+      "bytes": 11074,
+      "sha256": "19c5d4135cbe083f9b9366f1ef9aa9fd092d4c706134ec808ff29bbe31e8a293"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_quote_1911.json",
+      "bytes": 10899,
+      "sha256": "1c11aac0f4ac94477ab7afea21af8b2f29dc1d43598b4c846558370d8432eded"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0380_resume.json",
+      "bytes": 597,
+      "sha256": "cc25e32ed3d93396130fc6fba7e7f416ff5ae0bb74e58626a9246ee73345c43a"
+    }
+  ]
+}

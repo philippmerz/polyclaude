@@ -1,0 +1,143 @@
+{
+  "append_only_prefix_checks": {
+    "evaluations.jsonl": {
+      "appended_review_indices": [
+        378,
+        379,
+        380
+      ],
+      "appended_selected_rows": {
+        "378": 1,
+        "379": 1,
+        "380": 1
+      },
+      "current_bytes": 3324333,
+      "current_starts_with_head": true,
+      "delta_bytes": 15831,
+      "head_bytes": 3308502,
+      "head_sha256": "8486250ab482725cb5307e67a0e04ebea9ef617a5a8211a886afb79051d4920a"
+    },
+    "revisions.jsonl": {
+      "current_bytes": 39255,
+      "current_starts_with_head": true,
+      "delta_bytes": 0,
+      "head_bytes": 39255,
+      "head_sha256": "83ec3027a5afe8f5eafcb4d5a480fba62e172de84f5491d6b910dd3b0b59e8b8"
+    }
+  },
+  "case382": {
+    "active_indices": [
+      382
+    ],
+    "effective_status": "in_progress",
+    "resume_phase": "Facts updated with current 18:17 UTC public chart capture; valuation pending. No forecast or entry authority.",
+    "resume_pointer_hash": "097ce70881d2aaebfa6b0adcba2c409a5966a43e97edfc7301c58120dfbd1a0a",
+    "valued_record": false
+  },
+  "created_utc": "2026-10-19T19:18:10.681454+00:00",
+  "head_commit": "e2afa9c",
+  "required_phase_correction": [
+    {
+      "current_phase": "FACTS_ONLY_SAVED_NO_VALUATION",
+      "index": 380,
+      "path": "data/deep_review_20261017/work/0380_resume.json",
+      "reason": "Evaluation/report and valid economics are saved; effective status valued; resume still labels facts-only."
+    }
+  ],
+  "schema": "polyclaude.periodic_research_audit.v1",
+  "scope": [
+    378,
+    379,
+    380,
+    382
+  ],
+  "selected_cases": [
+    {
+      "checks": {
+        "both_sides_economics_match_forecast": true,
+        "frozen_market_condition_criteria_match": true,
+        "markdown_links_resolve": true,
+        "model_adopted_probability_matches_record": true,
+        "model_primary_precedes_quote": true,
+        "model_selected_stress_matches_record": true,
+        "model_source_hashes_match": true,
+        "quote_sha_matches_record": true,
+        "report_sha_matches_record": true,
+        "validator_record_and_economics_pass": true
+      },
+      "evaluated_utc": "2026-10-19T18:56:13.529815+00:00",
+      "forecast_p_yes": 0.8,
+      "index": 378,
+      "model_created_utc": "2026-10-19T18:54:27.927124+00:00",
+      "model_path": "research/2026-10-17-deep-review/models/0378_primary_1855.json",
+      "model_quote_gap_seconds": 8.743093,
+      "quote_capture_utc": "2026-10-19T18:54:36.670217+00:00",
+      "quote_fee_rate": 0.04,
+      "report_path": "research/2026-10-17-deep-review/evaluations/0378.md",
+      "resume_phase": "VALUED_COMPLETE_2026-10-19T18:56:13Z; noentry",
+      "selected_stress_yes_no": [
+        0.65,
+        0.04999999999999996
+      ],
+      "status": "valued"
+    },
+    {
+      "checks": {
+        "both_sides_economics_match_forecast": true,
+        "frozen_market_condition_criteria_match": true,
+        "markdown_links_resolve": true,
+        "model_adopted_probability_matches_record": true,
+        "model_primary_precedes_quote": true,
+        "model_selected_stress_matches_record": true,
+        "model_source_hashes_match": true,
+        "quote_sha_matches_record": true,
+        "report_sha_matches_record": true,
+        "validator_record_and_economics_pass": true
+      },
+      "evaluated_utc": "2026-10-19T19:01:46.040042+00:00",
+      "forecast_p_yes": 0.53,
+      "index": 379,
+      "model_created_utc": "2026-10-19T19:00:47.408329+00:00",
+      "model_path": "research/2026-10-17-deep-review/models/0379_primary_1900.json",
+      "model_quote_gap_seconds": 0.558843,
+      "quote_capture_utc": "2026-10-19T19:00:47.967172+00:00",
+      "quote_fee_rate": 0.05,
+      "report_path": "research/2026-10-17-deep-review/evaluations/0379.md",
+      "resume_phase": "VALUED_COMPLETE_2026-10-19T19:01:46Z; noentry",
+      "selected_stress_yes_no": [
+        0.38,
+        0.31999999999999995
+      ],
+      "status": "valued"
+    },
+    {
+      "checks": {
+        "both_sides_economics_match_forecast": true,
+        "frozen_market_condition_criteria_match": true,
+        "markdown_links_resolve": true,
+        "model_adopted_probability_matches_record": true,
+        "model_primary_precedes_quote": true,
+        "model_selected_stress_matches_record": true,
+        "model_source_hashes_match": true,
+        "quote_sha_matches_record": true,
+        "report_sha_matches_record": true,
+        "validator_record_and_economics_pass": true
+      },
+      "evaluated_utc": "2026-10-19T19:12:23.522723+00:00",
+      "forecast_p_yes": 0.07,
+      "index": 380,
+      "model_created_utc": "2026-10-19T19:11:00.350934+00:00",
+      "model_path": "research/2026-10-17-deep-review/models/0380_primary_1911.json",
+      "model_quote_gap_seconds": 0.57539,
+      "quote_capture_utc": "2026-10-19T19:11:00.926324+00:00",
+      "quote_fee_rate": 0.05,
+      "report_path": "research/2026-10-17-deep-review/evaluations/0380.md",
+      "resume_phase": "FACTS_ONLY_SAVED_NO_VALUATION",
+      "selected_stress_yes_no": [
+        0,
+        0.6499999999999999
+      ],
+      "status": "valued"
+    }
+  ]
+}

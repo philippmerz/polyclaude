@@ -1,0 +1,40 @@
+{
+  "candidate_paths": [
+    "research/2026-10-17-deep-review/evaluations/0378.json",
+    "research/2026-10-17-deep-review/evaluations/0378.md",
+    "research/2026-10-17-deep-review/models/0378_primary_1855.json",
+    "data/deep_review_20261017/work/0378_resume.json",
+    "data/deep_review_20261017/work/0378_quote_1855.json",
+    "data/deep_review_20261017/work/0378_economics_1855.json",
+    "data/deep_review_20261017/work/0378_primary_input_1857.json",
+    "logs/deep_review_20261017/0378_quote_1855/capture_manifest.json",
+    "logs/deep_review_20261017/0378_quote_1855/public/0378_fee.body.json.gz",
+    "logs/deep_review_20261017/0378_quote_1855/public/0378_gamma.body.json.gz",
+    "logs/deep_review_20261017/0378_quote_1855/public/books_batch_01.body.json.gz",
+    "logs/deep_review_20261017/0378_quote_1855/public/0378_fee.receipt.json",
+    "logs/deep_review_20261017/0378_quote_1855/public/0378_gamma.receipt.json",
+    "logs/deep_review_20261017/0378_quote_1855/public/books_batch_01.receipt.json",
+    "data/deep_review_20261017/work/0378_facts_1645.json",
+    "data/deep_review_20261017/work/0378_freshness_1836.json",
+    "data/deep_review_20261017/work/0378_ballot_poll_detail_1852.json",
+    "data/deep_review_20261017/work/0378_calendar_read_1856.json",
+    "data/deep_review_20261017/work/0378_economics_15_1856.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.intent.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.receipt.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/poll_index.intent.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/poll_index.receipt.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/county_candidate_list/candidate_listing.intent.json",
+    "logs/deep_review_20261017/case0378_freshness_1836/county_candidate_list/candidate_listing.receipt.json"
+  ],
+  "case": 378,
+  "coverage": "Explicit path candidates only; no hashes or staging decision.",
+  "exclusions": [
+    "Do not include any quote private/** captures, account/order/reservation/geoblock/status bodies, credentials or operator material. Full copyrighted article/PDF/XLSX bodies stay local."
+  ],
+  "local_only_source_bodies_or_arrays": [
+    "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.body.json.gz",
+    "logs/deep_review_20261017/case0378_freshness_1836/poll_index.body.json.gz",
+    "logs/deep_review_20261017/case0378_freshness_1836/county_candidate_list/candidate_listing.body.json.gz"
+  ],
+  "schema": "polyclaude.preservation_path_candidates.v1"
+}

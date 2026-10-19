@@ -1,0 +1,44 @@
+{
+  "candidate_paths": [
+    "research/2026-10-17-deep-review/evaluations/0380.json",
+    "research/2026-10-17-deep-review/evaluations/0380.md",
+    "research/2026-10-17-deep-review/models/0380_primary_1911.json",
+    "data/deep_review_20261017/work/0380_resume.json",
+    "data/deep_review_20261017/work/0380_quote_1911.json",
+    "data/deep_review_20261017/work/0380_economics_1911.json",
+    "data/deep_review_20261017/work/0380_primary_input_1913.json",
+    "logs/deep_review_20261017/0380_quote_1911/capture_manifest.json",
+    "logs/deep_review_20261017/0380_quote_1911/public/0380_fee.body.json.gz",
+    "logs/deep_review_20261017/0380_quote_1911/public/0380_gamma.body.json.gz",
+    "logs/deep_review_20261017/0380_quote_1911/public/books_batch_01.body.json.gz",
+    "logs/deep_review_20261017/0380_quote_1911/public/0380_fee.receipt.json",
+    "logs/deep_review_20261017/0380_quote_1911/public/0380_gamma.receipt.json",
+    "logs/deep_review_20261017/0380_quote_1911/public/books_batch_01.receipt.json",
+    "data/deep_review_20261017/work/0380_facts_1720.json",
+    "data/deep_review_20261017/work/0380_facts_current_1853.json",
+    "data/deep_review_20261017/work/0380_history_facts_1903.json",
+    "data/deep_review_20261017/work/0380_primary_history_stats_1906.json",
+    "data/deep_review_20261017/work/0380_eia_energy_facts_1907.json",
+    "logs/deep_review_20261017/case380_history_1859/ppi_history_2017_2026.intent.json",
+    "logs/deep_review_20261017/case380_history_1859/ppi_history_2017_2026.receipt.json",
+    "logs/deep_review_20261017/case380_bls_1708/ppi_schedule.intent.json",
+    "logs/deep_review_20261017/case380_bls_1708/ppi_schedule.receipt.json",
+    "logs/deep_review_20261017/case380_eia_energy_1910/gulf_gasoline_daily.intent.json",
+    "logs/deep_review_20261017/case380_eia_energy_1910/gulf_gasoline_daily.receipt.json",
+    "logs/deep_review_20261017/case380_eia_energy_1910/wti_daily.intent.json",
+    "logs/deep_review_20261017/case380_eia_energy_1910/wti_daily.receipt.json"
+  ],
+  "case": 380,
+  "coverage": "Explicit path candidates only; no hashes or staging decision.",
+  "exclusions": [
+    "Do not include any quote private/** captures, account/order/reservation/geoblock/status bodies, credentials or operator material. Full copyrighted article/PDF/XLSX bodies stay local."
+  ],
+  "local_only_source_bodies_or_arrays": [
+    "data/deep_review_20261017/work/0380_ppi_series_2017_2026.json",
+    "logs/deep_review_20261017/case380_history_1859/ppi_history_2017_2026.body.json.gz",
+    "logs/deep_review_20261017/case380_bls_1708/ppi_schedule.body.json.gz",
+    "logs/deep_review_20261017/case380_eia_energy_1910/gulf_gasoline_daily.body.json.gz",
+    "logs/deep_review_20261017/case380_eia_energy_1910/wti_daily.body.json.gz"
+  ],
+  "schema": "polyclaude.preservation_path_candidates.v1"
+}

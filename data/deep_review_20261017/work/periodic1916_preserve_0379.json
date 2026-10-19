@@ -1,0 +1,33 @@
+{
+  "candidate_paths": [
+    "research/2026-10-17-deep-review/evaluations/0379.json",
+    "research/2026-10-17-deep-review/evaluations/0379.md",
+    "research/2026-10-17-deep-review/models/0379_primary_1900.json",
+    "data/deep_review_20261017/work/0379_resume.json",
+    "data/deep_review_20261017/work/0379_quote_1900.json",
+    "data/deep_review_20261017/work/0379_economics_1900.json",
+    "data/deep_review_20261017/work/0379_primary_input_1903.json",
+    "logs/deep_review_20261017/0379_quote_1900/capture_manifest.json",
+    "logs/deep_review_20261017/0379_quote_1900/public/0379_fee.body.json.gz",
+    "logs/deep_review_20261017/0379_quote_1900/public/0379_gamma.body.json.gz",
+    "logs/deep_review_20261017/0379_quote_1900/public/books_batch_01.body.json.gz",
+    "logs/deep_review_20261017/0379_quote_1900/public/0379_fee.receipt.json",
+    "logs/deep_review_20261017/0379_quote_1900/public/0379_gamma.receipt.json",
+    "logs/deep_review_20261017/0379_quote_1900/public/books_batch_01.receipt.json",
+    "data/deep_review_20261017/work/0379_facts_1717.json",
+    "data/deep_review_20261017/work/0379_facts_current_1853.json",
+    "data/deep_review_20261017/work/0379_vote_eme_followup_1858.json",
+    "data/deep_review_20261017/work/0379_primary_reads_1900.json",
+    "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.intent.json",
+    "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.receipt.json"
+  ],
+  "case": 379,
+  "coverage": "Explicit path candidates only; no hashes or staging decision.",
+  "exclusions": [
+    "Do not include any quote private/** captures, account/order/reservation/geoblock/status bodies, credentials or operator material. Full copyrighted article/PDF/XLSX bodies stay local."
+  ],
+  "local_only_source_bodies_or_arrays": [
+    "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.body.json.gz"
+  ],
+  "schema": "polyclaude.preservation_path_candidates.v1"
+}

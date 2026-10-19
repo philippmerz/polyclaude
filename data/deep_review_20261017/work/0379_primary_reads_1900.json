@@ -1,0 +1,27 @@
+{
+  "schema": "primary_BanRep379_reads.v1",
+  "read_utc": "2026-10-19T19:00:47.408329+00:00",
+  "verified_sources": [
+    {
+      "path": "logs/deep_review_20261017/banrep_minutes_pdf_1240/september_minutes_pdf.body.json.gz",
+      "raw_sha256": "20bd14592b6b130cb9dfea3b21798e130573aa072948a4214a8a18b1a2194863",
+      "finding": "Root read all3pages: above6% inflation/expectations/excessdemand/FX,fiscal,Ni\u00f1o risks favor tightening; opposing restrictive realrate~6%,275bp cumulativehikes/lags/reconstruction/activity. Do not multiply directors independentvotes."
+    },
+    {
+      "path": "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.body.json.gz",
+      "raw_sha256": "09c37cb208ccbe35c6c7814f3d44fbec378cd1d1db42c6c6a808063cc17778c3",
+      "finding": "Root read pressbody:4+25/2hold/1+50. Minutes describe +50director initially then joining25. Distinctdeliberationstages, no independentlytabulated finalrollcall."
+    },
+    {
+      "path": "logs/deep_review_20261017/case379_facts_1700/detail/dane_core_sep_xlsx.body.json.gz",
+      "raw_sha256": "f77f04f24688f8ea92064141f05f495dc3e863a85cd5f445a1e8ea29acb2f3ed",
+      "finding": "Root decoded XLSX XML: sheet3 annualcolumnF Augrow101=6.12/Sep102=6.03; SepmonthlyD=.26/YTDE4.92. SheetlabelIPCsin alimentos ni regulados; workbookUpdatedOct13, not silentlysameOct7publication as headline."
+    },
+    {
+      "path": "logs/deep_review_20261017/case379_facts_1700/detail/dane_ise_august_bulletin.body.json.gz",
+      "raw_sha256": "af82e90ac4575e6b544ad5929be1aa31747516419a8e973970b0453d3e03f819",
+      "finding": "RootPDFread AugSA/CA125.65\u2212.11%YoY/\u22123.11%MoM fromJuly129.69; originalJanAug+2.27. Preliminarymonthlyactivity, notGDP/fullquartertrend."
+    }
+  ],
+  "calendar": "Rootverified embeddedOct30/Dec18 meeting times08:30\u201313:00 withouttimezone/Dec23minutes;12.25currenteffectiveOct1. MeetingnotDecember00Z endmetadata."
+}

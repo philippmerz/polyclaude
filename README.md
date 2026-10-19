@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**346 valued /9 blocked /364 factual /2,281 pending;719 base+64 revisions, active378.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. NVIDIA376 and the Apple280 append-only revision share a coherent worldwide-winner forecast; neither clears selected entry economics.378 has saved facts, no completed forecast. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1838-periodic.md). Scanner coverage earns no valuation credit.
+**349 valued /9 blocked /364 factual /2,278 pending;722 base+64 revisions, active382.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. New378(SC governor),379(Colombia December rate) and380(exact October PPI) were saved individually; none clears selected entry economics.382 remains unvalued with facts saved. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1916-periodic.md). Scanner coverage earns no valuation credit.
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC all-unfilled pull binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
 
-**Whalefall6NO/$1.02 retained without adding.** Fresh18:02 Numbers/Mojo8m remains estimated; exactly8m FINAL paysNO. OpenRouter5NO is governed by four future weekly labels. ClosedHLE9NO/DEC225 and the zero-value/uncertain legacyGemini claim are distinct. [Source review](data/deep_review_20261017/work/light1800_sources.json).
+**Whalefall6NO/$1.02 retained without adding.** Fresh19:19 Numbers/Mojo8m remains estimated; exactly8m FINAL paysNO. OpenRouter5NO is governed by four future weekly labels. ClosedHLE9NO/DEC225 and the zero-value/uncertain legacyGemini claim are distinct. [Source review](data/deep_review_20261017/work/light1800_sources.json).
 
 ## Mandate and constraints
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 Four LIVE/zero-matched BUYs/four matching reservations/$7.52 and eight positive-size positions match17:02. Orders18:03:40–41 are authenticated CLI serialization; indexed positions18:04:53 HTTP200. No trade or numerical-prior change. Idaho34YES3c/$1.02 retains22UTC all-unfilled pull/earlier cancel-first. [Orders](notes/resting_orders.md) · [ops/account provenance](data/deep_review_20261017/work/light1800_ops.json).
 
-Whale8m is still estimated; OROct19 partial is not a target-week result. News reviewed through18:31:35; new Free Press poll body/date remain inaccessible. Fresh Rasmussen release repeats the already-used survey; questionnaire content differs from the verified earlier capture. MI5NO retained/no add.18:40 orders/positions/reservations unchanged; no new NAV/CSV row. [Periodic review](research/2026-10-19-1838-periodic.md).18UTC full checks/daemon evidence remain dated; no repeated discovery or routine Telegram. Existing22UTC light/Idaho pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
+Whale19:19 Numbers/Mojo8m remains estimated; OROct19 partial is not a target-week result. News reviewed through19:03:41; town-hall reporting establishes no measured electoral change. Michigan5NO/no add/prior unchanged; earlier poll-body/date gaps remain.19:17 authenticated orders/indexed positions/reservations unchanged. Quick status returned0/no hurdle flag or watchlist hit; nested child rc not exposed. No new total NAV/CSV row. [Periodic review](research/2026-10-19-1916-periodic.md).18UTC full checks/daemon evidence remain dated. Existing22UTC light AND Idaho all-unfilled pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

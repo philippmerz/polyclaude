@@ -1,0 +1,1 @@
+{"name":"omar_press_list","request":{"call_window_label":"case384_primary_listing_followup","method":"GET","read_only":true,"scope":"case384 public current official press listing only","url":"https://omar.house.gov/media/press-releases"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:58:31.714386Z","timing_basis":"call_window"}

@@ -1,0 +1,49 @@
+{
+  "schema": "periodic1916_alert_delta.v1",
+  "observed_utc": "2026-10-19T19:17:08.483056+00:00",
+  "news_after": "2026-10-19T18:31:35Z",
+  "news": [
+    {
+      "line": 1115,
+      "line_sha256_without_newline": "4224a3c76978f1a737d29624213de94b21a982cdf6cf10c46301e49798952b93",
+      "alert_id": "d1944e5ccd89687ba23ef59d536b4b392da6b9a1",
+      "ts": "2026-10-19T18:42:22Z",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - The Detroit News",
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0FJWi1ibWd0bnZwUVh4YU9zekQzd3VpSG5wU2FOdFhVLV8zeG5lZE9zeXVuYXZ0djZvbUNqbEktczBURTJTc2ZybzluZ0lWVXRlWXNXcXkxRDVhd0RKSGJjRWVMYmZHamJ5czh2TGYwR3dQTXdGVTk5NUVEbl9lU2Z5MjBwVXJVc0RRaFdjMlZ3Sy00YzdEUmFrQ3BpRTlzU1o2VmFLZ1JUaHhIU1c1VUFUMlUtYmJJRnRZ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Disavowing the Muslim Brotherhood may improve El-Sayed\u2019s broader-election viability, pressuring the No-Democrats thesis."
+        }
+      ],
+      "tier": 1
+    },
+    {
+      "line": 1116,
+      "line_sha256_without_newline": "1f4c27bda0d9acabad37c068edb77980513a6472a23db74496572567ade2ed92",
+      "alert_id": "c2809072524b97517c729af9d4b42c243b7c5a12",
+      "ts": "2026-10-19T18:58:17Z",
+      "title": "Lionel Messi, Cristiano Ronaldo And The Power Of Future Earnings - Forbes",
+      "feed": "Google Year in Search, Messi and Mbappe athlete news",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxNdEdHaEVfTFFYaDZ5dU9hcUYzRmg0elgydGwtWHplQ19JSDQzZjJTeVIydEFTQzluQ1JzeXE2UkxHY0ZKMVJFZ0NkeW5CQlVyenlibjVuQmhBNnptTlI3M2RsaWVEeHhEN3VlUjk4TS1SX1cydFRnSjNMV0c1QnlNY19CamV1a2ZSQnpmZ0pkcTY1VmVKaTVuLVByQXpQY0gxQ1E?oc=5",
+      "impacts": [],
+      "tier": 1
+    },
+    {
+      "line": 1117,
+      "line_sha256_without_newline": "c7c3872a1d8a9cf42dab308015997e61b05c0c6a39bc8cdb4f952c2106f9a921",
+      "alert_id": "48131fd4ef6bcd5af2f6541ded2b558812a5b207",
+      "ts": "2026-10-19T19:03:41Z",
+      "title": "Why a veteran tech analyst says Anthropic will be a 'very speculative investment' - Business Insider",
+      "feed": "Anthropic IPO and valuation news",
+      "link": "https://news.google.com/rss/articles/CBMinAFBVV95cUxNSDQwNVV6MTgtdGUzVUgwblZKYjJtOVhyd0FUS3AyLVpOdTZrelFGMFRWbHU2eHl6WDZ0SkZySWZWNHppa0dxM2hKV3BFbjh3TjA0bGVYWUxyVHFiTmRFSkJOZThLVkJIVFVlVWpXZzAwZUZHcWhGQ3VONFJCbWVoREdTSUctWlplb1BiN3FUYnVkMUZDVWJYbHUyMFU?oc=5",
+      "impacts": [],
+      "tier": 1
+    }
+  ],
+  "opportunity_after": "2026-10-19T18:47:24Z",
+  "opportunities": [],
+  "covered_through_utc": "2026-10-19T19:03:41Z"
+}

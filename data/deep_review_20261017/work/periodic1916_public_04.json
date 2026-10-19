@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/0388_resume.json",
+      "bytes": 847,
+      "sha256": "0b1e807ce9da5e35549a72a41b67601725e50d6c12af2fd14720527924292703"
+    },
+    {
+      "path": "data/deep_review_20261017/work/manual1852_RESUME.json",
+      "bytes": 1458,
+      "sha256": "61b431f2ea94f5ce1f7e0758b9a9fe124b098c22defebe647c6313804b81bf9f"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_RESUME.json",
+      "bytes": 2251,
+      "sha256": "64c2786f80b3fc7bf8534fdae2e52270386235e6c6847a3f8ccb32274aba4022"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_account_verification.json",
+      "bytes": 2016,
+      "sha256": "5b124f794477a331e783cb9da43656d1f6055758f8d4f027183a3236e57ee6f0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_journal_prefix.json",
+      "bytes": 222,
+      "sha256": "266476828948772f0e3d6aae7a49c1fdcbf2eeea2a0a457b555600a0d037f107"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_news_delta.json",
+      "bytes": 2766,
+      "sha256": "5ba6ff715089fa97e6c61c891a0e786b546976be4170fbf79cc273fd847778c6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_0378.json",
+      "bytes": 2595,
+      "sha256": "77be8c6bc61666c844e6cb1c7047152b706c172d14245cae82c9a9588b6f1a82"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_0379.json",
+      "bytes": 2006,
+      "sha256": "61dc068ba520459b06f5e492ec4f5abb429452ad6968f7595dfb7ca559f1d931"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1916_preserve_0380.json",
+      "bytes": 2836,
+      "sha256": "8f472fec860ba90bbe1a53e87ad86143273121134986564061b636db09dfa25e"
+    }
+  ]
+}

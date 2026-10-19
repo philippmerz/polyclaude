@@ -1,0 +1,123 @@
+{
+  "schema": "deep_review.fact_unit.v1",
+  "index": 388,
+  "assembled_utc": "2026-10-19T18:59:05.768455Z",
+  "identity": {
+    "market_id": "3072321",
+    "conditionId": "0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e",
+    "criteria_sha256": "4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba",
+    "question": "Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 60% or higher?"
+  },
+  "operative_rule": "YES if any SpaceXAI Grok model achieves HLE Accuracy >=60% by 2026-12-31 23:59 ET. Accuracy is specifically the metric labeled HLE Accuracy or a clear equivalent; Calibration Error and HLE Diamond do not qualify. Official source is agi.safe.ai. If unavailable, keep open while data may return; after the deadline/permanent unavailability, official HLE results elsewhere may be used if available, otherwise NO.",
+  "current_official_page": {
+    "url": "https://agi.safe.ai/",
+    "status": 200,
+    "started_utc": "2026-10-19T17:37:12.691209Z",
+    "received_utc": "2026-10-19T17:37:13.468555Z",
+    "cache_age_seconds": "0",
+    "table_headers": [
+      "Model",
+      "Accuracy (%)",
+      "Calibration Error (%)"
+    ],
+    "data_rows": 10,
+    "grok_rows": [
+      [
+        "Grok 4",
+        "24.5",
+        "56.4"
+      ]
+    ],
+    "raw_sha256": "514f6c49609448ca9b61686a66d0969033f6914dc8085b098d51dc0d3529aa08",
+    "gzip_sha256": "a01f322fb6d2345a4054849c109da6f600e5a5b0d530d659e19d929a85502f4a",
+    "body": "logs/deep_review_20261017/case0388_current_173712/hle_page.body.json.gz",
+    "receipt": "logs/deep_review_20261017/case0388_current_173712/hle_page.receipt.json",
+    "limit": "This captured page showed one Grok row; it does not substitute for a full version-history/any-time audit."
+  },
+  "official_api_status": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "status": 403,
+      "started_utc": "2026-10-19T17:37:13.489151Z",
+      "received_utc": "2026-10-19T17:37:13.711481Z",
+      "raw_bytes": 59,
+      "raw_sha256": "a56aae3d12feb94722b421bbcbb340b4087ffbe9dfb21a95a71fa625eaf5f057",
+      "gzip_sha256": "1b977baef37273521b20a0993424ecd5ce890ea162c8238df0eeeef729d3f102",
+      "receipt": "logs/deep_review_20261017/case0388_current_173712/hle_api.receipt.json",
+      "body": "logs/deep_review_20261017/case0388_current_173712/hle_api.body.json.gz",
+      "result": "HTTP 403; no model rows returned."
+    },
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "status": 403,
+      "started_utc": "2026-10-19T18:58:22.024032Z",
+      "received_utc": "2026-10-19T18:58:22.291228Z",
+      "raw_bytes": 59,
+      "raw_sha256": "706ce5877289940021dee8c8c1a08967841525de638fae60fd108c891ce3be76",
+      "gzip_sha256": "9c17497fe6f9dc04482400b252a16995f6b0caea4def2d87bd82cd9c5bf70afb",
+      "receipt": "logs/deep_review_20261017/case0388_official_refresh_20261019T1858Z/hle_models.receipt.json",
+      "body": "logs/deep_review_20261017/case0388_official_refresh_20261019T1858Z/hle_models.body.json.gz",
+      "result": "HTTP 403; no model rows returned. This is current access failure, not score zero or proof of permanent source unavailability."
+    }
+  ],
+  "latest_successful_official_api_snapshot": {
+    "observed_utc": "2026-10-18T23:53:50.075803+00:00",
+    "http_status": 200,
+    "cache_age_seconds": "2128",
+    "raw_sha256": "7cb55e4b15cfdf440eafafbf26041eafef4d8d15984d49744414a8d1eb7a3baa",
+    "gzip_sha256": "3f8711d0ab59ea5146d932bfee69c45a36186ab110b871a1a3116a137dfb5849",
+    "body": "logs/deep_review_20261017/case0298_hle_0005/api_models.json.gz",
+    "receipt": "logs/deep_review_20261017/case0298_hle_0005/api_models.receipt.json",
+    "accepted_total_rows": "source_freeze_check.hle_chart_results; 65 rows accepted",
+    "grok_accuracy_rows": [
+      [
+        "Grok 4",
+        "2025-07-09",
+        24.52
+      ],
+      [
+        "Grok 4.3",
+        "2026-04-17",
+        33.12
+      ],
+      [
+        "Grok 4.2",
+        "2026-03-09",
+        30.2
+      ],
+      [
+        "Grok 4.1 Fast",
+        "2025-11-19",
+        18.4
+      ],
+      [
+        "Grok 4 Fast",
+        "2025-09-19",
+        17.8
+      ],
+      [
+        "Grok 4.6",
+        "2026-08-12",
+        39.72
+      ],
+      [
+        "Grok 4.5",
+        "2026-07-08",
+        39.28
+      ],
+      [
+        "Grok 4.7",
+        "2026-09-21",
+        null
+      ]
+    ],
+    "accuracy_field": "scores.hle, displayed in API-derived table as HLE Accuracy; null for Grok 4.7 means missing/unscored, not 0. HLE Diamond is a separate field."
+  },
+  "limits": [
+    "The most recent successful complete API body is from Oct 18 and was cached; it is not current at Oct 19 18:58 or a historical maximum.",
+    "A current 403 returned no current rows; it does not show score zero or permanent unavailability.",
+    "Neither retained page nor API snapshot supplies revision history or a complete year-to-date maximum by model/version.",
+    "No official alternate-source review or history was performed in this bounded update."
+  ],
+  "no_valuation": true
+}

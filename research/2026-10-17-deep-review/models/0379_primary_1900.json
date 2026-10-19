@@ -1,0 +1,124 @@
+{
+  "schema": "primary_BanRep379_joint.v1",
+  "created_utc": "2026-10-19T19:00:47.408329+00:00",
+  "own_quote_unread": true,
+  "review_index": 379,
+  "metric": "Decembermeeting change vs rate immediatelybeforeDecember; Oct30intervening. Any nonzero moveNO, no netchangefromcurrentbaseline. Emergencyoutside actionnotitselfcounted; ratebasecouldchange.",
+  "source_bridge": "Lastmajorityhawks/inflation6.29vs3target/Septanalyst6.8 supporttightening; core6.12\u21926.03/12.25nominalrealrestrictive/latestAugISE\u22123.11MoM supportlags/pause. OnepreliminaryactivitymonthnotlinearGDPforecast; fiscal/FX/Ni\u00f1o/reconstructionuncertain. OctEMEnotverified, notinventedconsensus.",
+  "regimes": [
+    {
+      "name": "persistent_inflation",
+      "weight": 0.45,
+      "october": {
+        "increase": 0.7,
+        "hold": 0.28,
+        "decrease": 0.02
+      },
+      "december_given_october": {
+        "increase": {
+          "increase": 0.42,
+          "hold": 0.55,
+          "decrease": 0.03
+        },
+        "hold": {
+          "increase": 0.7,
+          "hold": 0.25,
+          "decrease": 0.05
+        },
+        "decrease": {
+          "increase": 0.35,
+          "hold": 0.35,
+          "decrease": 0.3
+        }
+      }
+    },
+    {
+      "name": "demand_lags_pause",
+      "weight": 0.4,
+      "october": {
+        "increase": 0.25,
+        "hold": 0.7,
+        "decrease": 0.05
+      },
+      "december_given_october": {
+        "increase": {
+          "increase": 0.1,
+          "hold": 0.8,
+          "decrease": 0.1
+        },
+        "hold": {
+          "increase": 0.15,
+          "hold": 0.65,
+          "decrease": 0.2
+        },
+        "decrease": {
+          "increase": 0.05,
+          "hold": 0.55,
+          "decrease": 0.4
+        }
+      }
+    },
+    {
+      "name": "supply_fiscal_FX_shock",
+      "weight": 0.15,
+      "october": {
+        "increase": 0.65,
+        "hold": 0.25,
+        "decrease": 0.1
+      },
+      "december_given_october": {
+        "increase": {
+          "increase": 0.6,
+          "hold": 0.3,
+          "decrease": 0.1
+        },
+        "hold": {
+          "increase": 0.6,
+          "hold": 0.3,
+          "decrease": 0.1
+        },
+        "decrease": {
+          "increase": 0.6,
+          "hold": 0.2,
+          "decrease": 0.2
+        }
+      }
+    }
+  ],
+  "october_latent_marginal": {
+    "increase": 0.5125000000000001,
+    "hold": 0.4435,
+    "decrease": 0.044000000000000004
+  },
+  "december_normal_marginal": {
+    "increase": 0.36665000000000003,
+    "hold": 0.5244000000000001,
+    "decrease": 0.10895000000000002
+  },
+  "cancel_no_decision_before_next_meeting": 0.01,
+  "december_with_rule_fallback": {
+    "increase": 0.3629835,
+    "hold": 0.5291560000000001,
+    "decrease": 0.10786050000000001
+  },
+  "adopted_yes": 0.53,
+  "adopted_no": 0.47,
+  "broad_yes_range": [
+    0.25,
+    0.8
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.38,
+  "selected_no": 0.32,
+  "reserve_reason": "Ordinary10ppmodel/fill allowance plus5pp currentunretrievedEME/preliminaryactivity/fiscalforecast and two-monthpolicy-transition uncertainty. Regimepath probabilitiesareprimaryjudgments, notsampleestimated/independentdirectors.",
+  "sensitivity": "Shift conditionalDecHold\u00b115pp, offsetNOdirections: final38.07\u201367.77. Broader25\u201380 allows alteredregime/board/source specifications; not confidenceinterval.1%cancelbranchsubjective/frozenfallback, not observedfrequency.",
+  "family": "Older349Oct41% is dated12:30/JulyISEbased, notsameDecemberforecast. LatentOctober44.35 here incorporateslaterAugISE; do notaverage withold349orclaimtwoindependentviews. No new349entry/prior/revisionfromthislatentpath.",
+  "catalysts": "Oct30decision/minutes; Oct/NovCPI and activity/expectations/fiscalFXupdates; Dec12\u201318silence/dateclockverify. FuturebidmustbereviewedbeforeOct30, notleftthroughknowncatalyst. EndDateDec18midnight is notofficialmeetingtime.",
+  "source_hashes": {
+    "data/deep_review_20261017/work/0379_facts_1717.json": "81c0eb50d35f02fdf7b227f93eef6418bf12ca55d0e02f48c6fed5bbc620a83b",
+    "data/deep_review_20261017/work/0379_facts_current_1853.json": "b407a637ce3d23fdaa49d33dc44e0f8959957486e3a1b9fa1a535fed7135597a",
+    "data/deep_review_20261017/work/0379_vote_eme_followup_1858.json": "df5343369f98bc2fc8ae05b868e6768424c6ed92e34423ce097e5a59feb95e40",
+    "data/deep_review_20261017/work/0379_primary_reads_1900.json": "3a0690691960efe8dda0c0f8ce0726abee73323e4926430e1b2b8197846332df"
+  },
+  "limits": "No fittedreactionfunction/ratepathconsensus/originalOctsurvey; shocks/preliminaryactivity/revisions; normalDec18settlementbeforeJanuary but postponement/adjudicationcanextend. Weightsnotcalibrated; broadadversecanloseall."
+}

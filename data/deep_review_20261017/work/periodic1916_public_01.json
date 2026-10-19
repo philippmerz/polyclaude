@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "data/deep_review_20261017/work/0378_resume.json",
+      "bytes": 689,
+      "sha256": "0b32bffe568f16568e9c313aac72fda94dceb6206987557c6a44a3091dbf0102"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_economics_1900.json",
+      "bytes": 3617,
+      "sha256": "1fb658c28a9139d33204441d301d540ef15ea5be042f9f51760b66fa53aac7e1"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_facts_1717.json",
+      "bytes": 6055,
+      "sha256": "81c0eb50d35f02fdf7b227f93eef6418bf12ca55d0e02f48c6fed5bbc620a83b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_facts_current_1853.json",
+      "bytes": 3512,
+      "sha256": "b407a637ce3d23fdaa49d33dc44e0f8959957486e3a1b9fa1a535fed7135597a"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_primary_input_1903.json",
+      "bytes": 10805,
+      "sha256": "131e84585acecf4b3f9cda99b3e9247bcb18fe910fbf54adfcab9ba66b260ac2"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_primary_reads_1900.json",
+      "bytes": 1949,
+      "sha256": "3a0690691960efe8dda0c0f8ce0726abee73323e4926430e1b2b8197846332df"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_quote_1900.json",
+      "bytes": 12411,
+      "sha256": "532c9ad16cbe3f2b26ecf93d0c1f551db77c7dbc49abca72a39acd48bdde475b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_resume.json",
+      "bytes": 635,
+      "sha256": "83b4d542fe8384c405e557981da0dca4041befdae44f30731f97afd4cd20c2dd"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0379_vote_eme_followup_1858.json",
+      "bytes": 3748,
+      "sha256": "df5343369f98bc2fc8ae05b868e6768424c6ed92e34423ce097e5a59feb95e40"
+    }
+  ]
+}

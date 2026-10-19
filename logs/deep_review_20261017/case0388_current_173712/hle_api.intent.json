@@ -1,0 +1,1 @@
+{"name":"hle_api","request":{"method":"GET","read_only":true,"scope":"case388 exact public source status/identity","url":"https://dashboard.safe.ai/api/models"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:37:13.489151Z","timing_basis":"call_window"}

@@ -1,0 +1,1 @@
+{"name":"ap_oct17_search_followup","request":{"method":"GET","read_only":true,"scope":"case384 current public source facts; source capture only","url":"https://apnews.com/article/ilhan-omar-justice-department-investigation-search-42c86bdbd54679e974e32ac4a924b402"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:20:27.143951Z","timing_basis":"call_window"}

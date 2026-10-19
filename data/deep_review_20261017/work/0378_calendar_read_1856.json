@@ -1,0 +1,9 @@
+{
+  "schema": "primary_calendar_read378.v1",
+  "read_utc": "2026-10-19T18:56:13.352811+00:00",
+  "source": "https://scvotes.gov/candidates/2026-candidate-information/",
+  "receipt_utc": "2026-10-19T16:46:22.438033Z",
+  "raw_sha256": "1e26c5d810db7c0f9d8b079b0b1f6855164ae4df37327df47657a964cfc5adff",
+  "verified": "GeneralElectionDayNov3,2026; certification no more than10days followingElectionDay; protestdeadlineNov11noon.",
+  "source_inconsistency": "Early-voting line says SundayOct27, which is not a Sunday in2026. Do not adopt that weekday/turnout calendar as current verified evidence. ElectionDayNov3 agrees with Nov4endmetadata; no turnout estimate drawn from the inconsistent line."
+}

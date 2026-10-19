@@ -1,0 +1,38 @@
+{
+  "schema": "finite_review_phase.v1",
+  "updated_utc": "2026-10-19T19:21:41.319496+00:00",
+  "counts": {
+    "completed_valuations": 349,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2278,
+    "base_records": 722,
+    "revisions_written": 64,
+    "active_indices": [
+      382
+    ]
+  },
+  "completed_since_periodic1838": [
+    378,
+    379,
+    380
+  ],
+  "last_completed": {
+    "index": 380,
+    "report": "research/2026-10-17-deep-review/evaluations/0380.md",
+    "model": "research/2026-10-17-deep-review/models/0380_primary_1911.json",
+    "result": "YES7/NO93; bothasksnegativeevencentral; K5 arithmetic not measured-tail licence; noentry."
+  },
+  "next_index": 382,
+  "next_source_pointer": "data/deep_review_20261017/work/0382_resume.json",
+  "active_case_scope": "ExactSep28/Oct5/Oct12/Oct19 displayedOpenRouter sum<575T; literal rules read/facts saved, noforecast orcompletedvaluation; see currentperiodicresume forweeklyfreeze/roundingcautions.",
+  "facts_ready": [
+    379,
+    380,
+    382
+  ],
+  "read_one_case_only": true,
+  "safety": "22UTC Idahoallunfilledpull ANDlightcheck; latestaccount19:17unchanged/financial18:03CSV220/news19:03:41. No newtradingstate.",
+  "goal_turn": "Research made progress through378/379/380 before bounded periodic interruption; no globalblock. Currentperiodicrun endsafterpreservation.",
+  "current_resume": "data/deep_review_20261017/work/periodic1916_RESUME.json"
+}

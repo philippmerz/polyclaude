@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "logs/deep_review_20261017/case0384_followup_1858/usao_dc_news.intent.json",
+      "bytes": 331,
+      "sha256": "11ea2592d9219babb942499c4a39efe2114ea8e486640e8df364b817d52fae87"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_followup_1858/usao_dc_news.receipt.json",
+      "bytes": 947,
+      "sha256": "2842255ed25260c81bea39ffc03e58a91a460708a8c5c8451e9382a5cb947ff5"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.intent.json",
+      "bytes": 373,
+      "sha256": "7d3dc427c67aa182df778891bbad10512248960d6ab255a7d6d2b899bde59a7b"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.receipt.json",
+      "bytes": 876,
+      "sha256": "5714319399deba62a4e149073f323f81f79fea8c507c104e3d63730ba681aeb0"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.intent.json",
+      "bytes": 344,
+      "sha256": "f39b7a37be1f13689cb6907be958220ff8506fb0030c6605ddc92df7a044216e"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.receipt.json",
+      "bytes": 1010,
+      "sha256": "1bbc48441317c1451664781dfca32ad9b6b5da22042fcb16485cff83ce5ff44d"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.intent.json",
+      "bytes": 348,
+      "sha256": "28cc231d3ea5d4163271863b246913b36378b2fda2a2ac2399aa00a34343afd0"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.receipt.json",
+      "bytes": 1019,
+      "sha256": "2b9a89f452387c1533574a85072486ea7e64630cca99b98ef607df48c599a4b8"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0388_current_173712/gamma.intent.json",
+      "bytes": 279,
+      "sha256": "01493b590050e6169b64fd15e2d56f796652baf4e9cc6082768afff99501fb88"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "schema": "public_artifact_hash_shard.v1",
+  "artifacts": [
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/county_candidate_list/candidate_listing.receipt.json",
+      "bytes": 987,
+      "sha256": "f9d3ce6f96fc23422feee08b4de711295cea97edbc50faa7a4cdda9b2f872ab8"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.intent.json",
+      "bytes": 277,
+      "sha256": "218540ba2cc4b524119d1f289f8616ca66ebe28d18f0fe439c92723d19fa8dfa"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.receipt.json",
+      "bytes": 776,
+      "sha256": "37b1ba741fa58fbe26b55588a5104bc340c8017003ae6a7e29d531947153ff9c"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/poll_index.intent.json",
+      "bytes": 290,
+      "sha256": "6369361a6fced61f55d3855ca95972d5ce0fc4d02dfefab2d584a78676d268f8"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0378_freshness_1836/poll_index.receipt.json",
+      "bytes": 853,
+      "sha256": "2f4070c634402099d36007002e69a22862f9bf4ad84da094956d72197f0f081f"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.intent.json",
+      "bytes": 350,
+      "sha256": "3efa4389e7d865b6532bc3d52ae8a32f3daa1b630d176b4e5f5fa03caa1376da"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0379_vote_survey_addendum/sep30_decision_press_release.receipt.json",
+      "bytes": 899,
+      "sha256": "b0740970aecdd60ccef87e911f7c8e0d3574c95efdfc61919e911767d6f51e1a"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_followup_1858/omar_press_list.intent.json",
+      "bytes": 346,
+      "sha256": "ce3e280666a7584f458408c551660b17f197d89df7c2086ca95deb1a803b6624"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_followup_1858/omar_press_list.receipt.json",
+      "bytes": 986,
+      "sha256": "fa89e7100245dfbbd037ad09bf6dec007600fd788a3a81e8db1dde4464c58387"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"usao_dc_news","request":{"call_window_label":"case384_primary_listing_followup","method":"GET","read_only":true,"scope":"case384 public current official press listing only","url":"https://www.justice.gov/usao-dc"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:58:31.946498Z","timing_basis":"call_window"}

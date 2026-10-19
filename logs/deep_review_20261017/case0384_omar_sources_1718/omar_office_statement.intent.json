@@ -1,0 +1,1 @@
+{"name":"omar_office_statement","request":{"method":"GET","read_only":true,"scope":"case384 current public source facts; source capture only","url":"https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:20:26.769758Z","timing_basis":"call_window"}

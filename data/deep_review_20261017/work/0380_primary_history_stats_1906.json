@@ -1,0 +1,31 @@
+{
+  "series_coverage": [
+    [
+      2017,
+      1
+    ],
+    [
+      2026,
+      9
+    ]
+  ],
+  "latest_sa_mom": 1.3433801423297975,
+  "latest_nsa_mom": 1.1136802762028442,
+  "last6_sa_mean": 0.5745069138145783,
+  "last3_sa_median": 0.47029135122733656,
+  "blended_sa_prediction": 0.5223991325209574,
+  "october_seasonal_factor": 1.0012521493336282,
+  "october_factor_range": [
+    1.0,
+    1.001755926251097
+  ],
+  "normal_nsa_mean": 0.6482681876094576,
+  "rolling_revised_history_errors": {
+    "n": 104,
+    "median": 0.01710475839680295,
+    "sd": 0.39932761550717205,
+    "mad_normalized": 0.3781827052875163,
+    "last36_mad_normalized": 0.3768640545474588
+  },
+  "notes": "One-step SA6mean/3median revised-vintage diagnostic, not first-release prediction calibration or actualOctober observation. October seasonality9sameyears/current-vintage\u2014not9independentregimes."
+}

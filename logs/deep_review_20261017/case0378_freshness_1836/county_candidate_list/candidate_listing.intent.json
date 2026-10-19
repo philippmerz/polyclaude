@@ -1,0 +1,1 @@
+{"name":"candidate_listing","request":{"method":"GET","read_only":true,"scope":"official county election candidate list for statewide 2026 general election","url":"https://www.spartanburgcounty.gov/DocumentCenter/View/106526/42110326-Spartanburg-County-Partisan-Candidates"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:52:46.266677Z","timing_basis":"call_window"}
