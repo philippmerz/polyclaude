@@ -1,0 +1,42 @@
+{
+  "schema": "tick1648_alert_followup_shard.v1",
+  "reviewed_utc": "2026-10-19T17:28:42.779089+00:00",
+  "rows": [
+    {
+      "alert_id": "3c795ec8c6202c3c971cfae36f9cbf1ab53eab40",
+      "ts": "2026-10-19T17:09:43Z",
+      "line_sha256": "f42aae50a7cbec2e2a95db9626e9e8a74bb05a4edffb842bc808dae2afba0e95",
+      "title": "How gas prices have changed in Atlanta in the last week - WSB-TV",
+      "url": "https://news.google.com/rss/articles/CBMif0FVX3lxTE1udk1pNXgyZkltNm1MSURPSld1Rk9TeWpPUmN1RXB1UVBwWVFHOHFFUko1bzdNMmt6R3ZOQzBzV0xkMmp4NTlZbGMxTkxOOEIwRVRXY01pbDluSmpKTDFCbnRCSkZWaWdzUEVGM0FtUXV5OXE0NVdMNE9MR0lNRTTSAZMBQVVfeXFMT1g3WHNzZERGOXV0NEJCekZpWXBqc0tLWHRTZHo5NmRwbzVmNUxiX2M0UWxFMHRnTy13QnJJbVV6ODZhczdDMXBhUTZOZUgtLVA5dnY3aGNNLVpRVFlJdmRsNkRyenVNWEFVVkhMY0REMXRnSE1WT2theHBYTkpiVzdQdUhhTEFYb0pMalRqamFmZG9B?oc=5",
+      "classifier_relevance": "research_only",
+      "impacts": [],
+      "primary_decision": "Research-only headline; no identified current holding or pending-BUY criterion/catalyst channel. No valuation or rejection credit; body/date not verified."
+    },
+    {
+      "alert_id": "8fef400abb204f83452ad0808a7cebde2c419ee9",
+      "ts": "2026-10-19T17:15:02Z",
+      "line_sha256": "fb9485927d9d1bf07aac47c53b22d7c36ccb6272001842abe4410b48f5a6ee2a",
+      "title": "Abdul El-Sayed Schools Heckler Who Questioned His Loyalty to the US - Truthout",
+      "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxOTjRmOHhUMDhGWXRoUHk0cVF5ZUdKa2dQTC16cUZXc0xIVE92MHJESU54cjJyUHctbTN6NXR3azhxazE1UU9OOVlrbVUyWjZPWTlvMlBab1NaV2ZBRkFaQVVQVTFwTVotTUNKbFo0blZxc1NmSzVGbndDemJ1anY4M2EyQnBPT2t4RjNKRFJlZHR3bTdzbXVhelNwSlZtZEE?oc=5",
+      "classifier_relevance": "minor",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Public campaign interaction provides limited signal on El-Sayed’s political positioning, but does not materially change the Democrats’ general-election prospects."
+        }
+      ],
+      "primary_decision": "Campaign-exchange coverage lead; no poll, ballot, candidate withdrawal or quantified general-election update established by this alert. Do not count syndicated commentary as independent observations. No prior/order change; publisher body/date not newly verified."
+    },
+    {
+      "alert_id": "ba00c0e0b43c502c5e2729bf677943837ff4a8f0",
+      "ts": "2026-10-19T17:15:07Z",
+      "line_sha256": "6aa2d2746cf23940be248accae83a43775d2134a2c766e2a88637832f5ae7821",
+      "title": "Lionel Messi turned football fame into a charity mission, helping raise €37 million for children’s cancer - The Times of India",
+      "url": "https://news.google.com/rss/articles/CBMiygJBVV95cUxNbjd5M0gwbVhad01JajVDSk1lZEFPSG1SUlQxNGtlRXp6QTYzbFFUUTcxdnE5QzN5VnBWd2ZjUk01bzVLczE1Q0tIZ09uMmhxYWZVMEFOODVvOVhpSVlhcGlqTDhqeUhVU1dsbk96SHJJZU9QRDRhYVVNR2ZnelhUZWgxZ2ZxMTVUa01YcFE3bGxsa0psaXZCWGdtbGkzVXYtV2hYUVc1bmdfOS1sbWVmS3JnNWdUemc3a3hEZnY5TEtVZUxEYkRicjc4ajZXSjNZX0NiakJvVEVXal9odXJHRVBTUjZWME9PMkF1VF9WamdpUDZTelhaZk5zNno3T3VRa0FhSXlwTjRXb3VscVJfQ3FSeFUzWnJTaDZ6b2Q1U0QxNWtmTkFaMGZZc3locWNjckdNZkc1RUNld0JMYXY0M19ULU5XRXd2ZUHSAc8CQVVfeXFMTzRsTnJ6U0xEdjJYRUVYT3Z1ako2dk15WG5pSHJFbzRvbjl0Y2R5VUVyQURqN1lMeEdGTk03N2htZnhONFhBbHVtYkxoTFU4NWhpaFJLT21aTDNuZDBaWXU3NVpOeGN1SWFvMmFodnEtN1JVUUpkZE9TZkVXSDlpVEpCUE9xTE9PS3RObzJkZDZWdkQxYzZtWGpPQ2VEY0RESG5NOE1jekgxNnRudm8xYWNEM29SaUplRHdPU2VGWDljS3dBQTNWRWpPTzZXTUhyVXBDcWtnZlF1eFZaY3hKaXo3TXI5Ry0ySjZFdXBHOG9IdHZLVlpwZVhEaFg3WkRTbmgwaTY2TlZtRy1nUnBXOHM3YzhJYVVDQ1h2X1lIOTk1Ym9zUGUzX3JKbl9sWGVDUFY4T1NTOGJTUlhBMTh2YVVseDNhQXRRV0FRM29mWVk?oc=5",
+      "classifier_relevance": "research_only",
+      "impacts": [],
+      "primary_decision": "Charity-profile headline supplies no Google2026 GlobalAthletesTop5 result; body/date not verified. No material criterion update established."
+    }
+  ]
+}

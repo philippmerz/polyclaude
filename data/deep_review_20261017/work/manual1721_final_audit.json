@@ -1,0 +1,25 @@
+{
+  "schema": "manual1721_final_preservation_audit.v1",
+  "verified_utc": "2026-10-19T17:34:55.492763+00:00",
+  "public_manifest_entries_rehashed": 127,
+  "manifest_shards_rehashed": 11,
+  "sanitized_quote_public_economics_reproduced": true,
+  "public_quote_replay": "Prior closeout audit successfully extracted source_quote into temporary JSON and reproduced sides/fees/Gamma/book clocks before subsequent link/pattern checks; wrapper provenance retained and temporary replay removed.",
+  "private_original_untouched_not_staged": true,
+  "maintained_documents_link_checked": 6,
+  "handoff_source_hashes_checked": 11,
+  "credential_pattern_flags_unresolved": 0,
+  "benign_http_entity_tag_matches": [
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.receipt.json",
+      "field": "headers.etag",
+      "reason": "Public official HTTP response entity-tag; not an operator/provider credential."
+    },
+    {
+      "path": "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.receipt.json",
+      "field": "headers.etag",
+      "reason": "Public official HTTP response entity-tag; not an operator/provider credential."
+    }
+  ],
+  "scope": "Closeout-only audit; no new financial observation or execution."
+}

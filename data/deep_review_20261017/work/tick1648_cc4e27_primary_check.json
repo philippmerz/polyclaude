@@ -1,0 +1,13 @@
+{
+  "schema": "tick1648_cc4e27_primary_receipt_check.v1",
+  "verified_utc": "2026-10-19T17:29:22.914841+00:00",
+  "source_gap_file_sha256": "77827986dbd5d042cabcdeecced743b2666deedf0955e0ed4d9cee1f4b11e9a5",
+  "receipt_raw_and_gzip_hashes_match": true,
+  "actual_received_utc": "2026-10-19T17:27:29.821189Z",
+  "status_code": 200,
+  "final_host": "consent.google.com",
+  "private_consent_bytes_not_for_public_staging": true,
+  "decision_file": "data/deep_review_20261017/work/tick1648_final_alert_followup.json",
+  "no_trade": true,
+  "verification_note": "Legacy receipt uses body_path relative to receipt directory and response_status. Two initial local metadata/path lookups failed before this successful check; no extra HTTP request."
+}

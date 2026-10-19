@@ -1,0 +1,13 @@
+{
+  "review_index": 382,
+  "phase": "FACTS_ONLY_COMPLETE; valuation pending",
+  "source_paths": [
+    "work/0382_facts.json"
+  ],
+  "source_pointers": [
+    "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart"
+  ],
+  "unit_sha256": "26ecb0145c7a97c5338be9aa86514fc3db5bf0d7a1d7d305d91f81d9c5c4af8d",
+  "frozen_conditionId": "0xb6ae15a0ea806a324647b4155680e176c0340e0f4db48a5f139fb8675830ce2c",
+  "criteria_sha256": "08348899964ba4703d02142c16ec4d9077d30b204d6f3bad1be4895fdd77d869"
+}

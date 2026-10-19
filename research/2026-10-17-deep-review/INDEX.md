@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T16:48:53.410493+00:00
+Updated: 2026-10-19T17:21:13.173190+00:00
 
-**339 valuations saved; first milestone100:** 339 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2289 pending.
+**340 valuations saved; first milestone100:** 340 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2288 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -377,6 +377,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |363|[Will Brighton & Hove Albion FC win on 2026-10-18?](evaluations/0363.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |364|[Will Tesla be the largest company in the world by market cap on October 31, 2026?](evaluations/0364.md)|valued|Noentry: YESsmallcentralpositivebutactual20ppstressnegative; NOaskabsent. RemoteNObidrequiresfreshconditional-fill/earnings/riskreview, notautomatic.|
 |365|[Will the price of Ethereum be above $2,500 on October 18?](evaluations/0365.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|366|[Will OpenAI announce another Millennium Prize solution by December 31, 2026?](evaluations/0366.md)|valued|No entry. YEScentralpositivebutfails25ppreserve; NOnegativeevencentral. Competitive makerpricingalsofails; remoteceilingnotorderauthority. Cash/currentheldriskandfourBUYcommitmentsremainalternatives.|
 |369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |375|[European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri](evaluations/0375.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -723,5 +724,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 366

@@ -1,0 +1,85 @@
+{
+  "schema": "deep_review.case0382_facts.v1",
+  "review_index": 382,
+  "market_id": "5326399",
+  "conditionId": "0xb6ae15a0ea806a324647b4155680e176c0340e0f4db48a5f139fb8675830ce2c",
+  "criteria_sha256": "08348899964ba4703d02142c16ec4d9077d30b204d6f3bad1be4895fdd77d869",
+  "literal_scope": "Resolution sums displayed Top Models weekly totals for labels Sep28, Oct5, Oct12, Oct19, 2026; exact sum below 575T is YES. Weeks run Monday 00:00–Sunday 23:59 UTC; each label can update until following week is first displayed. At first Oct26 display lock, fallback Oct30 23:59 ET. Boundary resolves to higher bracket.",
+  "source": {
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "status": 200,
+    "receipt": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt.json",
+    "body_gzip": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.body.json.gz",
+    "receipt_received_utc": "2026-10-19T17:01:42.435545Z",
+    "http_date": "Mon, 19 Oct 2026 17:01:42 GMT",
+    "cachedAt_utc": "2026-10-19T16:59:52.776Z",
+    "cache_age_seconds": "174",
+    "raw_sha256": "4cd28a57ac2a7a91387724b69c926b89c8994fc46637dfe4231423798adcd6bb",
+    "gzip_sha256": "b867da1d57971c777fa725eaa84eb2bfe80baa9974d399aad6c17db1d642b7ed",
+    "raw_bytes": 24668
+  },
+  "observed_chart_rows": [
+    {
+      "week_label_utc_monday": "2026-09-28",
+      "series_count_including_Others": 10,
+      "raw_api_sum_tokens": 165856049857563,
+      "raw_api_sum_T": 165.856049857563,
+      "Others_tokens": 53522124129984,
+      "Others_T": 53.522124129984,
+      "is_partial_at_capture": false
+    },
+    {
+      "week_label_utc_monday": "2026-10-05",
+      "series_count_including_Others": 10,
+      "raw_api_sum_tokens": 171842501724714,
+      "raw_api_sum_T": 171.842501724714,
+      "Others_tokens": 66173540545806,
+      "Others_T": 66.173540545806,
+      "is_partial_at_capture": false
+    },
+    {
+      "week_label_utc_monday": "2026-10-12",
+      "series_count_including_Others": 10,
+      "raw_api_sum_tokens": 164043985914931,
+      "raw_api_sum_T": 164.043985914931,
+      "Others_tokens": 67468271267061,
+      "Others_T": 67.468271267061,
+      "is_partial_at_capture": false
+    },
+    {
+      "week_label_utc_monday": "2026-10-19",
+      "series_count_including_Others": 10,
+      "raw_api_sum_tokens": 16617272842070,
+      "raw_api_sum_T": 16.61727284207,
+      "Others_tokens": 6447411424271,
+      "Others_T": 6.447411424271,
+      "is_partial_at_capture": true
+    }
+  ],
+  "arithmetic": {
+    "completed_first_three_labels_raw_sum_T": 501.742537497208,
+    "fourth_label_Oct19_partial_T": 16.61727284207,
+    "four_label_raw_sum_now_T": 518.3598103392779,
+    "interpretation": "The first three rows are past completed weeks but remain subject to OpenRouter updates until the Oct26 label first appears. Oct19 is partial and not a full-week total; no extrapolation made."
+  },
+  "display_semantics": {
+    "prior_official_ui_capture_date": "2026-10-18",
+    "receipt_index": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/receipts.json",
+    "screenshot_oct5": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct5_probe.png",
+    "screenshot_oct12": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct12_probe.png",
+    "observed": "The Oct5 hover tooltip displayed Total 172T; Oct12 screenshot displayed Total 152T and Weekly Pace 165T. These show UI rounding/pacing treatment at that earlier capture, not current Oct19 displayed totals. Current captured API raw Oct12 sum is 164.043985914931T; the older UI screenshot is not current evidence for that label. Exact Oct19 current rendered tooltip was not captured, so raw API precision is not asserted to be the final displayed/settled value."
+  },
+  "related_existing_research": [
+    "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md",
+    "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.json",
+    "data/deep_review_20261017/work/tick1648_openrouter_facts.json",
+    "data/deep_review_20261017/work/delayed1959_openrouter_facts_0340.json"
+  ],
+  "limitations": [
+    "No future target labels Oct26, Nov2, Nov9, Nov16 appear in this captured response.",
+    "No measurement cutoff timestamp is exposed by the API.",
+    "The UI screenshot is dated Oct18 and its Oct12 display conflicts with the updated Oct19 API series; it cannot identify the final display for a market that resolves later.",
+    "No forecast, probability, or market quote is included."
+  ],
+  "assembled_utc": "2026-10-19T17:17:25Z"
+}

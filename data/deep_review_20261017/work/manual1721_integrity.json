@@ -1,0 +1,30 @@
+{
+  "schema": "manual1721_research_integrity.v1",
+  "verified_utc": "2026-10-19T17:26:17.447938+00:00",
+  "base_records_verified": 712,
+  "revision_chain_verified": 62,
+  "effective_counts": {
+    "blocked_after_review": 8,
+    "excluded_factual": 364,
+    "valued": 340
+  },
+  "pending": 2288,
+  "next": 367,
+  "active": [],
+  "ledger_prior_prefix_preserved": {
+    "bytes": 3268070,
+    "sha256": "49393a6ae5942e3b480cb08fff1169db7c525cc858b57c24aeccf16fc85b007e"
+  },
+  "new_case": {
+    "index": 366,
+    "report_sha256": "a5b66c1b9334b2a773fefc6090eeeb694da255f3f43e4461b82931a4c9914284",
+    "criteria_sha256": "e07d9e88853aaec08332d6a47dad2bd58d9dcfd078e66607a5b1a82b4b01b5f5",
+    "model_sha256": "1c0803a9d318a0aca5cee684c7653d381a58133ce5e765cd5217544282349e93",
+    "quote_sha256": "9c2c31c2ca1383a2cb4e2212f0072ea547530d316baed0831767018fcd91a68a",
+    "both_side_offline_economics_reproduced": true,
+    "report_links_resolve": true
+  },
+  "network_calls": 0,
+  "financial_state_mutations": 0,
+  "scope": "Read-only verification; no ledger rebuild, new price request or execution authority."
+}

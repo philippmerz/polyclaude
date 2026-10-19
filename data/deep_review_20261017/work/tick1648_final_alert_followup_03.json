@@ -1,0 +1,42 @@
+{
+  "schema": "tick1648_alert_followup_shard.v1",
+  "reviewed_utc": "2026-10-19T17:28:42.779089+00:00",
+  "rows": [
+    {
+      "alert_id": "efb0f341e59fd96cb656cddcd09386f45bc7308f",
+      "ts": "2026-10-19T17:20:38Z",
+      "line_sha256": "8d8ae773cb9b4e4dac2e8fdfbc95d5ef699ce1779bfd1a365b9ae96dfcb4ff22",
+      "title": "Anthropic Makes Surprising Share Move Ahead of IPO - TradingView",
+      "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPbzh3dTlzdDFIcklCQjR2dTQ4YWZVa0UwX1VYcEpKUkdOaW5zZUJQQkxscmZVTUpPdlAwVVMxcElQS2xtckVSWjR1VXJ0aEpXQzRlYzl2Tk9ZWGprQkRiamtYaU9TVnNNeEp3UGtNNkdGNkJtSFA4S292TEhDLWVaS0J3ZGR4SDdPYlRKNWg0WmlkY1EtaGRpVkQtVHhvQTNBTUxfLU9MYVRPTGlCTXpB?oc=5",
+      "classifier_relevance": "research_only",
+      "impacts": [],
+      "primary_decision": "Research-only headline; no identified current holding or pending-BUY criterion/catalyst channel. No valuation or rejection credit; body/date not verified."
+    },
+    {
+      "alert_id": "5947038b8969b452f7646dd5346569dd2196a071",
+      "ts": "2026-10-19T17:20:53Z",
+      "line_sha256": "3d9d49783a79308eac3d059d6efd20b6399e754408e4f2cbf53b664d19a22ab5",
+      "title": "\"No hay intención de mantener viva su memoria\": cómo se va difuminando la figura de Maduro en la nueva Venezuela de Delcy Rodríguez - El Nacional",
+      "url": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxOajRHV0l3Uk5sbW1GaXV4TmxXZFNPbndHWDFmUWdwX0tMeEtyVTFzVTMzSDBWUjRHNjNjMG5nc0tLR2ExQmd1SlhjWnVVMVI3Yl9EdXQ2d3I1SXF6clBnU2ZMblFJcElTTVZYSm1IQ0ZIaGJ2QkFEWkoxLUVFeEJlYXVUc1dwZU1ubk00VnJDc0dXcTJYQnhmdFcyX01BRkdSaTNYeFpQeEI4RFRhUFFsX1dMNW0wcU05UHl3OW5hbk9iQ1dxMHF3cUZZTXgyaXRGSDh5UTRLaU1OTmZZQkRodDRWVl83QzJQeDFoSjhlYUN2RV9DRjE0?oc=5",
+      "classifier_relevance": "research_only",
+      "impacts": [],
+      "primary_decision": "Research-only headline; no identified current holding or pending-BUY criterion/catalyst channel. No valuation or rejection credit; body/date not verified."
+    },
+    {
+      "alert_id": "cc4e27e2f23386ca343375ff1973816baa2770d4",
+      "ts": "2026-10-19T17:26:14Z",
+      "line_sha256": "76ccb2e13ab54620f2dd8eba9660efd5b91b77e3a4372572b6c967509c65b0ec",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - USA Today",
+      "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMlA3UFJGdzVjcVd5T1Zld2Y3WFNiaC1FUEJ2OXRERDkyS2RwM2xRdm5vNzF4M3Ryc0ZYOWVuODJBbWJTcWFJaVdYaTAtZWl5YzJkcWdzWVB1OURpRmxteUQtbTJQLWo4RDRtQk9POTcybl83T0sycVJKUlZCdXdnRU1FQ3pXNkpwY3BGTXlNby1Ndmo5TWJxSkxwclhrck82LU9rTUhKWHhEWjAzVW5wcmJlcEhBa00?oc=5",
+      "classifier_relevance": "portfolio_material_critical",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "El-Sayed’s disavowal may reduce controversy around his candidacy, modestly pressuring the thesis that Democrats lose Michigan."
+        }
+      ],
+      "primary_decision": "MATERIAL classifier reviewed. USA Today body/date remains inaccessible after one ordinary Google redirect; public CNN syndication corroborates already-covered Caro disavowal exchange, but does not prove USA Today identical. That body has a publication/Sunday-reference chronology inconsistency; retain gap. No newly measured voter response, poll or ballot change established. Disavowal could help Democratic nominee and hurt held5NO; do not reverse sign or count recurring headlines independently. Judgment remains NO44/selected34 with broadNO20 adverse to hold, unchanged small accepted loss risk; no numeric-prior/order/addition."
+    }
+  ]
+}

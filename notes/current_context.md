@@ -1,22 +1,22 @@
 ---
-reviewed_at: "2026-10-19T17:12:01.717145Z"
+reviewed_at: "2026-10-19T17:33:18.838355Z"
 valid_until: "2026-10-19T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: edcae9e5d0a7a10c75378b4692bedb58479dce9b082358f9ba9276fec0236450
+  README.md: f6033f457f5f6576e87bab081fb9e833a224d7a8e75290b68509f9c227f02177
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: d97a3109d43d51dd8befc136cf676197187ac6bead04e1e3b91f01e6810e8a3f
+  notes/backlog.md: 26d82a52326574bf8dc29ea3f49789815bda900da48aad78f2d375842926076a
   notes/resting_orders.md: 5cfeb525d70e4f0acfb03739f62bf641c93e213faff7a2cf3554937e818266dc
-  notes/journal.md: fd55566c6d4e5e7c9ff29ade404571793d85ec5f493689e26fba243ac3af8776
+  notes/journal.md: a854826a712d870f4051ef512c8044f200c525c3e7cf222c7207ff550c581d06
 ---
 ## Resume
 
-**339valued/8blocked/364factual/2,289pending;711base+62revisions,active/next366.** [Checkpoint](deep_review_checkpoint.json) · [small research phase](../data/deep_review_20261017/work/manual1647_RESUME.json) · [case366 facts pointer](../data/deep_review_20261017/work/0366_resume.json).364saved/noentry.366/367/368/370/371/372/374/378facts only;366primaryp/economics pending. Initial355/356leads withdrawn before orders. Canceled bids stay closed.
+**340valued/8blocked/364factual/2,288pending;712base+62revisions,next367/noactivecase.** [Checkpoint](deep_review_checkpoint.json) · [small phase](../data/deep_review_20261017/work/manual1721_RESUME.json).366saved/noentry; thirteen pending cases have facts only. Initial355/356leads withdrawn beforeorders. Canceled bids stay closed.
 
 Native goal was active at preceding interactive checkpoint; bounded checks made no lifecycle change or idle follow-up. Continue finite research in its authorized context. Notify Telegram if global progress becomes blocked; individual source gaps do not stop queue. Recovery1269 already delivered.
 
@@ -33,7 +33,7 @@ Orders17:02:19.678163–19.799590UTC/positions17:02:19.810067–20.000595UTC HTT
 - RetainMI5NO/Messi5YES/OR5NO/Whale6NO; Claritywhole29/29only. Noadd/newmaker/prior/order/trade. Selected terminal1.70/2/3.65/2.5261 vsfresh17:02indicative net1.458/1.20312/3.00242/.27429. Broadadverse20%ordinary/2%Whalefavor sale; fullbinaryloss possible. No recovery claim, hidden-info maker-at-fair or automaticmidpoint/rhoKellyadds. [Primary/joint risk](../data/deep_review_20261017/work/tick1648_root_risk.json).
 - MI is USSenate. Messi is Google2026GlobalAthletesTop5/fallbackMar31’27. OR uses displayedOct26/Nov2/Nov9/Nov16 totals, NOoutside[725,775). Current17:01chart/Age174: Oct12completed164.043985914931T; Oct19partial16.617272842070T, no targetweek/cutoff. ExactGamma/fees112/210/299/1838match17:02; no execution certificate.
 - Whale: finaldomesticOct16–18strict<8m; exactly8mFINALpaysNO. ReusedNumbers16:53:37.258632/Mojo16:53:37.965650 still8mESTIMATE.49b78…/7dc141…global17.5m notdomesticfinal; Yahoo body/date inaccessible. No previewdoubleaddition. CopiedNumbers17:01clockcorrected, notfreshrequest. [Sources](../data/deep_review_20261017/work/tick1648_whalefall_facts.json).
-- MI2f1…WWMTbody/pub/eventunverifiedatconsent17:03:32; ffa125…sameOct18NewsNationURL/ID, reusedcappedAOLbodyOct18pub/update/Oct17exchange. No measuredpoll/ballot/withdrawal inferred. Timesd572…originalpoll/publishergap remains; boundedsearchdoesnotproveabsence. [Michigan](../data/deep_review_20261017/work/tick1648_michigan_facts.json). NY01WLIWbody/dategap and datedNewsday/officialFEC totals remain; pending10YES12c/$1.20 unchanged. Newsreviewthrough16:48:24UTC.
+- MI2f1…WWMTbody/pub/eventunverifiedatconsent17:03:32; ffa125…sameOct18NewsNationURL/ID, reusedcappedAOLbodyOct18pub/update/Oct17exchange. No measuredpoll/ballot/withdrawal inferred. Timesd572…poll/publishergap remains. NY01WLIWbody/dategap/detailedFECsource unchanged. Nine later rows reviewed through17:26:14: cc4e27USAbody/date inaccessible; CNNsyndication matches knownCaroexchange but chronology is imperfect, no new measured electoral update. MI5NO/prior unchanged. [Follow-up](../data/deep_review_20261017/work/tick1648_final_alert_followup.json).
 - Clarityconditional29floor/58middle vs24.94CLIexit/.20fee, wholepaironly. FirstqualifyingfinalSenatepassage, notcloture/proforma. Oracle/venue/systemcanbreakfloor. Jointbookkeeping allordinary+fourbidslose/pair29→176.62; pair0→147.62, otherassetsconstant/no calibratedjointprobability.
 
 ## Operations and next boundary

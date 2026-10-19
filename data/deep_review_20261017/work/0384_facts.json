@@ -1,0 +1,80 @@
+{
+  "schema": "deep_review.case0384_facts.v1",
+  "review_index": 384,
+  "market_id": "5609932",
+  "conditionId": "0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c",
+  "criteria_sha256": "1e7b54110de2f4cdaf0f59d7d4a142df55c0201d2c214ee3ee73fea34a33debd",
+  "question": "Ilhan Omar arrested by December 31, 2026?",
+  "creation_window_start_utc": "2026-10-12T15:49:20.225537Z",
+  "endDate_utc": "2027-01-01T04:59:00Z",
+  "identity_status_capture": {
+    "received_utc": "2026-10-19T02:55:44.149777Z",
+    "http_status": 200,
+    "identity_exact": true,
+    "active": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "raw_sha256": "65518f603d9bd7a1fc32e2ffa37bc96cee5bc7c4eaa152ffa9916c6cc261c3d5",
+    "gzip_sha256": "db8543a7cf289fb24e00dd0d7225cc269599fe51e1b4cefb61d91bdc04fa010d",
+    "receipt": "logs/deep_review_20261017/terminal_status_batch_0305/0384_gamma.receipt.json"
+  },
+  "rule_scope": "A YES requires Omar herself to be taken into physical custody after market creation and by Dec31 ET, plus criminal booking/processing, custody under a criminal warrant/charge/indictment, holding for criminal proceedings, or transport to law-enforcement center. Warrant issuance, charge without custody, search, brief detention, interview, witness/protective/medical custody alone do not qualify.",
+  "dated_facts": [
+    {
+      "date": "2026-10-12",
+      "source": "Omar House office statement",
+      "fact": "The official page, dated Oct12, describes a DHS raid/search at her home and issues a statement following it. It does not state she was arrested or taken into custody. This is a search event, not evidence by itself of qualifying physical custody."
+    },
+    {
+      "date": "2026-10-17",
+      "source": "AP article rendered by web reader; ordinary direct HTTP GET returned 403",
+      "fact": "AP reports Omar’s lawyers asked DOJ to return property seized in an Oct12 search of her Washington home; DOJ spokesperson said attorneys and law-enforcement partners complied with court orders. AP separately reports subpoenas. Its article describes search/seizure/investigation, not Omar being arrested, booked, transported, or held for criminal proceedings. The AP direct-fetch body was not retained because the GET returned 403; do not treat that as universal source absence."
+    },
+    {
+      "date": "2026-02-25",
+      "source": "Omar House office statement",
+      "fact": "An official page says Aliya Rahman—not Omar—was arrested during the State of the Union speech. This is a different person and predates this market’s Oct12 creation window."
+    }
+  ],
+  "source_captures": [
+    {
+      "publisher": "U.S. House office",
+      "url": "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+      "status": 200,
+      "started_utc": "2026-10-19T17:20:26.769758Z",
+      "received_utc": "2026-10-19T17:20:27.131572Z",
+      "raw_sha256": "f56d2257aae429b165b508cba229cc2f17fd5971360c5414d80b9ffddbbca369",
+      "gzip_sha256": "566483db6a983bfbbbbe31705ffc85f40ca59841127fd26f2b806ca8f9099328",
+      "receipt": "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.receipt.json",
+      "body": "logs/deep_review_20261017/case0384_omar_sources_1718/omar_office_statement.body.json.gz"
+    },
+    {
+      "publisher": "Associated Press",
+      "url": "https://apnews.com/article/ilhan-omar-justice-department-investigation-search-42c86bdbd54679e974e32ac4a924b402",
+      "status": 403,
+      "started_utc": "2026-10-19T17:20:27.143951Z",
+      "received_utc": "2026-10-19T17:20:27.256409Z",
+      "raw_sha256": "30eec8c3920ff2e574d8c77475e27a99bece70e1a9877248943ecd75040786d8",
+      "gzip_sha256": "4625bd7cc60307f824894d263ff49d3918ea5069c174a6006cbe629e38a0a9c5",
+      "receipt": "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.receipt.json",
+      "body": "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.body.json.gz"
+    },
+    {
+      "publisher": "U.S. House office",
+      "url": "https://omar.house.gov/media/press-releases/rep-omar-statement-arrest-aliya-rahman",
+      "status": 200,
+      "started_utc": "2026-10-19T17:20:41.944087Z",
+      "received_utc": "2026-10-19T17:20:42.422317Z",
+      "raw_sha256": "a294f306fe859776a61b122770e06f0697be267823fdff10336dfc0ddfcf3a1b",
+      "gzip_sha256": "87f978746ba8f64b8e08da78f4864f43e59ffc2fb223ff8116631d312bf26535",
+      "receipt": "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.receipt.json",
+      "body": "logs/deep_review_20261017/case0384_omar_sources_1721/aliyarahman_omar_statement.body.json.gz"
+    }
+  ],
+  "coverage_limits": [
+    "The bounded search found reporting about a home search, property seizure, investigation and subpoenas, but no source establishing a qualifying Omar custody event after 2026-10-12 15:49:20.225537Z. This is not a proof that no such event occurred or that no records exist.",
+    "The exact time of the Oct12 home search was not established in captured sources; regardless, search alone is not a qualifying arrest under this rule.",
+    "Targeted official-site/web search results were not a comprehensive docket or law-enforcement-record search. AP article body was web-rendered but direct HTTP returned 403."
+  ],
+  "assembled_utc": "2026-10-19T17:21:02.734857Z"
+}

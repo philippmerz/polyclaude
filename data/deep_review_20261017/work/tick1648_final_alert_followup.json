@@ -1,0 +1,52 @@
+{
+  "schema": "tick1648_final_alert_followup.v1",
+  "reviewed_utc": "2026-10-19T17:28:42.779089+00:00",
+  "source": "notes/news_alerts.jsonl",
+  "source_bytes_at_read": 860313,
+  "source_sha256_at_read": "a46f2e08eafe62872c85c817391c868a0fdcff582dd8e3d96305a4030c809056",
+  "after_prior_watermark": "2026-10-19T16:48:24Z",
+  "reviewed_through": "2026-10-19T17:26:14Z",
+  "source_units": [
+    "work/tick1648_cc4e27_source_gap.json",
+    "work/tick1648_cc4e27_receipt_index.json",
+    "work/tick1648_cc4e27_browser_index.json"
+  ],
+  "scope": "Bounded closeout; nine later leads reviewed. New USA Today request gap checked; no current account/book refresh or financial action. Original three requested alerts retain completed source/risk review. No Telegram warranted by repeated/unverified campaign coverage.",
+  "counts": {
+    "later_rows_reviewed": 9,
+    "material_classifier_rows": 1,
+    "verified_material_portfolio_changes": 0
+  },
+  "shards": [
+    {
+      "path": "data/deep_review_20261017/work/tick1648_final_alert_followup_01.json",
+      "bytes": 3344,
+      "sha256": "c6bd334213b7b8e0458a56b1786d84265c3a9723570c8a225d8bd39c1a9961b8",
+      "alert_ids": [
+        "b7d7304bb8b1edd5939ba8ce8726293b73eadaa8",
+        "b7d66c7d416600a9e53306c7d67bbd2f20674b8f",
+        "7b9d0cacf9e77ddf73170a67edd77bd18e3ca992"
+      ]
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1648_final_alert_followup_02.json",
+      "bytes": 3896,
+      "sha256": "af5b138897cd6c9caeb48a5cf9a61364a7f751b17c5f638c706b13fcfe2d4fdc",
+      "alert_ids": [
+        "3c795ec8c6202c3c971cfae36f9cbf1ab53eab40",
+        "8fef400abb204f83452ad0808a7cebde2c419ee9",
+        "ba00c0e0b43c502c5e2729bf677943837ff4a8f0"
+      ]
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1648_final_alert_followup_03.json",
+      "bytes": 3626,
+      "sha256": "d2eda20fc278605e5408ff70023c502152345e46f5545f4b9d8bfcddd9d289e9",
+      "alert_ids": [
+        "efb0f341e59fd96cb656cddcd09386f45bc7308f",
+        "5947038b8969b452f7646dd5346569dd2196a071",
+        "cc4e27e2f23386ca343375ff1973816baa2770d4"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "verified_utc": "2026-10-19T17:28:00.904241+00:00",
+  "checks": [
+    {
+      "index": 366,
+      "resume_output_bytes": 5928,
+      "returncode": 0
+    },
+    {
+      "index": 367,
+      "resume_output_bytes": 5288,
+      "returncode": 0
+    },
+    {
+      "index": 368,
+      "resume_output_bytes": 3747,
+      "returncode": 0
+    },
+    {
+      "index": 370,
+      "resume_output_bytes": 5010,
+      "returncode": 0
+    },
+    {
+      "index": 371,
+      "resume_output_bytes": 6366,
+      "returncode": 0
+    },
+    {
+      "index": 372,
+      "resume_output_bytes": 4528,
+      "returncode": 0
+    },
+    {
+      "index": 374,
+      "resume_output_bytes": 4483,
+      "returncode": 0
+    },
+    {
+      "index": 376,
+      "resume_output_bytes": 4159,
+      "returncode": 0
+    },
+    {
+      "index": 378,
+      "resume_output_bytes": 5147,
+      "returncode": 0
+    },
+    {
+      "index": 379,
+      "resume_output_bytes": 5977,
+      "returncode": 0
+    },
+    {
+      "index": 380,
+      "resume_output_bytes": 4985,
+      "returncode": 0
+    },
+    {
+      "index": 382,
+      "resume_output_bytes": 4943,
+      "returncode": 0
+    },
+    {
+      "index": 383,
+      "resume_output_bytes": 5907,
+      "returncode": 0
+    },
+    {
+      "index": 384,
+      "resume_output_bytes": 5300,
+      "returncode": 0
+    }
+  ],
+  "network_calls": 0,
+  "scope": "Offline exact-rule/selected-source pointer validation only; pending facts earn no valuation or rejection credit."
+}

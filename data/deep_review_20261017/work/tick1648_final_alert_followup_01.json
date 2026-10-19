@@ -1,0 +1,48 @@
+{
+  "schema": "tick1648_alert_followup_shard.v1",
+  "reviewed_utc": "2026-10-19T17:28:42.779089+00:00",
+  "rows": [
+    {
+      "alert_id": "b7d7304bb8b1edd5939ba8ce8726293b73eadaa8",
+      "ts": "2026-10-19T17:04:09Z",
+      "line_sha256": "96be3edc20eabe9a5de2c0b0567a877478c6fda441fc6ea8809beb645a642fbf",
+      "title": "Election analyst: Candidate quality key to Roger Marshall’s slide, Adam Hamilton’s rise in Kansas - News From The States",
+      "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNSl9YQnNfODJfTEE4NEdmMXFiS2p4YWQxTDAxaVFhSUhaZE53bEY0eklVZGpybzdQTlNlRExVS1Q2UUxoWGhQZFlPSzUyMk9CUXN4aklwMWxEd09xYWsyU1hKMGxLU0Y4SWFtdE1NNE5VZld1c0tJMElqWWM4VkhfWUxKd0dKMllQbGFSTnctUTdWYWNRNndEaG15REhfS1I0WDhRMk80VTVRUllYazBNZnljY2pWdjRIZTVPZXNYS0NSRlQyZ1lWag?oc=5",
+      "classifier_relevance": "research_only",
+      "impacts": [],
+      "primary_decision": "Research-only headline; no identified current holding or pending-BUY criterion/catalyst channel. No valuation or rejection credit; body/date not verified."
+    },
+    {
+      "alert_id": "b7d66c7d416600a9e53306c7d67bbd2f20674b8f",
+      "ts": "2026-10-19T17:04:14Z",
+      "line_sha256": "6164e512bf22a53198609b9ddc2a6716d04571e1e6af2f5f873670c4ba014132",
+      "title": "OpenRouter challenger closes seed round - Yahoo Finance",
+      "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNMWE0anEydWRVWVhtN2ZBeTJTVjlQMXVfMmpBRkkzTHRpUE9HNXJwYWYxSVBNTHk3a1RIcXhNcGhjZVlXT1UxTm1kQm0xUVdGblBiekZud2dITjljOVI0TG5xM095SXlEai1NcG5WbzFZRm50NEZNWV9LdTJzQUV3TGxXYkwwa1lvZkVxMk4yUEdHZ2wtaHhlX2JBLXNFMlllY0xHamtn?oc=5",
+      "classifier_relevance": "minor",
+      "impacts": [
+        {
+          "position": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+          "level": "MINOR",
+          "reason": "New competition could slightly reduce OpenRouter token throughput, but does not materially alter the forecast."
+        }
+      ],
+      "primary_decision": "Minor research lead: competitor seed funding alone supplies no measured OpenRouter target-week throughput; title/body not adopted as a forecast update. No prior/order change."
+    },
+    {
+      "alert_id": "7b9d0cacf9e77ddf73170a67edd77bd18e3ca992",
+      "ts": "2026-10-19T17:09:36Z",
+      "line_sha256": "47bfabb2fbcaaff0f5d768a4ca0bc14ba330733ffb3858c312c95cc7b763914b",
+      "title": "Abdul El-Sayed, Mike Rogers address Muslim Brotherhood - CBS News",
+      "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPYWdTVDZmaVVQM055WFFwUzhYUzNNLUp0OU1lTVRHWmpXaU9GUzk0cTZTcHhVbnJuRWFHVXRoWkN2UV8yYmNLZGVuZXNkQnRaWnB2TGtjSmtIU2UtMUd4dkp4WWlYS3RnOEFkMHU1UWdCRUZKU0ZpV0t2bkRYLXUzMzdqc2VuTEFwendsdlBtRV9aZUpGMjlV?oc=5",
+      "classifier_relevance": "minor",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Campaign messaging may slightly shift Michigan race sentiment, but does not materially change the Democratic-win thesis."
+        }
+      ],
+      "primary_decision": "Campaign-exchange coverage lead; no poll, ballot, candidate withdrawal or quantified general-election update established by this alert. Do not count syndicated commentary as independent observations. No prior/order change; publisher body/date not newly verified."
+    }
+  ]
+}

@@ -1,8 +1,8 @@
 # October19 manual market research — active
 
-**338 valued /8 blocked /364 factual /2,290 pending;710 base+62 revisions,next364.**
+**340 valued /8 blocked /364 factual /2,288 pending;712 base+62 revisions,next367/no active case.**
 
-[Latest six-case batch and effective revisions](2026-10-19-manual1536-research.md). The table below is the earlier10:43 batch; native goal is now active.
+[Latest case366 closeout and small resume](2026-10-19-1721-research-closeout.md) · [earlier six-case batch and effective revisions](2026-10-19-manual1536-research.md). The table below is the earlier10:43 batch. Native goal was last verified active17:14UTC; bounded scheduled checks do not change its lifecycle.
 
 Manual research resumed10:43. Full portfolio checks at14UTC are independent; source gathering and valuations proceed between them. No automatic wait for cron. No financial action in this research chunk. Financial/account observations retain their existing dated records.
 
@@ -27,10 +27,10 @@ Manual research resumed10:43. Full portfolio checks at14UTC are independent; sou
 |[350](2026-10-17-deep-review/evaluations/0350.md)|YES61%, range20–98%|Noentry: YES61central/41selected,NO39/19; both passive and taker dated prices fail. Private GAAP mark uncertainty remains explicit.|
 |[352](2026-10-17-deep-review/evaluations/0352.md)|YES20%, range5–65%|Noentry: YES20/selected0 andNO80/60; even10pphaircut fails both bids. Held112 retain/noadd unchanged; no financial-prior mutation.|
 
-Next: **364**. [Small active phase](../data/deep_review_20261017/work/manual1536_RESUME.json); facts ready364/366/367/368/370.
+Next: **367**. [Small current phase](../data/deep_review_20261017/work/manual1721_RESUME.json); thirteen pending cases have scoped factual pointers, without valuation credit.
 
 - Tables use the newest immutable revision per case; earlier forecasts and blocks remain preserved. Case340 candidate withdrawn unplaced after album-specific leak evidence; DEC234.
 - Quotes are dated research evidence, never execution authorization. Sorted max-bid/min-ask governs; original first-row ordering error/correction and raw captures remain preserved.
 - Source units target2–5KB with separate raw arrays/receipts. Primary owns exact-rule interpretation, probabilities and both-side economics; helpers gather facts.
-- Latest completed full check is14:27, with financial producer14:30:21–36UTC and news review14:32:22. Research does not refresh those observations. [Check](2026-10-19-1427-checkin.md).
+- Latest completed full check is16:48, with financial producer17:01:48–17:02:03UTC and account17:02; later alert review through17:26:14 has no new financial observation. [Check](2026-10-19-1648-checkin.md) · [follow-up](../data/deep_review_20261017/work/tick1648_final_alert_followup.json).
 - Five11:06–11:27 alerts reviewed with source gaps retained: no measured MI/Google change; TheMeg streaming is not Whale final gross. [Source index](../data/deep_review_20261017/work/alert_followup_340_1155_index.json).

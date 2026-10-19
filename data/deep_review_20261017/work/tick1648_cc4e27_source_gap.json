@@ -1,0 +1,34 @@
+{
+  "schema": "tick1648_cc4e27_michigan_source_gap.v1",
+  "observed_utc": "2026-10-19T17:27:48.402450Z",
+  "alert": {
+    "alert_id": "cc4e27e2f23386ca343375ff1973816baa2770d4",
+    "alert_utc": "2026-10-19T17:26:14Z",
+    "line_sha256": "76ccb2e13ab54620f2dd8eba9660efd5b91b77e3a4372572b6c967509c65b0ec",
+    "tier": 1,
+    "feed": "Michigan Senate Rogers and El-Sayed news",
+    "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - USA Today",
+    "google_rss_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMlA3UFJGdzVjcVd5T1Zld2Y3WFNiaC1FUEJ2OXRERDkyS2RwM2xRdm5vNzF4M3Ryc0ZYOWVuODJBbWJTcWFJaVdYaTAtZWl5YzJkcWdzWVB1OURpRmxteUQtbTJQLWo4RDRtQk9POTcybl83T0sycVJKUlZCdXdnRU1FQ3pXNkpwY3BGTXlNby1Ndmo5TWJxSkxwclhrck82LU9rTUhKWHhEWjAzVW5wcmJlcEhBa00?oc=5",
+    "claimed_impacted_condition": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4"
+  },
+  "attempt": {
+    "method": "GET",
+    "requested_host": "news.google.com",
+    "response_status": 200,
+    "final_host": "consent.google.com",
+    "started_utc": "2026-10-19T17:27:29.638951Z",
+    "received_utc": "2026-10-19T17:27:29.821189Z",
+    "raw_bytes": 35478,
+    "raw_sha256": "57e3001eff20b92de82fa0e58ca95e8b1c1e15dd649da9e108ee070e5f0d8730",
+    "gzip_sha256": "4d3b3888fe39cfbacd7f979200dabafd42ab882b35594b5eb9ac6211f40b3743",
+    "receipt_metadata_only": "logs/deep_review_20261017/tick1648_cc4e27_source/google_link.receipt.json",
+    "raw_consent_body_intentionally_not_linked_here": true
+  },
+  "finding": "The one ordinary Google News redirect attempt reached the consent host, not a USA Today canonical article. No publisher body, canonical URL, source publication timestamp, or event date was established by this attempt. No additional fetch/search was made.",
+  "context_only": "Prior saved coverage includes a 2026-10-17 El-Sayed town-hall disavowal exchange from NewsNation syndication and an ABC17-hosted CNN Newsource story pointer; without the USA Today article body this alert cannot be independently bound to the same report, nor treated as a new event. The alert classifier reason is not a poll or voter measurement.",
+  "limits": [
+    "No claim about arrest/withdrawal/ballot/caucus changes or a poll is supported by this alert alone.",
+    "This is an access gap for the named link, not evidence that USA Today has no article or that no new information exists.",
+    "No probability, trade, or portfolio action assessed."
+  ]
+}

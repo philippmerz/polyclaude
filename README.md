@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**339 valued /8 blocked /364 factual /2,289 pending;711 base+62 revisions,active/next366.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.364 is saved with no entry;366/367/368/370/371/372/374/378 have factual packets only. Initial355/356 candidates remain withdrawn before orders. [Latest closeout](research/2026-10-19-1653-closeout.md) · [Small resume](research/2026-10-17-deep-review/RESUME.md). Scanner coverage earns no valuation credit.
+**340 valued /8 blocked /364 factual /2,288 pending;712 base+62 revisions,next367; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.366 is saved with no entry;367/368/370/371/372/374/376/378/379/380/382/383/384 have facts only. Initial355/356 candidates remain withdrawn before orders. [Research closeout](research/2026-10-19-1721-research-closeout.md) · [Small resume](research/2026-10-17-deep-review/RESUME.md). Scanner coverage earns no valuation credit.
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC pull binding.** Canceled orders stay closed and must never be replayed. [Current orders/proofs](notes/resting_orders.md).
 

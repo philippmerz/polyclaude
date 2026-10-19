@@ -1,0 +1,48 @@
+[
+  {
+    "name": "runtime0ft",
+    "url": "https://openrouter.ai/_next/static/immutable/chunks/0ftcpflkl75wt.js",
+    "started_utc": "2026-10-18T11:01:12.987523+00:00",
+    "status": 200,
+    "final_url": "https://openrouter.ai/_next/static/immutable/chunks/0ftcpflkl75wt.js",
+    "content_type": "application/javascript; charset=utf-8",
+    "http_date": "Sun, 18 Oct 2026 11:01:13 GMT"
+  },
+  {
+    "name": "model_rankings_chart_caller_sourcemap",
+    "url": "https://openrouter.ai/_next/static/immutable/chunks/0ak4p6uden9nw.js.map",
+    "started_utc": "2026-10-18T11:01:13.071205+00:00",
+    "received_utc": "2026-10-18T11:01:13.161698+00:00",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  {
+    "name": "runtime0ft_retry_capture",
+    "url": "https://openrouter.ai/_next/static/immutable/chunks/0ftcpflkl75wt.js",
+    "started_utc": "2026-10-18T11:01:21.396663+00:00",
+    "status": 200,
+    "final_url": "https://openrouter.ai/_next/static/immutable/chunks/0ftcpflkl75wt.js",
+    "content_type": "application/javascript; charset=utf-8",
+    "http_date": "Sun, 18 Oct 2026 11:01:21 GMT",
+    "received_utc": "2026-10-18T11:01:21.471934+00:00",
+    "bytes": 32572,
+    "sha256": "4ca712bbe9622bb8694c6d9e997b1e8657a0dbf13eb6f6cb2c2cd8f193809b93",
+    "gzip_bytes": 10910,
+    "gzip_sha256": "2d0744a393a4a1ca0b4cec19f3edf3f46109c12babcb7086f27190df40349e97",
+    "gzip_path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/runtime0ft_retry_capture.gz"
+  },
+  {
+    "name": "turbopack_runtime",
+    "url": "https://openrouter.ai/_next/static/immutable/chunks/turbopack-2ihhr7iq83pua.js",
+    "started_utc": "2026-10-18T11:01:29.059429+00:00",
+    "status": 200,
+    "final_url": "https://openrouter.ai/_next/static/immutable/chunks/turbopack-2ihhr7iq83pua.js",
+    "content_type": "application/javascript; charset=utf-8",
+    "http_date": "Sun, 18 Oct 2026 11:01:29 GMT",
+    "received_utc": "2026-10-18T11:01:29.138812+00:00",
+    "bytes": 11656,
+    "sha256": "e2d6f03109acda4fc8d326e1a2a6ae2eafab71bc9a46c5343d646e3b154b103d",
+    "gzip_bytes": 4572,
+    "gzip_sha256": "b7ecb0c975319a97c95a5bd86d2a33c147532e7cfe1d09710b36a81316462205",
+    "gzip_path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/turbopack_runtime.gz"
+  }
+]

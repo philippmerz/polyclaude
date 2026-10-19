@@ -1,0 +1,15 @@
+{
+  "schema": "manual1721_handoff_curation.v1",
+  "reviewed_utc": "2026-10-19T17:33:18.838355Z",
+  "valid_until": "2026-10-19T18:00:00Z",
+  "journal_prior_prefix": {
+    "bytes": 2501656,
+    "sha256": "fd55566c6d4e5e7c9ff29ade404571793d85ec5f493689e26fba243ac3af8776",
+    "preserved": true
+  },
+  "source_hash_count": 11,
+  "context_bytes": 5960,
+  "phase_bytes": 3392,
+  "financial_observation_refreshed": false,
+  "scope": "Editorial closeout of completed research and scheduled-check followup; no new case or idle goal continuation."
+}

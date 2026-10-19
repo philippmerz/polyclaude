@@ -1,0 +1,12 @@
+{
+  "schema": "public_read_receipt_metadata_index.v1",
+  "alert_line_sha256": "76ccb2e13ab54620f2dd8eba9660efd5b91b77e3a4372572b6c967509c65b0ec",
+  "requested_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQMlA3UFJGdzVjcVd5T1Zld2Y3WFNiaC1FUEJ2OXRERDkyS2RwM2xRdm5vNzF4M3Ryc0ZYOWVuODJBbWJTcWFJaVdYaTAtZWl5YzJkcWdzWVB1OURpRmxteUQtbTJQLWo4RDRtQk9POTcybl83T0sycVJKUlZCdXdnRU1FQ3pXNkpwY3BGTXlNby1Ndmo5TWJxSkxwclhrck82LU9rTUhKWHhEWjAzVW5wcmJlcEhBa00",
+  "status": 200,
+  "received_utc": "2026-10-19T17:27:29.821189Z",
+  "raw_sha256": "57e3001eff20b92de82fa0e58ca95e8b1c1e15dd649da9e108ee070e5f0d8730",
+  "gzip_sha256": "4d3b3888fe39cfbacd7f979200dabafd42ab882b35594b5eb9ac6211f40b3743",
+  "final_host": "consent.google.com",
+  "receipt_metadata": "logs/deep_review_20261017/tick1648_cc4e27_source/google_link.receipt.json",
+  "body_path_omitted": "consent-response body is retained only in ignored local capture; not included in this public-safe index"
+}

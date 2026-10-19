@@ -1,0 +1,82 @@
+{
+  "schema": "deep_review.small_phase.v1",
+  "compiled_utc": "2026-10-19T17:31:12.147113Z",
+  "counts": {
+    "completed_valuations": 340,
+    "blocked_after_in_depth_review": 8,
+    "factual_exclusions": 364,
+    "pending": 2288,
+    "base_records": 712,
+    "revisions_written": 62,
+    "active_indices": []
+  },
+  "completed_case": {
+    "index": 366,
+    "report": "research/2026-10-17-deep-review/evaluations/0366.md",
+    "sha256": "a5b66c1b9334b2a773fefc6090eeeb694da255f3f43e4461b82931a4c9914284",
+    "decision": "No entry; YES30.5/broad7–75%,25pp reserve. Both dated sides fail selected economics; no financial prior/order/reservation change."
+  },
+  "next_case": {
+    "index": 367,
+    "pointer": "data/deep_review_20261017/work/0367_resume.json",
+    "phase": "Facts only. Read full literal rule and title/creation-window versus description scope before probability; source gap may be case-specific block, never a fabricated valuation or wider stop."
+  },
+  "following_fact_only_cases": [
+    {
+      "index": 368,
+      "pointer": "data/deep_review_20261017/work/0368_resume.json"
+    },
+    {
+      "index": 370,
+      "pointer": "data/deep_review_20261017/work/0370_resume.json"
+    },
+    {
+      "index": 371,
+      "pointer": "data/deep_review_20261017/work/0371_resume.json"
+    },
+    {
+      "index": 372,
+      "pointer": "data/deep_review_20261017/work/0372_resume.json"
+    },
+    {
+      "index": 374,
+      "pointer": "data/deep_review_20261017/work/0374_resume.json"
+    },
+    {
+      "index": 376,
+      "pointer": "data/deep_review_20261017/work/0376_resume.json"
+    },
+    {
+      "index": 378,
+      "pointer": "data/deep_review_20261017/work/0378_resume.json"
+    },
+    {
+      "index": 379,
+      "pointer": "data/deep_review_20261017/work/0379_resume.json"
+    },
+    {
+      "index": 380,
+      "pointer": "data/deep_review_20261017/work/0380_resume.json"
+    },
+    {
+      "index": 382,
+      "pointer": "data/deep_review_20261017/work/0382_resume.json"
+    },
+    {
+      "index": 383,
+      "pointer": "data/deep_review_20261017/work/0383_resume.json"
+    },
+    {
+      "index": 384,
+      "pointer": "data/deep_review_20261017/work/0384_resume.json"
+    }
+  ],
+  "validation": "work/manual1721_integrity.json and work/manual1721_resume_validation.json; all712base/62revision hashes valid,14selectedresume packets below6.4KB; no network/account mutation.",
+  "public_archive": {
+    "path": "data/deep_review_20261017/work/manual1721_public_artifacts.json",
+    "sha256": "47b5ea3f23a6c674e89d6c7aca98754b4fc51f855a9a650df5ee55ac6f475c78"
+  },
+  "financial_authority": "Latest completed tick1648 producer17:01:48–17:02:03UTC/account17:02 remain dated. Research adds no NAV, CSV row, current quote or execution authority. Original366quote private/geoblock field excluded from public archive; hashed sanitized derivative preserves all public economics.",
+  "alert_followup": "work/tick1648_final_alert_followup.json: nine later rows reviewed through17:26:14; cc4e27USA Today body/date access gap/likely already-covered disavowal, no measured electoral change or financial action.",
+  "boundaries": "Existing18UTC lightcheck, Idaho630707 all-unfilled22UTC pull/earlier cancel-first, fullOct20 02UTC. This bounded run ends with no goal lifecycle change/new timer/idle followup. Finite research checkpoint preserved for authorized continuation."
+}

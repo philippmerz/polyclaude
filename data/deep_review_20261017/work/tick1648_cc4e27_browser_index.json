@@ -1,0 +1,16 @@
+{
+  "schema": "tick1648_cc4e27_browser_index.v1",
+  "recorded_utc": "2026-10-19T17:27:58.545251+00:00",
+  "source": {
+    "path": "data/deep_review_20261017/work/tick1648_cc4e27_browser.json.gz",
+    "raw_sha256": "ead54362be3566aebdc5d3ba87ec628fb5d794e61baf99d32febab6dba68c839",
+    "gzip_sha256": "dd9ce1ac4af1b0bb7314a736b59cb279eb012dc127cd33a4eae1b556851c21cb"
+  },
+  "representation": "Web-tool rendered/search result, not raw HTTP. Call windows17:26:53–57UTC and17:27:07–08UTC; received/wire/cache clocks unavailable.",
+  "adopted_source": {
+    "url": "https://abc17news.com/politics/national-politics/cnn-us-politics/2026/10/17/abdul-el-sayed-disavows-muslim-brotherhood-and-criticizes-implications-that-he-has-dual-loyalty/",
+    "publisher": "CNN Newsource/Aleena Fayaz syndication, ABC17",
+    "finding": "Rendered body describes Caro town hall disavowal/Constitution exchange already under review. Its displayedOct17publication and SundayMSNOWreference are not a reliable chronology proof; do not silently normalize. No measured voter-response estimate supplied.",
+    "limitations": "USA Today canonical page/body not established by these search results. CNN transcript result was search-visible but direct browseropen failed. Other search results not adopted as factual evidence; no evidence from social-media commenters."
+  }
+}

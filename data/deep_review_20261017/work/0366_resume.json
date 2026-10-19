@@ -1,13 +1,21 @@
 {
   "review_index": 366,
-  "phase": "FACTS_ONLY; scope follow-up appended; valuation pending",
+  "phase": "VALUATION_SAVED_NO_ENTRY; immutable base report/economics saved, no execution authority",
   "source_paths": [
     "work/0366_millennium_facts_1551.json",
-    "work/0366_scope_followup_1650.json"
+    "work/0366_scope_followup_1650.json",
+    "work/0366_browser_index_1714.json",
+    "work/0366_search_index_1717.json",
+    "work/0366_economics_1720.json"
   ],
   "source_pointers": [
     "https://github.com/openai/math",
     "https://github.com/openai/math/blob/main/history.md",
     "https://openai.com/index/sharing-ai-progress-in-mathematics/"
-  ]
+  ],
+  "schema": "polyclaude.deep_review_resume.v1",
+  "report": "research/2026-10-17-deep-review/evaluations/0366.md",
+  "model": "research/2026-10-17-deep-review/models/0366_primary_1718.json",
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T17:26:01.384746+00:00"
 }

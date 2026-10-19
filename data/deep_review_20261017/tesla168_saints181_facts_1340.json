@@ -1,0 +1,307 @@
+{
+  "schema": "tesla168_saints181_facts/v1",
+  "compiled_utc": "2026-10-18T13:21:08Z",
+  "scope": "Bounded factual source packet for exact frozen cases 168 and 181. No probabilities, prediction-market quote/book, valuation, recommendation, or account action.",
+  "frozen_rules": [
+    {
+      "review_index": 168,
+      "market_id": "676743",
+      "condition_id": "0x1f403ffb53e114cbc81c5f07a0f3971886c67b67af7c260f0117d3f63ba54af4",
+      "criteria_sha256": "8a7eb3208a5a13120be0db1cdb037d193af7871a9ac0e04b03dd7cc78e9432a3",
+      "question": "Will Tesla be the largest company in the world by market cap on December 31?",
+      "resolution": "Largest company worldwide by market capitalization on December 31, 2026, at market close; resolution by consensus of credible reporting.",
+      "outcomes": [
+        "Yes",
+        "No"
+      ],
+      "horizon": "2026-12-31 market close"
+    },
+    {
+      "review_index": 181,
+      "market_id": "4329887",
+      "condition_id": "0xe5699e9eeb4d985d52ced2156482d1f49c3c27806e68e8011f4a4d217799e84c",
+      "criteria_sha256": "63de5870371f42bc3bc675831fb0672bbb08a028bf5f0b31fbfc66c4eb7e41cc",
+      "question": "Saints vs. Giants",
+      "resolution": "2026-10-18 1:00 PM ET (17:00 UTC): Saints win -> Saints; Giants win -> Giants; overtime included; tie -> 50/50; postponement remains open until played; cancellation without make-up -> 50/50.",
+      "outcomes": [
+        "Saints",
+        "Giants"
+      ],
+      "event_time_utc": "2026-10-18T17:00:00Z",
+      "official_resolution_source": "https://www.nfl.com/scores"
+    }
+  ],
+  "tesla_168": {
+    "market_cap_ranking": {
+      "source": "CompaniesMarketCap global companies ranking",
+      "url": "https://companiesmarketcap.com/",
+      "captured_utc": "2026-10-18T13:11:26.699680Z",
+      "page_explicit_as_of_time": false,
+      "date_binding_note": "The captured ranking values TSLA at $354.72, matching Yahoo chart’s October 16 close; October 16 association is therefore an inference from matching prices, not a page-provided as-of date.",
+      "rows_as_displayed": [
+        {
+          "rank": 1,
+          "company": "Nvidia",
+          "ticker": "NVDA",
+          "market_cap_usd_trillion": 5.17,
+          "display_price_usd": 214.13
+        },
+        {
+          "rank": 2,
+          "company": "Apple",
+          "ticker": "AAPL",
+          "market_cap_usd_trillion": 5.012,
+          "display_price_usd": 343.46
+        },
+        {
+          "rank": 3,
+          "company": "Alphabet",
+          "ticker": "GOOG",
+          "market_cap_usd_trillion": 4.12,
+          "display_price_usd": 336.91,
+          "aggregation_caveat": "The page row is labeled GOOG; capture does not establish whether GOOG and GOOGL classes are aggregated for this row."
+        },
+        {
+          "rank": 4,
+          "company": "Microsoft",
+          "ticker": "MSFT",
+          "market_cap_usd_trillion": 3.928,
+          "display_price_usd": 529.05
+        },
+        {
+          "rank": 5,
+          "company": "Amazon",
+          "ticker": "AMZN",
+          "market_cap_usd_trillion": 2.696,
+          "display_price_usd": 250.0
+        },
+        {
+          "rank": 6,
+          "company": "TSMC",
+          "ticker": "TSM",
+          "market_cap_usd_trillion": 2.139,
+          "display_price_usd": 412.61
+        },
+        {
+          "rank": 7,
+          "company": "SpaceX",
+          "ticker": "SPCX",
+          "market_cap_usd_trillion": 1.923,
+          "display_price_usd": 146.03,
+          "status": "Publicly listed on Nasdaq as SPCX by the 2026 IPO; do not treat as a private-company exclusion."
+        },
+        {
+          "rank": 8,
+          "company": "Meta Platforms",
+          "ticker": "META",
+          "market_cap_usd_trillion": 1.807,
+          "display_price_usd": 709.32
+        },
+        {
+          "rank": 9,
+          "company": "Saudi Aramco",
+          "ticker": "2222.SR",
+          "market_cap_usd_trillion": 1.629,
+          "display_price_usd": 6.74
+        },
+        {
+          "rank": 10,
+          "company": "Broadcom",
+          "ticker": "AVGO",
+          "market_cap_usd_trillion": 1.569,
+          "display_price_usd": 328.75
+        },
+        {
+          "rank": 11,
+          "company": "Tesla",
+          "ticker": "TSLA",
+          "market_cap_usd_trillion": 1.4,
+          "display_price_usd": 354.72
+        }
+      ],
+      "source_capture": {
+        "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/cmc_global_rank.body.gz",
+        "http_status": 200,
+        "raw_bytes": 166420,
+        "raw_sha256": "f7342cf5739709aaf2d5742db0e84d270a4be9adf18fb2b7e2530725adb21ad4",
+        "gzip_sha256": "46f4edda959016840f18b4c8c5a7fdda21c585fd55ebc962e6777adb24b285a6"
+      }
+    },
+    "shares_and_dilution": {
+      "sec_latest_filed_count": {
+        "source": "Tesla Q2 2026 Form 10-Q",
+        "url": "https://www.sec.gov/Archives/edgar/data/1318605/000162828026049270/tsla-20260630.htm",
+        "as_of": "2026-07-16",
+        "common_shares_outstanding": 3949547394,
+        "capture": {
+          "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/tesla_q2_2026_10q.body.gz",
+          "http_status": 200,
+          "raw_bytes": 1573430,
+          "raw_sha256": "8a0a09c201e0a76386620839bee02b319690a7d0346e5b84be2d7ab702b69320",
+          "gzip_sha256": "1277fd795ca99032fb24f13639d703fc6d2e1bde1a6f2fd2e98057ccbb475860"
+        }
+      },
+      "filing_share_count_context": {
+        "2026-06-30_balance_sheet_outstanding_millions": 3949,
+        "2025-12-31_balance_sheet_outstanding_millions": 3751,
+        "shares_issued_for_equity_awards_and_acquisitions_net_cost_millions": {
+          "Q2": 194,
+          "six_months": 198
+        },
+        "AI_hardware_acquisition_equity_awards": {
+          "total_usd_billions": 1.95,
+          "service_or_performance_condition_awards_usd_billions": 1.73,
+          "intangible_usd_millions": 222
+        },
+        "note": "Q2 filing says no Q2 expense for the performance-based awards because achieving their conditions was considered improbable. These awards are a potential dilution item, not a forecast."
+      },
+      "weighted_average_not_outstanding": {
+        "Q2_basic_weighted_average_millions": 3237,
+        "stock_based_awards_millions": 303,
+        "diluted_weighted_average_millions": 3540,
+        "note": "EPS weighted-average figures differ from actual shares outstanding; restricted awards are excluded until earned."
+      },
+      "repurchase_evidence": "No “repurchase” or “treasury stock” text hit in the captured Q2 10-Q. This does not establish absence of activity after the filing date.",
+      "vendor_conflict": {
+        "source": "CompaniesMarketCap Tesla shares outstanding page",
+        "url": "https://companiesmarketcap.com/tesla/shares-outstanding/",
+        "displayed_as_of": "October 2026",
+        "displayed_shares": 3237000000,
+        "capture": {
+          "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/cmc_tesla_shares.body.gz",
+          "http_status": 200,
+          "raw_bytes": 45012,
+          "raw_sha256": "52624703b5b0a4a2cb281fbbc749513b7a509792944368ddadf59bb6f7919279",
+          "gzip_sha256": "1af43090a73feae55ed55427dc8e636334308accae01fb1958dcc27d531bcfb1"
+        },
+        "conflict": "CMC displayed 3.237B is materially below SEC’s 3.949547394B as of July 16 and exactly matches the Q2 basic weighted-average EPS count. CMC’s global TSLA cap and displayed price imply approximately 3.946B shares, close to SEC actual count. The vendor page is internally inconsistent; do not substitute its share-count field for SEC outstanding shares."
+      }
+    },
+    "share_price_and_confirmed_catalyst": {
+      "latest_captured_close": {
+        "date": "2026-10-16",
+        "close_usd": 354.72,
+        "adjusted_close_usd": 354.72,
+        "source": "Yahoo Finance chart API, secondary market data",
+        "exchange": "NasdaqGS",
+        "timezone": "America/New_York",
+        "url": "https://query1.finance.yahoo.com/v8/finance/chart/TSLA?range=3mo&interval=1d&includeAdjustedClose=true&events=div%2Csplits",
+        "capture": {
+          "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/tsla_yahoo_3mo.body.gz",
+          "http_status": 200,
+          "raw_bytes": 8115,
+          "raw_sha256": "d6e096a6cbd0f38880d30baced0e7a5ad0e5c03232b618814290822a81db4af8",
+          "gzip_sha256": "8594b52e5ff2b4bf93e51377bd90634944caa44b9367ab47c343fef2bc2028bc"
+        },
+        "prior_close_usd": {
+          "date": "2026-10-15",
+          "close": 362.44
+        }
+      },
+      "confirmed_company_event": {
+        "event": "Tesla Q3 2026 financial results and webcast",
+        "scheduled_utc": "2026-10-21 after market close; webcast 17:30 ET / 21:30 UTC",
+        "official_url": "https://ir.tesla.com/press-release/tesla-third-quarter-2026-production-deliveries-and-deployments",
+        "official_page_fact": "Tesla IR page states Q3 results after close Wednesday Oct 21; Q3 deliveries 486,532, production 464,391 and storage deployments 13.7 GWh were released Oct 2.",
+        "page_capture_note": "Direct GET to this official URL returned 403 (478-byte body; SHA-256 54d376bc6787266a5ccbeaa9875047c37aeb227dfc907c735fcc06481daa76c5); official page was separately visible via browser-rendered page during this bounded pass. No bypass was attempted.",
+        "capture_receipt": "logs/deep_review_20261017/tesla168_saints181_facts_1340/tesla_q3_ir_schedule.receipt.json"
+      },
+      "exchange_data_gap": "A Nasdaq historical API request for TSLA Oct 16 returned HTTP 200 with a 165-byte validation-error response (raw SHA-256 36fb8b588b6fdd0e6a553553b70ddd4c55dddad47a0837f7dda6f80592e367a8); the Yahoo chart value is secondary, not an exchange-tape capture."
+    },
+    "public_private_comparator_note": {
+      "fact": "SpaceX was publicly listed as Nasdaq: SPCX in June 2026; issuer said shares began trading June 12, and the issuer announced full underwriters’ option closing June 15. The CMC Oct 18 ranking lists SPCX at rank 7.",
+      "primary_source": "https://ir.spacex.com/updates/releases-details/2026/Space-Exploration-Technologies-Corp--Announces-Closing-of-Initial-Public-Offering-Including-Full-Exercise-of-Underwriters-Option-to-Purchase-Additional-Shares-2026-RgoR-Y1Vwh/",
+      "support_packet": "data/deep_review_20261017/spacex_first_close_verification.json",
+      "limitation": "Nasdaq newsroom described first-day trading as “anchored near $160.95” but did not establish an exact official close; Nasdaq historical query returned no row. Yahoo secondary data shows $160.95 on June 12. This price issue does not alter public-listing status."
+    }
+  },
+  "saints_giants_181": {
+    "event_and_rule_source": {
+      "schedule": "Official NFL Saints team schedule lists @ Giants, Oct 18, 1:00 PM EDT (17:00 UTC).",
+      "source_url": "https://www.nfl.com/teams/new-orleans-saints/",
+      "capture": "data/deep_review_20261017/sports174_181_current_facts_1300.json; receipt logs/deep_review_20261017/sports174_181_current_facts_1300/nfl_saints_schedule.body.gz, captured 2026-10-18T12:46:52.686762Z–12:46:53.317423Z, HTTP 200, raw SHA-256 b88952bdf3d63669edf49d2cc9596e982e5c1517a07ae65e7facfbd599e3c455."
+    },
+    "odds_snapshots": [
+      {
+        "source": "OddsReference public matchup odds page; aggregated sportsbook listings",
+        "url": "https://oddsreference.com/games/nfl/new-orleans-saints-vs-new-york-giants-2026-10-18",
+        "capture_time_utc": "2026-10-18T13:11:26.858877Z",
+        "page_freshness_label": "6 sportsbooks quoted 1d ago",
+        "moneyline_two_sided_best_listed": {
+          "Giants": "FanDuel -104",
+          "Saints": "BetRivers -110"
+        },
+        "listed_spread_prices_by_book": {
+          "BetRivers": {
+            "home": "-110",
+            "away": "-110"
+          },
+          "Fanatics": {
+            "home": "-110",
+            "away": "-110"
+          },
+          "BetMGM": {
+            "home": "-115"
+          },
+          "Caesars": {
+            "home": "-121",
+            "away": "+101"
+          },
+          "DraftKings": {
+            "home": "-122",
+            "away": "+102"
+          },
+          "FanDuel": {
+            "home": "-122",
+            "away": "+100"
+          }
+        },
+        "spread_caveat": "The page does not expose each provider’s spread point number; prices may correspond to different spreads, so this is not an exact spread consensus.",
+        "capture": {
+          "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/oddsreference_saints_giants.body.gz",
+          "http_status": 200,
+          "raw_bytes": 43232,
+          "raw_sha256": "4ed37eba6d2025ad690b0d7515579ddf85c5dafca81e50985efe6057b078982a",
+          "gzip_sha256": "089df0fad467b5c7b02fd418edb4b3156d8051a37705fed0a8db08c2c4adf4bf"
+        }
+      },
+      {
+        "source": "DraftKings Network listed matchup line (provider/network page, not independently authenticated sportsbook feed)",
+        "url": "https://dknetwork.draftkings.com/moneyline-total-spread/",
+        "capture_time_utc": "2026-10-18T13:13:02.786984Z",
+        "displayed_lines": {
+          "Giants_moneyline": "-112",
+          "Saints_moneyline": "-108",
+          "Giants_spread": "-1.5 +102",
+          "Saints_spread": "+1.5 -122",
+          "total": "46.5 (Over -105; Under -115)"
+        },
+        "quote_updated_at": "Not shown; only page-fetch time captured.",
+        "capture": {
+          "path": "logs/deep_review_20261017/tesla168_saints181_facts_1340/dknetwork_lines.body.gz",
+          "http_status": 200,
+          "raw_bytes": 252518,
+          "raw_sha256": "912f73a7c07cfdbce72d8bdc645e5cf22fc68fc7efc5b17a7bc441103fab141d",
+          "gzip_sha256": "120c586fdaf17e0112e9c9fb5588a23ef8b52ff9dab06b357b28f50afc0f8aa2"
+        }
+      }
+    ],
+    "access_and_roster_gaps": [
+      "Direct DraftKings Sportsbook matchup endpoint returned HTTP 403 (receipt retained); no retry or bypass.",
+      "No official team inactive report, lineup, injury update, or additional pre-kickoff roster announcement was captured in this bounded pass.",
+      "OddsReference freshness label was 1 day at capture; DK Network page had no underlying quote timestamp. Lines are dated snapshots, not a guarantee of 17:00 UTC prices."
+    ]
+  },
+  "limitations": [
+    "No probabilities, forecasting, prediction-market prices/books, or investment judgment were produced.",
+    "CompaniesMarketCap ranking and shares page have no explicit machine-readable as-of timestamp; the ranking date link is inferred from TSLA price matching Oct 16 close.",
+    "Tesla CMC share-count field conflicts with SEC filing; SEC figure is older but primary. No post-July 16 SEC outstanding-share count was fetched.",
+    "No claim is made that the retrieved list exhausts all possible companies relevant to the worldwide market-cap resolution rule.",
+    "Sportsbook odds differ by book and snapshot; no implied probability was computed."
+  ],
+  "timestamp_correction": {
+    "previous_compiled_utc": "2026-10-18T13:40:00Z",
+    "corrected_utc": "2026-10-18T13:21:08Z",
+    "reason": "The prior compiled_utc value was future-dated and incorrectly inferred from the output filename. Corrected to the actual editorial clock time; individual source request/receipt timestamps remain unchanged."
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "review_index": 384,
+  "phase": "FACTS_ONLY_COMPLETE; valuation pending",
+  "source_paths": [
+    "work/0384_facts.json"
+  ],
+  "source_pointers": [
+    "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+    "https://apnews.com/article/ilhan-omar-justice-department-investigation-search-42c86bdbd54679e974e32ac4a924b402"
+  ],
+  "unit_sha256": "9356a48f475093a8fcb43be5de0dd564dafbb3d925dadb15ad103bfc74785cc1",
+  "conditionId": "0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c",
+  "criteria_sha256": "1e7b54110de2f4cdaf0f59d7d4a142df55c0201d2c214ee3ee73fea34a33debd"
+}
