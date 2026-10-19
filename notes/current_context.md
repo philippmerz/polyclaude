@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-19T14:42:02.810335+00:00"
+reviewed_at: "2026-10-19T16:13:29.094867+00:00"
 valid_until: "2026-10-19T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
@@ -10,14 +10,16 @@ source_hashes:
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: cb6241b382687755932e7c05e86dc407d0652c4ed397dfb1408e012546039936
+  notes/backlog.md: 6689369f90323c496198f1af385ff271cc5262b787b8485eef321724b22f0d99
   notes/resting_orders.md: d3e0ac8f9396ffa6069dca40b6e5eb1d4837438f936bc7ca14708ca2817f9f8d
-  notes/journal.md: 425ab636d3850a98f259881ce7fa3fe077a4d467177659b72315af540ff37d2a
+  notes/journal.md: 2ea99bfcf8954582ce21d234543775c81eb3e4de9ac001a7368d468053fee49d
 ---
 
 ## Resume
 
-**333 valued / 7 blocked / 364 factual-only / 2,296 pending; 704 base + 60 revisions; next index 353.** No valuation credit at the Oct19 14:27 check. [Checkpoint](deep_review_checkpoint.json) · [effective review](../research/2026-10-19-manual-research.md). Case353 retains the exact ISW Ukrainian Settlements boundary gate; 355/356 remain facts-only. Cases317/340 are withdrawn and unplaced. Canceled orders stay closed and must never be replayed. [Order history](resting_orders.md).
+**338 valued /8 blocked /364 factual-only /2,290 pending;710 base+62 revisions;next364.** Native goal is **active** again; automatic continuation restored. [Checkpoint](deep_review_checkpoint.json) · [latest six-case batch](../research/2026-10-19-manual1536-research.md) · [small phase](../data/deep_review_20261017/work/manual1536_RESUME.json). Five new valuations353/355/356/360/361 and historical-cutoff gap362 saved immediately; latest355/356 revisions withdraw initial candidates before orders. Facts ready364/366/367/368/370; primary underwriting remains pending. Cases317/340 are withdrawn/unplaced; canceled orders stay closed. [Order history](resting_orders.md).
+
+Interactive continuation is authorized. Notify Telegram if a new global blocker stops progress; individual unpriced/source-gap cases do not stop the queue. Earlier Telegram1268 native-block notice is superseded by current active state. Financial/source snapshots below retain their original clocks.
 
 ## Latest portfolio check
 

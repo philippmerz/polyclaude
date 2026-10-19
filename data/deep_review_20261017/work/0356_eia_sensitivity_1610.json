@@ -1,0 +1,106 @@
+{
+  "schema": "price_blind_company_facts.v1",
+  "compiled_utc": "2026-10-19T15:54:43.783785Z",
+  "review_index": 356,
+  "market_id": "5684759",
+  "condition_id": "0x63a9c8ed7a860406a2bf24a75c51251b9799b8784c420e4c94b430420c1b6645",
+  "criteria_sha256": "a33a152482355507c9608cab31d7654cd7b753b84757d66ae5e604d159631b1c",
+  "question": "Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?",
+  "facts": [
+    {
+      "source": "EIA Europe Brent Spot Price FOB monthly history",
+      "source_url": "https://www.eia.gov/dnav/pet/hist/leafhandler.ashx?f=m&n=pet&s=rbrte",
+      "http_status": 200,
+      "release_date": "2026-10-15",
+      "next_release_date": "2026-10-21",
+      "unit": "USD/barrel",
+      "series_2026": {
+        "Jan": 66.6,
+        "Feb": 70.89,
+        "Mar": 103.13,
+        "Apr": 117.29,
+        "May": 107.14,
+        "Jun": 85.4,
+        "Jul": 83.76,
+        "Aug": 91.08,
+        "Sep": 114.16,
+        "Oct": null,
+        "Nov": null,
+        "Dec": null
+      },
+      "interpretation_limit": "The monthly spot series is market-price context, not Chevron realized sales or company production; no production sensitivity was applied quarter-only."
+    },
+    {
+      "source": "Chevron 2026 Sensitivities and Forward Guidance PDF",
+      "source_url": "https://chevroncorp.gcs-web.com/static-files/b648b12f-356c-4d38-a42c-8b3788f2d026",
+      "http_status": 200,
+      "published": "2026-08-07",
+      "verbatim_facts": {
+        "full_year_production_sensitivity": "approximately 15 MBOED per $10 change in Brent",
+        "full_year_production_guidance": "3,980 to 4,100 MBOED",
+        "guidance_price_basis": "$60/BBL Brent",
+        "Q3_upstream_turnarounds_and_downtime": "(150) to (200) MBOED",
+        "Guyana": "net entitlement expected to decline as net interest under the Stabroek PSC decreases with cost recovery"
+      },
+      "limits": [
+        "The sensitivity is stated as full-year, with no direction attached to the 15 MBOED line in this document; the same PDF separately describes Guyana net-entitlement decline but does not quantify it as the sensitivity sign.",
+        "The $60 Brent condition is explicitly attached to full-year guidance, not a Q3-only production forecast.",
+        "The Q3 turnaround/downtime impact is upstream-only and is not defined as an adjustment from Q2 actual or as a total-worldwide Q3 result. No exact Q2-to-Q3 bridge is supplied."
+      ]
+    }
+  ],
+  "receipts": [
+    {
+      "label": "eia_monthly_brent",
+      "receipt": "logs/deep_review_20261017/case356_eia_1600/eia_brent_monthly.receipt.json",
+      "body": "logs/deep_review_20261017/case356_eia_1600/eia_brent_monthly.body.json.gz",
+      "started_utc": "2026-10-19T15:53:30.693084Z",
+      "received_utc": "2026-10-19T15:53:39.053609Z",
+      "status": 200,
+      "raw_bytes": 21132,
+      "raw_sha256": "e51fb73cb543f54dba0b277784e7c32e6c065fd15c5b32350399a0de77871415",
+      "gzip_sha256": "d95d3402e3fdaded285f382b6a2e5909aacefb88246c986c01011a0f4de9c634"
+    },
+    {
+      "label": "chevron_aug7_guidance_pdf_existing_verified_capture",
+      "receipt": "logs/deep_review_20261017/case356_followup_1440_sources/august_outlook.receipt.json",
+      "body": "logs/deep_review_20261017/case356_followup_1440_sources/august_outlook.body.json.gz",
+      "started_utc": "2026-10-19T15:36:42.964860Z",
+      "received_utc": "2026-10-19T15:36:43.308843Z",
+      "status": 200,
+      "raw_bytes": 92719,
+      "raw_sha256": "572b0e6ec992357182ba91b0e928957ff1d14f379257e6caa7cc934ecb8a1b00",
+      "gzip_sha256": "043819175253a5274e7e584590dd212ea2114e50b191e0071965457b645071b5"
+    }
+  ],
+  "extraction_validation": {
+    "eia_2026_row_month_order": [
+      "Jan",
+      "Feb",
+      "Mar",
+      "Apr",
+      "May",
+      "Jun",
+      "Jul",
+      "Aug",
+      "Sep",
+      "Oct",
+      "Nov",
+      "Dec"
+    ],
+    "eia_extracted_month_count": 12,
+    "chevron_pdf_pages": 2,
+    "required_text_checks": {
+      "Full-year 2026 production sensitivity is approximately 15 MBOED per $10 change in Brent": true,
+      "3,980 to 4,100 MBOED": true,
+      "at $60/BBL Brent": true,
+      "Estimated 3Q26 upstream turnarounds and downtime impact is (150) to (200) MBOED": true,
+      "net entitlement": true
+    },
+    "hashes_verified_before_extraction": true
+  },
+  "limits": [
+    "No new Q3 operating total or quarterly Brent-to-production conversion was found in these bounded sources.",
+    "Annual guidance and price sensitivity do not determine the frozen Q3 metric; official Q3 materials remain controlling."
+  ]
+}

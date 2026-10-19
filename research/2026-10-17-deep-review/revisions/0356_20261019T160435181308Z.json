@@ -1,0 +1,178 @@
+{
+  "review_index": 356,
+  "market_id": "5684759",
+  "condition_id": "0x63a9c8ed7a860406a2bf24a75c51251b9799b8784c420e4c94b430420c1b6645",
+  "criteria_sha256": "a33a152482355507c9608cab31d7654cd7b753b84757d66ae5e604d159631b1c",
+  "status": "valued",
+  "literal_analysis": "Official Chevron Q3 worldwide NET oil-equivalent production strictly>4100MBOED; exactly4100NO; first/materials mostprecise metric; missingmetric/noquarterreleasebyNov30NO. MBOED thousandBOE/day, worldwide net (not grossfacilitycapacity/oil-only/revenue). Ranges midpoint,mostprecisecompanymetric controls; laterrevisionsignored; transcript/webcastfallbackwhenabsentfrommaterials. Oct30call11ET, exactmaterialsreleaseclocknotestablished.",
+  "evidence": [
+    {
+      "url": "https://chevroncorp.gcs-web.com/static-files/b648b12f-356c-4d38-a42c-8b3788f2d026",
+      "observed_utc": "2026-10-19T15:36:43.308843Z",
+      "finding": "Aug7FYguidance3980–4100MBOED/$60Brent; Q3upstreamdowntime150–200MBOED, no explicitQ2-to-Q3bridge. Annual15MBOED/$10line unsigned, not quarterforecast."
+    },
+    {
+      "url": "https://chevroncorp.gcs-web.com/static-files/5d221f6d-5629-4f32-9427-97636ba74a07",
+      "observed_utc": "2026-10-19T15:37:02.847921Z",
+      "finding": "Sep8CFO: TCO260→320kb/dgrossfacilitycapacity alreadymentionedQ2call; Permianplateau~1M. No extra+60worldwidenetincrement."
+    },
+    {
+      "url": "https://www.eia.gov/dnav/pet/hist/leafhandler.ashx?f=m&n=pet&s=rbrte",
+      "observed_utc": "2026-10-19T15:53:39.053609Z",
+      "finding": "Monthly2026Q3Brentspot83.76/91.08/114.16. Differentfromannual$60basis; not Chevronrealizationorquarterlyproductionsensitivity."
+    },
+    {
+      "url": "https://chevroncorp.gcs-web.com/static-files/d808dc3d-f0be-4b2c-b62b-095f75f1c461",
+      "observed_utc": "2026-10-19T16:02:07Z",
+      "finding": "RootbrowserPDFslides10/14: Q2nearfullTCO/Australia; priceentitlement−20MBOED vsQ1. Q3downtime150–200includesmajorAngolaLNGturnaround/PZ/JulyCPC, separateGuyanaentitlementdecline. No locallyhashedwholePDFclaim."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11,
+    "low": 0.01,
+    "high": 0.45,
+    "method": "Full Q2slides/source-age challenge; bottom-up quarterly operations countermodel plus reduced-weight conditional annual/H2 bridge.",
+    "reasoning": "Do not turn old$60annualplanningrange into an observedcurrentH2constraint. Q2wasnearfull, and Q3namedoutages/Guyananetentitlementareincrementalheadwinddirections though exactsequentialnumbersremainunknown. Bottom-upexplicitcountermodel gives~3%chancevsconditionaltopdown34%; blendat75/25~11%, adopt11. Largecountermodelspread is evidenceagainstentry, notreason to choosethemodelwithmoreedge. HigheroilnegativeQ2entitlementeffect is directlyshowninslides, but15MBOEDannualsensitivitystillnotappliedtoQ3. Mixture11.50025%, conservativeprimaryadoption11; operationalamountsnotreportedareexplicitjudgments. Thispostquoterevisiondoesnotclaimpriceblindness.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0356_primary_revision_1604.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1604_0356_revision.json",
+    "quote_file_sha256": "c9f77ea17a122fd22d776106b18b2ee80334b94637a7e8270ca4fb424a225611",
+    "quote_capture_utc": "2026-10-19T16:03:25.687036+00:00",
+    "gamma_received_utc": "2026-10-19T16:03:25.471645+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 13.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.11,
+        "selected_stress_probability": 0,
+        "best_bid": 0.04,
+        "best_ask": 0.09,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425791725",
+        "book_received_utc": "2026-10-19T16:03:25.598841+00:00",
+        "book_age_seconds_at_receipt": 13.873841047286987,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.44999999999999996,
+            "fee": 0.01639,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.46638999999999997
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.2,
+            "fee": 0.00768,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.04
+              }
+            ],
+            "net": 0.19232000000000002
+          }
+        },
+        "taker_cost_usd": 0.46638999999999997,
+        "central_expected_profit_usd": 0.08361000000000007,
+        "selected_stress_profit_usd": -0.46638999999999997,
+        "break_even_before_carry": 0.093278,
+        "break_even_constant_carry": 0.09338117335891301,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.89,
+        "selected_stress_probability": 0.69,
+        "best_bid": 0.91,
+        "best_ask": 0.96,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425791725",
+        "book_received_utc": "2026-10-19T16:03:25.598841+00:00",
+        "book_age_seconds_at_receipt": 13.873841047286987,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.8,
+            "fee": 0.00769,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.96
+              }
+            ],
+            "net": 4.80769
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.55,
+            "fee": 0.01638,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.91
+              }
+            ],
+            "net": 4.53362
+          }
+        },
+        "taker_cost_usd": 4.80769,
+        "central_expected_profit_usd": -0.35768999999999984,
+        "selected_stress_profit_usd": -1.3576900000000003,
+        "break_even_before_carry": 0.961538,
+        "break_even_constant_carry": 0.9626015423699318,
+        "current_execution_authorization": false
+      }
+    },
+    "ordinary10pp_diagnostic": {
+      "selected_yes": 0.01,
+      "selected_no": 0.79,
+      "Yes_EV_5shares": -0.41639,
+      "maker_note": "1%selectedYES below4cbid beforecosts; doesnotrequire20ppstress torejectYES."
+    }
+  },
+  "verdict": "Noentryatold9caskor4cbid:20ppselectedYES0; evenordinary10ppselectedYES1<4c. NO89/69 below96c. Original34%model/candidatepreservedaswithdrawnresearchlead, notexecuted.",
+  "reopen_condition": "QuantifiedQ3worldwidenetreconciliation/updatedquarterguide, measuredoperatingchangesorofficialQ3materials; entirelyfreshaccount/fee/source/conditionalfillgatesbeforemoney.",
+  "portfolio_action": "none; initial356YEScandidate withdrawn beforeorder afterprimarysource/modelchallenge",
+  "question": "Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?",
+  "valuation_author": "primary_operator",
+  "original_index": 356,
+  "evaluated_utc": "2026-10-19T16:04:35.181837+00:00",
+  "revision_reason": "FullofficialQ2slides/sourceagechallenge; unfittedannual-H2bridgecannotdominatequarterlyoutagecountermodel; candidatewithdrawnbeforeorder",
+  "prior_report_sha256": "28736cfdab38804c98d30ce75fbd889b51c44f06f112a59956224e1e578287a6",
+  "report_sha256": "d15f966c1d55702b063aaa8a77133d88e1eb559c225fb2e8b6fa5cb997263f32",
+  "report_path": "revisions/0356_20261019T160435181308Z.md",
+  "revision_path": "revisions/0356_20261019T160435181308Z.json"
+}

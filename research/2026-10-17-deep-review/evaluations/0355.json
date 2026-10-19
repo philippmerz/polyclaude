@@ -1,0 +1,170 @@
+{
+  "review_index": 355,
+  "market_id": "5329628",
+  "condition_id": "0xcd9b47eddae5baffb141ad5df392117f2d9e65c1709d2dccdfef108ec49b557a",
+  "criteria_sha256": "f9ada2ce0942ec945350441aba49a766669d9d6550bf972555c604df2e325612",
+  "status": "valued",
+  "literal_analysis": "Flávio Bolsonaro most valid presidential runoff votes in Distrito Federal; not national winner. TSE ambiguity tie/fallback June30 2027 acknowledged. Winner of most valid DF votes in Oct25 runoff, credible consensus/TSE if ambiguous, listedfull-name alphabetical tiebreak; no definitive result by June30 2027 23:59ET→Other/NO. Expected settlementOct25, extended lock possible.",
+  "evidence": [
+    {
+      "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/no-distrito-federal-flavio-bolsonaro-pl-lidera-com-49-das-intencoes-de-voto-de-2o-turno-lula-pt-tem-43.shtml",
+      "observed_utc": "2026-10-19T12:37:39.528684Z",
+      "finding": "Exact DF runoff poll fieldOct6–7,n910; published valid54F/46L; allrespondents49F43L,6blank/null2undecided. Primary PDF/rootchecked; no newer local poll established."
+    },
+    {
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/relatorio_resultado_totalizacao/Relatorio_Resultado_Totalizacao_2026_DF.zip",
+      "observed_utc": "2026-10-19T15:37:12.566341Z",
+      "finding": "DF official first-round report valid1,772,808,Flavio909,616(51.31%),Lula675,627(38.11%); local baseline not runoff tally/guarantee."
+    },
+    {
+      "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-45.shtml",
+      "observed_utc": "2026-10-19T15:51:37.259417Z",
+      "finding": "Oct16 national release,field13–14,n2520: validF51 vs52prior; national context only, not a DF measurement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.81,
+    "low": 0.55,
+    "high": 0.96,
+    "method": "Local valid-share normal error budget with national-trend sensitivity and reporting tail, primary judgment beyond sampling uncertainty.",
+    "reasoning": "Direct local survey favors Flávio but was fielded18 days before runoff. First-round51.31vs38.11 supports a DF advantage without assuming voters cannot switch or turnout cannot change. Newer national poll shows one-point valid-share deterioration; apply half to local mean and retain large campaign/nonresponse/turnout error. Sampling MOE alone would greatly overstate confidence. Disqualification/fallback/admin tail remains. Error scales and independence are unfitted.20pp selected stress saved before prices; current philosophy ordinary10pp diagnostic retained explicitly so an exploratory stress does not become a silent market-screen rejection.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0355_primary_1553.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1553_0355.json",
+    "quote_file_sha256": "cc70c4f4daa263d95ebc7381f494c90c05564a9ee6809ea568b8b9c296ad7df5",
+    "quote_capture_utc": "2026-10-19T15:50:32.478740+00:00",
+    "gamma_received_utc": "2026-10-19T15:50:32.156464+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 9.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.81,
+        "selected_stress_probability": 0.6100000000000001,
+        "best_bid": 0.98,
+        "best_ask": 0.991,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792424172828",
+        "book_received_utc": "2026-10-19T15:50:32.317808+00:00",
+        "book_age_seconds_at_receipt": 859.489807844162,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.955,
+            "fee": 0.00179,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.991
+              }
+            ],
+            "net": 4.95679
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.9,
+            "fee": 0.00393,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.98
+              }
+            ],
+            "net": 4.89607
+          }
+        },
+        "taker_cost_usd": 4.95679,
+        "central_expected_profit_usd": -0.9067899999999991,
+        "selected_stress_profit_usd": -1.906789999999999,
+        "break_even_before_carry": 0.991358,
+        "break_even_constant_carry": 0.9921170041377785,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.18999999999999995,
+        "selected_stress_probability": 0,
+        "best_bid": 0.009,
+        "best_ask": 0.02,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792424172828",
+        "book_received_utc": "2026-10-19T15:50:32.317808+00:00",
+        "book_age_seconds_at_receipt": 859.489807844162,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.1,
+            "fee": 0.00392,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.02
+              }
+            ],
+            "net": 0.10392000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.045,
+            "fee": 0.00179,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.009
+              }
+            ],
+            "net": 0.04321
+          }
+        },
+        "taker_cost_usd": 0.10392000000000001,
+        "central_expected_profit_usd": 0.8460799999999997,
+        "selected_stress_profit_usd": -0.10392000000000001,
+        "break_even_before_carry": 0.020784000000000004,
+        "break_even_constant_carry": 0.020799912659200403,
+        "current_execution_authorization": false
+      }
+    },
+    "ordinary_default_10pp_diagnostic": {
+      "source": "strategy/00_philosophy.md robust-edge ordinary default10pp; 20pp here is additional exploratory-model stress, not universal policy.",
+      "selected_yes": 0.71,
+      "selected_no": 0.09,
+      "No_profit_5shares_at_captured_asks": 0.34607999999999994,
+      "scope": "NO remains a candidate at10pp and low full-range4% sensitivity. New exact-local evidence, model misspecification, market-informed missing-fact challenge, correlation and conditional-maker-fill analysis required before order; not rejected by a small model or universal20pp filter."
+    }
+  },
+  "verdict": "No order now. YES99.1c fails central81; NO2c has central19%upset value and survives ordinary10pp (selected9%) and4%structural-low sensitivity, but not additional20pp stress. Promote NO for focused missing-evidence/conditional-fill challenge before entry, not universal rejection.",
+  "reopen_condition": "New registered DF runoff poll or material candidate/turnout/legal news; margin surviving model sensitivity plus current entry gates. Focus next on why live market prices nearly99%Flavio while old DF poll/error model says81%; never tighten probability after seeing a cheap tail without new evidence/rationale.",
+  "portfolio_action": "none now; research candidate355NO pending focused primary underwriting",
+  "evaluated_utc": "2026-10-19T15:52:49.217760+00:00",
+  "question": "Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Federal District?",
+  "valuation_author": "primary_operator",
+  "original_index": 355,
+  "report_sha256": "4932a83c71d2df29cbaa6818e7a5bfdb391ab54b075ea252811c2d177de5dc38"
+}

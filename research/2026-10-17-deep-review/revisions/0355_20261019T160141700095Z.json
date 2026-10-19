@@ -1,0 +1,172 @@
+{
+  "review_index": 355,
+  "market_id": "5329628",
+  "condition_id": "0xcd9b47eddae5baffb141ad5df392117f2d9e65c1709d2dccdfef108ec49b557a",
+  "criteria_sha256": "f9ada2ce0942ec945350441aba49a766669d9d6550bf972555c604df2e325612",
+  "status": "valued",
+  "literal_analysis": "Flávio Bolsonaro most valid presidential runoff votes in Distrito Federal; not national winner. TSE ambiguity tie/fallback June30 2027 acknowledged. Winner of most valid DF votes in Oct25 runoff, credible consensus/TSE if ambiguous, listedfull-name alphabetical tiebreak; no definitive result by June30 2027 23:59ET→Other/NO. Expected settlementOct25, extended lock possible.",
+  "evidence": [
+    {
+      "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/no-distrito-federal-flavio-bolsonaro-pl-lidera-com-49-das-intencoes-de-voto-de-2o-turno-lula-pt-tem-43.shtml",
+      "observed_utc": "2026-10-19T12:37:39.528684Z",
+      "finding": "Exact DF runoff poll fieldOct6–7,n910; published valid54F/46L; allrespondents49F43L,6blank/null2undecided. Primary PDF/rootchecked; no newer local poll established."
+    },
+    {
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/relatorio_resultado_totalizacao/Relatorio_Resultado_Totalizacao_2026_DF.zip",
+      "observed_utc": "2026-10-19T15:37:12.566341Z",
+      "finding": "DF official first-round report valid1,772,808,Flavio909,616(51.31%),Lula675,627(38.11%); local baseline not runoff tally/guarantee."
+    },
+    {
+      "url": "https://datafolha.folha.uol.com.br/eleicoes/2026/10/flavio-bolsonaro-pl-tem-47-e-tem-empate-tecnico-com-lula-pt-que-aparece-com-45.shtml",
+      "observed_utc": "2026-10-19T15:51:37.259417Z",
+      "finding": "Oct16 national release,field13–14,n2520: validF51 vs52prior; national context only, not a DF measurement."
+    },
+    {
+      "url": "https://jc.uol.com.br/politica/2026/10/12/quaest-flavio-bolsonaro-tem-50-contra-40-de-lula-no-segundo-turno-no-distrito-federal.html",
+      "observed_utc": "2026-10-19T15:54:29Z",
+      "finding": "NewerlocalQuaestreported50F40L6blank4undecided,n1104,field8–11; normalized55.56/44.44. Secondarybodyverified/rootread, not originalpollsterPDF. TSEregistrationcodesunresolved."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.89,
+    "low": 0.7,
+    "high": 0.995,
+    "method": "Newer exact-local secondaryreportedQuaest added to verifiedDatafolha; common-error andcampaignnormalmodel, unchangedfirst-roundcontext.",
+    "reasoning": "ReportednewerQuaestlocallead strengthensregionalfavorite, so reviseYES81→89 afterdirectsourcechallenge; subjectiveerrorbudgetstillleavesupsettail. Ordinarystrategy10ppdefaultmakesNOselected1%; extra20stressNO0. FullstructuralNOlow.5% andunconditional-makerfillshiftmean tinyasofmarginnotrobust. Noorderbasedonold19%upsetestimate. Equalweight54and55.56 then−.5ppnationalcontext; sharederrorretained, not a new independentRedditpoll. Registrationcodesunresolved. This is explicitpostquote primaryrevision, not claimedpriceblind. Ordinary10ppclassdefaultand20ppadditionalstressbothreported.",
+    "actual_entry_reserve_pp": 10,
+    "model_path": "research/2026-10-17-deep-review/models/0355_primary_revision_1602.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1602_0355_revision.json",
+    "quote_file_sha256": "abffd0c282557976b848f94794376edaf0818d24fe29a98e01f0e8ffd3226ced",
+    "quote_capture_utc": "2026-10-19T15:59:47.987542+00:00",
+    "gamma_received_utc": "2026-10-19T15:59:47.760822+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 9.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.89,
+        "selected_stress_probability": 0.79,
+        "best_bid": 0.98,
+        "best_ask": 0.991,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792425483099",
+        "book_received_utc": "2026-10-19T15:59:47.898814+00:00",
+        "book_age_seconds_at_receipt": 104.79981398582458,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.955,
+            "fee": 0.00179,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.991
+              }
+            ],
+            "net": 4.95679
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.9,
+            "fee": 0.00393,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.98
+              }
+            ],
+            "net": 4.89607
+          }
+        },
+        "taker_cost_usd": 4.95679,
+        "central_expected_profit_usd": -0.5067899999999996,
+        "selected_stress_profit_usd": -1.0067899999999996,
+        "break_even_before_carry": 0.991358,
+        "break_even_constant_carry": 0.9921170041377785,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.10999999999999999,
+        "selected_stress_probability": 0.009999999999999981,
+        "best_bid": 0.009,
+        "best_ask": 0.02,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792425483099",
+        "book_received_utc": "2026-10-19T15:59:47.898814+00:00",
+        "book_age_seconds_at_receipt": 104.79981398582458,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.1,
+            "fee": 0.00392,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.02
+              }
+            ],
+            "net": 0.10392000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.045,
+            "fee": 0.00179,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.009
+              }
+            ],
+            "net": 0.04321
+          }
+        },
+        "taker_cost_usd": 0.10392000000000001,
+        "central_expected_profit_usd": 0.4460799999999999,
+        "selected_stress_profit_usd": -0.05392000000000011,
+        "break_even_before_carry": 0.020784000000000004,
+        "break_even_constant_carry": 0.020799912659200403,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentryafterfocusedchallenge: YES89/79 fails99.1c; NO11/1 fails2cask+fee. AtNO0.9cbid selected1%marginonly0.1ppbeforecosts; fullstructuralNOlow0.5% and news-drivenmakerfillnotbounded. Do notpostan unconditionalfair-oddsbidintoasymmetricinformation.",
+  "reopen_condition": "Original/newer exactDFpoll, resolvedregistration/sourceverification, materialcampaign/turnoutnews; price/costmargin survivingconditionalfill.",
+  "portfolio_action": "none; earlier355NOcandidate not executable under updated evidence",
+  "question": "Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Federal District?",
+  "valuation_author": "primary_operator",
+  "original_index": 355,
+  "evaluated_utc": "2026-10-19T16:01:41.700615+00:00",
+  "revision_reason": "Newer exact-local Quaest report verified after focused missing-fact challenge; explicit10ppordinary/default20ppadditional stress and conditionalmakerfill assessment",
+  "prior_report_sha256": "4932a83c71d2df29cbaa6818e7a5bfdb391ab54b075ea252811c2d177de5dc38",
+  "report_sha256": "3031a11afd437f971074d5ddff5e0b57aeb0a58533f4b061a12bbcf6cc4bc4ea",
+  "report_path": "revisions/0355_20261019T160141700095Z.md",
+  "revision_path": "revisions/0355_20261019T160141700095Z.json"
+}

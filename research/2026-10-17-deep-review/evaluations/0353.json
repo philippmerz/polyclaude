@@ -1,0 +1,159 @@
+{
+  "review_index": 353,
+  "market_id": "1397281",
+  "condition_id": "0x627ed310dc3977b2d71d96a4f2fccd6050553f6f165efd6c29578f5678f3f863",
+  "criteria_sha256": "fa1ad965dc91949d44c2d4480d566fa467aecffad7784297c6599eded967739f",
+  "status": "valued",
+  "literal_analysis": "Entire bound Kostyantynivka municipality under qualifying ISW layers by Dec31 2026 23:59ET, retained in next full daily update; explicit negotiated actual-control exception. Infiltration and claimed-control layers excluded; broad uncovered interior is not border-sliver exception. Temporary map errors do not count; one full qualifying map must persist through next complete daily update. Actual negotiated transfer qualifies; de-jure announcement alone does not.",
+  "evidence": [
+    {
+      "url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+      "observed_utc": "2026-10-19T12:38:39.429006Z",
+      "finding": "Oct18 map, exact bound settlement OBJECTID5889; independent GEOS verification37.8773% qualifying advances,0% controlled,62.1227% uncovered. One snapshot, not persistence or forecast."
+    },
+    {
+      "url": "https://services5.arcgis.com/SaBe5HMtmnbqSWlu/arcgis/rest/services/Ukrainian_Settlements_Updated_view/FeatureServer/0",
+      "observed_utc": "2026-10-19T12:39:00.666261Z",
+      "finding": "Webmap UkrainianSettlements URL exactly binds target feature; Donetska/Kramatorskyi/Kostiantynivska, not another same-name city."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.28,
+    "low": 0.08,
+    "high": 0.65,
+    "method": "Primary subjective campaign-regime mixture with explicit faster/slower structural countermodels; map not extrapolated linearly.",
+    "reasoning": "Current qualifying footprint leaves a broad 62% interior gap and does not satisfy capture. Around73 days remain; full-municipality urban consolidation and next-map persistence are harder than infiltration. ISW Sep11 indexed prose describes months of failed complete seizure and logistical difficulty; this is dated context, not verified Oct18 prose. Sudden Ukrainian withdrawal or real negotiated transfer can shorten the remaining campaign; polygon fraction cannot be linearly extrapolated. Scenario weights/conditional probabilities are primary judgments, not frequencies estimated from a city sample; map alone establishes present failure, not future no.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0353_primary_1550.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1550_0353.json",
+    "quote_file_sha256": "d87ee2344f68599ff5a45a2c0d5a29b9736d27fa5ae64e36c2fc92dff12d14ad",
+    "quote_capture_utc": "2026-10-19T15:47:41.267458+00:00",
+    "gamma_received_utc": "2026-10-19T15:47:40.923823+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.28,
+        "selected_stress_probability": 0.08000000000000002,
+        "best_bid": 0.1,
+        "best_ask": 0.12,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792424858421",
+        "book_received_utc": "2026-10-19T15:47:41.116710+00:00",
+        "book_age_seconds_at_receipt": 2.6957099437713623,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.6,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.12
+              }
+            ],
+            "net": 0.6
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.5,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.1
+              }
+            ],
+            "net": 0.5
+          }
+        },
+        "taker_cost_usd": 0.6,
+        "central_expected_profit_usd": 0.8000000000000002,
+        "selected_stress_profit_usd": -0.1999999999999999,
+        "break_even_before_carry": 0.12,
+        "break_even_constant_carry": 0.1207575041956209,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.72,
+        "selected_stress_probability": 0.52,
+        "best_bid": 0.88,
+        "best_ask": 0.9,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792424858421",
+        "book_received_utc": "2026-10-19T15:47:41.116710+00:00",
+        "book_age_seconds_at_receipt": 2.6957099437713623,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.5,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.9
+              }
+            ],
+            "net": 4.5
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.4,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.88
+              }
+            ],
+            "net": 4.4
+          }
+        },
+        "taker_cost_usd": 4.5,
+        "central_expected_profit_usd": -0.9000000000000004,
+        "selected_stress_profit_usd": -1.9,
+        "break_even_before_carry": 0.9,
+        "break_even_constant_carry": 0.9056812814671569,
+        "current_execution_authorization": false
+      }
+    },
+    "fee_capture_limit": "Gamma explicitly feesEnabled=false; compact CLOB omitted fd, collector flagged a gap. Zero-fee Gamma planning economics is not execution-time CLOB fee verification; no order proposed. Positive fees only worsen the selected-stress rejection."
+  },
+  "verdict": "Central YES28% suggests value at12c, but selected/full-range low8% fails12c asks and10c bid; NO72/selected52% fails90c asks. Noentry: evidence cannot justify narrowing large campaign uncertainty to manufacture an executable edge.",
+  "reopen_condition": "New dated ISW qualifying map and next update, verified city logistics/withdrawal evidence, substantive negotiated actual control, or sufficient current fee-adjusted quote margin.",
+  "portfolio_action": "none; no order/reservation/prior change",
+  "evaluated_utc": "2026-10-19T15:48:56.825172+00:00",
+  "question": "Will Russia capture all of Kostyantynivka by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 353,
+  "report_sha256": "e6644396c272d50664e1452c8a9f82ff96f5fcee4f0e5c2449f6877472def4e7"
+}

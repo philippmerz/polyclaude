@@ -1,0 +1,44 @@
+{
+  "review_index": 362,
+  "market_id": "5707471",
+  "condition_id": "0x01555893a7a349a2fe8e17d0df9a82cf24560664c53008ccca4022fb72e08d9a",
+  "criteria_sha256": "a6ee160ad913cd5e1424a0c69545f019f3035ae5439779cf6a7c413991c35c6a",
+  "status": "blocked_after_review",
+  "literal_analysis": "SenseandSensibility2026 AllCritics displayedRTTomatometer>=78 atOct19 10AMET/14UTC. If actualdataunavailableatcutoff, followuntilOct23 23:59ET thenNO. Ourfailuretofindas-ofcapture is not proofdataunavailablethen and doesnotautomaticallyactivaterulefallback. Currentlater76%cannotreplacehistoricalcutoffvalue.",
+  "evidence": [
+    {
+      "url": "https://www.rottentomatoes.com/m/sense_and_sensibility_2026",
+      "observed_utc": "2026-10-19T15:46:58.826847Z",
+      "finding": "Exact2026film/current76%/99critics,6418secondsaftercutoff; embeddedaggregatehasnoexacthistoricalclock."
+    },
+    {
+      "url": "https://web.archive.org/web/20261019140340id_/https://www.rottentomatoes.com/m/sense_and_sensibility_2026",
+      "observed_utc": "2026-10-19T15:48:23.859257Z",
+      "finding": "Exact-dayCDXyieldedone14:03:40Zsnapshot76%/99,220secondsaftercutoff. No pre-cutoffsnapshotinboundedquery; laterliveunchangeddoesnotprove14UTCvalue."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "Historicalcutoffsourceaudit; primarywithholdsadoptedprobability ratherthanconvertinglaterreadingintofalseasofcertainty.",
+    "reasoning": "Near-cutoff76% favorsNOdirectionally,butupdates/correctionsandbatcharrivalprocessin220secondsgapareunmeasured. Reviewrelativeagesimprecise. No calibratedprobabilityforthehistoricalcutofforindependentresolutionconsensusobtained.",
+    "source_paths": [
+      "data/deep_review_20261017/work/0362_facts_1545.json",
+      "data/deep_review_20261017/work/0362_cutoff_history_1549.json"
+    ]
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "Yes": "Cannotpricefromlater76%asif78cutofffalse; cutoffupdate/correctiontailnotmeasured.",
+    "No": "No first-handcutoffreading; a nearbylater76%isnoteligiblemeasuredtailfor5xexception.",
+    "current_quote_requested": false,
+    "reason": "No adoptedp/cutoffvalue, so noorderorclaimofrobustentryEV. Bothsidesremainunpriced, notrejected."
+  },
+  "verdict": "Blockedforhistoricalcutoffevidence, not excludedorpricedreject. Primaryreviewcompletewithexplicitgap; continuetothenextcase.",
+  "reopen_condition": "Timestampedofficial/capturedRTscoreatorbefore14UTC Oct19, contemporaneouscorroboratedresolutiondata, or crediblevenueadjudicationwithfrozenliteralidentity.",
+  "portfolio_action": "none; individualcasegapdoesnotblockwiderreview/nativegoal",
+  "evaluated_utc": "2026-10-19T16:04:35.848593+00:00",
+  "question": "Will \"Sense and Sensibility\" score at least 78 on the Rotten Tomatoes Tomatometer?",
+  "valuation_author": "primary_operator",
+  "original_index": 362,
+  "report_sha256": "88d2eb85558c67116f7606929fa58496fda024c5f682f4ee013bf838dd652c47"
+}

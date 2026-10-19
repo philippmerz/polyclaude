@@ -1,0 +1,163 @@
+{
+  "review_index": 360,
+  "market_id": "5407574",
+  "condition_id": "0xd68a2258f31c860e6ce8bd748cd83c264327eaae37c75f4f2c11c58842ce0329",
+  "criteria_sha256": "58ac5f0607e6bda55fb1c12d031baafe88ec04e6b3c224b04e6a20fcbba21c1a",
+  "status": "valued",
+  "literal_analysis": "YES only if Predict.fun officially launches a governance token by 2026-10-31 11:59 PM ET and it is actively publicly transferable and tradable. Announcement alone is insufficient. Primary: Predict.fun; credible-reporting consensus also allowed.",
+  "evidence": [
+    {
+      "url": "https://predict.fun/news",
+      "observed_utc": "2026-10-19T15:47:23.278402Z",
+      "finding": "Bounded currentproduct/promotionslist, no governance-tokenlaunch notice in captured listing; not exhaustivearchive."
+    },
+    {
+      "url": "https://docs.predict.fun/the-basics/how-to-earn-points",
+      "observed_utc": "2026-10-19T15:48:12.758845Z",
+      "finding": "Weeklyactivity/LPpointsprogram, no tokenidentity/conversiondate. Cached~15.6h; pointsandlocaleairdropstringnotactualtransfer/trading."
+    },
+    {
+      "url": "https://x.com/predictdotfun",
+      "observed_utc": "2026-10-19T15:48:13.348765Z",
+      "finding": "LimitedrecentofficialrenderedpostsOct16–17promotions; absenceoflaunchinsegmentnotproofofnone."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15,
+    "low": 0.03,
+    "high": 0.45,
+    "method": "Primary short-window launch/governance/public-trading conditional tree, with preparedness/channel-coverage uncertainty.",
+    "reasoning": "Twelve days remain. Official currentnews/points UI/docs show an active product/weeklyPPprogram without a datedTGE, governancecontract or tradeabilitynotice. Funding/productgrowth provides capacity to launch, but not a launchschedule; PP and serializedairdroplocalestrings are not transferability. A surprise/quietlypreparedlaunch remains possible, so lackofnotice is not proofNO. Conditionalshortwindowlaunch20%,governance90%,deadlinepublictrading85% gives15.3%, adopt15. Docs cached~15.6h andXrenderonlylimitedrecentposts; nochain/exchangetokensearch andnoexhaustivechannelaudit, so uncertaintylarge.",
+    "actual_entry_reserve_pp": 10,
+    "model_path": "research/2026-10-17-deep-review/models/0360_primary_1602.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1602_0360.json",
+    "quote_file_sha256": "03bc01ca94954231cfe21e945b2aebf0ed45836809f4c23d7817909fe3458637",
+    "quote_capture_utc": "2026-10-19T15:59:47.206367+00:00",
+    "gamma_received_utc": "2026-10-19T15:59:46.969804+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 13.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.15,
+        "selected_stress_probability": 0.04999999999999999,
+        "best_bid": 0.15,
+        "best_ask": 0.17,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425577688",
+        "book_received_utc": "2026-10-19T15:59:47.117214+00:00",
+        "book_age_seconds_at_receipt": 9.429214000701904,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.8500000000000001,
+            "fee": 0.04939,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.17
+              }
+            ],
+            "net": 0.8993900000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.75,
+            "fee": 0.04463,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.15
+              }
+            ],
+            "net": 0.70537
+          }
+        },
+        "taker_cost_usd": 0.8993900000000001,
+        "central_expected_profit_usd": -0.14939000000000013,
+        "selected_stress_profit_usd": -0.6493900000000001,
+        "break_even_before_carry": 0.17987800000000004,
+        "break_even_constant_carry": 0.1800769602848963,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.85,
+        "selected_stress_probability": 0.75,
+        "best_bid": 0.83,
+        "best_ask": 0.85,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425577688",
+        "book_received_utc": "2026-10-19T15:59:47.117214+00:00",
+        "book_age_seconds_at_receipt": 9.429214000701904,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.25,
+            "fee": 0.04463,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.85
+              }
+            ],
+            "net": 4.29463
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.1499999999999995,
+            "fee": 0.04939,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.83
+              }
+            ],
+            "net": 4.10061
+          }
+        },
+        "taker_cost_usd": 4.29463,
+        "central_expected_profit_usd": -0.044629999999999725,
+        "selected_stress_profit_usd": -0.5446299999999997,
+        "break_even_before_carry": 0.858926,
+        "break_even_constant_carry": 0.859876044817403,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry: YES15/selected5 fails17casks/15cbid; NO85/75 fails85casks/83cbid afteruncertainty/carry.",
+  "reopen_condition": "Official datedtokenannouncement/contract/governance and publictransfer/trading evidence; completeofficialchannelupdate; adequatequote after conditionalfill/currentexecution gates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T16:01:40.868307+00:00",
+  "question": "Will Predict.fun launch a token by October 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 360,
+  "report_sha256": "60fa851214b976e84a26337c81ba0f78237a1b5fe902c11abf5e5e02d6ffe953"
+}

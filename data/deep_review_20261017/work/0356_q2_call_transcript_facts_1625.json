@@ -1,0 +1,44 @@
+{
+  "schema": "price_blind_company_facts.v1",
+  "compiled_utc": "2026-10-19T15:59:39.280192Z",
+  "review_index": 356,
+  "market_id": "5684759",
+  "condition_id": "0x63a9c8ed7a860406a2bf24a75c51251b9799b8784c420e4c94b430420c1b6645",
+  "criteria_sha256": "a33a152482355507c9608cab31d7654cd7b753b84757d66ae5e604d159631b1c",
+  "question": "Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?",
+  "source": {
+    "title": "Chevron 2026 2Q Earnings Conference Call Edited Transcript",
+    "url": "https://chevroncorp.gcs-web.com/static-files/ed21b689-6244-4338-b9f7-2e1081e6ef18",
+    "publisher": "Chevron Corporation investor-relations GCS Web",
+    "event_date": "2026-07-31 11:00 EDT",
+    "access": "official GCS quarterly earnings materials page identifies the transcript; browser-rendered official PDF read in full (16 pages). Direct local GET attempts are separately captured but yielded HTTPError with no numeric status in receipt."
+  },
+  "facts": [
+    "Prepared remarks: global upstream production grew >5% quarter-over-quarter; Q2 was the second-highest quarter, up >200 thousand BOE/day. U.S. production was a record nearly 2.1M BOE/day; international production nearly 2M. TCO and Australia were at/near full rates; reported Middle East conflict impact was isolated to Partitioned Zone (~1% of Q2 total). These are Q2 actual/operating context, not Q3 values.",
+    "TCO Q&A: management said its production waterfall was up 170 thousand BOE/day versus Q1 and each Q2 month was among TCO’s highest. A 2025 Q4 turnaround raised 3GP nameplate oil capacity 260→320 thousand b/d; total field processing capacity was slightly above 1M b/d. Capacity is not Chevron worldwide net BOE/day or a new Q3 increment.",
+    "CPC Q&A: two SPMs were in service; the third, then undergoing refurbishment, was expected to reopen during Q3, allowing all three later in Q3. Pipeline was flowing, with Caspian shipping, rail and storage as mitigations. This is a possible logistics relief, not a quantified production bridge.",
+    "Permian Q&A: >1M BOE/day for five quarters; management said it had continued to creep upward while the business focused on efficiency/productivity and a plateau. Management described highest surface reliability since 2024. No Q3 volume delta supplied.",
+    "Australia Q&A: interviewer raised typical Gorgon/Wheatstone LNG volume uplift in H2 starting Q3; CEO confirmed seasonality and said Australian assets were operating at high reliability. No volume/BOE figure or worldwide Q3 bridge supplied.",
+    "Transcript Q&A/prepared remarks provide no explicit Q3 worldwide net oil-equivalent total, no sequential Q2-to-Q3 amount, and no numerical Q3 Guyana net-entitlement change. Guyana is described as a long-lived growth asset only."
+  ],
+  "relation_to_other_primary_sources": "Chevron’s later Aug7 sensitivity/forward-guidance PDF is separate: its 150–200 MBOED Q3 upstream turnarounds/downtime estimate does not appear as an explicit bridge in the July31 transcript. Do not add it to Q2 actual or infer an all-company Q3 result.",
+  "capture_limit": {
+    "failed_direct_attempt_receipts": [
+      "logs/deep_review_20261017/case356_q2_call_1615/q2_event_page.receipt.json",
+      "logs/deep_review_20261017/case356_q2_call_1620_sources/q2_call_edited_transcript.receipt.json",
+      "logs/deep_review_20261017/case356_q2_call_1620_sources/q2_call_presentation_prepared.receipt.json"
+    ],
+    "local_raw_transcript_saved": false,
+    "status_note": "The event page browser request reports 403. read_capture records HTTPError for the direct transcript and slides GETs but does not preserve numeric status/body, so no raw hash is claimed. No alternate route or bypass attempted."
+  },
+  "source_links": [
+    "https://chevroncorp.gcs-web.com/node/5986",
+    "https://chevroncorp.gcs-web.com/events/event-details/2q-2026-chevron-earnings-conference-call",
+    "https://chevroncorp.gcs-web.com/static-files/ed21b689-6244-4338-b9f7-2e1081e6ef18"
+  ],
+  "limits": [
+    "Primary browser rendering supports the cited summary but is not a locally hashed source-body capture.",
+    "No specific sequential production guidance was found in the bounded official transcript; absence from this transcript is not evidence of a particular Q3 result.",
+    "No forecast or market price interpretation is included."
+  ]
+}

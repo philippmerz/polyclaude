@@ -1,0 +1,88 @@
+{
+ "schema": "price_blind_facts.v1",
+ "review_index": 360,
+ "market_id": "5407574",
+ "condition_id": "0xd68a2258f31c860e6ce8bd748cd83c264327eaae37c75f4f2c11c58842ce0329",
+ "criteria_sha256": "58ac5f0607e6bda55fb1c12d031baafe88ec04e6b3c224b04e6a20fcbba21c1a",
+ "generated_utc": "2026-10-19T15:49:16Z",
+ "question": "Will Predict.fun launch a token by October 31, 2026?",
+ "literal_rule": "YES only if Predict.fun officially launches a governance token by 2026-10-31 11:59 PM ET and it is actively publicly transferable and tradable. Announcement alone is insufficient. Primary: Predict.fun; credible-reporting consensus also allowed.",
+ "facts": [
+  "Official Predict Points UI (GET 2026-10-19 15:47:24Z) presents PP as an activity/leaderboard reward earned through trading, liquidity, holding positions and early market activity; weekly PP distributions occur 5–6 days after each week. It displays no token-conversion or launch date.",
+  "Official points guide last updated 2026-04-28T13:25:09Z (GET 2026-10-19 15:48:12Z; Age header 56,113s) describes points/reward allocation and rules, without a governance token identity, transferable contract, or dated TGE.",
+  "Official news index GET 2026-10-19 15:47:23Z displayed product, event and partnership updates; no governance-token launch item appeared in this captured listing. Bounded page snapshot only, not an exhaustive channel archive.",
+  "Official strategic funding article dated 2026-04-02 (describes Mar31 round with YZi Labs and Susquehanna Crypto) outlines expanded market access, trading infrastructure and integrations; gives no token launch schedule or token identity.",
+  "Official @predictdotfun X profile GET 2026-10-19 15:48:13Z rendered current event posts dated Oct16–17 and a pinned Apr9 Binance Wallet partnership. No token announcement appeared in the rendered segment; this does not cover the full account archive.",
+  "Official docs index GET 2026-10-19 15:47:59Z lists product, points, fees, wallets, resolution, audits and developer docs; no token/governance roadmap section appeared in that index snapshot. Response Age header 56,231s.",
+  "Points page serialized locale data contains an “Airdrop = {value}” label, but the visible page does not display an allocation or conversion promise; the string alone is not launch evidence."
+ ],
+ "live_token_status": "No official token address, transferability/tradability notice, or live token identity was found in these bounded sources. No chain/exchange contract search was done; this is an evidence gap, not proof no token exists.",
+ "sources": [
+  {
+   "id": "news",
+   "url": "https://predict.fun/news",
+   "status": 200,
+   "received_utc": "2026-10-19T15:47:23.278402Z",
+   "age_s": null,
+   "raw_sha256": "7f723825fb89167466fb5e64008f53e388961f7580daf0dacb060ae7251ebc15",
+   "gzip_sha256": "4e87f7cbff7395a75ece87c93fc0736d1902c5152100880d3e7ae0634731fff7",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/news/news.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/news/news.receipt.json"
+  },
+  {
+   "id": "points",
+   "url": "https://predict.fun/points",
+   "status": 200,
+   "received_utc": "2026-10-19T15:47:24.637652Z",
+   "age_s": null,
+   "raw_sha256": "00698c5a71f173d460180ceffdc43fba26905744484a56c5170064da38c7227d",
+   "gzip_sha256": "4399ac97f8aeb64d461e405d55346ee25792c444fcab24c12c4ab5053883f590",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/points/points.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/points/points.receipt.json"
+  },
+  {
+   "id": "docs",
+   "url": "https://docs.predict.fun/",
+   "status": 200,
+   "received_utc": "2026-10-19T15:47:59.464294Z",
+   "age_s": "56231",
+   "raw_sha256": "bfb2473793d3a2ab73e7df06c5207e674a5d851195e2c81038a5f6577bdaf74f",
+   "gzip_sha256": "3e1668fd596a91222612d43588f88a870ec28008f782af5353a43bb21ab6c4bd",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/docs/docs.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/docs/docs.receipt.json"
+  },
+  {
+   "id": "howto_points",
+   "url": "https://docs.predict.fun/the-basics/how-to-earn-points",
+   "status": 200,
+   "received_utc": "2026-10-19T15:48:12.758845Z",
+   "age_s": "56113",
+   "raw_sha256": "4cef212f3ac72ab178e56059bc40e1bf73ccd92f8abf4d3c908576394dff113c",
+   "gzip_sha256": "655f5185b750d127e4be4518a6abf88c099538f8c123d6caee70fd0edb153bb9",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/howto_points/howto_points.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/howto_points/howto_points.receipt.json"
+  },
+  {
+   "id": "x_profile",
+   "url": "https://x.com/predictdotfun",
+   "status": 200,
+   "received_utc": "2026-10-19T15:48:13.348765Z",
+   "age_s": null,
+   "raw_sha256": "8d7b3f68dd583e36b3f84a03d89bc6dab4e6b68db7c762b0f7142448171ae539",
+   "gzip_sha256": "a5ef403cc457c2a69db3628e59459ad5ea5115e940342eaa90c22227fc7e219b",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/x_profile/x_profile.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/x_profile/x_profile.receipt.json"
+  },
+  {
+   "id": "funding_strategy",
+   "url": "https://predict.fun/news/predict-fun-announces-strategic-funding-round-with-yzi-labs-and-susquehanna-crypto",
+   "status": 200,
+   "received_utc": "2026-10-19T15:48:31.909340Z",
+   "age_s": null,
+   "raw_sha256": "e3ef6219f65d54923277fe2abf63f6fdaa892f96d06607f05a6d11de2a3463a6",
+   "gzip_sha256": "d4a9a5a68ad5e53a1da40da76c5d2b5fb4192f68a485cbf3c8273492dae07eed",
+   "body_path": "logs/deep_review_20261017/case360_facts_1540/funding_strategy/funding_strategy.body.json.gz",
+   "receipt_path": "logs/deep_review_20261017/case360_facts_1540/funding_strategy/funding_strategy.receipt.json"
+  }
+ ]
+}

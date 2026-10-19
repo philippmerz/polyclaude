@@ -1,11 +1,1 @@
-{
-  "schema": "polyclaude.deep_review_resume.v1",
-  "review_index": 356,
-  "phase": "FACTS_ONLY_SAVED_NO_VALUATION",
-  "source_paths": [
-    "work/0356_facts_1240.json"
-  ],
-  "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-19T12:40:00Z",
-  "source_capture_root": "logs/deep_review_20261017"
-}
+{"schema":"polyclaude.deep_review_resume.v1","review_index":356,"phase":"Saved/indexed; use latest effective ledger revision. No execution authority.","source_paths":["work/0356_facts_1240.json","work/0356_q3_guidance_facts_1537.json","work/0356_eia_sensitivity_1610.json","work/0356_q2_call_transcript_facts_1625.json","work/0356_primary_slides_source_age_1604.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T15:59:39.280192Z","source_capture_root":"logs/deep_review_20261017"}

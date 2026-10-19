@@ -1,6 +1,8 @@
 # October19 manual market research — active
 
-**333 valued /7 blocked /364 factual /2,296 pending;704 base+60 revisions,next353.**
+**338 valued /8 blocked /364 factual /2,290 pending;710 base+62 revisions,next364.**
+
+[Latest six-case batch and effective revisions](2026-10-19-manual1536-research.md). The table below is the earlier10:43 batch; native goal is now active.
 
 Manual research resumed10:43. Full portfolio checks at14UTC are independent; source gathering and valuations proceed between them. No automatic wait for cron. No financial action in this research chunk. Financial/account observations retain their existing dated records.
 
@@ -25,10 +27,10 @@ Manual research resumed10:43. Full portfolio checks at14UTC are independent; sou
 |[350](2026-10-17-deep-review/evaluations/0350.md)|YES61%, range20–98%|Noentry: YES61central/41selected,NO39/19; both passive and taker dated prices fail. Private GAAP mark uncertainty remains explicit.|
 |[352](2026-10-17-deep-review/evaluations/0352.md)|YES20%, range5–65%|Noentry: YES20/selected0 andNO80/60; even10pphaircut fails both bids. Held112 retain/noadd unchanged; no financial-prior mutation.|
 
-Active/next: **353**. [Small phase](../data/deep_review_20261017/work/manual1043_RESUME.json).
+Next: **364**. [Small active phase](../data/deep_review_20261017/work/manual1536_RESUME.json); facts ready364/366/367/368/370.
 
 - Tables use the newest immutable revision per case; earlier forecasts and blocks remain preserved. Case340 candidate withdrawn unplaced after album-specific leak evidence; DEC234.
 - Quotes are dated research evidence, never execution authorization. Sorted max-bid/min-ask governs; original first-row ordering error/correction and raw captures remain preserved.
 - Source units target2–5KB with separate raw arrays/receipts. Primary owns exact-rule interpretation, probabilities and both-side economics; helpers gather facts.
-- Latest full portfolio check12:57: account196.41includes5.83gas; trading190.58mid/185.99indicativenetdepth, PM35.44/30.85. Four12:55LIVE/0matchedBUY7.52/matchingreservations; no financialwriter. [Check](2026-10-19-1253-checkin.md).
+- Latest completed full check is14:27, with financial producer14:30:21–36UTC and news review14:32:22. Research does not refresh those observations. [Check](2026-10-19-1427-checkin.md).
 - Five11:06–11:27 alerts reviewed with source gaps retained: no measured MI/Google change; TheMeg streaming is not Whale final gross. [Source index](../data/deep_review_20261017/work/alert_followup_340_1155_index.json).

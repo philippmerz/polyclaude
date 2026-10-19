@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T12:39:38.841024+00:00
+Updated: 2026-10-19T16:04:36.100068+00:00
 
-**333 valuations saved; first milestone100:** 333 valued; 7 blocked after in-depth review. 364 factual exclusions separately; 2296 pending.
+**338 valuations saved; first milestone100:** 338 valued; 8 blocked after in-depth review. 364 factual exclusions separately; 2290 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -364,10 +364,16 @@ Each report below is written before moving to the next evaluation. Related contr
 |350|[Will Amazon (AMZN) beat quarterly earnings?](evaluations/0350.md)|valued|Noentry: YES61central/41selected,NO39/19; both passive and taker dated prices fail. Private GAAP mark uncertainty remains explicit.|
 |351|[Spread: Pittsburgh (-6.5)](evaluations/0351.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |352|[Will OpenRouter process less than 625T tokens from Oct 26 to Nov 22?](evaluations/0352.md)|valued|Noentry: YES20/selected0 andNO80/60; even10pphaircut fails both bids. Held112 retain/noadd unchanged; no financial-prior mutation.|
+|353|[Will Russia capture all of Kostyantynivka by December 31, 2026?](evaluations/0353.md)|valued|Central YES28% suggests value at12c, but selected/full-range low8% fails12c asks and10c bid; NO72/selected52% fails90c asks. Noentry: evidence cannot justify narrowing large campaign uncertainty to manufacture an executable edge.|
 |354|[Will LOUD win VALORANT Champions 2026?](evaluations/0354.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
+|355|[Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Federal District?](revisions/0355_20261019T160141700095Z.md)|valued|Noentryafterfocusedchallenge: YES89/79 fails99.1c; NO11/1 fails2cask+fee. AtNO0.9cbid selected1%marginonly0.1ppbeforecosts; fullstructuralNOlow0.5% and news-drivenmakerfillnotbounded. Do notpostan unconditionalfair-oddsbidintoasymmetricinformation.|
+|356|[Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?](revisions/0356_20261019T160435181308Z.md)|valued|Noentryatold9caskor4cbid:20ppselectedYES0; evenordinary10ppselectedYES1<4c. NO89/69 below96c. Original34%model/candidatepreservedaswithdrawnresearchlead, notexecuted.|
 |357|[Sharks vs. Red Wings](evaluations/0357.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |358|[Will OpenAI have the second highest OpenRouter market share the week of October 12?](revisions/0358_20261018T120932318539Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |359|[Will MrBeast's next video get between 270 and 280 million views on week 2?](evaluations/0359.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|360|[Will Predict.fun launch a token by October 31, 2026?](evaluations/0360.md)|valued|Noentry: YES15/selected5 fails17casks/15cbid; NO85/75 fails85casks/83cbid afteruncertainty/carry.|
+|361|[Will UK GDP growth in Q3 2026 be between 0.4% and 0.5%?](evaluations/0361.md)|valued|Noentry: YES15/selected5 fails19cask, NO85/75 centralmodestedge but fails82cask and81cbid after10ppuncertainty.|
+|362|[Will "Sense and Sensibility" score at least 78 on the Rotten Tomatoes Tomatometer?](evaluations/0362.md)|blocked_after_review|Blockedforhistoricalcutoffevidence, not excludedorpricedreject. Primaryreviewcompletewithexplicitgap; continuetothenextcase.|
 |363|[Will Brighton & Hove Albion FC win on 2026-10-18?](evaluations/0363.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |365|[Will the price of Ethereum be above $2,500 on October 18?](evaluations/0365.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|

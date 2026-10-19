@@ -1,0 +1,111 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 353,
+  "market_id": "1397281",
+  "condition_id": "0x627ed310dc3977b2d71d96a4f2fccd6050553f6f165efd6c29578f5678f3f863",
+  "criteria_sha256": "fa1ad965dc91949d44c2d4480d566fa467aecffad7784297c6599eded967739f",
+  "generated_utc": "2026-10-19T15:39:46Z",
+  "target_boundary": {
+    "source_service": "https://services5.arcgis.com/SaBe5HMtmnbqSWlu/arcgis/rest/services/Ukrainian_Settlements_Updated_view/FeatureServer/0",
+    "source_observed_utc": "2026-10-19T12:39:00.666261Z",
+    "response_spatial_reference": {
+      "wkid": 4326,
+      "latestWkid": 4326
+    },
+    "feature": {
+      "OBJECTID": 5889,
+      "ADM4_EN": "Kostyantynivka",
+      "ADM3_EN": "Kostiantynivska",
+      "ADM2_EN": "Kramatorskyi",
+      "ADM1_EN": "Donetska",
+      "GlobalID": "0c841ab0-cbfa-4ea0-afb0-7b3d7d2ec2b4"
+    },
+    "geometry_type": "esriGeometryPolygon",
+    "rings": 1,
+    "ring_closed": true,
+    "vertices_in_ring_including_close": 388
+  },
+  "map_source": {
+    "story_map_url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+    "embedded_map_item_id": "9f04944a2fe84edab9da31750c2b15eb",
+    "map_layer_data_observed_utc": "2026-10-19T12:38:39.429006Z",
+    "map_caption": "Assessed Control of Terrain in Ukraine as of October 18, 2026, 4:00 PM ET",
+    "webmap_root_spatial_reference": {
+      "latestWkid": 3857,
+      "wkid": 102100
+    },
+    "polygon_geometry_spatial_reference": {
+      "wkid": 4326
+    },
+    "municipality_service_layer_metadata_spatial_reference": {
+      "wkid": 102100,
+      "latestWkid": 3857
+    },
+    "pub_date": {
+      "Assessed Russian Advances": [
+        "2026-10-18"
+      ],
+      "Assessed Russian-Controlled Terrain": [
+        "2026-10-18"
+      ],
+      "Assessed Russian Infiltration Areas": [
+        "2026-10-18"
+      ]
+    },
+    "qualifying_layers": [
+      "Assessed Russian-Controlled Terrain",
+      "Assessed Russian Advances"
+    ],
+    "excluded_layer": [
+      "Assessed Russian Infiltration Areas"
+    ]
+  },
+  "geometry_result": {
+    "method": "Polygon overlay by vertical decomposition in shared EPSG:4326 coordinates. The boundary and qualifying feature rings were split at source vertices and segment intersections; polygon interiors were evaluated by even-odd ring fill, then the qualifying-layer union was intersected with the municipality. Area ratio is in the lon/lat coordinate plane, not geodesic area.",
+    "target_planar_area_degree2": 0.00402148350678059,
+    "qualifying_union_covered_degree2": 0.0015232294805005205,
+    "qualifying_union_coverage_percent": 37.87730269021907,
+    "uncovered_percent": 62.12269730978093,
+    "per_layer": [
+      {
+        "layer": "Assessed Russian-Controlled Terrain",
+        "feature_count": 10,
+        "covered_area_degree2": 0.0,
+        "target_area_percent": 0.0
+      },
+      {
+        "layer": "Assessed Russian Advances",
+        "feature_count": 53,
+        "covered_area_degree2": 0.0015232294805005205,
+        "target_area_percent": 37.87730269021907
+      }
+    ],
+    "qualifying_feature_counts": {
+      "controlled": 10,
+      "advances": 53
+    },
+    "tiny_border_exception_note": "The computed uncovered portion is broad in this single-map overlay; this packet does not interpret the contract exception or make a settlement judgment."
+  },
+  "persistence_limit": "This is one ISW map observation dated 2026-10-18 16:00 ET, retrieved 2026-10-19. No subsequent full ISW daily update was captured here, so next-cycle persistence is not established.",
+  "source_receipts": [
+    {
+      "path": "logs/deep_review_20261017/case353_facts_1235/isw_webmap_item_data_complete/isw_webmap_item_data_complete.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/case353_facts_1235/isw_webmap_item_data_complete/isw_webmap_item_data_complete.receipt.json",
+      "http_status": 200,
+      "received_utc": "2026-10-19T12:38:39.429006Z",
+      "raw_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+      "gzip_sha256": "f5ff33a5d21d4c86c3707a52028b9dbc18f6b1e8542ccc5ccf156fb59b1f17d7",
+      "raw_bytes": 4334589
+    },
+    {
+      "path": "logs/deep_review_20261017/case353_facts_1235/kostyantynivka_municipality_query/kostyantynivka_municipality_query.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/case353_facts_1235/kostyantynivka_municipality_query/kostyantynivka_municipality_query.receipt.json",
+      "http_status": 200,
+      "received_utc": "2026-10-19T12:39:00.666261Z",
+      "raw_sha256": "ff1447d52f88f2aaaec8d87f0695f3a5bf185e6b7b83a610e046c939e4da5734",
+      "gzip_sha256": "36a1400e0bcfbd1fcd4fe47ff15a65e73382287152a3f3be20906f9d88fc53cd",
+      "raw_bytes": 19141
+    }
+  ],
+  "calculation_code": "logs/deep_review_20261017/case353_geometry_1538/overlay_sweep.py"
+}

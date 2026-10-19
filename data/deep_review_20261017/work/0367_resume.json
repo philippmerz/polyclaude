@@ -1,0 +1,12 @@
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 367,
+  "phase": "FACTS_ONLY_SAVED_NO_VALUATION",
+  "source_paths": [
+    "work/0367_facts_1555.json",
+    "work/0367_other_capture_search_1555.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T15:54:16Z",
+  "source_capture_root": "logs/deep_review_20261017"
+}

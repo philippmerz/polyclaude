@@ -1,0 +1,169 @@
+{
+  "review_index": 356,
+  "market_id": "5684759",
+  "condition_id": "0x63a9c8ed7a860406a2bf24a75c51251b9799b8784c420e4c94b430420c1b6645",
+  "criteria_sha256": "a33a152482355507c9608cab31d7654cd7b753b84757d66ae5e604d159631b1c",
+  "status": "valued",
+  "literal_analysis": "Official Chevron Q3 worldwide NET oil-equivalent production strictly>4100MBOED; exactly4100NO; first/materials mostprecise metric; missingmetric/noquarterreleasebyNov30NO. MBOED thousandBOE/day, worldwide net (not grossfacilitycapacity/oil-only/revenue). Ranges midpoint,mostprecisecompanymetric controls; laterrevisionsignored; transcript/webcastfallbackwhenabsentfrommaterials. Oct30call11ET, exactmaterialsreleaseclocknotestablished.",
+  "evidence": [
+    {
+      "url": "https://chevroncorp.gcs-web.com/static-files/b648b12f-356c-4d38-a42c-8b3788f2d026",
+      "observed_utc": "2026-10-19T15:36:43.308843Z",
+      "finding": "Aug7FYguidance3980–4100MBOED/$60Brent; Q3upstreamdowntime150–200MBOED, no explicitQ2-to-Q3bridge. Annual15MBOED/$10line unsigned, not quarterforecast."
+    },
+    {
+      "url": "https://chevroncorp.gcs-web.com/static-files/5d221f6d-5629-4f32-9427-97636ba74a07",
+      "observed_utc": "2026-10-19T15:37:02.847921Z",
+      "finding": "Sep8CFO: TCO260→320kb/dgrossfacilitycapacity alreadymentionedQ2call; Permianplateau~1M. No extra+60worldwidenetincrement."
+    },
+    {
+      "url": "https://www.eia.gov/dnav/pet/hist/leafhandler.ashx?f=m&n=pet&s=rbrte",
+      "observed_utc": "2026-10-19T15:53:39.053609Z",
+      "finding": "Monthly2026Q3Brentspot83.76/91.08/114.16. Differentfromannual$60basis; not Chevronrealizationorquarterlyproductionsensitivity."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34,
+    "low": 0.08,
+    "high": 0.7,
+    "method": "Price-blind day-weighted annual-to-H2 production bridge and explicit Q4-minus-Q3 split/error distribution; primary uncertainty judgments.",
+    "reasoning": "Annual guidance midpoint plus reportedQ1/Q2 implies H2avg4.114M, so comparing FY4.04 toQ3threshold4.1 would be wrong. Q3 downtime150–200MBOED and Guyanaentitlement headwinds suggest a Q4rebound; size not supplied, so split uncertainty remains broad. TCOcapacity260→320 is grossfacilitycapacity alreadydiscussedQ2, not another+60netquarter increment. EIAQ3spotBrent83.76/91.08/114.16 differs fromFY$60basis; annual15MBOED/$10sensitivity linehasnoverifiedsign and is not applied quarter-only. No completedQ3productionactual observed; crudequantity/grosscapacity/revenue are not rule metric. Simulationseed35620261019/n200k gives34.4855%; round34. Split/error distributionsunfitted; range8–70 capturesstructuralmisspecification.",
+    "actual_entry_reserve_pp": 20,
+    "model_path": "research/2026-10-17-deep-review/models/0356_primary_1558.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/quotes_1558_0356_0361.json",
+    "quote_file_sha256": "65395e2164af7d1dd4b4deda59f1dac2e0fb998d9883dec397999e6eb368f53e",
+    "quote_capture_utc": "2026-10-19T15:57:30.587645+00:00",
+    "gamma_received_utc": "2026-10-19T15:57:30.180894+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 13.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.34,
+        "selected_stress_probability": 0.14,
+        "best_bid": 0.04,
+        "best_ask": 0.09,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425440083",
+        "book_received_utc": "2026-10-19T15:57:30.500882+00:00",
+        "book_age_seconds_at_receipt": 10.417881965637207,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.44999999999999996,
+            "fee": 0.01639,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.46638999999999997
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.2,
+            "fee": 0.00768,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.04
+              }
+            ],
+            "net": 0.19232000000000002
+          }
+        },
+        "taker_cost_usd": 0.46638999999999997,
+        "central_expected_profit_usd": 1.23361,
+        "selected_stress_profit_usd": 0.2336100000000001,
+        "break_even_before_carry": 0.093278,
+        "break_even_constant_carry": 0.09338117335891301,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6599999999999999,
+        "selected_stress_probability": 0.4599999999999999,
+        "best_bid": 0.91,
+        "best_ask": 0.96,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792425440083",
+        "book_received_utc": "2026-10-19T15:57:30.500882+00:00",
+        "book_age_seconds_at_receipt": 10.417881965637207,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.8,
+            "fee": 0.00769,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.96
+              }
+            ],
+            "net": 4.80769
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.55,
+            "fee": 0.01638,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.91
+              }
+            ],
+            "net": 4.53362
+          }
+        },
+        "taker_cost_usd": 4.80769,
+        "central_expected_profit_usd": -1.5076900000000002,
+        "selected_stress_profit_usd": -2.5076900000000006,
+        "break_even_before_carry": 0.961538,
+        "break_even_constant_carry": 0.9626015423699318,
+        "current_execution_authorization": false
+      }
+    },
+    "ordinary_default_10pp_diagnostic": {
+      "selected_yes": 0.24,
+      "selected_no": 0.56,
+      "Yes_EV_5shares_at_asks": 0.73361,
+      "scope": "20pp primary additional stress remains governing because annual-to-quarter split is weakly observed."
+    }
+  },
+  "verdict": "YES candidate;34/selected14% vs9cask plusfee survives20pp diagnostic;5sharescost0.46639/selectedEV+0.23361. NO96c fails66/46%. Mandatory missing-fact challenge of Q2call/actualsequentialquarterbridge and conditionalmakerfill beforeorder; noautomaticentry.",
+  "reopen_condition": "Immediate focused Q2earningscall/slides/Q&A and officialoperatingdata; fresh source, fees/account/funding/geoblock, portfolio and conditionalpost-onlyfill underwriting beforemoney.",
+  "portfolio_action": "none yet; primary candidate356YES pending focused follow-up",
+  "evaluated_utc": "2026-10-19T15:59:05.613367+00:00",
+  "question": "Will Chevron (CVX) Q3 oil-equivalent barrels per day net production (koebd) be above 4.1M?",
+  "valuation_author": "primary_operator",
+  "original_index": 356,
+  "report_sha256": "28736cfdab38804c98d30ce75fbd889b51c44f06f112a59956224e1e578287a6"
+}
