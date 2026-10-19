@@ -1,0 +1,17 @@
+{
+  "schema": "deep_review_milestone_delivery.v1",
+  "deliveries": [
+    {
+      "completed_valuations": 300,
+      "blocked_after_review": 4,
+      "factual_exclusions": 343,
+      "pending": 2353,
+      "delivered_utc": "2026-10-18T23:52:38.997267+00:00",
+      "channel": "telegram",
+      "message_id": 1256,
+      "parts": 1,
+      "published_commit": "d179476",
+      "next_case": 297
+    }
+  ]
+}

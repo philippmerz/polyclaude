@@ -1,0 +1,78 @@
+{
+  "review_index": 297,
+  "market_id": "5308185",
+  "condition_id": "0x17e0bb0c083cabdd9a49862c2c4ea81fcd2b577e757370931889e7d9b1d8a98d",
+  "criteria_sha256": "765b97a4efb98c0bbda8de7c1fc791fdc631d5aff3eb5da06740c46faefd4eb1",
+  "status": "excluded_factual",
+  "literal_analysis": "Udinese must win90min+stoppage; cancellation/no makeup NO, postponement remains open. Official organizer final governs; optional Flashscore→Sofascore→consensus if final stats unavailable2h after conclusion; no acceptable data24h yields50/50. Post-resolution score revisions ignored. Oct18 10:30Z is kickoff, not resolution deadline.",
+  "evidence": [
+    {
+      "url": "https://www.legaseriea.it/videos/serie-a-2026-2027-udinese-lecce",
+      "observed_utc": "2026-10-18T23:10:46.451022+00:00",
+      "finding": "Root verified exact raw hash/JSON-LD: official organizer labels Udinese0–3Lecce; uploadOct18 13:47:45.809Z. Fulltime not a Udinese win; exact whistle/first stats publication time remains unverified."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5308185",
+      "observed_utc": "2026-10-18T23:52:39.391658+00:00",
+      "finding": "Exact frozen identity/rules/tokens match. closed=true, acceptingOrders=false, umaResolutionStatus=resolved, outcomePrices0/1; closedTime12:41:03Z. This explicit closure, not omitted books, establishes current ineligibility."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.001,
+    "low": 0,
+    "high": 0.01,
+    "method": "Priceblind post-event organizer result plus subjective0.1% administrative/source-error allowance; not fitted frequency.",
+    "reasoning": "Official loss binds original game; no future team-form model needed. No K5 treatment for guessed administrative tail. Closed Gamma independently confirms no entry.",
+    "model_path": "models/udinese297_primary_2355.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_297_2355.json",
+    "quote_file_sha256": "0d35af2c6f731994d2d64cb16e7ab9b76b21c89522e62384e3ea744c41aac27a",
+    "quote_capture_utc": "2026-10-18T23:52:39.536276+00:00",
+    "gamma_received_utc": "2026-10-18T23:52:39.391658+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 0.0,
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.001,
+        "book_available": false,
+        "cost": null,
+        "explicit_failure": "exact token has no returned book"
+      },
+      "No": {
+        "probability": 0.999,
+        "book_available": false,
+        "cost": null,
+        "explicit_failure": "exact token has no returned book"
+      }
+    },
+    "detail_path": "data/deep_review_20261017/work/0297_economics_2355.json",
+    "detail_sha256": "b4a033e1b9d0e9305cd03233df1f8bbc64a3b634a718126041a185c37cfd28b7"
+  },
+  "verdict": "Objective factual exclusion: currently closed/resolved/no accepting orders. Both exact-token books omitted fromHTTP200 batch; costs/EV unknown, not zero or an asserted absence of offers. No entry/account/prior/writer.",
+  "reopen_condition": "Only a new independently eligible instrument/current rule/source could justify a new review; no auto replay of closed case.",
+  "evaluated_utc": "2026-10-18T23:53:15.207135+00:00",
+  "question": "Will Udinese Calcio win on 2026-10-18?",
+  "valuation_author": "primary_operator",
+  "original_index": 297,
+  "report_sha256": "ba3731df8cec57b6f82971b40aceb0933e17a54ba3046642a1d136e191097fd9"
+}

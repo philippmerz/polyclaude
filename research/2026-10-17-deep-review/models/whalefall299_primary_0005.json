@@ -1,0 +1,55 @@
+{
+  "review_index": 299,
+  "saved_utc": "2026-10-19T00:02:53.098742+00:00",
+  "priceblind": true,
+  "p_yes": 0.42897844762076087,
+  "low": 0.15,
+  "high": 0.75,
+  "actual_entry_reserve_pp": 15,
+  "method": "Small-sample Sunday estimate-to-final revision mixture at exact8m boundary; majority weight on symmetric unknown revision, minority on five corrected same-week errors. Primary weights/variances, not calibrated posterior.",
+  "current_estimate_usd": 8000000,
+  "threshold_strict_less_than": 8000000,
+  "data_path": "work/0299_calibration_root_correction_0005.json",
+  "data_sha256": "34f8f74e9fd98d088fcfecc919dbf4bca7246d4b16a87634de44e0d2bb7c892b",
+  "empirical_relative_revisions": [
+    0.011120909090909015,
+    -0.08758854545454542,
+    0.04396165217391301,
+    0.019423571428571318,
+    0.047722394366197074
+  ],
+  "ordinary_regime": {
+    "weight": 0.9,
+    "components": [
+      {
+        "weight": 0.75,
+        "relative_revision": "Normal(0,.05)"
+      },
+      {
+        "weight": 0.25,
+        "relative_revision": "Uniform selection of five corrected errors +Normal(0,.02) kernel"
+      }
+    ],
+    "kernel_p_negative": 0.29545976720338135,
+    "p_negative": 0.44886494180084535
+  },
+  "unchanged_exact8m_atom": {
+    "weight": 0.05,
+    "p_yes": 0,
+    "basis": "Exact8m ties resolve higher bracket NO; subjective mass, not proven frequency."
+  },
+  "source_or_fallback_branch": {
+    "weight": 0.05,
+    "p_yes": 0.5,
+    "basis": "Table discrepancy/late credible fallback, subjective broad allowance; no claimed50/50 procedural resolution."
+  },
+  "sensitivity": {
+    "symmetric_only_with_same_atoms": 0.47500000000000003,
+    "empirical_only_with_same_atoms": 0.2909137904830432,
+    "no_atom_or_fallback": 0.44886494180084535,
+    "opening_pair_only_with_same_weights": 0.5075219433940839,
+    "generic_relative_mean_minus2percent": 0.5338881232077296,
+    "generic_relative_mean_plus2percent": 0.32406877203379203
+  },
+  "limits": "Not final data. Exactly8m is NO, tiny downward actual revision is YES. Five films share one weekend/source; openings differ from holdovers and publisher projections differ from studio data. Root corrected horizon errors before own quotes. Broad range deliberately exceeds modeled kernel sensitivities. Possible same-night estimate/actual update makes passive fill selection material. API endOct18 noon is not actuals deadline; source finality/ambiguity may delay throughOct23+."
+}

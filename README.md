@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-18. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-19. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 
@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October18
 
-**300 valued /4 blocked /343 factual exclusions /2,353 pending**;647 immutable base cases +44 append-only revisions. Next297. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200 notified;300 update pending publication. Save/index EACH completion; [resume interface](research/2026-10-17-deep-review/RESUME.md) loads one full rule/latest report and named source/model units, with an8KB hard cap.
+**303 valued /4 blocked /344 factual exclusions /2,349 pending**;651 immutable base cases +47 append-only revisions. Next301; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (Telegram1256). Save/index EACH completion; [resume interface](research/2026-10-17-deep-review/RESUME.md) loads one full rule/latest report and named2–5KB source/model units, with an8KB hard cap.
 
-**Two new LIVE, unfilled bids:** [DEC0220 Yisrael Beiteinu](research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md),11YES10c/$1.10; [DEC0221 state gas prices](research/2026-10-17-deep-review/gas296_entry_outcome_2355.md),5YES54c/$2.70. Both independently zero-matched/zero CTF balances23:45:36. Eight BUYs reserve$15.62; pUSD18.846890/free3.226890. Pull both new bids Oct19 **02UTC**, earlier on unassessed material news CANCEL FIRST; no add/replay/repost. A newer-polls feed fix changed forecasts before execution; Likud294 closed unplaced. Treasury295:42.986%YES/no entry. Research probabilities are judgments, not execution instructions.
+**Three new LIVE, unfilled bids:** [DEC0220 Yisrael Beiteinu](research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md),11YES10c/$1.10; [DEC0221 state gas](research/2026-10-17-deep-review/gas296_entry_outcome_2355.md),5YES54c/$2.70; [DEC0222 Whalefall](research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md),6NO17c/$1.02. Auth00:23:44/fresh chain00:25:14 prove zero matched/target balances; nine BUYs reserve$16.64, pUSD18.846890/free2.206890. **Pull ALL three unfilled Oct19 02UTC**, earlier unassessed material news CANCEL FIRST; no add/replay/repost. Commitments are not holdings or PnL. Likud294 and Netflix278 closed unplaced. Research probabilities are judgments, not execution instructions.
 
 BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 

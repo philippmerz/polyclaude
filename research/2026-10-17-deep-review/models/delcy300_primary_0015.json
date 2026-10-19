@@ -1,0 +1,51 @@
+{
+  "review_index": 300,
+  "saved_utc": "2026-10-19T00:15:40.560644+00:00",
+  "priceblind": true,
+  "p_yes": 0.80464,
+  "low": 0.45,
+  "high": 0.96,
+  "actual_entry_reserve_pp": 15,
+  "method": "Conditional current-role validity and four explicit political-continuity hypotheses toDec31 noonET; primary scenario weights, not historical hazard calibration.",
+  "source_paths": [
+    "work/0300_facts_2355.json",
+    "work/0300_un_pdf_extract_0000.json",
+    "work/0300_status_instrument_0000.json"
+  ],
+  "current_role": {
+    "qualifying_probability": 0.96,
+    "basis": "Venezuelan currentofficial page explicitlycallsDelcyPresidenta/Jefa deEstado; UN designatedlistnamesDelcy/PresidentaEncargada; Jan5officialswearing-inaccount. Actingstatusdoesnotitselfdisqualify literalhead-of-state. Governmentinfoalternativequalifies, UNfallbackonlyifgovernmentunclear.",
+    "residual_legal_or_source_risk": 0.04,
+    "limit": "UnderlyingTSJruling/extensioninstrumentnotobtained; strictexpired-termclauseandexternalrecognition/missionupdategaps retained. USSenaterequestisnot Venezuelanlaw. Thesearedependentsourcedesignations,notindependentvotes."
+  },
+  "conditional_on_current_validity": [
+    {
+      "scenario": "continuity or same-person formal upgrade",
+      "weight": 0.81,
+      "p_delcy_at_target": 1
+    },
+    {
+      "scenario": "negotiated transition or election before target",
+      "weight": 0.12,
+      "p_delcy_at_target": 0.2
+    },
+    {
+      "scenario": "elite replacement",
+      "weight": 0.05,
+      "p_delcy_at_target": 0
+    },
+    {
+      "scenario": "abrupt security/health removal",
+      "weight": 0.02,
+      "p_delcy_at_target": 0
+    }
+  ],
+  "if_current_role_invalid_p_yes": 0.1,
+  "formula": ".96*(.81+.12*.20)+.04*.10 = .80464",
+  "sensitivities": {
+    "continuity70_transition20_elite7_abrupt3": 0.7143999999999999,
+    "current_validity85": 0.7239000000000001,
+    "continuity90_transition6_elite3_abrupt1": 0.87952
+  },
+  "limits": "Retention probabilities/transition chances and legalweight are primary judgment, not calibrated hazard. No verified election/term extension calendar from bounded sources; do not claim noneexists. Currentofficialrole not a guarantee ofDec31status. Broad45–96%rangeallowscompoundpolitical/legal shocks. MiddayETcontract cut overridesAPIyearendtime. Exactrole/identityformal-effective-time exclusions andUNfallbackmustremain; no automaticpermanent-presidentrequirement."
+}

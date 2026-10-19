@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-10-18T23:49:48.774747+00:00",
+ "_updated": "2026-10-19T00:08:45.088841+00:00",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1578,6 +1578,26 @@
   "management": "DEC0221: LIVE_UNFILLED BUY5YES54c /2.70 full-fill risk; one vetted call, independently verified23:45:36. Pull ALL unfilled Oct19 02UTC or earlier unassessed material AAA/tax/supply news CANCEL FIRST. No add/replay/repost; on fill fresh source/holding/fee-net exit review. Whole cash loss possible.",
   "monitoring": "AAA official RSS + Google fuel/state-policy feeds both passed normal post-config watcher cycle23:38\u201323:40. Existing watcher only; newest-before30 cap, raw Telegram off. Source delay/caps/unknown news remain.",
   "order_id": "0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94",
+  "financial_status": "LIVE_UNFILLED_NOT_HELD"
+ },
+ "will-whalefall-opening-weekend-box-office-be-less-than-8m": {
+  "p_yes": 0.42897844762076087,
+  "p_no": 0.5710215523792391,
+  "cluster": "film-boxoffice-2026",
+  "rho_within": 0.7,
+  "cluster_frac": 0.02,
+  "verified": true,
+  "criteria_read": true,
+  "market_id": "5394247",
+  "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+  "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+  "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+  "rationale": "Primary final domestic3-day Whalefall<8m: YES42.8978%/NO57.1022%; actual15pp reserve selects NO42.1022%. Exactly8m final pays NO; latest8m is still estimated. Five corrected same-week revision pairs are weak/correlated; mixture weights/widths subjective. Entire stake can lose; no guaranteed hedge.",
+  "research_report": "research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md",
+  "latest_source_packet": "data/deep_review_20261017/work/0299_preexecute_source_0015.json",
+  "management": "DEC0222: ONE vetted BUY6 NO17c/$1.02 independently LIVE/unfilled; no holding. Pull ALL unfilled Oct19 02UTC, earlier unassessed material actual/estimate/source/ticket-sales news CANCEL FIRST. No replay/add/repost/taker fallback. On fill fresh source/holding/fee-net exit review; entire cash loss possible.",
+  "monitoring": "One Whalefall feed+Tier1 term verified in normal watcher cycle00:10:49, same PID83922; raw RSS Telegram off, no new timer/forced poll. Ankler public preview lacks domestic amount; inaccessible content remains a gap.",
+  "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
   "financial_status": "LIVE_UNFILLED_NOT_HELD"
  }
 }

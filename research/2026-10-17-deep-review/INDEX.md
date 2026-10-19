@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-18T23:49:54.031284+00:00
+Updated: 2026-10-19T00:29:40.698417+00:00
 
-**300 valuations saved; first milestone100:** 300 valued; 4 blocked after in-depth review. 343 factual exclusions separately; 2353 pending.
+**303 valuations saved; first milestone100:** 303 valued; 4 blocked after in-depth review. 344 factual exclusions separately; 2349 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -308,6 +308,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |294|[Will Likud win fewer than 20 seats in the 2026 Israeli legislative election?](revisions/0294_20261018T231457428786Z.md)|valued|NO ENTRY / FOLLOW-UP CLOSED UNPLACED: revised34.154%YES/selected19.154% fails current26c ordinary maker price; central improvement is insufficient after uncertainty. Zero execute calls/orders/spend; remove only294prior, retain293/sharedmonitorprep.|
 |295|[Will the 10-year Treasury yield hit 5.4% before 2027?](evaluations/0295.md)|valued|NO ENTRY: both dated fee-adjusted taker costs exceed central values; ordinary maker41c+ and56c+ also fail selected27.99/42.01%. 75daycarry and operation costs worsen economics. No new holding/order/prep.|
 |296|[Will gas be below $3.75/gallon in any state on October 31?](revisions/0296_20261018T234953742462Z.md)|valued|DEC0221: ONE vetted post-only BUY5YES54c /2.70 full-fill risk accepted and independently verified LIVE/unfilled. Commitment only, no holding/spend/PnL. Pull all unfilled Oct19 02UTC, earlier unassessed material AAA/tax/supply news CANCEL FIRST. No add/replay/repost.|
+|297|[Will Udinese Calcio win on 2026-10-18?](revisions/0297_20261018T235939405348Z.md)|excluded_factual|Objective factual exclusion: currently closed/resolved/no accepting orders. Both exact-token books omitted fromHTTP200 batch; costs/EV unknown, not zero or an asserted absence of offers. No entry/account/prior/writer.|
+|298|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 55% or higher?](revisions/0298_20261018T235940235691Z.md)|valued|NO ENTRY either side. Ten-share fee-cost YES2.16636/NO8.35645; even central EV−.32288/−.19993 before carry. Selected probabilities3.4348/66.5652% also fail maker18c+/80c+. Cash/known candidates dominate; free3.22689 also below5NO at80c. No order/prior/holding changes.|
+|299|[Will "Whalefall" Opening Weekend Box Office be less than 8m?](revisions/0299_20261019T002719924354Z.md)|valued|ONE vetted maker BUY6NO17c/$1.02 accepted, independently LIVE/unfilled. Forecast unchanged; no position/PnL claimed. All8 prior orders/reservations preserved. Pull ALL unfilled Oct19 02UTC or earlier unassessed material source/news; no replay/add/repost.|
+|300|[Will Delcy Rodríguez be the leader of Venezuela end of 2026?](evaluations/0300.md)|valued|YES candidate for further current investment review; no300order/prior/holding. Ten-share18c fee-cost1.85904/centralEV6.18736/selected4.68736; NOfee-cost8.35645/central−6.40285. Huge quoted disagreement is a diagnostic, not probability evidence. Legal-term classification/later-instrument gap and subjective continuity weights remain; 10% legal-failure scenario loses. Compare with held exposure, three new commitments and carry before allocation; no forced stake to complete a valuation.|
 |303|[FC Bayern München vs. RB Leipzig: O/U 4.5](evaluations/0303.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

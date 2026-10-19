@@ -1,0 +1,99 @@
+{
+  "review_index": 298,
+  "saved_utc": "2026-10-18T23:56:35.231039+00:00",
+  "priceblind": true,
+  "p_yes": 0.1843481877285509,
+  "low": 0.05,
+  "high": 0.55,
+  "actual_entry_reserve_pp": 15,
+  "method": "Three regime hypotheses, analytic Normal tails and Gaussian quadrature. Scenario weights are primary judgment, not calibrated frequencies.",
+  "source": {
+    "path": "work/0298_hle_refresh_0005.json",
+    "sha256": "b54ef9e6f3ca404b1b65213de6cc2bbacd29800510cce9a99382a7ff7d0eb198",
+    "http": 200,
+    "received_utc": "2026-10-18T23:53:50.075803+00:00",
+    "cache_age_seconds": 2128,
+    "raw_sha256": "7cb55e4b15cfdf440eafafbf26041eafef4d8d15984d49744414a8d1eb7a3baa",
+    "issuer_context": "work/0298_xai_context_0005.json"
+  },
+  "crossmetric_bridge": {
+    "names": [
+      "Grok 4.2",
+      "Grok 4.3",
+      "Grok 4.5",
+      "Grok 4.6"
+    ],
+    "diamond_accuracy_pairs": [
+      [
+        11.77,
+        30.2
+      ],
+      [
+        14.43,
+        33.12
+      ],
+      [
+        18.41,
+        39.28
+      ],
+      [
+        19.57,
+        39.72
+      ]
+    ],
+    "slope": 1.2933909471579106,
+    "intercept": 14.827542252851314,
+    "grok_4_7_diamond": 22.8,
+    "latent_accuracy_mean": 44.316855848051674,
+    "ordinary_sd_pp": 3.5,
+    "limit": "Four correlated releases; extrapolation. Diamond NEVER settles contract. Residual0.61pp is not predictive SD;3.5pp chosen wider, still judgment."
+  },
+  "observed_accuracy_gains_pp": [
+    2.919999999999998,
+    6.160000000000004,
+    0.4399999999999977
+  ],
+  "regimes": [
+    {
+      "name": "ordinary_cadence",
+      "weight": 0.55,
+      "further_release_count_probs_0_1_2": [
+        0.15,
+        0.45,
+        0.4
+      ],
+      "latent": "Normal(mu,3.5pp)",
+      "gain": "Uniform empirical2.92,6.16,0.44pp; ONE common gain repeated for two updates, not iid",
+      "qualifying_publication_probability": 0.9,
+      "conditional_yes": 0.10731397129905763
+    },
+    {
+      "name": "accelerated_catchup_or_scaffolding",
+      "weight": 0.3,
+      "latent": "Normal(mu,4.5pp)",
+      "additional_best_gain": "max(0,Normal(10pp,6pp)); conditional independent latent/gain within regime",
+      "qualifying_publication_probability": 0.9,
+      "conditional_yes": 0.41758137238754306
+    },
+    {
+      "name": "stalled_or_original_metric_migration",
+      "weight": 0.15,
+      "further_gain": 0,
+      "latent_publication_probability": 0.3,
+      "conditional_yes": 0.00034061198537530755
+    }
+  ],
+  "sensitivity_p_yes": {
+    "mapping_minus3": 0.1092602170118839,
+    "mapping_plus3": 0.2836122788168105,
+    "acceleration_weight15": 0.1378080775652781,
+    "acceleration_weight50": 0.246401667946248,
+    "publication60": 0.1229158224183027,
+    "publication100": 0.204825642831967,
+    "zero_further_ordinary_releases": 0.12588751328993847,
+    "joint_slow": 0.04934837647319654,
+    "joint_fast": 0.39313613116686225
+  },
+  "formula": "Ordinary: .90*sum_count weight*mean_gain SF((55-mu-count*gain)/3.5). Accelerated:.90*[P(G<=0)*SF((55-mu)/4.5)+integral_0^80 SF((55-mu-g)/4.5)*pdf_Normal(10,6)(g)dg]. Stalled:.30*SF((55-mu)/3.5). Weighted55/30/15. max39.72 baseline does not affect55 crossing.128/256-point Gauss-Legendre agree<1e-10; upper remainder negligible.",
+  "limits": "Fresh-but-cached65-row body; same raw bytes as13:56, not origin-current guarantee. Grok4.7 AccuracyNULL not failure/zero. Two issuer pages establish no fixed future release pledge. Release counts, publication probabilities, acceleration gains and weights are assumptions. Official original results can resume; higher tool/scaffolding result/metric interpretation remains tail. Google55.6/OpenAI53.6 do not settle Grok. Delayed outage resolution possible; shared AI risk with held OpenAI NO, no hedge credit."
+}

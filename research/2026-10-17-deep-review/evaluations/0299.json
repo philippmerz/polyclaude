@@ -1,0 +1,168 @@
+{
+  "review_index": 299,
+  "market_id": "5394247",
+  "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+  "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+  "status": "valued",
+  "literal_analysis": "Final3day domesticWhalefallOct16–18, namedNumbers weekendtable despiteinitialDaily wording; Thursdaypreviews normallyalreadyincluded. Strictless8m; exactly8m higherbracketNO. Estimates do not settle. If finality ambiguous waitNumbers+Mojo finalconfirmation; nofinalbyOct23 23:59ET→another credible source, not automaticYES/NO. APIendOct18noon not deadline.",
+  "evidence": [
+    {
+      "url": "https://www.the-numbers.com/movie/Whalefall-(2026)",
+      "observed_utc": "2026-10-18T23:51:27.652826Z",
+      "finding": "Root independently verified rawSHA/HTML: weekend8m, daily3.1/2.8/2.1m; estimate/chart_estimate cells. SeparateThursday0.9m preview not added twice. No finalconfirmation."
+    },
+    {
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "observed_utc": "2026-10-18T23:51:55Z",
+      "finding": "Exact domesticOct16–18 weekend8m. Genericmojo-estimatable class/key does not itself prove final/estimated status; no independentfinalconfirmation established."
+    },
+    {
+      "url": "https://www.the-numbers.com/?displayId=104",
+      "observed_utc": "2026-10-19T00:01:00Z",
+      "finding": "Root browser re-read exactOct11Sunday article: OtherMommy27.5/Social5.5/Verity11.5/Resident8.4/Heart7.1m. Priorhelper mixedearlierforecasts; explicitcorrectionpreservesoldunitandusesonly5verifiedpairs. RawGET403;browserprimaryonly, onecorrelatedweek/conveniencesample."
+    },
+    {
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/09",
+      "observed_utc": "2026-10-18T23:59:15.869661+00:00",
+      "finding": "Root rawSHA/tablematched final same5films27.805825/5.018263/12.005559/8.563158/7.438829m.4above/1belowSundayestimate;3holdovers,2openers. Notfiveindependentweekends orstablebias."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.42897844762076087,
+    "low": 0.15,
+    "high": 0.75,
+    "method": "Small-sample Sunday estimate-to-final revision mixture at exact8m boundary; majority weight on symmetric unknown revision, minority on five corrected same-week errors. Primary weights/variances, not calibrated posterior.",
+    "reasoning": "Finalestimateexactthresholdmakesrevisiondirectiondecisive.90%ordinary mixture75%symmetric0±5%revision/25%fiveerror2%kernels;5%exactunchanged8mNO/5%sourcebranchYES50. Empiricalkernelunder29.55%, baseYES42.8978%. Weights/widths/atomareprimaryjudgment; opening-only50.75%, mean±2%32.41–53.39%;broad15–75range.",
+    "model_path": "models/whalefall299_primary_0005.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_299_0005.json",
+    "quote_file_sha256": "2515dbca745d614a9cdf4ea480675aa16d194a599483c3e2cc1d5ff629e6a1ba",
+    "quote_capture_utc": "2026-10-19T00:02:53.705716+00:00",
+    "gamma_received_utc": "2026-10-19T00:02:53.468731+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 5.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.42897844762076087,
+        "selected_stress_probability": 0.27897844762076085,
+        "best_bid": 0.772,
+        "best_ask": 0.834,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792368141383",
+        "book_received_utc": "2026-10-19T00:02:53.704830+00:00",
+        "book_age_seconds_at_receipt": 32.32183003425598,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.34,
+            "fee": 0.06923,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.834
+              }
+            ],
+            "net": 8.409229999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.720000000000001,
+            "fee": 0.08801,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.772
+              }
+            ],
+            "net": 7.631990000000001
+          }
+        },
+        "taker_cost_usd": 8.409229999999999,
+        "central_expected_profit_usd": -4.119445523792391,
+        "selected_stress_profit_usd": -5.619445523792391,
+        "break_even_before_carry": 0.8409229999999999,
+        "break_even_constant_carry": 0.8412806213882881,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.5710215523792391,
+        "selected_stress_probability": 0.4210215523792391,
+        "best_bid": 0.166,
+        "best_ask": 0.228,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792368141383",
+        "book_received_utc": "2026-10-19T00:02:53.704830+00:00",
+        "book_age_seconds_at_receipt": 32.32183003425598,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.2800000000000002,
+            "fee": 0.08801,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.228
+              }
+            ],
+            "net": 2.3680100000000004
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.6600000000000001,
+            "fee": 0.06923,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.166
+              }
+            ],
+            "net": 1.5907700000000002
+          }
+        },
+        "taker_cost_usd": 2.3680100000000004,
+        "central_expected_profit_usd": 3.342205523792391,
+        "selected_stress_profit_usd": 1.8422055237923902,
+        "break_even_before_carry": 0.23680100000000004,
+        "break_even_constant_carry": 0.23690170494250729,
+        "current_execution_authorization": false
+      }
+    },
+    "detail_path": "data/deep_review_20261017/work/0299_economics_0005.json",
+    "detail_sha256": "14bd3d2e51b52e99043190e67a4ead8b39b761096f70013a42147cb3fbd54379"
+  },
+  "verdict": "NO candidate for bounded further current/source/execution review ONLY; no order/prior/holding. PrimaryNO57.1022%/15ppselected42.1022 vs10sharefee-cost2.36801 gives centralEV3.34221/selected1.84221beforecarry. YESfee-cost8.40923/central−4.11945. Marketdisagreementmaterial: independentlyseeknewactual/estimate/sourceexplanationbeforeanywriter; smallselectedsample notcalibratededge.",
+  "reopen_condition": "Current finaldata/estimate/sourcepublication update or adverse independent review requires primaryreforecast beforefunding/eligibility/identity/fees/depth/portfolio/monitoring/vettedexecution gates. Thisrecorddoesnotauthorize laterorder.",
+  "evaluated_utc": "2026-10-19T00:04:16.546352+00:00",
+  "question": "Will \"Whalefall\" Opening Weekend Box Office be less than 8m?",
+  "valuation_author": "primary_operator",
+  "original_index": 299,
+  "report_sha256": "e128acfdb758c13ceb1a89bff557c2331cadd45dd5b13d83f6356b1bd7e5f058"
+}

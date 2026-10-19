@@ -1,0 +1,16 @@
+{
+  "review_index": 297,
+  "saved_utc": "2026-10-18T23:52:39.001952+00:00",
+  "priceblind": true,
+  "p_yes": 0.001,
+  "low": 0.0,
+  "high": 0.01,
+  "method": "Post-event official organizer final outcome; 0.1% residual subjective administrative/source-error allowance, not empirical football win frequency. No future match simulation needed after organizer reports0–3 loss.",
+  "literal": "Udinese wins in90min+stoppage only; cancellation w/o makeup NO; official final governs, post-resolution score revisions ignored.2h fallback may use Flashscore then Sofascore/consensus; no acceptable data24h yields50/50.",
+  "evidence": "Organizer official video metadata labels exact2026-10-18 match Udinese0–3Lecce, upload13:47:45.809Z. Root independently verified saved raw hash and JSON-LD.",
+  "uncertainty": "Exact whistle/first stats publication times unknown; organizer source present same day. Third-party/administrative mismatch remaining allowance is judgment, not measured tail. K5 multiplicative tail treatment NOT licensed by guessed0.1% administrative risk.",
+  "actual_entry_reserve_pp": 10,
+  "source_path": "work/0297_facts_2320.json",
+  "source_sha256": "fc449ccc1776d97d16221c6946460e83564a118d674f69b2ac904cdbbd60f892",
+  "conditions": "Current Gamma may already be closed/resolved; inspect only after saving this model. Do not equate omitted book response with no offers or objective closure."
+}

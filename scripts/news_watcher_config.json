@@ -163,6 +163,10 @@
     {
       "name": "US state gasoline prices and fuel-tax policy",
       "url": "https://news.google.com/rss/search?q=%28%22North%20Carolina%22%20OR%20Georgia%20OR%20%22United%20States%22%29%20%28%22gas%20prices%22%20OR%20gasoline%20OR%20%22motor%20fuel%22%20OR%20%22fuel%20tax%22%29%20when%3A7d&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "Whalefall box-office and opening-weekend updates",
+      "url": "https://news.google.com/rss/search?q=Whalefall+%28%22box+office%22+OR+%22opening+weekend%22+OR+%22weekend+gross%22+OR+actuals+OR+%22final+figures%22+OR+%22studio+estimate%22%29+after%3A2026-10-17&hl=en-US&gl=US&ceid=US%3Aen"
     }
   ],
   "tier1_keywords": [
@@ -356,7 +360,8 @@
     "gasoline",
     "motor fuel",
     "fuel tax",
-    "gas prices"
+    "gas prices",
+    "Whalefall"
   ],
   "_tier2_note": "Tier-2 keywords are broad-recall: any plausibly-relevant topic. Each match goes through a scoped fast agent filter before reaching Telegram — the agent decides SEND vs. SUPPRESS given current positions and the article body. So we get keyword recall without keyword noise. Tier-1 still bypasses the filter and always fires, since those are regime-changing and we never want to suppress them. | HLE COVERAGE ADDED 2026-08-12: three positions (~10% of bankroll) plus a resting bid rest entirely on whether agi.safe.ai posts a 2026 model row, and ZERO of the 217 existing keywords covered that crux — the thesis-break event would have arrived with no alerting at all. Deliberately TIER-2 rather than tier-1: a board update is consequential but not an emergency (these resolve Dec-31, so surfacing at the next tick is ample), and 'humanity's last exam' appears in routine AI commentary often enough that tier-1 would manufacture false alarms. Sep-23 added exact GPT-6 Sol/Luna names after OpenAI's 'Introducing' title evaded the generic release verbs. Prune after the family resolves. | CLARITY COVERAGE ADDED 2026-09-17: the held Senate-vote threshold pair depends on final-passage procedure and vote count; broad distinctive Clarity Act and crypto-market-structure phrases route relevant reporting through the scoped filter. Prune after the event resolves.",
   "tier2_keywords": [

@@ -10,6 +10,7 @@ import io
 import json
 import os
 import re
+from urllib.parse import unquote, urlsplit
 
 ROOT = Path(__file__).resolve().parents[1]
 RUN = ROOT / "research/2026-10-17-deep-review"
@@ -17,6 +18,7 @@ RULES = ROOT / "research/2026-10-17-primary-market-review-rules.jsonl.gz"
 POINTER = ROOT / "notes/deep_review_checkpoint.json"
 STATES = {"valued", "blocked_after_review", "excluded_factual"}
 REVISION_SCHEMA = "deep_review_revision.v1"
+_MARKDOWN_LINK = re.compile(r"!?\[[^\]]*\]\((.*?)\)", re.DOTALL)
 
 
 def now():
@@ -64,6 +66,88 @@ def validate_record(x, frozen, *, revision=False):
         assert f.get("reasoning") and f.get("method"), "forecast reasoning/method required"
         assert x["economics"].get("both_sides_considered") is True, "both outcomes required"
     return i
+
+
+def validate_local_markdown_links(markdown, report_path):
+    """Reject broken or escaping relative file links in a report before writes."""
+    report_dir = Path(report_path).parent.resolve()
+    root = ROOT.resolve()
+    try:
+        report_dir.relative_to(root)
+    except ValueError as exc:
+        raise ValueError("report directory escapes repository") from exc
+
+    def archived_source_exists(root_relative):
+        # These existing read-only adapters preserve legacy links after approved
+        # public captures are gzip-archived. Their readers verify manifest hashes.
+        for module_name in ("public_source_archive", "public_snapshot_archive"):
+            try:
+                module = __import__(module_name)
+                manifest_loader = getattr(module, "load_manifest", None)
+                if manifest_loader is None:
+                    manifest_loader = getattr(module, "_load_manifest")
+                manifest = manifest_loader()
+            except FileNotFoundError:
+                continue
+            if any(entry.get("original_path") == root_relative
+                   for entry in manifest.get("entries", []) if isinstance(entry, dict)):
+                module.read_verified_path(root_relative)
+                return True
+
+        # The extra HTML captures have two independent manifests and reader
+        # profiles. Consult only their declared manifest paths and exact
+        # original_path entries; the selected reader verifies the archive and
+        # source receipt without restoring the original body.
+        try:
+            extra = __import__("public_source_archive_extra")
+        except ModuleNotFoundError:
+            extra = None
+        if extra is not None:
+            for profile in ("prior36", "more-html"):
+                config = extra.PROFILES[profile]
+                manifest_path = Path(config["manifest"])
+                if not manifest_path.is_file():
+                    continue
+                manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+                if any(entry.get("original_path") == root_relative
+                       for entry in manifest.get("entries", []) if isinstance(entry, dict)):
+                    extra.read_verified_path(root_relative, profile=profile)
+                    return True
+        return False
+
+    checked = set()
+    for match in _MARKDOWN_LINK.finditer(markdown):
+        destination = match.group(1).strip()
+        if not destination:
+            continue
+        if destination.startswith("<"):
+            end = destination.find(">")
+            if end < 0:
+                continue
+            destination = destination[1:end]
+        else:
+            # Optional Markdown link titles follow the destination separated
+            # by whitespace; they are not part of the local path.
+            destination = destination.split(None, 1)[0]
+        parsed = urlsplit(destination)
+        if parsed.scheme or parsed.netloc or not parsed.path:
+            continue  # HTTP(S), mailto, fragments, and other intentional URLs.
+        decoded_path = unquote(parsed.path)
+        target = (report_dir / decoded_path).resolve(strict=False)
+        try:
+            target.relative_to(root)
+        except ValueError as exc:
+            raise ValueError(f"local Markdown link escapes repository: {destination!r}") from exc
+        key = target.as_posix()
+        if key in checked:
+            continue
+        checked.add(key)
+        if target.is_file():
+            continue
+        root_relative = target.relative_to(root).as_posix()
+        if archived_source_exists(root_relative):
+            continue
+        raise ValueError(f"local Markdown link target is missing: {destination!r}")
 
 
 def _base_records():
@@ -212,6 +296,7 @@ def record(path):
     dest = RUN / "evaluations" / f"{i:04d}.json"
     assert not dest.exists(), f"already recorded {i}; use revise"
     report = x.pop("report_markdown").rstrip() + "\n"
+    validate_local_markdown_links(report, dest.with_suffix(".md"))
     x["report_sha256"] = hashlib.sha256(report.encode()).hexdigest()
     atomic(dest.with_suffix(".md"), report)
     dump(dest, x)
@@ -237,8 +322,6 @@ def revise(path, prior_report_sha256, reason):
     assert x.get("report_markdown"), "report_markdown required"
     validate_record(x, u[i], revision=True)
     report = x.pop("report_markdown").rstrip() + "\n"
-    report_sha = hashlib.sha256(report.encode()).hexdigest()
-    assert report_sha != previous["report_sha256"], "duplicate revision report"
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     relbase = f"revisions/{i:04d}_{stamp}"
     md_rel = relbase + ".md"
@@ -246,6 +329,9 @@ def revise(path, prior_report_sha256, reason):
     md_path = _revision_path(md_rel)
     json_path = _revision_path(json_rel)
     assert not md_path.exists() and not json_path.exists(), "duplicate revision path"
+    validate_local_markdown_links(report, md_path)
+    report_sha = hashlib.sha256(report.encode()).hexdigest()
+    assert report_sha != previous["report_sha256"], "duplicate revision report"
     x["evaluated_utc"] = now()
     x["question"] = u[i]["question"]
     x["market_id"] = u[i]["id"]

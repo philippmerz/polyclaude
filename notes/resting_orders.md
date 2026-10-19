@@ -1,13 +1,14 @@
 # Standing resting orders (GTC post-only makers)
 
-## Current — October18 23:45 UTC
+## Current — October19 00:25UTC
 
-**Eight LIVE BUYs, $15.62 reserved, pUSD18.846890/free3.226890**, fixed Polygon95774526. All seven prior order/reservation IDs preserved; each order matches its reservation. Independent proof: exhausted orders/trades, exact order lookup and fixed-block target balances. New bids are commitments, not holdings or PnL.
+**Nine LIVE BUYs, $16.64 reserved, pUSD18.846890/free2.206890.** Auth00:23:44 and fresh Polygon95776111/00:25:14; all8 prior orders/reservations preserved. Every BUY matches a reservation. New commitments are not holdings or PnL.
 
-- **DEC0221 gas296:**5YES54c/$2.70, zero matched, both CTFs zero. Order `0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94`. [Exact identity/model/proof](../research/2026-10-17-deep-review/gas296_entry_outcome_2355.md).
-- **DEC0220 YB293:**11YES10c/$1.10, also LIVE/zero matched/both CTFs zero. [Exact identity/model/proof](../research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md).
-- **Pull ALL unfilled293/296 Oct19 02UTC**, earlier on unassessed material poll/list/turnout or AAA/tax/supply news: CANCEL FIRST. No add, replay or repost. On fill, fresh source/holding/fee-net exit review; partial lots may be below five-share exit minimum.
-- Other existing pulls: Sedgwick Oct19 **10UTC**, Idaho **22UTC**; four House bids unchanged. Next held review02UTC. BOI/film canceled; OpenRouter/Messi old BUY pulls complete. Earlier snapshots below are history.
+- **DEC0222 Whalefall299:**6NO17c/$1.02, zero matched, both CTFs0. [Exact identity/model/proof](../research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md).
+- **DEC0221 gas296:**5YES54c/$2.70, LIVE/zero matched/both CTFs0. [Identity/model/proof](../research/2026-10-17-deep-review/gas296_entry_outcome_2355.md).
+- **DEC0220 YB293:**11YES10c/$1.10, LIVE/zero matched/both CTFs0. [Identity/model/proof](../research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md).
+- **Pull ALL unfilled293/296/299 Oct19 02UTC**, earlier unassessed material poll/list/turnout, AAA/tax/supply or film actual/estimate/source/ticket-sales news: CANCEL FIRST. No replay/add/repost. On fill fresh source/holding/fee-net exit review; partial lots may be below5-share exit minimum.
+- Sedgwick pulls Oct19 **10UTC**, Idaho **22UTC**; four House bids unchanged. Next held review02UTC. BOI/film canceled; OpenRouter/Messi old BUY pulls complete. Earlier snapshots below are history.
 
 ## Previous verification — October18 23:20UTC
 

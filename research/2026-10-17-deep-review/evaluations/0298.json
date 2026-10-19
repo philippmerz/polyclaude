@@ -1,0 +1,163 @@
+{
+  "review_index": 298,
+  "market_id": "3072320",
+  "condition_id": "0x7bbdd1da7d072e8edb1358702b4e629c3c154dfc9c1e4f433e283a46bc994779",
+  "criteria_sha256": "945b98b8aeaf8412c659826a72cae799806e2170ad214b713b6d7cf6796a2947",
+  "status": "valued",
+  "literal_analysis": "ANY SpaceXAI Grok model original HLE Accuracy>=55 byDec31 2026 23:59ET. Calibration error/Diamond excluded except a true clear-equivalent restructuring, not automatic substitution. Named official agi.safe.ai board; if unavailable allow recovery, after window/permanent outage official HLE alternatives, no official alternative NO. Highest in window, not year-end last model; displayed null is not zero. Delay may exceed75day carry assumption.",
+  "evidence": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "observed_utc": "2026-10-18T23:53:50.075803+00:00",
+      "finding": "HTTP200/Age2128s/65 rows; root verified raw SHA and exact fields. xAI highest scored original39.72(Grok4.6), Grok4.7originalNULL/Diamond22.8. Payload byte-identical earlier13:56 capture; latest retrieval is cached, not origin-current proof. OpenAImax53.6, Google55.6 not Grok. History and pairs in linked model."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-7",
+      "observed_utc": "2026-10-18T23:55:11.724021+00:00",
+      "finding": "Issuer Sep21 release: larger base than4.6, longer RL on harder multi-hour tasks, coding/knowledge-work focus. No original HLE Accuracy reported in this article; cannot substitute issuer benchmark for named board."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-6",
+      "observed_utc": "2026-10-18T23:55:11.863230+00:00",
+      "finding": "Issuer Aug12 release continues4.5 with agentic/technical training; no original HLE Accuracy in this article. Absence scoped to two pages, not general absence of results."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.1843481877285509,
+    "low": 0.05,
+    "high": 0.55,
+    "method": "Three regime hypotheses, analytic Normal tails and Gaussian quadrature. Scenario weights are primary judgment, not calibrated frequencies.",
+    "reasoning": "Four own-lab paired scores map Diamond22.8 to latent original44.3169, NOT actual score. Primary55/30/15 regime weights include ordinary release gains, accelerated catchup/scaffolding and original-metric stall.3.5pp prediction SD exceeds0.61pp in-sample residual; few correlated observations and subjective weights leave5–55% range. Joint slow/fast4.9–39.3%; no calibrated probability floor or K5.",
+    "model_path": "models/grok298_primary_0005.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_298_0005.json",
+    "quote_file_sha256": "aa86f0c84626e8fa042830d016266d6b73750047397c5b5d8bdfa1cb258c4b29",
+    "quote_capture_utc": "2026-10-18T23:56:35.844615+00:00",
+    "gamma_received_utc": "2026-10-18T23:56:35.695547+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.1843481877285509,
+        "selected_stress_probability": 0.034348187728550916,
+        "best_bid": 0.17,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792367790547",
+        "book_received_utc": "2026-10-18T23:56:35.843818+00:00",
+        "book_age_seconds_at_receipt": 5.296818017959595,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.1,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.21
+              }
+            ],
+            "net": 2.16636
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7000000000000002,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.17
+              }
+            ],
+            "net": 1.6435500000000003
+          }
+        },
+        "taker_cost_usd": 2.16636,
+        "central_expected_profit_usd": -0.322878122714491,
+        "selected_stress_profit_usd": -1.8228781227144908,
+        "break_even_before_carry": 0.216636,
+        "break_even_constant_carry": 0.21802206134957527,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8156518122714491,
+        "selected_stress_probability": 0.6656518122714491,
+        "best_bid": 0.79,
+        "best_ask": 0.83,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792367790547",
+        "book_received_utc": "2026-10-18T23:56:35.843818+00:00",
+        "book_age_seconds_at_receipt": 5.296818017959595,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.299999999999999,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.83
+              }
+            ],
+            "net": 8.356449999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.9,
+            "fee": 0.06636,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.79
+              }
+            ],
+            "net": 7.83364
+          }
+        },
+        "taker_cost_usd": 8.356449999999999,
+        "central_expected_profit_usd": -0.19993187728550765,
+        "selected_stress_profit_usd": -1.6999318772855077,
+        "break_even_before_carry": 0.8356449999999999,
+        "break_even_constant_carry": 0.8409915501415546,
+        "current_execution_authorization": false
+      }
+    },
+    "detail_path": "data/deep_review_20261017/work/0298_economics_0005.json",
+    "detail_sha256": "0ff2c145d07c04a38d46762e78e5d6c57454e4e33c0e55fcf959323f257dec3b"
+  },
+  "verdict": "NO ENTRY either side. Ten-share fee-cost YES2.16636/NO8.35645; even central EV−.32288/−.19993 before carry. Selected probabilities3.4348/66.5652% also fail maker18c+/80c+. Cash/known candidates dominate; free3.22689 also below5NO at80c. No order/prior/holding changes.",
+  "reopen_condition": "Verified new ORIGINAL Grok HLE score/publication regime or materially lower executable cost; reforecast primary before all current identity/source/funding/fees/liquidity/correlation/execution checks. No automatic follow-up/order.",
+  "evaluated_utc": "2026-10-18T23:57:22.809171+00:00",
+  "question": "Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 55% or higher?",
+  "valuation_author": "primary_operator",
+  "original_index": 298,
+  "report_sha256": "454261d40fc866a73429a055ac8ad473701a65487112e78de88070afc8ea4196"
+}

@@ -161,3 +161,89 @@ def test_rebuild_detects_tampered_revision_artifact(review_run: Path, tmp_path: 
         (review_run / markdown).write_text("Tampered report.\n", encoding="utf-8")
     with pytest.raises(AssertionError, match="revision JSON hash mismatch|revision report hash mismatch"):
         ledger.rebuild()
+
+
+def test_record_checks_links_from_evaluations_directory_before_writing(review_run: Path, tmp_path: Path):
+    source_dir = review_run.parent.parent / "data"
+    source_dir.mkdir()
+    source = source_dir / "source artifact.md"
+    source.write_text("Source facts.\n", encoding="utf-8")
+    report = (
+        "Valid local [source](<../../../data/source%20artifact.md#facts>), "
+        "[web](https://example.test/a), [anchor](#section), and "
+        "[mail](mailto:research@example.test)."
+    )
+    path = _write_input(tmp_path / "valid-base.json", _record_input(1, "blocked_after_review", report))
+    ledger.record(path)
+    saved = (review_run / "evaluations" / "0001.md").read_text(encoding="utf-8")
+    assert "../../../data/source%20artifact.md#facts" in saved
+
+    broken = _write_input(
+        tmp_path / "broken-base.json",
+        _record_input(2, "blocked_after_review", "Broken [source](../../data/missing.md)."),
+    )
+    with pytest.raises(ValueError, match="local Markdown link target is missing"):
+        ledger.record(broken)
+    assert not (review_run / "evaluations" / "0002.json").exists()
+    assert not (review_run / "evaluations" / "0002.md").exists()
+    assert len((review_run / "evaluations.jsonl").read_text().splitlines()) == 1
+
+
+def test_revision_checks_links_from_revisions_directory_before_writing(review_run: Path, tmp_path: Path):
+    source_dir = review_run.parent.parent / "data"
+    source_dir.mkdir()
+    (source_dir / "source artifact.md").write_text("Source facts.\n", encoding="utf-8")
+    _, base_record = _save_base(review_run, tmp_path)
+
+    valid = _revision_input(
+        tmp_path,
+        report=(
+            "[source](<../../../data/source%20artifact.md#facts>) "
+            "[external](https://example.test) [anchor](#notes) [email](mailto:a@b.test)."
+        ),
+    )
+    ledger.revise(valid, base_record["report_sha256"], "Test valid revision links.")
+    rows_before = (review_run / "revisions.jsonl").read_bytes()
+    files_before = [p.relative_to(review_run).as_posix() for p in _revision_files(review_run)]
+
+    invalid = _revision_input(tmp_path, report="Bad [source](../../../data/missing.md).")
+    current = json.loads((review_run / "revisions.jsonl").read_text().splitlines()[-1])
+    with pytest.raises(ValueError, match="local Markdown link target is missing"):
+        ledger.revise(invalid, current["report_sha256"], "Must fail before write.")
+    assert (review_run / "revisions.jsonl").read_bytes() == rows_before
+    assert [p.relative_to(review_run).as_posix() for p in _revision_files(review_run)] == files_before
+
+
+def test_local_link_repository_escape_fails_before_record_artifacts(review_run: Path, tmp_path: Path):
+    path = _write_input(
+        tmp_path / "escaping-base.json",
+        _record_input(1, "blocked_after_review", "Escape [source](../../../../outside.md)."),
+    )
+    with pytest.raises(ValueError, match="local Markdown link escapes repository"):
+        ledger.record(path)
+    assert not (review_run / "evaluations" / "0001.json").exists()
+    assert not (review_run / "evaluations.jsonl").exists()
+
+
+@pytest.mark.parametrize("profile", ["prior36", "more-html"])
+def test_local_link_accepts_existing_extra_archived_public_source_without_restore(profile: str):
+    # Exercise a real receipt-linked archive entry and its profile-specific
+    # verified reader. Validation must not restore the adjacent .body file.
+    import public_source_archive_extra
+
+    manifest_path = public_source_archive_extra.PROFILES[profile]["manifest"]
+    manifest = json.loads(manifest_path.read_text(encoding="utf-8"))
+    entry = next(
+        item for item in manifest["entries"]
+        if item.get("original_path") and not (ledger.ROOT / item["original_path"]).exists()
+    )
+    original = ledger.ROOT / entry["original_path"]
+    archive = ledger.ROOT / entry["archive_path"]
+    assert archive.is_file()
+    report_path = ledger.ROOT / "research/2026-10-17-deep-review/evaluations/archive-link-fixture.md"
+    relative = Path(__import__("os").path.relpath(original, report_path.parent))
+    assert not original.exists()
+
+    ledger.validate_local_markdown_links(f"[archived source]({relative.as_posix()})", report_path)
+
+    assert not original.exists()

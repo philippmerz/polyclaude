@@ -31369,3 +31369,20 @@ Filesystem99%/261MiBthreatensnewsourcepersistence. Removedonly4regenerablepipcac
 - Primary77.9177375%YES/actual15pp allowance; correlated fuel/policy/source model is judgment. Whole$2.70 can be lost. Pull ALL unfilled293+296 Oct19 02UTC, earlier unassessed material news CANCEL FIRST; no add/replay/repost.293 still LIVE/unfilled;294 closed unplaced.
 - New public snapshot collector binds exact Gamma/compact fd fees/books/status/receipt time/raw hashes, preserves explicit missing-book gaps and stores gzip evidence. Root reviewed;11 focused tests pass. Newest-first news repair already deployed; source update changed293/294 before writer. No new timer/raw news TG.
 - Storage99%/about280MiB free: only regenerable pip cache purged; apt332MB needs operator sudo or disk expansion. Async request pending; financial/source evidence retained.300 milestone TG follows owned commit/push.
+
+- 23:53 UTC: owned checkpoint/code/financial records pushed d179476; pre-commit money-math169 checks pass. Telegram300 milestone delivered message1256, one part. Finite review continues at297; delivery receipt in research/2026-10-17-deep-review/milestones.json.
+
+## 2026-10-19 00:06 UTC — 302 valued; Whalefall source discrepancy under review
+
+- 297 official Udinese0–3 +Gamma closed/resolved→factual exclusion.298 Grok HLE primary18.4348%YES/15pp; both-side central EV negative, no entry.23:53 cached officialAPI200/Age2128s,65rows/rootSHA verified: Grokmax39.72/4.7originalNULL, OpenAImax53.6/no55 trigger.
+- 299 Whalefall estimate8m is not final; exact8m final paysNO. Root caught earlier-horizon calibration figures, preserved rejected draft and saved5 corrected same-week pairs before priceblind model. PrimaryYES42.8978%/NO57.1022%,15pp; current dated10NO cost2.36801/selectedEV1.84221. Independent new-source/skeptic/account tasks pending; no order/prior/holding. [Case](../research/2026-10-17-deep-review/evaluations/0299.md).
+- 302 valued/4blocked/344factual/2,350pending;650base/46revisions; save/index each completion. Two link-only revisions repair relative evidence paths297/298 without changing p/economics/disposition.300 full rule/source read, model pending.
+
+
+## 2026-10-19 00:30UTC — 297–299 saved; DEC0222 pending fill
+
+- Finite review:302 valued/4 blocked/344 factual/2,350 pending;650 base+47 revisions.297 official Udinese0–3 and Gamma explicitly closed/resolved→factual exclusion.298 original-HLE Grok≥55:primary18.4348%YES/15pp reserve, neither side positive central takerEV. Official cached API23:53 xAImax39.72/4.7AccuracyNULL/Diamond22.8; OpenAImax53.6, no held threshold trigger; origin freshness unknown.
+- 299 primary NO57.1022%/15pp selected42.1022%; exact final8m winsNO, current8m is estimated. Root corrected mixed-horizon helper sample; five same-week pairs weak/correlated. Source/independent challenge/normal monitoring/account/funding/fee/identity gates passed. ONE vetted post-only BUY6NO17c/$1.02 accepted00:20:32; DEC0222. [Exact outcome](../research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md).
+- Independent auth00:23:44/direct order/124 exhausted trades/threshold-zero positions and fresh Polygon95776111/00:25:14:LIVE,0matched/target trades/CTFs. Nine BUYs reserve16.64; pUSD18.846890/free2.206890. All8 earlier orders/reservations preserved. Root rejected initial chain proof reusing pre-call00:06 block; required NEW postcall block and independently verified all raw hashes/identities/request tags. No replay; no holding/PnL/CSV point.
+- Pull ALL unfilled293/296/299 Oct19 02UTC, earlier unassessed material news CANCEL FIRST; no add/repost. On fill fresh holding/fee-net exit review. Sedgwick10UTC/Idaho22UTC unchanged; held review02UTC.
+- Small-unit architecture:297/298 link-only revisions preserve base records. New report-local Markdown guard rejects broken/escaping paths BEFORE immutable writes; root-reviewed11 tests passed, archive-reader compatibility included.300 ongoing; named source/model units2–4KB. Main handoff compacted; no full journal/index ingestion needed.

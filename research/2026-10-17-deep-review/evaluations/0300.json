@@ -1,0 +1,172 @@
+{
+  "review_index": 300,
+  "market_id": "1105742",
+  "condition_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+  "criteria_sha256": "ba2b313858c467da696c91dc257d786d7eaea84b2bf9ce702539b43fc0ddce1e",
+  "status": "valued",
+  "literal_analysis": "Official head of state Dec31 2026 NOON ET, notAPIendmidnight. Formal appointment/confirmation/sworn OR current official government confirmation qualifies; UN fallback if government unclear. Multipleheads→primary, else earliest; none→NoHead. Expired/resigned/terminated terms, future-effective/nominee/unofficial/oversight-only roles excluded. Acting title not automatic exclusion; head-of-state differs from head-of-government. Exact UN-recognized-government identity and legal-effective status remain important.",
+  "evidence": [
+    {
+      "url": "https://historico.tsj.gob.ve/decisiones/scon/enero/352131-0001-3126-2026-26-0001.HTML",
+      "observed_utc": "2026-10-19T00:24:12.494738+00:00",
+      "finding": "Root rawSHA/fulltext verified official Jan3 ruling: orders Delcy to exercise all presidential duties as Encargada. Explicitly reserves temporary/absolute absence classification and later state action; cites234/239, no stated90-day expiry. Does not establish no later act."
+    },
+    {
+      "url": "https://mppre.gob.ve/index.php/publicacion/8194-0",
+      "observed_utc": "2026-10-19T00:00:07.367431+00:00",
+      "finding": "Jan5 official sworn-in account before NationalAssembly supports effective appointment, distinct from Jan3 order. No later term extension/election instrument obtained."
+    },
+    {
+      "url": "https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/hspmfmlist.pdf",
+      "observed_utc": "2026-10-18T23:53:47Z",
+      "finding": "Root visually verified PDFpage49:Delcy/EloínaRodríguezGómez in HEAD OF STATE column/PresidentaEncargada; HEAD OF GOVERNMENT NoPrimeMinister.13-Jul-26 belongs foreignminister, not Delcy effective date. List depends on mission updates; PDFmetadataOct15 is not role date."
+    },
+    {
+      "url": "https://vicepresidencia.gob.ve/presidenta-delcy-rodriguez-interviene-en-el-cierre-de-la-conferencia-de-energia-petroleo-y-gas-2026/",
+      "observed_utc": "2026-10-18T23:52:36Z",
+      "finding": "Official current page names her Presidenta/Jefa deEstado; article visible publication date missing. Continued recognition, not a new extension instrument."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/pdf/CREC-2026-09-30.pdf",
+      "observed_utc": "2026-10-18T23:56:13Z",
+      "finding": "S.Res932 requests assessment of90-day expiry/elections; not Venezuelanlaw/finalruling. OAS constitution PDF403 and laterTSJsource timeout remain access gaps. No dated government election/transition deadline was verified by bounded pass; not proof none exists."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.80464,
+    "low": 0.1,
+    "high": 0.96,
+    "method": "Conditional current-role validity and four explicit political-continuity hypotheses toDec31 noonET; primary scenario weights, not historical hazard calibration.",
+    "reasoning": ".96 current-role qualifying *(.81 same-person continuity+.12 negotiated transition*.20Delcy)+.04 invalid-role*.10=.80464. Elite replacement5%/abrupt removal2% fail. Scenario weights/current-validity96% are primary judgment, not fitted hazard. Initial model saved before quotes; later TSJ source update leaves center unchanged and broadens adverse legal sensitivity to10%.",
+    "model_path": "models/delcy300_source_update_0035.json",
+    "original_priceblind_model": "models/delcy300_primary_0015.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_300_0015.json",
+    "quote_file_sha256": "3fc1aa9fc775d326953560dc01d3d21aed69f6dfe17580d4e8eb7c17ff0f1810",
+    "quote_capture_utc": "2026-10-19T00:16:05.160769+00:00",
+    "gamma_received_utc": "2026-10-19T00:16:04.750129+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.80464,
+        "selected_stress_probability": 0.65464,
+        "best_bid": 0.17,
+        "best_ask": 0.18,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792368958250",
+        "book_received_utc": "2026-10-19T00:16:05.159616+00:00",
+        "book_age_seconds_at_receipt": 6.909615993499756,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7999999999999998,
+            "fee": 0.05904,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.18
+              }
+            ],
+            "net": 1.8590399999999998
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7000000000000002,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.17
+              }
+            ],
+            "net": 1.6435500000000003
+          }
+        },
+        "taker_cost_usd": 1.8590399999999998,
+        "central_expected_profit_usd": 6.18736,
+        "selected_stress_profit_usd": 4.68736,
+        "break_even_before_carry": 0.18590399999999999,
+        "break_even_constant_carry": 0.1870775254998559,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.19535999999999998,
+        "selected_stress_probability": 0.045359999999999984,
+        "best_bid": 0.82,
+        "best_ask": 0.83,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792368958250",
+        "book_received_utc": "2026-10-19T00:16:05.159616+00:00",
+        "book_age_seconds_at_receipt": 6.909615993499756,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.299999999999999,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.83
+              }
+            ],
+            "net": 8.356449999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.2,
+            "fee": 0.05905,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.82
+              }
+            ],
+            "net": 8.14095
+          }
+        },
+        "taker_cost_usd": 8.356449999999999,
+        "central_expected_profit_usd": -6.402849999999999,
+        "selected_stress_profit_usd": -7.902849999999999,
+        "break_even_before_carry": 0.8356449999999999,
+        "break_even_constant_carry": 0.8409200382795803,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YES candidate for further current investment review; no300order/prior/holding. Ten-share18c fee-cost1.85904/centralEV6.18736/selected4.68736; NOfee-cost8.35645/central−6.40285. Huge quoted disagreement is a diagnostic, not probability evidence. Legal-term classification/later-instrument gap and subjective continuity weights remain; 10% legal-failure scenario loses. Compare with held exposure, three new commitments and carry before allocation; no forced stake to complete a valuation.",
+  "reopen_condition": "Promote only after a distinct primary entry decision addresses expired-term/source-adjudication risk, accessible competing opportunities and current exact identity/book/fees/funding/portfolio/monitoring gates. A verified later TSJ/AN/CNE act, transition/election or source-status change requires reforecast. No later-action absence claim.",
+  "evaluated_utc": "2026-10-19T00:29:40.397193+00:00",
+  "question": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 300,
+  "report_sha256": "8ec2d08b62eedfee4962783c1ca030a3728fe73d4a4e46b394b4e4492f22477d"
+}
