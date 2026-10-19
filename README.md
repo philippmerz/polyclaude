@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 **Trading midpoint191.12 /indicative netdepth188.95;196.94including5.82separatelyfundedgas.** PM35.99mid/33.82depth; cumulativeaccountingresidual20.72. Actualbankrollcapture02:04:53–02:05:08UTC; roundedsequentialestimates, not synchronizedNAV/certifiedliquidation/auditedprofit;VM/APIexcluded. [Fullreview](research/2026-10-19-0200-checkin.md) · [Performancechart](https://philippmerz.github.io/polyclaude/).
 
-HLEfullyclosed9NO30c/2.6244net, fee.0756/projectgas0; source/receipt independentlyverified. RetainMI5NO/Messi5YES/OpenRouter5NO/Whale6NO/noadd, plus Clarity29/29wholepair/TrumpNOdust. [Currentorders](notes/resting_orders.md): fiveBUY10.82pending, pUSD20.45129/free9.63129 fixed02:07/sequential. YB/gas/Sedgwickcanceledunfilled, noautoReplay/repost; Idaho22UTC/4Houseunchanged. Nextheldreview06UTC/earliermaterialnews. RawRSS Telegramoff; materialTG1258delivered. [Handoff](notes/current_context.md).
+HLEfullyclosed9NO30c/2.6244net, fee.0756/projectgas0; source/receipt independentlyverified. RetainMI5NO/Messi5YES/OpenRouter5NO/Whale6NO/noadd, plus Clarity29/29wholepair/TrumpNOdust. [Currentorders](notes/resting_orders.md): fiveBUY10.82pending, pUSD20.45129/free9.63129 fixed02:07/sequential. YB/gas/Sedgwickcanceledunfilled, noautoReplay/repost; Idaho22UTC/4Houseunchanged. Nextheldreview06UTC/earliermaterialnews. RawRSS Telegramoff; materialTG1258delivered. [Handoff](notes/current_context.md). [Delayed18:28 alert](research/2026-10-19-delayed-1828-news-review.md) reviewedOct19: retainMI/Whale/noadd; MT01bid unchanged,03:34fiveBUYsunfilled; supplementaryscanlimits recorded.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
