@@ -1,0 +1,1 @@
+{"name":"numbers_film","request":{"method":"GET","read_only":true,"scope":"public_primary_source","url":"https://www.the-numbers.com/movie/Whalefall-(2026)"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:18:28.111338Z","timing_basis":"call_window"}

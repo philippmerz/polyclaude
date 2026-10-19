@@ -1,0 +1,26 @@
+## Batch 66 (18 markets)
+
+### What price will Bitcoin hit in October?
+Group basis: `exact_gamma_event_id`; event ID: `1112205`. Only observed snapshot rows are included; context grouping does not establish proposition equivalence.
+
+| Rank | Status | Market identity | Outcome prices | Changed | Semantic context | Criteria proof |
+|---:|---|---|---|---|---|---|
+| 539 | changed | Will Bitcoin reach $87,500 in October? [market=5170735; condition=0x42dc04e485b5d8ec749326fe564820ee37a1c63425f43d7b0755a016afd5c4cb] | Yes=0.295, No=0.705 | best_ask, best_bid, no_price, yes_price, outcome_prices | True | `421c57887fe31f9f06cbea6a429e3d696285e3a4ca2efb6e7c5dc99aae0bb500` |
+| 580 | changed | Will Bitcoin reach $85,000 in October? [market=5407561; condition=0xb62c2292b069f6dd1f94c0b642452d168a6e9bdf7f3012865a435d4503e1311f] | Yes=0.545, No=0.455 | best_ask, best_bid, no_price, yes_price, outcome_prices | True | `67c1d68ebe8cd8f2dae4205a4e2d2a64ed35191510c819527f4b482dd8dba0d2` |
+| context | context_unchanged | Will Bitcoin reach $105,000 in October? [market=5170728; condition=0x6fb90566bc3da452fed4460dfba11e93765802b824bdc022a5f1902b439075f0] | Yes=0.0045, No=0.9955 |  | True | `61cf0192507b6573afaf3ac10f23c9031630448f8266bdf02a558be1ac00556c` |
+| context | context_unchanged | Will Bitcoin reach $102,500 in October? [market=5170729; condition=0x19e75f32a671c3c9cbdd96530d9c0e87a71937f3809e1629109aadeffa6e70cd] | Yes=0.0085, No=0.9915 |  | True | `bad31fca445d9180969009387a5d205820fd33ae0a9fe7577e12aa3d6d85f968` |
+| context | context_unchanged | Will Bitcoin reach $100,000 in October? [market=5170730; condition=0x8e80ea7acae674a30a58c8db893493f88964601796b5a8bc786979deafae181b] | Yes=0.0125, No=0.9875 |  | True | `d488a9662eacbc41514a106a99ee5bd7cb215db8cef5e346d3c3981bc26aeae0` |
+| context | context_unchanged | Will Bitcoin reach $97,500 in October? [market=5170731; condition=0x92b08ea4b42761055b6c8c87a71dbb9ab0a7a8869454fe65eec5785b24ceaf26] | Yes=0.0175, No=0.9825 |  | True | `e9dd43378a0a20b5dd7e5a500c0eb7c1db98e6b6415eb9bb8c30a6d10a46e03a` |
+| context | context_unchanged | Will Bitcoin reach $95,000 in October? [market=5170732; condition=0x3d78687856148bc4410fcf2d511c6a8e797a32cd123d5130550937776c1bc580] | Yes=0.0335, No=0.9665 |  | True | `8fe822c3cb942a997690a8ab7c5e0a0b2e7a5d824b2a401bb4d2437c0de1c52d` |
+| context | context_unchanged | Will Bitcoin reach $92,500 in October? [market=5170733; condition=0x5efc792583ed760c4cd710bef57236e005a632f9bb16d58d58d99fbdd632efce] | Yes=0.075, No=0.925 |  | True | `7f555c90acd4b7684bf2ac3abde7872d8fc22e671537d2a3831fc423fa73857a` |
+| context | context_unchanged | Will Bitcoin reach $90,000 in October? [market=5170734; condition=0x94f623a9c9ac7e0caca65b1ab664e8158ebb8ec0c826b023ba98518967910755] | Yes=0.155, No=0.845 |  | True | `508a51d2bfce620bf6b72d8c69f69adfc644e857f70f461bfbce08160199928f` |
+| context | context_unchanged | Will Bitcoin dip to $77,500 in October? [market=5170739; condition=0x4e22f6d2ae4af77a41c1f57a3f077e3c32606c826b987406d6e27fac9ddad7aa] | Yes=0.385, No=0.615 |  | True | `3ffeb03df583238a8fbb073ad031591347df06874585484f9d39257b21ef7e15` |
+| context | context_unchanged | Will Bitcoin dip to $75,000 in October? [market=5170740; condition=0x5280e91e95ab540de0879f26813f060f51f9d77d8c2e41dd81f1aec41c8bb714] | Yes=0.195, No=0.805 |  | True | `5b23ffd491d2bf16bc7a024415dfb4ce29cee84106dec2bbfbba435174f373cf` |
+| context | context_unchanged | Will Bitcoin dip to $72,500 in October? [market=5170741; condition=0xbf0602707edd80eada90c28ee03e74b9330432105f71b41da38f3997a55c1bde] | Yes=0.105, No=0.895 |  | True | `69b6ae116cd9d6a006dd18a0028cf2deea63321398aa293ce454eb4ed72711f0` |
+| context | context_unchanged | Will Bitcoin dip to $70,000 in October? [market=5170742; condition=0x8feb2a254634f61caacbbe13abd7b9d5b30c296e66fa3666990cab540fb3d0a5] | Yes=0.055, No=0.945 |  | True | `44b8c47ec1047b5f12a7042c3d8c4a870a2b1c4241f6057da22804be220269a1` |
+| context | context_unchanged | Will Bitcoin dip to $67,500 in October? [market=5170743; condition=0x758784e5d3076107c30fee0658405306e8c2bd051c9be06af638d63b5dd6b1d2] | Yes=0.024, No=0.976 |  | True | `8fc7eb647a37fe0170743f7a189ecbfb27a9d4cbd4256371a86dd679e37792d5` |
+| context | context_unchanged | Will Bitcoin dip to $65,000 in October? [market=5170744; condition=0x68bd2cba871a2289c3cbc75396a2e180795b74c0183c1407875247243a083af7] | Yes=0.0145, No=0.9855 |  | True | `91b4ade8d4e99ed8eb0c5fc4655e588c7eb06eef50505d20529e30f6cd404590` |
+| context | context_unchanged | Will Bitcoin dip to $62,500 in October? [market=5170745; condition=0xff6a852f912fc6548ec130b05de014f21b1a26342adedef20e4103bb97b4e81d] | Yes=0.0105, No=0.9895 |  | True | `7985c1a86cbfedd680d4ae98d1bc0e3dc9eca8c5f500d2d4468bdabf6a3046a8` |
+| context | context_unchanged | Will Bitcoin dip to $60,000 in October? [market=5170746; condition=0xe496820bb94513f7e748a98dbac56d9883f3165236faf2eef5d6d89dd25b6d14] | Yes=0.0085, No=0.9915 |  | True | `70ed2e0870cc9b83418e1e6168fc60f9040326fa36b3b2b5933552f1337a1f11` |
+| context | context_unchanged | Will Bitcoin dip to $80,000 in October? [market=5742250; condition=0x2952027eb109a0004cac2f99fcab57c535d12b3c4de65bef138a3d0c7a68d909] | Yes=0.69, No=0.31 |  | True | `0debd32b722ef1c9b5843f96be47404e807fe628222e13b1cc20803c642a08ab` |
+

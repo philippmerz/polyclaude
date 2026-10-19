@@ -1,8 +1,8 @@
-# Current resting orders — October 19 14:27 UTC
+# Current resting orders — October19 15:59 tick
 
-**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** The authenticated 14:29 inventory exhausted pagination and matched four exact order/CID/asset/size/price records to four live reservations. Eight position identities, sizes and total-bought quantities are unchanged; marks changed. [Current account](../data/deep_review_20261017/work/tick1427_account.json) · [operations](../data/deep_review_20261017/work/tick1427_ops.json). This is a dated observation, not a guarantee against later fills.
+**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated pagination exhausted; four exact order/CID/asset/size/price records match four reservations. Eight position identities/sizes/totalBought unchanged. Artifact writes about16:15UTC are recorded; actual request/response clocks were not retained. This is a dated observation, not a guarantee against later fills. [Account proof](../data/deep_review_20261017/work/tick1559_account.json) · [operations](../data/deep_review_20261017/work/tick1559_ops.json).
 
-Bankroll window 14:30:21.173767–14:30:36.207726 UTC: pUSD/account details are in the linked proof; the portfolio snapshot is rounded/sequential, not synchronized NAV. Idaho 630707 remains 34 YES at 3¢/$1.02, all-unfilled pull at Oct19 22:00 UTC, cancel-first on material poll/candidate/ballot/turnout evidence. [Primary review](../research/2026-10-19-1427-checkin.md).
+Bankroll producer16:16:13.295523–16:16:27.606117UTC, rounded/sequential rather than synchronized NAV. Existing terms retained without adding/reposting. NY01 fundraising headline was checked against prior officialSep30 aggregates and distinct NewsdayOct17 reporting; no new numerical poll/ballot fact established. Idaho63070734YES3c/$1.02 keeps its binding Oct19 22:00UTC all-unfilled pull and earlier cancel-first rule. [Primary review](../research/2026-10-19-1559-checkin.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|

@@ -1,0 +1,50 @@
+{
+  "observed_utc": "2026-10-19T16:17:09.128420Z",
+  "daemon_rows": [
+    {
+      "script": "opportunity_watch.py",
+      "pid": 425,
+      "canonical_path": true,
+      "script_mtime_utc": "2026-09-29T10:07:53.974910Z",
+      "started_utc": "2026-10-18T09:33:44.720000Z",
+      "mtime_precedes_start": true
+    },
+    {
+      "script": "heartbeat_watch.py",
+      "pid": 450,
+      "canonical_path": true,
+      "script_mtime_utc": "2026-10-02T14:31:39.989785Z",
+      "started_utc": "2026-10-18T09:33:44.960000Z",
+      "mtime_precedes_start": true
+    },
+    {
+      "script": "telegram_listener.py",
+      "pid": 451,
+      "canonical_path": true,
+      "script_mtime_utc": "2026-09-10T18:34:57.001351Z",
+      "started_utc": "2026-10-18T09:33:44.990000Z",
+      "mtime_precedes_start": true
+    },
+    {
+      "script": "news_watcher.py",
+      "pid": 148881,
+      "canonical_path": true,
+      "script_mtime_utc": "2026-10-18T22:58:44.443045Z",
+      "started_utc": "2026-10-19T05:28:37.310000Z",
+      "mtime_precedes_start": true
+    }
+  ],
+  "daemon_counts": {
+    "news_watcher.py": 1,
+    "heartbeat_watch.py": 1,
+    "telegram_listener.py": 1,
+    "opportunity_watch.py": 1
+  },
+  "news_state_metadata_only": {
+    "mtime_utc": "2026-10-19T16:15:47.645254Z",
+    "bytes": 561334,
+    "freshness_seconds": 81.483
+  },
+  "news_status_safe": "watcher pid=148881 seen=5000 last_cron_trigger=1792426513.0669878",
+  "disk_free_bytes": 1056333824
+}

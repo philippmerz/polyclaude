@@ -1,0 +1,1 @@
+{"name":"numbers_weekend","request":{"method":"GET","read_only":true,"scope":"public_primary_source","url":"https://www.the-numbers.com/box-office-chart/weekend/2026/10/16"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:18:28.110781Z","timing_basis":"call_window"}

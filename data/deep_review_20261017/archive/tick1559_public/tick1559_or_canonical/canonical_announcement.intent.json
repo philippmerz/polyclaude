@@ -1,0 +1,1 @@
+{"name":"canonical_announcement","request":{"method":"GET","read_only":true,"scope":"public_primary_source","url":"https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:19:50.304492Z","timing_basis":"call_window"}

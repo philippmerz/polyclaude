@@ -1,0 +1,140 @@
+{
+  "schema": "tick1559_ops.v1",
+  "observed_utc": "2026-10-19T16:18:05.091359Z",
+  "scope": "Bounded 16:00 routine safety snapshot; no trade, cancel, redeem execution, prior/config/doc/Telegram mutation. Position insurance audit --fix was authorized.",
+  "account": {
+    "comparison": "logs/tick1559_private/account/account_compare.private.json",
+    "comparison_sha256": "e3442ed201852ad99a44e7e08372176aa194ea1c83960b9f0ac4b34be5f2c1a3",
+    "baseline": "data/deep_review_20261017/work/tick1427_account.json",
+    "capture": "logs/tick1559_private/account/",
+    "orders": {
+      "count": 4,
+      "all_BUY_live": true,
+      "pagination_terminal": true,
+      "matched_shares": 0,
+      "full_and_remaining_risk_usd": 7.52,
+      "terms_equal_tick1427": true
+    },
+    "positions": {
+      "count": 8,
+      "identity_outcome_size_totalBought_redeemable_equal_tick1427": true
+    },
+    "reservations": {
+      "count": 4,
+      "identities_and_risk_equal_tick1427": true
+    },
+    "capture_time_limitation": "Order/position request and response timestamps were not retained; see public account unit for raw-body hashes and artifact-write times, explicitly not presented as network times."
+  },
+  "routine": {
+    "cli_manifest": "logs/tick1559_private/cli_manifest.private.json",
+    "cli_manifest_sha256": "7713a82c606d9440238a6facdecefe686d6e69ca56460497fd1f44cd155620d4",
+    "private_streams_dir": "logs/tick1559_private/cli/",
+    "commands": 14,
+    "returncode_zero": 14,
+    "timeouts": 0,
+    "window_utc": [
+      "2026-10-19T16:15:48.799854Z",
+      "2026-10-19T16:16:38.643694Z"
+    ],
+    "bankroll_utc": [
+      "2026-10-19T16:16:13.295523Z",
+      "2026-10-19T16:16:27.606117Z"
+    ],
+    "bankroll": {
+      "total_usd": 195.56,
+      "gas_usd_included_separately_deposited": 5.84,
+      "pm_mid_usd": 34.58,
+      "indicative_fee_net_depth_usd": 30.27,
+      "mid_minus_depth_usd": 4.3,
+      "realized_settled_cash_metric_usd": 20.73,
+      "limitation": "Sequential producer observations, not synchronized NAV or certified liquidation proceeds."
+    },
+    "wallet_utc": [
+      "2026-10-19T16:16:02.866764Z",
+      "2026-10-19T16:16:06.597869Z"
+    ],
+    "wallet_pUSD_deployable_net_of_BUYs_usd": 12.93129,
+    "exit_analysis_utc": [
+      "2026-10-19T16:16:34.192298Z",
+      "2026-10-19T16:16:35.787291Z"
+    ],
+    "exit_estimates_usd": {
+      "Whalefall_6_NO": 0.49,
+      "Messi_5_YES": 1.2,
+      "Michigan_5_NO": 1.46,
+      "OpenRouter_5_NO": 3.0,
+      "Clarity_pair_full_exit_net": 24.12,
+      "Clarity_pair_fee": 0.22
+    },
+    "status_flags": {
+      "hurdle_groups_clear": 3,
+      "hurdle_groups_flagged": 0,
+      "UMA_positions_tracked": 44,
+      "UMA_markets_refreshed": 42,
+      "UMA_alerts": 0,
+      "HLE_chart_response_returned": true,
+      "unscored_Grok_4_7_excluded_from_accuracy_thresholds": true,
+      "Ostium_open_trades": 0,
+      "ostium_state_diff": "no change",
+      "crux_quiet_output": "empty",
+      "watchlist_hit_output": "empty",
+      "pending_decisions": "none overdue"
+    },
+    "insurance_audit": {
+      "returncode": 0,
+      "finding": "snapshot refreshed, 7 indexed + 1 deindexed claim rows; 0 acked holds pruned; clean audit"
+    },
+    "redeem_all_dry_run": {
+      "returncode": 0,
+      "winning_redeemables": 0,
+      "losing_or_uncertain_skipped": 1,
+      "broadcast": false
+    },
+    "Kelly": "Constrained report captured after fresh bankroll; complete output retained in private CLI streams."
+  },
+  "daemons": {
+    "packet": "data/deep_review_20261017/work/tick1559_daemons.json",
+    "sha256": "63d2e62598e1829c6cc4efa5ea9a6d968cd12011ba572f2d16811a67d824d33e",
+    "observed_utc": "2026-10-19T16:17:09.128420Z",
+    "one_canonical_process_each_code_older_than_start": true,
+    "news_state_metadata_only": {
+      "mtime_utc": "2026-10-19T16:15:47.645254Z",
+      "bytes": 561334,
+      "freshness_seconds": 81.483
+    },
+    "news_status_safe": "watcher pid=148881 seen=5000 last_cron_trigger=1792426513.0669878",
+    "disk_free_bytes": 1056333824
+  },
+  "source_review_refs": [
+    "data/deep_review_20261017/work/tick1559_source_review.json",
+    "data/deep_review_20261017/work/tick1559_michigan_idaho.json",
+    "data/deep_review_20261017/work/tick1559_openrouter.json",
+    "data/deep_review_20261017/work/tick1559_other_catalysts.json"
+  ],
+  "errors_or_material_order_changes": [],
+  "account_public_unit": "data/deep_review_20261017/work/tick1559_account.json",
+  "account_public_unit_sha256": "cf826aaf7d0e5e485769034f2d28db7e75124c8b1b51d94d5f2dd48281c95fd4",
+  "cli_public_stream_manifests": [
+    {
+      "path": "data/deep_review_20261017/work/tick1559_cli_streams_01.json",
+      "sha256": "f628706f3baf91fd357495a31c39f12132fe0f1265accb75d44378bbb720d0ad"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1559_cli_streams_02.json",
+      "sha256": "68def684efe13deb8b7dc03f08704806bed9ea7fc37ba4e3d3b7d3e6886669f8"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1559_cli_streams_03.json",
+      "sha256": "457676ac436e3770629d9e64b1b0e9209afe2102ed7c254d315cc3dd3c4c2dc4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1559_cli_streams_04.json",
+      "sha256": "36a1ca7ebd6aba40b89e0c70a58e581793febde682c6f92537d2122fa29e7515"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick1559_cli_streams_05.json",
+      "sha256": "85f61bc53f784a960ab48394cbc9acf73eecd2b28a942e9894abee121701bb9e"
+    }
+  ],
+  "updated_utc": "2026-10-19T16:20:21.890416Z"
+}
