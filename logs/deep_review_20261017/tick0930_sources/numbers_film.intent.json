@@ -1,0 +1,1 @@
+{"name":"numbers_film","request":{"call_window_label":"tick 09:30 held Whalefall source refresh","method":"GET","read_only":true,"scope":"The Numbers Whalefall title page and weekend/daily rows","url":"https://www.the-numbers.com/movie/Whalefall-(2026)"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T09:31:22.120070Z","timing_basis":"call_window"}

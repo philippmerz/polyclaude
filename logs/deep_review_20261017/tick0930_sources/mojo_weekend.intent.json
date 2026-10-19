@@ -1,0 +1,1 @@
+{"name":"mojo_weekend","request":{"call_window_label":"tick 09:30 held Whalefall source refresh","method":"GET","read_only":true,"scope":"Box Office Mojo exact Whalefall release weekend table","url":"https://www.boxofficemojo.com/release/rl1608024065/weekend/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T09:31:22.820159Z","timing_basis":"call_window"}

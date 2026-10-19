@@ -1,0 +1,21 @@
+{
+  "scope": "One bounded scheduled check, queued082506/started0929UTC; no goal or idle continuation",
+  "created_utc": "2026-10-19T09:33:14.866220+00:00",
+  "phase": "COMPLETE: bounded check, no trades/fills/priors changed; source/account/scanner verification and docs/CSV saved",
+  "explicit_alert_ids": [
+    "f9f38cd626ecbd2e5e10ce64c2a87463b5ea0a97",
+    "ea975f2ccc52da372c51e20231a8b656bfb92219",
+    "e46af719870ada9fff6c0fcad7f88994fc99700d"
+  ],
+  "known_account_delta": "09:32 sixBUY/11.47reserved/all0matched/eightpositions;fixedPolygon95798001pUSD20.451290,candidate313/316CTFs0; primaryproofverificationpending",
+  "source_unit": "work/tick0930_news_sources.json",
+  "ops_unit": "work/tick0930_ops.json when complete",
+  "discovery_unit": "work/tick0930_discovery.json when complete",
+  "next": "ExistingOct19 10UTC cancel all unfilled DEC229/230 remainder + heldreview; earlier materialuncertainty cancel-first; Idaho22UTC separate. No Telegram/goal/idle continuation. Publish owned records now and end.",
+  "pull_boundary": "If actualclockreachesOct19 10UTCduringrun, cancel all unfilled DEC229/230 remainder via exactverifiedvettedcancel; no automaticrepost/add. Before10onlyonmaterialuncertainty. Idaho22UTCseparate. No waits forboundary.",
+  "research_progress": "316valued/6blocked/364factual/2314pending,next320;thisscheduledtickdoesnotcontinue3kresearch",
+  "completed_utc": "2026-10-19T09:47:51.223156+00:00",
+  "root_audit": "work/tick0930_root_audit.json",
+  "root_risk": "work/tick0930_root_risk.json",
+  "batch_audit": "work/tick0930_6b_audit.json"
+}

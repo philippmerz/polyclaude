@@ -1,0 +1,22 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/macro_pm_scan.py",
+    "--no-consensus",
+    "--days",
+    "60"
+  ],
+  "finished_utc": "2026-10-19T09:33:17.571773+00:00",
+  "name": "macro",
+  "returncode": 0,
+  "started_utc": "2026-10-19T09:33:17.011672+00:00",
+  "stderr_bytes": 106,
+  "stderr_gzip": "logs/tick_20261019T0930/scanners/macro_valid.stderr.gz",
+  "stderr_gzip_sha256": "c775c66a4da26c32b7a3d0d3c1725036159ecb721da2251b5e763ebc9b194c96",
+  "stderr_sha256": "dc9d8e7783a6dc5afd98759064eea33d61c790bbce077c31eba8e98acd65151c",
+  "stdout_bytes": 583,
+  "stdout_gzip": "logs/tick_20261019T0930/scanners/macro_valid.stdout.gz",
+  "stdout_gzip_sha256": "f64c1a8a4ce8320aa9441f825289a44828ad7184de0fafe56fadc33d2d765580",
+  "stdout_sha256": "90b300c3a104a1d093a58ebc87d3b09bff14a18f54b4db9426cdd9fcbbff5ecf",
+  "timed_out": false
+}

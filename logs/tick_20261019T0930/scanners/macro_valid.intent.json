@@ -1,0 +1,1 @@
+{"argv": [".venv/bin/python", "scripts/macro_pm_scan.py", "--no-consensus", "--days", "60"], "name": "macro", "started_utc": "2026-10-19T09:33:17.011672+00:00", "timeout_seconds": 180}

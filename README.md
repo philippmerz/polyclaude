@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 211 recorded observations from Apr-25
+The local performance CSV now has 212 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,7 +58,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **316 valued /6 blocked /364 factual exclusions /2,314 pending**;686 immutable base cases +56 append-only revisions. Five newvaluations and one sourceblock individuallysaved; next320. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. [Resume](research/2026-10-17-deep-review/RESUME.md): one fullrule/latestreport, named2–5KBunits/8KBcap. Nativegoalrecordstillblocked despiteinteractiveoperatorresumption; tools havenoresumeoperation, so automaticcontinuation requiresapp/systemcontrol. [Current review and decisions](research/2026-10-19-goal-resumed.md).
 
-**New pilot bids, NOT fills:** DEC229Rhine5YES53c/$2.65 andDEC230Haaland10NO13c/$1.30; bothLIVE/0matched/allfourcandidateCTFs0 at09:09. Entire3.95canloseiflaterfilled. **Cancelallunfillednewremainder at existing10UTC**,earliermaterialuncertaintycancel-first; noautomaticrepost/add/taker. [Exactorders/proofs](notes/resting_orders.md). Primary source/model uncertainty remains substantial; these are smallmanualsizes,notpointKelly recommendations.
+**New pilot bids, NOT fills:** DEC229Rhine5YES53c/$2.65 andDEC230Haaland10NO13c/$1.30; bothLIVE/0matched/allfourcandidateCTFs0 at09:32. Entire3.95canloseiflaterfilled. **Cancelallunfillednewremainder at existing10UTC**,earliermaterialuncertaintycancel-first; noautomaticrepost/add/taker. [Exactorders/proofs](notes/resting_orders.md). Primary source/model uncertainty remains substantial; these are smallmanualsizes,notpointKelly recommendations.
 
 **Whalefall: original DEC222 filled6NO17c/$1.02; DEC223retain/noadd.** Numbers/Mojo08:40still$8mESTIMATE,notfinal; newglobalflopheadline doesn'tchange the domesticmetric. SelectedNO42.10% remains uncalibrated/fullcashlosspossible. [Source refresh](research/2026-10-19-goal-resumed.md). Original02UTCBUYpullobsolete; nextheldreview10UTC.
 
@@ -86,11 +86,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Required entry-check snapshot — October19 08:41UTC
+## Last audited snapshot — October19 09:33UTC
 
-**Trading midpoint $190.75 / indicative net depth≈$188.88 fromroundedcomponents; account$196.61 including$5.86 separatelyfundedgas.** PM$35.62mid/$33.75fee-netdepth; residual$20.73cumulativeaccountingarithmetic. Bankrollproducer08:41:46UTC,minuteCSVanchor: roundedsequential/not synchronizedNAV,certifiedproceeds or auditedcashprofit;VM/APIexcluded. [Financial source](research/2026-10-19-goal-resumed.md).
+**Trading midpoint $190.88 / indicative net depth $188.84; account $196.75 including $5.87 separately funded gas.** PM $35.75 midpoint / $33.71 fee-net depth; $20.73 cumulative accounting residual. Authoritative producer09:33:20–35UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Completed check and source limits](research/2026-10-19-0930-checkin.md).
 
-Two newpostonlybids/zero fills09:09;old8indexedfinancialrowsunchanged. pUSD20.451290/commitments11.47/deployable8.981290. MI/Messi/OpenRouter/Whaleretain/noadd; Claritywhole29/29 andTrumpdustunchanged. MInewstoryrepeatsOct17exchange/spendclaimunverified; ORlastdirectchart06:01,targetweeksabsent/cutoffunknown,no newacquisition/usageinference. NewClarityenactmentclaim317differsfromheldvotecountpair. [Priorfullsafetycheck](research/2026-10-19-0654-checkin.md) · [currentorders](notes/resting_orders.md). Fourcanonicaldaemonsretained; rawRSSTelegramoff. Duplicateoperatorrecordingdisabled/three transcriptsremoved;~1.3GiBfree. Next10UTCnewbidpulls+heldreview;Idaho22UTC. [Handoff](notes/current_context.md).
+No new trades/fills or numerical prior changes. Six BUYs/$11.47 remain LIVE/unmatched09:32; pUSD20.451290, deployable8.981290. **Cancel unfilled Rhine/Haaland remainder at existing10UTC; Idaho22UTC separately.** MI/Messi/OpenRouter/Whale retain/noadd; Clarity whole29/29 and Trump dust unchanged. Named Michigan alerts repeat coverage or remain unverified; Numbers/Mojo09:31 still$8mESTIMATE. Kaub12cm/BfGforecast unchanged; OpenRouter target weeks absent/current cutoff unknown. [Exact orders/proofs](notes/resting_orders.md).
+
+Full routine checks complete; no UMA alerts, winning redeemables, hurdle flags or watchlist triggers. Four canonical daemons healthy. Discovery refreshed with explicit pagination/top/quote limits; no verified sports discrepancy or structural positive in the checked slice, no exchange-wide-zero claim. Frozen review remains316valued/6blocked, next320. No material new update, so no Telegram. [Compact handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

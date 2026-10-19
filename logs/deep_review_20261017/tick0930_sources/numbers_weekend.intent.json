@@ -1,0 +1,1 @@
+{"name":"numbers_weekend","request":{"call_window_label":"tick 09:30 held Whalefall source refresh","method":"GET","read_only":true,"scope":"The Numbers domestic Oct16\u201318 weekend chart","url":"https://www.the-numbers.com/box-office-chart/weekend/2026/10/16"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T09:31:21.417448Z","timing_basis":"call_window"}

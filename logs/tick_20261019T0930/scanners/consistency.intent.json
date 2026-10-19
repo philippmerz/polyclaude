@@ -1,0 +1,1 @@
+{"argv": [".venv/bin/python", "scripts/polymarket_consistency_scan.py"], "name": "consistency", "started_utc": "2026-10-19T09:31:40.289706+00:00", "timeout_seconds": 240}

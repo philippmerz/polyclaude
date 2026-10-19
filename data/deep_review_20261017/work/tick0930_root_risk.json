@@ -1,0 +1,71 @@
+{
+  "schema": "periodic_primary_risk_judgment.v1",
+  "reviewed_utc": "2026-10-19T09:43:01.024067+00:00",
+  "decision": "Retain current holdings, whole Clarity pair only; no adds, cancels, sells, redemptions or new orders this tick. Existing10UTC pulls on unfilled DEC229/230 remain; Idaho22UTC separate. No new probability from headlines.",
+  "explicit_alerts": {
+    "f9f38cd626ecbd2e5e10ce64c2a87463b5ea0a97": "MI5NO exactCID verified. Captured INN body repeatsOct17 event, no measured voter/poll effect; classifier MATERIAL is provisional, no p shift.",
+    "ea975f2ccc52da372c51e20231a8b656bfb92219": "Whale6NO exactCID verified. Global-flop headline is not domestic<8m evidence; Numbers/Mojo09:31still8mESTIMATE; exact8mFINAL would winNO.",
+    "e46af719870ada9fff6c0fcad7f88994fc99700d": "MI5NO. Spend amount/incrementality/narrowing basis unverified; consent response not publisher body. Cannot infer quantitative/electoral sign from headline.",
+    "c1292a5f672a7dabca3f76222ee2d48406470326": "WMRN headline matches old iHeart title; specific new body not bound; prior report has no identifiable numerical poll. No numeric update."
+  },
+  "other_recent_leads": "09:12Reyna/Haaland,09:13MessiMLS match,08:25Messi botanical namesake/08:41Mbappe milestone are unverified ranking-growth leads, not measured GlobalAthletes rank probabilities. Kansas/gas/Delcy are not current holdings or BUYs; no old action replay.",
+  "ordinary": {
+    "selected_terminal_EV_usd": {
+      "MI5NO": 1.7,
+      "Messi5YES": 2.0,
+      "OR5NO": 3.65,
+      "Whale6NO": 2.5261293142754346
+    },
+    "indicative_sequential_net_exit_usd": {
+      "MI5NO": 1.41,
+      "Messi5YES": 1.2,
+      "OR5NO": 3.0,
+      "Whale6NO": 0.65
+    },
+    "one_year_zero_cost_redeployment_diagnostic_usd": {
+      "MI5NO": 1.45445025,
+      "Messi5YES": 1.23783,
+      "OR5NO": 3.094575,
+      "Whale6NO": 0.6704912500000001
+    },
+    "hurdle_sensitivity": "Dated Oct18 17:42 Aave3.1525% constant, not locked or executable after funding costs. One-year diagnostic is generous to exit+cash, not a new holding horizon. AllselectedEVs exceed it.",
+    "broader_adverse_EV_usd": {
+      "MI5NO": 1.0,
+      "Messi5YES": 1.0,
+      "OR5NO": 1.0,
+      "Whale6NO": 1.5
+    },
+    "judgment": "Selected cases support retain/noadd, but broad MI/Messi/OR adverse cases favor sale. Models, conditional-fill risk and joint outcomes remain uncalibrated; no assumption prices recover. Small existing sizes, no verified source shock justifies forecast revision.",
+    "Kelly": "After fresh196.75bankroll: MI+16.86advisory, other3largeadds cap-suppressed; midpoint/rho heuristic not measuredjointoptimum, new pendingrisk not an automatic scale authorization. No add.",
+    "maker_exit": "No premium demonstrably compensates unannounced poll/data/list/outcome jump risk; no new resting sells. Whole-group/nolegwise routing preserved."
+  },
+  "Clarity": {
+    "rules": "Both full criteria/exact assets/commonend unchanged35bc95...aab693. Strict>50/>58 on same first qualifying final-passage vote, not cloture/procedure. No vote and voice/unanimous exceptions preserve one pair payout under consistent adjudication. No newer official Senate final-vote record obtained; no proof of absence asserted.",
+    "conditional_payoff_per_pair": {
+      "recordedYes<=50": 1,
+      "51to58": 2,
+      ">=59": 1,
+      "noqualifyingvote": 1,
+      "voice_or_unanimous_passage_exception": 1
+    },
+    "shares_each": 29,
+    "fresh_indicative_net_pair_usd": 24.0319,
+    "capture_utc": "2026-10-19T09:35:46.929519+00:00",
+    "earlier_exit_analysis_pair_net_usd": 27.44,
+    "snapshots_not_combined": true,
+    "zero_cost_cash_Jan2_sensitivity_usd": 24.185263475799907,
+    "days_to_operational_end_diagnostic": 74.80779016760417,
+    "decision": "RetainWHOLE29/29/noadd, conditional29floor58middle exceeds supplied-depth exit+cash in datedconstant-rate diagnostic. Not a guaranteedvenue/adjudication floor; no hedgecredit. No individual-leg sale."
+  },
+  "joint_bookkeeping_stresses": {
+    "trading_midpoint_rounded": 190.88,
+    "PM_midpoint": 35.75,
+    "nonPM_ex_gas_rounded": 155.13,
+    "allordinary_lose_all6BUYs_fill_and_lose11_47_pair_pays29": 172.66,
+    "same_pair_pays0": 143.66,
+    "limits": "Conditional otherassets hold their value and accessibility; not calibrated probability, guaranteedwealth, fullsystemic-loss bound or log-optimalallocation. Full3.95newbidloss included; currentbidsremainunfilled."
+  },
+  "source_updates": "Kaub12cm/BfGPDFsame; Googlehub301to2025doesnotprove2026absence; OpenRouterOct12tinyrevision/Oct19partial7.632384T,no cutoff/targetlabels. No model change.",
+  "financial_writer_calls": 0,
+  "next_boundary": "Oct19 10UTC newbidunfilledpulls+heldreview; earliermaterialuncertaintycancel-first. No wait/timer/self-followup."
+}

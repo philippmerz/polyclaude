@@ -1,0 +1,195 @@
+{
+  "schema": "tick0930_account.v1",
+  "times": {
+    "orders_started": "2026-10-19T09:32:28.511505+00:00",
+    "orders_received": "2026-10-19T09:32:28.720636+00:00",
+    "positions_started": "2026-10-19T09:32:28.721139+00:00",
+    "positions_received": "2026-10-19T09:32:28.913656+00:00",
+    "reservations_started": "2026-10-19T09:32:28.914201+00:00",
+    "reservations_received": "2026-10-19T09:32:28.914327+00:00",
+    "chain_started": "2026-10-19T09:32:28.984390+00:00",
+    "chain_received": "2026-10-19T09:32:30.687968+00:00"
+  },
+  "captured": {
+    "orders": {
+      "path": "logs/tick0930_private/open_orders.sdk.json.gz",
+      "raw_sha256": "e1bf7e485a430aca7d2e1503c9b074cce63c5b67b83fff7ccafb5190f83e9db5",
+      "gzip_sha256": "b09c4a74da29e7331b5fb0453a40a6a42cd392e48c689ab2159389b71eb4e2e9",
+      "raw_bytes": 3265,
+      "gzip_bytes": 1152
+    },
+    "positions": {
+      "path": "logs/tick0930_private/positions.data_api.json.gz",
+      "raw_sha256": "30c3ce1d7489e8f9d5f06d5575bb4dee457ca85122279cda1474119c8c8cb954",
+      "gzip_sha256": "3b1830c4385cf5540a521f3d54a2e8b465504d8cfbbff4198053f4437ee42353",
+      "raw_bytes": 8463,
+      "gzip_bytes": 2850
+    },
+    "reservations": {
+      "path": "logs/tick0930_private/reservations.json.gz",
+      "raw_sha256": "3dd7491f60abc8bc8a6e507471ec2c4b082531b9c87d8bbe66ce794e1f866bcf",
+      "gzip_sha256": "ca24f9acc927a871fe2aa31e12189383bd9519be1130a8c8e28c8f1ea2e650cc",
+      "raw_bytes": 3543,
+      "gzip_bytes": 1541
+    }
+  },
+  "order_status_code": 200,
+  "open_orders_total": 6,
+  "open_BUYs": 6,
+  "positions_count": 8,
+  "reservations_count": 6,
+  "orders_schema_keys": [
+    "asset_id",
+    "associate_trades",
+    "created_at",
+    "expiration",
+    "id",
+    "maker_address",
+    "market",
+    "order_type",
+    "original_size",
+    "outcome",
+    "owner",
+    "price",
+    "side",
+    "size_matched",
+    "status"
+  ],
+  "candidate_checks": [
+    {
+      "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "price": "0.53",
+      "original_size": "5",
+      "size_matched": "0",
+      "reservationId": "1792400692238585459-acc23652",
+      "reservationState": "live"
+    },
+    {
+      "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "price": "0.13",
+      "original_size": "10",
+      "size_matched": "0",
+      "reservationId": "1792400836968375171-1fe9f209",
+      "reservationState": "live"
+    }
+  ],
+  "candidate_tokens": {
+    "313": {
+      "conditionId": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+      "tokens": [
+        "19084872616962411893665279455695701352433114098006020241350661698518933473122",
+        "86006311808069604181016902065305702598289476091939867213751308592840390092285"
+      ],
+      "balances": {
+        "19084872616962411893665279455695701352433114098006020241350661698518933473122": 0.0,
+        "86006311808069604181016902065305702598289476091939867213751308592840390092285": 0.0
+      }
+    },
+    "316": {
+      "conditionId": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+      "tokens": [
+        "72257742731710757631814812995930297810474685632113794047520846137551021660945",
+        "21344240354098108351843424713534394837006651055727639290239200588246460759867"
+      ],
+      "balances": {
+        "72257742731710757631814812995930297810474685632113794047520846137551021660945": 0.0,
+        "21344240354098108351843424713534394837006651055727639290239200588246460759867": 0.0
+      }
+    }
+  },
+  "pUSD_balance_fixed_block": 20.45129,
+  "polygon_block": 95798001,
+  "polygon_block_time_utc": "2026-10-19T09:32:29+00:00",
+  "base_0909_orders": [
+    "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+    "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237"
+  ],
+  "raw_representation": {
+    "open_orders": "SDK serialization returned by clob_v2.list_open_orders after internally paginating /data/orders",
+    "positions": "JSON serialization returned by polyclaude_enter._fetch_live_positions after internally paginating Data API",
+    "reservations": "exact local file JSON serialization; read only"
+  },
+  "baseline_order_checks": [
+    {
+      "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792270288866840753-48c4e9d4",
+      "reservation_state": "live"
+    },
+    {
+      "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792270316592572015-fc54aec2",
+      "reservation_state": "live"
+    },
+    {
+      "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792272900263701705-71e35e1a",
+      "reservation_state": "live"
+    },
+    {
+      "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792282073257552169-98c5c301",
+      "reservation_state": "live"
+    },
+    {
+      "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792400692238585459-acc23652",
+      "reservation_state": "live"
+    },
+    {
+      "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+      "present": true,
+      "reservation_present": true,
+      "condition_match": true,
+      "asset_match": true,
+      "price_match": true,
+      "size_match": true,
+      "matched_shares": 0.0,
+      "reservationId": "1792400836968375171-1fe9f209",
+      "reservation_state": "live"
+    }
+  ],
+  "baseline_all_six_exact_and_unfilled": true,
+  "open_buy_remaining_risk": 11.47,
+  "account_evidence_scope": "current orders are SDK serialization from vetted exhaustive paginator; positions are Data API helper aggregate; chain balances share one fixed Polygon block; reservations are exact local projection."
+}

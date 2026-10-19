@@ -1,0 +1,96 @@
+{
+  "schema": "periodic_primary_verification.v1",
+  "verified_utc": "2026-10-19T09:38:56.781368+00:00",
+  "tick_queued": "20261019T082506Z",
+  "CLI_commands_verified": 13,
+  "CLI_streams_verified": 26,
+  "public_source_bodies_verified": 10,
+  "account_capture_window": {
+    "orders_started": "2026-10-19T09:32:28.511505+00:00",
+    "orders_received": "2026-10-19T09:32:28.720636+00:00",
+    "positions_started": "2026-10-19T09:32:28.721139+00:00",
+    "positions_received": "2026-10-19T09:32:28.913656+00:00",
+    "reservations_started": "2026-10-19T09:32:28.914201+00:00",
+    "reservations_received": "2026-10-19T09:32:28.914327+00:00",
+    "chain_started": "2026-10-19T09:32:28.984390+00:00",
+    "chain_received": "2026-10-19T09:32:30.687968+00:00"
+  },
+  "all8_position_identity_size_basis_totalBought_redeemability_unchanged": true,
+  "old4_orders_exact_unchanged": true,
+  "new2_orders_exact_unchanged_since0909": true,
+  "all6_LIVE_BUY_0matched": true,
+  "6_reservations_unique_exact_order_CID_asset_bindings": true,
+  "reserved_usd": 11.47,
+  "fixed_block_balance_proof": {
+    "polygon_block": 95798001,
+    "block_utc": "2026-10-19T09:32:29+00:00",
+    "pUSD": 20.45129,
+    "candidate_CTFs": {
+      "313": {
+        "conditionId": "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652",
+        "tokens": [
+          "19084872616962411893665279455695701352433114098006020241350661698518933473122",
+          "86006311808069604181016902065305702598289476091939867213751308592840390092285"
+        ],
+        "balances": {
+          "19084872616962411893665279455695701352433114098006020241350661698518933473122": 0.0,
+          "86006311808069604181016902065305702598289476091939867213751308592840390092285": 0.0
+        }
+      },
+      "316": {
+        "conditionId": "0x59145e4f2c11d547a6de5dc12f5c31cdc5043315c546ed5d74f391b81fe9f209",
+        "tokens": [
+          "72257742731710757631814812995930297810474685632113794047520846137551021660945",
+          "21344240354098108351843424713534394837006651055727639290239200588246460759867"
+        ],
+        "balances": {
+          "72257742731710757631814812995930297810474685632113794047520846137551021660945": 0.0,
+          "21344240354098108351843424713534394837006651055727639290239200588246460759867": 0.0
+        }
+      }
+    }
+  },
+  "redeemable_winners": 0,
+  "bankroll_window": {
+    "started_utc": "2026-10-19T09:33:20.272691+00:00",
+    "received_utc": "2026-10-19T09:33:35.406261+00:00"
+  },
+  "Clarity": {
+    "capture_utc": "2026-10-19T09:35:46.929519+00:00",
+    "both_literal_criteria_and_held_assets_unchanged": true,
+    "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+    "reported_UMA_null_empty": true,
+    "fee_net_walks": [
+      {
+        "label": "over50",
+        "gross": 0.9199999999999999,
+        "fee": 0.03564,
+        "net": 0.8843599999999999,
+        "avg_fill": 0.03172413793103448,
+        "unfilled": 0.0
+      },
+      {
+        "label": "over58",
+        "gross": 23.33,
+        "fee": 0.18246,
+        "net": 23.14754,
+        "avg_fill": 0.8044827586206896,
+        "unfilled": 0.0
+      }
+    ],
+    "total_net": 24.0319,
+    "book_ages_seconds": [
+      35.504942893981934,
+      2.864943027496338
+    ],
+    "limits": "Sequential receipt; supplied-book math, not locked executable proceeds. Earlier exit_analysis27.44 is a separately timed snapshot, not combined."
+  },
+  "OpenRouter_recomputed_T": {
+    "2026-10-05": 171.842501724714,
+    "2026-10-12": 164.043979329882,
+    "2026-10-19": 7.63238422081
+  },
+  "OpenRouter_target_labels_present": [],
+  "source_decision": "Named alerts were explicitly read despite earlier timestamp; unchanged $8mESTIMATE/preview separate; MI repeatcoverage or unverifiedspend; no numerical p update. WSV12<77/BfG unchanged; OR partial/currentcutoff unknown.",
+  "financial_writer_calls": 0
+}

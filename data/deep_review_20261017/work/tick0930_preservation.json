@@ -1,0 +1,13 @@
+{
+  "checked_utc": "2026-10-19T09:47:51.223439+00:00",
+  "decisions_priors_position_snapshot_and_frozen_checkpoint_hashes_unchanged": true,
+  "CSV_only_appended_one_row": true,
+  "original_CSV_sha256": "1665b52981c09cf6fb895eb3e9b7d068a551f8c918048afbb6d1466afe9e74ef",
+  "handoff_bytes": 7897,
+  "packet_bytes": 11243,
+  "source_mismatches": [],
+  "financial_writer_calls": 0,
+  "Telegram_messages_this_tick": 0,
+  "native_goal_operations_this_tick": 0,
+  "daemon_restarts_or_code_changes": 0
+}

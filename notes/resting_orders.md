@@ -1,8 +1,8 @@
-# Current resting orders — October19 09:09UTC
+# Current resting orders — October19 09:32UTC
 
-**Six LIVE/zero-matched BUYs/$11.47 reserved; no SELL orders.** NewRhine/Haaland3.95plusoldfour7.52; authenticatedorders/currentchainreads09:09:30–33, terminalcursor exhausted. Allold8indexed financialrowsunchanged; allfournewcandidateCTFoutcomes0. [Rootproof/exactCID+assets](../data/deep_review_20261017/work/post_entry0909_root_verified.json) · [decision/source/risk](../research/2026-10-19-goal-resumed.md). Unfilledordersarenotpurchases,profit orfillguarantees; laterfillspossible.
+**Six LIVE/zero-matched BUYs/$11.47 reserved; no SELL orders.** NewRhine/Haaland3.95plusoldfour7.52; authenticatedorders09:32:28–29/currentchainreads09:32:29–30, terminalcursor exhausted. Allold8indexed financialrowsunchanged; allfournewcandidateCTFoutcomes0. [Rootproof/exactCID+assets](../data/deep_review_20261017/work/tick0930_root_audit.json) · [decision/source/risk](../research/2026-10-19-goal-resumed.md). Unfilledordersarenotpurchases,profit orfillguarantees; laterfillspossible.
 
-Wallet09:09 pUSD20.451290; commitments11.470000/deployable8.981290. Sequentialcash/account/chainreads,notNAV/fixed-blockproof. Sixreservationsmatchfull-fillcommitments. Historical fixedPolygon95785155/MT-onlyretirement5→4 remainsin[reconciliation](../data/deep_review_20261017/work/mt01_reconcile_0413.json).
+Wallet at fixedPolygon95798001 (09:32:29UTC) pUSD20.451290; commitments11.470000/deployable8.981290. Cash/newcandidateCTFs pinned tothatblock; authenticatedaccount/orderreads separate,notNAV. Sixreservationsmatchfull-fillcommitments. Historical fixedPolygon95785155/MT-onlyretirement5→4 remainsin[reconciliation](../data/deep_review_20261017/work/mt01_reconcile_0413.json).
 
 **CANCEL ALL unfilled new remainder at existingOct19 10UTC; earliermaterialuncertaintyCANCEL FIRST. Noautomaticrepost/add/taker.** Anypartial/fullfill needsfreshholding/source/fee-netexit/portfoliojudgment; subminimum5sharepartials canbedust.
 

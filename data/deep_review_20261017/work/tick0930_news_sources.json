@@ -1,0 +1,107 @@
+{
+  "schema": "periodic_public_source_check.v1",
+  "captured_utc": "2026-10-19T09:32:11.711450Z",
+  "cutoff_utc": "2026-10-19T09:16:16Z",
+  "scope": "Public news/opportunity alert rows and bounded source refresh for current Michigan and Whalefall exposures. No probabilities or financial actions.",
+  "alert_logs": {
+    "news": {
+      "path": "notes/news_alerts.jsonl",
+      "rows": 1034,
+      "sha256": "fbaffa51dbd5d48bdde2ba85789ed3c63df501bfd7b0bc3ab0a9934646cfdcac",
+      "latest_alert_utc": "2026-10-19T09:24:24Z",
+      "rows_after_cutoff": 1
+    },
+    "opportunity": {
+      "path": "notes/opportunity_alerts.jsonl",
+      "rows": 314,
+      "sha256": "26906caba83df66a999f0c7e6ebe1100f81c9d2d062ca3ac17c5f52accc22e3d",
+      "latest_alert_utc": "2026-10-18T07:41:07Z",
+      "rows_after_cutoff": 0
+    }
+  },
+  "explicit_alerts": [
+    {
+      "id": "f9f38cd626ecbd2e5e10ce64c2a87463b5ea0a97",
+      "ts": "2026-10-19T07:31:38Z",
+      "title": "Watch: El-Sayed rejects Muslim Brotherhood, challenges questioner’s motives - Israel National News",
+      "source_unit": "work/held_michigan_alerts_0810.json",
+      "publisher_url": "https://www.israelnationalnews.com/news/434811",
+      "publisher_displayed_local": "2026-10-19 05:38:21 (timezone not explicit)",
+      "underlying_event": "Oct17 Caro town-hall exchange, repeated in Oct19 article/video report; previously verified in delayed1959 and delayed2134 units.",
+      "new_measurement": "No poll, sample, field dates, withdrawal or ballot change in captured article; it repeats the same public response. Existing raw/gzip body hashes verified against receipt."
+    },
+    {
+      "id": "ea975f2ccc52da372c51e20231a8b656bfb92219",
+      "ts": "2026-10-19T07:47:35Z",
+      "title": "Josh Brolin’s Whalefall Sinks at Box Office, Flops Hard Globally - Yahoo",
+      "source_unit": "work/whale_yahoo_0747_current_sources_0840.json",
+      "finding": "Related publisher article/body reports $8m domestic opening estimate, $9.5m international and $17.5m worldwide. Global headline is not a new domestic actual. Existing Numbers/Mojo raw and gzip receipts hash-verified."
+    },
+    {
+      "id": "e46af719870ada9fff6c0fcad7f88994fc99700d",
+      "ts": "2026-10-19T08:09:01Z",
+      "title": "Republican Group Invests Another $4.7 Million in Michigan Senate Race as El-Sayed and Rogers Race Narrows - The New York Sun",
+      "source_unit": "work/held_michigan_alerts_0810.json",
+      "finding": "Publisher body remains unverified: Google URL returned a consent page, not article content. The $4.7m amount, group, incrementality, spend type/date and “race narrows” basis remain unverified; no poll method or numeric topline established."
+    },
+    {
+      "id": "c1292a5f672a7dabca3f76222ee2d48406470326",
+      "ts": "2026-10-19T09:24:24Z",
+      "title": "Mike Rogers Says Michigan Voters Worry About El-Sayed - 1490 WMRN",
+      "source": "news_alerts.jsonl line 1034; new since cutoff",
+      "finding": "Exact headline matches the Oct18 iHeart syndicated article already captured in delayed1959/delayed0043 units. Full prior iHeart body attributes voter concern to Rogers and mentions a narrow unspecified poll lead, but names no poll, field dates, sample or topline. This new station alert adds no independently measured result; WMRN-specific page was not fetched."
+    }
+  ],
+  "current_boxoffice_refresh": {
+    "scope": "Whalefall domestic opening weekend Oct16–18 2026, Fri–Sun only; preview Oct15 separately reported and excluded.",
+    "the_numbers_weekend": {
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+      "receipt": "logs/deep_review_20261017/tick0930_sources/numbers_weekend.receipt.json",
+      "body": "logs/deep_review_20261017/tick0930_sources/numbers_weekend.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T09:31:22.108961Z",
+      "raw_sha256": "95792f225f833bf3db2ae7bb1cde91d6cab7373aca3dea10b3e583b4038f9aea",
+      "gzip_sha256": "f1a257f4f374917cd4908dedc5177522bf343638ac008a59baa8293c10e06f08",
+      "row": "Rank 4, Whalefall, $8,000,000, 3,065 theaters; gross cell class chart_estimate."
+    },
+    "the_numbers_film": {
+      "url": "https://www.the-numbers.com/movie/Whalefall-(2026)",
+      "receipt": "logs/deep_review_20261017/tick0930_sources/numbers_film.receipt.json",
+      "body": "logs/deep_review_20261017/tick0930_sources/numbers_film.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T09:31:22.808729Z",
+      "raw_sha256": "9ab121e3a6bdb0ec93283874efe572f15024b9de166a3bf7e9506e8dee76c5cd",
+      "gzip_sha256": "890d40658a7b561a915c12d1ac1b9b217e252202ae584542da8d975bce48c841",
+      "weekend_row": "Oct16 $8.0m (estimate class); daily Oct16 $3.1m, Oct17 $2.8m, Oct18 $2.1m (all estimate classes); cumulative estimate $8.0m. Oct15 preview $0.9m is separate and not part of weekend row."
+    },
+    "box_office_mojo": {
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "receipt": "logs/deep_review_20261017/tick0930_sources/mojo_weekend.receipt.json",
+      "body": "logs/deep_review_20261017/tick0930_sources/mojo_weekend.body.json.gz",
+      "status": 200,
+      "received_utc": "2026-10-19T09:31:23.677427Z",
+      "raw_sha256": "40aafb12e0c6a98717c8d08e7d17929c65e8c00fcf05675d6f50c8b0a7fe8e12",
+      "gzip_sha256": "7306cc7c8cb3a4338b4127c2807ed4c1b02b2004e37b630435bcf4bc6610d460",
+      "row": "Oct16–18, rank 4, $8,000,000; HTML row class mojo-annotation-isEstimated and legend says Estimated."
+    },
+    "result": "Both named box-office sources still present exactly $8m as an estimate. No below-$8m domestic figure or final status was observed. This does not establish that no later final source exists."
+  },
+  "source_hash_verification": [
+    {
+      "receipt": "logs/deep_review_20261017/held_michigan_0810/inn.receipt.json",
+      "raw_sha256": "ec4622453a1eb61cc22e32abf166d2c7607561bea19107d68ceeec0039b46420",
+      "raw_and_gzip_hashes_match": true
+    },
+    {
+      "receipt": "logs/deep_review_20261017/whale0717_safety_0840/the_numbers_film.receipt.json",
+      "raw_sha256": "43c0b2a9d4b1fc06178f3856d3bf03146b25d42d0b31ce055b9573590978641f",
+      "raw_and_gzip_hashes_match": true
+    },
+    {
+      "receipt": "logs/deep_review_20261017/whale0717_safety_0840/mojo_weekend.receipt.json",
+      "raw_sha256": "20143cfc8751ce781deadad225609e44ec0481290f7d1a6c41618d25d0ae4935",
+      "raw_and_gzip_hashes_match": true
+    }
+  ],
+  "limits": "No publisher-body verification for the New York Sun headline or WMRN-specific page. The two older global-flop reports are not independent proof of domestic finality. Alert logs were read through the recorded cutoff only; no wider absence claim."
+}

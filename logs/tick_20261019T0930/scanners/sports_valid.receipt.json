@@ -1,0 +1,24 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/sports_pm_scan.py",
+    "--hours",
+    "36",
+    "--with-consensus",
+    "--consensus-top-n",
+    "3"
+  ],
+  "finished_utc": "2026-10-19T09:33:05.532769+00:00",
+  "name": "sports",
+  "returncode": 0,
+  "started_utc": "2026-10-19T09:32:30.253331+00:00",
+  "stderr_bytes": 556,
+  "stderr_gzip": "logs/tick_20261019T0930/scanners/sports_valid.stderr.gz",
+  "stderr_gzip_sha256": "ecbb4131772b0b46bb4f48f370b60e226131b7cb1e06f438f0f6e0e790c48249",
+  "stderr_sha256": "d43956c9fad9f5f71f41bc5e929914c9a1204b60f6a486742c567fdb3960bace",
+  "stdout_bytes": 1504,
+  "stdout_gzip": "logs/tick_20261019T0930/scanners/sports_valid.stdout.gz",
+  "stdout_gzip_sha256": "50b4320248daa45f29e33ec51a8e3ff9e0ee0a164c728a7bfa12a83df6821624",
+  "stdout_sha256": "13935b5d93b6edc3974bd9fea9516b541616d82026815d2da31ded044616d50a",
+  "timed_out": false
+}

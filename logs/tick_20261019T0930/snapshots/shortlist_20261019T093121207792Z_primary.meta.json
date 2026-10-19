@@ -1,0 +1,51 @@
+{
+  "schema_version": 2,
+  "snapshot": "shortlist_20261019T093121207792Z_primary.json",
+  "created_at": "2026-10-19T09:31:21.207792Z",
+  "scan_kind": "primary",
+  "params": {
+    "min_liquidity": 20000,
+    "min_vol24": 500,
+    "max_spread": 0.05,
+    "horizon_days": 370,
+    "top": 80,
+    "max_pages": 10,
+    "via_events": false,
+    "clears_hurdle_only": false,
+    "hurdle_apy": 0.031525,
+    "hurdle_days_floor": 3
+  },
+  "market_count": 80,
+  "snapshot_sha256": "f19375c8111d41ad0c73d025868c6942151ebe254f27a64fb703d74c1e6ca169",
+  "criteria_fingerprint": "sha256:canonical-json-exact-v1",
+  "selection_policy": "filter-before-top-v1",
+  "coverage": {
+    "fetch": {
+      "endpoint": "markets",
+      "max_pages": 10,
+      "pages_attempted": 10,
+      "pages_succeeded": 10,
+      "response_rows": 1000,
+      "duplicate_market_rows": 1,
+      "malformed_rows": 0,
+      "stop_reason": "page_cap",
+      "pagination_complete": false,
+      "fetched_market_rows": 999
+    },
+    "filters": {
+      "input_markets": 999,
+      "filter_rejections": {
+        "past_deadline": 10,
+        "liquidity": 305,
+        "horizon": 54,
+        "spread": 3,
+        "missing_deadline": 2
+      },
+      "eligible_before_top": 625,
+      "top_omitted": 545,
+      "selected": 80,
+      "selection_complete": false,
+      "filter_accounting_complete": true
+    }
+  }
+}

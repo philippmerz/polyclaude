@@ -1,0 +1,19 @@
+{
+  "verified_utc": "2026-10-19T09:45:16.008598+00:00",
+  "coverage": [
+    {
+      "kind": "primary",
+      "batches": 3,
+      "rows": 40,
+      "index_sha256": "0b205cb31d0bb12fa228dd78bf1bec4213bc090c4e9f7f8897ef51220d1602d6"
+    },
+    {
+      "kind": "thin_tail",
+      "batches": 101,
+      "rows": 1795,
+      "index_sha256": "b06e2be4430af9d819383b3ffbccacb638b6c6b2c55fa55354fc07677284c76a"
+    }
+  ],
+  "substantive_case_dispositions": 0,
+  "batch_review_audit_sha256": "3b0235ae5c91777da26792ec53a55989ef154213aa7fa3abdfce385cb6e9cdac"
+}

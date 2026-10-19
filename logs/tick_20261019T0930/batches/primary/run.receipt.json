@@ -1,0 +1,21 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/market_context_batches.py",
+    "--scan-kind",
+    "primary",
+    "--format",
+    "markdown",
+    "--batch-size",
+    "20"
+  ],
+  "finished_utc": "2026-10-19T09:33:33.663994+00:00",
+  "returncode": 0,
+  "started_utc": "2026-10-19T09:33:31.937133+00:00",
+  "stderr_bytes": 0,
+  "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 21016,
+  "stdout_gzip_sha256": "bb1a9f465013965f06548681d23745e0734c8984fb0d49cb9bf6aec05dfd4430",
+  "stdout_sha256": "34ab3e3973d2333a484fb1408b1ae2ab470ded384a415df68653babbb6f370bf"
+}

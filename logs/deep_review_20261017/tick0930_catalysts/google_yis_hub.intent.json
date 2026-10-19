@@ -1,0 +1,1 @@
+{"name":"google_yis_hub","request":{"call_window_label":"tick0930 required catalyst refresh","method":"GET","read_only":true,"scope":"Official Google Year in Search hub, no follow-up unless response is non-redirect","url":"https://trends.withgoogle.com/year-in-search/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T09:33:31.405879Z","timing_basis":"call_window"}

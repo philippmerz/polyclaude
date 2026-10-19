@@ -1,0 +1,9 @@
+{
+  "appended_utc": "2026-10-19T09:43:01.024067+00:00",
+  "old_observations": 211,
+  "new_observations": 212,
+  "historical_prefix_sha256": "1665b52981c09cf6fb895eb3e9b7d068a551f8c918048afbb6d1466afe9e74ef",
+  "row_source": "research/2026-10-19-0930-checkin.md:3",
+  "required_producer_window": "09:33:20.273-09:33:35.406UTC",
+  "extra_market_requests_for_chart": 0
+}

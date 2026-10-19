@@ -1,0 +1,1 @@
+{"argv": [".venv/bin/python", "scripts/sports_pm_scan.py", "--hours", "36", "--with-consensus", "--consensus-top-n", "3"], "name": "sports", "started_utc": "2026-10-19T09:32:30.253331+00:00", "timeout_seconds": 300}

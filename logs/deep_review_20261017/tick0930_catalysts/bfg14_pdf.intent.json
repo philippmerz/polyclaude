@@ -1,0 +1,1 @@
+{"name":"bfg14_pdf","request":{"call_window_label":"tick0930 required catalyst refresh","method":"GET","read_only":true,"scope":"Official BfG Kaub 14-day forecast PDF","url":"https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T09:33:31.048441Z","timing_basis":"call_window"}

@@ -1,0 +1,54 @@
+{
+  "schema_version": 2,
+  "snapshot": "shortlist_20261019T093130311545Z_thin_tail.json",
+  "created_at": "2026-10-19T09:31:30.311545Z",
+  "scan_kind": "thin_tail",
+  "params": {
+    "min_liquidity": 500.0,
+    "min_vol24": 20.0,
+    "max_spread": 0.05,
+    "horizon_days": 370,
+    "top": 3000,
+    "max_pages": 20,
+    "via_events": true,
+    "clears_hurdle_only": true,
+    "hurdle_apy": 0.031525,
+    "hurdle_days_floor": 3
+  },
+  "market_count": 3000,
+  "snapshot_sha256": "a95708ed14d78fdeda312668bf284fdb9418e632f989baa7fea2deb97364a513",
+  "criteria_fingerprint": "sha256:canonical-json-exact-v1",
+  "selection_policy": "filter-before-top-v1",
+  "coverage": {
+    "fetch": {
+      "endpoint": "events",
+      "max_pages": 20,
+      "pages_attempted": 20,
+      "pages_succeeded": 20,
+      "response_rows": 2000,
+      "duplicate_market_rows": 212,
+      "malformed_rows": 0,
+      "stop_reason": "page_cap",
+      "pagination_complete": false,
+      "fetched_market_rows": 38953
+    },
+    "filters": {
+      "input_markets": 38953,
+      "filter_rejections": {
+        "not_tradable": 6553,
+        "liquidity": 15009,
+        "win_assumed_hurdle": 3044,
+        "past_deadline": 102,
+        "volume": 9858,
+        "horizon": 318,
+        "spread": 663,
+        "missing_deadline": 23
+      },
+      "eligible_before_top": 3383,
+      "top_omitted": 383,
+      "selected": 3000,
+      "selection_complete": false,
+      "filter_accounting_complete": true
+    }
+  }
+}

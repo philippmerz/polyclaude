@@ -1,0 +1,398 @@
+{
+  "captured_utc": "2026-10-19T09:35:46.929519+00:00",
+  "rows": [
+    {
+      "label": "over50",
+      "market_id": "3210152",
+      "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "held_asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+      "gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "id": "3210152",
+        "question": "Will over 50 Senators vote for the Clarity Act?",
+        "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+        "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+        "resolutionSource": "https://senate.gov",
+        "endDate": "2027-01-02T04:59:00Z",
+        "liquidity": "875.6286",
+        "startDate": "2026-07-29T20:01:19.609822Z",
+        "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage — including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version — will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.045\", \"0.955\"]",
+        "volume": "48599.25758199999",
+        "active": true,
+        "closed": false,
+        "marketMakerAddress": "",
+        "createdAt": "2026-07-29T19:59:14.281262Z",
+        "updatedAt": "2026-10-19T09:31:13.317049Z",
+        "new": false,
+        "featured": false,
+        "submitted_by": "0xF43d55F3A8B7484Ed4B6931f93CB6F9eF5Dd369D",
+        "archived": false,
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "groupItemTitle": "Above 50",
+        "groupItemThreshold": "0",
+        "questionID": "0xe8c97684603c9123082fbe4287e18c41a6573669e0631e84397d58cffca647a7",
+        "enableOrderBook": true,
+        "orderPriceMinTickSize": 0.01,
+        "orderMinSize": 5,
+        "volumeNum": 48599.25758199999,
+        "liquidityNum": 875.6286,
+        "endDateIso": "2027-01-02",
+        "startDateIso": "2026-07-29",
+        "hasReviewedDates": true,
+        "clobTokenIds": "[\"27574293309104117988785722816384166732256180683715968874076479908449482000352\", \"66225549028370775174805670288026406587364840830462832284615254168964916630541\"]",
+        "comboStatus": "disabled",
+        "umaBond": "500",
+        "umaReward": "3.5",
+        "volumeClob": 48599.25758199999,
+        "liquidityClob": 875.6286,
+        "makerBaseFee": 1000,
+        "takerBaseFee": 1000,
+        "customLiveness": 0,
+        "acceptingOrders": true,
+        "negRisk": false,
+        "negRiskRequestID": "",
+        "ready": false,
+        "funded": false,
+        "acceptingOrdersTimestamp": "2026-07-29T20:00:30Z",
+        "cyom": false,
+        "competitive": 0.8284832542822228,
+        "approved": true,
+        "rewardsMinSize": 50,
+        "rewardsMaxSpread": 6.5,
+        "spread": 0.01,
+        "oneWeekPriceChange": -0.03,
+        "oneMonthPriceChange": -0.045,
+        "lastTradePrice": 0.06,
+        "bestBid": 0.04,
+        "bestAsk": 0.05,
+        "automaticallyActive": true,
+        "clearBookOnStart": true,
+        "showGmpSeries": false,
+        "showGmpOutcome": false,
+        "manualActivation": false,
+        "negRiskOther": false,
+        "umaResolutionStatuses": "[]",
+        "pendingDeployment": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-07-29T19:59:27.51725Z",
+        "rfqEnabled": false,
+        "holdingRewardsEnabled": false,
+        "feesEnabled": true,
+        "feeType": "politics_fees",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "fallbackResolutionType": "none",
+        "version": "v1"
+      },
+      "gamma_receipt": {
+        "request_id": "over50_gamma_01",
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/3210152",
+        "started_utc": "2026-10-19T09:35:46.671514+00:00",
+        "received_utc": "2026-10-19T09:35:46.790736+00:00",
+        "status_code": 200,
+        "raw_sha256": "202b3157b3064273d4cb84eb0d9c2330997ff06138d0dccbd1cd2708fc5b8bb9",
+        "gzip_sha256": "94254169d1a903d5ea1b398336725a19cc4f716e69c4adda60317892afc23e10",
+        "raw_bytes": 4446,
+        "gzip_path": "logs/deep_review_20261017/tick0930_clarity/public/over50_gamma.body.json.gz",
+        "receipt_path": "logs/deep_review_20261017/tick0930_clarity/public/over50_gamma.receipt.json",
+        "type": "http"
+      },
+      "full_criteria_unchanged": true,
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "book": {
+        "market": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+        "asset_id": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+        "timestamp": "1792402511424",
+        "hash": "5f304b17476257a67146f7fdb08f8627fea57db1",
+        "bids": [
+          {
+            "price": "0.01",
+            "size": "319.32"
+          },
+          {
+            "price": "0.02",
+            "size": "675.59"
+          },
+          {
+            "price": "0.03",
+            "size": "251.87"
+          },
+          {
+            "price": "0.04",
+            "size": "5"
+          }
+        ],
+        "asks": [
+          {
+            "price": "0.99",
+            "size": "87.93"
+          },
+          {
+            "price": "0.98",
+            "size": "18.79"
+          },
+          {
+            "price": "0.97",
+            "size": "7.2"
+          },
+          {
+            "price": "0.95",
+            "size": "2805"
+          },
+          {
+            "price": "0.93",
+            "size": "40"
+          },
+          {
+            "price": "0.59",
+            "size": "62"
+          },
+          {
+            "price": "0.58",
+            "size": "40"
+          },
+          {
+            "price": "0.08",
+            "size": "20"
+          },
+          {
+            "price": "0.07",
+            "size": "668.98"
+          },
+          {
+            "price": "0.06",
+            "size": "5"
+          },
+          {
+            "price": "0.05",
+            "size": "26.5"
+          }
+        ],
+        "min_order_size": "5",
+        "tick_size": "0.01",
+        "neg_risk": false,
+        "last_trade_price": "0.070"
+      },
+      "book_receipt": {
+        "request_id": "held_books_03",
+        "method": "POST",
+        "url": "https://clob.polymarket.com/books",
+        "started_utc": "2026-10-19T09:35:46.850507+00:00",
+        "received_utc": "2026-10-19T09:35:46.928943+00:00",
+        "status_code": 200,
+        "raw_sha256": "6052e25c92cb7d915955f245ce97b6d9b810d3ff0c671b1c7521190af9d0b542",
+        "gzip_sha256": "e4edae9d8bb77834be0d6e532d0ce590bb1a1f894a7234f50422e857fc659160",
+        "raw_bytes": 1530,
+        "gzip_path": "logs/deep_review_20261017/tick0930_clarity/public/held_books.body.json.gz",
+        "receipt_path": "logs/deep_review_20261017/tick0930_clarity/public/held_books.receipt.json",
+        "type": "books_batch"
+      },
+      "gross29_bidwalk": [
+        0.9199999999999999,
+        0.03172413793103448,
+        0.0
+      ],
+      "book_age_at_receipt_seconds": 35.504942893981934
+    },
+    {
+      "label": "over58",
+      "market_id": "3210154",
+      "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "held_asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+      "gamma": {
+        "$schema": "https://gamma-api.polymarket.com/schemas/Market.json",
+        "id": "3210154",
+        "question": "Will over 58 Senators vote for the Clarity Act?",
+        "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+        "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+        "resolutionSource": "https://senate.gov",
+        "endDate": "2027-01-02T04:59:00Z",
+        "liquidity": "127.5501",
+        "startDate": "2026-07-29T20:01:23.683262Z",
+        "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage — including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version — will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+        "outcomes": "[\"Yes\", \"No\"]",
+        "outcomePrices": "[\"0.06\", \"0.94\"]",
+        "volume": "12473.910795000003",
+        "active": true,
+        "closed": false,
+        "marketMakerAddress": "",
+        "createdAt": "2026-07-29T19:59:14.522538Z",
+        "updatedAt": "2026-10-19T09:29:12.656897Z",
+        "new": false,
+        "featured": false,
+        "submitted_by": "0xF43d55F3A8B7484Ed4B6931f93CB6F9eF5Dd369D",
+        "archived": false,
+        "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+        "restricted": true,
+        "groupItemTitle": "Above 58",
+        "groupItemThreshold": "2",
+        "questionID": "0xf064e04b3a600d1416592b14013884a0663baafd5406bd1f8ef560b4e26dfe73",
+        "enableOrderBook": true,
+        "orderPriceMinTickSize": 0.01,
+        "orderMinSize": 5,
+        "volumeNum": 12473.910795000003,
+        "liquidityNum": 127.5501,
+        "endDateIso": "2027-01-02",
+        "startDateIso": "2026-07-29",
+        "hasReviewedDates": true,
+        "clobTokenIds": "[\"90478389068106043826833580661092508858615079475879584220859211951733291944919\", \"43566386855398527373115443041865408808190028685008561538141743908824051774750\"]",
+        "comboStatus": "disabled",
+        "umaBond": "500",
+        "umaReward": "3.5",
+        "volumeClob": 12473.910795000003,
+        "liquidityClob": 127.5501,
+        "makerBaseFee": 1000,
+        "takerBaseFee": 1000,
+        "customLiveness": 0,
+        "acceptingOrders": true,
+        "negRisk": false,
+        "negRiskRequestID": "",
+        "ready": false,
+        "funded": false,
+        "acceptingOrdersTimestamp": "2026-07-29T20:00:35Z",
+        "cyom": false,
+        "competitive": 0.8378016085790885,
+        "approved": true,
+        "rewardsMinSize": 50,
+        "rewardsMaxSpread": 6.5,
+        "spread": 0.04,
+        "oneDayPriceChange": -0.015,
+        "oneHourPriceChange": -0.01,
+        "oneWeekPriceChange": -0.005,
+        "oneMonthPriceChange": -0.035,
+        "lastTradePrice": 0.07,
+        "bestBid": 0.04,
+        "bestAsk": 0.08,
+        "automaticallyActive": true,
+        "clearBookOnStart": true,
+        "showGmpSeries": false,
+        "showGmpOutcome": false,
+        "manualActivation": false,
+        "negRiskOther": false,
+        "umaResolutionStatuses": "[]",
+        "pendingDeployment": false,
+        "deploying": false,
+        "deployingTimestamp": "2026-07-29T19:59:27.536576Z",
+        "rfqEnabled": false,
+        "holdingRewardsEnabled": false,
+        "feesEnabled": true,
+        "feeType": "politics_fees",
+        "feeSchedule": {
+          "exponent": 1,
+          "rate": 0.04,
+          "takerOnly": true,
+          "rebateRate": 0.25
+        },
+        "fallbackResolutionType": "none",
+        "version": "v1"
+      },
+      "gamma_receipt": {
+        "request_id": "over58_gamma_02",
+        "method": "GET",
+        "url": "https://gamma-api.polymarket.com/markets/3210154",
+        "started_utc": "2026-10-19T09:35:46.802502+00:00",
+        "received_utc": "2026-10-19T09:35:46.821812+00:00",
+        "status_code": 200,
+        "raw_sha256": "afbb7feea094fa244cc8cf5428b5a2a17819b026b21fa66fcb534665e6010296",
+        "gzip_sha256": "919e77d8d9b2a384edb053374f9551413a19f7eba9dafd6530baa76c9a30b7b4",
+        "raw_bytes": 4503,
+        "gzip_path": "logs/deep_review_20261017/tick0930_clarity/public/over58_gamma.body.json.gz",
+        "receipt_path": "logs/deep_review_20261017/tick0930_clarity/public/over58_gamma.receipt.json",
+        "type": "http"
+      },
+      "full_criteria_unchanged": true,
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "book": {
+        "market": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+        "asset_id": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+        "timestamp": "1792402544064",
+        "hash": "49c0255b927792bf79480ffec8bbf9e38d9d6cf0",
+        "bids": [
+          {
+            "price": "0.01",
+            "size": "61.86"
+          },
+          {
+            "price": "0.02",
+            "size": "37"
+          },
+          {
+            "price": "0.03",
+            "size": "10.78"
+          },
+          {
+            "price": "0.41",
+            "size": "61"
+          },
+          {
+            "price": "0.51",
+            "size": "49.06"
+          },
+          {
+            "price": "0.52",
+            "size": "25"
+          },
+          {
+            "price": "0.56",
+            "size": "80"
+          },
+          {
+            "price": "0.57",
+            "size": "28"
+          },
+          {
+            "price": "0.91",
+            "size": "20"
+          }
+        ],
+        "asks": [
+          {
+            "price": "0.99",
+            "size": "87.37"
+          },
+          {
+            "price": "0.98",
+            "size": "17.75"
+          },
+          {
+            "price": "0.96",
+            "size": "65.09"
+          }
+        ],
+        "min_order_size": "5",
+        "tick_size": "0.01",
+        "neg_risk": false,
+        "last_trade_price": "0.930"
+      },
+      "book_receipt": {
+        "request_id": "held_books_03",
+        "method": "POST",
+        "url": "https://clob.polymarket.com/books",
+        "started_utc": "2026-10-19T09:35:46.850507+00:00",
+        "received_utc": "2026-10-19T09:35:46.928943+00:00",
+        "status_code": 200,
+        "raw_sha256": "6052e25c92cb7d915955f245ce97b6d9b810d3ff0c671b1c7521190af9d0b542",
+        "gzip_sha256": "e4edae9d8bb77834be0d6e532d0ce590bb1a1f894a7234f50422e857fc659160",
+        "raw_bytes": 1530,
+        "gzip_path": "logs/deep_review_20261017/tick0930_clarity/public/held_books.body.json.gz",
+        "receipt_path": "logs/deep_review_20261017/tick0930_clarity/public/held_books.receipt.json",
+        "type": "books_batch"
+      },
+      "gross29_bidwalk": [
+        23.33,
+        0.8044827586206896,
+        0.0
+      ],
+      "book_age_at_receipt_seconds": 2.864943027496338
+    }
+  ],
+  "scope": "Read-only exact held pair current rule/status/book capture; no writer; full JSON/raw evidence separate from bounded judgment."
+}

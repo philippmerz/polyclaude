@@ -1,0 +1,29 @@
+{
+  "schema": "tick_public_snapshot_publication.v1",
+  "created_utc": "2026-10-19T09:45:16.364308+00:00",
+  "files": [
+    {
+      "original_path": "data/snapshots/shortlist_20261019T093121207792Z_primary.json",
+      "raw_sha256": "f19375c8111d41ad0c73d025868c6942151ebe254f27a64fb703d74c1e6ca169",
+      "raw_bytes": 253936,
+      "gzip_path": "logs/tick_20261019T0930/snapshots/shortlist_20261019T093121207792Z_primary.json.gz",
+      "gzip_sha256": "e9e0b696ef949a93382669a848c4b3b8800e5dab0816b4d7c85757a2b4245f40",
+      "gzip_bytes": 53032,
+      "sidecar_path": "logs/tick_20261019T0930/snapshots/shortlist_20261019T093121207792Z_primary.meta.json",
+      "sidecar_sha256": "4aa94839238585439ffec0ff0041b554101e108245aa6c93783736c633644afc",
+      "original_left_unchanged": true
+    },
+    {
+      "original_path": "data/snapshots/shortlist_20261019T093130311545Z_thin_tail.json",
+      "raw_sha256": "a95708ed14d78fdeda312668bf284fdb9418e632f989baa7fea2deb97364a513",
+      "raw_bytes": 9727557,
+      "gzip_path": "logs/tick_20261019T0930/snapshots/shortlist_20261019T093130311545Z_thin_tail.json.gz",
+      "gzip_sha256": "e06681f92c9662d17aa5c4d6eff949ac3c79e9fa58d78992e709c1c8bf924cb3",
+      "gzip_bytes": 2062972,
+      "sidecar_path": "logs/tick_20261019T0930/snapshots/shortlist_20261019T093130311545Z_thin_tail.meta.json",
+      "sidecar_sha256": "ff920d05326a1cedc22bfb31c404d262a7a8ea1ec44417c157c04391052eaeb1",
+      "original_left_unchanged": true
+    }
+  ],
+  "scope": "Exact public scanner snapshot bytes, compressed for publication. Not a source of probabilities or execution authorization."
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "periodic_tick_ops.v1",
+  "tick_id": "20261019T082506Z",
+  "actual_run_utc": "2026-10-19T09:32:54Z/09:34:05Z",
+  "status": "completed_with_flags_and_known_source_limitations",
+  "account": {
+    "inventory_capture": "data/deep_review_20261017/work/tick0930_account.json",
+    "inventory_sha256": "fb813c6fc9c52609d3a3a712d6be4ec612e8748847cab7d823a9263eee3831df",
+    "raw_private_dir": "logs/tick0930_private/",
+    "open_BUYs": 6,
+    "all_six_0909_baseline_BUYs_exact_live_zero_matched": true,
+    "all_six_remaining_risk_usd": 11.47,
+    "positions_data_api_rows": 8,
+    "position_state_audit": "rc0: 7 indexed + 1 deindexed claim row; 0 expired acknowledgements pruned; clean",
+    "position_condition_ids_sha256_after_fix": "7520cd915ba8b85f62cedaee34daef837f36b9610f0dbba4c201a758b51833a8",
+    "acknowledged_holds_sha256_after_fix": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "pUSD_fixed_polygon_block": {
+      "block": 95798001,
+      "block_time_utc": "2026-10-19T09:32:29+00:00",
+      "balance": 20.45129,
+      "313_both_CTFs_zero": true,
+      "316_both_CTFs_zero": true
+    },
+    "deployable_after_all_BUYs_usd": 8.98129
+  },
+  "redeemability": {
+    "command": "scripts/clob_v2.py redeem-all --dry-run",
+    "dry_run": true,
+    "winning_redeemables": 0,
+    "losing_or_uncertain_rows": 1,
+    "only_reported_row": "legacy Gemini-model highest-score No, curPrice 0",
+    "note": "CLI output preserved as a clearly labelled console transcript, not an intercepted raw subprocess stream. No broadcast path used."
+  },
+  "commands": {
+    "manifest": "logs/tick0930_private/cli_manifest.json",
+    "manifest_sha256": "615bff78d63094848283ce10469d075b39534a564c7105da33bc672185233bb7",
+    "commands_total": 13,
+    "failed": []
+  },
+  "portfolio": {
+    "bankroll_usd": 196.75,
+    "gas_assets_usd": 5.87,
+    "gas_treatment": "included in total, separately deposited; not trading P&L",
+    "PM_mid_mark_usd": 35.75,
+    "PM_depth_net_indicative_usd": 33.71,
+    "Kelly_recomputed_after_bankroll": true,
+    "hurdle": "3 clear, 0 flagged, 3 protected groups",
+    "watchlist": "0 triggers",
+    "UMA": "44 tracked / 42 refreshed / 0 alerts; positions fetch OK",
+    "exit_analysis": "Whalefall, Messi, MI Senate NO and OpenRouter rows all reported HOLD CANDIDATE; complete output preserved privately; Clarity over-50/over-58 group reports HOLD_COMPLETE_GROUP",
+    "news_alert_material": "08:09Z alert: Republican group investing another $4.7m in Michigan Senate race, flagged against held MI position; source review delegated to primary, no position change here",
+    "HLE_source_check": "UPDATING vs Jul-3 archive: 21 rows added, 3 changed, none removed; Grok 4.7 unscored. This is archive-relative, not evidence of an intraday change."
+  },
+  "daemons": {
+    "expected_four_found_once": true,
+    "processes": [
+      {
+        "script": "news_watcher.py",
+        "pid": 148881,
+        "started_utc": "2026-10-19T05:28:37Z",
+        "code_mtime_utc": "2026-10-18T22:58:44Z",
+        "absolute_path_match": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "heartbeat_watch.py",
+        "pid": 450,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "code_mtime_utc": "2026-10-02T14:31:39Z",
+        "absolute_path_match": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "telegram_listener.py",
+        "pid": 451,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "code_mtime_utc": "2026-09-10T18:34:57Z",
+        "absolute_path_match": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "opportunity_watch.py",
+        "pid": 425,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "code_mtime_utc": "2026-09-29T10:07:53Z",
+        "absolute_path_match": true,
+        "mtime_before_start": true
+      }
+    ],
+    "shell_wrappers": "heartbeat and Telegram also have one shell redirection wrapper each; canonical Python process is singular for both."
+  },
+  "resource": {
+    "free_bytes": 1375420416,
+    "quota": "83% used / 17% headroom, resets 2026-10-24 20:41 UTC"
+  },
+  "provenance_note": "private CLI streams are gzip-compressed with raw/gzip SHA256 in manifest; authenticated CLOB and Data API captures are SDK/helper serializations, not raw wire bodies; Polygon balances are pinned to one fixed block."
+}

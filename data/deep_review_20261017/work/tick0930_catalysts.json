@@ -1,0 +1,91 @@
+{
+  "schema": "periodic_catalyst_source_refresh.v1",
+  "captured_utc": "2026-10-19T09:33:32Z",
+  "scope": "One public GET per named source; facts only, no probabilities or financial action.",
+  "kaub_wsv": {
+    "url": "https://pegelonline.wsv.de/webservices/rest-api/v2/stations/1d26e504-7f9e-480a-b52c-5932be6549ab.json?includeTimeseries=true&includeCurrentMeasurement=true&includeCharacteristicValues=true&includeForecastTimeseries=true",
+    "receipt": "logs/deep_review_20261017/tick0930_catalysts/kaub_station.receipt.json",
+    "body": "logs/deep_review_20261017/tick0930_catalysts/kaub_station.body.json.gz",
+    "status": 200,
+    "received_utc": "2026-10-19T09:33:31.039524Z",
+    "http_date": "Mon, 19 Oct 2026 09:33:30 GMT",
+    "raw_sha256": "28c633e9e3fc5b54de996ed740eb8d0e690ff8a542747ae37787140e0053ebd4",
+    "gzip_sha256": "d9362988a9c94ac4e291d83679d3bc5c7ec5168672b972f6e55fa5d23b84f909",
+    "station": "25700100 KAUB, RHEIN",
+    "series": "W water level, raw, cm",
+    "latest_observation": {
+      "timestamp_local": "2026-10-19T11:30:00+02:00",
+      "value_cm": 12.0,
+      "stateMnwMhw": "low",
+      "stateNswHsw": "normal"
+    },
+    "GlW_threshold_cm": 77,
+    "GlW_validFrom": "2023-01-01",
+    "finding": "Latest reported reading is below 77cm; one snapshot only."
+  },
+  "bfg_14day": {
+    "url": "https://vorhersage.bafg.de/14-Tage-Vorhersage/Kaub_14Tage.pdf",
+    "receipt": "logs/deep_review_20261017/tick0930_catalysts/bfg14_pdf.receipt.json",
+    "body": "logs/deep_review_20261017/tick0930_catalysts/bfg14_pdf.body.json.gz",
+    "status": 200,
+    "received_utc": "2026-10-19T09:33:31.388097Z",
+    "last_modified": "Sun, 18 Oct 2026 09:45:05 GMT",
+    "raw_sha256": "b1b19629cc1235051c0eda720887f38841e12d5d8fc591ae50461e1b0267736e",
+    "gzip_sha256": "e8323de70a4291b247527401aabe02b7cb9d4ce1c4e7c076e7282de6beddc974",
+    "comparison": "Raw SHA is byte-identical to the Oct18 forecast version captured in prior unit work/0313_forecast_followup_0828.json; no new forecast revision detected."
+  },
+  "google_yis_hub": {
+    "url": "https://trends.withgoogle.com/year-in-search/",
+    "receipt": "logs/deep_review_20261017/tick0930_catalysts/google_yis_hub.receipt.json",
+    "body": "logs/deep_review_20261017/tick0930_catalysts/google_yis_hub.body.json.gz",
+    "status": 301,
+    "location": "2025/",
+    "received_utc": "2026-10-19T09:33:31.637337Z",
+    "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "finding": "Current hub response redirects to 2025. This bounded response does not establish whether a 2026 list exists elsewhere; redirect was not followed in this four-request pass."
+  },
+  "openrouter_model_rankings_chart": {
+    "case112_market_id": "5763815",
+    "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+    "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "receipt": "logs/deep_review_20261017/tick0930_catalysts/openrouter_weekly.receipt.json",
+    "body": "logs/deep_review_20261017/tick0930_catalysts/openrouter_weekly.body.json.gz",
+    "status": 200,
+    "received_utc": "2026-10-19T09:33:31.738304Z",
+    "http_date": "Mon, 19 Oct 2026 09:33:31 GMT",
+    "cache_age_seconds": 164,
+    "raw_sha256": "fc4b3d68be483617b415ad02d8c7516b8cdb40252cbbfd7dcf91650e62c56d7e",
+    "gzip_sha256": "9790aa8b042c0a13f8200f6d199c88d8a6b055726b1273fd26ea8acae2567016",
+    "compare_to_0601": {
+      "receipt": "logs/deep_review_20261017/periodic0600_openrouter/openrouter_weekly.receipt.json",
+      "body": "logs/deep_review_20261017/periodic0600_openrouter/openrouter_weekly.body.gz",
+      "received_utc": "2026-10-19T06:01:21.472184+00:00",
+      "raw_sha256": "13ac788ffc445390a1ba4f1290de0c3f30f6370758d04c038501a1778eef861e",
+      "cache_age_seconds": 83,
+      "cachedAt_utc": "2026-10-19T05:39:34.206Z"
+    },
+    "current_series": {
+      "row_count": 53,
+      "model_series_per_row": 10,
+      "first_label": "2025-10-20",
+      "last_label": "2026-10-19",
+      "cachedAt_utc": "2026-10-19T08:40:09.852Z",
+      "target_labels_present": []
+    },
+    "displayed_sums_T": {
+      "2026-10-05": 171.842501724714,
+      "2026-10-12": 164.043979329882,
+      "2026-10-19_partial": 7.63238422081
+    },
+    "comparison_to_0601": {
+      "2026-10-12_previous_T": 164.043952246042,
+      "2026-10-12_revision_T": 2.708384e-05,
+      "2026-10-19_partial_previous_T": 4.678324428519,
+      "2026-10-19_partial_change_T": 2.954059792291
+    },
+    "limits": "The chart response has no cutoff timestamp. The Oct19 row is a partial week label, not a completed weekly total. The Oct26/Nov2/Nov9/Nov16 target labels are absent in this response; no target-week total or forecast can be inferred. HTTP Age/cachedAt describe delivery cache metadata, not the data cutoff."
+  },
+  "overall_limit": "These are source observations, not event probabilities, investment recommendations, or broad absence findings."
+}

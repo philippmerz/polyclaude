@@ -1,0 +1,19 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/discover_markets.py"
+  ],
+  "finished_utc": "2026-10-19T09:31:21.262497+00:00",
+  "name": "primary",
+  "returncode": 0,
+  "started_utc": "2026-10-19T09:31:20.472026+00:00",
+  "stderr_bytes": 0,
+  "stderr_gzip": "logs/tick_20261019T0930/discovery/primary.stderr.gz",
+  "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 6258,
+  "stdout_gzip": "logs/tick_20261019T0930/discovery/primary.stdout.gz",
+  "stdout_gzip_sha256": "4d45ec8b42a0a91807ef7232210b5b6f618f060caab04b2e2d9e52b056c12996",
+  "stdout_sha256": "5da05dddaa27c2bb950060efff1f3c3caf19266bccedcd033902bd1e2c7ccdbe",
+  "timed_out": false
+}

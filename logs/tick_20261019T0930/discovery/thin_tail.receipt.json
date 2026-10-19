@@ -1,0 +1,29 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/discover_markets.py",
+    "--min-liquidity",
+    "500",
+    "--min-vol24",
+    "20",
+    "--max-pages",
+    "20",
+    "--via-events",
+    "--clears-hurdle-only",
+    "--top",
+    "3000"
+  ],
+  "finished_utc": "2026-10-19T09:31:30.709745+00:00",
+  "name": "thin_tail",
+  "returncode": 0,
+  "started_utc": "2026-10-19T09:31:24.986552+00:00",
+  "stderr_bytes": 0,
+  "stderr_gzip": "logs/tick_20261019T0930/discovery/thin_tail.stderr.gz",
+  "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stdout_bytes": 9454,
+  "stdout_gzip": "logs/tick_20261019T0930/discovery/thin_tail.stdout.gz",
+  "stdout_gzip_sha256": "146df562609cfa5360cd8639b43d381a549992ded6841d0053b178bc7c2c12a3",
+  "stdout_sha256": "111f53e261885eaedccf5ca052b3a9221ddfbddf09e8cff596988b85c0ab21ee",
+  "timed_out": false
+}
