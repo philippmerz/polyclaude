@@ -1,0 +1,49 @@
+{
+  "compiled_utc": "2026-10-19T18:40:15.170113Z",
+  "scope": "Facts-only review of Detroit Free Press Michigan Senate alert; no poll interpretation or valuation.",
+  "frozen_case_reference": "Michigan Senate, exact row details retained in applicable case packet; no market quote read.",
+  "alerts": [
+    {
+      "line": 1091,
+      "alert_id": "d5720d40d28c6a492eb996806aa033230b0b03bd",
+      "timestamp": "2026-10-19T16:37:13Z",
+      "title": "Michigan Senate race polls: who will win the 2026 election? - The Times",
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "line_sha256": "39a97503b39b59b62845f37dec035d99cfa3721fc3a3b18db1b65aaab644e55e",
+      "google_link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPMlBkeFVsVEVKY1hkRFVCdmxGWlpPUU1XX2NmQ0pfbzdaQ1pfZU9MalJIODJsLWotLVZUM1ZjbVFiMDlEcnZ2Q0ZUY3hhZGh6YXlSb3hVOVRIV203NVUyanZ5R3U2OWJHWkRwbUFudG4zZkZEWS1MZ1ZiMGRNR2tLM1M0NmY3VHhFNzEtTXVGTTc5YXZQdzRKc3pvSURhOHl1aENHWFZHd08xaHk0U01iN1JWZ2xHYlVQYzdMNTd6Zw?oc=5"
+    },
+    {
+      "line": 1111,
+      "alert_id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "timestamp": "2026-10-19T18:26:06Z",
+      "title": "Who's winning Michigan Senate race? Latest polls show tightening race - Detroit Free Press",
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "line_sha256": "98d490c5b6f8e18ed8c568827d423a0aebe1c806462fd583b8e0553aceaee961",
+      "google_link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYVpNUGRFNDlsY2NyZ0EzdTBMaWlCY2l0V3JLakxXM2djQ1JlZzZpemlERlRxVENGSERWM3RlUThlMFVmTE43ZjQ5ZWpaNlh1cVhkMG9UUGlqUFVwS2ZidlE2QndJaHlwNkh2VWdneXNMVXNQWnVaZWgxRDBMQm5KeDM5Q0R6bnFsUFJkOWRLcUQxVEVydHBBSUExaTZpbjAxLUFPeVUybGpPS28xZXlTMTdNZU9qYUE?oc=5"
+    }
+  ],
+  "publisher_access": {
+    "supplied_google_news_link_get": {
+      "requested_url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYVpNUGRFNDlsY2NyZ0EzdTBMaWlCY2l0V3JLakxXM2djQ1JlZzZpemlERlRxVENGSERWM3RlUThlMFVmTE43ZjQ5ZWpaNlh1cVhkMG9UUGlqUFVwS2ZidlE2QndJaHlwNkh2VWdneXNMVXNQWnVaZWgxRDBMQm5KeDM5Q0R6bnFsUFJkOWRLcUQxVEVydHBBSUExaTZpbjAxLUFPeVUybGpPS28xZXlTMTdNZU9qYUE",
+      "status": 200,
+      "started_utc": "2026-10-19T18:39:26.068919Z",
+      "received_utc": "2026-10-19T18:39:26.324005Z",
+      "final_url": "https://news.google.com/rss/articles/… (same Google News route with locale parameters)",
+      "observed_page_title": "Google News",
+      "body_gz": "logs/deep_review_20261017/mi1826_poll/google_resolution/alert_link.body.json.gz",
+      "raw_sha256": "0c62539efcce049611d0536785ab31d32c045244e121c65d54a9a9f93280c3dc",
+      "gzip_sha256": "13374ba3ca0867fb5cd307b1726e91eed94b73a8f05ed2c32474d56a2406382a",
+      "note": "200 response was a Google News HTML shell; no article text, canonical Detroit Free Press URL, publication date, or linked poll source recovered."
+    },
+    "targeted_searches": [
+      "Exact quoted headline search returned no relevant publisher article.",
+      "site:freep.com title query was blocked by robots.txt in search; no bypass or retry attempted."
+    ]
+  },
+  "older_related_poll_alert": {
+    "alert_id": "d5720d40d28c6a492eb996806aa033230b0b03bd",
+    "source_unit": "work/tick1615_michigan_times_followup.json",
+    "finding": "The Times prior alert had the same “Michigan Senate race polls: who will win the 2026 election?” headline family, but prior supplied Google link yielded only a Google News page; poll identity, field dates, and toplines stayed unverified. The newer Free Press headline is a separate alert/source label, but its article body was not retrieved, so cannot determine whether it cites that prior story, the same poll material, or a new survey."
+  },
+  "factual_finding": "Neither alert provides a verified new poll measurement in the captured evidence. The phrase “latest polls show tightening” is a headline only here; no values, pollster, sample, dates, method, or publication date can be attributed from this pass. This is an access/coverage gap, not evidence that no new poll exists."
+}

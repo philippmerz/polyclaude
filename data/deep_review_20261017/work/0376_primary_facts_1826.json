@@ -1,0 +1,83 @@
+{
+  "schema": "deep_review.public_facts.v1",
+  "review_index": 376,
+  "compiled_utc": "2026-10-19T18:26:46.818212Z",
+  "phase": "FACTS_ONLY_NO_VALUATION",
+  "identity": {
+    "market_id": "676739",
+    "condition_id": "0x684e5b72d4e407695397a79ed75ef37273c2655ca2548791a4153233d3744696",
+    "criteria_sha256": "5f0eaf160c055ed9ce157c931eb17c38f106134dc7592b888e04426c7f535765",
+    "rule_scope": "NVIDIA largest company worldwide by market cap at Dec 31 2026 market close; credible-reporting consensus."
+  },
+  "findings": [
+    {
+      "topic": "Next results date",
+      "fact": "Issuer-hosted corrected transcript for the Aug 26 Q2 FY2027 call states the Q3 FY2027 earnings call is scheduled for Nov 17, 2026. Nov17 is BEFORE the Dec31 contract date; it is after only the Oct31 sibling date. The issuer events page fetched Oct 19 shows no listed upcoming event details in its static body (it says select a highlighted date), so the transcript is the direct captured basis for Nov 17."
+    },
+    {
+      "topic": "Near-term company catalyst",
+      "fact": "The same Q2 transcript says Q3 revenue outlook is $108B \u00b12%, expects sequential growth primarily from ACIE and data center, and Vera Rubin at about 20% of Q3 data-center revenue. It also says FY2028 revenue preliminary expectation approximately 70% year-over-year growth. These are management outlook statements from Aug 26, not realized results."
+    },
+    {
+      "topic": "Capital return / share count",
+      "fact": "Issuer release dated Sep 28 announces an additional $150B share-repurchase authorization, bringing remaining authorized program to $235B, with expected execution through FY2028. Authorization is capacity, not evidence of repurchases actually completed or share-count reduction by Dec 31."
+    },
+    {
+      "topic": "Existing comparison context",
+      "fact": "The prior Oct 19 vendor snapshot in work/0364_primary_refresh_1646.json put NVIDIA first at $5.267T, Apple $4.991T, Alphabet $4.169T and Microsoft $3.962T; it has no exact exchange close timestamp or globally exhaustive private-company convention. Existing Q2 SEC share-count data is filing-dated, not a Dec 31 count."
+    },
+    {
+      "topic": "Limits",
+      "fact": "No newer issuer-announced split or separately dated share-count change was established in this bounded pass. The captured pages do not define the contract\u2019s credible-reporting consensus, private-company inclusion, share-class/FX treatment, or the Dec 31 source aggregation."
+    }
+  ],
+  "sources": [
+    {
+      "name": "issuer_events_page",
+      "url": "https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx",
+      "http_status": 200,
+      "started_utc": "2026-10-19T18:26:19.094992Z",
+      "received_utc": "2026-10-19T18:26:19.427242Z",
+      "raw_sha256": "8015f41ff68d0c5622e7eedc62b1eec570512c6b76f391ebc74b7b498c8acb22",
+      "gzip_sha256": "54647b708e7a32d1f6379f131eb42b8ac0a08451ad00b23ce0866fb49ca0865e",
+      "body_gz": "logs/deep_review_20261017/case0376_primary_1826/events.body.json.gz"
+    },
+    {
+      "name": "issuer_q2_call_transcript",
+      "url": "https://investor.nvidia.com/files/content_files/TRANSCRIPT_-NVIDIA-Corp-NVDA-US-Q2-2027-Earnings-Call-26-August-2026-5_00-PM-ET.pdf",
+      "http_status": 200,
+      "started_utc": "2026-10-19T18:26:28.905479Z",
+      "received_utc": "2026-10-19T18:26:29.456301Z",
+      "raw_sha256": "a8be2bac4fd08ca18fc4bccbb165cd48237166ac5b4e211e779fc9f89ee35e16",
+      "gzip_sha256": "8e14b70bc956751034d555950f63b2bedb13a19904f0fdb1ed84c12b48c41f7c",
+      "body_gz": "logs/deep_review_20261017/case0376_primary_1826_transcript/official_q2_transcript.body.json.gz"
+    },
+    {
+      "name": "issuer_buyback_release",
+      "url": "https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-a-150-Billion-Share-Repurchase-Authorization-Increase/default.aspx",
+      "http_status": 200,
+      "started_utc": "2026-10-19T18:26:19.444408Z",
+      "received_utc": "2026-10-19T18:26:19.671201Z",
+      "raw_sha256": "0f086c1a8b39059f1ee3021eeb08cff411872a238d722ddec6db712e78f98d2c",
+      "gzip_sha256": "dfb1d47b925bcbbc9345b3bbef84cb208e7dc07ebb00b79840574a43eef8e1fe",
+      "body_gz": "logs/deep_review_20261017/case0376_primary_1826/buyback.body.json.gz"
+    }
+  ],
+  "linked_existing": [
+    "work/0376_facts_1721.json",
+    "work/0364_primary_refresh_1646.json",
+    "work/0304_catalysts_0100.json",
+    "logs/deep_review_20261017/tesla_alien_cap_sources/sec_companyfacts_sharecounts_4issuers.body.gz"
+  ],
+  "limits": [
+    "Three targeted issuer pages captured; no broader peer/private-company census.",
+    "Source timestamps are HTTP call-window receipt times; publication dates are as stated on issuer material.",
+    "No market prices or probability conclusions included."
+  ],
+  "primary_date_erratum": {
+    "corrected_utc": "2026-10-19T18:30:50.870186+00:00",
+    "prior_local_path": "data/deep_review_20261017/work/0376_primary_facts_1826_pre_date_erratum.json",
+    "prior_sha256": "e6dd907c30cdf5c494d7af88917fbcc500864448707be15b0f4d9f77838a1987",
+    "reason": "Collector inherited Oct31 date comparison; primary independently parsed issuer PDF and verified Aug26,2026call/Nov17Q3 schedule. Target376 is Dec31, so include the event. No source byte changes."
+  }
+}

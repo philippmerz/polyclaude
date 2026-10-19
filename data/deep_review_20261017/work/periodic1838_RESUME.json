@@ -1,0 +1,50 @@
+{
+  "schema": "finite_review_phase.v1",
+  "updated_utc": "2026-10-19T18:45:39.236361+00:00",
+  "counts": {
+    "completed_valuations": 346,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2281,
+    "base_records": 719,
+    "revisions_written": 64,
+    "active_indices": [
+      378
+    ]
+  },
+  "completed_since_manual1800": [
+    376
+  ],
+  "new_revision": {
+    "index": 280,
+    "path": "research/2026-10-17-deep-review/revisions/0280_20261019T183408595244Z.md",
+    "change": "Dated40.00935%YES to35% via coherent same-date worldwinner model; noentry."
+  },
+  "next_index": 378,
+  "next_facts_pointer": "data/deep_review_20261017/work/0378_resume.json",
+  "active_case_phase": "Fullrule/read originalpoll done; facts/freshness saved. No adopted forecast/quote/economics/finalreport. Resume primaryvaluation from literalcontract, not a speculative probability.",
+  "facts_only_following": [
+    379,
+    380,
+    382,
+    383,
+    384,
+    386,
+    388,
+    390,
+    391,
+    394,
+    396,
+    397,
+    398,
+    400,
+    402
+  ],
+  "read_one_case_only": true,
+  "integrity": "data/deep_review_20261017/work/periodic1838_ledger_integrity.json",
+  "current_closeout": "research/2026-10-19-1838-periodic.md",
+  "financial_anchor": "research/2026-10-19-1800-checkin.md",
+  "clock_limits": "Financial18:03:14\u201329; account18:40:21\u201322; Michiganofficialrelease18:41:27 repeatsOct12\u201314field; quote18:41:26. No newNAV/CSVrow.",
+  "next_boundary": "Existing22UTC light ANDIdahoallunfilledpull; fullOct20 02UTC.",
+  "bounded_contract": "End after preservation/check; no nextvaluation/newgoal/timer/idlefollowup."
+}

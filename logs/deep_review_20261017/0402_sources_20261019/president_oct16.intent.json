@@ -1,0 +1,1 @@
+{"name":"president_oct16","request":{"method":"GET","read_only":true,"scope":"Official presidential office briefing dated 2026-10-16 about President Lee Jae-myung","url":"https://www.president.go.kr/briefings/p18TIc0N"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:27:46.154929Z","timing_basis":"call_window"}

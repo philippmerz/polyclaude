@@ -1,0 +1,49 @@
+{
+  "schema": "periodic1838_account_verification.v1",
+  "reviewed_utc": "2026-10-19T18:45:02.034721+00:00",
+  "observation_windows": {
+    "orders": {
+      "started_utc": "2026-10-19T18:40:21.890075Z",
+      "received_utc": "2026-10-19T18:40:22.003381Z",
+      "response_status": 200,
+      "body_representation": "sdk_result_serialization",
+      "raw_sha256": "d2c4d091cb919fce91a9351157f195652cd0f347b97d4dcfc2a9cca0fa945130"
+    },
+    "positions": {
+      "started_utc": "2026-10-19T18:40:22.055058Z",
+      "received_utc": "2026-10-19T18:40:22.107489Z",
+      "response_status": 200,
+      "body_representation": "http_body",
+      "raw_sha256": "57a6381530720a47b498310d134b5cf376290974ff01635473635577aad0e866"
+    },
+    "quick_status": {
+      "started_utc": "2026-10-19T18:40:20.561507Z",
+      "received_utc": "2026-10-19T18:40:24.325666Z",
+      "body_representation": "supplied_bytes",
+      "raw_sha256": "7a12412988c2bc21d61a5fa61b7e3b0e789ecca0e298cc14f93d2c6865163a8c",
+      "outer_returncode": 0,
+      "nested_child_returncodes_not_exposed": true,
+      "failure_marker_present": false,
+      "hurdle_flags": 0,
+      "watchlist_hits": 0
+    }
+  },
+  "comparison": {
+    "baseline": "data/deep_review_20261017/work/tick1648_account.json",
+    "same_as_last18UTC_check": true,
+    "exact_order_terms_equal_verified1702": true,
+    "exact_positive_position_identity_side_size_totalBought_equal_verified1702": true,
+    "live_orders": 4,
+    "matched_shares": 0,
+    "remaining_buy_risk_usd": 7.52,
+    "positive_size_positions_including_legacy_claim": 8,
+    "reservation_count": 4,
+    "reservations_byte_hash_equals_verified1702": true,
+    "exact_reservation_id_identity_shares_risk_bindings": true
+  },
+  "limits": [
+    "No raw account/order/reservation/status body is published. Orders are vetted authenticated result serialization, not rawHTTP.",
+    "Current quick status is not a new complete portfolio NAV producer or full11-step check. Existing18UTC full safety checks remain dated; no performance CSV row appended.",
+    "No order, reservation, position or financial-prior write."
+  ]
+}

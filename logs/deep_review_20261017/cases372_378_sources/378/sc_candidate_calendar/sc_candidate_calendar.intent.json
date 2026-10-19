@@ -1,0 +1,1 @@
+{"name":"sc_candidate_calendar","request":{"method":"GET","read_only":true,"scope":"Official SC Election Commission 2026 candidate information and election schedule","url":"https://scvotes.gov/candidates/2026-candidate-information/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:46:21.265313Z","timing_basis":"call_window"}

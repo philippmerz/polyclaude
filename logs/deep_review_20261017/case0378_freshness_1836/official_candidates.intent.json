@@ -1,0 +1,1 @@
+{"name":"official_candidates","request":{"method":"GET","read_only":true,"scope":"bounded public South Carolina election facts","url":"https://scvotes.gov/candidates/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:35:25.134937Z","timing_basis":"call_window"}

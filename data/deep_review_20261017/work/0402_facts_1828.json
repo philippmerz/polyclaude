@@ -1,0 +1,58 @@
+{
+  "schema": "deep_review.fact_unit.v1",
+  "index": 402,
+  "captured_utc": "2026-10-19T18:28:05Z",
+  "identity": {
+    "market_id": "2071657",
+    "condition_id": "0xf4c72ff42c3f1ee9f25e835e62ca52d71a9cafbcc11f93c01af709af8ee5ff09",
+    "criteria_sha256": "ec49d00513eb0a261e73e0655d98962515510c168e0e505648eb9d89b0cc12ea",
+    "question": "Lee Jae-myung out as president of South Korea in 2026?"
+  },
+  "operative_rule": "YES if Lee ceases to be President of South Korea for any period from market creation through 2026-12-31 23:59 ET. An announcement of resignation/removal before expiry resolves YES immediately, even if effective later. Detention, effective removal, or permanent prevention from performing presidential duties can qualify. Resolving source is official information from Lee and the South Korean government; credible reporting may also be used.",
+  "facts": [
+    {
+      "fact": "The Republic of Korea Ministry of Culture, Sports and Tourism policy briefing (official Korea.kr) is dated 2026-10-19 and says President Lee Jae-myung presented appointment certificates to seven minister-level officials and the Serious Crimes Investigation Agency chief at the presidential office. This is a dated official report of him exercising the office on that date.",
+      "url": "https://www.korea.kr/briefing/presidentView.do?newsId=148973786",
+      "published_date": "2026-10-19",
+      "request_started_utc": "2026-10-19T18:27:43.921113Z",
+      "response_received_utc": "2026-10-19T18:27:46.134752Z",
+      "http_status": 200,
+      "raw_bytes": 153678,
+      "raw_sha256": "e8c088b3190e6a625da8ae2f8803840c9de4c2b2c5ddfc64eb7b8b38fd9c333d",
+      "gzip_sha256": "822d65646b25833be0b274923b184e097f5a8abd2316fbd3fba5b2cec7389403",
+      "receipt": "logs/deep_review_20261017/0402_sources_20261019/government_oct19.receipt.json",
+      "body": "logs/deep_review_20261017/0402_sources_20261019/government_oct19.body.json.gz"
+    },
+    {
+      "fact": "The official Constitution of the Republic of Korea, Article 65, provides that the National Assembly may impeach the president for constitutional/statutory violations in official duties; a presidential impeachment motion must be proposed by a majority of total Assembly members and pass with at least two-thirds. On passage, the official is suspended from exercising power until adjudication; an impeachment decision removes the person from office. This is procedure, not evidence that proceedings are pending or likely.",
+      "url_requested": "https://elaw.klri.re.kr/eng_service/jomunPrint.do?cseq=1777689&hseq=1",
+      "request_started_utc": "2026-10-19T18:27:46.764676Z",
+      "response_received_utc": "2026-10-19T18:27:52.869823Z",
+      "http_status": 200,
+      "raw_bytes": 8209,
+      "raw_sha256": "df9c81db611bf798a6a1235be277112235a8a2cd5f5a75a0e260f59dd91bdb44",
+      "gzip_sha256": "42bb4a671dd88aa3839ec8b51990491a86a26524e2ae54c3a7ff80d0ed4f737f",
+      "receipt": "logs/deep_review_20261017/0402_sources_20261019/constitution.receipt.json",
+      "body": "logs/deep_review_20261017/0402_sources_20261019/constitution.body.json.gz",
+      "article": "Article 65"
+    },
+    {
+      "fact": "An additional direct presidential-office October 16 briefing route returned HTTP 403. No content was extracted from that response; it is an access limitation.",
+      "url": "https://www.president.go.kr/briefings/p18TIc0N",
+      "request_started_utc": "2026-10-19T18:27:46.154929Z",
+      "response_received_utc": "2026-10-19T18:27:46.754522Z",
+      "http_status": 403,
+      "raw_bytes": 399,
+      "raw_sha256": "255e0aade2deae94ecf8982f47738a9c3d0e5266d6a692bc151a9c248c166b47",
+      "gzip_sha256": "1fc39f039630c8ee72e7cc4fbbd49b9a88140d13a7154ab0dcfb7e76a66e8f83",
+      "receipt": "logs/deep_review_20261017/0402_sources_20261019/president_oct16.receipt.json",
+      "body": "logs/deep_review_20261017/0402_sources_20261019/president_oct16.body.json.gz"
+    }
+  ],
+  "limits": [
+    "The Oct 19 government record establishes service on that dated occasion; it does not establish absence of all other legal or political proceedings.",
+    "No complete National Assembly or Constitutional Court docket search was performed.",
+    "No resignation/removal announcement or qualifying detention is established by these bounded sources; this is not an exhaustive absence finding."
+  ],
+  "no_valuation": true
+}

@@ -1,0 +1,1 @@
+{"name":"sc_election_results","request":{"method":"GET","read_only":true,"scope":"Official SC Election Commission 2026 primary/runoff election results index","url":"https://scvotes.gov/elections-statistics/election-results/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:46:22.456326Z","timing_basis":"call_window"}

@@ -1,0 +1,181 @@
+{
+  "schema": "current_marketcap376_rank_sensitivity.v1",
+  "created_utc": "2026-10-19T18:28:15.521073+00:00",
+  "scope": "On-chain PM Dec31 rank contract, not stock-investment research; sensitivity, not adoption.",
+  "seed": 37620261019,
+  "samples_per_cell": 100000,
+  "source_hashes": {
+    "research/2026-10-17-deep-review/models/marketcap_inputs.json": "32dafab53f6f77deb6ef862d670824e3f9fe7b5366393d3a27f688d32f2cfca7",
+    "data/deep_review_20261017/work/0260_earnings_event_history.json": "1b38ea38700ac4d813c596f9e63206d913abf311b2353f847fcb7a6b60ac1ead",
+    "data/deep_review_20261017/work/0364_primary_refresh_1646.json": "0e2b8073c905f0e79316fb2c48e49cd15789701fa7adc6f38fc0fdcea890e85c"
+  },
+  "current_caps_trillion": {
+    "NVDA": 5.267,
+    "AAPL": 4.991,
+    "MSFT": 3.962,
+    "Alphabet": 4.169
+  },
+  "model": "Zero log drift; equal20/87 event-excluded covariance windows,52session horizon/51sensitivity, independent8% terminal event shocks; covariance and shocks judgmental/nonstationary.",
+  "global_winner_fork": ".95*(.96 conditional4firm winner + .03 Tesla + .01 other) + .05 alternative[.40,.40,.06,.08,.03,.03]",
+  "coherence_note": "Exactly one winner; Tesla3%/Other1.1% are subjective global tails. ExistingApple280 is a differently dated forecast; these are current joint diagnostics, not independent company signals.",
+  "equal_window_winner_probabilities": {
+    "base": {
+      "NVDA": 0.5402002399999999,
+      "AAPL": 0.35930048,
+      "MSFT": 0.018472079999999995,
+      "Alphabet": 0.0410272,
+      "Tesla": 0.03,
+      "Other": 0.011
+    },
+    "51sessions": {
+      "NVDA": 0.5411076799999999,
+      "AAPL": 0.3591044,
+      "MSFT": 0.01821672,
+      "Alphabet": 0.0405712,
+      "Tesla": 0.03,
+      "Other": 0.011
+    },
+    "no_extra_event": {
+      "NVDA": 0.57450512,
+      "AAPL": 0.35247872,
+      "MSFT": 0.00800232,
+      "Alphabet": 0.02401384,
+      "Tesla": 0.03,
+      "Other": 0.011
+    },
+    "wide_event": {
+      "NVDA": 0.4822244,
+      "AAPL": 0.35188592,
+      "MSFT": 0.04729583999999999,
+      "Alphabet": 0.07759384,
+      "Tesla": 0.03,
+      "Other": 0.011
+    },
+    "NVDA_relative_minus5": {
+      "NVDA": 0.44721271999999995,
+      "AAPL": 0.4339568,
+      "MSFT": 0.023866559999999995,
+      "Alphabet": 0.05396392,
+      "Tesla": 0.03,
+      "Other": 0.011
+    },
+    "NVDA_relative_plus5": {
+      "NVDA": 0.6275698399999999,
+      "AAPL": 0.28722055999999996,
+      "MSFT": 0.014076239999999999,
+      "Alphabet": 0.030133359999999994,
+      "Tesla": 0.03,
+      "Other": 0.011
+    }
+  },
+  "window_cells": {
+    "20": {
+      "used_background_rows": 20,
+      "cells": {
+        "base": {
+          "NVDA": 0.56534864,
+          "AAPL": 0.35742176,
+          "MSFT": 0.012794879999999998,
+          "Alphabet": 0.02343472,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "51sessions": {
+          "NVDA": 0.5660691199999999,
+          "AAPL": 0.35709344000000004,
+          "MSFT": 0.01259424,
+          "Alphabet": 0.0232432,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "no_extra_event": {
+          "NVDA": 0.6108392,
+          "AAPL": 0.33802352,
+          "MSFT": 0.00397584,
+          "Alphabet": 0.006161440000000001,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "wide_event": {
+          "NVDA": 0.49465952,
+          "AAPL": 0.35432096,
+          "MSFT": 0.043191839999999995,
+          "Alphabet": 0.06682768000000001,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "NVDA_relative_minus5": {
+          "NVDA": 0.45913711999999995,
+          "AAPL": 0.44799247999999997,
+          "MSFT": 0.01775616,
+          "Alphabet": 0.03411424,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "NVDA_relative_plus5": {
+          "NVDA": 0.6634433599999999,
+          "AAPL": 0.27128336,
+          "MSFT": 0.00891888,
+          "Alphabet": 0.015354399999999999,
+          "Tesla": 0.03,
+          "Other": 0.011
+        }
+      }
+    },
+    "89": {
+      "used_background_rows": 87,
+      "cells": {
+        "base": {
+          "NVDA": 0.5150518399999999,
+          "AAPL": 0.3611792,
+          "MSFT": 0.024149279999999995,
+          "Alphabet": 0.05861967999999999,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "51sessions": {
+          "NVDA": 0.5161462399999999,
+          "AAPL": 0.36111536,
+          "MSFT": 0.023839199999999994,
+          "Alphabet": 0.0578992,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "no_extra_event": {
+          "NVDA": 0.5381710399999999,
+          "AAPL": 0.36693392,
+          "MSFT": 0.0120288,
+          "Alphabet": 0.04186624,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "wide_event": {
+          "NVDA": 0.46978928,
+          "AAPL": 0.34945088,
+          "MSFT": 0.051399839999999995,
+          "Alphabet": 0.08836,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "NVDA_relative_minus5": {
+          "NVDA": 0.43528831999999995,
+          "AAPL": 0.41992112,
+          "MSFT": 0.029976959999999993,
+          "Alphabet": 0.0738136,
+          "Tesla": 0.03,
+          "Other": 0.011
+        },
+        "NVDA_relative_plus5": {
+          "NVDA": 0.5916963199999999,
+          "AAPL": 0.30315775999999994,
+          "MSFT": 0.019233599999999997,
+          "Alphabet": 0.04491231999999999,
+          "Tesla": 0.03,
+          "Other": 0.011
+        }
+      }
+    }
+  },
+  "limits": "Intraday vendor cap convention/FX/shares unverified; no drift alpha, options, global census or calibrated tail. Residual NVDA/Apple earnings in background may double-count shocks;51/52counts approximate current intraday session. Main must read issuer facts and adopt p/range before own quote.",
+  "code_sha256": "bd60cf1d96410ec9b7e18e4d999527f693b482be3569870c01ec6cb3d030d70d"
+}

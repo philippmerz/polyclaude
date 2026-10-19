@@ -1,0 +1,35 @@
+{
+  "schema": "scoped_public_archive_manifest.v1",
+  "compiled_utc": "2026-10-19T18:48:51.942412+00:00",
+  "scope": "One bounded Michigan-source/exposure/economics review and compact research closeout; no new valuation, trade or financial producer.",
+  "file_count": 22,
+  "shards": [
+    {
+      "path": "data/deep_review_20261017/work/periodic1838_review_artifacts_00.json",
+      "bytes": 1681,
+      "sha256": "c764531fb476336ea0375c0afa445b405b0f619857b1879c025478211add35f6",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1838_review_artifacts_01.json",
+      "bytes": 1798,
+      "sha256": "ff7d1ccc01d2b0ca33ea6a2b246ca2df1b8ff349de0119c9ae2b89d8fadc9239",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1838_review_artifacts_02.json",
+      "bytes": 370,
+      "sha256": "366164a25a0f3f9c1320fac22de79e9ea9bc7561b26e5938f0bbc1375dfae3b2",
+      "files": 2
+    }
+  ],
+  "research_manifest": {
+    "path": "data/deep_review_20261017/work/periodic1838_research_artifacts.json",
+    "sha256": "2aaaafab374fdbf7d33b81b9a4c6153b79d23075382d8a8500a3d578226f8bec"
+  },
+  "excluded": [
+    "Full Rasmussen/publisher/Google source or consent bodies retained locally; public paraphrase, URL, receipt and body hashes only.",
+    "All raw authenticated/account/reservation/status captures and provider/operator runtime. No geoblock data or0332draft."
+  ],
+  "verification": "All listed sizes/SHA and included public-quote gzip/raw receipt hashes verified. Original hash-bound facts/models/reports unmodified."
+}

@@ -1,0 +1,1 @@
+{"name":"events","request":{"method":"GET","read_only":true,"scope":"official NVIDIA investor relations factual source","url":"https://investor.nvidia.com/events-and-presentations/events-and-presentations/default.aspx"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:26:19.094992Z","timing_basis":"call_window"}

@@ -1,0 +1,48 @@
+{
+  "compiled_utc": "2026-10-19T18:27:20.900027Z",
+  "conditionId": "0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25",
+  "coverage_limit": "These dated official-page observations do not establish absence of an announcement elsewhere or later in the window. No qualifying announcement was identified in this bounded check; continue checking official statements/credible consensus before resolution.",
+  "criteria_sha256": "8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14",
+  "direct_capture_receipts": [
+    {
+      "body_path": "openai_agistandards.body.json.gz",
+      "gzip_sha256": "ef827b680c7eac4a8b0c30ab684081bdb320948a11809bae1328ae9182cf8bdc",
+      "name": "openai_agistandards",
+      "raw_bytes": 9935,
+      "raw_sha256": "7463fda0043cb0d26736eb299f648fd622450a89a7e821ac228b3c5a89012958",
+      "received_utc": "2026-10-19T18:26:39.801305Z",
+      "response_status": 403
+    },
+    {
+      "body_path": "openai_abundant_intelligence.body.json.gz",
+      "gzip_sha256": "f042aca2e3c87afeebc632b8ce31f81ed677650993fc00cf51c76991fa546b61",
+      "name": "openai_abundant_intelligence",
+      "raw_bytes": 9929,
+      "raw_sha256": "bfe3c08622e4ebd25ebcbed2fcba684934e4b5ffcf7cff4b23f4d32c3232629c",
+      "received_utc": "2026-10-19T18:26:39.895460Z",
+      "response_status": 403
+    }
+  ],
+  "exact_rule_window": "OpenAI or an official representative announces it has created AGI by Dec 31, 2026 ET; otherwise No. Primary resolution source is official OpenAI information; credible-reporting consensus may also be used.",
+  "market_id": "653788",
+  "question": "OpenAI announces it has achieved AGI before 2027?",
+  "review_index": 390,
+  "sources": [
+    {
+      "fact": "The page frames AGI as mission and describes goals including automated AI research and a personal AGI; the browser search result did not report an announcement that OpenAI had created AGI.",
+      "page_date": "2026-09-21",
+      "publisher": "OpenAI (official)",
+      "representation": "official-site search-result text; local ordinary GET was HTTP 403, so no body claim is made.",
+      "title": "Building standards for the next phase of AI",
+      "url": "https://openai.com/index/building-standards-next-phase-ai/"
+    },
+    {
+      "fact": "The page uses AGI as mission/long-term framing and discusses increasingly capable intelligence; the search result did not report that OpenAI announced AGI had been created.",
+      "page_date": "2026-07-31",
+      "publisher": "OpenAI (official)",
+      "representation": "official-site search-result text; local ordinary GET was HTTP 403, so no body claim is made.",
+      "title": "Building abundant intelligence",
+      "url": "https://openai.com/index/building-abundant-intelligence/"
+    }
+  ]
+}

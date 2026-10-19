@@ -1,0 +1,1 @@
+{"name":"openai_agistandards","request":{"method":"GET","read_only":true,"scope":"case390_primary_source","url":"https://openai.com/index/building-standards-next-phase-ai/"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:26:39.715402Z","timing_basis":"call_window"}

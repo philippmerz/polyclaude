@@ -1,0 +1,8 @@
+{
+  "schema": "journal_append_prefix.v1",
+  "prior_bytes": 2508736,
+  "prior_sha256": "0d9dace62c530d8881b33648f362f5c9611bd9dc0c0a05019eacd05cd101ca67",
+  "new_bytes": 2511571,
+  "new_sha256": "7cee83dd74c9df13ebedef06db119595c4f4141585d0fb49a83563f63ac365b8",
+  "prefix_preserved": true
+}

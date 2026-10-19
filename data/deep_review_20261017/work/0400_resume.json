@@ -1,0 +1,14 @@
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 400,
+  "phase": "Facts collected; primary may proceed after exact frozen rule and linked source units; no valuation or entry authority.",
+  "source_paths": [
+    "work/0400_facts_1826.json",
+    "google_historical_category_sources.json",
+    "google_2026_competitor_sources.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T18:26:49Z",
+  "source_capture_root": "logs/deep_review_20261017",
+  "exact_identity_criteria_verified": true
+}

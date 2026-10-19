@@ -1,0 +1,52 @@
+{
+  "review_index": 378,
+  "compiled_utc": "2026-10-19T18:35:39.248840Z",
+  "scope": "Facts-only freshness follow-up; no forecast.",
+  "identity": {
+    "market_id": "629641",
+    "condition_id": "0x1b7fa10e6b102c964bbd4a7cb0a4b7a341e17fcb9f8a2c8a5d6a3b30dfb5c394",
+    "criteria_sha256": "6fb2fb94b055d876f4e8bc82cee728fa05da9929c9c432296ba560bbe6923458"
+  },
+  "facts": [
+    {
+      "topic": "Later poll coverage lead",
+      "fact": "PolitiKool page fetched Oct19 (page itself dated Oct17) says its average uses 3 polls from 3 pollsters and lists Resonance Sep29\u2013Oct3, 638 registered voters, Johnson 35%, Wilson 45%; Hart Aug12\u201315, 600 voters, Johnson 42%, Wilson 50%; PPP July16\u201317, 577 likely voters, Johnson 37%, Wilson 45%. Its displayed average is secondary aggregation. This indicates no later poll among the three items displayed on that page, not that no later poll exists elsewhere."
+    },
+    {
+      "topic": "Original poll / no newer original found",
+      "fact": "Existing original Resonance memo remains the latest original poll source identified in this bounded pass: published Oct5; field Sep29\u2013Oct3; n=638 registered voters, live callers; all-voter \u201cif held today\u201d question; Wilson45.17%, Johnson35.03%, undecided15.84%, reported lead 10.14 points; stated MOE3.7%. No newer original poll was located in the targeted search/results. This is a bounded source gap, not universal absence."
+    },
+    {
+      "topic": "Official ballot / nominee status",
+      "fact": "SC Election Commission candidates page fetched Oct19 lists 2026 general-election party order (Nov3): United Citizens, Forward, Green, Republican, Alliance, Libertarian, Petition, Democratic, Workers, Constitution. It explains party nominations, petition filing deadline (July15), conventions for named minor parties, and write-ins, but the captured page does not enumerate the final gubernatorial candidates by party. Prior AP report (June23, secondary to official election returns) says Alan Wilson won Republican runoff and Jermaine Johnson won Democratic nomination. Final ballot qualification / additional nominees remain unverified from the official roster in this pass."
+    }
+  ],
+  "sources": [
+    {
+      "name": "poll_index",
+      "url": "https://politikool.com/polls/governors/south-carolina",
+      "status": 200,
+      "started_utc": "2026-10-19T18:35:24.796773Z",
+      "received_utc": "2026-10-19T18:35:25.121357Z",
+      "raw_sha256": "ad14662d3cd364403b4c3201a09e71ec8a3cb0d24d0b810db48d93aa2641e268",
+      "gzip_sha256": "6de78537bd82f28d615c013589e0b74ffb41b27ab3952040b57782d4d33bea5e",
+      "body_gz": "logs/deep_review_20261017/case0378_freshness_1836/poll_index.body.json.gz"
+    },
+    {
+      "name": "official_candidates",
+      "url": "https://scvotes.gov/candidates/",
+      "status": 200,
+      "started_utc": "2026-10-19T18:35:25.134937Z",
+      "received_utc": "2026-10-19T18:35:26.483630Z",
+      "raw_sha256": "fa707d5f10dd08b45cc7ec81f3670ca38fd901fc7eab9296e9ff887edb8ce314",
+      "gzip_sha256": "f0a930ba85629420bb3bff0c17f134e29665265211ced1753bf38ea196c2f6e8",
+      "body_gz": "logs/deep_review_20261017/case0378_freshness_1836/official_candidates.body.json.gz"
+    }
+  ],
+  "prior_source_pointer": "work/0378_facts_1645.json",
+  "limits": [
+    "Secondary poll index coverage is not an original poll and does not prove global absence.",
+    "Official SCVotes candidate page is general filing guidance and party ordering, not a final governor candidate list.",
+    "No price or probability data."
+  ]
+}

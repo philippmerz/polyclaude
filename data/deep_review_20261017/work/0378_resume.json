@@ -2,6 +2,7 @@
   "review_index": 378,
   "phase": "FACTS_ONLY_COMPLETE; valuation remains pending",
   "source_paths": [
+    "work/0378_freshness_1836.json",
     "work/0378_facts_1645.json"
   ],
   "source_pointers": [
@@ -9,5 +10,6 @@
     "https://scvotes.gov/elections-statistics/election-results/",
     "https://www.fitsnews.com/wp-content/uploads/securepdfs/2026/10/Resonance-Governor-Poll-Summary-Oct-5-2026.pdf",
     "https://apnews.com/article/6df5a35cf20af9ee1e0453192017f17a"
-  ]
+  ],
+  "updated_utc": "2026-10-19T18:35:39.249226Z"
 }

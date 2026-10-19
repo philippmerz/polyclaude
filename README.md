@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**345 valued /9 blocked /364 factual /2,282 pending;718 base+63 revisions, next376/no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. Five further valuations and one source-blocked review are saved; no new entry. DeepSeek370's fine-tick route constraint was investigated without changing execution safeguards. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1800-checkin.md). Scanner coverage earns no valuation credit.
+**346 valued /9 blocked /364 factual /2,281 pending;719 base+64 revisions, active378.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts. NVIDIA376 and the Apple280 append-only revision share a coherent worldwide-winner forecast; neither clears selected entry economics.378 has saved facts, no completed forecast. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1838-periodic.md). Scanner coverage earns no valuation credit.
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC all-unfilled pull binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 Four LIVE/zero-matched BUYs/four matching reservations/$7.52 and eight positive-size positions match17:02. Orders18:03:40–41 are authenticated CLI serialization; indexed positions18:04:53 HTTP200. No trade or numerical-prior change. Idaho34YES3c/$1.02 retains22UTC all-unfilled pull/earlier cancel-first. [Orders](notes/resting_orders.md) · [ops/account provenance](data/deep_review_20261017/work/light1800_ops.json).
 
-Whale8m is still estimated; OROct19 partial is not a target-week result. USA Today body/date and original MI poll gaps remain. News reviewed through18:15:18; the Ox Alpha alert is an Oct7 story about August model usage, with no new platform-week result. OR5NO retained/no add. [Source review](research/2026-10-19-openrouter-1815-review.md).17invoked commands rc0/34streams verified; no new UMA/hurdle/Ostium/redemption/overdue issue; four single canonical/code-current daemons. No repeated discovery or routine Telegram. Existing22UTC light/Idaho pull/fullOct20 02UTC; weeklyOct23. [Primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
+Whale8m is still estimated; OROct19 partial is not a target-week result. News reviewed through18:31:35; new Free Press poll body/date remain inaccessible. Fresh Rasmussen release repeats the already-used survey; questionnaire content differs from the verified earlier capture. MI5NO retained/no add.18:40 orders/positions/reservations unchanged; no new NAV/CSV row. [Periodic review](research/2026-10-19-1838-periodic.md).18UTC full checks/daemon evidence remain dated; no repeated discovery or routine Telegram. Existing22UTC light/Idaho pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

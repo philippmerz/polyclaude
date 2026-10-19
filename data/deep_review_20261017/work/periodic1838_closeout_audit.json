@@ -1,0 +1,24 @@
+{
+  "schema": "periodic1838_closeout_audit.v1",
+  "verified_utc": "2026-10-19T18:50:02.143499+00:00",
+  "checks": {
+    "new376_and280_forecast_economics_identity_valid": true,
+    "seven_new_or_modified_markdown_link_sets_valid": true,
+    "model_joint_probabilities_sum1_and_bound_source_hashes_match": true,
+    "base719_revision64_counts_and_active378_match": true,
+    "ledger_revisions_exact_prefixes_of_HEAD8214208": true,
+    "journal_prior_bytes_preserved": true,
+    "public_artifact_hashes_match": {
+      "periodic1838_research_artifacts.json": 69,
+      "periodic1838_public_artifacts.json": 22
+    },
+    "performance220_rows_byte_unchanged": true,
+    "bounded_handoff_valid_source_hashes_match": true,
+    "diff_check": true
+  },
+  "sizes": {
+    "handoff_bytes": 6094,
+    "research_packet_bytes": 9729
+  },
+  "limits": "No new NAV, full11-step check, valuation, order, private-state mutation or automatic continuation is certified by this offline closeout."
+}

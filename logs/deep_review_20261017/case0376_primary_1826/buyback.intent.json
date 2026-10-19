@@ -1,0 +1,1 @@
+{"name":"buyback","request":{"method":"GET","read_only":true,"scope":"official NVIDIA investor relations factual source","url":"https://investor.nvidia.com/news/press-release-details/2026/NVIDIA-Announces-a-150-Billion-Share-Repurchase-Authorization-Increase/default.aspx"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:26:19.444408Z","timing_basis":"call_window"}

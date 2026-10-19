@@ -1,0 +1,81 @@
+{
+  "append_only_prefixes": {
+    "evaluations.jsonl": {
+      "current_bytes": 3308502,
+      "head_bytes": 3303104,
+      "pass": true
+    },
+    "revisions.jsonl": {
+      "current_bytes": 39255,
+      "head_bytes": 38625,
+      "pass": true
+    }
+  },
+  "case376": {
+    "evaluation_json_sha256": "a0fe721d9276f8dfaf407af0e1d2ec9dd9733bb879c17804cb962a5ec5d8d2e3",
+    "identity_and_criteria_match": true,
+    "local_markdown_links": "pass",
+    "model_input_sources": [
+      "data/deep_review_20261017/work/0376_primary_facts_1826.json",
+      "data/deep_review_20261017/work/0376_rank_sensitivity_1830.json",
+      "data/deep_review_20261017/work/0364_primary_refresh_1646.json"
+    ],
+    "model_source_hash_matches_0376_primary_facts_1826": true,
+    "report_sha256": "a09c0fc6b6c7c0b3f8d7966899a6899626ffc62a70d2cecae3aa75822ec65932",
+    "resume_report_hash_matches": true,
+    "status": "valued"
+  },
+  "checkpoint_updated_utc": "2026-10-19T18:34:19.077741+00:00",
+  "counts": {
+    "active_indices": [
+      378
+    ],
+    "base_records": 719,
+    "blocked_after_in_depth_review": 9,
+    "completed_valuations": 346,
+    "factual_exclusions": 364,
+    "pending": 2281,
+    "revisions_written": 64
+  },
+  "exclusions": [
+    "Private raw issuer PDF/transcript captures; authenticated/account/geoblock/provider-secret/consent data. Public concise fact units only; logs remain unpreserved."
+  ],
+  "hashes": {
+    "checkpoint": "6adeb29c514c0a7fd4e2f66bb966799b8d6565ba700ccc0df23c0d0d2c80179b",
+    "evaluations_current": "8486250ab482725cb5307e67a0e04ebea9ef617a5a8211a886afb79051d4920a",
+    "index_csv": "e4a53495558e67b003930404c7d558e64d54ec068e0d6e25504f9c89c38fd76e",
+    "progress": "a451184c07ecb38522648dc1d8282284e812ed1c18f34dc5566c5ee48ba59534",
+    "revisions_current": "83ec3027a5afe8f5eafcb4d5a480fba62e172de84f5491d6b910dd3b0b59e8b8"
+  },
+  "head": "8214208",
+  "observed_utc": "2026-10-19T18:40:27.568432Z",
+  "preservation_paths": [
+    "data/deep_review_20261017/work/0376_resume.json",
+    "data/deep_review_20261017/work/0376_primary_facts_1826.json",
+    "data/deep_review_20261017/work/0376_facts_1721.json",
+    "data/deep_review_20261017/work/0364_facts_1551.json",
+    "data/deep_review_20261017/work/0364_primary_refresh_1646.json",
+    "data/deep_review_20261017/work/0304_catalysts_0100.json",
+    "data/deep_review_20261017/work/0168_final.json",
+    "data/deep_review_20261017/work/0376_rank_sensitivity_1830.json",
+    "data/deep_review_20261017/work/0376_0280_quote_1834.json",
+    "data/deep_review_20261017/work/0376_economics_1834.json",
+    "research/2026-10-17-deep-review/evaluations/0376.json",
+    "research/2026-10-17-deep-review/evaluations/0376.md",
+    "research/2026-10-17-deep-review/models/0376_primary_1833.json",
+    "research/2026-10-17-deep-review/models/0376_rank_model_1830.py",
+    "research/2026-10-17-deep-review/revisions/0280_20261019T183408595244Z.json",
+    "research/2026-10-17-deep-review/revisions/0280_20261019T183408595244Z.md",
+    "research/2026-10-17-deep-review/evaluations/0280.json",
+    "research/2026-10-17-deep-review/evaluations/0280.md"
+  ],
+  "revision280": {
+    "latest_append_row": true,
+    "links_pass": "pass",
+    "prior_base_report_sha256": "7872da3c84a235096563fa45b8df566fdcb26ad270373c7a1686d86292d5c49e",
+    "resume_validation": "pass; latest predecessor/report hashes and append-only revision row verified",
+    "revision_json_sha256": "378196ddc3d198fa9ec9418884a8f04baeb98dd14c74eab0c227c360734344fa",
+    "revision_md_sha256": "e68a98098226105a5a682396ea9eb8f0e148d1cd18250642ccccd7c2d68230a8"
+  },
+  "schema": "periodic1838_ledger_integrity.v1"
+}

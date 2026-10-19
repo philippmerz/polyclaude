@@ -1,0 +1,47 @@
+{
+  "schema": "periodic1838_selected_alert_delta.v1",
+  "compiled_utc": "2026-10-19T18:48:51.942412+00:00",
+  "covered_window": [
+    "2026-10-19T18:15:18Z",
+    "2026-10-19T18:31:35Z"
+  ],
+  "rows": [
+    {
+      "line": 1111,
+      "line_sha256_without_newline": "98d490c5b6f8e18ed8c568827d423a0aebe1c806462fd583b8e0553aceaee961",
+      "id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "ts": "2026-10-19T18:26:06Z",
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Who's winning Michigan Senate race? Latest polls show tightening race - Detroit Free Press",
+      "review_decision_unit": "data/deep_review_20261017/work/periodic1838_primary_review.json"
+    },
+    {
+      "line": 1112,
+      "line_sha256_without_newline": "71b2bcce082f2a78ba834ccde2d3b5831e04f37e06459bb81f9f50c8ab8fcc27",
+      "id": "0e1b45e3f5beedd3680eb5b0d7fc5eb181b24bea",
+      "ts": "2026-10-19T18:26:14Z",
+      "feed": "Israel Knesset Hebrew polls, party lists and elections",
+      "title": "לוד הסירה שלטים של הרשימה המשותפת מרכוש ציבורי בעיר, שלטי הליכוד נותרו - הארץ",
+      "review_decision_unit": "data/deep_review_20261017/work/periodic1838_primary_review.json"
+    },
+    {
+      "line": 1113,
+      "line_sha256_without_newline": "ec035d1940545fb0c24ac0dfd515655e34ae9f958c0bf87f69146bba65c4dd76",
+      "id": "2e6d0b518c1d4e57bbde92cd9c355a55bef9a9f4",
+      "ts": "2026-10-19T18:26:19Z",
+      "feed": "US state gasoline prices and fuel-tax policy",
+      "title": "North Carolina Gas Prices Lowest In US — $3.61 A Gallon - The North Carolina Beat",
+      "review_decision_unit": "data/deep_review_20261017/work/periodic1838_primary_review.json"
+    },
+    {
+      "line": 1114,
+      "line_sha256_without_newline": "1f3f5c28b0deb6199e794b14ae376f9691f2e579d0057ca712547033f7d23212",
+      "id": "e7b9100bc07f7de0686220efae4b2eb4cf30f29c",
+      "ts": "2026-10-19T18:31:35Z",
+      "feed": "Anthropic IPO and valuation news",
+      "title": "Anthropic IPO Prospects Dim Amid Market Uncertainty - GuruFocus",
+      "review_decision_unit": "data/deep_review_20261017/work/periodic1838_primary_review.json"
+    }
+  ],
+  "limits": "Selected exact IDs from the one observed delta; later daemon appends are outside this completed review. Not an inbox/operator history."
+}

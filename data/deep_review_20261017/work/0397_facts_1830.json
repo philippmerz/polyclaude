@@ -1,0 +1,57 @@
+{
+  "compiled_utc": "2026-10-19T18:27:20.900787Z",
+  "conditionId": "0xa8ce9e92890d683bee3fb877f69b88fde9fe6665fdd4e078f84f7c91fdf390be",
+  "coverage_limit": "Captured official materials support appointment/role through Oct 6, not a definitive Oct 19 status. No resignation/removal announcement appears in these captures; this bounded source set is not proof that no later announcement or departure occurred. No official current-status source later than Oct 6 was captured in this pass.",
+  "criteria_sha256": "9a2a2f51f238820902b0446dc2f0245a4c21253653ad2a70f977ece50b16ae9b",
+  "direct_capture_receipts": [
+    {
+      "body_path": "whitehouse_oct6_wiles_quote.body.json.gz",
+      "gzip_sha256": "3d0fd435ac1de41f58dc14fe4adc3f1d6d136ab10cec880e71d723df3dacf3f2",
+      "headers": {
+        "cache-control": "max-age=300, must-revalidate",
+        "content-type": "text/html; charset=UTF-8",
+        "date": "Mon, 19 Oct 2026 18:26:40 GMT"
+      },
+      "name": "whitehouse_oct6_wiles_quote",
+      "raw_bytes": 283892,
+      "raw_sha256": "13d236f4e1a2eea0df3a71a2bc34164b3028ff45f7d2c27f673ddaa32ab2fb6b",
+      "received_utc": "2026-10-19T18:26:40.119782Z",
+      "response_status": 200
+    },
+    {
+      "body_path": "whitehouse_staff_report_july1.body.json.gz",
+      "gzip_sha256": "bb78564db6276029e6a992983ad303492cc5148482fe0e9afb691abad72db5e9",
+      "headers": {
+        "cache-control": "max-age=31536000",
+        "content-length": "251322",
+        "content-type": "application/pdf",
+        "date": "Mon, 19 Oct 2026 18:26:40 GMT",
+        "etag": "\"b1f600fe080ace90\"",
+        "last-modified": "Wed, 01 Jul 2026 15:25:31 GMT"
+      },
+      "name": "whitehouse_staff_report_july1",
+      "raw_bytes": 251322,
+      "raw_sha256": "549c4b93a121dc5ae9905e1584bed9906dff47099013d72eccf46aabad7f2354",
+      "received_utc": "2026-10-19T18:26:40.399193Z",
+      "response_status": 200
+    }
+  ],
+  "exact_rule_window": "An announcement of resignation/removal before Dec 31, 2026 11:59 PM ET resolves Yes immediately even if effective later; otherwise ceasing to be a member by the deadline also qualifies. Covered administration roles include publicly announced White House staff appointments.",
+  "market_id": "948387",
+  "question": "Will Susie Wiles leave the Trump administration before 2027?",
+  "review_index": 397,
+  "timeline": [
+    {
+      "date": "2026-07-01 (roster as-of date in document)",
+      "fact": "White House annual staff report lists Susan S. Wiles as an employee, Assistant to the President and Chief of Staff. PDF page 7 in the extracted text.",
+      "receipt": "whitehouse_staff_report_july1",
+      "source": "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf"
+    },
+    {
+      "date": "2026-10-06",
+      "fact": "Official White House release quotes \u201cWhite House Chief of Staff Susie Wiles\u201d on the administration diesel announcement, showing her publicly presented in that role on that date.",
+      "receipt": "whitehouse_oct6_wiles_quote",
+      "source": "https://www.whitehouse.gov/releases/2026/10/what-they-are-saying-president-trump-delivers-immediate-diesel-relief-saving-americans-up-to-100-per-fill/"
+    }
+  ]
+}

@@ -1,0 +1,1 @@
+{"name":"constitution","request":{"method":"GET","read_only":true,"scope":"Official Korea Legislation Research Institute English Constitution page, Article 65 impeachment provisions","url":"https://elaw.klri.re.kr/eng_service/jomunPrint.do"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:27:46.764676Z","timing_basis":"call_window"}

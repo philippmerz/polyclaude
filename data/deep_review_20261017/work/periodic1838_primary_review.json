@@ -1,0 +1,80 @@
+{
+  "schema": "periodic1838_primary_review.v1",
+  "reviewed_utc": "2026-10-19T18:45:39.236361+00:00",
+  "bounded_scope": "Backlog/recent-journal review; new18:26Michigan alert revalidated; existing376/280 research records preserved. No next valuation begun by this scheduled run.",
+  "news_cutoff_utc": "2026-10-19T18:15:18Z",
+  "news_reviewed_through_utc": "2026-10-19T18:31:35Z",
+  "alert_decisions": [
+    {
+      "id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "decision": "Retain5NO/noadd; classifier direction not adopted. FreePress article/poll identity/date remain inaccessible. Fresh primary Rasmussen release repeats already-used Oct12\u201314wave; changed questionnaire body is recorded, with original dated six-name question verified independently. No measured poll/ballot/candidate change established, not proof no new poll exists."
+    },
+    {
+      "id": "0e1b45e3f5beedd3680eb5b0d7fc5eb181b24bea",
+      "decision": "Local Israeli signage headline; no corresponding current holding or four pendingBUYs. Research-only, no trade."
+    },
+    {
+      "id": "2e6d0b518c1d4e57bbde92cd9c355a55bef9a9f4",
+      "decision": "NC gasoline-price headline; no corresponding current holding/pendingBUY. Research-only."
+    },
+    {
+      "id": "e7b9100bc07f7de0686220efae4b2eb4cf30f29c",
+      "decision": "AnthropicIPO opinion; no corresponding current holding/pendingBUY. Research-only, no forecast credit."
+    }
+  ],
+  "Michigan": {
+    "review_index": 1838,
+    "market_id": "630805",
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
+    "rule": "Dnominee wins2026MIUSSenate inclrunoffs; independents excluded regardlessaffiliation; replacements inheritparty. AP/Fox/NBCunanimouscall elseofficialcertification. NOallnonDwinners.",
+    "p_no_retained": 0.44,
+    "selected_no_retained": 0.34,
+    "broad_no_adverse": 0.2,
+    "forecast_reestimated_from_headline_or_quote": false,
+    "source_unit": "data/deep_review_20261017/work/periodic1838_mi_sources.json",
+    "quote_utc": "2026-10-19T18:41:26.469626+00:00",
+    "quote_and_costs": {
+      "identity_raw_fee_and_books_verified": true,
+      "fee_curve": {
+        "rate": 0.04,
+        "exponent": 1.0,
+        "taker_only": true,
+        "authoritative": true
+      },
+      "book_age_seconds_at_receipt": 0.26441502571105957,
+      "fiveNO_net_exit": 1.458,
+      "central_terminal": 2.2,
+      "selected_terminal": 1.7,
+      "broad_adverse_terminal": 1.0,
+      "exit_plus10pct_one_year_sensitivity": 1.6038,
+      "additional5NO_taker_cost": 1.59278,
+      "additional5NO_selected_profit_before_carry_ops": 0.10721999999999965
+    },
+    "judgment": "Existing selected hold exceeds fee-net exit plus generous cash sensitivity, but broad20%NO favors sale/fullbinaryloss remains possible. No better bid prefix exceeds selected34%. Extra5NO paper selectededge.10722beforecarry/ops is acknowledged; noadd because inaccessible newpoll coverage and shareduncalibrated electionerrors make incrementalallocation unattractive. No invented absolute profitfloor or claim no paperedge. No hidden-info maker at/belowfair.",
+    "joint_risk": "MI5NO1.55cost plus fourunfilledBUY7.52canalllose9.07; no measured hedge credit. ExistingClaritywhole29/29floorconditional on oracle/venue/system; prior18UTCjointwealth scenarios remain dated, not probabilities.",
+    "decision": "Retain existing5NO; noadd/order/newmaker/numerical-prior/reservation change."
+  },
+  "account_verification": "data/deep_review_20261017/work/periodic1838_account_verification.json",
+  "research_counts": {
+    "completed_valuations": 346,
+    "blocked_after_in_depth_review": 9,
+    "factual_exclusions": 364,
+    "pending": 2281,
+    "base_records": 719,
+    "revisions_written": 64,
+    "active_indices": [
+      378
+    ]
+  },
+  "research_new_since_prior_closeout": {
+    "376": "Valued18:33; noentry.",
+    "280": "Append-onlyrevision18:34;35%YES, noentry.",
+    "378": "Active; facts saved, no forecast/economics/report completed.",
+    "verification": "data/deep_review_20261017/work/periodic1838_ledger_integrity.json"
+  },
+  "financial_and_operations": "No new full-account financial producer/CSVrow. Last18:03producer and18UTCfull safety work retain originalclocks; quickstatus18:40has0hurdle/watchlisthits/no failuremarker, nestedchildrcnotseparatelyexposed.",
+  "next": "Existing22UTC lightcheck ANDIdaho630707pullALLunfilled/earliermaterialpoll,candidate,ballot,turnoutuncertaintycancel-first/noadd/repost; fullOct20 02UTC. WeeklyOct23/monthlyNov12notdue.",
+  "telegram": "No materialtrade/fill/priorchange or globalblock; no routineTelegram.",
+  "goal": "No lifecyclechange/newgoal/timer/idlefollowup; end bounded run."
+}

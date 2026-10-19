@@ -1,0 +1,63 @@
+{
+  "schema": "deep_review.fact_unit.v1",
+  "index": 400,
+  "captured_utc": "2026-10-19T18:26:49Z",
+  "identity": {
+    "market_id": "2965274",
+    "condition_id": "0x7c0b6291b3448d77362635d310d8b45b788f84490a1a18d0da4231a60a296c99",
+    "criteria_sha256": "a063abcb3e8a04fa9ce479cae78a665c2ce53cddcaba2f6790f8834789245e60",
+    "question": "Will Dolly Parton be the #1 searched passing on Google this year?"
+  },
+  "operative_rule": "Named winner must be #1 in Google official Year in Search Global → Trending → Passings for 2026. Settlement uses the specified list, regardless of navigation. If Google does not release the specified 2026 list by 2027-03-31 23:59 ET, market resolves Other. This differs from total search volume and from a generic weekly Google Trends peak.",
+  "facts": [
+    {
+      "claim": "Official Dolly Parton site published an announcement dated 2026-08-25 stating she died that day in Nashville at age 80; the article names her music, acting, philanthropy, writing and other public roles.",
+      "source_url": "https://www.dollyparton.com/news/official-announcement-dolly-parton-passes-away-at-80",
+      "source_published_date": "2026-08-25",
+      "retrieved_utc": "2026-10-17T21:32:20.775220+00:00",
+      "http_status": 200,
+      "raw_sha256": "bb4de3ee894918888543d4b264f83c43e6c23a816e89420eb179751c25ca3c7d",
+      "gzip_sha256": "57580cc5fced4e014699a425d16863d25b98f6d4c0b4f2b3dd1c204b05101d31",
+      "body_path": "logs/deep_review_20261017/google_2026_competitor_sources/dolly_parton_passing.body.gz",
+      "receipt_path": "logs/deep_review_20261017/google_2026_competitor_sources/dolly_parton_passing.receipt.json"
+    },
+    {
+      "claim": "The exact official Global 2026 Year in Search route returned HTTP 404; this documents that route response only and does not establish that no 2026 list exists on another route or will be published.",
+      "source_url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "request_started_utc": "2026-10-19T18:26:33.911515Z",
+      "response_received_utc": "2026-10-19T18:26:34.307868Z",
+      "http_status": 404,
+      "raw_bytes": 58133,
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+      "body_path": "logs/deep_review_20261017/0400_sources_20261019/google_2026_global.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/0400_sources_20261019/google_2026_global.receipt.json"
+    },
+    {
+      "claim": "The 2025 official method defines Year in Search trends by fastest increase in search interest/traffic against the same period of the prior year using Google Trends plus internal tools; it is not absolute or total search volume. The retained method is explicitly about 2025; its exact cutoff/formula cannot be transferred as an established 2026 fact.",
+      "source_url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "published_scope": "2025 method",
+      "capture_utc": "2026-10-17T20:59:53.678601+00:00",
+      "raw_sha256": "ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830",
+      "source_unit": "data/deep_review_20261017/google_historical_category_sources.json",
+      "capture_index": "data/deep_review_20261017/google_time_sources.json"
+    },
+    {
+      "claim": "A prior official Google Trends comparison requested Jan 1–Oct 17, 2026, worldwide/global, category 0, web search, with Chuck Norris, Alex Pretti, Kevin Keegan, Franco Baresi and Dolly Parton. It returned HTTP 429, no values; this is an access gap, not zero interest or a ranking.",
+      "request_started_utc": "2026-10-17T21:30:53Z",
+      "response_utc": "2026-10-17T21:30:53Z",
+      "http_status": 429,
+      "body_sha256": "15593c0247c26cfede6195f0546d8c896d2fb9e280e7ccbc72dc1d6543fd3905",
+      "gzip_sha256": "1ad9c2e5187bf327f2067f9260ea2498dd5805d685b30cd14c809863a4701cfe",
+      "receipt_path": "logs/deep_review_20261017/google_2026_competitor_sources/global_passings.explore.receipt.json",
+      "body_path": "logs/deep_review_20261017/google_2026_competitor_sources/global_passings.explore.body.gz",
+      "scope": "Official Trends query: Global geography, category 0, web search; five named terms including Dolly; 2026-01-01 through 2026-10-17. Query/term list and request details retained in linked source packet."
+    }
+  ],
+  "limits": [
+    "No 2026 official Global Passings ranking was located in the bounded captures.",
+    "No returned Google comparison values for the named group; do not infer relative rank or probability from the 429.",
+    "The 2025 method and list do not establish 2026 data window, aliases, internal formula or eventual rank."
+  ],
+  "no_valuation": true
+}

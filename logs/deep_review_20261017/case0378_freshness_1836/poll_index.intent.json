@@ -1,0 +1,1 @@
+{"name":"poll_index","request":{"method":"GET","read_only":true,"scope":"bounded public South Carolina election facts","url":"https://politikool.com/polls/governors/south-carolina"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:35:24.796773Z","timing_basis":"call_window"}

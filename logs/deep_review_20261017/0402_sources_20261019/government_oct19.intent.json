@@ -1,0 +1,1 @@
+{"name":"government_oct19","request":{"method":"GET","read_only":true,"scope":"Official Republic of Korea policy briefing dated 2026-10-19 about President Lee Jae-myung","url":"https://www.korea.kr/briefing/presidentView.do"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:27:43.921113Z","timing_basis":"call_window"}

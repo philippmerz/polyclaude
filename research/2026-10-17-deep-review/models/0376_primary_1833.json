@@ -1,0 +1,100 @@
+{
+  "schema": "primary_dec31_global_marketcap376.v1",
+  "created_utc": "2026-10-19T18:30:50.870186+00:00",
+  "review_index": 376,
+  "own376_quote_unread": true,
+  "scope": "ExactworldlargestcompanyDec31close/credibleconsensus; currentjointworldwinnerforecast, not offchaininvestment or independentpeermultiplication.",
+  "current_provider_caps_trillion": {
+    "NVDA": 5.267,
+    "AAPL": 4.991,
+    "MSFT": 3.962,
+    "Alphabet": 4.169
+  },
+  "source_clocks": "Vendor16:45:49Oct19/notcertifiedclose; currentissuer18:26capturedAug26transcript/Sep28authorization, not new19Octguidance.",
+  "price_process": "Equal20/87-row covariance windows, centered89logreturns/verified2Julyannouncementrowsremoved;52sessions/51sensitivity;independent8%terminaleventshocks. Currentcapanchors, no rallyextrapolation/directionalalpha.",
+  "global_fork": ".94 conditional four-company winner + .03 Tesla + .01 SaudiAramco + .02 allothercompanies.",
+  "normalization_reason": "Do not add existingTesla3% andAramco1% on top of a normalizedtopfour. Six-state diagnostic had too-smallOther aggregate forknownresidualpriors. Explicit7-statefork repairslocaluniversecoherence beforequote; tails are judgments, not calibratedcensus.",
+  "joint_formula_results": {
+    "base": {
+      "NVDA": 0.5361712999999999,
+      "AAPL": 0.34971759999999996,
+      "MSFT": 0.015947099999999995,
+      "Alphabet": 0.038164,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    },
+    "51sessions": {
+      "NVDA": 0.5371065999999998,
+      "AAPL": 0.3495155,
+      "MSFT": 0.0156839,
+      "Alphabet": 0.037694,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    },
+    "no_extra_event": {
+      "NVDA": 0.5715294,
+      "AAPL": 0.3426864,
+      "MSFT": 0.0051559,
+      "Alphabet": 0.020628300000000002,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    },
+    "wide_event": {
+      "NVDA": 0.47641549999999994,
+      "AAPL": 0.3420754,
+      "MSFT": 0.04565579999999999,
+      "Alphabet": 0.0758533,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    },
+    "NVDA_relative_minus5": {
+      "NVDA": 0.44032889999999997,
+      "AAPL": 0.42666599999999993,
+      "MSFT": 0.021507199999999997,
+      "Alphabet": 0.0514979,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    },
+    "NVDA_relative_plus5": {
+      "NVDA": 0.6262232999999999,
+      "AAPL": 0.27542469999999997,
+      "MSFT": 0.011416299999999997,
+      "Alphabet": 0.026935699999999996,
+      "Tesla": 0.03,
+      "SaudiAramco": 0.01,
+      "Other": 0.02
+    }
+  },
+  "adopted_joint_winner_probabilities": {
+    "NVDA": 0.536,
+    "AAPL": 0.35,
+    "MSFT": 0.016,
+    "Alphabet": 0.038,
+    "Tesla": 0.03,
+    "SaudiAramco": 0.01,
+    "Other": 0.02
+  },
+  "rounding": "Base conditionalglobalwinnerraw probabilities rounded0.1pp;7outcomes sum1; computationalprecision is not forecastcertainty.",
+  "adopted_NVDA_yes": 0.536,
+  "range_NVDA_yes": [
+    0.25,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_NVDA_yes": 0.336,
+  "selected_NVDA_no": 0.264,
+  "reserve_reason": "10ppnonstationaryreturns/earnings/drift/capacity;5globaluniverse/shareclasses/denominator/consensus;5conditionalfills/information. Fixedbefore own376quote; broadadversecasesworse thanselected.",
+  "known_catalysts": "NVDAissuertranscriptNov17Q3 BEFOREDec31; AppleNov2/MSFTAlphabetOct28 alsoinside. Aug26$108B\u00b12Q3guidance/FY28~70% is publicexpectation, not excessreturnalpha. Sep28additional150Bbuyback/$235Bremaining is authorization, not actualsharechange.",
+  "family": "PriorApple28040.009% andMSFT214% are differentlydated models, not currentindependentsignals. CurrentApple35% explicitlyrevaluewith376 beforefurtherentryuse; Tesla3/Aramco1 consistentresidualbudgets. No financialposition inthesecompanies.",
+  "source_hashes": {
+    "data/deep_review_20261017/work/0376_rank_sensitivity_1830.json": "622f76ca4c9d7967d3d504cc7f34c0671bb7f71d11435091baa0cdec4f4bbaa6",
+    "data/deep_review_20261017/work/0376_primary_facts_1826.json": "2a508a26976d92ef9f5ba2e17ef336a4c825a8e4282b533bbae554281c5e3044",
+    "data/deep_review_20261017/work/0364_primary_refresh_1646.json": "0e2b8073c905f0e79316fb2c48e49cd15789701fa7adc6f38fc0fdcea890e85c"
+  },
+  "limits": "No option-implied calibration/globalcensus;8%shocks arbitrary/residualearnings maydoublecount;currentvendorFX/shares/timeunverified; fixedfiledsharehistory/multiclassconventions; outsidertailsnormalizationnotmeasurement.52includespartialcurrentday/fullvarianceearlycloses. Broadrange andactualreservearejudgment, not a guaranteedbound."
+}

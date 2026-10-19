@@ -1,0 +1,1 @@
+{"name":"whitehouse_staff_report_july1","request":{"method":"GET","read_only":true,"scope":"case397_primary_source","url":"https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:26:40.137342Z","timing_basis":"call_window"}

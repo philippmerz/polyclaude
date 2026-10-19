@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T18:02:44.080835+00:00
+Updated: 2026-10-19T18:34:19.077741+00:00
 
-**345 valuations saved; first milestone100:** 345 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2282 pending.
+**346 valuations saved; first milestone100:** 346 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2281 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -291,7 +291,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |278|[Will "Love Is Blind: Boston" be the #2 US Netflix show this week?](revisions/0278_20261018T221454246763Z.md)|valued|NO ENTRY: one cappedUSD1maker attempt SKIP at2c>1chardcap; auth/reservations/CTFsunchanged. Candidateclosed/no retry; noholding/spend/financialwriter.|
 |279|[Spread: Paris Saint-Germain FC (-1.5)](evaluations/0279.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-|280|[Will Apple be the largest company in the world by market cap on December 31?](evaluations/0280.md)|valued|NO ENTRY: YEScentralpositive butselected20.01%fails29.35%fee-inclusivecost;NOcentralnegative. Bothsidespass/no financial action.|
+|280|[Will Apple be the largest company in the world by market cap on December 31?](revisions/0280_20261019T183408595244Z.md)|valued|NO ENTRY unchanged: YEScentralpositive butselected15% failscurrentfee-inclusive27.42%cost/current25cmaker; NOcentralnegative. Sharedworldmodel explicitlyupdated without overwriting prior report.|
 |281|[Will the highest temperature in Amsterdam be 14°C on October 17?](evaluations/0281.md)|excluded_factual|FACTUAL EXCLUSION: exact contract closed/nonaccepting; no current entry route.|
 |282|[Will the Democrats win the Ohio Senate race in 2026?](evaluations/0282.md)|valued|No entry: YESpositivecentral but10ppstressnegative at66cask; NOnegativecentral. MakerwatchYES<=.63 orNO<=.13/<=10shares withfreshallgates.|
 |283|[Will the Democratic Party win the NV-03 House seat?](evaluations/0283.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -387,6 +387,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |374|[Will the Ornn B200 Index be at least $7.00 on December 31, 2026?](evaluations/0374.md)|valued|No entry: YES negative central; NO central positive but fails prequote20pp selected forecast and competitive maker prices. Remains eligible for new evidence/price.|
 |375|[European Open, Qualification: Kimmer Coppejans vs Andrea Guerrieri](evaluations/0375.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|376|[Will NVIDIA be the largest company in the world by market cap on December 31?](evaluations/0376.md)|valued|NO ENTRY: YES centralnegative; NO centralpositive butselected26.4% belowfee-inclusive32.87%cost/current29cmakerbid. Local joint-universe normalization repaired; no globalblock.|
 |377|[Will the highest temperature in Guangzhou be 33°C on October 17?](evaluations/0377.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -730,3 +731,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 378
