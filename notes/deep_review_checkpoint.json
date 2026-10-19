@@ -1,18 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-19T00:29:40.698417+00:00",
+  "updated_utc": "2026-10-19T01:25:18.521160+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 307,
-  "completed_valuations": 303,
+  "completed_in_depth_reviews": 310,
+  "completed_valuations": 306,
   "blocked_after_in_depth_review": 4,
   "factual_exclusions": 344,
-  "pending": 2349,
-  "active_indices": [],
+  "pending": 2346,
+  "active_indices": [
+    305
+  ],
   "next_pending_indices": [
-    301,
-    302,
-    304,
     305,
     306,
     307,
@@ -39,15 +38,18 @@
     338,
     339,
     340,
-    342
+    342,
+    343,
+    344,
+    345
   ],
-  "base_records": 651,
+  "base_records": 654,
   "base_record_counts": {
-    "blocked_after_review": 5,
+    "valued": 305,
     "excluded_factual": 344,
-    "valued": 302
+    "blocked_after_review": 5
   },
-  "revisions_written": 47,
+  "revisions_written": 52,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -58,8 +60,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 651,
-  "ledger_sha256": "0dfcf61ec46b0864aa5c285fe60eccaa18ae3f8293586fd4da6b4627ff54076d",
-  "revisions_sha256": "3b6f875574e4e230f30dd178ca6fe2360c0957da4c1b1e8a6fc6de7e5fc53baa",
+  "evaluations_written": 654,
+  "ledger_sha256": "96f573ced83708434800a3b0e7c8be79fa9b3c5d34eb5490dd6743fb6563eb8d",
+  "revisions_sha256": "7ccade16194c7e84f30f4e4075f5926feb085cd46a0b0f51e6fb5e9d94d9048b",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

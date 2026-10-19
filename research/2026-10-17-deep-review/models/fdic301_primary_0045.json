@@ -1,0 +1,93 @@
+{
+  "review_index": 301,
+  "saved_utc": "2026-10-19T00:34:20.061525+00:00",
+  "priceblind": true,
+  "p_yes": 0.5202379534327793,
+  "low": 0.2,
+  "high": 0.9,
+  "actual_entry_reserve_pp": 15,
+  "method": "Discounted historical Gamma-Poisson annual failure hazard, updated with6 current-year FDIC-listed closures; posterior predictive chance of\u22651 further closing plus explicit small unreported in-window branch. Primary time-discount/weak prior, not calibrated structural banking model.",
+  "historical_year_counts": {
+    "2015": 8,
+    "2016": 5,
+    "2017": 8,
+    "2018": 0,
+    "2019": 4,
+    "2020": 4,
+    "2021": 0,
+    "2022": 0,
+    "2023": 5,
+    "2024": 2,
+    "2025": 2
+  },
+  "source_paths": [
+    "work/0301_creation_source_followup_2359.json",
+    "work/0301_history_0040.json",
+    "work/0301_root_source_0040.json"
+  ],
+  "inputs": {
+    "current_year_closures": 6,
+    "current_list_latest_date": "2026-09-25",
+    "market_created_at_utc": "2026-09-28T23:24:07.428036Z",
+    "asof": "2026-10-19T00:34:20.061525+00:00",
+    "observed_2026_years": 0.7967548218393264,
+    "future_years": 0.20324327557315447,
+    "future_calendar_days": 74.18379558420138,
+    "historical_weight": "exp(-(2026-year)/3); all eleven years incl zero-failure years",
+    "weak_gamma_prior": {
+      "shape": 0.5,
+      "rate_years": 0.125,
+      "mean_annual_rate": 4
+    },
+    "hidden_already_qualifying_branch": 0.005
+  },
+  "posterior": {
+    "alpha": 12.509681848805279,
+    "beta_years": 3.3848687308158816,
+    "posterior_mean_annual_rate": 3.695765727904601,
+    "p_future_failure": 0.5178270888771652,
+    "p_yes_with_hidden_branch": 0.5202379534327793
+  },
+  "formula": "a=.5+sum(w_y*count_y)+6; b=.125+sum(w_y)+observed_years; p_future=1-(b/(b+remaining_years))**a; pYES=.005+.995*p_future. Gamma uncertainty shared across banks; no independent-bank multiplication.",
+  "sensitivities": {
+    "tau1": {
+      "alpha": 7.770275218912142,
+      "beta_years": 1.503721808707828,
+      "posterior_mean_annual_rate": 5.167362190210743,
+      "p_future_failure": 0.6265857610344894,
+      "p_yes_with_hidden_branch": 0.6284528322293169
+    },
+    "tau10": {
+      "alpha": 25.58773835854486,
+      "beta_years": 7.265038007996037,
+      "posterior_mean_annual_rate": 3.5220377829245373,
+      "p_future_failure": 0.5063855532133892,
+      "p_yes_with_hidden_branch": 0.5088536254473223
+    },
+    "empirical_late_year_timing_only": {
+      "alpha": 12.509681848805279,
+      "beta_years": 3.3848687308158816,
+      "posterior_mean_annual_rate": 3.695765727904601,
+      "p_future_failure": 0.43466716330679633,
+      "p_yes_with_hidden_branch": 0.43749382749026233
+    },
+    "half_hazard": {
+      "alpha": 12.509681848805279,
+      "beta_years": 3.3848687308158816,
+      "posterior_mean_annual_rate": 3.695765727904601,
+      "p_future_failure": 0.30929494506978683,
+      "p_yes_with_hidden_branch": 0.3127484703444379
+    },
+    "double_hazard": {
+      "alpha": 12.509681848805279,
+      "beta_years": 3.3848687308158816,
+      "posterior_mean_annual_rate": 3.695765727904601,
+      "p_future_failure": 0.7579723482468061,
+      "p_yes_with_hidden_branch": 0.7591824865055721
+    },
+    "hidden0": 0.5178270888771652,
+    "hidden3pct": 0.5322922762108503
+  },
+  "context": "Current named list6closures Jan30/May1/Jul10/Jul17/Aug21/Sep25 all precreation, no displayed qualifying closing; root rawSHA/tables verified. APIAug25indexomitslast2 and cannot prove currentabsence. Completed2019\u201325 annualcounts matchQBP. Q2Aug25reports47problem institutions/1.1%,2failures throughJune30; problem-bank assets omitted by policy. These are context, not new independent hazardmultipliers.",
+  "limits": "Annual hazard can change with regulators,CRE/funding stress, idiosyncratic losses and avoidance/merger resolutions. Exp(-age/3), weakGamma prior, hidden0.5% and continuous-time approximation are primary choices, not empirically fit. Only38historicfailures/11years; six afterOct18 vs7.72 expected underuniform calendar is weak seasonality, not stable forecast. Closures oftenFridays/holidays; no daily scheduling model. FDIClist publication canlag; rule waits for updated list and permits other official FDIC/government statements. Existing source absence not futureabsence. Broad20\u201390range is sensitivity, no probability floor/K5."
+}

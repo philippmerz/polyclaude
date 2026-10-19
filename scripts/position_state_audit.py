@@ -309,6 +309,16 @@ def _iso_date(value: object) -> dt.date | None:
         return None
 
 
+def _criteria_read_date(value: object) -> tuple[str, str | None]:
+    """Return a sortable ISO date; malformed metadata is explicitly unknown."""
+    parsed = _iso_date(value)
+    if parsed is not None:
+        return parsed.isoformat(), None
+    if value is None or (isinstance(value, str) and not value.strip()):
+        return "1970-01-01", None
+    return "1970-01-01", f"invalid criteria_read value ({type(value).__name__})"
+
+
 def _matching_prior(priors: dict, slug: str) -> tuple[str, dict] | None:
     exact = priors.get(slug)
     if isinstance(exact, dict):
@@ -647,7 +657,9 @@ def main() -> int:
             continue
         if not any(k in s or s in k for s in live):
             continue
-        cr = v.get("criteria_read") or "1970-01-01"
+        cr, criteria_error = _criteria_read_date(v.get("criteria_read"))
+        if criteria_error:
+            issues.append(f"PRIOR metadata stale: {k[:52]} has {criteria_error}; re-read criteria")
         if oldest_date is None or cr < oldest_date:
             oldest_key, oldest_date = k, cr
     # Threshold, not just "oldest" (2026-08-05): flagging the oldest EVERY tick

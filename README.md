@@ -54,11 +54,13 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — October18
+## Active in-depth review — October19
 
-**303 valued /4 blocked /344 factual exclusions /2,349 pending**;651 immutable base cases +47 append-only revisions. Next301; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (Telegram1256). Save/index EACH completion; [resume interface](research/2026-10-17-deep-review/RESUME.md) loads one full rule/latest report and named2–5KB source/model units, with an8KB hard cap.
+**306 valued /4 blocked /344 factual exclusions /2,346 pending**;654 immutable base cases +52 append-only revisions. Next305; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (TG1256). Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; entire revision history verified while emitted metadata is bounded. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
 
-**Three new LIVE, unfilled bids:** [DEC0220 Yisrael Beiteinu](research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md),11YES10c/$1.10; [DEC0221 state gas](research/2026-10-17-deep-review/gas296_entry_outcome_2355.md),5YES54c/$2.70; [DEC0222 Whalefall](research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md),6NO17c/$1.02. Auth00:23:44/fresh chain00:25:14 prove zero matched/target balances; nine BUYs reserve$16.64, pUSD18.846890/free2.206890. **Pull ALL three unfilled Oct19 02UTC**, earlier unassessed material news CANCEL FIRST; no add/replay/repost. Commitments are not holdings or PnL. Likud294 and Netflix278 closed unplaced. Research probabilities are judgments, not execution instructions.
+**Whalefall originalDEC0222 filled6NO17c/$1.02 at01:04:56; DEC223retain/noadd.** Successful receipt/CTFs/index/directorder independently agree. Both01:11named sources still8mESTIMATE; no final actual. SelectedNO42.10% versus0.84438 indicative net sale; uncalibrated model/fullcashlosspossible. [Current outcome](research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md). Original02UTC BUYpull obsolete; holdingreview02UTC.
+
+**293YB11YES10c/$1.10 and296gas5YES54c/$2.70 remain LIVE/unfilled. PullALL02UTC**, earlier unassessed material news CANCEL FIRST; noadd/replay/repost. EightBUYs15.62 reserved; last fixedpUSD17.826890/free2.206890, [sequential proof](data/deep_review_20261017/work/0299_reconcile_0135.json). [300Delcy](research/2026-10-17-deep-review/delcy300_unplaced_outcome_0120.md) closedunplaced19c>18c cap, dryrunonly/0financialcalls;302maker candidate unplaced. Research probabilities are judgments, not execution instructions.
 
 BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 
@@ -100,7 +102,7 @@ Retain/noadd HLE9NO, Michigan5NO, Messi5YES, OpenRouter5NO, completeClarity29/29
 
 HLE cached ordinaryAccuracy53.6<55; originfreshnessunknown. Diamond59.9 is a differentmetric in the same row. OpenRouterpartialcurrentweek is not futuretargetsettlement. Senate proceduralcloture is not finalClaritypassage. Adverse scenarios still favor exit; retainedforecasts are not guaranteed floors.
 
-Currentcommitments independently23:20:35: **7LIVEBUY12.92**,7linkedreservations,pUSD18.846890/free5.926890;293bothCTFs0. This updates commitments only; displayedfull-account marks remain the dated22review, no newperformanceCSVrowforanunfilledbid.
+Current commitments/Whalefall fill are updated above; the displayed full-account marks remain the dated22UTC review. No performanceCSV point is inferred from a partial account observation.
 
 RawRSS Telegramoff; actualexposure IDs constrain materialreview, pending≠reviewed. [Routingproof](research/2026-10-18-news-review-routing.md). SedgwickBUYpullOct19 10UTC;Idaho22UTC; earlieruncertainty cancelsFIRST. Nextheldreview02UTC. [Chart/CSVmethodology](docs/README.md).
 

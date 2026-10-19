@@ -1,5 +1,5 @@
 {
-  "next_id": 223,
+  "next_id": 224,
   "decisions": [
     {
       "id": 1,
@@ -4784,6 +4784,38 @@
       "pull_at": "2026-10-19T02:00:00Z",
       "research_report": "research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md",
       "verification": "data/deep_review_20261017/work/0299_root_postproof_0035.json"
+    },
+    {
+      "id": 223,
+      "timestamp": "2026-10-19T01:23:09.726700+00:00",
+      "type": "skip",
+      "thesis": "OriginalDEC222 maker filled6NO17c/$1.02; retain6/noadd after fresh named-source/exit review. NO57.1022% central/42.1022% selected versus0.84438 indicative net sale; unfitted small-sample model, fullcashlosspossible. No newBUY orsale.",
+      "confidence": "medium",
+      "prediction": "Exact final domestic Oct16\u201318>=8m paysNO; both01:11namedrowsstill8mESTIMATE. Original02UTC BUYpullobsolete; holdingreviewexisting02UTC/earliermaterialnews. Noadd/repost/replay.",
+      "size_usd": 0,
+      "holding_cost_usd": 1.02,
+      "shares": 6,
+      "side": "NO",
+      "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+      "resolution_at": "2026-10-24",
+      "tags": [
+        "polymarket",
+        "deep-review",
+        "confirmed-fill",
+        "retain-no-add",
+        "film-boxoffice-2026"
+      ],
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "original_decision_id": 222,
+      "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
+      "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "market_id": "5394247",
+      "financial_status": "HELD_FULLY_FILLED",
+      "filled_shares": 6,
+      "research_report": "research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md",
+      "verification": "data/deep_review_20261017/work/0299_root_fill_verified_0125.json"
     }
   ]
 }

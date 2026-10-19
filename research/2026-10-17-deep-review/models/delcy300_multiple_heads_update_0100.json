@@ -1,0 +1,59 @@
+{
+  "review_index": 300,
+  "saved_utc": "2026-10-19T00:47:27.888775+00:00",
+  "priceblind": false,
+  "p_yes": 0.74592,
+  "low": 0.1,
+  "high": 0.96,
+  "actual_entry_reserve_pp": 15,
+  "method": "Conditional current-role validity and four explicit political-continuity hypotheses toDec31 noonET; primary scenario weights, not historical hazard calibration.",
+  "source_paths": [
+    "work/0300_facts_2355.json",
+    "work/0300_un_pdf_extract_0000.json",
+    "work/0300_status_instrument_0000.json",
+    "work/0300_term_challenge_0030.json",
+    "work/0300_un_pdf_page49_0010.json",
+    "work/0300_multiple_heads_0100.json"
+  ],
+  "current_role": {
+    "qualifying_probability": 0.88,
+    "basis": "CurrentOct17/11government plainPresidenta plusUNHeadOfState favorDelcy. Root verified May19article callsMadurohead-of-state while quoting earlier Saabdenunciation; noncontemporaneous, notverified currentdualofficiallist. Ifcurrentgovernmentunclear, explicitUNfallbackfavorsDelcy; earliest-clause requirescurrentmultipleofficialheads. Do notassertMaduroformer or laterinstrumentabsence.",
+    "residual_legal_or_source_risk": 0.12,
+    "limit": "Lowered qualifyinghypothesis96\u219288% toallow noncontemporaneous competing titles/laterlegalinstruments and primary/earliest interpretation; uncalibrated primaryweight, not legalcertification or data-derived posterior. No knowncurrentdualdesignation established; no proof noneexists."
+  },
+  "conditional_on_current_validity": [
+    {
+      "scenario": "continuity or same-person formal upgrade",
+      "weight": 0.81,
+      "p_delcy_at_target": 1
+    },
+    {
+      "scenario": "negotiated transition or election before target",
+      "weight": 0.12,
+      "p_delcy_at_target": 0.2
+    },
+    {
+      "scenario": "elite replacement",
+      "weight": 0.05,
+      "p_delcy_at_target": 0
+    },
+    {
+      "scenario": "abrupt security/health removal",
+      "weight": 0.02,
+      "p_delcy_at_target": 0
+    }
+  ],
+  "if_current_role_invalid_p_yes": 0.1,
+  "formula": ".88*(.81+.12*.20)+.12*.10 = .74592",
+  "sensitivities": {
+    "current_validity50pct": 0.46699999999999997,
+    "current_validity20pct": 0.24680000000000002,
+    "current_validity100pct": 0.834,
+    "selected_p_at_center": 0.59592,
+    "qualifying_weight_break_even_at17c_plus1c_cost_and15pp_reserve": 0.31335149863760214
+  },
+  "limits": "Retention probabilities/transition chances and legalweight are primary judgment, not calibrated hazard. No verified election/term extension calendar from bounded sources; do not claim noneexists. Currentofficialrole not a guarantee ofDec31status. Broad45\u201396%rangeallowscompoundpolitical/legal shocks. MiddayETcontract cut overridesAPIyearendtime. Exactrole/identityformal-effective-time exclusions andUNfallbackmustremain; no automaticpermanent-presidentrequirement. Broad10\u201396% sensitivity includes failure of current-role eligibility. Nothing in retrieved ruling proves all later term challenges resolved; no verified later AN/CNE instrument. Current-title evidence does not establish constitutional immunity or guarantee retention. Source/rulebranchcanwipeentirepilot; hypothesisbreak-evenfor17c+1ccost+15ppreserve isqualifyingweight\u224831.34%, not observedfrequency. Boundedpriceblindsourcefactsdo not establish absenceoflateract. Current source/venue/account/portfolio/monitoring stillrequired beforeonewriter.",
+  "original_priceblind_model": "models/delcy300_primary_0015.json",
+  "postquote_source_update": "Primary readnewMay19/Oct17 current-role challenge, loweredcurrent-rolequalifyingweight96\u219288%, physicalretentionhypothesesunchanged. NewYES74.592%,15ppselected59.592%; quote didnotsetprobability.",
+  "previous_model": "models/delcy300_source_update_0035.json"
+}

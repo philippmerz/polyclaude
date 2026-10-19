@@ -36,6 +36,49 @@ def test_no_pending_order_retains_orphan(monkeypatch):
     ]
 
 
+@pytest.mark.parametrize("bad_value", [True, "not-a-date", "2026-02-30"])
+def test_criteria_read_bad_metadata_is_unknown_not_comparable(bad_value):
+    date, issue = audit._criteria_read_date(bad_value)
+    assert date == "1970-01-01"
+    assert issue and "invalid criteria_read" in issue
+
+
+def test_malformed_criteria_read_does_not_abort_claim_insurance_audit(
+    monkeypatch, capsys
+):
+    today = audit.dt.date.today().isoformat()
+    live = [
+        {"slug": "held-a", "size": 2, "outcome": "Yes", "curPrice": 0.4,
+         "asset": "asset-a", "endDate": "2027-12-31"},
+        {"slug": "held-b", "size": 3, "outcome": "No", "curPrice": 0.6,
+         "asset": "asset-b", "endDate": "2027-12-31"},
+    ]
+    priors = {
+        "held-a": {"criteria_read": True},
+        "held-b": {"criteria_read": today},
+    }
+
+    def load(name, default):
+        return {
+            "position_condition_ids.json": {"positions": []},
+            ".uma_status_cache.json": {},
+            "opportunity_triggers.json": [],
+            "portfolio_kelly_priors.json": priors,
+            "acknowledged_holds.json": [],
+        }.get(name, default)
+
+    monkeypatch.setattr(audit, "_live_positions", lambda: live)
+    monkeypatch.setattr(audit, "_load", load)
+    monkeypatch.setattr(sys, "argv", ["position_state_audit.py"])
+
+    assert audit.main() == 1
+    output = capsys.readouterr().out
+    assert "invalid criteria_read value (bool)" in output
+    assert "CRITERIA RE-READ due" in output
+    assert "SNAPSHOT missing (no claim insurance!): held-a" in output
+    assert "SNAPSHOT missing (no claim insurance!): held-b" in output
+
+
 @pytest.mark.parametrize("changes", [
     {"remainingShares": 0}, {"remainingShares": float("nan")},
     {"orderId": ""}, {"side": "UNKNOWN"},

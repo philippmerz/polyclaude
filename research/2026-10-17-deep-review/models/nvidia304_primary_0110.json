@@ -1,0 +1,114 @@
+{
+  "review_index": 304,
+  "saved_utc": "2026-10-19T00:54:21.130590+00:00",
+  "priceblind": true,
+  "p_yes": 0.014486705780029297,
+  "low": 0.0005,
+  "high": 0.2,
+  "actual_entry_reserve_pp": 15,
+  "method": "Conditional joint rank simulation from matched59daily logreturns; 50%full/50%last20 covariance plus10%diagonal shrink,10futureUSsessions, independent comparator earnings overlays, normal/t5 variance mixture. Primary risk choices/source branch; not calibrated rank probabilities.",
+  "source_paths": [
+    "work/0304_rank_context_0100.json",
+    "work/0304_returns_0100.json",
+    "work/0304_root_return_stats_0105.json",
+    "work/0304_catalysts_0100.json"
+  ],
+  "symbols": [
+    "NVDA",
+    "AAPL",
+    "GOOG",
+    "MSFT",
+    "AMZN"
+  ],
+  "initial_market_caps_USD_T": [
+    5.17,
+    5.011,
+    4.145,
+    3.929,
+    2.698
+  ],
+  "calendar": "10sessions Oct19\u201330; interpretingOct31SaturdayaslatestusableUSclose is BASEHYPOTHESIS, not literal fallback.3%source/reference branch permitsotherinterpretations.",
+  "cov_daily": [
+    [
+      0.00039397968945751357,
+      -4.0207331303027685e-05,
+      4.6977080611400274e-05,
+      7.915991257494765e-05,
+      8.405955509839537e-05
+    ],
+    [
+      -4.0207331303027685e-05,
+      0.00017680799100846243,
+      -3.0938694401748973e-06,
+      -7.972864764426111e-06,
+      -8.544217448130698e-05
+    ],
+    [
+      4.6977080611400274e-05,
+      -3.0938694401748973e-06,
+      0.0002567049403771981,
+      0.00011530902385506368,
+      0.00021329289344159137
+    ],
+    [
+      7.915991257494765e-05,
+      -7.972864764426111e-06,
+      0.00011530902385506368,
+      0.000382303582486858,
+      0.00019302877744759958
+    ],
+    [
+      8.405955509839537e-05,
+      -8.544217448130698e-05,
+      0.00021329289344159137,
+      0.00019302877744759958,
+      0.0004355826830040361
+    ]
+  ],
+  "sample_daily_vol": [
+    0.019848921619511566,
+    0.013296916597785459,
+    0.01602201424219808,
+    0.01955258505893423,
+    0.020870617695795114
+  ],
+  "return_policy": "Provideradjustedcloses forpairedlogreturns; rawalsoverified. No historicalmean/momentum drift extrapolation; zero median logmoves, no arithmetic meanreturn claim. AllrawSHA/numericalarrays/60dates pass.",
+  "simulation": {
+    "n": 262144,
+    "seed": 20261019,
+    "horizon_sessions": 10,
+    "normal_weight": 0.7,
+    "t5_weight": 0.3,
+    "t5_covariance_factor": "multiplywholejointlogshockby sqrt(3/chiSquare5), preservesvarianceunconditionally; sharedvolregime, not independenttails.",
+    "logmove_clip": [
+      -3,
+      3
+    ],
+    "comparator_jump_sigma": [
+      0,
+      0,
+      0.06,
+      0.06,
+      0.06
+    ],
+    "source_reference_branch_weight": 0.03,
+    "p_yes_in_source_branch": 0.1,
+    "rank_test": "Exactlytwoother top5companycaps exceedNVIDIA; no forcedsorttie, continuousdraws. Othercompaniesmodeledonlythroughsource/reference branch, not assumed impossible.",
+    "implementation": "rngz+jnormalantitheticpairs,chiSquare5paired; lr=sqrt(10)*z@chol(cov).T+j*jump; normalcap=c*exp(clip(lr,-3,3)); tailcap=c*exp(clip(lr*sqrt(3/chi),-3,3)); 3%sourcebranch. Researchscript work/0304_model_0110.py."
+  },
+  "result": {
+    "normal_rank3": 0.0107879638671875,
+    "t5_rank3": 0.014301300048828125,
+    "mixed_rank3": 0.011841964721679688,
+    "p_yes_with_source_branch": 0.014486705780029297,
+    "mc_se_rough": 0.00023189420196520838
+  },
+  "context": "Oct16CMC+currentStockAnalysis agreeNVDA5.17T#1,Apple~5.01T#2,Alphabet4.12\u20134.17T#3,MS3.93T#4; Amazon2.70Tfarther. Exactrank3requiresfallbehindtwoothers whileaboveothers. Multiplecompanyearningscanjumpcomparators: MicrosoftofficialOct28bodyverified,AmazonOct29officialsnippet/GET403,AlphabetOct28syndicationnotdirectissuerbody,Appledateunverified; NVIDIANov17issuertranscriptsnippetpostwindow. No quantitative price response inferredfromquarterrevenue.",
+  "limits": "59dailyreturns/20recent selectedsample; covariance canchange materially andearnings/newsjumpsnotfitted. 70/30normal/t5,6%overlay,3%sourcebranch10%YES allprimaryjudgment. Historicalcovalreadyincludesearnings;overlaydeliberatelyconservative, no doublecountclaim offittedforecast. Publishedrankingssharefeedindependenceunproved, Alphabetshareclassmethodunresolved, sourceSaturday/ties/companyuniverseunclear. Capsfrozenunlesspricechanges;issuance/buybacks/dividends/FX omitted exceptbranch. Lowpnotobservedtailfrequency; broad0.05\u201320%sensitivity/notfloor/K5. UnderlyingequitydatausedonlyforonchainPMcontract, notstockallocation.",
+  "sensitivity_path": "models/nvidia304_sensitivities_0110.json",
+  "selected_sensitivity_summary": {
+    "vol1point5_p_yes": 0.040425872802734374,
+    "nv_minus10log_p_yes": 0.10376797103881835,
+    "larger_earnings_jump_p_yes": 0.04717810058593751
+  }
+}

@@ -83,6 +83,23 @@ def _revision_input(tmp_path: Path, *, status: str = "valued", report: str = "Up
     return _write_input(tmp_path / "revision-input.json", _record_input(1, status, report, revision=True))
 
 
+def _standard_economics(p_yes: float, reserve_pp: float = 15.0) -> dict:
+    return {
+        "both_sides_considered": True,
+        "actual_entry_reserve_pp": reserve_pp,
+        "sides": {
+            "Yes": {
+                "probability": p_yes,
+                "selected_stress_probability": max(0.0, p_yes - reserve_pp / 100),
+            },
+            "No": {
+                "probability": 1 - p_yes,
+                "selected_stress_probability": max(0.0, 1 - p_yes - reserve_pp / 100),
+            },
+        },
+    }
+
+
 def _revision_files(run: Path) -> list[Path]:
     return sorted((run / "revisions").glob("*")) if (run / "revisions").exists() else []
 
@@ -146,6 +163,74 @@ def test_revision_identity_or_criteria_mismatch_fails_before_mutation(
     assert base_path.read_bytes() == base_bytes
     assert not (review_run / "revisions.jsonl").exists()
     assert _revision_files(review_run) == []
+
+
+def test_record_rejects_stale_economic_probability_before_writing(review_run: Path, tmp_path: Path):
+    payload = _record_input(1, "valued", "Stale probability fixture.")
+    payload["economics"] = _standard_economics(0.8)
+    source = _write_input(tmp_path / "stale-base.json", payload)
+
+    with pytest.raises(AssertionError, match="economic Yes probability does not match forecast"):
+        ledger.record(source)
+
+    assert not (review_run / "evaluations" / "0001.json").exists()
+    assert not (review_run / "evaluations" / "0001.md").exists()
+    assert not (review_run / "evaluations.jsonl").exists()
+
+
+@pytest.mark.parametrize(("tamper", "message"), [
+    ("complement", "economic No probability does not complement forecast"),
+    ("stress", "economic No stress probability does not match forecast reserve"),
+])
+def test_revision_probability_economics_mismatch_fails_without_mutation(
+    review_run: Path, tmp_path: Path, tamper: str, message: str,
+):
+    base_path, base_record = _save_base(review_run, tmp_path)
+    base_bytes = base_path.read_bytes()
+    evaluation_ledger = review_run / "evaluations.jsonl"
+    ledger_bytes = evaluation_ledger.read_bytes()
+    source = _revision_input(tmp_path, report="Inconsistent source update.")
+    payload = json.loads(source.read_text())
+    payload["economics"] = _standard_economics(0.74592)
+    payload["forecast"]["p_yes"] = 0.74592
+    payload["forecast"]["low"] = 0.7
+    payload["forecast"]["high"] = 0.8
+    if tamper == "complement":
+        payload["economics"]["sides"]["No"]["probability"] = 0.2
+    else:
+        payload["economics"]["sides"]["No"]["selected_stress_probability"] = 0.2
+    _write_input(source, payload)
+
+    with pytest.raises(AssertionError, match=message):
+        ledger.revise(source, base_record["report_sha256"], "Reject inconsistent economics.")
+
+    assert base_path.read_bytes() == base_bytes
+    assert evaluation_ledger.read_bytes() == ledger_bytes
+    assert not (review_run / "revisions.jsonl").exists()
+    assert _revision_files(review_run) == []
+
+
+def test_source_update_with_current_probabilities_and_reserve_is_accepted(review_run: Path, tmp_path: Path):
+    base_path, base_record = _save_base(review_run, tmp_path)
+    base_bytes = base_path.read_bytes()
+    source = _revision_input(tmp_path, report="Current probability and economics.")
+    payload = json.loads(source.read_text())
+    p_yes = 0.74592
+    payload["forecast"]["p_yes"] = p_yes
+    payload["forecast"]["low"] = 0.6
+    payload["forecast"]["high"] = 0.9
+    payload["economics"] = _standard_economics(p_yes)
+    _write_input(source, payload)
+
+    result = ledger.revise(source, base_record["report_sha256"], "Record current probability consistently.")
+
+    assert result["completed_valuations"] == 1
+    assert base_path.read_bytes() == base_bytes
+    row = json.loads((review_run / "revisions.jsonl").read_text().splitlines()[0])
+    revised = json.loads((review_run / row["revision_path"]).read_text())
+    assert revised["forecast"]["p_yes"] == pytest.approx(p_yes)
+    assert revised["economics"]["sides"]["Yes"]["probability"] == pytest.approx(p_yes)
+    assert revised["economics"]["sides"]["No"]["probability"] == pytest.approx(1 - p_yes)
 
 
 @pytest.mark.parametrize("tamper", ["json", "markdown"])

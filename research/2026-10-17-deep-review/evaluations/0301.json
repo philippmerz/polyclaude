@@ -1,0 +1,166 @@
+{
+  "review_index": 301,
+  "market_id": "5100024",
+  "condition_id": "0xcc018205fe25121a866a5637ad65726b5c1587d7f5a325731d599ee9ccbe5f6e",
+  "criteria_sha256": "a03e0d7d42afc31815b980aa22d35be70af4c7d396d3cbabb071bb043a9455b2",
+  "status": "valued",
+  "literal_analysis": "Any US bank with FDIC-listed closing date between exact marketcreationSep28 23:24:07.428036Z and Dec31 2026 23:59ET. Earlier2026 failures do not qualify. Potential in-window failure can wait for FDIC list update; other official FDIC/government statements suffice. Named failed-bank closing matters, not general distress/holding-company bankruptcy or credit-union event alone. Same-date intraday ambiguity would need investigation if relevant; none currently displayed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5100024",
+      "observed_utc": "2026-10-18T23:59:27.067006+00:00",
+      "finding": "Root independently checked rawSHA/exact frozenidentity/fullrules/outcomes/tokens; createdAtSep28 23:24:07.428036Z, distinct from startDate23:24:18 and slugclue."
+    },
+    {
+      "url": "https://www.fdic.gov/bank-failures/failed-bank-list?page=0",
+      "observed_utc": "2026-10-18T23:59:28.168806+00:00",
+      "finding": "Root rawSHA/tableverified six2026closingdates Jan30/May1/Jul10/Jul17/Aug21/Sep25, all beforecreation. No displayed in-window closing in this surface; publication-lag risk remains."
+    },
+    {
+      "url": "https://api.fdic.gov/banks/failures?filters=FAILDATE%3A%5B2015-01-01+TO+2025-12-31%5D&fields=NAME%2CFAILDATE%2CCERT%2CRESTYPE%2CRESTYPE1&limit=1000&format=json&sort_by=FAILDATE&sort_order=ASC",
+      "observed_utc": "2026-10-19T00:31:51.717265+00:00",
+      "finding": "Root verified raw/gzipSHAs,38allFAILURE(notassistance),2015–25counts8/5/8/0/4/4/0/0/5/2/2; zero years included. Six historical closings afterOct18; weak seasonality. APIAug25indexmissesAug21/Sep25 current2026 so cannot establish currentabsence."
+    },
+    {
+      "url": "https://www.fdic.gov/quarterly-banking-profile/quarterly-banking-profile-2q-2026",
+      "observed_utc": "2026-10-19T00:30:52.705243+00:00",
+      "finding": "Q2profile publishedAug25; TableII-C47problem institutions/1.1%,2failures throughJune30.2019–25annualfailuresmatchAPI. Problem-list aggregateassets omitted underFeb25 2025policy; failed-bankassets are a different quantity."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.5202379534327793,
+    "low": 0.2,
+    "high": 0.9,
+    "method": "Discounted historical Gamma-Poisson annual failure hazard, updated with6 current-year FDIC-listed closures; posterior predictive chance of≥1 further closing plus explicit small unreported in-window branch. Primary time-discount/weak prior, not calibrated structural banking model.",
+    "reasoning": "WeakGamma(.5,.125) annualrate prior plus exp(-yearage/3)weighted2015–25counts and6current2026closures, observedyearfraction~.797. Shared Gamma-Poisson predictive P≥1 in74.18days~51.78%; explicit0.5%already-qualifying unpublished branch gives52.0238%. tau1/10 and late-year/half/doublehazard sensitivities retained. Discount/weakprior/hiddenbranch are judgment, not fitted structural parameters; historical count calibration does not guarantee stationarity.",
+    "model_path": "models/fdic301_primary_0045.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_301_0045.json",
+    "quote_file_sha256": "aa819ba0d8ffdbe8145f651b841b1916be58ccb6f663cda0e91f39036cf027f9",
+    "quote_capture_utc": "2026-10-19T00:34:20.701905+00:00",
+    "gamma_received_utc": "2026-10-19T00:34:20.463583+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.2,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.5202379534327793,
+        "selected_stress_probability": 0.3702379534327793,
+        "best_bid": 0.57,
+        "best_ask": 0.6,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792370006722",
+        "book_received_utc": "2026-10-19T00:34:20.597222+00:00",
+        "book_age_seconds_at_receipt": 53.87522220611572,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.0,
+            "fee": 0.12,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.6
+              }
+            ],
+            "net": 6.12
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.699999999999999,
+            "fee": 0.12256,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.57
+              }
+            ],
+            "net": 5.577439999999999
+          }
+        },
+        "taker_cost_usd": 6.12,
+        "central_expected_profit_usd": -0.9176204656722069,
+        "selected_stress_profit_usd": -2.417620465672207,
+        "break_even_before_carry": 0.612,
+        "break_even_constant_carry": 0.6158737456471111,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.47976204656722066,
+        "selected_stress_probability": 0.32976204656722063,
+        "best_bid": 0.4,
+        "best_ask": 0.43,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792370006722",
+        "book_received_utc": "2026-10-19T00:34:20.597222+00:00",
+        "book_age_seconds_at_receipt": 53.87522220611572,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.3,
+            "fee": 0.12256,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.43
+              }
+            ],
+            "net": 4.42256
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.0,
+            "fee": 0.12,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.4
+              }
+            ],
+            "net": 3.88
+          }
+        },
+        "taker_cost_usd": 4.42256,
+        "central_expected_profit_usd": 0.37506046567220697,
+        "selected_stress_profit_usd": -1.1249395343277935,
+        "break_even_before_carry": 0.442256,
+        "break_even_constant_carry": 0.44505532557991623,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry. PrimaryYES52.0238%/selected37.0238%; NO47.9762%/selected32.9762%.10sharesYESfee-cost6.12/central−.91762; NO4.42256/central+.37506 but selected−1.12494 beforecarry/operations. Improved ordinaryNOmaker41c+ still exceeds32.9762%selected; bankhazard/model/source uncertainty exceeds small quoted advantage. Cash/knowncandidates dominate afterrisk.",
+  "reopen_condition": "New exact FDIC/government closing in-window, source/publication update or materially better eligible executable cost requires reforecast/currentprimarydecision. Friday/holiday closure timing and regulatory merger/avoidance paths remain; no automatic buy on news/headline.",
+  "evaluated_utc": "2026-10-19T00:35:23.414022+00:00",
+  "question": "US bank failure by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 301,
+  "report_sha256": "8376cdca19a66bdc5226669c8cc8b1cfce9ab5bbf5ac3ca835c3eb2363e88234"
+}

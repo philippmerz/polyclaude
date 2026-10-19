@@ -8,6 +8,7 @@ import gzip
 import hashlib
 import io
 import json
+import math
 import os
 import re
 from urllib.parse import unquote, urlsplit
@@ -44,7 +45,53 @@ def universe():
         return {int(x["review_index"]): x for x in map(json.loads, f)}
 
 
-def validate_record(x, frozen, *, revision=False):
+def _validate_economics_forecast_consistency(x):
+    """Check standard side probabilities only for new record/revision writes."""
+    economics = x.get("economics")
+    sides = economics.get("sides") if isinstance(economics, dict) else None
+    if not isinstance(sides, dict):
+        return
+    yes = sides.get("Yes")
+    no = sides.get("No")
+    yes = yes if isinstance(yes, dict) else {}
+    no = no if isinstance(no, dict) else {}
+    if "probability" not in yes and "probability" not in no:
+        return  # Preserve older compact economics records.
+
+    assert "probability" in yes and "probability" in no, "both economic side probabilities required"
+    forecast = x["forecast"]
+    p_yes = forecast["p_yes"]
+
+    def checked_probability(value, label):
+        assert (isinstance(value, (int, float)) and not isinstance(value, bool)
+                and math.isfinite(value) and 0 <= value <= 1), f"invalid {label} probability"
+        return float(value)
+
+    yes_probability = checked_probability(yes["probability"], "economic Yes")
+    no_probability = checked_probability(no["probability"], "economic No")
+    assert abs(yes_probability - p_yes) <= 1e-10, "economic Yes probability does not match forecast"
+    assert abs(no_probability - (1 - p_yes)) <= 1e-10, "economic No probability does not complement forecast"
+
+    has_stress = ("selected_stress_probability" in yes
+                  or "selected_stress_probability" in no)
+    reserve = economics.get("actual_entry_reserve_pp")
+    if reserve is None:
+        reserve = forecast.get("actual_entry_reserve_pp")
+    if has_stress and reserve is not None:
+        assert (isinstance(reserve, (int, float)) and not isinstance(reserve, bool)
+                and math.isfinite(reserve) and 0 <= reserve <= 100), "invalid actual entry reserve in percentage points"
+        assert ("selected_stress_probability" in yes
+                and "selected_stress_probability" in no), "both economic side stress probabilities required"
+        reserve_fraction = float(reserve) / 100.0
+        expected_yes = max(0.0, p_yes - reserve_fraction)
+        expected_no = max(0.0, (1 - p_yes) - reserve_fraction)
+        actual_yes = checked_probability(yes["selected_stress_probability"], "economic Yes stress")
+        actual_no = checked_probability(no["selected_stress_probability"], "economic No stress")
+        assert abs(actual_yes - expected_yes) <= 1e-10, "economic Yes stress probability does not match forecast reserve"
+        assert abs(actual_no - expected_no) <= 1e-10, "economic No stress probability does not match forecast reserve"
+
+
+def validate_record(x, frozen, *, revision=False, validate_economics_forecast=False):
     i = int(x["review_index"])
     assert i == int(frozen["review_index"]), "review index mismatch"
     assert x["status"] in STATES, "invalid status"
@@ -65,6 +112,8 @@ def validate_record(x, frozen, *, revision=False):
         assert 0 <= f["p_yes"] <= 1 and 0 <= f["low"] <= f["p_yes"] <= f["high"] <= 1, "invalid probability/range"
         assert f.get("reasoning") and f.get("method"), "forecast reasoning/method required"
         assert x["economics"].get("both_sides_considered") is True, "both outcomes required"
+        if validate_economics_forecast:
+            _validate_economics_forecast_consistency(x)
     return i
 
 
@@ -287,7 +336,7 @@ def record(path):
     u = universe()
     i = int(x["review_index"])
     assert x.get("report_markdown"), "report_markdown required"
-    validate_record(x, u[i])
+    validate_record(x, u[i], validate_economics_forecast=True)
     x["evaluated_utc"] = x.get("evaluated_utc", now())
     x["question"] = u[i]["question"]
     x["market_id"] = u[i]["id"]
@@ -320,7 +369,7 @@ def revise(path, prior_report_sha256, reason):
     assert re.fullmatch(r"[0-9a-f]{64}", prior_report_sha256 or ""), "prior report SHA-256 required"
     assert prior_report_sha256 == previous["report_sha256"], "provided predecessor hash is stale or mismatched"
     assert x.get("report_markdown"), "report_markdown required"
-    validate_record(x, u[i], revision=True)
+    validate_record(x, u[i], revision=True, validate_economics_forecast=True)
     report = x.pop("report_markdown").rstrip() + "\n"
     stamp = datetime.now(timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     relbase = f"revisions/{i:04d}_{stamp}"

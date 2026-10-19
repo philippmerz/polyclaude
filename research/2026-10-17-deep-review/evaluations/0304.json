@@ -1,0 +1,164 @@
+{
+  "review_index": 304,
+  "market_id": "5166966",
+  "condition_id": "0x3880719bdedd83d3f3f169a556592ea48006f7d4625a31238a568d92108f341d",
+  "criteria_sha256": "912441d422925adb5e3aeaacd5696c8433b96fc4771bc7582982fec5513ba599",
+  "status": "valued",
+  "literal_analysis": "Third-largest company WORLD marketcapitalization Oct31 2026 asofmarketclose; credible-reportingconsensus. Exactlythird, nottop3. Oct31Saturday: literaldoesnotnamebusinessday/source/timezone/tie/shareclass/company-universefallback. BasehypothesisuseslastavailableUScloseOct30, NOTanestablishedrule. Source/referencebranchandwideuncertaintymustremain. Privatevaluationvslistedcapnotassumedresolved; currentleadingrankingsagreefirst5.",
+  "evidence": [
+    {
+      "url": "https://companiesmarketcap.com/time-machine/2026-10-16/",
+      "observed_utc": "2026-10-19T00:40:57Z",
+      "finding": "ExplicitOct16datedUSDtable:NVDA5.170T#1,Apple5.012T#2,AlphabetGOOG4.120T#3,Microsoft3.928T#4,Amazon2.696T#5;TSMC2.139T/SpaceX1.923Tfarther. Sourcepublicationclockexactcloseunspecified."
+    },
+    {
+      "url": "https://stockanalysis.com/list/biggest-companies/",
+      "observed_utc": "2026-10-19T00:41:14Z",
+      "finding": "DailyglobalrankingattributedS&P:NVDA5.17T#1,Apple5.01T#2,AlphabetGOOGL4.17T#3,MS3.93T#4,Amazon2.70T#5. As-ofdateunprinted, Oct16USclosealignmentinferrednotproven. Classaggregation/feedindependencenotexplained; bothranklistsconsistenttop5."
+    },
+    {
+      "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA",
+      "observed_utc": "2026-10-19T00:45:12Z",
+      "finding": "Root rawSHA/gzip/numericarrayschecked5tickerpublicchartGETsHTTP200; identical60completedsessionsJul24–Oct16, noffill/missingbars. Adjustedclose logreturns59rows, matched5×5cov; rawpricealsoretained, empty splitmetadata notabsenceproof. DailyvolNV1.985/AAPL1.330/GOOG1.602/MS1.955/AMZN2.087%; historicalsample, notfuturevolguarantee."
+    },
+    {
+      "url": "https://www.microsoft.com/en-us/Investor/earnings/FY-2027-Q1/press-release-webcast",
+      "observed_utc": "2026-10-19T00:46:00Z",
+      "finding": "UseactualsourcecapsuleforissuerURL/receipt: officialOct7announcementconfirmsMicrosoftearningsOct28afterclose. AmazonOct29officialsnippet/direct403;AlphabetOct28syndicationnotverifiedissuerbody;Appledateunverified. NVIDIANov17issuertranscriptsnippetpostwindow. No cadenceorstock-allocationassumption."
+    },
+    {
+      "url": "https://docs.polymarket.com/trading/place-orders",
+      "observed_utc": "2026-10-19T00:57:54Z",
+      "finding": "Root currentdocsverify BUYamountpre-feenotional, platformfeesaddedontop; officialfeepageUSDdenominatedcurve/makers0. Supportsrepohypotheticalcash-feeeconomics; exactlegacyV1/V2transfermechanicsnotasserted."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.014486705780029297,
+    "low": 0.0005,
+    "high": 0.2,
+    "method": "Conditional joint rank simulation from matched59daily logreturns; 50%full/50%last20 covariance plus10%diagonal shrink,10futureUSsessions, independent comparator earnings overlays, normal/t5 variance mixture. Primary risk choices/source branch; not calibrated rank probabilities.",
+    "reasoning": "CurrentNVDAfirstnearApple but~24.7%abovethirdAlphabet; mustendbelowexactlytwoothers. Cov from59matchedreturns:50%full/50%recent20 plus10%diagshrink;10sessions, GOOG/MS/AMZN6%extraearningslogshock,70%Normal/30%sharedT5variance;262144antitheticdraws. Conditionalrank3~1.1842%, plus3%sourcebranchYES10%=1.4487%. Primaryoverlays/tail/sourceweightsnotfitted. Vol1.5×4.04%, NV−10logpp10.38%; broad.05–20%sensitivity, notcalibratedtail/floor.",
+    "model_path": "models/nvidia304_primary_0110.json",
+    "sensitivity_path": "models/nvidia304_sensitivities_0110.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_304_0110.json",
+    "quote_file_sha256": "b1abcedfa55a1e58e5169085e596091bff1294cdca1d96df8976b5036c0208b2",
+    "quote_capture_utc": "2026-10-19T00:55:20.749213+00:00",
+    "gamma_received_utc": "2026-10-19T00:55:20.468113+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 13.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.014486705780029297,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792371295441",
+        "book_received_utc": "2026-10-19T00:55:20.611520+00:00",
+        "book_age_seconds_at_receipt": 25.170520067214966,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.02,
+            "fee": 0.0008,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.002
+              }
+            ],
+            "net": 0.0208
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 0.0208,
+        "central_expected_profit_usd": 0.12406705780029297,
+        "selected_stress_profit_usd": -0.0208,
+        "break_even_before_carry": 0.00208,
+        "break_even_constant_carry": 0.0020823006559589513,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9855132942199707,
+        "selected_stress_probability": 0.8355132942199707,
+        "best_bid": 0.998,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792371295441",
+        "book_received_utc": "2026-10-19T00:55:20.611520+00:00",
+        "book_age_seconds_at_receipt": 25.170520067214966,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.98,
+            "fee": 0.0008,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.998
+              }
+            ],
+            "net": 9.9792
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false
+      }
+    },
+    "minimum_cash_walk_path": "data/deep_review_20261017/work/0304_economics_min_cash_0110.json",
+    "fee_unit_check": "data/deep_review_20261017/work/fee_buy_units_0120.json; root currentofficialdocsverifyBUYpre-feenotionalpluscashfees, makers0; nocodechange."
+  },
+  "verdict": "No entry. YEScentral1.4487% exceeds.2cask butactual15ppselected0; cash-minimum500sharedepthwalkfee-equivalentcost1.15464/centralEV6.08871/selected−1.15464. Tail/source/earningsvarianceunfitted, lower.05%sensitivityreversesask, no guaranteedlotteryedge. NO98.5513%central/83.5513%selected butnoNOaskinreceivedbook; improvingNOmaker99.9cwouldfail. NoYESbidexitquote. Cash/known300and302candidatesdominateafteruncertaintyandoperationalrisk; notexcludedas99.8%moot.",
+  "reopen_condition": "Newverifiableconsensusreference/currentcapgap/corporateevent and independentlydefensibletailcalibration or bettereligiblecostrequiresreforecast. SourceSaturday/shareclasses/ties/universeunresolved; do notadjustreserveafterquotetoforceentry. Any latermakerneedsadverseselection,currentportfolio/funding/depth/fees/sourcewatchandvettedpath.",
+  "evaluated_utc": "2026-10-19T01:00:32.018455+00:00",
+  "question": "Will NVIDIA be the third-largest company in the world by market cap on October 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 304,
+  "report_sha256": "3e87536bdea2fda913057ed2634c4c2785ce21533b7c86125d74d659b450baf3"
+}

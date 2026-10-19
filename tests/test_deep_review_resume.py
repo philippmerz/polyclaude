@@ -17,6 +17,30 @@ def _write_json(path: Path, value: dict) -> None:
     path.write_text(json.dumps(value, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
 
 
+def _refresh_checkpoint(layout, *, base_records: int, revisions_written: int) -> None:
+    run = layout["run"]
+    progress_path = run / "progress.json"
+    progress = json.loads(progress_path.read_text())
+    progress.update({
+        "updated_utc": "2026-10-18T13:00:00Z",
+        "completed_in_depth_reviews": 1,
+        "completed_valuations": 1,
+        "blocked_after_in_depth_review": 0,
+        "factual_exclusions": 0,
+        "pending": 1,
+        "base_records": base_records,
+        "revisions_written": revisions_written,
+    })
+    _write_json(progress_path, progress)
+    checkpoint = dict(progress)
+    checkpoint.update({
+        "original_rules_sha256": hashlib.sha256(layout["rules"].read_bytes()).hexdigest(),
+        "ledger_sha256": hashlib.sha256((run / "evaluations.jsonl").read_bytes()).hexdigest(),
+        "revisions_sha256": hashlib.sha256((run / "revisions.jsonl").read_bytes()).hexdigest(),
+    })
+    _write_json(layout["root"] / "notes/deep_review_checkpoint.json", checkpoint)
+
+
 @pytest.fixture
 def layout(tmp_path, monkeypatch):
     root = tmp_path
@@ -131,7 +155,81 @@ def test_explicit_case_uses_newest_verified_revision_pointer(layout):
     assert packet["effective_case"]["report_pointer"]["path"].endswith(md_rel)
     assert packet["effective_case"]["report_pointer"]["sha256"] == revised_sha
     assert packet["effective_case"]["latest_revision"]["json_sha256"] == row["revision_json_sha256"]
+    assert len(packet["effective_case"]["verified_artifacts"]) == 2
+    assert "verified_artifacts_omitted" not in packet["effective_case"]
     assert "report" not in packet["effective_case"]
+
+
+def test_long_revision_chain_is_fully_verified_but_historical_metadata_is_bounded(layout):
+    i = 1
+    (layout["run"] / "evaluations").mkdir()
+    base_report_rel = "evaluations/0001.md"
+    base_report = "base report\n"
+    (layout["run"] / base_report_rel).write_text(base_report)
+    base_sha = hashlib.sha256(base_report.encode()).hexdigest()
+    base = {
+        "review_index": i, "market_id": "101", "condition_id": layout["rows"][0]["conditionId"],
+        "criteria_sha256": "a" * 64, "status": "valued", "evaluated_utc": "2026-10-17T10:00:00Z",
+        "report_path": base_report_rel, "report_sha256": base_sha,
+    }
+    (layout["run"] / "evaluations.jsonl").write_text(json.dumps(base) + "\n")
+    (layout["run"] / "revisions").mkdir()
+    current = base
+    rows = []
+    revision_reports = []
+    for number in range(4):
+        stamp = f"20261018T{12 + number:02d}0000000000Z"
+        suffix = f"0001_{stamp}"
+        report_rel = f"revisions/{suffix}.md"
+        revision_rel = f"revisions/{suffix}.json"
+        report = f"revision {number + 1} report\n"
+        report_sha = hashlib.sha256(report.encode()).hexdigest()
+        (layout["run"] / report_rel).write_text(report)
+        revision = {
+            **current, "evaluated_utc": f"2026-10-18T{12 + number:02d}:00:00Z",
+            "prior_report_sha256": current["report_sha256"], "report_sha256": report_sha,
+            "report_path": report_rel, "revision_reason": f"revision {number + 1}",
+            "revision_path": revision_rel,
+        }
+        raw = json.dumps(revision, ensure_ascii=False, indent=2) + "\n"
+        (layout["run"] / revision_rel).write_text(raw)
+        rows.append({
+            "schema": "deep_review_revision.v1", "review_index": i, "revision_path": revision_rel,
+            "report_sha256": report_sha, "prior_report_sha256": current["report_sha256"],
+            "revision_json_sha256": hashlib.sha256(raw.encode()).hexdigest(),
+            "reason": revision["revision_reason"], "revision_utc": revision["evaluated_utc"],
+        })
+        revision_reports.append(report_rel)
+        current = revision
+    (layout["run"] / "revisions.jsonl").write_text("".join(json.dumps(row) + "\n" for row in rows))
+    _refresh_checkpoint(layout, base_records=1, revisions_written=4)
+
+    packet = resume.build_packet(i)
+    effective = packet["effective_case"]
+    assert effective["verified_artifacts_total"] == 5
+    assert effective["verified_artifacts_omitted"] == 2
+    assert "only; the complete immutable chain was verified" in effective["verified_artifacts_omission_notice"]
+    assert [row["kind"] for row in effective["verified_artifacts"]] == ["base", "revision", "revision"]
+    assert [row["json_path"].split("/")[-1] for row in effective["verified_artifacts"][1:]] == [
+        f"{Path(revision_reports[-2]).stem}.json", f"{Path(revision_reports[-1]).stem}.json",
+    ]
+    full_metadata = [{"kind": "base", "sha256": base_sha}]
+    for row in rows:
+        raw_path = layout["run"] / row["revision_path"]
+        revision = json.loads(raw_path.read_text())
+        full_metadata.append({
+            "kind": "revision", "json_path": f"research/2026-10-17-deep-review/{row['revision_path']}",
+            "json_sha256": row["revision_json_sha256"], "report_sha256": row["report_sha256"],
+            "revision_utc": revision["evaluated_utc"], "reason": revision["revision_reason"],
+        })
+    canonical = json.dumps(full_metadata, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode()
+    assert effective["verified_artifacts_sha256"] == hashlib.sha256(canonical).hexdigest()
+    assert packet["packet_bytes"] <= 8000
+
+    omitted_report = layout["run"] / revision_reports[0]
+    omitted_report.write_text("tampered old report\n")
+    with pytest.raises(resume.ResumeError, match="revision report hash mismatch"):
+        resume.build_packet(i)
 
 
 def test_oversized_full_criteria_fails_without_truncation(layout):

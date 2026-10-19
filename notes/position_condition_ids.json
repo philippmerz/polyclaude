@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-10-18",
+ "_refreshed": "2026-10-19",
  "positions": [
   {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
@@ -25,6 +25,14 @@
    "conditionId": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
    "asset": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
    "negativeRisk": false
+  },
+  {
+   "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+   "outcome": "No",
+   "size": 6,
+   "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+   "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+   "negativeRisk": true
   },
   {
    "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",

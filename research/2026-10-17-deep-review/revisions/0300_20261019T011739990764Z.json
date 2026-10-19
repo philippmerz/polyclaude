@@ -1,0 +1,232 @@
+{
+  "review_index": 300,
+  "market_id": "1105742",
+  "condition_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+  "criteria_sha256": "ba2b313858c467da696c91dc257d786d7eaea84b2bf9ce702539b43fc0ddce1e",
+  "status": "valued",
+  "literal_analysis": "Official head of state Dec31 2026 NOON ET, notAPIendmidnight. Formal appointment/confirmation/sworn OR current official government confirmation qualifies; UN fallback if government unclear. Multipleheads→primary, else earliest; none→NoHead. Expired/resigned/terminated terms, future-effective/nominee/unofficial/oversight-only roles excluded. Acting title not automatic exclusion; head-of-state differs from head-of-government. Exact UN-recognized-government identity and legal-effective status remain important.",
+  "evidence": [
+    {
+      "url": "https://historico.tsj.gob.ve/decisiones/scon/enero/352131-0001-3126-2026-26-0001.HTML",
+      "observed_utc": "2026-10-19T00:24:12.494738+00:00",
+      "finding": "Root rawSHA/fulltext verified official Jan3 ruling: orders Delcy to exercise all presidential duties as Encargada. Explicitly reserves temporary/absolute absence classification and later state action; cites234/239, no stated90-day expiry. Does not establish no later act."
+    },
+    {
+      "url": "https://mppre.gob.ve/index.php/publicacion/8194-0",
+      "observed_utc": "2026-10-19T00:00:07.367431+00:00",
+      "finding": "Jan5 official sworn-in account before NationalAssembly supports effective appointment, distinct from Jan3 order. No later term extension/election instrument obtained."
+    },
+    {
+      "url": "https://www.un.org/dgacm/sites/www.un.org.dgacm/files/Documents_Protocol/hspmfmlist.pdf",
+      "observed_utc": "2026-10-18T23:53:47Z",
+      "finding": "Root visually verified PDFpage49:Delcy/EloínaRodríguezGómez in HEAD OF STATE column/PresidentaEncargada; HEAD OF GOVERNMENT NoPrimeMinister.13-Jul-26 belongs foreignminister, not Delcy effective date. List depends on mission updates; PDFmetadataOct15 is not role date."
+    },
+    {
+      "url": "https://vicepresidencia.gob.ve/presidenta-delcy-rodriguez-interviene-en-el-cierre-de-la-conferencia-de-energia-petroleo-y-gas-2026/",
+      "observed_utc": "2026-10-18T23:52:36Z",
+      "finding": "Official current page names her Presidenta/Jefa deEstado; article visible publication date missing. Continued recognition, not a new extension instrument."
+    },
+    {
+      "url": "https://www.govinfo.gov/content/pkg/CREC-2026-09-30/pdf/CREC-2026-09-30.pdf",
+      "observed_utc": "2026-10-18T23:56:13Z",
+      "finding": "S.Res932 requests assessment of90-day expiry/elections; not Venezuelanlaw/finalruling. OAS constitution PDF403 and laterTSJsource timeout remain access gaps. No dated government election/transition deadline was verified by bounded pass; not proof none exists."
+    },
+    {
+      "url": "https://mppre.gob.ve/index.php/publicacion/1755-0",
+      "observed_utc": "2026-10-19T00:47:27.888775+00:00",
+      "finding": "RootcheckedretainedMay19bodySHA29be6527...a5e6e26; referencesMadurojefadeEstado whilequotingearlierSaabdenunciation, notverifiedOctdualprimarylist. Oct17/11articlesplainDelcyPresidenta, noMaduroinmainbody; first3captureclocksmissing,newfreshgatesrequired. Currentroleq96→88%primaryjudgment, notposterior."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1105742",
+      "observed_utc": "2026-10-19T01:09:26.033151+00:00",
+      "finding": "Strict current exact-ID snapshot matched frozen criteria; active and accepting orders; current YES best bid 0.19 / ask 0.20, with predeclared raw cap 0.18. Snapshot is not account/order authorization."
+    },
+    {
+      "url": "local:logs/deep_review_20261017/entry300_0120/dryrun.stdout",
+      "observed_utc": "2026-10-19T01:09:08.517970+00:00",
+      "finding": "Pre-writer returned SKIP: signed raw BUY limit 0.19 exceeded --max-price 0.18. This run submitted no order and created no reservation; no account/trade query was made."
+    },
+    {
+      "url": "local:data/deep_review_20261017/work/0300_root_monitor_0120.json",
+      "observed_utc": "2026-10-19T01:03:19.728850+00:00",
+      "finding": "Normal monitor cycle passed after adding Delcy/Maduro terms; bounded headline review found no report of removal, new term, or election date; source coverage is not exhaustive."
+    },
+    {
+      "url": "local:data/deep_review_20261017/work/0300_multiple_heads_0100.json",
+      "observed_utc": "2026-10-19T00:42:04.308994+00:00",
+      "finding": "Competing official titulature remains unresolved; current primary instrument determining Maduro/Delcy precedence under the frozen earliest-applicable clause was not verified; nonfinding is not absence proof."
+    },
+    {
+      "url": "local:data/deep_review_20261017/work/0300_embassy_news_0120.json",
+      "observed_utc": "2026-10-19T01:03:21Z",
+      "finding": "DW reports an Embassy security-detachment reactivation, not a leadership change; underlying Embassy post was not independently captured from primary source."
+    },
+    {
+      "url": "data/deep_review_20261017/work/0300_submission_0120.json",
+      "observed_utc": "2026-10-19T01:20:00+00:00",
+      "finding": "Root completion marker: closed unplaced before writer; zero financial calls; no Case 300 order/reservation; temporary unsubmitted prior removed and original 35-key prior restored byte-for-byte."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.74592,
+    "low": 0.1,
+    "high": 0.96,
+    "method": "Conditional current-role validity and four explicit political-continuity hypotheses toDec31 noonET; primary scenario weights, not historical hazard calibration.",
+    "reasoning": ".88*(.81+.12*.20)+.12*.10 = .74592; qualifyingweight lowered96→88% fornoncontemporaneous competingMaduro/Delcytitles/primary-earliest interpretation; currentOctgovernment+UNfavorDelcy. Retentionhypothesesunchanged. Uncalibratedprimaryweight, broad10–96% range.",
+    "model_path": "models/delcy300_multiple_heads_update_0100.json",
+    "original_priceblind_model": "models/delcy300_primary_0015.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_300_0015.json",
+    "quote_file_sha256": "3fc1aa9fc775d326953560dc01d3d21aed69f6dfe17580d4e8eb7c17ff0f1810",
+    "quote_capture_utc": "2026-10-19T00:16:05.160769+00:00",
+    "gamma_received_utc": "2026-10-19T00:16:04.750129+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.74592,
+        "selected_stress_probability": 0.59592,
+        "best_bid": 0.17,
+        "best_ask": 0.18,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792368958250",
+        "book_received_utc": "2026-10-19T00:16:05.159616+00:00",
+        "book_age_seconds_at_receipt": 6.909615993499756,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7999999999999998,
+            "fee": 0.05904,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.18
+              }
+            ],
+            "net": 1.8590399999999998
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.7000000000000002,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.17
+              }
+            ],
+            "net": 1.6435500000000003
+          }
+        },
+        "taker_cost_usd": 1.8590399999999998,
+        "central_expected_profit_usd": 5.600160000000001,
+        "selected_stress_profit_usd": 4.100160000000001,
+        "break_even_before_carry": 0.18590399999999999,
+        "break_even_constant_carry": 0.1870775254998559,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.25408,
+        "selected_stress_probability": 0.10407999999999998,
+        "best_bid": 0.82,
+        "best_ask": 0.83,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792368958250",
+        "book_received_utc": "2026-10-19T00:16:05.159616+00:00",
+        "book_age_seconds_at_receipt": 6.909615993499756,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.299999999999999,
+            "fee": 0.05645,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.83
+              }
+            ],
+            "net": 8.356449999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.2,
+            "fee": 0.05905,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.82
+              }
+            ],
+            "net": 8.14095
+          }
+        },
+        "taker_cost_usd": 8.356449999999999,
+        "central_expected_profit_usd": -5.815649999999999,
+        "selected_stress_profit_usd": -7.315649999999999,
+        "break_even_before_carry": 0.8356449999999999,
+        "break_even_constant_carry": 0.8409200382795803,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Valued candidate, unplaced. Strict predeclared raw price cap blocks the current 19-cent maker limit; the pre-writer skip submitted no order and created no reservation. Forecast and economics are preserved; the economics remain dated to the 00:16 book. No retry or trade authority.",
+  "reopen_condition": "Reopen only after material primary-source resolution of the multiple-head/earliest-office question and a fresh exact-market capture at or below the existing cap, followed by current account, reservation, portfolio, monitoring, and execution gates. No automatic retry.",
+  "latest_go_snapshot": {
+    "path": "data/deep_review_20261017/quotes_300_go_0120.json",
+    "sha256": "ccfb855b3f737dc219d36b304f7cbd787f47dc384dbdd434b3fe8904fd872a10",
+    "captured_utc": "2026-10-19T01:09:26.033151+00:00",
+    "scope": "Public exact-market/books/fee/geoblock snapshot only; no account query."
+  },
+  "prewriter_skip": {
+    "path": "logs/deep_review_20261017/entry300_0120/dryrun.stdout",
+    "sha256": "0bb70814c5fef9960e1fb2635d26fb1e61fb50faaa7e72d637e30f39786cbcbf",
+    "mtime_utc": "2026-10-19T01:09:08.517970+00:00",
+    "result": "SKIP signed raw BUY limit 0.19 exceeds configured maximum 0.18"
+  },
+  "source_challenge_paths": [
+    "data/deep_review_20261017/work/0300_multiple_heads_0100.json",
+    "data/deep_review_20261017/work/0300_embassy_news_0120.json"
+  ],
+  "monitor_path": "data/deep_review_20261017/work/0300_root_monitor_0120.json",
+  "source_paths": {
+    "research/2026-10-17-deep-review/delcy300_unplaced_outcome_0120.md": "471a510db8ae0f00e777305bdcaf0ed1fedc1c07350b54e47c2f68971fd41fde",
+    "data/deep_review_20261017/work/0300_submission_0120.json": "d38c22236a634b45c26675cc44b992e0b7614bcac9176862e0a94aef8d367133"
+  },
+  "evaluated_utc": "2026-10-19T01:17:39.991315+00:00",
+  "question": "Will Delcy Rodríguez be the leader of Venezuela end of 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 300,
+  "revision_reason": "Close300unplaced after strict19c passive quote exceeds18c cap; dryrunonly/0financialcalls, temporarypriorremoved and original35 restored. Forecast/datelyeconomics unchanged; no automatedretry.",
+  "prior_report_sha256": "56a8d30daeba0cf85761e3d79425212a19f80564a7c3bda3b99915b7eef67391",
+  "report_sha256": "e68767a1c67d4234a1919a16fdfe9fa4d448ccb51f7549b8755c39726291320d",
+  "report_path": "revisions/0300_20261019T011739990764Z.md",
+  "revision_path": "revisions/0300_20261019T011739990764Z.json"
+}

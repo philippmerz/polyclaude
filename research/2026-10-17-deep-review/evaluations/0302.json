@@ -1,0 +1,166 @@
+{
+  "review_index": 302,
+  "market_id": "5684454",
+  "condition_id": "0xb0b86000fd14cecb03cfd4e833d4ebf460fef769077b18d5c8f9f559017115db",
+  "criteria_sha256": "7f355311deed49b2be262407d01d038028b5df4d658fb1fb28db59b6763894a5",
+  "status": "valued",
+  "literal_analysis": "Q3FY2026 Mastercard worldwide branded GDV y/y LOCALCURRENCY; mostnumericallyprecise firstreported value8.5≤x<9.5. Exactly9.5→higherNO; exactly8.5→thisbracketYES; officialrange usesmidpoint. QuarterlynotH1/YTD; notUSD/purchase/crossborder/revenue/regionalvalues. Officialearningsrelease/presentation/filing thenwebcast/transcript ifomitted; subsequentrevisionsignored. Missingmetric ornoearningsbyNov30 23:59ET→lowestbracket, thereforeNOhere. Oct29call9ETscheduled butreleasepostingtimeunstated; API13:30Znotexactsourceclock.",
+  "evidence": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000081/ma06302026-exx991xearnings.htm",
+      "observed_utc": "2026-10-18T23:57:45.519158+00:00",
+      "finding": "Root rawSHA/detailedtableverified Q2Worldwide allMastercard GDV2881bn, USD9.2%, local8.0%; H1local7.7%andpurchase9.6%are different. Headline8%/10Qinteger8 lessprecise. Later comparativeQ2FY25local9.1 is a revision, not original9.0."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139125000191/ma09302025-exx991xearnings.htm",
+      "observed_utc": "2026-10-19T00:31:17Z",
+      "finding": "Root rawSHA/firstcurrentquartertableverified Q3FY25GDVlocal8.7%, notheadline9%. Sameprocedurefiveotheroriginalreleases gives9.3/9.0/8.7/7.4/7.3/8.0 chronologicalQ1FY25–Q2FY26. Notlatestrestatedcomparatives."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/1141391/000114139126000083/ma-20260630.htm",
+      "observed_utc": "2026-10-18T23:57:45.715615+00:00",
+      "finding": "Root SHA/definitiontablechecked: GDVpurchase+cashinclbalancetransfers/conveniencechecks, localcurrencyremovesFX; Q2summary8%lessprecise. BrandedscopeexcludesMaestro/Cirrus/nonMastercard, volume data mayrevise butcontractignoreslaterrevisions."
+    },
+    {
+      "url": "https://investor.mastercard.com/investor-news/investor-news-details/2026/Mastercard-Incorporated-to-Host-Conference-Call-on-Third-Quarter-2026-Financial-Results/default.aspx",
+      "observed_utc": "2026-10-18T23:57:45.309222+00:00",
+      "finding": "OfficialOct8notice schedulesOct29Q3results/call9amET, releasepostingtimeunstated. NoquantifiedQ3GDVoutlookobtained. Sep10conferenceofficiallistingfound, replay30days expiredOct10/no recording/transcriptobtained. Boundedgap, not no-publicupdate proof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.24182711682287536,
+    "low": 0.05,
+    "high": 0.55,
+    "method": "Firstreported decimal GDV history plus three Studentt4 growth regimes and explicit reportingprecision/sourcebranches; primary scenario weights.",
+    "reasoning": "Sixoriginalquarterrates9.3/9.0/8.7/7.4/7.3/8.0; localtrendmean7.87 withStudentt4scale.9 weight60%, reaccelmean9scale.9 weight30%, slowdownmean6.8scale1.2 weight10%.90%1decimal/10%moreprecise reporting,99%normalmetricpublication; missingdefaultsNO. YES24.1827%, actual15ppselected9.1827%; alltrend19.71/allacceleration38.74. Tinyhistory/weights/tailshape are uncalibratedprimaryjudgment.",
+    "model_path": "models/mastercard302_primary_0055.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_302_0055.json",
+    "quote_file_sha256": "e3ff8ef1e619bf72ef72f343f83ad52497f328c2a057676b68a9231d635b73bd",
+    "quote_capture_utc": "2026-10-19T00:37:46.883954+00:00",
+    "gamma_received_utc": "2026-10-19T00:37:46.603118+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 10.5,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.24182711682287536,
+        "selected_stress_probability": 0.09182711682287537,
+        "best_bid": 0.013,
+        "best_ask": 0.105,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792370266558",
+        "book_received_utc": "2026-10-19T00:37:46.750283+00:00",
+        "book_age_seconds_at_receipt": 0.19228291511535645,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.05,
+            "fee": 0.03759,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.105
+              }
+            ],
+            "net": 1.08759
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.13,
+            "fee": 0.00514,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.013
+              }
+            ],
+            "net": 0.12486
+          }
+        },
+        "taker_cost_usd": 1.08759,
+        "central_expected_profit_usd": 1.3306811682287534,
+        "selected_stress_profit_usd": -0.1693188317712464,
+        "break_even_before_carry": 0.10875900000000001,
+        "break_even_constant_carry": 0.10885615235338364,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7581728831771246,
+        "selected_stress_probability": 0.6081728831771246,
+        "best_bid": 0.895,
+        "best_ask": 0.987,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792370266558",
+        "book_received_utc": "2026-10-19T00:37:46.750283+00:00",
+        "book_age_seconds_at_receipt": 0.19228291511535645,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.87,
+            "fee": 0.00514,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.987
+              }
+            ],
+            "net": 9.87514
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.95,
+            "fee": 0.03759,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.895
+              }
+            ],
+            "net": 8.91241
+          }
+        },
+        "taker_cost_usd": 9.87514,
+        "central_expected_profit_usd": -2.2934111682287543,
+        "selected_stress_profit_usd": -3.7934111682287543,
+        "break_even_before_carry": 0.987514,
+        "break_even_constant_carry": 0.9883961275397833,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YES maker candidate for distinct current entry review, no order/prior/holding. At10sharesYESask10.5cfee-cost1.08759/centralEV1.33068 butselected−.16932; NO98.7cfee-cost9.87514/central−2.29341. TakerYESfailschosen15ppallowance; muchlower makerquote canpass. Actualmakerqty/cashminimum/selectionrisk/fillprobabilityandothercandidatesmustbeassessed; do not rejectmerelywidebook. Noempiricalhedge; globalconsumption/creditstresscorrelatesmacroevents.",
+  "reopen_condition": "Current YESmaker price below chosen selected9.1827% aftercarry/operations, meaningfulcash-minimumsize and adverse-selectionassessment; compare300/heldrisk/fundingbeforeanydistinctentrydecision. Newquartermetric/guidance/publicstatement/precisionorbrandedscopechange requiresreforecast. BeforeOct29unknownreleaseclockknownmaterialupdatecancelrestingbidsfirst.",
+  "evaluated_utc": "2026-10-19T00:39:21.385414+00:00",
+  "question": "Mastercard (MA) Q3 gross dollar volume growth (local currency basis) 8.5% to 9.5%?",
+  "valuation_author": "primary_operator",
+  "original_index": 302,
+  "report_sha256": "9124910a3dd0a605181030c461500bef9ed72bdc3fc8b517061840b4abc79513"
+}

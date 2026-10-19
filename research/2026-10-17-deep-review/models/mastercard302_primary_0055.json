@@ -1,0 +1,86 @@
+{
+  "review_index": 302,
+  "saved_utc": "2026-10-19T00:38:05.349397+00:00",
+  "priceblind": true,
+  "calculation_note": "Model script fixed before ownquote capture; SciPy missing stopped first serialization. Replaced with exact df4 CDF antiderivative and sanity checked, no dependencies installed. Quote packet remained UNINSPECTED until this model saved; captured-before-model-time does not mean price exposure.",
+  "p_yes": 0.24182711682287536,
+  "low": 0.05,
+  "high": 0.55,
+  "actual_entry_reserve_pp": 15,
+  "metric": "Mastercard Q3FY2026 worldwide all-branded GDV YoY, local currency; first reported most numerically precise8.5\u2264value<9.5. Notpurchase/USD/H1/region growth.",
+  "source_paths": [
+    "work/0302_facts_2358.json",
+    "work/0302_metric_bridge_0040.json",
+    "work/0302_precision_0050.json",
+    "work/0302_root_precise_rows_0050.json"
+  ],
+  "original_first_report_history_pct": [
+    9.3,
+    9.0,
+    8.7,
+    7.4,
+    7.3,
+    8.0
+  ],
+  "first_differences_pp": [
+    -0.3000000000000007,
+    -0.3000000000000007,
+    -1.299999999999999,
+    -0.10000000000000053,
+    0.7000000000000002
+  ],
+  "mean_step_pp": -0.2600000000000001,
+  "sample_step_sd_pp": 0.7127411872482181,
+  "distribution": "Studentt df4; scale is distribution scale, not standard deviation. Main center=8+.5*mean(fivechanges)=7.87; scale max(.9, sampleSD). Other regime centers/weights are subjective competing hypotheses.",
+  "regimes": [
+    {
+      "name": "local trend/steady",
+      "weight": 0.6,
+      "mu": 7.87,
+      "scale": 0.9,
+      "p_reported_one_decimal_in_bracket": 0.20018476330796753,
+      "p_more_precise_in_bracket": 0.18906974145871658
+    },
+    {
+      "name": "renewed acceleration toward old9pct regime",
+      "weight": 0.3,
+      "mu": 9.0,
+      "scale": 0.9,
+      "p_reported_one_decimal_in_bracket": 0.39126066273227833,
+      "p_more_precise_in_bracket": 0.391879697406001
+    },
+    {
+      "name": "renewed slowdown",
+      "weight": 0.1,
+      "mu": 6.8,
+      "scale": 1.2,
+      "p_reported_one_decimal_in_bracket": 0.07466277273741406,
+      "p_more_precise_in_bracket": 0.0709438892513482
+    }
+  ],
+  "source_and_precision": {
+    "normal_metric_available_by_deadline": 0.99,
+    "missing_or_late_branch_p_yes": 0,
+    "one_decimal_reporting_weight": 0.9,
+    "more_precise_reporting_weight": 0.1,
+    "one_decimal_latent_bounds": [
+      8.45,
+      9.45
+    ],
+    "more_precise_bounds": [
+      8.5,
+      9.5
+    ]
+  },
+  "formula": ".99*sum(w_regime*(.9*(T4((9.45-mu)/scale)-T4((8.45-mu)/scale))+.1*(T4((9.5-mu)/scale)-T4((8.5-mu)/scale))))",
+  "sensitivities": {
+    "all_one_decimal": 0.24250578073742335,
+    "all_more_precise": 0.23571914159194338,
+    "all_local_trend": 0.19708252851181202,
+    "all_acceleration": 0.387409340537654,
+    "all_centers_minus1pp": 0.10270210010201652,
+    "all_centers_plus1pp": 0.31203527029007594
+  },
+  "context": "Root rawSHA/table verified6original releases; precise history9.3/9.0/8.7/7.4/7.3/8.0. Later Q2FY26 comparative prior-year9.1 does not replace original Q2FY25 9.0. Q2USD9.2, purchase9.6, H1LC7.7 and10Qinteger8 are different or less precise. Official Oct8notice schedulesQ3Oct29/call9ET, postingtimeunstated. No quantifiedQ3GDVguidance/Septembercalltranscript obtained; archivedreplay30days expiredOct10.",
+  "limits": "Only6selected contiguous quarters/5steps, no fitted out-of-sample calibration. Shrinkage.5, df4/scale floor.9,60/30/10regimes,99%publication and90%1decimal are primary choices. Source text/current scope/missingmetric/default and later precision can change payoff. No growth computed from roundedvolumes. QuarteralreadyendedSep30; unknown contemporaneous public updates/internaldata may explain price. Broader5\u201355%sensitivity is not confidenceinterval/floor/K5. No stock/brokerage allocation; evaluates onchain metric contract."
+}

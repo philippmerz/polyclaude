@@ -137,6 +137,26 @@ def _load_case_progress(i: int, frozen: dict, active: set[int], base_records: li
             "verified_artifacts": verified}
 
 
+def _bound_verified_artifact_metadata(effective: dict) -> None:
+    """Bound only emitted metadata after the complete chain has been verified."""
+    artifacts = effective.get("verified_artifacts", [])
+    canonical = json.dumps(artifacts, ensure_ascii=False, sort_keys=True,
+                          separators=(",", ":")).encode("utf-8")
+    total = len(artifacts)
+    if total <= 3:
+        return  # Preserve the established small-chain packet schema unchanged.
+    kept = [artifacts[0], *artifacts[-2:]]
+    omitted = total - len(kept)
+    effective["verified_artifacts"] = kept
+    effective["verified_artifacts_total"] = total
+    effective["verified_artifacts_omitted"] = omitted
+    effective["verified_artifacts_sha256"] = hashlib.sha256(canonical).hexdigest()
+    if omitted:
+        effective["verified_artifacts_omission_notice"] = (
+            "Historic artifact metadata omitted from this packet only; the complete immutable chain was verified."
+        )
+
+
 def _public_pointers(i: int) -> dict | None:
     rel = f"work/{i:04d}_resume.json"
     path = DATA / rel
@@ -206,6 +226,7 @@ def build_packet(index: int | None = None, max_bytes: int = 8000) -> dict:
     base_rows = [json.loads(line) for line in (RUN / "evaluations.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     revision_rows = [json.loads(line) for line in (RUN / "revisions.jsonl").read_text(encoding="utf-8").splitlines() if line.strip()]
     effective = _load_case_progress(index, frozen, set(active), base_rows, revision_rows)
+    _bound_verified_artifact_metadata(effective)
     hashes = {}
     files = {
         "checkpoint": CHECKPOINT,

@@ -1,0 +1,56 @@
+{
+  "review_index": 304,
+  "saved_utc": "2026-10-19T00:54:21.130590+00:00",
+  "model": "models/nvidia304_primary_0110.json",
+  "sensitivities": {
+    "google_cmc4120": {
+      "normal_rank3": 0.00951385498046875,
+      "t5_rank3": 0.013454437255859375,
+      "mixed_rank3": 0.010696029663085936,
+      "p_yes_with_source_branch": 0.013375148773193356,
+      "mc_se_rough": 0.0002250201353938243
+    },
+    "google_stockanalysis4170": {
+      "normal_rank3": 0.01215362548828125,
+      "t5_rank3": 0.015178680419921875,
+      "mixed_rank3": 0.013061141967773436,
+      "p_yes_with_source_branch": 0.015669307708740234,
+      "mc_se_rough": 0.0002387952965762951
+    },
+    "no_extra_earningsjump": {
+      "normal_rank3": 0.001613616943359375,
+      "t5_rank3": 0.005458831787109375,
+      "mixed_rank3": 0.002767181396484375,
+      "p_yes_with_source_branch": 0.0056841659545898435,
+      "mc_se_rough": 0.00014391010083116644
+    },
+    "earningsjump12pct": {
+      "normal_rank3": 0.04810333251953125,
+      "t5_rank3": 0.03957366943359375,
+      "mixed_rank3": 0.04554443359375,
+      "p_yes_with_source_branch": 0.04717810058593751,
+      "mc_se_rough": 0.00041793863939459594
+    },
+    "covariance_vol1point5x": {
+      "normal_rank3": 0.040828704833984375,
+      "t5_rank3": 0.033344268798828125,
+      "mixed_rank3": 0.0385833740234375,
+      "p_yes_with_source_branch": 0.040425872802734374,
+      "mc_se_rough": 0.0003865101714951811
+    },
+    "NVIDIA_logshock_minus10pct": {
+      "normal_rank3": 0.11161041259765625,
+      "t5_rank3": 0.08585739135742188,
+      "mixed_rank3": 0.10388450622558593,
+      "p_yes_with_source_branch": 0.10376797103881835,
+      "mc_se_rough": 0.0006150127589365723
+    },
+    "extra_session": {
+      "normal_rank3": 0.01291656494140625,
+      "t5_rank3": 0.01570892333984375,
+      "mixed_rank3": 0.013754272460937498,
+      "p_yes_with_source_branch": 0.016341644287109373,
+      "mc_se_rough": 0.0002428650510606302
+    }
+  }
+}
