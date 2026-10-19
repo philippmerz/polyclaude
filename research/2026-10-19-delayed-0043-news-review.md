@@ -1,0 +1,25 @@
+# Delayed00:43 check — October19 04:28UTC
+
+**Both named alerts reviewed; no portfolio/prior/order change.** Next existing held review06UTC; Idaho pull22UTC. No Telegram: no new material finding.
+
+## Named sources and decisions
+
+- **Michigan `71b477e9e2d78215b7d66eabd8152c6142cbced4`**, alertOct18 23:15:15. [WLAC](https://wlac.iheart.com/content/2026-10-18-mike-rogers-says-michigan-voters-worry-about-el-sayed/) fullHTTP200 body received04:26:54; publishedOct18 18:57Z/modified19:03:44. All3 story paragraphs match the previously read WKBN capture exactly. The initial80KB shell-only capture remains separately labeled; the complete462,817B capture establishes the match.
+- Rogers alleges voter concerns and a failure to disavow the Muslim Brotherhood; the same article reports El-Sayed's disavowal. Its generic narrow-Democratic-lead sentence identifies no survey, field dates, sample or topline. These are attributed campaign claims/context, not a new measured voter response. Root corrects the helper's attribution: the article, not a quoted Rogers statement, supplies the polling sentence. Downgrade classifierMATERIAL toMINOR; retain **5NO, primary44%/selected34%, no add**. Existing broad20% downside and earlier dated exit comparison remain; no new executable quote or probability input asserted.
+- **Kansas `b80acde8e6d318741bcf386b4942cf3b32fe6a15`**, alertOct19 00:00:03. [AP article syndicated by WRAL](https://www.wral.com/news/ap/9472c-sen-roger-marshall-sought-funding-to-address-a-water-shortage-the-project-could-benefit-his-ranch/) fullHTTP200 body received04:26:02; publishedOct15 07:13:12Z. AP reports a2024 $4.2m earmark request, its failed bill and later2025 project funding, plus Marshall's reported20% ranch stake. Office denies benefit; a quoted critic raises a conflict concern but says the public-purpose project did not violate the cited earmark rule. Records/law texts were not independently retrieved; RepublicanHerald's own body/local edits were not captured. The article's race-tightening language supplies no new named poll or measured voter effect.
+- **No Kansas holding or pending BUY:** originalSedgwick2054 canceled unfilled/DEC224; [terminal/trades/index/CTF proof](2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md), latest account corroboration04:12. Reclassify as research-only, not a current-portfolio MATERIAL alert; no cancellation replay, entry or automatic repost.
+
+[Small source units](../data/deep_review_20261017/work/delayed0043_mi_completion_0407.json) · [Kansas unit](../data/deep_review_20261017/work/delayed0043_ks_facts.json) · [Root raw/gzip/receipt hashes and paragraph comparison](../data/deep_review_20261017/work/delayed0043_root_source_audit_0428.json). Source filenames are labels; receipt clocks govern freshness.
+
+## Later alert tail
+
+[Eight complete public rows](../data/deep_review_20261017/work/delayed0043_newstail_0426.json), after04:01:18 through actual capture04:26:19.955918. Effective cutoff corrected from a requested boundary10seconds later; all8 rows predate capture. Four classifier failures were manually checked for exposure relevance; article claims were not adopted as facts.
+
+[Exact-ID dispositions](../data/deep_review_20261017/work/delayed0043_tail_dispositions_0429.json): MT01 debate concerns a canceled candidate; gas/Anthropic reports concern no recorded current exposure; Mbappé match headline does not establish annual search-rank movement. Those bodies remain unverified. MI`f8e2d7db67d63d1b559f44880020326f1cf4ca60` campaign/debate headline staysMINOR: one search and supplied-link GET yielded Google shell, no publisher article/date. No numeric shock adopted or full-content review claimed.
+
+## Checklist, records and limits
+
+- [02UTC full review](2026-10-19-0200-checkin.md),03:22 supplementary scans,03:52 status and04:12 account proof completed after this00:43 request. [Prior11-step audit](../data/deep_review_20261017/work/delayed2309_checklist_0422.json) and [this bounded audit](../data/deep_review_20261017/work/delayed0043_checklist_0428.json) preserve source/account times, scanner omissions and uncertainty. No redundant bankroll, redemption, scanner or financial call.
+- Inventory04:12:51: fourLIVE/0matched BUYs/$7.52; holdings unchanged. FixedPolygon95785155 cash/CTFs are partial/sequential, not newNAV. Full bankroll/CSV208 retain02UTC dates. MT01 closure/poll-method gap: [prior review](2026-10-19-delayed-2309-news-review.md).
+- Disk crossed180MiB floor. Removed only899 same-owner generated.pyc files with adjacent unchanged regular.py/source-hash guards:13,090,816filesystem bytes reclaimed to196,423,680B. [Manifest](../data/deep_review_20261017/work/generated_pyc_reclaim_0426.json). Later04:27 observation194,961,408B; caches/logs can regrow. Source/financial/operator records preserved; remaining Python uses-B. No permanent growth fix claimed.
+- WeeklyOct23/monthlyNov12 not due; methodology20/20 concluded. No code/daemon change, material financial action,3k valuation credit, goal, timer, idle continuation or Telegram. Existing message1259 belongs to the preceding MT01 cancellation; not resent.
