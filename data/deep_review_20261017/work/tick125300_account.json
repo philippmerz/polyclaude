@@ -1,0 +1,78 @@
+{
+  "schema": "tick125300_account_audit.v1",
+  "compiled_utc": "2026-10-19T12:55:54.332392+00:00",
+  "capture_dir": "logs/periodic_20261019T1253_ops_private_125551933836",
+  "private_capture_mode": "0700 directory; read_capture receipts/bodies 0600; order and position bodies are SDK/result serialization, not raw HTTP wire bodies.",
+  "captures": {
+    "orders": {
+      "receipt": "logs/periodic_20261019T1253_ops_private_125551933836/authenticated_open_orders.receipt.json",
+      "started_utc": "2026-10-19T12:55:53.181016Z",
+      "received_utc": "2026-10-19T12:55:53.586736Z",
+      "bytes": 2197,
+      "sha256": "2a001cc730c9189ff33aa2100cef2e085b7567ff25387921d2a615e450309bcf",
+      "gzip_sha256": "8cf75b03a19c7f051f5a26f2ce59e4008fdc294ba18048d1d26f24c4c5a6cc36"
+    },
+    "positions": {
+      "receipt": "logs/periodic_20261019T1253_ops_private_125551933836/indexed_positions.receipt.json",
+      "started_utc": "2026-10-19T12:55:53.596657Z",
+      "received_utc": "2026-10-19T12:55:54.273992Z",
+      "bytes": 8450,
+      "sha256": "852e20e6221916fb8f893b170ea6be2bfbbba32d5448e9d2b5e1cacce5e866cb",
+      "gzip_sha256": "c333db3d1e16285300be44004710e9f13cd9e9ccbb6450123122b8281dc4541d"
+    },
+    "reservations": {
+      "receipt": "logs/periodic_20261019T1253_ops_private_125551933836/entry_reservations.receipt.json",
+      "started_utc": "2026-10-19T12:55:54.316473Z",
+      "received_utc": "2026-10-19T12:55:54.322327Z",
+      "bytes": 2274,
+      "sha256": "d2d709c50435264e6f0bf7f099e6cb0dd1dc56af832a98183c39dfff628110fc",
+      "gzip_sha256": "a412a257595f8e0b623a9a9570a5aeb3a890362747c5658cefd8f36eb82eac14"
+    }
+  },
+  "orders": {
+    "helper_status": 200,
+    "pagination_terminal": true,
+    "open_order_count": 4,
+    "open_buy_count": 4,
+    "open_buy_matched_shares": 0.0,
+    "open_buy_full_risk": 7.52,
+    "identities_sha256": "1a420b8d563e2c8d163237edb7d5f7e7be3988cade0668e8a48119e0be8f131d",
+    "live_buy_without_reservation_count": 0,
+    "live_reservation_without_open_buy_count": 0,
+    "identity_or_full_risk_mismatch_count": 0
+  },
+  "reservations": {
+    "count": 4,
+    "state_counts": {
+      "live": 4,
+      "claimed": 0,
+      "matched": 0,
+      "ambiguous": 0,
+      "cancelled": 0,
+      "pending": 0
+    },
+    "sha256_before": "e39f6976abd7c2505b9917cdbc945ac28ce686eedc392f86f525c9c55ee60c6a",
+    "sha256_after": "e39f6976abd7c2505b9917cdbc945ac28ce686eedc392f86f525c9c55ee60c6a",
+    "unchanged_during_read": true
+  },
+  "positions": {
+    "data_api_row_count_including_redeemables": 8,
+    "positive_unresolved_rows": 7,
+    "positive_redeemable_rows": 1,
+    "identity_duplicate_rows": 0,
+    "claim_insurance_snapshot_rows": 8,
+    "missing_from_claim_snapshot_count": 0,
+    "snapshot_extra_count": 1,
+    "snapshot_missing_cid_tails": [],
+    "snapshot_extra_cid_tails": [
+      "40afa1be64e8"
+    ],
+    "total_bought_sum": 107.33
+  },
+  "errors": [],
+  "details_private_only": {
+    "live_orders_without_reservation_id_tails": [],
+    "reservations_without_live_order_id_tails": [],
+    "order_mismatch_id_tails": []
+  }
+}

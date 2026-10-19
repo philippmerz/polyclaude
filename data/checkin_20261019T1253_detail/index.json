@@ -1,0 +1,31 @@
+{
+  "schema": "routine_discovery_detail_index.v1",
+  "created_utc": "2026-10-19T13:00:44Z",
+  "source_original_local_only": {
+    "path": "data/checkin_20261019T1253_discovery.json",
+    "bytes": 12303,
+    "sha256": "1afee56eafd0176b6ce278376d23d5791697f9777327bb423e542931bf647442",
+    "publication": "Preserved locally for audit; not required in public allowlist."
+  },
+  "shards": [
+    {
+      "path": "data/checkin_20261019T1253_detail/fetch.json",
+      "bytes": 2889,
+      "sha256": "57efb8a67cb0a7bf13cba2e83e4ba56bd4f23b7b40492b4f587b8050d363919b",
+      "topic": "fetch"
+    },
+    {
+      "path": "data/checkin_20261019T1253_detail/scans.json",
+      "bytes": 4462,
+      "sha256": "8c4fd766092dc8638a66c54f264e3e9ab7201499789d98420cf2b80b7b7163d9",
+      "topic": "scans"
+    },
+    {
+      "path": "data/checkin_20261019T1253_detail/batches.json",
+      "bytes": 2330,
+      "sha256": "46d241b34680c9695fa1e8f4bbeffd8623f256ec666a18ce236fa53061baa9d7",
+      "topic": "batches"
+    }
+  ],
+  "raw_capture_policy": "No raw CLI output or private endpoint payloads included; receipt hashes only."
+}

@@ -1,0 +1,112 @@
+{
+  "schema": "routine_discovery_scan_detail.v1",
+  "created_utc": "2026-10-19T13:00:44Z",
+  "sports": {
+    "consensus_attempts": 3,
+    "fetched_markets": 54,
+    "mapping_failures": 2,
+    "qualifying_deltas": [],
+    "receipt": {
+      "sha256": "45e15a28c92d13f2526f454ebd9478c1ad195e07891023bf0f7aeacaf54548e1"
+    },
+    "valid_result": "PARIVISION vs magic CS BO3; bookmaker label median/bwin; delta -2.9pp, v24 $266767."
+  },
+  "macro": {
+    "consensus": "disabled",
+    "markets_over_volume_threshold": 7,
+    "receipt": {
+      "sha256": "9715e95f14258d711d8b6cf275f4314ddfc9a3fd7e5ff7e0d150f52214c4c3c2"
+    }
+  },
+  "event_monotonicity": {
+    "events_fetched": 1335,
+    "flag": "Axis Robotics: midpoint +1.45pp; live net -0.70pp, ARTIFACT (mid-only).",
+    "midpoint_flags": 1,
+    "multi_market_events": 1099,
+    "pages": "15/15 capped",
+    "provisional_positive": 0,
+    "receipt": {
+      "sha256": "588289e53a6061acacb84c2af523b7dd7f7f5fa1a3cbaef07901d24f3311d51b"
+    }
+  },
+  "consistency": {
+    "coverage": {
+      "analysis_incomplete_reasons": [
+        "market_cap",
+        "162 structural groups unquoted",
+        "10 structural groups quote-failed"
+      ],
+      "coverage_complete": false,
+      "cursor_exhausted": false,
+      "events_fetched": 660,
+      "events_processed": 644,
+      "live_groups_attempted": 20,
+      "live_groups_relevant": 182,
+      "live_groups_requested": 20,
+      "live_groups_skipped": 10,
+      "live_groups_unquoted": 162,
+      "live_groups_validated": 10,
+      "live_legs_attempted": 200,
+      "neg_risk_markets_retained": 2741,
+      "open_markets_scanned": 5029,
+      "pages_fetched": 33,
+      "stop_reason": "market_cap"
+    },
+    "full_json_sha256": "ee1c44337c0585607e99d8546d63c3eff9e52c78d69dc6056f645143b3522b4f",
+    "full_markdown_sha256": "2e101502f98a313b1a21e92bfb277c351068f37dd6e0bcb34a79b11dc5b1939f",
+    "live_status_counts": {
+      "not_quoted": 92,
+      "quote_failed": 10,
+      "quoted_nonpositive": 10,
+      "unquoted_leg_cap": 162
+    },
+    "openrouter_oct19_midpoint_only": [
+      {
+        "actionable": false,
+        "event_id": "1216187",
+        "failure": "book validation failed for 5916183: CLOB book is stale (464.7s)",
+        "live_status": "quote_failed",
+        "market_id": 5916183,
+        "title": "#1 AI lab by OpenRouter market share week of October 19?"
+      }
+    ],
+    "provisional_positive": 0,
+    "quote_failure_types": {
+      "no_asks": 7,
+      "stale_book": 3
+    },
+    "receipt": {
+      "sha256": "ed40dd214bc33142e62cd93790b21a76bcdbe54b13c89fe0fd14fa25f92b707f"
+    }
+  },
+  "favorite_fade": {
+    "coverage": "{\"book_batch_error\": null, \"candidate_rows_emitted\": 24, \"market_fetch\": {\"command_failed\": false, \"complete\": false, \"failures\": [], \"max_pages\": 10, \"page_size\": 100, \"pages_attempted\": 10, \"pages_succeeded\": 10, \"stop_reason\": \"max_pages\"}, \"max_walks\": 40, \"missing_or_invalid_favorite_books\": 1, \"rough_survivors_before_book_cap\": 72, \"selected_for_book_walk\": 40, \"valid_books_outside_favorite_price_profile\": 15, \"valid_favorite_books\": 39, \"walk_cap_omissions\": 32}",
+    "profile_rows_emitted": 24,
+    "receipt": {
+      "sha256": "6d310f909cbdd1525c44839012a1ead3068e7560d2dbe54a8f21d85bca9c3881"
+    }
+  },
+  "exact_checks": {
+    "provided_CIDs": {
+      "0xa52beb533967265e4abce442e554e9d0b556c9ee4f2a3cb97d2bd915acc23652": 0,
+      "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301": 0
+    },
+    "scope": "Only these two supplied CIDs were checked."
+  },
+  "candidate_index": {
+    "axis_robotics": "not positive after depth walk",
+    "limits": "All discovery/event/consistency universes are capped. Absence is not evidence of closure, resolution, or exchange-wide absence. Thin-tail context output covers all 808 ranked triggers and 836 same-event context rows from the selected 3000; other unchanged rows were not emitted. OpenRouter Oct19 is not the held Oct26-Nov16 four-week contract.",
+    "midpoint_only_openrouter_event": [
+      {
+        "actionable": false,
+        "event_id": "1216187",
+        "failure": "book validation failed for 5916183: CLOB book is stale (464.7s)",
+        "live_status": "quote_failed",
+        "market_id": 5916183,
+        "title": "#1 AI lab by OpenRouter market share week of October 19?"
+      }
+    ],
+    "verified_live_structural_positive": [],
+    "verified_sports_delta_trigger": []
+  }
+}

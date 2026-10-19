@@ -1,0 +1,128 @@
+{
+  "schema": "tick1253_primary_verification.v1",
+  "verified_utc": "2026-10-19T13:06:01.979174+00:00",
+  "cli_commands": 12,
+  "cli_stream_hashes_verified": 24,
+  "source_receipt_body_pairs_verified": 8,
+  "positions_identity_size_basis_totalBought_match0956": true,
+  "positive_position_rows": 8,
+  "source_gross_cells": [
+    {
+      "source": "The Numbers film page",
+      "gross_cells": [
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data"
+          ]
+        },
+        {
+          "text": "$8,000,000 (100.0% of total gross)",
+          "class": null
+        },
+        {
+          "text": "$8,000,000",
+          "class": null
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data",
+            "estimate"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data",
+            "chart_estimate"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data",
+            "chart_estimate"
+          ]
+        },
+        {
+          "text": "$8,000,000 (100.0% of total gross)",
+          "class": null
+        },
+        {
+          "text": "$8,000,000",
+          "class": null
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data",
+            "estimate"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "data",
+            "chart_estimate"
+          ]
+        }
+      ],
+      "estimate_annotation_count": 0
+    },
+    {
+      "source": "Box Office Mojo weekend page",
+      "gross_cells": [
+        {
+          "text": "$8,000,000",
+          "class": [
+            "a-size-medium",
+            "a-text-bold"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "money"
+          ]
+        },
+        {
+          "text": "$8,000,000 3,065\n            theaters",
+          "class": null
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "money"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "a-text-right",
+            "mojo-field-type-money",
+            "mojo-estimatable"
+          ]
+        },
+        {
+          "text": "$8,000,000",
+          "class": [
+            "a-text-right",
+            "mojo-field-type-money",
+            "mojo-estimatable"
+          ]
+        }
+      ],
+      "estimate_annotation_count": 2
+    }
+  ],
+  "corrected_transcription_metadata": [
+    {
+      "unit": "data/deep_review_20261017/work/tick1253_whalefall_facts.json",
+      "field": "raw_sha256",
+      "prior_transcribed_value": "eee832166f2c7428693c31b7664b8387dea53b1945d3b74c00ba237115e241de",
+      "receipt_value": "eee832166f2c7428693c31b7664b8387dea53b1943d5b74c00ba237115e241de"
+    }
+  ],
+  "limits": "Private captures remain local. No new network calls or financial operations. Byte hashes/call windows are not wire authentication; quote depth is indicative, not synchronized/freshness-certified. Earlier uncaptured full status was repeated with captured routine reads/cache updates."
+}

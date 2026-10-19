@@ -1,0 +1,127 @@
+{
+  "schema": "tick125300_ops_closeout.v1",
+  "compiled_utc": "2026-10-19T13:02:14.039466Z",
+  "account": {
+    "unit": "work/tick125300_account.json",
+    "sha256": "136032bc851ef82f68824ad687229da9e98fbdf12ae3ebdbf9333214126d8a37",
+    "orders": "4 live BUYs; 0 matched; full risk $7.52; no identity/risk mismatch or reservation gaps",
+    "reservation_sha256": "e39f6976abd7c2505b9917cdbc945ac28ce686eedc392f86f525c9c55ee60c6a",
+    "positions": "8 rows including claim; 7 unresolved, 1 redeemable; no duplicate identity; totalBought 107.33"
+  },
+  "cli": {
+    "manifest": "work/tick125300_cli_manifest.json",
+    "sha256": "66d4b90c5960a06c12595f4bc6b939830d977a36b6d0e74e56575a39a780e16b",
+    "private_capture_dir": "logs/periodic_20261019T1253_cli_private_1259",
+    "window": [
+      "2026-10-19T12:56:58.916919Z",
+      "2026-10-19T12:57:43.655448Z"
+    ],
+    "commands": [
+      "full_status",
+      "wallet",
+      "crypto",
+      "bankroll",
+      "ostium_diff",
+      "crux",
+      "watchlist_revet",
+      "insurance_fix",
+      "exit_analysis",
+      "kelly_after_bankroll",
+      "decisions_pending",
+      "redeem_dry_run"
+    ],
+    "all_rc0": true,
+    "bankroll_received_utc": "2026-10-19T12:57:35.370009Z",
+    "bankroll_total_usd": 196.41,
+    "gas_separate_usd": 5.83,
+    "wallet_pUSD": 20.45129,
+    "resting_risk_usd": 7.52,
+    "deployable_pUSD": 12.93129,
+    "realizable_mark_usd": 30.85,
+    "mark_note": "Indicative, not synchronized/freshness-verified; midpoint $35.44.",
+    "findings": [
+      "HLE chart inventory UPDATING vs Jul-3; Grok 4.7 unscored and excluded from accuracy threshold.",
+      "UMA: 44 tracked, 42 markets refreshed, 0 alerts; not interpreted as failures.",
+      "No watchlist hits; Crux rc0 empty output; decisions pending none.",
+      "Insurance audit refreshed snapshot (7 indexed +1 deindexed; 0 acked holds dropped), then clean.",
+      "Redeem dry-run: 0/7 winning claims; only Gemini >=50% HLE NO size 4.0347 at $0 value was skipped as losing/uncertain; no broadcast.",
+      "Status warning headline 12:52 Whalefall box-office piece; title alone not treated as confirmed evidence."
+    ]
+  },
+  "daemons": {
+    "unit": "work/tick125300_daemons.json",
+    "sha256": "1c20db50d13db2b0bbf704308f06c56bef562a442f58d886457e0af1a96afa65",
+    "four_expected_each_single": true,
+    "all_code_mtimes_before_start": true,
+    "cwd": "news watcher is repo; other three resolve canonical absolute script but have non-repo cwd, permitted per root guidance"
+  },
+  "freshness": {
+    "unit": "work/tick125300_freshness_metadata.json",
+    "sha256": "6f9276dd6fafa28d97fb83c5cd92894d492e03e060993a7a4c1137154dd6aa24",
+    "metadata_only": true,
+    "heartbeat_interval_seconds": 3600,
+    "news_state": "mode/mtime only: last modified 2026-10-19T12:58:24.372772Z, age 223.5s against 300s polling interval; contents not read.",
+    "news_status_addendum": "work/tick125300_news_status.json sha256 06989ca756473527fe17ad88795677bbf6cf8277c44db0a4fa4e60b23f8c7f4a; status command rc0, PID 148881; last_cron_trigger field is not last poll.",
+    "earlier_reported_heartbeat_state_age_seconds": 1460.4,
+    "earlier_reported_opportunity_state_age_seconds": 36.5,
+    "timestamp_scope": "Earlier heartbeat/opportunity ages lack retained per-row clocks and are not ages at the later merged13:02timestamp; news223.5s is separately clock-bound. Code/process observation remains12:58:08.580549Z."
+  },
+  "calendar": "Weekly P&L due Oct 23; monthly review due Nov 12; not run/changed.",
+  "capture_caveat": "One initial full-status rerun was not durably captured because response-name mismatched intent. The successful captured CLI run repeated full status once. No later command lost; no order/account mutation.",
+  "exit_analysis": {
+    "capture": "logs/periodic_20261019T1253_cli_private_1259/exit_analysis_stdout.body.json.gz",
+    "positions": [
+      {
+        "market": "Clarity over-50/over-58 group",
+        "full_exit_net_usd": 24.53,
+        "fee_usd": 0.21,
+        "fair_floor_usd": 29.0,
+        "note": "group-level; individual legs suppressed"
+      },
+      {
+        "market": "Whalefall <$8m",
+        "side": "NO",
+        "shares": 6,
+        "hold_at_model_fair_usd": 3.43,
+        "net_taker_exit_usd": 0.21,
+        "model_fair": 0.571
+      },
+      {
+        "market": "Google top-5 athletes",
+        "side": "Messi YES",
+        "shares": 5,
+        "hold_at_model_fair_usd": 3.0,
+        "net_taker_exit_usd": 1.2,
+        "model_fair": 0.6
+      },
+      {
+        "market": "Michigan Senate",
+        "side": "NO",
+        "shares": 5,
+        "hold_at_model_fair_usd": 2.2,
+        "net_taker_exit_usd": 1.41,
+        "model_fair": 0.44
+      },
+      {
+        "market": "OpenRouter 725T\u2013775T",
+        "side": "NO",
+        "shares": 5,
+        "hold_at_model_fair_usd": 4.4,
+        "net_taker_exit_usd": 3.0,
+        "model_fair": 0.88
+      }
+    ],
+    "interpretation": "Central arithmetic/fee-net-depth only; no synchronized freshness, stressed/joint portfolio verdict, or action."
+  },
+  "kelly_advisory": {
+    "capture": "logs/periodic_20261019T1253_cli_private_1259/kelly_after_bankroll_stdout.body.json.gz",
+    "post_bankroll_cache_age_hours": 0.0,
+    "scale_in_candidates_suppressed_by_ticket_cap": {
+      "Michigan_NO_usd": 16.32,
+      "OpenRouter_NO_usd": 55.99,
+      "Whalefall_NO_usd": 48.5,
+      "Messi_YES_usd": 39.38
+    },
+    "orders_added": false
+  }
+}

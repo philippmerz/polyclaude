@@ -1,0 +1,40 @@
+{
+  "observed_utc": "2026-10-19T13:02:07.909769Z",
+  "metadata_only": true,
+  "paths": [
+    {
+      "label": "opportunity_state",
+      "present": true,
+      "mtime_utc": "2026-10-19T12:58:05.248814Z",
+      "bytes": 7970,
+      "mode": "0o644",
+      "reported_age_seconds_earlier_probe": 36.5
+    },
+    {
+      "label": "heartbeat_state",
+      "present": true,
+      "mtime_utc": "2026-10-19T12:34:21.367934Z",
+      "bytes": 515,
+      "mode": "0o600",
+      "reported_age_seconds_earlier_probe": 1460.4
+    },
+    {
+      "label": "heartbeat_log",
+      "present": true,
+      "mtime_utc": "2026-10-19T06:34:16.783267Z",
+      "bytes": 53390,
+      "mode": "0o755",
+      "reported_age_seconds_earlier_probe": 23065.0
+    },
+    {
+      "label": "news_state",
+      "present": true,
+      "mtime_utc": "2026-10-19T12:58:24.372772Z",
+      "age_seconds": 223.5,
+      "bytes": 547303,
+      "mode": "0o600",
+      "metadata_only": true
+    }
+  ],
+  "timestamp_scope_clarification": "Top-level observed_utc is the later news-state metadata update. Earlier opportunity/heartbeat ages were copied from a prior probe with no retained per-row clock; preserve them as earlier reported ages, not ages at the merged timestamp. News row age is bound to the current observed_utc."
+}

@@ -1,0 +1,61 @@
+{
+  "observed_utc": "2026-10-19T12:58:08.580549Z",
+  "processes": [
+    {
+      "script": "news_watcher.py",
+      "count": 1,
+      "processes": [
+        {
+          "pid": 148881,
+          "resolved_script": "/home/polyclaude/polyclaude/scripts/news_watcher.py",
+          "start_utc": "2026-10-19T05:28:37.310000Z",
+          "code_mtime_utc": "2026-10-18T22:58:44.443045Z",
+          "mtime_before_start": true,
+          "cwd_is_repo": true
+        }
+      ]
+    },
+    {
+      "script": "opportunity_watch.py",
+      "count": 1,
+      "processes": [
+        {
+          "pid": 425,
+          "resolved_script": "/home/polyclaude/polyclaude/scripts/opportunity_watch.py",
+          "start_utc": "2026-10-18T09:33:44.720000Z",
+          "code_mtime_utc": "2026-09-29T10:07:53.974910Z",
+          "mtime_before_start": true,
+          "cwd_is_repo": false
+        }
+      ]
+    },
+    {
+      "script": "heartbeat_watch.py",
+      "count": 1,
+      "processes": [
+        {
+          "pid": 450,
+          "resolved_script": "/home/polyclaude/polyclaude/scripts/heartbeat_watch.py",
+          "start_utc": "2026-10-18T09:33:44.960000Z",
+          "code_mtime_utc": "2026-10-02T14:31:39.989785Z",
+          "mtime_before_start": true,
+          "cwd_is_repo": false
+        }
+      ]
+    },
+    {
+      "script": "telegram_listener.py",
+      "count": 1,
+      "processes": [
+        {
+          "pid": 451,
+          "resolved_script": "/home/polyclaude/polyclaude/scripts/telegram_listener.py",
+          "start_utc": "2026-10-18T09:33:44.990000Z",
+          "code_mtime_utc": "2026-09-10T18:34:57.001351Z",
+          "mtime_before_start": true,
+          "cwd_is_repo": false
+        }
+      ]
+    }
+  ]
+}

@@ -30,5 +30,5 @@ Active/next: **353**. [Small phase](../data/deep_review_20261017/work/manual1043
 - Tables use the newest immutable revision per case; earlier forecasts and blocks remain preserved. Case340 candidate withdrawn unplaced after album-specific leak evidence; DEC234.
 - Quotes are dated research evidence, never execution authorization. Sorted max-bid/min-ask governs; original first-row ordering error/correction and raw captures remain preserved.
 - Source units target2–5KB with separate raw arrays/receipts. Primary owns exact-rule interpretation, probabilities and both-side economics; helpers gather facts.
-- Last full portfolio check:09:58financial/10:07account. Separate read-only pre-entry11:46:58–11:47:38 observed account196.52 including5.78gas,4LIVE/0matchedBUY7.52/matchingreservations, auditCLEAN. No new financial writer or synchronized NAV/CSV anchor.
+- Latest full portfolio check12:57: account196.41includes5.83gas; trading190.58mid/185.99indicativenetdepth, PM35.44/30.85. Four12:55LIVE/0matchedBUY7.52/matchingreservations; no financialwriter. [Check](2026-10-19-1253-checkin.md).
 - Five11:06–11:27 alerts reviewed with source gaps retained: no measured MI/Google change; TheMeg streaming is not Whale final gross. [Source index](../data/deep_review_20261017/work/alert_followup_340_1155_index.json).

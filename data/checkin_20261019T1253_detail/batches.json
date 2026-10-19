@@ -1,0 +1,79 @@
+{
+  "schema": "routine_discovery_batch_detail.v1",
+  "created_utc": "2026-10-19T13:00:44Z",
+  "context_batches": {
+    "primary": {
+      "bad_identity_or_criteria_proofs": 0,
+      "batch_count": 3,
+      "bytes": 22526,
+      "changed_field_counts": {
+        "best_ask": 7,
+        "best_bid": 8,
+        "new_to_snapshot": 19,
+        "no_price": 7,
+        "outcome_prices": 7,
+        "tick": 1,
+        "yes_price": 7
+      },
+      "duplicate_market_ids": 0,
+      "markets_in_batches": 42,
+      "rank_gaps": 0,
+      "rank_range": [
+        1,
+        28
+      ],
+      "ranked_triggers": 28,
+      "semantic_context_incomplete": 0,
+      "sha256": "683a19408ea8d293c5cdf3364a1d25f4a18041cd0e8c01f04b327997dfad3cbb",
+      "source_integrity_verified": true,
+      "statuses": {
+        "changed": 9,
+        "context_unchanged": 14,
+        "new_to_snapshot": 19
+      },
+      "table_rows": 42,
+      "warnings": [
+        "- 19 prior market(s) are absent from the current filtered shortlist; omission is not evidence of closure or resolution",
+        "- upstream discovery pagination is incomplete: page_cap",
+        "- upstream output cap omitted 534 eligible rows"
+      ]
+    },
+    "thin_tail": {
+      "bad_identity_or_criteria_proofs": 0,
+      "batch_count": 95,
+      "bytes": 655263,
+      "changed_field_counts": {
+        "best_ask": 223,
+        "best_bid": 221,
+        "new_to_snapshot": 524,
+        "no_price": 185,
+        "outcome_prices": 185,
+        "spread": 48,
+        "tick": 4,
+        "yes_price": 185
+      },
+      "duplicate_market_ids": 0,
+      "markets_in_batches": 1644,
+      "rank_gaps": 0,
+      "rank_range": [
+        1,
+        808
+      ],
+      "ranked_triggers": 808,
+      "semantic_context_incomplete": 0,
+      "sha256": "cf501e0f3840ce0261f0a346cf01d7429974c58c25b3e7102219e8b13eaf19ea",
+      "source_integrity_verified": true,
+      "statuses": {
+        "changed": 284,
+        "context_unchanged": 836,
+        "new_to_snapshot": 524
+      },
+      "table_rows": 1644,
+      "warnings": [
+        "- 524 prior market(s) are absent from the current filtered shortlist; omission is not evidence of closure or resolution",
+        "- upstream discovery pagination is incomplete: page_cap",
+        "- upstream output cap omitted 234 eligible rows"
+      ]
+    }
+  }
+}
