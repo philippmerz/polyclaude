@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 209 recorded observations from Apr-25
+The local performance CSV now has 210 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,7 +58,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **311 valued /5 blocked /364 factual exclusions /2,320 pending**;680 immutable base cases +56 append-only revisions. Active case313; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; full revision chain verified with bounded emitted metadata. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
 
-**Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Latest direct Numbers06:01 reports an $8m estimate; no final actual. Selected NO42.10%, versus~$0.83 indicative net sale06:01; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0600-periodic-review.md). Original02UTC BUY pull obsolete; next held review10UTC.
+**Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Latest direct Numbers06:01 reports an $8m estimate; no final actual. Selected NO42.10%, versus~$0.71 indicative net sale06:56; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0654-checkin.md). Original02UTC BUY pull obsolete; next held review10UTC.
 
 **293YB/296gas/Sedgwick/MT01 canceledunfilled**, standingpullscomplete/DEC226+224; no automaticrepost. HLEclosedremaining9NO/DEC225,2.6244netverified. FourBUY7.52 remain; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments, not executioninstructions.
 
@@ -84,11 +84,11 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 05:22–05:23UTC
+## Last audited snapshot — October19 06:55–06:56UTC
 
-**Trading midpoint $190.95 / indicative net depth $188.67; account $196.75 including $5.80 separately funded gas.** PM $35.81 mid / $33.53 depth; cumulative accounting residual $20.73. Authoritative bankroll capture05:22:51–05:23:06UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Full check](research/2026-10-19-0519-checkin.md).
+**Trading midpoint $190.22 / indicative net depth $184.65; account $196.09 including $5.87 separately funded gas.** PM $35.09 midpoint / $29.52 net bid-depth; cumulative accounting residual $20.73. Authoritative bankroll window06:55:58–06:56:15UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Full check](research/2026-10-19-0654-checkin.md).
 
-[06UTC held review](research/2026-10-19-0600-periodic-review.md): PM $35.80 midpoint / $33.93 indicative exit, a separate partial observation; no new whole-account mark or CSV row. Holdings unchanged: MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add, Clarity whole29/29 pair and Trump dust; GrokHLE stays closed. Four BUYs/$7.52 LIVE/zero matched06:02; pUSD20.451290/deployable12.931290 at06:01. [Exact orders](notes/resting_orders.md). Two new headlines reviewed without a verified thesis change; four canonical daemons healthy. Discovery remains incomplete below180MiB disk floor; package-cache cleanup needs admin access. Next10UTC/Idaho22UTC; [handoff](notes/current_context.md).
+No trades/fills; four BUYs/$7.52 LIVE/zero matched06:57. MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add; Clarity whole29/29 and Trump dust unchanged. A wide-book Clarity price alert received fresh two-market rule/resolution/book checks: criteria unchanged, no proposal/dispute reported; retain whole pair. Named OpenRouter link reaches consent/no new verified thesis input. [Current orders](notes/resting_orders.md). Four daemons healthy; discovery remains incomplete below180MiB disk floor. Next10UTC/Idaho22UTC; [handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
