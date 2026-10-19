@@ -1,0 +1,74 @@
+{
+  "review_index": 391,
+  "market_id": "2883733",
+  "condition_id": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8",
+  "status": "blocked_after_review",
+  "literal_analysis": "Any issuedpartial/temporary/entity/individualCAATSA231reliefqualifiesirreversibly; intent/F35NDAA-onlynonqualifying. Currentlistmembershipdoesnotruleoutpastqualifyingrelief.",
+  "evidence": [
+    {
+      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML",
+      "observed_utc": "2026-10-19T21:28:58.881317Z",
+      "finding": "RootOct19officialSSBmenu-basedsanctionsentry; currentnotpast-historyproof."
+    },
+    {
+      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "observed_utc": "2026-10-19T21:15:46.622792Z",
+      "finding": "Originalfourindividualsallpresent, publishedOct15; correctedmissedSerhat."
+    },
+    {
+      "url": "https://stratlink.meci.gov.cy/sanction/us?order=asc&page=10&sort=",
+      "observed_utc": "2026-10-19T21:25:54Z",
+      "finding": "ForeigngovernmentindexactualinactiveStateCAATSArowsJuly28; underlyingU.S.reliefactionunverified/conflictswithcurrentlistmembership."
+    },
+    {
+      "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12710/IN12710.1.pdf",
+      "observed_utc": "2026-10-19T21:26:57.436390Z",
+      "finding": "OriginalJuly14CongressPDF3pages distinguishesCAATSAwaiver/review andF35NDAAmechanisms."
+    },
+    {
+      "url": "https://www.devdiscourse.com/article/international/3979489-turkey-says-working-with-us-on-creative-ideas-to-solve-s-400-missile-issue",
+      "observed_utc": "2026-10-19T21:26:57.108362Z",
+      "finding": "DirectReutersministerreportSept19creativeideas/hope, notactualissuedrelief."
+    }
+  ],
+  "forecast": {
+    "status": "unpriced",
+    "reasoning": "IdentifytheU.S.action,ifany,andpenaltyscopebehindCyprusJuly28StateCAATSAdelisting. Currentofficialliststestedbutnotcompletehistory. No defensible already-YES baseline; donot manufacture a point probability from thisconcreteconflict. Case-specificblocked/unpriced, not globallyblocked/rejected.",
+    "method": "Substantiveexact-rule/cross-agencyhistoricalstate review; no fabricatedbaselineprobability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0391_quote_2132.json",
+    "quote_file_sha256": "ed513dc2e419f78a84f90f0e4a803cc833944075681c9b4f8e7e2248cc749caa",
+    "quote_created_utc": "2026-10-19T21:29:49.474393+00:00",
+    "exact_identity": true,
+    "current_quotes": [
+      {
+        "outcome": "Yes",
+        "best_bid": 0.32,
+        "best_ask": 0.36,
+        "book_age_seconds_at_receipt": 14.929598093032837,
+        "min_order_size": "5",
+        "received_utc": "2026-10-19T21:29:49.473598+00:00"
+      },
+      {
+        "outcome": "No",
+        "best_bid": 0.64,
+        "best_ask": 0.68,
+        "book_age_seconds_at_receipt": 14.929598093032837,
+        "min_order_size": "5",
+        "received_utc": "2026-10-19T21:29:49.473598+00:00"
+      }
+    ],
+    "fee_status": "GammafeesEnabledfalse is canonicalzero-fee evidence; compactfd absent, parityunverified, not unknownpositivefee.",
+    "capture_errors": [
+      "fee:ValueError:compact response has no fee descriptor fd"
+    ],
+    "no_probability_or_EV": "No dummy p/EV: unabletocompareYES/NOexpectedterminalreturnsorKellywithoutdefensiblepaststate. These are observations, not execution gates.",
+    "alternative": "Retaincash/currentunderwrittenpositionsandmakercommitments; no allocation tothisunpricedcondition. UnknownEV is not proof either side isnegativeEV."
+  },
+  "verdict": "Blocked/unpriced specificcase; noentry/prior/valuationcredit. SourceconflictrequiresunderlyingU.S.actionnotanothergenericnewssearch. Not a globalgoalblock.",
+  "reopen_condition": "OriginalUSJuly28instrument/scope/officialclarification or definitivecurrent-historyevidence; thenvaluefuturepartial/temporarypathsandbothsidesaftercosts.",
+  "report_markdown": "# 391 · TurkeyCAATSA relief · blocked/unpriced\n\nMarket2883733; CID`0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581`; criteria`aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8`.\n\n- **Exact rule:** any issued U.S. waiver/license/termination/revocation/equivalent removing or suspending any CAATSA§231 penalty onTurkey/SSB/coveredofficials byDec31 23:59ET counts, including individual/partial/temporary relief. YES persists after reversal. Promises/negotiations/F35NDAA-only action do not count. No artificial creation-date lower bound.\n- Original2021StateFederalRegister establishes2020sanctions;2026NRCrecital establishes onlyJuly2024status. Root verified official [OFACSDN](https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML) fourindividuals, includingSerhatUID30686; collector initially missed him. PublicationOct15, notOct19origin. [Correction](../../../data/deep_review_20261017/work/0391_sdn_erratum_2126.json). Root additionallycaptured [Oct19nonSDN](https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML) SSBuid27016/menu-basedpenalties. Currentlisting doesnotexcludepriorpartial/temporaryrelief.\n- **Concrete historical conflict:** [Cyprusgovernmentindex](https://stratlink.meci.gov.cy/sanction/us?order=asc&page=10&sort=) marksFaruk/Serhat/MustafaDelistedJuly28, underCAATSA231/State. RootverifiedSerhatHTMLinactive-row, notfiltertext. This foreignindex isnotU.S.issuance proof; distinctStatepenalties, temporaryrelief or indexerror remain possible. CurrentOFACentries cannot adjudicate an irreversiblepastYES. The underlyingU.S.action/date/scope remains unestablished.\n- Rootread official [July14CRS](https://www.congress.gov/crs_external_products/IN/PDF/IN12710/IN12710.1.pdf),3pages/rawhash: standard236waiver/termination with216review differsfrom231modifiedwaiver; F35NDAA90days isseparate. Conditionalpaths exist, not automaticrelief. [Sep19Reutersministerinterview](https://www.devdiscourse.com/article/international/3979489-turkey-says-working-with-us-on-creative-ideas-to-solve-s-400-missile-issue) shows ongoingideas/hope, notissuance. Oct15Anadolu isonlysearchlead afterbodyaccessfailures. [Primarysourceunit](../../../data/deep_review_20261017/work/0391_primary_sources_2133.json).\n- **No adopted probability/range/EV or valuation credit.** This specificpositiveconflict blocks a defensiblealready-qualifiedbaseline; itisnot a universalrequirementfor exhaustivehistoryor certainty. Historicalgoodwill cannotbereusedasnewissuedrelief. Accessfailure/currentlistingarenotproofnoqualifyingaction.\n-21:29exactowncontractquote observedbeforeanyforecast: Yesbid/ask0.32/0.36, Nobid/ask0.64/0.68; quoteages14.93s/min5. GammafeesEnabledfalse is canonicalzero-fee evidence; compactfd absent, parityunverified, not unknownpositivefee. No expectedROI/Kelly from dummyprobabilities. [Observedbooks](../../../data/deep_review_20261017/work/0391_quote_2132.json).\n- **No trade/prior/watch:** retaincash/underwrittenalternatives; unpriced doesnotmeanbothsidesnegativeEV. Reopenwhen originalU.S.instrument or credibleofficialclarification resolvesJuly28scope/history, thenforecastfuturemechanisms andpricebothsideswithfreshgates. No Turkeyholding/pendingBUY inlast21:04account, no materialportfolioTelegram. Individualcaseblock; finitequeuecontinues394.\n"
+}

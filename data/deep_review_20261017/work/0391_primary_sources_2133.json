@@ -1,0 +1,69 @@
+{
+  "review_index": 391,
+  "reviewed_utc": "2026-10-19T21:31:31.754144+00:00",
+  "identity": "2883733/CID0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "corrected_SDN": "0391_sdn_erratum_2126.json: allfourofficials present (includingSerhat30686). PublishOct15/19457entries vsOct19capture; no missingperson/de-list inference.",
+  "SSB_consolidated": {
+    "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML",
+    "received_utc": "2026-10-19T21:28:58.881317Z",
+    "published": "2026-10-19",
+    "record_count": 486,
+    "SSB_uid27016_ids": [
+      {
+        "uid": "131935",
+        "idType": "CAATSA Section 235 Information:",
+        "idNumber": "EXPORT SANCTIONS Sec. 235(a)(2)"
+      },
+      {
+        "uid": "131936",
+        "idType": "CAATSA Section 235 Information:",
+        "idNumber": "LOANS FROM UNITED STATES FINANCIAL INSTITUTIONS. Sec. 235(a)(3)"
+      },
+      {
+        "uid": "131937",
+        "idType": "CAATSA Section 235 Information:",
+        "idNumber": "LOANS FROM INTERNATIONAL FINANCIAL INSTITUTIONS. Sec. 235(a)(4)"
+      },
+      {
+        "uid": "131938",
+        "idType": "CAATSA Section 235 Information:",
+        "idNumber": "SANCTIONS ON PRINCIPAL EXECUTIVE OFFICERS. Sec 235(a)(12)"
+      },
+      {
+        "uid": "131949",
+        "idType": "CAATSA Section 235 Information:",
+        "idNumber": "EXPORT-IMPORT BANK ASSISTANCE FOR EXPORTS TO SANCTIONED PERSONS. Sec. 235(a)(1)"
+      }
+    ],
+    "program": "CAATSA - RUSSIA",
+    "raw_sha256": "c8a6b609403520dfced0d21325e7851aaffe73fd93b1581a0d6fddce5216d04f",
+    "gzip_sha256": "48e79d2911526a77e3cfb71da1bfc3cff23349554d48cd9c3be013784b948295",
+    "receipt": "logs/deep_review_20261017/case0391_official2131/consolidated.receipt.json",
+    "scope": "Current menu-basedSSB sanctions record, not proof of no priorpartial/temporary/specificlicense."
+  },
+  "CRS": {
+    "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12710/IN12710.1.pdf",
+    "status": 200,
+    "received_utc": "2026-10-19T21:26:57.436390Z",
+    "publication": "2026-07-14",
+    "pages": 3,
+    "raw_sha256": "e46fcb1afcd9ad62cf1882f1f5a02a0dc350d3a99cb63df03f703958bd784a05",
+    "receipt": "logs/deep_review_20261017/case0391_primary2129/crs_pdf.receipt.json",
+    "root_read": "OriginalCongressPDFparsedwithpypdfafterpdftotextmissing; fetchedbytesretainedbeforeparse. Distinguishes F35/NDAA90daywaiver, CAATSA236waiver/termination with21630/60dayreview, separate231modifiednational-securitywaivernocongressionalreview; certificationsstillrequired. NeitherF35approvalnorblanketPresidentcanliftwithoutconditions assumed. DatedlegalanalysisnotOctamendmentcertificate."
+  },
+  "Reuters_Sep19": {
+    "url": "https://www.devdiscourse.com/article/international/3979489-turkey-says-working-with-us-on-creative-ideas-to-solve-s-400-missile-issue",
+    "published_display": "2026-09-20 00:48IST (Sep19UTC)",
+    "received_utc": "2026-10-19T21:26:57.108362Z",
+    "raw_sha256": "cf3e96977417decf596b4ea9c46ead3a3a0ba97ff670b4364e04efe687b6d477",
+    "receipt": "logs/deep_review_20261017/case0391_primary2129/reuters_sep19.receipt.json",
+    "root_read": "Direct200originalReuterssyndication: FidanNTVreportedworkoncreativeideas/hopeforsteps, noactualreliefinstrument. MorecurrentthanJulyintentreport, notqualifyingissuance."
+  },
+  "Cyprus_positive_conflict": {
+    "source": "0391_sdn_erratum_2126.json",
+    "root_DOM_verified": "Serhatrow is actual tr.inactive-row withDelisted/Listdate28.07.2026 andCAATSA231/State nonproliferationlink; not hiddenfilterlegend. Faruk/Mustafaalsoobserved. ItisCyprusgovernmentindex, notU.S.issuedinstrument.",
+    "unresolved": "Could reflectdifferentStatepenalties, temporaryorpartialrelief, mapping/staleindex. ContinuedSDN/nonSDNlisting doesnotdecidewhetheranearlierqualifyingmechanismoccurred; contractYESirreversible."
+  },
+  "latest_search_lead": "Oct15Anadolu reportsTurkishDefenceMinistryexpectationofliftingCAATSA/allrestrictions. OriginalhostGETConnectError/aa.com.trRemoteProtocolError, browser502; rootdidnotverifybodyoradoptasproofnoaction.",
+  "named_blocker": "IdentifytheU.S.action,ifany,andpenaltyscopebehindCyprusJuly28StateCAATSAdelisting. Currentofficialliststestedbutnotcompletehistory. No defensible already-YES baseline; donot manufacture a point probability from thisconcreteconflict. Case-specificblocked/unpriced, not globallyblocked/rejected."
+}

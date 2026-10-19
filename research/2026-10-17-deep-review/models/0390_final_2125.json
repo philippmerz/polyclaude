@@ -1,0 +1,158 @@
+{
+  "review_index": 390,
+  "market_id": "653788",
+  "condition_id": "0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25",
+  "criteria_sha256": "8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14",
+  "status": "valued",
+  "literal_analysis": "OfficialOpenAI OR officialrepresentative publiccompleted-AGIcreationannouncement byDec31ET; notindependentcapabilityproof/productrelease/formalboarddesignation. Future/AGI-like/mission statements ambiguousnotautomaticallyqualifying; no artificiallowerbound. Crediblereportingconsensusallowed.",
+  "evidence": [
+    {
+      "url": "https://time.com/article/2026/08/26/openai-sam-altman-interview/",
+      "observed_utc": "2026-10-19T21:15:43.540654Z",
+      "finding": "Rootdirectcanonicalarticle/rawgzipverified: distinctprogress/futureretrospective/internalyearendexpectation/notquiteyetstatements. Unrelatedbrowserbodyignored."
+    },
+    {
+      "url": "https://openai.com/index/building-standards-next-phase-ai/",
+      "observed_utc": "2026-10-19T21:20:00Z",
+      "finding": "RootpublicbrowserofficialSep21AGIgoals/RSIstatus, not fullannouncementabsenceproof; exactbrowserfetchclock unavailable, markedminute orientation."
+    },
+    {
+      "url": "https://openai.com/index/building-abundant-intelligence/",
+      "observed_utc": "2026-10-19T21:20:00Z",
+      "finding": "RootofficialJul31business/missionframing; browserrepresentation, not failed403body asarticle."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.20756875000000002,
+    "low": 0.05,
+    "high": 0.6,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primaryunfitted historicalclaim plusinternalcapability/publicwording/timingconditionaltree.",
+    "reasoning": ".025+.975*(.55*.32+.45*.025)=.20756875; CEOsame-yearinternalexpectation givesrealchance butAGI-likelanguagehabit/publicclaimtiming remains separate. No80%progressasprobability or absencefromboundedsearch.15ppselectedYES.05756875 fails9cmaker/taker.",
+    "model_path": "models/0390_primary_2122.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0390_quote_2124.json",
+    "quote_file_sha256": "f343f6f06ba962bdf2d6d1a5fa89b3de5e06c33c3cc44d19eeb1dbf022df842f",
+    "quote_capture_utc": "2026-10-19T21:23:06.041546+00:00",
+    "gamma_received_utc": "2026-10-19T21:23:05.909185+00:00",
+    "hypothetical_gross_shares": 20.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.20756875000000002,
+        "selected_stress_probability": 0.05756875000000003,
+        "best_bid": 0.08,
+        "best_ask": 0.09,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444973782",
+        "book_received_utc": "2026-10-19T21:23:06.040715+00:00",
+        "book_age_seconds_at_receipt": 12.2587149143219,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 1.7999999999999998,
+            "fee": 0.06553,
+            "fills": [
+              {
+                "shares": 20.0,
+                "price": 0.09
+              }
+            ],
+            "net": 1.86553
+          },
+          "bids": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 1.6,
+            "fee": 0.05888,
+            "fills": [
+              {
+                "shares": 20.0,
+                "price": 0.08
+              }
+            ],
+            "net": 1.54112
+          }
+        },
+        "taker_cost_usd": 1.86553,
+        "central_expected_profit_usd": 2.285845000000001,
+        "selected_stress_profit_usd": -0.7141549999999992,
+        "break_even_before_carry": 0.0932765,
+        "break_even_constant_carry": 0.09388282836387232,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7924312499999999,
+        "selected_stress_probability": 0.6424312499999999,
+        "best_bid": 0.91,
+        "best_ask": 0.92,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444973782",
+        "book_received_utc": "2026-10-19T21:23:06.040715+00:00",
+        "book_age_seconds_at_receipt": 12.2587149143219,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 18.400000000000002,
+            "fee": 0.05888,
+            "fills": [
+              {
+                "shares": 20.0,
+                "price": 0.92
+              }
+            ],
+            "net": 18.45888
+          },
+          "bids": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 18.2,
+            "fee": 0.06552,
+            "fills": [
+              {
+                "shares": 20.0,
+                "price": 0.91
+              }
+            ],
+            "net": 18.13448
+          }
+        },
+        "taker_cost_usd": 18.45888,
+        "central_expected_profit_usd": -2.610255000000002,
+        "selected_stress_profit_usd": -5.610255000000002,
+        "break_even_before_carry": 0.922944,
+        "break_even_constant_carry": 0.9289434438627712,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No currententry; YEScentralpositive but current9c cost fails15ppactualallowance, NOcentralnegative. Preserve potential cheaperYES as researchlead, not an executable/authorized recommendation.",
+  "reopen_condition": "Officialpast/presentcompleted-creationwording or improvedcapability/publicannouncement/source/uncertainty evidence andsufficientcostchange; freshconditionalfill/allcurrentexecutiongates.",
+  "report_markdown": "# 390 \u00b7 OpenAI announces AGI by2027 \u00b7 \u224820.8%YES; no current entry\n\nMarket653788; CID`0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25`; criteria`8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14`.\n\n- **Rule:** OpenAI OR an official representative announces it has created AGI byDec31 2026ET; credible-reporting consensus can establish the announcement. Actual universalAGIproof, productrelease, formalboard/Microsoftdesignation are not additional requirements. Futureexpectation/AGI-like language alone need not qualify. No invented creation-date lower bound. Historicalambiguousclaims remain a risk.\n- Root verified [TIME Aug26 original interview](https://time.com/article/2026/08/26/openai-sam-altman-interview/) canonicaldirectHTTP200/article element/raw+gzip: Chen describes progress, Brockman a possible future-retrospective interpretation, Altman an internalyearend expectation while not yet declaring AGI. Progresspercentage is not probability. Browser rendering of sameURL returned unrelated sponsoredbody; it was discarded in favor of actual article bytes. [Primary source review](../../../data/deep_review_20261017/work/0390_primary_sources_2122.json).\n- Root read official [Sep21 standards](https://openai.com/index/building-standards-next-phase-ai/) and [Jul31 abundance](https://openai.com/index/building-abundant-intelligence/) webtext: AGI goals/business framing, not reviewed completed-creation declarations. AutonomousRSI status is a different event. Direct403 bodies remain labeledfailures; boundedreading does not establish no announcement elsewhere. [Collector units](../../../data/deep_review_20261017/work/0390_facts_2115.json).\n- **PrimaryYES20.756875%/NO79.243125%; broadYES5\u201360.** Unseen/ambiguouspastqualifier2.5%; ifnone, internalAGIbydeadline55%, explicitpublicclaimgiveninternal32%, acceptedlooseclaimgivennointernal2.5%. Formula`.025+.975*(.55*.32+.45*.025)`. These are unfitted judgments, not validated AGI-deadline or marketing frequencies. Joint slow/fast5.8\u201354%; public-label15%\u219211.64%YES, label50%\u219230.41%. [3.3KB model](../models/0390_primary_2122.json).\n- Model fixed before own current quote. **15pp actual allowance** (10default+5 wording/history/datedinterview extrapolation/conditional-fill estimation risk) selects YES5.756875%/NO64.243125%. Eventuncertainty is already in scenarios; reserve is estimationerror, not a second capabilityproof hurdle. Broadendpoints do not all need to pass.\n-21:23 exactGamma/fee/books verified;12.26s age/min5shares/4%taker-only. YES8/9\u00a2, NO91/92\u00a2. Intended20shares cost1.86553/18.45888; centralprofit+2.285845/\u22122.610255, selected\u22120.714155/\u22125.610255 beforecarry. Constant3.2035%Aave/75d breaks9.3883%/92.8943%. Ordinary improving9\u00a2YES/92\u00a2NOmakers also fail selected; a hypothetical5\u00a2YES would need fresh source/conditional-fill underwriting and cannot be assumed filled beneath the current8\u00a2bid. [Bound economics](../../../data/deep_review_20261017/work/0390_economics_2124.json).\n- **No current entry/order/prior.** Positive centralYES is a researchlead; the actual uncertainty allowance rejects these entrycosts. Cash/knownS\u00e1nchez16\u00a2maker remain alternatives, independently revalidated before allocation. OldHLE9NO is fullyclosed/DEC225; legacyGemini claim/futureORtraffic are distinct and offer no verified hedge. SharedAIprogress/publication/regulatory regimes preclude independence credit.\n- Reopen on direct official completed-creation wording or a genuine new capability/communication commitment, sufficientlylower executablecost, or better evidence reducing estimation uncertainty. Any money needs fresh identity/eligibility/funding/fees/depth/full-fill portfolio/crux/cancelpolicy through vetted entry. No new timer/watcher.\n"
+}

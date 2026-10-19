@@ -1,0 +1,107 @@
+{
+  "schema": "primary_grok_HLE60_model.v1",
+  "review_index": 388,
+  "saved_utc": "2026-10-19T21:18:29.351697+00:00",
+  "forecast_timing": "Fixed before first current own388 book; related55-threshold historical prices known but not probability inputs. Not globally price-blind.",
+  "threshold_HLE_Accuracy": 60,
+  "p_yes": 0.07672617498210324,
+  "adopted_p_yes": 0.07672617498210324,
+  "low": 0.01,
+  "high": 0.35,
+  "actual_entry_reserve_pp": 15,
+  "selected_YES": 0,
+  "selected_NO": 0.7732738250178968,
+  "parent_model": {
+    "path": "research/2026-10-17-deep-review/models/grok298_primary_0005.json",
+    "sha256": "130e57d6cd49aa60fc122b0cea5f007dc31f0fe00eee07ca194b6275b2d63b4b",
+    "reuse": "Same official source/metric/lab/deadline. Exact60threshold separately calculated; not importing sibling probability or quote."
+  },
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0388_facts_2001.json",
+      "sha256": "d0e43a267dd4aa836cb593ef93dac9d5344ebf108cc1e2b405b9d2d3285ee151"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0388_primary_sources_2118.json",
+      "sha256": "717a98c10bae073175e71f66ea45f55e075d95a4ff1cc075da758d14f15c953c"
+    }
+  ],
+  "baseline": "Last successful20:01 cached65-row official response verified raw/gzip; maxnumericGrok39.72,4.7 AccuracyNULL/Diamond22.8. Current21:16 API403 gives no newer rows. Issuer Sep21 largerbase/longerRL confirms possible progress, not HLEAccuracy. No alltime history certification.",
+  "mapping": {
+    "pairs": [
+      [
+        11.77,
+        30.2
+      ],
+      [
+        14.43,
+        33.12
+      ],
+      [
+        18.41,
+        39.28
+      ],
+      [
+        19.57,
+        39.72
+      ]
+    ],
+    "slope": 1.2933909471579106,
+    "intercept": 14.827542252851314,
+    "latent47_mean": 44.316855848051674,
+    "ordinary_sd_pp": 3.5,
+    "limit": "Four correlated own-lab releases/extrapolation; residual not predictiveSD; Diamond does not settle. Latent estimate is not an observed score."
+  },
+  "historical_unseen_qualifying_probability": 0.005,
+  "history_basis": "Unfitted residual for removed/revised/unseen qualifying original-score publication, not inferred zero from snapshot. Separate branch from no-past future;5pct sensitivity explicit.",
+  "regimes": {
+    "weights": {
+      "ordinary": 0.55,
+      "accelerated": 0.3,
+      "stalled": 0.15
+    },
+    "ordinary_release_count_probs_0_1_2": [
+      0.15,
+      0.45,
+      0.4
+    ],
+    "ordinary_gain_pp_shared_across_updates": [
+      2.919999999999998,
+      6.160000000000004,
+      0.4399999999999977
+    ],
+    "ordinary_publication": 0.9,
+    "accelerated_latent_sd": 4.5,
+    "accelerated_best_gain": "max(0,Normal(10pp,6pp)), independent oflatent conditionalonregime",
+    "accelerated_publication": 0.9,
+    "stalled_no_gain_publication": 0.3,
+    "conditional_event_probabilities": {
+      "ordinary": 0.020951502401665916,
+      "accelerated": 0.2018770481996245,
+      "stalled": 1.1149427380118908e-06,
+      "future_given_no_past": 0.07208660802221431
+    }
+  },
+  "sensitivity_p_yes": {
+    "threshold55_same_newpast": 0.1884264467898936,
+    "mapping_minus3": 0.040462286655931774,
+    "mapping_plus3": 0.13614483941510622,
+    "acceleration15pct": 0.049723037271757906,
+    "acceleration50pct": 0.11273035859589699,
+    "publication60pct": 0.05281750545647003,
+    "publication100pct": 0.08469573149064763,
+    "past5pct": 0.1184822776211036,
+    "ordinary_no_further_release": 0.06526229575003169,
+    "joint_slow": 0.01799971432788417,
+    "joint_fast": 0.20855180902992357
+  },
+  "formula": "P=.005+.995*(.55*ordinary+.30*accelerated+.15*stalled). Each branch uses SF((60-latentmean-totalgain)/SD); shared gain preserves dependence. Simpson integral0..80/4096panels includes atomG<=0. Score clipping at0/100 leaves60crossing unchanged.",
+  "checks": {
+    "2048_4096_absdiff": 1.4585554986012994e-14,
+    "threshold55_old_nopast_reproduced": 0.18434818772853628,
+    "threshold60_le55_under_same_states": true
+  },
+  "limits": "All scenario/publication/release/gain/history weights and SDs are unfitted judgment; no calibrated probability, no historical-peak proof or permanent-source-outage claim. Broad2\u201335 not a forced all-endpoint entryrule;15pp actual allowance covers model/source/configuration/scaffolding/adjudication and adverse conditional fills.",
+  "portfolio": "Former OpenAI55 HLE9NO is fully closed/DEC225, no longer active hedge/exposure. Remaining legacyGemini claim uncertain and OR futuretraffic NO has nonmonotonic AI-usage dependence; no independence/hedge credit. Cash/currentothercandidates compete; no allocation yet.",
+  "range_note": "1\u201335% broadjudgment range, includes jointslow1.8%; initial2% bound preserved in range draft before any current388quote."
+}

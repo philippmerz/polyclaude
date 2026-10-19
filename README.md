@@ -56,11 +56,13 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**352 valued /10 blocked /364 factual /2,274 pending;726 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.383 is blocked/unpriced on historical Lyman station control/persistence;384 Omar is valued/no entry.386 Sánchez is valued47.658%YES with30pp allowance; tenYES maker16¢/1.60 is LIVE/zero matched, not an acquired holding. [Entry and source limits](research/2026-10-17-deep-review/sanchez386_entry_2043.md). Next finite case388; no next case started during this bounded check. [Small handoff](data/deep_review_20261017/work/tick191427_followup_RESUME.json).
+**354 valued /11 blocked /364 factual /2,271 pending;729 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.388 Grok HLE≥60 and390 OpenAI AGI announcement are valued/no entry after costs and uncertainty allowance.391 Turkey relief is blocked/unpriced on a specific historical-source conflict; no global research block. Next394/396. Each completed report is saved/indexed individually. [Small handoff](data/deep_review_20261017/work/goal2115_RESUME.json).
 
-**Five LIVE/zero-matched BUYs /9.12 reserved, independently reverified21:04. Idaho22UTC all-unfilled pull remains binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
+386 Sánchez remains valued47.658%YES with30pp allowance; tenYES maker16¢/1.60 is LIVE/zero matched at21:37, not an acquired holding. [Entry and source limits](research/2026-10-17-deep-review/sanchez386_entry_2043.md).
 
-**Whalefall6NO/1.02: thesis broken; exit unavailable.** Numbers20:02 domestic weekend/daily7,837,153 is below8m; Mojo still8m estimated/Numbers summary8m, no finality claim. NO revised57.1%→3%, broad0.2–20.21:04 exactNO book has no bids/YES no asks,24.71s age; chainNO6/UMA stillproposed. No sale/add submitted, full loss possible. [Revision](research/2026-10-17-deep-review/revisions/0299_20261019T200804353936Z.md) · [fresh check](research/2026-10-19-2104-news-checkin.md). TG1270 already sent once.
+**Five LIVE/zero-matched BUYs /9.12 reserved, independently reverified21:37. Idaho22UTC all-unfilled pull remains binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
+
+**Whalefall6NO/1.02: thesis broken; exit unavailable.** Numbers20:02 domestic weekend/daily7,837,153 is below8m; Mojo still8m estimated/Numbers summary8m, no finality claim. NO revised57.1%→3%, broad0.2–20.21:37 exactNO book has no bids/YES no asks; chainNO6/UMA stillproposed. No sale/add submitted, full loss possible. [Revision](research/2026-10-17-deep-review/revisions/0299_20261019T200804353936Z.md) · [fresh check](data/deep_review_20261017/work/tick204951_tail_review.json). TG1270 already sent once.
 
 ## Mandate and constraints
 
@@ -88,7 +90,7 @@ establish an allocation. No position or new watcher was added.
 
 Later21:04 verification: fiveLIVE/zero-matched BUYs/9.12/five reservations and eight indexed identities; order terms and indexed sizes/totalBought unchanged since20:43, SpainCTFs0. DEC23616¢ Sánchez bid reserves1.60; no shares acquired or profit booked. Country grouping gives no independence hedge; manual declared23%risk fraction/rho.7 and full-fill caps passed at entry. [Account proof](data/deep_review_20261017/work/tick204951_account.json).
 
-21:04 quick status returned0/no failure marker, hurdle0/watchlist0;21:05 four canonical daemons count1/code current.20:44 Kelly/crux and20:47 state audit remain dated; broader18UTC safety/16:48full discovery were not repeated. Exact delayed20:49:51 alert IDs have substantive completed source reviews; MI gaps/NO44selected34/noadd remain. Four later title-level leads read through21:00:37 at fixed21:04:59 cutoff; subsequent21:06MI/Warnock support alert also source-reviewed.21:12 fee-net exit comparison retainsMI5NO/NO44selected34/noadd; no numerical/trade update. Existing22UTC light AND Idaho pull/fullOct20 02UTC; weeklyOct23. [Current check](research/2026-10-19-2104-news-checkin.md).
+21:04 quick status returned0/no failure marker, hurdle0/watchlist0;21:05 four canonical daemons count1/code current.20:44 Kelly/crux and20:47 state audit remain dated; broader18UTC safety/16:48full discovery were not repeated. Exact delayed20:49:51 alert IDs have substantive completed source reviews; MI gaps/NO44selected34/noadd remain. Four later title-level leads read through21:00:37 at fixed21:04:59 cutoff; subsequent21:06MI/Warnock support alert also source-reviewed.21:12 fee-net exit comparison retainsMI5NO/NO44selected34/noadd; no numerical/trade update. 21:37 account/books unchanged; later Idaho denied text endorsement and Michigan title reviewed with source limits, no numerical update. Existing22UTC light AND Idaho pull/fullOct20 02UTC; weeklyOct23. [Current check](research/2026-10-19-2104-news-checkin.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

@@ -1,0 +1,43 @@
+{
+  "reviewed_utc": "2026-10-19T21:39:13.878737+00:00",
+  "scope": "Bounded closeout of individually saved finite-review cases; next research remains394, no new case started in closeout.",
+  "counts": {
+    "completed_valuations": 354,
+    "blocked_after_in_depth_review": 11,
+    "factual_exclusions": 364,
+    "pending": 2271,
+    "base_records": 729,
+    "revisions_written": 65,
+    "active_indices": []
+  },
+  "next": [
+    394,
+    396,
+    397
+  ],
+  "source_preservation": "391collector overwrote existingfacts; parent savednew0391_facts_2115 and restored original exactHEAD SHA757092…3285 before adoption. No financialrecords/priors changed.",
+  "next_safety": "ExistingOct19 22UTC light ANDIdahoall-unfilledpull; fullOct20 02UTC. No newtimer.",
+  "goal": "Fullremaininguniverse unchanged; cases saved/indexed individually, next progressTG400/material/block earlier.",
+  "run_boundary": "End this scheduled run after safety follow-up and audited preservation; existing cron/watchers own future triggers. No goal lifecycle mutation, idle continuation or new timer.",
+  "completed_cases": [
+    {
+      "index": 388,
+      "report": "research/2026-10-17-deep-review/evaluations/0388.md",
+      "sha256": "79edef32b5fc026c75c03e64de546d77d6c7967d5f83517f266bc6a8a531c4d7",
+      "status": "valued/no entry"
+    },
+    {
+      "index": 390,
+      "report": "research/2026-10-17-deep-review/evaluations/0390.md",
+      "sha256": "e334485591e5f9ac0afa519eab4bffaeb1aad2d79524722a2a961c4e64f46ee6",
+      "status": "valued/no entry"
+    },
+    {
+      "index": 391,
+      "report": "research/2026-10-17-deep-review/evaluations/0391.md",
+      "sha256": "e1940411d527aa87d0350978b03f2c91defd8d0d61f3c92607587e72b2ac1d94",
+      "status": "blocked/unpriced"
+    }
+  ],
+  "case391": "Specific unresolved US instrument behind Cyprus July28 delisting versus current OFAC entries; no fabricated p or valuation credit. Individual case block, not global research block."
+}

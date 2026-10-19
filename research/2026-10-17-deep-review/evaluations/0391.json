@@ -1,0 +1,78 @@
+{
+  "review_index": 391,
+  "market_id": "2883733",
+  "condition_id": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8",
+  "status": "blocked_after_review",
+  "literal_analysis": "Any issuedpartial/temporary/entity/individualCAATSA231reliefqualifiesirreversibly; intent/F35NDAA-onlynonqualifying. Currentlistmembershipdoesnotruleoutpastqualifyingrelief.",
+  "evidence": [
+    {
+      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/CONSOLIDATED.XML",
+      "observed_utc": "2026-10-19T21:28:58.881317Z",
+      "finding": "RootOct19officialSSBmenu-basedsanctionsentry; currentnotpast-historyproof."
+    },
+    {
+      "url": "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+      "observed_utc": "2026-10-19T21:15:46.622792Z",
+      "finding": "Originalfourindividualsallpresent, publishedOct15; correctedmissedSerhat."
+    },
+    {
+      "url": "https://stratlink.meci.gov.cy/sanction/us?order=asc&page=10&sort=",
+      "observed_utc": "2026-10-19T21:25:54Z",
+      "finding": "ForeigngovernmentindexactualinactiveStateCAATSArowsJuly28; underlyingU.S.reliefactionunverified/conflictswithcurrentlistmembership."
+    },
+    {
+      "url": "https://www.congress.gov/crs_external_products/IN/PDF/IN12710/IN12710.1.pdf",
+      "observed_utc": "2026-10-19T21:26:57.436390Z",
+      "finding": "OriginalJuly14CongressPDF3pages distinguishesCAATSAwaiver/review andF35NDAAmechanisms."
+    },
+    {
+      "url": "https://www.devdiscourse.com/article/international/3979489-turkey-says-working-with-us-on-creative-ideas-to-solve-s-400-missile-issue",
+      "observed_utc": "2026-10-19T21:26:57.108362Z",
+      "finding": "DirectReutersministerreportSept19creativeideas/hope, notactualissuedrelief."
+    }
+  ],
+  "forecast": {
+    "status": "unpriced",
+    "reasoning": "IdentifytheU.S.action,ifany,andpenaltyscopebehindCyprusJuly28StateCAATSAdelisting. Currentofficialliststestedbutnotcompletehistory. No defensible already-YES baseline; donot manufacture a point probability from thisconcreteconflict. Case-specificblocked/unpriced, not globallyblocked/rejected.",
+    "method": "Substantiveexact-rule/cross-agencyhistoricalstate review; no fabricatedbaselineprobability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0391_quote_2132.json",
+    "quote_file_sha256": "ed513dc2e419f78a84f90f0e4a803cc833944075681c9b4f8e7e2248cc749caa",
+    "quote_created_utc": "2026-10-19T21:29:49.474393+00:00",
+    "exact_identity": true,
+    "current_quotes": [
+      {
+        "outcome": "Yes",
+        "best_bid": 0.32,
+        "best_ask": 0.36,
+        "book_age_seconds_at_receipt": 14.929598093032837,
+        "min_order_size": "5",
+        "received_utc": "2026-10-19T21:29:49.473598+00:00"
+      },
+      {
+        "outcome": "No",
+        "best_bid": 0.64,
+        "best_ask": 0.68,
+        "book_age_seconds_at_receipt": 14.929598093032837,
+        "min_order_size": "5",
+        "received_utc": "2026-10-19T21:29:49.473598+00:00"
+      }
+    ],
+    "fee_status": "GammafeesEnabledfalse is canonicalzero-fee evidence; compactfd absent, parityunverified, not unknownpositivefee.",
+    "capture_errors": [
+      "fee:ValueError:compact response has no fee descriptor fd"
+    ],
+    "no_probability_or_EV": "No dummy p/EV: unabletocompareYES/NOexpectedterminalreturnsorKellywithoutdefensiblepaststate. These are observations, not execution gates.",
+    "alternative": "Retaincash/currentunderwrittenpositionsandmakercommitments; no allocation tothisunpricedcondition. UnknownEV is not proof either side isnegativeEV."
+  },
+  "verdict": "Blocked/unpriced specificcase; noentry/prior/valuationcredit. SourceconflictrequiresunderlyingU.S.actionnotanothergenericnewssearch. Not a globalgoalblock.",
+  "reopen_condition": "OriginalUSJuly28instrument/scope/officialclarification or definitivecurrent-historyevidence; thenvaluefuturepartial/temporarypathsandbothsidesaftercosts.",
+  "evaluated_utc": "2026-10-19T21:31:32.158325+00:00",
+  "question": "Will the U.S. lift CAATSA sanctions on Turkey by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 391,
+  "report_sha256": "e1940411d527aa87d0350978b03f2c91defd8d0d61f3c92607587e72b2ac1d94"
+}

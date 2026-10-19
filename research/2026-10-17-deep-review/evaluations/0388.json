@@ -1,0 +1,162 @@
+{
+  "review_index": 388,
+  "market_id": "3072321",
+  "condition_id": "0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e",
+  "criteria_sha256": "4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba",
+  "status": "valued",
+  "literal_analysis": "AnyGrok original HLEAccuracy>=60 byDec31 23:59ET; Diamond/calibration do not qualify except genuine clear-equivalent metric restructuring. Highest duringwindow; outage/recovery/officialalternate/noalternateNO asfullrule. Current/historical source gaps notabsenceproof.",
+  "evidence": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "observed_utc": "2026-10-19T20:01:47.816323Z",
+      "finding": "Cached65rows verified raw/gzip; Grokmax39.72 and4.7 AccuracyNULL/Diamond22.8.21:16API403 has no newrows; no history guarantee."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-7",
+      "observed_utc": "2026-10-19T21:16:38.265799Z",
+      "finding": "Root officialSep21 largerbase/longerRL release, no resolving HLEAccuracy in inspectedarticle."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-6",
+      "observed_utc": "2026-10-19T21:16:38.504963Z",
+      "finding": "Root officialAug12 agenticrelease; no resolving HLEAccuracy in inspectedarticle."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07672617498210324,
+    "low": 0.01,
+    "high": 0.35,
+    "actual_entry_reserve_pp": 15,
+    "method": "Explicit family-conditional latent score/gain/publication regimes with unseenhistory branch, analyticNormalSF/Simpsonquadrature. Unfitted judgments, notcalibration.",
+    "reasoning": "Four correlated xAI pairs imply latent44.3169; normaluncertainty and sharedfuturegains preserve dependence. At60, futuregivenno-past7.20866%;.005+.995*future=7.6726175%. Sourceslackcompletehistory; no null-aszero. SelectedNO77.3274 fails90cask/improving87cmaker.",
+    "model_path": "models/grok388_primary_2118.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0388_quote_2120.json",
+    "quote_file_sha256": "369864e5dc3c023cb34ebfdae644e770eb3ea53f0705879e425925b7d52f93fb",
+    "quote_capture_utc": "2026-10-19T21:18:29.838441+00:00",
+    "gamma_received_utc": "2026-10-19T21:18:29.709813+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.07672617498210324,
+        "selected_stress_probability": 0,
+        "best_bid": 0.1,
+        "best_ask": 0.14,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444706898",
+        "book_received_utc": "2026-10-19T21:18:29.837434+00:00",
+        "book_age_seconds_at_receipt": 2.939434051513672,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.04816,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.14
+              }
+            ],
+            "net": 1.4481600000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.0,
+            "fee": 0.03601,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.1
+              }
+            ],
+            "net": 0.96399
+          }
+        },
+        "taker_cost_usd": 1.4481600000000001,
+        "central_expected_profit_usd": -0.6808982501789678,
+        "selected_stress_profit_usd": -1.4481600000000001,
+        "break_even_before_carry": 0.144816,
+        "break_even_constant_carry": 0.14575735230569903,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9232738250178968,
+        "selected_stress_probability": 0.7732738250178968,
+        "best_bid": 0.86,
+        "best_ask": 0.9,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444706898",
+        "book_received_utc": "2026-10-19T21:18:29.837434+00:00",
+        "book_age_seconds_at_receipt": 2.939434051513672,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.0,
+            "fee": 0.036,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.9
+              }
+            ],
+            "net": 9.036
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.6,
+            "fee": 0.04816,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.86
+              }
+            ],
+            "net": 8.55184
+          }
+        },
+        "taker_cost_usd": 9.036,
+        "central_expected_profit_usd": 0.19673825017896895,
+        "selected_stress_profit_usd": -1.303261749821032,
+        "break_even_before_carry": 0.9036,
+        "break_even_constant_carry": 0.9094737014102698,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry. Both current taker outcomes and ordinary improving makers fail selected case; additional source/model/fill risk not worth allocating over cash/knownalternatives. No new order/prior/holding.",
+  "reopen_condition": "Official HLEAccuracy, futuremodelpublication/historicalqualifier, clear-equivalent metric/sourcefallback or materiallylowercost; freshconditionalfill/source/portfolio/execution gates.",
+  "evaluated_utc": "2026-10-19T21:19:42.316471+00:00",
+  "question": "Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 60% or higher?",
+  "valuation_author": "primary_operator",
+  "original_index": 388,
+  "report_sha256": "79edef32b5fc026c75c03e64de546d77d6c7967d5f83517f266bc6a8a531c4d7"
+}

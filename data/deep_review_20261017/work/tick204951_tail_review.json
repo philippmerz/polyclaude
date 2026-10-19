@@ -1,0 +1,26 @@
+{
+  "schema": "tick204951_bounded_tail_review.v1",
+  "reviewed_utc": "2026-10-19T21:39:13.878737+00:00",
+  "tick_id": "20261019T204951Z",
+  "result": "No new trade, fill or numerical prior change; close bounded run after preservation.",
+  "source": "tick204951_tail_sources.json",
+  "account": "tick204951_tail_account.json",
+  "source_sha256": "51f1984a4def65d6b0f58f836909c3b79453b1e356b691d43d89999503c5c5a9",
+  "account_sha256": "b45f7b6b5c40a0e0a016207aa7aebfbfd7b6b599a4b2f45f2df8be7d7677bfc3",
+  "observations": {
+    "orders": "21:37:46 completed authenticated fully paginated read: fiveLIVE BUYs, all zero matched,9.12 remaining risk; eight indexed identity/size/totalBought rows unchanged since21:04; chain IdahoYES0/SpainYES0/SpainNO0/WhaleNO6. Vetted serialization, not rawHTTP/synchronized NAV.",
+    "Idaho": "New denied-endorsement/text-origin report is a campaign-information risk, not established authentic endorsement, poll, candidacy/ballot change or measured turnout change. Impact direction/scale unmeasured. Tiny1.02 commitment already accepts broad1–80% range and Peak-only1.653% adverse branch; no calibrated zero-effect claim. Retain primaryYES20/selected5/15pp allowance, noadd/repost; retain existing22UTC all-unfilled pull and earlier verified material uncertainty cancel-first.",
+    "Michigan": "Exact article content remains unknown; Brotherhood campaign narrative could affect voters, not independently proved new race data. RetainNO44/selected34/broad20/noadd. Fresh21:37 fee-net sale5NO1.458 versus selectedhold1.70/central2.20; broad1.00/full1.55cost loss and shared-politics risk accepted. No manufactured favorable update from controversy.",
+    "Whale": "Fresh21:37 exact identity/fee/book: still zeroNO bids and zeroYES asks; no executable sale/offsettingYES route/order/add/proceeds. ChainNO6. Source/prior remains20:02/DEC235; UMAproposed is not final settlement. Full1.02 cost loss possible.",
+    "other_tail": "Read eb21834bee757fc117a7a0d27144e5b08f0f3941 sports crossover as possible competitor-attention context for Messi, but title supplies no GoogleGlobalAthletes2026 measure; no numerical update. Israel90e9b90e53896b616d7a300f11bb0accce837dd5 no held/pending identity. Georgia c2164503fbcf42f6606b12864556ea2c5a629017 repeated15:16ID at21:17:58; no current gas-price contract. Titles not adopted as verified bodies."
+  },
+  "economics": {
+    "quote": "tick204951_tail_quote.json",
+    "MI": "tick204951_tail_mi_economics.json",
+    "Whale": "tick204951_tail_whale_economics.json"
+  },
+  "research": "388/390 valued/noentry;391 specific conflict blocked/unpriced.354valued/11blocked/364factual/2271pending;729base+65revisions/noactive;next394. Immediate case reports/index records preserved. Individual block not globalimpasse.",
+  "next_existing_boundary": "Oct19 22UTC light AND Idaho all-unfilled pull; fullOct20 02UTC. No newtimer, idlefollowup or goal lifecycle mutation.",
+  "communication": "No Telegram: no new material portfolio finding/action; earlierWhaleTG1270 already delivered.",
+  "financial": "20:32 authoritative producer/CSV221 unchanged; no new aggregate NAV or performance observation from these narrower reads."
+}

@@ -1,0 +1,62 @@
+{
+  "review_index": 388,
+  "compiled_utc": "2026-10-19T21:16:38.543681+00:00",
+  "sources": [
+    {
+      "name": "models",
+      "url": "https://dashboard.safe.ai/api/models",
+      "status": 403,
+      "received_utc": "2026-10-19T21:16:37.945332Z",
+      "headers": {
+        "date": "Mon, 19 Oct 2026 21:16:37 GMT",
+        "content-type": "text/plain; charset=utf-8",
+        "cache-control": "private, no-store, max-age=0"
+      },
+      "raw_sha256": "7d7763f465620be125dba91f549b0ce988e2f6cd8d721b6c3d6276daa220d81a",
+      "gzip_sha256": "e9d83f5885b169cb69da553a0dd93a01c7087b79cdd6123f48ac447c617ff6b5",
+      "receipt": "logs/deep_review_20261017/case0388_primary2118/models.receipt.json",
+      "raw_body": "logs/deep_review_20261017/case0388_primary2118/models.body.json.gz"
+    },
+    {
+      "name": "grok47",
+      "url": "https://x.ai/news/grok-4-7",
+      "status": 200,
+      "received_utc": "2026-10-19T21:16:38.265799Z",
+      "headers": {
+        "date": "Mon, 19 Oct 2026 21:16:38 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000"
+      },
+      "raw_sha256": "f5a66e032016a4418b3830ad7443f2060e24e7e2eb09458f627cf7561c4f42f1",
+      "gzip_sha256": "c4e13a54560862d0f6f7ce38d48f1f1eaed7ade2cd4069c943505c81d6fe62ee",
+      "receipt": "logs/deep_review_20261017/case0388_primary2118/grok47.receipt.json",
+      "raw_body": "logs/deep_review_20261017/case0388_primary2118/grok47.body.json.gz",
+      "title": "Introducing Grok 4.7 | SpaceXSI",
+      "has_original_HLE_or_HLE_Accuracy_text": false,
+      "larger_base_claim": true,
+      "longer_RL_claim": true,
+      "scope": "Issuer coding/knowledge-work release description, not a CAIS HLE score. No general absence claim."
+    },
+    {
+      "name": "grok46",
+      "url": "https://x.ai/news/grok-4-6",
+      "status": 200,
+      "received_utc": "2026-10-19T21:16:38.504963Z",
+      "headers": {
+        "date": "Mon, 19 Oct 2026 21:16:38 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "s-maxage=31536000"
+      },
+      "raw_sha256": "822ce089f0dce92ade68f2b1a50131aed6cba0afc5e5c5cfd85ae080fde525e7",
+      "gzip_sha256": "eb42a9630916ff30530d913b70ab730fb20792060efb899952bed480829a95b4",
+      "receipt": "logs/deep_review_20261017/case0388_primary2118/grok46.receipt.json",
+      "raw_body": "logs/deep_review_20261017/case0388_primary2118/grok46.body.json.gz",
+      "title": "Introducing Grok 4.6 | SpaceXSI",
+      "has_original_HLE_or_HLE_Accuracy_text": false,
+      "larger_base_claim": false,
+      "longer_RL_claim": false,
+      "scope": "Issuer coding/knowledge-work release description, not a CAIS HLE score. No general absence claim."
+    }
+  ],
+  "limits": "Current snapshots and two release articles do not establish an all-time2026 peak, original evaluation configuration or absence of removed/revised rows. Grok4.7 HLE Accuracy null is missing, not zero. Diamond/calibration distinct. No cache bypass or archived-history inference."
+}

@@ -1,1 +1,29 @@
-{"review_index":391,"phase":"FACTS_ONLY_COMPLETE; valuation pending","source_paths":["work/0391_facts.json","work/0391_source_refresh_2015.json"],"source_pointers":["https://ofac.treasury.gov/sanctions-programs-and-country-information/countering-americas-adversaries-through-sanctions-act-related-sanctions","https://public-inspection.federalregister.gov/2021-07048.pdf","https://public-inspection.federalregister.gov/2026-07917.pdf"],"unit_sha256":"757092d6bfa05c97beceb6badfb478693cea0a781faa650edf4bbb1e0f6e3285","conditionId":"0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581","criteria_sha256":"aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8","updated_utc":"2026-10-19T20:15:48Z"}
+{
+  "review_index": 391,
+  "phase": "PRIMARY_BLOCKED_UNPRICED; immutable report indexed; next pending394",
+  "source_paths": [
+    "work/0391_facts.json",
+    "work/0391_source_refresh_2015.json",
+    "work/0391_facts_2115.json",
+    "work/0391_sdn_erratum_2126.json",
+    "work/0391_primary_sources_2133.json"
+  ],
+  "source_pointers": [
+    "https://ofac.treasury.gov/sanctions-programs-and-country-information/countering-americas-adversaries-through-sanctions-act-related-sanctions",
+    "https://public-inspection.federalregister.gov/2021-07048.pdf",
+    "https://public-inspection.federalregister.gov/2026-07917.pdf",
+    "https://sanctionslistservice.ofac.treas.gov/api/PublicationPreview/exports/SDN.XML",
+    "https://www.internazionale.it/ultime-notizie-reuters/2026/07/10/turkey-says-it-hopes-to-achieve-result-on-lifting-u-s-sanctions-soon"
+  ],
+  "unit_sha256": "757092d6bfa05c97beceb6badfb478693cea0a781faa650edf4bbb1e0f6e3285",
+  "conditionId": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+  "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8",
+  "updated_utc": "2026-10-19T21:39:13.878737+00:00",
+  "latest_addendum_sha256": "534067609fff997588db51a346458f3a5b925c7de67dd25debe793be0dc8a791",
+  "preservation_note": "Collector overwrote older source unit; parent saved newcontent separately and restored original exact committed bytes before adoption.",
+  "completed_report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0391.md",
+    "sha256": "e1940411d527aa87d0350978b03f2c91defd8d0d61f3c92607587e72b2ac1d94"
+  },
+  "reopen_condition": "Resolve underlying US action/date/scope behind Cyprus July28 delisting; current-list membership alone cannot rule out earlier partial or temporary qualifying relief."
+}

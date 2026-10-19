@@ -1,0 +1,40 @@
+{
+  "schema": "primary_OpenAI_AGI_announcement_model.v1",
+  "review_index": 390,
+  "created_utc": "2026-10-19T21:23:00.026608+00:00",
+  "price_status": "Primary probabilities fixed before first current own-contract quote; no quote/price in model inputs.",
+  "past_qualifying_claim_unverified": 0.025,
+  "future_given_no_past": {
+    "internal_system_qualifies_under_officials_own_usage_by_deadline": 0.55,
+    "public_completed_creation_statement_given_internal": 0.32,
+    "qualifying_or_accepted_loose_claim_given_no_internal": 0.025
+  },
+  "formula": "p=.025+.975*(.55*.32+.45*.025)",
+  "p_yes": 0.20756875000000002,
+  "low": 0.05,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 15,
+  "selected_YES": 0.05756875000000003,
+  "selected_NO": 0.6424312499999999,
+  "source_bridge": "Aug26originalTIMEofficialinterviews: internalAGIexpectedyearend, notquiteyet;80%progressnotprobability. Sep21officialgoalsremainfutureframed; AGI-like languagehabit canavoidexplicitclaim. Publicclaimmayoccurbeforeproductrelease, eveninformally; no Microsoft/boardtest requiredbyrule. Brockmanfuture-retrospectiveambiguity getsresidualpastbranch, notautomaticYES.",
+  "weight_rationale": {
+    "past2.5pct": "Unfitted allowance for unseenprior/ambiguouscurrentqualifier; neither snapshot/searchabsence nor no-proposal certified.",
+    "internal55pct": "Material but uncertainty-discounted chance givenclosestofficials same-year expectation, largerprogress and75daysleft; optimisticexpectationnotvalidateddeadlinefrequency.",
+    "public32pct": "Substantial conditional publicclaimchance but qualitativeAGI-like/internallanguageandannouncementcautioncanpersistbeyonddeadline; noverifiedstatisticalbase.",
+    "loose2.5pct": "Ruledependsannouncementandadjudication, notobjectivecapability; anacceptedlooseofficialclaimcouldqualifywithoutinternallysatisfyingcentraldefinition."
+  },
+  "sensitivity_p_yes": {
+    "slow": 0.058015000000000004,
+    "fast": 0.54,
+    "no_past_credit": 0.18725000000000003,
+    "public_label15pct": 0.11640624999999999,
+    "public_label50pct": 0.30409375,
+    "internal30pct": 0.1356625,
+    "internal75pct": 0.26509375
+  },
+  "range_reserve": "Broad5–60coversjointslow5.8/fast54.0 andunmeasuredhistory/communication. Actual15ppaggregate (default10plus5 for wording/history/dated-interview extrapolation/adverseconditionalfills). Explicit-eventuncertainty already in scenarios; reservecoversestimationerror, not another capability hurdle. All broadendpointsneednotclear.",
+  "limits": "All q/conditionalrates are primaryunfittedjudgment, not calibratedAGIprobability or treating80%progressas80%chance. No claimcurrentcapabilityorhistoricalabsence. The event is a publicstatement, so benchmark/safety-releasefacts are indirect and policy/incentivescanchange.",
+  "portfolio": "NoAGIholding/pendingBUY in21:04 account. FormerHLE9NOfullyclosed; legacyGeminiuncertainclaim andfutureOpenRouterNO notsameevent/nohedge. Broad AIprogress/publicationregimecan affectmultiplepositions; nocorrelationindependencecredit. Comparecash/knownmakerSánchez andcurrentremainingcommitments before any entry.",
+  "source_path": "data/deep_review_20261017/work/0390_primary_sources_2122.json",
+  "source_sha256": "4a4fab78c62eabf1016eccfc16b500ec5a2e20f6081c010e928a582e66ab9d9e"
+}

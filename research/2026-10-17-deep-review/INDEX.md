@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T20:41:44.085380+00:00
+Updated: 2026-10-19T21:31:32.414743+00:00
 
-**352 valuations saved; first milestone100:** 352 valued; 10 blocked after in-depth review. 364 factual exclusions separately; 2274 pending.
+**354 valuations saved; first milestone100:** 354 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2271 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -399,7 +399,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |386|[Pedro Sánchez out as PM of Spain by December 31, 2026?](evaluations/0386.md)|valued|YES maker-only candidate <=16c/10shares/1.60 subject current gated execution;18c taker and NO competitive entries fail selected or central cases. No order at valuation.|
 |387|[Georgia State vs. James Madison](evaluations/0387.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|388|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 60% or higher?](evaluations/0388.md)|valued|No entry. Both current taker outcomes and ordinary improving makers fail selected case; additional source/model/fill risk not worth allocating over cash/knownalternatives. No new order/prior/holding.|
 |389|[Will the highest temperature in Madrid be 23°C on October 17?](evaluations/0389.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|390|[OpenAI announces it has achieved AGI before 2027?](evaluations/0390.md)|valued|No currententry; YEScentralpositive but current9c cost fails15ppactualallowance, NOcentralnegative. Preserve potential cheaperYES as researchlead, not an executable/authorized recommendation.|
+|391|[Will the U.S. lift CAATSA sanctions on Turkey by December 31, 2026?](evaluations/0391.md)|blocked_after_review|Blocked/unpriced specificcase; noentry/prior/valuationcredit. SourceconflictrequiresunderlyingU.S.actionnotanothergenericnewssearch. Not a globalgoalblock.|
 |392|[Will it rain in Atlanta, GA on October 17?](evaluations/0392.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |393|[Dota 2: Yellow Submarine vs Spirit Academy - Game 2 Winner](evaluations/0393.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |395|[Will the highest temperature in Qingdao be 23°C on October 17?](evaluations/0395.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

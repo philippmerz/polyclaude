@@ -1,0 +1,158 @@
+{
+  "review_index": 388,
+  "market_id": "3072321",
+  "condition_id": "0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e",
+  "criteria_sha256": "4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba",
+  "status": "valued",
+  "literal_analysis": "AnyGrok original HLEAccuracy>=60 byDec31 23:59ET; Diamond/calibration do not qualify except genuine clear-equivalent metric restructuring. Highest duringwindow; outage/recovery/officialalternate/noalternateNO asfullrule. Current/historical source gaps notabsenceproof.",
+  "evidence": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "observed_utc": "2026-10-19T20:01:47.816323Z",
+      "finding": "Cached65rows verified raw/gzip; Grokmax39.72 and4.7 AccuracyNULL/Diamond22.8.21:16API403 has no newrows; no history guarantee."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-7",
+      "observed_utc": "2026-10-19T21:16:38.265799Z",
+      "finding": "Root officialSep21 largerbase/longerRL release, no resolving HLEAccuracy in inspectedarticle."
+    },
+    {
+      "url": "https://x.ai/news/grok-4-6",
+      "observed_utc": "2026-10-19T21:16:38.504963Z",
+      "finding": "Root officialAug12 agenticrelease; no resolving HLEAccuracy in inspectedarticle."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07672617498210324,
+    "low": 0.01,
+    "high": 0.35,
+    "actual_entry_reserve_pp": 15,
+    "method": "Explicit family-conditional latent score/gain/publication regimes with unseenhistory branch, analyticNormalSF/Simpsonquadrature. Unfitted judgments, notcalibration.",
+    "reasoning": "Four correlated xAI pairs imply latent44.3169; normaluncertainty and sharedfuturegains preserve dependence. At60, futuregivenno-past7.20866%;.005+.995*future=7.6726175%. Sourceslackcompletehistory; no null-aszero. SelectedNO77.3274 fails90cask/improving87cmaker.",
+    "model_path": "models/grok388_primary_2118.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0388_quote_2120.json",
+    "quote_file_sha256": "369864e5dc3c023cb34ebfdae644e770eb3ea53f0705879e425925b7d52f93fb",
+    "quote_capture_utc": "2026-10-19T21:18:29.838441+00:00",
+    "gamma_received_utc": "2026-10-19T21:18:29.709813+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.07672617498210324,
+        "selected_stress_probability": 0,
+        "best_bid": 0.1,
+        "best_ask": 0.14,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444706898",
+        "book_received_utc": "2026-10-19T21:18:29.837434+00:00",
+        "book_age_seconds_at_receipt": 2.939434051513672,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.04816,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.14
+              }
+            ],
+            "net": 1.4481600000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.0,
+            "fee": 0.03601,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.1
+              }
+            ],
+            "net": 0.96399
+          }
+        },
+        "taker_cost_usd": 1.4481600000000001,
+        "central_expected_profit_usd": -0.6808982501789678,
+        "selected_stress_profit_usd": -1.4481600000000001,
+        "break_even_before_carry": 0.144816,
+        "break_even_constant_carry": 0.14575735230569903,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9232738250178968,
+        "selected_stress_probability": 0.7732738250178968,
+        "best_bid": 0.86,
+        "best_ask": 0.9,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792444706898",
+        "book_received_utc": "2026-10-19T21:18:29.837434+00:00",
+        "book_age_seconds_at_receipt": 2.939434051513672,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.0,
+            "fee": 0.036,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.9
+              }
+            ],
+            "net": 9.036
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.6,
+            "fee": 0.04816,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.86
+              }
+            ],
+            "net": 8.55184
+          }
+        },
+        "taker_cost_usd": 9.036,
+        "central_expected_profit_usd": 0.19673825017896895,
+        "selected_stress_profit_usd": -1.303261749821032,
+        "break_even_before_carry": 0.9036,
+        "break_even_constant_carry": 0.9094737014102698,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry. Both current taker outcomes and ordinary improving makers fail selected case; additional source/model/fill risk not worth allocating over cash/knownalternatives. No new order/prior/holding.",
+  "reopen_condition": "Official HLEAccuracy, futuremodelpublication/historicalqualifier, clear-equivalent metric/sourcefallback or materiallylowercost; freshconditionalfill/source/portfolio/execution gates.",
+  "report_markdown": "# 388 \u00b7 Grok original HLE\u226560 \u00b7 \u22487.7%YES; no entry\n\nMarket3072321; CID`0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e`; criteria`4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba`.\n\n- **Exact rule:** any SpaceXAI Grok model reaches HLE Accuracy\u226560 byDec31 23:59ET. Diamond/calibration are distinct; a genuinely clear-equivalent restructured metric may qualify. Use officialagi.safe.ai; outage permits recovery, then official HLE alternate after window/permanent loss; none\u2192NO. Highest during window, not latest model; payout timing may extend beyond75-day planning horizon.\n- Last successful [official API](https://dashboard.safe.ai/api/models)20:01 cached65rows: numericGrok max39.72,4.7 AccuracyNULL/Diamond22.8. Raw/gzip hashes/root parser verified; same bytes asOct18, not current-origin or year-to-date peak proof. Current21:16API403 yields no rows, not scorezero/permanent outage. [Source capsule](../../../data/deep_review_20261017/work/0388_facts_2001.json) \u00b7 [fresh checks](../../../data/deep_review_20261017/work/0388_primary_sources_2118.json).\n- Root reread [Sep21 issuer](https://x.ai/news/grok-4-7) larger-base/longer-RL claims and [Aug12 release](https://x.ai/news/grok-4-6). Neither article supplies resolving HLE Accuracy; no blanket absence claim. Current source gaps are priced, not treated as disqualification.\n- **PrimaryYES7.6726% /NO92.3274%; broadYES1\u201335%.** Same-lab/source/deadline family bridge as298, recalculated at60; four correlated Diamond/original pairs imply illustrative latent44.3169, not a score. Ordinary/accelerated/stalled55/30/15%,0\u20132 releases/shared gains/publication uncertainty; additional0.5% unseen-past-publication branch. This is an unfitted model, not calibrated probabilities. Joint slow/fast1.8\u201320.9%;5%past-state sensitivity11.85%. Threshold60 remains nested below55 under shared assumptions. [4.8KB model/formula/checks](../models/grok388_primary_2118.json).\n- Forecast fixed before this contract's fresh quote; sibling historical prices known, so not globally priceblind. **15pp actual allowance** for source/history/configuration/gain/adjudication and conditional-fill uncertainty selects YES0/NO77.3274%; broad endpoints are sensitivities, not an automatic all-endpoint rule.\n-21:18:29 exactGamma/fees/books pass;2.94s bookage/min5shares,4%taker-only. YES10/14\u00a2,NO86/90\u00a2. Ten-share cost1.44816/9.036; central profit\u22120.68090/+0.19674, selected\u22121.44816/\u22121.30326 before carry. Constant3.2035%Aave/75d gives carry-adjusted breaks14.5757%/90.9474%. Improving ordinary makers11\u00a2YES/87\u00a2NO still fail selected probabilities; uncompetitive lower bids have unpriced adverse-fill risk and are not posted. [Receipt-bound economics](../../../data/deep_review_20261017/work/0388_economics_2120.json).\n- **No entry/order/prior:** known cash alternative and previously underwritten smallS\u00e1nchez maker beat this selected quote; revalidate alternatives before any allocation. Previously held OpenAI55HLE9NO is fully closed/DEC225; it is not current exposure/hedge. Remaining legacyGemini claim and futureORtraffic differ; no independence or hedge credit. No two-leg sibling arb certified from these single-market quotes.\n- Reopen on official original-score/release/publication/history or genuine metric-restructuring evidence, source recovery/fallback, or enough executable cost change after fresh conditional-fill/carry/portfolio/execution checks. No new watcher/timer.\n"
+}

@@ -1,0 +1,59 @@
+{
+  "schema": "tick204951_final_preservation.v1",
+  "verified_utc": "2026-10-19T21:41:43.188189+00:00",
+  "base_commit": "bf681581cdf64e51f730aa3ca0b62dd6040d749e",
+  "result": "Requested alert work and bounded late safety follow-up complete; no new trade/fill/prior. Preserve completed case work and end run.",
+  "research_counts": {
+    "completed_valuations": 354,
+    "blocked_after_in_depth_review": 11,
+    "factual_exclusions": 364,
+    "pending": 2271,
+    "base_records": 729,
+    "revisions_written": 65,
+    "active_indices": []
+  },
+  "checks": [
+    "Independent three-case report/index/ledger audit hashes reverified by parent.",
+    "Journal and evaluation/revision ledgers preserve exact committed prefixes; old391facts exactHEAD.",
+    "Six new account/source capture bodies match raw and gzip receipt hashes; full private bodies excluded.",
+    "MI and Whale economics quote hashes/identity/fee/freshness validated by existing offline economics helper. FiveLIVEzero matched9.12, selectedCTFs verified21:37.",
+    "Public JSONs contain no secret-valued credential key fields; exact public order/conditionIDs retained. Raw private source/account responses and adapter-error packets remain local.",
+    "No daemon script changed;21:05 canonical liveness/code timing remains dated, no restart.",
+    "No new full financial producer/CSVrow, scanner, goal lifecycle mutation, timer or idle follow-up."
+  ],
+  "context_packets": [
+    {
+      "scope": "portfolio",
+      "bytes": 10389,
+      "status": "within_declared_validity"
+    },
+    {
+      "scope": "research",
+      "bytes": 10699,
+      "status": "within_declared_validity"
+    },
+    {
+      "scope": "engineering",
+      "bytes": 10390,
+      "status": "within_declared_validity"
+    },
+    {
+      "scope": "operations",
+      "bytes": 10589,
+      "status": "within_declared_validity"
+    }
+  ],
+  "published_decision_sha256": {
+    "data/deep_review_20261017/work/goal2115_RESUME.json": "9a02e8e3d8d824ea381d0e53c4873bfbcd7fffe2339f10c431cb6e46ff0174d3",
+    "data/deep_review_20261017/work/tick204951_tail_review.json": "91bb78b9c0c88833050e64fe9446f6ee66ecb52e0c62fbc5695b15a35e09d086",
+    "data/deep_review_20261017/work/tick204951_tail_sources.json": "51f1984a4def65d6b0f58f836909c3b79453b1e356b691d43d89999503c5c5a9",
+    "data/deep_review_20261017/work/tick204951_tail_account.json": "b45f7b6b5c40a0e0a016207aa7aebfbfd7b6b599a4b2f45f2df8be7d7677bfc3",
+    "data/deep_review_20261017/work/tick204951_tail_quote.json": "f4b63ee98d4c000f582dbab72a3e440e370cc47d7a0f89f64ef50332b87cad17",
+    "data/deep_review_20261017/work/tick204951_tail_mi_economics.json": "da94388f768fc1bfc26a29c62f48a6d5db9e3c48627ecfd42d41db1741c0ed5a",
+    "data/deep_review_20261017/work/tick204951_tail_whale_economics.json": "02ac8618a15a455dcead667d1e626087f5eec152576862da6429d4cf0fdf3795",
+    "data/deep_review_20261017/work/tick204951_research_closeout_audit.json": "f15d49b5cca624dff810164d2af36037c77b84941e6dc292ff656f57fac9dc30"
+  },
+  "next_existing_due": "2026-10-19T22:00:00Z light AND pull all Idaho630707unfilled; fullOct20 02UTC",
+  "owned_paths_count_excluding_this_artifact": 43,
+  "limitations": "Editorial hashes/receipt integrity are not source authenticity, calibrated probability, fresh execution authorization or future-fill protection. Specific391source conflict is unpriced, not a globalblock. Telegram1270 not duplicated."
+}

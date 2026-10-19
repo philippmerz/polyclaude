@@ -1,0 +1,43 @@
+{
+  "schema": "primary_AGI_source_review.v1",
+  "review_index": 390,
+  "reviewed_utc": "2026-10-19T21:23:00.026608+00:00",
+  "TIME_direct": {
+    "url": "https://time.com/article/2026/08/26/openai-sam-altman-interview/",
+    "status": 200,
+    "received_utc": "2026-10-19T21:15:43.540654Z",
+    "raw_sha256": "9fd46955c28a7177921d9bcd833acf18bc4283a37eee9388c15ad71b2d1ea305",
+    "gzip_sha256": "57d16eba78164b3a48fa175331bdaf60f626396fd032802cd7d61e465b3d6180",
+    "canonical": [
+      "https://time.com/article/2026/08/26/openai-sam-altman-interview/"
+    ],
+    "root_verified": "Actual article element contains Chen80% progress, Brockman future-retrospective creation phrasing, Altman not-quite-yet and an expected internal AGI by year-end. These are distinct statements;80% is not event probability. Exact interpretation of Brockman phrase uncertain; no claim no priorqualifier exists.",
+    "representation_conflict": "Root web-open render of sameURL exposed unrelated sponsoredPMI reference content despite matchingtitle. Root ignored that body; directdurable200canonicalarticle independently contains relevant statements. BrowserTitle/HTTPsuccess alone notarticleproof. No siteinjectioninstructions adopted."
+  },
+  "official_root_web_reads": [
+    {
+      "url": "https://openai.com/index/building-standards-next-phase-ai/",
+      "publication": "2026-09-21",
+      "representation": "Public browser text viewedrootOct19~21:20, not rawHTTP or exact source-update timestamp. Earlier directGET403 stays separatelylabeled.",
+      "finding": "Sets automatedAIresearch/personalAGI goals and says fully autonomousRSI not happeningtoday. Goals/RSIstatus do not establish currentAGIcreation or define thiscontract."
+    },
+    {
+      "url": "https://openai.com/index/building-abundant-intelligence/",
+      "publication": "2026-07-31",
+      "representation": "Root browser fulltext; earlierdirect403 notarticlebody.",
+      "finding": "CFO business/infrastructure/adoption discussion, AGI inmission; not a reviewed completed-creation declaration."
+    }
+  ],
+  "exact_contract_bridge": "OpenAI OR officialrepresentative announcement of already-createdAGI, not independentproof/universalAGItest/formalboardorMicrosoftdesignation/publicproductrelease. AGI-like/futureexpectation/mission alone insufficient; credible-reporting consensus can establish officialspeakerclaim. A unilateralpublicofficialstatement may count. No lower-start bound added to literalbyDec31wording.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0390_facts_2115.json",
+      "sha256": "74bb62758c5a9a2be7b2edae9bf315af1f49c5e04e854433c1a07f9d04369311"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0390_facts_1830.json",
+      "sha256": "d4d7493592f3681d90c4c3c92507f82dc3559b078978cdf83546b238c2431b34"
+    }
+  ],
+  "limits": "Dated interviews/officialpages and bounded searches do not establish exhaustive historical/currentabsence. Futureinternalachievement, choice/wording/timingofpublicclaim and adjudication are different uncertain events. Directvsbrowserbodyconflict resolved locally, no globalmethodblock."
+}

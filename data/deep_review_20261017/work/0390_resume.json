@@ -1,1 +1,28 @@
-{"conditionId":"0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25","criteria_sha256":"8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14","phase":"FACTS_ONLY_COMPLETE; primary may review; no valuation or entry authority","review_index":390,"schema":"polyclaude.deep_review_resume.v1","source_capture_root":"logs/deep_review_20261017","source_paths":["work/0390_facts_1830.json","work/0390_source_refresh_2015.json"],"source_paths_are_relative_to":"data/deep_review_20261017","source_pointers":["https://openai.com/index/building-standards-next-phase-ai/","https://openai.com/index/building-abundant-intelligence/"],"unit_sha256":"d4d7493592f3681d90c4c3c92507f82dc3559b078978cdf83546b238c2431b34","updated_utc":"2026-10-19T20:15:48Z"}
+{
+  "conditionId": "0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25",
+  "criteria_sha256": "8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14",
+  "phase": "PRIMARY_VALUED_NO_ENTRY; immutable report indexed",
+  "review_index": 390,
+  "schema": "polyclaude.deep_review_resume.v1",
+  "source_capture_root": "logs/deep_review_20261017",
+  "source_paths": [
+    "work/0390_facts_1830.json",
+    "work/0390_source_refresh_2015.json",
+    "work/0390_facts_2115.json",
+    "work/0390_primary_sources_2122.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "source_pointers": [
+    "https://openai.com/index/building-standards-next-phase-ai/",
+    "https://openai.com/index/building-abundant-intelligence/",
+    "https://time.com/article/2026/08/26/openai-sam-altman-interview/",
+    "https://openai.com/index/path-to-astra/",
+    "https://www.axios.com/2026/09/03/axios-interview-sam-altmans-sobering-siren"
+  ],
+  "unit_sha256": "d4d7493592f3681d90c4c3c92507f82dc3559b078978cdf83546b238c2431b34",
+  "updated_utc": "2026-10-19T21:39:13.878737+00:00",
+  "completed_report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0390.md",
+    "sha256": "e334485591e5f9ac0afa519eab4bffaeb1aad2d79524722a2a961c4e64f46ee6"
+  }
+}

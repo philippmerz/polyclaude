@@ -1,0 +1,53 @@
+{
+  "schema": "tick204951_tail_sources.v1",
+  "reviewed_utc": "2026-10-19T21:39:13.878737+00:00",
+  "source_path": "notes/news_alerts.jsonl",
+  "relevant_rows": [
+    {
+      "alert_id": "7af88c16b53dc275baab1ae3dc6ab9dc3f9a58f4",
+      "ts": "2026-10-19T21:17:47Z",
+      "title": "Text blast claims DSA support for Jim Risch; local chapter denies endorsement - KBOI",
+      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQb0hZNHIzM0VGeDNWZXNVN29sQnZRSDRfWUJfNjNTLU1sMFBEN3ZGUWZhV1MtejhxWUtLLWMycTYzeklKajAxdWZoRU01R0J5MDlpRTc4N1dXdU1aT05na0tzeGl0a2xNWTNvZExQNXBSVV95d2h4UFFDR0I3OHNVMkxxZGxZSkVjVWo4OGFWMnM1T0ptLU5LVExjYnVKTmNMMnltcDQ5Q01XcFZHLUxnM0JGczJmeGRE?oc=5",
+      "line_number": 1136,
+      "line_sha256": "0f1d9b931acd82f123af6edecb27ccc1141a227897cdc40bf145b49f1b772277"
+    },
+    {
+      "alert_id": "07b7f44e66e76ab0a05b9147452d75993d19b371",
+      "ts": "2026-10-19T21:34:18Z",
+      "title": "Why the Muslim Brotherhood has become a flashpoint in the Michigan Senate race - news8000.com",
+      "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQbWRXZlhvWUlIa0xuTGhZM2RuRlh4SDNTS1JKYlRoVGQ5bXZNS085aGMxemtIVWxqbFpUWGhaM3VKSDl4NXlMYUhPYldtQjhpNVdSMlhNN2ZTbDBtWUJURWxQR3pxZHZ1Ni1zc1lqRmU4SG5LM2M1QWpwenh6Q0c4SVFGN0cyYWhuVExLY3hBZzRPTDExN2pBUlFDLTNaN1NFTXhMTlN0NXhxYUE0Tzk2bWhFOTNmckVPVlRsTlhqSHpxcEdub1NCMHZlNFFnWU1JUXdBRVBGTTV3WjNmdmRNS0RXYjFDR2kxTFRyZy1iSGtTWnFTckJyTDdmbHhQX29qZmFfSHIzdEhVc3Y4bDROaE5udw?oc=5",
+      "line_number": 1139,
+      "line_sha256": "bc53e82305ff169f2ba117a71af96fe3a43f1d0fd25dc429dfcf3dbdcff3be10"
+    }
+  ],
+  "Idaho": {
+    "url": "https://idahonews.com/news/local/text-blast-claims-dsa-support-for-jim-risch-local-chapter-denies-endorsement",
+    "status": 200,
+    "received_utc": "2026-10-19T21:36:52.972912Z",
+    "raw_sha256": "6e1862169fd31858ad96022c6f0e95e0e82625ffe8aa4e2c0ac1327ccf3098f4",
+    "receipt": "logs/deep_review_20261017/tick204951_late2140_retry/idaho_slug_guess.receipt.json",
+    "page_title": "Text blast claims DSA support for Jim Risch; local chapter denies endorsement"
+  },
+  "Idaho_verified_facts": "CBS2 October19 article, published15:10/updated15:29 as displayed without timezone in this extraction: text purported to endorse Risch and attacked Achilles/Loesby; Idaho DSA chapters explicitly denied originating it. Sender unknown; Risch team had not replied. Root read actual body. No poll or measured voter effect reported in the reviewed article.",
+  "Michigan_source_limit": "Exact news8000 article body/date not verified: Google wrapper returned consent; exact-title/site searches did not locate original body. Search snippets and AI aggregators were not adopted as facts or article equivalents. Prior CBS/Fox/CNN campaign-event evidence remains dated.",
+  "wrapper_receipts": [
+    {
+      "name": "idaho_wrapper",
+      "status": 200,
+      "received_utc": "2026-10-19T21:36:52.849003Z",
+      "raw_sha256": "8862ebd1ea1fd446e0ac4d3293db2c1c6d927c0b19790d11805a238ec32f6151",
+      "receipt": "logs/deep_review_20261017/tick204951_late2140_retry/idaho_wrapper.receipt.json",
+      "page_title": "Before you continue"
+    },
+    {
+      "name": "mi_wrapper",
+      "status": 200,
+      "received_utc": "2026-10-19T21:36:52.857284Z",
+      "raw_sha256": "7de4e5ace746bbd2caac8913ebb3c966fcc2af2b332bb24740a92c62247eb65d",
+      "receipt": "logs/deep_review_20261017/tick204951_late2140_retry/mi_wrapper.receipt.json",
+      "page_title": "Before you continue"
+    }
+  ],
+  "capture_erratum": "Initial metadata adapter failed before network; corrected method/http_body capture has durable receipts. Original error packet and full bodies remain local, not source-unavailability evidence.",
+  "limits": "No complete article sweep or proof of absent developments; URL was initially guessed, then canonical title and matching article body verified."
+}
