@@ -1,0 +1,76 @@
+{
+  "schema": "delayed_tick_completed_review.v1",
+  "tick_id": "20261019T174243Z",
+  "verified_utc": "2026-10-19T18:16:12.638944Z",
+  "classification": "Both requested alerts source/exposure-reviewed in completed18UTC check. This verifies completed primary review, not queue acceptance.",
+  "requested_alerts": [
+    {
+      "id": "cc4e27e2f23386ca343375ff1973816baa2770d4",
+      "alert_utc": "2026-10-19T17:26:14Z",
+      "line_sha256": "76ccb2e13ab54620f2dd8eba9660efd5b91b77e3a4372572b6c967509c65b0ec",
+      "completed_primary_review_utc": "2026-10-19T18:08:28.812374+00:00",
+      "decision": "Retain MI5NO/no add. Disavowal framing could help Democrat/hurt NO, but USA Today body/date remain inaccessible; related CNN/ABC17 coverage does not prove identity. No measured electoral update; primary NO44/selected34 unchanged."
+    },
+    {
+      "id": "ef1955c177be072a077fba9b99d5d2476d4d0b24",
+      "alert_utc": "2026-10-19T17:42:43Z",
+      "line_sha256": "c3f4a4f2823356f96fe9f048a168ae34eb835300c98be52e07e7fab8bbbcf40d",
+      "completed_primary_review_utc": "2026-10-19T18:08:28.812374+00:00",
+      "decision": "Classifier CRITICAL finality implication not established. Fresh Numbers chart_estimate and Mojo Estimated=true show8m, not final. Exact8m FINAL would pay NO. Retain6NO/noadd; no probability change or resolution claim."
+    }
+  ],
+  "proofs": {
+    "data/deep_review_20261017/work/light1800_sources.json": "f0ef4f8d58b205d5fcb04815003da3498c6a395a079d937ef60868430fcb69ca",
+    "data/deep_review_20261017/work/light1800_root_risk.json": "1dc69d8a05eefeda3249edfb337c77e35a7e4547a222963d3de5f3d07f04ccc7",
+    "data/deep_review_20261017/work/light1800_ops.json": "ea92b6d6a4b512f12dcbabf8ba0ab2c78a4143941b024a7de092441c48d40ae8",
+    "data/deep_review_20261017/work/tick1648_final_alert_followup.json": "65463c0a76b371d75b65ab181b7e58d1a178912a0add22b6ba371368e394c6ce"
+  },
+  "resolving_sources": "Archived18:02 Numbers/Mojo raw+gzip hashes and row estimate markers independently reverified;8m remains estimated, exact8mFINALNO. No new network/finality inference.",
+  "exposure": {
+    "orders_window_utc": [
+      "2026-10-19T18:03:40.937124+00:00",
+      "2026-10-19T18:03:41.620748+00:00"
+    ],
+    "positions_window_utc": [
+      "2026-10-19T18:04:53.426902+00:00",
+      "2026-10-19T18:04:53.631992+00:00"
+    ],
+    "MI_No_shares": 5,
+    "Whale_No_shares": 6,
+    "positions": 8,
+    "LIVE_BUYs": 4,
+    "matched": 0,
+    "reserved": 7.52,
+    "same_as_completed18check": true
+  },
+  "related_older_alerts_reread": [
+    "122ce9ea5e4040f91e9846c4a04ae722a6910f07",
+    "df272b3fbe4e54b17365c981f4800e6f2c72b2aa",
+    "ba9ab53f6bdd77624a18c08561687485e62037be",
+    "1261cc89640943a513f2b75a66c5dc16c769aab0",
+    "f846709391e48c514cfdb8a5dee4a51885ab7046",
+    "d52b43ac0a1334188dc02d91330f4eab8a603efb",
+    "af0388d7576b203ad1a10f47b781c80dd699680b",
+    "0f0badeb0d8f164cdb7566ea78048b64f88fa0e6",
+    "7dc141268f687283627ccdfc6fcd6e8f32461bcf",
+    "2f1cd958e63e0205b1db466f6469d37a6661b2cb",
+    "ffa1251d18e4af071b22d377a72656bef2467226",
+    "49b78be779d9309a29fcbb99660fb74400afbdc8",
+    "7b9d0cacf9e77ddf73170a67edd77bd18e3ca992"
+  ],
+  "additional_alert": {
+    "id": "5c4e768133217d3c4fbf4d07ab1ae40a52052849",
+    "ts": "2026-10-19T18:09:55Z",
+    "line_sha256": "5cb570de19919c4b938f44aded0b0fc32c8f3a2cee0ec73f0fe3cbcef25b2412",
+    "decision": "Marshall Kansas water/ranch headline: no held or pending Kansas exposure. Research lead only; no forecast/trade/valuation credit."
+  },
+  "news_reviewed_through": "2026-10-19T18:09:55Z",
+  "checklist_coverage": "16:48fullcheck plus18UTC due safety check completed/pushed49327ea; no duplicate discovery/account/financial probes. WeeklyOct23/monthlyNov12 notdue; methodologyconcluded.",
+  "new_financial_observation": false,
+  "CSV_rows_unchanged": 220,
+  "financial_or_prior_or_order_mutations": 0,
+  "new_research_cases": 0,
+  "Telegram": "none; no additional material finding/action",
+  "next": "Existing22UTC light AND Idaho63070734YES3c/$1.02 pull ALL unfilled; earlier material poll/candidate/ballot/turnout uncertainty cancel-first. FullOct20 02UTC.",
+  "bounded_contract": "End run; no goal lifecycle change, timer or idle followup."
+}

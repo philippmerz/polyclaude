@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-19T18:10:43.123119Z"
+reviewed_at: "2026-10-19T18:16:12.638944Z"
 valid_until: "2026-10-19T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 5a1ebaccf86fbda97b482c63fdb1f4fb55fe0d44ba1cf5cf40dbd81bf260c64b
+  README.md: 693f60affe8e45842f1abfc755acf1653499b552a370b665db3466f5635fd8c7
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: adca33680346e10ba1de20efa0af823270b0086aca72b12917ff2baf21d456af
+  notes/backlog.md: b5449bda8cd4b6e9c37f111390c84093767ca59a1758abb190d5703f82f20de2
   notes/resting_orders.md: 7229525029111618ccc25ac6ba1bf5dd31faa29317b74dc1002744b350e0a735
-  notes/journal.md: daee8bac60b79adbeb3d848a79689a4e067070d13fb94a641d385b33f4b1d1a8
+  notes/journal.md: 76d27d8541b8f7154420ddf04f8019277721afa5b397cd1cd4ed613ac6039425
 ---
 ## Resume
 
@@ -33,7 +33,7 @@ Four LIVE/zero-matched BUYs/$7.52/four exact reservations and eight positive-siz
 - Retain MI USSenate5NO/Messi5YES/OR5NO/Whale6NO; Clarity whole29/29 only. Selected terminal1.70/2/3.65/2.5261 versus18:03:16 quote fee-net indicative exits1.458/1.20312/3.00242/.37176. Best bids below selected probabilities; no better prefix. Selected holds exceed generous10% one-year cash sensitivity, but broad adverse20% ordinary/2% Whale favors sale. Full binary loss possible; no recovery claim. No hidden-information maker at/below fair or automatic midpoint/rho Kelly adds. [Primary/joint risk](../data/deep_review_20261017/work/light1800_root_risk.json).
 - Whale strict final domesticOct16–18<8mYES; exactly8m FINAL paysNO. Fresh Numbers18:02:00.572409/Mojo18:02:01.392211 both8m ESTIMATE; critical headlineef1955 does not establish finality. Worldwide17.5m is different; no preview double-add. [Sources](../data/deep_review_20261017/work/light1800_sources.json).
 - OR measures displayedOct26/Nov2/Nov9/Nov16 total, NOoutside[725,775).18:02 chart/cachedAt17:49:44: Oct12completed164.044T, Oct19partial17.789T including Others; target labels absent. Completed baseline already known; partial progression is not a new completed-week surprise/cutoff. Messi is Google2026 GlobalAthletesTop5/fallbackMar31’27, not individual award/headline or a different search list.
-- Requested2f1cd/ffa125/49b78 reviewed with older related coverage in16:48 check. Current news watermark17:53:33 includescc4e27 USA disavowal, ef1955 Whale, f2dba Mbappe,2102 Kansas,29c6 Messi plant. USA body/date inaccessible; framing could help Democrat/hurt MI NO, no measured poll/ballot/withdrawal update. Related syndication cannot prove identity; originalTimes poll gap remains. Other leads are not Google rank/current exposure evidence. [Exact IDs/decisions](../data/deep_review_20261017/work/light1800_root_risk.json).
+- Requested2f1cd/ffa125/49b78 reviewed with older related coverage in16:48 check. News watermark18:09:55; later Kansas water/ranch lead has no exposure. [Delayed17:42 tick proof](../data/deep_review_20261017/work/tick174243_completed_review.json). Earlier covered rows includecc4e27 USA disavowal, ef1955 Whale, f2dba Mbappe,2102 Kansas,29c6 Messi plant. USA body/date inaccessible; framing could help Democrat/hurt MI NO, no measured poll/ballot/withdrawal update. Related syndication cannot prove identity; originalTimes poll gap remains. Other leads are not Google rank/current exposure evidence. [Exact IDs/decisions](../data/deep_review_20261017/work/light1800_root_risk.json).
 - Clarity conditional29 floor/58 middle versus23.96 CLI exit/.22fee; whole pair only/no add. First qualifying final Senate passage, not cloture/proforma.18:02 schedule refresh403;12:07adjournmentuntilNov9 is dated schedule, not passage status. Oracle/venue/system can break floor. Joint bookkeeping allordinary+fourbidslose/pair29→176.62, pair0→147.62; otherassets constant, no calibrated joint probabilities.
 
 ## Operations and next boundary
