@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 220 recorded observations from Apr-25
+The local performance CSV now has 221 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**350 valued /9 blocked /364 factual /2,277 pending;723 base+64 revisions, active383.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.382(OpenRouter displayed four-week total below575T) was saved individually at19:43UTC; positive central YES economics fail the selected uncertainty case, and NO has no ask. No entry.383(Lyman station) remains unpriced: current locator geometry does not establish the contract's historical icon/persistence condition. [Small resume](research/2026-10-17-deep-review/RESUME.md) · [current closeout](research/2026-10-19-1956-closeout.md). Scanner coverage earns no valuation credit.
+**352 valued /10 blocked /364 factual /2,274 pending;726 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.383 is blocked/unpriced on historical Lyman station control/persistence;384 Omar is valued/no entry.386 Sánchez is valued47.658%YES with30pp allowance; tenYES maker16¢/1.60 is LIVE/zero matched, not an acquired holding. [Entry and source limits](research/2026-10-17-deep-review/sanchez386_entry_2043.md). Next finite case388; no next case started during this bounded check. [Small handoff](data/deep_review_20261017/work/tick191427_followup_RESUME.json).
 
-**Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC all-unfilled pull binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
+**Five LIVE/zero-matched BUYs /9.12 reserved, independently verified20:43. Idaho22UTC all-unfilled pull remains binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
 
-**Whalefall6NO/$1.02 retained without adding.** Fresh19:19 Numbers/Mojo8m remains estimated; exactly8m FINAL paysNO. OpenRouter5NO is governed by four future weekly labels. ClosedHLE9NO/DEC225 and the zero-value/uncertain legacyGemini claim are distinct. [Source review](data/deep_review_20261017/work/light1800_sources.json).
+**Whalefall6NO/1.02: thesis broken; exit unavailable.** Numbers20:02 domestic weekend/daily7,837,153 is below8m; Mojo still8m estimated/Numbers summary8m, no finality claim. NO revised57.1%→3%, broad0.2–20.20:32 exactNO book has no bids; no sale/add submitted, full loss possible. [Revision](research/2026-10-17-deep-review/revisions/0299_20261019T200804353936Z.md) · [book follow-up](data/deep_review_20261017/work/whale_2032_book_followup.json). TG1270 already sent once.
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 18:00 UTC
+## Last audited snapshot — October19 20:32 UTC
 
-**Bankroll $195.66 incl $5.80 separate gas; trading midpoint $189.86 / indicative depth $185.98; PM $34.72 / $30.84.** Producer18:03:14.695934–29.060593UTC. Rounded sequential inputs are not synchronized NAV/certified proceeds;20.73 residual is accounting arithmetic, not audited profit. VM/API excluded. CSV220 observations uses the same producer/check-window anchor. [Check-in](research/2026-10-19-1800-checkin.md).
+**Bankroll195.62 incl5.81 separate gas; trading189.81 midpoint /187.32 indicative depth; PM34.67 /32.18.** Authoritative producer20:32:07.939856–23.151609UTC. Rounded sequential inputs are not synchronized NAV or certified proceeds;20.73 residual is accounting arithmetic, not audited cash profit. VM/API excluded. CSV221 uses this same producer/check-window anchor. [Financial observation](research/2026-10-19-2032-financial-snapshot.md).
 
-Four LIVE/zero-matched BUYs/four matching reservations/$7.52 and eight positive-size positions match17:02. Orders18:03:40–41 are authenticated CLI serialization; indexed positions18:04:53 HTTP200. No trade or numerical-prior change. Idaho34YES3c/$1.02 retains22UTC all-unfilled pull/earlier cancel-first. [Orders](notes/resting_orders.md) · [ops/account provenance](data/deep_review_20261017/work/light1800_ops.json).
+Later20:43 verification: fiveLIVE/zero-matched BUYs/9.12/five matching reservations and eight indexed holdings; earlier four orders and indexed sizes/totalBought unchanged, SpainCTFs0. DEC236 new16¢ Sánchez bid reserves1.60; no shares acquired or profit booked. Country grouping gives no independence hedge; manual declared23%risk fraction/rho.7 and full-fill caps passed. [Order proof](data/deep_review_20261017/work/0386_postsubmit2043.json).
 
-Whale19:19 Numbers/Mojo8m remains estimated; OROct19 partial is not a target-week result. Alerts reviewed through19:52:47; exact Bridge/Gander bodies remain unavailable and no measured electoral change is verified. Michigan5NO/no add/prior unchanged; earlier poll-body/date gaps remain.19:17 authenticated orders/indexed positions/reservations unchanged. Quick status returned0/no hurdle flag or watchlist hit; nested child rc not exposed. No new total NAV/CSV row. [Periodic review](research/2026-10-19-1916-periodic.md).18UTC full checks/daemon evidence remain dated. Existing22UTC light AND Idaho all-unfilled pull/fullOct20 02UTC; weeklyOct23. [18UTC primary risk](data/deep_review_20261017/work/light1800_root_risk.json).
+20:30 quick status returned0/no failure marker, hurdle0/watchlist0;20:44 Kelly/crux/watcher status0;20:47 state audit clean7indexed+1deindexed claim/0 expired holds. These are narrower than the prior18UTC safety and16:48full/discovery checks, which retain their dates. No repeated discovery or new full-check claim. Requested three news reviews verified complete; laterMI source gaps remain/NO44selected34/noadd. Alerts read through20:43:32 at fixed20:48:05 cutoff; title-only opinion leads are not verified source events. Existing22UTC light AND Idaho pull/fullOct20 02UTC; weeklyOct23. [Current follow-up](research/2026-10-19-2048-checkin-followup.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

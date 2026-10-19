@@ -1,0 +1,63 @@
+{
+  "schema": "primary_sanchez_departure_model.v2",
+  "review_index": 386,
+  "created_utc": "2026-10-19T20:36:48.239581+00:00",
+  "price_status": "Revision after seeing20:24/20:32books; notprice-blind. Original prequote52% draft is preserved, not overwritten.",
+  "predecessor_model": "research/2026-10-17-deep-review/models/0386_primary_2027.json",
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/work/0386_primary_sources_2027.json",
+      "sha256": "f754257a83b99121ae4e5a030f84353ce3efe4140eec1ce485532b003f3c46db"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0386_cis_2037.json",
+      "sha256": "7114bfd23186ee56de0e823353966dfd43c97dc1fcd890c1e679bfe64275b9a6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0386_rtve2037_root.json",
+      "sha256": "2540db456850bba2a468da9c07aef308e35404103c95724a8fdd108ee525f0eb"
+    }
+  ],
+  "new_information": "Later-published CIS conflicts with40dB; CISfieldOct1–6 precedes40dB7–8 and is not a measured subsequent swing. Exact original instrument/partytable unverified; RTVEbody/header34/34.2 inconsistency retained. Onepoll cannot identify formation probability.",
+  "historical_already_qualified_unverified": 0.005,
+  "future_event_states_given_no_past": {
+    "election": 0.9,
+    "delay": 0.05,
+    "delay_conditional_departure": 0.1,
+    "nonelectoral_departure": 0.05
+  },
+  "election_branch": {
+    "formal_statutory_cese_accepted_as_contractYES_probability": 0.25,
+    "conditional_ceseissuedbydeadline": 0.98,
+    "continuity_interpretation_probability": 0.75,
+    "political_states": {
+      "clear_opposition": 0.5,
+      "sanchez_viable": 0.3,
+      "hung_other": 0.2
+    },
+    "opposition_announcement_by_deadline": 0.3,
+    "opposition_replacement_given_noannouncement": 0.3,
+    "sanchez_viable_conditional_departure": 0.05,
+    "hung_other_conditional_departure": 0.12
+  },
+  "ordinary_continuity_conditional_p_yes": 0.294,
+  "calculated_p_yes": 0.47658025,
+  "adopted_p_yes": 0.47658025,
+  "broad_yes_range": [
+    0.1,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 30,
+  "selected_YES": 0.17658025,
+  "selected_NO": 0.22341975,
+  "sensitivities": {
+    "no_statutory_cese_credit": 0.323002,
+    "opposition40_keep40_hung20": 0.4456855,
+    "formal_handover10pct": 0.4295665,
+    "cese_credit50pct": 0.6301585000000001
+  },
+  "reserve_rationale": "30pp aggregate allowance for unfitted political/timing/legal/source risk and adverse conditional maker fills, versus25pp draft. CISconflict reduces clearopposition65to50 and increases keep20to30/hung15to20; not equal averaging partyvote percentages or calibrated poll-to-seat odds. No additional claim all broad endpoints clear.",
+  "paired_synthesis": "Champion correctly identifies personal2023cese precedent; skeptic correctly identifies simultaneouscaretakercontinuity and8dayDec23→31handoverwindow. Neither adjudicates this contract or supplies probabilities. Root retains25%semanticcredit as explicit unfitted judgment, notguarantee. Skeptic fee sentence is stale: exact currentGammafeesEnabledfalse is affirmativezero-fee evidence in canonicalpm_fees; missingcompactfd leavesparityunverified, not unknownGammafee.",
+  "portfolio_decision": "Consider only10YESpostonly<=16c/1.60cash withfull-lossaccepted; no taker/chase/add. Makeredgeconditional/noncalibrated; currentcaps/account/funding/eligibility/cruxcoverage required. NoSpanishholding, but noindependencecredit: declared aggregateclusterfraction.23/rho.7 covermorethan allcurrentPMcost35.59+BUYcommitments7.52 over189.81tradingbankroll.",
+  "limits": "Allweights are primaryjudgments, not empiricalfrequencies/legaladvice/venue ruling. Newdecree/ruling/coalition/poll/candidate/timetable evidence requires cancel-first/re-underwriting if unassessed; no bid based on draft52 afterthisrevision."
+}

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T19:44:03.517772+00:00
+Updated: 2026-10-19T20:41:44.085380+00:00
 
-**350 valuations saved; first milestone100:** 350 valued; 9 blocked after in-depth review. 364 factual exclusions separately; 2277 pending.
+**352 valuations saved; first milestone100:** 352 valued; 10 blocked after in-depth review. 364 factual exclusions separately; 2274 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -310,7 +310,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |296|[Will gas be below $3.75/gallon in any state on October 31?](revisions/0296_20261019T021240146785Z.md)|valued|OriginalpendingBUYcanceledunfilledatstanding02UTCpull; DEC226. Datedprobability/quoteevaluationpreserved, no automaticre-entry.|
 |297|[Will Udinese Calcio win on 2026-10-18?](revisions/0297_20261018T235939405348Z.md)|excluded_factual|Objective factual exclusion: currently closed/resolved/no accepting orders. Both exact-token books omitted fromHTTP200 batch; costs/EV unknown, not zero or an asserted absence of offers. No entry/account/prior/writer.|
 |298|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 55% or higher?](revisions/0298_20261018T235940235691Z.md)|valued|NO ENTRY either side. Ten-share fee-cost YES2.16636/NO8.35645; even central EV−.32288/−.19993 before carry. Selected probabilities3.4348/66.5652% also fail maker18c+/80c+. Cash/known candidates dominate; free3.22689 also below5NO at80c. No order/prior/holding changes.|
-|299|[Will "Whalefall" Opening Weekend Box Office be less than 8m?](revisions/0299_20261019T012310323938Z.md)|valued|ONE vetted maker BUY6NO17c/$1.02 accepted, independently LIVE/unfilled. Forecast unchanged; no position/PnL claimed. All8 prior orders/reservations preserved. Pull ALL unfilled Oct19 02UTC or earlier unassessed material source/news; no replay/add/repost.|
+|299|[Will "Whalefall" Opening Weekend Box Office be less than 8m?](revisions/0299_20261019T200804353936Z.md)|valued|NO thesis broken; no executableNO bid in captured response, no sale submitted. Keep6sharesasilliquidclaim/noadd; priorrevisedNO3/YES97. No finalresolutionclaim.|
 |300|[Will Delcy Rodríguez be the leader of Venezuela end of 2026?](revisions/0300_20261019T011739990764Z.md)|valued|Valued candidate, unplaced. Strict predeclared raw price cap blocks the current 19-cent maker limit; the pre-writer skip submitted no order and created no reservation. Forecast and economics are preserved; the economics remain dated to the 00:16 book. No retry or trade authority.|
 |301|[US bank failure by December 31, 2026?](evaluations/0301.md)|valued|No entry. PrimaryYES52.0238%/selected37.0238%; NO47.9762%/selected32.9762%.10sharesYESfee-cost6.12/central−.91762; NO4.42256/central+.37506 but selected−1.12494 beforecarry/operations. Improved ordinaryNOmaker41c+ still exceeds32.9762%selected; bankhazard/model/source uncertainty exceeds small quoted advantage. Cash/knowncandidates dominate afterrisk.|
 |302|[Mastercard (MA) Q3 gross dollar volume growth (local currency basis) 8.5% to 9.5%?](evaluations/0302.md)|valued|YES maker candidate for distinct current entry review, no order/prior/holding. At10sharesYESask10.5cfee-cost1.08759/centralEV1.33068 butselected−.16932; NO98.7cfee-cost9.87514/central−2.29341. TakerYESfailschosen15ppallowance; muchlower makerquote canpass. Actualmakerqty/cashminimum/selectionrisk/fillprobabilityandothercandidatesmustbeassessed; do not rejectmerelywidebook. Noempiricalhedge; globalconsumption/creditstresscorrelatesmacroevents.|
@@ -394,7 +394,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |380|[Will PPI YoY be 6.6% in October?](evaluations/0380.md)|valued|Noentry; bothcurrentasks failcentralandselected; broadspread/centgrid/floor/conditionalinformationaddcosts. K5arithmeticisnotmeasured-tail licence.|
 |381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |382|[Will OpenRouter process less than 575T tokens from Sep 28 to Oct 25?](evaluations/0382.md)|valued|Noentry. YEScentralpositive butselectednegative/unmeasuredrare-eventweights; NOnoask/competitive99cmakerfailscentral. No arbitraryprofitfloor or missingask=zero.|
+|383|[Will Russia capture Lyman by December 31, 2026?](evaluations/0383.md)|blocked_after_review|Local source block; unpriced, noentry, not a valuation/rejection. Othercasescontinue.|
+|384|[Ilhan Omar arrested by December 31, 2026?](evaluations/0384.md)|valued|No entry; YESpositivecentral butselectednegative, NOask/competitive maker negativecentral. No arbitraryprofitfloor.|
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|386|[Pedro Sánchez out as PM of Spain by December 31, 2026?](evaluations/0386.md)|valued|YES maker-only candidate <=16c/10shares/1.60 subject current gated execution;18c taker and NO competitive entries fail selected or central cases. No order at valuation.|
 |387|[Georgia State vs. James Madison](evaluations/0387.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |389|[Will the highest temperature in Madrid be 23°C on October 17?](evaluations/0389.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |392|[Will it rain in Atlanta, GA on October 17?](evaluations/0392.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
@@ -735,5 +738,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 383

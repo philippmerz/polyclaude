@@ -1,0 +1,57 @@
+{
+  "schema": "postentry_advisory.v1",
+  "checks": {
+    "kelly": {
+      "returncode": 0,
+      "started_utc": "2026-10-19T20:44:07.584071Z",
+      "received_utc": "2026-10-19T20:44:08.403292Z",
+      "raw_sha256": "2ad3d5adab8d6a04088578c9a866e02af631753c32a60363af08ee6133b0db56",
+      "output_bytes": 2445,
+      "selected_output": [
+        "",
+        "====================================================================================================",
+        "Slug                                          Side mark    P_win  edge   cost     Kelly$   \u0394 to opt  cluster        ",
+        "====================================================================================================",
+        "will-openrouter-process-between-725t-and-775t No  0.6550  0.880  22.50pp 3.25     59.00       +55.75 ai-ships-fast-short",
+        "will-lionel-messi-rank-in-googles-top-5-most- Yes 0.2650  0.600  33.50pp 1.35     40.57       +39.22 google-year-in-search-2026",
+        "will-the-democrats-win-the-michigan-senate-ra No  0.3050  0.440  13.50pp 1.55     17.29       +15.74 us-politics    ",
+        "will-whalefall-opening-weekend-box-office-be- No  0.0035    -      -    1.02     (de-idx) -         film-boxoffice-2026",
+        "clarity-act-senate-threshold-monotonicity     SET   -       -      -    28.33    (group)       0.00 group-structure",
+        "    GROUP: mark=$28.27 fair=$29.00 floor=$29.00; floor-pair fair/unit=1.000; floor-pair: executable +5; all-in/unit $1.025 vs fair/unit $1.000 (SKIP_ADD_POLICY_PRICE_CAP)",
+        "    FILLED DEC-0139 on 2026-09-17: 29 equal over-58 NO + over-50 YES shares bought for $28.13 nominal and $28.32893 including taker fees, versus a $29.00 logical payout floor. Sep-22 live source reconciliation confirmed byte-identical criteria and matching Jan-2 operational end metadata on both legs; the written qualifying cutoff remains before Jan-1. The pair consumes the 15% ticket allowance; NO ADD and never transact one leg independently.",
+        "",
+        "====================================================================================================",
+        "TOTAL: cost=$34.48  kelly_optimal=$145.19  delta=$+110.71",
+        "  Bankroll utilization (cost): 17.6%",
+        "  Kelly-optimal utilization:   74.2%",
+        "",
+        "Recommended actions (delta > $5 = scale-in candidate):",
+        "  TICKET_CAP will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026: suppressed scale-in; current gross $3.25, 15% cap $29.34, headroom $26.09 < requested $55.75. Entry gate also rechecks pending BUYs.",
+        "  TICKET_CAP will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026: suppressed scale-in; current gross $1.35, 15% cap $29.34, headroom $27.99 < requested $39.22. Entry gate also rechecks pending BUYs.",
+        "  +$ 15.74  No @ $0.305  edge=13.50pp  Will the Democrats win the Michigan Senate race in",
+        "",
+        "Over-sized (delta < -$5) \u2014 choose the maker route by information class:",
+        "  (none)"
+      ]
+    },
+    "crux": {
+      "returncode": 0,
+      "started_utc": "2026-10-19T20:44:08.413367Z",
+      "received_utc": "2026-10-19T20:44:08.773428Z",
+      "raw_sha256": "625f12da9ed706f020bb4c3825e7f6d01968e00bf3b9e22576e9a3a4e0a157cb",
+      "output_bytes": 0,
+      "selected_output": []
+    },
+    "watcher": {
+      "returncode": 0,
+      "started_utc": "2026-10-19T20:44:08.782614Z",
+      "received_utc": "2026-10-19T20:44:09.349024Z",
+      "raw_sha256": "60671b03df885e5863370c1c5456d85fb89d5fe35d33c815e6f49e366d17b88f",
+      "output_bytes": 66,
+      "selected_output": [
+        "watcher pid=148881 seen=5000 last_cron_trigger=1792437240.9246168"
+      ]
+    }
+  },
+  "limits": "Kelly midpoint/rho heuristic, not joint terminal distribution. Crux keyword audit is not complete resolution-crux or pending-feed progress certification; watcher status is liveness only."
+}

@@ -1,0 +1,38 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 391,
+  "created_utc": "2026-10-19T20:15:48Z",
+  "market": {
+    "market_id": "2883733",
+    "condition_id": "0x8dcfaba48b64919f64ab8d728182b78957305eb9baecd2533ff9839440c85581",
+    "criteria_sha256": "aa2e69c8a04f61144e48447c5b5f86dd6a5ef17b394022dd99ed1f02202087f8",
+    "literal": "By Dec31 2026 ET the U.S. federal government must issue a waiver/license/termination/revocation/equivalent that lifts any part of CAATSA §231 penalties on Turkey, SSB, or covered Turkish officials. Intent, negotiations and F-35/NDAA-only changes do not qualify."
+  },
+  "current_ofac_page": {
+    "url": "https://ofac.treasury.gov/sanctions-programs-and-country-information/countering-americas-adversaries-through-sanctions-act-related-sanctions",
+    "status": 200,
+    "started_utc": "2026-10-19T20:15:11.375610Z",
+    "received_utc": "2026-10-19T20:15:11.679928Z",
+    "http_date": "Mon, 19 Oct 2026 20:15:11 GMT",
+    "raw_bytes": 47593,
+    "raw_sha256": "504de5d6b7d0e2a59901943292ed4a18ce4d8c4909d6c82ee79c90018bba3850",
+    "gzip_sha256": "b9cc7ffba6b20940ce35973baf202de36923b7a210937800dde74c6b48c223d0",
+    "receipt": "logs/deep_review_20261017/case0391_sources_2005/ofac_caatsa_current_2005.receipt.json",
+    "receipt_sha256": "9a695ea21f00a5756040eff1703702d81e5e4454aa25c407fe0b5ab4b85197c8",
+    "body": "logs/deep_review_20261017/case0391_sources_2005/ofac_caatsa_current_2005.body.json.gz",
+    "page_observation": "Official current CAATSA program page identifies §231 and links to State. Its listed recent CAATSA actions are Feb24 2026 (Russia-related), Nov19 2025 (Russia-related), and Jul1 2025 (Russia-related). Captured body contains no literal Turkey or SSB string. The page’s recent-action list is not a complete record of every State-issued instrument."
+  },
+  "linked_state_page_attempt": {
+    "url": "https://www.state.gov/section-231-of-the-countering-americas-adversaries-through-sanctions-act-of-2017/",
+    "started_utc": "2026-10-19T20:15:24.502231Z",
+    "received_utc": "2026-10-19T20:15:25.066916Z",
+    "error_type": "HTTPError",
+    "response_status": null,
+    "receipt": "logs/deep_review_20261017/case0391_sources_2005/state/state_section231_current_2005.receipt.json",
+    "receipt_sha256": "4566fd8b0a46c1f605ec021cc555d07e3bcba13219e1bcb7eb61bf2ac3f5c4f1",
+    "limit": "The ordinary GET raised HTTPError and capture adapter retained status=null/body empty; exact HTTP status is unknown. No retry/bypass."
+  },
+  "existing_valid_history": "data/deep_review_20261017/work/0391_facts.json records the 2020 SSB/four-official sanctions notice and a Federal Register April 2026 recital that SSB was subject to §231 sanctions as of July9 2024. Those are dated historical facts, not a current October2026 relief status.",
+  "bounded_search": "One official-domain query for Treasury/State Turkey CAATSA §231 relief returned the OFAC program page and archived statutory/older material; no fresh Turkey relief instrument was identified in the returned results. Search representation has no raw HTTP receipt. This does not prove no instrument exists or cover all relevant government records.",
+  "finding": "No current qualifying relief instrument was established in this bounded refresh. OFAC page evidence is limited to its linked program page/recent-actions list; linked State page access failed with status unrecorded. Negotiation/issuance status remains unresolved; no absence inference."
+}

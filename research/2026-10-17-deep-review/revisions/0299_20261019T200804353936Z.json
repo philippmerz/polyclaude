@@ -1,0 +1,150 @@
+{
+  "review_index": 299,
+  "market_id": "5394247",
+  "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+  "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+  "status": "valued",
+  "literal_analysis": "Final3day domesticWhalefallOct16–18, namedNumbers weekendtable despiteinitialDaily wording; Thursdaypreviews normallyalreadyincluded. Strictless8m; exactly8m higherbracketNO. Estimates do not settle. If finality ambiguous waitNumbers+Mojo finalconfirmation; nofinalbyOct23 23:59ET→another credible source, not automaticYES/NO. APIendOct18noon not deadline.",
+  "evidence": [
+    {
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+      "observed_utc": "2026-10-19T20:02:51.521974Z",
+      "finding": "The gross cell no longer has the prior chart_estimate class; this is a change from the Oct19 19:19 capture. Page has no explicit FINAL/ACTUAL label or page-level update timestamp, so finality is not independently stated. Gross $7,837,153"
+    },
+    {
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "observed_utc": "2026-10-19T20:02:52.860933Z",
+      "finding": "Estimated flag true and row class mojo-annotation-isEstimated remain. Gross $8,000,000"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.97,
+    "low": 0.8,
+    "high": 0.998,
+    "method": "Primary actual-source/correction/adjudication scenario revision; unfitted tails, not old estimate-to-final kernels.",
+    "reasoning": "Numbers updated weekend/daily7,837,153 below8m; Mojo remains8m estimate; old summary8m remains.94/4/2 judgment states produceYES97/NO3; broadNO0.2–20,15ppselectedNO0/YES82. No calibrated near-certainty licence.",
+    "model_path": "models/whalefall299_primary_2007.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0299_quote_2005.json",
+    "quote_file_sha256": "1ed03f327a807c2da292550bd3e12e67039c59ed078e33ac0b4c5e68793ae6ad",
+    "quote_capture_utc": "2026-10-19T20:04:53.889393+00:00",
+    "gamma_received_utc": "2026-10-19T20:04:53.733510+00:00",
+    "hypothetical_gross_shares": 6.0,
+    "horizon_days": 5.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.97,
+        "selected_stress_probability": 0.82,
+        "best_bid": 0.992,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792440102993",
+        "book_received_utc": "2026-10-19T20:04:53.888279+00:00",
+        "book_age_seconds_at_receipt": 190.89527893066406,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 5.952,
+            "fee": 0.00239,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.992
+              }
+            ],
+            "net": 5.94961
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.030000000000000027,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.008,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792440102993",
+        "book_received_utc": "2026-10-19T20:04:53.888279+00:00",
+        "book_age_seconds_at_receipt": 190.89527893066406,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 0.048,
+            "fee": 0.00239,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.008
+              }
+            ],
+            "net": 0.050390000000000004
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 0.050390000000000004,
+        "central_expected_profit_usd": 0.12961000000000017,
+        "selected_stress_profit_usd": -0.050390000000000004,
+        "break_even_before_carry": 0.008398333333333334,
+        "break_even_constant_carry": 0.008401961803624916,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NO thesis broken; no executableNO bid in captured response, no sale submitted. Keep6sharesasilliquidclaim/noadd; priorrevisedNO3/YES97. No finalresolutionclaim.",
+  "reopen_condition": "Material correction/finality or actual freshNO bid; independently revalidate exact sources, full account/book/fee/depth/freshness and payout economics. No timer/repost.",
+  "evaluated_utc": "2026-10-19T20:08:04.354745+00:00",
+  "question": "Will \"Whalefall\" Opening Weekend Box Office be less than 8m?",
+  "valuation_author": "primary_operator",
+  "original_index": 299,
+  "revision_reason": "Numbersweekend/dailychanged7,837,153below8m; oldestimate-kernelNO57.1022 replacedbyunfittedsource-stateNO3. CurrentNOno bid/stale timestamp; no executableexit/no order submitted.",
+  "prior_report_sha256": "65aeda20f15a202c74c45981a9310ad9bf3b3af9c1eb01bf1058e4f7656f4828",
+  "report_sha256": "76116126acae3d3a7bc77841fe4894e017cef2289d9d4a4559121ddbdce6cde5",
+  "report_path": "revisions/0299_20261019T200804353936Z.md",
+  "revision_path": "revisions/0299_20261019T200804353936Z.json"
+}

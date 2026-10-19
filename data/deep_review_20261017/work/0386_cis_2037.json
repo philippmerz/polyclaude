@@ -1,0 +1,46 @@
+{
+  "compiled_utc": "2026-10-19T20:34:35Z",
+  "scope": "Facts-only CIS source follow-up; no forecast or seat/coalition inference.",
+  "frozen_rule": {
+    "review_index": 386,
+    "id": "802374",
+    "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+    "question": "Pedro Sánchez out as PM of Spain by December 31, 2026?",
+    "description": "This market will resolve to “Yes” if Pedro Sánchez ceases to be Prime Minister of Spain for any period of time between market creation and the specified date (ET). Otherwise, this market will resolve to “No”.\n\nAn announcement of Pedro Sánchez's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nIf the specified individual is detained, effectively removed from the specified position, or otherwise permanently prevented from fulfilling the duties of the specified position within this market’s timeframe, it will qualify for a “Yes” resolution.\n\nThe resolution source for this market will be official information from Pedro Sánchez and the government of Spain; however, a consensus of credible reporting may also be used.",
+    "endDate": "2027-01-01T04:59:00Z",
+    "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395"
+  },
+  "web_searches": [
+    {
+      "query": "site:cis.es octubre 2026 barómetro CIS 34 PSOE 22,2 PP 14 octubre 2026",
+      "result": "No original CIS October release surfaced."
+    },
+    {
+      "query": "site:cis.es \"Barómetro de octubre 2026\" \"Estudio nº 3582\"",
+      "result": "No result. Exact search retrieval times not exposed."
+    }
+  ],
+  "direct_official_GETs": [
+    {
+      "utc": "2026-10-19T20:34:26.302529Z",
+      "url": "https://www.cis.es/documents/d/guest/es3582sdMT_a-pdf",
+      "status": 410,
+      "receipt": "logs/deep_review_20261017/0386_cis_2037/fetch_error.json"
+    },
+    {
+      "utc": "2026-10-19T20:34:31.461785Z",
+      "url": "https://www.cis.es/estudios/barometro-de-octubre-2026",
+      "status": 404,
+      "receipt": "logs/deep_review_20261017/0386_cis_2037/landing_fetch_error.json"
+    }
+  ],
+  "secondary_report_only": {
+    "outlet": "RTVE",
+    "url": "https://www.rtve.es/noticias/20261014/cis-dispara-a-118-puntos-ventaja-del-psoe-con-pp-tras-caida-del-decreto-maricarmen/17265537.shtml",
+    "published": "2026-10-14",
+    "reported": "CIS October estimated vote: PSOE 34.0%, PP 22.2%; fieldwork Oct 1–6, 5,025 telephone interviews, stated full-sample MOE ±1.4 pp. Framed as what would happen if a general election were held now.",
+    "not_verified": "No original CIS report/questionnaire/tabulations. Thus no exact question, raw stated vote intention, weighting/estimation method or full party table verified; 34/22.2 should not be relabeled raw intention."
+  },
+  "comparison": "Separate 40dB Oct 7–8 topline cited by root (PP31.9, PSOE28.1, Vox18.9); instrument reconciliation unsupported here.",
+  "access_gap": "Original CIS study/data/methodology not retrieved. Failed URLs and search absence do not establish anything about poll validity or election outcome."
+}

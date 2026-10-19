@@ -1,0 +1,23 @@
+{
+  "schema": "candidate386_entry_precheck.v1",
+  "eligibility": {
+    "http_status": 200,
+    "blocked": false,
+    "received_utc": "2026-10-19T20:32:07.927059Z",
+    "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052",
+    "private_receipt": "logs/deep_review_20261017/entry386_checks2033/eligibility.receipt.json"
+  },
+  "bankroll": {
+    "returncode": 0,
+    "started_utc": "2026-10-19T20:32:07.939856Z",
+    "received_utc": "2026-10-19T20:32:23.151609Z",
+    "raw_sha256": "fec64f7c59f8c1e388cda1c244af2aac61837a94f19337124bbc6ea1219dc8a2",
+    "private_receipt": "logs/deep_review_20261017/entry386_checks2033/bankroll.receipt.json",
+    "selected_output": [
+      "TOTAL BANKROLL                         $   195.62",
+      "  REALIZED (settled cash)                 +20.73  (+12.2% of ref) <- the metric that counts",
+      "  (gas tokens excluded)                     5.81  \u2014 separately deposited, not trading P&L",
+      "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $2.49 (mid $34.67 vs $32.18) \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return."
+    ]
+  }
+}

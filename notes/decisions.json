@@ -1,5 +1,5 @@
 {
-  "next_id": 235,
+  "next_id": 237,
   "decisions": [
     {
       "id": 1,
@@ -5104,6 +5104,47 @@
         "unplaced"
       ],
       "slug": "will-kodak-black-be-featured-on-gta-vi-the-album",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 235,
+      "timestamp": "2026-10-19T20:08:27Z",
+      "type": "strategy_change",
+      "thesis": "Whalefall Numbers Oct16-18 weekend/daily changed from 8m estimate to 7,837,153. NO thesis broken; source-state NO3 replaces57.1022. SixNO/1.02 remain because current exact NO book has no bids and stale timestamp; no sale submitted, noadd, no finality claim. Source/model/management units saved2007.",
+      "confidence": "medium",
+      "prediction": "Numbers finalized domestic3day remains below8m; NO loses unless material correction or adjudication reversal. Source finality and actual exit remain unconfirmed.",
+      "size_usd": 1.02,
+      "resolution_at": "2026-10-24",
+      "tags": [
+        "whalefall",
+        "source-revision",
+        "thesis-break",
+        "illiquid-exit"
+      ],
+      "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 236,
+      "timestamp": "2026-10-19T20:45:10Z",
+      "type": "open_position",
+      "thesis": "Rested10YES post-only16c/1.60; independent20:43inventory verifiesLIVE0matched, not a purchase. Primary47.658025%YES with30pp aggregate model/legal/source/conditional-fill allowance leaves17.658025% selected. Formal personalcese may count despite caretakercontinuity; no guarantee. Newer-published CISconflicts with40dB but earlier fieldwork; originalCIS instrument unavailable. Full1.60 loss accepted, noindependencecredit; declared23%all-PMrisk fraction/rho.7, freshfunding/caps/eligibility passed. Cancel-first on unassessed material poll/coalition/candidate/timetable/decree/ruling; noadd/repost/chase/taker.",
+      "confidence": "low",
+      "prediction": "Conditional on any fill, qualifying personaldeparture or announcedresignation/removal byDec31ET paysYES, subjectiveP.47658025; electioncall alone does not. Track never-filled orders as unexecuted forecasts, not realized trade returns.",
+      "size_usd": 1.6,
+      "resolution_at": "2027-01-03",
+      "tags": [
+        "deep-review-386",
+        "maker-pending",
+        "spanish-government-2026",
+        "new-strategy-class",
+        "statutory-cese-uncertainty"
+      ],
+      "slug": "pedro-snchez-out-as-pm-of-spain-by-december-31-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -1,0 +1,68 @@
+{
+  "schema": "primary_sanchez_departure_model.v1",
+  "review_index": 386,
+  "created_utc": "2026-10-19T20:24:34.986854+00:00",
+  "price_status": "Rootadopted beforefreshown386quote; no frozenhistoricalpriceused.",
+  "literal": "AnyperiodoutPMsinceDec2,2025throughDec31ET; actualresignation/removalannouncementqualifies immediatelydespite latereffect; detention/effectiveremoval/permanentpreventionqualifies. Ordinaryelectioncall/parliamentdissolutionis not suchannouncement.",
+  "source_synthesis": "data/deep_review_20261017/work/0386_primary_sources_2027.json",
+  "source_sha256": "f754257a83b99121ae4e5a030f84353ce3efe4140eec1ce485532b003f3c46db",
+  "historical_already_qualified_unverified": 0.005,
+  "future_event_states_given_no_past": [
+    {
+      "state": "Nov29electiontakesplaceandusualconstitutionaltransition",
+      "weight": 0.9
+    },
+    {
+      "state": "Electiondelay/cancellationbeyonddeadline",
+      "weight": 0.05,
+      "conditional_qualifying_departure": 0.1
+    },
+    {
+      "state": "Nonelectoralpersonaldeparturebeforedeadline",
+      "weight": 0.05,
+      "conditional_qualifying_departure": 1
+    }
+  ],
+  "election_branch": {
+    "formal_statutory_cese_accepted_as_contractYES_probability": 0.25,
+    "conditional_ceseissuedbydeadline": 0.98,
+    "continuity_interpretation_probability": 0.75,
+    "political_states": [
+      {
+        "state": "Clearoppositionformation",
+        "weight": 0.65,
+        "resignationannouncementbyyearend": 0.3,
+        "formalreplacementbydeadline_given_noannouncement": 0.3
+      },
+      {
+        "state": "Sanchezviablecontinuedgovernment",
+        "weight": 0.2,
+        "conditional_departure": 0.05
+      },
+      {
+        "state": "Hung/otherformation",
+        "weight": 0.15,
+        "conditional_departure": 0.12
+      }
+    ],
+    "ordinary_continuity_conditional_p_yes": 0.3595
+  },
+  "calculated_p_yes": 0.5205716875,
+  "adopted_p_yes": 0.52,
+  "broad_yes_range": [
+    0.15,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 25,
+  "selected_YES": 0.27,
+  "selected_NO": 0.23,
+  "sensitivities": {
+    "no_statutory_cese_credit": 0.38165725000000006,
+    "cese_credit50pct": 0.6594861250000001,
+    "formal_handover10pct": 0.4594538125,
+    "opposition40_keep40_hung20": 0.44568550000000007
+  },
+  "evidence_bridge": "Original40dBpointPP/Vox198seats versus176 andmarginstronglyfavoranopposition-capablepath, but65%formationweight is a primaryjudgment allowingcampaign/house/coalitionerror, not directconversionofpollbands. Dec23session narrowsformalhandoverwindow; announcedpersonalresignationcanqualify sooner. Official2023cese/continuity createsadjudicationuncertainty, not a guaranteedYES.",
+  "limits": "Allstate/adjudication/announcement/timingweights unfitted. Onepoll is not ensemble; presentagenda not exhaustive historicalabsence proof. Do notpricecaretakerwordingasrisklessarbitrage or assume electionvictory=PMchangebydeadline. Broad15\u201385is an uncalibratedsensitivityenvelope;25ppselectionnotarbitraryrange-endpointrequirement.",
+  "portfolio": "NoSpanishholding/pendingBUY in20:04account; no hedge/independencecredit versuspolitical/venue tail. Existing7.52commitments andAavecashalt remain; currententrygates required beforemoney."
+}

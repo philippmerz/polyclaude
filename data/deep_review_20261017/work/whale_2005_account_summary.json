@@ -1,0 +1,20 @@
+{
+  "positions_response200": true,
+  "indexed_position_rows": 8,
+  "whale": {
+    "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+    "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+    "outcome": "No",
+    "size": 6,
+    "totalBought": 6,
+    "initialValue": 1.02,
+    "currentValue": 0.024,
+    "redeemable": false
+  },
+  "orders_status_code": 200,
+  "orders_keys": [
+    "body",
+    "status_code"
+  ],
+  "raw_capture_root": "logs/deep_review_20261017/whale_2005_account"
+}

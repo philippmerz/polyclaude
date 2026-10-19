@@ -1,0 +1,28 @@
+{
+  "schema": "case386_preentry_classification.v1",
+  "updated_utc": "2026-10-19T20:38:08.537253+00:00",
+  "new_prior_only": "pedro-snchez-out-as-pm-of-spain-by-december-31-2026",
+  "other_prior_objects_unchanged": true,
+  "new_feeds": [
+    "Spain PM departure, election and formation news",
+    "Spain PM official cessation and investiture news"
+  ],
+  "new_terms": [
+    "Pedro Sánchez",
+    "Pedro Sanchez",
+    "Feijóo",
+    "Feijoo",
+    "Sánchez dimite",
+    "Sanchez resigns",
+    "Sánchez detenido",
+    "presidente en funciones",
+    "Spanish election",
+    "Spanish investiture"
+  ],
+  "configuration_reloads_each_daemon_poll": true,
+  "daemon_code_changed": false,
+  "order_or_reservation_created_by_this_config_edit": false,
+  "declared_cluster_fraction": 0.23,
+  "rho": 0.7,
+  "rationale": "Country group plus conservative aggregate all-PM-risk bound; not independent-election/venue modeling. Full literal crux: personal departure or qualifying announcement, detention/incapacity; not election call alone. Existing classifier scopes held and authenticated pending BUYs; raw headlines never send Telegram."
+}

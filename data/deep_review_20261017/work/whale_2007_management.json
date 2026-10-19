@@ -1,0 +1,19 @@
+{
+  "schema": "primary_thesis_break_management.v1",
+  "review_index": 299,
+  "updated_utc": "2026-10-19T20:08:03.967781+00:00",
+  "p_no_before": 0.5710215523792391,
+  "p_no_after": 0.03,
+  "shares": 6,
+  "cash_cost": 1.02,
+  "sale_submitted": false,
+  "sale_filled": false,
+  "reason": "NO bid absent; book timestampfails180s; no liquidation certificate.",
+  "prior_only_intended_slug_changed": true,
+  "model": "research/2026-10-17-deep-review/models/whalefall299_primary_2007.json",
+  "model_sha256": "1bf077a6ef16c40a962570f8e4b4bcf35e7e30c995a1c696b9a3088a31351c53",
+  "account": "data/deep_review_20261017/work/whale_2005_account_summary.json",
+  "source": "data/deep_review_20261017/work/whalefall_alert_1958_facts.json",
+  "current_totalNAV_produced": false,
+  "CSVrow_added": false
+}

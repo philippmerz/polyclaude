@@ -1,0 +1,55 @@
+{
+  "schema": "primary_whalefall_actual_revision.v1",
+  "review_index": 299,
+  "created_utc": "2026-10-19T20:08:03.967781+00:00",
+  "source_change": "20:02Numbers weekend chart now7,837,153 with no chart_estimate vs19:19 eightmillion estimate. Root browser movie Weekend and Daily figures corroborate7,837,153; summary OpeningWeekend still8m. Mojo remains8m Estimated=true.",
+  "direct_movie_get": "403; independent public browser view captured as supplied tool representation, not rawHTTP/source-clock proof.",
+  "daily_sum": {
+    "Oct16": 3092009,
+    "Oct17": 2799361,
+    "Oct18": 1945783,
+    "sum": 7837153,
+    "separate_Thursday_preview_not_added": 900000
+  },
+  "gap_to_8m": 162847,
+  "primary_scenarios": [
+    {
+      "state": "Updated Numbers weekend/daily amount governs below8m without material reversal",
+      "weight": 0.94,
+      "conditional_p_no": 0
+    },
+    {
+      "state": "Material correction, reporting/metric mismatch",
+      "weight": 0.04,
+      "conditional_p_no": 0.5
+    },
+    {
+      "state": "Finality/adjudication/fallback surprise",
+      "weight": 0.02,
+      "conditional_p_no": 0.5
+    }
+  ],
+  "p_no": 0.03,
+  "p_yes": 0.97,
+  "broad_no_range": [
+    0.002,
+    0.2
+  ],
+  "entry_reserve_pp": 15,
+  "selected_NO": 0,
+  "selected_YES": 0.82,
+  "limits": "94/4/2 and conditional50%s are transparent unfitted primary judgments, not historical correction-rate estimates or calibrated posterior. Finality condition not yet certified. No prediction of recovery; full1.02 cash loss remains possible. A 2.08% upward change from current total crosses8m.",
+  "management": "Prior NO57.1022 thesis broken. Prefer economically justified thesis-break exit, but captured exactNO book has no bids; timestamp190.895s fails180s execution freshness. No invented zero-price sale, no posted below-fair hidden-info maker, noadd/replay. Revalidate existing-source/book checks at scheduled/material review; no newtimer.",
+  "portfolio": "Single6NO position; no protected multi-leg or hedge credit. Other priors/order sizes unchanged.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/whalefall_alert_1958_facts.json",
+      "sha256": "04a69a915bb7f4b39950d3a9f4e4b8c5d85f2c26d882eaeb55961e87a6279210"
+    },
+    {
+      "path": "data/deep_review_20261017/work/whale_2005_account_summary.json",
+      "sha256": "7b9cee524223fcac09f6c1cbcb209cd0d4f9f13d37f02977ffdb0bb6dc01e09f"
+    }
+  ],
+  "browser_receipt": "logs/deep_review_20261017/whale_2006_web/movie_view.receipt.json"
+}

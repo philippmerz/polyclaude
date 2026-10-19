@@ -1,0 +1,152 @@
+{
+  "review_index": 384,
+  "market_id": "5609932",
+  "condition_id": "0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c",
+  "criteria_sha256": "1e7b54110de2f4cdaf0f59d7d4a142df55c0201d2c214ee3ee73fea34a33debd",
+  "status": "valued",
+  "literal_analysis": "Omarpersonalphysicalcustody afterOct12creation throughDec31ET plusoneofcriminalprocessing/chargingcustody/proceedings/transportcriminalcenter. Search/warrant/chargealonefail; releaseirreversible;anyjurisdiction/officialorcredibleconsensus.",
+  "evidence": [
+    {
+      "url": "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+      "observed_utc": "2026-10-19T17:20:27.131572Z",
+      "finding": "RootverifiedOct12officestatementaboutHSIraid/search, notqualifyingcustody; allegationscontested."
+    },
+    {
+      "url": "https://www.boston25news.com/news/politics/rep-ilhan-omars/J4MFS7OR4Y5YBESVAEKYJ7UUAA/",
+      "observed_utc": "2026-10-19T20:15:56.223111Z",
+      "finding": "SeparatelabeledAPbrowserrepresentationdescribesdocument/investigativeprocess, notcustody. DirectHTTP200geounavailable notarticle; no rawHTTP/updateclockclaim."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14,
+    "low": 0.02,
+    "high": 0.45,
+    "method": "Primary historical-state allowance plus three conditional investigation-to-custody regime scenarios; unfitted.",
+    "reasoning": "1%paststate plus99%*(70%*.015+25%*.35+5%*.60)=13.672\u219214YES. Broad2\u201345/20ppselectedNO66/YES0; source gaps cannot proveabsence or guilt.",
+    "model_path": "models/0384_primary_2016.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0384_quote_2016.json",
+    "quote_file_sha256": "824eea40ec6c27ddb1d09dcd3794ac53d93dde3dd3337a1b742fb8e8f453abca",
+    "quote_capture_utc": "2026-10-19T20:15:56.812766+00:00",
+    "gamma_received_utc": "2026-10-19T20:15:56.664700+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.14,
+        "selected_stress_probability": 0,
+        "best_bid": 0.08,
+        "best_ask": 0.1,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792440954154",
+        "book_received_utc": "2026-10-19T20:15:56.811910+00:00",
+        "book_age_seconds_at_receipt": 2.657909870147705,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.0,
+            "fee": 0.03601,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.1
+              }
+            ],
+            "net": 1.03601
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.8,
+            "fee": 0.02944,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.08
+              }
+            ],
+            "net": 0.77056
+          }
+        },
+        "taker_cost_usd": 1.03601,
+        "central_expected_profit_usd": 0.36399000000000004,
+        "selected_stress_profit_usd": -1.03601,
+        "break_even_before_carry": 0.10360100000000001,
+        "break_even_constant_carry": 0.10426543311186484,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.86,
+        "selected_stress_probability": 0.6599999999999999,
+        "best_bid": 0.9,
+        "best_ask": 0.92,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792440954154",
+        "book_received_utc": "2026-10-19T20:15:56.811910+00:00",
+        "book_age_seconds_at_receipt": 2.657909870147705,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.200000000000001,
+            "fee": 0.02944,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.92
+              }
+            ],
+            "net": 9.22944
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.0,
+            "fee": 0.036,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.9
+              }
+            ],
+            "net": 8.964
+          }
+        },
+        "taker_cost_usd": 9.22944,
+        "central_expected_profit_usd": -0.6294400000000007,
+        "selected_stress_profit_usd": -2.6294400000000007,
+        "break_even_before_carry": 0.922944,
+        "break_even_constant_carry": 0.9288631953166184,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry; YESpositivecentral butselectednegative, NOask/competitive maker negativecentral. No arbitraryprofitfloor.",
+  "reopen_condition": "Materialoriginalcustody/court/process/timeline or currentdefensibleconditionalprice; fullsource/account/fees/depth/correlationgates beforeentry.",
+  "report_markdown": "# 0384 \u2014 Ilhan Omar arrested byDec31\n\n**YES14% / NO86%; broadYES2\u201345%. No entry.** The active search/investigation raises risk above an unrelated routine-arrest baseline; it is not physical custody. [Primary prequote model](../models/0384_primary_2016.json).\n\nExact window beginsOct12 15:49:20.225537Z, endsDec31 23:59ET. Omar personally must enter physical custody in any jurisdiction pluscriminalbooking/processing, criminalchargingcustody, holdingforcriminalproceedings, ortransporttoapolicestation/equivalentcriminalcenter. Warrant/chargealone, search/interview/briefdetention orprotective/witness/medicalholds alone fail. A later release/acquittal/pardon does not reverse a qualifying arrest. Official arresting information is primary; credible consensus also allowed. An already-qualifying pastweek is not silently assignedzero.\n\nRoot verified officialOct12 Omar/Raskin pages and their raw/gzip bindings. They describe an HSI home search; the office denies wrongdoing and Raskin challenges its purpose. Those interested statements do not independently settle criminal merits or custody. Exact search time/agency docket and full current any-jurisdiction history remain unknown. [Official sources](../../../data/deep_review_20261017/work/0384_facts_followup_1935.json). Other-person assailant/Rahman arrests are not Omar and may predate creation. [Search limits](../../../data/deep_review_20261017/work/0384_custody_source_refresh_2003.json).\n\nRoot recovered AP's attributed lawyers-letter/DOJ-response reporting via public syndication browser: phone seizure, grand-jury subpoenas and investigative scope remain distinct from a qualifying arrest. No guilt or comprehensive custody-absence inference. OriginalAP was inaccessible; directBoston25HTTP200 was a location-unavailable shell. That false draft was isolated before use; the independently rendered AP source has a separately labeled supplied-tool receipt, no rawHTTP clock claim. [AP evidence](../../../data/deep_review_20261017/work/0384_AP_browser_facts_2016.json) \u00b7 [access correction](../../../data/deep_review_20261017/work/0384_primary_AP_facts_2013.json).\n\nPrimary1%already-qualified-but-unverified allowance; otherwise70%document/civil/investigative regime\u00d71.5%qualifyingcustody,25%targetedcriminal-escalation\u00d735%,5%nonstandard/otherjurisdiction\u00d760%. Integrates13.672%YES, rounded14. Paststate10%\u219221.52%YES; heavier50%escalation/50%conditionalcustody\u219229.39%. These are explicit unfitted hazard/scenario judgments, not empirical arrest-frequency estimates, indictmentprobabilities or legal predictions. Congressional/citizenship status supplies no assumed absolute immunity; unlawful custody may still meet contract terms. Broad2\u201345 and20pp allowance reflect evidence/process/mapping uncertainty; selectedYES0/NO66.\n\n[Both-side economics](../../../data/deep_review_20261017/work/0384_economics_2016.json),20:15:56UTC: authoritative4%p(1\u2212p), min5/tick.01, books2.66s old.10YES at10c costs1.03601 includingfee; centralprofit+.36399/selected\u22121.03601, fee-inclusive break10.3601% beforecarry.10NO at92c costs9.22944; central\u2212.62944/selected\u22122.62944. YESpositivecentral is acknowledged; no arbitrary absolute profitfloor is applied.\n\nCompetitive post-onlyYES9c would cost.90 versusselected0 and below1dollar signedlimit minimum at10shares; need>=12shares at9c, stillselectednegative. CompetitiveNO91c fails evencentral86. Far-below-touchNO bids could nominally clear static probabilities but adverse investigative news can lower conditional fair when they fill; no unverified stale-prior maker edge is established. Dated18:02 Aave3.2035%/74days is a variable-rate cash sensitivity, not guaranteedfunding/netyield. Existing7.52commitments and USpoliticalregime/electiondependence receive no hedge/independence credit.\n\nManualreopen on originalagency/court custody/charging information, materially clearer investigation/timeline or a price with defensible conditional selected margin aftercosts. Charges/search alone still do not settleYES. Recheck exact identity, full sources, lawful route, account/reservations, fees/freshdepth/caps before money. No order, prior, position, watcher or timer change.\n"
+}

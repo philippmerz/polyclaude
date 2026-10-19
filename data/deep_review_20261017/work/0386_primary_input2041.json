@@ -1,0 +1,106 @@
+{
+  "review_index": 386,
+  "market_id": "802374",
+  "condition_id": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+  "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395",
+  "status": "valued",
+  "literal_analysis": "Personal departure for any period after creation; predeadline resignation/removal announcement qualifies immediately; election call alone does not. Formal personal cese with caretaker continuity creates interpretation risk.",
+  "evidence": [
+    {
+      "url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-17073",
+      "observed_utc": "2026-10-19T20:20:06.553819Z",
+      "finding": "Personal2023cese plus caretaker continuation; predates creation, semantic fork unresolved."
+    },
+    {
+      "url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742",
+      "observed_utc": "2026-10-19T20:24:34.986571+00:00",
+      "finding": "Root synthesis verifies Nov29 election/Art5 Dec23sessions; underlying receipt clocks in source unit."
+    },
+    {
+      "url": "https://ep00.epimg.net/infografias/encuestas40db/2026/10-08-barometro-flash/2026_10_informe_voto_barometro_flash.pdf",
+      "observed_utc": "2026-10-19T20:22:14.688099Z",
+      "finding": "Original40dB instrument/pages checked; party vote and seat projection are not coalition probabilities."
+    },
+    {
+      "url": "https://www.rtve.es/noticias/20261014/cis-dispara-a-118-puntos-ventaja-del-psoe-con-pp-tras-caida-del-decreto-maricarmen/17265537.shtml",
+      "observed_utc": "2026-10-19T20:35:30.179145Z",
+      "finding": "Root article verifies conflicting secondary-reported CIS estimate/method; original instrument unavailable, fieldwork earlier than40dB."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.47658025,
+    "low": 0.1,
+    "high": 0.85,
+    "method": "Explicit unfitted election/formation/timing/statutory-interpretation mixture, primary synthesis after paired challenge.",
+    "reasoning": "New CIS conflict reduces opposition65to50%, keep20to30%, hung15to20%; ordinaryYES.294. Combined .005+.995*(.9*(.25*.98+.75*.294)+.055)=.47658025;30pp aggregate includes model/source/legal/conditional-fill risk.",
+    "actual_entry_reserve_pp": 30,
+    "model_path": "models/0386_primary_2038.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0386_quote_2039.json",
+    "quote_file_sha256": "54522c0018774f37bd80066442e3bb985d125ae0dd737833446bee8d8894ab61",
+    "quote_capture_utc": "2026-10-19T20:38:08.389716+00:00",
+    "gamma_received_utc": "2026-10-19T20:38:08.239536+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 30.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.47658025,
+        "selected_stress_probability": 0.17658025,
+        "best_bid": 0.15,
+        "best_ask": 0.18,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792442280035",
+        "book_received_utc": "2026-10-19T20:38:08.388812+00:00",
+        "book_age_seconds_at_receipt": 8.353811979293823,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.7999999999999998,
+        "central_expected_profit_usd": 2.9658024999999997,
+        "selected_stress_profit_usd": -0.03419749999999988,
+        "break_even_before_carry": 0.18,
+        "break_even_constant_carry": 0.1811544093216829,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.52341975,
+        "selected_stress_probability": 0.22341974999999997,
+        "best_bid": 0.82,
+        "best_ask": 0.85,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792442280035",
+        "book_received_utc": "2026-10-19T20:38:08.388812+00:00",
+        "book_age_seconds_at_receipt": 8.353811979293823,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 8.5,
+        "central_expected_profit_usd": -3.2658025000000004,
+        "selected_stress_profit_usd": -6.2658025,
+        "break_even_before_carry": 0.85,
+        "break_even_constant_carry": 0.8554513773523915,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YES maker-only candidate <=16c/10shares/1.60 subject current gated execution;18c taker and NO competitive entries fail selected or central cases. No order at valuation.",
+  "reopen_condition": "Material personal announcement/cese adjudication, original polls/coalition/timetable or price/caps/funding/crux coverage; cancel-first on unassessed material evidence.",
+  "report_markdown": "# 0386 — Sánchez out by December31\n\n**YES47.658% / NO52.342%; broadYES10–85%. Maker candidate≤16¢; no taker.** Aggregate30pp allowance leaves selectedYES17.658/NO22.342. No order/fill at valuation. [Current model](../models/0386_primary_2038.json) preserves the earlier52% draft; this revision follows observed quotes and is not price-blind.\n\nRule: any period out afterDec2,2025 creation throughDec31ET. Personal resignation/removal announcement before deadline qualifies immediately despite later effectiveness; detention/effective removal/permanent prevention also qualify. Election call or dissolution alone is not personal departure. Exact802374 CID/criteria binding unchanged.\n\nOfficial RD806/2026 calls Nov29 voting and constituent chambersDec23 10:00, leaving eight calendar days for formal succession; no investiture date verified. ConstitutionArts68/99/101 andLaw50Art21 preserve caretaker continuity. Earlier capsule missedArt5; [correction](../../../data/deep_review_20261017/work/0386_facts_2010_update.json) governs. RD694/2023 declared Sánchez's personal cese while continuing en funciones until succession; it predatescreation, not an already-triggeredYES. [Decree](../../../data/deep_review_20261017/work/0386_personal_cese_2020.json).\n\nFormal cessation and functional continuity support competing contract readings. Paired [champion](../advisories/sanchez386_champion_2027.md)/[skeptic](../../../data/deep_review_20261017/work/0386_independent_skeptic_2027.md) identify this fork; neither supplies a venue ruling or probabilities. Skeptic fee wording is stale: explicit Gamma feesEnabled=false gives canonical zero fee; missing compactfd leaves parity unverified, not missing Gamma fee evidence.\n\nRoot read original40dB PDF/pages5,8,26: Oct7–8/800online; PP31.9/PSOE28.1/Vox18.9; baseline PP132+Vox66 versus176 seats. Bands and the distinct united-left scenario are not independent distributions. [Sources](../../../data/deep_review_20261017/work/0386_primary_sources_2027.json). Later-published CIS conflicts: RTVE bodyPSOE34/PP22.2, summaryPSOE34.2; reported Oct1–6/5025telephone. Earlier fieldwork is not a subsequent swing. Original CIS instrument remains unavailable; two guessed URLs failed, not proof of absence. [Root article](../../../data/deep_review_20261017/work/0386_rtve2037_root.json) · [gap](../../../data/deep_review_20261017/work/0386_cis_2037.json).\n\nPrimary mixture: .5%historical-unverified trigger; otherwise90%election/5%delay with10%departure/5%other departure. Election:25%statutory-cese interpretation with98%timely issuance; otherwise50%opposition/30%continuedSánchez/20%hung. Opposition:30%announcement then30%replacement if none; other departure rates5/12%. Integrates47.658025%. All weights unfitted; no poll-derived coalition odds. No statutory credit→32.3002%; handover10%→42.95665%. Aggregate30pp prices legal/timing/source/model/conditional-fill risk; broad adverse states still lose.\n\n[20:38:08 costs](../../../data/deep_review_20261017/work/0386_economics2039.json):10YES18¢ costs1.80, central+2.96580/selected−.03420;10NO85¢ costs8.50, central−3.26580/selected−6.26580. NO84¢ maker also fails central. TenYES16¢ post-only cost1.60: central+3.16580/selected+.16580 before roughly.01026 variable-rate74-day carry and operations; existing.05 operating allowance still clears. No invented profit floor. At10%YES, loss.60; full1.60 loss possible. Gamma explicitly fee-disabled; books8.35s/min5/tick.01. Ten shares clear1dollar signed minimum; no execution certificate.\n\n20:37 authenticated orders/indexed inventory/chain reads: fourzero-matchedBUY7.52/eightrows; SpainCTFs0/WhaleNO6; pUSD20.45129 less7.52 commitments leaves12.93129, approvals sufficient. [Preflight](../../../data/deep_review_20261017/work/0386_account2038.json). Country grouping gives no independence credit: declared23%of189.81 trading capital exceeds all35.59PMcost+7.52pending risk. Adding1.60 permits44.71 joint loss; caps remain binding. No independent Clarity-leg trade.\n\nOnly deliberate10YES maker≤16¢ may proceed through vetted/current gates. Material unassessed poll, coalition, candidate, timetable, decree or ruling invokes cancel-first/re-underwriting. Review each scheduled check; a check alone is not hard expiry. No chase/add/automatic repost/taker fallback. Two bilingual feeds/ten crux terms configured; manual RSS baseline is partial coverage, not proven daemon-cycle/absence evidence. Any fill needs fresh holding/source/net-exit/joint-risk review.\n"
+}

@@ -1,0 +1,77 @@
+{
+  "schema": "deep_review.fact_unit.v1",
+  "index": 388,
+  "assembled_utc": "2026-10-19T20:02:11.852340Z",
+  "identity": {
+    "market_id": "3072321",
+    "conditionId": "0x60871378e220231ae5382b0d42ba0f17b0f61b73f48aec88aebaa954ef98b34e",
+    "criteria_sha256": "4e4ece95e501dfcb2e0ec4b88323fd96fc00f1769eda4e74cbb6cd3917fe2bba",
+    "question": "Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 60% or higher?"
+  },
+  "operative_rule": "Any SpaceXAI Grok model may qualify by 2026-12-31 23:59 ET if it reaches >=60% on the named HLE Accuracy metric (or clear equivalent). HLE Diamond/calibration are distinct. Official source agi.safe.ai; unavailable source remains open while it may return; after deadline/permanent unavailability use official HLE alternative if available, otherwise NO.",
+  "official_api_capture": {
+    "url": "https://dashboard.safe.ai/api/models",
+    "http_status": 200,
+    "started_utc": "2026-10-19T20:01:47.561466Z",
+    "received_utc": "2026-10-19T20:01:47.816323Z",
+    "age_header_seconds": "2508",
+    "cache_control": "public",
+    "raw_bytes": 40162,
+    "raw_sha256": "7cb55e4b15cfdf440eafafbf26041eafef4d8d15984d49744414a8d1eb7a3baa",
+    "gzip_sha256": "3f8711d0ab59ea5146d932bfee69c45a36186ab110b871a1a3116a137dfb5849",
+    "body": "logs/deep_review_20261017/case0388_refresh_20261019T_current/models.body.json.gz",
+    "receipt": "logs/deep_review_20261017/case0388_refresh_20261019T_current/models.receipt.json",
+    "rows_parsed": 65,
+    "parser": "scripts/source_freeze_check.py:hle_chart_results; scores.hle only"
+  },
+  "grok_accuracy_rows": [
+    {
+      "model": "Grok 4",
+      "releaseDate": "2025-07-09",
+      "hle_accuracy": 24.52
+    },
+    {
+      "model": "Grok 4.3",
+      "releaseDate": "2026-04-17",
+      "hle_accuracy": 33.12
+    },
+    {
+      "model": "Grok 4.2",
+      "releaseDate": "2026-03-09",
+      "hle_accuracy": 30.2
+    },
+    {
+      "model": "Grok 4.1 Fast",
+      "releaseDate": "2025-11-19",
+      "hle_accuracy": 18.4
+    },
+    {
+      "model": "Grok 4 Fast",
+      "releaseDate": "2025-09-19",
+      "hle_accuracy": 17.8
+    },
+    {
+      "model": "Grok 4.6",
+      "releaseDate": "2026-08-12",
+      "hle_accuracy": 39.72
+    },
+    {
+      "model": "Grok 4.5",
+      "releaseDate": "2026-07-08",
+      "hle_accuracy": 39.28
+    },
+    {
+      "model": "Grok 4.7",
+      "releaseDate": "2026-09-21",
+      "hle_accuracy": null
+    }
+  ],
+  "retained_observation": {
+    "max_numeric_accuracy_in_this_response": 39.72,
+    "unscored_rows": [
+      "Grok 4.7"
+    ]
+  },
+  "historical_peak_limit": "This response is an API row snapshot, not a score history. Its body SHA matches the successful Oct18 23:53 API capture (raw 7cb55e4b15cfdf440eafafbf26041eafef4d8d15984d49744414a8d1eb7a3baa) and age header is 2508 seconds; treat rows as cached/stale snapshot, not proof of current-origin state. The API and saved official-page observations do not establish an all-time 2026 peak or exclude prior revisions/rows no longer listed. No score >=60 appears in retained numeric Grok rows; null Grok4.7 Accuracy remains unscored, not zero. No official secondary archive/history queried.",
+  "previous_access_limit": "A separate official API request at 2026-10-19 18:58:22Z returned HTTP 403; it yielded no rows and was not evidence of zero or permanent unavailability. This check did not repeat that failed request."
+}

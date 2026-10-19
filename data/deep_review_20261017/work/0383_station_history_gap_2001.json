@@ -1,0 +1,37 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 383,
+  "created_utc": "2026-10-19T20:01:33Z",
+  "market": {
+    "market_id": "1397270",
+    "condition_id": "0xf691956d44187f9296718a26b10c03d3b85e3369e2098ab2188f765ef4dc97b7",
+    "criteria_sha256": "e2fe769c24d9a11a56bb59f378666b5c5a1beec3111ee9b8189ff75793f4e799",
+    "market_createdAt": "2026-02-19T12:25:03.975602Z"
+  },
+  "target": "The exact target is the Lyman rail-station icon on Vulytsya Pryvokzalʹna, not other railway stations around Lyman. Qualifying shading: Assessed Russian-Controlled Terrain or Assessed Russian Advances, persisting through next full ISW update; claimed territory/infiltration excluded.",
+  "bounded_search": {
+    "queries": [
+      "site:understandingwar.org Pryvokzalna Lyman station",
+      "site:understandingwar.org \"Lyman train station\" \"2026\" ISW",
+      "site:storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375 history map updates ISW Ukraine"
+    ],
+    "result": "No exact Pryvokzalna-station history or map-version archive surfaced. Search results included an Oct9 2025 ISW reference to northeastern Yampil station and a Jun21 2026 ISW reference to Brusyn station southwest of Lyman; both are different stations and cannot establish the frozen target. Search-result display only; web search did not provide raw-response receipts or per-call UTC timestamps."
+  },
+  "current_source_binding": {
+    "item_refresh_unit": "data/deep_review_20261017/work/0383_station_map_refresh_1935.json",
+    "story_refresh_unit": "data/deep_review_20261017/work/0383_map_history_addendum_1948.json",
+    "story_url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+    "story_body": "logs/deep_review_20261017/case383_map_refresh_1935/story/isw_story_1936.body.json.gz",
+    "story_receipt": "logs/deep_review_20261017/case383_map_refresh_1935/story/isw_story_1936.receipt.json",
+    "story_http_status": 200,
+    "story_receipt_time": "2026-10-19T19:47:51.217534Z",
+    "story_page_modified": "2026-10-19T13:06:18.598Z",
+    "story_response_age_seconds": 3206,
+    "story_embedded_map_caption": "Assessed Control of Terrain in Ukraine as of October 18, 2026, 4:00 PM ET",
+    "map_item_body_sha256": "86aed227b91d603bd1f376887abf3c3de99fdcf13fe2bb7c34d59ce9eb192a80",
+    "map_item_http_status": 200,
+    "map_item_receipt_time": "2026-10-19T19:34:51.249997Z"
+  },
+  "correction": "The nation-wide polygon layers remain suitable inputs for a properly bound point/icon overlay. The Kostyantynivka-specific overlay ratio is not transferable. No exact station-icon footprint or rendered-current-icon intersection has been obtained.",
+  "finding_and_limits": "No historical ISW snapshot from market creation through the current Oct18-dated layer, no exact target-icon coordinate/footprint, and no next-full-update persistence evidence was found in this bounded pass. Thus prior qualifying shading and a persistent change remain unknown. This is a bounded source gap, not evidence that the event never occurred or that the icon is unshaded."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "primary_personal_cese_precedent.v1",
+  "review_index": 386,
+  "source_url": "https://www.boe.es/diario_boe/txt.php?id=BOE-A-2023-17073",
+  "source_date": "2023-07-25",
+  "received_utc": "2026-10-19T20:20:06.553819Z",
+  "status": 200,
+  "title": "BOE-A-2023-17073 Real Decreto 694/2023, de 24 de julio, por el que se declara el cese de don Pedro S\u00e1nchez P\u00e9rez-Castej\u00f3n como Presidente del Gobierno.",
+  "text": "De conformidad con lo dispuesto en los art\u00edculos\u00a062 y\u00a0101 de la Constituci\u00f3n y como consecuencia de la celebraci\u00f3n de elecciones generales, Vengo en declarar el cese de don Pedro S\u00e1nchez P\u00e9rez-Castej\u00f3n como Presidente del Gobierno, que continuar\u00e1 en funciones hasta la toma de posesi\u00f3n del nuevo Presidente del Gobierno. Dado en Madrid, el\u00a024 de julio de\u00a02023. FELIPE R. El Presidente del Gobierno, PEDRO S\u00c1NCHEZ P\u00c9REZ-CASTEJ\u00d3N",
+  "receipt": "logs/deep_review_20261017/0386_royal_cese_2023_2020/cese.receipt.json",
+  "raw_sha256": "576c18da433dbf277b3256e8f00831a4fea32bf9caee14b6e9859bf7508dae39",
+  "gzip_sha256": "ca1e378bcd90bf170241e74587a8c8580efa7e534e87ec6a529282b5da03d686",
+  "market_window": "Historical2023precedescreationDec2,2025; notanexistingYES. It documents howSpainformallydeclarespersonalcessationandcaretakercontinuityafterelections.",
+  "interpretation_limit": "Officialpersonal cese does not itself decide venueinterpretation of ceasesPM/removalannouncement while stillinfunctions. Root must distinguishstatutoryformality from substantiveofficecontinuity."
+}

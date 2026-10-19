@@ -1,0 +1,92 @@
+{
+  "schema": "price_blind_alert_source_refresh.v1",
+  "review_index": 299,
+  "market_id": "5394247",
+  "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+  "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
+  "compiled_utc": "2026-10-19T20:03:26.378060Z",
+  "alert": {
+    "line": 1124,
+    "id": "dd8f14bde84cd4c2064aa3d1bb4563eb8b528564",
+    "ts": "2026-10-19T19:58:35Z",
+    "title": "\"Street Fighter\" Wins the Weekend With $51 Million Global Debut as \"Whalefall\" Sinks and Elizabeth Holmes Doc Makes Box Office History - 玩具人 TOY PEOPLE",
+    "relevance": "portfolio_material_critical",
+    "impact_position": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e"
+  },
+  "prior_capture": {
+    "path": "data/deep_review_20261017/work/periodic1916_whale_facts.json",
+    "compiled_utc": "2026-10-19T19:19:44.225897Z",
+    "findings": "Both sources then showed $8,000,000 estimates for the Oct16–18 domestic weekend."
+  },
+  "current_sources": [
+    {
+      "source": "numbers",
+      "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+      "page_title": "The Numbers - Weekend Domestic Box Office Chart for October 16, 2026",
+      "http_status": 200,
+      "started_utc": "2026-10-19T20:02:50.405404Z",
+      "received_utc": "2026-10-19T20:02:51.521974Z",
+      "http_date": "Mon, 19 Oct 2026 20:02:51 GMT",
+      "raw_bytes": 50366,
+      "raw_sha256": "0c5f702d47e313aa65fd3b18fb3dfff6da13bdf6196d435ea1405db63459aef7",
+      "gzip_sha256": "a78d66c42d0f6343c417d981a82e95de1f72fc859feb9a501572dbc2297dee11",
+      "receipt": "logs/deep_review_20261017/whale_alert_1958_refresh/numbers.receipt.json",
+      "body": "logs/deep_review_20261017/whale_alert_1958_refresh/numbers.body.json.gz",
+      "body_hashes_verified": true,
+      "observation": {
+        "metric": "domestic weekend chart",
+        "weekend": "Oct 16–18, 2026 (three-day)",
+        "currency": "USD",
+        "row": {
+          "rank": "4",
+          "previous_rank": "(new)",
+          "title": "Whalefall",
+          "gross": "$7,837,153",
+          "gross_cell_class": [
+            "data"
+          ],
+          "weekly_change": "",
+          "theaters": "3,065",
+          "theater_average": "$2,557",
+          "total_gross": "$7,837,153",
+          "days_in_release": "3"
+        },
+        "status_signal": "The gross cell no longer has the prior chart_estimate class; this is a change from the Oct19 19:19 capture. Page has no explicit FINAL/ACTUAL label or page-level update timestamp, so finality is not independently stated."
+      }
+    },
+    {
+      "source": "mojo",
+      "url": "https://www.boxofficemojo.com/release/rl1608024065/weekend/",
+      "page_title": "Whalefall - Box Office Mojo",
+      "http_status": 200,
+      "started_utc": "2026-10-19T20:02:51.539202Z",
+      "received_utc": "2026-10-19T20:02:52.860933Z",
+      "http_date": "Mon, 19 Oct 2026 20:02:51 GMT",
+      "raw_bytes": 150812,
+      "raw_sha256": "8e9cea0949521da3e5e7ff9af3aa541294a7e87e0feb828aee8e61928c1082df",
+      "gzip_sha256": "7fa9d320a45d6c04761a74369e86e25490d8dd4304ed4ad6509c71de637e0981",
+      "receipt": "logs/deep_review_20261017/whale_alert_1958_refresh/mojo.receipt.json",
+      "body": "logs/deep_review_20261017/whale_alert_1958_refresh/mojo.body.json.gz",
+      "body_hashes_verified": true,
+      "observation": {
+        "metric": "domestic weekend gross",
+        "currency": "USD",
+        "row": {
+          "weekend": "Oct 16-18",
+          "rank": "4",
+          "weekend_gross": "$8,000,000",
+          "theaters": "3,065",
+          "average": "$2,610",
+          "to_date": "$8,000,000",
+          "days_in_release": "1",
+          "estimated_flag": "true",
+          "row_class": [
+            "mojo-annotation-isEstimated"
+          ]
+        },
+        "status_signal": "Estimated flag true and row class mojo-annotation-isEstimated remain."
+      }
+    }
+  ],
+  "comparison": "The Numbers now displays $7,837,153 for the Oct16–18 domestic three-day row and the gross cell is unmarked (previously $8,000,000 with chart_estimate). Box Office Mojo still displays $8,000,000 and explicitly Estimated=true. The Numbers does not expose a final/actual label or page-update timestamp; source status conflicts, so finality and strict-threshold resolution are not established by these pages alone. This is a material source change, not a forecast or position decision."
+}

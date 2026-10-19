@@ -1,0 +1,17 @@
+{
+  "schema": "whale_thesis_break_book_followup.v1",
+  "reviewed_utc": "2026-10-19T20:45:32.650411+00:00",
+  "source_judgment": "20:02 named-source revision remains latest adopted source evidence; NO3/YES97, no finality certificate. No new source result or prior change in this follow-up.",
+  "quote_path": "data/deep_review_20261017/work/0386_0299_quote_2033.json",
+  "quote_sha256": "58eaa8a7a98d0777a292fc293296f3e4c7197fb8daa32ce5f70a9162b56a3649",
+  "quote_received_utc": "2026-10-19T20:32:08.153688+00:00",
+  "book_timestamp": "1792441862718",
+  "book_age_seconds_at_receipt": 65.43568801879883,
+  "passes_180s_at_receipt": true,
+  "exact_NO_bid_count": 0,
+  "YES_ask_count": 0,
+  "action": "No sell/add/fictional liquidation submitted: NO bid absent, YES ask absent. Full1.02 historical cost may be lost.",
+  "later_holding_verification": "20:37 exact on-chain NO6, indexed six; account2038 links raw receipt.",
+  "account": "data/deep_review_20261017/work/0386_account2038.json",
+  "next_existing_boundary": "Oct19 22UTC light/source/book check or earlier material source/executable-bid event; no new timer or idle polling."
+}

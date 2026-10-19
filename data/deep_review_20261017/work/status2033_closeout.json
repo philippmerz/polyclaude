@@ -1,0 +1,16 @@
+{
+  "schema": "checkin_closeout_quick_status.v1",
+  "returncode": 0,
+  "started_utc": "2026-10-19T20:30:45.919392Z",
+  "received_utc": "2026-10-19T20:30:49.113595Z",
+  "raw_sha256": "9a960a2f26bfade975f7f7ce70c4b561c56095428c9fef8ce3a3e0f504c1a480",
+  "receipt_path": "logs/deep_review_20261017/status2033_closeout/quick.receipt.json",
+  "failure_markers": [],
+  "selected_output": [
+    "OPEN TOTAL  cost $35.59  mtm $34.67  max-payout $79.33  unrealised P&L $-0.92  (-2.60%)",
+    "REALIZABLE (depth-walked, NET of taker fees): $32.18  (-9.59%)  \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; midpoints overstate by $2.49",
+    "# 3 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)",
+    "(no triggers hit)"
+  ],
+  "limits": "Quick status only; nested subprocess return codes not independently exposed. No TOTAL bankroll producer or authenticated order/reservation audit."
+}

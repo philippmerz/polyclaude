@@ -1,0 +1,10 @@
+{
+  "schema": "performance_csv_append_audit.v1",
+  "prior_rows": 220,
+  "current_rows": 221,
+  "prior_bytes": 127279,
+  "prior_sha256": "7d7261361ed421bdb845e14285ced4c4d77a28d95eb6b9a1d356ce502d39045f",
+  "exact_prior_prefix_preserved": true,
+  "added_timestamp": "2026-10-19T20:32:07Z",
+  "source": "research/2026-10-19-2032-financial-snapshot.md:3"
+}

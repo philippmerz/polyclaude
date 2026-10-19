@@ -1,0 +1,17 @@
+{
+  "schema": "primary_MI_alert_review.v1",
+  "reviewed_utc": "2026-10-19T20:15:02.734291+00:00",
+  "alert_ids": [
+    "12856988e4fc1b37c5fa655fbf9ca56e311c86da",
+    "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+    "cdf6cfd2870898be18bea28b90a667395eb88bd6"
+  ],
+  "facts": "Root verified CBS/Fox rawhashes and matching paragraphs. CBS19Oct publication covers17OctCaro and cites an Oct1 Mitchell poll, not a new wave. Fox18Oct covers a separateSaturdayMSNOW/Velshi interview; not assumed the sameCaro event. ExactBridge/WKEF/GrandHavenarticle bodies remain unverified.",
+  "source_capsule": "data/deep_review_20261017/work/mi_alerts_1958_facts_erratum.json",
+  "source_sha256": "923aa365e01de805b8cc97e83f8c1a5ff65e4aac385605cf5a6dd7e450588358",
+  "collector_error": "Original compact draft reused APfailure prose for successfulCBS/Fox rows. Corrected erratum binds per-publisher bodies; root did not adopt those wrong labels or treatHTTP200 as proof of article content.",
+  "current_exposure": "20:04indexed exactCID/outcome/5NO verified; otherprior/orderterms unchanged.",
+  "primary_judgment": "Two campaign-response events could move perceptions in either direction. There is no identified new measured statewide vote/ballot/endorsement/candidate-status fact or defensible numerical likelihood ratio in these sources. KeepNO44/selected34/noadd; retain broadNO20 adverse case/full loss. No claim that media narratives cannot matter or that no unseenpoll exists.",
+  "action": "No numerical prior/trade/order change; no below-fair hiddeninfomaker or automaticadd. Reassess on actual materially new race/source evidence; existingwatchers, no newtimer.",
+  "related_whale": "Separate source change did reviseNO3 and was messagedTG1270; thisMIrecorddoesnotreverseit."
+}

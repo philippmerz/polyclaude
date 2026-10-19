@@ -1,0 +1,52 @@
+{
+  "schema": "primary_omar_custody_model.v1",
+  "review_index": 384,
+  "created_utc": "2026-10-19T20:15:56.324518+00:00",
+  "price_status": "Root adopted before fresh own-contract quote; frozen historical prices not used.",
+  "literal": "Omar personally physicallyincustody afterOct12 15:49:20.225537Z throughDec31 23:59ET pluscriminalprocessing/chargingcustody/criminalproceedings/transporttoequivalentcriminalcenter. Search/warrant/chargewithoutcustody notsufficient; laterreleaseirrelevant. Anyjurisdiction, officialsourceorcredibleconsensus.",
+  "evidence_bridge": "Root verifiedHouseOct12searchstatements and correctlylabeledAPOct17browsercontent. HSIsearch/property/subpoena proceedings indicate active investigation, not qualifying arrest. Sealed/unknownscope, no authoritative personalcustody document; allegationscontested, no guiltinference.",
+  "historical_state": {
+    "already_qualifying_but_unverified_probability": 0.01,
+    "basis": "Explicitunfittedallowance for unseenpast-weekcustody; notassumedzero fromnegative searches or officelisting."
+  },
+  "future_given_no_known_past": [
+    {
+      "regime": "Investigation/document/civildispute without targetedcriminalcustody escalation",
+      "weight": 0.7,
+      "conditional_any_qualifying_custody": 0.015,
+      "basis": "Search/statutory/court challenges need not producephysicalarrest; residualprotest/unrelated risk."
+    },
+    {
+      "regime": "Targetedcriminalcase or enforcement escalation beforedeadline",
+      "weight": 0.25,
+      "conditional_any_qualifying_custody": 0.35,
+      "basis": "Grandjury/phone/parallel-inquiry reporting increases processrisk, butchargealone/bondappearancewithoutcustody doesnotqualify."
+    },
+    {
+      "regime": "Acceleratedpolitical/nonstandardorother-jurisdictionprocess",
+      "weight": 0.05,
+      "conditional_any_qualifying_custody": 0.6,
+      "basis": "Windowincludesanyjurisdiction and illegalitydoesnotexcludequalifyingphysicalcustody. No assumption congressional/citizenshipstatusgrantsabsoluteimmunity."
+    }
+  ],
+  "calculated_p_yes": 0.13672,
+  "adopted_p_yes": 0.14,
+  "broad_yes_range": [
+    0.02,
+    0.45
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_YES": 0,
+  "selected_NO": 0.66,
+  "sensitivity": {
+    "past_state10pct_otherweightsfixed": 0.2152,
+    "escalation50pct_conditional50pct_otherfuture45_5": 0.29388249999999994
+  },
+  "limits": "Weights/hazards/conditionalcustodyrates are primary judgment, not fitted empirical arrest-frequency/timeline estimates. No transparent warrant/docket/privateevidence.20ppallowance reflects process/mappinguncertainty; broadadversestateYES45 is a separate sensitivity, not an automatic entryrule. Do not demandcertainty or inferprobabilityfromsourceabsence.",
+  "portfolio": "No Omar holding/pendingBUY in20:04 exactaccount. AggressiveUSexecutive/politicalregime can couple this event withMI/electionnews; no independence/hedgecredit, existing7.52commitments/cashalt remain.",
+  "source_hashes": {
+    "data/deep_review_20261017/work/0384_AP_browser_facts_2016.json": "5d823d256e6ba5719a2bee65be9a706b0db01f26bfdc0acdb4c1af14530ae8a8",
+    "data/deep_review_20261017/work/0384_facts_followup_1935.json": "4bb89b5e348eb0a87014378ca6be6d151c51cf37dcfdb31fdd68fcdf2cadeddd",
+    "data/deep_review_20261017/work/0384_facts.json": "9356a48f475093a8fcb43be5de0dd564dafbb3d925dadb15ad103bfc74785cc1"
+  }
+}

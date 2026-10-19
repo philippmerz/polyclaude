@@ -1,0 +1,7 @@
+{
+  "schema": "journal_append_prefix.v1",
+  "before_bytes": 2520289,
+  "before_sha256": "e5013ce50fdc300768009bdec56487a7ae39fe7298d848067159acf58c62b390",
+  "prefix_preserved": true,
+  "entry_utc": "2026-10-19T20:51:21.173947+00:00"
+}

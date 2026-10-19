@@ -1,0 +1,14 @@
+{
+  "returncode": 1,
+  "started_utc": "2026-10-19T20:32:42.632184Z",
+  "received_utc": "2026-10-19T20:32:44.834234Z",
+  "raw_sha256": "a53caad9fdcaa4f5f8200811f8cb042476d23f5cbf0453eb6420472c48ae9099",
+  "private_receipt": "logs/deep_review_20261017/0386_entry_preview2034/preview.receipt.json",
+  "selected_output": [
+    "  [maker] gate + sizing run on the POSTED rest price 0.16 (bid 0.150 / ask 0.18), maker fee $0 \u2014 not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.",
+    "  [price cap] preview signed raw BUY limit 0.1600 <= 0.1600; execution will refresh and re-check",
+    "DECISION: NEED_REVIEW \u2014 cannot prove ticket/cluster caps: candidate lacks a configured correlation cluster; add an explicit unique cluster only after confirming independence"
+  ],
+  "execute": false,
+  "no_order_or_reservation_requested": true
+}

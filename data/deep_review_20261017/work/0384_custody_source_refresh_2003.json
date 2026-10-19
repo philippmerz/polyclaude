@@ -1,0 +1,52 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 384,
+  "created_utc": "2026-10-19T20:03:03Z",
+  "market": {
+    "market_id": "5609932",
+    "condition_id": "0x84064fc8eaa80d257f8673867b0a3c84c1935aeb9fda5a74cecd14b3a2c8b94c",
+    "criteria_sha256": "1e7b54110de2f4cdaf0f59d7d4a142df55c0201d2c214ee3ee73fea34a33debd",
+    "creation_start_utc": "2026-10-12T15:49:20.225537Z",
+    "deadline": "2026-12-31 11:59 PM ET"
+  },
+  "literal_qualifier": "Omar must be physically taken into custody in any jurisdiction and at least one qualifying criminal-process condition must hold: booking/processing, custody under criminal warrant/charge/indictment, holding for criminal proceedings, or transport to a law-enforcement center. Warrant/charge alone, search, brief detention, interview, or witness/protective/medical custody alone does not qualify.",
+  "bounded_fresh_search": {
+    "performed_utc": "2026-10-19T20:02Z (web search tool does not provide a saved request receipt or precise call timestamp)",
+    "queries": [
+      "site:justice.gov \"Ilhan Omar\" arrest October 2026",
+      "site:ice.gov \"Ilhan Omar\" arrest October 2026",
+      "site:omar.house.gov Ilhan Omar \"taken into custody\" October 2026"
+    ],
+    "result": "Official-domain search results surfaced DOJ Minnesota releases about the separate assailant arrested/charged in the Jan27 attack on Omar (Jan29 charge; May7 plea; Sep18 sentencing). They describe the other man, not Omar being taken into custody. No current first-hand arrest/custody record for Omar appeared in these bounded search results. This is not a comprehensive any-jurisdiction search and not proof no qualifying event occurred."
+  },
+  "existing_source_review": {
+    "prior_fact_units": [
+      [
+        "data/deep_review_20261017/work/0384_facts.json",
+        "9356a48f475093a8fcb43be5de0dd564dafbb3d925dadb15ad103bfc74785cc1"
+      ],
+      [
+        "data/deep_review_20261017/work/0384_facts_followup_1858.json",
+        "prior pointer hash remains in work/0384_resume.json"
+      ],
+      [
+        "data/deep_review_20261017/work/0384_facts_followup_1935.json",
+        "prior pointer hash remains in work/0384_resume.json"
+      ]
+    ],
+    "facts": "Captured Oct12 House statement and House Judiciary chair statement describe an HSI search of Omar’s home, not her arrest. AP’s Oct17 reporting (browser-rendered summary) discusses search/property seizure, court-order compliance and subpoenas, not Omar being arrested/booked/transported/held for criminal process."
+  },
+  "access_and_capture_limits": {
+    "ap_direct_url": "https://apnews.com/article/ilhan-omar-justice-department-investigation-search-42c86bdbd54679e974e32ac4a924b402",
+    "prior_direct_status": 403,
+    "prior_receipt": "logs/deep_review_20261017/case0384_omar_sources_1718/ap_oct17_search_followup.receipt.json",
+    "prior_raw_sha256": "30eec8c3920ff2e574d8c77475e27a99bece70e1a9877248943ecd75040786d8",
+    "existing_official_units": [
+      "data/deep_review_20261017/work/0384_facts.json",
+      "data/deep_review_20261017/work/0384_facts_followup_1858.json",
+      "data/deep_review_20261017/work/0384_facts_followup_1935.json"
+    ],
+    "new_http_capture": "None. Search results were browser/tool representation; no new article body or agency record was returned, so no body hash is claimed."
+  },
+  "finding": "No qualifying custody fact was established in this bounded refresh. The Oct12 search is not itself qualifying. Custody status across jurisdictions and any court or law-enforcement records remain unknown; no universal-absence inference."
+}

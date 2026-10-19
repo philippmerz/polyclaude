@@ -1,0 +1,59 @@
+{
+  "schema": "deep_review.case_facts_addendum.v1",
+  "review_index": 386,
+  "assembled_utc": "2026-10-19T20:20:57.679823Z",
+  "identity": {
+    "market_id": "802374",
+    "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+    "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395",
+    "question": "Pedro Sánchez out as PM of Spain by December 31, 2026?"
+  },
+  "facts": [
+    {
+      "type": "source_correction",
+      "source": "BOE Real Decreto 806/2026 (BOE-A-2026-20742), same previously captured HTML body",
+      "source_url": "https://www.boe.es/buscar/doc.php",
+      "published": "2026-10-06",
+      "capture_received_utc": "2026-10-19T17:37:04.878069Z",
+      "body_sha256": "5e1616cbe927dea3c6ed05e8931ebc924d1fd9cbe4f35e1effddbb2218b02bd9",
+      "finding": "Article 5 says the chambers resulting from the Nov 29 election convene in constituent sessions on Dec 23, 2026 at 10:00. This corrects work/0386_facts_1935.json wording that the decree sets no new Congress session date. It does not set the successor’s investiture or the date Sánchez ceases to hold the personal office."
+    },
+    {
+      "type": "poll_document",
+      "publisher": "EL PAÍS / Cadena SER; commissioned survey conducted by 40dB.",
+      "article_url": "https://elpais.com/espana/2026-10-09/consulte-todos-los-datos-internos-de-la-encuesta-de-el-pais-cuestionarios-cruces-y-respuestas-individuales.html",
+      "article_publication": "2026-10-09 05:30 CEST",
+      "report_url": "https://ep00.epimg.net/infografias/encuestas40db/2026/10-08-barometro-flash/2026_10_informe_voto_barometro_flash.pdf",
+      "report_title": "Encuesta flash, Octubre 2026",
+      "retrieval_note": "EL PAÍS page linked the report (“Presentación del informe del Barómetro mensual”). Direct HTTP page request returned 403; browser-rendered public page and linked 28-page PDF were accessible. No byte-level raw capture/receipt was available in this bounded pass; do not imply a raw hash.",
+      "fieldwork": "2026-10-07 to 2026-10-08",
+      "population": "Spain resident population, age 18+, voting right, excluding Ceuta and Melilla",
+      "sample_n": 800,
+      "mode": "online interview (CAWI)",
+      "reported_sampling_error": "±3.5 percentage points at 95% confidence",
+      "measurements": {
+        "party_vote_estimate_percent_total_valid_votes": {
+          "PP": 31.9,
+          "PSOE": 28.1,
+          "Vox": 18.9,
+          "Sumar": 5.3,
+          "Podemos": 2.3,
+          "SALF": 1.8,
+          "other_blank": 11.7
+        },
+        "preferred_president_percent_general_population": {
+          "Pedro_Sanchez": 32.2,
+          "Alberto_Nunez_Feijoo": 29.3,
+          "neither": 33.4,
+          "dont_know": 5.1
+        }
+      },
+      "interpretation_limit": "The survey reports stated party vote intention and a question on preferred President. Neither is a measurement of resignation/removal, PM tenure, investiture outcome, or legal effective departure. Party vote shares are not seat estimates or government formation certainty."
+    }
+  ],
+  "source_unit_hashes": {
+    "work/0386_facts_1737.json": "e4825930fffde404d258a082c9ac1f0c272e6c547ce50c5fec8e8bfb3ad41aaf",
+    "work/0386_facts_1935.json": "cfdcfdf656c695a9607a2fa500861d10684eb6d017811fdfd3a1f335ab833967"
+  },
+  "no_forecast_or_resolution_judgment": true
+}

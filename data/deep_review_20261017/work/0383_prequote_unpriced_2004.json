@@ -1,0 +1,27 @@
+{
+  "schema": "primary_prequote_unpriced_decision.v1",
+  "review_index": 383,
+  "created_utc": "2026-10-19T20:03:00.883274+00:00",
+  "primary_decision": "BLOCKED_AFTER_SUBSTANTIVE_REVIEW_UNPRICED",
+  "load_bearing_gap": "Creation-to-current exact station-icon qualifying shading with next full daily persistence, and actual-control alternative, remain unverified. Current approximate location/buffers outside Oct18 polygons cannot rule out earlier irreversible YES.",
+  "reason_not_to_force_forecast": "Would need an explicit defensible probability for already-qualified state before future-frontline dynamics; current point geometry and negative keyword results do not supply it. No probability or price-based rejection is adopted.",
+  "scope": "Local case383 source block; continue other frozen cases after saving complete record and both-side conditional-cost evidence. Not a global model/method block.",
+  "sources": [
+    {
+      "path": "data/deep_review_20261017/work/0383_primary_geometry_1950.json",
+      "sha256": "8e13b7cce2de8dffd095bdece7772e93b8840fc599ac2545b24134beb88d8cac"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_station_map_refresh_1935.json",
+      "sha256": "a8ca03460b73be4d01d8f7e16d84122473c985064d8898ec9adf4d4cbb9918d4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_map_history_addendum_1948.json",
+      "sha256": "7343b3c7985cb26cbe4be6b3e504883f74d3dbd75c0f03011ba0bb8ef72e1797"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0383_station_history_gap_2001.json",
+      "sha256": "b3ac0fdaeb5067116b34032c6b1bfbd6e76a6912be2ffa202194e9e6dae40d0c"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "primary_AP_browser_source.v1",
+  "review_index": 384,
+  "observed_representation_saved_utc": "2026-10-19T20:15:56.223111Z",
+  "source_url": "https://www.boston25news.com/news/politics/rep-ilhan-omars/J4MFS7OR4Y5YBESVAEKYJ7UUAA/",
+  "publisher": "AP by AlannaDurkinRicher syndicatedBoston25",
+  "published_as_rendered": "Oct17,2026 01:47UTC; earliersearchdisplay01:23 is a different cached view, not verified event timing",
+  "source_type": "Public browser page representation; directAPinaccessible and directBoston25HTTP200 is location-unavailable, not article.",
+  "verified_findings": "AP describes a property-return letter it obtained and DOJ rebuttal. It attributes over12 grand-jury subpoenas and phone seizure to a person briefed; scope unclear. Reported official comments concern immigration paperwork and financial disclosures. No qualifying personal custody is established. Allegations are contested; no guilt or all-jurisdiction absence inference.",
+  "receipt": "logs/deep_review_20261017/0384_ap_browser_2016/ap_view.receipt.json",
+  "raw_representation_sha256": "15d4f91965ccdeed19a86995168da2434516f6e1b220280f2d44f66c60eae30c",
+  "gzip_sha256": "4543c7d3e2e050b41b7e9e16146511890468ca151ccadf6e6aaf2f03fe59d7db",
+  "http_status": null,
+  "limits": "Tool-view capture time is not original publisher-fetch/update time. This is not a court docket/arresting-authority record."
+}

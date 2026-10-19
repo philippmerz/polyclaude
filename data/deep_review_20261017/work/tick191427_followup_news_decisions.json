@@ -1,0 +1,31 @@
+{
+  "schema": "primary_followup_news_decisions.v1",
+  "reviewed_utc": "2026-10-19T20:49:04.032947+00:00",
+  "read_cutoff_utc": "2026-10-19T20:48:05.667108+00:00",
+  "latest_reviewed_alert_ts": "2026-10-19T20:43:32Z",
+  "alert_log_sha256_at_cutoff": "c6d3358398384caf50dce217028ff74d3f1912db9a8f026a5ea9d8f05d50336a",
+  "current_exposure_source": "data/deep_review_20261017/work/0386_postsubmit2043.json",
+  "items": [
+    {
+      "alert_id": "948e1126eca60d96b825661e2818290451de64e6",
+      "decision": "Messi playmaking commentary is not verified Google2026GlobalAthletesTop5 evidence. Retain5YES/p60/selected40; no change. Body not fetched."
+    },
+    {
+      "alert_id": "5ca7f96a4fdef074d9a51ed4d5b4c711e7705578",
+      "decision": "Partisan DanaBash/Rogers framing supplies no independently verified new quantitative poll, ballot or candidate-status fact. RetainMI5NO/NO44selected34/noadd; body not fetched, no exact-event equivalence claim."
+    },
+    {
+      "alert_id": "d99a0b175fcb2a4e7a74a15d1432320ad40b1b2e",
+      "decision": "Named local officials/resignation are not Sanchez personal departure. Title-only opinion/local-allegation lead; no guilt/event claim adopted, no newcurrent-entry fact."
+    },
+    {
+      "alert_id": "558db706492877f88250b880d12cc40d25e010f7",
+      "decision": "Spain editorial is related to currentSanchez pendingBUY despite earlierclassifier pre-order research_only label. Title supplies no new verified qualifying departure or quantitative instrument. Existing election/model/source risk stays priced; body not fetched, no claim no relevant information exists."
+    },
+    {
+      "alert_id": "bb68e5d9735aad28392535efa2448542beccf39b",
+      "decision": "Aguirre rhetorical comparison/campaign kiss is not qualifying PM removal or Venezuelan leadership evidence. CurrentSanchez pendingBUY acknowledged; title-only no numeric prior/order change. Classifier cache alone not used as current inventory proof."
+    }
+  ],
+  "limits": "Actual row/title/current-exposure review; no assertion all original article bodies verified. ExistingmaterialMI1958review andWhalerevision retained; later appends outside fixed cutoff."
+}

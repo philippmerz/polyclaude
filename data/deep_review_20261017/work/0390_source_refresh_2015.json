@@ -1,0 +1,38 @@
+{
+  "schema": "price_blind_source_addendum.v1",
+  "review_index": 390,
+  "created_utc": "2026-10-19T20:15:48Z",
+  "market": {
+    "market_id": "653788",
+    "condition_id": "0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25",
+    "criteria_sha256": "8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14",
+    "literal": "YES only if OpenAI or an official representative announces that it has created AGI by Dec31 2026 ET."
+  },
+  "bounded_current_search": {
+    "query": "site:openai.com/index/ AGI \"created\" OpenAI October 2026 announcement",
+    "tool": "web search representation; no raw body, exact call timestamp, or HTTP receipt exposed",
+    "result": "Returned adjacent official OpenAI material (including an Oct5 content-provenance update and an Oct5 EU text-provenance article); the displayed results did not state that OpenAI had created AGI. Those pages are not direct evidence of no announcement elsewhere."
+  },
+  "prior_first_party_page_captures": {
+    "unit": "data/deep_review_20261017/work/0390_facts_1830.json",
+    "pages": [
+      {
+        "url": "https://openai.com/index/building-standards-next-phase-ai/",
+        "page_date": "2026-09-21",
+        "direct_status": 403,
+        "receipt": "logs/deep_review_20261017/case390_sources_1830/openai_agistandards.receipt.json",
+        "raw_sha256": "7463fda0043cb0d26736eb299f648fd622450a89a7e821ac228b3c5a89012958",
+        "gzip_sha256": "ef827b680c7eac4a8b0c30ab684081bdb320948a11809bae1328ae9182cf8bdc"
+      },
+      {
+        "url": "https://openai.com/index/building-abundant-intelligence/",
+        "page_date": "2026-07-31",
+        "direct_status": 403,
+        "receipt": "logs/deep_review_20261017/case390_sources_1830/openai_abundant_intelligence.receipt.json",
+        "raw_sha256": "bfe3c08622e4ebd25ebcbed2fcba684934e4b5ffcf7cff4b23f4d32c3232629c",
+        "gzip_sha256": "f042aca2e3c87afeebc632b8ce31f81ed677650993fc00cf51c76991fa546b61"
+      }
+    ]
+  },
+  "finding": "This bounded pass located no source text establishing a qualifying AGI-created announcement. Direct GETs for the two known official pages remain the earlier HTTP403 results; no retry was made. This is not evidence that no announcement will occur by the still-future deadline, nor a comprehensive announcement search."
+}

@@ -1,18 +1,1 @@
-{
-  "conditionId": "0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25",
-  "criteria_sha256": "8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14",
-  "phase": "FACTS_ONLY_COMPLETE; primary may review; no valuation or entry authority",
-  "review_index": 390,
-  "schema": "polyclaude.deep_review_resume.v1",
-  "source_capture_root": "logs/deep_review_20261017",
-  "source_paths": [
-    "work/0390_facts_1830.json"
-  ],
-  "source_paths_are_relative_to": "data/deep_review_20261017",
-  "source_pointers": [
-    "https://openai.com/index/building-standards-next-phase-ai/",
-    "https://openai.com/index/building-abundant-intelligence/"
-  ],
-  "unit_sha256": "d4d7493592f3681d90c4c3c92507f82dc3559b078978cdf83546b238c2431b34",
-  "updated_utc": "2026-10-19T18:27:20.900303Z"
-}
+{"conditionId":"0x454005ba2b2a2f3bfeb354e18d8c0cb82136009c8f39589645f9cf2af25f0d25","criteria_sha256":"8bfeee98ae8d527efa0ee678d428711b236f6b9ce81f14139391c5713abc1a14","phase":"FACTS_ONLY_COMPLETE; primary may review; no valuation or entry authority","review_index":390,"schema":"polyclaude.deep_review_resume.v1","source_capture_root":"logs/deep_review_20261017","source_paths":["work/0390_facts_1830.json","work/0390_source_refresh_2015.json"],"source_paths_are_relative_to":"data/deep_review_20261017","source_pointers":["https://openai.com/index/building-standards-next-phase-ai/","https://openai.com/index/building-abundant-intelligence/"],"unit_sha256":"d4d7493592f3681d90c4c3c92507f82dc3559b078978cdf83546b238c2431b34","updated_utc":"2026-10-19T20:15:48Z"}

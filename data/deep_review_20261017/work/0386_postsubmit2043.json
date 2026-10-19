@@ -1,0 +1,57 @@
+{
+  "schema": "candidate386_postsubmit_verified.v1",
+  "verified_utc": "2026-10-19T20:43:45.658385+00:00",
+  "orderId": "0x4648ea205eb204fe65c8886bd131aa68c38280322891b917708809a17f75d8b2",
+  "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+  "asset": "38943156005562933924590395107769174031077435060879703425069135833415221550151",
+  "side": "YES",
+  "price": 0.16,
+  "original_shares": 10,
+  "matched_shares": 0.0,
+  "status": "LIVE",
+  "authenticated_orders": 5,
+  "all_orders_exhausted": true,
+  "remaining_buy_risk": 9.120000000000001,
+  "four_prior_order_terms_unchanged": true,
+  "indexed_positive_rows": 8,
+  "indexed_identity_size_totalBought_unchanged": true,
+  "CTF_balances": {
+    "38943156005562933924590395107769174031077435060879703425069135833415221550151": 0.0,
+    "48069029602522438566697221508835732014168815060862308159598480358509516768097": 0.0
+  },
+  "candidate_reservation_exact": {
+    "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+    "asset": "38943156005562933924590395107769174031077435060879703425069135833415221550151",
+    "shares": 10.0,
+    "risk": 1.6,
+    "orderId": "0x4648ea205eb204fe65c8886bd131aa68c38280322891b917708809a17f75d8b2",
+    "submissionState": "live",
+    "baselineBought": 0.0
+  },
+  "reservation_count": 5,
+  "windows": {
+    "orders": [
+      "2026-10-19T20:43:44.431725Z",
+      "2026-10-19T20:43:44.760637Z"
+    ],
+    "positions": [
+      "2026-10-19T20:43:44.773666Z",
+      "2026-10-19T20:43:45.194719Z"
+    ],
+    "ctf": [
+      "2026-10-19T20:43:45.334769Z",
+      "2026-10-19T20:43:45.630407Z"
+    ],
+    "reservations": [
+      "2026-10-19T20:43:45.641672Z",
+      "2026-10-19T20:43:45.647179Z"
+    ]
+  },
+  "raw_sha256": {
+    "orders": "26830752c1fa20f323c03d611df006cdfd15c1facf426cf5de65534fa98e287b",
+    "positions": "95fe641bf1dd2bce0d56bef46eed3a32bde7e414f0991d748ac013ecfceab2fb",
+    "ctf": "810aba203997dbef181e384f69b2caeaf68f0a8b550116a31d3cb50db597eb66",
+    "reservations": "b5ff65b132efa8a715e39d73cfa5d39732b98c93ce1665abc4cd45b3f1de1a71"
+  },
+  "source_representation": "SDK/vetted reader result serialization; supplied bytes durable before parsing; no trade from a live unfilled status."
+}

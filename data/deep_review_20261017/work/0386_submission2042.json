@@ -1,0 +1,21 @@
+{
+  "schema": "financial_submission_result.v1",
+  "started_utc": "2026-10-19T20:42:17.504158+00:00",
+  "received_utc": "2026-10-19T20:42:21.760658+00:00",
+  "returncode": 0,
+  "timed_out": false,
+  "stdout_sha256": "fddfb80d8ede350b012d77a782cb820338e560fe18c5bd7efdf7178dc9793d28",
+  "stderr_sha256": "77c76d3213534c4dcca0bafada6127c05a034e78a48046886b195471476536d7",
+  "stdout_bytes": 1967,
+  "stderr_bytes": 279,
+  "private_evidence_dir": "logs/deep_review_20261017/0386_submission2042",
+  "selected_output": [
+    "  [maker] gate + sizing run on the POSTED rest price 0.16 (bid 0.150 / ask 0.18), maker fee $0 — not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.",
+    "  [price cap] preview signed raw BUY limit 0.1600 <= 0.1600; execution will refresh and re-check",
+    "  [capital caps] ticket $1.60/$28.47; cluster spanish-government-2026 $45.26/$56.94",
+    "  ρ-discount: 0.8390 (ρ=0.7, cluster_frac=0.23)",
+    "# Executing BUY 10 shares (YES) @ 0.16 (tick 0.01) for $1.6 [RESTING post-only BID (record in notes/resting_orders.md)]",
+    "signing v2 BUY order: token=3894315600556293... price=0.16 usd_size=1.6 neg_risk=False"
+  ],
+  "no_retry_on_ambiguity": true
+}

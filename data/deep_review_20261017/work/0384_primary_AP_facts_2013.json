@@ -1,0 +1,14 @@
+{
+  "schema": "primary_access_receipt_review.v1",
+  "review_index": 384,
+  "received_utc": "2026-10-19T20:12:55.524325Z",
+  "url": "https://www.boston25news.com/news/politics/rep-ilhan-omars/J4MFS7OR4Y5YBESVAEKYJ7UUAA/",
+  "http_status": 200,
+  "page_title": "This website is unavailable in your location. \u2013 Boston 25 News",
+  "article_body_verified": false,
+  "finding": "Body is a location-unavailable message (155textbytes), with no AP byline/target content. Do not adopt article facts from this response. The draft AP paraphrase attached solely onHTTP200 was invalid and is retained privately as an invalid draft, never cited as evidence.",
+  "receipt": "logs/deep_review_20261017/0384_ap_syndication_2013/ap.receipt.json",
+  "raw_sha256": "48ccb189cfb45de9ca8fff91e40a546dd930ca9383e89a97d21806d9c01cd0aa",
+  "gzip_sha256": "c544fb28ea169cab4169bf49f4a5e0d6130772834c9ee0d39b746546154f3e18",
+  "scope": "AP syndicated search preview remains separately attributed tool evidence, not an HTTP article capture."
+}

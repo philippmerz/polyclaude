@@ -1,0 +1,52 @@
+{
+  "schema": "bounded_closeout_root_audit.v1",
+  "verified_utc": "2026-10-19T20:58:53.142675+00:00",
+  "head_before": "78dbc062c57fb2c44d2fe31d116092dff8f9b4af",
+  "counts": {
+    "valued": 352,
+    "blocked": 10,
+    "factual": 364,
+    "pending": 2274,
+    "base": 726,
+    "revisions": 65,
+    "active": []
+  },
+  "prefixes": {
+    "research/2026-10-17-deep-review/evaluations.jsonl": {
+      "old_bytes": 3329303,
+      "old_sha256": "7c86d66803c6fe3ab25ee7d3217730acc288cb8f5e27c02429699c1b3e14e0eb",
+      "exact_prefix_preserved": true
+    },
+    "research/2026-10-17-deep-review/revisions.jsonl": {
+      "old_bytes": 39255,
+      "old_sha256": "83ec3027a5afe8f5eafcb4d5a480fba62e172de84f5491d6b910dd3b0b59e8b8",
+      "exact_prefix_preserved": true
+    },
+    "docs/performance.csv": {
+      "old_bytes": 127279,
+      "old_sha256": "7d7261361ed421bdb845e14285ced4c4d77a28d95eb6b9a1d356ce502d39045f",
+      "exact_prefix_preserved": true
+    },
+    "notes/journal.md": {
+      "old_bytes": 2518071,
+      "old_sha256": "ccaa8c495f1b4ba45f8310fd9e67461473cc91a8883497f24d6734d0d28d823f",
+      "exact_prefix_preserved": true
+    }
+  },
+  "existing_prior_objects_unchanged_except_Whale": true,
+  "new_prior_only_Sanchez": true,
+  "old_decisions_unchanged": true,
+  "new_decisions": [
+    235,
+    236
+  ],
+  "local_markdown_files_checked": 15,
+  "journal_link_scope": "New append sinceHEAD only; pre-existing historical relative0096 link is broken and unchanged. No claim entire historical journal links pass.",
+  "inventory_sources": 75,
+  "explicit_publication_paths": 98,
+  "source_model_hashes_and_clock_valid": true,
+  "CSV_tests": "10/10 node performance tests pass",
+  "context_packets": "four scopes <10KB within validity, zero sourcehash mismatches",
+  "privacy": "Exact public financial IDs retained; raw account/source/consent/browser/PDF/operator material and invalid drafts excluded. Incorrect helper projection removed before publication.",
+  "no_goal_timer_idle_continuation": true
+}

@@ -1,0 +1,27 @@
+{
+  "schema": "candidate386_monitoring_summary.v1",
+  "source_packet_sha256": "e9bf7cdec6c89c4dbbac24f0a2d428e815ee9c000e7621bb9ec0f12f379c0437",
+  "raw_items_stay_local": true,
+  "feeds": [
+    {
+      "name": "Spain PM departure, election and formation news",
+      "http_status": 200,
+      "valid_rss": true,
+      "received_utc": "2026-10-19T20:39:28.369030Z",
+      "raw_sha256": "5aa463ae76fa78531b962c3d186111e4a0b2d2158f14559d9e4bf86ff1b43fac",
+      "items_count": 81
+    },
+    {
+      "name": "Spain PM official cessation and investiture news",
+      "http_status": 200,
+      "valid_rss": true,
+      "received_utc": "2026-10-19T20:39:29.006077Z",
+      "raw_sha256": "030506b568a64cb3d10db866bc2a51a100c7cd9a5bb3146905917ee11fc8ef09",
+      "items_count": 100
+    }
+  ],
+  "config": "scripts/news_watcher_config.json",
+  "config_reload": "Existing daemon rereads config every normal poll; no code changed/restart required. Manual baseline is not a daemon-cycle acknowledgment.",
+  "root_review_scope": "Read12 newest titles per feed; no claim all181 article bodies or omissions reviewed. ReutersOct17 hard-left split title is unverified body/context, not a probability update; GAD3 interview says a Sanchez win remains possible, not a new numeric poll. Latest Spain campaign headlines supply no independently adopted qualifying departure evidence. Other coverage remains incomplete and priced as model/source risk, not proof of absence.",
+  "limits": "81English/100Spanish observed RSS rows; watcher takes newest30perfeed. First attempt302notfollowed was durably retained; follow_redirects yielded200/validRSS for both, so302 is not a declared outage. RawheadlineTelegram remains disabled; classifier scopes actual held/pending exposure."
+}

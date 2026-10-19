@@ -1,0 +1,10 @@
+{
+  "schema": "postentry_state_audit.v1",
+  "returncode": 0,
+  "started_utc": "2026-10-19T20:47:13.186565+00:00",
+  "received_utc": "2026-10-19T20:47:14.188262+00:00",
+  "stdout_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "output": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\nposition state CLEAN (7 indexed positions, 1 deindexed claim row(s))\n",
+  "private_evidence": "logs/deep_review_20261017/0386_stateaudit2048"
+}

@@ -1,0 +1,11 @@
+{
+  "http_status": 200,
+  "received_utc": "2026-10-19T20:35:30.179145Z",
+  "raw_sha256": "e8de85d2c89e3a6544d7d370ca0f5ad1241763c4a6e6be6c424a9af3c659e756",
+  "title": "Encuestas elecciones generales: el CIS suma ventaja al PSOE",
+  "CIS_links": [],
+  "raw_bytes": 73523,
+  "private_receipt": "logs/deep_review_20261017/0386_rtve2037_root/rtve.receipt.json",
+  "root_fact_status": "Exact RT VE publisher page obtained; reported CIS topline/methodology treated as secondary reporting, not original instrument.",
+  "root_paraphrase": "RTVE current article body reports CIS election-now estimated PSOE34% versusPP22.2%; displayed summary instead saysPSOE34.2%. Methodology reported asOct1–6,5025telephone interviews,fullsampleMOE1.4pp. This is secondary reporting, not raw stated intention or an original CIS instrument. Earlier fieldwork than40dBOct7–8 despite laterOct14publication; not a time-series shift."
+}

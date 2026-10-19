@@ -1422,8 +1422,8 @@
     "entry_report": "research/2026-10-17-deep-review/film2161_entry_1450.md"
   },
   "will-whalefall-opening-weekend-box-office-be-less-than-8m": {
-    "p_yes": 0.42897844762076087,
-    "p_no": 0.5710215523792391,
+    "p_yes": 0.97,
+    "p_no": 0.03,
     "cluster": "film-boxoffice-2026",
     "rho_within": 0.7,
     "cluster_frac": 0.02,
@@ -1433,16 +1433,17 @@
     "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
     "criteria_sha256": "b5c326932b2dab8c0c2102b99dd13b98e1f06423aebb5231446e30a971be8238",
     "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
-    "rationale": "Primary final domestic3-day Whalefall<8m: YES42.8978%/NO57.1022%; actual15pp reserve selects NO42.1022%. Exactly8m final pays NO; latest8m is still estimated. Five corrected same-week revision pairs are weak/correlated; mixture weights/widths subjective. Entire stake can lose; no guaranteed hedge.",
-    "research_report": "research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md",
-    "latest_source_packet": "data/deep_review_20261017/work/0299_preexecute_source_0015.json",
-    "management": "OriginalDEC222 filled6NO17c/$1.02 at01:04:56; DEC223retain6/noadd after01:11namedsource/fee-netexitreview. Original02UTC BUYpullobsolete; holdingsourcecheckexisting02UTC/earliermaterialactual/estimate/source/ticketnews. Noadd/replay/repost/restingsale. Entirecashlosscanoccur.",
+    "rationale": "Source revision: Numbers20:02 domesticweekend/daily7,837,153 below8m, Mojo8mstillestimated/Numberssummary8mstillold. Primary94/4/2unfittedstates\u2192NO3/YES97,broadNO0.2\u201320,15ppselectedNO0/YES82. Oldestimate-kernelpriorobsolete; finalitynotcertified.",
+    "research_report": "research/2026-10-17-deep-review/models/whalefall299_primary_2007.json",
+    "latest_source_packet": "data/deep_review_20261017/work/whalefall_alert_1958_facts.json",
+    "management": "THESIS_BROKEN_NO_ADD. Held6NO/initial1.02 verified20:04; exactNO bookhasnobids and190.895sagefails180sgate. No sale/order submitted or price-recoverythesis. No below-fairhiddeninfomaker; sourcefinality/reversal or actualfreshbid recheck at existing22UTC/earliermaterialtrigger, no newtimer.",
     "monitoring": "One Whalefall feed+Tier1 term verified in normal watcher cycle00:10:49, same PID83922; raw RSS Telegram off, no new timer/forced poll. Ankler public preview lacks domestic amount; inaccessible content remains a gap.",
     "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
     "financial_status": "HELD_FULLY_FILLED",
     "holding_proof": "data/deep_review_20261017/work/0299_root_fill_verified_0125.json",
     "divergence_ack": "2026-10-19",
-    "divergence_ack_reason": "Root fresh named8mestimate-only rows and fee-net6shareexit0.84438 checked; unchanged small-sample centralNO57.1022/selected42.1022/broadlow25 favors retain/noadd. Fill/lowmark doesnotproveprior. work/0299_fill_hold_0135.json"
+    "divergence_ack_reason": "Adverseactual-sourceupdate independentlychecked; priorNO3 now replaces57.1022, not a routineholdack. No executableNO bid; full cashlosspossible.",
+    "verified_at_utc": "2026-10-19T20:08:03.967781+00:00"
   },
   "_closed_20261019_hle_openai55": {
     "review_required": "REVIEW COMPLETE 2026-10-11: exact current criteria unchanged; mounted resolving API reachable with 60 rows and GPT-6 Astra HLE Accuracy 53.6, below 55. Retain p(NO) .25, stress .15, range .15-.38. Capture-time complete fee-net exit $2.7531 versus $4.75 central / $2.85 stress terminal EV. Current central joint/correlation checks favor HOLD / NO ADD; explicit downside joint scenarios favor trims. Wider current OpenAI release coverage remains partial because three direct pages returned 403.",
@@ -1683,5 +1684,28 @@
     "original_slug": "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
     "closure_decision_id": 232,
     "reservation_reconcile_proof": "data/deep_review_20261017/work/tick0956_reconciled.json"
+  },
+  "pedro-snchez-out-as-pm-of-spain-by-december-31-2026": {
+    "p_yes": 0.47658025,
+    "p_no": 0.52341975,
+    "cluster": "spanish-government-2026",
+    "cluster_frac": 0.23,
+    "edge_haircut": 0.3,
+    "hidden_info": true,
+    "review_index": 386,
+    "model": "research/2026-10-17-deep-review/models/0386_primary_2038.json",
+    "rationale": "Unfitted legal/political/timing mixture; 2023 personal cese precedent coexists with caretaker continuity. Later-published CIS conflicts with 40dB; earlier fieldwork, not a measured swing. Selected YES17.658% after30pp aggregate model/source/conditional-fill allowance. Tiny post-only <=16c only if current gates pass; no holding or fill implied.",
+    "note": "Spain country/transition cluster is an identity grouping, not independence proof. Declared23% aggregate risk fraction andrho0.7 conservatively cover all current PM cost+four BUY commitments; no venue/model hedge credit. Before any material unassessed poll, coalition, timetable, decree/rule or candidate update: cancel first then re-underwrite. No automatic add/repost/taker fallback.",
+    "updated_utc": "2026-10-19T20:38:08.513215+00:00",
+    "rho_within": 0.7,
+    "condition_id": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+    "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395",
+    "asset": "38943156005562933924590395107769174031077435060879703425069135833415221550151",
+    "research_report": "research/2026-10-17-deep-review/sanchez386_entry_2043.md",
+    "order_id": "0x4648ea205eb204fe65c8886bd131aa68c38280322891b917708809a17f75d8b2",
+    "financial_status": "LIVE_ZERO_MATCHED_20261019T204344Z",
+    "decision_id": 236,
+    "verified_at_utc": "2026-10-19T20:43:45.658385+00:00",
+    "management": "Cancel-first on unassessed material poll/coalition/candidate/timetable/decree/ruling or custody/incapacity; review at each scheduled check. No default cron expiry, add/repost/chase/taker fallback. Any fill needs fresh holding/source/net-exit/joint-risk review."
   }
 }

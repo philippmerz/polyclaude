@@ -1,13 +1,15 @@
 {
   "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 386,
-  "phase": "Facts-only legal/election timeline refresh saved; valuation and entry remain pending. No resolution conclusion.",
+  "phase": "Valued47.658025YES; current30pp selected17.658025. DEC236 maker10YES16c/1.60 LIVE0matched verified20:43; no acquired holding. Next read entry outcome/policy before any management, no automatic repost/add.",
   "source_paths": [
-    "work/0386_facts_1935.json",
-    "work/0386_facts_1737.json"
+    "work/0386_primary_sources_2027.json",
+    "work/0386_personal_cese_2020.json",
+    "work/0386_rtve2037_root.json",
+    "work/0386_cis_2037.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-19T19:36:29.254560Z",
+  "updated_utc": "2026-10-19T20:45:32.650778+00:00",
   "unit_sha256": "cfdcfdf656c695a9607a2fa500861d10684eb6d017811fdfd3a1f335ab833967",
   "source_capture_root": "logs/deep_review_20261017",
   "source_pointers": [
@@ -17,5 +19,11 @@
     "https://www.congreso.es/constitucion/ficheros/c78/cons_ingl.pdf"
   ],
   "conditionId": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
-  "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395"
+  "criteria_sha256": "115469b00edb88c4d38cd8ab41dbb4017b0cb9ac205e4a5787741b5d4e5b0395",
+  "latest_addendum_sha256": "5e8be39f147ab6ff0ca0f8022c8ead45b8968849dea10287008747c1c8aaf413",
+  "report_path": "research/2026-10-17-deep-review/evaluations/0386.md",
+  "report_sha256": "6d9653326023bf4e9b4e523bf5cf348488f951945e26c754736dea9d031ec5d9",
+  "latest_model": "research/2026-10-17-deep-review/models/0386_primary_2038.json",
+  "entry_outcome": "research/2026-10-17-deep-review/sanchez386_entry_2043.md",
+  "source_gap": "Original CIS instrument and venue caretaker/cese precedent unverified; unfitted mixture/30pp priced allowance, not resolved gaps."
 }

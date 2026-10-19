@@ -1,0 +1,72 @@
+{
+  "schema": "primary_sanchez_source_synthesis.v1",
+  "review_index": 386,
+  "created_utc": "2026-10-19T20:24:34.986571+00:00",
+  "election_decree": {
+    "canonical_url": "https://www.boe.es/buscar/doc.php?id=BOE-A-2026-20742",
+    "verified_raw_sha256": "5e1616cbe927dea3c6ed05e8931ebc924d1fd9cbe4f35e1effddbb2218b02bd9",
+    "finding": "RootreadArt2Nov29election andArt5Dec23 10:00constituentsessions. Earlierclaimsnosessiondate werefalse; thisdateisnotPMdeparture/investiture."
+  },
+  "personal_cessation_precedent": {
+    "unit": "data/deep_review_20261017/work/0386_personal_cese_2020.json",
+    "finding": "OfficialRD694/2023namedSanchezpersonalcessation afterJuly23election andsameclausecontinuesenfunciones untilnewPMtakesoffice. PredatesDec2,2025creation, so notalreadyYES; distinguishesformalcessationversusongoingcaretaker.",
+    "unsettled": "Whether this contract personalceasesPM/removalannouncement treats automaticstatutorycese asYES is notdetermined by decree alone. Electioncall/parliamentdissolutionalone is not apersonalresignation."
+  },
+  "primary_poll": {
+    "url": "https://ep00.epimg.net/infografias/encuestas40db/2026/10-08-barometro-flash/2026_10_informe_voto_barometro_flash.pdf",
+    "received_utc": "2026-10-19T20:22:14.688099Z",
+    "raw_sha256": "9368bb209e639a5b75d98361f758f5df7560b9da83c874f6b97b68c528c12d5f",
+    "gzip_sha256": "fe5fe5a1a0ae569762f11ccba1283d82e61d396a683c9bda3b51ade4864f1bd6",
+    "receipt": "logs/deep_review_20261017/0386_40db_pdf_2023/report.receipt.json",
+    "root_visual_verified_pages_one_based": [
+      5,
+      8,
+      26
+    ],
+    "fieldwork": [
+      "2026-10-07",
+      "2026-10-08"
+    ],
+    "sample_n": 800,
+    "mode": "CAWIonline",
+    "population": "Spaineligible18+excludingCeuta/Melilla",
+    "reported_error": "3.5pp/95%, not a coalition/PM-confidenceinterval",
+    "party_vote_estimates": {
+      "PP": 31.9,
+      "PSOE": 28.1,
+      "Vox": 18.9,
+      "Sumar": 5.3,
+      "Podemos": 2.3,
+      "SALF": 1.8,
+      "other_blank": 11.7
+    },
+    "seat_projection_not_distribution": {
+      "PP": {
+        "point": 132,
+        "range": [
+          123,
+          140
+        ]
+      },
+      "PSOE": {
+        "point": 112,
+        "range": [
+          105,
+          117
+        ]
+      },
+      "Vox": {
+        "point": 66,
+        "range": [
+          63,
+          74
+        ]
+      },
+      "absolute_majority": 176,
+      "PPplusVox_point": 198
+    },
+    "limits": "Onecommissionedpoll; inferredvotes/seatprojection are not electionprobabilities. Bandsdepend and are not independentconfidencebounds. No pollsterbias/campaignerror fitted. Differentunitary-leftscenario is not mixed withbaseline."
+  },
+  "legal_timeline": "ConstArts68/99/101 andLaw50Art21: caretakercontinuity untilsuccessor; firstabsolutemajorityvote/second48hourslater,2monthclockafterfirstvote ifnoinvestiture. Dec23\u2192Dec31 allows8calendardays, no investituredateproved.",
+  "capture_scope": "Publicnumericfacts/hashcapsule; fullPDF/screenshots remainprivate. Root temporaryPDFiumrendering onlyoutsideproject, no dependency/financialwriter change."
+}
