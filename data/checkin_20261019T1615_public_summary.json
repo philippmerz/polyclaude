@@ -1,0 +1,174 @@
+{
+ "consistency": {
+  "artifacts": {
+   "json": "logs/checkin_20261019T1615/scans/polymarket_consistency_result.json",
+   "json_sha256": "d6d945b0abe668a1b97fcc71ebd21a3743af31384ef55cf9bb11c46a365c684d",
+   "markdown": "logs/checkin_20261019T1615/scans/polymarket_consistency_report.md",
+   "markdown_sha256": "73bded87ef29a3fd5a61faa30647f512ea10f8a48aa9764e42e6b086fa095f0e"
+  },
+  "eligible": 197,
+  "events_processed": 669,
+  "failure_reasons": "not recorded",
+  "gross_deviation_groups": 289,
+  "groups": 354,
+  "live_quote_groups_requested": 20,
+  "markets": 5005,
+  "net_threshold_candidates": 0,
+  "pages": 34,
+  "provisional_after_depth": 0,
+  "quote_failures": 14,
+  "quotes_validated": 6,
+  "stop": "market_cap, incomplete",
+  "unquoted_groups": 177
+ },
+ "context": {
+  "batch_audit_index": "see detail index for 35 per-batch hash/count shards",
+  "changed_fields_only": [
+   "best_ask",
+   "best_bid",
+   "no_price",
+   "outcome_prices",
+   "spread",
+   "tick",
+   "yes_price"
+  ],
+  "criteria_fields_changed": 0,
+  "duplicate_ids": 0,
+  "identity_or_criteria_hash_mismatches": 0,
+  "primary": {
+   "batches": 1,
+   "emitted": 16,
+   "not_emitted_by_trigger": 64,
+   "selected": 80,
+   "statuses": {
+    "changed": 5,
+    "context_unchanged": 3,
+    "new_to_snapshot": 8
+   }
+  },
+  "semantic_false": 0,
+  "thin_tail": {
+   "batches": 34,
+   "emitted": 578,
+   "not_emitted_by_trigger": 2422,
+   "selected": 3000,
+   "statuses": {
+    "changed": 49,
+    "context_unchanged": 324,
+    "new_to_snapshot": 205
+   }
+  },
+  "total_batches": 35,
+  "total_rows": 594
+ },
+ "coverage": "Page/top/market/live-quote caps leave coverage incomplete. Omitted, unquoted, no-consensus and non-emitted rows remain unreviewed; no exchange-wide zero is implied.",
+ "created_utc": "2026-10-19T16:37:58.802704Z",
+ "discovery": [
+  {
+   "argv": [
+    "discover_markets.py"
+   ],
+   "eligible": 609,
+   "fetched": 1000,
+   "kind": "primary",
+   "pages": "10/10; page_cap",
+   "rejections": {
+    "horizon": 49,
+    "liquidity": 270,
+    "missing_deadline": 2,
+    "past_deadline": 69,
+    "spread": 1
+   },
+   "selected": 80,
+   "snapshot": "data/snapshots/shortlist_20261019T163131389413Z_primary.json",
+   "snapshot_sha256": "2f659a7b3cecc4001f445eb5964cb85fe7ff3118b010af6dd5aff2a41609a39c",
+   "top_omitted": 529
+  },
+  {
+   "argv": [
+    "--min-liquidity",
+    "500",
+    "--min-vol24",
+    "20",
+    "--max-pages",
+    "20",
+    "--via-events",
+    "--clears-hurdle-only",
+    "--top",
+    "3000"
+   ],
+   "duplicate_rows": 49,
+   "eligible": 3290,
+   "event_response_rows": 2000,
+   "fetched_unique": 38521,
+   "kind": "thin_tail",
+   "pages": "20/20; page_cap",
+   "rejections": {
+    "horizon": 321,
+    "liquidity": 14996,
+    "missing_deadline": 23,
+    "not_tradable": 5567,
+    "past_deadline": 842,
+    "spread": 813,
+    "volume": 9701,
+    "win_assumed_hurdle": 2968
+   },
+   "selected": 3000,
+   "snapshot": "data/snapshots/shortlist_20261019T163136361121Z_thin_tail.json",
+   "snapshot_sha256": "69ffc651678d6dc4fc3576337b6b17ccf470acf2a4c4252ab3d9613df1975838",
+   "top_omitted": 290
+  }
+ ],
+ "event_monotonicity": {
+  "event_candidates": 1448,
+  "midpoint_violations_ge_1pp": 0,
+  "multi_market_events_inspected": 1177,
+  "pages": "15/15 successful; max_pages stop",
+  "provisional_after_book_walk": 0
+ },
+ "favorite_fade": {
+  "book_walk_cap": 40,
+  "candidate_profile_rows": 24,
+  "markets_fetched": 1000,
+  "missing_invalid_books": 0,
+  "probability_edge_estimates": 0,
+  "rough_survivors": 61,
+  "valid_books": 40,
+  "walk_cap_omissions": 21
+ },
+ "financial_or_order_changes": false,
+ "macro": {
+  "consensus": "disabled",
+  "passed_volume": 9
+ },
+ "prospective_resolve": {
+  "rc": 2,
+  "retried": false,
+  "status": "20/20 snapshotted markets reported resolved; no prospective_results file; no scoring artifact"
+ },
+ "receipts": {
+  "detail_index": "data/checkin_20261019T1615_detail/index.json",
+  "detail_index_sha256": "b6263927fe519d0815e15a46e46b510858fd86f1f1fbf8b8ea3bb38569e93855",
+  "manifest": "logs/checkin_20261019T1615/scans/manifest.json",
+  "manifest_sha256": "7f662ff1134ff6e91a7cb9b318b31599b4668177e570668e67bfaf33419fe67b"
+ },
+ "run_window_utc": [
+  "2026-10-19T16:31:30.511302Z",
+  "2026-10-19T16:33:05.459680Z"
+ ],
+ "schema": "scheduled_discovery_fact_summary.v1",
+ "scope": "One bounded catalog/screen pass; no valuation, rejection or action.",
+ "sports": {
+  "consensus_attempts": 3,
+  "in_play_skipped": 5,
+  "passed": 72,
+  "results": [
+   "AEK win: YES/NO mapping not established from Gamma rules",
+   "Man City win: YES/NO mapping not established from Gamma rules",
+   "Barcelona win: source odds page was PSG-Barcelona; no confirmed exact mapping"
+  ],
+  "usable": 0,
+  "verified_gt3pp_and_gt50k_leads": 0
+ },
+ "tick": "checkin_20261019T1615"
+}

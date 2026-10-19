@@ -1,0 +1,1 @@
+{"name":"watchlist","request":{"operation":"watchlist","read_only":true,"scope":"bounded_followup_verify_previously_empty_output_with_unavailable_returncode"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:37:31.225377Z","timing_basis":"call_window"}

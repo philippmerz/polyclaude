@@ -1,0 +1,1 @@
+{"batches":[{"batch":1,"criteria_hash_mismatches":0,"declared":16,"identity_mismatches":0,"parsed":16,"section_bytes":8404,"section_sha256":"4b7ec78b9dce51b4fb8f17ec803d034146acebfc0e951e37c111db3310c90295","semantic_false":0,"statuses":{"changed":5,"context_unchanged":3,"new_to_snapshot":8}}],"kind":"primary","schema":"context_batch_audit_shard.v1"}

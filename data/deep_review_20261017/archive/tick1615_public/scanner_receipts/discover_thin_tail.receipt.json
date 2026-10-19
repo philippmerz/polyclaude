@@ -1,0 +1,45 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/discover_markets.py",
+    "--min-liquidity",
+    "500",
+    "--min-vol24",
+    "20",
+    "--max-pages",
+    "20",
+    "--via-events",
+    "--clears-hurdle-only",
+    "--top",
+    "3000"
+  ],
+  "duration_seconds": 5.307,
+  "end_utc": "2026-10-19T16:31:36.753093Z",
+  "free_bytes_after": 1030389760,
+  "free_bytes_before": 1040236544,
+  "name": "discover_thin_tail",
+  "returncode": 0,
+  "snapshot": {
+    "bytes": 9681774,
+    "metadata": {
+      "bytes": 1477,
+      "path": "data/snapshots/shortlist_20261019T163136361121Z_thin_tail.meta.json",
+      "sha256": "6b78a66154e763b3060368b3ebf8c0f47d5566e76e3498cdde5a4c8887506a23"
+    },
+    "path": "data/snapshots/shortlist_20261019T163136361121Z_thin_tail.json",
+    "sha256": "69ffc651678d6dc4fc3576337b6b17ccf470acf2a4c4252ab3d9613df1975838"
+  },
+  "start_utc": "2026-10-19T16:31:31.445828Z",
+  "stderr": {
+    "bytes": 0,
+    "path": "logs/checkin_20261019T1615/scans/discover_thin_tail.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 9555,
+    "path": "logs/checkin_20261019T1615/scans/discover_thin_tail.stdout",
+    "sha256": "ba9e09adcf66910c5ed873fea46ebd1e2601e800e217b41386b03b5ae6c8212c"
+  },
+  "timed_out": false,
+  "timeout_seconds": 180
+}

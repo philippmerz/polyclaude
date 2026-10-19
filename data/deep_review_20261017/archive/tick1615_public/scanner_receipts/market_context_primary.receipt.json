@@ -1,0 +1,31 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/market_context_batches.py",
+    "--scan-kind",
+    "primary",
+    "--format",
+    "markdown",
+    "--batch-size",
+    "20"
+  ],
+  "duration_seconds": 0.195,
+  "end_utc": "2026-10-19T16:33:04.856555Z",
+  "free_bytes_after": 1029193728,
+  "free_bytes_before": 1029206016,
+  "name": "market_context_primary",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:33:04.661338Z",
+  "stderr": {
+    "bytes": 0,
+    "path": "logs/checkin_20261019T1615/scans/market_context_primary.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 9782,
+    "path": "logs/checkin_20261019T1615/scans/market_context_primary.stdout",
+    "sha256": "36d99d2ffdfd4ed4994d1e583a5193b79ef465bbf87912f57229008d071131c1"
+  },
+  "timed_out": false,
+  "timeout_seconds": 240
+}

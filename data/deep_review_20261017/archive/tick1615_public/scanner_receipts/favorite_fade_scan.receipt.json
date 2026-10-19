@@ -1,0 +1,25 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/favorite_fade_scan.py"
+  ],
+  "duration_seconds": 0.842,
+  "end_utc": "2026-10-19T16:33:01.582835Z",
+  "free_bytes_after": 1029238784,
+  "free_bytes_before": 1029251072,
+  "name": "favorite_fade_scan",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:33:00.741253Z",
+  "stderr": {
+    "bytes": 568,
+    "path": "logs/checkin_20261019T1615/scans/favorite_fade_scan.stderr",
+    "sha256": "c9fb209dc729762336762edc200a5edd01974002e842499bbc26a6ee810fcbc1"
+  },
+  "stdout": {
+    "bytes": 2804,
+    "path": "logs/checkin_20261019T1615/scans/favorite_fade_scan.stdout",
+    "sha256": "fa9a2876371d389d1cf972d8f03f8c2b4ab38cfa3c11f4294a956eeec0bc55bb"
+  },
+  "timed_out": false,
+  "timeout_seconds": 180
+}

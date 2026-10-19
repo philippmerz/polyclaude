@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 217 recorded observations from Apr-25
+The local performance CSV now has 218 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Four LIVE/zero-matched BUYs/$7.52 remain; Idaho22UTC pull binding.** Canceled orders stay closed and must never be replayed. [Current orders/proofs](notes/resting_orders.md).
 
-**Whalefall6NO/$1.02 retained without adding.** Numbers/Mojo16:18 show8mESTIMATE, not final; exactly8mFINAL paysNO. Worldwide17.5m is a different metric. HLE9NO closed/DEC225; the separate legacyGeminiNO is a zero-value/uncertain claim. OpenRouter5NO retained; specified four weekly labels govern. [Current primary judgment](research/2026-10-19-1559-checkin.md).
+**Whalefall6NO/$1.02 retained without adding.** Numbers/Mojo16:31 show8mESTIMATE, not final; exactly8mFINAL paysNO. Worldwide17.5m is a different metric. HLE9NO closed/DEC225; the separate legacyGeminiNO is a zero-value/uncertain claim. OpenRouter5NO retained; specified four weekly labels govern. [Current primary judgment](research/2026-10-19-1559-checkin.md).
 
 ## Mandate and constraints
 
@@ -82,15 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 19 15:59 tick
+## Last audited snapshot — October19 16:15 queued tick
 
-**Authoritative bankroll $195.56 including $5.84 separate gas; trading midpoint $189.72 / indicative depth $185.41; PM $34.58 / $30.27.** Producer window16:16:13.295523–16:16:27.606117UTC. Rounded sequential inputs are not synchronized NAV or certified proceeds; $20.73 residual is accounting arithmetic, not audited cash profit. [Check-in](research/2026-10-19-1559-checkin.md).
+**Bankroll $195.85 incl $5.84 separate gas; trading midpoint $190.01 / indicative depth $186.24; PM $34.87 / $31.10.** Recording window16:30:35–16:32:27.763180UTC; exact producer process/quote times and rc unavailable after metadata error. Rounded sequential inputs are not synchronized NAV/certified proceeds;20.73 residual is accounting arithmetic, not audited cash profit. [Check-in](research/2026-10-19-1615-checkin.md).
 
-Four authenticated LIVE/zero-matched BUYs/four exact reservations retain $7.52 full-fill risk; eight position identities/sizes/totalBought unchanged. Account request clocks were not retained; artifact-write times are labeled separately. Idaho34YES3c/$1.02 retains its Oct19 22:00UTC all-unfilled pull and earlier cancel-first on material poll/candidate/ballot/turnout uncertainty. [Orders](notes/resting_orders.md) · [account proof](data/deep_review_20261017/work/tick1559_account.json).
+Authenticated orders/positions at16:31:41–42UTC match prior state: four LIVE/zero-matched BUYs/four reservations/$7.52 full-fill risk and eight position identities/sizes/totalBought unchanged. No trade, numerical-prior change, new maker exit or addition. Idaho34YES3c/$1.02 retains its Oct19 22UTC all-unfilled pull and earlier cancel-first rule. [Orders](notes/resting_orders.md) · [account](data/deep_review_20261017/work/tick1615_account.json).
 
-Retain holdings/noadd/no new maker exits/no numerical-prior changes. News reviewed through16:21:04UTC: repeated Michigan interview/old OpenRouter agreement; NY01 fundraising context, no verified new poll; worldwide Whalefall headline misclassified against domestic criterion/heldNO. Both exact weekend sources still show8mESTIMATE. [Primary risk](data/deep_review_20261017/work/tick1559_root_risk.json) · [alert decisions](data/deep_review_20261017/work/tick1559_root_news_review.json).
+Named NY01/Whalefall alerts reviewed; both weekend sources still show8mESTIMATE, not final.17.5mworldwide is not the domestic criterion. NewsNation repeats old coverage; a newer Times polling headline has unverified publisher/data after bounded attempts. News review through16:37:19UTC. [Risk/source limits](data/deep_review_20261017/work/tick1615_root_risk.json).
 
-All14 routine CLIs rc0; no overdue decision, watchlist/hurdle/UMA flag, Ostium change or winning redeemable. Four daemons single/canonical/code-current. Discovery page/quote caps and8unexplained quote failures leave coverage incomplete; no exchange-wide absence claim. Next fullcheckOct20 02UTC; Idaho pull22UTC. WeeklyP&LdueOct23. [Operations](data/deep_review_20261017/work/tick1559_ops.json) · [scan](data/checkin_20261019T1559_public_summary.json).
+All14 routine output pairs inspected; processrc unavailable, no visible runtime error. Two quiet safety checks independently verified rc0; status reports no hurdle/UMA/redemption/Ostium/overdue-decision issue. Four daemons single/canonical/code-current. Discovery incomplete with14unexplained quote failures; no exchange-wide absence claim. No routine Telegram. Existing light18UTC, Idaho22UTCpull, fullcheckOct20 02UTC; weeklyP&LOct23. [Operations](data/deep_review_20261017/work/tick1615_ops.json) · [scan](data/checkin_20261019T1615_public_summary.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

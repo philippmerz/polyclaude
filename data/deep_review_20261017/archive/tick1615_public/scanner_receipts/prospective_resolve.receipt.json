@@ -1,0 +1,26 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/methodology_stress_test.py",
+    "prospective_resolve"
+  ],
+  "duration_seconds": 3.077,
+  "end_utc": "2026-10-19T16:33:04.660681Z",
+  "free_bytes_after": 1029210112,
+  "free_bytes_before": 1029234688,
+  "name": "prospective_resolve",
+  "returncode": 2,
+  "start_utc": "2026-10-19T16:33:01.583469Z",
+  "stderr": {
+    "bytes": 29,
+    "path": "logs/checkin_20261019T1615/scans/prospective_resolve.stderr",
+    "sha256": "721950f1f47f5ad40f90abdfddbe81755126f27fc2ca2af87ade35534e76b6dc"
+  },
+  "stdout": {
+    "bytes": 80,
+    "path": "logs/checkin_20261019T1615/scans/prospective_resolve.stdout",
+    "sha256": "65d049b41b1c759addb8ccf3609e4225fc1c840af864a98663cea7cff2103738"
+  },
+  "timed_out": false,
+  "timeout_seconds": 180
+}

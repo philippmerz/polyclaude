@@ -1,0 +1,35 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/discover_markets.py"
+  ],
+  "duration_seconds": 0.932,
+  "end_utc": "2026-10-19T16:31:31.443481Z",
+  "free_bytes_after": 1040240640,
+  "free_bytes_before": 1040560128,
+  "name": "discover_primary",
+  "returncode": 0,
+  "snapshot": {
+    "bytes": 290360,
+    "metadata": {
+      "bytes": 1368,
+      "path": "data/snapshots/shortlist_20261019T163131389413Z_primary.meta.json",
+      "sha256": "3739783684f4e978ae4165da2320afd9cca515708c64bba1c63a13837104d1eb"
+    },
+    "path": "data/snapshots/shortlist_20261019T163131389413Z_primary.json",
+    "sha256": "2f659a7b3cecc4001f445eb5964cb85fe7ff3118b010af6dd5aff2a41609a39c"
+  },
+  "start_utc": "2026-10-19T16:31:30.511302Z",
+  "stderr": {
+    "bytes": 0,
+    "path": "logs/checkin_20261019T1615/scans/discover_primary.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 5125,
+    "path": "logs/checkin_20261019T1615/scans/discover_primary.stdout",
+    "sha256": "b6ab4ee8cff7f121d1a0dd35f759ad32d1838b8ed8c3b2b26862a4b689f0c446"
+  },
+  "timed_out": false,
+  "timeout_seconds": 120
+}

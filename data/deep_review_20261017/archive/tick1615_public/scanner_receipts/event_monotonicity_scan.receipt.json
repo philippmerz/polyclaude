@@ -1,0 +1,25 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/event_monotonicity_scan.py"
+  ],
+  "duration_seconds": 3.61,
+  "end_utc": "2026-10-19T16:32:21.191501Z",
+  "free_bytes_after": 1029672960,
+  "free_bytes_before": 1029685248,
+  "name": "event_monotonicity_scan",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:32:17.581171Z",
+  "stderr": {
+    "bytes": 178,
+    "path": "logs/checkin_20261019T1615/scans/event_monotonicity_scan.stderr",
+    "sha256": "36ccfd7356cd04a7bc5e69eefad96773801bac923f2ca94b7cdc25374c9a954a"
+  },
+  "stdout": {
+    "bytes": 249,
+    "path": "logs/checkin_20261019T1615/scans/event_monotonicity_scan.stdout",
+    "sha256": "a553ea08d7442379214ec8017f829166cd368eabfea6e918f8ff12e9c23e04fa"
+  },
+  "timed_out": false,
+  "timeout_seconds": 180
+}

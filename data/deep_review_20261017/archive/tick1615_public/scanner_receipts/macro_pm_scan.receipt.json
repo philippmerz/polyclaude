@@ -1,0 +1,28 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/macro_pm_scan.py",
+    "--no-consensus",
+    "--days",
+    "60"
+  ],
+  "duration_seconds": 0.5,
+  "end_utc": "2026-10-19T16:32:17.580478Z",
+  "free_bytes_after": 1029689344,
+  "free_bytes_before": 1029697536,
+  "name": "macro_pm_scan",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:32:17.080329Z",
+  "stderr": {
+    "bytes": 106,
+    "path": "logs/checkin_20261019T1615/scans/macro_pm_scan.stderr",
+    "sha256": "5fbe297115d8033a358064a1cafd544ec74a432fa53e41e935a808089cdf2655"
+  },
+  "stdout": {
+    "bytes": 875,
+    "path": "logs/checkin_20261019T1615/scans/macro_pm_scan.stdout",
+    "sha256": "29ad1f68eff8c494e18162cdfbce06eb3b41826a771161fead20f4d5e15b6c89"
+  },
+  "timed_out": false,
+  "timeout_seconds": 120
+}

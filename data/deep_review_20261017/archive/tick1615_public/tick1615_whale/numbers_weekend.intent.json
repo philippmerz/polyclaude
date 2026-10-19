@@ -1,0 +1,1 @@
+{"name":"numbers_weekend","request":{"call_window_label":"bounded current-source refresh 2026-10-19","method":"GET","read_only":true,"scope":"Named weekend domestic box-office chart, Oct16-18","url":"https://www.the-numbers.com/box-office-chart/weekend/2026/10/16"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T16:31:30.885609Z","timing_basis":"call_window"}

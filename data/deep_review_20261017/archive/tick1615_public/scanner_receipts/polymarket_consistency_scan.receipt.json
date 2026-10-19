@@ -1,0 +1,25 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/polymarket_consistency_scan.py"
+  ],
+  "duration_seconds": 39.548,
+  "end_utc": "2026-10-19T16:33:00.740649Z",
+  "free_bytes_after": 1029255168,
+  "free_bytes_before": 1029668864,
+  "name": "polymarket_consistency_scan",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:32:21.192224Z",
+  "stderr": {
+    "bytes": 0,
+    "path": "logs/checkin_20261019T1615/scans/polymarket_consistency_scan.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 1192,
+    "path": "logs/checkin_20261019T1615/scans/polymarket_consistency_scan.stdout",
+    "sha256": "622a923e9090235578f38820fe382fa4146209878bbbc0cf3600628f014fa5e5"
+  },
+  "timed_out": false,
+  "timeout_seconds": 180
+}

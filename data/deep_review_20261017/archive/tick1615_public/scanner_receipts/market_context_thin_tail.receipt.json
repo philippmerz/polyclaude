@@ -1,0 +1,31 @@
+{
+  "argv": [
+    ".venv/bin/python",
+    "scripts/market_context_batches.py",
+    "--scan-kind",
+    "thin_tail",
+    "--format",
+    "markdown",
+    "--batch-size",
+    "20"
+  ],
+  "duration_seconds": 0.603,
+  "end_utc": "2026-10-19T16:33:05.459680Z",
+  "free_bytes_after": 1028960256,
+  "free_bytes_before": 1029189632,
+  "name": "market_context_thin_tail",
+  "returncode": 0,
+  "start_utc": "2026-10-19T16:33:04.857070Z",
+  "stderr": {
+    "bytes": 0,
+    "path": "logs/checkin_20261019T1615/scans/market_context_thin_tail.stderr",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "stdout": {
+    "bytes": 229201,
+    "path": "logs/checkin_20261019T1615/scans/market_context_thin_tail.stdout",
+    "sha256": "4ae1b7b021e6c9d0a74ec648e43b66ad6ca701cedb0dc30d51eb28e378d43d3b"
+  },
+  "timed_out": false,
+  "timeout_seconds": 240
+}

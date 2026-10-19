@@ -1,8 +1,8 @@
-# Current resting orders — October19 15:59 tick
+# Current resting orders — October19 16:15 queued tick
 
-**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated pagination exhausted; four exact order/CID/asset/size/price records match four reservations. Eight position identities/sizes/totalBought unchanged. Artifact writes about16:15UTC are recorded; actual request/response clocks were not retained. This is a dated observation, not a guarantee against later fills. [Account proof](../data/deep_review_20261017/work/tick1559_account.json) · [operations](../data/deep_review_20261017/work/tick1559_ops.json).
+**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated orders16:31:41.481495–41.597242UTC and positions16:31:41.899908–42.112157UTC HTTP200; pagination exhausted. Four exact order/CID/asset/size/price records match four reservations; eight position identities/sizes/totalBought unchanged. Reservation-read time not recorded. Dated observation, not a guarantee against later fills. [Account](../data/deep_review_20261017/work/tick1615_account.json).
 
-Bankroll producer16:16:13.295523–16:16:27.606117UTC, rounded/sequential rather than synchronized NAV. Existing terms retained without adding/reposting. NY01 fundraising headline was checked against prior officialSep30 aggregates and distinct NewsdayOct17 reporting; no new numerical poll/ballot fact established. Idaho63070734YES3c/$1.02 keeps its binding Oct19 22:00UTC all-unfilled pull and earlier cancel-first rule. [Primary review](../research/2026-10-19-1559-checkin.md).
+Retain existing terms, noadd/repost. Producer stdout recorded within16:30:35–16:32:27.763180UTC; exact CLIprocess clocks/rc unavailable, not synchronized NAV. NY01 fundraising context already reviewed; no new measured poll/ballot failure. Idaho63070734YES3c/$1.02 retains Oct19 22UTC all-unfilled pull and earlier material-evidence cancel-first rule. [Primary review](../research/2026-10-19-1615-checkin.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|
