@@ -84,6 +84,13 @@ provisional and requires an independent fresh rewalk before any action.
   execution defaults to maker-or-skip: `--execute` with a taker route requires a
   logged `--taker-urgency` naming the short-lived reason that justifies fee and
   slippage. Multi-leg bundles retain their separately guarded taker-only path.
+  Optional `--maker --maker-price PRICE` preserves an explicit fine-tick limit:
+  both book reads must match the asset/condition, be at most180s old, and keep
+  the price strictly below the ask. Integer-share lots must produce exact cent
+  cash within budget, meet live share minima and the1USD cash floor. Preview,
+  cap checks, reservation and post-only writer use that same price/size/cash;
+  the default maker cent grid remains. No bundle or routine-taker bypass.
+  [Precision repair and validation](../research/2026-10-19-fine-tick-maker-repair.md).
   Cancellation reconciliation binds complementary fills to the reserved maker's
   own asset/BUY row and parent condition; outer trade assets can differ. Terminal
   cancellation, exhaustive fills and indexed cumulative purchases still gate

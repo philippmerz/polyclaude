@@ -37,6 +37,7 @@ from __future__ import annotations
 import argparse
 import contextlib
 import datetime
+from decimal import Decimal, InvalidOperation, ROUND_FLOOR
 import fcntl
 import functools
 import json
@@ -409,15 +410,14 @@ def _two_decimal_marketable_limit(ask: float, tick: float) -> float:
 
 
 def _single_buy_preflight(reference_price: float, tick: float,
-                          max_price: float | None = None, *, maker: bool = False) -> float:
+                          max_price: float | None = None, *, maker: bool = False,
+                          allow_fine_tick_maker: bool = False) -> float:
     """Return the exact raw CLOB limit a single-market BUY would sign.
 
-    Taker FAKs use a marketable ceiling. Fine-tick markets still require a
-    two-decimal maker amount, so their signed limit can be above the touch (for
-    example, a 0.293 ask becomes a 0.30 limit). Maker orders are different:
-    ``maker_rest_price`` already produced a passive, two-decimal price, and
-    rounding it upward here could cross the ask and trigger a post-only reject.
-    Preserve that gated maker price exactly and assert its amount precision.
+    Taker FAKs use a marketable ceiling. Fine-tick takers use a cent-rounded
+    marketable limit. Default maker orders retain the cent-grid guard from
+    ``maker_rest_price``; the separate opt-in path accepts an already validated
+    exact tick price without rounding it across the ask.
 
     A user-supplied cap applies to the resulting signed raw limit, not to the
     earlier Gamma midpoint. Taker callers run this again on a fresh ask
@@ -432,9 +432,14 @@ def _single_buy_preflight(reference_price: float, tick: float,
             or not math.isfinite(tick_value) or tick_value <= 0.0):
         raise ValueError("buy price must be in (0,1) and tick must be positive")
     if maker:
-        if abs(price - round(price, 2)) > 1e-9:
+        if allow_fine_tick_maker:
+            if not _is_exact_tick_price(reference_price, tick):
+                raise ValueError("maker BUY price must align exactly to market tick")
+        elif abs(price - round(price, 2)) > 1e-9:
             raise ValueError("maker BUY price must already satisfy two-decimal amount precision")
         signed_price = price
+    elif allow_fine_tick_maker:
+        raise ValueError("fine-tick price mode requires --maker")
     else:
         signed_price = _two_decimal_marketable_limit(price, tick_value)
     if max_price is not None:
@@ -444,10 +449,98 @@ def _single_buy_preflight(reference_price: float, tick: float,
             raise ValueError("--max-price must be numeric") from exc
         if not math.isfinite(cap) or not 0.0 < cap < 1.0:
             raise ValueError("--max-price must be in (0,1)")
+        if (allow_fine_tick_maker
+                and _decimal_input(reference_price, "maker price")
+                > _decimal_input(max_price, "--max-price")):
+            raise RuntimeError(
+                f"signed raw BUY limit {price:.4f} exceeds --max-price {cap:.4f}")
         if signed_price > cap + 1e-12:
             raise RuntimeError(
                 f"signed raw BUY limit {signed_price:.4f} exceeds --max-price {cap:.4f}")
     return signed_price
+
+
+def _decimal_input(value: object, name: str) -> Decimal:
+    try:
+        result = Decimal(str(value))
+    except (InvalidOperation, TypeError, ValueError) as exc:
+        raise ValueError(f"{name} must be a finite decimal") from exc
+    if not result.is_finite():
+        raise ValueError(f"{name} must be a finite decimal")
+    return result
+
+
+def _is_exact_tick_price(price: object, tick: object) -> bool:
+    try:
+        price_d = _decimal_input(price, "maker price")
+        tick_d = _decimal_input(tick, "tick")
+    except ValueError:
+        return False
+    return (0 < price_d < 1 and tick_d > 0
+            and (price_d / tick_d) == (price_d / tick_d).to_integral_value())
+
+
+def _validate_fine_tick_maker_price(price: object, tick: object,
+                                    best_ask: object | None) -> Decimal:
+    """Validate an explicit maker limit against exact tick and current ask."""
+    price_d = _decimal_input(price, "--maker-price")
+    tick_d = _decimal_input(tick, "market tick")
+    if not 0 < price_d < 1 or not 0 < tick_d <= 1:
+        raise ValueError("--maker-price and market tick must be in (0,1]")
+    if (price_d / tick_d) != (price_d / tick_d).to_integral_value():
+        raise ValueError("--maker-price must align exactly to market tick")
+    if best_ask is None:
+        raise ValueError("cannot validate --maker-price without a live ask")
+    ask_d = _decimal_input(best_ask, "live ask")
+    if not 0 < ask_d <= 1 or price_d >= ask_d:
+        raise ValueError("--maker-price must be strictly below the current best ask")
+    return price_d
+
+
+def _validate_fine_tick_book_identity(book: object, token: str,
+                                      condition_id: str, *,
+                                      now_epoch: float | None = None) -> None:
+    """Bind an opt-in maker quote to the requested asset/condition and freshness."""
+    if not isinstance(book, dict):
+        raise ValueError("live CLOB book is not an object")
+    if str(book.get("asset_id") or "") != str(token):
+        raise ValueError("live CLOB book asset_id does not match requested token")
+    if str(book.get("market") or "").lower() != str(condition_id).lower():
+        raise ValueError("live CLOB book market does not match current conditionId")
+    timestamp_ms = _decimal_input(book.get("timestamp"), "live book timestamp")
+    if timestamp_ms <= 0:
+        raise ValueError("live book timestamp must be positive milliseconds")
+    current = time.time() if now_epoch is None else now_epoch
+    age = Decimal(str(current)) - timestamp_ms / Decimal(1000)
+    if age < 0 or age > 180:
+        raise ValueError("live book timestamp is future-dated or older than 180 seconds")
+
+
+def _fine_tick_maker_size(budget: object, price: Decimal,
+                          min_shares: object) -> tuple[int, Decimal]:
+    """Floor budget to integer shares whose price is an exact cent amount."""
+    budget_d = _decimal_input(budget, "maker budget")
+    min_shares_d = _decimal_input(min_shares, "live minimum order size")
+    if budget_d < 0 or min_shares_d <= 0:
+        raise ValueError("maker budget and live minimum order size must be positive")
+    cent_cash_per_share = price * Decimal(100)
+    numerator, denominator = cent_cash_per_share.as_integer_ratio()
+    lot_shares = denominator
+    lot_cash = price * lot_shares
+    if numerator <= 0 or lot_cash <= 0:
+        raise ValueError("maker price has no positive cash-feasible share lot")
+    lots = int((budget_d / lot_cash).to_integral_value(rounding=ROUND_FLOOR))
+    shares = lots * lot_shares
+    cash = price * shares
+    if shares < min_shares_d:
+        raise ValueError("cash-feasible maker size is below live minimum shares")
+    if cash < 1:
+        raise ValueError("cash-feasible maker size is below $1 minimum BUY cash")
+    if cash > budget_d:
+        raise ValueError("cash-feasible maker size exceeds requested budget")
+    if cash * 100 != (cash * 100).to_integral_value():
+        raise ValueError("maker cash is not exactly representable in cents")
+    return shares, cash
 
 
 def _signed_buy_cash_error(clean_usd: float) -> str | None:
@@ -2101,8 +2194,10 @@ def _bundle_entry(args: argparse.Namespace) -> int:
     if args.side != "YES":
         print("ERROR: bundle mode buys YES legs; pass --side YES explicitly", file=sys.stderr)
         return 2
-    if args.maker or args.usd is not None or args.tail_mult is not None:
-        print("ERROR: bundle mode is equal-share taker-only; --maker/--usd/--tail-mult are incompatible",
+    maker_price_arg = getattr(args, "maker_price", None)
+    if (args.maker or maker_price_arg is not None or args.usd is not None
+            or args.tail_mult is not None):
+        print("ERROR: bundle mode is equal-share taker-only; --maker/--maker-price/--usd/--tail-mult are incompatible",
               file=sys.stderr)
         return 2
 
@@ -2630,6 +2725,9 @@ def main() -> int:
                         "no taker fee, bid-side price, fill NOT guaranteed. Record in "
                         "notes/resting_orders.md and re-verify each tick. NOT for "
                         "catalyst-imminent entries — cross the spread for those.")
+    p.add_argument("--maker-price", default=None, metavar="PRICE",
+                   help="Opt in to an exact fine-tick post-only maker price (requires --maker); "
+                        "must match the current market tick and remain below the live ask.")
     p.add_argument("--taker-urgency", default=None, metavar="REASON",
                    help="Required to execute a non-maker single-market BUY. State the "
                         "concrete short-lived catalyst or fill-urgency reason whose "
@@ -2668,6 +2766,21 @@ def main() -> int:
     if input_error:
         print(f"ERROR: {input_error}", file=sys.stderr)
         return 2
+    if args.maker_price is not None and not args.maker:
+        print("ERROR: --maker-price requires --maker", file=sys.stderr)
+        return 2
+    if args.maker_price is not None:
+        try:
+            parsed_maker_price = _decimal_input(args.maker_price, "--maker-price")
+        except ValueError as exc:
+            print(f"ERROR: {exc}", file=sys.stderr)
+            return 2
+        if not 0 < parsed_maker_price < 1:
+            print("ERROR: --maker-price must be in (0,1)", file=sys.stderr)
+            return 2
+    if args.bundle_slug and args.maker_price is not None:
+        print("ERROR: --maker-price is incompatible with bundle mode", file=sys.stderr)
+        return 2
     if args.max_price is not None and not 0.0 < args.max_price < 1.0:
         print("ERROR: --max-price must be in (0,1)", file=sys.stderr)
         return 2
@@ -2676,6 +2789,9 @@ def main() -> int:
     if args.bundle_slug:
         if args.max_price is not None:
             print("ERROR: --max-price is for single-market entries; use --max-bundle-cost", file=sys.stderr)
+            return 2
+        if args.maker_price is not None:
+            print("ERROR: --maker-price is incompatible with bundle mode", file=sys.stderr)
             return 2
         return _bundle_entry(args)
     if args.bundle_add:
@@ -2828,6 +2944,9 @@ def main() -> int:
     # Delegate to pm_fees.py; do not reconstruct the curve in this entry path.
     fee_curve = pm_fees.fee_schedule(m)
     maker_px = None
+    maker_price_decimal = None
+    maker_tick_decimal = None
+    maker_min_size = None
     if args.maker:
         # Gate on the price actually being POSTED (2026-08-18 gap): --maker used
         # to change only the execution price, so the robust gate judged maker
@@ -2846,21 +2965,39 @@ def main() -> int:
         if maker_bb is None:
             print("  empty bid side — maker entry aborted (use the taker path)")
             return 1
-        try:
-            maker_px = maker_rest_price(maker_bb, maker_ba, tick)
-        except ValueError as exc:
-            # A resting price must exist on both the market-tick and signed
-            # two-decimal cash grids, strictly below any displayed ask. Fail
-            # here, before sizing, reservations, locks, or order signing.
-            print(f"\nDECISION: NEED_REVIEW — no valid passive maker price: {exc}")
-            return 2
+        if args.maker_price is not None:
+            try:
+                _validate_fine_tick_book_identity(
+                    bk, token, str(m.get("conditionId") or ""))
+                exact_asks = [_decimal_input(x.get("price"), "live ask")
+                              for x in bk.get("asks", []) if isinstance(x, dict)]
+                maker_ba_exact = min(exact_asks) if exact_asks else None
+                maker_tick_decimal = _decimal_input(
+                    bk.get("tick_size"), "live book tick")
+                maker_price_decimal = _validate_fine_tick_maker_price(
+                    args.maker_price, maker_tick_decimal, maker_ba_exact)
+                maker_px = float(maker_price_decimal)
+                maker_min_size = _decimal_input(
+                    bk.get("min_order_size"), "live minimum order size")
+                if maker_min_size <= 0:
+                    raise ValueError("live minimum order size must be positive")
+            except ValueError as exc:
+                print(f"\nDECISION: NEED_REVIEW — invalid explicit maker price/size: {exc}")
+                return 2
+        else:
+            try:
+                maker_px = maker_rest_price(maker_bb, maker_ba, tick)
+            except ValueError as exc:
+                # Preserve the original cent-grid fail-closed default.
+                print(f"\nDECISION: NEED_REVIEW — no valid passive maker price: {exc}")
+                return 2
     if maker_px is not None:
         cost_eff, fee_per_share = maker_px, 0.0
     else:
         fee_per_share = pm_fees.fee_per_share(m, mark)
         cost_eff = mark + fee_per_share
     if maker_px is not None:
-        print(f"  [maker] gate + sizing run on the POSTED rest price {maker_px:.2f} "
+        print(f"  [maker] gate + sizing run on the POSTED rest price {maker_px:.6g} "
               f"(bid {maker_bb:.3f} / ask {maker_ba if maker_ba is not None else '—'}), maker fee $0 "
               f"— not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.")
     elif fee_per_share:
@@ -2870,8 +3007,11 @@ def main() -> int:
               f"(ask {mark:.4f}) — gate + sizing run on effective cost")
     try:
         preview_buy_price = _single_buy_preflight(
-            maker_px if maker_px is not None else mark, tick, args.max_price,
-            maker=args.maker)
+            maker_price_decimal if maker_price_decimal is not None
+            else maker_px if maker_px is not None else mark,
+            maker_tick_decimal if maker_tick_decimal is not None else tick,
+            args.max_price,
+            maker=args.maker, allow_fine_tick_maker=args.maker_price is not None)
     except RuntimeError as exc:
         print(f"\nDECISION: SKIP — hard price cap: {exc}")
         return 0
@@ -2941,7 +3081,18 @@ def main() -> int:
         print(f"\nDECISION: SKIP — Kelly size ${deploy_dollar:.2f} < $1 (no edge or marginal)")
         return 0
 
-    shares = deploy_dollar / cost_eff
+    fine_maker_cash = None
+    if maker_price_decimal is not None:
+        try:
+            shares, fine_maker_cash = _fine_tick_maker_size(
+                deploy_dollar, maker_price_decimal, maker_min_size)
+        except ValueError as exc:
+            print(f"\nDECISION: SKIP — explicit maker size is not executable: {exc}")
+            return 0
+        deploy_dollar = float(fine_maker_cash)
+        print(f"  [fine-tick maker] {shares} integer shares; exact signed cash ${fine_maker_cash}")
+    else:
+        shares = deploy_dollar / cost_eff
     profit_if_win = shares * (1.0 - cost_eff)
 
     # Robust-edge gate (2026-05-29: replaces the retired flat 10pp edge bar).
@@ -3100,7 +3251,7 @@ def main() -> int:
 
     if not args.execute:
         if maker_px is not None:
-            print(f"\nDECISION: WOULD_REST ${deploy_dollar:.2f} of {side} @ {maker_px:.2f} "
+            print(f"\nDECISION: WOULD_REST ${deploy_dollar:.2f} of {side} @ {maker_px:.6g} "
                   f"post-only (ask {mark:.4f}; fill not guaranteed)")
         else:
             print(f"\nDECISION: WOULD_BUY ${deploy_dollar:.2f} of {side} @ {mark:.4f}")
@@ -3121,7 +3272,8 @@ def main() -> int:
     # midpoint or the ask observed before catalyst analysis.  Re-read the taker
     # ask now, derive the precision-safe raw limit, and enforce --max-price with
     # no network or analysis work between this check and order construction.
-    execution_reference = maker_px
+    execution_reference = (maker_price_decimal if maker_price_decimal is not None
+                          else maker_px)
     if not args.maker:
         fresh_ask = _best_ask(token)
         if fresh_ask is None:
@@ -3138,7 +3290,10 @@ def main() -> int:
         execution_reference = fresh_ask
     try:
         buy_price = _single_buy_preflight(
-            execution_reference, tick, args.max_price, maker=args.maker)
+            execution_reference,
+            maker_tick_decimal if maker_tick_decimal is not None else tick,
+            args.max_price, maker=args.maker,
+            allow_fine_tick_maker=args.maker_price is not None)
     except RuntimeError as exc:
         print(f"\nDECISION: SKIP — hard price cap at execution: {exc}")
         return 0
@@ -3163,7 +3318,14 @@ def main() -> int:
     # (notional + exchange fee) stays within the deploy budget.
     execution_fee_per_share = 0.0 if args.maker else pm_fees.fee_per_share(m, buy_price)
     execution_cost = buy_price + execution_fee_per_share
-    target_shares = max(1, round(deploy_dollar / execution_cost))
+    if maker_price_decimal is not None:
+        target_shares = int(shares)
+        clean_usd_decimal = maker_price_decimal * target_shares
+        final_risk = float(clean_usd_decimal)
+    else:
+        target_shares = max(1, round(deploy_dollar / execution_cost))
+        clean_usd_decimal = None
+        final_risk = target_shares * execution_cost
     execution_robust_ev = target_shares * (p_robust - execution_cost)
     if p_robust <= execution_cost or execution_robust_ev <= OP_COST:
         print("\nDECISION: SKIP — fresh signed execution price no longer clears the robust gate.")
@@ -3171,7 +3333,8 @@ def main() -> int:
               f"effective={execution_cost:.4f}, p_robust={p_robust:.4f}, "
               f"robust EV=${execution_robust_ev:+.2f}")
         return 0
-    final_risk = target_shares * execution_cost
+    if maker_price_decimal is None:
+        final_risk = target_shares * execution_cost
     try:
         final_positions = _fetch_live_positions()
         final_open_buys = _fetch_open_buy_commitments()
@@ -3188,7 +3351,32 @@ def main() -> int:
         print(f"\nDECISION: SKIP — final signed order fails capital cap: "
               f"{final_cap_error}")
         return 0
-    clean_usd = round(target_shares * buy_price, 2)
+    if maker_price_decimal is not None:
+        try:
+            fresh_book_response = httpx.get(
+                "https://clob.polymarket.com/book",
+                params={"token_id": token}, timeout=15)
+            fresh_book_response.raise_for_status()
+            fresh_book = fresh_book_response.json()
+            _validate_fine_tick_book_identity(
+                fresh_book, token, str(m.get("conditionId") or ""))
+            fresh_asks = [_decimal_input(x.get("price"), "live ask")
+                          for x in fresh_book.get("asks", []) if isinstance(x, dict)]
+            fresh_ask = min(fresh_asks) if fresh_asks else None
+            fresh_tick = _decimal_input(fresh_book.get("tick_size"), "live book tick")
+            _validate_fine_tick_maker_price(
+                args.maker_price, fresh_tick, fresh_ask)
+            fresh_min_size = _decimal_input(
+                fresh_book.get("min_order_size"), "live minimum order size")
+            if fresh_min_size <= 0:
+                raise ValueError("current live minimum order size must be positive")
+            if Decimal(target_shares) < fresh_min_size:
+                raise ValueError("integer shares are below the current live minimum order size")
+        except Exception as exc:
+            print(f"\nDECISION: NEED_REVIEW — explicit maker price is no longer verified passive: {exc}")
+            return 1
+    clean_usd = (float(clean_usd_decimal) if clean_usd_decimal is not None
+                 else round(target_shares * buy_price, 2))
     signed_cash_error = _signed_buy_cash_error(clean_usd)
     if signed_cash_error:
         print(f"\nDECISION: SKIP — {signed_cash_error}; no reservation or order sent.")
@@ -3202,6 +3390,8 @@ def main() -> int:
         "shares": float(target_shares),
         "risk": float(final_risk),
     }
+    if maker_price_decimal is not None:
+        reservation_record["limitPrice"] = str(maker_price_decimal)
     try:
         reservation_record["baselineBought"] = _reservation_indexed_bought(
             reservation_record, final_positions)
@@ -3212,9 +3402,13 @@ def main() -> int:
     mode = "RESTING post-only BID (record in notes/resting_orders.md)" if args.maker else "taker FAK"
     print(f"\n# Executing BUY {target_shares} shares ({side}) @ {buy_price} (tick {tick}) for ${clean_usd} [{mode}]")
 
+    signed_price_arg = (str(maker_price_decimal) if maker_price_decimal is not None
+                        else str(buy_price))
+    signed_cash_arg = (str(clean_usd_decimal) if clean_usd_decimal is not None
+                       else str(clean_usd))
     cmd = [".venv/bin/python", "scripts/clob_v2.py",
            "buy" if side in ("YES", "NO") else "sell",
-           token, str(buy_price), str(clean_usd), *order_flags,
+           token, signed_price_arg, signed_cash_arg, *order_flags,
            "--reservation-id", reservation_id]
     if neg_risk:
         cmd.extend(["--neg-risk", "true"])

@@ -1,0 +1,12 @@
+{
+  "schema": "root_reviewed_money_change.v1",
+  "reviewed_utc": "2026-10-19T23:37:09.085635+00:00",
+  "source": "scripts/polyclaude_enter.py",
+  "source_sha256": "fb5beb47e49ffcd86fbb1315702aa97834262c92d99f0358175dc404a2a3a8e6",
+  "tests": "tests/test_fine_tick_maker_price.py",
+  "tests_sha256": "9bcdd5b55824bce8c63e824035b29798cd65c0779a2077a241becc2c0322e4f4",
+  "root_focus_tests_passed": 221,
+  "money_math_checks_passed": 169,
+  "source_review": "Fullinitialdiff plusrequiredasset/CID/nonfuture<=180s/currentpositive-minfix+mockedmain-flowwiringreviewed. Defaultmaker/book_walk/writerunchanged; no financialactionfromrepair.",
+  "scope": "Opt-infine-tickmakeronly; no daemoncodechanged/restartneeded; nodeploymentortestapprovalsubstituteforcurrententrygates."
+}
