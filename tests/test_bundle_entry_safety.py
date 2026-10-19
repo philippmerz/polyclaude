@@ -827,6 +827,110 @@ def test_trade_match_totals_require_exact_confirmed_buy_identity(monkeypatch):
         entry._fetch_order_match_totals({"0xorder": record})
 
 
+def _complementary_maker_buy_trade() -> dict:
+    # Redacted shape of the confirmed Whalefall NO fill: the outer trade
+    # carries YES, while our maker row carries the six NO shares we bought.
+    return {
+        "id": "complementary-fill", "status": "CONFIRMED",
+        "market": "0xmarket", "asset_id": "token-yes", "side": "BUY",
+        "size": "40", "taker_order_id": "other-order",
+        "maker_orders": [{
+            "order_id": "0xorder", "asset_id": "token-no", "side": "BUY",
+            "matched_amount": "6", "price": "0.17", "outcome": "No",
+        }],
+    }
+
+
+def test_complementary_maker_fill_counts_own_shares_once(monkeypatch):
+    trade = _complementary_maker_buy_trade()
+    failed = {**trade, "id": "failed-fill", "status": "FAILED"}
+    monkeypatch.setattr(clob_v2, "list_authenticated_trades", lambda: {
+        "status_code": 200,
+        "body": {"next_cursor": "LTE=", "data": [trade, trade, failed]},
+    })
+
+    assert entry._fetch_order_match_totals({
+        "0xorder": {"conditionId": "0xmarket", "asset": "token-no"},
+    }) == {"0xorder": pytest.approx(6)}
+
+
+@pytest.mark.parametrize("mismatch", ["market", "maker_asset", "maker_side", "status"])
+def test_complementary_maker_fill_still_requires_exact_identity(
+        mismatch, monkeypatch):
+    trade = _complementary_maker_buy_trade()
+    if mismatch == "market":
+        trade["market"] = "0xother-market"
+    elif mismatch == "maker_asset":
+        trade["maker_orders"][0]["asset_id"] = "token-yes"
+    elif mismatch == "maker_side":
+        trade["maker_orders"][0]["side"] = "SELL"
+    else:
+        trade["status"] = "MATCHED"
+    monkeypatch.setattr(clob_v2, "list_authenticated_trades", lambda: {
+        "status_code": 200,
+        "body": {"next_cursor": "LTE=", "data": [trade]},
+    })
+
+    with pytest.raises(RuntimeError, match="identity/state"):
+        entry._fetch_order_match_totals({
+            "0xorder": {"conditionId": "0xmarket", "asset": "token-no"},
+        })
+
+
+def test_complementary_maker_row_does_not_relax_taker_identity(monkeypatch):
+    trade = _complementary_maker_buy_trade()
+    trade["taker_order_id"] = "0xorder"
+    monkeypatch.setattr(clob_v2, "list_authenticated_trades", lambda: {
+        "status_code": 200,
+        "body": {"next_cursor": "LTE=", "data": [trade]},
+    })
+
+    with pytest.raises(RuntimeError, match="taker trade disagrees"):
+        entry._fetch_order_match_totals({
+            "0xorder": {"conditionId": "0xmarket", "asset": "token-no"},
+        })
+
+
+def test_complementary_partial_cancel_waits_for_indexed_buys(
+        tmp_path, monkeypatch):
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    reservation_id = entry._add_entry_reservation({
+        "conditionId": "0xmarket", "slug": "candidate",
+        "question": "Candidate?", "eventIds": ["event-1"],
+        "asset": "token-no", "shares": 10, "risk": 1.7,
+        "baselineBought": 5,
+    })
+    entry._update_entry_reservation(
+        reservation_id, "0xorder", submission_state="cancelled")
+    rows = entry._read_entry_reservations()
+    rows[0]["cancelVerifiedAt"] = (
+        datetime.datetime.now(datetime.timezone.utc)
+        - datetime.timedelta(minutes=10)).isoformat()
+    entry._write_entry_reservations(rows)
+    monkeypatch.setattr(clob_v2, "get_authenticated_order", lambda _order_id: {
+        "status_code": 200,
+        "body": {
+            "id": "0xorder", "status": "CANCELED", "side": "BUY",
+            "market": "0xmarket", "asset_id": "token-no",
+            "original_size": "10", "size_matched": "6", "price": "0.17",
+        },
+    })
+    monkeypatch.setattr(clob_v2, "list_authenticated_trades", lambda: {
+        "status_code": 200,
+        "body": {"next_cursor": "LTE=", "data": [_complementary_maker_buy_trade()]},
+    })
+    indexed = [{
+        "conditionId": "0xmarket", "asset": "token-no", "slug": "candidate",
+        "size": 0, "totalBought": 10,
+    }]
+
+    assert len(entry._entry_reservation_commitments(indexed, [], prune=True)) == 1
+    assert entry._read_entry_reservations() == rows
+    indexed[0]["totalBought"] = 11
+    assert entry._entry_reservation_commitments(indexed, [], prune=True) == []
+    assert not entry._entry_reservations_path().exists()
+
+
 def test_cancel_retirement_requires_affirmative_terminal_order(monkeypatch):
     record = {
         "conditionId": "0xmarket", "asset": "token-yes", "shares": 10,

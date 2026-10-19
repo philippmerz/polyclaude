@@ -84,6 +84,10 @@ provisional and requires an independent fresh rewalk before any action.
   execution defaults to maker-or-skip: `--execute` with a taker route requires a
   logged `--taker-urgency` naming the short-lived reason that justifies fee and
   slippage. Multi-leg bundles retain their separately guarded taker-only path.
+  Cancellation reconciliation binds complementary fills to the reserved maker's
+  own asset/BUY row and parent condition; outer trade assets can differ. Terminal
+  cancellation, exhaustive fills and indexed cumulative purchases still gate
+  reservation retirement. [Verified repair](../research/2026-10-19-2232-periodic-check.md).
 - `catalyst_check.py --facts-only --slug EXACT_SLUG` — collect dated source
   evidence while the primary analyst owns probabilities and selection. Feed
   title matches remain unverified leads in both modes; missing bodies are gaps.

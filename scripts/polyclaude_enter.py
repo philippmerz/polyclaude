@@ -1052,11 +1052,11 @@ def _fetch_order_match_totals(records: dict[str, dict]) -> dict[str, float]:
             maker_order_id = str(maker.get("order_id") or "")
             if maker_order_id in targets:
                 expected = records[maker_order_id]
+                # Complementary matches can name the other outcome in the
+                # outer trade; the reserved maker's own row binds its asset.
                 if (status not in {"CONFIRMED", "FAILED"}
                         or str(trade.get("market") or "").lower()
                         != str(expected.get("conditionId") or "").lower()
-                        or str(trade.get("asset_id") or "")
-                        != str(expected.get("asset") or "")
                         or str(maker.get("asset_id") or "")
                         != str(expected.get("asset") or "")
                         or str(maker.get("side") or "").upper() != "BUY"):
