@@ -1,0 +1,44 @@
+{
+  "review_index": 417,
+  "market_id": "5351192",
+  "condition_id": "0x786a82f4f500e6dc23ed88b91351a4f0c9a9be135f932f0f284ce94dac273c8c",
+  "criteria_sha256": "274b9ccb3de8ccd0b34125c7422f9075e4bccc167bf6429fe41b97075d79571a",
+  "status": "excluded_factual",
+  "literal_analysis": "Presbyterianminus10.5Oct17collegefootball: Presbyterianrequireswinby>=11,otherwiseStetson. Postponementopen;canceledwithoutmakeup50–50. NCAA source, noindependentscoreclaim.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5351192",
+      "observed_utc": "2026-10-19T02:55:45.870486+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Presbyterian": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "Stetson": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0417.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:54.720155+00:00",
+  "question": "Spread: Presbyterian (-10.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 417,
+  "report_sha256": "a7c7213f88001372a773a2c6f73d4bddfd5807fb832f4f00df1d0cda2211ed3b"
+}

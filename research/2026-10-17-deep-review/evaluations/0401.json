@@ -1,0 +1,44 @@
+{
+  "review_index": 401,
+  "market_id": "5726939",
+  "condition_id": "0x4af1235b72e9b0d9c370663673bf453eb413964dff93da312c47df228e1e024c",
+  "criteria_sha256": "7396707b8fcc6b0326f93cebcbbde09b80ba861f93590e8db8994b63bb52dc51",
+  "status": "excluded_factual",
+  "literal_analysis": "SanFranciscoInternationalKSFOOct17highestHOURLYwhole°F in86–87Fbracket;useShowHourlyData,notcityorotherfrequency. NOAAhighestTemp,wholedegrees;nextdayfirstdatapoint freezesrevisions, latestnextday23:59ETfallbackWU/lowestbracketifnodata. Clearlyerroneoustechnical/interfereddata maywait7ETcalendardaysforcorrection/clarification; noindependenttemperatureresultclaimed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5726939",
+      "observed_utc": "2026-10-19T02:55:45.003503+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0401.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:52.928463+00:00",
+  "question": "Will the highest temperature in San Francisco be between 86-87°F on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 401,
+  "report_sha256": "524f314f215fb4982db1bd20a7276759a695a0ff9261f473806b56829329268f"
+}

@@ -1,0 +1,44 @@
+{
+  "review_index": 387,
+  "market_id": "5349745",
+  "condition_id": "0xf68035918f00868bded5f5c0bf8f68fb1f8d2956f592b1a720a813f8d568286b",
+  "criteria_sha256": "8beff855fbe35464f7268cca63ddefae96407a7680c7242d5c121bbe93f2d721",
+  "status": "excluded_factual",
+  "literal_analysis": "GeorgiaState–JamesMadisonOct17collegefootballwinner,OTincluded; tie50–50; postponementremainsopen;canceledwithoutmakeup50–50. NCAA source; no independent gamewinnerclaim.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5349745",
+      "observed_utc": "2026-10-19T02:55:44.243072+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Georgia State": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "James Madison": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0387.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:51.094730+00:00",
+  "question": "Georgia State vs. James Madison",
+  "valuation_author": "primary_operator",
+  "original_index": 387,
+  "report_sha256": "a3db4e245264fb6e8d1fd4e45c0240e1abea700a5d274dde2224a0e7ec714af0"
+}

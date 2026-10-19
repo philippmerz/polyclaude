@@ -1,0 +1,169 @@
+{
+  "review_index": 312,
+  "market_id": "898412",
+  "condition_id": "0xcd2640464754b9a894ffec98ac11554fdd507ea89ca01237eabb3a6de4a606e6",
+  "criteria_sha256": "c3a1df6decc727499457ff33d651e27332b8b5e52f127d8db3bed50afe078e5a",
+  "status": "valued",
+  "literal_analysis": "OfficialF1finalseasonP1/tiebreak. MathematicalelimNOearly;YESwaitfinalscheduledraceresults. Canceled/incompletebyMar31 2027 23:59ET=>Other. APIendmidnightnotliteralcutoff. SixGP150max/noSprints;49pointsguaranteestrictcurrentlead, notclinchalready.",
+  "evidence": [
+    {
+      "url": "https://www.formula1.com/en/results/2026/drivers",
+      "observed_utc": "2026-10-19T02:30:38.572542+00:00",
+      "finding": "Rootrawtable/hashes:340vs238andtop6onlymathematicallyalive+150;6futureGPs; Ant8/R3GPwins fromseparatelycachedofficialdriverpages,notfutureskill."
+    },
+    {
+      "url": "https://www.fia.com/system/files/documents/fia_2026_f1_regulations_-_section_a_general_provisions_-_iss_02_-_2026-02-27.pdf",
+      "observed_utc": "2026-10-19T02:30:39.405141+00:00",
+      "finding": "Rawhashverified;rootwebPDFreadA2.1.4/2.2+table/screenshotp9attempt: race25max/tiebreakwinsseconds. No fastest-lap bonus added."
+    },
+    {
+      "url": "https://www.betfair.com/betting/motor-sport/formula-1/f1-outrights-2026/winner-drivers-championship/om-924.494300217",
+      "observed_utc": "2026-10-19T02:55:46.472766Z",
+      "finding": "Rootpublicsearchindexedfield6aliveodds; direct403/webopen0lines/cacheoriginunknown. Singleoperatorbenchmark,notverifiedliveconsensus; fullsourcegap preserved. Proportionalvs powernormalizationsmateriallydifferent."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.93,
+    "low": 0.8,
+    "high": 0.995,
+    "method": "Independentindexedfullalivefieldproportionaldevig.93637×.995completion=.93169→.93; powerde-vigsensitivityseparate.",
+    "reasoning": "Lead/rules independentlygrounded; no extraedgefromstandingdoublecount. Source/normalization/hiddenabsence/penalty/calendaruncertainty,broad80–99.5notcalibrated. Default10pp/NO0selected; no unmeasuredhighconfidencebond-license.",
+    "model_path": "models/f1_312_primary_0305.json",
+    "actual_entry_reserve_pp": 10
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_312_0305.json",
+    "quote_file_sha256": "9d61b888576349a59eb527801c3f8348e52c55353d7cec483b759ca8cc6b8721",
+    "quote_capture_utc": "2026-10-19T02:59:52.260468+00:00",
+    "gamma_received_utc": "2026-10-19T02:59:52.013073+00:00",
+    "hypothetical_gross_shares": null,
+    "horizon_days": 50.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.03,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.93,
+        "selected_stress_probability": 0.8300000000000001,
+        "best_bid": 0.975,
+        "best_ask": 0.979,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792378780277",
+        "book_received_utc": "2026-10-19T02:59:52.152067+00:00",
+        "book_age_seconds_at_receipt": 11.875066995620728,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.895,
+            "fee": 0.00309,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.979
+              }
+            ],
+            "net": 4.89809
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.875,
+            "fee": 0.00366,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.975
+              }
+            ],
+            "net": 4.87134
+          }
+        },
+        "taker_cost_usd": 4.89809,
+        "central_expected_profit_usd": -0.24808999999999948,
+        "selected_stress_profit_usd": -0.7480899999999995,
+        "break_even_before_carry": 0.979618,
+        "break_even_constant_carry": 0.9837920272317275,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.06999999999999995,
+        "selected_stress_probability": 0,
+        "best_bid": 0.021,
+        "best_ask": 0.025,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792378780277",
+        "book_received_utc": "2026-10-19T02:59:52.152067+00:00",
+        "book_age_seconds_at_receipt": 11.875066995620728,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 50.0,
+            "gross": 1.25,
+            "fee": 0.03657,
+            "fills": [
+              {
+                "shares": 50.0,
+                "price": 0.025
+              }
+            ],
+            "net": 1.28657
+          },
+          "bids": {
+            "complete": true,
+            "filled": 50.0,
+            "gross": 1.05,
+            "fee": 0.03084,
+            "fills": [
+              {
+                "shares": 50.0,
+                "price": 0.021
+              }
+            ],
+            "net": 1.01916
+          }
+        },
+        "taker_cost_usd": 1.28657,
+        "central_expected_profit_usd": 2.213429999999997,
+        "selected_stress_profit_usd": -1.28657,
+        "break_even_before_carry": 0.0257314,
+        "break_even_constant_carry": 0.025841038210313076,
+        "current_execution_authorization": false
+      }
+    },
+    "hypothetical_quantity_by_outcome": {
+      "Yes": 5,
+      "No": 50
+    },
+    "size_note": "FiveYES orfiftyNO; each exceeds$1grossBUYnotional atobservedasks/makerbids. Hypotheticalplanning, not orders.",
+    "normalization_sensitivity_file": "research/2026-10-17-deep-review/models/f1_312_vig_sensitivity_0305.json"
+  },
+  "verdict": "NOENTRY: YESfailscentral/reserve; NOpositivecentralonlyunderfragileproportionaldevig,failsdefaultreserve/powercountermodel. No order/prior/watcher.",
+  "reopen_condition": "Currentindependentbenchmark/state/rule/calendar orrobustlybetterquote; exactaccount/books/gates.",
+  "portfolio_action": "none",
+  "evaluated_utc": "2026-10-19T03:01:45.372948+00:00",
+  "question": "Will Kimi Antonelli be the 2026 F1 Drivers' Champion?",
+  "valuation_author": "primary_operator",
+  "original_index": 312,
+  "report_sha256": "6c23c7a4d1b894cd837625be40cdc1f386973921b9cd0f861ff56dba832dc637"
+}

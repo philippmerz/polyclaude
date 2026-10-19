@@ -1,0 +1,44 @@
+{
+  "review_index": 411,
+  "market_id": "5255063",
+  "condition_id": "0x3c810d6a2579cf23d4fba4935e930db1892f86f8027c236b3a71844c2ffed093",
+  "criteria_sha256": "2104dde1e548fec8f01c96ec0d8b9894a7ee9c8a5a41f899b5e3ed786090a6bd",
+  "status": "excluded_factual",
+  "literal_analysis": "UFCofficialMikeMalottvsJoaquinBuckleywinnerOct17. Draw/technicaldraw/NoContest/unscored/canceled/postponedbeyondOct31=>50–50. No independentfightoutcomecertified.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5255063",
+      "observed_utc": "2026-10-19T02:55:45.597544+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Mike Malott": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "Joaquin Buckley": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0411.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:54.114530+00:00",
+  "question": "UFC Fight Night: Mike Malott vs. Joaquin Buckley (Welterweight, Main Card)",
+  "valuation_author": "primary_operator",
+  "original_index": 411,
+  "report_sha256": "522733fcd46c0159d43249e8a6294f4b405fe63be8b3bf02852e5070484ea6ee"
+}

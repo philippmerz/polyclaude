@@ -1,0 +1,57 @@
+{
+  "schema": "primary_external_sports_benchmark_projection.v1",
+  "index": 312,
+  "created_utc": "2026-10-19T02:59:51.686383+00:00",
+  "price_blind": true,
+  "market_id": "898412",
+  "condition_id": "0xcd2640464754b9a894ffec98ac11554fdd507ea89ca01237eabb3a6de4a606e6",
+  "criteria_sha256": "c3a1df6decc727499457ff33d651e27332b8b5e52f127d8db3bed50afe078e5a",
+  "p_yes": 0.93,
+  "p_no": 0.07,
+  "broad_yes": [
+    0.8,
+    0.995
+  ],
+  "actual_entry_reserve_pp": 10,
+  "selected_yes": 0.83,
+  "selected_no": 0,
+  "benchmark_fair_Antonelli": 0.9363716812239434,
+  "source_completion_branch": 0.005,
+  "raw_projected_yes": 0.9316898228178238,
+  "rounding": "Adopt93%, notprecisionbeyondsourcequality.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0312_facts_0235.json",
+      "sha256": "70b6f0b9d32ad78ec1e6ec31351632ab42ed2215acfad5a9f6b9e54c78c6c9d2"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0312_facts_numeric_0235.json",
+      "sha256": "e4998a78fea84765f17b360e6ea2d547faf3a3b9d35dcf8a0587980b80015af6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0312_benchmark_0305.json",
+      "sha256": "01aff4d4c3089015b0392c5d6e8cccec7a25dc75c1fa47aa050a439a3828f60e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0312_new_benchmark_0305.json",
+      "sha256": "daf798c63652c726b70480fb78a762f7b74d7f858032097bf916de597b381697"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0312_root_rule_math_0305.json",
+      "sha256": "41f9f6f39d583d111e9470ae84a55be4ce62a5d5c511803d9deaaed261c405b1"
+    }
+  ],
+  "reasoning": [
+    "Official340vs238and6remainingGPs/max150 mean strongposition, notmathematicalclinch. 49additionalpointsguaranteestrictlyaboveRussellmax388absentpenalties/schedulechange. EightGPwinsvsRussell3 matterforties. PMYESwaitsfinalscheduledraceresults, evenifclinchedearlier.",
+    "Six-source-selection sportsbook field inrootpublicsearchrenderer:Ant1/80;Verstappen25/1;Hamilton/Russell100/1;Leclerc/Norris225/1. Impliedsum~1.05475; proportionaldevigAnt93.6372%. Singleoperator, not independentconsensus; cacheoriginunknown/direct403/webopen0lines. Older25/1andmulti-languageviewsnotaveraged.",
+    "Use independentdatedbenchmark as conditionalforecastbase with0.5%completion/Otherbranchratherthaninventasportsabilityedgefrom17races. Broad80–99.5% coversstaleness,unseeninjury/penalty/schedule, oddsnormalization/voidrulemapping andstrongcontinuity; notcalibratedinterval.",
+    "No furtherad hoc pboostfrom102lead: bookmakeralreadyincorporatesstanding. F1/FIArawgzhashes+literalstandings/Sprintcalendarindependentlyread; articlefastestlapbonusnotused."
+  ],
+  "limits": [
+    "Bookmaker consensus rule: source is limitedsingleoperatorbenchmark, not verifiedcurrentmultibookconsensus. Financialdecisionrequiresfreshbenchmark/state/gates ifinteresting.",
+    "General2026FIAsectionAissue02 verified, butunretrievedlaterbindingamendments canchangefuturestate. No health/availabilityclaimfromboundedabsence.",
+    "Default10ppinstance/catalystreserve; numerical93% is not measuredhighconfidencebondtail, so no tail-multlicativeexceptionlicense.",
+    "Same-teamoutcomesracefailurecorrelated; titlewinneralternativesexclusive, notindependentinvestments. Generalglobalvenue/calendarshocks overlapportfolio, nospecialhedgecredit."
+  ],
+  "execution_authority": false
+}

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T02:51:22.796342+00:00
+Updated: 2026-10-19T03:03:56.116127+00:00
 
-**310 valuations saved; first milestone100:** 310 valued; 5 blocked after in-depth review. 355 factual exclusions separately; 2330 pending.
+**311 valuations saved; first milestone100:** 311 valued; 5 blocked after in-depth review. 364 factual exclusions separately; 2320 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -323,6 +323,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |309|[Ballon d'Or 2026: Kylian Mbappé or Lamine Yamal to finish higher?](revisions/0309_20261019T025122487555Z.md)|blocked_after_review|BLOCKEDAFTERREVIEW: namedrankingforecastunsupported; bothcostsreviewed/noentry. Notcheapmodelrejection/factualexclusion/completedvaluation.|
 |310|[Will Hayden Panettiere be the #1 searched passing on Google this year?](evaluations/0310.md)|valued|NOENTRY: YESfailscentral; NOtakerfails20/25ppreserve;68cmakerhaspositivebase20ppdiagnosticbutfails25ppconditionalfillstress/carry. Noorder/prior/watcher.|
 |311|[Will the highest temperature in Tel Aviv be 26°C on October 17?](evaluations/0311.md)|excluded_factual|Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.|
+|312|[Will Kimi Antonelli be the 2026 F1 Drivers' Champion?](evaluations/0312.md)|valued|NOENTRY: YESfailscentral/reserve; NOpositivecentralonlyunderfragileproportionaldevig,failsdefaultreserve/powercountermodel. No order/prior/watcher.|
 |315|[Counter-Strike: Heroic vs 100 Thieves - Map 2 Winner](evaluations/0315.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |321|[Virginia vs. SMU: O/U 51.5](evaluations/0321.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |323|[Will the highest temperature in Wuhan be 29°C on October 17?](evaluations/0323.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -351,13 +352,22 @@ Each report below is written before moving to the next evaluation. Related contr
 |377|[Will the highest temperature in Guangzhou be 33°C on October 17?](evaluations/0377.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |381|[Devils vs. Capitals](evaluations/0381.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
 |385|[Will the Democratic Party win the VA-06 House seat?](evaluations/0385.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|387|[Georgia State vs. James Madison](evaluations/0387.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|389|[Will the highest temperature in Madrid be 23°C on October 17?](evaluations/0389.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|392|[Will it rain in Atlanta, GA on October 17?](evaluations/0392.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |393|[Dota 2: Yellow Submarine vs Spirit Academy - Game 2 Winner](evaluations/0393.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |395|[Will the highest temperature in Qingdao be 23°C on October 17?](evaluations/0395.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |399|[Will Leyton Orient FC win on 2026-10-17?](evaluations/0399.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|401|[Will the highest temperature in San Francisco be between 86-87°F on October 17?](evaluations/0401.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |405|[Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?](evaluations/0405.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|407|[Will the highest temperature in Warsaw be 14°C on October 17?](evaluations/0407.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |409|[Will the Democratic Party win the NY-01 House seat?](evaluations/0409.md)|valued|Potential small passive YES source revalidation|
+|411|[UFC Fight Night: Mike Malott vs. Joaquin Buckley (Welterweight, Main Card)](evaluations/0411.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |413|[Will the highest temperature in Taipei be 34°C on October 17?](evaluations/0413.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |415|[Will the Republican Party win the TX-25 House seat?](evaluations/0415.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|417|[Spread: Presbyterian (-10.5)](evaluations/0417.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|419|[Will the highest temperature in Munich be 15°C or below on October 17?](evaluations/0419.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|420|[Will Atsumi Harasawa win the 2026 Yokohama mayoral election?](evaluations/0420.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |421|[Will the Republican Party win the MI-04 House seat?](evaluations/0421.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |423|[Counter-Strike: ENCE vs Phantom - Map 2 Winner](evaluations/0423.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |424|[NVIDIA (NVDA) Q3 adjusted gross margin 75% to 77%?](evaluations/0424.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
@@ -683,4 +693,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 312
+Active indices: 313

@@ -1,0 +1,44 @@
+{
+  "review_index": 407,
+  "market_id": "5720834",
+  "condition_id": "0xaedf6f3faabce2e95b0286856aee7cdad5eb075d00e4f9d8e68380169d108602",
+  "criteria_sha256": "3a9c0dfbf20e06d0f18865022cd8c4d179dad2bbc781d1f9617badd404061e44",
+  "status": "excluded_factual",
+  "literal_analysis": "WarsawChopinEPWAOct17highestwhole°C14°Cbracket. NOAAhighestTemp,wholedegrees;nextdayfirstdatapoint freezesrevisions, latestnextday23:59ETfallbackWU/lowestbracketifnodata. Clearlyerroneoustechnical/interfereddata maywait7ETcalendardaysforcorrection/clarification; noindependenttemperatureresultclaimed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720834",
+      "observed_utc": "2026-10-19T02:55:45.409822+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0407.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:53.508805+00:00",
+  "question": "Will the highest temperature in Warsaw be 14°C on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 407,
+  "report_sha256": "920b0126e82999b8ac7f0f7294e0a298bbf3918903d6c2689f0c598be1a08d9a"
+}

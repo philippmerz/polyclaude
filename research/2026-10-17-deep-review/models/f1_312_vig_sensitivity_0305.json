@@ -1,0 +1,23 @@
+{
+  "index": 312,
+  "proportional": {
+    "Antonelli": 0.9363716812239434,
+    "Verstappen": 0.03646447412458626,
+    "Hamilton": 0.009386894329101413,
+    "Russell": 0.009386894329101413,
+    "Leclerc": 0.004195027996633818,
+    "Norris": 0.004195027996633818
+  },
+  "power_exponent": 1.3622264806705529,
+  "power_probabilities": {
+    "Antonelli": 0.9832200919283757,
+    "Verstappen": 0.011816417739367296,
+    "Hamilton": 0.0018606314129660274,
+    "Russell": 0.0018606314129660274,
+    "Leclerc": 0.0006211137531625944,
+    "Norris": 0.0006211137531625944
+  },
+  "after_same_completion_branch_yes": 0.9783039914687338,
+  "interpretation": "Both de-vig models are assumptions. Heavyfavoritefairtail changes materially; scalar proportional normalization alone does not establish a NOmispricing. Sourceindexed/cachedlimits unchanged; no measuredtail.",
+  "execution_authority": false
+}

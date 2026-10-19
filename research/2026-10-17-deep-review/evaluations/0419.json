@@ -1,0 +1,44 @@
+{
+  "review_index": 419,
+  "market_id": "5720729",
+  "condition_id": "0x3da9388e2061fc87def9293ff10fb13fb6bdbbaa75b99875a4b7452f0e17099d",
+  "criteria_sha256": "c4dce1b12d16d0655c029dd41cfa70e7aeac0bbff98b251bfe138575dd04ed10",
+  "status": "excluded_factual",
+  "literal_analysis": "MunichAirportEDDMOct17highestwhole°C<=15bracket. NOAAhighestTemp,wholedegrees;nextdayfirstdatapoint freezesrevisions, latestnextday23:59ETfallbackWU/lowestbracketifnodata. Clearlyerroneoustechnical/interfereddata maywait7ETcalendardaysforcorrection/clarification; noindependenttemperatureresultclaimed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720729",
+      "observed_utc": "2026-10-19T02:55:46.013899+00:00",
+      "finding": "Root full literalrule review plus independently verified raw/gzip/receipt/identity/assets/status: closedtrue/nonaccepting/UMAresolved/binaryterminal. Nontrading currentvenue observation, noteventprobability orindependentresultcertification."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No forecast for exactterminal/nontradingvenuecase.",
+    "reasoning": "Primaryliteralreview+rawstatusproof establishescurrentineligibility,noteventresult."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; no executablebookqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0305/case_0419.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.",
+  "reopen_condition": "Explicitvenuecorrection/reopening+freshfullrule/source/eligibilityreview; noautomaticreplay.",
+  "evaluated_utc": "2026-10-19T03:03:55.319954+00:00",
+  "question": "Will the highest temperature in Munich be 15°C or below on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 419,
+  "report_sha256": "43dec157b3d90dabca9c3285b83e041481d2d90c6b9fb8d67a2125ae780aa35d"
+}
