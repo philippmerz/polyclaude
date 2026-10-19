@@ -1,6 +1,6 @@
-# Current resting orders — October19 20:43 UTC
+# Current resting orders — October19 21:04 UTC
 
-**Five LIVE/zero-matched BUYs /9.12 remaining risk; five exact reservations.** Independent authenticated full order query20:43:44.431725–.760637UTC, indexed positions20:43:44.773666–45.194719 and on-chain SpainCTFs0. Four earlier order terms unchanged; eight indexed identity/size/totalBought rows unchanged. These are vetted result serializations, not rawHTTP or protection against later fills. [Verification](../data/deep_review_20261017/work/0386_postsubmit2043.json).
+**Five LIVE/zero-matched BUYs /9.12 remaining risk; five reservations.** Independent authenticated fully paginated order query21:04:14.826114–15.315297UTC, indexed positions21:04:15.326749–16.036914 and on-chain21:04:16.049156–.568357 SpainCTFs0/WhaleNO6. Order terms and eight indexed identity/size/totalBought rows unchanged since20:43. These are vetted result serializations, not rawHTTP or protection against later fills. [Verification](../data/deep_review_20261017/work/tick204951_account.json).
 
 New Sánchez10YES16c/1.60 is unfilled, not a holding/spend/profit. Primary47.658025%YES/30pp aggregate allowance→17.658025% selected; broadYES10–85 includes losses. Ordinary maker only, no taker/chase/add/automatic repost. Full1.60 may be lost. [Valuation](../research/2026-10-17-deep-review/evaluations/0386.md) · [entry outcome](../research/2026-10-17-deep-review/sanchez386_entry_2043.md).
 
@@ -32,7 +32,7 @@ Canceled orders remain closed. Reposting or changing an existing specific pull i
 
 - **MT01 case271 canceled unfilled/DEC228:** original10YES33c/$3.30, one vetted cancel04:04:03; after300s terminal0/trades/index/bothCTFs0 verified. New AmericanPulse poll-source uncertainty; no adverse probability adopted. Only its reservation retired; historical47/37 prior archived. No replay/repost. [Outcome](../research/2026-10-17-deep-review/mt01_271_canceled_outcome_0413.md).
 - **293YB/296gas canceled unfilled/DEC226**, [outcome](../research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md); **Sedgwick2054 canceled unfilled/DEC224**, [outcome](../research/2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md). Former pulls complete; no automatic retries.
-- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222; thesis broken/DEC235.** Numbers20:02 below8m; NO3/selected0.20:32exactNO book has no bids, no sale submitted; old BUYpull obsolete. [Latest management](../data/deep_review_20261017/work/whale_2032_book_followup.json); existing22UTC/earlier material source or executable-bid review.
+- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222; thesis broken/DEC235.** Numbers20:02 below8m; NO3/selected0.21:04exactNO book has no bids/YESnoasks,24.71s age/chainNO6, UMA stillproposed. No sale submitted; old BUYpull obsolete. [Latest check](../research/2026-10-19-2104-news-checkin.md); existing22UTC/earlier material source or executable-bid review.
 - BOI/earlier film canceled; OpenRouter/Messi/MI original BUYs filled, old pulls obsolete.278/294/300closedunplaced. Unfilled commitments are contingent promises, never purchases/profit.
 
 Full earlier financial history is byte-identical in [archive](resting_orders_20261019T0210_archive.md), SHA256 `e761aecc21d3672b3152e7e72c1e7e13201486cc3b73d8bea6945b0243f2841d`; later dated journal/outcomes supplement it. Never replay archived instructions.

@@ -1,0 +1,109 @@
+{
+  "read_utc": "2026-10-19T21:04:59.425662+00:00",
+  "file_bytes": 885867,
+  "file_sha256": "00de0d11328476a8bacfb8a264c6cf029f1e930694ea78551bb1451a1390fae3",
+  "rows": [
+    {
+      "line": 1121,
+      "line_sha256": "404cbdd5560d82fbe5026f0b2f03b6af35658947fa93c66691c7706171df9bf7",
+      "row": {
+        "alert_id": "12856988e4fc1b37c5fa655fbf9ca56e311c86da",
+        "ts": "2026-10-19T19:58:11Z",
+        "title": "Abdul El-Sayed disavows Muslim Brotherhood, responds to claims - Bridge Michigan",
+        "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWHpyRWU3N1lvd2FzTHNvOEQzU1Z4dG9vbUIwci1iYVR3TUpVeW9iMHdXQVZ0NkxlRGV6NUVaMnl1NHRIRGk2M1ktdklYMUpja3NvblE3OWM4R0xmaE04bFZZSkRWLUZoSEN0UnBrWVhKaGVkR3BSQ1JvV0ppZjlWajFQTTlGQS1fZVlOSXhIWjFIRkhHUlV5V1BYQWNXY1A1LWxRWXJB?oc=5",
+        "impacts": [
+          {
+            "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+            "level": "MATERIAL",
+            "reason": "El-Sayed’s disavowal may shift statewide perceptions and pressure the thesis that Democrats will lose Michigan."
+          }
+        ],
+        "relevance": "portfolio_material_critical"
+      }
+    },
+    {
+      "line": 1123,
+      "line_sha256": "a6517d8216f1087b01ce952bdc66dc0ffc865f637f6c782da6c3dcec9a5c9c0a",
+      "row": {
+        "alert_id": "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+        "ts": "2026-10-19T19:58:25Z",
+        "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WKEF",
+        "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPcHJzMkMyWW1FTFNIWF9ubUxhV25JZ2s1RzJWSjRVYTNHMDk3T3g4WENibzVYX1g3SzVqdXo2c0drbU43ZFdFbF92dHVxLWppWWFNME8yeEpWRW41LVRkckpJcjcxd2MyZnU1X1c4ZlJ4ZHpyb1QzVW44MGVPS3ZGT0U0UVo4ampzQk5INlVzalBwbmNLUWJfcDFDVkVsQmFWampfbXRzSngxdDF0c2ltQW5DSUxoOVNyMEF3ODlfOUVFQmFfZUFpZFR1THNrcVkwSGFVVGxoUzhhdGVTWGpQMFAwWll6VWQxdEpiQ3lpQm5kNFM4SmVZ?oc=5",
+        "impacts": [
+          {
+            "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+            "level": "MATERIAL",
+            "reason": "Controversy may weaken El-Sayed and reinforce the No position on a Democratic Michigan Senate victory."
+          }
+        ],
+        "relevance": "portfolio_material_critical"
+      }
+    },
+    {
+      "line": 1124,
+      "line_sha256": "91d2bd5d56d9124d0278b9f2df852ad9475ccd83d6f2cbdc8b4174e458146d2e",
+      "row": {
+        "alert_id": "dd8f14bde84cd4c2064aa3d1bb4563eb8b528564",
+        "ts": "2026-10-19T19:58:35Z",
+        "title": "\"Street Fighter\" Wins the Weekend With $51 Million Global Debut as \"Whalefall\" Sinks and Elizabeth Holmes Doc Makes Box Office History - 玩具人 TOY PEOPLE",
+        "link": "https://news.google.com/rss/articles/CBMiUEFVX3lxTFBBbWtfUVg4RW00V1N3TGtSWHlMQnlndnNUaDZab2hFU2ZQc1lDb1dZSkFXQno5aWg3WkQxMWlfa19JRmNCak1IZDI3MVRUV0RC?oc=5",
+        "impacts": [
+          {
+            "position": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+            "level": "MATERIAL",
+            "reason": "“Whalefall sinks” supports the thesis that its opening weekend was below $8M; re-evaluate on the next price tick."
+          }
+        ],
+        "relevance": "portfolio_material_critical"
+      }
+    },
+    {
+      "line": 1130,
+      "line_sha256": "9ac00a8855666aac549230582328b1322a89d0b8c45a78cfff96c2867f35fc20",
+      "row": {
+        "alert_id": "754bc5513455dca117cdbd347470dbafd01e7a93",
+        "ts": "2026-10-19T20:49:42Z",
+        "title": "A “Perfect Storm to Put Kansas In Play”: Roger Marshall Faces “Uphill Battle” in Toss-Up Senate Race - DSCC",
+        "link": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxQWkp3bm44SFBuNlJWbUVXa2xxekY0SWZIUTBwRE5PNkxKZ19NT2dOR3pUczJkY0hXTkxzeVVEZnNPbkttZmthbF9ra2tpZ2NUUzJaMnFoUWdWLUtvbFpBNFNHcGU2eDFJTHRRdTNOVHV2MG03NlYxU0ROWkVUS0ttbXFGRUs3UWt1bkpJNmZVX2RKdWJ1c2k1alBxaUVRb3FiMEZXNWQ2U1ViX1A5amtuS1lVcjBEMm5SYlZxaEtxUFhDY2c?oc=5",
+        "impacts": [],
+        "relevance": "research_only"
+      }
+    },
+    {
+      "line": 1131,
+      "line_sha256": "63516376397c68b946af46fd1cb40d81cf232926dd0a5f3afc45c72a70be3a4c",
+      "row": {
+        "alert_id": "e9eb9f0a1bc180172a7900723dbf707d60b5c5f4",
+        "ts": "2026-10-19T20:49:50Z",
+        "title": "#EnVideo 📹| Presidenta de la República Bolivariana de Venezuela, Delcy Rodríguez, sostuvo un encuentro de trabajo en el Palacio de Miraflores con directivos de Centro Caribe Sports. El objetivo principal fue evaluar y ratificar la candidatura oficial de Cara - Instagram",
+        "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE14emM2V2M4czRxTTdPRWVBNjFJZFNzeHV1THNlNEZUR1BObE55dHBRSkM0c0k3eUFpU2VrYUgzb3BhZmxENUtkWDFlbmpLdmdoNkpwVFln?oc=5",
+        "impacts": [],
+        "relevance": "research_only"
+      }
+    },
+    {
+      "line": 1132,
+      "line_sha256": "33f98134ecf10685eb50fc921f64bbb6300b5e10bb08abaa5e245443ee527f9e",
+      "row": {
+        "alert_id": "6776bab6236ddf52691b9276284600151c64e9aa",
+        "ts": "2026-10-19T20:55:20Z",
+        "title": "אפקט תמיכת טראמפ: הליכוד וגוש הימין מזנקים • סקר - אמס",
+        "link": "https://news.google.com/rss/articles/CBMiTkFVX3lxTE94SHN5emFLNUtZNk9MSkdJX0VDQTF3M0xiNmtKYnhfSkVrdXJVdlI4YnhQWmFkUjIzclI3d1BDUU03bU9ZU0g5cW5JZHJsdw?oc=5",
+        "impacts": [],
+        "relevance": "research_only"
+      }
+    },
+    {
+      "line": 1133,
+      "line_sha256": "3b2d6f2ad4b9f286fe7ef944720e486af9afa5d3e4efc1692d85985c29db9259",
+      "row": {
+        "alert_id": "4e5572d8b35b0c1c582ecc7eb02e23989572ab8a",
+        "ts": "2026-10-19T21:00:37Z",
+        "title": "Nscale's SEC filing confirms a $44.6 billion Anthropic compute deal - Startup Fortune",
+        "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPOGhrVHVMN0hNaUltOWxqOTcyTjEzcXpvS1ozRElMaHotVG1KSEZGNWc3bFhsLU9SbkZtY1VxZm5BckJWRklHOWJKQ0pEQ1diMjltdVFoT0IwcVZmbmN2a0ZkWmhXVEpiUVNGOTFNZGxDQ3UzQnE0eWwxQlg2TmVwRkx6NEljaEppNW9RcXhza0VhMW5CYXUw?oc=5",
+        "impacts": [],
+        "relevance": "research_only"
+      }
+    }
+  ]
+}

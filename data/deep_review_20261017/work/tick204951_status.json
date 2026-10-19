@@ -1,0 +1,12 @@
+{
+  "returncode": 0,
+  "stdout_failure_markers": false,
+  "stderr_bytes": 0,
+  "window": [
+    "2026-10-19T21:04:13.194155Z",
+    "2026-10-19T21:04:18.253976Z"
+  ],
+  "raw_sha256": "0bbdb1bc29d762714c5c2aa3a3be04929313fd19782991feaf5eab2715e81fc9",
+  "receipt": "logs/deep_review_20261017/tick204951_status/quick_status.receipt.json",
+  "nested_child_returncodes": "not independently exposed"
+}

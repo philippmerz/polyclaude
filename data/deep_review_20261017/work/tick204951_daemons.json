@@ -1,0 +1,61 @@
+{
+  "checked_utc": "2026-10-19T21:05:35.850271+00:00",
+  "daemons": [
+    {
+      "daemon": "news_watcher",
+      "canonical_process_count": 1,
+      "script_sha256": "650baf55a25e5bff3fa5b16406abcde7facfb35f7e4bb6fcf4b0de7f0da69d23",
+      "checks": [
+        {
+          "pid": 148881,
+          "process_started_epoch": 1792387717.0,
+          "source_mtime_epoch": 1792364324.443045,
+          "stale_code": false
+        }
+      ]
+    },
+    {
+      "daemon": "heartbeat_watch",
+      "canonical_process_count": 1,
+      "script_sha256": "e57102de71428c0e9332654fc46c15fa5075c79305ffe870f65da2d4423eb8ab",
+      "checks": [
+        {
+          "pid": 450,
+          "process_started_epoch": 1792316024.0,
+          "source_mtime_epoch": 1790951499.989785,
+          "stale_code": false
+        }
+      ]
+    },
+    {
+      "daemon": "telegram_listener",
+      "canonical_process_count": 1,
+      "script_sha256": "08b60004758f0abea432af30df529cefa268e6eea7bc29141e61016ae09285c5",
+      "checks": [
+        {
+          "pid": 451,
+          "process_started_epoch": 1792316024.0,
+          "source_mtime_epoch": 1789065297.0013506,
+          "stale_code": false
+        }
+      ]
+    },
+    {
+      "daemon": "opportunity_watch",
+      "canonical_process_count": 1,
+      "script_sha256": "0757c4f0a4e19f35c144de2a5d260014b5091c327e3a5636c9638b100c2bf383",
+      "checks": [
+        {
+          "pid": 425,
+          "process_started_epoch": 1792316024.0,
+          "source_mtime_epoch": 1790676473.9749105,
+          "stale_code": false
+        }
+      ]
+    }
+  ],
+  "code_changes_this_tick": false,
+  "restart_performed": false,
+  "scope": "Exact repository interpreter python OR python3 plus absolute script and start; excludes shell wrappers. Liveness/source-mtime only, not feed progress.",
+  "probe_correction": "Earlier python3-only match missed boot-started python daemons; no down/stale inference or restart adopted."
+}

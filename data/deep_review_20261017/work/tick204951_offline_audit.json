@@ -1,0 +1,148 @@
+{
+  "schema": "tick204951_offline_audit.v1",
+  "audit_time_utc": "2026-10-19T21:04:00Z",
+  "scope": "Bounded offline audit of supplied delayed-news request and existing 11-step checklist. No network, account, trade, Telegram, git, inbox, provider or credential access.",
+  "request_ids": {
+    "supplied": [
+      "12856988e4fc1b37c5fa655fbf9ca56e311c86da",
+      "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+      "dd8f14bde84cd4c2064aa3d1bb4563eb8b528564"
+    ],
+    "mi_root_review_ids": [
+      "12856988e4fc1b37c5fa655fbf9ca56e311c86da",
+      "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+      "cdf6cfd2870898be18bea28b90a667395eb88bd6"
+    ],
+    "match": "Both supplied MI IDs are in the root review; it also covers adjacent alert cdf6cfd2870898be18bea28b90a667395eb88bd6. Whale ID matches facts record."
+  },
+  "evidence": {
+    "mi_reviewed_utc": "2026-10-19T20:15:02.734291+00:00",
+    "mi_erratum_compiled_utc": "2026-10-19T20:13:43.427867Z",
+    "mi_root_bound_erratum_sha256_matches": true,
+    "mi_judgment": "CBS Oct19 story covers Oct17 Caro event and cites Oct1 Mitchell poll; Fox Oct18 is separate MS NOW/Velshi interview. AP fetch errored with empty supplied body and null HTTP status. Bridge Michigan, WKEF and Grand Haven bodies remain unavailable. No new measured statewide poll or defensible numerical likelihood update; retained NO44/selected34/no-add.",
+    "mi_receipts": {
+      "cbs": {
+        "compressed_sha256_matches_receipt": true,
+        "supplied_bytes_sha256_matches_receipt": true,
+        "bytes_match_receipt": true,
+        "status": 200,
+        "error_type": null,
+        "started_utc": "2026-10-19T20:10:09.215696Z",
+        "received_utc": "2026-10-19T20:10:11.009805Z"
+      },
+      "fox": {
+        "compressed_sha256_matches_receipt": true,
+        "supplied_bytes_sha256_matches_receipt": true,
+        "bytes_match_receipt": true,
+        "status": 200,
+        "error_type": null,
+        "started_utc": "2026-10-19T20:10:11.073058Z",
+        "received_utc": "2026-10-19T20:10:11.275561Z"
+      },
+      "ap": {
+        "compressed_sha256_matches_receipt": true,
+        "supplied_bytes_sha256_matches_receipt": true,
+        "bytes_match_receipt": true,
+        "status": null,
+        "error_type": "HTTPError",
+        "started_utc": "2026-10-19T20:10:11.302309Z",
+        "received_utc": "2026-10-19T20:10:11.390272Z"
+      }
+    },
+    "whale_alert_utc": "2026-10-19T19:58:35Z",
+    "whale_facts_compiled_utc": "2026-10-19T20:03:26.378060Z",
+    "whale_review_index": 299,
+    "whale_bound_quote_received_utc": "2026-10-19T20:32:08.153688+00:00",
+    "whale_quote_sha256_matches": true,
+    "whale_book_timestamp": "1792441862718",
+    "whale_book_age_seconds_at_receipt": 65.43568801879883,
+    "whale_exact_no_bids": 0,
+    "whale_yes_asks": 0,
+    "whale_action": "No sell/add/fictional liquidation submitted: NO bid absent, YES ask absent. Full1.02 historical cost may be lost.",
+    "whale_next_existing_boundary": "Oct19 22UTC light/source/book check or earlier material source/executable-bid event; no new timer or idle polling.",
+    "note": "Receipts bind supplied SDK/capture bytes and call-window timestamps; this is not wire authentication. No raw article, book, account, or operator text copied."
+  },
+  "steps": [
+    {
+      "step": 1,
+      "status": "reused",
+      "detail": "Previously dated 20:30 quick status, 20:44 Kelly/crux/watcher status and 20:47 state audit remain the latest recorded operational checks; this offline audit did not refresh live state."
+    },
+    {
+      "step": 2,
+      "status": "completed",
+      "detail": "Root source review covers exact two supplied MI IDs plus adjacent cdf6... alert; whale facts bind supplied dd8... ID. Body/receipt hashes checked."
+    },
+    {
+      "step": 3,
+      "status": "completed_trigger_review_next_check_due",
+      "detail": "MI and Whale thesis judgments/actions audited; Whale record says no executable NO bid/YES ask and no sell/add. Current-context scheduled 22UTC review still due."
+    },
+    {
+      "step": 4,
+      "status": "reused",
+      "detail": "No new financial or strategy action in audited source reviews; retain recorded decisions and no-add posture."
+    },
+    {
+      "step": 5,
+      "status": "reused",
+      "detail": "No new winner/redeem signal evidenced. Latest indexed state remains prior 20:47 audit; not refreshed here."
+    },
+    {
+      "step": 6,
+      "status": "reused",
+      "detail": "Prior 16:48 discovery retained; no new trigger evidenced. Coverage remains explicitly incomplete, not exchange-wide zero."
+    },
+    {
+      "step": 7,
+      "status": "completed_for_audit",
+      "detail": "Current context and dated follow-up pointers inspected; this standalone audit records the evidence. No journal/rootdoc edits."
+    },
+    {
+      "step": 8,
+      "status": "reused_no_new_send",
+      "detail": "No new material operator message sent. Current context records Whale TG1270 as sent, but dispatch receipt was not independently verified in this bounded audit."
+    },
+    {
+      "step": 9,
+      "status": "not_due",
+      "detail": "Weekly P&L boundary Oct23."
+    },
+    {
+      "step": 10,
+      "status": "not_due",
+      "detail": "Methodology run concluded 2026-07-11; no rerun."
+    },
+    {
+      "step": 11,
+      "status": "not_performed_scope_excluded",
+      "detail": "No git commands, commit or push in this delegated offline audit."
+    }
+  ],
+  "next_due": "Oct19 22:00 UTC light check AND pull all unfilled Idaho 63070734 YES 3¢ / $1.02; cancel-first on earlier material uncertainty. Full check Oct20 02:00 UTC. Weekly Oct23 and monthly Nov12 remain not due.",
+  "limitations": [
+    "No live status/account/venue refresh; operational and indexed-state checks are reused from dated records.",
+    "No verification of alert queue acknowledgment or dispatch delivery; review is established from primary source-review artifacts only.",
+    "No claim that the delayed queued review or a fresh full 11-step tick was completed.",
+    "AP body is empty and HTTP status null; Bridge/WKEF/Grand Haven exact bodies are unavailable.",
+    "Source hashes and exact file hashes below identify local artifacts; supplied-byte hashes do not establish wire authenticity."
+  ],
+  "sha256": {
+    "mi_root_review": "413df35ad155da189503353adbefa466eb4164cc97837a2e47af30d1be1f16ea",
+    "mi_erratum": "923aa365e01de805b8cc97e83f8c1a5ff65e4aac385605cf5a6dd7e450588358",
+    "mi_invalid_draft_superseded": "0b67f59c1742596219f70e525148f243f6c840ea77f7032318930d476193e24d",
+    "whale_facts": "04a69a915bb7f4b39950d3a9f4e4b8c5d85f2c26d882eaeb55961e87a6279210",
+    "whale_book_followup": "e6af3114893e9cca8cc57dc9a3c154dc1bd3b94331550c66545b12adbb4dad65",
+    "prior_checklist": "5549a5ad068f29d18311e696439b48d88113e735bd82fa1fb1aab82f217d296a",
+    "current_context": "80eabda314dfe97050cfe8319d86a3eddb9193fbe1390e14371d648910670570",
+    "operations": "0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0",
+    "daily_checkin": "9c16924798df264e41e35179ec89cb64664930f2b1f6bdfe19f6e2030882db06",
+    "mi_cbs_receipt": "c621f2251e1811e32e7ad45ace15010835bdedcc1eeafa6b9302a57a3f8fd303",
+    "mi_fox_receipt": "2460d9da6a7be5f5c2b87e4682d0933d46e949dd167e32a02958c2547b572dee",
+    "mi_ap_receipt": "9ec33ed2cbbb69f5e8a9ae0a7b00d90962cd112ea0444372ed73a379e693b133",
+    "mi_cbs_body_gzip": "1869e878885a8f2dd257b38f1a2f013aeab0c4aadaf82e99e4b713aab355c15a",
+    "mi_fox_body_gzip": "ea4eebb238dd2fe98bc2774f83876c0f9eb90236800612113863a9751aae6977",
+    "mi_ap_body_gzip": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+    "whale_quote": "58eaa8a7a98d0777a292fc293296f3e4c7197fb8daa32ce5f70a9162b56a3649"
+  }
+}
