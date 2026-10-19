@@ -58,7 +58,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **311 valued /5 blocked /364 factual exclusions /2,320 pending**;680 immutable base cases +56 append-only revisions. Active case313; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; full revision chain verified with bounded emitted metadata. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
 
-**Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Latest direct Numbers04:48 reports an $8m estimate; no final actual. Selected NO42.10%, versus~$0.73 indicative net sale05:23; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0519-checkin.md). Original02UTC BUY pull obsolete; next held review06UTC.
+**Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Latest direct Numbers06:01 reports an $8m estimate; no final actual. Selected NO42.10%, versus~$0.83 indicative net sale06:01; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0600-periodic-review.md). Original02UTC BUY pull obsolete; next held review10UTC.
 
 **293YB/296gas/Sedgwick/MT01 canceledunfilled**, standingpullscomplete/DEC226+224; no automaticrepost. HLEclosedremaining9NO/DEC225,2.6244netverified. FourBUY7.52 remain; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments, not executioninstructions.
 
@@ -88,7 +88,7 @@ establish an allocation. No position or new watcher was added.
 
 **Trading midpoint $190.95 / indicative net depth $188.67; account $196.75 including $5.80 separately funded gas.** PM $35.81 mid / $33.53 depth; cumulative accounting residual $20.73. Authoritative bankroll capture05:22:51–05:23:06UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Full check](research/2026-10-19-0519-checkin.md).
 
-Holdings unchanged: MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add, Clarity whole29/29 pair and Trump dust; sold GrokHLE stays closed. Four BUYs/$7.52 LIVE/zero matched05:22:39; pUSD20.451290/deployable12.931290 at05:28. [Exact orders](notes/resting_orders.md). Five requested alerts reviewed; no verified thesis change. News watcher launch repaired, four canonical daemons verified. Discovery incomplete: disk below180MiB floor; clearing the ~318MiB package cache requires admin access. Next06UTC/Idaho22UTC; [dated handoff](notes/current_context.md).
+[06UTC held review](research/2026-10-19-0600-periodic-review.md): PM $35.80 midpoint / $33.93 indicative exit, a separate partial observation; no new whole-account mark or CSV row. Holdings unchanged: MI5NO/Messi5YES/OpenRouter5NO/Whale6NO retain/no add, Clarity whole29/29 pair and Trump dust; GrokHLE stays closed. Four BUYs/$7.52 LIVE/zero matched06:02; pUSD20.451290/deployable12.931290 at06:01. [Exact orders](notes/resting_orders.md). Two new headlines reviewed without a verified thesis change; four canonical daemons healthy. Discovery remains incomplete below180MiB disk floor; package-cache cleanup needs admin access. Next10UTC/Idaho22UTC; [handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

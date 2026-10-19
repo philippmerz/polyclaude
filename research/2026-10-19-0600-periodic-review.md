@@ -1,0 +1,27 @@
+# October19 06:00 periodic review — retain; no trades or fills
+
+**PM $35.80 midpoint / $33.93 indicative net bid-depth at06:01; quantities unchanged.** Last whole-account mark remains05:22:51–05:23:06:196.75 including5.80 separate gas, trading190.95. No new bankroll call or CSV point; partial marks/wallets are not a newly assembled NAV. Quotes are sequential/cached, not certified liquidation proceeds; VM/API excluded.
+
+## Due review and exposure
+
+- Eight read-only CLI checks06:01:15–06:01:44 returned0. Root verified16 timed stdout/stderr raw/gzip pairs. State audit CLEAN7indexed+1deindexed; UMA44tracked/42refreshed/0alerts; hurdle3clear/0flags/3protected; watchlist0hits; Ostium0/no change; crux quiet/no overdue decisions. Brownian6unmodeled, no automatic action. Kelly uses dated05:22 bankroll cache196.75/age0.6h.
+- Account06:02:10–11: eight exact indexed identities/quantities/totalBought/redeemable flags unchanged; four exact LIVE BUYs/zero matched/$7.52, terminal pagination cursor verified. Reservations unchanged. Order capture is status_code/body-wrapper serialization labeled supplied_bytes, not raw wire evidence. [Root proof](../data/deep_review_20261017/work/periodic0600_root_ops.json).
+- Wallet06:01:29–33 pUSD20.451290/committed7.520000/deployable12.931290; crypto clean. Idaho34YES3c/$1.02 pullOct19 22UTC; earlier material uncertainty cancel first. NY01$1.20/CA06$1.50/ME02$3.80 unchanged; CID/token governs historical ME01 slug. [Exact order index](../notes/resting_orders.md). MT01/Sedgwick/YB/gas cancellations and sold GrokHLE remain final; old zero-value GeminiHLE row is distinct.
+
+## Two new alerts — explicit dispositions
+
+- **`c0540b1bc4e7da3bf6428a81655740bad8f19496` /05:50:19 OpenRouter:** MATERIAL→unverified/repeated-deal context, no measured traffic shock adopted. Refreshed [known Startup Fortune URL](https://startupfortune.com/stripe-agrees-to-buy-ai-model-router-openrouter-for-75-billion/) still has prior metadata Oct18 19:30:48Z and substantially matching claims. It attributes7.5bn to other publications; no new close/integration/reporting fact verified. **New GoogleRSS→publisher-body binding was not resolved**; matching title/content supports an inference, not an exact-body certification. Prior [company-source review](2026-10-19-0346-openrouter-acquisition-review.md) established Aug19 agreement, not completion; no new company GET claimed.
+- Official [weekly chart](https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart)06:01:21: root summed10 numeric series/row. Oct12 displayed164.043952246042T, revision+0.000015447471T versus03:40. Oct19 partial4.678324428519T versus2.902040765446T, delta+1.776283663073T. Cache Age83 is not source cutoff. Target labelsOct26/Nov2/Nov9/Nov16 remain absent; no extrapolation from the partial/current week or unreconciled company>10T/day claim into target sums.
+- **`172c7dd63a0bd7501bf4071ebe0dee96a2e4d067` /05:55:42 Whalefall:** MINOR/unverified headline, no new probability. TheWrap body not fetched; relative film ranking does not establish final three-day domestic gross. Classifier again reverses direction: heldNO wins FINAL>=8m. One exact [Numbers](https://www.the-numbers.com/movie/Whalefall-(2026)) GET06:01:16–18 is byte-identical to04:48:8m ESTIMATE, daily3.1/2.8/2.1m estimates. Separate0.9m previewP row does not establish accounting exclusion; no adjustment. Estimates do not resolve the position.
+
+Fixed actual news cutoff06:01:36.756UTC captured both rows; repeated coverage is not independent calibration evidence. [Root source audit](../data/deep_review_20261017/work/periodic0600_root_sources.json).
+
+## Portfolio judgment and limits
+
+Retain/no add: MI5NO44/selected34%, Messi5YES60/40%, OR5NO88/73%, Whale6NO57.1022/42.1022%. Selected terminal EV1.70/2.00/3.65/2.5261 exceeds approximate net exits1.46/1.20/3.00/0.83. Broad20% MI/Messi/OR cases favor sale; Whale25% EV1.50 still exceeds exit. Saved Oct18 Aave3.1525% constant-zero-cost throughJan1 sensitivity does not reverse selected comparisons; not locked yield. Uncalibrated model/selection uncertainty and full binary losses remain. No new maker/fill-selection edge or Kelly scale-up authority.
+
+Clarity29/29 stays whole: conditional29floor/58middle versus~27.44 net exit; no guaranteed floor or legwise action. Trump0.33<5-share minimum. OR uses FOUR-WEEK SUM[725,775)T, locksNov23/fallbackNov27 23:59ET;750T countermodel reversesNO. Dated05:22 joint cash scenarios176.62/147.62 retain other-assets/value/access assumptions and no systemic-loss bound or hedge credit. [Current root risk](../data/deep_review_20261017/work/periodic0600_root_risk.json).
+
+Four daemons independently verified single/canonical/current: news148881, opportunity425, heartbeat450, Telegram451. No restart/code/asset/prior/decision change. No new material finding, so no Telegram. Discovery remains blocked below180MiB floor; prior noninteractive APT clean failed/password required, not retried. No cleanup/scanner/3k credit/goal/timer/idle continuation. Existing next held review10UTC; Idaho22UTC; weeklyOct23/monthlyNov12 not due.
+
+Evidence: [compact ops](../data/deep_review_20261017/work/periodic0600_ops.json), [OR facts](../data/deep_review_20261017/work/periodic0600_or_facts.json), [Whale facts](../data/deep_review_20261017/work/periodic0600_whale_facts.json). Private receipts linked inside units. Three fresh source GETs total; hashes bind saved bytes, not source truth, live executability or synchronized account state.
