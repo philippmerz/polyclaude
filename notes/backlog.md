@@ -1,4 +1,4 @@
-# Current backlog — October19 04:45UTC
+# Current backlog — October19 04:51UTC
 
 - **Finite3,000 review:**311valued/5blocked/364factual/2,320pending;680base+56revisions;savedcase313. [Checkpoint](deep_review_checkpoint.json) governs newer counts. Save/index EACH completion. Use one [resume packet](../research/2026-10-17-deep-review/RESUME.md), small source/model units and [hot candidates](../research/2026-10-17-deep-review/candidate_followup.md); no full historical ledger ingestion. First100/200/300 notified; next milestone400/material findings via Telegram.
 - **02UTC check complete:**196.94including5.82gas;trading midpoint191.12/indicative depth188.95, sequential/notNAV/auditedprofit. CSV208. [Dated check](../research/2026-10-19-0200-checkin.md). No extra account calls merely to refresh this index.
@@ -9,7 +9,7 @@
 - **Small-unit work:**308Trump–Kim saved noentry;309Ballon remains blocked after primary rank-context follow-up;310Google saved noentry/conditional-fill stress.312F1 saved noentry;313Rhine pending: title/start ambiguity and Sep6–18 source gap, no adopted probability; exact small resume pointer saved.314shipping facts ready. Named-outcome adapter/forecast binding complete,31 focused tests pass. Nine further terminal cases387/389/392/401/407/411/417/419/420 individually read/root-verified and saved as factual, never valuations. Prior seven remain indexed. [Current context](current_context.md).
 - **Storage below research floor:**188,588,032B free04:35:12, below180MiB after cache/log regrowth. Discretionary research paused; required safety checks/exits remain active. [Earlier source-guarded cleanup](../data/deep_review_20261017/work/generated_pyc_reclaim_0426.json) is not permanent. Preserve source/financial/operator records; use Python-B. No stocks/brokerage, timer, idle loop or indefinite goal.
 
-- **Named news requests completed:**[Latest02:16 review](../research/2026-10-19-delayed-0216-news-review.md) closes exactFox/CNN/CBS IDs. MI44/34 retained after04:40 netexit1.458 versus2.20/1.70hold; broadlow1.00 favorssale. Kansas alreadyclosed; CBS poll identity remainsunspecified/opposite-leader correction retained.8indexedquantityrows unchanged, legacyzeroGemini notsoldGrok. [Prior00:43 review](../research/2026-10-19-delayed-0043-news-review.md) links earlierreviews; fixedcutoff04:38:37/no othernewrows. No queued=reviewed inference/newNAV/CSV/scan/goal.
+- **Named news requests completed:**[Latest03:47 Whale review](../research/2026-10-19-delayed-0347-news-review.md) closes bothIDs;04:48Numbers8mESTIMATE unchanged. Correctside: NO wins final>=8m; previewProw notaccountingexclusion/no0.9adjustment.127s-oldbook net.7287387 vs3.42613/2.52613/1.50terminalEV; retain6NO/noadd, no executioncertification. [Prior02:16](../research/2026-10-19-delayed-0216-news-review.md) closesMI/KS andlinks olderreviews. Fixedcutoff04:48:31/gasheadline researchonly; no newNAV/CSV/scan/goal.
 
 ## Historical evidence
 

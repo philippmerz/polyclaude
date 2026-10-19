@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-19T04:45:57.361533+00:00"
+reviewed_at: "2026-10-19T04:51:52.156585+00:00"
 valid_until: "2026-10-19T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 3f8f1cd52de26fa7ea2387740d85ba4b18735a0c17c57de452ca412fdbaf393d
+  README.md: ab599b06a04b3e0fe40439c6d50e899533a8e9461e94146710ce6e82b373db5e
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
   strategy/02_operations.md: 35959b43ce34c0960717d3da854b39dac0f1b3d487ab4de6cb34062a6251b428
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7f6acda494f135755c2404d9b228372702449c4687d5a91ec30f6ef044893013
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 9f0d53b304eb4f9e51e7ddb6e4b2a957fd6e86341723c9f18565c95e8459d55d
+  notes/backlog.md: 52a74a7e0f5b6495664fbcf0d9e24dfdf202771054c0bcf45361a4480fada97e
   notes/resting_orders.md: ce9c83a568e6e6f3e214fb1fb64c05f413451ce67bb3e8c0f7c449da1c799cac
-  notes/journal.md: 7ed4897885986c665cff5dd7d6ac751bbabd638db425de5bb16334a187f10640
+  notes/journal.md: e022253cdd2c3870085f3dc53dbdb736091ac78050c65b38f80172468ba93087
 ---
 
 ## Resume
@@ -36,18 +36,20 @@ source_hashes:
 |MI5NO|44%/34%|Retain/no add.03:46 netexit1.458 vs2.20/1.70hold; broadlow1.00 favors sale. Rasmussen/IA already inputs.|
 |Messi5YES|60%/40%|Retain/no add. MLS25G15A is not annual Google growth rank;2026route404 is bounded absence.|
 |OpenRouter5NO|88%/73%|FOUR-WEEK SUM[725,775)T, labelsOct26/Nov2/9/16; lockNov23/fallbackNov27 23:59ET.03:46 exit3.00242 vs4.40/3.65hold; broadlow1.00 favors sale.750T alternative reversesNO.|
-|Whale6NO|57.1022%/42.1022%|Original6@17c/$1.02/DEC222; retain/no add.03:53Numbers8mESTIMATE; equality8mFINAL winsNO.03:56 exit.82702 vs3.4261/2.5261/1.50hold.|
+|Whale6NO|57.1022%/42.1022%|Original6@17c/$1.02/DEC222; retain/no add.04:48Numbers8mESTIMATE; equality8mFINAL winsNO.04:48snapshot(age127s) net.72874 vs3.4261/2.5261/1.50hold.|
 |Clarity29/29;Trumpdust|Conditional29floor/58middle|Retain wholepair/no legwise action. Procedure is not passage; new official actions403unknown. Trump.33<minimum5.|
 
 [Risk](../data/checkin_20261019T0200_risk.json): selected retain; broad adverse MI/Messi/OR favors sale. No calibrated joint optimum/hedge credit/guaranteed wealth; pair adjudication failure and pending fills/losses remain possible.
 
 ## Latest sources
 
-[02:16 review](../research/2026-10-19-delayed-0216-news-review.md): exactFox/CNN/CBS IDs closed. Fox adds reporter apology/attributed background; no measured voter effect/new named poll. CNN primary interview alreadyread. CBS unspecifiedpoll/opposite-leader correction; newbody cap/metadataonly. MI44/34retain/noadd; Kansasclosed. [04:40rootproof](../data/deep_review_20261017/work/delayed0216_root_current_0442.json): netMIexit1.458 vs2.20/1.70hold; broadlow1.00 favorssale. All8indexedquantityrows/4orders unchanged, oldzeroGemini notsoldGrok. No newNAV/TG. [Prior00:43](../research/2026-10-19-delayed-0043-news-review.md) links olderreviews/accesslimits. Cutoff04:38:37/no othernewrows.
+[03:47 Whale review](../research/2026-10-19-delayed-0347-news-review.md): bothIDs closed; Numbers04:48still8mESTIMATE. NO wins final>=8m/globalflop inference unsupported; previewProw notexclusion/no0.9adjustment. [Root](../data/deep_review_20261017/work/delayed0347_root_review_0450.json):127s-oldquote/noexecutioncertification; retain6NO/noadd under table's scenarios. Uncalibratedweights/fullbinaryloss remain. Cutoff04:48:31/NCgasresearch-only; noNAV/TG.
+
+[02:16 MI/KS review](../research/2026-10-19-delayed-0216-news-review.md): MI44/34retain, net1.458 vs2.20/1.70hold/broad1.00sale; Kansasclosed/CBSunspecifiedpoll/oppositeleader correction. [04:40proof](../data/deep_review_20261017/work/delayed0216_root_current_0442.json):8quantityrows/4orders unchanged, legacyzeroGemini notsoldGrok. [00:43](../research/2026-10-19-delayed-0043-news-review.md): earlierreviews/Detroitbodyunavailable.
 
 [23:09 review](../research/2026-10-19-delayed-2309-news-review.md): MT01 omitted identifiedAmericanPulse/NonStopLocal poll lead, distinct fromRutgers; original methods/MOE unverified429. Historical47/37 archived under_closed_20261019_mt01_271. No active entry authority/repost; re-underwrite primary coverage/dedupe/conditional fill. Prior alerts/access gaps linked there.
 
-[OR source](../research/2026-10-19-0346-openrouter-acquisition-review.md): Aug19agreement/no verified closing/reporting change; Oct12chart164.043936798571T, target labels absent/cutoff unknown; daily/chart coverage unreconciled. [Whale](../research/2026-10-19-0352-periodic-review.md): no final actual.
+[OR source](../research/2026-10-19-0346-openrouter-acquisition-review.md): Aug19agreement/no verified closing/reporting change; Oct12chart164.043936798571T, target labels absent/cutoff unknown; daily/chart coverage unreconciled.
 
 ## Next boundaries / research limits
 
