@@ -1,0 +1,19 @@
+{
+  "edited_utc": "2026-10-19T10:04:17.886350+00:00",
+  "reason": "Only313/316newcandidate-specific feeds/terms removed after affirmativezero-fillcancellation. ExistingheldMessi/GoogleYIScoverage unchanged. RawRSS Telegram remainsOFF. No watcher code/state/restart/poll writes.",
+  "removed_feed_names": [
+    "Erling Haaland Google athlete",
+    "Rhine Kaub water level"
+  ],
+  "removed_tier1_terms": [
+    "Kaub",
+    "Erling Haaland"
+  ],
+  "before_sha256": "7c705515b4933afdef46732ba1342db545a111e3dc4b00932bfb63bb022d5278",
+  "after_sha256": "bcfaefc65069ce57092c05efa801368679dc2aa80375445c43611a93fe0bcfb6",
+  "normal_reload_verification_pending": false,
+  "checked_utc": "2026-10-19T10:14:12.998581+00:00",
+  "normal_state_save_observed_utc": "2026-10-19T10:13:02.026521+00:00",
+  "normal_state_save_after_config_edit": true,
+  "normal_reload_limit": "Later ordinary state save observed; daemon reads config at each loop start. Consistent with normal reload, but state stores no loaded-config fingerprint; actual per-cycle config identity not independently certified. No forced poll, state edit, or restart."
+}

@@ -1,0 +1,24 @@
+{
+  "created_utc": "2026-10-19T10:00:04.422554+00:00",
+  "author": "primary",
+  "decision": "Execute original10UTC cancellation plan for remaining DEC229/230 BUYs, independently verified live/unfilled09:57 and exactraw bindings rootverified09:59. No source forecast withdrawal implied.",
+  "execute_not_before": "2026-10-19T10:00:00Z",
+  "orders": [
+    {
+      "index": 313,
+      "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+      "expected_shares": 5,
+      "expected_price": 0.53
+    },
+    {
+      "index": 316,
+      "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+      "expected_shares": 10,
+      "expected_price": 0.13
+    }
+  ],
+  "funds": "Up to3.95contingentcommitment,not purchase/sale/profit. Vettedcancel pathrecheckstargetinventory/locks/removal; terminal/trade/CTF/indexedproofandreservationgracefollow.",
+  "Idaho": "Separate22UTC standingpull. NewNewsmaxheadline underreview for materiallynewfacts; no cancel decisionyet. Pending34YES3c,not holding.",
+  "on_any_fill": "Cancelremaining onlythen source/holding reunderwrite. Noautopost/add/taker.",
+  "next": "Collectterminal/trade/postaccount/chainstate; reconcileonlyvettedpathafteritsgrace. Saveexactresults/DEC/journal/handoff;materialTelegramonce."
+}

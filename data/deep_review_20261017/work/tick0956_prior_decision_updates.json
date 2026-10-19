@@ -1,0 +1,21 @@
+{
+  "created_utc": "2026-10-19T10:05:18.998874+00:00",
+  "new_decisions": {
+    "313": 231,
+    "316": 232
+  },
+  "related_original_decisions_outcome_updated": [
+    229,
+    230
+  ],
+  "archived_priors": {
+    "313": "_closed_20261019_rhine313",
+    "316": "_closed_20261019_haaland316"
+  },
+  "numeric_probabilities_unchanged": true,
+  "unrelated_prior_entries_unchanged": true,
+  "no_new_capital_at_risk": true,
+  "prior_sha256": "a330e3e8422802b47a6e30af4c4f32a5d80d37d5948d1947687bddf4b07a11f2",
+  "decisions_sha256": "3ddd235b9ca96ea40592cfc6bdfad935f2839c57349cb11d1ec7fa4ecb0e33a7",
+  "new_cancellation_decisions_resolved": true
+}

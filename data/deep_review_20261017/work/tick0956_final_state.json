@@ -1,0 +1,204 @@
+{
+ "schema": "tick0956_final_state.v1",
+ "window_utc": {
+  "audit_fix": [
+   "2026-10-19T10:07:29.600029+00:00",
+   "2026-10-19T10:07:30.616275+00:00"
+  ],
+  "orders": [
+   "2026-10-19T10:07:30.616866+00:00",
+   "2026-10-19T10:07:30.840966+00:00"
+  ],
+  "positions": [
+   "2026-10-19T10:07:30.841391+00:00",
+   "2026-10-19T10:07:31.030106+00:00"
+  ],
+  "reservations": [
+   "2026-10-19T10:07:31.030667+00:00",
+   "2026-10-19T10:07:31.030795+00:00"
+  ],
+  "polygon": [
+   "2026-10-19T10:07:31.118500+00:00",
+   "2026-10-19T10:07:32.444696+00:00"
+  ]
+ },
+ "audit_fix": {
+  "returncode": 0,
+  "stdout_capture": {
+   "path": "logs/tick0956_private/postfinal/position_audit_stdout.gz",
+   "representation": "captured subprocess stream bytes",
+   "raw_bytes": 166,
+   "gzip_bytes": 135,
+   "raw_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+   "gzip_sha256": "d0756290e4df6b0916af8837542a274058c926e8b12bce259fc21f7ba355c3ca"
+  },
+  "stderr_capture": {
+   "path": "logs/tick0956_private/postfinal/position_audit_stderr.gz",
+   "representation": "captured subprocess stream bytes",
+   "raw_bytes": 0,
+   "gzip_bytes": 20,
+   "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+  },
+  "summary": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\nposition state CLEAN (7 indexed positions, 1 deindexed claim row(s))"
+ },
+ "open_orders": {
+  "status": 200,
+  "cursor_exhausted": true,
+  "total_open": 4,
+  "live_BUYs": 4,
+  "reservations_total": 4,
+  "live_order_reservation_matches": [
+   {
+    "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+    "present": true,
+    "condition_match": true,
+    "asset_match": true,
+    "price_match": true,
+    "size_match": true,
+    "unmatched": true,
+    "reservationId": "1792270288866840753-48c4e9d4",
+    "state": "live"
+   },
+   {
+    "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+    "present": true,
+    "condition_match": true,
+    "asset_match": true,
+    "price_match": true,
+    "size_match": true,
+    "unmatched": true,
+    "reservationId": "1792270316592572015-fc54aec2",
+    "state": "live"
+   },
+   {
+    "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+    "present": true,
+    "condition_match": true,
+    "asset_match": true,
+    "price_match": true,
+    "size_match": true,
+    "unmatched": true,
+    "reservationId": "1792272900263701705-71e35e1a",
+    "state": "live"
+   },
+   {
+    "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+    "present": true,
+    "condition_match": true,
+    "asset_match": true,
+    "price_match": true,
+    "size_match": true,
+    "unmatched": true,
+    "reservationId": "1792282073257552169-98c5c301",
+    "state": "live"
+   }
+  ],
+  "all_four_live_orders_match": true,
+  "reconciliation_reference": {
+   "path": "data/deep_review_20261017/work/tick0956_reconciled.json",
+   "reservations_after": 4,
+   "all4_old_reservations_byteequivalent": true,
+   "removed_target_ids": [
+    "1792400692238585459-acc23652",
+    "1792400836968375171-1fe9f209"
+   ]
+  }
+ },
+ "positions": {
+  "count": 8,
+  "matches_pre_cancel_0957_on_identity_size_avgPrice_totalBought": true,
+  "comparison_capture": {
+   "path": "logs/tick0956_private/postfinal/positions_prepost_comparison.gz",
+   "representation": "derived comparison between helper serializations",
+   "raw_bytes": 2026,
+   "gzip_bytes": 797,
+   "raw_sha256": "e2781a7f1ab3a7ab1087b0113399d42873023f2685619e07fefb982e9066e580",
+   "gzip_sha256": "5c9690228e6f5c221ce311ae6716fb119227c58ffb8077f8d6918a27481108ae"
+  },
+  "current_data_capture": {
+   "path": "logs/tick0956_private/postfinal/positions.data_api.gz",
+   "representation": "polyclaude_enter._fetch_live_positions helper serialization",
+   "raw_bytes": 8465,
+   "gzip_bytes": 2848,
+   "raw_sha256": "81b8d97fcce85d5745f4337b13253279808206d007d2fc47270d9677febaac76",
+   "gzip_sha256": "83db4bd2e416fd590738f003aa85ccb71353fdc8447b9fe4dd83c0de4f6d5e92"
+  }
+ },
+ "polygon": {
+  "block": 95799403,
+  "block_time_utc": "2026-10-19T10:07:32+00:00",
+  "pUSD": 20.45129,
+  "candidate_balances": {
+   "313": {
+    "19084872616962411893665279455695701352433114098006020241350661698518933473122": 0.0,
+    "86006311808069604181016902065305702598289476091939867213751308592840390092285": 0.0
+   },
+   "316": {
+    "72257742731710757631814812995930297810474685632113794047520846137551021660945": 0.0,
+    "21344240354098108351843424713534394837006651055727639290239200588246460759867": 0.0
+   }
+  }
+ },
+ "captures": {
+  "open_orders": {
+   "path": "logs/tick0956_private/postfinal/open_orders.sdk.gz",
+   "representation": "clob_v2.list_open_orders SDK result serialization (exhaustive paginator)",
+   "raw_bytes": 2197,
+   "gzip_bytes": 861,
+   "raw_sha256": "2a001cc730c9189ff33aa2100cef2e085b7567ff25387921d2a615e450309bcf",
+   "gzip_sha256": "8cf75b03a19c7f051f5a26f2ce59e4008fdc294ba18048d1d26f24c4c5a6cc36"
+  },
+  "reservations": {
+   "path": "logs/tick0956_private/postfinal/reservations.current.gz",
+   "representation": "exact local reservation helper JSON serialization",
+   "raw_bytes": 2274,
+   "gzip_bytes": 1013,
+   "raw_sha256": "d2d709c50435264e6f0bf7f099e6cb0dd1dc56af832a98183c39dfff628110fc",
+   "gzip_sha256": "a412a257595f8e0b623a9a9570a5aeb3a890362747c5658cefd8f36eb82eac14"
+  }
+ },
+ "watcher_metadata": {
+  "config_sha256": "bcfaefc65069ce57092c05efa801368679dc2aa80375445c43611a93fe0bcfb6",
+  "config_mtime_utc": "2026-10-19T10:04:17.883669+00:00",
+  "state_mtime_utc": "2026-10-19T10:02:18.239931+00:00",
+  "config_mtime_after_100417": true,
+  "state_saved_after_config_mtime": false,
+  "normal_cycle_after_config_update": "Not proven: last observed watcher state save (10:02:18Z) predates config removal (10:04:17Z); no manual poll/state change/restart performed."
+ },
+ "daemons": [
+  {
+   "script": "opportunity_watch.py",
+   "pid": 425,
+   "started_utc": "2026-10-18T09:33:44+00:00",
+   "absolute_path": true,
+   "code_mtime_utc": "2026-09-29T10:07:53.974910+00:00",
+   "mtime_before_start": true
+  },
+  {
+   "script": "heartbeat_watch.py",
+   "pid": 450,
+   "started_utc": "2026-10-18T09:33:44+00:00",
+   "absolute_path": true,
+   "code_mtime_utc": "2026-10-02T14:31:39.989785+00:00",
+   "mtime_before_start": true
+  },
+  {
+   "script": "telegram_listener.py",
+   "pid": 451,
+   "started_utc": "2026-10-18T09:33:44+00:00",
+   "absolute_path": true,
+   "code_mtime_utc": "2026-09-10T18:34:57.001351+00:00",
+   "mtime_before_start": true
+  },
+  {
+   "script": "news_watcher.py",
+   "pid": 148881,
+   "started_utc": "2026-10-19T05:28:37+00:00",
+   "absolute_path": true,
+   "code_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+   "mtime_before_start": true
+  }
+ ],
+ "scope": "No order/account/reconciliation changes here beyond explicitly requested position insurance refresh; no manual watcher poll, state edit, or restart."
+}

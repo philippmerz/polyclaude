@@ -1,0 +1,21 @@
+{
+  "index": 316,
+  "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+  "started_utc": "2026-10-19T10:00:32.337235+00:00",
+  "received_utc": "2026-10-19T10:00:35.264600+00:00",
+  "returncode": 0,
+  "streams": [
+    {
+      "name": "stdout",
+      "path": "logs/tick0956_private/pulls/316.stdout.gz",
+      "raw_sha256": "ff562a78c330fb5dd5c7d2ab849c0931e7d60a51377ad2d64dfcd67d8e6c6d19",
+      "gzip_sha256": "6d4d7714c4ae202ab6dd1e66e72f597c8316d7e92aa9b05c53b9eb017a522812"
+    },
+    {
+      "name": "stderr",
+      "path": "logs/tick0956_private/pulls/316.stderr.gz",
+      "raw_sha256": "6de35bc6c2745b8078c412b4837715e32c504195134229bdd7481e2353d56321",
+      "gzip_sha256": "158bea1b7cfdc7edf3f7a590bc5192b2c349123462ec35504ab06adcd0fbf3bd"
+    }
+  ]
+}

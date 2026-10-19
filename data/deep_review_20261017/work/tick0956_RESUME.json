@@ -1,0 +1,15 @@
+{
+  "phase": "COMPLETE \u2014 both10UTC orders CANCELED UNFILLED; DO NOT REPLAY/REPOST",
+  "created_utc": "2026-10-19T10:03:51.803255+00:00",
+  "cancel_results": "work/tick0956_cancel_results.json",
+  "postcancel_proof": "work/tick0956_postcancel_initial.json",
+  "remaining": "Four original BUYs/7.52; Idaho34YES3c/1.02 remains to existing22UTC pull, earlier verified material uncertainty cancel-first. No p update.",
+  "reservations": "Four exact live zero-matched BUYs/four reservations/7.52; only313/316 reservations retired after300s grace. No manual ledger edit or cash credit.",
+  "next": "Scoped final artifact/secret/diff verification and commit/push; end bounded run. Next existing fullcheck14UTC, Idaho22UTC. No new goal/timer/idle continuation.",
+  "completed_check_utc": "2026-10-19T10:20:28.950674+00:00",
+  "post_grace_reconciliation": "work/tick0956_reconciled.json",
+  "final_state": "work/tick0956_final_state.json",
+  "primary_risk": "work/tick0956_root_risk.json",
+  "root_audit": "work/tick0956_root_audit.json",
+  "telegram": "Delivered1262 once; no repeat. Prior1261 research update not repeated."
+}

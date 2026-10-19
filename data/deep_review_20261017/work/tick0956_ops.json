@@ -1,0 +1,180 @@
+{
+  "schema": "periodic_tick_ops.v1",
+  "tick": "20261019T095645Z",
+  "actual_check_window_utc": "2026-10-19T09:57:55Z\u201309:59:06Z",
+  "account_summary": "data/deep_review_20261017/work/tick0956_account.json",
+  "account_summary_sha256": "3cec741e0e560eb2c197a055ec992ee6ff769c023d630f09bfc1937feb6927c9",
+  "account_private_captures": "logs/tick0956_private/",
+  "orders": {
+    "open_BUYs": 6,
+    "total_open_orders": 6,
+    "reservations": 6,
+    "all_six_orders_unchanged_from_0930": true,
+    "exact_comparison": [
+      {
+        "orderId": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      },
+      {
+        "orderId": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      },
+      {
+        "orderId": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      },
+      {
+        "orderId": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      },
+      {
+        "orderId": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      },
+      {
+        "orderId": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+        "present": true,
+        "reservation_present": true,
+        "same_condition": true,
+        "same_asset": true,
+        "same_price": true,
+        "same_original_size": true,
+        "matched_zero": true,
+        "reservationId_same": true,
+        "reservation_live": true
+      }
+    ],
+    "matched_total": 0,
+    "new_open_BUYs_since_0930": [],
+    "total_remaining_risk_usd": 11.47,
+    "current_pUSD": 20.45129,
+    "deployable_after_BUYs_usd": 8.98129
+  },
+  "candidate_chain_balances": {
+    "block": 95799019,
+    "block_time_utc": "2026-10-19T09:57:56+00:00",
+    "pUSD": 20.45129,
+    "313_both_outcomes_zero": true,
+    "316_both_outcomes_zero": true,
+    "1870_idaho_both_outcomes_zero": true
+  },
+  "routine_commands": {
+    "manifest": "logs/tick0956_private/cli_manifest.json",
+    "manifest_sha256": "26e93a2e4aef0dff630d540b29f73f97867a568b63d1ebfbee9dafd16c40a99f",
+    "count": 13,
+    "all_returncode_0": true,
+    "failed": [],
+    "position_state_audit": "rc0: 7 indexed + 1 deindexed claim, 0 expired acknowledgements pruned, clean",
+    "position_condition_ids_sha256_after_fix": "7520cd915ba8b85f62cedaee34daef837f36b9610f0dbba4c201a758b51833a8",
+    "acknowledged_holds_sha256_after_fix": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "watchlist": "0 triggers",
+    "hurdle": "3 clear, 0 flagged, 3 protected groups",
+    "UMA": "44 tracked / 42 Gamma refreshed / 0 alerts; fetch OK",
+    "Ostium": "0 open trades; state diff unchanged",
+    "exit_analysis": "Whalefall, Messi, Michigan and OpenRouter report HOLD CANDIDATE; Clarity group HOLD_COMPLETE_GROUP"
+  },
+  "portfolio": {
+    "total_bankroll_usd": 196.31,
+    "gas_usd_separately_deposited_included_in_total": 5.86,
+    "pm_mid_mtm_usd": 35.31,
+    "pm_net_depth_realizable_usd": 33.11,
+    "realizable_is_indicative_not_synchronized": true,
+    "pm_net_depth_source": "bankroll warning explicitly reports midpoint $35.31 vs net realizable $33.11; this is preferred over incorrectly adding the unrealized-realizable P&L field to midpoint.",
+    "reported_accounting_residual_usd": 20.73,
+    "residual_limit": "Cumulative accounting arithmetic, not independently audited cash profit."
+  },
+  "redeem_all_dry_run": {
+    "receipt": "logs/tick0956_private/redeem_all_dry_run.receipt.json",
+    "receipt_sha256": "2d2df43ecdeefbef19f3ee6ee4a036b1407159f9af61a06e64b51ad7ea76a902",
+    "returncode": 0,
+    "winning_redeemables": 0,
+    "losing_or_uncertain": 1,
+    "reported_row": "legacy Gemini-model highest-score No, curPrice 0; dry-run only"
+  },
+  "daemons": {
+    "four_expected_canonical_processes_once_each": true,
+    "processes": [
+      {
+        "script": "news_watcher.py",
+        "pid": 148881,
+        "started_utc": "2026-10-19T05:28:37Z",
+        "mtime_utc": "2026-10-18T22:58:44Z",
+        "canonical_absolute": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "heartbeat_watch.py",
+        "pid": 450,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "mtime_utc": "2026-10-02T14:31:39Z",
+        "canonical_absolute": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "telegram_listener.py",
+        "pid": 451,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "mtime_utc": "2026-09-10T18:34:57Z",
+        "canonical_absolute": true,
+        "mtime_before_start": true
+      },
+      {
+        "script": "opportunity_watch.py",
+        "pid": 425,
+        "started_utc": "2026-10-18T09:33:44Z",
+        "mtime_utc": "2026-09-29T10:07:53Z",
+        "canonical_absolute": true,
+        "mtime_before_start": true
+      }
+    ],
+    "wrappers": "one shell redirection wrapper each for heartbeat/Telegram; each has one canonical Python child"
+  },
+  "resource": {
+    "free_bytes": 1354104832,
+    "quota_headroom": "17%; resets 2026-10-24 20:41 UTC"
+  },
+  "material_news_alerts": [
+    "09:40Z Idaho Republican criticism of polls showing Risch behind, flagged against pending Idaho YES order; source not independently assessed in this task."
+  ],
+  "provenance": "authenticated orders SDK serialization from exhaustive paginator; positions helper serialization; reservations exact local read; balances are fixed-block Polygon calls; command streams gzip+SHA; no order cancellation, reconciliation, or financial-record changes."
+}

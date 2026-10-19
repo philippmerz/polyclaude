@@ -1,0 +1,12 @@
+{
+  "created_utc": "2026-10-19T09:58:08.079722+00:00",
+  "queued_tick": "20261019T095645Z",
+  "head": "707ca79",
+  "hashes": {
+    "notes/decisions.json": "6421929d1b78752c57b61c6a5fc93670d96f24325b5b606b183100f95d8a5dcd",
+    "notes/portfolio_kelly_priors.json": "bbf08ae1a32b34f376e8a95a1a7fb4b7f64db0589f1e8661fcc13ea5b7828591",
+    "notes/position_condition_ids.json": "7520cd915ba8b85f62cedaee34daef837f36b9610f0dbba4c201a758b51833a8",
+    "notes/deep_review_checkpoint.json": "3a7b17cbdfad1593ed0044ffa032040402c9ff3c41a9061e93d795859a9600cb",
+    "docs/performance.csv": "204dc2a2b8cde5ec682241af73c35c2831c1e43e56a3930885c1d285618d4c5c"
+  }
+}

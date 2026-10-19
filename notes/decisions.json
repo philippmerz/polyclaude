@@ -1,5 +1,5 @@
 {
-  "next_id": 231,
+  "next_id": 233,
   "decisions": [
     {
       "id": 1,
@@ -5001,9 +5001,10 @@
         "bounded-pilot"
       ],
       "slug": "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
-      "outcome": null,
+      "outcome": "Original BUY canceled unfilled at Oct19 10UTC; no executed position/cash debit/profit. See DEC231 and tick0956_postcancel_initial.json. Not a realized forecast trial; retain original research model as dated evidence.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Unfilled quotes are contingent commitments; original boundary cancellation is not a market outcome or a successful forecast.",
+      "resolved_at": "2026-10-19T10:05:19Z"
     },
     {
       "id": 230,
@@ -5021,9 +5022,52 @@
         "bounded-pilot"
       ],
       "slug": "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
-      "outcome": null,
+      "outcome": "Original BUY canceled unfilled at Oct19 10UTC; no executed position/cash debit/profit. See DEC232 and tick0956_postcancel_initial.json. Not a realized forecast trial; retain original research model as dated evidence.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Unfilled quotes are contingent commitments; original boundary cancellation is not a market outcome or a successful forecast.",
+      "resolved_at": "2026-10-19T10:05:19Z"
+    },
+    {
+      "id": 231,
+      "timestamp": "2026-10-19T10:05:19Z",
+      "type": "size_change",
+      "thesis": "Execute original Oct19 10UTC pull: cancel case313 unfilled BUY commitment 2.65pUSD. Vetted cancel accepted and removal verified10:00; independent terminal CANCELED0matched, exhaustive authenticated trades0, CTFs0 and old indexed positions unchanged10:02. This removes a commitment, with no purchase, sale or profit. No automatic repost/add/taker; archived live financial prior, research probabilities unchanged.",
+      "confidence": "high",
+      "prediction": "Canceled order stays absent; no matching executed exposure or cash debit is found during final reservation reconciliation.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "cancel-unfilled",
+        "standing-pull",
+        "no-profit",
+        "deep-review"
+      ],
+      "slug": "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+      "outcome": "Confirmed: case313 BUY canceled unfilled10:00UTC; affirmative terminal CANCELED0matched, exhaustive126-row authenticated trades0, CTFs0/cash20.451290/old8positionsunchanged. Vetted300sgrace reconciliation10:06 retired onlymatching reservation; fourothers unchanged/7.52risk. No executed trade or profit; no probability calibration trial.",
+      "calibration_delta": null,
+      "lesson": "Honor the original pull boundary; reconcile terminal order, trades, cumulative buys and balances before freeing commitments.",
+      "resolved_at": "2026-10-19T10:07:08Z"
+    },
+    {
+      "id": 232,
+      "timestamp": "2026-10-19T10:05:19Z",
+      "type": "size_change",
+      "thesis": "Execute original Oct19 10UTC pull: cancel case316 unfilled BUY commitment 1.30pUSD. Vetted cancel accepted and removal verified10:00; independent terminal CANCELED0matched, exhaustive authenticated trades0, CTFs0 and old indexed positions unchanged10:02. This removes a commitment, with no purchase, sale or profit. No automatic repost/add/taker; archived live financial prior, research probabilities unchanged.",
+      "confidence": "high",
+      "prediction": "Canceled order stays absent; no matching executed exposure or cash debit is found during final reservation reconciliation.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "cancel-unfilled",
+        "standing-pull",
+        "no-profit",
+        "deep-review"
+      ],
+      "slug": "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
+      "outcome": "Confirmed: case316 BUY canceled unfilled10:00UTC; affirmative terminal CANCELED0matched, exhaustive126-row authenticated trades0, CTFs0/cash20.451290/old8positionsunchanged. Vetted300sgrace reconciliation10:06 retired onlymatching reservation; fourothers unchanged/7.52risk. No executed trade or profit; no probability calibration trial.",
+      "calibration_delta": null,
+      "lesson": "Honor the original pull boundary; reconcile terminal order, trades, cumulative buys and balances before freeing commitments.",
+      "resolved_at": "2026-10-19T10:07:08Z"
     }
   ]
 }

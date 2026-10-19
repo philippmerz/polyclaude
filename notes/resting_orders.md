@@ -1,23 +1,27 @@
-# Current resting orders — October19 09:32UTC
+# Current resting orders — October19 10:07UTC
 
-**Six LIVE/zero-matched BUYs/$11.47 reserved; no SELL orders.** NewRhine/Haaland3.95plusoldfour7.52; authenticatedorders09:32:28–29/currentchainreads09:32:29–30, terminalcursor exhausted. Allold8indexed financialrowsunchanged; allfournewcandidateCTFoutcomes0. [Rootproof/exactCID+assets](../data/deep_review_20261017/work/tick0930_root_audit.json) · [decision/source/risk](../research/2026-10-19-goal-resumed.md). Unfilledordersarenotpurchases,profit orfillguarantees; laterfillspossible.
+**Four LIVE/zero-matched BUYs/$7.52 reserved; no SELL orders.** Four exact order/CID/asset/size/price matches and four live reservations; all8 old position rows unchanged. [Final state](../data/deep_review_20261017/work/tick0956_final_state.json) · [exact identities](../data/deep_review_20261017/work/tick0956_account.json). Later fills remain possible; unfilled commitments are not purchases/profit.
 
-Wallet at fixedPolygon95798001 (09:32:29UTC) pUSD20.451290; commitments11.470000/deployable8.981290. Cash/newcandidateCTFs pinned tothatblock; authenticatedaccount/orderreads separate,notNAV. Sixreservationsmatchfull-fillcommitments. Historical fixedPolygon95785155/MT-onlyretirement5→4 remainsin[reconciliation](../data/deep_review_20261017/work/mt01_reconcile_0413.json).
+FixedPolygon95799403 at10:07:32UTC: pUSD20.451290, canceled313/316 both-outcomeCTFs0. Deployable after current commitments12.931290; account and chain observations separate, not synchronized NAV. Six→four reservations reconciled through existing entry-lock/300s grace/terminal/trades/indexed-buy gates; only two canceled IDs retired. [Reconcile](../data/deep_review_20261017/work/tick0956_reconciled.json).
 
-**CANCEL ALL unfilled new remainder at existingOct19 10UTC; earliermaterialuncertaintyCANCEL FIRST. Noautomaticrepost/add/taker.** Anypartial/fullfill needsfreshholding/source/fee-netexit/portfoliojudgment; subminimum5sharepartials canbedust.
-
-|Newbid|Shares/limit/risk|OrderID|Deadline|
+|Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|
-|DEC229/case313 Rhine|5YES/53c/2.65|`0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261`|Oct19 10UTC|
-|DEC230/case316 Haaland|10NO/13c/1.30|`0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237`|Oct19 10UTC|
+|ME02|10YES/38c/3.80|`0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37`|HistoricalME01slug does not overrideME02CID/asset|
+|CA06|50NO/3c/1.50|`0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd`|No add/repost/taker fallback|
+|NY01|10YES/12c/1.20|`0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585`|No add/repost/taker fallback|
+|Idaho named Independent|34YES/3c/1.02|`0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de`|Oct19 22UTC pullALLunfilled; earlier verified material poll/candidate/ballot/turnout uncertainty CANCEL FIRST|
 
-RhineprimaryYES84%/selected64%,range50–97; Kaub25700100/77cm, datedofficialBfGdailymean-to-any-readingbridge. HaalandNO65%/selected40%,YESrange10–70; official2026GlobalAthletestop5growth, sharedMessi/internalGoogle/finite-slotrisk. Theseareunfittedjudgments,noprobabilityfloor orhedgecredit. Currentforecasts/feedsnotguaranteedexhaustive. Structuredfees/eligiblebooks/source/exchangeapprovals/currentcaps/funds andnormalwatcherreload verifiedbeforeposts. Nomakerfee paid; entire3.95canloseonfuturefill.
+Idaho630707 CID`0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301` governs;630706 Republican sibling is not equivalent/hedge. Newsmax alertf9c70fee… returned consent/no publisher or new poll verified; no numeric change/add. Existing20%YES/selected5% after15pp reserve, range1–80; Peak-only1.653% is below3c, accepted tiny full1.02 risk. [Primary judgment/source limits](../research/2026-10-19-0956-checkin.md). Any fill needs fresh holding/source/net-exit/portfolio judgment; subminimum5share partials can become dust.
 
-- **Idaho:** original34YES3c/$1.02; existingOct19 22UTC pullALLunfilled. Earlier material poll/candidate/ballot/turnout uncertainty CANCEL FIRST. No automatic repost/add; fresh holding judgment on fill.
-- Three House bids remain: NY01$1.20/CA06$1.50/ME02$3.80. Exact IDs/assets/current records in root proof above; ME02's historical slug saysME01, so CID/token identity governs. No add/repost/taker fallback.
+**ALREADY CANCELED UNFILLED — never replay/repost:**
+
+- Rhine313: original5YES53c/2.65, order`0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261`; canceled10:00:29–32/DEC231.
+- Haaland316: original10NO13c/1.30, order`0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237`; canceled10:00:32–35/DEC232.
+- TerminalCANCELED/0matched,126authenticated trades/no fills, indexed purchases unchanged/CTFs0; after300s only their two reservations retired. No fee/cash debit/credit/profit. OriginalDEC229/230 outcomes resolved as unexecuted forecasts; numeric research retained under archived priors. Candidate feeds/terms removed; heldMessi/Google coverage unchanged. [Independent proof](../data/deep_review_20261017/work/tick0956_postcancel_initial.json).
+
 - **MT01 case271 canceled unfilled/DEC228:** original10YES33c/$3.30, one vetted cancel04:04:03; after300s terminal0/trades/index/bothCTFs0 verified. New AmericanPulse poll-source uncertainty; no adverse probability adopted. Only its reservation retired; historical47/37 prior archived. No replay/repost. [Outcome](../research/2026-10-17-deep-review/mt01_271_canceled_outcome_0413.md).
 - **293YB/296gas canceled unfilled/DEC226**, [outcome](../research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md); **Sedgwick2054 canceled unfilled/DEC224**, [outcome](../research/2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md). Former pulls complete; no automatic retries.
-- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222**, retain/noadd; old BUYpull obsolete. [Latest held review](../research/2026-10-19-0654-checkin.md); next10UTC/earlier material actual/source news.
+- **HLE9NO fully sold/DEC225**, [outcome](../research/2026-10-19-0200-hle-exit.md); no remainder/re-entry. **Whale6NO original fill/DEC222**, retain/noadd; old BUYpull obsolete. [Latest held review](../research/2026-10-19-0956-checkin.md); next existing14UTC/earlier material actual/source news.
 - BOI/earlier film canceled; OpenRouter/Messi/MI original BUYs filled, old pulls obsolete.278/294/300closedunplaced. Unfilled commitments are contingent promises, never purchases/profit.
 
 Full earlier financial history is byte-identical in [archive](resting_orders_20261019T0210_archive.md), SHA256 `e761aecc21d3672b3152e7e72c1e7e13201486cc3b73d8bea6945b0243f2841d`; later dated journal/outcomes supplement it. Never replay archived instructions.

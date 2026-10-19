@@ -1,62 +1,51 @@
 ---
-reviewed_at: "2026-10-19T09:46:26.148156+00:00"
-valid_until: "2026-10-19T10:00:00Z"
+reviewed_at: "2026-10-19T10:20:28.950674+00:00"
+valid_until: "2026-10-19T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 0a9e7a7de14a5e3b35ae22bbeb4ba82d3078093386f8ad4410eac9719d4bbee6
+  README.md: 958fbbe4df2dc42194561bbab58b49aca33711f4495bf056f521165307ecc8fc
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 0780e40b729f71598bebd2bac19635635083195c8df3a3e50a3c18076eed193f
-  notes/resting_orders.md: 3b840576b870fb84793572804d92bf741dc12abbb90b66a8af7d862cb775fc56
-  notes/journal.md: 74d490e9b12e40c46fa878aed82ee94b1543b560842e12ded41a7edadf597682
+  notes/backlog.md: 2e836611873699e4553695bce8b6e10baccf848d5f25de71553a52ec68faf86d
+  notes/resting_orders.md: 41a11fc271a98f018dc53286a8e00c79000a5903624731140e272e56badae795
+  notes/journal.md: 90db0b04a84d11cc425961a027e30bfd94b84c3470f6ebb83cdff84a38226563
 ---
 
 ## Resume
 
-**316 valued / 6 blocked / 364 factual / 2,314 pending; 686 base + 56 revisions; next320.** [Checkpoint](deep_review_checkpoint.json) governs counts. First100/200/300 notified; next400/material findings. Each completion saved/indexed immediately. [Small resume](../research/2026-10-17-deep-review/RESUME.md): full literal rule/latest report, named2–5KB source/model units,8KB cap; never ingest whole indexes/ledgers/journal.
+**316 valued /6 blocked /364 factual /2,314 pending;686 base+56 revisions,next320.** [Checkpoint](deep_review_checkpoint.json) governs counts; every completion saved/indexed. First100/200/300 notified,next400/material findings. [Small resume](../research/2026-10-17-deep-review/RESUME.md): full exact rule/latest report plus named2–5KBunits,8KBcase cap; never load whole indexes/ledgers/journal. Native goal last observed blocked09:25/tools lack resume; no fake completion/duplicate. This scheduled check is complete and bounded.
 
-Prior Telegram1261 delivered; do not repeat. Native goal last observed blocked09:25/tools lack resume; no fake completion/duplicate goal. This scheduled run is bounded.
+## Completed money actions — do not replay
 
-## Already submitted — do not replay
+**313Rhine/316Haaland ALREADY CANCELED UNFILLED10:00:29–35UTC; no repost.** DEC231/232resolved; originalDEC229/230 outcomes are unexecuted forecasts, not calibration trials/profit. Auth terminalCANCELED/0matched,126trade rows/no fills, bothCTFs0 and8old position identities/size/basis/totalBought unchanged. After300s, vetted lock+reconcile removed only their two reservations/3.95; oldfour JSON unchanged. Numerical research models archived unchanged. [Final proof](../data/deep_review_20261017/work/tick0956_final_state.json) · [completed phase](../data/deep_review_20261017/work/tick0956_RESUME.json).
 
-**DEC229 Rhine5YES53c/$2.65; DEC230 Haaland10NO13c/$1.30. At09:32 bothLIVE/0matched, all four candidateCTFs0.** Commitments, not purchases/profit. **CANCEL ALL unfilled new remainder at existingOct19 10UTC**, earlier material source/forecast/list/eligibility uncertainty cancel-first. No automatic add/repost/taker. Any fill needs source/holding/fee-net-exit/portfolio judgment; subminimum5share partials can be dust.
+**Four BUYs/7.52, all0matched10:07:** Idaho34YES3c/1.02, NY01/1.20, CA06/1.50, ME02/3.80. Four matching reservations. FixedPolygon95799403/10:07:32 pUSD20.451290/new313+316CTFs0; unreserved12.931290. Account/chain times separate,later fills possible. HistoricalME01slug does not overrideME02CID/asset. [Exact orders](resting_orders.md).
 
-[Exact orders](resting_orders.md) · [current root proof](../data/deep_review_20261017/work/tick0930_root_audit.json) · [entry phase](../data/deep_review_20261017/work/entry0848_RESUME.json) · [completed check](../research/2026-10-19-0930-checkin.md).
+**Idaho22UTC pullALLunfilled**, earlier verified material poll/candidate/ballot/turnout uncertainty cancel-first; no add/repost. f9c70fee… plus olde2da2a49… Newsmax wrappers differ, newbody consent/no article date or new poll identified. Keep tiny existing bid/no p change. Primary20%YES/selected5% after15pp reserve/range1–80; Peak-only1.653% below3c remains adverse.630707 namedIndependent CID differs from630706 Republican sibling; no hedge/closure inference. [Source judgment](../data/deep_review_20261017/work/tick0956_root_risk.json).
 
-- Six BUYs/$11.47 reserved: oldfour$7.52 = Idaho34YES3c/$1.02 (Oct19 22UTC pull), NY01$1.20, CA06$1.50, ME02$3.80. HistoricalME01slug does not override ME02CID/token. Idaho22UTC separate from new10UTC pulls.
-- Auth account09:32:28–29: six exact order/asset/CID/term matches, unique matching live reservationIds; all8 position identities/size/basis/totalBought/redeemability unchanged. Polygon95798001 (09:32:29) pUSD20.451290/newCTFs0; deployable8.981290. Account vs chain reads separate, later fills possible. Audit clean7indexed+1deindexed claim; zero winning redeemables, legacy losing GeminiNO0 skipped.
-- Entire new3.95 can lose; small manual sizes/no hedge credit. Entry gates were checked before original posts; dated evidence is not new execution authority. Feed baseline08:57/reload09:02 verified; rawRSS Telegram OFF.
-- RelatedRhine745 route audit09:25:313YES/745NO both53bid/56ask/samefees. Opposite questions are not duplicates; earlier-window/title ambiguity remains.745 pending/no extra valuation credit or order. [Audit](../data/deep_review_20261017/work/entry0927_sibling_route_audit.json).
+## Dated financial observation
 
-## Financial observation — dated
+Authoritative09:58:36.411–50.698: **account196.31 includes5.86separate gas; trading190.45 / indicative depth188.25** from roundedPM35.31mid/33.11net depth. Versus170 contributions, depthgain18.25/~10.7%.20.73 residual is cumulative accounting arithmetic, not audited cash profit. Sequential/rounded, not synchronizedNAV or certified proceeds; VM/API excluded. CSV21309:58minute anchor preserves historical prefix; no extra chart requests. [Full check](../research/2026-10-19-0956-checkin.md).
 
-Required authoritative producer09:33:20.273–35.406: **account196.75 includes5.87 separate gas; trading190.88 / indicative depth188.84** from roundedPM35.75mid/33.71depth. Versus170 contributions, depthgain18.84/~11.1%. Residual20.73 is cumulative accounting arithmetic, not audited cash profit. Sequential/rounded, not synchronizedNAV or executable proceeds; VM/API excluded. CSV212,09:33minute anchor, historical prefix preserved. No extra chart valuation requests.
+## Held risks and evidence
 
-## Theses and source limits
-
-| Exposure | Primary / selected | Current management and limits |
-|---|---|---|
-|Rhine pending5YES|84%/64%; range50–97|Kaub25700100>=77cm, transient reading; titleOct1–31 vsSep6start ambiguity.History/source gaps retained in0313 report.09:30W12cm; BfG PDF unchanged09:33. Daily-mean-to-any-reading bridge uncalibrated. Pull10UTC.|
-|Haaland pending10NO|65%/40%; YESrange10–70|2026GoogleGlobalAthletes top5 YoY growth, not football fame. Internal growth/field unmeasured; shares Messi release/attention factor.09:33hub301→2025 is not proof no2026list elsewhere. Mar31 fallback can outlast project. Pull10UTC.|
-|MI5NO/Messi5YES/OR5NO|44/60/88%; selected34/40/73|Retain/noadd. Selected terminalEV1.70/2.00/3.65 vs indicative exits1.41/1.20/3.00. Broad20% cases favor sale. No recovery promise/automatic Kellyadd.|
-|Whale6NO|57.1022/42.1022%|Original6@17c/DEC222.09:31Numbers/Mojo exactly8mESTIMATE; final exactly8 winsNO. Preview0.9 separately listed/no extra adjustment. SelectedEV2.5261 vs indicative.65; broad25%EV1.50. Retain/noadd.|
-|Clarity29/29; Trump0.33dust|Conditional29floor/58middle|Whole pair only, no legwise action/add; not guaranteed. Trump below5share exitminimum.|
-
-- Named old alerts explicitly reviewed: f9f38cd6… MI repeatOct17 townhall/no measured effect; ea975f2c… Yahoo global flop adds no domestic actual; e46af719… Sun4.7m/narrowing unverified after consent. New c1292a5f… WMRN title matches old iHeart, newbody unbound/no identifiable numeric poll. No p update from classifier. [Exact IDs/source dates](../data/deep_review_20261017/work/tick0930_news_sources.json).
-- OR09:33 direct chart: Oct12=164.043979329882T; Oct19partial=7.632384220810T, cutoff unknown. FOUR-WEEK SUM[725,775)T usesOct26/Nov2/Nov9/Nov16 labels, absent now; lockNov23/fallbackNov27ET. No target-total extrapolation.750Tcountermodel reversesNO; acquisition publisher unbound/no new closing inference.
-- Clarity same first final-passage vote beforeJan1: <=50Yea pays1/pair;51–58 pays2;>=59 pays1; no qualifying vote and voice/unanimous exception pay1. Cloture/procedure excluded.09:35:46 exact rules/assets unchanged35bc95…aab693, UMA null/empty; fee-net supplied-depth24.0319, separately timed from exit_analysis27.44. No new official final-vote record obtained; no absence claim. [Risk](../data/deep_review_20261017/work/tick0930_root_risk.json).
-- Research317 coalition/floor/status gaps remain;318 originalASR/currentfield missing/blocked;319 extremeFedcut regime/noK5license. See current reports before entry.
+- **MI5NO/Messi5YES/OR5NO:** primary44/60/88%, selected34/40/73%; retain/noadd. Selected terminalEV1.70/2.00/3.65 vs indicative exits1.41/1.20/3.00; broad20% cases favor sale. Small size/uncalibrated source models, no recovery promise or automatic Kellyadd.
+- **Whale6NO17c/DEC222:** primary57.1022%/selected42.1022%, retain/noadd. The Numbers10:08:41 exactly8m/chart_estimate/3065theaters/3releasedays; unchanged09:31, not final or proof no final elsewhere. Exact8mFINALwinsNO; preview0.9 separate. SelectedEV2.5261 vs indicative.66; broad25%EV1.50. Day4Sacnilk wrapper10:18consent, no verified domestic actual.
+- **MI endorsement opinion** new5ade6753… relevant despite empty classifierimpacts;10:18wrapperconsent/no measured electoral change. Prior townhall repeatsOct17;4.7m/narrowing publisher unverified. No headline-derived p. [Tail sources](../data/deep_review_20261017/work/tick0956_tail_news.json).
+- **Clarity29/29:** whole pair only/noadd; conditional29floor/58middle vs26.84net exit. Same first qualifying final passage, not cloture; no-vote and voice/unanimous exceptions pay1/pair. Full exact criteria/assets last checked09:35:46, hash35bc95…aab693; directdepth24.0319 separatelytimed from laterexit26.84. No new official vote record/absence claim; venue/adjudication risk, not guarantee. Trump0.33dust below5share minimum.
+- **OR**09:33 chartOct12=164.043979T/Oct19partial7.632384T/cutoffunknown; targetOct26/Nov2/9/16 absent then, no target-total extrapolation/acquisition-closing inference. **Google**09:33 hub301→2025 does not prove no2026list elsewhere. **HLE**archivecomparison isn't intraday change.
+- Selected holds exceed generous one-year exit+cash diagnostic at datedOct18 Aave3.1525%, not locked/costless funding. Joint bookkeepingstress: allordinarylose+all4BUYfilllose7.52+pair29 gives176.62; pair0 gives147.62, conditional otherassetsvalue/access; not calibrated systemic bound/guarantee/hedge credit.
 
 ## Next and operations
 
-Existing10UTC newbid pulls+held review; Idaho22UTC. WeeklyOct23/monthlyNov12 notdue; no off-chain stocks/brokerage catchup. No replay of completed MT01/Sedgwick/293YB/296gas cancels, GrokHLE9NO sale, or BOI/278/294/300 closures. LegacyGeminiHLE4.0347/value0 is distinct; Whale old BUY pull obsolete.
+Existing next fullcheck14UTC; Idaho22UTC, earlier material verified uncertainty cancel-first.317 coalition/floor/status gaps beforeentry;318 originalASR/currentfield missing/blocked;319 extremeFedcut/noK5license. No new valuation credit or discovery rejection. Completed MT01/Sedgwick/293YB/296gas cancels,HLE9NOsale,BOI/278/294/300 closures never replay. LegacyGeminiHLE4.0347/value0 distinct; Whale oldBUYpull obsolete. WeeklyOct23/monthlyNov12 not due; off-chain stocks/brokerage catchup retired.
 
-Full13CLI/26streams verified; UMA44/42/0alerts, hurdle0flags/watchlist0hits/Ostium0. HLE comparison is Jul3archive-relative, not intraday change. Four canonical daemons once each/code older thanstarts; no restart/code/gate change.
+13CLI/26streams verifiedrc0: UMA44/42/0alerts,hurdle0flags/watchlist0hits/Ostium0,auditCLEAN7indexed+1deindexed/0holds pruned,no winningredeemables. Four canonical daemons onceeach/codeolderthanstarts. CanceledRhine/Haalandfeeds removed; heldMessi/Google coverage unchanged/rawRSS TelegramOFF.10:13ordinarysave consistentwithconfigreload, no loaded-byte fingerprint/no forcedpoll/stateedit/restart.
 
-Discovery09:31–34: primary999fetched/625eligible/80selected/545omitted;thin38953/3383/3000/383; both capped.104 batch files/1835contextrows factually reviewed, substantive cases pending. Sports no exact consensus; structural20groups:4validated/nonpositive,7stale/9noasks,164unquoted. No exchange-wide zero. [Coverage](../data/deep_review_20261017/work/tick0930_discovery.json).
+Discovery09:58–59 primary998/621eligible/80selected/541omitted,thin38154/3346/3000/346; both page-capped.41hashed batches/741contextrows organized, substantive cases pending. Structural20of174attempted:5nonpositive/3stale/12noasks/154unquoted; no sports>3ppverified or exchange-widezero claim. [Coverage](../data/deep_review_20261017/work/tick0956_discovery.json).
 
-Duplicate operator recording disabled/removed; nativeCodexhistory untouched. ~1.38GB free/180MiB floor; source/account receipts preserved. PYTHONDONTWRITEBYTECODE=1. Last probe09:34=83%used/17%headroom/resetOct24 20:41; refresh before expensive discretionary research. No private inbox/history reads; Telegram literalstdin only. No material new finding/action, no Telegram this tick.
+Telegram1262 delivered once/cancellations; prior1261 not repeated. Chart10/10passed. Duplicateoperatortranscripts disabled/deleted/nativeCodex untouched;~1.35GBfree/180MiBfloor. PYTHONDONTWRITEBYTECODE=1. Last directquota09:34=83%used/17%headroom/resetOct24 20:41; refreshbeforeexpensive discretionary research. No private inbox/history reads, new goal/timer or idle follow-up.

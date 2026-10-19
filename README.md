@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 212 recorded observations from Apr-25
+The local performance CSV now has 213 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,11 +58,11 @@ Writing default for replies, handoffs and maintained documents:
 
 **316 valued /6 blocked /364 factual exclusions /2,314 pending**;686 immutable base cases +56 append-only revisions. Five newvaluations and one sourceblock individuallysaved; next320. [Checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified. [Resume](research/2026-10-17-deep-review/RESUME.md): one fullrule/latestreport, named2–5KBunits/8KBcap. Nativegoalrecordstillblocked despiteinteractiveoperatorresumption; tools havenoresumeoperation, so automaticcontinuation requiresapp/systemcontrol. [Current review and decisions](research/2026-10-19-goal-resumed.md).
 
-**New pilot bids, NOT fills:** DEC229Rhine5YES53c/$2.65 andDEC230Haaland10NO13c/$1.30; bothLIVE/0matched/allfourcandidateCTFs0 at09:32. Entire3.95canloseiflaterfilled. **Cancelallunfillednewremainder at existing10UTC**,earliermaterialuncertaintycancel-first; noautomaticrepost/add/taker. [Exactorders/proofs](notes/resting_orders.md). Primary source/model uncertainty remains substantial; these are smallmanualsizes,notpointKelly recommendations.
+**Rhine313/Haaland316 bids canceled unfilled at existing10UTC pulls** (DEC231/232); no purchases/profit, no repost. Independent terminal/trade/CTF checks and post-grace reconciliation retired only their3.95 commitments. Four older BUYs/7.52 remain; Idaho22UTC pull unchanged. [Current orders/proofs](notes/resting_orders.md).
 
-**Whalefall: original DEC222 filled6NO17c/$1.02; DEC223retain/noadd.** Numbers/Mojo08:40still$8mESTIMATE,notfinal; newglobalflopheadline doesn'tchange the domesticmetric. SelectedNO42.10% remains uncalibrated/fullcashlosspossible. [Source refresh](research/2026-10-19-goal-resumed.md). Original02UTCBUYpullobsolete; nextheldreview10UTC.
+**Whalefall: original DEC222 filled6NO17c/$1.02; retain/noadd.** The Numbers10:08still8mESTIMATE, not final; exact8mFINAL winsNO. SelectedNO42.10% is uncalibrated/full loss possible. [Current check](research/2026-10-19-0956-checkin.md). Original02UTCBUYpull obsolete.
 
-**293YB/296gas/Sedgwick/MT01 canceledunfilled**, standingpullscomplete/DEC226+224+228; noautomaticrepost. HLE9NOclosed/DEC225,2.6244netverified. SixBUY11.47nowincludeoldfour7.52+new3.95; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments,notexecutioninstructions.
+293YB/296gas/Sedgwick/MT01 canceled unfilled; no replay. HLE9NOclosed/DEC225,2.6244net verified.300Delcy closed unplaced/302maker candidate unplaced. Research probabilities are dated judgments, never execution instructions.
 
 BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 
@@ -86,13 +86,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 09:33UTC
+## Last audited snapshot — October19 09:58UTC
 
-**Trading midpoint $190.88 / indicative net depth $188.84; account $196.75 including $5.87 separately funded gas.** PM $35.75 midpoint / $33.71 fee-net depth; $20.73 cumulative accounting residual. Authoritative producer09:33:20–35UTC: rounded sequential estimates, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Completed check and source limits](research/2026-10-19-0930-checkin.md).
+**Trading midpoint $190.45 / indicative net depth $188.25; account $196.31 including $5.86 separate gas.** PM35.31mid/33.11net depth;20.73 cumulative accounting residual. Authoritative09:58:36–50 producer is rounded/sequential, not synchronized NAV, certified proceeds or audited cash profit; VM/API excluded. [Completed check](research/2026-10-19-0956-checkin.md).
 
-No new trades/fills or numerical prior changes. Six BUYs/$11.47 remain LIVE/unmatched09:32; pUSD20.451290, deployable8.981290. **Cancel unfilled Rhine/Haaland remainder at existing10UTC; Idaho22UTC separately.** MI/Messi/OpenRouter/Whale retain/noadd; Clarity whole29/29 and Trump dust unchanged. Named Michigan alerts repeat coverage or remain unverified; Numbers/Mojo09:31 still$8mESTIMATE. Kaub12cm/BfGforecast unchanged; OpenRouter target weeks absent/current cutoff unknown. [Exact orders/proofs](notes/resting_orders.md).
+Two10UTC bids canceled unfilled;3.95 commitments retired. Four BUYs/7.52 remain LIVE/unmatched10:07; pUSD20.451290/deployable12.931290 observed separately. Idaho Newsmax body inaccessible; no new poll established,34YES3c retains22UTC pull. Holdings/numeric priors unchanged; MI/Messi/OpenRouter/Whale retain/noadd, Clarity whole29/29 and Trump dust. [Exact orders](notes/resting_orders.md).
 
-Full routine checks complete; no UMA alerts, winning redeemables, hurdle flags or watchlist triggers. Four canonical daemons healthy. Discovery refreshed with explicit pagination/top/quote limits; no verified sports discrepancy or structural positive in the checked slice, no exchange-wide-zero claim. Frozen review remains316valued/6blocked, next320. No material new update, so no Telegram. [Compact handoff](notes/current_context.md).
+Routine checks found no UMA alerts, winning redeemables, hurdle flags or watchlist triggers. Four canonical daemons healthy; inactive Rhine/Haaland feeds removed. Discovery caps/quote failures explicit; no exchange-wide-zero claim. Review316valued/6blocked,next320. One material Telegram summarizes the cancellations. [Compact handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

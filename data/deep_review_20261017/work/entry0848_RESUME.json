@@ -1,6 +1,6 @@
 {
   "schema": "bounded_entry_followup_resume.v1",
-  "phase": "COMPLETE: BOTH_LIVE_UNFILLED_INDEPENDENTLY_VERIFIED09:09; DO_NOT_REPOST",
+  "phase": "COMPLETE:CANCELED_UNFILLED10:00;TERMINAL+TRADES0MATCHED+CTFs0VERIFIED;DO_NOT_REPOST",
   "indices": [
     313,
     316
@@ -45,7 +45,7 @@
       "Erling Haaland"
     ]
   },
-  "next": "Existing10UTC: cancelALLunfillednewRhine/Haalandorders;earliermaterialuncertaintycancelfirst. Ifanyfill,source/holdingreunderwrite. Nextresearch320. Nativegoalblockedrequiresapp/systemresume.",
+  "next": "No10UTCorderactionremains;doNOTreplaycancels. See tick0956_RESUME.json forboundedreservationreconciliationanddocs. Nextresearch320onlyonauthorizedrun.",
   "goal_control": "Operatorresumedinteractivework;nativeget_goalstillblocked08:42andtoolsdonotexposeresume. Do notmarkcomplete/createanothergoal/edprivategoalstate; automaticcontinuationneedsappuser/systemcontrol.",
   "rhine_order_id": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
   "rhine_proof": "data/deep_review_20261017/work/0313_root_order_verified_0905.json",
@@ -73,5 +73,6 @@
       "matched": 0
     }
   ],
-  "sibling_route_audit": "data/deep_review_20261017/work/entry0927_sibling_route_audit.json"
+  "sibling_route_audit": "data/deep_review_20261017/work/entry0927_sibling_route_audit.json",
+  "cancel_proof": "data/deep_review_20261017/work/tick0956_postcancel_initial.json"
 }

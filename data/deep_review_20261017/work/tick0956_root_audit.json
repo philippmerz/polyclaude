@@ -1,0 +1,47 @@
+{
+  "schema": "tick0956_root_capture_and_preservation_audit.v1",
+  "reviewed_utc": "2026-10-19T10:14:12.998867+00:00",
+  "verified_capture_files": 65,
+  "routine_commands": 13,
+  "routine_streams": 26,
+  "routine_all_rc0": true,
+  "public_receipts": 7,
+  "batch_files": 41,
+  "batch_rows": 741,
+  "batch_max_bytes": 9476,
+  "all_capture_hashes_match": true,
+  "frozen_checkpoint_and_ledgers_unchanged": true,
+  "unrelated_decisions_and_priors_unchanged": true,
+  "decisions_outcome_lesson_resolved_at_only": [
+    229,
+    230
+  ],
+  "new_resolved_zero_size_decisions": [
+    231,
+    232
+  ],
+  "prior_changed_keys": [
+    "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
+    "_updated",
+    "_closed_20261019_rhine313",
+    "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+    "_closed_20261019_haaland316"
+  ],
+  "capture_manifest_sha256": "26e93a2e4aef0dff630d540b29f73f97867a568b63d1ebfbee9dafd16c40a99f",
+  "final_state_sha256": "a33b708e97b22bc8c9be0cdde7f6f5cf6de408cc77b4fca29e1974d2cbf2c082",
+  "final_state": "Four exact zero-matched BUYs, four reservations; eight old positions unchanged; pUSD20.451290 at Polygon95799403/10:07:32Z, canceled313/316CTFs0. Prior independent terminal0matched+126trade rows+postgrace reconcile retained.",
+  "scope": "Offline audit; no extra account/market requests, no financial writer or new substantive valuation.",
+  "audit_correction": "Initial audit assumptions (# header, numeric-only rows, <=8000 scanner bytes) corrected to actual ## Batch headers, ranked+context rows and indexed max9476bytes. Captures untouched.",
+  "direct_source_raw_gzip_hashes_verified": [
+    "Newsmax consent (not publisher body)",
+    "The Numbers10:08 weekend chart"
+  ],
+  "remaining_order_sides_verified": {
+    "ME02": "10YES38c",
+    "CA06": "50NO3c",
+    "NY01": "10YES12c",
+    "Idaho": "34YES3c"
+  },
+  "tail_source_hashes_verified": 2,
+  "primary_pending_and_held_alert_review": "Includes MI endorsement despite empty classifier impacts and Whale Day4; sources unverified, no p change."
+}

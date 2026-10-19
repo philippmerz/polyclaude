@@ -1,0 +1,27 @@
+{
+  "schema": "whalefall_current_weekend_refresh.v1",
+  "captured_utc": "2026-10-19T10:08:42Z",
+  "source": {
+    "url": "https://www.the-numbers.com/box-office-chart/weekend/2026/10/16",
+    "receipt": "logs/deep_review_20261017/tick0956_whale/numbers_weekend.receipt.json",
+    "body": "logs/deep_review_20261017/tick0956_whale/numbers_weekend.body.json.gz",
+    "status": 200,
+    "started_utc": "2026-10-19T10:08:41.208888Z",
+    "received_utc": "2026-10-19T10:08:41.893238Z",
+    "raw_sha256": "e1c068ae8f76d1e4117f9e554194e8a3a669f22950531f8ec52c962ea61e7701",
+    "gzip_sha256": "162ebf9d3a546ef00f7cc55d4bfae8c3c19e517ece871eb0e2c5087825bb7576",
+    "raw_bytes": 35699
+  },
+  "scope": "The Numbers domestic weekend chart for Oct16–18, 2026.",
+  "observed_row": {
+    "rank": 4,
+    "title": "Whalefall",
+    "gross": "$8,000,000",
+    "gross_cell_class": "chart_estimate",
+    "theaters": 3065,
+    "days_in_release": 3
+  },
+  "comparison": "The current row still labels $8m as an estimate; no below-$8m actual or final status observed on this one page. This page refresh does not establish absence of a later final source elsewhere.",
+  "prior_comparison": "Prior 09:31 captured Numbers weekend row also showed $8m with chart_estimate class (work/tick0930_news_sources.json). No material change in observed domestic estimate/status.",
+  "followup": "No Mojo request made because this page did not materially change the prior observation."
+}

@@ -1,0 +1,22 @@
+{
+  "primary": {
+    "original_path": "data/snapshots/shortlist_20261019T095818039263Z_primary.json",
+    "path": "logs/tick_20261019T0956/snapshots/shortlist_20261019T095818039263Z_primary.json.gz",
+    "raw_bytes": 257876,
+    "raw_sha256": "defd8b4111b410528ab58f45eef92ae8910032baa7f73f46db4b3a737befa2f5",
+    "gzip_bytes": 54800,
+    "gzip_sha256": "8622a250c73fe8ddfa2e0c71dace8529ac07d12d0d5a4a4bd24865400f41b796",
+    "sidecar": "logs/tick_20261019T0956/snapshots/shortlist_20261019T095818039263Z_primary.meta.json",
+    "sidecar_sha256": "799a780eb42f050a2c931a0112be380bd7bce3f7538f62b7e4199ec3323f2a8a"
+  },
+  "thin_tail": {
+    "original_path": "data/snapshots/shortlist_20261019T095824569191Z_thin_tail.json",
+    "path": "logs/tick_20261019T0956/snapshots/shortlist_20261019T095824569191Z_thin_tail.json.gz",
+    "raw_bytes": 9713836,
+    "raw_sha256": "31666525ef33b5a69a4895ead3aca165289aea46661af18dec32d413043b800b",
+    "gzip_bytes": 2056312,
+    "gzip_sha256": "326543268aa699a7f0ec7d48db51b3dc9de4bbb97279b1bbe157de062dad6276",
+    "sidecar": "logs/tick_20261019T0956/snapshots/shortlist_20261019T095824569191Z_thin_tail.meta.json",
+    "sidecar_sha256": "4913b25086fdc86f64c5af808491a5507574b9776d99baf23d446d992e85111f"
+  }
+}

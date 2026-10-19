@@ -1,0 +1,61 @@
+{
+  "schema": "bounded_cancel_reconcile.v1",
+  "started_utc": "2026-10-19T10:06:07.684650+00:00",
+  "completed_utc": "2026-10-19T10:06:08.848815+00:00",
+  "writer": "Vetted entry-lock + _merge_entry_commitments(prune=True), existing300sgrace/affirmative terminal/trade/cumulative-buys gates; no manualledgeredit",
+  "cancel_grace_age_seconds": {
+    "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261": 335.46485,
+    "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237": 332.53952
+  },
+  "reservations_before": 6,
+  "reservations_after": 4,
+  "retired_only_target_reservationIds": [
+    "1792400692238585459-acc23652",
+    "1792400836968375171-1fe9f209"
+  ],
+  "all4_other_reservations_byteequivalent_JSON": true,
+  "open_BUYs_after": 4,
+  "open_total_risk": 7.52,
+  "all4_live_zero_matched": true,
+  "removed_commitment_risk": 3.95,
+  "pUSD_last_fixed_block": 20.45129,
+  "deployable_using_that_cash_and_current_commitments": 12.93129,
+  "cash_scope": "Currentpost-reconciliationcommitments vs fixedPolygon95799195cash10:02:20; separate observationtimes, notfreshNAV/cashcredit/profit.",
+  "captures": [
+    {
+      "path": "logs/tick0956_private/reconcile/reservations_before.json.gz",
+      "representation": "SDK/helper serialization or exact ledger JSON, not wire capture",
+      "raw_sha256": "942a4b15cab313333fd4a3a6c2c7cd61b096b1ab0544b9f352741f4b8224eaa9",
+      "gzip_sha256": "29ef252c38bdfa6a94d1f0e4ff6346065328489f9da99b62a3a7e650ab506f07",
+      "raw_bytes": 3661
+    },
+    {
+      "path": "logs/tick0956_private/reconcile/positions.json.gz",
+      "representation": "SDK/helper serialization or exact ledger JSON, not wire capture",
+      "raw_sha256": "81b8d97fcce85d5745f4337b13253279808206d007d2fc47270d9677febaac76",
+      "gzip_sha256": "83db4bd2e416fd590738f003aa85ccb71353fdc8447b9fe4dd83c0de4f6d5e92",
+      "raw_bytes": 8465
+    },
+    {
+      "path": "logs/tick0956_private/reconcile/open_buy_commitments.json.gz",
+      "representation": "SDK/helper serialization or exact ledger JSON, not wire capture",
+      "raw_sha256": "84e43aa01476c6721dba93ae5af6de029a162dbf3ea1be6adb09feb1b8d82f9f",
+      "gzip_sha256": "f7b4c95e3acd25b31a820c07bc2b7118615ab85f50bb8c4aa3e87c58f9bfc77c",
+      "raw_bytes": 1970
+    },
+    {
+      "path": "logs/tick0956_private/reconcile/reservations_after.json.gz",
+      "representation": "SDK/helper serialization or exact ledger JSON, not wire capture",
+      "raw_sha256": "d2d709c50435264e6f0bf7f099e6cb0dd1dc56af832a98183c39dfff628110fc",
+      "gzip_sha256": "a412a257595f8e0b623a9a9570a5aeb3a890362747c5658cefd8f36eb82eac14",
+      "raw_bytes": 2274
+    },
+    {
+      "path": "logs/tick0956_private/reconcile/open_orders_after.json.gz",
+      "representation": "SDK/helper serialization or exact ledger JSON, not wire capture",
+      "raw_sha256": "2a001cc730c9189ff33aa2100cef2e085b7567ff25387921d2a615e450309bcf",
+      "gzip_sha256": "8cf75b03a19c7f051f5a26f2ce59e4008fdc294ba18048d1d26f24c4c5a6cc36",
+      "raw_bytes": 2197
+    }
+  ]
+}

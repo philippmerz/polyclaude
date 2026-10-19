@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-19: 313Rhine/316Haaland LIVE_UNFILLED DEC229/230; oldpriorsunchanged, source/entryproofslinked.",
+  "_updated": "2026-10-19T10:05:18.998874+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1620,7 +1620,7 @@
     "latest_financial_outcome": "research/2026-10-17-deep-review/mt01_271_canceled_outcome_0413.md",
     "verification": "data/deep_review_20261017/work/mt01_root_verified_0412.json"
   },
-  "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026": {
+  "_closed_20261019_rhine313": {
     "p_yes": 0.84,
     "p_no": 0.16000000000000003,
     "cluster": "rhine-kaub-waterlevel-2026",
@@ -1636,17 +1636,23 @@
     "rationale": "Primary officialBfGdailymean-to-any-readingbridge84%YES/range50-97;15ppmodel+5ppconditionalfillreserve,selected64. Currentlowreadingsanticipated; futureweathermodelcanfail.",
     "research_report": "research/2026-10-17-deep-review/evaluations/0313.md",
     "latest_source_packet": "data/deep_review_20261017/work/0313_forecast_followup_0828.json",
-    "financial_status": "LIVE_UNFILLED",
+    "financial_status": "CANCELED_UNFILLED_10UTC_NO_CURRENT_POSITION_OR_BUY",
     "management": "CANCEL allunfilledremainder atEXISTINGOct19 10UTCcheck;earliermaterialsource/forecast/list/eligibility/criteriauncertaintycancel-first. Noautomaticrepost/add/taker. Ifpartially/fullyfilled,immediatelyreunderwriteholdingwithfreshsource/fee-netexit/portfolio;partialsbelow5minimumcanbedust. Fullrisk2.65Rhine/1.30Haalandpossible.",
     "monitoring": "Existingnews148881 normalbaseline08:57:00+normaltermreload09:02:14verified,Kaub/ErlingHaalandfeedsandterms;GoogleBlog/YISalreadycovered. Coveragepartial,nomissednewsproof. RawTelegramoff;normal10UTCsourcecheck/pull;noforcedpoll/stateedit/newdaemon/timer.",
     "order_id": "0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261",
-    "current_assessment": "Root09:09verified LIVE0matched: 5YES@0.53/2.65pUSD. BothCTFs0;allold8indexedfinancialrowsunchanged. This is anunfilledcommitment,notpurchase/return. Noautomaticadd/repost.",
+    "current_assessment": "Original10UTCpullcompleted10:00:29\u201335;terminalCANCELED0matched/exhaustiveauthtrades0/CTFs0/old8positionsunchanged10:02. No purchase/sale/profit;doNOTrepost. Sourcevaluationretainedashistoricalresearch,notexecutionauthority.",
     "holding_proof": "data/deep_review_20261017/work/post_entry0909_root_verified.json",
     "decision_id": 229,
     "divergence_ack": "2026-10-19",
-    "divergence_ack_reason": "Primaryliteral/fullsource/model/bothsidecomparisoncompletebeforequote;currentdatedPDF/hub/sourceverified. Uncalibratedpointforecast/broadadversescenarios/sharedrisk;tinyfixedmanualpilot,notpointKellyrecommendationorcalibrationclaim."
+    "divergence_ack_reason": "Primaryliteral/fullsource/model/bothsidecomparisoncompletebeforequote;currentdatedPDF/hub/sourceverified. Uncalibratedpointforecast/broadadversescenarios/sharedrisk;tinyfixedmanualpilot,notpointKellyrecommendationorcalibrationclaim.",
+    "previous_entry_assessment": "Root09:09verified LIVE0matched: 5YES@0.53/2.65pUSD. BothCTFs0;allold8indexedfinancialrowsunchanged. This is anunfilledcommitment,notpurchase/return. Noautomaticadd/repost.",
+    "closure_utc": "2026-10-19T10:05:18.998874+00:00",
+    "closure_proof": "data/deep_review_20261017/work/tick0956_postcancel_initial.json",
+    "original_slug": "will-the-rhine-river-return-to-normal-levels-between-october-1-and-october-31-2026",
+    "closure_decision_id": 231,
+    "reservation_reconcile_proof": "data/deep_review_20261017/work/tick0956_reconciled.json"
   },
-  "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026": {
+  "_closed_20261019_haaland316": {
     "p_yes": 0.35,
     "p_no": 0.65,
     "cluster": "google-year-in-search-2026",
@@ -1662,14 +1668,20 @@
     "rationale": "PrimaryGoogleinternalannualgrowthqualitativeregimes35%YES/65%NO,rangeYES10-70;20ppmodel+5ppconditionalfillreserve,selectedNO40. No measured2026globalgrowth; actualsportsnoveltyandcompetingfieldconsidered.",
     "research_report": "research/2026-10-17-deep-review/evaluations/0316.md",
     "latest_source_packet": "data/deep_review_20261017/work/0316_2018_analogue_0835.json",
-    "financial_status": "LIVE_UNFILLED",
+    "financial_status": "CANCELED_UNFILLED_10UTC_NO_CURRENT_POSITION_OR_BUY",
     "management": "CANCEL allunfilledremainder atEXISTINGOct19 10UTCcheck;earliermaterialsource/forecast/list/eligibility/criteriauncertaintycancel-first. Noautomaticrepost/add/taker. Ifpartially/fullyfilled,immediatelyreunderwriteholdingwithfreshsource/fee-netexit/portfolio;partialsbelow5minimumcanbedust. Fullrisk2.65Rhine/1.30Haalandpossible.",
     "monitoring": "Existingnews148881 normalbaseline08:57:00+normaltermreload09:02:14verified,Kaub/ErlingHaalandfeedsandterms;GoogleBlog/YISalreadycovered. Coveragepartial,nomissednewsproof. RawTelegramoff;normal10UTCsourcecheck/pull;noforcedpoll/stateedit/newdaemon/timer.",
     "order_id": "0x1007534737420b0deb2e4ed88cff49d2c32e7d5602cd6610bb1dce5602696237",
     "decision_id": 230,
-    "current_assessment": "Root09:09verified LIVE0matched: 10NO@0.13/1.30pUSD. BothCTFs0;allold8indexedfinancialrowsunchanged. This is anunfilledcommitment,notpurchase/return. Noautomaticadd/repost.",
+    "current_assessment": "Original10UTCpullcompleted10:00:29\u201335;terminalCANCELED0matched/exhaustiveauthtrades0/CTFs0/old8positionsunchanged10:02. No purchase/sale/profit;doNOTrepost. Sourcevaluationretainedashistoricalresearch,notexecutionauthority.",
     "holding_proof": "data/deep_review_20261017/work/post_entry0909_root_verified.json",
     "divergence_ack": "2026-10-19",
-    "divergence_ack_reason": "Primaryliteral/fullsource/model/bothsidecomparisoncompletebeforequote;currentdatedPDF/hub/sourceverified. Uncalibratedpointforecast/broadadversescenarios/sharedrisk;tinyfixedmanualpilot,notpointKellyrecommendationorcalibrationclaim."
+    "divergence_ack_reason": "Primaryliteral/fullsource/model/bothsidecomparisoncompletebeforequote;currentdatedPDF/hub/sourceverified. Uncalibratedpointforecast/broadadversescenarios/sharedrisk;tinyfixedmanualpilot,notpointKellyrecommendationorcalibrationclaim.",
+    "previous_entry_assessment": "Root09:09verified LIVE0matched: 10NO@0.13/1.30pUSD. BothCTFs0;allold8indexedfinancialrowsunchanged. This is anunfilledcommitment,notpurchase/return. Noautomaticadd/repost.",
+    "closure_utc": "2026-10-19T10:05:18.998874+00:00",
+    "closure_proof": "data/deep_review_20261017/work/tick0956_postcancel_initial.json",
+    "original_slug": "will-erling-braut-haaland-rank-in-googles-top-5-most-searched-athletes-of-2026",
+    "closure_decision_id": 232,
+    "reservation_reconcile_proof": "data/deep_review_20261017/work/tick0956_reconciled.json"
   }
 }

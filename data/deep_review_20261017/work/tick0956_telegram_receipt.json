@@ -1,0 +1,9 @@
+{
+  "sent_utc_observed": "2026-10-19T10:20:28.950674+00:00",
+  "message_id": 1262,
+  "parts": 1,
+  "character_count_including_newline": 496,
+  "material_reason": "Two scheduled zero-fill cancellations and reservation release; one consolidated tick summary.",
+  "no_duplicate_research_update": true,
+  "raw_sender_stdout_sha256": "fb92714f62332bbb86eb06cb79983be1afcd81a34277632731fce0e600c093bd"
+}

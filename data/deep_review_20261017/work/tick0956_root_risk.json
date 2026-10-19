@@ -1,0 +1,88 @@
+{
+  "schema": "periodic_primary_risk_judgment.v1",
+  "reviewed_utc": "2026-10-19T10:16:06.358304+00:00",
+  "decision": "Existing10UTC pulls executed for313/316, independently CANCELED/zero matched; no repost. Retain current holdings/no adds; whole Clarity pair only. Four older BUYs remain, Idaho22UTC pull unchanged. No numeric prior update from unverified news.",
+  "explicit_alerts": {
+    "f9c70fee747559e340dcb03c51ce493a7f23246a": "Idaho pending34YES3c/1.02, not a holding. New Newsmax wrapper returned Google consent, not publisher body; date/poll identity/field dates/n/mode/topline unverified. Different wrapper/title from e2da2a49172e6fdd607506305f13b9a5b2e5dfa3; cannot assert same body or newly fielded poll. No newly verified material poll/source challenge; retain existing tiny bid to22UTC, no add/p change. Cancel first on verified material new poll/candidate/ballot/turnout uncertainty.",
+    "588cd184f2db311794aaade112836535dd97e321": "Post-journal Guardian Kansas liveblog, research-only/no current exposure or BUY; no article-body confirmation, no financial action.",
+    "e8c0842d1e3de0cae22676cfd751f2c3a512e445": "Whale Day4 headline/body/date/territory/metric unverified; wrapper consent. Does not establish an Oct16\u201318 domestic actual; current10:08 Numbers estimate remains dated observed input. Retain/noadd/no numeric update.",
+    "5ade67531368327d9e4838833c80766b24d1540b": "MI-relevant endorsement opinion headline despite empty classifier impacts. Wrapper consent; body/date/measured polling or candidate/ballot change unverified. No measurable voter effect adopted. Retain tiny MI5NO/noadd/no numeric update.",
+    "fe833d6c734ad220b3f1ee3812245a69014d9082": "Iran/Hormuz general news; no current instrument or pending BUY directly linked; no thesis/financial change adopted.",
+    "63f2e5b08c775e3a488f3075aa75dde7d691934f": "Sedgwick early voting; former candidate canceled unfilled, no current exposure/BUY; no reactivation."
+  },
+  "Idaho_sensitivity": {
+    "identity": "630707 / 0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301, named Independent Todd Achilles winner; Republican sibling630706 is separate criteria/CID, no hedge equivalence.",
+    "primary_yes": 0.2,
+    "selected_yes_after_15pp_reserve": 0.05,
+    "judgment_range_yes": [
+      0.01,
+      0.8
+    ],
+    "ATR_like_weight": 0.25,
+    "Peak_like_weight": 0.75,
+    "Peak_only_yes": 0.01653,
+    "risk_limit": "Peak-only case loses expected value at3c; accepted tiny1.02 full-fill risk. Weights/15pp reserve are judgments, not calibrated floor. Existing questionnaire/source gaps retained, no reinterpretation of inaccessible headline as a measured update.",
+    "poll_evidence": "ATR Sep13\u201316 n700 registered,87.8%text/12.2%live; two-way50.1/38.5 and three-way45.5/39.4/4.5. Peak Sep28\u201330 n500likely/livephone49/24/3/2/6/15, +/-4pp. Commissioning attribution reporter-only; original questionnaires missing. Full prior1870 report and tick0956_idaho_news.json reviewed."
+  },
+  "ordinary": {
+    "selected_terminal_EV_usd": {
+      "MI5NO": 1.7,
+      "Messi5YES": 2.0,
+      "OR5NO": 3.65,
+      "Whale6NO": 2.5261293142754346
+    },
+    "indicative_net_exit_usd": {
+      "MI5NO": 1.41,
+      "Messi5YES": 1.2,
+      "OR5NO": 3.0,
+      "Whale6NO": 0.66
+    },
+    "one_year_zero_funding_cost_cash_diagnostic_usd": {
+      "MI5NO": 1.45445025,
+      "Messi5YES": 1.23783,
+      "OR5NO": 3.094575,
+      "Whale6NO": 0.6808065000000001
+    },
+    "cash_limit": "Oct18 17:42 Aave3.1525% held constant; not locked or costless funding/executable carry. One-year generous diagnostic is not new holding-horizon permission. SelectedEVs exceed it.",
+    "broader_adverse_EV_usd": {
+      "MI5NO": 1.0,
+      "Messi5YES": 1.0,
+      "OR5NO": 1.0,
+      "Whale6NO": 1.5
+    },
+    "judgment": "Retain/noadd under existing selected source models and small sizes. Broad MI/Messi/OR20% cases favor sale; uncalibrated models/full loss/conditional adverse fill remain. No expectation of price recovery or automatic point-Kelly scale. No newly verified source shock.",
+    "kelly": "Fresh196.31bankroll; MI+16.82 advisory, other large adds cap-suppressed. Midpoint/rho heuristic is not measured joint optimum. No add.",
+    "maker_exit": "No demonstrated premium compensates hidden poll/data/list/outcome jump risk; no new resting sells."
+  },
+  "Clarity": {
+    "shares_each": 29,
+    "rules": "Same first qualifying final-passage vote beforeJan1, strict>50/>58; cloture/procedure excluded. <=50Yea pays1/pair;51\u201358 pays2;>=59 pays1; no qualifying vote and voice/unanimous exceptions pay1 under consistent adjudication.",
+    "criteria_evidence": "Full exact rules/assets verified09:35:46 prior check, hash35bc95\u2026aab693 unchanged then; not refetched this tick. No new official final-vote record obtained and no absence claim.",
+    "current_exit_analysis_net_usd": 26.84,
+    "current_exit_analysis_fee_usd": 0.14,
+    "dated_separate_direct_depth_093546_net_usd": 24.0319,
+    "one_year_zero_cost_cash_diagnostic_usd": 27.686131,
+    "conditional_terminal_floor_usd": 29,
+    "middle_payoff_usd": 58,
+    "decision": "Retain WHOLE29/29/noadd/no legwise action. Conditional floor exceeds indicative exit+generous cash diagnostic. Venue/adjudication/oracle/withdrawal risk can defeat payout; not guaranteed or hedge credit."
+  },
+  "joint_bookkeeping_stress": {
+    "trading_midpoint_rounded": 190.45,
+    "PM_midpoint": 35.31,
+    "nonPM_ex_gas_rounded": 155.14,
+    "all_ordinary_lose_all4_BUYs_fill_and_lose7_52_pair_pays29": 176.62,
+    "same_pair_pays0": 147.62,
+    "limit": "Conditional other assets retain value/access; not calibrated probabilities, guaranteed wealth, full systemic loss bound or log-optimal allocation. Existing bids remain unfilled."
+  },
+  "source_updates": {
+    "Whale": "The Numbers current10:08:41 domestic Oct16\u201318 row exactly8m/chart_estimate/3065theaters/3release days. Unchanged from09:31; not final, not absence of later finals elsewhere. Exactly8mFINAL winsNO; preview0.9 separate.",
+    "OR": "Dated09:33 Oct12=164.043979329882T/Oct19partial7.632384220810T; targetOct26/Nov2/9/16 absent then, cutoff unknown. No target-total extrapolation or new acquisition/closing inference.",
+    "Google": "Dated09:33 YIS hub301to2025 does not establish absence of2026list elsewhere.",
+    "HLE": "UPDATING comparison to Jul3 archive is not an intraday change.",
+    "canceled_candidates": "Kaub12cm09:30/BfGPDFsame09:33 and Haaland leads not new current allocation requests. Both original10UTC orders canceled; candidate-specific feeds removed, held Messi/Google coverage retained."
+  },
+  "financial_writer_calls": 2,
+  "calls_limit": "Only vetted cancel calls; reservation reconciliation through existing lock+merge/prune path after300s grace. No purchase/sale/redemption/transfer or profit.",
+  "next_boundary": "Existing14UTC full check; Idaho22UTC unfilled pull, earlier material verified uncertainty cancel-first. No new goal/timer/idle continuation.",
+  "last_bounded_alert_snapshot": "After09:59:27 through latest10:12:57 alert: four rows reviewed, opportunity no new rows. Two relevant wrappers once each10:18, consent only. Not an ongoing drain loop."
+}

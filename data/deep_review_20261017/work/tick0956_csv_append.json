@@ -1,0 +1,11 @@
+{
+  "timestamp_utc": "2026-10-19T09:58:00Z",
+  "before_rows": 212,
+  "after_rows": 213,
+  "prior_bytes": 123801,
+  "historical_prefix_sha256": "204dc2a2b8cde5ec682241af73c35c2831c1e43e56a3930885c1d285618d4c5c",
+  "after_sha256": "520d24f5aeb20f24cd3d2c3e65307b6d5c7095b0b5ec6c8a73ce5913d80c7791",
+  "source": "research/2026-10-19-0956-checkin.md:3",
+  "historical_prefix_unchanged": true,
+  "no_extra_valuation_requests": true
+}

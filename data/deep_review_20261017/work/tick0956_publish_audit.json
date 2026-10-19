@@ -1,0 +1,14 @@
+{
+  "schema": "scoped_publication_audit.v1",
+  "staged_files_before_this_audit": 131,
+  "staged_bytes_before_this_audit": 5940201,
+  "credential_pattern_hits": 0,
+  "runtime_dispatch_files_unstaged": true,
+  "no_private_captures_staged": true,
+  "chart_tests": "10/10 passed",
+  "handoff_bytes": 7328,
+  "portfolio_context_packet_bytes": 10663,
+  "packet_status": "within_declared_validity",
+  "historical_CSV_prefix_preserved": true,
+  "archived_numeric_priors_preserved": true
+}

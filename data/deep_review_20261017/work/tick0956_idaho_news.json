@@ -1,0 +1,143 @@
+{
+  "schema": "periodic_idaho_alert_source_facts.v1",
+  "captured_utc": "2026-10-19T09:59:27Z",
+  "scope": "Bounded factual review of the two Newsmax Idaho Senate alert rows and alert-log deltas after the 09:45:16Z cutoff. No probability or financial judgment.",
+  "instrument_identity_from_alert": "Pending Idaho Senate Achilles market CID 0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301 (as supplied in task); this packet does not verify current venue state.",
+  "newsmax_alert_comparison": {
+    "new": {
+      "alert_id": "f9c70fee747559e340dcb03c51ce493a7f23246a",
+      "ts": "2026-10-19T09:40:42Z",
+      "title": "Idaho Republicans Call Polls Showing Sen. Risch Behind 'Baloney' - Newsmax",
+      "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxObjhBclYzS1Y2RWFSdWwwb3VwYndWNHZRaWdIdzlmaG1lcUZ5V2owdUVsYjV0NWllUVNtaHJ1OHc5VW1CelZtUUZab2JFcVVMY0k0bGNzQVlPS0tBYUZYR3Nuay0wai1fS1dYalo5TzR3ZUxua2dSR0ZoU0lLTEtBTjlB?oc=5"
+    },
+    "prior": {
+      "alert_id": "e2da2a49172e6fdd607506305f13b9a5b2e5dfa3",
+      "ts": "2026-10-18T23:02:32Z",
+      "title": "Idaho Republican Calls Poll Showing Sen. Risch Behind 'Baloney' - Newsmax",
+      "link": "https://news.google.com/rss/articles/CBMif0FVX3lxTE9RTFhCRy16ZDBkczNzTlIzZV9zYXVRZFlVcEpnczlIanlJeHNuM292NF9ZVk1ydHdGZDdFa2I2UDFpdDY4U1ZSVWtnenM5YVVYdTNRMWplUTlwLWw1SkFpRnMxMTRUaFhkY1dGRWR0Mjc1STBHeHBBUHRoX0R0Slk?oc=5"
+    },
+    "comparison": "Different Google News wrapper URLs and distinct alert IDs. New headline pluralizes 'Poll' to 'Polls' and changes 'Idaho Republican' to 'Idaho Republicans'; no article ID, publisher publication timestamp, underlying poll name, or evidence of a newly fielded poll was obtained.",
+    "access": {
+      "attempted_url": "new alert Google News URL above",
+      "receipt": "logs/deep_review_20261017/tick0956_idaho/newsmax_alert_link.receipt.json",
+      "body": "logs/deep_review_20261017/tick0956_idaho/newsmax_alert_link.body.json.gz",
+      "received_utc": "2026-10-19T09:58:09.447852Z",
+      "status": 200,
+      "final_url_host": "consent.google.com",
+      "raw_sha256": "1cc671c9de47d52376fa80b1465e727cb4f566aa23a99e691a041f4a3346fa43",
+      "gzip_sha256": "b4228a890dbc328c4dd01d300b733aea39f85344427a29dfa3ca8c42ba7c2679",
+      "limit": "HTTP 200 was a Google consent page, not Newsmax article content. Two targeted searches did not locate the article; no retries or consent bypass. Publication date/time and any article metadata remain unavailable."
+    }
+  },
+  "previously_captured_poll_facts_not_new_measurements": {
+    "source": "data/deep_review_20261017/idaho_literal_source_followup.json",
+    "ATR": {
+      "field": "2026-09-13–16",
+      "sample": 700,
+      "population": "registered Idaho voters",
+      "mode": "text 87.8%, live interview 12.2%",
+      "two_way": {
+        "Achilles": 50.1,
+        "Risch": 38.5,
+        "unsure": 11.4
+      },
+      "three_way": {
+        "Achilles": 45.5,
+        "Risch": 39.4,
+        "Loesby": 4.5,
+        "unsure": 10.6
+      }
+    },
+    "Peak": {
+      "field": "2026-09-28–30",
+      "sample": 500,
+      "population": "likely 2026 general-election voters",
+      "mode": "live phone",
+      "reported_MOE": "±4 percentage points",
+      "topline": {
+        "Risch": 49,
+        "Achilles": 24,
+        "Fleming": 3,
+        "Loesby": 2,
+        "None": 6,
+        "DK": 15
+      },
+      "sponsorship_note": "Pollster-branded memo; prior packet attributes Risch-campaign commissioning to reporter post, while memo image itself names Peak Insights and not payer."
+    },
+    "interpretation_limit": "The inaccessible Newsmax body prevents determining which prior poll(s) its plural headline refers to. Neither existing poll is evidence of a new October 19 measurement; no new poll identity, field dates, n, method, or topline was verified."
+  },
+  "alert_log_cutoff": {
+    "cutoff_utc": "2026-10-19T09:45:16Z",
+    "read_utc": "2026-10-19T09:59:27Z",
+    "news": {
+      "path": "notes/news_alerts.jsonl",
+      "rows": 1037,
+      "sha256": "7f07d6f3ec90c4d48284b0f500b539c6978e61e99a9e5baa1ce266818f13c292",
+      "latest": "2026-10-19T09:45:57Z",
+      "after_cutoff": [
+        {
+          "alert_id": "588cd184f2db311794aaade112836535dd97e321",
+          "ts": "2026-10-19T09:45:57Z",
+          "feed": "Guardian US",
+          "title": "Trump to head to Kansas to show support for embattled Marshall – US politics live",
+          "url": "https://www.theguardian.com/us-news/live/2026/oct/19/donald-trump-kansas-roger-marshall-golf-ukraine-midterms-latest-news-updates",
+          "classification": "Alert log marks research_only, impacts=[], review_required=false; no article-body check in this pass."
+        }
+      ]
+    },
+    "opportunity": {
+      "path": "notes/opportunity_alerts.jsonl",
+      "rows": 314,
+      "sha256": "26906caba83df66a999f0c7e6ebe1100f81c9d2d062ca3ac17c5f52accc22e3d",
+      "latest": "2026-10-18T07:41:07Z",
+      "after_cutoff": []
+    }
+  },
+  "recent_bounded_catalyst_source_reuse": {
+    "source": "data/deep_review_20261017/work/tick0930_catalysts.json",
+    "captured_utc": "2026-10-19T09:33:32Z",
+    "Kaub": "Official WSV station 25700100 reading 12cm at 2026-10-19 11:30+02:00, below 77cm threshold; one snapshot, not interval coverage.",
+    "BfG": "Official 14-day Kaub PDF raw SHA b1b19629cc1235051c0eda720887f38841e12d5d8fc591ae50461e1b0267736e, byte-identical to prior Oct18 version.",
+    "Google": "YIS hub returned 301 to 2025; this does not establish whether a 2026 list exists elsewhere.",
+    "OpenRouter": "The 09:33 weekly chart capture has latest partial label Oct19 (7.632384T), not completed week; no Oct26+ target labels. Not refreshed in this pass."
+  },
+  "limits": "No new public article or source was obtained for the additional Guardian alert; no other post-cutoff news row or opportunity row was present in the bounded log snapshot. This is not a claim about all public news.",
+  "related_prior_idaho_alerts_in_same_public_log": [
+    {
+      "line": 855,
+      "alert_id": null,
+      "ts": "2026-10-18T00:33:01Z",
+      "title": "Idaho Wasn’t on Anyone’s Senate Map. Todd Achilles Is Changing That. | That Trippi Show - YouTube"
+    },
+    {
+      "line": 863,
+      "alert_id": null,
+      "ts": "2026-10-18T02:21:26Z",
+      "title": "SENATOR: Risch should visit more - Coeur d'Alene Press"
+    },
+    {
+      "line": 875,
+      "alert_id": null,
+      "ts": "2026-10-18T09:34:03Z",
+      "title": "I can’t tell what Sen. Risch does. Why should we send him back? | Opinion - Idaho Statesman"
+    },
+    {
+      "line": 898,
+      "alert_id": null,
+      "ts": "2026-10-18T14:34:48Z",
+      "title": "Independent Idaho: Todd Achilles wants to build “the wedge” - Twin Falls Times-News"
+    },
+    {
+      "line": 914,
+      "alert_id": null,
+      "ts": "2026-10-18T16:49:27Z",
+      "title": "Opinion: Jim Risch and the Idaho approach to affordability, energy, and security | Psa - Post Register"
+    },
+    {
+      "line": 968,
+      "alert_id": "79ef8d4eb336179dfc47b23b06fb47c6eb4887c2",
+      "ts": "2026-10-18T23:31:15Z",
+      "title": "Why I’ll Vote for Idaho’s Jim Risch - 95.7 KEZJ"
+    }
+  ]
+}

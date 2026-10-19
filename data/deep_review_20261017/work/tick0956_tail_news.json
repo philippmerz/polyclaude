@@ -1,0 +1,37 @@
+{
+  "schema": "tick0956_tail_alert_fact_check.v1",
+  "captured_utc": "2026-10-19T10:18:17Z",
+  "alerts": [
+    {
+      "alert_id": "e8c0842d1e3de0cae22676cfd751f2c3a512e445",
+      "alert_ts": "2026-10-19T10:02:16Z",
+      "title": "Whalefall box office collection Day 4 live: hold, total and records - Sacnilk",
+      "wrapper_url": "https://news.google.com/rss/articles/CBMid0FVX3lxTE5zVWdfakd2UUJYYXVzTEVqSEJvbDV1SXJtUzFjQ19LUUVLQjRFVmhkLUZJRWgzVFVvRjlKem1DcGtGXzNESkRGQVBFMWI5TVZTOU9Tc3lZZ180WjcyTEFvVGdNaVhNdEpXQ3Y4bFdVUy1ZUFg5NkhZ?oc=5",
+      "feed": "Whalefall box-office and opening-weekend updates",
+      "receipt": "logs/deep_review_20261017/tick0956_tail_news/sacnilk.receipt.json",
+      "body": "logs/deep_review_20261017/tick0956_tail_news/sacnilk.body.json.gz",
+      "received_utc": "2026-10-19T10:18:16.523398Z",
+      "status": 200,
+      "final_host": "consent.google.com",
+      "raw_sha256": "eda0abf417d1b03c5b83c92889948846745f93a80a83e7b90e8ac95393023b9d",
+      "gzip_sha256": "a2a0a1c2ff139ab28b33e65693d38b316f39e5933acf821a5d5fc350f17a32e3",
+      "fact_result": "No Sacnilk article/date or domestic weekend figure could be verified from the consent page; it does not update The Numbers Oct16–18 $8m estimate."
+    },
+    {
+      "alert_id": "5ade67531368327d9e4838833c80766b24d1540b",
+      "alert_ts": "2026-10-19T10:07:37Z",
+      "title": "5 reasons Freep endorsed Abdul El-Sayed for U.S. Senate I Opinion - Detroit Free Press",
+      "wrapper_url": "https://news.google.com/rss/articles/CBMizwFBVV95cUxPVDFrNjUtY256bENnTWpiRDBHRWdKcVFNeFNkSW9mOTRUamYzX3FGYTEzd3YtYm54LVV4RnI5bk9PZzMteWdDdlhGTXkyWnBMTWd0LWZ2Zkp6bzU0S2wza0NiX2ZuM2Q1ekVMQWxqemNaUFh1cDF2WTZlTlhYM05vYzM1QlZvMmFRakJNaVo1Mm4wWXZXeTdRZXhXcXgyYjVuQUVhUkFBMFNfZWxkNFd4d0lKenZoMFdzVktsd2JwV0cyRlR1QjhwUFo3bkVaVzQ?oc=5",
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "receipt": "logs/deep_review_20261017/tick0956_tail_news/freep.receipt.json",
+      "body": "logs/deep_review_20261017/tick0956_tail_news/freep.body.json.gz",
+      "received_utc": "2026-10-19T10:18:16.675319Z",
+      "status": 200,
+      "final_host": "consent.google.com",
+      "raw_sha256": "14651f3c469ab68f0757327c48792dedef5ee91b9b3ea63c461a0fd1081d34bc",
+      "gzip_sha256": "ccef098c9e4ee3b913513b6cc99f7b7aba18b8881324573707e0c5d6733c5c45",
+      "fact_result": "No Detroit Free Press article/body, publication metadata, poll result, candidate/ballot change, or other measurable electoral update could be verified from the consent page."
+    }
+  ],
+  "limits": "Both supplied Google News wrappers returned HTTP 200 Google consent pages, not publisher pages. No consent bypass, retry, direct publisher search, or further request. Alert titles alone do not establish article content."
+}
