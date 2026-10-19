@@ -1,0 +1,71 @@
+{
+  "schema": "light2200_precancel.v1",
+  "verified_utc": "2026-10-19T21:59:12.961586+00:00",
+  "orders": [
+    {
+      "id": "0x4648ea205eb204fe65c8886bd131aa68c38280322891b917708809a17f75d8b2",
+      "market": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+      "asset_id": "38943156005562933924590395107769174031077435060879703425069135833415221550151",
+      "side": "BUY",
+      "price": "0.16",
+      "original_size": "10",
+      "size_matched": "0",
+      "status": "LIVE"
+    },
+    {
+      "id": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "market": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+      "asset_id": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+      "side": "BUY",
+      "price": "0.03",
+      "original_size": "34",
+      "size_matched": "0",
+      "status": "LIVE"
+    },
+    {
+      "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "side": "BUY",
+      "price": "0.12",
+      "original_size": "10",
+      "size_matched": "0",
+      "status": "LIVE"
+    },
+    {
+      "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "side": "BUY",
+      "price": "0.03",
+      "original_size": "50",
+      "size_matched": "0",
+      "status": "LIVE"
+    },
+    {
+      "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "side": "BUY",
+      "price": "0.38",
+      "original_size": "10",
+      "size_matched": "0",
+      "status": "LIVE"
+    }
+  ],
+  "target": [
+    {
+      "id": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+      "market": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+      "asset_id": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+      "side": "BUY",
+      "price": "0.03",
+      "original_size": "34",
+      "size_matched": "0",
+      "status": "LIVE"
+    }
+  ],
+  "inventory_exhausted": true,
+  "representation": "Vettedserializationbeforeparse, notrawHTTP; no financialmutation from thisread.",
+  "receipt": "logs/deep_review_20261017/light2200_precancel/orders.receipt.json"
+}

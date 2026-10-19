@@ -1,0 +1,40 @@
+{
+  "schema": "whalefall_resolved_loss.v1",
+  "verified_utc": "2026-10-19T22:23:57.762867+00:00",
+  "market_id": "5394247",
+  "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+  "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
+  "fills": [
+    {
+      "status": "CONFIRMED",
+      "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "outer_asset_id": "1902754979316488104145737772175718553958667775381152626281371012455287813405",
+      "maker_asset_id": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+      "maker_side": "BUY",
+      "maker_outcome": "No",
+      "maker_price": "0.17",
+      "matched_amount": "6",
+      "venue_match_time_epoch": "1792371896",
+      "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db"
+    }
+  ],
+  "gross_cost_usd": 1.02,
+  "maker_fee_usd": 0,
+  "held_no_shares": 6,
+  "resolved_yes": true,
+  "exact_no_payout_numerator": 0,
+  "payout_denominator": 1,
+  "payout_usd": 0,
+  "economic_trade_pnl_usd": -1.02,
+  "burn_or_redemption_transaction_submitted": false,
+  "no_cash_credit": true,
+  "raw_trade_capture": "logs/deep_review_20261017/light2200_sanchez_reconcile_2218/authenticated_trades1.body.json.gz",
+  "raw_trade_capture_sha256": "8bc408b75d46aecc60bdcc770e458cebd20dc5c2f8cce90fb8f47b8b2f1b2d11",
+  "ctf_payout_proof": "data/deep_review_20261017/work/light2200_whale_resolution_2222.json",
+  "negrisk_token_binding": "data/deep_review_20261017/work/light2200_whale_adapter_2223.json",
+  "archived_only_prior": "_closed_20261019_whalefall299",
+  "removed_only_unique_feed": "Whalefall box-office and opening-weekend updates",
+  "removed_only_unique_keyword": "Whalefall",
+  "all_other_priors_config_equal": true,
+  "reconciliation_observation": "ConfirmedhistoricalNOmaker6fill hasoutertradeYESasset whilemakerassetNO. Zero-fillcanceledorders unaffected; reviewmatcheridentityassumptions before futurepartialfillcancel handling. No matcher code changed."
+}

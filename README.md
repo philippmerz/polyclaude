@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 221 recorded observations from Apr-25
+The local performance CSV now has 223 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,13 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**354 valued /11 blocked /364 factual /2,271 pending;729 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.388 Grok HLE≥60 and390 OpenAI AGI announcement are valued/no entry after costs and uncertainty allowance.391 Turkey relief is blocked/unpriced on a specific historical-source conflict; no global research block. Next394/396. Each completed report is saved/indexed individually. [Small handoff](data/deep_review_20261017/work/goal2115_RESUME.json).
+**357 valued /11 blocked /364 factual /2,268 pending;732 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.394Teslaexactrank3,396sevenAdendistricts and397Wilesexit individually valued/noentry;397initial partial-source12.88% draft withdrawn before money, current32.0365%YES/20pp allowance is explicitly source-conditioned after prices seen.391historicalU.S.relief source conflict remains blocked/unpriced; no globalblock. Next398/400; save/index each completed case. [Small handoff](data/deep_review_20261017/work/goal2115_RESUME.json).
 
-386 Sánchez remains valued47.658%YES with30pp allowance; tenYES maker16¢/1.60 is LIVE/zero matched at21:37, not an acquired holding. [Entry and source limits](research/2026-10-17-deep-review/sanchez386_entry_2043.md).
+**Three LIVE/zero-matched BUYs /6.50 committed, independently verified22:18.** Idaho34YES3¢ andSánchez10YES16¢ canceledzero-fill/DEC237–238; only their reservations retired after300s proof, numerical research preserved. No purchase/profit or automatic repost. [Exact orders/policies](notes/resting_orders.md).
 
-**Five LIVE/zero-matched BUYs /9.12 reserved, independently reverified21:37. Idaho22UTC all-unfilled pull remains binding.** Canceled orders stay closed. [Exact orders/policies](notes/resting_orders.md).
-
-**Whalefall6NO/1.02: thesis broken; exit unavailable.** Numbers20:02 domestic weekend/daily7,837,153 is below8m; Mojo still8m estimated/Numbers summary8m, no finality claim. NO revised57.1%→3%, broad0.2–20.21:37 exactNO book has no bids/YES no asks; chainNO6/UMA stillproposed. No sale/add submitted, full loss possible. [Revision](research/2026-10-17-deep-review/revisions/0299_20261019T200804353936Z.md) · [fresh check](data/deep_review_20261017/work/tick204951_tail_review.json). TG1270 already sent once.
+**Whalefall resolved YES: six NO shares pay0/full1.02economic loss.** Exact CTF payout andNegRisk wrapped-token identity verified atPolygon95828757. Six valueless tokens remain; no sale/burn/redemption transaction or active-risk alert. DEC222/235 outcomes recorded; original forecasts preserved. [Resolution](research/2026-10-19-whalefall-resolution.md).
 
 ## Mandate and constraints
 
@@ -84,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 20:32 UTC
+## Last audited snapshot — October19 22:22 UTC
 
-**Bankroll195.62 incl5.81 separate gas; trading189.81 midpoint /187.32 indicative depth; PM34.67 /32.18.** Authoritative producer20:32:07.939856–23.151609UTC. Rounded sequential inputs are not synchronized NAV or certified proceeds;20.73 residual is accounting arithmetic, not audited cash profit. VM/API excluded. CSV221 uses this same producer/check-window anchor. [Financial observation](research/2026-10-19-2032-financial-snapshot.md).
+**Indicative trading net depth187.14 versus170contributed (+10.08%); authoritative bankroll195.54 including5.85separate gas.** Trading189.69midpoint; PM34.55mid/32.00indicative fee-net depth. Exact producer22:22:41.153697–22:22:57.122772UTC after confirmedWhale resolution. Rounded sequential quotes are not synchronized NAV or guaranteed proceeds;19.71residual is accounting arithmetic, not auditedcashprofit. VM/API costs excluded. CSV223 preserves all222earlier observations. [Financial record](research/2026-10-19-2222-financial-snapshot.md).
 
-Later21:04 verification: fiveLIVE/zero-matched BUYs/9.12/five reservations and eight indexed identities; order terms and indexed sizes/totalBought unchanged since20:43, SpainCTFs0. DEC23616¢ Sánchez bid reserves1.60; no shares acquired or profit booked. Country grouping gives no independence hedge; manual declared23%risk fraction/rho.7 and full-fill caps passed at entry. [Account proof](data/deep_review_20261017/work/tick204951_account.json).
+22:18 affirmative terminal/trades/index/CTFs confirms Idaho/Sánchez bothcanceledunfilled; threeotherBUY6.50/three reservations unchanged. No cash credit or profit from releasing commitments. LaterWhale resolution removes its1.02nominal cost from open exposure; producerdisplayed open cost34.57+pending6.50=41.07, no independencehedge. Pair historical fees remain in wallet accounting and its separate cost record. If ordinaryholdings/bids all lose andClarity29/29set pays29, trading bookkeeping177.64; ifsetpays0,148.64, otherassetsconstant. Scenarios are not probabilities or a venue guarantee. [Order proof](data/deep_review_20261017/work/light2200_sanchez_reconciled_2218.json).
 
-21:04 quick status returned0/no failure marker, hurdle0/watchlist0;21:05 four canonical daemons count1/code current.20:44 Kelly/crux and20:47 state audit remain dated; broader18UTC safety/16:48full discovery were not repeated. Exact delayed20:49:51 alert IDs have substantive completed source reviews; MI gaps/NO44selected34/noadd remain. Four later title-level leads read through21:00:37 at fixed21:04:59 cutoff; subsequent21:06MI/Warnock support alert also source-reviewed.21:12 fee-net exit comparison retainsMI5NO/NO44selected34/noadd; no numerical/trade update. 21:37 account/books unchanged; later Idaho denied text endorsement and Michigan title reviewed with source limits, no numerical update. Existing22UTC light AND Idaho pull/fullOct20 02UTC; weeklyOct23. [Current check](research/2026-10-19-2104-news-checkin.md).
+Twelve22UTC lightchecks ranonce; newly detectedWhale resolution justified one subsequentpositions/bankroll producer pair. Final22:24stateaudit clean6indexed+1separatelegacydeindexedclaim/cruxquiet0; fourcanonicaldaemons count1/codecurrent/no restart. Hurdle0/projectwatchlist0hits/Ostium0 retain22:00dates. MI5NO44selected34 andOR5NO88selected73/noadd retained after source/fee-netexit review; broadadverse/fullcostloss retained. MissingSpanishpollinstruments triggered cancel-first;47.658025%YES research unchanged, freshunderwriting before any newentry. No new broad discovery. Next existingfullOct20 02UTC; weeklyOct23/monthlyNov12 notdue. [Completed check](research/2026-10-19-2200-checkin.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

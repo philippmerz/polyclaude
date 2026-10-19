@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T21:31:32.414743+00:00
+Updated: 2026-10-19T22:09:39.677771+00:00
 
-**354 valuations saved; first milestone100:** 354 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2271 pending.
+**357 valuations saved; first milestone100:** 357 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2268 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -405,7 +405,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |391|[Will the U.S. lift CAATSA sanctions on Turkey by December 31, 2026?](evaluations/0391.md)|blocked_after_review|Blocked/unpriced specificcase; noentry/prior/valuationcredit. SourceconflictrequiresunderlyingU.S.actionnotanothergenericnewssearch. Not a globalgoalblock.|
 |392|[Will it rain in Atlanta, GA on October 17?](evaluations/0392.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |393|[Dota 2: Yellow Submarine vs Spirit Academy - Game 2 Winner](evaluations/0393.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|394|[Will Tesla be the third-largest company in the world by market cap on October 31?](evaluations/0394.md)|valued|Valued/noentry. CheapYEScentralpaperedge fails20ppactualallowance and noexitbid; NOnoask/improvingmakerfailsselected. No offchaininvestment/prior/order/watch.|
 |395|[Will the highest temperature in Qingdao be 23°C on October 17?](evaluations/0395.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|396|[Houthis enter Aden by December 31, 2026?](evaluations/0396.md)|valued|Valued/noentry; bothcurrenttakersnegativeevencentral, selectednegative andordinaryimprovingmakerscannotclearallowance. Specificsource/geometryerratum preserved, noglobalblock.|
+|397|[Will Susie Wiles leave the Trump administration before 2027?](evaluations/0397.md)|valued|Valued/noentry: modest central NO paper edge fails selected case and ordinary improving maker; initial omitted-news draft withdrawn before money.|
 |399|[Will Leyton Orient FC win on 2026-10-17?](evaluations/0399.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |401|[Will the highest temperature in San Francisco be between 86-87°F on October 17?](evaluations/0401.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |405|[Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?](evaluations/0405.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

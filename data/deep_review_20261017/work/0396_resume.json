@@ -1,1 +1,17 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":396,"phase":"FACTS_ONLY_SAVED_NO_VALUATION","source_paths":["work/0396_facts_1744.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:44:29.428030Z","source_capture_root":"logs/deep_review_20261017"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 396,
+  "phase": "PRIMARY_VALUED_NO_ENTRY; saved/indexed;maperratumrootverified",
+  "source_paths": [
+    "work/0396_facts_1744.json",
+    "work/0396_district_facts_2143.json",
+    "work/0396_district_erratum_2149.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T21:53:07.108836+00:00",
+  "source_capture_root": "logs/deep_review_20261017",
+  "completed_report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0396.md",
+    "sha256": "3a08dba68c4ba6ac80e0a7f4f443c4eecacd5acd6de5065396d7258d57d6464c"
+  }
+}

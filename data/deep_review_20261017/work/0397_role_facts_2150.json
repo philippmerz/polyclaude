@@ -1,0 +1,49 @@
+{
+  "compiled_utc": "2026-10-19T21:50:00Z",
+  "review_index": 397,
+  "question": "Will Susie Wiles leave the Trump administration before 2027?",
+  "scope": "Bounded factual collection only. No event conclusion or probability assessment.",
+  "coverage_limit": "Two query strings sought later official role evidence and recent Reuters reporting; Google returned a Finnish consent page, and Bing returned irrelevant Finnish calendar results. A direct White House site search returned Oct 6, 2026 as its newest Wiles result, duplicating existing proof, and a Mar 16, 2026 health-related official video. No later-than-Oct-6 official role appearance or recent credible direct-sourced departure/continuity report was verified in this pass. This is a search-coverage limit, not evidence that no announcement/departure occurred.",
+  "new_facts": [
+    {
+      "date": "2026-03-16",
+      "fact": "White House video page title identifies Susie Wiles as Chief of Staff and says President Trump addressed her early-stage breast cancer diagnosis. It supplies dated official health context; it does not establish her health now or administration status after Oct 6.",
+      "url": "https://www.whitehouse.gov/videos/president-trump-on-chief-of-staff-susie-wiles-following-her-early-stage-breast-cancer-diagnosis-%F0%9F%99%8F%E2%9D%A4%EF%B8%8F/",
+      "retrieved_utc": "2026-10-19T21:49:27.917454Z",
+      "http_status": 200,
+      "raw_sha256": "308654f7d75538fbf5e413487b678bdf05a2a01c090796267a58a31ac3bb517e",
+      "raw_bytes": 279881,
+      "receipt": "logs/0397_role_facts_2150_20261019T214858Z/wh_video_mar16.receipt.json",
+      "raw_body": "logs/0397_role_facts_2150_20261019T214858Z/wh_video_mar16.body.json.gz"
+    }
+  ],
+  "search_coverage": [
+    {
+      "source": "White House site search",
+      "url": "https://www.whitehouse.gov/?s=Susie+Wiles",
+      "retrieved_utc": "2026-10-19T21:49:14.354371Z",
+      "http_status": 200,
+      "raw_sha256": "571be516caea2badb963faca34e50c2c94bbae406e47ec64a8411bc62debb48d",
+      "result": "Newest Wiles result shown is Oct 6, 2026 diesel-relief release, already in prior facts; next result is Mar 16, 2026 video above.",
+      "receipt": "logs/0397_role_facts_2150_20261019T214858Z/official_search.receipt.json",
+      "raw_body": "logs/0397_role_facts_2150_20261019T214858Z/official_search.body.json.gz"
+    },
+    {
+      "source": "Search attempts",
+      "retrieved_utc": "2026-10-19T21:48:58Z",
+      "result": "Google search pages returned consent text in Finnish (HTTP 200) and no results. Bing returned unrelated Finnish calendar results (HTTP 200), not usable Reuters reporting. No inference about absence of news.",
+      "receipts": [
+        "logs/0397_role_facts_2150_20261019T214858Z/q1.receipt.json",
+        "logs/0397_role_facts_2150_20261019T214858Z/q2.receipt.json",
+        "logs/0397_role_facts_2150_20261019T214858Z/q3.receipt.json"
+      ],
+      "raw_bodies": [
+        "logs/0397_role_facts_2150_20261019T214858Z/q1.body.json.gz",
+        "logs/0397_role_facts_2150_20261019T214858Z/q2.body.json.gz",
+        "logs/0397_role_facts_2150_20261019T214858Z/q3.body.json.gz"
+      ]
+    }
+  ],
+  "raw_capture_note": "All HTTP response bodies were durably captured as http_body before parsing, with read-only method/operation metadata, in the private new log directory. Hashes cover supplied response bytes, not wire authentication.",
+  "prior_official_proof": "Existing 2026-10-06 White House role quote remains as recorded in 0397_facts_1830.json; not duplicated as a new fact."
+}

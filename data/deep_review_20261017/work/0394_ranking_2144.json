@@ -1,0 +1,204 @@
+{
+  "url": "https://companiesmarketcap.com/",
+  "status": 200,
+  "received_utc": "2026-10-19T21:43:31.850138Z",
+  "raw_sha256": "0776406aca224a5b8b33c9119d5cb9ba4f0b9fabb2a854fb384744d2b095dbd2",
+  "gzip_sha256": "c5d312c5f587895a9d6b409442b0acd93ba3f175f947043ab21e0100b7dfb9f6",
+  "receipt": "logs/deep_review_20261017/case0394_sources_2144/ranking.receipt.json",
+  "rows": [
+    [
+      "",
+      "1",
+      "NVIDIA NVDA",
+      "$ 5.242 T",
+      "$217.09",
+      "1.38%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "2",
+      "Apple AAPL",
+      "$ 5.004 T",
+      "$342.94",
+      "0.15%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "3",
+      "Alphabet (Google) GOOG",
+      "$ 4.160 T",
+      "$340.16",
+      "0.96%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "4",
+      "Microsoft MSFT",
+      "$ 3.961 T",
+      "$533.52",
+      "0.84%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "5",
+      "Amazon AMZN",
+      "$ 2.830 T",
+      "$262.45",
+      "4.98%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "6",
+      "TSMC TSM",
+      "$ 2.179 T",
+      "$420.22",
+      "1.84%",
+      "",
+      "🇹🇼 Taiwan"
+    ],
+    [
+      "",
+      "7",
+      "SpaceX SPCX",
+      "$ 1.949 T",
+      "$147.96",
+      "1.32%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "8",
+      "Meta Platforms (Facebook) META",
+      "$ 1.797 T",
+      "$705.44",
+      "0.55%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "9",
+      "Saudi Aramco 2222.SR",
+      "$ 1.663 T",
+      "$6.88",
+      "0.00%",
+      "",
+      "🇸🇦 S. Arabia"
+    ],
+    [
+      "",
+      "10",
+      "Broadcom AVGO",
+      "$ 1.597 T",
+      "$334.59",
+      "1.78%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "11",
+      "Tesla TSLA",
+      "$ 1.453 T",
+      "$368.06",
+      "3.76%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "12",
+      "Berkshire Hathaway BRK-B",
+      "$ 1.139 T",
+      "$532.23",
+      "0.04%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "13",
+      "Eli Lilly LLY",
+      "$ 1.105 T",
+      "$1,240",
+      "1.33%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "14",
+      "Samsung 005930.KS",
+      "$ 1.066 T",
+      "$163.72",
+      "1.16%",
+      "",
+      "🇰🇷 S. Korea"
+    ],
+    [
+      "",
+      "15",
+      "Micron Technology MU",
+      "$ 1.023 T",
+      "$904.90",
+      "2.97%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "16",
+      "Walmart WMT",
+      "$ 941.73 B",
+      "$118.70",
+      "0.09%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "17",
+      "JPMorgan Chase JPM",
+      "$ 885.72 B",
+      "$333.53",
+      "1.82%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "Close Ad X"
+    ],
+    [
+      "",
+      "18",
+      "AMD AMD",
+      "$ 878.35 B",
+      "$538.05",
+      "1.76%",
+      "",
+      "🇺🇸 USA"
+    ],
+    [
+      "",
+      "19",
+      "Visa V",
+      "$ 756.42 B",
+      "$402.92",
+      "0.08%",
+      "",
+      "🇺🇸 USA"
+    ]
+  ],
+  "scope": "Source observation for on-chain PM rank3 contract only. Exact underlying print timestamps absent; one provider is not credible-reporting consensus or target-close result."
+}

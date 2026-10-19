@@ -1,0 +1,35 @@
+{
+  "schema": "case0397_primary_sources.v1",
+  "reviewed_utc": "2026-10-19T21:55:40.352709+00:00",
+  "rows": [
+    {
+      "url": "https://abcnews.com/Politics/white-house-chief-staff-susie-wiles-cancer-free/story?id=136504768",
+      "received_utc": "2026-10-19T21:54:40.405532Z",
+      "status": 200,
+      "raw_sha256": "2bb7de1c6f869b15610fba8b944cf55d99342e2fcfda709501927947cd9d71f2",
+      "receipt": "logs/deep_review_20261017/case0397_abc_2155/abc.receipt.json",
+      "finding": "Root verified Sept16 ABC original reporting quotes Wiles self-report of clearpathology/cancer-free and intentcontinue administrationwork; maintainedrole duringtreatment. Not rootclinicalprognosis or Oct19job-statuscertification."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/10/advancing-womens-health-to-improve-outcomes-in-all-phases-of-life/",
+      "received_utc": "2026-10-19T21:53:41.332605Z",
+      "status": 200,
+      "raw_sha256": "d4604120a566e2ca666f053635f3d7107fc716879149be40bc85b8230d49e377",
+      "receipt": "logs/deep_review_20261017/case0397_sources_2154/wh_oct19_eo.receipt.json",
+      "finding": "Root verified Oct19 officialorder creates womenhealth taskforce cochaired byHHSsecretary andAssistanttothePresident/ChiefStaff. It namesroles, notWiles personally; addingduty isnotresignationproof."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/10/what-they-are-saying-president-trump-delivers-immediate-diesel-relief-saving-americans-up-to-100-per-fill/",
+      "received_utc": "2026-10-19T18:26:40.119782Z",
+      "status": 200,
+      "raw_sha256": "13d236f4e1a2eea0df3a71a2bc34164b3028ff45f7d2c27f673ddaa32ab2fb6b",
+      "body_path": "logs/deep_review_20261017/case397_sources_1830/whitehouse_oct6_wiles_quote.body.json.gz",
+      "finding": "Root actualbody verifies Oct6 ChiefStaffSusieWiles namedquote. Julyroster isolder corroboration, not todaystatus."
+    }
+  ],
+  "coverage_limits": "APSep16/Oct19 articles direct403 and browseropenfailed; theirsearch-rendered health/currentappearance passages remain unverified leads, not directbodyadopted. WHprofilebrowserinternalerror. Collector directGoogle/Bingsearches hitconsent/irrelevance; officialsearchnewestresultOct6 isnot proof of no newernews. Root searchtoolfoundABC currentdatedstatement. No completeannouncement/historysweep.",
+  "additional_source_units": [
+    "work/0397_facts_1830.json",
+    "work/0397_role_facts_2150.json"
+  ]
+}

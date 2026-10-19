@@ -1,24 +1,20 @@
 {
-  "reviewed_utc": "2026-10-19T21:39:13.878737+00:00",
-  "scope": "Bounded closeout of individually saved finite-review cases; next research remains394, no new case started in closeout.",
+  "reviewed_utc": "2026-10-19T22:26:33.880223+00:00",
+  "scope": "Saved394/396/397valuations; bounded22UTCsafetycloseout, no nextcase.",
   "counts": {
-    "completed_valuations": 354,
+    "completed_valuations": 357,
     "blocked_after_in_depth_review": 11,
     "factual_exclusions": 364,
-    "pending": 2271,
-    "base_records": 729,
+    "pending": 2268,
+    "base_records": 732,
     "revisions_written": 65,
     "active_indices": []
   },
-  "next": [
-    394,
-    396,
-    397
-  ],
+  "next": "Finaldocs/context/TG/scopedauditcommitpush/end boundedrun. Finiteprojectincomplete/noactivecase, next398/400/402 onauthorizedresearchcontinuation, no idle timer.",
   "source_preservation": "391collector overwrote existingfacts; parent savednew0391_facts_2115 and restored original exactHEAD SHA757092…3285 before adoption. No financialrecords/priors changed.",
-  "next_safety": "ExistingOct19 22UTC light ANDIdahoall-unfilledpull; fullOct20 02UTC. No newtimer.",
+  "next_safety": "Idaho/Spainzero-fillcancellations reconciled;3BUY6.50. WhaleNO6resolved0payout/full1.02economicloss/no burntx. ExistingfullOct20 02UTC/earliermaterialfillsources.",
   "goal": "Fullremaininguniverse unchanged; cases saved/indexed individually, next progressTG400/material/block earlier.",
-  "run_boundary": "End this scheduled run after safety follow-up and audited preservation; existing cron/watchers own future triggers. No goal lifecycle mutation, idle continuation or new timer.",
+  "run_boundary": "Current scheduled run is bounded: finish concrete safety follow-up, record/TG/audit/commit/push, then end. No newtimer or idlefollowup; finite project remains incomplete.",
   "completed_cases": [
     {
       "index": 388,
@@ -37,7 +33,28 @@
       "report": "research/2026-10-17-deep-review/evaluations/0391.md",
       "sha256": "e1940411d527aa87d0350978b03f2c91defd8d0d61f3c92607587e72b2ac1d94",
       "status": "blocked/unpriced"
+    },
+    {
+      "index": 394,
+      "report": "research/2026-10-17-deep-review/evaluations/0394.md",
+      "sha256": "ec0263d50e9272d2286bee2154ddb0ed3c4597b4f14793f0d4b30bfbaff56ae9",
+      "status": "valued/noentry; YES0.4960/broad0.01–15/20ppallowance, cheapYESpaperedgefailsselected; NOnoask."
+    },
+    {
+      "index": 396,
+      "report": "research/2026-10-17-deep-review/evaluations/0396.md",
+      "sha256": "3a08dba68c4ba6ac80e0a7f4f443c4eecacd5acd6de5065396d7258d57d6464c",
+      "status": "valued/noentry;YES26.539886/broad5–65/20ppallowance;bothasksnegativecentral."
+    },
+    {
+      "index": 397,
+      "report": "research/2026-10-17-deep-review/evaluations/0397.md",
+      "sha256": "b4953f074879e4e462fa45114683c14151db4121ebb86b0927687cdf307443d2",
+      "status": "valued/noentry;YES32.0365/broad10–70/20pp;initial12.88partialsourceforecastwithdrawn."
     }
   ],
-  "case391": "Specific unresolved US instrument behind Cyprus July28 delisting versus current OFAC entries; no fabricated p or valuation credit. Individual case block, not global research block."
+  "case391": "Specific unresolved US instrument behind Cyprus July28 delisting versus current OFAC entries; no fabricated p or valuation credit. Individual case block, not global research block.",
+  "phase": "357valued/11blocked/364factual/2268pending/noactive. Source/accountproofs inlight2200_phase and2200checkin; finaldocs/TG/audit/commitpushthenend.",
+  "final_financial": "Postresolutionproducer22:22:41–57 TOTAL195.54incl5.85gas; trading189.69mid/187.14indicative depth, PM34.55/32.00; residual19.71notauditedprofit, VM/APIexcluded. CSV223.",
+  "new_material_followup": "COMPLETED: exactWhaleCTF[1,0]/denom1+NegRiskwcol derivation, confirmedmakerfill6/cost1.02; DEC222/235 outcomes/onlyprior-feed-keywordretired.22:24auditclean6indexed+1separatelegacyclaim/cruxquiet0."
 }

@@ -1,0 +1,12 @@
+{
+  "recorded_utc": "2026-10-19T22:10:02.037958+00:00",
+  "csv_old_rows": 221,
+  "csv_new_rows": 222,
+  "original_csv_bytes": 127753,
+  "original_csv_sha256": "19321620bee6edf4b3f34ef4ca3696785a35dd72a170cf7a125efcd0f4528077",
+  "prefix_unchanged": true,
+  "source": "research/2026-10-19-2200-financial-snapshot.md",
+  "bankroll_producer_raw_sha256": "916d5b7fbabe6fd51bb7bd680d22f4c4488ba784760101c55ca0bcb793873931",
+  "trading_depth_derivation": "195.69-5.81-(34.74-32.00)=187.14",
+  "limitations": "Rounded sequential indicative net depth, not synchronized NAV or certified proceeds;20.73 residual not auditedprofit; VM/API excluded."
+}

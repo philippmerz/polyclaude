@@ -1,0 +1,37 @@
+{
+  "compiled_utc": "2026-10-19T22:15:00Z",
+  "scope": "Two exact held-position news-alert sources, bounded factual provenance. No forecast, order, or probability assessment.",
+  "alerts": [
+    {
+      "alert_id": "e6836a36c1895a323e2530832b79e375612ecdcf",
+      "alert_title": "Why the Muslim Brotherhood has become a flashpoint in the Michigan Senate race - Yahoo",
+      "verified_origin": "CNN reporting by Eric Bradner; Oct 19, 2026 at 1:50 PM ET, republished as CNN Newsource by KESQ under the headline “GOP attacks on El-Sayed’s Muslim faith come to a head in heated town hall exchange.”",
+      "url": "https://kesq.com/news/national-politics/cnn-us-politics/2026/10/19/why-the-muslim-brotherhood-has-become-a-flashpoint-in-the-michigan-senate-race/",
+      "bounded_facts": "Reports El-Sayed publicly disavowed the Muslim Brotherhood after a voter pressed him at a Caro town hall over the weekend, then addressed the issue again with reporters. It describes Republican efforts to connect him to the movement via relatives’ past comments and his own older writing, and says Rogers told CNN he had never called El-Sayed a terrorist while accusing him of alignment with the Brotherhood. This is live campaign controversy and candidate conduct, not evidence of affiliation or a measured voter response.",
+      "hard_poll_or_ballot_fact": "None reported in this article.",
+      "capture": {
+        "receipt": "logs/news_mi_alert_review_20261019T221122Z/cnn_kesq.receipt.json",
+        "raw_body": "logs/news_mi_alert_review_20261019T221122Z/cnn_kesq.body.json.gz",
+        "http_status": 200,
+        "raw_sha256": "2ce32c7d54f3a8cc4a50218146311fb9ee1e39f2b0edd8fcbaa11d5402066824",
+        "retrieved_utc": "2026-10-19T22:11:41.535572Z"
+      }
+    },
+    {
+      "alert_id": "e569219197601f1fab365748941ee081615f4958",
+      "alert_title": "Mike Rogers Spent $100K on Private Jets and Luxury Travel Last Quarter - The Intercept",
+      "date_byline": "Jonah Valdez, Oct 19, 2026, 5:43 p.m. ET.",
+      "url": "https://theintercept.com/2026/10/19/michigan-senate-mike-rogers-spending-private-jets/",
+      "basis_and_facts": "The Intercept says it reviewed campaign-finance records: Rogers’s campaign paid JL Jets $93,152 in September for at least five charter flights, including one payment above $40,000, and spent more than $100,000 on luxury travel during July–September. It also reports $4,527 to Blacklane over the quarter. Context in the same report: El-Sayed reported roughly $330,000 in total travel expenses, which the article says went to commercial flights, rentals, fuel, rideshare and hotels, during a contested primary; Rogers’s spokesperson pointed to that spending and a father-in-law contribution to a supporting super PAC. No independent FEC line-by-line validation performed in this pass.",
+      "hard_poll_or_ballot_fact": "None reported. The spending report is campaign-finance context, not polling or ballot-status evidence.",
+      "capture": {
+        "receipt": "logs/news_mi_alert_review_20261019T221122Z/intercept_original.receipt.json",
+        "raw_body": "logs/news_mi_alert_review_20261019T221122Z/intercept_original.body.json.gz",
+        "http_status": 200,
+        "raw_sha256": "947f3cc8fa4c020639af33c13cc481d7cebfd3979e8638bdc89c0eaee6737ea9",
+        "retrieved_utc": "2026-10-19T22:12:02.613658Z"
+      }
+    }
+  ],
+  "source_limits": "Yahoo alert resolved only to a CNN Newsource republication; direct KESQ HTTP body captured. The Intercept original was identified from a captured mirror link and fetched directly. The alert Google News URLs led to Google consent pages; those captures contain no article content. No hard polling or official ballot update was found in the two alerted reports. No absence inference beyond these articles."
+}

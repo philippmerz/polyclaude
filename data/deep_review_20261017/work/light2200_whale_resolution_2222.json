@@ -1,0 +1,88 @@
+{
+  "schema": "whale_resolution_verification.v1",
+  "verified_utc": "2026-10-19T22:21:31.019359+00:00",
+  "exact_gamma_identity_criteria_tokens_equal_prior_capture": true,
+  "gamma": {
+    "id": "5394247",
+    "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+    "question": "Will \"Whalefall\" Opening Weekend Box Office be less than 8m?",
+    "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+    "closed": true,
+    "active": true,
+    "umaResolutionStatus": "resolved",
+    "outcomePrices": "[\"1\", \"0\"]",
+    "updatedAt": "2026-10-19T22:11:00.533838Z",
+    "resolvedBy": "0x69c47De9D4D3Dad79590d61b9e05918E03775f24",
+    "negRisk": true,
+    "resolutionSource": ""
+  },
+  "ctf": {
+    "chain_id": 137,
+    "block_number": 95828757,
+    "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "token_ids": [
+      "1902754979316488104145737772175718553958667775381152626281371012455287813405",
+      "73168238092631084665488650926272039136850868604323922909743725093759786953626"
+    ],
+    "payout_denominator": 1,
+    "payout_numerators": [
+      1,
+      0
+    ],
+    "held_no_balance_units": 6000000,
+    "held_no_balance": 6.0,
+    "derived_no_positions": {
+      "0xC011a7E12a19f7B1f670d46F03B03f3342E82DFB": "57153854154034150059118895022523421706336300868238327569334425788056141361303",
+      "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174": "77490115431045680740879979800547139005279118377807452109339047601093754536213"
+    },
+    "matching_collateral": []
+  },
+  "indexed_whale_rows": [
+    {
+      "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+      "outcome": "No",
+      "size": 6,
+      "totalBought": 6,
+      "redeemable": true,
+      "curPrice": 0,
+      "currentValue": 0,
+      "initialValue": 1.02,
+      "cashPnl": -1.02,
+      "realizedPnl": 0,
+      "title": "Will \"Whalefall\" Opening Weekend Box Office be less than 8m?"
+    }
+  ],
+  "representation": "Pinned numeric-block CTF reads serialized; directGammaHTTP receipt. Closed/data-api flags alone are not final-payout proof.",
+  "receipts": {
+    "gamma": {
+      "started_utc": "2026-10-19T22:21:28.515508+00:00",
+      "received_utc": "2026-10-19T22:21:28.591260+00:00",
+      "raw_sha256": "01cae69a4feaaa6e76da72ccc7561df000e630c4f324bf9f1bd8f8ee8cc5aaf5",
+      "gzip_sha256": "67f3e7e0d1bfdc4953f4240aee7118b7d629ff9d824485b6e73ab6edfb12a1ec"
+    },
+    "block_number": {
+      "started_utc": "2026-10-19T22:21:28.746356+00:00",
+      "received_utc": "2026-10-19T22:21:28.828508+00:00",
+      "raw_sha256": "c8e67b46a911cfcd5b4c4c7a286dfea17c24461b4ac66a0dcde5830f9a4b7db9",
+      "gzip_sha256": "5bba3fe8bbc8faf2f579bb55638ce1badf215229be3d9f84ab97b13f0150047d"
+    },
+    "ctf_payout_and_identity": {
+      "started_utc": "2026-10-19T22:21:28.841858+00:00",
+      "received_utc": "2026-10-19T22:21:30.813230+00:00",
+      "raw_sha256": "404ac364d89cc821b6ab98034596267edff74ad4107a9c27320d2f332ea60413",
+      "gzip_sha256": "6fc78eba05199db732c878fabb59a52c78b73db95dce72ee05f77455e5c02c4e"
+    },
+    "indexed_positions": {
+      "started_utc": "2026-10-19T22:21:30.823083+00:00",
+      "received_utc": "2026-10-19T22:21:31.009617+00:00",
+      "raw_sha256": "cd5dff1fb88147ed42d9ce0d2a198bc03d1fa20b378ffc933f6afb4ea8478384",
+      "gzip_sha256": "81637c8084c1ad1ceb05ff6794b73e4e2ad8d658514f82f7ad2ec02afa3a9cfa"
+    }
+  },
+  "capture_root": "logs/deep_review_20261017/light2200_whale_resolution_2222"
+}

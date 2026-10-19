@@ -1,0 +1,34 @@
+{
+  "schema": "case0397_current_exit_sources.v1",
+  "reviewed_utc": "2026-10-19T22:02:28.459159+00:00",
+  "rows": [
+    {
+      "url": "https://www.washingtonpost.com/politics/2026/10/16/trump-aides-brace-white-house-turmoil-midterm-losses-loom/",
+      "published": "2026-10-16",
+      "finding": "Aides anticipate vacancy; Wiles reportedly signaled no exit plan; spokesperson rejects rumors.",
+      "raw_sha256": "383c883eda482a1db62717b3b31cd940ef9b27313c6707fb567404c172e38779",
+      "receipt": "logs/deep_review_20261017/case0397_browser_ingest_2202/wapo_browser.receipt.json",
+      "representation": "Rootreadbrowsertext ingested durably; NOTrawHTTP/source-wireclock. OriginaldirectHTTPtimeoutno body; sourcearticleURL/title/bylines verified inbrowser."
+    },
+    {
+      "url": "https://www.vanityfair.com/story/susie-wiles-still-standing-trump-midterms",
+      "published": "2026-10-19",
+      "finding": "Rootactualbody: ChrisWhipple continuityassessment leans on2025interviews/personalbond, notnew2026tenurepromise.",
+      "raw_sha256": "a8a8237d22f658b841267f5565a1e4691046d55967469434f0ccf89bb01858f0",
+      "receipt": "logs/deep_review_20261017/case0397_exit_2158/vf_oct19.receipt.json",
+      "representation": "directHTTP200 rawbody rootread"
+    },
+    {
+      "url": "https://www.thedailybeast.com/trump-secretly-plots-shock-firing-of-his-most-powerful-aide-white-house-chief-of-staff-susie-wiles",
+      "published": "2026-10-15",
+      "finding": "Rootbody attributes replacementcalls toPolitico, plusTrumpdenial; derivative, notindependentconfirmation.",
+      "raw_sha256": "99c7f2cabc7204d8853224e73ef93c99a2c11fbae23dcaf778e48d147ba73253",
+      "receipt": "logs/deep_review_20261017/case0397_exit_2158/beast_oct15.receipt.json",
+      "representation": "directHTTP200 rootread; originalPolitico notverified"
+    }
+  ],
+  "source_timing_erratum": "0397_exit_primary_2200.json collectorcompiled22:00 wasrounded/futureatroot21:59:47. Not adopted asactualfetch/editorialclock. Rootlater actualingestion/reviewclock above; URLdates are articlepublicationdates.",
+  "source_independence": "Do not countcommentary/syndication/replacementname lists asmultipleindependentvotes. NeitherWAPO/VF norpublicpraise establishes departureorcontinuedtenurethroughDec31.",
+  "model_effect": "Partialhealth/role-only12.88YES draft withdrawn beforefinalrecord/money. Currentnews establishes personnelstrainchannel; reviseunfittedhazard beforefinalquote; ownpricesalreadyseen.",
+  "scope": "Sourceobservations forunheld397, notcanonicalportfolioexittrigger."
+}

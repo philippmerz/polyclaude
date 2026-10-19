@@ -1,0 +1,112 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 394,
+  "created_utc": "2026-10-19T21:45:10.474658+00:00",
+  "scope": "Only on-chain PM exact-rank binary; no off-chain stock recommendation or equity monitoring task.",
+  "own_market_prices_seen": false,
+  "known_sibling_prices": "Case364 largest-company quotes seen previously; not used to infer event probability. Exact394own quote not read.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0394_ranking_2144.json",
+      "sha256": "628a1a9b5134c6bb03b94fb5875ad68e0fe2add28acf15e29bc89e10767daa0c"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0394_facts_1743.json",
+      "sha256": "5a3f56ffc9f0a0f01d952e99b596d4b24118a2e9ba963c7a0dd0158dabba9699"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0364_primary_1647.json",
+      "sha256": "6cd3bef862f0c66776cc04d2db49c93e3e6d9d6a5e3483740ff089fcd2e33e9f"
+    }
+  ],
+  "literal_rule": "Tesla exactly third-largest company worldwide by market cap Oct31,2026 asofmarketclose; consensus credible reporting. No namedprovider/global private scope/shareclass/FX/tie/Saturday fallback.",
+  "source_binding": {
+    "CMC_received_utc": "2026-10-19T21:43:31.850138Z",
+    "Tesla_rank": 11,
+    "Tesla_cap_T": 1.453,
+    "NVDA_Apple_Alphabet_MSFT_caps_T": [
+      5.242,
+      5.004,
+      4.16,
+      3.961
+    ],
+    "rank3_static_relative_interval": {
+      "lower_Alphabet": 2.8630419821059876,
+      "upper_Apple": 3.4439091534755675
+    },
+    "observed_rank_rows": 19,
+    "scope_limit": "First20HTMLrows include ad;19 actualrankrows, not fullglobaluniverse. Provider/printdate/shares not certified consensus. DatedSECshares preserved in0364facts; GOOG/GOOGL onecompany; no EPS-share substitution."
+  },
+  "model": {
+    "main_close_utc": "2026-10-30T20:00:00Z",
+    "remaining_days": 10.92696209886574,
+    "ordinary_weight": 0.95,
+    "assumed_annual_relative_sigma": 0.9,
+    "ordinary_needed_union_upper_proxy": 7.145160704445596e-12,
+    "ordinary_pair_tails_top3": [
+      8.640261723563921e-17,
+      1.001195529491969e-15,
+      7.1440731062988685e-12
+    ],
+    "ordinary_limit": "Exactthird requires exceeding at leastone currenttop3. Sum marginal relative-Gaussian tails is an upperproxy, not fitted exactrank likelihood; not independent rival-loss multiplication. It contributes negligibly.",
+    "transform_weight": 0.04,
+    "transform_jump_median": 2.0,
+    "transform_log_sd": 0.4612568603611919,
+    "transform_conditional_rank3": 0.09900607666440575,
+    "transform_definition": "Under sharedmarket scaling that cancelsranks, Tesla relative jump is lognormal(log2,sd). sd derived from364static hurdle and10%conditionalworld-first judgment. Exactthird requires third-highest peer<Tesla<second-highest peer. Otherissuer jumps/relativepeerchanges unmodeled centrally; explicit sensitivity/range/reserve.",
+    "scope_or_adjudication_weight": 0.01,
+    "conditional_rank3_in_scope_state": 0.1,
+    "exact_rank_bins_sum": 1.0,
+    "raw_p_yes": 0.004960243073364133,
+    "sensitivity": [
+      {
+        "transform_weight": 0.01,
+        "jump_median": 1.6,
+        "log_sd": 0.4612568603611919,
+        "scope_weight": 0.005,
+        "p_rank3": 0.0010530467697887486
+      },
+      {
+        "transform_weight": 0.04,
+        "jump_median": 2,
+        "log_sd": 0.4612568603611919,
+        "scope_weight": 0.01,
+        "p_rank3": 0.00496024306657623
+      },
+      {
+        "transform_weight": 0.1,
+        "jump_median": 2.6,
+        "log_sd": 0.6,
+        "scope_weight": 0.03,
+        "p_rank3": 0.014647947399143078
+      },
+      {
+        "transform_weight": 0.04,
+        "jump_median": 2,
+        "log_sd": 0.3228798022528343,
+        "scope_weight": 0.01,
+        "p_rank3": 0.004484023231209128
+      },
+      {
+        "transform_weight": 0.04,
+        "jump_median": 2,
+        "log_sd": 0.6457596045056686,
+        "scope_weight": 0.01,
+        "p_rank3": 0.004570238979486114
+      }
+    ],
+    "limits": "All weights,volatility,jump law and scope odds subjective/unfitted. Ordinary nearzero is not certainty. Tail shape/conditionalrank interval dominate; no option/historical-tail calibration. Distinctrank1 andrank3 outcomes mutually exclusive in same datedcompany universe, not two independent signals."
+  },
+  "adopted_p_yes": 0.004960243073364133,
+  "plausible_range_yes": [
+    0.0001,
+    0.15
+  ],
+  "actual_entry_reserve_pp": 20,
+  "reserve_reason": "Same family20pp actual allowance for unfitted rare-jump/relativepeer tails, provider/quarterlyshare uncertainty and unspecifiedglobal/Saturday/source convention. Estimation risk, not an extra20%event probability. Range endpoints not universal pass/fail constraints.",
+  "selected_yes": 0,
+  "selected_no": 0.7950397569266359,
+  "catalysts": "DatedTeslaOct21afterclose,MSFT/AlphabetOct28; AppleNov2aftertarget;TeslaIR403 remainsgap,not refreshed schedule. Ordinary maininterpretationlastregularFriOct30close; alternativeSaturdayglobal/timing adjudication unresolved.",
+  "comparison": "Cash/current tinyPMpositions/fiveBUY9.12 asof21:37; Spainmaker knownconditionalalternative not guaranteedfill. Generaltech/risk-on channel overlapsAIheldOR but no measuredhedge; commonvenue/oracle risk persists. No equityposition contemplated.",
+  "reopen": "Verified ranking/share/scope/catalyst change or freshquote with positivecost/risk economics; anymoney requires account,eligibility,funding,identity,fees,depth,caps and conditionalfill underwriting. No passiveearningsGTC authorized."
+}

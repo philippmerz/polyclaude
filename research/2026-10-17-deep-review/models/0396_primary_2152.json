@@ -1,0 +1,89 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 396,
+  "created_utc": "2026-10-19T21:50:56.489339+00:00",
+  "own_contract_quote_seen": false,
+  "literal_analysis": "Any Houthi/directedforce deliberately operates evenbriefly inside oneof7Aden districts byDec31 23:59ET. Notcitycapture. AlBuraiqeh alone excluded; offshore/naval/missile/sabotage/disruption/claims/emissaries/POWs alone excluded. Credibleconsensus; genuineambiguity3calendardays thenNOunlessentryestablished. Rule contains no explicitcreation-date lowerbound.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0396_facts_1744.json",
+      "sha256": "feb48ab1fb05eb5b8d23663c2553f5fc4ec0d311f992ba08753d7e221020cd0e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0396_district_facts_2143.json",
+      "sha256": "620ea82c790743e62791772dd3bf2a3587342afa11cf4a060283b39c694e6f29"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0396_district_erratum_2149.json",
+      "sha256": "20b29a46b1b0c45d48a3c7410e9115f6016c60855c94913e160e2c8e59c51cb6"
+    }
+  ],
+  "source_binding": {
+    "UN_Oct9": "Root verified originalrawDPPA: fullscalewar, AnsarAllahMokha/coastaladvance, fightingwest/southTaiz andLahj, govcounteroffensive/claimedrecapturesBab. No exact7districtentry report inthisonebriefing. PublicationOct9, retrieved17:43, notOct19groundtruth.",
+    "RTE_Sept11": "Root verified rawactualarticle: anonymousgovernmentmilitaryofficial reports armedHouthiboatslandingMayyunafterpreviousdaywithdrawal. Notindependentofficialmilitarylog/consensus; do notmapgovernoratewordto7districts.",
+    "OCHA_geometry": "Root verified335ADM2features/sourceziphash; Mayyun-locationcomponent inDhubab/Taiz YE1506. Centroidoutsideislandconcavepolygon; erroneouscollectorclaimpreserved/corrected. Interiorpoint43.4275235228,12.6518936095 coveredbyDhubab; bounds43.38745–43.44029E/12.63197–12.67176N. 2019valid_on dataset, not2026territorialcontrol.",
+    "location_judgment": "Reported islandlanding doesnot establish anynamedAden districtentry. EvenAdenGovernorate attribution alone wouldnot identify oneof7; currentmapversion/incidentcoverage limits retained.",
+    "temporal_judgment": "Main reading is a prospective new/current-conflict entry event, not every historicYemenwar presence. No explicit lowerbound supplied; cannot rewrite itas literalaftercreation. Legacy/scope/adjudicationbranch remainsuncertain. Two guessed2015URLsfailed/mismatched; no2015incident adopted fromthem; no claim historicalabsence."
+  },
+  "model": {
+    "scope_legacy_adjudication_YES_branch": 0.02,
+    "past_qualifying_entry_not_established_in_bounded_reads_given_main_scope": 0.08,
+    "future_given_no_prior_entry": {
+      "offensive_or_securityfracture_weight": 0.55,
+      "reach_oneof7_given_offensive": 0.35,
+      "credibleestablishment_given_reach": 0.85,
+      "containment_or_negotiation_weight": 0.45,
+      "deliberate_raid_included_district_given_other": 0.06,
+      "credibleestablishment_given_raid": 0.8,
+      "result": 0.185225
+    },
+    "p_yes_formula": ".02+.98*(.08+.92*(.55*.35*.85+.45*.06*.8))",
+    "raw_p_yes": 0.26539886,
+    "limits": "All scenarioweights/conditionalodds subjective and unfitted, not casualty/territorialcalibration. Conditionaltree not independentwar/raid votes. Paststate uncertainty isnotprovedpastentry; currentmapnotcontrol/sourceabsence. Governmentreversal/negotiations/externalbacking and covertforceattribution canchange forecast.",
+    "sensitivity": [
+      {
+        "scope_legacy": 0,
+        "past_unobserved": 0.02,
+        "offensive_weight": 0.3,
+        "reach_given_offensive": 0.15,
+        "established_given_reach": 0.75,
+        "other_raid": 0.02,
+        "other_established": 0.7,
+        "p_yes": 0.062679
+      },
+      {
+        "scope_legacy": 0.02,
+        "past_unobserved": 0.08,
+        "offensive_weight": 0.55,
+        "reach_given_offensive": 0.35,
+        "established_given_reach": 0.85,
+        "other_raid": 0.06,
+        "other_established": 0.8,
+        "p_yes": 0.26539886
+      },
+      {
+        "scope_legacy": 0.08,
+        "past_unobserved": 0.18,
+        "offensive_weight": 0.8,
+        "reach_given_offensive": 0.6,
+        "established_given_reach": 0.95,
+        "other_raid": 0.15,
+        "other_established": 0.9,
+        "p_yes": 0.6099752
+      }
+    ]
+  },
+  "adopted_p_yes": 0.26539886,
+  "plausible_range_yes": [
+    0.05,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 20,
+  "reserve_reason": "10ppordinaryplus10pp forunfittedwarfronttranslation, stalegeo/currentdistrictcontrol gaps, uncertaincredibleestablishment andtemporal/agencyadjudication. These are estimationuncertainties, not anextra20%event. No mandatoryrange-endpointrule.",
+  "selected_yes": 0.06539886,
+  "selected_no": 0.5346011399999999,
+  "horizon": "Dec31 23:59ET main/Jan3 23:59ET ambiguitygrace; nominalhorizon<1year, settlementdispute may extend beyond2027start evaluation.",
+  "catalysts": "Named-districtgroundfootage/crediblemultiple-sourceentry, govcounteroffensive/frontshift inLahj, ceasefire orforceattribution. Missilehitsalone do notflip event. Historicalqualifyingnewfact persistsafterlaterwithdrawal.",
+  "portfolio_comparison": "No currentYemenholding/BUY in21:37exactinventory. War/energy/politicalrisk canoverlapMI/House/Idaho/Spain andOR/AI usage; no measuredhedge. CommonPM/UMA/fundingrisk. FiveBUY9.12 andcash/knownconditionalSpainmaker compete; do notlabel independentbinarydiversification.",
+  "reopen": "Verifiedspecificdistrictentry/control/front/negotiation/ruleclarification orrobustaftercostquotes; anypositivepaperedge must getfreshidentity/eligibility/account/funding/fees/depth/caps/conditionalfill checks."
+}

@@ -1,0 +1,25 @@
+{
+  "reviewed_utc": "2026-10-19T22:19:18.184347+00:00",
+  "prior_archive": "_closed_20261019_sanchez386",
+  "p_yes_preserved": 0.47658025,
+  "p_no_preserved": 0.52341975,
+  "removed_only_feed_names": [
+    "Spain PM departure, election and formation news",
+    "Spain PM official cessation and investiture news"
+  ],
+  "removed_only_unique_terms": [
+    "Pedro Sánchez",
+    "Pedro Sanchez",
+    "Feijóo",
+    "Feijoo",
+    "Sánchez dimite",
+    "Sanchez resigns",
+    "Sánchez detenido",
+    "presidente en funciones",
+    "Spanish election",
+    "Spanish investiture"
+  ],
+  "all_other_prior_and_config_fields_equal": true,
+  "no_state_or_daemon_code_edits": true,
+  "proof": "data/deep_review_20261017/work/light2200_sanchez_reconciled_2218.json"
+}

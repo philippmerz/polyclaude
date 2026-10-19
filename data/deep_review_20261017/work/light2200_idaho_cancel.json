@@ -1,0 +1,14 @@
+{
+  "schema": "light2200_idaho_cancel.v1",
+  "started_utc": "2026-10-19T22:00:22.488905+00:00",
+  "finished_utc": "2026-10-19T22:00:25.540440+00:00",
+  "order_id": "0x99f750e8f948adc2c6e05877df63a979cd6df50cc84918855a978070a4aad8de",
+  "market_id": "630707",
+  "condition_id": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+  "returncode": 0,
+  "reason": "Honor existing all-unfilled22UTCpull, no repricing/repost.",
+  "raw_path": "logs/deep_review_20261017/light2200_idaho_cancel/result.json",
+  "raw_sha256": "b4e3fe7fcc4fc99f19bf2c2889bb3af605bc65669506e4680e6e7a2bba732cee",
+  "CLI_verified_removal": true,
+  "reservation_effect": "If verified, BUYreservationcancelmarker awaits300s plusaffirmativeterminal/trades/indexed reconciliation. No cashcredit/profit orfillabsence claimfromcancelresponsealone."
+}

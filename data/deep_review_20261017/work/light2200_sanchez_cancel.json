@@ -1,0 +1,13 @@
+{
+  "schema": "cancel_result_capture.v1",
+  "order_id": "0x4648ea205eb204fe65c8886bd131aa68c38280322891b917708809a17f75d8b2",
+  "condition_id": "0x890f9b8de730479549e95027f26aad5ce89ecc4a42a6fd6316d0b0aec9a5aad1",
+  "market_id": "802374",
+  "start_utc": "2026-10-19T22:13:02.410448+00:00",
+  "finish_utc": "2026-10-19T22:13:06.405492+00:00",
+  "returncode": 0,
+  "raw_sha256": "f8f863ba5a47bca4df3a5d6c9864f606be83af1ab775de715a1d101c05439248",
+  "receipt": "logs/deep_review_20261017/light2200_sanchez_cancel_2215/cancel_result.receipt.json",
+  "reason": "Standing cancel-first: source review identified multiple older distinct Spanish poll instruments absent from the original source set; instruments unassessed. No numerical forecast change or automatic repost.",
+  "note": "Capture operation labels only serialized CLI result; the CLI itself performs a monetary order cancellation. Reservation retirement pending affirmative terminal/trade/cumulative-buys proof after300s."
+}

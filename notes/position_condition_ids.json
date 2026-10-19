@@ -19,14 +19,6 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
-   "outcome": "No",
-   "size": 6,
-   "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
-   "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
-   "negativeRisk": true
-  },
-  {
    "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
    "outcome": "Yes",
    "size": 5,

@@ -1,0 +1,10 @@
+{
+  "recorded_utc": "2026-10-19T22:28:08.994389+00:00",
+  "message_id": 1271,
+  "sender": "scripts/telegram.py msg --stdin singlequotedheredoc",
+  "exit_code": 0,
+  "result_sha256": "bc4aceb60d427ec5cb7b13c759c83dcf20b33521a09d8cd9d63e798bca60803a",
+  "summary": "MaterialnewWhaleresolutionloss1.02,bothunfilledcancellations,latestfinancialsnapshot,357valued/next02UTC.",
+  "body_chars_under_700": true,
+  "private_result": "logs/deep_review_20261017/light2200_telegram/result.txt"
+}

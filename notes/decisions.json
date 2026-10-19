@@ -1,5 +1,5 @@
 {
-  "next_id": 237,
+  "next_id": 239,
   "decisions": [
     {
       "id": 1,
@@ -4461,9 +4461,10 @@
         "source-regime-risk"
       ],
       "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
-      "outcome": null,
+      "outcome": "Operational closure: order canceled unfilled22:00UTC; terminal0matched/exhaustive126trades/indexed buys/CTF0 confirmed after300s. Only Idaho reservation retired5to4; four LIVE bids8.10 unchanged. No purchase, spend, cash credit or realized PnL. Unexecuted forecast, not an election result or calibration trial.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Preserve research forecasts while retiring unfilled financial commitments only after affirmative terminal/trade/cumulative-buy proof. Honor dated pull; no automatic repost.",
+      "resolved_at": "2026-10-19T22:08:35Z"
     },
     {
       "id": 211,
@@ -4771,21 +4772,29 @@
         "film-boxoffice-2026"
       ],
       "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null,
+      "outcome": "ResolvedYES: exactPolygon95828757 payoutdenominator1/numeratorsYES1NO0; NegRiskwcol independentlyderivesheldNOasset. Confirmedmakerfill6NO17c/1.02, payout0, full1.02economicloss.6valueless tokensretained; no sale/burn/redemptiontx or newcashcredit. Original57.1022NOentry forecastfailed; laterNO3thesisbreakforecast preserved separately. No executableexit existed atcheckedbooks.",
+      "calibration_delta": "OriginalNO57.1022% lost; binary squared error0.3260661. One low-confidence sample is not populationcalibration. LaterNO3% did not undo originalentryloss.",
+      "lesson": "An8m studio estimate at the equality threshold was not a final gross. Actual7,837,153 and oracleYES make the NO claim worthless. Preserve original loss, source revisions and unavailable-exit evidence; do not spend gas to burn a zero-payout claim.",
       "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
       "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
       "market_id": "5394247",
       "side": "NO",
       "shares": 6,
       "limit_price": 0.17,
-      "filled_shares": 0,
+      "filled_shares": 6,
       "committed_cash_usd": 1.02,
-      "financial_status": "LIVE_UNFILLED_NOT_HELD",
+      "financial_status": "RESOLVED_LOSS_NO_PAYOUT",
       "pull_at": "2026-10-19T02:00:00Z",
       "research_report": "research/2026-10-17-deep-review/whalefall299_entry_outcome_0035.md",
-      "verification": "data/deep_review_20261017/work/0299_root_postproof_0035.json"
+      "verification": "data/deep_review_20261017/work/0299_root_postproof_0035.json",
+      "resolved_at": "2026-10-19T22:23:57Z",
+      "filled_cost_usd": 1.02,
+      "payout_usd": 0,
+      "economic_trade_pnl_usd": -1.02,
+      "current_committed_cash_usd": 0,
+      "financial_verified_utc": "2026-10-19T22:23:57.762867+00:00",
+      "resolution_verification": "data/deep_review_20261017/work/whalefall_resolved_loss_2224.json",
+      "original_unfilled_fields_basis": "Initialentrysnapshot00:26; confirmedvenuefill01:04:56UTC/holdingproof0125 supersedes currentfinancialstatus only; originalthesis/numericforecast retained."
     },
     {
       "id": 223,
@@ -5124,9 +5133,10 @@
         "illiquid-exit"
       ],
       "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
-      "outcome": null,
+      "outcome": "ResolvedYES: exactPolygon95828757 payoutdenominator1/numeratorsYES1NO0; NegRiskwcol independentlyderivesheldNOasset. Confirmedmakerfill6NO17c/1.02, payout0, full1.02economicloss.6valueless tokensretained; no sale/burn/redemptiontx or newcashcredit. Original57.1022NOentry forecastfailed; laterNO3thesisbreakforecast preserved separately. No executableexit existed atcheckedbooks.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "An8m studio estimate at the equality threshold was not a final gross. Actual7,837,153 and oracleYES make the NO claim worthless. Preserve original loss, source revisions and unavailable-exit evidence; do not spend gas to burn a zero-payout claim.",
+      "resolved_at": "2026-10-19T22:23:57Z"
     },
     {
       "id": 236,
@@ -5145,9 +5155,52 @@
         "statutory-cese-uncertainty"
       ],
       "slug": "pedro-snchez-out-as-pm-of-spain-by-december-31-2026",
-      "outcome": null,
+      "outcome": "Operational zero-fill closure: one vetted cancel22:13:02\u201306; after300s exactterminalCANCELED0matched,126exhaustedtrades/no targetfill,indexedpurchasesunchanged/SpainbothCTFs0. Onlytargetreservationretired4to3, otherssame/threeLIVEzero-matchedBUY6.50. No purchase, spend, cashcredit or realizedPnL; unexecutedforecast, not a market-outcome calibrationtrial.",
       "calibration_delta": null,
-      "lesson": null
+      "lesson": "Inspect missing original poll instruments and dated coalition context before fresh entry; a source publication date is not a fieldwork date. Cancel-first when load-bearing evidence is unassessed; preserve numerical research and never grade an unexecuted order as a trade.",
+      "resolved_at": "2026-10-19T22:19:18Z"
+    },
+    {
+      "id": 237,
+      "timestamp": "2026-10-19T22:08:35Z",
+      "type": "size_change",
+      "thesis": "Completed original Oct19 22UTC pull: canceled Idaho630707 namedIndependent YES34 at3c/1.02pUSD. Exact terminal CANCELED0matched, exhausted126 trades with no target fill, indexed purchases unchanged/CTF0; vetted post300s reconciliation retired only Idaho reservation5to4. Four other bids8.10 remain unchanged. No execution or profit; no automatic repost.",
+      "confidence": "high",
+      "prediction": "Canceled target remains absent; all executed exposure and cumulative buys remain zero. This is cancellation verification, not an electoral forecast outcome.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "cancel-unfilled",
+        "standing-pull",
+        "no-profit",
+        "deep-review"
+      ],
+      "slug": "will-person-a-win-the-idaho-senate-race-in-2026",
+      "outcome": "Operational closure: order canceled unfilled22:00UTC; terminal0matched/exhaustive126trades/indexed buys/CTF0 confirmed after300s. Only Idaho reservation retired5to4; four LIVE bids8.10 unchanged. No purchase, spend, cash credit or realized PnL. Unexecuted forecast, not an election result or calibration trial.",
+      "calibration_delta": null,
+      "lesson": "Preserve research forecasts while retiring unfilled financial commitments only after affirmative terminal/trade/cumulative-buy proof. Honor dated pull; no automatic repost.",
+      "resolved_at": "2026-10-19T22:08:35Z"
+    },
+    {
+      "id": 238,
+      "timestamp": "2026-10-19T22:19:18Z",
+      "type": "size_change",
+      "thesis": "Canceled unfilled Sanchez DEC236 tenYES16c/1.60 under standing cancel-first after source review identified3distinctolderOct12polls absent originalinputset; original instruments remain unchecked. Rootcurrent coalitionreport distinguishes jointSenatelists fromCongressleftsplit, not directSenatePMselection. No adverse pointforecastadopted. Exact22:13cancel/after300s CANCELED0/exhausted126trades/indexedbuys/CTFs0; onlySpain reservation4to3, threeotherbids6.50unchanged. No automaticrepost or profit.",
+      "confidence": "high",
+      "prediction": "Zero-fill canceled order remains absent and numerical research prior remains historical; new source/instrument assessment required before any fresh entry.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "cancel-unfilled",
+        "source-coverage-gap",
+        "no-profit",
+        "deep-review"
+      ],
+      "slug": "pedro-snchez-out-as-pm-of-spain-by-december-31-2026",
+      "outcome": "Operational zero-fill closure: one vetted cancel22:13:02\u201306; after300s exactterminalCANCELED0matched,126exhaustedtrades/no targetfill,indexedpurchasesunchanged/SpainbothCTFs0. Onlytargetreservationretired4to3, otherssame/threeLIVEzero-matchedBUY6.50. No purchase, spend, cashcredit or realizedPnL; unexecutedforecast, not a market-outcome calibrationtrial.",
+      "calibration_delta": null,
+      "lesson": "Inspect missing original poll instruments and dated coalition context before fresh entry; a source publication date is not a fieldwork date. Cancel-first when load-bearing evidence is unassessed; preserve numerical research and never grade an unexecuted order as a trade.",
+      "resolved_at": "2026-10-19T22:19:18Z"
     }
   ]
 }

@@ -1,0 +1,22 @@
+{
+  "chain_id": 137,
+  "block_number": 95828757,
+  "adapter": "0xd91E80cF2E7be2e162c6513ceD06f1dD0dA35296",
+  "identity": {
+    "ctf": "0x4D97DCd97eC945f40cF65F87097ACe5EA0476045",
+    "col": "0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174",
+    "wcol": "0x3A3BD7bb9528E159577F7C2e685CC81A765002E2"
+  },
+  "derived_no_positions": {
+    "col": "77490115431045680740879979800547139005279118377807452109339047601093754536213",
+    "wcol": "73168238092631084665488650926272039136850868604323922909743725093759786953626"
+  },
+  "matching_collateral_names": [
+    "wcol"
+  ],
+  "expected_no_token": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+  "verified_utc": "2026-10-19T22:22:20.176843+00:00",
+  "raw_sha256": "47c631ff25255645b4cd5e83f5ee7af4222e171d9f4bdea5b49c5e718c9312b7",
+  "receipt": "logs/deep_review_20261017/light2200_whale_adapter_2223/adapter.receipt.json",
+  "interpretation": "NegRisk wrapped collateral is why standardpUSD/USDC.e derivation did notmatch; exact heldNO is now independently derived for resolved condition/index2. Payout numerator0/denominator1 proves0 economicclaim; no burn/redemption or transaction made."
+}

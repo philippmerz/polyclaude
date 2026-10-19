@@ -1,0 +1,13 @@
+{
+  "recorded_utc": "2026-10-19T22:25:15.586821+00:00",
+  "original_rows": 222,
+  "new_rows": 223,
+  "original_bytes": 128237,
+  "original_sha256": "a702454070c07f34bd29f3f4feeccd81eb5993941ad0b4302aadd83f90cb7ff7",
+  "prefix_unchanged": true,
+  "source": "research/2026-10-19-2222-financial-snapshot.md:3",
+  "reason": "Material new finalWhaleresolution requiredcompletefinancialproducer afterearlier22UTCmark.",
+  "producer_raw_sha256": "fe6ba8d5b27a0504f580829f70281b5fa46ce776226f38c332342cbc7acc7232",
+  "derived_trading_depth_usd": 187.14,
+  "scope": "No new externalflow, no claim markequalscashprofit or executableNAV."
+}

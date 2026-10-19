@@ -1,0 +1,58 @@
+{
+  "schema": "primary_forecast.v1",
+  "review_index": 397,
+  "created_utc": "2026-10-19T21:55:40.353288+00:00",
+  "own_market_quote_seen": false,
+  "literal_analysis": "Announced resignation/removal byDec31,2026 23:59ET resolvesYES immediately eveneffectiveafterdeadline; otherwiseactuallyceasingadministrationmembershipalsoqualifies. Broadformalpublicgovernmentrolesincluded; ChiefStaff-tootherformalrole alone notautomaticallyYES. Officialadministrationsourceprimary/credible reopening literaltypo not silentlyrewritten, treatedcredible-reporting consensus asordinarymeaning withuncertainty.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0397_primary_sources_2156.json",
+      "sha256": "831c83ced93ca66e13b161aecf09ac88681de522217df9fee1b5a7975322c336"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0397_facts_1830.json",
+      "sha256": "6a3b054d08559cc131dc87c5e990348debdba8ff22dfd23fc9b6edfeadbf0f32"
+    }
+  ],
+  "evidence_judgment": "Oct6namedofficialrole+Sept16reportedself-statementmaintainingwork supportcontinuitybaseline, notcertaincurrentstatus. Oct19newinstitutionaldutyweaklyconsistentwithcontinuedrole, not personaltenureguarantee. Do nottreatMarchdiagnosisasnewunresolvedclinicalshock; no clinicalrecurrence estimate. APtodayrole/treatmentleadunverifiedbody, notadopted.",
+  "model": {
+    "already_announced_departure_not_verified_in_bounded_source_set": 0.01,
+    "midterm_reset_or_political_personnel_shock_weight": 0.35,
+    "qualifying_announcement_or_full_administration_exit_given_reset": 0.25,
+    "other_continuity_regime": 0.65,
+    "qualifying_other_exit_given_continuity": 0.05,
+    "formula": ".01+.99*(.35*.25+.65*.05)",
+    "p_yes": 0.1288,
+    "limits": "All probabilities subjective/unfitted; no estimatedstaff-survivaldataset ormedicalprognosis. Conditionalmutuallyexclusivepersonnelregimes, notindependenthealth+politicsmultiplication. Resignationannouncedfor2027counts; internalroletransferdoesnot necessarilycount. Boundednewsaccessnotabsenceproof.",
+    "sensitivity": [
+      {
+        "case": "stable",
+        "already": 0.005,
+        "reset_weight": 0.2,
+        "exit_given_reset": 0.12,
+        "other": 0.025,
+        "p_yes": 0.048780000000000004
+      },
+      {
+        "case": "adverse",
+        "already": 0.04,
+        "reset_weight": 0.6,
+        "exit_given_reset": 0.5,
+        "other": 0.12,
+        "p_yes": 0.37407999999999997
+      }
+    ]
+  },
+  "adopted_p_yes": 0.1288,
+  "plausible_range_yes": [
+    0.03,
+    0.45
+  ],
+  "actual_entry_reserve_pp": 15,
+  "reserve_reason": "Ordinary10ppplus5pp forunfittedpostmidtermtransitionhazard, announcement-vsactualmembership/roletransfer interpretation and datedpersonalrole evidence/boundedcoverage. Healthself-report isnot sourceforpersonalmedicalriskforecast.",
+  "selected_yes": 0,
+  "selected_no": 0.7212,
+  "catalysts": "Nov3midterms/aftermath, officialpersonnelannouncement/newformalrole, directpublicstatement. Julyroster/Oct6quote notfreshnoexitproof; genuinelynewannouncement outranksprior.",
+  "portfolio_comparison": "NoWilesholding/pendingBUY at21:37 exactinventory; USadministration/midtermfactor overlapsheldMI andHouse/Idahobids/Spain/ORwar/capacity indirectly, no measuredhedge. SharedPM/UMA/collateralrisk. Cash/knownconditionalSánchezmaker andotherunderwrittenpositions compete.",
+  "reopen": "Currentofficialannouncement/role/newdirectstatement orrobustfee-netquotes; exactidentity,eligibility,funding,account,fees,depth,caps/conditional-fill checksbeforemoney."
+}

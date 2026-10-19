@@ -1,0 +1,24 @@
+{
+  "reviewed_utc": "2026-10-19T22:08:35.592146+00:00",
+  "removed_feed_names": [
+    "Idaho Senate Achilles and Risch news"
+  ],
+  "removed_unique_keywords": [
+    "Todd Achilles",
+    "Risch",
+    "Idaho Senate",
+    "Loesby"
+  ],
+  "prior_archive": "_closed_20261019_idaho1870",
+  "numeric_research_preserved": {
+    "p_yes": 0.2,
+    "p_no": 0.8,
+    "condition_id": "0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301",
+    "asset": "109865291951183941149765892685776097643915392898762342965012269207177841238467",
+    "market_id": "630707",
+    "criteria_sha256": "03d6fc81c34d9e4cba1a253c012997e68126c4deb51ef1f9fc0b8128755a1889"
+  },
+  "other_priors_and_config_fields_equal": true,
+  "no_held_or_pending_idaho_exposure": "terminal/trades/index/CTF checked after grace",
+  "note": "Config reload only; no daemon code or seen-state edits."
+}

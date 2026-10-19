@@ -1,0 +1,31 @@
+{
+  "compiled_utc": "2026-10-19T22:00:00Z",
+  "review_index": 397,
+  "scope": "Factual provenance refresh; no probability or event conclusion.",
+  "primary_article": {
+    "publisher": "The Washington Post",
+    "headline": "Power struggle erupts in Trump’s White House as midterm losses loom",
+    "date": "2026-10-16",
+    "byline": [
+      "Nancy Cook",
+      "Natalie Allison",
+      "Isaac Arnsdorf",
+      "Katherine Doyle"
+    ],
+    "url": "https://www.washingtonpost.com/politics/2026/10/16/trump-aides-brace-white-house-turmoil-midterm-losses-loom/",
+    "reporting_basis": "Article says reporting draws on interviews with 20 staffers, advisers and people close to the president; most were anonymous to discuss personnel maneuvering.",
+    "bounded_paraphrase": "It reports that some aides believe Chief of Staff Susie Wiles might step down after the midterms and that several figures are positioning for the job. Separately, the article says Wiles has given aides or allies no indication she plans to leave. This is reported expectation and speculation, not an announced resignation/removal or confirmed departure.",
+    "official_response": "White House spokesperson Danielle Alvarez rejected the anonymous-source account as selfish/opportunistic behavior and said Trump had assembled a strong, talented, united team focused on the agenda. This is the administration response, distinct from the reporting and not a specific Wiles tenure commitment.",
+    "browser_open_retrieved_utc": "2026-10-19",
+    "browser_open_status": "Article text accessible through web open; original URL verified.",
+    "raw_http_capture": "logs/0397_exit_primary_2200_20261019T215853Z/washpost_oct16.receipt.json",
+    "raw_body": "logs/0397_exit_primary_2200_20261019T215853Z/washpost_oct16.body.json.gz",
+    "raw_capture_limit": "Direct HTTP GET timed out; receipt records empty supplied body and ReadTimeout, so it is not a content capture. Parsed article text was available through the permitted browser open."
+  },
+  "other_source_provenance": {
+    "politico": "The single web search was blocked by Politico robots.txt and returned no usable original Oct 15 Playbook article. No claim from it independently verified here.",
+    "daily_beast": "Prior root-provided source audit says its Oct 15 story linked only to the Politico Playbook homepage. Treat it as a secondary account of the same reporting, not independent corroboration; it is not counted as a separate source in this file.",
+    "independence_limit": "Do not count follow-on commentary/syndication of the Washington Post article or the Daily Beast account as independent reporting without separate original sourcing."
+  },
+  "search_receipt": "One web__run search attempted to locate the original Politico item; result explicitly reported robots block. No further search performed."
+}

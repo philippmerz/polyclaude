@@ -1,12 +1,17 @@
 {
   "conditionId": "0xa8ce9e92890d683bee3fb877f69b88fde9fe6665fdd4e078f84f7c91fdf390be",
   "criteria_sha256": "9a2a2f51f238820902b0446dc2f0245a4c21253653ad2a70f977ece50b16ae9b",
-  "phase": "FACTS_ONLY_COMPLETE; primary may review; no valuation or entry authority",
+  "phase": "COMPLETED valued/noentry; initial12.88draft withdrawn, source-conditioned32.0365YES adopted",
   "review_index": 397,
   "schema": "polyclaude.deep_review_resume.v1",
   "source_capture_root": "logs/deep_review_20261017",
   "source_paths": [
-    "work/0397_facts_1830.json"
+    "work/0397_facts_1830.json",
+    "work/0397_role_facts_2150.json",
+    "work/0397_primary_sources_2156.json",
+    "work/0397_phase_2159.json",
+    "work/0397_current_exit_sources_2202.json",
+    "work/0397_economics_2213.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
   "source_pointers": [
@@ -14,5 +19,7 @@
     "https://www.whitehouse.gov/wp-content/uploads/2026/07/2026-Annual-Report-to-Congress-on-White-House-Staff.pdf"
   ],
   "unit_sha256": "6a3b054d08559cc131dc87c5e990348debdba8ff22dfd23fc9b6edfeadbf0f32",
-  "updated_utc": "2026-10-19T18:27:20.900958Z"
+  "updated_utc": "2026-10-19T22:09:39.748044+00:00",
+  "completed_report": "research/2026-10-17-deep-review/evaluations/0397.md",
+  "report_sha256": "b4953f074879e4e462fa45114683c14151db4121ebb86b0927687cdf307443d2"
 }

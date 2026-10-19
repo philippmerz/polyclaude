@@ -1,1 +1,25 @@
-{"schema":"polyclaude.deep_review_resume.v1","review_index":394,"phase":"FACTS_ONLY_COMPLETE; primary may review source facts; valuation/entry remain pending","source_paths":["work/0394_facts_1743.json","work/0364_facts_1551.json","work/0364_primary_refresh_1646.json","work/0304_catalysts_0100.json"],"source_paths_are_relative_to":"data/deep_review_20261017","updated_utc":"2026-10-19T17:44:24.792397+00:00","unit_sha256":"5a3f56ffc9f0a0f01d952e99b596d4b24118a2e9ba963c7a0dd0158dabba9699","source_capture_root":"logs/deep_review_20261017","source_pointers":["https://www.nasdaq.com/trading-calendar"],"conditionId":"0x622b6f1516b8b019a9e567763ad84a677bc9b4bcad5ada5321d844538554cb87","criteria_sha256":"165922f2bede03b5eaf47539e5d091a44298369768e3d0d4a53e1a6a17826f7e"}
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 394,
+  "phase": "PRIMARY_VALUED_NO_ENTRY; saved/indexed before nextcase",
+  "source_paths": [
+    "work/0394_facts_1743.json",
+    "work/0364_facts_1551.json",
+    "work/0364_primary_refresh_1646.json",
+    "work/0304_catalysts_0100.json",
+    "work/0394_ranking_2144.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-19T21:49:07.968369+00:00",
+  "unit_sha256": "5a3f56ffc9f0a0f01d952e99b596d4b24118a2e9ba963c7a0dd0158dabba9699",
+  "source_capture_root": "logs/deep_review_20261017",
+  "source_pointers": [
+    "https://www.nasdaq.com/trading-calendar"
+  ],
+  "conditionId": "0x622b6f1516b8b019a9e567763ad84a677bc9b4bcad5ada5321d844538554cb87",
+  "criteria_sha256": "165922f2bede03b5eaf47539e5d091a44298369768e3d0d4a53e1a6a17826f7e",
+  "completed_report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0394.md",
+    "sha256": "ec0263d50e9272d2286bee2154ddb0ed3c4597b4f14793f0d4b30bfbaff56ae9"
+  }
+}

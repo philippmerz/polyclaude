@@ -1,0 +1,57 @@
+{
+  "schema": "primary_forecast.v2",
+  "review_index": 397,
+  "created_utc": "2026-10-19T22:08:57.690730+00:00",
+  "own_market_quote_seen": true,
+  "price_information_limit": "Source-conditioned revision after first own quote was seen; not priceblind. Original partial health/role-only12.88% draft withdrawn before final valuation/entry. Current replacement reporting supplies missing political strain channel, not a market-price anchor.",
+  "supersedes_model": "models/0397_primary_2156.json",
+  "literal_analysis": "Announced resignation/removal byDec31,2026 23:59ET resolvesYES immediately eveneffectiveafterdeadline; otherwiseactuallyceasingadministrationmembershipalsoqualifies. Broadformalpublicgovernmentrolesincluded; ChiefStaff-tootherformalrole alone notautomaticallyYES. Officialadministrationsourceprimary/credible reopening literaltypo not silentlyrewritten, treatedcredible-reporting consensus asordinarymeaning withuncertainty.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0397_current_exit_sources_2202.json",
+      "sha256": "8f1010a24d012e29cd0d625f9a4ac6ef474190af15286eda48d31f2af45899cc"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0397_primary_sources_2156.json",
+      "sha256": "831c83ced93ca66e13b161aecf09ac88681de522217df9fee1b5a7975322c336"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0397_facts_1830.json",
+      "sha256": "6a3b054d08559cc131dc87c5e990348debdba8ff22dfd23fc9b6edfeadbf0f32"
+    }
+  ],
+  "evidence_judgment": "Oct16WaPo current personnel strain reporting plus denial/no stated exit intention; Oct19Whipple continuity commentary relies on earlier interviews/personalbond, not new tenurepromise. DailyBeast derives from unverified Politico original, not independent confirmation. Sept16 Wiles public cancerfree report weakens stale Marchhealth-only exit narrative; no medical prognosis inferred. Oct6namedrole and Oct19institutionalrole duty are continuity evidence, not tenure guarantees.",
+  "model": {
+    "unverified_already_announced_allowance": 0.01,
+    "real_personnel_strain_regime": 0.65,
+    "chief_staff_change_or_departure_announcement_given_strain": 0.6,
+    "qualifying_full_administration_exit_or_announcement_given_change": 0.75,
+    "continuity_regime": 0.35,
+    "other_qualifying_exit_given_continuity": 0.06,
+    "formula": ".01+.99*(.65*.60*.75+.35*.06)",
+    "p_yes": 0.320365,
+    "limits": "Unfitted subjective conditional tree, not staff-survival frequency or independent-vote count. ChiefStaff replacement can leave a formal administration role and not qualify. Announcement can count even effective2027; no announcement established from verified sources. Rumors correlate; reporting source identities unknown.",
+    "sensitivity": [
+      {
+        "case": "continuity",
+        "p_yes": 0.09753499999999998
+      },
+      {
+        "case": "adverse",
+        "p_yes": 0.6782025
+      }
+    ]
+  },
+  "adopted_p_yes": 0.320365,
+  "plausible_range_yes": [
+    0.1,
+    0.7
+  ],
+  "actual_entry_reserve_pp": 20,
+  "reserve_reason": "Ordinary10pp plus10pp for unfitted political-regime/exit hazard, anonymous-correlated coverage, ChiefStaff-to-other-role distinction and announcement timing. Broad range includes worse losses than selected case.",
+  "selected_yes": 0.120365,
+  "selected_no": 0.479635,
+  "catalysts": "Nov3midterms/aftermath, officialpersonnelannouncement/newformalrole, directpublicstatement. Julyroster/Oct6quote notfreshnoexitproof; genuinelynewannouncement outranksprior.",
+  "portfolio_comparison": "No Wiles holding/bid in fresh22:07 account; four existing bids8.10. USadministration/midterm uncertainty overlaps Michigan and House bids; no measured hedge or independence. Retain cash/current holdings absent robust after-cost entry; PM/UMA/collateral risks shared.",
+  "reopen": "Currentofficialannouncement/role/newdirectstatement orrobustfee-netquotes; exactidentity,eligibility,funding,account,fees,depth,caps/conditional-fill checksbeforemoney."
+}

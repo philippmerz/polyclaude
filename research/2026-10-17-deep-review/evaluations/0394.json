@@ -1,0 +1,155 @@
+{
+  "review_index": 394,
+  "market_id": "5166970",
+  "condition_id": "0x622b6f1516b8b019a9e567763ad84a677bc9b4bcad5ada5321d844538554cb87",
+  "criteria_sha256": "165922f2bede03b5eaf47539e5d091a44298369768e3d0d4a53e1a6a17826f7e",
+  "status": "valued",
+  "literal_analysis": "Tesla exactly third-largest company worldwide by market cap Oct31,2026 asofmarketclose; consensus credible reporting. No namedprovider/global private scope/shareclass/FX/tie/Saturday fallback.",
+  "evidence": [
+    {
+      "url": "https://companiesmarketcap.com/",
+      "observed_utc": "2026-10-19T21:43:31.850138Z",
+      "finding": "Root directprovider19rankrows; Tesla11th/1.453T, top3caps5.242/5.004/4.160T; oneprovider/printclockuncertain."
+    },
+    {
+      "url": "https://www.nasdaq.com/trading-calendar",
+      "observed_utc": "2026-10-19T17:43:40.552791Z",
+      "finding": "CalendarOct31Saturday/Oct30Friday, no venue-specific fallback. DatedSECshares/issuer events in linked sourceunit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.004960243073364133,
+    "low": 0.0001,
+    "high": 0.15,
+    "actual_entry_reserve_pp": 20,
+    "method": "Subjective family structuraljump/exactrank interval plus scope/adjudication mixture; ordinary necessarycrossing upperproxy.",
+    "reasoning": "ExactlytwopeersaboveTesla centrally;95%ordinary+4%transform*9.9006%+1%scope*10% =0.4960%YES. Unfittedjump law, staticpeer sensitivity and global/Saturday ambiguity dominate; no certainty from tinyGaussian proxy.",
+    "model_path": "models/0394_primary_2146.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0394_quote_2146.json",
+    "quote_file_sha256": "8507e201b5b1aba415b500e7c9a3bd85336bc864d0d88dc09259963bf6691ca7",
+    "quote_capture_utc": "2026-10-19T21:45:11.140407+00:00",
+    "gamma_received_utc": "2026-10-19T21:45:10.907397+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 12.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.004960243073364133,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792446256835",
+        "book_received_utc": "2026-10-19T21:45:11.139136+00:00",
+        "book_age_seconds_at_receipt": 54.30413603782654,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.01,
+            "fee": 0.0004,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.0104
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 0.0104,
+        "central_expected_profit_usd": 0.03920243073364133,
+        "selected_stress_profit_usd": -0.0104,
+        "break_even_before_carry": 0.00104,
+        "break_even_constant_carry": 0.0010410787141537676,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9950397569266358,
+        "selected_stress_probability": 0.7950397569266359,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792446256835",
+        "book_received_utc": "2026-10-19T21:45:11.139136+00:00",
+        "book_age_seconds_at_receipt": 54.30413603782654,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0004,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.9896
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false
+      }
+    },
+    "larger_ticket_depth_illustration": {
+      "path": "data/deep_review_20261017/work/0394_ticket_economics_2148.json",
+      "sha256": "7835e2f252a0ff69fb9c11db24ff7e83ef525ef5cefef5eaaf9e2b977605fba0",
+      "scope": "1000grossshares depth illustration, not an exact USD-sized submitted order. Ten-shareYESsignedgross.01 is below the vetted$1BUYminimum.",
+      "YES_ask_cost": 3.2725099999999996,
+      "YES_central_profit": 1.6877330733641331,
+      "YES_selected_profit": -3.2725099999999996
+    }
+  },
+  "verdict": "Valued/noentry. CheapYEScentralpaperedge fails20ppactualallowance and noexitbid; NOnoask/improvingmakerfailsselected. No offchaininvestment/prior/order/watch.",
+  "reopen_condition": "Verified ranking/share/scope/catalyst change or freshquote with positivecost/risk economics; anymoney requires account,eligibility,funding,identity,fees,depth,caps and conditionalfill underwriting. No passiveearningsGTC authorized.",
+  "evaluated_utc": "2026-10-19T21:46:54.376325+00:00",
+  "question": "Will Tesla be the third-largest company in the world by market cap on October 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 394,
+  "report_sha256": "ec0263d50e9272d2286bee2154ddb0ed3c4597b4f14793f0d4b30bfbaff56ae9"
+}

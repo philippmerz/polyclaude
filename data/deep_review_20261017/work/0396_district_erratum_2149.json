@@ -1,0 +1,40 @@
+{
+  "schema": "deep_review_case_facts_erratum.v1",
+  "index": 396,
+  "corrects": "data/deep_review_20261017/work/0396_district_facts_2143.json",
+  "correction": "The prior addendum incorrectly said the Dhubab island component's centroid was within the component. It is outside; a polygon centroid is not guaranteed to lie inside a concave polygon.",
+  "source": {
+    "title": "OCHA Yemen Common Operational Dataset – Administrative Boundaries (COD-AB), HDX GeoJSON ZIP",
+    "url": "https://data.humdata.org/dataset/6b2656e2-b915-4671-bfed-468d5edcd80a/resource/c79a3728-44cd-4d20-8ea4-ecfab88c1450/download/yem_admin_boundaries.geojson.zip",
+    "http_status": 200,
+    "retrieved_utc": "2026-10-19T21:43:44.391469Z/2026-10-19T21:43:47.171482Z",
+    "dataset_valid_on": "2019-11-22",
+    "raw_sha256": "4529c4450f4ef6e4728c80ab010a6bdc1ed9c4644294c14717fdddf6c2528972",
+    "gzip_sha256": "dad1d3b0bd1521cd70176778a103824431530542eeb482156ce828f2be31c2b5",
+    "private_capture": "logs/deep_review_20261017/0396_district_facts_2143/ocha_cod/geojson_zip.body.json.gz; receipt: geojson_zip.receipt.json"
+  },
+  "geometry_reproduction": {
+    "archive_member": "yem_admin2.geojson",
+    "feature": "adm2_name Dhubab; adm2_pcode YE1506; adm1_name Ta'iz; adm1_pcode YE15; valid_on 2019-11-22; version v01",
+    "feature_count": 335,
+    "geometry_type": "MultiPolygon",
+    "component_index_zero_based": 1,
+    "component_bounds_wgs84_lon_lat": [43.38744725700019,12.631973906000098,43.44028884400012,12.671755510000082],
+    "component_area_square_degrees": 0.0009729214145664046,
+    "canonical_geometry_json_sha256": "064b405f7828b4c354434e5308e2e3f5ad83e6e13086f96cfb50b517c59bfc41",
+    "geometry_valid": true
+  },
+  "membership_check": {
+    "software": "Shapely 2.1.2; shape(feature.geometry).geoms[1]",
+    "centroid_lon_lat": [43.41643009708719,12.655250384098116],
+    "centroid_covered_by_component": false,
+    "representative_point_lon_lat": [43.42752352275906,12.651893609500036],
+    "representative_point_covered_by_component": true,
+    "finding": "The captured boundary geometry contains a small offshore component in the Mayyun/Perim location; its representative interior point is inside Dhubab ADM2. The mapping remains supported by this component's geographic location and direct point-in-polygon result, not by the outside centroid."
+  },
+  "limits": [
+    "The COD-AB feature names the administrative district, not the island; component identification as Mayyun is geographic matching from its offshore position and bounds.",
+    "This is a 2019 boundary dataset; no newer primary boundary source was checked.",
+    "This erratum addresses only geometry reproduction and makes no event, contract, probability, or market conclusion."
+  ]
+}

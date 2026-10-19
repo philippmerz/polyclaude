@@ -1,0 +1,69 @@
+{
+  "reviewed_utc": "2026-10-19T22:12:26.332946+00:00",
+  "representation": "DirectHTTP bodies; source content still needs primary interpretation. Browser access differences remain explicit.",
+  "rows": [
+    {
+      "key": "stripe",
+      "url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+      "final_url": "https://stripe.com/en-fi/newsroom/news/stripe-agrees-to-acquire-openrouter",
+      "http_status": 200,
+      "received_utc": "2026-10-19T22:12:26.076037+00:00",
+      "raw_sha256": "c20a50b0293be030c24bcec253bfcbfaec431f09f43e4cbe72897b0a74589e33",
+      "receipt": "logs/deep_review_20261017/light2200_news_sources_2215/stripe.receipt.json",
+      "h1_or_title": "Stripe logo",
+      "date_metadata": []
+    },
+    {
+      "key": "openrouter",
+      "url": "https://openrouter.ai/blog/openrouter-is-joining-stripe/",
+      "final_url": "https://openrouter.ai/blog/openrouter-is-joining-stripe/",
+      "http_status": 200,
+      "received_utc": "2026-10-19T22:12:24.836199+00:00",
+      "raw_sha256": "d02ed2500f8b6d6011a849bbbc774c9d57f494efdbc0561a50a3ba6c2b0e1c18",
+      "receipt": "logs/deep_review_20261017/light2200_news_sources_2215/openrouter.receipt.json",
+      "h1_or_title": "Redirecting...",
+      "date_metadata": []
+    },
+    {
+      "key": "spain_interview",
+      "url": "https://www.elconfidencial.com/espana/2026-10-18/entrevista-contraluz-ivan-espinosa-de-los-monteros-cbtrntrv_4447147/",
+      "final_url": "https://www.elconfidencial.com/espana/2026-10-18/entrevista-contraluz-ivan-espinosa-de-los-monteros-cbtrntrv_4447147/",
+      "http_status": 403,
+      "received_utc": "2026-10-19T22:12:25.051729+00:00",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "logs/deep_review_20261017/light2200_news_sources_2215/spain_interview.receipt.json",
+      "h1_or_title": null,
+      "date_metadata": []
+    },
+    {
+      "key": "spain_oct13",
+      "url": "https://www.elindependiente.com/espana/2026/10/13/sanchez-optimismo-movilizacion-primera-fuerza-gobierno-punto-mejor-2023/",
+      "final_url": "https://www.elindependiente.com/espana/2026/10/13/sanchez-optimismo-movilizacion-primera-fuerza-gobierno-punto-mejor-2023/",
+      "http_status": 200,
+      "received_utc": "2026-10-19T22:12:25.161952+00:00",
+      "raw_sha256": "866ec7be1a68a314de0f41d88f5976976b0c2e85572bc3aabb80a1a18bda2d3e",
+      "receipt": "logs/deep_review_20261017/light2200_news_sources_2215/spain_oct13.receipt.json",
+      "h1_or_title": "Sánchez proyecta optimismo por la movilización y se ve ganando y gobernando: \"Estamos en un punto mejor que en 2023\"",
+      "date_metadata": [
+        "3FBEBDDE80FCCEED76FFC0E5FE150A0C",
+        "2026-10-12T22:06:49+00:00",
+        "2026-10-13T23:58:03+00:00"
+      ]
+    },
+    {
+      "key": "spain_senate_pact",
+      "url": "https://www.elindependiente.com/espana/2026/10/16/psoe-cierra-listas-tensiones-burgos-palencia-tudanca-pactos-senado/",
+      "final_url": "https://www.elindependiente.com/espana/2026/10/16/psoe-cierra-listas-tensiones-burgos-palencia-tudanca-pactos-senado/",
+      "http_status": 200,
+      "received_utc": "2026-10-19T22:12:25.135220+00:00",
+      "raw_sha256": "672ba867e4a27df58dc6e801d2e6d9abfb2f0a2d587e92f322c2f63c478dad37",
+      "receipt": "logs/deep_review_20261017/light2200_news_sources_2215/spain_senate_pact.receipt.json",
+      "h1_or_title": "El PSOE sella un pacto con Frente Amplio en toda España salvo Cataluña y Canarias para intentar arrebatar el Senado al PP",
+      "date_metadata": [
+        "3FBEBDDE80FCCEED76FFC0E5FE150A0C",
+        "2026-10-16T21:56:45+00:00",
+        "2026-10-17T15:08:44+00:00"
+      ]
+    }
+  ]
+}

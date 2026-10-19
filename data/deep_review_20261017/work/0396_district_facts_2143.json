@@ -1,0 +1,49 @@
+{
+  "schema": "deep_review_case_facts_addendum.v1",
+  "index": 396,
+  "scope": "Geography and one bounded post-2026-09-10 ground-operation source check only; no probability, interpretation, quote, or resolution decision.",
+  "frozen_rule": {
+    "market": "Houthis enter Aden by 2026-12-31?",
+    "qualifying_areas": ["Craiter/Sirah", "At Tawahi", "Al Mualla", "Khur Maksar", "Ash Shaikh Outhman", "Dar Sad", "Al Mansura"],
+    "excluded_area": "Al Buraiqeh/Little Aden alone",
+    "qualifying_action": "deliberate Houthi military operation within any part of a named district; bombardment, sabotage, offshore naval presence, threats/claims alone, emissaries, or POW status do not suffice"
+  },
+  "mayyun_geography": {
+    "finding": "Mayyun/Perim Island maps to Dhubab ADM2 district, Ta'iz ADM1 governorate, outside all seven named Aden districts. The reported island landing is therefore outside the frozen rule's named area, even though the prior report describes it as Houthi ground presence.",
+    "primary_source": "OCHA Yemen Common Operational Dataset – Administrative Boundaries (COD-AB), HDX resource yem_admin_boundaries.geojson.zip",
+    "url": "https://data.humdata.org/dataset/6b2656e2-b915-4671-bfed-468d5edcd80a/resource/c79a3728-44cd-4d20-8ea4-ecfab88c1450/download/yem_admin_boundaries.geojson.zip",
+    "dataset_valid_on": "2019-11-22",
+    "http_last_modified": "2026-01-26T16:32:53Z",
+    "retrieved_utc": "2026-10-19T21:43:44.391469Z/2026-10-19T21:43:47.171482Z",
+    "http_status": 200,
+    "body_representation": "http_body",
+    "raw_sha256": "4529c4450f4ef6e4728c80ab010a6bdc1ed9c4644294c14717fdddf6c2528972",
+    "gzip_sha256": "dad1d3b0bd1521cd70176778a103824431530542eeb482156ce828f2be31c2b5",
+    "private_capture": "logs/deep_review_20261017/0396_district_facts_2143/ocha_cod/geojson_zip.receipt.json; body: geojson_zip.body.json.gz",
+    "map_test": "OCHA ADM2 GeoJSON has 335 polygons. Its offshore multipart component at Mayyun (approx. 43.41643E, 12.65525N) is part of Dhubab (adm2_pcode YE1506), whose adm1_name is Ta'iz. The island component's geometry centroid is within that component. This is a point-in-polygon result from OCHA district data, not an inference from governorate membership alone.",
+    "limits": "COD boundary version is dated 2019-11-22; the dataset establishes administrative geography, not current territorial control. Mayyun is not named as a feature; location is identified geographically by the island component and its coordinates."
+  },
+  "bounded_post_sep10_ground_operation_check": {
+    "source": "UN DPPA, Secretary-General's Special Envoy briefing",
+    "url": "https://www.unmissions.org/en/dppa/news/yemen-has-returned-to-full-scale-war-special-envoy-warns",
+    "published": "2026-10-09",
+    "retrieved_utc": "2026-10-19T17:43:36.794758Z",
+    "http_status": 200,
+    "raw_sha256": "c91e6e5e24971e361710c92aef846717104f5c66ccf446e196254a69f3f54322",
+    "gzip_sha256": "d0f7f0f45f2d4530fde6e559f2b535281cddc517012112e4b89988e4d68e0724",
+    "private_capture": "logs/deep_review_20261017/case0396_facts_1745/un_dppa_oct9.body.json.gz (receipt in same capture directory)",
+    "bounded_finding": "The briefing described hostilities on multiple fronts, including fighting west/south of Ta'iz and across into Lahj, and government-reported recaptures around Bab al-Mandab. It did not report Houthi ground entry into any of the seven named Aden districts.",
+    "limit": "One bounded source only; this is not a comprehensive incident search and does not establish that no such operation occurred."
+  },
+  "landing_context": {
+    "source": "RTÉ, 2026-09-11 report, relaying an unnamed internationally recognized government military official",
+    "url": "https://www.rte.ie/news/middle-east/2026/0911/1591170-mideast-yemen-houthis/",
+    "reported_event": "Armed Houthi fighters reportedly reached Mayyun/Perim after government forces withdrew the prior day and the group took the island.",
+    "source_capture": "Previously captured in logs/deep_review_20261017/case0396_followup_1747/rte_mayyun.body.json.gz; HTTP 200, raw SHA-256 e39f2fff3ad7553799511a0b26a1e05872e6a20e92c28a6a3057fdb6a60f8208."
+  },
+  "uncertainty": [
+    "The OCHA COD-AB source is a 2019 administrative-boundary version; no newer primary district-boundary map was checked.",
+    "The UN source check is bounded and cannot support an exhaustive absence assertion.",
+    "No conclusion is made about probability, market value, or other incidents."
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "schema": "case0397_primary_phase.v1",
+  "updated_utc": "2026-10-19T21:59:12.314277+00:00",
+  "phase": "IN_PROGRESS; first partialsourceforecast withdrawn before finalvaluation/money",
+  "draft_model": "research/2026-10-17-deep-review/models/0397_primary_2156.json",
+  "draft_p_yes": 0.1288,
+  "new_source_change": "Root specificexitsearch found current replacementcall reports/anonymouspostmidtermexpectations, missing fromhealth+rolesource draft. DirectDailyBeastOct15bodyattributesPolitico (notindependent); VF19Octcontinuityanalysis verified butbased2025interviews, notfreshstayguarantee. WAPO16OctdirectReadTimeout, searchleadonly. Source-conditionedforecast underreview; own397quotesnowknown. Noentry.",
+  "verified_new_sources": [
+    {
+      "path": "logs/deep_review_20261017/case0397_exit_2158/beast_oct15.receipt.json",
+      "raw_sha256": "99c7f2cabc7204d8853224e73ef93c99a2c11fbae23dcaf778e48d147ba73253"
+    },
+    {
+      "path": "logs/deep_review_20261017/case0397_exit_2158/vf_oct19.receipt.json",
+      "raw_sha256": "a8a8237d22f658b841267f5565a1e4691046d55967469434f0ccf89bb01858f0"
+    }
+  ],
+  "earlier_sources": "work/0397_primary_sources_2156.json; work/0397_role_facts_2150.json",
+  "quote": "work/0397_quote_2156.json",
+  "economics_scope": "work/0397_economics_2157.json positiveNO onlyunderwithdrawn12.88draft; notcurrentforecast orauthority.",
+  "next": "Verifycurrentoriginalreporting anddenials, revisebeforefinalrecord; 22UTCIdahopull/lightfirst."
+}
