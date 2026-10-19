@@ -13,6 +13,14 @@ FixedPolygon95799403 at10:07:32UTC: pUSD20.451290, canceled313/316 both-outcomeC
 
 Idaho630707 CID`0xd598aae4819d33b840423b82ded0de2a5f583529a1790ff318a4531f98c5c301` governs;630706 Republican sibling is not equivalent/hedge. Newsmax alertf9c70fee… returned consent/no publisher or new poll verified; no numeric change/add. Existing20%YES/selected5% after15pp reserve, range1–80; Peak-only1.653% is below3c, accepted tiny full1.02 risk. [Primary judgment/source limits](../research/2026-10-19-0956-checkin.md). Any fill needs fresh holding/source/net-exit/portfolio judgment; subminimum5share partials can become dust.
 
+## Quote lifetime — clarified October19
+
+A scheduled check is a **review**, not a default cancellation deadline. Before posting, justify the price, known load-bearing source gaps, conditional fill risk, monitoring capacity and intended lifetime. Resolve or price those gaps; do not post a placeholder while underwriting is unfinished.
+
+At review, retain a bid only if current evidence, price, full-fill exposure and conditional fill economics still justify it. Cancel or resize when its edge, evidence, risk, capital priority or monitorability changes. Hard expiry needs a named catalyst, source-staleness or operational-risk reason; the next cron time alone is insufficient. Newly unassessed material evidence still invokes cancel-first where required. These rules do not promise a fill or justify a taker fallback.
+
+Canceled orders remain closed. Reposting or changing an existing specific pull instruction requires fresh independent underwriting and all applicable live execution gates. This clarification changes no existing order, price, prior, reservation or dated pull instruction by itself.
+
 **ALREADY CANCELED UNFILLED — never replay/repost:**
 
 - Rhine313: original5YES53c/2.65, order`0xa0e222c2d78dbf925e126989592609d76caa628631177be0ebfa9077da8bd261`; canceled10:00:29–32/DEC231.

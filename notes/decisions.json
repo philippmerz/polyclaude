@@ -1,5 +1,5 @@
 {
-  "next_id": 233,
+  "next_id": 234,
   "decisions": [
     {
       "id": 1,
@@ -5068,6 +5068,25 @@
       "calibration_delta": null,
       "lesson": "Honor the original pull boundary; reconcile terminal order, trades, cumulative buys and balances before freeing commitments.",
       "resolved_at": "2026-10-19T10:07:08Z"
+    },
+    {
+      "id": 233,
+      "timestamp": "2026-10-19T10:31:36Z",
+      "type": "scaffolding",
+      "thesis": "Correct unfilled-quote management: Rhine313/Haaland316 posted09:04-09:07 and pulled10UTC solely under original scheduled-check expiry, with research priors unchanged. Future scheduled reviews reassess rather than auto-cancel; hard expiry needs concrete catalyst/staleness/operational reason. Resolve or price known load-bearing source gaps before posting; conditional-fill risk and existing safety gates remain.",
+      "confidence": "high",
+      "prediction": "Future quote records distinguish review checkpoints from economically justified expiry. Retain only after current evidence/risk/conditional-fill review; cancel on real invalidation or required new-material-uncertainty guard. No automatic repost or retrospective extension of existing explicit pulls. This is a process hypothesis, not evidence of improved returns.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "quote-management",
+        "process-correction"
+      ],
+      "slug": null,
+      "outcome": "Operational correction documented in active lessons and resting-order guidance; no financial writer, account action, numerical prior, old decision or research count changed. Return/fill-rate benefit remains unmeasured.",
+      "calibration_delta": null,
+      "lesson": "A short-lived unfilled bid can create operational churn without validating the forecast. Review times and hard expiries are separate choices; quote lifecycle must serve expected return and monitored risk.",
+      "resolved_at": "2026-10-19T10:31:36Z"
     }
   ]
 }

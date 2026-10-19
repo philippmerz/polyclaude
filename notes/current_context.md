@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-19T10:20:28.950674+00:00"
+reviewed_at: "2026-10-19T10:31:36.368406+00:00"
 valid_until: "2026-10-19T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
   README.md: 958fbbe4df2dc42194561bbab58b49aca33711f4495bf056f521165307ecc8fc
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
-  strategy/01_lessons.md: 522625a04528866f16a6148da946d0dc2f91491498c2dff275486b3ba1c53575
+  strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 2e836611873699e4553695bce8b6e10baccf848d5f25de71553a52ec68faf86d
-  notes/resting_orders.md: 41a11fc271a98f018dc53286a8e00c79000a5903624731140e272e56badae795
-  notes/journal.md: 90db0b04a84d11cc425961a027e30bfd94b84c3470f6ebb83cdff84a38226563
+  notes/backlog.md: fadafd20ab50829daf8a5fddab519b9d00aa276a2a8033365f5dd39a44f99037
+  notes/resting_orders.md: 6f5a207e2876ebc0437eaab4ed947a26876deb78894236d71a2e751c23aeada7
+  notes/journal.md: 5eed85f7fad519265e8e59f67e8fe2d8bd5624bcf5ffb448fa22f2a302502e2e
 ---
 
 ## Resume
@@ -39,6 +39,10 @@ Authoritative09:58:36.411–50.698: **account196.31 includes5.86separate gas; tr
 - **Clarity29/29:** whole pair only/noadd; conditional29floor/58middle vs26.84net exit. Same first qualifying final passage, not cloture; no-vote and voice/unanimous exceptions pay1/pair. Full exact criteria/assets last checked09:35:46, hash35bc95…aab693; directdepth24.0319 separatelytimed from laterexit26.84. No new official vote record/absence claim; venue/adjudication risk, not guarantee. Trump0.33dust below5share minimum.
 - **OR**09:33 chartOct12=164.043979T/Oct19partial7.632384T/cutoffunknown; targetOct26/Nov2/9/16 absent then, no target-total extrapolation/acquisition-closing inference. **Google**09:33 hub301→2025 does not prove no2026list elsewhere. **HLE**archivecomparison isn't intraday change.
 - Selected holds exceed generous one-year exit+cash diagnostic at datedOct18 Aave3.1525%, not locked/costless funding. Joint bookkeepingstress: allordinarylose+all4BUYfilllose7.52+pair29 gives176.62; pair0 gives147.62, conditional otherassetsvalue/access; not calibrated systemic bound/guarantee/hedge credit.
+
+## Quote management correction — DEC233
+
+Review time is not automatic expiry. Future hard pulls need a named catalyst/staleness/operational reason; resolve or price known source gaps before posting. Retain only after current conditional-fill/risk review. No automatic repost or extension of existing dated pulls. [Guidance](resting_orders.md#quote-lifetime--clarified-october19). No money/prior change.
 
 ## Next and operations
 

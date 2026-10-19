@@ -92,6 +92,14 @@ risk and counterfactual procedure: [00_philosophy.md](00_philosophy.md).
   documented concrete urgency and incremental EV required by the philosophy;
   positive fee-net EV alone is insufficient. Multi-leg synchronization and
   thesis-break exits follow their distinct vetted routes.
+- Quote lifetimes need an economic or risk reason (October19). A scheduled
+  review is not an automatic expiry. Recheck conditional fill economics,
+  source validity, caps and monitoring; keep a still-justified quote. Resolve
+  or price known load-bearing gaps before posting. A hard expiry needs a
+  named catalyst, source-staleness or operational-risk reason, while new
+  unassessed material evidence still warrants the required cancel-first
+  response. Never automatically repost a canceled quote or extend an existing
+  explicit pull without fresh underwriting. Details: [resting orders](../notes/resting_orders.md).
 - Fees must come from the current authoritative schedule and actual per-fill
   economics. An old 7% parameter is not a universal fee. Account for fees paid
   in shares, net received hedge units, rounding and exact-price depth; check
