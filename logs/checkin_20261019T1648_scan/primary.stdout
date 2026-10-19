@@ -1,0 +1,46 @@
+fetched 1000 active markets
+fetch coverage: INCOMPLETE slice; 10/10 pages; stop=page_cap
+filter coverage: {"eligible_before_top": 599, "filter_accounting_complete": true, "filter_rejections": {"horizon": 48, "liquidity": 263, "missing_deadline": 2, "past_deadline": 86, "spread": 2}, "input_markets": 1000, "selected": 80, "selection_complete": false, "top_omitted": 519}
+wrote /home/polyclaude/polyclaude/data/snapshots/shortlist_20261019T170051221781Z_primary.json
+
+=== sports (5864272 vol24h, 25 mkts) ===
+  yes=  -    gross_apy_-=   -     spd=0.001  liq=  2359186  v24=  1320671  d=   6.9  Almaty Open: Mikhail Kukushkin vs Stefanos Sakellaridis
+  yes=  -    gross_apy_-=   -     spd=0.001  liq=   201895  v24=   493971  d=   0.2  Counter-Strike: fnatic vs Liquid (BO3) - 1win Private Club #2 Playoffs
+  yes=  -    gross_apy_-=   -     spd=0.001  liq=   831400  v24=   456196  d=   6.6  Lyon Open: Matteo Arnaldi vs Lorenzo Musetti
+  yes=0.002  gross_apy_NO= +0.2%   spd=0.001  liq=   457066  v24=   427424  d= 223.3  Will Shakhtar Donetsk win the 2026-27 UEFA Champions League Championship?
+  yes=  -    gross_apy_-=   -     spd=0.010  liq=   112666  v24=   375593  d=   6.3  Japan Women's Open: Katie Boulter vs Himeno Sakatsume
+  yes=  -    gross_apy_-=   -     spd=0.010  liq=   111523  v24=   338479  d=   0.3  Counter-Strike: PARIVISION vs magic (BO3) - 1win Private Club #2 Playoffs
+  yes=  -    gross_apy_-=   -     spd=0.010  liq=   405649  v24=   332216  d=   0.3  Commanders vs. 49ers: O/U 52.5
+  yes=0.004  gross_apy_NO= +1.0%   spd=0.001  liq=   280101  v24=   299420  d= 163.5  Will the Cleveland Browns win the 2027 NFL league championship?
+
+=== geopolitics (5155620 vol24h, 41 mkts) ===
+  yes=0.620  gross_apy_YES=+146405047.2%✓  spd=0.020  liq=    38947  v24=   563115  d=  12.3  US x Iran ceasefire continues through October 31?
+  yes=0.737  gross_apy_YES=+9839496745718378.0%✓  spd=0.004  liq=    55629  v24=   419184  d=   3.5  US x Iran ceasefire continues through October 22?
+  yes=0.275  gross_apy_NO=+106588313.1%✓  spd=0.010  liq=   445614  v24=   311158  d=   8.5  Will Benjamin Netanyahu be the next Prime Minister of Israel?
+  yes=0.630  gross_apy_YES=+5316066.2%✓  spd=0.020  liq=    35398  v24=   224288  d=  15.5  US-Iran ceasefire continues through the midterms?
+  yes=0.025  gross_apy_NO=+13.1%✓  spd=0.001  liq=   650011  v24=   212869  d=  73.5  Putin out as President of Russia by December 31, 2026?
+  yes=0.897  gross_apy_YES=+1059.3%✓  spd=0.013  liq=    57665  v24=   205918  d=  15.5  Will there be no Hormuz agreement?
+  yes=0.974  gross_apy_YES=+5304.1%   spd=0.003  liq=    33547  v24=   165518  d=   2.5  Israel x Iran ceasefire continues through October 21?
+  yes=0.367  gross_apy_NO=+868.8%✓  spd=0.006  liq=   154471  v24=   162422  d=  73.5  US announces end of Iranian blockade by December 31, 2026?
+
+=== macro (4222568 vol24h, 6 mkts) ===
+  yes=0.001  gross_apy_NO=   -     spd=0.001  liq=  1152270  v24=  1276536  d=   9.5  Will the Fed decrease interest rates by 50+ bps after the October 2026 meeting?
+  yes=0.845  gross_apy_YES=+49285.9%✓  spd=0.010  liq=   477383  v24=   813126  d=   9.5  Will there be no change in Fed interest rates after the October 2026 meeting?
+  yes=0.004  gross_apy_NO=+13.7%✓  spd=0.001  liq=   892432  v24=   786584  d=   9.5  Will the Fed decrease interest rates by 25 bps after the October 2026 meeting?
+  yes=0.145  gross_apy_NO=+31868.4%✓  spd=0.010  liq=   488345  v24=   762522  d=   9.5  Will the Fed increase interest rates by 25 bps after the October 2026 meeting?
+  yes=0.004  gross_apy_NO=+13.7%✓  spd=0.001  liq=  1211641  v24=   510845  d=   9.5  Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?
+  yes=0.205  gross_apy_NO=+375.9%✓  spd=0.010  liq=   197933  v24=    72955  d=  51.3  Will there be no change in Fed interest rates after the December 2026 meeting?
+
+=== other (732429 vol24h, 7 mkts) ===
+  yes=  -    gross_apy_-=   -     spd=0.024  liq=    23363  v24=   160144  d=   0.1  S&P 500 (SPX) Up or Down on October 19?
+  yes=0.002  gross_apy_NO=   -     spd=0.001  liq=    40669  v24=   145297  d=   1.0  Will Elon Musk post 300-319 tweets from October 13 to October 20, 2026?
+  yes=0.002  gross_apy_NO= +0.2%   spd=0.001  liq=   309369  v24=   104595  d= 238.5  Will Alavés win the 2026-27 LALIGA Championship?
+  yes=0.002  gross_apy_NO= +0.3%   spd=0.002  liq=   288312  v24=   104478  d= 238.5  Will Villarreal win the 2026-27 LALIGA Championship?
+  yes=0.665  gross_apy_YES=+152881681.5%✓  spd=0.010  liq=    22923  v24=    82469  d=  10.5  Saudi Arabia military action against Yemen on October 29?
+  yes=0.135  gross_apy_NO=+105.5%✓  spd=0.010  liq=   394865  v24=    73176  d=  73.5  Strait of Hormuz traffic returns to normal by December 31?
+  yes=0.415  gross_apy_NO=+409845945.0%✓  spd=0.010  liq=    45555  v24=    62269  d=  12.5  Will WTI Crude Oil (WTI) hit (HIGH) $105 in October?
+
+=== crypto (99870 vol24h, 1 mkts) ===
+  yes=0.075  gross_apy_NO=+43.5%✓  spd=0.010  liq=   145067  v24=    99870  d=  73.5  Will Bitcoin dip to $50,000 by December 31, 2026?
+
+# gross_apy = WIN-ASSUMED carry, not expected edge — price P(loss) with an honest prior before any entry (2026-07-02 guard lesson, applied to discovery 2026-07-18)

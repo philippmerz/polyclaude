@@ -1,0 +1,32 @@
+{
+  "schema": "tick1648_openrouter_chart_facts.v1",
+  "source_url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+  "captured_utc": "2026-10-19T17:01:42.435545Z",
+  "status": 200,
+  "raw_sha256": "4cd28a57ac2a7a91387724b69c926b89c8994fc46637dfe4231423798adcd6bb",
+  "gzip_sha256": "b867da1d57971c777fa725eaa84eb2bfe80baa9974d399aad6c17db1d642b7ed",
+  "cache_age_header_seconds": "174",
+  "receipt": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.receipt.json",
+  "body": "logs/deep_review_20261017/tick1648_or_chart/weekly_chart.body.json.gz",
+  "rows": [
+    {
+      "week_label": "2026-10-05",
+      "rows_including_others": 10,
+      "total_T": 171.842501724714,
+      "others_T": 66.173540545806
+    },
+    {
+      "week_label": "2026-10-12",
+      "rows_including_others": 10,
+      "total_T": 164.043985914931,
+      "others_T": 67.468271267061
+    },
+    {
+      "week_label": "2026-10-19",
+      "rows_including_others": 10,
+      "total_T": 16.61727284207,
+      "others_T": 6.447411424271
+    }
+  ],
+  "scope_note": "Monday-labeled weekly Top Models chart API, totals sum all displayed series including Others; Oct19 is current partial week. No measurement cutoff timestamp is exposed; this is not a forecast and contains no Oct26\u2013Nov22 target-week data."
+}

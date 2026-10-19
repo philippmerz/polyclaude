@@ -1,0 +1,6 @@
+# sports_pm_scan window=<=36.0h vol24h>=$30000 liq>=$5000
+# fetched 73 sports markets passing thresholds
+# fetching bookie consensus for top 3 pregame candidates (~30s each via scoped worker); skipped 3 in-play
+  [1/3] Will AEK win on 2026-10-20?: NO_CONSENSUS: 1x2 YES side does not match the team named as winning in the
+  [2/3] Will Manchester City FC win on 2026-10-20?: NO_CONSENSUS: 1x2 opponent is not present in the Gamma question/rules
+  [3/3] Will FC Barcelona win on 2026-10-20?: NO_CONSENSUS: 1x2 opponent is not present in the Gamma question/rules

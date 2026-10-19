@@ -1,0 +1,140 @@
+{
+  "schema": "polyclaude.checkin_discovery_summary.v1",
+  "tick": "20261019T1648",
+  "created_utc": "2026-10-19T17:04:39.167097+00:00",
+  "commands_manifest": {
+    "path": "logs/checkin_20261019T1648_scan/commands.json",
+    "sha256": "85f3470806e1f1d02e0fd2bbd3fdf8f1a814e41818771269b4a4e7b7b2fc8198",
+    "commands": 7,
+    "all_rc0": true,
+    "from_utc": "2026-10-19T17:00:50.505535+00:00",
+    "to_utc": "2026-10-19T17:02:32.517186+00:00"
+  },
+  "discovery": {
+    "primary": {
+      "argv": "discover_markets.py defaults",
+      "fetched": 1000,
+      "pages": "10/10",
+      "stop": "page_cap",
+      "eligible": 599,
+      "selected": 80,
+      "top_omitted": 519,
+      "rejections": {
+        "horizon": 48,
+        "liquidity": 263,
+        "missing_deadline": 2,
+        "past_deadline": 86,
+        "spread": 2
+      },
+      "snapshot": "data/snapshots/shortlist_20261019T170051221781Z_primary.json",
+      "sidecar": "data/snapshots/shortlist_20261019T170051221781Z_primary.meta.json",
+      "snapshot_bytes": 292013,
+      "snapshot_sha256": "21fcd1a114714c5f75d42a89f79126856479ae3bf290bee620a981bec7f329be",
+      "sidecar_bytes": 1368,
+      "sidecar_sha256": "0d661ab8b9ec66d26c3a65ca59eced2ffccd09e207a7b28db89c8757377be6f4"
+    },
+    "thin_tail": {
+      "argv": "--min-liquidity 500 --min-vol24 20 --max-pages 20 --via-events --clears-hurdle-only --top 3000",
+      "fetched": 38975,
+      "pages": "20/20",
+      "stop": "page_cap",
+      "eligible": 3297,
+      "selected": 3000,
+      "top_omitted": 297,
+      "rejections": {
+        "horizon": 322,
+        "liquidity": 15069,
+        "missing_deadline": 25,
+        "not_tradable": 5762,
+        "past_deadline": 1014,
+        "spread": 804,
+        "volume": 9837,
+        "win_assumed_hurdle": 2845
+      },
+      "snapshot": "data/snapshots/shortlist_20261019T170056218282Z_thin_tail.json",
+      "sidecar": "data/snapshots/shortlist_20261019T170056218282Z_thin_tail.meta.json",
+      "snapshot_bytes": 9689451,
+      "snapshot_sha256": "c594fcb2996c8d685ca71c817c6291ecd95ddb36608342180ff428795a30c44e",
+      "sidecar_bytes": 1479,
+      "sidecar_sha256": "c6cb8e051387b758286321a51ca362bf45cfc94504d782bc450239d31dde8b6b"
+    }
+  },
+  "scanners": {
+    "sports": {
+      "threshold_pass": 73,
+      "consensus_attempted": 3,
+      "validated": 0,
+      "mapping_errors": 3,
+      "reasons": [
+        "AEK named-team mismatch",
+        "Man City opponent unmapped",
+        "Barcelona opponent unmapped"
+      ],
+      "verified_gt3pp_and_gt50k": 0
+    },
+    "macro": {
+      "markets": 9,
+      "consensus": "disabled"
+    },
+    "event_monotonicity": {
+      "multi_market_events": 1178,
+      "coverage": "incomplete; 15/15 pages, max_pages; 1455 events reported to inspect",
+      "violations": 0,
+      "provisional_after_live_walk": 0
+    },
+    "consistency": {
+      "markets": 5001,
+      "events": 658,
+      "coverage_stop": "market_cap; incomplete",
+      "groups": 191,
+      "live_requested": 20,
+      "validated": 12,
+      "failed": 8,
+      "failure_reasons": {
+        "stale_books": 2,
+        "no_asks": 6
+      },
+      "unquoted": 171,
+      "positive_live_depth": 0,
+      "actionable": 0
+    },
+    "favorite_fade": {
+      "rough_survivors": 58,
+      "walked": 40,
+      "valid_books": 40,
+      "emitted": 27,
+      "walk_cap_omissions": 18,
+      "valid_outside_profile": 13,
+      "coverage_stop": "max_pages; 10/10"
+    }
+  },
+  "context_batches": {
+    "primary": {
+      "batches": 2,
+      "group_headings": 12,
+      "market_rows": 22,
+      "status_counts": {
+        "changed": 6,
+        "new_to_snapshot": 6,
+        "context_unchanged": 10
+      },
+      "path": "data/checkin_20261019T1648_primary_batches.md"
+    },
+    "thin_tail": {
+      "batches": 37,
+      "group_headings": 172,
+      "market_rows": 665,
+      "status_counts": {
+        "new_to_snapshot": 197,
+        "context_unchanged": 412,
+        "changed": 56
+      },
+      "path": "data/checkin_20261019T1648_thin_tail_batches.md"
+    },
+    "index": "data/checkin_20261019T1648_batch_index.json",
+    "all_39_sections_inspected": true,
+    "IDs_and_criteria_proofs_checked": true,
+    "coverage": "filtered rows only; page caps and top omissions above"
+  },
+  "limits": "No substantive criteria valuation or rejection; scanner positives are not execution certification; no exchange-wide zero claim."
+}

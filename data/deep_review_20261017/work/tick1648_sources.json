@@ -1,0 +1,20 @@
+{
+  "schema": "tick1648_sources_index.v1",
+  "captured_utc": "2026-10-19T17:07:29Z",
+  "files": [
+    "work/tick1648_alert_delta.json",
+    "work/tick1648_michigan_facts.json",
+    "work/tick1648_whalefall_facts.json",
+    "work/tick1648_openrouter_facts.json",
+    "work/tick1648_catalyst_reuse_index.json"
+  ],
+  "raw_receipts": [
+    "logs/deep_review_20261017/whale_alert_49b78_1650/",
+    "logs/deep_review_20261017/tick1648_or_chart/",
+    "logs/deep_review_20261017/tick1648_michigan/wwmt_google_link.receipt.json"
+  ],
+  "no_new_alert_rows_after": "2026-10-19T16:48:24Z",
+  "latest_alert_timestamp": "2026-10-19T16:48:24Z",
+  "alerts_file_sha256": "0eb94840f2673108ba38121b04e760fa7c206fe88b3ffc40135b0de9c816fc79",
+  "editorial_correction": "Index assembled/corrected at this time; underlying request timestamps remain in their receipts. Prior 17:02:09Z stamp preceded the 17:03:32.967487Z WWMT capture and is not the completed-index time."
+}

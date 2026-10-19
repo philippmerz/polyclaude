@@ -1,0 +1,153 @@
+[
+  {
+    "name": "primary",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/discover_markets.py"
+    ],
+    "started_utc": "2026-10-19T17:00:50.505535+00:00",
+    "ended_utc": "2026-10-19T17:00:51.308653+00:00",
+    "elapsed_seconds": 0.803,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/primary.stdout",
+    "stdout_bytes": 5307,
+    "stdout_sha256": "0dfac546a688bd42609984cf59e494a9e9ad87ddd01e8711753512556931cd00",
+    "stderr_path": "logs/checkin_20261019T1648_scan/primary.stderr",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "thin_tail",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/discover_markets.py",
+      "--min-liquidity",
+      "500",
+      "--min-vol24",
+      "20",
+      "--max-pages",
+      "20",
+      "--via-events",
+      "--clears-hurdle-only",
+      "--top",
+      "3000"
+    ],
+    "started_utc": "2026-10-19T17:00:51.309432+00:00",
+    "ended_utc": "2026-10-19T17:00:56.628603+00:00",
+    "elapsed_seconds": 5.319,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/thin_tail.stdout",
+    "stdout_bytes": 9551,
+    "stdout_sha256": "33e01c90977cd5fc49dde5fdcb7f9d8bdded94cb4372b1a86eea555324640892",
+    "stderr_path": "logs/checkin_20261019T1648_scan/thin_tail.stderr",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "sports",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/sports_pm_scan.py",
+      "--hours",
+      "36",
+      "--with-consensus",
+      "--consensus-top-n",
+      "3"
+    ],
+    "started_utc": "2026-10-19T17:00:56.629247+00:00",
+    "ended_utc": "2026-10-19T17:01:46.098547+00:00",
+    "elapsed_seconds": 49.469,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/sports.stdout",
+    "stdout_bytes": 2522,
+    "stdout_sha256": "e376f48d303754c187a9ec7129fe345d711e81bdb279e9f333d73a2460bc2512",
+    "stderr_path": "logs/checkin_20261019T1648_scan/sports.stderr",
+    "stderr_bytes": 561,
+    "stderr_sha256": "3201b7078c4ea5863bd59d3170eddf19157cbd32d81feb01bd83887067fe803c"
+  },
+  {
+    "name": "macro",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/macro_pm_scan.py",
+      "--no-consensus",
+      "--days",
+      "60"
+    ],
+    "started_utc": "2026-10-19T17:01:46.099277+00:00",
+    "ended_utc": "2026-10-19T17:01:46.608372+00:00",
+    "elapsed_seconds": 0.509,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/macro.stdout",
+    "stdout_bytes": 875,
+    "stdout_sha256": "47330c6fb177fb6b7412350c271375705dff1dbf86f545f863d5aa3040002e29",
+    "stderr_path": "logs/checkin_20261019T1648_scan/macro.stderr",
+    "stderr_bytes": 106,
+    "stderr_sha256": "5fbe297115d8033a358064a1cafd544ec74a432fa53e41e935a808089cdf2655"
+  },
+  {
+    "name": "event_monotonicity",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/event_monotonicity_scan.py"
+    ],
+    "started_utc": "2026-10-19T17:01:46.609106+00:00",
+    "ended_utc": "2026-10-19T17:01:50.191485+00:00",
+    "elapsed_seconds": 3.582,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/event_monotonicity.stdout",
+    "stdout_bytes": 249,
+    "stdout_sha256": "fa851398e958e4b01bb618c991d7a9002c23b7dc1d364356839cd29af30f71e3",
+    "stderr_path": "logs/checkin_20261019T1648_scan/event_monotonicity.stderr",
+    "stderr_bytes": 178,
+    "stderr_sha256": "89a36b4949d5937f707a0b082641dd4aacefc755d5104f7c3c55fb14d8ab8e91"
+  },
+  {
+    "name": "consistency",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/polymarket_consistency_scan.py"
+    ],
+    "started_utc": "2026-10-19T17:01:50.192226+00:00",
+    "ended_utc": "2026-10-19T17:02:31.839264+00:00",
+    "elapsed_seconds": 41.647,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/consistency.stdout",
+    "stdout_bytes": 1193,
+    "stdout_sha256": "94944807b9e248482f7f875d2982b1d556188f8fa84492ffd879649daf71f3ef",
+    "stderr_path": "logs/checkin_20261019T1648_scan/consistency.stderr",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "favorite_fade",
+    "argv": [
+      ".venv/bin/python",
+      "-B",
+      "scripts/favorite_fade_scan.py"
+    ],
+    "started_utc": "2026-10-19T17:02:31.840113+00:00",
+    "ended_utc": "2026-10-19T17:02:32.517186+00:00",
+    "elapsed_seconds": 0.677,
+    "returncode": 0,
+    "timeout": false,
+    "stdout_path": "logs/checkin_20261019T1648_scan/favorite_fade.stdout",
+    "stdout_bytes": 3106,
+    "stdout_sha256": "3821d14f878d639ec02cdeaacc532095247a55af40e4b0b401fceb920457e760",
+    "stderr_path": "logs/checkin_20261019T1648_scan/favorite_fade.stderr",
+    "stderr_bytes": 568,
+    "stderr_sha256": "51ff1e0a67a0c9692004b7672143f1473b4d51f4b4666133fbb436692626c56c"
+  }
+]

@@ -1,0 +1,40 @@
+{
+  "schema": "tick1648_other_catalyst_source_index.v1",
+  "captured_utc": "2026-10-19T17:02:09Z",
+  "no_new_alerts_after_watermark": true,
+  "reuse_only": [
+    {
+      "family": "NY01 Chris Gallant",
+      "latest_packet": "data/deep_review_20261017/work/tick1559_ny01.json",
+      "limitation": "WLIW alert’s Google link reached consent in prior capture; article body/publication time unverified. Previously captured Newsday Oct17 and official FEC data through Sep30 remain dated baselines; no new NY01 alert after 16:48:24."
+    },
+    {
+      "family": "ME02",
+      "latest_packet": "data/deep_review_20261017/house_me02_latest_news.json",
+      "captured_utc": "2026-10-17T20:34:38Z",
+      "limitation": "No related new alert after watermark; no fresh publisher GET in this pass."
+    },
+    {
+      "family": "CA06",
+      "latest_packet": "data/deep_review_20261017/house_ca06_latest_news.json",
+      "captured_utc": "2026-10-17T20:36:50Z",
+      "limitation": "No related new alert after watermark; no fresh publisher GET in this pass."
+    },
+    {
+      "family": "Idaho Senate pending candidate",
+      "latest_packet": "data/deep_review_20261017/work/tick0956_idaho_news.json",
+      "limitation": "Official candidate-list snapshot last reported at 13:00Z Oct19; latest saved poll field dates Sep28–30. Newsmax poll-denial title access gap remains; no new Idaho alert after watermark."
+    },
+    {
+      "family": "Google Year in Search",
+      "latest_packet": "data/deep_review_20261017/work/0328_google_people_facts.json",
+      "limitation": "Official 2026 route request previously returned HTTP404 at 10:58Z; no current list or absence inference."
+    },
+    {
+      "family": "Clarity Senate final-passage market",
+      "latest_packet": "data/deep_review_20261017/work/tick1253_catalyst_facts.json",
+      "limitation": "Last successful Senate vote-menu read Oct18 18:01Z showed no qualifying final-passage vote; later official Senate/Congress URLs returned403. No new current source fetched; no claim of no vote since."
+    }
+  ],
+  "scope": "Source inventory only; previous capture times are not refreshed by this packet."
+}

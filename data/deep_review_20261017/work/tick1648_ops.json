@@ -1,0 +1,119 @@
+{
+  "schema": "routine-ops-summary-v1",
+  "tick_id": "20261019T164825Z",
+  "compiled_utc": "2026-10-19T17:03:33.089803+00:00",
+  "scope": "routine read-only/status; no authenticated order inventory, chain account snapshot, trades, or decisions/prior writes by this worker",
+  "cli_manifest": {
+    "path": "logs/tick1648_private/cli/manifest.json",
+    "sha256": "da1d5c231665bcd79a6ec566435c1a5c0c3e24bbb3a841eaeead8bf99e0543a7",
+    "commands": 15,
+    "all_returncode_zero": true,
+    "all_raw_gzip_roundtrips_verified": true,
+    "note": "Per-command argv, exact UTC start/end, return code, byte lengths and raw/gzip hashes are in this immediately-updated manifest."
+  },
+  "results": {
+    "full_status": "rc0; no Telegram flag. Positions: 7 live rows shown, OPEN TOTAL cost $35.59 / midpoint $34.22. Hurdle: 3 clear, 0 flagged, 3 protected groups; watchlist hits none. Source freeze reports expected GPT-6/Gemini rows present but inventory UPDATING; Grok 4.7 unscored. UMA: 44 positions tracked, 42 Gamma markets refreshed, 0 alerts, positions fetch ok. Nested Kelly used $195.85 bankroll cache age 0.5h; full status stderr confirms this stale basis.",
+    "fresh_bankroll": {
+      "producer": "scripts/bankroll.py",
+      "start_utc": "2026-10-19T17:01:48.512167+00:00",
+      "end_utc": "2026-10-19T17:02:03.246022+00:00",
+      "total_usd": 195.38,
+      "gas_usd_separate_deposit": 5.83,
+      "pm_positions_mtm_usd": 34.41,
+      "pm_realizable_indicative_usd": 30.88,
+      "unrealized_marked_usd": -1.18,
+      "unrealized_realizable_usd": -4.71,
+      "warnings": [
+        "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $3.53 (mid $34.41 vs $30.88) \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which."
+      ],
+      "accounting_residual_usd": 20.73,
+      "accounting_residual_limit": "Producer legacy display label; rounded residual, not an independently audited cash-profit figure."
+    },
+    "post_bankroll_constrained_kelly": {
+      "start_utc": "2026-10-19T17:02:38.884560+00:00",
+      "end_utc": "2026-10-19T17:02:39.801742+00:00",
+      "captured_rc": 0,
+      "recomputed_after_fresh_bankroll": true,
+      "basis_total_usd": 195.38,
+      "captured_streams_in_manifest": true,
+      "totals": [
+        "35.50",
+        "195.38",
+        "+159.88"
+      ],
+      "cost_utilization": "18.2%",
+      "kelly_utilization": "100.0%"
+    },
+    "wallet_crypto": "wallet_status and crypto_status for polymarket and crypto sleeves each rc0; sensitive raw stdout retained only in mode-0600 capture files.",
+    "ostium": "status rc0, 0 open trades, 0 active limits; state diff rc0, 0 open trades and no change.",
+    "crux_watchlist": "crux quiet rc0 with empty output; watchlist hits+auto-revet rc0 with empty output.",
+    "position_state_audit_fix": {
+      "rc": 0,
+      "result": "snapshot refreshed to 7 indexed + 1 deindexed claim row; 0 acknowledged holds dropped; audit reports clean."
+    },
+    "exit_analysis": "rc0; fee-net indicative exits: Whalefall NO $0.27, Messi YES $1.20, Michigan NO $1.46, OpenRouter NO $3.00; Clarity paired group full exit $24.94 vs $29 floor (fee $0.20), hold-complete-group flag. Not synchronized executable quotes.",
+    "decisions": "pending rc0: no overdue decisions.",
+    "redeem_all_dry_run": "rc0; 0/7 winning redeemable positions; 1 losing/uncertain Gemini claim skipped; no transaction broadcast.",
+    "news": {
+      "status_rc": 0,
+      "status_output": "watcher pid=148881 seen=5000 last_cron_trigger=1792428478.2979157",
+      "seen_id_count": 5000,
+      "state_mtime_utc": "2026-10-19T16:58:54.323168+00:00",
+      "state_size_bytes": 564798,
+      "config_sha256": "bcfaefc65069ce57092c05efa801368679dc2aa80375445c43611a93fe0bcfb6",
+      "config_mtime_utc": "2026-10-19T10:04:17.883669+00:00",
+      "note": "state mtime is the latest state write, not proof of complete feed coverage."
+    },
+    "daemon_metadata": {
+      "news_watcher": {
+        "count": 1,
+        "matches": [
+          {
+            "pid": 148881,
+            "started_utc": "2026-10-19T05:28:37.310000+00:00",
+            "code_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+            "code_precedes_start": true
+          }
+        ]
+      },
+      "heartbeat_watch": {
+        "count": 1,
+        "matches": [
+          {
+            "pid": 450,
+            "started_utc": "2026-10-18T09:33:44.960000+00:00",
+            "code_mtime_utc": "2026-10-02T14:31:39.989785+00:00",
+            "code_precedes_start": true
+          }
+        ]
+      },
+      "telegram_listener": {
+        "count": 1,
+        "matches": [
+          {
+            "pid": 451,
+            "started_utc": "2026-10-18T09:33:44.990000+00:00",
+            "code_mtime_utc": "2026-09-10T18:34:57.001351+00:00",
+            "code_precedes_start": true
+          }
+        ]
+      },
+      "opportunity_watch": {
+        "count": 1,
+        "matches": [
+          {
+            "pid": 425,
+            "started_utc": "2026-10-18T09:33:44.720000+00:00",
+            "code_mtime_utc": "2026-09-29T10:07:53.974910+00:00",
+            "code_precedes_start": true
+          }
+        ]
+      }
+    },
+    "disk_free_bytes": 987865088
+  },
+  "alerts_for_primary_review": [
+    "HLE source-freeze verdict UPDATING",
+    "Whalefall Tier-1 alert at 16:48 UTC: Street Fighter box-office headline; not source-verified here."
+  ]
+}

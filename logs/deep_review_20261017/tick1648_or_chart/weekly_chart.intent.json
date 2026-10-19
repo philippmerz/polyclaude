@@ -1,0 +1,1 @@
+{"name":"weekly_chart","request":{"method":"GET","read_only":true,"scope":"Current official weekly model-rankings chart source; source facts only","url":"https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T17:01:42.317876Z","timing_basis":"call_window"}

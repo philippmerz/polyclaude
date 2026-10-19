@@ -1,49 +1,45 @@
 ---
-reviewed_at: "2026-10-19T16:58:32.603220Z"
+reviewed_at: "2026-10-19T17:12:01.717145Z"
 valid_until: "2026-10-19T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: d34420cd3ffad865394716e54e92c79c42f2e6023f4782f15e2a59fbee5906c1
+  README.md: edcae9e5d0a7a10c75378b4692bedb58479dce9b082358f9ba9276fec0236450
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 24cacf6277830cf2d5e19ed05f47bedee39ee14d7f81f70c6b5357ea7e308f47
-  notes/resting_orders.md: 32600db41aa4dadc2839c3c2b38b162e8417a63ede06890483ba1dabc146cd0d
-  notes/journal.md: 230be679f8a08de03713d2b401f8a0452b9c96c7c23a141b5aa45dffbc5e84a9
+  notes/backlog.md: d97a3109d43d51dd8befc136cf676197187ac6bead04e1e3b91f01e6810e8a3f
+  notes/resting_orders.md: 5cfeb525d70e4f0acfb03739f62bf641c93e213faff7a2cf3554937e818266dc
+  notes/journal.md: fd55566c6d4e5e7c9ff29ade404571793d85ec5f493689e26fba243ac3af8776
 ---
-
 ## Resume
 
-**339 valued /8 blocked /364 factual /2,289 pending;711 base+62 revisions,active/next366.** [Checkpoint](deep_review_checkpoint.json) · [latest closeout](../research/2026-10-19-1653-closeout.md) · [small phase](../data/deep_review_20261017/work/manual1647_RESUME.json).364saved/noentry.366/367/368/370/371/372/374/378facts only;366primaryp/economics pending. Initial355/356leads withdrawn before orders. Canceled orders stay closed.
+**339valued/8blocked/364factual/2,289pending;711base+62revisions,active/next366.** [Checkpoint](deep_review_checkpoint.json) · [small research phase](../data/deep_review_20261017/work/manual1647_RESUME.json) · [case366 facts pointer](../data/deep_review_20261017/work/0366_resume.json).364saved/noentry.366/367/368/370/371/372/374/378facts only;366primaryp/economics pending. Initial355/356leads withdrawn before orders. Canceled bids stay closed.
 
-Native goal was active at preceding interactive checkpoint; this bounded scheduled run made no lifecycle change or idle follow-up. Continue finite research in its authorized context. Notify Telegram if global progress becomes blocked; individual source gaps do not stop queue. Earlier recovery already sent as Telegram1269.
+Native goal was active at preceding interactive checkpoint; bounded checks made no lifecycle change or idle follow-up. Continue finite research in its authorized context. Notify Telegram if global progress becomes blocked; individual source gaps do not stop queue. Recovery1269 already delivered.
 
 ## Current portfolio
 
-[16:15 queued tick](../research/2026-10-19-1615-checkin.md): oneproducer **195.85 incl5.84 separate gas; trading190.01mid/186.24indicative depth; PM34.87/31.10**. Recording window16:30:35–16:32:27.763180UTC, not recovered CLIprocess/quote timestamps.20.73residual is accounting arithmetic, not audited profit; sequential rounded inputs not synchronizedNAV/proceeds. CSV218rows/check_window anchor16:30:35; prior217preserved. VM/APIexcluded.
+[16:48 queued check](../research/2026-10-19-1648-checkin.md): soleproducer **195.38incl5.83separategas; trading189.55mid/186.02indicative depth; PM34.41/30.88**, process17:01:48.512167–17:02:03.246022UTC.20.73residual accounting arithmetic, not auditedprofit. Rounded sequential inputs not synchronizedNAV/proceeds; VM/APIexcluded. CSV219/check-window anchor17:01:48 preserves218prior rows.
 
-Authenticated HTTP200 orders16:31:41.481495–41.597242UTC and positions16:31:41.899908–42.112157UTC: four LIVE/zero-matched BUYs/four exact reservations/$7.52 and eight position identities/sizes/totalBought unchanged. Reservation read clock unavailable. [Exact account](../data/deep_review_20261017/work/tick1615_account.json) · [order identities/history](resting_orders.md).
+Orders17:02:19.678163–19.799590UTC/positions17:02:19.810067–20.000595UTC HTTP200: fourLIVE/zero-matchedBUYs/$7.52/eightpositionidentities/outcomes/sizes/totalBought unchanged. Rawlocalreserves17:02:20.011348–20.026337 exactly4prior objects. [Account](../data/deep_review_20261017/work/tick1648_account.json) · [exact orders/policy](resting_orders.md). pUSD20.451290−7.52=12.931290 arithmetic, not allowance certificate.
 
-**Idaho63070734YES3c/$1.02: Oct19 22UTC pullALLunfilled**; earlier material poll/candidate/ballot/turnout uncertainty cancel-first. Noadd/repost.20%YES/selected5 after15ppreserve; broad1–80%, Peak-only1.653% belowbid; tiny full loss accepted. No newly verified material Idaho source change here.
+**Idaho63070734YES3c/$1.02: Oct19 22UTC pullALLunfilled**, earliermaterialpoll/candidate/ballot/turnout uncertainty cancel-first; noadd/repost.20%YES/selected5after15ppreserve; broad1–80/Peak-only1.653belowbid; tiny full loss accepted.
 
-## Decisions and source limits
+## Current judgments and limits
 
-- Retain MI5NO/Messi5YES/OR5NO/Whale6NO and wholeClarity29/29. Noadd/newmaker/prior change/trade. Selected terminal1.70/2/3.65/2.5261 vs current roundedCLIexits1.46/1.20/3/.49. Broad adverse cases may favor sale; full binary loss remains. No price-recovery thesis, hidden-info maker-at-fair or automatic midpoint/rho Kelly additions. [Primary risk/joint states](../data/deep_review_20261017/work/tick1615_root_risk.json).
-- MI is US Senate; Messi is Google2026 GlobalAthletesTop5/fallbackMar31’27. OR uses displayedOct26/Nov2/Nov9/Nov16 totals, NO outside[725,775), not current partial. Exact Gamma/fee checks112/210/299/1838 retain actual16:20clock in prior `tick1559_rule_<four-digit-index>.json`; no fresh execution certificate implied.
-- Whale: final domesticOct16–18 strict<8m; exactly8mFINALpaysNO. Numbers16:53:37.258632/Mojo16:53:37.965650 still8mESTIMATE.7dc141…/49b78…17.5mWORLDWIDE alerts confuse metrics; neither establishes domestic final. No Thursday-preview double addition or final inferred. [Latest sources](../data/deep_review_20261017/work/alert49b78_whale_facts_1653.json).
-- NY01 WLIW53b1…body/date unavailable; separate NewsdayOct17 fundraising and officialSep30 cumulative finances already underwritten. No new measured poll/ballot failure. Retain existing10YES12c/$1.20 promise, noadd/repost.
-- NewsNationffa125…repeats sameOct18URL/ID/Oct17exchange; capped AOL body retains Oct18publication/update clocks, no new request. TheTimesd572…16:37polling headline was manually reviewed despite research_only; publisher/date/survey/fielddates/toplines unverified after bounded attempts, not evidence no poll exists. No numeric substitute. News reviewed through16:48:24UTC; newer Venezuela policy/power headlines have no identified exposure channel. [Times access gap](../data/deep_review_20261017/work/tick1615_michigan_times_followup.json).
-- Clarity wholepaironly: conditional29floor/58middle vs24.94CLIexit/.20fee. First qualifying final Senate passage, not proforma/cloture; venue/oracle/system risk can break floor. No legwise action.
+- RetainMI5NO/Messi5YES/OR5NO/Whale6NO; Claritywhole29/29only. Noadd/newmaker/prior/order/trade. Selected terminal1.70/2/3.65/2.5261 vsfresh17:02indicative net1.458/1.20312/3.00242/.27429. Broadadverse20%ordinary/2%Whalefavor sale; fullbinaryloss possible. No recovery claim, hidden-info maker-at-fair or automaticmidpoint/rhoKellyadds. [Primary/joint risk](../data/deep_review_20261017/work/tick1648_root_risk.json).
+- MI is USSenate. Messi is Google2026GlobalAthletesTop5/fallbackMar31’27. OR uses displayedOct26/Nov2/Nov9/Nov16 totals, NOoutside[725,775). Current17:01chart/Age174: Oct12completed164.043985914931T; Oct19partial16.617272842070T, no targetweek/cutoff. ExactGamma/fees112/210/299/1838match17:02; no execution certificate.
+- Whale: finaldomesticOct16–18strict<8m; exactly8mFINALpaysNO. ReusedNumbers16:53:37.258632/Mojo16:53:37.965650 still8mESTIMATE.49b78…/7dc141…global17.5m notdomesticfinal; Yahoo body/date inaccessible. No previewdoubleaddition. CopiedNumbers17:01clockcorrected, notfreshrequest. [Sources](../data/deep_review_20261017/work/tick1648_whalefall_facts.json).
+- MI2f1…WWMTbody/pub/eventunverifiedatconsent17:03:32; ffa125…sameOct18NewsNationURL/ID, reusedcappedAOLbodyOct18pub/update/Oct17exchange. No measuredpoll/ballot/withdrawal inferred. Timesd572…originalpoll/publishergap remains; boundedsearchdoesnotproveabsence. [Michigan](../data/deep_review_20261017/work/tick1648_michigan_facts.json). NY01WLIWbody/dategap and datedNewsday/officialFEC totals remain; pending10YES12c/$1.20 unchanged. Newsreviewthrough16:48:24UTC.
+- Clarityconditional29floor/58middle vs24.94CLIexit/.20fee, wholepaironly. FirstqualifyingfinalSenatepassage, notcloture/proforma. Oracle/venue/systemcanbreakfloor. Jointbookkeeping allordinary+fourbidslose/pair29→176.62; pair0→147.62, otherassetsconstant/no calibratedjointprobability.
 
-## Operations
+## Operations and next boundary
 
-Fourteen original stdout/stderr pairs retained/hash-verified; returncodes/process windows lost after localrunner post-runTypeError. Root inspected every output: no visible runtimeerror. Two silent checks independently verified rc0/empty with durable captures; no crux gap/watchlist hit. Other originalrc remain unavailable; never reconstruct clocks/status from filemtime. Future subprocess metadata must be durable per command, before batch assembly. [Operations](../data/deep_review_20261017/work/tick1615_ops.json) · [quiet verification](../data/deep_review_20261017/work/tick1615_quiet_verification.json).
+15invokedCLIcommandsrc0/30streamsverified; nestedstatuschildrcnotexposed, completeoutputno failuremarker. Quietcrux/watchlistdirectrc0/empty; hurdle3clear0flagged/UMA0alerts/insurance7indexed+1deindexedclean/nooverdue/Ostium0/no winnerredeemable. LegacyGeminiloser/uncertainclaim skipped/no broadcast. HLEUPDATINGvsJul3notnewscore; closed9NOdistinct. Fourdaemonssingle/canonical/code-current. Newscycle state mtime16:58:54 atcheck, partialcoverage only. [Ops](../data/deep_review_20261017/work/tick1648_ops.json).
 
-Status outputs show clean7indexed+1deindexed insurance audit, hurdle3clear/0flagged, UMA0alerts, no overdue decision/Ostiumchange/winningredeemable. LegacyGemini losing/uncertainNO skipped, no broadcast. Four daemons single/canonical/code-current.
+39contextsections/687rows hashchecked, no valuationcredit. Discoveryprimary10/thin20pagecaps; consistency12/20validated,8failed(2stale/6noasks),171unquoted. Sports3mappingfailures. Coverage incomplete, no exchange-widezero. [Scan](../data/checkin_20261019T1648_public_summary.json) · [public proofs](../data/deep_review_20261017/work/tick1648_public_artifacts.json).
 
-35context batches/594rows audited, no frozen-rule/identity mismatch, no substantive valuation credit. Discovery page/quote capped; consistency6/20quoted/14failurescauseunrecorded/177unquoted. No exchange-wide zero. Prospective20/20resolved/rc2missingresults; methodology stays concluded. [Scan](../data/checkin_20261019T1615_public_summary.json) · [public proofs](../data/deep_review_20261017/work/tick1615_public_artifacts.json).
-
-No routineTelegram. Existing light18UTC, Idaho22UTCpull, fullcheckOct20 02UTC/earlier material event. WeeklyOct23/monthlyNov12. End boundedrun; off-chainbrokerage/Sundaycatch-up remain retired.
+No routineTelegram. Existing18UTC light/Idaho22UTCpull/fullOct20 02UTC or earliermaterialevent. WeeklyOct23/monthlyNov12notdue; methodologyconcluded. Endboundedtick; no goal lifecycle change/timer/idlefollowup; off-chainbrokerage/Sundaycatch-up retired.

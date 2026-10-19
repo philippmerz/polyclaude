@@ -1,0 +1,75 @@
+{
+  "schema": "tick1648_michigan_source_facts.v1",
+  "scope": "Michigan Senate El-Sayed vs Rogers; prior artifacts are dated, no new poll/source event inferred.",
+  "alerts": [
+    {
+      "alert_id": "ffa1251d18e4af071b22d377a72656bef2467226",
+      "ts": "2026-10-18T21:29:31Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed confronts question about Muslim Brotherhood in viral exchange - NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rdXd5WmhCc1g3NldtZ0o3WE5fcHJ6TUNIWnRoSm8wRHYzVTdJWTltcFdlbnB6WDBsMWwwOTE1X3diX0RVY0hpandOTldwdEhQVjNIdXBabml6UWI3TmVOTUJkT2pzTy0wanRuV1h4Q25uSjctRzdLX0h6cnRRQdIBgwFBVV95cUxOVWp6NVp6RnB0SldOc1FKemFlQmtwZTJkQ3ZOMlBTSm5wVGFjMFczZXlXZGh4N2FiV0w1clNJYWV3RTJNbGNTS0p1QUlXdDZpVU83QUl0Q0NvWmxwd1ZqZFJRQUhDTmZVT2xlRU9DNGFTeklNWGMwYjdnTk5XeEF2bllQUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Renewed Muslim Brotherhood controversy creates additional negative pressure on El-Sayed\u2019s Democratic win thesis."
+        }
+      ],
+      "line_sha256": "0c92c3e3232c35ab57c01e1c1669bb6295f68400d834483dd18d9cfa2d726b33"
+    },
+    {
+      "alert_id": "2f1cd958e63e0205b1db466f6469d37a6661b2cb",
+      "ts": "2026-10-19T16:21:04Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WWMT",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNEozZzZxSXFJUktCSmFOa0U3a3F2cEd3VkcyMXppWXJZUldSamh3NjJFNV9XQlpaeWdmQm1nUXJHQVhTTThwemxuWm50WTJQb1dMQ2V3a01FajRMVlZuTVBaTXB1OV9SOVVrbW04Q1hlX2ZDYkVvaFlLOXAwWGpVTV9SdUpoZG9ia2piRUN6TC1VQW9kOU9VbVBMRTZDWXk2VVdaS2ZFc1RsX1JLUWFKX3NkT1dsbC12amZ5aDVEYjlZcFFwV3NRTGVJdzFEN0tTX0JhZDlhd2p5TExwMkNSazB4bw?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Negative candidate controversy pressures the thesis that Democrats will win the Michigan Senate race."
+        }
+      ],
+      "line_sha256": "d749032ff6ad80319d9008ced6f91e41087c23086a104068365775da98bd9953"
+    },
+    {
+      "alert_id": "ffa1251d18e4af071b22d377a72656bef2467226",
+      "ts": "2026-10-19T16:26:36Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed confronts Muslim Brotherhood question in viral exchange - NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rdXd5WmhCc1g3NldtZ0o3WE5fcHJ6TUNIWnRoSm8wRHYzVTdJWTltcFdlbnB6WDBsMWwwOTE1X3diX0RVY0hpandOTldwdEhQVjNIdXBabml6UWI3TmVOTUJkT2pzTy0wanRuV1h4Q25uSjctRzdLX0h6cnRRQdIBgwFBVV95cUxOVWp6NVp6RnB0SldOc1FKemFlQmtwZTJkQ3ZOMlBTSm5wVGFjMFczZXlXZGh4N2FiV0w1clNJYWV3RTJNbGNTS0p1QUlXdDZpVU83QUl0Q0NvWmxwd1ZqZFJRQUhDTmZVT2xlRU9DNGFTeklNWGMwYjdnTk5XeEF2bllQUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Viral allegations and opponent attacks increase reputational pressure on the Democratic nominee, weakening the thesis that Democrats win Michigan."
+        }
+      ],
+      "line_sha256": "dee801cae847c2d442c037d3384bf14f18897eb3ffe77bbca3d7db571be83bd8"
+    }
+  ],
+  "source_comparison": {
+    "2f1cd958e63e0205b1db466f6469d37a6661b2cb": "WWMT alert at Oct19 16:21:04Z has a title matching the JFK/Muslim-Brotherhood question story also covered in earlier Oct17 rally reporting. One ordinary Google News link fetch at 2026-10-19T17:03:32.967487Z returned HTTP200 but redirected to consent.google.com; no WWMT canonical URL/article body, publication date, or event date was obtained. Alert title alone does not establish a new poll, ballot/caucus change, or withdrawal.",
+    "ffa1251d18e4af071b22d377a72656bef2467226": "Same alert ID and same Google News link were present Oct18 21:29:31Z and reappeared Oct19 16:26:36Z with slightly revised title. Existing captured AOL syndication of NewsNation story (work/delayed2134_michigan_facts_0347.json; logs/deep_review_20261017/delayed2134_michigan_0347/newsnation_article.*) says rally exchange occurred Oct17; article published Oct18 21:21:01Z and updated 21:38:22Z. It contained no poll, ballot/caucus change, or withdrawal. This later RSS reappearance is not a newly occurring event."
+  },
+  "latest_polls_in_saved_sources": {
+    "poll": "Rasmussen Oct16 release, field Oct12\u201314, n=798, El-Sayed46/Rogers44; see data/deep_review_20261017/work/tick1400_michigan_facts.json. No new poll in reviewed rows.",
+    "limits": "No publisher body retrieved for WWMT alert; no claim that this proves all coverage is identical."
+  },
+  "wwmt_link_attempt": {
+    "http_status": 200,
+    "received_utc": "2026-10-19T17:03:32.967487Z",
+    "final_url_host": "consent.google.com",
+    "raw_sha256": "7d9d65b3df294d6df2d0727b529723128958f4c100f3d767802a52c11d1ab286",
+    "gzip_sha256": "fad890205ea3996b37ba8c20ae9446b8fe7d240e25cc40e16050ef16213aedb9",
+    "receipt": "logs/deep_review_20261017/tick1648_michigan/wwmt_google_link.receipt.json",
+    "body": "logs/deep_review_20261017/tick1648_michigan/wwmt_google_link.body.json.gz",
+    "final_url_capture": "logs/deep_review_20261017/tick1648_michigan/wwmt_google_link.receipt-extra.json"
+  },
+  "assembly_started_utc": "2026-10-19T17:02:09Z",
+  "editorial_reviewed_utc": "2026-10-19T17:11:00.214839Z",
+  "clock_scope": "Request clocks live in each source receipt; assembly start does not date the later WWMT response."
+}

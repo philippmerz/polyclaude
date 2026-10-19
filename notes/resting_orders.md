@@ -1,8 +1,8 @@
-# Current resting orders — October19 16:15 queued tick
+# Current resting orders — October19 16:48 queued tick
 
-**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated orders16:31:41.481495–41.597242UTC and positions16:31:41.899908–42.112157UTC HTTP200; pagination exhausted. Four exact order/CID/asset/size/price records match four reservations; eight position identities/sizes/totalBought unchanged. Reservation-read time not recorded. Dated observation, not a guarantee against later fills. [Account](../data/deep_review_20261017/work/tick1615_account.json).
+**Four LIVE/zero-matched BUYs / $7.52 reserved; no SELL orders.** Authenticated orders17:02:19.678163–19.799590UTC and positions17:02:19.810067–20.000595UTC HTTP200; pagination exhausted. Exact order/CID/asset/size/price records and eight positive-size position identities/sizes/totalBought equal16:31. Raw local reservations17:02:20.011348–20.026337UTC exactly match previous four records. Dated observation, not a guarantee against later fills. [Account](../data/deep_review_20261017/work/tick1648_account.json).
 
-Retain existing terms, noadd/repost. Producer stdout recorded within16:30:35–16:32:27.763180UTC; exact CLIprocess clocks/rc unavailable, not synchronized NAV. NY01 fundraising context already reviewed; no new measured poll/ballot failure. Idaho63070734YES3c/$1.02 retains Oct19 22UTC all-unfilled pull and earlier material-evidence cancel-first rule. [Primary review](../research/2026-10-19-1615-checkin.md).
+Retain exact terms, noadd/repost. No newly verified pending-candidate poll/ballot/source failure. Idaho63070734YES3c/$1.02 retains Oct19 22UTC all-unfilled pull and earlier material-evidence cancel-first rule. Marking and risk comparisons use17:01–02 sequential inputs, not synchronized NAV or future execution authorization. [Primary review](../research/2026-10-19-1648-checkin.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|

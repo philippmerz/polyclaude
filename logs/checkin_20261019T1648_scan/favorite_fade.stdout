@@ -1,0 +1,34 @@
+
+# 27 favorite-price profile candidates (live ask 0.90-0.98, 2-14d; no probability/edge estimate)
+
+side    ask  days    depth$       liq$          cat  question
+--------------------------------------------------------------------------------------------
+  NO 0.965    2d     17874      34443   other/meme  France declares state of emergency by October 21, 
+ YES 0.975    2d     82851      34437 politics/geo  Israel x Iran ceasefire continues through October 
+ YES 0.942    3d      1032      38412 crypto/price  Will the price of Bitcoin be above $78,000 on Octo
+ YES 0.930    4d     14286      39298 crypto/price  Will the price of Bitcoin be above $78,000 on Octo
+  NO 0.940    4d     15096      30465 crypto/price  Will the price of Bitcoin be above $86,000 on Octo
+ YES 0.950    4d      9673      28652 crypto/price  Will the price of Ethereum be above $2,200 on Octo
+ YES 0.960    6d     13152      41720 crypto/price  Will the price of Bitcoin be above $76,000 on Octo
+  NO 0.906    6d        83      77005 politics/geo  Will Iliana Iotova win the 2026 Bulgarian presiden
+  NO 0.961    6d       499      74097 politics/geo  Will Andrey Gyurov win the 2026 Bulgarian presiden
+  NO 0.903    6d      6362     136683 politics/geo  Will Flávio Bolsonaro win the second round of the 
+  NO 0.969    6d     28035     118523 politics/geo  Will Flávio Bolsonaro win the second round of the 
+  NO 0.940    6d      5997      34458 crypto/price  Will Ethereum dip to $2,100 October 19-25?
+  NO 0.968    8d     49654     182219 politics/geo  Will Avigdor Lieberman be the next Prime Minister 
+  NO 0.930    8d     14764      88558 politics/geo  Will Likud win 30-34 seats in the 2026 Israeli leg
+ YES 0.933    8d      3157      24508 politics/geo  Will Israel election happen as scheduled?
+  NO 0.942   12d     19879     147691   other/meme  Will the Cleveland Guardians win the 2026 World Se
+ YES 0.960   12d    139936      74255 politics/geo  US x Yemen ceasefire continues through October 31?
+  NO 0.930   12d     26239      27306   other/meme  Iran-Oman Hormuz Agreement by October 31?
+  NO 0.979   12d   6777260     124849 politics/geo  Russia x Ukraine ceasefire agreement by October 31
+  NO 0.976   12d    118002     112487 politics/geo  Bab el-Mandeb Strait effectively closed by October
+  NO 0.920   12d    117561      60285   other/meme  NATO x Russia military clash by October 31, 2026?
+  NO 0.965   12d     25973      55559   other/meme  Iran agrees to surrender enriched uranium stockpil
+  NO 0.919   12d      6453      50817 crypto/price  Will Apple be the largest company in the world by 
+  NO 0.954   12d      4777      46106 politics/geo  Saudi-Houthi ceasefire agreement announced by Octo
+  NO 0.951   12d      6424      42600   other/meme  Perim Island no longer under Houthi control by Oct
+  NO 0.962   12d     16151      32692   other/meme  Israel accuses Iran/proxies of plane stabbing inci
+  NO 0.955   12d      9472      30739   other/meme  Ilhan Omar federally charged by October 31?
+
+# Profile only: these rows contain no probability, edge, or APY estimate and are not execution-ready.

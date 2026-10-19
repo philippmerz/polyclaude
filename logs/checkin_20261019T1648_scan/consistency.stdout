@@ -1,0 +1,23 @@
+fetching Polymarket active event universe (top-volume soft cap 5000 open markets)...
+  filters: end_date=[2026-10-19T17:01:50Z, 2027-01-05T23:59:59Z], sports=excluded, liquidity_min=omitted
+  retained 2832 validated neg-risk markets; scanned 5001 open markets in 658 events / 33 pages
+  fetch coverage: INCOMPLETE (market_cap); streamed 35.7 MiB; projected peak memory 58.8 MiB
+grouping by event...
+  349 distinct events
+evaluating consistency (pass 1: gamma-api midpoints)...
+  289 groups exceed 0.5% gross deviation (gamma midpoint)
+
+live-quote pass: 20/191 structural groups requested (184 legs; selection=balanced; every unquoted group keeps analysis incomplete)
+  ...10/20 done
+  ...20/20 done
+  12 got live quotes
+
+wrote /home/polyclaude/polyclaude/logs/polymarket_consistency_20261019T170231Z.md
+wrote /home/polyclaude/polyclaude/logs/polymarket_consistency_latest.json
+
+
+=== PROVISIONAL STRUCTURAL BASKETS (REVALIDATION REQUIRED) ===
+none in scanned slice — coverage incomplete; NOT a comprehensive zero.
+
+191 midpoint sum>1 / 98 midpoint sum<1 / 0 provisional positive after sequential depth check
+0 PROVISIONAL consistency candidates exceed 2.0% modeled net; REVALIDATION REQUIRED

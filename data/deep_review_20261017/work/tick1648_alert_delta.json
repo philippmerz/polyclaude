@@ -1,0 +1,90 @@
+{
+  "schema": "tick1648_bounded_alert_delta.v1",
+  "captured_utc": "2026-10-19T17:02:09Z",
+  "watermark_before": "2026-10-19T16:48:24Z",
+  "source_file": "notes/news_alerts.jsonl",
+  "source_bytes_sha256": "0eb94840f2673108ba38121b04e760fa7c206fe88b3ffc40135b0de9c816fc79",
+  "reviewed_alerts": [
+    {
+      "alert_id": "ffa1251d18e4af071b22d377a72656bef2467226",
+      "ts": "2026-10-18T21:29:31Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed confronts question about Muslim Brotherhood in viral exchange - NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rdXd5WmhCc1g3NldtZ0o3WE5fcHJ6TUNIWnRoSm8wRHYzVTdJWTltcFdlbnB6WDBsMWwwOTE1X3diX0RVY0hpandOTldwdEhQVjNIdXBabml6UWI3TmVOTUJkT2pzTy0wanRuV1h4Q25uSjctRzdLX0h6cnRRQdIBgwFBVV95cUxOVWp6NVp6RnB0SldOc1FKemFlQmtwZTJkQ3ZOMlBTSm5wVGFjMFczZXlXZGh4N2FiV0w1clNJYWV3RTJNbGNTS0p1QUlXdDZpVU83QUl0Q0NvWmxwd1ZqZFJRQUhDTmZVT2xlRU9DNGFTeklNWGMwYjdnTk5XeEF2bllQUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Renewed Muslim Brotherhood controversy creates additional negative pressure on El-Sayed’s Democratic win thesis."
+        }
+      ],
+      "line_sha256": "0c92c3e3232c35ab57c01e1c1669bb6295f68400d834483dd18d9cfa2d726b33"
+    },
+    {
+      "alert_id": "2f1cd958e63e0205b1db466f6469d37a6661b2cb",
+      "ts": "2026-10-19T16:21:04Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WWMT",
+      "link": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxQNEozZzZxSXFJUktCSmFOa0U3a3F2cEd3VkcyMXppWXJZUldSamh3NjJFNV9XQlpaeWdmQm1nUXJHQVhTTThwemxuWm50WTJQb1dMQ2V3a01FajRMVlZuTVBaTXB1OV9SOVVrbW04Q1hlX2ZDYkVvaFlLOXAwWGpVTV9SdUpoZG9ia2piRUN6TC1VQW9kOU9VbVBMRTZDWXk2VVdaS2ZFc1RsX1JLUWFKX3NkT1dsbC12amZ5aDVEYjlZcFFwV3NRTGVJdzFEN0tTX0JhZDlhd2p5TExwMkNSazB4bw?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Negative candidate controversy pressures the thesis that Democrats will win the Michigan Senate race."
+        }
+      ],
+      "line_sha256": "d749032ff6ad80319d9008ced6f91e41087c23086a104068365775da98bd9953"
+    },
+    {
+      "alert_id": "ffa1251d18e4af071b22d377a72656bef2467226",
+      "ts": "2026-10-19T16:26:36Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "title": "Abdul El-Sayed confronts Muslim Brotherhood question in viral exchange - NewsNation",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTE1rdXd5WmhCc1g3NldtZ0o3WE5fcHJ6TUNIWnRoSm8wRHYzVTdJWTltcFdlbnB6WDBsMWwwOTE1X3diX0RVY0hpandOTldwdEhQVjNIdXBabml6UWI3TmVOTUJkT2pzTy0wanRuV1h4Q25uSjctRzdLX0h6cnRRQdIBgwFBVV95cUxOVWp6NVp6RnB0SldOc1FKemFlQmtwZTJkQ3ZOMlBTSm5wVGFjMFczZXlXZGh4N2FiV0w1clNJYWV3RTJNbGNTS0p1QUlXdDZpVU83QUl0Q0NvWmxwd1ZqZFJRQUhDTmZVT2xlRU9DNGFTeklNWGMwYjdnTk5XeEF2bllQUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Viral allegations and opponent attacks increase reputational pressure on the Democratic nominee, weakening the thesis that Democrats win Michigan."
+        }
+      ],
+      "line_sha256": "dee801cae847c2d442c037d3384bf14f18897eb3ffe77bbca3d7db571be83bd8"
+    },
+    {
+      "alert_id": "49b78be779d9309a29fcbb99660fb74400afbdc8",
+      "ts": "2026-10-19T16:48:24Z",
+      "tier": 1,
+      "feed": "Whalefall box-office and opening-weekend updates",
+      "title": "‘Street Fighter’ Leads Box Office With $51 Million Global Opening as ‘Whalefall’ Gets Beached With $17.5 Million - Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMijwJBVV95cUxPdW9lUUVRX2M4bmJMRUlsRTNORlYydWQ1LURRb1g5OGhtbmxVOEdxclhiWWZSOWotaTNJMTEwdDVUSUZGdTE5N290dnVUQkNkcWlKY01qX0pCenFmeGRLSU94cmw4TFFjVDRqaUdBT1hVZnAwMTBaNU82VE8wcFhGeEtTMy1YWFMyaHY0SHlJRU5OR2FSVC11ZThUX1l5cFF1Q3Ffb2JtNmo1S0JrVXcwNVJ5Z1Y0LTlKMFBhUkk5azF4eU43LTFnWVQ2SUM3Rlc4N3dDLUdyQ18yRjVvQy1yenItS2lOVDNSZGVnWmRnM1hod1ZTNDFFdW82ZUM2bUJoUmVTRWhyRUxnVFRrWC1R?oc=5",
+      "impacts": [
+        {
+          "position": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+          "level": "CRITICAL",
+          "reason": "Reported $17.5 million opening confirms the “less than $8m” outcome is false, resolving the held No position. | body-confirmed: The article title reports “Whalefall” earned $17.5 million globally, confirming it exceeded $8 million and resolving the held No position."
+        }
+      ],
+      "line_sha256": "37639befcbcee29e28e04875c6417ee1fd8316a535eb1d6db33c065517816a0e"
+    }
+  ],
+  "newer_than_watermark": [],
+  "max_timestamp_observed": "2026-10-19T16:48:24Z",
+  "coverage": "Exact requested IDs plus all public alert rows after 16:48:24Z; no private inbox or history read.",
+  "related_alert_scan": {
+    "method": "Full public news_alerts.jsonl scanned by bounded title terms for Whalefall and El-Sayed/JFK/Muslim/Brotherhood/viral; not private history.",
+    "michigan_related_title_rows": {
+      "count": 27,
+      "first_ts": "2026-10-18T00:48:27Z",
+      "last_ts": "2026-10-19T16:26:36Z"
+    },
+    "whalefall_related_title_rows": {
+      "count": 12,
+      "first_ts": "2026-10-19T00:10:49Z",
+      "last_ts": "2026-10-19T16:48:24Z"
+    },
+    "note": "Rows may represent repeated/syndicated coverage, not independent events. Earlier captured article/body facts are reused only where explicitly referenced in family shards."
+  }
+}
