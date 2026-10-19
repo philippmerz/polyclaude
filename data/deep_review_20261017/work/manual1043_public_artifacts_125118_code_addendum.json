@@ -1,0 +1,17 @@
+{
+  "schema": "manual_public_artifact_allowlist.shard.v1",
+  "entries": [
+    {
+      "path": "research/2026-10-17-deep-review/models/openrouter352_lower_tail_diagnostic_1225.py",
+      "bytes": 5946,
+      "sha256": "eac570daabf73abd0f47ac5d99507a76a7b2f524cf574d5acc6aa0067d061370",
+      "kind": "public_research_reproducibility_or_hygiene"
+    },
+    {
+      "path": "data/deep_review_20261017/work/public_capture_api_key_classification_1243.json",
+      "bytes": 4048,
+      "sha256": "b988a99ec4fe161d743f9002cfdda7f1d9454f3a44ad9b868b35bc63bc2b44b5",
+      "kind": "public_research_reproducibility_or_hygiene"
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "manual_public_artifact_allowlist_supplement.v1",
+  "compiled_utc": "2026-10-19T12:51:18.554335+00:00",
+  "previous_master_sha256": "ce5622aaecf63ddc8c1cf2c88abf7969543e50ceffdebbce2efe114496a9048c",
+  "previous_public_entries": 675,
+  "new_public_entries": 677,
+  "added": [
+    {
+      "path": "research/2026-10-17-deep-review/models/openrouter352_lower_tail_diagnostic_1225.py",
+      "bytes": 5946,
+      "sha256": "eac570daabf73abd0f47ac5d99507a76a7b2f524cf574d5acc6aa0067d061370",
+      "kind": "public_research_reproducibility_or_hygiene"
+    },
+    {
+      "path": "data/deep_review_20261017/work/public_capture_api_key_classification_1243.json",
+      "bytes": 4048,
+      "sha256": "b988a99ec4fe161d743f9002cfdda7f1d9454f3a44ad9b868b35bc63bc2b44b5",
+      "kind": "public_research_reproducibility_or_hygiene"
+    }
+  ],
+  "master": "data/deep_review_20261017/work/manual1043_public_artifacts.json",
+  "new_master_sha256": "4facf6238ccc9acb95e57118240d5177c69898b813942c2f05584b96d330d437",
+  "new_index": {
+    "p": "data/deep_review_20261017/work/manual1043_public_artifacts_shards_125118_code.json",
+    "h": "486f2effb3668a70bf616834d9325a651e144dff082e4bd8bf6fd0bf69a4fdf5",
+    "b": 13468,
+    "n": 60
+  },
+  "reason": "Final git-status verification found additive352 replay code had not been included by prior collector. Preserve it for reproducibility; the adopted anchor code was already tracked. Add reviewed config classification to the hash allowlist. Earlier675-file snapshot remains dated historical evidence."
+}
