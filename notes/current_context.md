@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-19T21:08:08.515872+00:00"
+reviewed_at: "2026-10-19T21:13:35.186166+00:00"
 valid_until: "2026-10-19T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 43da4291a1e1bffc679c48b970e202d281a084de3debc53188fa9d30a8c9eefc
+  README.md: f489ec70c8a2e7443c9365866df429738b393dc28f55eabf12390bb4338ada2e
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: 50a01cdabcd22198620e3447ca92d8acb4f9d038f8925d32222a9b3433a8c952
   scripts/README.md: 7d6a2f51acbe6238418d3b036dbaeb4f7ca6886517da5db0ac5420520ad6614d
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: f3e3b2543bdc5169401c5dc163bcee9ba32533763517ef071e3b57ed7c30c32f
+  notes/backlog.md: 620adeb28be6e1bf82306925c266a7543f48cafa9b11f1636d78515cc329db79
   notes/resting_orders.md: 6cd08b06ebc691c06c60d238c9a5afd9fb55f78c83d128a16dc50d6f7b45349e
-  notes/journal.md: 10df8fd7198953eb4a4d7d58584be22522504cbcbcaecfcdc71766ffeff2be2b
+  notes/journal.md: e2fa417019e223275188be4cfb84e5f9ccb038813e6c5a27ee6b2434fbdda740
 ---
 
 ## Resume
@@ -43,6 +43,6 @@ With five bids, allordinaryholdings/bids losing andClarity29 gives trading termi
 
 RequestedMI128569…/f3de… completed20:15; correctedCBS/Fox receipts bind distinctCaro/Velshi events/Oct1Mitchellpoll. ExactBridge/WKEF/GrandHaven bodies unavailable; no measured new statewide poll/defensible numeric update established. Narrative impact remains possible. [Primary review](../data/deep_review_20261017/work/mi_alerts_1958_root_review.json). Whale dd8… materially reviewed20:07, not merely queued.
 
-Four later title-level leads through21:00:37 read at fixed21:04:59 cutoff: KansasDSCC/Venezuelasports/Israelpoll/Anthropiccompute. Current account verified; canceled Kansas/Israel bids stayclosed. Originalbodies/SECfiling unverified. Anthropiccapacity could be indirectORcontext; dollars do not measure contract's future weekly platform totals. No numeric prior/trade update. [Exact IDs/rows](../data/deep_review_20261017/work/tick204951_alert_rows.json).
+Four later title-level leads through21:00:37 read at fixed21:04:59 cutoff: KansasDSCC/Venezuelasports/Israelpoll/Anthropiccompute. Current account verified; canceled Kansas/Israel bids stayclosed. Originalbodies/SECfiling unverified. Anthropiccapacity could be indirectORcontext; dollars do not measure contract's future weekly platform totals. No numeric prior/trade update. Late21:06MI/Warnock support alert also reviewed: CNN reports planned campaigning, Grio body unavailable;21:12 sell5NO nets1.458 vs central2.20/selected1.70 hold payout, broad1.00/full-loss risk accepted. RetainNO44selected34/noadd, noTG. [Review](../data/deep_review_20261017/work/tick204951_late_mi_review.json). [Exact IDs/rows](../data/deep_review_20261017/work/tick204951_alert_rows.json).
 
 21:04quickstatusrc0/no failuremarker/hurdle0/watchlist0; nestedchildrcs notindependentlyexposed.21:05four canonicaldaemons count1/codecurrent/no restart; python/python3 both counted/excludeshellwrappers. Liveness/code-timing is not exhaustive feed progress.20:44Kelly/crux/20:47stateaudit clean7openindexed+1legacyclaim/0expiredholds remain dated;18UTC safety/16:48full discovery not repeated. No new full11-step/NAV claim. Config-only bilingualfeeds reload normally; off-chainSunday/brokeragework retired. Raw account/operator/copyrighted bodies/PDFs/invalid drafts staylocal; exact public financial IDs retained. [Previous integrity closeout](../data/deep_review_20261017/work/tick191427_followup_RESUME.json).

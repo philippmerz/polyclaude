@@ -1,0 +1,24 @@
+{
+  "schema": "late_MI_material_alert_review.v1",
+  "reviewed_utc": "2026-10-19T21:13:03.001027+00:00",
+  "alert_id": "5ef84b62bc3184801942e4f04fe94ce1a0f1b261",
+  "alert_ts": "2026-10-19T21:06:43Z",
+  "alert_title": "Raphael Warnock urges Democrats to unite behind Abdul El-Sayed in Michigan senate race - TheGrio",
+  "source_path": "notes/news_alerts.jsonl",
+  "line_sha256": "e581ba459d73b809a8ee823604f0a8aa08aedaddbbe04829b0a02aa12246ff42",
+  "source_check": {
+    "original_Grio": "Guessed Oct19 article slug returned403 Cloudflare; exact original article/publication timestamp unverified. Do not treat guessed URL as established publisher mapping. Raw block page stays local.",
+    "CNN_url": "https://transcripts.cnn.com/show/cnr/date/2026-10-18/segment/05",
+    "CNN_received_utc": "2026-10-19T21:11:33.806201Z",
+    "CNN_status": 200,
+    "CNN_raw_sha256": "949d52ac0de947e1e9b1ce84e6646158a375100a5680dad8cba519cfadf39aff",
+    "CNN_receipt": "logs/deep_review_20261017/tick204951_warnock/cnn.receipt.json",
+    "observation": "CNN October18 18ET rush transcript reports Warnock said that morning he planned Michigan campaigning for El-Sayed, with commentary on Black-voter turnout/coalition unity. This independently supports a campaign-support channel; it does not prove campaign visit occurred, the exact NBC wording, original Grio body, or realized turnout effect.",
+    "classifier_correction": "Candidate is already general-election Democratic nominee; no new nomination event. Expected party-surrogate support may help Democrats/hurt heldNO; campaign request is not observed coalition consolidation or a new statewide vote estimate."
+  },
+  "primary_judgment": "Acknowledge adverse qualitative evidence. Existing pNO44 is an uncertain election forecast allowing party-surrogate campaigning, not a thesis requiring no endorsements. No measured turnout/poll or ballot/candidate change establishes a defensible numerical likelihood update. Retain centralNO44/selected34/broadNO20/full-loss possibility; no add. Not a claim that endorsements cannot matter or a fitted zero effect.",
+  "current_quote": "tick204951_mi_quote.json; exact1838/630805/CID0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4;21:12:00.350648 book,1.348647833s old. Fee rate.04/exponent1/parity passes; min5shares.",
+  "management": "Fresh5NO sell at30c nets1.458 vs centralterminal2.20/selected1.70; broadNO20 gives1.00 and full loss remains possible. Constant3.2035% Aave over16d adds approximately.002 to1.458 before any deployment/funding cost, not a forecast. Retain tiny5NO/cost1.55 with no add; accept election/shared-politics correlation, not a recovery story. Existing whole-portfolio allordinary/bid losses+Clarity29 bookkeeping175.02/pair0->146.02 retained, not probability distribution. No below-fair hidden-info maker.",
+  "action": "No new order/prior/decision row or independent valuation count. No Telegram: reviewed campaign-support context without a material numerical thesis/action change. Earlier Whale TG1270 not repeated.",
+  "economics": "tick204951_mi_economics.json; offline current receipt-bound planning, not an execution certificate."
+}

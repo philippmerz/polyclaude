@@ -1,0 +1,26 @@
+{
+  "schema": "tick204951_final_offline_audit.v1",
+  "verified_utc": "2026-10-19T21:13:35.186166+00:00",
+  "result": "Evidence bindings pass. Public notes contain no raw account response, credentials, owner UUID, or full copyrighted source. Hex-pattern matches in notes are public condition/order identifiers, not private keys.",
+  "checks": {
+    "account_receipts": "Orders, positions, CTF, and reservation decompressed-byte and gzip hashes each match receipt and account manifest. Five LIVE BUYs, all zero matched; remaining risk 9.12; CTF mapping confirms Whale NO6 and both Spain outcomes0.",
+    "whale_market": "Gamma, fee, and book raw/gzip hashes and receipt times match packet. Quote packet hash matches economics file. Exact market identity and fee parity pass; book age 24.712528944s at receipt; no NO bids/YES asks.",
+    "news": "notes/news_alerts.jsonl captured prefix (885,867 bytes) hash matches the stored 00de\u202640fae3 digest; all seven selected line hashes/IDs/timestamps reverified at recorded line numbers. Current log has later appended bytes, so its full-file digest differs. Latest selected row is 21:00:37Z; cutoff 21:04:59.425662Z. Four later rows have title-only judgments.",
+    "journal": "Original2524160-byte prefix unchanged; both new suffix entries/links pass.",
+    "context": "All11source hashes match after lateMI follow-up;4packets withinvalidity, each<12000bytes.",
+    "late_MI": "Alert5ef84b62\u2026 source line captured; Grio guessed URL403/unverified, CNN HTTP200 raw/gzip receipt hashes pass. Primary reviewed exact CNN planned-campaign context, no new measured turnout/nomination. Current exactMI quote passes identity/parity/freshness; offline economics quote hash matches. Retain5NO after sell-net1.458 vs stressedhold1.70; broad1.00/full-loss risk remains; noadd/TG."
+  },
+  "sha256": {
+    "tick204951_root_review.json": "0117d85d55af143f6d508fdd5995b46ec2b17280d0656197ff7d3b37b3564af9",
+    "tick204951_account.json": "0e23d6921f1ef80dd52c69173596f06ebaa83c83b9a6ec7b988fd8b836909354",
+    "tick204951_alert_rows.json": "d532ee070b22ded04e06782775a8909cd1ce285aa384b3232344f09da7380a29",
+    "tick204951_status.json": "94133646f45b44eb67f87294a686180f1b804fa9c0c75995b69cbc7bddbf455b",
+    "tick204951_daemons.json": "366b7baf7a765d198e9e9a628eec84b2dc531dcaa91313f27470f162d6c4ca62",
+    "tick204951_whale_quote.json": "3dd58344b22a1d072e11ba857cdb908d470c5250b45b40fe1a802da35b23f1b0",
+    "tick204951_whale_economics.json": "735c204850015196305863fd26fcca1d414f222cdb550d4093947acf80a0694e",
+    "tick204951_late_mi_review.json": "ef0613e7d024ab9a0bea987f0a44facbf8516f52d35e28499b78ccee743755ad",
+    "tick204951_mi_quote.json": "0fc7f8c609a4a3509938c1c3f520127fafd020c4eac3a1bdb86e02f353565c20",
+    "tick204951_mi_economics.json": "5d3177186dc8639d03a485aee332e480c04b83a2da994a8aff75eeaba20e76fe"
+  },
+  "verification_scope": "Earlier delegated account/book/news bindings rechecked by parent; parent extends audit for explicit public source path, lateMI follow-up and final journal/handoff. Actual parent UTC clock above; no future timestamp adopted."
+}

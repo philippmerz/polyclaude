@@ -1,4 +1,5 @@
 {
+  "source_path": "notes/news_alerts.jsonl",
   "read_utc": "2026-10-19T21:04:59.425662+00:00",
   "file_bytes": 885867,
   "file_sha256": "00de0d11328476a8bacfb8a264c6cf029f1e930694ea78551bb1451a1390fae3",
@@ -105,5 +106,6 @@
         "relevance": "research_only"
       }
     }
-  ]
+  ],
+  "verification": "Captured whole-file bytes are now an exact hash-matching prefix of the append-only public source; later rows fall outside this fixed read cutoff."
 }
