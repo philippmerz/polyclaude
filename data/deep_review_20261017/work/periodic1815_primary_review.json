@@ -1,0 +1,47 @@
+{
+  "schema": "periodic_1815_openrouter_primary_review.v1",
+  "reviewed_utc": "2026-10-19T18:22:01.743046Z",
+  "alert_id": "5dc0d83066b111f8ce28b74a901b40936dd99f85",
+  "decision": "Retain existing5NO/noadd; no prior, order, reservation or transaction change. Old model-run story provides no new platform/target-week measurement.",
+  "exact_contract": {
+    "market_id": "5763815",
+    "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+    "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+    "NO": "Outside[725,775)T sum of displayed weeklyTotalsOct26/Nov2/Nov9/Nov16 at firstNov23display; Nov27ETfallback. Rounding/boundaries literal; current partial is not settlement."
+  },
+  "classification_correction": "MATERIAL relevance to held inventory was legitimate to review. Direction and novelty were unproved: higher volume can enter OR leave a bounded YES interval, so it does not monotonically hurtNO.",
+  "source_assessment": "Publisher published/modifiedOct7 10:36:31Z. It claims23T over6days forOxAlpha, not platformweeklytotal; reportsAug20test/Aug26identity, with last-week chronology inconsistency. OfficialOpenRouter confirms identityGLM5.3Flash/releaseAug20, not23T. Z.ai604bytebody is not an article proof.",
+  "surprise_bridge": "All52completedweeklychartrows unchanged vs18:02. GLM5.3Flash already appears in completedOct12=12.231280T within platform164.043986T; old launch claim is not an incremental23T to add. CurrentOct19partial18.173046T/cachedAt18:10:05 is not completed or any target week. No justified shift to existing growth/plateau regime weights.",
+  "forecast": "Existing subjectiveYES12/NO88, selectedNO73 after15pp reserve retained; broad adverseNO20 can favor sale. Not newly calibrated or guaranteedfloor.",
+  "exit_comparison": {
+    "quote_utc": "2026-10-19T18:18:31.291688+00:00",
+    "shares": 5,
+    "full_sell_net": 3.00242,
+    "fee": 0.04758,
+    "best_bid": 0.61,
+    "selected_terminal": 3.65,
+    "one_year_10pct_exit_sensitivity": 3.302662,
+    "broad_adverse_terminal": 1.0,
+    "best_bid_below_selected": true,
+    "book_age_at_receipt_seconds": 42.07095289230347,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    }
+  },
+  "additional_entry": "FiveNO at captured70c ask costs3.54201 includingfees, paperselectedsurplus.10799 beforecash/funding/operations. This does not fail a made-up profit floor. No add chosen: old story adds no underwriting information; tiny current pilot size and jointAI/model-tail uncertainty remain deliberate. No new entry authorization or maker posting; research arithmetic alone is insufficient.",
+  "portfolio": "SharedAIrelease/demand factors with reviewedAIcandidates; no independence/hedge credit. Current holding inventory basis remains18:04:53HTTP200, not a new authenticated probe. Other positions/fourBUY7.52/Idaho22UTCpull unchanged.",
+  "source_units": {
+    "data/deep_review_20261017/work/openrouter_1815_alert_facts.json": "1ed7285e35cfb4f6e3d5ee2ea819ef998a01b73545f69a38e7ca4549b02a70e9",
+    "data/deep_review_20261017/work/openrouter_1817_chart.json": "50936400fde56fc3330c3d5163be4f5c37adf2e5274f549eef50c5e8320fd162",
+    "data/deep_review_20261017/work/openrouter_1818_quote.json": "c2444971e5d11d352fbd6309ad220a136fa0ae24dbc55332ce51aeb11680b3a3",
+    "data/deep_review_20261017/work/openrouter_1818_economics.json": "0f96e9b77092647a4494595608458ae33c67527be84f9b20a60213b6b003d6f4"
+  },
+  "financial_observation": "Only scoped public source/quote reads; no new bankroll/NAV/CSV row. Bankroll and account retain18:03\u201304 clocks.",
+  "Telegram": "none; staleheadline correction without trade/prior/position change is not material operator update",
+  "new_research_cases": 0,
+  "research_counts_unchanged": "345valued/9blocked/364factual/2282pending,next376",
+  "bounded_contract": "End after source/proof/docs verification; no goal lifecycle change, new timer or idlefollowup. Existing22UTC light/Idaho pull, fullOct20 02UTC."
+}

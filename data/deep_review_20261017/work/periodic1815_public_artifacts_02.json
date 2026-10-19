@@ -1,0 +1,20 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "files": [
+    {
+      "path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.intent.json",
+      "bytes": 329,
+      "sha256": "28ee4900403408fc1b3229d3a97651918f4b166d58860776f992bb746e5403b0"
+    },
+    {
+      "path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.receipt.json",
+      "bytes": 960,
+      "sha256": "035baf260225c620c93af3a9bac102fb6295e8eb64c6f36b398ae7287d6d74ec"
+    },
+    {
+      "path": "research/2026-10-19-openrouter-1815-review.md",
+      "bytes": 3188,
+      "sha256": "af2dfe77795b484f9886e61da5e5427831f2c0b3e1bed0a95c3873129f84205d"
+    }
+  ]
+}

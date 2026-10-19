@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "files": [
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/official/zai_glm_flash.intent.json",
+      "bytes": 291,
+      "sha256": "0287386d01fe56c3930389e3fb029efd56fcdeffb68f93ab746f6c6c6fd735e5"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/official/zai_glm_flash.receipt.json",
+      "bytes": 864,
+      "sha256": "7b5d09c36a20e5423c19d5c77fa29ead4e42b9119fdad07be77b5e15b78839f2"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/capture_manifest.json",
+      "bytes": 2142,
+      "sha256": "54eb9bde017f261c51ea25ad89871e6d484d3342703c3f8ee7f7a5d6f9e8ead9"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/0112_fee.body.json.gz",
+      "bytes": 311,
+      "sha256": "7d270dadeeff5e7b20a999c4b5bfe3cdf66844126d12a69407c4cbd4bc5dac4d"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/0112_fee.receipt.json",
+      "bytes": 655,
+      "sha256": "b1a7956ef0a4772b484af91ee46057180b0b73575bad06f32b8c2cc25be5fb29"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/0112_gamma.body.json.gz",
+      "bytes": 1960,
+      "sha256": "7dcf0dced7ffcc2b2fe4fa39c58bb83d024c473160c7bbc380240e5f90cc6fcd"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/0112_gamma.receipt.json",
+      "bytes": 687,
+      "sha256": "76c19082c54d0a17c4d91597eda4a1ed458d1e75806ded6236cb46b1a7109d68"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/books_batch_01.body.json.gz",
+      "bytes": 542,
+      "sha256": "d0764d8e503d06a94d528f07e618adcb9f0c0ade10d4e353c907c41ecb7f0a49"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1818_quote/public/books_batch_01.receipt.json",
+      "bytes": 777,
+      "sha256": "d84d71a533a4e5ad3be66684c706fc6bdc58d54eab8b2dbb9a81ca2832b6161f"
+    },
+    {
+      "path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.body.json.gz",
+      "bytes": 6061,
+      "sha256": "1250bff197773864610663f2120298176c1e190f2b4698bd33958ba5f0f1d0aa"
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema": "openrouter_1817_chart.v1",
+  "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+  "capture": {
+    "received_utc": "2026-10-19T18:17:34.678895Z",
+    "started_utc": "2026-10-19T18:17:34.525640Z",
+    "status": 200,
+    "headers": {
+      "age": "171",
+      "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600",
+      "content-type": "application/json",
+      "date": "Mon, 19 Oct 2026 18:17:34 GMT",
+      "last-modified": "Mon, 19 Oct 2026 18:10:11 GMT"
+    },
+    "raw_sha256": "82845dfc247b57c62339540d344299742ced737732b929843bd041c1beec0897",
+    "gzip_sha256": "1250bff197773864610663f2120298176c1e190f2b4698bd33958ba5f0f1d0aa",
+    "body_path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.body.json.gz",
+    "receipt_path": "logs/deep_review_20261017/periodic1817_openrouter/weekly_chart.receipt.json"
+  },
+  "cachedAt_utc": "2026-10-19T18:10:05.133000+00:00",
+  "weekly_rows": 53,
+  "completed_points_compared": 52,
+  "all_complete_rows_identical_to_1802": true,
+  "recent": [
+    {
+      "label": "2026-09-21",
+      "total_T": 145.845105335054,
+      "others_T": 55.570503829007,
+      "named_zai_or_alpha_T": {
+        "z-ai/glm-5.3-flash-20260826": 16.316686693493,
+        "stealth/space-bunny-alpha": 13.858497514441
+      }
+    },
+    {
+      "label": "2026-09-28",
+      "total_T": 165.856049857563,
+      "others_T": 53.522124129984,
+      "named_zai_or_alpha_T": {
+        "stealth/space-bunny-alpha": 38.661199699827,
+        "z-ai/glm-5.3-flash-20260826": 9.733199290942
+      }
+    },
+    {
+      "label": "2026-10-05",
+      "total_T": 171.842501724714,
+      "others_T": 66.173540545806,
+      "named_zai_or_alpha_T": {
+        "z-ai/glm-5.3-flash-20260826": 12.235607464492
+      }
+    },
+    {
+      "label": "2026-10-12",
+      "total_T": 164.043985914931,
+      "others_T": 67.468271267061,
+      "named_zai_or_alpha_T": {
+        "z-ai/glm-5.3-flash-20260826": 12.231280348768,
+        "z-ai/glm-5.3-20260816": 5.192182103497
+      }
+    },
+    {
+      "label": "2026-10-19",
+      "total_T": 18.173045694762,
+      "others_T": 7.135862706125,
+      "named_zai_or_alpha_T": {
+        "z-ai/glm-5.3-flash-20260826": 1.332411365135,
+        "z-ai/glm-5.3-20260816": 0.568718815343
+      }
+    }
+  ],
+  "target_weeks_present": [],
+  "limits": "Chart top-model weekly displayed totals include Others. CurrentOct19 partial is neither final weekly result nor target sum. Absence of OxAlpha from displayedtopnames does not establish zero traffic; others includes unlisted models. Cache clock is not exact usage cutoff."
+}

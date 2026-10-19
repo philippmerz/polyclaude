@@ -1,0 +1,1 @@
+{"name":"weekly_chart","request":{"method":"GET","read_only":true,"scope":"Held112 target displayed weekly totals and new named-model headline","url":"https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart"},"schema":"read_capture.intent.v1","started_utc":"2026-10-19T18:17:34.525640Z","timing_basis":"call_window"}

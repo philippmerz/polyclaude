@@ -1,0 +1,55 @@
+{
+  "schema": "public_artifact_shard.v1",
+  "files": [
+    {
+      "path": "data/deep_review_20261017/work/openrouter_1815_alert_facts.json",
+      "bytes": 4103,
+      "sha256": "1ed7285e35cfb4f6e3d5ee2ea819ef998a01b73545f69a38e7ca4549b02a70e9"
+    },
+    {
+      "path": "data/deep_review_20261017/work/openrouter_1817_chart.json",
+      "bytes": 2641,
+      "sha256": "50936400fde56fc3330c3d5163be4f5c37adf2e5274f549eef50c5e8320fd162"
+    },
+    {
+      "path": "data/deep_review_20261017/work/openrouter_1818_economics.json",
+      "bytes": 3557,
+      "sha256": "0f96e9b77092647a4494595608458ae33c67527be84f9b20a60213b6b003d6f4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/openrouter_1818_quote.json",
+      "bytes": 10766,
+      "sha256": "c2444971e5d11d352fbd6309ad220a136fa0ae24dbc55332ce51aeb11680b3a3"
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1815_primary_review.json",
+      "bytes": 4072,
+      "sha256": "7d87c0df4aba541c20e13fd3c7d597f82ada01b2c9195e8267351e75f3e548f9"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/newsanyway/article.intent.json",
+      "bytes": 331,
+      "sha256": "409ca13f86c5fde929348a19fcec0a20cb656f4a068c65fe033d41f8536f153e"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/newsanyway/article.receipt.json",
+      "bytes": 843,
+      "sha256": "06c37877d9ca6235870b5579ef73604fa772caf89f87254a96c0df550c8f626a"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/newsanyway/final_url.json",
+      "bytes": 126,
+      "sha256": "072edb4de02fd30b4a56eaa73f63bc55724477faac503184725f92403f838458"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/official/or_oxalpha.intent.json",
+      "bytes": 295,
+      "sha256": "9c0a48a7d960d7c78faf56909e3bdd4270a50ba4d02aac0b9d99c7eadcff9be8"
+    },
+    {
+      "path": "logs/deep_review_20261017/openrouter_1815_alert/official/or_oxalpha.receipt.json",
+      "bytes": 851,
+      "sha256": "dd67e6f7650af83f56a30376ad9aaf4e271da8dbbe127c88e6dba3b40b22f078"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "scoped_public_archive_manifest.v1",
+  "compiled_utc": "2026-10-19T18:23:56.970711+00:00",
+  "scope": "Bounded existing-position news review: source facts/provenance, actual weekly data, exact public quote/economics and primary decision. No new account/financial probe or research case.",
+  "file_count": 23,
+  "shards": [
+    {
+      "path": "data/deep_review_20261017/work/periodic1815_public_artifacts_00.json",
+      "bytes": 2096,
+      "sha256": "e15b8920c4afd0281956df787b19839f13b9632b9f6c25f82850e22f2cc28388",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1815_public_artifacts_01.json",
+      "bytes": 2184,
+      "sha256": "02afc0b5bf0019174c447ee0f5fb523a8516546cd4a994bcb02977297be5bc0d",
+      "files": 10
+    },
+    {
+      "path": "data/deep_review_20261017/work/periodic1815_public_artifacts_02.json",
+      "bytes": 657,
+      "sha256": "ec703335d3f30490b9c21c9ff2ee2a16c291c54809af7306915daa237ed2941c",
+      "files": 3
+    }
+  ],
+  "verification": {
+    "size_and_sha256": true,
+    "gzip_payloads_decoded": 4,
+    "source_body_hashes": "Primary verified publisher/OpenRouter model-page local bodies; metadata and paraphrases are public. Chart/quote raw bodies included and hash-bound."
+  },
+  "excluded": [
+    {
+      "paths": "openrouter_1815_alert/google_alert_link.* and top-level final_url.json",
+      "reason": "Consent-response capture remains local; no source article obtained there."
+    },
+    {
+      "paths": "openrouter_1815_alert/newsanyway/article.body.json.gz and official/*body.json.gz",
+      "reason": "Article/model-page/nonarticle bodies retained locally; public source capsules/receipts provide URLs, clocks, status, hashes and paraphrases without duplicating full pages."
+    }
+  ],
+  "financial_actions": 0,
+  "production_code_changes": 0
+}
