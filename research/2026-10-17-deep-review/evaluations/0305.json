@@ -1,0 +1,57 @@
+{
+  "review_index": 305,
+  "market_id": "5766859",
+  "condition_id": "0x8489416bdafdf553ec52687e8b755f5182f15b5b2810b7c9e4c6f530671f91ba",
+  "criteria_sha256": "43085d27af8b2cae82e9274e9001fe35148aef120f85f990874683975ed03ba2",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactRKSI IncheonIntl NOAAviewer highestTemp onlocalOct18, whole°C. Freezeatfirstfollowing-datepoint orOct19 23:59ET(Oct20 03:59Z), whicheverfirst. IfNOAAunavailablebydeadlineuseWU; ifnoeitherdata lowestbracket. Clearlyerroneousdata maywait7calendardays/clarification. APIendOct18 12Zisnotliteralday/fallbackdeadline. Target20°C; half-hourFAAmax23°C isproxyonly, notnamedsourcecertificate.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5766859",
+      "observed_utc": "2026-10-19T01:28:49.031058+00:00",
+      "finding": "RootexactID/CID/fullfrozenrulematch:closedtrue/acceptingOrdersfalse/currentumaResolutionStatusresolved/outcomePrices0,1. Arraystillproposed/proposednotusedforcurrentstatus. Definitivenon-tradingvenue record, notinferencefromAPIend/missingbooks."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=rksi",
+      "observed_utc": "2026-10-19T00:23:57Z",
+      "finding": "CapturedNOAAvierwerHTTP200onlyJSshell; documentedSynopticclientfollowup00:45returns403/tokenrules. DoesnotproveNOAAdataabsent. FAAhalf-hourMETAR23°C proxy cannotcertifyexactnamedtablemax."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No independent current probability claimed for a resolved/non-trading instrument.",
+    "reasoning": "Venuecurrentterminalstatusalone establishesfactualexclusion; exact NOAAmaximum/freeze/correctionfinality remains unverifiedbyroot."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Venueclosed/resolved/notaccepting; noexecutablebookqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Venueclosed/resolved/notaccepting; noexecutablebookqueried."
+      }
+    },
+    "status_receipt": {
+      "url": "https://gamma-api.polymarket.com/markets/5766859",
+      "started_utc": "2026-10-19T01:28:48.853069+00:00",
+      "received_utc": "2026-10-19T01:28:49.031058+00:00",
+      "http_status": 200,
+      "raw_sha256": "a2e3c823ebd4c35e2ab87b3ab9f13cb35667c33860bd1d7e11aef504d9801e12",
+      "gzip_sha256": "33a6456413f554e968185ebb510a87081c877673ed3e6bc79350c7ae55ce2328",
+      "gzip_path": "logs/deep_review_20261017/case305_gamma_0135/gamma.body.json.gz"
+    },
+    "execution_authority": false
+  },
+  "verdict": "Factualexclude becauseexactvenueexplicitlyclosed/resolved/nonaccepting. Notanindependent NOAAresultcertification. No order/prior/forecast orprobabilityscreen.",
+  "reopen_condition": "Onlyanexplicitvenuecorrection/reopening withnewexactsource/rule/statusreview; neverreplayclosedcaseautomatically.",
+  "evaluated_utc": "2026-10-19T01:30:26.885528+00:00",
+  "question": "Will the highest temperature in Seoul (Incheon) be 20°C on October 18?",
+  "valuation_author": "primary_operator",
+  "original_index": 305,
+  "report_sha256": "c68c49086617808f7a5e1d8bbdf6cf5b0f618c76501bdbc624b5cb617f4f52a8"
+}

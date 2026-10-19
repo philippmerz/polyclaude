@@ -1,0 +1,61 @@
+{
+  "schema": "polyclaude.primary_daily_yield_first_passage.v1",
+  "review_index": 307,
+  "adopted_utc": "2026-10-19T01:55:12.211238+00:00",
+  "primary_numeric_outcome_prices_inspected_before_adoption": false,
+  "automated_terminal_status_parser_preflight": true,
+  "p_yes": 0.352134392,
+  "low": 0.1,
+  "high": 0.75,
+  "entry_reserve_pp": 15,
+  "literal": "Treasury daily published30Yr>=5.80% anydateSep3-Dec31inclusive. Notintraday/othermaturity. Noqualifier+absentDec31databyJan14 2027 23:59ET=>NO; APIendmidnightnotliteralcutoff.",
+  "data_unit": "data/deep_review_20261017/work/0307_curve_diagnostics.json",
+  "macro_unit": "data/deep_review_20261017/work/0295_macro_catalysts_2320.json",
+  "root_series_verification": "IndependentstdlibHTMLParser exactbc30year/date classes matchesall199CSVrows/raw+gzip+CSVhashes; operativewindow30publishedrows/noqualifier, latest5.43/high5.67. Priorhelper31rowcountcorrected; no inferredSep7/Oct12 observation.",
+  "method": "Circular5-published-observation blockbootstrap centeredlatest120changes. DailySD5bp80%/7.5bp20%; drift0bp60%/+0.6bp25%/-0.6bp15%;51futureobservations;100kcommonseedpaths; ANYpublishedpointmax>=latent5.795 proxyfor5.80.1%source/adminbranch conditionalYES50%.",
+  "seed": 30720261019,
+  "paths_per_branch": 100000,
+  "branches": [
+    {
+      "drift_pp": 0,
+      "sd_pp": 0.05,
+      "weight": 0.48,
+      "p_yes": 0.27703
+    },
+    {
+      "drift_pp": 0,
+      "sd_pp": 0.075,
+      "weight": 0.12,
+      "p_yes": 0.44333
+    },
+    {
+      "drift_pp": 0.006,
+      "sd_pp": 0.05,
+      "weight": 0.2,
+      "p_yes": 0.56507
+    },
+    {
+      "drift_pp": 0.006,
+      "sd_pp": 0.075,
+      "weight": 0.05,
+      "p_yes": 0.63638
+    },
+    {
+      "drift_pp": -0.006,
+      "sd_pp": 0.05,
+      "weight": 0.12,
+      "p_yes": 0.09471
+    },
+    {
+      "drift_pp": -0.006,
+      "sd_pp": 0.075,
+      "weight": 0.03,
+      "p_yes": 0.27562
+    }
+  ],
+  "source_judgment": "HistoricalSD20/60/120/all5.10/4.50/4.01/3.92bp;recentmean+0.43bp not persistentknown drift.5bpbase/7.5bptailallow fiscal/term-premium/oil/geopolitical shocks; officialCPI.6m/m3.7y/y andSeptFed25bphike motivateuncertainty/smallupwarddriftmixture, not deterministic yieldprediction. Sameknownmacrocalendaras295, distinctmaturity/rawseries/threshold.",
+  "future_obs": "54weekdaydatesOct19-Dec31minus3customarypublicationholidays=>51assumed; publicationcalendar notguaranteed,49/54sensitivity. Missingobservedweekdaysnotimputed.",
+  "rounding": "5.795proxy notverifiedroundingconvention; exactlatent5.80sensitivityseparate. Settlement actualpublishedtwo-decimalrate.",
+  "limits": "Weights/drift/volscale/sourcebranch subjective/unfitted, notcalibrated posterior;5-stepdependence/one2026regime insufficient structural fiscal/term-premium/meanreversionmodel. Broad10-75%includes jumps/negativedrift;15ppreserve separatepolicy, notconfidencefloor. Reusemethod295notprobability; Treasurycontracts stronglycorrelated. Noexecutionauthorization.",
+  "sensitivity_file": "research/2026-10-17-deep-review/models/treasury307_sensitivity_0155.json"
+}

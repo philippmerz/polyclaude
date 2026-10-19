@@ -1,0 +1,15 @@
+{
+  "review_index": 307,
+  "adopted_utc": "2026-10-19T01:55:12.211238+00:00",
+  "method": "Commonseed5-stepbootstrap isolatedsensitivities, notnewposterior",
+  "cases": {
+    "neutral_historical_sd": 0.18308,
+    "recent120_mean_extrapolated": 0.47967,
+    "low_rates": 0.09471,
+    "neutral_49obs": 0.26727,
+    "neutral_54obs": 0.29083,
+    "neutral_exactlatent5_80": 0.27134,
+    "small_positive_drift_0_2bp": 0.36393,
+    "high_vol_positive_drift": 0.63638
+  }
+}

@@ -31395,3 +31395,35 @@ Filesystem99%/261MiBthreatensnewsourcepersistence. Removedonly4regenerablepipcac
 - 300sourcechallenge loweredYES80.464→74.592 before entry; current19cpassive>18ccap→dryrunSKIP/0financialcalls/no prior, noautomaticretry. Normalmonitorreload verified01:01/samePID83922; DWembassysecurityheadline is not a leadershipchange, originalembassypostunverified. [Outcome](../research/2026-10-17-deep-review/delcy300_unplaced_outcome_0120.md).
 - Compactness/integrity:59,584Bcandidateindex archivedbyte-exact, hotindex~1.7KB; resume8KBcap verifiesallhistory but bounds emittedmetadata. New probability/complement/stress guard prevents stale standardeconomics after sourceupdates (15tests); resume9tests; malformedcriteria-date guard43tests. Current official fee docs confirm BUYfees on top of pre-fee notional; no feeenginechange. Root caught helpertruncatedorderIDs and falseinsurance-absence summary; raw evidence correct, explicit rootcorrections saved. Claim snapshot8indexed+1deindexed/allpriorrows+acks preserved. Threeownprior date fields corrected; no pchange.
 - Storage99%/~179MiBfree, apt332MBoperatoractionstillpending; no financial/source/operator evidence deletion. Usage67%used/33%headroom; cheap factualhelpers, primaryprobability/riskjudgment. Continuefinitegoal with per-case save; no new timer/rawheadlineTG.
+
+
+## 2026-10-19 01:50 UTC — Sedgwick canceled; small-unit review continues
+
+- DEC224: one cancel originalSedgwick5YES20c/$1 under standing cancel-first on unspecifiedCBSlead. Root checked raw/gzip hashes/exact fullIDs/terminalCANCELED0/exhausted125trades/noindexedholding/bothCTFs0 after300s; only its reservation8→7, other7unchanged. SevenBUY14.62; pUSD17.826890/free3.206890 fixed01:44:20/sequential/notNAV. Old10UTC pull complete early; noautorepost. [Outcome](../research/2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md). CBShelper oppositeleader comparison corrected; olderOct9–10D+1 is not newerOct13–14R+1, no new survey identified/pchange.
+- 307valued/4blocked/348factual/2341pending, active307. Taipei30672.8851%YES fails15ppreserve at63ctaker/62cmaker; noentry. 305/311/339/345 excluded ONLY exact venue terminalstatus, not inferred event outcome. Deterministic30case preflight flags3terminal; no smallmodel probability filter or passquota. Source30730publishedwindowrows, correcting helper31; own30Yseries required.
+- Reversible four-Oct12diagnostic gzip archive ROOT verified byte-for-byte/raw+gzipSHA/mode/originalabsence; reclaimed48,708,685B, no financial/source/operator evidence deletion. [Archive manifest](../data/deep_review_20261017/work/diagnostic_archive_manifest_0140.json).
+
+
+## 2026-10-19 02:08 UTC — HLE remaining9NO closed/DEC225
+
+- OnevettedFOK30c matched9/9; rootverifiedexactsuccessfulreceipt/transfers−9NO/+2.6244pUSD, fee.0756/projectgas0, directMATCHED/indexedabsence/fixedCTF0. Close2.6244certainty vs2.25central/1.35selected/3.42upper; NO25unchanged/upperfavorshold. Cachedsame65row53.6Accuracy/currentoriginunknown;Diamond59.9notmetric. Returnedpublictape533/no post22trades, no newverifiedfundamental/informedtrade; quotebidimprovementassessed. NoHLEremainder/replay/re-entry. [Outcome](../research/2026-10-19-0200-hle-exit.md). Fullhistoricalpriorpreservedunder_closedkey; othersunchanged.
+- MI dailyrotation: fullcurrentrules/identitiesread, pollages+1analyticD55.6488%→retain56/44/NOselected34. Rasmussen46/44wasALREADY0059modelinput, no doublepolladdition. 5NO2.20central/1.70selected vs1.458indicativenetexit; broadNO20%favorssale. [Derivation](../data/checkin_20261019T0200_michigan_rederived.json).
+
+
+## 2026-10-19 02:11 UTC — scheduledYB/gas pulls complete/DEC226
+
+- Onecancelperoriginal293/296order; after300s ROOTraw200HTTP/clocks/fullIDs/terminalCANCELED0/exhausted5orders+126trades/indexedabsence/CTFs0verified. Onlytworeservations7→5, other5exact; no acquisition/spend/realizedPnL orrepost. FiveBUY10.82, pUSD20.451290/free9.631290 fixed02:07:14/sequentialnotNAV. [Outcome](../research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md). Priorsunchangedarchived, old02pullscomplete.
+- MaterialTG1258delivered: verifiedHLEsale/netfees; cancellations; freshbankroll196.94inclgas/191.12tradingmid/188.95indicativetradingdepth;308valuations/storage99%incident. RawRSS/TGspamremainsdisabled.
+- Standingorders hotunit now2KB; complete precedingfinancialhistorybyte-exact same-directoryarchive/SHA/linksretained. OneguessedIdahoreportlinkwasrejectedbylocalvalidation andremoved; currentproofsupplies exactidentity, no guess retained.
+
+
+## 2026-10-19 02:22 UTC — requiredcheck complete; storage repaired; resume308
+
+- [Fullportfolio/risk/source review](../research/2026-10-19-0200-checkin.md); authoritativebankroll196.94/gas5.82/tradingmid191.12/indicativetradingdepth188.95/residual20.72. Appendedoneexisting-checkCSVpoint, noadditionalNAVrequests. InsuranceCLEAN7indexed+1deindexed afterHLEretirement; currentfiveBUY10.82/free9.63129.
+- MIalert6d2e5ba0c94c3340ad8e0f3989ef48db2d93b6b4 primaryCNN13:13:23ZOct18predatesbaseline; no measuredpoll/withdrawal/ballotchangeininterview, reclassMINOR/hold44/noadd. Messialerts53cf7103d7f6b741794e9f5bb2d2692de532ac7e andccd3830a525122341ec98fab701e9e69168246cf contextonly. No newopportunityalerts. Whale02:14both8mESTIMATEonly; retain6NO/noadd. OROct12nowcompleted164.04388, correct+1.70928vs22baseline; selectedholdunchanged/notcalibratedlowerbound.
+- DEC156routepolicy/209canceladministrativeauditsresolvedwithoutROI/underlyingeventgrade. DEC227smallpreparsecallreceiptutility/representationlabels;56focusedtestsPASS. Gitrepackonce/rootall12,234objectset+HEAD/indexpreservationPASS,69,754,880Bfreed; no snapshotarchive/source/financial/operatorrecorddeletion. Due02discoveryresumed02:19; raw+134batchsections separatelyindexed/incompletepagecaps, no smallmodelprobabilityfilter/frozen3kscopechange.
+- Research308valued/4blocked/348factual/2340pending,660base55revisions;308active, fullrule/factunitread, latestprimarynewsresearchbegun/no ownnumericquote/modeladoptedyet. Save/indexeachcompletion; unitbudget2–5KB/hardresume8000B.
+
+## 2026-10-19T02:30:54.895428+00:00 — compact closeout verification
+
+02UTC finances are final: no replay. Discovery overlap audit covered3,080rows/134 individually hashed batches,3exact inventory CIDs/0criteria changes; absent filtered holdings do not establish settlement. CSV208 matches the authoritative check;10 existing chart tests pass. Small-unit tools/docs complete. Handoff validation found3nonallowlisted financial hash sources; removed only those hash-list entries, retained financial records/links, rebuilt bounded research packet. New CSV row line ending normalized to existing LF; no values changed. [Audits](../data/checkin_20261019T0220_closeout_validation.json) · [CSV](../data/deep_review_20261017/work/closeout_csv_0230.json).

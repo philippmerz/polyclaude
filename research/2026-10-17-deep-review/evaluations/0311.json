@@ -1,0 +1,44 @@
+{
+  "review_index": 311,
+  "market_id": "5720745",
+  "condition_id": "0xee0a09fd64ee6c0118be527abd171391f2c467e489e9334d6a7093b24aeaf2ad",
+  "criteria_sha256": "34e67daa754245609193eca1b74dc2ff812dec15ded6b11170559d6aedcc509d",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactBenGurionLLBG NOAATemp maximumlocalOct17, whole°C; firstfollowing-datepoint orOct18 23:59ET(Oct19 03:59Z)freeze; NOAAunavailable→WU, neitherdata→lowest. Clearlyerroneousdatamaywait7calendardays. NOAAJSshell/notfound andfuturefallbackclockdoNOTproveactualmax; onlyterminalvenue statusestablishescurrentirrelevance.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720745",
+      "observed_utc": "2026-10-19T01:32:36.563039+00:00",
+      "finding": "Rootraw/gziphashverified, fullfrozenidentity/rules/outcomes/assetsmatch. Explicitclosedtrue/acceptingOrdersfalse/currentUMAresolved/exactbinary0/1pair. Nontradingterminalstatusisobserved, notinferredfromeventdate/missingbook/model."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No independent eventprobability asserted for exactterminal/nontrading venue case.",
+    "reasoning": "Literalruleparsed; fullbodyhashidentity/statusproof establishescurrentineligibility. Noothercaseistransferred/rejectedbyanalogy."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0140/case_0311.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.",
+  "reopen_condition": "Onlyexplicitvenuecorrection/reopeningwithexactrule/source/eligibilityreview; neverautomaticreplay.",
+  "evaluated_utc": "2026-10-19T01:44:11.376549+00:00",
+  "question": "Will the highest temperature in Tel Aviv be 26°C on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 311,
+  "report_sha256": "368444c40af9398b2afd1d3532bbdd8b797f199f64fcbe2419c67e7ef71e3f41"
+}

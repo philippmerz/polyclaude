@@ -1,5 +1,5 @@
 {
-  "next_id": 224,
+  "next_id": 228,
   "decisions": [
     {
       "id": 1,
@@ -3122,9 +3122,10 @@
         "guard"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Process prediction is supported by the current route guard and focused tests: a non-maker single-market --execute with no urgency reason is rejected before market lookup; maker entry and explicit urgency remain permitted. This verifies implementation behavior, not every attempted order during the review interval.",
+      "calibration_delta": "Not applicable: deterministic process claim, not a probabilistic forecast. No observed attempt/override sample or counterfactual executable-route ledger was checked, so do not claim quantified ROI improvement or avoided fees.",
+      "lesson": "Keep ordinary single-market entries maker-or-skip; log any urgency override. Assess economic effect only from matched execution records and contemporaneous fee/spread/slippage alternatives. The cited $0.18183 taker fee motivates the control but does not establish causal savings.",
+      "resolved_at": "2026-10-19T02:24:01Z"
     },
     {
       "id": 157,
@@ -4438,9 +4439,10 @@
         "ipo-safety-cancel-20261017"
       ],
       "slug": "will-anthropic-have-the-highest-ipo-market-cap-2026-673",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Canceled unfilled; no realized P&L and no grade of the underlying IPO event. The record reports authenticated CANCELED/zero matched and both case158 CTF balances zero at Polygon block 95717478; independent snapshot has no matching open order and records the target reservation as cancelled.",
+      "calibration_delta": "None. This is a cancel-first process outcome; the underlying case158 event remains unresolved. Its dated 24/76 assessment is not calibrated or outcome-graded by cancellation.",
+      "lesson": "When a load-bearing valuation input becomes uncertain, cancel-first can cap exposure while underwriting resumes. Track cancellation/zero-fill separately from thesis resolution; do not score an unfilled order as a correct NO forecast or as a loss.",
+      "resolved_at": "2026-10-19T02:24:01Z"
     },
     {
       "id": 210,
@@ -4816,6 +4818,143 @@
       "filled_shares": 6,
       "research_report": "research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md",
       "verification": "data/deep_review_20261017/work/0299_root_fill_verified_0125.json"
+    },
+    {
+      "id": 224,
+      "timestamp": "2026-10-19T01:51:43Z",
+      "type": "skip",
+      "thesis": "Canceled original Sedgwick5YES20c/$1 pending BUY under standing cancel-first for unspecified CBS one-point poll lead. Raw terminal/trades/index/CTFs after300s verify zero fill; no probability change or repost.",
+      "confidence": "high",
+      "prediction": "Closed unfilled; oldOct19 10UTC pull completed early. No new identified CBS survey; priorYES49 unchanged. Any re-entry needs fresh independent gates.",
+      "size_usd": 0,
+      "resolution_at": null,
+      "tags": [
+        "polymarket",
+        "cancel-unfilled",
+        "deep-review",
+        "us-politics"
+      ],
+      "slug": "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "original_decision_id": 212,
+      "financial_status": "CANCELED_ZERO_FILL",
+      "order_id": "0xf13217b0e8b865d920d2ef56624f344e37284712737e479ba408a15e47c8e955",
+      "condition_id": "0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5",
+      "market_id": "5790793",
+      "filled_shares": 0,
+      "research_report": "research/2026-10-17-deep-review/sedgwick2054_canceled_outcome_0150.md",
+      "verification": "data/deep_review_20261017/work/sedgwick_root_verified_0150.json"
+    },
+    {
+      "id": 225,
+      "timestamp": "2026-10-19T02:09:25Z",
+      "type": "close_position",
+      "thesis": "Close remaining9HLEOpenAI>=55 NO: freshfee-net2.6244 exceeds terminalEV2.25central/1.35selected; upper3.42 favorshold. Source/hidden-info/quote-only move checks retainNO25%, no new fundamental claim. OneFOK30c matched9/9.",
+      "confidence": "medium",
+      "prediction": "Exactsuccessfulreceipt/trade/direct/index/CTFprovezeroHLEremainder; no automaticre-entry. Actualnet2.6244, fee.0756, projectgas0.",
+      "size_usd": 2.6244,
+      "resolution_at": null,
+      "tags": [
+        "polymarket",
+        "hle",
+        "close",
+        "verified-execution",
+        "forward-ev"
+      ],
+      "slug": "will-the-highest-score-achieved-by-an-openai-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723225144064",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "financial_status": "CLOSED_FULLY_VERIFIED",
+      "order_id": "0xf438c78e9691400eab1dcf02072159564c7381db29d414b6f403e3e875439581",
+      "tx": "0x8c680115df6bc7b73bed5eda398399bd9139b6af27704b91e3278251dec001c7",
+      "condition_id": "0xd30e3b4e2d6bf4594f44ad982b55435c3add71d3622993b0dee67354defaf598",
+      "asset": "2261859210057397360733755370829699556983953980550942465322842594827769255576",
+      "shares": 9,
+      "side": "NO",
+      "gross_proceeds_pUSD": 2.7,
+      "net_proceeds_pUSD": 2.6244,
+      "execution_fee_pUSD": 0.0756,
+      "project_wallet_gas_debit": 0,
+      "before_sale_indexed_basis": {
+        "size": 9,
+        "avgPrice": 0.1599,
+        "initialValue": 1.4399,
+        "totalBought": 38,
+        "realizedPnl": -7.6719
+      },
+      "basis_not_independent_cost_audit": true,
+      "research_report": "research/2026-10-19-0200-hle-exit.md",
+      "verification": "data/deep_review_20261017/work/hle_root_fill_verified_0208.json"
+    },
+    {
+      "id": 226,
+      "timestamp": "2026-10-19T02:12:37Z",
+      "type": "skip",
+      "thesis": "Scheduled02UTC cancelALLremaining293YB and296gas BUYs. Onevettedcancelperorder; rootafter300s terminal/trades/index/CTFs0 proof; onlytworeservations7to5, otherfiveexact. No fill/holding/spend/realizedPnL; no autorepost.",
+      "confidence": "high",
+      "prediction": "Closed unfilled originalDEC220/221; futureentryrequiresfreshindependentgates, neverreplay.",
+      "size_usd": 0,
+      "resolution_at": null,
+      "tags": [
+        "polymarket",
+        "cancel-unfilled",
+        "deep-review",
+        "scheduled-management"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null,
+      "financial_status": "CANCELED_ZERO_FILL",
+      "original_decision_ids": [
+        220,
+        221
+      ],
+      "review_indices": [
+        293,
+        296
+      ],
+      "exact_targets": {
+        "293": {
+          "order_id": "0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d",
+          "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
+          "asset": "89643140239342548048448701869105827389195064616743381771593601098573294698149",
+          "matched": 0,
+          "terminal": "CANCELED"
+        },
+        "296": {
+          "order_id": "0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94",
+          "condition_id": "0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a",
+          "asset": "89657564314254312016109285821372616495366637583869934291275521891966562780185",
+          "matched": 0,
+          "terminal": "CANCELED"
+        }
+      },
+      "research_report": "research/2026-10-17-deep-review/yb293_gas296_canceled_outcome_0210.md",
+      "verification": "data/deep_review_20261017/work/pull293296_root_verified_0210.json"
+    },
+    {
+      "id": 227,
+      "timestamp": "2026-10-19T02:24:01Z",
+      "type": "scaffolding",
+      "thesis": "Persist private read-call intents/status/body/hash receipts before parsing; distinguish call-window timing and supplied-byte representation from wire evidence. Repeated schema exceptions had lost transport metadata and forced expensive financialproof reconstruction. Preserve allfinancialwriters; standard Gitrepack retains every12234object/ref/HEAD/index and frees69.75MB.",
+      "confidence": "high",
+      "prediction": "Parserfailurecannoterasereceipts; duplicatecapturecannotoverwrite; SDKserializationneverassertedwireauthenticity. Targeted56testspassed; no currentfinancialpathchanged. Smallcase/summaryunits andindexedrawproofs supportunannouncedcompaction.",
+      "size_usd": 0,
+      "resolution_at": null,
+      "tags": [
+        "engineering",
+        "read-only-proof",
+        "context",
+        "storage"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

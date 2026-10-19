@@ -1,0 +1,166 @@
+{
+  "review_index": 2054,
+  "condition_id": "0x8bcf65d7c3cc697c0ebc609d7c775599b6f6ea34413fa244fdd12f6b2fcc40b5",
+  "criteria_sha256": "23e4ab42d59e5c1fc683a1b8f3095fe91f17f75b3bfd5a2cd1403b7fdd31c5fc",
+  "status": "valued",
+  "literal_analysis": "DemocraticSedgwickcountySenateplurality,alphabeticaltiebreak,partyreplacement,March31Otherfallback;fullindividualrulesread.",
+  "evidence": [
+    {
+      "url": "https://www.sos.ks.gov/elections/24elec/2024-Presidential-Results.xlsx",
+      "observed_utc": "2026-10-18T00:15:57.085364Z",
+      "finding": "OfficialSedgwickD90506/R120118/other3528,total214152, exactcountyrelativegeographyderivedbyprimarynotusingwrongroundedpacketfield."
+    },
+    {
+      "url": "https://www.sos.ks.gov/elections/22elec/2022-General-Election-US-Senate-Results-By-Precinct.xlsx",
+      "observed_utc": "2026-10-18T00:38:15.034Z",
+      "finding": "Primaryoriginalsheetread:SedgwickCOUNTYTOTALS58815/90856/4446 match364precincts whenTOTALrowexcluded; olderdifferentcandidates."
+    },
+    {
+      "url": "https://www.sos.ks.gov/elections/22elec/2022-General-Official-Vote-Totals.pdf",
+      "observed_utc": "2026-10-18T00:40:45.265405Z",
+      "finding": "OriginalstateSenateD372214/R602976/L29766, sum1004956; independentprimaryPDFread/hashreceipt."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.5,
+    "low": 0.15,
+    "high": 0.85,
+    "method": "Sharedexplicitcounty-marginprojection with15ppentryreserve; not an independent forecastfrom540",
+    "reasoning": "D50/R49/Other1 fixedbeforebook; possiblecountyturnout/sourceerror retained; samecountyNOcontainsR+Other.",
+    "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_2041_2160.json.gz",
+    "quote_observed_utc": "2026-10-18T00:20:23.165+00:00",
+    "fee_source": "current exact Gamma V2 feeSchedule or explicit disabled flag; live compact descriptor and all other execution gates must be rechecked before signing",
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true,
+      "explicit_fee_free": false
+    },
+    "hypothetical_gross_shares": 10,
+    "horizon_days": 30,
+    "alternative_rate_fraction": 0.030553043724883856,
+    "alternative_rate_asof": "2026-10-17T18:04 fixedblock95703276; variable constant-rate sensitivity, not forecast or free deployability proof",
+    "fee_convention": "USD/share from repository pm_fees; sum per-level and ceil5dp for planning. Signing-time client proves actual fees.",
+    "sides": {
+      "Yes": {
+        "probability": 0.5,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 61.597,
+        "received_utc": "2026-10-18T00:20:23.165+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.21,
+            "fee_usd": 0.06636
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 2.16636,
+        "fee_usd": 0.06636,
+        "break_even_probability_before_carry": 0.216636,
+        "break_even_probability_with_idealized_carry": 0.21717253639070297,
+        "central_expected_profit_usd": 2.83364,
+        "default_10pp_stressed_profit_usd": 1.83364,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 1.936
+      },
+      "No": {
+        "probability": 0.5,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "min_order_shares": 5.0,
+        "book_age_at_receipt_seconds": 61.597,
+        "received_utc": "2026-10-18T00:20:23.165+00:00",
+        "passed_180s_at_receipt": true,
+        "full_10share_ask_depth": true,
+        "fills": [
+          {
+            "shares": 10,
+            "price": 0.8,
+            "fee_usd": 0.064
+          }
+        ],
+        "filled_gross_shares": 10,
+        "taker_cost_usd": 8.064,
+        "fee_usd": 0.064,
+        "break_even_probability_before_carry": 0.8064,
+        "break_even_probability_with_idealized_carry": 0.8083971885811356,
+        "central_expected_profit_usd": -3.064,
+        "default_10pp_stressed_profit_usd": -4.064,
+        "maker_zero_fee_robust_max_price_before_gas_carry": 0.4,
+        "quote_is_current_execution_certificate": false,
+        "immediate_exit_net_for_hypothetical_10shares": 7.83364
+      }
+    }
+  },
+  "verdict": "OriginalDEC212 pending SedgwickYES bid canceled unfilled; DEC224/no automatic repost. Existing valuation/quotes preserved as dated research, current priorYES49 unchanged.",
+  "reopen_condition": "Neworiginalcounty/statepollorballot/candidatenews; balancedreview andcurrentpassiveYES<=23c withmaxcash1.20/currentallgates.",
+  "current_description_sha256": "d498368d9985424c79b93c9fb83ecdbb841496a63043c46498256c8259cf2b65",
+  "current_identity_valid": true,
+  "current_token_ids": [
+    "36188675263105076384129304581287560611497377961272296678113273811602118139553",
+    "62690985792318651524980701231978800979099310590252813339241487737461196951581"
+  ],
+  "source_receipt_references": {
+    "gamma": {
+      "request_id": "req_0001",
+      "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0001.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0001.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "exact_identity_match_count": 1,
+      "status": "exact_market_and_condition_identity_validated",
+      "received_utc": "2026-10-18T00:20:22.928+00:00",
+      "error": null
+    },
+    "books": {
+      "request_id": "req_0003",
+      "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0003.receipt.json",
+      "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0003.body.json.gz",
+      "http_status": 200,
+      "parse_status": "ok",
+      "requests": [
+        {
+          "request_id": "req_0003",
+          "receipt_path": "logs/deep_review_20261017/quotes_2041_2160/req_0003.receipt.json",
+          "body_path": "logs/deep_review_20261017/quotes_2041_2160/req_0003.body.json.gz",
+          "http_status": 200,
+          "parse_status": "ok",
+          "received_utc": "2026-10-18T00:20:23.165+00:00",
+          "error": null
+        }
+      ]
+    },
+    "gamma_initial_request": null,
+    "quote_time_convention": "original batch receipt time, or last per-side receipt if no batch field; not a synchronized/current execution certificate"
+  },
+  "portfolio_action": "One vetted cancel only; no fill/holding/spend/realizedPNL. Only target reservation retired8to7 after independent terminal/trade/index/CTF proof.",
+  "extra": {
+    "tracked_method": "research/2026-10-17-deep-review/models/county_kansas_method_0042.md",
+    "tracked_model": "research/2026-10-17-deep-review/models/county_kansas_projection_0042.json",
+    "case_specific_reserve_for_entry": 0.15,
+    "priority_followup": true,
+    "same_outcome_family_case": 540,
+    "not_independent_bet": true
+  },
+  "evaluated_utc": "2026-10-19T01:51:43.617928+00:00",
+  "question": "Will the Democrats win Sedgwick County in the Kansas Senate race in 2026?",
+  "market_id": "5790793",
+  "valuation_author": "primary_operator",
+  "original_index": 2054,
+  "report_sha256": "20c8c71f0425b399bce712e78f2698d8c2f887a0a8d1f61459d71e17951350b2",
+  "report_path": "revisions/2054_20261019T015143617158Z.md",
+  "revision_reason": "Financial management only: cancel-first original pending bid, zero fill independently verified; no automatic repost or probability change.",
+  "prior_report_sha256": "e945e59312c5e36662f491483513d79fd81ebc886a1ef0d9ea1b91580c9b75e7",
+  "revision_path": "revisions/2054_20261019T015143617158Z.json"
+}

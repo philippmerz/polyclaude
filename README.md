@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 207 recorded observations from Apr-25
-through Oct-18. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 208 recorded observations from Apr-25
+through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -56,11 +56,11 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**306 valued /4 blocked /344 factual exclusions /2,346 pending**;654 immutable base cases +52 append-only revisions. Next305; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (TG1256). Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; entire revision history verified while emitted metadata is bounded. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
+**308 valued /4 blocked /348 factual exclusions /2,340 pending**;660 immutable base cases +55 append-only revisions. Next308; [checkpoint](notes/deep_review_checkpoint.json) governs newer counts. First100/200/300 notified (TG1256). Save/index EACH completion. [Resume](research/2026-10-17-deep-review/RESUME.md): one full rule/latest report, named2–5KB units,8KB hard cap; entire revision history verified while emitted metadata is bounded. [Hot candidates](research/2026-10-17-deep-review/candidate_followup.md).
 
-**Whalefall originalDEC0222 filled6NO17c/$1.02 at01:04:56; DEC223retain/noadd.** Successful receipt/CTFs/index/directorder independently agree. Both01:11named sources still8mESTIMATE; no final actual. SelectedNO42.10% versus0.84438 indicative net sale; uncalibrated model/fullcashlosspossible. [Current outcome](research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md). Original02UTC BUYpull obsolete; holdingreview02UTC.
+**Whalefall: original DEC222 filled 6 NO at17c/$1.02; DEC223 retain/no add.** Receipt, CTF balance, indexed position and direct order agree. Both02:14 sources still report an $8m estimate; no final actual. Selected NO42.10%, versus0.81544 indicative net sale at01:58; uncalibrated model/full cash loss possible. [Latest review](research/2026-10-19-0200-checkin.md). Original02UTC BUY pull obsolete; next held review06UTC.
 
-**293YB11YES10c/$1.10 and296gas5YES54c/$2.70 remain LIVE/unfilled. PullALL02UTC**, earlier unassessed material news CANCEL FIRST; noadd/replay/repost. EightBUYs15.62 reserved; last fixedpUSD17.826890/free2.206890, [sequential proof](data/deep_review_20261017/work/0299_reconcile_0135.json). [300Delcy](research/2026-10-17-deep-review/delcy300_unplaced_outcome_0120.md) closedunplaced19c>18c cap, dryrunonly/0financialcalls;302maker candidate unplaced. Research probabilities are judgments, not execution instructions.
+**293YB/296gas/Sedgwick canceledunfilled**, standingpullscomplete/DEC226+224; no automaticrepost. HLEclosedremaining9NO/DEC225,2.6244netverified. FiveBUY10.82 remain; [currentproofs](notes/resting_orders.md). 300Delcyclosedunplaced/302maker candidateunplaced. Researchprobabilities arejudgments, not executioninstructions.
 
 BOI137 canceled unfilled; [DEC0219 proof](research/2026-10-18-boi-cancel.md), no replay. OpenRouter112 filled5NO65c17:37:42; latest88%NO/selected73%, retain/no add. [Latest112](research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md). Netflix278 closed unplaced; no replay.
 
@@ -84,27 +84,11 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October18 22UTC review
+## Last audited snapshot — October19 02UTC
 
-Full-account valuation **21:54:32–48UTC**; rounded sequential marks/indicative depth, not synchronized NAV/certified proceeds/audited profit. VM/APIcosts excluded.
+**Trading midpoint191.12 /indicative netdepth188.95;196.94including5.82separatelyfundedgas.** PM35.99mid/33.82depth; cumulativeaccountingresidual20.72. Actualbankrollcapture02:04:53–02:05:08UTC; roundedsequentialestimates, not synchronizedNAV/certifiedliquidation/auditedprofit;VM/APIexcluded. [Fullreview](research/2026-10-19-0200-checkin.md) · [Performancechart](https://philippmerz.github.io/polyclaude/).
 
-|Measure|Value|
-|---|---:|
-|Trading capital reference|$170.00|
-|Total marked bankroll|**$196.04**|
-|Separately funded gas|$5.64|
-|Trading midpoint / indicative netdepth|$190.40 / **$187.95**|
-|PM midpoint / indicative netdepth|$36.87 / $34.42|
-|Whole-account approximate depth|$193.59|
-|Open-position cost / accountingresidual|$36.01 / $19.54|
-
-Retain/noadd HLE9NO, Michigan5NO, Messi5YES, OpenRouter5NO, completeClarity29/29, TrumpNO.33dust. Fresh22:04:54 fixedchain/account: **6LIVE zero-matchedBUYs/$11.82**, sixmatchingreservations; pUSD18.846890/free7.026890. No newfill/financialwriter. [Review/evidence/limits](research/2026-10-18-2200-checkin.md).
-
-HLE cached ordinaryAccuracy53.6<55; originfreshnessunknown. Diamond59.9 is a differentmetric in the same row. OpenRouterpartialcurrentweek is not futuretargetsettlement. Senate proceduralcloture is not finalClaritypassage. Adverse scenarios still favor exit; retainedforecasts are not guaranteed floors.
-
-Current commitments/Whalefall fill are updated above; the displayed full-account marks remain the dated22UTC review. No performanceCSV point is inferred from a partial account observation.
-
-RawRSS Telegramoff; actualexposure IDs constrain materialreview, pending≠reviewed. [Routingproof](research/2026-10-18-news-review-routing.md). SedgwickBUYpullOct19 10UTC;Idaho22UTC; earlieruncertainty cancelsFIRST. Nextheldreview02UTC. [Chart/CSVmethodology](docs/README.md).
+HLEfullyclosed9NO30c/2.6244net, fee.0756/projectgas0; source/receipt independentlyverified. RetainMI5NO/Messi5YES/OpenRouter5NO/Whale6NO/noadd, plus Clarity29/29wholepair/TrumpNOdust. [Currentorders](notes/resting_orders.md): fiveBUY10.82pending, pUSD20.45129/free9.63129 fixed02:07/sequential. YB/gas/Sedgwickcanceledunfilled, noautoReplay/repost; Idaho22UTC/4Houseunchanged. Nextheldreview06UTC/earliermaterialnews. RawRSS Telegramoff; materialTG1258delivered. [Handoff](notes/current_context.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

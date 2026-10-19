@@ -1,0 +1,44 @@
+{
+  "review_index": 339,
+  "market_id": "4761442",
+  "condition_id": "0x53220908ec851cd294b9f02d78f7a70b094590cb89955b4877e72d5e14360c0c",
+  "criteria_sha256": "1a9eb6d0493df01757a3075d08ff889e2f1fb4a0e839c28e402c06383161aad1",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactPenguins–GoldenKnights Oct17 22ETgame:finalwinnerINCLUDINGovertime/shootout, addonewinninggoalonshootout; postponementkeepsopen, outrightcancellationwithoutmakeup50/50. Not90minregulationorregulartimeonly. Noindependentfinalscorecertificationclaimed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4761442",
+      "observed_utc": "2026-10-19T01:32:37.484451+00:00",
+      "finding": "Rootraw/gziphashverified, fullfrozenidentity/rules/outcomes/assetsmatch. Explicitclosedtrue/acceptingOrdersfalse/currentUMAresolved/exactbinary0/1pair. Nontradingterminalstatusisobserved, notinferredfromeventdate/missingbook/model."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No independent eventprobability asserted for exactterminal/nontrading venue case.",
+    "reasoning": "Literalruleparsed; fullbodyhashidentity/statusproof establishescurrentineligibility. Noothercaseistransferred/rejectedbyanalogy."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Penguins": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      },
+      "Golden Knights": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0140/case_0339.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.",
+  "reopen_condition": "Onlyexplicitvenuecorrection/reopeningwithexactrule/source/eligibilityreview; neverautomaticreplay.",
+  "evaluated_utc": "2026-10-19T01:44:11.966935+00:00",
+  "question": "Penguins vs. Golden Knights",
+  "valuation_author": "primary_operator",
+  "original_index": 339,
+  "report_sha256": "a9ea2fb26a0fd8cb932562079063e80437b4130cef7c36e38b407401ddf5e479"
+}

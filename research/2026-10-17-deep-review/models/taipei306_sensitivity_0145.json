@@ -1,0 +1,14 @@
+{
+  "primary": 0.7288513513161397,
+  "all_TVBS": 0.8232956028102693,
+  "all_Xinmin": 0.5534548842556133,
+  "common_bias_minus5pp": 0.5248230455331402,
+  "common_bias_plus5pp": 0.8685886526935872,
+  "future_sd3pp": 0.7586132914796315,
+  "future_sd8pp": 0.6842057030651556,
+  "house_sd2_5pp": 0.7457553986768686,
+  "house_sd6pp": 0.7025306619218814,
+  "normal_only": 0.7510809904375326,
+  "wide40pct": 0.7066217121947467,
+  "note": "Countermodels are explicit hypotheses, not fittedconfidencebounds; none were chosen afterseeingPMprices."
+}

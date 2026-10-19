@@ -1,0 +1,57 @@
+{
+  "review_index": 306,
+  "saved_utc": "2026-10-19T01:41:59.387535+00:00",
+  "priceblind": true,
+  "p_yes": 0.7288513513161397,
+  "low": 0.3,
+  "high": 0.97,
+  "actual_entry_reserve_pp": 15,
+  "method": "Competing-source final-margin normal mixture with shared mode/house, campaign, undecided and rounding uncertainty;20%double-SD regime; no pooled respondent count or fitted calibration.",
+  "polls": [
+    {
+      "name": "TVBS",
+      "weight": 0.65,
+      "candidate": 0.49,
+      "challenger": 0.41,
+      "n_intending": 1054,
+      "raw_margin": 0.08000000000000002,
+      "approx_margin_sampling_sd": 0.029117311634354985,
+      "total_ordinary_sd": 0.0732436197686334
+    },
+    {
+      "name": "Xinmin",
+      "weight": 0.35,
+      "candidate": 0.417,
+      "challenger": 0.405,
+      "n_intending": 1076,
+      "raw_margin": 0.011999999999999955,
+      "approx_margin_sampling_sd": 0.027637052872001643,
+      "total_ordinary_sd": 0.07266785184281846
+    }
+  ],
+  "uncertainty_sd_pp": {
+    "mode_house": 4,
+    "future_campaign": 5,
+    "undecided_imbalance": 2,
+    "published_rounding": 0.41
+  },
+  "fat_regime": {
+    "ordinary_weight": 0.8,
+    "wide_weight": 0.2,
+    "wide_sd_multiplier": 2
+  },
+  "other_or_procedural_NO_branch": {
+    "weight": 0.01,
+    "p_yes": 0,
+    "basis": "Subjective1% for othercandidate/ineffectiveelection/no knownwinnerbyJun30 2027; no measuredfrequency."
+  },
+  "weights_basis": "65/35 favorsOct3–7 overSep16–18 roughlyexponential30-dayrecency. Differentcandidateframes/modes/registration/intention filtersmean neither independence nor a literal statisticalpool is justified. WeightsanderrorSDs are primaryjudgments.",
+  "source_binding": {
+    "poll_fact_unit": "work/0306_poll_facts_0140.json",
+    "sha256": "22d3fa26f2d22ccfbefb3f04bc18c30fec8c7e5df74eca8cc7d151a717a82520",
+    "root_Xinmin_page_receipt": "logs/deep_review_20261017/case306_root_association_0145/receipt.json",
+    "root_source_verification": "Raw+gziphashesallpollsourceschecked; primarywebPDFpage6TVBSQ2n1054/49-41-11 andprimaryXinminpage41.7-40.5/n1076 independentlyread. PDFhelperbytesretained; noPDFreaderinstalled. CEC2022oversizedPDFremoved/unverifiedpreviewNOTused."
+  },
+  "interpretation": "FrozenrequirespersonbecomesmayorfromNov28election, interimexcluded, June30 2027Otherfallback. Pollsupport/expectedwinner/satisfaction are differentmetrics. TVBSheadline49% isnotwinP; 55%perceivedwinner notwinP. May28→Oct8pointgapnarrowsbutdifferentrecentframes preclude lineartrend; no directionaldrift or extra incumbencybonus.",
+  "limits": "Unfittedcommonerrors/tails/sourceweights; broad30–97% sensitivity, not empiricalCI/floor. Landline-onlyTVBSvsdualframeXinmin; printed101%sumrounding; fullfieldvs2way; house/turnout/nonresponse/latecampaignshock canreverse. No county-electioncalibrationorold2racefrequencyasserted. NormalNovresolutionexpected, literalJune2027fallbackcanexceedJanuaryevaluation."
+}

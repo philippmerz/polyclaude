@@ -1,0 +1,157 @@
+{
+  "review_index": 307,
+  "market_id": "4178730",
+  "condition_id": "0xf18975f8753fac053455f9301b89cee143990e1bee12e7e6b7da27242f3de0ef",
+  "criteria_sha256": "104ae1596182b20ed35b1ea202760aeea1fadbc8da199dec0fae3300ae5791b0",
+  "status": "valued",
+  "literal_analysis": "Treasury daily published30Yr>=5.80% anydateSep3-Dec31inclusive. Notintraday/othermaturity. Noqualifier+absentDec31databyJan14 2027 23:59ET=>NO; APIendmidnightnotliteralcutoff.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-19T00:33:26.074429+00:00",
+      "finding": "Exact30Yr daily199rows/latest5.43Oct16, operativeSep3window30rows/high5.67Oct7/noqualifier; independentrootheadersparser/rawhash/CSVmatch, initial31rowhelpercorrected."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-18T23:11:36.510601+00:00",
+      "finding": "OfficialupcomingOct27–28/Dec8–9FOMC, noNovemberregularmeeting; reusedboundedmacrocalendarunit not futureyieldforecast."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.352134392,
+    "low": 0.1,
+    "high": 0.75,
+    "method": "Circular5-published-observation blockbootstrap centeredlatest120changes. DailySD5bp80%/7.5bp20%; drift0bp60%/+0.6bp25%/-0.6bp15%;51futureobservations;100kcommonseedpaths; ANYpublishedpointmax>=latent5.795 proxyfor5.80.1%source/adminbranch conditionalYES50%.",
+    "reasoning": "HistoricalSD20/60/120/all5.10/4.50/4.01/3.92bp;recentmean+0.43bp not persistentknown drift.5bpbase/7.5bptailallow fiscal/term-premium/oil/geopolitical shocks; officialCPI.6m/m3.7y/y andSeptFed25bphike motivateuncertainty/smallupwarddriftmixture, not deterministic yieldprediction. Sameknownmacrocalendaras295, distinctmaturity/rawseries/threshold. Weights/drift/volscale/sourcebranch subjective/unfitted, notcalibrated posterior;5-stepdependence/one2026regime insufficient structural fiscal/term-premium/meanreversionmodel. Broad10-75%includes jumps/negativedrift;15ppreserve separatepolicy, notconfidencefloor. Reusemethod295notprobability; Treasurycontracts stronglycorrelated. Noexecutionauthorization.",
+    "model_path": "models/treasury307_primary_0155.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_307_0155.json",
+    "quote_file_sha256": "f6c4adc73109fd51e35deb46bfa8d9aaf7c7523468760018610f9582b1f9d944",
+    "quote_capture_utc": "2026-10-19T01:55:44.250457+00:00",
+    "gamma_received_utc": "2026-10-19T01:55:44.107388+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.352134392,
+        "selected_stress_probability": 0.20213439200000002,
+        "best_bid": 0.283,
+        "best_ask": 0.288,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792374937319",
+        "book_received_utc": "2026-10-19T01:55:44.249578+00:00",
+        "book_age_seconds_at_receipt": 6.930577993392944,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.88,
+            "fee": 0.10253,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.288
+              }
+            ],
+            "net": 2.9825299999999997
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.8299999999999996,
+            "fee": 0.10146,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.283
+              }
+            ],
+            "net": 2.7285399999999997
+          }
+        },
+        "taker_cost_usd": 2.9825299999999997,
+        "central_expected_profit_usd": 0.5388139200000004,
+        "selected_stress_profit_usd": -0.9611860799999996,
+        "break_even_before_carry": 0.298253,
+        "break_even_constant_carry": 0.3001612560409852,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.647865608,
+        "selected_stress_probability": 0.497865608,
+        "best_bid": 0.712,
+        "best_ask": 0.717,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792374937319",
+        "book_received_utc": "2026-10-19T01:55:44.249578+00:00",
+        "book_age_seconds_at_receipt": 6.930577993392944,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.17,
+            "fee": 0.10146,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.717
+              }
+            ],
+            "net": 7.27146
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.119999999999999,
+            "fee": 0.10253,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.712
+              }
+            ],
+            "net": 7.017469999999999
+          }
+        },
+        "taker_cost_usd": 7.27146,
+        "central_expected_profit_usd": -0.7928039199999999,
+        "selected_stress_profit_usd": -2.29280392,
+        "break_even_before_carry": 0.7271460000000001,
+        "break_even_constant_carry": 0.7317983614085298,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NOENTRY: YESpositivecentralEVbutfails15ppreservebothpassiveandtaker; NOfailscentral/stress. No order/prior/watcher.",
+  "reopen_condition": "OriginaldailyTreasury/macro/sourcechange orfreshquotebelow independentlysupportedrobustceiling, exactfamilycorrelation/currententrygates.",
+  "portfolio_action": "none; datedresearchonly",
+  "evaluated_utc": "2026-10-19T01:56:53.432861+00:00",
+  "question": "Will the 30-year Treasury yield hit 5.80% before 2027?",
+  "valuation_author": "primary_operator",
+  "original_index": 307,
+  "report_sha256": "68a0cc0f5cf96840e9e956a5e1793a72c11cf28160f9f946e38cc3ec5b7067f0"
+}

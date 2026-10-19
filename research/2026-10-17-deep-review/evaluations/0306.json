@@ -1,0 +1,156 @@
+{
+  "review_index": 306,
+  "market_id": "3580932",
+  "condition_id": "0xbf7a9da08326512f76129d4accf9f7d852dbf1cb7dd2c512479ff40c872f5659",
+  "criteria_sha256": "d8fa01db3e356b5e56b6a090dcc58583de5bcee408dd8967a22e6149851145d9",
+  "status": "valued",
+  "literal_analysis": "Candidatewho becomesnextTaipeiMayor fromNov28 2026election; interim/placeholderpre-electionrolesexcluded. Crediblereportingconsensus, officialTaiwan/CECresultsifambiguous. Resultunknown/noelectedcandidatebyJun30 2027 23:59ET=>Other=>NOhere. APIendNov29notthisultimatefallback; delaycanexceedJanuaryevaluation.",
+  "evidence": [
+    {
+      "url": "https://www-asset.tvbs.com.tw/uploads/opinion-polls/1552/1791788111_20261003_________________________________.pdf",
+      "observed_utc": "2026-10-19T01:32:24.689830Z",
+      "finding": "OriginalTVBSQ2page6:49/41/11,intendingvotersn1054,totaln1120,Oct3and5–7,landline. Expectedwinner55/20/26 isdifferentmetric; printed101%sumrounding."
+    },
+    {
+      "url": "https://dc579968-5ed9-4902-8454-9871fa44324e.filesusr.com/ugd/3ea6ac_7c66d227dc414f169202cda2ca75a7f3.pdf",
+      "observed_utc": "2026-10-19T01:32:24.909219Z",
+      "finding": "OriginalXinmin/BeaconSep16–18 n1076/dualframe752landline324mobile:sixway41.7/40.5,othernames2.1/nonvoteinvalid5.2/undecided10.6. Primaryassociationpage independentlyconfirmscoretopline/method. Perceivedwinner57.8/21.3notwinP."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.7288513513161397,
+    "low": 0.3,
+    "high": 0.97,
+    "method": "Competing-source final-margin normal mixture with shared mode/house, campaign, undecided and rounding uncertainty;20%double-SD regime; no pooled respondent count or fitted calibration.",
+    "reasoning": "Root primarypolls showgenuinelycompetitivefield:TVBS8pplead vsolderdualframe1.2pplead. Competing-source65/35mixture, commonhouse4pp/future5pp/undecided2pp plus sample/rounding;80%ordinary/20%doubleSD;1%other/proceduralNO. Unfittedjudgments, noindependencepool/extra incumbencybonus orlinearMaytrend.",
+    "model_path": "models/taipei306_primary_0145.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/quotes_306_0145.json",
+    "quote_file_sha256": "c56090d2f9bc0dcb06070f682db826d27dd784f9cc1428d9614524ee51029020",
+    "quote_capture_utc": "2026-10-19T01:42:08.431709+00:00",
+    "gamma_received_utc": "2026-10-19T01:42:07.535441+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 42.0,
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.031525,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-18T17:42:28.016716+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.7288513513161397,
+        "selected_stress_probability": 0.5788513513161396,
+        "best_bid": 0.62,
+        "best_ask": 0.63,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792374124619",
+        "book_received_utc": "2026-10-19T01:42:07.655143+00:00",
+        "book_age_seconds_at_receipt": 3.0361430644989014,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.3,
+            "fee": 0.09324,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.63
+              }
+            ],
+            "net": 6.39324
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.2,
+            "fee": 0.09424,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.62
+              }
+            ],
+            "net": 6.10576
+          }
+        },
+        "taker_cost_usd": 6.39324,
+        "central_expected_profit_usd": 0.8952735131613965,
+        "selected_stress_profit_usd": -0.6047264868386035,
+        "break_even_before_carry": 0.639324,
+        "break_even_constant_carry": 0.6416114467668986,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.27114864868386035,
+        "selected_stress_probability": 0.12114864868386035,
+        "best_bid": 0.37,
+        "best_ask": 0.38,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792374124619",
+        "book_received_utc": "2026-10-19T01:42:07.655143+00:00",
+        "book_age_seconds_at_receipt": 3.0361430644989014,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.8,
+            "fee": 0.09424,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.38
+              }
+            ],
+            "net": 3.89424
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.7,
+            "fee": 0.09324,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.37
+              }
+            ],
+            "net": 3.60676
+          }
+        },
+        "taker_cost_usd": 3.89424,
+        "central_expected_profit_usd": -1.1827535131613964,
+        "selected_stress_profit_usd": -2.6827535131613964,
+        "break_even_before_carry": 0.389424,
+        "break_even_constant_carry": 0.39081732587194085,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NOENTRY. YESpositivecentral but15pp-selectedprob57.885% below63.9324c fee-cost andordinary62cmaker. NO38.9424cfee-cost exceeds27.115%central. Othercandidates/cashpreferableunderchosenuncertainty, notrejectionfromheadlineapproval/support; allsource/modelunitsretained.",
+  "reopen_condition": "Neworiginalfullfield/dualframepolls,currentballot/turnout/campaignfacts or a genuinelylowerprice; newexactsource/fee/portfolio/monitoring/accountgatesrequired. Noorder/prior/watchadded.",
+  "evaluated_utc": "2026-10-19T01:43:37.337503+00:00",
+  "question": "Will Chiang Wan-an win the next Taipei Mayor election?",
+  "valuation_author": "primary_operator",
+  "original_index": 306,
+  "report_sha256": "c039902e4c3946fe9f72e79d75d08eb9a0d8fbc1ede395ae527bed0c7e782492"
+}

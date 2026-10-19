@@ -103,6 +103,14 @@ Compute hashes after updating source documents. Do not roll expiry forward by
 copying the old summary; explicitly retain dates and unknowns when no fresh
 financial/source check was performed.
 
+Keep completed case reports and source/model units independently addressable;
+target2–5KB per unit and link large arrays/raw receipts separately. Store a small
+hashed index for scanner batches so resumption needs only the selected unit.
+Before formatting read evidence, persist it through the existing vetted reader;
+`scripts/read_capture.py` provides private durable intent/body/receipt storage.
+Label SDK serialization and call-window timing honestly; they are not raw HTTP
+or wire timestamps. The helper changes no financial execution path.
+
 scripts/context_packet.py emits a bounded orientation packet for portfolio,
 research, engineering or operations from allowlisted Git-tracked public files.
 Its default cap is 12,000 UTF-8 bytes, not a model token budget. Expired, future

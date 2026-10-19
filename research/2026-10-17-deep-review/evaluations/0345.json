@@ -1,0 +1,44 @@
+{
+  "review_index": 345,
+  "market_id": "5286639",
+  "condition_id": "0xea2d50c908379c24ef3cb35ecdccd36ba93365f8b599c2e6df242c70d176c4b8",
+  "criteria_sha256": "5f5b9fe27e11d31ac38b0d3cebf6a04a1912b17a1cb97c5b8b90a91a294a853c",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactNewYorkRedBullsOct17game:winwithin90min+stoppageYES,otherwiseNO. Postponedstaysopen; canceled/no makeupNO. Organizerfinalsource;2hFlashscore→Sofascore→consensus, noacceptable24hdata50/50/Drawwhereapplicable; postresolutionrevisionignored. Noindependentscorecertificationclaimed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5286639",
+      "observed_utc": "2026-10-19T01:32:37.852764+00:00",
+      "finding": "Rootraw/gziphashverified, fullfrozenidentity/rules/outcomes/assetsmatch. Explicitclosedtrue/acceptingOrdersfalse/currentUMAresolved/exactbinary0/1pair. Nontradingterminalstatusisobserved, notinferredfromeventdate/missingbook/model."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "method": "No independent eventprobability asserted for exactterminal/nontrading venue case.",
+    "reasoning": "Literalruleparsed; fullbodyhashidentity/statusproof establishescurrentineligibility. Noothercaseistransferred/rejectedbyanalogy."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "sides": {
+      "Yes": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      },
+      "No": {
+        "probability": null,
+        "cost": null,
+        "reason": "Exactvenueclosed/resolved/notaccepting; executablebooknotqueried."
+      }
+    },
+    "status_unit": "data/deep_review_20261017/work/status_batch_0140/case_0345.json",
+    "execution_authority": false
+  },
+  "verdict": "Factualexcluded:exactterminal/nontradingvenuecase. Independentweather/scorevalue isnotcertified, prices/EVunassigned. Noorder/prior/holdingaction orprobabilityscreen.",
+  "reopen_condition": "Onlyexplicitvenuecorrection/reopeningwithexactrule/source/eligibilityreview; neverautomaticreplay.",
+  "evaluated_utc": "2026-10-19T01:44:12.545101+00:00",
+  "question": "Will New York Red Bulls win on 2026-10-17?",
+  "valuation_author": "primary_operator",
+  "original_index": 345,
+  "report_sha256": "f087760885be3fde9d55fcfe0cfa7c881466592acfb7796afc3d2ba8442a2e56"
+}
