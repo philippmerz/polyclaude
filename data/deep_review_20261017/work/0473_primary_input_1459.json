@@ -1,0 +1,27 @@
+{
+  "review_index": 473,
+  "market_id": "5636435",
+  "condition_id": "0x9af6ec1217372684aa2c065c1f946c7f3c12f0dced7cc3481382af8123c94ed6",
+  "criteria_sha256": "cedb24148603a92f95876d36b976942aa27bf25e59f0f1f45b1f894cb36b018b",
+  "status": "excluded_factual",
+  "literal_analysis": "Next eligible MrBeast YouTube video first24h views, waitfull24h;35\u201340million boundary belongs higherbracket. Shorts/previews/othernonreferencedvideos excluded; no postbyNov30ET=>lowest. Closed exact contract, no real-world view-count claim.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5636435",
+      "observed_utc": "2026-10-20T14:48:26.625389+00:00",
+      "finding": "Root raw/gzip/identity verified; exactclosed/nonaccepting/resolved/binaryterminal contract. No independentrealworldoutcome claim."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Objective exact venue ineligibility; no probability required/adopted."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "both_sides_entry_unavailable": true,
+    "reason": "Exactclosed/nonaccepting contract, no substitute route."
+  },
+  "verdict": "Objectivevenueineligibility, factualexclusion notvaluation.",
+  "reopen_condition": "Only proven exactconditionreopens after freshchecks.",
+  "report_markdown": "#473 \u2014 exact contract closed; factual exclusion\n\n**excluded_factual, not a valuation.** Primary read full frozen rule and exact ordered tokens/outcomes. Next eligible MrBeast YouTube video first24h views, waitfull24h;35\u201340million boundary belongs higherbracket. Shorts/previews/othernonreferencedvideos excluded; no postbyNov30ET=>lowest. Closed exact contract, no real-world view-count claim.\n\n[Raw-bound exact-ID status](../../../data/deep_review_20261017/work/status473_479_1451/case_0473.json) at2026-10-20T14:48:26.625389+00:00:200, closed=true, acceptingOrders=false, UMAresolved, binaryterminalprices; every identityfield and raw/gzip SHA verified. No remaining new-entry route for either side of this condition; no substitute sibling.\n\nThis proves venue ineligibility, not independent event-outcome verification. No probability/returnestimate/order/prior/Telegram; not rejection by price/liquidity/difficulty. Reopen only if exactcondition demonstrably reopens after fresh fullrule/status/source/execution review.\n"
+}

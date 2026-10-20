@@ -1,0 +1,43 @@
+{
+  "schema": "price_blind_release_facts.v1",
+  "review_index": 475,
+  "market_id": "5194868",
+  "condition_id": "0xfe6808a893347ee4d9c6d7e1e1499aa63926c3b9a66d1f9701249fb6285bd7ec",
+  "question": "Will the 2-year Treasury yield dip below 4.55% in October?",
+  "as_of_utc": "2026-10-20T15:03Z",
+  "source": {
+    "publisher": "U.S. Bureau of Labor Statistics",
+    "release": "Consumer Price Index - September 2026",
+    "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+    "report_period": "September 2026",
+    "release_date": "2026-10-14",
+    "release_time": "8:30 AM Eastern Time, per the BLS release calendar",
+    "retrieved_utc": "2026-10-20T15:02:30.963128Z",
+    "http_status": 200,
+    "content_type": "text/html",
+    "raw_bytes": 1373525,
+    "raw_sha256": "b9f981390c08f4a530d839495fce582124015b979bac0398bfcc35ffde0544e4",
+    "gzip_sha256": "423597a43faadc270ebd95d02405b9796efe76d62fef3e88d06d1eb9a3bd5a08",
+    "receipt_path": "logs/deep_review_20261020/case475_cpi_source_1503/bls_cpi_sep2026.receipt.json",
+    "body_path": "logs/deep_review_20261020/case475_cpi_source_1503/bls_cpi_sep2026.body.json.gz",
+    "receipt_hash_scope": "supplied_bytes_only_not_wire_authentication"
+  },
+  "reported_metrics": {
+    "population_and_geography": "Consumer Price Index for All Urban Consumers (CPI-U), U.S. city average.",
+    "unit": "Percent change.",
+    "headline_all_items": {
+      "month_over_month_pct": 0.6,
+      "month_basis": "seasonally adjusted, August to September 2026",
+      "year_over_year_pct": 3.7,
+      "year_basis": "unadjusted, September 2025 to September 2026"
+    },
+    "core_all_items_less_food_and_energy": {
+      "month_over_month_pct": 0.3,
+      "month_basis": "seasonally adjusted, August to September 2026",
+      "year_over_year_pct": 2.6,
+      "year_basis": "unadjusted, September 2025 to September 2026"
+    },
+    "coordinates": "Release lead paragraph gives headline monthly and 12-month changes; lead paragraph also reports all items less food and energy monthly and annual changes. Tables 1 and A give CPI-U U.S. city average cross-checks by item and period."
+  },
+  "scope_note": "This is a published CPI report fact for macro context, not the Treasury yield resolution metric. No probability, market-price capture, verdict, or trade."
+}

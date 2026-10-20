@@ -1,0 +1,43 @@
+{
+  "schema": "primary_source_binding.v1",
+  "review_index": 472,
+  "verified_utc": "2026-10-20T14:51:50.043910+00:00",
+  "full_description_identical_indices": [
+    56,
+    203,
+    310,
+    400,
+    472
+  ],
+  "frozen_identity": {
+    "id": "2965273",
+    "conditionId": "0x46a20022223e9e2594d0dd0db2083d1325008588435b2d696a815e8e3178e1c5",
+    "clobTokenIds": "[\"60210406827197479470137005698769436013907851508107519939457047497842384207041\", \"31055653987411679763830930847071775860044906387626368818872148649342669092892\"]",
+    "criteria_sha256": "906f3331cd5b165d7fd6fff929401d57335afeff85545e0dd976597e8ab2f5ea"
+  },
+  "root_source_reads": [
+    {
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/official_youtube_event/official_youtube_event.receipt.json",
+      "raw_sha256": "9a271bf849d9adc348c2845b049e35f8c14393583b7ec6a803c0b7855a21c75d",
+      "status": 200,
+      "finding": "Artist-channel raw attributed-description text identifies OliverTreeNickell, named life celebration, July25 event and linked foundation; not a death-date record. Earlier extraction assumed absent shortDescription field; root verified actual attributed-description text instead."
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/official_foundation/official_foundation.receipt.json",
+      "raw_sha256": "fe89f14ab2d7b5ec516d49c6f469299261907810ccb81f72ce6d94d109a27d70",
+      "status": 200,
+      "finding": "Official-channel-linked foundation identifies legal name and lifetime-directed fund, undated/stale; not a separately dated death record."
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0472_root_AP_syndication_1453/ap_syndication.receipt.json",
+      "raw_sha256": "a24e526024a37411f7cf1e008cf8d7242abda71ef864d7bed49ac7e6e1921fc1",
+      "status": 200,
+      "url": "https://wtop.com/national/2026/06/oliver-tree-the-eccentric-american-musician-and-comedian-dies-at-32-in-helicopter-crash-in-brazil/",
+      "finding": "AP June22 original reporting, syndicated byWTOP, says representatives directed AP to official Instagram confirmation of June14 2026 death; corroborates legal name/memorial/foundation. This is reporter-carried representative confirmation, not direct Instagram access or independent replica. Reported platform audiences are datedJune22, not Google growth scores."
+    }
+  ],
+  "google_methodology_raw_sha256": "ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830",
+  "source_year": "2025 only; no2026 exact formula/cutoff established",
+  "public_eligibility_judgment": "June14 2026 death sufficiently supported for forecasting by AP direct representative reporting plus first-party memorial; original Instagram access remains unverified, no fabricated event date.",
+  "not_ranking_evidence": true
+}

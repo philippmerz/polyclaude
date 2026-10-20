@@ -1,0 +1,47 @@
+{
+  "schema": "case0476_late_delay_facts.v1",
+  "collected_utc": "2026-10-20T15:12Z",
+  "scope": "factual late-delay/development-status follow-up only; no probability or verdict",
+  "case": {
+    "review_index": 476,
+    "market_id": "3762773",
+    "question": "GTA VI released by November 30?",
+    "frozen_cutoff": "2026-11-30 11:59 PM ET",
+    "release_definition": "publicly available for purchase or download in US; early access, beta, other pre-release availability or leaks excluded; official Rockstar/Take-Two information resolves"
+  },
+  "reads": [
+    {
+      "receipt": "logs/deep_review_20261017/case0476_latedelay_1518/bloomberg_makingof.receipt.json",
+      "response_status": 403,
+      "received_utc": "2026-10-20T15:11:42.784750Z",
+      "raw_bytes": 13856,
+      "raw_sha256": "7372a82a44d88b9e7c76b8cf3a75d92457bf53cdc8348924a9531e701536275b",
+      "body_path": "logs/deep_review_20261017/case0476_latedelay_1518/bloomberg_makingof.body.json.gz"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0476_latedelay_1518b/gamesradar_bloomberg_quote.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:11:55.458437Z",
+      "raw_bytes": 2335476,
+      "raw_sha256": "1652b194cf7df9c5e2e7ebd8a1cced466c9b72e4346e8e0c0c54b849ea880982",
+      "body_path": "logs/deep_review_20261017/case0476_latedelay_1518b/gamesradar_bloomberg_quote.body.json.gz"
+    }
+  ],
+  "findings": [
+    {
+      "source": "Bloomberg Businessweek, Jason Schreier, Inside the Making of Grand Theft Auto 6",
+      "published": "2026-10-14 06:00 EDT (per indexed result)",
+      "retrieval": "direct article GET returned 403; no article text parsed from the private response",
+      "finding": null,
+      "limitation": "Original primary report body inaccessible to direct capture; web search indexed metadata and excerpts only."
+    },
+    {
+      "source": "GamesRadar+, Anthony McGlynn, GTA 6 is still undergoing changes despite releasing next month, Rockstar boss says",
+      "published": "2026-10-16 10:00 UTC (article metadata)",
+      "finding": "Article attributes to Schreier\u2019s Oct 14 Bloomberg reporting a direct quote from Rockstar technology director Phil Hooker: \u201cThe game is never completely settled.\u201d The article also paraphrases leadership as saying the game \u201csimply wasn\u2019t ready yet\u201d when discussing prior delay rationale. This supports ongoing changes as a general development fact; it does not specify critical-path blockers, gold/certification status, review-copy distribution, or a new delay.",
+      "limitation": "Secondary report quoting a direct management interview; no explicit current delay announcement or build-complete/test-status statement verified. Ongoing changes alone do not establish schedule risk."
+    }
+  ],
+  "coverage_gap": "Within two reads, no accessible original Bloomberg article body and no explicit current gold/certification/build-complete/test-status/review-copy statement was verified. No inference of \u201cno delay\u201d or \u201cno issue\u201d is made from absence.",
+  "read_cap": 5
+}

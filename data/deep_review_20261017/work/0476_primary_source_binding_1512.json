@@ -1,0 +1,94 @@
+{
+  "review_index": 476,
+  "verified_utc": "2026-10-20T15:09:01.068174+00:00",
+  "original_source_bodies_hash_verified": [
+    {
+      "source_id": "rockstar_2023_original_2025_window",
+      "url": "https://www.rockstargames.com/newswire/article/8978kok9385a82/grand-theft-auto-vi-watch-trailer-1-now",
+      "status": 200,
+      "raw_sha256": "318f176e1e7d6c59e7ca05239bcb88a2f5ced5f76e0c9d69e2883262d0827fd7",
+      "received_utc": "2026-10-20T14:52:39.780758Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2023_original_2025_window.receipt.json"
+    },
+    {
+      "source_id": "rockstar_2025_may_delay",
+      "url": "https://www.rockstargames.com/newswire/article/258aa538o412ok/grand-theft-auto-vi-is-now-coming-may-26-2026",
+      "status": 200,
+      "raw_sha256": "e4915398f6c50e3d9c93d5950790a1e4b8cf18f434bb6fe54d140af8ed824f0e",
+      "received_utc": "2026-10-20T14:51:37.924262Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_may_delay.receipt.json"
+    },
+    {
+      "source_id": "rockstar_2025_nov_date",
+      "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026",
+      "status": 200,
+      "raw_sha256": "9eff1f2ca212879cb5d318f05943a8114c649f4076a05cd6c65b03643b2d6d8c",
+      "received_utc": "2026-10-20T14:51:38.046489Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_nov_date.receipt.json"
+    },
+    {
+      "source_id": "rockstar_2026_preorder",
+      "url": "https://www.rockstargames.com/newswire/article/5171972o3ak5oa/pre-order-grand-theft-auto-vi-on-june-25",
+      "status": 200,
+      "raw_sha256": "55cd3917a63c718172fd23f093d5ae2f28d7b165c467ec7f52c0dfbb59fc59f1",
+      "received_utc": "2026-10-20T14:52:39.918277Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2026_preorder.receipt.json"
+    },
+    {
+      "source_id": "take2_latest_lineup",
+      "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-first-6",
+      "status": 200,
+      "raw_sha256": "670dfcd32d4f030310ffc2fb3c55f0ad7388acc0e3c519e51549a32f7a48936c",
+      "received_utc": "2026-10-20T14:51:38.621571Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/take2_latest_lineup.receipt.json"
+    },
+    {
+      "source_id": "rockstar_oct15_launch_trailer",
+      "url": "https://www.rockstargames.com/VI/launch-trailer",
+      "status": 200,
+      "raw_sha256": "3057a8b50b53098b23d7a98e9a160eb0f175c64c3a2e2de24ab769035fefbe64",
+      "received_utc": "2026-10-20T14:51:38.718831Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_oct15_launch_trailer.receipt.json"
+    },
+    {
+      "source_id": "rockstar_platform_versions_faq",
+      "url": "https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions",
+      "status": 200,
+      "raw_sha256": "f11bd23a42cc6d8fb3781e52970a3b78994a10ac56e6cd3f58bec42f9f24c255",
+      "received_utc": "2026-10-20T14:51:38.945310Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_platform_versions_faq.receipt.json"
+    },
+    {
+      "source_id": "playstation_us_listing",
+      "url": "https://store.playstation.com/en-us/product/EP1004-PPSA01547_00-GTAVISTANDARD001",
+      "status": 200,
+      "raw_sha256": "ea55cf26efd7f556965283e18cc30c6430a38c2aa132e219b9bf351e12aa56d4",
+      "received_utc": "2026-10-20T14:51:39.625501Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/playstation_us_listing.receipt.json"
+    },
+    {
+      "source_id": "xbox_us_listing",
+      "url": "https://www.xbox.com/en-us/games/grand-theft-auto-vi",
+      "status": 200,
+      "raw_sha256": "adfb93b47b1b4ffbd8388551d5f653bc0067dfc472eabd491ffa1b57d9d2d401",
+      "received_utc": "2026-10-20T14:51:40.096732Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/xbox_us_listing.receipt.json"
+    },
+    {
+      "source_id": "rockstar_2025_original_schedule",
+      "url": "https://www.rockstargames.com/newswire/article/4k4k3kk2ao22ok/grand-theft-auto-vi-coming-2025",
+      "status": 404,
+      "raw_sha256": "74679326388a6ca75088e00ccdca386c8cc1727c9ce6bd445c493c0580794a18",
+      "received_utc": "2026-10-20T14:51:37.799106Z",
+      "receipt": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_original_schedule.receipt.json"
+    }
+  ],
+  "full_frozen_rule_read": true,
+  "primary_interpretation": "Public official release inUS controls. Preorder/shipped download code/preload alone are explicitly excluded pre-release availability; Nov12 packaging is not proof of a completed released game. At least oneconsole counts. Actual scheduledNov19 release byNov30 can qualify, not already observed.",
+  "limits": [
+    "Newswire metadata is thin/client-rendered; use body/metadata only for claims actually present, with IR/support/store corroboration.",
+    "No gold/mastereddisc or actual playable retail release verified; code-only boxes weaken physicalmanufacturing inference.",
+    "USlocale/source/support evidence not a verifiedfuture ability to buy/play; schedule can change."
+  ],
+  "historical_date_note": "Current official launch-trailer catalogue labels Trailer1 December4,2023; collector called the old announcement December5. Exact initial day/timezone unresolved/not load-bearing; model uses only original2025window\u2192May2026\u2192Nov2026 sequence, not claimed Dec5day."
+}

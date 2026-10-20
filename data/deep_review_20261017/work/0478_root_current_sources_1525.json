@@ -1,0 +1,30 @@
+{
+  "review_index": 478,
+  "exact_description_matches": [
+    210,
+    406,
+    478
+  ],
+  "current_source_receipts_root_verified": [
+    {
+      "url": "https://www.matchroomboxing.com/news/anthony-joshua-returns-for-comeback-fight-in-riyadh-on-saturday-25th-july/",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/joshua_announcement/joshua_announcement.receipt.json",
+      "raw_sha256": "734f20ef485a260cdf816adb23d39c23051a0e69edbf134a691869ec635e32b8",
+      "received_utc": "2026-10-20T15:10:45.872396Z"
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=BHVkoYIfBds",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/joshua_result/joshua_result.receipt.json",
+      "raw_sha256": "e5bdb4165b7eb11a3d555e30b1e99cda540dea04f7c3fc03e18da575fc406f0c",
+      "received_utc": "2026-10-20T15:10:46.497089Z"
+    },
+    {
+      "url": "https://www.matchroomboxing.com/events/fury-vs-joshua/",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/fury_joshua_event/fury_joshua_event.receipt.json",
+      "raw_sha256": "a4ad15a5ed8156c1bd12991ca66b5046f2b41a3e744f533ad7e3529cd335b7ff",
+      "received_utc": "2026-10-20T15:10:46.675984Z"
+    }
+  ],
+  "Google2025_body_raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+  "method_historical_scope": "Growth notabsolutevolume;2025cutoffnot2026fixeddate; events/time/publication separated. No per-athlete forecast inherited."
+}

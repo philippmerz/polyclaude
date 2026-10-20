@@ -1,0 +1,90 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T15:37:04.083480+00:00",
+  "previous_goal_turn_classification": "Concrete research progress472/475/476 valued and473/474/477 factually closed;472 append-only UMA-presence correction. Latest14UTC scheduled instruction is bounded: verify/publish saved work, finish current safety/news delta, then end.",
+  "scope": "Continue full frozen3000 review; no newBUY until600valued plus primary comparative selection.",
+  "counts": {
+    "completed_valuations": 396,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 379,
+    "pending": 2209,
+    "base_records": 791,
+    "revisions_written": 76
+  },
+  "active_indices": [
+    478
+  ],
+  "next_index": 478,
+  "completed_this_turn": [
+    {
+      "index": 472,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0472_record_verified_1459.json",
+      "proof_sha256": "b4d9d9500ab63cac0d644eaa1061552170385c1290a1514b28de6b96e6c75911",
+      "report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d"
+    },
+    {
+      "index": 473,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0473_record_verified_1459.json",
+      "proof_sha256": "9d8aa76c3ddf0c58a7ada47e0a8e7770c35cdbf9bfebdcc0620d440dd3dc7c29",
+      "report_sha256": "1f766c68a315400078a2f44cd633e2bbfbfe245987d2a449d9d5b9eef9615074"
+    },
+    {
+      "index": 474,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0474_record_verified_1459.json",
+      "proof_sha256": "3d2cc5ed0a779844e3eafdc4adc896c77ecdc722826a63e33416ed63bb06e71b",
+      "report_sha256": "1cf76ac2e1c7f001c39772b20a1426fc1b0fd29007ff1672446a7c4cf36907ae"
+    },
+    {
+      "index": 475,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0475_record_verified_1510.json",
+      "proof_sha256": "289faa4d0eb77e7b9f08aecb9f08694811e473b3e6e4b48e4b55a7a2639f90be",
+      "report_sha256": "953d94d2024b588e22bc8848f6167c104812cb6cb83e5ec5a963153ed0ff2235"
+    },
+    {
+      "index": 476,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0476_record_verified_1520.json",
+      "proof_sha256": "ed584b5d257797edf45e1a4a80a5fbffb7d67c1e1a01159d1d220e6dbf90c532",
+      "report_sha256": "732349317e92644bef3e67beb55e6fb1c61b09fb27e79d02704edd453e6ef03c"
+    },
+    {
+      "index": 477,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0477_record_verified_1521.json",
+      "proof_sha256": "6305dac6f9be789045d9a531ef7af1a7d1d84cfba792b7b8ea3d0008108e035e",
+      "report_sha256": "44c8aa655ec8a9862986db2a791bd57206db39f5fc4b70954378c27ec4cfe2d3"
+    }
+  ],
+  "active_work": "data/deep_review_20261017/work/0478_resume.json",
+  "last_safety": "research/2026-10-20-140001-checkin.json",
+  "late_safety": "data/deep_review_20261017/work/tick134616_primary_portfolio_judgment.json",
+  "last_financial": "research/2026-10-20-1402-financial-snapshot.json",
+  "next_safety": "MIprogram16UTC/debateOct21 23UTC; nextscheduled18UTC/earliermaterialevent. No automatictimer orentryexpiry.",
+  "run_contract": "This scheduled run is bounded; no new case or goal lifecycle action, timer, idle continuation. Finite research remains unfinished and may resume under its authorization after the scheduled run.",
+  "next_telegram": "400valued/materialfinding/globalblock",
+  "handoff_pointer_fix": "Current small unit27; preserve prior units26 and earlier as dated evidence.",
+  "next_source_unit": "478 active/unvalued: use0478_resume.json. 479 terminal-status lead not yet literal-reviewed;480 and481 facts-only collected, no forecast/valuation. Do not count these as completed.",
+  "candidate_comparison": "470NO provisional selected edge;476NO central-positive/selectednegative delay-tail lead;472/475 neither side selected-positive. All remain dated research, newBUYpause396/600+comparison.",
+  "verification": "data/deep_review_20261017/work/goal0027_root_closeout_verified_1530.json",
+  "latest_auth": "15:25 complete authenticatedorders3LIVE/0matched/$6.50/trades127 and all9 zero-threshold position tuples exactly unchanged versus14:38\u201340 baseline.",
+  "latest_source_review": "data/deep_review_20261017/work/tick134616_primary_source_review.json",
+  "source_collection_ahead": [
+    "data/deep_review_20261017/work/status473_479_1451/index.json",
+    "data/deep_review_20261017/work/0480_facts_1525.json",
+    "data/deep_review_20261017/work/0481_source_family_facts_1525.json"
+  ],
+  "revisions_this_turn": [
+    {
+      "index": 472,
+      "proof": "data/deep_review_20261017/work/0472_uma_revision_verified_1511.json",
+      "proof_sha256": "99fde1520f5adb04c53d70aae289d3d44d09d62d1596c8f7630fd235367e7d8d",
+      "revision_path": "research/2026-10-17-deep-review/revisions/0472_20261020T150746767331Z.json"
+    }
+  ],
+  "publication_audit": "data/deep_review_20261017/work/goal0027_publication_audit_1530.json",
+  "latest_safety_closeout": "data/deep_review_20261017/work/tick140001_closeout_delta_1530.json"
+}

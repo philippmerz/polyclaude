@@ -1,0 +1,57 @@
+{
+  "schema": "deep_review_additive_facts.v1",
+  "captured_utc": "2026-10-20T14:50:00Z",
+  "review_index": 472,
+  "identity": {
+    "market_id": "2965273",
+    "condition_id": "0x46a20022223e9e2594d0dd0db2083d1325008588435b2d696a815e8e3178e1c5",
+    "source_unit": "data/deep_review_20261017/work/0472_passings_facts_1405.json"
+  },
+  "scope": "Receipt-backed review of existing first-party captures plus bounded targeted search for an accessible original announcement. No probability, ranking, verdict, or trade action.",
+  "verified_first_party_material": {
+    "artist_identity": {
+      "source_url": "https://www.youtube.com/watch?v=917OIkfhMkI",
+      "official_channel_id": "UCHcb3FQivl6xCRcHC2zjdkQ",
+      "video_title": "Oliver Tree - Celebration of Life (Live from Santa Cruz)",
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/official_youtube_event/official_youtube_event.receipt.json",
+      "retrieved_utc": "2026-10-20T13:53:59.943807Z",
+      "http_status": 200,
+      "raw_sha256": "9a271bf849d9adc348c2845b049e35f8c14393583b7ec6a803c0b7855a21c75d",
+      "body_facts": "Official Artist Channel identifies the video. YouTube metadata says streamed live July 25, 2026. Description says ‘Join us to celebrate the life of Oliver Tree Nickell’; program to include live music, tribute videos and speakers from friends and family; event scheduled July 25 at 7:30pm PST. This is an artist-channel memorial event and establishes the artist-name/legal-name linkage in its own copy. The live-event date is not a death date."
+    },
+    "foundation_linkage": {
+      "url": "https://olivertreefoundation.com/",
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/official_foundation/official_foundation.receipt.json",
+      "retrieved_utc": "2026-10-20T13:54:20.490295Z",
+      "http_status": 200,
+      "raw_sha256": "fe89f14ab2d7b5ec516d49c6f469299261907810ccb81f72ce6d94d109a27d70",
+      "body_facts": "The official-channel description links this domain for proceeds. Foundation page identifies Oliver Tree Nickell Foundation and says Oliver directed the fund and grant work was created with board during his lifetime. Linkage is established by the official channel's own video description, rather than name similarity alone. Foundation capture's CDN age was 2,322,023 seconds; undated wording may be stale."
+    }
+  },
+  "targeted_original_source_check": {
+    "discovery": "Search targeted exact official death wording and family/representative announcement. Results surfaced AP's June 22 report, which says representatives directed AP to an official Instagram confirmation. Search result exposed the reported caption with dates June 29, 1993–June 14, 2026 and the statement that the foundation was set up before his passing. This is a secondary report of an original, not direct capture of that Instagram post.",
+    "official_instagram": {
+      "url": "https://www.instagram.com/olivertree/",
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/instagram_profile/instagram_profile.receipt.json",
+      "retrieved_utc": "2026-10-20T13:53:59.147456Z",
+      "http_status": 200,
+      "raw_sha256": "4aa7412d6770ae97031545821a9d67034d7d943b96482e9cb4aebb877fa75561",
+      "finding": "Captured body is login-required/error page; no post or caption available. No challenge or access-control workaround attempted."
+    },
+    "associated_ap_attempt": {
+      "url": "https://apnews.com/article/8994feaf25fac4bca37132308cbbac11",
+      "receipt": "logs/deep_review_20261017/case0472_passings_1405/ap_identity_confirmation/ap_identity_confirmation.receipt.json",
+      "retrieved_utc": "2026-10-20T13:54:47.653364Z",
+      "http_status": 403,
+      "raw_sha256": "d7c053bf0020ab3737d0d5ddcb290b61111c54f3f28c27fbd86d2b6d031af892",
+      "finding": "AP body was not accessible in the saved capture. The search-result rendering identifies AP's report as dated June 22, 2026 and describes the Instagram caption, but it does not replace the missing original post or receipt-backed AP body."
+    }
+  },
+  "date_separation": {
+    "reported_death_date": "June 14, 2026 (reported in search-result rendering of AP and other news results; exact official Instagram post body not directly captured here).",
+    "official_channel_event": "July 25, 2026 at 7:30pm PST per artist-channel video description; YouTube metadata labels it streamed live on July 25.",
+    "capture_date": "October 20, 2026; distinct from both event and reported death dates.",
+    "upload_or_update_date": "Existing YouTube metadata does not expose a distinct upload date beyond the July 25 live-stream date. Foundation response includes stale CDN age and no publication/event date."
+  },
+  "conclusion_and_gaps": "The official artist channel's named life-celebration event, linked foundation, AP's rendered secondary account of an official Instagram death confirmation, and multiple reported tributes converge on a death rather than a merely staged memorial. However, the exact official death announcement and underlying event record were not directly captured; the exact death date here remains secondary-source-supported, not independently verified from the original. No accessible first-party material supports current liveness. Existing site 403, Instagram login page and AP 403 are preserved; no repeated request or workaround."
+}

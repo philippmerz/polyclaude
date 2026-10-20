@@ -1,0 +1,270 @@
+{
+  "collected_utc": "2026-10-20T14:53:29.855569+00:00",
+  "condition_id": "0xd421f367cf3057d4ce5959edffd6fd2ae77b5da55cccf5a73560ae2b334660bf",
+  "criteria_sha256": "569d708d7cd65531be30a8449640046ad7b531c53ee77e268360044179df4319",
+  "cutoff_and_open_fact_boundary": {
+    "actual_release_observation": "No captured source documents GTA VI as already released by the Oct 20 retrieval date; official pages state future schedule/pre-order/preload information.",
+    "frozen_cutoff": "Listed date November 30, 2026, 11:59 PM ET. Frozen endDate is 2026-12-01T04:59:00Z.",
+    "rule_distinction": "The exact criterion defines release as becoming publicly available for purchase or download in the US; early access, beta, other pre-release availability, and leaks are expressly excluded.",
+    "unresolved_factual_boundary": "Official support describes physical Standard copies as expected for retailer shipping/pickup from Nov 12 and says the box contains a download code used for preload; digital preload also starts Nov 12. This collection does not decide how those pre-release purchase/preload facts interact with the exact criterion. Store schedule currently states Nov 19."
+  },
+  "exact_frozen_rule": {
+    "criteria_sha256": "569d708d7cd65531be30a8449640046ad7b531c53ee77e268360044179df4319",
+    "description": "This market will resolve to \"Yes\" if it Grand Theft Auto VI is officially released in the US by the listed date, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nFor the purposes of this market, \"release\" refers to the game becoming publicly available for purchase or download in the US. Early access, beta versions, other forms of pre-release availability, or leaks will not count as an official release. If the release is only for certain consoles (e.g. Xbox Series X/S) it will count.\n\nThe resolution source will be official information from Rockstar Games or its parent company, Take-Two Interactive.",
+    "endDate": "2026-12-01T04:59:00Z",
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "question": "GTA VI released by November 30?",
+    "resolutionSource": ""
+  },
+  "frozen_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+  "limitations": [
+    "Rockstar Newswire article pages return thin HTML with metadata but article text is client-rendered; official current release schedule is independently corroborated in Take-Two IR and current US platform storefronts.",
+    "The initial guessed Rockstar original-schedule URL returned HTTP 404 and is retained only as a failed retrieval receipt; it is not used for factual claims.",
+    "Storefront and newsroom content can change; this packet is a dated Oct 20 collection, not a later settlement-time recheck.",
+    "This is factual collection only: no probability, verdict, rejection, market-price inference, ledger record or execution recommendation."
+  ],
+  "market_id": "3762773",
+  "question": "GTA VI released by November 30?",
+  "review_index": 476,
+  "schema": "polyclaude.deep_review_factual_collection.v1",
+  "slug": "gta-vi-released-by-november-30",
+  "source_facts": [
+    {
+      "facts": [
+        "Rockstar\u2019s Dec 5, 2023 official Trailer 1 page says Coming 2025 for PS5 and Xbox Series X|S.",
+        "Rockstar\u2019s May 2, 2025 update moved its then-published schedule to May 26, 2026.",
+        "Rockstar\u2019s Nov 6, 2025 update moved the announced date to Thursday, Nov 19, 2026."
+      ],
+      "sources": [
+        "rockstar_2023_original_2025_window",
+        "rockstar_2025_may_delay",
+        "rockstar_2025_nov_date"
+      ],
+      "subject": "schedule history"
+    },
+    {
+      "facts": [
+        "Take-Two\u2019s Aug 7, 2026 FY2027 Q1 release table lists GTA VI for PS5 and Xbox Series X|S on Nov 19, 2026.",
+        "Rockstar\u2019s Oct 15, 2026 Launch Trailer page is current promotional material, not an observed game release; the page/site states Coming Nov 19, 2026 and offers pre-order.",
+        "Current US PlayStation and Xbox product pages identify Nov 19, 2026 as release/availability date and present pre-order actions."
+      ],
+      "sources": [
+        "take2_latest_lineup",
+        "rockstar_oct15_launch_trailer",
+        "playstation_us_listing",
+        "xbox_us_listing"
+      ],
+      "subject": "latest schedule evidence"
+    },
+    {
+      "facts": [
+        "Rockstar Support last updated its platform/version FAQ Aug 18, 2026. It lists PS5 and Xbox Series X|S; digital Standard and Ultimate editions; physical Standard only.",
+        "The physical version contains a download code in the box and no disc. Support says retailer shipping/pickup is expected from Nov 12; the code supports preload. Digital preload begins at local midnight Nov 12.",
+        "Support\u2019s code guidance assigns North America (US and Canada) as a PlayStation redemption region; Xbox codes are not region-locked.",
+        "Rockstar\u2019s June 24 announcement says pre-orders begin June 25 at local midnight; current US stores display pre-order, not a completed release."
+      ],
+      "sources": [
+        "rockstar_platform_versions_faq",
+        "rockstar_2026_preorder",
+        "playstation_us_listing",
+        "xbox_us_listing"
+      ],
+      "subject": "editions, platform, region and pre-release availability"
+    }
+  ],
+  "sources": [
+    {
+      "captured_event_or_page_fact": "Initial published schedule: coming in 2025 for PS5 and Xbox Series X|S.",
+      "id": "rockstar_2023_original_2025_window",
+      "label": "Rockstar Games Newswire \u2014 GTA VI Trailer 1",
+      "published_date_caveat": "For Rockstar Newswire article dates, date is the article date shown in the rendered official Newswire page/search result; the captured HTTP document is the official article HTML/metadata response and does not expose all client-rendered article text.",
+      "publisher_date_or_retrieval": "2023-12-05",
+      "retrieval": {
+        "gzip_sha256": "a17c0406dcde159593d56d99900a73480eed7a10ba7b84589de1ce97c7fc33c2",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2023_original_2025_window.body.json.gz",
+        "raw_bytes": 5831,
+        "raw_sha256": "318f176e1e7d6c59e7ca05239bcb88a2f5ced5f76e0c9d69e2883262d0827fd7",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2023_original_2025_window.receipt.json",
+        "received_utc": "2026-10-20T14:52:39.780758Z",
+        "started_utc": "2026-10-20T14:52:39.557761Z",
+        "status": 200
+      },
+      "url": "https://www.rockstargames.com/newswire/article/8978kok9385a82/grand-theft-auto-vi-watch-trailer-1-now"
+    },
+    {
+      "captured_event_or_page_fact": "Title/description state revised release date May 26, 2026 and say it was later than expected.",
+      "id": "rockstar_2025_may_delay",
+      "label": "Rockstar Games Newswire \u2014 May 2025 schedule update",
+      "published_date_caveat": "For Rockstar Newswire article dates, date is the article date shown in the rendered official Newswire page/search result; the captured HTTP document is the official article HTML/metadata response and does not expose all client-rendered article text.",
+      "publisher_date_or_retrieval": "2025-05-02",
+      "retrieval": {
+        "gzip_sha256": "542d2c8f385b74af8e4d36cca5d8474149a2d14e6acb3410657ed7362f3711b6",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_may_delay.body.json.gz",
+        "raw_bytes": 5992,
+        "raw_sha256": "e4915398f6c50e3d9c93d5950790a1e4b8cf18f434bb6fe54d140af8ed824f0e",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_may_delay.receipt.json",
+        "received_utc": "2026-10-20T14:51:37.924262Z",
+        "started_utc": "2026-10-20T14:51:37.808604Z",
+        "status": 200
+      },
+      "url": "https://www.rockstargames.com/newswire/article/258aa538o412ok/grand-theft-auto-vi-is-now-coming-may-26-2026"
+    },
+    {
+      "captured_event_or_page_fact": "Title/description state Thursday, November 19, 2026 as the revised release date and refer to added time for polish.",
+      "id": "rockstar_2025_nov_date",
+      "label": "Rockstar Games Newswire \u2014 November 2025 schedule update",
+      "published_date_caveat": "For Rockstar Newswire article dates, date is the article date shown in the rendered official Newswire page/search result; the captured HTTP document is the official article HTML/metadata response and does not expose all client-rendered article text.",
+      "publisher_date_or_retrieval": "2025-11-06",
+      "retrieval": {
+        "gzip_sha256": "97de9ad11dec9b082f35b7d85d981592068c00c28b122c5f0f04179d9f9ad371",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_nov_date.body.json.gz",
+        "raw_bytes": 6205,
+        "raw_sha256": "9eff1f2ca212879cb5d318f05943a8114c649f4076a05cd6c65b03643b2d6d8c",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_nov_date.receipt.json",
+        "received_utc": "2026-10-20T14:51:38.046489Z",
+        "started_utc": "2026-10-20T14:51:37.933301Z",
+        "status": 200
+      },
+      "url": "https://www.rockstargames.com/newswire/article/ak3ak31a49a221/grand-theft-auto-vi-is-now-set-to-launch-november-19-2026"
+    },
+    {
+      "captured_event_or_page_fact": "Description says pre-orders begin at midnight local time June 25; announcement page describes digital and physical pre-orders and planned November 19 release.",
+      "id": "rockstar_2026_preorder",
+      "label": "Rockstar Games Newswire \u2014 pre-orders",
+      "published_date_caveat": "For Rockstar Newswire article dates, date is the article date shown in the rendered official Newswire page/search result; the captured HTTP document is the official article HTML/metadata response and does not expose all client-rendered article text.",
+      "publisher_date_or_retrieval": "2026-06-24",
+      "retrieval": {
+        "gzip_sha256": "394c9d467a3506f43fc44d4bce19b63334a3589a4ab82723b9863dd0f15b2b96",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2026_preorder.body.json.gz",
+        "raw_bytes": 6295,
+        "raw_sha256": "55cd3917a63c718172fd23f093d5ae2f28d7b165c467ec7f52c0dfbb59fc59f1",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/additional/rockstar_2026_preorder.receipt.json",
+        "received_utc": "2026-10-20T14:52:39.918277Z",
+        "started_utc": "2026-10-20T14:52:39.791925Z",
+        "status": 200
+      },
+      "url": "https://www.rockstargames.com/newswire/article/5171972o3ak5oa/pre-order-grand-theft-auto-vi-on-june-25"
+    },
+    {
+      "captured_event_or_page_fact": "Current lineup table lists GTA VI on PS5 and Xbox Series X|S for November 19, 2026; CEO remarks express confidence in that date.",
+      "id": "take2_latest_lineup",
+      "label": "Take-Two Interactive IR \u2014 FY2027 Q1 results",
+      "published_date_caveat": null,
+      "publisher_date_or_retrieval": "2026-08-07",
+      "retrieval": {
+        "gzip_sha256": "c2395724bf921060bda67055d031fd08709b5e9ba37d8f0d887b71d430e79d35",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/take2_latest_lineup.body.json.gz",
+        "raw_bytes": 1401015,
+        "raw_sha256": "670dfcd32d4f030310ffc2fb3c55f0ad7388acc0e3c519e51549a32f7a48936c",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/take2_latest_lineup.receipt.json",
+        "received_utc": "2026-10-20T14:51:38.621571Z",
+        "started_utc": "2026-10-20T14:51:38.055595Z",
+        "status": 200
+      },
+      "url": "https://www.take2games.com/ir/news/take-two-interactive-software-inc-reports-results-fiscal-first-6"
+    },
+    {
+      "captured_event_or_page_fact": "Page title is Launch Trailer; page carries October 15, 2026 event date and current site header states Coming November 19, 2026 with pre-order prompt.",
+      "id": "rockstar_oct15_launch_trailer",
+      "label": "Rockstar Games GTA VI launch-trailer page",
+      "published_date_caveat": null,
+      "publisher_date_or_retrieval": "2026-10-15",
+      "retrieval": {
+        "gzip_sha256": "ae7bb570a401fc9cf856ef057e073d6228d34816790da677afe81de887a06316",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_oct15_launch_trailer.body.json.gz",
+        "raw_bytes": 511953,
+        "raw_sha256": "3057a8b50b53098b23d7a98e9a160eb0f175c64c3a2e2de24ab769035fefbe64",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_oct15_launch_trailer.receipt.json",
+        "received_utc": "2026-10-20T14:51:38.718831Z",
+        "started_utc": "2026-10-20T14:51:38.661557Z",
+        "status": 200
+      },
+      "url": "https://www.rockstargames.com/VI/launch-trailer"
+    },
+    {
+      "captured_event_or_page_fact": "Last updated August 18, 2026. Platforms PS5/Xbox Series X|S; digital Standard/Ultimate; physical Standard contains download code/no disc; shipping/pickup expected from Nov 12; digital pre-load midnight Nov 12; PS code region group includes US/Canada, Xbox codes not region-locked.",
+      "id": "rockstar_platform_versions_faq",
+      "label": "Rockstar Support \u2014 platforms, editions and versions",
+      "published_date_caveat": null,
+      "publisher_date_or_retrieval": "2026-08-18",
+      "retrieval": {
+        "gzip_sha256": "8ee6d4b60a153cda30b98a508ddf44460f99207448ef0249da765470650268e7",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_platform_versions_faq.body.json.gz",
+        "raw_bytes": 196639,
+        "raw_sha256": "f11bd23a42cc6d8fb3781e52970a3b78994a10ac56e6cd3f58bec42f9f24c255",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_platform_versions_faq.receipt.json",
+        "received_utc": "2026-10-20T14:51:38.945310Z",
+        "started_utc": "2026-10-20T14:51:38.740954Z",
+        "status": 200
+      },
+      "url": "https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions"
+    },
+    {
+      "captured_event_or_page_fact": "Current US storefront marks Pre-Order; PS5 Standard and Ultimate; releaseDate 2026-11-19T05:00:00Z.",
+      "id": "playstation_us_listing",
+      "label": "PlayStation Store US \u2014 GTA VI",
+      "published_date_caveat": null,
+      "publisher_date_or_retrieval": "retrieved 2026-10-20",
+      "retrieval": {
+        "gzip_sha256": "e75248f274a84c4d7c50056de52eb0e7713d0494ccd9c4c00e8b5bb76f3ac1c7",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/playstation_us_listing.body.json.gz",
+        "raw_bytes": 465944,
+        "raw_sha256": "ea55cf26efd7f556965283e18cc30c6430a38c2aa132e219b9bf351e12aa56d4",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/playstation_us_listing.receipt.json",
+        "received_utc": "2026-10-20T14:51:39.625501Z",
+        "started_utc": "2026-10-20T14:51:38.962935Z",
+        "status": 200
+      },
+      "url": "https://store.playstation.com/en-us/product/EP1004-PPSA01547_00-GTAVISTANDARD001"
+    },
+    {
+      "captured_event_or_page_fact": "Current US storefront says Available November 19, 2026; product platform Xbox Series X|S; preorder prompt.",
+      "id": "xbox_us_listing",
+      "label": "Xbox US \u2014 GTA VI",
+      "published_date_caveat": null,
+      "publisher_date_or_retrieval": "retrieved 2026-10-20",
+      "retrieval": {
+        "gzip_sha256": "a94f378eed01af258581f53350349ca20fec7bc6d70aa992b35956f638654f33",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/xbox_us_listing.body.json.gz",
+        "raw_bytes": 437870,
+        "raw_sha256": "adfb93b47b1b4ffbd8388551d5f653bc0067dfc472eabd491ffa1b57d9d2d401",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/xbox_us_listing.receipt.json",
+        "received_utc": "2026-10-20T14:51:40.096732Z",
+        "started_utc": "2026-10-20T14:51:39.645375Z",
+        "status": 200
+      },
+      "url": "https://www.xbox.com/en-us/games/grand-theft-auto-vi"
+    },
+    {
+      "captured_event_or_page_fact": "HTTP 404; excluded as evidence and not used.",
+      "id": "rockstar_2025_original_schedule",
+      "label": "failed guessed Rockstar URL; invalid/404",
+      "published_date_caveat": "For Rockstar Newswire article dates, date is the article date shown in the rendered official Newswire page/search result; the captured HTTP document is the official article HTML/metadata response and does not expose all client-rendered article text.",
+      "publisher_date_or_retrieval": "retrieved 2026-10-20",
+      "retrieval": {
+        "gzip_sha256": "4c296ed2f04e3189909c9ec1b108825b3a1b6338ca07d59f94ef5bc8647f4745",
+        "http_representation": "http_body",
+        "private_body_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_original_schedule.body.json.gz",
+        "raw_bytes": 2831,
+        "raw_sha256": "74679326388a6ca75088e00ccdca386c8cc1727c9ce6bd445c493c0580794a18",
+        "receipt_path": "logs/deep_review_20261017/case0476_primary_facts_1455/rockstar_2025_original_schedule.receipt.json",
+        "received_utc": "2026-10-20T14:51:37.799106Z",
+        "started_utc": "2026-10-20T14:51:37.304031Z",
+        "status": 404
+      },
+      "url": "https://www.rockstargames.com/newswire/article/4k4k3kk2ao22ok/grand-theft-auto-vi-coming-2025"
+    }
+  ]
+}

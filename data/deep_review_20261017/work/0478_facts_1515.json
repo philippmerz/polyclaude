@@ -1,0 +1,93 @@
+{
+  "schema": "deep_review_additive_facts.v1",
+  "captured_utc": "2026-10-20T15:12:00Z",
+  "review_index": 478,
+  "identity": {
+    "market_id": "4425462",
+    "condition_id": "0xf56fe1c53c6acec4bae2c7f221e2a6e4d2f5f1652e1a317deabba975067ca2ac",
+    "criteria_sha256": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe",
+    "question": "Will Anthony Joshua rank in Google’s Top 5 Most Searched Athletes of 2026?"
+  },
+  "frozen_rule": {
+    "exact_criterion": "Yes iff Anthony Joshua appears at rank 1–5 in Google's official 2026 Year in Search Global Athletes list; otherwise No.",
+    "source": "Google-published specified list, irrespective of navigation route.",
+    "fallback": "No if Google has not released the list by 2027-03-31 23:59 ET.",
+    "category_geography": "Global Athletes, not US-only, People, Passings, or another athlete ranking.",
+    "exact_rule_pointer": "scripts/deep_review_resume.py --index 478 (read 2026-10-20); frozen rules file hash verified by resume packet."
+  },
+  "google_family_comparison": {
+    "same_literal_family_reference": "Lionel Messi review 210, data/deep_review_20261017/work/0210_final.json; exact held rule reverified in data/deep_review_20261017/work/tick1559_rule_0210.json.",
+    "equivalence": "Messi and Joshua descriptions specify the same year, official Global Athletes category, top-five rank threshold, Google list source, and Mar. 31, 2027 missing-list deadline. Subject identity differs. This is source/criteria family equivalence only; no valuation or probability from review 210 is adopted.",
+    "official_method_and_historical_source": {
+      "method_url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "receipt": "logs/deep_review_20261017/0700_case0406_facts_0011/google_methodology.receipt.json",
+      "retrieved_utc": "2026-10-20T00:12:03.677406Z",
+      "http_status": 200,
+      "raw_sha256": "ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830",
+      "finding": "Google describes 2025 lists as queries whose search interest increased fastest from Jan. 1–Nov. 25 versus the same period in 2024, using Google Trends/internal tools; this is not absolute search volume. It does not specify the 2026 cutoff or implementation."
+    },
+    "global_athletes_2025": {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "receipt": "logs/deep_review_20261017/0700_case0406_facts_0011/google_global_2025.receipt.json",
+      "retrieved_utc": "2026-10-20T00:12:18.064450Z",
+      "http_status": 200,
+      "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+      "finding": "Official Global page shows Sports > Athletes category and a ranked list. 2025 is historical comparison only, not evidence of Joshua's 2026 rank."
+    },
+    "exact_2026_route_reuse": {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "existing_receipt": "logs/deep_review_20261017/case0406_google2026_root_0031/exact_2026.receipt.json",
+      "retrieved_utc": "2026-10-20T00:28:56.007505Z",
+      "http_status": 404,
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "finding": "Reused existing exact annual-route check; no repeat Trends request. A single 404 does not establish that a list is absent elsewhere or will not be released."
+    },
+    "publication_timing": "Official 2025 Google blog was captured with metadata publication date 2025-12-04; one prior release date does not establish a 2026 release schedule. See data/deep_review_20261017/work/0406_facts_0011.json."
+  },
+  "current_event_facts": [
+    {
+      "source_url": "https://www.matchroomboxing.com/news/anthony-joshua-returns-for-comeback-fight-in-riyadh-on-saturday-25th-july/",
+      "source_type": "Matchroom Boxing promoter announcement",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/joshua_announcement/joshua_announcement.receipt.json",
+      "retrieved_utc": "2026-10-20T15:10:45.872396Z",
+      "http_status": 200,
+      "raw_sha256": "734f20ef485a260cdf816adb23d39c23051a0e69edbf134a691869ec635e32b8",
+      "source_publication_date": "2026-04-27 (page body)",
+      "event_date_and_place": "July 25, 2026, Riyadh, Saudi Arabia; announced as Joshua vs Kristian Prenga, live worldwide on DAZN.",
+      "fact": "The promoter's April announcement said Joshua's previous win was a December 2025 knockout of Jake Paul and described the July 25 return as a multi-fight deal starting in Saudi Arabia. At announcement time this was scheduled, not completed."
+    },
+    {
+      "source_url": "https://www.youtube.com/watch?v=BHVkoYIfBds",
+      "source_type": "Matchroom Boxing official YouTube channel video; video ID preserved from requested URL and body",
+      "channel_id": "UC7LReVje9aPB4B6XAsXX8WQ",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/joshua_result/joshua_result.receipt.json",
+      "retrieved_utc": "2026-10-20T15:10:46.497089Z",
+      "http_status": 200,
+      "raw_sha256": "e5bdb4165b7eb11a3d555e30b1e99cda540dea04f7c3fc03e18da575fc406f0c",
+      "source_event_date": "2026-07-25 per video metadata and description",
+      "fact": "Title: ‘Anthony Joshua Climbs Off Canvas, KO’s Prenga | Tyson Fury Fight Is On’. Description states he was knocked down twice, then knocked out Prenga in round two at Jeddah Superdome, Saudi Arabia on July 25. This establishes an event/result, not merely a scheduled bout. It establishes activity on that date; not present health/status in October."
+    },
+    {
+      "source_url": "https://www.matchroomboxing.com/events/fury-vs-joshua/",
+      "source_type": "Matchroom Boxing official event listing",
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/fury_joshua_event/fury_joshua_event.receipt.json",
+      "retrieved_utc": "2026-10-20T15:10:46.675984Z",
+      "http_status": 200,
+      "raw_sha256": "a4ad15a5ed8156c1bd12991ca66b5046f2b41a3e744f533ad7e3529cd335b7ff",
+      "last_modified": "2026-10-20T14:45:56Z; HTTP Age 1489s at capture",
+      "event_status": "Listed for Friday, Dec. 11, 2026, Principality Stadium, Cardiff: Tyson Fury vs Anthony Joshua. Scheduled as of capture; not yet occurred.",
+      "limitation": "No evidence in this capture about eventual completion, Joshua's health, or a later change in event status."
+    }
+  ],
+  "injury_or_death_rumor_check": "The captured first-party/promoter material does not make or verify a current injury or death claim about Joshua. The July 25 recorded bout confirms he competed then; it does not prove health after that date. No conclusion about later injury/death rumors is supported by this bounded source set.",
+  "unknowns": [
+    "No official 2026 Global Athletes ranking or Joshua-specific Google search measurement verified; the existing exact 2026 route is one 404 only.",
+    "No 2026 Google cutoff, score, aliases, full-field rank, or release date verified.",
+    "No current October 2026 first-party health/liveness statement found in the three captured pages.",
+    "Fights in Saudi Arabia and Wales are internationally promoted events; these facts do not measure Google Global search interest or show that event exposure translates to a top-five ranking."
+  ],
+  "no_probability": true,
+  "no_ranking_or_verdict": true,
+  "no_trade_or_ledger_action": true,
+  "no_telegram": true
+}

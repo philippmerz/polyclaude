@@ -1,0 +1,28 @@
+{
+  "schema": "polyclaude.status_closeout.v1",
+  "receipt_path": "logs/cron20261020T140001Z_closeout/status1530/status.receipt.json",
+  "receipt": {
+    "schema": "read_capture.response.v1",
+    "name": "status",
+    "timing_basis": "call_window",
+    "started_utc": "2026-10-20T15:24:24.142072Z",
+    "received_utc": "2026-10-20T15:24:37.915423Z",
+    "response_status": null,
+    "error_type": null,
+    "headers": {},
+    "body_representation": "supplied_bytes",
+    "hash_scope": "supplied_bytes_only_not_wire_authentication",
+    "request": {
+      "read_only": true,
+      "operation": "polyclaude_status",
+      "scope": "bounded_closeout_existing_check_no_telegram"
+    },
+    "raw_bytes": 5681,
+    "raw_sha256": "e1e496557b0ad656e66a9b74b6656c65bbacc6240883618462bd8b5b41b25d51",
+    "gzip_sha256": "b4a2ad1ab9a00507a74b9b30b1c197cf0734194f56632d11609147055f2d8c5b",
+    "body_path": "status.body.json.gz"
+  },
+  "returncode": 0,
+  "has_internal_error": false,
+  "stderr_nonempty": false
+}

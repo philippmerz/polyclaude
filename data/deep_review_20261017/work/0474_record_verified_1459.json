@@ -1,0 +1,29 @@
+{
+  "verified_utc": "2026-10-20T14:58:46.137137+00:00",
+  "review_index": 474,
+  "status": "excluded_factual",
+  "record_sha256": "bb36880a83a10052a1b8d2e20bd25b9462212f4a7fdf72d49ae8260be7032005",
+  "report_sha256": "1cf76ac2e1c7f001c39772b20a1426fc1b0fd29007ff1672446a7c4cf36907ae",
+  "prior_ledger_prefix_preserved": true,
+  "raw_gamma_sha256": "0e8d0d08640b9c63ea1bcbf526ce18433994f899aec63089b155c3fa22f01cf8",
+  "identity_checks": {
+    "market_id": true,
+    "condition_id": true,
+    "question": true,
+    "slug": true,
+    "description": true,
+    "resolution_source": true,
+    "end_date": true,
+    "outcomes": true,
+    "assets": true
+  },
+  "terminal_state": {
+    "closed_true": true,
+    "accepting_orders_false": true,
+    "uma_resolved": true,
+    "binary_terminal_prices": true
+  },
+  "completed_valuations": 394,
+  "factual_exclusions": 378,
+  "ledger_sha256": "2cb56a2ac770d2945720a55b68bed87a997263f23f58a54b8029a08927bc1c5d"
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "polyclaude.scheduled_check_closeout.v1",
+  "tick_id": "20261020T140001Z",
+  "editorial_reviewed_utc": "2026-10-20T15:32:56.288407+00:00",
+  "completed_full_check": "research/2026-10-20-140001-checkin.json",
+  "full_check_basis": "13:46triggered11-stepcheck executed14:00\u201314:30, coalesced14UTC request plus14:38\u201340 delta; do not repeatseven scans/financialproducer solelyforpublication.",
+  "latest_safety": {
+    "status": "data/deep_review_20261017/work/tick140001_closeout_status_1530.json",
+    "account_alert_delta": "data/deep_review_20261017/work/tick140001_closeout_delta_1530.json",
+    "news_facts": "data/deep_review_20261017/work/tick140001_closeout_news_facts_1530.json",
+    "primary_news_review": "data/deep_review_20261017/work/tick140001_closeout_root_news_review_1530.json",
+    "auth_utc": "15:25",
+    "orders": 3,
+    "matched": 0,
+    "commitment_usd": 6.5,
+    "trades": 127,
+    "allsize_positions": 9,
+    "identity_quantity_totalBought_redeemability_unchanged": true,
+    "status_observation_utc": "15:24",
+    "UMA_alerts": 0,
+    "hurdle_flagged": 0,
+    "winning_redeemables": 0,
+    "redemption_writer_skipped": true,
+    "PM_sleeve_status_mid_depth_usd": [
+      34.4,
+      29.33
+    ],
+    "PM_quote_limit": "Separate15:24 rounded sequential PMsleeve estimate, not synchronized/freshness-certifiedproceeds or newcanonicalwholeaccount total."
+  },
+  "previously_completed_research_published": {
+    "valued": [
+      472,
+      475,
+      476
+    ],
+    "excluded_factual": [
+      473,
+      474,
+      477
+    ],
+    "append_only_revision": [
+      472
+    ],
+    "active_unvalued": 478,
+    "counts": {
+      "valued": 396,
+      "blocked": 16,
+      "factual": 379,
+      "pending": 2209,
+      "base": 791,
+      "revisions": 76
+    },
+    "per_case_persistence": "Eachcompletedrecord saved/indexed before advancing; no newcase advanced during this boundedcloseout.",
+    "audit": "data/deep_review_20261017/work/goal0027_publication_audit_1530.json",
+    "root_verification": "data/deep_review_20261017/work/goal0027_root_closeout_verified_1530.json",
+    "phase": "data/deep_review_20261017/work/goal0027_RESUME.json"
+  },
+  "financial_record_unchanged": "research/2026-10-20-1402-financial-snapshot.json",
+  "financial_clock_unchanged": "14:02:12\u201314:02:30 canonical194.83 including5.89 separatefundedgas; trading188.94mid/181.68indicative depth versus170, +6.87%. Rounded sequential estimates notNAV/proceeds,19.72residual notauditedcashprofit; VM/APIexcluded.",
+  "CSV_rows_unchanged": 238,
+  "newBUY_gate": "Verifiedblocked396/600 plusprimarycomparativeselectionunset; includesadds/reposts/taker/bundle. Holdingmanagement/SELL/cancel/redeemremainavailable.",
+  "new_financial_action_or_prior_change": false,
+  "telegram_sent": false,
+  "weekly_due": "Oct23; monthlyNov12; offchainreviewretired",
+  "publication": "Audit explicitownedpaths/secretpatterns/linkshashes, commit+pushverifyremote/index; localpostflightrecordsresult withoutrecursivetrackedrewrite.",
+  "run_boundary": "Endafterpublication. No goal lifecyclemutation, durablegoalmaintenance, newtimer, idlefollow-up or waiting. Research remains unfinished;478sources/modelwork preserved for authorizedresumption.",
+  "next_existing_boundary": "MIprogram16UTC/debateOct21 23UTC; scheduledsafety18UTC/earliermaterialevent."
+}

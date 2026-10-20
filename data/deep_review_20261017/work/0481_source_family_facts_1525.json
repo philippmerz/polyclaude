@@ -1,0 +1,83 @@
+{
+  "schema": "price_blind_source_family_facts.v1",
+  "review_index": 481,
+  "market_id": "5194857",
+  "condition_id": "0x225106d573af3ad964c91ba064b74a1531c35ff6862515c405398e0a50567118",
+  "criteria_sha256": "c9d665f94a268ebf07dde8c89643266a2be54c7dd9ebe98c2939e0a98dc9080f",
+  "question": "Will the 2-year Treasury yield hit 4.95% in October?",
+  "as_of_utc": "2026-10-20T15:25Z",
+  "frozen_rule_comparison": {
+    "index_481": {
+      "identity": "case 481, market 5194857, condition 0x225106d573af3ad964c91ba064b74a1531c35ff6862515c405398e0a50567118",
+      "source_metric": "U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, 2 Yr column",
+      "threshold_pct": 4.95,
+      "comparison": "Reaches or is higher than 4.95%; inclusive threshold (>=).",
+      "date_window": "Any published listed date from October 2 through October 31, 2026, inclusive.",
+      "fallback": "Resolve when the qualifying value is published or once last-business-day October data is available; if no qualifying value is published and last-business-day data is unavailable by November 13, 2026, 11:59 PM ET, resolve No."
+    },
+    "index_475": {
+      "identity": "case 475, market 5194868, condition 0xfe6808a893347ee4d9c6d7e1e1499aa63926c3b9a66d1f9701249fb6285bd7ec",
+      "source_metric": "U.S. Department of the Treasury, Daily Treasury Par Yield Curve Rates, 2 Yr column",
+      "threshold_pct": 4.55,
+      "comparison": "Strictly lower than 4.55%; exclusive threshold (<).",
+      "date_window": "Any published listed date from October 2 through October 31, 2026, inclusive.",
+      "fallback": "Same November 13, 2026, 11:59 PM ET last-business-day data fallback."
+    },
+    "shared_source_identity": "Both frozen rules name the same issuer table, year-2026 page, 2 Yr field and date window. Their comparison operators differ: 481 is >= 4.95%; 475 is < 4.55%. Both resolve on daily listed observations, not a continuous intraday quote."
+  },
+  "reused_source_receipts": [
+    {
+      "name": "Official Treasury 2026 TextView HTML",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T14:51:24.789677Z",
+      "latest_observation_date": "2026-10-19",
+      "raw_sha256": "a3e21d423cbd0fe289b9c4280f7d1111b052476922901fabe39dd90048fad789",
+      "gzip_sha256": "ad99e4fa360c32d57beb94345822b7d122b5734eee3b4d515758b2c954bcbcd1",
+      "receipt_path": "logs/deep_review_20261017/case475_treasury_facts_1455/treasury_2026.receipt.json",
+      "body_path": "logs/deep_review_20261017/case475_treasury_facts_1455/treasury_2026.body.json.gz",
+      "hash_check": "Rechecked for this case: gzip hash, decompressed raw hash and raw length match receipt."
+    },
+    {
+      "name": "Official Treasury 2026 CSV export linked from TextView",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T14:52:19.683124Z",
+      "latest_observation_date": "2026-10-19",
+      "raw_sha256": "0c314f652a54469083e629e2548276a9fe11adad16a0e0e194c480e3d308d71d",
+      "gzip_sha256": "b978ca5fb1119f3b7c774dbbf361f0b31a145b640a9f50e6520831be5dd5b509",
+      "receipt_path": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.receipt.json",
+      "body_path": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.body.json.gz",
+      "hash_check": "Rechecked for this case: gzip hash, decompressed raw hash and raw length match receipt. HTML and CSV agree on all in-window displayed rows."
+    }
+  ],
+  "shared_daily_observations": {
+    "source_field": "2 Yr",
+    "unit": "Percent per annum, displayed to 0.01 percentage point.",
+    "observation_window_checked": "October 2 through October 19, 2026, inclusive; latest Treasury row available in the reused capture.",
+    "observations_in_window": 11,
+    "values_chronological": [
+      {"date": "2026-10-02", "yield_pct": 4.83},
+      {"date": "2026-10-05", "yield_pct": 4.84},
+      {"date": "2026-10-06", "yield_pct": 4.79},
+      {"date": "2026-10-07", "yield_pct": 4.77},
+      {"date": "2026-10-08", "yield_pct": 4.75},
+      {"date": "2026-10-09", "yield_pct": 4.80},
+      {"date": "2026-10-13", "yield_pct": 4.79},
+      {"date": "2026-10-14", "yield_pct": 4.82},
+      {"date": "2026-10-15", "yield_pct": 4.77},
+      {"date": "2026-10-16", "yield_pct": 4.74},
+      {"date": "2026-10-19", "yield_pct": 4.77}
+    ],
+    "observed_minimum": {"date": "2026-10-16", "yield_pct": 4.74},
+    "observed_maximum": {"date": "2026-10-05", "yield_pct": 4.84},
+    "distance_from_481_barrier_pct_points": 0.11,
+    "date_boundary_context": "October 1 row (4.78%) is outside the frozen observation window and excluded. No October 20-or-later Treasury row was present in this capture."
+  },
+  "method_and_freshness": {
+    "metric_scope": "Daily Treasury par yield/CMT observation; table is not an intraday continuous series.",
+    "source_capture_freshness": "The data are not newly fetched for case 481. Captures were retrieved October 20 at 14:51:24Z and 14:52:19Z, and the latest observation in both is October 19.",
+    "timezone_limit": "The October 31 observation row is not yet published in this reused capture. The November 13 deadline is explicitly ET; Treasury quote-time timezone was not specified by the source text in the prior source-family capture.",
+    "scope_note": "Shared exact source facts only. No probability or result from index 475 was transferred, no independent sibling-trade inference was made, and no verdict or ledger action was recorded."
+  }
+}

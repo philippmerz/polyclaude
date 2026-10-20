@@ -1,0 +1,118 @@
+{
+  "schema": "price_blind_catalyst_facts.v1",
+  "review_index": 475,
+  "market_id": "5194868",
+  "condition_id": "0xfe6808a893347ee4d9c6d7e1e1499aa63926c3b9a66d1f9701249fb6285bd7ec",
+  "question": "Will the 2-year Treasury yield dip below 4.55% in October?",
+  "as_of_utc": "2026-10-20T15:00Z",
+  "sources": [
+    {
+      "name": "Federal Reserve 2026 FOMC calendar (reused case 469 receipt)",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "publication_or_event_dates": "Page last modified Oct 7, 2026; calendar lists the September 15-16 meeting and next meetings October 27-28 and December 8-9. The September meeting is marked as associated with SEP.",
+      "retrieved_utc": "2026-10-20T13:17:25.282656Z",
+      "http_status": 200,
+      "raw_sha256": "e8a7bc531800f0ca6d80bdedbc9ff7c0c91b881ce42eb1e51ecce84453467107",
+      "gzip_sha256": "ef270971f3aa4a97ac6c0051ff30ce1e1463c757a7431c4e1c3b6907795c4d64",
+      "raw_bytes": 165751,
+      "receipt_path": "logs/deep_review_20261020/case469_fed_1320/calendar.receipt.json",
+      "body_path": "logs/deep_review_20261020/case469_fed_1320/calendar.body.json.gz",
+      "hash_verification": "Local gzip body hash, decompressed raw hash, and raw byte count match receipt. Receipt scope explicitly covers official Federal Reserve FOMC calendar."
+    },
+    {
+      "name": "Federal Reserve September 16, 2026 FOMC statement (reused case 469 receipt)",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "publication_or_event_dates": "Statement dated Sep 16, 2026; for release at 2:00 p.m. EDT. Server Last-Modified: Sep 16, 2026 18:00:17 GMT.",
+      "retrieved_utc": "2026-10-20T13:17:25.695601Z",
+      "http_status": 200,
+      "raw_sha256": "58e4e3b030ddddc74d3426e77d576f41c841a4e91a33d03d89937ec6eea0ae08",
+      "gzip_sha256": "e5dff3334fb899f9548db0bb8c4596dcf3a9741b59a4613d18b02dd30d98c7b4",
+      "raw_bytes": 82636,
+      "receipt_path": "logs/deep_review_20261020/case469_fed_1320/latest_statement.receipt.json",
+      "body_path": "logs/deep_review_20261020/case469_fed_1320/latest_statement.body.json.gz",
+      "hash_verification": "Local gzip body hash, decompressed raw hash, and raw byte count match receipt. Receipt scope explicitly covers official Federal Reserve statement."
+    },
+    {
+      "name": "Federal Reserve September 16, 2026 Summary of Economic Projections accessible version",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "publication_or_event_dates": "SEP released Sep 16, 2026 at 2:00 p.m. EDT, with the September 15-16 FOMC meeting; latest SEP available before Oct 27-28 meeting.",
+      "retrieved_utc": "2026-10-20T15:00:27.829885Z",
+      "http_status": 200,
+      "raw_sha256": "5c35a7f93e3a816b1aff010496d8cedbfd30ede8fc02c90fd10b31d1be69a21f",
+      "gzip_sha256": "acaf46685fb05cf35c335e2cefa5091bb16f1cf4446b85f1624aae8fbf81f406",
+      "raw_bytes": 243336,
+      "receipt_path": "logs/deep_review_20261020/case475_macro_sources_1500/fed_sep/fed_sep_sep.receipt.json",
+      "body_path": "logs/deep_review_20261020/case475_macro_sources_1500/fed_sep/fed_sep_sep.body.json.gz",
+      "hash_verification": "Local gzip body hash, decompressed raw hash, and raw byte count match receipt."
+    },
+    {
+      "name": "Bureau of Economic Analysis 2026 News Release Schedule",
+      "url": "https://www.bea.gov/news/schedule",
+      "publication_or_event_dates": "The current 2026 schedule lists October 29 releases. Page states 'Last modified on 10/20/26'.",
+      "retrieved_utc": "2026-10-20T15:00:28.642057Z",
+      "http_status": 200,
+      "raw_sha256": "a07ad750a3515b2dcf95e35fba43fa649d4374ffd8f98a663adf55dc80a31f1b",
+      "gzip_sha256": "045395f56f211c0f06514880f25d218a0d2804ae6c29a43b224b5c8f0d2baaca",
+      "raw_bytes": 71459,
+      "receipt_path": "logs/deep_review_20261020/case475_macro_sources_1500/bea/bea_schedule.receipt.json",
+      "body_path": "logs/deep_review_20261020/case475_macro_sources_1500/bea/bea_schedule.body.json.gz",
+      "hash_verification": "Local gzip body hash, decompressed raw hash, and raw byte count match receipt."
+    },
+    {
+      "name": "Bureau of Labor Statistics 2026 release schedule (reused existing receipt)",
+      "url": "https://www.bls.gov/schedule/2026/",
+      "publication_or_event_dates": "Official calendar page says last modified Feb 18, 2026; retrieved Oct 18, 2026 23:11:37Z. It explicitly says all times are Eastern Time.",
+      "retrieved_utc": "2026-10-18T23:11:37.323858Z",
+      "http_status": 200,
+      "raw_sha256": "1bfb9d805fb7b419504962aa22773506b558534daac3b47d72c9de99fd16acac",
+      "gzip_sha256": "862b805be2ffdfcd62fa886b36f831bc02cb87ba8701d32e13e65666a0fb95ef",
+      "raw_bytes": 100563,
+      "receipt_path": "logs/deep_review_20261017/case0295_macro_2320/bls_schedule.receipt.json",
+      "body_path": "logs/deep_review_20261017/case0295_macro_2320/bls_schedule.body.gz",
+      "hash_verification": "Local gzip body hash, decompressed raw hash, and raw byte count match receipt."
+    }
+  ],
+  "official_fed_facts": {
+    "latest_statement": "At 2:00 p.m. EDT September 16, FOMC statement released; committee approved by 12-0 vote a 25 basis point increase in target range to 3.75%-4.00%.",
+    "september_sep_median_projections_percent": {
+      "basis": "For 2026 and later years; GDP and both PCE inflation measures are Q4-over-Q4 percent changes. Federal funds rate is the SEP's projected appropriate policy path (year-end median).",
+      "2026": {"real_gdp_growth": 2.3, "unemployment_rate": 4.1, "pce_inflation": 3.7, "core_pce_inflation": 3.4, "federal_funds_rate": 4.1},
+      "2027": {"real_gdp_growth": 2.4, "unemployment_rate": 4.1, "pce_inflation": 2.3, "core_pce_inflation": 2.5, "federal_funds_rate": 4.1},
+      "2028": {"real_gdp_growth": 2.2, "unemployment_rate": 4.1, "pce_inflation": 2.1, "core_pce_inflation": 2.2, "federal_funds_rate": 3.9}
+    }
+  },
+  "official_scheduled_events_oct20_oct30": {
+    "time_zone": "BLS calendar explicitly states Eastern Time. BEA release schedule page gives times but the captured page does not state a timezone in the schedule text; only its date/time as displayed is recorded here.",
+    "bea": [
+      {"date": "2026-10-29", "time": "8:30 AM (timezone not stated on page)", "release": "GDP (Advance Estimate), 3rd Quarter 2026"},
+      {"date": "2026-10-29", "time": "8:30 AM (timezone not stated on page)", "release": "Personal Income and Outlays, September 2026"}
+    ],
+    "bls": [
+      {"date": "2026-10-20", "time": "10:00 AM ET", "release": "State Employment and Unemployment (Monthly), September 2026"},
+      {"date": "2026-10-21", "time": "10:00 AM ET", "release": "Usual Weekly Earnings of Wage and Salary Workers, Third Quarter 2026"},
+      {"date": "2026-10-28", "time": "10:00 AM ET", "release": "Metropolitan Area Employment and Unemployment (Monthly), September 2026"},
+      {"date": "2026-10-28", "time": "10:00 AM ET", "release": "Quarterly Data Series on Business Employment Dynamics, First Quarter 2026"},
+      {"date": "2026-10-29", "time": "10:00 AM ET", "release": "Consumer Expenditures, Annual 2025"},
+      {"date": "2026-10-30", "time": "8:30 AM ET", "release": "Employment Cost Index, Third Quarter 2026"}
+    ],
+    "other_dates_from_same_bls_calendar": [
+      {"date": "2026-10-14", "time": "8:30 AM ET", "release": "Consumer Price Index, September 2026"},
+      {"date": "2026-10-15", "time": "8:30 AM ET", "release": "Producer Price Index, September 2026"},
+      {"date": "2026-11-03", "time": "10:00 AM ET", "release": "Job Openings and Labor Turnover Survey, September 2026"},
+      {"date": "2026-11-06", "time": "8:30 AM ET", "release": "Employment Situation, October 2026"},
+      {"date": "2026-11-10", "time": "8:30 AM ET", "release": "Consumer Price Index, October 2026"},
+      {"date": "2026-11-13", "time": "8:30 AM ET", "release": "Producer Price Index, October 2026"}
+    ],
+    "fomc": [
+      {"date": "2026-10-27/28", "event": "Scheduled FOMC meeting; calendar marks no SEP for this meeting."},
+      {"date": "2026-12-08/09", "event": "Next scheduled FOMC meeting after October; calendar marks it with SEP."}
+    ]
+  },
+  "scope_limits": [
+    "BLS release calendar is official and lists exact dates, but its page reports last modified Feb 18, 2026; it was captured two days before this follow-up and not re-fetched.",
+    "The BLS calendar schedules no national Employment Situation, CPI, or PPI release from October 20 through October 30; its next listed national Employment Situation, October CPI, and October PPI dates are November 6, November 10, and November 13, respectively.",
+    "BEA schedule is marked modified October 20; displayed release times are preserved without inferring a timezone absent from captured page text.",
+    "The October FOMC calendar entry gives meeting dates but does not include the October statement publication time in the reused calendar body."
+  ],
+  "scope_note": "Factual source/date bridge only. These are official schedules and published SEP facts, not forecasts of yield response; no probability, market-price capture, verdict, ledger write, or trade."
+}

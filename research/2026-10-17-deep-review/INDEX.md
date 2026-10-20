@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T13:54:05.246447+00:00
+Updated: 2026-10-20T15:17:22.397164+00:00
 
-**393 valuations saved; first milestone100:** 393 valued; 16 blocked after in-depth review. 376 factual exclusions separately; 2215 pending.
+**396 valuations saved; first milestone100:** 396 valued; 16 blocked after in-depth review. 379 factual exclusions separately; 2209 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -483,6 +483,12 @@ Each report below is written before moving to the next evaluation. Related contr
 |469|[Will three people dissent the December Fed decision?](evaluations/0469.md)|valued|Neither ask central-positive; lowpricedYES below minimum at10shares/20shares stillnegative. No entry;600comparisonpause.|
 |470|[Allstate (ALL) Q3 property-liability combined ratio 86% to 88%?](evaluations/0470.md)|valued|ProvisionalNO central+1.90/selected+.40 per10shares at5.10cost beforefunding; conditionaladverse-fill2x tailfails. No entry under600+comparisonpause ormaker/taker-routegates.|
 |471|[Cholet vs. Chalon/Saone: O/U 167.5](evaluations/0471.md)|excluded_factual|Objectiveclosedvenuefactualexclusion; notfullvaluation/600credit.|
+|472|[Will Oliver Tree be the #1 searched passing on Google this year?](revisions/0472_20261020T150746767331Z.md)|valued|No selected-positive current ticket: NO10 central+.16745 butselected−2.53255 beforecarry; YESnegative. Ordinary maker91cNO failsselected/2xtail. No newBUY under600+comparisonpause.|
+|473|[Will MrBeast's next video get between 35 and 40 million views on day 1?](evaluations/0473.md)|excluded_factual|Objectivevenueineligibility, factualexclusion notvaluation.|
+|474|[Next Fable Model (5.2+) released by October 17, 2026?](evaluations/0474.md)|excluded_factual|Objectivevenueineligibility, factualexclusion notvaluation.|
+|475|[Will the 2-year Treasury yield dip below 4.55% in October?](evaluations/0475.md)|valued|No selected-positive currentquote; YES10cost4.14131selected−3.84131/NO8.94895selected−2.24895 beforecarry. Topaskthin,408sbooksstale, UMAstatusabsent. NoBUYunder600pause.|
+|476|[GTA VI released by November 30?](evaluations/0476.md)|valued|ProvisionalNOdelay-tail central+.61218/10shares butselectednegative, stale197sbooks and privateproductionfillrisk. NO30routecost1.16345 not$0.37paperdust. No currentrobustentry or600selection.|
+|477|[UAE Tri-Nations ODIs: Bangladesh vs Zimbabwe](evaluations/0477.md)|excluded_factual|Factualclosedvenueexclusion, notvaluation.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
@@ -798,4 +804,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 472
+Active indices: 478

@@ -1,0 +1,63 @@
+{
+  "schema": "primary_daily_yield_barrier.v1",
+  "review_index": 475,
+  "created_utc": "2026-10-20T15:04:43.460121+00:00",
+  "price_blind": true,
+  "p_yes": 0.18,
+  "p_no": 0.82,
+  "broad_yes": [
+    0.03,
+    0.5
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.03,
+  "selected_no": 0.67,
+  "rounding_and_monitoring": "Exact daily Treasury2Yr must be<4.55 =>published4.54orless;9futureweekday observations fromOct20\u201330, not continuous intraday. Simulated latent<4.545 respects source2dp display.",
+  "construction": {
+    "mixture_before_rounding": 0.177669875,
+    "weights": {
+      "ordinary_hawkish": 0.65,
+      "routine_dovish_reprice": 0.2,
+      "growth_panic": 0.08,
+      "inflationary": 0.07
+    },
+    "event_horizon_days": 15,
+    "fallback_days_sensitivity": 25,
+    "scenario_probability_paths": {
+      "historical60_iid": 0.043575,
+      "flat_centered60": 0.09505,
+      "ordinary_hawkish": 0.07025,
+      "routine_dovish_reprice": 0.352775,
+      "growth_panic": 0.7352,
+      "inflationary": 0.0376625,
+      "high_volatility_no_jump": 0.31215
+    }
+  },
+  "reasoning": [
+    "Source exactTreasuryCSV/HTML showslatestOct19=4.77, minimumOct2\u201319=4.74; no qualifying published row. Start distance23bp to displayed4.54,9dailyobservations left.",
+    "Historical60-day changes mean+.667bp/sd5.294;20daymean+.05/sd5.753. IID60bootstrap4.36%hitting vs centered9.51% exposes drift/sample sensitivity;0/61overlapping9daydropwindows is not a zero-probability estimate.",
+    "KnownOct28FOMC/Oct29GDPPCE/Oct30ECI justify event-jump regimes beyond IID history. Ordinary65%/routine-dovish20%/growth-panic8%/inflationary7% are explicit primaryjudgment weights, not learned/fitted. Model17.77%rounds18; stress0.03\u2013.50 covers differentvolatility/tailweights.",
+    "SepFOMC+25bp to3.75\u20134.00/unanimous, SepSEPstickyinflation/endyearFFR4.1 and Oct14headlineCPI+.6monthly/3.7annual argue against automatic neartermcollapse. CoreCPI+.3/2.6 and future surprises leave repricing plausible. These facts were known beforeOct19close and are not added again as a new yield shock or fresh surprise update. CPI and PCE are distinct series.",
+    "15pp reserve exceedsdefault10 for uncalibrated jump weights/volatility clustering, source publication/correction and conditionalmakerfill information. Even selectedYES3/NO67 is a sensitivity, not a certified fill-conditioned forecast; broadYES50 can reverseNOeconomics.",
+    "NoCMEprice/predictionmarket used to set p. Existing4.77already reflects knowninformation; dailycurve inputs/interpolation not continuousmarketprice. CalendarBLSoldercapture andBEAtimezonegap retained. Futuredata/sourcefailurefallbackNo not current hit evidence."
+  ],
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0475_primary_data_1500.json",
+      "sha256": "e24d2af557aee3969e7401013beaff47bcdd1d4a29393f39267a12cf76778a53"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "sha256": "a03614d912bbfafaf81aa543d5f352b0a1ab0f32cf2f9634aa953e078fe658bb"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0475_cpi_addendum_1503.json",
+      "sha256": "fd352ecdd83ad280996d72fd12ef3db57bbe9e225da8b8f14f0a098c07ce380e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0475_firstpass_sensitivity_1503.json",
+      "sha256": "5fad849831ac0c660c15a9c5b70eed8e06e49f08de6f81c25c59723dfa55c308"
+    }
+  ],
+  "execution_authority": false
+}

@@ -1,0 +1,84 @@
+{
+  "schema": "primary_global_passings_named_child.v1",
+  "review_index": 472,
+  "created_utc": "2026-10-20T14:53:03.197165+00:00",
+  "price_blind": true,
+  "p_yes": 0.05,
+  "p_no": 0.95,
+  "broad_yes": [
+    0.002,
+    0.25
+  ],
+  "base_model_reserve_pp": 20,
+  "conditional_maker_fill_reserve_pp": 5,
+  "missing_list_January_zero_value_stress_pp": 2,
+  "actual_entry_reserve_pp": 27,
+  "selected_yes": 0,
+  "selected_no": 0.68,
+  "scenarios": {
+    "central": {
+      "Norris": 0.25,
+      "Pretti": 0.15,
+      "Parton": 0.2,
+      "Khamenei": 0.1,
+      "HaydenPanettiere": 0.08,
+      "OliverTree": 0.05,
+      "other_current": 0.02,
+      "late_or_unobserved": 0.13,
+      "missing_list_Other": 0.02
+    },
+    "Oliver_strong": {
+      "Norris": 0.16,
+      "Pretti": 0.1,
+      "Parton": 0.14,
+      "Khamenei": 0.07,
+      "HaydenPanettiere": 0.05,
+      "OliverTree": 0.25,
+      "other_current": 0.03,
+      "late_or_unobserved": 0.18,
+      "missing_list_Other": 0.02
+    },
+    "Oliver_weak": {
+      "Norris": 0.28,
+      "Pretti": 0.16,
+      "Parton": 0.22,
+      "Khamenei": 0.1,
+      "HaydenPanettiere": 0.08,
+      "OliverTree": 0.002,
+      "other_current": 0.028,
+      "late_or_unobserved": 0.11,
+      "missing_list_Other": 0.02
+    }
+  },
+  "reasoning": [
+    "AP representative confirmation and first-party memorial support current-year eligibility, not global rank. Artist internet virality and unexpected young death support meaningful rather than zero winner mass; recognition is not a calibrated Google metric.",
+    "Shared categorical distribution keeps prior named competitors unchanged. Allocate5pp from prior18pp late-or-unobserved bucket to newly examined Oliver, leaving13pp; the bucket explicitly included unobserved current contenders. Do not count repeated family sources as independent measurements.",
+    "Central5% and0.2\u201325% range are primary judgment, not inferred from Polymarket prices/follower ratios or a fitted arrival-frequency model. Established search baseline may reduce year-on-year growth; global language/alias treatment, publication method and worldwide competitor ordering remain unmeasured.",
+    "Google2025 method uses fastest matched-period growth/internaltools, not absolute searches. No exact2026 formula/cutoff/ranking from checked route; prior429 series failures not retried.",
+    "20pp inherited family/model uncertainty +5pp unmeasured conditional fill-information selection +2pp zero-January-value missing-list stress prices risk beyond central95%NO. Broad upper25%YES and selectedNO68 are distinct sensitivities, not confidence intervals or calibrated conditional fill probabilities.",
+    "Normal December release~60d fitsJanuary; missing-listOther March31 fallback~163d may not. Zero-January-value2pp stress and operational/funding costs matter; no guaranteedNOcashflow/independent sibling hedge."
+  ],
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0472_passings_facts_1405.json",
+      "sha256": "472a21e6737f75a4e37dfce4699c609195a38cb30f25b1277f912020aacec3c2"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0472_identity_addendum_1450.json",
+      "sha256": "b99e83c5c3fc2a722d6a9ac2ab0d564849aecdaa50b84cbc090fbb9174f0b9b5"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0472_primary_source_binding_1452.json",
+      "sha256": "f6f4cd51145c3c684ac6050d263480ae63e001e284b9dbb318b525f96d6e05de"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google310_primary_0300.json",
+      "sha256": "1324428c7af984fd2a445a8ad2e3a3d87a7b1d89af3125c05083b847b0cb62d2"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/google_passings_method_0137.md",
+      "sha256": "c86c6be8af6bcc5fd2813c730be5e6294a2c22aaf20bd9be9ffe15db95a24138"
+    }
+  ],
+  "execution_authority": false
+}

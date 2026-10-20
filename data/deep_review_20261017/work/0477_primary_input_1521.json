@@ -1,0 +1,27 @@
+{
+  "review_index": 477,
+  "market_id": "5483609",
+  "condition_id": "0x404ff40e45c045a19fa92dea8200c9c88f9c13efed087bdf0241ad929b7d8373",
+  "criteria_sha256": "5a5324307544bc943f88e3c0680b67b38a72c19d5efd736c9f23a7e4726dc364",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactBangladesh/ZimbabweODI scheduledOct17 01:30ET; onfieldDLS/DRS/penalty/forfeit/tiebreakwinnercounts, tie withouttiebreak/permanentcancel/no winner=>50/50. Postponedfixturewaitsuntilcompleted; officialeventstatsprimary/credibleconsensusafter2hwithoutstats. EndDateOct24 notindependentnewfixture. Exactclosedvenue, no adoptedmatchresult.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5483609",
+      "observed_utc": "2026-10-20T14:48:26.958615+00:00",
+      "finding": "Root exactfullrule/nonYesNolabels/orderedtokens/rawhash verified; closed/nonaccepting/UMAresolved/binaryterminal. No independentcricketresult inferred."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Objectiveclosedvenueineligibility."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "both_sides_entry_unavailable": true,
+    "reason": "Exactclosedcondition, nosubstituteorroute."
+  },
+  "verdict": "Factualclosedvenueexclusion, notvaluation.",
+  "reopen_condition": "Exactconditionreopening afterfreshchecks only.",
+  "report_markdown": "#477 Bangladesh\u2013Zimbabwe ODI \u2014 exact contract closed\n\n**excluded_factual, not a valuation.** Primary read full frozen rule and ordered Bangladesh/Zimbabwe tokens, not assumedYes/No labels. ExactBangladesh/ZimbabweODI scheduledOct17 01:30ET; onfieldDLS/DRS/penalty/forfeit/tiebreakwinnercounts, tie withouttiebreak/permanentcancel/no winner=>50/50. Postponedfixturewaitsuntilcompleted; officialeventstatsprimary/credibleconsensusafter2hwithoutstats. EndDateOct24 notindependentnewfixture. Exactclosedvenue, no adoptedmatchresult.\n\n[Receipt-bound Gamma](../../../data/deep_review_20261017/work/status473_479_1451/case_0477.json) at2026-10-20T14:48:26.958615+00:00:200, exactID/condition/fullrule/outcomes/tokens; closed=true, acceptingOrders=false, UMAresolved, binaryterminalprices. Root raw/gzip hashes verified. Both outcomes unavailable for newentry on this frozen condition; no substitutefixture/sibling.\n\nThis proves exact venueineligibility, not independent matchwinner/score/timing. No probability/returnestimate/order/financialprior/Telegram. Objectiveclosure is not a price/liquidity/model rejection. Reopen only if exactcondition demonstrably reopens after freshfullrule/status/source checks; no replay.\n"
+}

@@ -1,0 +1,31 @@
+{
+  "review_index": 474,
+  "market_id": "5205160",
+  "condition_id": "0x3ce7fcccc9417cd3f73f421a08b134acf17502bf97bfaf4221d179e904ae0fd3",
+  "criteria_sha256": "dc086f6ce4654184b1c765cfdd56ef2bf354c92072e0d1f82845262e65a925a6",
+  "status": "excluded_factual",
+  "literal_analysis": "Anthropic Fable5.2+ includingwholeFable6 butnotMythos5.1, publicaccess/openbeta/openrollingwaitlist betweencreation andOct17ET. No closed/private/placeholders/mislabels. OfficialAnthropicprimarysource; closed exact contract, no independent model-release claim.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5205160",
+      "observed_utc": "2026-10-20T14:48:26.721789+00:00",
+      "finding": "Root raw/gzip/identity verified; exactclosed/nonaccepting/resolved/binaryterminal contract. No independentrealworldoutcome claim."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Objective exact venue ineligibility; no probability required/adopted."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "both_sides_entry_unavailable": true,
+    "reason": "Exactclosed/nonaccepting contract, no substitute route."
+  },
+  "verdict": "Objectivevenueineligibility, factualexclusion notvaluation.",
+  "reopen_condition": "Only proven exactconditionreopens after freshchecks.",
+  "evaluated_utc": "2026-10-20T14:58:45.830027+00:00",
+  "question": "Next Fable Model (5.2+) released by October 17, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 474,
+  "report_sha256": "1cf76ac2e1c7f001c39772b20a1426fc1b0fd29007ff1672446a7c4cf36907ae"
+}

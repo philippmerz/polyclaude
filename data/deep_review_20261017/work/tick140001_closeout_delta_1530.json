@@ -1,0 +1,212 @@
+{
+  "schema": "polyclaude.bounded_closeout_delta.v1",
+  "verified_utc": "2026-10-20T15:25:09.139031+00:00",
+  "receipts": {
+    "orders": {
+      "schema": "read_capture.response.v1",
+      "name": "orders",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T15:25:08.502035Z",
+      "received_utc": "2026-10-20T15:25:08.611055Z",
+      "response_status": null,
+      "error_type": null,
+      "headers": {},
+      "body_representation": "sdk_result_serialization",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "operation": "orders",
+        "scope": "complete_authenticated_pagination"
+      },
+      "raw_bytes": 1661,
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "gzip_sha256": "dddec73cc73ec315ec508d6ec4a31668f094f316e0189a3bcf609b28888e0b11",
+      "body_path": "orders.body.json.gz"
+    },
+    "trades": {
+      "schema": "read_capture.response.v1",
+      "name": "trades",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T15:25:08.621398Z",
+      "received_utc": "2026-10-20T15:25:08.767630Z",
+      "response_status": null,
+      "error_type": null,
+      "headers": {},
+      "body_representation": "sdk_result_serialization",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "operation": "trades",
+        "scope": "complete_authenticated_pagination"
+      },
+      "raw_bytes": 175759,
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "gzip_sha256": "f4e55c14e9fe35567898ba091daa2f2325c387698c5bd0cd2b10de02b7a0f759",
+      "body_path": "trades.body.json.gz"
+    },
+    "positions": {
+      "schema": "read_capture.response.v1",
+      "name": "positions",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T15:25:08.825696Z",
+      "received_utc": "2026-10-20T15:25:09.018777Z",
+      "response_status": 200,
+      "error_type": null,
+      "headers": {
+        "date": "Tue, 20 Oct 2026 15:25:09 GMT",
+        "content-type": "application/json",
+        "last-modified": "Tue, 20 Oct 2026 15:25:09 GMT",
+        "cache-control": "public, max-age=5"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://data-api.polymarket.com/positions",
+        "query_sha256": "d7403b815fcae60a24e6e8dce17985be4a81eb9158710da964bc217a6e34f2fe",
+        "scope": "explicit_sizeThreshold_0_all_positions"
+      },
+      "raw_bytes": 9575,
+      "raw_sha256": "2750f9fe7a5cc889080be1c0810bfc2ff801a877f36f0c0a8d07f8e8a4be5b47",
+      "gzip_sha256": "b7b8bc06cb1ada9256df24754dfb3a41fe7daf1afefdfb356fc5d5f454c7b19a",
+      "body_path": "positions.body.json.gz"
+    }
+  },
+  "sdk_status_semantics": "No raw HTTP status observed; captured complete authenticated SDK wrapper status200/cursorLTE= with actual call-window times.",
+  "orders": 3,
+  "orders_exact_equal_baseline": true,
+  "all_live_zero_matched": true,
+  "remaining_commitment_usd": "6.50",
+  "trades": 127,
+  "trades_exact_equal_baseline": true,
+  "positions_allsize": 9,
+  "position_tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought",
+    "redeemable"
+  ],
+  "position_tuples_exact_equal_baseline": true,
+  "alerts": {
+    "news": {
+      "read_at_utc": "2026-10-20T15:25:09.036605Z",
+      "tail_rows": 128,
+      "spans_prior_cutoff": true,
+      "latest_ts": "2026-10-20T15:24:06+00:00",
+      "raw_sha256": "27087701ee5c5bf8560cfd72be6f46b6817270bfee76b48e3aeaf9df0543e713",
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/news.receipt.json",
+      "entries_after_cutoff": [
+        {
+          "alert_id": "02756ce4c0c23e842df26d56353b6537328d343c",
+          "ts": "2026-10-20T14:45:59Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "Questions surround El-Sayed\u2019s allege Muslim Brotherhood ties: Senate candidate pushes back - KABB",
+          "agent_reason": "Named Michigan Senate candidate faces a potentially consequential campaign controversy that could affect race odds.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Allegations may modestly weaken El-Sayed\u2019s Democratic win prospects, but the candidate\u2019s pushback does not materially change the race thesis."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "1abbd485445077256f6771d90c5d74eada166c42c7127cd5997885526c9294e0",
+          "alert_link_sha256": "37d8232097ab21c47951f42613ab393de40305b5de95c9879b9ae5d54330c8ed"
+        },
+        {
+          "alert_id": "ec8ff7c75f0b952f043b8878313297bcd1fa328c",
+          "ts": "2026-10-20T14:46:06Z",
+          "tier": 1,
+          "feed": "Google Year in Search, Messi and Mbappe athlete news",
+          "matched": "Lionel Messi",
+          "title": "Lionel Messi breaks own Guinness World Record with six species named in his honour: All the insects, anim - The Times of India",
+          "agent_reason": "Generic Lionel Messi news unrelated to Google\u2019s Top 5 Most Searched Athletes outcome.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "dc78938b3d36772e535fcf711587d6094254e685807643819082417d7f0e058d",
+          "alert_link_sha256": "c31a30af3f5f5a426b1779e676f30b764a39ac8bab49d4ea521f5809a208d3d6"
+        },
+        {
+          "alert_id": "bb50ffd3c970a3cc4fcb35c9f7be266a9a6df913",
+          "ts": "2026-10-20T15:07:46Z",
+          "tier": 1,
+          "feed": "Google Year in Search, Messi and Mbappe athlete news",
+          "matched": "Kylian Mbapp\u00e9",
+          "title": "Bar\u00e7a: Kylian Mbapp\u00e9 will arrive at the classic 'formed' in Catalanophobia - Diari ARA",
+          "agent_reason": "Opinion/recycled sports commentary; no direct update to the Google Year in Search Messi position.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "d7816ffd5ee3bc48d8996ae1c6125b182a0cdfa4bd7336111bbb481fa0f0a9c4",
+          "alert_link_sha256": "3ec3e8cdd0ee3b80880b2e3e18c27cfec9c2e9bc33429504774d1b537412fa27"
+        },
+        {
+          "alert_id": "32462493e813cec875de00814c1ea2ad3da5acfb",
+          "ts": "2026-10-20T15:18:30Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "Mike Rogers",
+          "title": "Abdul El-Sayed, Mike Rogers set to appear before Detroit Economic Club - The Detroit News",
+          "agent_reason": "Named Michigan Senate candidates are scheduled for a public event, creating a potential near-term campaign-information update.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Candidate appearance may produce limited campaign-signal drift, but no substantive development or thesis change is reported."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "24fbb4335569ee8a56d5abfc46cfa25ae0cd01e3b3fc8d3ff4ce4009c21ac2d5",
+          "alert_link_sha256": "934fe8808da071e5485f800b6b92ce24dac8dfacd237148c08427985edc54ef2"
+        },
+        {
+          "alert_id": "c6efa53718bee7e11e8e5dbcde54dbe8d5a269e1",
+          "ts": "2026-10-20T15:18:41Z",
+          "tier": 1,
+          "feed": "Google Year in Search, Messi and Mbappe athlete news",
+          "matched": "Kylian Mbappe",
+          "title": "\u2018One Rooster\u2019\u2014Barcelona President Puts Kylian Mbappe, Vinicius Jr on Blast - Sports Illustrated",
+          "agent_reason": "Opinion-driven sports commentary with no material impact on the Messi search-ranking position or any pending/held market.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "2184ec604b58bf1a0970dc1bf5f429c4e50636f6576420f660fe76bbd2e6cf3d",
+          "alert_link_sha256": "263599683fddd13954006e5a41455450482d6795c7e73b311a315d8e676f629c"
+        },
+        {
+          "alert_id": "038734c1afdd6e28c381e77ed8a08dedf3045701",
+          "ts": "2026-10-20T15:24:06Z",
+          "tier": 1,
+          "feed": "MT01 Forstag news",
+          "matched": "Sam Forstag",
+          "title": "Letter to the editor: Sam Forstag will work for the working class - Montana Standard",
+          "agent_reason": "Opinion letter with no material update or direct causal channel to any held or pending position.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "bfb02271f32b9941958d556327c135c5b05772218bbb8e0ca29746288780b037",
+          "alert_link_sha256": "63ee733001b223ce1d0d43dcd4c2c4a8f2a3b0194880dde67eb66ba2cb56791e"
+        }
+      ]
+    },
+    "opportunity": {
+      "read_at_utc": "2026-10-20T15:25:09.127493Z",
+      "tail_rows": 128,
+      "spans_prior_cutoff": true,
+      "latest_ts": "2026-10-18T07:41:07+00:00",
+      "raw_sha256": "25ee232381fb43651cd3750010d3e38a777542182393aa9c3c73df5be4eb0601",
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/opportunity.receipt.json",
+      "entries_after_cutoff": []
+    }
+  },
+  "financial_producer_not_repeated": true,
+  "prior_canonical_financial_record": "research/2026-10-20-1402-financial-snapshot.json"
+}

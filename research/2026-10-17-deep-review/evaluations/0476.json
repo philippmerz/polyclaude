@@ -1,0 +1,157 @@
+{
+  "review_index": 476,
+  "market_id": "3762773",
+  "condition_id": "0xd421f367cf3057d4ce5959edffd6fd2ae77b5da55cccf5a73560ae2b334660bf",
+  "criteria_sha256": "569d708d7cd65531be30a8449640046ad7b531c53ee77e268360044179df4319",
+  "status": "valued",
+  "literal_analysis": "OfficialUSpublicreleasepurchase/download byNov30ET;1consolecounts. Preorders,Nov12code/preload,earlyaccess/beta/leaks excluded. AnnouncedNov19 schedule notactualrelease; exactsourceRockstar/TakeTwo.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/launch-trailer",
+      "observed_utc": "2026-10-20T14:51:38.718831Z",
+      "finding": "Root rawbody/metadata verifiedOct15promotionalrelease, plannedNov19 notactualrelease; currentIR/storescorroborate."
+    },
+    {
+      "url": "https://support.rockstargames.com/articles/4QfG4FmZCf5W1gS8jy4UVT/grand-theft-auto-vi-platform-editions-and-versions",
+      "observed_utc": "2026-10-20T14:51:38.945310Z",
+      "finding": "Rootactualbody verifiedNov12physicaldownloadcode/nodisc/preload andNorthAmericaUSsupport; notproofgamecomplete/released."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.9,
+    "low": 0.55,
+    "high": 0.985,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primary exclusive schedule-delay scenarios82/8/9/1 withexplicitprivate-readiness/criterionrisk; notsmall-sample calibration.",
+    "reasoning": "Officialnear-launchmarketing/schedule corroboration and11daybuffer vspriorbigdelays/codeonlycopies/unverifiedcompletion support90%YES; tails/makerselectionuncalibrated.",
+    "model": "research/2026-10-17-deep-review/models/0476_primary_1515.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases475_476_478_quotes_1502.json",
+    "quote_file_sha256": "843354986c279e25d98f8342990fffb698246cea56accee841a344a724443634",
+    "quote_capture_utc": "2026-10-20T15:00:38.488170+00:00",
+    "gamma_received_utc": "2026-10-20T15:00:38.235038+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 45.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.9,
+        "selected_stress_probability": 0.75,
+        "best_bid": 0.963,
+        "best_ask": 0.987,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792508240925",
+        "book_received_utc": "2026-10-20T15:00:38.487173+00:00",
+        "book_age_seconds_at_receipt": 197.56217312812805,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.87,
+            "fee": 0.00642,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.987
+              }
+            ],
+            "net": 9.87642
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.629999999999999,
+            "fee": 0.01782,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.963
+              }
+            ],
+            "net": 9.612179999999999
+          }
+        },
+        "taker_cost_usd": 9.87642,
+        "central_expected_profit_usd": -0.8764199999999995,
+        "selected_stress_profit_usd": -2.3764199999999995,
+        "break_even_before_carry": 0.9876419999999999,
+        "break_even_constant_carry": 0.9914890087397067,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.09999999999999998,
+        "selected_stress_probability": 0,
+        "best_bid": 0.013,
+        "best_ask": 0.037,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792508240925",
+        "book_received_utc": "2026-10-20T15:00:38.487173+00:00",
+        "book_age_seconds_at_receipt": 197.56217312812805,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.37,
+            "fee": 0.01782,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.037
+              }
+            ],
+            "net": 0.38782
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.13,
+            "fee": 0.00642,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.013
+              }
+            ],
+            "net": 0.12358000000000001
+          }
+        },
+        "taker_cost_usd": 0.38782,
+        "central_expected_profit_usd": 0.6121799999999997,
+        "selected_stress_profit_usd": -0.38782,
+        "break_even_before_carry": 0.038782,
+        "break_even_constant_carry": 0.03893306151109745,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalNOdelay-tail central+.61218/10shares butselectednegative, stale197sbooks and privateproductionfillrisk. NO30routecost1.16345 not$0.37paperdust. No currentrobustentry or600selection.",
+  "reopen_condition": "Concretecompletion/certification/delay/readiness evidence, freshconditionaltail/depth/economics after600comparison; no automaticbid.",
+  "evaluated_utc": "2026-10-20T15:14:29.345287+00:00",
+  "question": "GTA VI released by November 30?",
+  "valuation_author": "primary_operator",
+  "original_index": 476,
+  "report_sha256": "732349317e92644bef3e67beb55e6fb1c61b09fb27e79d02704edd453e6ef03c"
+}

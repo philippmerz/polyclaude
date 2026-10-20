@@ -1,0 +1,185 @@
+{
+  "review_index": 475,
+  "root_verified_utc": "2026-10-20T14:59:56.651698+00:00",
+  "sources": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "receipt": "logs/deep_review_20261017/case475_treasury_facts_1455/treasury_2026.receipt.json",
+      "raw_sha256": "a3e21d423cbd0fe289b9c4280f7d1111b052476922901fabe39dd90048fad789",
+      "received_utc": "2026-10-20T14:51:24.789677Z"
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "receipt": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.receipt.json",
+      "raw_sha256": "0c314f652a54469083e629e2548276a9fe11adad16a0e0e194c480e3d308d71d",
+      "received_utc": "2026-10-20T14:52:19.683124Z"
+    }
+  ],
+  "series_rows": 200,
+  "latest": {
+    "date": "2026-10-19",
+    "yield_pct": 4.77
+  },
+  "strict_threshold_pct": 4.55,
+  "source_two_decimal_qualifying_value_max": 4.54,
+  "distance_to_first_displayed_hit_bp": 23,
+  "window_no_hit_through_20261019": true,
+  "current_window_rows": [
+    {
+      "date": "2026-10-02",
+      "value": 4.83
+    },
+    {
+      "date": "2026-10-05",
+      "value": 4.84
+    },
+    {
+      "date": "2026-10-06",
+      "value": 4.79
+    },
+    {
+      "date": "2026-10-07",
+      "value": 4.77
+    },
+    {
+      "date": "2026-10-08",
+      "value": 4.75
+    },
+    {
+      "date": "2026-10-09",
+      "value": 4.8
+    },
+    {
+      "date": "2026-10-13",
+      "value": 4.79
+    },
+    {
+      "date": "2026-10-14",
+      "value": 4.82
+    },
+    {
+      "date": "2026-10-15",
+      "value": 4.77
+    },
+    {
+      "date": "2026-10-16",
+      "value": 4.74
+    },
+    {
+      "date": "2026-10-19",
+      "value": 4.77
+    }
+  ],
+  "future_scheduled_weekdays": [
+    "2026-10-20",
+    "2026-10-21",
+    "2026-10-22",
+    "2026-10-23",
+    "2026-10-26",
+    "2026-10-27",
+    "2026-10-28",
+    "2026-10-29",
+    "2026-10-30"
+  ],
+  "remaining_daily_observations": 9,
+  "change_summary_bp": {
+    "20": {
+      "daily_changes": 20,
+      "mean_bp": 0.049999999999998934,
+      "stdev_bp": 5.75348864420078,
+      "min_bp": -9.999999999999964,
+      "max_bp": 13.999999999999968
+    },
+    "60": {
+      "daily_changes": 60,
+      "mean_bp": 0.6666666666666657,
+      "stdev_bp": 5.293637583935689,
+      "min_bp": -9.999999999999964,
+      "max_bp": 13.999999999999968
+    },
+    "120": {
+      "daily_changes": 120,
+      "mean_bp": 0.8249999999999998,
+      "stdev_bp": 5.259105748823741,
+      "min_bp": -12.00000000000001,
+      "max_bp": 15.000000000000036
+    },
+    "199": {
+      "daily_changes": 199,
+      "mean_bp": 0.6532663316582912,
+      "stdev_bp": 4.932409504452999,
+      "min_bp": -12.00000000000001,
+      "max_bp": 15.000000000000036
+    }
+  },
+  "rolling9day_windows": {
+    "count": 61,
+    "falls23bp_or_more": 0,
+    "fraction": 0.0,
+    "largest_drop_bp": -19.00000000000004,
+    "not_independent_or_calibrated_probability": true
+  },
+  "raw_daily_change_bp_last60": [
+    -4.0,
+    -2.0,
+    -5.0,
+    -4.0,
+    1.0,
+    5.0,
+    -3.0,
+    -5.0,
+    -2.0,
+    7.0,
+    -6.0,
+    6.0,
+    -3.0,
+    -2.0,
+    -5.0,
+    2.0,
+    2.0,
+    0.0,
+    0.0,
+    0.0,
+    5.0,
+    0.0,
+    -7.0,
+    2.0,
+    1.0,
+    14.0,
+    0.0,
+    5.0,
+    0.0,
+    -5.0,
+    3.0,
+    2.0,
+    4.0,
+    13.0,
+    7.0,
+    2.0,
+    2.0,
+    7.0,
+    -7.0,
+    9.0,
+    0.0,
+    -5.0,
+    14.0,
+    2.0,
+    -6.0,
+    11.0,
+    -3.0,
+    -1.0,
+    -10.0,
+    5.0,
+    1.0,
+    -5.0,
+    -2.0,
+    -2.0,
+    5.0,
+    -1.0,
+    3.0,
+    -5.0,
+    -3.0,
+    3.0
+  ],
+  "no_quote_or_probability_input": true
+}

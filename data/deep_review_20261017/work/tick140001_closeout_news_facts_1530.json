@@ -1,0 +1,115 @@
+{
+  "schema": "polyclaude.bounded_public_news_facts.v1",
+  "captured_utc": "2026-10-20T15:31:44Z",
+  "scope": "Six exact post-14:38 alert rows; five bounded exact-link source-body retrieval attempts, plus reuse of a prior official Detroit Economic Club schedule receipt. No probabilities, forecasts, position actions, or classifier conclusions.",
+  "delta_source": "data/deep_review_20261017/work/tick140001_closeout_delta_1530.json",
+  "alerts": [
+    {
+      "id": "02756ce4c0c23e842df26d56353b6537328d343c",
+      "alert_utc": "2026-10-20T14:45:59Z",
+      "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - KABB",
+      "alert_url": "https://news.google.com/rss/articles/CBMi5wFBVV95cUxQODV4LUgtaDc4LUFwS3VvTDFsejJyZ1poY0VlWjk2NThCZllSa095VVVNa3hVZVYySTVRbGN5WXpmbTRpLUNvRmJ4TGFpVWNjMVh1ODJXRXNJelNqVmlDTnRDZFh3UTRlWVJNWnJuU2VMR2lRUVpIOTBZbGRUR0MwbFFmY2xIZjdwZkJrUGRLYmhIUlZVS245VjlaaGVOYUJxdHM0dWN4MEFVd1J0ejluSUgtd3ByNnhIRkk2WEVoemN5cjlPZnplX1JzQ2hveDdKX0tlcG5mMUtDU1JwNV9pQnYyYTRiS2c?oc=5",
+      "actual_body_attempt": {
+        "receipt": "logs/cron20261020T140001Z_closeout/news1530/kabb/kabb.receipt.json",
+        "retrieved_utc": "2026-10-20T15:26:17.833672Z",
+        "status": 200,
+        "raw_sha256": "1c5f62e39db985fcb5d5e6fdd3adf43db10539d8340c06d64c875715faba903a",
+        "body_result": "Google consent/sign-in HTML; KABB article body not present. Exact publisher URL, publication time, quoted claims, original source and campaign response cannot be verified from this capture."
+      },
+      "event_or_claim_date": "Unknown from publisher body. Headline is only alert metadata and states an allegation plus pushback; neither is adopted as fact."
+    },
+    {
+      "id": "32462493e813cec875de00814c1ea2ad3da5acfb",
+      "alert_utc": "2026-10-20T15:18:30Z",
+      "title": "Abdul El-Sayed, Mike Rogers set to appear before Detroit Economic Club - The Detroit News",
+      "alert_url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQOHQ5M3VfUDZ3YTM3bkhVUVRzNWlUV0NiRmpKMGltMDNTTkx6ck40cThWRlRHQlBPcjVEa25QMmdjOFJhZ1QwUXJaM2dxb25HYmlnaGtINktQU3duQkRrX045REc2dlhybWEwSWktWE5ua3dObHVhQ1ZyeWt4cldHU2lyVDlETnRDUkxaMENIR3VscVNCRWhibm14TUhRbGxIM2lsR2NTQnRhX1E2Qjg1Z1BsckFBQnpRaTdaY2h6OUJaeHJ5TF9KMzh6ZENHMHFRdmh5eHY5czdpb0k?oc=5",
+      "actual_body_attempt": {
+        "receipt": "logs/cron20261020T140001Z_closeout/news1530/detroit_news/detroit_news.receipt.json",
+        "retrieved_utc": "2026-10-20T15:26:18.385424Z",
+        "status": 200,
+        "raw_sha256": "55502530de8a0ae1d17e2578ea65e3a67b5d59661743804a96975a9364f11ce9",
+        "body_result": "Google consent/sign-in HTML; Detroit News article body, source publication timestamp and post-event reporting not available."
+      },
+      "independent_official_schedule_reuse": {
+        "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+        "prior_receipt": "logs/cron20261020T121327Z_root_sources/mi_program.receipt.json",
+        "prior_retrieved_utc": "2026-10-20T12:21:59.914197Z",
+        "current_receipt": "logs/cron20261020T140001Z_closeout/news1530/detroit_economic_club_official/detroit_economic_club_official.receipt.json",
+        "current_retrieved_utc": "2026-10-20T15:27:21.003331Z",
+        "current_status": 200,
+        "current_raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+        "finding": "Current organizer page body again shows Tuesday, Oct. 20, 2026; 11:00 a.m. registration, 12:00 p.m. program, 1:05 p.m. lunch. Current and prior body hashes are identical. Page remains a schedule; it does not document actual attendance, completed remarks, or event outcome.",
+        "timing_interpretation": "At alert time 15:18:30Z / 11:18 a.m. ET, the noon ET program was upcoming. It was still upcoming at current official-page retrieval 15:27:21Z, before the scheduled 16:00Z start. No actual occurrence, attendance or completed remarks are established."
+      }
+    },
+    {
+      "id": "ec8ff7c75f0b952f043b8878313297bcd1fa328c",
+      "alert_utc": "2026-10-20T14:46:06Z",
+      "title": "Lionel Messi breaks own Guinness World Record with six species named in his honour: All the insects, anim - The Times of India",
+      "alert_url": "https://news.google.com/rss/articles/CBMiwwJBVV95cUxNZmZpR05FMS1nbE1PcFkwTVhLS1drUk1PVVQzajJoWFpYLXhqTkdtVjNUZ01lb2Z0Z09vYU5EWU90Vm9mY2wzeVdqR0xCaUVEZ24wUEdTY0VQQ1BTT1BfYlZJemhtLXlaZTF3NmZTNTFuQjltc0VzcFZINnVhTFQwdHhtYnZhODg3TUVQbE0wYnJuVFFNX1RBZkdQZE1WN1BIbUFjVzFIcjUzZzd4cm85UC1uV3JRd1dfSkRFREpSN0Nta3FiY3M0OVBzWGdWczdCVXRZZE55TV9jMVlOdlhwRGVMWDRUTW54NjVDMlcwcXVqU09reFhUVDBwdW5qLTRpQzFYUmFfaVRTb3JDdXcxYXpkS0ZPZU5HY1duZmpxamxJN2tHWGhJc1ZaeHdySkZOOTliZXVNblUwUnExRVJfMkFpMNIByAJBVV95cUxOV1NrQUtBZU43MDFmel9SNVhxMEVLaW9kd2lfd29sR3RyTnZZQXhmck5PQ0MwOUdUX1lxWXBoWUEtVF81d0Frb2NvbTk3QXpOLWhfemhJUWxnRThCWW5vZzVnOUVOUVUwSTdKMHYxZng4RENfTmx6aDlLdDQ1cC1uZW5TMmlZME1tQXpXS2xYQ1g1UUtZZzFyUzc4dGU1VTU4SnlQRG5XQmpBNDBfT2ZLblk3M292QkJzTzRfcTdmdnlGTmlQOHlXTmo3X1hMUkxUM21VMmpfZnpFX1Z3a0wtMy0tTVprTDFoeVlDQVlENDVxSUVaWjc2cVVWeEhOb3Y0UXJDNXM4NVBPZ05FdVEyd01YbXRmOFV2ZEFmSjE2eHVQREdEQlNKR2M2Zy1VaVFKblcweWdDbTJCZHJvZWZDaDlfRGpoWGZY?oc=5",
+      "actual_body_attempt": {
+        "receipt": "logs/cron20261020T140001Z_closeout/news1530/times_india_messi/times_india_messi.receipt.json",
+        "retrieved_utc": "2026-10-20T15:26:18.032228Z",
+        "status": 200,
+        "raw_sha256": "172d487b217fd9ae409d8757f092a6d3eb7f528af0b7bfc64edf5ac549b5779d",
+        "body_result": "Google consent/sign-in HTML; Times of India story body, source publication time, Guinness entry details and named species not available."
+      },
+      "search_metric": "No Google search-volume, growth, query, rank or user-interest measure appears in the captured body because it is not the article. Alert title and a reported record do not measure Year in Search input."
+    },
+    {
+      "id": "bb50ffd3c970a3cc4fcb35c9f7be266a9a6df913",
+      "alert_utc": "2026-10-20T15:07:46Z",
+      "title": "Barça: Kylian Mbappé will arrive at the classic 'formed' in Catalanophobia - Diari ARA",
+      "alert_url": "https://news.google.com/rss/articles/CBMiowFBVV95cUxORTFXZWlKaUE5NzFnM1hmb0ZndUlhbl9XUGMyc05Zd2tSRkhoa2lHSTI3bUoycWRIUzZURWp4VjV4b0dweDBjS1VKSlVjLUszVmstVE80a0lDNGlHUXN4RllIREdQM0hPZ2xfOUw5ZzdGVjA2M2t4RFNlQ0tCM2ZlWWJTM2s2LTNNZkhfRlZzcUFacDQ4U0FYRm9EN0JTRW1tVUR3?oc=5",
+      "actual_body_attempt": {
+        "receipt": "logs/cron20261020T140001Z_closeout/news1530/diari_ara_mbappe/diari_ara_mbappe.receipt.json",
+        "retrieved_utc": "2026-10-20T15:26:18.202220Z",
+        "status": 200,
+        "raw_sha256": "20bb28ae9ac2246b86da0ce4a8197c3bc0421c5e7ed0129c1358185023a463cb",
+        "body_result": "Google consent/sign-in HTML; Diari ARA article body and event/publication dates remain unknown. The title's framing cannot be verified from this response."
+      },
+      "search_metric": "No search-volume or Google Trends metric in the captured body; no measurable athlete-ranking input established."
+    },
+    {
+      "id": "c6efa53718bee7e11e8e5dbcde54dbe8d5a269e1",
+      "alert_utc": "2026-10-20T15:18:41Z",
+      "title": "‘One Rooster’—Barcelona President Puts Kylian Mbappe, Vinicius Jr on Blast - Sports Illustrated",
+      "alert_url": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOX0NvNXBYbENlVTVCR3R6aHdFUzdOaDFkSXlUM0xXQlh0cHFJX0hlN0NuS1F0TFhzV1FlMkRrd0tpR256QWZIaWhiV0FyM1d2UVhnT1VRTUJjeW5yTHAtVGJyTTVuWHpvS1AtenZ5YjljdEN1ZW4wZ3I4UVlMeDdYaWdNZw?oc=5",
+      "actual_body_attempt": {
+        "receipt": "logs/cron20261020T140001Z_closeout/news1530/sports_illustrated_mbappe/sports_illustrated_mbappe.receipt.json",
+        "retrieved_utc": "2026-10-20T15:26:18.566832Z",
+        "status": 200,
+        "raw_sha256": "b6a94081e61e0663b64a9b520353cd9553901a8fd89b42a368e56acb1ab10397",
+        "body_result": "Google consent/sign-in HTML; Sports Illustrated article body and underlying Laporta interview/source date unavailable."
+      },
+      "search_metric": "No search-volume, Google Trends metric, or query-rank fact is reported in the captured body. Title/commentary is not measured ranking evidence."
+    },
+    {
+      "id": "038734c1afdd6e28c381e77ed8a08dedf3045701",
+      "alert_utc": "2026-10-20T15:24:06Z",
+      "title": "Letter to the editor: Sam Forstag will work for the working class - Montana Standard",
+      "alert_url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOcG41ejEtbDZIWWFlT2JqNFB3QlluUTRLTWFjYklmWlN2bTZYbkd1S0xRVm9QRW5fd3JWUXdHOFpKSVVoRlRvWEZYOHU0YjdYU0s1VUdHb09NakVMeWg1eFRIeHl6Z3Rna05iYlNLbHBKZ21mM0pCUWJyQW1nN3IzWjZYcnBWU2lDZi0yMjJvOHFtQQ?oc=5",
+      "handling": "Unrelated Montana letter-to-editor alert; exact row read from supplied delta. No publisher body request in this bounded subject check."
+    }
+  ],
+  "limitations": [
+    "All five exact Google News-link captures returned HTTP 200 consent/sign-in HTML; publisher bodies and publisher URLs/publication metadata were not available in captured responses. No consent workaround or retry.",
+    "The KABB title supplies an allegation and says candidate pushed back; it does not substantiate either the underlying allegation or what evidence/response the story contains.",
+    "The official DEC page is schedule evidence only. At the alert timestamp the event was upcoming; attendance, completed remarks and article claims remain unknown.",
+    "Neither the Messi record headline nor the two Mbappé headline claims provide a measurable Google Trends/Year in Search input in the bodies captured here (because those bodies are consent HTML). No conclusion about underlying story contents or search response follows.",
+    "No alert title, celebrity news, story volume, or social reaction is treated as Google ranking evidence."
+  ],
+  "no_probabilities": true,
+  "no_valuation_or_reclassification": true,
+  "no_order_or_ledger_action": true,
+  "no_telegram": true,
+  "network_page_attempts": 6,
+  "errata": [
+    {
+      "field": "alerts[32462493...].independent_official_schedule_reuse.timing_interpretation",
+      "previous_text": "At alert time 15:18:30Z / 11:18 a.m. ET, program was still upcoming (12:00 p.m. ET / 16:00Z). It may have started by current retrieval at 15:27Z but capture contains no evidence it occurred.",
+      "correction": "The prior text incorrectly suggested the event may have started by 15:27Z. The official page schedules the program for 16:00Z; it was still upcoming at the 15:27:21Z retrieval.",
+      "basis": "Current receipt timestamp and unchanged official organizer page body; no source or schedule change."
+    }
+  ]
+}

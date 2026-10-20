@@ -1,0 +1,150 @@
+{
+  "schema": "goal0027_publication_audit.v1",
+  "audited_utc": "2026-10-20T15:26:40.354178Z",
+  "scope": "offline audit; no ledger changes",
+  "head": "67346402af3d33caecdf2b5355354cf1cff28cb2",
+  "counts": {
+    "effective_valuations": 396,
+    "blocked_after_review": 16,
+    "factual_exclusions": 379,
+    "pending": 2209,
+    "base_ledger_records": 791,
+    "base_status_counts": {
+      "valued": 394,
+      "excluded_factual": 379,
+      "blocked_after_review": 18
+    },
+    "revisions": 76,
+    "active_indices": [
+      478
+    ]
+  },
+  "checkpoint_hashes": {
+    "evaluations_sha256": "076c83e1c20d5d1537bd1efb5860bd2d7f729f30549bcc1e67b0a0641041e8ff",
+    "revision_ledger_sha256": "64aca6d240e71659ee4096847d266fe7462bb7be7330d13dc7f95cdd3ff12d92",
+    "checkpoint_sha256": "ad522d262ade4328d1d8f5574d5cae5c916ef50f8d8f16d6def577fd30febb65",
+    "progress_sha256": "1b1716e56aea8f2a76f251aa519fb9afd77e0a763f993f9587aea8e56d3d12ff",
+    "index_sha256": "c9dd9db7c097cd0719fce48da6cccc9f57f91b6d22bc12eee874e17695d31b39",
+    "frozen_rules_gzip_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c"
+  },
+  "append_only_prefix": {
+    "evaluations_bytes_head": 3657068,
+    "evaluations_prefix_matches": true,
+    "revisions_bytes_head": 46616,
+    "revisions_prefix_matches": true
+  },
+  "receipt_integrity_method": "For each receipt listed per case, audit re-read receipt JSON and stored gzip body, checked gzip SHA-256, decompressed body, then checked raw SHA-256 and raw byte length against receipt and unit hash.",
+  "cases": [
+    {
+      "index": 472,
+      "status": "valued",
+      "market_id": "2965273",
+      "condition_id": "0x46a20022223e9e2594d0dd0db2083d1325008588435b2d696a815e8e3178e1c5",
+      "criteria_sha256": "906f3331cd5b165d7fd6fff929401d57335afeff85545e0dd976597e8ab2f5ea",
+      "report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d",
+      "proof": "data/deep_review_20261017/work/0472_record_verified_1459.json",
+      "receipt_units_checked": 3,
+      "model_economics_refs": [
+        {
+          "path": "research/2026-10-17-deep-review/models/0472_primary_1455.json",
+          "sha256": "39fcce7548c69b6df1dc6df154e9159480a59e9bfa64fd91065996714db50ed1"
+        },
+        {
+          "path": "data/deep_review_20261017/work/case0472_quotes_1450.json",
+          "sha256": "2d6f0cf9207fc544483f0a93ca0d8e36dc6a3757af55de31b492b2a0ed72014a"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "index": 473,
+      "status": "excluded_factual",
+      "market_id": "5636435",
+      "condition_id": "0x9af6ec1217372684aa2c065c1f946c7f3c12f0dced7cc3481382af8123c94ed6",
+      "criteria_sha256": "cedb24148603a92f95876d36b976942aa27bf25e59f0f1f45b1f894cb36b018b",
+      "report_sha256": "1f766c68a315400078a2f44cd633e2bbfbfe245987d2a449d9d5b9eef9615074",
+      "proof": "data/deep_review_20261017/work/0473_record_verified_1459.json",
+      "receipt_units_checked": 1,
+      "model_economics_refs": [],
+      "issues": []
+    },
+    {
+      "index": 474,
+      "status": "excluded_factual",
+      "market_id": "5205160",
+      "condition_id": "0x3ce7fcccc9417cd3f73f421a08b134acf17502bf97bfaf4221d179e904ae0fd3",
+      "criteria_sha256": "dc086f6ce4654184b1c765cfdd56ef2bf354c92072e0d1f82845262e65a925a6",
+      "report_sha256": "1cf76ac2e1c7f001c39772b20a1426fc1b0fd29007ff1672446a7c4cf36907ae",
+      "proof": "data/deep_review_20261017/work/0474_record_verified_1459.json",
+      "receipt_units_checked": 1,
+      "model_economics_refs": [],
+      "issues": []
+    },
+    {
+      "index": 475,
+      "status": "valued",
+      "market_id": "5194868",
+      "condition_id": "0xfe6808a893347ee4d9c6d7e1e1499aa63926c3b9a66d1f9701249fb6285bd7ec",
+      "criteria_sha256": "8f9a730685969a9abb5e557dabbc3e6967728184f42c4c5a9705d31dc5c6be05",
+      "report_sha256": "953d94d2024b588e22bc8848f6167c104812cb6cb83e5ec5a963153ed0ff2235",
+      "proof": "data/deep_review_20261017/work/0475_record_verified_1510.json",
+      "receipt_units_checked": 3,
+      "model_economics_refs": [
+        {
+          "path": "research/2026-10-17-deep-review/models/0475_primary_1507.json",
+          "sha256": "8d91381282fe14361b3525cb073ce43a89c18fc3cfd4549c9389309ffac309a1"
+        },
+        {
+          "path": "data/deep_review_20261017/work/cases475_476_478_quotes_1502.json",
+          "sha256": "843354986c279e25d98f8342990fffb698246cea56accee841a344a724443634"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "index": 476,
+      "status": "valued",
+      "market_id": "3762773",
+      "condition_id": "0xd421f367cf3057d4ce5959edffd6fd2ae77b5da55cccf5a73560ae2b334660bf",
+      "criteria_sha256": "569d708d7cd65531be30a8449640046ad7b531c53ee77e268360044179df4319",
+      "report_sha256": "732349317e92644bef3e67beb55e6fb1c61b09fb27e79d02704edd453e6ef03c",
+      "proof": "data/deep_review_20261017/work/0476_record_verified_1520.json",
+      "receipt_units_checked": 11,
+      "model_economics_refs": [
+        {
+          "path": "research/2026-10-17-deep-review/models/0476_primary_1515.json",
+          "sha256": "1337af6788b7c8b5a83128c7684335820c087fdfc48b7d9ca579e8ec47630224"
+        },
+        {
+          "path": "data/deep_review_20261017/work/cases475_476_478_quotes_1502.json",
+          "sha256": "843354986c279e25d98f8342990fffb698246cea56accee841a344a724443634"
+        }
+      ],
+      "issues": []
+    },
+    {
+      "index": 477,
+      "status": "excluded_factual",
+      "market_id": "5483609",
+      "condition_id": "0x404ff40e45c045a19fa92dea8200c9c88f9c13efed087bdf0241ad929b7d8373",
+      "criteria_sha256": "5a5324307544bc943f88e3c0680b67b38a72c19d5efd736c9f23a7e4726dc364",
+      "report_sha256": "44c8aa655ec8a9862986db2a791bd57206db39f5fc4b70954378c27ec4cfe2d3",
+      "proof": "data/deep_review_20261017/work/0477_record_verified_1521.json",
+      "receipt_units_checked": 1,
+      "model_economics_refs": [],
+      "issues": []
+    }
+  ],
+  "revision_0472": {
+    "revision_path": "revisions/0472_20261020T150746767331Z.json",
+    "revision_json_sha256": "ba7b726ab2405d837e28a72001f2fafe43ed069fd82b06f76061ea6a74929edd",
+    "report_sha256": "3754f981983a6b52987c2dc2605173b2b8b09919d03424ccfaed37cc6e29267a",
+    "prior_report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d",
+    "index_path": "revisions/0472_20261020T150746767331Z.md"
+  },
+  "phase27_resume_path": "data/deep_review_20261017/work/goal0027_RESUME.json",
+  "phase27_resume_as_of_updated_utc": "2026-10-20T15:15:35.195620+00:00",
+  "phase27_resume_sha256": "a4b027377a9207d5257bd6118aa3e17ef35a693d0f3b6acb04aad30f6d444f85",
+  "issues": [],
+  "status": "PASS"
+}

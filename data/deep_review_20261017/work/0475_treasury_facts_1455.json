@@ -1,0 +1,80 @@
+{
+  "schema": "price_blind_source_facts.v1",
+  "review_index": 475,
+  "market_id": "5194868",
+  "condition_id": "0xfe6808a893347ee4d9c6d7e1e1499aa63926c3b9a66d1f9701249fb6285bd7ec",
+  "criteria_sha256": "8f9a730685969a9abb5e557dabbc3e6967728184f42c4c5a9705d31dc5c6be05",
+  "question": "Will the 2-year Treasury yield dip below 4.55% in October?",
+  "as_of_utc": "2026-10-20T14:55Z",
+  "frozen_rule": {
+    "source": "Department of the Treasury, Daily Treasury Par Yield Curve Rates, year 2026, table column '2 Yr'.",
+    "metric_and_unit": "U.S. Treasury 2-year par yield / constant maturity Treasury (CMT) rate, percent per annum.",
+    "geography": "United States Treasury securities; this is the U.S. Treasury daily par-yield curve, not a local or foreign yield series.",
+    "comparison": "Strictly lower than 4.55% (below, not equal to).",
+    "qualifying_observation_dates": "Any listed daily source date from October 2 through October 31, 2026, inclusive.",
+    "resolution_timing": "Frozen rule says resolve as soon as a qualifying daily value is published, or once data is available for the last business day of October. If no qualifying value is published and last-business-day data is not available by November 13, 2026, 11:59 PM ET, resolve No.",
+    "intraday_vs_daily": "Contract source is a daily table with one 2 Yr value per date; it does not define an intraday crossing test. Treasury describes CMT values as read from its daily par curve at fixed maturities and says the input quotes are indicative bid-side quotations obtained by the Federal Reserve Bank of New York at or near 3:30 PM each trading day. This does not establish continuous intraday observation or a timezone for that quote time.",
+    "calendar_and_timezone": "Source observations are labeled by calendar date and exist on business days. The frozen market's deadline is explicitly Eastern Time. The captured Treasury description says 'at or near 3:30 PM each trading day' but does not state a timezone in the relevant passage; do not conflate the deadline timezone with quote time.",
+    "market_description_verbatim": "This market will resolve to \"Yes\" if the Treasury 2-year yield is lower than the listed value for any date between October 2, 2026 and October 31, 2026. Otherwise this market will resolve to \"No\"."
+  },
+  "captured_sources": [
+    {
+      "name": "treasury_2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "source_type": "Official U.S. Treasury TextView HTML page for Daily Treasury Par Yield Curve Rates.",
+      "publication_or_event_date": "Latest table observation visible in this capture: Monday, October 19, 2026. Page retrieval date: October 20, 2026. Page does not expose a distinct publication timestamp in the captured response.",
+      "retrieved_utc": "2026-10-20T14:51:24.789677Z",
+      "http_status": 200,
+      "response_content_type": "text/html; charset=UTF-8",
+      "raw_bytes": 1288333,
+      "raw_sha256": "a3e21d423cbd0fe289b9c4280f7d1111b052476922901fabe39dd90048fad789",
+      "gzip_sha256": "ad99e4fa360c32d57beb94345822b7d122b5734eee3b4d515758b2c954bcbcd1",
+      "receipt_path": "logs/deep_review_20261017/case475_treasury_facts_1455/treasury_2026.receipt.json",
+      "body_path": "logs/deep_review_20261017/case475_treasury_facts_1455/treasury_2026.body.json.gz",
+      "coordinates": "HTML table headed by columns Date, 1 Mo, ... 1 Yr, 2 Yr, ...; each data row supplies the 2 Yr value. Adjacent source methodology prose defines CMT rates and quote basis."
+    },
+    {
+      "name": "treasury_csv_2026",
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "source_type": "Official U.S. Treasury CSV export linked from the TextView page; independent representation of the same named official table, not an independent data provider.",
+      "publication_or_event_date": "Latest row: October 19, 2026. CSV has no separate publication timestamp in the captured response.",
+      "retrieved_utc": "2026-10-20T14:52:19.683124Z",
+      "http_status": 200,
+      "response_content_type": "text/csv; charset=UTF-8",
+      "raw_bytes": 16310,
+      "raw_sha256": "0c314f652a54469083e629e2548276a9fe11adad16a0e0e194c480e3d308d71d",
+      "gzip_sha256": "b978ca5fb1119f3b7c774dbbf361f0b31a145b640a9f50e6520831be5dd5b509",
+      "receipt_path": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.receipt.json",
+      "body_path": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.body.json.gz",
+      "coordinates": "CSV header Date and 2 Yr; one row per displayed observation date."
+    }
+  ],
+  "observations": {
+    "table_window_checked": "2026-10-02 through 2026-10-19, inclusive; dates in the frozen rule's window for which Treasury had published rows at retrieval time.",
+    "unit": "percent per annum; Treasury table values displayed to two decimal places.",
+    "daily_2yr_values_pct": [
+      {"date": "2026-10-02", "value": 4.83},
+      {"date": "2026-10-05", "value": 4.84},
+      {"date": "2026-10-06", "value": 4.79},
+      {"date": "2026-10-07", "value": 4.77},
+      {"date": "2026-10-08", "value": 4.75},
+      {"date": "2026-10-09", "value": 4.80},
+      {"date": "2026-10-13", "value": 4.79},
+      {"date": "2026-10-14", "value": 4.82},
+      {"date": "2026-10-15", "value": 4.77},
+      {"date": "2026-10-16", "value": 4.74},
+      {"date": "2026-10-19", "value": 4.77}
+    ],
+    "cross_check": "The HTML table and its linked CSV export agree on every displayed in-window business-day 2 Yr observation. The CSV contains 200 data rows through October 19, 2026.",
+    "limited_factual_result": "No published in-window daily 2 Yr value through October 19 is below 4.55%; the lowest displayed value in the checked window is 4.74% on October 16. This is a current-source observation only and says nothing about later October dates."
+  },
+  "separate_proxy_note": "This is the exact named Treasury resolution source, not a FRED daily-series proxy or an intraday Treasury-market quote. No proxy data was used.",
+  "unknowns": [
+    "Treasury had not published later October daily rows at retrieval time; October 20 and subsequent dates remain unobserved in this capture.",
+    "The page/CSV does not state a precise publication timestamp for each daily row; response Date and retrieval timestamps record capture time, not source publication time.",
+    "The frozen rule provides a November 13 ET fallback deadline if qualifying data and last-business-day data are not published, but the final resolution event remains in the future.",
+    "A FRED series or secondary market price would not be the named contract source and was not substituted."
+  ],
+  "receipt_directory": "logs/deep_review_20261017/case475_treasury_facts_1455/ plus logs/deep_review_20261017/case475_treasury_csv_1455/",
+  "scope_note": "Facts-only collection. No probability, price, verdict, trade, ledger entry, Telegram message, or model change."
+}

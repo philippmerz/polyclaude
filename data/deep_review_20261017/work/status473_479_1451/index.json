@@ -1,0 +1,63 @@
+{
+  "case_count": 7,
+  "cases": [
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 473,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0473.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 474,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0474.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 475,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0475.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 476,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0476.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 477,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0477.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 478,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0478.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 479,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status473_479_1451/case_0479.json"
+    }
+  ],
+  "created_utc": "2026-10-20T14:48:27.158369+00:00",
+  "schema": "deep_review_terminal_status_batch.v1"
+}

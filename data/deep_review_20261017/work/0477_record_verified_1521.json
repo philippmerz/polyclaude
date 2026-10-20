@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-20T15:15:35.195620+00:00",
+  "index": 477,
+  "status": "excluded_factual",
+  "record_sha256": "a112fcf1b9efde9420274d66303a5c08479004bcb13206ab735bd8fae75f3c8c",
+  "report_sha256": "44c8aa655ec8a9862986db2a791bd57206db39f5fc4b70954378c27ec4cfe2d3",
+  "raw_gamma_sha256": "3ac3406f77d3c0643ed75207d81610a9c198e9c5a7d6534f9d1e1b486cc23032",
+  "prior_ledger_prefix_preserved": true,
+  "identity_checks": {
+    "market_id": true,
+    "condition_id": true,
+    "question": true,
+    "slug": true,
+    "description": true,
+    "resolution_source": true,
+    "end_date": true,
+    "outcomes": true,
+    "assets": true
+  },
+  "factual_exclusions": 379
+}

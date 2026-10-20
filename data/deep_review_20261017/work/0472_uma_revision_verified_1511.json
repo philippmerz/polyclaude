@@ -1,0 +1,13 @@
+{
+  "verified_utc": "2026-10-20T15:07:47.086266+00:00",
+  "review_index": 472,
+  "revision_path": "research/2026-10-17-deep-review/revisions/0472_20261020T150746767331Z.json",
+  "reason": "Correct missingUMAfield vsnull wording from exact rawGamma; no forecast/economic/verdict change.",
+  "prior_report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d",
+  "report_sha256": "3754f981983a6b52987c2dc2605173b2b8b09919d03424ccfaed37cc6e29267a",
+  "revision_json_sha256": "ba7b726ab2405d837e28a72001f2fafe43ed069fd82b06f76061ea6a74929edd",
+  "base_record_report_and_ledger_unchanged": true,
+  "revision_prefix_preserved": true,
+  "forecast_economics_verdict_unchanged": true,
+  "UMAstatus_presence": false
+}

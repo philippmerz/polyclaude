@@ -1,0 +1,96 @@
+{
+  "schema": "polyclaude.primary_news_closeout.v1",
+  "reviewed_utc": "2026-10-20T15:32:56.288407+00:00",
+  "source_packet": "data/deep_review_20261017/work/tick140001_closeout_news_facts_1530.json",
+  "source_packet_sha256": "83cb31dc006706e4450fa1e3461c8dd35b60086e51dc3f9040f3ab4154279801",
+  "verified_receipts": [
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/kabb/kabb.receipt.json",
+      "raw_sha256": "1c5f62e39db985fcb5d5e6fdd3adf43db10539d8340c06d64c875715faba903a",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:26:17.833672Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/detroit_news/detroit_news.receipt.json",
+      "raw_sha256": "55502530de8a0ae1d17e2578ea65e3a67b5d59661743804a96975a9364f11ce9",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:26:18.385424Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/detroit_economic_club_official/detroit_economic_club_official.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:27:21.003331Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T121327Z_root_sources/mi_program.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "response_status": 200,
+      "received_utc": "2026-10-20T12:21:59.914197Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/times_india_messi/times_india_messi.receipt.json",
+      "raw_sha256": "172d487b217fd9ae409d8757f092a6d3eb7f528af0b7bfc64edf5ac549b5779d",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:26:18.032228Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/diari_ara_mbappe/diari_ara_mbappe.receipt.json",
+      "raw_sha256": "20bb28ae9ac2246b86da0ce4a8197c3bc0421c5e7ed0129c1358185023a463cb",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:26:18.202220Z"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_closeout/news1530/sports_illustrated_mbappe/sports_illustrated_mbappe.receipt.json",
+      "raw_sha256": "b6a94081e61e0663b64a9b520353cd9553901a8fd89b42a368e56acb1ab10397",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:26:18.566832Z"
+    }
+  ],
+  "account_basis": "15:25 authenticated fullorders/trades and all9 exactposition tuples unchanged; see closeoutdelta. Pending BUYs are3 exactdistrict contracts, not MichiganSenate.",
+  "alert_dispositions": [
+    {
+      "ids": [
+        "02756ce4c0c23e842df26d56353b6537328d343c"
+      ],
+      "exposure": "MI1838 held5NO",
+      "judgment": "Exact KABB body/date/allegation/response unverified; bounded root websearch did not recover exactarticle. Do not adopt accusation or infer zeroimpact. If effective criticism it may helpNO; backlash couldreverse. No voter-response measurement or quantified surprise bridge obtained. Existing44%central/34%selectedNO and broadlow20 retained, not newly calibrated; no duplicate aging. Retain smallholding/noadd, review16UTCprogram or earliermaterialsource."
+    },
+    {
+      "ids": [
+        "32462493e813cec875de00814c1ea2ad3da5acfb"
+      ],
+      "exposure": "MI1838 held5NO",
+      "judgment": "DetroitNews exactbody unknown. Rootverified currentofficialorganizerpage/hash and actualschedule12pmET=16UTC. Stillupcoming at15:27read; schedule notattendance/remarks/outcome. Alreadyanticipatedprogram adds no new surprise. Prior receiptpath/time corrected additively in factpacket; raw preserved."
+    },
+    {
+      "ids": [
+        "ec8ff7c75f0b952f043b8878313297bcd1fa328c",
+        "bb50ffd3c970a3cc4fcb35c9f7be266a9a6df913",
+        "c6efa53718bee7e11e8e5dbcde54dbe8d5a269e1"
+      ],
+      "exposure": "Messi210 held5YES; Mbappe competitor in sharedGlobalAthletes field",
+      "judgment": "Exact TOI/ARA/SI bodies unavailable. Rootsearch surfaced a separateOct17 FootballTransfers species story; not proved identical to TOI and primaryGuinness count not independently verified. Attention can affect searchgrowth, but neitherarticlecount nor speciescount measuresGooglematchedperiodgrowth/rank/cutoff. No numeric bridge to revise60%central/40%selectedMessi; broad20\u201390 and competitor uncertainty remain. No zero-effect or duplicate-story assertion; retain/noadd."
+    },
+    {
+      "ids": [
+        "038734c1afdd6e28c381e77ed8a08dedf3045701"
+      ],
+      "exposure": "No exact held or pending BUY instrument",
+      "judgment": "Montana letter-to-editor title/topic has no identified direct contract or venue trigger for currentaccount; body notrequested. Research-only observation, not a rejected investment valuation."
+    }
+  ],
+  "bounded_root_web_search": {
+    "queries": 6,
+    "exact_KABB_or_DetroitNews_body_recovered": false,
+    "secondary_Messi_lead": "https://www.footballtransfers.com/us/transfer-news/us-united-states-mls/2026/10/lionel-messi-gets-sixth-species-named-after-him",
+    "secondary_published": "2026-10-17 07:30CDT",
+    "primary_Guinness_species_claim_verified": false,
+    "scope": "Search results are boundedcoverage, not proofabsence; unrelated poll/opinion/oldrecords not adopted."
+  },
+  "portfolio_action": "No trade, cancel, transfer, redemption or numerical heldprior change. Existing prior selected/broadlow/exit+carry/jointstates retain original14:08quote/14:27judgment dates. Lateststatus is not a freshwholeaccount financialproducer.",
+  "limitations": "Missing articles are coverage gaps. No new measurable outcomeinput/thesis-break verified in these sixalerts, not proofnoevent/zeroeffect. Prior MI/Senate/Google gaps retained.",
+  "next_existing_boundary": "MIprogram16UTC; debateOct21 23UTC; safety18UTC/earliermaterialevent. No timer or waiting added.",
+  "telegram_sent": false,
+  "telegram_reason": "No new position/prior/action/incident or completed400valuation milestone; unfilledresearchlead alone not material."
+}

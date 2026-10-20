@@ -1,0 +1,62 @@
+{
+  "schema": "polyclaude.root_research_closeout.v1",
+  "verified_utc": "2026-10-20T15:27:28.241585+00:00",
+  "author": "root",
+  "cases": [
+    {
+      "index": 472,
+      "status": "valued",
+      "record_sha256": "8b953b402d2bc7b3c0c2d0c49d09ba6789c09276176d9ab9332174d7ebbe4abc",
+      "report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d"
+    },
+    {
+      "index": 473,
+      "status": "excluded_factual",
+      "record_sha256": "f860faf1247242bfc52e83c8768060c0107d351e8b0e37dc3f296d2d71dddac0",
+      "report_sha256": "1f766c68a315400078a2f44cd633e2bbfbfe245987d2a449d9d5b9eef9615074"
+    },
+    {
+      "index": 474,
+      "status": "excluded_factual",
+      "record_sha256": "bb36880a83a10052a1b8d2e20bd25b9462212f4a7fdf72d49ae8260be7032005",
+      "report_sha256": "1cf76ac2e1c7f001c39772b20a1426fc1b0fd29007ff1672446a7c4cf36907ae"
+    },
+    {
+      "index": 475,
+      "status": "valued",
+      "record_sha256": "b67e82ca2605c7cfee344c0aa49ff6216b2898b76c86f7123ba189371cb9bdc3",
+      "report_sha256": "953d94d2024b588e22bc8848f6167c104812cb6cb83e5ec5a963153ed0ff2235"
+    },
+    {
+      "index": 476,
+      "status": "valued",
+      "record_sha256": "8c9ed5a52f61c0ce13745ecd8644aa4ea8ff9cc32d239c6a8efaeb36dbe2157c",
+      "report_sha256": "732349317e92644bef3e67beb55e6fb1c61b09fb27e79d02704edd453e6ef03c"
+    },
+    {
+      "index": 477,
+      "status": "excluded_factual",
+      "record_sha256": "a112fcf1b9efde9420274d66303a5c08479004bcb13206ab735bd8fae75f3c8c",
+      "report_sha256": "44c8aa655ec8a9862986db2a791bd57206db39f5fc4b70954378c27ec4cfe2d3"
+    }
+  ],
+  "limits": "Hash/identity/arithmetic verification; not calibrated forecasts or execution certification.",
+  "entry_gate": {
+    "blocked": true,
+    "reason": "entry review gate: 396/600 completed valuations; new BUYs blocked"
+  },
+  "redemption": {
+    "source_received_utc": "2026-10-20T15:25:09.018777Z",
+    "redeemable_flagged": 2,
+    "winning": 0,
+    "writer_skipped": true
+  },
+  "financial_files_unchanged": {
+    "docs/performance.csv": "33aa1b36e5c4f60670ecdaa617bcdbb1a32904ccb08ef96672e3ec650898b154",
+    "docs/contributions.csv": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+    "research/2026-10-20-1402-financial-snapshot.json": "3f37e26ed7139d9fbe40b6690444d0033f9e867d4eeaec16418b46bdd9bc062c",
+    "notes/portfolio_kelly_priors.json": "98edcf5935f69fe446a4a498d2def86c99aa9ac1d6d79f0e184d2967692076a8",
+    "notes/entry_review_gate.json": "afb97a92be3c439c8a16809534e0cb57048131caedc89501aa3d98cbf8e95c8e"
+  },
+  "prior_models_verdicts_unchanged": true
+}

@@ -1,0 +1,31 @@
+{
+  "review_index": 477,
+  "market_id": "5483609",
+  "condition_id": "0x404ff40e45c045a19fa92dea8200c9c88f9c13efed087bdf0241ad929b7d8373",
+  "criteria_sha256": "5a5324307544bc943f88e3c0680b67b38a72c19d5efd736c9f23a7e4726dc364",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactBangladesh/ZimbabweODI scheduledOct17 01:30ET; onfieldDLS/DRS/penalty/forfeit/tiebreakwinnercounts, tie withouttiebreak/permanentcancel/no winner=>50/50. Postponedfixturewaitsuntilcompleted; officialeventstatsprimary/credibleconsensusafter2hwithoutstats. EndDateOct24 notindependentnewfixture. Exactclosedvenue, no adoptedmatchresult.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5483609",
+      "observed_utc": "2026-10-20T14:48:26.958615+00:00",
+      "finding": "Root exactfullrule/nonYesNolabels/orderedtokens/rawhash verified; closed/nonaccepting/UMAresolved/binaryterminal. No independentcricketresult inferred."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Objectiveclosedvenueineligibility."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "both_sides_entry_unavailable": true,
+    "reason": "Exactclosedcondition, nosubstituteorroute."
+  },
+  "verdict": "Factualclosedvenueexclusion, notvaluation.",
+  "reopen_condition": "Exactconditionreopening afterfreshchecks only.",
+  "evaluated_utc": "2026-10-20T15:15:34.879040+00:00",
+  "question": "UAE Tri-Nations ODIs: Bangladesh vs Zimbabwe",
+  "valuation_author": "primary_operator",
+  "original_index": 477,
+  "report_sha256": "44c8aa655ec8a9862986db2a791bd57206db39f5fc4b70954378c27ec4cfe2d3"
+}

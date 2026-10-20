@@ -1,0 +1,30 @@
+{
+  "review_index": 472,
+  "quote_path": "data/deep_review_20261017/work/case0472_quotes_1450.json",
+  "hypothetical_only": true,
+  "Yes": {
+    "shares": 20,
+    "taker_cost": 1.8819099999999997,
+    "central_profit": -0.8819099999999997,
+    "selected_profit": -1.8819099999999997,
+    "maker_best_bid": 0.07,
+    "maker_notional": 1.4,
+    "maker_central_profit": -0.4,
+    "maker_selected_profit": -1.4
+  },
+  "No": {
+    "shares": 5,
+    "taker_cost": 4.66628,
+    "central_profit": 0.08371999999999957,
+    "selected_profit": -1.266280000000001,
+    "maker_best_bid": 0.91,
+    "maker_notional": 4.55,
+    "maker_central_profit": 0.2,
+    "maker_selected_profit": -1.15
+  },
+  "notes": [
+    "Five-share exchange minimum; use20YES rather than10YES because10*.09 gross.90 may not clear ordinary signed-notional entry minimum. Quote/root gate validation still required, no route certified.",
+    "CentralNO false-positive risk: doubling5%YES tail to10% lowersNO90%, below91cmaker and fee-inclusive93ctaker.",
+    "A hypothetical NO limit67c is behind current91cbid; information arrivals causing fill can erase static selected-value margin. Not a certified conditional maker edge or attainable fill."
+  ]
+}

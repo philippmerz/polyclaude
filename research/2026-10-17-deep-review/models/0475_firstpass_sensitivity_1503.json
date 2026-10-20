@@ -1,0 +1,89 @@
+{
+  "schema": "primary_treasury_firstpass_sensitivity.v1",
+  "index": 475,
+  "created_utc": "2026-10-20T15:02:35.768865+00:00",
+  "data_source": "data/deep_review_20261017/work/0475_primary_data_1500.json",
+  "seed": 47520261020,
+  "nine_discrete_daily_observations": true,
+  "displayed_strict_threshold": "Rounded daily source<=4.54; simulated latent<4.545%. No intraday first-passage substitution.",
+  "start_yield_pct": 4.77,
+  "scenarios": {
+    "historical60_iid": {
+      "probability": 0.043575,
+      "mc_standard_error": 0.0007217705606267826,
+      "sample_paths": 80000,
+      "daily_drift_bp": 0,
+      "daily_volatility_bp": 5.29363758393569,
+      "event_day7_jump_bp": 0,
+      "mode": "historical_bootstrap"
+    },
+    "flat_centered60": {
+      "probability": 0.09505,
+      "mc_standard_error": 0.0010369154829348436,
+      "sample_paths": 80000,
+      "daily_drift_bp": 0,
+      "daily_volatility_bp": 5.29363758393569,
+      "event_day7_jump_bp": 0,
+      "mode": "centered_bootstrap"
+    },
+    "ordinary_hawkish": {
+      "probability": 0.07025,
+      "mc_standard_error": 0.0009035688788078084,
+      "sample_paths": 80000,
+      "daily_drift_bp": 0.5,
+      "daily_volatility_bp": 5.3,
+      "event_day7_jump_bp": 0,
+      "mode": "Gaussian"
+    },
+    "routine_dovish_reprice": {
+      "probability": 0.352775,
+      "mc_standard_error": 0.0016893963395803542,
+      "sample_paths": 80000,
+      "daily_drift_bp": -0.3,
+      "daily_volatility_bp": 5.8,
+      "event_day7_jump_bp": -10,
+      "mode": "Gaussian"
+    },
+    "growth_panic": {
+      "probability": 0.7352,
+      "mc_standard_error": 0.001559971794616813,
+      "sample_paths": 80000,
+      "daily_drift_bp": -1,
+      "daily_volatility_bp": 7,
+      "event_day7_jump_bp": -22,
+      "mode": "Gaussian"
+    },
+    "inflationary": {
+      "probability": 0.0376625,
+      "mc_standard_error": 0.0006730902251346955,
+      "sample_paths": 80000,
+      "daily_drift_bp": 1,
+      "daily_volatility_bp": 5.8,
+      "event_day7_jump_bp": 8,
+      "mode": "Gaussian"
+    },
+    "high_volatility_no_jump": {
+      "probability": 0.31215,
+      "mc_standard_error": 0.0016382627135932749,
+      "sample_paths": 80000,
+      "daily_drift_bp": 0,
+      "daily_volatility_bp": 9,
+      "event_day7_jump_bp": 0,
+      "mode": "Gaussian"
+    }
+  },
+  "provisional_weights_before_CPI_bridge": {
+    "ordinary_hawkish": 0.65,
+    "routine_dovish_reprice": 0.2,
+    "growth_panic": 0.08,
+    "inflationary": 0.07
+  },
+  "provisional_mixture": 0.177669875,
+  "limits": [
+    "Monte Carlo error is computational only; empirical daily increments are not independent/current-regime draws.",
+    "Historical rolling0/61 is dependent and not zero-event probability; different starting levels/event windows matter.",
+    "Known FOMCOct28/GDPPCEOct29/ECIOct30 create jump risk; a day7jump is a parsimonious scenario, not a measured event-return distribution.",
+    "Source-publication delay/corrections and day-index assumptions remain; no quote/price input or model calibration certification."
+  ],
+  "forecast_not_final": true
+}

@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-20T14:55:41.511884+00:00",
+  "review_index": 472,
+  "status": "valued",
+  "record_sha256": "8b953b402d2bc7b3c0c2d0c49d09ba6789c09276176d9ab9332174d7ebbe4abc",
+  "report_sha256": "43a6f4420dbb3c98aa970c9f8dbea768c6139f0c46bc185727c8608a6ab6004d",
+  "prior_ledger_sha256": "9f8818cf706752d59f5093f90364bc46548a6f1f9bee87d398eb65314ef98477",
+  "prior_ledger_prefix_preserved": true,
+  "forecast_economics_consistent": true,
+  "completed_valuations": 394,
+  "ledger_sha256": "5d5e4f43849cfa221e43eee228c9cb6f79277538e82411156c9f3424f9917900"
+}

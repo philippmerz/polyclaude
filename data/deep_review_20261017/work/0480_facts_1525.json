@@ -1,0 +1,101 @@
+{
+  "schema": "case0480_facts.v1",
+  "collected_utc": "2026-10-20T15:18Z",
+  "scope": "bounded factual collection only; no valuation or verdict",
+  "case": {
+    "review_index": 480,
+    "market_id": "1469737",
+    "condition_id": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+    "question": "Will Mojtaba Khamenei be head of state in Iran end of 2026?",
+    "cutoff": "2026-12-31 12:00 PM ET",
+    "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484",
+    "criterion": "Individual who de facto holds and exercises primary governing authority over the Islamic Republic of Iran at cutoff, including effective control over armed forces, national institutions, and core executive decisions, regardless of formal title/recognition. If multiple claimants, who demonstrably exercises primary governing control within Iran; if none, No Head of State. Primary resolution source: consensus of credible reporting."
+  },
+  "reads": [
+    {
+      "name": "appointment_iranpress",
+      "receipt": "logs/deep_review_20261017/case0480_facts_1525/appointment_iranpress.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_facts_1525/appointment_iranpress.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T15:16:59.948913Z",
+      "bytes": 65176,
+      "sha256": "9cf7dc0c06bc7fb2a4969f37b5a4fcd10238966da334a89238e9916bc56b379a"
+    },
+    {
+      "name": "leader_channel",
+      "receipt": "logs/deep_review_20261017/case0480_facts_1525/leader_channel.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_facts_1525/leader_channel.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T15:17:00.191841Z",
+      "bytes": 130165,
+      "sha256": "4b52ee4aef97ccb0b875af09dd3f1a3d4e4cdcb1aa7b44cf4764616e8761d09f"
+    },
+    {
+      "name": "constitution_article_111",
+      "receipt": "logs/deep_review_20261017/case0480_facts_1525/constitution_article_111.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_facts_1525/constitution_article_111.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T15:17:00.484747Z",
+      "bytes": 161678,
+      "sha256": "fa8fe2f20eecf6a3bd3bf404013da4dfc79730ce102c7ca96f9b5b2bc34104a8"
+    },
+    {
+      "name": "ap_health_meeting",
+      "receipt": "logs/deep_review_20261017/case0480_facts_1525/ap_health_meeting.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_facts_1525/ap_health_meeting.body.json.gz",
+      "http_status": 403,
+      "retrieved_utc": "2026-10-20T15:17:00.582349Z",
+      "bytes": 5531,
+      "sha256": "0240ceb0896de9db0a48775a2df1aefb7c1219748101cf07ce985bb7ced6b520"
+    },
+    {
+      "name": "cbs_pezeshkian_transcript",
+      "receipt": "logs/deep_review_20261017/case0480_cbs_transcript_1525/cbs_pezeshkian_transcript.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_cbs_transcript_1525/cbs_pezeshkian_transcript.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T15:17:11.563192Z",
+      "bytes": 668412,
+      "sha256": "aaeff865d2a748d252baa021a6df73e6ae46316f00a07b442f660c192a50ec28"
+    }
+  ],
+  "facts": [
+    {
+      "source": "Assembly of Experts statement reproduced by Iran Press",
+      "url": "https://iranpress.ir/content/315793/ayatollah-seyyed-mojtaba-khamenei-%28may-god-preserve-him%29-appointed-iran-3rd-leader",
+      "statement_date": "2026-03-08",
+      "published_on_page": "not independently verified in captured body metadata; page reports the dated statement",
+      "fact": "The reproduced statement says the Assembly appointed and introduced Ayatollah Seyyed Mojtaba Hosseini Khamenei as the third leader by decisive vote in an extraordinary session; it thanks members of the provisional Article 111 council. This establishes formal appointment as reported by Iranian state media, not de facto control by itself."
+    },
+    {
+      "source": "Public Telegram channel @MKhamenei_en (channel self-identifies as statements from the Leader and links en.rahbar.ir)",
+      "url": "https://t.me/s/MKhamenei_en",
+      "post_date": "2026-10-19 (Mehr 27, 1405)",
+      "fact": "Channel page carries a message attributed to Sayyid Mojtaba Hosseini Khamenei congratulating Iran’s U23 freestyle wrestling team; page also displays a message dated Oct. 16 and related posts. These are written messages, not verified in-person appearances or independent evidence of command/control."
+    },
+    {
+      "source": "Constitution of the Islamic Republic of Iran, FAOLEX-hosted English text",
+      "url": "https://faolex.fao.org/docs/pdf/ira127540.pdf",
+      "text_version": "English translation of constitutional text; document date/version not confirmed from the captured PDF metadata in this bounded pass",
+      "facts": "Article 107 vests appointment of the Leader in elected Experts and says the Leader elected by the Assembly assumes leadership powers. Article 111 assigns dismissal determination to the Experts; on death/resignation/dismissal the Experts appoint a successor and a temporary council (President, judiciary head, Guardian Council jurist) temporarily takes all Leader duties. It also says that when the Leader is temporarily unable to perform duties due to illness or another incident, that council assumes duties. Thus formal office and effective exercise can diverge under the constitution."
+    },
+    {
+      "source": "CBS News transcript of Face the Nation interview with President Masoud Pezeshkian",
+      "url": "https://www.cbsnews.com/news/transcript-iranian-president-masoud-pezeshkian-face-the-nation-transcript-09-27-2026/",
+      "interview_recorded": "2026-09-25",
+      "published": "2026-09-25 21:10 EDT; broadcast Sept. 27 (per CBS)",
+      "fact": "Asked about contact and injuries, Pezeshkian said they met twice, most recently for over seven hours, said Khamenei was healthy and able to sit, and said discussions were coordinated. This is the President’s on-record assertion, relevant to claimed recent access/participation; it is not independently verified evidence of Khamenei’s effective control or health."
+    }
+  ],
+  "gaps": [
+    "AP page reporting the Sept. 26 interview returned HTTP 403; its body is preserved privately but was not parsed. CBS transcript itself was accessible and captured.",
+    "No primary source in this bounded pass independently verifies current command over armed forces, ministries, law enforcement, binding directives, or territorial infrastructure.",
+    "No independently verified public in-person appearance was established; the Oct. 19 item is a written message. The extent and cause of any public absence remain unverified here.",
+    "No evidence of formal removal, constitutional incapacity finding, or current reactivation of an interim leadership council found in the bounded sources. Absence of such a finding from these reads is not proof none exists.",
+    "The official English text source is an archival translation host, not an identified current Iranian government publication; version/date should be checked if material to evaluation."
+  ],
+  "capture_directories": [
+    "logs/deep_review_20261017/case0480_facts_1525/",
+    "logs/deep_review_20261017/case0480_cbs_transcript_1525/"
+  ],
+  "read_cap": 5
+}
