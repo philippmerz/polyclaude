@@ -1,0 +1,103 @@
+{
+"schema": "deep_review_case_facts.v1",
+"review_index": 437,
+"resume_receipt": [
+"logs/deep_review_20261017/case437_facts_0400/resume437.receipt.json",
+"7a3c0e349ad4a5aa62c55ee757b9bcbd4605c4d830f19f341311103e18236c03",
+"144df36ba415fec06ac580bebb7c60f4459aa2af82885dff7d2656a8c0fdde00"
+],
+"frozen": {
+"market_id": "2602762",
+"condition_id": "0x55eda2831f1369b028fb05c7e2392bbe2274f9c332388a7801c2430e3aac3579",
+"question": "Will STRC hit $100 by December 31?",
+"status": "pending",
+"criteria_sha256": "27e44c1d98690bb051befec701f2c0c9f6186c8f6b80053f8a4493210dbb63ae",
+"rule": "Yes if any TradingView 1 minute candle for STRC between market creation and the listed date, 11:59 PM ET, has a final “High” value of at least $100. Otherwise No. Resolution source is TradingView STRC “High” values with chart settings on 1m. If price data is unavailable from TradingView for any relevant period at the listed date 11:59 PM ET, use WSJ Markets, Google Finance, then MarketWatch in that order. If none has relevant data, resolve based on available data then.",
+"endDate": "2027-01-01T04:59:00Z",
+"resolution_source": "https://www.tradingview.com/chart/?symbol=NASDAQ%3ASTRC"
+},
+"gamma": {
+"id": "2602762",
+"conditionId": "0x55eda2831f1369b028fb05c7e2392bbe2274f9c332388a7801c2430e3aac3579",
+"slug": "will-strc-hit-100-by-december-31-20260618001621119",
+"active": true,
+"closed": false,
+"updatedAt": "2026-10-20T03:54:45.496188Z",
+"endDate": "2027-01-01T04:59:00Z",
+"resolutionSource": "https://www.tradingview.com/chart/?symbol=NASDAQ%3ASTRC",
+"outcomes": "[\"Yes\", \"No\"]",
+"clobTokenIds": "[\"27910132987848933993007611645710528699440544297756317875661257868175835526313\", \"104221712627787034860958810219855339564277372637518123220011557009651490653042\"]"
+},
+"gamma_capture": [
+"2026-10-20T03:56:49.219415Z",
+"2026-10-20T03:56:49.322854Z",
+200,
+"fa9385e29e2c4c4d38cdfdc2c1b4a076dc9bf787fd837e9781f93eba736118c5",
+"80495cc8641dca6d414de42b1dceb8301bf0e47287f225e466e8b78a5a69b43e",
+"gamma_identity.receipt.json"
+],
+"source_receipt_tuple_order": "[call_start_utc, call_end_utc, HTTP, raw_sha256, gzip_sha256, receipt_file]",
+"private_capture_directory": "logs/deep_review_20261017/case437_facts_0400_sources/",
+"dated_primary_source_rows": [
+[
+"strategy_oct19_8k",
+"2026-10-19",
+"https://assets.contentstack.io/v3/assets/bltf8d808d9b8cebd37/blt075438553ed3641e/6ad5860b04e8526be47d2cab/form-8-k_10-19-2026.pdf",
+"Oct 19 issuer 8-K names STRC as Nasdaq-listed Variable Rate Series A Perpetual Stretch Preferred Stock. For Oct 12–18 it reports no STRC ATM sales and 1,938,780 shares repurchased for $193.1m; corporate activity, not candle evidence.",
+[
+"2026-10-20T03:56:49.331137Z",
+"2026-10-20T03:56:49.482301Z",
+200,
+"cc318b836eb76e3df16eeb75c565653f2309e07f08882f3788f01ee451870d2c",
+"26f617c66912580c53514b098fcbe2e27db2b74ea04d88e636bd89b6e3a46b76",
+"strategy_oct19_8k.receipt.json"
+]
+],
+[
+"strategy_oct12_8k",
+"2026-10-12",
+"https://assets.contentstack.io/v3/assets/bltf8d808d9b8cebd37/blte419037cd092e319/6acc004404e85227007cf7c7/strategy-acquires-250-btc-and-repurchases-192-million-of-strc_10-12-2026.pdf",
+"Oct 12 issuer 8-K names Nasdaq-listed STRC and reports no STRC shares sold under ATM for Oct 5–11; corporate activity, not candle evidence.",
+[
+"2026-10-20T03:58:39.753891Z",
+"2026-10-20T03:58:39.956801Z",
+200,
+"7154921ee14d9cfab6696225347c2eec1b7c6bdf833bef002358e7a0d03da001",
+"31ccbc63bc98cf20cec53948f3a8f3a685e9e890ec1f515161bf486071735475",
+"strategy_oct12_8k.receipt.json"
+]
+],
+[
+"sec_strc_prospectus_corrected",
+"2025-07-24",
+"https://www.sec.gov/Archives/edgar/data/1050446/000119312525165531/d852456d424b5.htm",
+"SEC prospectus names STRC as Variable Rate Series A Perpetual Stretch Preferred Stock and states $100/share amount and initial liquidation preference; these are legal terms, not observed trading prices.",
+[
+"2026-10-20T03:56:59.759516Z",
+"2026-10-20T03:56:59.997855Z",
+200,
+"1da70289dfff09cdcb764f3d4560d2d0c243f40b9b865b69a43185b929e10817",
+"95841f06086bcf3efa189e9b82eb08c3c20c6b25508e3774ce69b14a89a3ecab",
+"sec_strc_prospectus_corrected.receipt.json"
+]
+]
+],
+"failed_source_attempt": [
+"https://www.strategy.com/strc/dividends",
+403,
+"strategy_strc_dividends.receipt.json"
+],
+"gaps": [
+"TradingView chart shell did not expose one-minute OHLC; no candle values/prices were parsed.",
+"Official Strategy dividends page returned 403; its content is not claimed absent.",
+"No book, price, probability, or position inspected."
+],
+"resolution_page_capture": [
+"2026-10-20T03:57:00.030067Z",
+"2026-10-20T03:57:00.289016Z",
+200,
+"aff5e0c3ed9e495277d063caa90c3f3f2a82253d2bad001004f6ce27d737233f",
+"e90f95163d91fd22007af955b92136f52a4a600342ef65c49609d46b8c11e590",
+"tradingview_resolution_chart.receipt.json"
+]
+}

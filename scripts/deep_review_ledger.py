@@ -419,6 +419,42 @@ def revise(path, prior_report_sha256, reason):
     return rebuild()
 
 
+def start(index):
+    """Start or resume exactly one unfinished case in this review run."""
+    frozen = universe()
+    if not isinstance(index, int) or isinstance(index, bool) or index not in frozen:
+        raise ValueError(f"unknown review index: {index!r}")
+
+    base = _base_records()
+    effective, _ = _apply_revisions(base, frozen)
+    if index in effective:
+        raise ValueError(f"review index {index} already has a completed record; use revise")
+
+    progress_path = RUN / "progress.json"
+    old = json.loads(progress_path.read_text()) if progress_path.exists() else {}
+    active = old.get("active_indices", [])
+    if not isinstance(active, list):
+        raise ValueError("progress active_indices must be a list")
+    if any(not isinstance(i, int) or isinstance(i, bool) or i not in frozen for i in active):
+        raise ValueError("progress contains an invalid active review index")
+    if len(set(active)) != len(active):
+        raise ValueError("progress contains duplicate active review indices")
+
+    unfinished = [i for i in active if i not in effective]
+    if index in unfinished:
+        # Resume the same case without duplicating or reordering active work.
+        return rebuild(active)
+    if unfinished:
+        raise ValueError(
+            f"cannot start review index {index}; unfinished active case(s): "
+            + ", ".join(map(str, unfinished))
+        )
+
+    # Keep any stale completed entries for rebuild() to filter, preserving
+    # the order of live active cases and adding the new case last.
+    return rebuild(active + [index])
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("command", choices=["init", "start", "record", "revise", "rebuild"])
@@ -433,9 +469,7 @@ def main():
     elif a.command == "revise":
         out = revise(a.input, a.prior_report_sha256, a.reason)
     elif a.command == "start":
-        assert a.index in universe()
-        old = json.loads((RUN / "progress.json").read_text())
-        out = rebuild(sorted(set(old.get("active_indices", []) + [a.index])))
+        out = start(a.index)
     else:
         out = rebuild()
     print(json.dumps(out))

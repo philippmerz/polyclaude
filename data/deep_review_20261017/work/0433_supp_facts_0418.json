@@ -1,0 +1,93 @@
+{
+"schema": "deep_review_case_supp_facts.v1",
+"review_index": 433,
+"case": {
+"market_id": "3388092",
+"condition_id": "0x79361c2379eda2645213973ee61ab00b51ef78eaa142ebc0363e24d8e0666acd",
+"question": "Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?",
+"effective_status": "in_progress",
+"criteria_sha256": "df828eb0dae11bde3c6b14b230a7b6810b53ece47c48195c781d89d24b3c9e52"
+},
+"minutes": {
+"source": "https://www.banxico.org.mx/publicaciones-y-prensa/minutas-de-las-decisiones-de-politica-monetaria/%7BF63C3DE2-0AEC-9BAE-A86E-FC59895F9702%7D.pdf",
+"index_url": "https://www.banxico.org.mx/publicaciones-y-prensa/minutas-de-las-decisiones-de-politica-monetaria/minutas-politica-monetaria-ta.html",
+"published": "2026-10-08",
+"decision_announced": "2026-09-24",
+"board_session": "2026-09-23",
+"minute_number": 127,
+"vote": "All five named members voted unanimously to maintain the overnight interbank target at 6.50%: Victoria Rodríguez Ceja, Galia Borja Gómez, José Gabriel Cuadra García, Jonathan Ernest Heath Constable, Omar Mejía Castelazo.",
+"common_guidance": "Future decisions depend on continued disinflation and its determinants, including FX pass-through, slack and inflation expectations; Banxico need not follow anticipated Fed moves mechanically.",
+"member_forward_guidance_differences": [
+"One member said upcoming decisions could consider a one-off rate decrease if inflation and its determinants continued supporting disinflation.",
+"One supported case-by-case decisions without a predetermined path; a cut could be considered if inflation evolves favorably and financial markets remain orderly.",
+"One urged keeping rates at current levels for a prolonged period and warned a Fed-cycle decoupling would depend on Mexico consolidating convergence to 3%.",
+"One said a downward fine-tuning discussion could remain open, not anticipated, conditional on falling inflation and orderly financial conditions.",
+"Another emphasized caution, upside risks and monitoring firmly anchored expectations while holding unchanged."
+],
+"pdf_receipt": [
+"2026-10-20T04:08:30.762783Z",
+"2026-10-20T04:08:32.805399Z",
+200,
+"3ae9f0d5241d648443df51558680c9e576b2dbf817b09137f01df06d22e3ab25",
+"81c3d8dc892a7e8de94f676208027172fc2ec602a3edf41f5f2b4e797f2a5bf8",
+"logs/deep_review_20261017/case433_supp_facts_0418/banxico_minutes_20260924.receipt.json"
+]
+},
+"post_decision_data": {
+"inegi_observed_inflation": {
+"release": "2026-10-08",
+"observation": "September 2026",
+"headline_yoy_pct": 3.45,
+"headline_mom_pct": 0.42,
+"core_yoy_pct": 3.75,
+"core_mom_pct": 0.2,
+"noncore_yoy_pct": 2.45,
+"noncore_mom_pct": 1.2,
+"source": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/inpc/inpc_2q2026_10.pdf",
+"receipt": [
+"2026-10-20T04:08:56.368244Z",
+"2026-10-20T04:08:57.510392Z",
+200,
+"9c72b5e957b9f68f49a05c3efb4cffd1b40eca9f0647d27c61529c7e8ead6e84",
+"a3d4881a05529e595709a0525d6685ced5cccfbeba35ba40e176dc856e3bd31a",
+"logs/deep_review_20261017/case433_supp_facts_0418/inegi_cpi_202609_monthly_correct.receipt.json"
+]
+},
+"banxico_expectations_survey": {
+"release": "2026-10-01",
+"responses_received": "2026-09-15 through 2026-09-28",
+"respondent_groups": 42,
+"classification": "private-sector forecast survey, not realized inflation; response window crosses the Sep 23 Board session and announcement date.",
+"medians_pct": {
+"general_2026_year_end": {
+"Sep_survey": 3.87,
+"Aug_survey": 3.9
+},
+"general_2027_year_end": {
+"Sep_survey": 3.82,
+"Aug_survey": 3.84
+},
+"core_2026_year_end": {
+"Sep_survey": 3.9,
+"Aug_survey": 3.99
+},
+"core_2027_year_end": {
+"Sep_survey": 3.78,
+"Aug_survey": 3.8
+}
+},
+"source": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/%7BEEFA3879-4DED-3362-C8CD-9F292BFF772E%7D.pdf",
+"pdf_receipt": [
+"2026-10-20T04:08:32.845898Z",
+"2026-10-20T04:08:35.270450Z",
+200,
+"ba987ccbdbd7c157bfca64981bfed892c099191788553d532a28f0e38713679f",
+"bd1b4fc855226c1eed020adf735c3a7d0ef5c40491233c77a692b6817f5522ae",
+"logs/deep_review_20261017/case433_supp_facts_0418/banxico_expectations_202609.receipt.json"
+]
+}
+},
+"timing_limit": "The Sep CPI release and Sep expectations survey were published after the Sep 23/24 meeting. Survey responses extend through Sep 28; do not treat these as all information available to that Board session.",
+"scope": "Factual supplement only; no probability or market-price inspection.",
+"pdf_receipt_tuple_order": "[start_utc,end_utc,http,raw_sha256,gzip_sha256,receipt_path]"
+}

@@ -1,0 +1,75 @@
+{
+  "schema": "primary_source_review.v1",
+  "review_index": 430,
+  "reviewed_utc": "2026-10-20T03:59:24.668275+00:00",
+  "identity_verified": true,
+  "sources": [
+    {
+      "name": "atlantic_press",
+      "url": "https://press.atlanticrecords.com/grand-theft-auto-vi-album",
+      "http": 403,
+      "received_utc": "2026-10-20T03:56:45.714505Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_0401/atlantic_press.receipt.json",
+      "raw_sha256": "9e4ff3f596e23d7b6d8c62b462e7a2c548fc9237892e7959a1bdb97b55462a35",
+      "gzip_sha256": "f005325f17d9d167ef5f4f1688f90c4e73859adcdd1a62710f1ec14c4882df54"
+    },
+    {
+      "name": "apple_album",
+      "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+      "http": 200,
+      "received_utc": "2026-10-20T03:56:46.326139Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_0401/apple_album.receipt.json",
+      "raw_sha256": "fafd80770e39497683406a6d938b2124bf522a046fae161d6a29aba1d88ac707",
+      "gzip_sha256": "52464c732ffcc74e117a977db22f55c19747a20e7f42900d38dc0afaa9c9f681"
+    },
+    {
+      "name": "rockstar_blonded_2017",
+      "url": "https://www.rockstargames.com/newswire/article/398a45525k4411/New-GTAV-Radio-Station-blonded-Los-Santos-97-8-with-Frank-Ocean-More",
+      "http": 200,
+      "received_utc": "2026-10-20T03:56:46.588290Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_0401/rockstar_blonded_2017.receipt.json",
+      "raw_sha256": "1e5744a1f2d207073f52a1b25819ee5ff6ce7c319ba4b666cddc679888404111",
+      "gzip_sha256": "69d8ecdfca69c0ccdc9d3fb6130af1270749715d94555d9753481851040f39cc"
+    },
+    {
+      "name": "gamma",
+      "url": "https://gamma-api.polymarket.com/markets/4662691",
+      "http": 200,
+      "received_utc": "2026-10-20T03:56:46.738708Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_0401/gamma.receipt.json",
+      "raw_sha256": "d23667ac60c33b44eb6d3991e8d10266516b717544314c137c7eabc7c8ca8c49",
+      "gzip_sha256": "b26ead50328400a020b9f78754c05dbaffb65ec193b914970038c4f99f00aaeb"
+    },
+    {
+      "name": "frank_artist",
+      "url": "https://music.apple.com/us/artist/frank-ocean/442122051",
+      "http": 200,
+      "received_utc": "2026-10-20T03:57:34.027294Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_history_0403/frank_artist.receipt.json",
+      "raw_sha256": "967be34ac49edc7def40de39e6504dc594be2fea58ac19e74ed3d666319d3b04",
+      "gzip_sha256": "ed6046d66d13651df54210f8c1555497899ac3d5bb086ec2cf4375e387dadddb"
+    },
+    {
+      "name": "rockstar2017_jp",
+      "url": "https://www.rockstargames.com/jp/newswire/article/398a45525k4411/New-GTAV-Radio-Station-blonded-Los-Santos-97-8-with-Frank-Ocean-More",
+      "http": 200,
+      "received_utc": "2026-10-20T03:57:34.686141Z",
+      "receipt": "logs/deep_review_20261017/case430_primary_history_0403/rockstar2017_jp.receipt.json",
+      "raw_sha256": "8652752ddbc2920ea774ff6d5d43387b0df7a09200af81a0e10c9461c24fa2db",
+      "gzip_sha256": "dfb115af5d4a376830fecacd989b38ea110becead585340dd328f8d51241b513"
+    }
+  ],
+  "findings": [
+    "All six new raw/gzip pairs verified. Gamma exact question/CID/outcome-token strings match frozen raw strings; active/open/accepting, no UMA flag. No outcomePrice parsed.",
+    "Apple embedded MusicAlbum JSON contains34 tracks:9 named positions2,4,5,6,8,10,11,19,32 and25 Track N placeholders. No Frank text in album schema. Incomplete credits cannot prove absence. November19 date;26minutes describes current previews, not proven final album length.",
+    "Rockstar2017 English title/Japanese metadata connect Frank with blonded GTAV radio; full article bodies unavailable in GET. Official Japanese indexed representation dates December13 2017. Prior radio involvement is not GTA VI original-album credit.",
+    "Correct Apple artist442122051 is Frank Ocean; retrieved selection lists Blonde2016/channelORANGE2012 and2020 acoustic singles. Selection does not establish complete discography, retirement or no future collaboration. Wrong Frank1738366259 search result not used.",
+    "Atlantic403 is retrieval failure, not album cancellation/credit absence. Forum/Spotify playlist rumors not adopted as facts or calibrated probabilities."
+  ],
+  "original_sources": "work/0430_facts_0308.json",
+  "local_error_notes": [
+    "0400 TypeError was a caller missing-unpack error before HTTP, not a source failure. Corrected0401 receipts are actual reads.",
+    "Initial root identity assertion compared parsed tokens to frozen raw JSON strings; no identity conflict. Normalized/string equality now verified."
+  ],
+  "limits": "Collector/source claims are bounded to retrieved bytes; private raw bodies remain separate. Public sources may be cached."
+}

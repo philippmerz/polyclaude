@@ -1,35 +1,35 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T03:54:09.842541+00:00",
+  "updated_utc": "2026-10-20T04:16:46.396916+00:00",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Published28408e1 completed/indexed418/422/427/428 valuations and425/426 objective closures; counts371valued. Follow-updcdeb4a completed required safety/news/full03:27producer/CSV230 and fresh unchanged exposures. Both remoteverified; not a status restatement.",
-  "current_turn_progress": "Completed03:01 safety/news check already published dcdeb4a. Preserve430 partial with incidental own-price exposure and434/435/436 collector facts; no additional valuation or financial action. This bounded tick ends after handoff verification.",
+  "evidence": "Publishedb2a521f saved honest430partial and434/435/436 facts, repaired active-case handoff. Current430 individually valued/saved/indexed.",
+  "current_turn_progress": "430/431/433individuallyvalued/saved/indexed, no entry.434active/fullrule/source-schedule discrepancy read, current/historicalcount supplement pending. Single-active-caseguardimplemented/audited;25isolatedstart/revision tests plus25reader/terminaltests pass.",
   "counts": {
-    "completed_valuations": 371,
+    "completed_valuations": 374,
     "blocked_after_in_depth_review": 12,
     "factual_exclusions": 366,
-    "pending": 2251,
-    "base_records": 749,
+    "pending": 2248,
+    "base_records": 752,
     "revisions_written": 69,
     "active_indices": [
-      430
+      434
     ]
   },
   "last_completed": {
-    "index": 428,
+    "index": 433,
     "status": "valued",
-    "report": "evaluations/0428.md",
-    "sha256": "c1c39aa0ad0d3caf693ca7e9f91926c02a67c7cc8806201a64ee0f6c5625461a",
-    "p_yes": 0.24007799999999999,
+    "report": "evaluations/0433.md",
+    "sha256": "b4a47637c23cdcb5fd3235cc72a55ff72f5fb08bfe1a682404e28861f6ec6339",
+    "p_yes": 0.13532,
     "decision": "NO_ENTRY"
   },
   "next": [
-    430,
-    431,
-    433,
     434,
     435,
-    436
+    436,
+    437,
+    438,
+    439
   ],
   "next_facts": {
     "430": "work/0430_resume.json",
@@ -37,11 +37,14 @@
     "433": "work/0433_resume.json",
     "434": "work/0434_resume.json",
     "435": "work/0435_resume.json",
-    "436": "work/0436_resume.json"
+    "436": "work/0436_resume.json",
+    "437": "work/0437_resume.json",
+    "438": "work/0438_resume.json",
+    "439": "work/0439_resume.json"
   },
   "next_existing_safety": "2026-10-20T06:00:00Z",
   "financial_state": "Canonical03:27:35–51:196.22incl5.83gas;190.39tradingmid/187.60indicative fee-netdepth(+10.35%vs170), PM36.44/33.65, CSV230.03:27pUSD19.251290 and3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral.127trades no delta. Kimi10YEScost1.20/0makerfee unchanged.",
-  "goal_state": "Finite3000-condition objective preserved; this scheduled tick ends after completed safety work and saving incomplete research. No idle follow-up, new timer or lifecycle mutation; active430 remains incomplete.",
+  "goal_state": "Full finite3000 objective active/incomplete. Each primary evaluation saved before next substantive evaluation. Next existing06UTC/earliermaterial safety.",
   "safety_followup": {
     "tick": "20261020T030114Z",
     "report": "research/2026-10-20-0301-checkin.md",
@@ -66,5 +69,5 @@
     "window_end": "2026-10-20T03:28:14.986261Z"
   },
   "latest_scheduled_tick": "20261020T030114Z",
-  "active_case": 430
+  "active_case": 434
 }

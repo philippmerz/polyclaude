@@ -1,0 +1,41 @@
+{
+  "schema": "primary_event_forecast.v1",
+  "review_index": 431,
+  "saved_utc": "2026-10-20T04:04:34.834580+00:00",
+  "source": "work/0431_primary_sources_0410.json",
+  "source_sha256": "58f4f4ecae6fb5c640bd24494459f086a5a9a86a7f7e4a8b94fa47c91e24a3e9",
+  "method": "Unfitted joint leadership/announcement regime tree, exact11.99day futurewindow plus past-coverage risk.",
+  "price_exposure": "No own-market price/book used or parsed before this model; quote pending.",
+  "p_missed_qualifying_prior_event": 0.01,
+  "future_given_no_prior_event": [
+    {
+      "state": "continuedprotection/no decisivefreshshock",
+      "weight": 0.9,
+      "p_qualifying_announcement_or_exit": 0.02
+    },
+    {
+      "state": "newscandal/war/dealpressure/presidentialpivot",
+      "weight": 0.1,
+      "p_qualifying_announcement_or_exit": 0.25
+    }
+  ],
+  "p_yes": 0.052570000000000006,
+  "low": 0.005,
+  "high": 0.3,
+  "actual_entry_reserve_pp": 10,
+  "confidence": "Low-to-mediumjudgment, not calibrated turnover frequency. Every weight/hazard subjective; source continuity incomplete.",
+  "reasoning": "CurrentofficialCabinet role and precreationsecondarytitle favorcontinuedincumbency. Oldlowapproval and postmidtermouster discussion preservepressure, not an announcedexit. An announcementbeforeOct31 qualifies even ifeffectiveNovember; quiet2% andshock25% futures explicitlyinclude that.1%pastmiss guards anyperiodclause/capturegaps, not a measurederrorfrequency. Futuretree conditional, not independentdoublecountedrisks.",
+  "sensitivity": {
+    "quiet_lower": 0.014701250000000003,
+    "pressure_higher": 0.15818
+  },
+  "bond_fade_limit": "NO>90% is not a K5license: resolvingdeparturetail not measured first-hand, approval/incumbency is not a quantified exitvariable. Keep10pp instance-thesis reserve; do not multiply a vibes tail.",
+  "literal_window": {
+    "creation": "2026-09-03T13:29:25.296541Z",
+    "cutoff": "2026-11-01T03:59:00Z",
+    "remaining_days_planning": 13,
+    "nonqualifying": "Precreation2025secondarytitle or merely oppositionrequest/futurebargaining without resignation/removalannouncement."
+  },
+  "portfolio": "No Hegseth holding in03:27datedsnapshot. Politicalpositions/bids share nationalapproval/news/venue risk; no hedge assumed. Cash/Aave and current candidates compete.",
+  "remaining": "Both-side fees/depth/mins/maker/conditionalfill/carry before record; no action."
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "primary_source_review.v1",
+  "review_index": 433,
+  "reviewed_utc": "2026-10-20T04:12:06.350695+00:00",
+  "original": "work/0433_facts_0308.json",
+  "supplement": "work/0433_supp_facts_0418.json",
+  "supplement_sha256": "da7f6862cbff0feff5fb54f4f49fcb1d778123c803b6a56ce612ba94f5a71966",
+  "root_verified": [
+    "Exact frozen Gamma IDs/outcome-token strings and all6original source raw/gzip pairs verified. Full September24statement2PDFpages read; unanimous6.50hold, disinflation/slack coexist withupsideinflationrisks; no mechanical Fedfollow.",
+    "Supplement3PDF raw/gzip pairs verified; minutesPDF pages11–14 read completepolicydebate/vote plusp23annex. MeetingSep23/announcementSep24/publicationOct8. Three anonymousstances conditionallyconsidercuts, oneprolongedhold/possibleFedrecoupling, onecautious; allfiveactuallyvotedhold. No member-name mapping inferred from anonymousparagraphs.",
+    "SurveyPDF pages1/10read:42groups, Sep15–28responses, Oct1publication; rate2026/2027mean6.51/median6.50. Modalyearendhold is not the probability of a Novemberexact25cut. SurveystraddlesSeptmeeting; minutesannexPIP Sep23swap6.77yearend/Citiconsensus6.50 are old context, not currentprice probabilities.",
+    "INEGIofficialCPI PDF pages1–2read: Oct8release/Septemberobservation, headline3.45y/y/.42m/m, core3.75/.20, noncore2.45/1.20; services4.27y/y. NextfullmonthlyreleaseNov9 is afterscheduledNov5decision. An earlierOctoberfortnight/growth/Fed/FXrelease can stillchange theoutlook; thosecurrentvalues/calendarhours not verified here.",
+    "Surprisebridge: Septfullmonthcore3.75 vs firsthalf3.79 confirmsdecline already inSepstatement; differentperiods/quarterlyaveragesprevent treating0.04pp as an independentlymeasured majornews surprise. Q4coreforecast3.6wasalreadyanticipated; no automaticnew easing boost from lowlevelalone."
+  ],
+  "limits": [
+    "DirectBanxicohome staticbody no numericindicators; indexedvalues not counted as directevidence.",
+    "Guessedminutesindex-t404 correctedofficial-ta200; absencegap resolved. pypdf extraction gap resolved; raws retained.",
+    "No freshOctoberfortnight/FX/energy/GDP/Fedbody in thisunit, widefuture-regime sensitivity retained.",
+    "Officialforecastsurvey and swapmean do not givecalibrated event probabilities."
+  ],
+  "source_urls": {
+    "statement": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/{7D0BDB6E-E519-9C69-04AA-ABD4D31E4850}.pdf",
+    "minutes": "https://www.banxico.org.mx/publicaciones-y-prensa/minutas-de-las-decisiones-de-politica-monetaria/%7BF63C3DE2-0AEC-9BAE-A86E-FC59895F9702%7D.pdf",
+    "survey": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/%7BEEFA3879-4DED-3362-C8CD-9F292BFF772E%7D.pdf",
+    "cpi": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/inpc/inpc_2q2026_10.pdf"
+  },
+  "receipt_index": "logs/deep_review_20261017/case433_supp_facts_0418/; exact individual receipts in supplement"
+}

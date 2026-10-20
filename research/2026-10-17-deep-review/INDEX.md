@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T03:48:06.563278+00:00
+Updated: 2026-10-20T04:14:34.865109+00:00
 
-**371 valuations saved; first milestone100:** 371 valued; 12 blocked after in-depth review. 366 factual exclusions separately; 2251 pending.
+**374 valuations saved; first milestone100:** 374 valued; 12 blocked after in-depth review. 366 factual exclusions separately; 2248 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -441,7 +441,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |427|[Will the Republican Party win the IN-05 House seat?](evaluations/0427.md)|valued|NO_ENTRY: 5YEScost4.17823/central-0.34068/selected-1.09068;6NOcost1.11543/central+0.27951/selected-0.62049. Ordinarymakersfail15ppreserve;default10alsofails. Noallocation/monitoringchange.|
 |428|[Ink FDV above $500M one day after launch?](evaluations/0428.md)|valued|NO_ENTRY: YES central upside fails selected15pp reserve; NO fails central/stress. Current-touch makers fail selected; remote bids lack supported conditional-fill EV. No order/holding/prior/watcher change.|
 |429|[Will SV Werder Bremen vs. SC Paderborn 07 end in a draw?](evaluations/0429.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|430|[Will Frank Ocean be featured on GTA VI: The Album?](evaluations/0430.md)|valued|NO_ENTRY: YES central14.4% gives small positive point-EV but selected4.4% fails11c+fees; NO85.6%/selected75.6 fails91c+fees. Touchmakers fail selected; remotebids lack supported conditional-fill EV. Both books staleatcapture; no current execution certificate. No order/prior/holding/watcher change.|
+|431|[Pete Hegseth out as Secretary of Defense by October 31?](evaluations/0431.md)|valued|NO_ENTRY: YES has positivecentralpointEV but selected0% fails; NO failscentral/stress. Touchmakers fail; remotebids lack supportedconditional-fill/catalystpull. No new order/prior/holding/watcher.|
 |432|[Will the Democrats win the Iowa Senate race in 2026?](evaluations/0432.md)|valued|No entry: both dated asks negative central EV. MakerresearchYES<=.30 orNO<=.46 x10 onlyafterfreshallgates.|
+|433|[Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?](evaluations/0433.md)|valued|NO_ENTRY: YESfailscentral/selected; NOsmallcentralupsidefailsselected76.468%afterfees/carry. Touchmakersfailselected; hypotheticaldeeperorderslack supportedconditionalforecast and verifiedadvancepullschedule. No newposition/prior/order/watcher.|
 |444|[Will the Republicans win the Georgia Senate race in 2026?](evaluations/0444.md)|valued|YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.|
 |447|[Spread: Bowling Green (-6.5)](evaluations/0447.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |448|[Will DeepSeek have the second highest OpenRouter market share the week of October 12?](revisions/0448_20261018T120932860077Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
@@ -762,4 +765,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 430
+Active indices: 434

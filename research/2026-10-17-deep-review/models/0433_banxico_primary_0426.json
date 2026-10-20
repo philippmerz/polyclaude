@@ -1,0 +1,65 @@
+{
+  "schema": "primary_event_forecast.v1",
+  "review_index": 433,
+  "saved_utc": "2026-10-20T04:12:06.351155+00:00",
+  "source": "work/0433_primary_sources_0426.json",
+  "source_sha256": "bf0a45798d7698c5f7222a807d50f6b16cd4de7668abc541b0d55622fbd59476",
+  "method": "Unfitted conditional macroregime distribution over meetingmoves; exactrounded25cut, not anycut.",
+  "price_exposure": "No own-market quote/book read before model. No analystmean/marketprice treated as calibrated probability.",
+  "regimes": [
+    {
+      "state": "orderedcontinuation/basecase",
+      "weight": 0.75,
+      "distribution": {
+        "cut25": 0.08,
+        "hold": 0.89,
+        "cut50_or_more": 0.005,
+        "hike": 0.025
+      },
+      "bridge": "Unanimouspause, hawkishmember, surveyyearendmedian6.50 and littleadoptedpostmeeting surprise favorhold; conditionaldoves keepcutprobabilitynonzero."
+    },
+    {
+      "state": "decisivedomesticdisinflation/growthweakness withorderlyFX",
+      "weight": 0.15,
+      "distribution": {
+        "cut25": 0.5,
+        "hold": 0.45,
+        "cut50_or_more": 0.04,
+        "hike": 0.01
+      },
+      "bridge": "Three conditionalcut-friendly stances couldcoalesce if newdata permit; no directvote commitment or independentlymeasuredregimefrequency."
+    },
+    {
+      "state": "renewedenergy/FX/externalinflationpressure",
+      "weight": 0.1,
+      "distribution": {
+        "cut25": 0.01,
+        "hold": 0.49,
+        "cut50_or_more": 0,
+        "hike": 0.5
+      },
+      "bridge": "Fed/energy/FXupsideinflation risk can prolongpause or forcehike; not a newshockassertion."
+    }
+  ],
+  "p_meeting_cancel_nextfallback": 0.005,
+  "distribution": {
+    "cut25": 0.13532,
+    "hold": 0.78008,
+    "cut50_or_more": 0.00970125,
+    "hike": 0.06989875000000001,
+    "cancel_or_nextmeetingfallback": 0.005
+  },
+  "p_yes": 0.13532,
+  "low": 0.02,
+  "high": 0.45,
+  "actual_entry_reserve_pp": 10,
+  "confidence": "Low-to-mediumjudgment, not calibrated economistvote share. Allregimeweights/conditionals/cancellationtailsubjective.",
+  "reasoning": "Currenthold baseline outweighs conditionalfine-tuning: 75%ordered×8%cut +15%decisivefavorabledata×50%cut +10%renewedpressure×1%cut, times99.5%qualifyingmeeting=13.532%. Threeopen-to-cutstances demonstratepossibility, not majorityintention; Septembercoredecline largelyanticipated. Futuredata/shockuncertainty retained, no sourceabsenceinference.",
+  "sensitivity": {
+    "low_easing": 0.040795,
+    "high_easing": 0.3825775
+  },
+  "literal": "YESonrounded25bpcut fromimmediatepreNovembermeetingtarget (upperboundifrange); 0<cut<37.5rounds25, tie37.5→50NO. Nochange/bigcut/hike/cancelfallbackNO; unrelatedemergencychangesexcluded. ScheduledNov5/nextDec17datesonly; premeetingbaselinecanchange.",
+  "portfolio": "NoMexicorateholdingin03:27datedaccount; macro/USrate/FX/venue risk cancorrelate withcrypto/Aave/currentportfolio. Noindependentbankroll or allocationtarget.",
+  "remaining": "Savedexactquote/fees/depth/route-minimums, makerconditionalfill/carry and currentalternatives beforedecision. Noorder."
+}

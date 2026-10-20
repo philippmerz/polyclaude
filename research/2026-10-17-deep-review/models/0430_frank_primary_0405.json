@@ -1,0 +1,44 @@
+{
+  "schema": "primary_event_forecast.v1",
+  "review_index": 430,
+  "saved_utc": "2026-10-20T03:59:24.668667+00:00",
+  "source": "work/0430_primary_sources_0405.json",
+  "source_sha256": "9c628cb20afe148c7f0ff16666795f1d3f7386acd28a66256c3a4bbcbb635ad3",
+  "full_rule_read": true,
+  "price_exposure": "Mirror-price anchoring exposure disclosed in0430_primary_partial_0356.json. Own live quote file captured after failed model-save assertion but still unread before this save; no price-blind claim. Mirrors/Betfair/forums not probability inputs.",
+  "method": "Unfitted joint creative-roster scenario judgment; no random-slot or market-price calibration.",
+  "p_release_by_literal_cutoff": 0.96,
+  "conditional_roster_scenarios": [
+    {
+      "state": "ordinary active-artist roster",
+      "weight": 0.7,
+      "p_frank_credit": 0.07,
+      "bridge": "34tracks allow breadth; old directRockstar relationship positive, but no adopted new original-album credit and retrieved artist catalog is sparse."
+    },
+    {
+      "state": "intentional rare-artist surprise collaboration",
+      "weight": 0.25,
+      "p_frank_credit": 0.4,
+      "bridge": "Prior direct relationship and25withheldnames leave material surprise possibility. Withheldslots are not independent Frank trials."
+    },
+    {
+      "state": "narrower/changed roster or nonqualifying radio participation",
+      "weight": 0.05,
+      "p_frank_credit": 0.02,
+      "bridge": "Radio/licensed songs can occur without album credit; artist versus writer/producer/alias treatment is not explicit."
+    }
+  ],
+  "p_yes": 0.14400000000000002,
+  "low": 0.005,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 10,
+  "confidence": "Low/unfitted. Every weight and conditional probability is judgment, not measured frequency; range is model sensitivity, not a confidence interval.",
+  "probability_sensitivity": {
+    "restrained_continuity": 0.036000000000000004,
+    "strong_surprise": 0.41895000000000004
+  },
+  "reasoning": "Official preorder schedule supports delivery, not certainty. No Frank among9selected singles weakly favors ordinary roster;25placeholders preserve real upside. Prior radio relationship supports rare-collaboration branch but does not qualify itself. Failed search/body is not absence proof; broad credit/oracle uncertainty retained.",
+  "correlation": "All GTA VI album-credit bets share release/tracklist/informed-team risk; no current such holding in03:27dated state. Existing commitments/held risks share bankroll/venue.",
+  "maker_fill": "A passive bid can fill on private creative-team information; assess conditional odds stress instead of unconditional probability alone.",
+  "remaining": "Both-side saved quote/fees/depth/minimums, carry/maker and portfolio comparison. No decision/order yet."
+}

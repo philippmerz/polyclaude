@@ -1,0 +1,206 @@
+{
+  "review_index": 430,
+  "market_id": "4662691",
+  "condition_id": "0x1889c867f870b77d3beb6c768dc165c47771094956f286f8891e70b8d2768413",
+  "criteria_sha256": "dbc5b78b44f7762f92c93b39b82a820de40b3f0c0500434a20e199c2f6443c59",
+  "token_ids": [
+    "111825100060138377241857461071186072559206814657006477947629340562752854270553",
+    "94611596175477128485945372882659933056441535899252825625663943632057459748469"
+  ],
+  "status": "valued",
+  "literal_analysis": "YES requires Frank credited/featured on≥1track of specifically GTA VI:The Album; radiohosting/license/cameo alone insufficient. Rockstarprimary, streamingofficialcreditsfallback. NoalbumbyNov26 23:59ET→NO (=Nov27 04:59UTC); earlierGammaendDate not literalcutoff. Artist/writer/producer/alias interpretation uncertain; source/adjudication risk can delay return past nominaldate.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-20T03:01:35.411228Z/2026-10-20T03:01:35.554814Z",
+      "finding": "34originaltracks/November19 and9selectedsingles; root verified/read prior capture."
+    },
+    {
+      "url": "https://press.atlanticrecords.com/grand-theft-auto-vi-album",
+      "observed_utc": "2026-10-20T03:56:45.714505Z",
+      "finding": "403 retrieval failure, not cancellation/noFrankproof."
+    },
+    {
+      "url": "https://music.apple.com/us/album/grand-theft-auto-vi-the-album/6812476961",
+      "observed_utc": "2026-10-20T03:56:46.326139Z",
+      "finding": "34embedded tracks,25placeholders; incomplete roster not Frankabsence."
+    },
+    {
+      "url": "https://www.rockstargames.com/newswire/article/398a45525k4411/New-GTAV-Radio-Station-blonded-Los-Santos-97-8-with-Frank-Ocean-More",
+      "observed_utc": "2026-10-20T03:56:46.588290Z",
+      "finding": "Official prior-radio title only, no fullbody."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4662691",
+      "observed_utc": "2026-10-20T03:56:46.738708Z",
+      "finding": "Exact frozen identity/tokens/openstatus matched."
+    },
+    {
+      "url": "https://music.apple.com/us/artist/frank-ocean/442122051",
+      "observed_utc": "2026-10-20T03:57:34.027294Z",
+      "finding": "Correct artist; bounded catalog selection supports sparse output, not retirement/complete absence."
+    },
+    {
+      "url": "https://www.rockstargames.com/jp/newswire/article/398a45525k4411/New-GTAV-Radio-Station-blonded-Los-Santos-97-8-with-Frank-Ocean-More",
+      "observed_utc": "2026-10-20T03:57:34.686141Z",
+      "finding": "Official metadata FrankGTAVradio link, not originalGTA VIalbum credit; body not captured."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.14400000000000002,
+    "low": 0.005,
+    "high": 0.6,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted joint creative-roster scenario judgment; no random-slot or market-price calibration.",
+    "reasoning": "96%ontimerelease×(70%ordinaryroster×7%Frank +25%rare-artist-surprise×40% +5%changed/nonqualifyingroster×2%)=14.4%. Olddirectrelationship versus sparseboundedcatalog and25hiddennames supports two-way uncertainty; all weights judgment/unfitted, broad0.5–60. Ownmirrorprice exposure disclosed; saved model after quote capture but before livebook parsing, not priceblind.",
+    "model_path": "models/0430_frank_primary_0405.json",
+    "model_sha256": "819eca3c33b4ec6f5fbe88e8884b939f28dfd084a76e97d0d686e5c438185093"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0430_quote_0406.json",
+    "quote_file_sha256": "06bd95d9340ae3f662125f58044475ffeb16a19e60956bbf18775970cff1854a",
+    "quote_capture_utc": "2026-10-20T03:58:38.589120+00:00",
+    "gamma_received_utc": "2026-10-20T03:58:38.444496+00:00",
+    "horizon_days": 39.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.14400000000000002,
+        "selected_stress_probability": 0.04400000000000001,
+        "best_bid": 0.09,
+        "best_ask": 0.11,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792468453235",
+        "book_received_utc": "2026-10-20T03:58:38.588443+00:00",
+        "book_age_seconds_at_receipt": 265.35344314575195,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.1,
+            "fee": 0.04895,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.11
+              }
+            ],
+            "net": 1.1489500000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.8999999999999999,
+            "fee": 0.04096,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.8590399999999999
+          }
+        },
+        "taker_cost_usd": 1.1489500000000001,
+        "central_expected_profit_usd": 0.29105000000000003,
+        "selected_stress_profit_usd": -0.70895,
+        "break_even_before_carry": 0.11489500000000001,
+        "break_even_constant_carry": 0.11528276108366142,
+        "current_execution_authorization": false,
+        "gross_shares": 10
+      },
+      "No": {
+        "probability": 0.856,
+        "selected_stress_probability": 0.756,
+        "best_bid": 0.89,
+        "best_ask": 0.91,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792468453235",
+        "book_received_utc": "2026-10-20T03:58:38.588443+00:00",
+        "book_age_seconds_at_receipt": 265.35344314575195,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.55,
+            "fee": 0.02048,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.91
+              }
+            ],
+            "net": 4.57048
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.45,
+            "fee": 0.02448,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.89
+              }
+            ],
+            "net": 4.425520000000001
+          }
+        },
+        "taker_cost_usd": 4.57048,
+        "central_expected_profit_usd": -0.2904799999999996,
+        "selected_stress_profit_usd": -0.7904799999999996,
+        "break_even_before_carry": 0.914096,
+        "break_even_constant_carry": 0.917180998089826,
+        "current_execution_authorization": false,
+        "gross_shares": 5
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 10,
+      "No": 5
+    },
+    "route_minimum_note": "Venue5shares AND separate1USD gross route.5YES0.55 fails dollar floor;10YES1.10 and5NO4.55 pass hypothetically. No funding/order gate certified.",
+    "stale_quote_limit": "Both CLOB books age265.35s at matching03:58:38receipt, above180s execution gate. Fresh GET is not fresh book timestamp. Dated research economics only, not current liquidity/execution; gate independently fails uncertainty-adjusted value.",
+    "maker_analysis": {
+      "touch": "9cYES and89cNO fail4.4%/75.6% selected probabilities before carry/ops. Improving towardask worsens value.",
+      "remote": "4cYES needs25shares/1USD, unconditionalselectedEV1.10 versus1.0034constantcarry. That is not conditional-fill EV: an unknown roster-credit decision can make fills overwhelmingly bad. No measured informative-fill likelihood bound or reliable advance tracklist pull supports a remote order; deeper quotes similarly require a supported conditional forecast, not an assumption of free optionality.",
+      "conditional_fill_sensitivity_not_measured": {
+        "1.5": 0.02976995940460082,
+        "2": 0.02249488752556238,
+        "5": 0.009121061359867334
+      },
+      "cash_alternative": "Retain current pUSD liquidity or vetted pUSD→USDC.e/Aave route if net economics warrant;3.2035% variable dated APY is a constant sensitivity, funding/gas/ops not free.",
+      "portfolio": "Dated03:27 bankroll196.22 incl5.83gas; three6.50bidcommitments, pUSD19.251290−6.50=12.751290 arithmetic, not present free collateral. Proposed10YEScost1.14895 small but could fully lose. No current GTA-album holding; future album bets correlate on release/credits/private information. ExistingKimi/OR/political full-loss risks compete. No fresh account check/trade warranted for failed selected gate."
+    }
+  },
+  "verdict": "NO_ENTRY: YES central14.4% gives small positive point-EV but selected4.4% fails11c+fees; NO85.6%/selected75.6 fails91c+fees. Touchmakers fail selected; remotebids lack supported conditional-fill EV. Both books staleatcapture; no current execution certificate. No order/prior/holding/watcher change.",
+  "reopen_condition": "Verify new exact artist/track/album credit or dated official fullroster/release change, revise forecast/conditionalfill; revalidate exact frozen identity, current eligible books/fees/account/funding/commitments/lawful route and vetted gates. No automatic own-price action.",
+  "recording_note": "Initial record attempt lacked required report_markdown and wrote no evaluation. Caller incorrectly started431 afterward; only its resume/rule was read, no431 valuation/sourcework. This corrected430 record is saved/verified before431 substantive evaluation; preserve the incident, no fabricated earlier completion.",
+  "evaluated_utc": "2026-10-20T04:01:34.483978+00:00",
+  "question": "Will Frank Ocean be featured on GTA VI: The Album?",
+  "valuation_author": "primary_operator",
+  "original_index": 430,
+  "report_sha256": "fe45fc81f9f3a0409633320771b310db68884e34fc31aee41b6ab47d8a5b8a2b"
+}

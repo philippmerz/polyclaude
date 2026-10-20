@@ -1,9 +1,13 @@
 {
   "review_index": 433,
-  "updated_utc": "2026-10-20T03:17:58.391995+00:00",
-  "phase": "facts only; not started/valued; root complete-rule/source/forecast/economics pending",
+  "updated_utc": "2026-10-20T04:16:46.396916+00:00",
+  "phase": "valued, immutable record/index saved; NO_ENTRY; dated sources not execution authority",
   "source_paths": [
-    "work/0433_facts_0308.json"
+    "work/0433_facts_0308.json",
+    "work/0433_primary_partial_0419.json"
   ],
-  "facts_sha256": "644fdacede2c00182766712542d4c5439863f1744fa547995564f5560804d871"
+  "facts_sha256": "644fdacede2c00182766712542d4c5439863f1744fa547995564f5560804d871",
+  "primary_partial_sha256": "5e193964b583c320cc187edc3a0702d13befcd4681f96e8c58cecbadc929f41d",
+  "completed_report": "evaluations/0433.json",
+  "report_sha256": "b4a47637c23cdcb5fd3235cc72a55ff72f5fb08bfe1a682404e28861f6ec6339"
 }

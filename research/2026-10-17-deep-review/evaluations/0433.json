@@ -1,0 +1,198 @@
+{
+  "review_index": 433,
+  "market_id": "3388092",
+  "condition_id": "0x79361c2379eda2645213973ee61ab00b51ef78eaa142ebc0363e24d8e0666acd",
+  "criteria_sha256": "df828eb0dae11bde3c6b14b230a7b6810b53ece47c48195c781d89d24b3c9e52",
+  "token_ids": [
+    "79935321123546292962195856591175158928949469679115949589340432812674795298180",
+    "105171868481302721406414902711796379313728379634038427438846735562489922509288"
+  ],
+  "status": "valued",
+  "literal_analysis": "YESonrounded25bpcut fromimmediatepreNovembermeetingtarget (upperboundifrange); 0<cut<37.5rounds25, tie37.5→50NO. Nochange/bigcut/hike/cancelfallbackNO; unrelatedemergencychangesexcluded. ScheduledNov5/nextDec17datesonly; premeetingbaselinecanchange.No publishedhourassumed; source/oracle/bookandsettlementriskremain.",
+  "evidence": [
+    {
+      "url": "https://www.banxico.org.mx/publicaciones-y-prensa/anuncios-de-las-decisiones-de-politica-monetaria/{7D0BDB6E-E519-9C69-04AA-ABD4D31E4850}.pdf",
+      "observed_utc": "2026-10-20T03:01:38.196145Z",
+      "finding": "Full2pagesread:Sep24unanimoushold6.50, coredecline/slack andupsideinflationrisks alreadyanticipated; nonmechanicalFedresponse."
+    },
+    {
+      "url": "https://www.banxico.org.mx/publicaciones-y-prensa/minutas-de-las-decisiones-de-politica-monetaria/%7BF63C3DE2-0AEC-9BAE-A86E-FC59895F9702%7D.pdf",
+      "observed_utc": "2026-10-20T04:08:32.805399Z",
+      "finding": "RootreadPDF11–14policy/vote+p23annex:conditionalcutstancesvsprolongedhold, no cutcommitment; oldswap/Citisep23 contextnotcurrentprobability."
+    },
+    {
+      "url": "https://www.banxico.org.mx/publicaciones-y-prensa/encuestas-sobre-las-expectativas-de-los-especialis/%7BEEFA3879-4DED-3362-C8CD-9F292BFF772E%7D.pdf",
+      "observed_utc": "2026-10-20T04:08:35.270450Z",
+      "finding": "Rootreadpp1/10;42groupsSep15–28responses, rateyearend2026/2027mean6.51/median6.50, not Novembereventprobabilities."
+    },
+    {
+      "url": "https://www.inegi.org.mx/contenidos/saladeprensa/boletines/2026/inpc/inpc_2q2026_10.pdf",
+      "observed_utc": "2026-10-20T04:08:57.510392Z",
+      "finding": "Rootreadpp1–2:Oct8releasedSepheadline3.45/core3.75yoy, nextfullmonthlyNov9afterdecision. Coredeclinealreadyforecast; no measuredlargefreshsurprise."
+    },
+    {
+      "url": "https://www.banxico.org.mx/viewers2/JSP/calendarioDifusion_es.jsp",
+      "observed_utc": "2026-10-20T03:01:51.888295Z",
+      "finding": "OfficialJSONcalendarNov5decision/Dec17nextmeeting dateonly; postponementfallback matters."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.13532,
+    "low": 0.02,
+    "high": 0.45,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted conditional macroregime distribution over meetingmoves; exactrounded25cut, not anycut.",
+    "reasoning": "99.5%qualifyingmeeting×(75%ordered×8%cut +15%newfavorabledata×50%cut +10%newpressure×1%cut)=13.532%; fullnonoverlappingmove distribution inmodel. Unanimouspause/surveymedian6.5favorhold; conditionalfine-tuning notpromise; Septcoredecline largelyanticipated. Weightsjudgment/notcalibrated, broad2–45/sensitivity4.0795–38.25775; model savedbeforeownquote.",
+    "model_path": "models/0433_banxico_primary_0426.json",
+    "model_sha256": "61ee1cfef9e64ab6701d4045ab212aa41de88d8fb093661409ef05471777b926"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0433_quote_0427.json",
+    "quote_file_sha256": "5c818e7363a75707959804965aadbcec4f1cd56fb21634ad4d9cd52d72bf45df",
+    "quote_capture_utc": "2026-10-20T04:12:14.497399+00:00",
+    "gamma_received_utc": "2026-10-20T04:12:14.345495+00:00",
+    "horizon_days": 18.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.13532,
+        "selected_stress_probability": 0.03531999999999999,
+        "best_bid": 0.185,
+        "best_ask": 0.195,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792469531410",
+        "book_received_utc": "2026-10-20T04:12:14.496347+00:00",
+        "book_age_seconds_at_receipt": 3.0863468647003174,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 1.17,
+            "fee": 0.0471,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.195
+              }
+            ],
+            "net": 1.2170999999999998
+          },
+          "bids": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 1.1099999999999999,
+            "fee": 0.04524,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.185
+              }
+            ],
+            "net": 1.06476
+          }
+        },
+        "taker_cost_usd": 1.2170999999999998,
+        "central_expected_profit_usd": -0.4051799999999999,
+        "selected_stress_profit_usd": -1.00518,
+        "break_even_before_carry": 0.20284999999999997,
+        "break_even_constant_carry": 0.20316568350522154,
+        "current_execution_authorization": false,
+        "gross_shares": 6
+      },
+      "No": {
+        "probability": 0.86468,
+        "selected_stress_probability": 0.76468,
+        "best_bid": 0.805,
+        "best_ask": 0.815,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792469531410",
+        "book_received_utc": "2026-10-20T04:12:14.496347+00:00",
+        "book_age_seconds_at_receipt": 3.0863468647003174,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.074999999999999,
+            "fee": 0.0377,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.815
+              }
+            ],
+            "net": 4.112699999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.025,
+            "fee": 0.03925,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.805
+              }
+            ],
+            "net": 3.9857500000000003
+          }
+        },
+        "taker_cost_usd": 4.112699999999999,
+        "central_expected_profit_usd": 0.210700000000001,
+        "selected_stress_profit_usd": -0.289299999999999,
+        "break_even_before_carry": 0.8225399999999998,
+        "break_even_constant_carry": 0.823820070546635,
+        "current_execution_authorization": false,
+        "gross_shares": 5
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 6,
+      "No": 5
+    },
+    "route_minimum_note": "Venue5shares AND1USDgrossroute.5YES0.975 failsUSD;6YES1.17 and5NO4.075 pass hypothetically.",
+    "carry_sensitivity_60_days": {
+      "Yes": 1.2234251412257784,
+      "No": 4.134073271152131
+    },
+    "maker_analysis": {
+      "current_touch": "18.5cYESfails13.532%central/3.532%selected;80.5cNOfails76.468%selected thoughcentral86.468% positive. Inside-spread improvement worsens value.",
+      "remote": "NO≤76c offers unconditional arithmetic but narrowcarry/opsmargin. An illustrative70c order fails a1.5adverse-fillloss-odds stress; deeper60c could pass2×stress arithmetically but there is no measured bound. Fills may follow newinflation/growth/FX/Fed/Boardinformation; no verified advancepullcalendar/conditional forecast establishes a resting order now. This does not assert all future deeper bids are negative.",
+      "no_conditional_fill_bound_measured": {
+        "1.5": 0.684179446343253,
+        "2": 0.6190136968558755,
+        "3": 0.5199640972637763
+      },
+      "alternative": "Keep liquidity or vettedAave route after costs. Dated3.2035%APY is variable/constantcarry sensitivity, not forecast;18day~0.1556%,60day~0.52%. Existing03:27commitments/portfolio compete; no freshaccountneeded forfailedselectedgate.",
+      "portfolio": "NoMexicorateholding in03:27account; three6.50bidcommitments,19.251290pUSD/12.751290arithmetic residualnotcurrentfreecollateral. Macro/USrates/FX/geopolitical/venue risks affectcrypto/Aave/currentpolitical exposure; noindependence/hedge assumed. Smallticket canfullylose."
+    }
+  },
+  "verdict": "NO_ENTRY: YESfailscentral/selected; NOsmallcentralupsidefailsselected76.468%afterfees/carry. Touchmakersfailselected; hypotheticaldeeperorderslack supportedconditionalforecast and verifiedadvancepullschedule. No newposition/prior/order/watcher.",
+  "reopen_condition": "Read newofficialOctoberfortnight/growth/FX/Board/Feddata againstsamevintageexpectations andrevisejointpolicyweights; verify exactroundedcut/meetingbaseline, calendar/pulltime, currentidentity/books/fees/account/funding/commitments/lawfulroute/vetted entrygates. Neither broadconsensusmean nor ownprice is a probability/authority.",
+  "evaluated_utc": "2026-10-20T04:14:08.631639+00:00",
+  "question": "Bank of Mexico decreases interest rates by 25 bps after November 2026 meeting?",
+  "valuation_author": "primary_operator",
+  "original_index": 433,
+  "report_sha256": "b4a47637c23cdcb5fd3235cc72a55ff72f5fb08bfe1a682404e28861f6ec6339"
+}

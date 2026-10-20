@@ -1,0 +1,193 @@
+{
+  "review_index": 431,
+  "market_id": "4188133",
+  "condition_id": "0xdb018a01cb1f57281c656ffcfdb0e99215410836f82868cb09d4eb25a1504b2c",
+  "criteria_sha256": "1aacec57aa7eb70e500e580326d66a115c871daa0335031566231c1a614e232c",
+  "token_ids": [
+    "7255979635559102548763279870457597753866245982581680266339955484832555959186",
+    "27782924500838474317680166975100633450555846797038540523315322865276817275276"
+  ],
+  "status": "valued",
+  "literal_analysis": "YES ifHegsethceasesSecretaryofDefenseanyperiodsinceSep3 2026creation throughOct31 23:59EDT (=Nov1 03:59UTC), or resignation/removalannouncedbycutoff even ifeffectivelater. Gammaend4hearlier is notliteralcutoff. EO14347secondarySecretaryofWar title predatescreation andpreservesstatutoryoffice, not roleexit. Mereoppositionrequest/afterelectionbargaining is not an announceddeparture. Temporaryactualcessation and sourceadjudication remainuncertain.",
+  "evidence": [
+    {
+      "url": "https://www.whitehouse.gov/administration/the-cabinet/",
+      "observed_utc": "2026-10-20T04:02:03.754913Z",
+      "finding": "WhiteHouse listsPeteHegsethSecretaryofWar; exactsectionread, notcontinuous-officeproof."
+    },
+    {
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/09/restoring-the-united-states-department-of-war/",
+      "observed_utc": "2026-10-20T04:02:02.950742Z",
+      "finding": "Sep5 2025order secondarytitle, statutoryrolepreserved; predatesmarketcreation."
+    },
+    {
+      "url": "https://www.war.gov/About/Secretary-of-war/",
+      "observed_utc": "2026-10-20T04:02:04.030247Z",
+      "finding": "403 only, not departureevidence."
+    },
+    {
+      "url": "https://ktvz.com/politics/cnn-us-politics/2026/09/22/republican-support-for-trumps-handling-of-war-in-iran-shows-cracks-in-new-cnn-poll/",
+      "observed_utc": "2026-10-20T04:02:53.195101Z",
+      "finding": "CNNoriginalSSRSSept16–17survey1206adults/3.5ppMOE;34%approval is not5%removalriskmeasurement. Fullavailablearticlelaterread outsideemptyselector."
+    },
+    {
+      "url": "https://www.aol.com/articles/dems-float-hegseth-ouster-lame-215555000.html",
+      "observed_utc": "2026-10-20T04:02:52.260099Z",
+      "finding": "Oct19newsletter metadataaftermidtermousterproposal, bodytruncated; not a resignation/removalannouncement."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.052570000000000006,
+    "low": 0.005,
+    "high": 0.3,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted joint leadership/announcement regime tree, exact11.99day futurewindow plus past-coverage risk.",
+    "reasoning": "1%pastmiss +99%×(90%quiet×2%futureexit/announcement +10%decisiveshock/deal×25%)=5.257%. Officialcurrentrole favorscontinuity; oldlowapproval/postmidtermousterdiscussion preservepressure but do not announceexit. Allweights judgment, not turnovercalibration; broad0.5–30%, sensitivity1.470125–15.818%. NO94.743% lacks measured resolvingtail, so no K5license; keep10ppinstance reserve. Model savedbeforeownquote.",
+    "model_path": "models/0431_hegseth_primary_0410.json",
+    "model_sha256": "bca8358b67921670b2f010b573d0027ddc635cb96843423f98d88e5983090d2d"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0431_quote_0411.json",
+    "quote_file_sha256": "97304b213119e26b57d537a81222d8706822da2fe0d6a0d7d0ac79ffca44b094",
+    "quote_capture_utc": "2026-10-20T04:04:39.400784+00:00",
+    "gamma_received_utc": "2026-10-20T04:04:39.227382+00:00",
+    "horizon_days": 13.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.052570000000000006,
+        "selected_stress_probability": 0,
+        "best_bid": 0.029,
+        "best_ask": 0.036,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792469079167",
+        "book_received_utc": "2026-10-20T04:04:39.399712+00:00",
+        "book_age_seconds_at_receipt": 0.2327120304107666,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 28.0,
+            "gross": 1.008,
+            "fee": 0.03887,
+            "fills": [
+              {
+                "shares": 28.0,
+                "price": 0.036
+              }
+            ],
+            "net": 1.04687
+          },
+          "bids": {
+            "complete": true,
+            "filled": 28.0,
+            "gross": 0.789,
+            "fee": 0.03068,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.029
+              },
+              {
+                "shares": 23.0,
+                "price": 0.028
+              }
+            ],
+            "net": 0.75832
+          }
+        },
+        "taker_cost_usd": 1.04687,
+        "central_expected_profit_usd": 0.4250900000000002,
+        "selected_stress_profit_usd": -1.04687,
+        "break_even_before_carry": 0.03738821428571428,
+        "break_even_constant_carry": 0.03743022776321852,
+        "current_execution_authorization": false,
+        "gross_shares": 28
+      },
+      "No": {
+        "probability": 0.94743,
+        "selected_stress_probability": 0.84743,
+        "best_bid": 0.964,
+        "best_ask": 0.971,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792469079167",
+        "book_received_utc": "2026-10-20T04:04:39.399712+00:00",
+        "book_age_seconds_at_receipt": 0.2327120304107666,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.8549999999999995,
+            "fee": 0.00564,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.971
+              }
+            ],
+            "net": 4.860639999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.82,
+            "fee": 0.00695,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.964
+              }
+            ],
+            "net": 4.8130500000000005
+          }
+        },
+        "taker_cost_usd": 4.860639999999999,
+        "central_expected_profit_usd": -0.12348999999999943,
+        "selected_stress_profit_usd": -0.6234899999999994,
+        "break_even_before_carry": 0.9721279999999999,
+        "break_even_constant_carry": 0.9732203891028097,
+        "current_execution_authorization": false,
+        "gross_shares": 5
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 28,
+      "No": 5
+    },
+    "route_minimum_note": "5share venue and1USD grossroute both required.10YES0.36 failsUSD;28YES≥1.008 and5NO≥4.855 pass hypothetically.",
+    "maker_analysis": {
+      "touch": "2.9cYES fails selected0%;96.4cNO exceeds94.743%central and84.743%selected beforecarry. Improving prices inside spread does not fix selected gate.",
+      "remote": "No positive YESbid clears selected0. Remote NO<84.7c could look arithmetically positive, but such fills likely coincide with privately known imminentexit and require a new conditional forecast. No supported conditional-fill bound/catalystpull establishes a resting order.",
+      "capital": "Dated03:27account196.22inclgas/19.251290pUSD/three6.50commitments; residual12.751290arithmetic, not freshfreecollateral. No Hegseth holding; political exposure shares approval/news/venue risk.",
+      "cash_alternative": "Cash/vetted pUSD→USDC.e/Aave if net beneficial; dated3.2035%variable rate constant13daycost~0.1124%, gas/funding/ops not assumedfree."
+    }
+  },
+  "verdict": "NO_ENTRY: YES has positivecentralpointEV but selected0% fails; NO failscentral/stress. Touchmakers fail; remotebids lack supportedconditional-fill/catalystpull. No new order/prior/holding/watcher.",
+  "reopen_condition": "Verify official resignation/removal/transfer/actualrolecessation or materialnewpresidentialsource/deal/hospitalization and exactannouncementwindow; reviseprobability, currentexactidentity/books/fees/account/funding/commitments/lawfulvenue/vetted gates. Do not infer exit from secondarytitle or pollingapproval.",
+  "evaluated_utc": "2026-10-20T04:05:46.285136+00:00",
+  "question": "Pete Hegseth out as Secretary of Defense by October 31?",
+  "valuation_author": "primary_operator",
+  "original_index": 431,
+  "report_sha256": "9fd55329676085cfd13bc2aae993df8cbbaaa0344f598dfcabd7812dc2c5ab18"
+}

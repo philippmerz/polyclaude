@@ -1,20 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T03:48:06.563278+00:00",
+  "updated_utc": "2026-10-20T04:14:34.865109+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 383,
-  "completed_valuations": 371,
+  "completed_in_depth_reviews": 386,
+  "completed_valuations": 374,
   "blocked_after_in_depth_review": 12,
   "factual_exclusions": 366,
-  "pending": 2251,
+  "pending": 2248,
   "active_indices": [
-    430
+    434
   ],
   "next_pending_indices": [
-    430,
-    431,
-    433,
     434,
     435,
     436,
@@ -41,12 +38,15 @@
     461,
     462,
     463,
-    464
+    464,
+    465,
+    466,
+    468
   ],
-  "base_records": 749,
+  "base_records": 752,
   "base_record_counts": {
-    "valued": 369,
     "excluded_factual": 366,
+    "valued": 372,
     "blocked_after_review": 14
   },
   "revisions_written": 69,
@@ -60,8 +60,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 749,
-  "ledger_sha256": "2b5198ab000a07c5862a0cb68d101499cd2209edb0726e99d004594cd0a655bc",
+  "evaluations_written": 752,
+  "ledger_sha256": "d86bb46d5e29daf1ed930b0f0b378b7712aa8c0743bde987c72c37d0c1b62600",
   "revisions_sha256": "417ef4c84ad37f8b4659c7cf5ddd1b38a8637f4df886a82599d8916096e6cf15",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

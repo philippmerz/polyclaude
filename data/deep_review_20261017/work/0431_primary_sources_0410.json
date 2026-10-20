@@ -1,0 +1,63 @@
+{
+  "schema": "primary_source_review.v1",
+  "review_index": 431,
+  "reviewed_utc": "2026-10-20T04:04:34.834216+00:00",
+  "sources": [
+    {
+      "name": "cabinet",
+      "url": "https://www.whitehouse.gov/administration/the-cabinet/",
+      "http": 200,
+      "received_utc": "2026-10-20T04:02:03.754913Z",
+      "receipt": "logs/deep_review_20261017/case431_primary_0404/cabinet.receipt.json",
+      "raw_sha256": "5adfa86b906a806b6bb94ae135c226ef18fe3f5f9b4f5b910b5dd08a20a580ed",
+      "gzip_sha256": "4f0859cc6ad166049a75971a4cc394d95b8f060cb879f8f826d00671171c9617"
+    },
+    {
+      "name": "eo14347",
+      "url": "https://www.whitehouse.gov/presidential-actions/2025/09/restoring-the-united-states-department-of-war/",
+      "http": 200,
+      "received_utc": "2026-10-20T04:02:02.950742Z",
+      "receipt": "logs/deep_review_20261017/case431_primary_0404/eo14347.receipt.json",
+      "raw_sha256": "b3e2c74f14998b61bb8009404255ffaad6fe95c41b41733c07875b051556f612",
+      "gzip_sha256": "710812e4e265e633ebae0973960e1ec6b189700873999308746974f22f32daee"
+    },
+    {
+      "name": "secretary_profile",
+      "url": "https://www.war.gov/About/Secretary-of-war/",
+      "http": 403,
+      "received_utc": "2026-10-20T04:02:04.030247Z",
+      "receipt": "logs/deep_review_20261017/case431_primary_0404/secretary_profile.receipt.json",
+      "raw_sha256": "f7e7af66d878627c4d74805570e65b1db958ef76395ccb2f6a7f25d5261458b5",
+      "gzip_sha256": "fb8fd4e81bc82ba77a58f4588c4e914ca59dc92a32a5390ecf86d6404763b14f"
+    },
+    {
+      "name": "cnn_survey",
+      "url": "https://ktvz.com/politics/cnn-us-politics/2026/09/22/republican-support-for-trumps-handling-of-war-in-iran-shows-cracks-in-new-cnn-poll/",
+      "http": 200,
+      "received_utc": "2026-10-20T04:02:53.195101Z",
+      "receipt": "logs/deep_review_20261017/case431_reporting_0407/cnn_survey.receipt.json",
+      "raw_sha256": "22a614e328cfdeb695a89aa9500d3a83e054ca55a959edb4a9a19d6ae664718a",
+      "gzip_sha256": "f8d7c3b9ec33a47681fefd9049ab559cdce8c30e3d9064a11e0f3bffda6e82dc"
+    },
+    {
+      "name": "lame_duck",
+      "url": "https://www.aol.com/articles/dems-float-hegseth-ouster-lame-215555000.html",
+      "http": 200,
+      "received_utc": "2026-10-20T04:02:52.260099Z",
+      "receipt": "logs/deep_review_20261017/case431_reporting_0407/lame_duck.receipt.json",
+      "raw_sha256": "5e58390e687e4318e9fe4b44d19387cf7b5a045a1e7b49a754e6e4b72bce19f0",
+      "gzip_sha256": "e5cd91609118e62983006907d04c2e56354eb2c61c17e382be2d66df1111006e"
+    }
+  ],
+  "gamma_prior_capture": "work/0431_facts_0308.json",
+  "root_verified": [
+    "All five new raw/gzip captures and originalGamma bytes verified. Creation September3 2026 13:29:25.296541UTC, exact frozen IDs/tokens/rule match.",
+    "ExecutiveOrder14347 Sep5 2025§2(a/e): SecretaryofWar is an additional secondarytitle; statutory SecretaryofDefense references remain controlling until law changes. This order predates marketcreation and is not a Hegseth departure.",
+    "WhiteHouse CabinetGET20004:02:03.754913 names PeteHegseth SecretaryofWar. Root read exactHegsethsection, not all unrelated30326chars. Pageupdate/authorship time unknown; currentfetch is not continuous-office proof.",
+    "AOL Oct19 21:58updated EllenMitchell/TheHill newsletter body only134chars; verifiedmetadata says SenateDemocrats float ouster aftermidterms as defensecooperation price. CanonicalHillURL is blocked bywebrobots. Metadata is not a bindingpresidentialannouncement or fullreport, and futureannouncement beforecutoff could stillqualify even if effectiveafterelection.",
+    "CNN own-survey article syndicated KTVZ: raw200body available outside initiallyselectedemptyarticleelement. Root subsequently read full actualarticle including methodology: Sept16–17SSRS1206adults/3.5ppMOE, Hegsethapproval34%all/72%Republicans/58%nonMAGAleaners. Approval doesnot map to dismissal probability; fielding old and no rawsurveyPDF verification.",
+    "WarprofileGET403 remainsretrievalfailure, not evidenceofdeparture. Bounded sourcewindow cannotprove no earlier temporary roleexit/resignationannouncement."
+  ],
+  "technical_corrections": "Initial HTMLselector returnedemptyCNNarticle; originalHTTPbody was notempty. Preserved raw, re-extracted/read actualtext; do not label source unavailable.",
+  "primary_rule": "YES on ceasingrole anyperiodsincecreation or resignation/removalannouncedbyOct31 23:59EDT (=Nov1 03:59UTC), even if effectiveaftercutoff. GammaendDate4hearlier not controlling literal."
+}

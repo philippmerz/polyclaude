@@ -1,0 +1,72 @@
+{
+  "schema": "primary_partial_review.v1",
+  "review_index": 433,
+  "saved_utc": "2026-10-20T04:08:36.735429+00:00",
+  "phase": "Full frozen rule and entire Sept24statement2pages read; minutes/laterdata fact supplement pending. No model/ownbook/decision yet.",
+  "identity": {
+    "market_id": "3388092",
+    "condition_id": "0x79361c2379eda2645213973ee61ab00b51ef78eaa142ebc0363e24d8e0666acd",
+    "criteria_sha256": "df828eb0dae11bde3c6b14b230a7b6810b53ece47c48195c781d89d24b3c9e52",
+    "tokens": [
+      "79935321123546292962195856591175158928949469679115949589340432812674795298180",
+      "105171868481302721406414902711796379313728379634038427438846735562489922509288"
+    ]
+  },
+  "verified_prior_captures": [
+    {
+      "name": "gamma_market",
+      "received_utc": "2026-10-20T03:01:13.836532Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_facts_0308/gamma_market.receipt.json",
+      "raw_sha256": "feb65d9d919eb042ba3149eb93e276d34914c6fff65eeb2196616b0ebcc7bd09",
+      "gzip_sha256": "60c16b21ec9f8df998f82096bf0515162aa549040a469300da069e9ab986a978"
+    },
+    {
+      "name": "banxico_calendar",
+      "received_utc": "2026-10-20T03:01:14.823364Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_facts_0308/banxico_calendar.receipt.json",
+      "raw_sha256": "8f19966b078b3f91bec31d116f1866e6d36c95a315f640193581f4d2893f942e",
+      "gzip_sha256": "16e68fa89764a9237c9f8301776d7147b056f654d256b8b5228af760616ed4bc"
+    },
+    {
+      "name": "banxico_policy_index",
+      "received_utc": "2026-10-20T03:01:15.534690Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_facts_0308/banxico_policy_index.receipt.json",
+      "raw_sha256": "c29cc278bc3e931dfc29b8130ae2e7b20d992860b768f493f5c6bf5f88a1459c",
+      "gzip_sha256": "94b40ea89dbcaa73a0ed54164bf8080b28551ea00f6eb405bfe1ebb0766b1875"
+    },
+    {
+      "name": "banxico_november_calendar_data",
+      "received_utc": "2026-10-20T03:01:37.634513Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_supp_0308/banxico_november_calendar_data.receipt.json",
+      "raw_sha256": "2b5e3461763985b9290ca63bdf2232509ccb9d7ddfc8cd122e59abdf0e3b6fa8",
+      "gzip_sha256": "1c9c3d8c8f8f084703d2c31eccfa9e6af8ea28f1846641cb01c5eb2bd9c42bd4"
+    },
+    {
+      "name": "latest_policy_statement",
+      "received_utc": "2026-10-20T03:01:38.196145Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_supp_0308/latest_policy_statement.receipt.json",
+      "raw_sha256": "7c5708112edc0cccf652a7992af14b77522bf1330bafabdc9eaad4a62044fdc5",
+      "gzip_sha256": "0905cd3685fd15f464f5348f9545de88be452f5901b9a5a21607f99df18c3d21"
+    },
+    {
+      "name": "banxico_december_calendar_data",
+      "received_utc": "2026-10-20T03:01:51.888295Z",
+      "receipt": "logs/deep_review_20261017/0700case0433_calendar_next_0308/banxico_december_calendar_data.receipt.json",
+      "raw_sha256": "5b2311b596a94f3d34afca53a804f77c7e2c0c3c7398b6acbc41e60930391279",
+      "gzip_sha256": "19dfdb5f52fecde2e05a52f79b0b147348d8686497c90e62360fdb84e707e0a1"
+    }
+  ],
+  "primary_statement": [
+    "Sept24unanimous maintain overnighttarget6.50; no mechanical reaction required to USFed adjustments. No explicit commitment to Novembercut.",
+    "Statement firsthalfJuly→firsthalfSept headline3.10→3.42, core3.95→3.79. Inflationtarget3% expectedQ42027; forecast risksupward; domestic slack/downsidegrowth risk; FXvolatility/USFedSep+25/globalenergy/geopolitics.",
+    "Q32026coreforecast3.9 vs prior3.8 andQ43.6 vs prior3.5, headlineQ33.3 vs prior3.5/Q43.5unchanged. Table uses annualchanges in quarterlyaverageindexes, not a monthly CPI print. Disinflation/slack already recognized, so another lowmonthlyvalue is not automatically a new cut-surprise."
+  ],
+  "rule_mapping": "Exactly25bpsdecrease bracket, including smallerpositivecutsroundedup andcutsbelow37.5 rounded25;37.5tie→50notYES. Nochange/largecut/hike/cancel-nextmeetingfallback→NO. Upperboundifrange; emergencyoutsideNovmeetingignored; relativeimmediatepremeetingrate, not an immutable6.50baseline. November5scheduled; nextDecember17 dateonly/no verifiedhour.",
+  "new_read_limits": [
+    "Root directhome20004:06shell has no numeric indicators; indexed3.45/3.75 are not adopted as directmeasured values.",
+    "Guessedminutesindex404 not no-minutesproof. Agentseeking actualOct8minutes fromofficialnewsindex.",
+    "pypdfinstalled and rootextractedbothpages fromhashedPDF; earlierworker text-extractiongap resolved without alteringraw."
+  ],
+  "source_lead": "work/0433_supp_facts_0418.json pending factualcollector",
+  "remaining": "Read exact minutespolicyforwardguidance and currentofficialpublicationvintages; derive independent distribution over hold/25cut/50cut/hike, then quote/economics/selection before record."
+}

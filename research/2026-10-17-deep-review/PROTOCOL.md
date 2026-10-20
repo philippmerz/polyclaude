@@ -20,7 +20,7 @@ For saved-quote math use `scripts/deep_review_economics.py` with an explicit pac
 
 ## Records and progress
 
-Every case starts pending. Use `scripts/deep_review_ledger.py start --index N` before work. After each finished case—not a batch—save the primary-authored input and run `record --input PATH`. This writes immutable base JSON/Markdown, append-only ledger, effective index, progress, and checkpoint. Partial work stays in bounded work/source directories. Verify saved identity, hashes, status, and checkpoint before moving on.
+Every case starts pending. Use `scripts/deep_review_ledger.py start --index N` before work. The start guard permits resuming the same unfinished case and rejects a different case until active work has a completed record; a failed record call does not permit advancing. After each finished case—not a batch—save the primary-authored input and run `record --input PATH`. This writes immutable base JSON/Markdown, append-only ledger, effective index, progress, and checkpoint. Partial work stays in bounded work/source directories. Verify saved identity, hashes, status, and checkpoint before moving on.
 
 Target2–5KB per source/model unit; keep large arrays and raw receipts separate. Use a small hash-linked index rather than reopening batch monoliths. `deep_review_terminal_status.py` supplies at most30 exact-ID status leads per explicit request; the primary still reads each full rule before recording objective ineligibility. Nonterminal, missing or failed responses stay pending, without a probability or rejection. `scripts/read_capture.py` can persist read evidence before parsing; supplied SDK/provider bytes and call-window clocks must retain those representation limits.
 
