@@ -1,5 +1,5 @@
 {
-  "next_id": 248,
+  "next_id": 251,
   "decisions": [
     {
       "id": 1,
@@ -4320,9 +4320,10 @@
         "pending-zero-fill"
       ],
       "slug": "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
     },
     {
       "id": 204,
@@ -4340,9 +4341,10 @@
         "pending-zero-fill"
       ],
       "slug": "will-the-democratic-party-win-the-ca-06-house-seat",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
     },
     {
       "id": 205,
@@ -4380,9 +4382,10 @@
         "pending-zero-fill"
       ],
       "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
     },
     {
       "id": 207,
@@ -5419,6 +5422,66 @@
       "calibration_delta": "Operator policy and deterministic execution behavior, not a market probability forecast.",
       "lesson": "Persist operator entry restrictions in execution paths and compact handoffs. Milestone count alone must not grant entry, and a selected bundle requires every exact token before leg one. Keep exits and cancellation available.",
       "resolved_at": "2026-10-20T10:40:18Z"
+    },
+    {
+      "id": 248,
+      "timestamp": "2026-10-20T15:52:02Z",
+      "type": "size_change",
+      "thesis": "Cancel unfilled pilot case32, 50No at0.03, maximumcommitment1.50. Original midOctober national vote-intention poll postdates underwriting; standing cancel-first while sharednational/conditionalfill impactunassessed. No districtforecastinversion claimed; no newBUY orrepost. Verifiedoffbook; final300sfillreconciliation pending. Exactidentities andsource in data/deep_review_20261017/work/tick151845_house_cancellation.json.",
+      "confidence": "high",
+      "prediction": "Operational cancellation only: prove terminalCANCELED/exhaustivetrades/indexedcumulativebuys/CTF/cash after300s; retireonlygenuinelyzero-fill reservation. Unfilled forecast is not a purchased trade, market outcome or profit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "order-management",
+        "cancel-first",
+        "unexecuted"
+      ],
+      "slug": "will-the-democratic-party-win-the-ca-06-house-seat",
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
+    },
+    {
+      "id": 249,
+      "timestamp": "2026-10-20T15:52:03Z",
+      "type": "size_change",
+      "thesis": "Cancel unfilled pilot case123, 10Yes at0.38, maximumcommitment3.80. Original midOctober national vote-intention poll postdates underwriting; standing cancel-first while sharednational/conditionalfill impactunassessed. No districtforecastinversion claimed; no newBUY orrepost. Verifiedoffbook; final300sfillreconciliation pending. Exactidentities andsource in data/deep_review_20261017/work/tick151845_house_cancellation.json.",
+      "confidence": "high",
+      "prediction": "Operational cancellation only: prove terminalCANCELED/exhaustivetrades/indexedcumulativebuys/CTF/cash after300s; retireonlygenuinelyzero-fill reservation. Unfilled forecast is not a purchased trade, market outcome or profit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "order-management",
+        "cancel-first",
+        "unexecuted"
+      ],
+      "slug": "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016",
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
+    },
+    {
+      "id": 250,
+      "timestamp": "2026-10-20T15:52:03Z",
+      "type": "size_change",
+      "thesis": "Cancel unfilled pilot case409, 10Yes at0.12, maximumcommitment1.20. Original midOctober national vote-intention poll postdates underwriting; standing cancel-first while sharednational/conditionalfill impactunassessed. No districtforecastinversion claimed; no newBUY orrepost. Verifiedoffbook; final300sfillreconciliation pending. Exactidentities andsource in data/deep_review_20261017/work/tick151845_house_cancellation.json.",
+      "confidence": "high",
+      "prediction": "Operational cancellation only: prove terminalCANCELED/exhaustivetrades/indexedcumulativebuys/CTF/cash after300s; retireonlygenuinelyzero-fill reservation. Unfilled forecast is not a purchased trade, market outcome or profit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "order-management",
+        "cancel-first",
+        "unexecuted"
+      ],
+      "slug": "will-the-democratic-party-win-the-ny-01-house-seat",
+      "outcome": "Operational zero-fill closure: vetted cancel15:48; after389s allthree terminalCANCELED0,127exhaustedtrades/0targetmatches, indexedtotalBought0/CTF0/pUSD19.251290unchanged. Exactreservations3to0,6.50commitmentreleased. No purchase/sale/spend/fee/cashcredit/realizedPnL; noautomaticrepost.",
+      "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
+      "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
+      "resolved_at": "2026-10-20T15:56:29Z"
     }
   ]
 }

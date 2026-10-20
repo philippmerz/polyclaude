@@ -1,0 +1,77 @@
+{
+  "timestamp_utc": "2026-10-20T15:40:24.225877Z",
+  "scope": "read-only routine account/venue safety delta",
+  "clob": {
+    "open_orders": {
+      "rows": 3,
+      "live": 3,
+      "complete_cursor_LTE": true,
+      "sdk_api_status": null,
+      "sdk_status_code_field": 200,
+      "sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "baseline_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "exact_wrapper_match": true
+    },
+    "authenticated_trades": {
+      "rows": 127,
+      "complete_cursor_LTE": true,
+      "sdk_api_status": null,
+      "sdk_status_code_field": 200,
+      "sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "baseline_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "exact_wrapper_match": true
+    },
+    "remaining_commitment": {
+      "open_order_count": 3,
+      "calculation": "sum(max(original_size-size_matched,0)*price)",
+      "shares": 70.0,
+      "usd": 6.5,
+      "all_rows_parseable": true
+    }
+  },
+  "positions": {
+    "http_status": 200,
+    "size_threshold": "0",
+    "current_rows": 9,
+    "baseline_rows": 9,
+    "identity_asset_outcome_size_totalBought_redeemable_exact_matches": 9,
+    "changed_or_new": 0,
+    "removed": 0,
+    "winning_redeemable_rows_by_vetted_classifier": 0,
+    "body_sha256": "5534fdb8564a6bea528c0bee3a1bb72a5b3f6ac3e87edd0b8b9f322bbbcae62b"
+  },
+  "checks": {
+    "uma": {
+      "rc": 0,
+      "alert_count": 0,
+      "markets_refreshed": 43,
+      "positions_fetch_ok": true
+    },
+    "ostium_status": {
+      "rc": 0,
+      "open_trades": 0,
+      "active_limits": 0
+    },
+    "ostium_state_diff": {
+      "rc": 0,
+      "opened": 0,
+      "closed": 0,
+      "current_count": 0,
+      "prior_count": 0
+    },
+    "crux_coverage": {
+      "rc": 0,
+      "quiet_no_gaps_reported": true
+    },
+    "absolute_path_singleton_code_age": {
+      "rc": 0,
+      "news_watcher": "OK",
+      "heartbeat_watch": "OK",
+      "telegram_listener": "OK",
+      "opportunity_watch": "OK"
+    }
+  },
+  "private_receipt_dir": "logs/cron20261020T151845Z_account/receipts",
+  "private_status_dir": "logs/cron20261020T151845Z_account/status",
+  "baseline_receipt_dir": "logs/cron20261020T140001Z_closeout/account1530"
+}

@@ -1,21 +1,20 @@
-# Current resting orders — October20 14:40 UTC
+# Current resting orders — October20 15:55 UTC
 
-**October20 entry pause:** no new BUY bid, add, repricing/repost, taker or bundle until600 full valuations and primary winner selection. These three existing bids remain managed; no automatic cancellation or new order. Exits/cancels/redemptions remain available. [Policy](entry_review_gate.json).
+**Zero open orders; zero entry reservations.** Three original political pilot bids were canceled15:48 under standing cancel-first after original national congressional vote-intention data postdating their underwriting. Shared national/fill assumptions need reassessment; this does not declare every original forecast wrong. No automatic repost. NewBUY/add/reprice/repost/taker/bundle remains paused396/600 fullvaluations plus primary comparative selection; holdings/SELL/cancel/redeem remain managed. [Policy](entry_review_gate.json).
 
-**Three original BUYs remain LIVE/zero matched, committing $6.50.** Candidate14/DEC245 was briefly posted5NO49c/$2.45, then canceled09:39:38 before any fill. After300s exactterminal/trades/index/CTF/cash checks confirmed zero exposure; only its reservation retired4→3. Kimi412 remains a filled holding. [Candidate closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json) · [Source/action record](../research/2026-10-20-anthropic-arena-order.md).
+After389s, allthree exactterminalCANCELED/0matched;127 exhausted trades/no targetmatches, all9 position tuples/cumulativebuys unchanged, targetCTFs0 and pUSD19.251290 unchanged. Vetted locked pruning retired onlythese3reservations3→0. $6.50 is released commitment, not cashcredit/profit; no purchase/sale/fee/gastransaction. [Action](../data/deep_review_20261017/work/tick151845_house_cancellation.json) · [Final proof](../data/deep_review_20261017/work/tick151845_cancel_reconciled.json).
 
-|Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
+|Closed unfilled bid|Original shares /limit /maximum commitment|Exact order ID|Final state|
 |---|---|---|---|
-|ME02|10YES /38c /$3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|Historical ME01 slug never overrides exact ME02 identity|
-|CA06|50NO /3c /$1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
-|NY01|10YES /12c /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
+|CA06 PanD/KileyNPP|50No /0.03 /$1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|CANCELED /0matched|
+|ME02 DunlapD/LePageR|10Yes /0.38 /$3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|CANCELED /0matched|
+|NY01 GallantD/LaLotaR|10Yes /0.12 /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|CANCELED /0matched|
+
+Original conditional decisions203/204/206 and operational closures248/249/250 are recorded as unexecuted forecasts; original numericpriors remain dated research with explicit lifecycle retirement. No market-outcome grade or realized return. Before any futurequote, complete600+comparative selection and fresh exactsource/identity/conditionalfill/cost/portfolio checks. [Primary source and judgment](../data/deep_review_20261017/work/tick151845_primary_review.json).
 
 - **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
-- Kimi’s filled reservation retired4→3 at01:59; after candidate14’s separate zero-fill closure, the original three records/terms remain unchanged. At09:45 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
-- Review remaining political bids each existing tick/earlier material evidence. Cancel first on newly unassessed material poll/candidate/ballot/turnout facts; no add/chase/repost/taker fallback. Unannounced information/cache gaps can fill before cancellation. A scheduled check is a review, not automatic expiry; any fill needs fresh holding/source/fee-netexit/joint-risk judgment.
-- Canonical14:02:12–30 bankroll194.83 includes5.89 gas; trading188.94 midpoint/181.68 indicative fee-net depth. Mark remains dated, not synchronized NAV/proceeds. Auth14:38 confirms3LIVE/0matched/6.50 and127 unchanged trades; explicit zero size-threshold14:40 confirms all9 identity/quantity/totalBought/redeemability tuples unchanged. Exact Gamma full rules/tokens remain the separate14:08 observation, not refreshed by account reads. [Financial record](../research/2026-10-20-1402-financial-snapshot.json) · [Current safety delta](../data/deep_review_20261017/work/tick140001_safety_delta.json) · [Root verification](../data/deep_review_20261017/work/tick140001_root_verified.json).
 
-- Original3 pilots retained after current source review. Their conditional-fill uncertainty remains; all fail an unmeasured2×adverse-fill stress. No add/chase/repost/taker. MI headlines do not themselves change exact-district bid priors; cancel first on newly unassessed material evidence and review any fill as a fresh holding. [Primary review](../data/deep_review_20261017/work/tick134616_primary_portfolio_judgment.json).
+Candidate14/DEC245 remains canceledzero-fill09:39/09:45 proof; no repost. Kimi412 is a filledholding, so its formerBUYcancel/pull is obsolete. Existing holdings and the Clarity pair retain their dated primary management rules. Canonical14:02 bankroll194.83 includes5.89 separate gas/trading188.94mid/181.68indicative depth; no new whole-account producer orCSVrow. [Financial record](../research/2026-10-20-1402-financial-snapshot.json).
 
 ## Quote lifetime — clarified October19
 

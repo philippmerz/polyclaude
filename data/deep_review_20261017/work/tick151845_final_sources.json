@@ -1,0 +1,26 @@
+{
+  "schema": "polyclaude.final_source_followup.v1",
+  "reads": [
+    {
+      "name": "DN_apology",
+      "url": "https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:59:40.641556Z",
+      "receipt": "logs/cron20261020T151845Z_final_sources/DN_apology.receipt.json",
+      "raw_sha256": "46c0c7560a3b53aad70145959ac5c9d5bc2fb2a97a71595e81c545a883dc1d84",
+      "title": "CBS News Correspondent Apologizes for Partisan Post Targeting Michigan Senate Candidate El-Sayed | Democracy Now!"
+    },
+    {
+      "name": "MI_program",
+      "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+      "response_status": 200,
+      "received_utc": "2026-10-20T15:59:41.357205Z",
+      "receipt": "logs/cron20261020T151845Z_final_sources/MI_program.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "title": "2026 Senatorial Candidates \u2013 State of Michigan \u2013 Detroit Economic Club"
+    }
+  ],
+  "reviewed_utc": "2026-10-20T15:59:41.408912+00:00",
+  "programme_limit": "Organizer stillprovides16UTCscheduledprogram. This response is not an attendance/remarks/transcript/result measurement; do notinfer cancellation/completion orvoteeffect. Existingwatcher handleslater materialnews; no waitingtimeradded.",
+  "related_461_limit": "Actualindividualpublisherbody nowretrievedviaheadlineindexcanonicalsharelink. Itreportsanapology/deletedpost/hecklerexchange; underlyingidentity/socialposts notindependentlyverified, no newvote-choice sample."
+}

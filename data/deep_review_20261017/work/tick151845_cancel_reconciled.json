@@ -1,0 +1,53 @@
+{
+  "schema": "polyclaude.three_cancel_zero_fill_reconciliation.v1",
+  "verified_utc": "2026-10-20T15:55:25.961737+00:00",
+  "cancel_completed_utc": [
+    "2026-10-20T15:48:48.089989+00:00",
+    "2026-10-20T15:48:51.059847+00:00",
+    "2026-10-20T15:48:54.025272+00:00"
+  ],
+  "minimum_elapsed_since_cancel_marker_seconds": 389.394382,
+  "terminal": {
+    "123": {
+      "status": "CANCELED",
+      "matched": 0.0,
+      "identity_size_price_match": true
+    },
+    "32": {
+      "status": "CANCELED",
+      "matched": 0.0,
+      "identity_size_price_match": true
+    },
+    "409": {
+      "status": "CANCELED",
+      "matched": 0.0,
+      "identity_size_price_match": true
+    }
+  },
+  "authenticated_trades": 127,
+  "complete_cursor": "LTE=",
+  "exact_trade_wrapper_unchanged": true,
+  "all_target_confirmed_matches_zero": true,
+  "indexed_totalBought": {
+    "123": 0.0,
+    "32": 0.0,
+    "409": 0.0
+  },
+  "all9_position_tuples_unchanged": true,
+  "target_CTF_balances": {
+    "1309236961796814213282116190073921143698457854457840407101156157351932472760": 0.0,
+    "16023486908001375361896867545596933092058101961714333897342822645702969966393": 0.0,
+    "96914958250546616618098909674490573266030506817741031776466109480920768219053": 0.0
+  },
+  "pusd_base_units_before": 19251290,
+  "pusd_base_units_after": 19251290,
+  "open_orders_after": 0,
+  "reservations_before": 3,
+  "reservations_after": 0,
+  "pruner": "polyclaude_enter._entry_reservation_commitments(...,prune=True) underentrylock afterindependentterminal/trade/index/CTF/cash verification",
+  "released_commitment_usd": 6.5,
+  "no_cash_credit_sale_fee_profit_or_gas_transaction": true,
+  "private_receipt_directory": "logs/cron20261020T151845Z_cancel/final",
+  "receipt_limit": "SDK result serialization/provider results, not wireHTTP evidence; positionHTTP200 observed. Automatic vettedpruner refetchedterminal/tradematches internally beforedeletingexactthreeonly.",
+  "target_token_set_hash": "a983cbc065f74af21a2cca00de0fe862053b8b7863b844b7bbf7cf13aea2fed4"
+}

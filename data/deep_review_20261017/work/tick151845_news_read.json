@@ -1,0 +1,282 @@
+{
+  "schema": "polyclaude.triggered_news_read.v1",
+  "tick_id": "20261020T151845Z",
+  "explicit_ids": [
+    "07c4f3a0263f343f14f084b24e48937320a4f95d"
+  ],
+  "prior_cutoff_utc": "2026-10-20T15:25:09.127493+00:00",
+  "sources": {
+    "news": {
+      "read_received_utc": "2026-10-20T15:40:42.064071Z",
+      "tail_rows": 256,
+      "tail_spans_prior_cutoff": true,
+      "receipt_path": "logs/cron20261020T151845Z_news/root_tail2/news.receipt.json",
+      "raw_sha256": "cbb0f082ee4eea098f58ac23c4ce24518060c3f7cd74eafbff0536a3a0fdad1d",
+      "latest_ts": "2026-10-20T15:40:27+00:00",
+      "selected_rows": [
+        {
+          "alert_id": "86e7994e41fd2b524cd9f033f41bbcf70d2da3c2",
+          "ts": "2026-10-20T12:13:17Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "'My Name Is Abdul': El-Sayed Confronts Trump's Racist, Anti-Muslim Attacks Head-On in New Ad - Common Dreams",
+          "agent_reason": "New campaign ad by Michigan Senate candidate Abdul El-Sayed may affect the Democratic win probability.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MATERIAL",
+              "reason": "El-Sayed\u2019s direct response to Trump attacks could strengthen Democratic campaign positioning, pressuring the No position."
+            }
+          ],
+          "relevance": "portfolio_material_critical",
+          "review_required": true,
+          "full_row_sha256_canonical": "e4b0483d8d221f89937eec212ccf2569180f78b7b59f42218b3c800aa1d0ee4e",
+          "alert_link_sha256": "b2fa95cbfc2e4914b1eb874d1e4d59e9eb0ec462643966b0c82d5ac324e074fb"
+        },
+        {
+          "alert_id": "8f083beb589641eeffbce1bd549c7ac217a252fc",
+          "ts": "2026-10-20T12:56:40Z",
+          "tier": 1,
+          "feed": "Guardian World",
+          "matched": "El-Sayed",
+          "title": "Michigan heckler the son of Republican adviser paid for \u2018influencer marketing\u2019 against El-Sayed",
+          "agent_reason": "Named political operation and $250,000 payment indicate organized opposition activity affecting the Michigan Senate race.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Paid anti\u2013El-Sayed activity and resulting viral attention modestly pressure the Democratic-win thesis, but do not materially change race odds."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "1a573f68f7a973a3d6c153ab0adb0e0db9180b2998e55553d144062623b5cce3",
+          "alert_link_sha256": "d7de24696a79b71b8756cade71bee009877003a473f3efc496cf420164ca7c3e"
+        },
+        {
+          "alert_id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+          "ts": "2026-10-20T13:07:55Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "700 doctors endorse Abdul El-Sayed as GOP attacks his credentials - The Detroit News",
+          "agent_reason": "Named candidate event with 700 doctors endorsing Abdul El-Sayed, materially relevant to the Michigan Senate race.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MATERIAL",
+              "reason": "High-profile endorsement strengthens El-Sayed and pressures the thesis that Democrats will lose Michigan."
+            }
+          ],
+          "relevance": "portfolio_material_critical",
+          "review_required": true,
+          "full_row_sha256_canonical": "b80883d2833a486ea4f9d67533f37943edcd081f93565a3af47abf8ddc7907dc",
+          "alert_link_sha256": "22bfeb5ccd15f7c8b3a16fa12a1519e0eb7b0ba499568b5075bd0f8f95870e5b"
+        },
+        {
+          "alert_id": "e1fa7e2a0beca81bbfcb4d164926821f3c959f2d",
+          "ts": "2026-10-20T13:24:19Z",
+          "tier": 1,
+          "feed": "CBS Latest",
+          "matched": "Mike Rogers",
+          "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan",
+          "agent_reason": "Named candidate Mike Rogers is actively campaigning against Democrat Abdul El-Sayed in Michigan, directly relevant to the Michigan Senate market.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Rogers\u2019s continued campaign activity modestly supports the No-Democrats thesis, but provides no decisive polling or outcome evidence."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "1be26ccd9111c8f45ac7a61b89184d274c549a40f6e24f32ea943c916552adef",
+          "alert_link_sha256": "1ad468bad93e6845f571ee850f0f833129974a5a8b611fb7526d60e83c86b3b6"
+        },
+        {
+          "alert_id": "6c93232b2bfff79f3c4f581422e254e54904b455",
+          "ts": "2026-10-20T13:24:34Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "Mike Rogers",
+          "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan - CBS News",
+          "agent_reason": "Named candidate Mike Rogers is actively courting Democrats while competing with Abdul El-Sayed, signaling a potentially meaningful shift in the Michigan Senate race.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MATERIAL",
+              "reason": "Rogers\u2019s outreach to Democratic voters could improve his competitiveness, pressuring the thesis that Democrats will win Michigan."
+            }
+          ],
+          "relevance": "portfolio_material_critical",
+          "review_required": true,
+          "full_row_sha256_canonical": "67197f4735e0d0b3c4b38e12aea902ec91ff814d27f8c9fb261ffe1983d9e7f7",
+          "alert_link_sha256": "525597ee119786da3020d50c6251a088df3fc7b677a6ba288dbe0e9f6990ee71"
+        },
+        {
+          "alert_id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+          "ts": "2026-10-20T14:02:29Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "CBS News Correspondent Apologizes for Partisan Post Targeting Michigan Senate Candidate El-Sayed - Democracy Now!",
+          "agent_reason": "Media apology over a partisan post is commentary/noise and does not materially change the Michigan Senate race thesis.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "2640958080e4c8b64fd3bfd46088c266d7e54a879cbc86911b28fa9de0cf9373",
+          "alert_link_sha256": "bb1574835a492c4a33b3cad49d6a84031b1c65a7391478ae11936e1cd8d2c2bb"
+        },
+        {
+          "alert_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+          "ts": "2026-10-20T14:13:36Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "Abdul El-Sayed emphasizes Muslim faith after Trump calls him a \u2018jihadist\u2019 - Scripps News",
+          "agent_reason": "Named Michigan Senate candidate Abdul El-Sayed responds to a presidential attack, creating potential campaign/electability implications.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MATERIAL",
+              "reason": "Public controversy around the Democratic candidate may affect Michigan Senate electability and pressure the No-Dem thesis."
+            }
+          ],
+          "relevance": "portfolio_material_critical",
+          "review_required": true,
+          "full_row_sha256_canonical": "b9201ecb24adb3c5091b5c256600e0a22ae4385706db668c837c869e76ac9976",
+          "alert_link_sha256": "d2af686fa7552177b8550ece341b852dffbce2ddf700eaf6ad6235f302b5ce27"
+        },
+        {
+          "alert_id": "02756ce4c0c23e842df26d56353b6537328d343c",
+          "ts": "2026-10-20T14:45:59Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "El-Sayed",
+          "title": "Questions surround El-Sayed\u2019s allege Muslim Brotherhood ties: Senate candidate pushes back - KABB",
+          "agent_reason": "Named Michigan Senate candidate faces a potentially consequential campaign controversy that could affect race odds.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Allegations may modestly weaken El-Sayed\u2019s Democratic win prospects, but the candidate\u2019s pushback does not materially change the race thesis."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "1abbd485445077256f6771d90c5d74eada166c42c7127cd5997885526c9294e0",
+          "alert_link_sha256": "37d8232097ab21c47951f42613ab393de40305b5de95c9879b9ae5d54330c8ed"
+        },
+        {
+          "alert_id": "32462493e813cec875de00814c1ea2ad3da5acfb",
+          "ts": "2026-10-20T15:18:30Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "Mike Rogers",
+          "title": "Abdul El-Sayed, Mike Rogers set to appear before Detroit Economic Club - The Detroit News",
+          "agent_reason": "Named Michigan Senate candidates are scheduled for a public event, creating a potential near-term campaign-information update.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MINOR",
+              "reason": "Candidate appearance may produce limited campaign-signal drift, but no substantive development or thesis change is reported."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "24fbb4335569ee8a56d5abfc46cfa25ae0cd01e3b3fc8d3ff4ce4009c21ac2d5",
+          "alert_link_sha256": "934fe8808da071e5485f800b6b92ce24dac8dfacd237148c08427985edc54ef2"
+        },
+        {
+          "alert_id": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+          "ts": "2026-10-20T15:29:35Z",
+          "tier": 1,
+          "feed": "Michigan Senate Rogers and El-Sayed news",
+          "matched": "Mike Rogers",
+          "title": "Drop Site News: Mike Rogers\u2019s Wife Won Lucrative Contracts While Rogers Served as Intel Chair - Democracy Now!",
+          "agent_reason": "New reporting alleges lucrative government contracts benefiting Mike Rogers\u2019s wife during his tenure as House Intelligence chair, creating fresh political pressure on Rogers in the Michigan Senate race.",
+          "impacts": [
+            {
+              "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+              "level": "MATERIAL",
+              "reason": "Allegations of insider influence and financial conflicts could weaken Rogers and pressure the held No position."
+            }
+          ],
+          "relevance": "portfolio_material_critical",
+          "review_required": true,
+          "full_row_sha256_canonical": "405df0fb3d16f51993420245c5d228733875d6df86281abed6b7705f934f7929",
+          "alert_link_sha256": "834cbd95a3e35716d23e4e58081c4a63b4777bc7eac0d9a7d4ceed78707920df"
+        },
+        {
+          "alert_id": "cc5229f2fd99d5272ddb50d61763c8eb3b55c3b2",
+          "ts": "2026-10-20T15:29:43Z",
+          "tier": 1,
+          "feed": "Venezuela presidency, Delcy Rodriguez and transition news",
+          "matched": "Maduro",
+          "title": "\u00bfPodr\u00eda Ra\u00fal Castro acabar como Maduro? - DW.com",
+          "agent_reason": "Opinion/speculative commentary on Castro and Maduro with no direct causal link to any held position or pending BUY market.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "f7523e0c5b26c7f3e351e9467f86d599e5b0ac4758b66b4a2ec132dcdb494966",
+          "alert_link_sha256": "8756d583a3998e4c36475f96aeb34e43b4d166fd3833609596c92f4c79a27671"
+        },
+        {
+          "alert_id": "881a30bc795ea45a87eb1fefd02961c2b92f8619",
+          "ts": "2026-10-20T15:34:56Z",
+          "tier": 2,
+          "feed": "France24",
+          "matched": "trump approval",
+          "title": "US midterm elections: Trump approval rating falls to new low",
+          "agent_reason": "Record-low 31% approval and explicit increased Democratic House-loss risk may affect pending House-race BUY theses.",
+          "impacts": [
+            {
+              "position": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+              "level": "MINOR",
+              "reason": "Lower presidential approval modestly supports Democratic House-win odds nationally, but provides no NY-01-specific evidence."
+            },
+            {
+              "position": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+              "level": "MINOR",
+              "reason": "Lower presidential approval modestly supports Democratic House-win odds nationally, but provides no CA-06-specific evidence."
+            },
+            {
+              "position": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+              "level": "MINOR",
+              "reason": "Lower presidential approval modestly supports Democratic House-win odds nationally, but provides no ME-02-specific evidence."
+            }
+          ],
+          "relevance": "minor",
+          "review_required": false,
+          "full_row_sha256_canonical": "6a60f7b06c4342355731b0997035c2a062be72d8cbd55c835fb7799b4cb27876",
+          "alert_link_sha256": "bc210483afa78b7f7c72dbf6dcbeca7fd936092431dfe7948af6d61e729ca06f"
+        },
+        {
+          "alert_id": "1c097d3c389a86d0cb0517c31dc21a256c427f5e",
+          "ts": "2026-10-20T15:40:27Z",
+          "tier": 1,
+          "feed": "Anthropic IPO and valuation news",
+          "matched": "Anthropic",
+          "title": "Schmidt's Anthropic Stake Could Reach 27 Trillion Won - \uc870\uc120\uc77c\ubcf4",
+          "agent_reason": "Anthropic stake/valuation news has no direct causal channel to the listed positions.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "full_row_sha256_canonical": "ae98b04ad6350910a05e0196c3196f9b2d141ebf0125c36235c5948f07b35af8",
+          "alert_link_sha256": "a48eef7db722021a794ba4a2d79370580503bd72eda52af4fd21c74d773cc630"
+        }
+      ]
+    },
+    "opportunity": {
+      "read_received_utc": "2026-10-20T15:40:42.095107Z",
+      "tail_rows": 256,
+      "tail_spans_prior_cutoff": true,
+      "receipt_path": "logs/cron20261020T151845Z_news/root_tail2/opportunity.receipt.json",
+      "raw_sha256": "0d0b9015c1e72a0526fadba4f811b4e2716ff08b9bc590ee40be146e816b55cd",
+      "latest_ts": "2026-10-18T07:41:07+00:00",
+      "selected_rows": []
+    }
+  },
+  "read_completed_utc": "2026-10-20T15:40:42.108327+00:00"
+}

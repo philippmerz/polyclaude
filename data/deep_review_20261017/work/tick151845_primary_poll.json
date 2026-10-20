@@ -1,0 +1,38 @@
+{
+  "schema": "polyclaude.root_primary_poll.v1",
+  "reviewed_utc": "2026-10-20T15:47:22.290447+00:00",
+  "source_receipts": {
+    "release": {
+      "url": "https://www.ipsos.com/en-us/reutersipsos-mid-october-survey",
+      "receipt": "logs/cron20261020T151845Z_root_poll/release.receipt.json",
+      "received_utc": "2026-10-20T15:46:26.729719Z",
+      "raw_sha256": "9fa8a5926db5e5cb2ab05d455a8ca486aa74d849b213d1c5b3e5ef40d2c5da98",
+      "bytes": 47680
+    },
+    "topline": {
+      "url": "https://www.ipsos.com/sites/default/files/ct/news/documents/2026-10/Reuters%20Ipsos%20News%20Issue%20Survey%20October%202026%20Topline_2.pdf",
+      "receipt": "logs/cron20261020T151845Z_root_poll/topline.receipt.json",
+      "received_utc": "2026-10-20T15:46:27.153591Z",
+      "raw_sha256": "8356c7aa6e77e328fada4893102248ba062435e432dd2f9a1c4cec1a4e4d67d7",
+      "bytes": 585504
+    }
+  },
+  "population": "1,679USadults;1,279registeredvoters(unweightedreducedbase). KnowledgePanel Oct16\u201319,2026;MOEalladults2.4pp/RV2.8pp.",
+  "reported_measurements": {
+    "approval_adults": 31,
+    "disapproval_adults": 66,
+    "approval_RV": 34,
+    "disapproval_RV": 65,
+    "congressional_vote_choice_adults_D_R": [
+      40,
+      29
+    ],
+    "congressional_vote_choice_RV_D_R": [
+      47,
+      35
+    ]
+  },
+  "scope": "Samepoll31%adultapproval/34%RVapproval; notcontradictorytimes. NationalRVgenericD+12 is not district orMichiganSenatevote, electionprobability or Kileycaucusintent. Newtable postdatesOct17pilotunderwriting; commonfactor/conditionalfillimpactunassessed. No numericdistrict/MIupdate inferred.",
+  "parser_note": "pdftotext executableabsent afterdurablePDFreceipt; reusedsameverifiedbody withpypdf, no newnetworkretry. WebPDFtextandlocalpages0/2/3independentlyread.",
+  "no_execution_authority": true
+}

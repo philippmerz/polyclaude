@@ -1142,7 +1142,12 @@
         "source_date": "2026-10-16",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "retired": true,
+    "retired_utc": "2026-10-20T15:56:29.520884+00:00",
+    "retired_reason": "Unfilled pilot canceled under standing cancel-first policy after newly reviewed national vote-intention evidence; terminal/trade/index/CTF/cash zero-fill proof after300s. No holding or newBUYauthority; fresh600+comparative source/conditionalfill review before any new quote.",
+    "lifecycle_record": "data/deep_review_20261017/work/tick151845_house_cancellation.json",
+    "note": "CLOSED unfilled15:48UTC; exactzero-fillclosure15:55, reservationsretired3\u21920. Originalnumericforecast/sourceassessment remains datedunexecutedresearch. Noautomaticrepost."
   },
   "will-the-democratic-party-win-the-ca-06-house-seat": {
     "p_yes": 0.85,
@@ -1185,7 +1190,12 @@
         "source_date": "2026-10-16",
         "checked": "2026-10-17"
       }
-    ]
+    ],
+    "retired": true,
+    "retired_utc": "2026-10-20T15:56:29.520884+00:00",
+    "retired_reason": "Unfilled pilot canceled under standing cancel-first policy after newly reviewed national vote-intention evidence; terminal/trade/index/CTF/cash zero-fill proof after300s. No holding or newBUYauthority; fresh600+comparative source/conditionalfill review before any new quote.",
+    "lifecycle_record": "data/deep_review_20261017/work/tick151845_house_cancellation.json",
+    "note": "CLOSED unfilled15:48UTC; exactzero-fillclosure15:55, reservationsretired3\u21920. Originalnumericforecast/sourceassessment remains datedunexecutedresearch. Noautomaticrepost."
   },
   "will-the-democratic-party-win-the-ny-01-house-seat": {
     "p_yes": 0.31,
@@ -1209,7 +1219,12 @@
     "monitoring_source_packet": "data/deep_review_20261017/house_next_monitoring_sources.json",
     "current_assessment": "Ordinary10ppreserve. OfficialMTgeneralfilinglistandold375RVpoll; NYofficialFECthroughSep30andcorrectedNY21Siena misattribution. No new quantitative NY01poll adopted. Broad ranges remain in immutable reports.",
     "next_scheduled_catalyst": "November3 general election and earlier polls/candidate/ballot/caucus disclosures; pull resting bid before a known outcome window, cancel first on changed or uncertain evidence.",
-    "first_resting_review_due_utc": "2026-10-17T22:00:00Z"
+    "first_resting_review_due_utc": "2026-10-17T22:00:00Z",
+    "retired": true,
+    "retired_utc": "2026-10-20T15:56:29.520884+00:00",
+    "retired_reason": "Unfilled pilot canceled under standing cancel-first policy after newly reviewed national vote-intention evidence; terminal/trade/index/CTF/cash zero-fill proof after300s. No holding or newBUYauthority; fresh600+comparative source/conditionalfill review before any new quote.",
+    "lifecycle_record": "data/deep_review_20261017/work/tick151845_house_cancellation.json",
+    "note": "CLOSED unfilled15:48UTC; exactzero-fillclosure15:55, reservationsretired3\u21920. Originalnumericforecast/sourceassessment remains datedunexecutedresearch. Noautomaticrepost."
   },
   "will-anthropic-have-the-highest-ipo-market-cap-2026-673": {
     "p_yes": 0.24,

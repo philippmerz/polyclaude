@@ -1,0 +1,94 @@
+{
+  "schema": "polyclaude.primary_trigger_review.v1",
+  "tick_id": "20261020T151845Z",
+  "reviewed_utc": "2026-10-20T16:02:38.482080+00:00",
+  "explicit_requested_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+  "related_rows_read": "All9 El-Sayed/Rogers alerts since12UTC, including older461/86e/5ac/e1fa/6c/02756/324624, plus newb8e5/881a through15:40:42. Read actualtail andprior datedreviews, notjournalrecency.",
+  "news_read": "data/deep_review_20261017/work/tick151845_news_read.json",
+  "sources_verified": [
+    {
+      "receipt": "logs/cron20261020T151845Z_requested_root/scripps.receipt.json",
+      "raw_sha256": "d0d63658f8d3c3201cdcfe3633d630d56dd2a5d9246e1dc3e58dece29f69228c",
+      "received_utc": "2026-10-20T15:58:10.213764Z"
+    },
+    {
+      "receipt": "logs/cron20261020T151845Z_requested_root/DN_headlines.receipt.json",
+      "raw_sha256": "c0382a3f6989bd01298bf162d1485151251ddc8335ac826eb8028f5b552a15fd",
+      "received_utc": "2026-10-20T15:58:11.637959Z"
+    },
+    {
+      "receipt": "logs/cron20261020T151845Z_final_sources/DN_apology.receipt.json",
+      "raw_sha256": "46c0c7560a3b53aad70145959ac5c9d5bc2fb2a97a71595e81c545a883dc1d84",
+      "received_utc": "2026-10-20T15:59:40.641556Z"
+    },
+    {
+      "receipt": "logs/cron20261020T151845Z_final_sources/MI_program.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "received_utc": "2026-10-20T15:59:41.357205Z"
+    }
+  ],
+  "alert_judgments": [
+    {
+      "ids": [
+        "07c4f3a0263f343f14f084b24e48937320a4f95d"
+      ],
+      "source": "https://www.scrippsnews.com/politics/america-votes/abdul-el-sayed-emphasizes-muslim-faith-after-trump-calls-him-a-jihadist",
+      "finding": "Correct /america-votes/ body recovered. Prior guessed /politics/404 did not establish absence. Reports faith-ad campaign response and earlier attack/weekenddenunciation; no namednewpoll/fielding or measuredvoteeffect. PhotoOct14 notarticle/eventtimestamp.",
+      "decision": "RetainMI5NO/noadd; campaigning canaffectsupport, unknownsalience notzero. No justifiednewnumericalbridge. Actualadlaunch/statementtime and effect remainunknown."
+    },
+    {
+      "ids": [
+        "4610724a656beefcf5066d11fb7d7d55a962d44c"
+      ],
+      "source": "https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed",
+      "finding": "DatedOct20headlineindex+linkedindividualbody verifypublisher report of JanCrawford apology/deletedpost and a heckler exchange. Originalsocialposts/heckleridentity notindependentlyverified; no measuredvotechoice.",
+      "decision": "Relatedcampaign/media evidence read; noindependentpoll ornumericshift adopted. Prior bodygap closed, notproofofall underlyingclaims."
+    },
+    {
+      "ids": [
+        "b8e5c884943232b1d7197a5d58953b9ad4690bd2"
+      ],
+      "source": "data/deep_review_20261017/work/tick151845_new_news_facts.json",
+      "finding": "RootreadactualDNbody/hashed5sourceattempts. DNattributesAegis-contract/wealth/C&D allegations toDropSite andalso citesgiftcard/charterspending stories. Originalreport/disclosures/contracts/letter and causalvoteeffectunverified.",
+      "decision": "Potentiallyadverse toheldnon-Doutcome; not adjudicatedwrongdoing, candidatewithdrawal ornewMIpoll. Retain smallpilot afterexit/carry/broadlow/jointreview; noautomaticpchange orzeroeffectassertion."
+    },
+    {
+      "ids": [
+        "881a30bc795ea45a87eb1fefd02961c2b92f8619"
+      ],
+      "source": "data/deep_review_20261017/work/tick151845_primary_poll.json",
+      "finding": "France24video403; rootindependentlyverifiedoriginalIpsosrelease/linkedPDF/pages0,2,3. Adult/RVapproval differsbypopulation inonesurvey. Nationalcongressionalvote-intention postdatesOct17pilots; notthree districtpolls orMichiganSenatepoll.",
+      "decision": "Applystandingcancel-first toall3conditionalpilots while sharednational/fill assumptionsunassessed. This isoperationalriskclosure, notclaimall3forecastsinverted. No nationalpercentageconvertedtoawincase, no newBUY/repost before600+comparison."
+    }
+  ],
+  "related_old_items": "86e ad/8f083heckler/5acdoctors/e1fa+6cCBS/02756KABB/324624programme retain their datedprimaryreviews; oldheadlineassociations are notindependentmeasurements. Doctorlist/KABBexactbody andfullCBSvideo gaps remain; no absence/zeroimpact inference.",
+  "MI_holding_judgment": {
+    "literal_outcome": "NO meansanynon-Dwinner, notexclusivelyRogers.",
+    "shares": 5,
+    "original_cost": 1.55,
+    "central_NO": 0.44,
+    "selected_NO": 0.34,
+    "broad_low_NO": 0.2,
+    "last_no_duplicate_aging": "Oct20rederivation alreadydone; no secondaging.",
+    "quoted_utc": "2026-10-20T15:43:26.543944+00:00",
+    "fee_net_exit": 1.40882,
+    "selected_terminal": 1.7,
+    "central_terminal": 2.2,
+    "broad_low_terminal": 1.0,
+    "exit_plus_constant_cached_Aave75d": 1.4179777999345022,
+    "adverse_selected_shift_reversing_comparison_pp": 5.640444001309958,
+    "minus6pp_selected_terminal": 1.4,
+    "judgment": "Retain/noadd after explicitadverse-stress andexit+redeploymentreview. Broadlow and6ppadverseselectedcase favorsale. Newnational andcampaignsources canhurtNO; no defensible state-specific change estimated. Remainingcost1.55~0.8%ofdatelytradingcapital, fullstakecanlose. Canceling6.50conditionalHousecommitments removesfuturejointloss; it doesnot improveMIoutcomeodds. No staticmakersell absent assessedconditionalfill/catalystcase.",
+    "other_holdings": "No new materialdirectKimi/OR/Messi/Clarityinput in selectedwindow; previousdatedholdingjudgments retained, notfreshlyrepriced.",
+    "venue_limits": "15:43researchbooks dated byjudgment; any laterSELL requiresfreshvettedexecution. CachedAavevariable3.2035% sensitivitynotforecast."
+  },
+  "cancellation_proof": "data/deep_review_20261017/work/tick151845_cancel_reconciled.json",
+  "state_audit": "CLEAN afterlifecycle-retiringonly3canceledpriors; numericforecasts and allunrelatedpriors unchanged.",
+  "MI_programme": "Officialpage15:59:41 stillschedule16UTC; actualattendance/remarks/outcome notverified. Eventwindowbeginning/ongoingdoesnotclearnewquotes. Existingwatcher/safety18UTC handleslatermaterialnews, no waitingtimer.",
+  "source_collection_limit": "One cheapbody-recoverytask returnednoartifact despiteboundedinstructions andwasinterrupted; rootcompletedtargetedprimaryrecovery directly. No unfinishedagentwork counts asreviewevidence.",
+  "financial_actions": "3guardedcancels only; no trade/fill/transfer/redemption/adoptednumericpriorchange.127trades/all9positions/targetCTF0/pUSDunchanged.",
+  "telegram": "One materialactionsummary accepted15:56; no rawheadline or routineheartbeat.",
+  "research_progress_unchanged": "396valued/16blocked/379factual/2209pending,791base+76revisions;478active/unvalued.",
+  "end": "Finishownedpublicationthenendboundedrun; no goal lifecycle/timer/idlecontinuation.",
+  "house_direction_limits": "Nationalpro-Ddata canfavorME02/NY01YES andpressureCA06NO; KileyNPP/caucusclauses furtherpreventone-to-onepartytranslation. Cancelall3followstheoriginalnew-evidence re-underwriting requirement; it doesnotestablishnegativeEVonall3oropportunityabsence. Originalsmallmodeldirectionalimpactlabels were notadopted. No automaticrepostunder600+comparisonpause."
+}

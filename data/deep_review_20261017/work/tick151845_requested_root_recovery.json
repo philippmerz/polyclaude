@@ -1,0 +1,66 @@
+{
+  "schema": "polyclaude.requested_alert_primary_recovery.v1",
+  "tick_id": "20261020T151845Z",
+  "explicit_alert_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+  "related_id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+  "reads": [
+    {
+      "name": "scripps",
+      "url": "https://www.scrippsnews.com/politics/america-votes/abdul-el-sayed-emphasizes-muslim-faith-after-trump-calls-him-a-jihadist",
+      "status": 200,
+      "receipt": "logs/cron20261020T151845Z_requested_root/scripps.receipt.json",
+      "raw_sha256": "d0d63658f8d3c3201cdcfe3633d630d56dd2a5d9246e1dc3e58dece29f69228c",
+      "received_utc": "2026-10-20T15:58:10.213764Z",
+      "metadata": [
+        {
+          "@type": "NewsArticle",
+          "headline": "Abdul El-Sayed emphasizes Muslim faith after Trump calls him a \u2018jihadist\u2019",
+          "datePublished": "2026-10-20T09:59:09-0400",
+          "dateModified": "2026-10-20T09:59:09-0400"
+        }
+      ],
+      "matching_canonical_links": [],
+      "body_present": true
+    },
+    {
+      "name": "DN_headlines",
+      "url": "https://www.democracynow.org/2026/10/20/headlines",
+      "status": 200,
+      "receipt": "logs/cron20261020T151845Z_requested_root/DN_headlines.receipt.json",
+      "raw_sha256": "c0382a3f6989bd01298bf162d1485151251ddc8335ac826eb8028f5b552a15fd",
+      "received_utc": "2026-10-20T15:58:11.637959Z",
+      "metadata": [
+        {
+          "@type": "VideoObject"
+        }
+      ],
+      "matching_canonical_links": [
+        {
+          "title": "",
+          "href": "https://www.facebook.com/sharer/sharer.php?u=https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed"
+        },
+        {
+          "title": "",
+          "href": "https://twitter.com/share?url=https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed&text=CBS+News+Correspondent+Apologizes+for+Partisan+Post+Targeting+Michigan+Senate+Candidate+El-Sayed&via=democracynow&lang=en"
+        },
+        {
+          "title": "",
+          "href": "https://www.reddit.com/submit?url=https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed"
+        },
+        {
+          "title": "",
+          "href": "https://wa.me/?text=https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed"
+        },
+        {
+          "title": "",
+          "href": "mailto:?body=https%3A%2F%2Fwww.democracynow.org%2F2026%2F10%2F20%2Fheadlines%2Fcbs_news_correspondent_apologizes_for_praising_man_who_heckled_democratic_senate_candidate_dr_abdul_el_sayed&subject=%3Cspan%20class%3D%22caps%22%3ECBS%3C%2Fspan%3E%20News%20Correspondent%20Apologizes%20for%20Partisan%20Post%20Targeting%20Michigan%20Senate%20Candidate%20El-Sayed"
+        }
+      ],
+      "body_present": true
+    }
+  ],
+  "reviewed_utc": "2026-10-20T15:58:11.684707+00:00",
+  "scripps_scope": "Actual /politics/america-votes/ publisherbody recovered; prior /politics/ guess404 was not canonical. Body reports faith-centeredad/earlierTrumpattack/weekenddenunciation; qualitative tight-race paragraph has no namednewpoll or fielddate. PhotoOct14 is not articlepublication/eventdate.",
+  "related_scope": "DNdatedheadlineindexbody recovered/relatedlink correspondence inspected; prior guessedindividualarticle404 remains historical, not absenceproof.",
+  "unverified": "Adlaunch/originalstatementexacttime, measurablevoterresponse, individualpollbasis and causalelectionimpact remainunverified. Sourcebodyrecovery is not validation of everyreportedclaim or a numericpriorupdate."
+}

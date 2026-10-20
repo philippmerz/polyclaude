@@ -1,0 +1,11 @@
+{
+  "retired_utc": "2026-10-20T15:56:29.520884+00:00",
+  "retired_exact_prior_keys": [
+    "will-the-democratic-party-win-the-ny-01-house-seat",
+    "will-the-democratic-party-win-the-ca-06-house-seat",
+    "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016"
+  ],
+  "numeric_forecasts_and_original_assessments_unchanged": true,
+  "all_unrelated_priors_unchanged": true,
+  "lifecycle_only": true
+}

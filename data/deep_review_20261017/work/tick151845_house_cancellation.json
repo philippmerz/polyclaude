@@ -1,0 +1,100 @@
+{
+  "schema": "polyclaude.house_pilot_cancel.v1",
+  "planned_utc": "2026-10-20T15:48:44.961983+00:00",
+  "source": "data/deep_review_20261017/work/tick151845_primary_poll.json",
+  "reason": "New originalOct16\u201319 nationalcongressionalvote-intention table postdatesOct17pilotunderwriting. Sharednational-factor/conditionalfill impactnotyetunderwritten; standingcancel-first on newlyunassessedmaterialpoll evidence. This doesnot assert districtp equalsnationalpoll or that allthreeforecastsinverted.",
+  "targets": [
+    {
+      "review_index": 409,
+      "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "market_id": "1284219",
+      "token_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "outcome": "Yes",
+      "order_id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "shares": "10",
+      "limit_price": "0.12",
+      "maximum_commitment_usd": "1.20"
+    },
+    {
+      "review_index": 32,
+      "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "market_id": "1280973",
+      "token_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "outcome": "No",
+      "order_id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "shares": "50",
+      "limit_price": "0.03",
+      "maximum_commitment_usd": "1.50"
+    },
+    {
+      "review_index": 123,
+      "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "market_id": "3006483",
+      "token_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "outcome": "Yes",
+      "order_id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "shares": "10",
+      "limit_price": "0.38",
+      "maximum_commitment_usd": "3.80"
+    }
+  ],
+  "before_open_orders": 3,
+  "before_trade_count": 127,
+  "before_target_CTF_balances": {
+    "1309236961796814213282116190073921143698457854457840407101156157351932472760": 0.0,
+    "16023486908001375361896867545596933092058101961714333897342822645702969966393": 0.0,
+    "96914958250546616618098909674490573266030506817741031776466109480920768219053": 0.0
+  },
+  "before_pusd_base_units": 19251290,
+  "before_reservations": 3,
+  "newBUYpause": "396/600+primarycomparison; no repost",
+  "actions": [
+    {
+      "review_index": 32,
+      "order_id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "started_utc": "2026-10-20T15:48:44.962220+00:00",
+      "finished_utc": "2026-10-20T15:48:48.089989+00:00",
+      "returncode": 0,
+      "removed_from_live_inventory_verified": true,
+      "private_result": "logs/cron20261020T151845Z_cancel/32_cancel.json",
+      "private_result_sha256": "337f27caf43d43c7375aaabee602c166716bd1d5c4d1bb340bf0a6bc6c44bfda"
+    },
+    {
+      "review_index": 123,
+      "order_id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "started_utc": "2026-10-20T15:48:48.090635+00:00",
+      "finished_utc": "2026-10-20T15:48:51.059847+00:00",
+      "returncode": 0,
+      "removed_from_live_inventory_verified": true,
+      "private_result": "logs/cron20261020T151845Z_cancel/123_cancel.json",
+      "private_result_sha256": "1ba6f666f02d6e7705ba7b5a0dea5d012aa6f151764c08d1b6c8c015921f253d"
+    },
+    {
+      "review_index": 409,
+      "order_id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "started_utc": "2026-10-20T15:48:51.060513+00:00",
+      "finished_utc": "2026-10-20T15:48:54.025272+00:00",
+      "returncode": 0,
+      "removed_from_live_inventory_verified": true,
+      "private_result": "logs/cron20261020T151845Z_cancel/409_cancel.json",
+      "private_result_sha256": "97f3f65c0e64cd5bcd517266a0487b0d754ea475eb0597f911f2eee66a44b8cd"
+    }
+  ],
+  "reconciliation": "Completed after>=300s; all3zero-fill, reservations3\u21920;6.50releasedcommitment, notcashcredit/profit.",
+  "decision_ids": {
+    "32": {
+      "cancellation_decision": 248,
+      "original_conditional_bid_decision": 204
+    },
+    "123": {
+      "cancellation_decision": 249,
+      "original_conditional_bid_decision": 203
+    },
+    "409": {
+      "cancellation_decision": 250,
+      "original_conditional_bid_decision": 206
+    }
+  },
+  "final_proof": "data/deep_review_20261017/work/tick151845_cancel_reconciled.json",
+  "final_proof_sha256": "90c1a09d6c99ef458bac61eda5e66ce35042680161a52120a8b13083021891fd"
+}

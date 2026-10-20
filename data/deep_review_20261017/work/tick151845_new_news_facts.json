@@ -1,0 +1,135 @@
+{
+  "schema": "tick151845_new_news_facts.v1",
+  "scope": "bounded factual source check only; no probability, selection or action",
+  "alert_window": {
+    "tick_id": "20261020T151845Z",
+    "news_tail_received_utc": "2026-10-20T15:40:42.064071Z",
+    "prior_cutoff_utc": "2026-10-20T15:25:09.127493+00:00",
+    "latest_alert_utc": "2026-10-20T15:40:27+00:00",
+    "tail_rows": 256,
+    "receipt": "logs/cron20261020T151845Z_news/root_tail2/news.receipt.json",
+    "raw_sha256": "cbb0f082ee4eea098f58ac23c4ce24518060c3f7cd74eafbff0536a3a0fdad1d",
+    "tail_body_integrity_verified": true
+  },
+  "selected_alerts": {
+    "b8e5c884943232b1d7197a5d58953b9ad4690bd2": {
+      "alert_id": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+      "alert_utc": "2026-10-20T15:29:35Z",
+      "title": "Drop Site News: Mike Rogers’s Wife Won Lucrative Contracts While Rogers Served as Intel Chair - Democracy Now!",
+      "source_feed": "Michigan Senate Rogers and El-Sayed news",
+      "alert_link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUFVjdUZfQXR5MVVncjRqZkhFcFEwdG1lQ0tMejBaTno4Mm83cnBlWm8zelgyQWZhSW5WanpUaklJWDFKb1F6dk1HRVNpRFdZYXVPQTJpVE9wbVY0dkRyeHBLX3JuWmxXQWs0aGJSYUc2T1ZzcE5nVzBGYWpKX09qaTZETmowN193ZzkzSXh0MzA5emdUekNDQXlEYVZBZzVvQ3c2aG9YUmZDZ3ZCZnBFdS1sa2o5TUtqc1BoWHBhXzk5WXBWQ1FmQlJRc21RUVNwRzFoTzhia08?oc=5",
+      "agent_reason": "New reporting alleges lucrative government contracts benefiting Mike Rogers’s wife during his tenure as House Intelligence chair, creating fresh political pressure on Rogers in the Michigan Senate race.",
+      "impacted_contracts": [
+        "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4"
+      ]
+    },
+    "881a30bc795ea45a87eb1fefd02961c2b92f8619": {
+      "alert_id": "881a30bc795ea45a87eb1fefd02961c2b92f8619",
+      "alert_utc": "2026-10-20T15:34:56Z",
+      "title": "US midterm elections: Trump approval rating falls to new low",
+      "source_feed": "France24",
+      "alert_link": "https://www.france24.com/en/video/20261020-us-midterm-elections-trump-approval-rating-falls-to-new-low",
+      "agent_reason": "Record-low 31% approval and explicit increased Democratic House-loss risk may affect pending House-race BUY theses.",
+      "impacted_contracts": [
+        "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+        "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+        "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4"
+      ]
+    }
+  },
+  "public_reads": [
+    {
+      "purpose": "Democracy Now! article on the Rogers/Aegis story",
+      "url": "https://www.democracynow.org/2026/10/20/headlines/drop_site_news_mike_rogerss_wife_won_lucrative_contracts_while_rogers_served_as_intel_chair",
+      "publication_date": "2026-10-20",
+      "capture": {
+        "receipt": "logs/cron20261020T151845Z_news_sources/democracynow_rogers.receipt.json",
+        "body": "logs/cron20261020T151845Z_news_sources/democracynow_rogers.body.json.gz",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-20T15:41:52.192862Z",
+        "raw_bytes": 128255,
+        "raw_sha256": "710f42ed0d231b1128df26bb7107e88ce7f673a6615e8176dcd91cd0a4ed578d",
+        "gzip_sha256": "27cd55b8b082e54615f1b60c6c9fe94d9bdb15fb1df16627b4a9d6c1da7bffa2",
+        "raw_and_gzip_hashes_verified": true
+      },
+      "finding": "Body says Drop Site News reports Mike Rogers’s personal wealth rose after he became House Intelligence Committee chair in 2011, attributing much of the change to marriage to Kristi Clemens Rogers, a senior Aegis executive; says Aegis won billions in contracts during his tenure; says the campaign sent Drop Site a cease-and-desist demanding correction/retraction and Drop Site stands by its report. These are claims summarized by Democracy Now!, not independently verified by this check. No report methodology, financial-disclosure calculations, contract docket or campaign letter was reviewed."
+    },
+    {
+      "purpose": "Drop Site News publisher homepage only",
+      "url": "https://www.dropsitenews.com/",
+      "capture": {
+        "receipt": "logs/cron20261020T151845Z_news_sources_dropsite/dropsite_home.receipt.json",
+        "body": "logs/cron20261020T151845Z_news_sources_dropsite/dropsite_home.body.json.gz",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-20T15:42:24.507954Z",
+        "raw_bytes": 119707,
+        "raw_sha256": "bf51e4d305cef4cb4019cde893bd65b4803c2d77761770356289d31c9cd3738e",
+        "gzip_sha256": "b8b3cbe5fb10aa443a15778a3683faa75e2b47b797cf61c296ac77ab0daf0de1",
+        "raw_and_gzip_hashes_verified": true
+      },
+      "finding": "Homepage response did not expose a Rogers/Aegis story link or matching article text in the locally parsed body; the original Drop Site report itself was not retrieved."
+    },
+    {
+      "purpose": "Exact first alert Google News redirect",
+      "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUFVjdUZfQXR5MVVncjRqZkhFcFEwdG1lQ0tMejBaTno4Mm83cnBlWm8zelgyQWZhSW5WanpUaklJWDFKb1F6dk1HRVNpRFdZYXVPQTJpVE9wbVY0dkRyeHBLX3JuWmxXQWs0aGJSYUc2T1ZzcE5nVzBGYWpKX09qaTZETmowN193ZzkzSXh0MzA5emdUekNDQXlEYVZBZzVvQ3c2aG9YUmZDZ3ZCZnBFdS1sa2o5TUtqc1BoWHBhXzk5WXBWQ1FmQlJRc21RUVNwRzFoTzhia08?oc=5",
+      "capture": {
+        "receipt": "logs/cron20261020T151845Z_news_sources_google_exact/alert_roger_full_redirect.receipt.json",
+        "body": "logs/cron20261020T151845Z_news_sources_google_exact/alert_roger_full_redirect.body.json.gz",
+        "http_status": 200,
+        "retrieved_utc": "2026-10-20T15:42:35.213976Z",
+        "raw_bytes": 35830,
+        "raw_sha256": "d2c6436d4d82f3982f303c9f196589184575f4f771c3d3a03939e825f6f21df0",
+        "gzip_sha256": "7ce5e3b23b20ee0fbb707305c72d34a00f8c3bd898625f3c6bb7e281485f3de4",
+        "raw_and_gzip_hashes_verified": true
+      },
+      "finding": "Response body was Google consent/interstitial HTML; it did not reveal a final publisher destination. Exact original alert link is preserved in selected_alerts."
+    },
+    {
+      "purpose": "France 24 story reporting Trump approval low",
+      "url": "https://www.france24.com/en/video/20261020-us-midterm-elections-trump-approval-rating-falls-to-new-low",
+      "publication_date": "2026-10-20 (from alert path/headline; direct body unavailable)",
+      "capture": {
+        "receipt": "logs/cron20261020T151845Z_news_sources/france24_approval.receipt.json",
+        "body": "logs/cron20261020T151845Z_news_sources/france24_approval.body.json.gz",
+        "http_status": 403,
+        "retrieved_utc": "2026-10-20T15:41:52.290365Z",
+        "raw_bytes": 641,
+        "raw_sha256": "103554725d2871bdf92690aa92bf97f9a46197974306cd2b144fe83ccc4e5e0f",
+        "gzip_sha256": "23c3938171f1d2cb56e968080776179690f25584d3810ba2f95767ab129a247d",
+        "raw_and_gzip_hashes_verified": true
+      },
+      "finding": "HTTP 403, 641-byte response; no poll figures, field dates, sample or provider verified from publisher body."
+    },
+    {
+      "purpose": "Reuters October poll article URL attempt",
+      "url": "https://www.reuters.com/world/us/trump-approval-falls-record-low-31-midterms-near-2026-10-19/",
+      "capture": {
+        "receipt": "logs/cron20261020T151845Z_news_sources_reuters_guess/reuters_october_poll.receipt.json",
+        "body": "logs/cron20261020T151845Z_news_sources_reuters_guess/reuters_october_poll.body.json.gz",
+        "http_status": 401,
+        "retrieved_utc": "2026-10-20T15:42:54.319254Z",
+        "raw_bytes": 771,
+        "raw_sha256": "af2ea2cda719c7d768231710e1ddb0b65a8bbb0288e5737bfb98727b1dd5bf23",
+        "gzip_sha256": "312016d46321c54fea9c1e5710152f75c21e82248e47408fb6d8767c74e26380",
+        "raw_and_gzip_hashes_verified": true
+      },
+      "finding": "HTTP 401 anti-bot response, not article content. Exact Reuters article body and poll topline therefore remain unverified here."
+    }
+  ],
+  "baseline_and_comparison": {
+    "michigan": "Existing decision 211 (2026-10-18) records the Michigan Democratic-win primary YES 55% / NO 45%, broad YES 30–80 range, based then on YouGov/Rasmussen and official six-candidate listing; stated mixed fundraising did not quantify votes. The new Democracy Now! item adds a potentially adverse allegation about Rogers; this bounded check did not verify it against primary records or measure voter response. No new Michigan vote-intention poll was found in captured sources.",
+    "house_races": "The approval headline is national presidential job approval. It is not a NY-01, CA-06, or ME-02 ballot/matchup result; no district-specific evidence was verified from the captured sources."
+  },
+  "poll_status": {
+    "alert_claim": "Alert metadata/agent reason says record-low 31%; direct France24 and Reuters bodies inaccessible. Treat as unverified alert framing here.",
+    "secondary_leads_only": [
+      "Search-index/aggregator leads diverged by population: 31% approve among 1,679 adults (field dates reported Oct 16–19) versus 34% among 1,279 registered voters. They must not be combined or treated as a verified common estimand.",
+      "Parent supplied the existing official Ipsos Sep 21 release as baseline: 32% approve among 1,277 adults, fielded Sep 17–20. The release was not fetched in this check.",
+      "Parent separately identified the official Ipsos mid-October primary link; parent will capture its exact body/PDF. This agent did not read it."
+    ],
+    "interpretation_limit": "National approval is distinct from vote preference and from state/district candidate matchups. No updated approval number, fielding dates, population or sample is adopted pending the parent’s primary Ipsos capture."
+  },
+  "coverage_gap": "Original Drop Site News story body not retrieved; current Ipsos mid-October poll release not captured by this agent; France24 body 403; guessed Reuters path 401; exact Google News destination remained a consent page. Primary details remain unresolved within the six-request cap.",
+  "public_read_cap": 6,
+  "private_raw_receipts_only": true
+}

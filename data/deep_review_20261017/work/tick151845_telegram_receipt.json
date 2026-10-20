@@ -1,0 +1,9 @@
+{
+  "sender": "scripts/telegram.py msg --stdin literalheredoc",
+  "accepted": true,
+  "observed_returncode": 0,
+  "summary": "Threezero-fillHousepilotcancellations/reservationrelease, holdingsunchanged/newBUYpause.",
+  "operator_read_or_delivery_not_proved": true,
+  "stdout_sha256": "8a802253e05c8ea5a9e3ce6981e718acb208f7e22f83545b7ef409971394af01",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
