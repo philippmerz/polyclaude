@@ -1,0 +1,61 @@
+{
+  "schema": "wtvcfox_alert_facts.v1",
+  "state": "FACTS_CAPTURED_WITH_LOCAL_PUBLISHER_IDENTITY_UNRESOLVED",
+  "alert": {
+    "id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+    "ts": "2026-10-20T05:09:23Z",
+    "feed": "Michigan Senate Rogers and El-Sayed news",
+    "matched": "El-Sayed",
+    "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - wtvcfox",
+    "alert_line": 1187,
+    "line_sha256": "b6705de4898e73ba07e4ff1a4b29828497a7f4987188aecc3cd7ce6a8e649449"
+  },
+  "publisher_resolution": {
+    "search_read_utc_approx": "2026-10-20T05:45Z",
+    "bounded_queries": 2,
+    "result": "Search surfaced a matching Fox News Digital original article, but did not resolve a WTVC/FOX Chattanooga local page. The supplied Google News article URL returned Google consent HTML after redirect; no bypass attempted. Captured Fox News Digital page is related original-network reporting, not verified local WTVC page."
+  },
+  "sources": [
+    {
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONlZFNldfYXh2bmRWeGhtVkF3d29LcnVvMS1rSVVaWFZsQWh6X0s3bE5ENDQ3WlYzUFczeHVYNllyZjVPS2FGd1ROWmViU1ktVXgzVXQyRGd0b2Q3OUVfdnBqQ2tDNERlWk84cUk5a3VDOXFqZllnaFd2ZngzNVcwcDJ4cE5YN3ZKVWF2c0hXOTZjdFBhNkF6Ul9ZMS1Ddm5aNElUWmk1M3VKWTZrNjJLYVlhWUNZMHo1d1NtVGluNjlhUW9VVzZvaW5FR2Q3bzVnRmVzRkdnenZIcGpCc1lISWFVcDdnNzdJbXhWNkZrVHFNTDFSbER1ekV3?oc=5",
+      "capture": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/alert_redirect.receipt.json",
+      "http_status": 200,
+      "started_utc": "2026-10-20T05:46:06.754918Z",
+      "received_utc": "2026-10-20T05:46:06.907080Z",
+      "raw_sha256": "b4d904986d54c1199d8515ed0778de8c58f50b3ea82430652ce824f000c034e9",
+      "gzip_sha256": "02995a56535c7e4d17983350d6e9ca1397d9d619c1f2203783810d84c0efc519",
+      "representation": "Google consent HTML, not publisher article or RSS item; followed URL ended at consent.google.com; no bypass."
+    },
+    {
+      "url": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONlZFNldfYXh2bmRWeGhtVkF3d29LcnVvMS1rSVVaWFZsQWh6X0s3bE5ENDQ3WlYzUFczeHVYNllyZjVPS2FGd1ROWmViU1ktVXgzVXQyRGd0b2Q3OUVfdnBqQ2tDNERlWk84cUk5a3VDOXFqZllnaFd2ZngzNVcwcDJ4cE5YN3ZKVWF2c0hXOTZjdFBhNkF6Ul9ZMS1Ddm5aNElUWmk1M3VKWTZrNjJLYVlhWUNZMHo1d1NtVGluNjlhUW9VVzZvaW5FR2Q3bzVnRmVzRkdnenZIcGpCc1lISWFVcDdnNzdJbXhWNkZrVHFNTDFSbER1ekV3",
+      "capture": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/rss_noquery/alert_redirect_noquery.receipt.json",
+      "http_status": 200,
+      "started_utc": "2026-10-20T05:46:28.787420Z",
+      "received_utc": "2026-10-20T05:46:28.949434Z",
+      "raw_sha256": "299c9138423536c0f5e506045fdd0caf14315d58c28081a74de04d87fa11dd3b",
+      "gzip_sha256": "51631b36fb77a1b7f4ce6f447cbb53b51c23b978a84eedd08ff858c2c7a46c83",
+      "representation": "Google consent HTML; no publisher identity recovered."
+    },
+    {
+      "url": "https://www.foxnews.com/media/abdul-el-sayed-invokes-jfk-dismiss-crazy-questions-over-familys-alleged-ties-muslim-brotherhood/",
+      "capture": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/foxnews_original/foxnews_article.receipt.json",
+      "http_status": 200,
+      "started_utc": "2026-10-20T05:46:33.107963Z",
+      "received_utc": "2026-10-20T05:46:33.805936Z",
+      "raw_bytes": 460477,
+      "raw_sha256": "beb4e0a88bcd5b9f4762024f6b249dac4f966cffdb5fadec886467fc12294290",
+      "gzip_sha256": "24cf848ddb69f03d02b6dd6964ec47abf41c40715e3c5fbed7dfc0f06446c508",
+      "published": "2026-10-18 3:52pm EDT (meta time 2026-10-18T15:52:39-04:00)",
+      "author": "CJ Womack, Fox News Digital",
+      "facts": "Article reports El-Sayed made the JFK comparison in a Saturday (Oct 17 by publication chronology) MS NOW Reports interview with Ali Velshi. Article quotes/paraphrases his answer that questions about family allegations imply dual loyalties, and his constitutional/religious-freedom response. It reports Michigan GOP spokesman Ted Goodman disputed the analogy; it also says the allegations concerning relatives had not established that El-Sayed personally belonged to the organization. Campaign response is quoted as an attributed campaign statement.",
+      "genre": "News article containing selected interview excerpts and responses, not a full transcript/video, poll, or ad. No voter-response measurement."
+    }
+  ],
+  "limits": [
+    "Fox News original-network page content was captured and parsed after durable receipt; supplied article title differs slightly from alert headline.",
+    "Local WTVC/FOX Chattanooga canonical page remains unresolved.",
+    "No inference about voter response, persuasion, or election effect.",
+    "Search snippets are search representation, not article-body evidence.",
+    "Capture hashes cover supplied HTTP body bytes, not wire authentication."
+  ]
+}

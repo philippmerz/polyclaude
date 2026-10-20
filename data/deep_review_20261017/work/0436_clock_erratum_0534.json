@@ -1,0 +1,13 @@
+{
+  "schema": "nonfinancial_source_clock_erratum.v1",
+  "review_index": 436,
+  "saved_utc": "2026-10-20T05:24:11.639995+00:00",
+  "canonical_record": "evaluations/0436.json",
+  "field": "evidence[0].observed_utc",
+  "recorded_rounded_label": "2026-10-20T03:50:00Z",
+  "correct_received_utc": "2026-10-20T03:49:15.131614Z",
+  "correct_started_utc": "2026-10-20T03:49:14.767840Z",
+  "receipt": "logs/deep_review_20261017/0700case0436_facts_0350/time_poy_method.receipt.json",
+  "raw_sha256": "cb9e23bcdd438ff2d276078d19c9a61cb526bbb42e949ee143218c8d30640dc0",
+  "effect": "Correctsourcecaptureclock only; immutablebase/reportpreserved. No forecast/economic/quoteclock/decision/financialchange."
+}

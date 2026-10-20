@@ -1,0 +1,66 @@
+{
+  "schema": "primary_contract_forecast.v1",
+  "review_index": 438,
+  "saved_utc": "2026-10-20T05:40:51.084058+00:00",
+  "condition_id": "0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+  "market_id": "4620250",
+  "criteria_sha256": "0d6f83e6343fe19e3375628490fbb2ee90a2e558dfea36efa07cb6ceb33f53ec",
+  "token_ids": [
+    "12986041958032490956100187529369728708256259581035618976714497828677868886315",
+    "98282689049673050962334818467743727614818971377812348096485339058203693156854"
+  ],
+  "price_exposure": "Own438marketprices notinspected beforemodelsave. Country/scopemodel isprimary, notmarketodds orborrowedIsraelprobability.",
+  "method": "Unfitted exact-event history-plus-future conditional tree; primary judgment with explicit source/history uncertainty.",
+  "historical_qualifying_closure_probability": 0.03,
+  "future_conditional_on_no_prior": {
+    "wider_escalation_regime_probability": 0.12,
+    "general_Iran_commercial_closure_given_escalation": 0.55,
+    "other_qualifying_security_closure_given_no_wider_escalation": 0.015
+  },
+  "computed_p_yes": 0.106824,
+  "adopted_p_yes": 0.11,
+  "adopted_p_no": 0.89,
+  "broad_probability_range_yes": [
+    0.02,
+    0.65
+  ],
+  "selected_absolute_reserve": 0.1,
+  "selected_yes": 0.01,
+  "selected_no": 0.79,
+  "rounding": "Derived10.6824%rounded11%; numericprecision is arithmetic, not calibratedaccuracy.",
+  "evidence_bridge": [
+    "ExactwindowSep16 17:53:25.865929UTC–Nov1 03:59UTC; Iran-initiatedgeneralTehranFIR suspension incllimitedapprovedexceptions. Partial/VFR/foreignwarnings/weather/quakes/volcanoesexcluded.",
+    "OfficialEASASept30validityextensionexplicitlyunchangedcontent: aviationrisk/highairdefencealert; describesfragileJuneceasefire/MOU andpossiblefurthermilitaryaction. It is a foreignoperatoradvisory, NOT closure and NOT verifiedOctoberattack/activeextensionoftheJune60dayMOU. Supports futuresecurity-response mechanism, not scheduledwar.",
+    "ActualOct10Shafaqbody: twoIranboundaircraftdeniedsecurityentry, unnamedsecuritysource; IraqiSept25suspension/Sept29license sanctionsstoryforeignscoped. Neither is observedgeneralIranclosure.",
+    "A2260Oct11resumednormallead isthirdpartysearchrepresentation, direct403; A1306scope/timingunverified. Nohistoricalnegative/qualifyinginitiationproof. Retain3%uncalibratedunrecoveredhistorymass; arbitrarycertainty0or1wouldbeunjustified.",
+    "12%widerescalation overremaining~12days is cautiousprimaryregimejudgment undercontinuingregionalrisk, not empiricaldailyhazard or assertion of an imminentstrike.55%conditionalgeneralclosure permits limitedexceptions butalsoIranpartial/no/lateaction.1.5%othersecurityclosure excludesweather/foreignmeasures.",
+    "RootAPsearchheadlinesraisepotentialUSrestraint/negotiation andregionalconflictleads; all3directbodies403 andwebopensinaccessible. Exactstatementconditionsunverified, so no confirmedpresidentialpromise/zeroUSrisk/observedIranclosure adopted. They remain catalyst/uncertaintyinputs, not fabricatedprimarybodyfacts."
+  ],
+  "range_and_sensitivity": "Broad2–65% includes muchlowerfuturehazard ormissedpriorqualifyingorder/highconflictresponse. Not allsourcegaps areabsence; rangeendpoints are not automaticentrytests. Futureuncertainty is modeled, notblockedbyit.",
+  "timing": "CutoffNov1 03:59UTC; costhorizon13days permitsnormalsettlement. Adjudication/delay risk remains; normalresolutionfitsJanuaryevaluation.",
+  "reserve_basis": "Existing10ppdefaultinstancecalibrationreserve beforequote; noK5/measuredtail. Anyentrystillneedscredibleconditionalfill/currentdriver/catalystmanagement, portfolio andmandatoryvettedgates.",
+  "portfolio": "Dated04:35threepoliticalbidcommitments6.50 plusMI5NO/Kimi10YES/OR5NO/Messi/wholeClarity; globalpolitical andsamevenue tailsnotindependent. Comparecash/d atedAavevariablecarry; nohedgecredit.",
+  "source_units": [
+    {
+      "path": "work/0438_facts_0400.json",
+      "sha256": "a129d193e75b55139576e6aae760fdbd5b6c2be4cf5281534b42443bf582712d"
+    },
+    {
+      "path": "work/0438_notam_facts_0540.json",
+      "sha256": "877c842bf981978ca9c6da3fb3ead771c00fc1fe6dfbef1f4d0aba2acd20bd5a"
+    },
+    {
+      "path": "work/0438_chronology_facts_0541.json",
+      "sha256": "4e852f875df4dc383a18426ec5b0794809969020ed13d711695ea844da552258"
+    },
+    {
+      "path": "work/0438_current_risk_facts_0548.json",
+      "sha256": "b488d21636cae19d47c77b3c450e8f12de022bfb6f176372ddfece84b43905fe"
+    },
+    {
+      "path": "work/0438_web_search_leads_0549.json",
+      "sha256": "c5380d8642dd52b10f000586833bdfa9c27c071f5501871b57922cefa97e3b5d"
+    }
+  ],
+  "verified_supplement_pairs": 9
+}

@@ -1,0 +1,213 @@
+{
+  "review_index": 436,
+  "market_id": "4798151",
+  "condition_id": "0x5ddf1776820e1f001635f0a48c280bffdd5eb9b526313418aba590f2924ab5e6",
+  "criteria_sha256": "b6ffa93f0c231084929b79aa77b5f753eabefe11709ed8ca9df8455816730422",
+  "token_ids": [
+    "19801257871010915928461715426701726678695986988088749487395531360119171753647",
+    "53391694501701903402193426226407123831418161452850630232271922772235303076714"
+  ],
+  "status": "valued",
+  "literal_analysis": "Full exactfrozenrule read; explicitnaming/multiplepeople or directlyassociatedpicturedperson onanyofficialgroupcover; TIME100notPOY. Featurearticleinterpretsvaguelabels; noannouncementbyJune30 2027 23:59ET→NO, metadataDec31notliteralcutoff. NormalDec10schedule tentative; delayedbeyondJanuarytailpriced.",
+  "evidence": [
+    {
+      "url": "https://time.com/4586372/time-person-of-the-year-facts/",
+      "observed_utc": "2026-10-20T03:50:00Z",
+      "finding": "Rootverified/readTIMEeditorialinfluence/privatechoice/object/archetypemethod; exactrawhash indexed oldfacts, not merit/popularitypoll."
+    },
+    {
+      "url": "https://www.weforum.org/stories/forum-in-focus/davos-2026-special-address-by-mark-carney-prime-minister-of-canada",
+      "observed_utc": "2026-10-20T04:57:57.160638Z",
+      "finding": "FullJan20speechread/verified; middlepower/tradestatecraftnarrative, projectionsnotrealizedoutcomes."
+    },
+    {
+      "url": "https://time.com/collection/100-most-influential-people/2026/mark-carney/",
+      "observed_utc": "2026-10-20T05:19:45.597281Z",
+      "finding": "ActualApril15TIME100profilebyChristineLagarde fullbodyverified/read; editorialattention/attributedmultilateralism, notPOYnomination or announcingcover; rawf52ab62763aaf83a5b683c65da31f53c834f2a6fbe9e77157b82fc3c487b99d6."
+    },
+    {
+      "url": "https://mediakit.time.com/",
+      "observed_utc": "2026-10-20T04:58:04.745680Z",
+      "finding": "2026sectionmainPOYdigitalDec10/categoryDec7–9, tentative/editorialnotshortlist."
+    },
+    {
+      "url": "https://www.pm.gc.ca/en/news/news-releases/2026/10/06/prime-minister-carney-visit-turkiye-advance-partnership-across-trade",
+      "observed_utc": "2026-10-20T04:57:59.124127Z",
+      "finding": "Oct21–24tripannounced, notcompleted; source/otherinitiative limitsinfluencefacts."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.07,
+    "low": 0.005,
+    "high": 0.35,
+    "actual_entry_reserve_pp": 10,
+    "method": "Primaryunfittedcompetingeditorialnarrativetree withexplicitname/associatedcoverdisjointpaths andannouncementfactor.",
+    "reasoning": "Initial6%beforequote; verifiedAprilTIME100profile suppliesmodesteditorialattentionbridge, conditionalinternationalstoryCarney20→25%; otherweightsunchanged. Derived7.164%rounded7, NO93/selected83. No empiricalcalibration/priceblindupdate/absencenarrative claim.",
+    "model_path": "data/deep_review_20261017/work/0436_model_update_0529.json",
+    "model_sha256": "c39d83aec9576de647cf439c97f40afeb683ef354e2ab07bea9a7dc7d1523598",
+    "initial_model_sha256": "6dc26d8173bdc2bd8094aec50d87c17d0fe3e0230e2c4d70d5a664270baf9ac1"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0436_quote_0520.json",
+    "quote_file_sha256": "99e88dd49ac7d6b169eefd4500f8942ea54111d38126b23e40d057840d68ecef",
+    "quote_capture_utc": "2026-10-20T05:17:15.989457+00:00",
+    "gamma_received_utc": "2026-10-20T05:17:15.709028+00:00",
+    "horizon_days": 51.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.07,
+        "selected_stress_probability": 0,
+        "best_bid": 0.13,
+        "best_ask": 0.18,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792473279990",
+        "book_received_utc": "2026-10-20T05:17:15.874354+00:00",
+        "book_age_seconds_at_receipt": 155.8843538761139,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 1.08,
+            "fee": 0.04429,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.18
+              }
+            ],
+            "net": 1.12429
+          },
+          "bids": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 0.78,
+            "fee": 0.03393,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.13
+              }
+            ],
+            "net": 0.74607
+          }
+        },
+        "taker_cost_usd": 1.12429,
+        "central_expected_profit_usd": -0.70429,
+        "selected_stress_profit_usd": -1.12429,
+        "break_even_before_carry": 0.18738166666666667,
+        "break_even_constant_carry": 0.1882090771463167,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9299999999999999,
+        "selected_stress_probability": 0.83,
+        "best_bid": 0.82,
+        "best_ask": 0.87,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792473279990",
+        "book_received_utc": "2026-10-20T05:17:15.874354+00:00",
+        "book_age_seconds_at_receipt": 155.8843538761139,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.35,
+            "fee": 0.02828,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.87
+              }
+            ],
+            "net": 4.378279999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.1,
+            "fee": 0.03691,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.82
+              }
+            ],
+            "net": 4.06309
+          }
+        },
+        "taker_cost_usd": 4.378279999999999,
+        "central_expected_profit_usd": 0.2717200000000002,
+        "selected_stress_profit_usd": -0.22827999999999982,
+        "break_even_before_carry": 0.8756559999999999,
+        "break_even_constant_carry": 0.8795225839826116,
+        "current_execution_authorization": false
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 6,
+      "No": 5
+    },
+    "route_minimum_note": "Each side meets its own live share minimum and1USDgross; cost includes fee. No $5 minimum assumed. Quote-time arithmetic only.",
+    "carry_sensitivity_254_days": {
+      "Yes": 0.19153886836018333,
+      "No": 0.895083079878704
+    },
+    "maker_analysis": {
+      "NO82c5shares": {
+        "gross_cost": 4.1,
+        "central_profit": 0.5500000000000007,
+        "selected_profit_before_carry": 0.04999999999999982,
+        "selected_profit_after_constant_carry": 0.03189586512430864
+      },
+      "YES13c8shares": {
+        "gross_cost": 1.04,
+        "central_profit": -0.48,
+        "selected_profit": -1.04
+      },
+      "NO_conditional_unmeasured_yes_odds_stress": {
+        "1.5": {
+          "p_yes_given_fill_stress": 0.10144927536231883,
+          "p_no_given_fill_stress": 0.898550724637681,
+          "NO_after10pp_reserve": 0.7985507246376811
+        },
+        "2": {
+          "p_yes_given_fill_stress": 0.13084112149532712,
+          "p_no_given_fill_stress": 0.8691588785046729,
+          "NO_after10pp_reserve": 0.7691588785046729
+        },
+        "5": {
+          "p_yes_given_fill_stress": 0.2734375,
+          "p_no_given_fill_stress": 0.7265625,
+          "NO_after10pp_reserve": 0.6265625
+        }
+      },
+      "judgment": "NO82c clears unconditionalselected by1pp, about3.2c/5sharesafter51dayconstantcarry; not an automaticentry. Privateeditorial/associatedcover/news-jump fillselection lacks supportedconditionalforecast; 1.5oddsstress erasesmargin. Multipliers unmeasured sensitivities, not universalgate. Lower blindbids do not fix missingconditional/catalystmanagement evidence. Preserve original politicalpilots/cash/Aave; no new bid."
+    }
+  },
+  "verdict": "NO_ENTRY: YESfailscentral/selected; NOtakerpositivecentralfailsselected. MakerNO82c narrowunconditionalselectedsurplus is not supported after editorial/fillselection/carry/portfolio review; no newbid/prior/holding/watcher.",
+  "reopen_condition": "New verifiedPOY-specific/editorial/majorCarney evidence orsupportedconditionalfill/catalystmanagement margin, plusfreshbothside/identity/fees/depth/funding/jointportfolio/vettedgates.",
+  "report_markdown": "# 0436 — Mark Carney TIME Person of the Year2026\n\n**YES7%/NO93%, lowconfidence; broadYES0.5–35%; no new entry.** Exactmarket4798151/CID`0x5ddf1776820e1f001635f0a48c280bffdd5eb9b526313418aba590f2924ab5e6`, criteriaSHA`b6ffa93f0c231084929b79aa77b5f753eabefe11709ed8ca9df8455816730422`.10ppdefaultreserve selectsYES0/NO83%; highNO does not establish a measured K5tail.\n\nThe complete frozen rule allows explicit naming, multiple named people, or directassociation plus a pictured person on any official group/concept announcingcover. TIME100 inclusion or generic association alone does not qualify. Concept-equivalence provisions do not turn every related person into a winner; featurearticle interprets vague labels. No announcement byJune30 2027 23:59ET/July1 03:59UTC paysNO. GammaDec31 endDate is not that cutoff. TIME's current2026media-kit schedules main digitalPOYDec10 and category launchesDec7–9, subject to editorialchange; this is not a shortlist. Normal December settlement fits January; a delay tail can extend beyond it.\n\n## Sources and forecast bridge\n\n- TIME's actual editor-selection explainer describes influence for good or ill, including objects/archetypes; reader voting/merit/popularity are not the rule.2025AIArchitects and two covers demonstrate the group mechanic, not2026selection.\n- Carney's Jan20Davos transcript supplies a concrete middle-power/trade-statecraft narrative. Root verified/read the full speech, not the related-card article element. Government investment/security projections are speakerclaims, not measured achievements. Oct1pipeline designation remains proposal/review; Oct2AICouncil is advisory; Oct21–24Türkiye trip is scheduled, not completed.\n- Root independently verified four new TIMEreceipt/raw/gzip pairs and read the full1027character April15TIME100 profile byChristineLagarde. It attributes financial/climate/multilateralism influence and anticipated cooperation toCarney. It confirms editorial attention in TIME100, notPOYnomination/selection; the profile does not literally mentionDavos. Collection embeds the exact profile link/date. Blocked methodology pages and a search representation remain gaps, not absence evidence. Unverified2000–2024winner labels supply no frequency calibration.\n\nThe pre-ownquote model was6%YES. After this newlyverified oldpublic profile, primary judgment modestly raises the conditionalCarney share of an international-statecraft narrative from20%to25%: explicit10% plus associated-cover-only15%, weighted25%. Other narrative weights stayUSpower/conflict35%, tech/AI20%, culture/society/science15%, other5%; their Carneyqualifying chances1.5/1/0.5/3%. This yields7.2%before the99.5%announcement factor,7.164%derived, rounded7%. Explicitnaming takes priority so the coveronly path is disjoint; multiple marketpeople can still win together. These are subjective, unfitted weights, not historical frequencies or marketodds. The source update occurred **after seeing the quote**; preserve the6%model rather than claim priceblindness for7%. Aprilcoverage is newlyreviewed, not an Octobernewsbreak, and repeats no independent Davos “event.”\n\nThe wide range captures alternative editorial stories, global shocks, covercomposition and timing; it is not an arbitrary endpoint entry test. More TIMEattention/major Carney-led outcomes can increaseYES substantially. Currentgovernment plans are not an earned global outcome; another geopolitical, business or culturalstory can dominate. Private editorial choice cannot be monitored away.\n\n## Both-side costs and allocation\n\nSaved quote2026-10-20T05:17:15.989457+00:00: exactGamma/rules/tokens/structured fee bound to rawreceipts, open/accepting/noUMAstatus. Rate.05/exponent1; bookage155.884sat its matchingreceipt, not current execution authority.6YES@18c meets5share/1USDgross minima:1.08+.04429fee=1.12429, central−.70429/selected−1.12429.5NO@87c costs4.35+.02828=4.37828, central+.27172/selected−.22828. Immediate indicative fee-net exits.74607/4.06309. NOselected does not clear taker cost. Constant datedAave3.2035%APY over51days raises breakevens18.7382→18.8209%YES and87.5656→87.9523%NO;254daydelay sensitivity is in the costunit, not an APY forecast. Funding, extra settlement, gas and operations are not free.\n\nFee-free makerYES13c x8 costs1.04 and failscentral/selected. MakerNO82c x5 costs4.10: central+.55, unconditionalselected+.05, about+.03190 after51dayconstantcarry. That narrow surplus is **not automatically rejected by an extreme scenario**: it is insufficient here after assessing unmeasured conditionalfill/publicsalience/privateeditorial risk. Illustrative1.5×YESodds at fill givesNO89.8551%, then79.8551%afterreserve, below82c;2×gives76.9159%afterreserve. These are sensitivities, not calibrated fill forecasts or a new universal gate. Source evidence does not support the required conditional margin; a lower blindbid is not proposed as a fix. Reassess with a concrete updated source/cancel-before-catalyst plan.\n\nThe dated04:35portfolio already has3politicalLIVE0bids/6.50, Michigan5NO, Kimi10YES, OR5NO, Messi and wholeClarity. This adds global/political and venue/editorial tail risk, with no independence/hedge credit; retain existingpilot commitments and cash/Aave rather than reserve another4.10 for a weak residual margin. ME02's existing38c/selected51% gap is a stronger known conditional candidate before its own risks, not authorization toadd/chase. No account/order/forecast-prior/watcher/financial record changed.\n\n**Reopen:** verified POY-specific editorial/cover/shortlist evidence, major Carney/international developments or a genuinely supported conditional-fill thesis; then current exactidentity/source, both-side fees/depth/minima, timing, joint portfolio and vetted entry gates. No automatic re-entry.\n\n[Initial model](../../../data/deep_review_20261017/work/0436_model_0518.json) · [Source update/model](../../../data/deep_review_20261017/work/0436_model_update_0529.json) · [TIMEeditorialfacts](../../../data/deep_review_20261017/work/0436_time_editorial_facts_0524.json) · [Both-sidecosts](../../../data/deep_review_20261017/work/0436_economics_update_0529.json).\n"
+}

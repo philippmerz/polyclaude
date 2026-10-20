@@ -32238,3 +32238,23 @@ NewAmericanPulse/NonStopLocal polling claim identified inBozemanreport index, ex
 - Earlier completed434blocked/435factual records, append-only identities/report hashes/checkpoint verified;374valued/13blocked/367factual/2246pending.436incomplete/unpriced partial and440–442fact pointers saved; no new case started. Financial04:35/CSV231 and prior forecast/revision/contribution bytes unchanged. Dashboard/phase mismatch repaired. Run ends after publication; no goal lifecycle, new timer or idlefollowup. Next existing06light/14full or earliermaterialevent. [436partial](../data/deep_review_20261017/work/0436_partial_closeout_0512.json).
 
 - Closeout verification 2026-10-20T05:12:47.383257+00:00: repaired434/435resume source paths to scoped relative paths;434/435/436/440/441/442packets all validate at3995–6387bytes without truncating literal rules. No immutable report, ledger, forecast or financial change.
+
+
+## 2026-10-20T05:24:11.639995+00:00 —436 TIME Carney valued/indexed; no order
+
+-375valued/13blocked/367factual/2245pending;755base+69revisions/noactive.6%model savedbeforeownquote; verifiedAprilTIME100profile/collection gives modesteditorialattentionbridge→7%YES/93%NO, selectedYES0/NO83, broadYES.5–35%. Postquoteupdate explicitlydisclosed, noPOYnomination/absenceclaim orunverifiedhistoricalfrequency. [436](../research/2026-10-17-deep-review/evaluations/0436.md).
+-6YEScost1.12429failscentral/selected;5NOcost4.37828central+.27172/selected−.22828. MakerNO82c5shares selected+.05/+.03190after51dayconstantcarry, unsupportedconditional/editorialmargin afterportfolio/catalyst review; no bid. Unmeasuredoddsstress is sensitivity, not universalhardgate. No financialaction/heldprior/TG/producer/CSV. OriginalexactTIMEsourceclock corrected in sidecar, immutableforecast/report preserved. Next existing06UTC/earliermaterialsafety.
+
+
+## 2026-10-20T05:33:00.120563+00:00 —437 historicalminute bridge investigated, unpriced
+
+-375valued/14blocked/367factual/2244pending;756base+69revisions. Fullrule/actualJun19UTCcreation verified; SECdiscretionarytarget100 isnottradedHigh.11raw/gzippairs checked; TradingViewminute/defaultdaily fields lacktimestamps/history/configuration, Googlemonthproxy lacksfullwindow andlabeledOHLC. No inventedalready-hitweight orfallbackactivation. Namedgap case-specific, not rejection/globalgoalblock. [437](../research/2026-10-17-deep-review/evaluations/0437.md).
+-5YEScost3.84628/breakeven76.9256%,5NOmulti-levelcost1.29122/breakeven25.8244%; conditionalcostsonly/noforecastorEV. Savedidentity/reporthash/append-onlyledger verified before438. No financialaction/heldprior/TG/CSV;04:35financialstate unchanged,next06UTC/earliermaterial safety.
+
+
+## 2026-10-20T05:48:54.316897+00:00 — bounded04:31 closeout: late Michigan article reviewed, handoff preserved
+
+- New51b06dcdb0f35a071f616187d66e9d62c667f5e7 in fixed window through05:45:16.675970UTC reviewed irrespective of journal recency. Root verified3source raw/gzip pairs/read full related Fox article; Oct18 publication reports Oct17 interview, not new measured voter response. Exact WTVC canonical/body and WRGB equivalence unknown; no automatic NOconfirmation from allegations. MINOR context; retain MI NO44/selected34/broad20/noadd, no repeat same-day aging. [Primary review](../data/deep_review_20261017/work/tick043158_late_news_primary_0548.json).
+- Public indexed exposure05:46:04: exact MI5NO/totalBought5/notredeemable,9rows/full single page. No on-chain/order/trade/financial-total refresh;04:35 totals/account observations andCSV231 keep their dates. No financial action or forecast mutation.
+- Earlier436valued/437case-specificblocked records and append-only ledger verified;375valued/14blocked/367factual/2244pending,756base+69revisions.438 partial model/source/fee-disabled capture saved, not a completed valuation, economic rejection or global block. No next substantive case started. [438 partial](../data/deep_review_20261017/work/0438_partial_closeout_0548.json).
+- Correct stale dashboard/handoff counts and preserve selected small source units. No new scan, Telegram, timer, idle continuation or goal lifecycle mutation; next existing06UTC light. Explicit owned-file commit/push verification completes this bounded run.

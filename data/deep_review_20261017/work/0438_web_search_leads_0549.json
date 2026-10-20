@@ -1,0 +1,15 @@
+{
+  "schema": "web_search_representation_pointer.v1",
+  "review_index": 438,
+  "saved_utc": "2026-10-20T05:39:53.034700+00:00",
+  "receipt": "logs/deep_review_20261017/case0438_web_representation_0549/search_and_open.receipt.json",
+  "raw_sha256": "0463c79aa654d3d135ed1d687118d6da4c386c029c21a399a157be5bef0264c7",
+  "gzip_sha256": "f74d0faf8a9ab16ddd2be2a2be947e0f5e3bae9d5fd27619076b63abec7148ee",
+  "representation": "webtool result serialization, not publisherHTTPbody; timestamps serialization only",
+  "leads": [
+    "APOct8headline saysTrumpnoIranstrikesbeforeNov3",
+    "APOct14Hormuzmine/warpreparednessnegotiations",
+    "APOct19Hegsethregiontrip"
+  ],
+  "limitations": "All3directAPbodycaptures403 and all3webopensinaccessible. Rootsearchreturnedheadlines/excerpts, not verifiedfullstatements/conditions. HistoricalWhiteHouseApril/MayclaimsnotusedasOctoberstate. Theseleadsneitherprovepolicy/closure norabsence."
+}

@@ -1,9 +1,14 @@
 {
   "review_index": 437,
-  "updated_utc": "2026-10-20T04:09:26.767943+00:00",
-  "phase": "collector facts only, root full-rule/source verification and valuation or factual exclusion pending",
+  "updated_utc": "2026-10-20T05:33:00.120563+00:00",
+  "phase": "completed case-specificblocked/unpriced; exact historicalminute/sourceconfiguration gap",
   "source_paths": [
-    "work/0437_facts_0400.json"
+    "evaluations/0437.md",
+    "work/0437_unpriced_economics_0545.json",
+    "work/0437_daily_proxy_facts_0542.json"
   ],
-  "facts_sha256": "ba53f1c327ba1377fef47163cb6b1321fe5d328e203b0d0cdba89d47d8317905"
+  "facts_sha256": "ba53f1c327ba1377fef47163cb6b1321fe5d328e203b0d0cdba89d47d8317905",
+  "status_limit": "Not valued/rejected/globalgoalblock. Do not treatpar, untimestampedscannerrow ordefaultdailyproxy asfinalin-windowminute.",
+  "report": "evaluations/0437.md",
+  "report_sha256": "1596cf2491ab62ea469d35c019f7ffeecc8ea65a0b5842161653c7d40d97e66e"
 }

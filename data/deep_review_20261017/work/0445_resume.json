@@ -1,0 +1,10 @@
+{
+  "review_index": 445,
+  "updated_utc": "2026-10-20T05:19:39.917831+00:00",
+  "phase": "collector facts only; not started or decided",
+  "source_paths": [
+    "work/0445_facts_0520.json"
+  ],
+  "facts_sha256": "5e71b91e4e7fbd4e1a85a09e43d34002dd17623f275253de115c38c4993094b1",
+  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority."
+}

@@ -1,18 +1,22 @@
 {
   "review_index": 436,
-  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
-  "phase": "incomplete436: full rule/source review saved; primary model and both-side economics pending",
+  "updated_utc": "2026-10-20T05:24:11.639995+00:00",
+  "phase": "completed valued7%YES/93%NO; noentry, report/index/hashverified",
   "source_paths": [
-    "work/0436_facts_0350.json",
-    "work/0436_influence_facts_0500.json",
-    "work/0436_time_history_0500.json",
-    "work/0436_partial_closeout_0512.json"
+    "evaluations/0436.md",
+    "work/0436_model_update_0529.json",
+    "work/0436_time_editorial_facts_0524.json",
+    "work/0436_clock_erratum_0534.json"
   ],
   "facts_sha256": "f14d9160b55cd730f7b59e4b4848fcd3c7e4a6b0c5d47a177d733ead44d8b644",
-  "status_limit": "No adopted probability, own-price review, valuation or decision; preserve unverified-source limits. Resume436 before437 only when authorized research resumes.",
+  "status_limit": "Finishedvaluation, not execution authority; exact source-clock erratum supplements unchangedcanonicalrecord. Earlier6%model andpostquote7%update preserved.",
   "primary_partial": {
     "path": "work/0436_partial_closeout_0512.json",
     "sha256": "4ef3800c8ea1e7e7d3c85d4cb8dc39ed3c9cdd97670361181e5c8f709673d028",
     "bytes": 3790
-  }
+  },
+  "model_sha256": "6dc26d8173bdc2bd8094aec50d87c17d0fe3e0230e2c4d70d5a664270baf9ac1",
+  "economics_sha256": "bb1f9d97bca50813447c6eb5241d16ebab978cc00d040651e38fdb8e26cc2a29",
+  "report": "evaluations/0436.md",
+  "report_sha256": "bffa1f87cdc2071d724016a7758fbd0f4af47c3823a9f7cf25441afc459e334f"
 }

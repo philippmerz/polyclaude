@@ -1,0 +1,38 @@
+{
+  "schema": "primary_model_source_update.v1",
+  "review_index": 436,
+  "saved_utc": "2026-10-20T05:22:01.450156+00:00",
+  "base_model": {
+    "path": "work/0436_model_0518.json",
+    "sha256": "6dc26d8173bdc2bd8094aec50d87c17d0fe3e0230e2c4d70d5a664270baf9ac1"
+  },
+  "new_source": {
+    "path": "work/0436_time_editorial_facts_0524.json",
+    "sha256": "59df41e3979bb8f24c872258ff3ed452332b2b13ca03bd7972ab2548cb8c7769",
+    "root_raw_gzip_pairs_verified": 4,
+    "root_full_profile_text_read": true
+  },
+  "price_exposure": "Ownmarket quote alreadyseen; this source update is not price-blind. Earlier6%model remains preserved.",
+  "observation": "DirectApril15 TIME100 profile byChristineLagarde andexactcollectionlink nowbodyverified. Establishes editorialattention andattributedmultilateralism/cooperation narrative; no POYnomination/shortlist/cover. The1027-character profile doesnotliterallymentionDavos; collectorchatreference toDavos is an inference, not wording adoptedhere.",
+  "surprise_bridge": "Initialmodel excludedTIME100snippet. Newlyverifiedbody supplies actual TIMEfranchiseeditorialattention beyond governmentselfclaims, giving modestextra weight toCarney when the dominantnarrative is internationalstatecraft. Aprilmaterial is oldpublicinformation newlyreviewed, not an Octobernewsbreak; Davos/previousfinance history are not independentnewevents.",
+  "changed_branch": {
+    "narrative": "international trade/middle-power statecraft",
+    "weight_unchanged": 0.25,
+    "old_qualifying_conditional": 0.2,
+    "new_explicit_named_conditional": 0.1,
+    "new_associated_cover_only_conditional": 0.15
+  },
+  "other_branches_unchanged": true,
+  "computed_p_yes": 0.07164,
+  "adopted_p_yes": 0.07,
+  "adopted_p_no": 0.93,
+  "broad_probability_range_yes": [
+    0.005,
+    0.35
+  ],
+  "selected_absolute_reserve": 0.1,
+  "selected_yes": 0,
+  "selected_no": 0.83,
+  "rounding": "7.164%derivedrounded7%, uncalibrated subjectiveweights. No measuredcalibration claim.",
+  "reopen": "New POY-specific sources ormajor2026salience change; freshbooks/fees, conditionalfill/carry andportfolio gates before any action."
+}

@@ -1,0 +1,66 @@
+{
+  "schema": "case438_current_risk_facts.v1",
+  "status": "FACTS_LIMITED_SOURCE_BLOCKED",
+  "captured_utc": "2026-10-20T05:37:27.923989Z/2026-10-20T05:37:28.132289Z",
+  "review_index": 438,
+  "market_id": "4620250",
+  "conditionId": "0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+  "question": "Iran full airspace closure by October 31, 2026?",
+  "criteria_sha256": "0d6f83e6343fe19e3375628490fbb2ee90a2e558dfea36efa07cb6ceb33f53ec",
+  "frozen_criterion": "Between market creation (2026-09-16T17:53:25.865929Z per existing 0438 facts packet) and 2026-10-31 23:59 ET, Iran must initiate a general closure applying generally to all commercial flights transiting Tehran FIR; limited authority-approved exceptions may qualify. Partial closure, external airline/country warnings, and weather-only restriction do not qualify. Resolution source official Iranian aviation authority information plus credible-reporting consensus.",
+  "requested_AP_pages": [
+    {
+      "requested_url": "https://apnews.com/article/422b1799a1a06466279ac265f560e014",
+      "started_utc": "2026-10-20T05:37:27.923989Z",
+      "received_utc": "2026-10-20T05:37:27.981529Z",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "body_representation": "supplied_bytes",
+      "raw_bytes": 5809,
+      "raw_sha256": "fcd2f6d923ecb6c19acaa823a5e5f273dd7257b1ed535891e16750e79c02cc4e",
+      "gzip_sha256": "209d0a074f4f4b3ca5ed812390e5a5beacd5adddb0d79a982483285e7c73da3a",
+      "body_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct8_trump_statement.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct8_trump_statement.receipt.json",
+      "capture_note": "403 HTML anti-bot challenge; article body unavailable; hashes cover supplied bytes, not authenticated wire bytes"
+    },
+    {
+      "requested_url": "https://apnews.com/article/7e2c57a29fd5c3afc7ffe0cf63954bf3",
+      "started_utc": "2026-10-20T05:37:27.991020Z",
+      "received_utc": "2026-10-20T05:37:28.056246Z",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "body_representation": "supplied_bytes",
+      "raw_bytes": 5809,
+      "raw_sha256": "9d51ad9e3962138522f18ce9c61dfeac67515f639855c00138f4ce02a317e2bf",
+      "gzip_sha256": "a9897b59bc7368fd84071bf9aed6d3ff699013ba8f0482cc52a1bf6b747f1a59",
+      "body_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct14_hormuz_mines.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct14_hormuz_mines.receipt.json",
+      "capture_note": "403 HTML anti-bot challenge; article body unavailable; hashes cover supplied bytes, not authenticated wire bytes"
+    },
+    {
+      "requested_url": "https://apnews.com/article/03d81c6dd9cf107482392105c21fc1e4",
+      "started_utc": "2026-10-20T05:37:28.066590Z",
+      "received_utc": "2026-10-20T05:37:28.132289Z",
+      "http_status": 403,
+      "content_type": "text/html; charset=UTF-8",
+      "body_representation": "supplied_bytes",
+      "raw_bytes": 5809,
+      "raw_sha256": "5aca6545a50113fabfba0fdff7268e50a3befa9427d6d3e122cb0385fa6e2b53",
+      "gzip_sha256": "606af79e84973a00caedb4ed56e59c7b8a8a327b0e278534c0cdb4584ca19788",
+      "body_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct19_hegseth_visit.body.json.gz",
+      "receipt_path": "logs/deep_review_20261017/0700case0438_current_risk_0548/oct19_hegseth_visit.receipt.json",
+      "capture_note": "403 HTML anti-bot challenge; article body unavailable; hashes cover supplied bytes, not authenticated wire bytes"
+    }
+  ],
+  "bounded_search": {
+    "performed_utc": "2026-10-20T05:37:52Z",
+    "queries": "Three exact AP article URLs/site+article-ID queries, one bounded web search call. Returned results did not identify any of the requested Iran articles; result representation was unrelated AP news. No AP article-body text recovered. Search result is not a body capture or evidence about requested claim wording."
+  },
+  "evidence_conclusion": "No new article-level facts verified in this supplement. The supplied Oct 8, Oct 14, and Oct 19 article titles/claim summaries remain leads from the task request only; exact wording, conditions, attribution, event dates, and whether reported incidents were direct Iranian action versus proxy/other regional action are unresolved here. Do not treat these capture failures or search results as evidence of absence or as risk elimination.",
+  "limits": [
+    "AP GETs all returned same-size 403 HTML challenge; no retries or alternate endpoints.",
+    "No proxy-versus-Iranian-action classification made without source bodies.",
+    "Existing prior packet/NOTAM evidence is not duplicated or reinterpreted in this supplement.",
+    "No forecast, market-price review, or resolution judgment."
+  ]
+}

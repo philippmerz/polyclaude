@@ -1,9 +1,17 @@
 {
   "review_index": 438,
-  "updated_utc": "2026-10-20T04:09:26.767943+00:00",
-  "phase": "collector facts only, root full-rule/source verification and valuation or factual exclusion pending",
+  "updated_utc": "2026-10-20T05:47:11.543374+00:00",
+  "phase": "Incomplete: 11% YES / 89% NO model saved before quote; explicit fee-disabled quote has compact fd/parity parser gap; both-side decision pending",
   "source_paths": [
-    "work/0438_facts_0400.json"
+    "work/0438_facts_0400.json",
+    "work/0438_notam_facts_0540.json",
+    "work/0438_chronology_facts_0541.json",
+    "work/0438_current_risk_facts_0548.json",
+    "work/0438_web_search_leads_0549.json",
+    "work/0438_model_0552.json",
+    "work/0438_partial_closeout_0548.json"
   ],
-  "facts_sha256": "a129d193e75b55139576e6aae760fdbd5b6c2be4cf5281534b42443bf582712d"
+  "facts_sha256": "a129d193e75b55139576e6aae760fdbd5b6c2be4cf5281534b42443bf582712d",
+  "status_limit": "Not a completed valuation, rejection, global block or execution authority. Preserve model/source/partial quote; finish costs and conditional-fill/portfolio review before439.",
+  "model_sha256": "35decfe99d9d62b28b48e9ccf97e6338f56511502fe56d582234f0e90060b2ff"
 }

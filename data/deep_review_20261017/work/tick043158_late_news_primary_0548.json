@@ -1,0 +1,30 @@
+{
+  "schema": "bounded_primary_late_news_review.v1",
+  "tick": "20261020T043158Z",
+  "reviewed_utc": "2026-10-20T05:47:52.935184+00:00",
+  "window": {
+    "start_exclusive": "2026-10-20T05:04:49.443260+00:00",
+    "end_inclusive": "2026-10-20T05:45:16.675970+00:00",
+    "rows": 1,
+    "limit": "Fixed late window only; no claim about later arrivals."
+  },
+  "alert_id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+  "exact_line_sha256": "54bf26392c256bf7fc4505f23f211720ca80fb977d0b218c3e482ddc6d888c6e",
+  "requested_original_id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+  "requested_original_line_sha256": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea",
+  "source_unit": {
+    "path": "data/deep_review_20261017/work/tick043158_wtvc_facts_0546.json",
+    "sha256": "8136cb4fa2610c68a9a8be66483a362bde22084304ce8c6be7c13536aa36bf30"
+  },
+  "source_verification": "Root independently verified all3raw/gzip receipt pairs and read full6,364-character Foxarticle body. Google exact/ordinary no-queryvariant both served consent. LocalWTVCcanonical/body and identity withWRGB remain unproved; title similarity is not duplicate proof.",
+  "publication_vs_event": "Fox metadata published2026-10-18T15:52:39-04:00; body reports SaturdayMSNOW/Velshi interview (Oct17 by chronology), attributed GOP criticism and campaign rebuttal. CaptureOct20 does not make it newOct20 testimony.",
+  "findings": "Claims about relatives are allegations, not established personalmembership. Candidate/campaign response and GOP claims are attributed advocacy; no direct fullinterview/transcript watched, poll/fieldwork/voter-response measurement, withdrawal or ballot change found in this captured article. No body equality claim forWTVC/WRGB or proof of election impact. Unrelated historical/legal claims in article not independently adopted.",
+  "exposure": {
+    "path": "data/deep_review_20261017/work/tick043158_late_exposure_0546.json",
+    "sha256": "c194ffcdb39682ccb711689b5f5b1175bf125b1a79da2ea100d07e5580e387dd",
+    "observed_utc": "2026-10-20T05:46:04.354273Z",
+    "current_public_index": "One exactMIcondition/NOtoken row,5NO,totalBought5,notredeemable;9rows<100fullpage. Public index only, not freshCTF/order/trade proof."
+  },
+  "primary_decision": "Reclass this article as MINOR context after review rather than quantified voter update. No automatic NOconfirmation from accusation or YESconfirmation from rebuttal; two-way backlash/mobilization remains. Retain datedMI centralNO.44/selected.34/broad.20,5NO/noadd; no duplicate same-day analyticaging. Existing exit/wholeportfolio comparison remains04:35 dated; no freshbook/executable sale claim, forecast mutation, trade or Telegram.",
+  "financial_limit": "Only publicMIidentity refreshed05:46;04:35 financial/account totals/orderstate andCSV231 retain their observationtimes. This does not assert no laterfills."
+}

@@ -1,0 +1,110 @@
+{
+  "schema": "primary_contract_model.v1",
+  "review_index": 436,
+  "saved_utc": "2026-10-20T05:17:02.084367+00:00",
+  "market_id": "4798151",
+  "condition_id": "0x5ddf1776820e1f001635f0a48c280bffdd5eb9b526313418aba590f2924ab5e6",
+  "criteria_sha256": "b6ffa93f0c231084929b79aa77b5f753eabefe11709ed8ca9df8455816730422",
+  "outcomes": [
+    "Yes",
+    "No"
+  ],
+  "token_ids": [
+    "19801257871010915928461715426701726678695986988088749487395531360119171753647",
+    "53391694501701903402193426226407123831418161452850630232271922772235303076714"
+  ],
+  "price_exposure": "Own market prices not inspected before this model save. No forecast derived from market odds, source absence or collector rankings.",
+  "method": "Primary subjective competing-editorial-narrative tree; not an empirically fitted or calibrated forecast. Dominant narrative branches mutually exclusive by assignment; explicit naming takes priority over associated-cover-only path, so no double counting. Sibling people can qualify together.",
+  "branches": [
+    {
+      "narrative": "US power/conflict/political leadership",
+      "weight": 0.35,
+      "explicit_named_conditional": 0.003,
+      "associated_official_cover_only_conditional": 0.012
+    },
+    {
+      "narrative": "international trade/middle-power statecraft",
+      "weight": 0.25,
+      "explicit_named_conditional": 0.08,
+      "associated_official_cover_only_conditional": 0.12
+    },
+    {
+      "narrative": "technology/AI/business",
+      "weight": 0.2,
+      "explicit_named_conditional": 0.002,
+      "associated_official_cover_only_conditional": 0.008
+    },
+    {
+      "narrative": "culture/society/science",
+      "weight": 0.15,
+      "explicit_named_conditional": 0.001,
+      "associated_official_cover_only_conditional": 0.004
+    },
+    {
+      "narrative": "other/surprise narrative",
+      "weight": 0.05,
+      "explicit_named_conditional": 0.005,
+      "associated_official_cover_only_conditional": 0.025
+    }
+  ],
+  "announcement_by_literal_cutoff": 0.995,
+  "computed_p_yes_before_announcement": 0.059500000000000004,
+  "computed_p_yes": 0.059202500000000005,
+  "adopted_p_yes": 0.06,
+  "adopted_p_no": 0.94,
+  "rounding": "Rounded derived5.92025% to6%; precision is tree arithmetic, not measured accuracy.",
+  "broad_probability_range_yes": [
+    0.005,
+    0.35
+  ],
+  "selected_absolute_reserve": 0.1,
+  "selected_yes": 0,
+  "selected_no": 0.84,
+  "reserve_basis": "Existing default10pp instance uncertainty reserve, declared before quote; private editorial selection, uncertain group-cover association and broad uncalibrated narrative weights. High NO probability does not justify K5: no measured short tail.",
+  "evidence_bridge": [
+    "TIME verified explainer defines influence for good/ill and private editorial choice, not reader votes or merit. Group/thing winners and multiple official covers are possible.",
+    "Jan20 Davos address supplies a concrete Canada/middle-power trade-statecraft narrative. Government economic, security and diplomacy claims are not verified realized outcomes. Relative editorial dominance/Carney attribution remain subjective.",
+    "October pipeline designation and AI Council are current initiatives, not completed global outcomes. Türkiye Oct21–24 trip is scheduled; it can change salience but is not a guaranteed POY path.",
+    "2025 AI Architects are prior-year cover evidence for the rule mechanic, not2026 selection. No history-list frequency, unverifiedTIME100 snippet or blocked-source absence used."
+  ],
+  "timing": {
+    "normal_official_digital_date": "2026-12-10",
+    "normal_cost_sensitivity_days": 51,
+    "literal_no_announcement_cutoff": "2027-07-01T03:59:00Z",
+    "delay_cost_sensitivity_days": 254,
+    "illustrative_timing_weights": {
+      "by_start_January": 0.99,
+      "after_start_January_through_cutoff": 0.005,
+      "none_by_cutoff": 0.005
+    },
+    "limit": "Subjective timing weights, not empirical survival estimates. Late settlement tail can extend beyond January evaluation and must be priced, not hidden by Gamma Dec31 endDate."
+  },
+  "conditional_fill_stress": {
+    "basis": "Unmeasured adverse information/selection: multiply YES odds, not additive fake calibration. Revalue on new cover/editorial/major geopolitical news; no automatic distant bid.",
+    "yes_odds_multipliers_for_NO_maker": [
+      1.5,
+      2,
+      5
+    ]
+  },
+  "portfolio_alternative": "At04:35 dated state:3LIVE0 political bids6.50; Kimi10YES/OR5NO/MI5NO/Messi5YES/wholeClarity. Political/global-news exposure and samevenue settlement risk; no independence/hedge credit. Cash/Aave alternative, dated variable rate only, funding/gas/ops not free. Fresh account/gates required for any action.",
+  "reopen": "New verified TIMEeditorial/shortlist/cover information or major Carney/international-event change, plus fresh source, both-side depth/fees, conditional-fill/carry and portfolio checks. No automatic order.",
+  "source_units": [
+    {
+      "path": "work/0436_facts_0350.json",
+      "sha256": "f14d9160b55cd730f7b59e4b4848fcd3c7e4a6b0c5d47a177d733ead44d8b644"
+    },
+    {
+      "path": "work/0436_influence_facts_0500.json",
+      "sha256": "289a3ff41f7519c4288aa0806c5a32a3e5ab8e07134a21192c8090ba2d161d90"
+    },
+    {
+      "path": "work/0436_time_history_0500.json",
+      "sha256": "54e1ed0653637949e0ca2ac30e4567aa5b7db77c54056edc5cbb1fc80aaf5689"
+    },
+    {
+      "path": "work/0436_partial_closeout_0512.json",
+      "sha256": "4ef3800c8ea1e7e7d3c85d4cb8dc39ed3c9cdd97670361181e5c8f709673d028"
+    }
+  ]
+}

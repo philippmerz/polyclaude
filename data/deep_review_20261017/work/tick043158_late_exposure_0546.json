@@ -1,0 +1,23 @@
+{
+  "schema": "late_alert_exposure_check.v1",
+  "tick": "20261020T043158Z",
+  "observed_utc": "2026-10-20T05:46:04.354273Z",
+  "public_positions_count": 9,
+  "full_single_page": true,
+  "MI_rows": [
+    {
+      "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "outcome": "No",
+      "size": 5,
+      "totalBought": 5,
+      "redeemable": false,
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "title": "Will the Democrats win the Michigan Senate race in 2026?"
+    }
+  ],
+  "receipt": "logs/checkin_20261020T043158/followup_0546/positions.receipt.json",
+  "receipt_sha256": "b2ac8b21c52f372403b8378556183de5d72d7a34a7d6f0df3a97b3f1e5893cba",
+  "raw_sha256": "a7caa35a7709699f828ff4c690fecc5cb46e4604edb2ff1661c006ae7180ff1f",
+  "limits": "Public indexed holding identity only; no on-chain/account/order/trade refresh, no total/CSV update or financial writer."
+}
