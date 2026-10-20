@@ -1,0 +1,37 @@
+{
+  "schema": "tick012937_final_audit.v1",
+  "results": [
+    {
+      "schema": "cli_capture.result.v1",
+      "name": "state_audit",
+      "started_utc": "2026-10-20T01:58:06.491551+00:00",
+      "received_utc": "2026-10-20T01:58:12.344390+00:00",
+      "exit_code": 1,
+      "local_state_may_update": true,
+      "financial_mutation": false,
+      "stdout_sha256": "94b53aea6eb2bebfdf82c08eb734938f2762e6a7a4df8dd8e55d25eb9877ae68",
+      "stdout_gzip_sha256": "2f31abdeaa8d77297c375a29e4c7588284577db59da0859a2febc2bd4d5a6cb5",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "stdout": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\n\n1 state issue(s):\n  - SNAPSHOT missing (no claim insurance!): will-the-highest-score-achieved-by-a-moonshot-kimi-m\n\n(judgment items \u2014 triggers/priors \u2014 are reported, never auto-removed)\n",
+      "stderr": "",
+      "receipt": "logs/checkin_20261020T012937/final_audit_0206/state_audit.result.json"
+    },
+    {
+      "schema": "cli_capture.result.v1",
+      "name": "decisions_pending",
+      "started_utc": "2026-10-20T01:58:12.358861+00:00",
+      "received_utc": "2026-10-20T01:58:12.668185+00:00",
+      "exit_code": 0,
+      "local_state_may_update": false,
+      "financial_mutation": false,
+      "stdout_sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+      "stdout_gzip_sha256": "c4072b2b9573d525b377b0863d58c0c9d8a7e68c3bc200ed1c49c419f45fb3a2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "stdout": "(no overdue decisions)\n",
+      "stderr": "",
+      "receipt": "logs/checkin_20261020T012937/final_audit_0206/decisions_pending.result.json"
+    }
+  ]
+}

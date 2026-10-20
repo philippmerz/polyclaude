@@ -1,16 +1,16 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T01:35:00.100450+00:00",
+  "updated_utc": "2026-10-20T02:08:33.694289+00:00",
   "previous_goal_turn_classification": "progress",
   "evidence": "Published fdb8907:364valued/12blocked, append-onlyfourcase/revisionproof/handoff; no financial action.",
-  "current_turn_progress": "412 and414 valued/indexed individually; append-only412 revision records one vetted10YES12c/1.20LIVEunfilled bid/DEC243 after source,monitoring,alternative,conditional-fill andportfolio review. Originalthreeorders unchanged. No holding/spend/profit.",
+  "current_turn_progress": "Bounded01:29 news/fullcheck completed; originalKimi412bid filled10YES12c/1.20/0fee. Exacttrade/chain/cash/source/exit/jointreview done; onlyfilledreservation4to3, retain/noadd. No newvaluation or queue continuation.",
   "counts": {
     "completed_valuations": 366,
     "blocked_after_in_depth_review": 12,
     "factual_exclusions": 364,
     "pending": 2258,
     "base_records": 742,
-    "revisions_written": 68,
+    "revisions_written": 69,
     "active_indices": []
   },
   "last_completed": {
@@ -28,22 +28,22 @@
   "next_facts": {
     "416": "work/0416_facts_0122.json"
   },
-  "next_existing_safety": "2026-10-20T02:00:00Z",
-  "financial_state": "Producer01:02:26–42:196.08incl5.81separate gas/190.27tradingmid/188.04indicative depth;PM35.12/32.89;CSV226/chart10pass. Independent01:24:49–50 fourLIVE0matchedbids7.70/fourreservations; pUSD20.45129−7.70=12.75129arithmetic, not freecollateral. No Kimi holding/purchase/spend/profit.",
-  "goal_state": "Remaining frozen queue incomplete. This bounded run ends after audit/publication; no goal lifecycle action,newtimer or idle followup. Existing02UTC fullcheck/earliermaterialevent governs next safety work.",
+  "next_existing_safety": "2026-10-20T06:00:00Z",
+  "financial_state": "Canonical02:00:30\u201347:195.91incl5.81gas;190.10tradingmid/187.90indicative depth, PM36.15/33.95. CSV228.01:59pUSD19.251290 and3LIVE0bids6.50 =>12.751290arithmetic/notfreecollateral. Kimiheld10YEScost1.20/0fee, no saleprofit.",
+  "goal_state": "Remaining frozen queue incomplete. Bounded news/check run ends after verification/publication; no goal lifecycle/newtimer/idlecontinuation. Next scheduler clocklight06/full14 or earliermaterialevent; a separate queued dispatch is not automatically a completed review.",
   "safety_followup": {
-    "fixed_news_through": "2026-10-20T01:30:42.432754Z",
-    "receipt": "work/goal0018_mi_primary_0157.json",
-    "result": "All3rowsreviewed: exactGreenBaybodyunknown/oldrelatedCBSreviewed, noclassifierconfirmationadopted;MI5NO44selected34/noaddretained againstfresh1.458netexit vs1.70selectedhold. TwoKansasunheldresearchleads,noaction."
+    "fixed_news_through": "2026-10-20T01:40:14.786921Z",
+    "report": "research/2026-10-20-012937-checkin.md",
+    "result": "Requested3+related1Michigan reviewed; dailyrederive56/44/noadd. ORsourceupdate12/88/noadd. NewKimiheld/source/fee-netexit/conditionalfill/joint risk checked; finalauditCLEAN/cruxquiet."
   },
   "candidate_followup": {
     "index": 412,
-    "phase": "LIVE_UNFILLED_VERIFIED_NO_MORE_ENTRY_FOLLOWUP",
+    "phase": "FILLED_VERIFIED_RETAIN10YES_NOADD",
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
     "decision_id": 243,
-    "effective_revision": "revisions/0412_20261020T012806290142Z.json",
-    "report_sha256": "eae7dfdbdedc267fcf6023f35d08b45515e63f08bdeb8bc6d3e4729bc0d34b69",
-    "proof": "work/0412_post_primary_0143.json",
-    "management": "Existingticks/earliermaterialsource/fill; cancel-first newlyunassessedmodel/score/source/policy; pullbeforeknowncatalyst/cutoff. Noadd/chase/taker/automaticrepost. Nextcronreviewnotexpiry."
+    "effective_revision": "revisions/0412_20261020T020519635270Z.json",
+    "report_sha256": "25f1dd17777d8cb7521d81d09190a2fe77429103dda98f581e2fe0b8d0ccef85",
+    "proof": "work/tick012937_fill_primary_reconciled_0202.json",
+    "management": "OriginalBUYfullyfilled/cancelpullobsolete.10YESheld/noadd; reevaluateorexit on materialmodel/score/source/evaluation/policy changes. No hidden-infoSELLat/belowfair, norecovery/repost."
   }
 }

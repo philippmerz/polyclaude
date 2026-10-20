@@ -1,0 +1,76 @@
+{
+  "schema": "postfill_risk_checks.v1",
+  "commands": [
+    {
+      "name": "state_audit",
+      "started_utc": "2026-10-20T02:06:21.767105+00:00",
+      "received_utc": "2026-10-20T02:06:22.812113+00:00",
+      "returncode": 0,
+      "financial_mutation": false,
+      "stdout_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+      "stdout_gzip_sha256": "d0756290e4df6b0916af8837542a274058c926e8b12bce259fc21f7ba355c3ca",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "receipt": "logs/checkin_20261020T012937/postfill_risk_checks_0207/state_audit.result.json",
+      "output": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\nposition state CLEAN (7 indexed positions, 1 deindexed claim row(s))\n",
+      "error": ""
+    },
+    {
+      "name": "crux_coverage",
+      "started_utc": "2026-10-20T02:06:22.813290+00:00",
+      "received_utc": "2026-10-20T02:06:23.238190+00:00",
+      "returncode": 0,
+      "financial_mutation": false,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "receipt": "logs/checkin_20261020T012937/postfill_risk_checks_0207/crux_coverage.result.json",
+      "output": "",
+      "error": ""
+    },
+    {
+      "name": "hurdle",
+      "started_utc": "2026-10-20T02:06:23.238823+00:00",
+      "received_utc": "2026-10-20T02:06:23.987652+00:00",
+      "returncode": 0,
+      "financial_mutation": false,
+      "stdout_sha256": "b6c771782dc0220909184d8c45de26af74132382ceb840c1f2324b0bf1942863",
+      "stdout_gzip_sha256": "34a356026ef7833156123c3da6f2ec0f71ded798fdef109531cd08e382969469",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "receipt": "logs/checkin_20261020T012937/postfill_risk_checks_0207/hurdle.result.json",
+      "output": "# marginal-APY scan (EXPECTED-edge vs prior) @ 2026-10-20T02:06:23+00:00\n# hurdle: live 3.20% (polygon/USDC, 8h old); drawdown alert: 15%; priors: portfolio_kelly_priors.json\n# 4 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)\n\n=== HOLD CANDIDATES (central expected edge clears hurdle, or acknowledged hold) ===\n  No 0.770 |  33.9d | mid E+153.76% (p=0.880, P($0)=12.0%, gross +321.5%)  Will OpenRouter process between 725T and 775T tokens\n  Yes 0.265 |  71.9d | mid E+641.64% (p=0.600, P($0)=40.0%, non-bond mark)  Will Lionel Messi rank in Google\u2019s Top 5 Most Search\n  Yes 0.115 |  72.9d | mid E+980.36% (p=0.340, P($0)=66.0%, non-bond mark)  Will the highest score achieved by a Moonshot Kimi m\n  No 0.305 |  14.9d | mid E+1083.39% (p=0.440, P($0)=56.0%, non-bond mark)  Will the Democrats win the Michigan Senate race in 2\n\n=== GROUP STRUCTURES (member-leg actions and drawdowns suppressed) ===\n  Treasury 5-year yield 4.35%/4.45% monotonicity pair: \n  LSU 2026 regular-season wins 9.5/10.5 monotonicity pair: \n  Clarity Act Senate over-50/over-58 monotonicity pair: cost=$28.33 mark=$28.27 drawdown=-0.2% fair=$29.00 floor=$29.00 | full exit=$26.37 (fee $0.16) | HOLD_COMPLETE_GROUP (-2.63 raw vs fair; -2.46 after hurdle carry)\n",
+      "error": ""
+    },
+    {
+      "name": "kelly",
+      "started_utc": "2026-10-20T02:06:23.988335+00:00",
+      "received_utc": "2026-10-20T02:06:24.869821+00:00",
+      "returncode": 0,
+      "financial_mutation": false,
+      "stdout_sha256": "fd7cff723a7953b0b45dd92c9d4f37574fbfdf685c1a8b207c472065cd4fd69f",
+      "stdout_gzip_sha256": "bf744e30d9f8c8cc0162c60aa408d85a2dc8e1c77be481243c9ad5bc42f438b3",
+      "stderr_sha256": "4fbf2d9a00ad865db5cc6b96e855b197f47b89c44b7c2238faea978789eb2f47",
+      "stderr_gzip_sha256": "0aff26d40c64d992d254d2052f82d74bcb4b07e46dd4e2db18791f799bd07052",
+      "receipt": "logs/checkin_20261020T012937/postfill_risk_checks_0207/kelly.result.json",
+      "output": "\n====================================================================================================\nSlug                                          Side mark    P_win  edge   cost     Kelly$   \u0394 to opt  cluster        \n====================================================================================================\nwill-openrouter-process-between-725t-and-775t No  0.7700  0.880  11.00pp 3.25     43.33       +40.08 ai-ships-fast-short\nwill-lionel-messi-rank-in-googles-top-5-most- Yes 0.2650  0.600  33.50pp 1.35     40.63       +39.28 google-year-in-search-2026\nwill-the-highest-score-achieved-by-a-moonshot Yes 0.1150  0.340  22.52pp 1.20     23.06       +21.86 ai-ships-fast-short\nwill-the-democrats-win-the-michigan-senate-ra No  0.3050  0.440  13.50pp 1.55     17.31       +15.76 us-politics    \nclarity-act-senate-threshold-monotonicity     SET   -       -      -    28.33    (group)       0.00 group-structure\n    GROUP: mark=$28.27 fair=$29.00 floor=$29.00; floor-pair fair/unit=1.000; floor-pair: executable +5; all-in/unit $1.025 vs fair/unit $1.000 (SKIP_ADD_POLICY_PRICE_CAP)\n    FILLED DEC-0139 on 2026-09-17: 29 equal over-58 NO + over-50 YES shares bought for $28.13 nominal and $28.32893 including taker fees, versus a $29.00 logical payout floor. Sep-22 live source reconciliation confirmed byte-identical criteria and matching Jan-2 operational end metadata on both legs; the written qualifying cutoff remains before Jan-1. The pair consumes the 15% ticket allowance; NO ADD and never transact one leg independently.\n\n====================================================================================================\nTOTAL: cost=$35.68  kelly_optimal=$152.66  delta=$+116.98\n  Bankroll utilization (cost): 18.2%\n  Kelly-optimal utilization:   77.9%\n\nRecommended actions (delta > $5 = scale-in candidate):\n  TICKET_CAP will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026: suppressed scale-in; current gross $3.25, 15% cap $29.39, headroom $26.14 < requested $40.08. Entry gate also rechecks pending BUYs.\n  TICKET_CAP will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026: suppressed scale-in; current gross $1.35, 15% cap $29.39, headroom $28.04 < requested $39.28. Entry gate also rechecks pending BUYs.\n  +$ 21.86  Yes @ $0.115  edge=22.52pp  Will the highest score achieved by a Moonshot Kimi\n  +$ 15.76  No @ $0.305  edge=13.50pp  Will the Democrats win the Michigan Senate race in\n\nOver-sized (delta < -$5) \u2014 choose the maker route by information class:\n  (none)\n",
+      "error": "# bankroll $195.91 from cache (age 0.1h)\n# portfolio_kelly: 6 held rows, 3 protected group(s), bankroll=$195.91, kelly_frac=0.5\n"
+    },
+    {
+      "name": "kimi_exit",
+      "started_utc": "2026-10-20T02:06:24.870737+00:00",
+      "received_utc": "2026-10-20T02:06:25.395272+00:00",
+      "returncode": 0,
+      "financial_mutation": false,
+      "stdout_sha256": "7b4c61f38f163a5caa5a305ba204cac2715bfd24eb37039bd6172e3c8a79eaf8",
+      "stdout_gzip_sha256": "72a67917f7878be590c215b87649027d83990877a2605989d56d751514491ac2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "receipt": "logs/checkin_20261020T012937/postfill_risk_checks_0207/kimi_exit.result.json",
+      "output": "position                                     side     sh   fair   bid~   hold$   sell$  verdict\nwill-the-highest-score-achieved-by-a-moonsho  Yes   10.0  0.340  0.100    3.40    0.96  HOLD CANDIDATE (central arithmetic +$2.44; P(terminal $0)=66.0%); CONFIRM stressed p + joint cluster/log-growth; HIDDEN-INFO: rest maker sell only ABOVE fair 0.340 (premium = jump-risk pay; at/below fair is BANNED \u2014 donates the news). Taker breakeven 0.349\n\nordinary hold$ is p \u00d7 $1 + (1-p) \u00d7 $0 per share. HOLD CANDIDATE is a central-arithmetic screen, not a recovery forecast or a complete portfolio-risk verdict; confirm stressed p, joint outcomes and redeployment before action. Resolution is fee-free; maker sells are fee-free; taker sells pay rate x [p x (1-p)]^exponent/share at each fill level (V2 curve) \u2014 that gap is usually the whole decision.\n",
+      "error": ""
+    }
+  ],
+  "limits": "CLI output/call windows, not synchronized quote/chain/forecast or execution authorization. Root owns hold/exit judgment."
+}

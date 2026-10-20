@@ -1,0 +1,11 @@
+# October20 02:00 UTC post-fill financial snapshot
+
+**Authoritative bankroll $195.91 includes $5.81 separately funded gas; trading value $190.10 at midpoint / $187.90 at indicative fee-net depth.** Depth versus $170 trading contributions is +10.53%. Canonical producer02:00:30.302805–02:00:47.307276UTC; root verified complete stdout and compressed/raw hashes. Quotes remain sequential rounded estimates, not synchronized NAV or guaranteed proceeds. VM/API costs are excluded.
+
+- Same-producer PM midpoint36.15 and fee-net depth33.95 give195.91−5.81−36.15+33.95=187.90. Reported19.72 settled residual is accounting arithmetic, not audited cash profit; unrealized-realizable is **−1.82**, correcting the worker's missing minus sign.
+- Kimi412 filled10YES at12c /1.20pUSD with zero maker fee at authenticated match time01:48:47. Exact order statusMATCHED10/10, exhausted127trades, successful Polygon receipt95837051, exact OrderFilled/CTF transfer, currentYES10/NO0, indexed cumulative buys10 and cash debit agree. Tx`0xf19365ddbf55236097f48e9e83bc7f455afd9c291cb858033e9d13b3dc5a1a15`. Transaction-wide gas was paid by a different sender, not this maker wallet. [Root proof](../data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json).
+- Three original orders remain LIVE/zero-matched, committing6.50. At01:59:26 pUSD19.251290 less commitments gives12.751290 arithmetic, not certified venue free collateral. The filled1.20 was spent, not released as cash. Vetted reservation reconciliation removed only the filled record4→3; all other records remained identical.
+- Separate positions call02:00:47.334289–02:00:49.002404 showed seven open rows, cost35.77, midpoint36.30 and indicative fee-net depth33.76. Those later values are **not** inputs to this aggregate. Cost is API nominal cost; protected Clarity original fee-inclusive cost remains28.32893.
+- CSV observation228 appends this producer after pre-fill227, preserving all226 earlier observations. The02:00:30Z plotting anchor denotes producer start. No external contribution, realized sale profit or redemption occurred.
+
+[Dated account/producer facts and root errata](../data/deep_review_20261017/work/0412_postfill_state_0201.json) · [Post-fill hold judgment](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).

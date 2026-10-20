@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-10-19",
+ "_refreshed": "2026-10-20",
  "positions": [
   {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
@@ -16,6 +16,14 @@
    "size": 29,
    "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
    "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+   "negativeRisk": false
+  },
+  {
+   "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+   "outcome": "Yes",
+   "size": 10,
+   "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+   "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
    "negativeRisk": false
   },
   {

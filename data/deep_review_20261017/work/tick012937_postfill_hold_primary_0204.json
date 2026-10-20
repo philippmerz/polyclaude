@@ -1,0 +1,108 @@
+{
+  "schema": "primary_postfill_hold.v1",
+  "reviewed_utc": "2026-10-20T02:03:50.834724+00:00",
+  "index": 412,
+  "decision": "RETAIN verified10KimiYES/noadd; no newBUY, sale or makerSELL. Original bid is fully filled; cancellation/pull is obsolete. Future changed-source/thesis-break exit remains active.",
+  "financial_proof": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
+  "source_proof": "data/deep_review_20261017/work/tick012937_kimi_source_refresh_0210.json",
+  "quote_economics": "data/deep_review_20261017/work/tick012937_postfill_economics_0201.json",
+  "honest_unconditional_tree_p_yes": 0.3402125,
+  "selected_stress_p_yes": 0.1902125,
+  "broad_yes_range": [
+    0.08,
+    0.8
+  ],
+  "payouts_central_selected_broadlow": [
+    3.402125,
+    1.902125,
+    0.8
+  ],
+  "exit_10_yes": {
+    "bid": 0.1,
+    "gross": 1.0,
+    "fee": 0.03601,
+    "net": 0.96399,
+    "book_received_utc": "2026-10-20T01:59:06.989411+00:00",
+    "book_age_at_receipt_s": 1.635411,
+    "curve": "4% * p*(1-p), per-route ceil5dp, actual fills govern",
+    "quote_is_not_future_execution_authorization": true
+  },
+  "conditional_fill_sensitivity": {
+    "NO_over_YES_fill_likelihood_ratio": 1.5,
+    "central_conditional_p": 0.25581930887335924,
+    "selected_conditional_p": 0.13539280105701945,
+    "selected_conditional_payout": 1.3539280105701945,
+    "idealized_exit_carry_at_3p2035_APY_73days": 0.9700886289309515,
+    "not_observed_or_bounded": true,
+    "judgment": "A fill can be informative; do not interpret it as proof of alpha. Checked public sources are unchanged, but cached/private/unannounced information can select the fill. At illustrative1.5 ratio, stressed conditionalpayout still exceeds currentcash exit; broad8%payout.80 favorssale. Unfittedlikelihoodratio is not a guarantee."
+  },
+  "rationale": "Currentexactrules/fee/book and both official source bodies verified. BoardK3HLE41.08 vs issuer tool56 remains admission/configuration uncertainty, not settlementYES. No newlyverified catalyst/sourcepolicy invalidates entrytree. Small full-loss1.20risk accepted; central/selected/illustrativeconditional comparisons support holding. Never add to recover a loss, assume price recovery, or mechanically sell from entry-haircut alone.",
+  "AI_joint_terminal_states": {
+    "scope": "Other trading assets fixed at hypothetical180USD; illustrative wealth normalization, not new NAV. Actual OR5NO and Kimi10YES are both held. Frechet extremal couplings of uncalibrated marginals, no estimated correlation/hedge.",
+    "both_win": 195,
+    "OR_only": 185,
+    "Kimi_only": 190,
+    "both_lose": 180,
+    "both_sold_cash_wealth": 184.72751,
+    "log_sensitivities": [
+      {
+        "case": "central",
+        "p_OR_NO": 0.88,
+        "p_Kimi_YES": 0.3402125,
+        "p_both_win": 0.22021249999999992,
+        "expected_log_gain_both_held_vs_both_sold": 0.016267002540346742
+      },
+      {
+        "case": "central",
+        "p_OR_NO": 0.88,
+        "p_Kimi_YES": 0.3402125,
+        "p_both_win": 0.3402125,
+        "expected_log_gain_both_held_vs_both_sold": 0.01609618400616429
+      },
+      {
+        "case": "selected",
+        "p_OR_NO": 0.73,
+        "p_Kimi_YES": 0.1902125,
+        "p_both_win": 0,
+        "expected_log_gain_both_held_vs_both_sold": 0.004360543025410327
+      },
+      {
+        "case": "selected",
+        "p_OR_NO": 0.73,
+        "p_Kimi_YES": 0.1902125,
+        "p_both_win": 0.1902125,
+        "expected_log_gain_both_held_vs_both_sold": 0.004089777855133827
+      },
+      {
+        "case": "selected_fill_ratio_1p5",
+        "p_OR_NO": 0.73,
+        "p_Kimi_YES": 0.13539280105701945,
+        "p_both_win": 0,
+        "expected_log_gain_both_held_vs_both_sold": 0.0013965942326902995
+      },
+      {
+        "case": "selected_fill_ratio_1p5",
+        "p_OR_NO": 0.73,
+        "p_Kimi_YES": 0.13539280105701945,
+        "p_both_win": 0.13539280105701945,
+        "expected_log_gain_both_held_vs_both_sold": 0.0012038642342284923
+      },
+      {
+        "case": "broad_low",
+        "p_OR_NO": 0.2,
+        "p_Kimi_YES": 0.08,
+        "p_both_win": 0,
+        "expected_log_gain_both_held_vs_both_sold": -0.01611979691854063
+      },
+      {
+        "case": "broad_low",
+        "p_OR_NO": 0.2,
+        "p_Kimi_YES": 0.08,
+        "p_both_win": 0.08,
+        "expected_log_gain_both_held_vs_both_sold": -0.01623367594132893
+      }
+    ],
+    "shared_cost_full_loss_usd": 4.45
+  },
+  "management": "Existing scheduled reviews/earlier material model/score/source/evaluation/export-policy change; sourceoutage may delay settlement pastJanuary. No restingSELL at/belowfair in hidden-information class. Any future action needs freshsource/book/account verification; no automaticrepost."
+}

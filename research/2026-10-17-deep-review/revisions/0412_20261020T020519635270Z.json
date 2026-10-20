@@ -1,0 +1,108 @@
+{
+  "review_index": 412,
+  "market_id": "3072315",
+  "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+  "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+  "status": "valued",
+  "literal_analysis": "Any2026MoonshotKimi>=55 HLEAccuracy/equivalent byDec31 23:59ET. Currentnamedofficialboard, notautomaticissuer-toolscore. Entire2026qualifies; historicalmax/removals/missedrecordsunknown. Otherofficialresults conditionalonboardunavailable/deadline/permanentoutage; noofficialalternativeNO; temporaryoutagecanextendsettlement.",
+  "evidence": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "observed_utc": "2026-10-20T01:59:22.843168Z",
+      "finding": "HTTP200/Age2448,66rows, byte-identical to01:43; K3HLE41.08, no new Kimi55 row in this cache. Not whole-year absence."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/README.md",
+      "observed_utc": "2026-10-20T01:59:23.103292Z",
+      "finding": "HTTP200/body byte-identical to prior official README; HLE-Full43.5no-tools/56withtools is not automatic resolvingboard55."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34021250000000014,
+    "low": 0.08,
+    "high": 0.8,
+    "method": "Unfitteddisjointsource-admission/new-capability/no-update tree, explicitconditionaljudgments; nobenchmarktrendregressionorpriceprior.",
+    "reasoning": "Existing56toolrecordadmission/newcapability/noupdateconditionaljudgmenttree; full-year/source-historyuncertainty retained.15ppsamefamilyreserve; noK5measurementlicense.",
+    "actual_entry_reserve_pp": 15.0,
+    "model_path": "models/0412_kimi55_primary_0100.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/tick012937_postfill_quotes_0200.json",
+    "quote_file_sha256": "6abf2b762c92b8be76aa455cc760f7fbea73c97063c5a00c2d89cc814fcbd725",
+    "quote_capture_utc": "2026-10-20T01:59:06.990512+00:00",
+    "gamma_received_utc": "2026-10-20T01:59:06.752288+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 73.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.3402125,
+        "selected_stress_probability": 0.19021249999999998,
+        "best_bid": 0.1,
+        "best_ask": 0.13,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792461545354",
+        "book_received_utc": "2026-10-20T01:59:06.989411+00:00",
+        "book_age_seconds_at_receipt": 1.635411024093628,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.34524,
+        "central_expected_profit_usd": 2.056885,
+        "selected_stress_profit_usd": 0.5568849999999999,
+        "break_even_before_carry": 0.134524,
+        "break_even_constant_carry": 0.13537505857768992,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6597875,
+        "selected_stress_probability": 0.5097875,
+        "best_bid": 0.87,
+        "best_ask": 0.9,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792461545354",
+        "book_received_utc": "2026-10-20T01:59:06.989411+00:00",
+        "book_age_seconds_at_receipt": 1.635411024093628,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 9.036,
+        "central_expected_profit_usd": -2.4381249999999994,
+        "selected_stress_profit_usd": -3.9381250000000003,
+        "break_even_before_carry": 0.9036,
+        "break_even_constant_carry": 0.9093165749665533,
+        "current_execution_authorization": false
+      }
+    },
+    "full_walks_unit": "data/deep_review_20261017/work/tick012937_postfill_economics_0201.json",
+    "actual_fill": "Original10YES12cmaker fullyfilled01:48:47/1.20/zero makerfee; exactsuccessfulchain/accountproof in tick012937_fill_primary_reconciled_0202.json. No newBUY/submission in this review.",
+    "holding_comparison": "Current10YES netbidexit.96399 vscentral3.402125/selected1.902125/illustrative1.5selectionratio1.353928; broad8%payout.80 favorssale. Sunkentrycost doesnotgovernexit. Fullsource/conditional/joint judgment in tick012937_postfill_hold_primary_0204.json."
+  },
+  "verdict": "FILLED_HOLD_NO_ADD: original10YES12cmaker filled1.20/zero makerfee; account/trade/chain/cash agree. Checked sources unchanged; retain with explicit conditionalfill/model/settlementrisk. No newBUY, sale, cancel, duplicateentry or makerSELL.",
+  "reopen_condition": "Manage existing10YES on material model/score/source/evaluation/export-policy or load-bearing uncertainty; direct thesis-breakexit remains available. OriginalBUY cancellation/pull obsolete becausefullyfilled. Noadd/repost or hidden-information makerSELL at/belowfair. Futuremoney requirescurrentevidence/execution/account gates.",
+  "evaluated_utc": "2026-10-20T02:05:19.636315+00:00",
+  "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?",
+  "valuation_author": "primary_operator",
+  "original_index": 412,
+  "revision_reason": "Original Kimi412 maker bid fullyfilled; exact trade/chain/cash verified, source refresh/fee-net exit/conditional-fill/joint-risk review completed; probabilities unchanged, noadd.",
+  "prior_report_sha256": "eae7dfdbdedc267fcf6023f35d08b45515e63f08bdeb8bc6d3e4729bc0d34b69",
+  "report_sha256": "25f1dd17777d8cb7521d81d09190a2fe77429103dda98f581e2fe0b8d0ccef85",
+  "report_path": "revisions/0412_20261020T020519635270Z.md",
+  "revision_path": "revisions/0412_20261020T020519635270Z.json"
+}

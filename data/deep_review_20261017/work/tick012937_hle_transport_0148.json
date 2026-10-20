@@ -1,0 +1,14 @@
+{
+  "status": 200,
+  "receipt": "logs/checkin_20261020T012937/hle_vetted_transport_0148/models.receipt.json",
+  "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+  "gzip_sha256": "c99f7463a00639e054c7aae8ae9944fac988a8dd619096d74a5e6c0f96e20d1a",
+  "received_utc": "2026-10-20T01:43:38.146879Z",
+  "headers": {
+    "date": "Tue, 20 Oct 2026 01:43:38 GMT",
+    "content-type": "application/json",
+    "age": "1504",
+    "cache-control": "public"
+  },
+  "bytes": 41010
+}

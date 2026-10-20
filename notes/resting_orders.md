@@ -1,21 +1,17 @@
-# Current resting orders — October20 01:25 UTC
+# Current resting orders — October20 01:59 UTC
 
-**Four LIVE zero-matched BUYs commit $7.70.** Independent01:24:49–50 account reads confirm the new Kimi412 bid and the three original bids unchanged; exact inventory/detail,126 exhausted trades, data API/local position index and four reservations were checked. No Kimi purchase, fee, cash credit or profit. [Primary proof](../data/deep_review_20261017/work/0412_post_primary_0143.json).
+**Three LIVE zero-matched BUYs commit $6.50; Kimi412 is now a filled holding.** Root verified exact order detail/trade/chain/index/cash reconciliation. [Fill proof](../data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json).
 
 |Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
 |---|---|---|---|
 |ME02|10YES /38c /$3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|Historical ME01 slug never overrides exact ME02 identity|
 |CA06|50NO /3c /$1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
 |NY01|10YES /12c /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
-|Kimi HLE≥55 /DEC243|10YES /12c /$1.20|0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932|Cancel first on newly unassessed material model/score/source/policy evidence|
 
-Kimi exact market3072315/CID `0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset `37766872206008704788193600553604631093824104239948970702184049381100338243383`; criteria `46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7`. Submitted once01:23:15–19 through the vetted entry path, full1.20 loss budget. Numerical YES34.02125%/15pp selected19.02125%/broad8–80%; official board versus issuer tool-score admission remains uncertain. Same AI cluster as held OpenRouter, not a hedge. [Effective review](../research/2026-10-17-deep-review/revisions/0412_20261020T012806290142Z.md).
-
-Review each scheduled check or earlier material news. Retain a bid only while price, source freshness, full-fill correlation/caps, capital priority and conditional-fill economics remain justified. Original political bids: cancel first on newly unassessed material poll/candidate/ballot/turnout evidence. Kimi: cancel first on newly unassessed material model/score/source/evaluation/policy evidence; pull before a known relevant release/cutoff. No add, chase, automatic repost or taker fallback. Unannounced/private updates and five-minute watcher/cache gaps can fill before cancellation; Kimi can lose1.20 or settle late. Any fill requires fresh holding/source/fee-net-exit/joint-risk review. **Next full02UTC is a review, not an automatic expiry.**
-
-pUSD20.45129 at01:24:50 less7.70 commitments gives12.75129 arithmetic; this is not certified venue free collateral. An unfilled bid creates no new NAV row; aggregate producer01:02 and CSV226 retain their dates.
-
-Parton400 remains canceled unfilled with its23:45 affirmative terminal proof; no replay or duplicate Telegram. RBA403 was never submitted; its unsubmitted prior/feed/terms remain retired. Their historical details are below.
+- **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
+- Only filled reservation retired4→3 under vetted locks; other three records/terms unchanged. At01:59:26 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
+- Review remaining political bids each existing tick/earlier material evidence. Cancel first on newly unassessed material poll/candidate/ballot/turnout facts; no add/chase/repost/taker fallback. Unannounced information/cache gaps can fill before cancellation. A scheduled check is a review, not automatic expiry; any fill needs fresh holding/source/fee-netexit/joint-risk judgment.
+- Latest canonical financial producer02:00:30–47:195.91incl5.81gas, trading190.10mid/187.90indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. [Financial record](../research/2026-10-20-0200-postfill-financial-snapshot.md).
 
 ## Quote lifetime — clarified October19
 

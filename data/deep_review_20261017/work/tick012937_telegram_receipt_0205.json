@@ -1,0 +1,9 @@
+{
+  "schema": "material_telegram_receipt.v1",
+  "observed_after_send_utc": "2026-10-20T02:06:07.634854+00:00",
+  "message_id": 1274,
+  "parts": 1,
+  "returncode": 0,
+  "scope": "One material Kimi fill/hold/financial summary through documented stdin sender; no raw-headline/unfilled-bid ping.",
+  "delivery_limit": "Sender success/message ID, not proof operator read it."
+}

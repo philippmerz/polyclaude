@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-19T10:05:18.998874+00:00",
+  "_updated": "2026-10-20T02:06:07.634854+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1249,20 +1249,20 @@
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
-    "verified": "2026-10-19",
+    "verified": "2026-10-20",
     "criteria_read": "2026-10-19",
     "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct19 02UTC primaryliteral/currentidentity/source/analyticdailyagingrederivation retainsD56/NO44, broadD30-80,selectedNO34. 5NOholding2.20central/1.70selected vs1.458indicativenetexit, broadlow1.00favorssale. Noadd/return-assumption/hedgecredit. RasmussenOct12-14 46/44 alreadyincludedin0059 model; no duplicatepoll. See data/checkin_20261019T0200_michigan_rederived.json.",
+    "current_assessment": "Oct20 primarydailyanalyticrederivation ages allthreepolls+1; rawD55.6886069262%, roundedD56/NO44 retained, selectedNO34/broadNO20. RootverifiedfreshIA/Rasoriginalbodies/numericreleases; no newindependentpoll. IA MI notice has no mode: do not borrow mixedtext/panel fromadjacentstates. SourceextraSD4.5 retained. Requested/relatedcontroversy headlines supply no measuredvoteeffect; blockedpublisherbodies/date remainunknown. 5NO2.20central/1.70selected vsdated1.458fee-netexit; broad1.00 favorssale. Retain/noadd, full1.55costloss possible. See data/deep_review_20261017/work/tick012937_mi_rederived_0154.json andtick012937_primary_hold_review_0204.json.",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
     "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/held_michigan_sources_0150.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick012937_mi_poll_refresh_0152.json",
     "management": "Review each existing tick/earlier material news; reassess or exit on changed or uncertain load-bearing poll, candidate, withdrawal, health, ballot or turnout facts. Original BUY is filled, so its Oct23 22UTC pull is no longer a live instruction. Detroit Economic Club official program is Oct20 15:00-18:00UTC (solo stages, main program16UTC); pull any future resting order before this earlier known catalyst. Mandatory early voting Oct24-Nov1 and existing absentee voting sinceSep24 remain. New orders require current full gates; no measured hedge against other US-politics exposure. Official source: https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage."
   },
@@ -1326,24 +1326,24 @@
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.75,
     "cluster_frac": 0.1,
-    "verified": "2026-10-18",
-    "criteria_read": "2026-10-18",
+    "verified": "2026-10-20",
+    "criteria_read": "2026-10-20",
     "market_id": "5763815",
     "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
     "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
     "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
     "rationale": "PrimaryYES12%/NO88%, rawYES11.5545%;15ppentryreserve selectedNO73%, broadNO20-99.5%. Explicit20%plateau regime fixes prior missingflatgrowth mode; otheroldregimes rescaled36/28/8/8, latest158.105Tpartial/UIremainingproxy. Fixedfour displayed weekly Totals Oct26/Nov2/9/16; currentWeekPace is not settlement. Sourcecutoff/regime/noise weights uncalibrated; concentrated750Tmodel73.36%YES reversesNO. SamefactorasotherAIexposure; rho.75/10%clusterfloor are sizing assumptions, not measuredhedge/correlation.",
-    "current_assessment": "Original5NO@65c/$3.25 DEC0214 fullyfilled17:37:42, verifiedauthmaker/successfulchain/indexedbuys/CTFs; onlymatchingreservation retired8to7. Dated18:00account7LIVEzerofilledBUYs/$12.87, sevenmatchingreservations,pUSD18.846890/free5.976890 atPolygon95760740/18:00:57. RETAIN5NO/noadd; newprimary88%NO/selected73% still exceed prior17:45datedexit/Aavewealthbreak-even63.56-63.82%NO. Broad20%NO counterstate favorssale; not guaranteedfloor. No newaccountprobe/order/sale/cancel in this research update.",
+    "current_assessment": "Oct20 primaryrederive: observedcompleted-calendarOct12raw164.0439859T replaces partial158.105+remaining; newOct19partial25.6178223T notsettlementtotal, UIpace171.610T notfullweek. Same5regimes/weights/correlatednoise yieldrawYES11.481%; retainroundedYES12/NO88, selectedNO73/broad20-99.5. Fresh01:51:46 exactunchangedrules/fee/book verified:5NO76cbid gives3.76352net vs4.40central/3.65selected/1.00broadlow. Selectedstress favorssale but doesnotautomaticallyreplace honestbelief; explicitjoint/logcomparison/smallrisk supportsRETAIN5NO/noadd. No financialmutation, no hedge/independence credit; full3.25entryloss possible. Dated decision: data/deep_review_20261017/work/tick012937_primary_hold_review_0204.json.",
     "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md",
-    "current_revision": "research/2026-10-17-deep-review/models/openrouter250_112_primary_1940.json",
+    "current_revision": "research/2026-10-17-deep-review/models/openrouter_tick012937_primary_0154.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
       "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/0250_source_update_1800.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick012937_source_captures_0145.json",
     "management": "Filledholding, no originalrestingBUY remains. OldOct18 22UTCBUYpull obsolete; existing22UTCheldreview and earliermaterialnews remain. Re-underwrite currentexit/hold on source/rule/measurement/method/regimechanges; fullcurrentgates beforemoney. Noadd/repost. AnynewweeklyTotalrequiresrevaluation; WeeklyPace not realizedtotal/cutoff. Full3.25entrycost canbelost; noindependence orhedgecredit.",
     "monitoring": "Existing exposure-aware newsrouting; PID40455progressverified17:21 after17:19restart, rawRSS Telegramoff, queued/deferred is not reviewed. Current scopedsourcechecks remain required; cache/cooldown/cappedfeed/private-unannouncedchange gaps retained. No newdaemon/timer/manualpoll.",
-    "latest_catalyst": "NextheldreviewOct18 22UTC. Oct19 nextweeklydisplay canfinalize currentnon-targetOct12week and updategrowthinput; targetweeksOct26/Nov2/Nov9/Nov16, finalfirstNov23display/Nov27ETfallback. No unfilledBUYpull."
+    "latest_catalyst": "Oct20 boundedcheck completedsource/holdreview. Existing02UTC or earliermaterialsource/fill; nextweeklydisplayOct26; exacttargetweeksOct26/Nov2/Nov9/Nov16, freezeonfirstNov23display/Nov27ETfallback. Currentpartialweek/weeklypace notsettlement; no liveORBUY."
   },
   "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
     "p_yes": 0.8,
@@ -1814,13 +1814,14 @@
     "hidden_info": true,
     "research_report": "research/2026-10-17-deep-review/evaluations/0412.md",
     "probability_model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
-    "latest_source_packet": "data/deep_review_20261017/work/0412_context_primary_root_0137.json",
-    "rationale": "Primary34.02125%YES/15ppselected19.02125/broad8–80; uncalibratedsource-admission/update tree. Currentofficialboard41.08 vsissuer56withtools: admission/config/fallbackuncertain. MOFCOMscopedproposal/APIexception independentlyread, notblanketmodelban orverifiedK3.1roadmap.",
-    "current_assessment": "DEC243:LIVE unfilled10YES12c/maximum1.20. Submittedonce01:23:15–19; independent01:24:49–50 reads/rootaudit verifyexactinventory/detail matched0, exhausted126trades/target0, API/localindex0target, matchingreservation. Fourbids7.70/originalthreeunchanged; no holding/spend/fee/profit. Noadd/chase/taker/repost.",
-    "management": "Noadd/chase/taker/repost. Revieweveryexistingtick/earliermaterialmodel,score,source/evaluation/exportpolicy change; cancel-first on newlyunassessedmaterialevidence. Pullbeforeknownrelevantrelease/cutoff, notautomaticnextcronexpiry. Unannouncednews/privateupdatescanfillbeforecancel; full1.20lossaccepted. SourceoutagecanlockpastJanuary.",
-    "monitoring": "Scoped feed + tier2 Kimi/Moonshot AI/MoonshotAI. Root read original/current30 headlines and verified HTTP200/hash-bound current RSS;26IDs+4normalized titles cover current30. Unordered5000ID retention invalidates ID-only absence; no state edit/forced poll. Existing one code-current daemon,5minpoll/cache/cappedfeed/cooldown are nonexhaustive. Cancel-first newly unassessed material model/score/source/policy evidence; pull before known catalyst/cutoff, not automatic nextcron expiry.1.20 full-loss/adverse fills/source-delay accepted.",
+    "latest_source_packet": "data/deep_review_20261017/work/tick012937_kimi_source_refresh_0210.json",
+    "rationale": "Primary34.02125%YES/15ppselected19.02125/broad8\u201380; uncalibratedsource-admission/update tree. Currentofficialboard41.08 vsissuer56withtools: admission/config/fallbackuncertain. MOFCOMscopedproposal/APIexception independentlyread, notblanketmodelban orverifiedK3.1roadmap.",
+    "current_assessment": "OriginalDEC243maker filled10YES@12c/1.20pUSD/zero makerfee at01:48:47. RootverifiedexactMATCHED10/10,127exhaustedtrades, successfulPolygon95837051/OrderFilled/CTF10YES0NO, cumulativebuys10 andcashdebit. Onlyfilledreservation4to3; original3bidsLIVE0/6.50 unchanged. Fresh01:59officialboard/issuerbodiesunchanged (cached/limited), current10YES fee-netexit.96399 vscentral3.402125/selected1.902125/illustrative1.5fillratio1.353928; broad.80 favorssale. RETAIN10YES/noadd; sharedOR+Kimi fullcostloss4.45 possible, nohedge. See data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json.",
+    "management": "Filledholding: originalBUY cancel/pull obsolete. Noadd/chase/repost. Reviewexistingchecks/earlier material model/score/source/evaluation/export-policy change; reassess or exit on changed load-bearingfacts/uncertainty. Hidden-informationclass: no restingSELL at/belowfair; thesis-breakexit remains available. Full1.20costloss/sourceoutagepastJanuary possible; futuremoneyrequiresfresh fullgates.",
+    "monitoring": "Existing scoped feed plus Kimi/Moonshot AI/MoonshotAIterms retained for nowheld exact55claim. Original30RSS coverage and unordered5000ID limitation remain dated/nonexhaustive; no stateedit/forcedpoll/newwatcher. Cache5min/caps/cooldown/private-unannouncedsource gaps remain. Newlymaterialevidence invokes freshhold/exitreview, not obsoleteBUYcancel.",
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
     "decision_id": 243,
-    "latest_execution_review": "data/deep_review_20261017/work/0412_post_primary_0143.json"
+    "latest_execution_review": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
+    "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json"
   }
 }

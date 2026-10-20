@@ -1,0 +1,96 @@
+{
+  "schema": "primary_MI_daily_rederivation.v1",
+  "reviewed_utc": "2026-10-20T01:50:24.124042+00:00",
+  "index": 1838,
+  "method": "Exact analytic marginal of existing Gaussian primary model; reproduceOct19 result, then ageallthreepolls+1day. No quote setsinputs; national/region/sharedpollbias/future residual retained, no complete35state reforecast.",
+  "source_input": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_inputs.json",
+  "source_input_sha256": "e3d481122aa7e903e745df619471f14d578fb0d6543e663dcc0f04cfd30e9ffb",
+  "prior_daily_result_reproduced": true,
+  "polls": [
+    {
+      "margin_pp": 1.0,
+      "share_moe_pp": 2.5,
+      "age_days": 16,
+      "source": "YouGov Sep22–Oct4 original allocated-respondent PDF",
+      "source_extra_sd_pp": 2.5,
+      "sponsor_adjustment_pp": 0.0
+    },
+    {
+      "margin_pp": 2.0,
+      "share_moe_pp": 3.0,
+      "age_days": 6,
+      "source": "Rasmussen Oct16 release; Oct12–14 n798MichiganLV, original six-name topline46ElSayed44Rogers,reported3pp/95confidence",
+      "source_extra_sd_pp": 3.0,
+      "sponsor_adjustment_pp": 0.0,
+      "precision_source": "Publisher reported marginofsamplingerror; fullmode/weights/responseunrecovered. Nationalphone/onlinewording preserved, not state-specificallocation.",
+      "source_url": "https://www.rasmussenreports.com/public_content/archive/election_2026/michigan_senate_el_sayed_46_rogers_44"
+    },
+    {
+      "margin_pp": 2.0,
+      "share_moe_pp": 2.83,
+      "age_days": 10,
+      "source": "OfficialIAhomepageOct11notice,MIElSayed48/Rogers46;fieldOct9–10,n1200LV;notdedicatedrelease/tabs, modeunknowninthisnotice",
+      "source_extra_sd_pp": 4.5,
+      "sponsor_adjustment_pp": 0.0,
+      "source_url": "https://insideradvantage.com/",
+      "precision_source": "PublisherMOE/weightingage/race/gender/party. Do not borrowmodefromotherrelease; fullinstrument/sponsorunrecovered."
+    }
+  ],
+  "scenarios": {
+    "central": {
+      "p_D": 0.5568860692623434,
+      "center_pp": 0.6717236432974995,
+      "total_margin_sd_pp": 4.694777493633095,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    },
+    "bias0": {
+      "p_D": 0.6608816431241054,
+      "center_pp": 1.9477246389826819,
+      "total_margin_sd_pp": 4.694777493633095,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    },
+    "biasMinus3": {
+      "p_D": 0.4487925042828069,
+      "center_pp": -0.6042773523876833,
+      "total_margin_sd_pp": 4.694777493633095,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    },
+    "adverseGeneric6BiasMinus3": {
+      "p_D": 0.4287309957206354,
+      "center_pp": -0.8432096236568218,
+      "total_margin_sd_pp": 4.694777493633095,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    },
+    "favorableGeneric10Bias0": {
+      "p_D": 0.6793076725835099,
+      "center_pp": 2.1866569102518203,
+      "total_margin_sd_pp": 4.694777493633095,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    },
+    "wideCommon5": {
+      "p_D": 0.5433627921308768,
+      "center_pp": 0.6717236432974995,
+      "total_margin_sd_pp": 6.167733434149359,
+      "poll_center_pp": 1.5587809427751906,
+      "poll_weight": 0.8506673304567884
+    }
+  },
+  "adopted": {
+    "D": 0.56,
+    "NO_any_non_D": 0.44,
+    "D_range": [
+      0.3,
+      0.8
+    ],
+    "selected_NO": 0.34
+  },
+  "source_refresh": "work/tick012937_mi_poll_refresh_0152.json",
+  "primary_correction": "IAOct9–10MI notice doesNOTstate mode. Worker copied mixedtext/panel fromotherhomepage surveys; doNOTadopt. Originalpacket retained. Keep4.5sourceextraSD/instrument/sponsor/overlap gaps. Rasmussen originalnationalphone+online wordingnotverifiedstate-specificmodeallocation. Bothnumericpolls alreadyincluded, notadditionalindependentlikelihoods.",
+  "fresh_evidence": "Primaryverifiedbothraw+gzipandreadMIhomepagecontext/Rasfullpreview; IAOct9–10 48/46/n1200/2.83 andRasOct12–14 46/44/n798/3pp unchanged. ECofficialsolo-stageeventtoday15–18UTC remainsupcoming, nota voteeffect. Fourrequested/relatednewsrows do notsupplymeasuredvoterresponse; exactModernGhana/GreenBay/Woosterbodiesremainunknown.",
+  "interpretation": "RawcentralDrecomputed below; rounded56/44 retained after currentevidence/aging, not merelyrollingverifieddate. BroadNO20canfavor exit/full1.55loss possible; noadd/automatichedgecredit."
+}

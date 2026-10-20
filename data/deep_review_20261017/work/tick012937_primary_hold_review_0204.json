@@ -1,0 +1,116 @@
+{
+  "schema": "primary_dated_hold_review.v1",
+  "reviewed_utc": "2026-10-20T01:57:49.878513+00:00",
+  "tick": "20261020T012937Z",
+  "decision": "RETAIN5OpenRouterNO/noadd; no order/sale/cancel/transfer. Adopt rounded12YES/88NO after newsource model11.481%YES. Centraledge is not consumed; stressdisagreement explicitly retained.",
+  "identity": {
+    "index": 112,
+    "market_id": "5763815",
+    "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+    "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426"
+  },
+  "source_model": "research/2026-10-17-deep-review/models/openrouter_tick012937_primary_0154.json",
+  "quote": "data/deep_review_20261017/tick012937_or_kimi_quote_0156.json",
+  "quote_sha256": "9085f78cf926ed2f5d3dedb57b57d7c8475c2723fa46827ea31d7ce36b8718d2",
+  "quote_verified": {
+    "all_identity_checks": true,
+    "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
+    "book_received_utc": "2026-10-20T01:51:46.954130+00:00",
+    "book_age_at_receipt_s": 10.71613,
+    "NO_bid_ask": [
+      0.76,
+      0.78
+    ],
+    "quantity": 5,
+    "gross_bid": 3.8,
+    "fee_curve_rate": 0.04,
+    "fee_exponent": 1,
+    "fee_net_exit": 3.76352,
+    "quote_is_current_execution_certificate": false
+  },
+  "payouts": {
+    "central": 4.4,
+    "selected_entry_reserve_stress_73pct": 3.65,
+    "broad_low_20pct": 1.0,
+    "worst": 0,
+    "best": 5
+  },
+  "judgment": "Exit exceeds selected-stress hold by0.11352; centralhold exceeds exit by0.63648. Do not relabel entryreserve as honestbelief or make it a mechanical exitstop. Small five-share exposure, refreshed central and no identified thesisbreak support retention. Unfittedregime/source-cutoff/revision risks can still make salebetter; concentrated750Tcountermodel reversesNO. Noadd/chase/automaticmakerSELL.",
+  "cash_alternative": "Zero-yield pUSDexit3.76352. At previouslyfetched3.2035%APY for34.5days, idealizedAave3.77475 before routing/gas/rate/cutoffrisk; sensitivity only, no reinvestment/frictionfreeassumption. Deployment option value not quantified.",
+  "joint_scope": "Kimi bid is stillunfilled. States below assume itsfull10share fill at1.20; allotherassetvalues fixed at datedindicative depth. Frechetbounds, not measured dependence or independence/hedgecredit.",
+  "joint_states": [
+    {
+      "OR_NO_wins": 1,
+      "Kimi_YES_wins": 1,
+      "hold_OR_wealth": 197.98648,
+      "sell_OR_wealth": 196.75
+    },
+    {
+      "OR_NO_wins": 1,
+      "Kimi_YES_wins": 0,
+      "hold_OR_wealth": 187.98648,
+      "sell_OR_wealth": 186.75
+    },
+    {
+      "OR_NO_wins": 0,
+      "Kimi_YES_wins": 1,
+      "hold_OR_wealth": 192.98648,
+      "sell_OR_wealth": 196.75
+    },
+    {
+      "OR_NO_wins": 0,
+      "Kimi_YES_wins": 0,
+      "hold_OR_wealth": 182.98648,
+      "sell_OR_wealth": 186.75
+    }
+  ],
+  "log_sensitivities": [
+    {
+      "p_OR_NO": 0.88,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0.22021249999999992,
+      "expected_log_gain_hold_vs_sell": 0.003416033523567377
+    },
+    {
+      "p_OR_NO": 0.88,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0.3402125,
+      "expected_log_gain_hold_vs_sell": 0.003250533828882421
+    },
+    {
+      "p_OR_NO": 0.73,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0.07021250000000001,
+      "expected_log_gain_hold_vs_sell": -0.0004207581110130404
+    },
+    {
+      "p_OR_NO": 0.73,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0.3402125,
+      "expected_log_gain_hold_vs_sell": -0.0007931324240541947
+    },
+    {
+      "p_OR_NO": 0.2,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0,
+      "expected_log_gain_hold_vs_sell": -0.01461154431044685
+    },
+    {
+      "p_OR_NO": 0.2,
+      "p_Kimi_YES_if_filled": 0.3402125,
+      "p_both_win": 0.2,
+      "expected_log_gain_hold_vs_sell": -0.014887377134921779
+    }
+  ],
+  "whole_book_stress": {
+    "trading_midpoint": 190.15,
+    "PM_midpoint": 35,
+    "cash_commitments": 7.7,
+    "all_ordinary_and_all_four_bids_lose_Clarity_pays29": 176.45,
+    "same_Clarity_pays0": 147.45,
+    "qualification": "Otherassetsfixed, not probabilities or guarantees. Pairloss cancoincidewithAIandpolitical losses; nohedgecredit."
+  },
+  "other_holdings": "MI5NO44/selected34/broadNO20:2.20/1.70/1.00 vs datednetexit1.458; retain/noadd. Messi5YES60/selected40/broad20:3/2/1 vs~1.20netexit; retain/noadd despitebroadcasefavoringsale/hiddeninformation. ProtectedClarity29+29 heldwholeonly, noadd; indicativewholeexit26.37 vsconditional29floor/58middle, venue/oracle0possible. Trump.33NOdust retained.",
+  "pending_Kimi": "10YES12cmaker unchanged/unfilled; currentask13c notentryauthority. OfficialHLEboardK3accuracy41.08/calibration44.67, not issuer56toolclaim. HLEpublictransport200afterplain403; no55rowobserved inthiscapture, notall-timeabsence. July3freeze22addedisoldbaseline, notnewentry-thesisbreak. Existingmaterial-source/catalyst cancel-firstpolicy retained.",
+  "next_review": "Existing02UTC/fulltick or earlier materialsource/fill; boundary is review, notbidexpiry. No newtimer, durablegoal or idlecontinuation."
+}

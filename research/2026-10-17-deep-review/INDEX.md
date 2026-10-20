@@ -1,6 +1,6 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T01:28:06.610895+00:00
+Updated: 2026-10-20T02:05:19.882747+00:00
 
 **366 valuations saved; first milestone100:** 366 valued; 12 blocked after in-depth review. 364 factual exclusions separately; 2258 pending.
 
@@ -423,7 +423,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |409|[Will the Democratic Party win the NY-01 House seat?](evaluations/0409.md)|valued|Potential small passive YES source revalidation|
 |410|[Will CrowdStrike Q3 net new ARR be above $440M?](evaluations/0410.md)|valued|NO_ENTRY:7YEScentral+.118butselected-.932;7NOcentral-.736/selected-1.786. Ordinarymakersfail;3cfarbidmarginfailsmodestadversefillillustration. Noorder/prior/watch.|
 |411|[UFC Fight Night: Mike Malott vs. Joaquin Buckley (Welterweight, Main Card)](evaluations/0411.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
-|412|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?](revisions/0412_20261020T012806290142Z.md)|valued|POSTED_ONCE_LIVE_UNFILLED:10YES12c/max1.20/DEC243; independent01:24:49–50 exactinventory/detail0matched/exhausted126trades0target/API+localindex0target/reservation verified. Noholding/spend/profit. Noadd/chase/taker/repost.|
+|412|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?](revisions/0412_20261020T020519635270Z.md)|valued|FILLED_HOLD_NO_ADD: original10YES12cmaker filled1.20/zero makerfee; account/trade/chain/cash agree. Checked sources unchanged; retain with explicit conditionalfill/model/settlementrisk. No newBUY, sale, cancel, duplicateentry or makerSELL.|
 |413|[Will the highest temperature in Taipei be 34°C on October 17?](evaluations/0413.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |414|[Will the Republicans win the New York governor race in 2026?](evaluations/0414.md)|valued|NO_ENTRY:19YES central+.477814 but selected−1.04929;19NO central−.631524/selected−2.531524. Ordinary makers also fail. No allocation or monitoring change.|
 |415|[Will the Republican Party win the TX-25 House seat?](evaluations/0415.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|

@@ -1,0 +1,30 @@
+{
+  "schema": "primary_fill_reconciliation.v1",
+  "reviewed_utc": "2026-10-20T02:02:19.545748+00:00",
+  "index": 412,
+  "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
+  "transaction_hash": "0xf19365ddbf55236097f48e9e83bc7f455afd9c291cb858033e9d13b3dc5a1a15",
+  "Polygon_receipt_status": 1,
+  "Polygon_receipt_block": 95837051,
+  "exact_order_filled_event": {
+    "side": 0,
+    "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+    "pUSD_units": 1200000,
+    "YES_units": 10000000,
+    "maker_fee_units": 0
+  },
+  "fill_utc_from_authenticated_match": "2026-10-20T01:48:47+00:00",
+  "exact_detail": "MATCHED10/10@12c",
+  "exhausted_trade_count": 127,
+  "CTF_YES_units": "10000000",
+  "CTF_NO_units": "0",
+  "pUSD_units": "19251290",
+  "other_three_orders_exact_terms_unchanged": true,
+  "source_refresh_raw_gzip_primary_verified": true,
+  "reservation_before_count": 4,
+  "reservation_after_count": 3,
+  "only_target_removed_and_other_records_equal": true,
+  "reservation_before_sha256": "8e935b1dadc02816a60345c31e01cef2f725875050cd05050f49d80452b02e52",
+  "reservation_after_sha256": "681a42b8e60a609cb537be5c743d6f9097008ef0b23f7918f7c887c424d50d3a",
+  "reconcile_method": "Vetted _entry_reservation_commitments(prune=True) under shared entry+reservation locks, exactfullindexed buys and no openOID. No order/transaction/newBUY."
+}

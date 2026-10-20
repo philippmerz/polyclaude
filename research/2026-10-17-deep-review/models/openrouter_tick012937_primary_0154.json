@@ -1,0 +1,93 @@
+{
+  "schema": "primary_OR_dated_source_projection.v1",
+  "created_utc": "2026-10-20T01:50:25.183374+00:00",
+  "review_index": 112,
+  "numerical_update_before_fresh_own_quote": true,
+  "older_exit_advisory_known_NO_bid": 0.76,
+  "source_receipt": "logs/checkin_20261020T012937/root_sources_0145/openrouter.receipt.json",
+  "source_raw_sha256": "c7a2a76af1848ff4919b3f2db0a93edc283c4404801bff0974ad5045e73f57b0",
+  "point_count": 53,
+  "cachedAt_utc": "2026-10-20T01:19:13.618000+00:00",
+  "source_received_utc": "2026-10-20T01:42:13.146098Z",
+  "base_20261012_raw_T": 164.043985914931,
+  "current_20261019_partial_raw_T": 25.617822344271,
+  "UI_week_pace_proxy_T": 171.61016447441983,
+  "cutoff_limit": "cachedAt controls UI forecasthour, notknownusagecutoff. CalendarcompletedOct12rawrow notcertifiedfinal/UI targetTotal; allfourtargetweeksabsent. CurrentOct19partial isnotafullweek/settlementtotal.",
+  "method": "Sameprior5regimes/weights/drifts/scales/correlation. ReplaceuncertainOct12partial+SundayremainingwithobservedcalendarcompletedOct12base; simulatefivefutureweeks, sumlastfourOct26/Nov2/Nov9/Nov16. Keep95%N0,2T/5%N0,10T aggregate revision/roundingnoise. PartialOct19 UIpace iscontext/sensitivity, not usedasactualfullweek. Parametersunfitted; no quote-based adjustment.",
+  "branches": [
+    [
+      "moderation",
+      0.36,
+      0.035,
+      0.065
+    ],
+    [
+      "historical_growth",
+      0.28,
+      0.08,
+      0.095
+    ],
+    [
+      "release_boom",
+      0.08,
+      0.2,
+      0.1
+    ],
+    [
+      "disruption",
+      0.08,
+      -0.15,
+      0.15
+    ],
+    [
+      "plateau",
+      0.2,
+      0.0,
+      0.05
+    ]
+  ],
+  "draws": 200000,
+  "seed": 20261018182,
+  "innovation_correlation": 0.25,
+  "raw_joint_counts": {
+    "250_yes": 24055,
+    "112_yes": 22962,
+    "neither": 152983
+  },
+  "raw_joint_probabilities": {
+    "250_yes": 0.120275,
+    "112_yes": 0.11481,
+    "neither": 0.764915
+  },
+  "branch_112_probabilities": {
+    "moderation": {
+      "n": 71831,
+      "p_yes": 0.17517506369116398,
+      "mean_fourweek_T": 751.5670736742684
+    },
+    "historical_growth": {
+      "n": 55836,
+      "p_yes": 0.09567304248155312,
+      "mean_fourweek_T": 898.7273269755844
+    },
+    "release_boom": {
+      "n": 16035,
+      "p_yes": 0.005862176488930465,
+      "mean_fourweek_T": 1401.595793482935
+    },
+    "disruption": {
+      "n": 16232,
+      "p_yes": 0.01244455396747166,
+      "mean_fourweek_T": 418.042886882053
+    },
+    "plateau": {
+      "n": 40066,
+      "p_yes": 0.11832975590276044,
+      "mean_fourweek_T": 660.3863917280194
+    }
+  },
+  "p_yes_raw": 0.11481,
+  "p_no_raw": 0.88519,
+  "decision": "NOT_YET_ADOPTED; primarycomparewithsource/modelrange/currentcash-feenetexit/carry/jointterminal risk beforechangingpriorortrading.",
+  "limitations": "Regimeweights/drifts/scales/cutoff/noise arejudgments, not empiricalconfidence. Existingconcentrated750Tcountermodel stillreversesNOthesis. SourceUIforecastmethods andhistoryfirstdisplayremainuncertain."
+}

@@ -3187,9 +3187,10 @@
         "transaction-safety"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Engineering repair verified with bounded evidence: current shared redemption path simulates, estimates gas live, buffers max(20%,30000), and fails before build/sign/broadcast on preflight failure. Contemporaneous Sep19 journal records one hardened retry succeeding at gas255082/limit367107, tx0xb096cad6b6a470926572acf705faed94ec820828731801ef8346736e1dd2dbff. This closes the overdue implementation review, not an exhaustive audit of every redemption through Oct19 or a new test run; no counterexample established in reviewed evidence.",
+      "calibration_delta": "Not applicable: engineering implementation review, no market forecast or calibration score; universal runtime behavior was not exhaustively audited.",
+      "lesson": "Preserve live simulation/estimate and buffered gas in both vetted redemption paths. Historical retry proves the repaired instance; source inspection does not prove universal runtime behavior. No market-outcome calibration score assigned.",
+      "resolved_at": "2026-10-20T01:58:06Z"
     },
     {
       "id": 160,
@@ -5324,7 +5325,22 @@
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
       "outcome": null,
       "calibration_delta": null,
-      "lesson": null
+      "lesson": null,
+      "execution_updates": [
+        {
+          "reviewed_utc": "2026-10-20T02:06:07.634854+00:00",
+          "state": "fully_filled",
+          "match_utc": "2026-10-20T01:48:47Z",
+          "shares": 10,
+          "price": 0.12,
+          "cost_pUSD": 1.2,
+          "maker_fee": 0,
+          "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
+          "tx": "0xf19365ddbf55236097f48e9e83bc7f455afd9c291cb858033e9d13b3dc5a1a15",
+          "proof": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
+          "action": "Retain10YES/noadd after fresh source/exit/conditional-fill/jointreview. Originalpendingprediction preserved historically; outcome remains unresolved, no calibration score from fill."
+        }
+      ]
     }
   ]
 }

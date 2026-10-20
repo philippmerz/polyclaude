@@ -1,0 +1,53 @@
+{
+  "schema": "scheduled_tick.primary_source_capture.v1",
+  "tick": "20261020T012937Z",
+  "created_utc": "2026-10-20T01:42:13.778788+00:00",
+  "captures": [
+    {
+      "name": "openrouter",
+      "status": 200,
+      "receipt": "logs/checkin_20261020T012937/root_sources_0145/openrouter.receipt.json",
+      "raw_sha256": "c7a2a76af1848ff4919b3f2db0a93edc283c4404801bff0974ad5045e73f57b0",
+      "gzip_sha256": "531df20c5c2056ccfe25905f1c1004482f939433442dedadfd71e8c277c17403",
+      "received_utc": "2026-10-20T01:42:13.146098Z",
+      "bytes": 24689
+    },
+    {
+      "name": "senate",
+      "status": 403,
+      "receipt": "logs/checkin_20261020T012937/root_sources_0145/senate.receipt.json",
+      "raw_sha256": "9ee5b950d3a543ea6a8a35ed7515e94a2b72ba9ddd2cecd0a87eb7beeb04b9d8",
+      "gzip_sha256": "7e41acb64ff87839aef4367565d52d2a82c3d09caa297b6f7b9fc9c8b941c33c",
+      "received_utc": "2026-10-20T01:42:13.596809Z",
+      "bytes": 491
+    },
+    {
+      "name": "michigan_event",
+      "status": 200,
+      "receipt": "logs/checkin_20261020T012937/root_sources_0145/michigan_event.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "gzip_sha256": "c4a722def93f8ccf59d04225369e0128618736f293d82b6577c1a339331a9735",
+      "received_utc": "2026-10-20T01:42:13.764085Z",
+      "bytes": 160289
+    },
+    {
+      "name": "google_yis",
+      "status": 404,
+      "receipt": "logs/checkin_20261020T012937/root_sources_0145/google_yis.receipt.json",
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+      "received_utc": "2026-10-20T01:42:13.363235Z",
+      "bytes": 58133
+    },
+    {
+      "name": "hle",
+      "status": 403,
+      "receipt": "logs/checkin_20261020T012937/root_sources_0145/hle.receipt.json",
+      "raw_sha256": "579268e9ed206e7ed06d1eec5774d1afffc079745e700fccddbc4721efce461f",
+      "gzip_sha256": "5a334bbedcdb34b0ee574315d67dad96efc7532e68a68e7fa5edab15bb6842aa",
+      "received_utc": "2026-10-20T01:42:13.449143Z",
+      "bytes": 59
+    }
+  ],
+  "source_limits": "Capture before parse; status alone does not establish source meaning, availability universe, outcome or execution."
+}

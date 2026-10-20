@@ -1,6 +1,6 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T01:28:06.610895+00:00",
+  "updated_utc": "2026-10-20T02:05:19.882747+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
   "completed_in_depth_reviews": 378,
@@ -43,11 +43,11 @@
   ],
   "base_records": 742,
   "base_record_counts": {
-    "excluded_factual": 364,
+    "valued": 364,
     "blocked_after_review": 14,
-    "valued": 364
+    "excluded_factual": 364
   },
-  "revisions_written": 68,
+  "revisions_written": 69,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -60,6 +60,6 @@
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
   "evaluations_written": 742,
   "ledger_sha256": "6bf17c8fa2924b5c5c9e4c3636807e09b1585f60788aa0d6b6da874ccd08c242",
-  "revisions_sha256": "994dc3d3316a556532f818c4750d4b349e4ea60c6350af32dafdc1067485284b",
+  "revisions_sha256": "417ef4c84ad37f8b4659c7cf5ddd1b38a8637f4df886a82599d8916096e6cf15",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

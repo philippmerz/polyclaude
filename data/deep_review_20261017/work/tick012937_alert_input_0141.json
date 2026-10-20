@@ -1,0 +1,96 @@
+{
+  "schema": "scheduled_tick.alert_input.v1",
+  "tick": "20261020T012937Z",
+  "observed_utc": "2026-10-20T01:40:14.786921+00:00",
+  "explicit_requested_ids": [
+    "947fffd88974a00707d3ef922908aeefdf766ec7",
+    "a099a9ac21f8d5315c10967822b6de06b6ca2a8f",
+    "d248f59082c3c21d789833e15150fbe53ad5f4bc"
+  ],
+  "additional_window_after": "2026-10-20T01:35:00.100669Z",
+  "additional_window_through": "2026-10-20T01:40:14.786921+00:00",
+  "rows": [
+    {
+      "alert_id": "947fffd88974a00707d3ef922908aeefdf766ec7",
+      "ts": "2026-10-20T00:09:30Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Abdul El-Sayed confronts accusations of having links to militant groups - Modern Ghana",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9XYVFsUjl5azVYejNTbVNicTBRMDdNbEVLNWhhdEhjS2FIYzlxTnozUWdqN190M3pfMWQ5dlpESWRNa2RSck4xVTlDeXJrbDdGZG5OVzlZbDlOZnpLazlB0gFcQVVfeXFMTkdsU0xkenF4amVzS0hfTFFkOXNiOE9WbWtXVGxMVWtCSFd5R3ZPRC1ZWlhMUmFleGZ3LWhRMGNYamU2c2lTVlRURmlrTDJ6MHJiSzUtb1ZQTkN5eVU?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Allegations against Abdul El-Sayed may weaken Democratic prospects in Michigan’s 2026 Senate race."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "raw_line_newline_sha256": "3bc7328c3ee94333f2df096a26d3aafe2afda95259fce2872faa8d496dd88252",
+      "explicitly_requested": true
+    },
+    {
+      "alert_id": "d248f59082c3c21d789833e15150fbe53ad5f4bc",
+      "ts": "2026-10-20T00:09:34Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Abdul El-Sayed Disavows Muslim Brotherhood After Town Hall Heckler In Caro, Michigan: 15 outlets compared - NewsCord",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPR1V5cjZPLTJvc21VdmxxeF92em5GVVdXV2NXNDl3UW5RZkJzemZFd2Vmb25UNzJWVFZiT3E2Y3ZlYVFtTjEySk5senhuVC1PZGMwZXZRQlhoampFOG9Yc2IxbllHZGRHZmhOVXBtLUlNbk5hX0ZVTGJqcDlONU1GcThpbEdyaEZpdmZ2cGNmcFNZN2dLVXBBU3lhMUNxU3RZVHpiZ0NCemE0MnVoQXpjOG5XZjZVLVgxLTk5Wi1DbzF0cGJsMmx1bFFNQ21Tdm5fb0pMS2I5T2EyX3JGM0VITGpBWGJpWGh6UWc?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "The controversy pressures Democratic win odds, modestly confirming the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "raw_line_newline_sha256": "07a94dc744784c4288e518bbea38b507ceb4445432613ed3969fd4215eb87b21",
+      "explicitly_requested": true
+    },
+    {
+      "alert_id": "a099a9ac21f8d5315c10967822b6de06b6ca2a8f",
+      "ts": "2026-10-20T01:07:59Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Green Bay Press-Gazette",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUV9FU1M2ZWZ6RnB1MnhzWGJ3eWhqRUJJVGgxMTRCdlZiRXJkQjRpdVU5QXNMdGVDUzRBaUVQQ0VjRGlwYnlPSGJudGxpVVFweGhVMkRkZ2V3VndRM2N1Wkc3bDFEclJacmZ2U3dzblRQTzcwMlNhSEt2TXUtb2xXQnR6NE5aU01mX3NWRzkzdFhkMmlJR0FhbnpXcGhBUUdLajMySWpUQ3R3WE5ncnYyQnZMTXZvdG5kT0ZOT0R1ZWE3djhwZFBn?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Controversy and defensive messaging pressure the Democratic win thesis, modestly confirming the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "raw_line_newline_sha256": "88ea340419310fa61682cba2664348f92eb886c584c4d75db82a323e61b7ebca",
+      "explicitly_requested": true
+    },
+    {
+      "alert_id": "9dee237d6b85978c9fd9ab4ea2b921ffca8ade97",
+      "ts": "2026-10-20T01:40:10Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Wooster Daily Record",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOU19nbm5wbjIzWGlSMjYtTldjUVpISDFEal9vbkpvcEZNLUNWV2JoZUNhcnQ2MjJIamQtS2JKb3kyd3IyVVE5Y0l3RVB4MEM5M2VJU2N4bWo2UXJyenRVYUF6VVMxdDRjTDhiZWcta005Q0JrVzFUeFFJS1VhNWFNOXFVOF9IZVgzV0J3NjlGWEh0NERGNlh0YjNDbVNyc3NzN3R6X2JGV0dhUVdWeUVjSlFWVmE2b2drXzJBMW9GRF9XUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Candidate clarification may modestly affect Democratic electability, but does not materially change the race thesis."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "raw_line_newline_sha256": "f1e091e6595baaae7d189a2dc0e1a622af627fa7fa3693fc6ed84b2018c889ac",
+      "explicitly_requested": false
+    }
+  ],
+  "source": "notes/news_alerts.jsonl",
+  "limits": "Explicit IDs read regardless journal recency; source/exposure judgments pending root. Fixed window only, no claim later alerts absent."
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "scheduled_tick.publication_validation.v1",
+  "reviewed_utc": "2026-10-20T02:11:26.309864+00:00",
+  "chart_tests": {
+    "command": "node --test tests/performance_chart.test.mjs",
+    "exit": 0,
+    "passed": 10,
+    "failed": 0
+  },
+  "CSV": {
+    "observations": 228,
+    "HEAD_original_observations_preserved": 226,
+    "new_producers": [
+      "2026-10-20T01:40:14Z",
+      "2026-10-20T02:00:30Z"
+    ],
+    "sha256": "a897e8982308bcb7dcfa8439b322614fc0ca24633680b6867952b06822163c24"
+  },
+  "integrity": {
+    "journal_and_revision_ledgers_append_only": true,
+    "changed_DEC_records": [
+      159,
+      243
+    ],
+    "original_DEC243_forecast_and_unresolved_outcome_preserved": true,
+    "all_current_numeric_priors_unchanged": true,
+    "README_current_snapshot_count": 1
+  },
+  "context_packet": {
+    "command": "scripts/context_packet.py --scope portfolio --format json",
+    "exit": 0,
+    "status": "within_declared_validity",
+    "source_mismatches": [],
+    "packet_bytes": 9725,
+    "execution_ready": false
+  },
+  "private_capture_limits": "Raw account/copyright bodies, private runtime, unrelated caches/alerts/drafts excluded. New public facts include corrected sourcefilename, negative unrealized-depth sign, removedtradeUUID and gaspayer attribution; originalraw receipts unchanged.",
+  "execution_scope": "Only local filledreservation reconciliation; no additional financial submission/close/transfer. Source/financial observations keep originaltimes."
+}
