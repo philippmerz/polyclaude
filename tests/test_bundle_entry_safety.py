@@ -719,6 +719,8 @@ def test_claimed_buy_reservation_remains_full_risk_commitment(
 def test_low_level_buy_holds_shared_ledger_lock_through_post(
         tmp_path, monkeypatch):
     monkeypatch.setattr(clob_v2, "REPO_ROOT", tmp_path)
+    # Isolate existing reservation/post semantics from the new entry policy.
+    monkeypatch.setattr(clob_v2, "require_new_buy_allowed", lambda *_: None)
     ledger = tmp_path / ".entry_reservations.json"
     ledger.write_text(json.dumps([{
         "reservationId": "r1", "asset": "token-yes",
@@ -758,6 +760,8 @@ def test_low_level_buy_holds_shared_ledger_lock_through_post(
 def test_low_level_buy_rejects_subdollar_amount_before_claim(
         tmp_path, monkeypatch):
     monkeypatch.setattr(clob_v2, "REPO_ROOT", tmp_path)
+    # Keep this test focused on the amount-before-claim invariant.
+    monkeypatch.setattr(clob_v2, "require_new_buy_allowed", lambda *_: None)
     monkeypatch.setattr(
         clob_v2, "_claim_buy_reservation",
         lambda *_args: pytest.fail("invalid amount must be rejected before claim"),

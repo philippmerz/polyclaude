@@ -1,6 +1,6 @@
 {
   "schema": "finite_goal_progress.v2",
-  "updated_utc": "2026-10-20T09:54:03.792763+00:00",
+  "updated_utc": "2026-10-20T10:36:24.893633+00:00",
   "scope": "Frozen3000 review incomplete. This bounded scheduled follow-up ends after source/cancelverification/publication; no goal lifecycle change, timer or idlecontinuation.",
   "counts": {
     "completed_valuations": 383,
@@ -47,5 +47,12 @@
   "safety": "07:34fullcheckcompletedonce08:07\u201324,requested2alertsverified. Freshaccountandquickstatusforsmallentryfollowup; next10light/14full/earliermaterial.",
   "telegram": "One materialaction/error summary successfully sent; no rawheadlinepings.",
   "monitoring_final": "data/deep_review_20261017/work/news_watcher_cleanup_final_0952.json",
-  "final_verification": "data/deep_review_20261017/work/final_0952_verification.json"
+  "final_verification": "data/deep_review_20261017/work/final_0952_verification.json",
+  "entry_restriction": {
+    "policy": "notes/entry_review_gate.json",
+    "minimum_completed_valuations": 600,
+    "current_completed_valuations": 383,
+    "selection": null,
+    "rule": "No newPolymarketBUY/add/repost/taker/bundle until600fullvaluations plus primarycomparativewinnerselection. Blocked/factual notcount. Existing3bids/holdings management and safeSELL/cancel/redeem remainactive; no early wildcard. All usualexecutiongates remain."
+  }
 }

@@ -289,6 +289,13 @@ def main() -> int:
                    help="explicit correlation cluster for both legs")
     p.add_argument("--execute", action="store_true")
     args = p.parse_args()
+    if args.execute:
+        try:
+            import entry_review_gate
+            entry_review_gate.require_new_buy_allowed()
+        except RuntimeError as exc:
+            print(f"ENTRY PAUSED: {exc}", file=sys.stderr)
+            return 3
     if (args.shares <= 0 or not math.isfinite(args.max_cost)
             or not 0 < args.max_cost < 1):
         p.error("shares must be positive and max-cost must be finite and in (0,1)")
@@ -306,6 +313,9 @@ def main() -> int:
         fingerprint = _pair_fingerprint(early, late)
         legs = [_build_leg(early, "NO", args.shares),
                 _build_leg(late, "YES", args.shares)]
+        if args.execute:
+            for leg in legs:
+                entry_review_gate.require_new_buy_allowed(leg["token"])
         signed = sum(leg["limit"] + leg["fee_at_limit"] for leg in legs)
         if signed > args.max_cost + 1e-9:
             print(f"DECISION: SKIP — signed pair cost {signed:.6f} exceeds "

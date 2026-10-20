@@ -1,6 +1,9 @@
 # Opportunity discovery and evaluation
 
 Use this with [the entry doctrine](00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+The October20 operator restriction pauses new Polymarket BUY bids until600 full
+valuations and a primary comparative selection; research is still authorized.
+Discovery or an attractive individual case cannot bypass that restriction.
 The objective is net compounded return through the January evaluation. Number of
 markets read, number of trades and a quiet scanner are not success measures.
 

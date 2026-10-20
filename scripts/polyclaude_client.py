@@ -40,6 +40,7 @@ from py_clob_client.order_builder.constants import BUY, SELL
 from web3 import Web3
 
 import _paths as _secrets
+from entry_review_gate import require_new_buy_allowed
 
 # ----- constants ----------------------------------------------------------------
 
@@ -250,6 +251,8 @@ class Polyclaude:
         return self._place(token_id, price=price, size=round(shares, 4), side=SELL, gtc=gtc, post_only=post_only)
 
     def _place(self, token_id: str, *, price: float, size: float, side: str, gtc: bool, post_only: bool) -> dict:
+        if str(side).upper() == str(BUY).upper():
+            require_new_buy_allowed(str(token_id))
         order_args = OrderArgs(token_id=str(token_id), price=float(price), size=float(size), side=side)
         order_type = OrderType.GTC if gtc else OrderType.FOK
         signed = self.client.create_order(order_args)

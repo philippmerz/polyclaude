@@ -56,6 +56,8 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
+**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current383valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Existing three bids and holdings remain managed; selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+
 **383 valued /15 blocked /371 factual /2,231 pending;769 base+74 revisions.** Cases451(VA05),452(Hormuz shipping range) and454(Alibaba TextArena) are individually saved and verified. No entry from those three; one common December company-winner model corrects incompatible dated sibling forecasts. No case is active; next455. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase handoff](data/deep_review_20261017/work/goal0022_RESUME.json).
 
 **Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids remain unchanged. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).

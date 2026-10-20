@@ -177,6 +177,23 @@ anything whose only thesis is a headline everyone has.
 
 ## 4. Entry pipeline (every gate is an EV term, in application order)
 
+**Operator restriction, October20: pause all new Polymarket BUY bids until600
+unique full valuations are complete, then compare the candidates and select the
+best opportunities before opening bids.** Count only `valued` cases; pending,
+blocked and factual exclusions do not count. A milestone is not an automatic
+release or an obligation to invest. The primary comparative review must record
+selected exact condition/token identities and a hashed research report in
+[`notes/entry_review_gate.json`](../notes/entry_review_gate.json).
+
+This restriction covers adds, repricing/reposts, maker/taker orders, and each leg
+of a new bundle or pair. The three already-live bids remain managed under their
+existing rules; their later fills are not new order submissions. Research,
+holding management, SELL exits, cancellations and redemptions remain available.
+After selection, every existing identity, evidence, eligibility, fee, liquidity,
+uncertainty, collateral and portfolio gate still applies. Do not use another
+route to evade the pause. This operator restriction takes precedence over
+generic guidance elsewhere to deploy idle capital when an entry clears EV gates.
+
 `scripts/polyclaude_enter.py` is mandatory for every entry. Honest enforcement map:
 #2 (UMA reject) and #5 (robust-edge gate) are HARD BLOCKS in the tool; #1 auto-runs
 but warns rather than blocks; #3 auto-runs ONLY when `--my-p` is omitted — supplying

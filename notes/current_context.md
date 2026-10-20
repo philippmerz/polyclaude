@@ -1,21 +1,23 @@
 ---
-reviewed_at: "2026-10-20T10:26:24.738900+00:00"
+reviewed_at: "2026-10-20T10:41:29.409496+00:00"
 valid_until: "2026-10-20T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 77af4d33db80466234cfa12da5fc217b85b22e715a23f9564d6a0541e0a3ab4a
-  strategy/00_philosophy.md: 03b6e1787daec81f256ad6986385c711808a36d468d3a95fc36b7563bba9c698
+  README.md: ade7c2856c346d47f0ba941bd90e914f613dc21f46d47f2153684493e53c6e8b
+  strategy/00_philosophy.md: 4941f0493b4a4da67fbf5f7afeea5365cc8245c5e040c5c98c3f9383b2731a88
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
-  strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
-  scripts/README.md: d40c216e0d4d59d7eb23e3c6ee2bc4e78187a68a49e2f31117ed58c1c7e469a1
+  strategy/03_opportunity_method.md: d2347f74b5c7cca7e3b2a8f7591b2406daf2baaf396a97be900f7b675a42468c
+  scripts/README.md: 1129bef41443965b47288d08f155a8231879786c1c349d68dbfd7bac9b8403ce
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 0c0655d9299a995274c48d461619460ede22c84c8f6934866a46f2be0c5c07cc
-  notes/resting_orders.md: 9ca4f82d2ac5c2608e61ea78198d921b501c8ab093598bc784f646ed38448cdd
-  notes/journal.md: 5e77c49e62273929cc36688d7c513c5ef69d85b024cb0f81cec48dadc410f4b5
+  notes/backlog.md: 5f8908bdfbe1015470e471288404e8e582aa054d7b9dcff75dd34a1ef3f5139a
+  notes/resting_orders.md: 3820f25ba173e49e6bffe874ff7f104a9d6f258f4d3a2d624acbe5ee569ae287
+  notes/journal.md: 638c6f35f9fbc6f4f429caa23d7eeef25a2819798e8e45ab5d0d833367449d5f
 ---
 
 ## Completed check / next boundary
+
+**New BUY bids paused until600 full valuations plus primary comparative winner selection (DEC247).** Current383; blocked/factual do notcount. No earlywildcard/add/reprice/repost/taker/bundle. Existing3bids/holdings and SELL/cancel/redeem management remainactive. Pause persists past thishandoff expiry; no automaticrelease at600. [Policy](entry_review_gate.json) · [94tests/actual383gate](../data/deep_review_20261017/work/entry_pause600_verified.json).
 
 **10:22periodic complete:10:24auth3originalbids/127trades/9indexed quantities unchanged; no newernewsrows at10:23read.** No newfinancial/source mark or numericalforecast change. [Reconciliation](../data/deep_review_20261017/work/periodic1022_root_verification.json). Prior09:10full11steps/requestedMI4b60+related/opposing stories completed once from09:57. [Check](../research/2026-10-20-091017-checkin.md).
 
@@ -30,7 +32,7 @@ Next existing14UTC full/earlier material event; this check also covers10light. W
 - ME02(DunlapD/LePageR)10YES38c/3.80;CA06(PanD/KileyNPP)50NO3c/1.50;NY01(GallantD/LaLotaR)10YES12c/1.20. Keeporiginalpilots/noadd/chase/repost/taker;selectedunconditional51/5/21%,allfailunmeasured2×adversefillstress. Cancel-first unassessedmaterialfacts/knowncatalystpull; reviewnotexpiry. [Exact identities](resting_orders.md).
 - Kimi412/DEC24310YEScost1.20: central34.02125/selected19.02125/broad8–80. OR1125NOcost3.25:88/73/broad20–99.5. MI18385NOcost1.55:44/34/broadlow20. Messi2105YEScost1.35:60/40/broad20–90. Retain/noadd; broadlowfavorssale. AI4.45cost/MIplusfullbids8.05canalllose; nohedgecredit. HiddenKimi no makerSELLat/belowfair; thesis-breakexitavailable. [Current portfolio judgment](../data/deep_review_20261017/work/tick091017_primary_portfolio_judgment.json).
 - Clarity29YES>50+29NO>58/cost28.32893: managewhole/noadd; conditional29floor/58middle, venueoracle0possible. BeforeJan1 firstfinalpassage, notcloture/Jan2metadata. Trump.33NOdust; Whale6NO0payout/full1.02loss/no burn/recovery. SeparatelegacyGeminiuncertain; no eligiblewinningredemption.
-- Anthropic14/DEC245 stayscanceledzero-filled:09:45terminalCANCELED0/associated0/trades/index/bothCTF0/cashproof;09:46onlytargetreservationretired4→3. Current09:57detail200/null isnotfreshterminalproof. Priorforecastsretired/preserved;tempfeed/twotermsremoved, normal09:52statewriteproved. No automaticrepost. [Closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json). Read actual feedwarmup beforeanyposting; pre-exposure researchsuppressiondoesnotclearcatalysts.
+- Anthropic14/DEC245 canceled0-filled,09:45terminal/trade/index/CTF/cashproof;09:46onlytargetreservationretired4→3.09:57detail200/null isnotfreshterminalproof. Priorpreserved/temporarycoverage retired; no automaticrepost. [Closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json). Read actual feedwarmup beforeanyfutureposting.
 
 ## Sources / research
 

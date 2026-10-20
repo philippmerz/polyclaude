@@ -2245,6 +2245,15 @@ def _bundle_entry(args: argparse.Namespace) -> int:
             "tick": tick if tick > 0 else 0.01,
         })
 
+    if args.execute:
+        try:
+            import entry_review_gate
+            for leg in legs:
+                entry_review_gate.require_new_buy_allowed(leg["token"])
+        except RuntimeError as exc:
+            print(f"ENTRY PAUSED: {exc}", file=sys.stderr)
+            return 3
+
     if len({leg["market_id"] for leg in legs}) != len(legs):
         print("ERROR: duplicate market IDs in bundle", file=sys.stderr)
         return 2
@@ -2784,6 +2793,13 @@ def main() -> int:
     if args.max_price is not None and not 0.0 < args.max_price < 1.0:
         print("ERROR: --max-price must be in (0,1)", file=sys.stderr)
         return 2
+    if args.execute:
+        try:
+            import entry_review_gate
+            entry_review_gate.require_new_buy_allowed()
+        except RuntimeError as exc:
+            print(f"ENTRY PAUSED: {exc}", file=sys.stderr)
+            return 3
     if args.bankroll is None:
         args.bankroll = _bankroll_default()
     if args.bundle_slug:
@@ -2844,6 +2860,16 @@ def main() -> int:
         tick = 0.01
     if tick <= 0:
         tick = 0.01
+
+    if args.execute:
+        try:
+            selected_token = no_token if args.side == "NO" else yes_token
+            if selected_token is None:
+                raise RuntimeError("candidate has no exact outcome token")
+            entry_review_gate.require_new_buy_allowed(str(selected_token))
+        except RuntimeError as exc:
+            print(f"ENTRY PAUSED: {exc}", file=sys.stderr)
+            return 3
 
     print(f"\nMarket: {question}")
     print(f"  slug: {slug}")

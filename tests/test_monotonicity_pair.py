@@ -13,6 +13,14 @@ from monotonicity_pair import validate_pair_markets
 import polyclaude_enter as entry
 
 
+@pytest.fixture(autouse=True)
+def isolate_pair_safety_checks_from_operator_pause(monkeypatch):
+    # These tests exercise exposure/fill/rollback behavior after entry authority.
+    # The dedicated entry-review route tests assert the operator pause itself.
+    import entry_review_gate
+    monkeypatch.setattr(entry_review_gate, "require_new_buy_allowed", lambda *_: None)
+
+
 def market(threshold: int, *, source: str = "https://example.test/rules",
            end: str = "2026-12-31T23:59:00Z", comparator: str = "or lower",
            subject: str = "yield") -> dict:

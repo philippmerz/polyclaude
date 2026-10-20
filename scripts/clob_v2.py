@@ -39,6 +39,7 @@ from eth_account.messages import encode_typed_data
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _paths as _secrets
+from entry_review_gate import EntryReviewGateError, require_new_buy_allowed
 
 _secrets.install_scrubbing_excepthook()
 REPO_ROOT = Path(__file__).resolve().parent.parent
@@ -279,6 +280,8 @@ def _signed_order_to_api_body(signed: dict) -> dict:
 def post_order(signed_order: dict, *, order_type: str = "GTC", post_only: bool = False,
                defer_exec: bool = False) -> dict:
     """POST a signed v2 order and resolve async trade IDs when possible."""
+    if signed_order.get("side") == SIDE_BUY or str(signed_order.get("side") or "").upper() == "BUY":
+        require_new_buy_allowed(str(signed_order.get("tokenId") or ""))
     address, _ = _load_wallet()
     creds = _load_creds()
     body = {
@@ -1209,6 +1212,11 @@ def _check_neg_risk(token_id: str) -> bool:
 
 
 def cmd_buy(args):
+    try:
+        require_new_buy_allowed(str(args.token_id))
+    except EntryReviewGateError as exc:
+        print(f"BUY blocked: {exc}", file=sys.stderr)
+        return 3
     reservation_lock = _acquire_reservation_lock()
     try:
         # The venue rejects marketable BUYs whose collateral amount is below

@@ -1,0 +1,9 @@
+{
+  "schema": "polyclaude.entry_review_gate.v1",
+  "minimum_completed_valuations": 600,
+  "selection": null,
+  "operator_directive_date": "2026-10-20",
+  "count_basis": "completed unique full valuations in the canonical deep-review index; factual exclusions, pending and blocked reviews do not count",
+  "scope": "All new Polymarket BUY orders, including adds, repricing/reposts, maker/taker and bundles. Existing orders and holding/cancel/sell/redemption management remain active.",
+  "release": "Reaching600 alone does not release the pause: complete a primary comparative review, record selected exact condition/token identities and a hashed research report, then apply every existing live execution gate."
+}

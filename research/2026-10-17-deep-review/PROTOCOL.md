@@ -4,6 +4,34 @@ Read [RESUME.md](RESUME.md), then `.venv/bin/python scripts/deep_review_resume.p
 
 ## Scope and selection
 
+**October20 operator entry restriction:** no new Polymarket BUY bids until600
+unique full `valued` cases are complete, followed by a primary comparative
+selection of the best candidates reviewed so far. Blocked reviews and factual
+exclusions stay separate. Reaching600 alone does not authorize an order; record
+the comparison and exact selected tokens in
+[the entry policy](../../notes/entry_review_gate.json), then apply every current
+execution gate. No earlier wildcard entry, add, repost, taker or bundle bypass.
+Existing bids/holdings retain their management rules; research and safe exits
+continue. Keep per-case persistence and the finite queue independent of this
+entry restriction.
+
+After600, compare the reviewed candidates using fresh source/criteria checks,
+both-side executable economics, uncertainty, time to settlement, conditional
+maker-fill risk and the current portfolio. Historical edge estimates alone are
+insufficient; selection may conclude that no bid is justified. Preserve the
+comparison as a small research report. The policy's `selection` is initially
+`null`; a completed selection uses:
+
+```json
+{"reviewed_utc":"<actual aware UTC time>","completed_valuations":600,
+ "report":"research/<comparative-report>.md","report_sha256":"<SHA256>",
+ "targets":[{"condition_id":"<exact valued condition>","token_id":"<selected outcome token>"}]}
+```
+
+The offline gate verifies count consistency, the report hash and selected token
+membership; it cannot certify the quality of the comparison or live eligibility.
+Do not populate this structure before the milestone or merely to release capital.
+
 The authorization is a finite in-depth review of the full frozen 3,000-condition universe. Work in original index order; preserve each condition, market, token, literal criterion, and fingerprint. All cases remain eligible regardless of title, old model labels, price, liquidity, or cheap-model output. Small models and factual collectors cannot reject, rank, set probabilities, or choose investments. Primary review owns interpretation, forecasts, and investment conclusions.
 
 Read the complete rule before analysis. Copy case identities programmatically from the frozen universe; check complete token strings, not shortened or manually transcribed IDs. Preserve an erroneous source unit and append a correction before relying on it. Exclude only for an objective fact that makes the exact contract ineligible or unreachable within the project horizon, such as a resolved/closed event with no remaining route. Record the exact reason and source. A high price, thin book, research difficulty, or related market result is not sufficient. Inaccessible evidence is a gap unless the contract itself is objectively impossible to evaluate. Shared family research is permitted only when the relationship is demonstrated; index each condition and do not count shared evidence as independent forecasts.

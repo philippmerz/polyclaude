@@ -1,5 +1,5 @@
 {
-  "next_id": 247,
+  "next_id": 248,
   "decisions": [
     {
       "id": 1,
@@ -5399,6 +5399,26 @@
       "calibration_delta": "Not a probability forecast; deterministic audit behavior verified.",
       "lesson": "Read lifecycle metadata before declaring a prior orphan. Preserve dated forecasts after an unfilled cancellation; incomplete retirement metadata must still receive pending-inventory checks.",
       "resolved_at": "2026-10-20T10:09:50Z"
+    },
+    {
+      "id": 247,
+      "timestamp": "2026-10-20T10:33:54Z",
+      "type": "strategy_change",
+      "thesis": "Operator-directed pause on new Polymarket BUY bids until600 unique full valuations are complete, followed by a primary comparative review selecting exact winning candidate tokens. Count only valued cases; retain current holdings and three existing bids under their management rules. No automatic release at the count threshold and no exception for adds, repricing, reposting, takers or bundles.",
+      "confidence": "high",
+      "prediction": "Before600 valuations or without a valid selected-winner review, new BUY execution fails before reservations, signing or submission; SELL, cancellation and redemption remain available. After600, only selected exact tokens can proceed through all existing gates.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "operator-policy",
+        "entry-gate",
+        "comparative-review"
+      ],
+      "slug": null,
+      "outcome": "Implemented policy600/fullvaluations plus recorded comparative winner tokens across all in-repository BUY writers and execution CLIs. Current offline gate independently reports383/600 and selectionunset.94focused gate/reservation/pair tests pass, including blocked/factual/pending targets and both-leg-before-account checks. No financial action; existing holdings/bids retain management.",
+      "calibration_delta": "Operator policy and deterministic execution behavior, not a market probability forecast.",
+      "lesson": "Persist operator entry restrictions in execution paths and compact handoffs. Milestone count alone must not grant entry, and a selected bundle requires every exact token before leg one. Keep exits and cancellation available.",
+      "resolved_at": "2026-10-20T10:40:18Z"
     }
   ]
 }

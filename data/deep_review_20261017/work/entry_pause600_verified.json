@@ -1,0 +1,32 @@
+{
+  "verified_utc": "2026-10-20T10:41:29.409496+00:00",
+  "policy": "notes/entry_review_gate.json",
+  "policy_sha256": "afb97a92be3c439c8a16809534e0cb57048131caedc89501aa3d98cbf8e95c8e",
+  "count_source": "notes/deep_review_checkpoint.json",
+  "canonical_index": "research/2026-10-17-deep-review/index.csv",
+  "current_completed_valuations": 383,
+  "minimum_completed_valuations": 600,
+  "selection": null,
+  "actual_offline_gate_result": "entry review gate: 383/600 completed valuations; new BUYs blocked",
+  "tests": {
+    "command": ".venv/bin/python -B -m pytest -q tests/test_entry_review_gate.py tests/test_entry_review_gate_routes.py tests/test_bundle_entry_safety.py tests/test_monotonicity_pair.py",
+    "passed": 94,
+    "note": "Existing pair/reservation tests explicitly isolate this policy to keep exercising their original safety contracts; dedicated route tests prove policy blocks before venue/account calls and all legs are selected before any account/reservation step."
+  },
+  "scope": "New BUY bids/adds/repricing/reposts/maker/taker/bundles/pairs; exact selected outcome token required after600 plus comparative selection. Regular execution gates still required.",
+  "unchanged": "Existing bids/holdings/reservations/priors; SELL/cancel/redemption/research previews remain available. No financial call or order made by this policy task.",
+  "independent_code_review": "Second bounded read-only review found no consequential in-repository BUY bypass; external direct signing/manual venue actions are outside this local guard.",
+  "telegram": "One authenticated operator reply sent through documented sender; private message envelope not copied to tracked files.",
+  "source_hashes": {
+    "scripts/entry_review_gate.py": "ef5dbc0254a187a37cd56424a788fcd85ee1321bc71894ccc035cfd95e8755e1",
+    "scripts/clob_v2.py": "26502081ca45fb2482a107fea03c628c3b983de783b01860f0ecbb71758768be",
+    "scripts/polyclaude_client.py": "fdc2855a6f3c1c388620fe6486f2725bef816980e0b11c5a5a8dd4fa46c77830",
+    "scripts/polyclaude_enter.py": "e5078e043f1279d4b2cf364cfcd95943487628cda7ee276dc82930e199bc694e",
+    "scripts/monotonicity_pair.py": "e648b3cd751dfda97bc6e6f5316e8d05c1664f912ff0571927733e2c27e7b680",
+    "tests/test_entry_review_gate.py": "767dd2eccb4496072b7a76195f8b5db2983859d079561aabeacceb7182d564d9",
+    "tests/test_entry_review_gate_routes.py": "59d382bbc2edd2ef3de78b5a22e0dca9798ff59577ad22e98c4779389e116880",
+    "tests/test_bundle_entry_safety.py": "013ecfd6f062cd4aaf95e2017d8c9b0a6706e1df21beeb924838e11453b0ad3b",
+    "tests/test_monotonicity_pair.py": "cac0e330d4e3109ef1cc134a5cb8ebb2c7e3a12454b65f8dc8ab55bf73196b97"
+  },
+  "daemon_scope": "No daemon script was edited; inspection found no in-daemon BUY writer. News watcher imports only the unchanged read-only pending-commitment reader. No restart or watcher/poll was added."
+}

@@ -1,5 +1,7 @@
 # Current resting orders — October20 10:24 UTC
 
+**October20 entry pause:** no new BUY bid, add, repricing/repost, taker or bundle until600 full valuations and primary winner selection. These three existing bids remain managed; no automatic cancellation or new order. Exits/cancels/redemptions remain available. [Policy](entry_review_gate.json).
+
 **Three original BUYs remain LIVE/zero matched, committing $6.50.** Candidate14/DEC245 was briefly posted5NO49c/$2.45, then canceled09:39:38 before any fill. After300s exactterminal/trades/index/CTF/cash checks confirmed zero exposure; only its reservation retired4→3. Kimi412 remains a filled holding. [Candidate closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json) · [Source/action record](../research/2026-10-20-anthropic-arena-order.md).
 
 |Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
