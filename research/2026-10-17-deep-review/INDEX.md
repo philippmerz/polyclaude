@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T17:44:03.070738+00:00
+Updated: 2026-10-20T18:50:38.284707+00:00
 
-**403 valuations saved; first milestone100:** 403 valued; 17 blocked after in-depth review. 383 factual exclusions separately; 2197 pending.
+**405 valuations saved; first milestone100:** 405 valued; 19 blocked after in-depth review. 383 factual exclusions separately; 2193 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -501,7 +501,11 @@ Each report below is written before moving to the next evaluation. Related contr
 |487|[Will Vladimir Fedoseev finish in the Top 8 of Titled Tuesday on October 20?](evaluations/0487.md)|blocked_after_review|Case-specificblocked_after_review; no probability/valuationcredit. No fullgoal methodblock.|
 |488|[Will KLA Corp (KLAC) Q1 total revenues be above $4B?](evaluations/0488.md)|valued|Bothselectedtakersnegative; NOsmallcentralupside.5cbidmakerNOpaperpositivebutconditionalfillunmeasured, onlyprovisionalrouteleadfor600comparison. Noentrycertified.|
 |489|[UFC Fight Night: Tanner Boser vs. Jhonata Diniz (Heavyweight, Prelims)](evaluations/0489.md)|excluded_factual|Factualexclusionexactterminalvenue, not fullvaluation or fightresultclaim.|
+|490|[Will LeBron James be the #1 searched person on Google in the US this year?](evaluations/0490.md)|valued|Bothselectedoutcomesnegative;500YESwalkcentralpositive but highlyunfittedtail/selectedloss, staleat-receiptbooks and noconditionalfillproof. No entry; studycountsvaluationonly.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|492|[Will the Republicans win the Wisconsin governor race in 2026?](evaluations/0492.md)|valued|ProvisionalRYES21cselected+0.15on1.05 underprimaryp34; crediblemodelcountercasefailsevencentral. Furthercomparative/sourceworkneeded;600gate/noBUY.|
+|493|[Will Trump be impeached by December 31, 2026?](evaluations/0493.md)|blocked_after_review|Blockedsourcegap afterindepthrule/institutionalreview; nofullvaluationcredit/rejection/globalgoalblock.|
+|494|[United Airlines (UAL) Q3 consolidated passenger load factor 85%+?](evaluations/0494.md)|blocked_after_review|Case-specific information gap; not a rejection, completed valuation, global block or trade.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
@@ -815,5 +819,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 490

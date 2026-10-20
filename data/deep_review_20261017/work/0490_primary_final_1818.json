@@ -1,0 +1,163 @@
+{
+  "review_index": 490,
+  "market_id": "3251334",
+  "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+  "criteria_sha256": "06ce779c68535deea4aa3e7591da8bd1ac013fbfcb333fd2c45b4622f44a60b9",
+  "status": "valued",
+  "literal_analysis": "Exactofficial2026USPeople#1, notGlobalAthletes/absolutevolume; earlylistresolution elseOtherMar31,2027ETfallback. NormalDecemberroutecouldfitJanuary, fallbackAprilrisk. Fullrule and exactorderedassetsverified.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-20T00:12:03.677406Z",
+      "finding": "Official2025fastestincrease/sameperiodcomparison/PeoplevsPassings;2026methodnotverified."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2018/us/",
+      "observed_utc": "2026-10-20T17:46:46.870468Z",
+      "finding": "PeopleDemiLovato/AthletesTristanThompsonfirst;LeBronabsentboth10, singleanalogyonly."
+    },
+    {
+      "url": "https://www.nba.com/sixers/news/philadelphia-76ers-sign-4x-nba-champion-and-22x-all-star-lebron-james",
+      "observed_utc": "2026-10-20T17:46:48.948612Z",
+      "finding": "FirstpartyJSONLDJuly27signingdescription, notrenderedfullbody or Googlegrowth."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/us/",
+      "observed_utc": "2026-10-20T17:35:04.864246Z",
+      "finding": "404 exactrequest, notabsenceelsewhere/future."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.035,
+    "low": 0.002,
+    "high": 0.3,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted primary eventtree for the exactUSPeople firstplace outcome; not a search-volume/rankmodel or empirical base-rate. Fame/sportsperformance/marketprice do not set p.",
+    "reasoning": "Independent90/6/4regimes include ordinaryknownmove, unseenexistingbreakout andfuturemajorcrossover; sourcecalibrationlimits and compatibleknownsinglewinnercoupling explicit. Raw3.4692rounded3.5; no marketpricefit.",
+    "model": "research/2026-10-17-deep-review/models/0490_lebron_primary_1810.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0490_quotes_1816_revalidated.json",
+    "quote_file_sha256": "854e2296994d323c5fd559eaffb6d6d4ddd53d8518552d3a4cb9adb772463aae",
+    "quote_capture_utc": "2026-10-20T18:09:23.652745+00:00",
+    "gamma_received_utc": "2026-10-20T18:09:23.524206+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 50.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.035,
+        "selected_stress_probability": 0,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792519500727",
+        "book_received_utc": "2026-10-20T18:09:23.651869+00:00",
+        "book_age_seconds_at_receipt": 262.92486906051636,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.02,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.002
+              }
+            ],
+            "net": 0.02
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.01,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.01
+          }
+        },
+        "taker_cost_usd": 0.02,
+        "central_expected_profit_usd": 0.33,
+        "selected_stress_profit_usd": -0.02,
+        "break_even_before_carry": 0.002,
+        "break_even_constant_carry": 0.002008657748594044,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.965,
+        "selected_stress_probability": 0.865,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792519500727",
+        "book_received_utc": "2026-10-20T18:09:23.651869+00:00",
+        "book_age_seconds_at_receipt": 262.92486906051636,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.99
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.98,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.998
+              }
+            ],
+            "net": 9.98
+          }
+        },
+        "taker_cost_usd": 9.99,
+        "central_expected_profit_usd": -0.33999999999999986,
+        "selected_stress_profit_usd": -1.3399999999999999,
+        "break_even_before_carry": 0.999,
+        "break_even_constant_carry": 1.003324545422725,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Bothselectedoutcomesnegative;500YESwalkcentralpositive but highlyunfittedtail/selectedloss, staleat-receiptbooks and noconditionalfillproof. No entry; studycountsvaluationonly.",
+  "reopen_condition": "Actual2026Googlemethod/list/relativegrowth, substantialqualifyingpersonalnews or supportablefair/costchange; revalidatecurrentexecutiongates, maintain600pause.",
+  "report_markdown": "# 490 LeBron James — U.S. People first place; subjective tail upside, selected case fails\n\n**YES3.5% / NO96.5%; broadYES0.2–30%,10pp class reserve.** SelectedYES0/NO86.5%. This is an unfitted primary forecast, not a measured Google rank. At the dated10-share asks YEScost0.02/central+0.33/selected−0.02; NOcost9.99/central−0.34/selected−1.34. No selected-positive route or entry recommendation;403→404 valuation credit only, BUYpause600+comparison unchanged.\n\nFull literal rule: Google's official **2026 UnitedStates People #1**, regardless of navigation. GlobalAthletes, overallqueries, sports fame and absolute volume do not answer it. Early resolution when the specified list appears; no list by **Mar31,2027 23:59ET =>Other=>thisNO**. GammaDec31expiry is not that fallback. NormalDecemberpublication may fit January; missing/delayed list can lock until April.50d normal/165d fallback carry are sensitivities, not guaranteed redemption. Exact frozen tokens/condition/fullrulehash copied programmatically; currentGamma matches and is open/accepting.\n\n[Sources](../../../data/deep_review_20261017/work/0490_facts_1740.json) and [root read](../../../data/deep_review_20261017/work/0490_primary_source_read_1810.json): official2025 method measures fastest interest increase Jan1–Nov25 against the prior same period, not absolute searches. Exact2026 method/cutoff/current growth cohort are unverified. Current2026 route404 proves only that request failed. Official2018 U.S. People list begins DemiLovato; Athletes begins TristanThompson; LeBron appears in neither top10 despite a documented Lakers move. One qualitative analogy, not a causal estimate or individual base rate. OfficialSixers July27,2026 JSONLD headline/description reports his signing; June30 NBA item attributes another-season intent to his agent. Root did not obtain a full rendered signing narrative or personal/current-health statement. Neither source establishes search growth. [2018/context](../../../data/deep_review_20261017/work/0490_historical_context_1750.json) has a copied gzip digest corrected in a [separate preserved erratum](../../../data/deep_review_20261017/work/0490_source_hash_correction_1754.json); raw identity verified. Existing Trends429 was not retried.\n\n[Pre-quote model](../models/0490_lebron_primary_1810.json) / [generator](../models/0490_people_generator_1810.py): published-list regimes90%ordinary×0.6%first,6%unseen existing major breakout×20%,4%future major alive-person crossover×45%; ×98%publication =3.4692%, rounded3.5%. The known team move belongs in ordinary, not a second future-event bonus. Unknown earlier2026 news is explicit, not an absence claim. Death does not automatically belong in People under2025's separate Passings list;2026 policy could differ. Masses and conditional win chances are judgment, not fitted to historical winners. Ordinary-only gives0.588%; future-storymass10% gives6.08%. Larger missing-story/method scenarios support the broad range. The historical/current evidence supports cautious novelty reasoning, not these numeric parameters' calibration.\n\nCentral winner masses can coexist: Combs77 .05 +Clancy224 .40 +Ohtani418 .0301154 +LeBron490 .035 +otherpublished .4648846 +missinglist .02=1. This is a compatible allocation, not an estimated joint forecast. Nancy328 remains unpriced/blocked, not0; unreviewed siblings remain unreviewed. No implication to heldMessi's GlobalAthletesTop5; shared attention/platform/source risk remains.\n\n[Quotes](../../../data/deep_review_20261017/work/0490_quotes_1816_revalidated.json) / [math](../../../data/deep_review_20261017/work/0490_economics_1816.json): **500YES actually walks458.69@0.002 +41.31@0.009, fee0, total1.28917**; central+16.21083, selected−1.28917, broadlow0.2% payoff1.00 =>−0.28917. It is not500×bestask. Full stake can lose (central96.5%); gas/funding/carry make the selected case worse.10NO is the opposite-side comparison;500NOcost499.50 exceeds project capital and is not an intended ticket. Hypothetical1000YES maker@0.001 costs1.00, central+34/selected−1 before fill/carry; unknown queue, fill probability and conditional fair invalidate any unconditional-profit entry claim. At captured cached3.2035% variableAPY,1.28917 alternative earns roughly0.00558/0.01851 over50/165d if constant; not a forecast or guaranteed funding route.\n\nInitial18:07 packet had structuredGamma5% versus compactfd0 and was quarantined. [Paired recheck](../../../data/deep_review_20261017/work/0490_fee_recheck1815.json) and a new complete packet both show explicit structured0/compact0 with matching ordered tokens. No old packet was edited or missing fee assumed zero; future action revalidates fees. **Both books were262.92s old at receipt, exceeding180s**, so these are dated planning walks, not current executable certification. No freshness gate bypass or packet timestamp refresh. Fee5% sensitivity on500YES adds about0.06420 and cannot repair selected loss.\n\nKnown470AllstateNO/480IranNO/486meetingNO remain provisional alternatives at different source/quote clocks; cash and dated18UTCheld-risk comparisons also compete. This small-p/high-payoff forecast cannot win an allocation by central return alone. Reopen on verifiedGoogle2026 methodology/list or relative-growth evidence, a substantial qualifying personal event, or independently supported fair/cost changes; later entry still needs600+primary selection and every live lawful venue/funding/exposure gate. No trade, prior update, watcher or Telegram from this case.\n"
+}

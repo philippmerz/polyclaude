@@ -1,0 +1,162 @@
+{
+  "review_index": 492,
+  "market_id": "629721",
+  "condition_id": "0xd66eadbd64b3e815e31c7994470b44fe15c7ef1146f78937d0cfaa4c04fcfda7",
+  "criteria_sha256": "9ae126f7b118b3b82d2a559d5080572a06240f544a30e2bae7df919c97525e24",
+  "status": "valued",
+  "literal_analysis": "Republicannomineewinner; independent/replacementclauses, AP/Fox/NBCagreeelseofficialcertification, nofixedmetadata deadline. NOanynonRwinner. Fullrule/exacttokenscurrentmatch.",
+  "evidence": [
+    {
+      "url": "https://law.marquette.edu/poll/2026/09/30/mlsp91-press-release/",
+      "observed_utc": "2026-10-20T18:00:09.387624Z",
+      "finding": "PrimarySep16–23LV49D46R/RV46D45R fromsamepoll, turnout/favorability/undecidedtables; population/fielddate limitationsexplicit."
+    },
+    {
+      "url": "https://urbanmilwaukee.com/pressrelease/new-wisconsin-poll-crowley-leads-tiffany-46-to-42-in-governors-race/",
+      "observed_utc": "2026-10-20T18:00:08.313521Z",
+      "finding": "Sponsor-releasedYouGovSep22–Oct9adults46D42R;1715item/2000total, notRV/LV, governorMOEunquantified."
+    },
+    {
+      "url": "https://elections.wi.gov/memo/2026-election-calendar-available",
+      "observed_utc": "2026-10-20T18:00:31.290773Z",
+      "finding": "403officialcalendarrequest; notnominee/calendarverification orabsenceproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34,
+    "low": 0.12,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted65/25/10normalfinalDminusRmarginmixture;1%other-winnerallowance; no nationalgenericballot or price-derivedprobability.",
+    "reasoning": "TwoD-leadingpolls withdifferentpopulations/fielddates, overlappingcuts/turnout/favorabilityuncertainty. Source-basedcompetitiveelectionjudgment notcalibration. CountermodelR16.31 andmean-shiftscanreverseedge; provisionalnotcertified.",
+    "model": "research/2026-10-17-deep-review/models/0492_wisconsin_primary_1820.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0492_quotes_1821.json",
+    "quote_file_sha256": "657d03e82b3bd67caba44f2d7fe713284712966cd9675f623ae7f98d63ec0fb0",
+    "quote_capture_utc": "2026-10-20T18:17:20.269099+00:00",
+    "gamma_received_utc": "2026-10-20T18:17:20.137520+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 21.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.34,
+        "selected_stress_probability": 0.24000000000000002,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792520238879",
+        "book_received_utc": "2026-10-20T18:17:20.268224+00:00",
+        "book_age_seconds_at_receipt": 1.3892240524291992,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.05,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.21
+              }
+            ],
+            "net": 1.05
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.2
+              }
+            ],
+            "net": 1.0
+          }
+        },
+        "taker_cost_usd": 1.05,
+        "central_expected_profit_usd": 0.6500000000000001,
+        "selected_stress_profit_usd": 0.15000000000000013,
+        "break_even_before_carry": 0.21000000000000002,
+        "break_even_constant_carry": 0.21038132849267482,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6599999999999999,
+        "selected_stress_probability": 0.5599999999999999,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792520238879",
+        "book_received_utc": "2026-10-20T18:17:20.268224+00:00",
+        "book_age_seconds_at_receipt": 1.3892240524291992,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.8
+              }
+            ],
+            "net": 4.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.95,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.79
+              }
+            ],
+            "net": 3.95
+          }
+        },
+        "taker_cost_usd": 4.0,
+        "central_expected_profit_usd": -0.7000000000000002,
+        "selected_stress_profit_usd": -1.2000000000000002,
+        "break_even_before_carry": 0.8,
+        "break_even_constant_carry": 0.8014526799720946,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalRYES21cselected+0.15on1.05 underprimaryp34; crediblemodelcountercasefailsevencentral. Furthercomparative/sourceworkneeded;600gate/noBUY.",
+  "reopen_condition": "Actualnewerstatepoll/turnout/ballotfacts, defensiblemargin-errorrevision orsupportablecostchange; freshquotes/fees/funding/portfolio and600selection beforeanyentry.",
+  "evaluated_utc": "2026-10-20T18:23:42.316032+00:00",
+  "question": "Will the Republicans win the Wisconsin governor race in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 492,
+  "report_sha256": "35eef08c186e130fe9a232c2b283fe707903f2b2570810c7a273c8b1cfa59b71"
+}

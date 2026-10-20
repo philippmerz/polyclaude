@@ -1,0 +1,48 @@
+{
+  "schema": "deep_review.case_factual_followup.v1",
+  "case_index": 493,
+  "retrieved_utc": "2026-10-20T18:19:10.091179+00:00",
+  "sources": [
+    {
+      "name": "hres939",
+      "url": "https://www.congress.gov/bill/119th-congress/house-resolution/939",
+      "status": 403,
+      "intent": "logs/cron20261020T1825Z_case0493_hres939/hres939.intent.json",
+      "receipt": "logs/cron20261020T1825Z_case0493_hres939/hres939.receipt.json",
+      "body_gzip": "logs/cron20261020T1825Z_case0493_hres939/hres939.body.json.gz",
+      "retrieved_utc": "2026-10-20T18:18:52.321537Z",
+      "raw_sha256": "02c5422df6c9dd120aeea63fdc6a2dd37d323e980a8d0b3ffb4598c5b2ebe5cd",
+      "gzip_sha256": "59645b27e2c386ff0e742e043e8036c09223f88b67a0270fa667cc261b4c9a3f",
+      "hashes_verified": true,
+      "body_result": "403 returned “Just a moment… Enable JavaScript and cookies to continue”; no bill/search content."
+    },
+    {
+      "name": "impeachment_search",
+      "url": "https://www.congress.gov/search",
+      "status": 403,
+      "intent": "logs/cron20261020T1825Z_case0493_impeachment_search/impeachment_search.intent.json",
+      "receipt": "logs/cron20261020T1825Z_case0493_impeachment_search/impeachment_search.receipt.json",
+      "body_gzip": "logs/cron20261020T1825Z_case0493_impeachment_search/impeachment_search.body.json.gz",
+      "retrieved_utc": "2026-10-20T18:18:52.414369Z",
+      "raw_sha256": "d434b9b6f7c4654cdf872c95e5819e52d2ddda5ed3b572520ac5578b6926765f",
+      "gzip_sha256": "329945db04913a8f96e5afc8f9cffceaa31f66c20c78a34e1084c38c18ea00ed",
+      "hashes_verified": true,
+      "body_result": "403 returned “Just a moment… Enable JavaScript and cookies to continue”; no bill/search content."
+    }
+  ],
+  "findings": [
+    {
+      "source": "Official Clerk Roll Call 322, https://clerk.house.gov/evs/2025/roll322; captured source referenced at logs/cron20261020T1800Z_case0493/roll322.receipt.json",
+      "time": "2025-12-11",
+      "fact": "H.Res.939 impeachment resolution roll call asked “On Motion to Table”; motion passed 237-140, 47 present, 9 not voting. This establishes that procedural vote, not passage of articles.",
+      "limit": "No later H.Res.939 status independently obtained in this follow-up."
+    },
+    {
+      "source": "Official House.gov schedule, https://www.house.gov/legislative-activity; captured at logs/cron20261020T1800Z_case0493/house_schedule.receipt.json",
+      "fact": "Page note says a new Congress begins at noon Jan 3 of each odd-numbered year after general election, unless it designates another date by law. Thus Nov election day is not itself the listed new-Congress start date; Jan 3, 2027 is the general-rule date for the next Congress.",
+      "limit": "Generic explanatory note, not a separately verified 2027 House calendar or check for a different designation by law."
+    }
+  ],
+  "search_coverage": "Direct official Congress.gov GETs for the H.Res.939 record and a 119th-Congress “impeach Trump” legislation search both returned HTTP 403 challenge pages. Therefore this follow-up does not establish current H.Res.939 legislative status, whether newer 2026 articles were introduced, whether any qualifying passage occurred, or universal absence. Do not infer those facts from the blocked search.",
+  "scope": "No probability, rank, verdict, ledger change, or action."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "polyclaude.storage_integrity.v1",
+  "verified_utc": "2026-10-20T18:31:40.741128+00:00",
+  "action": "IncrementallooseGitobjectrepack(-d -l), onepackthread/windowMemory32m; no prune/reflogexpiry/aggressive/fullpack rewrite. Only redundantlooseobjects removed afterpacking; originalcontentobjectIDs retained.",
+  "baseline_head": "58c6663d7f67b0be1fe8608b7b4a470c4e4657ae",
+  "refs_worktree_index_controls_unchanged": true,
+  "controls_count": 8,
+  "fsck_full_no_reflogs_rc": 0,
+  "private_fsck_log": "logs/deep_review_20261020/git_storage1830/fsck.stdout.txt",
+  "free_bytes_before": 143351808,
+  "free_bytes_after": 184487936,
+  "git_objects_before": "count: 1184\nsize: 47.94 MiB\nin-pack: 17216\npacks: 2\nsize-pack: 60.90 MiB\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0 bytes\n",
+  "git_objects_after": "count: 37\nsize: 5.45 MiB\nin-pack: 18363\npacks: 3\nsize-pack: 64.91 MiB\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0 bytes\n",
+  "no_source_or_financial_record_deleted": true
+}

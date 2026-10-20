@@ -1,0 +1,37 @@
+{
+  "schema": "deep_review.case_facts.v1",
+  "case_index": 500,
+  "retrieved_utc": "2026-10-20T18:15:07.122389+00:00",
+  "identity": {
+    "market_id": "5620530",
+    "condition_id": "0x8dd87b12575f6d1ff9084aff987f94365c696f9b922bfaf889068c4e2ea5cca3",
+    "question": "Will Jack Doherty post again on X by October 31?",
+    "criteria_sha256": "3bf09e963d927da4ecda0f35b2f239e5e088179b965087e276f3af866a2f0160"
+  },
+  "rule": "YES if Jack Doherty posts again on X between market creation and listed date 2026-10-31 11:59 PM ET. Posts include post, repost, quote post, or reply. Only official account https://x.com/dohertyjackk, including successor names; other accounts do not qualify.",
+  "primary_observation": {
+    "source": "https://x.com/dohertyjackk",
+    "capture": "logs/cron20261020T1820Z_case0500_xprofile/x_profile.receipt.json",
+    "body_gzip": "logs/cron20261020T1820Z_case0500_xprofile/x_profile.body.json.gz",
+    "http_status": 200,
+    "started_utc": "2026-10-20T18:14:35.111495Z",
+    "received_utc": "2026-10-20T18:14:35.601457Z",
+    "raw_bytes": 147327,
+    "raw_sha256": "a8602dc59e9ad9ae47f74f5c1f92c6bf3ea820de444a93545a0213d4b4be0810",
+    "gzip_sha256": "21170007c5c34c5d2198eb26dd6324a8e5fe9ab2507f0ba89c7f0407a62c5ca1",
+    "both_hashes_independently_verified": true,
+    "observed_post": {
+      "account": "Jack Doherty (@dohertyjackk)",
+      "post_id": "2108728754893652425",
+      "created_at_utc": "2026-10-10T01:18:08Z",
+      "text": "I’ll be back soon…",
+      "type": "original post as rendered in the Posts timeline (not a repost/quote/reply in captured entry)",
+      "disclosure": "Paid partnership"
+    }
+  },
+  "limits": [
+    "The post is an actual first-party profile timeline entry and falls before the listed Oct 31 deadline, but the frozen condition starts at market creation; the selected offline packet does not give that creation timestamp. No conclusion about qualifying “again” is made without timing that post against creation.",
+    "Captured public profile SSR is a bounded page view, not an exhaustive archive of all post types or later posts; access to more complete history would require separate evidence. No auth, private history, or restricted endpoint used.",
+    "No probability, ranking, verdict, ledger record, or action."
+  ]
+}

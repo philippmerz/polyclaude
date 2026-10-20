@@ -1,0 +1,92 @@
+{
+  "schema": "deep_review.case_facts.v1",
+  "case_index": 493,
+  "retrieved_utc": "2026-10-20T18:00:43.941518+00:00",
+  "identity": {
+    "market_id": "568116",
+    "condition_id": "0x4c8ceef9b9c0a27b6b4efa7c398ece4a5eeda76502f722de398c232abefe2ede",
+    "question": "Will Trump be impeached by December 31, 2026?",
+    "criteria_sha256": "4f1430b9f18d5ab5bfc46dfa364782f5747bc1d56246eb32f2b4d4f30c1ef2e3"
+  },
+  "frozen_rule": "House simple-majority vote to approve/pass one or more articles of impeachment of President Donald Trump between 2025-07-24 and 2026-12-31 11:59 PM ET qualifies YES. Senate trial, conviction, or removal unnecessary. US federal-government information primary; credible-reporting consensus fallback.",
+  "facts": [
+    {
+      "claim": "Official Clerk homepage snapshot labels House at a Glance as of October 19, 2026: Republicans 218, Democrats 214, Independents 1, vacancies 2 (435 seats total).",
+      "source": "https://clerk.house.gov/",
+      "receipt": "logs/cron20261020T1800Z_case0493/clerk_current.receipt.json",
+      "limitations": "Snapshot dated Oct 19, not an independently refreshed seat-by-seat roster; captured Members page repeats totals but its rendered vacancy-detail section did not expose names."
+    },
+    {
+      "claim": "Clerk Roll Call 322, Dec 11, 2025, H.Res.939, “Impeaching Donald John Trump…”: question was “On Motion to Table”; motion passed 237 yea, 140 nay, 47 present, 9 not voting. A successful motion to table is a procedural disposition, not House approval/passage of articles under this market rule.",
+      "source": "https://clerk.house.gov/evs/2025/roll322",
+      "receipt": "logs/cron20261020T1800Z_case0493/roll322.receipt.json",
+      "limitations": "This exact vote record establishes that vote only; no comprehensive roll-call, bill-status, committee or proceedings sweep was performed for the full July 24, 2025–Dec 31, 2026 window."
+    },
+    {
+      "claim": "House.gov Legislative Activity page retrieved Oct 20 says “There is no legislative activity available at this time”; it renders 2026 monthly calendars through November, including future November dates marked as in-session and district-work days. December 2026 calendar was not present in this captured page.",
+      "source": "https://www.house.gov/legislative-activity",
+      "receipt": "logs/cron20261020T1800Z_case0493/house_schedule.receipt.json",
+      "limitations": "The page describes a calendar as an agenda of possible business; no specific impeachment vote was listed. It does not prove December floor plans or absence of a pending vote."
+    }
+  ],
+  "receipt_hashes_verified": [
+    {
+      "name": "clerk_current",
+      "intent": "logs/cron20261020T1800Z_case0493/clerk_current.intent.json",
+      "receipt": "logs/cron20261020T1800Z_case0493/clerk_current.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_case0493/clerk_current.body.json.gz",
+      "status": 200,
+      "started_utc": "2026-10-20T17:59:50.315276Z",
+      "received_utc": "2026-10-20T17:59:50.925388Z",
+      "raw_bytes": 263229,
+      "raw_sha256": "0645c1626bde092fca97b974834b8c796fa640150229cc55861c48eea85400a3",
+      "gzip_sha256": "d6cf9914c1deee0b48f34c5dd1b75ae1e645ad5485424b83e7b6211a540752ea",
+      "both_hashes_verified": true
+    },
+    {
+      "name": "roll322",
+      "intent": "logs/cron20261020T1800Z_case0493/roll322.intent.json",
+      "receipt": "logs/cron20261020T1800Z_case0493/roll322.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_case0493/roll322.body.json.gz",
+      "status": 200,
+      "started_utc": "2026-10-20T17:59:50.951137Z",
+      "received_utc": "2026-10-20T17:59:51.295838Z",
+      "raw_bytes": 91697,
+      "raw_sha256": "756f503bacc76889b7106c55739025a3bd673e7362ab3dd5c5b238335fbabfd1",
+      "gzip_sha256": "2224f345d26f012f72029abf9de9d49761ee1dbd657c26ed5a224a456dd80aa9",
+      "both_hashes_verified": true
+    },
+    {
+      "name": "house_schedule",
+      "intent": "logs/cron20261020T1800Z_case0493/house_schedule.intent.json",
+      "receipt": "logs/cron20261020T1800Z_case0493/house_schedule.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_case0493/house_schedule.body.json.gz",
+      "status": 200,
+      "started_utc": "2026-10-20T17:59:51.312134Z",
+      "received_utc": "2026-10-20T17:59:51.493164Z",
+      "raw_bytes": 47310,
+      "raw_sha256": "286e5acb09146e1bdada9ad60f3766b55062d30160bdee6bba152d63e11cd0f5",
+      "gzip_sha256": "7d3082ed59021f62f4d97bef60de0a871fcd5abfe8b0b60ad82b62a4bf2e847a",
+      "both_hashes_verified": true
+    },
+    {
+      "name": "clerk_members",
+      "intent": "logs/cron20261020T1800Z_case0493_members/clerk_members.intent.json",
+      "receipt": "logs/cron20261020T1800Z_case0493_members/clerk_members.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_case0493_members/clerk_members.body.json.gz",
+      "status": 200,
+      "started_utc": "2026-10-20T18:00:12.191697Z",
+      "received_utc": "2026-10-20T18:00:12.725931Z",
+      "raw_bytes": 260109,
+      "raw_sha256": "cde217d27b5c79e41392db9e9d360486f08eebdce2e646884a45196df49fcea2",
+      "gzip_sha256": "7ee3c457defd1abbf226d0574f5c6f40c2007e573a6dcc29732dc6cd8f66d050",
+      "both_hashes_verified": true
+    }
+  ],
+  "source_gaps": [
+    "No broad claim that no articles passed in the entire operative window: only one identified impeachment-related roll-call result was captured, and it was a motion to table.",
+    "No verified current December 2026 House floor calendar or relevant scheduled/pending impeachment vote in the bounded four-request set.",
+    "Formal introduction or committee/procedural action is not equivalent to House passage of articles; further government-record coverage would be required to support any full-window absence claim."
+  ],
+  "limits": "Factual collection only. No probability, forecast, verdict, ranking, ledger entry, or action."
+}

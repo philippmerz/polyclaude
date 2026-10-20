@@ -1,0 +1,15 @@
+{
+  "schema": "polyclaude.auxiliary_audit_erratum.v1",
+  "reviewed_utc": "2026-10-20T18:41:10.407116+00:00",
+  "original_audit": "data/deep_review_20261017/work/goal0029_offline_audit_1754.json",
+  "original_sha256": "ab2c8711494923099eb34ce5389d6b69865efe159294d6bf1ff679d4ac277725",
+  "incorrect_field": {
+    "effective_records": 2
+  },
+  "correction": {
+    "effective_records": 803
+  },
+  "cause": "_apply_revisions returns(effective_records_dict,revision_rows); originalauditor usedlen(tuple)=2 instead oflen(firstelement). Functiondidvalidateallbase/revisionhashchains; originalcounts/checkpoint/evaluation/probabilityfieldsunchanged.",
+  "independent_scope_evidence": "Git58c6663d contains803baseJSONreports; originalbase803/effective403valued+17blocked+383factual=803. Currentauditmustunpackreturntuple.",
+  "financial_or_ledger_or_forecast_change": false
+}

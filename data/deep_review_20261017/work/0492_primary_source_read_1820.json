@@ -1,0 +1,31 @@
+{
+  "schema": "deep_review.primary_source_read.v1",
+  "review_index": 492,
+  "reviewed_utc": "2026-10-20T18:17:19.800684+00:00",
+  "verified_receipts": [
+    {
+      "receipt": "logs/deep_review_20261020/wisconsin_governor_492_1800/yougov_cfc_release/yougov_cfc_release.receipt.json",
+      "raw_sha256": "46e8bfe1746a0bbf19e3d4d6a2b09a286e9df02104fbda71954ad7def01d5db8",
+      "gzip_sha256": "c8e33ec2c49cdedb4b086545711d2273fc3660cae90ed9f54660657fff4fb6ea"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/wisconsin_governor_492_1800/marquette_release/marquette_release.receipt.json",
+      "raw_sha256": "35bded1b49969b74008eef0efdf007e03264332dae0115bce658fe972477229e",
+      "gzip_sha256": "1c2a216b901ef0ec42256a4d580f1cc36c7394a24c68f207668d6344a36a2f01"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/wisconsin_governor_492_1800/green_county_candidates/green_county_candidates.receipt.json",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/wisconsin_governor_492_1800/wec_calendar_memo/wec_calendar_memo.receipt.json",
+      "raw_sha256": "236838d8c01a31dde7fe9ef7ca9a09090c77fd987634bcba60d82f5ed2fc4a2b",
+      "gzip_sha256": "812a041494e104b37d7088ff171169e06ea627f9dc655de8fd646c9e22a48ac4"
+    }
+  ],
+  "poll_population": "CFC explicitlyadultpopulation/notexclusivelyRV/LV,1715governoritem/2000total,subsampleMOEunknown; Marquette692LV/843RV are cuts fromonepoll, notindependentsamples. No summingN/inverseSEcertainty.",
+  "load_bearing_primary_read": "Rootreadactualpollsterparagraphsandtables. MarquetteSep16–23LV49D/46R/5undecided,RV46D/45R/9; AugLV49D/44R. TurnoutcertainD85/R78 versusAug84/82, contributesLVvsRVgap. IndependentsLV44D/18R/38undecided, smallsubgroupnotallvoters. Crowleynetfavorability−13Sepvs+4Aug,25unknown;Tiffany−6vs−3,15unknown; no numericfutureeffectinferredfromfavorability. CFCfieldSep22–Oct9adult46D/42R/9unsure/2nonvote corroboratesdirection, notpreciseelectoratemargin.",
+  "nominee_source": "MarquettecallsDavidCrowleyD/TomTiffanyRnominees asofSep; currentofficialballotcalendarretrieval gaps remain. Frozenpartyreplacementrulelimitsnamedcandidateidentity dependence; futureentrymustverifycurrentnominees/ballot.",
+  "scope_limits": "No exhaustivepoll/news/candidateupdate sweep, finalpollbias calibration, directcurrentofficialelectioncalendar orcertificationdeadlineproof. Publishedreleaseage is not fielddateage."
+}

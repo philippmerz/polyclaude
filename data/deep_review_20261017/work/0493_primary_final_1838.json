@@ -1,0 +1,44 @@
+{
+  "review_index": 493,
+  "market_id": "568116",
+  "condition_id": "0x4c8ceef9b9c0a27b6b4efa7c398ece4a5eeda76502f722de398c232abefe2ede",
+  "criteria_sha256": "4f1430b9f18d5ab5bfc46dfa364782f5747bc1d56246eb32f2b4d4f30c1ef2e3",
+  "status": "blocked_after_review",
+  "literal_analysis": "House simple-majorityarticleapprovalJuly24,2025–Dec31,2026ET; noSenateconviction/removalrequired. Tablemotions/introductionnotpassage. Exactruleandcurrentnonterminalvenueidentitychecked.",
+  "evidence": [
+    {
+      "url": "https://clerk.house.gov/",
+      "observed_utc": "2026-10-20T17:59:50.925388Z",
+      "finding": "VisibleR218/D214/I1/vac2; partycontrolnotlegalimpossibility; notfullpastvotehistory."
+    },
+    {
+      "url": "https://clerk.house.gov/evs/2025/roll322",
+      "observed_utc": "2026-10-20T17:59:51.295838Z",
+      "finding": "Dec11,2025HRes939motiontotablepassed237–140/47present/9NV; notarticlespassage."
+    },
+    {
+      "url": "https://www.house.gov/legislative-activity",
+      "observed_utc": "2026-10-20T17:59:51.493164Z",
+      "finding": "DefaultJan3odd-yearnewCongresstermnote; currentDecfloorcalendar/statusnotverified."
+    },
+    {
+      "url": "https://clerk.house.gov/evs/2026/index.asp",
+      "observed_utc": "2026-10-20T18:33:12.783946+00:00",
+      "finding": "404capture (seeactualreceipttiming); no comprehensiveoperative-windowhistoryretrieved."
+    }
+  ],
+  "forecast": {
+    "status": "unpriced_not_completed_valuation",
+    "reason": "CurrentwhetherqualifyingHouseapprovalhasalreadyoccurredandcurrentrelevantlegislationstatusareloadbearingunresolvedfacts. No inventedtinyhistoricaleventprobability/fullmarketp.",
+    "conditional_reasoning": "CurrentnarrowRmajorityhindersbutdoesnotbarpassage; severepoliticalshock/coalitionfracture/vacancies canmatter, newCongressordinaryJan3beyondcutoff. No calibratedconditionalweightsclaimed."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "Yes": "unpriced; currenteventstateunverified",
+    "No": "unpriced; cannotassumenoearlierqualifyingapproval",
+    "execution_authorization": false
+  },
+  "verdict": "Blockedsourcegap afterindepthrule/institutionalreview; nofullvaluationcredit/rejection/globalgoalblock.",
+  "reopen_condition": "Authoritativeorcorroboratedcurrenteventhistory/article-statuscoverage sufficienttosupportstartingstate, thenindependentp/rangeandfreshbothsidecosts;appenddatedrevision.",
+  "report_markdown": "# 493 Trump impeachment — reviewed, current qualifying-event status unresolved\n\n**Blocked after review; no full valuation credit or rejection.** The exact event is House approval of an article, and I could not establish whether it has already occurred in the operative window or verify current relevant legislation status. The reviewed evidence supports institutional reasoning but not an unconditional market probability. Neither outcome is priced; no fake50% or near-zero historical-event assumption.\n\nLiteralYES: U.S.House simple-majority approval/passage of one or more impeachment articles against DonaldTrump **July24,2025–Dec31,2026 23:59ET**. Senate trial, conviction and removal are unnecessary. Federalgovernment information is primary; credible-reporting consensus can also resolve it.2019/2021impeachments are outside the window; introduced resolutions, committee steps or tabling motions are not articlepassage. GammaJan1,2027 04:59UTC corresponds to the rule cutoff, not a required Senate outcome.\n\n[Primary facts](../../../data/deep_review_20261017/work/0493_facts_1800.json) / [root read](../../../data/deep_review_20261017/work/0493_primary_source_read_1836.json): current capturedClerk page listsR218/D214/I1/vacancies2 and a nextsessionOct22. Those are verified numbers from an Oct20retrieval, not a full legislative history. Republican control can hinder approval, **not make it impossible**. If all433cast yes/no,217wins; all214D+Iyes would require twoRyes. Actualattendance, abstention, independentchoice and Democraticunity change that arithmetic. This is an illustration, not a forecast of defections or a claim the House has a fixed217threshold in all votes.\n\nClerk's Dec11,2025 Roll322 forH.Res939 asks **OnMotiontoTable**:237yea/140nay/47present/9notvoting. Rootread actualpartytable: R214yea/6NV;D23yea/140nay/47present/3NV. Passing that motion did not approve articles. The split also cautions against assuming everyDemocrat automatically supports a givenimpeachment. It proves that specific vote, not the absence of qualifying votes at other times or currentbillstatus.\n\nHouse.gov's capturedcalendar gives the default newCongress start at noonJan3 in odd-numbered years unless law sets another date. The inference is that a NovemberDemocraticseatwin ordinarily does not itself seat a newmajority before thisDec31cutoff. It is not a verified2027sessiondesignation or proof of zeroDecemberfloordays; special/lame-duck business, vacancies and partychanges remain possible. Normalpartyprotection versus a severe politicalshock/coalition fracture would drive future passage risk, conditional on no earlierqualifyingapproval. The present evidence does not calibrate those weights or resolve the startingeventstate.\n\n[Current-status followup](../../../data/deep_review_20261017/work/0493_legislation_followup_1825.json): twoCongress.gov requests returned403challengepages. [Archive index followup](../../../data/deep_review_20261017/work/0493_roll_index_1835.json): specified2025/2026Clerklegacyindexes returned404. No restricted-access workaround or negativeevent inference. The visibleHouselegislativecalendar lacked a Decemberpage/currentactivitylisting; an emptywidget is not proof no relevantbusiness exists. A current [exactGamma observation](../../../data/deep_review_20261017/work/status493_1835/case_0493.json) is nonterminal/open, with matchingfrozenidentity; venue status is not government proof that no articlepassed. No sourcefailed-request equals factualineligibility.\n\nBothYES/NO remain **unpriced** pending sufficiently corroborated currenteventstatus and operative-window evidence; no certified fees/depth/economics or investmentrank is claimed. An impeachmentYES would not imply the heldTrump-outNOdust loses, since removal is unnecessary; neither contract hedges the other mechanically. OtherU.S.politicalpositions share broadshock/party/venue risks, with no estimated joint probabilities. Cash/knowncandidates/heldrisks remain alternatives, no new exposure. The600full-valuation BUYpause and all futureexecutiongates remain unchanged.\n\nReopen with authoritative or corroborated credible evidence establishing the current qualifying-event history/status, relevant article/procedural distinctions and plausible remainingfloorpath. It need not be an impossible universal proof of everypoliticalfact, but must support the load-bearing startingstate. Then build an independent forecast and both-side currenteconomics; append a dated revision preserving this report. This is a case-specific sourcegap; the frozenqueue continues at494. No trade, prior, watcher or routineTelegram.\n"
+}

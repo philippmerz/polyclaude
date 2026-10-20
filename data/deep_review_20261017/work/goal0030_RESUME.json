@@ -1,0 +1,61 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T18:52:14.422018+00:00",
+  "previous_goal_turn_classification": "progress: sixrecords/ledger/modelmath/sourcecorrection/owned68pathpublicationverified58c6663d.",
+  "scope": "Fullremainingfrozen3000; no milestone/smallercompletion substitution.",
+  "counts": {
+    "completed_valuations": 405,
+    "blocked_after_in_depth_review": 19,
+    "factual_exclusions": 383,
+    "pending": 2193,
+    "base_records": 807,
+    "revisions_written": 77
+  },
+  "active_indices": [],
+  "next_index": 495,
+  "active_work": null,
+  "state": "Bounded tick closeout:490/492valued;493/494namedcaseblocks persisted. Noactivecase/nextcase notstarted. Full3000incomplete; futureauthorizedreview resumes495. No idle continuation/timer.",
+  "last_safety": "data/deep_review_20261017/work/goal0030_safety1800_primary.json",
+  "last_financial": "research/2026-10-20-1658-financial-snapshot.json",
+  "entry_pause": "405/600uniquevalued+primaryselectionnull; noBUY/add/repost/taker/bundle.",
+  "next_telegram": "500valued/materialfinding/globalblock;400alreadyacceptedonce.",
+  "source_facts": {
+    "492": "data/deep_review_20261017/work/0492_facts_1800.json",
+    "493": "data/deep_review_20261017/work/0493_facts_1800.json",
+    "494": [
+      "data/deep_review_20261017/work/0494_facts_1800.json",
+      "data/deep_review_20261017/work/0494_history_1805.json"
+    ],
+    "495_497_501_506": "data/deep_review_20261017/work/terminal495_506_1820.json",
+    "499": "data/deep_review_20261017/work/0499_facts_1820.json",
+    "500": "data/deep_review_20261017/work/0500_facts_1820.json"
+  },
+  "completed_this_turn": [
+    {
+      "index": 490,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0490_record_verified_1818.json"
+    },
+    {
+      "index": 492,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0492_record_verified_1828.json"
+    },
+    {
+      "index": 493,
+      "status": "blocked_after_review",
+      "proof": "data/deep_review_20261017/work/0493_record_verified_1838.json"
+    },
+    {
+      "index": 494,
+      "status": "blocked_after_review",
+      "proof": "data/deep_review_20261017/work/0494_record_verified_1855.json"
+    }
+  ],
+  "model": "research/2026-10-17-deep-review/models/0494_ual_primary_1845.json",
+  "resource": "Directrepoquota63%used/37%headroom, resetsOct27 06:33; maincontextreservedforprimaryjudgment; boundedroutinefactsdelegated.",
+  "storage": "data/deep_review_20261017/work/storage_git_repack_1830_verified.json",
+  "last_news": "data/deep_review_20261017/work/tick165003_closeout_primary_1855.json",
+  "model_status": "494historicalscenario39% preserved, not adoptedunconditionalforecast; modeltypo3states not5. Actual50YESwalk1.1341, not50×bestask. Currentquarterpublicinformationsetgap.",
+  "audit_erratum": "data/deep_review_20261017/work/goal0029_audit_count_erratum_1845.json"
+}

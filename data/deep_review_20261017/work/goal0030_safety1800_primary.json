@@ -1,0 +1,104 @@
+{
+  "schema": "polyclaude.focused_safety_primary.v1",
+  "reviewed_utc": "2026-10-20T18:05:46.037273+00:00",
+  "scope": "Existing18UTCboundaryduringfinitegoal; not a newfullscheduledcheck/financialproducer",
+  "account": {
+    "orders": 0,
+    "complete_auth_trades": 127,
+    "allsize_positions": 9,
+    "all_tuples_match_1657": true,
+    "proof": "data/deep_review_20261017/work/goal0030_safety1800_ops.json"
+  },
+  "news_sources": "data/deep_review_20261017/work/goal0030_MI1800_facts.json",
+  "source_state": "data/deep_review_20261017/work/goal0030_primary_sources1808.json",
+  "source_judgment": "MI18:01previewandEventScheduled do not establish forumoccurrence or actualremarks; no newpoll/candidate-status/pbridge. K3.1rumorunderlyingclaims unverified, currentHLEsame66rows/K3score41.08. ORpartiallatestweek not held future4week settlement. No confirmedthesisbreak/newnumericprior; no repeatedsame-dayaging. Sourcegaps not assumedzeroeffect.",
+  "hold_exit_checks": [
+    {
+      "index": 112,
+      "side": "No",
+      "shares": 5,
+      "central_terminal": 4.4,
+      "selected_terminal": 3.65,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 3.30578,
+      "additional_selected_adverse_pp_reversing": 6.4546265460814105,
+      "quote_capture_utc": "2026-10-20T18:03:49.285804+00:00",
+      "old_probability_unchanged": true,
+      "execution_authorization": false,
+      "exit_plus_cached_constant_apy_carry": 3.3272686726959293
+    },
+    {
+      "index": 210,
+      "side": "Yes",
+      "shares": 5,
+      "central_terminal": 3.0,
+      "selected_terminal": 1.9999999999999998,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 1.20312,
+      "additional_selected_adverse_pp_reversing": 15.812550227400235,
+      "quote_capture_utc": "2026-10-20T18:03:49.285804+00:00",
+      "old_probability_unchanged": true,
+      "execution_authorization": false,
+      "exit_plus_cached_constant_apy_carry": 1.2093724886299881
+    },
+    {
+      "index": 412,
+      "side": "Yes",
+      "shares": 10,
+      "central_terminal": 3.402125,
+      "selected_terminal": 1.9021249999999998,
+      "broad_low_terminal": 0.8,
+      "fee_net_exit": 0.96399,
+      "additional_selected_adverse_pp_reversing": 9.318687434456772,
+      "quote_capture_utc": "2026-10-20T18:03:49.285804+00:00",
+      "old_probability_unchanged": true,
+      "execution_authorization": false,
+      "exit_plus_cached_constant_apy_carry": 0.9702562565543227
+    },
+    {
+      "index": 1838,
+      "side": "No",
+      "shares": 5,
+      "central_terminal": 2.1999999999999997,
+      "selected_terminal": 1.6999999999999997,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 1.40882,
+      "additional_selected_adverse_pp_reversing": 5.640444001309952,
+      "quote_capture_utc": "2026-10-20T18:03:49.285804+00:00",
+      "old_probability_unchanged": true,
+      "execution_authorization": false,
+      "exit_plus_cached_constant_apy_carry": 1.4179777999345022
+    }
+  ],
+  "carry_limits": "CachedvariableAave3.2035% Oct19 held constant(compoundedannualAPY)75d/Messi60d for sensitivity, not guaranteed rate/time/executable funding. LaterSELLneedsfreshvettedroute.",
+  "joint_states": {
+    "AI_OR112NO5_Kimi412YES10": {
+      "both_win_payoff": 15,
+      "only_Kimi_wins": 10,
+      "only_OR_wins": 5,
+      "both_lose": 0,
+      "original_cost": 4.45,
+      "limits": "All four joint states possible; AI shared/venue/model uncertainty is not a hedge or independently calibrated copula. Full original cost can be lost."
+    },
+    "four_directional_pilots": {
+      "original_cost": 7.35,
+      "all_lose_payoff": 0,
+      "limits": "AI+MI+Messi all-loss possible; probabilities not independent. No unfilled House or Anthropic commitment remains."
+    }
+  },
+  "group_exit_update": {
+    "tool_stdout_mtime_utc": "2026-10-20T18:00:51.104636+00:00",
+    "full_Clarity_fee_net_exit_indicative": 24.99,
+    "conditional_normal_floor": 29,
+    "midband_payoff": 58,
+    "oracle_or_venue_failure": 0,
+    "rule_proof_asof": "14:02identicalruleproof retained; no freshpairrulereadclaim. UMA43refreshed0alerts.",
+    "comparison": "Conditionalnormalfloor29 exceeds dated24.99wholegroupfee-netexit plus cached75dAPYsensitivity; no leg-onlysale or settlement/oracleguarantee.",
+    "exit_plus_cached_75d_APY_sensitivity": 25.152443335815228
+  },
+  "safety_tools": "Completed18:00–18:01stdout reviewed: hurdle4clear0flagged/watchlistnohits/UMA43refreshed0alerts/positionsfetchtrue/KellynoTRIM/Ostium0→0noalerts/cruxquiet. Originalwrapperlostreturncodes; notinvented0. These outputs do not replace current account or primary judgment.",
+  "primary_decision": "Retain/noadd. Allfour selectedterminalvalues exceed freshlyobservedfee-netexit+cachedcarry; broadlowssupportsale. MIadditionaladverseshiftshown, no newbasisadopted. AIbothlose0/original4.45 andallfourpilotscanlose7.35, noindependence/hedgecredit. Hidden-infofairjump/fill-selection preventsroutinefairmakersell; passivebidpause600+primaryselectionnull.",
+  "financial_record": "No standalonebankrollproducer/performanceCSVappend orflow; retain16:58datedcanonical194.31incl5.95gas/trading188.36mid/178.57depth, not current18UTCaggregateNAV. Freshseparateposition/group exits not substituted into total.",
+  "next_boundary": "Nextactualscheduledcheck/earliermaterialevent; MIdebateOct21 23UTC. No newtimer/idlefollow-up.",
+  "telegram": "No confirmedthesisbreak, inventorychange orglobalmethodblock; no routineheadlineTelegram."
+}

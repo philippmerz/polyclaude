@@ -1,0 +1,40 @@
+{
+  "review_index": 494,
+  "market_id": "5457295",
+  "condition_id": "0x01c0d4fd1fedde8810fa640947fd5523dd35889ec88146ac486384ba7581d3ce",
+  "criteria_sha256": "f3ebeb4ed1bd4e87e68b2c47400ede3e02eaa4e0c574479082f81dca4ced63c9",
+  "status": "blocked_after_review",
+  "literal_analysis": "Q3FY2026 original official consolidated LF>=85%; equality higher bracket, reported most precise metric/range midpoint, no revisions. Missing metric or no materials Nov30 23:59ET=>lowest=>NO. Current rules/ordered assets matched.",
+  "evidence": [
+    {
+      "url": "https://ir.united.com/static-files/d8c591f0-42a2-4c93-911c-976fdff3a71f",
+      "observed_utc": "2026-10-20T18:41:10.407116+00:00",
+      "finding": "Official Q2 excerpt/definition recovered;83.4%vs83.1%, not Q3 result. Saved web-supplied excerpts, not raw PDF/HTTP."
+    },
+    {
+      "url": "https://ir.united.com/news-releases/news-release-details/united-airlines-continues-win-brand-loyal-customers-q3-profit/",
+      "observed_utc": "2026-10-20T18:50:28.764106+00:00",
+      "finding": "Q3 2025 official release gives84.4%vs2024 85.3%; dates prevent treating it as2026."
+    },
+    {
+      "url": "https://ir.united.com/financial-performance/quarterly-results",
+      "observed_utc": "2026-10-20T18:50:28.764106+00:00",
+      "finding": "Web tool open failed; current Q3 metric and public-information set unresolved, not absence proof."
+    }
+  ],
+  "forecast": {
+    "status": "unpriced_not_completed_valuation",
+    "reason": "Current-quarter original operating materials/public information coverage is load-bearing and unresolved; historical-scenario .39 is retained as a hypothesis, not adopted unconditional p.",
+    "conditional_model": "research/2026-10-17-deep-review/models/0494_ual_primary_1845.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "Yes": "Unpriced for selection; saved50share historical-hypothesis walk, not expected current profit.",
+    "No": "Unpriced for selection; saved50share historical-hypothesis walk, not expected current profit.",
+    "hypothesis_only": "data/deep_review_20261017/work/0494_hypothesis_economics50_1855.json",
+    "execution_authorization": false
+  },
+  "verdict": "Case-specific information gap; not a rejection, completed valuation, global block or trade.",
+  "reopen_condition": "Sufficiently current issuer/authorized-source material or corroborated operating data establishes information set; then append forecast/economics revision.",
+  "report_markdown": "# 494 — UAL Q3 consolidated passenger load factor ≥85%: source gap\n\n**Blocked after substantive review; no full-valuation credit or rejection.** The current-quarter public information set is unresolved. Historical extrapolation produces a large paper discrepancy with the book, but does not establish a usable current forecast. New BUYs also remain paused until600 unique valuations and comparative selection.\n\n- Exact market5457295 / condition`0x01c0d4fd1fedde8810fa640947fd5523dd35889ec88146ac486384ba7581d3ce`; frozen criteria`f3ebeb4ed1bd4e87e68b2c47400ede3e02eaa4e0c574479082f81dca4ced63c9`. Current Gamma creationOct9 13:54:56Z, not the Oct8 slug; exact full rules/assets matched. Open/nonterminal metadata is not issuer-result evidence. [Source/identity recovery](../../../data/deep_review_20261017/work/0494_primary_sources_1845.json).\n- Literal target: original official Q3FY2026 **consolidated** passenger load factor≥85%; equality qualifies. Most precise officially reported metric; later revisions ignored; midpoint for reported range. Omitted metric or no quarterly earnings materials byNov30 23:59ET routes lowest bracket, so thisNO. Domestic/mainline/another quarter do not qualify. GammaOct20 22UTC is not verified issuer release time; callOct21 remains an uncaptured earlier lead. Fallback/dispute can extend settlement beyondJanuary.\n\n## Verified inputs and limits\n\n- [Official Q2 2026 filing](https://ir.united.com/static-files/d8c591f0-42a2-4c93-911c-976fdff3a71f), filedJuly16/quarterendedJune30, printed21–22: consolidated83.4%, prior83.1%; RPM72,765m/ASM87,279m. Ratio definition recovered. Computed83.3706 is arithmetic from rounded inputs, not a more precise officially reported load factor. Revenue/yield growth does not imply this occupancy threshold. Web-supplied PDF excerpts preserved; direct GET403 retained separately.\n- [Official October15,2025 Q3 release](https://ir.united.com/news-releases/news-release-details/united-airlines-continues-win-brand-loyal-customers-q3-profit/): consolidated84.4% versus85.3% in2024. Domestic85.4% is a different metric. These are historical observations, not2026 results or enough observations to estimate volatility/regime weights.\n- CurrentQ3 release/actual RPM–ASM/metric guidance and exact release timing remain unverified. Bounded issuer/wire searches returned older periods; failed access/search is not evidence of no publication. The quarter endedSeptember30: a forecast based only on old data may omit already-public, decisive information. [Information boundary](../../../data/deep_review_20261017/work/0494_information_boundary_1855.json).\n\n## Preserved hypothesis, not adopted valuation\n\n- [Immutable prequote model](../models/0494_ual_primary_1845.json) and [generator](../models/0494_loadfactor_generator_1845.py): three unfitted LF states65%N(84.7,0.8),20%N(83.5,0.9),15%N(86,0.7),75/25 reported-precision states and99% timely metric. RawYES38.757%, rounded39%; ±0.5pp means produce22.81–57.15%. Weights/dispersion/private-information reserve are not calibrated. Model prose's “5regimes” is a typo; actual three-state array is preserved unchanged.\n- The18:41:11 saved snapshot has YES1/2c, NO98/99c; explicit zero fee corroborated; books49.44s old at receipt. This tight discrepancy prompted the source follow-up. It does not establish p=2%, prove market error, or justify adopting39% after missing current information.\n- [Actual50-share walk under the hypothesis](../../../data/deep_review_20261017/work/0494_hypothesis_economics50_1855.json): YEScost1.13410, central+18.36590,15pp-stressed+10.86590; NOcost49.70943, central-19.20943, stressed-26.70943. Actual consumed levels are saved; no larger ticket inferred from best ask. These are conditional arithmetic, **not expected profits under an adopted current forecast**. Quotes are dated planning only. Carry/funding/gas/fill selection are additional costs, not assumed free.\n- Both outcomes remain unpriced for selection. No trade, comparative ranking or guaranteed alternative payoff. Related exact bins1017/1437/1819/2111 remain unreviewed; later distributions must respect common metric/precision and lowest-bracket fallback. No hedge/independence with held political/AI positions is established; current holdings and existing variable Aave cash remain the alternatives.\n\n**Reopen:** retrieve sufficiently current issuer/authorized-source materials or corroborated operating data to establish the information set; inspect exact original metric/precision and then append a dated revision with defensible forecast/range and fresh both-side ticket economics. Do not demand perfect certainty or infer a rejection from this evidence gap.\n"
+}

@@ -1,0 +1,29 @@
+{
+  "schema": "polyclaude.frozen_market_population_audit.v1",
+  "index": 492,
+  "captured_utc": "2026-10-20T18:13:02.490478Z",
+  "scope": "Audit of existing captured bodies only; no new GETs, forecasts or disposition.",
+  "yougov_cfc": {
+    "source": "YouGov survey; City Forward Collective/CFC Action Fund sponsor press release hosted by Urban Milwaukee (not staff reporting).",
+    "receipt": {
+      "path": "logs/deep_review_20261020/wisconsin_governor_492_1800/yougov_cfc_release/yougov_cfc_release.receipt.json",
+      "url": "https://urbanmilwaukee.com/pressrelease/new-wisconsin-poll-crowley-leads-tiffany-46-to-42-in-governors-race/",
+      "retrieved_utc": "2026-10-20T18:00:08.313521Z",
+      "raw_sha256": "46e8bfe1746a0bbf19e3d4d6a2b09a286e9df02104fbda71954ad7def01d5db8"
+    },
+    "body_evidence": "Release: “The survey is of Wisconsin adults, not exclusively registered or likely voters.” Online survey weighted to represent Wisconsin adults by demographic and political characteristics; n=2,000 adults, governor item n=1,715; Crowley 46%, Tiffany 42%, unsure 9%, not planning to vote 2%.",
+    "limits": "Treat n=1,715 as the governor-item base in an adult-population survey, not as RV/LV results. Release omits exact question wording, reason for 285 outside the item base, item eligibility/screen, weighting variables/factors and exact MOE for n=1,715. ±2.6 pp is stated for the full n=2,000; release says item MOE is larger."
+  },
+  "marquette": {
+    "source": "Marquette Law School Poll; Sep 2026 survey, release dated Sep 30.",
+    "receipt": {
+      "path": "logs/deep_review_20261020/wisconsin_governor_492_1800/marquette_release/marquette_release.receipt.json",
+      "url": "https://law.marquette.edu/poll/2026/09/30/mlsp91-press-release/",
+      "retrieved_utc": "2026-10-20T18:00:09.387624Z",
+      "raw_sha256": "35bded1b49969b74008eef0efdf007e03264332dae0115bce658fe972477229e"
+    },
+    "body_evidence": "One survey (Sep 16–23): 843 registered voters, MOE ±4.3 pp; LV subset n=692, MOE ±4.8 pp. Table 1 gives LV Tiffany 46/Crowley 49/undecided 5 and RV Tiffany 45/Crowley 46/undecided 9; pollster calls them party nominees.",
+    "dependence": "LV and RV figures are two cuts of this same poll, not independent polls. The 692 LV sample likely overlaps/is nested in n=843 RV; release gives no respondent-level overlap/covariance. Do not combine as independent evidence or infer SE from published MOEs."
+  },
+  "limits": "No historical-bias research. No respondent microdata or full weighting specification captured."
+}

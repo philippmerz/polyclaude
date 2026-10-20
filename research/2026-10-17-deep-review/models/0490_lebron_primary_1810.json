@@ -1,0 +1,65 @@
+{
+  "schema": "deep_review.primary_event_tree.v1",
+  "review_index": 490,
+  "created_utc": "2026-10-20T18:07:06.055489+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "3251334",
+    "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+    "criteria_sha256": "06ce779c68535deea4aa3e7591da8bd1ac013fbfcb333fd2c45b4622f44a60b9"
+  },
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0490_facts_1740.json": "1a22216938a756dfd2a78639e959389cf667c38ccfea0fecdeba83e3665366a5",
+    "data/deep_review_20261017/work/0490_primary_source_read_1810.json": "3f1802559086a55cf51d822d01655e6ab7e8ccb90f9c6fc0f68d48a18e718c94",
+    "data/deep_review_20261017/work/0490_source_hash_correction_1754.json": "e85516115a6033157c96517dfdf2f07c0324a939710bc4829c3c3f5c7213bdea",
+    "data/deep_review_20261017/work/0490_known_USPeople_effective_1748.json": "391696b0ad6ff5b8d31c2cbfb648cfe6eb0d3f9464cbdfdb0125a99e1ebe7101"
+  },
+  "method": "Unfitted primary eventtree for the exactUSPeople firstplace outcome; not a search-volume/rankmodel or empirical base-rate. Fame/sportsperformance/marketprice do not set p.",
+  "p_official_list_by_fallback": 0.98,
+  "conditional_published_list_regimes": [
+    {
+      "regime": "No verylarge unseen or future crossoverstory; known24thseason/teamchange belongs here",
+      "mass": 0.9,
+      "p_lebron_first": 0.006,
+      "reason": "Incumbentfame/ordinarybasketball andknownteammove do not normally dominate a fastest-increase list;2018analogyqualitativeonly. Establishedbaseline reduces novelty, not a quantified elasticity."
+    },
+    {
+      "regime": "Alreadylarge2026generalnewsbreakout not detected in boundedsourcecoverage",
+      "mass": 0.06,
+      "p_lebron_first": 0.2,
+      "reason": "No currentGoogle growthcohort measured. Explicitmissinginformationregime ratherthanclaim no earlierbreakout. Singlewinnercompetition includesstrongknownClancystory andmany unreviewedpeople."
+    },
+    {
+      "regime": "Future verylarge alive-person crossoverstory before unknown2026measurementcutoff",
+      "mass": 0.04,
+      "p_lebron_first": 0.45,
+      "reason": "Retirement/majorcareer/controversy/publicstory could produce a newburst, not a predicted event. Death notautomaticallyPeople under2025method. AlreadyreportedJulyteamchange notcountedagain."
+    }
+  ],
+  "raw_yes": 0.034692,
+  "p_yes": 0.035,
+  "p_no": 0.965,
+  "broad_judgment_range_yes": [
+    0.002,
+    0.3
+  ],
+  "selected_entry_reserve_absolute": 0.1,
+  "reserve_reason": "ExistingUSPeopleclass10pp absolute event/source/selection reserve, as418; no measuredtail exception. SelectedYES0/NO.865, broadNOlow.70 remainsseparate.",
+  "sensitivity": "Ordinary-onlyYES.588%; futurestorymass10% reallocating ordinary to84% gives6.07992%; largerunseen2026breakout/methodchange supportsbroadrange, not rootcalibration. No certaintyforecast.",
+  "compatible_central_winner_masses": {
+    "Combs77": 0.05,
+    "Clancy224": 0.4,
+    "Ohtani418": 0.0301154,
+    "LeBron490": 0.035,
+    "other_published_winner_including_unreviewed_or_blocked": 0.4648846,
+    "missing_specified_list_Other": 0.02
+  },
+  "coupling_limits": "Compatiblecentralmasses only, preservesknownmarginals; not estimatedjointdistribution/finalcohort. Nancy328unpricedblocked not0; allunreviewedfrozenothers remainunpriced. No relation toMessiGlobalAthletesTop5 beyondsharedplatform/attention risk.",
+  "horizon": "NormalDecemberpublication mayfitJanuary; byMar31fallbackcanlockApril.50dnormal/165dfallbackcarrysensitivities, neither guaranteedredeemdate. No offchaininstrument or automaticlonghorizonallocation.",
+  "calibration_limits": "Masses/conditionalwinchances/publication98% are explicit subjective judgments, not fitted to eightwinners or Googlerankmeasurement. Smallp is not a source-observed fact. Broaduncertainty and conditionalfillchanges can dominate the stake.",
+  "generator": {
+    "path": "research/2026-10-17-deep-review/models/0490_people_generator_1810.py",
+    "sha256": "c0df5db6a52db7737632cc7d32377fd5e63a907e78ab10fd87917b2615d418d1",
+    "limits": "Arithmeticreplayonly; notvalidationofunfittedparameters."
+  }
+}

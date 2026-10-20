@@ -1,0 +1,167 @@
+{
+  "review_index": 490,
+  "market_id": "3251334",
+  "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+  "criteria_sha256": "06ce779c68535deea4aa3e7591da8bd1ac013fbfcb333fd2c45b4622f44a60b9",
+  "status": "valued",
+  "literal_analysis": "Exactofficial2026USPeople#1, notGlobalAthletes/absolutevolume; earlylistresolution elseOtherMar31,2027ETfallback. NormalDecemberroutecouldfitJanuary, fallbackAprilrisk. Fullrule and exactorderedassetsverified.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-20T00:12:03.677406Z",
+      "finding": "Official2025fastestincrease/sameperiodcomparison/PeoplevsPassings;2026methodnotverified."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2018/us/",
+      "observed_utc": "2026-10-20T17:46:46.870468Z",
+      "finding": "PeopleDemiLovato/AthletesTristanThompsonfirst;LeBronabsentboth10, singleanalogyonly."
+    },
+    {
+      "url": "https://www.nba.com/sixers/news/philadelphia-76ers-sign-4x-nba-champion-and-22x-all-star-lebron-james",
+      "observed_utc": "2026-10-20T17:46:48.948612Z",
+      "finding": "FirstpartyJSONLDJuly27signingdescription, notrenderedfullbody or Googlegrowth."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/us/",
+      "observed_utc": "2026-10-20T17:35:04.864246Z",
+      "finding": "404 exactrequest, notabsenceelsewhere/future."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.035,
+    "low": 0.002,
+    "high": 0.3,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted primary eventtree for the exactUSPeople firstplace outcome; not a search-volume/rankmodel or empirical base-rate. Fame/sportsperformance/marketprice do not set p.",
+    "reasoning": "Independent90/6/4regimes include ordinaryknownmove, unseenexistingbreakout andfuturemajorcrossover; sourcecalibrationlimits and compatibleknownsinglewinnercoupling explicit. Raw3.4692rounded3.5; no marketpricefit.",
+    "model": "research/2026-10-17-deep-review/models/0490_lebron_primary_1810.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0490_quotes_1816_revalidated.json",
+    "quote_file_sha256": "854e2296994d323c5fd559eaffb6d6d4ddd53d8518552d3a4cb9adb772463aae",
+    "quote_capture_utc": "2026-10-20T18:09:23.652745+00:00",
+    "gamma_received_utc": "2026-10-20T18:09:23.524206+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 50.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.035,
+        "selected_stress_probability": 0,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792519500727",
+        "book_received_utc": "2026-10-20T18:09:23.651869+00:00",
+        "book_age_seconds_at_receipt": 262.92486906051636,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.02,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.002
+              }
+            ],
+            "net": 0.02
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.01,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.01
+          }
+        },
+        "taker_cost_usd": 0.02,
+        "central_expected_profit_usd": 0.33,
+        "selected_stress_profit_usd": -0.02,
+        "break_even_before_carry": 0.002,
+        "break_even_constant_carry": 0.002008657748594044,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.965,
+        "selected_stress_probability": 0.865,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792519500727",
+        "book_received_utc": "2026-10-20T18:09:23.651869+00:00",
+        "book_age_seconds_at_receipt": 262.92486906051636,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.99
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.98,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.998
+              }
+            ],
+            "net": 9.98
+          }
+        },
+        "taker_cost_usd": 9.99,
+        "central_expected_profit_usd": -0.33999999999999986,
+        "selected_stress_profit_usd": -1.3399999999999999,
+        "break_even_before_carry": 0.999,
+        "break_even_constant_carry": 1.003324545422725,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Bothselectedoutcomesnegative;500YESwalkcentralpositive but highlyunfittedtail/selectedloss, staleat-receiptbooks and noconditionalfillproof. No entry; studycountsvaluationonly.",
+  "reopen_condition": "Actual2026Googlemethod/list/relativegrowth, substantialqualifyingpersonalnews or supportablefair/costchange; revalidatecurrentexecutiongates, maintain600pause.",
+  "evaluated_utc": "2026-10-20T18:11:15.538527+00:00",
+  "question": "Will LeBron James be the #1 searched person on Google in the US this year?",
+  "valuation_author": "primary_operator",
+  "original_index": 490,
+  "report_sha256": "137b1c1cff28b737d847dae3b45753a17b9dec9dc322bd6fc4a739e67f7ca37b"
+}

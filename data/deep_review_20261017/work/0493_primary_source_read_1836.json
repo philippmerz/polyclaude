@@ -1,0 +1,20 @@
+{
+  "schema": "deep_review.primary_source_read.v1",
+  "review_index": 493,
+  "reviewed_utc": "2026-10-20T18:33:12.783946+00:00",
+  "receipt_hashes_independently_verified": [
+    "logs/cron20261020T1800Z_case0493/clerk_current.receipt.json",
+    "logs/cron20261020T1800Z_case0493/house_schedule.receipt.json",
+    "logs/cron20261020T1800Z_case0493/roll322.receipt.json",
+    "logs/cron20261020T1800Z_case0493_members/clerk_members.receipt.json",
+    "logs/cron20261020T1825Z_case0493_hres939/hres939.receipt.json",
+    "logs/cron20261020T1825Z_case0493_impeachment_search/impeachment_search.receipt.json",
+    "logs/cron20261020T1835Z_case0493_2025/index_2025.receipt.json",
+    "logs/cron20261020T1835Z_case0493_2026/index_2026.receipt.json",
+    "logs/deep_review_20261020/status493_1835/0493_gamma.receipt.json"
+  ],
+  "primary_read": "ClerkcurrentcapturedOct20 listsR218/D214/I1/vac2 andNotInSession/nextsessionOct22. RootreadRoll322actualquestionOnMotiontoTable/237Yea140Nay47Present9NV, Republican214Yea6NV/Dem23Yea140Nay47Present3NV. Notarticleapproval. HousegenericJan3odd-yeartermnote read, notactual2027datedcalendar.",
+  "identity_time_limits": "AgentdescribesOct19snapshotdate; rootreliesonactualOct20retrieval andvisiblecounts, notindependentlyunlocatedOct19label. CurrentHousepartynumberscannotprove whetheranyqualifyingarticlepassedearlierinthemarketwindow.",
+  "history_coverage_gap": "Congressgov2requests403; Clerklegacy2025/2026indexes404. No currentarticle-status/full-windowvotehistory verified; successfulDec2025tablevoteisoneeventonly.",
+  "scope_decision": "Case493blockedafter substantiveinstitutional/rule/source review. No fullmarketp manufactured by assigninganunverifiedtinyprobabilitythatqualifyingapprovalalreadyhappened. Rootcanconsiderfuturepathsonlyconditionaltocurrentstatus; nocredit/rejection/globalgoalblock."
+}

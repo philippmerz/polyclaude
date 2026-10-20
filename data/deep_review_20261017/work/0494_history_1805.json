@@ -1,0 +1,37 @@
+{
+  "case_index": 494,
+  "kind": "facts_only_addendum",
+  "retrieved_at_utc": "2026-10-20T18:05Z browser-search/open run time recorded by task context; web tool has no raw HTTP receipt",
+  "source_capture": {
+    "search_result_path_private": "logs/cron20261020T180500Z_case494_web/search_results.json",
+    "search_result_sha256": "33880d917def2f0697c2c4881c8dc292b1f8366674e5948e88cea13bfef38e30",
+    "open_result_path_private": "logs/cron20261020T180500Z_case494_web/open_results.json",
+    "open_result_sha256": "cccc3529ee1862b0e14e039a7bf92031c53303e1fa5088c50354547d1f0911c5",
+    "note": "Exact serialized browser-supplied search/open results preserved privately; these are not raw HTTP response bodies. Official issuer IR page and SEC iXBRL viewer returned as browser extracts."
+  },
+  "seasonal_comparator": {
+    "issuer": "United Airlines Holdings, Inc.",
+    "source_url": "https://ir.united.com/news-releases/news-release-details/united-airlines-continues-win-brand-loyal-customers-q3-profit/",
+    "issuer_release_publication_date": "2025-10-15",
+    "period": "three months ended 2025-09-30",
+    "table": "Select operating statistics, Passenger load factor (d), consolidated; press release browser extract, table following Third-Quarter Financial Results",
+    "reported_consolidated_load_factor_percent": 84.4,
+    "reported_comparator_2024_percent": 85.3,
+    "change_year_over_year_percentage_points": -0.9,
+    "rpm_millions_2025": 73769,
+    "asm_millions_2025": 87417,
+    "rpm_millions_2024": 69549,
+    "asm_millions_2024": 81541,
+    "derived_rpm_divided_by_asm_percent_2025": 84.39,
+    "derived_rpm_divided_by_asm_percent_2024": 85.29,
+    "calculation_note": "RPM ÷ ASM reproduces the issuer's displayed consolidated percentages after rounding to one decimal place; arithmetic cross-check, not an independently sourced definitional footnote.",
+    "source_browser_references": ["turn4121search0", "turn4122view0", "turn4121search2"]
+  },
+  "current_q3_2026_evidence": {
+    "status": "No Q3 2026 actual operating statistics available in reviewed result set as of retrieval; official issuer webcast notice identified call scheduled 2026-10-21 10:30 EDT (14:30 UTC), after this retrieval date.",
+    "scope": "Two official-source search queries and two official-source opens; no direct HTTP retried.",
+    "forecast": "No Q3 2026 load-factor/RPM/ASM forecast found in these results. Q3 2026-specific operating guidance remains unknown; search extracts mention financial guidance but that is not load-factor guidance.",
+    "metric_definition": "Source table labels RPM, ASM, and passenger load factor (d); the extracts reviewed here do not expose the (b)-(d) definition text. Current authoritative definition wording remains unverified.",
+    "coverage_gap": "These browser search/open extracts do not establish whether the issuer subsequently reports/revises the precise contract metric; monitor official Q3 release and its underlying statistics table."
+  }
+}

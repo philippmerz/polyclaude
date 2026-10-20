@@ -1,0 +1,49 @@
+{
+  "schema": "deep_review.factual_update.v1",
+  "retrieved_utc": "2026-10-20T18:01:53.460727+00:00",
+  "topic": "Oct 20, 2026 Detroit Economic Club Michigan U.S. Senate candidate forum",
+  "sources": [
+    {
+      "name": "clickondetroit",
+      "intent": "logs/cron20261020T1800Z_MI_forum_clickondetroit/clickondetroit.intent.json",
+      "receipt": "logs/cron20261020T1800Z_MI_forum_clickondetroit/clickondetroit.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_MI_forum_clickondetroit/clickondetroit.body.json.gz",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/20/livestream-michigan-us-senate-candidates-el-sayed-rogers-join-detroit-economic-club/",
+      "status": 200,
+      "started_utc": "2026-10-20T18:01:29.120659Z",
+      "received_utc": "2026-10-20T18:01:30.451988Z",
+      "raw_bytes": 358096,
+      "raw_sha256": "3f300f99dfffdcff97ab691ccc8203c9ad1d25124dca78729bdc8cd547448341",
+      "gzip_sha256": "254f5e3c5678d00935da2b60df9a6e97e5acf75ec48cdce2477274d54e4c42fb",
+      "both_hashes_verified": true
+    },
+    {
+      "name": "econclub",
+      "intent": "logs/cron20261020T1800Z_MI_forum_econclub/econclub.intent.json",
+      "receipt": "logs/cron20261020T1800Z_MI_forum_econclub/econclub.receipt.json",
+      "body_gzip": "logs/cron20261020T1800Z_MI_forum_econclub/econclub.body.json.gz",
+      "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+      "status": 200,
+      "started_utc": "2026-10-20T18:01:30.474046Z",
+      "received_utc": "2026-10-20T18:01:31.401022Z",
+      "raw_bytes": 160282,
+      "raw_sha256": "61e9c6f16e6a6a4ab8a15de087d7bcb3bbbf863d051c98ac830fee69a90c105d",
+      "gzip_sha256": "c60714396ad797d337a18e0f0926fe5b6f6df190ae17c1a2205757f41d633516",
+      "both_hashes_verified": true
+    }
+  ],
+  "facts": [
+    {
+      "source": "ClickOnDetroit/WDIV article, published 2026-10-20 16:02:55.833Z (metadata), body retrieved 18:01:29–18:01:30Z",
+      "details": "Headline says “Livestream”; article says El-Sayed and Rogers would each have time on stage, event begins at 12 p.m. local, moderated by Jason Colthorp, and viewers could watch live at top of article. Captured rendered body retains future-tense announcement and contains no actual forum remarks, post-event report, transcript, or result. The page capture had no video iframe; no video was fetched."
+    },
+    {
+      "source": "Detroit Economic Club official meeting page, body retrieved 18:01:30–18:01:31Z",
+      "details": "Structured Event data marks eventStatus EventScheduled, date Oct 20 2026 11:00 a.m.–2:00 p.m. EDT (15:00–18:00Z); page says candidates each have solo time to answer questions, agenda lists program noon and lunch 1:05 p.m. This is event identity/schedule, not confirmation of completion or remarks."
+    }
+  ],
+  "limits": [
+    "At retrieval (~18:01Z, after scheduled end), neither captured body documents that the event actually occurred or establishes any statements/outcome. Schedule and livestream label alone are not outcome evidence.",
+    "No measured poll, candidate-status change, or election result is established by these pages. No full video download, transcript search, or additional source request was made."
+  ]
+}

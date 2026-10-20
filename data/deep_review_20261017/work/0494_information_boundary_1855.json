@@ -1,0 +1,20 @@
+{
+  "schema": "deep_review.primary_information_boundary.v1",
+  "review_index": 494,
+  "reviewed_utc": "2026-10-20T18:50:28.764106+00:00",
+  "captures": {
+    "logs/deep_review_20261020/0494_root_web1840/current_Q3_search_supplied.json": {
+      "sha256": "05cbe8bd74759af6a8b74af92ac723bde4e16c311a46a22a87a1df385918151d",
+      "output_mtime_utc_not_call_bounds": "2026-10-20T18:42:33.594944+00:00"
+    },
+    "logs/deep_review_20261020/0494_root_web1840/closing_current_Q3_search_supplied.json": {
+      "sha256": "0c40d7e03364faeae7b4e93428000c3c85ee0a2a83b50a04faaadf1c740794c8",
+      "output_mtime_utc_not_call_bounds": "2026-10-20T18:48:31.114130+00:00"
+    }
+  },
+  "representation": "Serialized public web-tool results, not raw HTTP; exact query/open responses retained privately.",
+  "coverage": "Bounded issuer/authorized-wire searches returned Q3 2025 and Q2 2026; current issuer quarterly-results open failed. Last first query used site.ir.united.com instead of site:; earlier correctly restricted queries also failed to retrieve current Q3. Not proof current materials do not exist.",
+  "unresolved_fact": "Whether original Q3 2026 official operating materials or current-quarter operating guidance/statistics are already public, and their exact consolidated metric. Cannot establish fresh information set for a realized Sep30 quarter.",
+  "decision": "Block this case, not the queue. Retain historical scenario model and hypothetical economics without adopting them as current unconditional forecast. Market 1/2c YES versus 98/99c NO is a reason to investigate; neither proof of public result nor a probability input.",
+  "model_note": "Prequote immutable model prose says 5 regimes; actual array/generator has three load-factor regimes plus precision/timeliness states. No numeric alteration or retrospective overwrite."
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "deep_review.factual_update.v1",
+  "retrieved_utc": "2026-10-20T18:49:31.719133+00:00",
+  "alert_ids": [
+    "bc6c680f90f8f8aaf01354f82b67b2eb068a233d",
+    "8f083beb589641eeffbce1bd549c7ac217a252fc"
+  ],
+  "sources": [
+    {
+      "name": "fox_video",
+      "intent": "logs/cron20261020T1850Z_MI_closeout_fox_video/fox_video.intent.json",
+      "receipt": "logs/cron20261020T1850Z_MI_closeout_fox_video/fox_video.receipt.json",
+      "body_gzip": "logs/cron20261020T1850Z_MI_closeout_fox_video/fox_video.body.json.gz",
+      "url": "https://www.foxnews.com/video/6407138719112",
+      "status": 200,
+      "started_utc": "2026-10-20T18:49:08.228451Z",
+      "received_utc": "2026-10-20T18:49:08.450478Z",
+      "raw_bytes": 69744,
+      "raw_sha256": "dfc2b9e83ad241dd57c2a91ef3fab4b272e706da83632325494cdf7d78a6fad6",
+      "gzip_sha256": "6c10bcaa39859b5ba9f606f326423c0adec9201ad87ae1b1acedd5c9c0acad4f",
+      "both_hashes_verified": true
+    },
+    {
+      "name": "guardian_heckler",
+      "intent": "logs/cron20261020T1850Z_MI_closeout_guardian_heckler/guardian_heckler.intent.json",
+      "receipt": "logs/cron20261020T1850Z_MI_closeout_guardian_heckler/guardian_heckler.receipt.json",
+      "body_gzip": "logs/cron20261020T1850Z_MI_closeout_guardian_heckler/guardian_heckler.body.json.gz",
+      "url": "https://www.theguardian.com/us-news/2026/oct/20/abdul-el-sayed-heckler",
+      "status": 200,
+      "started_utc": "2026-10-20T18:49:08.475450Z",
+      "received_utc": "2026-10-20T18:49:08.674642Z",
+      "raw_bytes": 311073,
+      "raw_sha256": "8af470ecb792c142e4029787167e1e3176b1e5c84b07af006fe6b1c6880b138e",
+      "gzip_sha256": "eb925dcb4911313929d3883c97aa877024403b1da00e1102fd75c931847f2181",
+      "both_hashes_verified": true
+    }
+  ],
+  "facts": [
+    {
+      "source": "Fox News Video, https://www.foxnews.com/video/6407138719112; page metadata datePublished 2026-10-20T15:33:11Z, captured 18:49Z",
+      "fact": "Page title “WATCH LIVE: Abdul El-Sayed and Mike Rogers outline economic vision in Detroit”; description says Democratic nominee El-Sayed and Republican nominee Rogers take the stage at the Detroit Economic Club to pitch business leaders and voters. Page UI showed LIVE/live-TV schedule.",
+      "limit": "Captured text is a page blurb/player shell. No verbatim remarks, transcript, or event recording content was verified. LIVE label does not establish that the candidate forum was underway or completed; no full video fetched."
+    },
+    {
+      "source": "The Guardian, https://www.theguardian.com/us-news/2026/oct/20/abdul-el-sayed-heckler; published 2026-10-20T12:45:48Z, modified 17:57:40Z; by Jason Wilson",
+      "fact": "Guardian reports that the man it identifies via The Handbasket as Thomas “Tommy” Teepell heckled El-Sayed about the Muslim Brotherhood, and reports the exchange drew over 50m views across platforms. It says FEC filing records Breakthrough LLC received $250,000 from America Next on Sep 29 for canvassing/influencer marketing opposing El-Sayed. It also reports a University of Michigan College Republicans member saying he acted for America Next offered $200 to boo/question El-Sayed at a Flint town hall on Oct 1.",
+      "limit": "These are Guardian’s reported claims. Article explicitly says nothing in filings shows Thomas Teepell was paid by Breakthrough or America Next; no independent FEC documents or incident video captured here, and no inference of quantifiable vote effect."
+    }
+  ],
+  "limits": [
+    "Earlier 18:01Z WDIV/Detroit Economic Club captures were event preview/schedule only; the new Fox page still yields no verified forum remarks.",
+    "No polling/candidate-status change is established by these captures. Evidence remains factual context; forecast/action reserved to root."
+  ]
+}

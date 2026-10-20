@@ -1,0 +1,57 @@
+{
+  "schema": "deep_review.primary_metric_scenarios.v1",
+  "review_index": 494,
+  "created_utc": "2026-10-20T18:41:10.407116+00:00",
+  "own_market_quotes_seen": false,
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0494_primary_sources_1845.json": "c21ebe65b78352d32a3671e12b40bff1519fed89a3e7b37730bda8196978910f",
+    "data/deep_review_20261017/work/0494_history_1805.json": "ecd74037fe7d5f52900d813114ecf6777e933136b547a1e9620d80b3a3eb0fe3"
+  },
+  "metric": "OriginalreportedconsolidatedQ3_2026passengerloadfactor>=85%;onlyreportedmetricprecision, notderivedroundedRPM/ASMextra-decimals.",
+  "method": "Unfittedsame-season/YoYloadfactor-percentnormalmixture withreportedprecision/timeliness states; no EPS/equity-price proxy or marketprobabilityinput.",
+  "load_factor_percent_regimes": [
+    {
+      "regime": "recentYoYoccupancyimprovementpersistswithpriorseasonality",
+      "mass": 0.65,
+      "mean_pct": 84.7,
+      "sd_percentage_points": 0.8,
+      "reason": "84.4priorQ3+.3recentQ2YoY; samebridgeas83.4currentQ2+(84.4−83.1)seasonality, not twoindependentestimates."
+    },
+    {
+      "regime": "weaktraffic/mixorcapacityoutpacesdemand",
+      "mass": 0.2,
+      "mean_pct": 83.5,
+      "sd_percentage_points": 0.9,
+      "reason": "Q2domesticLFfellwhileinternationalrose; demand/capacity/farelags couldhurtoccupancy. No newobservedQ3weaknessclaimed."
+    },
+    {
+      "regime": "strongpeaktravelorcapacitydiscipline",
+      "mass": 0.15,
+      "mean_pct": 86.0,
+      "sd_percentage_points": 0.7,
+      "reason": "Capacitycuts canraiseoccupancy evenwithweakrevenues; a strongsummer/constraintstate possible. No Q3bookings/load-guidance proof."
+    }
+  ],
+  "one_decimal_reporting_probability": 0.75,
+  "precision_reason": "Prioractualofficialstats useone-decimalLF, so nearest-tenth85.0correspondstolatent84.95 inthisapproximation.25%allowsoriginalhigherprecision85threshold; notclaimGoogleorcompanyrulealwaysrounds, notderivedratioasreportedmetric. Equality85qualifies.",
+  "timely_metric_probability": 0.99,
+  "timely_reason": "Unfitted1%omittedmetric/latebeyondNov30failure routeslowestbracket=>NO. Normalcorporatequarterreporting supportsmajority, not verifiedrelease/calltime or guaranteedsettlement.",
+  "raw_yes": 0.38757030439364504,
+  "p_yes": 0.39,
+  "p_no": 0.61,
+  "broad_judgment_range_yes": [
+    0.1,
+    0.8
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "reserve_reason": "Sameunfittedpre-releasecorporate/private-result15pp as488; metric/source/periodprecisionandconditionalfill uncertainty. Broadboundsnotrequiredallpass, no tailfloorcalibration.",
+  "calibration_limits": "Onepriorseasonalcomparison/twoyearQ3values andoneQ2YoYpair do not estimate regimeweights, SDs ortrends.5regimesare not independentfacts; ratiosonlyreproduce roundedreportedmetrics. Countermean ±.5pp matters materially.",
+  "horizon": "Normal2d/Nov30deadlineabout41d plussettlement45d sensitivity; exactissuerrelease/calltime unverified, Gammaendnotproof. Dispute/delaybeyondJanuarypossible.",
+  "family": "Exactdescription siblings1017(84–85),1437(83–84),1819(82–83),2111(<82)allunreviewed; no existingvaluedfamilymarginal tooverride. Laterbinforecastsneedcompatibleboundaries/missingmetriclowest, notindependentjudgments.",
+  "portfolio": "OnchainPMearningscontractonly,noshareprice/brokerageview. Travel/fuel/macroshock risk overlapsbroaderUSpolitics/venue/cashprotocol exposures; no estimatedindependence/hedge or newallocation.",
+  "generator": {
+    "path": "research/2026-10-17-deep-review/models/0494_loadfactor_generator_1845.py",
+    "sha256": "05a74e5af97e29d6eca7f3814bce22b97c1b21a835bb8c58b41abd364f853bb9",
+    "limits": "Arithmeticreplay, notvalidationofunfittedinputs."
+  }
+}

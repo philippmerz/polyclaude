@@ -1,0 +1,55 @@
+{
+  "schema": "deep_review.primary_challenge.v1",
+  "review_index": 492,
+  "created_utc": "2026-10-20T18:22:41.714786+00:00",
+  "quote_aware": true,
+  "central_primary_p_unchanged": 0.34,
+  "root_web_supplied_captures": [
+    {
+      "path": "logs/deep_review_20261020/ratings_492_1830/root_search_retry_supplied.json",
+      "sha256": "31d686fea0ccdfa275d169d858ca5d183ec4218066092aa151e66c7394f2e521",
+      "representation": "serializedwebtoolsearch/openresponse, notrawHTTP"
+    },
+    {
+      "path": "logs/deep_review_20261020/ratings_492_1830/root_open_supplied.json",
+      "sha256": "c83475fe70ae3100aa7ee12ebbf579ce1dced4c43df975d1b26df8d4021471ad",
+      "representation": "serializedwebtoolsearch/openresponse, notrawHTTP"
+    }
+  ],
+  "analyst_coverage": "DirectCook/Sabato officialratingbody notverified:403/toolaccessfail. Campaignclaim/thirdpartyaggregatortitles notpromotedtocurrentindependentrating. No currentnamedrating usednumerically.",
+  "AP_search_excerpt": {
+    "url": "https://apnews.com/article/b92fe76b37132a38ecedfb8ff371e3e9",
+    "publication_utc": "2026-10-15T14:40:45Z",
+    "source_form": "APsearch/news extract only; directopeninaccessible, notfullarticle",
+    "finding": "APexcerpt describes a close campaign and Republican distancing from Trump; campaign spending/attacks are attributed reporting, not independently audited filings. No new measuredvote/poll included in retrievedexcerpt.",
+    "probability_effect": "Qualitativecontextconsistentwithcompetitive/regimeuncertainty; no newquantitativeupdate toprequote34%."
+  },
+  "credible_D_favouring_countermodel": {
+    "conditional_major_party_regimes": [
+      {
+        "mass": 0.8,
+        "mean_D_minus_R_pp": 4,
+        "sd_margin_pp": 3.5
+      },
+      {
+        "mass": 0.1,
+        "mean_D_minus_R_pp": -1,
+        "sd_margin_pp": 3.5
+      },
+      {
+        "mass": 0.1,
+        "mean_D_minus_R_pp": 8,
+        "sd_margin_pp": 4.0
+      }
+    ],
+    "p_other": 0.01,
+    "p_republican": 0.16311173537722629,
+    "rationale": "MorepersistentDemturnoutadvantage and a somewhatmorefavourableDanchor4, lessRerrormass andnarrower3.5–4ppresidual. Also unfitted; adultpolls cannot establishthisprecision. Itshows uncertainty aboutmean/errorregimes, not just electiondrawnoise.",
+    "five_yes_central_profit": -0.23444132311386867,
+    "five_yes_selected_profit": -0.7344413231138687,
+    "mixture50_50_primary_and_counter_p": 0.25155586768861316,
+    "mixture50_50_selected_profit5": -0.29222066155693427
+  },
+  "scope_decision": "Keep primarypriceblind34% andprovisionalRlead as a hypothesis, with countermodel beforeselection. Do not certifyedge/claimallreasonablemodelspositive orraisepriorfromprice. Sourcegaps and600comparisonremain.",
+  "cadence": "Firstcollectionwebserializationfailed beforeevidencewasread; root used explicitPOSIXsinglequotedJSONserialization successfully, no TextEncoder/btoa dependency, no protocol/executiongatechange."
+}

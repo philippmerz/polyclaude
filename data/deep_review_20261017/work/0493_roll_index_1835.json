@@ -1,0 +1,35 @@
+{
+  "schema": "deep_review.factual_source_gap.v1",
+  "case_index": 493,
+  "retrieved_utc": "2026-10-20T18:27:37.133117+00:00",
+  "sources": [
+    {
+      "url": "https://clerk.house.gov/evs/2026/index.asp",
+      "status": 404,
+      "received_utc": "2026-10-20T18:27:31.704178Z",
+      "intent": "logs/cron20261020T1835Z_case0493_2026/index_2026.intent.json",
+      "receipt": "logs/cron20261020T1835Z_case0493_2026/index_2026.receipt.json",
+      "body_gzip": "logs/cron20261020T1835Z_case0493_2026/index_2026.body.json.gz",
+      "raw_bytes": 254572,
+      "raw_sha256": "cffc89af79d28bb54446b96445e64dbd419d31664a9d549c3fb64811ef25d55c",
+      "gzip_sha256": "a17885907860bc98004cdf887963553d5784dd377f6cca8dc48917d7fea0c63f",
+      "both_hashes_verified": true,
+      "result": "HTTP 404; no Clerk roll-call index table accessible at requested URL."
+    },
+    {
+      "url": "https://clerk.house.gov/evs/2025/index.asp",
+      "status": 404,
+      "received_utc": "2026-10-20T18:27:32.137809Z",
+      "intent": "logs/cron20261020T1835Z_case0493_2025/index_2025.intent.json",
+      "receipt": "logs/cron20261020T1835Z_case0493_2025/index_2025.receipt.json",
+      "body_gzip": "logs/cron20261020T1835Z_case0493_2025/index_2025.body.json.gz",
+      "raw_bytes": 254572,
+      "raw_sha256": "53585b7d18483d3abed640a4f715ac7ebe7c0530e3058851f73ec0e7a4aa8edf",
+      "gzip_sha256": "f43e961db7c48248b5428c2d0c31d11baca4d1496136e3c438421f078959125f",
+      "both_hashes_verified": true,
+      "result": "HTTP 404; no Clerk roll-call index table accessible at requested URL."
+    }
+  ],
+  "coverage_conclusion": "Both requested official Clerk index URLs returned 404. Therefore date coverage, pagination/completeness and rows matching impeachment/Trump/articles/H.Res.939 could not be inspected; this establishes no absence of qualifying votes. No retries/workarounds. Existing single Roll Call 322 capture remains a 2025 procedural motion-to-table record only.",
+  "scope": "Factual archive-index check only; no forecast, verdict, ranking, ledger change, or action."
+}

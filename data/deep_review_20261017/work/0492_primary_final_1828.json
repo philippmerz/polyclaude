@@ -1,0 +1,158 @@
+{
+  "review_index": 492,
+  "market_id": "629721",
+  "condition_id": "0xd66eadbd64b3e815e31c7994470b44fe15c7ef1146f78937d0cfaa4c04fcfda7",
+  "criteria_sha256": "9ae126f7b118b3b82d2a559d5080572a06240f544a30e2bae7df919c97525e24",
+  "status": "valued",
+  "literal_analysis": "Republicannomineewinner; independent/replacementclauses, AP/Fox/NBCagreeelseofficialcertification, nofixedmetadata deadline. NOanynonRwinner. Fullrule/exacttokenscurrentmatch.",
+  "evidence": [
+    {
+      "url": "https://law.marquette.edu/poll/2026/09/30/mlsp91-press-release/",
+      "observed_utc": "2026-10-20T18:00:09.387624Z",
+      "finding": "PrimarySep16–23LV49D46R/RV46D45R fromsamepoll, turnout/favorability/undecidedtables; population/fielddate limitationsexplicit."
+    },
+    {
+      "url": "https://urbanmilwaukee.com/pressrelease/new-wisconsin-poll-crowley-leads-tiffany-46-to-42-in-governors-race/",
+      "observed_utc": "2026-10-20T18:00:08.313521Z",
+      "finding": "Sponsor-releasedYouGovSep22–Oct9adults46D42R;1715item/2000total, notRV/LV, governorMOEunquantified."
+    },
+    {
+      "url": "https://elections.wi.gov/memo/2026-election-calendar-available",
+      "observed_utc": "2026-10-20T18:00:31.290773Z",
+      "finding": "403officialcalendarrequest; notnominee/calendarverification orabsenceproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34,
+    "low": 0.12,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted65/25/10normalfinalDminusRmarginmixture;1%other-winnerallowance; no nationalgenericballot or price-derivedprobability.",
+    "reasoning": "TwoD-leadingpolls withdifferentpopulations/fielddates, overlappingcuts/turnout/favorabilityuncertainty. Source-basedcompetitiveelectionjudgment notcalibration. CountermodelR16.31 andmean-shiftscanreverseedge; provisionalnotcertified.",
+    "model": "research/2026-10-17-deep-review/models/0492_wisconsin_primary_1820.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0492_quotes_1821.json",
+    "quote_file_sha256": "657d03e82b3bd67caba44f2d7fe713284712966cd9675f623ae7f98d63ec0fb0",
+    "quote_capture_utc": "2026-10-20T18:17:20.269099+00:00",
+    "gamma_received_utc": "2026-10-20T18:17:20.137520+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 21.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.34,
+        "selected_stress_probability": 0.24000000000000002,
+        "best_bid": 0.2,
+        "best_ask": 0.21,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792520238879",
+        "book_received_utc": "2026-10-20T18:17:20.268224+00:00",
+        "book_age_seconds_at_receipt": 1.3892240524291992,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.05,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.21
+              }
+            ],
+            "net": 1.05
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.2
+              }
+            ],
+            "net": 1.0
+          }
+        },
+        "taker_cost_usd": 1.05,
+        "central_expected_profit_usd": 0.6500000000000001,
+        "selected_stress_profit_usd": 0.15000000000000013,
+        "break_even_before_carry": 0.21000000000000002,
+        "break_even_constant_carry": 0.21038132849267482,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6599999999999999,
+        "selected_stress_probability": 0.5599999999999999,
+        "best_bid": 0.79,
+        "best_ask": 0.8,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792520238879",
+        "book_received_utc": "2026-10-20T18:17:20.268224+00:00",
+        "book_age_seconds_at_receipt": 1.3892240524291992,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.8
+              }
+            ],
+            "net": 4.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.95,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.79
+              }
+            ],
+            "net": 3.95
+          }
+        },
+        "taker_cost_usd": 4.0,
+        "central_expected_profit_usd": -0.7000000000000002,
+        "selected_stress_profit_usd": -1.2000000000000002,
+        "break_even_before_carry": 0.8,
+        "break_even_constant_carry": 0.8014526799720946,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalRYES21cselected+0.15on1.05 underprimaryp34; crediblemodelcountercasefailsevencentral. Furthercomparative/sourceworkneeded;600gate/noBUY.",
+  "reopen_condition": "Actualnewerstatepoll/turnout/ballotfacts, defensiblemargin-errorrevision orsupportablecostchange; freshquotes/fees/funding/portfolio and600selection beforeanyentry.",
+  "report_markdown": "# 492 Wisconsin governor — provisional Republican lead at21c; model uncertainty unresolved\n\n**RepublicanYES34% / NO66%; broadYES12–65%,10pp reserve.** At5shares, YEScost1.05/central+0.65/selected+0.15; NOcost4.00/central−0.70/selected−1.20. This is a provisional research lead, not certified edge: a plausible D-favouring model givesR16.31%, making YESnegative even centrally. No entry, newBUYpause600+primarycomparison unchanged.\n\nLiteral rule is the **Republican nominee winning Wisconsin governor2026**, not necessarily the named current candidate. Independents do not become R/D by affiliation; replacement party nominees stay with that party outcome. NO covers any nonR winner. AP/Fox/NBC must all call the same winner, otherwise officialcertification governs. GammaNov4UTC is not a mandatory certification deadline. Normal21d/extended45d carry are sensitivities, not guaranteed settlement; certification litigation could extend the January project horizon. Exact condition/tokens/fullrulehash match current open/acceptingGamma.\n\n[Poll facts](../../../data/deep_review_20261017/work/0492_facts_1800.json) / [population audit](../../../data/deep_review_20261017/work/0492_population_audit_1815.json) / [primary read](../../../data/deep_review_20261017/work/0492_primary_source_read_1820.json): Marquette fieldSep16–23 (releaseSep30) LVn692/MOE±4.8pp givesCrowley49/Tiffany46/5undecided; RVn843/MOE±4.3 gives46/45/9. These are cuts of one survey, not two independent polls. CityForward/CFC-commissioned YouGov fieldSep22–Oct9 (releaseOct15) gives46D/42R/9unsure/2nonvote among1715of2000adults. It explicitly is not exclusively registered/likely voters; governor-itemMOE is larger than fullsample±2.6 but unquantified. Exact selection/question wording and omitted285respondents are unresolved. Sponsor-submitted release is a primary poll-release statement, not independent staff verification. Do not sum samples or divide candidateMOE into a margin/probability.\n\nRootreadMarquette's tables: D/Rcertain-to-vote85/78 versusAug84/82 helps explain LV/RV difference. Independents44D/18R/38undecided are a subgroup, not38% ofallvoters. Crowley's netfavourability fell+4→−13, with25%unknown; Tiffany−3→−6,15%unknown. Those measurements suggest turnout/late-opinion uncertainty, not a calibratedfuturevoteswing. Marquette names CrowleyD/TiffanyR nominees; current officialballot/calendar retrievals failed (countytimeout/WEC403), so later action must verify status. No comprehensive newerpoll/candidate/news absence claim. Release dates do not refresh old fieldwork.\n\n[Priceblind model](../models/0492_wisconsin_primary_1820.json) / [generator](../models/0492_margin_generator_1820.py): conditional finalD-minus-R margins65%Normal(+3,5ppSD),25%Normal(−2,5),10%Normal(+8,5). Apply1%unfittedother-winner allowance: R34.4124%, rounded34%. Baseline+3 reflects both surveys' direction; the R regime allows turnout/pollerror/candidate deterioration, D regime preserves stronger upside.5pp/weights/means are judgments bundling measurement, shared bias and future movement, not an empirical governor backtest or transformedMOE. Samepoll/national/method errors remain dependent. Moving all Dmargin means+3pp givesR17.96%;−3pp gives54.57%. Broad range is judgment, not a95%posterior.\n\n[Quote-aware challenge](../../../data/deep_review_20261017/work/0492_primary_challenge_1825.json):80%Normal(D+4,3.5),10%Normal(D−1,3.5),10%Normal(D+8,4), sameother1%, givesR16.311%. It emphasizes persistentDturnout/strongerDanchor and less error; it too is unfitted and may overstate precision.5YEScentral−0.23444/selected−0.73444; a50/50mixture with primary34% also fails the chosen reserve. Keep primaryprequote34% as a hypothesis, not an assertion that all credible models clear21c. DirectCook/Sabatorating bodies remained403/unverified; campaign/aggregator claims are not current analyst evidence. A capturedAPOct15 search excerpt describes a competitive race andTiffany distancing fromTrump, but fullarticle/financing records were not recovered; no newquantitativepoll input adopted.\n\n[Snapshot](../../../data/deep_review_20261017/work/0492_quotes_1821.json) / [walks](../../../data/deep_review_20261017/work/0492_economics_1821.json):5/10/25YES all at0.21 cost1.05/2.10/5.25, fee0; selectedprofits0.15/0.30/0.75 before funding/carry.5/10/25NO all0.80 cost4/8/20, selectednegative. Bothbooks1.39s old atreceipt; exactstructuredGamma/compactfee views corroborate0, not inferred frommissingfees. Hypothetical5YES maker20c costs1.00/selected+0.20 unconditionally; queue/fillprobability/adverseselection unmeasured, not guaranteed expectedfilled profit. CachedvariableAave3.2035% constant sensitivity on1.05 earns about0.00191/0.00409 over21/45d; exactgas/funding/access costs not assumed free. Full1.05 canlose (central66% loss); minimum5shares is not a5USDfloor. These dated reads do not authorize later execution.\n\nCompare against provisional470AllstateNO/480IranNO/486meetingNO, cash and18UTCheldrisks at their own clocks; none is a finalrank. WIRepublicanYES shares nationalparty/turnout exposure with heldMI nonDNO, with state/office/candidate differences. At illustrative5+5shares, bothwin10/eitheralone5/bothlose0; illustrativecombined originalcost2.60 couldalllose. No newWIposition, independence estimate or hedge guarantee. Reopen on actual newerpoll/turnout/nominee evidence or a justifiedmargin/error-model change; sourcecurrentness, comparative600selection and every execution gate precede allocation. No trade, transfer, heldprior or watcher change.\n"
+}

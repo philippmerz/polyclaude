@@ -1,0 +1,43 @@
+{
+  "schema": "deep_review.primary_source_recovery.v1",
+  "review_index": 494,
+  "reviewed_utc": "2026-10-20T18:41:10.407116+00:00",
+  "web_sources_representation": "Exactserializedwebtoolresponses privatelypreserved beforeinterpretation; officialPDF/HTMLexcerpts, not rawHTTPorfullPDFdownload.",
+  "private_capture_hashes": {
+    "logs/deep_review_20261020/0494_root_web1840/open_supplied.json": "fcafffcf9bafe0a7be05195642b290bc714d6e7b2f8f68c732a23be947b98730",
+    "logs/deep_review_20261020/0494_root_web1840/find_supplied.json": "cf8fd731e063141249ebbe9edf9c11e2c27b58eb47fc233e170ba6ab4e803fe4",
+    "logs/deep_review_20261020/0494_root_web1840/events_and_Q2_supplied.json": "9728c8c38870b0c357279d77a1b9e4b28670efdb524ca00315029c1a59f85ce0"
+  },
+  "Q2_2026": {
+    "url": "https://ir.united.com/static-files/d8c591f0-42a2-4c93-911c-976fdff3a71f",
+    "original_filing": "2026-07-16;quarterended2026-06-30",
+    "pages": "21–22printed/PDF20–21",
+    "scope": "ConsolidatedCompanyoperations, three monthsJun30; do not substitute sixmonths/mainline/domestic/geography.",
+    "load_factor_pct": 83.4,
+    "Q2_2025_pct": 83.1,
+    "change_pp": 0.3,
+    "RPM_millions": 72765,
+    "ASM_millions": 87279,
+    "definition": "Footnote(d): ratioofrevenuepassengermiles(RPM)toavailableseatmiles(ASM).",
+    "ratio_arithmetic_only": 83.37057024026399,
+    "driver_limits": "Q2RPM+3.8%/ASM+3.5%, yield+12.1% andpassengerrevenue+16.4% do not imply a highloadfactor. MD&A saysearlierMiddleEastdisruption promptedcapacitycuts/fare-feeadjustments; existingQ2conditions, not newQ3surprise or numericguidance."
+  },
+  "Q3_history": {
+    "url": "https://ir.united.com/news-releases/news-release-details/united-airlines-continues-win-brand-loyal-customers-q3-profit/",
+    "publication_date": "2025-10-15",
+    "consolidated_2025_pct": 84.4,
+    "consolidated_2024_pct": 85.3,
+    "domestic_2025_pct_NOT_target": 85.4,
+    "international_2025_pct_NOT_target": 83.3,
+    "RPM_millions_2025": 73769,
+    "ASM_millions_2025": 87417
+  },
+  "period_identity": {
+    "Gamma_createdAt": "2026-10-09T13:54:56.563183Z",
+    "frozen_slug_has_Oct8_but_not_creationtime": true,
+    "receipt_unit": "data/deep_review_20261017/work/status494_1840/case_0494.json",
+    "interpretation": "UpcomingQ3 interpreted inOctober2026earnings/Nov30,2026fallback context asJul–Sep2026, notQ3calendar2027. GammaOct20 22Zmetadata not issuerreleaseproof. Exactcurrentdescription/tokens match."
+  },
+  "remaining_gaps": "NoactualQ3_2026consolidatedmetric/currentRPM-ASMguidanceverified. Q3callOct21isuncapturedoriginalsearchleadonly; notice403/eventspageunavailable, not adoptedasverifiedtime. Failureisnotabsenceofreport. FinancialguidanceEPSnotthismetric.",
+  "method_implication": "Use explicitunfitted seasonal/YoYscenarioforecast withbroaduncertainty/privateinformationrisk; no source-observed85%event or empiricalcalibration."
+}

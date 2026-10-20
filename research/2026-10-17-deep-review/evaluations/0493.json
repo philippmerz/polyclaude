@@ -1,0 +1,48 @@
+{
+  "review_index": 493,
+  "market_id": "568116",
+  "condition_id": "0x4c8ceef9b9c0a27b6b4efa7c398ece4a5eeda76502f722de398c232abefe2ede",
+  "criteria_sha256": "4f1430b9f18d5ab5bfc46dfa364782f5747bc1d56246eb32f2b4d4f30c1ef2e3",
+  "status": "blocked_after_review",
+  "literal_analysis": "House simple-majorityarticleapprovalJuly24,2025–Dec31,2026ET; noSenateconviction/removalrequired. Tablemotions/introductionnotpassage. Exactruleandcurrentnonterminalvenueidentitychecked.",
+  "evidence": [
+    {
+      "url": "https://clerk.house.gov/",
+      "observed_utc": "2026-10-20T17:59:50.925388Z",
+      "finding": "VisibleR218/D214/I1/vac2; partycontrolnotlegalimpossibility; notfullpastvotehistory."
+    },
+    {
+      "url": "https://clerk.house.gov/evs/2025/roll322",
+      "observed_utc": "2026-10-20T17:59:51.295838Z",
+      "finding": "Dec11,2025HRes939motiontotablepassed237–140/47present/9NV; notarticlespassage."
+    },
+    {
+      "url": "https://www.house.gov/legislative-activity",
+      "observed_utc": "2026-10-20T17:59:51.493164Z",
+      "finding": "DefaultJan3odd-yearnewCongresstermnote; currentDecfloorcalendar/statusnotverified."
+    },
+    {
+      "url": "https://clerk.house.gov/evs/2026/index.asp",
+      "observed_utc": "2026-10-20T18:33:12.783946+00:00",
+      "finding": "404capture (seeactualreceipttiming); no comprehensiveoperative-windowhistoryretrieved."
+    }
+  ],
+  "forecast": {
+    "status": "unpriced_not_completed_valuation",
+    "reason": "CurrentwhetherqualifyingHouseapprovalhasalreadyoccurredandcurrentrelevantlegislationstatusareloadbearingunresolvedfacts. No inventedtinyhistoricaleventprobability/fullmarketp.",
+    "conditional_reasoning": "CurrentnarrowRmajorityhindersbutdoesnotbarpassage; severepoliticalshock/coalitionfracture/vacancies canmatter, newCongressordinaryJan3beyondcutoff. No calibratedconditionalweightsclaimed."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "Yes": "unpriced; currenteventstateunverified",
+    "No": "unpriced; cannotassumenoearlierqualifyingapproval",
+    "execution_authorization": false
+  },
+  "verdict": "Blockedsourcegap afterindepthrule/institutionalreview; nofullvaluationcredit/rejection/globalgoalblock.",
+  "reopen_condition": "Authoritativeorcorroboratedcurrenteventhistory/article-statuscoverage sufficienttosupportstartingstate, thenindependentp/rangeandfreshbothsidecosts;appenddatedrevision.",
+  "evaluated_utc": "2026-10-20T18:33:12.987186+00:00",
+  "question": "Will Trump be impeached by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 493,
+  "report_sha256": "8c683d15ccb996467f61855160653cf4ebbb0d3e63c65dccd3d2a259bf2d5f68"
+}

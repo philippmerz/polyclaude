@@ -1,0 +1,70 @@
+{
+  "schema": "polyclaude.focused_safety.v1",
+  "reviewed_utc": "2026-10-20T18:03:05.069552+00:00",
+  "scope": "18UTCheldportfolio/eventboundary; not full11steps/discovery/financialproducer",
+  "orders": 0,
+  "trades": 127,
+  "positions": 9,
+  "all_position_tuples_unchanged_from1657": true,
+  "account_receipts": [
+    {
+      "kind": "orders",
+      "receipt": "logs/deep_review_20261020/safety1800/account_recovery/orders/orders.receipt.json",
+      "received_utc": "2026-10-20T18:03:05.015870Z",
+      "raw_sha256": "b1b6fcddc2721ba0f8e03a56c7ae96422c74a18297dbdc15a34d8398fa21d186"
+    },
+    {
+      "kind": "trades",
+      "receipt": "logs/deep_review_20261020/safety1800/account_recovery/trades/trades.receipt.json",
+      "received_utc": "2026-10-20T18:03:05.032474Z",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a"
+    },
+    {
+      "kind": "positions",
+      "receipt": "logs/deep_review_20261020/safety1800/account_recovery/positions/positions.receipt.json",
+      "received_utc": "2026-10-20T18:03:05.055055Z",
+      "raw_sha256": "e6957dd010e73d034e72d1cc343b2c149aca4bdbfead609457fd4062254bdfa0"
+    }
+  ],
+  "commands": {
+    "status": {
+      "stdout": "logs/deep_review_20261020/safety1800/status.stdout.txt",
+      "stdout_sha256": "53c2b0250c41e11c6fb089e9f70425c8128aa02ab842398fd9e0444d61b13edb",
+      "stdout_mtime_utc": "2026-10-20T18:01:04.856605+00:00",
+      "stderr_nonempty": false,
+      "returncode": "notpersistedbyfailedwrapper; actualcompletedstdoutreviewed, not inferred0"
+    },
+    "exit": {
+      "stdout": "logs/deep_review_20261020/safety1800/exit.stdout.txt",
+      "stdout_sha256": "2898ca529961c2116d8dacf1e28deef037284885949510b422d00942c4c1026b",
+      "stdout_mtime_utc": "2026-10-20T18:00:51.104636+00:00",
+      "stderr_nonempty": false,
+      "returncode": "notpersistedbyfailedwrapper; actualcompletedstdoutreviewed, not inferred0"
+    },
+    "ostium_diff": {
+      "stdout": "logs/deep_review_20261020/safety1800/ostium_diff.stdout.txt",
+      "stdout_sha256": "45471a48ed0372ad30a25f900fd624c8d3498e68bb51a28792181a9dd1c1f882",
+      "stdout_mtime_utc": "2026-10-20T18:00:53.424631+00:00",
+      "stderr_nonempty": false,
+      "returncode": "notpersistedbyfailedwrapper; actualcompletedstdoutreviewed, not inferred0"
+    },
+    "crux": {
+      "stdout": "logs/deep_review_20261020/safety1800/crux.stdout.txt",
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stdout_mtime_utc": "2026-10-20T18:00:50.024639+00:00",
+      "stderr_nonempty": false,
+      "returncode": "notpersistedbyfailedwrapper; actualcompletedstdoutreviewed, not inferred0"
+    }
+  },
+  "root_primary_judgment_pending": true,
+  "capture_wrapper_recovery": "Originalrunning48060confirmedterminalrc1: sharedCapturemkdirrace and nonallowedbodyrepresentation; separatecontainers+allowedSDKrepresentationfixed read capture. No writer executed. Existingcompletedstatus/exit/diff/crux outputs retained, not rerun.",
+  "financial_basis": "No standalonebankrollproducer/CSVrowappend; currentpositionsexitobservations not aggregateNAV.16:58canonical194.31/trading188.36mid/178.57depth retainsdate.",
+  "allsize_verified_utc": "2026-10-20T18:03:49.434322+00:00",
+  "allsize_receipt": "logs/deep_review_20261020/safety1800/allsize_positions/positions.receipt.json",
+  "allsize_raw_sha256": "d12ff5994bdf3b5c9c24db25d63897483ad60ce298b28bb74d7369e1ff45edc6",
+  "allsize_parameters": {
+    "limit": 100,
+    "sizeThreshold": 0.0
+  },
+  "prior_capture_coverage_limitation": "Vettedclob_v2._data_api_positions defaultlimit50/implicitminsize returned8 and omitted0.33TrumpNOdust. All8sharedtuplesunchanged,0added. ExplicitallsizeactualGET returns9 exactbaseline; no fill/inventorychange. Do not use implicitminsize for completeinventory verification. Original8rowSDKcapture retained, not overwritten."
+}

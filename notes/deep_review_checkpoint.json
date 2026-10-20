@@ -1,21 +1,15 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T17:44:03.070738+00:00",
+  "updated_utc": "2026-10-20T18:50:38.284707+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 420,
-  "completed_valuations": 403,
-  "blocked_after_in_depth_review": 17,
+  "completed_in_depth_reviews": 424,
+  "completed_valuations": 405,
+  "blocked_after_in_depth_review": 19,
   "factual_exclusions": 383,
-  "pending": 2197,
-  "active_indices": [
-    490
-  ],
+  "pending": 2193,
+  "active_indices": [],
   "next_pending_indices": [
-    490,
-    492,
-    493,
-    494,
     495,
     497,
     499,
@@ -41,12 +35,16 @@
     519,
     521,
     522,
-    523
+    523,
+    524,
+    526,
+    527,
+    528
   ],
-  "base_records": 803,
+  "base_records": 807,
   "base_record_counts": {
-    "valued": 401,
-    "blocked_after_review": 19,
+    "valued": 403,
+    "blocked_after_review": 21,
     "excluded_factual": 383
   },
   "revisions_written": 77,
@@ -60,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 803,
-  "ledger_sha256": "d6f9a343babc1c1b233ce0fa1e6805bb2d587beb83ac7655ccdf7ba1dd6409f6",
+  "evaluations_written": 807,
+  "ledger_sha256": "12ca9f5b34e815d83df7d3a9789b834320b7a8407bf3ea937ede8f76289f2e92",
   "revisions_sha256": "57fc358e8766f7bf2a19ba75e165ce762d31380e148b8654fe200b396d03acfb",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

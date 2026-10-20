@@ -1,0 +1,85 @@
+{
+  "schema": "polyclaude.frozen_market_factual_addendum.v1",
+  "index": 492,
+  "market_id": "629721",
+  "condition_id": "0xd66eadbd64b3e815e31c7994470b44fe15c7ef1146f78937d0cfaa4c04fcfda7",
+  "question": "Will Republicans win Wisconsin governor race in 2026?",
+  "captured_utc": "2026-10-20T18:01:28.651717Z",
+  "rule": "Exact rule read using deep_review_resume.py --index 492; frozen rules hash verified. Party means party nominee; independents are outside D/R outcomes. Resolve after AP, Fox and NBC call same candidate, otherwise certification.",
+  "scope": "Facts only; no probability, ranking, verdict or ledger action.",
+  "polls": [
+    {
+      "name": "YouGov for City Forward Collective/CFC Action Fund",
+      "release": "Oct 15, 2026 07:07 am (release gives no timezone)",
+      "field": "Sep 22–Oct 9, 2026",
+      "population": "Wisconsin adults; online survey weighted by demographic/political traits",
+      "n": "2,000 adults; 1,715 answered governor item",
+      "result": "Crowley 46%, Tiffany 42%, unsure 9%, not planning to vote 2%.",
+      "error": "Press release states ±2.6 pp for full survey and says governor subsample error is larger, but gives no exact subsample MOE. Sponsor-submitted release; Urban Milwaukee says it is not staff reporting."
+    },
+    {
+      "name": "Marquette Law School Poll",
+      "release": "Sep 30, 2026",
+      "field": "Sep 16–23, 2026",
+      "population": "Wisconsin registered voters and likely-voter subset",
+      "n": "RV 843, MOE ±4.3 pp; LV 692, MOE ±4.8 pp",
+      "result": "LV: Crowley 49%, Tiffany 46%, undecided 5%; RV: 46%, 45%, undecided 9%.",
+      "candidate_fact": "Pollster release calls Crowley and Tiffany the Democratic and Republican nominees."
+    }
+  ],
+  "candidates_election_date": {
+    "verified_by_pollster": "Marquette names Democrat David Crowley and Republican Tom Tiffany and calls them nominees; YouGov/CFC tests them as the D/R general-election pair.",
+    "official_get_gaps": "Green County Clerk page timed out (20s; empty body). WEC calendar memo returned HTTP 403 challenge page. No direct current official ballot list/calendar body captured.",
+    "search_discovery_only": "Targeted search results for WEC-titled calendar PDF at https://tn.siren.wi.gov/wp-content/uploads/2025/2026ElectionInfo.pdf say General Election Tuesday Nov 3, 2026; Green County official page https://greencountywi.org/354/Elections snippet lists Tiffany (R), Crowley (D), Aug 11 primary and Nov 3 general. Search snippets only, not captured bodies; do not treat as direct verification."
+  },
+  "sources": [
+    {
+      "source": "YouGov survey released by City Forward Collective/CFC Action Fund via Urban Milwaukee press-release desk",
+      "url": "https://urbanmilwaukee.com/pressrelease/new-wisconsin-poll-crowley-leads-tiffany-46-to-42-in-governors-race/",
+      "http": 200,
+      "error": null,
+      "received_utc": "2026-10-20T18:00:08.313521Z",
+      "raw_sha256": "46e8bfe1746a0bbf19e3d4d6a2b09a286e9df02104fbda71954ad7def01d5db8",
+      "gzip_sha256": "c8e33ec2c49cdedb4b086545711d2273fc3660cae90ed9f54660657fff4fb6ea",
+      "receipt_name": "yougov_cfc_release/yougov_cfc_release.receipt.json"
+    },
+    {
+      "source": "Marquette Law School Poll release",
+      "url": "https://law.marquette.edu/poll/2026/09/30/mlsp91-press-release/",
+      "http": 200,
+      "error": null,
+      "received_utc": "2026-10-20T18:00:09.387624Z",
+      "raw_sha256": "35bded1b49969b74008eef0efdf007e03264332dae0115bce658fe972477229e",
+      "gzip_sha256": "1c2a216b901ef0ec42256a4d580f1cc36c7394a24c68f207668d6344a36a2f01",
+      "receipt_name": "marquette_release/marquette_release.receipt.json"
+    },
+    {
+      "source": "Green County Clerk election page (official local election source)",
+      "url": "https://greencountywi.org/354/Elections",
+      "http": null,
+      "error": "ReadTimeout",
+      "received_utc": "2026-10-20T18:00:30.037217Z",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec",
+      "receipt_name": "green_county_candidates/green_county_candidates.receipt.json"
+    },
+    {
+      "source": "WEC 2026 election-calendar memo",
+      "url": "https://elections.wi.gov/memo/2026-election-calendar-available",
+      "http": 403,
+      "error": null,
+      "received_utc": "2026-10-20T18:00:31.290773Z",
+      "raw_sha256": "236838d8c01a31dde7fe9ef7ca9a09090c77fd987634bcba60d82f5ed2fc4a2b",
+      "gzip_sha256": "812a041494e104b37d7088ff171169e06ea627f9dc655de8fd646c9e22a48ac4",
+      "receipt_name": "wec_calendar_memo/wec_calendar_memo.receipt.json"
+    }
+  ],
+  "capture_dir": "logs/deep_review_20261020/wisconsin_governor_492_1800/ (receipt names are relative to this directory; read_capture response bodies saved beside receipts).",
+  "gaps": [
+    "No direct official certified nominee list or election-calendar body.",
+    "No exact MOE for YouGov governor-question n=1,715.",
+    "Latest found release is Oct 15; bounded search cannot establish no newer/unindexed poll.",
+    "No wider poll search beyond targeted discovery."
+  ],
+  "search_note": "Targeted rg found no Wisconsin-specific source unit in work files; only unrelated polling packets/discovery snapshots. Four direct GET attempts (20s timeout), all captured before parse; no further requests."
+}

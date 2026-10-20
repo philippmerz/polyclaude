@@ -1,0 +1,29 @@
+{
+  "case_index": 499,
+  "kind": "facts_only",
+  "market_identity": {
+    "condition_id": "0x29d75600ba2e46ce9dd262e813ee710a64c83c2e0c4edfa025019d00a46ae05b",
+    "criteria_sha256": "919b3bae79a269ac01c51501b3cbd126cfac86e3bbfa20c939e1e0f6d0e2536a",
+    "literal_rule": "YES if the President, any US Cabinet member, any Joint Chiefs of Staff member, or any US federal agency definitively states that extraterrestrial life or technology exists by 2026-10-31 23:59 ET; otherwise NO. Primary resolution source: official US government information; consensus of credible reporting may also be used.",
+    "deadline_utc": "2026-11-01T03:59:00Z",
+    "interpretation_limits": "Unidentified or unexplained UAP reports alone are not a definitive statement that extraterrestrial life or technology exists. AARO case classifications and public speculation should not be substituted for the literal qualifying statement."
+  },
+  "existing_primary_capture": {
+    "name": "NASA UAP FAQs",
+    "url": "https://science.nasa.gov/uap/faqs/",
+    "page_last_updated": "2026-10-08",
+    "retrieved_utc": "2026-10-17T18:45:32Z",
+    "http_status": 200,
+    "body_bytes": 276375,
+    "body_sha256": "57e98629ef6b527ec1ba7f5da1ee615db32a61a86ea3a87ff829bc10daf16f06",
+    "gzip_sha256": "2f2bd856254cd83201e5125937d9352d6f70e44c7f1b5bb828b1a64cd28fa215",
+    "capture_paths": ["logs/deep_review_20261017/tesla_alien_cap_sources/nasa_uap_faq.body.gz", "logs/deep_review_20261017/tesla_alien_cap_sources/nasa_uap_faq.meta.json"],
+    "page_text_fact": "NASA FAQ says NASA has not found credible evidence of extraterrestrial life and there is no evidence that UAPs are extraterrestrial. This is NASA's stated current position on that page, not a statement about what all eligible officials/agencies may say by the contract deadline."
+  },
+  "coverage_and_gaps": {
+    "reuse": "Reused verified Oct17 primary-source capture; no new network requests.",
+    "AARO_prior_capture": "Existing AARO 2024 historical report and FY25 congressional-products URL captures both returned HTTP 403 on 2026-10-17. Their gzip/body hashes are in respective meta.json files; these failures provide no report content. No same-URL retries.",
+    "current_agency_statement_scan": "No bounded comprehensive scan of every eligible US agency or official statement was performed; this addendum only verifies the NASA FAQ fact and exact frozen rule.",
+    "unknown": "No qualifying definitive US statement identified or excluded across all agencies as of a comprehensive current review; this unit makes no market verdict."
+  }
+}

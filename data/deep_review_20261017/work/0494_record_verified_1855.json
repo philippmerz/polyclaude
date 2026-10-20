@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-20T18:50:38.526147+00:00",
+  "index": 494,
+  "status": "blocked_after_review",
+  "json_sha256": "e18f4db181a4fa7b338b349eca08bce2b884c3c3e9fe986f6eacb3e09882849f",
+  "report_sha256": "e59f4511fd0154ba4ecd221f6c3d999fe6243448d04777cc9aafb734f9871bcb",
+  "indexed_once": true,
+  "completed_valuations": 405,
+  "blocked_after_in_depth_review": 19,
+  "factual_exclusions": 383,
+  "pending": 2193,
+  "base_records": 807,
+  "revisions_written": 77
+}

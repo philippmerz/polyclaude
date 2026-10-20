@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T18:33:36.287248+00:00",
+  "index": 493,
+  "status": "blocked_after_review",
+  "json_sha256": "614a2bdee6197b26b0c44d3aaab6deae7da614c302d5529f804afd878a37adaa",
+  "report_sha256": "8c683d15ccb996467f61855160653cf4ebbb0d3e63c65dccd3d2a259bf2d5f68",
+  "indexed_once": true,
+  "count_valued": 405,
+  "blocked": 18,
+  "pending": 2194
+}

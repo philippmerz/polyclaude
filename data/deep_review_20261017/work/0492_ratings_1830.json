@@ -1,0 +1,27 @@
+{
+  "schema": "polyclaude.frozen_market_qualitative_ratings_source_check.v1",
+  "review_index": 492,
+  "captured_utc": "2026-10-20T18:20:53.063260Z",
+  "scope": "Bounded adversarial fact-check of qualitative 2026 Wisconsin governor ratings; no forecast or disposition.",
+  "attempts": [
+    {
+      "type": "web_search",
+      "query": "2026 Wisconsin governor race rating Cook Political Report Sabato Crystal Ball Inside Elections October 2026 Crowley Tiffany rating",
+      "count": 2,
+      "outcome": "Both calls reached the web tool. Persistence failed after each returned object because the JS environment lacked TextEncoder (first attempt) and btoa (second). The results were not saved or reviewed; no snippets are used as evidence."
+    },
+    {
+      "type": "open",
+      "url": "https://centerforpolitics.org/crystalball/2026-governor/",
+      "outcome": "Web tool returned only an Internal Error stating 403 Forbidden; this is not a read of the page body and does not establish page absence or rating."
+    }
+  ],
+  "preservation": "The only retained web-tool response is `logs/deep_review_20261020/ratings_492_1830/primary_open.web.response.json`; it is a serialized tool error, not raw HTTP. File SHA-256 891e6647cbbb2af4e7b14081623d95ecea65885a440ccb9fc398ffa151fef382. Search responses were not retained; no interpretation based on them.",
+  "verified_findings": [],
+  "unverified": [
+    "No current Cook Political Report, Sabato Crystal Ball, or Inside Elections rating/date/reasoning verified.",
+    "No nominee favorability, turnout rationale, or poll evidence from these rating sources verified.",
+    "The attempted Crystal Ball URL may not be its current race page; 403 does not imply no rating."
+  ],
+  "limits": "Search limit used (2 queries); one permitted primary open used. No further source retrieval attempted. Any ratings, if later found, are qualitative analyst judgments, not measured probabilities or poll results."
+}

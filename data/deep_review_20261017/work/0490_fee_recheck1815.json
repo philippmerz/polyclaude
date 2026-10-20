@@ -1,0 +1,52 @@
+{
+  "schema": "deep_review.fee_parity_recheck.v1",
+  "review_index": 490,
+  "reviewed_utc": "2026-10-20T18:09:07.373395+00:00",
+  "receipts": [
+    {
+      "view": "gamma",
+      "http_status": 200,
+      "received_utc": "2026-10-20T18:09:07.632181Z",
+      "receipt": "logs/deep_review_20261020/0490_fee_recheck1815/gamma/gamma.receipt.json",
+      "raw_sha256": "c689083edcd55a049b9dc0ef9461cd988b7b707097327f7b1964aed025e5e36c",
+      "gzip_sha256": "05a8d3fab5039455c0c3f8c584fb9a9beb5e3115103e006c9fe233c3299a2967",
+      "market_id": "3251334",
+      "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0,
+        "takerOnly": true,
+        "rebateRate": 0
+      },
+      "feesEnabled": true
+    },
+    {
+      "view": "compact",
+      "http_status": 200,
+      "received_utc": "2026-10-20T18:09:07.621084Z",
+      "receipt": "logs/deep_review_20261020/0490_fee_recheck1815/compact/compact.receipt.json",
+      "raw_sha256": "867e08c895d7c7a9815d2a73bbea01ab398c49451e5c3f6eddbafe3cc47b60f1",
+      "gzip_sha256": "3e879fae6a590f0d7f45a83183fc7f27d98c9ce449e3a6906531d8123635c3ea",
+      "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+      "fd": {
+        "r": 0,
+        "e": 1,
+        "to": true
+      },
+      "tokens": [
+        {
+          "t": "90347219035982614581789979971385161755512714756333406950484194528037851298014",
+          "o": "Yes"
+        },
+        {
+          "t": "3043180750194921219803723863240863330049636758196394221563794042561394838564",
+          "o": "No"
+        }
+      ]
+    }
+  ],
+  "still_mismatch": false,
+  "scope_decision": "Original18:07fullGamma5%/compact0 mismatch preserved. Singlepairedrevalidationbothstructuredrates0; newfullyboundpublicsnapshot confirmsparity and rawidentities, originalfailedpacketneveredited. Economicsusesnewpacketonly; this temporarygapdidnotblockothercases/globalmethod or authorizeentry.",
+  "new_confirming_packet": "data/deep_review_20261017/work/0490_quotes_1816_revalidated.json",
+  "updated_utc": "2026-10-20T18:10:01.438001+00:00"
+}

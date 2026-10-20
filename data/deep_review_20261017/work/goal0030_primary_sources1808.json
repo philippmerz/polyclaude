@@ -1,0 +1,73 @@
+{
+  "schema": "polyclaude.focused_source_review.v1",
+  "reviewed_utc": "2026-10-20T18:04:40.215077+00:00",
+  "sources": [
+    {
+      "name": "hle",
+      "url": "https://dashboard.safe.ai/api/models",
+      "status": 200,
+      "received_utc": "2026-10-20T18:04:40.199638Z",
+      "receipt": "logs/deep_review_20261020/safety1800/sources/hle/hle.receipt.json",
+      "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+      "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+      "rows": 66,
+      "kimi": [
+        {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2.5-thinking",
+          "hle": 25.4,
+          "calibration_error": 75.9,
+          "releaseDate_metadata": "2026-01-29"
+        },
+        {
+          "name": "Kimi K3",
+          "id": "kimi-k3-high",
+          "hle": 41.08,
+          "calibration_error": 44.67,
+          "releaseDate_metadata": "2026-07-16"
+        },
+        {
+          "name": "Kimi K2.6",
+          "id": "kimi-k2.6-64k",
+          "hle": 35.48,
+          "calibration_error": 58.19,
+          "releaseDate_metadata": "2026-04-20"
+        },
+        {
+          "name": "Kimi K2",
+          "id": "kimi-k2-thinking",
+          "hle": 21.4,
+          "calibration_error": 67.8,
+          "releaseDate_metadata": "2025-11-06"
+        }
+      ],
+      "interpretation": "18:04vettedmonitorheaders200,66rows/K3HLE41.08same; prior17:55defaultheader403notongoingAPIunavailability/permanentfreeze. No official≥55scoreproved by rumor."
+    },
+    {
+      "name": "openrouter",
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "status": 200,
+      "received_utc": "2026-10-20T18:04:40.111714Z",
+      "receipt": "logs/deep_review_20261020/safety1800/sources/openrouter/openrouter.receipt.json",
+      "raw_sha256": "23ce02b40329ef2c4f9b790354463458f2faf8b852f9b16de08979c7ef4b2236",
+      "gzip_sha256": "f5e693bf177d32d20f0d1be1668bbe0060bbaf9b599670b9f88e9b895a5bca45",
+      "shape": [
+        "data"
+      ],
+      "rows": 1,
+      "weekly_sums_T": [
+        {
+          "week_start": "2026-10-12",
+          "total_T": 164.043985914931
+        },
+        {
+          "week_start": "2026-10-19",
+          "total_T": 44.93852543684
+        }
+      ],
+      "held_target_weeks_present": [],
+      "limits": "Oct19currentweekpartial; cache/receiptclock not usagecutoff, targetOct26–Nov22future. No fullweekforecast or bandprobability from partialdata."
+    }
+  ],
+  "limits": "Point-in-timeAPI/cache not fullhistory, retrievaltime not usagecutoff/scorepublication; no automatic numericpriorchange."
+}

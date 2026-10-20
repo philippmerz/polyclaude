@@ -1,0 +1,54 @@
+{
+  "schema": "deep_review.primary_margin_scenarios.v1",
+  "review_index": 492,
+  "created_utc": "2026-10-20T18:17:19.800684+00:00",
+  "own_market_quotes_seen": false,
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0492_facts_1800.json": "107abc0ccaa3329e1bf5c7c2111636144eaf14c8b982a3dae0ddf507d1be6c5c",
+    "data/deep_review_20261017/work/0492_population_audit_1815.json": "c4f27dc7e8cddf88cc54a478db044e5e7e699efec0104b4126ef2eeff8f36798",
+    "data/deep_review_20261017/work/0492_primary_source_read_1820.json": "262b47dabd273daff8a7bbfcacaaaefdae894b2724ee732d9afac4b1a795eae9"
+  },
+  "method": "Unfitted finalD-minus-R popular-vote-margin normalmixture conditionalonmajorpartywinner; exactRepublicannomineeoutcome, not nationalgenericballotprobability.",
+  "conditional_major_party_regimes": [
+    {
+      "regime": "pollanchor broadlyholds",
+      "mass": 0.65,
+      "mean_D_minus_R_pp": 3.0,
+      "sd_margin_pp": 5.0,
+      "reason": "LV D+3 andneweradultsD+4 pointtowardsD; keepbaseline3, not weightedpseudo-precision.5ppbundlesmeasurement/sharedbias/latechangejudgment, not MOE dividedby1.96."
+    },
+    {
+      "regime": "Republicanturnout/pollerrororDemnomineedeterioration",
+      "mass": 0.25,
+      "mean_D_minus_R_pp": -2.0,
+      "sd_margin_pp": 5.0,
+      "reason": "RVcloserthanLV, partisanenthusiasmuncertain andCrowleynegatives/independentundecideds create downside; mean−2 andmass25%unfitted. Not a second5ppdeterministicpenalty onobservedpolls."
+    },
+    {
+      "regime": "Demturnout/crossoverupside",
+      "mass": 0.1,
+      "mean_D_minus_R_pp": 8.0,
+      "sd_margin_pp": 5.0,
+      "reason": "Possiblefavourablelateelectorate/undecidedresolution; asymmetric10%regimepreservesDemupside without addingnationalgenericballot as independentWIevidence."
+    }
+  ],
+  "other_winner_probability": 0.01,
+  "other_reason": "Explicitunfittedsmallother-winner allowance, not otherpollshare/noplan-vote. NonRwinner paysNO; partyreplacementstillRifRnominee.",
+  "raw_p_republican": 0.34412389219898387,
+  "p_yes": 0.34,
+  "p_no": 0.66,
+  "broad_judgment_range_yes": [
+    0.12,
+    0.65
+  ],
+  "selected_entry_reserve_absolute": 0.1,
+  "reserve_reason": "Existingpublicpoliticselection10ppclassreserve asheldMI; widebroadbounds remainseparate, not assumedmeasuredposterior95%CI.",
+  "forecast_limits": "Threepublishedtoplines are onlytwosurveys, populations/fielddatesdiffer andsharedmethod/turnout/nationalerror. Marginscenarios/SD/weightsnotfitted/validated. FiveppisnotreportedcandidateMOEconvertedtomargin or modelcalibration. No2024backtestclaimed.",
+  "horizon": "Novemberelection, metadataNov4UTCnotmandatorycertificationdeadline; AP/Fox/NBCagreeelseofficialcertification.21dnormal45dcertificationcarrysensitivities; delaybeyondJanuarypossible, no guaranteedelectoralroute.",
+  "portfolio_dependence": "AnyWIRepublicanYESsharesnationalpartyfactorwithheldMI nonDemNO, butdifferentstate/office/candidates. WInonRNOcanoffsetnationaldirectionwithoutguarantee; bothlose/win statespossible. No independence/correlationcopulacalibration or newsize.",
+  "generator": {
+    "path": "research/2026-10-17-deep-review/models/0492_margin_generator_1820.py",
+    "sha256": "f37166cbc894e4842bd9380749cd78247888830e86355447f73f0fb583b37087",
+    "limits": "DeterministicCDFarithmeticonly; notvalidationofinputs."
+  }
+}
