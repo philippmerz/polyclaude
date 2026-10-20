@@ -1,0 +1,31 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261020T192642Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-20T19:28:25.520273+00:00",
+  "producer_completed_utc": "2026-10-20T19:28:41.971277+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "2a4f8659e99ac99485d43a70ae3f107abf485df04796ee8b37a801608b04410d",
+  "timing_basis": "Actual invocation bounds; component quotes sequential, not synchronized or individually freshness-certified. CSV uses whole-second start/check_window.",
+  "canonical_total_including_funded_gas_usd": "195.08",
+  "same_producer_funded_gas_usd": "5.93",
+  "same_producer_PM_mid_usd": "35.20",
+  "same_producer_PM_fee_net_depth_usd": "30.21",
+  "derived_trading_mid_usd": "189.15",
+  "derived_trading_fee_net_depth_usd": "184.16",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 8.33,
+  "reported_accounting_residual_usd": "19.72",
+  "previous_1658_comparison": {
+    "canonical_total_change_usd": "0.77",
+    "trading_mid_change_usd": "0.79",
+    "trading_depth_change_usd": "5.59"
+  },
+  "limits": [
+    "Canonical TOTAL and gas/PM components come from this one producer; separate19:29positions35.17/30.02 and four-token exit snapshots are not substituted.",
+    "Rounded sequential midpoint/depth are not synchronized NAV, realized profit or guaranteed sale proceeds. Quote liquidity/fees/marks changed without a financial writer.",
+    "19.72 accounting residual is not independently audited cash profit; historical basis/fees/flows remain unreconciled and VM/API costs excluded.",
+    "No unvalued-asset warning in producer output; expected midpoint-overstates-net-depth warning retained."
+  ],
+  "producer_receipt": "logs/cron20261020T192642Z_root/bankroll.receipt.json"
+}

@@ -1,0 +1,284 @@
+{
+  "schema": "tick192642_account_ops_v1",
+  "captured_utc": "2026-10-20T19:30:26.888355+00:00",
+  "private_log_root": "logs/deep_review_20261020/tick192642_ops",
+  "complete_status": "Account HTTP bodies and command stdout/stderr captured; child returncodes/callbounds unavailable after wrapper error; no zero inferred.",
+  "command_output_receipts": {
+    "status": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/status.stdout.txt",
+          "bytes": 5503,
+          "sha256": "f09121e67dce1940925852e2876441fab1796abd6b75c4103826aedc73cc7fec",
+          "mtime_utc": "2026-10-20T19:29:16.585628+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/status.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:16.585628+00:00"
+        }
+      }
+    },
+    "exit_analysis": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/exit_analysis.stdout.txt",
+          "bytes": 1953,
+          "sha256": "1b1d8d3f04308a58a5dfeac96e9ab4e9811b0210585c18ae2343bd44f755d863",
+          "mtime_utc": "2026-10-20T19:29:18.209625+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/exit_analysis.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:18.209625+00:00"
+        }
+      }
+    },
+    "ostium_state_diff": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/ostium_state_diff.stdout.txt",
+          "bytes": 60,
+          "sha256": "fba5ef73181c8e4711004e02b44b8c9337a232d84d38f6a2d9742982d243eb39",
+          "mtime_utc": "2026-10-20T19:29:21.337619+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/ostium_state_diff.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:21.337619+00:00"
+        }
+      }
+    },
+    "crux_coverage": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/crux_coverage.stdout.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:21.605618+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/crux_coverage.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:21.605618+00:00"
+        }
+      }
+    },
+    "decisions_pending": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/decisions_pending.stdout.txt",
+          "bytes": 23,
+          "sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+          "mtime_utc": "2026-10-20T19:29:21.677618+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/decisions_pending.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:21.677618+00:00"
+        }
+      }
+    },
+    "position_state_audit_fix": {
+      "returncode": null,
+      "callbounds": null,
+      "reason": "Wrapper failed on optional SDK serialization after subprocess capture; exact child returncode/start bounds were not persisted.",
+      "files": {
+        "stdout": {
+          "path": "logs/deep_review_20261020/tick192642_ops/position_state_audit_fix.stdout.txt",
+          "bytes": 166,
+          "sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+          "mtime_utc": "2026-10-20T19:29:22.109617+00:00"
+        },
+        "stderr": {
+          "path": "logs/deep_review_20261020/tick192642_ops/position_state_audit_fix.stderr.txt",
+          "bytes": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "mtime_utc": "2026-10-20T19:29:22.109617+00:00"
+        }
+      }
+    }
+  },
+  "daemon_checks": {
+    "checked_utc": "2026-10-20T19:30:35.812242+00:00",
+    "method": "read /proc argv for exact absolute <venv-python> <repo>/scripts/<daemon>.py start; compared script mtime to process start",
+    "results": {
+      "news_watcher": {
+        "exact_count": 1,
+        "started_utc": "2026-10-19T05:28:37.310000+00:00",
+        "stale": false
+      },
+      "heartbeat_watch": {
+        "exact_count": 1,
+        "started_utc": "2026-10-18T09:33:44.960000+00:00",
+        "stale": false
+      },
+      "telegram_listener": {
+        "exact_count": 1,
+        "started_utc": "2026-10-18T09:33:44.990000+00:00",
+        "stale": false
+      },
+      "opportunity_watch": {
+        "exact_count": 1,
+        "started_utc": "2026-10-18T09:33:44.720000+00:00",
+        "stale": false
+      }
+    }
+  },
+  "account": {
+    "orders": {
+      "complete": true,
+      "count": 0,
+      "baseline_count": 0,
+      "delta": 0
+    },
+    "trades": {
+      "complete": true,
+      "count": 127,
+      "baseline_count": 127,
+      "delta": 0,
+      "size_sum": 33632.11013799999,
+      "baseline_size_sum": 33632.11013799999,
+      "size_delta": 0.0,
+      "by_side_current": {
+        "BUY": {
+          "count": 78,
+          "size": 18271.540138000004
+        },
+        "SELL": {
+          "count": 49,
+          "size": 15360.57
+        }
+      },
+      "by_side_baseline": {
+        "BUY": {
+          "count": 78,
+          "size": 18271.540138000004
+        },
+        "SELL": {
+          "count": 49,
+          "size": 15360.57
+        }
+      },
+      "by_side_delta": {
+        "SELL": {
+          "count": 0,
+          "size": 0.0
+        },
+        "BUY": {
+          "count": 0,
+          "size": 0.0
+        }
+      }
+    },
+    "positions": {
+      "count": 9,
+      "baseline_count": 9,
+      "delta": 0,
+      "tuple_fields": [
+        "conditionId",
+        "asset",
+        "outcome",
+        "size",
+        "totalBought"
+      ],
+      "exact_tuple_match": true,
+      "size_sum": 93.3647,
+      "baseline_size_sum": 93.3647,
+      "size_delta": 0.0,
+      "totalBought_sum": 278.4247,
+      "baseline_totalBought_sum": 278.4247,
+      "totalBought_delta": 0.0,
+      "outcomes_current": {
+        "Yes": {
+          "count": 3,
+          "size": 44.0,
+          "totalBought": 44.0
+        },
+        "No": {
+          "count": 6,
+          "size": 49.3647,
+          "totalBought": 234.42469999999997
+        }
+      },
+      "outcomes_baseline": {
+        "Yes": {
+          "count": 3,
+          "size": 44.0,
+          "totalBought": 44.0
+        },
+        "No": {
+          "count": 6,
+          "size": 49.3647,
+          "totalBought": 234.42469999999997
+        }
+      },
+      "winning_redeemable_count": 0,
+      "winning_redeemable_size": 0
+    },
+    "allsize_query_parameters": {
+      "limit": 100,
+      "sizeThreshold": 0
+    },
+    "captured_responses": [
+      {
+        "name": "clob_http_01",
+        "url": "https://clob.polymarket.com/data/orders",
+        "status": 200,
+        "started_utc": "2026-10-20T19:29:22.918804Z",
+        "received_utc": "2026-10-20T19:29:23.023665Z",
+        "raw_bytes": 56,
+        "raw_sha256": "54deb2b8c7553fd26b9228336fab016dbb224d6a11caa29f7daecf5787db7c2c",
+        "body_representation": "http_body",
+        "receipt": "logs/deep_review_20261020/tick192642_ops/account/clob_http_01/clob_http_01.receipt.json",
+        "body": "logs/deep_review_20261020/tick192642_ops/account/clob_http_01/clob_http_01.body.json.gz"
+      },
+      {
+        "name": "clob_http_02",
+        "url": "https://clob.polymarket.com/data/trades",
+        "status": 200,
+        "started_utc": "2026-10-20T19:29:23.034452Z",
+        "received_utc": "2026-10-20T19:29:23.145656Z",
+        "raw_bytes": 175757,
+        "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+        "body_representation": "http_body",
+        "receipt": "logs/deep_review_20261020/tick192642_ops/account/clob_http_02/clob_http_02.receipt.json",
+        "body": "logs/deep_review_20261020/tick192642_ops/account/clob_http_02/clob_http_02.body.json.gz"
+      },
+      {
+        "name": "allsize_positions",
+        "url": "https://data-api.polymarket.com/positions",
+        "status": 200,
+        "started_utc": "2026-10-20T19:29:23.608039Z",
+        "received_utc": "2026-10-20T19:29:23.655197Z",
+        "raw_bytes": 9569,
+        "raw_sha256": "95bb63dd93c5304656884381f0701e780b07587a794a19e35916112656c2f4c7",
+        "body_representation": "http_body",
+        "receipt": "logs/deep_review_20261020/tick192642_ops/account/allsize_positions/allsize_positions.receipt.json",
+        "body": "logs/deep_review_20261020/tick192642_ops/account/allsize_positions/allsize_positions.body.json.gz"
+      }
+    ],
+    "prior_allsize_body_sha256": "d12ff5994bdf3b5c9c24db25d63897483ad60ce298b28bb74d7369e1ff45edc6"
+  },
+  "scope_note": "No wallet/crypto balance read, standalone bankroll producer or financial CSV operation. Raw account bodies and full ops outputs remain private."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "Observed market-specific explicit zero curves, not a venue-wide policy claim or execution certificate.",
+  "identity_checks": "4exactGamma/rules/outcometokens; all8bookrows and4compactfd descriptors hash/receipt-bound.",
+  "current": "19:28 GammafeeSchedule.rate0/exponent1/takerOnlytrue/feeTypezero_fees andindependentcompactfd.r0 parity on112/210/412/1838. feesEnabledtrue notusedtoinferzero; legacymaker/takerBaseFee1000 notpercentageauthority.",
+  "previous": "18:04capturehad4%curve; oldobservations preserved, currentdescriptor change not retroactive error.",
+  "current_quote": "data/deep_review_20261017/work/tick192642_held_quotes.json"
+}

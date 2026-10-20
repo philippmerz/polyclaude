@@ -1,0 +1,41 @@
+{
+ "schema": "polyclaude.triggered_primary_review.v1",
+ "reviewed_utc": "2026-10-20T19:40:12.811217+00:00",
+ "tick_id": "20261020T192642Z",
+ "requested_alert": "358bcbdec31f76adea5c099a3dbb7f7f645d4fb0",
+ "additional_material_alert": "becea882f54cd5206629d70e3388d4c244b481ad",
+ "alert_decisions": "data/deep_review_20261017/work/tick192642_alert_decisions.json",
+ "Kimi": {
+  "literal": "Exact41255%+officialHLEAccuracyanyMoonshotKimi beforeDec31 23:59ET; calibration/otherlabs/issuerwithtools56 notautomaticqualifyingresult; temporarysourcefailure notNO.",
+  "source": "19:28HTTP200same66rows/rawhashas18:04;K3HLE41.08/cal44.67; Age1142s cache canpredatealert/newinfo, notall-timeabsenceproof. Rootpairedrawgzipverified.",
+  "headline": "ExactBloomberg.comdestination/body notverified (redirect/403candidate). AccessibleJuly27BloombergLawcompanion andJuly22officialKimiForum areolderK3context, notprovennewOct20result. RootseparateJuly17searchresultwasadifferentcompanionURL/title. No assertedexactheadlinebinding.",
+  "judgment": "Newcapabilityifverified couldhelpheldYES, notautomaticallyhurtit. No verifiednew qualifying/forecast-changinginput; keepYES34.02125/selected19.02125/broad8–80, no duplicateaging/price-derivedp. Source gaps remain material uncertainty.",
+  "source_unit": "data/deep_review_20261017/work/tick192642_kimi_news_facts.json"
+ },
+ "Michigan": {
+  "source": "CNNbody/date/candidates/newpoll/subgroupN/fieldwork/MOE unverified afterordinaryboundedrequests; failedguessed404notabsence. Crainforumrobotsblocked, actualremarksnotadopted. PriorRasmussenOct12–14D46R44alreadyknown, WIdatairrelevant.",
+  "judgment": "HeadlineDsupportslippageiftrue favoursheld5NO; no justifiednumericshiftfromunverifiedheadline. RetainNO44/selected34/broad20/noadd; neitherzeroeffectclaimnorforcedexit.",
+  "source_unit": "data/deep_review_20261017/work/tick192642_MI1932_facts.json"
+ },
+ "hold_math": "data/deep_review_20261017/work/tick192642_hold_exit_math.json",
+ "root_hold_decision": "Retainall4directionalpilots/noadd: eachselectedterminal exceeds19:28fee-netexit plusvariableAave3.2247% heldconstant75d/Messi60d. Broadlowcasesfavorliquidation; MIanother4.8103pp/Kimi8.9558ppselectedadverseshiftreverses. Oldpriorsremainuncalibrated, no fill/privateinformationguarantee. Quotesstale forfutureexecution; makerjump/conditionalfillriskdoesnotjustifynewrestingsells.",
+ "joint": "Kimi10YES+OR5NOcanbothlose4.45originalcost; fourdirectionalpilotscanalllose7.35. Noindependence/hedgecredit.",
+ "Clarity_group": {
+  "held": "29YES>50+29NO>58",
+  "normal_conditional_payoff": [
+   29,
+   58
+  ],
+  "venue_or_oracle_failure": 0,
+  "dated_rule_proof": "14:02identicalrulesretained, no newrulereadclaim",
+  "indicative_complete_group_exit": 22.47,
+  "exit_tool_stdout_mtime_utc": "2026-10-20T19:29:18.209625+00:00",
+  "cached75d_APY_sensitivity": 22.617017029205506,
+  "judgment": "retainwholegroup; noleg-onlysale. Conditional29exceedsdatedexit+carry, notguaranteedfloor."
+ },
+ "account_proof": "data/deep_review_20261017/work/tick192642_account_root_recheck.json",
+ "no_financial_writer_or_numeric_prior_change": true,
+ "BUY_pause": "405/600uniquevalued+primaryselectionnull; Kellyscaleinoutput notauthority.",
+ "next_boundary": "Existing22UTClightcheck/earliermaterialevent;MIdebateOct21 23UTC. No newtimer/idlefollowup.",
+ "telegram": "None: no newverifiedthesisbreak/action/newscore orconfirmedmaterialinvestmentfinding. Paperliquiditychange alone notrealizedprofit."
+}

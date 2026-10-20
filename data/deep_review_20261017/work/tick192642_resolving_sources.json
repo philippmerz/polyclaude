@@ -1,0 +1,49 @@
+{
+  "schema": "tick192642_resolving_source_facts.v1",
+  "observed_utc": "2026-10-20T19:28:11Z",
+  "scope": "Read-only resolver-source facts; no judgment or action.",
+  "hle": {
+    "source": "SAFE / Artificial Analysis HLE resolving chart API",
+    "url": "https://dashboard.safe.ai/api/models",
+    "http_status": 200,
+    "receipt": "logs/cron20261020T192642Z_resolving_sources/hle/hle.receipt.json",
+    "body": "logs/cron20261020T192642Z_resolving_sources/hle/hle.body.json.gz",
+    "retrieved_utc": "2026-10-20T19:28:11.635542Z",
+    "response_date": "2026-10-20 19:28:11 GMT",
+    "age_seconds": 1142,
+    "raw_bytes": 41236,
+    "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+    "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+    "baseline": "Exact same raw and gzip hashes as official API capture at logs/deep_review_20261020/safety1800/sources/hle/hle.receipt.json (2026-10-20T18:04:40.199638Z); parsed row count 66 remains 66; no added, removed, or changed HLE/calibration values after treating missing calibration as '-' equivalently.",
+    "anchor": {"model": "Kimi K3", "id": "kimi-k3-high", "HLE": 41.08, "calibration_error": 44.67, "releaseDate_metadata": "2026-07-16"},
+    "observed_rows_HLE_at_least_55_not_new_since_baseline": [
+      {"model": "Gemini 4 Argon", "HLE": 55.6, "calibration_error": 41.52},
+      {"model": "Opus 5.5", "HLE": 55.36, "calibration_error": 13.84}
+    ],
+    "new_qualifying_rows_since_baseline": 0,
+    "scope_note": "Scores, calibration-error values and release-date metadata are distinct API fields; latest response is cache-backed and does not timestamp score publication."
+  },
+  "openrouter": {
+    "source": "OpenRouter rankings chart API (market names https://openrouter.ai/rankings as resolution source)",
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "http_status": 200,
+    "receipt": "logs/cron20261020T192642Z_resolving_sources/openrouter/openrouter.receipt.json",
+    "body": "logs/cron20261020T192642Z_resolving_sources/openrouter/openrouter.body.json.gz",
+    "retrieved_utc": "2026-10-20T19:28:11.740484Z",
+    "response_date": "2026-10-20 19:28:11 GMT",
+    "cache_age_seconds": 132,
+    "cachedAt_utc": "2026-10-20T19:24:06.782Z",
+    "raw_bytes": 24691,
+    "raw_sha256": "6d4f3edf5c6f9044cafc3bfe7dc554cf41cbf675ee044c830fdec833caf9115b",
+    "gzip_sha256": "5470d073051e7c6354024cda60e73c74f34f37dbe6873bf5d61b95ada7e6f530",
+    "api_metric": "Summed integer ys values in weekly chart rows, converted to trillions of tokens (T); week labels are Monday dates.",
+    "weekly_facts": [
+      {"week_start": "2026-10-12", "status": "completed_week", "returned_sum_T": 164.043985914931},
+      {"week_start": "2026-10-19", "status": "current_partial_week_row", "returned_sum_T": 47.557737266305, "prior_2026-10-20T18:04_capture_sum_T": 44.93852543684, "difference_T": 2.619211829465}
+    ],
+    "future_target_week_rows": [],
+    "future_target_scope": "No weekly labels for Oct 26, Nov 2, Nov 9, or Nov 16 were returned; the Oct 19 row is not a forecast. Response/cache timestamp is not a documented token-usage cutoff, so the partial-week sum is not treated as finalized usage.",
+    "row_count": 53
+  },
+  "not_refreshed": "No additional Clarity/Senate or Google Year-in-Search request was made; prior same-day Clarity market-description capture is not primary evidence of a vote, and a 2026 year-end search list was not assumed to exist in October."
+}

@@ -119,6 +119,14 @@ Before formatting read evidence, persist it through the existing vetted reader;
 Label SDK serialization and call-window timing honestly; they are not raw HTTP
 or wire timestamps. The helper changes no financial execution path.
 
+For CLI checks, persist each completed command's stdout, stderr, return code and
+invocation bounds before optional receipt conversion or another command. Two
+October20 wrappers lost return codes by keeping them only in memory until a
+later adapter failed; preserved output does not establish a zero return code.
+`Capture.write_response` requires both `started_utc` and `received_utc`, matched
+to the durable intent. For API reads, use the existing
+`capture_readonly_call` adapter when suitable; its response is saved before parsing.
+
 scripts/context_packet.py emits a bounded orientation packet for portfolio,
 research, engineering or operations from allowlisted Git-tracked public files.
 Its default cap is 12,000 UTF-8 bytes, not a model token budget. Expired, future

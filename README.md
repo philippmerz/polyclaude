@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 239 recorded observations from Apr-25
+The local performance CSV now has 240 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 16:58 UTC
+## Last audited snapshot — October20 19:28 UTC
 
-**Indicative trading depth $178.57 versus $170 contributed (+5.04%); trading midpoint $188.36.** Canonical bankroll $194.31 includes $5.95 separately funded gas; same-producer PM midpoint/depth $34.40/$24.61. The recorded16:58:07 timestamp is stdout mtime; invocation bounds were not persisted. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit, VM/API costs excluded. CSV239 preserves prior238 rows and flows. [Financial record](research/2026-10-20-1658-financial-snapshot.json).
+**Indicative trading depth $184.16 versus $170 contributed (+8.33%); trading midpoint $189.15.** Canonical bankroll $195.08 includes $5.93 separately funded gas; same-producer PM midpoint/depth $35.20/$30.21. Producer ran19:28:25–41UTC; rounded sequential marks are not synchronized NAV, guaranteed proceeds or realized profit. $19.72 accounting residual remains unaudited; VM/API costs excluded. CSV240 preserves all prior239rows and flows. The depth improvement reflects observed quotes/liquidity/fees without a trade. [Financial record](research/2026-10-20-1928-financial-snapshot.json).
 
-18:03 focused authenticated verification: **zero open orders,127 complete trades, all nine all-size position tuples unchanged** against16:57. Default helper omitted0.33TrumpNOdust; explicit all-size query recovered it, with no actual change. The original full check completed17:09;18UTC added held-safety review, without a new bankroll producer or CSV row. No financial writer or new entry. [Completed check](research/2026-10-20-165003-checkin.json) · [18UTC account proof](data/deep_review_20261017/work/goal0030_safety1800_ops.json).
+19:29 root-verified authenticated state: **zero orders,127 complete trades, nine unchanged all-size position tuples** against18:03. No winning redeemable or financial writer. Wallet/crypto19:36rc0;0committedpUSD. Four daemons current/singleton19:30; UMA43refreshed0alerts, hurdle4clear0flagged, watchlistnohits, stateCLEAN, Ostium0→0/cruxquiet. Original six CLI return codes were lost by a receipt-wrapper error; outputs were retained and independently reviewed, without invented success codes. [Check](research/2026-10-20-192642-checkin.json) · [Root account proof](data/deep_review_20261017/work/tick192642_account_root_recheck.json).
 
-Retain/noadd after18:04 exact-token exit/stress/carry and joint-loss review. Michigan5NO: fee-net exit1.40882 versus selected terminal1.70;75d cached-carry sensitivity1.41798. Another5.64pp adverse selected shift reverses; broad-low cases favor sale. Original Rogers records remain unverified;18:49 Fox page still supplies no verified forum remarks. Guardian opposition-activity allegations give no measured vote update. DebateOct21 23UTC. [Primary judgment](data/deep_review_20261017/work/goal0030_safety1800_primary.json) · [News closeout](data/deep_review_20261017/work/tick165003_closeout_primary_1855.json).
+Retain/noadd. The requested Bloomberg/Kimi headline does not establish a new model or qualifying score: exact article inaccessible; July27 companion preview/July22 official announcement are older K3 context.19:28 official HLE response remains66rows/K3accuracy41.08/calibration44.67; cache can miss newer information. CNN Michigan slippage headline supplies no verified body/date/poll; no numeric shift inferred. NewBUYpause405/600+comparison stays. [Primary review](data/deep_review_20261017/work/tick192642_primary_review.json).
 
-18:04 sources: HLE unchanged66rows/K3HLE41.08; OpenRouter completedOct12 164.043986T/currentOct19partial44.938525T, held future weeks absent. Senate17:01 list endsSep30; not proof of no later passage. Google17:35 route404 remains a coverage gap. Clarity29+29 retains14:02 identical-rule proof: normal conditional payout29/58, venue/oracle0;18UTC tool indicated24.99 group exit. [Source review](data/deep_review_20261017/work/goal0030_primary_sources1808.json).
+19:28 exact held-token fee-net exits are Kimi1.00/OR3.30/MI1.45/Messi1.25. Selected terminal values1.902125/3.65/1.70/2 still exceed those exits plus variable-Aave carry sensitivities. Broad-low cases favor sale; another4.81pp adverse MI selected shift reverses. Gamma structured curves and compact CLOB both now report0fee for these four markets; no venue-wide policy claim. WholeClarity normal conditional29/58 or venue/oracle0 versus19:29tool22.47group exit; no leg-onlysale. [Saved math](data/deep_review_20261017/work/tick192642_hold_exit_math.json).
 
-All seven14UTCscans/81batches1398rows retain capped/incomplete coverage; no exchange-wide absence claim. Four daemons/stateCLEAN retain16:57 clocks;18UTC UMA0alerts/hurdle4clear0flagged/Ostium0→0/cruxquiet. Incremental Git repacking recovered39.23MiB with object integrity, refs, worktree and controls verified unchanged; disk remains below512MiB warning. No daemon code changed or routine Telegram sent. [Discovery](data/deep_review_20261017/work/tick134616_discovery_index.json) · [Storage proof](data/deep_review_20261017/work/storage_git_repack_1830_verified.json).
+OpenRouter19:28 completedOct12=164.043986T/currentOct19partial47.557737T; held target weeks absent, cache is not usage cutoff. Senate17:01/Google17:35 gaps retain their dates. Full14UTCscans/81batches remain incomplete discovery evidence. No new valuation or Telegram. Next existing22UTCcheck/earlier material event; Michigan debateOct21 23UTC. [Source record](data/deep_review_20261017/work/tick192642_resolving_sources.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

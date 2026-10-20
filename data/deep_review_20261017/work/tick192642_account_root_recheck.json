@@ -1,0 +1,26 @@
+{
+  "schema": "polyclaude.root_account_verification.v1",
+  "verified_utc": "2026-10-20T19:38:22.852603+00:00",
+  "account_original": "data/deep_review_20261017/work/tick192642_account_ops.json",
+  "orders": 0,
+  "trade_count": 127,
+  "terminal_cursor_both": "LTE=",
+  "positions_allsize": 9,
+  "tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "all_tuples_equal_1803": true,
+  "winning_redeemables": 0,
+  "private_account_raw_hashes_verified": true,
+  "command_output_hashes_verified": true,
+  "status_no_failure_markers": true,
+  "completed_stdout_checks": "Hurdle4clear/0flagged, watchlistnohits, UMA43refreshed/0alerts, KellynoTRIM, Ostium0\u21920, cruxquiet, decisionsnooverdue, stateCLEAN7indexed+1claim/0expiredholds.",
+  "CLI_returncodes": "Original6commands unknown after wrapper TypeError; never inferred0. Outputs independently reviewed. Wallet/crypto andcanonicalbankroll separately capturedwith actualrc0/invocationbounds.",
+  "group_exit": "19:29:18.209625stdoutmtime only, indicative wholeClarity22.47/fee0; no fabricated invocationbounds or exactbookclock.",
+  "zero_reservations_source": "wallet19:36rootCLI pUSDcommitment0, separatefromaggregatefinancialproducer",
+  "no_financial_writer": true
+}

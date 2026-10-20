@@ -1,0 +1,114 @@
+{
+ "read_cutoff": "2026-10-20T19:32:14Z",
+ "alerts": [
+  {
+   "alert_id": "e54d91e795a1caabb15a89a242c5eef6bc471ba6",
+   "ts": "2026-10-20T18:59:02Z",
+   "line_sha256": "37c6cfeabf3bdc06acd2a081b9c6b1295d75badc4800d6e56f932b39a50ea753",
+   "decision": "Messi held: award vote is not resolvingGoogleannualathletequery; no verifiedranking/pbridge/action."
+  },
+  {
+   "alert_id": "b4e3c98c17a2f6343aa5cff3db50e231b7eaf5c1",
+   "ts": "2026-10-20T19:04:21Z",
+   "line_sha256": "f9440da01038692bb58f2fdcec4ccac92b1dc5f8cc2dd6b0738811a9d97735e2",
+   "decision": "No currentheld/liveBUY identity channel established; research-only/unvalued, noaction."
+  },
+  {
+   "alert_id": "9b921e8717eb346c7422133bb3500834a0a4a8cc",
+   "ts": "2026-10-20T19:04:30Z",
+   "line_sha256": "8546a898a3ad54a8f9232f0f99c34fb49bd30d1b3924b0fec7efbe481b5450f4",
+   "decision": "MI held: Crainforum body/date/poll notverified after robots block; no numericalbridge/action."
+  },
+  {
+   "alert_id": "b55af7dc2856b791263902dcce836f4d9c07b7cc",
+   "ts": "2026-10-20T19:04:38Z",
+   "line_sha256": "1669c989b93ff9817007e8dd0f2e8227c30c13890aeff622c6dedcfe11732a5f",
+   "decision": "No currentheld/liveBUY identity channel established; research-only/unvalued, noaction."
+  },
+  {
+   "alert_id": "3edde6ab3a40fa7d9ee9f87a24ef6de15ae782dc",
+   "ts": "2026-10-20T19:10:08Z",
+   "line_sha256": "98a750f6f48b2f14e84c512eac8fd68b0d9ca73228227004ba3a44c66c33e787",
+   "decision": "No currentheld/liveBUY identity channel established; research-only/unvalued, noaction."
+  },
+  {
+   "alert_id": "ab1232cdda872f8b3aa4790370d4fa2594be2a47",
+   "ts": "2026-10-20T19:15:27Z",
+   "line_sha256": "725337f64e4f4f784c0f73a0ad44ca684f41489ff797addf2b71d434e6c197d6",
+   "decision": "No currentheld/liveBUY identity channel established; research-only/unvalued, noaction."
+  },
+  {
+   "alert_id": "ce348c00f0c47b1d8085e19a8c891a838c03a56a",
+   "ts": "2026-10-20T19:15:31Z",
+   "line_sha256": "123b6e022438d58c60e378c6487d5afe4c52c06e80eca39c40baec748643f064",
+   "decision": "No currentheld/liveBUY identity channel established; research-only/unvalued, noaction."
+  },
+  {
+   "alert_id": "358bcbdec31f76adea5c099a3dbb7f7f645d4fb0",
+   "ts": "2026-10-20T19:26:37Z",
+   "line_sha256": "194bca10118be1ad8e33a4efd4a65fb553ec476247fceeec8bcd799073082caf",
+   "decision": "Kimi heldYES: no verified new qualifying score/release; exactarticleunverified, retain/noadd/punchanged."
+  },
+  {
+   "alert_id": "becea882f54cd5206629d70e3388d4c244b481ad",
+   "ts": "2026-10-20T19:32:09Z",
+   "line_sha256": "6a41461e5c4189b3fd5154accfcf0e7bd5be497583b8bd95e4c0f39a3e39436f",
+   "decision": "MI heldNO: body/date/newpoll unknown; slippage iftrue favoursNO, no quantifiedbridge oradd; retain/punchanged."
+  },
+  {
+   "alert_id": "744df22c0625c8827a8e035188b141cf8ef00ed3",
+   "ts": "2026-10-20T19:32:14Z",
+   "line_sha256": "2376cb8855d74e2454a6014f8a2709bbd07ffbf491f497046e401a6152ddc460",
+   "decision": "Messi held: award vote is not resolvingGoogleannualathletequery; no verifiedranking/pbridge/action."
+  }
+ ],
+ "older_Kimi_related": [
+  [
+   "a40093efed7c7b243727ac80c534760073f3c650",
+   "06:45",
+   "OpenAI accuses Moonshot of copying reasoning"
+  ],
+  [
+   "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+   "07:17",
+   "K3 lands on Amazon (SCMP)"
+  ],
+  [
+   "e8ea6beea0ed415d918f6cb7c0993a7f05ecf9f3",
+   "09:40",
+   "Moonshot seeks cloud revenue-sharing deals (Quartz)"
+  ],
+  [
+   "5fa45630a7ef41fc67a1685a286aae60f0e561e9",
+   "09:40",
+   "K3 escaped sandbox to cheat, researchers say (TNW)"
+  ],
+  [
+   "f534810c5538d26e2580ac14dbb36c64047f5760",
+   "09:41",
+   "AI cold war/Kimi (CTech)"
+  ],
+  [
+   "b27070873be8269e6f95abbf691c1c93b18f5993",
+   "17:22",
+   "K3.1 four launch signals, “one commit nobody can find” (OrcaRouter)"
+  ],
+  [
+   "358bcbdec31f76adea5c099a3dbb7f7f645d4fb0",
+   "19:26:37",
+   "What Is Moonshot AI’s Kimi K3 Model and Why Is It Making Waves? (Bloomberg.com)"
+  ]
+ ],
+ "older_MI_related": [
+  {
+   "id": "d5720d40d28c6a492eb996806aa033230b0b03bd",
+   "ts": "2026-10-19T16:37:13Z",
+   "title": "Michigan Senate race polls: who will win the 2026 election? - The Times"
+  },
+  {
+   "id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+   "ts": "2026-10-19T18:26:06Z",
+   "title": "Who’s winning Michigan Senate race? Latest polls show tightening race - Detroit Free Press"
+  }
+ ]
+}
