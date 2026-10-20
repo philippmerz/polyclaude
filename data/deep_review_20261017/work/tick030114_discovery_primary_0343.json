@@ -1,0 +1,41 @@
+{
+  "schema": "tick_discovery_primary_coverage.v1",
+  "tick": "20261020T030114Z",
+  "reviewed_utc": "2026-10-20T03:41:43.057741+00:00",
+  "worker_report": "work/tick030114_discovery_0326.json",
+  "worker_sha256": "de119145e1fde92a15e13a7b26aad9bc5463259e22be68536bbe85678c209e95",
+  "capture_index": "work/tick030114_capture_index_0326.jsonl",
+  "capture_index_sha256": "10b04e7bf2cc3425b0da6fa70f0a04ef63500244071a37a3090790b248619424",
+  "review_scope": "Root verified all9 CLI/context raw+gzip hashes and zero command returncodes; read complete scanner CLI outputs, then every61batch title/identity/status unit. Initial combined tool output truncated; explicit12–29 and30–46 reads completed omitted middle. These are metadata observations, not new valuations/rejections.",
+  "primary": {
+    "fetched": 988,
+    "pages": "10/10 cap",
+    "eligible": 588,
+    "selected": 80,
+    "top_omitted": 508,
+    "new_to_snapshot": 8,
+    "absent_from_filtered_snapshot": 8,
+    "batch_rows": 17,
+    "outside_delta_batches": 63
+  },
+  "thin": {
+    "fetched": 39398,
+    "pages": "20/20 cap",
+    "eligible": 3335,
+    "selected": 3000,
+    "top_omitted": 335,
+    "new_to_snapshot": 263,
+    "absent_from_filtered_snapshot": 263,
+    "batch_rows": 1022,
+    "outside_delta_batches": 1978
+  },
+  "other_scanners": {
+    "sports": "47passing/8printed/3consensus attempts/0valid; actual pages not reported, code cap6. No >3pp certified bookie delta.",
+    "macro": "9rows/no consensus; actual pages unreported, code cap8.",
+    "monotonicity": "1070multi-event/15pagecap;1midpoint Papertradeflag becomes−7.19pp executable and is outside earlyJan window.0 provisional, no payout-floor certification.",
+    "consistency": "5003markets/33pagecap;193structural+90directional groups.20requested/6validated/14quote-failed/173unquoted;0provisional. Mutable prior copied before scan (priorgenerated03:22:08, not assumed02:14); no universe-wide absence.",
+    "favorite": "1000market/10pagecap;61rough/40walks/28emitted;21walk-omitted,1invalidbook,11outsideprofile; no probability supplied."
+  },
+  "decision": "No newly completed primary valuation or executable arb justifies allocation in this check. All unreviewed eligible rows remain unvalued, not rejected. Frozenqueue371/12blocked/366factual/2251pending unchanged; no new case started.",
+  "limits": "Added-to-shortlist not new listing; disappearing row not closure. Grouping not settlement equivalence. Win-assumed carry/profile labels/model forecasts not probabilities/entry signals. Category labels visibly imperfect (Ballon dOr under geopolitics); not selection authority. Scanner/context producers write local snapshots/artifacts; no financial mutation/execution authority."
+}

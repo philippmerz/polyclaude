@@ -1,0 +1,38 @@
+{
+  "schema": "held_hle_transport_followup.v1",
+  "observed_utc": "2026-10-20T03:30:20.003200Z",
+  "status": 200,
+  "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+  "gzip_sha256": "c99f7463a00639e054c7aae8ae9944fac988a8dd619096d74a5e6c0f96e20d1a",
+  "receipt": "logs/checkin_20261020T030114/hle_vetted_0333/hle.receipt.json",
+  "age": "697",
+  "same_as_prior_raw": true,
+  "transport": "Same first-party URL and public browser headers as vetted source_freeze_check.py; no auth/login/proxy.",
+  "rows": 66,
+  "Kimi_rows": [
+    {
+      "name": "Kimi K2.5",
+      "id": "kimi-k2.5-thinking",
+      "hle": 25.4,
+      "calibration": 75.9
+    },
+    {
+      "name": "Kimi K3",
+      "id": "kimi-k3-high",
+      "hle": 41.08,
+      "calibration": 44.67
+    },
+    {
+      "name": "Kimi K2.6",
+      "id": "kimi-k2.6-64k",
+      "hle": 35.48,
+      "calibration": 58.19
+    },
+    {
+      "name": "Kimi K2",
+      "id": "kimi-k2-thinking",
+      "hle": 21.4,
+      "calibration": 67.8
+    }
+  ]
+}

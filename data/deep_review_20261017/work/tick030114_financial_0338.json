@@ -1,0 +1,23 @@
+{
+  "schema": "canonical_financial_snapshot.v1",
+  "tick": "20261020T030114Z",
+  "producer": "scripts/bankroll.py",
+  "producer_window_utc": [
+    "2026-10-20T03:27:35.706794Z",
+    "2026-10-20T03:27:51.629931Z"
+  ],
+  "raw_sha256": "5f24af2f29a19d215a15bfd3ebb2f092095a3e61d190a1fe75b256393c569094",
+  "receipt": "logs/checkin_20261020T030114/ops_0326/readonly/bankroll.receipt.json",
+  "authoritative_total": "196.22",
+  "separate_gas": "5.83",
+  "trading_mid": "190.39",
+  "PM_mid": "36.44",
+  "PM_indicative_fee_net_depth": "33.65",
+  "trading_indicative_fee_net_depth": "187.60",
+  "reference_contributions": "170",
+  "depth_vs_contributions_pct": "10.35294117647058823529411760",
+  "settled_residual_not_audited_profit": "19.72",
+  "unrealized_marked": ".67",
+  "unrealized_indicative_depth": "-2.12",
+  "interpretation": "TOTAL is producer, not hand-assembled wallets. Trading/depth derived using same producer rounded gas and PM components. Sequential indicative estimates, not synchronized NAV/proceeds. Residual not audited cash profit; VM/API excluded. No new trade/fill/flow in complete account pass; contributes unchanged170."
+}

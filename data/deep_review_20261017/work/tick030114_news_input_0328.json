@@ -1,0 +1,363 @@
+{
+  "schema": "bounded_news_input.v1",
+  "tick": "20261020T030114Z",
+  "requested_ids": [
+    "7732eabb7fe4c67abfcb287b10a74f58b0517e89"
+  ],
+  "window_start_exclusive": "2026-10-20T03:17:20.748052Z",
+  "window_end_inclusive": "2026-10-20T03:28:14.986261Z",
+  "new_rows": [
+    {
+      "alert_id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+      "ts": "2026-10-20T03:23:02Z",
+      "line_sha256_including_newline": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea",
+      "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WRGB",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOU01KbE9BMlRWdUJKVUFrVnA1TmgzU0tIUGxSYWFPQUxqZm1zckF1T0VfMG91ZlpkYzktdlRCNjNuN1hIaFhIUVltN25lNkk5elROaTQxanVXU1dWTllJNkRJMjF1WGVMWnpQQ08za3lMWTNDZHk2TzZ6clVHXy12SEN2WnRRVEE3RmpldktkVWZKdzJFckJZVEVFWlVFQTBYdFVldTNlZnlHNjkyQXJ1NzZOT1NmWEpLRnlLczRaVXVuWHY2QjZpcUFmZHAzYVo1X0xqM2RhMXVrU2lVc1QwdF9SWV85UlJIc0FEUlFUQ3Q1UzFJ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Questions about Abdul El-Sayed’s alleged Muslim Brotherhood ties could weaken Democratic prospects, supporting the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    }
+  ],
+  "related_including_requested_rows": [
+    {
+      "alert_id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "ts": "2026-10-19T18:26:06Z",
+      "line_sha256_including_newline": "bf4a4865c684350539205e96811ada731debb05883276464a93770d1ae4ee4c9",
+      "title": "Who's winning Michigan Senate race? Latest polls show tightening race - Detroit Free Press",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQYVpNUGRFNDlsY2NyZ0EzdTBMaWlCY2l0V3JLakxXM2djQ1JlZzZpemlERlRxVENGSERWM3RlUThlMFVmTE43ZjQ5ZWpaNlh1cVhkMG9UUGlqUFVwS2ZidlE2QndJaHlwNkh2VWdneXNMVXNQWnVaZWgxRDBMQm5KeDM5Q0R6bnFsUFJkOWRLcUQxVEVydHBBSUExaTZpbjAxLUFPeVUybGpPS28xZXlTMTdNZU9qYUE?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "A tightening race increases the Democrats’ estimated win probability, weakening the held No position and warranting re-evaluation."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "d1944e5ccd89687ba23ef59d536b4b392da6b9a1",
+      "ts": "2026-10-19T18:42:22Z",
+      "line_sha256_including_newline": "17db49b6f4519b92dda2bdd8e57a8373238d227b0399c6e84fc3be45985d15b2",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - The Detroit News",
+      "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxNd0FJWi1ibWd0bnZwUVh4YU9zekQzd3VpSG5wU2FOdFhVLV8zeG5lZE9zeXVuYXZ0djZvbUNqbEktczBURTJTc2ZybzluZ0lWVXRlWXNXcXkxRDVhd0RKSGJjRWVMYmZHamJ5czh2TGYwR3dQTXdGVTk5NUVEbl9lU2Z5MjBwVXJVc0RRaFdjMlZ3Sy00YzdEUmFrQ3BpRTlzU1o2VmFLZ1JUaHhIU1c1VUFUMlUtYmJJRnRZ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Disavowing the Muslim Brotherhood may improve El-Sayed’s broader-election viability, pressuring the No-Democrats thesis."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "3793f8b8a83e5f69b4012d3d505cdf3f8d2ae10d",
+      "ts": "2026-10-19T19:30:29Z",
+      "line_sha256_including_newline": "dcd8b2fbdc9556982ab2911119cfe0ce073a081708f3892891b99ff900e50f5f",
+      "title": "Fact check: Mike Rogers pushed Patriot Act, but isn’t to blame for Flock cams - Bridge Michigan",
+      "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOa191SjNmdFlkcGI0UF81RERYdUdYWDZZdkw2dWJ2YjlpUkE1ZVdWRlMtNFpiaEI4TWtKRVd5M1BnNm1oVU83RVNjVU8zbG9xYTZ2b09lblVWLXFGN0pDVUEyUTR0S0ZGcEYxODBmdUlndmg2Wk1Jd2RzWVVKUVFpUGxnbTNWSDYzSHBHWWxTY1BKYnZoSFdHV3ZCVzdDZHBKZnNTWTFSZDdBOEQtNVo0dEZEM1FENzQ?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "8dfc44d0637ea271769746f8165f714f60bac47a",
+      "ts": "2026-10-19T19:52:47Z",
+      "line_sha256_including_newline": "196d0469668d82973c41ba8c732a4b70e87bf151cf640ff6de9fe64d321e02da",
+      "title": "MUST WATCH: Abdul El-Sayed challenges voter after pointed question at campaign event - The Gander",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxQY2d0UnlINGlDSW4ybnpXMHF0b0Jpcm1QX3BiQnRJR3hYbmtSdmZZNmJQYWJldjEyQldsOGg3U1ZjNUZSXzRlWngtTU1oN3Bsc2pPY0pMNFh0Sk9DTW9lM1EyRVNqazhseWdWdXQxX0dNUThQSmxOTjRHVU9Vb0hoa2JsTDdRNm1NX29yZnp3d01OZXQxX2VEOUV5V3NVTlNsTW51T0xHeEJza3FJNHExcXJkMVgwNWVGOW41T0pZMA?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "12856988e4fc1b37c5fa655fbf9ca56e311c86da",
+      "ts": "2026-10-19T19:58:11Z",
+      "line_sha256_including_newline": "0f679349d0e55ee6ca48a599599dc5ddc4e019efb54a9b0601daf1bbbdc8df86",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood, responds to claims - Bridge Michigan",
+      "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxOWHpyRWU3N1lvd2FzTHNvOEQzU1Z4dG9vbUIwci1iYVR3TUpVeW9iMHdXQVZ0NkxlRGV6NUVaMnl1NHRIRGk2M1ktdklYMUpja3NvblE3OWM4R0xmaE04bFZZSkRWLUZoSEN0UnBrWVhKaGVkR3BSQ1JvV0ppZjlWajFQTTlGQS1fZVlOSXhIWjFIRkhHUlV5V1BYQWNXY1A1LWxRWXJB?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "El-Sayed’s disavowal may shift statewide perceptions and pressure the thesis that Democrats will lose Michigan."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "cdf6cfd2870898be18bea28b90a667395eb88bd6",
+      "ts": "2026-10-19T19:58:20Z",
+      "line_sha256_including_newline": "d3cfaebc3c8556078a932dd4fb9ec176c4ba606dfe118da8026512273c5f91c2",
+      "title": "Bitter Michigan Senate race rattles Jewish and Muslim voters already on edge over the war in Gaza - Grand Haven Tribune",
+      "link": "https://news.google.com/rss/articles/CBMilgJBVV95cUxNU3E2M1hqb0NjQ0xydWhOc3pHcm8wSW0xTVp1NXdOZm5YTTEtaG9BLXNSUWhmb3R6RTIzdmFkZ1A1aG5NY3kwNG9PWE55TUF0RjBiRV9jdjRUeUlLMmFWOVVhajRZdTBXNnFsWG9LYUFodkNNVXJydHhaSmJFNFlVUktxdUt3elNRbFdLRFh0SVozd3JycHhkQnZLNi1DSXUtaTdmcTYzejVIWDNaTURCNDNwOHk5QzAwV3NNZVROWlM5MF9uTHhkVFVCdl9jNEpISHpPN2lzX2JKM2xfZjQ2ZVQ4VzU3MzlSbHptSFJGSUJJdTJVWU5VUWFkQk5BeG1xZzQ3UkxrTHhxMTBwaHdWWGFTMTV5UQ?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+      "ts": "2026-10-19T19:58:25Z",
+      "line_sha256_including_newline": "f8fddc96ce706e535461ace91f3b03b427a299428259449e73767704aa8561de",
+      "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WKEF",
+      "link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPcHJzMkMyWW1FTFNIWF9ubUxhV25JZ2s1RzJWSjRVYTNHMDk3T3g4WENibzVYX1g3SzVqdXo2c0drbU43ZFdFbF92dHVxLWppWWFNME8yeEpWRW41LVRkckpJcjcxd2MyZnU1X1c4ZlJ4ZHpyb1QzVW44MGVPS3ZGT0U0UVo4ampzQk5INlVzalBwbmNLUWJfcDFDVkVsQmFWampfbXRzSngxdDF0c2ltQW5DSUxoOVNyMEF3ODlfOUVFQmFfZUFpZFR1THNrcVkwSGFVVGxoUzhhdGVTWGpQMFAwWll6VWQxdEpiQ3lpQm5kNFM4SmVZ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Controversy may weaken El-Sayed and reinforce the No position on a Democratic Michigan Senate victory."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "5ca7f96a4fdef074d9a51ed4d5b4c711e7705578",
+      "ts": "2026-10-19T20:41:11Z",
+      "line_sha256_including_newline": "39543c484116fae8070dcd83cf6e570975a629420445ed2b4df9320109b7547c",
+      "title": "Dana Bash Tried Playing Gotcha With Mike Rogers Over Abdul El-Sayed, and It Didn't Go Well for Her - KSLM Radio",
+      "link": "https://news.google.com/rss/articles/CBMizgFBVV95cUxQS0JqRU5GN0tqNlE2NklWeHNMcjlHb0tPTXBLcS1udnNQNTdtUjBwaXdWY2xOb3dRcDRRR3g0VURFeHVfWGY5Q29Gc3VMOXA4MWdJc2VrZ01tQ3ZQQzk0bEtCVWs0QWhSNzExMy1XX2R3SThYSkFaMURIbmVWZnlXSlM1SDlVRm9GWXBDLU92OEhXRVVWVlJPeTRhcFFWNlJvWk1mNDBSOFBybE1zTlN1N1ZSb2JmTGlVdjI1dm5ZQ2NYZF9tRFpKRWpZVzdZZw?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "5ef84b62bc3184801942e4f04fe94ce1a0f1b261",
+      "ts": "2026-10-19T21:06:43Z",
+      "line_sha256_including_newline": "1bec2e350a8cc9d17263f9ef467a86bc8c214b2dff2deeb1933bb173bd89080c",
+      "title": "Raphael Warnock urges Democrats to unite behind Abdul El-Sayed in Michigan senate race - TheGrio",
+      "link": "https://news.google.com/rss/articles/CBMie0FVX3lxTE1SMUM5UGJBd24xSVNpWjZFQnA0cEc1YjdtYTJVLXpnYWJENzlXV3ZWM2RMTWE5YkcyR0pJQTYtaThsSFVjVlR1LUFQWGZFZklyMThWTFhraHhHb0Q0N3dxOWUxeGRTTmY1ZFRvdkIySGdaVTNnQTVvcUljVQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "High-profile endorsement and consolidation could improve El-Sayed’s Democratic nomination/electoral prospects, weakening the No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "07b7f44e66e76ab0a05b9147452d75993d19b371",
+      "ts": "2026-10-19T21:34:18Z",
+      "line_sha256_including_newline": "bc53e82305ff169f2ba117a71af96fe3a43f1d0fd25dc429dfcf3dbdcff3be10",
+      "title": "Why the Muslim Brotherhood has become a flashpoint in the Michigan Senate race - news8000.com",
+      "link": "https://news.google.com/rss/articles/CBMikwJBVV95cUxQbWRXZlhvWUlIa0xuTGhZM2RuRlh4SDNTS1JKYlRoVGQ5bXZNS085aGMxemtIVWxqbFpUWGhaM3VKSDl4NXlMYUhPYldtQjhpNVdSMlhNN2ZTbDBtWUJURWxQR3pxZHZ1Ni1zc1lqRmU4SG5LM2M1QWpwenh6Q0c4SVFGN0cyYWhuVExLY3hBZzRPTDExN2pBUlFDLTNaN1NFTXhMTlN0NXhxYUE0Tzk2bWhFOTNmckVPVlRsTlhqSHpxcEdub1NCMHZlNFFnWU1JUXdBRVBGTTV3WjNmdmRNS0RXYjFDR2kxTFRyZy1iSGtTWnFTckJyTDdmbHhQX29qZmFfSHIzdEhVc3Y4bDROaE5udw?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Campaign issue may modestly affect Democratic win probabilities, but no decisive polling or race-state change is provided."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "e6836a36c1895a323e2530832b79e375612ecdcf",
+      "ts": "2026-10-19T21:39:42Z",
+      "line_sha256_including_newline": "614a3d166c714eb8d97e0285f4e5c15ff130fa4e83456dd198f440d772c0b91b",
+      "title": "Why the Muslim Brotherhood has become a flashpoint in the Michigan Senate race - Yahoo",
+      "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQWEJiRURwWGRBTGZhU1dGem8xMW1DR3dYN3p4TEc5N282aTd6bjJTU2RMLV9pQ3dvRTBiMGt2Zl9NOHVIWmpPQ0hDRm1jSzUySDF1SzVPek1xcm9HbU1Qa0hTU0VFdVZmTTlNZEJIbEZHNDJhd2R5NHc5MGYxWndVN210cUxYcHNnT09XcGRTa1FnM0RoV2JqZGxpSzBlRkdQSHc?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Allegations involving El-Sayed could pressure Democratic support and improve the Republican’s electoral position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "e569219197601f1fab365748941ee081615f4958",
+      "ts": "2026-10-19T21:50:58Z",
+      "line_sha256_including_newline": "5ce8479008d6e32b17c41be723fefe62a18bd7f33bcc28ebec021f7a57a5717d",
+      "title": "Mike Rogers Spent $100K on Private Jets and Luxury Travel Last Quarter - The Intercept",
+      "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxPamZJRkJmRHdjTUQ0S0hXUXlYZE5DZkNpbk9UdnAwcTBmbWRncGQ1MjQ0Wm8wN05ySGJMSzBVRE1UZkJ3REQ0YkF1MV9fTTZSeWZ3d0V6U3pDSks0bTVIWi1uNzVoeWZvQUIyLTAtcHd2TlhtNmpEY1Z0dGVfRjY2c1dqdTBHSWM1WlVfSmJxWQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Negative publicity for Republican candidate Mike Rogers modestly improves Democratic win odds, pressuring the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "236c4e4e22079720761db8d03095edd6777637d4",
+      "ts": "2026-10-19T22:13:12Z",
+      "line_sha256_including_newline": "0f80347ee5fa0cf61173910ca752e067893960a24d9243426ca115bacac08279",
+      "title": "Rogers wrong that El-Sayed didn’t disavow Muslim Brotherhood - PolitiFact",
+      "link": "https://news.google.com/rss/articles/CBMipAFBVV95cUxNYXlCWlpOYkZ0UExQejFxRmxyQldoVV9EQmdTT0U3eGtqOTBhT3M4SmRTckQ0aXZKVDNkZ0prS0NBdmxfbjBRek8tUDR3M0ZTOXFSTUlnNDhSejBwTXY0aGhtRzVtbnM4UFhaOGJhYmZnSHZUOTlQWXNjTC1SSEl3RF9OZkg5WjR4d2ZYdjZWX002TW9GVG5qN3BQaGh4MkhFU0dXRQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Correcting a negative claim about El-Sayed may modestly strengthen the Democratic candidate and pressure the No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "947fffd88974a00707d3ef922908aeefdf766ec7",
+      "ts": "2026-10-20T00:09:30Z",
+      "line_sha256_including_newline": "3bc7328c3ee94333f2df096a26d3aafe2afda95259fce2872faa8d496dd88252",
+      "title": "Abdul El-Sayed confronts accusations of having links to militant groups - Modern Ghana",
+      "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9XYVFsUjl5azVYejNTbVNicTBRMDdNbEVLNWhhdEhjS2FIYzlxTnozUWdqN190M3pfMWQ5dlpESWRNa2RSck4xVTlDeXJrbDdGZG5OVzlZbDlOZnpLazlB0gFcQVVfeXFMTkdsU0xkenF4amVzS0hfTFFkOXNiOE9WbWtXVGxMVWtCSFd5R3ZPRC1ZWlhMUmFleGZ3LWhRMGNYamU2c2lTVlRURmlrTDJ6MHJiSzUtb1ZQTkN5eVU?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Allegations against Abdul El-Sayed may weaken Democratic prospects in Michigan’s 2026 Senate race."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "d248f59082c3c21d789833e15150fbe53ad5f4bc",
+      "ts": "2026-10-20T00:09:34Z",
+      "line_sha256_including_newline": "07a94dc744784c4288e518bbea38b507ceb4445432613ed3969fd4215eb87b21",
+      "title": "Abdul El-Sayed Disavows Muslim Brotherhood After Town Hall Heckler In Caro, Michigan: 15 outlets compared - NewsCord",
+      "link": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxPR1V5cjZPLTJvc21VdmxxeF92em5GVVdXV2NXNDl3UW5RZkJzemZFd2Vmb25UNzJWVFZiT3E2Y3ZlYVFtTjEySk5senhuVC1PZGMwZXZRQlhoampFOG9Yc2IxbllHZGRHZmhOVXBtLUlNbk5hX0ZVTGJqcDlONU1GcThpbEdyaEZpdmZ2cGNmcFNZN2dLVXBBU3lhMUNxU3RZVHpiZ0NCemE0MnVoQXpjOG5XZjZVLVgxLTk5Wi1DbzF0cGJsMmx1bFFNQ21Tdm5fb0pMS2I5T2EyX3JGM0VITGpBWGJpWGh6UWc?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "The controversy pressures Democratic win odds, modestly confirming the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "dfb1b6579bb76a08381ad0e0505e9298ceca2e69",
+      "ts": "2026-10-20T01:02:36Z",
+      "line_sha256_including_newline": "07a39d3244a408a44438511bb8bd09c2faf8ea0cf55b6bc75a0ddfebef087f4f",
+      "title": "Jesse Watters humiliated by Fox New viewers after he makes Abdul El-Sayed claim - AOL.com",
+      "link": "https://news.google.com/rss/articles/CBMihwFBVV95cUxQLVdSTjBUUFNUTWFTRjh2NDZXWjBOUGZMZHlWYWVmSUVLcUFwelFTOVhaQkVsNUlGZ3AtNlF1MDhHN1lEd2s5a0ZxWnNCOUxTdmpCRWtWa0phUGJBdm95RDFPdERBT2pGTUNsVDlSQ3VpREJkV09fZEs4VkZJMWxsWEJjdXd3Mzg?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "a099a9ac21f8d5315c10967822b6de06b6ca2a8f",
+      "ts": "2026-10-20T01:07:59Z",
+      "line_sha256_including_newline": "88ea340419310fa61682cba2664348f92eb886c584c4d75db82a323e61b7ebca",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Green Bay Press-Gazette",
+      "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxPUV9FU1M2ZWZ6RnB1MnhzWGJ3eWhqRUJJVGgxMTRCdlZiRXJkQjRpdVU5QXNMdGVDUzRBaUVQQ0VjRGlwYnlPSGJudGxpVVFweGhVMkRkZ2V3VndRM2N1Wkc3bDFEclJacmZ2U3dzblRQTzcwMlNhSEt2TXUtb2xXQnR6NE5aU01mX3NWRzkzdFhkMmlJR0FhbnpXcGhBUUdLajMySWpUQ3R3WE5ncnYyQnZMTXZvdG5kT0ZOT0R1ZWE3djhwZFBn?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Controversy and defensive messaging pressure the Democratic win thesis, modestly confirming the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "9dee237d6b85978c9fd9ab4ea2b921ffca8ade97",
+      "ts": "2026-10-20T01:40:10Z",
+      "line_sha256_including_newline": "f1e091e6595baaae7d189a2dc0e1a622af627fa7fa3693fc6ed84b2018c889ac",
+      "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Wooster Daily Record",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOU19nbm5wbjIzWGlSMjYtTldjUVpISDFEal9vbkpvcEZNLUNWV2JoZUNhcnQ2MjJIamQtS2JKb3kyd3IyVVE5Y0l3RVB4MEM5M2VJU2N4bWo2UXJyenRVYUF6VVMxdDRjTDhiZWcta005Q0JrVzFUeFFJS1VhNWFNOXFVOF9IZVgzV0J3NjlGWEh0NERGNlh0YjNDbVNyc3NzN3R6X2JGV0dhUVdWeUVjSlFWVmE2b2drXzJBMW9GRF9XUQ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Candidate clarification may modestly affect Democratic electability, but does not materially change the race thesis."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "f90506edefe6a4bc5012f15c5441b3b24d365188",
+      "ts": "2026-10-20T01:50:43Z",
+      "line_sha256_including_newline": "560ee09bd575f040af317e8928980e2fe9246e965197d9d999400c6c3c7929f8",
+      "title": "'Manufactured candidate' El-Sayed is losing his base: Mike Rogers - Fox News",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xWHNLU2wzQ0RzdWtmSGRnbGJDUHFVVDZOSkJuQ01QRjRPSXRCT3d2b1hIR3RLdGtRN1htQnZUN3VITmszSnVHazdXLVFOSnMzZGNqbU5B?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "00d00be3216b6e110fd8a909f5c9bb2b68bba28b",
+      "ts": "2026-10-20T02:17:52Z",
+      "line_sha256_including_newline": "8fe9c05c14e68aec01393cc5ad8649327b3ec39d5f6671ee5933c38f3cbc3e1a",
+      "title": "Rogers advierte a los votantes de « Michigan » sobre el programa «extremo» de El-Sayed de cara a las elecciones - Fox News",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPam14YXdOOHNHVTk3MjUxY1QtRWp4d0cweUhqcXRiMzItdFhkRl9ZLWxCR0tMZzBDcUNOcWtZTUM3c25oY3dQR0NWM2pBUjdRSWRqNjBDR2JNMUpIN21RZjRfWkFMTzhWeWpVOGxyWC1nVEZyYzZlR2pKZEpESWNOUDNtTVJqQ0E3QmNaTHdfYllLNDlKUE1VNXEyZXBTbFBMZktJZGxOMmlpanc5c2NxYXZ2TGs?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "key_shape": null
+    },
+    {
+      "alert_id": "7732eabb7fe4c67abfcb287b10a74f58b0517e89",
+      "ts": "2026-10-20T02:55:56Z",
+      "line_sha256_including_newline": "ac68ea42b139d8a83bcae8b6532e449d233ae8adb82d2b10d18d0f5155049645",
+      "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - The National News Desk",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMEZmVEhza2FuWXZCam9uZnJ1ai1TSjhGYWZrYnJpekdaLUJjVmJTTG93OXdjNHJ3ZmVXYXlhMHcwWlVHQmg2UGVQZ0xZSGlYdkRzZmlvTlRHVF9ZOVM3WXFjYkZQMUwtZTYtWmlhc2ZIN1hRdmV6ejBINEtWV2hPajZickdDSnduTVBkekNFaEJQdFI0RDJFOG16WVRfRGo4bXVzcFE0aC1sclRaNWdEUjJ3SzRneU5jckRHV3BQLWlsM0RCQmlyT24yaWJLcHlSVm5fUjJTTVhwTlRRX3Zpa0xWTFZRNnQwV3hsT1JwQlA?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Allegations may weaken El-Sayed’s Democratic winning prospects in Michigan, supporting the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    },
+    {
+      "alert_id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+      "ts": "2026-10-20T03:23:02Z",
+      "line_sha256_including_newline": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea",
+      "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WRGB",
+      "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOU01KbE9BMlRWdUJKVUFrVnA1TmgzU0tIUGxSYWFPQUxqZm1zckF1T0VfMG91ZlpkYzktdlRCNjNuN1hIaFhIUVltN25lNkk5elROaTQxanVXU1dWTllJNkRJMjF1WGVMWnpQQ08za3lMWTNDZHk2TzZ6clVHXy12SEN2WnRRVEE3RmpldktkVWZKdzJFckJZVEVFWlVFQTBYdFVldTNlZnlHNjkyQXJ1NzZOT1NmWEpLRnlLczRaVXVuWHY2QjZpcUFmZHAzYVo1X0xqM2RhMXVrU2lVc1QwdF9SWV85UlJIc0FEUlFUQ3Q1UzFJ?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Questions about Abdul El-Sayed’s alleged Muslim Brotherhood ties could weaken Democratic prospects, supporting the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "key_shape": null
+    }
+  ],
+  "scope": "All new alert rows after last substantive review, plus MI-feed rows since Oct19 18UTC regardless of journal time. Newness does not follow from queue/journal recency; historical review evidence remains separately linked."
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "scheduled_tick.held_source_facts.v1",
+  "reviewed_utc": "2026-10-20T03:28:15.638879+00:00",
+  "sources": {
+    "hle": {
+      "status": 403,
+      "received_utc": "2026-10-20T03:28:15.628274Z",
+      "raw_sha256": "2c7f111e0f9e0e108159b537e8b041817d9ffe4242d436d9f4b5a965b539de7f",
+      "gzip_sha256": "cf9298a9a1ebf57a9175f42a1c0672b4e46af6eddcd253c408ed92a5a4ba384d",
+      "receipt": "logs/checkin_20261020T030114/held_sources_0330/hle.receipt.json",
+      "age_header": null,
+      "same_bytes_as_previous_checked_source": false
+    },
+    "openrouter": {
+      "status": 200,
+      "received_utc": "2026-10-20T03:28:15.297262Z",
+      "raw_sha256": "c9c63639bdefa9da0b2c9615db8f474c376f3c7a7fd556aac78255cf21017f4c",
+      "gzip_sha256": "02320347971bc018b4b4b02fe18217525382417414cbe2d64e8116199f0329be",
+      "receipt": "logs/checkin_20261020T030114/held_sources_0330/openrouter.receipt.json",
+      "age_header": "300",
+      "same_bytes_as_previous_checked_source": false,
+      "top_level_keys": [
+        "data"
+      ],
+      "data_keys": [
+        "data",
+        "cachedAt"
+      ],
+      "cached_at": 1792462993683,
+      "latest_rows": [
+        {
+          "x": "2026-10-12",
+          "total": 164043985914931
+        },
+        {
+          "x": "2026-10-19",
+          "total": 26785144387681
+        }
+      ]
+    }
+  },
+  "limits": "Call-window capture, supplied HTTP bodies not authenticated wire. Header age/cache time not fresh benchmark/usage cutoff; partial week not settlement; values require root judgment."
+}

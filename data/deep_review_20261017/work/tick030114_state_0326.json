@@ -1,0 +1,171 @@
+{
+  "capture_dir": "logs/deep_review_20261017/tick030114_0326",
+  "cash": {
+    "decimals": 6,
+    "pUSD_balance": 19.25129
+  },
+  "limitations": [
+    "CLOB and indexed-position results are SDK/data-API serializations passed to read_capture before this summary parser; they are not raw wire transcripts.",
+    "No orders, trades, ledger, index or reservations were modified."
+  ],
+  "local_index": {
+    "raw_sha256": "181c7d755837a14b18906bc8d56c82e6cde558a939815ba341ddaf6bf1c6497f",
+    "same_raw_hash_as_prior": true
+  },
+  "observed_window_utc": [
+    "2026-10-20T03:27:37.213364Z",
+    "2026-10-20T03:27:39.358638Z"
+  ],
+  "orders": {
+    "HTTP": 200,
+    "items": [
+      {
+        "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+        "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+        "detail_http": 200,
+        "label": "ME02",
+        "limit": 0.38,
+        "matched": 0.0,
+        "order_id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+        "shares": 10.0,
+        "side": "BUY",
+        "status": "LIVE"
+      },
+      {
+        "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+        "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+        "detail_http": 200,
+        "label": "CA06",
+        "limit": 0.03,
+        "matched": 0.0,
+        "order_id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+        "shares": 50.0,
+        "side": "BUY",
+        "status": "LIVE"
+      },
+      {
+        "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+        "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+        "detail_http": 200,
+        "label": "NY01",
+        "limit": 0.12,
+        "matched": 0.0,
+        "order_id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+        "shares": 10.0,
+        "side": "BUY",
+        "status": "LIVE"
+      }
+    ],
+    "next_cursor": "LTE=",
+    "open_count": 3,
+    "pagination_exhausted": true,
+    "remaining_buy_commitment_usd": 6.5,
+    "same_three_ids_and_terms_as_prior": true
+  },
+  "positions": {
+    "MI1838": {
+      "api_size": 5,
+      "api_totalBought": 5,
+      "asset_id": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "local_index_size": 5,
+      "open_BUY_count": 0,
+      "outcome": "No",
+      "polygon_ctf_balance": 5.0,
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026"
+    },
+    "data_api_rows": 9,
+    "prior_rows": 9,
+    "quantity_totalBought_signature_additions": 0,
+    "quantity_totalBought_signature_removals": 0
+  },
+  "prior": "data/deep_review_20261017/work/tick020002_state_0214.json (02:15 UTC; 3 live bids, 127 authenticated trades, 9 indexed positions)",
+  "receipt_field_order": [
+    "started_utc",
+    "received_utc",
+    "response_status",
+    "raw_sha256",
+    "gzip_sha256"
+  ],
+  "receipts": {
+    "chain_balances": [
+      "2026-10-20T03:27:38.685344Z",
+      "2026-10-20T03:27:39.358638Z",
+      null,
+      "3bfca8b85a3da93fe9fc507579e9f57ceac80e41f13041abee954ab6903a9bf7",
+      "c9d9d7a872556ef513216705c07c0a61dce757a85d364412e10c0094e2f11f56"
+    ],
+    "detail_1": [
+      "2026-10-20T03:27:38.128694Z",
+      "2026-10-20T03:27:38.259331Z",
+      200,
+      "629902feb079fa0f7a5171c000b305add78ce744206c660cec4fb8d0ce5521e0",
+      "561fb522886ae1f582017affaaf3dd49ca6058b4cdf969cb8749e1103e112918"
+    ],
+    "detail_2": [
+      "2026-10-20T03:27:38.269424Z",
+      "2026-10-20T03:27:38.397343Z",
+      200,
+      "bfe61038dab5eb2d28fe049b8d4290c9ac7ab77b12ef5fd0852b07e62f3cb765",
+      "b700825e3dea54d1b8f6a11643acf70733542028ec20434583b401542a70622d"
+    ],
+    "detail_3": [
+      "2026-10-20T03:27:38.406250Z",
+      "2026-10-20T03:27:38.537322Z",
+      200,
+      "3f6d1fd1d1c5498e935739e6585ad17c48bcafe3402b8317248b17574ac8b5ba",
+      "c44b5039d79f5cedd14f1d46f83c9bb491ee55d9466a993ad6bca114ceb0ba5f"
+    ],
+    "orders": [
+      "2026-10-20T03:27:37.261714Z",
+      "2026-10-20T03:27:37.548137Z",
+      200,
+      "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "dddec73cc73ec315ec508d6ec4a31668f094f316e0189a3bcf609b28888e0b11"
+    ],
+    "position_index": [
+      "2026-10-20T03:27:37.213364Z",
+      "2026-10-20T03:27:37.217764Z",
+      null,
+      "181c7d755837a14b18906bc8d56c82e6cde558a939815ba341ddaf6bf1c6497f",
+      "2c550043127fa0cb3ebda72cf7d51270d355a9b3416bef031f15400bb746651c"
+    ],
+    "positions": [
+      "2026-10-20T03:27:37.709114Z",
+      "2026-10-20T03:27:38.115900Z",
+      null,
+      "f73196bc0c7547fa033085c004831cf382e47890b7772cf367cff9236d97f40e",
+      "2100255631251112c5baa6d782675fada267ccee2c9c59388c8a15c76c18a33a"
+    ],
+    "reservations": [
+      "2026-10-20T03:27:37.226374Z",
+      "2026-10-20T03:27:37.252774Z",
+      null,
+      "681a42b8e60a609cb537be5c743d6f9097008ef0b23f7918f7c887c424d50d3a",
+      "6d334779df478edcbd3839b24a5b1c112cf2cda778b20e373e6a933c4b166de1"
+    ],
+    "trades": [
+      "2026-10-20T03:27:37.557383Z",
+      "2026-10-20T03:27:37.689898Z",
+      200,
+      "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "f4e55c14e9fe35567898ba091daa2f2325c387698c5bd0cd2b10de02b7a0f759"
+    ]
+  },
+  "reservations": {
+    "count": 3,
+    "order_ids_match_current_three": true,
+    "raw_sha256": "681a42b8e60a609cb537be5c743d6f9097008ef0b23f7918f7c887c424d50d3a",
+    "same_raw_hash_as_prior": true
+  },
+  "schema": "tick030114_account_state.v1",
+  "trades": {
+    "HTTP": 200,
+    "count": 127,
+    "new_ids_vs_prior": 0,
+    "next_cursor": "LTE=",
+    "pagination_exhausted": true,
+    "prior_ids_missing": 0,
+    "trades_referencing_any_current_three_order": 0
+  }
+}

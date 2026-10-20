@@ -1,9 +1,9 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T03:21:27.624334+00:00",
+  "updated_utc": "2026-10-20T03:45:22.778039+00:00",
   "previous_goal_turn_classification": "progress",
   "evidence": "Published9c3e145 completed/indexed416; counts367valued and remoteverified.",
-  "current_turn_progress": "418/422/427/428 valuedNO_ENTRY;425/426 factual exact-route closures. Each recorded/indexed before next. Late fixed-window7alerts reviewed; MI publisherbody/date/newness remainunknown, no verified voter update/financialaction. Bounded check/activecase/source closeout complete; no nextcase started.",
+  "current_turn_progress": "Latest finite-research progress remains418/422/427/428 valued and425/426 factual exact-route closures, individually saved. Subsequent scheduled03:01check completed with unchanged371valued counts/no newcase/financialaction; source/news/account/ops evidence fresh03:27–30.",
   "counts": {
     "completed_valuations": 371,
     "blocked_after_in_depth_review": 12,
@@ -32,12 +32,13 @@
     "433": "work/0433_resume.json"
   },
   "next_existing_safety": "2026-10-20T06:00:00Z",
-  "financial_state": "Lastcanonical02:14:58–02:15:13:196.23incl5.82gas;190.41tradingmid/187.75indicative fee-netdepth(+10.44%vs170),PM36.47/33.81,CSV229.02:15pUSD19.251290 and3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral. Kimi10YEScost1.20/0fee. No newaggregate/CSV thisfollowup.",
+  "financial_state": "Canonical03:27:35–51:196.22incl5.83gas;190.39tradingmid/187.60indicative fee-netdepth(+10.35%vs170), PM36.44/33.65, CSV230.03:27pUSD19.251290 and3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral.127trades no delta. Kimi10YEScost1.20/0makerfee unchanged.",
   "goal_state": "Existing finite review incomplete. This scheduled run ends after completed check/active-case/source closeout. No new goal/timer/idle continuation or lifecycle mutation; future authorized continuation reads checkpoint.",
   "safety_followup": {
-    "fixed_news_through": "2026-10-20T02:14:44.955459Z",
-    "report": "research/2026-10-20-0200-checkin.md",
-    "result": "All11steps;4newsrowsreviewed/no newmaterialfact/heldprior/financialaction. HLE/ORcachedbodiesunchanged02:17; daemonscurrent/single, no executioncodechange."
+    "tick": "20261020T030114Z",
+    "report": "research/2026-10-20-0301-checkin.md",
+    "result": "Full11-stepcheck once; fresh03:27 account/ops, source03:28/30. No newfinancialaction or forecastchange. Requested MI review proof and22related/newWRGB sources assessed; exactbody/clip gaps remain. No frozenqueue continuation.",
+    "fixed_news_through": "2026-10-20T03:28:14.986261Z"
   },
   "candidate_followup": {
     "index": 412,
@@ -50,10 +51,11 @@
     "management": "OriginalBUYfullyfilled/cancelpullobsolete.10YESheld/noadd; reevaluateorexit on materialmodel/score/source/evaluation/policy changes. No hidden-infoSELLat/belowfair, norecovery/repost."
   },
   "news_followup": {
-    "status": "completed bounded primary review; source gaps explicit",
-    "input": "work/tick020002_late_news_input_0324.json",
-    "review": "work/tick020002_late_primary_review_0328.json",
-    "review_sha256": "5a9edaf326e600834ddaba1c1b00d1417a3ba5c5f35d25995c2ea443957e6151",
-    "window_end": "2026-10-20T03:17:20.748052Z"
-  }
+    "status": "completed primary review with source limits",
+    "input": "work/tick030114_news_input_0328.json",
+    "review": "work/tick030114_news_primary_0341.json",
+    "review_sha256": "54a227390391fe4e82327612249a93cde1ef98ee7e84af67739c2567e128087d",
+    "window_end": "2026-10-20T03:28:14.986261Z"
+  },
+  "latest_scheduled_tick": "20261020T030114Z"
 }

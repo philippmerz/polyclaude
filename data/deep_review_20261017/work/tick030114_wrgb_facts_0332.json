@@ -1,0 +1,66 @@
+{
+  "schema": "wrgb_michigan_alert_facts.v1",
+  "observed_utc": "2026-10-20T03:29:02.823256Z/2026-10-20T03:29:17.143300Z",
+  "current_alert": {
+    "id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+    "ts": "2026-10-20T03:23:02Z",
+    "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WRGB",
+    "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOU01KbE9BMlRWdUJKVUFrVnA1TmgzU0tIUGxSYWFPQUxqZm1zckF1T0VfMG91ZlpkYzktdlRCNjNuN1hIaFhIUVltN25lNkk5elROaTQxanVXU1dWTllJNkRJMjF1WGVMWnpQQ08za3lMWTNDZHk2TzZ6clVHXy12SEN2WnRRVEE3RmpldktkVWZKdzJFckJZVEVFWlVFQTBYdFVldTNlZnlHNjkyQXJ1NzZOT1NmWEpLRnlLczRaVXVuWHY2QjZpcUFmZHAzYVo1X0xqM2RhMXVrU2lVc1QwdF9SWV85UlJIc0FEUlFUQ3Q1UzFJ?oc=5",
+    "raw_line_sha256": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea"
+  },
+  "retrievals": [
+    {
+      "attempt": 1,
+      "source": "exact Google News URL from the alert row",
+      "status": 200,
+      "window_utc": [
+        "2026-10-20T03:29:02.823256Z",
+        "2026-10-20T03:29:03.078931Z"
+      ],
+      "raw_sha256": "424ea96717c74165092cf5e4ae9d1488676b557cde829b8fbfe3f9b5f67e8915",
+      "gzip_sha256": "de73db1dadd73572e25fd3848115ee309073f795403d789afab2f87c7f12a032",
+      "receipt": "logs/deep_review_20261017/tick030114_wrgb_0332/alert_google_link.receipt.json",
+      "finding": "Google News shell only; no publisher URL/body/date."
+    },
+    {
+      "attempt": 2,
+      "source": "AOL syndicated article discovered by one exact-title search",
+      "url": "https://www.aol.com/articles/abdul-el-sayed-compares-himself-235057000.html",
+      "status": 200,
+      "window_utc": [
+        "2026-10-20T03:29:16.339663Z",
+        "2026-10-20T03:29:17.143300Z"
+      ],
+      "raw_sha256": "340bf8f94a1f48f38a32a6a450e40438cae091cdaa1c4a65318cc66700b2f187",
+      "gzip_sha256": "303fdb2039378d1de39000989202dc049fa3f297514f9063170c316b3b27bd70",
+      "receipt": "logs/deep_review_20261017/tick030114_wrgb_0332_syndication/aol_article.receipt.json",
+      "canonical_original_publisher": "https://www.mediaite.com/media/abdul-el-sayed-compares-himself-to-jfk-amid-questions-on-muslim-brotherhood-ties-crazy-to-assume-dual-loyalties/",
+      "published_utc": "2026-10-17T23:50:57Z",
+      "finding": "AOL page says the post first appeared on Mediaite; provides full article text and its own canonical Mediaite URL. This is a syndicated copy, not direct Mediaite capture."
+    }
+  ],
+  "facts_attributed_by_article": [
+    "The Mediaite article says El-Sayed answered an MS NOW interview question by comparing scrutiny of alleged Muslim Brotherhood ties to anti-Catholic loyalty questions faced by John F. Kennedy; he argued assumptions of dual loyalties were unfair and invoked religious freedom.",
+    "The article attributes family-tie claims to the sister’s reported 2012–2013 social-media posts, citing Washington Free Beacon; it also reports El-Sayed denied ties in an Oct 11 Meet the Press interview. These are reported allegations and candidate statements, not independent verification.",
+    "No separate direct MS NOW clip URL was present in the captured article text/links; the page says “Watch above via MS NOW.” Article makes only a generic statement about polling, without naming a poll, sample, method, field dates, or numerical result."
+  ],
+  "comparison": {
+    "prior_alert_id": "f3de70da126c2bb4885e029f1f92e1349706ccfe",
+    "prior_ts": "2026-10-19T19:58:25Z",
+    "prior_title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WKEF",
+    "prior_link": "https://news.google.com/rss/articles/CBMi9wFBVV95cUxPcHJzMkMyWW1FTFNIWF9ubUxhV25JZ2s1RzJWSjRVYTNHMDk3T3g4WENibzVYX1g3SzVqdXo2c0drbU43ZFdFbF92dHVxLWppWWFNME8yeEpWRW41LVRkckpJcjcxd2MyZnU1X1c4ZlJ4ZHpyb1QzVW44MGVPS3ZGT0U0UVo4ampzQk5INlVzalBwbmNLUWJfcDFDVkVsQmFWampfbXRzSngxdDF0c2ltQW5DSUxoOVNyMEF3ODlfOUVFQmFfZUFpZFR1THNrcVkwSGFVVGxoUzhhdGVTWGpQMFAwWll6VWQxdEpiQ3lpQm5kNFM4SmVZ?oc=5",
+    "prior_raw_line_sha256": "f8fddc96ce706e535461ace91f3b03b427a299428259449e73767704aa8561de",
+    "prior_review": "data/deep_review_20261017/work/mi_alerts_1958_facts.json",
+    "prior_result": "Same JFK-comparison headline was previously seen via WKEF; prior Google News resolution returned shell only and exact WKEF body remained unavailable. The title is near-identical, but source-body equality or a WRGB-to-Mediaite syndication link is not proved. The retrieved Mediaite/AOL text concerns an Oct17 MS NOW interview and adds no poll measurement; no basis here to claim a distinct new voter fact."
+  },
+  "poll_context_from_prior_review": {
+    "source": "data/deep_review_20261017/work/mi_alerts_1958_facts.json",
+    "fact": "Prior CBS Detroit coverage referenced Oct1 Mitchell likely-voter poll 45.6–41.4, MOE 3.8; this is previously reviewed context, not a new result in this alert."
+  },
+  "limits": [
+    "The original Mediaite page and WRGB page were not retrieved within the 3-attempt budget; AOL is a syndicated body that names Mediaite as original publisher.",
+    "No direct original candidate-response video URL was captured.",
+    "Title similarity does not prove the older WKEF alert and current WRGB alert carry byte-identical article bodies.",
+    "No forecast or portfolio judgment is made."
+  ]
+}
