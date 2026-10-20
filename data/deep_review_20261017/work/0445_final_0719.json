@@ -1,0 +1,44 @@
+{
+  "review_index": 445,
+  "market_id": "2953634",
+  "condition_id": "0x9508269931569b2958d92a4450513e8d056ac855b964847e7528f43853d83ee7",
+  "criteria_sha256": "d881329f4f9f05be5240bb9f863227e8a4beede8a175eafc6f852be96eb1c21e",
+  "token_ids": [
+    "69195208200933646173671150139101937779584291926597215206674025642194358882440",
+    "27824050841615642597579132839737358643485359679599885059684867745949186954164"
+  ],
+  "status": "excluded_factual",
+  "literal_analysis": "FullinitialQ3Y/Yrelease/higherboundary/nextquarterfallback/revisionexclusion read; closedexactcontract.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/2953634",
+      "observed_utc": "2026-10-20T07:12:50.275007+00:00",
+      "finding": "ActualexactGamma closed/nonaccepting/UMAresolved; raw/gzip/identity verified."
+    },
+    {
+      "url": "https://www.stats.gov.cn/english/PressRelease/202610/t20261019_1965619.html",
+      "observed_utc": "2026-10-20T05:16:34.412998Z",
+      "finding": "Root actualofficialbody/table Q3Y/Y4.5, not cumulative4.6; current retrieval/vintage limits retained."
+    },
+    {
+      "url": "https://www.stats.gov.cn/sj/zxfb/202610/t20261020_1965658.html",
+      "observed_utc": "2026-10-20T05:16:41.462628Z",
+      "finding": "Root actualofficialbody/table Q3Y/Y4.5, not cumulative4.6; current retrieval/vintage limits retained."
+    }
+  ],
+  "forecast": {
+    "not_estimated": "Closed/resolved historicalcontract; no newfuturep or valuation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "accessible_entry_route": "No currentvettedCLOBnewentry; noverifiedalternative route.",
+    "terminal_prices_not_quotes": [
+      "1",
+      "0"
+    ],
+    "fees_depth_sizing": "Not applicable to new closedcontract entry."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting contract.",
+  "reopen_condition": "Verifiedexactreopening/lawfulvettedroute;fullvintage+livegates.",
+  "report_markdown": "# 445 · ChinaQ3 GDP4.3–4.6%\n\n**Factual exclusion: exact contract is closed/resolved and does not accept orders.** Both YES and NO lack a current entry through the vetted CLOB path; no verified alternative route is established. This is not an ex-ante probability or a completed valuation.\n\nFull rule: Q3 2026 year-on-year GDP growth in the NBS Preliminary Accounting Results release, scheduled Oct20. Initial release only; later revisions excluded. Exact bracket boundaries go to the higher bracket. If Q3 is unreleased by the next quarter's scheduled release, use the last available quarter. Operational endOct21 03:59Z is not the full fallback rule. The question is quarterlyY/Y, not cumulative first-three-quarterY/Y or Q/Q.\n\nRoot verified the fresh Gamma body/receipt at2026-10-20T07:12:50.275007+00:00: exact market2953634, condition/tokens/question/fullcriteria/source/end all match; closedtrue, acceptingOrdersfalse, UMAresolved. Terminal Yes/No marks['1', '0'] are not executable quotes or a CTF payout proof. The earlier closure timestampOct19 06:23:45UTC does not reopen the market or create an available trade because a separate release page is datedOct20.\n\nAll three earlier source raw/gzip pairs independently verified. Actual NBS Chinese preliminary table, publishedOct20 09:30local, has columnsQ3/firstthreequarters: GDP375367/1071071hundred-millionyuan and Y/Y4.5%/4.6%. Growth is at constant prices; absolute values are current prices. The English national-economy body datedOct19 10:00local separately says Q3Y/Y4.5%, Q/Q1.2%, cumulativeY/Y4.6%. Do not substitute the cumulative4.6 boundary value for quarterly4.5. Current retrieved tables do not certify every historical first-display vintage; no retrospective forecast is manufactured.\n\nBoth outcomes considered: no new CLOB entry, so hypothetical fees, maker orders, depth or sizing cannot establish an accessible investment. No financial writer, held-prior, redemption, funding or watcher change. Reopen only on verified exact-contract reopening/lawful vetted route; then reassess full initial-release/vintage evidence and all live execution gates.\n\n[Fresh exact status](../../../data/deep_review_20261017/work/terminal_0714/case_0445.json) · [Official-source facts](../../../data/deep_review_20261017/work/0445_facts_0520.json).\n"
+}

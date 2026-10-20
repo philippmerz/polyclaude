@@ -1,0 +1,10 @@
+{
+  "schema": "case450.followup_pointer.v1",
+  "review_index": 450,
+  "facts": "data/deep_review_20261017/work/0450_followup_facts_0713.json",
+  "private_receipts": [
+    "logs/deep_review_20261017/450_followup_0713_gamma_capture/gamma_450.receipt.json",
+    "logs/deep_review_20261017/450_followup_0713_departure_capture/ap_gabbard_resignation.receipt.json"
+  ],
+  "scope": "Facts-only; no case record or verdict."
+}

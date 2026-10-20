@@ -1,0 +1,96 @@
+{
+  "schema": "kimi.alert_safety_facts.v1",
+  "retrieved_utc": "2026-10-20T07:55:04Z",
+  "held_market": {
+    "review_index": 412,
+    "market_id": "3072315",
+    "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+    "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?",
+    "literal_source_rule": "Any 2026 Moonshot Kimi model reaching >=55 HLE Accuracy/equivalent on the official agi.safe.ai resolving chart by 2026-12-31 23:59 ET; issuer/tool scores are not automatically resolving-board scores."
+  },
+  "baseline": {
+    "revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
+    "baseline_source": "https://dashboard.safe.ai/api/models",
+    "baseline_body_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+    "baseline_observed_utc": "2026-10-20T06:24:26.623332Z",
+    "models_count": 66,
+    "kimi_k3_hle_accuracy": "41.08",
+    "kimi_k3_calibration_error": "44.67"
+  },
+  "public_alert_rows": [
+    {
+      "alert_id": "a40093efed7c7b243727ac80c534760073f3c650",
+      "ts": "2026-10-20T06:45:08Z",
+      "title": "OpenAI Accuses Kimi Operator China’s Moonshot AI Of Copying AI Model Reasoning - Yahoo Finance",
+      "feed": "Kimi model, benchmark and Moonshot releases",
+      "matched": "Kimi",
+      "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQN1NwYTJJN0ZqWGtycDVRN2wtSWlqTEtKX1NVZUpaQmRBc2szTEg4MHRGeVktNUVHZXpjSzYxR1hoX0pKckZOU3ZlazVJdmtJTEVtamRYdzhpMXl6MzA5cDNldERxcFhRS1RXcEkwUTdwQ2ZhU2RuUHpaczA5TTcweHhlTkdOdnFpXy1RRHh5Nk1UNzBtRjN2TUpNMXBjeE0?oc=5"
+    },
+    {
+      "alert_id": "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+      "ts": "2026-10-20T07:17:34Z",
+      "title": "Moonshot’s Kimi K3 lands on Amazon in key test for Chinese open-source AI income - South China Morning Post",
+      "feed": "Kimi model, benchmark and Moonshot releases",
+      "matched": "Kimi",
+      "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcDZqcmQxQkhmMW9NcUh6cW1hTTdXTlEwTUNSNUh2ZmlRYmt6Sm9GMnZISkZNSmg2RUc1NndvM1ZhSlBGUkQ1dDlCRldFdXcxQmNpLXB3TTllN0NtSVlTdVpIZ0NDZkhBLWlkMENhODVnbzQ5SldFVGFFaW11SVdBTHFGN2M0RFkydjQxelhlWHVKYXVNZExydXpOZlZOaXV0cEZWbFdYSGRHUWJWYjF3WWpkQng3RUFLY2E0ME9va1F2UdIBwgFBVV95cUxNSE8tSlJiRTFRMWRYREFncDA0ZldXRUJ6clRCTC0xdTloZmVKUzNSR1ZkamlLazd4VGdMTmo4TzNIM0NDM056c1pEZmNjS3J5blVUVlVyeEczb3ByOUFDUmRRRXRxX2JZRVVSYXNQQjh5THdWSFk5em1wODl4N1pzR0VZQ1FYN3d2ckkzSHF5Z3N0RU9YTmZDeWFyQlJkZzdjbTdRQWVMRFhqMXNXYU5fYjkzWUNWaGRJZ3A0LXpzVFkzUQ?oc=5"
+    }
+  ],
+  "facts": [
+    "One live GET to the HLE resolving API returned HTTP 200; source_freeze_check.hle_chart_results parsed 66 model rows. Response Age was 2,177 seconds. Raw body SHA256 exactly matches the 06:24 cached baseline. Kimi K3 remains 41.08 HLE Accuracy / 44.67 calibration; Kimi K2, K2.5 and K2.6 rows also match that payload. No new Kimi row/score appears in this served body; cache age limits this to the delivered snapshot, not a fresh benchmark absence certificate.",
+    "OpenAI original article URL returned HTTP 403; the denied response was preserved. The Yahoo/Google alert row is the only captured evidence for that headline here; no article allegations, dates, enforcement result, legal finding, or benchmark consequence were independently verified from the source body.",
+    "The SCMP original article URL returned HTTP 403; the denied response was preserved. AWS official notice dated 2026-09-18 says Moonshot AI Kimi K3 became generally available on Amazon Bedrock; it describes K3 as Moonshot’s model, gives its claimed 2.8T parameters and 1M-token context, and says availability is in AWS Regions supporting cross-Region inference. This verifies service deployment of the named K3 model, not an HLE score or new model version.",
+    "No captured source establishes a HLE score at/above 55, a benchmark disqualification/policy change, or an adjudicated legal constraint. The HLE snapshot contains scores only; the AWS notice is a service availability notice."
+  ],
+  "sources": [
+    {
+      "label": "OpenAI original article; access failure preserved",
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+      "http": 403,
+      "captured_utc": [
+        "2026-10-20T07:55:02.711020Z",
+        "2026-10-20T07:55:02.930665Z"
+      ],
+      "age_seconds": null,
+      "body_sha256": "fc25eaaeb9607ccb92736a2e7763deb03441d821bde49c8c04fd256665d18e23",
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/openai_distillation/openai_distillation.receipt.json"
+    },
+    {
+      "label": "SCMP original report; access failure preserved",
+      "url": "https://www.scmp.com/tech/tech-trends/article/3368274/moonshots-kimi-k3-lands-amazon-key-test-chinese-open-source-ai-revenue",
+      "http": 403,
+      "captured_utc": [
+        "2026-10-20T07:55:03.089205Z",
+        "2026-10-20T07:55:03.267837Z"
+      ],
+      "age_seconds": null,
+      "body_sha256": "540d5d02ef1be28d2efa7b1fc30c3082547651f18e5a2523e1265b1ef04de682",
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/scmp_k3_amazon/scmp_k3_amazon.receipt.json"
+    },
+    {
+      "label": "AWS official availability notice",
+      "url": "https://aws.amazon.com/about-aws/whats-new/2026/09/moonshot-ai-kimi-k3-on-amazon-bedrock/",
+      "http": 200,
+      "captured_utc": [
+        "2026-10-20T07:55:03.349470Z",
+        "2026-10-20T07:55:03.796826Z"
+      ],
+      "age_seconds": null,
+      "body_sha256": "338b2dc4283490c4e52cdffe83e56d3afa1fa7bb37565d321ba9edcc37c647d1",
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/aws_k3_available/aws_k3_available.receipt.json"
+    },
+    {
+      "label": "Single refreshed HLE resolving API call",
+      "url": "https://dashboard.safe.ai/api/models",
+      "http": 200,
+      "captured_utc": [
+        "2026-10-20T07:55:03.955282Z",
+        "2026-10-20T07:55:04.176659Z"
+      ],
+      "age_seconds": 2177,
+      "body_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/hle_live/hle_live.receipt.json"
+    }
+  ],
+  "capture_dir": "logs/deep_review_20261017/kimi_alert_followup_0820"
+}

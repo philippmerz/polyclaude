@@ -1,10 +1,20 @@
 {
   "review_index": 446,
-  "updated_utc": "2026-10-20T05:19:39.917979+00:00",
-  "phase": "collector facts only; not started or decided",
+  "updated_utc": "2026-10-20T07:29:18.235583+00:00",
+  "phase": "Completedprimaryvalued94%YES/noentry;17sourcepairsverified andrecordjoined.",
   "source_paths": [
-    "work/0446_facts_0520.json"
+    "work/0446_facts_0520.json",
+    "work/0446_followup_facts_0713.json",
+    "models/0446_primary_0723.json",
+    "work/0446_economics_0731.json",
+    "work/0446_verification_0731.json",
+    "work/0446_record_verified_0736.json"
   ],
   "facts_sha256": "5506950b7275a5430842956ba288f7608e5f27282717e17f7c3ec47ea6ebfe2b",
-  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority."
+  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority.",
+  "report": {
+    "path": "evaluations/0446.md",
+    "sha256": "f9dbd6068951da26b129608f69ad170992dd772387a1cacd8fec35672bbdd89e"
+  },
+  "status_limit": "Datedcompletedresearch; noautomaticentry/re-record."
 }

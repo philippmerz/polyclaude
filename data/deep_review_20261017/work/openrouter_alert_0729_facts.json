@@ -1,0 +1,112 @@
+{
+  "schema": "openrouter.held_alert_facts.v1",
+  "scope": "Safety/facts only. No probability, valuation, order/account write, or Telegram.",
+  "alert": {
+    "alert_id": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+    "alert_utc": "2026-10-20T07:28:46Z",
+    "title": "Stripe will pay 7.5 billion dollars for the AI router OpenRouter - Startup Fortune",
+    "source_story_url": "https://startupfortune.com/stripe-will-pay-75-billion-for-openrouter-the-ai-model-traffic-cop/",
+    "source_story_published": "2026-10-19T10:59:45+05:30",
+    "alert_link_capture": "logs/deep_review_20261017/held_or_material_0729_alert/alert_story_link.receipt.json",
+    "alert_link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVV9oZk5zMFcyRjJDR2w1RVpDMXd1bmtEeXlRNDluRnFXTWstT3FLdlJtUW5pOEIya1ZuZEY1QW9EVlcwTmdIOHB0OXFfcVhDQjhTTVFLNjg3b0Vpd3RzVWo1X3h6Z3JPWlV5NE5qOVgwN2h5WFJOQ3UzS2tHSWQ0azg3SkV3QktNWUptLWhkSXFCVW1nMEE?oc=5"
+  },
+  "deal_announcement": {
+    "Stripe_official_date": "2026-08-19",
+    "OpenRouter_official_date": "2026-08-19",
+    "finding": "Both company bodies describe an agreed acquisition announced Aug 19, not a new Oct 19/20 event. Startup Fortune says price was reported by The New York Times and that neither company disclosed it publicly; neither captured official company announcement states $7.5B. Thus $7.5B here is secondary reporting, not official company price confirmation.",
+    "OpenRouter_operational_statement": "Official OpenRouter page says service/product/roadmap and current commitments remain unchanged; no integration change. It also claims 10+T tokens/day and 10x annual inference-volume growth, without a defined measurement date or direct crosswalk to the Top Models weekly chart."
+  },
+  "resolved_instrument_context": {
+    "review_index": 112,
+    "market_id": "5763815",
+    "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+    "question": "Will OpenRouter process between 725T and 775T tokens from Oct 26 to Nov 22?",
+    "criteria_source": "research/2026-10-17-deep-review/evaluations/0112.md",
+    "rule": "Sum displayed Top Models weekly totals for weeks Oct 26, Nov 2, Nov 9 and Nov 16; weeks run Monday 00:00 through Sunday 23:59 UTC. Freeze when Nov 23 week first displays, or Nov 27 23:59 ET fallback. YES is >=725T and <775T; boundary goes to higher bracket."
+  },
+  "chart_refresh": {
+    "exact_url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "prior_receipt": "logs/tick060240_sources/openrouter.receipt.json",
+    "prior_raw_sha256": "7fa78f5b31b94fdbf9a50fa4de596cf92c8684a121ab5d78932748b01976ea1e",
+    "current_receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_rankings.receipt.json",
+    "current_http_status": 200,
+    "current_received_utc": "2026-10-20T07:54:32.742121Z",
+    "current_raw_sha256": "93bca9dbfda1050931225b01fb4086ef2c358c64c47fbb92f18b3b5952a28771",
+    "chart_cachedAt_utc": "2026-10-20T07:31:45.247Z",
+    "comparison_T": {
+      "Oct12_completed_prior": 164.043985914931,
+      "Oct12_completed_current": 164.043985914931,
+      "Oct19_partial_prior_at_06:24": 30.038851003818,
+      "Oct19_partial_current_at_07:54": 32.345372199105,
+      "Oct19_partial_snapshot_delta": 2.306521195287
+    },
+    "top_partial_rows_current_T": {
+      "Others": 12.693,
+      "deepseek/deepseek-v4.1-flash-20261017": 4.837,
+      "deepseek/deepseek-v4.1-flash-20260910": 3.524,
+      "z-ai/glm-5.3-flash-20260826": 2.191
+    },
+    "target_weeks_absent": [
+      "2026-10-26",
+      "2026-11-02",
+      "2026-11-09",
+      "2026-11-16"
+    ],
+    "limit": "Oct19 is the current incomplete Monday-start week. The observed snapshot increase is not attributed to the acquisition and cannot be paced/extrapolated; target settlement weeks are absent.",
+    "weeks_returned": 53,
+    "series_per_week": 10
+  },
+  "source_limit": "OpenRouter announcement first URL redirected to a canonical company URL; that canonical page was captured. Google News link capture returned a consent page, so the alert link itself did not provide the story body; direct Startup Fortune URL was captured separately.",
+  "sources": [
+    {
+      "name": "startupfortune",
+      "label": "Alert story body",
+      "url": "https://startupfortune.com/stripe-will-pay-75-billion-for-openrouter-the-ai-model-traffic-cop/",
+      "status": 200,
+      "received_utc": "2026-10-20T07:54:30.980409Z",
+      "raw_bytes": 109238,
+      "raw_sha256": "75137c7cbbb40000cce1c63e410dd8686e03e66941eb1aa3955a6731004eea38",
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/startupfortune.receipt.json"
+    },
+    {
+      "name": "stripe_official",
+      "label": "Stripe official announcement",
+      "url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+      "status": 200,
+      "received_utc": "2026-10-20T07:54:32.466512Z",
+      "raw_bytes": 361685,
+      "raw_sha256": "2523f8a03a8dff5f10a6feaf6d5d7629d10f368cb63ae8aac68b1383e38c7e5f",
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/stripe_official.receipt.json"
+    },
+    {
+      "name": "openrouter_official_canonical",
+      "label": "OpenRouter official announcement",
+      "url": "https://openrouter.ai/blog/announcements/openrouter-is-joining-stripe/",
+      "status": 200,
+      "received_utc": "2026-10-20T07:55:46.390067Z",
+      "raw_bytes": 52618,
+      "raw_sha256": "4b14931bbf45f23b04b7aa7294b9d61b4076427c62a3b338b1c7dc62846445f3",
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_official_canonical.receipt.json"
+    },
+    {
+      "name": "openrouter_rankings",
+      "label": "Exact frozen resolution-source chart refresh",
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "status": 200,
+      "received_utc": "2026-10-20T07:54:32.742121Z",
+      "raw_bytes": 24691,
+      "raw_sha256": "93bca9dbfda1050931225b01fb4086ef2c358c64c47fbb92f18b3b5952a28771",
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_rankings.receipt.json"
+    },
+    {
+      "name": "alert_story_link",
+      "label": "Google News RSS URL request; returned consent HTML, no article content",
+      "url": "https://news.google.com/rss/articles/[opaque-id]?oc=5",
+      "status": 200,
+      "received_utc": "2026-10-20T07:54:12.796875Z",
+      "raw_bytes": 35126,
+      "raw_sha256": "87b6e48d7f481dae0a7d56a8e951cf3e36e476abb3960bd238ab55596e564a79",
+      "receipt": "logs/deep_review_20261017/held_or_material_0729_alert/alert_story_link.receipt.json"
+    }
+  ]
+}

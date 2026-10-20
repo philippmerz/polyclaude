@@ -1,0 +1,238 @@
+{
+  "review_index": 446,
+  "market_id": "3940925",
+  "condition_id": "0x21846a156b073b0a3abc55e677cb730b8b872f5d7ee3fbadf9b78ebef0552d12",
+  "criteria_sha256": "44e50634e50abdb72f49baed36b66b478f751d59f39d9cc01e4849a4474bb209",
+  "token_ids": [
+    "85295589449362847937877856810440341663990478921925083655796698691566344346791",
+    "82840440887573677435093188113779720289146680826393576080254006222340269125216"
+  ],
+  "status": "valued",
+  "literal_analysis": "OfficialOct22change vsimmediatelypremeetingBaseRate,upperbound/specifiedrounding;scheduledstatementnotoperationalend/finality.",
+  "evidence": [
+    {
+      "url": "https://www.bok.or.kr/fileSrc/eng/d4ea6747324840a79bf02f0c853bd55b/2/9adfb391db844b17bf79fcdf5a9bdcb2.pdf",
+      "observed_utc": "2026-10-20T07:14:10.017604Z",
+      "raw_sha256": "f21520d03a1c0cd587066f12e45ca8ac7c29a4b1b284c3fad941a4721162907a",
+      "finding": "ActualonepageofficialcalendarOct22/Nov26."
+    },
+    {
+      "url": "https://www.bok.or.kr/eng/bbs/E0000634/view.do?menuNo=400423&nttId=11064193&programType=newsDataEng",
+      "observed_utc": "2026-10-20T07:13:10.481801Z",
+      "raw_sha256": "4bed9a7a55b25e4c3b8fa170f73dffeaa75c299e7d0b2816480b8010cd1e547f",
+      "finding": "Official6–1hike2.75→3.00/furtherhikesdata-dependent; priorgrowth/inflation/creditrisks known."
+    },
+    {
+      "url": "https://www.mods.go.kr/board.es?act=view&bid=11751&list_no=447323&mainXml=Y&mid=a20101000000",
+      "observed_utc": "2026-10-20T07:13:13.744942Z",
+      "raw_sha256": "51069d5a4c89b993a7043f53523e50e43d755d4ca1569560560874a5a04578a3",
+      "finding": "OfficialSeptemberheadline2.9/core2.8Y/Y."
+    },
+    {
+      "url": "https://www.bok.or.kr/eng/stats/statsPublictSchdul/listCldr.do?date=2026-10&menuNo=400359",
+      "observed_utc": "2026-10-20T07:13:15.988613Z",
+      "raw_sha256": "54f9531333e31d06908bb8b447a2418c4d586d11c253d281ac9b6af99d44c962",
+      "finding": "ActualrowsOct21PPI/BSI-ESIbeforemeeting;Q3GDP27/creditNov18after."
+    },
+    {
+      "url": "https://www.bok.or.kr/eng/bbs/E0000634/view.do?menuNo=400069&nttId=11063881",
+      "observed_utc": "2026-10-20T07:14:12.309882Z",
+      "raw_sha256": "c1b361e97628a29c5d119561d96a7667b676a083c480838414e80e48c3e0c46a",
+      "finding": "ActualcreditQ2+25.9tn to2019.8; releasedAug19beforebaselineAug27."
+    },
+    {
+      "url": "https://www.channelnewsasia.com/business/south-korea-central-bank-hold-rates-october-22-hike-in-november-reuters-poll-6473951",
+      "observed_utc": "2026-10-20T07:13:17.592129Z",
+      "raw_sha256": "a30c29774c53798b931cede94401a59dedf09079d2ac15589dd2d1b3816dd3d0",
+      "finding": "CNAcreditedReuterspollOct14–19:34/34hold; medianNovemberhike. Notindependenttrials/directReutershostnotverified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.94,
+    "low": 0.7,
+    "high": 0.995,
+    "actual_entry_reserve_pp": 10,
+    "method": "Primarypre-own-current-quotejudgmental3regimetree; unanimoussharedpollplusofficialmacro/policy/calendar.",
+    "reasoning": "Stablepausevsunobservedearlierhike/financialshock;93.55%treehold rounded94; pointforecastercountnotcalibratedodds. StablebranchNO1.5undercutscheapmaker."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0446_quote_0727.json",
+    "quote_file_sha256": "76325c679b3b0c56b8d901e06bbd80361334d5be8fc80d46197d785bdfa99a58",
+    "quote_capture_utc": "2026-10-20T07:21:50.030905+00:00",
+    "gamma_received_utc": "2026-10-20T07:21:49.699693+00:00",
+    "horizon_days": 3.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.94,
+        "selected_stress_probability": 0.84,
+        "best_bid": 0.959,
+        "best_ask": 0.983,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792480899508",
+        "book_received_utc": "2026-10-20T07:21:49.837381+00:00",
+        "book_age_seconds_at_receipt": 10.329380989074707,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.915,
+            "fee": 0.00418,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.983
+              }
+            ],
+            "net": 4.91918
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.795,
+            "fee": 0.00983,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.959
+              }
+            ],
+            "net": 4.78517
+          }
+        },
+        "taker_cost_usd": 4.91918,
+        "central_expected_profit_usd": -0.2191800000000006,
+        "selected_stress_profit_usd": -0.7191799999999997,
+        "break_even_before_carry": 0.9838359999999999,
+        "break_even_constant_carry": 0.9840910156908059,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.06000000000000005,
+        "selected_stress_probability": 0,
+        "best_bid": 0.017,
+        "best_ask": 0.041,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792480899508",
+        "book_received_utc": "2026-10-20T07:21:49.837381+00:00",
+        "book_age_seconds_at_receipt": 10.329380989074707,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 56.0,
+            "gross": 2.3396000000000003,
+            "fee": 0.1121,
+            "fills": [
+              {
+                "shares": 12.4,
+                "price": 0.041
+              },
+              {
+                "shares": 43.6,
+                "price": 0.042
+              }
+            ],
+            "net": 2.4517
+          },
+          "bids": {
+            "complete": true,
+            "filled": 56.0,
+            "gross": 0.6204,
+            "fee": 0.03064,
+            "fills": [
+              {
+                "shares": 12.1,
+                "price": 0.017
+              },
+              {
+                "shares": 10.0,
+                "price": 0.012
+              },
+              {
+                "shares": 8.35,
+                "price": 0.011
+              },
+              {
+                "shares": 8.0,
+                "price": 0.01
+              },
+              {
+                "shares": 17.549999999999997,
+                "price": 0.007
+              }
+            ],
+            "net": 0.58976
+          }
+        },
+        "taker_cost_usd": 2.4517,
+        "central_expected_profit_usd": 0.9083000000000028,
+        "selected_stress_profit_usd": -2.4517,
+        "break_even_before_carry": 0.04378035714285715,
+        "break_even_constant_carry": 0.04379170525170915,
+        "current_execution_authorization": false
+      }
+    },
+    "quantity_by_outcome": {
+      "Yes": 5,
+      "No": 56
+    },
+    "maker_and_risk": {
+      "maker": {
+        "Yes": {
+          "price": 0.96,
+          "quantity": 5,
+          "cost": 4.8,
+          "central_profit": -0.1,
+          "selected_profit": -0.6
+        },
+        "No": {
+          "price": 0.018,
+          "quantity": 56,
+          "cost": 1.008,
+          "central_profit": 2.352,
+          "selected_profit": -1.008,
+          "unchanged_information_branch_p_no": 0.015,
+          "branch_profit": -0.16800000000000004,
+          "illustrative_twofold_adverse_odds_p_no": 0.030927835051546393,
+          "illustrative_stress_profit": 0.723958762886598
+        }
+      },
+      "carry": "Dated3.2035%APY constant2/3/7day sensitivity; tinycapitalcost nottherejectionreason. Settlementcanlagofficialstatement.",
+      "No_maker_cash_alternative_3days": 1.0082612791322256,
+      "No_maker_expected_log_at_dated_trading_mid": {
+        "0.06": 0.01024786308569271,
+        "0.015": -0.001425679840313643,
+        "0.030927835051546393": 0.00270619274174359
+      },
+      "joint_risk": "No independence/hedge credit. CurrentAIpaircost4.45 canbothlose withBOKnewYES4.91918→9.36918totalcost, orwithNOmaker1.008→5.458; ordinaryterminalexamples, venue/otherassets canfail.",
+      "remote_yes": "<=83.9c5shares couldclearunconditionalselectedcarry, farbelow95.9cbid. No certifiedconditionalfillmargin, no blindbid.",
+      "NO_route_floor": "5NO below1USDroute;56NO supports1.008USDmaker at1.8c and2.296USDcapturedasknotional.",
+      "catalysts": "Officialcalendar Oct21 PPI06:00/BSI-ESI12:00 sourceclocktimezoneunverified; anybidneedsverifiedUTCpullbeforefirstreleaseandOct22decision. Noorder."
+    }
+  },
+  "verdict": "NO_ENTRY: YESfailscentral;NOpositivecentral/touchmaker butfailsselected andstable-informationcase; conditionaltailnotunderwritten.",
+  "reopen_condition": "Oct21officialdata/newguidance/survey orsupportedconditionalfreshprice,allgates.",
+  "report_markdown": "# 446 · Bank of Korea hold, October22\n\n**Valued YES94% / NO6%; no entry.** Broad YES70–99.5% is judgmental uncertainty. Ordinary10pp instance reserve selects84%YES/0%NO for entry arithmetic; it does not estimate zero chance of a change. No short-horizon tail-calibration exemption is established.\n\nFull rule read: official October MPB Base Rate change relative to the immediately preceding level; unchanged is YES. If a band exists, use its upper bound. Any nonzero change under25bp rounds to25; larger changes round to nearest25, ties away from zero. Official calendar PDF verifies Oct22; the statement can resolve the contract. Operational end00:00UTC is not proof of release/finality; no explicit cancellation fallback is supplied.\n\nPrimary evidence: Aug27 BOK raised2.75→3.00 by6–1 after July's hike, retaining data-dependent further tightening. Its forecasts already incorporated strong growth, above-target inflation and housing/debt risks. Official September CPI is2.9%Y/Y, core2.8%; Q2 credit increased25.9tn won to2019.8tn, released before August's decision. Those known risks are not fresh independent likelihood penalties. The official calendar puts Q3GDP on Oct27 and Q3credit Nov18, but PPI/BSI-ESI are scheduled Oct21; do not claim no premeeting data.\n\nThe Oct20 Reuters poll, fielded Oct14–19 and carried as credited original reporting by CNA, has34/34 hold3.00, median next hikeNovember. Direct Reuters-hosted body was not verified. This is one shared consensus, not34 independent probability observations. Official decision/calendar/CPI/credit bodies corroborate context; two retrieved generic GDP pages supply no adopted numerical GDP estimate.\n\nPre-own-current-quote tree:90% stable information gives98.5%hold/1.4%hike/.1%cut;7% unobserved hawkish/timing surprise gives40%hold/60%hike;3% acute financial/growth shock gives70%hold/30%cut at the October decision. Total hold93.55%, rounded94; hike5.46/cut.99. Scenario weights are uncalibrated primary judgment. Recent easing and time to assess two hikes favor pause; persistent inflation/credit and strong semiconductor activity support a surprise earlier hike. The uncertainty interval permits substantial common poll/model error. A premeeting emergency change alone is not automatically a change resulting from the scheduled meeting.\n\n| Side / intended shares | Captured taker cost | Central profit | Selected profit |\n|---|---:|---:|---:|\n| YES5 |4.91918|−.21918|−.71918|\n| NO56 |2.45170|+.90830|−2.45170|\n\n07:21:50 capture: YES95.9/98.3c, NO1.7/4.1c; min5shares,0.1c tick,5%×p(1−p) takerfee. Exact identity/fee/books verified; book age10.33s at receipt. NO56 walks12.4@4.1c and43.6@4.2c, not the touch for all shares. Five NO would miss the1USD route floor. These dated planning quotes do not authorize execution, and no taker-urgency case is established.\n\nTouch maker: YES5@96c costs4.80, central−.10/selected−.60. NO56@1.8c costs1.008, central+2.352/selected−1.008. An illustrative2× adverse-success-odds stress gives NO3.09% and+.724; it passes that illustration, not a measured fill model. The tree's stable-information branch gives NO1.5%, payout.84 and loss.168 even before carry. Thus the positive maker case depends on the uncalibrated residual-surprise mass; unconditional bid price alone does not justify an order. A remote≤83.9cYES price might pass selected arithmetic but is far below95.9c bid and has no underwritten conditional-fill edge.\n\nDated3.2035%Aave held constant turns1.008 into1.008261 over3days; carry is tiny and is not the rejection reason. At dated190.09 trading midpoint, the NOmaker toy expected log return is+1.025% at6%,−.143% at1.5%; it assumes fixed other wealth/ordinary full settlement, not a portfolio forecast. Source/adjudication, funding/gas and venue risk remain. Any real bid must have a verified UTC pull before Oct21's first data catalyst and the Oct22 decision; the captured calendar's clock zone was not independently established.\n\nDated06:22 account has three original unfilled bids committing6.50; no BOK holding. No independence/hedge credit: held AIpair4.45cost can both lose alongside BOKYES4.91918 or NOmaker1.008, giving9.36918/5.458 combined cost at risk. Current account/caps/collateral require fresh checks if a candidate passes. Cash/Aave and existing underwritten opportunities outrank this unsupported tail allocation. No order, prior, funding, redemption or watcher change.\n\nReopen on the actual Oct21 data/official guidance, a new primary survey/board signal, or a genuinely supported fill-conditional price. Recheck exact identity, full criteria, source, account, fees, depth, joint risk and vetted execution path before action.\n\n[Source facts](../../../data/deep_review_20261017/work/0446_followup_facts_0713.json) · [Prequote model](../models/0446_primary_0723.json) · [Economics](../../../data/deep_review_20261017/work/0446_economics_0731.json) · [17-pair verification](../../../data/deep_review_20261017/work/0446_verification_0731.json).\n"
+}

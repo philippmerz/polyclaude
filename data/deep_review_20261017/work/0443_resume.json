@@ -1,10 +1,17 @@
 {
   "review_index": 443,
-  "updated_utc": "2026-10-20T05:19:39.917656+00:00",
-  "phase": "collector facts only; not started or decided",
+  "updated_utc": "2026-10-20T07:15:01.970745+00:00",
+  "phase": "Completedrootverifiedexcluded_factual; no ppoint/entry.",
   "source_paths": [
-    "work/0443_facts_0520.json"
+    "work/0443_facts_0520.json",
+    "work/terminal_0714/case_0443.json",
+    "work/0443_record_verified_0717.json"
   ],
   "facts_sha256": "6e14203ae6f1614fb573ebee7a792b5e0757a4ebffbe9178976a6c653271d8e5",
-  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority."
+  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority.",
+  "report": {
+    "path": "evaluations/0443.md",
+    "sha256": "9b3ec4a9ea212e62d5d7a443b1ddda33d0e37e67d5ca6c99d4e4b00686abf5ec"
+  },
+  "status_limit": "Dated completedresearch; no automaticentry/re-record. Reopen onlyverifiedexactroute."
 }

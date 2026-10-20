@@ -1,0 +1,16 @@
+{
+  "index": 446,
+  "status": "valued",
+  "verified_utc": "2026-10-20T07:29:18.235583+00:00",
+  "report_sha256": "f9dbd6068951da26b129608f69ad170992dd772387a1cacd8fec35672bbdd89e",
+  "ledger_index_checkpoint": "PASS",
+  "counts": {
+    "completed_valuations": 380,
+    "blocked_after_in_depth_review": 14,
+    "factual_exclusions": 370,
+    "pending": 2236,
+    "base_records": 764,
+    "revisions_written": 69
+  },
+  "next": 449
+}

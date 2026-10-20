@@ -1,0 +1,7 @@
+{
+  "schema": "openrouter.held_alert_pointer.v1",
+  "alert_id": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+  "facts": "data/deep_review_20261017/work/openrouter_alert_0729_facts.json",
+  "capture_dir": "logs/deep_review_20261020/openrouter_alert_0755",
+  "scope": "Factual safety check; no judgment or action."
+}

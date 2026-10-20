@@ -1,0 +1,112 @@
+{
+  "schema": "case446.source_and_quote_verification.v1",
+  "verified_utc": "2026-10-20T07:26:26.358785+00:00",
+  "receipt_pairs_verified": 17,
+  "captures": [
+    {
+      "name": "household_q2",
+      "status": 200,
+      "raw_sha256": "c1b361e97628a29c5d119561d96a7667b676a083c480838414e80e48c3e0c46a",
+      "received_utc": "2026-10-20T07:14:12.309882Z"
+    },
+    {
+      "name": "bok_gdp",
+      "status": 200,
+      "raw_sha256": "d877cf4c752fc59917a508f937a8460670e74494e9334f286593433636b9be71",
+      "received_utc": "2026-10-20T07:13:17.007548Z"
+    },
+    {
+      "name": "reuters_poll",
+      "status": 200,
+      "raw_sha256": "a30c29774c53798b931cede94401a59dedf09079d2ac15589dd2d1b3816dd3d0",
+      "received_utc": "2026-10-20T07:13:17.592129Z"
+    },
+    {
+      "name": "bok_dates",
+      "status": 200,
+      "raw_sha256": "44ef1b392dcd62c8bd1323c4aa7f02850bf76fc57a80a47010a8debb83702577",
+      "received_utc": "2026-10-20T07:13:05.973286Z"
+    },
+    {
+      "name": "bok_aug27",
+      "status": 200,
+      "raw_sha256": "4bed9a7a55b25e4c3b8fa170f73dffeaa75c299e7d0b2816480b8010cd1e547f",
+      "received_utc": "2026-10-20T07:13:10.481801Z"
+    },
+    {
+      "name": "calendar_pdf",
+      "status": 200,
+      "raw_sha256": "f21520d03a1c0cd587066f12e45ca8ac7c29a4b1b284c3fad941a4721162907a",
+      "received_utc": "2026-10-20T07:14:10.017604Z"
+    },
+    {
+      "name": "gdp_q2",
+      "status": 200,
+      "raw_sha256": "d877cf4c752fc59917a508f937a8460670e74494e9334f286593433636b9be71",
+      "received_utc": "2026-10-20T07:14:13.319271Z"
+    },
+    {
+      "name": "bok_stat_calendar",
+      "status": 200,
+      "raw_sha256": "54f9531333e31d06908bb8b447a2418c4d586d11c253d281ac9b6af99d44c962",
+      "received_utc": "2026-10-20T07:13:15.988613Z"
+    },
+    {
+      "name": "cpi_sep",
+      "status": 200,
+      "raw_sha256": "51069d5a4c89b993a7043f53523e50e43d755d4ca1569560560874a5a04578a3",
+      "received_utc": "2026-10-20T07:13:13.744942Z"
+    },
+    {
+      "name": "bok_policy_list",
+      "status": 200,
+      "raw_sha256": "9342a1ea4afce752188df153cf96d2635420e16174291fd3fdb6dd6d3cce1cf2",
+      "received_utc": "2026-10-20T07:13:08.145547Z"
+    },
+    {
+      "name": "bok_aug_decision",
+      "status": 200,
+      "raw_sha256": "335e9bbecb0957111cb9361351e35a08670135d5c6a990ac2f1baaef06485a69",
+      "received_utc": "2026-10-20T05:16:45.993611Z"
+    },
+    {
+      "name": "gamma",
+      "status": 200,
+      "raw_sha256": "2616691d91b51d6e7d3c7676dd8bffcb343ed323499bda31bee2ca9aeba3348f",
+      "received_utc": "2026-10-20T05:16:41.603222Z"
+    },
+    {
+      "name": "bok_2026_calendar",
+      "status": 200,
+      "raw_sha256": "e5adcf395af90365b5a430a93e1bda88de45d547d78f3328b4bd1ad63f200402",
+      "received_utc": "2026-10-20T05:16:43.813834Z"
+    },
+    {
+      "name": "0446_gamma_01",
+      "status": 200,
+      "raw_sha256": "7a380accc9f1de5c18394958677e0e2091e25f75ed6e21b5a7d86c22da0dae21",
+      "received_utc": "2026-10-20T07:21:49.699693+00:00"
+    },
+    {
+      "name": "0446_fee_02",
+      "status": 200,
+      "raw_sha256": "f45e3e016a1cd5573e19e746cc364494bd1270d8fc31064d7844e5883ff4f25a",
+      "received_utc": "2026-10-20T07:21:49.786741+00:00"
+    },
+    {
+      "name": "books_batch_01_03",
+      "status": 200,
+      "raw_sha256": "a562e2f60c8579d65a5736d780a2923ded62abdafeae3a8e2bd911ea80c29991",
+      "received_utc": "2026-10-20T07:21:49.837381+00:00"
+    },
+    {
+      "name": "geoblock_04",
+      "status": 200,
+      "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052",
+      "received_utc": "2026-10-20T07:21:50.030307+00:00"
+    }
+  ],
+  "model_sha256": "913aa9e2b386e14c211014b4b0cff4722beb6e02b9a79d25c7945b23a0f9955a",
+  "quote_sha256": "76325c679b3b0c56b8d901e06bbd80361334d5be8fc80d46197d785bdfa99a58",
+  "limits": "10followupHTTP200bodies include2genericGDPpages without adoptedGDPnumber;8loadbearingfacts rows explicitlybound/read, calendarPDFextracted. Old3plusnew4quotes verified. No presentexecution/currentaccount/CTFpayoutcertificate."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "case452_portwatch_ui_binding_followup.v1",
+  "case": {
+    "index": 452,
+    "market_id": "5166819",
+    "condition_id": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac"
+  },
+  "captured_utc": "2026-10-20T07:25:42Z",
+  "frozen_resolution_rule": {
+    "source": "scripts/deep_review_resume.py --index 452 --max-bytes 8000 (frozen case rule reread 2026-10-20)",
+    "quoted_rule": "This market will resolve according to the 7-day moving average of transit calls (“Arrivals of Ships”) for the Bab el-Mandeb Strait that IMF Portwatch reports for October 31, 2026. Transit calls include container, dry bulk, roll-on/roll-off, general cargo, and tanker ships. Ships not reported by IMF Portwatch will not be considered.",
+    "date_and_fallback": "Resolve as soon as data is published. If it is not published within 14 calendar days of October 31, use the most recent data then available. Obvious data-integrity issues may delay resolution until the end of the third ET day after first release for correction; use the unrounded value.",
+    "resolution_source": "https://portwatch.imf.org/pages/6b1814d64903461b98144a6cc25eb79c (both chart and downloadable files)",
+    "scope_note": "The rule specifies 7-day mean, transit calls, named chokepoint, and Oct 31 reference date. It does not name an API field."
+  },
+  "followup_capture": {
+    "receipt": "logs/deep_review_20261017/portwatch_ui_binding_0720/resolution_page.receipt.json",
+    "body": "logs/deep_review_20261017/portwatch_ui_binding_0720/resolution_page.body.json.gz",
+    "url": "https://portwatch.imf.org/pages/6b1814d64903461b98144a6cc25eb79c",
+    "http_status": 200,
+    "timing_basis": "call_window",
+    "received_utc": "2026-10-20T07:25:42.219208Z",
+    "raw_bytes": 216598,
+    "raw_sha256": "7547c2867efc5385f2df5af42b9e437944843488812dc2726a9419541e5d49f9",
+    "finding": "Current HTML source references app item 2116586ea519488389e905f9bcd536dd. It contains no Daily_Chokepoints_Data, TotalShips, Arrivals of Ships, n_total, or 7-day label."
+  },
+  "examined_prior_official_receipts": [
+    {
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/imf_portwatch_hub_item.receipt.json",
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/imf_portwatch_hub_item.body.json.gz",
+      "url": "https://imf-dataviz.maps.arcgis.com/sharing/rest/content/items/2116586ea519488389e905f9bcd536dd/data?f=json",
+      "raw_sha256": "e485055363965415ba3bc488b4ff26d3cae4897663b408ce7c1c62f243e4ade3",
+      "finding": "Ports-Instant-App configuration/webscene linkage, but no named chart query or daily-series metric binding."
+    },
+    {
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/imf_portwatch_webscene.receipt.json",
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/imf_portwatch_webscene.body.json.gz",
+      "url": "https://imf-dataviz.maps.arcgis.com/sharing/rest/content/items/b72143ed30774bd99f9d0bd2c1b75e4c/data?f=json",
+      "raw_sha256": "b18788babba92f9c5ff9d61d2014f02a095d6534230b13e45658c7937d08fc8a",
+      "finding": "Static port/chokepoint reference services and routes; no Daily_Chokepoints_Data query, 7-day mean, or metric label."
+    },
+    {
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/receipts3/capture/bab_chokepoints_layer_metadata.receipt.json",
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/receipts3/capture/bab_chokepoints_layer_metadata.body.json.gz",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0?f=json",
+      "raw_sha256": "665074f60501775bdb29d9d6a562973d3efefb889aa45a7718b6f5e20ee1f16b92",
+      "finding": "Official layer schema includes date, portid, portname, n_total and category fields, but description is blank. This proves field existence, not that the resolution chart displays n_total or averages it over 7 days."
+    }
+  ],
+  "conclusion": "No directly sourced dashboard/widget or methodology/config evidence found in the named resolution page, linked app item, static webscene, or layer metadata that binds display label “Arrivals of Ships” / 7-day mean at Bab el-Mandeb to Daily_Chokepoints_Data.n_total. Preserve this as an unresolved metric-to-field mapping. Existing captured daily API observations are a separate source; their availability or absence outside Oct 31 does not by itself establish a forecast block.",
+  "limits": [
+    "Follow-up captured one new public body; three earlier official bodies were reused.",
+    "Hashes cover supplied response bytes, not wire authentication.",
+    "No forecast, value inference, or trade decision."
+  ]
+}

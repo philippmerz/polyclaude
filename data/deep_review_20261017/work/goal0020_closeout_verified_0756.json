@@ -1,0 +1,43 @@
+{
+  "schema": "finite_research_closeout_verification.v1",
+  "verified_utc": "2026-10-20T07:55:44.328944+00:00",
+  "cases": [
+    {
+      "index": 443,
+      "status": "excluded_factual",
+      "report_sha256": "9b3ec4a9ea212e62d5d7a443b1ddda33d0e37e67d5ca6c99d4e4b00686abf5ec",
+      "identity_ledger_index": "PASS"
+    },
+    {
+      "index": 445,
+      "status": "excluded_factual",
+      "report_sha256": "883f11a33468b81c1dd77922b83c9853ade564c6b1bbfd90960733503e81dacb",
+      "identity_ledger_index": "PASS"
+    },
+    {
+      "index": 446,
+      "status": "valued",
+      "report_sha256": "f9dbd6068951da26b129608f69ad170992dd772387a1cacd8fec35672bbdd89e",
+      "identity_ledger_index": "PASS"
+    },
+    {
+      "index": 449,
+      "status": "excluded_factual",
+      "report_sha256": "dbb5b3c1499d8d37292dd24b6f2bb6e5e6ca5e8dab43bfcb2ad188a00b0e930a",
+      "identity_ledger_index": "PASS"
+    }
+  ],
+  "all_base_reports_verified": 765,
+  "revision_chain_rows_verified": 69,
+  "effective_counts": {
+    "valued": 380,
+    "excluded_factual": 371,
+    "blocked_after_review": 14
+  },
+  "pending": 2235,
+  "active": [
+    450
+  ],
+  "ledger_sha256": "7771be211b8bf6cb0b92d7ca1d9ff9bad1b0d15274a5c2caae5a7e8cb4f0450e",
+  "financial_action": "None; original priors/orders/CSV preserved. Material safety news follow-up tracked separately."
+}

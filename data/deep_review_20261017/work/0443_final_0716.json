@@ -1,0 +1,39 @@
+{
+  "review_index": 443,
+  "market_id": "5720679",
+  "condition_id": "0xdaf0dab5fe0237adb57e8c4a6597ed6d80c6251211eb844405c10d04307c7341",
+  "criteria_sha256": "f4fc57bc32ada626a7179edeb0fd6d26d55a18716cc1808748f1123e6718f1f4",
+  "token_ids": [
+    "96001351219875844498838140150827708164056550813666943139433390574708222620584",
+    "79241996538827563940760044545315737338123832320700790828916033906975465186788"
+  ],
+  "status": "excluded_factual",
+  "literal_analysis": "FullNOAA/LFPB/wholeC/nextdate/Oct18fallback/lowestbracket/7dayerrorcorrectionread; exactcontractterminal.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720679",
+      "observed_utc": "2026-10-20T07:12:50.187318+00:00",
+      "finding": "Root actualexactGamma closed/nonaccepting/UMAresolved; raw/gzip/identity verified."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=lfpb",
+      "observed_utc": "2026-10-20T05:16:27.404945Z",
+      "finding": "Genericviewer shell, no actualOct17measurementadopted; retrievalgap not weatherabsence."
+    }
+  ],
+  "forecast": {
+    "not_estimated": "Closed historical contract; not a newfutureprobability or completedvaluation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "accessible_entry_route": "No currentvettedCLOBnewentry; exactclosed/nonaccepting.",
+    "terminal_prices_not_quotes": [
+      "1",
+      "0"
+    ],
+    "fees_depth_sizing": "Notapplicableto newclosedcontractentry; noalternativevettedroute established."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting; no model-basedscreen.",
+  "reopen_condition": "Verifiedexactcontractreopening/lawfulvettedroute,thenfreshfullreview.",
+  "report_markdown": "# 443 · Paris16°C, October17\n\n**Factual exclusion: exact contract is closed/resolved and does not accept orders.** No new entry through the vetted CLOB route is available; no verified alternative route is established. This is not a valuation or a retrospective forecast.\n\nFull rule read: highest NOAA Temp reading at Paris–Le Bourget/LFPB on Oct17, whole°C, bracket16°C. NOAA unavailable by Oct18 23:59ET invokes Weather Underground Daily Observations; no data by then goes to the lowest bracket. Resolve at the first next-date point or that deadline, whichever first; ordinary revisions stop at the first next-date point. Clearly erroneous technical/operational/interference data may remain open up to7ETcalendar days for correction/clarification. Do not silently replace this with another station, a forecast or a subhourly/high-low product.\n\nRoot verified the current exact Gamma body and raw/gzip receipt at2026-10-20T07:12:50.187318+00:00: market5720679, condition/tokens/question/fullrules/source/end match; closedtrue, acceptingOrdersfalse, UMAresolved. Yes/No terminal marks['1', '0'] are not executable bids/asks. Active=true alone does not reopen the book. No on-chain payout denominator or current holding is claimed.\n\nTwo earlier source pairs were independently hash-verified. The NOAA captured HTML is a generic Time Series Viewer shell without station/Oct17 observations; its HTTP200 does not prove NOAA lacked data or supply the actual peak. No fallback result or exact observed temperature is adopted. Those measurement gaps do not create a current route into this closed contract.\n\nBoth YES and NO considered: no new CLOB entry; hypothetical fee/depth/maker calculations cannot establish an accessible investment. No fabricated p-point, order, redemption, transfer or prior change. Reopen only on verified exact-contract reopening/lawful vetted route, then reread source and apply all live execution gates.\n\n[Exact status](../../../data/deep_review_20261017/work/terminal_0714/case_0443.json) · [Source facts and limits](../../../data/deep_review_20261017/work/0443_facts_0520.json).\n"
+}

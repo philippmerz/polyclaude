@@ -1,0 +1,40 @@
+{
+  "schema": "bounded_tick_closeout_primary.v1",
+  "tick": "20261020T060240Z",
+  "reviewed_utc": "2026-10-20T08:01:55.700837+00:00",
+  "decision": "Retain holdings/noadd and3originalpoliticalbids at originalterms. No new fill/order/cancel/transfer/redemption/numericalforecast or financialprior change.",
+  "fixed_news_window": {
+    "after_exclusive_utc": "2026-10-20T06:35:00.722044Z",
+    "through_inclusive_utc": "2026-10-20T07:52:35.961716Z",
+    "source": "notes/news_alerts.jsonl",
+    "records": 7,
+    "new_michigan_records": 0
+  },
+  "Michigan": "Requested51b06 exactrow/prior substantive sourceproofs verified;0newMIrecords later. Repeatedcampaigncoverage not measured voterresponse; no numericalupdate or duplicateOct20aging.",
+  "Kimi": {
+    "alerts": [
+      "a40093efed7c7b243727ac80c534760073f3c650",
+      "214d3b4a4fc1251e82385c54ef00b9a999d967c3"
+    ],
+    "judgment": "AWS Sep18notice confirms existingK3 distribution, predatingOct17forecast; not new model/qualifyingHLEscore. Copying headline remains unverified allegation: originalOpenAI/SCMPbodies403, no adopted enforcement/date/benchmarkinvalidity/legalfinding. Accessfailure notdisproof. ServedHLE66rows/K3HLE41.08 unchangedhash, not freshbenchmark/alltimeabsence. Retain10YES central.3402125/selected.1902125/broad.08\u2013.80, noadd.",
+    "reopen": "Actualscore/policy/removal/qualifyingnewmodel/serviceconstraint. Cache/privateinformationrisks remain."
+  },
+  "OpenRouter": {
+    "alert": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+    "judgment": "Stripe/OpenRouterAug19agreement predatesOct17forecast. Oct19article repeatsit, attributes7.5B toNYT; noofficialpriceconfirmation. Company saysproduct/commitments/integrationsunchanged, not guaranteedfuturegrowth. Historical10+Tdaily/10xclaims lackchartcrosswalk/period; not independentOctobertraffic measurement. CurrentcompletedOct12unchanged;Oct19partial32.345372T withoutpace/causalityinference. No targetweekvalues/newoperatingtransition established. Retain5NO central.88/selected.73/broad.20\u2013.995, noadd.",
+    "reopen": "Actualchart/source/operatingchange. Narrow[725,775) bracket gives both under/overshoot NO; traffic-up notautomaticallyloss."
+  },
+  "other_news": "FlintMT01/Venezuelaresearch-only,no held/pendingexactjoin. Messi-name naturestory peripheraltoheldGoogleathleteranking; no resolvingranking/searchmeasurement, no update. Sevenrowsread; classifierrelevance notauthority.",
+  "account": "07:55original3LIVE0matched/6.50;127trades/9indexed identities/quantities unchanged. Kimi10YES/OR5NO; Clarity29+29 managedwhole. No freshCTF.",
+  "planning": "07:52standalonePM34.26mid/28.92indicative fee-netdepth is separatefromcanonical06:22producer36.14/31.94. Clarity>58book .850vs.728full-netavg; laterindexedmark.895. Price/depthchange is realobservation, not proofwhy. Conditional29floor/58middle/venue-oracle0 model unchanged. No spliceintowholeaccount/CSV; previous hold/exit/carry/jointstress remainsdated, no newexecutablequoteclaim.",
+  "joint": "Kimi+OR4.45costcanbothlose; noindependence/hedgecredit. Clarityvenue/oraclefailure/fullpoliticalbidfills remainrisk, no recoveryargument.",
+  "research": "443/445/449closed factual and446BOKvaluation recordedindividually;380valued/14blocked/371factual/2235pending.450savedincomplete/no forecast/currentownquote.",
+  "evidence": [
+    "data/deep_review_20261017/work/tick060240_closeout_verified_0802.json",
+    "data/deep_review_20261017/work/kimi_alerts_20261020_0755_facts.json",
+    "data/deep_review_20261017/work/openrouter_alert_0729_facts.json",
+    "data/deep_review_20261017/work/tick060240_account_safety_0755.json"
+  ],
+  "Telegram": "None: old-announcementrepublication/cacheadvance, no newmaterialsource/prior/action. No headline/quietheartbeat.",
+  "stop": "Full11stepcheckcompletedonce; afterpublicationfinishthisboundedtick. Existing10UTClight/14full/earliermaterialevent; no newgoal/timer/idlefollowup."
+}

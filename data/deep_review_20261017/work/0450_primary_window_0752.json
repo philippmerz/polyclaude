@@ -1,0 +1,52 @@
+{
+  "schema": "case450.primary_window_and_context.v1",
+  "reviewed_utc": "2026-10-20T07:42:56.511271+00:00",
+  "case": 450,
+  "verified_receipt_pairs": [
+    {
+      "name": "gamma_parent",
+      "url": "https://gamma-api.polymarket.com/markets",
+      "status": 200,
+      "received_utc": "2026-10-20T07:38:41.312210+00:00",
+      "raw_sha256": "08c1377114446e01e75476cff20de6962713410be3fab0667e5aed35769478e6",
+      "receipt": "logs/deep_review_20261017/case0450_primary_0746/gamma_parent.receipt.json"
+    },
+    {
+      "name": "pbs_ap_gabbard",
+      "url": "https://www.pbs.org/newshour/politics/tulsi-gabbard-resigns-as-trumps-national-intelligence-director",
+      "status": 200,
+      "received_utc": "2026-10-20T07:38:42.312467+00:00",
+      "raw_sha256": "195e55d577ad5bdb8a2e30f11d9deb44d10984991c877ec34a62dfdb7fe6197f",
+      "receipt": "logs/deep_review_20261017/case0450_primary_0746/pbs_ap_gabbard.receipt.json"
+    },
+    {
+      "name": "house_intel_gabbard",
+      "url": "https://intelligence.house.gov/2026/05/22/chairman-crawford-on-the-resignation-of-director-of-national-intelligence-tulsi-gabbard/",
+      "status": 200,
+      "received_utc": "2026-10-20T07:38:41.617393+00:00",
+      "raw_sha256": "32001fdc7620933f9c177a2d78f2f4ad563b1553a1fc3ac641e2bed10501ebac",
+      "receipt": "logs/deep_review_20261017/case0450_primary_0746/house_intel_gabbard.receipt.json"
+    }
+  ],
+  "chronology": {
+    "PBS_AP_publication_local": "2026-05-22 13:40EDT",
+    "publication_utc": "2026-05-22T17:40:00Z",
+    "PBS_AP_updated_utc": "2026-05-22T17:48:00Z",
+    "market_created_utc": "2026-05-22T18:33:40.738594Z",
+    "market_started_utc": "2026-05-22T19:11:25.900051Z",
+    "announced_effective_departure": "2026-06-30",
+    "proof": "ActualPBS/APbody explicitly reports resignation/letter andpublished/updatedtimes; HouseIntelMay22statement corroborates resignation context. EarlierAP403 didnotmakebodyunreachable; originalAPtextobtainedthroughPBSsyndication."
+  },
+  "event_context": {
+    "event_id": "514187",
+    "source_unit": "work/0450_event_context_0750.json",
+    "exact_description_matches_frozen": true,
+    "scope_inference": "Nextnewannouncement aftercreation isbest-supportedcontext: eventcreatedafterGabbardnews and omitsher, but notbindingclarification. Actualpost-startceasing/timing acceleration and genericYes/Nonewording remaininterpretationissues."
+  },
+  "still_unverified": [
+    "Whethera distinctpost-May22includedroledepartureannounced or actualdeparturecountsindependentlyhere.",
+    "Completepostcreationchronology/anyofficialplatformclarification.",
+    "Futurehazard/postmidtermstates/currentbothsideeconomics."
+  ],
+  "status": "Active/incomplete; no ppoint/currentownquoteview/entry orfinancialprior mutation."
+}

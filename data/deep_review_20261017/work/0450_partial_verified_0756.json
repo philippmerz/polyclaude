@@ -1,0 +1,33 @@
+{
+  "schema": "case450.partial_source_verification.v1",
+  "verified_utc": "2026-10-20T07:55:44.328944+00:00",
+  "pairs": [
+    {
+      "receipt": "logs/deep_review_20261017/case0450_event_0750/event_450.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T07:41:02.414839+00:00",
+      "raw_sha256": "9fc0e3090c67ca9cf8917874e1bf97894455bd3d362a7e7af3dfb09565c967c9",
+      "gzip_sha256": "fc7cce9048a92b8bec3234ecf7fb3fbf77d4166c1bcc150f9ad5497b51d8fd15"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0450_hazard_0800/wh_dni_nom/wh_dni_nom.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T07:46:56.614786Z",
+      "raw_sha256": "737ff34e544f4163ff6a729e71fd5d0bf8d4ba276e9ddd175cd39fca459b30b2",
+      "gzip_sha256": "863732d8d7bb5ac8e97ac336e9886d6f2cf0e8f9ad82d84e7d3eccc13cbce78b"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0450_hazard_0800/cbs_2018_timeline/cbs_2018_timeline.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T07:46:57.576808Z",
+      "raw_sha256": "feb080d4dd611b88460667b71a960d1b5b5f8f6f8794f2fc623f7b01d2060684",
+      "gzip_sha256": "05de024ad0c57f9532eac02a93501a5345ed8bf2d9145c30c8ac9a1423d2c856"
+    }
+  ],
+  "adopted_limits": [
+    "Parent metadata context_requires_regen=true/versionv1/creationDate19:25:18 does not itself clarify payout. No additional editorial clarification recovered.",
+    "June11 WH notice nominates Walter Clayton viceTulsiGabbard; it supplies no departure effective date and does not independently prove a later qualifying departure. Nominee withdrawal is not departure of an already serving covered official.",
+    "CBS2018 is one historical path with post-midterm departures, not a representative hazard sample/calibration. No current forecast adopted."
+  ],
+  "status": "450 incomplete/unvalued; no p/current own quote/order."
+}

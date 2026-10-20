@@ -1,0 +1,108 @@
+{
+  "schema": "finite_goal_progress.v1",
+  "updated_utc": "2026-10-20T08:02:52.540899+00:00",
+  "previous_goal_turn_classification": "progress",
+  "previous_turn_evidence": "7d59fae5:440and442valued/441excluded, individuallyverified/indexed/pushed; fullscope remains incomplete.",
+  "current_completed": [
+    {
+      "index": 443,
+      "status": "excluded_factual",
+      "verified_utc": "2026-10-20T07:15:01.970745+00:00",
+      "report_sha256": "9b3ec4a9ea212e62d5d7a443b1ddda33d0e37e67d5ca6c99d4e4b00686abf5ec",
+      "ledger_index_checkpoint": "PASS",
+      "counts": {
+        "completed_valuations": 379,
+        "blocked_after_in_depth_review": 14,
+        "factual_exclusions": 369,
+        "pending": 2238,
+        "base_records": 762,
+        "revisions_written": 69
+      },
+      "next": 445
+    },
+    {
+      "index": 445,
+      "status": "excluded_factual",
+      "verified_utc": "2026-10-20T07:17:00.248095+00:00",
+      "report_sha256": "883f11a33468b81c1dd77922b83c9853ade564c6b1bbfd90960733503e81dacb",
+      "ledger_index_checkpoint": "PASS",
+      "counts": {
+        "completed_valuations": 379,
+        "blocked_after_in_depth_review": 14,
+        "factual_exclusions": 370,
+        "pending": 2237,
+        "base_records": 763,
+        "revisions_written": 69
+      },
+      "next": 446
+    },
+    {
+      "index": 446,
+      "status": "valued",
+      "verified_utc": "2026-10-20T07:29:18.235583+00:00",
+      "report_sha256": "f9dbd6068951da26b129608f69ad170992dd772387a1cacd8fec35672bbdd89e",
+      "ledger_index_checkpoint": "PASS",
+      "counts": {
+        "completed_valuations": 380,
+        "blocked_after_in_depth_review": 14,
+        "factual_exclusions": 370,
+        "pending": 2236,
+        "base_records": 764,
+        "revisions_written": 69
+      },
+      "next": 449
+    },
+    {
+      "index": 449,
+      "status": "excluded_factual",
+      "verified_utc": "2026-10-20T07:32:41.632376+00:00",
+      "report_sha256": "dbb5b3c1499d8d37292dd24b6f2bb6e5e6ca5e8dab43bfcb2ad188a00b0e930a",
+      "ledger_index_checkpoint": "PASS",
+      "counts": {
+        "completed_valuations": 380,
+        "blocked_after_in_depth_review": 14,
+        "factual_exclusions": 371,
+        "pending": 2235,
+        "base_records": 765,
+        "revisions_written": 69
+      },
+      "next": 450
+    }
+  ],
+  "counts": {
+    "completed_valuations": 380,
+    "blocked_after_in_depth_review": 14,
+    "factual_exclusions": 371,
+    "pending": 2235,
+    "base_records": 765,
+    "revisions_written": 69
+  },
+  "active_indices": [
+    450
+  ],
+  "next": [
+    450,
+    451,
+    452,
+    454,
+    455,
+    456
+  ],
+  "safety": "Full11stepscompletedonce; laterfixednewswindowthrough07:52/account-source07:54\u201355 verified/noaction. Financial06:22/CSV232 dated. See work/tick060240_closeout_primary_0802.json; nextexisting10light/14full/earliermaterialevent.",
+  "financial_action": "None thisgoalturn; account/quotesfornewtrades mustrefreshallgates.",
+  "parallel_facts_only": [
+    "work/0450_resume.json",
+    "work/0451_facts_0714.json",
+    "work/0451_poll_capture_addendum_0729.json",
+    "work/0452_facts_0714.json",
+    "work/0452_portwatch_ui_binding_0720.json",
+    "work/0454_facts_0738.json",
+    "work/0454_facts_0738_addendum.json",
+    "work/0455_facts_0738.json",
+    "work/0456_facts_0738.json"
+  ],
+  "goal": "Full3000scope active/incomplete; record+verifyeachcasebeforeadvance. No newtimer/idlefollowup.",
+  "telegram": "Next400valued/materialfinding/block; no routinecasepings.",
+  "active_pointer": "work/0450_resume.json",
+  "bounded_run_note": "Current scheduled tick closes after necessary news/account safety follow-up and publication. Full research scope remains incomplete;450 saved without forecast. No new goal/timer/idle follow-up."
+}

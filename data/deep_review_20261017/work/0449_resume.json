@@ -1,0 +1,15 @@
+{
+  "review_index": 449,
+  "updated_utc": "2026-10-20T07:32:41.632376+00:00",
+  "phase": "Completedrootverifiedexcluded_factual; no ppoint/entry.",
+  "report": {
+    "path": "evaluations/0449.md",
+    "sha256": "dbb5b3c1499d8d37292dd24b6f2bb6e5e6ca5e8dab43bfcb2ad188a00b0e930a"
+  },
+  "status_limit": "Datedcompletedresearch; noautomaticentry/re-record.",
+  "source_paths": [
+    "work/0449_facts_0642.json",
+    "work/terminal_0714/case_0449.json",
+    "work/0449_record_verified_0740.json"
+  ]
+}

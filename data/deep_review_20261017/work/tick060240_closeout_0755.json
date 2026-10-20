@@ -1,0 +1,175 @@
+{
+  "schema": "tick060240_closeout.v1",
+  "check_id": "20261020T060240Z",
+  "read_window": {
+    "after_exclusive_utc": "2026-10-20T06:35:00.722044Z",
+    "through_inclusive_utc": "2026-10-20T07:52:35.961716Z",
+    "source": "notes/news_alerts.jsonl",
+    "records": 7,
+    "new_michigan_records": 0
+  },
+  "quick_status": {
+    "command": ".venv/bin/python -B scripts/polyclaude_status.py --quick",
+    "started_utc": "2026-10-20T07:52:18.175997+00:00",
+    "ended_utc": "2026-10-20T07:52:21.886350+00:00",
+    "returncode": 0,
+    "stdout_private_path": "logs/deep_review_20261017/tick060240_closeout_0755/status.stdout",
+    "stdout_bytes": 3163,
+    "stdout_sha256": "8a99bacc2525dd38df969ef2c1e229621c1807e2263b2ba261cd11a7d6e3d2ba",
+    "stderr_private_path": "logs/deep_review_20261017/tick060240_closeout_0755/status.stderr",
+    "stderr_bytes": 0,
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "reported_state": {
+      "open_positions": 7,
+      "open_cost_usd": 35.77,
+      "open_mtm_usd": 34.26,
+      "max_payout_usd": 83.33,
+      "unrealized_pnl_usd": -1.51,
+      "realizable_net_depth_fee_estimate_usd": 28.92,
+      "hurdles": "4 clear; 0 flagged; 3 protected groups",
+      "watchlist": "no triggers hit",
+      "resolved_rows_excluded": 2,
+      "visible_row_pnl_usd": -1.66
+    },
+    "flags": [
+      "Thin book: Clarity Act >58 Senators, mark 0.850 vs avg-fill 0.728 (12.2pp full-position exit gap).",
+      "Thin book: OpenRouter 725T–775T, mark 0.700 vs avg-fill 0.641 (5.9pp gap).",
+      "Status marks the 06:45 Kimi K3 and 07:28 OpenRouter news alerts with review flags."
+    ]
+  },
+  "new_alerts": [
+    {
+      "alert_id": "8e44f4b4222d3f8127b7c4c28eb1b3705c09bcb7",
+      "ts": "2026-10-20T06:44:52Z",
+      "tier": 1,
+      "feed": "MT01 Flint news",
+      "matched": "Aaron Flint",
+      "title": "Montana candidate Aaron Flint says Iran war should end without 'boots on the ground' - KATV",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "source_line": 1190,
+      "source_line_sha256": "4d5e01cf2c2e727a9cf9bb5637b08439848759ea79ae1491baae45a996149729"
+    },
+    {
+      "alert_id": "e8c83b0a118b0fa685e7be1baa2c83834ba48060",
+      "ts": "2026-10-20T06:44:59Z",
+      "tier": 1,
+      "feed": "Google Year in Search, Messi and Mbappe athlete news",
+      "matched": "Lionel Messi",
+      "title": "Animals, Fungi and Plants Named After Lionel Messi - BGNES",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "source_line": 1191,
+      "source_line_sha256": "e01488768e35d9339f2cfea7271acbcf2be8f4831f8523b025b3cac74b741db4"
+    },
+    {
+      "alert_id": "a40093efed7c7b243727ac80c534760073f3c650",
+      "ts": "2026-10-20T06:45:08Z",
+      "tier": 2,
+      "feed": "Kimi model, benchmark and Moonshot releases",
+      "matched": "Kimi",
+      "title": "OpenAI Accuses Kimi Operator China’s Moonshot AI Of Copying AI Model Reasoning - Yahoo Finance",
+      "impacts": [
+        {
+          "position": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+          "level": "MINOR",
+          "reason": "The copying allegation may affect confidence or scrutiny around Kimi’s Humanity’s Last Exam score, but does not directly change the achieved score."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "source_line": 1192,
+      "source_line_sha256": "c8be1d59dde466fe9e86ac73355f0d401ef5d5e32e102faa46d1c92cade824f5"
+    },
+    {
+      "alert_id": "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+      "ts": "2026-10-20T07:17:34Z",
+      "tier": 2,
+      "feed": "Kimi model, benchmark and Moonshot releases",
+      "matched": "Kimi",
+      "title": "Moonshot’s Kimi K3 lands on Amazon in key test for Chinese open-source AI income - South China Morning Post",
+      "impacts": [
+        {
+          "position": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+          "level": "MATERIAL",
+          "reason": "A new Kimi model deployment could alter the maximum achievable benchmark score, requiring score/result verification."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "source_line": 1193,
+      "source_line_sha256": "ba3702c6e99fb5ecc5cd901b52fa648aaa4df3ccacab9e61d32e741e58b8be66"
+    },
+    {
+      "alert_id": "82b24d23557079272b93d964528157beeddc8bbd",
+      "ts": "2026-10-20T07:22:57Z",
+      "tier": 1,
+      "feed": "Venezuela presidency, Delcy Rodriguez and transition news",
+      "matched": "Delcy",
+      "title": "Trump considera «interesante» unas elecciones entre Delcy Rodríguez y María Corina Machado - Analitica.com",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "source_line": 1194,
+      "source_line_sha256": "ad463bab804c970c7c790a0a4ec8e4f289066a7f1717843647d7e13352d6cfd3"
+    },
+    {
+      "alert_id": "6b14ac58d6021bd538bbc7c897509aed92c7bd71",
+      "ts": "2026-10-20T07:23:27Z",
+      "tier": 1,
+      "feed": "Venezuela presidency, Delcy Rodriguez and transition news",
+      "matched": "Maduro",
+      "title": "Nicolás Maduro y Cilia Flores podrían enfrentar condena mínima de 50 años de cárcel - El Nacional",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "source_line": 1195,
+      "source_line_sha256": "7a2bacfacfe99f3f5f4c5b5ba941b6ef480e949fd64e06e8c10b3cf392a06d51"
+    },
+    {
+      "alert_id": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+      "ts": "2026-10-20T07:28:46Z",
+      "tier": 1,
+      "feed": "OpenRouter traffic, routing and model news",
+      "matched": "OpenRouter",
+      "title": "Stripe will pay 7.5 billion dollars for the AI router OpenRouter - Startup Fortune",
+      "impacts": [
+        {
+          "position": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+          "level": "MATERIAL",
+          "reason": "A Stripe acquisition could materially change OpenRouter’s routing volume and the probability of reaching the 725T–775T token threshold."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "source_line": 1196,
+      "source_line_sha256": "94e9bd6e3b4151491400a7fd8d8497d66c56d4b06e27979d93c4ef88ee219c05"
+    }
+  ],
+  "requested_alert_outside_window": {
+    "alert_id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+    "ts": "2026-10-20T05:09:23Z",
+    "tier": 1,
+    "feed": "Michigan Senate Rogers and El-Sayed news",
+    "matched": "El-Sayed",
+    "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - wtvcfox",
+    "impacts": [
+      {
+        "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+        "level": "MATERIAL",
+        "reason": "Negative candidate coverage pressures the Democratic-win thesis, though it is not yet outcome-determinative."
+      }
+    ],
+    "relevance": "portfolio_material_critical",
+    "review_required": true,
+    "source_line": 1187,
+    "source_line_sha256": "b6705de4898e73ba07e4ff1a4b29828497a7f4987188aecc3cd7ce6a8e649449"
+  },
+  "michigan_window_finding": "No Michigan Senate alert after cutoff through read time; requested alert 51b06dcdb0f35a071f616187d66e9d62c667f5e7 is 2026-10-20T05:09:23Z, before cutoff, and impacts position 0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4.",
+  "limitations": [
+    "Status figures and alert impact records are a read-only snapshot; no probabilities or forecasts changed.",
+    "Realizable value is marked by status as indicative depth/fee estimate, not synchronized or freshness-verified liquidation quote."
+  ]
+}

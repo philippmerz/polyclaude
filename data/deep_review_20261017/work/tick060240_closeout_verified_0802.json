@@ -1,0 +1,111 @@
+{
+  "schema": "bounded_tick_closeout_verification.v1",
+  "verified_utc": "2026-10-20T08:01:55.700837+00:00",
+  "pairs_verified": 16,
+  "pairs": [
+    {
+      "receipt": "logs/tick060240_account_safety_0755/trades_p000.receipt.json",
+      "status": 200,
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "gzip_sha256": "74905bda8aadfcaefec53d807d06e0a3fc13d9f40a67cbbaccbff81f6f303b3f"
+    },
+    {
+      "receipt": "logs/tick060240_account_safety_0755/detail_0.receipt.json",
+      "status": 200,
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "gzip_sha256": "6564e1195eb64e5dc668593e1dcc99fb4b1dfc5a3dcf80458de10f6fc95a734e"
+    },
+    {
+      "receipt": "logs/tick060240_account_safety_0755/positions_snapshot.receipt.json",
+      "status": 200,
+      "raw_sha256": "711d467840af31dd92fc0b2ad22eb10d90c1adff69a6766114e14ac6c6b3e220",
+      "gzip_sha256": "418d881e23cd292446faa8b7d011a31a40c91f77484b1252ce8dacdeeb5c0220"
+    },
+    {
+      "receipt": "logs/tick060240_account_safety_0755/orders_p000.receipt.json",
+      "status": 200,
+      "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+      "gzip_sha256": "fb4c6d1d8ff5dec099cbca9e8422eba38653615c6ccf0f87d11f0d2d3963714c"
+    },
+    {
+      "receipt": "logs/tick060240_account_safety_0755/detail_2.receipt.json",
+      "status": 200,
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "gzip_sha256": "e46ebced402757c6ecf7fb51e195747901b511e8603e0a188c28c5c8ca7d62ed"
+    },
+    {
+      "receipt": "logs/tick060240_account_safety_0755/detail_1.receipt.json",
+      "status": 200,
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "gzip_sha256": "9a39c19d31cbb6961283dc419584003f78f594d20828d89f9de150eb0fd58d97"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/stripe_official.receipt.json",
+      "status": 200,
+      "raw_sha256": "2523f8a03a8dff5f10a6feaf6d5d7629d10f368cb63ae8aac68b1383e38c7e5f",
+      "gzip_sha256": "ae039dc120b0cf81471ed6905f3b8fb88e5e7b361fe46d6491a5e17e7d651a54"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_official.receipt.json",
+      "status": 200,
+      "raw_sha256": "0c081d0f114bbb361e3bfbeae68aaa1cba26fd1fcd170c78a2e02d75aa524e42",
+      "gzip_sha256": "893cf10eee09cea2b268e144eece37fd5753d883e4111ad0feef6bf9dd3bc6d8"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_official_canonical.receipt.json",
+      "status": 200,
+      "raw_sha256": "4b14931bbf45f23b04b7aa7294b9d61b4076427c62a3b338b1c7dc62846445f3",
+      "gzip_sha256": "01188d1009919c3e81dcaac5e57313741476155698f99b13185a69c268314337"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/openrouter_rankings.receipt.json",
+      "status": 200,
+      "raw_sha256": "93bca9dbfda1050931225b01fb4086ef2c358c64c47fbb92f18b3b5952a28771",
+      "gzip_sha256": "347df4c5ac2b24ab2ca87f5f550ee32b31ecbb6a9a85e116f7f504f899f9e60e"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/openrouter_alert_0755/startupfortune.receipt.json",
+      "status": 200,
+      "raw_sha256": "75137c7cbbb40000cce1c63e410dd8686e03e66941eb1aa3955a6731004eea38",
+      "gzip_sha256": "086c2034c0c127e8dc81b70a480104ba3384f3453f81b63d6eafc9bd3200909d"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/openai_distillation/openai_distillation.receipt.json",
+      "status": 403,
+      "raw_sha256": "fc25eaaeb9607ccb92736a2e7763deb03441d821bde49c8c04fd256665d18e23",
+      "gzip_sha256": "95ee79414aeb789150e3403e40a794f658cd0400f0d1eebdb483b103da9ee9b9"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/scmp_k3_amazon/scmp_k3_amazon.receipt.json",
+      "status": 403,
+      "raw_sha256": "540d5d02ef1be28d2efa7b1fc30c3082547651f18e5a2523e1265b1ef04de682",
+      "gzip_sha256": "866c979b209342105355d41bac48590a782dd36327d7bb03817573b77935a4f2"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/aws_k3_available/aws_k3_available.receipt.json",
+      "status": 200,
+      "raw_sha256": "338b2dc4283490c4e52cdffe83e56d3afa1fa7bb37565d321ba9edcc37c647d1",
+      "gzip_sha256": "4a3342bfad26f589cac91616547f06ec992746436680afbe89a7f3920e425171"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/kimi_alert_followup_0820/hle_live/hle_live.receipt.json",
+      "status": 200,
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "gzip_sha256": "c99f7463a00639e054c7aae8ae9944fac988a8dd619096d74a5e6c0f96e20d1a"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/held_or_material_0729_alert/alert_story_link.receipt.json",
+      "status": 200,
+      "raw_sha256": "87b6e48d7f481dae0a7d56a8e951cf3e36e476abb3960bd238ab55596e564a79",
+      "gzip_sha256": "2c2c63fce8f363abb7b6ae6bd80ca4fb03313c2589987a18b4bdbe7f8c127843"
+    }
+  ],
+  "account": "Root exact3originalterms/list/detail joins;127exhaustedorderedtraderows exactlyequal06:22;9indexed identity/quantity/redeemable joins. No fresh CTF proof.",
+  "news": "7new exactlinehashes plus requested older51b06 row independently verified. Fixedwindow06:35:00.722044\u201307:52:35.961716; no later absence claim.",
+  "OR_chart": "Root sums53rows/10series; completedOct12 unchanged164.043985914931T; Oct19partial32.345372199105T, not final or paced;4targetweeksabsent.",
+  "HLE": "Root parser66rows/K3(41.08,44.67); raw15fc012f unchanged, age2177. Not freshbenchmark/alltimeabsence.",
+  "collector_errata": [
+    "Corrected Kimi revisionpointer to actualrun directory.",
+    "Corrected Clarity>58 statusmark .958\u2192.850/gap23\u219212.2pp using actual07:52stdout; .958 isTrumpdust. No immutableorfinancialrecordchanged."
+  ]
+}

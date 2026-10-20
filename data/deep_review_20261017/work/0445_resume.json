@@ -1,10 +1,17 @@
 {
   "review_index": 445,
-  "updated_utc": "2026-10-20T05:19:39.917831+00:00",
-  "phase": "collector facts only; not started or decided",
+  "updated_utc": "2026-10-20T07:17:00.248095+00:00",
+  "phase": "Completedrootverifiedexcluded_factual; no ppoint/entry.",
   "source_paths": [
-    "work/0445_facts_0520.json"
+    "work/0445_facts_0520.json",
+    "work/terminal_0714/case_0445.json",
+    "work/0445_record_verified_0720.json"
   ],
   "facts_sha256": "5e71b91e4e7fbd4e1a85a09e43d34002dd17623f275253de115c38c4993094b1",
-  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority."
+  "limit": "Primary fullrule/source/identity review required; no forecast/rejection/entry authority.",
+  "report": {
+    "path": "evaluations/0445.md",
+    "sha256": "883f11a33468b81c1dd77922b83c9853ade564c6b1bbfd90960733503e81dacb"
+  },
+  "status_limit": "Datedcompletedresearch; noautomaticentry/re-record."
 }

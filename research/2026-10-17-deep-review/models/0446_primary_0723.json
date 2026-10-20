@@ -1,0 +1,68 @@
+{
+  "schema": "case446.primary_pre_own_quote.v1",
+  "created_utc": "2026-10-20T07:20:49.802432+00:00",
+  "review_index": 446,
+  "p_yes": 0.94,
+  "p_no": 0.06,
+  "range_yes": [
+    0.7,
+    0.995
+  ],
+  "actual_entry_reserve_pp": 10,
+  "selected_yes": 0.84,
+  "selected_no": 0,
+  "own_current446_quotes_not_viewed": true,
+  "limits_price_blindness": "Oldscreen/familyinformationmaybeknown; no all-prices-blind claim.",
+  "literal": "Change in official BaseRate at Octobermeeting vs immediatelypremetinglevel; unchangedYES, anyincrease/cutNO withspecified25bprounding/upperboundrule. Oct22calendarPDFverified; officialstatement may settle, end00UTCnotdecisionfinality.",
+  "current_evidence": {
+    "official_Aug27": "6–1hike2.75→3.00 afterJulyhike; risinggrowth/debt/inflation, furtherhikesdata-dependent. Augforecasts2026GDP3.3/2027GDP2.9,CPI2.7/2.3,core2.5/2.5.",
+    "official_September_CPI": "2.9yoy/+0.3mom/core2.8yoy/−0.1mom; notfull-year2026CPI or news beyond Oct14–19poll.",
+    "official_household_credit": "Q2+25.9tn to2019.8tn; releasedAug19beforeAug27decision, notnewOctoberbadnews.",
+    "calendar": "Q3GDPdueOct27; Q3householdcreditNov18; Nov26nextpolicy/outlookmeeting.",
+    "Reuters_poll_via_CNA": "Oct20publication/Oct14–19field,34of34hold3.00; medianNov3.25/later3.50. Originalreportedpoll text in creditedsyndication, directReutershostnotverified. Equityvolatility/headlineeasing reported; no independentofficialGDPnumericadoption."
+  },
+  "reasoning": "Stableconsensus and time-to-assessback-to-backhikesfavorhold. Above-targetinflation/credit/strongsemiconductorsfavor eventualhike, predominantlyNovember; Octoberhike remainsmaincountercase. Emergencycutpossibleinacutejointshock. Existingpublishedhawkishrisksalreadyconditionconsensus; scenario7%isuncertainresidualboard/timingsurprise, notanotherindependentlikelihoodpenalty.",
+  "judgmental_tree": [
+    {
+      "name": "unchanged_public_information",
+      "weight": 0.9,
+      "hold": 0.985,
+      "hike": 0.014,
+      "cut": 0.001
+    },
+    {
+      "name": "hawkish_board_information_or_earlier_timing",
+      "weight": 0.07,
+      "hold": 0.4,
+      "hike": 0.6,
+      "cut": 0
+    },
+    {
+      "name": "acute_financial_or_growth_shock",
+      "weight": 0.03,
+      "hold": 0.7,
+      "hike": 0,
+      "cut": 0.3
+    }
+  ],
+  "raw_probability": {
+    "hold": 0.9355,
+    "hike": 0.0546,
+    "cut": 0.009899999999999999
+  },
+  "adoption": "93.55%treehold rounded94%YES; 5.46%hike/.99%cut raw. Weights/conditionalodds are primaryjudgment, not estimated historicalfrequencies/calibratedsurveypredictiveodds. Pollcount notBernoullitrials.",
+  "uncertainty": "Broad70–99.5%admitssharedpollerror/latentpolicychoice/source/modelrisk. Ordinary10ppinstanceentryreserve foruncalibratedforecast; no K5tailcalibrationclaim, no broadendpointmustpassrequirement. Freshsource/account/conditionalfill stillneededfornewentry.",
+  "portfolio": "BOKdecision isdistinctfromUSpolitical/OR/HLEclaims, butnofreeindependence/hedgecredit; all canlose together. NewPMcostaddsvenue/source/modelrisk; freshfunding/commitments/capsrequired ifpromising.",
+  "facts_path": "data/deep_review_20261017/work/0446_followup_facts_0713.json",
+  "facts_sha256": "9bf123936d82478348d76fc354a8a3ae1812e52be589061abcde5293f96d8aba",
+  "next": "Fresh exactGamma/fees/books; bothsides/touchmaker/remoteconditionalfill/shortcarry comparison. No action or financialprior mutation.",
+  "prequote_calendar_clarification": "Nov26 is verified next policy date. No separate November outlook-release date is adopted; prior shorthand policy/outlook should read policy.",
+  "prequote_catalyst_addendum": {
+    "saved_utc": "2026-10-20T07:21:49.272562+00:00",
+    "official_calendar_rows": [
+      "2026-10-21 06:00 SeptemberProducerPrices(preliminary)",
+      "2026-10-21 12:00 OctoberBSI/ESI"
+    ],
+    "limit": "Calendarpageclocktimezone notindependentlyestablishedhere. ScheduledbeforeOct22meeting; futuredata canchangeboard/conditionalfill. No absenceofpremeetingdata claim; knownreleaseuncertainty alreadywithinresidualscenario, notanextraobservedsurprise. Anyactualmaker wouldneed verifiedUTCpullbeforeearliestcatalyst. Noorder."
+  }
+}

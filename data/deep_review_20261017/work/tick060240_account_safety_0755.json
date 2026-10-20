@@ -1,0 +1,186 @@
+{
+  "schema": "tick060240_account_safety_followup.v1",
+  "capture_window": {
+    "started_utc": "2026-10-20T07:55:07.213295Z",
+    "finished_utc": "2026-10-20T07:55:08.453381Z",
+    "timing_basis": "per-call window; not wire timestamps"
+  },
+  "private_capture_dir": "logs/tick060240_account_safety_0755",
+  "private_payloads": "HTTP response bodies and parsed account rows remain under private logs; receipts bind supplied body bytes and omit owner fields from this facts file.",
+  "orders": {
+    "list_status": 200,
+    "page_exhausted": true,
+    "separate_detail_statuses": [
+      200,
+      200,
+      200
+    ],
+    "all_three_details_match_list_and_06_22_facts": true,
+    "each_detail_associate_trades_empty": true,
+    "count": 3,
+    "remaining_buy_commitment_usd": 6.5,
+    "orders": [
+      {
+        "order_id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+        "condition_id": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+        "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+        "side": "BUY",
+        "size": "10",
+        "price": "0.12",
+        "status": "LIVE",
+        "size_matched": "0"
+      },
+      {
+        "order_id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+        "condition_id": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+        "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+        "side": "BUY",
+        "size": "50",
+        "price": "0.03",
+        "status": "LIVE",
+        "size_matched": "0"
+      },
+      {
+        "order_id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+        "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+        "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+        "side": "BUY",
+        "size": "10",
+        "price": "0.38",
+        "status": "LIVE",
+        "size_matched": "0"
+      }
+    ],
+    "same_exact_three_as": "notes/resting_orders.md (06:22 current order record) and data/deep_review_20261017/work/light0600_account_facts.json"
+  },
+  "fills": {
+    "authenticated_trade_status": 200,
+    "pagination_exhausted": true,
+    "row_count": 127,
+    "unique_trade_ids": 127,
+    "canonical_ordered_rows_sha256": "28a489c2c72999cbfd0a948a5737743794ac232ce5701cc1ffdf18b10b6db363",
+    "exact_same_ordered_rows_as_0622_and_0600": true,
+    "rows_linked_to_three_original_order_ids": 0,
+    "details_associate_trades_empty": true,
+    "new_fill_or_unknown_identity": false
+  },
+  "positions": {
+    "status": 200,
+    "one_public_limit100_snapshot_rows": 9,
+    "same_condition_asset_outcome_size_totalBought_redeemable_as_0622_and_0600": true,
+    "positions_body_receipt": "logs/tick060240_account_safety_0755/positions_snapshot.receipt.json",
+    "rows": [
+      {
+        "label": "Clarity Act >50 Yes",
+        "condition_id": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+        "asset_id": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+        "size": 29,
+        "totalBought": 29,
+        "curPrice": 0.06,
+        "currentValue": 1.74,
+        "redeemable": false
+      },
+      {
+        "label": "Clarity Act >58 No",
+        "condition_id": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+        "asset_id": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+        "size": 29,
+        "totalBought": 29,
+        "curPrice": 0.895,
+        "currentValue": 25.955,
+        "redeemable": false
+      },
+      {
+        "label": "Kimi current Yes",
+        "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+        "asset_id": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+        "size": 10,
+        "totalBought": 10,
+        "curPrice": 0.135,
+        "currentValue": 1.35,
+        "redeemable": false
+      },
+      {
+        "label": "OpenRouter No",
+        "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+        "asset_id": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
+        "size": 5,
+        "totalBought": 5,
+        "curPrice": 0.7,
+        "currentValue": 3.5,
+        "redeemable": false
+      }
+    ]
+  },
+  "recent_exits_status_0752": {
+    "source": "logs/deep_review_20261017/tick060240_closeout_0755/status.stdout",
+    "returncode": 0,
+    "raw_stdout_sha256": "8a99bacc2525dd38df969ef2c1e229621c1807e2263b2ba261cd11a7d6e3d2ba",
+    "reported_whole_portfolio_depth_walk_net_fees_usd": 28.92,
+    "quote_limit": "indicative, not synchronized or freshness-verified; whole-portfolio estimate, not per-position executable guarantee",
+    "thin_book_rows": [
+      {
+        "label": "Clarity Act >58 No",
+        "shares": 29,
+        "mark": 0.85,
+        "net_avg_fill": 0.728,
+        "gap_pp": 12.2
+      },
+      {
+        "label": "OpenRouter No",
+        "shares": 5,
+        "mark": 0.7,
+        "net_avg_fill": 0.641,
+        "gap_pp": 5.9
+      }
+    ],
+    "remaining_held_rows_from_same_status": [
+      {
+        "label": "Clarity Act >50 Yes",
+        "shares": 29,
+        "mark": 0.06
+      },
+      {
+        "label": "Kimi current Yes",
+        "shares": 10,
+        "mark": 0.125
+      }
+    ],
+    "fresh_0755_position_prices": "Current snapshot marks subsequently read: Clarity >58 No 0.895; Clarity >50 Yes 0.060; Kimi Yes 0.135; OpenRouter No 0.700. No per-position executable quote is claimed for the two rows without thin-book warnings."
+  },
+  "receipts": {
+    "orders_p000": {
+      "status": 200,
+      "raw_bytes": 1658,
+      "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1"
+    },
+    "trades_p000": {
+      "status": 200,
+      "raw_bytes": 175757,
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9"
+    },
+    "detail_0": {
+      "status": 200,
+      "raw_bytes": 534,
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300"
+    },
+    "detail_1": {
+      "status": 200,
+      "raw_bytes": 534,
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc"
+    },
+    "detail_2": {
+      "status": 200,
+      "raw_bytes": 535,
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066"
+    },
+    "positions_snapshot": {
+      "status": 200,
+      "raw_bytes": 9568,
+      "raw_sha256": "711d467840af31dd92fc0b2ad22eb10d90c1adff69a6766114e14ac6c6b3e220"
+    }
+  },
+  "errors": [],
+  "private_data_hygiene": "No wallet owner, CLOB API key, or credential values included.",
+  "collector_correction": "Root read07:52 actual status.stdout:Clarity>58No mark.850/avgfill.728/gap12.2pp; .958 belonged to Trump dust. Corrected before publication; source stdout/hash and money records unchanged."
+}

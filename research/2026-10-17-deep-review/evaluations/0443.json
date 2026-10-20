@@ -1,0 +1,43 @@
+{
+  "review_index": 443,
+  "market_id": "5720679",
+  "condition_id": "0xdaf0dab5fe0237adb57e8c4a6597ed6d80c6251211eb844405c10d04307c7341",
+  "criteria_sha256": "f4fc57bc32ada626a7179edeb0fd6d26d55a18716cc1808748f1123e6718f1f4",
+  "token_ids": [
+    "96001351219875844498838140150827708164056550813666943139433390574708222620584",
+    "79241996538827563940760044545315737338123832320700790828916033906975465186788"
+  ],
+  "status": "excluded_factual",
+  "literal_analysis": "FullNOAA/LFPB/wholeC/nextdate/Oct18fallback/lowestbracket/7dayerrorcorrectionread; exactcontractterminal.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720679",
+      "observed_utc": "2026-10-20T07:12:50.187318+00:00",
+      "finding": "Root actualexactGamma closed/nonaccepting/UMAresolved; raw/gzip/identity verified."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=lfpb",
+      "observed_utc": "2026-10-20T05:16:27.404945Z",
+      "finding": "Genericviewer shell, no actualOct17measurementadopted; retrievalgap not weatherabsence."
+    }
+  ],
+  "forecast": {
+    "not_estimated": "Closed historical contract; not a newfutureprobability or completedvaluation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "accessible_entry_route": "No currentvettedCLOBnewentry; exactclosed/nonaccepting.",
+    "terminal_prices_not_quotes": [
+      "1",
+      "0"
+    ],
+    "fees_depth_sizing": "Notapplicableto newclosedcontractentry; noalternativevettedroute established."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting; no model-basedscreen.",
+  "reopen_condition": "Verifiedexactcontractreopening/lawfulvettedroute,thenfreshfullreview.",
+  "evaluated_utc": "2026-10-20T07:14:28.206401+00:00",
+  "question": "Will the highest temperature in Paris be 16°C on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 443,
+  "report_sha256": "9b3ec4a9ea212e62d5d7a443b1ddda33d0e37e67d5ca6c99d4e4b00686abf5ec"
+}

@@ -1,0 +1,43 @@
+{
+  "review_index": 449,
+  "market_id": "5724276",
+  "condition_id": "0x577f491723004d9084548596797365fadb0abc22dd01e64211f71f606490b5e0",
+  "criteria_sha256": "f333f5591df0290676dfd4ded681a91986a77dff81e5cb30249dd65ed7c36ef7",
+  "token_ids": [
+    "14325167472052362974463118899629378957676174424915408890814596211941395689518",
+    "90710440124313975365595082992648194215133285368321049454069151352354280542827"
+  ],
+  "status": "excluded_factual",
+  "literal_analysis": "FullKMIA/hourly/wholeF/fallback/nextdate/revision/7dayerrorrule read; exactcontractclosed.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5724276",
+      "observed_utc": "2026-10-20T07:12:50.354209+00:00",
+      "finding": "ActualexactGamma closed/nonaccepting/UMAresolved; raw/gzip/identity verified."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=kmia",
+      "observed_utc": "2026-10-20T06:42:23.120410Z",
+      "finding": "Genericviewer page, no adoptedhourlytargetmeasurement; subhourlynotasubstitute."
+    }
+  ],
+  "forecast": {
+    "not_estimated": "Closedhistoricalcontract; no newfutureprobability or completedvaluation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "accessible_entry_route": "No currentvettedCLOBnewentry; no verifiedalternative.",
+    "terminal_prices_not_quotes": [
+      "0",
+      "1"
+    ],
+    "fees_depth_sizing": "Not applicable to newclosedcontractentry."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting; notamodelscreen.",
+  "reopen_condition": "Verifiedexactreopening/lawfulvettedroute,thenfreshfullreview/gates.",
+  "evaluated_utc": "2026-10-20T07:31:27.121700+00:00",
+  "question": "Will the highest temperature in Miami be between 86-87°F on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 449,
+  "report_sha256": "dbb5b3c1499d8d37292dd24b6f2bb6e5e6ca5e8dab43bfcb2ad188a00b0e930a"
+}

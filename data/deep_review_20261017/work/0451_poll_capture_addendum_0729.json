@@ -1,0 +1,30 @@
+{
+  "schema": "case451.poll_capture_addendum.v1",
+  "review_index": 451,
+  "scope": "Facts-only acquisition check; no forecast, ledger, or canonical-record change.",
+  "target": {
+    "url": "https://washingtonpost.com/documents/c5cba6fd-7edb-4550-93c3-0580e8084bfb.pdf",
+    "identity": "Official Washington Post / GMU Schar School VA-05 topline and methods PDF; 7 pages per existing work/0451_facts_0714.json."
+  },
+  "existing_direct_attempts": "Three receipt-first HTTP attempts timed out; exact receipt paths and hashes are retained in work/0451_facts_0714.json.",
+  "alternate_attempts": [
+    {
+      "method": "web browser open of exact PDF URL",
+      "provider_result": "Internal Error: URL is not accessible via this tool.",
+      "provider_ref": "turn3804view0",
+      "origin_http_status": null,
+      "source_body_returned": false,
+      "provider_bytes_saved": false
+    },
+    {
+      "method": "web search for exact PDF URL and its filename plus poll figures",
+      "provider_refs": ["turn3805search0", "turn3805search1"],
+      "provider_result": "Search returned PollingSource/VoteSee summary snippets, not the official PDF or its extracted text. Not used as corroboration of the original PDF or methods.",
+      "origin_http_status": null,
+      "source_body_returned": false,
+      "provider_bytes_saved": false
+    }
+  ],
+  "capture_decision": "No actual PDF bytes, PDF extraction, or screenshot was supplied by either browser-provider attempt. No source body or source hash is claimed; do not label search snippets as PDF evidence. No further access attempt made, respecting the two-attempt bound.",
+  "prior_local_facts": "Poll figures/method facts remain exactly as recorded in work/0451_facts_0714.json and prior Schar/CSV captures; this addendum supplies no independent verification of them."
+}
