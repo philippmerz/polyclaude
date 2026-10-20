@@ -1,0 +1,41 @@
+{
+  "schema": "bounded_news_review_primary_closeout.v1",
+  "tick_id": "20261019T235849Z",
+  "completed_utc": "2026-10-20T00:51:30.583138+00:00",
+  "classification": "previously_completed_event_review_verified_no_further_financial_action",
+  "requested_alerts": [
+    {
+      "id": "0ebb9af61252aab524dc71534cbd45bd346f5dd4",
+      "raw_line_with_newline_sha256": "30d9def62362d7ec7bbdbe2b9ce966c27c95557f56f41c0fc3cfe3f9065f2b1f",
+      "root_current_row_match": true,
+      "disposition": "Prior substantive source review/cancel-first and zero-fill reconciliation complete; no new article-body/rank/death inference."
+    },
+    {
+      "id": "2a551dbfde59fa8d01f45d2b89cbb46ea16aa3ae",
+      "raw_line_with_newline_sha256": "1e6f935017d2483ef57684804da541a7a836f0963282e57878045cff7307cf8f",
+      "root_current_row_match": true,
+      "disposition": "Prior substantive source review/cancel-first and zero-fill reconciliation complete; no new article-body/rank/death inference."
+    }
+  ],
+  "exposure_proof": "tick235849_state.json and tick235849_gap.json retain00:05\u201307 observation dates; earlier affirmative23:45 terminalproof retained. No recancel/repost/prune.",
+  "quick_status": {
+    "scope": "One --quick only, notfull11step orcanonicalbankrollproducer. Rootverifiedraw+gzipreceipt hashes andfulloutput.",
+    "started_utc": "2026-10-20T00:48:23.930542Z",
+    "received_utc": "2026-10-20T00:48:27.020664Z",
+    "raw_sha256": "53cf65fa21b38fe16d1709b7193752b1721a4b4e5b54aff69be9afdb41e08aa3",
+    "rc": 0,
+    "finding": "Same six open market rows/quantities;0hurdleflags/no watchlisttriggers. Resolved/legacypositions not inferredabsentfromdisplay. Noaggregate/CSVrefresh."
+  },
+  "new_news_window": {
+    "after": "2026-10-20T00:33:00Z",
+    "through": "2026-10-20T00:47:38Z",
+    "ids": [
+      "807880e622486aff46c42906120bfbd2e0321318",
+      "d259d69b2de1c3ff16b5e767d4c36f42184dc082"
+    ],
+    "root_disposition": "Titles/matches concern unheld Kansas Senate research/showmention; no specific new held/pending payout or Clarity-vote claim. Bodies notnewlyverified; no vote/poll/holdingprobabilitychange inferredfromclassifier. No absenceclaimaftercutoff."
+  },
+  "collector_correction": "tick235849_closeout_0049.json checked prior MI IDs, not requestedPartonpair. Originalcollector retained; root directlyverified bothactualrequestedIDs against priorreceipt/currentlinehash. MI review remains separatelycomplete in goal0034_mi_primary_review.json.",
+  "schedule": "Triggeredreviewcomplete; nextfull11step02UTC, weeklyOct23/monthlyNov12notdue/methodologyconcluded. Broad account/discovery/redemption not duplicated in eventcloseout.",
+  "actions": "No money/prior/reservation/config/DEC/TG/CSV/goal/timer changes. In-flight410 finalvaluation saved/indexed; no newcase begun. Publishscopedfiles/end."
+}

@@ -1,0 +1,155 @@
+{
+  "schema": "deep_review.root_family_source_check.v1",
+  "index": 406,
+  "reviewed_utc": "2026-10-20T00:27:04.508405+00:00",
+  "facts": [
+    {
+      "edition": 2022,
+      "url": "https://trends.withgoogle.com/year-in-search/2022/",
+      "raw_sha256": "c542f7ec16aacc9fbcac948deb45cda1df81f76d3cfc4de24b7cb9a1011a416c",
+      "top10": [
+        {
+          "rank": 1,
+          "name": "Novak Djokovic"
+        },
+        {
+          "rank": 2,
+          "name": "Rafael Nadal"
+        },
+        {
+          "rank": 3,
+          "name": "Serena Williams"
+        },
+        {
+          "rank": 4,
+          "name": "Manti Te'o"
+        },
+        {
+          "rank": 5,
+          "name": "Shaun White"
+        },
+        {
+          "rank": 6,
+          "name": "\u7fbd\u751f\u7d50\u5f26 (Yuzuru Hanyu)"
+        },
+        {
+          "rank": 7,
+          "name": "Brittney Griner"
+        },
+        {
+          "rank": 8,
+          "name": "Gerard Piqu\u00e9"
+        },
+        {
+          "rank": 9,
+          "name": "Cain Velasquez"
+        },
+        {
+          "rank": 10,
+          "name": "Carlos Alcaraz"
+        }
+      ]
+    },
+    {
+      "edition": 2024,
+      "url": "https://trends.withgoogle.com/year-in-search/2024/",
+      "raw_sha256": "873ecd73db9be2828e55a13a3c03284ad3303f610f2005280881ceb1334aade8",
+      "top10": [
+        {
+          "rank": 1,
+          "name": "Imane Khelif"
+        },
+        {
+          "rank": 2,
+          "name": "Mike Tyson"
+        },
+        {
+          "rank": 3,
+          "name": "Lamine Yamal"
+        },
+        {
+          "rank": 4,
+          "name": "Simone Biles"
+        },
+        {
+          "rank": 5,
+          "name": "Jake Paul"
+        },
+        {
+          "rank": 6,
+          "name": "Nico Williams"
+        },
+        {
+          "rank": 7,
+          "name": "Hardik Pandya"
+        },
+        {
+          "rank": 8,
+          "name": "Scottie Scheffler"
+        },
+        {
+          "rank": 9,
+          "name": "Shashank Singh"
+        },
+        {
+          "rank": 10,
+          "name": "Rodri"
+        }
+      ]
+    },
+    {
+      "edition": 2025,
+      "url": "https://trends.withgoogle.com/year-in-search/2025/",
+      "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+      "top10": [
+        {
+          "rank": 1,
+          "name": "Terence Crawford"
+        },
+        {
+          "rank": 2,
+          "name": "Rory McIlroy"
+        },
+        {
+          "rank": 3,
+          "name": "Shedeur Sanders"
+        },
+        {
+          "rank": 4,
+          "name": "Shai Gilgeous-Alexander"
+        },
+        {
+          "rank": 5,
+          "name": "Jalen Hurts"
+        },
+        {
+          "rank": 6,
+          "name": "Manny Pacquiao"
+        },
+        {
+          "rank": 7,
+          "name": "Alexander Ovechkin"
+        },
+        {
+          "rank": 8,
+          "name": "Cooper Flagg"
+        },
+        {
+          "rank": 9,
+          "name": "Stefon Diggs"
+        },
+        {
+          "rank": 10,
+          "name": "Cam Skattebo"
+        }
+      ]
+    }
+  ],
+  "method": "Raw hash verification and exactGLOBAL/Athletes card parent then allten rank-aria rows, not unrestricted name search/USPeople card.",
+  "limits": [
+    "Historical editions, not2026searchvolumes or candidatecalibration.",
+    "2025currentmethodology does not prove earlier or2026cutoffs/implementation equal.",
+    "ShaunWhite2022rank5/Hanyu6 and2024Olympicnames illustrate differentcutoff outcomes, not an Olympicgold successrate."
+  ],
+  "no_forecast": true
+}

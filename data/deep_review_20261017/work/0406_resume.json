@@ -1,19 +1,33 @@
 {
+  "baseline_addendum_captured_utc": "2026-10-20T00:26:19Z",
+  "baseline_addendum_sha256": "a66293b0e48587ce8a009aad6406f71600f03180e470923ed718265b4e99214f",
   "captured_as_of": "2026-10-20T00:12:49Z",
   "identity": {
     "condition_id": "0xa3d91e6932c60ce2d59c0f269ccc03430faa7e3080634be508e0d6a3dcccf114",
     "criteria_sha256": "cd9fadc01eadbafb12d7f1e007a18b940f7b7f8f0a2a6717fa0a71d0d1722b28",
     "market_id": "4425461",
-    "question": "Will Alysa Liu rank in Google’s Top 5 Most Searched Athletes of 2026?"
+    "question": "Will Alysa Liu rank in Google\u2019s Top 5 Most Searched Athletes of 2026?"
   },
   "no_forecast": true,
-  "phase": "FACTS_READY_NOT_VALUED",
+  "phase": "VALUED_NO_ENTRY",
   "review_index": 406,
   "schema": "deep_review.fact_resume.v1",
   "source_capture_root": "logs/deep_review_20261017/0700_case0406_facts_0011",
+  "source_capture_roots": [
+    "logs/deep_review_20261017/0700case0406_baseline_0026"
+  ],
   "source_paths": [
-    "work/0406_facts_0011.json"
+    "work/0406_baseline_0026.json",
+    "work/0406_facts_0011.json",
+    "work/0406_worlds_root_0029.json",
+    "work/0406_family_rootcheck_0029.json",
+    "work/0406_current_source_0031.json",
+    "work/0406_economics_final_0034.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
-  "unit_sha256": "5185bc84fa6f4409d8e20816664409f9a18e443a86ff0cea9096fdcfa3e1fe81"
+  "unit_sha256": "5185bc84fa6f4409d8e20816664409f9a18e443a86ff0cea9096fdcfa3e1fe81",
+  "updated_utc": "2026-10-20T00:31:53.051178+00:00",
+  "next_step": "406basevaluationsaved; append-onlyrevisionbindsexactWorldsreceiptclock; p45.8/reserve20/noentryunchanged. Next408fullrule/sourceAPIgap, notrepeat406.",
+  "effective_report": "research/2026-10-17-deep-review/revisions/0406_20261020T003125677399Z.md",
+  "effective_report_sha256": "e5d7b24d37b4f29105d70f29978924c4c581e15621356361d09cb3a29b805e8e"
 }

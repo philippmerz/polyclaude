@@ -1,0 +1,141 @@
+{
+  "review_index": 406,
+  "market_id": "4425461",
+  "condition_id": "0xa3d91e6932c60ce2d59c0f269ccc03430faa7e3080634be508e0d6a3dcccf114",
+  "criteria_sha256": "cd9fadc01eadbafb12d7f1e007a18b940f7b7f8f0a2a6717fa0a71d0d1722b28",
+  "status": "valued",
+  "literal_analysis": "AlysaLiu inofficial2026GoogleGlobalAthletes top5; notUS/absolutesearchvolume. No specifiedlistthroughMar31 2027 23:59ET→NO. Navigationguideonly; specifiedlistgoverns. NormalDecfitsJan, Marfallbackcapitalcanextendpastprojectevaluation.",
+  "evidence": [
+    {
+      "url": "https://www.isuresults.com/results/season2526/owg2026/CAT002RS.htm",
+      "observed_utc": "2026-10-20T00:12:18.383165Z",
+      "finding": "FullOlympicwomenSSresultfirst226.79; Feb19sourceupdate."
+    },
+    {
+      "url": "https://results.isu.org/results/season2425/wc2025/CAT002RS.htm",
+      "observed_utc": "2026-10-20T00:28:22.653862Z",
+      "finding": "FullWorlds2025womenresultfirst222.97/Mar28; notableprioryearbaseline, notGooglemeasure. Exactcaptureend frompreservedreceipt, notroundedsecond."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-20T00:12:03.677406Z",
+      "finding": "2025trafficincrease vspriorperiod/internaltools, notabsolutesearchvolume;2026method/cutoffunknown."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "observed_utc": "2026-10-20T00:28:56.007505Z",
+      "finding": "OneexactannualURL404, notglobalabsence orrankproof; noTrendsAPIretry."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.45799999999999996,
+    "low": 0.1,
+    "high": 0.85,
+    "method": "UnfittedpartialjointGoogleAthletestop5 scenarioextension with explicitremainingranks/missinglistbranch.",
+    "reasoning": "22/38/18/20familymasses×Liu35/45/50/60 conditional=.458;missing2%NO. Olympic2026title/2025Worldsbaseline/historicalcutoffs considered; no2026scores/currentrank.20ppselectedreserve; noholdingpriorchange.",
+    "model_path": "models/0406_athletes_primary_0032.json",
+    "actual_entry_reserve_pp": 20.0
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0406_quote_0032.json",
+    "quote_file_sha256": "7a0d992ccb25546329b246629a7fc072de0293a2aa6786e97e7ea3f9d466c3c1",
+    "quote_capture_utc": "2026-10-20T00:29:33.600189+00:00",
+    "gamma_received_utc": "2026-10-20T00:29:33.340426+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 45.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "maker_comparison": {
+      "ordinary_YES_prices": [
+        0.63,
+        0.64
+      ],
+      "ordinary_NO_prices": [
+        0.35,
+        0.36
+      ],
+      "quantity": 5,
+      "NO_at35c_cost": 1.75,
+      "NO_selected_payout": 1.7100000000000002,
+      "NO_selected_profit": -0.039999999999999813,
+      "note": "Makerfee0 beforecarry/selection; .35alreadyabove.342selectedfair. Anyfarbelowbookquote needs newfill-conditionedunderwriting."
+    },
+    "joint_portfolio_comparison": {
+      "held_MessiYES_and_proposed_LiuNO_both_win": 0.352,
+      "both_lose": 0.21,
+      "scope": "SuppliedpartialjointGooglemodel, notempiricalbound; otherassetsfixed andunmodeledscores remain. No automatichedgecredit."
+    },
+    "horizon_sensitivities": {
+      "normal_december_planning_days": 45,
+      "March31_fallback_about_days": 163,
+      "capital_after_January_possible": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.45799999999999996,
+        "selected_stress_probability": 0.25799999999999995,
+        "best_bid": 0.63,
+        "best_ask": 0.65,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792456166746",
+        "book_received_utc": "2026-10-20T00:29:33.471364+00:00",
+        "book_age_seconds_at_receipt": 6.7253639698028564,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 3.30688,
+        "central_expected_profit_usd": -1.01688,
+        "selected_stress_profit_usd": -2.0168800000000005,
+        "break_even_before_carry": 0.661376,
+        "break_even_constant_carry": 0.6639521553804235,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.542,
+        "selected_stress_probability": 0.342,
+        "best_bid": 0.35,
+        "best_ask": 0.37,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792456166746",
+        "book_received_utc": "2026-10-20T00:29:33.471364+00:00",
+        "book_age_seconds_at_receipt": 6.7253639698028564,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.90828,
+        "central_expected_profit_usd": 0.80172,
+        "selected_stress_profit_usd": -0.1982799999999998,
+        "break_even_before_carry": 0.381656,
+        "break_even_constant_carry": 0.38314260543755885,
+        "current_execution_authorization": false
+      }
+    },
+    "full_walks_unit": "data/deep_review_20261017/work/0406_economics_final_0034.json"
+  },
+  "verdict": "NO_ENTRY:5YEScost3.30688/selected-2.01688;5NOcost1.90828/central+.80172butselected-.19828. Ordinary35cNOmakerloses.04beforecarry/selection. SharedMessiGoogle risk not ahedge; noorder/prior/watch.",
+  "reopen_condition": "Verified2026Globalathletemeasurement/officialmethod/list ornewcandidate/competitorevidence; independentlyfreshquotes/caps/portfolio/fill/carry gates. Noautomaticbid ornewtimer.",
+  "evaluated_utc": "2026-10-20T00:31:25.678431+00:00",
+  "question": "Will Alysa Liu rank in Google’s Top 5 Most Searched Athletes of 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 406,
+  "revision_reason": "Bind Worlds observation clock to preserved capture receipt; forecast and economics unchanged",
+  "prior_report_sha256": "7c31a2c77b1700e952b8f682b61fee667f381f74b47aed89ee5003a7807709e2",
+  "report_sha256": "e5d7b24d37b4f29105d70f29978924c4c581e15621356361d09cb3a29b805e8e",
+  "report_path": "revisions/0406_20261020T003125677399Z.md",
+  "revision_path": "revisions/0406_20261020T003125677399Z.json"
+}

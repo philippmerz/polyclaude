@@ -1,0 +1,32 @@
+{
+  "additional_source_capture_roots": [
+    "logs/deep_review_20261017/0700case0410_guidance_0037",
+    "logs/deep_review_20261017/0700case0410_demand_0045"
+  ],
+  "captured_as_of": "2026-10-20T00:43:33.284971Z",
+  "identity": {
+    "condition_id": "0xa287a0c300ca61611fd21e36ff8806090de9e2f0e6bcd2c61b32c73742e183a1",
+    "criteria_sha256": "3713ee62834fa14145f4897083a899fff5b52d3cd198d0ec205d0b1673262289",
+    "market_id": "5730893",
+    "question": "Will CrowdStrike Q3 net new ARR be above $440M?"
+  },
+  "no_forecast": false,
+  "phase": "VALUED_NO_ENTRY",
+  "review_index": 410,
+  "schema": "deep_review.fact_resume.v1",
+  "source_capture_root": "logs/deep_review_20261017/case0410_facts_0033",
+  "source_paths": [
+    "work/0410_facts_0033.json",
+    "work/0410_guidance_0037.json",
+    "work/0410_demand_0045.json",
+    "work/0410_pdf_facts_0040.json",
+    "work/0410_pdf_root_0044.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "unit_sha256": "600cc249580c9680423516772f2efdf7cff7d47b6724fd0e66878649c09b39d4",
+  "updated_utc": "2026-10-20T00:50:09.445404+00:00",
+  "next_step": "Completed/saved/indexed. No execution/prior/watch. Future revalidation only on material source or economics change; next pending412 is factual-only/unstarted.",
+  "report_path": "evaluations/0410.md",
+  "report_sha256": "da6653e67953b73a9958a649fbfdb341efa80c1ced8b6cb15538866dc4c39ddd",
+  "model_path": "models/0410_arr_primary_0047.json"
+}

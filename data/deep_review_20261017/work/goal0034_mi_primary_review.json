@@ -1,0 +1,48 @@
+{
+  "schema": "finite_goal_held_news_review.v1",
+  "completed_utc": "2026-10-20T00:40:18.452454+00:00",
+  "news_window": {
+    "after": "2026-10-20T00:05:14.600757Z",
+    "through": "2026-10-20T00:33:00Z",
+    "additional_research_only_ids": [
+      "ee17c5f3082a40b80ba3a24318400083d47dfbe7",
+      "26e31c1e35cf98fa47855a627e0f0657bf344587"
+    ]
+  },
+  "alerts": [
+    {
+      "id": "947fffd88974a00707d3ef922908aeefdf766ec7",
+      "utc": "2026-10-20T00:09:30Z",
+      "title": "Abdul El-Sayed confronts accusations of having links to militant groups - Modern Ghana",
+      "raw_line_newline_sha256": "3bc7328c3ee94333f2df096a26d3aafe2afda95259fce2872faa8d496dd88252",
+      "claimed_impact": "Allegations against Abdul El-Sayed may weaken Democratic prospects in Michigan\u2019s 2026 Senate race."
+    },
+    {
+      "id": "d248f59082c3c21d789833e15150fbe53ad5f4bc",
+      "utc": "2026-10-20T00:09:34Z",
+      "title": "Abdul El-Sayed Disavows Muslim Brotherhood After Town Hall Heckler In Caro, Michigan: 15 outlets compared - NewsCord",
+      "raw_line_newline_sha256": "07a94dc744784c4288e518bbea38b507ceb4445432613ed3969fd4215eb87b21",
+      "claimed_impact": "The controversy pressures Democratic win odds, modestly confirming the held No position."
+    }
+  ],
+  "source_unit": "work/goal0034_mi_facts.json",
+  "root_verification": "Allfourfreshcapture raw+gziphashes/bodyrepresentations verified; NewsCordautomatedaggregation andCBSarticleevent/pollparagraph read. PriorCBSbodyde9cc... raw+gzipverified; sameOct1poll/context, notnewvoteobservation. Twoexactalertline+newlinehashes match.",
+  "prior_CBS_poll_excerpt_for_binding": "El-Sayed held a narrow lead over Rogers, 45.6% to 41.4%, among likely voters in a Mitchell Research & Communications poll conducted Oct. 1 , with a 3.8% margin of error. The two met for their first debate on Oct. 8 in Grand Rapids. Election Day is Nov. 3, about two weeks away. More from CBS News Trump returning to Georgia for Macon rally on Saturday AOC's $1 million donation to Abdul El-",
+  "identity": {
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "holding": "MI5NO inindexed00:05positionstate; no newaccountobservation"
+  },
+  "assessment": [
+    {
+      "alert_id": "947fffd88974a00707d3ef922908aeefdf766ec7",
+      "decision": "No prior/actionchange fromunverifiedallegationtitle; originalModernGhanabody/date unknown behindGoogleconsent. Do notassertsameeventoreffectiveRbenefit."
+    },
+    {
+      "alert_id": "d248f59082c3c21d789833e15150fbe53ad5f4bc",
+      "decision": "AutomatedrehashofOct17Caroexchange; linkedCBSOct19articleandOct1Mitchelllikely-voterpollalreadyreviewed20:10Oct19. Disavowalcanreassurevoters; netoddsdirectionnotestablishedbycoveragevolume."
+    }
+  ],
+  "forecast_action": "RetainMI NO44/selected34/broad20/noadd; no newmeasurement or thesisbreak verified. Earlier22:37exit1.458 vsselectedhold1.70 remainsdatedplanningcomparison, notfreshbookproofofcurrentbestaction. Full1.55costloss remainspossible. No automaticKellyadd/hiddeninfosell.",
+  "scope_limit": "Noexhaustiveclaimsafterfixednewscutoff; no assertionallModernGhanafactsduplicate ornewpollabsentworldwide. Sourcegaps retained.",
+  "financial_ops": "No order/prior/newproducer/CSV/DEC/config/goal/timer/TG. Full02UTCdue, earliermaterialsource/fillstillrequiresreview."
+}

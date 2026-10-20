@@ -1,0 +1,19 @@
+{
+  "schema": "deep_review.root_source_addendum.v1",
+  "review_index": 406,
+  "url": "https://results.isu.org/results/season2425/wc2025/CAT002RS.htm",
+  "receipt": "logs/deep_review_20261017/case0406_worlds_root_0029/worlds_2025.receipt.json",
+  "body": "logs/deep_review_20261017/case0406_worlds_root_0029/worlds_2025.body.json.gz",
+  "response_status": 200,
+  "started_utc": "2026-10-20T00:28:22.299327Z",
+  "received_utc": "2026-10-20T00:28:22.653862Z",
+  "raw_sha256": "a898d753d234de7b8ce1da05587538996a3f70f77321ceff93fc28719a893610",
+  "gzip_sha256": "24edce9d4c3a70fda111d193e104760958a9cdcd5d2315a7c8039f2b1e06f940",
+  "body_read_by_primary": true,
+  "finding": "ISUWorlds2025 Women result:LIUAlysa1st222.97/SP1FS1, lastupdateMar28 2025; verified from full row only if printed excerpt below matches. Prior-year championship demonstrates notable2025 event, not measuredGooglebaseline.",
+  "limits": [
+    "First2025worldtitle vsfirstOlympic2026 differ; no candidate searchscore measured.",
+    "ISUcomebackarticle shell remains an indexed-excerpt gap; no fullbodymedical/personalclaim adopted."
+  ],
+  "no_forecast": true
+}

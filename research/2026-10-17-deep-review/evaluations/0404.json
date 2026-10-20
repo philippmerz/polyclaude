@@ -1,0 +1,129 @@
+{
+  "review_index": 404,
+  "market_id": "5130178",
+  "condition_id": "0x1925d6fd97db28b2597afc255c05e85e4225341466ba4279c2e0f14cc5a6300a",
+  "criteria_sha256": "ba4179c14d2f67e9da365f7281e2aaf9b3500a46bf389afea4c6a684a58413da",
+  "status": "valued",
+  "literal_analysis": "FirstpublishedSeptember2026BLSJOLTS SA totalnonfarm thousands; reported<=6799YES/exact6800NO; expectedNov3 15UTC, unavailablethroughnextDec1 15UTC→previousavailablemonth, subjectrevisions; metadataendnotcashguarantee.",
+  "evidence": [
+    {
+      "url": "https://www.bls.gov/news.release/archives/jolts_09292026.htm",
+      "observed_utc": "2026-10-19T23:23:45Z",
+      "finding": "Aug7079prelim/Jul7335+64revision; stock, preliminary/revision/noise caveats."
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/JTSJOL",
+      "observed_utc": "2026-10-20T00:11:31.432391Z",
+      "finding": "44current-vintage monthly observations; recent24changeSD324k; nofirst-printcalibration."
+    },
+    {
+      "url": "https://fred.stlouisfed.org/series/IHLIDXUS",
+      "observed_utc": "2026-10-20T00:21:15.955637Z",
+      "finding": "Indeed-origin SApostingproxySepmonthend+1.78468%, latestOct9/pageOct15; notJOLTSstock. Root70rows/rawhashesverified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.1924825966142636,
+    "low": 0.08,
+    "high": 0.6,
+    "method": "Unfitted published-estimate Gaussian regime mixture; integerthreshold/fallback explicit, revised after contrary demand source and serialdependencediagnostic.",
+    "reasoning": "75/10/15regimes withmeans+25/-250/+250k andSD325/350/450k;98%release/2%fallbackwith5%YES. Originalpriceblind26.509%retained; final19.2483%afterquotes/newIndeeddata. Uncalibrated8–60range; unchanged15ppselectedmodelreserve.",
+    "actual_entry_reserve_pp": 15.0,
+    "model_path": "models/0404_jolts_final_0025.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0404_quote_0021.json",
+    "quote_file_sha256": "217e79af2b8f71ae16c6621c8a308bff12315f8935cee95fa24718bf2820a2d1",
+    "quote_capture_utc": "2026-10-20T00:19:54.421928+00:00",
+    "gamma_received_utc": "2026-10-20T00:19:54.183170+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 14.6111,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "maker_fill_selection_sensitivity": {
+      "selected_physical_yes": 0.042482596614263596,
+      "conditional_p_yes_by_NOstate_fill_odds": {
+        "1": 0.042482596614263596,
+        "2": 0.021702282973722422,
+        "5": 0.00879544189076435,
+        "10": 0.004417146322282494
+      },
+      "lowest_live_tick": 0.01,
+      "lowest_ticket_example": {
+        "price": 0.01,
+        "shares": 100,
+        "cash": 1,
+        "selected5x_expected_profit": -0.12045581092356494,
+        "operational_buffer": 0.05
+      },
+      "ordinary_passive_prices": [
+        0.08,
+        0.09
+      ],
+      "limitation": "No measuredfilllikelihood bound/automaticforecast or executionauthority. Belowbookbids not certifiedopportunities."
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.1924825966142636,
+        "selected_stress_probability": 0.042482596614263596,
+        "best_bid": 0.08,
+        "best_ask": 0.1,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792455530002",
+        "book_received_utc": "2026-10-20T00:19:54.310724+00:00",
+        "book_age_seconds_at_receipt": 64.30872392654419,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.04501,
+        "central_expected_profit_usd": 0.8798159661426359,
+        "selected_stress_profit_usd": -0.6201840338573641,
+        "break_even_before_carry": 0.104501,
+        "break_even_constant_carry": 0.10463299094661278,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8075174033857364,
+        "selected_stress_probability": 0.6575174033857364,
+        "best_bid": 0.9,
+        "best_ask": 0.92,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792455530002",
+        "book_received_utc": "2026-10-20T00:19:54.310724+00:00",
+        "book_age_seconds_at_receipt": 64.30872392654419,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 9.2368,
+        "central_expected_profit_usd": -1.161625966142637,
+        "selected_stress_profit_usd": -2.661625966142637,
+        "break_even_before_carry": 0.9236800000000001,
+        "break_even_constant_carry": 0.9248466624966968,
+        "current_execution_authorization": false
+      }
+    },
+    "full_walks_unit": "data/deep_review_20261017/work/0404_economics_final_0025.json"
+  },
+  "verdict": "NO_ENTRY at currentasks/ordinarymakers:10YEScost1.04501/selected-.62018;NOalsofailscentral/stress. Lowest1cmaker/1USD failsfivefoldadverseselectionstress; factorisjudgmentnotmeasuredbound. Cash/Aave/existingcommitmentsbetter; noorder/prior/watch.",
+  "reopen_condition": "Newverifiedresolving-input/first-vintagenowcast changingp orneweligiblequoteclearinguncertainty/fillselection/allfreshgates. ExactNov3/Dec1calendar/versioncheck; noautopost/timer.",
+  "evaluated_utc": "2026-10-20T00:25:02.119824+00:00",
+  "question": "Will JOLTS Job Openings be below 6.8M in September?",
+  "valuation_author": "primary_operator",
+  "original_index": 404,
+  "report_sha256": "5ed573f3722ef84a044ba672880a41fca8afca645f1d25b33711a1d697f9e451"
+}

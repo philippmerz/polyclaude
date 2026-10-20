@@ -1,0 +1,14 @@
+{
+  "schema": "deep_review.current_source_probe.v1",
+  "review_index": 406,
+  "url": "https://trends.withgoogle.com/year-in-search/2026/",
+  "status": 404,
+  "title": " Page not found ",
+  "receipt": "logs/deep_review_20261017/case0406_google2026_root_0031/exact_2026.receipt.json",
+  "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+  "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+  "started_utc": "2026-10-20T00:28:55.621833Z",
+  "received_utc": "2026-10-20T00:28:56.007505Z",
+  "limitation": "One exact2026annualURL probe;404/shell/redirect is bounded route evidence, not proof no2026list anywhere. NoTrendscomparison/API retry.",
+  "no_forecast": true
+}

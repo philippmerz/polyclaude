@@ -1,0 +1,144 @@
+{
+  "review_index": 410,
+  "market_id": "5730893",
+  "condition_id": "0xa287a0c300ca61611fd21e36ff8806090de9e2f0e6bcd2c61b32c73742e183a1",
+  "criteria_sha256": "3713ee62834fa14145f4897083a899fff5b52d3cd198d0ec205d0b1673262289",
+  "status": "valued",
+  "literal_analysis": "FirstofficialCrowdStrikeQ3FY27netnewARR>440M, notcalendarQ3/endingARR/annualgrowth. QuarterendsOct31 2026; missingafterauthorizedmaterials/transcriptfallback ornoquartermaterialsbyJan31 2027 23:59ET→NO. Mostpreciseactualmetric/rangemidpoint; laterrevisionsignored.",
+  "evidence": [
+    {
+      "url": "https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2027-financial",
+      "observed_utc": "2026-10-20T00:31:42.865380Z",
+      "finding": "Q2netnew332.8M/Q3endingARRguide6184.4–6188.4M; annual34%notquarterlyguide."
+    },
+    {
+      "url": "https://ir.crowdstrike.com/static-files/ca6983fc-8732-451a-ba26-f32a0b019a34",
+      "observed_utc": "2026-10-20T00:42:08.193444+00:00",
+      "finding": "SDKserializedPDFextract saveclock; p8endingARR5841.421M andhistory; derivedchangeproxy notspecifiedactualmetric."
+    },
+    {
+      "url": "https://ir.crowdstrike.com/static-files/7d32e91f-6184-4ade-8f02-f685e91b420f",
+      "observed_utc": "2026-10-20T00:41:31.652262+00:00",
+      "finding": "SDKserializedPDFextract saveclock; p20XMCyberassetsnoARR/revenue; p19endingguide."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.1822338002180578,
+    "low": 0.02,
+    "high": 0.6,
+    "method": "Unfittedthree-regimeGaussianmixtureforreportednetnewARR plusmissingdisclosurebranch.",
+    "reasoning": "Guidestockdelta344.979Manchorsordinaryregime;30%combinedstrong/exceptionalmassallowslarge-deal/AIbeat. Exactthreshold/mostprecisereporting/transcriptfallback priced. Subjective/unmeasuredtail;15ppselectedreserve, nottail-exception.",
+    "model_path": "models/0410_arr_primary_0047.json",
+    "actual_entry_reserve_pp": 15.0
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0410_quote_0047.json",
+    "quote_file_sha256": "4a117cceb39b000b1528d79ae5955a5600dfc75826193aa9a4196682d77b2078",
+    "quote_capture_utc": "2026-10-20T00:45:14.180614+00:00",
+    "gamma_received_utc": "2026-10-20T00:45:13.964347+00:00",
+    "hypothetical_gross_shares": 7.0,
+    "horizon_days": 44.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.1822338002180578,
+        "selected_stress_probability": 0.0322338002180578,
+        "best_bid": 0.08,
+        "best_ask": 0.16,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792457099809",
+        "book_received_utc": "2026-10-20T00:45:14.095265+00:00",
+        "book_age_seconds_at_receipt": 14.286264896392822,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.15764,
+        "central_expected_profit_usd": 0.11799660152640468,
+        "selected_stress_profit_usd": -0.9320033984735954,
+        "break_even_before_carry": 0.16537714285714286,
+        "break_even_constant_carry": 0.16600696873179235,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8177661997819422,
+        "selected_stress_probability": 0.6677661997819422,
+        "best_bid": 0.84,
+        "best_ask": 0.92,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792457099809",
+        "book_received_utc": "2026-10-20T00:45:14.095265+00:00",
+        "book_age_seconds_at_receipt": 14.286264896392822,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 6.46061,
+        "central_expected_profit_usd": -0.7362466015264042,
+        "selected_stress_profit_usd": -1.786246601526405,
+        "break_even_before_carry": 0.9229442857142857,
+        "break_even_constant_carry": 0.9264592466209746,
+        "current_execution_authorization": false
+      }
+    },
+    "maker_comparison": {
+      "ordinary_YES_prices_cents": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "ordinary_NO_prices_cents": [
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "ordinary_verdict": "All above selectedfair; YES8c>3.22338c, NO84c>66.77662c beforecarry/selection.",
+      "hypothetical_far_bid": {
+        "price": 0.03,
+        "shares": 34,
+        "gross": 1.02,
+        "selected_unconditional_payout": 1.0959492074139652,
+        "selected_unconditional_profit": 0.07594920741396516,
+        "modest_adverse_fill_likelihood_ratio_NO_over_YES_assumption": 1.2,
+        "selected_fill_conditioned_p": 0.027006587673655515,
+        "fill_conditioned_profit_before_carry_operations": -0.10177601909571254,
+        "not_measured_fill_distribution": true,
+        "reason": "Farbelowbook cannotinheritunconditional probability; even illustrative20%relativeNO-filloverweight kills smallunconditionalmargin. No automatedrestingbid."
+      }
+    },
+    "horizon_sensitivities": {
+      "normal_planning_days": 44,
+      "Jan31_deadline_rough_days": 104,
+      "date_status": "Dec2metadata/planning notverifiedactualannouncement; fallbackcanlockcapitalpastJanuaryevaluation."
+    },
+    "five_share_note": "Earlier5shareYESgross.80/net.82688below1USDroutefloor;7sharesgross1.12/net1.15764cashfeasible at saveddepth. Venue5shareminimum is not5USD.",
+    "full_walks_unit": "data/deep_review_20261017/work/0410_economics_final_0054.json"
+  },
+  "verdict": "NO_ENTRY:7YEScentral+.118butselected-.932;7NOcentral-.736/selected-1.786. Ordinarymakersfail;3cfarbidmarginfailsmodestadversefillillustration. Noorder/prior/watch.",
+  "reopen_condition": "Verifiedtarget-specificguidance/actualorlarge-dealconversions; freshboth-sideeconomics/conditionalfill/carry/caps/portfolioandvettedexecution. Nonewtimer.",
+  "report_markdown": "# 410 · CrowdStrike Q3 FY27 net-new ARR >440M · 18.22% YES; no entry\n\nMarket5730893; CID `0xa287a0c300ca61611fd21e36ff8806090de9e2f0e6bcd2c61b32c73742e183a1`; criteria `3713ee62834fa14145f4897083a899fff5b52d3cd198d0ec205d0b1673262289`.\n\n- **Literal target:** first official net-new ARR for fiscal Q3 FY2027, ending Oct31 2026, strictly >440M. Exactly440 is NO; use the most numerically precise actual, or range midpoint; later revisions ignored. Ending ARR, annual growth, RPO, revenue and EPS cannot substitute. Official press release/presentation/filings govern, with webcast/recording/transcript fallback. The omission→NO clause must be read with that fallback; omission from one press release alone is insufficient. No quarterly materials by Jan31 2027 23:59ET→NO. Dec2 metadata is not a verified earnings date; normal44-day planning and104-day deadline are assumptions, and capital can extend beyond January evaluation.\n- **Primary evidence:** [Q2FY27 release](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-second-quarter-fiscal-year-2027-financial), Aug26: reported Q2 net-new ARR332.8M versus rounded headline333M; Q3 ending-ARR guide6184.4–6188.4M. Annual net-new growth34% is not Q3 guidance. [Prior Q3FY26](https://ir.crowdstrike.com/news-releases/news-release-details/crowdstrike-reports-third-quarter-fiscal-year-2026-financial/) reported265.3M. [Source unit](../../../data/deep_review_20261017/work/0410_facts_0033.json).\n- **Forecast bridge:** [supplement](https://ir.crowdstrike.com/static-files/ca6983fc-8732-451a-ba26-f32a0b019a34), p8 zero-based, gives precise July31 ending ARR5841.421M. Subtracting it from the ending guide implies342.979–346.979M, midpoint344.979, assuming comparable definitions/no other reconciliation. This stock-change proxy matches reported Q2/prior-Q3 net-new after rounding; it is not a settlement substitute. Threshold440 requires32.20% sequential or65.83% YoY growth. Applying the one prior Q3/Q2 ratio gives399.421M; one seasonal illustration, not a fitted forecast. [Root PDF/arithmetic proof](../../../data/deep_review_20261017/work/0410_pdf_root_0044.json).\n- **Competing upside:** conservative guidance, quarter-end large enterprise deals, FalconFlex and AI demand can produce a material beat. Q2 growth51% and RPO10.7B versus8.8B support demand, without a1:1 quarter-ARR conversion. [Presentation](https://ir.crowdstrike.com/static-files/7d32e91f-6184-4ade-8f02-f685e91b420f) p20 says XM Cyber assets bring no ARR/revenue; no automatic M&A boost. Sept29 OpenAI channel permits eligible existing commitments but quantifies no uptake/ARR; Oct6 Fal.Con registrations+60% measure event reach, not sales. [Two demand bodies](../../../data/deep_review_20261017/work/0410_demand_0045.json).\n- **Primary distribution written before own quotes:**70% ordinary N(345,45),20% strong N(430,65),10% exceptional N(540,100), values in USD millions. Weighted P(>440)=18.40745%;99% normal disclosure/1% missing-or-deadline NO gives **18.22338% YES /81.77662% NO**. Weights, scales and missing branch are subjective, not calibrated earnings errors or guidance-width probabilities. Broad YES2–60% is not a CI.15pp selected model allowance reflects the unmeasured tail/hidden pipeline: selected YES3.22338%, NO66.77662%; no measured-tail exception. [Priceblind model](../models/0410_arr_primary_0047.json).\n- **Both sides after costs:** [saved quotes](../../../data/deep_review_20261017/0410_quote_0047.json) Oct20 00:45:14: YES8/16c, NO84/92c; exact rules/tokens/Gamma fee parity,4% taker-only fee, minimum5 shares/tick.01, books14.29s old at receipt, geoblockfalse. Five YES gross.80 fails the1USD route floor. Seven YES gross1.12/net1.15764: central profit+.11800, selected−.93200. Seven NO net6.46061: central−.73625, selected−1.78625. Fees ceil5dp per side; quoted eligibility/freshness is dated evidence, never current execution authority. [Full walks](../../../data/deep_review_20261017/work/0410_economics_final_0054.json).\n- **Maker and alternatives:** ordinary YES8–15c and NO84–91c exceed selected fair before carry/selection. A hypothetical34YES at3c costs1.02 and has only+.07595 unconditional selected profit. Assuming NO-state fills are1.2× as likely as YES-state fills reduces selected p to2.70066%, profit−.10178 before operations/carry. This is illustrative, not a measured fill distribution or entry. Cash/current commitments and same-chain Aave avoid these selected losses; dated3.2035% variable APY implies~.381% over44days, not promised return/free funding. Existing on-chain/Polymarket exposure receives no independence or hedge credit. Full ticket can lose; no allocation, prior, watcher, reservation or Telegram.\n- **Coverage/reopen:** root read all10 distinct visible IR release titles and two potentially material demand bodies, quarterly/event pages and both PDFs. Direct PDF403s preserved; SDK PDF text succeeded. Worker listing duplicated one link; root deduplicated it. No exhaustive SEC/audio/all-announcement claim. Reopen for verified target-specific guidance/actual metric, material deal conversion, or fresh two-side prices surviving source, conditional-fill, carry, portfolio and vetted execution checks. No new timer or automatic far bid.\n"
+}

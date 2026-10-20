@@ -1,0 +1,25 @@
+{
+  "captured_as_of": "2026-10-20T00:19:07Z",
+  "identity": {
+    "condition_id": "0x95273f17dbd9cf6bb34fe0de5abdb0b0424a4d24e504a7c275ff99b48f10977d",
+    "criteria_sha256": "3b6567ba79635ef90be958bc516c37b74cb7de729ba43fdd1ea789f20e4c65d8",
+    "market_id": "5786298",
+    "question": "Will commitments to the 1W public sale exceed $60M?"
+  },
+  "no_forecast": true,
+  "phase": "BLOCKED_AFTER_IN_DEPTH_REVIEW_NOT_VALUED",
+  "review_index": 408,
+  "schema": "deep_review.fact_resume.v1",
+  "source_capture_root": "logs/deep_review_20261017/case0408_facts_0019",
+  "source_paths": [
+    "work/0408_facts_0019.json",
+    "work/0408_source_0028.json",
+    "work/0408_api_0034.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "unit_sha256": "98b827ad5a35878e776f293724d085e526132407a0ca7acde4bbbbf43a1167b3",
+  "updated_utc": "2026-10-20T00:36:14.257484+00:00",
+  "effective_report": "evaluations/0408.md",
+  "effective_report_sha256": "05c50cb5fddb0027a4aa9ee70e5843605bb6e1aeb173d7ce3b503823d485b960",
+  "next_step": "408saved/blocked: API403 leavesgrosscurrent/historicalmax/phase unverified. NamedXfallbacknotexcludedbyhostdifference; no p/quote/action. Continue410, noautomaticretry/globalblock."
+}

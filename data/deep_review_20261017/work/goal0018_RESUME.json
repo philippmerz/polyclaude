@@ -1,0 +1,39 @@
+{
+  "schema": "finite_goal_progress.v1",
+  "updated_utc": "2026-10-20T00:50:09.445404+00:00",
+  "previous_goal_turn_classification": "progress",
+  "evidence": "Boundedrequestednewscloseout/proofverification/publishedsourcehandoff1fc5012 changed authoritative state; no financial action.",
+  "current_turn_progress": "404 and406 valued;408 source-blocked after in-depth investigation;410 valued and indexed. No new entry; case-specific block does not block queue.",
+  "counts": {
+    "completed_valuations": 364,
+    "blocked_after_in_depth_review": 12,
+    "factual_exclusions": 364,
+    "pending": 2260,
+    "base_records": 740,
+    "revisions_written": 67,
+    "active_indices": []
+  },
+  "last_completed": {
+    "index": 410,
+    "status": "valued",
+    "report": "evaluations/0410.md",
+    "sha256": "da6653e67953b73a9958a649fbfdb341efa80c1ced8b6cb15538866dc4c39ddd",
+    "p_yes": 0.1822338002180578,
+    "decision": "NO_ENTRY; both selected sides/makers fail."
+  },
+  "next": [
+    412,
+    414
+  ],
+  "next_facts": {
+    "412": "work/0412_facts_0042.json"
+  },
+  "next_existing_safety": "2026-10-20T02:00:00Z",
+  "financial_state": "No newaggregate/CSV/order/prior/reservation/config/TG. Producer23:36/order00:05/zero-fillclosure00:07/ops23:57retain dates.",
+  "goal_state": "Finite queue remains resumable; this scheduled closeout adds no goal/timer/idle follow-up and ends after verification/publication.",
+  "safety_followup": {
+    "fixed_news_through": "2026-10-20T00:33:00Z",
+    "receipt": "work/goal0034_mi_primary_review.json",
+    "result": "TwoMIleadsreviewed;oneunknownpublisher/oneoldCaroaggregation+oldpoll;NO44selected34/noaddunchanged;nonewfinancialstate."
+  }
+}

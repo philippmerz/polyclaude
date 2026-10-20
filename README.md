@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**361 valued /11 blocked /364 factual /2,264 pending;736 base+66 revisions;404 active, facts only.** Cases402 and403 saved individually. Lee402:4.43%YES/20pp allowance/no entry. RBA403 revised to11.65%YES after a newer original transcript; unchanged15pp allowance leaves selectedYES0, and both sides fail. The proposed1USD maker bid was never submitted. Fine-tick route repair passed221tests+169money checks and is published; no investment edge follows from the repair. 404 started00:11; no forecast, quotes or completed valuation. FRED history/BLS follow-up and next406 worker facts are saved separately. [Small handoff](data/deep_review_20261017/work/handoff0018_RESUME.json).
+**364 valued /12 blocked /364 factual /2,260 pending;740 base+67 revisions; no active case.**404JOLTS19.25%,406Liu45.8% and410CrowdStrike18.22% YES saved individually; no entry clears selected economics.408gross-sale source/API gap is blocked after substantive review, not valued/rejected or a global blocker.412facts are ready but unstarted. [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
 
 **Three LIVE zero-matched bids commit6.50, reverifiedOct20 00:05.** Parton400 canceled once23:39; after353seconds,23:45 terminal/trades/cumulative-buys/CTF proof confirmed zero fills and retired only its reservation. Original three orders unchanged; no purchase, cash credit or profit. Dedicated Parton alerts removed, shared Messi/Google coverage retained. [Exact orders](notes/resting_orders.md) · [Closure](research/2026-10-19-parton400-cancellation.md).
 

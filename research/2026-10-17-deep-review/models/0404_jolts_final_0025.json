@@ -1,0 +1,73 @@
+{
+  "schema": "deep_review.primary_distribution.v1",
+  "review_index": 404,
+  "created_utc": "2026-10-20T00:24:10.686317+00:00",
+  "market_prices_seen_before_this_model": true,
+  "original_priceblind_model": "models/0404_jolts_primary_0021.json",
+  "original_priceblind_sha256": "262f2d30dbbb036312c1257cdb0f290f01564e45a3b42adf6130c3e39f678620",
+  "original_p_yes": 0.2650945343484273,
+  "identity": {
+    "market_id": "5130178",
+    "condition_id": "0x1925d6fd97db28b2597afc255c05e85e4225341466ba4279c2e0f14cc5a6300a",
+    "criteria_sha256": "ba4179c14d2f67e9da365f7281e2aaf9b3500a46bf389afea4c6a684a58413da"
+  },
+  "target": "September2026 first published SA totalnonfarm JOLTS thousands <6800; reported6799 YES,6800 NO.",
+  "last_observed_august_thousands": 7079,
+  "integer_continuity_boundary": 6799.5,
+  "regimes": [
+    {
+      "regime": "Ordinary variation/partial rebound",
+      "weight": 0.75,
+      "mean_change_thousands": 25,
+      "sd_change_thousands": 325,
+      "p_yes_given_report": 0.17439906385754506
+    },
+    {
+      "regime": "Material cooling despite proxy",
+      "weight": 0.1,
+      "mean_change_thousands": -250,
+      "sd_change_thousands": 350,
+      "p_yes_given_report": 0.46641463516603454
+    },
+    {
+      "regime": "Larger rebound/noisy upside",
+      "weight": 0.15,
+      "mean_change_thousands": 250,
+      "sd_change_thousands": 450,
+      "p_yes_given_report": 0.11966428865779988
+    }
+  ],
+  "conditional_p_yes_if_september_available": 0.19539040470843225,
+  "fallback": {
+    "weight": 0.02,
+    "p_yes_if_fallback": 0.05,
+    "reason": "Judgment reserve for September data still unavailable at nextscheduledDec1 10ET release; previousavailableAugust7079 favorsNO but could be revised. Not an observed shutdown or measured operational frequency.",
+    "sensitivity": "0\u201310%fallback weight and conditional0\u201320% yields a modest shift, not an exact tail bound."
+  },
+  "p_yes": 0.1924825966142636,
+  "p_no": 0.8075174033857364,
+  "broad_judgment_range_yes": [
+    0.08,
+    0.6
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "selected_entry_p_yes": 0.042482596614263596,
+  "selected_entry_p_no": 0.6575174033857364,
+  "forecast_bridge": "Newfirst-party-origin Indeed dailySAposting index roseAug31 101.9389937705 toSep30 103.7582787280(+1.78468%); latestOct9 104.1454/pageupdatedOct15, notOct20. This contradicts strong continuing hiring-demand contraction but is not the JOLTS survey/stock or a fitted nowcast. Same-history lagcorrelations are-0.29to-0.33; recent24pairARpredicts+64.6kafterAugust-256k, versus marginaldrift-18.4k. Partialshrink towardrebound changesordinarydrift-25\u2192+25; coolingweight25\u219210/rebound10\u219215, ordinary65\u219275. Qualitative scenario judgment, no1:1index mapping or fit to ask.",
+  "model_comparison": "Retrospective rollingAR RMSE324.9vsrollingmean329.2vszero323.9(30steps);326.1vs326.5vszero311.1(18steps). No materialvalidatedforecastadvantage claimed. Serialdependence helps expose an omitted alternative, not establish causal meanreversion or calibrated p.",
+  "model_and_selection_limits": [
+    "Allweights/means/scales are unfitted judgment; broad8\u201360% is not a measured confidenceinterval. Originalmodel retained, finalreassessment explicitly afterquotes/newdata, not claimedpriceblind.",
+    "Revised-vintage history/overlappingwindows/possibleannualbenchmarkleakage; nofirst-releasebacktest/currentSE. Gaussian mixtures include samplingnoise; no double-countedSEadd.",
+    "August7.079 canbe revised;2%fallbackweight/5%conditionalYES are judgment, not observed shutdown odds. Nov3expected/Dec1fallback can delaycapital.",
+    "Selected15pp absolute model allowance remains unchanged; not an arbitrary all-endpoint test.",
+    "For an unattended discountmaker, check fivefold NO-state fill propensity: selectedYES/(selectedYES+5*(1-selectedYES)); also2x/10x sensitivities. These are selection-stress judgments, not empirical bounds."
+  ],
+  "evidence_units": [
+    "data/deep_review_20261017/work/0404_facts_2323.json",
+    "data/deep_review_20261017/work/0404_history_0011.json",
+    "data/deep_review_20261017/work/0404_history_stats_0020.json",
+    "data/deep_review_20261017/work/0404_bls_addendum_0015.json",
+    "data/deep_review_20261017/work/0404_serial_diagnostic_0024.json",
+    "data/deep_review_20261017/work/0404_leading_0022.json"
+  ]
+}

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T00:11:12.618614+00:00
+Updated: 2026-10-20T00:49:37.527804+00:00
 
-**361 valuations saved; first milestone100:** 361 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2264 pending.
+**364 valuations saved; first milestone100:** 364 valued; 12 blocked after in-depth review. 364 factual exclusions separately; 2260 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -415,9 +415,13 @@ Each report below is written before moving to the next evaluation. Related contr
 |401|[Will the highest temperature in San Francisco be between 86-87°F on October 17?](evaluations/0401.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |402|[Lee Jae-myung out as president of South Korea in 2026?](evaluations/0402.md)|valued|Noentry: bothfee-nettakersandordinarymakerquotesfailselected20pp; main5NOcost4.78842/central−.00981/selected−1.00981, cashminimum20YEScost1.39001/central−.50444. No newprior/order/watch; comparecash/Aave/existingtinyPartonbid andsharedpolitical/venue risk.|
 |403|[Reserve Bank of Australia increases interest rates by 50+ bps at the November 2026 meeting?](revisions/0403_20261019T235523790177Z.md)|valued|NO_ENTRY on bothsides afternewprimarysource. Proposed1USDYESmaker droppedbeforeany--execute/reservation/order; unchanged15ppmodelreserve floorsselectedYES0. Codeprecisionrepair221+169passed/published215bdea doesnotestablishedge. Archiveonlypreparatoryfinancialprior/removeunique1feed3terms; numericalresearchretained. ThreeoriginalLIVEbids6.50/holdingsunchanged.|
+|404|[Will JOLTS Job Openings be below 6.8M in September?](evaluations/0404.md)|valued|NO_ENTRY at currentasks/ordinarymakers:10YEScost1.04501/selected-.62018;NOalsofailscentral/stress. Lowest1cmaker/1USD failsfivefoldadverseselectionstress; factorisjudgmentnotmeasuredbound. Cash/Aave/existingcommitmentsbetter; noorder/prior/watch.|
 |405|[Will 1. FC Union Berlin vs. BV Borussia 09 Dortmund end in a draw?](evaluations/0405.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|406|[Will Alysa Liu rank in Google’s Top 5 Most Searched Athletes of 2026?](revisions/0406_20261020T003125677399Z.md)|valued|NO_ENTRY:5YEScost3.30688/selected-2.01688;5NOcost1.90828/central+.80172butselected-.19828. Ordinary35cNOmakerloses.04beforecarry/selection. SharedMessiGoogle risk not ahedge; noorder/prior/watch.|
 |407|[Will the highest temperature in Warsaw be 14°C on October 17?](evaluations/0407.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|408|[Will commitments to the 1W public sale exceed $60M?](evaluations/0408.md)|blocked_after_review|BLOCKED_AFTER_REVIEW, notvalued/economicrejection. Grossheadline/historicalmax/phase unavailable aftersource-definedAPI403; small-modeloutputdidnotreject. Noglobalgoalblock; proceed410.|
 |409|[Will the Democratic Party win the NY-01 House seat?](evaluations/0409.md)|valued|Potential small passive YES source revalidation|
+|410|[Will CrowdStrike Q3 net new ARR be above $440M?](evaluations/0410.md)|valued|NO_ENTRY:7YEScentral+.118butselected-.932;7NOcentral-.736/selected-1.786. Ordinarymakersfail;3cfarbidmarginfailsmodestadversefillillustration. Noorder/prior/watch.|
 |411|[UFC Fight Night: Mike Malott vs. Joaquin Buckley (Welterweight, Main Card)](evaluations/0411.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |413|[Will the highest temperature in Taipei be 34°C on October 17?](evaluations/0413.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |415|[Will the Republican Party win the TX-25 House seat?](evaluations/0415.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -748,5 +752,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 404

@@ -32054,3 +32054,41 @@ NewAmericanPulse/NonStopLocal polling claim identified inBozemanreport index, ex
 - Independent read-only audit: both requestedIDs occur once and raw-line-plus-newline hashes match completed00:08review; all six capture receipt hashes/source-review hash and journal/backlog pointers verify. No missing event-closeout check; no repeated accounts/discovery/producer or Telegram. Full02UTC remains due.
 - Checkpoint already records404 started00:11, while dashboard/handoff still said no active case; corrected the pointers, without counting a valuation.361valued/11blocked/364factual/2264pending;736base+66revisions unchanged.404 FRED44month history raw/gzip hashes/metadata verified. Existing BLS web extracts preserved after call: exact original call clocks unknown; save/editorial times do not refresh source. New small source unit/resume retains this limitation.406 factual worker packet saved unstarted/unvalued; primary verification/judgment still required. [Small handoff](../data/deep_review_20261017/work/handoff0018_RESUME.json).
 - No forecast, live market quote, immutable valuation, prior, money operation, CSV observation, DEC, code/config or goal lifecycle change in this closeout. Existing finite research remains resumable at404; scheduled run ends after scoped publication, no timer/idle continuation. Financial23:36/order00:05/closure00:07/ops23:57 dates retained.
+
+
+## 2026-10-20T00:25:33.449328+00:00 — finitegoal resumed;404JOLTS valued/indexed;362valued
+
+- Previousgoalturn classifiedprogress: completedrequestednewsproof/sourcehandoff1fc5012; boundedticknotrepeated.404 finalYES19.2483%/broad8–60/15ppallowance; originalpriceblind26.509%preserved. Primaryverified44monthhistory,70dailyIndeedproxyrows/rawhashes; Septemberposting+1.78468%/serialreversiondiagnostic weaken extrapolatedAugustdecline. Finalforecast explicitlyafterquotes/newdata, uncalibrated; no claimedregressionadvantage orproxy=stock mapping. [Report](../research/2026-10-17-deep-review/evaluations/0404.md).
+-10YESat10cfee-cost1.04501/selected-.62018;NOfailscentral/stress.8/9cmakersfail;1c100shares/1USDselected5xfillstress-.12046before.05op/carry; oddsarejudgment, not measured. Noorder/prior/watch/TG.737base+66revisions/362valued/11blocked/364factual/2263pending/noactive verifiedimmediatelybefore406. Existingfull02UTC; no newfinancialproducer/CSV/goallifecycle/timer. [Phase](../data/deep_review_20261017/work/goal0018_RESUME.json).
+
+
+## 2026-10-20T00:31:53.051720+00:00 —406GoogleLiu valued/indexed;363valued
+
+- Primary45.8%YES/broad10–85/20ppallowance beforeownquotes. Rootverified2026Olympicgold/2025Worldstitlefullrows, exactGoogleGLOBAL/Athletes2022/24/25cards, 2025method andbounded2026route404. Prior-yearbaseline/internalranks/otherbreakouts remainuncertain. Partialjointnine-stateextension preservesMessi60/McGregor40, remainingranksotherathletes; noholdingpriorupdate/hedgecredit. [Base](../research/2026-10-17-deep-review/evaluations/0406.md).
+-5NOcost1.90828/central+.80172butselected-.19828;35cmakerselected-.04beforecarry/selection.5YESfails. SharedMessiYES/newLiuNO bothlose21%insuppliedmodel. Noorder/prior/watch/TG. ExactWorldsreceiptend00:28:22.653862replacesroundedobservationfieldinappend-onlyrevision67; p/costs/decisionunchanged.738base+67revisions/363valued/11blocked/364factual/2262pending verifiedbeforesubsequentcase. Next408factualhost/APIgap; full02UTC remainsdue.
+
+
+## 2026-10-20T00:36:14.257866+00:00 —408gross-sale source investigated;blocked12/363valued
+
+- Fullrulegross>60Manypoint/strictdeadline/refundhistory read. Rootverifiedall8directsourcebodies/hashes: namedpage200dynamiccounterabsent, namedX3.9Mcap/oversubscription/openpostnotcurrenttotal, distinctlinkedhost403, publicJS/UI/IDLtrace, documentedanonymousstatePOST403. FailedcaptureisnotNO/permanentunavailability; allocationdoesnotcapgross. LiteralXfallbackremainsvaliddespitehostdifference, correctingoverbroadworkerwarning. [Report](../research/2026-10-17-deep-review/evaluations/0408.md).
+- No defensiblep/EVwithoutgrossheadline/history/phase; blockedafterin-depth, notvalued/rejected/globalgoalblock.739base+67revisions/363valued/12blocked/364factual/2261pending/noactive verifiedbefore410. Noquote/money/prior/watch/TG; continuefinitequeue. Two new00:09Michiganleads undergoingboundedsourceverification; full02UTCdue.
+
+
+## 2026-10-20T00:40:18.452454+00:00 — two00:09Michiganleads reviewedduringfinitegoal;nochange
+
+- ExactIDs947fffd88974a00707d3ef922908aeefdf766ec7/d248f59082c3c21d789833e15150fbe53ad5f4bc bindcurrentindexedMI5NO. ModernGhanabody/date remainunverified/Googleconsent; allegationheadlineisnotfact/electoralmeasurement. NewsCordautomated15outletrecap linksCBSOct19sameOct17Caroexchange andOct1MitchellLVpollElSayed45.6/Rogers41.4±3.8alreadyreviewed. Root4newraw+gzip/oldCBS/twoalertlinehashes verified; noexactfullbodyidentityclaim. [Primaryreview](../data/deep_review_20261017/work/goal0034_mi_primary_review.json).
+- RetainNO44/selected34/broad20/noadd; no newmeasuredvoterchange orverifiedthesisbreak. DisavowalcanhelpDemocrats; automateddirectionisnotadopted. Earlierexit/netdepthdatesretained, fullbinarylosspossible; no newaccount/book/producer/financialaction/TG. Fixednewnewswindow00:05:14→00:33includes2Venezuelaresearch-onlyIDs/noheldpendingmatch; no postcutoffabsenceclaim. Full02UTCstilldue.
+
+
+## 2026-10-20T00:50:09.445404+00:00 — in-flight410 net-new ARR valued/indexed;364 valued
+
+- Primary priceblind YES18.22338%/broad2–60/15pp allowance; selected YES3.22338/NO66.77662. Exact ending ARR5841.421 versus guide implies344.979M proxy, not direct quarterly net-new metric; target440 strict. Quarterly/annual/ending differences, transcript fallback, January deadline and unmeasured deal tail retained. Both PDF SDK extracts verified despite direct403; current demand releases quantify no ARR uplift. [Report](../research/2026-10-17-deep-review/evaluations/0410.md).
+- Seven YES fee-cost1.15764/central+.11800/selected−.93200; seven NO6.46061/central−.73625/selected−1.78625. Five YES below1USD cash floor; ordinary makers fail. Hypothetical3c far bid loses under illustrative1.2× adverse NO-state fill weighting, not a measured bound. No money/prior/watch/TG.740base+67revisions/364valued/12blocked/364factual/2260pending/noactive verified before any next evaluation;412 facts remain unstarted.
+- Latest requested235849 review already completed with fresh00:05–07 exposure proof; current closeout audits checklist evidence once, without replaying cancellation or broad scans. Existing full02UTC/earlier material source/fill binds. Canonical money23:36/CSV225 unchanged; no new timer, goal lifecycle change or idle continuation.
+
+
+## 2026-10-20T00:51:30.583138+00:00 —235849 event closeout and in-flight research handoff verified
+
+- Root re-read both actual requested Parton alert rows; newline-inclusive hashes match completed00:08 review. Worker collector instead checked prior MI IDs; its original remains unchanged and correction is explicit. Prior23:45 affirmative terminal/00:05–07 exposure proof still governs; no repeat cancel/prune/repost or new death/rank fact. [Primary closeout](../data/deep_review_20261017/work/tick235849_primary_closeout_0055.json).
+- One required-onboarding quick status00:48:23–27rc0: root verified raw+gzip receipts/full output; six open quantities unchanged,0hurdleflags/no project-watchlist hits. This is not a full11-step check or authoritative aggregate producer. Fixed news through00:47:38 adds two unheld Kansas/showmention research rows; no new specific payout/vote evidence adopted or postcutoff absence claim. No portfolio/prior/CSV/TG change.
+- Bounded latest event run ends after scoped audit/commit/push.364valued/12blocked/364factual/2260pending;740base+67revisions/noactive;412facts are unstarted. Full02UTC remains due. No goal lifecycle mutation, new timer, idle follow-up or new evaluation during closeout.

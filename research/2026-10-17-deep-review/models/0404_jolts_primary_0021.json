@@ -1,0 +1,125 @@
+{
+  "schema": "deep_review.primary_distribution.v1",
+  "review_index": 404,
+  "created_utc": "2026-10-20T00:19:43.640811+00:00",
+  "market_prices_seen_before_model": false,
+  "identity": {
+    "market_id": "5130178",
+    "condition_id": "0x1925d6fd97db28b2597afc255c05e85e4225341466ba4279c2e0f14cc5a6300a",
+    "criteria_sha256": "ba4179c14d2f67e9da365f7281e2aaf9b3500a46bf389afea4c6a684a58413da"
+  },
+  "target": "September2026 first published SA totalnonfarm JOLTS thousands <6800; reported6799 YES,6800 NO.",
+  "last_observed_august_thousands": 7079,
+  "continuity_boundary_for_rounded_integer_report": 6799.5,
+  "change_boundary_thousands": -279.5,
+  "model": "Subjective Gaussian mixture for published first estimate minus last observed August level; no fitted/calibrated posterior or forecast-vendor consensus. Gaussian component changes include survey variation; no separate full sampling-SE add.",
+  "regimes": [
+    {
+      "regime": "Ordinary near-flat/slower hiring",
+      "weight": 0.65,
+      "mean_change_thousands": -25,
+      "sd_change_thousands": 325,
+      "basis": "24month revised-series mean-18.4/median-77; shrink short-run trend; \u03c3324 recent24month.",
+      "p_report_below6800": 0.21679097087014826
+    },
+    {
+      "regime": "Cooling continues materially",
+      "weight": 0.25,
+      "mean_change_thousands": -250,
+      "sd_change_thousands": 350,
+      "basis": "Last3month mean-152.7 and weak September payroll+29k vs45k prior12month; openings and payroll not one-to-one.",
+      "p_report_below6800": 0.46641463516603454
+    },
+    {
+      "regime": "Rebound/noisy upside",
+      "weight": 0.1,
+      "mean_change_thousands": 250,
+      "sd_change_thousands": 450,
+      "basis": "Jan/Apr2026 jumps690/698k; one weaker month does not force continued decline. Broader variance includes survey/revision/regime variation.",
+      "p_report_below6800": 0.11966428865779988
+    }
+  ],
+  "conditional_p_yes_if_september_available": 0.26948421872288497,
+  "fallback": {
+    "weight": 0.02,
+    "p_yes_if_fallback": 0.05,
+    "reason": "Judgment reserve for September data still unavailable at nextscheduledDec1 10ET release; previousavailableAugust7079 favorsNO but could be revised. Not an observed shutdown or measured operational frequency.",
+    "sensitivity": "0\u201310%fallback weight and conditional0\u201320% yields a modest shift, not an exact tail bound."
+  },
+  "p_yes": 0.2650945343484273,
+  "p_no": 0.7349054656515728,
+  "broad_judgment_range_yes": [
+    0.08,
+    0.6
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "selected_entry_p_yes": 0.11509453434842729,
+  "selected_entry_p_no": 0.5849054656515728,
+  "reserve_reason": "15pp vs default10: only44 revised-vintage observations, nonstationary mean, survey-first-vintage uncertainty, unresolved tails; exact printed threshold clear. Broad range is a judgment scenario envelope, not calibrated CI; no requirement every extreme pass.",
+  "drift_scale_sensitivities": [
+    {
+      "mean_change_thousands": 100,
+      "sd_thousands": 250,
+      "p_below": 0.06450719933248311
+    },
+    {
+      "mean_change_thousands": 100,
+      "sd_thousands": 450,
+      "p_below": 0.19952102266878718
+    },
+    {
+      "mean_change_thousands": 0,
+      "sd_thousands": 250,
+      "p_below": 0.13178349668316613
+    },
+    {
+      "mean_change_thousands": 0,
+      "sd_thousands": 450,
+      "p_below": 0.2672632595428518
+    },
+    {
+      "mean_change_thousands": -100,
+      "sd_thousands": 250,
+      "p_below": 0.23637864340795767
+    },
+    {
+      "mean_change_thousands": -100,
+      "sd_thousands": 450,
+      "p_below": 0.3449875382946056
+    },
+    {
+      "mean_change_thousands": -200,
+      "sd_thousands": 250,
+      "p_below": 0.37524246845466436
+    },
+    {
+      "mean_change_thousands": -200,
+      "sd_thousands": 450,
+      "p_below": 0.42988511256204814
+    },
+    {
+      "mean_change_thousands": -300,
+      "sd_thousands": 250,
+      "p_below": 0.5326766432714113
+    },
+    {
+      "mean_change_thousands": -300,
+      "sd_thousands": 450,
+      "p_below": 0.5181677530519011
+    }
+  ],
+  "source_units": [
+    "data/deep_review_20261017/work/0404_facts_2323.json",
+    "data/deep_review_20261017/work/0404_history_0011.json",
+    "data/deep_review_20261017/work/0404_history_stats_0020.json",
+    "data/deep_review_20261017/work/0404_bls_addendum_0015.json"
+  ],
+  "root_evidence": "CSV44observations/raw+gzip hashes/SA-thousands metadata verified. BLS full relevant Total row/revision/reliability extracts and release calendars verified; September payroll contextual only.",
+  "limitations": [
+    "Current-vintage history is not a real-time first-print calibration; empirical6/24 threshold-sized declines cannot be read as a measured conditional probability.",
+    "Mixture weights, drift, scale and fallback probabilities are primary judgment; they can be wrong.",
+    "No current national survey SE, market-implied consensus or repeated independent forecast samples. 2013 BLS example SE is not2026 uncertainty.",
+    "Lastbusinessday stock vs monthly payroll/hires/separations flows; seasonality does not remove economic or first-estimate noise.",
+    "Named official report settles, not later revisions; delays can extend from Nov3 to Dec1, beyond metadataendDate."
+  ]
+}

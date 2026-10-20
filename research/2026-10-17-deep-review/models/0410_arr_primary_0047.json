@@ -1,0 +1,70 @@
+{
+  "schema": "deep_review.primary_distribution.v1",
+  "review_index": 410,
+  "created_utc": "2026-10-20T00:45:13.564146+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "5730893",
+    "condition_id": "0xa287a0c300ca61611fd21e36ff8806090de9e2f0e6bcd2c61b32c73742e183a1",
+    "criteria_sha256": "3713ee62834fa14145f4897083a899fff5b52d3cd198d0ec205d0b1673262289"
+  },
+  "literal_target": "FirstofficialCrowdStrikeQ3FY27netnewARR>440M, notcalendarQ3/endingARR/annualgrowth. QuarterendsOct31 2026; missingafterauthorizedmaterials/transcriptfallback ornoquartermaterialsbyJan31 2027 23:59ET\u2192NO. Mostpreciseactualmetric/rangemidpoint; laterrevisionsignored.",
+  "regimes": [
+    {
+      "state": "Guidance-near ordinary quarter",
+      "weight": 0.7,
+      "mean_netnewARR_M": 345,
+      "sd_M": 45,
+      "p_strictly_above440": 0.01738138131111422
+    },
+    {
+      "state": "Strong conversion/quarter beat",
+      "weight": 0.2,
+      "mean_netnewARR_M": 430,
+      "sd_M": 65,
+      "p_strictly_above440": 0.43886552075085805
+    },
+    {
+      "state": "Exceptional large-deal/AI acceleration",
+      "weight": 0.1,
+      "mean_netnewARR_M": 540,
+      "sd_M": 100,
+      "p_strictly_above440": 0.8413447460685429
+    }
+  ],
+  "p_yes_if_metric_reported": 0.18407454567480586,
+  "normal_disclosure_weight": 0.99,
+  "missing_or_deadline_no_weight": 0.01,
+  "p_yes": 0.1822338002180578,
+  "p_no": 0.8177661997819422,
+  "broad_judgment_range_yes": [
+    0.02,
+    0.6
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "selected_entry_p_yes": 0.0322338002180578,
+  "selected_entry_p_no": 0.6677661997819422,
+  "forecast_bridge": "QuarterendingARRguidemid6186.4 lesspreciseJuly31ARR5841.421 impliesstockchange344.979M assumingcomparablemetric/nootherreconciliation. HistoricalQ2FY27/Q3FY26stockdifferences332.825/265.324 matchdirect332.8/265.3 afterrounding, supportingforecastproxybutnotsettlementmetric.440requires+32.20%sequential/+65.83%yoy;priorFY26Q3/Q2seasonalratio1.2001appliedtocurrentQ2implies399.421, oneillustrationnotfittedseasonality. Annualnetnewgrowth34%isnotQ3guidance.",
+  "competing_theses": "Ordinarymean345 anchorsendingguideproxy. Strong/exceptional30%combinedmass allowsconservativeguidance/largeenterpriseclosures/FalconFlex/AIrisingdemand andtimingnoise. Q2grew51%yoy/RPO10.7Bvs8.8Bpriorquarter, but differentmetricandhorizon. OpenAIMarketplaceSept29channelusesexistingcustomercommitments; noquantifiedARRuplift. FalConEuroperegistrations+60%areeventreach, notcustomerARR. Noheadlinebooststackedontopofgrowthregimes. XMCyberassetsdealexplicitlybringsnoARR/revenuepercurrentcompanyslide20.",
+  "sensitivity_p_if_regime_certain": {
+    "Guidance-near ordinary quarter": 0.01738138131111422,
+    "Strong conversion/quarter beat": 0.43886552075085805,
+    "Exceptional large-deal/AI acceleration": 0.8413447460685429
+  },
+  "limits": [
+    "Scenario weights/means/scales are subjective, not calibrated predictive errors or probabilities from companyrange. Guidancewidth4M is not forecastvariance.",
+    "NinehistoricalARRstockdifferencesaretrending/seasonal/affectedbyearlierepisodes, notIIDnetnewARRsamples or a tailfrequency.",
+    "Stockdifferenceis a researchproxy, not a substitute for mostprecise reportednetnewARRrequiredbycontract. Futureaccounting/cohort/definition/recastdifferencesmatter.",
+    "1%missing/deadline branch is judgment, not empiricalfrequency; pressreleaseomissionmustnotignoreliteralwebcast/transcriptfallback. NormalDecmetadata/planningnotconfirmedcurrenteventdate.",
+    "Mostprecise reporting outranks roundedheadline; exact440NO. Continuousapproximation doesnotmodelallpossible printedtieatoms.",
+    "Broad2\u201360%is not a calibratedCI;15ppmodelreserve vsdefault10reflectsunmeasuredquartertail/insiderpipeline/reportingrisk. Tailmultiplicative measured-data exceptionnotused.",
+    "Sourcecoveragebounded:10distinctIRreleaseURLs/alltitlesread,2mostrelevantbusinessbodiesread,currentquarterly/eventpagesandtwoPDFs. Not exhaustiveallSECfilings/audio/public-announcementcoverage."
+  ],
+  "sources": [
+    "work/0410_facts_0033.json",
+    "work/0410_guidance_0037.json",
+    "work/0410_pdf_facts_0040.json",
+    "work/0410_pdf_root_0044.json",
+    "work/0410_demand_0045.json"
+  ]
+}

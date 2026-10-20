@@ -1,0 +1,172 @@
+{
+  "schema": "deep_review.primary_joint_distribution.v1",
+  "review_index": 406,
+  "created_utc": "2026-10-20T00:29:32.929771+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "4425461",
+    "condition_id": "0xa3d91e6932c60ce2d59c0f269ccc03430faa7e3080634be508e0d6a3dcccf114",
+    "criteria_sha256": "cd9fadc01eadbafb12d7f1e007a18b940f7b7f8f0a2a6717fa0a71d0d1722b28"
+  },
+  "literal_target": "AlysaLiu inofficial2026GoogleGlobalAthletes top5; notUS/absolutesearchvolume. No specifiedlistthroughMar31 2027 23:59ET\u2192NO.",
+  "p_yes": 0.45799999999999996,
+  "p_no": 0.542,
+  "broad_judgment_range_yes": [
+    0.1,
+    0.85
+  ],
+  "selected_entry_reserve_absolute": 0.2,
+  "selected_entry_p_yes": 0.25799999999999995,
+  "selected_entry_p_no": 0.342,
+  "family_model": "models/google_athletes_scenarios_0158.json",
+  "family_model_sha256": "26a4d082ab6506f6f115703b35d34e5f11e5894798ebc3c8988d580bc05ac0e4",
+  "conditional_extension": [
+    {
+      "state": "Messi+McGregor",
+      "weight": 0.22,
+      "Messi": true,
+      "McGregor": true,
+      "p_Liu_given": 0.35
+    },
+    {
+      "state": "Messi_only",
+      "weight": 0.38,
+      "Messi": true,
+      "McGregor": false,
+      "p_Liu_given": 0.45
+    },
+    {
+      "state": "McGregor_only",
+      "weight": 0.18,
+      "Messi": false,
+      "McGregor": true,
+      "p_Liu_given": 0.5
+    },
+    {
+      "state": "neither_with_list",
+      "weight": 0.2,
+      "Messi": false,
+      "McGregor": false,
+      "p_Liu_given": 0.6
+    }
+  ],
+  "joint_states": [
+    {
+      "weight": 0.077,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 2
+    },
+    {
+      "weight": 0.14300000000000002,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 3
+    },
+    {
+      "weight": 0.171,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 3
+    },
+    {
+      "weight": 0.20900000000000002,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 4
+    },
+    {
+      "weight": 0.09,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 3
+    },
+    {
+      "weight": 0.09,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 4
+    },
+    {
+      "weight": 0.12,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 4
+    },
+    {
+      "weight": 0.08000000000000002,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 5
+    },
+    {
+      "weight": 0.02,
+      "list_exists": false,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 0
+    }
+  ],
+  "marginals": {
+    "Messi": 0.6000000000000001,
+    "McGregor": 0.4,
+    "Liu": 0.45799999999999996
+  },
+  "forecast_bridge": "VerifiedfirstOlympicwomenSSwinFeb19 2026 is globallysalientnew2026catalyst. Verified2025WorldswomenwinMar28 means prior-yearbaselinewasnotzero; 2025GoogleGlobaltop10absence doesnotmeasurethatbaseline. HistoricalShaunWhite2022rank5/Hanyu6 andBiles2024rank4 illustrateOlympicstoriescancompeteandmiss; notanOlympicwinnerbacktest. PartialfamilyjointassignsLiu35/45/50/60% conditionalonexistingMessi/McGregorstates, totaling45.8%. Winterstory strongerwhenestablishedstarsmiss, nofixedslotsindependence.",
+  "competing_sensitivities": {
+    "winter_novelty_strong_conditional": [
+      0.6,
+      0.7,
+      0.65,
+      0.8
+    ],
+    "winter_novelty_strong_p_yes": 0.6749999999999999,
+    "high_2025_baseline_conditional": [
+      0.2,
+      0.25,
+      0.3,
+      0.4
+    ],
+    "high_2025_baseline_p_yes": 0.273,
+    "other_breakouts_strong_conditional": [
+      0.15,
+      0.25,
+      0.25,
+      0.3
+    ],
+    "other_breakouts_strong_p_yes": 0.23299999999999998
+  },
+  "uncertainty": [
+    "Allweights/conditionalprobabilities are explicitprimaryqualitativejudgment, notcalibratedrank probabilities/searchmeasurements.",
+    "Fullfield/top5scores, aliasaggregation and2026method/cutoff unknown. Unknownothers explicitlyfillremaining2\u20135slots; no fullfieldrankmodel claimed.",
+    "Current2025method sayshighesttrafficincrease Jan1\u2013Nov25versus2024, nottotalvolume or an exposed percentageformula; noautomatic2026cutofftransfer.",
+    "Exact2026route404at00:28 isboundedprobe, notglobalabsenceproof. PriorTrendscomparison429 not retried. GenericFeb3Olympicsblogpre-gamesdataisnotLiuspecific/rank evidence.",
+    "MarchfallbackcanlockcapitalpastJanuaryevaluation; normalDecemberpublicationplausiblenotguaranteed. Shared2%missinglistbranchretainedasjudgment, notmeasuredfrequency.",
+    "Messi60/McGregor40margins retainedascompatiblejointfamilycontext, notfreshholdingpriorupdates. SameGoogle/5slots/venue risk: nohedgeorindependencecredit.",
+    "20ppentryallowance retainssamefamilymodelrisk; broad10\u201385rangeisnotCI, allendpointpassnotrequired."
+  ],
+  "source_units": [
+    "work/0406_facts_0011.json",
+    "work/0406_baseline_0026.json",
+    "work/0406_family_rootcheck_0029.json",
+    "work/0406_worlds_root_0029.json",
+    "work/0406_current_source_0031.json"
+  ]
+}

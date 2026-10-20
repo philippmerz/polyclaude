@@ -1,0 +1,121 @@
+{
+  "schema": "deep_review.root_pdf_source_unit.v1",
+  "review_index": 410,
+  "reviewed_utc": "2026-10-20T00:44:10.563607+00:00",
+  "representation": "WebtoolPDFtextextract serialized; notrawPDFbytes/rawHTTP. BothrepositorydirectGETs403werepreserved;SDKopensucceeded, so not aninaccessiblePDFconclusion.",
+  "presentation": {
+    "url": "https://ir.crowdstrike.com/static-files/7d32e91f-6184-4ade-8f02-f685e91b420f",
+    "pages": 31,
+    "version": "Q2FY27 asofAug26 2026",
+    "relevant_pages_zero_based": [
+      16,
+      19,
+      20,
+      23
+    ],
+    "findings": [
+      "Slide16showsendingARR5841Mrounded/netnew333Mrounded.",
+      "Slide19Q3endingARR6184.4\u20136188.4M;FY27endingARR6603.0\u20136611.9M. NotdirectquarterlynetnewARRguide.",
+      "Slide20XM Cybertechnologyasset acquisitionexpected2HFY27bringsnoARR/revenue andnoneincludedinFY27guidance.",
+      "Slide23ARRdefinitionconsistentwithrelease. No independentforecastconsensus ordirectQ3newARRdollarlineinreadslides."
+    ]
+  },
+  "supplement": {
+    "url": "https://ir.crowdstrike.com/static-files/ca6983fc-8732-451a-ba26-f32a0b019a34",
+    "pages": 9,
+    "data_page_zero_based": 8,
+    "table_units": "USDthousands, exceptpercentages/RPO; unaudited",
+    "arr_table": [
+      {
+        "quarter": "Q1FY25",
+        "ending_arr_thousands": 3646881,
+        "derived_arr_stock_change_millions": null
+      },
+      {
+        "quarter": "Q2FY25",
+        "ending_arr_thousands": 3864512,
+        "derived_arr_stock_change_millions": 217.631
+      },
+      {
+        "quarter": "Q3FY25",
+        "ending_arr_thousands": 4017540,
+        "derived_arr_stock_change_millions": 153.028
+      },
+      {
+        "quarter": "Q4FY25",
+        "ending_arr_thousands": 4241838,
+        "derived_arr_stock_change_millions": 224.298
+      },
+      {
+        "quarter": "Q1FY26",
+        "ending_arr_thousands": 4435596,
+        "derived_arr_stock_change_millions": 193.758
+      },
+      {
+        "quarter": "Q2FY26",
+        "ending_arr_thousands": 4656682,
+        "derived_arr_stock_change_millions": 221.086
+      },
+      {
+        "quarter": "Q3FY26",
+        "ending_arr_thousands": 4922006,
+        "derived_arr_stock_change_millions": 265.324
+      },
+      {
+        "quarter": "Q4FY26",
+        "ending_arr_thousands": 5252751,
+        "derived_arr_stock_change_millions": 330.745
+      },
+      {
+        "quarter": "Q1FY27",
+        "ending_arr_thousands": 5508596,
+        "derived_arr_stock_change_millions": 255.845
+      },
+      {
+        "quarter": "Q2FY27",
+        "ending_arr_thousands": 5841421,
+        "derived_arr_stock_change_millions": 332.825
+      }
+    ],
+    "scope": "TheseareendingARRstocks. Differencesarederivedproxies, notdirectnetnewARR-reportsubstitutesforsettlement.",
+    "consistency_checks": {
+      "Q2FY27_derived": 332.825,
+      "Q2FY27_release_reported": 332.8,
+      "Q3FY26_derived": 265.324,
+      "Q3FY26_release_reported": 265.3
+    }
+  },
+  "arithmetic_bridge": {
+    "Q3_endingguide_low_millions": 6184.4,
+    "Q3_endingguide_high_millions": 6188.4,
+    "exact_Q2_ending_millions": 5841.421,
+    "derived_guided_stock_change_range": [
+      342.97899999999936,
+      346.97899999999936
+    ],
+    "derived_midpoint": 344.97899999999936,
+    "strict_threshold_millions": 440,
+    "threshold_yoy_growth_over_Q3FY26_proxy": 0.6583497911986853,
+    "threshold_sequential_growth_over_Q2FY27_proxy": 0.32201607451363334,
+    "prior_Q3FY26_to_Q2FY26_ratio": 1.2000940810363387,
+    "prior_ratio_applied_to_Q2FY27_proxy": 399.42131252091946,
+    "limits": "Stockdifferenceproxyassumescomparabledefinition/nootherreconciliation; do notuseitasactualreportednetnewmetric. FY27annualgrowth34%isnotquartergrowth. PriorquartersnotIID/poorperformanceepisode/AIgrowthshift; nofuturetailfrequencyfrom9differences."
+  },
+  "captures": [
+    {
+      "receipt": "logs/deep_review_20261017/case0410_pdf_web_0043/receipt.json",
+      "raw_sha256": "3eab56b1728d5b3a68ac1d51b32612b4dad4e9cd69db8e0d54a3d250e477473a",
+      "gzip_sha256": "8f2fc9112ae306745ca516bbb6818cb1b3e83dfc19b06e18aabfd5823eb92eeb",
+      "started_utc": "2026-10-20T00:41:30.168358+00:00",
+      "saved_utc": "2026-10-20T00:41:31.652262+00:00"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0410_pdf_web_0043/find.receipt.json",
+      "raw_sha256": "5b27d955ae7780340878b8c1f61ec68bb322b3f785fa831e2d13744d0f3e3ff6",
+      "gzip_sha256": "dd2f0018b4e19b591356bfe1ab8faa652a32ef69ca7ddf6dc7173e7bd589510c",
+      "started_utc": "2026-10-20T00:42:06.530774+00:00",
+      "saved_utc": "2026-10-20T00:42:08.193444+00:00"
+    }
+  ],
+  "no_forecast": true
+}

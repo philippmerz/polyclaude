@@ -1,0 +1,59 @@
+{
+  "schema": "deep_review.model_comparison.v1",
+  "index": 404,
+  "computed_utc": "2026-10-20T00:21:46.665911+00:00",
+  "post_quote": true,
+  "original_model": "models/0404_jolts_primary_0021.json",
+  "evidence": "Same44month current-vintage history; original forecast did not explicitly condition on negative serial correlation after August-256k. Diagnostic checks possible rebound rather than extrapolate drop.",
+  "fits": [
+    {
+      "pairs": 12,
+      "lag_correlation": -0.32774535079301076,
+      "alpha": 20.140316835088615,
+      "beta": -0.33204797569537964,
+      "residual_sd": 370.25751924931757,
+      "predicted_change_thousands": 105.1445986131058,
+      "normal_p_below6800": 0.14943563434097312
+    },
+    {
+      "pairs": 24,
+      "lag_correlation": -0.3257510988395102,
+      "alpha": -19.62282568183423,
+      "beta": -0.3290968831211156,
+      "residual_sd": 313.5261089504254,
+      "predicted_change_thousands": 64.62597639717137,
+      "normal_p_below6800": 0.13618979205048554
+    },
+    {
+      "pairs": 42,
+      "lag_correlation": -0.29299596232590036,
+      "alpha": -86.68969748077598,
+      "beta": -0.2892951036515558,
+      "residual_sd": 324.8088282544181,
+      "predicted_change_thousands": -12.63015094597769,
+      "normal_p_below6800": 0.2056462337347193
+    }
+  ],
+  "retrospective_walkforward": [
+    {
+      "rolling_pairs": 12,
+      "retrospective_oos_steps": 30,
+      "mean_err_rmse_thousands": 329.20000534404386,
+      "ar_err_rmse_thousands": 324.90083473210336,
+      "zero_err_rmse_thousands": 323.9021971727474
+    },
+    {
+      "rolling_pairs": 24,
+      "retrospective_oos_steps": 18,
+      "mean_err_rmse_thousands": 326.5096233551448,
+      "ar_err_rmse_thousands": 326.0649976270363,
+      "zero_err_rmse_thousands": 311.068141873913
+    }
+  ],
+  "limitations": [
+    "This is revised-vintage retrospective analysis; later benchmark revisions can leak later information.",
+    "Small sample/nonstationarity; in-sample lag relation does not establish causal or calibrated first-release mean reversion.",
+    "Retrospective walk-forward RMSE is not threshold calibration; only18or30dependent/regime-varying steps.",
+    "No fitted weighting to marketprice or forecast-performance significance claim."
+  ]
+}

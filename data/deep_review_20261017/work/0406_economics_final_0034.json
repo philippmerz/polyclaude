@@ -1,0 +1,146 @@
+{
+  "both_sides_considered": true,
+  "quote_file": "data/deep_review_20261017/0406_quote_0032.json",
+  "quote_file_sha256": "7a0d992ccb25546329b246629a7fc072de0293a2aa6786e97e7ea3f9d466c3c1",
+  "quote_capture_utc": "2026-10-20T00:29:33.600189+00:00",
+  "gamma_received_utc": "2026-10-20T00:29:33.340426+00:00",
+  "hypothetical_gross_shares": 5.0,
+  "horizon_days": 45.0,
+  "probability_reference_outcome": "Yes",
+  "actual_entry_reserve_pp": 20.0,
+  "fee_curve": {
+    "rate": 0.05,
+    "exponent": 1.0,
+    "taker_only": true,
+    "authoritative": true
+  },
+  "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+  "alternative": {
+    "apy": 0.032035,
+    "chain": "polygon",
+    "token": "USDC",
+    "supply_status": "live",
+    "fetched": "2026-10-19T18:02:51.823060+00:00",
+    "constant_rate_sensitivity_not_forecast": true,
+    "funding_and_operations_costs_not_assumed_free": true
+  },
+  "sides": {
+    "Yes": {
+      "probability": 0.45799999999999996,
+      "selected_stress_probability": 0.25799999999999995,
+      "best_bid": 0.63,
+      "best_ask": 0.65,
+      "minimum_shares": "5",
+      "tick_size": "0.01",
+      "book_timestamp": "1792456166746",
+      "book_received_utc": "2026-10-20T00:29:33.471364+00:00",
+      "book_age_seconds_at_receipt": 6.7253639698028564,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 3.25,
+          "fee": 0.05688,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.65
+            }
+          ],
+          "net": 3.30688
+        },
+        "bids": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 3.15,
+          "fee": 0.05828,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.63
+            }
+          ],
+          "net": 3.09172
+        }
+      },
+      "taker_cost_usd": 3.30688,
+      "central_expected_profit_usd": -1.01688,
+      "selected_stress_profit_usd": -2.0168800000000005,
+      "break_even_before_carry": 0.661376,
+      "break_even_constant_carry": 0.6639521553804235,
+      "current_execution_authorization": false
+    },
+    "No": {
+      "probability": 0.542,
+      "selected_stress_probability": 0.342,
+      "best_bid": 0.35,
+      "best_ask": 0.37,
+      "minimum_shares": "5",
+      "tick_size": "0.01",
+      "book_timestamp": "1792456166746",
+      "book_received_utc": "2026-10-20T00:29:33.471364+00:00",
+      "book_age_seconds_at_receipt": 6.7253639698028564,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 1.85,
+          "fee": 0.05828,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.37
+            }
+          ],
+          "net": 1.90828
+        },
+        "bids": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 1.75,
+          "fee": 0.05688,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.35
+            }
+          ],
+          "net": 1.69312
+        }
+      },
+      "taker_cost_usd": 1.90828,
+      "central_expected_profit_usd": 0.80172,
+      "selected_stress_profit_usd": -0.1982799999999998,
+      "break_even_before_carry": 0.381656,
+      "break_even_constant_carry": 0.38314260543755885,
+      "current_execution_authorization": false
+    }
+  },
+  "maker_comparison": {
+    "ordinary_YES_prices": [
+      0.63,
+      0.64
+    ],
+    "ordinary_NO_prices": [
+      0.35,
+      0.36
+    ],
+    "quantity": 5,
+    "NO_at35c_cost": 1.75,
+    "NO_selected_payout": 1.7100000000000002,
+    "NO_selected_profit": -0.039999999999999813,
+    "note": "Makerfee0 beforecarry/selection; .35alreadyabove.342selectedfair. Anyfarbelowbookquote needs newfill-conditionedunderwriting."
+  },
+  "joint_portfolio_comparison": {
+    "held_MessiYES_and_proposed_LiuNO_both_win": 0.352,
+    "both_lose": 0.21,
+    "scope": "SuppliedpartialjointGooglemodel, notempiricalbound; otherassetsfixed andunmodeledscores remain. No automatichedgecredit."
+  },
+  "horizon_sensitivities": {
+    "normal_december_planning_days": 45,
+    "March31_fallback_about_days": 163,
+    "capital_after_January_possible": true
+  }
+}

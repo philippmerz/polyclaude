@@ -1,0 +1,70 @@
+{
+  "schema": "deep_review.descriptive_statistics.v1",
+  "review_index": 404,
+  "computed_utc": "2026-10-20T00:18:55.945585+00:00",
+  "source_unit": "work/0404_history_0011.json",
+  "source_raw_sha256": "3d0f93556a60ce95ef84d13d6e50cd175001d4e0a002aee16648edf939210273",
+  "target": "future first-published Sep2026 SA totalnonfarm openings in thousands; YES reportedinteger<=6799",
+  "last_published_current_vintage": {
+    "month": "2026-08",
+    "thousands": 7079
+  },
+  "descriptive_change_windows": {
+    "3": {
+      "n_monthly_changes": 3,
+      "mean_change_thousands": -152.66666666666666,
+      "median_change_thousands": -256,
+      "sample_sd_thousands": 269.3034224315267,
+      "min": -355,
+      "max": 153,
+      "changes_below_minus279_5k": 1,
+      "negative": 2
+    },
+    "6": {
+      "n_monthly_changes": 6,
+      "mean_change_thousands": 26.166666666666668,
+      "median_change_thousands": -41.5,
+      "sample_sd_thousands": 374.5917333133056,
+      "min": -355,
+      "max": 698,
+      "changes_below_minus279_5k": 1,
+      "negative": 4
+    },
+    "12": {
+      "n_monthly_changes": 12,
+      "mean_change_thousands": 13.333333333333334,
+      "median_change_thousands": -41.5,
+      "sample_sd_thousands": 373.66570702442124,
+      "min": -355,
+      "max": 698,
+      "changes_below_minus279_5k": 4,
+      "negative": 7
+    },
+    "24": {
+      "n_monthly_changes": 24,
+      "mean_change_thousands": -18.375,
+      "median_change_thousands": -77.0,
+      "sample_sd_thousands": 324.324691373911,
+      "min": -577,
+      "max": 698,
+      "changes_below_minus279_5k": 6,
+      "negative": 14
+    },
+    "43": {
+      "n_monthly_changes": 43,
+      "mean_change_thousands": -75.32558139534883,
+      "median_change_thousands": -106,
+      "sample_sd_thousands": 336.95461902516195,
+      "min": -679,
+      "max": 698,
+      "changes_below_minus279_5k": 12,
+      "negative": 25
+    }
+  },
+  "limitations": [
+    "Current-vintage revised history, not real-time first-estimate backtest.",
+    "Overlapping windows and secular regime shift are not independent forecasts.",
+    "Historical variation already includes survey noise; adding a full estimated sampling SE can double count.",
+    "No market prices or calibrated predictive coverage."
+  ]
+}

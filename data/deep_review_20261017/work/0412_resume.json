@@ -1,0 +1,19 @@
+{
+  "captured_as_of": "2026-10-20T00:40:53.004207Z",
+  "identity": {
+    "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+    "market_id": "3072315",
+    "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity\u2019s Last Exam in 2026 be 55% or higher?"
+  },
+  "no_forecast": true,
+  "phase": "FACTS_READY_NOT_VALUED",
+  "review_index": 412,
+  "schema": "deep_review.fact_resume.v1",
+  "source_capture_root": "logs/deep_review_20261017/0700case0412_facts_0042",
+  "source_paths": [
+    "work/0412_facts_0042.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "unit_sha256": "6bd8ec85a3ebd6caf92ea32313137a57fcf3102578e948af87daa8ab572932b9"
+}
