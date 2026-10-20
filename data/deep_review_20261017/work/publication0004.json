@@ -1,0 +1,20 @@
+{
+  "schema": "bounded_publication_verification.v2",
+  "observed_utc": "2026-10-20T00:04:04.584540+00:00",
+  "commit": "ca4cb0b1d1b91e94e8d2b19af7da1faedc0d580e",
+  "origin_main_matches": true,
+  "deployment_http": 200,
+  "deployment": {
+    "head_sha": "ca4cb0b1d1b91e94e8d2b19af7da1faedc0d580e",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/philippmerz/polyclaude/actions/runs/39345257049"
+  },
+  "capture_directory": "logs/deep_review_20261017/publication0004",
+  "live_csv_http": 200,
+  "live_csv_exact_bytes": true,
+  "local_csv_sha256": "117e62a0ac449e8c5bac0b521ea0e6f594e8a20fa7c5540575aab25b1611915c",
+  "live_csv_sha256": "117e62a0ac449e8c5bac0b521ea0e6f594e8a20fa7c5540575aab25b1611915c",
+  "live_csv_rows": 225,
+  "completed_utc": "2026-10-20T00:04:04.800448+00:00"
+}

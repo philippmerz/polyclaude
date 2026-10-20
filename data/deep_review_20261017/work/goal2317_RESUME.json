@@ -1,6 +1,6 @@
 {
   "schema": "finite_review_phase.v1",
-  "updated_utc": "2026-10-19T23:59:35.135898+00:00",
+  "updated_utc": "2026-10-20T00:04:38.812570+00:00",
   "previous_turn_classification": "progress:398/400immutablevaluations, DEC239LIVE_UNFILLED5NO46c/2.30 verified, account/chart/docs committed/pushed1f8ffa5; liveCSVbytesverified.",
   "counts_at_start": {
     "valued": 359,
@@ -14,7 +14,7 @@
   "prepared_next": 404,
   "current_orders": "23:57:08\u201311 exact3originalLIVE0BUY6.50/3reservations,8indexedrows/no400NO403YESholding. No financialfollowuppending.",
   "financial_asof": "23:36:40\u201357 canonicalproducer195.20incl5.83gas; trading189.37mid185.79indicative netdepth; PM34.23mid30.65depth; CSV225. Cancellation is no cashcredit/financialrefresh.",
-  "current": "Complete boundedlocalcloseout;402valued/403revisedNO_ENTRY beforemoney;400zero-fillcancellationfinal. Final23:57state3LIVE0bids6.50/no400403holdingreservation; auditCLEAN/cruxquiet/4daemons1fresh. TG1273sent. CSV225/financial23:36notrefreshed. Scopedpublicationverification is finalstep.",
+  "current": "Allboundedworkcomplete.402valued/403revisedNO_ENTRY beforemoney;400zero-fillcancelreconciled. Final23:57exact3LIVE0bids6.50/no400403holdingreservation; auditCLEAN/cruxquiet/4daemons1fresh. TG1273sent. Code215bdea+researchca4cb0b published; Pagesdeploymentca4success/liveCSV225exacthashverified00:04. Nofinancialfollowuppending.",
   "next_safety": "ExistingfullOct20 02UTC/earliermaterialsource/fill; no newtimer.",
   "completed": [
     {
@@ -40,7 +40,7 @@
     "base_records": 736,
     "revisions_written": 66
   },
-  "next": "Endthisboundedrun afterpublicationverification; next404factsready/notvalued forordinaryfinitequeueresumption. No idlefollowup/newtimer/goalmutation.",
+  "next": "Endscheduledrun. Next404factsready/notvalued for ordinary authorizedfinitequeue resumption; no idlefollowup/newtimer/goalmutation.",
   "critical": "400CANCELED_ZERO_FILL complete/neverresubmit.403NOT_ENTERED_SOURCE_REVISION; preparatoryprior/feed3termsretired. No pendingfinancialsubmission orcancellationfollowup.",
   "engineering": {
     "agent": "/root/case390_facts_2115",
@@ -66,5 +66,7 @@
   "source_limitation": "CorrectedRBAcollectorpricingdirection and17irrelevantliteral-titleomissions; rootall20titles+fullprimarypolicyQ&Aread. Correctedunit+originalpreserved; no globalresearchblock.",
   "entry_decision": "data/deep_review_20261017/work/0403_no_entry_cleanup_2359.json",
   "final_state": "data/deep_review_20261017/work/final2358_state.json",
-  "telegram_message_id": 1273
+  "telegram_message_id": 1273,
+  "status": "BOUNDED_RUN_COMPLETE",
+  "publication_receipt": "data/deep_review_20261017/work/publication0004.json"
 }
