@@ -1,0 +1,46 @@
+{
+  "schema": "primary_partial_review.v1",
+  "review_index": 430,
+  "saved_utc": "2026-10-20T03:54:09.842541+00:00",
+  "phase": "Started 03:48:06UTC; incomplete primary review, not a valuation or exclusion.",
+  "identity": {
+    "market_id": "4662691",
+    "condition_id": "0x1889c867f870b77d3beb6c768dc165c47771094956f286f8891e70b8d2768413",
+    "criteria_sha256": "dbc5b78b44f7762f92c93b39b82a820de40b3f0c0500434a20e199c2f6443c59"
+  },
+  "source_unit": {
+    "path": "work/0430_facts_0308.json",
+    "sha256": "efec11eac5d78b9a2438cd53e9d3212552d871c1b0043dfff3120c645facd795"
+  },
+  "primary_work_before_compaction": [
+    "Full frozen criterion read. Root verified raw/gzip hashes for the two Rockstar captures; read all available music-page text (2422 characters). Newswire retrieval exposes title/metadata, not full article body.",
+    "Official page describes 34 original album tracks, November19 release and nine selected singles. Frank absence from the selected singles does not establish absence from the full album. Game radio/music/cameo credits and album credits are not automatically equivalent.",
+    "Literal no-release cutoff November26 23:59ET is November27 04:59UTC, later than Gamma endDate. Featured/credited artist wording does not explicitly settle every writer/producer/alias interpretation."
+  ],
+  "incidental_own_price_exposure": {
+    "occurred": true,
+    "stage": "Search results before any saved primary probability/model/own quote.",
+    "unverified_search_snippets": [
+      {
+        "url": "https://polym.trade/fr/event/who-will-be-featured-on-gta-vi-the-album",
+        "display": "Frank 7c"
+      },
+      {
+        "url": "https://polymarkettrader.com/odds/person/frank-ocean/",
+        "display": "GTA11%, dated October14"
+      },
+      {
+        "publisher": "Betfair search results",
+        "display": "Inconsistent6.2/6.8 and8.2/8.8; zero matched/suspended text."
+      }
+    ],
+    "treatment": "Not current verified books, calibrated consensus or fundamental probability evidence. Root must disclose anchoring exposure; do not claim price-blind forecast. Contract equivalence and freshness unverified."
+  },
+  "unopened_primary_lead": "https://press.atlanticrecords.com/grand-theft-auto-vi-album",
+  "remaining": [
+    "Read available official album/streaming credits and dated artist history; distinguish partial page from complete roster.",
+    "Verify exact current Gamma identity/status.",
+    "Construct defensible independent probability/range or identify a substantive case-specific source gap; then both-side current fees/depth/minimums, conditional-fill/carry and portfolio comparison."
+  ],
+  "not_done": "No probability, model, quote, exclusion, investment decision, ledger completion or financial action. Preserve as incomplete; resume active430 before starting another case."
+}

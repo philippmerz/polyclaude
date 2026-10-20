@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-20T03:45:22.778364+00:00"
+reviewed_at: "2026-10-20T03:54:09.842541+00:00"
 valid_until: "2026-10-20T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 1339d046c9c3698b57d9a6b748e8d96a53c0692eca99c4b54fdf76b52b335595
+  README.md: 648e2d04049cc3307029de736196830c23c7c9697cd0240aa26f545eb64c4857
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
   scripts/README.md: 8a5d3cfc5f01f7cb6dd0e8420fcc52d9fd536b358e6606aed218e3c1c2f22b1f
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 840547b04d28afbe0232301313da83039d4166a0a0b5724ba769c613b224bcfa
+  notes/backlog.md: 7a140dc8dcd097729b09caef1fa3bbfc42cfafd1e820d2c711c920b78c6034b7
   notes/resting_orders.md: 04bce76fe85a3c5251553d492b33b3fdd4d802372bf1e4515fe86f7dd3f54614
-  notes/journal.md: a7a0378031a1a6c00c0685c8387524022a8575eaf2ab7dd3f8649f884b6c1539
+  notes/journal.md: 5ce0c2826cb0b49c55621319983e3fd868bfb791754d7925222953000700be1c
 ---
 
 ## Run status
@@ -37,6 +37,6 @@ AuditCLEAN/cruxquiet/Ostium0/nochange/UMA0/hurdle4clear0flagged/watchlist0/0over
 
 ## Finite research and limits
 
-**371valued/12blocked/366factual/2251pending;749base+69revisions; no active case.** Latest428Ink saved/indexed, no entry; next430/431/433 facts only/not started,408source gap case-specific. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), then selected resume unit; preserve every completed eval immediately. Next notification400valued/materialfinding/block. No category/price/small-model rejection.
+**371valued/12blocked/366factual/2251pending;749base+69revisions;430 incomplete.** Latest428Ink saved/indexed, no entry.430 started03:48/full rule-source partial saved; incidental own-price exposure disclosed/no forecast or quote.431/433/434/435/436 collector facts only, pending primary verification and judgment;408source gap case-specific. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), then selected resume unit; preserve every completed eval immediately. Next notification400valued/materialfinding/block. No category/price/small-model rejection.
 
 Discovery03:27–29 capped/incomplete:61metadata batches/17+1022rows inspected, not valuations;63+1978selected outside delta batches remain unvalued. Current mutable prior copied before overwrite, not retroactive recovery of earlier missing identity comparison. [Coverage](../data/deep_review_20261017/work/tick030114_discovery_primary_0343.json). No universe-wide absence finding. Entryconsole sibling/ask-label UI repair optional; exact contracts/vetted gates govern. Preserve unrelated changes and private raw account/copyright bodies.

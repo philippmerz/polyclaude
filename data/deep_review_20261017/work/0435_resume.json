@@ -1,0 +1,10 @@
+{
+  "review_index": 435,
+  "updated_utc": "2026-10-20T03:54:09.842541+00:00",
+  "phase": "collector facts only; root source/identity verification and complete-rule/valuation or factual-exclusion decision pending",
+  "source_paths": [
+    "work/0435_facts_0350.json"
+  ],
+  "facts_sha256": "3368ee0a054322ae2653dcf093e7db86c2ae7ee710988dee172ddc27567d62a9",
+  "status_limit": "Not a completed evaluation; no probability or investment decision. Collector report is not independent root verification."
+}

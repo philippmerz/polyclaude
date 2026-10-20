@@ -1,0 +1,83 @@
+{
+ "schema": "deep_review_case_facts.v1",
+ "observed_utc": "2026-10-20T03:49:00.097709Z/2026-10-20T03:49:02.394814Z",
+ "review_index": 434,
+ "market": {
+  "id": "5154842",
+  "conditionId": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+  "question": "Will there be between 35 and 59 tornadoes in the US in October 2026?",
+  "slug": "us-tornadoes-in-october-2026-20260925t160000000z-will-there-be-between-35-and-59-tornadoes-in-the-us-in-october-2026",
+  "active": true,
+  "closed": false,
+  "archived": false,
+  "endDate": "2026-11-11T16:00:00Z",
+  "createdAt": "2026-09-30T13:43:49.254426Z",
+  "updatedAt": "2026-10-20T03:42:46.237812Z",
+  "outcomes": "[\"Yes\", \"No\"]",
+  "resolutionSource": ""
+ },
+ "effective_status": "pending",
+ "resume_capture": {
+  "receipt": "logs/deep_review_20261017/case434_facts_0350/resume434.receipt.json",
+  "raw_sha256": "9bde2e520d5f1fb48185c5d2eff563bb9437d5b42fd460cd94f849c0553a3b53",
+  "gzip_sha256": "02528bd8f612c071d74466f1a8ee8ea9163d35884cfbc81acbf322b402bed00b"
+ },
+ "frozen_criterion": {
+  "yes": "The first relevant tornado count published on the NCEI U.S. Tornadoes Time Series after scheduled monthly release determines the monthly U.S. tornado count; Yes if the count is 35–59 inclusive. Only the final NCEI dataset for October 2026 counts. Pre-release preliminary values are excluded. If the post-scheduled-release value is labeled preliminary, it controls despite later revisions.",
+  "release_in_frozen_rule": "2026-11-11 11:00 AM ET",
+  "fallback": "If no data is published by the scheduled release or site is temporarily unavailable, remain open until available; if still unavailable by next scheduled publication, use most recent prior month; permanent NCEI unavailability permits another credible source.",
+  "criteria_sha256": "08126e459a5f9814be1939abdd31ff3d5149fc015025fff4199d746c560a0006"
+ },
+ "primary_sources": [
+  {
+   "url": "https://www.ncei.noaa.gov/access/monitoring/tornadoes/time-series",
+   "fact": "Exact resolution-source page. Captured HTML is an NCEI page shell/SPA; no October 2026 count or final monthly value appears in its static body.",
+   "evidence": {
+    "window_utc": [
+     "2026-10-20T03:49:00.280278Z",
+     "2026-10-20T03:49:00.801888Z"
+    ],
+    "http": 200,
+    "raw_sha256": "7d3d9dfadc76b4129b957923381f0eb0010c789697c4e86bf1d2ca5d01887cf2",
+    "gzip_sha256": "83f4b470586979d1492a649adf7a08516c5526ff96d411bdfaa0d59ca6894d42",
+    "capture": "logs/deep_review_20261017/case434_facts_0350_sources/ncei_tornado_timeseries.receipt.json"
+   }
+  },
+  {
+   "url": "https://www.ncei.noaa.gov/access/monitoring/dyk/monthly-releases",
+   "fact": "Current official schedule body states “October U.S. Release: Mon, 9 Nov 2026, 11:00 AM EST.” This differs from the frozen rule’s scheduled Nov 11, 2026 11:00 AM ET; I preserve both as a source/criteria discrepancy, not a resolution conclusion.",
+   "evidence": {
+    "window_utc": [
+     "2026-10-20T03:49:00.811539Z",
+     "2026-10-20T03:49:01.375526Z"
+    ],
+    "http": 200,
+    "raw_sha256": "1b8d438dd7b6f49a19fb0c353a5bc77d2a885bdc2896bfdd343bd5c013f753fa",
+    "gzip_sha256": "bf2373f9ae0f22b4f53e4f832fde45867c403168da7389e7bce903e0056789da",
+    "capture": "logs/deep_review_20261017/case434_facts_0350_sources/ncei_monthly_release_schedule.receipt.json"
+   }
+  },
+  {
+   "url": "https://www.ncei.noaa.gov/access/metadata/landing-page/bin/iso?id=gov.noaa.ncdc%3AC00769",
+   "fact": "Official dataset: “State of the Climate Monthly Overview - National Tornadoes”; metadata temporal coverage 2006 to present, with NCEI datasets generally primary for the monthly narrative. Dataset-level context, not the market-specific count.",
+   "temporal_coverage": "2006 to Present",
+   "evidence": {
+    "window_utc": [
+     "2026-10-20T03:49:01.385550Z",
+     "2026-10-20T03:49:02.394814Z"
+    ],
+    "http": 200,
+    "raw_sha256": "bc037c7b15022ae45f3bfc6a67598707a60ba916371509e842fbe31401179c59",
+    "gzip_sha256": "b921ce0fd02d2ea0dbc1aaba0f7ee5ee7e83a3a3b51b69ac5871b3d65cc40f34",
+    "capture": "logs/deep_review_20261017/case434_facts_0350_sources/ncei_national_tornado_metadata.receipt.json"
+   }
+  }
+ ],
+ "gaps": [
+  "The captured time-series HTML did not expose the October 2026 count; the month is still ongoing and the frozen release date is future relative to retrieval. This is not evidence the eventual value will be absent.",
+  "Official schedule currently differs from the frozen rule’s stated release date (Nov 9 vs Nov 11); only root can decide any criteria/source treatment.",
+  "Gamma standalone resolutionSource field is empty; the market description contains the NCEI URL and source rule.",
+  "No SPC preliminary tornado count or other non-resolution source was collected."
+ ],
+ "capture_note": "Gamma identity/status and three NCEI bodies were captured with read_capture before parsing. No books, prices or probabilities inspected."
+}
