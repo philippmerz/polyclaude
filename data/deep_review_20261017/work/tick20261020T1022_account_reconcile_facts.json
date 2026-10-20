@@ -1,0 +1,104 @@
+{
+  "schema": "tick20261020T1022_account_reconcile.v1",
+  "collection_window_utc": [
+    "2026-10-20T10:24:01.863888Z",
+    "2026-10-20T10:24:02.703975Z"
+  ],
+  "timing_basis": "call_window, not wire timing",
+  "baseline": "data/deep_review_20261017/work/tick20261020T091017_account_facts.json",
+  "private_capture_dir": "logs/tick20261020T1022_account_reconcile (0700); authenticated payloads private.",
+  "orders": {
+    "http_status": 200,
+    "fully_paginated": true,
+    "count": 3,
+    "same_order_terms_and_identity_as_091017": true,
+    "details_count": 3,
+    "detail_status_counts": {
+      "LIVE": 3
+    },
+    "all_details_LIVE_zero_matched_and_no_associated_trades": true,
+    "canonical_order_fingerprint": "604c9b9262096bd2bee9a4c6150adbee675ee90dbbdbddcfa2f749666218cb65"
+  },
+  "trades": {
+    "http_status": 200,
+    "fully_paginated": true,
+    "count": 127,
+    "unique_id_count": 127,
+    "same_all_rows_as_091017": true,
+    "canonical_rows_fingerprint": "0cd79add25fbed45f7b2b63ff550ee333dfe149402ea786d7213a46ac2cc02d9"
+  },
+  "indexed_positions": {
+    "http_status": 200,
+    "row_count": 9,
+    "below_100_limit": true,
+    "same_identity_size_totalBought_redeemable_as_091017": true,
+    "canonical_position_fingerprint": "d97f7ac542efd8b72cffbdb43a6e13385d59775eb67a93151e2d9b9b4f1015f3",
+    "positions": [
+      {
+        "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+        "outcome": "Yes",
+        "size": 29,
+        "totalBought": 29,
+        "redeemable": false
+      },
+      {
+        "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+        "outcome": "No",
+        "size": 29,
+        "totalBought": 29,
+        "redeemable": false
+      },
+      {
+        "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+        "outcome": "Yes",
+        "size": 10,
+        "totalBought": 10,
+        "redeemable": false
+      },
+      {
+        "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+        "outcome": "No",
+        "size": 6,
+        "totalBought": 6,
+        "redeemable": true
+      },
+      {
+        "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+        "outcome": "Yes",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+        "outcome": "No",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
+        "outcome": "No",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+        "outcome": "No",
+        "size": 4.0347,
+        "totalBought": 161.0947,
+        "redeemable": true
+      },
+      {
+        "slug": "trump-out-as-president-before-2027",
+        "outcome": "No",
+        "size": 0.33,
+        "totalBought": 28.33,
+        "redeemable": false
+      }
+    ]
+  },
+  "conclusion": "unchanged",
+  "errors": []
+}

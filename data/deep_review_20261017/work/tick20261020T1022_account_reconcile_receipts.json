@@ -1,0 +1,66 @@
+{
+  "schema": "tick20261020T1022_account_reconcile_receipts.v1",
+  "receipts": [
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/indexed_positions.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/indexed_positions.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:02.544691Z",
+      "received_utc": "2026-10-20T10:24:02.703975Z",
+      "raw_sha256": "6fcd369e6136df6db2b75e189659bd6bd252e58b351bff6760dc6f6e8d91bb91",
+      "gzip_sha256": "68e5fe2232377bf55b7d945d08e969c78eda35b39ee73381754e15a40c6159dc"
+    },
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/openorders_p000.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/openorders_p000.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:01.863888Z",
+      "received_utc": "2026-10-20T10:24:01.970836Z",
+      "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+      "gzip_sha256": "fb4c6d1d8ff5dec099cbca9e8422eba38653615c6ccf0f87d11f0d2d3963714c"
+    },
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/order_detail_00.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/order_detail_00.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:01.982374Z",
+      "received_utc": "2026-10-20T10:24:02.087158Z",
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "gzip_sha256": "6564e1195eb64e5dc668593e1dcc99fb4b1dfc5a3dcf80458de10f6fc95a734e"
+    },
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/order_detail_01.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/order_detail_01.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:02.097870Z",
+      "received_utc": "2026-10-20T10:24:02.221996Z",
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "gzip_sha256": "9a39c19d31cbb6961283dc419584003f78f594d20828d89f9de150eb0fd58d97"
+    },
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/order_detail_02.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/order_detail_02.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:02.233079Z",
+      "received_utc": "2026-10-20T10:24:02.335828Z",
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "gzip_sha256": "e46ebced402757c6ecf7fb51e195747901b511e8603e0a188c28c5c8ca7d62ed"
+    },
+    {
+      "receipt": "logs/tick20261020T1022_account_reconcile/trades_p000.receipt.json",
+      "body": "logs/tick20261020T1022_account_reconcile/trades_p000.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "started_utc": "2026-10-20T10:24:02.347376Z",
+      "received_utc": "2026-10-20T10:24:02.514816Z",
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "gzip_sha256": "74905bda8aadfcaefec53d807d06e0a3fc13d9f40a67cbbaccbff81f6f303b3f"
+    }
+  ],
+  "note": "Private receipt directory; authenticated raw bodies are not tracked facts."
+}

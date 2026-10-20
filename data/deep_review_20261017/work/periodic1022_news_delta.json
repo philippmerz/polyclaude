@@ -1,0 +1,8 @@
+{
+  "read_utc": "2026-10-20T10:23:12.388880+00:00",
+  "prior_actual_review_watermark": "2fc7fa7cdb47a36eef426dbccb6c4d09c0926d38/2026-10-20T10:14:21Z",
+  "news_log_sha256": "38d350e6d48a1e8d075af3a31197c93153598f70a7242e6569b2e3897f955b40",
+  "bytes": 953702,
+  "new_rows": [],
+  "scope": "Current public news delta only, not a complete external source sweep. No inference from journal time."
+}

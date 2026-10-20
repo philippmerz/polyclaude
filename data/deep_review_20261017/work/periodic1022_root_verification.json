@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T10:25:46.367664+00:00",
+  "facts": "data/deep_review_20261017/work/tick20261020T1022_account_reconcile_facts.json",
+  "facts_sha256": "52199a5f28889428074cb7b0397b4d4e6bb41a74d4444dc5df4dde6b05d90de2",
+  "receipt_index": "data/deep_review_20261017/work/tick20261020T1022_account_reconcile_receipts.json",
+  "receipt_index_sha256": "f1beefe84e8b5d9e724c0e8291e663d148901ed66eaa5bbc4fffe0db6184cbf2",
+  "six_receipt_pairs_verified": true,
+  "orders_and_trades_entire_JSON_equal_to_0957": true,
+  "nine_indexed_positions_exact_identity_quantity_redeemability_equal": true,
+  "judgment": "No new fill/exposure/anomaly observed; retain current holdings and3originalpilots/noadd. No fresh financial/source mark or prior change. Existing14full or earlier material source/fill; no repeated scans/research/TG."
+}
