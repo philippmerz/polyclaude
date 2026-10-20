@@ -1,0 +1,113 @@
+{
+  "schema": "scoped_snapshot_storage_dedup.v1",
+  "completed_utc": "2026-10-20T06:16:14.265549+00:00",
+  "pairs": [
+    {
+      "duplicate_path": "logs/cron20261020T032706Z_discovery/current/shortlist_20261020T032735050852Z_thin_tail.json",
+      "canonical_path": "data/snapshots/shortlist_20261020T032735050852Z_thin_tail.json",
+      "raw_sha256": "fe7cf5edf90c62922c5ac1902234100687d9abf6a7c520ffb3d371600bb330a5",
+      "duplicate_before": {
+        "size": 9684070,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792466855251681223,
+        "inode": 430854,
+        "device": 2049,
+        "blocks": 18928,
+        "nlink": 1
+      },
+      "canonical_before": {
+        "size": 9684070,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792466855251681223,
+        "inode": 204243,
+        "device": 2049,
+        "blocks": 18928,
+        "nlink": 1
+      },
+      "duplicate_after": {
+        "size": 9684070,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792466855251681223,
+        "inode": 204243,
+        "device": 2049,
+        "blocks": 18928,
+        "nlink": 2
+      },
+      "canonical_after": {
+        "size": 9684070,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792466855251681223,
+        "inode": 204243,
+        "device": 2049,
+        "blocks": 18928,
+        "nlink": 2
+      },
+      "allocation_reclaimed_bytes": 9691136
+    },
+    {
+      "duplicate_path": "logs/cron20261020T032706Z_discovery/preexisting/shortlist_20261020T021505109625Z_thin_tail.json",
+      "canonical_path": "data/snapshots/shortlist_20261020T021505109625Z_thin_tail.json",
+      "raw_sha256": "fa123f6707ebd5750192681bb3be21b7f1a802d132105270e4b6a10c17f9973d",
+      "duplicate_before": {
+        "size": 9673062,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792462505309645999,
+        "inode": 430760,
+        "device": 2049,
+        "blocks": 18904,
+        "nlink": 1
+      },
+      "canonical_before": {
+        "size": 9673062,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792462505309645999,
+        "inode": 204145,
+        "device": 2049,
+        "blocks": 18904,
+        "nlink": 1
+      },
+      "duplicate_after": {
+        "size": 9673062,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792462505309645999,
+        "inode": 204145,
+        "device": 2049,
+        "blocks": 18904,
+        "nlink": 2
+      },
+      "canonical_after": {
+        "size": 9673062,
+        "mode": 384,
+        "uid": 1003,
+        "gid": 1007,
+        "mtime_ns": 1792462505309645999,
+        "inode": 204145,
+        "device": 2049,
+        "blocks": 18904,
+        "nlink": 2
+      },
+      "allocation_reclaimed_bytes": 9678848
+    }
+  ],
+  "allocation_reclaimed_bytes": 19369984,
+  "allocation_reclaimed_mib": 18.47265625,
+  "filesystem_free_before_bytes": 327454720,
+  "filesystem_free_after_bytes": 346808320,
+  "proof_dir": "logs/periodic_20261020T0613_storage",
+  "third_pair": "Preserved as separatefiles; mtimes differ. No archive/reader extension or other cleanup.",
+  "integrity": "Both original pathnames/bytes and size/mode/uid/gid/mtime preserved. Inode/nlink/ctime necessarily change; shared files stay immutable. Existing raw SHA references continue to match. No financial/action/forecast/schedule/goal lifecycle mutation."
+}

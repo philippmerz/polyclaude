@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-20T06:10:33.539519+00:00"
+reviewed_at: "2026-10-20T06:17:12.722574+00:00"
 valid_until: "2026-10-20T10:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
@@ -10,9 +10,9 @@ source_hashes:
   strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
   scripts/README.md: d40c216e0d4d59d7eb23e3c6ee2bc4e78187a68a49e2f31117ed58c1c7e469a1
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 6e9965639bd682a5ff930e4b6fdae1dd17f0079bab5ccc9319505c295b550629
+  notes/backlog.md: b5f655c0ed85fec0717653a7e7985cfbf029c9809e72c40ad325858750db2a3d
   notes/resting_orders.md: fb322fd937d2c5443089a46fb4f84bf501f7305956a6dacbc27cb83e94a4ed1c
-  notes/journal.md: 6fe2b90b78e26d15299197556f0709c2e5c1261b5fa1c8bb8d0fe6b60568ff7b
+  notes/journal.md: b524466dd9dce42989a60215ac9d8a908a229f0f2431d869e6ac4a099afa2cea
 ---
 
 ## Run status
@@ -41,4 +41,4 @@ HLE06:02HTTP200/Age2599/body15fc012f... unchanged; baredefaultclient403 preserve
 
 **377 valued/14 blocked/367 factual/2242 pending;758 base+69 revisions;next440/noactive.**438 Iran11%YES/noentry;439 CA0188%YES/noentry after fullrules/actualsources/bothside/maker/carry/portfolio review.439 initial75%prequote model and88%postquote actualnewmap source update preserved; oldspecialmap62.1 nottransferred.437 historicalminute gap remains unpriced, not economicallyrejected/globalblock. Later collector packets facts only. [Checkpoint](deep_review_checkpoint.json) · [Small phase](../data/deep_review_20261017/work/goal0018_RESUME.json) · [439](../research/2026-10-17-deep-review/evaluations/0439.md).
 
-Fee-disabled publicreader repair: absentcompactfd requires exactGamma/strictdisabled flag, consistent optionalzero schedule and exactfullCLOB numericzero corroboration; no inventeddescriptor/parity.24tests/fresh438capture pass; no financialwriter changed. [Repair](../research/2026-10-20-fee-disabled-research-capture.md). Disk317MiBfree: boundedmetadata audit found possible duplicatecopies; hashes/consumer checks pending, nothingdeleted. Next material/milestoneTelegram400valued; first100/200already notified.
+Fee-disabled publicreader repair: absentcompactfd requires exactGamma/strictdisabled flag, consistent optionalzero schedule and exactfullCLOB numericzero corroboration; no inventeddescriptor/parity.24tests/fresh438capture pass; no financialwriter changed. [Repair](../research/2026-10-20-fee-disabled-research-capture.md). Periodic06:13 review found no new alerts through06:13:54; due06check reused, next10UTC. Storage:two exact immutable snapshot-copy pairs deduplicated,18.47MiB reclaimed/330.74MiBfree atverification; originalpaths/bytes/mode/owner/mtime preserved. Shared-inode copies must be detached atomically before manual edits; third pair stays separate. [Proof](../data/deep_review_20261017/work/periodic0613_storage_verified.json). Next material/milestoneTelegram400valued; first100/200already notified.
