@@ -1,0 +1,91 @@
+{
+  "schema": "deep_review.primary_source_check.v1",
+  "review_index": 412,
+  "reviewed_utc": "2026-10-20T00:55:30.823054+00:00",
+  "captures_verified": [
+    {
+      "receipt": "logs/deep_review_20261017/0700case0412_facts_0042/hle_leaderboard.receipt.json",
+      "raw_sha256": "514f6c49609448ca9b61686a66d0969033f6914dc8085b098d51dc0d3529aa08",
+      "gzip_sha256": "a01f322fb6d2345a4054849c109da6f600e5a5b0d530d659e19d929a85502f4a"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/0700case0412_facts_0042/hle_models_api.receipt.json",
+      "raw_sha256": "eea2dde71646cbe49f8798cef629533189ceeea69bcdb5ecd7d4f916fafe736e",
+      "gzip_sha256": "e78d76a5a1dfa9f86b538f8ef118fcfd77e6a41a65b9c6cf17bd4c60ad845e01"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/0700case0412_facts_0042/kimi_k3_blog.receipt.json",
+      "raw_sha256": "ef8bcfc3e824c385cc1c55b6cf0282b7b2e4923b8f9c384c391e969e55d5b1f7",
+      "gzip_sha256": "3262bfc95d3e85c8cb3f84699f387b39ee9b944fc501c1bc64872ae5327fe0f6"
+    }
+  ],
+  "resolver_facts": {
+    "observed_moonshot_hle": {
+      "K2": 21.4,
+      "K2.5": 25.4,
+      "K2.6": 35.48,
+      "K3": 41.08
+    },
+    "cache_age_at_response": 2468,
+    "K3_isTextOnlyModel": "fieldabsent, notfalse/proofmultimodal",
+    "latest_page_notice": "HLE-DiamondSep22 migration path when originalHLE reachesnoiseceiling; DiamondisnotautomaticAccuracyequivalent",
+    "server_table": "StaleGemini3Pro38.3/GPT525.3; currentAPIhigher, not avalidcurrentboardproxy",
+    "source_is_unavailable": "NotestablishedbyLoadingHLEresults/serverstaleness: officialAPIresponds; UIbindingtracepending."
+  },
+  "issuer_readmes_verified": [
+    {
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/README.md",
+      "captured_utc": "2026-10-19T10:46:31.776036+00:00",
+      "raw_sha256": "849a303d849486aac61d1f0c253e3a1148ca59e801be807151c2dc3cce57ccb2",
+      "gzip_sha256": "d1cd6bc351d58fd2b00ba867af7a1b86712e3d80e041d2283ff4f722771fcbc1",
+      "finding": "K3HLE-Full43.5withouttools/56withgeneraltools;maxeffort/temp1; K2.530.1full/50.2tools,text/imagefullset. DistinctconfigurationfromcurrentAPI, notautomaticexclusion."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K2.5/master/README.md",
+      "captured_utc": "2026-10-19T10:46:10.945354+00:00",
+      "raw_sha256": "97a8b8d78c8832ec149792a3a00f1f04c5c87fc61d7ece5160024e8720251020",
+      "gzip_sha256": "0fe6adbf7fc1a8f8ce8e4ac68c6bd42221d50600d8de998176a706835400474e",
+      "finding": "K2.5fullset includesimage/text;51.8texttools/39.8imagetools separate, not55overall."
+    }
+  ],
+  "global_board_context_not_Kimi_score": [
+    {
+      "id": "gemini-4-argon-high",
+      "name": "Gemini 4 Argon",
+      "hle": 55.6,
+      "releaseDate_metadata": "2026-10-13"
+    },
+    {
+      "id": "claude-opus-5-5-high",
+      "name": "Opus 5.5",
+      "hle": 55.36,
+      "releaseDate_metadata": "2026-09-22"
+    },
+    {
+      "id": "claude-fable-5-1-high",
+      "name": "Fable 5.1",
+      "hle": 54.6,
+      "releaseDate_metadata": "2026-09-01"
+    },
+    {
+      "id": "gpt-6-astra-high",
+      "name": "GPT-6 Astra",
+      "hle": 53.6,
+      "releaseDate_metadata": "2026-09-03"
+    },
+    {
+      "id": "claude-fable-5-high",
+      "name": "Fable 5",
+      "hle": 52.72,
+      "releaseDate_metadata": "2026-06-09"
+    },
+    {
+      "id": "gpt-6.1-sol-high",
+      "name": "GPT-6.1 Sol",
+      "hle": 51.28,
+      "releaseDate_metadata": "2026-09-29"
+    }
+  ],
+  "interpretation": "55iswithinobservedfrontierrange, notKimi-specificprobability; Kimi13.92ppshortbycurrentAPI. Vendor56withtools potentiallymattersunderadmission/fallback/restructuredsources; donotcallsettledYESor0relevance. Complete2026windowqualifies includingpre-marketrecords; historicalmaxcannotbeexcludedbycurrentrows.",
+  "no_probability_or_quotes": true
+}

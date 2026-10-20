@@ -1,0 +1,15 @@
+{
+  "schema": "deep_review.case_resume.v1",
+  "review_index": 414,
+  "phase": "VALUED_NO_ENTRY",
+  "updated_utc": "2026-10-20T01:18:49.378101+00:00",
+  "report": "research/2026-10-17-deep-review/evaluations/0414.md",
+  "report_sha256": "61ddce671dfcd0d958c4b81b3ee195f4fe0f8c28eabadfa7c433e0a01cd5edbb",
+  "model": "research/2026-10-17-deep-review/models/0414_nygov_primary_0119.json",
+  "p_yes": 0.08037390523090565,
+  "selected_reserve_pp": 10,
+  "actual_entry": false,
+  "next_index": 416,
+  "source_identity_erratum": "work/0414_identity_erratum_0105.json",
+  "followup": "No financial action. Reopen on material newer state polls/candidate/turnout or fresh prices passing current model/cost/portfolio gates."
+}

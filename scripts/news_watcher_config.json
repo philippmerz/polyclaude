@@ -163,6 +163,10 @@
     {
       "name": "Venezuela presidency, Delcy Rodriguez and transition news",
       "url": "https://news.google.com/rss/search?q=%28%22Delcy+Rodr%C3%ADguez%22+OR+%22Delcy+Rodriguez%22+OR+Maduro%29+%28Venezuela+OR+presidency+OR+president+OR+presidenta+OR+election+OR+elections+OR+transition+OR+transici%C3%B3n+OR+elecciones%29+when%3A14d&hl=es-419&gl=VE&ceid=VE%3Aes-419"
+    },
+    {
+      "name": "Kimi model, benchmark and Moonshot releases",
+      "url": "https://news.google.com/rss/search?q=%28Kimi+OR+%22Moonshot+AI%22+OR+MoonshotAI%29+%28model+OR+release+OR+HLE+OR+benchmark%29&hl=en-US&gl=US&ceid=US%3Aen"
     }
   ],
   "tier1_keywords": [
@@ -488,7 +492,10 @@
     "Kevin Kiley",
     "Kiley",
     "CA-06",
-    "California 6th District"
+    "California 6th District",
+    "Kimi",
+    "Moonshot AI",
+    "MoonshotAI"
   ],
   "_trump_approval_note": "Trump approval coverage added 2026-09-18 for the short-dated held 38.5-38.9 YES bucket. The exact Datawrapper source is checked separately before close; tier 2 catches broader source/methodology reporting. Prune after the event resolves.",
   "_duma_note": "Duma coverage added 2026-08-28 for the held 295-339 equal-share range. Tier 2 is appropriate because forecasts/results need judgment, not an emergency tick. Prune after the September 2026 election resolves.",

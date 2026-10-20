@@ -1,0 +1,80 @@
+{
+  "schema": "deep_review.primary_margin_mixture.v1",
+  "review_index": 414,
+  "created_utc": "2026-10-20T01:11:35.750548+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "629545",
+    "condition_id": "0x50b78cd83de62d75d504d7a184ba1171436628068b3c3d4dd0384e65d4a40d1b",
+    "criteria_sha256": "43ff675776e0fd1d43ad1d69076b45b50800f28969f6fce972e9c3924dc7000c"
+  },
+  "literal": "Republicannomineewins2026NYgovernor; independentnotRepublicanbyassociation, replacementnomineecounts. AP/Fox/NBCmustallcallsamecandidateelseofficialcertification; no ballot-line-countsubstitution. NormalNov3election/Nov4metadata not guaranteedresolutiondate.",
+  "poll_bridge": {
+    "statewide_D_margins": [
+      {
+        "poll": "MaristOct1\u20134RV",
+        "margin": 11,
+        "weight": 0.5
+      },
+      {
+        "poll": "SienaSep11\u201317LV",
+        "margin": 9,
+        "weight": 0.35
+      },
+      {
+        "poll": "QP Sep17\u201320LV",
+        "margin": 19,
+        "weight": 0.15
+      }
+    ],
+    "weighted_illustrative_margin": 11.5,
+    "not_inverse_variance_estimator": "Weights are primaryjudgmentforrecency/scope/outliergap; overlap/sharederrors notindependentn. Ongoingnewpolls/campaignscope notexhaustivelychecked; regionalCD21R+15 excludedonlybecausegeographydifferent.",
+    "uncertainty": "Design3.6\u20134.1pp proportions isnotwin-probabilitySE. Commonpollbias/turnout/undecideds/housegap+lateevents dominate; do notdivideby sqrt3. Modelscalesnot fittedhistoricalstateerrors.",
+    "competing_R_thesis": "Hochulweakapproval/favorability, Blakemanstrongercommitment/independents, economy/costpressures cancloserace. Siena9undecideds/lowBlakemanrecognition leaveconsolidationrisk; not allundecidedsassignedR.",
+    "competing_D_thesis": "All3statewidepollsD+9to19; NYC andwomen/youngervoters/Dpartisans supportincumbent. Pollingandnomineecertification aredistinctfromcalledwinner."
+  },
+  "regimes": [
+    {
+      "state": "Ordinarypoll-supportedDemlead",
+      "weight": 0.75,
+      "mean_D_minus_R_pp": 11.5,
+      "sd_pp": 5.5,
+      "p_R_wins_margin": 0.01826810701154069
+    },
+    {
+      "state": "Rlateconsolidation/turnout/systematicmiss",
+      "weight": 0.2,
+      "mean_D_minus_R_pp": 3,
+      "sd_pp": 7,
+      "p_R_wins_margin": 0.3341175708976247
+    },
+    {
+      "state": "StrongerDemstateenvironment",
+      "weight": 0.05,
+      "mean_D_minus_R_pp": 18,
+      "sd_pp": 7,
+      "p_R_wins_margin": 0.00506399527469531
+    }
+  ],
+  "p_R_if_majorparty_winner": 0.08077779420191523,
+  "other_candidate_or_unmodeled_nonR_winner_mass": 0.005,
+  "p_yes": 0.08037390523090565,
+  "p_no": 0.9196260947690944,
+  "broad_judgment_range_yes": [
+    0.01,
+    0.35
+  ],
+  "selected_entry_reserve_absolute": 0.1,
+  "selected_entry_p_yes": 0,
+  "selected_entry_p_no": 0.8196260947690944,
+  "reserve_reason": "Default10ppinstanceforecast; tail isfutureelection/sharedpollerrornotdirectlymeasuredeventprobability, so noK5exception. BroadboundnotCI/nodemandallendpoints pass.",
+  "sensitivity": "Rcatch-upregime20\u219235% atordinaryexpense raisesRwin; ordinarymeanminus5ppalsoraisesupset. Latepolls/currentturnoutcanchangeforecast; no preciseprobabilityfromoneMOE.",
+  "portfolio": "SameUSpoliticscluster aspendingNY01D,ME02D,CA06NOandMIheldNO; aNYRepublicanupset cancoincidewithNY01Dlosing. GovRYESisnotguaranteedhedge; governorDcanwinwhileHouseDloses. No independentKelly/automaticpriorupdate.",
+  "sources": [
+    "work/0414_ballot_primary_0112.json",
+    "work/0414_poll_facts_0103.json",
+    "work/0414_siena_state_0107.json",
+    "work/0414_marist_primary_0118.json",
+    "work/0414_identity_erratum_0105.json"
+  ]
+}

@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 225 recorded observations from Apr-25
-through Oct-19. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 226 recorded observations from Apr-25
+through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -54,15 +54,15 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — October19
+## Active in-depth review — October20
 
-**364 valued /12 blocked /364 factual /2,260 pending;740 base+67 revisions; no active case.**404JOLTS19.25%,406Liu45.8% and410CrowdStrike18.22% YES saved individually; no entry clears selected economics.408gross-sale source/API gap is blocked after substantive review, not valued/rejected or a global blocker.412facts are ready but unstarted. [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
+**366 valued /12 blocked /364 factual /2,258 pending;742 base+68 revisions; no active case.**412Kimi HLE≥55 is valued at34.02125%YES with a15pp selected reserve;414NY Republican governor8.03739%YES fails the10pp reserve after costs. Both were saved/indexed individually.416facts are ready, unvalued; its token/launch identity gap needs primary resolution before a forecast.408gross-sale source/API gap remains case-specific. [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
 
-**Three LIVE zero-matched bids commit6.50, reverifiedOct20 00:05.** Parton400 canceled once23:39; after353seconds,23:45 terminal/trades/cumulative-buys/CTF proof confirmed zero fills and retired only its reservation. Original three orders unchanged; no purchase, cash credit or profit. Dedicated Parton alerts removed, shared Messi/Google coverage retained. [Exact orders](notes/resting_orders.md) · [Closure](research/2026-10-19-parton400-cancellation.md).
+**Four LIVE zero-matched bids commit $7.70, independently verified01:24:49–50UTC.** Kimi41210YES12c/maximum1.20 was submitted once through the vetted writer; the original three bids remain unchanged. No Kimi holding, purchase or profit; source interpretation and adverse fills can lose the full1.20. Existing02UTC remains the next full review. [Exact orders/management](notes/resting_orders.md) · [Primary proof](data/deep_review_20261017/work/0412_post_primary_0143.json).
 
-**Whalefall resolved YES: six NO shares pay0/full1.02economic loss.** Exact CTF payout andNegRisk wrapped-token identity verified atPolygon95828757. Six valueless tokens remain; no sale/burn/redemption transaction or active-risk alert. DEC222/235 outcomes recorded; original forecasts preserved. [Resolution](research/2026-10-19-whalefall-resolution.md).
+**Whalefall resolved YES: six NO shares pay0/full1.02economic loss.** Exact CTF payout and NegRisk token identity were verified; valueless tokens remain without a sale/burn/redemption transaction. Original forecasts/DEC222,235 are preserved. [Resolution](research/2026-10-19-whalefall-resolution.md).
 
-Five requested22:24newsIDs have completed substantive reviews; MI/ORholds/noadd unchanged, exactsource gaps retained. Complementary-maker reconciliation repair passed69safetytests/historic6share replay. [Repair](research/2026-10-19-2232-periodic-check.md) · [Alert coverage](data/deep_review_20261017/work/tick222420_alert_coverage.json). Financial/order observation times remain separate.
+The delayed23:58 requested Parton news IDs were reviewed against prior sources and exact zero-exposure proof; no repeat cancellation or Telegram. Scoped Kimi coverage was added only after source and current headline review. No daemon code changed or forced poll occurred. [Event closeout](data/deep_review_20261017/work/tick235849_primary_closeout_0055.json).
 
 ## Mandate and constraints
 
@@ -84,13 +84,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 23:36 UTC
+## Last audited snapshot — October20 01:02 UTC
 
-**Indicative trading net depth185.79 versus170contributed (+9.29%); authoritative bankroll195.20 including5.83separate gas.** Trading midpoint189.37; PM34.23mid/30.65indicative fee-net depth. Canonical producer23:36:40.349789–23:36:57.061911UTC. Rounded sequential quotes are not synchronized NAV or guaranteed proceeds;19.71residual is accounting arithmetic, not audited cash profit. VM/API costs excluded. CSV225 preserves all224earlier rows. [Financial record](research/2026-10-19-2336-financial-snapshot.md).
+**Indicative trading net depth $188.04 versus $170 contributed (+10.61%); authoritative bankroll $196.08 including $5.81 separate gas.** Trading midpoint190.27; PM35.12mid/32.89 indicative fee-net depth. Canonical producer01:02:26.492920–01:02:42.025222UTC. Sequential rounded quotes are not synchronized NAV or guaranteed proceeds;19.72residual is accounting arithmetic, not audited cash profit. VM/API costs excluded. CSV226 preserves all225 earlier rows; chart10checks passed. [Financial record](research/2026-10-20-0102-entry-preflight-financial-snapshot.md).
 
-After the later verified zero-fill cancellation, three bids commit6.50; pUSD20.45 less those commitments mechanically leaves13.95 available. This is no new cash observation or credit. At the dated snapshot, all ordinary PM holdings/bids losing while the protected Clarity set pays29 gives177.64trading wealth; pair failure/payout0 gives148.64, other assets fixed. These are joint stress scenarios, not probabilities or guarantees. No RBA funds were allocated.
+Four zero-matched bids subsequently commit7.70; fresh01:24:50 pUSD20.45129 minus commitments gives12.75129 arithmetic, not venue free collateral. This is no purchase, cash credit or new NAV observation. Using the dated producer, all ordinary PM holdings/all four bids losing while the protected Clarity set pays29 gives176.45trading wealth; pair payout0 gives147.45, other assets fixed. These are joint stress scenarios, not probabilities or guarantees.
 
-The five requested22:24news IDs were substantively reviewed; MI/OR holds/noadd remain. Final Parton cancellation proof is separate from the23:36financial producer. Oct20 00:05 order/index/reservation reads confirm three unchanged bids/no Parton or RBA exposure.00:07 exhausted trades/PartonNOCTF0 corroborate its prior zero-fill closure; the old order-detail response is now null, so its affirmative terminal proof retains23:45. AuditCLEAN/cruxquiet/four single-current daemons retain23:57 dates; config reload is ordinary. Full discovery16:48 and twelve22UTCchecks retain their dates. Next existing fullOct20 02UTC; weeklyOct23/monthlyNov12 not due. [Completed safety check](research/2026-10-19-2200-checkin.md) · [Requested-alert coverage](data/deep_review_20261017/work/tick222420_alert_coverage.json).
+MI/OR hold/noadd priors and other holdings remain unchanged; Kimi is an unfilled commitment. Full audit/crux/four-daemon proof retains23:57 dates; current Kimi coverage checks verified the one news process separately. Full discovery16:48 and twelve22UTC checks retain their dates. Next existing fullOct20 02UTC; weeklyOct23/monthlyNov12 not due. [Completed safety check](research/2026-10-19-2200-checkin.md) · [Latest order proof](data/deep_review_20261017/work/0412_post_primary_0143.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

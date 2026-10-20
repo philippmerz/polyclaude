@@ -1,0 +1,15 @@
+{
+  "schema": "deep_review.primary_context_assessment.v1",
+  "review_index": 412,
+  "reviewed_utc": "2026-10-20T01:22:35.834388+00:00",
+  "source_unit": "work/0412_context_primary_0134.json",
+  "openai_sdk_receipt": "logs/deep_review_20261017/case0412_openai_sdk_0136/openai_campaign.receipt.json",
+  "openai_sdk_raw_sha256": "c5b99fbf2a19a9f65483072eaa092e0dd9e241d529c0d8fbaeffe8b94a5b409f",
+  "openai_sdk_gzip_sha256": "1d076c6804a6cf82c0b5f3dc313d7a37359455c725c314c1e686844f8b07dde0",
+  "openai_sdk_timing_note": "Intent before SDKopen. Raw serialization preserved before reading. Receipt received time is serialization save-clock upper bound after correcting unsupported representation name; not rawHTTP or wire timing. DirectHTTP403 preserved.",
+  "primary_read": "Root read official article full substantive paragraphs/footnote and verified Snowflake raw+gzip/full article body.",
+  "openai_finding": "Sep30 publisher attributes a core activity cluster to individuals associated with Moonshot, explicitly not all operators; attempted requests, not necessarily successful. July activity disrupted byJul28; account restrictions and stronger controls, not documented worldwide Kimi prohibition, HLE score deletion or model-release cancellation. This is publisher attribution, not adjudicated organizational guilt.",
+  "snowflake_finding": "Sep24 K3 private-preview/distribution article, model kimi-k3; issuer-attributed benchmarks do not include HLE. NoK3.1 release date/new qualifying55score established bybody. This is distribution, not a new release-capability forecast.",
+  "forecast_decision": "Retain34.02125%YES/15ppselected19.02125; competitive access/IP risks and evaluation/source uncertainty remain. No mechanical penalty or verified future road map from these two bodies; do not translate attempted extraction counts into benchmark gains.",
+  "monitoring": "work/0412_monitor_primary_0135.json supports current30 baseline IDs-or-titles coverage. No guarantee of per-feed success/exhaustive future news; use existing daemon terms + scheduled review, full1.20loss accepted."
+}

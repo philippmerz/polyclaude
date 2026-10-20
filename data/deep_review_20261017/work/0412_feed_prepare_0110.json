@@ -1,0 +1,14 @@
+{
+  "schema": "deep_review.feed_preparation.v1",
+  "review_index": 412,
+  "feed": {
+    "name": "Kimi model, benchmark and Moonshot releases",
+    "url": "https://news.google.com/rss/search?q=%28Kimi+OR+%22Moonshot+AI%22+OR+MoonshotAI%29+%28model+OR+release+OR+HLE+OR+benchmark%29&hl=en-US&gl=US&ceid=US%3Aen"
+  },
+  "config_before_sha256": "941d6cbfa71ba4323b183179175fcc9778e88effac715d8754b9bc6cc799c9c2",
+  "config_after_sha256": "19a24cd31c39253ad779784c5b4051bcd0f431beda71e5c651fb1cae32b16746",
+  "config_mtime_utc": "2026-10-20T01:05:00.645948+00:00",
+  "new_keywords_added": false,
+  "order_exists": false,
+  "rationale": "Newfeedbaselinebeforepotentialmaker. Export-ruleheadlineunassessed,noorder/prior. Existingdaemonordinarypollonly; noforcedpoll/seenstateedit/restart/newwatcher/timer. Removefeedifcandidateabandoned."
+}

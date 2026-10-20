@@ -1,0 +1,28 @@
+{
+  "schema": "deep_review.entry_intent_review.v1",
+  "review_index": 412,
+  "created_utc": "2026-10-20T01:23:01.006563+00:00",
+  "identity": {
+    "market_id": "3072315",
+    "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+    "yes_asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383"
+  },
+  "source_assessment": "work/0412_context_primary_root_0137.json",
+  "monitoring_assessment": "work/0412_monitor_primary_0135.json",
+  "decision": "Submit once through vetted entry path only:10YES12c postonly/max1.20; full loss accepted. Model34.02125%/selected19.02125, broad8–80; no K5 or precise-tail claim. Portfolio/Kelly/cash/caps from01:02+current writer gates, no fixedpricefallback if fail.",
+  "management": "No add/chase/taker/automaticrepost. Review existing ticks or earlier material evidence; cancel-first newlyunassessed material source/model/score/policy change. Pull before known catalyst/cutoff. No nextcron hardexpiry. Unannounced news, cache/dedup/feeds/source latency, conditionalfills/sourceoutage can lose full1.20 or extend lock pastJanuary.",
+  "news_config": {
+    "before_sha256": "19a24cd31c39253ad779784c5b4051bcd0f431beda71e5c651fb1cae32b16746",
+    "after_sha256": "1083842374139c720733f73b58f1921bd59276fb6c3cd0e4d67bcacb6fcd1cb5",
+    "tier2_added": [
+      "Kimi",
+      "Moonshot AI",
+      "MoonshotAI"
+    ],
+    "existing_feeds_unchanged": true,
+    "daemon_code_unchanged": true
+  },
+  "financial_prior": "Only exact412 prior updated; all unrelated prior objects byte-equivalent under canonical JSON.",
+  "actual_order_submitted": false
+}

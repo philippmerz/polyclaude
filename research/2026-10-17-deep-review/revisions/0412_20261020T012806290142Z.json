@@ -1,0 +1,135 @@
+{
+  "review_index": 412,
+  "market_id": "3072315",
+  "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+  "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+  "status": "valued",
+  "literal_analysis": "Any2026MoonshotKimi>=55 HLEAccuracy/equivalent byDec31 23:59ET. Currentnamedofficialboard, notautomaticissuer-toolscore. Entire2026qualifies; historicalmax/removals/missedrecordsunknown. Otherofficialresults conditionalonboardunavailable/deadline/permanentoutage; noofficialalternativeNO; temporaryoutagecanextendsettlement.",
+  "evidence": [
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "observed_utc": "2026-10-20T00:40:51.878223Z",
+      "finding": "CurrentcachedAPIK3HLE41.08, noKimi55rowobserved; notall-timeabsence."
+    },
+    {
+      "url": "https://agi.safe.ai/_next/static/chunks/app/page-b244ce4b73b862e2.js",
+      "observed_utc": "2026-10-20T00:54:21.164868Z",
+      "finding": "DefaultHLEAccuracy to scores.hle; separateDiamond/calibration; toolsconfigunknown."
+    },
+    {
+      "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/README.md",
+      "observed_utc": "2026-10-19T10:46:31.776036+00:00",
+      "finding": "Fulltable+footnotesK3HLE-Full43.5no-tools/56tools; potentialadmission/fallbacklead, notcurrentboard55."
+    },
+    {
+      "url": "https://openai.com/index/disrupting-a-coordinated-model-distillation-campaign/",
+      "observed_utc": "2026-10-20T01:22:35.690866+00:00",
+      "finding": "SDKserialization save-clock upperbound; publisherlimitedattribution/Julyenforcement, attemptednotnecessarilysuccessful; noautomaticnewscore/modelbaninference."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34021250000000014,
+    "low": 0.08,
+    "high": 0.8,
+    "method": "Unfitteddisjointsource-admission/new-capability/no-update tree, explicitconditionaljudgments; nobenchmarktrendregressionorpriceprior.",
+    "reasoning": "Existing56toolrecordadmission/newcapability/noupdateconditionaljudgmenttree; full-year/source-historyuncertainty retained.15ppsamefamilyreserve; noK5measurementlicense.",
+    "actual_entry_reserve_pp": 15.0,
+    "model_path": "models/0412_kimi55_primary_0100.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0412_candidate_quotes_0101.json",
+    "quote_file_sha256": "ef1b1c5d61527fd3242016b9b37c10a6000a7915fcac8b51839b6d319e1a181b",
+    "quote_capture_utc": "2026-10-20T00:59:34.016062+00:00",
+    "gamma_received_utc": "2026-10-20T00:59:33.639611+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 73.2,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.34021250000000014,
+        "selected_stress_probability": 0.19021250000000015,
+        "best_bid": 0.12,
+        "best_ask": 0.13,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792457965001",
+        "book_received_utc": "2026-10-20T00:59:33.884731+00:00",
+        "book_age_seconds_at_receipt": 8.883731126785278,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.34524,
+        "central_expected_profit_usd": 2.0568850000000016,
+        "selected_stress_profit_usd": 0.5568850000000014,
+        "break_even_before_carry": 0.134524,
+        "break_even_constant_carry": 0.13537739762531006,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6597874999999999,
+        "selected_stress_probability": 0.5097874999999998,
+        "best_bid": 0.87,
+        "best_ask": 0.88,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792457965001",
+        "book_received_utc": "2026-10-20T00:59:33.884731+00:00",
+        "book_age_seconds_at_receipt": 8.883731126785278,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 8.84224,
+        "central_expected_profit_usd": -2.244365000000002,
+        "selected_stress_profit_usd": -3.744365000000002,
+        "break_even_before_carry": 0.884224,
+        "break_even_constant_carry": 0.8898333683048539,
+        "current_execution_authorization": false
+      }
+    },
+    "full_walks_unit": "data/deep_review_20261017/work/0412_economics_posted_0144.json",
+    "maker_comparison": {
+      "YES_at12c": {
+        "shares": 10,
+        "cost": 1.2,
+        "central_payout": 3.4021250000000016,
+        "selected_unconditional_payout": 1.9021250000000014,
+        "selected_profit_before_carry_ops": 0.7021250000000014,
+        "selected_profit_after_5c_ops_and_constant_carry": 0.6445124018734805,
+        "illustrative_NO_over_YES_fill_likelihood_ratio": 1.5,
+        "selected_fill_p": 0.13539280105701954,
+        "selected_fill_profit_after_5c_ops_and_carry": 0.09631541244367456,
+        "not_measured_fill_distribution": true
+      },
+      "NO_at87c": "Failscentral65.97875/selected50.97875fair beforecarry/selection.",
+      "actual_execution": "One exact10YES12c post-only submitted01:23:15–19 through vettedwriter; independent01:24:49–50 accountproof LIVE0matched. No useofdatedquoteasongoingauthorization.",
+      "selected_break_even_NO_over_YES_fill_ratio_after_costs": 1.6328682825156386,
+      "fill_ratio_limit_note": "Unfitted sensitivity, not empirical upper bound. Greater information selection can remove edge/lose full1.20; smallmanualfull-lossallocation and cancel-firstmanagement accepted, not a guaranteed floor."
+    },
+    "execution_proof": "data/deep_review_20261017/work/0412_post_primary_0143.json"
+  },
+  "verdict": "POSTED_ONCE_LIVE_UNFILLED:10YES12c/max1.20/DEC243; independent01:24:49–50 exactinventory/detail0matched/exhausted126trades0target/API+localindex0target/reservation verified. Noholding/spend/profit. Noadd/chase/taker/repost.",
+  "reopen_condition": "Manage exactlivebid undercancel-first materialevidence/knowncatalyst rule; review existingticks/earlierevent, noautomaticexpiry. Anyfill requiresfreshholding/source/fee-netexit/joint-risk review. Source/APIoutage canextendlock.",
+  "evaluated_utc": "2026-10-20T01:28:06.291462+00:00",
+  "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 55% or higher?",
+  "valuation_author": "primary_operator",
+  "original_index": 412,
+  "revision_reason": "Fresh comparison/source/monitoring follow-up completed; one vetted10YES12cmaker submission and independent LIVE0matched financial verification. Numerical forecast unchanged; immutable stale-book base preserved.",
+  "prior_report_sha256": "92984be821b6ef27b4fd33e1331fd955128ccf55c2e2aaec28147bc51db5a0c5",
+  "report_sha256": "eae7dfdbdedc267fcf6023f35d08b45515e63f08bdeb8bc6d3e4729bc0d34b69",
+  "report_path": "revisions/0412_20261020T012806290142Z.md",
+  "revision_path": "revisions/0412_20261020T012806290142Z.json"
+}

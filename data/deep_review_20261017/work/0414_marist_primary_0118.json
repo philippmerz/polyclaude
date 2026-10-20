@@ -1,0 +1,35 @@
+{
+  "schema": "deep_review.primary_poll_method_check.v1",
+  "review_index": 414,
+  "reviewed_utc": "2026-10-20T01:11:35.685522+00:00",
+  "source": "https://maristpoll.marist.edu/wp-content/uploads/2026/10/Marist-Poll_NYS_NOS-and-Tables_202610051034565bVw9_q.pdf",
+  "capture": {
+    "receipt": "logs/deep_review_20261017/case0414_marist_tables_0115/marist_tables.receipt.json",
+    "started_utc": "2026-10-20T01:09:28.121755Z",
+    "received_utc": "2026-10-20T01:09:28.451232Z",
+    "raw_sha256": "76cd43b081457ee44513e247da0f82e91658c86b6f12e2dc9c935b3e81bc0fd3",
+    "gzip_sha256": "82002d7eb9acadb5b8aa15d3c5a8cc6b6edc058668bc7ee92dadb516295f5c48"
+  },
+  "read_scope": "26pagepacket; fullmethodp0, governorvote/support/expectedwinner and candidatefavorabilitytables p5/6/7/17/19; otherpagesnotfullyreviewed.",
+  "method": {
+    "population": "1361NYregisteredvoters, notlikelyvoters",
+    "field": "Oct1\u20134",
+    "modes": {
+      "livephone": 297,
+      "text": 813,
+      "online": 251
+    },
+    "sampling": "PhoneL2voterfile; onlineCintpanelsmatchedsameL2. Screenage/registration, webattentionchecks; English/Spanish.",
+    "weights": "L2age/gender/income/raceethnicity; CPSeducation; regionadjustedprior-similarelectionturnout.",
+    "design_effect": 1.8,
+    "reported_moe_pp": 3.6,
+    "partisan_composition": "42D/28R/28independent; roundedremainingnotassigned",
+    "governor_choices": "HochulDem53/BlakemanRep42/anotherparty1/undecided5/noresponse<1; roundedtotalcanexceed100, norawcounts/normalization.",
+    "turnout_caveat": "Hochulsupport52%strongvsBlakeman80%, differingenthusiasm canmatter; not a calibratedturnoutconversion.",
+    "favorability": "Hochul43favorable47unfavorable vsBlakeman36/35with27unsure; noindependentvoteprobabilityfromapproval.",
+    "expected_winner": "69Hochul/28Blakeman is respondentexpectation, notpwin.",
+    "siena_recheck": "Fullp0questionandp8methodread/bytesverified; n1144coreQ3 vs991laterquestions preserved; stated+derivedlikely-voterweighting/unmeasurednonresponse/coverage/lateundecideds caveat."
+  },
+  "pending_NY01_safety": "Read0409base: D+8nationalenvironment/structuralR+4/lastdistrictR+10.4/newcandidate; thesearestatewidegovernor+genericballot/differentCD21, not a newlymeasuredNY01race orreplacement. No newGallant/LaLotaidentitychange; statewideD+11generic/SienaD+11/MaristD+13 doesnotestablishdistrictmodelshift. No prior/orderjudgmentchange inferred; actualnewNY01poll/candidateeventstillcancel-first.",
+  "no_forecast": true
+}

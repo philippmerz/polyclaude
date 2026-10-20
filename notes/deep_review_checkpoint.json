@@ -1,17 +1,15 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T00:49:37.527804+00:00",
+  "updated_utc": "2026-10-20T01:28:06.610895+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 376,
-  "completed_valuations": 364,
+  "completed_in_depth_reviews": 378,
+  "completed_valuations": 366,
   "blocked_after_in_depth_review": 12,
   "factual_exclusions": 364,
-  "pending": 2260,
+  "pending": 2258,
   "active_indices": [],
   "next_pending_indices": [
-    412,
-    414,
     416,
     418,
     422,
@@ -39,15 +37,17 @@
     451,
     452,
     454,
-    455
+    455,
+    456,
+    457
   ],
-  "base_records": 740,
+  "base_records": 742,
   "base_record_counts": {
-    "valued": 362,
     "excluded_factual": 364,
-    "blocked_after_review": 14
+    "blocked_after_review": 14,
+    "valued": 364
   },
-  "revisions_written": 67,
+  "revisions_written": 68,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -58,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 740,
-  "ledger_sha256": "bfcf3caed1f690ed80a525ff5f63110e953c4cdcea833bdbfb5102293b88f1b9",
-  "revisions_sha256": "96c6cd6de13143d5991056c7e2285c0ce6e1373e02cd364183d572c9eb25f0eb",
+  "evaluations_written": 742,
+  "ledger_sha256": "6bf17c8fa2924b5c5c9e4c3636807e09b1585f60788aa0d6b6da874ccd08c242",
+  "revisions_sha256": "994dc3d3316a556532f818c4750d4b349e4ea60c6350af32dafdc1067485284b",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

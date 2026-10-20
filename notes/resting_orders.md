@@ -1,16 +1,21 @@
-# Current resting orders — October19 23:57 UTC
+# Current resting orders — October20 01:25 UTC
 
-**Three LIVE zero-matched BUYs commit6.50.** Parton400 canceled once23:39; post353s23:45 terminal/trades/cumulative-buys/CTF proof retired only its reservation4→3. Original three orders unchanged. No Parton purchase, profit or automatic repost. [Closure](../research/2026-10-19-parton400-cancellation.md) · [exact proof](../data/deep_review_20261017/work/0400_final_reconcile_2345.json).
+**Four LIVE zero-matched BUYs commit $7.70.** Independent01:24:49–50 account reads confirm the new Kimi412 bid and the three original bids unchanged; exact inventory/detail,126 exhausted trades, data API/local position index and four reservations were checked. No Kimi purchase, fee, cash credit or profit. [Primary proof](../data/deep_review_20261017/work/0412_post_primary_0143.json).
 
-RBA403 was never submitted. Newer primary evidence invalidated the candidate; both sides fail the revised uncertainty check. Preparatory prior/feed/three terms retired, no RBA pull obligation or standing alerts. [Revision](../research/2026-10-17-deep-review/revisions/0403_20261019T235523790177Z.md).
-
-|Current BUY|Shares/limit/risk|Exact order ID|Management|
+|Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
 |---|---|---|---|
-|ME02|10YES/38c/3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|HistoricalME01slug never overridesME02CID/asset|
-|CA06|50NO/3c/1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
-|NY01|10YES/12c/1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
+|ME02|10YES /38c /$3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|Historical ME01 slug never overrides exact ME02 identity|
+|CA06|50NO /3c /$1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
+|NY01|10YES /12c /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
+|Kimi HLE≥55 /DEC243|10YES /12c /$1.20|0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932|Cancel first on newly unassessed material model/score/source/policy evidence|
 
-Review each scheduled check/earliermaterialnews: retain only if price, source freshness, full-fill correlation/caps and conditional-fill economics remain justified. Cancel-first on newly unassessed material poll/candidate/ballot/turnout evidence. A scheduled check alone is not a hard expiry; no chase/add/automaticrepost/taker fallback. Any fill requires fresh holding/source/fee-netexit/joint-risk review; partials can become dust. NextfullOct20 02UTC, not a newly invented pull deadline.
+Kimi exact market3072315/CID `0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset `37766872206008704788193600553604631093824104239948970702184049381100338243383`; criteria `46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7`. Submitted once01:23:15–19 through the vetted entry path, full1.20 loss budget. Numerical YES34.02125%/15pp selected19.02125%/broad8–80%; official board versus issuer tool-score admission remains uncertain. Same AI cluster as held OpenRouter, not a hedge. [Effective review](../research/2026-10-17-deep-review/revisions/0412_20261020T012806290142Z.md).
+
+Review each scheduled check or earlier material news. Retain a bid only while price, source freshness, full-fill correlation/caps, capital priority and conditional-fill economics remain justified. Original political bids: cancel first on newly unassessed material poll/candidate/ballot/turnout evidence. Kimi: cancel first on newly unassessed material model/score/source/evaluation/policy evidence; pull before a known relevant release/cutoff. No add, chase, automatic repost or taker fallback. Unannounced/private updates and five-minute watcher/cache gaps can fill before cancellation; Kimi can lose1.20 or settle late. Any fill requires fresh holding/source/fee-net-exit/joint-risk review. **Next full02UTC is a review, not an automatic expiry.**
+
+pUSD20.45129 at01:24:50 less7.70 commitments gives12.75129 arithmetic; this is not certified venue free collateral. An unfilled bid creates no new NAV row; aggregate producer01:02 and CSV226 retain their dates.
+
+Parton400 remains canceled unfilled with its23:45 affirmative terminal proof; no replay or duplicate Telegram. RBA403 was never submitted; its unsubmitted prior/feed/terms remain retired. Their historical details are below.
 
 ## Quote lifetime — clarified October19
 

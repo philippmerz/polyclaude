@@ -1,39 +1,49 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T00:50:09.445404+00:00",
+  "updated_utc": "2026-10-20T01:35:00.100450+00:00",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Boundedrequestednewscloseout/proofverification/publishedsourcehandoff1fc5012 changed authoritative state; no financial action.",
-  "current_turn_progress": "404 and406 valued;408 source-blocked after in-depth investigation;410 valued and indexed. No new entry; case-specific block does not block queue.",
+  "evidence": "Published fdb8907:364valued/12blocked, append-onlyfourcase/revisionproof/handoff; no financial action.",
+  "current_turn_progress": "412 and414 valued/indexed individually; append-only412 revision records one vetted10YES12c/1.20LIVEunfilled bid/DEC243 after source,monitoring,alternative,conditional-fill andportfolio review. Originalthreeorders unchanged. No holding/spend/profit.",
   "counts": {
-    "completed_valuations": 364,
+    "completed_valuations": 366,
     "blocked_after_in_depth_review": 12,
     "factual_exclusions": 364,
-    "pending": 2260,
-    "base_records": 740,
-    "revisions_written": 67,
+    "pending": 2258,
+    "base_records": 742,
+    "revisions_written": 68,
     "active_indices": []
   },
   "last_completed": {
-    "index": 410,
+    "index": 414,
     "status": "valued",
-    "report": "evaluations/0410.md",
-    "sha256": "da6653e67953b73a9958a649fbfdb341efa80c1ced8b6cb15538866dc4c39ddd",
-    "p_yes": 0.1822338002180578,
-    "decision": "NO_ENTRY; both selected sides/makers fail."
+    "report": "evaluations/0414.md",
+    "sha256": "61ddce671dfcd0d958c4b81b3ee195f4fe0f8c28eabadfa7c433e0a01cd5edbb",
+    "p_yes": 0.08037390523090565,
+    "decision": "NO_ENTRY"
   },
   "next": [
-    412,
-    414
+    416,
+    418
   ],
   "next_facts": {
-    "412": "work/0412_facts_0042.json"
+    "416": "work/0416_facts_0122.json"
   },
   "next_existing_safety": "2026-10-20T02:00:00Z",
-  "financial_state": "No newaggregate/CSV/order/prior/reservation/config/TG. Producer23:36/order00:05/zero-fillclosure00:07/ops23:57retain dates.",
-  "goal_state": "Finite queue remains resumable; this scheduled closeout adds no goal/timer/idle follow-up and ends after verification/publication.",
+  "financial_state": "Producer01:02:26–42:196.08incl5.81separate gas/190.27tradingmid/188.04indicative depth;PM35.12/32.89;CSV226/chart10pass. Independent01:24:49–50 fourLIVE0matchedbids7.70/fourreservations; pUSD20.45129−7.70=12.75129arithmetic, not freecollateral. No Kimi holding/purchase/spend/profit.",
+  "goal_state": "Remaining frozen queue incomplete. This bounded run ends after audit/publication; no goal lifecycle action,newtimer or idle followup. Existing02UTC fullcheck/earliermaterialevent governs next safety work.",
   "safety_followup": {
-    "fixed_news_through": "2026-10-20T00:33:00Z",
-    "receipt": "work/goal0034_mi_primary_review.json",
-    "result": "TwoMIleadsreviewed;oneunknownpublisher/oneoldCaroaggregation+oldpoll;NO44selected34/noaddunchanged;nonewfinancialstate."
+    "fixed_news_through": "2026-10-20T01:30:42.432754Z",
+    "receipt": "work/goal0018_mi_primary_0157.json",
+    "result": "All3rowsreviewed: exactGreenBaybodyunknown/oldrelatedCBSreviewed, noclassifierconfirmationadopted;MI5NO44selected34/noaddretained againstfresh1.458netexit vs1.70selectedhold. TwoKansasunheldresearchleads,noaction."
+  },
+  "candidate_followup": {
+    "index": 412,
+    "phase": "LIVE_UNFILLED_VERIFIED_NO_MORE_ENTRY_FOLLOWUP",
+    "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
+    "decision_id": 243,
+    "effective_revision": "revisions/0412_20261020T012806290142Z.json",
+    "report_sha256": "eae7dfdbdedc267fcf6023f35d08b45515e63f08bdeb8bc6d3e4729bc0d34b69",
+    "proof": "work/0412_post_primary_0143.json",
+    "management": "Existingticks/earliermaterialsource/fill; cancel-first newlyunassessedmodel/score/source/policy; pullbeforeknowncatalyst/cutoff. Noadd/chase/taker/automaticrepost. Nextcronreviewnotexpiry."
   }
 }

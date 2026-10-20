@@ -1,5 +1,5 @@
 {
-  "next_id": 243,
+  "next_id": 244,
   "decisions": [
     {
       "id": 1,
@@ -5305,6 +5305,26 @@
       "calibration_delta": null,
       "lesson": "A literal-name title nonmatch is unreviewed, not irrelevant. Verify speaker, comparator and change direction in original primary bodies before probabilities or orders. Engineering executability does not establish investment edge.",
       "resolved_at": "2026-10-19T23:55:50Z"
+    },
+    {
+      "id": 243,
+      "timestamp": "2026-10-20T01:24:28Z",
+      "type": "open_position",
+      "thesis": "Post one10YES12c/1.20 Kimi>=55 HLE maker BUY through vetted entry path. Primary34.02125%YES/15ppreserve selected19.02125,broad8\u201380,unfittedsource-admission/update tree. Officialboard41.08 vs issuer56tools is admission/config/fallback risk, not automaticYES. CurrentRSS/source/export-policy, portfolio/full-loss/conditional-fill and writer gates reviewed. Same AI cluster as OR/rho.75; no hedge or independence credit. Submission returned LIVE at01:23:19UTC, independent account proof pending; unfilled commitment is not a purchase.",
+      "confidence": "medium",
+      "prediction": "At most10YES at12c/max1.20; no add/chase/taker/repost. Cancel-first newly unassessed material model/score/source/policy changes; pull before known relevant catalyst/cutoff. Reviewexistingticks, not automaticcronexpiry. If held, YES needs official qualifying55 before2026deadline; full1.20loss/source-delay possible. End-of-year forecast is judgment, not calibrated tail.",
+      "size_usd": 1.2,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "deep-review",
+        "maker",
+        "pending-unfilled",
+        "hle-source-risk"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

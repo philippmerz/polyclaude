@@ -1,0 +1,55 @@
+{
+  "schema": "deep_review.primary_event_tree.v1",
+  "review_index": 412,
+  "created_utc": "2026-10-20T00:56:33.826865+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "3072315",
+    "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7"
+  },
+  "literal": "Any2026MoonshotKimi>=55 HLEAccuracy/equivalent byDec31 23:59ET. Currentnamedofficialboard, notautomaticissuer-toolscore. Entire2026qualifies; historicalmax/removals/missedrecordsunknown. Otherofficialresults conditionalonboardunavailable/deadline/permanentoutage; noofficialalternativeNO; temporaryoutagecanextendsettlement.",
+  "verified_baseline": "CurrentAPIK3hle41.08, needing13.92pp; K2.6 35.48/K2.5 25.4; UIbindsHLEAccuracy toscores.hle, Diamond/calibrationseparate. IssuerK3HLEFull43.5no-tools/56tools, officialexisting55-capabilitylead butnotautomaticspecifiedboardmetric. Twootherproviders55.6/55.36demonstrate55withinfrontierrange, notKimiability/probability.",
+  "method": "Unfitteddisjointsource-admission/new-capability/no-update tree, explicitconditionaljudgments; nobenchmarktrendregressionorpriceprior.",
+  "branches": [
+    {
+      "state": "Existingorhistorical55+ record admitted without newcapability",
+      "mass": 0.1,
+      "p_yes_conditional": 0.8,
+      "reason": "Includes56vendor-with-tools adoptions/qualifyingfallback and missedofficialhistory; metrics/configuration/source-admissionuncertainty leavesNOmass. Notclaimrecordalreadyqualifies."
+    },
+    {
+      "state": "No existing qualifyingadmission, materialcapabilityupdate bycutoff",
+      "mass": 0.5850000000000001,
+      "p_55_given_update": 0.55,
+      "p_official_timely_given_55": 0.75,
+      "reason": "Reuseweak65%updatejudgmentfromfamily, notschedule. Higher55thresholdchance than65(.25) because13.92ppgapvs23.92 andexisting56tools.13.92ppstilllargerthanlast5.6ppboardstep;55%conditionalallowslargejump, notextrapolation."
+    },
+    {
+      "state": "No existingadmission andno materialupdate",
+      "mass": 0.315,
+      "p_55_remeasurement_or_equivalence": 0.12,
+      "p_official_timely_given_55": 0.5,
+      "reason": "Excludesinitial56/historyadmissionbranch; otherremeasure/clear-equivalentpresentationcanqualify, notautomaticDiamond."
+    }
+  ],
+  "broad_judgment_range_yes": [
+    0.08,
+    0.8
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "reserve_reason": "10ppordinarymodel+5pphiddenrelease/sourceadmission/conditionalfillrisk, sameclassas322; no measured-tail exception orcalibratedfloor.",
+  "sensitivity": "Ifmaterialupdate55chance.30/.80 ratherthan.55, pYES.230525/.4499; source-admission10%/80% isunmeasured, can be muchlarger ifofficial55tooldata becomeseligible. No extrapolatedscore treatedasprobability.",
+  "dependence": "Update/score/officialadmissionconditionalandcorrelated; productsareconditionaljudgments. P55>=P65 preserved vs dated32214%; can couple states14%>=65/20.02125%[55,65)/65.97875%<55, subjective notjointfit. No322financialpriorrevision orposition.",
+  "source_limits": "Three2026releasefamilydates do notpromiseQ4release. APIAge2468s/releaseDatenotscoredate;66throwhasnullHLE/noKimiincrement. UItoolsconfigunknown. Noall-timeabsenceorcompleteannouncementsclaim.",
+  "sources": [
+    "work/0412_facts_0042.json",
+    "work/0412_primary_source_0058.json",
+    "work/0412_resolver_trace_0055.json",
+    "work/0322_kimi_hle_facts.json"
+  ],
+  "p_yes": 0.34021250000000014,
+  "p_no": 0.6597874999999999,
+  "selected_entry_p_yes": 0.19021250000000015,
+  "selected_entry_p_no": 0.5097874999999998
+}

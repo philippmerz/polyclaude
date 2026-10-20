@@ -1,0 +1,125 @@
+{
+  "review_index": 414,
+  "market_id": "629545",
+  "condition_id": "0x50b78cd83de62d75d504d7a184ba1171436628068b3c3d4dd0384e65d4a40d1b",
+  "criteria_sha256": "43ff675776e0fd1d43ad1d69076b45b50800f28969f6fce972e9c3924dc7000c",
+  "status": "valued",
+  "literal_analysis": "Republicannomineewins2026NYgovernor; independentnotRepublicanbyassociation, replacementnomineecounts. AP/Fox/NBCmustallcallsamecandidateelseofficialcertification; no ballot-line-countsubstitution. NormalNov3election/Nov4metadata not guaranteedresolutiondate.",
+  "evidence": [
+    {
+      "url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+      "observed_utc": "2026-10-20T01:03:41.569201Z",
+      "finding": "SDK nomination certification: Blakeman/Hood Republican, Hochul/Adams Democrat; not results."
+    },
+    {
+      "url": "https://maristpoll.marist.edu/polls/midterm-elections-in-new-york-october-2026/",
+      "observed_utc": "2026-10-20T01:00:57.363156Z",
+      "finding": "Statewide RV53/42, fieldOct1–4; full methods independently captured01:09:28.451232."
+    },
+    {
+      "url": "https://sri.siena.edu/wp-content/uploads/2026/09/SNY-September-2026-Poll-Crosstabs-9-23-26.pdf",
+      "observed_utc": "2026-10-20T01:03:44.517718Z",
+      "finding": "Statewide LV50/41, core n1144/design3.9; distinct from later n991 questions/CD21."
+    },
+    {
+      "url": "https://poll.qu.edu/poll-release?releaseid=3967",
+      "observed_utc": "2026-10-20T01:00:58.269976Z",
+      "finding": "Statewide LV58/39, fieldSep17–20/n1026/design4.1; exact receipt in poll-facts unit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08037390523090565,
+    "low": 0.01,
+    "high": 0.35,
+    "method": "Unfitted three-regime state margin mixture plus other/non-Republican winner branch; own quotes unseen when written.",
+    "reasoning": "All three statewide polls favor Hochul9–19pp; explicit20% late Republican consolidation/systematic-error regime and broad turnout/model uncertainty. Default10pp selected reserve; no measured-tail exception.",
+    "actual_entry_reserve_pp": 10.0,
+    "model_path": "models/0414_nygov_primary_0119.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0414_quote_0119.json",
+    "quote_file_sha256": "756b4c0e58148952a3b9623ff43ac1da382e016331ca9a9b7104b4c33d6a00f2",
+    "quote_capture_utc": "2026-10-20T01:11:36.422571+00:00",
+    "gamma_received_utc": "2026-10-20T01:11:36.196731+00:00",
+    "hypothetical_gross_shares": 19.0,
+    "horizon_days": 16.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.08037390523090565,
+        "selected_stress_probability": 0,
+        "best_bid": 0.049,
+        "best_ask": 0.053,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792458675568",
+        "book_received_utc": "2026-10-20T01:11:36.329959+00:00",
+        "book_age_seconds_at_receipt": 20.761958837509155,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 1.0492899999999998,
+        "central_expected_profit_usd": 0.4778141993872076,
+        "selected_stress_profit_usd": -1.0492899999999998,
+        "break_even_before_carry": 0.0552257894736842,
+        "break_even_constant_carry": 0.055302178110599134,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9196260947690944,
+        "selected_stress_probability": 0.8196260947690944,
+        "best_bid": 0.947,
+        "best_ask": 0.951,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792458675568",
+        "book_received_utc": "2026-10-20T01:11:36.329959+00:00",
+        "book_age_seconds_at_receipt": 20.761958837509155,
+        "passed_180s_at_receipt": true,
+        "taker_cost_usd": 18.104419999999998,
+        "central_expected_profit_usd": -0.6315241993872043,
+        "selected_stress_profit_usd": -2.531524199387203,
+        "break_even_before_carry": 0.9528642105263156,
+        "break_even_constant_carry": 0.9541822179083886,
+        "current_execution_authorization": false
+      }
+    },
+    "full_walks_unit": "data/deep_review_20261017/work/0414_economics_final_0126.json",
+    "maker_comparison": {
+      "ordinary_yes_bid_ask": [
+        0.049,
+        0.053
+      ],
+      "ordinary_no_bid_ask": [
+        0.947,
+        0.951
+      ],
+      "result": "Selected YES fair0 and NO81.9626c; both ordinary maker ranges fail before carry and conditional-fill risk. No remote bid or reserve reduction to fit price."
+    },
+    "minimum_and_horizon": "Venue5shares; route1USD minimum is separate. TenYES gross.53 fails route. NineteenYES walk gross>=1.007; Nov3 election/16day planning is not guaranteed AP/Fox/NBC agreement or certification date.",
+    "cash_and_portfolio": "No allocation. US-politics holdings/NY01,ME02,CA06 commitments share turnout/news risks; no independent Kelly or hedge credit. Cash/current commitments and Aave remain alternatives."
+  },
+  "verdict": "NO_ENTRY:19YES central+.477814 but selected−1.04929;19NO central−.631524/selected−2.531524. Ordinary makers also fail. No allocation or monitoring change.",
+  "reopen_condition": "Verified newer statewide polls/turnout/candidate or exact-rule changes; fresh two-side economics with model reserve/selection/carry/current portfolio and vetted execution.",
+  "evaluated_utc": "2026-10-20T01:18:17.267069+00:00",
+  "question": "Will the Republicans win the New York governor race in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 414,
+  "report_sha256": "61ddce671dfcd0d958c4b81b3ee195f4fe0f8c28eabadfa7c433e0a01cd5edbb"
+}

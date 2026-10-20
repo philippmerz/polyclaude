@@ -1,0 +1,53 @@
+{
+  "schema": "deep_review.monitor_title_retention.v1",
+  "observed_utc": "2026-10-20T01:20:39.360928+00:00",
+  "review_index": 412,
+  "persisted_seen_ids_count": 5000,
+  "id_retention_cap": 5000,
+  "scope": "Only seven already-public baseline headlines; no other state fields or history emitted. IDs are unordered set converted to list then truncated in current code. Title dedup is 72h.",
+  "rows": [
+    {
+      "title": "Kimi K3 Beats GPT-6.1 Sol by 61 Elo Points [2026] - shattered.io",
+      "id_present": false,
+      "normalized_title_present": true,
+      "title_first_seen_utc": "2026-10-20T01:07:40.432280+00:00"
+    },
+    {
+      "title": "Muse Spark Open vs GLM-5.3 and Kimi K3 - Medium",
+      "id_present": false,
+      "normalized_title_present": true,
+      "title_first_seen_utc": "2026-10-20T01:07:40.432280+00:00"
+    },
+    {
+      "title": "OpenAI disrupts AI model distillation attack linked to China’s Moonshot AI - SC Media",
+      "id_present": false,
+      "normalized_title_present": true,
+      "title_first_seen_utc": "2026-10-20T01:07:40.432280+00:00"
+    },
+    {
+      "title": "OpenAI Accuses Kimi Operator China’s Moonshot AI Of Copying AI Model Reasoning - TradingView",
+      "id_present": false,
+      "normalized_title_present": true,
+      "title_first_seen_utc": "2026-10-20T01:07:40.432280+00:00"
+    },
+    {
+      "title": "Moonshot AI rolls out Kimi model for financial sector - China Daily Global Edition",
+      "id_present": false,
+      "normalized_title_present": false,
+      "title_first_seen_utc": null
+    },
+    {
+      "title": "A Chinese AI company just connected its model to Wall Street's leading data providers - CNBC",
+      "id_present": false,
+      "normalized_title_present": false,
+      "title_first_seen_utc": null
+    },
+    {
+      "title": "China AI Star Moonshot Eyes $2 Billion Annualized Sales in 2026 - Bloomberg.com",
+      "id_present": false,
+      "normalized_title_present": false,
+      "title_first_seen_utc": null
+    }
+  ],
+  "limits": "Title processing may have happened via another configured feed; neither ID nor title retention proves a specific feed successfully loaded. All baseline titles independently read by primary; not exhaustive news or execution authority."
+}

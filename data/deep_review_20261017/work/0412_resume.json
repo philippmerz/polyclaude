@@ -1,19 +1,19 @@
 {
-  "captured_as_of": "2026-10-20T00:40:53.004207Z",
-  "identity": {
-    "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
-    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
-    "market_id": "3072315",
-    "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity\u2019s Last Exam in 2026 be 55% or higher?"
-  },
-  "no_forecast": true,
-  "phase": "FACTS_READY_NOT_VALUED",
+  "schema": "deep_review.case_resume.v1",
   "review_index": 412,
-  "schema": "deep_review.fact_resume.v1",
-  "source_capture_root": "logs/deep_review_20261017/0700case0412_facts_0042",
-  "source_paths": [
-    "work/0412_facts_0042.json"
-  ],
-  "source_paths_are_relative_to": "data/deep_review_20261017",
-  "unit_sha256": "6bd8ec85a3ebd6caf92ea32313137a57fcf3102578e948af87daa8ab572932b9"
+  "phase": "VALUED_REVISED_LIVE_UNFILLED_BID",
+  "updated_utc": "2026-10-20T01:28:06.676580+00:00",
+  "base": "research/2026-10-17-deep-review/evaluations/0412.md",
+  "base_sha256": "92984be821b6ef27b4fd33e1331fd955128ccf55c2e2aaec28147bc51db5a0c5",
+  "effective_revision": "revisions/0412_20261020T012806290142Z.json",
+  "effective_report_sha256": "eae7dfdbdedc267fcf6023f35d08b45515e63f08bdeb8bc6d3e4729bc0d34b69",
+  "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
+  "decision_id": 243,
+  "p_yes": 0.34021250000000014,
+  "selected_p_yes": 0.19021250000000015,
+  "max_commitment": 1.2,
+  "matched_shares_at_0124_snapshot": 0,
+  "financial_proof": "work/0412_post_primary_0143.json",
+  "next_safety": "2026-10-20T02:00:00Z or earlier material source/fill",
+  "no_automatic_repost": true
 }

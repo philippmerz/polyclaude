@@ -32092,3 +32092,39 @@ NewAmericanPulse/NonStopLocal polling claim identified inBozemanreport index, ex
 - Root re-read both actual requested Parton alert rows; newline-inclusive hashes match completed00:08 review. Worker collector instead checked prior MI IDs; its original remains unchanged and correction is explicit. Prior23:45 affirmative terminal/00:05–07 exposure proof still governs; no repeat cancel/prune/repost or new death/rank fact. [Primary closeout](../data/deep_review_20261017/work/tick235849_primary_closeout_0055.json).
 - One required-onboarding quick status00:48:23–27rc0: root verified raw+gzip receipts/full output; six open quantities unchanged,0hurdleflags/no project-watchlist hits. This is not a full11-step check or authoritative aggregate producer. Fixed news through00:47:38 adds two unheld Kansas/showmention research rows; no new specific payout/vote evidence adopted or postcutoff absence claim. No portfolio/prior/CSV/TG change.
 - Bounded latest event run ends after scoped audit/commit/push.364valued/12blocked/364factual/2260pending;740base+67revisions/noactive;412facts are unstarted. Full02UTC remains due. No goal lifecycle mutation, new timer, idle follow-up or new evaluation during closeout.
+
+
+## 2026-10-20T00:59:27.467944+00:00 —412Kimi55 valued/indexed;365valued
+
+- Primary priceblind34.02125%YES/broad8–80/15ppreserve; selectedYES19.02125/NO50.97875. Root3source/4UItrace raw+gzip hashes, full Kimi/APIrows and K3README table/footnotes verified.56withtools canmatterunderadmission/fallback but notautomaticspecifiedboardYES; currentAccuracy41.08/13.92ppgap. Diamond/calibrationseparate; full2026history/sourcewait retained. [Report](../research/2026-10-17-deep-review/evaluations/0412.md).
+- TenYES saved13c fee-cost1.34524/selected+.556885;NO fails. TenYES12cmaker1.20/selected1.902125 beforecarry/fill; illustrative1.5× adversefillstressafterreserve positive~.0963after5cops/carry, notmeasured. Bothbooks361.407s atmatchingresponse fail180s; noorder/prior/watch/TG.741base+67revisions/365valued/12blocked/364factual/2259pending/noactive verified before nextcase. Singlecurrentquote/knownalternative follow-up, not automaticbid or infinitepoll.
+
+
+## 2026-10-20 01:18 UTC — Goal continuation:414 completed individually
+
+- Saved/indexed414 NY Republican governor **8.03739% YES**,10pp selected reserve→YES0/NO81.96261%; no entry. Primary read statewide Marist/Siena/Quinnipiac methods, ballot certification and bounded archive listings. NineteenYES dated cost1.04929 gives central+.477814/selected−1.04929; NO also fails. No mechanical NY01 prior change from statewide/CD21 evidence. [Report](../research/2026-10-17-deep-review/evaluations/0414.md).
+- Caught collector NO-token digit omission against frozen identity before action; preserved original + explicit erratum and clarified programmatic full-string identity copying in PROTOCOL. No execution bypass or full queue block.
+- **366valued/12blocked/364factual/2258pending;742base+67revisions/noactive.**416 facts ready, unvalued.4121.20YES maker candidate still has no submitted order; prior/feed are preparatory and must be resolved before handoff. Current RSS-variant diagnostic is bounded; no daemon restart/forced poll/state edit.
+
+
+## 2026-10-20 01:23 UTC — Kimi412 maker submitted; independent verification pending
+
+- Vetted `polyclaude_enter.py --execute` ran once01:23:15.079949–01:23:19.225511UTC, returned200/success/LIVE for **10YES12c/maximum1.20**, exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`, order`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`. DEC243. Full financial mutation intent/result/receipt private; no blind retry. Independent account/trade/index/reservation proof is the immediate follow-up. No holding/spend/profit inferred from a resting bid.
+- Source/model19.02125% selected fair vs12c,1.20full-loss cap and same-AI-cluster risk accepted; noadd/chase/taker/repost. Current30RSS cohort26retainedIDs+4normalizedtitles supports baseline handling despite unordered5000ID retention; directfeed200/hashchecked, no forcedpoll/restart/seenedit. Added threeKimi/Moonshot terms to existing exposure-aware daemon. [Entry review](../data/deep_review_20261017/work/0412_entry_intent_review_0138.json) · [Primary context](../data/deep_review_20261017/work/0412_context_primary_root_0137.json).
+- The console sibling advisory incorrectly says TRUE-DUP while listing different45/50/60/65thresholds. Root routed only the exact55market/asset; guarded writer binds identity. Consoleask13c is not signedmaker12c. No new engineering change or threshold substitution. No standaloneTelegram for an unfilled bid under October18 outbound policy.
+
+
+## 2026-10-20 01:29 UTC — Kimi412 verified; two reviews complete
+
+- Root independently verified all5account raw/gzip receipts: exact Kimi inventory/detail LIVE10YES12c/0matched; exhausted126trades/no targetCID ormaker/takerOID match; API8/localindex7rows with0candidate; all4matching reservations. Original3bids unchanged/6.50; total7.70. pUSD20.45129 at01:24:50 less commitments12.75129 is arithmetic, not freecollateral. No holding/spend/fee/credit/profit; no duplicate submit. [Primary proof](../data/deep_review_20261017/work/0412_post_primary_0143.json).
+- Append-only412revision records completed source/export/OpenAI/Snowflake/monitoring/alternative/conditional-fill underwriting and one submitted bid. Numerical model34.02125%YES/15ppreserve unchanged; full1.20loss accepted. Existing02UTC review is not a default cancellation deadline. No add/chase/taker/automaticrepost; cancel first on newly unassessed material model/score/source/policy evidence, pull before known catalyst/cutoff. [Effective report](../research/2026-10-17-deep-review/revisions/0412_20261020T012806290142Z.md).
+- **366valued/12blocked/364factual/2258pending;742base+68revisions/noactive.**414saved individually/noentry;416facts ready, unvalued. Collector token-copy error corrected explicitly/protocol clarified. Watcher unordered5000-ID retention limits diagnostics; current30 covered by IDs-or-titles, no code/state edit or forced poll. Generic sibling advisory is misleading; exact55identity governed execution.
+- Fresh canonical producer01:02:26–42:196.08incl5.81gas;190.27tradingmid/188.04indicative depth versus170(+10.61%depth ratio), PM35.12/32.89;19.72residual is accounting, not audited profit. Appended one CSV row226, all225oldrows preserved; chart10tests pass. No new NAV from unfilledbid. [Financial record](../research/2026-10-20-0102-entry-preflight-financial-snapshot.md).
+- No standalone Telegram for an unfilled bid under October18 policy; material fills/findings/block or400-valued milestone remain notify-worthy. No new timer, watcher process or goal lifecycle action. This bounded run ends after audit/publication; existing02UTC full check remains due.
+
+
+## 2026-10-20 01:35 UTC — In-run Michigan source review complete
+
+- Reviewed all3alert rows01:02:44–01:30:42, verified exactline hashes. NewGreenBay disavowal headline matches heldMI CID; twoGoogleconsentcaptures leave itsbody/date unknown, not silentlyduplicated orconfirmed. Rootread priorCBSOct17Caroexchange/oldOct1poll; allegation/disavowalcoverage doesnotmeasurevotes orautomaticallyconfirmNO. [Primary review](../data/deep_review_20261017/work/goal0018_mi_primary_0157.json).
+- RetainMI5NO44/selected34/broadNO20/noadd. Fresh01:33:28.952596 book2.662s old: NO30/31c,5share netexit1.458 after.042fee versus selectedhold1.70; exitplus14.5dayconstantAavecarry~1.45983. Broadlow1favorssale/full1.55costlosscanoccur. No guarantee, newprior, trade, add ormechanicalelection-bidchange; no newaggregate/CSV/TG.
+- Kansasdebate/Sedgwickearly-voting rows areunheldresearchleads; no automaticrepost. Collectorcase_index412 isroutingmetadataerror; primaryunit bindsactualMichigan1838/CID/asset andpreservesoriginalfacts. No claimallnewsabsentafterfixedcutoff. Nextfull02UTC retained.

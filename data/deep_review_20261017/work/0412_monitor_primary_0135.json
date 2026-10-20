@@ -1,0 +1,20 @@
+{
+  "schema": "deep_review.monitor_primary_coverage.v1",
+  "review_index": 412,
+  "reviewed_utc": "2026-10-20T01:21:41.086941+00:00",
+  "hashes_verified": true,
+  "private_receipt": "logs/deep_review_20261017/case0412_variant_0128/kimi_rss.receipt.json",
+  "public_source_unit": "work/0412_monitor_variant_0128.json",
+  "current_titles_read_by_primary": 30,
+  "current_id_matches": 26,
+  "current_id_or_title_matches": 30,
+  "expected_count": 30,
+  "persisted_seen_ids": 5000,
+  "uncovered_current_titles": [],
+  "interpretation": "Current30 all IDs or normalized titles processed; four missing IDs have01:07:40 title stamps, after newfeed config. This supports baseline handling, not proof of a particular feed/client or exhaustive coverage. Old three finance titles fell outside current cohort; root independently read all original30. Unordered5000ID retention makes ID-only absence inconclusive. No state edit or forced poll.",
+  "remaining_source_checks": [
+    "Official OpenAI Sep30 distillation body",
+    "Official Snowflake Sep24 K3 preview body"
+  ],
+  "limits": "Current root source assessment/keyword promotion and live writer gates still required before an order. Five-minute poll/cache, feed cap/title cooldown, source latency and unannounced release fills remain priced risks."
+}

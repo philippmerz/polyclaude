@@ -1792,5 +1792,35 @@
     "current_research_model": "research/2026-10-17-deep-review/models/0403_revision_2358.json",
     "current_assessment": "Preparatoryprior only/no--execute/reservation/order/holding. RootnewOct19Kenttranscript correctslowerpricing/fasterlaborloosening andbadliteralRSSexclusions; sourceconditionalYES11.652258 withunchanged15ppmodelallowancefloorsselectedYES0; bothsidesfail. Originalcandidatep15.5707/haircut15.45605 retainedhistorically. No capital/spend/profit/hardpull obligation orRBAalerts.",
     "current_management": "No order exists. Reopen only with fresh independent source/conditional-fill/current economics and execution gates; no automatic entry/chase/taker fallback."
+  },
+  "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823": {
+    "p_yes": 0.34021250000000014,
+    "p_no": 0.6597874999999999,
+    "p_yes_stress": 0.19021250000000015,
+    "p_yes_range": [
+      0.08,
+      0.8
+    ],
+    "edge_haircut": 0.15,
+    "cluster": "ai-ships-fast-short",
+    "rho_within": 0.75,
+    "cluster_frac": 0.1,
+    "verified": "2026-10-20",
+    "criteria_read": "2026-10-20",
+    "market_id": "3072315",
+    "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+    "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+    "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
+    "hidden_info": true,
+    "research_report": "research/2026-10-17-deep-review/evaluations/0412.md",
+    "probability_model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
+    "latest_source_packet": "data/deep_review_20261017/work/0412_context_primary_root_0137.json",
+    "rationale": "Primary34.02125%YES/15ppselected19.02125/broad8–80; uncalibratedsource-admission/update tree. Currentofficialboard41.08 vsissuer56withtools: admission/config/fallbackuncertain. MOFCOMscopedproposal/APIexception independentlyread, notblanketmodelban orverifiedK3.1roadmap.",
+    "current_assessment": "DEC243:LIVE unfilled10YES12c/maximum1.20. Submittedonce01:23:15–19; independent01:24:49–50 reads/rootaudit verifyexactinventory/detail matched0, exhausted126trades/target0, API/localindex0target, matchingreservation. Fourbids7.70/originalthreeunchanged; no holding/spend/fee/profit. Noadd/chase/taker/repost.",
+    "management": "Noadd/chase/taker/repost. Revieweveryexistingtick/earliermaterialmodel,score,source/evaluation/exportpolicy change; cancel-first on newlyunassessedmaterialevidence. Pullbeforeknownrelevantrelease/cutoff, notautomaticnextcronexpiry. Unannouncednews/privateupdatescanfillbeforecancel; full1.20lossaccepted. SourceoutagecanlockpastJanuary.",
+    "monitoring": "Scoped feed + tier2 Kimi/Moonshot AI/MoonshotAI. Root read original/current30 headlines and verified HTTP200/hash-bound current RSS;26IDs+4normalized titles cover current30. Unordered5000ID retention invalidates ID-only absence; no state edit/forced poll. Existing one code-current daemon,5minpoll/cache/cappedfeed/cooldown are nonexhaustive. Cancel-first newly unassessed material model/score/source/policy evidence; pull before known catalyst/cutoff, not automatic nextcron expiry.1.20 full-loss/adverse fills/source-delay accepted.",
+    "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
+    "decision_id": 243,
+    "latest_execution_review": "data/deep_review_20261017/work/0412_post_primary_0143.json"
   }
 }

@@ -1,0 +1,20 @@
+{
+  "schema": "deep_review.identity_erratum.v1",
+  "review_index": 414,
+  "reviewed_utc": "2026-10-20T01:02:00.727466+00:00",
+  "original_unit": "data/deep_review_20261017/work/0414_facts_0055.json",
+  "original_sha256": "a9ae9462e1fd86d8b768ebc262d8a67d004a812442154e846258b3e3d7b97760",
+  "finding": "Collector manually transcribed NOtokenincorrectly; originalpreserved. Noquote/order/financialactionusedthisunit.",
+  "correct_identity": {
+    "market_id": "629545",
+    "condition_id": "0x50b78cd83de62d75d504d7a184ba1171436628068b3c3d4dd0384e65d4a40d1b",
+    "criteria_sha256": "43ff675776e0fd1d43ad1d69076b45b50800f28969f6fce972e9c3924dc7000c",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "token_ids": [
+      "108106288970534575307495623455701128869187166289634633189375113923142364674394",
+      "32946988346851809083717853909672502303533938428804197173672614672441945179683"
+    ]
+  },
+  "repair": "Copyidentityprogrammaticallyfromfrozenuniverse; root exact-equalitycheckincludesfulltokenstrings. Current quote/ledger paths alreadybindfrozenidentity; no executiongatechange/globalblock.",
+  "source_limits": "Browser-onlyNYSobservations remainleadsuntilrootSDKcapture; direct403s arenotcandidateevidence."
+}

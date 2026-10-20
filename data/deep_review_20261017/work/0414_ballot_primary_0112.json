@@ -1,0 +1,22 @@
+{
+  "schema": "deep_review.primary_ballot_check.v1",
+  "review_index": 414,
+  "reviewed_utc": "2026-10-20T01:06:37.164096+00:00",
+  "source_url": "https://elections.ny.gov/certification-november-3-2026-general-election",
+  "representation": "SDKserializedwebPDFtext, notrawPDF orwireHTTP; observedcallwindow/saveclocks",
+  "capture": {
+    "receipt": "logs/deep_review_20261017/case0414_nys_sdk_0108/nys_pages.receipt.json",
+    "started_utc": "2026-10-20T01:03:39.896620Z",
+    "saved_utc": "2026-10-20T01:03:41.569201Z",
+    "raw_sha256": "44112cf77da2ad190f9fb02730d62a08ba5e8a0df59713ffa780bc5d28ae3df3",
+    "gzip_sha256": "9898ab8037b3fe62b17bb6db1c510193dc9b038d8c7e80b98bc9ec46c35dfd13"
+  },
+  "read_scope": "Documentmetadata/versionhistory andstatewideGovernor/LtGovernor first3pages, notentire136-pagecertification.",
+  "findings": [
+    "Oct7amendednomineecertificationforNov3general election; not electionresults.",
+    "RepublicanBruceABlakeman/ToddHood; DemocraticKathyCHochul/AdrienneEAdams; candidatealsootherballotlinesdoesnotchangeRepublicannomineestatus.",
+    "Direct403failurespreserved; SDKsourceworked. CollectororiginalbadNOtoken correctedbyfrozenprogrammaticidentityerratum beforequote/action."
+  ],
+  "identity_erratum": "work/0414_identity_erratum_0105.json",
+  "not_probability": true
+}

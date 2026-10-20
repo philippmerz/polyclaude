@@ -1,0 +1,58 @@
+{
+  "schema": "finite_goal.held_news_primary_review.v1",
+  "completed_utc": "2026-10-20T01:35:00.100075+00:00",
+  "case_index": 1838,
+  "identity": {
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+    "holding": "5NO; no currentpendingBUY for exactMI CID in01:24authenticated inventory"
+  },
+  "news_window": {
+    "after": "2026-10-20T01:02:44.089295Z",
+    "through": "2026-10-20T01:30:42.432754Z",
+    "row_count": 3,
+    "all_three_raw_line_hashes_verified": true
+  },
+  "source_unit": "work/goal0018_mi_greenbay_facts_0152.json",
+  "collector_metadata_correction": "That fact unit says case_index412 because of ongoingKimi task; its alert/source areMichigan1838. Preserve original; this assessment binds exactalert/CID/asset and makes noKimi source claim.",
+  "primary_source_verification": "Root verified raw+gzip hashes/read bothGoogleconsent bodies; neither is theGreenBay article. Root verified/read entire previouslycapturedCBSarticle/event/pollparagraph including bothcandidates statements. No newnetworkclaim forpriorCBS.",
+  "alert_decisions": [
+    {
+      "alert_id": "a099a9ac21f8d5315c10967822b6de06b6ca2a8f",
+      "finding": "ExactGreenBaybody/date/canonicalURL/eventdetailsremain unverified. Title isconsistentwith priorCaro disavowalcoverage but that doesnotproveitsfullcontents duplicate. EarlierCBS reportsOct17exchange/oldOct1Mitchell45.6D41.4R poll, alreadypriced; accusations areattributed, notestablishedties. Disavowal/reactioncouldhelpD; headlinevolume/classifierMATERIALdoesnotmeasurevoteeffect orconfirmheldNO.",
+      "decision": "RetainNO44/selected34/broadNO20/noadd. Noverifiednewvote/candidate/ballot/thesisbreak supportsdirectionalpriorchange; do notassumethenewpublisherhasnonewdetails. Unknownbodyremainspricedmodel/sourceuncertainty, notfreshpositivenewsexposure."
+    },
+    {
+      "alert_id": "1072593dcb55049ca589a4053b4b7336689e7833",
+      "finding": "Kansasdebatewatchingguide; noKansasSenateholding orpendingBUY inactual portfolio.",
+      "decision": "Researchleadonly; bodynotfetched/noprobabilityorallocationchange."
+    },
+    {
+      "alert_id": "8ba82d93c2a3f7beb5a0de567139bc27f1009a9f",
+      "finding": "Sedgwickearly-votingnotice; noSedgwickholding orpendingBUY. Priorzero-fillorderclosed.",
+      "decision": "Researchleadonly; nofreshcountyturnoutmeasurementadopted/noautomaticrepost."
+    }
+  ],
+  "hold_economics": {
+    "quote": "data/deep_review_20261017/goal0018_mi_quote_0155.json",
+    "full_verified_walks": "work/goal0018_mi_economics_0156.json",
+    "quote_received_utc": "2026-10-20T01:33:28.952596+00:00",
+    "book_age_seconds_at_receipt": 2.6615960597991943,
+    "bid_ask_NO": [
+      0.3,
+      0.31
+    ],
+    "minimum_shares": 5,
+    "tick": 0.01,
+    "fee_rate": 0.04,
+    "fee_taker_only": true,
+    "five_NO_net_exit": 1.458,
+    "selected_expected_hold_payout": 1.7,
+    "central_expected_hold_payout": 2.2,
+    "broad_NO20_payout": 1.0,
+    "constant_Aave_APY_dated": 0.032035,
+    "14_5day_exit_plus_constant_carry": 1.4598275287829334,
+    "decision": "Retainholding/noadd. Selected1.70exceedsfresh1.458netexitplus~.00183illustrativecarry; broadlow1favorssale,so no guaranteedfloor orworst-rangeclaim. NoautomaticKellyadd/hidden-infosell/full1.55costlosscanoccur."
+  },
+  "operations": "No order/priorchange/newaggregate/CSV/DEC/watch/Telegram. Kimiandoriginalthreebidsuntouched. Existing02UTC remainsfullcheck; earliermaterialevidence/fillstillrequiresreview. Noabsenceclaimafterfixedcutoff."
+}

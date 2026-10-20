@@ -1,0 +1,121 @@
+{
+  "both_sides_considered": true,
+  "quote_file": "data/deep_review_20261017/0414_quote_0119.json",
+  "quote_file_sha256": "756b4c0e58148952a3b9623ff43ac1da382e016331ca9a9b7104b4c33d6a00f2",
+  "quote_capture_utc": "2026-10-20T01:11:36.422571+00:00",
+  "gamma_received_utc": "2026-10-20T01:11:36.196731+00:00",
+  "hypothetical_gross_shares": 10.0,
+  "horizon_days": 16.0,
+  "probability_reference_outcome": "Yes",
+  "actual_entry_reserve_pp": 10.0,
+  "fee_curve": {
+    "rate": 0.04,
+    "exponent": 1.0,
+    "taker_only": true,
+    "authoritative": true
+  },
+  "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+  "alternative": {
+    "apy": 0.032035,
+    "chain": "polygon",
+    "token": "USDC",
+    "supply_status": "live",
+    "fetched": "2026-10-19T18:02:51.823060+00:00",
+    "constant_rate_sensitivity_not_forecast": true,
+    "funding_and_operations_costs_not_assumed_free": true
+  },
+  "sides": {
+    "Yes": {
+      "probability": 0.08037390523090565,
+      "selected_stress_probability": 0,
+      "best_bid": 0.049,
+      "best_ask": 0.053,
+      "minimum_shares": "5",
+      "tick_size": "0.001",
+      "book_timestamp": "1792458675568",
+      "book_received_utc": "2026-10-20T01:11:36.329959+00:00",
+      "book_age_seconds_at_receipt": 20.761958837509155,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 10.0,
+          "gross": 0.53,
+          "fee": 0.02008,
+          "fills": [
+            {
+              "shares": 10.0,
+              "price": 0.053
+            }
+          ],
+          "net": 0.55008
+        },
+        "bids": {
+          "complete": true,
+          "filled": 10.0,
+          "gross": 0.49,
+          "fee": 0.01864,
+          "fills": [
+            {
+              "shares": 10.0,
+              "price": 0.049
+            }
+          ],
+          "net": 0.47136
+        }
+      },
+      "taker_cost_usd": 0.55008,
+      "central_expected_profit_usd": 0.2536590523090565,
+      "selected_stress_profit_usd": -0.55008,
+      "break_even_before_carry": 0.055008,
+      "break_even_constant_carry": 0.055084087389233594,
+      "current_execution_authorization": false
+    },
+    "No": {
+      "probability": 0.9196260947690944,
+      "selected_stress_probability": 0.8196260947690944,
+      "best_bid": 0.947,
+      "best_ask": 0.951,
+      "minimum_shares": "5",
+      "tick_size": "0.001",
+      "book_timestamp": "1792458675568",
+      "book_received_utc": "2026-10-20T01:11:36.329959+00:00",
+      "book_age_seconds_at_receipt": 20.761958837509155,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 10.0,
+          "gross": 9.51,
+          "fee": 0.01864,
+          "fills": [
+            {
+              "shares": 10.0,
+              "price": 0.951
+            }
+          ],
+          "net": 9.52864
+        },
+        "bids": {
+          "complete": true,
+          "filled": 10.0,
+          "gross": 9.469999999999999,
+          "fee": 0.02008,
+          "fills": [
+            {
+              "shares": 10.0,
+              "price": 0.947
+            }
+          ],
+          "net": 9.449919999999999
+        }
+      },
+      "taker_cost_usd": 9.52864,
+      "central_expected_profit_usd": -0.3323790523090544,
+      "selected_stress_profit_usd": -1.3323790523090544,
+      "break_even_before_carry": 0.9528639999999999,
+      "break_even_constant_carry": 0.9541820070908719,
+      "current_execution_authorization": false
+    }
+  }
+}

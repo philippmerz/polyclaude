@@ -1,0 +1,22 @@
+{
+  "schema": "deep_review.fact_resume.v1",
+  "review_index": 416,
+  "phase": "FACTS_READY_NOT_VALUED",
+  "no_forecast": true,
+  "captured_as_of_utc": "2026-10-20T01:13:34.004228Z",
+  "identity": {
+    "conditionId": "0xceb97ea935b3a028af06390154cb9acd876d35d28101510e0b576694400670e8",
+    "criteria_sha256": "9f136f42873e804c46da69317a1fd8b39d75472e238935b0e515a652e88258ff",
+    "id": "716907",
+    "question": "Felix Protocol FDV above $800M one day after launch?"
+  },
+  "source_capture_root": "logs/deep_review_20261017/case0416_facts_0122",
+  "source_paths": [
+    "work/0416_facts_0122.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "unit_sha256": "f9c7db4e6ce7bfd9c25775b5d11c00c7bad6b243bb3cf4158bc4f4a14c569522",
+  "unit_hashes": {
+    "work/0416_facts_0122.json": "f9c7db4e6ce7bfd9c25775b5d11c00c7bad6b243bb3cf4158bc4f4a14c569522"
+  }
+}

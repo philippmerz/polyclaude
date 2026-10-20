@@ -1,0 +1,53 @@
+{
+  "schema": "deep_review.primary_candidate_underwriting.v1",
+  "review_index": 412,
+  "reviewed_utc": "2026-10-20T01:09:00.218957+00:00",
+  "p_yes": 0.3402125,
+  "selected_entry_p_yes": 0.1902125,
+  "actual_entry_reserve_pp": 15,
+  "model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
+  "quote_followup": "work/0412_candidate_followup_0103.json",
+  "source_review": {
+    "baseline": "work/0412_news_baseline_0106.json",
+    "all_30_titles_read_by_primary": true,
+    "export_rule": "work/0412_export_rule_facts_0109.json",
+    "primary_result": "Rootverified2MOFCOMbody/raw+gziphashes; Oct16consultationOct16\u2013Nov15+temporaryregistration islistedtechnology/specifictransfer, notblanketall-model license. OfficialQ&AexcludesAPI/app/SaaS/lightedge fromlarge-model technology-exportmanagement andidentifiesopen-source/publicationconveniences. Kimi3.1existence/scopeorarticlebodyunverified. No demonstratedbar onofficialHLEscorepublication/APIeval, therefore no automaticnewreleasepenalty orconfirmation ofroadmap. Existing15ppuncertainty retained.",
+    "other_titles": "Mercury/Elo comparisons,distillation/IP,specialistfinance releases,staffdeparture/distribution remainleads, notnew55measurementorindependentlyverifiednewmodel/tailprobabilities. No literal-namerelevancefilter/noexhaustivecoverageclaim."
+  },
+  "intended_order": {
+    "side": "YES",
+    "shares": 10,
+    "maker_limit": 0.12,
+    "full_loss_budget_usd": 1.2,
+    "no_taker_urgency": true,
+    "not_yet_posted": true
+  },
+  "capital_and_portfolio": {
+    "producer": "work/0412_preflight_state_0104.json",
+    "canonical_bankroll_total": 196.08,
+    "separate_gas": 5.81,
+    "trading_midpoint": 190.27,
+    "indicative_trading_depth": 188.04,
+    "existing_original_bids": 6.5,
+    "proposed_total_bids": 7.7,
+    "pUSD_rounded": 20.45,
+    "after_bids_arithmetic": 12.75,
+    "cash_scope": "Notcertifiedvenuefreecollateral; writerrevalidatesactualpUSD/allowance/locks. USDC.11notpUSD.",
+    "same_cluster": "ai-ships-fast-short; sameasheldOR; no independence/hedge credit",
+    "sizing_assumptions": {
+      "rho": 0.75,
+      "declared_cluster_fraction_floor": 0.1,
+      "bankroll_cap_denominator": 188.04,
+      "manual_risk_usd": 1.2,
+      "reason": "Smallfull-loss allocation underunfittedscore/admissionmodel, farbelowcentralandstressedfractionalKelly; notsizeoptimizedfrompointp."
+    },
+    "explicit_joint_adverse_states": {
+      "KimiNO_and_OR_intervalYES": "Bothlose; combinedentrycost4.45, neitherhedgesother.",
+      "all_ordinary_PM_and_all_four_bids_lose_Clarity29": "176.45tradingwealth, otherassetsfixed; no probability/guarantee.",
+      "same_but_Clarity0": "147.45tradingwealth, protocol/oracle/sharedvenueworstcase, notriskfreefloor."
+    }
+  },
+  "known_alternative": "Fresh316NOask19c vsdated65%NO/40selected islargermodelmargin, butoriginalHaalandbidwasalreadycanceled aftersourceissues andremainclosed. OpaqueGooglegrowth/sharedMessi/longfallback cannotbe assumedcurrent. Do not automaticallyrepost; noKimi=best-all-marketclaim. Small1.20doesnotdisplaceexistingcommitments/cashhurdle.",
+  "monitoring_precondition": "NewKimirssfeedaddedwithoutKimiterms01:05 forordinarybaseline. Beforepostingverifyordinarycyclebaseline, promoteKimi/Moonshotterms; existingexact exposure-awaredaemon/5mincache, no rawheadlineTG. Cancel-first on newlyunassessedmaterialmodel/score/source-policy/evaluation changes; existingticks review, no arbitrary02expiry/noadd/chase/repost. Knownsourcechange/publishedcatalystrequirespullbefore; private/unannouncedchanges canbefilledbeforecancel/full1.20lossaccepted.",
+  "decision": "Small12c10YESpost-onlycandidate aftermonitoring/currentwriter-gates. Noorder/priorasofthisunit. Source/exportgapreviewcomplete; no needglobalgoalblock."
+}
