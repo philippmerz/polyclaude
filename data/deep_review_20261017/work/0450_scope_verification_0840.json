@@ -1,0 +1,72 @@
+{
+  "schema": "case450.scope_source_verification.v1",
+  "verified_utc": "2026-10-20T08:39:00.571163+00:00",
+  "pairs": [
+    {
+      "label": "PBS/AP initial resignation",
+      "url": "https://www.pbs.org/newshour/politics/tulsi-gabbard-resigns-as-trumps-national-intelligence-director",
+      "observed_utc": "2026-10-20T07:38:42.312467+00:00",
+      "receipt": "logs/deep_review_20261017/case0450_primary_0746/pbs_ap_gabbard.receipt.json",
+      "status": 200,
+      "raw_sha256": "195e55d577ad5bdb8a2e30f11d9deb44d10984991c877ec34a62dfdb7fe6197f",
+      "gzip_sha256": "67733c4ff6ce424d1ea585f22293e2b67520e442cfc2b06c2678216254a1b438"
+    },
+    {
+      "label": "Presidential post archive",
+      "url": "https://www.trumpstruth.org/",
+      "observed_utc": "2026-10-20T08:31:06.676023Z",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/truth_archive.receipt.json",
+      "status": 200,
+      "raw_sha256": "f17369f3bfd0dca364b83e6bbac4a5e7cef9c238dfc54723cd0fa2df7dac6705",
+      "gzip_sha256": "2fea354ff59d88ef08e23a9e0c8c2bc49ac889c4f9f8cb44f3e3dc86705e07b7"
+    },
+    {
+      "label": "Hawaii News Now departure report",
+      "url": "https://www.hawaiinewsnow.com/2026/06/20/tulsi-gabbard-exits-role-director-national-intelligence/",
+      "observed_utc": "2026-10-20T08:31:07.909701Z",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/hawaii_followup.receipt.json",
+      "status": 200,
+      "raw_sha256": "66726b2e2fa433ad75cbbdd75fe29c8eff755c57720ae4002596db047db510fc",
+      "gzip_sha256": "a48eb63cdd4be54117dd228c73cfcef07122066b15c01b80db5409cb704ff0f3"
+    },
+    {
+      "label": "Exact parent/child scope",
+      "url": "https://gamma-api.polymarket.com/events/514187",
+      "observed_utc": "2026-10-20T08:34:46.529874Z",
+      "receipt": "logs/deep_review_20261017/case0450_scope_0837/event.receipt.json",
+      "status": 200,
+      "raw_sha256": "db1ea880de3e40f67c4a82e8e6b10d2b3c6d53208f4b442fd8f9ae5d4d2d5b94",
+      "gzip_sha256": "facdbd7fa210b34b4fa1e59d9c2c65d072a1ee2c4a1a42030d3ce4e4adf9b404"
+    },
+    {
+      "label": "Event comments",
+      "url": "https://gamma-api.polymarket.com/comments",
+      "observed_utc": "2026-10-20T08:35:56.433153Z",
+      "receipt": "logs/deep_review_20261017/case0450_scope_0837/comments/comments.receipt.json",
+      "status": 200,
+      "raw_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "gzip_sha256": "2ca4529576310b626c1bd48352d283b521d029d54f195d8416536872d826e4c6"
+    },
+    {
+      "label": "Official post access failure",
+      "url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
+      "observed_utc": "2026-10-20T08:31:14.110023Z",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/official/truth_post.receipt.json",
+      "status": 403,
+      "raw_sha256": "980fda33a25551276184edc4929fce1e6a9eb3e2369b21e2bb350db86457e568",
+      "gzip_sha256": "d27101be984d9377f3d039906753d14cf2036fbd33336f41f5f5de8e1d057988"
+    },
+    {
+      "label": "Axios access failure",
+      "url": "https://www.axios.com/2026/06/11/pulte-gabbard-removal-intel",
+      "observed_utc": "2026-10-20T08:31:06.855177Z",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/axios_followup.receipt.json",
+      "status": 403,
+      "raw_sha256": "b52add230ece30ef23606bb66498b1a2ba52f553bb0479167d83d57071126cdf",
+      "gzip_sha256": "b0281a6ee018861d930e34757fbfcbbac5a845b84cb0219570fb2b6b44e5aacb"
+    }
+  ],
+  "current_exactidentity": "canonicalidentity_checks9of9PASS; fullcurrentdescriptionexactlyequalsfrozen; rawdescriptionsha91b9a0da distinctfromfrozencriteriafingerprint3865b61b bydefinition. No criteriachange.",
+  "quote_status": "No owncurrentquoteviewed or probability adopted.",
+  "limit": "Sourcehashesbind suppliedbytes/callwindows, not wireauth or definitiveUMA/editorialpayoutinterpretation."
+}

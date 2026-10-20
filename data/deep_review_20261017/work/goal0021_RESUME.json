@@ -1,0 +1,59 @@
+{
+  "schema": "finite_goal_progress.v1",
+  "updated_utc": "2026-10-20T08:45:47.728036+00:00",
+  "previous_goal_turn_classification": "progress",
+  "previous_turn_evidence": "2234a38c independentlysaved/verified/pushed443/445/446/449;450partialsource/windowinvestigationssaved. Intervening72753ebe boundedfullcheckverifiedrequestedalerts/currentaccount/CSV233 butdidnotadvancefrozenqueue.",
+  "scope": "Full frozen3000 finite research remains incomplete;380valued/15blocked/371factual/2234pending. Latest cron is bounded and does not authorize indefinite continuation.",
+  "counts": {
+    "completed_valuations": 380,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2234,
+    "base_records": 766,
+    "revisions_written": 69
+  },
+  "active_indices": [
+    451
+  ],
+  "active_pointer": "work/0451_resume.json",
+  "next": [
+    451,
+    452,
+    454,
+    455,
+    456
+  ],
+  "current_case": "450 saved/verified blocked_after_review;451 started08:40, no forecast/quote/completed record. Preserve evidence; no further research in this bounded closeout.",
+  "new_fact_tasks": {},
+  "task_limit": "Existing factual workers completed.451 in_progress/unvalued;452 pending. No worker forecast, records or trades.",
+  "safety": "Latestfulltick073415observed08:07\u201316; canonical195.01incl5.79gas/trading189.22mid/183.85indicativenetdepth,CSV233.3originalLIVE0matched/6.50/127trades/9indexedidentities unchanged08:08. HLE08:08unchanged/OR32.345372Tpartial;next10UTClight/14full/earliermaterialevent. Newtradefreshallgates.",
+  "latest_primary": "work/tick073415_primary_review.json",
+  "quota_probe": "08:29repo_readonlyprobe15%used/85%headroom/resetOct2706:33;notexecution/budgetpromise.",
+  "telegram": "400valued/materialfinding/action/block; no routinecase/headlinepings.",
+  "goal": "Finite research incomplete; no lifecycle mutation, new goal, timer or idle continuation in this bounded scheduled run.",
+  "current_completed": [
+    {
+      "schema": "case_record_verification.v1",
+      "verified_utc": "2026-10-20T08:39:58.240072+00:00",
+      "index": 450,
+      "status": "blocked_after_review",
+      "market_id": "2332981",
+      "condition_id": "0x50f740162f52bcef8c8035e5b175c7ad6f5230b7ffbed4cbd5733ff93fc91168",
+      "report_sha256": "9fd3f7ec2f0a4eaec5274424569a7ca922e2b28f9da7193382aaa6063a68d3af",
+      "ledger_index_checkpoint": "PASS",
+      "counts": {
+        "completed_valuations": 380,
+        "blocked_after_in_depth_review": 15,
+        "factual_exclusions": 371,
+        "pending": 2234,
+        "base_records": 766,
+        "revisions_written": 69
+      },
+      "next": 451
+    }
+  ],
+  "future_facts": [
+    "work/0451_poll_capture_addendum_0832.json",
+    "work/0452_portwatch_binding_addendum_20261020.json"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "event_receipt": "logs/deep_review_20261017/case0450_scope_0837/event.receipt.json",
+  "event_raw_sha256": "db1ea880de3e40f67c4a82e8e6b10d2b3c6d53208f4b442fd8f9ae5d4d2d5b94",
+  "event_metadata": {
+    "id": "514187",
+    "title": "Who will be the next to leave the Trump Cabinet?",
+    "commentCount": 0,
+    "resolutionSource": "",
+    "eventMetadata": {
+      "context_requires_regen": true
+    },
+    "createdAt": "2026-05-22T18:33:40.537888Z",
+    "startDate": "2026-05-22T19:11:25.900051Z",
+    "creationDate": "2026-05-22T19:25:18.442715Z",
+    "negRisk": true,
+    "negRiskAugmented": true
+  },
+  "exact_child": {
+    "id": "2332981",
+    "question": "Will no one leave the Trump Cabinet before 2027?",
+    "groupItemTitle": "None before 2027",
+    "active": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "umaResolutionStatus": null,
+    "createdAt": "2026-05-22T18:33:40.738594Z",
+    "startDate": "2026-05-22T19:11:25.900051Z",
+    "endDate": "2027-01-01T04:59:00Z"
+  },
+  "frozen_identity_checks": {
+    "market_id": true,
+    "condition_id": true,
+    "question": true,
+    "description": true,
+    "slug": true,
+    "resolutionSource": true,
+    "endDate": true,
+    "outcomes": true,
+    "token_ids": true
+  },
+  "description_sha256": "91b9a0daae5d6de18d9feb7d793526c9dfc7cb1bc5db3074174e67ee0d7dc3d7",
+  "frozen_criteria_fingerprint": "3865b61b96d9d0e9b49c8ec7d68dbca634b148f4791a3a3a6d0703a6a53278f5",
+  "hash_note": "Frozencriteriafingerprint isnot standalone descriptionsha. Initialguardcomparedunlikeschemes andstoppedbeforecomments; fulltextunchanged, canonicalidentity_checksallpass. No criteriamutation.",
+  "comments": {
+    "status": 200,
+    "receipt": "logs/deep_review_20261017/case0450_scope_0837/comments/comments.receipt.json",
+    "raw_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "rows": [],
+    "limit": "Commentssurfaceisnotallpossibleeditorial/UMAclarification; usercommentsnotautomaticallyauthority."
+  },
+  "current_own_quote_not_viewed": true
+}

@@ -1,0 +1,79 @@
+{
+  "binding_gap": [
+    "Market rule names metric, 7-day average, Bab el-Mandeb, and October 31, but no API field.",
+    "Official resolution page, linked app item, static webscene, layer metadata, and service metadata do not expose a query mapping the displayed metric to n_total or an aggregation implementing the 7-day mean.",
+    "The daily endpoint rows are integer daily n_total values for chokepoint4; that field/identity fit is suggestive but is not a verified display binding.",
+    "Existing latest API row remains Oct 11 per 0714 capture; absence after Oct 11 does not establish publication schedule, forecast block, resolution, or outcome."
+  ],
+  "captured_utc": "2026-10-20T08:31:38Z",
+  "case_identity": {
+    "condition_id": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac",
+    "index": 452,
+    "market_id": "5166819"
+  },
+  "new_official_body": {
+    "body": "logs/deep_review_20261017/case452_ui_binding_20261020/daily_service_metadata.body.json.gz",
+    "body_representation": "http_body",
+    "interpretation": "Service identity metadata adds no UI metric binding.",
+    "raw_sha256": "68ea34ec9693a7087a7bc89aa6137f296182ff1c3f33434f2eac68e2e2e6854f",
+    "receipt": "logs/deep_review_20261017/case452_ui_binding_20261020/daily_service_metadata.receipt.json",
+    "received_utc": "2026-10-20T08:31:35.304031Z",
+    "service_description": "absent",
+    "service_item_id": "3da2b9ca97684916b75c4013f95d18ab",
+    "started_utc": "2026-10-20T08:31:34.953641Z",
+    "status": 200,
+    "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer"
+  },
+  "no_valuation_or_trade_action": true,
+  "question": "Does the PortWatch resolution UI explicitly bind Bab el-Mandeb Arrivals of Ships 7-day mean to Daily_Chokepoints_Data.n_total (portid chokepoint4)?",
+  "result": "UNRESOLVED: no direct UI/widget/config/methodology query or aggregation binding found. Do not treat field match as verified mapping.",
+  "reused_official_evidence": [
+    {
+      "finding": "Official resolution page source references app item 2116586ea519488389e905f9bcd536dd but contains no named metric/layer/field/7-day label.",
+      "raw_sha256": "7547c2867efc5385f2df5af42b9e437944843488812dc2726a9419541e5d49f9",
+      "receipt": "logs/deep_review_20261017/portwatch_ui_binding_0720/resolution_page.receipt.json",
+      "url": "https://portwatch.imf.org/pages/6b1814d64903461b98144a6cc25eb79c"
+    },
+    {
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/imf_portwatch_hub_item.body.json.gz",
+      "finding": "Ports-Instant-App configuration/webscene linkage, but no named chart query or daily-series metric binding.",
+      "raw_sha256": "e485055363965415ba3bc488b4ff26d3cae4897663b408ce7c1c62f243e4ade3",
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/imf_portwatch_hub_item.receipt.json",
+      "url": "https://imf-dataviz.maps.arcgis.com/sharing/rest/content/items/2116586ea519488389e905f9bcd536dd/data?f=json"
+    },
+    {
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/imf_portwatch_webscene.body.json.gz",
+      "finding": "Static port/chokepoint reference services and routes; no Daily_Chokepoints_Data query, 7-day mean, or metric label.",
+      "raw_sha256": "b18788babba92f9c5ff9d61d2014f02a095d6534230b13e45658c7937d08fc8a",
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/imf_portwatch_webscene.receipt.json",
+      "url": "https://imf-dataviz.maps.arcgis.com/sharing/rest/content/items/b72143ed30774bd99f9d0bd2c1b75e4c/data?f=json"
+    },
+    {
+      "body": "logs/deep_review_20261017/next451452_publicfacts_0714/public/receipts3/capture/bab_chokepoints_layer_metadata.body.json.gz",
+      "finding": "Official layer schema includes date, portid, portname, n_total and category fields, but description is blank. This proves field existence, not that the resolution chart displays n_total or averages it over 7 days.",
+      "raw_sha256": "665074f60501775bdb29d9d6a562973d3efefb889aa45a7718b6f5e20ee1f16b92",
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/receipts3/capture/bab_chokepoints_layer_metadata.receipt.json",
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0?f=json"
+    }
+  ],
+  "schema": "case452_portwatch_binding_addendum.v1",
+  "targeted_searches": [
+    {
+      "query": "site:portwatch.imf.org \"Arrivals of Ships\" Bab el-Mandeb 7-day average",
+      "result": "no results"
+    },
+    {
+      "query": "site:imf-dataviz.maps.arcgis.com PortWatch \"Daily_Chokepoints_Data\"",
+      "result": "ArcGIS layer/schema and service metadata only; no UI binding"
+    },
+    {
+      "query": "site:portwatch.imf.org \"Bab el-Mandeb Strait\" \"Arrivals of Ships\"",
+      "result": "no results"
+    },
+    {
+      "query": "site:arcgis.com \"Daily_Chokepoints_Data\" IMF PortWatch",
+      "result": "ArcGIS REST layer/service docs only; blank layer description"
+    }
+  ]
+}

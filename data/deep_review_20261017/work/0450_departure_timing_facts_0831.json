@@ -1,0 +1,67 @@
+{
+  "schema": "case450.departure_timing_facts.v1",
+  "review_index": 450,
+  "identity": {
+    "id": "2332981",
+    "conditionId": "0x50f740162f52bcef8c8035e5b175c7ad6f5230b7ffbed4cbd5733ff93fc91168",
+    "criteria_sha256": "3865b61b96d9d0e9b49c8ec7d68dbca634b148f4791a3a3a6d0703a6a53278f5"
+  },
+  "scope": "public chronology facts only; no payout mapping, probability, market data, case record or financial judgment",
+  "initial_baseline": {
+    "announcement_publication_utc": "2026-05-22T17:40:00Z",
+    "announced_resignation_effective_date": "2026-06-30",
+    "source": "PBS/AP syndicated original text, previously captured in work/0450_primary_window_0752.json; raw body sha 195e55d577ad5bdb8a2e30f11d9deb44d10984991c877ec34a62dfdb7fe6197f; market creation 2026-05-22T18:33:40.738594Z"
+  },
+  "new_chronology": [
+    {
+      "fact": "A June 9 presidential post states William Pulte would take over as Acting DNI on Friday, June 19, while “working closely with Tulsi Gabbard.” Archive page timestamps it 2026-06-09T22:10:33Z (6:10 PM displayed); this is a post-creation announcement preceding the announced June 30 effective date.",
+      "url": "https://www.trumpstruth.org/statuses/39172",
+      "official_post_url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T08:31:06Z",
+      "sha256": "f17369f3bfd0dca364b83e6bbac4a5e7cef9c238dfc54723cd0fa2df7dac6705",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/truth_archive.receipt.json",
+      "source_limit": "Independent archive reproducing a post and linking the original; official Truth Social page separately attempted once and returned 403 (receipt below)."
+    },
+    {
+      "fact": "Hawaii News Now page/video description says Gabbard’s last day had been June 30 but the timeline “was moved up to Friday after a conversation with President Donald Trump.” Friday was June 19, 2026. Page publication metadata is 2026-06-20T01:01:46.793Z; video upload metadata 02:35:03Z.",
+      "url": "https://www.hawaiinewsnow.com/2026/06/20/tulsi-gabbard-exits-role-director-national-intelligence/",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T08:31:07Z",
+      "sha256": "66726b2e2fa433ad75cbbdd75fe29c8eff755c57720ae4002596db047db510fc",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/hawaii_followup.receipt.json",
+      "source_limit": "Description-level newsroom/video statement; no official personnel instrument captured in this bounded pass."
+    }
+  ],
+  "access_failures": [
+    {
+      "url": "https://www.axios.com/2026/06/11/pulte-gabbard-removal-intel",
+      "status": 403,
+      "bytes": 5656,
+      "sha256": "b52add230ece30ef23606bb66498b1a2ba52f553bb0479167d83d57071126cdf",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/axios_followup.receipt.json",
+      "note": "No retry; search result had described June 9 call/appointment chronology, but body inaccessible."
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
+      "status": 403,
+      "bytes": 5670,
+      "sha256": "980fda33a25551276184edc4929fce1e6a9eb3e2369b21e2bb350db86457e568",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/official/truth_post.receipt.json",
+      "note": "Official post page access failed once; archived transcription was captured separately."
+    }
+  ],
+  "limited_conclusion": "Evidence now establishes a post-market-creation June 9 presidential announcement setting Pulte’s Acting-DNI start for June 19, and contemporaneous June 20 Hawaii News Now reporting that Gabbard’s June 30 timeline was moved up to Friday after a Trump conversation. The captured official-post transcription does not itself explicitly say “Gabbard resigned effective June 19”; the exact formal separation instrument/date was not captured. Existing fact that successor Jay Clayton was sworn Aug 3 remains contextual, not the departure timestamp.",
+  "searches": {
+    "count": 2,
+    "queries": [
+      "Tulsi Gabbard resignation June 30 effective date later announcement leave early 2026 June 19 White House ODNI",
+      "Trump Truth Social \"June 19th\" Gabbard \"Acting Director of National Intelligence\" June 2026 official post"
+    ]
+  },
+  "limits": [
+    "No Wikipedia reliance; June 19 date was independently supported by retrieved presidential-post archive and Hawaii News Now page.",
+    "No further source requests after four captured attempts (two successful bodies, two HTTP 403 bodies).",
+    "Receipts bind supplied HTTP response bodies, not wire authentication."
+  ]
+}

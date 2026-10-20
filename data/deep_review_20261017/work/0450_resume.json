@@ -1,20 +1,21 @@
 {
   "review_index": 450,
-  "updated_utc": "2026-10-20T07:55:44.328944+00:00",
-  "phase": "Incomplete at bounded scheduled closeout; original AP/PBS chronology and parent event verified; no p/own current quote/case record.",
+  "updated_utc": "2026-10-20T08:39:58.240072+00:00",
+  "phase": "Completedblocked_after_review; exactNonepayoutwindow remainsunpriced, notfactuallyexcluded/noentry.",
   "source_paths": [
-    "work/0450_facts_0642.json",
-    "work/0450_followup_facts_0713.json",
-    "work/0450_event_context_0750.json",
     "work/0450_primary_window_0752.json",
-    "work/0450_hazard_context_facts_0800.json",
-    "work/0450_partial_verified_0756.json"
+    "work/0450_departure_timing_facts_0831.json",
+    "work/0450_scope_probe_0837.json",
+    "work/0450_scope_verification_0840.json"
   ],
   "open_issues": [
     "Nonebefore2027 firstclause versus genericannouncementresolvesYes wording; verifyeventoption/context/clarifications beforemappingpayout.",
     "Actual PBS/AP body published May22 17:40UTC, updated17:48, precedes market created18:33/start19:11. Whether a later actual departure or new acceleration qualifies remains unresolved; preannouncement alone does not prove exclusion.",
     "Currentroster/successorappointments arecontext, notcontemporaneousdepartureannouncements. Needpost-May22includedrolechronology, includingactingexclusion."
   ],
-  "next": "Resume case450 only in an authorized research turn. Bind actual postcreation departures and explicit payout forks before forecasting. No automatic entry or idle continuation.",
-  "status_limit": "Incomplete/unvalued; no automaticentry or fabricatedprobability."
+  "next": "Independent451next; reopen450onlywithscope/adjudicationevidence orunambiguouslyqualifyingnewdeparture. No impliedrejection/globalgoalblock.",
+  "status_limit": "Incomplete/unvalued; no automaticentry or fabricatedprobability.",
+  "record": "research/2026-10-17-deep-review/evaluations/0450.json",
+  "report_sha256": "9fd3f7ec2f0a4eaec5274424569a7ca922e2b28f9da7193382aaa6063a68d3af",
+  "verification": "work/0450_record_verified_0840.json"
 }

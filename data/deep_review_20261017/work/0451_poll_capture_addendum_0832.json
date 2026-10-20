@@ -1,0 +1,82 @@
+{
+ "schema": "case451.official_poll_primary_access_addendum.v1",
+ "review_index": 451,
+ "market_id": "1285079",
+ "captured_utc": "2026-10-20T08:32:27Z",
+ "guard": "451 remains pending, unstarted, and unvalued until 450 is finished. No probability, price, model, ledger, trade, or shared document changed.",
+ "target_claim": "WaPo/Schar VA-05 likely-voter poll, Sep 23–28 2026, N=600, McGuire 51% / Perriello 45%, MOE 4.6pp.",
+ "new_official_http_attempts": [
+  {
+   "name": "washpost_article",
+   "url": "https://www.washingtonpost.com/politics/2026/10/01/shannon-taylor-has-edge-over-rob-wittman-virginia-house-district-post-poll-finds/",
+   "started_utc": "2026-10-20T08:31:18.355507Z",
+   "received_utc": "2026-10-20T08:31:43.471838Z",
+   "status": null,
+   "error_type": "ReadTimeout",
+   "raw_bytes": 0,
+   "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "receipt": "logs/deep_review_20261017/next451_primary_access_0808/washpost_article.receipt.json",
+   "body": "logs/deep_review_20261017/next451_primary_access_0808/washpost_article.body.json.gz",
+   "timing_basis": "call_window"
+  },
+  {
+   "name": "washpost_www_pdf",
+   "url": "https://www.washingtonpost.com/documents/c5cba6fd-7edb-4550-93c3-0580e8084bfb.pdf",
+   "started_utc": "2026-10-20T08:31:43.482460Z",
+   "received_utc": "2026-10-20T08:32:08.546496Z",
+   "status": null,
+   "error_type": "ReadTimeout",
+   "raw_bytes": 0,
+   "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+   "receipt": "logs/deep_review_20261017/next451_primary_access_0808/washpost_www_pdf.receipt.json",
+   "body": "logs/deep_review_20261017/next451_primary_access_0808/washpost_www_pdf.body.json.gz",
+   "timing_basis": "call_window"
+  }
+ ],
+ "prior_exact_pdf_failures": [
+  {
+   "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/receipts/va05_wapo_topline_pdf.receipt.json",
+   "receipt_sha256": "a5eee7bbc4c5ca65cb773046c1f7be8079550955f6a46ed51c762009c7b380d6",
+   "error": "ReadTimeout",
+   "start": "2026-10-20T07:14:53.692559Z",
+   "receive": "2026-10-20T07:15:24.396688Z"
+  },
+  {
+   "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/va05_wapo_topline_pdf_retry.receipt.json",
+   "receipt_sha256": "8af056d1a32d62ae355c08e2306430bfe71f898243710889e124ec6414342028",
+   "error": "ReadTimeout",
+   "start": "2026-10-20T07:16:13.691011Z",
+   "receive": "2026-10-20T07:17:53.824273Z"
+  },
+  {
+   "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/va05_topline_pdf_final_attempt.receipt.json",
+   "receipt_sha256": "b19576466ba65560ee821cdb39ce5879ad114436e3c59fcde363452233171d76",
+   "error": "ReadTimeout",
+   "start": "2026-10-20T07:20:02.144881Z",
+   "receive": "2026-10-20T07:20:37.536824Z"
+  }
+ ],
+ "existing_official_schar_capture": {
+  "url": "https://schar.gmu.edu/news/2026-10/washington-post-schar-school-poll-shows-democrats-leading-bellwether-districts",
+  "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_schar_poll/451_schar_poll.receipt.json",
+  "status": 200,
+  "raw_bytes": 100875,
+  "raw_sha256": "f1a90feb2893dc95bb637fed7a9653ddadc0e2bdf9976a334e575b4c3349cc38",
+  "start": "2026-10-20T06:42:31.917925Z",
+  "receive": "2026-10-20T06:42:32.221095Z",
+  "supports": "Body states Sep 23–28 likely-voter fieldwork and McGuire 51% over Perriello.",
+  "gap": "Does not state N=600, Perriello 45%, or 4.6pp MOE."
+ },
+ "two_targeted_searches": [
+  {
+   "query": "site:schar.gmu.edu/news/2026-10; WaPo/Schar VA-05 poll Sep 23–28 PDF",
+   "result": "Official Schar release found; it is the existing raw capture above."
+  },
+  {
+   "query": "official WaPo documents PDF ID; McGuire Perriello 51 45",
+   "result": "Official WaPo article result appeared, but provider excerpt is not retained source-body evidence."
+  }
+ ],
+ "result": "Gap not closed. Both new distinct official HTTP routes ended in ReadTimeout with zero response bytes; original PDF URL has three prior ReadTimeout receipts. No PDF raw bytes/hash, PDF extraction, or screenshot. Search excerpts are not PDF evidence.",
+ "limit": "Two new HTTP bodies attempted, receipt-intent-first; two searches used; no further route attempted."
+}

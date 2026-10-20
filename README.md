@@ -56,7 +56,7 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
-**380 valued /14 blocked /371 factual /2,235 pending;765 base+69 revisions.** Research checkpoint unchanged this tick. Case450 remains active/incomplete with small source and wording-fork pointers; no forecast or own current quote. [Checkpoint](notes/deep_review_checkpoint.json) · [450 resume](data/deep_review_20261017/work/0450_resume.json).
+**380 valued /15 blocked /371 factual /2,234 pending;766 base+69 revisions.** Case450 is verified blocked after review over its None-versus-accelerated-departure payout scope; no probability, own quote or trade. This is case-specific, not a global goal block; case451 is active. [Checkpoint](notes/deep_review_checkpoint.json) · [Goal phase](data/deep_review_20261017/work/goal0021_RESUME.json) · [450 report](research/2026-10-17-deep-review/evaluations/0450.md) · [451 facts](data/deep_review_20261017/work/0451_facts_0642.json).
 
 **Kimi412 remains10YES at12c/1.20cost; original3political BUYs remain LIVE/0matched/6.50.** Full07:34-triggered check completed08:07–24UTC with no new fill, transaction or numerical forecast change. [Exact orders](notes/resting_orders.md) · [Current check](research/2026-10-20-073415-checkin.md).
 

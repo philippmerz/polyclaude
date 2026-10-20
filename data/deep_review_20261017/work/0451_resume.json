@@ -1,0 +1,23 @@
+{
+  "schema": "polyclaude.case_resume.v1",
+  "updated_utc": "2026-10-20T08:45:47.728036+00:00",
+  "review_index": 451,
+  "status": "in_progress",
+  "identity": {
+    "market_id": "1285079",
+    "condition_id": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+    "question": "Will the Republican Party win the VA-05 House seat?"
+  },
+  "started_utc": "2026-10-20T08:40:09.799185+00:00",
+  "completion": "Not valued, excluded or blocked; no completed case record, probability or own current quote. This pointer preserves prior authorized work and does not start a continuation.",
+  "literal_rule_note": "Republican party winner of VA05 Nov3 election. Affiliation/caucus intent is measured when all 2026 House elections are conclusively called; an independent is not automatically outside R/D. Literal rule and current exact identity must be revalidated before any action.",
+  "facts": [
+    "work/0451_facts_0642.json",
+    "work/0451_facts_0714.json",
+    "work/0451_poll_capture_addendum_0729.json",
+    "work/0451_poll_capture_addendum_0832.json"
+  ],
+  "load_bearing_limit": "Successful official Schar body confirms Sep23\u201328 likely-voter fieldwork/McGuire51 only. N600/Perriello45/MOE4.6 have not been verified in locally captured primary PDF bytes; do not treat older worker prose or snippets as primary proof. Failed official PDF routes are recorded; no repeated request is needed merely to preserve work.",
+  "next_when_research_authorized": "Read this small pointer and current protocol/checkpoint; inspect actual successful primary body and official district/election/candidate facts as needed, then root forecast and both-side economics. Missing one PDF alone is not a rejection or automatic forecast block.",
+  "run_boundary": "Latest requested cron is bounded; stop after concrete verification/publication. No new goal, timer or idle follow-up."
+}

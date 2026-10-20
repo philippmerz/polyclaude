@@ -1,0 +1,82 @@
+{
+  "review_index": 450,
+  "market_id": "2332981",
+  "condition_id": "0x50f740162f52bcef8c8035e5b175c7ad6f5230b7ffbed4cbd5733ff93fc91168",
+  "criteria_sha256": "3865b61b96d9d0e9b49c8ec7d68dbca634b148f4791a3a3a6d0703a6a53278f5",
+  "token_ids": [
+    "109972039784538003535573132821364819132290674018564050436004350179491214637743",
+    "67529754895171955938758533776468490692766923438172166755798649719748513057231"
+  ],
+  "status": "blocked_after_review",
+  "literal_analysis": "Fullcatchall/announcement/effective-date/roles/acting/nominees/tiebreak/source/cutoff rules read; currentliteraltextandtokens unchanged. UnresolvedNonepayoutscope forpre-announcedbutpostcreationaccelerated Gabbarddeparture.",
+  "evidence": [
+    {
+      "url": "https://www.pbs.org/newshour/politics/tulsi-gabbard-resigns-as-trumps-national-intelligence-director",
+      "observed_utc": "2026-10-20T07:38:42.312467+00:00",
+      "finding": "ActualPBS/APpublication17:40UTC precedesMay22created18:33; statedJune30effective date.",
+      "raw_sha256": "195e55d577ad5bdb8a2e30f11d9deb44d10984991c877ec34a62dfdb7fe6197f",
+      "receipt": "logs/deep_review_20261017/case0450_primary_0746/pbs_ap_gabbard.receipt.json"
+    },
+    {
+      "url": "https://www.trumpstruth.org/",
+      "observed_utc": "2026-10-20T08:31:06.676023Z",
+      "finding": "Independentarchive ofJune9presidentialpost setsPulteactingstartJune19; directfirstparty403.",
+      "raw_sha256": "f17369f3bfd0dca364b83e6bbac4a5e7cef9c238dfc54723cd0fa2df7dac6705",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/truth_archive.receipt.json"
+    },
+    {
+      "url": "https://www.hawaiinewsnow.com/2026/06/20/tulsi-gabbard-exits-role-director-national-intelligence/",
+      "observed_utc": "2026-10-20T08:31:07.909701Z",
+      "finding": "ContemporaneousHNNbody describesJune30timeline movedtoFriday/June19 afterTrumpconversation; formalinstrumentnotcaptured.",
+      "raw_sha256": "66726b2e2fa433ad75cbbdd75fe29c8eff755c57720ae4002596db047db510fc",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/hawaii_followup.receipt.json"
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/events/514187",
+      "observed_utc": "2026-10-20T08:34:46.529874Z",
+      "finding": "CurrentexactNonechild/fullrules9identitychecksPASS; no sourceclarificationfieldadopted.",
+      "raw_sha256": "db1ea880de3e40f67c4a82e8e6b10d2b3c6d53208f4b442fd8f9ae5d4d2d5b94",
+      "receipt": "logs/deep_review_20261017/case0450_scope_0837/event.receipt.json"
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/comments",
+      "observed_utc": "2026-10-20T08:35:56.433153Z",
+      "finding": "CurrenteventcommentCount0/commentslistempty; notallpossibleofficialclarificationcertificate.",
+      "raw_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "receipt": "logs/deep_review_20261017/case0450_scope_0837/comments/comments.receipt.json"
+    },
+    {
+      "url": "https://truthsocial.com/@realDonaldTrump/116722436233594406",
+      "observed_utc": "2026-10-20T08:31:14.110023Z",
+      "finding": "Firstpartydirect403notabsenceproof; archivedtranscriptionisnotauthenticatedfirstpartypayload.",
+      "raw_sha256": "980fda33a25551276184edc4929fce1e6a9eb3e2369b21e2bb350db86457e568",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/official/truth_post.receipt.json"
+    },
+    {
+      "url": "https://www.axios.com/2026/06/11/pulte-gabbard-removal-intel",
+      "observed_utc": "2026-10-20T08:31:06.855177Z",
+      "finding": "403bodyinaccessible; searchleadnotadoptedasarticlefact.",
+      "raw_sha256": "b52add230ece30ef23606bb66498b1a2ba52f553bb0479167d83d57071126cdf",
+      "receipt": "logs/deep_review_20261017/case0450_departure_followup_0820/public/axios_followup.receipt.json"
+    }
+  ],
+  "forecast": {
+    "status": "not_estimated",
+    "p_yes": null,
+    "low": null,
+    "high": null,
+    "method": "Explicitpayout-window forks beforeprobability",
+    "reasoning": "Futureturnoverhazard versusalready-triggeredhistoricalevent dependsunresolvedcatchall treatment ofacceleratedpre-announcedresignation; no defensibleprobability/mixadopted. GenericYesclauseconflict retained, no equalforkweights."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "status": "unpriced_scope",
+    "own_current_quote_viewed": false,
+    "reason": "NeitherYESnorNOEVcanbeunderwrittenwithoutpayoutscope. No price/liquidity-basedrejection, ordinarycriteria-riskisnotcategoricallybanned; case-specificpast-vs-futureeventambiguity unresolved.",
+    "alternatives": "Cash/datedvariableAave/currentunderwrittenclaims; no newfunding/conditionalfill/jointhedgecredit."
+  },
+  "verdict": "Unpriced: None catch-all treatment of post-creation acceleration of pre-announced Gabbard resignation remains unresolved; case-specific review block, no entry.",
+  "reopen_condition": "Definitive exactNone-specificscope/adjudication evidence forpreannouncedresignationacceleratedaftercreation, orlaterunambiguouslyqualifyingdeparture; then forecast+bothsidecurrenteconomics+allgates.",
+  "evaluated_utc": "2026-10-20T08:39:00.571163+00:00",
+  "report_markdown": "# 450 · No Trump Cabinet departure before2027 — payout window unresolved\n\n**Blocked after substantive review; unpriced, no entry.** This exact contract is still open and accepting; it is not factually excluded. No own current quote was viewed and no forecast was manufactured. The unresolved fact is whether the catch-all excludes an already-announced resignation when its departure date is subsequently accelerated after market creation.\n\nFull rules read. The parent asks who is next announced to leave, or otherwise ceases to be in the administration; no departure by Dec31 23:59ET selects “None before2027.” A generic second paragraph says a resignation/removal announcement resolves “Yes” immediately regardless of its effective date. For this None child, that sentence conflicts with the first paragraph's option mapping if applied literally. Specific catch-all semantics are more natural than an unconditional generic-Yes reading; they are not treated as equal-probability forks.\n\nCovered roles are VP,15department heads, EPA,ChiefStaff,DNI,OMB,CIA,USTR,UNambassador,CEA,SBA. Acting officials and OSTP are excluded. Leaving any covered role counts even if moved into another; nominees rejected/withdrawn do not count as departing incumbents. New serving officials can be added. Simultaneous announcements use actual departure order, then surname alphabetically. Official administration information is primary; the frozen secondary clause says “credible reopening,” a retained typo, not an independently established source policy. Operational endJan1 04:59UTC corresponds to the stated ET cutoff; normal January settlement fits the project horizon.\n\nCreation is May22 18:33:40.738594UTC, start19:11:25.900051. The actual PBS/AP body was published17:40/updated17:48 that day and described Gabbard's resignation effectiveJune30. This announcement predates creation; it cannot automatically be counted as a new post-creation announcement. A successor's later swearing-in or a June11 nomination notice alone does not prove the departure date.\n\nThe additional evidence changes the next action. A captured independent archive reproduces and links Trump's June9 post appointing Pulte actingDNI fromJune19, while working with Gabbard. Direct TruthSocial returned403. Hawaii News Now's contemporaneous June19local/June20UTC page says her June30 last day was moved up to Friday after a Trump conversation, supportingJune19. This is stronger than a retrospective roster or Wikipedia lead, but no formal separation instrument was captured. Pulte's acting status excludes his own eventual departure; it does not automatically exclude Gabbard leaving a non-acting covered role.\n\nThree payout readings remain materially different:\n\n- If the market asks for a *new departure decision* and the prior resignation stays excluded despite its accelerated effective date, None is a future no-turnover claim through year-end. Post-midterm reshuffle risk matters; the single2018 episode is context, not a calibrated Cabinet hazard sample.\n- If “otherwise ceases” or the new acceleration announcement counts, Gabbard's post-creation departure can defeat None already, independent of future turnover.\n- The generic announcement→Yes wording is another adjudication conflict for the None child. Parent/option convention argues against applying it literally, but the captured text does not explicitly repair it.\n\nThe current exact child matches all9canonical identity checks and has unchanged full rules; parent/comment requests return200, commentCount0/listempty, context_requires_regen=true. No relevant clarification was recovered. Gabbard's absence from named options is weak intent evidence: current appointments/options need not be synchronized, and placeholders/augmented negative risk remain. Open status is not proof that no qualifying event occurred.\n\nThis is a case-specific missing payout-scope fact, not a categorical UMA-loose ban, broad-endpoint hurdle or global research failure. Under the first reading a prospective forecast is needed; under the second a historical claim can already be lost. Assigning arbitrary mixture weights would create the probability rather than estimate it. Therefore both YES and NO economics remain unpriced; no liquidity/price-profile result is called a rejection, and no execution route was attempted. Cash/dated variable Aave and the current underwritten portfolio remain available alternatives; any Cabinet trade could lose alongside existing political commitments, without hedge credit.\n\nReopen on a definitive None-specific clarification or applicable adjudication evidence about a pre-announced resignation accelerated after creation; bind the exact condition/rules before forecasting. A later unambiguously qualifying departure may also resolve the uncertainty. Then price both sides after current fees/depth/fill selection/carry and all account/venue/portfolio gates. This record does not block independent next cases.\n\n[Primary chronology](../../../data/deep_review_20261017/work/0450_primary_window_0752.json) · [New departure facts](../../../data/deep_review_20261017/work/0450_departure_timing_facts_0831.json) · [Exact scope/comments](../../../data/deep_review_20261017/work/0450_scope_probe_0837.json) · [Seven-pair verification](../../../data/deep_review_20261017/work/0450_scope_verification_0840.json).\n"
+}

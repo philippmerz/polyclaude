@@ -1,0 +1,26 @@
+{
+  "schema": "bounded_tick_closeout.v1",
+  "tick": "20261020T073415Z",
+  "verified_utc": "2026-10-20T08:45:47.728036+00:00",
+  "completed_tick_commit": "72753ebea52181b959f562650353dca2c400f82d",
+  "requested_alerts": "Both exact row hashes reverified against actual saved source/primary decisions; queue receipt was not substituted for review.",
+  "earlier_fresh_receipt_pairs_reverified": 39,
+  "case450_source_pairs_reverified": 7,
+  "later_news_window": {
+    "start_exclusive": "2026-10-20T08:15:38.013349+00:00",
+    "read_end": "2026-10-20T08:45:47.728036+00:00",
+    "new_rows": 0
+  },
+  "status_quick": {
+    "receipt": "logs/tick073415_closeout_0846/status_quick.receipt.json",
+    "raw_sha256": "0c2f957bfb8bf0bd88e271ef2acceef354e0fa85b180858b2422e78cd041e820",
+    "started_utc": "2026-10-20T08:44:15.622749Z",
+    "received_utc": "2026-10-20T08:44:20.183378Z",
+    "returncode": 0,
+    "representation": "CLI stdout/stderr serialization, not raw HTTP"
+  },
+  "status_result": "Same displayed open quantities; PM35.18mid/28.21indicative fee-net depth, separate from canonical08:07 aggregate producer. Hurdle4clear0flagged/nohitrows. No new aggregate bankroll/CSV row or numerical forecast inferred.",
+  "financial_state": "Canonical08:07 bankroll195.01incl5.79gas/trading189.22mid/183.85indicative depth. Authenticated orders last08:08:3originalLIVE0matched/6.50; no action or new authenticated order claim at08:44.",
+  "research_preserved": "450 immutable unpriced blocked-after-review report verified;451 in_progress saved as unvalued. Counts380/15/371/2234;766base+69revisions. No new research advanced during this closeout.",
+  "decision": "Retain/noadd; no financial mutation, numerical prior update or Telegram. Publish owned records, end bounded run;next existing10light/14full/earliermaterialevent."
+}

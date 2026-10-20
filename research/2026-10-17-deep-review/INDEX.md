@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T07:33:25.630273+00:00
+Updated: 2026-10-20T08:40:09.799185+00:00
 
-**380 valuations saved; first milestone100:** 380 valued; 14 blocked after in-depth review. 371 factual exclusions separately; 2235 pending.
+**380 valuations saved; first milestone100:** 380 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2234 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -461,6 +461,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |447|[Spread: Bowling Green (-6.5)](evaluations/0447.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |448|[Will DeepSeek have the second highest OpenRouter market share the week of October 12?](revisions/0448_20261018T120932860077Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |449|[Will the highest temperature in Miami be between 86-87°F on October 17?](evaluations/0449.md)|excluded_factual|EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting; notamodelscreen.|
+|450|[Will no one leave the Trump Cabinet before 2027?](evaluations/0450.md)|blocked_after_review|Unpriced: None catch-all treatment of post-creation acceleration of pre-announced Gabbard resignation remains unresolved; case-specific review block, no entry.|
 |453|[Will PSV win on 2026-10-17?](evaluations/0453.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
@@ -778,4 +779,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 450
+Active indices: 451

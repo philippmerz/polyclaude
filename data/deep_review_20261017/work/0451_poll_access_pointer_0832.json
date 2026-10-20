@@ -1,0 +1,15 @@
+{
+  "schema": "case451.primary_access_pointer.v1",
+  "review_index": 451,
+  "status": "pending; unstarted; unvalued",
+  "facts": "data/deep_review_20261017/work/0451_facts_0714.json",
+  "prior_access_addendum": "data/deep_review_20261017/work/0451_poll_capture_addendum_0729.json",
+  "new_access_addendum": "data/deep_review_20261017/work/0451_poll_capture_addendum_0832.json",
+  "new_access_addendum_sha256": "52e4ff6879a09ef811749188bcc8b24299f9893bd14cf9e0c1211c5ebe571ccf",
+  "raw_attempt_receipts": [
+    "logs/deep_review_20261017/next451_primary_access_0808/washpost_article.receipt.json",
+    "logs/deep_review_20261017/next451_primary_access_0808/washpost_www_pdf.receipt.json"
+  ],
+  "existing_successful_official_capture": "logs/deep_review_20261017/next449451_facts_0642/451_schar_poll/451_schar_poll.receipt.json",
+  "conclusion": "PDF-level N=600, 51/45, and MOE=4.6 facts remain unverified by locally captured raw primary body; Schar release confirms only LV dates and McGuire 51%."
+}
