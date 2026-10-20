@@ -1,0 +1,185 @@
+{
+  "schema": "polyclaude.primary_portfolio_judgment.v1",
+  "reviewed_utc": "2026-10-20T12:43:52.373976+00:00",
+  "primary_author": "root",
+  "alert_decisions": [
+    {
+      "alert_id": "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+      "decision": "Retain MI5NO/noadd, centralNO44/selected34/broadlow20 unchanged. Forward exact body stillunknown; prior exactJTA recaps older stance statements. Potential salience is uncertain, notzero; no new voter measurement adopted."
+    },
+    {
+      "alert_id": "86e7994e41fd2b524cd9f033f41bbcf70d2da3c2",
+      "decision": "Root verified actual officialOct18Prayer ad/transcript; it supports adexistence and substance, not exactCommonDreams body or measured campaign effect. Not an unexpected newballot/candidate/poll fact. RetainMI/noadd, no numerical revision or duplicateOct20aging. Publisher-exactbody gap retained."
+    }
+  ],
+  "literal_MI": "Current Gamma630805 matches frozen fullrule and ordered tokens. NO is anynonD winner, not justRogers. Replacement party nominees and inclusive runoffs apply; three-network call unanimity else officialcertification. No news claim changes nominee/ballot/settlement.",
+  "sources": "data/deep_review_20261017/work/tick121327_primary_source_review.json",
+  "holds": [
+    {
+      "identity": "Kimi412YES",
+      "shares": 10,
+      "current_central_win_probability": 0.3402125,
+      "selected_stress_probability": 0.1902125,
+      "broad_win_probability_range": [
+        0.08,
+        0.8
+      ],
+      "central_terminal_expected_usd": 3.402125,
+      "selected_terminal_expected_usd": 1.902125,
+      "broad_low_expected_usd": 0.8,
+      "rounded_fee_net_exit_usd": 1.16,
+      "exit_source_window": "2026-10-20T12:18:44.181137Z–12:18:46.823466Z",
+      "exit_plus_90day_constant_carry_usd": 1.1691628876712328,
+      "original_cost_loss_possible_usd": 1.2,
+      "decision": "retain/noadd; selected comparison favors holding, broad low favors exit; full binary loss remains possible."
+    },
+    {
+      "identity": "GoogleMessi210YES",
+      "shares": 5,
+      "current_central_win_probability": 0.6,
+      "selected_stress_probability": 0.4,
+      "broad_win_probability_range": [
+        0.2,
+        0.9
+      ],
+      "central_terminal_expected_usd": 3.0,
+      "selected_terminal_expected_usd": 2.0,
+      "broad_low_expected_usd": 1.0,
+      "rounded_fee_net_exit_usd": 1.2,
+      "exit_source_window": "2026-10-20T12:18:44.181137Z–12:18:46.823466Z",
+      "exit_plus_90day_constant_carry_usd": 1.2094788493150685,
+      "original_cost_loss_possible_usd": 1.35,
+      "decision": "retain/noadd; selected comparison favors holding, broad low favors exit; full binary loss remains possible."
+    },
+    {
+      "identity": "Michigan1838NO",
+      "shares": 5,
+      "current_central_win_probability": 0.44,
+      "selected_stress_probability": 0.34,
+      "central_terminal_expected_usd": 2.2,
+      "selected_terminal_expected_usd": 1.7,
+      "broad_low_expected_usd": 1.0,
+      "rounded_fee_net_exit_usd": 1.41,
+      "exit_source_window": "2026-10-20T12:18:44.181137Z–12:18:46.823466Z",
+      "exit_plus_90day_constant_carry_usd": 1.4211376479452056,
+      "original_cost_loss_possible_usd": 1.55,
+      "decision": "retain/noadd; selected comparison favors holding, broad low favors exit; full binary loss remains possible.",
+      "broad_low_win_probability": 0.2,
+      "range_note": "Only the documented broad-low NO20% is used in this hold comparison; no new upper bound asserted."
+    },
+    {
+      "identity": "OpenRouter112NO",
+      "shares": 5,
+      "current_central_win_probability": 0.88,
+      "selected_stress_probability": 0.73,
+      "broad_win_probability_range": [
+        0.2,
+        0.995
+      ],
+      "central_terminal_expected_usd": 4.4,
+      "selected_terminal_expected_usd": 3.65,
+      "broad_low_expected_usd": 1.0,
+      "rounded_fee_net_exit_usd": 3.26,
+      "exit_source_window": "2026-10-20T12:18:44.181137Z–12:18:46.823466Z",
+      "exit_plus_90day_constant_carry_usd": 3.285750873972603,
+      "original_cost_loss_possible_usd": 3.25,
+      "decision": "retain/noadd; selected comparison favors holding, broad low favors exit; full binary loss remains possible."
+    }
+  ],
+  "Clarity_complete_group": {
+    "shares": {
+      "YES_over50": 29,
+      "NO_over58": 29
+    },
+    "original_all_in_cost_usd": 28.32893,
+    "rounded_whole_fee_net_exit_usd": 22.32,
+    "central_and_selected_conditional_floor_usd": 29,
+    "middle_state_payout_usd": 58,
+    "venue_oracle_failure_usd": 0,
+    "decision": "Retain complete29+29/noadd/no independent leg action. Quoted exit loses6.68 versus logical29 floor, before middle option; no source/identity break established."
+  },
+  "carry_note": "Aave3.2035% fetchedOct19 18:02:51 is cached/variable.90day constant-rate examples are sensitivities, not guaranteed carry or settlement dates. Broad-low/oracle failure states stillfavor exit.",
+  "joint_states": {
+    "AI": {
+      "KimiYes_wins_ORNo_wins_payout_usd": 15,
+      "KimiYes_loses_ORNo_loses_payout_usd": 0,
+      "full_original_cost_loss_usd": 4.45,
+      "judgment": "Different sources/windows, shared AI factor; no independence or hedgecredit."
+    },
+    "USpolitics": {
+      "MIplus_full_three_bid_original_risk_usd": 8.05,
+      "all_lose_possible": true,
+      "judgment": "MI Democratic win plusNY01/ME02 Democratic losses andCA06 Democratic win canlose allfour. No diversification guarantee."
+    }
+  },
+  "resting_BUYs": {
+    "count": 3,
+    "all_live_zero_matched": true,
+    "maximum_remaining_cash_commitment_usd": 6.5,
+    "current_Gamma_identities_criteria_tokens_unchanged": true,
+    "current_all_open_accepting_no_UMA_proposal": true,
+    "primary_selected_probabilities": {
+      "ME02YES": 0.51,
+      "CA06NO": 0.05,
+      "NY01YES": 0.21
+    },
+    "management": "Retain only originalpilots; noadd/chase/repost/taker. Existing source/conditional-fill/jointreview remains dated; allfailunmeasured2x adversefillstress, no certifiedfill-conditional edge. No newly identified unassessedmaterial fact in these three exactcases. Cancel-first if that changes; freshholding review on anyfill."
+  },
+  "maker_sells_considered": "Existing ordinarypublic-info positions may sell at/abovefair, but no present bid reachesfair; future makerfills canfollow a changedfair. No new maker order chosen without fresh fill economics/catalyst monitoring. Kimi hiddeninfo requires strictlyabovefair; Clarity stayswhole.",
+  "redemption": "0 winningeligible;2losing/uncertain rowsretained, no gas/burn/writer.",
+  "schedules": "Next existing14UTCcheck precedesofficialMIprogram16UTC within15–18. CapturedWXYZ listsOct21debate19ET=23UTC. No MIrestingorder now; neworderwouldneed pre-catalystpull.",
+  "new_BUY_authority": "Stillblocked386/600 plusprimary comparative selection; no policy/selection change.",
+  "no_financial_action_or_numerical_portfolio_prior_change": true,
+  "poll_followup": {
+    "record": "data/deep_review_20261017/work/tick121327_debate_poll_followup.json",
+    "decision": "Retain MI5NO/noadd; centralNO44/selected34/broadlow20 unchanged. Debate impressions are not a new representative vote-choice measurement; original WOOD unknown. No duplicate Oct20 aging. Qualitative salience remains uncertain, not zero.",
+    "no_new_valuation": true
+  },
+  "other_held_catalyst": {
+    "record": "data/deep_review_20261017/work/tick121327_trump_feed.json",
+    "decision": "Official WhiteHouse activity feed bounded through Oct20 provides no verified cessation event; retain .33NO dust. This feed is not exhaustive health or cessation evidence."
+  },
+  "final_news_delta": {
+    "record": "data/deep_review_20261017/work/tick121327_final_news_delta.json",
+    "decisions": [
+      {
+        "alert_id": "506adf4eee371d50d162f6253e8a87265ae5c5cc",
+        "decision": "Israeli party messaging; no held/pending exposure identified."
+      },
+      {
+        "alert_id": "1b32e4e8162f90d2cd49419eff81a3a13c1e5a1f",
+        "decision": "MI opinion/video headline; exact clip body unverified. No new quantified voter measurement adopted, no exact-duplicate claim. Retain/noadd with uncertainty."
+      },
+      {
+        "alert_id": "a9e5c3026f37461a8eca03f17bd66d45fb854334",
+        "decision": "BOI poll lead preserved as research-only; no current BOI holding/bid, not an entry or completed valuation."
+      }
+    ]
+  },
+  "identity_corrections": [
+    {
+      "path": "data/deep_review_20261017/work/tick121327_news_facts.json",
+      "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+      "field": "case_identity.market_id",
+      "original_value": "3399938",
+      "correct_value": "630805",
+      "review_index": 1838,
+      "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+      "original_unit_sha256": "e91eea2c652bc7ed486c2590503e74b039b11474bcb4bf985edfbdd2df155474",
+      "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+      "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick121327_debate_poll_followup.json",
+      "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+      "field": "case_identity.market_id",
+      "original_value": "3399938",
+      "correct_value": "630805",
+      "review_index": 1838,
+      "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+      "original_unit_sha256": "8942f159bf4089e7bd09196b93dd012ac68fa007a4774ec42fa4dcca2a52587e",
+      "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+      "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+    }
+  ]
+}

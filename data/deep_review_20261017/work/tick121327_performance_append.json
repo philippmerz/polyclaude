@@ -1,0 +1,11 @@
+{
+  "recorded_utc": "2026-10-20T12:30:38.123785+00:00",
+  "row_count_before": 236,
+  "row_count_after": 237,
+  "prior_byte_prefix_sha256": "f1c9fee12c679f94c4dd48260f0bad27976afdabc1923e6f5f18157e5ce394df",
+  "prior_byte_prefix_preserved": true,
+  "contributions_sha256": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+  "financial_record": "research/2026-10-20-1219-financial-snapshot.json",
+  "financial_record_sha256": "ee6d0d9d5951e3361d2e8c02a5a8cb9689ec708f373764c49ae136e86ce3734e",
+  "no_new_market_requests_for_chart": true
+}

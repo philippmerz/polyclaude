@@ -1,0 +1,9 @@
+{
+  "packet_status": "within_declared_validity",
+  "packet_bytes": 10186,
+  "handoff_bytes": 6655,
+  "source_mismatches": [],
+  "execution_ready": false,
+  "current_state_loaded": false,
+  "created_at": "2026-10-20T12:46:21.966153+00:00"
+}

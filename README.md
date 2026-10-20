@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 236 recorded observations from Apr-25
+The local performance CSV now has 237 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,19 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 10:46–10:47 UTC
+## Last audited snapshot — October20 12:19–12:20 UTC
 
-**Indicative trading net depth $183.14 versus $170 contributed (+7.73%); canonical bankroll $194.74 includes $5.79 separate gas.** Trading midpoint $188.95; same-producer PM $35.01 midpoint/$29.20 fee-net depth. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV236 preserves235 earlier rows and external flows. [Financial record](research/2026-10-20-1046-financial-snapshot.md).
+**Indicative trading net depth $183.24 versus $170 contributed (+7.79%); canonical bankroll $194.80 includes $5.82 separate gas.** Trading midpoint $188.98; same-producer PM $35.04 midpoint/$29.30 fee-net depth. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV237 preserves236 earlier rows/flows. [Financial record](research/2026-10-20-1219-financial-snapshot.json).
 
-At10:48:57 all nine indexed identities/quantities and127 authenticated trades were unchanged; original three BUYs LIVE/zero matched/$6.50. pUSD19.251290; Ostium0. Retain small holdings and complete Clarity29+29, with no adds. Canceled Anthropic14 staysclosed. [Current orders](notes/resting_orders.md) · [Reconciliation](data/deep_review_20261017/work/tick104103_root_account_verification.json).
+At12:19:52 all nine indexed identities/quantities and127 authenticated trades were unchanged; original three BUYs LIVE/zero matched/$6.50. Ostium0. Twelve-hour and event-triggered checks manage holdings/orders; new BUYs remain paused at386/600 plus comparative selection. [Current orders](notes/resting_orders.md) · [Reconciliation](data/deep_review_20261017/work/tick121327_account_facts.json).
 
-Full11steps and four requested alerts plus related/opposing stories reviewed. Old Kimi cyber/policy reports do not establish changed HLE evidence; OpenRouter agreement isAug19 and exact alert-body binding remains unresolved. Rogers reporting has uncertain electoral salience; no measured new poll. Kimi HLE41.08 unchanged; OpenRouter completedOct12 total unchanged/currentOct19 partial36.124191T is not settlement. CA06 dated mail incident reviewed as minor. No financial action or numerical prior change. UMA0alerts/45freshrows/43uniqueIDs; four current daemon singletons. Next existing14UTC check/earlier material event; weeklyOct23/monthlyNov12 notdue. [Completed check](research/2026-10-20-104103-checkin.md).
+HLE12:21:59 body unchanged/66rows/KimiK3HLE41.08. OpenRouter completedOct12 total unchanged; currentOct19 partial37.332159T is not settlement and target weeks remain absent. Senate direct200 now works but its displayed list endsSep30; Google2026 route404 remains a coverage gap. [Current sources](data/deep_review_20261017/work/tick121327_primary_source_review.json).
 
-Discovery remains incomplete: primary80/635eligible and thin3000/3222, both page-capped. All47offline batches/813emitted rows structurally/source joined; root checked14artifact hashes. Consistency4validated/20attempted/190unquoted/16failed; sports3/3without verified consensus. These are discovery observations, not valuations or an exchange-wide absence finding. [Small index](data/deep_review_20261017/work/tick104103_discovery_index.json).
+Both requested Michigan alerts were reviewed: the official Oct18 ad is corroborated, while exact Forward/CommonDreams article bodies remain unverified. The related Free Press debate-winner question is expressly unscientific; original WOOD poll details remain unknown. No new representative vote-intention estimate was adopted. Retain MI5NO/noadd and all other small holdings/whole Clarity; no numerical prior change or trade. Official program today16UTC; WXYZ debateOct21 23UTC. [Completed check](research/2026-10-20-121327-checkin.json) · [Primary judgment](data/deep_review_20261017/work/tick121327_primary_portfolio_judgment.json).
 
-Storage12:09: losslessly archived48 completed public discovery snapshots after free space fell below128MiB. Reclaimed153.6MiB;275MiB free at verification. Hash/sidecar checks and a live restore/recompression passed; current snapshots, frozen rules, financial records and entry policy are unchanged. [Verification and restore evidence](data/deep_review_20261017/work/storage_safety_120928/verified.json) · [Archive helper](scripts/public_snapshot_archive_data.py).
+Discovery remains incomplete: primary80/640eligible and thin3000/3153, both page-capped. All71offline batches/1234emitted rows independently source-joined; these are structural checks, not valuations. Consistency20/197groups attempted,10received books, no provisional positive in that scope; sports3attempts/no verified consensus. No exchange-wide absence finding. [Small index](data/deep_review_20261017/work/tick121327_discovery_index.json).
+
+Four current daemon singletons; UMA0alerts, hurdle4clear/0flagged, state audit CLEAN, no winning redeemable. Storage12:20:~256MiB free after the completed lossless archive; current/latest outputs remain usable. [Operations](data/deep_review_20261017/work/tick121327_operations_review.json) · [Archive/restore proof](data/deep_review_20261017/work/storage_safety_120928/verified.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

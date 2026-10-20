@@ -1,0 +1,159 @@
+{
+  "verified_utc": "2026-10-20T12:43:52.373976+00:00",
+  "ops_output_hashes_verified": 28,
+  "discovery_artifact_hashes_verified": 17,
+  "receipt_body_pairs_verified": 21,
+  "all_emitted_batch_rows_independently_source_joined": {
+    "primary": {
+      "batch_count": 2,
+      "emitted_exact_joined": 28,
+      "snapshot_rows": 80
+    },
+    "thin_tail": {
+      "batch_count": 69,
+      "emitted_exact_joined": 1206,
+      "snapshot_rows": 3000
+    }
+  },
+  "new_buy_gate": "entry review gate: 386/600 completed valuations; new BUYs blocked",
+  "winning_redeemables": 0,
+  "redeem_action": "Skip: no winning eligible row, losing/uncertain retained. No writer/gas/burn.",
+  "research_cases_advanced": 0,
+  "limits": "Structural source/identity coverage checks are not probabilities, substantive market rejections or universe-wide absence. Quote, cache and delivery clocks remain distinct.",
+  "receipt_inventory": [
+    {
+      "receipt": "logs/cron20261020T121327Z_account/orders.receipt.json",
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_account/positions_00.receipt.json",
+      "raw_sha256": "bbbe5e0f7bf918aea97c0458d7b99809c8d05075320b66cda3e386f246436aa7",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_account/trades.receipt.json",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_sources/google2026.receipt.json",
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_sources/hle.receipt.json",
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_sources/mi_program.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_sources/openrouter.receipt.json",
+      "raw_sha256": "a54b7efc724342b338868987b015ea5789e54fa678e3614dc1c544548e716467",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_sources/senate.receipt.json",
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_identities/case_123.receipt.json",
+      "raw_sha256": "bb3e22a1460f0638047587981219badafb7649c9013b170e0690edd98a2c3b61",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+      "raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_identities/case_32.receipt.json",
+      "raw_sha256": "89d91ff76d6a9a8fbe210a0917c7c460a71348e6f192ec3f5e7eba7ed82ee510",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_identities/case_409.receipt.json",
+      "raw_sha256": "28723a279dd04b26427f656bba69e6423611052f0d2f2440026f3d4edab33180",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_sources/campaign_prayer.receipt.json",
+      "raw_sha256": "3c52e3bdc5453c9111c1750b0da658233490f8956d443102fd21540660e32832",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_sources/commondreams_tag.receipt.json",
+      "raw_sha256": "d43243515b18658e956e24a801e0a2bdc26bc073dc27367eb059dcfa517d6b87",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_sources/forward_alert_redirect.receipt.json",
+      "raw_sha256": "d6b9bea31c5ca9509ab38a0a83f865f0930216ea429c81045ed873607820a0cd",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_sources/wxyz_oct21_debate.receipt.json",
+      "raw_sha256": "33ab42b0e7ec3ab55d2dae2f2ef7ad045fb1e41140869514fd92c7df86885ea0",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_root_catalyst/whitehouse.receipt.json",
+      "raw_sha256": "307078c09477aabd4bc88b4353b8cf5e1face61e6512bcbd1a69f708b13ac66a",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_debate_poll/aol_syndication.receipt.json",
+      "raw_sha256": "0c846205b369c06dc1f33443086e6a5885469a104fab2d2e90882b98b0ceed40",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_debate_poll/commondreams_poll_claim.receipt.json",
+      "raw_sha256": "1c2cac77b3b264b8455bbe43c2d057aa61580bf890865b3c7eb23481d4d2067a",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_debate_poll/freep_original.receipt.json",
+      "raw_sha256": "e8dbc3dd43c22a207485dc95fbec2a04690a23b6ab2d5bbe64715c2829e7ffac",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/cron20261020T121327Z_debate_poll/wood_search.receipt.json",
+      "raw_sha256": "ab57eedcdd9a73d3320a262a027e6f55cf1f8b7f4f5013d115a25216d7881704",
+      "representation": "http_body"
+    }
+  ],
+  "prepublication_identity_corrections": [
+    {
+      "path": "data/deep_review_20261017/work/tick121327_news_facts.json",
+      "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+      "field": "case_identity.market_id",
+      "original_value": "3399938",
+      "correct_value": "630805",
+      "review_index": 1838,
+      "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+      "original_unit_sha256": "e91eea2c652bc7ed486c2590503e74b039b11474bcb4bf985edfbdd2df155474",
+      "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+      "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick121327_debate_poll_followup.json",
+      "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+      "field": "case_identity.market_id",
+      "original_value": "3399938",
+      "correct_value": "630805",
+      "review_index": 1838,
+      "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+      "original_unit_sha256": "8942f159bf4089e7bd09196b93dd012ac68fa007a4774ec42fa4dcca2a52587e",
+      "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+      "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+    }
+  ],
+  "poll_followup": "Four source bodies/receipt hashes and actual AOL attribution/method/date/original link independently verified; original WOOD and exact requested publisher bodies remain unknown. No new representative vote-intention estimate adopted.",
+  "final_news_delta": "data/deep_review_20261017/work/tick121327_final_news_delta.json",
+  "primary_judgment": "data/deep_review_20261017/work/tick121327_primary_portfolio_judgment.json"
+}

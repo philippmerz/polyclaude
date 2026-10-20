@@ -1,0 +1,67 @@
+{
+  "schema": "tick121327_debate_poll_followup.v1",
+  "observed_utc": "2026-10-20T12:36:19Z",
+  "scope": "Factual poll provenance check only; no vote-intention inference or probability change.",
+  "case_identity": {
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "market_id": "630805",
+    "review_index": 1838
+  },
+  "finding": "The roughly three-quarters secondary claim concerns who prevailed in the Oct8 debate, not a candidate vote-intention estimate. AOL publisher syndication of Free Press text calls the online question totally unscientific. Detailed participation mechanics and the original WOOD poll remain unknown. No new representative vote-intention sample, fieldwork or topline was identified in this bounded source set.",
+  "free_press_poll": {
+    "original_page": "https://www.freep.com/story/opinion/2026/10/08/who-won-u-s-senate-debate-abdul-el-sayed-mike-rogers-michigan-midterms/92109812007/",
+    "page_title": "Abdul El-Sayed and Mike Rogers U.S. Senate debate: Who won? Take our poll.",
+    "date": "2026-10-08 23:10 UTC (AOL-reproduced Detroit Free Press page metadata)",
+    "method_and_prompt": "AOL reproduction of Free Press Opinion Staff text asks who won and calls the poll ‘totally unscientific’; no probability sample, voter screen, field dates, or poll sample size is stated. It links to the original Freep page.",
+    "original_access": "Direct Freep GET returned HTTP 402/paywall/challenge bytes; AOL full syndication page returned HTTP 200 and reproduces the text. Do not treat AOL as the Freep poll-results database.",
+    "receipts": [
+      {
+        "name": "freep_original",
+        "path": "logs/cron20261020T121327Z_debate_poll/freep_original.receipt.json",
+        "received_utc": "2026-10-20T12:35:57.469904Z",
+        "status": 402,
+        "raw_sha256": "e8dbc3dd43c22a207485dc95fbec2a04690a23b6ab2d5bbe64715c2829e7ffac"
+      },
+      {
+        "name": "aol_syndication",
+        "path": "logs/cron20261020T121327Z_debate_poll/aol_syndication.receipt.json",
+        "received_utc": "2026-10-20T12:35:58.016918Z",
+        "status": 200,
+        "raw_sha256": "0c846205b369c06dc1f33443086e6a5885469a104fab2d2e90882b98b0ceed40"
+      }
+    ]
+  },
+  "wood_tv_and_summary_claim": {
+    "common_dreams_article": "https://www.commondreams.org/news/sanders-el-sayed-debate",
+    "published_utc": "2026-10-09T20:28:45Z",
+    "claim": "Common Dreams says the Detroit Free Press and WOOD-TV polls each showed about three-quarters believing El-Sayed prevailed. Its poll link points to a Yahoo-hosted video/article titled ‘Trump claims “jihadist lunatic” lost Michigan Senate debate. What do the polls say?’ The click-through returned HTTP 429 in browser; exact linked story body and underlying WOOD poll page/design were not recovered.",
+    "limits": "Common Dreams provides no sample size, participant recruitment, field dates, weighting, uncertainty, or vote-intention figures for either debate-winner poll. WOOD poll's exact original page, method, and result remain unverified here.",
+    "receipt": {
+      "path": "logs/cron20261020T121327Z_debate_poll/commondreams_poll_claim.receipt.json",
+      "received_utc": "2026-10-20T12:36:18.767765Z",
+      "status": 200,
+      "raw_sha256": "1c2cac77b3b264b8455bbe43c2d057aa61580bf890865b3c7eb23481d4d2067a"
+    }
+  },
+  "failed_source_probe": {
+    "path": "logs/cron20261020T121327Z_debate_poll/wood_search.receipt.json",
+    "url": "https://www.woodtv.com/?s=senate+debate+poll",
+    "received_utc": "2026-10-20T12:35:58.280655Z",
+    "status": 403,
+    "raw_sha256": "ab57eedcdd9a73d3320a262a027e6f55cf1f8b7f4f5013d115a25216d7881704"
+  },
+  "source_summary": "Freep original402; AOL licensed syndication200 attributes Free Press Opinion Staff, dates Oct8 23:10UTC, links the exact original and labels the debate-winner question totally unscientific. This supports an online impression question, not a representative candidate-support estimate. Self-selection is plausible but recruitment mechanics were not verified. CommonDreams Oct9 supplies a secondary WOOD characterization; exact WOOD body/design/result remain unverified. No odds or prices used.",
+  "collector_identity_erratum": {
+    "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+    "field": "case_identity.market_id",
+    "original_value": "3399938",
+    "correct_value": "630805",
+    "review_index": 1838,
+    "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+    "original_unit_sha256": "8942f159bf4089e7bd09196b93dd012ac68fa007a4774ec42fa4dcca2a52587e",
+    "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+    "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+  },
+  "primary_verified_utc": "2026-10-20T12:43:52.373976+00:00",
+  "primary_method_review": "Root checked all four receipt/gzip/raw hashes and independently read the actual AOL attribution, original link, date and unscientific-method passage. Neither the secondary roughly75% claim nor an assumed sampling design was adopted as a new electoral estimate. These Oct8/9 items predate the IA Oct9–10 fieldwork already in the MI model."
+}

@@ -1,0 +1,8 @@
+{
+  "verified_utc": "2026-10-20T12:32:39.012805+00:00",
+  "command": "node --test tests/performance_chart.test.mjs",
+  "returncode": 0,
+  "stdout_sha256": "7410be858d84f90a0b8a57aeacc961a0ec9f668c0f09eaa63052aeea1af2dc51",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "result": "10 chart tests passed; CSV237 preserves236 priorrows/flows."
+}

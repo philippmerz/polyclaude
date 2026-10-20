@@ -1,0 +1,19 @@
+{
+  "schema": "polyclaude.operations_review.v1",
+  "reviewed_utc": "2026-10-20T12:32:36.034883+00:00",
+  "source_index": "data/deep_review_20261017/work/tick121327_ops_facts.json",
+  "commands_all_successful": 14,
+  "facts": {
+    "hurdle": "4 clear, 0 flagged, 3 protected groups",
+    "watchlist": "no trigger hits; hits-only mode does not establish that no trigger had NO_DATA",
+    "UMA": "45 positions tracked, 43 Gamma markets refreshed, 0 alerts; all clean",
+    "Ostium": "status: 0 open trades, 0 active limits, zero USDC allowance; state diff: 0 current, 0 prior, no alerts",
+    "crux": "quiet output, exit 0",
+    "position_audit_fix": "CLEAN; 7 indexed positions + 1 deindexed claim row; 0 expired holds dropped. Local condition-ID snapshot refreshed; no financial state changed.",
+    "decisions": "no overdue decisions",
+    "weekly_monthly": "weekly due Oct23; monthly due Nov12; both not due as of Oct20; retired off-chain Sunday/brokerage checks remain retired."
+  },
+  "daemon_audit": "Four canonical absolute-path singleton processes; each start after current scriptmtime. News/opportunity progress <2min; heartbeat hourly; Telegram PID monitor/queue0. No code change/restart.",
+  "filesystem_available_bytes_at_1220": 268636160,
+  "limitations": "Hits-only can hideNO_DATA; HLEUPDATING is againstJul3. Primary current-source review is separate. Raw timings/output hashes remain indexed; root independently verified28 output files."
+}

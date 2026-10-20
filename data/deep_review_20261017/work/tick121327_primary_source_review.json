@@ -1,0 +1,99 @@
+{
+  "reviewed_utc": "2026-10-20T12:25:22.002173+00:00",
+  "source_capture_index": "data/deep_review_20261017/work/tick121327_root_source_index.json",
+  "sources": {
+    "hle": {
+      "status": 200,
+      "received_utc": "2026-10-20T12:21:59.428038Z",
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 12:21:59 GMT",
+        "content-type": "application/json",
+        "age": "166",
+        "cache-control": "public"
+      },
+      "models_count": 66,
+      "kimi": {
+        "Kimi K2.5": {
+          "hle": 25.4,
+          "hle_calibration_error": 75.9
+        },
+        "Kimi K3": {
+          "hle": 41.08,
+          "hle_calibration_error": 44.67
+        },
+        "Kimi K2.6": {
+          "hle": 35.48,
+          "hle_calibration_error": 58.19
+        },
+        "Kimi K2": {
+          "hle": 21.4,
+          "hle_calibration_error": 67.8
+        }
+      },
+      "same_body_as_1053": true,
+      "limitation": "Fresh delivery/cacheAge is not a new publication. Jul3 inventory comparison is not a new event."
+    },
+    "openrouter": {
+      "status": 200,
+      "received_utc": "2026-10-20T12:21:59.342878Z",
+      "raw_sha256": "a54b7efc724342b338868987b015ea5789e54fa678e3614dc1c544548e716467",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 12:21:59 GMT",
+        "content-type": "application/json",
+        "age": "167",
+        "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+      },
+      "row_count": 53,
+      "cachedAt": 1792496303629,
+      "cachedAt_utc": "2026-10-20T11:38:23.629000+00:00",
+      "weekly_totals_T": {
+        "2026-09-28": 165.856049857563,
+        "2026-10-05": 171.842501724714,
+        "2026-10-12": 164.043985914931,
+        "2026-10-19": 37.33215919664
+      },
+      "held_target_weeks": {},
+      "limitation": "Current Oct19 week is partial, not settlement. Actual usage measurement cutoff unexposed;cachedAt/delivery are not that cutoff."
+    },
+    "senate": {
+      "status": 200,
+      "received_utc": "2026-10-20T12:22:00.129853Z",
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "22466",
+        "date": "Tue, 20 Oct 2026 12:22:00 GMT"
+      },
+      "table_rows": 257,
+      "newest_displayed_vote": "(00256) 256\u00a0(47-41) Confirmed On the Nomination: Confirmation: Keith Sonderling, of F.L., to be Secretary of Labor PN1129 Sep\u00a030",
+      "clarity_text_mentions": 0,
+      "limitation": "Successful HTTP200 closes transportgap, but displayedlist endsSep30, not exhaustive currentOct legislative coverage."
+    },
+    "google2026": {
+      "status": 404,
+      "received_utc": "2026-10-20T12:21:59.742763Z",
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "max-age=300",
+        "date": "Tue, 20 Oct 2026 12:21:59 GMT"
+      },
+      "limitation": "404 route is not proof no Google-related information exists or a final athlete ranking."
+    },
+    "mi_program": {
+      "status": 200,
+      "received_utc": "2026-10-20T12:21:59.914197Z",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 12:21:59 GMT",
+        "cache-control": "no-cache, max-age=600",
+        "last-modified": "Mon, 19 Oct 2026 20:58:43 GMT",
+        "content-type": "text/html; charset=UTF-8"
+      },
+      "agenda_excerpt": "AGENDA ** Please Note: No Speaker Reception for this meeting ** 11:00 a.m. Registration & Network Caf\u00e9 12:00 p.m. Program (Theater-Style, Unreserved Seating) 1:05 p.m. Strolling Lunch with Open Seating TICKETS $55 \u2013 DEC Members $65 \u2013 Guests of DEC Members PURCHASE TICKE",
+      "same_body_as_1052": true,
+      "timing": "Official20Octprogram16UTC within15\u201318; next14check precedes it."
+    }
+  }
+}

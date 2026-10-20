@@ -1,0 +1,26 @@
+{
+  "reviewed_utc": "2026-10-20T12:33:45.686980+00:00",
+  "status": 200,
+  "receipt": "logs/cron20261020T121327Z_root_catalyst/whitehouse.receipt.json",
+  "received_utc": "2026-10-20T12:33:45.658805Z",
+  "raw_sha256": "307078c09477aabd4bc88b4353b8cf5e1face61e6512bcbd1a69f708b13ac66a",
+  "limits": "Bounded official feed; no exhaustive cessation/health/legislative inference, no numerical prior change.",
+  "item_count": 30,
+  "latest_items": [
+    {
+      "title": "Presidential Message on National Forest Products Week",
+      "pubDate": "Tue, 20 Oct 2026 02:02:45 +0000",
+      "link": "https://www.whitehouse.gov/briefings-statements/2026/10/presidential-message-on-national-forest-products-week-5753/"
+    },
+    {
+      "title": "President Trump Delivers Historic Wins for Kansas Workers, Families, Farmers, and Rural Communities",
+      "pubDate": "Mon, 19 Oct 2026 18:00:25 +0000",
+      "link": "https://www.whitehouse.gov/releases/2026/10/president-trump-delivers-historic-wins-for-kansas-workers-families-farmers-and-rural-communities/"
+    },
+    {
+      "title": "First Lady Melania Trump Champions New U.S. Women\u2019s Health Initiative",
+      "pubDate": "Mon, 19 Oct 2026 15:35:08 +0000",
+      "link": "https://www.whitehouse.gov/briefings-statements/2026/10/first-lady-melania-trump-champions-new-u-s-womens-health-initiative/"
+    }
+  ]
+}

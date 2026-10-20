@@ -1,0 +1,56 @@
+{
+  "read_utc": "2026-10-20T12:36:52.987169+00:00",
+  "cutoff_utc": "2026-10-20T12:13:27Z",
+  "file_sha256": "bb7e340afecd0f1bd225704a19756731020030c3a4c1d8c3213fd5e6bc858832",
+  "rows": [
+    {
+      "alert": {
+        "alert_id": "506adf4eee371d50d162f6253e8a87265ae5c5cc",
+        "ts": "2026-10-20T12:18:54Z",
+        "tier": 1,
+        "feed": "Israel Knesset Hebrew polls, party lists and elections",
+        "matched": "\u05d9\u05e9\u05e8\u05d0\u05dc \u05d1\u05d9\u05ea\u05e0\u05d5",
+        "title": "\u05de\u05e1\u05e8\u05d5\u05e0\u05d9\u05dd \u05e9\u05de\u05db\u05e4\u05d9\u05e9\u05d9\u05dd \u05d0\u05ea \u05dc\u05d9\u05d1\u05e8\u05de\u05df: \u05d9\u05e9\u05e8\u05d0\u05dc \u05d1\u05d9\u05ea\u05e0\u05d5 \u05e9\u05d5\u05dc\u05d7\u05ea \u05d0\u05e6\u05d1\u05e2 \u05de\u05d0\u05e9\u05d9\u05de\u05d4 \u05dc\u05dc\u05d9\u05db\u05d5\u05d3 - \u05d4\u05d9\u05d5\u05dd",
+        "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTFB2bVBKSnlOSnR3YU9ZX1BONUZjckdoMkl4WEJVOTlFcTJUelgzRHlOVUFuR2JGX3hKOEJVYzJrYVFUWHhFOEtOVDJRWmg0OGFVRTZVYVBUSTBjUlJrZW5odmpkNi02RGdEY2ZoVTdQclczaV960gF0QVVfeXFMUHZtUEpKeU5KdHdhT1lfUE41RmNyR2gySXhYQlU5OUVxMlR6WDNEeU5VQW5HYkZfeEo4QlVjMmthUVRYeEU4S05UMlFaaDQ4YVVFNlVhUFRJMGNSUmtlbmh2amQ2LTZEZ0RjZmhVN1ByVzNpX3o?oc=5",
+        "agent_reason": "Unrelated Israeli party messaging; no direct causal channel to any held or pending position.",
+        "impacts": [],
+        "relevance": "research_only",
+        "review_required": false
+      },
+      "row_sha256_without_newline": "5c4b40b33c8178dfcf248319d73717531a82c01208eb01de24b3d2d195f2bf38"
+    },
+    {
+      "alert": {
+        "alert_id": "1b32e4e8162f90d2cd49419eff81a3a13c1e5a1f",
+        "ts": "2026-10-20T12:29:38Z",
+        "tier": 1,
+        "feed": "Michigan Senate Rogers and El-Sayed news",
+        "matched": "Michigan Senate",
+        "title": "Watch Evita Duffy-Alfonso analyzes Michigan Senate race and Gen Z voter trends - FNC - FOX One",
+        "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxOLXJzRE4yTTl2NEpnejVSVUNoMzVxOXpPcG5ZZjBhX1I0MjdEOXVPRVF1VUgydDk1S3N0cXhxak9yRkRoVnNpWl9vdWpDdUFRaVVsM1czMW5iSGRSazFKYXhZRExDNlVIakIyYTdNcFhibEE0QklpX2ppNUhqWkxOMlFReTlVbk1BRUJvNG4zOXE2cXFhbjZJLWVHeDBtcXJlbXhvMzQxTnU4ZmFrNmd4Y0VBNmxobGdO?oc=5",
+        "agent_reason": "Opinion/analysis segment with no new hard facts, official action, or state change affecting a position.",
+        "impacts": [],
+        "relevance": "research_only",
+        "review_required": false
+      },
+      "row_sha256_without_newline": "0c568c0cdaead145f041dee53eedfa4702a112370b43aa57e49073572f99974a"
+    },
+    {
+      "alert": {
+        "alert_id": "a9e5c3026f37461a8eca03f17bd66d45fb854334",
+        "ts": "2026-10-20T12:29:49Z",
+        "tier": 1,
+        "feed": "Bank of Israel, Yaron, FX and energy headlines",
+        "matched": "Bank of Israel",
+        "title": "Bank of Israel to pause rate cuts ahead of October 27 election: Reuters poll - StreetInsider",
+        "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOS25WRGl6NHU2ZTNFQmRTd28zZjlVZDlIOER6cUNUMUxyZnVtWk1JdHcxZGh3YnhFcTRySE1CTTgtdU5rQVNDcXRNckszUWhTYkdjU09vTUVkZF9YYmhJQzVka2hjRWYtb2JzMnJya2c4Y05uNzZWY3Fzb3htV2tzb1JETUpBYkNjUjFTd1VySWw5ZFZXN0RPelB0Nk1xVS1uazlRb0FFcUkwYWdzaGJHWlBqT2x3SGNMbVZRSk1ZRXZyRDE3Q3h3VlFB?oc=5",
+        "agent_reason": "Irrelevant to all held positions and pending BUY orders; no direct causal channel.",
+        "impacts": [],
+        "relevance": "research_only",
+        "review_required": false
+      },
+      "row_sha256_without_newline": "1660aae53542d0ac2e88ae96f58eb5305016c39ec4e729d8411fb06c8df82920"
+    }
+  ],
+  "limits": "One bounded finaldelta read, not polling or exhaustive external news coverage. Requested11:19 and12:13:17 alerts were read separately regardless of cutoff."
+}

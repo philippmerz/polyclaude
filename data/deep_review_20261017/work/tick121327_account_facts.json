@@ -1,0 +1,52 @@
+{
+  "schema": "polyclaude.tick_account_facts.v1",
+  "completed_utc": "2026-10-20T12:19:52.957914+00:00",
+  "orders": [
+    {
+      "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "side": "BUY",
+      "price": "0.12",
+      "original_size": "10",
+      "size_matched": "0",
+      "status": "LIVE",
+      "outcome": "Yes",
+      "expiration": "0"
+    },
+    {
+      "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "side": "BUY",
+      "price": "0.03",
+      "original_size": "50",
+      "size_matched": "0",
+      "status": "LIVE",
+      "outcome": "No",
+      "expiration": "0"
+    },
+    {
+      "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "side": "BUY",
+      "price": "0.38",
+      "original_size": "10",
+      "size_matched": "0",
+      "status": "LIVE",
+      "outcome": "Yes",
+      "expiration": "0"
+    }
+  ],
+  "order_count": 3,
+  "orders_equal_previous_full_wrappers": true,
+  "trade_count": 127,
+  "trades_equal_previous_full_wrappers": true,
+  "indexed_rows": 9,
+  "identity_quantity_totalBought_redeemability_equal_previous": true,
+  "winning_redeemable_count": 0,
+  "losing_or_uncertain_redeemable_count": 2,
+  "account_call_directory": "logs/cron20261020T121327Z_account",
+  "representation_note": "Vetted client return wrappers captured under sdk_result_serialization; not rawwire HTTP. Pagination exhausted before comparison. Public positions HTTP bodies captured."
+}

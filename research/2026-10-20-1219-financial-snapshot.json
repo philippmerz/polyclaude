@@ -1,0 +1,28 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-20T12:19:51.510292+00:00",
+  "producer_completed_utc": "2026-10-20T12:20:06.322823+00:00",
+  "stdout_path": "logs/cron20261020T121327Z_financial/stdout.txt",
+  "stdout_sha256": "38ecbc4854e79bdb3c5cbb0977f83bb6d880d160ff02b34ad5ab325679d7e23a",
+  "values_usd": {
+    "canonical_bankroll": 194.8,
+    "separately_funded_gas": 5.82,
+    "trading_midpoint": 188.98,
+    "pm_midpoint": 35.04,
+    "pm_fee_net_depth": 29.3,
+    "indicative_whole_trading_net_depth": 183.24,
+    "trading_contributions": 170,
+    "reported_accounting_residual": 19.72
+  },
+  "trading_net_depth_return_percent": 7.788235294117647,
+  "derivation": "Trading midpoint=canonical-gas; trading net depth=canonical-gas-PMmid+same-producer PMdepth. Rounded printed inputs from one producer, not another status/exit quote.",
+  "limits": [
+    "Sequential indicative estimates, not synchronized NAV or executable proceeds.",
+    "19.72 reported residual is not an independently audited cash-profit ledger; VM/API costs remain unreconciled and excluded.",
+    "Gas price drift is not a new contribution. No trade, fill, redemption, transfer or external flow recorded this tick.",
+    "Live orders reserve6.50, but remain owned cash until filled; no double subtraction from aggregate value."
+  ],
+  "account_verification": "data/deep_review_20261017/work/tick121327_account_facts.json",
+  "recorded_utc": "2026-10-20T12:30:38.123785+00:00"
+}

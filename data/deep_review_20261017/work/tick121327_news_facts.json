@@ -1,0 +1,108 @@
+{
+  "schema": "tick121327_news_facts.v1",
+  "observed_utc": "2026-10-20T12:18:39Z",
+  "scope": "Public-source facts and alert-body binding only; no probability or position judgment.",
+  "case_identity": {
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "market_id": "630805",
+    "exposure_identity": "Michigan Senate Democratic win; root must reconcile current account/position state",
+    "review_index": 1838
+  },
+  "alerts": [
+    {
+      "alert_id": "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+      "ts_utc": "2026-10-20T11:19:02Z",
+      "title": "Michigan’s El-Sayed doubles down: Israel ‘not an ally’ - The Forward",
+      "row_sha256_without_newline": "b7bf23cd32bc6866242c280413937ecde707f267d71f8a7efd9e41acc5c795c7",
+      "finding": "Exact Forward redirect returned Google consent HTML, not publisher text; earlier Forward API attempt returned 403. Exact article body remains unverified. Related JTA exact-title body was retrieved and reviewed in tick104103_closeout_mi_review_1127.json (receipt logs/deep_review_20261017/tick104103_closeout_jta_body_1126/jta_article.receipt.json, received 11:21:15Z, raw SHA-256 03349600508dcc7cbb50b08aba45d35510730175aeb4e67d42cbfe2846d3bb82). JTA says it recaps earlier ABC/MSNOW/debate remarks, supplies no poll or voter-response measure, and is not a second independent observation. Do not infer Forward text is byte-identical to JTA.",
+      "capture": {
+        "receipt": "logs/cron20261020T121327Z_sources/forward_alert_redirect.receipt.json",
+        "status": 200,
+        "received_utc": "2026-10-20T12:18:37.853931Z",
+        "raw_sha256": "d6b9bea31c5ca9509ab38a0a83f865f0930216ea429c81045ed873607820a0cd",
+        "limit": "Google consent page; not article body"
+      }
+    },
+    {
+      "alert_id": "86e7994e41fd2b524cd9f033f41bbcf70d2da3c2",
+      "ts_utc": "2026-10-20T12:13:17Z",
+      "title": "'My Name Is Abdul': El-Sayed Confronts Trump's Racist, Anti-Muslim Attacks Head-On in New Ad - Common Dreams",
+      "row_sha256_without_newline": "019974ed48a401a3eb8ae7a67b4022e1d9332fc706d2b8be36a8711bcbb2cb4d",
+      "finding": "Official campaign page says it released digital ad ‘Prayer’ on Oct. 18, 2026; transcript begins ‘My name is Abdul’ and focuses on faith, hope, service and neighbors. This corroborates an ad matching the alert's quoted opening, but does not establish the exact Common Dreams article's publication date/body or its framing as a direct response. Captured Common Dreams candidate tag page contains no matching new-title result; its similar surfaced Trump-attack story is a separate Oct. 8 article. No measured electoral impact or poll measuring a response to this ad/stance was identified in these sources. This is campaign messaging, not a voter-response measurement.",
+      "capture": {
+        "tag_receipt": "logs/cron20261020T121327Z_sources/commondreams_tag.receipt.json",
+        "tag_status": 200,
+        "tag_received_utc": "2026-10-20T12:18:38.283541Z",
+        "tag_raw_sha256": "d43243515b18658e956e24a801e0a2bdc26bc073dc27367eb059dcfa517d6b87",
+        "campaign_receipt": "logs/cron20261020T121327Z_sources/campaign_prayer.receipt.json",
+        "campaign_status": 200,
+        "campaign_received_utc": "2026-10-20T12:18:38.448289Z",
+        "campaign_raw_sha256": "3c52e3bdc5453c9111c1750b0da658233490f8956d443102fd21540660e32832"
+      }
+    }
+  ],
+  "related_alerts_already_reviewed": [
+    {
+      "id": "9682a9f269961f6245455fbe2e838977d4c9c615",
+      "note": "Same JTA headline, exact publisher-body review above; no new measurement."
+    },
+    {
+      "id": "4b60e36bc058b89da4d3f762af09d75139fdc4dd",
+      "note": "Earlier Jerusalem Post stance report; prior review material, not a poll."
+    },
+    {
+      "id": "0aa8fc32717007d7383164773cff584c7d806f8b",
+      "note": "Earlier Jerusalem Post accusation/attack item; tagged research-only in alert row."
+    },
+    {
+      "id": "e46af719870ada9fff6c0fcad7f88994fc99700d",
+      "note": "Opposing campaign-spending/narrowing-race report; earlier source review in tick104103 files."
+    },
+    {
+      "id": "e569219197601f1fab365748941ee081615f4958",
+      "note": "Opposing-candidate travel-spending report; earlier review, no quantified voter response."
+    },
+    {
+      "id": "f90506edefe6a4bc5012f15c5441b3b24d365188",
+      "note": "Rogers campaign characterization; alert row treated as opinion/recycled messaging."
+    },
+    {
+      "id": "306853ae7b61f9ebfde6893964b2e3fb8086eedb",
+      "note": "Prospect reporting on Rogers; prior source review says some payment/balance claims remain unverified and salience uncertain."
+    }
+  ],
+  "schedule": [
+    {
+      "event": "Detroit Economic Club Michigan Senate candidates program",
+      "source": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+      "prior_capture": "data/deep_review_20261017/work/tick104103_root_sources.json (mi_program receipt)",
+      "received_utc": "2026-10-20T10:52:31.570737Z",
+      "sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "listed_schedule": "Oct. 20; registration 11:00 a.m. ET, program 12:00 p.m. ET (16:00 UTC), lunch 1:05 p.m. ET. Thus program falls within 15:00–18:00 UTC."
+    },
+    {
+      "event": "WXYZ Senate debate",
+      "source": "https://www.wxyz.com/news/national-politics/america-votes/wxyz-tv-to-host-u-s-senate-debate-between-mike-rogers-and-abdul-el-sayed",
+      "capture": "logs/cron20261020T121327Z_sources/wxyz_oct21_debate.receipt.json",
+      "received_utc": "2026-10-20T12:18:38.905385Z",
+      "sha256": "33ab42b0e7ec3ab55d2dae2f2ef7ad045fb1e41140869514fd92c7df86885ea0",
+      "listed_schedule": "Candidates agreed to debate Wed. Oct. 21 at 7 p.m. ET (23:00 UTC)."
+    }
+  ],
+  "limits": [
+    "Alert-row reasons are hypotheses, not measured probabilities.",
+    "No current poll was found that isolates either candidate statement or the ad's electoral impact.",
+    "Previously reviewed related alerts are linked by ID; their original capture details remain in the cited tick104103 review files."
+  ],
+  "collector_identity_erratum": {
+    "corrected_utc": "2026-10-20T12:43:52.373976+00:00",
+    "field": "case_identity.market_id",
+    "original_value": "3399938",
+    "correct_value": "630805",
+    "review_index": 1838,
+    "cause": "Collector copied another case market ID while retaining the correct MI condition ID. Root rejected the inconsistent identity before publication; no financial action or valuation relied on it.",
+    "original_unit_sha256": "e91eea2c652bc7ed486c2590503e74b039b11474bcb4bf985edfbdd2df155474",
+    "binding_receipt": "logs/cron20261020T121327Z_root_identities/case_1838.receipt.json",
+    "binding_raw_sha256": "bdc5b14673954600cac23c2badc90c66b36b389544ac435c71ef2aa35b66f2f6"
+  }
+}
