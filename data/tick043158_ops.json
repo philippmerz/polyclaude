@@ -1,0 +1,106 @@
+{
+  "schema": "tick.operations.v1",
+  "tick_id": "20261020T043158Z",
+  "collector": "ops",
+  "observed_utc": "2026-10-20T04:35:30.896300Z",
+  "financial_state_asof_utc": "bankroll producer call-window 2026-10-20T04:34:59.527374Z–04:35:14.818350Z; full status producer 04:34:29.230746Z–04:34:43.685842Z",
+  "result": "routine checks complete; no urgent operational issue detected",
+  "portfolio": {
+    "pm_open_rows": 7,
+    "pm_open_cost_usd": 35.77,
+    "pm_open_mtm_usd": 36.35,
+    "pm_indicative_net_depth_usd": 33.85,
+    "bankroll_authoritative_usd": 196.2,
+    "bankroll_reference_usd": 170,
+    "realized_settled_cash_usd": 19.72,
+    "separately_deposited_gas_usd": 5.86,
+    "unrealized_marked_usd": 0.63,
+    "unrealized_indicative_realizable_usd": -1.87,
+    "bankroll_warning": "PM midpoint overstates net realizable by $2.50; indicative depth/fees, not synchronized or freshness-verified quote.",
+    "pm_pusd_usd": 19.25129,
+    "pm_pusd_buy_commitments_usd": 6.5,
+    "pm_pusd_deployable_arithmetic_usd": 12.75129,
+    "ostium_open_trades": 0,
+    "uma": {
+      "tracked": 45,
+      "gamma_refreshed": 43,
+      "alerts": 0,
+      "positions_fetch_ok": true
+    },
+    "marginal_hurdle": {
+      "clear": 4,
+      "flagged": 0,
+      "protected_groups": 3
+    },
+    "crux_coverage_gaps": 0,
+    "watchlist_hits": 0,
+    "state_audit": "CLEAN; refreshed 7 indexed + 1 deindexed claim row; 0 expired holds pruned",
+    "exit_analysis": "No SELL-TAKER verdict; individual holds remain central screens. Clarity pair whole-group screen HOLD_COMPLETE_GROUP; indicative full exit $26.52 vs $29 floor.",
+    "kelly_advisory": "delta +$117.98 vs optimum; advisory only, not sizing action; entry caps suppress OR and Messi scale-ins.",
+    "decisions_pending": "no overdue decisions"
+  },
+  "resolved_claims": {
+    "winning_redeemable": 0,
+    "flagged_rows": 8,
+    "skipped_losing_or_uncertain": 2,
+    "rows": [
+      "Whalefall Opening Weekend <8m, No, curPrice 0",
+      "Google Gemini highest score, No, curPrice 0"
+    ],
+    "action": "redeem-all --dry-run only; no claim burned or redeemed; no positive payout established"
+  },
+  "daemons": [
+    {
+      "name": "news_watcher",
+      "instances": 1,
+      "pid": 148881,
+      "argv": "/home/polyclaude/polyclaude/.venv/bin/python /home/polyclaude/polyclaude/scripts/news_watcher.py start",
+      "process_start_utc": "2026-10-19T05:28:37Z",
+      "script_mtime_utc": "2026-10-18T22:58:44.443045Z",
+      "stale": false
+    },
+    {
+      "name": "heartbeat_watch",
+      "instances": 1,
+      "pid": 450,
+      "argv": "/home/polyclaude/polyclaude/.venv/bin/python /home/polyclaude/polyclaude/scripts/heartbeat_watch.py start",
+      "process_start_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-10-02T14:31:39.989785Z",
+      "stale": false
+    },
+    {
+      "name": "telegram_listener",
+      "instances": 1,
+      "pid": 451,
+      "argv": "/home/polyclaude/polyclaude/.venv/bin/python /home/polyclaude/polyclaude/scripts/telegram_listener.py start",
+      "process_start_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-09-10T18:34:57.001351Z",
+      "stale": false
+    },
+    {
+      "name": "opportunity_watch",
+      "instances": 1,
+      "pid": 425,
+      "argv": "/home/polyclaude/polyclaude/.venv/bin/python3 /home/polyclaude/polyclaude/scripts/opportunity_watch.py start",
+      "process_start_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-09-29T10:07:53.974910Z",
+      "stale": false
+    }
+  ],
+  "due_dates": {
+    "weekly_pnl": "2026-10-23",
+    "monthly_emergency_fee_drill": "2026-11-12"
+  },
+  "mutations": {
+    "position_state_audit": "authorized local claim snapshot refresh; 0 acked-hold deletions",
+    "ostium_state_diff": "authorized local state-diff cache updated; no open/close changes",
+    "watchlist_monitor": "auto-revet check ran; no output/hits",
+    "other_checks": "read-only; no financial records, orders, or positions changed"
+  },
+  "limitations": [
+    "Bankroll total is a marked aggregate; several rows use cached source values and warning states the indicative liquidation limitation.",
+    "The 2 visible resolved rows are zero-price losing/uncertain; no zero-value burn attempted.",
+    "Discovery/scanner and news judgment are handled by the primary reviewer."
+  ],
+  "capture_receipts": "../logs/checkin_20261020T043158Z/ops/reads/*.receipt.json (each records exact call-window UTC and raw/gzip SHA-256; gzipped supplied bytes in paired .body.json.gz)"
+}

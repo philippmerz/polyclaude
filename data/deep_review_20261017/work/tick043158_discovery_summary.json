@@ -1,0 +1,83 @@
+{
+  "run": "20261020T043158Z",
+  "observed_at": "2026-10-20 approx 04:35-04:37 UTC; receipts contain call windows",
+  "primary": {
+    "snapshot": "data/snapshots/shortlist_20261020T043514734264Z_primary.json",
+    "sha256": "ef91dd253a74aa564f2e601605512fc45cb19c2057ec63aa609b202d98322c00",
+    "fetched": 1000,
+    "endpoint_pages": "10/10",
+    "stop": "page_cap",
+    "coverage_complete": false,
+    "selected": 80,
+    "eligible_pre_top": 581,
+    "top_omitted": 501,
+    "liquidity_rejected": 334,
+    "other_filter_rejections": 85
+  },
+  "thin": {
+    "snapshot": "data/snapshots/shortlist_20261020T043522897463Z_thin_tail.json",
+    "sha256": "c48783a2246a1524d247a9725bc54d3ae951562cb3560660e13abab57c986b81",
+    "fetched": 39281,
+    "pages": "20/20",
+    "stop": "page_cap",
+    "coverage_complete": false,
+    "selected": 3000,
+    "eligible_pre_top": 3369,
+    "top_omitted": 369,
+    "liquidity_rejected": 15634,
+    "volume_rejected": 9949,
+    "hurdle_rejected": 2791,
+    "not_tradable": 6089
+  },
+  "sports": {
+    "artifact": "tick043158_discovery_sports.json",
+    "rows": 11,
+    "consensus_top_n": 3,
+    "consensus_mapping_errors": 2,
+    "coverage": "scanner successful; source rows in artifact"
+  },
+  "macro": {
+    "artifact": "tick043158_discovery_macro.json",
+    "markets_passing_volume": 9,
+    "coverage": "60 day scope; no-consensus profile"
+  },
+  "event_monotonicity": {
+    "artifact": "tick043158_discovery_event_monotonicity.json",
+    "events_in_source": 1339,
+    "events_inspected": 1078,
+    "pages": "15/15",
+    "stop": "max_pages",
+    "complete": false,
+    "violations": 0,
+    "provisional_positive": 0
+  },
+  "consistency": {
+    "artifact": "tick043158_discovery_polymarket_consistency.json",
+    "markets_scanned": 5004,
+    "events_processed": 636,
+    "pages": 32,
+    "validated_neg_risk_markets": 3092,
+    "stop": "market_cap",
+    "coverage_complete": false,
+    "structural_groups": 364,
+    "live_groups_requested": 20,
+    "live_legs_requested": 185,
+    "live_quotes_valid": 5,
+    "provisional_positive": 0
+  },
+  "favorite_fade": {
+    "artifact": "tick043158_discovery_favorite_fade.json",
+    "fetched": "10/10 pages",
+    "rough_survivors": 58,
+    "book_walk_cap": 40,
+    "valid_books": 39,
+    "outside_profile_valid_books": 14,
+    "walk_cap_omissions": 18,
+    "candidate_profile_only": "not fair value, edge, APY or execution readiness"
+  },
+  "notes": [
+    "All zero/provisional counts are bounded to scanned scope; incomplete/filtered/capped portions remain unknown.",
+    "Discovery price profiles and aggregate liquidity/volume are not fair value or executable depth.",
+    "Snapshot hashes cover files; each scanner private capture records command result bytes and call window."
+  ]
+}

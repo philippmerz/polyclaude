@@ -1,0 +1,52 @@
+{
+  "schema": "tick.financial_snapshot.v1",
+  "tick_id": "20261020T043158Z",
+  "producer": "scripts/bankroll.py",
+  "producer_window_utc": {
+    "started": "2026-10-20T04:34:59.527374Z",
+    "received": "2026-10-20T04:35:14.818350Z"
+  },
+  "source_body": "logs/checkin_20261020T043158Z/ops/reads/bankroll.body.json.gz",
+  "source_receipt": "logs/checkin_20261020T043158Z/ops/reads/bankroll.receipt.json",
+  "source_verification": {
+    "body_representation": "supplied_bytes",
+    "raw_bytes": 1379,
+    "raw_sha256": "ed6229489fb52b5e3c610e1581a7949b41542b5e9e5f0c308dde2686a6a4981d",
+    "gzip_bytes": 645,
+    "gzip_sha256": "5a2ecfe98baf2a918f7ded1347b7008c07c7916d2e85a4a1dbcbcafedc27ebd4",
+    "hash_scope": "supplied_bytes_only_not_wire_authentication"
+  },
+  "same_producer_lines": [
+    "PM positions MTM                       $    36.40",
+    "polygon pm POL (47.7086):       $     4.44",
+    "polygon pm USDC:            $     0.11",
+    "polygon pm pUSD:            $    19.25",
+    "polygon pm aUSDC.e:         $     3.50",
+    "polygon pm aUSDC:           $   122.14",
+    "polygon crypto POL (1.9914):       $     0.19",
+    "arbitrum crypto ETH (0.0004):       $     1.01",
+    "arbitrum crypto aUSDC:      $     7.90",
+    "base crypto ETH (0.0001):       $     0.22",
+    "base crypto USDC:           $     1.05",
+    "TOTAL BANKROLL                         $   196.20",
+    "vs reference $170                         +26.20  (+15.4%)",
+    "  REALIZED (settled cash)                 +19.72  (+11.6% of ref) <- the metric that counts",
+    "  (gas tokens excluded)                     5.86  — separately deposited, not trading P&L",
+    "  unrealized (marked)                      +0.63  — NOT return until closed or resolved",
+    "  unrealized (realizable)                  -1.87  — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote",
+    "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $2.50 (mid $36.40 vs $33.90) — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return."
+  ],
+  "accounting_note": "The script labels +$19.72 REALIZED (settled cash); prior accounting record describes $19.72 as residual arithmetic, not audited cash profit. This unit preserves the producer text and makes no cash-profit inference.",
+  "separate_producer_observation": {
+    "producer": "scripts/polyclaude_status.py",
+    "window_utc": {
+      "started": "2026-10-20T04:34:29.230746Z",
+      "received": "2026-10-20T04:34:43.685842Z"
+    },
+    "pm_open_mtm_usd": 36.35,
+    "pm_open_cost_usd": 35.77,
+    "indicative_net_depth_usd": 33.85,
+    "source_receipt": "logs/checkin_20261020T043158Z/ops/reads/full_status.receipt.json",
+    "note": "Separate producer/call window; not substituted into authoritative bankroll aggregate."
+  }
+}

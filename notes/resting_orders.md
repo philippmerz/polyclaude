@@ -1,6 +1,6 @@
-# Current resting orders — October20 03:27 UTC
+# Current resting orders — October20 04:35 UTC
 
-**Three LIVE zero-matched BUYs commit $6.50; Kimi412 is now a filled holding.** Fresh03:27 exact inventory/details, exhausted127trades and index/reservation bytes agree with prior holdings/commitments; no new fill. Original Kimi chain/cash reconciliation remains dated. [Fill proof](../data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json).
+**Three LIVE zero-matched BUYs commit $6.50; Kimi412 is now a filled holding.** Fresh04:35–36 exact inventory/details, byte-identical127trades and index/reservation bytes agree with prior holdings/commitments; no new fill. Original Kimi chain/cash reconciliation remains dated. [Fill proof](../data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json).
 
 |Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
 |---|---|---|---|
@@ -11,7 +11,7 @@
 - **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
 - Only filled reservation retired4→3 under vetted locks; other three records/terms unchanged. At01:59:26 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
 - Review remaining political bids each existing tick/earlier material evidence. Cancel first on newly unassessed material poll/candidate/ballot/turnout facts; no add/chase/repost/taker fallback. Unannounced information/cache gaps can fill before cancellation. A scheduled check is a review, not automatic expiry; any fill needs fresh holding/source/fee-netexit/joint-risk judgment.
-- Latest canonical producer03:27:35–51:196.22incl5.83gas, trading190.39mid/187.60indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. [Financial record](../research/2026-10-20-0327-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick030114_state_0326.json).
+- Latest canonical producer04:34:59–04:35:14:196.20incl5.86gas, trading190.34mid/187.84indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. [Financial record](../research/2026-10-20-0435-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick043158_state.json).
 
 ## Quote lifetime — clarified October19
 
