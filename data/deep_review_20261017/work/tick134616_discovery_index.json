@@ -1,0 +1,736 @@
+{
+  "schema": "discovery_run_index.v1",
+  "tick_id": "cron20261020T134616Z",
+  "actual_scan_window_utc": "2026-10-20T14:01:48Z/2026-10-20T14:03:36Z",
+  "created_utc": "2026-10-20T14:05Z",
+  "disk_preflight": {
+    "available_mib": 206,
+    "threshold_mib": 128,
+    "status": "above threshold; no files deleted"
+  },
+  "commands_once": {
+    "consistency": {
+      "name": "consistency",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/polymarket_consistency_scan.py"
+      ],
+      "started_utc": "2026-10-20T14:02:44.400570+00:00",
+      "ended_utc": "2026-10-20T14:03:31.006986+00:00",
+      "elapsed_seconds": 46.606,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/consistency.stdout.txt",
+      "stdout_sha256": "c5d8f7dfa86f65e1f1e2275c132bc75557e39c6911c6a466e0f05e24e8288cfa",
+      "stdout_bytes": 1252,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/consistency.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0,
+      "shared_latest_preserved_path": "logs/cron20261020T134616Z_discovery/polymarket_consistency_latest.json",
+      "shared_latest_sha256": "8d5ac135305b6dd2178246a8a0ccb12166277954e4afabf55af242bede069e90",
+      "shared_latest_bytes": 455816
+    },
+    "context_primary": {
+      "name": "context_primary",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/market_context_batches.py",
+        "--scan-kind",
+        "primary",
+        "--format",
+        "markdown",
+        "--batch-size",
+        "20"
+      ],
+      "started_utc": "2026-10-20T14:03:36.112429+00:00",
+      "ended_utc": "2026-10-20T14:03:36.240063+00:00",
+      "elapsed_seconds": 0.128,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/context_primary.stdout.txt",
+      "stdout_sha256": "65630cdfc4ec07f0c88fe014a810dcdd53697a1b18ea9dff2c7e700034935f37",
+      "stdout_bytes": 16983,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/context_primary.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0
+    },
+    "context_thin_tail": {
+      "name": "context_thin_tail",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/market_context_batches.py",
+        "--scan-kind",
+        "thin_tail",
+        "--format",
+        "markdown",
+        "--batch-size",
+        "20"
+      ],
+      "started_utc": "2026-10-20T14:03:36.240623+00:00",
+      "ended_utc": "2026-10-20T14:03:36.792193+00:00",
+      "elapsed_seconds": 0.552,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/context_thin_tail.stdout.txt",
+      "stdout_sha256": "930bd30aecf998d08c2fe91166cffb4080c41012dd7c591b90f0b3ec847ceb1c",
+      "stdout_bytes": 541485,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/context_thin_tail.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0
+    },
+    "event_monotonicity": {
+      "name": "event_monotonicity",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/event_monotonicity_scan.py"
+      ],
+      "started_utc": "2026-10-20T14:02:41.320487+00:00",
+      "ended_utc": "2026-10-20T14:02:44.400075+00:00",
+      "elapsed_seconds": 3.08,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/event_monotonicity.stdout.txt",
+      "stdout_sha256": "8a6123bdf1c0c0a01f9a2a854ddcea2a42a51b967b36bd5727559f965bd2cf08",
+      "stdout_bytes": 249,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/event_monotonicity.stderr.txt",
+      "stderr_sha256": "cdd311c2e022ede7bdaf2877b23e85c0c2ce35b01eafa2095ca8d028c7eb73f5",
+      "stderr_bytes": 178
+    },
+    "favorite_fade": {
+      "name": "favorite_fade",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/favorite_fade_scan.py"
+      ],
+      "started_utc": "2026-10-20T14:03:31.009707+00:00",
+      "ended_utc": "2026-10-20T14:03:31.827012+00:00",
+      "elapsed_seconds": 0.817,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/favorite_fade.stdout.txt",
+      "stdout_sha256": "dbce7374358ad8c21cb74184efeef291734b799adeb4674be5bbcd5b0971781b",
+      "stdout_bytes": 3072,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/favorite_fade.stderr.txt",
+      "stderr_sha256": "2f65a7b0d5bc1797a110c86ace93110cb48077cefa4e1fd1ef9c1fcef9982baa",
+      "stderr_bytes": 568
+    },
+    "macro": {
+      "name": "macro",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/macro_pm_scan.py",
+        "--no-consensus",
+        "--days",
+        "60"
+      ],
+      "started_utc": "2026-10-20T14:02:40.703046+00:00",
+      "ended_utc": "2026-10-20T14:02:41.319984+00:00",
+      "elapsed_seconds": 0.617,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/macro.stdout.txt",
+      "stdout_sha256": "3f521bffd0a4cf8690dfa0d92ce25665b74bdf380c6b21b3495a3b24f11083f7",
+      "stdout_bytes": 680,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/macro.stderr.txt",
+      "stderr_sha256": "2d7cf4c780c9c2bb2cd2684faa47461c929532bc6973476a242059363233182d",
+      "stderr_bytes": 106
+    },
+    "primary": {
+      "name": "primary",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/discover_markets.py"
+      ],
+      "started_utc": "2026-10-20T14:01:48.849707+00:00",
+      "ended_utc": "2026-10-20T14:01:49.927507+00:00",
+      "elapsed_seconds": 1.078,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/primary.stdout.txt",
+      "stdout_sha256": "eb2167e93379eb9d60af877d0e32c69ffd0ff0e5f5867b823b02f6f8eea4e829",
+      "stdout_bytes": 6338,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/primary.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0
+    },
+    "sports": {
+      "name": "sports",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/sports_pm_scan.py",
+        "--hours",
+        "36",
+        "--with-consensus",
+        "--consensus-top-n",
+        "3"
+      ],
+      "started_utc": "2026-10-20T14:01:55.635447+00:00",
+      "ended_utc": "2026-10-20T14:02:40.702391+00:00",
+      "elapsed_seconds": 45.067,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/sports.stdout.txt",
+      "stdout_sha256": "12564d7ba8b2ca15a1126c1fe7f5d19ad7ec73e1138dc6a47fad67ea2dea18c5",
+      "stdout_bytes": 2508,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/sports.stderr.txt",
+      "stderr_sha256": "71c24b70c302a4acaf0985d6a840877b4077b177c37dc342927a79b0f5493ec2",
+      "stderr_bytes": 579
+    },
+    "thin_tail": {
+      "name": "thin_tail",
+      "argv": [
+        "/home/polyclaude/polyclaude/.venv/bin/python",
+        "scripts/discover_markets.py",
+        "--min-liquidity",
+        "500",
+        "--min-vol24",
+        "20",
+        "--max-pages",
+        "20",
+        "--via-events",
+        "--clears-hurdle-only",
+        "--top",
+        "3000"
+      ],
+      "started_utc": "2026-10-20T14:01:49.928208+00:00",
+      "ended_utc": "2026-10-20T14:01:55.634804+00:00",
+      "elapsed_seconds": 5.707,
+      "returncode": 0,
+      "stdout_path": "logs/cron20261020T134616Z_discovery/thin_tail.stdout.txt",
+      "stdout_sha256": "c61d8dd62a0f94b1bdfcf184c75e4cd4d80e8e5a63ed81d9f1b4dcafea5657b5",
+      "stdout_bytes": 9497,
+      "stderr_path": "logs/cron20261020T134616Z_discovery/thin_tail.stderr.txt",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_bytes": 0
+    }
+  },
+  "snapshots": [
+    {
+      "metadata": {
+        "path": "data/snapshots/shortlist_20261020T140149887028Z_primary.meta.json",
+        "bytes": 1337,
+        "sha256": "5286593bf3ac0e75a33981a86f98a6cba641c5789311e5d4fcd2fa8fa3163bc0"
+      },
+      "snapshot": {
+        "path": "data/snapshots/shortlist_20261020T140149887028Z_primary.json",
+        "bytes": 252762,
+        "sha256": "e446fd8648d88edb802732ba425a090dd4192caa09a40e445424375065ee0af7"
+      },
+      "scan_kind": "primary",
+      "params": {
+        "min_liquidity": 20000,
+        "min_vol24": 500,
+        "max_spread": 0.05,
+        "horizon_days": 370,
+        "top": 80,
+        "max_pages": 10,
+        "via_events": false,
+        "clears_hurdle_only": false,
+        "hurdle_apy": 0.032035,
+        "hurdle_days_floor": 3
+      },
+      "coverage": {
+        "fetch": {
+          "endpoint": "markets",
+          "max_pages": 10,
+          "pages_attempted": 10,
+          "pages_succeeded": 10,
+          "response_rows": 1000,
+          "duplicate_market_rows": 0,
+          "malformed_rows": 0,
+          "stop_reason": "page_cap",
+          "pagination_complete": false,
+          "fetched_market_rows": 1000
+        },
+        "filters": {
+          "input_markets": 1000,
+          "filter_rejections": {
+            "past_deadline": 26,
+            "horizon": 51,
+            "liquidity": 283,
+            "spread": 2
+          },
+          "eligible_before_top": 638,
+          "top_omitted": 558,
+          "selected": 80,
+          "selection_complete": false,
+          "filter_accounting_complete": true
+        }
+      }
+    },
+    {
+      "metadata": {
+        "path": "data/snapshots/shortlist_20261020T140155171123Z_thin_tail.meta.json",
+        "bytes": 1479,
+        "sha256": "ba6b1c589048449a49f065d8bf2d5e48874e25f5bb7ac5d91125eabb7014de71"
+      },
+      "snapshot": {
+        "path": "data/snapshots/shortlist_20261020T140155171123Z_thin_tail.json",
+        "bytes": 9696438,
+        "sha256": "da1a9d9a03454669bd6e31b6870f3245a0d8d45aeb06bf8bcaac745331676140"
+      },
+      "scan_kind": "thin_tail",
+      "params": {
+        "min_liquidity": 500.0,
+        "min_vol24": 20.0,
+        "max_spread": 0.05,
+        "horizon_days": 370,
+        "top": 3000,
+        "max_pages": 20,
+        "via_events": true,
+        "clears_hurdle_only": true,
+        "hurdle_apy": 0.032035,
+        "hurdle_days_floor": 3
+      },
+      "coverage": {
+        "fetch": {
+          "endpoint": "events",
+          "max_pages": 20,
+          "pages_attempted": 20,
+          "pages_succeeded": 20,
+          "response_rows": 2000,
+          "duplicate_market_rows": 128,
+          "malformed_rows": 0,
+          "stop_reason": "page_cap",
+          "pagination_complete": false,
+          "fetched_market_rows": 39086
+        },
+        "filters": {
+          "input_markets": 39086,
+          "filter_rejections": {
+            "not_tradable": 6149,
+            "win_assumed_hurdle": 3052,
+            "liquidity": 14828,
+            "volume": 10210,
+            "past_deadline": 654,
+            "spread": 709,
+            "horizon": 330,
+            "missing_deadline": 35
+          },
+          "eligible_before_top": 3119,
+          "top_omitted": 119,
+          "selected": 3000,
+          "selection_complete": false,
+          "filter_accounting_complete": true
+        }
+      }
+    }
+  ],
+  "offline_context_batches": {
+    "primary": {
+      "artifact": {
+        "path": "logs/cron20261020T134616Z_discovery/context_primary.stdout.txt",
+        "bytes": 16983,
+        "sha256": "65630cdfc4ec07f0c88fe014a810dcdd53697a1b18ea9dff2c7e700034935f37"
+      },
+      "batches": 2,
+      "markets_emitted": 30,
+      "batch_market_counts": [
+        20,
+        10
+      ],
+      "status_counts": {
+        "new_to_snapshot": 16,
+        "context_unchanged": 7,
+        "changed": 7
+      },
+      "review": "All emitted markdown batches opened and row/status totals cross-checked; reviewed exact identities, displayed prices/change fields and criteria-proof hashes as factual context. No probability or rejection inferred."
+    },
+    "thin_tail": {
+      "artifact": {
+        "path": "logs/cron20261020T134616Z_discovery/context_thin_tail.stdout.txt",
+        "bytes": 541485,
+        "sha256": "930bd30aecf998d08c2fe91166cffb4080c41012dd7c591b90f0b3ec847ceb1c"
+      },
+      "batches": 79,
+      "markets_emitted": 1368,
+      "batch_market_counts": [
+        20,
+        19,
+        18,
+        20,
+        15,
+        11,
+        12,
+        11,
+        18,
+        16,
+        19,
+        20,
+        19,
+        17,
+        20,
+        20,
+        9,
+        20,
+        20,
+        19,
+        14,
+        20,
+        13,
+        20,
+        19,
+        20,
+        20,
+        20,
+        18,
+        5,
+        21,
+        19,
+        18,
+        16,
+        18,
+        20,
+        17,
+        20,
+        20,
+        20,
+        20,
+        18,
+        7,
+        20,
+        20,
+        15,
+        17,
+        15,
+        17,
+        20,
+        19,
+        17,
+        16,
+        16,
+        20,
+        17,
+        8,
+        19,
+        20,
+        20,
+        19,
+        19,
+        20,
+        18,
+        16,
+        10,
+        19,
+        20,
+        15,
+        19,
+        14,
+        19,
+        20,
+        17,
+        18,
+        19,
+        12,
+        19,
+        13
+      ],
+      "status_counts": {
+        "changed": 229,
+        "context_unchanged": 720,
+        "new_to_snapshot": 419
+      },
+      "review": "All emitted markdown batches opened and row/status totals cross-checked; reviewed exact identities, displayed prices/change fields and criteria-proof hashes as factual context. No probability or rejection inferred."
+    }
+  },
+  "factual_coverage": {
+    "primary": {
+      "endpoint": "Gamma active markets offset pagination",
+      "fetched": 1000,
+      "filter": {
+        "liquidity_min_usd": 20000,
+        "volume24h_min_usd": 500,
+        "spread_max": 0.05,
+        "horizon_days": 370
+      },
+      "eligible_before_top": 638,
+      "selected": 80,
+      "omitted_after_top": 558,
+      "stop_reason": "page_cap 10/10; incomplete; page cap 1000 rows",
+      "filter_accounting_complete": true
+    },
+    "thin_tail": {
+      "endpoint": "Gamma events pagination",
+      "fetched_market_rows": 39086,
+      "response_rows": 2000,
+      "duplicate_rows": 128,
+      "selected": 3000,
+      "eligible_before_top": 3119,
+      "omitted_after_top": 119,
+      "stop_reason": "page_cap 20/20; incomplete",
+      "filter_accounting_complete": true,
+      "filters_rejected": {
+        "not_tradable": 6149,
+        "win_assumed_hurdle": 3052,
+        "liquidity": 14828,
+        "volume": 10210,
+        "past_deadline": 654,
+        "spread": 709,
+        "horizon": 330,
+        "missing_deadline": 35
+      }
+    },
+    "sports": {
+      "window_hours": 36,
+      "thresholds": {
+        "volume24h_min_usd": 30000,
+        "liquidity_min_usd": 5000
+      },
+      "fetched_passing_markets": 67,
+      "consensus_attempts": 3,
+      "consensus_verified": 0,
+      "no_consensus_cases": [
+        "Barcelona: no bookmaker odds with verifiable timestamp",
+        "Napoli: 1x2 opponent absent from Gamma question/rules",
+        "PSG vs Barcelona O/U 4.5: bookmaker outcomes did not match ordered Gamma outcomes"
+      ],
+      "in_play_skipped": 3
+    },
+    "macro": {
+      "window_days": 60,
+      "markets_passing_volume_threshold": 7,
+      "rows_emitted": 7,
+      "consensus": "disabled as requested"
+    },
+    "event_monotonicity": {
+      "events_to_inspect": 1452,
+      "events_inspected": 1153,
+      "violations_ge_1pp": 0,
+      "provisional_after_clob": 0,
+      "coverage": "incomplete, 15/15 pages succeeded, stopped max_pages cap"
+    },
+    "consistency": {
+      "artifact": {
+        "path": "logs/cron20261020T134616Z_discovery/polymarket_consistency_latest.json",
+        "bytes": 455816,
+        "sha256": "8d5ac135305b6dd2178246a8a0ccb12166277954e4afabf55af242bede069e90"
+      },
+      "report": {
+        "path": "logs/polymarket_consistency_20261020T140330Z.md",
+        "bytes": 6659,
+        "sha256": "293c15c6482b11edc1b3c7245e0932c26a92f67bfec818bea4b759febc944e22"
+      },
+      "endpoint": "https://gamma-api.polymarket.com/events/keyset",
+      "open_markets_scanned": 5003,
+      "retained_neg_risk_markets": 2956,
+      "pages": 33,
+      "events_fetched": 660,
+      "stop_reason": "market_cap",
+      "complete": false,
+      "midpoint_gross_sum_gt_1": 178,
+      "midpoint_gross_sum_lt_1": 95,
+      "live_groups_requested": 20,
+      "live_groups_validated": 5,
+      "live_groups_skipped": 15,
+      "live_groups_unquoted": 158,
+      "quote_failed": 15,
+      "validated_positive_depth": 0,
+      "actionable_candidates": 0,
+      "unknown_case_examples": [
+        {
+          "event_id": "1215835",
+          "title": "Lowest temperature in Istanbul on October 21?",
+          "midpoint_yes_sum": 2.989,
+          "raw_action": "buy_all_no",
+          "live_status": "quote_failed",
+          "actionable": false
+        },
+        {
+          "event_id": "unquoted/various",
+          "title": "Other structural groups selected by cap",
+          "live_status_counts": {
+            "unquoted_leg_cap": 149,
+            "unquoted_group_cap": 9
+          },
+          "actionable": false
+        }
+      ],
+      "coverage_gaps": [
+        "market_cap",
+        "invalid neg-risk events",
+        "158 structural groups unquoted",
+        "15 structural groups quote-failed"
+      ]
+    },
+    "favorite_fade": {
+      "fetched": 1000,
+      "rough_survivors_before_book_cap": 51,
+      "selected_for_book_walk": 40,
+      "valid_favorite_books": 40,
+      "valid_books_outside_profile": 13,
+      "rows_emitted": 27,
+      "walk_cap_omissions": 11,
+      "stop_reason": "market endpoint 10/10 page cap; incomplete"
+    }
+  },
+  "positive_and_unknown_cases": {
+    "validated_positive": [],
+    "unknown_or_unverified": [
+      {
+        "case": "Sports consensus top three",
+        "reason": "all three consensus attempts lack verifiable comparable external odds; absence is unknown, not negative."
+      },
+      {
+        "case": "Consistency scan provisional structural basket candidates",
+        "reason": "178 gross midpoint sum>1 structures, but 15 quotes failed, 158 remain unquoted, other groups skipped; no positive live-depth observations, no actionable case."
+      },
+      {
+        "case": "Event monotonicity scan",
+        "reason": "zero observed >=1pp violations in scanned 1,153 events; coverage incomplete at 15-page cap of 1,452 events."
+      },
+      {
+        "case": "Primary and thin-tail discoveries",
+        "reason": "Both are capped, volume/filter-limited slices; thresholds and omissions are explicit, neither represents the full market universe."
+      }
+    ]
+  },
+  "api_or_coverage_errors": {
+    "sports_consensus": "3 NO_CONSENSUS outcomes (reasons in factual_coverage.sports); not negative price evidence",
+    "event_monotonicity": "no HTTP/page failures; page-cap incomplete",
+    "consistency": [
+      "market_cap",
+      "invalid neg-risk events",
+      "158 structural groups unquoted",
+      "15 structural groups quote-failed"
+    ],
+    "primary": "no API errors reported; page cap",
+    "thin_tail": "no API errors reported; page cap",
+    "macro": "no API errors reported",
+    "favorite_fade": "no API error reported; page cap"
+  },
+  "artifacts": [
+    {
+      "path": "logs/cron20261020T134616Z_discovery/consistency.meta.json",
+      "bytes": 906,
+      "sha256": "5489e39c703220e25c4a11565f1d0d05f85c16acd062781685a7ada8a90b8769"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/consistency.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/consistency.stdout.txt",
+      "bytes": 1252,
+      "sha256": "c5d8f7dfa86f65e1f1e2275c132bc75557e39c6911c6a466e0f05e24e8288cfa"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_primary.meta.json",
+      "bytes": 774,
+      "sha256": "68be92f166732e19d331a5240cb2757cc8da1c9b1b5600d5388539226031bbaa"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_primary.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_primary.stdout.txt",
+      "bytes": 16983,
+      "sha256": "65630cdfc4ec07f0c88fe014a810dcdd53697a1b18ea9dff2c7e700034935f37"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_thin_tail.meta.json",
+      "bytes": 783,
+      "sha256": "ca63814d3e91173d6ce32f445104b7e4aa269337151c15091f58ef1f38c458d8"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_thin_tail.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/context_thin_tail.stdout.txt",
+      "bytes": 541485,
+      "sha256": "930bd30aecf998d08c2fe91166cffb4080c41012dd7c591b90f0b3ec847ceb1c"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/event_monotonicity.meta.json",
+      "bytes": 687,
+      "sha256": "82786a9a95ce70707968b767bba2695be80e778a826038298b0472b76625e4fd"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/event_monotonicity.stderr.txt",
+      "bytes": 178,
+      "sha256": "cdd311c2e022ede7bdaf2877b23e85c0c2ce35b01eafa2095ca8d028c7eb73f5"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/event_monotonicity.stdout.txt",
+      "bytes": 249,
+      "sha256": "8a6123bdf1c0c0a01f9a2a854ddcea2a42a51b967b36bd5727559f965bd2cf08"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/favorite_fade.meta.json",
+      "bytes": 669,
+      "sha256": "0535983f1b0d88522d7a0e5a8e48369eecd4ecccff193dbed596a3812808c65b"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/favorite_fade.stderr.txt",
+      "bytes": 568,
+      "sha256": "2f65a7b0d5bc1797a110c86ace93110cb48077cefa4e1fd1ef9c1fcef9982baa"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/favorite_fade.stdout.txt",
+      "bytes": 3072,
+      "sha256": "dbce7374358ad8c21cb74184efeef291734b799adeb4674be5bbcd5b0971781b"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/macro.meta.json",
+      "bytes": 685,
+      "sha256": "cd4c4ff7ade66cf14a42d5e4e6888a3dbd8f6d8bd3181e3e2f92c78770c694f8"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/macro.stderr.txt",
+      "bytes": 106,
+      "sha256": "2d7cf4c780c9c2bb2cd2684faa47461c929532bc6973476a242059363233182d"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/macro.stdout.txt",
+      "bytes": 680,
+      "sha256": "3f521bffd0a4cf8690dfa0d92ce25665b74bdf380c6b21b3495a3b24f11083f7"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/polymarket_consistency_latest.json",
+      "bytes": 455816,
+      "sha256": "8d5ac135305b6dd2178246a8a0ccb12166277954e4afabf55af242bede069e90"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/primary.meta.json",
+      "bytes": 647,
+      "sha256": "ebacc3eaea97495c33dc120f27210796b23b6d926c45f47a052b3f88cdc18f28"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/primary.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/primary.stdout.txt",
+      "bytes": 6338,
+      "sha256": "eb2167e93379eb9d60af877d0e32c69ffd0ff0e5f5867b823b02f6f8eea4e829"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/sports.meta.json",
+      "bytes": 728,
+      "sha256": "177364a1c26172ac7de31f8bf67a4f482831f7bb853663e5cfa36b7e01b51bad"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/sports.stderr.txt",
+      "bytes": 579,
+      "sha256": "71c24b70c302a4acaf0985d6a840877b4077b177c37dc342927a79b0f5493ec2"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/sports.stdout.txt",
+      "bytes": 2508,
+      "sha256": "12564d7ba8b2ca15a1126c1fe7f5d19ad7ec73e1138dc6a47fad67ea2dea18c5"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/thin_tail.meta.json",
+      "bytes": 818,
+      "sha256": "661ce32e9aa9392a94755fb4224bfd302cfe46f7648f9c6b91c92b8b605067b5"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/thin_tail.stderr.txt",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "logs/cron20261020T134616Z_discovery/thin_tail.stdout.txt",
+      "bytes": 9497,
+      "sha256": "c61d8dd62a0f94b1bdfcf184c75e4cd4d80e8e5a63ed81d9f1b4dcafea5657b5"
+    }
+  ],
+  "scope_note": "Factual discovery and coverage only. No probabilities, candidate rejection/ranking, valuation, portfolio decision, trade, Telegram message, code change or commit."
+}

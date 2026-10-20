@@ -1,0 +1,149 @@
+{
+  "verified_utc": "2026-10-20T14:27:48.911270+00:00",
+  "source_account_quote_receipt_pairs_verified": 34,
+  "receipt_inventory": [
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/whitehouse.receipt.json",
+      "raw_sha256": "622dc8430dfd045f6128467caf33badf29cee0c28204662ac9f09610b37d8512"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/openrouter.receipt.json",
+      "raw_sha256": "4ad39101385d9e4b5731c8625acfc25b9850611421f924dab6d6f62a218112fc"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/mi_program.receipt.json",
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/hle.receipt.json",
+      "raw_sha256": "b57165cdecd2527ca8a28c3c945d2e1f172ad4f8e070be8631bdaa290ee11fcd"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/senate.receipt.json",
+      "raw_sha256": "663136d4d45afbf1bc91da9c05b0a8cfbdffa29e99fe65b70a074124d8cd3493"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_root_sources/google2026.receipt.json",
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_source_monitor/hle_configured_monitor.receipt.json",
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_account/orders.receipt.json",
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_account/positions_00.receipt.json",
+      "raw_sha256": "76f8409055aa9520ca1e4f3df9b3635c989b2be78a95390c3aa08c70054b585d"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_account/trades.receipt.json",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_account/all_sizes/positions_00.receipt.json",
+      "raw_sha256": "15c51f669c12a6ddc38a30d923eb58ab47afbf7b953226cae2170b687d8cae8d"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_news/cbs_el_sayed_rogers/cbs_el_sayed_rogers.receipt.json",
+      "raw_sha256": "d55c726821d8a156e7700781c71aa05a5688138000594e6ae0a858d4193cea45"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_news/late/democracy_now_alert/democracy_now_alert.receipt.json",
+      "raw_sha256": "a7bc220f0de6c20142c98d7642bcdf7e38b43b82ec0b1761efa67d6ea54b6148"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_news/late/scripps_alert/scripps_alert.receipt.json",
+      "raw_sha256": "d9cddacf26621aecd1c679a0f2f0c3e190f47947e7deead8eefa53d499f1691d"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/over58.receipt.json",
+      "raw_sha256": "1638e2977031e41f0a92c6383c72ea51ecf423dab8884eaa48cdff938bf469aa"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/trumpdust.receipt.json",
+      "raw_sha256": "0b45d6d6effc1b655933d61b40d4c4f7ae8a42c3ed39fa7501a74c9ab4a348a7"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/over50.receipt.json",
+      "raw_sha256": "cadbc393026ec3b849633e97e661d3dd2f7091f364b70dca97525dfc9c9c9035"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0412_gamma.receipt.json",
+      "raw_sha256": "0b5da2148339cd485d76628535e18267d1fbbd344e97eb3d6c3e439f26adc084"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0123_gamma.receipt.json",
+      "raw_sha256": "7ad2000dfc5665e7aa5fd49fcce8b9423b10e9641676acc2c508772af96ec9ab"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0112_gamma.receipt.json",
+      "raw_sha256": "8703f70d7f91d3b0122b7acd106909b7e661dc946b855777a5b08792b51e8578"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0032_fee.receipt.json",
+      "raw_sha256": "6901fe1cac8e029652aebf19bee52abee1502fdfc114f7b0888ec6236656b7e4"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0412_fee.receipt.json",
+      "raw_sha256": "789171a9c429fd5ccedb79f41a87ec6838ffdc1aaf8939e93fe83c5bdd60b1ac"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0032_gamma.receipt.json",
+      "raw_sha256": "3f4368ca65d386a5cc10cfe2b154bd8499345b41a816bdc32c7fd804a3ab5bcc"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0210_gamma.receipt.json",
+      "raw_sha256": "e65dc2d280716f232c4f4b373f56555562b77480634353a394dfb6e5cad4c919"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/1838_fee.receipt.json",
+      "raw_sha256": "784a7f01ea9076f0562938b0d64fe817562dc8f9be591be53d9f3d8d00f66cab"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/1838_gamma.receipt.json",
+      "raw_sha256": "a36dafaae4daa2b8f2a82a2fd05fc752d4e84c1bc585ab435da8705b7dd1280b"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0409_fee.receipt.json",
+      "raw_sha256": "26780199dd3b88e52c1b0c98d4ac523ce1c87a793611bf55ee209a7a223f37f9"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0112_fee.receipt.json",
+      "raw_sha256": "091ab15ff5030e21e94e12695c544583b912a8e12e4bd19d69d3c6bd6f6bac8d"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/books_batch_01.receipt.json",
+      "raw_sha256": "0e874ed7644e88fa1f041c3d5afe12635efa6ed95bd6d193850fef50b799dfb6"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0409_gamma.receipt.json",
+      "raw_sha256": "3d87966dbc152c995c66d876954c946014ccc0d8c1fe09f7840401cd63ab664d"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0210_fee.receipt.json",
+      "raw_sha256": "c9a5369208a2f3520dbcf52a5f1bb90cfe31f6986d381b7ecfaae9f730cffe8a"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_held_bid_quotes/public/0123_fee.receipt.json",
+      "raw_sha256": "650063f10934571110d2455ef9c52ef7ebc4ea2d900e0fae16acb300fc15f48e"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_late_root/scripps_candidate.receipt.json",
+      "raw_sha256": "ad66ebf0226b661eaa4bf22a8a437626186677cb5ac9adc3161c7b9356f4aeb7"
+    },
+    {
+      "receipt": "logs/cron20261020T134616Z_late_root/democracynow_candidate.receipt.json",
+      "raw_sha256": "7485ca3cc51eadabfb4772b93d652c25c252a1693c2dd10316f861f3cae611f9"
+    }
+  ],
+  "seven_held_and_bid_cases_exactGamma_tokens_criteria_verified": true,
+  "fourteen_books_bound_to_raw_batch": true,
+  "Clarity_current_identical_rules_conditional_payoffs_verified": true,
+  "account_all_sizes_reconciliation": "data/deep_review_20261017/work/tick134616_account_allsize_reconciliation.json",
+  "news_binding_limit": "6c/e1fa haveidenticaltitleandpublisher/directCBScanonical, GoogleopaqueRSSdestinationnotfollowed. Treataslikelysamestorylineage, notprovedbyte-identicalredirectortwoindependentmeasurements. Originalcollectorclaimretained; rootusesboundedcorrespondence.",
+  "source_limits": "403/404andcachedclocksnotnegativeevidence. Hashvalidationnotauthwireproof/calibration/executionapproval.",
+  "late_source_limits": "2consentresponses/2unverifiedcandidateURL404; no exactlatepublisherbody. Sourcegapsretained, rootdecisiondoesnotinferabsence."
+}

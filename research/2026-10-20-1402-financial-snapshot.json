@@ -1,0 +1,29 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261020T134616Z",
+  "producer": "scripts/bankroll.py",
+  "started_utc": "2026-10-20T14:02:12.591199+00:00",
+  "completed_utc": "2026-10-20T14:02:30.819406+00:00",
+  "producer_stdout_sha256": "84f95cd7b7fd9e6a4a72189e669896b9f11294a261fa3d2b299751f010690224",
+  "canonical_total_including_funded_gas_usd": "194.83",
+  "same_producer_funded_gas_usd": "5.89",
+  "same_producer_PM_mid_usd": "34.99",
+  "same_producer_PM_fee_net_depth_usd": "27.73",
+  "derived_trading_mid_usd": "188.94",
+  "derived_trading_fee_net_depth_usd": "181.68",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 6.87,
+  "reported_accounting_residual_usd": "19.72",
+  "previous_1219_comparison": {
+    "canonical_total_change_usd": "0.03",
+    "trading_mid_change_usd": "-0.04",
+    "trading_depth_change_usd": "-1.56"
+  },
+  "limits": [
+    "TOTAL comes from canonical producer, never hand-assembled aggregate. Gas/trading separation and chart depth are permitted derived figures from this same producer.",
+    "Rounded sequential marks and depth are not synchronized NAV, freshness-verified liquidation quotes or guaranteed proceeds. Bid liquidity changed; this is not a realized trading loss.",
+    "Reported19.72 accounting residual is not independently audited cash profit; historical basis/fees/flows and VM/API costs remain unreconciled, VM/APIexcluded.",
+    "Do not substitute separately observed14:01 positions28.92depth or14:08heldquotes into this producer.",
+    "No new financial trade/transfer/redemption or externalflow this run."
+  ]
+}

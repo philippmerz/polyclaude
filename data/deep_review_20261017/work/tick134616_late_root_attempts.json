@@ -1,0 +1,30 @@
+{
+  "observed_utc": "2026-10-20T14:26:21.279104+00:00",
+  "attempts": {
+    "scripps_candidate": {
+      "attempted_url": "https://www.scrippsnews.com/politics/abdul-el-sayed-emphasizes-muslim-faith-after-trump-calls-him-a-jihadist",
+      "status": 404,
+      "received_utc": "2026-10-20T14:26:20.370200Z",
+      "receipt": "logs/cron20261020T134616Z_late_root/scripps_candidate.receipt.json",
+      "raw_sha256": "ad66ebf0226b661eaa4bf22a8a437626186677cb5ac9adc3161c7b9356f4aeb7",
+      "title": "Page Not Found",
+      "main_text_excerpt": "Page Not Found Page Not Found We are sorry the page you are looking for cannot be found. Back to home Watch Scripps News on your favorite app or smart TV.",
+      "publication": {
+        "og:title": "Page Not Found"
+      },
+      "canonical": "<link href=\"/error-page-not-found\" rel=\"canonical\"/>"
+    },
+    "democracynow_candidate": {
+      "attempted_url": "https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_partisan_post_targeting_michigan_senate_candidate_el_sayed",
+      "status": 404,
+      "received_utc": "2026-10-20T14:26:21.264182Z",
+      "receipt": "logs/cron20261020T134616Z_late_root/democracynow_candidate.receipt.json",
+      "raw_sha256": "7485ca3cc51eadabfb4772b93d652c25c252a1693c2dd10316f861f3cae611f9",
+      "title": "404 Error",
+      "main_text_excerpt": "404 Error The page you were looking for doesn't exist. You may have mistyped the address or the page may have moved. You can click here to return to the home page.",
+      "publication": {},
+      "canonical": "None"
+    }
+  },
+  "limits": "These URLs were likely publisher paths, not previously proved canonical; failedcandidateURLdoesnotprovearticleabsence."
+}

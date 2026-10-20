@@ -1,0 +1,27 @@
+{
+  "verified_utc": "2026-10-20T14:14:26.697264+00:00",
+  "discovery_artifact_hashes": 28,
+  "ops_stream_hashes": 18,
+  "offline_batches_replayed_exactly": {
+    "primary": {
+      "batches": 2,
+      "markets": 30,
+      "exact_replayed_markdown_matches": true,
+      "current_snapshot": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261020T140149887028Z_primary.json",
+      "prior_snapshot": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261020T121846990455Z_primary.json",
+      "execution_ready": false
+    },
+    "thin_tail": {
+      "batches": 79,
+      "markets": 1368,
+      "exact_replayed_markdown_matches": true,
+      "current_snapshot": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261020T140155171123Z_thin_tail.json",
+      "prior_snapshot": "/home/polyclaude/polyclaude/data/snapshots/shortlist_20261020T121852828438Z_thin_tail.json",
+      "execution_ready": false
+    }
+  },
+  "all_81_batches_exact_source_replayed": true,
+  "all_1398_rows_source_bound": true,
+  "no_network_or_model_for_verification": true,
+  "limits": "Coverage/fingerprint checks are not valuations, calibrated probabilities, event equivalence or trade certification. Complete rawscanneroutputs read by bounded factualreviewer; root keepscaps/unknowns, notuniverse-zero."
+}

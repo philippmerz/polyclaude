@@ -1,0 +1,41 @@
+{
+  "read_utc": "2026-10-20T14:15:58.010793+00:00",
+  "after": "2026-10-20T13:24:43Z",
+  "scope": "One bounded closeout read after requestedalerts/relateditems",
+  "alerts": [
+    {
+      "alert_id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+      "ts": "2026-10-20T14:02:29Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "CBS News Correspondent Apologizes for Partisan Post Targeting Michigan Senate Candidate El-Sayed - Democracy Now!",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxQZUFleWRZNFkyZEh0ZXVaaTlRcnFlR1ZPNVh6UGY0enZVbl9FU29mRU9Xek5tb2tBTjEwSDZDYnZ0UHl1NEhQWWNRZG03SUVoTlVNODJZTE5XVWF1dU9MUmc3V2hES21kRzlPek50WlFGRE9aYjkzVWFmR3k3MVE2TWJRTkFyVDNMaWRvUVZrM0NVM01Ub3pCeFNzZ1dhZG9SSDg2bHhZSldDb2laV2ctVjJsblNJTWEzeTlqODRiZXhSRkQza0RSNFZGOGFrZWExelVwdTFVNHpZZndKYVBGQVE2a05wY2RnNXJiTHcyZw?oc=5",
+      "agent_reason": "Media apology over a partisan post is commentary/noise and does not materially change the Michigan Senate race thesis.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "row_sha256_without_newline": "7f44ca87dd8467a17dc6b06e3639e3c5cffa531b6699a2de477b90d3bc3ac8c7"
+    },
+    {
+      "alert_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+      "ts": "2026-10-20T14:13:36Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Abdul El-Sayed emphasizes Muslim faith after Trump calls him a ‘jihadist’ - Scripps News",
+      "link": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPOVhlRjZyMEkzZ3R6cm9tVGRPdWpUTHFaZVhrb3JYeHJzRnZ1a0lxWVBvRVFhZldaeC1aSGdlQk5qRXF5TG5OUGZhMUJybklDVlZNZmpVejdILTh5Z2JpX3oyR1NQYjdnM0FnVEJ5YTVybWlaRFBlQXJOeXJhclNyWXE2S19pVU53UkxKMmxPRlBvdllsejVNZ3lyYTAzMzNmUVN1dkIyTHJueVZ3dmlaT2lnQ0NVWmtWbGF6TnFHWQ?oc=5",
+      "agent_reason": "Named Michigan Senate candidate Abdul El-Sayed responds to a presidential attack, creating potential campaign/electability implications.",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Public controversy around the Democratic candidate may affect Michigan Senate electability and pressure the No-Dem thesis."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "row_sha256_without_newline": "e618f73e48131a1a4571360784f871e3ea2f1fe83dde395a7edb2b4311c04e04"
+    }
+  ]
+}

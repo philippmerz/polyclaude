@@ -1,0 +1,13 @@
+{
+  "verified_utc": "2026-10-20T14:13:09.131146+00:00",
+  "record": "research/2026-10-20-1402-financial-snapshot.json",
+  "rows": 238,
+  "prior237rows_byteprefix_preserved": true,
+  "contributions_csv_unchanged": true,
+  "same_producer_only": true,
+  "trading_depth_usd": "181.68",
+  "return_pct": 6.87,
+  "chart_test_command": "node --test tests/performance_chart.test.mjs",
+  "chart_tests_passed": 10,
+  "chart_tests_failed": 0
+}

@@ -1,0 +1,194 @@
+{
+  "checked_utc": "2026-10-20T14:02:15.658358+00:00",
+  "scope": "bounded routine operations; no trade, Telegram, commit, or judgment action",
+  "commands": {
+    "polyclaude_status": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:01:43.669083+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/polyclaude_status.stdout.txt",
+          "sha256": "69b74b00db0baabd68f5ad4a7d4f18f62e80530b4dd706286b6c78efb88fde29",
+          "bytes": 5613
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/polyclaude_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "wallet_status": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:01:48.104176+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/wallet_status.stdout.txt",
+          "sha256": "b099f81131b1af6244d017f414f2d8036deb4957f0f92e10f50b4bf733b4499f",
+          "bytes": 274
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/wallet_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "crypto_status": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:01:55.463477+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/crypto_status.stdout.txt",
+          "sha256": "5bc44891db899da1871d133cbef6fbcfbfefe557c084f0227ca363156ede57e0",
+          "bytes": 309
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/crypto_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "ostium_status": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:01:58.505392+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/ostium_status.stdout.txt",
+          "sha256": "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2",
+          "bytes": 127
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/ostium_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "ostium_state_diff": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:02:01.362563+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/ostium_state_diff.stdout.txt",
+          "sha256": "fba5ef73181c8e4711004e02b44b8c9337a232d84d38f6a2d9742982d243eb39",
+          "bytes": 60
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/ostium_state_diff.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "crux_coverage_check": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:02:01.767487+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/crux_coverage_check.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/crux_coverage_check.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "position_state_audit": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:02:03.054736+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/position_state_audit.stdout.txt",
+          "sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+          "bytes": 166
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/position_state_audit.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "watchlist_monitor": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:02:03.350037+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/watchlist_monitor.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/watchlist_monitor.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    },
+    "decisions_pending": {
+      "returncode": 0,
+      "finished_utc": "2026-10-20T14:02:03.395233+00:00",
+      "outputs": {
+        "stdout": {
+          "private_log": "logs/cron20261020T134616Z_ops/decisions_pending.stdout.txt",
+          "sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+          "bytes": 23
+        },
+        "stderr": {
+          "private_log": "logs/cron20261020T134616Z_ops/decisions_pending.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "bytes": 0
+        }
+      }
+    }
+  },
+  "observations": {
+    "full_status": "return 0; HLE resolving inventory UPDATING; 4 hurdle clear/0 flagged; UMA 0 alerts; no watchlist hits; recent news-alert rows present including El-Sayed endorsement warning; Kelly output presented Kimi YES and Michigan Senate NO scale-in recommendations for independent review",
+    "wallet_crypto_ostium": "all return 0; read results preserved in private logs",
+    "ostium_state_diff": "0 open trades, prior 0, no change",
+    "crux_coverage": "return 0, no uncovered held rows printed",
+    "position_state_audit": "return 0, refreshed claim snapshot (7 indexed +1 deindexed row), pruned 0 expired holds, CLEAN",
+    "watchlist": "return 0, no hit output",
+    "decisions": "return 0, no overdue decisions",
+    "daemons": "four exact absolute-path singleton processes up; none started before script mtime",
+    "disk_available_mib": 194.3,
+    "calendar": "weekly Oct23 and monthly Nov12 reviews not due; retired off-chain stock/brokerage workflow not run"
+  },
+  "daemon_check": [
+    {
+      "name": "news_watcher",
+      "pid": 148881,
+      "started_utc": "2026-10-19T05:28:37Z",
+      "script_mtime_epoch": 1792364324,
+      "stale": false
+    },
+    {
+      "name": "heartbeat_watch",
+      "pid": 450,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_epoch": 1790951499,
+      "stale": false
+    },
+    {
+      "name": "telegram_listener",
+      "pid": 451,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_epoch": 1789065297,
+      "stale": false
+    },
+    {
+      "name": "opportunity_watch",
+      "pid": 425,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_epoch": 1790676473,
+      "stale": false
+    }
+  ],
+  "disk_path": "/home/polyclaude/polyclaude",
+  "private_log_directory": "logs/cron20261020T134616Z_ops"
+}

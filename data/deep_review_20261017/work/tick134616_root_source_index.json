@@ -1,0 +1,185 @@
+{
+  "observed_utc": "2026-10-20T14:06:29.762541+00:00",
+  "capture_dir": "logs/cron20261020T134616Z_root_sources",
+  "sources": {
+    "hle": {
+      "status": 403,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "hle",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.920183Z",
+        "received_utc": "2026-10-20T14:06:29.557946Z",
+        "response_status": 403,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT",
+          "content-type": "text/plain; charset=utf-8",
+          "cache-control": "private, no-store, max-age=0"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://dashboard.safe.ai/api/models",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 59,
+        "raw_sha256": "b57165cdecd2527ca8a28c3c945d2e1f172ad4f8e070be8631bdaa290ee11fcd",
+        "gzip_sha256": "8edac4e12addd092d75bbebafe4e260e443da7a72c130e3d5c900fb5dce93c8b",
+        "body_path": "hle.body.json.gz"
+      }
+    },
+    "openrouter": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "openrouter",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.920858Z",
+        "received_utc": "2026-10-20T14:06:29.207147Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT",
+          "content-type": "application/json",
+          "age": "50",
+          "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 24691,
+        "raw_sha256": "4ad39101385d9e4b5731c8625acfc25b9850611421f924dab6d6f62a218112fc",
+        "gzip_sha256": "f1e0d38d1e7d712c58789cd5444e5cc03828b57f7a1f430c63460b6603d07851",
+        "body_path": "openrouter.body.json.gz"
+      }
+    },
+    "senate": {
+      "status": 403,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "senate",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.921358Z",
+        "received_utc": "2026-10-20T14:06:29.705427Z",
+        "response_status": 403,
+        "error_type": null,
+        "headers": {
+          "content-length": "489",
+          "content-type": "text/html",
+          "cache-control": "max-age=0, no-cache",
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 489,
+        "raw_sha256": "663136d4d45afbf1bc91da9c05b0a8cfbdffa29e99fe65b70a074124d8cd3493",
+        "gzip_sha256": "aae89442f41b614232e03f203084231c0b130acc976e1020c2ad84cd6c226b03",
+        "body_path": "senate.body.json.gz"
+      }
+    },
+    "google2026": {
+      "status": 404,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "google2026",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.922173Z",
+        "received_utc": "2026-10-20T14:06:29.460998Z",
+        "response_status": 404,
+        "error_type": null,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "max-age=300",
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://trends.withgoogle.com/year-in-search/2026/",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 58133,
+        "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+        "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+        "body_path": "google2026.body.json.gz"
+      }
+    },
+    "mi_program": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "mi_program",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.922692Z",
+        "received_utc": "2026-10-20T14:06:29.746835Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT",
+          "cache-control": "no-cache, max-age=600",
+          "last-modified": "Mon, 19 Oct 2026 20:58:43 GMT",
+          "content-type": "text/html; charset=UTF-8"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 160289,
+        "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+        "gzip_sha256": "c4a722def93f8ccf59d04225369e0128618736f293d82b6577c1a339331a9735",
+        "body_path": "mi_program.body.json.gz"
+      }
+    },
+    "whitehouse": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "whitehouse",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T14:06:28.923193Z",
+        "received_utc": "2026-10-20T14:06:29.339420Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 14:06:29 GMT",
+          "content-type": "application/rss+xml; charset=UTF-8",
+          "last-modified": "Tue, 20 Oct 2026 02:02:45 GMT",
+          "etag": "W/\"761f75549b637830eadf1028501799df\"",
+          "cache-control": "max-age=300, must-revalidate"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://www.whitehouse.gov/news/feed/",
+          "operation": "Held resolving source or known catalyst check"
+        },
+        "raw_bytes": 579316,
+        "raw_sha256": "622dc8430dfd045f6128467caf33badf29cee0c28204662ac9f09610b37d8512",
+        "gzip_sha256": "aa07287f753ec3c198497b0c96abbce16010c37f9a37dbd8d4094e0057469467",
+        "body_path": "whitehouse.body.json.gz"
+      }
+    }
+  }
+}

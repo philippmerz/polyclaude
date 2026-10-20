@@ -1,0 +1,16 @@
+{
+  "schema": "polyclaude.handoff_gate_verification.v1",
+  "verified_utc": "2026-10-20T14:35:09.997207+00:00",
+  "handoff_path": "notes/current_context.md",
+  "handoff_sha256": "0660a272671989ab27fa1584bb887ce2abeaa686aefaa4c1ded45bee04823a86",
+  "handoff_bytes": 7846,
+  "packet_bytes": 11487,
+  "status": "within_declared_validity",
+  "source_mismatches": [],
+  "source_hashes_verified": 11,
+  "current_state_loaded": false,
+  "execution_ready": false,
+  "new_buy_denied": true,
+  "gate_message": "entry review gate: 393/600 completed valuations; new BUYs blocked",
+  "scope": "Offline orientation and fail-closed gate check; not financial revalidation or entry authorization."
+}

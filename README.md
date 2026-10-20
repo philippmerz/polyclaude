@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 237 recorded observations from Apr-25
+The local performance CSV now has 238 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,21 +82,19 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 12:19–12:20 UTC
+## Last audited snapshot — October20 14:02 UTC
 
-**Indicative trading net depth $183.24 versus $170 contributed (+7.79%); canonical bankroll $194.80 includes $5.82 separate gas.** Trading midpoint $188.98; same-producer PM $35.04 midpoint/$29.30 fee-net depth. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV237 preserves236 earlier rows/flows. [Financial record](research/2026-10-20-1219-financial-snapshot.json).
+**Indicative trading depth $181.68 versus $170 contributed (+6.87%); trading midpoint $188.94.** Canonical bankroll $194.83 includes $5.89 separately funded gas. Same-producer Polymarket midpoint/depth: $34.99/$27.73. Rounded sequential estimates are not synchronized NAV or proceeds; the $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV238 preserves the prior237 rows and flows. [Financial record](research/2026-10-20-1402-financial-snapshot.json).
 
-Authenticated13:25:54 reconciliation: all nine indexed identity/quantity/totalBought/redeemability tuples and127 trades unchanged; original three BUYs LIVE/zero matched/$6.50. The bankroll mark above remains12:19–12:20; no new money observation. New BUYs remain paused393/600 plus comparative selection. [Orders](notes/resting_orders.md) · [Account proof](data/deep_review_20261017/work/goal0025_safety_account_verified_1333.json).
+Authenticated14:03 inventory: three original BUY orders LIVE/zero matched, $6.50 committed;127 trades unchanged. Explicit zero size-threshold14:05 restores the0.33Trump dust row omitted by the default query and confirms all nine identity/quantity/totalBought/redeemability tuples unchanged. Exact14:08 Gamma rules/tokens match for the four ordinary holdings and three bids. [Orders](notes/resting_orders.md) · [All-size reconciliation](data/deep_review_20261017/work/tick134616_account_allsize_reconciliation.json).
 
-HLE12:21:59 body unchanged/66rows/KimiK3HLE41.08. OpenRouter completedOct12 total unchanged; currentOct19 partial37.332159T is not settlement and target weeks remain absent. Senate direct200 now works but its displayed list endsSep30; Google2026 route404 remains a coverage gap. [Current sources](data/deep_review_20261017/work/tick121327_primary_source_review.json).
+HLE14:08 configured monitor returned the same66-row body/KimiK3 score41.08; the July comparison is not a new score event. OpenRouter's current partial week grew to39.870563T, completed weeks unchanged and held target weeks absent; backend cache time is not a usage cutoff. Senate direct403 and Google2026 route404 remain coverage gaps. Clarity's two current rule bodies are identical, with29+29 shares: conditional payout29/58, venue/oracle failure0. [Sources](data/deep_review_20261017/work/tick134616_primary_source_review.json).
 
-Both requested Michigan alerts were reviewed: the official Oct18 ad is corroborated, while exact Forward/CommonDreams article bodies remain unverified. The related Free Press debate-winner question is expressly unscientific; original WOOD poll details remain unknown. No new representative vote-intention estimate was adopted. Retain MI5NO/noadd and all other small holdings/whole Clarity; no numerical prior change or trade. Official program today16UTC; WXYZ debateOct21 23UTC. [Completed check](research/2026-10-20-121327-checkin.json) · [Primary judgment](data/deep_review_20261017/work/tick121327_primary_portfolio_judgment.json).
+Michigan alerts and related stories reviewed: retain5NO/no add. CBS provides a campaign summary, not a voter-response measurement or full-video review; the doctor list and late Scripps/DemocracyNow bodies remain unverified. No numerical prior or financial action changed. MI program today16UTC/debateOct21 23UTC; new BUYs paused393/600 plus comparative selection. [Completed check](research/2026-10-20-134616-checkin.json) · [Primary review](data/deep_review_20261017/work/tick134616_primary_portfolio_judgment.json).
 
-Discovery remains incomplete: primary80/640eligible and thin3000/3153, both page-capped. All71offline batches/1234emitted rows independently source-joined; these are structural checks, not valuations. Consistency20/197groups attempted,10received books, no provisional positive in that scope; sports3attempts/no verified consensus. No exchange-wide absence finding. [Small index](data/deep_review_20261017/work/tick121327_discovery_index.json).
+All seven scans ran once, with capped/incomplete coverage. Primary80/638 eligible and thin-tail3000/3119; all81 offline batches/1398 emitted rows independently reproduced from their saved sources. Five structural groups validated,15 quote failures and158 unquoted groups remain; no actionable result was verified in that slice. This does not establish exchange-wide absence. [Coverage index](data/deep_review_20261017/work/tick134616_discovery_index.json).
 
-Four current daemon singletons; UMA0alerts, hurdle4clear/0flagged, state audit CLEAN, no winning redeemable. Storage12:20:~256MiB free after the completed lossless archive; current/latest outputs remain usable. [Operations](data/deep_review_20261017/work/tick121327_operations_review.json) · [Archive/restore proof](data/deep_review_20261017/work/storage_safety_120928/verified.json).
-
-Late Michigan endorsement/heckler stories were checked against the held5NO and original sources. Retain/no add; exact Detroit News body/list remains unavailable, newly verified FEC spending predates the poll baseline, and voter impact is uncertain. Fresh fee-net MI exit1.40882 remains below selected terminal1.70; broad-low1.00 favors sale. [Primary decision](data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json).
+Four current daemon singletons; UMA0 alerts, hurdle4 clear/0 flagged, state audit CLEAN, no winning redeemable. No daemon code or execution path changed. Disk remains above128MiB critical but below512MiB warning; no additional cleanup. [Operations](data/deep_review_20261017/work/tick134616_ops_facts.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

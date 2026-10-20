@@ -1,0 +1,71 @@
+{
+  "observed_utc": "2026-10-20T14:10:29.569124+00:00",
+  "cases": {
+    "over50": {
+      "received_utc": "2026-10-20T14:10:29.549810Z",
+      "raw_sha256": "cadbc393026ec3b849633e97e661d3dd2f7091f364b70dca97525dfc9c9c9035",
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/over50.receipt.json",
+      "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "ordered_outcomes": [
+        "Yes",
+        "No"
+      ],
+      "ordered_tokens": [
+        "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+        "66225549028370775174805670288026406587364840830462832284615254168964916630541"
+      ],
+      "held_outcome": "Yes",
+      "held_size": 29,
+      "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage \u2014 including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version \u2014 will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+      "description_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "endDate": "2027-01-02T04:59:00Z"
+    },
+    "over58": {
+      "received_utc": "2026-10-20T14:10:29.547876Z",
+      "raw_sha256": "1638e2977031e41f0a92c6383c72ea51ecf423dab8884eaa48cdff938bf469aa",
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/over58.receipt.json",
+      "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "ordered_outcomes": [
+        "Yes",
+        "No"
+      ],
+      "ordered_tokens": [
+        "90478389068106043826833580661092508858615079475879584220859211951733291944919",
+        "43566386855398527373115443041865408808190028685008561538141743908824051774750"
+      ],
+      "held_outcome": "No",
+      "held_size": 29,
+      "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage \u2014 including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version \u2014 will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+      "description_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "endDate": "2027-01-02T04:59:00Z"
+    },
+    "trumpdust": {
+      "received_utc": "2026-10-20T14:10:29.501443Z",
+      "raw_sha256": "0b45d6d6effc1b655933d61b40d4c4f7ae8a42c3ed39fa7501a74c9ab4a348a7",
+      "receipt": "logs/cron20261020T134616Z_pair_dust_identity/trumpdust.receipt.json",
+      "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "ordered_outcomes": [
+        "Yes",
+        "No"
+      ],
+      "ordered_tokens": [
+        "59252515735652674747158950210016502214756531287333895140318848923768750410355",
+        "2849827372590072151380088930233312280478318575453624773762283369907909283027"
+      ],
+      "held_outcome": "No",
+      "held_size": 0.33,
+      "description": "This market will resolve to \u201cYes\u201d if Donald Trump resigns or is removed as President or otherwise ceases to be the President of the United States for any period of time by December 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nAn announcement of Donald Trump's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the announced resignation/removal goes into effect.\n\nOnly permanent removal from office will qualify. Temporary removal (e.g. temporary invocation of the 25th Amendment under Section 3 or a Section 4 invocation not sustained by both Houses of Congress) or impeachment without removal will not count.\n\nA sustained invocation of the Twenty-Fifth Amendment, Section 4 (i.e., if both Houses of Congress, by two-thirds vote, uphold the Vice President and Cabinet\u2019s determination of presidential inability) will qualify for a \"Yes\" resolution. \n\nThe resolution source for this market will be a consensus of credible reporting.",
+      "description_sha256": "7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9",
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "endDate": "2027-01-01T04:59:00Z"
+    }
+  }
+}

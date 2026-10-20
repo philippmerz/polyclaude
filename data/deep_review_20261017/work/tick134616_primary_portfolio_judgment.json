@@ -1,0 +1,138 @@
+{
+  "schema": "polyclaude.primary_portfolio_judgment.v1",
+  "reviewed_utc": "2026-10-20T14:27:48.911683+00:00",
+  "status": "Completed primary review; retain original exposures/no add, no financial operation or numerical prior change.",
+  "author": "root",
+  "source_review": "data/deep_review_20261017/work/tick134616_primary_source_review.json",
+  "holds": [
+    {
+      "outcome": "Yes",
+      "shares": 10,
+      "pwin": 0.3402125,
+      "selected_pwin": 0.19021249999999998,
+      "best_bid": 0.11,
+      "fee_net_exit": 1.06084,
+      "central_terminal": 3.402125,
+      "selected_terminal": 1.9021249999999998,
+      "exit_plus_constant_cached_carry": 1.069120346346146,
+      "carry_days_sensitivity": 90,
+      "no_superior_selected_prefix": true,
+      "index": 412,
+      "broad_low_terminal": 0.8,
+      "judgment": "Retain/noadd after current source/late-news review; central/selected exceed exit-plus-carry, broadlow favorssale. No guaranteed recovery/price target."
+    },
+    {
+      "outcome": "No",
+      "shares": 5,
+      "pwin": 0.88,
+      "selected_pwin": 0.73,
+      "best_bid": 0.65,
+      "fee_net_exit": 3.2045,
+      "central_terminal": 4.4,
+      "selected_terminal": 3.65,
+      "exit_plus_constant_cached_carry": 3.2211534508733934,
+      "carry_days_sensitivity": 60,
+      "no_superior_selected_prefix": true,
+      "index": 112,
+      "broad_low_terminal": 1.0,
+      "judgment": "Retain/noadd after current source/late-news review; central/selected exceed exit-plus-carry, broadlow favorssale. No guaranteed recovery/price target."
+    },
+    {
+      "outcome": "No",
+      "shares": 5,
+      "pwin": 0.43999999999999995,
+      "selected_pwin": 0.33999999999999997,
+      "best_bid": 0.29,
+      "fee_net_exit": 1.40882,
+      "central_terminal": 2.1999999999999997,
+      "selected_terminal": 1.6999999999999997,
+      "exit_plus_constant_cached_carry": 1.4179777999345022,
+      "carry_days_sensitivity": 75,
+      "no_superior_selected_prefix": true,
+      "index": 1838,
+      "broad_low_terminal": 1.0,
+      "judgment": "Retain/noadd after current source/late-news review; central/selected exceed exit-plus-carry, broadlow favorssale. No guaranteed recovery/price target."
+    },
+    {
+      "outcome": "Yes",
+      "shares": 5,
+      "pwin": 0.6,
+      "selected_pwin": 0.39999999999999997,
+      "best_bid": 0.25,
+      "fee_net_exit": 1.20312,
+      "central_terminal": 3.0,
+      "selected_terminal": 1.9999999999999998,
+      "exit_plus_constant_cached_carry": 1.2125109074846114,
+      "carry_days_sensitivity": 90,
+      "no_superior_selected_prefix": true,
+      "index": 210,
+      "broad_low_terminal": 1.0,
+      "judgment": "Retain/noadd after current source/late-news review; central/selected exceed exit-plus-carry, broadlow favorssale. No guaranteed recovery/price target."
+    }
+  ],
+  "new_buy_gate": "393/600 fullvaluations+primarycomparativeselection; selectionnull. Kellymidpoint/rho output not permission.",
+  "joint_terminal_states": {
+    "AI": {
+      "witness": "KimiHLEnever55 AND OR qualifyingfourweektotalinside725–775",
+      "payouts": "Bothheldoutcomeslose, totaloriginalcost4.45; no hedgecredit."
+    },
+    "USpolitics": {
+      "witness": "MI Democraticwinner AND ME02/NY01 Democraticlosses AND CA06 Democraticwinner",
+      "payouts": "MI5NO plusfull3politicalbids canalllose; totaloriginalcost8.05. No independence guarantee."
+    },
+    "Clarity": {
+      "witness": "Currentidenticalrules:count<=50/>=59/noqualifyingvote/voiceconsent alltotal29;count51–58 total58;venue/inconsistentoracle can0.",
+      "whole_exit_usd": 20.95,
+      "conditional_floor": 29,
+      "oracle_or_venue_failure": 0,
+      "judgment": "Keep29+29 whole; selectedconditionalfloor exceeds exit-plusillustrativecarry, venue0wouldfavor sale. Source403 doesnotprove no vote; currentrules/positionsopen/noUMAproposal verified."
+    }
+  },
+  "existing_bids": {
+    "count": 3,
+    "LIVE_zero_matched": true,
+    "remaining_commitment": 6.5,
+    "priors_unchanged_selected": {
+      "ME02YES": 0.51,
+      "CA06NO": 0.05,
+      "NY01YES": 0.21
+    },
+    "decision": "Retainoriginalpilots; no newexactdistrictpoll/ballot/candidatestatus fact verified. Allfailunmeasured2xadversefillstress, not fill-certified. Cancel-firstifnewunassessedmaterialinput; reviewanyfillfresh."
+  },
+  "maker_sells": "Considered: no currentbestbid reachesselectedfair; ordinarymakersellsatfair mayfillafterchangedfair. No freshstaticoffer chosen without fill/catalystcase. Kimi hidden-info onlystrictlyabovefair withjump-riskpremium, Claritymuststaywhole.",
+  "cash_alternative": "CachedvariableAave3.2035% is investablefloor/sensitivityonly. Unwrapping/transfergasnotfree; smallpUSD operationalbufferfunds3commitments/futurecomparison, smallnear-termcarrydoesnotjustify churn. No transfer.",
+  "redemption": "Vettedwinningclassifier onexplicitallsize9rows gives0winning/2losing-uncertain;skipwriter/no gas/burn.",
+  "next": "MIprogram16UTC/debateOct21 23UTC; nextscheduled18UTC/earliermaterialevent. Finishdocumentation/publication thenendboundedrun; no goal lifecyclemutation, timer or idlefollow-up.",
+  "alert_decisions": [
+    {
+      "alert_id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+      "decision": "RetainMI5NO/noadd. Doctorendorsement couldsupportEl-Sayed/adverseNO, but exactarticle/list/date remainunverified; campaigndirectoryneitherconfirmsnordisproves700. Endorsementlistisnotrepresentativevote-choice sample. No supportednumericshift adopted; qualitativeeffectnotassumedzero."
+    },
+    {
+      "alert_id": "6c93232b2bfff79f3c4f581422e254e54904b455",
+      "related_id": "e1fa7e2a0beca81bbfcb4d164926821f3c959f2d",
+      "decision": "ActualCBSpage/VideoObjectsummaryread; title/publishercorrespondencetodirectCBSitem, exactGoogleRSSdestinationnotfollowed. Treataslikelyonecampaignstorylineage, nottwoindependentmeasurements. OutreachattemptdoesnotproveDemocraticdefections. IfsuccessfulitwouldsupportheldNO, unlikeagenericD-win-thesisimpactlabel. Fullvideo/transcriptnotreviewed; no polling/voter-response measurementverified."
+    },
+    {
+      "alert_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+      "decision": "MachineMATERIALfaith/Trumpattackheadline assessed withunverifiedoriginalbody. ExactRSSconsent andlikelypublisherURL404arenotarticleevidence. CouldoverlapOct18Prayer/priorattacklineage, butnoduplicate/newdate/zeroeffectclaim. Missingbody leaves material uncertainty; retain the small MI pilot/no add, with no evidenced numerical update adopted. No claimthatabsenceofpollaloneprovesirrelevance."
+    },
+    {
+      "alert_id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+      "decision": "Apology/mediabiasheadline originalbodyunverified afterconsent/candidateURL404. Politicalsaliencepossible, notnewverifiedballot/candidate/poll fact; no numericalprior ororderchange. No assumptionthatemptyclassifierimpactprovesirrelevance."
+    }
+  ],
+  "late_news_facts": "data/deep_review_20261017/work/tick134616_late_news_facts.json",
+  "other_held_headlines": "Griezmann/Messirecreation andElClasico camera stories13:24 are nottheGoogleGlobalAthlete resolvingmeasurement; no newrank probabilityadopted. No broadirrelevance/completeexternalcoverageclaim.",
+  "MI_sensitivity": "CentralNO44/selected34/broadlow20 remain; no duplicateOct20timeaging. Fresh5NOexit1.40882/75daycachedcarry1.41798 vsselected1.70/central2.20/broadlow1.00. DownwardselectedNOshift~5.64pp wouldreversecarrycomparison; broadlowfavorexit. Neitherthisthresholdnoroldpollprovescampaignstorieshavezeroeffect; followverifiedmaterialvoter/ballot/newsupdates.",
+  "financial_actions": {
+    "trade": false,
+    "cancel": false,
+    "transfer": false,
+    "redeem": false,
+    "prior_change": false,
+    "research_case_advance": false,
+    "telegram": false
+  },
+  "telegram_reason": "No adoptedprior/positionchange, fill, verifiedmaterialincident ornewexecution-readyfinding; no rawheadline/heartbeat message."
+}

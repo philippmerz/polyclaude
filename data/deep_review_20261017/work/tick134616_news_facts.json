@@ -1,0 +1,77 @@
+{
+  "schema": "polyclaude.held_market_public_facts.v1",
+  "captured_utc": "2026-10-20T14:05:00Z",
+  "scope": "Requested Michigan news alert bodies and prior indexed related/opposing evidence; facts only. No probabilities or portfolio action.",
+  "market_context": {
+    "review_index": 1838,
+    "market_id": "630805",
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "prior_judgment": "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json"
+  },
+  "alert_rows": [
+    {
+      "id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+      "row_sha256": "efea0eb911f4b90764137725b553e5cccc9778e56dd4f3554093fe5fb18ecf68",
+      "ts_utc": "2026-10-20T13:07:55Z",
+      "title": "700 doctors endorse Abdul El-Sayed as GOP attacks his credentials - The Detroit News",
+      "url": "https://news.google.com/rss/articles/CBMi-wFBVV95cUxOMWZ5LW9oczlKdVdndWVaRFlVdUliVk9EOGVqbEhOemkzWWxFU0pzNmx4a1ZXazRDZ21ndTVoVTRtLWtsU0ZjQmFJRWtHZ29za2J6VHhEb2ZOczZaYjhsN2tQbFJESUV2THZrZkhMUVRkcjZhbFZpaWhfWkZ0X2dSWUl0b3FTU3BaRHQyU0V0U0hTd2ZpbFBmZmd5U3Vpc0xadUpoSG1fZkp4Y245YXlFbHc5cVJjcGhPcnB6dFNvbjExYU1MZ2ZoTi03enJtX2Nub2tjaWd1RHlWMklzUkNnejFyVFlMWlhHdkZuS213Sk5BYzk2bkRNUDFZbw?oc=5",
+      "fact": "Prior exact redirect capture (logs/deep_review_20261020/held_mi_1330/detroit_news_alert_link.receipt.json) returned HTTP 200 but body was Google consent/sign-in, not Detroit News. Raw SHA-256 f80b7221c89e7e828d4634aa9f27dd330bb8907d40a7c27f1a9b83436fa6bb9c; retrieved 13:26:07Z. No article date/body, signer names, or 700-doctor list verified. Prior official campaign endorsements page says 130+ local/national leaders, without this list (HTTP 200, SHA-256 9b9cbfe900407e1491537bd1855c2ceecd86bc6e2f7b771409396b36c650283b). Search found no new official list route; Detroit News is blocked to the search provider. No repeat of consent redirect or bypass attempted."
+    },
+    {
+      "id": "6c93232b2bfff79f3c4f581422e254e54904b455",
+      "row_sha256": "880cda5f6bb4c20fe28c3ce4afffc5638770ee8e666eabb050a21c0f1ed2c8ee",
+      "ts_utc": "2026-10-20T13:24:34Z",
+      "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan - CBS News",
+      "alert_url": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPVUFja2MwakVoU2NoaXZqRDVNa1ZqZjFTdDE5WXJzdmtLcUxMa2NqT2FYbDFCdTA0VUt4UF9jb2RMMFctWlZBeGlDOC1mb1k1S1VaRlVWS3kzY3lub3RFTi1XOEwtZnR2cnl6SmVrTE5DbFJVb3Q2WFFNQlIxbkdra0xIU3hxUDdFYm5CRy1BTTQ?oc=5",
+      "joined_with_duplicate_alert": "e1fa7e2a0beca81bbfcb4d164926821f3c959f2d",
+      "finding": "Same title and direct CBS canonical URL as duplicate row; both map to the single CBS page below. Google RSS redirect was not followed."
+    },
+    {
+      "id": "e1fa7e2a0beca81bbfcb4d164926821f3c959f2d",
+      "row_sha256": "0c1a9368263531c3b054a834ab6fddc7ce4e73de739e0b9ac111c1d029a5d28c",
+      "ts_utc": "2026-10-20T13:24:19Z",
+      "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan",
+      "url": "https://www.cbsnews.com/video/el-sayed-rogers-prepare-to-debate-in-tight-michigan-race/",
+      "finding": "Direct URL is identical to 6c's CBS canonical page and was captured once."
+    }
+  ],
+  "cbs_page": {
+    "url": "https://www.cbsnews.com/video/el-sayed-rogers-prepare-to-debate-in-tight-michigan-race/",
+    "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan",
+    "published_or_event_time": "VideoObject uploadDate 2026-10-20T07:09:00-0400 (11:09:00Z); page displayDatePublished 2026-10-20 13:12:17 UTC. These source timestamps differ by about two hours.",
+    "retrieved_utc": "2026-10-20T14:02:49.933154Z",
+    "http_status": 200,
+    "last_modified": "Tue, 20 Oct 2026 13:59:20 GMT",
+    "cache_age_seconds": 210,
+    "receipt": "logs/cron20261020T134616Z_news/cbs_el_sayed_rogers/cbs_el_sayed_rogers.receipt.json",
+    "raw_sha256": "d55c726821d8a156e7700781c71aa05a5688138000594e6ae0a858d4193cea45",
+    "body_gzip_sha256": "3b35f4edfbaf182e6105f487401b788accf4fbcc1accc454e97bcbca9239ba23",
+    "summary": "CBS page description: Republican Mike Rogers and Democrat Abdul El-Sayed will debate again; Bridge Michigan senior political reporter Lauren Gibbons explains Rogers's campaign, and CBS's Michael George covers early voting. The player is six minutes. This is a page/video summary, not a transcript; no transcript or closed-caption text was present in the captured response. No poll result, sample, field dates, questionnaire, or voter-response measurement appears in the page summary. We did not watch/download the full video, so spoken anecdotes or further claims are unverified. The page establishes a scheduled debate/campaign segment, not an observed voter shift."
+  },
+  "prior_related_opposing_alerts_read": {
+    "source_indexes": [
+      "data/deep_review_20261017/work/held_mi_alert_facts_1328.json",
+      "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json",
+      "data/deep_review_20261017/work/tick121327_news_facts.json",
+      "data/deep_review_20261017/work/tick104103_closeout_mi_review_1127.json",
+      "data/deep_review_20261017/work/tick104103_news_facts.json",
+      "notes/news_alerts.jsonl (exact rows read by alert ID; row hashes recorded above for current alerts)"
+    ],
+    "facts": [
+      "JTA's exact Oct 20 article on El-Sayed's Israel stance reiterates earlier ABC/MSNOW/debate remarks; no poll or voter-response measurement, and related Forward exact body remains unavailable. It is one stance lineage, not independent measurements.",
+      "Official El-Sayed campaign page verifies the Oct 18 'Prayer' ad and transcript; it does not verify the exact Common Dreams article body/framing or electoral effect.",
+      "Guardian plus FEC primary form verify America Next's $250,000 Sep 29 payment to Breakthrough LLC for opposition canvassing/influencer marketing naming El-Sayed. No evidence the Flint heckler was paid or Rogers campaign involved; this predates the Oct 9–10 poll baseline.",
+      "The American Prospect Rogers/IronNet report is adverse reporting; court filing verifies a $557,883.35 secured claim as of the Nov 17, 2023 petition only, not a 2026 balance. No voter response measured.",
+      "Older indexed context also includes the reported $4.7M Republican-group investment, Rogers private-jet spending report, Jerusalem Post stance/accusation items, and Rogers campaign characterization. These are prior reports or messaging; none supplies a new voter-response sample in the cited facts."
+    ],
+    "review_basis": "These are reused from prior indexed body/fact units and receipts; no duplicate fetch. See tick104103_closeout_mi_review_1127.json and tick104103_news_facts.json for dates, body bindings, and limits."
+  },
+  "limits": [
+    "The Detroit News headline/list remains unverified; previous Google consent HTML is not article evidence.",
+    "CBS page summary is distinct from full video transcript and poll evidence; no sampling details or anecdotes were verified from the video.",
+    "Alert classifier impact language is hypothesis, not measurement. No new probability or holding judgment made."
+  ],
+  "no_probability": true,
+  "no_trade_or_ledger_action": true,
+  "no_telegram": true
+}

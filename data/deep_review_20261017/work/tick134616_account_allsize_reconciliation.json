@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-20T14:05:44.161943+00:00",
+  "initial_default_threshold_rows": 8,
+  "explicit_sizeThreshold_0_rows": 9,
+  "identity_quantity_totalBought_redeemability_equal_previous_allsize": true,
+  "Trump_dust_rows": [
+    {
+      "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+      "outcome": "No",
+      "size": 0.33,
+      "totalBought": 28.33,
+      "redeemable": false
+    }
+  ],
+  "winning_redeemable_count": 0,
+  "losing_or_uncertain_redeemable_count": 2,
+  "capture_directory": "logs/cron20261020T134616Z_account/all_sizes",
+  "judgment": "Defaultquery8 vs earlierallsize9 was a non-equivalent filter comparison. Explicitzero-threshold restoresTrump0.33; all9identity/quantity/totalBought/redeemabilitytuples compareequal. No evidenceoffill/transfer/disappearance; originaldefaultcapture preserved.",
+  "no_redeem_writer_when_zero": true
+}

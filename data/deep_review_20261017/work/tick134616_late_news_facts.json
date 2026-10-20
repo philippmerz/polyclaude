@@ -1,0 +1,53 @@
+{
+  "schema": "polyclaude.bounded_late_news_facts.v1",
+  "reviewed_utc": "2026-10-20T14:27:48.905824+00:00",
+  "alerts": [
+    {
+      "alert_id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+      "alert_ts": "2026-10-20T14:13:36Z",
+      "headline": "Abdul El-Sayed emphasizes Muslim faith after Trump calls him a ‘jihadist’ - Scripps News",
+      "exact_RSS_capture": "logs/cron20261020T134616Z_news/late/scripps_alert/scripps_alert.receipt.json",
+      "received_utc": "2026-10-20T14:16:57.025703Z",
+      "status": 200,
+      "raw_sha256": "d9cddacf26621aecd1c679a0f2f0c3e190f47947e7deead8eefa53d499f1691d",
+      "body_title": "Before you continue",
+      "scope": "Consent/sign-in body, not publisher article. No exactpublication/eventdate, transcript, voterresponse ororiginalstatement verified."
+    },
+    {
+      "alert_id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+      "alert_ts": "2026-10-20T14:02:29Z",
+      "headline": "CBS News Correspondent Apologizes for Partisan Post Targeting Michigan Senate Candidate El-Sayed - Democracy Now!",
+      "exact_RSS_capture": "logs/cron20261020T134616Z_news/late/democracy_now_alert/democracy_now_alert.receipt.json",
+      "received_utc": "2026-10-20T14:16:57.224992Z",
+      "status": 200,
+      "raw_sha256": "a7bc220f0de6c20142c98d7642bcdf7e38b43b82ec0b1761efa67d6ea54b6148",
+      "body_title": "Before you continue",
+      "scope": "Consent/sign-in body, not publisher article. No exactpublication/eventdate, transcript, voterresponse ororiginalstatement verified."
+    }
+  ],
+  "direct_candidate_route_attempts": {
+    "scripps_candidate": {
+      "attempted_url": "https://www.scrippsnews.com/politics/abdul-el-sayed-emphasizes-muslim-faith-after-trump-calls-him-a-jihadist",
+      "status": 404,
+      "received_utc": "2026-10-20T14:26:20.370200Z",
+      "receipt": "logs/cron20261020T134616Z_late_root/scripps_candidate.receipt.json",
+      "raw_sha256": "ad66ebf0226b661eaa4bf22a8a437626186677cb5ac9adc3161c7b9356f4aeb7",
+      "title": "Page Not Found"
+    },
+    "democracynow_candidate": {
+      "attempted_url": "https://www.democracynow.org/2026/10/20/headlines/cbs_news_correspondent_apologizes_for_partisan_post_targeting_michigan_senate_candidate_el_sayed",
+      "status": 404,
+      "received_utc": "2026-10-20T14:26:21.264182Z",
+      "receipt": "logs/cron20261020T134616Z_late_root/democracynow_candidate.receipt.json",
+      "raw_sha256": "7485ca3cc51eadabfb4772b93d652c25c252a1693c2dd10316f861f3cae611f9",
+      "title": "404 Error"
+    }
+  },
+  "limits": [
+    "Two exactRSSrequests returnedconsent; two likelypublisherpaths returned404. CandidateURLs were notprovedcanonical, so404doesnotprovearticlewithdrawal/absence.",
+    "ExactScrippsandDemocracyNowarticlebodies remainunverified. Faith/attackheadline mayoverlapalreadyverifiedOct18Prayer/earlierTrumpattack, but noredatedduplicateclaim orzeroeffect inference.",
+    "Boundedlatefollowupstopsaftertheseattempts. No furtherglobalnewsre-read; laterwatcher/scheduledruns handlelateritems."
+  ],
+  "no_probability": true,
+  "no_trade_or_message": true
+}

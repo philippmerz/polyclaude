@@ -1,0 +1,63 @@
+{
+  "reviewed_utc": "2026-10-20T14:18:17.614177+00:00",
+  "source_capture_index": "data/deep_review_20261017/work/tick134616_root_source_index.json",
+  "hle": {
+    "configured_monitor_status": 200,
+    "received_utc": "2026-10-20T14:08:04.534715Z",
+    "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+    "same_body_as_1221": true,
+    "models_count": 66,
+    "Kimi_K3_HLE": 41.08,
+    "Kimi_K3_calibration_error": 44.67,
+    "limits": "FirstdefaultHTTP403 retained. Existingvettedsource-monitorheaders return200same66rowbody; July3UPDATINGflagnotnewscoreevent. Delivery/cachetime notscorepublication."
+  },
+  "openrouter": {
+    "status": 200,
+    "received_utc": "2026-10-20T14:06:29.207147Z",
+    "raw_sha256": "4ad39101385d9e4b5731c8625acfc25b9850611421f924dab6d6f62a218112fc",
+    "row_count": 53,
+    "cachedAt_utc": "2026-10-20T13:40:18.843000+00:00",
+    "weekly_totals_T": {
+      "2026-09-28": 165.856049857563,
+      "2026-10-05": 171.842501724714,
+      "2026-10-12": 164.043985914931,
+      "2026-10-19": 39.870563365103
+    },
+    "held_target_weeks_observed": [],
+    "limits": "Completedweeksunchanged;Oct19partialgrew39.870563365103T, notsettlement orindependentforecastshock. BackendcachedAt/deliverydonotexposeactualusagecutoff; no rateextrapolationfromdelivery."
+  },
+  "senate": {
+    "status": 403,
+    "received_utc": "2026-10-20T14:06:29.705427Z",
+    "limits": "Currentdirect403; prior12:22successfuldisplayedlistendsSep30. Currentlegislativecoverageunobserved, notproofnopassage/vote."
+  },
+  "google2026": {
+    "status": 404,
+    "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+    "limits": "Same404route, notproofnonexistenceofranking/news. SportsheadlinesnotnamedGlobalAthletestop5measurement."
+  },
+  "MI_program": {
+    "status": 200,
+    "same_body_as_1221": true,
+    "program_UTC": "2026-10-20T16:00:00Z",
+    "debate_previously_verified_UTC": "2026-10-21T23:00:00Z"
+  },
+  "Trump_dust": {
+    "exact_Gamma_open_accepting_noUMAproposal": true,
+    "limits": "OfficialWhiteHousefeed bounded30items/latestOct20; no verifiedcessationevent, notexhaustivehealthproof. AllsizeAPIrestores.33NOdust; no fillorlossclaim."
+  },
+  "Clarity": {
+    "exact_current_rule_descriptions_identical": true,
+    "ordered_assets_and_holdings_matched": true,
+    "both_open_accepting_noUMAproposal": true,
+    "conditional_total_payoffs_for_29plus29": {
+      "recorded_Yea_le50": 29,
+      "recorded_Yea_51_through58": 58,
+      "recorded_Yea_ge59": 29,
+      "no_qualifying_vote": 29,
+      "voice_or_unanimous_consent": 29,
+      "inconsistent_oracle_or_venue_failure": 0
+    },
+    "limits": "Identicalcurrentruleandstrictthresholdproveconditionalimplication, notguaranteedvenuepayment; sourcegapnotturnedintofinalvoteclaim."
+  }
+}
