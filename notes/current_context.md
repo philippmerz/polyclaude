@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-20T06:36:32.757017+00:00"
+reviewed_at: "2026-10-20T07:08:32.176190+00:00"
 valid_until: "2026-10-20T10:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 7900482095b79ce9be6a7f1c8dccc8719f694f7a83449fb15158d45a3b16007e
+  README.md: a9c09cf19de028b2d67ab7e13cc0a0d1802f65d7b49959c179f947827185bb5b
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
   scripts/README.md: d40c216e0d4d59d7eb23e3c6ee2bc4e78187a68a49e2f31117ed58c1c7e469a1
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: ab9a5d16e8a16a4d8ef1d040447d76afb557cc081a5ee945d723c22e610f84cf
+  notes/backlog.md: a3f5cdddca81d5f45943ac1c2db0fa484647dc0eab523ed0a4a4a29402ba3502
   notes/resting_orders.md: e70636fd23023c19843c0f08ee432222b3f6fd6c12e9d7536a0860a9cb9f7dbd
-  notes/journal.md: da3b8ca53ccea08740c1d4e109ac3f85ead79c7595af17dde7ff27c0a497b73b
+  notes/journal.md: e762a409b02bb3ad0796ffd48dbc3a98daae799ced8a7481645b1d96dfe125f2
 ---
 
 ## Completed check / next boundary
@@ -44,6 +44,6 @@ Primary1000/10pagecap→605eligible/80selected/525topomitted; thin39322/20pageca
 
 ## Finite research / engineering
 
-**377valued/14blocked/367factual/2242pending;758base+69revisions,next440/noactive.**438 Iran11%YES/noentry;439 CA0188%YES/noentry, initial75%prequote/postquote new-map source update preserved.437case-specificunpriced, not globalblock; laterfactpackets notvaluations. Save/index eachcompletedcase immediately; activecaseguard prevents next unfinished start. [Checkpoint](deep_review_checkpoint.json) · [Small phase](../data/deep_review_20261017/work/goal0018_RESUME.json).
+**379valued/14blocked/368factual/2239pending;761base+69revisions,next443/noactive.**440Tromsø0.01%YES/noentry:184results reproduce23played, round24included/round12postponed, not eliminated.441closedWNBA factually excluded.442OpenRouter≥775T44%YES/noentry: positive central YES economics fail20pp model/source/fill reserve; held112prior unchanged, joint payout states explicit. All three report/hash/ledger/index joins verified individually.437case-specificunpriced, not globalblock; laterfactpackets notvaluations. Save eachcase immediately. [Checkpoint](deep_review_checkpoint.json) · [Small phase](../data/deep_review_20261017/work/goal0019_RESUME.json).
 
 Fee-disabled publicreader repair24tests/freshcapture passed; no fabricatedcompactdescriptor, financialwriters unchanged. [Repair](../research/2026-10-20-fee-disabled-research-capture.md). Two exactimmutable publicsnapshot pairs sharestorage/18.47MiBreclaimed; detachatomically before manual inplacechanges. Existingproof retained, no additionalcleanup. [Storage](../data/deep_review_20261017/work/periodic0613_storage_verified.json). Next material/milestoneTelegram400valued; first100/200already notified.

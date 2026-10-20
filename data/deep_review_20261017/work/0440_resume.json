@@ -1,14 +1,23 @@
 {
   "review_index": 440,
-  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
-  "phase": "collector facts saved only; not started, root-verified, valued or excluded",
+  "updated_utc": "2026-10-20T07:07:23.724706+00:00",
+  "phase": "Completed, root-verified, recorded/indexed individually; valued",
   "source_paths": [
-    "work/0440_facts_0500.json"
+    "work/0440_facts_0500.json",
+    "work/0440_results_reconstructed_0643.json",
+    "work/0440_followup_facts_0640.json",
+    "work/0440_source_url_clarification_0707.json"
   ],
   "facts": {
     "path": "work/0440_facts_0500.json",
     "sha256": "387770dd969f675dd3de72c86669ef415a2e8cebbb72ab635c08b3822503e5b2",
     "bytes": 3985
   },
-  "status_limit": "No forecast/decision; read exact full frozen rule and verify raw evidence before substantive primary review. No automatic retry/entry."
+  "status_limit": "Dated completed research, not execution authority; do not repeat record. Reopen material evidence through immutable revision.",
+  "root_observation": "Rootfullresults reconstruction184matches/23rounds incl24butmissing12 matchesall16officialstandings. Prior41/59addround24 hypothesis WRONG/doublecounts; noforecast/orderusedit. NFFindependenttable+remainingfixturesconfirmT23/40/B23/56/V23/56, sevenleft inclpostponed12. Noteliminated.",
+  "next_step": "Use effective ledger/revision; next pending443. No automatic entry or retry.",
+  "report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0440.md",
+    "sha256": "1414cf42fe195daebc3532c1f46a8dd82829ae231d7142e81a39292f6a13c8f1"
+  }
 }

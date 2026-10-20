@@ -1,0 +1,60 @@
+{
+  "schema": "case442.primary_verification.v1",
+  "reviewed_utc": "2026-10-20T07:03:25.831717+00:00",
+  "description_sha256_all_112_352_442": "7d0d0688c6b99b7a321f4ba4d1524f8b25f454794c06ee0696bde1021898b9e5",
+  "all_frozen_identity_checks": {
+    "market_id": true,
+    "condition_id": true,
+    "question": true,
+    "description": true,
+    "slug": true,
+    "resolutionSource": true,
+    "endDate": true,
+    "outcomes": true,
+    "token_ids": true
+  },
+  "fresh_capture_pairs": [
+    {
+      "request_id": "0442_gamma_01",
+      "raw_sha256": "5dd6a9f22e37639095099cb50724ffaea9ee1f68678cb52c0972570573660b43",
+      "received_utc": "2026-10-20T07:00:46.148110+00:00"
+    },
+    {
+      "request_id": "0442_fee_02",
+      "raw_sha256": "be2aac8da47b5822f9c544475663bee24f52dcc79f067d8861be2d57addf2614",
+      "received_utc": "2026-10-20T07:00:46.224833+00:00"
+    },
+    {
+      "request_id": "books_batch_01_03",
+      "raw_sha256": "38bb2b0114ee90aaa70f451589122160b878f817e6739e662695453249c9150e",
+      "received_utc": "2026-10-20T07:00:46.270963+00:00"
+    },
+    {
+      "request_id": "geoblock_04",
+      "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052",
+      "received_utc": "2026-10-20T07:00:46.417267+00:00"
+    },
+    {
+      "request_id": "gamma",
+      "raw_sha256": "9f8ee5417d537d8a87ed4acdf297859a1b8ef66d7e6c45de34c92f38ff88f9b5",
+      "received_utc": "2026-10-20T04:59:18.985739Z"
+    },
+    {
+      "request_id": "openrouter_daily_docs",
+      "raw_sha256": "dedc0a65651422091c0a0ead502df623f0203254196448e98381588fbb626a3b",
+      "received_utc": "2026-10-20T04:59:19.747810Z"
+    },
+    {
+      "request_id": "openrouter_rankings",
+      "raw_sha256": "67936a5d63eb2cfb67f6cc3d3c59db943f221c50ddb883457da31ac63dc0c3a4",
+      "received_utc": "2026-10-20T04:59:19.242845Z"
+    }
+  ],
+  "source_raw_sha256": "7fa78f5b31b94fdbf9a50fa4de596cf92c8684a121ab5d78932748b01976ea1e",
+  "source_target_weeks_absent": true,
+  "quote_sha256": "36496615e41c5c9a0657579522bf8c7421eccb020a2b9fe6c7a61464b4ddf430",
+  "model_sha256": "e200b6bbe70f17650e5dce7652748867e85c5b6a2e6ad3b88d8dc05d7fbfec44",
+  "replay_code_sha256": "96e28c0ecb6c28692edad152e4087a2d00321c11c7c6762840681cb1be1924a6",
+  "count": "7casecapturepairs plus prior06:24source verified; all exact identity/economicsbindings pass.",
+  "limit": "No financialwrites/currentaccount/CTF/conditionalfillcertificate. No own442quotes before06:56model; otherfamilypricesknown."
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "polyclaude.deep_review_fact_resume_pointer.v1",
+  "review_index": 451,
+  "status": "pending",
+  "id": "1285079",
+  "conditionId": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+  "question": "Will the Republican Party win the VA-05 House seat?",
+  "criteria_sha256": "cff14e17d2e6e47fc52ace581ac4342e616263fdfb277eb0aeafe9a2d64c8181",
+  "frozen_universe_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+  "resume_packet_verified": true,
+  "facts_path": "data/deep_review_20261017/work/0451_facts_0642.json",
+  "facts_sha256": "9d86d63c92d013ca9c3d99f65e454fb7de1ec3eaf2103984f8f4606da58c8843",
+  "evaluation_or_revision_written": false,
+  "next_step": "Root-owned sequential review; this file is a fact pointer only."
+}

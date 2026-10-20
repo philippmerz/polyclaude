@@ -1,0 +1,252 @@
+{
+  "schema": "goal0019.explicit_publication.v1",
+  "owned_files": [
+    {
+      "path": "README.md",
+      "sha256": "a9c09cf19de028b2d67ab7e13cc0a0d1802f65d7b49959c179f947827185bb5b",
+      "bytes": 14967
+    },
+    {
+      "path": "notes/backlog.md",
+      "sha256": "a3f5cdddca81d5f45943ac1c2db0fa484647dc0eab523ed0a4a4a29402ba3502",
+      "bytes": 5729
+    },
+    {
+      "path": "notes/current_context.md",
+      "sha256": "48783cba7ab16bb8f49e027ec30f7e06dc0840c64313062051c71d828da12bfa",
+      "bytes": 7268
+    },
+    {
+      "path": "notes/journal.md",
+      "sha256": "e762a409b02bb3ad0796ffd48dbc3a98daae799ced8a7481645b1d96dfe125f2",
+      "bytes": 2620299
+    },
+    {
+      "path": "notes/deep_review_checkpoint.json",
+      "sha256": "fca225d5159ee42da9b978f36af296b34ae560066b65b754f87963b0efc5ce4a",
+      "bytes": 2039
+    },
+    {
+      "path": "research/2026-10-17-deep-review/INDEX.md",
+      "sha256": "c4cca5efafc974720a8fb47068a1fb4092c86203ba3e96bda27442deea3b25bb",
+      "bytes": 167971
+    },
+    {
+      "path": "research/2026-10-17-deep-review/RESUME.md",
+      "sha256": "d6ebe922a5de84829faf70445f04c9aa08a62f77f6bc4f1a4b0022ab4233496f",
+      "bytes": 4413
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations.jsonl",
+      "sha256": "93d9681c9dfed0ed142e0624e52d3621395bc261bc53e3f9cf1ae2c53d8e24fe",
+      "bytes": 3546925
+    },
+    {
+      "path": "research/2026-10-17-deep-review/index.csv",
+      "sha256": "522654a59c827c9a6153e9e13a02ec9b9ef7e13d68a97055a7d9cfb98a2f7d62",
+      "bytes": 586830
+    },
+    {
+      "path": "research/2026-10-17-deep-review/progress.json",
+      "sha256": "e62b4c04e48db5460c1a3f44254b10829376c60c3bbddff41fc5defd2a40fd13",
+      "bytes": 1115
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0440_primary_model_0648.json",
+      "sha256": "db5673f3d160d820612aa91776b8023d416f133d693aecb26cf849c313732918",
+      "bytes": 4546
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0442_primary_0658.json",
+      "sha256": "e200b6bbe70f17650e5dce7652748867e85c5b6a2e6ad3b88d8dc05d7fbfec44",
+      "bytes": 4259
+    },
+    {
+      "path": "data/deep_review_20261017/0440_quote_0650.json",
+      "sha256": "89030ae63bf7cf8552ca765c6f4f680e10a372de416dd52a684912705e783107",
+      "bytes": 10131
+    },
+    {
+      "path": "data/deep_review_20261017/0442_quote_0700.json",
+      "sha256": "36496615e41c5c9a0657579522bf8c7421eccb020a2b9fe6c7a61464b4ddf430",
+      "bytes": 11749
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0440.json",
+      "sha256": "19b3e931b66488fc8cc1095611a27ec3aadd63c96d8f98b6a531c9d558099bd1",
+      "bytes": 7123
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0440.md",
+      "sha256": "1414cf42fe195daebc3532c1f46a8dd82829ae231d7142e81a39292f6a13c8f1",
+      "bytes": 3801
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_resume.json",
+      "sha256": "9523f38f008edd04328f8f596d49ddd20652535cb8203844116fdf664c7c1b85",
+      "bytes": 1234
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0441.json",
+      "sha256": "9950c27e62616abb7f70ed1c4f0da988ea5375e9a55b879521b416f3595c05f8",
+      "bytes": 2221
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0441.md",
+      "sha256": "e203884756bc4f78f007acdd94260db5f76bd886142fa41683151b4dc7ee1f72",
+      "bytes": 2065
+    },
+    {
+      "path": "data/deep_review_20261017/work/0441_resume.json",
+      "sha256": "e9e22aaca8b33a5c443283613ff4e24ed9ef4e3a3ae08c3aefdace3ee8bd0b25",
+      "bytes": 833
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0442.json",
+      "sha256": "ba2bf8562e162697a4fc9c5d5a1c2459e8e5cab11ee8b75e6e1a852c8570ed9d",
+      "bytes": 7939
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0442.md",
+      "sha256": "fde3559e9e7f6e07c5e7da3f9cb785971aa863f6bf1edd59f20e88be305e5bfc",
+      "bytes": 5154
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_resume.json",
+      "sha256": "dcc831d54961b49d6840cb08c62e26aa0ee85798ab1451827bb81ab9c17097f1",
+      "bytes": 896
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_followup_facts_0640.json",
+      "sha256": "4ee8df8834bd1a78e603de3f72db9dc52a40a53be0c197a4492e667d4c1ba6be",
+      "bytes": 6519
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_results_reconstructed_0643.json",
+      "sha256": "84441377f461410d6c197885b7aca2c6a4fc85e32237fc137a1050abbc1fda58",
+      "bytes": 3039
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_primary_model_0648.py",
+      "sha256": "8374cb72bbd944383bfd71efed8f5e601e6c068557f003860c1d2c7610599330",
+      "bytes": 4449
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_final_0652.json",
+      "sha256": "ab0d4bc1f186f3353e3972b1b6b80ae59543a03f1a7652518af9decb9545578c",
+      "bytes": 10810
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_build_final_0652.py",
+      "sha256": "1de855a00111b9f9713ac83b8e4b57095f4d18680a2a3fa7eb2d11ad6a13c204",
+      "bytes": 7773
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_economics_0652.json",
+      "sha256": "f70a941a47fdcfce2934a31fc66879d4f09da6f98b1709e7f10edd55b0fed0d3",
+      "bytes": 4360
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_quote_receipts_verified_0652.json",
+      "sha256": "9fea8cd29711ca0c6989ce758ba07c6822aa346a217dafdb14dfb80b19541cf7",
+      "bytes": 812
+    },
+    {
+      "path": "data/deep_review_20261017/work/0440_source_url_clarification_0707.json",
+      "sha256": "36afce7507b30234a5774dfdf1166d86bea308093714390a30f01e61fb025ef8",
+      "bytes": 792
+    },
+    {
+      "path": "data/deep_review_20261017/work/0441_final_0655.json",
+      "sha256": "f6291a6ba143908e76e84372e910cb03e87c89cd3b8e8b3c3cc655def11a1873",
+      "bytes": 4085
+    },
+    {
+      "path": "data/deep_review_20261017/work/terminal_0654/case_0441.json",
+      "sha256": "50476ec00d48439e2bcc192567afd378648af881419f1e37f5837b2d66b883f0",
+      "bytes": 1308
+    },
+    {
+      "path": "data/deep_review_20261017/work/terminal_0654/case_0443.json",
+      "sha256": "a4a19e18e48872054013df7951ae60e94d5de64f46f85931df145dbb784b540d",
+      "bytes": 1308
+    },
+    {
+      "path": "data/deep_review_20261017/work/terminal_0654/case_0445.json",
+      "sha256": "fc06995071de78afff059824ec37ca5a965b1265faddd443eb3a37f66a43d217",
+      "bytes": 1308
+    },
+    {
+      "path": "data/deep_review_20261017/work/terminal_0654/case_0449.json",
+      "sha256": "ab457c92766640a2898746036c375bd4d25960aa2ff544fbaf7d7dbc818b177c",
+      "bytes": 1308
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_primary_replay_0658.py",
+      "sha256": "96e28c0ecb6c28692edad152e4087a2d00321c11c7c6762840681cb1be1924a6",
+      "bytes": 5355
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_build_final_0705.py",
+      "sha256": "535091bd22043e876b6f487e8e49c4dfea47ff3ba2672173a4e3deccec936d8d",
+      "bytes": 12947
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_final_0705.json",
+      "sha256": "4eba2037309a8f43f77f005e2934a8d692103974a2116d59d8bac958b7e158cf",
+      "bytes": 12850
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_economics_0703.json",
+      "sha256": "1df14d9b9e4d87c05ea4e75148b69f80b537db6bf4565c18384bd276f97f9bf0",
+      "bytes": 5280
+    },
+    {
+      "path": "data/deep_review_20261017/work/0442_verification_0705.json",
+      "sha256": "d0ed49a3b8086c6908ae31c5d0dd622ce0e95036d858f61baeb5024f1b661081",
+      "bytes": 2485
+    },
+    {
+      "path": "data/deep_review_20261017/work/0449_facts_0642.json",
+      "sha256": "7ce886b4ea650ad7da31abb9ae6b2e6409f0b89fef8ec4acd07338cf44367817",
+      "bytes": 4919
+    },
+    {
+      "path": "data/deep_review_20261017/work/0449_resume_pointer_0642.json",
+      "sha256": "75be41f8b199f20d78f4671a19b235c896fbf2bb36f82260b3a10fcdbf49b855",
+      "bytes": 811
+    },
+    {
+      "path": "data/deep_review_20261017/work/0450_facts_0642.json",
+      "sha256": "65228afa6cbc87c2e435b1e963a937dee4d00de28962db4d63cb8e8e414b5b9c",
+      "bytes": 8044
+    },
+    {
+      "path": "data/deep_review_20261017/work/0450_resume_pointer_0642.json",
+      "sha256": "baf740f84e3abef2e282adc157215be654c7f2ada8d618942b4c35fccb5fe9a1",
+      "bytes": 783
+    },
+    {
+      "path": "data/deep_review_20261017/work/0451_facts_0642.json",
+      "sha256": "9d86d63c92d013ca9c3d99f65e454fb7de1ec3eaf2103984f8f4606da58c8843",
+      "bytes": 8236
+    },
+    {
+      "path": "data/deep_review_20261017/work/0451_resume_pointer_0642.json",
+      "sha256": "5c8c117417fa4a554af7b7c2fd6b2aad4b1a27f2e1859ce95d37b7ae792104f6",
+      "bytes": 786
+    },
+    {
+      "path": "data/deep_review_20261017/work/goal0019_RESUME.json",
+      "sha256": "de9b27d298cec4b01b4af1296a26edad9b491d9058c2791555e6d44c003fe002",
+      "bytes": 2405
+    },
+    {
+      "path": "data/deep_review_20261017/work/goal0019_integration_verified.json",
+      "sha256": "e061e677839ebb0d8620a7a667cb389b478bd7087185c275629f49dd527100e2",
+      "bytes": 1091
+    }
+  ],
+  "verification": "Per-caseimmutablehash/ledger/index/checkpoint/root+cheapindependentaudit; validboundedcontextpacket; completed442resumepacketvalid; JSONsyntax and high-specificitysecret scan pass.",
+  "limits": "No raw/private receipts staged. Existing daemonalerts/cache/hurdle/inject and two unrelated modeldrafts excluded. Financialproducer/CSV/order/prior files unchanged."
+}

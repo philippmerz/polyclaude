@@ -1,0 +1,122 @@
+{
+  "schema": "0442.primary_pre_own_quote.v1",
+  "created_utc": "2026-10-20T06:56:47.609912+00:00",
+  "review_index": 442,
+  "p_yes": 0.44,
+  "p_no": 0.56,
+  "range_yes": [
+    0.05,
+    0.95
+  ],
+  "actual_entry_reserve_pp": 20,
+  "own442_quote_not_viewed": true,
+  "other_prices_known": "Held112quote/priorandotherfamilypricesknown; not an all-prices-blind forecast.",
+  "literal_binding": "442and112and352 full descriptions byteidentical, question thresholds differ:442[775,infinity),112[725,775),352<625. SamefourOct26/Nov2/Nov9/Nov16weeks andfirstNov23/Nov27ETfallback. Raw APIinput, separate chartTotals govern.",
+  "source": {
+    "received_utc": "2026-10-20T06:24:26.716766Z",
+    "raw_sha256": "7fa78f5b31b94fdbf9a50fa4de596cf92c8684a121ab5d78932748b01976ea1e",
+    "completed_anchor_T": 164.043985914931,
+    "partial_Oct19_T_context_only": 30.038851003818,
+    "targets_absent": true
+  },
+  "replay": {
+    "N": 200000,
+    "seed": 20261018182,
+    "bin_counts": {
+      "lt625": 40379,
+      "625_675": 23949,
+      "675_725": 25900,
+      "725_775": 22745,
+      "ge775": 87027
+    },
+    "bin_probabilities": {
+      "lt625": 0.201895,
+      "625_675": 0.119745,
+      "675_725": 0.1295,
+      "725_775": 0.113725,
+      "ge775": 0.435135
+    },
+    "exact_prior_anchor_diagnostic_reproduced": true,
+    "branches": [
+      [
+        "moderation",
+        0.36,
+        0.035,
+        0.065
+      ],
+      [
+        "historical_growth",
+        0.28,
+        0.08,
+        0.095
+      ],
+      [
+        "release_boom",
+        0.08,
+        0.2,
+        0.1
+      ],
+      [
+        "disruption",
+        0.08,
+        -0.15,
+        0.15
+      ],
+      [
+        "plateau",
+        0.2,
+        0.0,
+        0.05
+      ]
+    ],
+    "by_branch": {
+      "moderation": {
+        "n": 71911,
+        "ge775": 28056,
+        "ge775_fraction": 0.39014893409909474
+      },
+      "historical_growth": {
+        "n": 56197,
+        "ge775": 39657,
+        "ge775_fraction": 0.7056782390519066
+      },
+      "release_boom": {
+        "n": 16176,
+        "ge775": 16014,
+        "ge775_fraction": 0.9899851632047477
+      },
+      "disruption": {
+        "n": 15842,
+        "ge775": 363,
+        "ge775_fraction": 0.02291377351344527
+      },
+      "plateau": {
+        "n": 39874,
+        "ge775": 2937,
+        "ge775_fraction": 0.07365701961177709
+      }
+    },
+    "noise": "95%N0,2T/5%N0,10T; unmeasured aggregate rounding/revision distribution",
+    "correlation": 0.25
+  },
+  "adoption": "43.5135% >=775 pathfrequency rounded44%YES,56NO. Regimeweights/drifts/vols are primaryjudgment, not calibratedfutureodds; MC samplingprecision notmodelconfidence.",
+  "reserve_reason": "20pp samefamilyuncertainty budget:10futuregrowth/model+5display/vintage/source+5conditionalfill. SelectedYES24/NO36, no K5futuretail.",
+  "deterministic_countermodels": {
+    "flat164_weekly_total_T": 656.175943659724,
+    "weekly_growth_required_for775": 0.04828514651858373,
+    "fivepct_weekly_growth_total_T": 779.5227184827303,
+    "interpretation": "FlatplateauNO;near5%weeklygrowthYES. Recent4.54%weeklydecline alone cannotbeanotherpenalty: originalpartialforecast/recentcompletedanchor alreadyincluded it."
+  },
+  "joint_research_sensitivity": {
+    "total_below725": 0.44,
+    "725to775_exclusive": 0.12,
+    "atleast775": 0.44,
+    "limits": "Coherent3stateillustrationusingheld11212%andnew44244% roundedjudgments. No silentheldpriorchange or new adopted250partition; sourceandregimes shared."
+  },
+  "portfolio": "Existing1125NO pays5/0/5 acrossbelow725/middle/upper. New442YES5 pays0/0/5: bothloseinmiddle, bothwinupper. New442NO5 pays5/5/0: combinedconditionalfloor5, not freeprofit/atomicitycertificate. CommonAI/venue/source/cutoff risks withKimi/112; no independencecredit.",
+  "hashes": {
+    "parent_code": "c6b5bf6bcd4684d52613037ee9a181766767637ba11b4979d5c7d34f131f20bc",
+    "prior_anchor_diagnostic": "7d375642cdc2b8907feb3ba3a33d2ee8abb5ca65505663131071396e68a85076"
+  },
+  "limitations": "Unknownfutureadoption/release/usage/competition; firstdisplayvintageandruleexactdisplayrounding vsraw projection notcertified. Category/language datasets notsubstitutes, partial/currentpace not actualweek. No transaction/heldfinancialprior mutation."
+}

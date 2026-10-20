@@ -1,0 +1,149 @@
+{
+  "schema": "case440.followup_facts.v1",
+  "scope": "Bounded factual follow-up only; no probability, valuation, ranking, exclusion, or selection.",
+  "captured_utc": "2026-10-20T06:40:49Z/2026-10-20T06:40:51Z",
+  "frozen_identity": {
+    "review_index": 440,
+    "market_id": "1830426",
+    "conditionId": "0xde16d9e049e6eae14c7d06808c739d0d173c214daac0d6a59a2d0837b3742a54",
+    "question": "Will Tromsø win Norway Eliteserien?",
+    "slug": "2026-soccer-norway-eliteserien-winner-troms",
+    "criteria_sha256": "5329659aa6d9c37fa78a7a86f8428cf7a45f064f15866b94511fa427980a4b23",
+    "identity_source": "offline deep_review_resume --index 440; no record started"
+  },
+  "league_facts": {
+    "as_of_capture": "2026-10-20T06:40:50Z",
+    "table_and_scored_fixture_rows_agree": true,
+    "clubs": {
+      "Tromsø": {
+        "played": 23,
+        "wins": 11,
+        "draws": 7,
+        "losses": 5,
+        "goals_for": 42,
+        "goals_against": 31,
+        "goal_difference": 11,
+        "points": 40
+      },
+      "Bodø/Glimt": {
+        "played": 23,
+        "wins": 18,
+        "draws": 2,
+        "losses": 3,
+        "goals_for": 58,
+        "goals_against": 20,
+        "goal_difference": 38,
+        "points": 56
+      },
+      "Viking": {
+        "played": 23,
+        "wins": 18,
+        "draws": 2,
+        "losses": 3,
+        "goals_for": 59,
+        "goals_against": 22,
+        "goal_difference": 37,
+        "points": 56
+      }
+    },
+    "interpretation": "The official result list includes round 24 results, including Tromsø–KFUM 1–1, but these clubs remain at 23 played because round-12 fixtures are postponed. Each has seven unplayed fixtures (round 12 plus rounds 25–30); 23 + 7 = 30.",
+    "remaining_fixtures": {
+      "Tromsø": [
+        "2026-10-25 R12 Viking–Tromsø",
+        "2026-11-01 R25 Vålerenga–Tromsø",
+        "2026-11-08 R26 Tromsø–Bodø/Glimt",
+        "2026-11-21 R27 Tromsø–Viking",
+        "2026-11-29 R28 Sandefjord–Tromsø",
+        "2026-12-06 R29 Tromsø–Start",
+        "2026-12-13 R30 Lillestrøm–Tromsø"
+      ],
+      "Bodø/Glimt": [
+        "2026-10-24 R12 Bodø/Glimt–Vålerenga",
+        "2026-10-30 R25 Bodø/Glimt–Viking",
+        "2026-11-08 R26 Tromsø–Bodø/Glimt",
+        "2026-11-20 R27 Molde–Bodø/Glimt",
+        "2026-11-28 R28 Bodø/Glimt–KFUM",
+        "2026-12-05 R29 Aalesund–Bodø/Glimt",
+        "2026-12-13 R30 Bodø/Glimt–Sarpsborg 08"
+      ],
+      "Viking": [
+        "2026-10-25 R12 Viking–Tromsø",
+        "2026-10-30 R25 Bodø/Glimt–Viking",
+        "2026-11-08 R26 Viking–KFUM",
+        "2026-11-21 R27 Tromsø–Viking",
+        "2026-11-29 R28 Viking–Vålerenga",
+        "2026-12-04 R29 Molde–Viking",
+        "2026-12-13 R30 Viking–HamKam"
+      ]
+    },
+    "leader_head_to_head_remaining": [
+      "2026-10-30 Bodø/Glimt–Viking",
+      "2026-10-25 Viking–Tromsø",
+      "2026-11-08 Tromsø–Bodø/Glimt",
+      "2026-11-21 Tromsø–Viking"
+    ],
+    "rules": "2026 Eliteserien regulations: 16 clubs play each other home and away; 3 points for a win, 1 for a draw, 0 for a loss. Ranking by points, goal difference, goals scored, then head-to-head; qualifying playoff if tie persists for championship/promotion/relegation. 30 matches per club is derived from the 16-club double round-robin.",
+    "no_elimination_conclusion": true
+  },
+  "captures": {
+    "private_dir": "logs/deep_review_20261017/case0440_followup_0640",
+    "hash_scope": "SHA-256 covers supplied response body bytes, not wire authentication; captured call-window timing.",
+    "items": [
+      {
+        "name": "nff_fixtures",
+        "url": "https://www.fotball.no/fotballdata/turnering/hjem/",
+        "http_status": 200,
+        "started_utc": "2026-10-20T06:40:49.654760Z",
+        "received_utc": "2026-10-20T06:40:50.364803Z",
+        "raw_bytes": 1145428,
+        "raw_sha256": "f98a17e7dfaec2e50f150b9e041cdeddc33a31e9ce3c837443eda50dd5440d70",
+        "gzip_sha256": "ead1e9830160e8de41ad3885e84b8dfd8bd30294e2c84ca025a57a407eb89617",
+        "receipt": "logs/deep_review_20261017/case0440_followup_0640/nff_fixtures.receipt.json"
+      },
+      {
+        "name": "nff_table",
+        "url": "https://www.fotball.no/turneringer/eliteserien/",
+        "http_status": 200,
+        "started_utc": "2026-10-20T06:40:50.396946Z",
+        "received_utc": "2026-10-20T06:40:50.824476Z",
+        "raw_bytes": 1163068,
+        "raw_sha256": "0f1bea410c7dd56b19193d34191f606c40b3fcc35d9ba88e83eba9bed8e3dca7",
+        "gzip_sha256": "9d2ec8e350beaa506086137f48baf9fa9895fedc414cbc6464881731ffb9ffaa",
+        "receipt": "logs/deep_review_20261017/case0440_followup_0640/nff_table.receipt.json"
+      },
+      {
+        "name": "league_terminliste",
+        "url": "https://www.eliteserien.no/terminliste",
+        "http_status": 200,
+        "started_utc": "2026-10-20T06:40:50.856811Z",
+        "received_utc": "2026-10-20T06:40:50.994081Z",
+        "raw_bytes": 154421,
+        "raw_sha256": "9c991579273d8495d2eeb0e81870b8f4161772a90aa34c7648f4c46b5206ff3a",
+        "gzip_sha256": "1be79c4a0821c984408f395f8cf058236358f78bdb98deaf0c5dd02a196cebda",
+        "receipt": "logs/deep_review_20261017/case0440_followup_0640/league_terminliste.receipt.json"
+      },
+      {
+        "name": "nff_rules_2026",
+        "url": "https://www.fotball.no/globalassets/regler-og-retningslinjer/turneringsbestemmelser/turneringsbestemmelser-eliteserien.pdf",
+        "http_status": 200,
+        "started_utc": "2026-10-20T06:40:51.008347Z",
+        "received_utc": "2026-10-20T06:40:51.098262Z",
+        "raw_bytes": 468127,
+        "raw_sha256": "896a23c6632be3e5ef3ca10b188f79df7705b698fb5107fb786e8a2758515cb8",
+        "gzip_sha256": "5b640eec8a5e4f8d3a98ec314bb5f1d20e71e01ce034a26d219e91aecb000093",
+        "receipt": "logs/deep_review_20261017/case0440_followup_0640/nff_rules_2026.receipt.json"
+      },
+      {
+        "name": "kampreglement_53",
+        "url": "https://lovdata.no/dokument/NFFF/nfffor/2014-03-09-1/%C2%A75-3",
+        "http_status": 200,
+        "started_utc": "2026-10-20T06:40:51.123383Z",
+        "received_utc": "2026-10-20T06:40:51.274424Z",
+        "raw_bytes": 231074,
+        "raw_sha256": "110a627be21f47c4438c61e3f2f2ae716c2146bc4e31ebc334aeb1f2f8bf4828",
+        "gzip_sha256": "a04b554a6bd918ebf4474669730d76095821b1c847174fe34d9d7499be72ad87",
+        "receipt": "logs/deep_review_20261017/case0440_followup_0640/kampreglement_53.receipt.json"
+      }
+    ]
+  }
+}

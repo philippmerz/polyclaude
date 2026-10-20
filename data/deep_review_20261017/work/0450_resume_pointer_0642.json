@@ -1,0 +1,15 @@
+{
+  "schema": "polyclaude.deep_review_fact_resume_pointer.v1",
+  "review_index": 450,
+  "status": "pending",
+  "id": "2332981",
+  "conditionId": "0x50f740162f52bcef8c8035e5b175c7ad6f5230b7ffbed4cbd5733ff93fc91168",
+  "question": "Will no one leave the Trump Cabinet before 2027?",
+  "criteria_sha256": "3865b61b96d9d0e9b49c8ec7d68dbca634b148f4791a3a3a6d0703a6a53278f5",
+  "frozen_universe_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+  "resume_packet_verified": true,
+  "facts_path": "data/deep_review_20261017/work/0450_facts_0642.json",
+  "facts_sha256": "65228afa6cbc87c2e435b1e963a937dee4d00de28962db4d63cb8e8e414b5b9c",
+  "evaluation_or_revision_written": false,
+  "next_step": "Root-owned sequential review; this file is a fact pointer only."
+}

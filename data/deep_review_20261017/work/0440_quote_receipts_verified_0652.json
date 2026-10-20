@@ -1,0 +1,20 @@
+{
+  "verified": [
+    {
+      "receipt": "logs/deep_review_20261017/case0440_quote_0650/public/0440_fee.receipt.json",
+      "raw_sha256": "7ef4362c68ea6be47a0fd24a635a3f9e6655a5558e6bb388941458c31037ccfb"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0440_quote_0650/public/0440_gamma.receipt.json",
+      "raw_sha256": "12ec4463230e363fdb261de0e96dc2d685355032af72f06175942c149a4a183d"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0440_quote_0650/public/books_batch_01.receipt.json",
+      "raw_sha256": "e197c0673d18ae29075425b3491dc7953ae87c7b29ce5d145c37c27b00b31d0f"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case0440_quote_0650/private/geoblock.receipt.json",
+      "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052"
+    }
+  ]
+}

@@ -1,14 +1,22 @@
 {
   "review_index": 442,
-  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
-  "phase": "collector facts saved only; not started, root-verified, valued or excluded",
+  "updated_utc": "2026-10-20T07:07:23.724706+00:00",
+  "phase": "Completed, root-verified, recorded/indexed individually; valued",
   "source_paths": [
-    "work/0442_facts_0500.json"
+    "work/0442_facts_0500.json",
+    "models/0442_primary_0658.json",
+    "work/0442_economics_0703.json",
+    "work/0442_verification_0705.json"
   ],
   "facts": {
     "path": "work/0442_facts_0500.json",
     "sha256": "19e03b76716a5cf0f6c23baad3200fd952c4ba9f2caa420ba142e58c865545a3",
     "bytes": 4466
   },
-  "status_limit": "No forecast/decision; read exact full frozen rule and verify raw evidence before substantive primary review. No automatic retry/entry."
+  "status_limit": "Dated completed research, not execution authority; do not repeat record. Reopen material evidence through immutable revision.",
+  "report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0442.md",
+    "sha256": "fde3559e9e7f6e07c5e7da3f9cb785971aa863f6bf1edd59f20e88be305e5bfc"
+  },
+  "next_step": "Use effective ledger/revision; next pending443. No automatic entry or retry."
 }

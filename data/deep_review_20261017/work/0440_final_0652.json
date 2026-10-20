@@ -1,0 +1,185 @@
+{
+  "review_index": 440,
+  "market_id": "1830426",
+  "condition_id": "0xde16d9e049e6eae14c7d06808c739d0d173c214daac0d6a59a2d0837b3742a54",
+  "criteria_sha256": "5329659aa6d9c37fa78a7a86f8428cf7a45f064f15866b94511fa427980a4b23",
+  "token_ids": [
+    "51140573450222075551561415734089318441298236180506411826348472705703392331206",
+    "84976121233665115117825774215341345014269941566427041807905874508738603634660"
+  ],
+  "status": "valued",
+  "literal_analysis": "Fullchampion/earlyNO/OtherDec20/alphabetical/source rules read; sevenoutstandinginclround12, noteliminated.",
+  "evidence": [
+    {
+      "url": "https://www.eliteserien.no/resultater",
+      "observed_utc": "2026-10-20T04:59:16.927725Z",
+      "finding": "Root184match reconstruction23complete rounds;24included/12missing,all16standingsreproduce."
+    },
+    {
+      "url": "https://www.fotball.no/turneringer/eliteserien/",
+      "observed_utc": "2026-10-20T06:40:50.824476Z",
+      "finding": "IndependenttableT23/40/B23/56/V23/56."
+    },
+    {
+      "url": "https://www.eliteserien.no/terminliste",
+      "observed_utc": "2026-10-20T06:40:50.994081Z",
+      "finding": "Sevenremaininginclpostponed12;fourcoupledT/B/Vgames."
+    },
+    {
+      "url": "https://www.fotball.no/globalassets/regler-og-retningslinjer/turneringsbestemmelser/turneringsbestemmelser-eliteserien.pdf",
+      "observed_utc": "2026-10-20T06:40:51.098262Z",
+      "finding": "RootPDF1/2/4 read16clubs/homeaway/3-1-0; LovdataGD/goals/H2H/playoffcorroboration."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.0001,
+    "low": 0.0,
+    "high": 0.02,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfittedcurrentgoal/fixturePoisson+coupledpoints/scenarios, primary prequote.",
+    "reasoning": "16pointgap/twoleaders/7games/GD26\u201327deficit. Threecontenderenvelope4.34566e-5,1e-4 adoptedwithextramodel/adminskew. Not calibratedtail, no falseelim."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0440_quote_0650.json",
+    "quote_file_sha256": "89030ae63bf7cf8552ca765c6f4f680e10a372de416dd52a684912705e783107",
+    "quote_capture_utc": "2026-10-20T06:46:40.498539+00:00",
+    "gamma_received_utc": "2026-10-20T06:46:40.213648+00:00",
+    "horizon_days": 62.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.03,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.0001,
+        "selected_stress_probability": 0,
+        "best_bid": 0.004,
+        "best_ask": 0.01,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792478231709",
+        "book_received_utc": "2026-10-20T06:46:40.357925+00:00",
+        "book_age_seconds_at_receipt": 568.6489248275757,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 100.0,
+            "gross": 1.0941800000000002,
+            "fee": 0.03247,
+            "fills": [
+              {
+                "shares": 5.82,
+                "price": 0.01
+              },
+              {
+                "shares": 94.18,
+                "price": 0.011
+              }
+            ],
+            "net": 1.1266500000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 100.0,
+            "gross": 0.4,
+            "fee": 0.01196,
+            "fills": [
+              {
+                "shares": 100.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.38804
+          }
+        },
+        "taker_cost_usd": 1.1266500000000002,
+        "central_expected_profit_usd": -1.1166500000000001,
+        "selected_stress_profit_usd": -1.1266500000000002,
+        "break_even_before_carry": 0.011266500000000002,
+        "break_even_constant_carry": 0.011327007746175408,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9999,
+        "selected_stress_probability": 0.8999,
+        "best_bid": 0.99,
+        "best_ask": 0.996,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792478231709",
+        "book_received_utc": "2026-10-20T06:46:40.357925+00:00",
+        "book_age_seconds_at_receipt": 568.6489248275757,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.98,
+            "fee": 0.0006,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.996
+              }
+            ],
+            "net": 4.980600000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.95,
+            "fee": 0.00149,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.99
+              }
+            ],
+            "net": 4.94851
+          }
+        },
+        "taker_cost_usd": 4.980600000000001,
+        "central_expected_profit_usd": 0.018899999999999473,
+        "selected_stress_profit_usd": -0.4811000000000005,
+        "break_even_before_carry": 0.9961200000000001,
+        "break_even_constant_carry": 1.0014697515750453,
+        "current_execution_authorization": false
+      }
+    },
+    "quantity_by_outcome": {
+      "Yes": 100,
+      "No": 5
+    },
+    "maker_and_carry": {
+      "Yes": "YES100 meets1USDroute. At1c touch and even1milli minimumtick, centralfair0.0001fails.",
+      "No": "NO995milli maker5cost4.975:central+.02450/selected-.47550; remote<=899milli fillselectionunmeasured, no blindbid.",
+      "constant_APY": 0.032035,
+      "No_taker_cost_terminal_by_days": {
+        "7": 4.9836128512187035,
+        "14": 4.986627524963301,
+        "21": 4.989644022336268,
+        "62": 5.007348757875226
+      },
+      "timing_limit": "EarlyNO may follow mathematicalelimination;7/14/21daycarry clearscentral,62dayendcarrydoesnot. No automaticimmediatefinality/settlementcertificate."
+    }
+  },
+  "verdict": "NO_ENTRY: YESfailscentral;NOtinycentralprofitfailsordinaryselected,datedbooksfailfreshness. EarlycarrycanbeatAaveifpaidsoon,notguaranteed;endcarryfails. No blindremoteorder.",
+  "reopen_condition": "VerifiedmathNO/officialresult/materialfootballfacts orunderwrittenconditionalfreshprice,thenallgates.",
+  "report_markdown": "# 440 \u00b7 Troms\u00f8, Eliteserien champion\n\n**Valued YES0.01% / NO99.99%; no entry.** Broad YES0\u20132% is judgmental uncertainty, not a calibrated interval. Ordinary10pp entry reserve gives selected YES0/NO89.99%. Eligible open contract, not a factual exclusion.\n\nFull rule: named league champion; early NO once championship is impossible; multiple champions use alphabetical order; cancellation/no champion after Dec20 23:59ET goes to Other. Official league information/credible consensus govern. Administrative and adjudication uncertainty remain.\n\n**23 matches, not24.** Root reconstructed all184 played matches across23 complete rounds, matching all16 official table rows. Round24 is included; postponed round12 is outstanding. Adding round24 again falsely implies41/59/59 and elimination; that discarded hypothesis was corrected before any forecast/quote. Independent NFF table, remaining fixtures and2026 regulations confirm30games,3-1-0points and goal-difference-first tiebreaks. Troms\u00f840points/+11GD; Bod\u00f8/Glimt56/+38, Viking56/+37; seven matches remain, so not eliminated.\n\nFour coupled games remain: Viking\u2013Troms\u00f8 Oct25, Bod\u00f8\u2013Viking Oct30, Troms\u00f8\u2013Bod\u00f8 Nov8, Troms\u00f8\u2013Viking Nov21. Troms\u00f8 ceiling61 requires both leaders to gain at most5points; the26\u201327GD deficit hurts tied-point routes. Other contenders, sanctions, cancellation and playoff timing add risk.\n\nPrequote primary model: shrink23-game GF/GA with5 league-mean pseudogames,1.12home advantage, independent Poisson W/D/L, enumerate81 joint outcomes of the four shared games, convolve other fixtures. Current/form-shock/extreme common-collapse scenarios have90/9/1% handweights and yield4.34566e-5 weighted three-contender envelope with5% tie credit. Ignoring other contenders favors Troms\u00f8. Regime weights/tie credit are unfitted; no lineup/xG calibration or measured rare-event frequency. Primary rounds to1e-4 YES with extra model/administrative skew; broad0\u20132%. Seven future games prevent claiming a measured short-horizon bond tail, so no unsupported K5 exemption.\n\n| Side / size | Captured taker cost | Central profit | Selected profit |\n|---|---:|---:|---:|\n| YES100 |1.12665|-1.11665|-1.12665|\n| NO5 |4.98060|+.01890|\u2212.48110|\n\n06:46:40 capture:3%\u00d7p(1\u2212p) taker fee,5share minimum/1milli tick. Both books568.65s old, failing180s freshness; these are dated planning observations. YES100 walks from1c through deeper asks and clears1USD route; it fails central even at the minimum tick. NO995milli maker5 gives+.02450central/\u2212.47550selected. Remote\u2264899milli NO has no underwritten conditional-fill margin; no blind bid.\n\nEarly elimination may shorten holding: dated3.2035%Aave held constant turns4.98060 into4.98361/4.98663/4.98964 over7/14/21days, below4.99950central payout.62day cost5.00735 exceeds even5maximum. Do not automatically charge the full end window, assume immediate settlement, or omit gas/routing/venue risk. Tiny central profit fails the selected gate; Aave/known alternatives win the present allocation comparison.\n\nDated06:22 account195.90gas-inclusive/190.09tradingmid/185.89indicative depth,3originalunfilled bids/6.50. No Troms\u00f8 holding; NO5 would risk4.98 and share venue/sports risk. Any later entry needs fresh account/collateral/eligibility/fee/books/caps and vetted writer. No order, forecast-prior, funding or watcher change. Reopen on verified mathematical elimination/official result, material football evidence or a genuinely underwritten fresh price.\n\n[Sources](../../../data/deep_review_20261017/work/0440_followup_facts_0640.json) \u00b7 [Reconstruction](../../../data/deep_review_20261017/work/0440_results_reconstructed_0643.json) \u00b7 [Prequote model](../models/0440_primary_model_0648.json) \u00b7 [Economics](../../../data/deep_review_20261017/work/0440_economics_0652.json).\n"
+}

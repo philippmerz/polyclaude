@@ -1,0 +1,125 @@
+{
+  "review_index": 451,
+  "status_at_collection": "pending; no ledger start or record",
+  "identity": {
+    "id": "1285079",
+    "conditionId": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+    "question": "Will the Republican Party win the VA-05 House seat?",
+    "slug": "will-the-republican-party-win-the-va-05-house-seat",
+    "endDate": "2026-11-04T04:59:00Z",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "criteria_sha256": "cff14e17d2e6e47fc52ace581ac4342e616263fdfb277eb0aeafe9a2d64c8181"
+  },
+  "resolution_rules_full": "This market will resolve according to the party of the candidate who wins the VA-05 congressional district seat in the U.S. House of Representatives in the 2026 midterm elections. The midterm elections will take place on November 3, 2026.\n\n​A candidate's party will be determined by their ballot-listed or otherwise identifiable affiliation with that party at the time all of the 2026 House elections are conclusively called by this market's resolution sources. A candidate without a ballot-listed affiliation to either the Democrat or Republican parties will be considered a member of one of these parties based on the party with which they most recently expressed their intent to caucus at the time all of the House elections are conclusively called by this market's resolution sources.\n\nThis market will resolve based on the result of the election as indicated by a consensus of credible reporting. If there is ambiguity, this market will resolve based solely on the official results as reported by the United States government, specifically the Federal Election Commission (https://www.fec.gov/).",
+  "facts": {
+    "november_3_federal_candidate_list_va05": "Member, House of Representatives 5th District Democratic Tom S. P. Perriello No Lily@TomPerriello.com TomPerriello.com 540-309-7392 415 Grassmere Rd Charlottesville VA 22903-9211 Member, House of Representatives 5th District Republican John J. McGuire III Yes Ramona@McGuireVA.com McGuireVA.com 434-391-4546 PO Box 242 Manakin Sabot VA 23103-0242 Member, House of Representatives 5th District Independent Cooke C. Harvey No va5cookeharvey@gmail.com 302-598-0474 111 Dove Ln Amherst VA 24521-3642 Member, House of Representatives 6th District Democratic Beth A. Macy No papergirlmacy@gmail.com bethmacyforcongress.com 2330 Maiden Ln SW Roanoke VA 24015-2212 Member, House of Representatives 6th District Republican Ben L.",
+    "primary_results_official_flags_and_aggregates": {
+      "Democratic": {
+        "official_results_flag": true,
+        "event_name": "2026 August Democratic Primary",
+        "as_of_utc": "2026-08-18T17:25:49.4783223Z",
+        "district_rows_aggregated": 909,
+        "candidate_votes": [
+          {
+            "name": "Rob W. \"T-ski\" Tracinski",
+            "party": "Democratic",
+            "votes": 2160
+          },
+          {
+            "name": "Suzanne K. \"Dr. K\" Krzyzanowski",
+            "party": "Democratic",
+            "votes": 5483
+          },
+          {
+            "name": "Tom S. P. Perriello",
+            "party": "Democratic",
+            "votes": 30112
+          }
+        ]
+      },
+      "Republican": {
+        "official_results_flag": true,
+        "event_name": "2026 August Republican Primary",
+        "as_of_utc": "2026-08-18T17:23:24.6633332Z",
+        "district_rows_aggregated": 606,
+        "candidate_votes": [
+          {
+            "name": "Melanie V. Lucero",
+            "party": "Republican",
+            "votes": 7914
+          },
+          {
+            "name": "John J. McGuire III",
+            "party": "Republican",
+            "votes": 42286
+          }
+        ]
+      }
+    },
+    "district_map": {
+      "official_state_notice": "Virginia Department of Elections reported that the Supreme Court ruling voided the April 21, 2026 redistricting referendum and no changes will be made to congressional boundaries that existed before it for 2026 primary/general elections.",
+      "current_map_url": "https://www.elections.virginia.gov/casting-a-ballot/redistricting/interactive-map/",
+      "ruling_notice_date": "2026-05-08"
+    },
+    "direct_poll": {
+      "pollster_source": "Washington Post–Schar School of Policy and Government",
+      "field_dates": "2026-09-23 to 2026-09-28",
+      "population": "likely voters",
+      "reported_va05_result_excerpt": "In Virginia’s 5th District, Republican incumbent John McGuire holds a narrow margin with 51 percent over Democrat challenger and former congressman Tom Perriello. The Post describes Perriello as “modestly” behind, despite being in a district Trump won by double digits in 2024. “That these two GOP-leaning districts are so competitive tells all,” Mark Rozell , dean of the Schar School, told The Post . “The national cli",
+      "scope_note": "Descriptive poll observation only; not converted to a win probability."
+    },
+    "gap": "State results front-end is a JavaScript shell; official API metadata identifies official results and result CSV exports were captured. No certified November general-election results exist yet as of this source snapshot."
+  },
+  "sources": [
+    {
+      "label": "Virginia Department of Elections November federal candidate list",
+      "url": "https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:43:21.247626Z",
+      "received_utc": "2026-10-20T06:43:21.963260Z",
+      "body_bytes": 48409,
+      "body_sha256": "837b6afbe31ab5f6243aacb7be6242abc0c6f90342e9a06afdf04b973a2382b9",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_va_federal_candidate_list/451_va_federal_candidate_list.receipt.json"
+    },
+    {
+      "label": "Official Virginia August Democratic primary result CSV",
+      "url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election Results_e8e26b96-2247-49b6-8ca5-cedc4d01419e.csv",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:45:01.020835Z",
+      "received_utc": "2026-10-20T06:45:01.953784Z",
+      "body_bytes": 1637459,
+      "body_sha256": "4a70e3a2972baf7de3b6ac95c662c021cd7d16712f50e04ba4944bdb36d34170",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_dem_primary_results_csv/451_dem_primary_results_csv.receipt.json"
+    },
+    {
+      "label": "Official Virginia August Republican primary result CSV",
+      "url": "https://enr.elections.virginia.gov/cdn/results/d2c804ee-4ec2-46bb-91d7-5b41526eab03/Election Results_d34af9a5-2991-46c9-b1f4-afd8c4b82765.csv",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:45:02.012876Z",
+      "received_utc": "2026-10-20T06:45:02.529361Z",
+      "body_bytes": 2666952,
+      "body_sha256": "33917d7f3a6a41db8044207abb20ea8f96a58a7c6b8f44ff6ccb21d77d83992e",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_rep_primary_results_csv/451_rep_primary_results_csv.receipt.json"
+    },
+    {
+      "label": "Virginia Department of Elections notice of Supreme Court ruling/current boundaries",
+      "url": "https://www.elections.virginia.gov/news-releases/supreme-court-of-virginia-voids-april-21-redistricting-referendum-2.html",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:31.621901Z",
+      "received_utc": "2026-10-20T06:42:31.906807Z",
+      "body_bytes": 31358,
+      "body_sha256": "77ee8bc730fad82d1352e4a0e5307e3c2a4e7bef35979aac37c5fb35a2dea53f",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_va_redistricting_ruling/451_va_redistricting_ruling.receipt.json"
+    },
+    {
+      "label": "Original Washington Post–Schar School poll release",
+      "url": "https://schar.gmu.edu/news/2026-10/washington-post-schar-school-poll-shows-democrats-leading-bellwether-districts",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:31.917925Z",
+      "received_utc": "2026-10-20T06:42:32.221095Z",
+      "body_bytes": 100875,
+      "body_sha256": "f1a90feb2893dc95bb637fed7a9653ddadc0e2bdf9976a334e575b4c3349cc38",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_schar_poll/451_schar_poll.receipt.json"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "schema": "0440.source_url_clarification.v1",
+  "reviewed_utc": "2026-10-20T07:07:23.724706+00:00",
+  "receipt": "logs/deep_review_20261017/case0440_followup_0640/nff_fixtures.receipt.json",
+  "raw_sha256": "f98a17e7dfaec2e50f150b9e041cdeddc33a31e9ce3c837443eda50dd5440d70",
+  "recorded_request_url": "https://www.fotball.no/fotballdata/turnering/hjem/",
+  "response_title": "Eliteserien 2026 - Norges Fotballforbund",
+  "response_canonical_url": "http://www.fotball.no/fotballdata/turnering/hjem/",
+  "limit": "Original sanitized receipt and actual canonical link both omit query. Response title identifies2026; exact request-query provenance remains incomplete. Do not call a navigation URL the canonical URL. Source bytes/football facts/model/report unchanged; no financial action."
+}

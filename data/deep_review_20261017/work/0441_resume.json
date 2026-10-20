@@ -1,14 +1,20 @@
 {
   "review_index": 441,
-  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
-  "phase": "collector facts saved only; not started, root-verified, valued or excluded",
+  "updated_utc": "2026-10-20T07:07:23.724706+00:00",
+  "phase": "Completed, root-verified, recorded/indexed individually; excluded_factual",
   "source_paths": [
-    "work/0441_facts_0500.json"
+    "work/0441_facts_0500.json",
+    "work/terminal_0654/case_0441.json"
   ],
   "facts": {
     "path": "work/0441_facts_0500.json",
     "sha256": "a4186523fc083970325992ae2094042ffded4c64be3b921c699c4b5ab2b4a29e",
     "bytes": 3915
   },
-  "status_limit": "No forecast/decision; read exact full frozen rule and verify raw evidence before substantive primary review. No automatic retry/entry."
+  "status_limit": "Dated completed research, not execution authority; do not repeat record. Reopen material evidence through immutable revision.",
+  "report": {
+    "path": "research/2026-10-17-deep-review/evaluations/0441.md",
+    "sha256": "e203884756bc4f78f007acdd94260db5f76bd886142fa41683151b4dc7ee1f72"
+  },
+  "next_step": "Use effective ledger/revision; next pending443. No automatic entry or retry."
 }

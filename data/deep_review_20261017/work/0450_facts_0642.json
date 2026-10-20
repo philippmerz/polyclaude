@@ -1,0 +1,94 @@
+{
+  "review_index": 450,
+  "status_at_collection": "pending; no ledger start or record",
+  "identity": {
+    "id": "2332981",
+    "conditionId": "0x50f740162f52bcef8c8035e5b175c7ad6f5230b7ffbed4cbd5733ff93fc91168",
+    "question": "Will no one leave the Trump Cabinet before 2027?",
+    "slug": "will-no-one-leave-the-trump-cabinet-before-2027-819",
+    "endDate": "2027-01-01T04:59:00Z",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "criteria_sha256": "3865b61b96d9d0e9b49c8ec7d68dbca634b148f4791a3a3a6d0703a6a53278f5"
+  },
+  "resolution_rules_full": "This market will resolve based on the next individual announced to leave the Trump Cabinet, or who otherwise ceases to be a member of the administration. If no one leaves by December 31, 2026, 11:59 PM ET, this market will resolve to “None before 2027”.\n\nAn announcement of an individual's resignation/removal before this market's end date will immediately resolve this market to \"Yes\", regardless of when the resignation/removal takes effect.\n\nIf multiple individuals announce departures or are removed at the same time, the market will resolve to the individual who actually leaves office first. If they leave simultaneously, the market will resolve to the individual whose last name comes first alphabetically.\n\nFor the purposes of this market, the Cabinet includes Vice President, the heads of the 15 executive departments, as well as the Administrator of the Environmental Protection Agency (EPA), the President’s Chief of Staff, the Director of National Intelligence (DNI), the Director of the Office of Management and Budget (OMB), the Director of the Central Intelligence Agency (CIA), the United States Trade Representative (USTR), the Ambassador to the United Nations, the Chair of the Council of Economic Advisers (CEA), and the Administrator of the Small Business Administration (SBA). Acting officials serving in these roles are not included. The Director of the Office of Science and Technology Policy (OSTP) is not considered Cabinet-level under the current Trump administration and is excluded from this market.\n\nAn individual will be considered to have left the Cabinet if they resign from or are removed from any Cabinet-level position, even if they are subsequently appointed to a different Cabinet-level role.\n\nIf a candidate who is not already listed, assumes a listed cabinet position they will be added to the market. However, candidates who have merely been nominated for a cabinet position will not be considered to have left, even if their nomination is rejected or withdrawn.\n\nThe primary resolution source will be official information from the Trump administration, however a consensus of credible reopening may also be used.",
+  "facts": {
+    "current_white_house_cabinet_page_roles": [
+      {
+        "role": "DHS secretary",
+        "person": "Markwayne Mullin",
+        "source_phrase": "the President and later CEO of World Wrestling Entertainment, Inc. (NYSE: WWE). Markwayne Mullin Secretary of Homeland Security Markwayne Mullin serves as the 9th Secretary of the Department of Homeland Security. Prior to serving in President Trump’s Cabinet, Secretary Mullin represented the people of Oklahom"
+      },
+      {
+        "role": "Attorney General",
+        "person": "Todd Blanche",
+        "source_phrase": "reign Relations. He lives with his husband and two children in Washington, D.C. Todd Blanche Attorney General The Honorable Todd Blanche is currently the United States Attorney General, and previously served as the 40th Deputy Attorney General of the United States. He oversees the work of the 115,000 dedicate"
+      },
+      {
+        "role": "Director of National Intelligence",
+        "person": "Jay Clayton",
+        "source_phrase": "ied to Kathryn Burgum, a nationally recognized advocate for addiction recovery. Jay Clayton Director of National Intelligence Jay Clayton was sworn in as the ninth Director of National Intelligence on August 3, 2026, serving as the head of the Intelligence Community and the President’s principal adviser for i"
+      },
+      {
+        "role": "Labor Secretary",
+        "person": "Keith Sonderling",
+        "source_phrase": "ogether, they’ve raised four children: Amanda, Daniella, Anthony, and Dominick. Keith Sonderling Secretary of Labor Keith Sonderling serves as U.S. Secretary of Labor, where he is the President’s principal advisor on labor and workforce matters and leads the Department’s efforts to administer and enforce fede"
+      }
+    ],
+    "official_explicit_departure_text": {
+      "person": "Kristi Noem",
+      "official_source_context": "White House March 16 release about Markwayne Mullin nomination; quotes describe Noem as leaving office and taking a new Special Envoy role."
+    },
+    "official_labor_context": {
+      "person": "Lori Chavez-DeRemer",
+      "source_title": "Report of Investigation: Lori Chavez-Deremer, Former Secretary, U.S. Department of Labor",
+      "source_type": "DOL Office of Inspector General report; title labels her former Secretary; not itself a contemporaneous departure announcement."
+    },
+    "direct_announcement_gaps": [
+      "No official departure announcement for Pam Bondi or Tulsi Gabbard was recovered in this bounded pass. The current White House page identifies Todd Blanche as Attorney General and says Jay Clayton was sworn in as DNI on 2026-08-03; these successor facts are not treated as an independent departure announcement for the predecessor.",
+      "The White House July 13 Sonderling nomination is not counted as proof of a completed appointment/departure. Acting status and later roles do not automatically satisfy frozen rule."
+    ],
+    "no_absence_inference": true
+  },
+  "sources": [
+    {
+      "label": "Current White House Cabinet page",
+      "url": "https://www.whitehouse.gov/administration/cabinet/",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:23.993349Z",
+      "received_utc": "2026-10-20T06:42:24.194054Z",
+      "body_bytes": 326852,
+      "body_sha256": "5adfa86b906a806b6bb94ae135c226ef18fe3f5f9b4f5b910b5dd08a20a580ed",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/450_whitehouse_cabinet/450_whitehouse_cabinet.receipt.json"
+    },
+    {
+      "label": "White House Mullin nomination page; explicit Noem leaving-office context",
+      "url": "https://www.whitehouse.gov/releases/2026/03/sen-markwayne-mullins-nomination-for-dhs-secretary-draws-bipartisan-acclaim/",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:24.213790Z",
+      "received_utc": "2026-10-20T06:42:24.957696Z",
+      "body_bytes": 308811,
+      "body_sha256": "36ba421d42bbfb0a4af454f25fb9df32503dffce2c4f603b298636644c391204",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/450_whitehouse_noem_mullin/450_whitehouse_noem_mullin.receipt.json"
+    },
+    {
+      "label": "DOL OIG report title identifies former Labor Secretary",
+      "url": "https://www.oig.dol.gov/public/reports/oa/2026/50-26-004-01-001.pdf",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:24.976546Z",
+      "received_utc": "2026-10-20T06:42:29.486880Z",
+      "body_bytes": 4200899,
+      "body_sha256": "cecc152dc2d0058f654e21da60f63345e8ae8ad4ad4d3bcfec72e0b5ad34005c",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/450_dol_oig_former_labor/450_dol_oig_former_labor.receipt.json"
+    },
+    {
+      "label": "White House July 13 nomination; retained as context only, not departure proof",
+      "url": "https://www.whitehouse.gov/presidential-actions/2026/07/nominations-sent-to-the-senate-3fd0/",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:42:30.266298Z",
+      "received_utc": "2026-10-20T06:42:30.770380Z",
+      "body_bytes": 289562,
+      "body_sha256": "c2397bac41cb70b663c1f2527090d833b6565301f3c906812906bfb9b430dda5",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/450_whitehouse_sonderling_nomination/450_whitehouse_sonderling_nomination.receipt.json"
+    }
+  ]
+}

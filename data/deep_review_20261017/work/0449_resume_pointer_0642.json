@@ -1,0 +1,15 @@
+{
+  "schema": "polyclaude.deep_review_fact_resume_pointer.v1",
+  "review_index": 449,
+  "status": "pending",
+  "id": "5724276",
+  "conditionId": "0x577f491723004d9084548596797365fadb0abc22dd01e64211f71f606490b5e0",
+  "question": "Will the highest temperature in Miami be between 86-87\u00b0F on October 17?",
+  "criteria_sha256": "f333f5591df0290676dfd4ded681a91986a77dff81e5cb30249dd65ed7c36ef7",
+  "frozen_universe_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+  "resume_packet_verified": true,
+  "facts_path": "data/deep_review_20261017/work/0449_facts_0642.json",
+  "facts_sha256": "7ce886b4ea650ad7da31abb9ae6b2e6409f0b89fef8ec4acd07338cf44367817",
+  "evaluation_or_revision_written": false,
+  "next_step": "Root-owned sequential review; this file is a fact pointer only."
+}

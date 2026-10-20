@@ -1,0 +1,49 @@
+{
+  "schema": "finite_goal_progress.v1",
+  "updated_utc": "2026-10-20T07:07:23.724706+00:00",
+  "previous_goal_turn_classification": "progress",
+  "evidence": "438439 completed/verified+fee-disabled reader repaired; subsequentboundedcf20726fullsafety/currentfinancialCSV complete, no researchcontinuationduringtick.",
+  "current_turn_progress": "440valued0.01%YES/noentry;184matches reconstruct23played, round24included/round12postponed. 441closed/resolvedexactcontract factuallyexcluded. 442>=775TOpenRouter44%YES/noentry; pre-own-quote200kregimereplay, bothside/maker/carry/joint112risk considered. Eachcaseimmutablehash/ledger/index/checkpoint verified beforeadvance. No newfinancialaction/heldprior/producer/CSV.",
+  "counts": {
+    "completed_valuations": 379,
+    "blocked_after_in_depth_review": 14,
+    "factual_exclusions": 368,
+    "pending": 2239,
+    "base_records": 761,
+    "revisions_written": 69,
+    "active_indices": []
+  },
+  "last_completed": {
+    "index": 442,
+    "status": "valued",
+    "report": "evaluations/0442.md",
+    "sha256": "fde3559e9e7f6e07c5e7da3f9cb785971aa863f6bf1edd59f20e88be305e5bfc"
+  },
+  "next": [
+    443,
+    445,
+    446,
+    449,
+    450,
+    451
+  ],
+  "financial_state": "06:22producer195.90incl5.81gas/trading190.09mid185.89indicativefee-netdepth,CSV232.3originalLIVE0bids6.50/127unchangedtrades/9indexedpositions. pUSD12.751290arithmetic,notcollateralproof. No newfinancialaction/heldprior/source mutation.",
+  "next_existing_safety": "2026-10-20T10:00:00Z",
+  "safety_proof": "research/2026-10-20-060240-checkin.md",
+  "goal_state": "Full finite3000scope incomplete; current bounded check/follow-up ends. No lifecycle mutation/newtimer/idlecontinuation. Next authorized finite work starts443.",
+  "next_facts": {
+    "441": "work/0441_resume.json",
+    "442": "work/0442_resume.json",
+    "443": "work/0443_resume.json",
+    "445": "work/0445_resume.json",
+    "446": "work/0446_resume.json"
+  },
+  "future_facts_only": "449450451 collected separately/unstarted, customNNNN_resume_pointer_0642 paths. No cheapmodelselection/rejection.",
+  "telegram": "Next400valued/materialfinding/globalblock;100/200already notified, no newmaterialfinancialfinding.",
+  "verification": "work/goal0019_integration_verified.json",
+  "new_case_pointers": {
+    "440": "work/0440_resume.json",
+    "441": "work/0441_resume.json",
+    "442": "work/0442_resume.json"
+  }
+}

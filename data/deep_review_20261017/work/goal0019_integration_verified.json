@@ -1,0 +1,34 @@
+{
+  "schema": "goal0019.completed_case_integration.v1",
+  "verified_utc": "2026-10-20T07:04:27.711470+00:00",
+  "records": [
+    {
+      "index": 440,
+      "status": "valued",
+      "report_sha256": "1414cf42fe195daebc3532c1f46a8dd82829ae231d7142e81a39292f6a13c8f1"
+    },
+    {
+      "index": 441,
+      "status": "excluded_factual",
+      "report_sha256": "e203884756bc4f78f007acdd94260db5f76bd886142fa41683151b4dc7ee1f72"
+    },
+    {
+      "index": 442,
+      "status": "valued",
+      "report_sha256": "fde3559e9e7f6e07c5e7da3f9cb785971aa863f6bf1edd59f20e88be305e5bfc"
+    }
+  ],
+  "checkpoint_sha256": "fca225d5159ee42da9b978f36af296b34ae560066b65b754f87963b0efc5ce4a",
+  "ledger_sha256": "93d9681c9dfed0ed142e0624e52d3621395bc261bc53e3f9cf1ae2c53d8e24fe",
+  "counts": {
+    "completed_valuations": 379,
+    "blocked_after_in_depth_review": 14,
+    "factual_exclusions": 368,
+    "pending": 2239,
+    "base_records": 761,
+    "revisions_written": 69,
+    "active_indices": []
+  },
+  "next": 443,
+  "limit": "Only research/save/index state; no new account or execution certificate."
+}

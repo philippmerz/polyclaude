@@ -1,0 +1,45 @@
+{
+  "review_index": 441,
+  "market_id": "5481968",
+  "condition_id": "0x4aac02964a330d36b7685fb08613c98f6b65af6772cc022d04504b91261fac02",
+  "criteria_sha256": "4b144f7406a893780994efb876f3cf788c2aed2063a38961ac903873372375b5",
+  "token_ids": [
+    "42635689873033784873895516511056409212428964484051948350171399576272845407921",
+    "76720928547665678419633041198850727118119463464469426078089369298313078023509"
+  ],
+  "status": "excluded_factual",
+  "literal_analysis": "Fullnamedoutcomesrule/strict>3/overtime/postponement/cancel50-50read; title-2.5tensiondoesnotchangeobserved4pointwin.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5481968",
+      "observed_utc": "2026-10-20T06:52:14.604675+00:00",
+      "finding": "ActualexactGamma closed/acceptingfalse/UMAresolved/terminalnamedprices1,0;allidentitiesandrawgzipverified."
+    },
+    {
+      "url": "https://www.wnba.com/game/1042600301/box-score",
+      "observed_utc": "2026-10-20T04:59:18.002636Z",
+      "finding": "RootactualgameobjectFinal/home68away64/Oct17time,notpregameprobability."
+    },
+    {
+      "url": "https://dream.wnba.com/news/dream-falls-in-game-1-of-wnba-finals",
+      "observed_utc": "2026-10-20T04:59:18.796211Z",
+      "finding": "Actualofficialteamrecap68\u201364loss,publishedOct17."
+    }
+  ],
+  "forecast": {
+    "not_estimated": "Resolvedhistoricalcontract;no newfutureprobability or completedvaluation."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "named_outcomes": [
+      "Golden State Valkyries",
+      "Atlanta Dream"
+    ],
+    "accessible_entry_route": "none_current_exactCLOBclosed/acceptingfalse",
+    "not_executable_quotes": "terminal1/0marksnotorders",
+    "fees_depth_sizing": "notapplicabletonewclosedcontractentry"
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonacceptingcontract,notamodelselection.",
+  "reopen_condition": "Verifiedexactreopening/lawfulvettedroute,thenfreshfullreview.",
+  "report_markdown": "# 441 \u00b7 Golden State\u2013Atlanta spread, October17\n\n**Factual exclusion: exact contract is closed/resolved and rejects orders.** This is not a valuation, probability-based rejection or a forecast from a past score. No new route to buy either named outcome through the vetted CLOB path remains.\n\nRead the complete frozen rule: Golden State must win by strictly more than3points; otherwise Atlanta wins. Overtime counts; postponement waits for completion, cancellation pays50\u201350. The title says\u22122.5, which differs for a3-point result; literal threshold retained. Actual4-point margin satisfies both, so this textual tension does not change this observed result.\n\nRoot verified allthree saved raw/gzip source pairs and independently read the WNBA game object: ID1042600301, Oct17 19:30UTC, Final, homeGoldenState68/awayAtlanta64. The Atlanta team recap separately reports68\u201364 defeat, publishedOct17 22:57:21UTC. CaptureOct20 is not a new game or a pregame predictor.\n\nFresh Gamma06:52:14.604675UTC: exact market5481968, condition/token/outcome/rules/end identities all match; closedtrue, acceptingOrdersfalse, UMAresolved, named outcome prices1/0. Root verified new raw/gzip hashes and actual fields, not just the helper's terminal_candidate label. Active=true alone does not mean open for orders. No on-chain payout-denominator or current owned-token claim is made.\n\nBoth named outcomes considered: no current CLOB entry route, so fees/depth/maker sizing and hypothetical return forecasts cannot establish an accessible new investment. Do not fabricate executable prices from terminal1/0 marks, reopen an already-settled forecast, or turn this into a win-probability point. No order, transfer, redemption or held-prior change.\n\nReopen only on verified exact-contract reopening with a lawful vetted route, then reread rules/live books/current facts and apply all execution gates.\n\n[Fresh exact status](../../../data/deep_review_20261017/work/terminal_0654/case_0441.json) \u00b7 [Official-source facts](../../../data/deep_review_20261017/work/0441_facts_0500.json).\n"
+}

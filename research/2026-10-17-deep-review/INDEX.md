@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T06:07:23.092909+00:00
+Updated: 2026-10-20T07:03:43.432004+00:00
 
-**377 valuations saved; first milestone100:** 377 valued; 14 blocked after in-depth review. 367 factual exclusions separately; 2242 pending.
+**379 valuations saved; first milestone100:** 379 valued; 14 blocked after in-depth review. 368 factual exclusions separately; 2239 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -451,6 +451,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |437|[Will STRC hit $100 by December 31?](evaluations/0437.md)|blocked_after_review|BLOCKED_AFTER_REVIEW: case-specifichistoricalminute/sourcebridge unpriced, noeconomicrejection orcountedvaluation; no newfinancialaction/globalgoalblock.|
 |438|[Iran full airspace closure by October 31, 2026?](evaluations/0438.md)|valued|NO_ENTRY: YES positive central fails selected at taker and maker; NO observed routes fail central and selected. RemoteNO narrow unconditional margin unsupported after conditional news/fill, carry and portfolio risk; no blind order.|
 |439|[Will the Democratic Party win the CA-01 House seat?](evaluations/0439.md)|valued|NO_ENTRY: YESfailscentral/selected; NOpositivecentralfailsselected atobservedtaker/maker. RemoteNO lacks evidenced conditionalfill margin; no blindorder.|
+|440|[Will Tromsø win Norway Eliteserien?](evaluations/0440.md)|valued|NO_ENTRY: YESfailscentral;NOtinycentralprofitfailsordinaryselected,datedbooksfailfreshness. EarlycarrycanbeatAaveifpaidsoon,notguaranteed;endcarryfails. No blindremoteorder.|
+|441|[Spread: Golden State Valkyries (-2.5)](evaluations/0441.md)|excluded_factual|EXCLUDED_FACTUAL: exactclosed/resolved/nonacceptingcontract,notamodelselection.|
+|442|[Will OpenRouter process at least 775T tokens from Oct 26 to Nov 22?](evaluations/0442.md)|valued|NO_ENTRY: YESpositivecentralbutfailsselected/maker;NOnegativecentral. Remoteconditionalfillunmeasured; no blindbid.|
 |444|[Will the Republicans win the Georgia Senate race in 2026?](evaluations/0444.md)|valued|YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.|
 |447|[Spread: Bowling Green (-6.5)](evaluations/0447.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |448|[Will DeepSeek have the second highest OpenRouter market share the week of October 12?](revisions/0448_20261018T120932860077Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
