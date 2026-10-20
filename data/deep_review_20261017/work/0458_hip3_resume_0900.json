@@ -1,0 +1,7 @@
+{
+  "case": 458,
+  "full_rule": "scripts/deep_review_resume.py --index 458",
+  "facts_unit": "data/deep_review_20261017/work/0458_hip3_facts_0900.json",
+  "capture_dir": "logs/deep_review_20261017/case0458_hip3_facts_0900/public",
+  "updated_utc": "2026-10-20T08:54:01Z"
+}

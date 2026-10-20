@@ -1,0 +1,7 @@
+{
+  "case": 456,
+  "full_rule": "scripts/deep_review_resume.py --index 456",
+  "facts_unit": "data/deep_review_20261017/work/0456_nomination_facts_0851.json",
+  "capture_dir": "logs/deep_review_20261017/case0456_official_nomination_0851",
+  "updated_utc": "2026-10-20T08:50:59Z"
+}

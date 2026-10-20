@@ -1,0 +1,50 @@
+{
+  "schema": "bounded_closeout_verification.v1",
+  "verified_utc": "2026-10-20T09:52:17.500477+00:00",
+  "ledger_append_only": true,
+  "revisions_append_only": true,
+  "counts_sum": 3000,
+  "current_reports_verified": [
+    {
+      "index": 14,
+      "report": "research/2026-10-17-deep-review/revisions/0014_20261020T091736436079Z.md",
+      "sha256": "b93d8b7a66d05ca53ab42191d48163171f2c36daedc9d7e8b7d3832424bff525"
+    },
+    {
+      "index": 161,
+      "report": "research/2026-10-17-deep-review/revisions/0161_20261020T091737364564Z.md",
+      "sha256": "d045b818e3ac0cfa7d61e62d2fdfc0b814f0bd505de37b98f95c4c1a8bbb38ce"
+    },
+    {
+      "index": 274,
+      "report": "research/2026-10-17-deep-review/revisions/0274_20261020T091738275825Z.md",
+      "sha256": "9bf86a5cfc7742135041c70877cbd1cf85c0b6c255e2a2356444fa54d6d69d62"
+    },
+    {
+      "index": 370,
+      "report": "research/2026-10-17-deep-review/revisions/0370_20261020T091739157768Z.md",
+      "sha256": "dff5bc1662e1c94c634b152edeb7533099773457d96ca0524beb66a21c88102a"
+    },
+    {
+      "index": 451,
+      "report": "research/2026-10-17-deep-review/evaluations/0451.md",
+      "sha256": "175163f2b4057398b249486cc6bb541784e10eae852656d2740e2872fb44f78e"
+    },
+    {
+      "index": 452,
+      "report": "research/2026-10-17-deep-review/revisions/0452_20261020T090134479838Z.md",
+      "sha256": "288bda9adac89559cf92499b5ce653c3b6020742491aa908437b266071cb0df4"
+    },
+    {
+      "index": 454,
+      "report": "research/2026-10-17-deep-review/evaluations/0454.md",
+      "sha256": "2df454224f4fbc10729618d82504abd6874cc8e5591a31d40bee04f98369db67"
+    }
+  ],
+  "newCSV_row_only": true,
+  "CSV_rows": 234,
+  "chart_checks": "10pass",
+  "new_financial_action": "case14posted/canceled0; onlytargetreservationretired; current3originalBUYs6.50",
+  "next": "existing10light/14full/earliermaterialevent; no newgoal/timer/idlecontinuation",
+  "telegram": "one materialsummarysent"
+}

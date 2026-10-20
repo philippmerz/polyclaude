@@ -1,0 +1,216 @@
+{
+  "schema": "tick20261020T0918_candidate14_account_facts.v1",
+  "collection_window_utc": [
+    "2026-10-20T09:18:20Z",
+    "2026-10-20T09:19:30Z"
+  ],
+  "timing_basis": "call_window, not wire timing",
+  "private_capture_dir": "logs/tick20261020T0918_candidate14_account (0700); raw auth payloads and CLI stdout/stderr private.",
+  "case14_identity": {
+    "review_index": 14,
+    "condition_id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "question": "Will Anthropic have the best AI model at the end of December 2026?",
+    "criteria_sha256": "97cf85eb21709fb3165022fa3e248ad74648ceea3a1bccfd6629f8f45b7e7b72",
+    "ordered_token_ids": "[\"43595531958558267934455886300539818619407063141211246186008687659488782680099\", \"101106027123457230511923560603100933782439732335133293995646065340833826927163\"]",
+    "market_id": "2431413",
+    "arena_identity_matches": true,
+    "arena_quote_sha256": "966fcaef3d736221502a33c5f2c5413fdf1b5c5997cf22366d4ecf6e84a5647c"
+  },
+  "cli_capture_semantics": "CLI receipts are sdk_result_serialization envelopes of stdout/stderr/returncode; response_status null; not raw HTTP evidence.",
+  "cli_commands": [
+    {
+      "name": "bankroll",
+      "returncode": 0,
+      "stdout_sha256": "8ed9c77a79d06924911ec85e7a2121f82edab182e192572b26686b3d04600160",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "positions",
+      "returncode": 0,
+      "stdout_sha256": "4ea2db8f89a7b9ea52b5a3aa7203da806eb93529a979900f6ac439250b9a0d39",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "wallet_status",
+      "returncode": 0,
+      "stdout_sha256": "413ac9695ef98b97da697a21858aafbead558a91f41dc90c3f83caa000085651",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "crypto_status",
+      "returncode": 0,
+      "stdout_sha256": "ba70eeac1119e5d83d99bbe6699d2246d208fcf170d8622f17a73abee5f5c583",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ostium_status",
+      "returncode": 0,
+      "stdout_sha256": "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "exit_analysis",
+      "returncode": 0,
+      "stdout_sha256": "44eb127a3e8db879cf5b567f31b2d73006df37d9537dc17d22d4d24c854bff30",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "bankroll_authoritative": {
+    "one_TOTAL_producer": true,
+    "TOTAL_BANKROLL_usd": 194.2,
+    "reference_usd": 170,
+    "vs_reference_usd": 24.2,
+    "PM_MTM_usd": 34.48,
+    "PM_net_realizable_usd": 28.56,
+    "midpoint_gap_usd": 5.92,
+    "realized_settled_usd": 19.72,
+    "unrealized_marked_usd": -1.29,
+    "unrealized_realizable_usd": -7.21,
+    "gas_excluded_usd": 5.78,
+    "warning": "PM midpoint overstates net realizable; depth/fee estimate non-synchronized."
+  },
+  "positions_cli": {
+    "open_cost_usd": 35.77,
+    "MTM_usd": 34.48,
+    "max_payout_usd": 83.33,
+    "realizable_net_fees_usd": 28.56,
+    "thin_book_warnings": 2
+  },
+  "wallet_status_no_address": [
+    "MATIC: 47.708595",
+    "USDC.e: 0.000000",
+    "USDC: 0.108932",
+    "pUSD: 19.251290",
+    "aave USDC.e: 3.503847",
+    "aave USDC: 122.138348",
+    "pUSD committed to resting BUYs: 6.500000",
+    "pUSD DEPLOYABLE (net of bids):  12.751290",
+    "pUSD balance $19.251290; script arithmetic subtracts $6.50 resting orders and labels $12.751290 deployable; venue free collateral not directly proven."
+  ],
+  "ostium_status": {
+    "open_trades": 0,
+    "active_limits": 0,
+    "USDC_allowance_to_TradingStorage": 0
+  },
+  "crypto_status": "Fresh CLI output captured; Arbitrum/Base/Polygon balances and block heights present, Optimism empty (not an error). See CLI hashes.",
+  "orders": {
+    "count": 3,
+    "fully_paginated_LTE": true,
+    "HTTP_status": 200,
+    "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+    "rows_sanitized": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.12",
+        "expiration": "0"
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "50",
+        "size_matched": "0",
+        "price": "0.03",
+        "expiration": "0"
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.38",
+        "expiration": "0"
+      }
+    ],
+    "three_separate_vetted_details": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.12",
+        "expiration": "0",
+        "associate_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "50",
+        "size_matched": "0",
+        "price": "0.03",
+        "expiration": "0",
+        "associate_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.38",
+        "expiration": "0",
+        "associate_trades_count": 0
+      }
+    ],
+    "details_HTTP_status": [
+      200,
+      200,
+      200
+    ],
+    "all_three_originals_LIVE_zero_matched": true,
+    "remaining_BUY_commitment_usd": 6.5,
+    "same_as_prior073415": true
+  },
+  "trades": {
+    "count": 127,
+    "unique_ids": 127,
+    "fully_paginated_LTE": true,
+    "HTTP_status": 200,
+    "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+    "canonical_rows_sha256": "28a489c2c72999cbfd0a948a5737743794ac232ce5701cc1ffdf18b10b6db363",
+    "prior_count": 127,
+    "exact_same_ordered_rows_as_prior": true
+  },
+  "indexed_positions": {
+    "HTTP_status": 200,
+    "rows": 9,
+    "raw_sha256": "d5725035124efa6aa6573190b8578cd9d3f6a2d3ef9ef8f78dd4c62407300fb7",
+    "case14_rows": 0,
+    "prior_rows": 9,
+    "same_count_as_prior": true
+  },
+  "case14_CTF_balanceOf": {
+    "Yes": {
+      "HTTP": 200,
+      "raw_sha256": "03c573e29725b9b06d95b1d0b0f47816794f85e25a15093d522f24866adb8533",
+      "quantity_shares": 0
+    },
+    "No": {
+      "HTTP": 200,
+      "raw_sha256": "4250c5b4ec77d1e0b1cf00bdfceaf351d4bca8b76fa03534e2924506c8af9c2d",
+      "quantity_shares": 0
+    }
+  },
+  "assessment": "No new fills or case14 holdings observed: 3 original orders remain LIVE with 0 matched; 127 trade rows unchanged by count and canonical hash vs 08:08; indexed portfolio row count unchanged and no case14 rows; CTF Yes/No quantities read from raw balanceOf responses.",
+  "errors_and_limits": {
+    "CLI_or_network_errors": [],
+    "local_collection_issue": "Initial staging had filename collision and parsing/import typos; corrected with separate vetted details and successful CTF reads. No account state was written.",
+    "free_collateral": "not proven; report only pUSD balance and wallet-script arithmetic."
+  },
+  "receipts": {
+    "orders": "logs/tick20261020T0918_candidate14_account/authenticated/orders_p000.receipt.json",
+    "trades": "logs/tick20261020T0918_candidate14_account/authenticated/trades_p000.receipt.json",
+    "details": [
+      "logs/tick20261020T0918_candidate14_account/authenticated_details_vetted/order_detail_0.receipt.json",
+      "logs/tick20261020T0918_candidate14_account/authenticated_details_vetted/order_detail_1.receipt.json",
+      "logs/tick20261020T0918_candidate14_account/authenticated_details_vetted/order_detail_2.receipt.json"
+    ],
+    "indexed_positions": "logs/tick20261020T0918_candidate14_account/indexed_positions/positions.receipt.json",
+    "CTF": [
+      "logs/tick20261020T0918_candidate14_account/ctf_retry3/case14_Yes_balance.receipt.json",
+      "logs/tick20261020T0918_candidate14_account/ctf_retry3/case14_No_balance.receipt.json"
+    ],
+    "CLI": "logs/tick20261020T0918_candidate14_account/cli/"
+  }
+}

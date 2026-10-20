@@ -1,0 +1,11 @@
+{
+  "review_index": 454,
+  "full_rule": "scripts/deep_review_resume.py --index 454",
+  "facts_unit": "data/deep_review_20261017/work/0454_current_org_facts_0915.json",
+  "capture_dirs": [
+    "logs/deep_review_20261017/454_overall_filter_capture_0905",
+    "logs/deep_review_20261017/454_overall_filter_retry_0910",
+    "logs/deep_review_20261017/454_official_alibaba_facts_0915"
+  ],
+  "updated_utc": "2026-10-20T09:05:20Z"
+}

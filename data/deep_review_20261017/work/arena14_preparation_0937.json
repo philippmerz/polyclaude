@@ -1,0 +1,21 @@
+{
+  "schema": "candidate_preparation.v1",
+  "prepared_utc": "2026-10-20T09:28:26.163587+00:00",
+  "index": 14,
+  "classification": "ai-ships-fast-short",
+  "existing_shared_risk": "Kimi HLE and OpenRouter",
+  "prior_before_sha256": "fef841321974b53ce00abbd77453eb7e88dcfbd95fa436ae5a3bdfe6107a31cf",
+  "prior_after_sha256": "ff736430560c1dd8c756f7dd0e20e10dac9a199004148a0a922a93fde8638c60",
+  "config_before_sha256": "1083842374139c720733f73b58f1921bd59276fb6c3cd0e4d67bcacb6fcd1cb5",
+  "config_after_sha256": "99894c7c4c9e6a23053836c1d5332e0e43030af203eb8ddd265aa382b8ea53ae",
+  "added_feed": {
+    "name": "Anthropic Claude model and Arena news",
+    "url": "https://news.google.com/rss/search?q=%28Anthropic+OR+Claude%29+%28model+OR+release+OR+benchmark+OR+Arena+OR+leaderboard%29+after%3A2026-10-01&hl=en-US&gl=US&ceid=US%3Aen"
+  },
+  "added_terms": [
+    "Claude",
+    "Gemini"
+  ],
+  "financial_status": "No reservation/order/holding created. Revert only candidate-specific coverage if final gates reject; keep prior historical preparation explicitly retired.",
+  "reload": "Existing watcher rereads each poll; no restart or new timer."
+}

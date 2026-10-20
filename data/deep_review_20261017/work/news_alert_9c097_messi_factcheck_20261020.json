@@ -1,0 +1,30 @@
+{
+  "schema": "public_news_alert_factcheck.v1",
+  "alert_id": "9c097df963c7432e4d49e9d83dee321a3c57ec00",
+  "alert_utc": "2026-10-20T08:58:43Z",
+  "alert_title": "'He will be missed!' - Nostalgic Martin Demichelis recalls close bond with Lionel Messi following international exit - Goal.com",
+  "assessment_scope": "Source/date/claim classification only; no probability or market forecast.",
+  "finding": "This reads as recent retrospective commentary about a recent Argentina farewell, not an old article resurfacing. It does not provide a measured Google Top 5 search ranking or outcome evidence for a Google Trends rank market.",
+  "source_checks": [
+    {
+      "url": "https://www.beinsports.com/en-us/soccer/friendlies/articles/the-nostalgia-of-a-former-teammate-of-lionel-messi-for-his-departure-2026-10-19",
+      "status": 200,
+      "date": "2026-10-19",
+      "fact": "beIN's page presents the story as Oct 19, 2026 commentary by Martín Demichelis after Messi's Argentina farewell. It recounts Demichelis's personal nostalgia and quotes him saying that when Messi announced his retirement and the day came, he felt nostalgia. This is opinion/anecdote, not search-rank measurement.",
+      "raw_sha256": "09b586ec1c1de4af69835798a9f191bfeaef3ebb11c85b56cd92b489bc236c5e",
+      "receipt": "logs/deep_review_20261017/news_alert_9c097_20261020/bein_article/bein_article.receipt.json",
+      "body": "logs/deep_review_20261017/news_alert_9c097_20261020/bein_article/bein_article.body.json.gz"
+    },
+    {
+      "url": "https://www.afa.com.ar/es/posts/la-seleccion-argentina-despidio-a-lionel-messi-con-una-goleada-ante-benin",
+      "status": 200,
+      "date": "2026-10-06",
+      "fact": "AFA's official match report describes Argentina's 3-0 win over Benin at the Monumental as Messi's last match with the national team before the Argentine public, and says he scored the third goal. This corroborates an Oct 6 public farewell; the report alone does not establish every legal/administrative aspect of retirement.",
+      "raw_sha256": "2ed8319f1ca2055d9d102ee2c6e3ca3c53c2a0ec2e2ed12ba1292e1e8ac983ea",
+      "receipt": "logs/deep_review_20261017/news_alert_9c097_20261020/afa_official/afa_official.receipt.json",
+      "body": "logs/deep_review_20261017/news_alert_9c097_20261020/afa_official/afa_official.body.json.gz"
+    }
+  ],
+  "access_note": "The exact alert's Google News URL returned a Google News shell, not the Goal.com article body (200; 585,544 bytes; SHA256 3ada5b95380db294c46c352466735db7a5c3370dc53a46e579a668239138f294; receipt logs/deep_review_20261017/news_alert_9c097_20261020/goal_article/goal_article.receipt.json). I did not locate the exact Goal article URL. The independent beIN and AFA source bodies are retained separately.",
+  "limitation": "No Google Trends or search-ranking data was collected. No inference about a ranking, outcome, probability, or portfolio impact is made."
+}

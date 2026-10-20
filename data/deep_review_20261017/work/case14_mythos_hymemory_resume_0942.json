@@ -1,0 +1,11 @@
+{
+  "case": 14,
+  "facts_unit": "data/deep_review_20261017/work/case14_mythos_hymemory_facts_0942.json",
+  "raw_capture_dirs": [
+    "logs/deep_review_20261017/case14_mythos_followup_0950",
+    "logs/deep_review_20261017/case14_mythos_publisher_capture_0952",
+    "logs/deep_review_20261017/case14_mythos_technologyorg_0955",
+    "logs/deep_review_20261017/case14_mythos_arxiv_0958"
+  ],
+  "updated_utc": "2026-10-20T09:41:34Z"
+}

@@ -1,0 +1,14 @@
+{
+  "schema": "exact_candidate_monitoring_retirement.v1",
+  "retired_utc": "2026-10-20T09:47:42.878825+00:00",
+  "proof": "data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json",
+  "removed_feed": "Anthropic Claude model and Arena news",
+  "removed_terms": [
+    "Claude",
+    "Gemini"
+  ],
+  "config_before": "99894c7c4c9e6a23053836c1d5332e0e43030af203eb8ddd265aa382b8ea53ae",
+  "config_after": "1083842374139c720733f73b58f1921bd59276fb6c3cd0e4d67bcacb6fcd1cb5",
+  "feeds": 41,
+  "scope": "Only exactnewcandidate additions removed; existing holdings/pendingpolitical/IPO coverage preserved. Existingnormalpoll reload, no newdaemon/timer."
+}

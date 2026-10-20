@@ -1,0 +1,69 @@
+{
+  "case": 456,
+  "identity": {
+    "id": "3399938",
+    "conditionId": "0x573b157703ef39c682aaa222bc869be0095a4c54609e944e5141f51d4950f29e",
+    "question": "Will Lionel Messi finish in the top 3 of the 2026 Ballon d'Or?",
+    "criteria_sha256": "829b46749aa7bf54a1b33ec9e67ee59e300855221229e4df3c856c9af2b88919"
+  },
+  "scope": "Facts only; no probability, ranking judgment, market inspection, eligibility conclusion, or account data.",
+  "facts": [
+    {
+      "claim": "UEFA’s French-language article announces the 2026 Ballon d’Or nominees and carries publication/update date 2026-09-08 15:23:44Z.",
+      "source": "uefa_nominees"
+    },
+    {
+      "claim": "UEFA’s nominee list explicitly names Lionel Messi (Argentina, Inter Miami) among the men’s nominees. This establishes nomination only, not a final ranking or top-three result.",
+      "source": "uefa_ceremony"
+    },
+    {
+      "claim": "UEFA’s ceremony explainer says the ceremony is scheduled for Monday 2026-10-26 at the London Palladium Theatre, 20:00 GMT / 21:00 CET. It was published 2026-10-19 09:01Z and updated 13:02:25Z. This captured source treats the ceremony as upcoming; it does not provide a final ranking.",
+      "source": "uefa_ceremony"
+    },
+    {
+      "claim": "No directly originated, dated season-performance statistic was collected in this bounded pass. Final men’s ranking/outcome remains unverified here.",
+      "source": null
+    }
+  ],
+  "sources": [
+    {
+      "name": "uefa_nominees",
+      "url": "https://www.uefa.com/news-media/news/02a9-218b0aa3148c-ae5a03f62044-1000--annonce-des-nommes-pour-le-ballon-d-ortm-2026/",
+      "status": 200,
+      "published_utc": "2026-09-08T15:23:44Z",
+      "retrieved_utc": "2026-10-20T08:50:59.149783Z",
+      "raw_bytes": 113497,
+      "raw_sha256": "1065c8a7233cba438d994de74952ea344a2553af95238fa5f8569ce398e50259",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_nominees.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_nominees.body.json.gz"
+    },
+    {
+      "name": "uefa_ceremony",
+      "url": "https://www.uefa.com/ballondor/news/02aa-21dcfc743210-2786daba77d8-1000--2026-ballon-d-or-ceremony-when-and-where-all-the-nominees-/",
+      "status": 200,
+      "published_utc": "2026-10-19T09:01:00Z",
+      "updated_utc": "2026-10-19T13:02:25Z",
+      "retrieved_utc": "2026-10-20T08:50:59.327864Z",
+      "raw_bytes": 143963,
+      "raw_sha256": "e6727b843182ec1374e2d05b6e8d7f5559ec191477a8aa031cd815e14ae45e73",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_ceremony.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_ceremony.body.json.gz"
+    },
+    {
+      "name": "lequipe_index",
+      "url": "https://www.lequipe.fr/Football/Ballon-d-or/",
+      "status": 403,
+      "retrieved_utc": "2026-10-20T08:50:59Z",
+      "raw_bytes": 405,
+      "raw_sha256": "48c10728701772018f31635eedc2afcc28e355f2e6395b17dbdb7dea5bf3e6b1",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_0851/public/lequipe_index.receipt.json",
+      "limitation": "Access denied; no claim extracted. Prior three official Ballon d’Or URLs that returned 403 were not repeated."
+    }
+  ],
+  "limits": [
+    "UEFA is an official co-organizer/source, but the frozen rule names the official Ballon d’Or announcement as primary resolution source.",
+    "No final ranking or result captured; ceremony is still scheduled in the future relative to retrieval timestamp.",
+    "No performance statistic was added."
+  ],
+  "captured_utc": "2026-10-20T08:50:59Z"
+}

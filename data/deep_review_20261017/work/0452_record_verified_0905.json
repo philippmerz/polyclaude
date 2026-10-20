@@ -1,0 +1,18 @@
+{
+  "schema": "case_record_verification.v1",
+  "verified_utc": "2026-10-20T09:01:35.132154+00:00",
+  "index": 452,
+  "status": "valued",
+  "report_path": "research/2026-10-17-deep-review/revisions/0452_20261020T090134479838Z.md",
+  "report_sha256": "288bda9adac89559cf92499b5ce653c3b6020742491aa908437b266071cb0df4",
+  "base_predecessor_preserved": true,
+  "ledger_revision_index_checkpoint": "PASS",
+  "counts": {
+    "completed_valuations": 382,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2232,
+    "base_records": 768,
+    "revisions_written": 70
+  }
+}

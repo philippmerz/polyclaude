@@ -1,0 +1,258 @@
+{
+  "schema": "tick20261020T0941_post_submit_facts.v1",
+  "capture_windows": [
+    {
+      "path": "logs/tick20261020T0941_post_submit",
+      "timing_basis": "call_window"
+    },
+    {
+      "path": "logs/tick20261020T0947_post_submit_chain",
+      "timing_basis": "call_window"
+    }
+  ],
+  "identity": {
+    "review_index": 14,
+    "condition_id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "token_ids": [
+      "43595531958558267934455886300539818619407063141211246186008687659488782680099",
+      "101106027123457230511923560603100933782439732335133293995646065340833826927163"
+    ],
+    "source": "deep_review_ledger.universe()[14]"
+  },
+  "acknowledged_order_is_listed": true,
+  "orders": {
+    "count": 4,
+    "fully_paginated": true,
+    "HTTP_status": 200,
+    "sanitized_rows": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "5",
+        "matched": "0",
+        "price": "0.49",
+        "candidate14": true
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.12",
+        "candidate14": false
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "50",
+        "matched": "0",
+        "price": "0.03",
+        "candidate14": false
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.38",
+        "candidate14": false
+      }
+    ],
+    "all_live_zero_matched": true,
+    "candidate14_count": 1,
+    "four_separate_details": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "5",
+        "size_matched": "0",
+        "price": "0.49",
+        "expiration": "0",
+        "associate_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.12",
+        "expiration": "0",
+        "associate_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "50",
+        "size_matched": "0",
+        "price": "0.03",
+        "expiration": "0",
+        "associate_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.38",
+        "expiration": "0",
+        "associate_trades_count": 0
+      }
+    ],
+    "all_detail_http200": true
+  },
+  "trades": {
+    "count": 127,
+    "unique_count": 127,
+    "fully_paginated": true,
+    "HTTP_status": 200,
+    "canonical_rows_sha256": "28a489c2c72999cbfd0a948a5737743794ac232ce5701cc1ffdf18b10b6db363",
+    "same_as_prior_073415": true,
+    "no_ack_order_trade_refs": true
+  },
+  "positions": {
+    "HTTP_status": 200,
+    "count": 9,
+    "exact_identity_size_totalBought_redeemable_match_073415": true,
+    "candidate14_rows": []
+  },
+  "balances": {
+    "candidate14_CTF_shares": {
+      "Yes": 0,
+      "No": 0
+    },
+    "pUSD": 19.25129,
+    "raw_rpc_receipts": [
+      {
+        "receipt": "logs/tick20261020T0947_post_submit_chain/call_00.receipt.json",
+        "body": "logs/tick20261020T0947_post_submit_chain/call_00.body.json.gz",
+        "HTTP_status": 200,
+        "result_sha256": "6aed34e6bddff5e1d872b5d7d5698a7b73abd6f3b33402732edc73ab9ffb9c70"
+      },
+      {
+        "receipt": "logs/tick20261020T0947_post_submit_chain/call_01.receipt.json",
+        "body": "logs/tick20261020T0947_post_submit_chain/call_01.body.json.gz",
+        "HTTP_status": 200,
+        "result_sha256": "6aed34e6bddff5e1d872b5d7d5698a7b73abd6f3b33402732edc73ab9ffb9c70"
+      },
+      {
+        "receipt": "logs/tick20261020T0947_post_submit_chain/call_02.receipt.json",
+        "body": "logs/tick20261020T0947_post_submit_chain/call_02.body.json.gz",
+        "HTTP_status": 200,
+        "result_sha256": "bf7509bf967d075d3e255fe8cacb7001cdef8daac57b4c7d96c5cb03825efd3c"
+      }
+    ]
+  },
+  "reservations_local_readonly": {
+    "row_count": 4,
+    "total_risk_usd": 8.95,
+    "candidate14_rows": 1,
+    "candidate14_risk_usd": 2.45,
+    "candidate14_shares": 5.0,
+    "candidate14_submission_state": "live"
+  },
+  "receipt_body_pairs": [
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/detail_00.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/detail_00.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "fe9bb92b550cb191e7a28c6c7dfa7919e1c0cf30a855815fb7c8baa863e66821",
+      "gzip_sha256": "350c8c80391e61833f6220df43ef9507c50118cd907b5d5b71489f20cba23fcc",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/detail_01.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/detail_01.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "gzip_sha256": "6564e1195eb64e5dc668593e1dcc99fb4b1dfc5a3dcf80458de10f6fc95a734e",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/detail_02.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/detail_02.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "gzip_sha256": "9a39c19d31cbb6961283dc419584003f78f594d20828d89f9de150eb0fd58d97",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/detail_03.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/detail_03.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "gzip_sha256": "e46ebced402757c6ecf7fb51e195747901b511e8603e0a188c28c5c8ca7d62ed",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/orders_p000.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/orders_p000.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "b06f58006e06e3d14ef82f06dabcf0afd4144b318e15ca09b4f3776a88b41338",
+      "gzip_sha256": "95cdf4b1cece58a158001899a1312d23cab53277adfc07414579ce457847722a",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/positions.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/positions.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "215fef29463cf457689812e2dc0649542ff54185ffdf0ef9b8214a490e4fd9d1",
+      "gzip_sha256": "6ab9392d3a4c083bfcd6656faee61dcb43afe1671a7d5c6722d51a98fb9e8ba7",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0941_post_submit/trades_p000.receipt.json",
+      "body": "logs/tick20261020T0941_post_submit/trades_p000.body.json.gz",
+      "status": 200,
+      "representation": "http_body",
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "gzip_sha256": "74905bda8aadfcaefec53d807d06e0a3fc13d9f40a67cbbaccbff81f6f303b3f",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0947_post_submit_chain/call_00.receipt.json",
+      "body": "logs/tick20261020T0947_post_submit_chain/call_00.body.json.gz",
+      "status": 200,
+      "representation": "jsonrpc_provider_result",
+      "raw_sha256": "03eeba832ea35e4ad5f8f6f5ee499c42ca9440322d561dfea607806e95cb508f",
+      "gzip_sha256": "1f534abdf8853419e19c8669c9b29dfdb601fc54eb3b36f904e1b9abfcf0e4ef",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0947_post_submit_chain/call_01.receipt.json",
+      "body": "logs/tick20261020T0947_post_submit_chain/call_01.body.json.gz",
+      "status": 200,
+      "representation": "jsonrpc_provider_result",
+      "raw_sha256": "bdb3f5e19e8d6b8bb0ece47690b6ed948d7408f7cd879b986bf50721657098fa",
+      "gzip_sha256": "dd8092e0e7099735353fdc5d0e8093f9241885d28e0c849e73f5a86f0313c8a4",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    },
+    {
+      "receipt": "logs/tick20261020T0947_post_submit_chain/call_02.receipt.json",
+      "body": "logs/tick20261020T0947_post_submit_chain/call_02.body.json.gz",
+      "status": 200,
+      "representation": "jsonrpc_provider_result",
+      "raw_sha256": "66204b952c7197e6e37c5906868e352db68b8cc493dda123aa0bb432ccbfaa59",
+      "gzip_sha256": "3fd2884fe2f3ecdcba7e966af5990906b4016b17e036c2ddaa9466f07d7c994f",
+      "raw_hash_ok": true,
+      "gzip_hash_ok": true
+    }
+  ],
+  "capture_note": "Initial local CTF collector attempts failed before any RPC calls; final chain captures are in 0947_post_submit_chain. Auth/data/index reads in 0941_post_submit.",
+  "assessment": "Acknowledged order is present in authenticated inventory and explicitly LIVE with zero matched; all four detail calls HTTP 200 and zero matched/no associated trades. 127 trades match the prior canonical hash; no acknowledgment-order trade ref. No indexed candidate row; both CTF balances zero. pUSD on-chain balance directly read. Reservation ledger read without mutation."
+}

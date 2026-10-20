@@ -1,0 +1,33 @@
+{
+  "schema": "primary_conditional_maker_assessment.v1",
+  "review_index": 452,
+  "created_utc": "2026-10-20T09:00:39.232559+00:00",
+  "side": "No",
+  "current_p": 0.55,
+  "contemplated_maker_prices": [
+    0.39,
+    0.38
+  ],
+  "conditional_scenarios": [
+    {
+      "weight": 0.55,
+      "p_no_given_fill": 0.55,
+      "assumption": "Ordinaryliquidityfill/noload-bearingnewinformation"
+    },
+    {
+      "weight": 0.3,
+      "p_no_given_fill": 0.45,
+      "assumption": "Newpublishedshippingdata/moderatein-rangeevidencearrivesbeforemonitorreview"
+    },
+    {
+      "weight": 0.15,
+      "p_no_given_fill": 0.2,
+      "assumption": "Strongin-range/newfuture-weekinformationadverselyselectsrestingquote"
+    }
+  ],
+  "conditional_p_no": 0.4675,
+  "selected_conditional_p_no": 0.3175,
+  "reserve": 0.15,
+  "judgment": "Case-specificunmeasuredscenariojudgment,nottestedfillmodel/certaintyrequirement. 1\u20132cselectedunconditionalmarginat38\u201339cannotcompensateplausibledata-publicationselection. Noorder;reopenifnearer-to-targetdataorlargerpriceedgeimprovesconditionalcase. Remote31cnotautomaticallyauthorized;fillmixwouldchange.",
+  "sensitivity": "Unmeasured2xfillstressnotusedasautomaticveto. Theseweightsand15ppreserveareexplicitanalystchoices;centralconditionalEVat38\u201339stayspositive,selecteddoesnot. Existingpilotunderwritingisnotretroactivelycanceled."
+}

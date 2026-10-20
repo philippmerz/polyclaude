@@ -1,0 +1,52 @@
+{
+  "captured_utc": "2026-10-20T09:24Z",
+  "config": "scripts/news_watcher_config.json",
+  "config_sha256": "1083842374139c720733f73b58f1921bd59276fb6c3cd0e4d67bcacb6fcd1cb5",
+  "daemon": {
+    "pid": 148881,
+    "process_count": 1,
+    "argv": [
+      ".venv/bin/python",
+      "scripts/news_watcher.py",
+      "start"
+    ],
+    "started_utc": "2026-10-19T05:28:37.310Z",
+    "script_mtime_utc": "2026-10-18T22:58:44.443Z",
+    "config_mtime_utc": "2026-10-20T01:23:00.992Z",
+    "config_newer_than_process": true,
+    "configured_pid_file_matches": true,
+    "log_mtime_utc": "2026-10-20T09:10:20.279Z",
+    "freshness_limit": "Config is opened by load_config() at the start of each loop, then the loop sleeps config poll_interval_seconds (300 sec). No per-poll heartbeat is logged; the 09:10 log mtime does not prove last config-read time."
+  },
+  "config_coverage": {
+    "feed_count": 41,
+    "tier1_count": 189,
+    "tier2_count": 134,
+    "anthropic": [
+      "Tier1 keyword Anthropic and Claude maker; only dedicated feed is Google News query restricted to IPO/public-offering/S-1/valuation/roadshow after 2026-10-01; no official Anthropic feed or broad Anthropic/Claude model-release query. This is adequate recall for many Anthropic headlines across general feeds but incomplete for direct Claude model/benchmark announcements."
+    ],
+    "google": [
+      "Official Google The Keyword RSS is configured. Tier2 terms are Gemini 3.5 Pro, Gemini Pro, Gemini 4, Gemini Argon; no generic Gemini/Google AI model term. Good coverage for named Gemini Pro/4 releases, but release headlines using other Gemini names can miss tiered matching."
+    ]
+  },
+  "minimal_config_changes_recommended_not_applied": [
+    {
+      "action": "Add one Tier2 term “Claude” (or narrowly “Claude model”) and one focused Google News RSS query for (Anthropic OR Claude) AND (model OR release OR benchmark OR Arena OR leaderboard), without IPO restriction. Anthropic official newsroom is https://www.anthropic.com/news; search results indicate no official native RSS, so do not represent a third-party RSS mirror as first-party."
+    },
+    {
+      "action": "Add generic Tier2 “Gemini” alongside specific model names; Google The Keyword feed already exists. The scoped exposure classifier will review affected live exposures, while generic product mentions can be suppressed."
+    }
+  ],
+  "classifier_path": {
+    "match": "Feed title+summary substring match against tier1/tier2 keyword lists. A match from either tier calls the fast scoped exposure filter. Tier1 is retained as research regardless of suppress verdict; tier2 is dropped if SUPPRESS. No RSS match directly sends Telegram.",
+    "exposure": "Five-minute in-process cache reads Polymarket held positions plus remaining BUY orders via vetted _fetch_open_buy_commitments; held position list capped below 50 to count as complete, redeemable positions excluded. Ostium is included only after successful live read with open trades. On inventory unavailable, alert passes through as unknown.",
+    "impact_validation": "Agent impact keys are accepted only when exact condition ID exists in live held/pending-BUY exposure list; unsupported keys are discarded and relevance becomes UNKNOWN. BUY quantity is treated as additional unfilled exposure, not duplicated held shares. Relevant MATERIAL/CRITICAL, safety_unknown and UNKNOWN route for review."
+  },
+  "case14_identity": {
+    "market_id": "2431413",
+    "conditionId": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "question": "Will Anthropic have the best AI model at the end of December 2026?",
+    "criteria_sha256": "97cf85eb21709fb3165022fa3e248ad74648ceea3a1bccfd6629f8f45b7e7b72"
+  },
+  "scope": "Read-only facts and configuration recommendations. No edits, restart, account inventory query, notification, or case judgment."
+}

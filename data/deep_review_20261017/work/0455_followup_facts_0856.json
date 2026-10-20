@@ -1,0 +1,97 @@
+{
+ "case_identity": {
+  "conditionId": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+  "criteria_sha256": "94f8c30287f7c2ef0dc48bf025307fbe9bcef14e7ede68a0739633826c11ce4c",
+  "endDate": "2027-01-01T04:59:00Z",
+  "id": "2696747",
+  "question": "US-Iran Final Nuclear Deal by December 31, 2026?"
+ },
+ "checked_utc": "2026-10-20T08:56:37Z",
+ "failed_or_blocked_fetches": [
+  {
+   "not_retried": true,
+   "receipt": "logs/deep_review_20261017/cases454_456_0738/455_iran_fm/455_iran_fm.receipt.json",
+   "source": "IranWatch FM statement mirror",
+   "status": 403
+  },
+  {
+   "not_retried": true,
+   "receipt": "logs/deep_review_20261017/cases454_456_0738/455_mou_text/455_mou_text.receipt.json",
+   "source": "IranWatch MOU text mirror",
+   "status": 403
+  },
+  {
+   "error_type": "HTTPError",
+   "receipt": "logs/deep_review_20261017/case455_followup_20261020/parstoday/iran_state_media_mou_text.receipt.json",
+   "source": "ParsToday MOU republication",
+   "status": null
+  },
+  {
+   "error_type": "URLError",
+   "receipt": "logs/deep_review_20261017/case455_followup_20261020/pakistan_presidency/pakistan_presidency_mou.receipt.json",
+   "source": "Pakistan Presidency MOU statement",
+   "status": null
+  },
+  {
+   "error_type": "URLError",
+   "receipt": "logs/deep_review_20261017/case455_followup_20261020/iran_fm_spokesperson/iran_fm_spokesperson_mou.receipt.json",
+   "source": "Tasnim report quoting Iranian FM spokesperson",
+   "status": null
+  }
+ ],
+ "findings": [
+  "The full text archive labels the Islamabad MOU June17, 2026 (not the June19 White House release date), and points 8, 9, and 13 tie enrichment/stockpile arrangements and the final nuclear agreement to future mutual agreement/negotiations; point9 says maintain current status quo pending the final deal. The captured text does not state a concrete measurable present nuclear-program cap.",
+  "This source is the American Presidency Project archival reproduction of the MOU, not a source hosted by either signatory. It is useful for wording but not independent authentication of signatures or instrument identity.",
+  "The official White House June19 page identifies a signed MOU and says future negotiations are intended to produce a final nuclear agreement; the quoted 60-day/final-agreement language is attributed to named third parties on the page, not the instrument itself.",
+  "The official July30 OMB statement independently says the MOU was signed June17, quotes a best-efforts safe-passage clause, reports subsequent vessel attacks July6\u20137, and describes Iran\u2019s nuclear activities as an ongoing concern. It does not reproduce the MOU\u2019s full nuclear clauses or prove there was no later instrument.",
+  "No official/foreign-ministry full signed MOU or post-July final nuclear instrument was obtained in this bounded pass. Do not treat the two IranWatch HTTP403 captures or failed direct host requests as proof that no agreement exists."
+ ],
+ "frozen_rule_digest": "94f8c30287f7c2ef0dc48bf025307fbe9bcef14e7ede68a0739633826c11ce4c",
+ "full_text_archival_copy": {
+  "body": "logs/deep_review_20261017/case455_followup_20261020/usap/mou_fulltext_archive.body.json.gz",
+  "checks": {
+   "date_june17_2026": true,
+   "point13_final_deal_negotiations": true,
+   "point8_enrichment_future_framework": true,
+   "point8_nuclear_weapons": true,
+   "point8_stockpile_future_mechanism": true,
+   "point9_status_quo_pending_final_deal": true
+  },
+  "date": "2026-06-17",
+  "host": "The American Presidency Project (non-governmental archive)",
+  "points": "14 points",
+  "receipt": "logs/deep_review_20261017/case455_followup_20261020/usap/mou_fulltext_archive.receipt.json",
+  "received_utc": "2026-10-20T08:54:52.166588Z",
+  "scope": "Full 14-point transcription of MOU; archive is non-governmental, not signature authentication.",
+  "sha256": "e055411d853d8d0430a9ed1a1fe23b7599166c2f4491f378e1e5b9bdca3bb58f",
+  "status": 200,
+  "url": "https://www.presidency.ucsb.edu/documents/islamabad-memorandum-understanding-between-the-united-states-america-and-the-islamic"
+ },
+ "limits": [
+  "No official Iranian government-hosted signed text or subsequent final nuclear instrument obtained; failures/full-text access gaps are not evidence of absence.",
+  "No forecast, payout judgment, probability, ledger, or trade action."
+ ],
+ "official_white_house_july30": {
+  "body": "logs/deep_review_20261017/case455_followup_20261020/july_official_pdf/whitehouse_mou_july_policy.body.json.gz",
+  "facts": "Acknowledges June17 signing; quotes a best-efforts safe-passage clause; reports July6\u20137 vessel attacks; describes nuclear activity as an ongoing concern. Not the full MOU.",
+  "receipt": "logs/deep_review_20261017/case455_followup_20261020/july_official_pdf/whitehouse_mou_july_policy.receipt.json",
+  "received_utc": "2026-10-20T08:54:18.809082Z",
+  "sha256": "c4cb7d01fd839d23116649d5a02d25277925dafc9ae1128639a041d8c722e8d3",
+  "status": 200,
+  "url": "https://www.whitehouse.gov/wp-content/uploads/2026/07/SAP-SJR181.pdf"
+ },
+ "official_white_house_june19": {
+  "raw_sha256": "4db1f98701e9483303ff106e1db5dcea120211e952e6cb7f1c01b3c2e4b84f09",
+  "receipt": "logs/deep_review_20261017/cases454_456_0738/455_whitehouse/455_whitehouse.receipt.json",
+  "received_utc": "2026-10-20T07:33:11.173924Z",
+  "scope": "Official press page states signed MOU; future-final-agreement statements attributed to third parties on the page.",
+  "started_utc": "2026-10-20T07:33:10.516814Z",
+  "status": 200,
+  "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/"
+ },
+ "rule_tests": [
+  "Qualifying document must be final deal contemplated by June14 MOU and signed/adopted by both governments by deadline.",
+  "Requires at least one present, unconditional, concrete measurable nuclear-program limit; future-negotiation clauses, a general no-weapons pledge, or unquantified status quo do not suffice under the frozen text."
+ ],
+ "schema": "case455_public_followup_facts.v1"
+}

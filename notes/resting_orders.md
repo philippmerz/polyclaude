@@ -1,6 +1,6 @@
-# Current resting orders — October20 06:22 UTC
+# Current resting orders — October20 09:46 UTC
 
-**Three LIVE zero-matched BUYs commit $6.50; Kimi412 is now a filled holding.** Fresh06:22 exact inventory/details and127 exhausted unchanged trades agree with06UTC holdings/commitments; all nine public indexed identity/quantity records match. No new fill or fresh CTF proof. Original Kimi chain/cash reconciliation remains dated. [Fill proof](../data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json).
+**Three original BUYs remain LIVE/zero matched, committing $6.50.** Candidate14/DEC245 was briefly posted5NO49c/$2.45, then canceled09:39:38 before any fill. After300s exactterminal/trades/index/CTF/cash checks confirmed zero exposure; only its reservation retired4→3. Kimi412 remains a filled holding. [Candidate closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json) · [Source/action record](../research/2026-10-20-anthropic-arena-order.md).
 
 |Current BUY|Shares / limit / maximum risk|Exact order ID|Management|
 |---|---|---|---|
@@ -9,13 +9,13 @@
 |NY01|10YES /12c /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
 
 - **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
-- Only filled reservation retired4→3 under vetted locks; other three records/terms unchanged. At01:59:26 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
+- Kimi’s filled reservation retired4→3 at01:59; after candidate14’s separate zero-fill closure, the original three records/terms remain unchanged. At09:45 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
 - Review remaining political bids each existing tick/earlier material evidence. Cancel first on newly unassessed material poll/candidate/ballot/turnout facts; no add/chase/repost/taker fallback. Unannounced information/cache gaps can fill before cancellation. A scheduled check is a review, not automatic expiry; any fill needs fresh holding/source/fee-netexit/joint-risk judgment.
-- Latest canonical producer06:22:11–29:195.90incl5.81gas, trading190.09mid/185.89indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. Original bid terms retained after source/conditional-fill/joint review; no add/chase/repost/taker. [Financial record](../research/2026-10-20-0622-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick060240_account_facts.json).
+- Latest canonical producer09:18:20–36:194.20incl5.78gas, trading188.42mid/182.50indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. Original bid terms retained after source/conditional-fill/joint review; no add/chase/repost/taker. [Financial record](../research/2026-10-20-0918-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick20261020T0945_post_cancel_facts.json).
 
 ## Quote lifetime — clarified October19
 
-A scheduled check is a **review**, not a default cancellation deadline. Before posting, justify the price, known load-bearing source gaps, conditional fill risk, monitoring capacity and intended lifetime. Resolve or price those gaps; do not post a placeholder while underwriting is unfinished.
+A scheduled check is a **review**, not a default cancellation deadline. Before posting, justify the price, known load-bearing source gaps, conditional fill risk, monitoring capacity and intended lifetime. Resolve or price those gaps; do not post a placeholder while underwriting is unfinished. Read the actual new-feed warmup headlines and load-bearing sources before posting. A research-only suppression made before candidate exposure is not catalyst clearance; feed reload and exposure lookup prove plumbing, not valuation.
 
 At review, retain a bid only if current evidence, price, full-fill exposure and conditional fill economics still justify it. Cancel or resize when its edge, evidence, risk, capital priority or monitorability changes. Hard expiry needs a named catalyst, source-staleness or operational-risk reason; the next cron time alone is insufficient. Newly unassessed material evidence still invokes cancel-first where required. These rules do not promise a fill or justify a taker fallback.
 

@@ -1,0 +1,24 @@
+{
+  "schema": "primary_material_news_review.v1",
+  "reviewed_utc": "2026-10-20T09:31:02.210664+00:00",
+  "alert_id": "9c097df963c7432e4d49e9d83dee321a3c57ec00",
+  "source_packet": "data/deep_review_20261017/work/news_alert_9c097_messi_factcheck_20261020.json",
+  "receipt_pairs_verified": [
+    {
+      "url": "https://www.beinsports.com/en-us/soccer/friendlies/articles/the-nostalgia-of-a-former-teammate-of-lionel-messi-for-his-departure-2026-10-19",
+      "raw_sha256": "09b586ec1c1de4af69835798a9f191bfeaef3ebb11c85b56cd92b489bc236c5e",
+      "status": 200
+    },
+    {
+      "url": "https://www.afa.com.ar/es/posts/la-seleccion-argentina-despidio-a-lionel-messi-con-una-goleada-ante-benin",
+      "raw_sha256": "2ed8319f1ca2055d9d102ee2c6e3ca3c53c2a0ec2e2ed12ba1292e1e8ac983ea",
+      "status": 200
+    }
+  ],
+  "exact_alert_body_status": "GoogleNews shell only; Goal article body unverified. Independent beIN/AFA actual bodies retained.",
+  "prior_source_quality": "Original0210 explicitly labeled FIFA direct shell and indexed article text, not captured raw article proof. New actual AFA body upgrades corroboration; do not call old FIFA shell a verified primary article.",
+  "event_scope": "AFA corroborates Oct6 farewell before home public; formal permanent retirement and later away appearances not established by that body alone.",
+  "current_forecast": "Retain MessiYES.60/selected.40/broad.20\u2013.90, no add. Farewell was already explicit Oct18baseline; nostalgia adds no measured Google growth/list rank. This is source corroboration/qualification, not a second independent event or zero-effect proof.",
+  "held_review": "5YES;09:18sameproducer indicative exit from separate exit_analysis retained by accountcapture; central3/selected2/broadlow1 payout. Broadlow can favor exit; uncalibrated Googlegrowth/field model remains. No automaticsell due commentary.",
+  "action": "retain/noadd; actual Google2026 GlobalAthletes list/methodology/cutoff or material competitor data warrants reassessment; no routineheadlineTelegram."
+}

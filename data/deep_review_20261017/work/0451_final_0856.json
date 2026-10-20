@@ -1,0 +1,171 @@
+{
+  "review_index": 451,
+  "market_id": "1285079",
+  "condition_id": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+  "criteria_sha256": "cff14e17d2e6e47fc52ace581ac4342e616263fdfb277eb0aeafe9a2d64c8181",
+  "token_ids": [
+    "83253007588985953900662535978265304048199216427463571583210985764316132662845",
+    "83208452942880339607911122438031742195323816449987096721739014238143102316792"
+  ],
+  "status": "valued",
+  "literal_analysis": "# 451 \u00b7 VA-05 Republican House winner\n\n**Valued: YES70% (broad45\u201390%); no entry at the current book.** Selected entry cases are YES60/NO20 after the ordinary10pp reserve. These are primary judgments, not calibrated poll probabilities. Forecast saved before the current own quote.\n\nThe rule pays for the party of the November3 winner. Ballot affiliation applies when *all*2026House elections are conclusively called; an independent is assigned by latest expressed caucus intent then. Harvey winning is therefore not automatically NO. Credible-reporting consensus resolves; ambiguity falls to official FEC results. Nov4 04:59UTC operational end is not a promise of final calls/certification; a normal November/December lag fits January, while a protracted dispute adds delay risk.\n\n",
+  "evidence": [
+    {
+      "url": "https://schar.gmu.edu/news/2026-10/washington-post-schar-school-poll-shows-democrats-leading-bellwether-districts",
+      "observed_utc": "2026-10-20T06:42:32.221095Z",
+      "finding": "Actualprimarybody:Sep23\u201328LV/McGuire51;noD45/N600/MOEverified;three-week-oldpollnotwinprobability."
+    },
+    {
+      "url": "https://www.tomperriello.com/news/new-poll-perriello-moves-virginias-5th-district-into-a-dead-heat",
+      "observed_utc": "2026-10-20T08:50:00.520169Z",
+      "finding": "CampaignprimaryOct3release:ExpeditionSep21\u201324LV400initialR46/D45;after-messageD47/R42notneutralbaseline;linkedmemo403."
+    },
+    {
+      "url": "https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/",
+      "observed_utc": "2026-10-20T06:43:21.963260Z",
+      "finding": "ExactVA05PerrielloD/McGuireRincumbent/HarveyI;ballot/caucusdefinitionmatters."
+    },
+    {
+      "url": "https://www.elections.virginia.gov/news-releases/supreme-court-of-virginia-voids-april-21-redistricting-referendum-2.html",
+      "observed_utc": "2026-10-20T08:49:01.709301Z",
+      "finding": "May8officialnotice:2026congressionalboundariesunchangedaftervoidedreferendum."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1285079",
+      "observed_utc": "2026-10-20T08:52:40.252026+00:00",
+      "finding": "All9exactcanonicalidentitychecks pass;open/accepting,4%takerp(1-p),freshatcapturebothbooks."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.7,
+    "low": 0.45,
+    "high": 0.9,
+    "method": "Rounded subjective regime mixture for Republican party winner, not a calibrated poll-to-win conversion.",
+    "reasoning": "ScharactualSep23\u201328LVbodyR51 anddouble-digit2024Trumpdistrictcontext favorR, but directlycapturedcampaignOct3release/Sept21\u201324LV400initial46R45D is a meaningful countercase. No verifiedScharD45/N600/MOE4.6 andno raw2024exactreturntotals; neither usedasnumericmodelinput. Existingboundaries/currentthreecandidatefield verified. Polls~3weeksold; district/candidate-specificturnout,crossoverandsharedpollerrors canbeatnominalMOE. Scenario weights/conditional probabilities are analyst judgments, not measured frequencies; wide45\u201390range, selected60R/20D after10ppreserve. No exactthirdparty caucusintent recovered; rulemeasures affiliation atallHousecallstime. Bothsides remain eligiblefor full economics.",
+    "model_path": "research/2026-10-17-deep-review/models/0451_primary_0853.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0451_quote_0854.json",
+    "quote_file_sha256": "21fd168e49772f31c3e2084da66952410a58d864eb58e281cd9267d72f7a9fe5",
+    "quote_capture_utc": "2026-10-20T08:52:40.547172+00:00",
+    "gamma_received_utc": "2026-10-20T08:52:40.252026+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 17.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.7,
+        "selected_stress_probability": 0.6,
+        "best_bid": 0.7,
+        "best_ask": 0.71,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486359453",
+        "book_received_utc": "2026-10-20T08:52:40.433912+00:00",
+        "book_age_seconds_at_receipt": 0.9809119701385498,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.1,
+            "fee": 0.08237,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.71
+              }
+            ],
+            "net": 7.18237
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.0,
+            "fee": 0.08401,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.7
+              }
+            ],
+            "net": 6.91599
+          }
+        },
+        "taker_cost_usd": 7.18237,
+        "central_expected_profit_usd": -0.1823699999999997,
+        "selected_stress_profit_usd": -1.1823699999999997,
+        "break_even_before_carry": 0.718237,
+        "break_even_constant_carry": 0.7192926071039543,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.30000000000000004,
+        "selected_stress_probability": 0.20000000000000004,
+        "best_bid": 0.29,
+        "best_ask": 0.3,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486359453",
+        "book_received_utc": "2026-10-20T08:52:40.433912+00:00",
+        "book_age_seconds_at_receipt": 0.9809119701385498,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.0,
+            "fee": 0.084,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.3
+              }
+            ],
+            "net": 3.084
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.9,
+            "fee": 0.08236,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.29
+              }
+            ],
+            "net": 2.81764
+          }
+        },
+        "taker_cost_usd": 3.084,
+        "central_expected_profit_usd": -0.08399999999999963,
+        "selected_stress_profit_usd": -1.0839999999999996,
+        "break_even_before_carry": 0.3084,
+        "break_even_constant_carry": 0.3088532615708457,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry:currentbothsidesnegativecentralandselectedafterfees;touchmakerfailsselected;remoteconditionalfillnotunderwritten.",
+  "reopen_condition": "Materialnewdistrictfacts/currentquotesandfullconditionalmaker/cost/cap/account/venuevalidation.",
+  "report_markdown": "# 451 \u00b7 VA-05 Republican House winner\n\n**Valued: YES70% (broad45\u201390%); no entry at the current book.** Selected entry cases are YES60/NO20 after the ordinary10pp reserve. These are primary judgments, not calibrated poll probabilities. Forecast saved before the current own quote.\n\nThe rule pays for the party of the November3 winner. Ballot affiliation applies when *all*2026House elections are conclusively called; an independent is assigned by latest expressed caucus intent then. Harvey winning is therefore not automatically NO. Credible-reporting consensus resolves; ambiguity falls to official FEC results. Nov4 04:59UTC operational end is not a promise of final calls/certification; a normal November/December lag fits January, while a protracted dispute adds delay risk.\n\nOfficial ELECT confirms Perriello(D), incumbent McGuire(R), Harvey(I), and unchanged pre-referendum boundaries after the May8court ruling. Primary turnout totals are not a general-election forecast. The captured October1Schar release gives Sep23\u201328likely-voter fieldwork/McGuire51%, and describes a district Trump won by double digits. Its body does **not** establish D45/N600/MOE4.6; the failed PDF and exact2024return leads are not numeric model inputs.\n\nA newly captured October3campaign release reports Expedition's Sep21\u201324LV400 initial ballot R46/D45, nominal\u00b14.90. This is a sponsored release, not independent replication; the linked original memo returned403. The later D47/R42 result follows persuasive information and is not a current neutral ballot. The close initial result nonetheless supplies a real Democratic countercase; ignoring it would overstate the Republican structural advantage.\n\nRoot's transparent mixture:65%weight on ordinaryRadvantage with90%conditionalYES,30%on a competitive Democratic crossover/turnout regime with35%YES,5%on a major anti-incumbent/affiliation disruption with20%YES; sum70%. Weights and conditional values are subjective, not historical frequencies. Polls are three weeks old, with14days to election; nonresponse, national climate, late turnout, crossover and Harvey's unknown caucus path exceed simple sampling error. Broad45\u201390% is uncertainty, not a requirement that every endpoint pass the gate.\n\nAt08:52:40UTC, exact canonical identity/all9fields pass; open/accepting, no proposed UMA state. Ten-share walks, taker rate4%\u00d7p(1\u2212p):\n\n| Side | p / selected | Bid / ask | Taker cost | Central / selected net profit |\n|---|---|---|---|---|\n| YES |70 /60%|70 /71c|7.18237|\u2212.18237 /\u22121.18237|\n| NO |30 /20%|29 /30c|3.08400|\u2212.08400 /\u22121.08400|\n\nBooks were0.98seconds old at receipt; minimum5shares/tick1c. Those quotes are dated planning evidence. Maker at touch saves taker fees but gives YES zero central spread advantage and NO only1c/share central advantage; both fail the selected case. Hypothetical remote59cYES/19cNO bids would be about11/10c behind current bids, with only.10selected dollars per10shares before carry. Their eventual fills would select new adverse information; no conditional-fill thesis was underwritten, so no remote order is proposed. The unmeasured2\u00d7adverse-fill stress is a sensitivity, not an automatic general veto.\n\nThe dated Oct19Aave3.2035%variable rate costs about.147%over17days before funding/gas/credit risk. Neither current side beats cash/carry after costs. Existing ME02YES/CA06NO/NY01YES bids and MichiganNO share election, turnout and model risks; direction varies, and VA-05 is not a guaranteed hedge. Underwriting another marginal unit requires its own conditional edge and current caps/reservations/account/legal gates. The08:07aggregate/08:08authenticated commitments are historical context, not fresh execution approval. No stock/brokerage alternative is introduced.\n\nReopen on materially new district evidence, a current fee/depth change or a defensible maker price whose conditional-fill economics survive uncertainty/carry. No order, cancellation, transfer or prior mutation occurred.\n\n[Primary model and four source-pair proofs](../models/0451_primary_0853.json) \u00b7 [Official-context access limits](../../../data/deep_review_20261017/work/0451_official_context_addendum_0900.json) \u00b7 [Poll-access correction](../../../data/deep_review_20261017/work/0451_poll_capture_addendum_0832.json) \u00b7 [Exact quote](../../../data/deep_review_20261017/work/0451_quote_0854.json) \u00b7 [Both-side economics](../../../data/deep_review_20261017/work/0451_economics_0854.json).\n"
+}

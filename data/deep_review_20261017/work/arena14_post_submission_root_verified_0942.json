@@ -1,0 +1,13 @@
+{
+  "schema": "root_post_submission_verification.v1",
+  "verified_utc": "2026-10-20T09:42:08.576794+00:00",
+  "facts": "data/deep_review_20261017/work/tick20261020T0941_post_submit_facts.json",
+  "facts_sha256": "f8aa900c9d1fecdf8aaff10aa04b482be31cf8a98a0ed5ca18b26e1c6719846d",
+  "receipt_pairs_verified": 10,
+  "received_utc_range": [
+    "2026-10-20T09:37:20.635393Z",
+    "2026-10-20T09:37:50.858729Z"
+  ],
+  "status_at_those_times": "new14LIVE0matched; original3LIVE0matched;127unchangedtrades;9sameindexed;CTF14both0/pUSD19.251290;4reservations8.95",
+  "later_event": "09:39:38cancelverified by guardedwriter; do not reuse LIVE status ascurrent. Delayed terminal/trade/index/chain reconciliation stillrequired."
+}

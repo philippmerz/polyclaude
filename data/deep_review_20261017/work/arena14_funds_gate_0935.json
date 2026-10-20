@@ -1,0 +1,19 @@
+{
+  "schema": "exact_candidate_funds_gate.v1",
+  "receipt": "logs/deep_review_20261017/arena14_funds_0935/funds.receipt.json",
+  "raw_sha256": "5280f91b594e558b063d219fba378d9883b3757028c646ae43e171c24fe64190",
+  "observed_utc": "2026-10-20T09:34:19.743075Z",
+  "semantics": "SDK parsed multiple read-only RPC/venue results, not raw HTTP or atomic state.",
+  "chain_id": 137,
+  "exchange": "0xe2222d279d744050d28e00520010520000310F59",
+  "pusd_balance": 19.25129,
+  "live_BUY_commitment": 6.5,
+  "arithmetic_deployable": 12.751290000000001,
+  "allowance_covers_all_BUYs_plus_candidate": true,
+  "CTF_sell_approval": true,
+  "reservations_count": 3,
+  "reservation_risk": 6.5,
+  "candidate_existing_order_reject": "both candidate tokens prohibited in current open inventory; passed",
+  "max_new_cash": 2.45,
+  "gate": "PASS"
+}

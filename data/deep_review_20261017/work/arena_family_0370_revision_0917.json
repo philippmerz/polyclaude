@@ -1,0 +1,156 @@
+{
+  "review_index": 370,
+  "market_id": "2431418",
+  "condition_id": "0x67adc22bcf8c1c7ff1a96cfa71d4221f5cc2ae6dc746989741d58bc8f3aa46f8",
+  "criteria_sha256": "5621fc4ad57c33feae883db35ea963fa3456e918043f05ba261b6c170fc87e76",
+  "token_ids": [
+    "42522029522447794225839808505719668556717833845034491419337607269358943876517",
+    "68550481961784329992235890013811525446413432891111185209927778519945061521942"
+  ],
+  "status": "valued",
+  "literal_analysis": "# 0370 \u00b7 DeepSeek December Text Arena \u2014 common-family revision\n\n**YES3.7750% /NO96.2250%; broadYES0.5\u201330%.** Noentry undercurrentcommonfamilyforecastand17ppselectedcase. This replaces datedcase marginals with one mutuallyexclusivecompany-winner forecast; original reports remain preserved.\n\nFull literal rule is byte-identical to454: TextRank withStyleControlOFF atDec31noonET/17UTC; rank thenunroundedscore thencompanyalphabet. NoGA, coding/HLE orbest-ever requirement. Temporaryoutage delays firstcheck;permanentoutage permits another source. Exactcurrentcanonicalidentity/all9fields match. No marketequivalence inferred from titles alone.\n\n",
+  "evidence": [
+    {
+      "url": "https://huggingface.co/datasets/lmarena-ai/leaderboard-dataset/resolve/main/text/latest-00000-of-00001.parquet",
+      "observed_utc": "2026-10-20T09:07:49.943885Z",
+      "finding": "CompleteofficialOct15overall416rowspublisherattribution/rawconfig mappingverified;commonfamily."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/2431418",
+      "observed_utc": "2026-10-20T09:10:57.264409+00:00",
+      "finding": "All9exactidentityfields/currentrules/fees/booksverified."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03775,
+    "low": 0.005,
+    "high": 0.3,
+    "method": "Common primary mutually-exclusivecompanywinnerjointscenarioallocation;uncalibrated.",
+    "reasoning": "SameOpenAIbranchweightsandOpenAImarginalas274arepreserved;reviseincompletecompetitorallocationtorepresentMetaandAlibababeyondatinyOtherbucket,andgivealldatedcasesasinglecurrentmutuallyexclusiveview. Thisiscoverage/modelreconciliationofsameOct15baseline,nottreatingoldinformationasanewadversesurprise. Conditionalquality/admission/timingandcompetitionarejointjudgments;noindependentmodel/releasecoinorhistoricalcalibrationclaimed. StrongerOpenAIiterationsleaveothercompanieslessfirst-placeprobability. Alibabaactualproductprogressandrank17supportnonzeropath;noverifiedfuturewinningreleaseorcompletecalendar. OtherincludesXiaomiandallunpricedowners,notfactualexclusionsorhardfutureceilings.",
+    "model_path": "research/2026-10-17-deep-review/models/arena_family_454_primary_0910.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/arena_family_454_quote_0911.json",
+    "quote_file_sha256": "966fcaef3d736221502a33c5f2c5413fdf1b5c5997cf22366d4ecf6e84a5647c",
+    "quote_capture_utc": "2026-10-20T09:10:57.635839+00:00",
+    "gamma_received_utc": "2026-10-20T09:10:57.264409+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 74.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 17.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.03775,
+        "selected_stress_probability": 0,
+        "best_bid": 0.003,
+        "best_ask": 0.004,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792487443067",
+        "book_received_utc": "2026-10-20T09:10:57.475132+00:00",
+        "book_age_seconds_at_receipt": 14.408132076263428,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.04,
+            "fee": 0.0016,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.0416
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.03,
+            "fee": 0.0012,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.003
+              }
+            ],
+            "net": 0.0288
+          }
+        },
+        "taker_cost_usd": 0.0416,
+        "central_expected_profit_usd": 0.3359,
+        "selected_stress_profit_usd": -0.0416,
+        "break_even_before_carry": 0.00416,
+        "break_even_constant_carry": 0.004186679682101116,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.96225,
+        "selected_stress_probability": 0.79225,
+        "best_bid": 0.996,
+        "best_ask": 0.997,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792487443067",
+        "book_received_utc": "2026-10-20T09:10:57.475132+00:00",
+        "book_age_seconds_at_receipt": 14.408132076263428,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.97,
+            "fee": 0.0012,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.997
+              }
+            ],
+            "net": 9.971200000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.96,
+            "fee": 0.0016,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.996
+              }
+            ],
+            "net": 9.958400000000001
+          }
+        },
+        "taker_cost_usd": 9.971200000000001,
+        "central_expected_profit_usd": -0.3487000000000009,
+        "selected_stress_profit_usd": -2.048700000000001,
+        "break_even_before_carry": 0.9971200000000001,
+        "break_even_constant_carry": 1.0035149145713138,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry undercurrentcommonfamilyforecastand17ppselectedcase.",
+  "reopen_condition": "Newadmittedmodel/source/configuration/ownership/catalystorcurrentconditionalmakerunderwriting;alllivegatesbeforeaction.",
+  "report_markdown": "# 0370 \u00b7 DeepSeek December Text Arena \u2014 common-family revision\n\n**YES3.7750% /NO96.2250%; broadYES0.5\u201330%.** Noentry undercurrentcommonfamilyforecastand17ppselectedcase. This replaces datedcase marginals with one mutuallyexclusivecompany-winner forecast; original reports remain preserved.\n\nFull literal rule is byte-identical to454: TextRank withStyleControlOFF atDec31noonET/17UTC; rank thenunroundedscore thencompanyalphabet. NoGA, coding/HLE orbest-ever requirement. Temporaryoutage delays firstcheck;permanentoutage permits another source. Exactcurrentcanonicalidentity/all9fields match. No marketequivalence inferred from titles alone.\n\nRoot parsed all11,033officialParquetrows andall416overall models, snapshotOct15;HFREADME mapsconfigtext to non-style-controlledratings. Google1/1532.337544,Anthropic2/1515.761445,Meta7/1500.955479,Alibaba17/1482.877225,OpenAI28/1471.339766,DeepSeek38/1462.847421,xAI51/1450.827928. Currentrank/score/CIsarenotcalibratedDecemberodds. ActualAnthropicSep22/Oct7andGoogleOct13releasebodies predate thissnapshot;no freshadverselikelihoodmultiplierisapplied toalreadyobserved facts. FuturecalendarandliveUI remainlimited;OpenAIdirectbody403isnotabsenceevidence.\n\nThe oldeffective14/161/274/370sum111.115%mixed datedmodels. Newjoint35/45/18/2%OpenAI-contender/sourcebranches eachsum1; competitorallocationnowpricesMeta/Alibaba rather than treatinganoldOtherbucket asahardceiling. MarginalsGoogle38.885/Anthropic23.29/OpenAI17.775/Meta5.985/Alibaba3.805/DeepSeek3.775/xAI3.25/Other3.235%. OpenAImarginalisunchanged;thisiscoverage/modelreconciliation,sameOct15baseline,notempiricalcalibration. Allweights/conditionalquality-admission-timing-rivalresponsesareprimarysubjectivejudgments. Otherownersremaineligibleforlatercasereview.\n\n17ppentryreserve=10frontieruncertainty+2residualsource/fallback+5conditionalfills. Independentofficialconfig/full-fileevidence closes most of theformer5ppsourcegap;20pp274/370 becomes17,whileold10pp14/161isharmonized. This was savedbefore freshquotes;olderfamilypriceswereknown. Widebroadendpoints arenotadditionalgate tests. Unmeasured2\u00d7fillstress remainsasensitivity;K5requiresameasuredstabletailanddoesnotfollowfromahighNOprobabilityalone.\n\nCaptured2026-10-20T09:10:57.635839+00:00;10grossshares,4%\u00d7p(1\u2212p)takerfees,min5,currenttickfrompacket;booksaged14.41secondsatreceipt. Datedplanning,notsignedexecutionproof.\n\n|Side|p /selected|Bid /ask|Taker cost|Central /selected netprofit|\n|---|---|---|---|---|\n|Yes|0.037750 /0.000000|0.003 /0.004|0.04160|+0.33590 /-0.04160|\n|No|0.962250 /0.792250|0.996 /0.997|9.97120|-0.34870 /-2.04870|\n\nNeither current side clears selectedeconomics. GoogleNOhas only.0155centraldollarsper10taker shares before~.039carry;OpenAI/DeepSeekYESpositivecentralvaluepersistsbutfailsselected. Those leadsremaineligibleonnewprimaryevidence,notprice-basedfactualexclusions.\n\nOnecompanyfirstmeanssiblingpositionsaredependent. HeldKimiHLE/OpenRouter aredifferentmetricsbutshareindustry/operationalrisks;noautomatichedgecredit. Comparemarginalshareswithuncommittedcash/datedOct19variableAave3.2035%,~.64%over74daysbeforefunding/gas/credit/delay. Freshaccount,reservations,ticket/factorcaps,source,legal,fees/booksandvettedwriterarenecessaryforanyaction. No canonicalheldprior ororderwaschangedbythisresearchrevision.\n\n[Commonjointmodel](../models/arena_family_454_primary_0910.json) \u00b7 [Completeofficialsnapshot](../../../data/deep_review_20261017/work/0454_full_snapshot_0908.json) \u00b7 [Primarycatalystreview](../../../data/deep_review_20261017/work/arena_family_catalyst_root_0917.json) \u00b7 [Exactquotes](../../../data/deep_review_20261017/work/arena_family_454_quote_0911.json) \u00b7 [Economics](../../../data/deep_review_20261017/work/arena_family_0370_economics_0911.json).\n"
+}

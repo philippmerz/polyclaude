@@ -1,0 +1,175 @@
+{
+  "review_index": 451,
+  "market_id": "1285079",
+  "condition_id": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+  "criteria_sha256": "cff14e17d2e6e47fc52ace581ac4342e616263fdfb277eb0aeafe9a2d64c8181",
+  "token_ids": [
+    "83253007588985953900662535978265304048199216427463571583210985764316132662845",
+    "83208452942880339607911122438031742195323816449987096721739014238143102316792"
+  ],
+  "status": "valued",
+  "literal_analysis": "# 451 · VA-05 Republican House winner\n\n**Valued: YES70% (broad45–90%); no entry at the current book.** Selected entry cases are YES60/NO20 after the ordinary10pp reserve. These are primary judgments, not calibrated poll probabilities. Forecast saved before the current own quote.\n\nThe rule pays for the party of the November3 winner. Ballot affiliation applies when *all*2026House elections are conclusively called; an independent is assigned by latest expressed caucus intent then. Harvey winning is therefore not automatically NO. Credible-reporting consensus resolves; ambiguity falls to official FEC results. Nov4 04:59UTC operational end is not a promise of final calls/certification; a normal November/December lag fits January, while a protracted dispute adds delay risk.\n\n",
+  "evidence": [
+    {
+      "url": "https://schar.gmu.edu/news/2026-10/washington-post-schar-school-poll-shows-democrats-leading-bellwether-districts",
+      "observed_utc": "2026-10-20T06:42:32.221095Z",
+      "finding": "Actualprimarybody:Sep23–28LV/McGuire51;noD45/N600/MOEverified;three-week-oldpollnotwinprobability."
+    },
+    {
+      "url": "https://www.tomperriello.com/news/new-poll-perriello-moves-virginias-5th-district-into-a-dead-heat",
+      "observed_utc": "2026-10-20T08:50:00.520169Z",
+      "finding": "CampaignprimaryOct3release:ExpeditionSep21–24LV400initialR46/D45;after-messageD47/R42notneutralbaseline;linkedmemo403."
+    },
+    {
+      "url": "https://www.elections.virginia.gov/casting-a-ballot/candidate-list/november-3-2026-gen-elect-federal-offices/",
+      "observed_utc": "2026-10-20T06:43:21.963260Z",
+      "finding": "ExactVA05PerrielloD/McGuireRincumbent/HarveyI;ballot/caucusdefinitionmatters."
+    },
+    {
+      "url": "https://www.elections.virginia.gov/news-releases/supreme-court-of-virginia-voids-april-21-redistricting-referendum-2.html",
+      "observed_utc": "2026-10-20T08:49:01.709301Z",
+      "finding": "May8officialnotice:2026congressionalboundariesunchangedaftervoidedreferendum."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1285079",
+      "observed_utc": "2026-10-20T08:52:40.252026+00:00",
+      "finding": "All9exactcanonicalidentitychecks pass;open/accepting,4%takerp(1-p),freshatcapturebothbooks."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.7,
+    "low": 0.45,
+    "high": 0.9,
+    "method": "Rounded subjective regime mixture for Republican party winner, not a calibrated poll-to-win conversion.",
+    "reasoning": "ScharactualSep23–28LVbodyR51 anddouble-digit2024Trumpdistrictcontext favorR, but directlycapturedcampaignOct3release/Sept21–24LV400initial46R45D is a meaningful countercase. No verifiedScharD45/N600/MOE4.6 andno raw2024exactreturntotals; neither usedasnumericmodelinput. Existingboundaries/currentthreecandidatefield verified. Polls~3weeksold; district/candidate-specificturnout,crossoverandsharedpollerrors canbeatnominalMOE. Scenario weights/conditional probabilities are analyst judgments, not measured frequencies; wide45–90range, selected60R/20D after10ppreserve. No exactthirdparty caucusintent recovered; rulemeasures affiliation atallHousecallstime. Bothsides remain eligiblefor full economics.",
+    "model_path": "research/2026-10-17-deep-review/models/0451_primary_0853.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0451_quote_0854.json",
+    "quote_file_sha256": "21fd168e49772f31c3e2084da66952410a58d864eb58e281cd9267d72f7a9fe5",
+    "quote_capture_utc": "2026-10-20T08:52:40.547172+00:00",
+    "gamma_received_utc": "2026-10-20T08:52:40.252026+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 17.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.7,
+        "selected_stress_probability": 0.6,
+        "best_bid": 0.7,
+        "best_ask": 0.71,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486359453",
+        "book_received_utc": "2026-10-20T08:52:40.433912+00:00",
+        "book_age_seconds_at_receipt": 0.9809119701385498,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.1,
+            "fee": 0.08237,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.71
+              }
+            ],
+            "net": 7.18237
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.0,
+            "fee": 0.08401,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.7
+              }
+            ],
+            "net": 6.91599
+          }
+        },
+        "taker_cost_usd": 7.18237,
+        "central_expected_profit_usd": -0.1823699999999997,
+        "selected_stress_profit_usd": -1.1823699999999997,
+        "break_even_before_carry": 0.718237,
+        "break_even_constant_carry": 0.7192926071039543,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.30000000000000004,
+        "selected_stress_probability": 0.20000000000000004,
+        "best_bid": 0.29,
+        "best_ask": 0.3,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486359453",
+        "book_received_utc": "2026-10-20T08:52:40.433912+00:00",
+        "book_age_seconds_at_receipt": 0.9809119701385498,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.0,
+            "fee": 0.084,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.3
+              }
+            ],
+            "net": 3.084
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.9,
+            "fee": 0.08236,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.29
+              }
+            ],
+            "net": 2.81764
+          }
+        },
+        "taker_cost_usd": 3.084,
+        "central_expected_profit_usd": -0.08399999999999963,
+        "selected_stress_profit_usd": -1.0839999999999996,
+        "break_even_before_carry": 0.3084,
+        "break_even_constant_carry": 0.3088532615708457,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No entry:currentbothsidesnegativecentralandselectedafterfees;touchmakerfailsselected;remoteconditionalfillnotunderwritten.",
+  "reopen_condition": "Materialnewdistrictfacts/currentquotesandfullconditionalmaker/cost/cap/account/venuevalidation.",
+  "evaluated_utc": "2026-10-20T08:54:27.751581+00:00",
+  "question": "Will the Republican Party win the VA-05 House seat?",
+  "valuation_author": "primary_operator",
+  "original_index": 451,
+  "report_sha256": "175163f2b4057398b249486cc6bb541784e10eae852656d2740e2872fb44f78e"
+}

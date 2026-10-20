@@ -1,0 +1,8 @@
+{
+  "schema": "material_tick_notification.v1",
+  "sent_utc": "2026-10-20T09:51:37.926568+00:00",
+  "status": "sender_returncode0/onepartsuccess",
+  "private_receipt_sha256": "8a35e20b14a193334b9fe9b8de18f69ddce76171d7c3fac039f3504b361c5347",
+  "scope": "One agent-composed material financial-action/source-review-error summary; no rawnews notification.",
+  "financial_proof": "data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json"
+}

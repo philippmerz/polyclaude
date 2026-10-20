@@ -1,0 +1,21 @@
+{
+  "schema": "root_entry_authorization.v1",
+  "quote_path": "data/deep_review_20261017/work/arena14_final_quote_0935.json",
+  "quote_sha256": "6ae2e947fd880e34fed72140c452dcd4d9ff8ef832ff370655df3de4416d0f23",
+  "full_identity_9_fields": true,
+  "source": "same current literal rules/styleoff/checkpoint; source/future-calendar gaps explicitly priced",
+  "side": "NO",
+  "p": 0.7671,
+  "selected_p": 0.5971,
+  "maximum": {
+    "shares": 5,
+    "limit": 0.49,
+    "cash": 2.45
+  },
+  "capital_base": 188.42,
+  "financial_policy": "DEC244 explicitly clarifies calendar-only scope; all hard gates unchanged",
+  "portfolio": "same AI cluster, floor25%, rho.75, no hedge/independence credit; explicit jointstress",
+  "funds_gate": "data/deep_review_20261017/work/arena14_funds_gate_0935.json",
+  "monitoring": "new focused Claude/Arena feed plus Claude/Gemini terms through existing watcher; normal reload verification pending; no raw TG",
+  "decision": "Proceed only through unchanged mandatory wrapper with exact fixed maker price; abort or reconcile any nondefinitive result, never taker/chase/retry blindly."
+}

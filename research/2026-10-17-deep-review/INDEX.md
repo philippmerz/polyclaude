@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T08:40:09.799185+00:00
+Updated: 2026-10-20T09:17:39.391388+00:00
 
-**380 valuations saved; first milestone100:** 380 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2234 pending.
+**383 valuations saved; first milestone100:** 383 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2231 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -25,7 +25,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |11|[Will the Fed increase interest rates by 25 bps after the October 2026 meeting?](evaluations/0011.md)|valued|No entry: YES has positive central EV but fails ordinary10pp stress; NO negative central EV.|
 |12|[Will there be no Hormuz agreement by October 23 or oil at least $80, and the Democrats win the Senate?](evaluations/0012.md)|valued|Noentry: YESnegativecentral, NOpositivecentralbutfails15ppselectedreserve atasks/ordinarymaker. FutureNO30c/YES34ctriggersonly.|
 |13|[Will Liverpool FC win on 2026-10-17?](evaluations/0013.md)|excluded_factual|Factual exclusion: exact venue market closed to new orders; not an investment rejection.|
-|14|[Will Anthropic have the best AI model at the end of December 2026?](evaluations/0014.md)|valued|NO central and default10pp edge; frontier-release uncertainty/December doctrine require follow-up, no order|
+|14|[Will Anthropic have the best AI model at the end of December 2026?](revisions/0014_20261020T091736436079Z.md)|valued|NOmaker49c is a positive selected-EV candidate; pending currentaccount/conditionalfill/source/caps/legal gates. No order asofthisrevision.|
 |15|[US announces end of Iranian blockade by October 31, 2026?](evaluations/0015.md)|valued|Official general-lift announcement valued separately from shipping/deal; neither ask clears normal reserve|
 |16|[Will "Animals" be the top US Netflix movie this week?](evaluations/0016.md)|valued|NO positive central tail arithmetic, unsupported floor; YES negative EV, no entry|
 |17|[Will Flávio Bolsonaro win the second round of the 2026 Brazilian presidential election by 8–12%?](evaluations/0017.md)|valued|Both sides deeply valued; small point-price difference is below ordinary uncertainty reserve|
@@ -172,7 +172,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |158|[Will Anthropic have the highest IPO Market Cap 2026?](evaluations/0158.md)|valued|Potential small passive NO follow-up; requires complete current entry review|
 |159|[Will the Central Bank of Chile make no change to the monetary policy rate at the October meeting?](evaluations/0159.md)|valued|No entry approved; conditional YESmaker72c ceiling after current EOF/source/catalyst/all financial gates.|
 |160|[Brentford FC vs. Liverpool FC: O/U 3.5](evaluations/0160.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-|161|[Will Google have the best AI model at the end of December 2026?](evaluations/0161.md)|valued|YES central/default-stress lead; correlated AI/December uncertainty review needed, no order|
+|161|[Will Google have the best AI model at the end of December 2026?](revisions/0161_20261020T091737364564Z.md)|valued|Noentry undercurrentcommonfamilyforecastand17ppselectedcase.|
 |162|[Will Bitcoin dip to $80,000 on October 17?](evaluations/0162.md)|excluded_factual|Factual exclusion: completed and closed, no held outcome balance/live entry route.|
 |163|[Will "Transformers One" be the #2 global Netflix movie this week?](evaluations/0163.md)|valued|Both asks negative central EV; availability/model uncertainty remains, no entry|
 |164|[Will the Democrats win the Arizona governor race in 2026?](evaluations/0164.md)|valued|NO maker near .07 is a thin contrarian watch; current source, notional and risk checks required|
@@ -285,7 +285,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |271|[Will the Democratic Party win the MT-01 House seat?](evaluations/0271.md)|valued|Potential small passive YES source revalidation|
 |272|[Will the ECB announce no change at the October 2026 meeting?](revisions/0272_20261018T211341467717Z.md)|valued|NO ENTRY after source/model audit:85%YES/15%NO,unchanged15ppreserve/selectedNO0. CentralNOedgepositivebutunreliable; nofinancialwriter.|
 |273|[Will 1. FSV Mainz 05 win on 2026-10-17?](evaluations/0273.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-|274|[Will OpenAI have the best AI model at the end of December 2026?](evaluations/0274.md)|valued|NO ENTRY: YES positive central EV but selected probability0 after unchanged20pp reserve; NO central negative. No order writer or hedge credit.|
+|274|[Will OpenAI have the best AI model at the end of December 2026?](revisions/0274_20261020T091738275825Z.md)|valued|Noentry undercurrentcommonfamilyforecastand17ppselectedcase.|
 |275|[Will "Street Fighter" Opening Weekend Box Office be between 25m and 30m?](revisions/0275_20261018T214546422619Z.md)|valued|NO ENTRY: YES positive centralEV but selected0 after unchanged10pp ordinaryreserve; NO centralnegative. At original matching receipt, books pass age0.165s; they are now dated research, not live gates. No financial action.|
 |276|[Netanyahu out by end of 2026?](evaluations/0276.md)|valued|NO ENTRY: YES marginalcentralpositive but selected24%fails41c; NO centralnegative. No financial action or independenthedgecredit.|
 |277|[Will the Democratic Party win the AZ-01 House seat?](evaluations/0277.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -381,7 +381,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |367|[Will the US capture another world leader in 2026?](evaluations/0367.md)|valued|Noentry. YESpositivecentral at3.9c butprequote15ppreserve fails; NOnegativeevenoptimisticzero-feecentral. Feeparityunverifiedexplicit; notliquidity/price-basedexclusion.|
 |368|[Is Earth flat?](evaluations/0368.md)|valued|Noentry. Bothdatedsidesfail5ppselectedprobability. Stalebook9730snotexecutionready; NOoptimisticcentralcarryfailsdatedcashhurdleevenbeforefunding. Notfactualexcluded.|
 |369|[Panthers vs. Eagles](evaluations/0369.md)|excluded_factual|Factual exclusion: exact venue contract already terminal and nontrading; no independent event probability, score, candle or tournament winner claimed. No order/prior/holding action.|
-|370|[Will DeepSeek have the best AI model at the end of December 2026?](revisions/0370_20261019T174937815114Z.md)|valued|Noentry; p/reserveunchangedafterpairedsource/methodreview. CentralcheapYESleadretained; noempiricallowerbound. Cent-grid/$1signedcashroute differsfrom10shareheadlinecost; strictsignedriskgatesremain.|
+|370|[Will DeepSeek have the best AI model at the end of December 2026?](revisions/0370_20261020T091739157768Z.md)|valued|Noentry undercurrentcommonfamilyforecastand17ppselectedcase.|
 |371|[Will Anthropic's valuation hit (HIGH) $2.5T by December 31?](evaluations/0371.md)|blocked_after_review|Blockedafterreview/noentry, notvalued orrejected. Bothsidecostandconditionalbreak-even preserved; noimmediatebuybothfloor.|
 |372|[Will Olivia Chow win the 2026 Toronto mayoral election?](evaluations/0372.md)|valued|Noentry: YESnegativecentral; NOpositivecentralbutfails15ppprequoteselectedforecast/currentmaker. Actualsinglepoll/candidate/turnoutgapspriced, notignored.|
 |373|[Will the Republican Party win the TX-23 House seat?](evaluations/0373.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
@@ -462,7 +462,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |448|[Will DeepSeek have the second highest OpenRouter market share the week of October 12?](revisions/0448_20261018T120932860077Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |449|[Will the highest temperature in Miami be between 86-87°F on October 17?](evaluations/0449.md)|excluded_factual|EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting; notamodelscreen.|
 |450|[Will no one leave the Trump Cabinet before 2027?](evaluations/0450.md)|blocked_after_review|Unpriced: None catch-all treatment of post-creation acceleration of pre-announced Gabbard resignation remains unresolved; case-specific review block, no entry.|
+|451|[Will the Republican Party win the VA-05 House seat?](evaluations/0451.md)|valued|No entry:currentbothsidesnegativecentralandselectedafterfees;touchmakerfailsselected;remoteconditionalfillnotunderwritten.|
+|452|[Will there be between 25 and 29 average daily transits of the Bab el-Mandeb Strait on October 31?](revisions/0452_20261020T090134479838Z.md)|valued|Noentry: NOpositivecentralat42c butfailsselected40;38–39c makerfailscase-specificconditionalselected31.75. Mappinggapclosed;notrejectedforinaccessiblefuturedata.|
 |453|[Will PSV win on 2026-10-17?](evaluations/0453.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|454|[Will Alibaba have the best AI model at the end of December 2026?](evaluations/0454.md)|valued|Noentry:AlibabaYESpositivecentralat0.4cbutselected0afterindependentlyjustified17ppreserve;NOoverpriced;preserverareeventlead.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
@@ -778,5 +781,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 451

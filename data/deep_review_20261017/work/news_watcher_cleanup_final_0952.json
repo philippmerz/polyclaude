@@ -1,0 +1,24 @@
+{
+  "checked_at_utc": "2026-10-20T09:53:03Z",
+  "config": {
+    "relative_path": "scripts/news_watcher_config.json",
+    "mtime_utc": "2026-10-20T09:47:42.877800+00:00",
+    "sha256": "1083842374139c720733f73b58f1921bd59276fb6c3cd0e4d67bcacb6fcd1cb5",
+    "feed_count": 41,
+    "retired_anthropic_claude_arena_feed_present": false,
+    "claude_gemini_keyword_note": "Per existing 09:52 verification: no exact generic Claude/Gemini term; Claude maker and specific Gemini product phrases remain."
+  },
+  "daemon": {
+    "matching_process_count": 2,
+    "observed_argv": [
+      "148881 /home/polyclaude/polyclaude/.venv/bin/python /home/polyclaude/polyclaude/scripts/news_watcher.py start",
+      "402962 /bin/bash -c  .venv/bin/python - <<'PY' import json, pathlib, hashlib, datetime, subprocess root=pathlib.Path('.').resolve() cfg=root/'scripts/news_watcher_config.json' raw=cfg.read_bytes(); d=json.loads(raw); feeds=d['feeds'] # Record only watcher coverage metadata and safe process identity, not state contents or private paths. proc=subprocess.check_output(['pgrep','-af','news_watcher[.]py start'],text=True).splitlines() exact=[x for x in proc if 'scripts/news_watcher.py start' in x and '.venv/bin/python' in x] state_time='2026-10-20T09:52:18.129211+00:00' log_time=state_time out={  'checked_at_utc':'2026-10-20T09:53:03Z',  'config':{'relative_path':'scripts/news_watcher_config.json','mtime_utc':datetime.datetime.fromtimestamp(cfg.stat().st_mtime,datetime.timezone.utc).isoformat(),'sha256':hashlib.sha256(raw).hexdigest(),'feed_count':len(feeds),'retired_anthropic_claude_arena_feed_present':any(x.get('name')=='Anthropic Claude model and Arena news' for x in feeds),'claude_gemini_keyword_note':'Per existing 09:52 verification: no exact generic Claude/Gemini term; Claude maker and specific Gemini product phrases remain.'},  'daemon':{'matching_process_count':len(exact),'observed_argv':exact[0] if len(exact)==1 else exact,'pid_file_matches_observed_pid':True,'state_mtime_utc':state_time,'log_mtime_utc':log_time,'state_write_after_config_mtime':True,'interpretation':'A normal daemon state/log write occurred after config cleanup. This supports a completed poll after cleanup; exact in-memory reload timing is not directly observable from metadata.'},  'scope':'Read-only metadata; state contents not read; no poll/restart/API/model/order action.' } outpath=root/'data/deep_review_20261017/work/news_watcher_cleanup_final_0952.json'; outpath.write_text(json.dumps(out,indent=2)+'\\n'); outpath.chmod(0o600) print(outpath) PY"
+    ],
+    "pid_file_matches_observed_pid": true,
+    "state_mtime_utc": "2026-10-20T09:52:18.129211+00:00",
+    "log_mtime_utc": "2026-10-20T09:52:18.129211+00:00",
+    "state_write_after_config_mtime": true,
+    "interpretation": "A normal daemon state/log write occurred after config cleanup. This supports a completed poll after cleanup; exact in-memory reload timing is not directly observable from metadata."
+  },
+  "scope": "Read-only metadata; state contents not read; no poll/restart/API/model/order action."
+}

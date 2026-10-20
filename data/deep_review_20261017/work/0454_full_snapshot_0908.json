@@ -1,0 +1,131 @@
+{
+  "schema": "official_arena_complete_snapshot.v1",
+  "read_utc": "2026-10-20T09:08:31.042220+00:00",
+  "receipt": "logs/deep_review_20261017/454_full_parquet_0908/text_latest.receipt.json",
+  "raw_sha256": "1735d8b7e31781eae4433c4ab32c642868dde6bb755d3367f37e51e1094d7a95",
+  "bytes": 613695,
+  "parser": "duckdb1.5.6;threads1/memory64MB;localfileonly",
+  "rows_total": 11033,
+  "overall_rows": 416,
+  "overall_snapshot_dates": [
+    "2026-10-15"
+  ],
+  "filters": "config=text/latest;category='overall' over complete613695byteParquet;rankASC,unroundedratingDESC",
+  "best_by_organization": {
+    "google": {
+      "model_name": "Gemini 4 Argon (High)",
+      "organization": "google",
+      "rank": 1.0,
+      "rating": 1532.3375436695164,
+      "leaderboard_publish_date": "2026-10-15",
+      "vote_count": 4904.0
+    },
+    "anthropic": {
+      "model_name": "Claude Opus 5.5 (High)",
+      "organization": "anthropic",
+      "rank": 2.0,
+      "rating": 1515.7614452392686,
+      "leaderboard_publish_date": "2026-10-15",
+      "vote_count": 8300.0
+    },
+    "openai": {
+      "model_name": "gpt-5.5-high",
+      "organization": "openai",
+      "rank": 28.0,
+      "rating": 1471.3397664394297,
+      "leaderboard_publish_date": "2026-10-15",
+      "vote_count": 69401.0
+    },
+    "deepseek": {
+      "model_name": "deepseek-v4.1-flash-max",
+      "organization": "deepseek",
+      "rank": 38.0,
+      "rating": 1462.8474205203297,
+      "leaderboard_publish_date": "2026-10-15",
+      "vote_count": 12793.0
+    },
+    "alibaba": {
+      "model_name": "qwen3.8-max",
+      "organization": "alibaba",
+      "rank": 17.0,
+      "rating": 1482.8772252478664,
+      "leaderboard_publish_date": "2026-10-15",
+      "vote_count": 27766.0
+    }
+  },
+  "top_five": [
+    {
+      "model_name": "Gemini 4 Argon (High)",
+      "organization": "google",
+      "license": "Proprietary",
+      "rating": 1532.3375436695164,
+      "rating_lower": 1523.5575334405723,
+      "rating_upper": 1541.1175538984605,
+      "variance": 20.06752726466379,
+      "vote_count": 4904.0,
+      "rank": 1.0,
+      "category": "overall",
+      "leaderboard_publish_date": "2026-10-15"
+    },
+    {
+      "model_name": "Claude Opus 5.5 (High)",
+      "organization": "anthropic",
+      "license": "Proprietary",
+      "rating": 1515.7614452392686,
+      "rating_lower": 1508.4279272912443,
+      "rating_upper": 1523.0949631872932,
+      "variance": 14.000016140815989,
+      "vote_count": 8300.0,
+      "rank": 2.0,
+      "category": "overall",
+      "leaderboard_publish_date": "2026-10-15"
+    },
+    {
+      "model_name": "Claude Fable 5.1 (Max)",
+      "organization": "anthropic",
+      "license": "Proprietary",
+      "rating": 1511.5534589044762,
+      "rating_lower": 1505.5125207843055,
+      "rating_upper": 1517.594397024647,
+      "variance": 9.499759095461963,
+      "vote_count": 14590.0,
+      "rank": 3.0,
+      "category": "overall",
+      "leaderboard_publish_date": "2026-10-15"
+    },
+    {
+      "model_name": "Claude Opus 5 (Max)",
+      "organization": "anthropic",
+      "license": "Proprietary",
+      "rating": 1507.6361874165489,
+      "rating_lower": 1502.8340119702264,
+      "rating_upper": 1512.4383628628716,
+      "variance": 6.003159240711822,
+      "vote_count": 32495.0,
+      "rank": 4.0,
+      "category": "overall",
+      "leaderboard_publish_date": "2026-10-15"
+    },
+    {
+      "model_name": "Claude Opus 5 (High)",
+      "organization": "anthropic",
+      "license": "Proprietary",
+      "rating": 1502.538234627805,
+      "rating_lower": 1498.8802896381064,
+      "rating_upper": 1506.1961796175035,
+      "variance": 3.483197965205152,
+      "vote_count": 66824.0,
+      "rank": 5.0,
+      "category": "overall",
+      "leaderboard_publish_date": "2026-10-15"
+    }
+  ],
+  "source_mapping": "work/0454_style_mapping_facts_0849.json",
+  "limits": [
+    "OfficialderivativesnapshotOct15,nottoday/Dec31UIcheck.",
+    "Currentrank/score/CIsarenotfuturewinprobabilities.",
+    "Organizationfieldrepresentspublisherattribution;exactmarketcompanyownership/tiebreak stillapply."
+  ],
+  "complete_org_lookup": "data/deep_review_20261017/work/0454_full_org_rows_0908.json",
+  "complete_org_lookup_sha256": "39be9a0974754cec3306461447d38fea143dde02218eb1dd33fdf44ace8dfdc6"
+}

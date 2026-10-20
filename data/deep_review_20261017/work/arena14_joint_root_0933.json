@@ -1,0 +1,42 @@
+{
+  "schema": "primary_portfolio_dependence_stress.v1",
+  "created_utc": "2026-10-20T09:33:06.864993+00:00",
+  "inputs": "Selected marginal KimiYES.1902125, ORNO.73, ArenaNO.5971; comonotonic wins/losses, not independence. Subjective stress coupling, not measured joint forecast.",
+  "scenarios": [
+    {
+      "weight": 0.1902125,
+      "held_AI_payout": 15,
+      "Arena_NO_payout": 5
+    },
+    {
+      "weight": 0.40688749999999996,
+      "held_AI_payout": 5,
+      "Arena_NO_payout": 5
+    },
+    {
+      "weight": 0.13290000000000002,
+      "held_AI_payout": 5,
+      "Arena_NO_payout": 0
+    },
+    {
+      "weight": 0.27,
+      "held_AI_payout": 0,
+      "Arena_NO_payout": 0
+    }
+  ],
+  "candidate_cost": 2.45,
+  "existing_AI_original_cost": 4.45,
+  "all3_original_cost_can_lose": 6.9,
+  "assumed_other_stable_terminal_wealth": [
+    160,
+    180,
+    200
+  ],
+  "incremental_expected_log_under_assumptions": {
+    "160": 0.0028015998944235527,
+    "180": 0.002539948858811685,
+    "200": 0.00232232591196826
+  },
+  "meaning": "Positive only under supplied selected marginals/coupling and stable-other-wealth assumptions. Stronger adverse fills, ArenaNO.40 or protocol/stable losses can reverse; no wealth floor or hedge. Expected log is a comparison tool, not an observed outcome.",
+  "root_decision": "Authorize at most5NO49c/2.45maker only after final live exact gates; noadd/chase/taker. Broad sensitivity does not certify edge; small size explicitly prices uncalibrated weights and unknown releases."
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "case_resume.v1",
+  "review_index": 452,
+  "updated_utc": "2026-10-20T09:01:35.132154+00:00",
+  "status": "valued",
+  "identity": {
+    "id": "5166819",
+    "conditionId": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "question": "Will there be between 25 and 29 average daily transits of the Bab el-Mandeb Strait on October 31?",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac"
+  },
+  "model": "research/2026-10-17-deep-review/models/0452_primary_0900.json",
+  "mapping": "work/0452_portwatch_methodology_binding_20261020.json",
+  "measured": "work/0452_measured_series_0857.json",
+  "next": "454afterverification;noentry/currentquotesnotauthority",
+  "report": "research/2026-10-17-deep-review/revisions/0452_20261020T090134479838Z.md",
+  "report_sha256": "288bda9adac89559cf92499b5ce653c3b6020742491aa908437b266071cb0df4",
+  "verification": "work/0452_record_verified_0905.json"
+}

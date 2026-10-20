@@ -1,0 +1,71 @@
+{
+  "schema": "primary_case_forecast.v1",
+  "review_index": 451,
+  "created_utc": "2026-10-20T08:52:39.325479+00:00",
+  "author": "root",
+  "identity": {
+    "id": "1285079",
+    "conditionId": "0x7dae18f53f698e29f24a8739aba96b9560034f6fabe31951fc1b4e6c9e624d59",
+    "question": "Will the Republican Party win the VA-05 House seat?",
+    "criteria_sha256": "cff14e17d2e6e47fc52ace581ac4342e616263fdfb277eb0aeafe9a2d64c8181"
+  },
+  "p_yes": 0.7,
+  "low": 0.45,
+  "high": 0.9,
+  "entry_reserve": 0.1,
+  "method": "Rounded subjective regime mixture for Republican party winner, not a calibrated poll-to-win conversion.",
+  "scenarios": [
+    {
+      "weight": 0.65,
+      "conditional_p_yes": 0.9,
+      "assumption": "Usual Republican district advantage persists; incumbent retains most current51%Schar support. Includes sampling/nonresponse error and14dayturnout uncertainty."
+    },
+    {
+      "weight": 0.3,
+      "conditional_p_yes": 0.35,
+      "assumption": "Competitive Democratic crossover/wave; campaign initial46R45D is closer to election environment and late undecideds/turnout favorD. Do not use after-message47D42R as current baseline."
+    },
+    {
+      "weight": 0.05,
+      "conditional_p_yes": 0.2,
+      "assumption": "Large anti-incumbent shock or unusual candidate/party outcome; includes unmeasured Harvey/caucus and adjudication paths."
+    }
+  ],
+  "reasoning": "ScharactualSep23\u201328LVbodyR51 anddouble-digit2024Trumpdistrictcontext favorR, but directlycapturedcampaignOct3release/Sept21\u201324LV400initial46R45D is a meaningful countercase. No verifiedScharD45/N600/MOE4.6 andno raw2024exactreturntotals; neither usedasnumericmodelinput. Existingboundaries/currentthreecandidatefield verified. Polls~3weeksold; district/candidate-specificturnout,crossoverandsharedpollerrors canbeatnominalMOE. Scenario weights/conditional probabilities are analyst judgments, not measured frequencies; wide45\u201390range, selected60R/20D after10ppreserve. No exactthirdparty caucusintent recovered; rulemeasures affiliation atallHousecallstime. Bothsides remain eligiblefor full economics.",
+  "alternatives_portfolio": "ExistingME02YES/CA06NO/NY01YEScommitmentsandMI_NO share election/climate/turnout/modelrisk; party-direction correlation varies and cannotbe creditedasguaranteedhedge. Compare marginalnewunit with cash/datedvariableAave/currentholdEV, not sunkcost or allocationquota. No requiredtrade.",
+  "quote_status": "Saved before root current own451quote; originalfrozen/familypriceexposuremayexist. No execution authorization.",
+  "source_proofs": [
+    {
+      "kind": "schar",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_schar_poll/451_schar_poll.receipt.json",
+      "raw_sha256": "f1a90feb2893dc95bb637fed7a9653ddadc0e2bdf9976a334e575b4c3349cc38",
+      "gzip_sha256": "50bc22b6c0cbe92dc1a8476a38670fea51603e62cf6f30be4092a8294854e8b3",
+      "received_utc": "2026-10-20T06:42:32.221095Z"
+    },
+    {
+      "kind": "candidate_list",
+      "receipt": "logs/deep_review_20261017/next449451_facts_0642/451_va_federal_candidate_list/451_va_federal_candidate_list.receipt.json",
+      "raw_sha256": "837b6afbe31ab5f6243aacb7be6242abc0c6f90342e9a06afdf04b973a2382b9",
+      "gzip_sha256": "05fd579728c59813eb740034d8a7f20d9ea73077fc5c6d16c7eaa76156467abe",
+      "received_utc": "2026-10-20T06:43:21.963260Z"
+    },
+    {
+      "kind": "map",
+      "receipt": "logs/deep_review_20261017/next451_official_context_0920/redistricting_release.receipt.json",
+      "raw_sha256": "035325dc29ca96f548ee96a0d135adf5503d8ed97f08b623c09ebbd76791fa24",
+      "gzip_sha256": "f8d9c73d019b36eb78c6fa80b88ec8f412ce9856efecc67a7a8bbb3de58948c6",
+      "received_utc": "2026-10-20T08:49:01.709301Z"
+    },
+    {
+      "kind": "campaign_poll",
+      "receipt": "logs/deep_review_20261017/case0451_root_0851/campaign_poll.receipt.json",
+      "raw_sha256": "1bdfd6e244ff9d1f2d95bb7ce3e57b53608da37d8743b13fac5b67af6a147820",
+      "gzip_sha256": "3b49786fd776eefcbfb999e333ab099987704a50024607ca215bdca24a276e48",
+      "received_utc": "2026-10-20T08:50:00.520169Z"
+    }
+  ],
+  "source_gap_addenda": [
+    "work/0451_poll_capture_addendum_0832.json",
+    "work/0451_official_context_addendum_0900.json"
+  ]
+}

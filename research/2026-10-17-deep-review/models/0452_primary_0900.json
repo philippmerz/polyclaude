@@ -1,0 +1,69 @@
+{
+  "schema": "primary_case_forecast.v1",
+  "review_index": 452,
+  "created_utc": "2026-10-20T08:58:30.782845+00:00",
+  "author": "root",
+  "identity": {
+    "id": "5166819",
+    "conditionId": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "question": "Will there be between 25 and 29 average daily transits of the Bab el-Mandeb Strait on October 31?",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac"
+  },
+  "p_yes": 0.45,
+  "low": 0.2,
+  "high": 0.75,
+  "entry_reserve": 0.15,
+  "method": "Measuredrecentseries plus explicitly subjectiveforwardregime/source-publication/range-interpretation mixture; rounded,uncalibrated.",
+  "observations": "100uniqueconsecutivepublishedJuly4\u2013Oct11dailyrows exactchokepoint4. Lastmean198/7=28.285714. Last56overlappingmeans27.535714/sd2.165551;33/56literal25..29,41/56integer25..<30. Countsaredependentnotbinomialforecastcalibration. Data9daysbehindcurrentdateand20daysbeforetargetweekend.",
+  "scenarios": [
+    {
+      "weight": 0.75,
+      "mean_weekly_average": 28,
+      "predictive_sd": 3,
+      "label": "continued/gradualtraffic",
+      "p_literal_range": 0.48654494348700317,
+      "p_integer_bucket": 0.5868789741841548
+    },
+    {
+      "weight": 0.1,
+      "mean_weekly_average": 18,
+      "predictive_sd": 5,
+      "label": "severedisruption",
+      "p_literal_range": 0.06951251677046,
+      "p_integer_bucket": 0.07439408791306446
+    },
+    {
+      "weight": 0.1,
+      "mean_weekly_average": 36,
+      "predictive_sd": 5,
+      "label": "broadresumption",
+      "p_literal_range": 0.06951251677045994,
+      "p_integer_bucket": 0.09891475410409217
+    },
+    {
+      "weight": 0.05,
+      "label": "no newpublisheddata throughNov14fallback",
+      "p_literal_range": 1.0,
+      "p_integer_bucket": 1.0,
+      "assumption": "latestpublishedOct11mean198/7staysfinal;notpublicationforecastfromanobservedcadence"
+    }
+  ],
+  "range_interpretation": {
+    "literal": "25<=unroundedmean<=29;7dailyintegercounts sum175..203, continuitylimits174.5..203.5",
+    "alternative": "Conventionalintegerbucket25<=mean<30,sum175..209",
+    "weight_literal": 0.75,
+    "weight_alternative": 0.25,
+    "reason": "Explicitunroundedpriorityandtitleend29supportliteralupper29;adjacentintegerbinscanleadUMAtointegerbucketreading. No authoritativeclarificationcaptured;weightsarejudgmentnotmeasured."
+  },
+  "computed_p_literal": 0.42881121096934444,
+  "computed_p_integer_bucket": 0.5074901148398319,
+  "computed_mixture": 0.4484809369369663,
+  "reasoning": "Continue/gradualmean28andpredictivesd3 broadenactualrecentweekvariabilityfor20dayextrapolation andunobserved9days. Separate10%down/10%up regimesavoidsassumingrecentshippingconditionspersist.5%extendeddatafreeze isuncalibratedoperationaltail;fallbackcanuseOct11latest,notonlydatafromthe14daywindow. Roundmixtureto45%,broad20\u201375 reflectsregime/source/endpointrisk.15ppentryreserve(10base+5forlagandrangegap)selectedYES30/NO40. Neitherendpointmustpass. Futuredataabsencealone isnotforecastblock.",
+  "data_and_mapping": [
+    "work/0452_measured_series_0857.json",
+    "work/0452_portwatch_methodology_binding_20261020.json"
+  ],
+  "deadline": "Oct31observation;targetdatamaypublishlater;fallbackafter14calendar days(~Nov14),clericalcorrectionthroughthirdETdayafterrelease. Use30daycarrysensitivitytoNov19,notjustoperationalNov1end.",
+  "portfolio_alternatives": "BothYESandNOcanlosewithcurrentclaims;noexistingexactshippinghedge. Security/commodityshocksaffectotherassetsandstable/protocolrisk;noindependencecredit. Comparemarginalexpectedpayoutwithcash/datedvariableAaveandcurrentheldopportunities;freshgatesbeforeanyaction.",
+  "quote_status": "Savedbeforecurrentown452quote;noexecutionauthority."
+}

@@ -1,0 +1,108 @@
+{
+  "checked_utc": "2026-10-20T08:48:53.600895Z",
+  "evidence": [
+    {
+      "components": [
+        "Citations",
+        "app-card",
+        "markdown-card",
+        "site-footer",
+        "site-header",
+        "spacer-card"
+      ],
+      "embedded_app_item": "2116586ea519488389e905f9bcd536dd",
+      "literal_metric_layer_markers": {
+        "7-day": false,
+        "Arrivals of Ships": false,
+        "Daily_Chokepoints_Data": false,
+        "n_total": false
+      },
+      "page_title": "chokepoint4",
+      "raw_sha256": "7547c2867efc5385f2df5af42b9e437944843488812dc2726a9419541e5d49f9",
+      "receipt": "logs/deep_review_20261017/portwatch_ui_binding_0720/resolution_page.receipt.json",
+      "script_assets": [
+        "https://hubcdn.arcgis.com/opendata-ui/assets/calcite-components/5.1.1/cdn/index.js",
+        "https://hubcdn.arcgis.com/opendata-ui/assets/assets/vendor-8fc73120dc4bd0b5b7e2935c27d5aefd.js",
+        "https://hubcdn.arcgis.com/opendata-ui/assets/assets/chunk.70287.53019f4acd63ec1e2137.js",
+        "https://hubcdn.arcgis.com/opendata-ui/assets/assets/chunk.33524.cfed42549e3954c397da.js",
+        "https://hubcdn.arcgis.com/opendata-ui/assets/assets/opendata-ui-0b567382b3291a690a347af91dac339c.js"
+      ],
+      "source": "official resolution page HTML",
+      "url": "https://portwatch.imf.org/pages/6b1814d64903461b98144a6cc25eb79c"
+    },
+    {
+      "body": "logs/deep_review_20261017/case452_frontend_20261020/resolution_app_item_metadata.body.json.gz",
+      "description_present": false,
+      "raw_sha256": "c2776321607522f669e606d103899f6e8efd78b45fe634e47952485a0321be7f",
+      "receipt": "logs/deep_review_20261017/case452_frontend_20261020/resolution_app_item_metadata.receipt.json",
+      "source": "linked ArcGIS item metadata",
+      "status": 200,
+      "title": "Ports - Instant App",
+      "type": "Web Mapping Application",
+      "url": "https://imf-dataviz.maps.arcgis.com/sharing/rest/content/items/2116586ea519488389e905f9bcd536dd"
+    },
+    {
+      "configuration_title": "Ports - Instant App",
+      "configuration_type": "webscene",
+      "raw_sha256": "e485055363965415ba3bc488b4ff26d3cae4897663b408ce7c1c62f243e4ade3",
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry/receipts/imf_portwatch_hub_item.receipt.json",
+      "source": "888910da7fdc4b11ac32825ad2d87816",
+      "webscene_id": "b72143ed30774bd99f9d0bd2c1b75e4c"
+    },
+    {
+      "daily_chokepoints_data_layer_present": false,
+      "operational_layers": [
+        {
+          "title": "Global Shipping Routes",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PW_Globe7_WFL1/FeatureServer/1"
+        },
+        {
+          "title": "Countries",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_boundaries/FeatureServer/0"
+        },
+        {
+          "title": "Ports (labels)",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0"
+        },
+        {
+          "title": "Ports",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_ports_database/FeatureServer/0"
+        },
+        {
+          "title": "Chokepoints (labels)",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_chokepoints_database/FeatureServer/0"
+        },
+        {
+          "title": "Chokepoints",
+          "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/PortWatch_chokepoints_database/FeatureServer/0"
+        }
+      ],
+      "raw_sha256": "b18788babba92f9c5ff9d61d2014f02a095d6534230b13e45658c7937d08fc8a",
+      "receipt": "logs/deep_review_20261017/next451452_publicfacts_0714/public/retry2/receipts/imf_portwatch_webscene.receipt.json",
+      "source": "linked webscene config"
+    },
+    {
+      "raw_sha256": "68ea34ec9693a7087a7bc89aa6137f296182ff1c3f33434f2eac68e2e2e6854f",
+      "receipt": "logs/deep_review_20261017/case452_ui_binding_20261020/daily_service_metadata.receipt.json",
+      "service_description_present": false,
+      "service_item_id": "3da2b9ca97684916b75c4013f95d18ab",
+      "source": "Daily_Chokepoints_Data service metadata",
+      "status": 200
+    }
+  ],
+  "fetches_this_followup": 1,
+  "identity": {
+    "condition_id": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac",
+    "market_id": "5166819"
+  },
+  "interpretation_limits": [
+    "The page\u2019s embedded app card resolves to the Ports - Instant App and a PortWatch Globe webscene; the listed webscene layers are not the daily chokepoints series.",
+    "The page\u2019s generic ArcGIS Open Data frontend code does not itself establish the selected field or rolling calculation.",
+    "A Bab el-Mandeb API slice of daily n_total values can be identity-consistent with the market wording while still failing to prove that the resolution UI displays or averages that field.",
+    "No future daily rows, schedule, forecast block, or resolution outcome inferred."
+  ],
+  "no_models_or_financial_actions": true,
+  "result": "UNRESOLVED: traced actual official resolution-page frontend and its linked ArcGIS app/config; no direct binding from displayed Arrivals of Ships seven-day mean to Daily_Chokepoints_Data.n_total was found.",
+  "schema": "case452_portwatch_frontend_binding.v1"
+}

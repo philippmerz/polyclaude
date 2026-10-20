@@ -1,0 +1,35 @@
+{
+  "captured_utc": "2026-10-20T09:36:47Z",
+  "config": {
+    "path": "scripts/news_watcher_config.json",
+    "sha256": "99894c7c4c9e6a23053836c1d5332e0e43030af203eb8ddd265aa382b8ea53ae",
+    "mtime_utc": "2026-10-20T09:28:26.104323Z",
+    "feeds": 42
+  },
+  "daemon": {
+    "pid": 148881,
+    "singleton_count": 1,
+    "config_reload_path": "load_config() runs at top of each normal loop; loop sleeps configured 300s",
+    "completed_poll_evidence": {
+      "state_file_mtime_utc": "2026-10-20T09:34:29.471533Z",
+      "log_mtime_utc": "2026-10-20T09:34:15.703563Z",
+      "new_feed_log": "8 tier2 suppression entries from feed \u201cAnthropic Claude model and Arena news\u201d appear in latest log tail after config modification; end-of-poll state write follows. This demonstrates that the live daemon loaded/processed the added feed and completed a normal poll after 09:28; no restart."
+    }
+  },
+  "case14_pending_buy_check": {
+    "market_id": "2431413",
+    "conditionId": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "helper_called_once": true,
+    "polymarket_inventory_available": true,
+    "ostium_inventory_available": true,
+    "exact_condition_exposure_present": true,
+    "held_match": false,
+    "pending_buy_match": true,
+    "matching_exposure_count": 1,
+    "private_order_details_omitted": true
+  },
+  "limits": [
+    "State/log evidence indicates a completed normal poll and new-feed processing; watcher in-memory position cache refresh time is not observable. Separate helper recomputed inventory; this does not prove daemon\u2019s prior cache contents.",
+    "No watcher once, config edit, restart, notification, ledger, or financial writer."
+  ]
+}

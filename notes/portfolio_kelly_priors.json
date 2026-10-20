@@ -1314,11 +1314,12 @@
       "research/2026-10-17-deep-review/advisories/messi_entry_champion.md",
       "research/2026-10-17-deep-review/advisories/messi_entry_skeptic.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/messi_fill_source_1445.json",
+    "latest_source_packet": "data/deep_review_20261017/work/news_alert_9c097_primary_review_0932.json",
     "management": "Retain5YES/no add or repost. Review each existing tick/earlier material news for Google list, methodology, cutoff, missing-source and athlete/competitor evidence. Full loss1.35 possible; ordinary December may fit January, missing-list NO can lock until March31,2027 23:59ET. Original Nov1 22UTC BUY pull is obsolete after full fill; any future resting sale requires fresh fair value and pull before known source/catalysts. No measured hedge against other categories.",
     "monitoring": "Warmup01:47; current30broadRSS+20existingGoogleBlognormalbaselineverified0189;3terms promoted01:54:05, normalpostpromotioncycle01:55:22>=309s frompriorverified0192. Sameconfig/alivedaemon; no manualpoll/stateedit/restart/newdaemon/timer. CurrentRSSwindowchangedfromold30; obsoleteYahooNYCFCitemnotmanuallymarkedseen. Nonexhaustivediscoverycoverage.",
     "divergence_ack": "2026-10-18",
-    "divergence_ack_reason": "Fresh exact full Gamma rule and Google methodology re-read after fill. Keep unfitted primary60%YES/40% selected stress/range20\u201390: Oct17 brace/MVP story is athlete news, not measured Google internal growth. Official2026 routes404 and2025-only method do not prove global absence. Root14:45:30 quote5YES fee-net exit1.20312 versus centralhold3/stress2/lowrange1; low range favors sale. Correlated alternative-opportunity/log-growth sensitivity recorded in research/2026-10-18-messi-fill.md; divergence does not authorize enlarging."
+    "divergence_ack_reason": "Fresh exact full Gamma rule and Google methodology re-read after fill. Keep unfitted primary60%YES/40% selected stress/range20\u201390: Oct17 brace/MVP story is athlete news, not measured Google internal growth. Official2026 routes404 and2025-only method do not prove global absence. Root14:45:30 quote5YES fee-net exit1.20312 versus centralhold3/stress2/lowrange1; low range favors sale. Correlated alternative-opportunity/log-growth sensitivity recorded in research/2026-10-18-messi-fill.md; divergence does not authorize enlarging.",
+    "source_review_20261020": "Actual AFA Oct6 home-public farewell corroboration upgrades previous indexed FIFA evidence (directFIFA bodywas shell); nostalgicOct19commentary supplies noGoogleTop5/growth measurement. No duplicateevent probabilityincrement or formalretirement inference. Retain5YES/noadd; p60/selected40 and uncertaintyunchanged."
   },
   "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
     "p_yes": 0.12,
@@ -1823,5 +1824,40 @@
     "decision_id": 243,
     "latest_execution_review": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
     "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json"
+  },
+  "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026": {
+    "p_yes": 0.2329,
+    "p_no": 0.7671,
+    "p_no_stress": 0.5971,
+    "p_yes_range": [
+      0.1,
+      0.6
+    ],
+    "edge_haircut": 0.17,
+    "cluster": "ai-ships-fast-short",
+    "rho_within": 0.75,
+    "cluster_frac": 0.25,
+    "verified": "2026-10-20",
+    "criteria_read": "2026-10-20",
+    "market_id": "2431413",
+    "condition_id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "asset": "101106027123457230511923560603100933782439732335133293995646065340833826927163",
+    "criteria_sha256": "97cf85eb21709fb3165022fa3e248ad74648ceea3a1bccfd6629f8f45b7e7b72",
+    "hidden_info": true,
+    "research_report": "research/2026-10-17-deep-review/revisions/0014_20261020T091736436079Z.md",
+    "probability_model": "research/2026-10-17-deep-review/models/arena_family_454_primary_0910.json",
+    "latest_source_packet": "data/deep_review_20261017/work/arena14_newlead_root_0944.json",
+    "current_assessment": "DEC245 posted5NO49c/2.45 then canceled09:39:38. After300s exactterminalCANCELED0/127unchangedtrades/9sameindexed/CTFboth0/pUSD19.251290 proven; onlytargetreservation4to3 retired. No purchase, fee, debit, cashcredit orprofit. Original numericforecast remains dated unexecutedresearch, not currententryauthority.",
+    "rationale": "Complete official Oct15 raw non-style-controlled table and config binding. One mutually exclusive company-winner distribution; no independent sibling forecasts. Reserve17pp=10 frontier uncertainty+2 source/fallback+5 conditional fills. Broad loss case reverses entry; no calibrated conditional-fill rate. Model predates own fresh quotes, older family prices known.",
+    "correlation_caveat": "Same configured AI factor as held Kimi HLE and OpenRouter NO, different metrics and cutoffs; no independence or hedge credit. Declared25% risk floor conservatively covers all current PM cost plus original pending bids; scalar rho.75 is advisory. Combined AI full cost including proposed2.45 can lose6.90.",
+    "management": "No active order or holding; no automaticrepost/add/chase/taker. Before any newquote: review actualcurrent source/modelcapability/admission, independently underwrite winner/conditionalfill, finish feedwarmup then all fresh execution gates. Old canceledbid needs no furtherpull.",
+    "entry_underwriting": "data/deep_review_20261017/work/arena14_entry_underwriting_0919.json",
+    "retired": true,
+    "retired_utc": "2026-10-20T09:47:42.878825+00:00",
+    "retired_reason": "Maker canceled0filled and no holding; newmoney requires source/quality/admission and fill-selection re-underwriting after Mythos research lead.",
+    "order_id": "0x1836ad189d5718623183af22e10b2649cf169b8e7aa99dee6f683a9bb99f1134",
+    "decision_id": 245,
+    "latest_execution_review": "data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json",
+    "monitoring": "Unique Claude/Arena feed and newly added Claude/Gemini terms retired after exactzero-fill proof; pre-existing held and IPO/model coverage unchanged."
   }
 }

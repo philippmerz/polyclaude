@@ -1,0 +1,23 @@
+{
+  "schema": "root_exact_cancel_retirement.v1",
+  "verified_utc": "2026-10-20T09:46:18.769856+00:00",
+  "order_id": "0x1836ad189d5718623183af22e10b2649cf169b8e7aa99dee6f683a9bb99f1134",
+  "terminal": "CANCELED",
+  "matched": 0,
+  "associated_trades": 0,
+  "auth_trades": 127,
+  "indexed_rows": 9,
+  "candidate_CTF_yes": 0,
+  "candidate_CTF_no": 0,
+  "pUSD": 19.25129,
+  "financial_effect": "No purchase, debit, credit, fee, transaction or realized profit. Only contingent exposure promise retired.",
+  "account_facts": "data/deep_review_20261017/work/tick20261020T0945_post_cancel_facts.json",
+  "facts_sha256": "e121ba35c138f0a8d9af1aeebe45147f3e5e58848472ad4ca7bfebec53ff09b1",
+  "root_verified_receipt_pairs": 10,
+  "earliest_read_started_utc": "2026-10-20T09:45:05.787995Z",
+  "cancel_completed_utc": "2026-10-20T09:39:38.506265+00:00",
+  "reservation_transition": "4/8.95\u21923/6.50 under vetted entry+ledger locks; only exacttarget removed; other3 dictionaries unchanged",
+  "vetted_read_capture": "logs/deep_review_20261017/arena14_reconcile_0946",
+  "new_BUY_blocker": false,
+  "automatic_repost": false
+}

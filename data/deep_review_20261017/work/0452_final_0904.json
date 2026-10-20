@@ -1,0 +1,161 @@
+{
+  "review_index": 452,
+  "market_id": "5166819",
+  "condition_id": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+  "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac",
+  "token_ids": [
+    "6951748019944267457340977919999635495635553300507854159007268627444555282625",
+    "96919765498554623403874663506090866865868148218577098036285318630677785496532"
+  ],
+  "status": "valued",
+  "literal_analysis": "# 452 \u00b7 Bab el-Mandeb October31 average25\u201329\n\n**Valued: YES45% (broad20\u201375%); no entry.** NO55% has positive central economics at42c, but selected NO40% after15pp uncertainty reserve does not clear it. The source-mapping limitation was resolved before forecasting; this is a priced case, not a data-gap rejection.\n\nThe exact rule uses IMF PortWatch's October31 seven-day \u201cArrivals of Ships\u201d average, including the five named cargo classes. Unreported ships do not count. Target data may arrive later; after14calendar days without the target, use the most recent data published by then, even if older than that14-day window. Obvious clerical corrections can extend through the third calendar day ET after first release; disagreement with another tracker is not a clerical error. Nov1operationalend is not settlement timing;30-day carry sensitivity allows the ordinary November lag within January's project horizon.\n\n",
+  "evidence": [
+    {
+      "url": "https://data-download.imf.org/climatedata/portwatch-chokepoints-indicators.html?portid=chokepoint4",
+      "observed_utc": "2026-10-20T08:51:13.782079Z",
+      "finding": "Actualofficialpage/JSbindsexactportid,n_total,n_MA7observationsandArrivalslabel;rootverifiedbytes/code."
+    },
+    {
+      "url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0",
+      "observed_utc": "2026-10-20T08:51:36.080995Z",
+      "finding": "100cappeduniqueconsecutivedailyrowsJuly4\u2013Oct11;last7sum198,28.285714;missingfutureunknown."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5166819",
+      "observed_utc": "2026-10-20T08:58:31.350640+00:00",
+      "finding": "All9identityfieldsunchanged/open/accepting;fee-freethree-waycorroboration;currentbothbooks."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.45,
+    "low": 0.2,
+    "high": 0.75,
+    "method": "Measuredrecentseries plus explicitly subjectiveforwardregime/source-publication/range-interpretation mixture; rounded,uncalibrated.",
+    "reasoning": "Continue/gradualmean28andpredictivesd3 broadenactualrecentweekvariabilityfor20dayextrapolation andunobserved9days. Separate10%down/10%up regimesavoidsassumingrecentshippingconditionspersist.5%extendeddatafreeze isuncalibratedoperationaltail;fallbackcanuseOct11latest,notonlydatafromthe14daywindow. Roundmixtureto45%,broad20\u201375 reflectsregime/source/endpointrisk.15ppentryreserve(10base+5forlagandrangegap)selectedYES30/NO40. Neitherendpointmustpass. Futuredataabsencealone isnotforecastblock.",
+    "model_path": "research/2026-10-17-deep-review/models/0452_primary_0900.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0452_quote_0901.json",
+    "quote_file_sha256": "f0102cd3dfac59c065ead8945d3aa4285435e60898a49f105f42db723277d0ac",
+    "quote_capture_utc": "2026-10-20T08:58:31.726534+00:00",
+    "gamma_received_utc": "2026-10-20T08:58:31.350640+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 30.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.45,
+        "selected_stress_probability": 0.30000000000000004,
+        "best_bid": 0.58,
+        "best_ask": 0.6,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486709476",
+        "book_received_utc": "2026-10-20T08:58:31.566522+00:00",
+        "book_age_seconds_at_receipt": 2.090521812438965,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.6
+              }
+            ],
+            "net": 6.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.8,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.58
+              }
+            ],
+            "net": 5.8
+          }
+        },
+        "taker_cost_usd": 6.0,
+        "central_expected_profit_usd": -1.5,
+        "selected_stress_profit_usd": -2.9999999999999996,
+        "break_even_before_carry": 0.6,
+        "break_even_constant_carry": 0.6015570482464895,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.55,
+        "selected_stress_probability": 0.4,
+        "best_bid": 0.4,
+        "best_ask": 0.42,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792486709476",
+        "book_received_utc": "2026-10-20T08:58:31.566522+00:00",
+        "book_age_seconds_at_receipt": 2.090521812438965,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.2,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.42
+              }
+            ],
+            "net": 4.2
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.4
+              }
+            ],
+            "net": 4.0
+          }
+        },
+        "taker_cost_usd": 4.2,
+        "central_expected_profit_usd": 1.2999999999999998,
+        "selected_stress_profit_usd": -0.20000000000000018,
+        "break_even_before_carry": 0.42000000000000004,
+        "break_even_constant_carry": 0.42108993377254267,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry: NOpositivecentralat42c butfailsselected40;38\u201339c makerfailscase-specificconditionalselected31.75. Mappinggapclosed;notrejectedforinaccessiblefuturedata.",
+  "reopen_condition": "Newseries/rangeclarification/currentconditionalmakerunderwritingandallliveexecutiongates.",
+  "report_markdown": "# 452 \u00b7 Bab el-Mandeb October31 average25\u201329\n\n**Valued: YES45% (broad20\u201375%); no entry.** NO55% has positive central economics at42c, but selected NO40% after15pp uncertainty reserve does not clear it. The source-mapping limitation was resolved before forecasting; this is a priced case, not a data-gap rejection.\n\nThe exact rule uses IMF PortWatch's October31 seven-day \u201cArrivals of Ships\u201d average, including the five named cargo classes. Unreported ships do not count. Target data may arrive later; after14calendar days without the target, use the most recent data published by then, even if older than that14-day window. Obvious clerical corrections can extend through the third calendar day ET after first release; disagreement with another tracker is not a clerical error. Nov1operationalend is not settlement timing;30-day carry sensitivity allows the ordinary November lag within January's project horizon.\n\nRoot verified the official technical page and chart JavaScript: exact `portid=chokepoint4`; daily `n_total`\u2192`n`; trailing7observations\u2192`n_MA`; chart label \u201cArrivals of Ships.\u201d A fresh descending query supplies100unique consecutiveJuly4\u2013Oct11rows, all exact location, capped/exceededTransferLimit. The latest week sums198, mean28.285714. Last56overlapping averages have mean27.535714/sd2.165551:33/56fall literally25\u201329;41/56in the integer25\u2013<30bucket. These dependent windows are descriptive, not independent backtest wins. Raw dates are DateOnly ISOstrings; local calendar continuity was verified, not live browser rendering.\n\nThe title's \u201cbetween25and29,\u201d together with unrounded-value priority, supports25\u2264mean\u226429: daily7sum175..203. Conventional integer-bin treatment would instead include sums204..209. Full text gives no explicit upper30rule. Forecast weights literal75%/integer interpretation25%, a subjective adjudication allowance rather than an invented certainty. An exact official clarification would change this mixture.\n\nRoot projects20days beyond the latest published date:75%gradual regime, future weekly meanNormal(28,3\u00b2);10%disruption Normal(18,5\u00b2);10%resumption Normal(36,5\u00b2);5%extended publication freeze, using today's in-range latest week. Regime/freeze weights are judgments, not measured security-event/publication frequencies. Continuity-corrected interval probabilities give42.881%literal/50.749%integer, mixture44.848%, rounded45. No future missing date is encoded zero. Broad20\u201375%allows regime/source failure; selected30YES/40NO uses10ppbase plus5ppfor the9-day source lag and range uncertainty, not an arbitrary endpoint-pass requirement.\n\nAt08:58:31UTC, all9identity fields/fullrules match; open/accepting/no proposed UMA. Both10-share books2.09seconds old at receipt, min5/tick1c. Fee-disabled status has structuredGamma, compact descriptor and fullCLOB corroboration; helper's `authoritative:false` denotes its legacy zero-curve representation, not a claim that a nonzero fee was ignored.\n\n| Side | Bid / ask | Cost | Central / selected net profit |\n|---|---|---|---|\n| YES45 /selected30%|58 /60c|6.00|\u22121.50 /\u22123.00|\n| NO55 /selected40%|40 /42c|4.20|+1.30 /\u2212.20|\n\nTouch makerNO40c only equals selected payout before carry. Bids38\u201339c create1\u20132c/share selected unconditional surplus. Their fills can select fresh published data: an explicit55%ordinary/30%moderate-in-range/15%strong-in-range fill mixture at respectiveNO55/45/20 yields conditional46.75%, selected31.75 after the same uncertainty reserve. These are uncalibrated case judgments; central conditional EV remains positive, but selected economics do not. This is not an automatic2\u00d7adverse-fill veto or a claim that all maker orders are invalid. A remote31c order would require its own changed fill mix; it is not implicitly authorized.\n\nDated Oct19Aave3.2035%variable carry is about.26%over30days before funding/gas/credit risk. Retain cash/current underwritten opportunities instead of buying a fragile marginal edge. This adds a new shipping/security and common venue/liquidity exposure, not a guaranteed hedge to existing political/AI claims. Any later action needs current collateral/reservations/caps/legal status/fees/source/books through the vetted wrapper. No order, capital move or held-prior change occurred.\n\nReopen on fresh qualifying series/source corrections, range clarification, or a current maker price with stronger conditional economics. Source/code change invalidates the mapping; future publication is monitored in the ordinary review process, with no new timer.\n\n[Measured-data proof](../../../data/deep_review_20261017/work/0452_measured_series_0857.json) \u00b7 [Official mapping](../../../data/deep_review_20261017/work/0452_portwatch_methodology_binding_20261020.json) \u00b7 [Primary model](../models/0452_primary_0900.json) \u00b7 [Conditional entry assessment](../models/0452_conditional_0903.json) \u00b7 [Quote](../../../data/deep_review_20261017/work/0452_quote_0901.json) \u00b7 [Economics](../../../data/deep_review_20261017/work/0452_economics_0901.json).\n"
+}

@@ -1,0 +1,20 @@
+{
+  "schema": "root_account_verification.v1",
+  "verified_utc": "2026-10-20T09:30:02.502685+00:00",
+  "facts_sha256": "1d69b94f8a1e135374e2ee053c440b075a614208822c9cc5cb1b47f676d1d137",
+  "pairs_verified": 14,
+  "all_9_indexed_identity_size_totalBought_redeemability_match_prior": true,
+  "original_orders_and127trades_raw_hash_equal_prior": true,
+  "candidate14_ctf_both_zero": true,
+  "bankroll_same_producer": {
+    "total": 194.2,
+    "gas": 5.78,
+    "pm_mid": 34.48,
+    "pm_net_depth": 28.56,
+    "trading_mid": 188.42,
+    "trading_net_depth": 182.5,
+    "depth_return_percent": 7.352941176470584
+  },
+  "receipt_index": "data/deep_review_20261017/work/tick20261020T0918_account_receipt_index.json",
+  "limits": "Sequential rounded book/provider values, not synchronized NAV/proceeds; free collateral not independently certified."
+}

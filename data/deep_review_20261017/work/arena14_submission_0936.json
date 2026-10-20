@@ -1,0 +1,26 @@
+{
+  "schema": "financial_submission_summary.v1",
+  "returncode": 0,
+  "started_utc": "2026-10-20T09:35:34.108744+00:00",
+  "completed_utc": "2026-10-20T09:35:39.837406+00:00",
+  "read_only": false,
+  "parser_state": "ambiguous",
+  "accepted": {
+    "success": true,
+    "status": "live",
+    "orderID": "0x1836ad189d5718623183af22e10b2649cf169b8e7aa99dee6f683a9bb99f1134",
+    "takingAmount": "",
+    "makingAmount": "",
+    "errorMsg": "",
+    "transactionsHashes": null,
+    "tradeIDs": null
+  },
+  "private_result": "logs/deep_review_20261017/arena14_execute_0936/result.json",
+  "limit": 0.49,
+  "side": "NO",
+  "shares": 5,
+  "maximum_cost": 2.45,
+  "verification": "Authenticated post-submit inventory/details/trades/CTF/cash pending; acknowledgement alone is not completion proof.",
+  "accepted_live_ack": true,
+  "parser_note": "Generic fill parser returns ambiguous for a resting order; explicitsuccess+LIVE+orderID is separately recognized by the mandatory wrapper. This was a liveack, not an ambiguous fill or a trade."
+}

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 233 recorded observations from Apr-25
+The local performance CSV now has 234 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
-**380 valued /15 blocked /371 factual /2,234 pending;766 base+69 revisions.** Case450 is verified blocked after review over its None-versus-accelerated-departure payout scope; no probability, own quote or trade. This is case-specific, not a global goal block; case451 is active. [Checkpoint](notes/deep_review_checkpoint.json) · [Goal phase](data/deep_review_20261017/work/goal0021_RESUME.json) · [450 report](research/2026-10-17-deep-review/evaluations/0450.md) · [451 facts](data/deep_review_20261017/work/0451_facts_0642.json).
+**383 valued /15 blocked /371 factual /2,231 pending;769 base+74 revisions.** Cases451(VA05),452(Hormuz shipping range) and454(Alibaba TextArena) are individually saved and verified. No entry from those three; one common December company-winner model corrects incompatible dated sibling forecasts. No case is active; next455. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase handoff](data/deep_review_20261017/work/goal0022_RESUME.json).
 
-**Kimi412 remains10YES at12c/1.20cost; original3political BUYs remain LIVE/0matched/6.50.** Full07:34-triggered check completed08:07–24UTC with no new fill, transaction or numerical forecast change. [Exact orders](notes/resting_orders.md) · [Current check](research/2026-10-20-073415-checkin.md).
+**Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids remain unchanged. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
 
 ## Mandate and constraints
 
@@ -80,15 +80,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 08:07 UTC
+## Last audited snapshot — October20 09:18 UTC
 
-**Indicative trading net depth183.85 versus170 contributed (+8.15%); canonical bankroll195.01 including5.79separate gas.** Trading midpoint189.22; same-producer PM35.27mid/29.90indicative fee-net depth. Producer08:07:09–26UTC; sequential rounded estimates are not synchronized NAV/proceeds.19.72accounting residual is not audited cash profit; VM/API costs excluded. CSV233preserves all232earlier rows and external contributions. [Financial record](research/2026-10-20-0807-financial-snapshot.md).
+**Indicative trading net depth $182.50 versus $170 contributed (+7.35%); canonical bankroll $194.20 including $5.78 separate gas.** Trading midpoint $188.42; same-producer PM $34.48 midpoint/$28.56 fee-net depth. Sequential rounded estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV234 preserves all233 earlier rows and external flows. [Financial record](research/2026-10-20-0918-financial-snapshot.md).
 
-No new fill or financial action. Authenticated original3LIVE0matched bids/6.50, all details,127exhausted trades and9indexed quantities unchanged. No freshCTF proof. Requested Kimi deployment/Stripe-OpenRouter alerts and a newer Michigan interview report were substantively reviewed; no numerical forecast change. HLE08:08servedbody unchanged/K3HLE41.08; ORcompletedOct12unchanged164.043986T/currentpartial32.345372T is not settlement. [Primary review](data/deep_review_20261017/work/tick073415_primary_review.json).
+No new fill, transfer or redemption observed. Current follow-up independently verified all9 indexed quantities,127 unchanged authenticated trades, case14 both CTF balances0 and pUSD19.251290. Its temporary maker commitment was canceled and reconciled without a fill or cash movement. The09:31 standalone PM35.23mid/31.73depth observation is separate from this aggregate. [Account verification](data/deep_review_20261017/work/arena14_account_root_verified_0930.json).
 
-AuditCLEAN/cruxquiet/Ostium0/UMA0alerts/hurdle4clear0flagged/nohitrows/0overdue. Four actual singleton/current daemons, no restart; no winningredemption. Retain/noadd after pessimistic, carry and explicit joint-state comparisons; Clarity29+29 managedwhole. [Completed check](research/2026-10-20-073415-checkin.md).
+Requested07:34 news reviews and full11steps completed once08:07–24. Kimi/Stripe-OpenRouter headlines do not establish new resolving-source values; latest Messi commentary concerns an already-modeled farewell. Retain existing holdings/noadd; manageClarity29+29 whole. Audit/UMA/ops remain dated to fullcheck;09:31quick status4hurdleclear/0flagged/nohitrows. WeeklyOct23/monthlyNov12notdue; next existing10light/14full or earlier material event. [Completed check](research/2026-10-20-073415-checkin.md).
 
-Discovery is capped/incomplete: primary80/585eligible, thin3000/3321; consistency4quoted/20attempted/174unquotedgroups. All69offline batches/1226emitted and3080retainedsnapshotrows structurally/source reviewed, notvaluations. Exact MI/Trumpdust/ME02unfilledbid matches are unchanged exposure. No universe-wide zero. WeeklyOct23/monthlyNov12notdue; next existing10light/14full or earlier material event. No Telegram for a flat decision tick. [Discovery resume](data/deep_review_20261017/work/tick073415_discovery_resume.json).
+Discovery remains capped/incomplete: primary80/585eligible,thin3000/3321; consistency4quoted/20attempted/174unquotedgroups.69offline batches/1226emitted and3080retained snapshot rows structurally/source checked, not valuations. No universe-wide absence finding. [Discovery resume](data/deep_review_20261017/work/tick073415_discovery_resume.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

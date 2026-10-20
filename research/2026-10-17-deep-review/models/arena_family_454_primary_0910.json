@@ -1,0 +1,132 @@
+{
+  "schema": "primary_joint_arena_model.v2",
+  "created_utc": "2026-10-20T09:10:56.520284+00:00",
+  "author": "root",
+  "endpoint": "OnecompanyownsTextRankfirst;styleoff;Dec31noonET;rank/unroundedscore/companyalphabet;delay/fallbackrules. Exactcriteria14/161/274/370/454byteidentical.",
+  "branches": [
+    {
+      "weight": 0.35,
+      "scenario": "No material OpenAI contender",
+      "company_first": {
+        "OpenAI": 0.005,
+        "Google": 0.5,
+        "Anthropic": 0.29,
+        "Meta": 0.07,
+        "Alibaba": 0.045,
+        "DeepSeek": 0.035,
+        "xAI": 0.025,
+        "Other": 0.03
+      }
+    },
+    {
+      "weight": 0.45,
+      "scenario": "One material OpenAI contender",
+      "company_first": {
+        "OpenAI": 0.22,
+        "Google": 0.365,
+        "Anthropic": 0.22,
+        "Meta": 0.055,
+        "Alibaba": 0.04,
+        "DeepSeek": 0.04,
+        "xAI": 0.035,
+        "Other": 0.025
+      }
+    },
+    {
+      "weight": 0.18,
+      "scenario": "Multiple material OpenAI iterations",
+      "company_first": {
+        "OpenAI": 0.4,
+        "Google": 0.25,
+        "Anthropic": 0.16,
+        "Meta": 0.05,
+        "Alibaba": 0.015,
+        "DeepSeek": 0.035,
+        "xAI": 0.04,
+        "Other": 0.05
+      }
+    },
+    {
+      "weight": 0.02,
+      "scenario": "Source/comparison disruption",
+      "company_first": {
+        "OpenAI": 0.25,
+        "Google": 0.23,
+        "Anthropic": 0.18,
+        "Meta": 0.08,
+        "Alibaba": 0.08,
+        "DeepSeek": 0.06,
+        "xAI": 0.04,
+        "Other": 0.08
+      }
+    }
+  ],
+  "joint_marginals": {
+    "OpenAI": 0.17775000000000002,
+    "Google": 0.38885,
+    "Anthropic": 0.2329,
+    "Meta": 0.05985,
+    "Alibaba": 0.03805,
+    "DeepSeek": 0.03775,
+    "xAI": 0.0325,
+    "Other": 0.03235
+  },
+  "case_mapping": {
+    "14": "Anthropic",
+    "161": "Google",
+    "274": "OpenAI",
+    "370": "DeepSeek",
+    "454": "Alibaba"
+  },
+  "ranges": {
+    "Anthropic": [
+      0.1,
+      0.6
+    ],
+    "Google": [
+      0.2,
+      0.75
+    ],
+    "OpenAI": [
+      0.03,
+      0.55
+    ],
+    "DeepSeek": [
+      0.005,
+      0.3
+    ],
+    "Alibaba": [
+      0.005,
+      0.18
+    ]
+  },
+  "entry_reserve": 0.17,
+  "reserve_bridge": "10ppbaseforfrontierquality/admission/timing+rivalresponse,2ppresidualsource/fallback/ownership,5ppconditionalfillselection. Older274/37020ppincluded5source/configuration;officialREADME+completeParquetcloseraw-configandcoveragegaps,reducingthatcomponentto2. Harmonizeolder14/16110ppwithsamefamilyuncertainty. Selectedcaseisnotbroadrangeendpoint;20ppwasnevercalibrateduniquely. Loweringnowhasindependentsourceevidenceandissavedbeforefreshquotes,notprice-driven.",
+  "fact_bridge": "CompleteofficialOct15snapshot416overall/11033rowsvalidated. Google1/1532.337544,Anthropic2/1515.761445,Meta7/1500.955479,Alibaba17/1482.877225,OpenAI28/1471.339766,DeepSeek38/1462.847421,xAI51/1450.827928. Configtextdocumentednonstylecontrolled. AlibabaAug3releaseclaimedText5then;Sep2snapshotupdateisnotcurrentrankorwinningDecemberrelease. Arena score/CIsandnumberofmodelsarenotDecemberprobabilities.",
+  "causal_bridge": "SameOpenAIbranchweightsandOpenAImarginalas274arepreserved;reviseincompletecompetitorallocationtorepresentMetaandAlibababeyondatinyOtherbucket,andgivealldatedcasesasinglecurrentmutuallyexclusiveview. Thisiscoverage/modelreconciliationofsameOct15baseline,nottreatingoldinformationasanewadversesurprise. Conditionalquality/admission/timingandcompetitionarejointjudgments;noindependentmodel/releasecoinorhistoricalcalibrationclaimed. StrongerOpenAIiterationsleaveothercompanieslessfirst-placeprobability. Alibabaactualproductprogressandrank17supportnonzeropath;noverifiedfuturewinningreleaseorcompletecalendar. OtherincludesXiaomiandallunpricedowners,notfactualexclusionsorhardfutureceilings.",
+  "family_inconsistency": "Effectivecase14=.327,161=.548,274=.17775,370=.0584sum1.11115acrossdifferentdatedmodelversions. Historicalreportsremainhonestdatedbeliefs,butcannotbecombinedascurrentjointview. New14/161/274/370revisionsand454recordwillpublishthisoneepoch;noindependentforecastcountinflation.",
+  "portfolio": "HeldKimiHLE/ORusetraffichaveAIreleaseandvenuefactors,differentmetrics/cutoffs;nohedgeorindependencecredit. Compareeachmarginalcandidateplusjointterminalstates,currentcaps/reservationsandcash/Aave. Nofinancialpriorchangeinthismodel.",
+  "sources": [
+    "work/0454_full_snapshot_0908.json",
+    "work/0454_style_mapping_facts_0849.json",
+    "work/0454_current_org_facts_0915.json"
+  ],
+  "source_proofs": [
+    {
+      "receipt": "logs/deep_review_20261017/454_style_mapping_0845/public/hf_readme.receipt.json",
+      "raw_sha256": "d0147bd2033ee4458b55e28a017268e46dc6e78418f52af0c0f2b5bc605d2877",
+      "received_utc": "2026-10-20T08:49:10.624618Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/454_official_alibaba_facts_0915/qwen38_release.receipt.json",
+      "raw_sha256": "9610c445aa89976fdb9877d758baeed5b8a88334d3d458f6cc12fe5da3ba6bb8",
+      "received_utc": "2026-10-20T09:05:19.237959Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/454_official_alibaba_facts_0915/qwen38_update_notice.receipt.json",
+      "raw_sha256": "17bba7092781ab7a2f9014352cfa57375d13bc5036f9cdca2763384f982eb7da",
+      "received_utc": "2026-10-20T09:05:19.840647Z"
+    }
+  ],
+  "price_context": "Olderfamilyquotesknownfromdatedreports;newallocationand17ppreservesavedbeforefreshfamilyquotes/currentown454quote. Noexecutionauthority."
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 463,
+  "market_id": "2941851",
+  "condition_id": "0x3e31fd4dcc1efc43b9798a205d604945b513c4f284e63629fa9f7434d13bb17a",
+  "frozen_criteria_sha256": "6dcbff711bfdfe7593b129c869463dbf846b1c1f3d1dcc24bf0fb8e56e0d97c6",
+  "captured_utc": "2026-10-20",
+  "scope": "Facts only. Frozen question asks whether the Bank of Canada decreases its target for the overnight rate by 25 bps at the October 2026 announcement; this is not an any-size cut question.",
+  "frozen_rule_facts": {
+    "decision_event": "October 2026 Bank of Canada interest-rate announcement, scheduled October 28, 2026; resolution source is official Bank of Canada information.",
+    "rate_definition": "If the specified rate is expressed as an upper/lower bound, use the upper bound.",
+    "rounding": "For a rate change not in displayed options: changes smaller than 25 bps round to 25 bps; larger changes round to nearest 25 bps, ties away from zero. Displayed Increase/Decrease options include changes of any size. The market's exact Yes question is specifically a 25-bp decrease.",
+    "postponement": "A postponed announcement before the next scheduled announcement resolves on that decision; cancellation or postponement past the next scheduled announcement resolves No Change. Emergency changes outside the specified announcement do not count."
+  },
+  "official_sources": [
+    {
+      "url": "https://www.bankofcanada.ca/core-functions/monetary-policy/key-interest-rate/",
+      "status": 200,
+      "fact": "Official policy-interest-rate page identifies the target for the overnight rate and lists fixed annual announcement dates. The captured page showed September 29, 2026 as a date in its rate table; no statement about a post-September decision is inferred.",
+      "raw_sha256": "bcfdf39da68894c982152d70a06e27f713a117d4a1065ea0d137732af6334d09",
+      "receipt": "logs/deep_review_20261017/case463_facts_20261020/calendar/calendar.receipt.json",
+      "body": "logs/deep_review_20261017/case463_facts_20261020/calendar/calendar.body.json.gz"
+    },
+    {
+      "url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-02/",
+      "status": 200,
+      "published": "2026-09-02",
+      "fact": "Bank states it held the overnight target at 2.25%, Bank Rate at 2.50%, deposit rate at 2.20%; next scheduled target announcement October 28, 2026. It says Governing Council is prepared to adjust policy as needed; this is not a forecast for October.",
+      "raw_sha256": "3546676d77d2b0dd307194d6e294c3767ddbc671c06d71424f525397f6199305",
+      "receipt": "logs/deep_review_20261017/case463_facts_20261020/sep2_release/sep2_release.receipt.json",
+      "body": "logs/deep_review_20261017/case463_facts_20261020/sep2_release/sep2_release.body.json.gz"
+    },
+    {
+      "url": "https://www.bankofcanada.ca/2026/07/bank-canada-publishes-2027-schedule-policy-interest-rate-announcements-other-major-publications/",
+      "status": 200,
+      "published": "2026-07-27",
+      "fact": "Bank reconfirms September 2, October 28, and December 9, 2026 announcement dates; announcements at 09:45 ET, with the October Monetary Policy Report concurrent.",
+      "raw_sha256": "4b76a5ececa47718439b5c1204b0a85cf0d669e7583cd2c6d56fc5777ae9b8b0",
+      "receipt": "logs/deep_review_20261017/case463_facts_20261020/2027_calendar/2027_calendar.receipt.json",
+      "body": "logs/deep_review_20261017/case463_facts_20261020/2027_calendar/2027_calendar.body.json.gz"
+    },
+    {
+      "url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261019/dq261019a-eng.pdf",
+      "status": 200,
+      "published": "2026-10-19",
+      "fact": "Official Statistics Canada September 2026 CPI PDF was captured (273,698 bytes), but no PDF text extractor is installed in this environment, so I make no numerical CPI claim from the body.",
+      "raw_sha256": "8b4b66cd9a470419aa70232ec5c4122a68c124abfa96fd1aa6a046b43024e318",
+      "receipt": "logs/deep_review_20261017/case463_facts_20261020/sep_cpi/sep_cpi.receipt.json",
+      "body": "logs/deep_review_20261017/case463_facts_20261020/sep_cpi/sep_cpi.body.json.gz"
+    }
+  ],
+  "failed_attempts": [
+    {"url": "https://www.bankofcanada.ca/2026/09/fad-press-release-2026-09-16/", "error": "HTTPError", "receipt": "logs/deep_review_20261017/case463_facts_20261020/release/release.receipt.json"},
+    {"url": "https://www150.statcan.gc.ca/n1/daily-quotidien/261020/dq261020a-eng.htm", "error": "HTTPError", "receipt": "logs/deep_review_20261017/case463_facts_20261020/cpi/cpi.receipt.json"}
+  ],
+  "limits": "No Governor interview or October decision exists in this collection; September statements and CPI are dated inputs, not evidence of the eventual October outcome. Failed URL attempts do not imply missing releases or absence of evidence. No forecast, probability, pricing, ledger, or action assessment was made."
+}

@@ -1,0 +1,9 @@
+{
+  "schema": "local_arena_model_lookup.v1",
+  "input_sha256": "1735d8b7e31781eae4433c4ab32c642868dde6bb755d3367f37e51e1094d7a95",
+  "snapshot": "2026-10-15",
+  "rows_total": 11033,
+  "matching_rows": 0,
+  "rows": [],
+  "limits": "No match in this dated full derivative does not establish model absence/current rank or new release. Exact source/config remains frozen date, not liveUI."
+}

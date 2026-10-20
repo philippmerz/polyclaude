@@ -1,0 +1,67 @@
+{
+  "capture_semantics": "read_capture HTTP body receipts; SHA covers supplied response bytes, not wire authentication.",
+  "case_identity": {
+    "conditionId": "0xf65f336f88d86c075decfd57fb7152f89ab6c72892bae4dee2ea464c02833630",
+    "criteria_sha256": "4cedd7e26c21e8a5a79d60eb0edad5802b52fb5ea99c5a77e3d2d6a7333303ac",
+    "frozen_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+    "id": "5166819",
+    "question": "Will there be between 25 and 29 average daily transits of the Bab el-Mandeb Strait on October 31?",
+    "slug": "will-there-be-between-25-and-29-average-daily-transits-of-the-bab-el-mandeb-strait-on-october-31"
+  },
+  "check_time_utc": "2026-10-20T08:51:13.782079Z",
+  "direct_mapping": {
+    "chart_binding": "HTML calls createDisruptionAisChart(final,\"n\"); label config titles n as Arrivals of Ships; chart line uses n_MA and names it a 7-day Moving Average (lines 395-421, 497-605).",
+    "moving_average": "generateChokepointIndicators defaults ma_days=7 and computes n_MA from n using movingAvg (lines 349-375).",
+    "moving_average_window": "Trailing seven observations on date-sorted series; startup values are null until seven observations.",
+    "official_page_url": "https://data-download.imf.org/climatedata/portwatch-chokepoints-indicators.html?portid=chokepoint4",
+    "page_capture": {
+      "body": "logs/deep_review_20261017/case452_methodology_20261020/chokepoint_indicator_page.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case452_methodology_20261020/chokepoint_indicator_page.receipt.json",
+      "sha256": "7011a1c0e01f1ff8d776c656e73084c13b7327c33d69c605cb75d1d23feb663d",
+      "status": 200
+    },
+    "query_identity": "HTML passes its portid query parameter to an ArcGIS where clause; this page uses portid=chokepoint4.",
+    "script_capture": {
+      "body": "logs/deep_review_20261017/case452_methodology_20261020/script/transit_calls_chart_script.body.json.gz",
+      "receipt": "logs/deep_review_20261017/case452_methodology_20261020/script/transit_calls_chart_script.receipt.json",
+      "received_utc": "2026-10-20T08:51:13.782079Z",
+      "sha256": "c52d87a1d8079214dea70e1de7f49ec01ec7b71db5b5bfa292ad643cd4f51ac5",
+      "status": 200
+    },
+    "series_parser": "parseChokepoint maps feature.attributes.n_total to series field n (script lines 196-219).",
+    "technical_layer_url": "https://services9.arcgis.com/weJ1QsnbMYJlCHdG/arcgis/rest/services/Daily_Chokepoints_Data/FeatureServer/0"
+  },
+  "identity_crosscheck": {
+    "api_portid": "chokepoint4",
+    "api_portname": "Bab el-Mandeb Strait",
+    "match": "exact name and portid in existing and refreshed API rows",
+    "rule_location": "Bab el-Mandeb Strait",
+    "rule_metric": "Arrivals of Ships; 7-day moving average"
+  },
+  "latest_series_refresh": {
+    "body": "logs/deep_review_20261017/case452_methodology_20261020/latest_series/latest_chokepoint4_rows.body.json.gz",
+    "coverage_statement": "Only newest returned row recorded. Response was capped/exceeded transfer limit; descending order returned the latest row first. No row after Oct 11 observed. Missing/future dates are unavailable, never encoded as zero.",
+    "exceededTransferLimit": true,
+    "features_returned": 100,
+    "latest_observed": {
+      "date": "2026-10-11",
+      "n_total": 31,
+      "portid": "chokepoint4",
+      "portname": "Bab el-Mandeb Strait"
+    },
+    "query_sha256": "be72c57c05009d512c36bcf8d7fddd05d3bb2c46fa31e9d8023378f285fe2703",
+    "receipt": "logs/deep_review_20261017/case452_methodology_20261020/latest_series/latest_chokepoint4_rows.receipt.json",
+    "received_utc": "2026-10-20T08:51:36.080995Z",
+    "requested_record_count": 100,
+    "sha256": "19a158dc05236187dd2a0e2e00b54f4db63189d33a1f8a12bc1ccf597f9aba53",
+    "sort": "date DESC",
+    "status": 200
+  },
+  "remaining_limits": [
+    "This proves official UI implementation field/aggregation mapping, not future availability or exact publication cadence.",
+    "No forecast or outcome inferred; market fallback/correction wording is separate from current API availability.",
+    "No pricing, probability, ledger, valuation, or trade action."
+  ],
+  "result": "Direct official page and chart code map the Bab el-Mandeb arrivals seven-day moving-average series to Daily_Chokepoints_Data.n_total for portid chokepoint4. The moving average is computed client-side from the daily series, not stored as a separate source field.",
+  "schema": "case452_portwatch_methodology_binding.v1"
+}

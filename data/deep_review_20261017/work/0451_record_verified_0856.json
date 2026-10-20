@@ -1,0 +1,16 @@
+{
+  "schema": "case_record_verification.v1",
+  "verified_utc": "2026-10-20T08:55:02.917231+00:00",
+  "index": 451,
+  "status": "valued",
+  "report_sha256": "175163f2b4057398b249486cc6bb541784e10eae852656d2740e2872fb44f78e",
+  "ledger_index_checkpoint": "PASS",
+  "counts": {
+    "completed_valuations": 381,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2233,
+    "base_records": 767,
+    "revisions_written": 69
+  }
+}

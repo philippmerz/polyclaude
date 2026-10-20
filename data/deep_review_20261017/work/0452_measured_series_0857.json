@@ -1,0 +1,62 @@
+{
+  "schema": "case452.measured_series.v1",
+  "created_utc": "2026-10-20T08:56:50.739084+00:00",
+  "mapping_unit": "work/0452_portwatch_methodology_binding_20261020.json",
+  "series_receipt": "logs/deep_review_20261017/case452_methodology_20261020/latest_series/latest_chokepoint4_rows.receipt.json",
+  "series_raw_sha256": "19a158dc05236187dd2a0e2e00b54f4db63189d33a1f8a12bc1ccf597f9aba53",
+  "latest": {
+    "date": "2026-10-11",
+    "n_total": 31
+  },
+  "oldest": {
+    "date": "2026-07-04",
+    "n_total": 31
+  },
+  "returned_rows": 100,
+  "exceededTransferLimit": true,
+  "all_dates_consecutive_unique": true,
+  "all_exact_location_match": true,
+  "series_array": "data/deep_review_20261017/work/0452_series_rows_0857.json",
+  "series_array_sha256": "e54c9cc8b513424463b86782520be91f0540a15138491c7147fdf51619f4b0ef",
+  "stats_overlapping_windows": [
+    {
+      "requested_windows": 21,
+      "actual": 21,
+      "mean": 28.07482993197279,
+      "sd": 1.7194084457464374,
+      "literal_hits": 13,
+      "integer_bucket_hits": 18
+    },
+    {
+      "requested_windows": 28,
+      "actual": 28,
+      "mean": 27.31122448979592,
+      "sd": 2.0467157739787964,
+      "literal_hits": 16,
+      "integer_bucket_hits": 21
+    },
+    {
+      "requested_windows": 56,
+      "actual": 56,
+      "mean": 27.535714285714285,
+      "sd": 2.165550828221399,
+      "literal_hits": 33,
+      "integer_bucket_hits": 41
+    },
+    {
+      "requested_windows": 94,
+      "actual": 94,
+      "mean": 29.024316109422493,
+      "sd": 4.093521500937316,
+      "literal_hits": 44,
+      "integer_bucket_hits": 59
+    }
+  ],
+  "endpoint_interpretation": "Literal25<=mean<=29 isdaily7sum175..203;conventionalintegerbucket25<=mean<30issum175..209. Do not silently substituteupper30.",
+  "limits": [
+    "Only100newestdescendingrows,capped;missingafterOct11notzero.",
+    "Overlappingmovingwindowsnotindependentforecasts.",
+    "ObservedlastdayOct11is20daysbeforeOct31target;source/asoflagis9days.",
+    "DateattributeinrawHTTPisISOstring;calendardaysnormalizedlocallyandcontinuityverified;noactualbrowserrenderclaimed."
+  ]
+}

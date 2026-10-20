@@ -1,0 +1,61 @@
+{
+  "schema": "primary_candidate_entry_underwriting.v1",
+  "created_utc": "2026-10-20T09:18:55.970897+00:00",
+  "review_index": 14,
+  "identity": {
+    "id": "2431413",
+    "conditionId": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "question": "Will Anthropic have the best AI model at the end of December 2026?",
+    "criteria_sha256": "97cf85eb21709fb3165022fa3e248ad74648ceea3a1bccfd6629f8f45b7e7b72"
+  },
+  "side": "NO",
+  "p_win": 0.7671,
+  "selected_probability": 0.5971,
+  "range_p_win": [
+    0.4,
+    0.9
+  ],
+  "maker_limit": 0.49,
+  "shares": 5,
+  "max_cost": 2.45,
+  "core_uncertainty": 0.12,
+  "fill_reserve": 0.05,
+  "conditional_fill": {
+    "assumptions": [
+      {
+        "weight": 0.8,
+        "p_win": 0.7671,
+        "branch": "ordinaryliquidity/noadditionalmaterialArenaorreleaseinformation"
+      },
+      {
+        "weight": 0.2,
+        "p_win": 0.55,
+        "branch": "Anthropicnewcompetitiveleaderorotheradverseinformationbeforecancel"
+      }
+    ],
+    "conditional_p": 0.72368,
+    "conditional_after_core_uncertainty": 0.60368,
+    "bridge": "Conditionaldrop4.342ppfitsinside5ppfillreserve;17ppselected59.71isbelowthis60.368case. Theseweightsareunmeasuredprimaryjudgments,notcertifiedfillfrequencies. Greateradverseselectioncaninvalidatebid."
+  },
+  "sensitivity": {
+    "twice_loss_odds_after_already_selected": 0.4256183619645021,
+    "twice_loss_odds_then12ppcore_uncertainty": 0.5021915808256956,
+    "meaning": "Firstfails49c;secondbarelypassesbeforecarry. Bothunmeasured;noautomaticveto,nomeasuredconditionaledgeclaim. Explicitstrong-adverseNO55minus12=43wouldfail49;cancel-firstnewunassessedmaterialdata."
+  },
+  "sizing": "Atmost5share/2.45costpilot~1.3%oflasttradingbankroll,notKellytarget. Full2.45lossfitsbudget;noclaimofrecovery orsafeincome. UnknownprobabilityweightsandsharedAIriskjustifycap5;noadd/chase/takerfallback.",
+  "joint_terminal_states": {
+    "AI_Kimi10YES_OR5NO_Arena14_5NO_payouts": [
+      0,
+      5,
+      10,
+      15,
+      20
+    ],
+    "all_three_lose_original_cost": 6.9,
+    "independence_or_hedge_credit": false,
+    "limit": "Thesearepayoutsupport,notjointprobabilitiesorwealthfloor;otherstable/protocolassetvaluescanfail. Existing4.45costnotredeductedfromcurrentwealth."
+  },
+  "alternatives": "Googleopposite/AIrareYESfailselected;cash/datedvariableAave remain. Marginal5NOat49chosenonlyifgatepassescurrentmaker,currentcommitments/capsandnoadditionalfacts. Existingunfilledbids6.50plusnew2.45wouldbe8.95commitments,notpurchases.",
+  "lifetime": "Revieweachexistingcheckandmaterialevent;cancel-firstunassessedadmittedmodel/rank/source/ownership/releasefact. PullbeforeknownscheduledcatalystorDec31noonETcheckpoint;scheduledreviewaloneisnotexpiry. Unknownreleasescanfillbeforecancellation;smallcappricesrisk. No newtimer/watcher,ordinarycurrentexposuremonitoringmustbeverified.",
+  "status": "Plannedcandidateonly. Noorder/financialprior/reservation hasbeencreated. Freshaccount/venue/writer gatespending."
+}

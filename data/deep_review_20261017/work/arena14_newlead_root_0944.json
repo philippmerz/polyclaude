@@ -1,0 +1,42 @@
+{
+  "schema": "primary_newlead_review.v1",
+  "source_packet": "data/deep_review_20261017/work/case14_mythos_hymemory_facts_0942.json",
+  "receipt_pairs_verified": [
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_publisher_capture_0952/anthropic_quantum_research.receipt.json",
+      "raw_sha256": "b131af911bed3ad35594c35f189e8b2d934f67b3c08a6b882419aec2ef301127",
+      "status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_arxiv_0958/mythos_quantum_preprint.receipt.json",
+      "raw_sha256": "dfc7ac27f0b3372fd293c91a6884a3b59234fab11833eda251e02d23ed42cda3",
+      "status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_publisher_capture_0952/techorg_mythos_redirect.receipt.json",
+      "raw_sha256": "fbe757dc66fcc9cab0cdf2834d5521ad3b22812709d14f5fea1164c204c99a79",
+      "status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_technologyorg_0955/technologyorg_article.receipt.json",
+      "raw_sha256": "247e06ebbd8a9d9cf99a75efc032c5d2d23a51036f88ef1c35d4ebf6e5a0a482",
+      "status": 403
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_publisher_capture_0952/techtimes_hymemory.receipt.json",
+      "raw_sha256": "cf3b40c97d967fd8097b49980512aacfe6c7d8ccca89ec0e8f16b2fed2987f14",
+      "status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case14_mythos_publisher_capture_0952/arxiv_hymemory.receipt.json",
+      "raw_sha256": "724d18399df731777201093b9d23fe647f16fe9787ab89daa13c29bd2f30c1c0",
+      "status": 200
+    }
+  ],
+  "facts": "Actual Anthropic Oct16 research body uses Mythos5 closed-loop circuit design; linked preprint covers8specific tasks. Not a publicrelease announcement or TextArena ranking. Tencentcomparison is specialized memory and vendorbenchmarks, notTextArena. ActualpublisherTechOrg unavailable; do not substituteGoogleconsent forbody.",
+  "interpretation": "Anthropicmodel capability work afterOct15snapshot was unassessed in case14 sourcecalendar. No numericprobability updatefromtitle; current source/admission/quality binding requires independent re-underwriting before newmoney. DatedpNO.7671/.5971selected notfreshlycertified. Cancel-first maintained; noautomaticrepost.",
+  "other_6_warmup": "Two copyright/ethics hypotheticals, code-credit UI, oldHaiku explainer, hotelintegration, ethicistsprofile: no resolvingTextRank evidence. They are not deep-rejected frozenuniversecases.",
+  "existing_holdings": "No article suppliesKimi HLE admission/55score, actualOpenRouterweeklyTotals orGoogleAthleteslist. Retainheld/noadd with prioruncertainty and earlierjointreview; notclaimzeroindirecteffect.",
+  "method_fix": "Readactualnewfeedwarmup andsources before posting; pre-exposure research-only suppression is not catalystclearance.",
+  "financial": "09:39:38cancel;09:45after300s terminalCANCELED0/trades/index/CTF/cashproven,09:46onlytargetreservationretired. No spend/fee/credit/profit; noautomaticrepost."
+}

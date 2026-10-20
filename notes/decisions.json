@@ -1,5 +1,5 @@
 {
-  "next_id": 244,
+  "next_id": 246,
   "decisions": [
     {
       "id": 1,
@@ -5341,6 +5341,44 @@
           "action": "Retain10YES/noadd after fresh source/exit/conditional-fill/jointreview. Originalpendingprediction preserved historically; outcome remains unresolved, no calibration score from fill."
         }
       ]
+    },
+    {
+      "id": 244,
+      "timestamp": "2026-10-20T09:33:24Z",
+      "type": "strategy_change",
+      "thesis": "Clarify legacy December carry-book hold-only restriction: retain no-add policy for old priors; newly underwritten instance-specific December claims may enter only after every current gate. Blanket calendar ban lacks candidate-level ROI derivation; bounded paired review and case14 carry/conditional/joint analysis recorded in research/2026-10-20-december-entry-scope.md. No writer limits changed.",
+      "confidence": "medium",
+      "prediction": "New December entries will document selected net edge above alternatives plus fill, portfolio, source, monitoring and execution checks; no population fade or legacy-prior add. Reassess after outcomes, not forecast agreement.",
+      "size_usd": 0.0,
+      "resolution_at": "2027-01-07",
+      "tags": [
+        "doctrine-scope",
+        "december-instance"
+      ],
+      "slug": null,
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 245,
+      "timestamp": "2026-10-20T09:37:09Z",
+      "type": "open_position",
+      "thesis": "Accepted post-only5NO49c/2.45 maximum cash commitment, not a filled position. Common company-winner model NO76.71/selected59.71/broad40\u201390;17ppreserve including5fill risk. Exact09:34rules/fees/books/geo, cash/allowance/CTF approval, caps and AI joint stress reviewed; DEC244 scope clarification. SameAIcluster Kimi/OR; all3 original costs could lose6.90. Unmeasured quality and fill assumptions justify5sharecap; noadd/chase/taker; cancelfirst unassessed material model/rank/source/release. Receipt/order link in research/2026-10-20-anthropic-arena-order.md; authenticated post-submit verification pending.",
+      "confidence": "medium",
+      "prediction": "Anthropic is not the company owning the first-ranked TextArena model, stylecontrolOFF, at Dec31noonET with literal tie/outagefallback rules. P(NO)=.7671, selected.5971; unfilled forecast cannot be graded as realized trade profit.",
+      "size_usd": 2.45,
+      "resolution_at": "2027-01-02",
+      "tags": [
+        "maker",
+        "anthropic-december-arena",
+        "deep-review-0014"
+      ],
+      "slug": "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026",
+      "outcome": "Canceled0filled09:39:38; terminal CANCELED0/127unchangedtrades/noindexed-or-CTFexposure/pUSDunchanged proven after300s; exactreservationretired4to3. No purchase, spend,fee,cashcredit orrealizedprofit. Noautomaticrepost; sourcebinding/forecastre-underwritingneeded.",
+      "calibration_delta": "Unexecuted forecast; operationalclosure is not binary-outcome calibration or a profitable trade. DatedNO76.71/selected59.71 retained as research.",
+      "lesson": "Review actual scoped-feed warmup sources before posting. Research-only suppression computed before candidate exposure does not clear its catalysts. New unassessed relevant lead warrants cancel-first.",
+      "resolved_at": "2026-10-20T09:47:42Z"
     }
   ]
 }

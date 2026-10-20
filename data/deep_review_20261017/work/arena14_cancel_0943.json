@@ -1,0 +1,13 @@
+{
+  "schema": "financial_cancel_summary.v1",
+  "started_utc": "2026-10-20T09:39:35.477922+00:00",
+  "completed_utc": "2026-10-20T09:39:38.506265+00:00",
+  "order_id": "0x1836ad189d5718623183af22e10b2649cf169b8e7aa99dee6f683a9bb99f1134",
+  "result": "HTTP200exactIDcanceled; guardedwriterverified absentfromopeninventory andmarkedreservation",
+  "reason": "Previously unassessed Claude Mythos5 benchmark lead surfaced onnewfeedwarmup; cancel-first untilsource/forecast reassessed. Warmup shouldhavebeen readbeforeposting.",
+  "delayed_terminal_reconciliation": "Completed09:45\u201346; CANCELED0,127trades unchanged,index9same,CTF0/pUSD19.251290, onlytargetreservationretired",
+  "no_automatic_repost": true,
+  "private_result": "logs/deep_review_20261017/arena14_cancel_0943/result.json",
+  "result_sha256": "1ab57ae31133967505f5d44d4313a501f96c88372b0d634f3723f96586842658",
+  "final_proof": "data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json"
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "arena_family_primary_catalyst_review.v1",
+  "reviewed_utc": "2026-10-20T09:17:35.834253+00:00",
+  "catalyst_helper": "logs/deep_review_20261017/arena14_catalyst_0913/facts.receipt.json",
+  "sources": [
+    {
+      "url": "https://www.anthropic.com/claude-opus-5-5",
+      "status": 200,
+      "raw_sha256": "1c14b53c8cac0cd669b2001e0966488397b607a2b93ba06edf03478d98c9196d",
+      "received_utc": "2026-10-20T09:15:22.274523Z",
+      "receipt": "logs/deep_review_20261017/arena_family_primary_catalysts_0916/opus.receipt.json",
+      "error_type": null
+    },
+    {
+      "url": "https://www.anthropic.com/claude-haiku-5-5",
+      "status": 200,
+      "raw_sha256": "00a8831d010746864593535ae1fa3093aff47da1247a6839c8cae1cf88c03290",
+      "received_utc": "2026-10-20T09:15:22.212662Z",
+      "receipt": "logs/deep_review_20261017/arena_family_primary_catalysts_0916/haiku.receipt.json",
+      "error_type": null
+    },
+    {
+      "url": "https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-argon/",
+      "status": 200,
+      "raw_sha256": "21859f7ef51dfa1bd010c31d48eea90a54e8484a2e077f9dde442d8b9dea25cf",
+      "received_utc": "2026-10-20T09:15:22.289027Z",
+      "receipt": "logs/deep_review_20261017/arena_family_primary_catalysts_0916/google.receipt.json",
+      "error_type": null
+    },
+    {
+      "url": "https://openai.com/index/gpt-6-for-everyone/",
+      "status": 403,
+      "raw_sha256": "8f7591c3b3d02f8187fbeb8b3b7bea2c25324bdd640dee88adf22ae155e0783b",
+      "received_utc": "2026-10-20T09:15:22.000038Z",
+      "receipt": "logs/deep_review_20261017/arena_family_primary_catalysts_0916/openai.receipt.json",
+      "error_type": null
+    }
+  ],
+  "facts": "ActualAnthropicOpus5.5Sep22andHaiku5.5Oct7bodies;GoogleArgonOct13availabilitybody. These are beforeOct15snapshot andnotnewscoreinformation. GoogleGAdoesnotqualifycompanyfirstbyitself. OpusreleaseannouncedSonnet/Haikucomingweeks;Oct7HaikubodyreferencesalreadyavailableSonnet5.5. PerformanceclaimsnotfutureArenaoutcome. OpenAIactualdirectbody403;helperclaimedreleaseisnotusedasunverifiedincrement.",
+  "source_mode": "HelperdefaultArena1524/Anthropic1508hasunknowncheckbox;rootusescompleteofficialHFtextnonstylecontrolled1532/1515forcurrentbaseline. Differentconfignotclaimednewsourceconflict.",
+  "future_catalysts": "No completedprimaryfuturecalendarorconfirmedpostOct20winningrelease;notabsenceproof. Newadmittedmodel/rank/source/ownershipchangeisanearliestmaterialreassessment/cancel-firsttrigger;mandatorypullbeforeknownscheduledcatalystifoneemerges.",
+  "judgment": "Commonmodelmarginalsunchangedafterrootbodyverification;noalreadyobservedreleaseisdoubledasfreshtimeupdate. Smallmakerprospectcase14stillrequiresconditionalrisk/account/allgates."
+}

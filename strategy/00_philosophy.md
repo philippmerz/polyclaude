@@ -106,10 +106,15 @@ both-side evaluation and on-chain alternative comparisons follow
    N=6, instance priors 6-23pp overconfident. 0.05 survives only for tail/monitoring
    fades, where the drift runs the OTHER way. The gate's skips were vindicated the
    night of the 2026-07-03 review); `notes/shortdated_ledger.json` continues recording gated evaluations as
-   the ongoing falsification record. Long-dated entries (Dec-31 book) remain
-   HOLD-ONLY: held where exit-spread > negative carry, no new entries, no adds —
-   expectation math at own priors puts the book at ~Aave-grade carry wearing tail
-   risk. Position health = EXPECTED-edge APY ((p/M−1)×365/d vs priors,
+   the ongoing falsification record. **Legacy Dec-31 carry book remains HOLD-ONLY**:
+   no new entries or adds justified by its old priors, since that book's expected
+   return was ~Aave-grade carry wearing tail risk. **Scope clarified Oct-20:**
+   a December deadline alone is not a ban on a newly underwritten instance.
+   New money still requires every entry gate, an explicit uncertainty and
+   conditional-fill case, joint portfolio risk, monitoring, and net return above
+   the best lawful executable alternative. This does not revive population fades
+   or authorize legacy adds. [Evidence and paired review](../research/2026-10-20-december-entry-scope.md).
+   Position health = EXPECTED-edge APY ((p/M−1)×365/d vs priors,
    `check_marginal_apy.py`, fixed 2026-07-02), never gross carry.
 
    Two instance-pipeline rules added 2026-07-17/19 (both validated live the same week):

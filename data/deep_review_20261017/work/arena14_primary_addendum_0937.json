@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "name": "evaluators",
+      "url": "https://www.anthropic.com/news/an-update-on-independent-evaluators",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/arena14_primary_addendum_0937/evaluators.receipt.json",
+      "raw_sha256": "9fa6608d96e6a67f353982fa089a62b084a31014c943f112092f2c5f522422c0",
+      "received_utc": "2026-10-20T09:28:56.240380Z"
+    },
+    {
+      "name": "fund",
+      "url": "https://www.anthropic.com/news/public-benefit-fund",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/arena14_primary_addendum_0937/fund.receipt.json",
+      "raw_sha256": "762ae13a4b9b14af4c4f4ee0a03bbf691c6f69fca9a48c16dc702953eee97c30",
+      "received_utc": "2026-10-20T09:28:56.190395Z"
+    },
+    {
+      "name": "geoblock",
+      "url": "https://polymarket.com/api/geoblock",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/arena14_primary_addendum_0937/geoblock.receipt.json",
+      "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052",
+      "received_utc": "2026-10-20T09:28:56.110490Z",
+      "result": {
+        "blocked": false,
+        "country": "FI",
+        "region": "02"
+      }
+    }
+  ],
+  "root_read_pending": false,
+  "reviewed_utc": "2026-10-20T09:31:02.211185+00:00",
+  "judgment": "ActualOct15/updatedOct16 evaluatorbody concerns METR risk access/publication, not a named new model/arena admission/rank. Oct18 fundbody concerns equity commitment, not a model-quality result. No numerical update to one-epoch winnerforecast. Does not certify absence of unannounced/other releases. CurrentgeoHTTP200 blockedfalse FI02; no VPN or location change."
+}

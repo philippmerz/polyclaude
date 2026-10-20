@@ -1,0 +1,67 @@
+{
+  "schema": "deep_review_public_facts.v1",
+  "review_index": 457,
+  "captured_utc": "2026-10-20T08:54:00Z",
+  "identity": {
+    "id": "5609863",
+    "conditionId": "0xdaafd2107465112c737afec122dfd3add1de5b5e1f1f42cb49275631e127b051",
+    "slug": "ilhan-omar-federally-charged-by-october-31-2026",
+    "question": "Ilhan Omar federally charged by October 31?",
+    "criteria_sha256": "223b27dff0e3175df613a59f375d7bb197af9ba24e76e8942c8256e309c8531c",
+    "frozen_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c"
+  },
+  "frozen_rule": {
+    "text": "Resolves Yes if the U.S. federal government formally charges or announces a criminal indictment of Ilhan Omar between market creation and October 31, 2026, 11:59 PM ET; otherwise No. Primary source is official U.S. government information; wide consensus of credible reporting may also be used.",
+    "window_start_market_creation_utc": "2026-10-12T15:39:59.545318Z",
+    "window_end_utc": "2026-11-01T03:59:00Z",
+    "metadata_source": "https://gamma-api.polymarket.com/markets?slug=ilhan-omar-federally-charged-by-october-31-2026",
+    "receipt": "logs/deep_review_20261020/next457_public/market_metadata.receipt.json",
+    "http_status": 200,
+    "raw_bytes": 5665,
+    "raw_sha256": "3b86c5d6d5265e9625355ace342f13339ded4e8f605e61dbfcae80e3a5e1fca4",
+    "captured_call_window_utc": "2026-10-20T08:53:51.234300Z/2026-10-20T08:53:51.472104Z",
+    "metadata_note": "Gamma API reports createdAt above and endDate 2026-11-01T03:59:00Z, which equals Oct 31 at 11:59 PM EDT. Market metadata is not an adjudication source."
+  },
+  "as_of_evidence": [
+    {
+      "kind": "first_party_named_statement",
+      "url": "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+      "title": "Office of Rep. Ilhan Omar Statement on DHS Raid",
+      "publication_date": "2026-10-12",
+      "receipt": "logs/deep_review_20261020/next457_public/omar_statement.receipt.json",
+      "http_status": 200,
+      "raw_bytes": 40927,
+      "raw_sha256": "6b6247d0e0f7632c3b55e0f5b8cb540b6b968601464c798f3ebdadd8b41e306e",
+      "captured_call_window_utc": "2026-10-20T08:53:51.676145Z/2026-10-20T08:53:51.933888Z",
+      "body_finding": "Omar's office says DHS raided her home and says she had done nothing wrong; it characterizes the raid as political targeting. This is her office's statement, not an official DOJ account or charging document.",
+      "limit": "Does not establish whether a federal charge was filed or announced."
+    },
+    {
+      "kind": "official_doj_page_fetch_attempt",
+      "url": "https://www.justice.gov/usao-mn/pr/minnesota-man-charged-forcibly-assaulting-representative-ilhan-omar-while-she-engaged",
+      "title": "Minnesota Man Charged with Forcibly Assaulting Representative Ilhan Omar",
+      "receipt": "logs/deep_review_20261020/next457_public/doj_assault_charge.receipt.json",
+      "http_status": 200,
+      "raw_bytes": 2543,
+      "raw_sha256": "43edca3426218c18ffa8d3bddef877fd574d84517c849d27dd113de1cc0f9061",
+      "body_finding": "Returned bytes are a DOJ anti-bot interstitial, not the press release body; no charging facts parsed from this capture.",
+      "limit": "A page title/search result mentions charges against a Minnesota man for assaulting Omar, which would concern a different defendant. Direct DOJ page content was not retrievable in this request."
+    }
+  ],
+  "bounded_search": {
+    "as_of_utc": "2026-10-20T08:54:00Z",
+    "queries": [
+      "site:justice.gov \"Ilhan Omar\" charged OR indictment 2026",
+      "site:mncd.uscourts.gov \"Ilhan Omar\" indictment charge 2026",
+      "site:justice.gov/usao-dc \"Ilhan Omar\" October 2026 investigation",
+      "site:justice.gov \"Omar\" \"search warrant\" \"October 12, 2026\" DOJ statement"
+    ],
+    "result": "The bounded official-domain search surfaced reporting/official-source references to a DHS search and ongoing investigation, but no retrieved official record or official statement saying Omar herself was charged or indicted as of capture time. No public charging instrument against her was retrieved.",
+    "limit": "This is a bounded search result, not proof that no charge exists. No PACER account, sealed docket, private court account, or paywall bypass was used. Allegations, search warrants, referrals, subpoenas, and investigations alone are not recorded here as filed charges."
+  },
+  "acquisition": {
+    "private_receipts_dir": "logs/deep_review_20261020/next457_public/",
+    "receipt_semantics": "Receipt-first supplied HTTP body bytes; DOJ body hash is only for interstitial bytes. Public sources were read-only.",
+    "decision_state": "facts only; no forecast, price, rejection, ledger, or trade decision"
+  }
+}
