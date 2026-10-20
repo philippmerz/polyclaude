@@ -1,0 +1,24 @@
+{
+  "schema": "polyclaude.primary_alert_review.v1",
+  "reviewed_utc": "2026-10-20T14:40:34.584169+00:00",
+  "author": "root",
+  "tick_id": "20261020T140001Z",
+  "alert_delta_path": "data/deep_review_20261017/work/tick140001_alert_delta.json",
+  "alert_delta_sha256": "26603e06892ebc62691b653f1c0df44480fa62494ed4f819bb771bf0a85f90d8",
+  "account_basis": "Root receipt/body verification: authenticated14:38orders3/trades127 and explicit sizeThreshold=0 positions14:40:21 nine rows unchanged. Latest public source/quote and financial observations retain prior as-of times.",
+  "alerts": [
+    {
+      "alert_id": "8f6878cb5bdaff9e46c1b2855168b7955cae5fd2",
+      "row_sha256_without_newline": "0d10558b1a4a1775485f0d220ab60ddb56c6af119bf25fbf328ffe4cd3d8753f",
+      "classification": "No direct held-contract resolution, exact-district candidate/poll, stablecoin/protocol/venue incident or order-management input identified in this headline.",
+      "decision": "No numerical prior change or action from this item.",
+      "limits": "Article body, event/publication date and stated oil/gas/war facts were not verified or adopted. Indirect macro and political effects are possible; research_only does not prove zero effect. No oil/gas position, no presumed hedge or cross-position loss offset."
+    }
+  ],
+  "prior_material_news_gaps": "Doctor list/article, Scripps and DemocracyNow exact bodies remain unverified per completed prior check; no relabeling as duplicates or absence.",
+  "coalesced_full_check": "research/2026-10-20-134616-checkin.json",
+  "prior_portfolio_judgment": "data/deep_review_20261017/work/tick134616_primary_portfolio_judgment.json",
+  "interpretation": "Overlapping14UTC checklist already executed14:00\u201314:30. This closes actual news-read gap since14:15:58, not only post-journal entries. No repeated scan, source or financial freshness is claimed.",
+  "material_telegram": false,
+  "research_case_advance": false
+}

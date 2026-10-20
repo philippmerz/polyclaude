@@ -1,0 +1,19 @@
+{
+  "schema": "polyclaude.handoff_gate_verification.v1",
+  "verified_utc": "2026-10-20T14:45:12.345728+00:00",
+  "handoff_path": "notes/current_context.md",
+  "handoff_sha256": "d3fa8be4c5969fffe4ffb2cb7fbfe5c400e524b18c4eb5d88b1aa830fd3b155f",
+  "handoff_bytes": 7873,
+  "packet_bytes": 11514,
+  "status": "within_declared_validity",
+  "source_mismatches": [],
+  "source_hashes_verified": 11,
+  "current_state_loaded": false,
+  "execution_ready": false,
+  "new_buy_denied": true,
+  "gate_message": "entry review gate: 393/600 completed valuations; new BUYs blocked",
+  "financial_csv_and_flows_byte_unchanged": true,
+  "csv_rows": 238,
+  "last_csv_observation_utc": "2026-10-20T14:02:12Z",
+  "deep_review_checkpoint_unchanged": true
+}

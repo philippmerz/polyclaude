@@ -1,0 +1,45 @@
+{
+  "schema": "polyclaude.overlapping_tick_alert_delta.v1",
+  "prior_check": "research/2026-10-20-134616-checkin.json",
+  "prior_last_news_read_utc": "2026-10-20T14:15:58.010793+00:00",
+  "interpretation": "This read closes the gap since actual prior news cutoff, including entries before the14:30journal, not just journal recency. Machine relevance is provisional.",
+  "sources": {
+    "news": {
+      "read_window_started_utc": "2026-10-20T14:38:56.409858Z",
+      "read_window_received_utc": "2026-10-20T14:38:56.416950Z",
+      "tail_rows": 128,
+      "earliest_timestamp": "2026-10-19T18:42:22+00:00",
+      "latest_timestamp": "2026-10-20T14:24:42+00:00",
+      "tail_spans_prior_cutoff": true,
+      "response_raw_sha256": "880c167fe92ba3fa68b8d460e1e1d9747d9947d7540c093b41dc5a859d64b50b",
+      "receipt_path": "logs/cron20261020T140001Z_delta/root_alerts/news.receipt.json",
+      "entries_after_cutoff": [
+        {
+          "alert_id": "8f6878cb5bdaff9e46c1b2855168b7955cae5fd2",
+          "ts": "2026-10-20T14:24:42Z",
+          "tier": 1,
+          "feed": "US state gasoline prices and fuel-tax policy",
+          "matched": "gas prices",
+          "title": "Gas prices top $4 a gallon as Iran war triggers global oil shock - ABC30 Fresno",
+          "link": "https://news.google.com/rss/articles/CBMigApBVV95cUxQUnBMTlo0NUU5d2ZFa3JzVVFWbEtFZV9wLU81SlFKeDJiS3RRdUJVNFVRaUpXTFVySWExTVJqLVNIcXVTVnhvdGF4Wks5dVBGekVJVU10N0RtZE41YkJPbmpKMVlnMTNGRkRSamtJQ0M2aXJQMlFMcnJ6OGpST1JqRVNnYVRhNHJ4U2pKRUZ0SlBaX0twbTFLZjNXRlJ1eS1ZNmx2by1TSnVnN2dPS1lpNXJwLUhnMnBFQnR1X2E5UldrWkNaNWhBVzdWZDNpQ3pfMEFnMHE5LWxjTHRLWjlmVHg0OGVsbERxZGxvVGNfWjB6MGNmRmUzTlk5aXV1LUVvYWJXOU16YnFiNXRia2dxMFBGbjY2dlF2bU40VE1rREY5REZwUmpORV9FOUh1QW1qQVNsRlVVOTlxOThNU2VsQkNCcnZ5b2djZVc2THFybVptcGlfUlJqWmxRQzhUbkd6X0c5MWhaLWs0eXJ3SG9lMXZCLThmYUdGd3o4N2p4Qm44Y1NEdTZld2tJWm5pbU1YaFFRNnFaaUxLRzAtQ01kdGljN0h4enlna2Z3ekxHOFNMRVZ0NThGa1V4a2VoWGpyWUdtSzl1ZHFwb0M0VklfTnA5RUNjcHVkSjBSZnctWUJDcXFXQ1BSRk81dmNaOXlZdEhfRXV1eU5CWkJoREwxX0lYcE9pRmJYMTNmblBueVdadHAtd1pxNHIxNWN0RnloUEw5bTNMMHZnNnlsQ1ktWjlBSlVULVdBWWt1eHd0WEktRlRGUEp2RnNPNEg1QzhaRUxKVWVvX29yLUtHaXBOYmZscS1WbkpzN1FCbG14Mm83TUF1cEU3Y0ZYWEJsN2dEUE4wWEZNanYyUkVSY0lrQ2JzbFRIMGxxMFliR1htN0w2TGhwVmVSSmJiUlA2LWN4ZDZ2RFBnU3JOeTU0R04zdjllT1V1SWhRNUlMWDd6cldRS01kVlFIRGl2SVJPWnFiRUUwNjlLUjFXRTNSZFJRZkpOczRFQnFzLVM0YnV3dXluQjJGSjhwZGxJTGIyNzd2RUYxRllsN0I0aXNwYU9xbUN6b2o1LWZXQkNQWGRySzlydnVUVnR5TUFxTTFsS3NVQW5lT1lCZGloUU1Tcm9CSzhjbFdNVlY5blNoSVFaZUlBU3Q2VF9mZGJUcFFveWtVNU1OTjZMejlyOUNpcDNvT0ZVTGhuVXVhMll5eUNGXzJhUUU4YjVCcFVFRUpJOTJFVHhuOFNvTWlmamZwRHluUFB5ZklYWDJvbmlFa1BIN0hOZlQwMXpaaTRXbmRPSDhXYUhoVUdpYWZHdWdWMW9TSmZBNnlSOXBQcnFKV3hNNVU5UVRQQlpiQTdaU3NXcWx6aW1KOFpGNFZwT01aOGNnRDVPSkVERElQbkFJMXZKUWJ6Ym9fLXdxeTg3WjVNd1FpeUhCdnpxSEJoUGwzVU9tNVVHaXFzWk9ISUhjMmxadl9RY2NpWWdtWld0cVNnSWFjcjZ1Rk1teFBoUlltTEl5eTltM2RXWHkwc1N0VEhjRGJlQlRJNzBYZks1OURCd3c4a0Vaay1FNmpsck9obTlfMEpEUjFCMmVBdjJSUW9sbnA5Y1RQUzVtaUw5Zk9ZU01sSUtzbzluZ2Jld1dET0xoM0MtcGRYeWN2T3Z3LUxBbk53WUZQWVl1bzVNbXozcjNWQkRwTUhaRjBjWEJYWU1rNw?oc=5",
+          "agent_reason": "No direct causal channel to any held position or pending BUY order.",
+          "impacts": [],
+          "relevance": "research_only",
+          "review_required": false,
+          "row_sha256_without_newline": "0d10558b1a4a1775485f0d220ab60ddb56c6af119bf25fbf328ffe4cd3d8753f"
+        }
+      ]
+    },
+    "opportunity": {
+      "read_window_started_utc": "2026-10-20T14:38:56.432163Z",
+      "read_window_received_utc": "2026-10-20T14:38:56.436235Z",
+      "tail_rows": 128,
+      "earliest_timestamp": "2026-07-28T05:08:15+00:00",
+      "latest_timestamp": "2026-10-18T07:41:07+00:00",
+      "tail_spans_prior_cutoff": true,
+      "response_raw_sha256": "25ee232381fb43651cd3750010d3e38a777542182393aa9c3c73df5be4eb0601",
+      "receipt_path": "logs/cron20261020T140001Z_delta/root_alerts/opportunity.receipt.json",
+      "entries_after_cutoff": []
+    }
+  }
+}

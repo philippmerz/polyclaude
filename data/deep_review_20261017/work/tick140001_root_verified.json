@@ -1,0 +1,88 @@
+{
+  "schema": "polyclaude.root_delta_verification.v1",
+  "verified_utc": "2026-10-20T14:42:57.315508+00:00",
+  "author": "root",
+  "receipts_verified": [
+    {
+      "receipt_path": "logs/cron20261020T140001Z_delta/account/orders.receipt.json",
+      "raw_sha256": "f41be9e1d65e678e32ee0ce19ce74ba5ee843c8a84d391a0b6e2a3dd6fe9bb3f",
+      "raw_bytes": 1662,
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt_path": "logs/cron20261020T134616Z_account/orders.receipt.json",
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "raw_bytes": 1661,
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_delta/account/trades.receipt.json",
+      "raw_sha256": "3bd61cd6a3be35bd62f2b3830852912206382114c52b01f1615e6f31f315cbee",
+      "raw_bytes": 175760,
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt_path": "logs/cron20261020T134616Z_account/trades.receipt.json",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "raw_bytes": 175759,
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_delta/account_followup/capture/positions.receipt.json",
+      "raw_sha256": "f32242f46cfdb59055296855c0c1e99c594ef1bf7a828a0a58b2ecb1fea4ff99",
+      "raw_bytes": 9571,
+      "representation": "http_body"
+    },
+    {
+      "receipt_path": "logs/cron20261020T134616Z_account/all_sizes/positions_00.receipt.json",
+      "raw_sha256": "15c51f669c12a6ddc38a30d923eb58ab47afbf7b953226cae2170b687d8cae8d",
+      "raw_bytes": 9571,
+      "representation": "http_body"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_delta/root_alerts/news.receipt.json",
+      "raw_sha256": "880c167fe92ba3fa68b8d460e1e1d9747d9947d7540c093b41dc5a859d64b50b",
+      "raw_bytes": 113569,
+      "representation": "supplied_bytes"
+    },
+    {
+      "receipt_path": "logs/cron20261020T140001Z_delta/root_alerts/opportunity.receipt.json",
+      "raw_sha256": "25ee232381fb43651cd3750010d3e38a777542182393aa9c3c73df5be4eb0601",
+      "raw_bytes": 41251,
+      "representation": "supplied_bytes"
+    }
+  ],
+  "private_receipt_count": 8,
+  "ops_streams_verified": 8,
+  "auth_pagination_cursor": "LTE=",
+  "orders": 3,
+  "all_LIVE_zero_matched": true,
+  "remaining_cash_commitment_usd": "6.50",
+  "trades": 127,
+  "current_and_prior_full_sdk_wrappers_equal": true,
+  "allsize_tuples_equal": true,
+  "allsize_rows": 9,
+  "position_tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought",
+    "redeemable"
+  ],
+  "sdk_success_marker_correction": "Original private200 marker retained; public HTTP status unknown/null. No raw-wire HTTP claim.",
+  "intermediate_capture_gap": "Agent first positions parser/reused-name failure retained in safety delta; root relies only on successful distinct14:40 receipt/body and compares against prior all-size body.",
+  "financial_producer_not_repeated": true,
+  "canonical_observation_remains_1402": true,
+  "seven_scans_and_81_batches_not_repeated": true,
+  "research_counts_unchanged": "393valued/16blocked/376factual/2215pending;active472",
+  "result": "No new fill, order/position change, material alert or financial action; retain prior completed primary judgment with original source/quote clocks.",
+  "redemption_screen": {
+    "source_window_completed_utc": "2026-10-20T14:40:21.355102Z",
+    "vetted_classifier": "clob_v2._held_outcome_won",
+    "winning": 0,
+    "losing_or_uncertain": 2,
+    "writer_skipped": true,
+    "reason": "Redeemable flag alone does not authorize spending gas; no winning held outcome identified."
+  }
+}

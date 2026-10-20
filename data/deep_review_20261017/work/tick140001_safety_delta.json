@@ -1,0 +1,267 @@
+{
+  "account_delta": {
+    "orders": {
+      "all_live_zero_matched": true,
+      "complete_authenticated_pagination": true,
+      "count": 3,
+      "exact_rows_equal_baseline": true
+    },
+    "positions": {
+      "changed_rows": [],
+      "endpoint": "data-api /positions",
+      "exact_identity_size_totalBought_redeemability_tuples_equal_allsize_baseline": true,
+      "parameters": {
+        "limit": 100,
+        "sizeThreshold": 0
+      },
+      "returned_rows": 9,
+      "successful_http_status": 200,
+      "under_limit": true,
+      "vetted_position_state_parser_validated_live_rows": 7
+    },
+    "trades": {
+      "complete_authenticated_pagination": true,
+      "count": 127,
+      "exact_rows_equal_baseline": true
+    }
+  },
+  "baseline": {
+    "account_facts": "data/deep_review_20261017/work/tick134616_account_facts.json",
+    "account_facts_completed_utc": "2026-10-20T14:03:18.950090+00:00",
+    "allsize_reconciliation": "data/deep_review_20261017/work/tick134616_account_allsize_reconciliation.json",
+    "allsize_verified_utc": "2026-10-20T14:05:44.161943+00:00",
+    "previous_routine_safety_check": "2026-10-20T14:02:15.658358+00:00"
+  },
+  "capture_receipts": {
+    "orders": {
+      "body_path": "orders.body.json.gz",
+      "body_representation": "sdk_result_serialization",
+      "gzip_sha256": "37cf3e5a4dec972e1bc852ac0c58c5a4e2366499012948eddf74d25b01c0d138",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "raw_bytes": 1662,
+      "raw_sha256": "f41be9e1d65e678e32ee0ce19ce74ba5ee843c8a84d391a0b6e2a3dd6fe9bb3f",
+      "received_utc": "2026-10-20T14:38:54.123994Z",
+      "request": {
+        "operation": "orders",
+        "read_only": true,
+        "scope": "complete_authenticated_pagination"
+      },
+      "response_status": null,
+      "started_utc": "2026-10-20T14:38:53.621043Z",
+      "stored_capture_success_marker": 200,
+      "status_semantics": "SDK-result serialization. Original private receipt stores caller-supplied success marker200; actual HTTP response status was not observed. Private receipt preserved unchanged."
+    },
+    "positions_followup": {
+      "body_path": "positions.body.json.gz",
+      "body_representation": "http_body",
+      "gzip_sha256": "9735bf69cf0367b096bddc20dc2d512f973062274eee31521d85970b80abdd7d",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "raw_bytes": 9571,
+      "raw_sha256": "f32242f46cfdb59055296855c0c1e99c594ef1bf7a828a0a58b2ecb1fea4ff99",
+      "received_utc": "2026-10-20T14:40:21.355102Z",
+      "request": {
+        "method": "GET",
+        "query_sha256": "a44f6c1c6ee584761691bf24736f83e52be642dd9a10ac03170b3f38c99e4c96",
+        "read_only": true,
+        "scope": "explicit_sizeThreshold_0_all_positions_followup",
+        "url": "https://data-api.polymarket.com/positions"
+      },
+      "response_status": 200,
+      "started_utc": "2026-10-20T14:40:21.047915Z"
+    },
+    "positions_initial": {
+      "body_path": "positions_allsize.body.json.gz",
+      "body_representation": "http_body",
+      "gzip_sha256": "c71e3a94521237e3f4e901c4c0f41cff4bd626b1b7b631207add273f2ce56d7c",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "raw_bytes": 9570,
+      "raw_sha256": "5d5bf130247357bf27ccc7ea609e9c3c8386a2da6ec3d9a9b3ee65b676db49ea",
+      "received_utc": "2026-10-20T14:38:54.512466Z",
+      "request": {
+        "method": "GET",
+        "query_sha256": "a44f6c1c6ee584761691bf24736f83e52be642dd9a10ac03170b3f38c99e4c96",
+        "read_only": true,
+        "scope": "explicit_sizeThreshold_0_all_positions",
+        "url": "https://data-api.polymarket.com/positions"
+      },
+      "response_status": 200,
+      "started_utc": "2026-10-20T14:38:54.506163Z"
+    },
+    "trades": {
+      "body_path": "trades.body.json.gz",
+      "body_representation": "sdk_result_serialization",
+      "gzip_sha256": "5a0dcc0035222d0d3c506de57e0f01da8e59f0428d8084ca7ba23372c2193c78",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "raw_bytes": 175760,
+      "raw_sha256": "3bd61cd6a3be35bd62f2b3830852912206382114c52b01f1615e6f31f315cbee",
+      "received_utc": "2026-10-20T14:38:54.281382Z",
+      "request": {
+        "operation": "trades",
+        "read_only": true,
+        "scope": "complete_authenticated_pagination"
+      },
+      "response_status": null,
+      "started_utc": "2026-10-20T14:38:54.136046Z",
+      "stored_capture_success_marker": 200,
+      "status_semantics": "SDK-result serialization. Original private receipt stores caller-supplied success marker200; actual HTTP response status was not observed. Private receipt preserved unchanged."
+    }
+  },
+  "completed_utc": "2026-10-20T14:40:21.355102Z",
+  "current_windows_utc": {
+    "authenticated_orders": [
+      "2026-10-20T14:38:53.621043Z",
+      "2026-10-20T14:38:54.123994Z"
+    ],
+    "authenticated_trades": [
+      "2026-10-20T14:38:54.136046Z",
+      "2026-10-20T14:38:54.281382Z"
+    ],
+    "crux_coverage": [
+      "2026-10-20T14:39:34.216596+00:00",
+      "2026-10-20T14:39:34.596385+00:00"
+    ],
+    "daemon_audit_utc": "2026-10-20T14:39:40.069561+00:00",
+    "ostium_state_diff": [
+      "2026-10-20T14:39:31.419511+00:00",
+      "2026-10-20T14:39:34.216323+00:00"
+    ],
+    "ostium_status": [
+      "2026-10-20T14:39:28.393987+00:00",
+      "2026-10-20T14:39:31.419304+00:00"
+    ],
+    "positions_followup": [
+      "2026-10-20T14:40:21.047915Z",
+      "2026-10-20T14:40:21.355102Z"
+    ],
+    "uma_status": [
+      "2026-10-20T14:39:19.992930+00:00",
+      "2026-10-20T14:39:28.393640+00:00"
+    ]
+  },
+  "daemons": {
+    "all_exact_absolute_path_singletons_up": true,
+    "any_stale_code": false,
+    "processes": [
+      {
+        "name": "news_watcher",
+        "pid": 148881,
+        "script_mtime_epoch": 1792364324,
+        "singleton": true,
+        "stale": false,
+        "started": "2026-10-19T05:28:37Z"
+      },
+      {
+        "name": "heartbeat_watch",
+        "pid": 450,
+        "script_mtime_epoch": 1790951499,
+        "singleton": true,
+        "stale": false,
+        "started": "2026-10-18T09:33:44Z"
+      },
+      {
+        "name": "telegram_listener",
+        "pid": 451,
+        "script_mtime_epoch": 1789065297,
+        "singleton": true,
+        "stale": false,
+        "started": "2026-10-18T09:33:44Z"
+      },
+      {
+        "name": "opportunity_watch",
+        "pid": 425,
+        "script_mtime_epoch": 1790676473,
+        "singleton": true,
+        "stale": false,
+        "started": "2026-10-18T09:33:44Z"
+      }
+    ]
+  },
+  "limitations": [
+    "Authenticated order/trade hashes bind complete SDK-result serializations, not raw HTTP wire bodies; cursors exhausted to LTE=.",
+    "The data API returned 9 rows under limit100 with explicit sizeThreshold=0; identity/size/totalBought/redeemability tuples match prior all-size read.",
+    "No bankroll producer or financial writer was run; retain dated 14:02 bankroll observation without refresh.",
+    "The first wrapped positions parse raised after its response had already been durably captured; a subsequent uniquely named, receipt-backed read validated through position_state_audit._live_positions and matched all nine baseline rows. The duplicate-name guard prevented preserving one intermediate retry response; latest follow-up completed cleanly.",
+    "No position state audit was needed because current all-size rows matched baseline."
+  ],
+  "private_capture_directory": "logs/cron20261020T140001Z_delta",
+  "routine_checks": {
+    "crux_coverage": {
+      "returncode": 0,
+      "streams": {
+        "finished_utc": "2026-10-20T14:39:34.596385+00:00",
+        "returncode": 0,
+        "started_utc": "2026-10-20T14:39:34.216596+00:00",
+        "stderr": {
+          "bytes": 0,
+          "path": "logs/cron20261020T140001Z_delta/checks/crux_coverage.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 0,
+          "path": "logs/cron20261020T140001Z_delta/checks/crux_coverage.stdout.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      "summary": "quiet pass; no uncovered held position printed"
+    },
+    "ostium_state_diff": {
+      "returncode": 0,
+      "streams": {
+        "finished_utc": "2026-10-20T14:39:34.216323+00:00",
+        "returncode": 0,
+        "started_utc": "2026-10-20T14:39:31.419511+00:00",
+        "stderr": {
+          "bytes": 0,
+          "path": "logs/cron20261020T140001Z_delta/checks/ostium_state_diff.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 60,
+          "path": "logs/cron20261020T140001Z_delta/checks/ostium_state_diff.stdout.txt",
+          "sha256": "fba5ef73181c8e4711004e02b44b8c9337a232d84d38f6a2d9742982d243eb39"
+        }
+      },
+      "summary": "0 open trades, prior 0; no change"
+    },
+    "ostium_status": {
+      "returncode": 0,
+      "streams": {
+        "finished_utc": "2026-10-20T14:39:31.419304+00:00",
+        "returncode": 0,
+        "started_utc": "2026-10-20T14:39:28.393987+00:00",
+        "stderr": {
+          "bytes": 0,
+          "path": "logs/cron20261020T140001Z_delta/checks/ostium_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 127,
+          "path": "logs/cron20261020T140001Z_delta/checks/ostium_status.stdout.txt",
+          "sha256": "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2"
+        }
+      },
+      "summary": "0 open trades; 0 active limits; allowance 0"
+    },
+    "uma_status": {
+      "returncode": 0,
+      "streams": {
+        "finished_utc": "2026-10-20T14:39:28.393640+00:00",
+        "returncode": 0,
+        "started_utc": "2026-10-20T14:39:19.992930+00:00",
+        "stderr": {
+          "bytes": 0,
+          "path": "logs/cron20261020T140001Z_delta/checks/uma_status.stderr.txt",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        "stdout": {
+          "bytes": 118,
+          "path": "logs/cron20261020T140001Z_delta/checks/uma_status.stdout.txt",
+          "sha256": "efae6005aa35b5fe5a066ea9e4dd6d424269887bbc7632bfac1e59e4ce9a7487"
+        }
+      },
+      "summary": "45 positions tracked; 43 Gamma markets refreshed; 0 alerts; positions_fetch_ok=true"
+    }
+  },
+  "schema": "polyclaude.tick_safety_delta.v1",
+  "root_status_semantics_erratum": "Orders/trades response_status corrected to null in this public index; private marker200 is synthetic SDK-wrapper success, not transport evidence."
+}
