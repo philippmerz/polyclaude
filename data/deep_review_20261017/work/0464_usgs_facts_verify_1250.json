@@ -1,0 +1,56 @@
+{
+  "schema": "case464_usgs_verification_facts.v1",
+  "checked_utc": "2026-10-20T12:50:17Z",
+  "scope": "Independent identity/query verification and catalog facts; no forecast, resolution verdict, probability or action.",
+  "identity": {
+    "review_index": 464,
+    "market_id": "5473550",
+    "conditionId": "0xbf1ae57187d2df8ae7c20fda70da86e2996b3e5c4e56f57c381e3d3cb5c50d37",
+    "criteria_sha256": "e7709816f6b19c1a9fa500473b3ff3639bf1e9092072a40e5041f945e40b6d32",
+    "identity_source": "scripts/deep_review_resume.py --index 464 --max-bytes 8000; programmatic exact frozen case record. All identifiers match 0464_usgs_facts_1140.json."
+  },
+  "rule_and_time_binding": {
+    "literal_rule_window": "2026-10-12 00:00 ET through 2026-10-18 23:59 ET",
+    "inclusive_utc_query": ["2026-10-12T04:00:00Z", "2026-10-19T03:59:59Z"],
+    "usgs_query_parameters": "format=geojson; starttime=2026-10-12T04:00:00; endtime=2026-10-19T03:59:59; minmagnitude=6.5; orderby=time",
+    "timezone_verification": "Official USGS FDSN service documentation says ISO8601 times with no explicit timezone default to UTC; the returned catalog metadata echoes the exact query URL. starttime/endtime bounds therefore match the ET-to-UTC conversion above.",
+    "revision_and_late_reporting": "The market rule allows final-day magnitude revision through 2026-10-20T03:59:59Z (passed before this capture) and a substantial-event late-reporting tail through 2026-10-21T03:59:59Z. At the 12:50:17Z catalog receipt, 15h09m42s remained in the latter period. Gamma endDate is a separate market field and is not substituted for the criterion event window."
+  },
+  "latest_exact_window_catalog": {
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-10-12T04%3A00%3A00&endtime=2026-10-19T03%3A59%3A59&minmagnitude=6.5&orderby=time",
+    "receipt": "logs/cron20261020T124955Z_case0464_verify/usgs_latest_exact_window.receipt.json",
+    "received_utc": "2026-10-20T12:50:17.233016Z",
+    "status": 200,
+    "raw_sha256": "4e9c4d780f22927b09c88d10629c36a89e3661e7bf335225f46a64f555a589a9",
+    "api_version": "2.8.1",
+    "generated_utc": "2026-10-20T12:50:17Z",
+    "result_count": 3,
+    "events": [
+      {"id": "us6000u2mq", "magnitude": 6.9, "event_utc": "2026-10-16T03:35:31.925Z", "updated_utc": "2026-10-17T03:41:49.338Z", "review_status": "reviewed", "place": "76 km NE of Ozernovskiy, Russia", "coordinates_lon_lat_depth_km": [157.2701, 51.9848, 135]},
+      {"id": "us6000u214", "magnitude": 6.8, "event_utc": "2026-10-13T12:23:07.248Z", "updated_utc": "2026-10-13T15:39:33.040Z", "review_status": "reviewed", "place": "central Mid-Atlantic Ridge", "coordinates_lon_lat_depth_km": [-19.4308, -0.4085, 10]},
+      {"id": "us6000u1z5", "magnitude": 6.7, "event_utc": "2026-10-13T05:44:46.919Z", "updated_utc": "2026-10-14T16:41:15.359Z", "review_status": "reviewed", "place": "central Mid-Atlantic Ridge", "coordinates_lon_lat_depth_km": [-19.8598, 0.1685, 10]}
+    ],
+    "comparison": "Matches all three IDs, magnitudes, event/update times, status and locations in the earlier exact-window receipt (2026-10-20T11:36:02.148313Z; raw SHA-256 3a1139b1c54a4db70dd237c2079cc06c05ad027d00d5471faa52d2618831b205)."
+  },
+  "catalog_baseline_context": {
+    "source": "USGS FDSN event catalog, same worldwide GeoJSON service and minmagnitude 6.5 threshold",
+    "query_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2016-10-20T00%3A00%3A00&endtime=2026-10-19T23%3A59%3A59&minmagnitude=6.5&orderby=time",
+    "window": "2026-10-20T00:00:00Z through 2026-10-19T23:59:59Z (ten calendar years; UTC by official service default)",
+    "receipt": "logs/cron20261020T124955Z_case0464_verify/usgs_historical_baseline.receipt.json",
+    "received_utc": "2026-10-20T12:50:06.077987Z",
+    "status": 200,
+    "raw_sha256": "139ffc91bc18b6a83f71b3bff48121d41035174bd7b2debb9336f00a76ac3867",
+    "api_version": "2.8.1",
+    "catalog_count": 408,
+    "interpretation_limit": "Observed current-catalog count over this historical interval only; not a fitted event rate, probability, independent-trial model, or claim about future reporting/revisions."
+  },
+  "official_documentation": {
+    "url": "https://earthquake.usgs.gov/fdsnws/event/1/",
+    "receipt": "logs/cron20261020T124955Z_case0464_verify/usgs_fdsn_docs.receipt.json",
+    "received_utc": "2026-10-20T12:50:05.394682Z",
+    "status": 200,
+    "raw_sha256": "839525eb4dacc093f2ed1dcce9408226c831f03b777feb8d77d3ba615b42e358",
+    "relevant_text": "All times use ISO8601; unless timezone is specified, UTC is assumed."
+  },
+  "gaps": ["The late-reporting clause remained open at latest query time; a stable catalog snapshot does not prove no qualifying late addition or revision will appear before the contractual tail ends.", "The historical count is catalog-dependent and is not used to infer a case outcome."]
+}

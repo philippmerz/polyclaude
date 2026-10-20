@@ -1,0 +1,162 @@
+{
+  "review_index": 468,
+  "market_id": "1439093",
+  "condition_id": "0x333455a7be2dad4c981b49d700b80a0497c0274f72be3ab633a9ec020e80e884",
+  "criteria_sha256": "a7dce0cab44c12faf623bae16e633af4a4e22a33e97040ed07372c48ad481ee8",
+  "status": "valued",
+  "literal_analysis": "CreationFeb25 21:56:46.016258Z–Dec31 23:59ET, anywherebetweenUSandCubanmilitary. USCG/CubanBorderGuardincluded. Directforcecanbeone-sidedstrike; no returnfire requirement. Warning-only/minordamageramming excluded; intentionalrammingmajorhull/sink qualifies. USregisteredvessel/citizenship/civilianexile isnotUSmilitary.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/1439093",
+      "observed_utc": "2026-10-20T11:40:33.584205Z",
+      "finding": "RootverifiedcurrentGamma creationFeb25 21:56:46Z/fullidentity; exactwindow notall2026."
+    },
+    {
+      "url": "https://www.aljazeera.com/news/2026/2/25/cuban-border-agents-fire-upon-florida-tagged-speedboat-killing-four",
+      "observed_utc": "2026-10-20T11:41:34.858851Z",
+      "finding": "RootactualfullbodymorningFeb25/civilianexiles vsCubanBorderGuard;USCGdeployedlater, notreportedengagement. Beforecreation; attributedMININT/Rubioaccounts."
+    },
+    {
+      "url": "https://www.news.uscg.mil/Press-Releases/Article/4616594/coast-guard-intercepts-motor-vessel-grace-continues-operations-to-interdict-ill/",
+      "observed_utc": "2026-10-20T13:11:43.618928Z",
+      "finding": "Direct403,mirror402; onlyindexedreleaseexcerpt supportsSepfuelinterdiction/pressure. DoesnotproveCubanmilitaryengagement; fullrawbodyunknown."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15,
+    "low": 0.02,
+    "high": 0.6,
+    "actual_entry_reserve_pp": 20,
+    "method": "Primary conditional remaining-window scenario tree plus1%unrecoveredpriorqualifyingincident residual; weights/hazards unfittedjudgment, no predictionmarketprice/Poissonrate/calibratedfrequency.",
+    "reasoning": "Pressure/interdiction likelycontinueswithoutmilitaryencounter; explicitlyincludedcoastguards andforceproximity createaccident/escalationrisk. Regimechange/coercivepolicyshockcanproduceUSstrikesagainstCubanmilitaryinsideoroutsideCuba, not onlyfullinvasion. Sharedescalationstateavoidsaddinginterdiction/strike/proxyoddsasindependent. Existingeventsoutsidewindowstillcontext, notpayoutproof. Bounded direct/search evidence, notexhaustiveeventcensus. Freshprimaryoriginals403/timeout; currentpressureterms partlysearch-result evidence. Newsaccountsattributeallegations, notverifiedconfessions/USmilitaryorders. RetrospectivecivilianepisodesnotcountedasoccurredYES.",
+    "model": "research/2026-10-17-deep-review/models/0468_primary_model_1325.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases462_463_464_466_468_quotes_1254.json",
+    "quote_file_sha256": "9177b669d53d120b56a7c776665017c1660624117fe1a46c4279e6f89fbfe845",
+    "quote_capture_utc": "2026-10-20T12:53:01.858786+00:00",
+    "gamma_received_utc": "2026-10-20T12:53:01.683175+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.15,
+        "selected_stress_probability": 0,
+        "best_bid": 0.11,
+        "best_ask": 0.12,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792500732716",
+        "book_received_utc": "2026-10-20T12:53:01.857438+00:00",
+        "book_age_seconds_at_receipt": 49.141438007354736,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.2,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.12
+              }
+            ],
+            "net": 1.2
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.1,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.11
+              }
+            ],
+            "net": 1.1
+          }
+        },
+        "taker_cost_usd": 1.2,
+        "central_expected_profit_usd": 0.30000000000000004,
+        "selected_stress_profit_usd": -1.2,
+        "break_even_before_carry": 0.12,
+        "break_even_constant_carry": 0.12078004002792427,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.85,
+        "selected_stress_probability": 0.6499999999999999,
+        "best_bid": 0.88,
+        "best_ask": 0.89,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792500732716",
+        "book_received_utc": "2026-10-20T12:53:01.857438+00:00",
+        "book_age_seconds_at_receipt": 49.141438007354736,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.9,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.89
+              }
+            ],
+            "net": 8.9
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.8,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.88
+              }
+            ],
+            "net": 8.8
+          }
+        },
+        "taker_cost_usd": 8.9,
+        "central_expected_profit_usd": -0.40000000000000036,
+        "selected_stress_profit_usd": -2.4000000000000012,
+        "break_even_before_carry": 0.89,
+        "break_even_constant_carry": 0.8957852968737716,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "CentralYESlead only; selectedstress andunmeasuredsource/conditionalfill risk notstrong enoughforentry. No trade/600comparativepause.",
+  "reopen_condition": "Verifiedexactpostcreationmilitaryencounter orcurrentpolicy/source/pricechange;600comparisonplusfullcurrentidentity/venue/funding/fees/depth/jointriskgates.",
+  "evaluated_utc": "2026-10-20T13:15:41.282160+00:00",
+  "question": "US x Cuba military clash in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 468,
+  "report_sha256": "1b6cd997b901b18e25c5fffd6d4f075f889fc3a1a992ea0ca3a99b5a3e072202"
+}

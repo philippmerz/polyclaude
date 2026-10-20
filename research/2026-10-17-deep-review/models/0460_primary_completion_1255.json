@@ -1,0 +1,29 @@
+{
+  "schema": "primary_openrouter_completion_review.v1",
+  "reviewed_utc": "2026-10-20T12:51:07.451707+00:00",
+  "review_index": 460,
+  "market_id": "5326400",
+  "condition_id": "0xf5d4506cb6fa3864a89de069c6ce11d5f00daa9e8b0bb7c2644cd5ca71fc7041",
+  "p_yes": 0.05,
+  "low": 0.005,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 15,
+  "base_model": "research/2026-10-17-deep-review/models/0460_primary_model_1210.json",
+  "base_model_sha256": "fb92611f6c7fc8c10cd7cd7e478267eada53bf9441c0ff01d70e71711b2e7a7b",
+  "current_source_receipt": "logs/cron20261020T121327Z_root_sources/openrouter.receipt.json",
+  "current_source_raw_sha256": "a54b7efc724342b338868987b015ea5789e54fa678e3614dc1c544548e716467",
+  "source_received_utc": "2026-10-20T12:21:59.342878Z",
+  "backend_cachedAt_utc": "2026-10-20T11:38:23.629Z",
+  "source_delta": "Completed Sep28/Oct5/Oct12 totals unchanged at165.856049857563/171.842501724714/164.043985914931T; displayed166+172+164=502T. PartialOct19 now37.332159196640T versus36.124191481344T in base, neither a completed week nor documented usage cutoff. No surprise in completed inputs and no reliable calendar-pace signal; retain rounded5% instead of mechanically revising for ordinary partial accumulation.",
+  "method_verification": "Root independently recomputed12complete log returns mean0.08658136427119845/sampleSD0.08709316910373352 and all four normal-band probabilities plus uniform branch; weighted4.4788255067% matches saved analytic output. Selected forecast5% is rounded judgment, not empirical calibration.",
+  "tail_sensitivity": {
+    "all_severe_branch_removed_keeping_other_weights_probability": 0.01701047728923474,
+    "all_disruption_and_severe_branches_removed_keeping_weights_probability": 1.80555108165915e-05,
+    "interpretation": "Nearly all YES probability is subjective disruption/source-ambiguity mass. Ordinary continuation rarely lands in73–123T; downshift/source change can. Zeroing branches is a sensitivity, not a fitted alternative; source outages do not necessarily produce a numeric low total. A permanently stalled chart may invoke fallback/current total below575 and lose YES. Uniform40–130 is a modeling choice, not an outage payout rule."
+  },
+  "independent_probability_judgment": "Retain5%central,0.5–60%scenario range.5%allows substantial downside tail without pretending the observed twelve-week variation calibrates a30%weekly collapse.60%countercase places most remaining-week mass inside73–123T. Broad lower supports continuednormalgrowth; these are scenarios, not confidence bounds.15pp selected reserve is supported by unresolved tail-model/conditional-fill/adjudication error, not a proof YES worthless.",
+  "sizing_review": "38.22YES shares offered at0.001 in11:32datedbook; five-share cost0.0052 inclfees is below vettedBUY1USDcashminimum.125shares walk to1.10117USD includingfees, central payout6.25 but low-case payout.625 and selected0; 1000shares cost676.89722 cannot fit pilotcapital. No scalable0.1c allocation. NO has no asks; highbid is exit liquidity for existing sellers, not a NO buy quote.",
+  "comparative_decision": "Central-value tail lead only; not a robust selected-stress entry. After600 comparative selection, reassess versus heldOR112differentweeks/sharedtraffic, other dated candidates, Aave3.2035%variablecash, or do nothing. Book gap, unknown tail frequency, no YESexitbid, funding/gas/redemption and fullbinaryloss matter. No automatic multiplier or independenthedgecredit; no newBUY under386/600 gate.",
+  "source_limits": "Root verifiedcurrentreceipt raw/gzip hashes; UIbinding is datedOct18browser/formatter proof, not freshscreenshot or first-display archive. Currenthistory may be revised beforecontractfreeze. Oldquotes retained for research math, not live gate.",
+  "entry_authority": false
+}

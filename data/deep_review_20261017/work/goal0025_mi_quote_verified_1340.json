@@ -1,0 +1,24 @@
+{
+  "verified_utc": "2026-10-20T13:38:49.083172+00:00",
+  "quotes": "data/deep_review_20261017/work/goal0025_mi_safety_quotes_1335.json",
+  "quote_sha256": "ef215466aac52c5565b579815a5c81417fa68205c473ab75aca9a97f1c3200ea",
+  "receipt_pairs_verified": [
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_mi_safety_quotes_1335/public/1838_fee.receipt.json",
+      "raw_sha256": "784a7f01ea9076f0562938b0d64fe817562dc8f9be591be53d9f3d8d00f66cab"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_mi_safety_quotes_1335/public/1838_gamma.receipt.json",
+      "raw_sha256": "b73e05840bb9e3f42b0d4a1e9f2fa3586e393fac3166e9ace65b915d48419c77"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_mi_safety_quotes_1335/public/books_batch_01.receipt.json",
+      "raw_sha256": "0b9bfaaa41030c2ee8eff071ad76eebc055c77abc6f21e8c7edc26e69ec66e8e"
+    }
+  ],
+  "offline_helper_exact_identity_fees_and_both_walks_reproduced": true,
+  "fee_net_MI_5NO_exit_usd": 1.40882,
+  "new_network_call": false,
+  "execution_authorization": false,
+  "note": "Historical captured13:26 quote, not a new live or executable quote at publication."
+}

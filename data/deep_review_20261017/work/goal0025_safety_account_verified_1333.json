@@ -1,0 +1,42 @@
+{
+  "verified_utc": "2026-10-20T13:25:54.988325+00:00",
+  "capture_dir": "logs/deep_review_20261020/goal0025_safety_account_1333",
+  "orders_count": 3,
+  "all_live_zero_matched": true,
+  "max_remaining_cash_commitment_usd": 6.5,
+  "orders_full_wrappers_equal_1219": true,
+  "trades_count": 127,
+  "trades_full_wrappers_equal_1219": true,
+  "indexed_rows": 9,
+  "exact_indexed_identity_quantity_totalBought_redeemability_equal_1219": true,
+  "MI_rows": [
+    {
+      "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "outcome": "No",
+      "size": 5,
+      "totalBought": 5,
+      "redeemable": false
+    }
+  ],
+  "represented_as": "Orders/tradesvettedSDKserialization,notrawHTTP;nullresponse_status;publicpositionsHTTPbodyseparate.",
+  "no_new_bankroll_or_CSV_observation": true,
+  "root_capture_hash_verification_utc": "2026-10-20T13:28:56.976684+00:00",
+  "receipt_pairs_verified": [
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_safety_account_1333/orders.receipt.json",
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "representation": "sdk_result_serialization"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_safety_account_1333/positions_00.receipt.json",
+      "raw_sha256": "c59710db4641efb50ae8756c68d60660eaa8a4c92f1ec78ec774e9254b0f304e",
+      "representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/goal0025_safety_account_1333/trades.receipt.json",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "representation": "sdk_result_serialization"
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "verified_utc": "2026-10-20T13:04:01.717125+00:00",
+  "review_index": 464,
+  "market_id": "5473550",
+  "condition_id": "0xbf1ae57187d2df8ae7c20fda70da86e2996b3e5c4e56f57c381e3d3cb5c50d37",
+  "criteria_sha256": "e7709816f6b19c1a9fa500473b3ff3639bf1e9092072a40e5041f945e40b6d32",
+  "gamma_receipt": "logs/deep_review_20261020/cases462_463_464_466_468_quotes_1254/public/0464_gamma.receipt.json",
+  "gamma_raw_sha256": "06b160e54bbbec0726b36317b650804c5fb49025fec72c5eb8bff8ed80caba64",
+  "closed": true,
+  "acceptingOrders": false,
+  "umaResolutionStatus": "resolved",
+  "groupItemTitle": "2",
+  "source_unit_erratum": {
+    "path": "data/deep_review_20261017/work/0464_usgs_facts_verify_1250.json",
+    "field": "catalog_baseline_context.window",
+    "original_start": "2026-10-20T00:00:00Z",
+    "correct_start": "2016-10-20T00:00:00Z",
+    "binding": "Original query_url already has2016; root not using historicalcount toforecast. Originalunit unchanged."
+  },
+  "optional_late_reporting": "Rule says mayremainopen if substantialevent unreported, not an unconditional48h mandatorydelay. Venue alreadyclosed/resolved. No unsupported forecast/terminalstate inference fromcatalog alone."
+}

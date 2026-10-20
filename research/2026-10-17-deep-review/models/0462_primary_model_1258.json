@@ -1,0 +1,62 @@
+{
+  "schema": "primary_amazonas_runoff_probability.v1",
+  "review_index": 462,
+  "market_id": "5329587",
+  "condition_id": "0xb64922cdb39b89d19b494ded7324f547e48b04f866bdbb71586acdc2982a4beb",
+  "created_utc": "2026-10-20T12:56:17.708466+00:00",
+  "p_yes": 0.34,
+  "low": 0.05,
+  "high": 0.8,
+  "actual_entry_reserve_pp": 15,
+  "polls": [
+    {
+      "name": "Quaest",
+      "field": "Oct9–12",
+      "Flavio": 43,
+      "Lula": 47,
+      "other": 10,
+      "normalized_F_minus_L_pp": -4.444444444444445,
+      "weight": 0.55,
+      "mode_gap": true
+    },
+    {
+      "name": "PoderData",
+      "field": "Oct8–11",
+      "Flavio": 49,
+      "Lula": 49,
+      "other_reported": 3,
+      "rounded_sum": 101,
+      "normalized_F_minus_L_pp": 0,
+      "weight": 0.45,
+      "method": "IVR; distinct survey, shared geography/overlapping dates"
+    }
+  ],
+  "forecast_bridge": {
+    "target": "FminusL valid-vote margin >0; exacttie alphabetically favors Flavio, negligible at state electorate scale but not excluded by rule. NO includes Other fallback/other nonqualifying winner.",
+    "mean_margin_pp": -2.4444444444444446,
+    "assumed_independent_sampling_component_sd_pp": 2.284933434315157,
+    "common_poll_bias_sd_pp": 4,
+    "remaining_campaign_turnout_sd_pp": 3,
+    "undecided_transfer_sd_pp": 2,
+    "combined_sd_pp": 5.849865024019893,
+    "raw_normal_p_F_wins": 0.3380234995006903,
+    "rounded_central_p": 0.34,
+    "nondefinitive_election_adjudication": "Small unquantified tail/no mechanical extra independent-event multiplier; June2027 fallback exceedsJan2027portfolioevaluation if delayed.",
+    "dependence": "Independent polling sample noise conditional on shared4pp systematic error; same-state election/turnout errors not diversified by using two polls. MOE-to-margin and vote-normalization formulas approximate; design not fully known."
+  },
+  "reasoning": "Reported polls are intentions including noncandidate responses, not certified valid-vote totals. Normalize only named-candidate arithmetic to compare; future turnout/blank/undecided transfer modeled separately. First-round TSE F45.00/L48.23 supports competitive Llean but is not an independent runoff poll/likelihood. No verified newer state-specific fieldwork; do not claim exhaustive absence. No alleged national result, governor poll or endorsements converted to votes.",
+  "sensitivities": {
+    "margin_bias_plus3pp_probability": 0.5378302562600926,
+    "margin_bias_minus3pp_probability": 0.17600548754011353,
+    "margin_bias_plus6pp_probability": 0.7283403658909764,
+    "margin_bias_minus6pp_probability": 0.0744358836899407,
+    "range_note": "5–80%scenario envelope wider than +/-6pp scenarios; not a confidence interval or calibrated probabilitybound. Three subjective error terms and weights are assumptions.",
+    "selected15pp_rationale": "Polling disagreement,8–12dayfieldage at election, unresolvedQuaestmode and unmeasuredturnouttransfer allow errors above smallbookedge; selected19%YES/51%NO are stress cases, not floors."
+  },
+  "source_units": [
+    "data/deep_review_20261017/work/0462_amazonas_facts_1140.json",
+    "data/deep_review_20261017/work/0462_current_runoff_facts_1251.json"
+  ],
+  "comparison": "Review both outcomes afterfee/carry at realistic$1+size and current3USpoliticalbidcommitments6.50. Differentgeography but sharedmacro/politicalmodelfailures; no hedgecredit. No newBUYbefore600+comparativeselection.",
+  "entry_authority": false
+}

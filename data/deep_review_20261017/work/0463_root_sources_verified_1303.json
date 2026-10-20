@@ -1,0 +1,57 @@
+{
+  "verified_utc": "2026-10-20T13:00:32.973340+00:00",
+  "review_index": 463,
+  "verified_capture_pairs": [
+    {
+      "path": "logs/deep_review_20261017/case463_facts_20261020/sep2_release/sep2_release.receipt.json",
+      "raw_sha256": "3546676d77d2b0dd307194d6e294c3767ddbc671c06d71424f525397f6199305",
+      "received_utc": "2026-10-20T09:03:51.186513Z"
+    },
+    {
+      "path": "logs/deep_review_20261017/case463_facts_20261020/calendar/calendar.receipt.json",
+      "raw_sha256": "bcfdf39da68894c982152d70a06e27f713a117d4a1065ea0d137732af6334d09",
+      "received_utc": "2026-10-20T09:03:27.462799Z"
+    },
+    {
+      "path": "logs/deep_review_20261017/case463_facts_20261020/rate/rate.receipt.json",
+      "raw_sha256": "93f8bbd3d18dcb38935f1e91fff8caa5b9523767f13986b63c8bcf9df2ed2b5c",
+      "received_utc": "2026-10-20T09:03:28.942483Z"
+    },
+    {
+      "path": "logs/deep_review_20261017/case463_facts_20261020/2027_calendar/2027_calendar.receipt.json",
+      "raw_sha256": "4b76a5ececa47718439b5c1204b0a85cf0d669e7583cd2c6d56fc5777ae9b8b0",
+      "received_utc": "2026-10-20T09:03:53.107597Z"
+    },
+    {
+      "path": "logs/deep_review_20261017/case463_boc_facts_1140/public/statcan_cpi_sep.receipt.json",
+      "raw_sha256": "186c1512338294ab1b9ea9e77bbcf56aa345936e6f8c1b8048eda015c1df6077",
+      "received_utc": "2026-10-20T11:36:19.102373Z"
+    },
+    {
+      "path": "logs/deep_review_20261017/case463_boc_facts_1140/public/statcan_lfs_sep.receipt.json",
+      "raw_sha256": "f7b29f3515c2dcdb24ccee2a3aa945160e4589a5ed1529ec81062c7a3e5137ca",
+      "received_utc": "2026-10-20T11:36:21.474704Z"
+    },
+    {
+      "path": "logs/cron20261020T124955Z_case463_surveys/bos_q3_2026.receipt.json",
+      "raw_sha256": "f73cfe681d24d5e98851331899ead081d8dfb2255471bb73344e0345235914f1",
+      "received_utc": "2026-10-20T12:57:00.114549Z"
+    },
+    {
+      "path": "logs/cron20261020T124955Z_case463_surveys/csce_q3_2026.receipt.json",
+      "raw_sha256": "7da402c30a4a7cfb80e9b282eb2deb209abacaf9a2a4aff9712471ef185f56f6",
+      "received_utc": "2026-10-20T12:57:00.865314Z"
+    },
+    {
+      "path": "logs/cron20261020T124955Z_case463_surveys/mps_q2_2026.receipt.json",
+      "raw_sha256": "6db71cc626eb5899649a37a4fe777f9ce701294ec11e2eb9e2c40c80eb997a73",
+      "received_utc": "2026-10-20T12:57:01.446266Z"
+    },
+    {
+      "path": "logs/cron20261020T124955Z_case463_surveys/csce_c1_data.receipt.json",
+      "raw_sha256": "137437336d2705ab88e173f12fe34bdc16f6918064043e5893f8fdb75a4c1693",
+      "received_utc": "2026-10-20T12:57:32.695177Z"
+    }
+  ],
+  "note": "Root independently read dated official survey/data/statement excerpts; July MPS not a fresh surprise baseline; one-character oldcriteria error preserved/corrected by exact frozen copy."
+}

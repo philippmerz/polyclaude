@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-10-20T13:09:01.308317+00:00",
+  "review_index": 466,
+  "issuer_receipts": [
+    {
+      "receipt": "data/deep_review_20261017/work/0466_public_receipts_1145/grok47.receipt.json",
+      "raw_sha256": "20b811cd79c35a119ed5f7d753b56de43658f66f6b7a4a739e4313f4377bbf66"
+    },
+    {
+      "receipt": "data/deep_review_20261017/work/0466_public_receipts_1145/news.receipt.json",
+      "raw_sha256": "eb5cb2b03bd7e47929ffa826a92a0ed49e5fab0c07ef6c8b8fbb6003ecf2ad42"
+    }
+  ],
+  "metric_bundle_raw_sha256": "640aa18265197d82fbe0263f91f0b3362cfc9e19ee33d15d3570628ae88761e1",
+  "dynamic_label_note": "Accuracy label is dynamically constructed from selected benchmark name (O); no literal fullHLEAccuracystring expected. Default hle, hle_diamond separate, calibration separate; existing0412trace retains fullmapping.",
+  "current_Grok_rows_independently_verified_by_id": 8,
+  "mode_note": "The exact rule has no tool-use exclusion. Any official qualifying HLEAccuracy entry counts; separateDiamond/calibration/issuer-onlybenchmarkclaim does not substitute. Unknownconfiguration affects forecast uncertainty, not an invented eligibility restriction."
+}

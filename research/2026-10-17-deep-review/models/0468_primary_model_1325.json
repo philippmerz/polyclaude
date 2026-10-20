@@ -1,0 +1,51 @@
+{
+  "schema": "primary_us_cuba_encounter_scenarios.v1",
+  "review_index": 468,
+  "market_id": "1439093",
+  "condition_id": "0x333455a7be2dad4c981b49d700b80a0497c0274f72be3ab633a9ec020e80e884",
+  "criteria_sha256": "a7dce0cab44c12faf623bae16e633af4a4e22a33e97040ed07372c48ad481ee8",
+  "created_utc": "2026-10-20T13:14:35.978400+00:00",
+  "p_yes": 0.15,
+  "raw_scenario_p": 0.14637250000000002,
+  "low": 0.02,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 20,
+  "regimes": [
+    {
+      "name": "Coercion/interdiction without deliberate militaryattack",
+      "weight": 0.65,
+      "remaining_window_qualifying_encounter": 0.035
+    },
+    {
+      "name": "Policy/escalation shock",
+      "weight": 0.25,
+      "remaining_window_qualifying_encounter": 0.4
+    },
+    {
+      "name": "Third-party/proxy/overseas spillover",
+      "weight": 0.1,
+      "remaining_window_qualifying_encounter": 0.15
+    }
+  ],
+  "past_qualifying_unrecovered_probability": 0.01,
+  "future_given_no_past_probability": 0.13775,
+  "method": "Primary conditional remaining-window scenario tree plus1%unrecoveredpriorqualifyingincident residual; weights/hazards unfittedjudgment, no predictionmarketprice/Poissonrate/calibratedfrequency.",
+  "literal": "CreationFeb25 21:56:46.016258Z–Dec31 23:59ET, anywherebetweenUSandCubanmilitary. USCG/CubanBorderGuardincluded. Directforcecanbeone-sidedstrike; no returnfire requirement. Warning-only/minordamageramming excluded; intentionalrammingmajorhull/sink qualifies. USregisteredvessel/citizenship/civilianexile isnotUSmilitary.",
+  "source_bridge": "RootverifiedcurrentGammacreationwindow andactualcontemporaneousAlJazeeraFeb25morninggunfirebody, which citesMININTandRubio. Itsopponentsarecivilianexiles, withUSCGdeployedafterwardforinformation, notreportedcombat; beforecreationregardless. LaterOct19AP/Reutersrenderedsearchreportsare retrospectivecharges/claims, not newOctclash. USCGOct2Graceinterdictionpress-release mirror/search supports continuingpressure/proximity, not Cubanmilitaryopponent; original403/mirror402, fullbodyunknown.",
+  "current_source_confidence": "Bounded direct/search evidence, notexhaustiveeventcensus. Freshprimaryoriginals403/timeout; currentpressureterms partlysearch-result evidence. Newsaccountsattributeallegations, notverifiedconfessions/USmilitaryorders. RetrospectivecivilianepisodesnotcountedasoccurredYES.",
+  "reasoning": "Pressure/interdiction likelycontinueswithoutmilitaryencounter; explicitlyincludedcoastguards andforceproximity createaccident/escalationrisk. Regimechange/coercivepolicyshockcanproduceUSstrikesagainstCubanmilitaryinsideoroutsideCuba, not onlyfullinvasion. Sharedescalationstateavoidsaddinginterdiction/strike/proxyoddsasindependent. Existingeventsoutsidewindowstillcontext, notpayoutproof.",
+  "sensitivity": {
+    "low": "Lowpressure/2%shockweight andminimalpriorunknowncanputYES~2%.",
+    "high": "60%escalationweight/80%encounterconditionalpluslargerpastrecoverycanputYES~50–60%.",
+    "selected20pp": "Actor/window/source/adjudication andunfittedgeopoliticalconditional-fills can overwhelm3ppcentralaskdifference;selectedYES0/NO65%notprobabilityfloors.",
+    "cash_timing": "Jan1normalresolution canserveevaluation; credible-reportdisputes/publicationtimingcanextend, cashnotguaranteed."
+  },
+  "comparative": "No currentCuba exposure; USpolicy/globalrisk cancorrelatewithUSpoliticalcommitments/crypto/AIeconomicregimes. No hedge/independencecredit. Comparecash/Aaveandotherleadsafter600+selection.",
+  "source_units": [
+    "data/deep_review_20261017/work/0468_us_cuba_facts_1145.json",
+    "data/deep_review_20261017/work/0468_military_clash_verification_1258.json",
+    "data/deep_review_20261017/work/0468_root_current_sources_1319.json",
+    "data/deep_review_20261017/work/0468_primary_mirrors_1320.json"
+  ],
+  "entry_authority": false
+}

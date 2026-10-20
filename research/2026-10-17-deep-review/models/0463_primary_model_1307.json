@@ -1,0 +1,68 @@
+{
+  "schema": "primary_boc_oct2026_scenario.v1",
+  "review_index": 463,
+  "market_id": "2941851",
+  "condition_id": "0x3e31fd4dcc1efc43b9798a205d604945b513c4f284e63629fa9f7434d13bb17a",
+  "criteria_sha256": "6dcbff711bfdfe7593b129c869463dbf846b1c1f3d1dcc24bf0fb8e56e0d97c6",
+  "created_utc": "2026-10-20T13:02:05.606528+00:00",
+  "p_yes": 0.09,
+  "low": 0.005,
+  "high": 0.45,
+  "actual_entry_reserve_pp": 15,
+  "regimes": [
+    {
+      "name": "Regular hold/recovery",
+      "weight": 0.55,
+      "exact25cut": 0.04,
+      "other_cut": 0.005,
+      "hold_or_default": 0.795,
+      "hike": 0.16
+    },
+    {
+      "name": "Inflation/expectation response",
+      "weight": 0.3,
+      "exact25cut": 0.01,
+      "other_cut": 0,
+      "hold_or_default": 0.34,
+      "hike": 0.65
+    },
+    {
+      "name": "Growth/labour downside",
+      "weight": 0.13,
+      "exact25cut": 0.5,
+      "other_cut": 0.1,
+      "hold_or_default": 0.35,
+      "hike": 0.05
+    },
+    {
+      "name": "Postponement/cancellation or late uncertainty",
+      "weight": 0.02,
+      "exact25cut": 0.05,
+      "other_cut": 0.025,
+      "hold_or_default": 0.8,
+      "hike": 0.125
+    }
+  ],
+  "raw_joint_probabilities": {
+    "exact25cut": 0.091,
+    "other_cut": 0.01625,
+    "hold_or_default": 0.6007500000000001,
+    "hike": 0.29200000000000004
+  },
+  "method": "Independent subjective policy-reaction scenarios from official statement/data/surveys, rounded exact25cut9.1% to9%. No prices/futures/pollster fraction as event probability. Not a fitted macro reaction function or calibrated posterior.",
+  "source_bridge": {
+    "baseline": "Sep2hold2.25%,Q2GDP3.3recovery,energyheadlineabout3%/coreclose2;BoC already knewAug21tradebreakdown.",
+    "new_since_baseline": "Sepemployment−68k/youthconcentration,UR6.5vs6.4 and CPI3.1vs3.0/exgas2.2vs2.4 are mixed marginal signals, not a new highlevelalone. BOSfuture-sales strong/sparecapacity/hiringsoft; consumer5y3.39→3.91 while12/24monthslightlylower.",
+    "timing": "Oct19surveypublication notOct19fieldwork; Aug5–Sep4observations may already informSep2decision, not an independent repeatedhawkishshock. No sourced expectation of the release means surprise magnitude unknown. JulyMPSOctmedian2.25 is June11–18context, not a new probabilityforecast."
+  },
+  "reasoning": "Mostweightonhold/hike because reacceleration/inflationexpectations and lack of broadcoreinflationcollapse; maintain nonzero25cutrisk forlabourweakness/sparecapacity/tradeshock. Distinguish50cut/emergency/otherannouncement: notallcutswinthisexactbracket. Fiveyexpectationrise is meaningfulsourceevidence, but vintage/samplelimits and simultaneoussoftpricing/hiring prevent treating it as a certainhike. Commonregimes, not multipliedindependentCPI/LFS/surveyodds.",
+  "sensitivity": "Growthdownsideweight40%/highercutpropensity canputYES~25–45%; minimalnewweakness/hold-hikeregimecanput~0.5%. Range is scenarioenvelope, not confidenceinterval.15ppreserve represents large uncalibratedreaction/fill/sourceinterpretationerror; selected0YES/76NO are stresscases, not floors.",
+  "literal": "25bpdecreasegroup; magnitude0<cut<37.5bp rounds25,37.5tiesawayto50. Zero/hike/50+cut=>NO. PostponebeforeDec9usespostponedrelease, canceled/noannouncementbyDec9defaultsNoChange. Otheremergencychangesnotresultingfromspecifiedannouncementexcluded. Upperboundifcorridor.",
+  "comparison": "Cash/Aave3.2035%variable and reviewedcentraltailleads; noentryuntil600+comparison. Currentmacroexposure diffuse,policy/liquiditytaildependence withcrypto/AI/politics nothedge. TinypricealonecannotestablishfreeEV orfillconditionalp.",
+  "source_units": [
+    "data/deep_review_20261017/work/0463_boc_facts_verification_1225.json",
+    "data/deep_review_20261017/work/0463_boc_surveys_1257.json",
+    "data/deep_review_20261017/work/0463_root_sources_verified_1303.json"
+  ],
+  "entry_authority": false
+}

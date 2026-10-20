@@ -1,0 +1,70 @@
+{
+  "schema": "polyclaude.held_market_primary_review.v1",
+  "reviewed_utc": "2026-10-20T13:37:35.277374+00:00",
+  "scope": "Bounded late-news safety follow-up; closes the already-completed 12:13 check and saved research records, no new case advance.",
+  "requested_alerts_already_completed": [
+    "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+    "86e7994e41fd2b524cd9f033f41bbcf70d2da3c2"
+  ],
+  "new_alert_decisions": [
+    {
+      "alert_id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+      "provisional_level": "MATERIAL",
+      "primary_decision": "Hold 5 MI NO/no add. Campaign endorsement could strengthen El-Sayed; article, list, timing and incremental voter effect remain unverified. Google consent is not article content, and the older campaign directory neither verifies nor disproves 700 doctors. Do not equate endorsement count with votes or assume zero effect; no supported numerical update adopted."
+    },
+    {
+      "alert_id": "8f083beb589641eeffbce1bd549c7ac217a252fc",
+      "primary_decision": "Guardian body and original FEC form verify America Next paid Breakthrough LLC USD250000 Sep29 for opposition canvassing/influencer marketing naming El-Sayed. This predates Oct9-10 poll baseline; do not double-count spending as a new independent measurement. Publicity/backlash effect is ambiguous and unmeasured. Guardian reports no evidence the heckler was paid or Rogers campaign involved; FEC independence certification is a claim, not proof of no coordination. No prior/order change."
+    },
+    {
+      "alert_id": "f9cb383175204e6fca88c16a588a75709489487b",
+      "primary_decision": "CBS captured page/VideoObject summary concerns Oct19 Kansas rally and Roger Marshall. No newly verified fact changing exact ME02/CA06/NY01 bids in that bounded summary; complete video transcript not reviewed. Retain original three bids, unchanged conditional-fill limitations."
+    }
+  ],
+  "other_delta_alerts": [
+    "99e3c10e822a4447f30ba9c5a3dafc376a812877",
+    "3e0673b5b27adfe583b261467b381c87f27de2ed",
+    "33868e582e60180f803826c93081bc040240ea8a",
+    "9b350cef700837ece42e98a7e748105bfcfa5e9d"
+  ],
+  "other_delta_decision": "Career reflection, Montana letters and Venezuela election speculation do not establish held-contract resolution or a new exact pending-bid catalyst. Bounded review, not exhaustive news absence.",
+  "exact_MI": {
+    "review_index": 1838,
+    "market_id": "630805",
+    "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+    "held_NO": 5,
+    "central_p_NO": 0.44,
+    "selected_p_NO": 0.34,
+    "broad_low_p_NO": 0.2,
+    "unchanged_prior": true,
+    "no_duplicate_Oct20_time_aging": true
+  },
+  "account_asof": "2026-10-20T13:25:54.988325+00:00",
+  "account_proof": "data/deep_review_20261017/work/goal0025_safety_account_verified_1333.json",
+  "hold_vs_exit": {
+    "current_fee_net_exit_usd": 1.40882,
+    "central_terminal_usd": 2.2,
+    "selected_terminal_usd": 1.7,
+    "broad_low_terminal_usd": 1.0,
+    "exit_plus75day_constant_cached_carry_usd": 1.4179777999345022,
+    "decision": "Retain small holding: central/selected payout exceeds exit plus illustrative carry, broad low favors sale. Unverified endorsement/publicity does not justify inventing a >5.64pp downward shift in selected NO needed to reverse this comparison. Uncertainty is real; no guaranteed floor or recovery credit.",
+    "limits": "75-day sensitivity, not settlement guarantee; cached variable3.2035% Aave, conversions/gas not assumed free. No executable partial prefix at/above selected34c since bestbid29c.",
+    "joint_politics_cost_usd": 8.05,
+    "joint_failure_possible": true,
+    "no_new_maker_SELL": "No supported fill-catalyst case for placing a new offer above the much cheaper current asks."
+  },
+  "source_facts": "data/deep_review_20261017/work/held_mi_alert_facts_1328.json",
+  "root_source_hash_verification": "data/deep_review_20261017/work/goal0025_mi_safety_source_verification_1337.json",
+  "exit_proof": "data/deep_review_20261017/work/goal0025_mi_exit_economics_1335.json",
+  "actions": {
+    "trade": false,
+    "fill": false,
+    "cancel": false,
+    "prior_change": false,
+    "new_financial_CSV_observation": false,
+    "telegram": false
+  },
+  "next": "Existing14UTC review or earlier material event; MI program today16UTC, debateOct21 23UTC. End bounded run after publication; no new goal/timer/idle follow-up.",
+  "quote_verification": "data/deep_review_20261017/work/goal0025_mi_quote_verified_1340.json"
+}

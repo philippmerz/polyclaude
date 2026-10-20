@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-20T12:58:28.327926+00:00",
+  "review_index": 462,
+  "receipts_verified": [
+    "logs/deep_review_20261020/case462_amazonas_1140/tse_am_2026_zip.receipt.json",
+    "logs/deep_review_20261020/case462_g1_quaest_am_1140/g1_quaest_am.receipt.json",
+    "logs/deep_review_20261020/case462_poderdata_pdf_1223/poderdata_am_runoff_pdf.receipt.json"
+  ],
+  "method": "Root independent offline pypdf extraction of exact gzip-hash/raw-hash verified PDF and ZIP member; actual presidential pages distinct from governor. Isolated temporary parser target, no financial-runtime/writer change.",
+  "parser_version": "6.21.1",
+  "financial_action": false
+}

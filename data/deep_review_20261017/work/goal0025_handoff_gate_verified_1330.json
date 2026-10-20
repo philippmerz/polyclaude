@@ -1,0 +1,12 @@
+{
+  "verified_utc": "2026-10-20T13:38:16.433887+00:00",
+  "handoff_status": "within_declared_validity",
+  "handoff_bytes": 7664,
+  "packet_bytes": 11307,
+  "source_mismatches": [],
+  "current_state_loaded": false,
+  "execution_ready": false,
+  "new_buy_gate": "entry review gate: 391/600 completed valuations; new BUYs blocked",
+  "no_policy_selection_or_financial_change": true,
+  "late_safety": "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json"
+}

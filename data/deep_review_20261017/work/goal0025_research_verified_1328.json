@@ -1,0 +1,90 @@
+{
+  "verified_utc": "2026-10-20T13:19:19.629443+00:00",
+  "previous_goal_turn_classification": "progress: bounded12:13check completed and published168b1275; currentfinite research adds5fullvaluations and3objectiveexclusions.",
+  "records": [
+    {
+      "review_index": 460,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0460.json",
+      "record_sha256": "54b2b77099d079128f9e20cdc2912d6bb4ebb5200fbf277d760424d64bb824c4",
+      "report_sha256": "7ee3568a61d0c12fde38e86bb83260d3ffbb6aa745d6dad346ae50bf90f4e6a7",
+      "p_yes": 0.05
+    },
+    {
+      "review_index": 461,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0461.json",
+      "record_sha256": "01fa134d97e000193fa56180d856e7cf8c280d2c2b501c24131f0cad83b14bae",
+      "report_sha256": "7d226b8f198f724859879e3d5c7776376acd2a3015cc84a659fc4c54ce85e15d",
+      "p_yes": null
+    },
+    {
+      "review_index": 462,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0462.json",
+      "record_sha256": "ac00fd48f2bb4b6cff6b312800c72c2ac5d02813ea43bde061d65bc2a6f22c0c",
+      "report_sha256": "c1fd556058a36ff41f419cb76eae88b0be6a61599bab58a06525091a9f76c3bd",
+      "p_yes": 0.34
+    },
+    {
+      "review_index": 463,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0463.json",
+      "record_sha256": "94917cad54b6166cf84305c8bb2e50fa18fe9503dc1ece6770081d928c22b839",
+      "report_sha256": "d0fda7f41a734f778272ad3015bc8b52cc9cd4609a28e832503e865f1e52a27b",
+      "p_yes": 0.09
+    },
+    {
+      "review_index": 464,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0464.json",
+      "record_sha256": "c0866fe9d45fc25f0dcbfa838880cc0ef468f7e389caf0739a82fb9fe14d2ad8",
+      "report_sha256": "fd2eaf1b597223b9672d70a88dfade48590ce9886c0c7c497591b216558e8c0c",
+      "p_yes": null
+    },
+    {
+      "review_index": 465,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0465.json",
+      "record_sha256": "fee64a34ee17dd38f1f792e14be283a9151850b9b9552be9a8132b0e09b1c248",
+      "report_sha256": "d4547b9674e5f36f7e97fdf896b8e8300bd66b2274f156b24ade4ed827b4d322",
+      "p_yes": null
+    },
+    {
+      "review_index": 466,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0466.json",
+      "record_sha256": "31367424631a4c95442bb49e5875a2475f4807a481a5bff555af4e65785ab10b",
+      "report_sha256": "36985883a4912622d53a7ece9fc7e3332485e81a71cd49d85451d75864ba1f05",
+      "p_yes": 0.023839221565820686
+    },
+    {
+      "review_index": 468,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0468.json",
+      "record_sha256": "c70bee6b1fcf057f15663e56b203491f6840236b6e2a3bf3af73cfd4fc03fbee",
+      "report_sha256": "1b6cd997b901b18e25c5fffd6d4f075f889fc3a1a992ea0ca3a99b5a3e072202",
+      "p_yes": 0.15
+    }
+  ],
+  "prior_ledger_prefix_bytes_preserved": 3609879,
+  "prior_ledger_prefix_sha256": "0be4c5773d26b0fc30d860fc98d64b51b9b88ead6f7d49635ac27cc44b3b9a46",
+  "append_count": 8,
+  "revision_ledger_unchanged": true,
+  "frozen_rules_hash_verified": true,
+  "counts": {
+    "completed_valuations": 391,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 375,
+    "pending": 2218,
+    "base_records": 782,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    469
+  ],
+  "new_policy_or_financial_action": false,
+  "source_limits": "Hash/identity/numerical consistency establishes savedprovenance, notforecastcalibration/profitableentry. Case-specific inaccessible originals/smallunfittedmodels remain explicit.",
+  "partial_quote_packet": "data/deep_review_20261017/work/cases462_463_464_466_468_quotes_1254.json",
+  "partial_quote_note": "Captureexit1 onlycase464missingbooks; rootusedclosed/resolvedexactGammaforfactualexclusion, notmissingbookasproof. Other4casequotesindividuallyhash-bound."
+}

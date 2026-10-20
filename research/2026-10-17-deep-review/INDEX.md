@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T11:50:13.914799+00:00
+Updated: 2026-10-20T13:17:59.347106+00:00
 
-**386 valuations saved; first milestone100:** 386 valued; 16 blocked after in-depth review. 372 factual exclusions separately; 2226 pending.
+**391 valuations saved; first milestone100:** 391 valued; 16 blocked after in-depth review. 375 factual exclusions separately; 2218 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -471,7 +471,15 @@ Each report below is written before moving to the next evaluation. Related contr
 |457|[Ilhan Omar federally charged by October 31?](evaluations/0457.md)|valued|Central-valueYESlead; no robust selected-stress entry/NOnegativecentrally. Legal-path and fill-model uncertainty unresolved, no financialaction;600+comparisonpause.|
 |458|[Will Hyperliquid HIP-3 open interest hit $9B in 2026?](evaluations/0458.md)|blocked_after_review|Case-specific data-access/evidence block; notvalued/notrejected/noentry. Continue unrelated cases.|
 |459|[Spread: Temple (-19.5)](evaluations/0459.md)|excluded_factual|Exclude exact closed/resolved/nonaccepting condition; not a full valuation.|
+|460|[Will OpenRouter process between 575T and 625T tokens from Sep 28 to Oct 25?](evaluations/0460.md)|valued|Central-valueYES tail lead; no supported selected-stress entry. NOask unavailable. USDminimum/depth and tail/fill/source uncertainty matter; no financialaction/600comparativepause.|
+|461|[Will the highest temperature in Karachi be 36°C on October 17?](evaluations/0461.md)|excluded_factual|Factual exclusion: exactvenue marketclosed/UMAresolved; separate fromvaluations.|
+|462|[Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Amazonas?](evaluations/0462.md)|valued|NOsmallcentralvalue, neither outcome supports selected-stress entry;forecast/source/conditionalfill uncertainty plus600comparativepause.|
+|463|[Will the Bank of Canada decrease the target for the overnight rate by 25 bps at the October interest rate announcement?](evaluations/0463.md)|valued|Central-valueYES tail candidate; no selected-stress entry/NOask absent. Tail/fill calibration unresolved;600comparativepause, no trade.|
+|464|[Will there be 2 earthquakes of 6.5 or above magnitude worldwide?](evaluations/0464.md)|excluded_factual|Factual exclusion: exactvenueclosed/resolved, not uncertainty-based rejection or a fullvaluation.|
+|465|[Bears vs. Falcons](evaluations/0465.md)|excluded_factual|Factual exclusion: exactvenueclosed/resolved, not a fullvaluation.|
+|466|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 65% or higher?](evaluations/0466.md)|valued|Neither currentaskhascentralpositiveEV;selectedcasefailsordinaryimprovingmakers. No entry/600comparativepause, noprior/orderchange.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+|468|[US x Cuba military clash in 2026?](evaluations/0468.md)|valued|CentralYESlead only; selectedstress andunmeasuredsource/conditionalfill risk notstrong enoughforentry. No trade/600comparativepause.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
@@ -787,4 +795,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 460
+Active indices: 469

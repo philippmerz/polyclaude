@@ -1,0 +1,95 @@
+{
+  "schema": "primary_grok65_family_model.v1",
+  "review_index": 466,
+  "created_utc": "2026-10-20T13:07:27.611686+00:00",
+  "market_id": "3072322",
+  "condition_id": "0x1897087fd1b1e3e37941c812d7d48caf21b3a74775dd15146a3688ffa6bae226",
+  "threshold": 65,
+  "p_yes": 0.023839221565820686,
+  "low": 0.001,
+  "high": 0.25,
+  "actual_entry_reserve_pp": 15,
+  "parent_model": "research/2026-10-17-deep-review/models/grok388_primary_2118.json",
+  "parent_sha256": "dfa8952fe961db0a2b89dbcc7c6b2bbf787d663d63cdedab133fca07999a330e",
+  "source_unit": "data/deep_review_20261017/work/0466_grok_current_facts_1254.json",
+  "baseline": "Rootindependentall8rowcomparison byID (collectororderdifferent),raw/gziphashes verified. Maxnumeric39.72;4.7HLEnull/Diamond22.8.66vsprior65totalrows leavesGrokinputsunchanged. Evalmode/history/scorepublicationdatesunknown,nullnotzero.",
+  "mapping": {
+    "pairs": [
+      [
+        11.77,
+        30.2
+      ],
+      [
+        14.43,
+        33.12
+      ],
+      [
+        18.41,
+        39.28
+      ],
+      [
+        19.57,
+        39.72
+      ]
+    ],
+    "slope": 1.2933909471579106,
+    "intercept": 14.827542252851314,
+    "latent47_mean": 44.316855848051674,
+    "ordinary_sd_pp": 3.5,
+    "limit": "Four correlated own-lab releases/extrapolation; residual not predictiveSD; Diamond does not settle. Latent estimate is not an observed score."
+  },
+  "regimes_reused": {
+    "weights": {
+      "ordinary": 0.55,
+      "accelerated": 0.3,
+      "stalled": 0.15
+    },
+    "count_probs": [
+      0.15,
+      0.45,
+      0.4
+    ],
+    "shared_gains": [
+      2.919999999999998,
+      6.160000000000004,
+      0.4399999999999977
+    ],
+    "ordinary_publication": 0.9,
+    "accelerated_latent_sd": 4.5,
+    "accelerated_gain": "max(0,Normal(10,6))",
+    "stalled_publication": 0.3
+  },
+  "unseen_history": {
+    "p65": 0.0025,
+    "reasoning": "Subjectivehalf ofprior60threshold0.005unseenhistorymass allocated>=65,remainder60–65. Notinferred fromabsentarchivedrows/notcalibrated;0–5%sensitivity. Jointnestingcoherent."
+  },
+  "calculation": {
+    "ordinary": 0.0010159757241570287,
+    "accelerated": 0.06944638866207416,
+    "stalled": 5.148160167152168e-10,
+    "future_given_no_past": 0.021392703324131013,
+    "p_yes": 0.023839221565820686
+  },
+  "formula": "Ordinary=.9*sum_count weight*mean_gain SF((65-mu-count*sharedgain)/3.5). Accelerated=.9*[P(N(10,6)<=0)*SF((65-mu)/4.5)+integral0..80 SF((65-mu-g)/4.5)*N(10,6)pdf(g)dg]. Stalled=.3*SF((65-mu)/3.5). P=.0025+.9975*(.55ordinary+.30accelerated+.15stalled).",
+  "sensitivities": {
+    "mapping_minus3": 0.011707473117885848,
+    "mapping_plus3": 0.04784886466171132,
+    "acceleration15pct": 0.013600321029984838,
+    "acceleration50pct": 0.03749108894693516,
+    "publication60pct": 0.016726147736223572,
+    "publication100pct": 0.026210246175686392,
+    "history65_0pct": 0.021392703324131013,
+    "history65_5pct": 0.07032306815792447,
+    "joint_slow": 0.0031964104763690716,
+    "joint_fast": 0.09779292099252752
+  },
+  "checks": {
+    "2048_vs4096_absdiff": 1.8388068845354155e-16,
+    "parent60_reproduced": 0.07672617498210324,
+    "threshold65_below_parent60": true
+  },
+  "judgment": "Same-lab/source/deadline distribution, exact65tail separatelycomputed. Fourcorrelatedownlabpairs/extrapolation andchosenSDs areassumptions;latent44.3169 notresolving HLEscore. Largerbase/longerRL possiblecatchup notfixed65publication. No mechanicaldailyaging fromunchangedinputs.",
+  "limits": "Unknownhistoricalpeak/evalmode/configuration/scaffolding/futurecadence/unfittedtailweights.0.1–25%rangeincludes strongerlatebreakthrough;selectedreserve coversmodel/source/adjudication/fill,notcalibratedfloor.",
+  "entry_authority": false,
+  "literal_mode_note": "The exact rule has no tool-use exclusion. Any official qualifying HLEAccuracy entry counts; separateDiamond/calibration/issuer-onlybenchmarkclaim does not substitute. Unknownconfiguration affects forecast uncertainty, not an invented eligibility restriction."
+}

@@ -1,0 +1,90 @@
+{
+  "read_utc": "2026-10-20T13:23:53.855660+00:00",
+  "after": "2026-10-20T12:36:52Z",
+  "source": "notes/news_alerts.jsonl tail180",
+  "alerts": [
+    {
+      "alert_id": "99e3c10e822a4447f30ba9c5a3dafc376a812877",
+      "ts": "2026-10-20T12:51:16Z",
+      "title": "Real Madrid Forward Kylian Mbappé Reflects on His Career: Definitely a Ten Out of Ten - Telecom Asia Sport",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "agent_reason": "Generic career reflection with no new event, hard numbers, or direct relevance to the listed positions.",
+      "row_sha256_without_newline": "acb0730fedb90d4f48ba232a9f585b19de90ef633944655a30e6587f9ab5c9a8"
+    },
+    {
+      "alert_id": "8f083beb589641eeffbce1bd549c7ac217a252fc",
+      "ts": "2026-10-20T12:56:40Z",
+      "title": "Michigan heckler the son of Republican adviser paid for ‘influencer marketing’ against El-Sayed",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "Paid anti–El-Sayed activity and resulting viral attention modestly pressure the Democratic-win thesis, but do not materially change race odds."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "agent_reason": "Named political operation and $250,000 payment indicate organized opposition activity affecting the Michigan Senate race.",
+      "row_sha256_without_newline": "0c693f7ee90ede582a6dd487815e01ffd5ad103178f9e11e275304a3c0fa1503"
+    },
+    {
+      "alert_id": "3e0673b5b27adfe583b261467b381c87f27de2ed",
+      "ts": "2026-10-20T13:07:47Z",
+      "title": "Letter to the editor: Vote Sam Forstag for Congress - Montana Standard",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "agent_reason": "Opinion letter endorsing a Montana congressional candidate; no direct causal channel to any held or pending position.",
+      "row_sha256_without_newline": "82901deb688a061a98164638fa26ab4a507c8db995da8f58d974ad37c2af9582"
+    },
+    {
+      "alert_id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+      "ts": "2026-10-20T13:07:55Z",
+      "title": "700 doctors endorse Abdul El-Sayed as GOP attacks his credentials - The Detroit News",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "High-profile endorsement strengthens El-Sayed and pressures the thesis that Democrats will lose Michigan."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "agent_reason": "Named candidate event with 700 doctors endorsing Abdul El-Sayed, materially relevant to the Michigan Senate race.",
+      "row_sha256_without_newline": "efea0eb911f4b90764137725b553e5cccc9778e56dd4f3554093fe5fb18ecf68"
+    },
+    {
+      "alert_id": "33868e582e60180f803826c93081bc040240ea8a",
+      "ts": "2026-10-20T13:08:04Z",
+      "title": "Trump dice que serían “interesantes” unas elecciones entre Delcy Rodríguez y María Corina Machado en Venezuela - Yahoo",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "agent_reason": "Venezuela election speculation has no direct causal channel to any held position or pending BUY order.",
+      "row_sha256_without_newline": "3a7ac269bf7629d1d2ef0be69f5fbcbce982b515bcecf884d011a02d561286b9"
+    },
+    {
+      "alert_id": "f9cb383175204e6fca88c16a588a75709489487b",
+      "ts": "2026-10-20T13:13:16Z",
+      "title": "Trump faces rare red state challenges over cost of living",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "agent_reason": "Generic rally and endorsement coverage; no direct causal impact on any held position or pending BUY order.",
+      "row_sha256_without_newline": "d77e03f00c61340dcbcd915e78496eeb65c3470266564602c4db2bddcdeb35b9"
+    },
+    {
+      "alert_id": "9b350cef700837ece42e98a7e748105bfcfa5e9d",
+      "ts": "2026-10-20T13:13:26Z",
+      "title": "Letter to the editor: Vote for Aaron Flint - The Missoulian",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "agent_reason": "Opinion letter endorsing Aaron Flint; no direct causal connection to any held position or pending BUY.",
+      "row_sha256_without_newline": "907bf7b6cbff7f01d08ed69176d2e6e8ecc405b8e3da6f9617f83f9dce5cc1be"
+    }
+  ],
+  "limit": "One bounded after-research safety read; provisional labels/emptyimpacts not proof ofirrelevance. No exhaustiveexternalcoverage."
+}

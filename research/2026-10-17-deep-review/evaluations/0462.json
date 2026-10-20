@@ -1,0 +1,162 @@
+{
+  "review_index": 462,
+  "market_id": "5329587",
+  "condition_id": "0xb64922cdb39b89d19b494ded7324f547e48b04f866bdbb71586acdc2982a4beb",
+  "criteria_sha256": "b33787aa005bdcd7dc8483b4211839bce9b3af83d901c83a85e06e998fe23562",
+  "status": "valued",
+  "literal_analysis": "Highestvalid presidentialrunoff votesinAmazonas onOct25; alphabeticallistfullname tie-break;credibleconsensuselseTSE;June30,2027ETunknown=>Other. Not governor/nationalresult; delayedcashriskpastJan2027.",
+  "evidence": [
+    {
+      "url": "https://cdn.tse.jus.br/estatistica/sead/odsele/relatorio_resultado_totalizacao/Relatorio_Resultado_Totalizacao_2026_AM.zip",
+      "observed_utc": "2026-10-20T11:36:46.479076Z",
+      "finding": "Rootverifiedexactmember/hash andactualfirst-roundcandidate votes, not runoff likelihood."
+    },
+    {
+      "url": "https://g1.globo.com/am/amazonas/eleicoes/2026/noticia/2026/10/13/quaest-am-presidente-segundo-turno-13-outubro.ghtml",
+      "observed_utc": "2026-10-20T11:37:08.676850Z",
+      "finding": "Rootreadactual47L/43F/1098body;fieldOct9–12, modeunknown."
+    },
+    {
+      "url": "https://static.poder360.com.br/uploads/2026/10/Relatorio-PoderData-Eleitoral-Amazonas-2Turno-11out26.pdf",
+      "observed_utc": "2026-10-20T12:50:19.346845Z",
+      "finding": "Roothash-verifiedactualPDFmethods/pages21–22:49L49F2blank1DK;IVR1200Oct8–11, rounded101; not governor table."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.34,
+    "low": 0.05,
+    "high": 0.8,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primary two-poll validmargin bridge with sharedpoll/turnout/transfererror; rounded33.80%normal calculation, not calibratedposterior.",
+    "reasoning": "Reported polls are intentions including noncandidate responses, not certified valid-vote totals. Normalize only named-candidate arithmetic to compare; future turnout/blank/undecided transfer modeled separately. First-round TSE F45.00/L48.23 supports competitive Llean but is not an independent runoff poll/likelihood. No verified newer state-specific fieldwork; do not claim exhaustive absence. No alleged national result, governor poll or endorsements converted to votes. Independent polling sample noise conditional on shared4pp systematic error; same-state election/turnout errors not diversified by using two polls. MOE-to-margin and vote-normalization formulas approximate; design not fully known.",
+    "model": "research/2026-10-17-deep-review/models/0462_primary_model_1258.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases462_463_464_466_468_quotes_1254.json",
+    "quote_file_sha256": "9177b669d53d120b56a7c776665017c1660624117fe1a46c4279e6f89fbfe845",
+    "quote_capture_utc": "2026-10-20T12:53:01.858786+00:00",
+    "gamma_received_utc": "2026-10-20T12:53:01.022746+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 10.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.34,
+        "selected_stress_probability": 0.19000000000000003,
+        "best_bid": 0.36,
+        "best_ask": 0.38,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792500777969",
+        "book_received_utc": "2026-10-20T12:53:01.857438+00:00",
+        "book_age_seconds_at_receipt": 3.8884379863739014,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.9,
+            "fee": 0.04712,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.38
+              }
+            ],
+            "net": 1.94712
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.7999999999999998,
+            "fee": 0.04608,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.36
+              }
+            ],
+            "net": 1.75392
+          }
+        },
+        "taker_cost_usd": 1.94712,
+        "central_expected_profit_usd": -0.24711999999999978,
+        "selected_stress_profit_usd": -0.9971199999999998,
+        "break_even_before_carry": 0.389424,
+        "break_even_constant_carry": 0.3897605712225186,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6599999999999999,
+        "selected_stress_probability": 0.5099999999999999,
+        "best_bid": 0.62,
+        "best_ask": 0.64,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792500777969",
+        "book_received_utc": "2026-10-20T12:53:01.857438+00:00",
+        "book_age_seconds_at_receipt": 3.8884379863739014,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.2,
+            "fee": 0.04608,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.64
+              }
+            ],
+            "net": 3.24608
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.1,
+            "fee": 0.04712,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.62
+              }
+            ],
+            "net": 3.05288
+          }
+        },
+        "taker_cost_usd": 3.24608,
+        "central_expected_profit_usd": 0.053919999999999746,
+        "selected_stress_profit_usd": -0.6960800000000007,
+        "break_even_before_carry": 0.649216,
+        "break_even_constant_carry": 0.6497771041507423,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "NOsmallcentralvalue, neither outcome supports selected-stress entry;forecast/source/conditionalfill uncertainty plus600comparativepause.",
+  "reopen_condition": "Newexactstate-runofffieldwork/turnout/candidatefact orrepricedbooks, then600comparativeselection plusfullexecutiongates.",
+  "evaluated_utc": "2026-10-20T12:59:17.762700+00:00",
+  "question": "Will Flavio Bolsonaro win the most votes in the second round of the Brazil presidential election from Amazonas?",
+  "valuation_author": "primary_operator",
+  "original_index": 462,
+  "report_sha256": "c1fd556058a36ff41f419cb76eae88b0be6a61599bab58a06525091a9f76c3bd"
+}

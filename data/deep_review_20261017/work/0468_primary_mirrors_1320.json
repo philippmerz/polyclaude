@@ -1,0 +1,25 @@
+{
+  "review_index": 468,
+  "reviewed_utc": "2026-10-20T13:12:08.529912+00:00",
+  "sources": [
+    {
+      "name": "uscg_release_mirror",
+      "url": "https://www.globalsecurity.org/military/library/news/2026/10/mil-261002-uscg02.htm",
+      "status": 402,
+      "receipt": "logs/deep_review_20261020/case468_primary_mirrors_1320/uscg_release_mirror.receipt.json",
+      "received_utc": "2026-10-20T13:12:08.365980Z",
+      "raw_sha256": "b3e3082a6053f6d1bcf8eab9e2b8498206141305109e39448067fcba5519f8cf"
+    },
+    {
+      "name": "reuters_mirror_es",
+      "url": "https://es.marketscreener.com/noticias/cuba-acusa-a-eeuu-de-permitir-a-terroristas-actuar-con-impunidad-tras-incursi-n-con-lanchas-motoras-ce785cdbd18af526",
+      "status": 403,
+      "receipt": "logs/deep_review_20261020/case468_primary_mirrors_1320/reuters_mirror_es.receipt.json",
+      "received_utc": "2026-10-20T13:12:08.518683Z",
+      "raw_sha256": "f716e101a2050740dcdb8d0b1505fb2fd74bcb8155482b8e5e2975d79a89c37d"
+    }
+  ],
+  "scope": "MirrorsquoteprimaryUSCGdocument/Reutersreport; originalfailedsourcebodies retained separately. Do not countmirrorsasindependentoccurrences.",
+  "interpretation": "Fuel-cargo interdiction ispressure/proximity, not evidence of directCubanmilitaryopponent. LaterFebruaryinvestigation/accusations are not newOctgunfire. Strongpoliticalpressure doesnotmakemilitaryengagementinevitable.",
+  "gaps": "Noexhaustiveincidentcensus/noissuanceofmilitaryoperationorderrecovered; primaryoriginal403/timeout, not evidence ofnoevent."
+}

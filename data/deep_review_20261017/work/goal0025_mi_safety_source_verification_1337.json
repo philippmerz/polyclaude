@@ -1,0 +1,36 @@
+{
+  "verified_utc": "2026-10-20T13:30:35.591660+00:00",
+  "collector_unit": "data/deep_review_20261017/work/held_mi_alert_facts_1328.json",
+  "collector_unit_sha256": "ae529a8f82160d6ae0c823063d5b184b1d57d1c62229cc6f534f6c5dce480bc5",
+  "verified_receipt_pairs": [
+    {
+      "receipt": "logs/deep_review_20261020/held_mi_1330/detroit_news_alert_link.receipt.json",
+      "raw_sha256": "f80b7221c89e7e828d4634aa9f27dd330bb8907d40a7c27f1a9b83436fa6bb9c",
+      "received_utc": "2026-10-20T13:26:07.363213Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/held_mi_1330_additional/campaign_endorsements.receipt.json",
+      "raw_sha256": "9b9cbfe900407e1491537bd1855c2ceecd86bc6e2f7b771409396b36c650283b",
+      "received_utc": "2026-10-20T13:26:45.600375Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/held_mi_1330_additional/guardian_20oct.receipt.json",
+      "raw_sha256": "bda9777762956c8f553c80363c1345913e0d3df29700d494a7882cd6af940b97",
+      "received_utc": "2026-10-20T13:26:45.434617Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/held_mi_1330_fec/america_next_filing.receipt.json",
+      "raw_sha256": "8d086109738f25f3973da869d77729503cd5b70fc9ce2cca4cad343b34adca6d",
+      "received_utc": "2026-10-20T13:27:41.515091Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/held_mi_1330/cbs_red_states.receipt.json",
+      "raw_sha256": "012f606675f20856913f97882ac74ae747e355c391da06ac05f4fc97511f55be",
+      "received_utc": "2026-10-20T13:26:07.650655Z"
+    }
+  ],
+  "FEC_actual_text_independently_read": true,
+  "Guardian_actual_text_independently_read": true,
+  "CBS_summary_scope_not_complete_video_transcript": true,
+  "DetroitNews_body_gap_retained": true
+}

@@ -1,0 +1,30 @@
+{
+  "schema": "primary_cuba_source_followup.v1",
+  "review_index": 468,
+  "reviewed_utc": "2026-10-20T13:11:43.735387+00:00",
+  "sources": [
+    {
+      "name": "uscg_grace",
+      "url": "https://www.news.uscg.mil/Press-Releases/Article/4616594/coast-guard-intercepts-motor-vessel-grace-continues-operations-to-interdict-ill/",
+      "receipt": "logs/deep_review_20261020/case468_current_primary_1319/uscg_grace.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-20T13:11:43.618928Z",
+      "raw_sha256": "b5a35900c33328e57471a376a3ba726e6c0e7ea6ea80f3380a6f60ca72cd314a",
+      "body_text_available": false
+    },
+    {
+      "name": "reuters_oct19",
+      "url": "https://www.investing.com/news/world-news/cuba-accuses-us-of-letting-terrorists-to-operate-with-impunity-after-speedboat-raid-4958597",
+      "receipt": "logs/deep_review_20261020/case468_current_primary_1319/reuters_oct19.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-20T13:11:43.701988Z",
+      "raw_sha256": "d26eae87829adde551bf4b852f9da6b8c3c2db9b65b8b68870632a2db5f53e00",
+      "body_text_available": false
+    }
+  ],
+  "older_report_verified": {
+    "receipt": "logs/deep_review_20261017/case468_us_cuba_facts_1145/alternative_report/aljazeera_feb_boat.receipt.json",
+    "raw_sha256": "1031c71a9b4802c054188545a6c6a9f73e683105deea0e7d4514ffe57db73de5"
+  },
+  "limits": "OriginalReuters/APreporting distinguishes retrospectiveFebevent fromnewforce; directfailedbodies remain failures. USCGfuelinterdiction supportsmaritimepressure not Cubanmilitaryengagement. Boundedsourcecoverage, notexhaustiveabsence;forecast pending."
+}

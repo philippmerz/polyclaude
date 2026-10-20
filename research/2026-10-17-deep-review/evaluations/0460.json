@@ -1,0 +1,168 @@
+{
+  "review_index": 460,
+  "market_id": "5326400",
+  "status": "valued",
+  "condition_id": "0xf5d4506cb6fa3864a89de069c6ce11d5f00daa9e8b0bb7c2644cd5ca71fc7041",
+  "criteria_sha256": "6b87fc3b6a3d74f2c71f7e2dd2bde83536b0a69e68f447a45b6aa080c8909251",
+  "literal_analysis": "Displayed four named UTCweekly TopModels totals,575inclusive/625exclusive; higherbracket boundary. Freeze whenOct26firstdisplayed elseOct30 23:59ET fallback. Rounding applies; current partial/pace notsettlement. Exact11:32Gamma rules/tokens unchanged/open, price notterminal.",
+  "evidence": [
+    {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "observed_utc": "2026-10-20T12:21:59.342878Z",
+      "finding": "Receipt/rawhash independently verified; threecompleteweeks unchanged, currentOct19partial37.332159T; cachedAt11:38notusagecutoff. NoOct26point."
+    },
+    {
+      "url": "https://openrouter.ai/rankings#top-models",
+      "observed_utc": "2026-10-18T11:06:24.407Z",
+      "finding": "Prior actual anonymousDOM/tooltip/JSbinding distinguishes displayedTotal from individuallyroundedseries and separatehatchedpace. Currentformatterderivedtotal notfreshscreenshot."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5326400",
+      "observed_utc": "2026-10-20T11:32:27.451444+00:00",
+      "finding": "Exactfrozenfullcriteria/identity/tokens/open/accepting/noUMAproposal; tinyYESprices notterminal."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.05,
+    "low": 0.005,
+    "high": 0.6,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primary one-remaining-week loggrowthregime mixture, independently recomputed and retained using unchanged completed inputs. Rounded judgment, no price-implied/calibrated posterior.",
+    "reasoning": "Retain5%central,0.5–60%scenario range.5%allows substantial downside tail without pretending the observed twelve-week variation calibrates a30%weekly collapse.60%countercase places most remaining-week mass inside73–123T. Broad lower supports continuednormalgrowth; these are scenarios, not confidence bounds.15pp selected reserve is supported by unresolved tail-model/conditional-fill/adjudication error, not a proof YES worthless. Nearly all YES probability is subjective disruption/source-ambiguity mass. Ordinary continuation rarely lands in73–123T; downshift/source change can. Zeroing branches is a sensitivity, not a fitted alternative; source outages do not necessarily produce a numeric low total. A permanently stalled chart may invoke fallback/current total below575 and lose YES. Uniform40–130 is a modeling choice, not an outage payout rule.",
+    "model": "research/2026-10-17-deep-review/models/0460_primary_completion_1255.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases456_457_460_quotes_1136.json",
+    "quote_file_sha256": "ef5c9f98cb462339e4f5aee548fc18d96d3fb6a828748ab39d9831fccd00fd8f",
+    "quote_capture_utc": "2026-10-20T11:32:27.705212+00:00",
+    "gamma_received_utc": "2026-10-20T11:32:27.451444+00:00",
+    "hypothetical_gross_shares": 125.0,
+    "horizon_days": 11.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.05,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792495946017",
+        "book_received_utc": "2026-10-20T11:32:27.570091+00:00",
+        "book_age_seconds_at_receipt": 1.553091049194336,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 125.0,
+            "gross": 1.05928,
+            "fee": 0.04189,
+            "fills": [
+              {
+                "shares": 38.22,
+                "price": 0.001
+              },
+              {
+                "shares": 20.3,
+                "price": 0.011
+              },
+              {
+                "shares": 66.48,
+                "price": 0.012
+              }
+            ],
+            "net": 1.10117
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 1.10117,
+        "central_expected_profit_usd": 5.14883,
+        "selected_stress_profit_usd": -1.10117,
+        "break_even_before_carry": 0.00880936,
+        "break_even_constant_carry": 0.00881773548706825,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.95,
+        "selected_stress_probability": 0.7999999999999999,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792495946017",
+        "book_received_utc": "2026-10-20T11:32:27.570091+00:00",
+        "book_age_seconds_at_receipt": 1.553091049194336,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 125.0,
+            "gross": 123.94072,
+            "fee": 0.04189,
+            "fills": [
+              {
+                "shares": 38.22,
+                "price": 0.999
+              },
+              {
+                "shares": 20.3,
+                "price": 0.989
+              },
+              {
+                "shares": 66.48,
+                "price": 0.988
+              }
+            ],
+            "net": 123.89883
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Central-valueYES tail lead; no supported selected-stress entry. NOask unavailable. USDminimum/depth and tail/fill/source uncertainty matter; no financialaction/600comparativepause.",
+  "reopen_condition": "Independent tail/source/fill evidence and updated exact settlement/source/book state after600comparative selection; no automatic entry from centralEV.",
+  "evaluated_utc": "2026-10-20T12:52:05.148269+00:00",
+  "question": "Will OpenRouter process between 575T and 625T tokens from Sep 28 to Oct 25?",
+  "valuation_author": "primary_operator",
+  "original_index": 460,
+  "report_sha256": "7ee3568a61d0c12fde38e86bb83260d3ffbb6aa745d6dad346ae50bf90f4e6a7"
+}

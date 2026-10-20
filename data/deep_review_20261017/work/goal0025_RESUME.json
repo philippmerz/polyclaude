@@ -1,0 +1,115 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T13:37:35.277374+00:00",
+  "scope": "Originalfinite3000fullreview remainsincomplete; no newBUYuntil600valued+primarycomparativeselection.",
+  "previous_goal_turn_classification": "progress: priorboundedcheckupdatedfinancial/safety recordsandpublished168b1275.",
+  "current_turn_progress": "Fiveprimaryvaluations460/462/463/466/468 immediatelysaved/verified;461/464/465objectiveclosedvenueexclusions separate. No financialaction/priorchange.",
+  "counts": {
+    "completed_valuations": 391,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 375,
+    "pending": 2218,
+    "base_records": 782,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    469
+  ],
+  "next_index": 469,
+  "verification": "data/deep_review_20261017/work/goal0025_research_verified_1328.json",
+  "completed_this_turn": [
+    {
+      "review_index": 460,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0460.json",
+      "record_sha256": "54b2b77099d079128f9e20cdc2912d6bb4ebb5200fbf277d760424d64bb824c4",
+      "report_sha256": "7ee3568a61d0c12fde38e86bb83260d3ffbb6aa745d6dad346ae50bf90f4e6a7",
+      "p_yes": 0.05
+    },
+    {
+      "review_index": 461,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0461.json",
+      "record_sha256": "01fa134d97e000193fa56180d856e7cf8c280d2c2b501c24131f0cad83b14bae",
+      "report_sha256": "7d226b8f198f724859879e3d5c7776376acd2a3015cc84a659fc4c54ce85e15d",
+      "p_yes": null
+    },
+    {
+      "review_index": 462,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0462.json",
+      "record_sha256": "ac00fd48f2bb4b6cff6b312800c72c2ac5d02813ea43bde061d65bc2a6f22c0c",
+      "report_sha256": "c1fd556058a36ff41f419cb76eae88b0be6a61599bab58a06525091a9f76c3bd",
+      "p_yes": 0.34
+    },
+    {
+      "review_index": 463,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0463.json",
+      "record_sha256": "94917cad54b6166cf84305c8bb2e50fa18fe9503dc1ece6770081d928c22b839",
+      "report_sha256": "d0fda7f41a734f778272ad3015bc8b52cc9cd4609a28e832503e865f1e52a27b",
+      "p_yes": 0.09
+    },
+    {
+      "review_index": 464,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0464.json",
+      "record_sha256": "c0866fe9d45fc25f0dcbfa838880cc0ef468f7e389caf0739a82fb9fe14d2ad8",
+      "report_sha256": "fd2eaf1b597223b9672d70a88dfade48590ce9886c0c7c497591b216558e8c0c",
+      "p_yes": null
+    },
+    {
+      "review_index": 465,
+      "status": "excluded_factual",
+      "record": "research/2026-10-17-deep-review/evaluations/0465.json",
+      "record_sha256": "fee64a34ee17dd38f1f792e14be283a9151850b9b9552be9a8132b0e09b1c248",
+      "report_sha256": "d4547b9674e5f36f7e97fdf896b8e8300bd66b2274f156b24ade4ed827b4d322",
+      "p_yes": null
+    },
+    {
+      "review_index": 466,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0466.json",
+      "record_sha256": "31367424631a4c95442bb49e5875a2475f4807a481a5bff555af4e65785ab10b",
+      "report_sha256": "36985883a4912622d53a7ece9fc7e3332485e81a71cd49d85451d75864ba1f05",
+      "p_yes": 0.023839221565820686
+    },
+    {
+      "review_index": 468,
+      "status": "valued",
+      "record": "research/2026-10-17-deep-review/evaluations/0468.json",
+      "record_sha256": "c70bee6b1fcf057f15663e56b203491f6840236b6e2a3bf3af73cfd4fc03fbee",
+      "report_sha256": "1b6cd997b901b18e25c5fffd6d4f075f889fc3a1a992ea0ca3a99b5a3e072202",
+      "p_yes": 0.15
+    }
+  ],
+  "active_work": "data/deep_review_20261017/work/0469_fomc_facts_1318.json",
+  "next_sources": {
+    "470": "data/deep_review_20261017/work/0470_allstate_q3_ratio_facts_1325.json",
+    "471": "data/deep_review_20261017/work/0471_gamma_terminal_facts_1317.json"
+  },
+  "last_safety": "research/2026-10-20-121327-checkin.json",
+  "last_financial": "research/2026-10-20-1219-financial-snapshot.json",
+  "next_safety": "Existing14UTC/earliermaterialevent; MIprogram16UTCtoday/debateOct21 23UTC. No repeatfinancial/sourceclockfromresearchpublication.",
+  "entry_restriction": {
+    "policy": "notes/entry_review_gate.json",
+    "minimum_completed_valuations": 600,
+    "selection": null
+  },
+  "limitations": [
+    "460/463/468central-tailmodelsnotcalibrated;selectedcasefails, notdiscardedbycheapfilter. Reassessknownleadsafter600comparative selection.",
+    "466same-sourceGrok65modelreusesjointdistribution, notsiblingprobability;tool-useisnotexcludedbyliteralrule.",
+    "PrimaryoriginalUSCG/AP/Reuters/MININTretrievalgapsretained;indexedmirrorsnotrawbodyverification.",
+    "Old463collectorcriteriahash/464baseline-windowtyposcorrectedinaddenda, originals preserved."
+  ],
+  "run_contract": "End current scheduled run after publication; do not advance469 here. Prior finite review remains incomplete and resumable under a separately authorized continuation; no goal lifecycle mutation, new timer or idle self-follow-up.",
+  "next_telegram": "400valued ormaterialfinding/globalblock; unchanged391countaloneisnotamaterialTelegram.",
+  "active_note": "Frozen469fullrulealreadyread, officialfacts collected but primaryprobability/economics notdone. No evaluationcount untilsavedrecord.",
+  "late_safety": {
+    "decision": "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json",
+    "auth_asof": "2026-10-20T13:25:54.988325+00:00",
+    "source_hash_verification": "data/deep_review_20261017/work/goal0025_mi_safety_source_verification_1337.json",
+    "result": "MI5NO/original3bids retained; no trade/fill/prior change/CSV refresh/Telegram. Article gap and unmeasured salience retained.",
+    "quote_verification": "data/deep_review_20261017/work/goal0025_mi_quote_verified_1340.json"
+  }
+}

@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
-**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current386valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Existing three bids and holdings remain managed; selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current391valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Existing three bids and holdings remain managed; selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
 
-**386 valued /16 blocked /372 factual /2,226 pending;774 base+75 revisions.** Cases456 (Messi Ballon d’Or top3) and457 (Omar charged byOct31) are saved; neither supports a new entry under the selected uncertainty stress. Case458's exact Artemis HIP3 series requires authentication, so its valuation remains blocked; case459 is venue-resolved. Case460 OpenRouter575–625T is active: draft model/source/book analysis remains unfinished and does not count. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase handoff](data/deep_review_20261017/work/goal0024_RESUME.json).
+**391 valued /16 blocked /375 factual /2,218 pending;782 base+75 revisions.** OpenRouter575–625T, Amazonas presidential runoff, BoC25bp cut, GrokHLE65 and US–Cuba clash have saved primary valuations; central-value leads retain model/source/fill uncertainty and the entry pause. Three exact venue-closed markets are separate factual exclusions. Case469 DecemberFed exact3dissents is active; its facts are saved, probability/economics unfinished. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase](data/deep_review_20261017/work/goal0025_RESUME.json) · [Eight-record verification](data/deep_review_20261017/work/goal0025_research_verified_1328.json).
 
 **Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids remain unchanged. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
 
@@ -86,7 +86,7 @@ establish an allocation. No position or new watcher was added.
 
 **Indicative trading net depth $183.24 versus $170 contributed (+7.79%); canonical bankroll $194.80 includes $5.82 separate gas.** Trading midpoint $188.98; same-producer PM $35.04 midpoint/$29.30 fee-net depth. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV237 preserves236 earlier rows/flows. [Financial record](research/2026-10-20-1219-financial-snapshot.json).
 
-At12:19:52 all nine indexed identities/quantities and127 authenticated trades were unchanged; original three BUYs LIVE/zero matched/$6.50. Ostium0. Twelve-hour and event-triggered checks manage holdings/orders; new BUYs remain paused at386/600 plus comparative selection. [Current orders](notes/resting_orders.md) · [Reconciliation](data/deep_review_20261017/work/tick121327_account_facts.json).
+Authenticated13:25:54 reconciliation: all nine indexed identity/quantity/totalBought/redeemability tuples and127 trades unchanged; original three BUYs LIVE/zero matched/$6.50. The bankroll mark above remains12:19–12:20; no new money observation. New BUYs remain paused391/600 plus comparative selection. [Orders](notes/resting_orders.md) · [Account proof](data/deep_review_20261017/work/goal0025_safety_account_verified_1333.json).
 
 HLE12:21:59 body unchanged/66rows/KimiK3HLE41.08. OpenRouter completedOct12 total unchanged; currentOct19 partial37.332159T is not settlement and target weeks remain absent. Senate direct200 now works but its displayed list endsSep30; Google2026 route404 remains a coverage gap. [Current sources](data/deep_review_20261017/work/tick121327_primary_source_review.json).
 
@@ -95,6 +95,8 @@ Both requested Michigan alerts were reviewed: the official Oct18 ad is corrobora
 Discovery remains incomplete: primary80/640eligible and thin3000/3153, both page-capped. All71offline batches/1234emitted rows independently source-joined; these are structural checks, not valuations. Consistency20/197groups attempted,10received books, no provisional positive in that scope; sports3attempts/no verified consensus. No exchange-wide absence finding. [Small index](data/deep_review_20261017/work/tick121327_discovery_index.json).
 
 Four current daemon singletons; UMA0alerts, hurdle4clear/0flagged, state audit CLEAN, no winning redeemable. Storage12:20:~256MiB free after the completed lossless archive; current/latest outputs remain usable. [Operations](data/deep_review_20261017/work/tick121327_operations_review.json) · [Archive/restore proof](data/deep_review_20261017/work/storage_safety_120928/verified.json).
+
+Late Michigan endorsement/heckler stories were checked against the held5NO and original sources. Retain/no add; exact Detroit News body/list remains unavailable, newly verified FEC spending predates the poll baseline, and voter impact is uncertain. Fresh fee-net MI exit1.40882 remains below selected terminal1.70; broad-low1.00 favors sale. [Primary decision](data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

@@ -1,0 +1,54 @@
+{
+  "schema": "price_blind_facts.v1",
+  "review_index": 468,
+  "market_id": "1439093",
+  "condition_id": "0x333455a7be2dad4c981b49d700b80a0497c0274f72be3ab633a9ec020e80e884",
+  "criteria_sha256": "a7dce0cab44c12faf623bae16e633af4a4e22a33e97040ed07372c48ad481ee8",
+  "question": "US x Cuba military clash in 2026?",
+  "as_of_utc": "2026-10-20T12:58Z",
+  "frozen_rule_source": {
+    "path": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
+    "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+    "identity_verified_by": ".venv/bin/python -B scripts/deep_review_resume.py --index 468",
+    "window": "From market creation through 2026-12-31 23:59 ET.",
+    "qualifier": "Use of force/direct military engagement between U.S. and Cuban military forces. U.S. Coast Guard and Cuban Border Guard explicitly count. Warning shots, artillery into uninhabited areas, and missiles landing in territorial waters or passing through airspace excluded; intentional ship ramming requires significant damage or sinking. Resolution source: consensus of credible reporting."
+  },
+  "gamma_creation": {
+    "createdAt": "2026-02-25T21:56:46.016258Z",
+    "url": "https://gamma-api.polymarket.com/markets/1439093",
+    "status": 200,
+    "raw_sha256": "389eb3002087cd859dc3fbc1b50e2d144c82f0dc0f71bdd870fccdee7c393661",
+    "receipt": "logs/deep_review_20261017/case468_us_cuba_facts_1145/gamma_case468.receipt.json",
+    "body": "logs/deep_review_20261017/case468_us_cuba_facts_1145/gamma_case468.body.json.gz"
+  },
+  "incident_facts": [
+    {
+      "date": "2026-02-25 morning, Cuba local time; before Gamma creation",
+      "reported": "Cuba's Interior Ministry (MININT) contemporaneous account, as reported by Al Jazeera the same day, described an exchange of gunfire when Cuban Border Guard personnel approached a Florida-registered speedboat. The Cuban commander was wounded; four occupants were reported killed and six injured. The reported opposing occupants were civilians, not identified as U.S. military. The U.S. Coast Guard was contacted/deployed afterward for investigation; the reports reviewed do not say it fired or exchanged force with Cuban personnel.",
+      "window_relation": "The reported morning incident predates the market's recorded creation at 21:56:46Z on February 25, regardless of the parties' disputed account. It is outside the stated creation-to-December-31 window.",
+      "sources": [
+        {
+          "kind": "independent report quoting Cuban officials and U.S. Secretary of State remarks",
+          "url": "https://www.aljazeera.com/news/2026/2/25/cuban-border-agents-fire-upon-florida-tagged-speedboat-killing-four",
+          "status": 200,
+          "raw_sha256": "1031c71a9b4802c054188545a6c6a9f73e683105deea0e7d4514ffe57db73de5",
+          "receipt": "logs/deep_review_20261017/case468_us_cuba_facts_1145/alternative_report/aljazeera_feb_boat.receipt.json",
+          "body": "logs/deep_review_20261017/case468_us_cuba_facts_1145/alternative_report/aljazeera_feb_boat.body.json.gz"
+        },
+        {
+          "kind": "official MININT account, primary source, access failed",
+          "url": "https://www.granma.cu/cuba/2026-02-25/minint-informa-sobre-enfrentamiento-con-lancha-rapida-en-cayo-falcones-villa-clara-25-02-2026-13-02-09",
+          "result": "ConnectTimeout; no source-body bytes received",
+          "receipt": "logs/deep_review_20261017/case468_verified_1331/minint_feb25.receipt.json"
+        }
+      ]
+    }
+  ],
+  "coverage_and_gaps": {
+    "reviewed_through": "2026-10-20",
+    "available_later_reporting": "Saved Oct 19 AP search-result excerpt discusses later Cuban prosecution/investigation of participants from the February event; the direct AP GET was 403 and its captured body is the blocked response, not article content. The excerpt alleges no new October use of force.",
+    "receipt": "logs/deep_review_20261017/case468_us_cuba_facts_1145/ap_sources/ap_cuba_oct.receipt.json",
+    "coverage_limit": "This is a bounded source review, not an exhaustive incident census. Failure to find a public qualifying encounter is not evidence no encounter occurred; no judgment about an undisclosed or sealed event is made.",
+    "primary_source_limit": "MININT's source page was inaccessible by direct read in this follow-up (ConnectTimeout); contemporaneous reporting attributes the account to MININT. AP direct access returned 403."
+  }
+}

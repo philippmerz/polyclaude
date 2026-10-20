@@ -1,0 +1,29 @@
+{
+  "review_index": 461,
+  "market_id": "5721018",
+  "condition_id": "0x9a1a6d7033dbe9840d3c6d7f5cdbfa89472431ecc2af6128cc827ca25cc695e3",
+  "criteria_sha256": "936aa579d19e044bd4984d2251d80cf106fb47ff1f16db3772c4917f39a70d88",
+  "status": "excluded_factual",
+  "literal_analysis": "Read fullNOAAwholeC/airport/day, next-dayWU/lowestfallback, revisionfreeze andtechnicalerror7dayexception. Exactvenueclosed/resolved, no currententry route.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5721018",
+      "observed_utc": "2026-10-20T11:40:28.618453+00:00",
+      "finding": "Rootraw/gzip hash and exactliteralidentity/orderingtokens verified;closedtrue,acceptingfalse,UMAresolved."
+    }
+  ],
+  "forecast": {
+    "not_valued": "Venue-resolved/no entry; no prospective probability or investment rejection."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "not_applicable": "Both sides closed; no current order route, not price-based rejection."
+  },
+  "verdict": "Factual exclusion: exactvenue marketclosed/UMAresolved; separate fromvaluations.",
+  "reopen_condition": "Verified exactcontractreopened/accepting; re-read currentcriteria/source/book before any forecast/action.",
+  "evaluated_utc": "2026-10-20T12:53:26.866825+00:00",
+  "question": "Will the highest temperature in Karachi be 36°C on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 461,
+  "report_sha256": "7d226b8f198f724859879e3d5c7776376acd2a3015cc84a659fc4c54ce85e15d"
+}

@@ -1,0 +1,29 @@
+{
+  "review_index": 464,
+  "market_id": "5473550",
+  "condition_id": "0xbf1ae57187d2df8ae7c20fda70da86e2996b3e5c4e56f57c381e3d3cb5c50d37",
+  "criteria_sha256": "e7709816f6b19c1a9fa500473b3ff3639bf1e9092072a40e5041f945e40b6d32",
+  "status": "excluded_factual",
+  "literal_analysis": "Read fullworldwideM6.5+exacteventwindow, optional24hfinaldayrevision/48hlate-substantialevent/no-datafallback. Venueclosed/resolved; optionaltail notunconditionalstillopen requirement.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5473550",
+      "observed_utc": "2026-10-20T12:53:01.380497+00:00",
+      "finding": "Rootraw/gzip/fullidentity/tokencheck:closedtrue/acceptingfalse/UMAresolved; exactvenueproof, missingbooksnotterminalproof."
+    }
+  ],
+  "forecast": {
+    "not_valued": "Exactvenuealreadyclosed/resolved; no prospectiveseismicforecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "not_applicable": "No orderrouteeitheroutcome; returnedmissingbooks notedseparately fromGammaidentityproof."
+  },
+  "verdict": "Factual exclusion: exactvenueclosed/resolved, not uncertainty-based rejection or a fullvaluation.",
+  "reopen_condition": "Exactvenuereopens; thenliteralcriteria/currentUSGS/currentbooks/fees/gates fresh.",
+  "evaluated_utc": "2026-10-20T13:04:01.717125+00:00",
+  "question": "Will there be 2 earthquakes of 6.5 or above magnitude worldwide?",
+  "valuation_author": "primary_operator",
+  "original_index": 464,
+  "report_sha256": "fd2eaf1b597223b9672d70a88dfade48590ce9886c0c7c497591b216558e8c0c"
+}

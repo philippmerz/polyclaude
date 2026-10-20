@@ -1,0 +1,29 @@
+{
+  "review_index": 465,
+  "market_id": "4329883",
+  "condition_id": "0x14909dcf760f6946eaa6ad83984d6b2a43e378fb41a198f2b8f825d1314eb233",
+  "criteria_sha256": "10881aed8f85ed7ec18ea8ed87c3009654edc70e6d81e35fa6c52ab4ce680d68",
+  "status": "excluded_factual",
+  "literal_analysis": "NamedBears/Falconswinner,OTincluded/tie50-50/postponeduntilplayed/cancelno-makeup50-50. Exactclosed/UMAresolvedvenue, no prospectiveforecast or inventedscore.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4329883",
+      "observed_utc": "2026-10-20T11:40:28.714563+00:00",
+      "finding": "Rootraw/gzip/fullidentity andexactorderednamedtokencheck;closedtrue/acceptingfalse/UMAresolved. No score/winnerclaim."
+    }
+  ],
+  "forecast": {
+    "not_valued": "Exactclosedvenue; no namedoutcomeprobability needed."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "not_applicable": "Both exactnamedoutcomesclosed to neworders."
+  },
+  "verdict": "Factual exclusion: exactvenueclosed/resolved, not a fullvaluation.",
+  "reopen_condition": "Verifiedexactvenuereopened; freshfullrule/namedoutcome/game/source/bookreview.",
+  "evaluated_utc": "2026-10-20T13:04:36.857980+00:00",
+  "question": "Bears vs. Falcons",
+  "valuation_author": "primary_operator",
+  "original_index": 465,
+  "report_sha256": "d4547b9674e5f36f7e97fdf896b8e8300bd66b2274f156b24ade4ed827b4d322"
+}

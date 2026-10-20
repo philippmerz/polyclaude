@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T12:52:31.970898+00:00",
+  "review_index": 460,
+  "market_id": "5326400",
+  "condition_id": "0xf5d4506cb6fa3864a89de069c6ce11d5f00daa9e8b0bb7c2644cd5ca71fc7041",
+  "report_sha256": "7ee3568a61d0c12fde38e86bb83260d3ffbb6aa745d6dad346ae50bf90f4e6a7",
+  "status": "valued",
+  "completed_valuations": 387,
+  "checkpoint_ledger_sha256": "03364ac76dd5f4c16e0b3fa7cf9e31458503f54071b6b583f4b78de2c2242c65",
+  "no_financial_action": true
+}
