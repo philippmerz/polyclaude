@@ -1,0 +1,424 @@
+{
+  "schema": "tick073415_account_facts.v1",
+  "check_id": "20261020T073415Z",
+  "collection_window_utc": [
+    "2026-10-20T08:07:09.933108Z",
+    "2026-10-20T08:08:11.506115Z"
+  ],
+  "timing_basis": "call_window, not wire timing",
+  "private_capture_dir": "logs/tick073415_account (0700); raw CLI stdout/stderr, authenticated payloads and parsed owner fields private; no owner IDs or credentials in facts.",
+  "cli_capture_semantics": "CLI receipts use supplied_bytes serialized stdout/stderr/returncode envelopes. receipt response_status=200 is a local capture sentinel, not HTTP; CLI output is not raw HTTP or SDK evidence. Command tuples: name, start, receive, returncode, stdout hash, stderr hash.",
+  "commands": [
+    [
+      "bankroll",
+      "2026-10-20T08:07:09.933108Z",
+      "2026-10-20T08:07:26.346457Z",
+      0,
+      "394ed1105d58deea173ac82fd9732f84e83b80f96c55df322c64792340de924e",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "positions",
+      "2026-10-20T08:07:26.357909Z",
+      "2026-10-20T08:07:27.980668Z",
+      0,
+      "34d31a9df8af54f6482607ae07873ba7eeedb48d2cf001609aee55414325337a",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "wallet_status",
+      "2026-10-20T08:07:27.990883Z",
+      "2026-10-20T08:07:32.463259Z",
+      0,
+      "26bb707cc2ffc3abf10a9b010bc4fb0186d33d97fd2c434f87a8222d5315aed7",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "crypto_status",
+      "2026-10-20T08:07:32.474027Z",
+      "2026-10-20T08:07:39.158388Z",
+      0,
+      "3a80665985dd67153c3ce6f4496221266710e0380eef16abe914124a532811ad",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "ostium_status",
+      "2026-10-20T08:07:39.169756Z",
+      "2026-10-20T08:07:41.646004Z",
+      0,
+      "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ],
+    [
+      "exit_analysis",
+      "2026-10-20T08:07:41.657330Z",
+      "2026-10-20T08:07:43.541781Z",
+      0,
+      "33765f4d30a5a31a0b0266ca2b5965dffc24f00c27c06b2ed03577d7a65547ae",
+      "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    ]
+  ],
+  "bankroll_authoritative": {
+    "one_TOTAL": true,
+    "PM_MTM_usd": 35.27,
+    "PM_net_realizable_usd_as_warning": 29.9,
+    "midpoint_gap_usd": 5.37,
+    "gas_excluded_usd": 5.79,
+    "gas_component_lines": [
+      "polygon pm POL $4.39",
+      "polygon crypto POL $0.18",
+      "arbitrum crypto ETH $1.00",
+      "base crypto ETH $0.22"
+    ],
+    "no_hand_assembled_total": true,
+    "TOTAL_BANKROLL_usd": 195.01,
+    "reference_usd": 170,
+    "vs_reference_usd": 25.01,
+    "realized_settled_usd": 19.72,
+    "unrealized_marked_usd": -0.5,
+    "unrealized_realizable_usd": -5.87,
+    "producer_stdout": "logs/tick073415_account/bankroll.stdout.txt"
+  },
+  "positions_cli": {
+    "open_cost": 35.77,
+    "MTM": 35.27,
+    "maxpay": 83.33,
+    "unrealized_PnL": -0.5,
+    "realizable_net_fees": 29.22,
+    "midpoint_gap": 6.05,
+    "thin_book_lines": [
+      "thin book: will-over-58-senators-vote-for-the-clarity-a mark 0.885 vs avg-fill 0.738 (14.7pp to exit the full position)",
+      "thin book: will-openrouter-process-between-725t-and-775 mark 0.700 vs avg-fill 0.641 (5.9pp to exit the full position)"
+    ]
+  },
+  "wallet_status_no_address": [
+    "MATIC: 47.708595",
+    "USDC.e: 0.000000",
+    "USDC: 0.108932",
+    "pUSD: 19.251290",
+    "aave USDC.e: 3.503841",
+    "aave USDC: 122.137818",
+    "pUSD committed to resting BUYs: 6.500000",
+    "pUSD DEPLOYABLE (net of bids):  12.751290"
+  ],
+  "crypto_status_no_address": [
+    "[Arbitrum] block 516538728",
+    "ETH      0.000420",
+    "USDC     0.0043",
+    "aUSDC    7.8985",
+    "[Base] block 52847155",
+    "ETH      0.000093",
+    "USDC     1.0478",
+    "[Polygon] block 95852193",
+    "MATIC    1.991432",
+    "USDC     0.0002",
+    "[Optimism] empty (block 158442440)"
+  ],
+  "ostium_status_no_address": [
+    "open trades: 0",
+    "active limits: 0",
+    "USDC allowance to TradingStorage: 0.000000"
+  ],
+  "exit_analysis_numeric_rows_order": [
+    "slug_prefix",
+    "side",
+    "shares",
+    "fair",
+    "bid_approx",
+    "hold_value",
+    "sell_value"
+  ],
+  "exit_analysis_numeric_rows": [
+    [
+      "will-the-highest-score-achieved-by-a-moonsho",
+      "Yes",
+      10.0,
+      0.34,
+      0.1,
+      3.4,
+      0.96
+    ],
+    [
+      "will-lionel-messi-rank-in-googles-top-5-most",
+      "Yes",
+      5.0,
+      0.6,
+      0.25,
+      3.0,
+      1.2
+    ],
+    [
+      "will-the-democrats-win-the-michigan-senate-r",
+      "No",
+      5.0,
+      0.44,
+      0.29,
+      2.2,
+      1.41
+    ],
+    [
+      "will-openrouter-process-between-725t-and-775",
+      "No",
+      5.0,
+      0.88,
+      0.65,
+      4.4,
+      3.2
+    ]
+  ],
+  "exit_analysis_clarity_group_screen": "Clarity Act Senate over-50/over-58 monotonicity pair: cost=$28.33 mark=$27.40 drawdown=-3.3% fair=$29.00 floor=$29.00 | full exit=$23.29 (fee $0.24) | HOLD_COMPLETE_GROUP (-5.71 vs fair)",
+  "exit_analysis_stdout_sha256": "33765f4d30a5a31a0b0266ca2b5965dffc24f00c27c06b2ed03577d7a65547ae",
+  "decision_limit": "CLI screen captured; no action or probability update.",
+  "orders": {
+    "count": 3,
+    "fully_paginated": true,
+    "separate_details": 3,
+    "all_http200": true,
+    "exact_terms_vs_0755_and_0622": true,
+    "remaining_BUY_commitment_usd": 6.5,
+    "rows": [
+      {
+        "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+        "status": "LIVE",
+        "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+        "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.12",
+        "expiration": "0"
+      },
+      {
+        "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+        "status": "LIVE",
+        "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+        "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+        "side": "BUY",
+        "original_size": "50",
+        "size_matched": "0",
+        "price": "0.03",
+        "expiration": "0"
+      },
+      {
+        "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+        "status": "LIVE",
+        "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+        "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+        "side": "BUY",
+        "original_size": "10",
+        "size_matched": "0",
+        "price": "0.38",
+        "expiration": "0"
+      }
+    ],
+    "details_exact_identity_status_terms_matched_zero_associate_trades": true,
+    "detail_receipts": [
+      "order_detail_0",
+      "order_detail_1",
+      "order_detail_2"
+    ]
+  },
+  "trades": {
+    "count": 127,
+    "unique_ids": 127,
+    "fully_paginated": true,
+    "canonical_ordered_rows_sha256": "28a489c2c72999cbfd0a948a5737743794ac232ce5701cc1ffdf18b10b6db363",
+    "exact_ordered_rows_vs_0755_and_0622": true,
+    "rows_referencing_any_current_order_id": 0
+  },
+  "positions": {
+    "HTTP_status": 200,
+    "row_count": 9,
+    "one_public_limit100_response": true,
+    "identity_size_totalBought_redeemable_exact_vs_0755_and_0622": true,
+    "all_rows": [
+      {
+        "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+        "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+        "outcome": "Yes",
+        "size": 29,
+        "totalBought": 29,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+        "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+        "outcome": "No",
+        "size": 29,
+        "totalBought": 29,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+        "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+        "outcome": "Yes",
+        "size": 10,
+        "totalBought": 10,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+        "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+        "outcome": "No",
+        "size": 6,
+        "totalBought": 6,
+        "redeemable": true
+      },
+      {
+        "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+        "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+        "outcome": "Yes",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+        "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+        "outcome": "No",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+        "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
+        "outcome": "No",
+        "size": 5,
+        "totalBought": 5,
+        "redeemable": false
+      },
+      {
+        "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+        "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+        "outcome": "No",
+        "size": 4.0347,
+        "totalBought": 161.0947,
+        "redeemable": true
+      },
+      {
+        "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+        "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+        "outcome": "No",
+        "size": 0.33,
+        "totalBought": 28.33,
+        "redeemable": false
+      }
+    ],
+    "focus_current_marks": [
+      {
+        "label": "Clarity >50 Yes",
+        "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+        "outcome": "Yes",
+        "size": 29,
+        "totalBought": 29,
+        "curPrice": 0.06,
+        "currentValue": 1.74
+      },
+      {
+        "label": "Clarity >58 No",
+        "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+        "outcome": "No",
+        "size": 29,
+        "totalBought": 29,
+        "curPrice": 0.885,
+        "currentValue": 25.665
+      },
+      {
+        "label": "Kimi Yes",
+        "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+        "outcome": "Yes",
+        "size": 10,
+        "totalBought": 10,
+        "curPrice": 0.125,
+        "currentValue": 1.25
+      },
+      {
+        "label": "OpenRouter No",
+        "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+        "outcome": "No",
+        "size": 5,
+        "totalBought": 5,
+        "curPrice": 0.7,
+        "currentValue": 3.5
+      }
+    ]
+  },
+  "errors_flags": {
+    "all_six_cli_rc0": true,
+    "all_cli_stderr_empty": true,
+    "authenticated_errors": [],
+    "bankroll_warnings": [
+      "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $5.37 (mid $35.27 vs $29.90) — indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return."
+    ],
+    "positions_thin_book_warnings": [
+      "thin book: will-over-58-senators-vote-for-the-clarity-a mark 0.885 vs avg-fill 0.738 (14.7pp to exit the full position)",
+      "thin book: will-openrouter-process-between-725t-and-775 mark 0.700 vs avg-fill 0.641 (5.9pp to exit the full position)"
+    ],
+    "crypto_note": "Optimism empty at captured block; no error text.",
+    "Ostium_open_trades": 0,
+    "Ostium_active_limits": 0,
+    "new_fill_or_identity_mismatch": false
+  },
+  "authenticated_public_receipts_order": [
+    "name",
+    "HTTP status",
+    "raw bytes",
+    "raw SHA-256",
+    "start",
+    "receive"
+  ],
+  "authenticated_public_receipts": [
+    [
+      "order_detail_0",
+      200,
+      534,
+      "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "2026-10-20T08:08:10.809815Z",
+      "2026-10-20T08:08:10.952196Z"
+    ],
+    [
+      "order_detail_1",
+      200,
+      534,
+      "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "2026-10-20T08:08:10.963208Z",
+      "2026-10-20T08:08:11.062417Z"
+    ],
+    [
+      "order_detail_2",
+      200,
+      535,
+      "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "2026-10-20T08:08:11.073288Z",
+      "2026-10-20T08:08:11.196239Z"
+    ],
+    [
+      "orders_p000",
+      200,
+      1658,
+      "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+      "2026-10-20T08:08:10.476904Z",
+      "2026-10-20T08:08:10.583478Z"
+    ],
+    [
+      "positions_snapshot",
+      200,
+      9576,
+      "d9c79e4d2f5bdb6d72f79fa7b4581f3c501cfb4392d177b6a72c8b961682fec9",
+      "2026-10-20T08:08:11.212916Z",
+      "2026-10-20T08:08:11.506115Z"
+    ],
+    [
+      "trades_p000",
+      200,
+      175757,
+      "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "2026-10-20T08:08:10.595980Z",
+      "2026-10-20T08:08:10.788713Z"
+    ]
+  ],
+  "authenticated_receipt_dir": "logs/tick073415_account/authenticated/",
+  "cli_receipt_dir": "logs/tick073415_account/cli_receipts/",
+  "all_payloads_receipted_before_parsing": true
+}

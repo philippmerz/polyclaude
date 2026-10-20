@@ -1,0 +1,284 @@
+{
+  "actual_context_batch_window_utc": [
+    "logs/checkin_20261020T073415/discovery/context_batches/primary/render.receipt.json",
+    "logs/checkin_20261020T073415/discovery/context_batches/thin_tail/render.receipt.json"
+  ],
+  "actual_scanner_window_utc": [
+    "2026-10-20T08:08:01.493682Z",
+    "2026-10-20T08:09:43.701966Z"
+  ],
+  "batch_index": "data/deep_review_20261017/work/tick073415_discovery_batch_index.json",
+  "context_batch_execution_note": "A first identical offline render of each scan-kind wrote stdout to /tmp but had no receipt; immediately reran each deterministic offline render with Capture before recording/parsing. The receipt-backed outputs are used here. No network/model call occurred in either render.",
+  "context_batches": [
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/market_context_batches.py",
+        "--scan-kind",
+        "primary",
+        "--format",
+        "markdown",
+        "--batch-size",
+        "20"
+      ],
+      "batch_count": 1,
+      "body": "logs/checkin_20261020T073415/discovery/context_batches/primary/render.body.json.gz",
+      "emitted_rows": 17,
+      "identity_criteria_errors": [],
+      "receipt": "logs/checkin_20261020T073415/discovery/context_batches/primary/render.receipt.json",
+      "returncode": 0,
+      "scan_kind": "primary",
+      "snapshot_rows_not_emitted": 63,
+      "stderr_bytes": 0,
+      "stdout_bytes": 11965,
+      "stdout_sha256": "643434ffae05f9ad764cd1514cd42b3e3cc934623534c6b3cc4037d9d236082f"
+    },
+    {
+      "argv": [
+        "/usr/bin/python3",
+        "scripts/market_context_batches.py",
+        "--scan-kind",
+        "thin_tail",
+        "--format",
+        "markdown",
+        "--batch-size",
+        "20"
+      ],
+      "batch_count": 68,
+      "body": "logs/checkin_20261020T073415/discovery/context_batches/thin_tail/render.body.json.gz",
+      "emitted_rows": 1209,
+      "identity_criteria_errors": [],
+      "receipt": "logs/checkin_20261020T073415/discovery/context_batches/thin_tail/render.receipt.json",
+      "returncode": 0,
+      "scan_kind": "thin_tail",
+      "snapshot_rows_not_emitted": 1791,
+      "stderr_bytes": 0,
+      "stdout_bytes": 479243,
+      "stdout_sha256": "890df0cf56517a7e2c5ceed17b3736e1e821a418f467718d09bb56311bd4fe39"
+    }
+  ],
+  "exposure_join": "data/deep_review_20261017/work/tick073415_discovery_exposure_join.json",
+  "limitations": [
+    "Both primary and thin-tail universe passes stopped at page caps; neither is a complete market universe.",
+    "Thin tail also selected only top 3000, omitting 321 eligible rows.",
+    "Context batches emitted 17 primary rows and 1209 thin-tail rows; 63 and 1791 snapshot rows respectively were not emitted.",
+    "Every emitted row joined exactly to its snapshot market ID, condition ID, criteria digest, and recomputed literal criteria hash; all 18 proof completeness checks passed.",
+    "Context membership is not proposition equivalence. No valuations, trade judgments, or execution actions were made.",
+    "Current public position/exact-token and live-order exposure joins are recorded separately in exposure_join; no name-based matching was used.",
+    "Across all 3,080 raw snapshot rows, exact identity/literal criteria were structurally checked. Five thin-tail rows fail order_terms, execution_metadata_complete, and context_complete; they are outside emitted 6b rows. Ancillary sports/macro/favorite-fade text rows lack condition/token identities, so no exact exposure join was possible for those scanners."
+  ],
+  "scanner_findings": {
+    "event_monotonicity": {
+      "cap": 15,
+      "complete": false,
+      "pages_attempted": 15,
+      "pages_succeeded": 15,
+      "reported_violations": "none in capped slice"
+    },
+    "favorite_fade": {
+      "book_walks": 40,
+      "candidate_rows_emitted": 27,
+      "coverage": "incomplete max_pages; profile only, no probability/edge/APY",
+      "fetched": 1000,
+      "rough_survivors": 51,
+      "walk_cap_omissions": 11
+    },
+    "macro": {
+      "consensus": "disabled",
+      "markets_passing_volume_threshold": 9
+    },
+    "polymarket_consistency": {
+      "coverage": "incomplete market_cap",
+      "depth_validated_candidates": 0,
+      "events": 637,
+      "groups_got_quotes": 4,
+      "live_quote_groups_requested": 20,
+      "midpoint_groups_above_1": 194,
+      "midpoint_groups_below_1": 90,
+      "pages": 32,
+      "retained_validated_neg_risk": 3082,
+      "scanned_open_markets": 5012,
+      "unquoted_groups": 174
+    },
+    "primary": {
+      "complete": false,
+      "eligible_before_top": 585,
+      "fetched": 996,
+      "filter_rejections": {
+        "horizon": 52,
+        "liquidity": 338,
+        "missing_deadline": 1,
+        "past_deadline": 17,
+        "spread": 3
+      },
+      "page_cap": 10,
+      "pages": 10,
+      "selected": 80,
+      "stop": "page_cap",
+      "top_omitted": 505
+    },
+    "sports": {
+      "consensus_results": "one quote match, bookmaker 0.527 vs candidate YES 0.505 (delta -2.2pp); two NO_CONSENSUS",
+      "consensus_top_n": 3,
+      "fetched_passing_thresholds": 55
+    },
+    "thin_tail": {
+      "complete": false,
+      "eligible_before_top": 3321,
+      "fetched": 39307,
+      "filter_rejections": {
+        "horizon": 328,
+        "liquidity": 15413,
+        "missing_deadline": 35,
+        "not_tradable": 6021,
+        "past_deadline": 253,
+        "spread": 729,
+        "volume": 10177,
+        "win_assumed_hurdle": 3030
+      },
+      "page_cap": 20,
+      "pages": 20,
+      "selected": 3000,
+      "stop": "page_cap",
+      "top_omitted": 321
+    }
+  },
+  "scanner_runs": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/discover_markets.py"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/primary.body.json.gz",
+      "captured_sha256": "8a105233833544969a861193ee23fd50fbe196116cd12c7774d6b556c8beb9c0",
+      "name": "primary",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/primary.receipt.json",
+      "received_utc": "2026-10-20T08:08:02.640540Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:08:01.493682Z",
+      "stderr_bytes": 0,
+      "stdout_bytes": 4950,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/discover_markets.py",
+        "--min-liquidity",
+        "500",
+        "--min-vol24",
+        "20",
+        "--max-pages",
+        "20",
+        "--via-events",
+        "--clears-hurdle-only",
+        "--top",
+        "3000"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/thin_tail.body.json.gz",
+      "captured_sha256": "cec8c41c72d34c68e94587f459bcf4a9aee1842142ae933bcf3430c498c6c9ea",
+      "name": "thin_tail",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/thin_tail.receipt.json",
+      "received_utc": "2026-10-20T08:08:08.033640Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:08:02.653546Z",
+      "stderr_bytes": 0,
+      "stdout_bytes": 9458,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/sports_pm_scan.py",
+        "--hours",
+        "36",
+        "--with-consensus",
+        "--consensus-top-n",
+        "3"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/sports.body.json.gz",
+      "captured_sha256": "8020ab6f65ed270847ab010dffc256c26a2087baccc828de689ec520ca33a6c6",
+      "name": "sports",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/sports.receipt.json",
+      "received_utc": "2026-10-20T08:09:00.979420Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:08:08.045489Z",
+      "stderr_bytes": 535,
+      "stdout_bytes": 2336,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/macro_pm_scan.py",
+        "--no-consensus",
+        "--days",
+        "60"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/macro.body.json.gz",
+      "captured_sha256": "6d83a2c0ca0daa700ae6a1a62fcf6d7e52c5bf927dfe9de25e20ace7a3504c38",
+      "name": "macro",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/macro.receipt.json",
+      "received_utc": "2026-10-20T08:09:01.465378Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:09:00.989436Z",
+      "stderr_bytes": 106,
+      "stdout_bytes": 875,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/event_monotonicity_scan.py"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/event_monotonicity.body.json.gz",
+      "captured_sha256": "89bd01bdc314c83e60d34723568517c91991a13bf29a2699c3efbf39ecf89cf8",
+      "name": "event_monotonicity",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/event_monotonicity.receipt.json",
+      "received_utc": "2026-10-20T08:09:04.581714Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:09:01.473942Z",
+      "stderr_bytes": 178,
+      "stdout_bytes": 249,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/polymarket_consistency_scan.py"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/polymarket_consistency.body.json.gz",
+      "captured_sha256": "dd7b9458bcf898e146f71707f7136112a7766927e0e5361bfd97e122a9dfc6d5",
+      "name": "polymarket_consistency",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/polymarket_consistency.receipt.json",
+      "received_utc": "2026-10-20T08:09:42.821430Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:09:04.592135Z",
+      "stderr_bytes": 0,
+      "stdout_bytes": 1192,
+      "timed_out": false
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/favorite_fade_scan.py"
+      ],
+      "body": "logs/checkin_20261020T073415/discovery/captures/favorite_fade.body.json.gz",
+      "captured_sha256": "27cabca212e582dcd76055d819c72841e07a97b20ff9455b1b3eb80f0e5942f1",
+      "name": "favorite_fade",
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/favorite_fade.receipt.json",
+      "received_utc": "2026-10-20T08:09:43.701966Z",
+      "returncode": 0,
+      "started_utc": "2026-10-20T08:09:42.832769Z",
+      "stderr_bytes": 568,
+      "stdout_bytes": 3074,
+      "timed_out": false
+    }
+  ],
+  "schema": "tick073415_discovery_facts.v1",
+  "snapshot_paths": [
+    "data/snapshots/shortlist_20261020T080802589595Z_primary.json",
+    "data/snapshots/shortlist_20261020T080807675988Z_thin_tail.json"
+  ],
+  "tick_label": "20261020T073415Z"
+}

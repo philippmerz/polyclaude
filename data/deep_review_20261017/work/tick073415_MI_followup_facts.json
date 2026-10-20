@@ -1,0 +1,45 @@
+{
+  "schema": "mi_alert_followup_facts.v1",
+  "captured_utc": "2026-10-20T08:16Z",
+  "scope": "alert identity, source timing/content, comparison with already captured related Michigan alerts; facts only",
+  "alert": {
+    "id": "4b60e36bc058b89da4d3f762af09d75139fdc4dd",
+    "ts": "2026-10-20T08:00:36Z",
+    "line": 1197,
+    "line_sha256_without_newline": "281b2737bba868bed25cd86a2f2150e87f4e00d9e35fd3dfb0b678ef0fa62097",
+    "title": "'Israel is not our friend': Michigan's El-Sayed doubles down on anti-Israel stance - The Jerusalem Post",
+    "google_news_link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYWUFnQXY3ei1tLTgzOWZqa2E2em4yMmZjcU15SVRXTXVaYzd3OXI2OE01YVl3d0l1WmZzV1hkVVlXMF9EaFFrSTJSY3NPcFdFdGdSU0hKVUU5TDJMV3JjSjJzWGI?oc=5"
+  },
+  "source": {
+    "url": "https://www.jpost.com/american-politics/article-912231",
+    "http_status": 200,
+    "retrieved_utc": "2026-10-20T08:16:17Z",
+    "bytes": 267800,
+    "body_sha256": "e2fc8169136e410715c38f4f223d58a88294b936ec21ab6e35c87be2364eeee2",
+    "receipt": "logs/deep_review_20261017/tick073415_MI_followup/public/jpost.receipt.json",
+    "body": "logs/deep_review_20261017/tick073415_MI_followup/public/jpost.body.json.gz",
+    "page_title": "Michigan democratic candidate El-Sayed: Israel is not US ally | The Jerusalem Post",
+    "page_datePublished": "2026-10-20T06:38:35Z",
+    "page_dateModified": "2026-10-20T08:49:50Z",
+    "note": "dateModified metadata is later than this capture time; publication timestamp precedes alert."
+  },
+  "verified_facts": [
+    "JPost article attributes the statements to a Monday interview with ABC News; on the calendar this is Oct 19, 2026. It reports El-Sayed said Israel was not the US’s friend/ally and described US aid as pushing the US into wars. The article was published Oct 20 at 06:38Z, before the 08:00:36Z alert.",
+    "This is distinct from the already captured Oct 17 MS NOW Reports/Ali Velshi interview about family allegations and the JFK comparison (related facts: data/deep_review_20261017/work/tick043158_wtvc_facts_0546.json; Fox original body SHA beb4e0a88bcd5b9f4762024f6b249dac4f966cffdb5fadec886467fc12294290). The Oct 20 JPost report presents a newer interview/comment, not merely a republication of that Oct 17 interview.",
+    "JPost mentions rabbis/Jewish leaders advocating party principles and University of Michigan students joining the campaign, but supplies no survey sample, field dates, voter measurement, or quantified candidate effect. No new poll is established by this captured body."
+  ],
+  "search": {
+    "count": 1,
+    "query": "site:jpost.com \"Israel is not our friend\" El-Sayed Michigan October 2026",
+    "result": "Identified canonical JPost page https://www.jpost.com/american-politics/article-912231; search snippet used only for discovery, claims above parsed from captured body."
+  },
+  "gaps": [
+    "No ABC News interview page/video body captured; event date and quote are JPost-attributed reporting, not primary interview transcript.",
+    "The report offers no voter-response measurement. Earlier September poll reviewed in tick060240 catalyst sources is not an October poll and was not refreshed here."
+  ],
+  "capture_dir": "logs/deep_review_20261017/tick073415_MI_followup/public",
+  "limits": [
+    "One public body capture; no account/private access, market data, probability, investment or position judgment.",
+    "Receipt hashes bind supplied response bytes, not wire authentication."
+  ]
+}

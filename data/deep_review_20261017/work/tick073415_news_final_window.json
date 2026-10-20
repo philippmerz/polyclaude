@@ -1,0 +1,49 @@
+{
+  "tick": "20261020T073415Z",
+  "schema": "bounded_news_final_window.v1",
+  "start_exclusive": "2026-10-20T07:52:35.961716+00:00",
+  "end_inclusive": "2026-10-20T08:15:38.013349+00:00",
+  "rows": [
+    {
+      "line": 1197,
+      "sha256": "281b2737bba868bed25cd86a2f2150e87f4e00d9e35fd3dfb0b678ef0fa62097",
+      "record": {
+        "alert_id": "4b60e36bc058b89da4d3f762af09d75139fdc4dd",
+        "ts": "2026-10-20T08:00:36Z",
+        "tier": 1,
+        "feed": "Michigan Senate Rogers and El-Sayed news",
+        "matched": "El-Sayed",
+        "title": "'Israel is not our friend': Michigan's El-Sayed doubles down on anti-Israel stance - The Jerusalem Post",
+        "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFBYWUFnQXY3ei1tLTgzOWZqa2E2em4yMmZjcU15SVRXTXVaYzd3OXI2OE01YVl3d0l1WmZzV1hkVVlXMF9EaFFrSTJSY3NPcFdFdGdSU0hKVUU5TDJMV3JjSjJzWGI?oc=5",
+        "agent_reason": "Named Democratic Michigan Senate nominee El-Sayed publicly doubled down on an electorally consequential stance, potentially weakening his candidacy.",
+        "impacts": [
+          {
+            "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+            "level": "MATERIAL",
+            "reason": "Anti-Israel comments may pressure El-Sayed with swing and Jewish voters, supporting the No thesis on Democrats winning Michigan."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    },
+    {
+      "line": 1198,
+      "sha256": "645d3bd76d8628d620618c51015266f2d500227b374905caf4eb07ae627e27c9",
+      "record": {
+        "alert_id": "a6d7f4a320f3c21764218cbaa8dde7c45e1e174c",
+        "ts": "2026-10-20T08:06:08Z",
+        "tier": 1,
+        "feed": "Google Year in Search, Messi and Mbappe athlete news",
+        "matched": "Lionel Messi",
+        "title": "Pedri: Lamine Yamal shouldn't be compared to Lionel Messi - Yahoo Sports",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVDhIbEd3N2VNRnJvNzg1Z2F5RGpQT2NjTWg3RTRiMVRqRjVOeUd5SV9rWTVMTXQ4LU1GZXpGanJENDdPcUtZRU1nc2xfREZoTV9aMnV5RFNVZ0U5YnFra2UyMEVyTVFtNFpIZTRpUThUTmI3dDhxWDI0OWdqRzB3X0JlNXFaSEV4N291V3Fn?oc=5",
+        "agent_reason": "Opinion/rephrasing with no material new information about Messi’s Google search ranking.",
+        "impacts": [],
+        "relevance": "research_only",
+        "review_required": false
+      }
+    }
+  ],
+  "limit": "Useslastactualreviewwatermark, notjournalrecency. No laterabsenceclaim."
+}

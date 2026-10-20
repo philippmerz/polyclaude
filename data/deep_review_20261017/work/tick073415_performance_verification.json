@@ -1,0 +1,19 @@
+{
+  "schema": "performance_append_verification.v1",
+  "prior_rows": 232,
+  "rows": 233,
+  "prior_bytes_sha256": "67a316373e2effba42ce1e206dcc0e256bdddb152225765a446e833da68926e5",
+  "new_bytes_sha256": "bc4d991ca8d3a36e06fa89df8492a3fb851fab62eaf9d8da5e108b3973272d77",
+  "prior_bytes_preserved": true,
+  "contributions_sha256": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+  "producer_receipt": "logs/tick073415_account/cli_receipts/bankroll.receipt.json",
+  "producer_window": [
+    "2026-10-20T08:07:09.933108Z",
+    "2026-10-20T08:07:26.346457Z"
+  ],
+  "derived_midpoint": "189.22",
+  "derived_net_depth": "183.85",
+  "financial_record": "research/2026-10-20-0807-financial-snapshot.md",
+  "plot_timestamp_utc": "2026-10-20T08:07:09Z",
+  "precision_note": "Existing parser accepts second anchors only; check_window label and note preserve exact microsecond receipt window. Only new row rewritten; all232oldrecordbytes intact."
+}

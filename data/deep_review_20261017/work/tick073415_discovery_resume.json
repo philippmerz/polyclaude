@@ -1,0 +1,29 @@
+{
+  "schema": "bounded_discovery_resume.v1",
+  "big_row_index": "data/deep_review_20261017/work/tick073415_discovery_batch_index.json",
+  "big_row_index_sha256": "be6e11268ed3dd0919f293f0555561e5002d897b9319c654d1cec220535dfc4f",
+  "load_policy": "Largearrayforselectedrowlookup, notdefaultorientation. All69batches/1226emittedrows structurally/sourcechecked, notvaluations.",
+  "kinds": {
+    "primary": {
+      "snapshot": "data/snapshots/shortlist_20261020T080802589595Z_primary.json",
+      "snapshot_sha256": "6222ae942591974e2a7c3257c96e830ed1b1b53d954e3fde04e78858e8275066",
+      "metadata_sha256": "6222ae942591974e2a7c3257c96e830ed1b1b53d954e3fde04e78858e8275066",
+      "emitted_rows": 17,
+      "snapshot_count": 80,
+      "snapshot_rows_not_emitted": 63,
+      "source_integrity_verified": true
+    },
+    "thin_tail": {
+      "snapshot": "data/snapshots/shortlist_20261020T080807675988Z_thin_tail.json",
+      "snapshot_sha256": "36c6ea34a16dda173dd134c95187081058c7d1cca5d7052e85bf37c67581bff9",
+      "metadata_sha256": "36c6ea34a16dda173dd134c95187081058c7d1cca5d7052e85bf37c67581bff9",
+      "emitted_rows": 1209,
+      "snapshot_count": 3000,
+      "snapshot_rows_not_emitted": 1791,
+      "source_integrity_verified": true
+    }
+  },
+  "exposure_join": "data/deep_review_20261017/work/tick073415_discovery_exposure_join.json",
+  "coverage": "Primary80/585eligible,thin3000/3321eligible; bothpagecapped. Fiveunemittedthinrows lackorder/executionmetadata. MI5NO/Trump.33NO andME02unfilledBUYexactmatches, notnewexposure.",
+  "candidate_status": "Sportsbest2.2ppgapbeforecostswithidentitymappinglimits;other2no consensus. No validatedstructuralpositive inattemptedslice; allunpriced/omittedrowsremainunpriced."
+}

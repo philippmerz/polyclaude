@@ -1,0 +1,280 @@
+{
+  "schema": "receipt_pair_verification.v1",
+  "verified_utc": "2026-10-20T08:19:27.951418+00:00",
+  "fresh_pairs": [
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/bankroll.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:26.346457Z",
+      "raw_sha256": "39968cdabad20df655ee7ff1bc10a57a168c4ef2d1ea19182ab4779a5a501058",
+      "gzip_sha256": "d9fd329c17327697a7d33ccc448c8b0a659c83005905efaaa1913f37d77de85d"
+    },
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/crypto_status.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:39.158388Z",
+      "raw_sha256": "4ee3c0aeea73f6114b7898905a8a8347b4840079daec93267e55c9c4bfece634",
+      "gzip_sha256": "059f23e7d1453e80afef624db7447f151392600144c5b3f1dbcef3a1c347249f"
+    },
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/exit_analysis.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:43.541781Z",
+      "raw_sha256": "eed469e5d8ba1a88df9404bfa45d55f7f3066d71fa01397dd2e8dfed02bbd2d2",
+      "gzip_sha256": "993b32cd570fa233f6547435fb8baafa1ec2c2912614698cebeb576cc0ed5d97"
+    },
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/ostium_status.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:41.646004Z",
+      "raw_sha256": "fa28e565f7d9d6a3b760e247f02c35cc035d65834342eb1c924842745e3d319f",
+      "gzip_sha256": "f1db416450dfa794ff0ae735169389af489c32d2693f7f0a600552eb8d25eb3a"
+    },
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/positions.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:27.980668Z",
+      "raw_sha256": "05d66b4636d94af4c3d85c7aac34c001d722fab695d82d606a698b3230b0c743",
+      "gzip_sha256": "1b98aa4144204015fcd26a7533ef8e6c35fee9cff3a00d5fc566ed66440a0e03"
+    },
+    {
+      "receipt": "logs/tick073415_account/cli_receipts/wallet_status.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:07:32.463259Z",
+      "raw_sha256": "2507cecb479996bd8a38daf380cce8f461d67fe6d100cda24753264c449fe4ae",
+      "gzip_sha256": "fc2363d5901751a1d4007c372ba19f189d80f7fc560e426800bbb21543e35723"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/order_detail_0.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:10.952196Z",
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "gzip_sha256": "6564e1195eb64e5dc668593e1dcc99fb4b1dfc5a3dcf80458de10f6fc95a734e"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/order_detail_1.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:11.062417Z",
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "gzip_sha256": "9a39c19d31cbb6961283dc419584003f78f594d20828d89f9de150eb0fd58d97"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/order_detail_2.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:11.196239Z",
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "gzip_sha256": "e46ebced402757c6ecf7fb51e195747901b511e8603e0a188c28c5c8ca7d62ed"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/orders_p000.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:10.583478Z",
+      "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+      "gzip_sha256": "fb4c6d1d8ff5dec099cbca9e8422eba38653615c6ccf0f87d11f0d2d3963714c"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/positions_snapshot.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:11.506115Z",
+      "raw_sha256": "d9c79e4d2f5bdb6d72f79fa7b4581f3c501cfb4392d177b6a72c8b961682fec9",
+      "gzip_sha256": "f9db397eb3a2e9a27197bf5ca49cd593072d1b0a57b0ad06f7c9d81b6f46e686"
+    },
+    {
+      "receipt": "logs/tick073415_account/authenticated/trades_p000.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:10.788713Z",
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "gzip_sha256": "74905bda8aadfcaefec53d807d06e0a3fc13d9f40a67cbbaccbff81f6f303b3f"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/apy.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:28.475975Z",
+      "raw_sha256": "0c2b0e3a13f706a51c2c54499ad0a62d79884b3a838c1d22ccd034b7a81a78c9",
+      "gzip_sha256": "4840df6b29a1deb14d7624506bd45cdae71813e78a175c92eb30fb171eb4f72a"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/audit.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:29.962252Z",
+      "raw_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+      "gzip_sha256": "d0756290e4df6b0916af8837542a274058c926e8b12bce259fc21f7ba355c3ca"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/crux.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:27.558567Z",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/decisions.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:30.021969Z",
+      "raw_sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+      "gzip_sha256": "c4072b2b9573d525b377b0863d58c0c9d8a7e68c3bc200ed1c49c419f45fb3a2"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/kelly.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:30.826985Z",
+      "raw_sha256": "758a5dc1385f6bed6a6c7c67540dfc3f634599399985eb8cd099afdb6a437030",
+      "gzip_sha256": "7553337435e55768e9ce63736890a2b7eafe6eceb1fb297c82fd596eb15fedad"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/ostium.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:27.180673Z",
+      "raw_sha256": "45471a48ed0372ad30a25f900fd624c8d3498e68bb51a28792181a9dd1c1f882",
+      "gzip_sha256": "ce96e8812483e054a16f5721c456d7b0e645050ad48fb719a2c457a57f684418"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/redeem_dry_run.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:31.928645Z",
+      "raw_sha256": "76a6cbbbe8de31ec500211eb8f47a1531703c6c82446dca09a77a09a9ca1a713",
+      "gzip_sha256": "743bcbd6f637907e5d15ea19dfd0ba9c00995f4d26b6f3128cbbb9e09a33e789"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/uma.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:24.552534Z",
+      "raw_sha256": "8f46565ed868131e1870dab5f0b981407f0427507990f538a4957f03ccdad457",
+      "gzip_sha256": "69f2b4ef9bf166d08b6c31faa6aba0a89b30e9497e4c0fd8c1eb25d0fd641938"
+    },
+    {
+      "receipt": "logs/tick073415_ops/cli/watchlist.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:07:28.991521Z",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "gzip_sha256": "f61f27bd17de546264aa58f40f3aafaac7021e0ef69c17f6b1b4cd7664a037ec"
+    },
+    {
+      "receipt": "logs/tick073415_sources/clarity50.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:48.800819Z",
+      "raw_sha256": "d5972c3cd3a24dcf74210c5807a71a77f38d2ac3b8501695e08a9fa47f8126b2",
+      "gzip_sha256": "2c2dcfd2f1d827d626d627269585ec0fae07710f41dc8df882879bf342303c0c"
+    },
+    {
+      "receipt": "logs/tick073415_sources/clarity58.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:48.914179Z",
+      "raw_sha256": "55c99e814e2a06b2d697ad3768f98c7c94dec2379ea3f63ed3423debb53cb2cf",
+      "gzip_sha256": "4350cdb224730af3a30e7eb23ecd31314d4c304a600279c8ca5834dee35c6cb0"
+    },
+    {
+      "receipt": "logs/tick073415_sources/hle.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:48.567707Z",
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "gzip_sha256": "c99f7463a00639e054c7aae8ae9944fac988a8dd619096d74a5e6c0f96e20d1a"
+    },
+    {
+      "receipt": "logs/tick073415_sources/openrouter.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:08:48.661874Z",
+      "raw_sha256": "93bca9dbfda1050931225b01fb4086ef2c358c64c47fbb92f18b3b5952a28771",
+      "gzip_sha256": "347df4c5ac2b24ab2ca87f5f550ee32b31ecbb6a9a85e116f7f504f899f9e60e"
+    },
+    {
+      "receipt": "logs/tick073415_sources/status_quick.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:08:51.898307Z",
+      "raw_sha256": "6c265a9088641de0d44927f6935ca05190d08c0fde59f97613517f6ed14c01d7",
+      "gzip_sha256": "b800a5a0f20ee943150e607779ef3d4f9c9d149de3d0fbf0e08b1fc6ae9dc28c"
+    },
+    {
+      "receipt": "logs/tick073415_catalysts/congress_actions.receipt.json",
+      "response_status": 403,
+      "received_utc": "2026-10-20T08:10:18.011860Z",
+      "raw_sha256": "ad6dac05c874246a828704c3188f2d2c4fe21d29ec5ede399687037d2bb47be0",
+      "gzip_sha256": "7db3b883589f659b216cd4956cb6107a90d918abe80e1129ec6662ac205d7ced"
+    },
+    {
+      "receipt": "logs/tick073415_catalysts/emerson.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:10:18.964008Z",
+      "raw_sha256": "39479ceb94cac3e0cb4734256d94decb35a1f45c7f5ad1f2c854d4a9e684bde7",
+      "gzip_sha256": "26722e18cec25608b210d1caa33150706187ee233b6a1d5a6c65e88fbfb87ef2"
+    },
+    {
+      "receipt": "logs/tick073415_catalysts/senate_rollcall.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:10:17.910955Z",
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+      "gzip_sha256": "1bcef7417266b15be8c720a450d1ded7c1bb6a7485087fd581978053f3caf2e7"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/event_monotonicity.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:09:04.581714Z",
+      "raw_sha256": "89bd01bdc314c83e60d34723568517c91991a13bf29a2699c3efbf39ecf89cf8",
+      "gzip_sha256": "e3a752679b9c719eaa0d97fa6a36fe40447ef43c685f813ce37d0243a3a7b80e"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/favorite_fade.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:09:43.701966Z",
+      "raw_sha256": "27cabca212e582dcd76055d819c72841e07a97b20ff9455b1b3eb80f0e5942f1",
+      "gzip_sha256": "442f06cc1fda9f5813ad9882f31cab1c9ad282273a399ef254fd47d0f4f0101b"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/macro.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:09:01.465378Z",
+      "raw_sha256": "6d83a2c0ca0daa700ae6a1a62fcf6d7e52c5bf927dfe9de25e20ace7a3504c38",
+      "gzip_sha256": "2bc39199e2357670ffcff6467f9a0bafa790fe64bf9cb2548ef1514b41ff1249"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/polymarket_consistency.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:09:42.821430Z",
+      "raw_sha256": "dd7b9458bcf898e146f71707f7136112a7766927e0e5361bfd97e122a9dfc6d5",
+      "gzip_sha256": "372a6ef81fb6f77c79feb792aa882f692c48d8309e50bbab27a2b6ba98ea01a7"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/primary.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:08:02.640540Z",
+      "raw_sha256": "8a105233833544969a861193ee23fd50fbe196116cd12c7774d6b556c8beb9c0",
+      "gzip_sha256": "f539c3e5fc8d0ef8a0856079feadb861725ce74eb011f536f943324606fae88d"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/sports.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:09:00.979420Z",
+      "raw_sha256": "8020ab6f65ed270847ab010dffc256c26a2087baccc828de689ec520ca33a6c6",
+      "gzip_sha256": "edd9867b7e199bbe9121df7f3d56128641ad7fdb1870a80a2acd278aedaf061f"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/captures/thin_tail.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:08:08.033640Z",
+      "raw_sha256": "cec8c41c72d34c68e94587f459bcf4a9aee1842142ae933bcf3430c498c6c9ea",
+      "gzip_sha256": "eb1ef10393b623e6b8da794fb09f5767a7377e9f901ec3c77e962417a41f2a9a"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/context_batches/primary/render.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:10:35.440197Z",
+      "raw_sha256": "b23c3d5a40f4be2b130995649a25799a716fee9cc29a06338d39441ee30b3e57",
+      "gzip_sha256": "d8e0dc2110a6b11a07cb6d8337e2c02ad05358abdb539d118ec871ee4df3fc08"
+    },
+    {
+      "receipt": "logs/checkin_20261020T073415/discovery/context_batches/thin_tail/render.receipt.json",
+      "response_status": null,
+      "received_utc": "2026-10-20T08:10:35.964824Z",
+      "raw_sha256": "f5a7b2eb25cc521a809c7d864e01b5f04d1b22b74dce1e024249be1c3d3b786c",
+      "gzip_sha256": "9fc6aa0f22fa08ab65b6228d845a694c140699323812141757ad62877c92a671"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/tick073415_MI_followup/public/jpost.receipt.json",
+      "response_status": 200,
+      "received_utc": "2026-10-20T08:16:17.510647Z",
+      "raw_sha256": "e2fc8169136e410715c38f4f223d58a88294b936ec21ab6e35c87be2364eeee2",
+      "gzip_sha256": "8a02235965c5cf6f042ee6a97529ef202a3abd25f6e9dc22fe69a1590d113feb"
+    }
+  ],
+  "old_public_pairs_reverified": 9
+}

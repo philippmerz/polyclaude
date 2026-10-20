@@ -1,0 +1,204 @@
+{
+  "ancillary_scanner_row_identity_review": {
+    "event_monotonicity": {
+      "emitted_candidate_rows": 0,
+      "raw_output_reviewed": true
+    },
+    "favorite_fade": {
+      "candidate_rows_reviewed": 27,
+      "exact_condition_or_token_id_available_in_scanner_output": false,
+      "exposure_join": "not possible without exact ID; no name matching used"
+    },
+    "macro": {
+      "candidate_rows_reviewed": 9,
+      "exact_condition_or_token_id_available_in_scanner_output": false,
+      "exposure_join": "not possible without exact ID; no name matching used"
+    },
+    "polymarket_consistency": {
+      "provisional_positive_rows": 0,
+      "raw_output_reviewed": true,
+      "structural_group_summary": "194 midpoint>1,90 midpoint<1; 20/194 quote groups requested,4 received,174 unquoted; incomplete"
+    },
+    "sports": {
+      "candidate_rows_reviewed": 20,
+      "exact_condition_or_token_id_available_in_scanner_output": false,
+      "exposure_join": "not possible without exact ID; no name matching used",
+      "fetched_threshold_passing": 55
+    }
+  },
+  "prior_current_change_flags": {
+    "current_live_order_count_change_vs_prior": 0,
+    "current_orders_same_three_live_zero_matched_as_tick060240": true,
+    "current_position_count_change_vs_prior": 0,
+    "held_identity_size_totalBought_redeemable_unchanged_vs_0755_and_0622": true,
+    "live_orders_exact_terms_unchanged_vs_0755_and_0622": true
+  },
+  "scan_kinds": {
+    "primary": {
+      "condition_only_position_matches": 0,
+      "emitted_6b_rows": 17,
+      "emitted_row_ids_account_join_reviewed": true,
+      "held_position_condition_token_matches": [],
+      "held_position_match_count": 0,
+      "live_order_match_count": 0,
+      "live_order_token_matches": [],
+      "malformed_or_nonbinary_token_map_rows": 0,
+      "proof_completeness_pass_counts": {
+        "binary_clob_token_ids": 80,
+        "binary_outcome_prices": 80,
+        "condition_id": 80,
+        "context_complete": 80,
+        "criteria_sha256": 80,
+        "criteria_text_hash_matches": 80,
+        "execution_metadata_complete": 80,
+        "fee_terms": 80,
+        "gamma_event_id": 80,
+        "literal_criteria_body": 80,
+        "literal_question_matches": 80,
+        "literal_yes_no_prices_match": 80,
+        "market_id": 80,
+        "neg_risk": 80,
+        "order_terms": 80,
+        "resolution_deadline": 80,
+        "semantic_context_complete": 80,
+        "snapshot_quotes_valid": 80
+      },
+      "rows_with_any_failed_structure_check": [],
+      "scanner_raw_rows_structurally_checked": 80,
+      "snapshot": "data/snapshots/shortlist_20261020T080802589595Z_primary.json",
+      "snapshot_row_count": 80,
+      "snapshot_sha256": "6222ae942591974e2a7c3257c96e830ed1b1b53d954e3fde04e78858e8275066",
+      "unmatched_held_position_rows": 9,
+      "unmatched_live_order_rows": 3
+    },
+    "thin_tail": {
+      "condition_only_position_matches": 0,
+      "emitted_6b_rows": 1209,
+      "emitted_row_ids_account_join_reviewed": true,
+      "held_position_condition_token_matches": [
+        {
+          "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "exact_condition_match": true,
+          "exact_token_match": true,
+          "market_id": "630805",
+          "position_row": 5,
+          "snapshot_row": 91,
+          "token_sha256": "dcd076d4814bfe737c77dbff8835d2ed7f489dcc5b9758022e09ab48d3f54e0d"
+        },
+        {
+          "condition_id": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+          "exact_condition_match": true,
+          "exact_token_match": true,
+          "market_id": "666861",
+          "position_row": 8,
+          "snapshot_row": 101,
+          "token_sha256": "b51dfd3434ed20905512aad72ea3e1ee875f7b396913f4fbf04a7572bc61a559"
+        }
+      ],
+      "held_position_match_count": 2,
+      "live_order_match_count": 1,
+      "live_order_token_matches": [
+        {
+          "condition_id": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+          "exact_token_match": true,
+          "market_id": "3006483",
+          "order_row": 2,
+          "side": "BUY",
+          "snapshot_row": 2343,
+          "status": "LIVE",
+          "token_sha256": "5c864bfa7af4d54c23ab6006156e121682bd6469e757630601e819eba54ffc89"
+        }
+      ],
+      "malformed_or_nonbinary_token_map_rows": 0,
+      "proof_completeness_pass_counts": {
+        "binary_clob_token_ids": 3000,
+        "binary_outcome_prices": 3000,
+        "condition_id": 3000,
+        "context_complete": 2995,
+        "criteria_sha256": 3000,
+        "criteria_text_hash_matches": 3000,
+        "execution_metadata_complete": 2995,
+        "fee_terms": 3000,
+        "gamma_event_id": 3000,
+        "literal_criteria_body": 3000,
+        "literal_question_matches": 3000,
+        "literal_yes_no_prices_match": 3000,
+        "market_id": 3000,
+        "neg_risk": 3000,
+        "order_terms": 2995,
+        "resolution_deadline": 3000,
+        "semantic_context_complete": 3000,
+        "snapshot_quotes_valid": 3000
+      },
+      "rows_with_any_failed_structure_check": [
+        {
+          "failed_checks": [
+            "order_terms",
+            "execution_metadata_complete",
+            "context_complete"
+          ],
+          "market_id": "2412367",
+          "row_index": 589
+        },
+        {
+          "failed_checks": [
+            "order_terms",
+            "execution_metadata_complete",
+            "context_complete"
+          ],
+          "market_id": "2412364",
+          "row_index": 664
+        },
+        {
+          "failed_checks": [
+            "order_terms",
+            "execution_metadata_complete",
+            "context_complete"
+          ],
+          "market_id": "2412374",
+          "row_index": 749
+        },
+        {
+          "failed_checks": [
+            "order_terms",
+            "execution_metadata_complete",
+            "context_complete"
+          ],
+          "market_id": "2412359",
+          "row_index": 766
+        },
+        {
+          "failed_checks": [
+            "order_terms",
+            "execution_metadata_complete",
+            "context_complete"
+          ],
+          "market_id": "2412369",
+          "row_index": 2730
+        }
+      ],
+      "scanner_raw_rows_structurally_checked": 3000,
+      "snapshot": "data/snapshots/shortlist_20261020T080807675988Z_thin_tail.json",
+      "snapshot_row_count": 3000,
+      "snapshot_sha256": "36c6ea34a16dda173dd134c95187081058c7d1cca5d7052e85bf37c67581bff9",
+      "unmatched_held_position_rows": 7,
+      "unmatched_live_order_rows": 2
+    }
+  },
+  "schema": "tick073415_discovery_exposure_join.v1",
+  "source_facts": {
+    "current_account_facts": "data/deep_review_20261017/work/tick073415_account_facts.json",
+    "current_account_facts_sha256": "f91042d6ada48a93aebfa597609cdf18f32afa3c2297ff45516d4b8db8784d42",
+    "live_order_rows": 3,
+    "orders_fully_paginated": true,
+    "positions_http200": true,
+    "positions_rows": 9,
+    "prior_account_facts": "data/deep_review_20261017/work/tick060240_account_facts.json",
+    "prior_account_facts_sha256": "da0472427a053b35214a2e3f81cceb5e60c5c205afc9080c2551e68a3f7f7deb",
+    "public_positions_receipt": "logs/tick073415_account/authenticated/positions_snapshot.receipt.json",
+    "public_positions_sha256": "d9c79e4d2f5bdb6d72f79fa7b4581f3c501cfb4392d177b6a72c8b961682fec9",
+    "authenticated_orders_receipt": "logs/tick073415_account/authenticated/orders_p000.receipt.json",
+    "authenticated_orders_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1"
+  },
+  "tick": "20261020T073415Z"
+}

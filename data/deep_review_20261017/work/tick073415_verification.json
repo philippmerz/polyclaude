@@ -1,0 +1,15 @@
+{
+  "schema": "bounded_tick_verification.v1",
+  "tick": "20261020T073415Z",
+  "verified_utc": "2026-10-20T08:19:27.951418+00:00",
+  "fresh_receipt_pairs": 39,
+  "old_public_source_pairs": 9,
+  "pairs_file": "data/deep_review_20261017/work/tick073415_receipt_pairs.json",
+  "pairs_file_sha256": "1f810ee61e5a35690b7a8b784b5a08309428d80643bae3868d22e7328c6f3f04",
+  "account": "Rootexact3originalLIVE0matched/list+detailjoin;127exhaustedorderedtraderowsunchanged;9indexedidentities/size/totalBought/redeemableequal06:22. No freshCTF.",
+  "financial": "Rootreadoriginalproducerstdout; only195.01total,5.79separategas,35.27PMmid/29.90sameproducernetdepth. Derived189.22mid/183.85net. Notsplicedwithlater29.22positions.",
+  "sources": "RootfullClarityrulesreadidentical35bc95d6/Jan2operationalendnotqualifyingcutoff. HLEservedhash15fc012funchanged/Age3001; ORsame93bca9db/Oct19partial32.345372T/targetweeksabsent.",
+  "discovery": "Rootsmallresume/index+exactexposurejoins; limitedcapped/unpricedcoverage, no globalzero.",
+  "news": "Requested2linehashesmatchactualsavedsourcejudgmentnotdispatch;3relatedKimi/ORrowsread. Lastactualreviewwatermark07:52:35\u219208:15:38includes2newrows;MI4b60newOct19interviewnotOct17republication;Messiopinionnotranking.",
+  "state": "No orders, cancellations, transfers, redemptions, numericalprior mutations or frozen-case advance."
+}

@@ -1,0 +1,229 @@
+{
+  "schema": "tick073415_ops_facts.v1",
+  "checked_utc": "2026-10-20T08:07Z",
+  "scope": "one routine operations checklist; no financial judgment",
+  "cli_capture_dir": "logs/tick073415_ops/cli",
+  "body_representation": "sdk_result_serialization (CLI stdout, including stderr where any)",
+  "commands": {
+    "uma": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/uma_status_check.py",
+        "--json"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 126,
+      "sha256": "8f46565ed868131e1870dab5f0b981407f0427507990f538a4957f03ccdad457",
+      "receipt": "logs/tick073415_ops/cli/uma.receipt.json"
+    },
+    "ostium": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/ostium_state_diff.py",
+        "--json"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 61,
+      "sha256": "45471a48ed0372ad30a25f900fd624c8d3498e68bb51a28792181a9dd1c1f882",
+      "receipt": "logs/tick073415_ops/cli/ostium.receipt.json"
+    },
+    "crux": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/crux_coverage_check.py",
+        "--quiet"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "logs/tick073415_ops/cli/crux.receipt.json"
+    },
+    "apy": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/check_marginal_apy.py"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 1274,
+      "sha256": "0c2b0e3a13f706a51c2c54499ad0a62d79884b3a838c1d22ccd034b7a81a78c9",
+      "receipt": "logs/tick073415_ops/cli/apy.receipt.json"
+    },
+    "watchlist": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/watchlist_monitor.py",
+        "--hits-only",
+        "--auto-revet"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "receipt": "logs/tick073415_ops/cli/watchlist.receipt.json"
+    },
+    "audit": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/position_state_audit.py",
+        "--fix"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 166,
+      "sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+      "receipt": "logs/tick073415_ops/cli/audit.receipt.json"
+    },
+    "decisions": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/decisions.py",
+        "pending"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 23,
+      "sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+      "receipt": "logs/tick073415_ops/cli/decisions.receipt.json"
+    },
+    "kelly": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/portfolio_kelly.py",
+        "--constrained"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 2665,
+      "sha256": "758a5dc1385f6bed6a6c7c67540dfc3f634599399985eb8cd099afdb6a437030",
+      "receipt": "logs/tick073415_ops/cli/kelly.receipt.json"
+    },
+    "redeem_dry_run": {
+      "argv": [
+        ".venv/bin/python",
+        "scripts/clob_v2.py",
+        "redeem-all",
+        "--dry-run"
+      ],
+      "returncode": 0,
+      "timeout": false,
+      "bytes": 427,
+      "sha256": "76a6cbbbe8de31ec500211eb8f47a1531703c6c82446dca09a77a09a9ca1a713",
+      "receipt": "logs/tick073415_ops/cli/redeem_dry_run.receipt.json"
+    }
+  },
+  "facts": {
+    "uma": {
+      "alerts": 0,
+      "checked_count": 43,
+      "tracked_count": 45,
+      "gamma_refreshed_count": 43,
+      "positions_fetch_ok": true
+    },
+    "ostium_diff": {
+      "alerts": 0,
+      "current_open_trades": 0,
+      "prior_open_trades": 0,
+      "limitation": "ostium_state_diff output is CLI serialization; status command internally distinguishes parser/returncode only; zero corroborated by successful status call."
+    },
+    "crux_coverage": {
+      "quiet_output_bytes": 0,
+      "returncode": 0
+    },
+    "marginal_apy": {
+      "clear": 4,
+      "acked_hold": 0,
+      "flagged": 0,
+      "protected_groups": 3,
+      "hurdle": "live 3.20%, cache age 14h"
+    },
+    "watchlist": {
+      "hits_only_output_bytes": 0,
+      "returncode": 0,
+      "interpretation": "no trigger-hit rows printed; non-hit and NO_DATA rows are suppressed by --hits-only, so not a complete candidate status"
+    },
+    "position_state_audit": {
+      "status": "CLEAN",
+      "indexed": 7,
+      "deindexed_claim_rows": 1,
+      "fixes": "snapshot refreshed; 0 acked-holds dropped"
+    },
+    "decisions_pending": {
+      "overdue": 0
+    },
+    "portfolio_kelly": {
+      "held_rows": 6,
+      "protected_groups": 3,
+      "bankroll_cache_age_hours": 0.0,
+      "displayed_bankroll_usd": 195.01,
+      "caveat": "advisory only; cached bankroll, not a new valuation"
+    },
+    "redeem_all_dry_run": {
+      "winning_redeemable_found": 0,
+      "redeemable_rows": 0,
+      "skipped_losing_or_uncertain": 2,
+      "mutated": false
+    }
+  },
+  "daemon_health": [
+    {
+      "name": "news_watcher",
+      "argv_python": "/home/polyclaude/polyclaude/.venv/bin/python",
+      "pid": 148881,
+      "start_utc": "2026-10-19T05:28:37.310Z",
+      "script_mtime_utc": "2026-10-18T22:58:44.443Z",
+      "count": 1,
+      "configured_pid_match": true,
+      "mtime_after_start": false,
+      "shell_wrappers": 0
+    },
+    {
+      "name": "heartbeat_watch",
+      "argv_python": "/home/polyclaude/polyclaude/.venv/bin/python",
+      "pid": 450,
+      "start_utc": "2026-10-18T09:33:44.960Z",
+      "script_mtime_utc": "2026-10-02T14:31:39.990Z",
+      "count": 1,
+      "configured_pid_match": true,
+      "mtime_after_start": false,
+      "shell_wrappers": 0
+    },
+    {
+      "name": "telegram_listener",
+      "argv_python": "/home/polyclaude/polyclaude/.venv/bin/python",
+      "pid": 451,
+      "start_utc": "2026-10-18T09:33:44.990Z",
+      "script_mtime_utc": "2026-09-10T18:34:57.001Z",
+      "count": 1,
+      "configured_pid_match": true,
+      "mtime_after_start": false,
+      "shell_wrappers": 0
+    },
+    {
+      "name": "opportunity_watch",
+      "argv_python": "/home/polyclaude/polyclaude/.venv/bin/python3",
+      "pid": 425,
+      "start_utc": "2026-10-18T09:33:44.720Z",
+      "script_mtime_utc": "2026-09-29T10:07:53.975Z",
+      "count": 1,
+      "configured_pid_match": true,
+      "mtime_after_start": false,
+      "shell_wrappers": 0
+    }
+  ],
+  "calendar": {
+    "weekly_last_report": "2026-10-16",
+    "next_weekly": "2026-10-23",
+    "monthly_next": "2026-11-12",
+    "methodology": "concluded per current_context; no repeat due this tick"
+  },
+  "errors": [],
+  "notes": [
+    "No daemon restart. Configured PID file paths resolved from imported script definitions and checked by match only; sensitive path/value not emitted.",
+    "No redeem mutation; losing/uncertain rows left untouched.",
+    "Position audit --fix refreshed allowed local snapshot; no decision/portfolio ledger update."
+  ]
+}

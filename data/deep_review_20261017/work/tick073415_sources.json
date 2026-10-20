@@ -1,0 +1,110 @@
+{
+  "sources": {
+    "hle": {
+      "status": 200,
+      "received_utc": "2026-10-20T08:08:48.567707Z",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "content-type": "application/json",
+        "age": "3001",
+        "cache-control": "public"
+      },
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "receipt": "logs/tick073415_sources/hle.receipt.json",
+      "models_count": 66,
+      "kimi": {
+        "kimi k2.5": [
+          "25.4",
+          "75.9"
+        ],
+        "kimi k3": [
+          "41.08",
+          "44.67"
+        ],
+        "kimi k2.6": [
+          "35.48",
+          "58.19"
+        ],
+        "kimi k2": [
+          "21.4",
+          "67.8"
+        ]
+      },
+      "same_as_0755": true
+    },
+    "openrouter": {
+      "status": 200,
+      "received_utc": "2026-10-20T08:08:48.661874Z",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "content-type": "application/json",
+        "age": "221",
+        "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+      },
+      "raw_sha256": "93bca9dbfda1050931225b01fb4086ef2c358c64c47fbb92f18b3b5952a28771",
+      "receipt": "logs/tick073415_sources/openrouter.receipt.json",
+      "row_count": 53,
+      "weekly_totals_T": {
+        "2026-10-05": 171.842501724714,
+        "2026-10-12": 164.043985914931,
+        "2026-10-19": 32.345372199105
+      },
+      "target_weeks": {},
+      "cachedAt": 1792481505247
+    },
+    "clarity50": {
+      "status": 200,
+      "received_utc": "2026-10-20T08:08:48.800819Z",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "content-type": "application/json",
+        "last-modified": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "cache-control": "public, max-age=300"
+      },
+      "raw_sha256": "d5972c3cd3a24dcf74210c5807a71a77f38d2ac3b8501695e08a9fa47f8126b2",
+      "receipt": "logs/tick073415_sources/clarity50.receipt.json",
+      "market_id": "3210152",
+      "condition_id": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage \u2014 including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version \u2014 will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "tokens": "[\"27574293309104117988785722816384166732256180683715968874076479908449482000352\", \"66225549028370775174805670288026406587364840830462832284615254168964916630541\"]",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "end_date": "2027-01-02T04:59:00Z",
+      "active": true,
+      "closed": false,
+      "accepting_orders": true,
+      "uma": null
+    },
+    "clarity58": {
+      "status": 200,
+      "received_utc": "2026-10-20T08:08:48.914179Z",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "content-type": "application/json",
+        "last-modified": "Tue, 20 Oct 2026 08:08:48 GMT",
+        "cache-control": "public, max-age=300"
+      },
+      "raw_sha256": "55c99e814e2a06b2d697ad3768f98c7c94dec2379ea3f63ed3423debb53cb2cf",
+      "receipt": "logs/tick073415_sources/clarity58.receipt.json",
+      "market_id": "3210154",
+      "condition_id": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "description": "This market will resolve to \"Yes\" if the number of Senators voting \"Yea\" on the first Senate vote on final passage of crypto market structure legislation occurring before January 1, 2027 is above the number specified in this market's title. Otherwise, this market will resolve to \"No\".\n\n\"Above\" means strictly greater than the number specified in the title. For example, a market titled \"Above 58\" will resolve to \"Yes\" only if 59 or more Senators vote \"Yea\".\n\nFor purposes of this market, \"crypto market structure legislation\" is defined identically to Polymarket's \"Crypto Market Structure legislation becomes law in 2026?\" market: https://polymarket.com/event/crypto-market-structure-legislation-becomes-law-in-2026-20260727223933088\n\nThe qualifying vote must be a vote on final passage of the bill conducted in the full Senate - not a committee vote, and not a vote on a motion to proceed, a motion to invoke cloture, or an amendment. Not every Senator needs to have participated in the vote. The first vote on final passage will be used for resolution regardless of whether the bill passes on that vote; subsequent votes on passage \u2014 including any re-vote following a motion to reconsider, or a vote on a conference report or House-amended version \u2014 will not be considered.\n\nIf no qualifying vote occurs before January 1, 2027, this market will resolve to \"No\". If qualifying legislation passes the Senate before January 1, 2027 without a prior recorded vote on final passage (e.g., passage by voice vote or unanimous consent), this market will resolve to \"Yes\" regardless of the number specified in this market's title.\n\nOnce the result of the vote has been announced, any subsequent request by a Senator to add, remove, or change a vote will not be considered for purposes of this market, regardless of any change to the official vote tally.\n\nThis market will resolve according to official records of the U.S. Senate (http://senate.gov) and Library of Congress (http://congress.gov).",
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "tokens": "[\"90478389068106043826833580661092508858615079475879584220859211951733291944919\", \"43566386855398527373115443041865408808190028685008561538141743908824051774750\"]",
+      "outcomes": "[\"Yes\", \"No\"]",
+      "end_date": "2027-01-02T04:59:00Z",
+      "active": true,
+      "closed": false,
+      "accepting_orders": true,
+      "uma": null
+    },
+    "status_quick": {
+      "returncode": 0,
+      "receipt": "logs/tick073415_sources/status_quick.receipt.json",
+      "raw_sha256": "6c265a9088641de0d44927f6935ca05190d08c0fde59f97613517f6ed14c01d7",
+      "stderr_nonempty": false,
+      "limits": "CLI stdout serialization, not HTTP; separate from bankroll producer"
+    }
+  },
+  "limits": "Delivered chart cache and call windows do not certify fresh benchmark/historical maxima/completed traffic or executable quotes. No priors/actions."
+}

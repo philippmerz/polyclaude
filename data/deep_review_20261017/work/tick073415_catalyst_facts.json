@@ -1,0 +1,29 @@
+{
+  "sources": [
+    {
+      "name": "senate_rollcall",
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+      "receipt": "logs/tick073415_catalysts/senate_rollcall.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-20T08:10:17.910955Z",
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773"
+    },
+    {
+      "name": "congress_actions",
+      "url": "https://www.congress.gov/bill/119th-congress/house-bill/3633/all-actions",
+      "receipt": "logs/tick073415_catalysts/congress_actions.receipt.json",
+      "status": 403,
+      "received_utc": "2026-10-20T08:10:18.011860Z",
+      "raw_sha256": "ad6dac05c874246a828704c3188f2d2c4fe21d29ec5ede399687037d2bb47be0"
+    },
+    {
+      "name": "emerson",
+      "url": "https://emersoncollegepolling.com/michigan-2026-poll-el-sayed-and-rogers-locked-in-close-election/",
+      "receipt": "logs/tick073415_catalysts/emerson.receipt.json",
+      "status": 200,
+      "received_utc": "2026-10-20T08:10:18.964008Z",
+      "raw_sha256": "39479ceb94cac3e0cb4734256d94decb35a1f45c7f5ad1f2c854d4a9e684bde7"
+    }
+  ],
+  "status": "Bodies preserved before parsing; root interpretation pending. Search leads: sameSeptemberEmerson/previouslymodeledME02Tulchin, no newlyadoptedpoll; failure/no searchhit notabsenceproof."
+}

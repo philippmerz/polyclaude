@@ -1,0 +1,149 @@
+{
+  "schema": "bounded_news_input.v2",
+  "tick": "20261020T073415Z",
+  "read_utc": "2026-10-20T08:07:42.755521+00:00",
+  "window": {
+    "start_exclusive": "2026-10-20T08:02:52.540899+00:00",
+    "end_inclusive": "2026-10-20T08:07:42.755521+00:00",
+    "new_rows": 1
+  },
+  "explicit": [
+    {
+      "line": 1193,
+      "sha256": "ba3702c6e99fb5ecc5cd901b52fa648aaa4df3ccacab9e61d32e741e58b8be66",
+      "record": {
+        "alert_id": "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+        "ts": "2026-10-20T07:17:34Z",
+        "tier": 2,
+        "feed": "Kimi model, benchmark and Moonshot releases",
+        "matched": "Kimi",
+        "title": "Moonshot’s Kimi K3 lands on Amazon in key test for Chinese open-source AI income - South China Morning Post",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcDZqcmQxQkhmMW9NcUh6cW1hTTdXTlEwTUNSNUh2ZmlRYmt6Sm9GMnZISkZNSmg2RUc1NndvM1ZhSlBGUkQ1dDlCRldFdXcxQmNpLXB3TTllN0NtSVlTdVpIZ0NDZkhBLWlkMENhODVnbzQ5SldFVGFFaW11SVdBTHFGN2M0RFkydjQxelhlWHVKYXVNZExydXpOZlZOaXV0cEZWbFdYSGRHUWJWYjF3WWpkQng3RUFLY2E0ME9va1F2UdIBwgFBVV95cUxNSE8tSlJiRTFRMWRYREFncDA0ZldXRUJ6clRCTC0xdTloZmVKUzNSR1ZkamlLazd4VGdMTmo4TzNIM0NDM056c1pEZmNjS3J5blVUVlVyeEczb3ByOUFDUmRRRXRxX2JZRVVSYXNQQjh5THdWSFk5em1wODl4N1pzR0VZQ1FYN3d2ckkzSHF5Z3N0RU9YTmZDeWFyQlJkZzdjbTdRQWVMRFhqMXNXYU5fYjkzWUNWaGRJZ3A0LXpzVFkzUQ?oc=5",
+        "agent_reason": "Moonshot’s Kimi K3 release on Amazon is a direct named-model event relevant to the Humanity’s Last Exam score market.",
+        "impacts": [
+          {
+            "position": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+            "level": "MATERIAL",
+            "reason": "A new Kimi model deployment could alter the maximum achievable benchmark score, requiring score/result verification."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    },
+    {
+      "line": 1196,
+      "sha256": "94e9bd6e3b4151491400a7fd8d8497d66c56d4b06e27979d93c4ef88ee219c05",
+      "record": {
+        "alert_id": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+        "ts": "2026-10-20T07:28:46Z",
+        "tier": 1,
+        "feed": "OpenRouter traffic, routing and model news",
+        "matched": "OpenRouter",
+        "title": "Stripe will pay 7.5 billion dollars for the AI router OpenRouter - Startup Fortune",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVV9oZk5zMFcyRjJDR2w1RVpDMXd1bmtEeXlRNDluRnFXTWstT3FLdlJtUW5pOEIya1ZuZEY1QW9EVlcwTmdIOHB0OXFfcVhDQjhTTVFLNjg3b0Vpd3RzVWo1X3h6Z3JPWlV5NE5qOVgwN2h5WFJOQ3UzS2tHSWQ0azg3SkV3QktNWUptLWhkSXFCVW1nMEE?oc=5",
+        "agent_reason": "Named-entity acquisition claim with a hard $7.5B figure directly affecting OpenRouter’s traffic outlook.",
+        "impacts": [
+          {
+            "position": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+            "level": "MATERIAL",
+            "reason": "A Stripe acquisition could materially change OpenRouter’s routing volume and the probability of reaching the 725T–775T token threshold."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    }
+  ],
+  "later": [
+    {
+      "line": 1198,
+      "sha256": "645d3bd76d8628d620618c51015266f2d500227b374905caf4eb07ae627e27c9",
+      "record": {
+        "alert_id": "a6d7f4a320f3c21764218cbaa8dde7c45e1e174c",
+        "ts": "2026-10-20T08:06:08Z",
+        "tier": 1,
+        "feed": "Google Year in Search, Messi and Mbappe athlete news",
+        "matched": "Lionel Messi",
+        "title": "Pedri: Lamine Yamal shouldn't be compared to Lionel Messi - Yahoo Sports",
+        "link": "https://news.google.com/rss/articles/CBMijgFBVV95cUxOVDhIbEd3N2VNRnJvNzg1Z2F5RGpQT2NjTWg3RTRiMVRqRjVOeUd5SV9rWTVMTXQ4LU1GZXpGanJENDdPcUtZRU1nc2xfREZoTV9aMnV5RFNVZ0U5YnFra2UyMEVyTVFtNFpIZTRpUThUTmI3dDhxWDI0OWdqRzB3X0JlNXFaSEV4N291V3Fn?oc=5",
+        "agent_reason": "Opinion/rephrasing with no material new information about Messi’s Google search ranking.",
+        "impacts": [],
+        "relevance": "research_only",
+        "review_required": false
+      }
+    }
+  ],
+  "related": [
+    {
+      "line": 1192,
+      "sha256": "c8be1d59dde466fe9e86ac73355f0d401ef5d5e32e102faa46d1c92cade824f5",
+      "record": {
+        "alert_id": "a40093efed7c7b243727ac80c534760073f3c650",
+        "ts": "2026-10-20T06:45:08Z",
+        "tier": 2,
+        "feed": "Kimi model, benchmark and Moonshot releases",
+        "matched": "Kimi",
+        "title": "OpenAI Accuses Kimi Operator China’s Moonshot AI Of Copying AI Model Reasoning - Yahoo Finance",
+        "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQN1NwYTJJN0ZqWGtycDVRN2wtSWlqTEtKX1NVZUpaQmRBc2szTEg4MHRGeVktNUVHZXpjSzYxR1hoX0pKckZOU3ZlazVJdmtJTEVtamRYdzhpMXl6MzA5cDNldERxcFhRS1RXcEkwUTdwQ2ZhU2RuUHpaczA5TTcweHhlTkdOdnFpXy1RRHh5Nk1UNzBtRjN2TUpNMXBjeE0?oc=5",
+        "agent_reason": "Named-entity allegation by OpenAI against Moonshot AI could prompt scrutiny of Kimi’s benchmark results, warranting internal review.",
+        "impacts": [
+          {
+            "position": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+            "level": "MINOR",
+            "reason": "The copying allegation may affect confidence or scrutiny around Kimi’s Humanity’s Last Exam score, but does not directly change the achieved score."
+          }
+        ],
+        "relevance": "minor",
+        "review_required": false
+      }
+    },
+    {
+      "line": 1193,
+      "sha256": "ba3702c6e99fb5ecc5cd901b52fa648aaa4df3ccacab9e61d32e741e58b8be66",
+      "record": {
+        "alert_id": "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+        "ts": "2026-10-20T07:17:34Z",
+        "tier": 2,
+        "feed": "Kimi model, benchmark and Moonshot releases",
+        "matched": "Kimi",
+        "title": "Moonshot’s Kimi K3 lands on Amazon in key test for Chinese open-source AI income - South China Morning Post",
+        "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOcDZqcmQxQkhmMW9NcUh6cW1hTTdXTlEwTUNSNUh2ZmlRYmt6Sm9GMnZISkZNSmg2RUc1NndvM1ZhSlBGUkQ1dDlCRldFdXcxQmNpLXB3TTllN0NtSVlTdVpIZ0NDZkhBLWlkMENhODVnbzQ5SldFVGFFaW11SVdBTHFGN2M0RFkydjQxelhlWHVKYXVNZExydXpOZlZOaXV0cEZWbFdYSGRHUWJWYjF3WWpkQng3RUFLY2E0ME9va1F2UdIBwgFBVV95cUxNSE8tSlJiRTFRMWRYREFncDA0ZldXRUJ6clRCTC0xdTloZmVKUzNSR1ZkamlLazd4VGdMTmo4TzNIM0NDM056c1pEZmNjS3J5blVUVlVyeEczb3ByOUFDUmRRRXRxX2JZRVVSYXNQQjh5THdWSFk5em1wODl4N1pzR0VZQ1FYN3d2ckkzSHF5Z3N0RU9YTmZDeWFyQlJkZzdjbTdRQWVMRFhqMXNXYU5fYjkzWUNWaGRJZ3A0LXpzVFkzUQ?oc=5",
+        "agent_reason": "Moonshot’s Kimi K3 release on Amazon is a direct named-model event relevant to the Humanity’s Last Exam score market.",
+        "impacts": [
+          {
+            "position": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+            "level": "MATERIAL",
+            "reason": "A new Kimi model deployment could alter the maximum achievable benchmark score, requiring score/result verification."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    },
+    {
+      "line": 1196,
+      "sha256": "94e9bd6e3b4151491400a7fd8d8497d66c56d4b06e27979d93c4ef88ee219c05",
+      "record": {
+        "alert_id": "ead7cfddc7fdeda5ea3bc127547e8b761c9e8698",
+        "ts": "2026-10-20T07:28:46Z",
+        "tier": 1,
+        "feed": "OpenRouter traffic, routing and model news",
+        "matched": "OpenRouter",
+        "title": "Stripe will pay 7.5 billion dollars for the AI router OpenRouter - Startup Fortune",
+        "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPVV9oZk5zMFcyRjJDR2w1RVpDMXd1bmtEeXlRNDluRnFXTWstT3FLdlJtUW5pOEIya1ZuZEY1QW9EVlcwTmdIOHB0OXFfcVhDQjhTTVFLNjg3b0Vpd3RzVWo1X3h6Z3JPWlV5NE5qOVgwN2h5WFJOQ3UzS2tHSWQ0azg3SkV3QktNWUptLWhkSXFCVW1nMEE?oc=5",
+        "agent_reason": "Named-entity acquisition claim with a hard $7.5B figure directly affecting OpenRouter’s traffic outlook.",
+        "impacts": [
+          {
+            "position": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+            "level": "MATERIAL",
+            "reason": "A Stripe acquisition could materially change OpenRouter’s routing volume and the probability of reaching the 725T–775T token threshold."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    }
+  ],
+  "limits": "Rawrequestedandrelatedrows; no inferredreviewfromdispatch/journal."
+}
