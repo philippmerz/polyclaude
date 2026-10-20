@@ -1,0 +1,47 @@
+{
+  "schema": "polyclaude.periodic_light_review.v1",
+  "reviewed_utc": "2026-10-20T22:04:00.082631+00:00",
+  "trigger": "22UTC periodicbacklog/journal review",
+  "root_account_verification": {
+    "orders": 0,
+    "trades": 127,
+    "terminal_cursor_both": "LTE=",
+    "allsize_positions": 9,
+    "tuple_fields": [
+      "conditionId",
+      "asset",
+      "outcome",
+      "size",
+      "totalBought"
+    ],
+    "exact_vs_2103": true,
+    "trade_rows_identical": true,
+    "winning_redeemables": 0,
+    "raw_and_gzip_receipt_hashes_verified": true,
+    "sevenCLIrc0_and_output_hashes_verified": true
+  },
+  "ops": "Quickstatus+hurdle4clear0flagged/watchlistnohits; separatelyUMA45tracked43refreshed0alerts;exitreview;Ostium0to0/cruxquiet/decisionsnooverdue/stateCLEAN7indexed+1claim/0expiredholds.4currentexactabsolute-daemon singletons22:01:40; no execution/daemoncodechange.",
+  "sources": "22:01:35liveHLEHTTP403raw/rootverified, currentaccuracy/calibrationdeltaUNKNOWN. Last20021:02:50/K3accuracy41.08/cal44.67/cacheAge3214 remainsdated. Do not convert sourcefailure toNO/newscore or claimunchanged. July3historicalarchive503 not retried. NYT exactalertlink yieldedGoogleNewsHTML, notarticle.",
+  "primary_judgment": "Retain4directionalpilots/noadd/no numericpriorchange. Currentexittool Kimi/OR/MI/Messi1/3.30/1.50/1.25 matches21:03bookwalk levels; datedselectedterminal1.902125/3.65/1.70/2 stillhigher aftercachedvariableAavecarry sensitivity. Broadlowcases favorsale; MI3.8037pp adverseselectedshift reversal remainsdatedsensitivity. HLEvisibilitygap increasesunknown, not affirmativeforecastchange; small10YESpilot/no standingmakernewsdonation. No verifiedthesisbreak inreadalerts/UMA/currentaccount.",
+  "evidence_limits": "No new4Gamma/8booktransportpacket orcurrent4fee revalidation at22; toolreportsindicativeexits underexistingpriors, notexecutioncertificate. Keep21:03exactfee/identity/bookproofdated. Anytrade needsfreshfinalvettedroute/allconstraints. HLE403 meansnocurrentscoreassurance; no inventedzeroeffect/defaultNO.",
+  "whole_Clarity": {
+    "normal_conditional_payoffs": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "current_exit_tool_net": 26.25,
+    "cached75d_Aave_carry_sensitivity": 26.421748865894287,
+    "tool_window": "2026-10-20T22:01:34.214053Z\u201322:01:35.912476Z",
+    "judgment": "Retainwholegroup/nolegonlysale; conditional29 exceedsdatedexit+carry.14:02same-ruleproofnotnewlyread; no guaranteedfloor/PNLclaim."
+  },
+  "joint": "KimiYES+ORNO canbothlose4.45originalcost; all4directionalpilots7.35canalllose. No independence/hedgecredit.",
+  "financial": "No completeaggregate/walletsnapshot thislightcheck. Canonical193.57/gas6.01/trading187.56mid183.90depth are21:03:41\u201358 ONLY. CurrentPM35.20/33.30notspliced;CSV241/flows/capital/priors/policy/evaluationledgers unchanged. No charttests rerun becauseCSV/codeunchanged.",
+  "research": "405valued/19blocked/383factual/2193pending;495next remainsnotstarted. No discretionarynewresearch/goal lifecycle/timer/idlefollowup.",
+  "entry": "BUYpaused405/600+primarycomparativeselectionnull,0orders; safeexits/cancel/redeemcontinueauthorized.",
+  "sources_unit": "data/deep_review_20261017/work/tick2200_sources.json",
+  "ops_unit": "data/deep_review_20261017/work/tick2200_account_ops.json",
+  "alert_decisions": "data/deep_review_20261017/work/tick2200_alert_decisions.json",
+  "telegram": "None: no confirmedmaterialthesisbreak/fill/score/action; specific403gaprecorded, no routineheadlineheartbeat.",
+  "next_existing_boundary": "02UTCfullcheck/earliermaterialevent; MIdebateOct21 23UTC, weeklyOct23/monthlyNov12notdue/offchainretired."
+}

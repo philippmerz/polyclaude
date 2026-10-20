@@ -1,0 +1,58 @@
+{
+  "schema": "polyclaude.periodic_alert_dispositions.v1",
+  "reviewed_utc": "2026-10-20T22:04:00.082631+00:00",
+  "read_cutoff": "2026-10-20T21:51:13Z",
+  "alerts": [
+    {
+      "alert_id": "a362c1793c194f90fa554b05515ebc2495e3e03d",
+      "ts": "2026-10-20T21:34:13Z",
+      "line_sha256": "529430eb3146c97d7dfebef040886beb16892d9298741741fbc4ad515ee9490f",
+      "decision": "No causalchannel to verified9heldidentities orliveBUY established;0orders. Preserve researchlead unvalued; noaction/Telegram."
+    },
+    {
+      "alert_id": "b0a7553c22fe088f149af1e2ae2ad03da0af9cb8",
+      "ts": "2026-10-20T21:34:37Z",
+      "line_sha256": "2cf0566f54b02aa4e86d56128da584c861056997fa335a42cca2d306890b4537",
+      "decision": "No causalchannel to verified9heldidentities orliveBUY established;0orders. Preserve researchlead unvalued; noaction/Telegram."
+    },
+    {
+      "alert_id": "7f0ccb825e7fb3edba9a0724840af0d31616fe25",
+      "ts": "2026-10-20T21:40:11Z",
+      "line_sha256": "a7d593114f508cafc37ce7e0a37b269927761679c283b52df52015cf4d9b445c",
+      "decision": "No causalchannel to verified9heldidentities orliveBUY established;0orders. Preserve researchlead unvalued; noaction/Telegram."
+    },
+    {
+      "alert_id": "f0a6b53a4becdb400e90e8ad5c0bef5460cb868c",
+      "ts": "2026-10-20T21:45:41Z",
+      "line_sha256": "139aa6cfc4122cc4d2c297ec95acbecc82c75ff9bd209724800bd1765763772f",
+      "decision": "Athleteperformance/habit/entertainment headline not resolvingGoogle2026GlobalTrendingAthletestop5 evidence. Attentioncompetitioncouldmatter but no measuredranking/numericalbridge fromtheseleads; no action."
+    },
+    {
+      "alert_id": "ebe07f392979c0187b70c48983470784326db9cd",
+      "ts": "2026-10-20T21:45:45Z",
+      "line_sha256": "a373e45a68113a50d729f0b6f0267e6ed435b81ea40507e915a4fd17ad82673f",
+      "decision": "Athleteperformance/habit/entertainment headline not resolvingGoogle2026GlobalTrendingAthletestop5 evidence. Attentioncompetitioncouldmatter but no measuredranking/numericalbridge fromtheseleads; no action."
+    },
+    {
+      "alert_id": "0fa1f1980ac25f24ab1ee8fba33141ac5909321f",
+      "ts": "2026-10-20T21:45:49Z",
+      "line_sha256": "5f7bc095343dad64394e8b343759924aae96bfaa934adb855563f6235e997dbc",
+      "decision": "Athleteperformance/habit/entertainment headline not resolvingGoogle2026GlobalTrendingAthletestop5 evidence. Attentioncompetitioncouldmatter but no measuredranking/numericalbridge fromtheseleads; no action."
+    },
+    {
+      "alert_id": "07b46a499c183e08a0e2e628cd47a8e7e57854c8",
+      "ts": "2026-10-20T21:51:08Z",
+      "line_sha256": "3e2386218925a13e00e2b391ac7943f6e7cafb68ba74cab0c5ea3c90ddb3915c",
+      "decision": "Michigan forum headline reviewed; one exactlinkrequest GoogleNewsHTML notNYTarticle. Existing CNNlimitedremarks alreadyread. No newmeasuredpoll/turnout evidence established; bodygap prevents numericalbridge, not a zeroeffectclaim. Retain5NO/unchangedprior/noadd."
+    },
+    {
+      "alert_id": "2a6224ac885f37dfdeaef51b596e811b17f5777d",
+      "ts": "2026-10-20T21:51:13Z",
+      "line_sha256": "842a99396a8aecda7309c886cf17926e3cf02fe1d01269a3a72bc844a30a009b",
+      "decision": "No causalchannel to verified9heldidentities orliveBUY established;0orders. Preserve researchlead unvalued; noaction/Telegram."
+    }
+  ],
+  "account_scope": "Currentauthenticated0orders/9allsizepositions, notclassifierassumption",
+  "later_arrivals": "Existingwatchers/futureticks; no idlechase",
+  "no_trade_prior_or_telegram": true
+}

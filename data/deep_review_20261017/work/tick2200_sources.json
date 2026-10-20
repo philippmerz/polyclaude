@@ -1,0 +1,75 @@
+{
+  "schema": "tick2200_sources.v1",
+  "audited_utc": "2026-10-20T22:01:49.809369Z",
+  "scope": "One current official HLE endpoint read and one exact NYT alert-link read; no retry or alternate-source resolution.",
+  "hle": {
+    "url": "https://dashboard.safe.ai/api/models",
+    "current_attempt": {
+      "status": 403,
+      "received_utc": "2026-10-20T22:01:35.838448Z",
+      "content_type": "text/plain; charset=utf-8",
+      "cache_control": "private, no-store, max-age=0",
+      "age": null,
+      "raw_sha256": "2a3d67cbbb551d602c5846704b8b4f044b7f3db6d19de9583f0c4c38661196a2",
+      "gzip_sha256": "7b3d43a751faed3e8117384db5fe5a97ae338e46dd936d639350f4bf4c963c47",
+      "receipt": "logs/cron20261020T2200Z_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T2200Z_sources/hle/hle.body.json.gz",
+      "body_text": "Forbidden; current HLEAccuracy/calibration cannot be determined."
+    },
+    "prior_tick210121_baseline": {
+      "status": 200,
+      "received_utc": "2026-10-20T21:02:50.533183Z",
+      "date_header": "Tue, 20 Oct 2026 21:02:50 GMT",
+      "cache_age_seconds": "3214",
+      "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+      "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+      "receipt": "logs/cron20261020T210121Z_resolving_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T210121Z_resolving_sources/hle/hle.body.json.gz",
+      "models": [
+        {
+          "name": "Kimi K2.5",
+          "id": "kimi-k2.5-thinking",
+          "provider": "moonshot",
+          "hle": 25.4,
+          "hle_calibration_error": 75.9,
+          "releaseDate": "2026-01-29"
+        },
+        {
+          "name": "Kimi K3",
+          "id": "kimi-k3-high",
+          "provider": "moonshot",
+          "hle": 41.08,
+          "hle_calibration_error": 44.67,
+          "releaseDate": "2026-07-16"
+        },
+        {
+          "name": "Kimi K2.6",
+          "id": "kimi-k2.6-64k",
+          "provider": "moonshot",
+          "hle": 35.48,
+          "hle_calibration_error": 58.19,
+          "releaseDate": "2026-04-20"
+        }
+      ],
+      "comparison": "No current-vs-baseline delta can be established because current request returned 403. HLE (`hle`) and HLE calibration error are separate fields."
+    }
+  },
+  "nyt_alert": {
+    "alert_id": "07b46a499c183e08a0e2e628cd47a8e7e57854c8",
+    "alert_utc": "2026-10-20T21:51:08Z",
+    "headline": "Michigan Senate Candidates Make Dueling Pitches to Business Leaders in Detroit - The New York Times",
+    "one_exact_alert_link_attempt": {
+      "status": 200,
+      "final_url_remained_google_news": true,
+      "content_type": "text/html; charset=utf-8",
+      "received_utc": "2026-10-20T22:01:36.197661Z",
+      "contains_nytimes_domain_in_body": false,
+      "raw_sha256": "90305afaf7faeac080ca1e3f1c6bd9486f462fa75879e2efef471eec33c6984a",
+      "gzip_sha256": "bf9e36247948d2bf9daf609e4c2b8c02991067069e84ae922d7820ffd1ffa255",
+      "receipt": "logs/cron20261020T2200Z_sources/nyt/nyt_alert.receipt.json",
+      "body": "logs/cron20261020T2200Z_sources/nyt/nyt_alert.body.json.gz",
+      "finding": "HTTP 200 Google News HTML, not a NYT article body; article contents/date/remarks unavailable from this read."
+    }
+  },
+  "hash_verification": "For all three captured bodies, independently decompressed gzip and matched SHA256 against raw_sha256; compressed bytes matched gzip_sha256."
+}
