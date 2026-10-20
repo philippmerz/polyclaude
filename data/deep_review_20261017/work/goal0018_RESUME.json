@@ -1,40 +1,43 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T02:08:33.694289+00:00",
+  "updated_utc": "2026-10-20T02:40:29.750256+00:00",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Published fdb8907:364valued/12blocked, append-onlyfourcase/revisionproof/handoff; no financial action.",
-  "current_turn_progress": "Bounded01:29 news/fullcheck completed; originalKimi412bid filled10YES12c/1.20/0fee. Exacttrade/chain/cash/source/exit/jointreview done; onlyfilledreservation4to3, retain/noadd. No newvaluation or queue continuation.",
+  "evidence": "Published fb0b610 complete bounded02UTC state/source/news/operations/discovery/accountverification; no newfinancialaction or valuation then.",
+  "current_turn_progress": "Already-active416Felix completed: fullrule/primaryissuer/product review, subjective11.088%YES saved before ownpriceinspection, bothsidefees/depth/carry/maker/portfolio comparison. Saved/indexed immediately; noentry. Boundedfollowup ends; no nextcase started.",
   "counts": {
-    "completed_valuations": 366,
+    "completed_valuations": 367,
     "blocked_after_in_depth_review": 12,
     "factual_exclusions": 364,
-    "pending": 2258,
-    "base_records": 742,
+    "pending": 2257,
+    "base_records": 743,
     "revisions_written": 69,
     "active_indices": []
   },
   "last_completed": {
-    "index": 414,
+    "index": 416,
     "status": "valued",
-    "report": "evaluations/0414.md",
-    "sha256": "61ddce671dfcd0d958c4b81b3ee195f4fe0f8c28eabadfa7c433e0a01cd5edbb",
-    "p_yes": 0.08037390523090565,
+    "report": "evaluations/0416.md",
+    "sha256": "4a535d80e132ab96cc61e06ec033e0599338ac105ae1ce665915c6ffebc86989",
+    "p_yes": 0.11087999999999999,
     "decision": "NO_ENTRY"
   },
   "next": [
-    416,
-    418
+    418,
+    422,
+    425
   ],
   "next_facts": {
-    "416": "work/0416_facts_0122.json"
+    "418": "work/0418_facts_0230.json",
+    "422": "work/0422_facts_0230.json",
+    "425": "work/0425_facts_0230.json"
   },
   "next_existing_safety": "2026-10-20T06:00:00Z",
-  "financial_state": "Canonical02:00:30\u201347:195.91incl5.81gas;190.10tradingmid/187.90indicative depth, PM36.15/33.95. CSV228.01:59pUSD19.251290 and3LIVE0bids6.50 =>12.751290arithmetic/notfreecollateral. Kimiheld10YEScost1.20/0fee, no saleprofit.",
-  "goal_state": "Remaining frozen queue incomplete. Bounded news/check run ends after verification/publication; no goal lifecycle/newtimer/idlecontinuation. Next scheduler clocklight06/full14 or earliermaterialevent; a separate queued dispatch is not automatically a completed review.",
+  "financial_state": "Lastcanonical02:14:58–02:15:13:196.23incl5.82gas;190.41tradingmid/187.75indicative fee-netdepth(+10.44%vs170),PM36.47/33.81,CSV229.02:15pUSD19.251290 and3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral. Kimi10YEScost1.20/0fee. No newaggregate/CSV thisfollowup.",
+  "goal_state": "Finitefrozenqueue incomplete. Latest scheduledcontract governs thisboundedrun: safetycheck and already-active416followup complete, no goal lifecycle/newtimer/idlecontinuation or nextcase start. Resume418 only on independentlyauthorized work.",
   "safety_followup": {
-    "fixed_news_through": "2026-10-20T01:40:14.786921Z",
-    "report": "research/2026-10-20-012937-checkin.md",
-    "result": "Requested3+related1Michigan reviewed; dailyrederive56/44/noadd. ORsourceupdate12/88/noadd. NewKimiheld/source/fee-netexit/conditionalfill/joint risk checked; finalauditCLEAN/cruxquiet."
+    "fixed_news_through": "2026-10-20T02:14:44.955459Z",
+    "report": "research/2026-10-20-0200-checkin.md",
+    "result": "All11steps;4newsrowsreviewed/no newmaterialfact/heldprior/financialaction. HLE/ORcachedbodiesunchanged02:17; daemonscurrent/single, no executioncodechange."
   },
   "candidate_followup": {
     "index": 412,

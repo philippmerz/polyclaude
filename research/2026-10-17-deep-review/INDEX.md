@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T02:05:19.882747+00:00
+Updated: 2026-10-20T02:38:09.528522+00:00
 
-**366 valuations saved; first milestone100:** 366 valued; 12 blocked after in-depth review. 364 factual exclusions separately; 2258 pending.
+**367 valuations saved; first milestone100:** 367 valued; 12 blocked after in-depth review. 364 factual exclusions separately; 2257 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -427,6 +427,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |413|[Will the highest temperature in Taipei be 34°C on October 17?](evaluations/0413.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |414|[Will the Republicans win the New York governor race in 2026?](evaluations/0414.md)|valued|NO_ENTRY:19YES central+.477814 but selected−1.04929;19NO central−.631524/selected−2.531524. Ordinary makers also fail. No allocation or monitoring change.|
 |415|[Will the Republican Party win the TX-25 House seat?](evaluations/0415.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|416|[Felix Protocol FDV above $800M one day after launch?](evaluations/0416.md)|valued|NO_ENTRY:59YES cost1.07202/central+5.46990/selected−1.07202/broadlow−.48202;5NOcost4.98605/central−.54045/selected−1.29045. Ordinarymakers fail selectedstress. No allocation or monitoring change.|
 |417|[Spread: Presbyterian (-10.5)](evaluations/0417.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |419|[Will the highest temperature in Munich be 15°C or below on October 17?](evaluations/0419.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |420|[Will Atsumi Harasawa win the 2026 Yokohama mayoral election?](evaluations/0420.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|

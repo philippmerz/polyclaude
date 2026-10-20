@@ -1,23 +1,23 @@
 ---
-reviewed_at: "2026-10-20T02:23:49.359243+00:00"
+reviewed_at: "2026-10-20T02:40:29.750256+00:00"
 valid_until: "2026-10-20T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: ecd5b86b29f2a4fc09883290df90f109c345e7f101bf6abd6d11b837428070ef
+  README.md: 3b420c771d4d9e39f2ef6238ed0590d15830587bd16dd862e039908884c651f3
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
   scripts/README.md: 8a5d3cfc5f01f7cb6dd0e8420fcc52d9fd536b358e6606aed218e3c1c2f22b1f
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 8f4f351b185969b7f7e0252ae9b29b7682c8b21c31b207452c3025ef9f303491
+  notes/backlog.md: e6e792d5b6af972f9ba68e3ad8575a1af87ae8e905581155ae48a1ef55aa3ba1
   notes/resting_orders.md: f6af0b66138b1580500b9d794cf0c3678b28c253d1b01f7570b65dbdb1778772
-  notes/journal.md: 8011ed93f1a293d35314d7ff5e28892966248cf700b8527872aabb9cb4c61518
+  notes/journal.md: 4ebcc510130fc0f6f1f4e63c0deb42dbb7e7f814484692f69d64b8b67d9074d3
 ---
 
 ## Current action
 
-**Separate02UTC scheduled11-step check complete; no new fill/action/forecast/Telegram.** Fresh state02:14–15 and source checks02:17 confirm prior holdings/threebids. Nextlight06/full14UTC or earliermaterialsource/fill; no newgoal/timer/idlecontinuation. WeeklyOct23/monthlyNov12 notdue; offchainSundayretired. [Latest check](../research/2026-10-20-0200-checkin.md).
+**Separate02UTC11-step check and already-active416followup complete; no financial action/held-prior change/Telegram.** Fresh state02:14–15 and source checks02:17 confirm prior holdings/threebids. Nextlight06/full14UTC or earliermaterialsource/fill; no newgoal/timer/idlecontinuation. WeeklyOct23/monthlyNov12 notdue; offchainSundayretired. [Latest check](../research/2026-10-20-0200-checkin.md).
 
 ## Holdings and orders
 
@@ -39,6 +39,6 @@ Finalaudit02:15CLEAN/cruxquiet/4centralhurdleclear0flagged. Kellymidpoint/rho ou
 
 ## Finite research and limits
 
-**366valued/12blocked/364factual/2258pending;742base+69revisions/noactive.** Kimi fillrevision adds no valuedmarket.416factsready/unvalued/token-launchambiguity;408sourcegapcase-specific. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), then onlychosenresumeunit. Save/index eachfinishedcase beforestartinganother. Noqueuecontinuationinthisboundedrun; nextnotification400valued/materialfinding/block.
+**367valued/12blocked/364factual/2257pending;743base+69revisions/noactive.**416Felix11.088%YES/broad1–65/lowconfidence/15ppreserve:noentry;59YEScentral+5.46990 butselected−1.07202,5NOcentral−.54045. Saved/indexed with fullrule/hash-verifiedprimarysources/subjectiveeventtree/bothsidecosts.418next,422/425factsreadyonly/unvalued;408sourcegapcase-specific. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), then chosenresumeunit. No nextcase started; nextnotification400valued/materialfinding/block. [Latest case](../research/2026-10-17-deep-review/evaluations/0416.md).
 
 Discovery02:14/scanners/40contextbatches reviewed; page/top/walk omissions explicit.3primary/204thin addedtosnapshot notnewactivelistingproof;72+2356selectedoutside deltabatches unvalued. ConsistencylatestJSONoverwritten/identitydeltaunknown; noabsenceclaim. [Coverage](../data/deep_review_20261017/work/tick020002_discovery_0214_coverage.json). Newsfixedwindowthrough02:14:44.955459; Rogersheadlinepublisherbodyunverified/nomeasuredvoterupdate,3unheldtitlesnodirectportfoliochannel. [Primary review](../data/deep_review_20261017/work/tick020002_primary_review_0220.json). Rawaccount/copyrightbodiesstayprivate. Local--fix receiptread_onlymislabel preservedwithtruthfulsidecar; naive daemonprobe wasfalsepositive, no restart. EntryconsoleTRUE-DUP/asklabel UIlimitation remainsfuturework, gatesunchanged. Unrelatedruntime/draftsexcludedfrompublication.

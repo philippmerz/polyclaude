@@ -1,0 +1,61 @@
+{
+  "schema": "deep_review.primary_model.v1",
+  "review_index": 416,
+  "written_utc": "2026-10-20T02:36:32.235231+00:00",
+  "source_unit": "data/deep_review_20261017/work/0416_primary_sources_0237.json",
+  "source_sha256": "5ca552cf1040cfa134ec9158af49fc4b76057a189f7e4b4c033f5564bc43780e",
+  "own_quotes_seen": false,
+  "provenance_limit": "First attempted durable model write failed because a source directory was absent. Public quotes captured afterward, but only capture counts/hash printed; model now saved before any own-price inspection. Same pre-inspection assumptions. Incidental other-market prices seen, not used as inputs; anchoring risk remains.",
+  "forecast": {
+    "p_yes": 0.11087999999999999,
+    "low": 0.01,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 15.0,
+    "selected_yes": 0,
+    "selected_no": 0.73912,
+    "confidence": "low; subjective event-tree, not fitted posterior"
+  },
+  "branches": [
+    {
+      "interpretation": "prospective nonstable native token",
+      "weight": 0.97,
+      "p_launch_by_deadline": 0.3,
+      "p_fdv_above_800M_given_launch": 0.38,
+      "yes_contribution": 0.11058
+    },
+    {
+      "interpretation": "existing feUSD or atypical adjudication",
+      "weight": 0.03,
+      "p_yes_given_branch": 0.01,
+      "yes_contribution": 0.0003
+    }
+  ],
+  "reasoning": [
+    "CreationNov2025 follows already-live Apr2025feUSD. Most plausible intent is distinct prospective native token; legal feUSD definition is a small competing adjudication branch. Interpretation weights are judgmental.",
+    "Issuer final-pointsApr10 and operating products permit rapid launch. Captured bodies do not establish token commitment/date/supply; full-history gap remains. Old HIP3 contraction weakens ecosystem expansion story without implying all Felix shut. Assign30%launch throughDec31, an unfitted judgment, not search-absence proof.",
+    "Conditional38% above800M: real protocol and low-float speculation can command high FDV, but60MTVL lending scale/product contraction supply no fundamental800M anchor. Total supply, not float, defines FDV; token supply/revenue/float unknown. No empirical comparable sample or TVL multiple assumed.",
+    "Existing feUSD branch: archive reports small early mint/cap, but first qualified trade and nextday supply-price not reconstructed. Conditional1% covers historical/adjudication gap; not a measured-tail probability.",
+    "Broad1–65%YES admits no/small launch and unannounced/high-FDV launch or interpretation alternatives.15pp reserve is a selected decision stress, not statistical confidence bound; no measured-tail K5 license."
+  ],
+  "sensitivity": {
+    "launch_probability_unfitted": [
+      0.1,
+      0.7
+    ],
+    "conditional_above800M_unfitted": [
+      0.15,
+      0.8
+    ],
+    "native_weight_unfitted": [
+      0.85,
+      1.0
+    ],
+    "broad_no_probability": [
+      0.35,
+      0.99
+    ],
+    "not_independent_calibration_samples": true
+  },
+  "timing": "Transferable/tradable token byDec31 23:59ET; strictFDV>800M at4PMET following calendar day, not24hours. Dec31launch measuresJan1 21UTC; normalJanuary settlement fits mandate, disputes/source gaps can lock later.75day baseline/90day carry sensitivity are planning, not guaranteed settlement.",
+  "portfolio": "No Felix holding/bid. Hyperliquid/crypto demand and PM/oracle risk shared; no independence/hedge credit. Current holdings/commitments/cash and Aave compete, no allocation implied."
+}

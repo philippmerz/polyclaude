@@ -1,0 +1,29 @@
+{
+  "review_index": 416,
+  "sources": [
+    {
+      "name": "issuer_post",
+      "url": "https://x.com/felixprotocol/status/2041848234708967726",
+      "status": 200,
+      "raw_sha256": "147e19108c94ec5e2fd3dd69cf1e579e3833777f69c736c9a50e0c736fbcff0a",
+      "receipt": "logs/deep_review_20261017/0416_primary_0237/issuer_post.receipt.json",
+      "read_utc": "2026-10-20T02:34:35.732134Z"
+    },
+    {
+      "name": "attributed_post_mirror",
+      "url": "https://twiscan.com/en/x/felixprotocol/2041848234708967726",
+      "status": 200,
+      "raw_sha256": "2877cf0b0e04d47c068d6402b46023ae8937b656921c88296a1293f55a45ce9e",
+      "receipt": "logs/deep_review_20261017/0416_primary_0237/attributed_post_mirror.receipt.json",
+      "read_utc": "2026-10-20T02:34:34.842448Z"
+    },
+    {
+      "name": "issuer_terms_md",
+      "url": "https://usefelix.gitbook.io/docs/terms/terms-and-conditions.md",
+      "status": 200,
+      "raw_sha256": "b46b9d344aaf1971e00eb993c79539259f76ffdd54d06963d80cae3801837327",
+      "receipt": "logs/deep_review_20261017/0416_primary_0237/issuer_terms_md.receipt.json",
+      "read_utc": "2026-10-20T02:34:35.183694Z"
+    }
+  ]
+}

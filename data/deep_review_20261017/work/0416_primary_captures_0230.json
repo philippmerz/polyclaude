@@ -1,0 +1,37 @@
+{
+  "review_index": 416,
+  "sources": [
+    {
+      "name": "gamma",
+      "url": "https://gamma-api.polymarket.com/markets/716907",
+      "status": 200,
+      "read_utc": "2026-10-20T02:27:54.981944Z",
+      "raw_sha256": "4dae312daf6f8d0cd28b0a849908f1b9069c0cf02cf75ca0ee43e678a6948277",
+      "receipt": "logs/deep_review_20261017/0416_primary_0230/gamma.receipt.json"
+    },
+    {
+      "name": "docs_index",
+      "url": "https://usefelix.gitbook.io/docs/llms.txt",
+      "status": 200,
+      "read_utc": "2026-10-20T02:27:55.405576Z",
+      "raw_sha256": "b40bc91fd5760e3f4a471a2d6c2cda5782f7a3957c061049edfcb32c66240c6e",
+      "receipt": "logs/deep_review_20261017/0416_primary_0230/docs_index.receipt.json"
+    },
+    {
+      "name": "docs_home",
+      "url": "https://usefelix.gitbook.io/docs.md",
+      "status": 200,
+      "read_utc": "2026-10-20T02:27:56.418030Z",
+      "raw_sha256": "09731fc4e3fd2119c0aa8f27a1796ddd3dc64bad7c198a6f46f97956da616d2e",
+      "receipt": "logs/deep_review_20261017/0416_primary_0230/docs_home.receipt.json"
+    },
+    {
+      "name": "docs_cdp",
+      "url": "https://usefelix.gitbook.io/docs/lending-products/quickstart.md",
+      "status": 200,
+      "read_utc": "2026-10-20T02:27:55.409813Z",
+      "raw_sha256": "2306fd7c5d2e66b4485123bb1d850fd569f6d3a550286a30a82cdf1db9e3d312",
+      "receipt": "logs/deep_review_20261017/0416_primary_0230/docs_cdp.receipt.json"
+    }
+  ]
+}

@@ -1,0 +1,238 @@
+{
+  "review_index": 416,
+  "market_id": "716907",
+  "condition_id": "0xceb97ea935b3a028af06390154cb9acd876d35d28101510e0b576694400670e8",
+  "criteria_sha256": "9f136f42873e804c46da69317a1fd8b39d75472e238935b0e515a652e88258ff",
+  "status": "valued",
+  "literal_analysis": "StrictFDV>800M at4PMET calendar dayafter publiclytransferable/tradable Felix tokenlaunch, total supply not circulating cap, most-liquidpricesource; no launch byDec31 23:59ET→NO. Identity not hardcoded; legalfeUSD definition not bindingoracle. NormalearlyJan permitted; disputes/source delaypossible.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/716907",
+      "observed_utc": "2026-10-20T02:27:54.981944Z",
+      "finding": "Exact frozen identity/rules/tokens; created2025-11-27T17:29:52.037419Z, active/unclosed/accepting UMA-null; prices not read."
+    },
+    {
+      "url": "https://usefelix.gitbook.io/docs/readme.md",
+      "observed_utc": "2026-10-20T02:29:39.822497Z",
+      "finding": "Still describes CDP/Vanilla/trading; HIP3 sunset is not whole-protocol closure."
+    },
+    {
+      "url": "https://usefelix.gitbook.io/docs/felix-perpetual-futures/getting-started/flx-hip-3-sunset-guide.md",
+      "observed_utc": "2026-10-20T02:29:39.770466Z",
+      "finding": "FLX HIP3 settlement expected June19Friday; no explicit year in page, June2026 counterparty supplies context. FLX namespace not verified native-token ticker."
+    },
+    {
+      "url": "https://ir.hyperiondefi.com/news-events/press-releases/detail/314/hyperion-defi-reiterates-guidanceon-sunset-of-usdh-and-felix-markets",
+      "observed_utc": "2026-10-20T02:29:39.522323Z",
+      "finding": "June8,2026: USDH-paired Felix HIP3 close byJune22;500kHYPE returned byJune29. Old product disruption, not new Oct20 shock or all-product closure."
+    },
+    {
+      "url": "https://api.llama.fi/protocol/felix",
+      "observed_utc": "2026-10-20T02:29:39.563254Z",
+      "finding": "parent#felix latest1792461023 TVL60,007,689.23982USD; dashsymbol/nullmcap are missing metadata, not proof no token. TVL is not FDV/gross deposits/supply."
+    },
+    {
+      "url": "https://x.com/felixprotocol/status/2041848234708967726",
+      "observed_utc": "2026-10-20T02:34:35.732134Z",
+      "finding": "Direct X fullbody: Apr8,2026 first lending anniversary; final points distributionApr10; ongoing RWA/lending product work. No token allocation,launchdate,supply,vesting or FDV promise in this post."
+    },
+    {
+      "url": "https://usefelix.gitbook.io/docs/terms/terms-and-conditions.md",
+      "observed_utc": "2026-10-20T02:34:35.183694Z",
+      "finding": "Legal Token refers to CDP stablecoin currentlyfeUSD or designated successor; legal definition does not bind PM resolver."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11087999999999999,
+    "low": 0.01,
+    "high": 0.65,
+    "method": "Primary unfitted interpretation×launch×conditionalFDV tree; own prices unseen through durable model save; incidental unrelated-market price exposure disclosed.",
+    "reasoning": "97%prospective native interpretation×30%qualifyinglaunch×38%FDV>800M plus3%existingfeUSD/otherinterpretation×1%YES =11.088%. Points confirmed, no date/supply commitment in captured body; old HIP3 contraction not whole protocol closure. Broad1–65% and15pp reserve reflect missing history, interpretation, tokenomics and speculative FDV; not calibrated.",
+    "actual_entry_reserve_pp": 15.0,
+    "model_path": "models/0416_felix_primary_0237.json",
+    "model_sha256": "c53ed937a604ced2339af553287371fa99d4e7443ede47a63bba203cb9a3810d"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0416_quote_0238.json",
+    "quote_file_sha256": "59e79d50142b454defeecec7fdb212053b873f47dd804576d23d4bf1e592f42b",
+    "quote_capture_utc": "2026-10-20T02:35:51.112123+00:00",
+    "gamma_received_utc": "2026-10-20T02:35:50.956579+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.11087999999999999,
+        "selected_stress_probability": 0,
+        "best_bid": 0.003,
+        "best_ask": 0.017,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792463694739",
+        "book_received_utc": "2026-10-20T02:35:51.111282+00:00",
+        "book_age_seconds_at_receipt": 56.37228202819824,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.085,
+            "fee": 0.00585,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.017
+              }
+            ],
+            "net": 0.09085
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.015,
+            "fee": 0.00105,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.003
+              }
+            ],
+            "net": 0.013949999999999999
+          }
+        },
+        "taker_cost_usd": 0.09085,
+        "central_expected_profit_usd": 0.46355,
+        "selected_stress_profit_usd": -0.09085,
+        "break_even_before_carry": 0.01817,
+        "break_even_constant_carry": 0.018288111060894868,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.88912,
+        "selected_stress_probability": 0.73912,
+        "best_bid": 0.983,
+        "best_ask": 0.997,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792463694739",
+        "book_received_utc": "2026-10-20T02:35:51.111282+00:00",
+        "book_age_seconds_at_receipt": 56.37228202819824,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.985,
+            "fee": 0.00105,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.997
+              }
+            ],
+            "net": 4.9860500000000005
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.915,
+            "fee": 0.00585,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.983
+              }
+            ],
+            "net": 4.90915
+          }
+        },
+        "taker_cost_usd": 4.9860500000000005,
+        "central_expected_profit_usd": -0.5404500000000008,
+        "selected_stress_profit_usd": -1.2904500000000008,
+        "break_even_before_carry": 0.9972100000000002,
+        "break_even_constant_carry": 1.0036921976353865,
+        "current_execution_authorization": false
+      }
+    },
+    "route_sized_yes": {
+      "hypothetical_gross_shares": 59,
+      "source": "data/deep_review_20261017/work/0416_economics_route_0238.json",
+      "probability": 0.11087999999999999,
+      "selected_stress_probability": 0,
+      "best_bid": 0.003,
+      "best_ask": 0.017,
+      "minimum_shares": "5",
+      "tick_size": "0.001",
+      "book_timestamp": "1792463694739",
+      "book_received_utc": "2026-10-20T02:35:51.111282+00:00",
+      "book_age_seconds_at_receipt": 56.37228202819824,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 59.0,
+          "gross": 1.0030000000000001,
+          "fee": 0.06902,
+          "fills": [
+            {
+              "shares": 59.0,
+              "price": 0.017
+            }
+          ],
+          "net": 1.0720200000000002
+        },
+        "bids": {
+          "complete": true,
+          "filled": 59.0,
+          "gross": 0.177,
+          "fee": 0.01236,
+          "fills": [
+            {
+              "shares": 59.0,
+              "price": 0.003
+            }
+          ],
+          "net": 0.16463999999999998
+        }
+      },
+      "taker_cost_usd": 1.0720200000000002,
+      "central_expected_profit_usd": 5.469899999999999,
+      "selected_stress_profit_usd": -1.0720200000000002,
+      "break_even_before_carry": 0.01816983050847458,
+      "break_even_constant_carry": 0.018287940467617995,
+      "current_execution_authorization": false,
+      "broad_low_probability": 0.01,
+      "broad_low_expected_profit_usd": -0.48202,
+      "break_even_constant_carry_90day": 0.018311654430706908
+    },
+    "minimum_and_horizon": "5sharesvenue minimum;5YESgross.085 does not meet separate1USDroute minimum.59YESgross1.003/fee.06902 is valid-sized hypothetical;5NOgross4.985.59NO is only sensitivity, not intended ticket (58.83536cost exceeds15%cap at dated bankroll).75daybaseline/90daysensitivity, not guaranteed settlement.",
+    "maker_comparison": "YESordinary0.003–0.017 fails selectedp0 at every positive price; NOordinary0.983–0.997 fails central.88912 and selected.73912 even before carry. Makers can select adverse launch news; no remote bid or haircut reduction.",
+    "portfolio_and_alternatives": "No Felix holdings/commitments; crypto-demand/Hyperliquid and PM/oracle risk shared, no hedge/independence credit. Date02:15 threeexistingbids6.50 and held risk retained; no fresh financialgate because no allocation. Aave3.2035%lastOct19 18:02 is a variable-rate/funding-cost planning sensitivity, not executable-free-cash certificate. Known NY414 fails10ppreserve; Kimiheld10YES1.20noadd. This case establishes no best market in the unreviewed universe.",
+    "operational_limits": "Public quote saved02:35:51; exact Gamma/fee fd/books hash-bound; CLOBage56.37s atreceipt. No geoblock/account/funding/allowance/post-only/conditional-fill verification for a neworder. Dated planning only; no writer invoked."
+  },
+  "verdict": "NO_ENTRY:59YES cost1.07202/central+5.46990/selected−1.07202/broadlow−.48202;5NOcost4.98605/central−.54045/selected−1.29045. Ordinarymakers fail selectedstress. No allocation or monitoring change.",
+  "reopen_condition": "Verified TGE/tokenallocation/supply/publictrading/date or historicallaunch evidence, exacttoken/UMA clarification or materialproduct update; refresh fullbothsideeconomics/currentportfolio and lawfulvettedexecution.",
+  "evaluated_utc": "2026-10-20T02:38:06.143101+00:00",
+  "question": "Felix Protocol FDV above $800M one day after launch?",
+  "valuation_author": "primary_operator",
+  "original_index": 416,
+  "report_sha256": "4a535d80e132ab96cc61e06ec033e0599338ac105ae1ce665915c6ffebc86989"
+}

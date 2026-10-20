@@ -1,0 +1,45 @@
+{
+  "review_index": 416,
+  "sources": [
+    {
+      "name": "docs_home",
+      "url": "https://usefelix.gitbook.io/docs/readme.md",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/0416_primary_0234/docs_home.receipt.json",
+      "raw_sha256": "5cb940e22c386dd700a493a8f342cb52a1d094e6adf3eead0724c30b686c03c6",
+      "read_utc": "2026-10-20T02:29:39.822497Z"
+    },
+    {
+      "name": "sunset",
+      "url": "https://usefelix.gitbook.io/docs/felix-perpetual-futures/getting-started/flx-hip-3-sunset-guide.md",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/0416_primary_0234/sunset.receipt.json",
+      "raw_sha256": "133987fe9fc4610d01d0b487cefc37b130425ca3d83baa735ab4ab26180835ed",
+      "read_utc": "2026-10-20T02:29:39.770466Z"
+    },
+    {
+      "name": "counterparty",
+      "url": "https://ir.hyperiondefi.com/news-events/press-releases/detail/314/hyperion-defi-reiterates-guidanceon-sunset-of-usdh-and-felix-markets",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/0416_primary_0234/counterparty.receipt.json",
+      "raw_sha256": "75e98db5953c8141d6bedbae37fa8e5eb34658544a1add1d243621aeb76fa896",
+      "read_utc": "2026-10-20T02:29:39.522323Z"
+    },
+    {
+      "name": "llama",
+      "url": "https://api.llama.fi/protocol/felix",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/0416_primary_0234/llama.receipt.json",
+      "raw_sha256": "0e97c6fb579c209a5516b974ec9748b4fef907739d450366c7d4fbd8897088a8",
+      "read_utc": "2026-10-20T02:29:39.563254Z"
+    },
+    {
+      "name": "official_thread_archive",
+      "url": "https://threadreaderapp.com/user/felixprotocol",
+      "status": 200,
+      "receipt": "logs/deep_review_20261017/0416_primary_0234/official_thread_archive.receipt.json",
+      "raw_sha256": "c206cd2105df4ed61d4bd83a2c929ff9635a98982768a26af9910ecc16c09c7c",
+      "read_utc": "2026-10-20T02:29:39.929862Z"
+    }
+  ]
+}

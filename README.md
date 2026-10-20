@@ -56,13 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
-**366 valued /12 blocked /364 factual /2,258 pending;742 base+68 revisions; no active case.**412Kimi HLE≥55 is valued at34.02125%YES with a15pp selected reserve;414NY Republican governor8.03739%YES fails the10pp reserve after costs. Both were saved/indexed individually.416facts are ready, unvalued; its token/launch identity gap needs primary resolution before a forecast.408gross-sale source/API gap remains case-specific. [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
+**367 valued /12 blocked /364 factual /2,257 pending;743 base+69 revisions; no active case.** Latest416Felix: YES11.088% (broad1–65%, low confidence),15pp reserve; neither side supports entry after costs/uncertainty. Saved and indexed individually.418/422/425 have factual packets only; primary valuation remains pending.408source gap is case-specific. [Latest case](research/2026-10-17-deep-review/evaluations/0416.md) · [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
 
-**Four LIVE zero-matched bids commit $7.70, independently verified01:24:49–50UTC.** Kimi41210YES12c/maximum1.20 was submitted once through the vetted writer; the original three bids remain unchanged. No Kimi holding, purchase or profit; source interpretation and adverse fills can lose the full1.20. Existing02UTC remains the next full review. [Exact orders/management](notes/resting_orders.md) · [Primary proof](data/deep_review_20261017/work/0412_post_primary_0143.json).
-
-**Whalefall resolved YES: six NO shares pay0/full1.02economic loss.** Exact CTF payout and NegRisk token identity were verified; valueless tokens remain without a sale/burn/redemption transaction. Original forecasts/DEC222,235 are preserved. [Resolution](research/2026-10-19-whalefall-resolution.md).
-
-The delayed23:58 requested Parton news IDs were reviewed against prior sources and exact zero-exposure proof; no repeat cancellation or Telegram. Scoped Kimi coverage was added only after source and current headline review. No daemon code changed or forced poll occurred. [Event closeout](data/deep_review_20261017/work/tick235849_primary_closeout_0055.json).
+**Kimi412 is10YES held at12c/1.20cost, not an open bid.** Three original LIVE zero-matched political bids commit6.50, independently verified02:15UTC. Retain/noadd; full Kimi loss/source delay remains possible. No new financial action during the02UTC check or Felix follow-up. [Exact orders/management](notes/resting_orders.md) · [Current held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
 
 ## Mandate and constraints
 

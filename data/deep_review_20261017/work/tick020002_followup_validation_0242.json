@@ -1,0 +1,34 @@
+{
+  "schema": "bounded_review_followup.validation.v1",
+  "validated_utc": "2026-10-20T02:41:44.284128+00:00",
+  "checkin": "research/2026-10-20-0200-checkin.md",
+  "new_completed": [
+    416
+  ],
+  "report_sha256": "4a535d80e132ab96cc61e06ec033e0599338ac105ae1ce665915c6ffebc86989",
+  "counts": {
+    "completed_valuations": 367,
+    "blocked_after_in_depth_review": 12,
+    "factual_exclusions": 364,
+    "pending": 2257,
+    "base_records": 743,
+    "revisions_written": 69,
+    "active_indices": []
+  },
+  "handoff_status": "within_declared_validity",
+  "packet_bytes": 9978,
+  "handoff_source_hashes_verified": true,
+  "base_ledger_append_only": true,
+  "journal_append_only": true,
+  "unchanged_financial_or_historical_records": [
+    "notes/decisions.json",
+    "notes/portfolio_kelly_priors.json",
+    "docs/performance.csv",
+    "research/2026-10-17-deep-review/revisions.jsonl"
+  ],
+  "three_next_fact_pointers_hash_match": true,
+  "execution_authorized_by_packet": false,
+  "financial_actions": [],
+  "new_timers_or_idle_followups": false,
+  "goal_lifecycle_mutations": false
+}
