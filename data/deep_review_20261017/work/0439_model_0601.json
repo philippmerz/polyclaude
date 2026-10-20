@@ -1,0 +1,55 @@
+{
+  "schema": "primary_contract_forecast.v1",
+  "review_index": 439,
+  "saved_utc": "2026-10-20T05:59:22.638731+00:00",
+  "market_id": "1280933",
+  "condition_id": "0xb54d34c4e90d8b52430f6f51413f2908b65d6cf8657a8cfad2e7f595dbd28de2",
+  "criteria_sha256": "e0acbd9283af4a0627a73ccf64aac454f8d4f9d126d5644e4a92d5ec15d696aa",
+  "token_ids": [
+    "67331357705585385027071329660686959600809248171117571210800179069993878608538",
+    "89112008640481353696429738400155169798395363167732806062573137685710743121315"
+  ],
+  "price_exposure": "No own439prices inspected before this model. Official regular primary and certifiedNovember candidates/map reviewed, no oldspecialmap forecast transfer.",
+  "primary_inputs": {
+    "June_regular_primary_D": 125196,
+    "June_regular_primary_R": 92975,
+    "June_regular_primary_NPP": 2424,
+    "two_party_D_share": 0.5738434530712148,
+    "same_primary_map_vs_official_new_district_counties": "Sonoma/Lake/Mendocino included in regularPDF and officialnewmap; distinct oldspecial list"
+  },
+  "subjective_vote_share_bridge": {
+    "formula": "0.5+0.6*(primary_two_party_D_share-0.5)-0.01",
+    "retention_of_primary_partisan_gap": 0.6,
+    "R_incumbency_candidate_adjustment": 0.01,
+    "mean_Nov_D_share": 0.5343060718427288,
+    "unfitted_total_error_sd": 0.05,
+    "normal_error_win_probability": 0.7536817330202901,
+    "limits": "60%gapretention/1ppcandidateadjustment/5ppSD are primary judgments, not fitted coefficients, measuredpolls or ballot-level samplingerror. No namedcurrentdistrictpoll/PVI reaggregation verified. Junevotes not random November sample; turnout, Denneytransfer and national swing correlated."
+  },
+  "adopted_p_yes": 0.75,
+  "adopted_p_no": 0.25,
+  "broad_probability_range_yes": [
+    0.35,
+    0.97
+  ],
+  "selected_absolute_reserve": 0.1,
+  "selected_yes": 0.65,
+  "selected_no": 0.15,
+  "party_rule": "Ballot-listed/identifiable party when all2026Houseelections conclusivelycalled; caucusintent onlyfornon-D/Rcandidate; consensusreporting/FECambiguityfallback. MetadataNov4 not guaranteedfinalsettlement.",
+  "catalysts": "Ongoingballoting/mail sinceOct5; Nov3election/calltiming; districtpoll, campaign/ballot/candidate/maplegalnews can materially shift forecast.",
+  "portfolio": "SameUSelection/nationalturnout correlation withMI and ME02/CA06/NY01pendingpilots; noindependencecredit. Comparebothoutcomes/maker/datedAavecash and knowncandidates beforeentry.",
+  "source_units": [
+    {
+      "path": "work/0439_facts_0400.json",
+      "sha256": "55b3e0c8f40b9a70033702541e545ad618959f070e55b5255314de3391ea86db"
+    },
+    {
+      "path": "work/0439_regular_facts_0558.json",
+      "sha256": "539ecab024e2e2709b74345fc543a07ec84771ca5ca722fe726dcd227ce2acca"
+    },
+    {
+      "path": "work/0439_certified_facts_0600.json",
+      "sha256": "e4a2d9b51c127304f8aa3f689c67b94895ec408b465bb777f0bcd2460289dd66"
+    }
+  ]
+}

@@ -1,9 +1,15 @@
 {
   "review_index": 439,
-  "updated_utc": "2026-10-20T04:09:26.767943+00:00",
-  "phase": "collector facts only, root full-rule/source verification and valuation or factual exclusion pending",
+  "updated_utc": "2026-10-20T06:08:53.773333+00:00",
+  "phase": "Completed valuation88%YES/12%NO, no entry;75%prequote and88%postquote source update preserved",
   "source_paths": [
-    "work/0439_facts_0400.json"
+    "evaluations/0439.md",
+    "work/0439_model_update_0606.json",
+    "work/0439_economics_update_0607.json"
   ],
-  "facts_sha256": "55b3e0c8f40b9a70033702541e545ad618959f070e55b5255314de3391ea86db"
+  "facts_sha256": "55b3e0c8f40b9a70033702541e545ad618959f070e55b5255314de3391ea86db",
+  "model_sha256": "c6b323b0ca371a41ea30dcb8ac3aea6be4e2ef4afceb0c39dac5e5b6319609b6",
+  "report": "evaluations/0439.md",
+  "report_sha256": "83d5dbc50bccb9d13156001ef9fbb0eb4af579a8c890c9b9e4cea0da689380d6",
+  "status_limit": "Not executionauthority. Actualnew-map source correctsneutralshrink; oldspecial62.1 notused. NOpointedgefailsselected; nofinancialaction."
 }

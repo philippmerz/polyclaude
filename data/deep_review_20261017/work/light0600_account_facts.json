@@ -1,0 +1,194 @@
+{
+  "schema": "light0600_account_facts.v1",
+  "observed_utc": "2026-10-20T06:00:56.261961+00:00",
+  "capture_dir": "logs/lightcheck_20261020T0600/account",
+  "orders": [
+    {
+      "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+      "status": "LIVE",
+      "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+      "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+      "side": "BUY",
+      "original_size": "10",
+      "size_matched": "0",
+      "price": "0.12",
+      "expiration": "0"
+    },
+    {
+      "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+      "status": "LIVE",
+      "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+      "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+      "side": "BUY",
+      "original_size": "50",
+      "size_matched": "0",
+      "price": "0.03",
+      "expiration": "0"
+    },
+    {
+      "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+      "status": "LIVE",
+      "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+      "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+      "side": "BUY",
+      "original_size": "10",
+      "size_matched": "0",
+      "price": "0.38",
+      "expiration": "0"
+    }
+  ],
+  "order_inventory_same_three": true,
+  "trades_count": 127,
+  "previous_trades_count": 127,
+  "new_trade_ids": 0,
+  "missing_trade_ids": 0,
+  "trades_exact_rows_equal": true,
+  "public_positions_count": 9,
+  "public_positions_complete_single_page": true,
+  "public_indexed_exposure": [
+    {
+      "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+      "outcome": "Yes",
+      "size": 29,
+      "totalBought": 29,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+      "outcome": "No",
+      "size": 29,
+      "totalBought": 29,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+      "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+      "outcome": "Yes",
+      "size": 10,
+      "totalBought": 10,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+      "outcome": "No",
+      "size": 6,
+      "totalBought": 6,
+      "redeemable": true
+    },
+    {
+      "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+      "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+      "outcome": "Yes",
+      "size": 5,
+      "totalBought": 5,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+      "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
+      "outcome": "No",
+      "size": 5,
+      "totalBought": 5,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+      "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
+      "outcome": "No",
+      "size": 5,
+      "totalBought": 5,
+      "redeemable": false
+    },
+    {
+      "conditionId": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+      "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+      "outcome": "No",
+      "size": 4.0347,
+      "totalBought": 161.0947,
+      "redeemable": true
+    },
+    {
+      "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+      "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+      "outcome": "No",
+      "size": 0.33,
+      "totalBought": 28.33,
+      "redeemable": false
+    }
+  ],
+  "hle": {
+    "status": 403,
+    "rawsha": "a4ef04711c39a3368d7b423e41fba36e69ddad519563c2d9eed4fe54699481c7",
+    "received": "2026-10-20T06:00:56.162972Z",
+    "age": null
+  },
+  "receipts": [
+    {
+      "name": "hle_models",
+      "started_utc": "2026-10-20T06:00:55.957054Z",
+      "received_utc": "2026-10-20T06:00:56.162972Z",
+      "response_status": 403,
+      "raw_sha256": "a4ef04711c39a3368d7b423e41fba36e69ddad519563c2d9eed4fe54699481c7",
+      "gzip_sha256": "9a98cf6598bfc88cd5aa88a31a7cf5f0f134741be9c864619ad300f84886e9af",
+      "body_representation": "http_body"
+    },
+    {
+      "name": "order_detail_0",
+      "started_utc": "2026-10-20T06:00:55.444716Z",
+      "received_utc": "2026-10-20T06:00:55.549883Z",
+      "response_status": 200,
+      "raw_sha256": "723ea3ff779880802c8ed2a61f8c51d98bbe8ef663ec008385dcfa4556474a19",
+      "gzip_sha256": "7522505e688641c092adc890e853c467ede1bfa06e42db73c75079a2a8838e8f",
+      "body_representation": "sdk_result_serialization"
+    },
+    {
+      "name": "order_detail_1",
+      "started_utc": "2026-10-20T06:00:55.561521Z",
+      "received_utc": "2026-10-20T06:00:55.665293Z",
+      "response_status": 200,
+      "raw_sha256": "c33a4757e14a36b74908903385475227165fa9ff1f1af6bfe43e3b9c4d67e352",
+      "gzip_sha256": "cccac29bf81c0ce6159e0da63492a38620bdf995f78254447382c69cced1bf68",
+      "body_representation": "sdk_result_serialization"
+    },
+    {
+      "name": "order_detail_2",
+      "started_utc": "2026-10-20T06:00:55.674701Z",
+      "received_utc": "2026-10-20T06:00:55.775913Z",
+      "response_status": 200,
+      "raw_sha256": "5964c18d0f47461262006edfa790365b24e41e8c97242bde3fac671b64909fbe",
+      "gzip_sha256": "09bc338c95baf86cd03bebf0fadd238479f31cef3e3c8e795ee4f75663c6a8c6",
+      "body_representation": "sdk_result_serialization"
+    },
+    {
+      "name": "orders",
+      "started_utc": "2026-10-20T06:00:55.001452Z",
+      "received_utc": "2026-10-20T06:00:55.269229Z",
+      "response_status": 200,
+      "raw_sha256": "9fcf12bde21e9669cb4556e0afa6a1e7edb4cb0677f86564bbb37e36e1d3f377",
+      "gzip_sha256": "b9753c9de78a0a164f55eb14cff16610d941adb951ec2b94a6998ee907633252",
+      "body_representation": "sdk_result_serialization"
+    },
+    {
+      "name": "positions",
+      "started_utc": "2026-10-20T06:00:55.816387Z",
+      "received_utc": "2026-10-20T06:00:55.945891Z",
+      "response_status": 200,
+      "raw_sha256": "9e2a851ce7644cf2a8fea4a907ec7127a72bac86f8d9ed5174545adabf6ec430",
+      "gzip_sha256": "1aaec8d8656fba139a1281e70813f4e703dce28cc00bc8aa40a851956b6f01b7",
+      "body_representation": "http_body"
+    },
+    {
+      "name": "trades",
+      "started_utc": "2026-10-20T06:00:55.281363Z",
+      "received_utc": "2026-10-20T06:00:55.422353Z",
+      "response_status": 200,
+      "raw_sha256": "46e20e4845d02788df18d10b89ac3720a01206402f4a9c3b75d2e2085007b250",
+      "gzip_sha256": "cc4378171243342ee76b14f6435b8e620d3a9df86e7d74610d37b798c0b5d5f9",
+      "body_representation": "sdk_result_serialization"
+    }
+  ],
+  "limits": "SDKresultserializations, not raw authenticatedHTTP; callwindowtimes. PublicindexnotnewCTFproof. No bankrollproducer/CSV/financialwriter. Compare sameorderedtradebytes with prior wrapper only where shapes agree."
+}

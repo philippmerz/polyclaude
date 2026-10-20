@@ -1,0 +1,249 @@
+{
+  "review_index": 438,
+  "market_id": "4620250",
+  "condition_id": "0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+  "criteria_sha256": "0d6f83e6343fe19e3375628490fbb2ee90a2e558dfea36efa07cb6ceb33f53ec",
+  "token_ids": [
+    "12986041958032490956100187529369728708256259581035618976714497828677868886315",
+    "98282689049673050962334818467743727614818971377812348096485339058203693156854"
+  ],
+  "status": "valued",
+  "literal_analysis": "Full frozen rule, actual creation and ET deadline reviewed; general Iran-initiated commercial closure, limited approved exceptions; partial/foreign/weather/natural-disaster restrictions excluded. Unknown past NOTAM/source history explicitly priced, not absence.",
+  "evidence": [
+    {
+      "url": "https://www.easa.europa.eu/en/domains/air-operations/czibs/czib-2026-04-r2",
+      "observed_utc": "2026-10-20T03:56:16.204541Z",
+      "finding": "Actual bulletin/body previously root verified/read; September30 extension unchanged-content, foreign safety recommendation not Iranian closure."
+    },
+    {
+      "url": "https://shafaq.com/en/society/Iran-bars-two-Iraqi-planes-from-its-airspace",
+      "observed_utc": "2026-10-20T03:57:05.892043Z",
+      "finding": "Actual full article root verified/read; two specific flights/security/unnamed source, not general commercial FIR closure."
+    },
+    {
+      "url": "https://notamify.com/notams/OIIX/f5851184-f4d9-484b-8902-a0ac204f63e2",
+      "observed_utc": "2026-10-20T05:52:24.170561Z",
+      "finding": "Direct403 verified; resumption/date/replacement search lead not an official historical body or closure/absence proof."
+    },
+    {
+      "url": "https://clob.polymarket.com/markets/0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+      "observed_utc": "2026-10-20T05:53:31.211258+00:00",
+      "finding": "Exact condition/outcomes/tokens; full CLOB numeric taker0/maker0 corroborates Gamma explicit fee-disable; no invented compact fd/structured parity."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11,
+    "low": 0.02,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 10,
+    "method": "Primary unfitted history-plus-forward-regime conditional tree.",
+    "reasoning": "3% unrecovered qualifying history +97%*(12% wider escalation*55% general closure +88%*1.5% other qualifying security closure)=10.6824%, rounded11. Source/risk uncertainty broad, not calibrated. Point unchanged after unverified supplementary leads; saved before own quote.",
+    "model_path": "data/deep_review_20261017/work/0438_model_0552.json",
+    "model_sha256": "35decfe99d9d62b28b48e9ccf97e6338f56511502fe56d582234f0e90060b2ff"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0438_quote_repair_0556.json",
+    "quote_file_sha256": "351c2289e533899fcf49f8c57f166fe7daf6a584db89d62b649044a43fa90b3c",
+    "quote_capture_utc": "2026-10-20T05:53:31.400537+00:00",
+    "gamma_received_utc": "2026-10-20T05:53:31.086702+00:00",
+    "horizon_days": 13.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.11,
+        "selected_stress_probability": 0.009999999999999995,
+        "best_bid": 0.07,
+        "best_ask": 0.09,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792475609954",
+        "book_received_utc": "2026-10-20T05:53:31.263498+00:00",
+        "book_age_seconds_at_receipt": 1.3094980716705322,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 12.0,
+            "gross": 1.08,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 12.0,
+                "price": 0.09
+              }
+            ],
+            "net": 1.08
+          },
+          "bids": {
+            "complete": true,
+            "filled": 12.0,
+            "gross": 0.8400000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 12.0,
+                "price": 0.07
+              }
+            ],
+            "net": 0.8400000000000001
+          }
+        },
+        "taker_cost_usd": 1.08,
+        "central_expected_profit_usd": 0.24,
+        "selected_stress_profit_usd": -0.9600000000000002,
+        "break_even_before_carry": 0.09000000000000001,
+        "break_even_constant_carry": 0.09010113382111501,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.89,
+        "selected_stress_probability": 0.79,
+        "best_bid": 0.91,
+        "best_ask": 0.93,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792475609954",
+        "book_received_utc": "2026-10-20T05:53:31.263498+00:00",
+        "book_age_seconds_at_receipt": 1.3094980716705322,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.65,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.93
+              }
+            ],
+            "net": 4.65
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.55,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.91
+              }
+            ],
+            "net": 4.55
+          }
+        },
+        "taker_cost_usd": 4.65,
+        "central_expected_profit_usd": -0.20000000000000018,
+        "selected_stress_profit_usd": -0.7000000000000002,
+        "break_even_before_carry": 0.93,
+        "break_even_constant_carry": 0.9310450494848552,
+        "current_execution_authorization": false
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 12,
+      "No": 5
+    },
+    "fee_basis": {
+      "basis": "exact_gamma_fees_disabled_and_full_clob_numeric_zero_taker_base_fee",
+      "compact_descriptor": null,
+      "structured_gamma_parity": null,
+      "fee_free_corroborated": true,
+      "full_market_receipt": "logs/deep_review_20261017/case0438_quote_repair_0556/public/0438_full_fee_free.receipt.json",
+      "interpretation": "Gamma strict boolean fee-disable plus exact fullCLOB numeric zero taker_base_fee corroborates dated zero planning fees. pm_fees.authoritative=False labels nonstructured rate convention, not missing fee-disable evidence. Fullmaker_base_fee0 separately observed. Not executionapproval/futurefee guarantee."
+    },
+    "maker_analysis": {
+      "Yes": {
+        "price": 0.07,
+        "shares": 15,
+        "gross_cost": 1.05,
+        "central_profit": 0.5999999999999999,
+        "selected_profit": -0.9000000000000001,
+        "selected_profit_after_constant_carry": -0.9011798945796752,
+        "limit": "Quote-time fee-free postonly hypothesis atbid; no fill or conditional probability certification."
+      },
+      "No": {
+        "price": 0.91,
+        "shares": 5,
+        "gross_cost": 4.55,
+        "central_profit": -0.09999999999999964,
+        "selected_profit": -0.5999999999999996,
+        "selected_profit_after_constant_carry": -0.6051128765119254,
+        "limit": "Quote-time fee-free postonly hypothesis atbid; no fill or conditional probability certification."
+      },
+      "remote_NO_78c": {
+        "price": 0.78,
+        "shares": 5,
+        "cost": 3.9,
+        "selected_profit_before_carry": 0.05,
+        "selected_profit_after_constant_carry": 0.04561753441834959,
+        "unmeasured_yes_odds_stress": {
+          "1.5": {
+            "p_yes_at_fill": 0.15639810426540285,
+            "selected_NO_at_fill": 0.7436018957345972
+          },
+          "2": {
+            "p_yes_at_fill": 0.19819819819819817,
+            "selected_NO_at_fill": 0.7018018018018019
+          }
+        },
+        "judgment": "Not proposed: small unconditional margin has no evidenced conditional-fill/catalyst bridge. Full/generalIranclosure or new credible military threat can make a remoteNO bid fill at worsened fundamentals. Multipliers are sensitivity, not fitted probabilities or universalhardgate. Lower blindbid is not evidence of accessibleedge."
+      }
+    },
+    "verified_raw_gzip_receipts": [
+      {
+        "request": "0438_gamma_01",
+        "status": 200,
+        "raw_sha256": "2148a91800735f6d4e1589c5e6fc84c692d4cc20652b7d2d185273e715959159",
+        "received_utc": "2026-10-20T05:53:31.086702+00:00"
+      },
+      {
+        "request": "0438_fee_02",
+        "status": 200,
+        "raw_sha256": "616e15329eb5a5a73e74a1047d3d0bc89d21f35dc12ee03f913b04d06ebad5e1",
+        "received_utc": "2026-10-20T05:53:31.163132+00:00"
+      },
+      {
+        "request": "0438_full_fee_free_03",
+        "status": 200,
+        "raw_sha256": "cd300f8adb5380311a466268e2fe9e548a5394b9a52e73fba047ddb7c7e5b526",
+        "received_utc": "2026-10-20T05:53:31.211258+00:00"
+      },
+      {
+        "request": "books_batch_01_04",
+        "status": 200,
+        "raw_sha256": "416405d4741c3bf3bfcc7ab8cacc42354294a375830e3dd7b250da98bfee11d3",
+        "received_utc": "2026-10-20T05:53:31.263498+00:00"
+      },
+      {
+        "request": "geoblock_05",
+        "status": 200,
+        "raw_sha256": "fd8f3d2712e902228cfdf3f67ec3fec0765a5c9b687cabff1ac71718367da052",
+        "received_utc": "2026-10-20T05:53:31.400015+00:00"
+      }
+    ]
+  },
+  "verdict": "NO_ENTRY: YES positive central fails selected at taker and maker; NO observed routes fail central and selected. RemoteNO narrow unconditional margin unsupported after conditional news/fill, carry and portfolio risk; no blind order.",
+  "reopen_condition": "Verified literal qualifying history/authority notice or material current escalation/supported conditional-fill evidence, then fresh full execution gates.",
+  "report_markdown": "# 0438 \u2014 Iran general airspace closure by October31\n\n**YES11%/NO89%, low confidence; broadYES2\u201365%; no entry.** The primary model was saved before this contract's own quote. A10pp reserve selectsYES1%/NO79%; no measured-tail exception. Identity and full token strings are copied from the frozen condition in the companion JSON.\n\n## Literal rule and evidence\n\nThe window starts at actual creation, September16 17:53:25.865929UTC, and ends November1 03:59UTC (October31 23:59ET). Iran must initiate a general suspension/cancellation applicable to commercial transit across all Iran/Tehran FIR. Limited categories of explicitly approved flights may remain exceptions. Partial/local restrictions, VFR-only measures, foreign airline/regulator warnings and closures solely from weather, earthquakes or volcanoes do not qualify. Official Iranian aviation information and credible-reporting consensus govern. January/February examples predate this window. A resumption or replacement notice does not itself prove a qualifying initiation during it.\n\n- EASA's actual September30 revision extended validity to November16 with no content change. It warns foreign operators against all-altitude Tehran FIR use, citing tensions, air-defence misidentification and possible renewed action. That is an advisory, not Iran closing commercial aviation. Its description of a June17 60-day MOU is not proof that an extension remains operative in October.\n- The full October10 Shafaq report describes two specific Iran-bound planes refused entry for security reasons, attributed to an unnamed security source. The report also discusses Iraqi airline suspension/licensing under sanctions. Neither establishes a general Iran-initiated closure.\n- A2260/A1306 resumption/replacement leads lack directly verified official historical bodies. A new search representation suggests A1306 began in June, but its one ordinary direct GET returned403. The official exact-number search capture failed locally; its empty receipt is not search coverage. No inferred intervening closure, historical absence, or adopted authoritative date follows.\n- Current AP headline leads about restraint, negotiations and regional conflict remain body-unverified after403 responses. They establish neither a verified promise to avoid attacks nor an imminent qualifying closure. Other services' market odds/AI summaries are not evidence or forecast inputs.\n\n## Primary probability bridge\n\nThe saved subjective tree assigns3% to an unrecovered qualifying historical event; conditional on none,12% to wider escalation before cutoff, with55% qualifying general Iran closure conditional on that escalation, plus1.5% other qualifying security closure without wider escalation. Thus .03+.97\u00d7(.12\u00d7.55+.88\u00d7.015)=.106824, rounded11%. Explicitly these are unfitted primary judgments, not measured daily hazards, empirical frequencies, official guarantees or market-derived odds. Unknown history is represented rather than declared absent; the wide range allows much lower future hazard or a missed past order/high-response conflict. The3% historical mass is uncertain and not a certified upper bound. New unverified NOTAM leads do not justify a point update.\n\nGeneral closure can become public abruptly; partial/foreign restrictions can remain extensive without meeting the literal rule. The contract can settle after the deadline or be adjudicated on disputed scope/history. Normal settlement fits the January project evaluation, with delay and venue/oracle losses still possible. The broad endpoints are not automatic entry tests; the selected reserve follows existing instance doctrine.\n\n## Both sides, maker alternatives and portfolio\n\nFresh public capture05:53:31UTC matches exact Gamma/rules/tokens, open/accepting/no UMA status. Five receipt/raw/gzip pairs verified. Books were1.309seconds old at the matching response. The research reader was repaired for this real fee-disabled schema: explicit Gamma boolean false plus exact full CLOB condition/outcome/token mapping and numeric taker_base_fee0 corroborate dated zero fees. Full maker_base_fee0 was separately observed. There is **no fabricated compact fd**: descriptor and structured-schedule parity remain null, with a separate corroborated-evidence label. The old partial packet/error remains preserved.24 focused tests pass, including contradictory/malformed/duplicate-identity controls; no financial writer changed. This is planning evidence, not current execution authority.\n\n12YES at9c meet the five-share and1USD gross minima:1.08cost, central+.24/selected\u2212.96; immediate indicative exit.84.5NO at93c cost4.65, central\u2212.20/selected\u2212.70; exit4.55. The opposite side is fully considered. Dated Aave3.2035% variable APY over13days raises per-share breakevens9\u21929.0101c and93\u219293.1045c; constant carry is a sensitivity, not a rate forecast. Funding, gas, operations and dispute delays are not free.\n\nMakerYES7c\u00d715 costs1.05, central+.60 but selected\u2212.90 before carry; any legal1c quote only reaches the1% selected probability before carry. MakerNO91c\u00d75 costs4.55 and fails central/selected. A remote78c NO bid\u00d75 would cost3.90 and retain only+.05 selected before carry (~+.04562 after). It is not proposed: a closure report or military threat can make that quote fill after its conditional fundamentals deteriorate. Illustrative1.5\u00d7/2\u00d7YES-odds stress gives selectedNO74.36%/70.18%, below78c; these are unmeasured sensitivities, not universal mandatory multipliers. The available evidence supports no reliable conditional-fill margin/cancel-before-news plan. An even lower blind bid does not establish an accessible opportunity.\n\nThe dated04:35 portfolio already has three political bids committing6.50, MI5NO, Kimi10YES, OR5NO, Messi and wholeClarity. This adds global/security and same-venue tail risk, with no independence or hedge credit. Existing pilots/cash/Aave compete for capital; ME02's existing38c versus selected51% gap is a stronger known candidate before its own conditional risks, not authorization to add/chase. Even before portfolio costs, observed routes fail the selected test. No order, transfer, held prior, financial total, CSV row or watcher changed.\n\n**Reopen:** a verified in-window Iranian general-closure notice, credible dated reporting or materially different escalation evidence, or a supported conditional-fill thesis; then current identity, source, eligibility, fees, depth, funding, joint portfolio and mandatory entry gates. No automatic order.\n\n[Prequote model](../../../data/deep_review_20261017/work/0438_model_0552.json) \u00b7 [Initial facts](../../../data/deep_review_20261017/work/0438_facts_0400.json) \u00b7 [NOTAM supplement](../../../data/deep_review_20261017/work/0438_prior_notam_facts_0554.json) \u00b7 [Both-side costs and verified receipts](../../../data/deep_review_20261017/work/0438_economics_0557.json).\n"
+}

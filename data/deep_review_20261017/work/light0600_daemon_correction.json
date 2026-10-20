@@ -1,0 +1,14 @@
+{
+  "observed_at_utc": "2026-10-20T06:03Z",
+  "corrects": "light0600_ops.json daemon counts only; original report and receipts retained",
+  "cause": "Initial process pattern anchored the interpreter as .venv/bin/python3, so it missed .venv/bin/python processes. Its reported missing PID files came from paths guessed under logs/ instead of importing each script's configured PID_PATH. The false down finding is superseded by this correction.",
+  "process_validation": "Read /proc/<pid>/cmdline and start time for each process; accepted both .venv/bin/python and .venv/bin/python3. No process was restarted.",
+  "daemons": {
+    "news_watcher": {"python_process_count": 1, "pid": 148881, "argv_verified": true, "started_utc": "2026-10-19T05:28:37Z", "script_mtime_utc": "2026-10-18T22:58:44Z", "script_mtime_before_start": true, "configured_pid_file_matches_process": true, "log_last_mtime_utc": "2026-10-20T05:57:20Z"},
+    "heartbeat_watch": {"python_process_count": 1, "pid": 450, "argv_verified": true, "started_utc": "2026-10-18T09:33:44Z", "script_mtime_utc": "2026-10-02T14:31:39Z", "script_mtime_before_start": true, "configured_pid_file_matches_process": true, "log_last_mtime_utc": "2026-10-20T05:34:45Z"},
+    "telegram_listener": {"python_process_count": 1, "pid": 451, "argv_verified": true, "started_utc": "2026-10-18T09:33:44Z", "script_mtime_utc": "2026-09-10T18:34:57Z", "script_mtime_before_start": true, "configured_pid_file_matches_process": true, "log_last_mtime_utc": "2026-10-20T01:13:14Z"},
+    "opportunity_watch": {"python_process_count": 1, "pid": 425, "argv_verified": true, "started_utc": "2026-10-18T09:33:44Z", "script_mtime_utc": "2026-09-29T10:07:53Z", "script_mtime_before_start": true, "configured_pid_file_matches_process": true, "log_last_mtime_utc": "2026-10-20T05:59:04Z"}
+  },
+  "shell_wrappers": {"heartbeat_watch": {"count": 1, "pid": 421, "parent_pid": 386}, "telegram_listener": {"count": 1, "pid": 424, "parent_pid": 388}, "other_daemon_shell_wrappers_seen": 0},
+  "pid_path_handling": "Configured PID_PATH values were imported and compared against expected process PIDs; path strings and file contents were not emitted. No private credential paths were printed."
+}

@@ -1,0 +1,55 @@
+{
+  "schema": "case439_rating_facts.v1",
+  "status": "FACTS_READY_NOT_VALUED",
+  "retrieved_utc": "2026-10-20T06:00Z search/open representations; HTTP call windows 2026-10-20T06:00:32.875105Z/06:00:33.856433Z",
+  "identity": {
+    "review_index": 439,
+    "market_id": "1280933",
+    "conditionId": "0xb54d34c4e90d8b52430f6f51413f2908b65d6cf8657a8cfad2e7f595dbd28de2",
+    "question": "Will the Democratic Party win the CA-01 House seat?",
+    "criteria_sha256": "e0acbd9283af4a0627a73ccf64aac454f8d4f9d126d5644e4a92d5ec15d696aa",
+    "Nov3_certified_candidates": "Mike McGuire (Democratic) and James Gallagher (Republican), from separately captured 2026-08-27 CA SOS certified list work/0439_certified_facts_0600.json."
+  },
+  "sources": [
+    {
+      "url": "https://insideelections.com/california-house-voters-enact-new-map-that-benefits-democrats/",
+      "publisher": "Inside Elections, direct original analysis by Jacob Rubashkin, published Nov 6 2025 7:29pm EST",
+      "capture": "logs/deep_review_20261017/0700case0439_rating_facts_0604/inside_newmap_analysis/inside_newmap_analysis.receipt.json",
+      "http_status": 200,
+      "started_utc": "2026-10-20T06:00:33.096231Z",
+      "received_utc": "2026-10-20T06:00:33.673365Z",
+      "raw_sha256": "6aeb7cc1bf010f3a78b7a7e70cb4237439a089a667bc8f2ae0f641e2bc56d438",
+      "gzip_sha256": "4469b809c6de2caee6af4c3fdef2ff8c83383295ae45218e2c7f336cb9620768",
+      "claim": "In its first-district section, article says new district extends south along Pacific Coast to wine country, changed from Trump +25 under former lines to Harris +12 under new lines; it names Harris at 54% in the header. It moved rating from Solid Republican to Solid Democratic. Article context is Nov 2025, when Doug LaMalfa was incumbent and McGuire only described as a possible candidate; do not mistake as 2026 candidate-specific forecast or current rating."
+    },
+    {
+      "url": "https://new.insideelections.com/person/mike-mcguire/",
+      "publisher": "Inside Elections direct CA-01 candidate profile",
+      "capture": "logs/deep_review_20261017/0700case0439_rating_facts_0604/inside_profile/inside_profile.receipt.json",
+      "http_status": 403,
+      "started_utc": "2026-10-20T06:00:32.875105Z",
+      "received_utc": "2026-10-20T06:00:33.085692Z",
+      "raw_sha256": "f261423d1da97890ff6bfccd31ff4ee0b74f69351cf75095fbe791cb16cbf5bd",
+      "gzip_sha256": "6b747eff2fc5f9bbb4677e32763096c2505347c6f059999e5b725cfa8f0729ee",
+      "search_representation": "Publisher search result/profile page representation showed current rating Solid Democrat; 2026 baseline D+11.2 (D55.4/R44.2); rating history through May 8 2026 Solid D, with Mar 7 2025 Solid R. Direct body was 403 (103-byte HTML), so details are not verified from captured page body; rating date/history as represented, not guaranteed current beyond accessible search representation."
+    },
+    {
+      "url": "https://www.cookpolitical.com/ratings/house-race-ratings",
+      "publisher": "Cook Political Report direct-origin Oct 16 2026 House ratings page (search result representation); also requested direct race page https://www.cookpolitical.com/house/race/481821",
+      "capture": "logs/deep_review_20261017/0700case0439_rating_facts_0604/cook_ca01_race/cook_ca01_race.receipt.json",
+      "http_status": 403,
+      "started_utc": "2026-10-20T06:00:33.686931Z",
+      "received_utc": "2026-10-20T06:00:33.856433Z",
+      "raw_sha256": "20125fb420e00b2a32218f518c8bf357e4b91d75d3f8422209b00d1b273de39d",
+      "gzip_sha256": "e3e33c1ef464a7f61ea5cc48b8b8d044399c0e3ad3e333767d03b07567fbd205",
+      "search_representation": "Cook Oct 16 2026 ratings page listed CA-01 Gallagher as Solid Democrat; direct profile search-result text described new, more Democratic-friendly Prop 50 lines and Cook PVI D+7. Direct GET body was 403 (5,609-byte HTML); do not treat search representation as captured full analysis or independently sourced vote reaggregation."
+    }
+  ],
+  "polls": "No named independent CA-01 poll surfaced in the bounded direct-source queries. No poll URL/body, field dates, sample, mode, or result captured; this is not an absence claim.",
+  "source_gaps": [
+    "No Sabato Crystal Ball CA-01 rating result located in this bounded search.",
+    "No official 2024 presidential vote reaggregation on the 2025 map captured; Inside Elections gives a Nov 2025 secondary direct-origin reaggregation (Harris 54%, +12) and explicitly contrasts old Trump +25.",
+    "No forecast, valuation, probability, price, or candidate ranking by collector.",
+    "Hashes are supplied HTTP-body bytes, not wire authentication."
+  ]
+}

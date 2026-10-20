@@ -1,0 +1,58 @@
+{
+  "schema": "case439_regular_facts.v1",
+  "status": "FACTS_READY_NOT_VALUED",
+  "captured_utc": "2026-10-20T05:57:02.662223Z/2026-10-20T05:57:04.381643Z",
+  "identity": {
+    "review_index": 439,
+    "market_id": "1280933",
+    "conditionId": "0xb54d34c4e90d8b52430f6f51413f2908b65d6cf8657a8cfad2e7f595dbd28de2",
+    "question": "Will the Democratic Party win the CA-01 House seat?",
+    "criteria_sha256": "e0acbd9283af4a0627a73ccf64aac454f8d4f9d126d5644e4a92d5ec15d696aa",
+    "resolution": "party of winner of CA-01 House seat at Nov 3, 2026 midterm; ballot-listed/otherwise identifiable affiliation at final calls; if ambiguous credible-reporting consensus, then official U.S. government results (FEC)."
+  },
+  "existing_context_checked": "work/0439_facts_0400.json already preserves June 2 regular primary results (Mike McGuire D 92,121/41.8%; James Gallagher R 92,975/42.1%) and a distinct old-map special primary (Gallagher 62.1%); these do not by themselves verify current certified general ballot or predict Nov results.",
+  "sources": [
+    {
+      "url": "https://www.sos.ca.gov/administration/news-releases-and-advisories/2026-news-releases-and-advisories/california-secretary-state-shirley-n-weber-phd-certifies-candidate-list-november-3-2026-general-election",
+      "kind": "CA Secretary of State press release, PR26-112, Aug 27 2026",
+      "fact": "SOS says it published the certified candidate list for the Nov 3, 2026 general-election ballot; 52 U.S. House seats appear on ballot. Release links official full certified list at https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf. CA-01 entries were not present in the release text and linked PDF was not fetched in this 3-GET budget. Thus this supplement does not independently confirm exact certified matchup/withdrawal status.",
+      "receipt": "logs/deep_review_20261017/0700case0439_regular_facts_0558/sos_nov_candidates/sos_nov_candidates.receipt.json",
+      "status": 200,
+      "started_utc": "2026-10-20T05:57:02.662223Z",
+      "received_utc": "2026-10-20T05:57:03.358627Z",
+      "raw_sha256": "33d84c731407267674a4326eac9be78d52dffdd918e1774b60ff39602ab6f094",
+      "gzip_sha256": "d756d459494497cc7dee4a737c6aad381c2369ce43c89482badb4234843b6c71"
+    },
+    {
+      "url": "https://sdmg.senate.ca.gov/committeehome/2025-congressional-districts",
+      "kind": "California Senate Office of Demographics 2025 congressional map page",
+      "fact": "Official page says 2025 congressional districts were established by voter passage of Proposition 50 on Nov 4, 2025 and will go into effect after the Nov 2026 elections upon seating of the 120th Congress Jan 3, 2027. Page links statewide 2025 congressional district map and CD01; boundary geometry was not separately captured here. This confirms a new-map premise for the incoming Congress but does not provide a reaggregated 2024 CA-01 presidential vote.",
+      "receipt": "logs/deep_review_20261017/0700case0439_regular_facts_0558/ca_2025_maps/ca_2025_maps.receipt.json",
+      "status": 200,
+      "started_utc": "2026-10-20T05:57:03.373407Z",
+      "received_utc": "2026-10-20T05:57:04.201800Z",
+      "raw_sha256": "6e91a4f159748e5dade8b2105cca56457e87a955038d53f40b58ba936a768b40",
+      "gzip_sha256": "0267bf97b6ff7365c84050086a7574d198b8f0d47a9155e1143a362724fcfe6e"
+    },
+    {
+      "url": "https://www.cookpolitical.com/cook-pvi/2025-partisan-voting-index",
+      "kind": "Cook Political Report direct-origin rating page",
+      "result": "HTTP 403 challenge (5,684 bytes); no rating score or contents verified in captured body. Search result named the 2025 PVI dataset and defined it as presidential vote-share relative to nation, but no CA-01 score retrieved. No score inferred.",
+      "receipt": "logs/deep_review_20261017/0700case0439_regular_facts_0558/cook_2025_pvi/cook_2025_pvi.receipt.json",
+      "status": 403,
+      "started_utc": "2026-10-20T05:57:04.216606Z",
+      "received_utc": "2026-10-20T05:57:04.381643Z",
+      "raw_sha256": "2bbcd730ac71f1eca5f51a59a5fd5d6d826fe3c0bfbccda80a87ea978cf42212",
+      "gzip_sha256": "6b97bbd095bc3cfd990a5aaf1d9755f8b7df3774f9d01cca92dde4a33bd5a054"
+    }
+  ],
+  "poll_search": {
+    "scope": "One bounded search query for recent CA-01 McGuire/Gallagher polling; results surfaced forecast aggregators and no identifiable named district poll/source. No poll body was opened. This is not evidence that no poll exists. No pollster, field dates, sample, mode, or result verified."
+  },
+  "limits": [
+    "Three body GETs used, including the Cook 403; captures persisted before parsing.",
+    "No 2024 presidential vote reallocated onto the 2025 map was obtained; old-map CA-01 totals must not be transferred.",
+    "No probability, race ranking, or election forecast.",
+    "Hash values cover supplied HTTP body bytes, not authenticated wire data."
+  ]
+}

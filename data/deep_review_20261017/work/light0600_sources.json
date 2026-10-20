@@ -1,0 +1,27 @@
+{
+  "hle": {
+    "http": 200,
+    "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+    "received_utc": "2026-10-20T06:02:02.758506Z",
+    "headers": {
+      "date": "Tue, 20 Oct 2026 06:02:02 GMT",
+      "content-type": "application/json",
+      "age": "2599",
+      "cache-control": "public"
+    },
+    "receipt": "logs/lightcheck_20261020T0600/sources_vetted/hle.receipt.json"
+  },
+  "openrouter": {
+    "http": 200,
+    "raw_sha256": "7fa78f5b31b94fdbf9a50fa4de596cf92c8684a121ab5d78932748b01976ea1e",
+    "received_utc": "2026-10-20T06:02:02.824864Z",
+    "headers": {
+      "date": "Tue, 20 Oct 2026 06:02:02 GMT",
+      "content-type": "application/json",
+      "age": "113",
+      "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+    },
+    "receipt": "logs/lightcheck_20261020T0600/sources_vetted/openrouter.receipt.json"
+  },
+  "limit": "Original bare default-client HLE403 preserved; this uses existing source_freeze_check public UA/origin/referrer configuration, no authentication or access workaround. HTTP freshness/cache clocks separate; body comparison still required."
+}

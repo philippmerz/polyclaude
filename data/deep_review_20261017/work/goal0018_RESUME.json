@@ -1,31 +1,27 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T05:48:54.316897+00:00",
+  "updated_utc": "2026-10-20T06:08:53.773333+00:00",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Published/remoteverified84b3cd6 completed missing offline6b, verified16opsreceiptpairs, fixed scoped434/435resume paths; preserved434blocked/435excluded and436partial. Financialrecords unchanged.",
-  "current_turn_progress": "436 valued at7%YES/no entry;437 recorded/hash-verified as case-specific blocked after full historical-minute/source review.375valued/14blocked/367factual/2244pending,756base+69revisions.438 active: full rule/evidence and pre-own-quote11%YES/89%NO model saved; partial quote explicit fee-disabled Gamma with missing compact fd/parity parser gap. Costs/conditional-fill/portfolio decision unfinished; no financial action or next case.",
+  "evidence": "Published and remote-verified29f8c2d:436valuation/437case-specificblockedrecord,438partial preserved, lateMichigan51b06source/exposure review completed, stalecount/handoff repaired. Not a wait or status-only turn.",
+  "current_turn_progress": "438/439 completed and individuallyverified; fee-disabledreaderrepaired24tests/live. Due06UTC light completed:3originalLIVE0bids/127exacttrades unchanged, HLEvetted200samebody, ORpartialonlygrowth andwidebookmove reviewedretain/noadd. False3daemonoutage corrected4single/current.377valued/14blocked/367factual/2242pending. Next440.",
   "counts": {
-    "completed_valuations": 375,
+    "completed_valuations": 377,
     "blocked_after_in_depth_review": 14,
     "factual_exclusions": 367,
-    "pending": 2244,
-    "base_records": 756,
+    "pending": 2242,
+    "base_records": 758,
     "revisions_written": 69,
-    "active_indices": [
-      438
-    ]
+    "active_indices": []
   },
   "last_completed": {
-    "index": 437,
-    "status": "blocked_after_review",
-    "report": "evaluations/0437.md",
-    "sha256": "1596cf2491ab62ea469d35c019f7ffeecc8ea65a0b5842161653c7d40d97e66e",
-    "p_yes": null,
-    "decision": "BLOCKED_AFTER_REVIEW: case-specifichistoricalminute/sourcebridge unpriced, noeconomicrejection orcountedvaluation; no newfinancialaction/globalgoalblock."
+    "index": 439,
+    "status": "valued",
+    "report": "evaluations/0439.md",
+    "sha256": "83d5dbc50bccb9d13156001ef9fbb0eb4af579a8c890c9b9e4cea0da689380d6",
+    "p_yes": 0.88,
+    "decision": "NO_ENTRY;75prequote/88postquoteactualnewmapsource update preserved; bothside/maker/conditional/carry/portfolio assessed."
   },
   "next": [
-    438,
-    439,
     440,
     441,
     442,
@@ -50,7 +46,7 @@
     "445": "work/0445_resume.json",
     "446": "work/0446_resume.json"
   },
-  "next_existing_safety": "2026-10-20T06:00:00Z",
+  "next_existing_safety": "2026-10-20T10:00:00Z",
   "financial_state": "Canonical04:34:59\u201304:35:14:196.20incl5.86gas;190.34tradingmid/187.84indicative fee-netdepth(+10.49%vs170), PM36.40/33.90, CSV231.04:35pUSD19.251290/3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral.127trades identical; Kimi10YEScost1.20 unchanged.",
   "goal_state": "Full finite3000 objective active/incomplete. Continue actual research; individually save and verify each finished case before next substantive case. Next existing06UTC safety.",
   "safety_followup": {
@@ -77,7 +73,7 @@
     "window_end": "2026-10-20T04:40:55.231604Z"
   },
   "latest_scheduled_tick": "20261020T043158Z",
-  "active_case": 438,
+  "active_case": null,
   "scheduled_closeout": {
     "completed_utc": "2026-10-20T04:46:20.534438+00:00",
     "tick": "20261020T043158Z",
@@ -110,5 +106,11 @@
     "sha256": "a99a559e958676d8cd63f2d17a8df5fbf614442cf5ba4c9c3d3981d5941be0e4",
     "window_end": "2026-10-20T05:45:16.675970+00:00",
     "result": "Related Fox body and publicMI5NO verified; localpublisherbodyunknown/no measuredvoterupdate. Retain/noadd, no financialaction/forecastmutation/Telegram."
+  },
+  "light_safety": {
+    "completed_utc": "2026-10-20T06:08:53.773333+00:00",
+    "report": "research/2026-10-20-0600-light-check.md",
+    "primary": "work/light0600_primary_review.json",
+    "financial_limit": "04:35aggregate/CSV231 unchanged;06:00account/source/ops refreshed, no producer/financialwriter."
   }
 }

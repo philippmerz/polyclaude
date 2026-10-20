@@ -1,0 +1,21 @@
+{
+  "observed_at_utc": "2026-10-20T06:01Z",
+  "source": "bounded read-only due-ops CLI and host checks; receipts in logs/lightcheck_20261020T0600_ops/",
+  "cli_representation": "SDK/CLI serialization, not HTTP wire bodies",
+  "state_checks": {
+    "position_state_audit": {"exit_code": 0, "issues": 0, "indexed_positions": 7, "deindexed_claim_rows": 1, "mode": "report-only"},
+    "crux_coverage_check": {"exit_code": 0, "uncovered_positions": 0},
+    "uma_status_check": {"exit_code": 0, "checked": 43, "tracked": 45, "positions_fetch_ok": true, "alerts": [{"type": "PRICE_MOVE", "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026", "detail": "YES 0.2400 to 0.3050 (+6.5pp); reported wide book (9.0pp spread), likely midpoint flap; verify via book walk before relying"}]},
+    "ostium_state_diff": {"exit_code": 0, "alerts": 0, "current_open_trades": 0, "prior_open_trades": 0, "corroboration": "ostium_client.py status explicitly reported open trades: 0; active limits: 0"},
+    "check_marginal_apy": {"exit_code": 0, "hurdle": "live 3.20%, cache age 12h", "clear": 4, "flagged": 0, "protected_groups": 3},
+    "watchlist_monitor_hits_only": {"exit_code": 0, "hits": 0, "output": "silent"}
+  },
+  "daemons": {
+    "news_watcher": {"exact_absolute_command_count": 0, "pidfile": "missing"},
+    "heartbeat_watch": {"exact_absolute_command_count": 0, "pidfile": "missing"},
+    "telegram_listener": {"exact_absolute_command_count": 0, "pidfile": "missing"},
+    "opportunity_watch": {"exact_absolute_command_count": 1, "pid": 425, "started": "2026-10-18 09:33:44 UTC", "script_mtime": "2026-09-29 10:07:53 UTC", "code_stale_at_start": false, "pidfile_matches": true}
+  },
+  "host": {"disk_root": "14G/15G used (98%), 317M available", "memory": "1.9Gi total, 1.1Gi available", "swap": "2.0Gi total, 1.0Gi available"},
+  "local_cache_effects": ["uma_status_check refreshed notes/.uma_status_cache.json", "ostium_state_diff updated notes/.ostium_state_cache.json"]
+}

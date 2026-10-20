@@ -1,0 +1,36 @@
+{
+  "schema": "primary_forecast_source_update.v1",
+  "review_index": 439,
+  "saved_utc": "2026-10-20T06:05:34.116864+00:00",
+  "initial_model": {
+    "path": "work/0439_model_0601.json",
+    "sha256": "c6b323b0ca371a41ea30dcb8ac3aea6be4e2ef4afceb0c39dac5e5b6319609b6",
+    "p_yes": 0.75
+  },
+  "price_exposure": "Post-ownquote source update; do not claim priceblindness. Initial model and quote preserved.",
+  "newly_reviewed_source": {
+    "path": "work/0439_rating_facts_0604.json",
+    "sha256": "f0598f4649fac903d9edd76a4284e8337af039e616b550b7456732d4bd0c6bf9",
+    "actual_body": "InsideElections Nov6 2025 direct-origin newmapanalysis: CA01Harris54/Trump42 (12pointmargin), SolidR\u2192SolidD, LaMalfathenincumbent/McGuirepossible. Rootverifiedall3raw/gzip pairs, readfullCA01section inwholepage text; firstarticleelementwas95charoverlay andnotusedasbody."
+  },
+  "current_search_representations_limit": "CookOct16SolidD/PVID+7 andInsideprofileSolidD/D+11.2 are publishersearch representations only;403bodies not fullanalysis. Not a captured currentpoll or independent vote reaggregation. No quantitative odds imported.",
+  "revised_bridge": {
+    "primary_two_party_D": 0.5738434530712148,
+    "published_2024_reallocated_D_two_party": 0.5625000000000001,
+    "formula": "(primary_D_two_party + reallocated2024_D_two_party)/2 -0.01 R incumbency/candidate adjustment",
+    "mean_Nov_D_share": 0.5581717265356074,
+    "total_error_sd": 0.05,
+    "derived_winprobability": 0.8776733768407317,
+    "interpretation": "Initial60%shrink-to-neutral discountedstructuralnewdistrictpartisanship too heavily. Newlyreviewed independentmeasurementsurface supports Dbaseline, though electorate/partisanship are correlated: keep5ppSD unchanged, no independent-observationprecisiongain. 50/50weight/1ppcandidateadjustment/normal5pp error remain unfittedjudgments; historicalreaggregationnotofficialnumericallyreverified orcurrentpoll."
+  },
+  "adopted_p_yes": 0.88,
+  "adopted_p_no": 0.12,
+  "broad_probability_range_yes": [
+    0.35,
+    0.97
+  ],
+  "selected_absolute_reserve": 0.1,
+  "selected_yes": 0.78,
+  "selected_no": 0.02,
+  "change_reason": "Actualnew-mapbaseline corroborates primarypartyaggregate and correctsneutral-centeredshrinkassumption. Oldpublicsource newlyreviewed, notnewOctobernews. Meanadjustment,notreductioninmodeluncertainty orforecastvalidation."
+}

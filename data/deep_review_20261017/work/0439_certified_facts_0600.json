@@ -1,0 +1,42 @@
+{
+  "schema": "case439_certified_candidates.v1",
+  "status": "FACTS_READY_NOT_VALUED",
+  "captured_utc": "2026-10-20T05:58:13.692299Z/2026-10-20T05:58:13.986774Z",
+  "identity": {
+    "review_index": 439,
+    "market_id": "1280933",
+    "conditionId": "0xb54d34c4e90d8b52430f6f51413f2908b65d6cf8657a8cfad2e7f595dbd28de2",
+    "question": "Will the Democratic Party win the CA-01 House seat?",
+    "criteria_sha256": "e0acbd9283af4a0627a73ccf64aac454f8d4f9d126d5644e4a92d5ec15d696aa"
+  },
+  "source": {
+    "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+    "publication_date": "2026-08-27 (printed on PDF)",
+    "kind": "California Secretary of State official certified candidate list for General Election Nov 3, 2026",
+    "http_status": 200,
+    "receipt": "logs/deep_review_20261017/0700case0439_certified_facts_0600/sos_certified_candidates.receipt.json",
+    "body": "logs/deep_review_20261017/0700case0439_certified_facts_0600/sos_certified_candidates.body.json.gz",
+    "raw_bytes": 14833345,
+    "raw_sha256": "0e514ae7b14378b1837bcea99c07e6a05ce35baa9db4c3d3a2297704dc7e6017",
+    "gzip_sha256": "3fb2d75dd00a35f1be7a3ae4fe482ef1a7e709a4c4d20e40cf65d60afa542bbb",
+    "hash_scope": "supplied HTTP body bytes; not wire authentication"
+  },
+  "ca01_certified_rows": {
+    "pdf_physical_page": 4,
+    "printed_page": "Page 3 of 41",
+    "heading": "United States Representative District 1",
+    "candidates": [
+      {
+        "name": "Mike McGuire",
+        "ballot_affiliation": "Democratic",
+        "designation": "California State Senator"
+      },
+      {
+        "name": "James Gallagher",
+        "ballot_affiliation": "Republican",
+        "designation": "United States Representative/Farmer"
+      }
+    ]
+  },
+  "scope_note": "This is the Nov 3, 2026 certified general-election list. It is distinct from the June 2 special-primary/old-map result; no special-election numbers are used here. This supplement reports identity only and makes no forecast or ranking."
+}

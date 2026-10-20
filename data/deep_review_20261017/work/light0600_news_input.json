@@ -1,0 +1,32 @@
+{
+  "start_exclusive": "2026-10-20T05:45:16.675970+00:00",
+  "end_inclusive": "2026-10-20T06:01:05.018715+00:00",
+  "rows": [
+    {
+      "alert_id": "0e1b45e3f5beedd3680eb5b0d7fc5eb181b24bea",
+      "ts": "2026-10-20T05:46:32Z",
+      "tier": 1,
+      "feed": "Israel Knesset Hebrew polls, party lists and elections",
+      "matched": "\u05d4\u05dc\u05d9\u05db\u05d5\u05d3",
+      "title": "\u05dc\u05d5\u05d3 \u05d4\u05e1\u05d9\u05e8\u05d4 \u05e9\u05dc\u05d8\u05d9\u05dd \u05e9\u05dc \u05d4\u05e8\u05e9\u05d9\u05de\u05d4 \u05d4\u05de\u05e9\u05d5\u05ea\u05e4\u05ea \u05de\u05e8\u05db\u05d5\u05e9 \u05e6\u05d9\u05d1\u05d5\u05e8\u05d9 \u05d1\u05e2\u05d9\u05e8, \u05e9\u05dc\u05d8\u05d9 \u05d4\u05dc\u05d9\u05db\u05d5\u05d3 \u05d4\u05d5\u05e9\u05d0\u05e8\u05d5 - \u05d4\u05d0\u05e8\u05e5",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNam5BMTFSSTE1by1Rclo5aE9oV1JJTzZMVVBMSFdEeklNbG9aYjNhbk90NlNyNmRqNWtHOS11clN2QXc5OTQxSVNsbnpTdTBDUnFKdURQLVZTdk5tSFZYM0NZUDVjNUZLbVlKeTF6eVQ0Tzk3YTNWQ2hHbmloQTNIMWtKbTlEdHBSNmRsdHVRRzQ2bFRzRlRrTEdVOUwxLTFB?oc=5",
+      "agent_reason": "Local Israeli municipal signage incident has no direct causal channel to the listed U.S. elections, Clarity Act, AI, Messi, or OpenRouter positions.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "1638bbed8078d535c3833c26e8ce509e0526f0e1",
+      "ts": "2026-10-20T05:57:18Z",
+      "tier": 1,
+      "feed": "Israel Knesset English polls, party lists and elections",
+      "matched": "Likud",
+      "title": "Netanyahu's former NSC head Hanegbi says he will vote for Avigdor Liberman, not Likud - The Jerusalem Post",
+      "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5qUEJxMzZrWm40Rm5NZHRnTmRGRklmSVo1b0xyYnZjd19sNDZhX2FqOHZUUi1KR3l3SEZUQnRBZ2lHcFhwU2E3bGZMZjl1b1BWZmVkTXkyd1J1dWgwX294M3FnWnVQNUJo?oc=5",
+      "agent_reason": "Unrelated Israeli political news with no direct causal channel to any held or pending position.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "schema": "case_fee_metadata_observation.v1",
+  "review_index": 438,
+  "source_url": "https://clob.polymarket.com/markets/0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+  "observed_utc": "2026-10-20T05:51:47.878035Z",
+  "receipt": "logs/deep_review_20261017/case0438_full_clob_0552/full_clob.receipt.json",
+  "raw_sha256": "cd300f8adb5380311a466268e2fe9e548a5394b9a52e73fba047ddb7c7e5b526",
+  "http_status": 200,
+  "fields": {
+    "condition_id": "0x3ef582dd2a08ec4df3a237ff16505b0869b92afeb8cbf619ff085695c9bdb542",
+    "tokens": [
+      {
+        "token_id": "12986041958032490956100187529369728708256259581035618976714497828677868886315",
+        "outcome": "Yes",
+        "price": 0.08,
+        "winner": false
+      },
+      {
+        "token_id": "98282689049673050962334818467743727614818971377812348096485339058203693156854",
+        "outcome": "No",
+        "price": 0.92,
+        "winner": false
+      }
+    ],
+    "taker_base_fee": 0,
+    "maker_base_fee": 0,
+    "accepting_orders": true,
+    "enable_order_book": true,
+    "active": true,
+    "closed": false,
+    "minimum_order_size": 5,
+    "minimum_tick_size": 0.01,
+    "seconds_delay": 0
+  },
+  "limit": "Full CLOB legacy fee metadata only; no quote, account, decision, execution or verified future fee guarantee."
+}

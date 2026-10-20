@@ -12,6 +12,7 @@ from datetime import datetime, timezone
 import gzip
 import hashlib
 import json
+import math
 import os
 from pathlib import Path
 import re
@@ -27,6 +28,7 @@ ROOT = Path(__file__).resolve().parents[1]
 GAMMA = "https://gamma-api.polymarket.com/markets/"
 FEE = "https://clob.polymarket.com/clob-markets/"
 BOOKS = "https://clob.polymarket.com/books"
+FULL_MARKET = "https://clob.polymarket.com/markets/"
 GEO = "https://polymarket.com/api/geoblock"
 SAFE_HEADERS = ("date", "age", "cache-control", "last-modified", "content-type")
 
@@ -62,24 +64,89 @@ def identity_checks(frozen: dict, gamma: dict) -> dict[str, bool]:
     return checks
 
 
-def compact_fee_fields(payload: dict, condition_id: str, token_map: dict[str, str]) -> dict:
-    """Extract the fee descriptor from `fd`; top-level `r` is rebate metadata."""
+def compact_market_identity(payload: dict, condition_id: str, token_map: dict[str, str]) -> None:
+    """Validate compact condition and exact, duplicate-free token mapping."""
     if str(payload.get("c", "")).lower() != condition_id.lower():
         raise ValueError("compact fee condition ID mismatch")
+    rows = payload.get("t")
+    if not isinstance(rows, list) or len(rows) != len(token_map):
+        raise ValueError("compact condition outcome/token map differs from frozen market")
+    got = {}
+    seen_tokens = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("compact condition outcome/token row is malformed")
+        outcome, token = row.get("o"), row.get("t")
+        if not isinstance(outcome, str) or not outcome or not isinstance(token, str) or not token:
+            raise ValueError("compact condition outcome/token row is malformed")
+        if outcome in got or token in seen_tokens:
+            raise ValueError("compact condition outcome/token map contains duplicates")
+        got[outcome] = token
+        seen_tokens.add(token)
+    if got != token_map:
+        raise ValueError("compact condition outcome/token map differs from frozen market")
+
+
+def compact_fee_fields(payload: dict, condition_id: str, token_map: dict[str, str]) -> dict:
+    """Extract the fee descriptor from `fd`; top-level `r` is rebate metadata."""
+    compact_market_identity(payload, condition_id, token_map)
     raw = payload.get("fd")
     if not isinstance(raw, dict):
         raise ValueError("compact response has no fee descriptor fd")
+    if isinstance(raw.get("r"), bool) or isinstance(raw.get("e"), bool):
+        raise ValueError("compact fee descriptor fd is malformed")
     try:
         rate, exponent, taker_only = float(raw["r"]), float(raw["e"]), raw["to"]
     except (KeyError, TypeError, ValueError) as exc:
         raise ValueError("compact fee descriptor fd is malformed") from exc
-    if not (0 <= rate < 1 and 0 < exponent <= 10 and isinstance(taker_only, bool)):
+    if not (math.isfinite(rate) and math.isfinite(exponent)
+            and 0 <= rate < 1 and 0 < exponent <= 10 and isinstance(taker_only, bool)):
         raise ValueError("compact fee descriptor fd has invalid values")
-    rows = payload.get("t")
-    got = {str(x.get("o")): str(x.get("t")) for x in rows if isinstance(x, dict)} if isinstance(rows, list) else {}
-    if got != token_map:
-        raise ValueError("compact condition outcome/token map differs from frozen market")
     return {"r": rate, "e": exponent, "to": taker_only}
+
+
+def fee_free_gamma_schedule(gamma: dict) -> bool:
+    """Accept absent/null schedule, or an explicitly valid zero-rate schedule."""
+    if "feeSchedule" not in gamma or gamma["feeSchedule"] is None:
+        return True
+    schedule = gamma["feeSchedule"]
+    if not isinstance(schedule, dict):
+        return False
+    try:
+        rate, exponent, taker_only = schedule["rate"], schedule["exponent"], schedule["takerOnly"]
+        if isinstance(rate, bool) or isinstance(exponent, bool):
+            return False
+        rate, exponent = float(rate), float(exponent)
+    except (KeyError, TypeError, ValueError):
+        return False
+    return (math.isfinite(rate) and rate == 0 and math.isfinite(exponent)
+            and 0 < exponent <= 10 and isinstance(taker_only, bool))
+
+
+def corroborate_fee_free_market(full: dict, condition_id: str, token_map: dict[str, str]) -> None:
+    """Require exact full-market condition/tokens and explicit numeric zero fee."""
+    if not isinstance(full, dict) or str(full.get("condition_id", "")).lower() != condition_id.lower():
+        raise ValueError("full CLOB fee-free condition ID mismatch")
+    rows = full.get("tokens")
+    if not isinstance(rows, list) or len(rows) != len(token_map):
+        raise ValueError("full CLOB outcome/token map differs from frozen market")
+    got = {}
+    seen_tokens = set()
+    for row in rows:
+        if not isinstance(row, dict):
+            raise ValueError("full CLOB outcome/token row is malformed")
+        outcome, token = row.get("outcome"), row.get("token_id")
+        if not isinstance(outcome, str) or not outcome or not isinstance(token, str) or not token:
+            raise ValueError("full CLOB outcome/token row is malformed")
+        if outcome in got or token in seen_tokens:
+            raise ValueError("full CLOB outcome/token map contains duplicates")
+        got[outcome] = token
+        seen_tokens.add(token)
+    if got != token_map:
+        raise ValueError("full CLOB outcome/token map differs from frozen market")
+    fee = full.get("taker_base_fee")
+    if isinstance(fee, bool) or not isinstance(fee, (int, float)) or not math.isfinite(fee) or fee != 0:
+        raise ValueError("full CLOB taker_base_fee is not explicit numeric zero")
 
 
 def fee_parity(gamma: dict, descriptor: dict) -> bool | None:
@@ -225,17 +292,46 @@ def capture(indices: list[int], output: Path, log_dir: Path, include_geo: bool =
             status, raw, fee_receipt = collector.request(
                 name=f"{index:04d}_fee", method="GET", url=FEE + condition_id)
             fee_payload = collector.parse(status, raw, f"compact fee {index}")
-            fee_obj = compact_fee_fields(fee_payload, condition_id, token_map)
-            parity = fee_parity(gamma_obj, fee_obj) if gamma_obj else None
-            fee_received = {"descriptor": fee_obj, "http_status": status,
-                            "received_utc": fee_receipt["received_utc"],
-                            "receipt_path": fee_receipt["receipt_path"],
-                            "raw_sha256": fee_receipt["raw_sha256"],
-                            "gzip_sha256": fee_receipt["gzip_sha256"],
-                            "structured_gamma_parity": parity}
-            parity_error = fee_parity_error(parity)
-            if parity_error:
-                case_errors.append(parity_error)
+            compact_market_identity(fee_payload, condition_id, token_map)
+            fd = fee_payload.get("fd")
+            if isinstance(fd, dict):
+                fee_obj = compact_fee_fields(fee_payload, condition_id, token_map)
+                if gamma_obj.get("feesEnabled") is False and (
+                        fee_obj["r"] != 0 or not fee_free_gamma_schedule(gamma_obj)):
+                    raise ValueError("fee-disabled Gamma contradicts compact descriptor or schedule")
+                parity = fee_parity(gamma_obj, fee_obj) if gamma_obj else None
+                fee_received = {"descriptor": fee_obj, "http_status": status,
+                                "received_utc": fee_receipt["received_utc"],
+                                "receipt_path": fee_receipt["receipt_path"],
+                                "raw_sha256": fee_receipt["raw_sha256"],
+                                "gzip_sha256": fee_receipt["gzip_sha256"],
+                                "structured_gamma_parity": parity}
+                parity_error = fee_parity_error(parity)
+                if parity_error:
+                    case_errors.append(parity_error)
+            elif fd is None:
+                if not (exact and gamma_obj.get("feesEnabled") is False):
+                    raise ValueError("compact response has no fee descriptor fd")
+                if not fee_free_gamma_schedule(gamma_obj):
+                    raise ValueError("fee-disabled Gamma schedule is malformed or nonzero")
+                full_status, full_raw, full_receipt = collector.request(
+                    name=f"{index:04d}_full_fee_free", method="GET", url=FULL_MARKET + condition_id)
+                full_payload = collector.parse(full_status, full_raw, f"full fee-free market {index}")
+                corroborate_fee_free_market(full_payload, condition_id, token_map)
+                fee_received = {"descriptor": None, "http_status": status,
+                                "received_utc": fee_receipt["received_utc"],
+                                "receipt_path": fee_receipt["receipt_path"],
+                                "raw_sha256": fee_receipt["raw_sha256"],
+                                "gzip_sha256": fee_receipt["gzip_sha256"],
+                                "structured_gamma_parity": None,
+                                "fee_free_corroborated": True,
+                                "basis": "exact_gamma_fees_disabled_and_full_clob_numeric_zero_taker_base_fee",
+                                "full_market_receipt_path": full_receipt["receipt_path"],
+                                "full_market_raw_sha256": full_receipt["raw_sha256"],
+                                "full_market_gzip_sha256": full_receipt["gzip_sha256"],
+                                "full_market_received_utc": full_receipt["received_utc"]}
+            else:
+                raise ValueError("compact fee descriptor fd is malformed")
         except Exception as exc:
             case_errors.append(f"fee:{type(exc).__name__}:{exc}")
             fee_payload = None
@@ -350,6 +446,7 @@ def capture(indices: list[int], output: Path, log_dir: Path, include_geo: bool =
             "manifest_bytes": len(mb), "manifest_sha256": hashlib.sha256(mb).hexdigest(),
             "cases": len(cases), "exact_gamma": sum(c["criteria_exact_match"] for c in cases),
             "fee_descriptors": sum(isinstance(c["optionalfee_descriptor"].get("descriptor"), dict) for c in cases),
+            "fee_free_corroborated": sum(c["optionalfee_descriptor"].get("fee_free_corroborated") is True for c in cases),
             "book_rows": sum(len(c["books"]) for c in cases), "errors": all_errors}
 
 

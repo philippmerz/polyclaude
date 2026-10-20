@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T05:33:00.758026+00:00
+Updated: 2026-10-20T06:07:23.092909+00:00
 
-**375 valuations saved; first milestone100:** 375 valued; 14 blocked after in-depth review. 367 factual exclusions separately; 2244 pending.
+**377 valuations saved; first milestone100:** 377 valued; 14 blocked after in-depth review. 367 factual exclusions separately; 2242 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -449,6 +449,8 @@ Each report below is written before moving to the next evaluation. Related contr
 |435|[Northern Illinois vs. Wyoming: O/U 41.5](evaluations/0435.md)|excluded_factual|EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting, notcountedvaluation; nofinancialaction.|
 |436|[Will Mark Carney be TIME Person of the Year 2026?](evaluations/0436.md)|valued|NO_ENTRY: YESfailscentral/selected; NOtakerpositivecentralfailsselected. MakerNO82c narrowunconditionalselectedsurplus is not supported after editorial/fillselection/carry/portfolio review; no newbid/prior/holding/watcher.|
 |437|[Will STRC hit $100 by December 31?](evaluations/0437.md)|blocked_after_review|BLOCKED_AFTER_REVIEW: case-specifichistoricalminute/sourcebridge unpriced, noeconomicrejection orcountedvaluation; no newfinancialaction/globalgoalblock.|
+|438|[Iran full airspace closure by October 31, 2026?](evaluations/0438.md)|valued|NO_ENTRY: YES positive central fails selected at taker and maker; NO observed routes fail central and selected. RemoteNO narrow unconditional margin unsupported after conditional news/fill, carry and portfolio risk; no blind order.|
+|439|[Will the Democratic Party win the CA-01 House seat?](evaluations/0439.md)|valued|NO_ENTRY: YESfailscentral/selected; NOpositivecentralfailsselected atobservedtaker/maker. RemoteNO lacks evidenced conditionalfill margin; no blindorder.|
 |444|[Will the Republicans win the Georgia Senate race in 2026?](evaluations/0444.md)|valued|YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.|
 |447|[Spread: Bowling Green (-6.5)](evaluations/0447.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |448|[Will DeepSeek have the second highest OpenRouter market share the week of October 12?](revisions/0448_20261018T120932860077Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
@@ -768,5 +770,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 438

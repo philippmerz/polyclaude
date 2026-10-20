@@ -1,0 +1,53 @@
+{
+  "schema": "primary_light0600_source_hold_review.v1",
+  "reviewed_utc": "2026-10-20T06:04:18.115540+00:00",
+  "or_source": "CompletedOct12weekly164.043985914931T unchanged; Oct19partial28.973474369008\u219230.038851003818T only. Fourtargetweekrowsabsent. Partial+1.065376634810T not fullweek/settlement or evidence of a quantified drift/cutoff bridge. No newcompletedregime input adopted.",
+  "gamma_market_fields": {
+    "volume24hr": 260,
+    "volume24hrClob": 260,
+    "bestBid": 0.25,
+    "bestAsk": 0.35,
+    "spread": 0.1,
+    "lastTradePrice": 0.26,
+    "outcomePrices": "[\"0.3\", \"0.7\"]",
+    "umaResolutionStatus": null,
+    "closed": false,
+    "acceptingOrders": true
+  },
+  "quote_file": "data/deep_review_20261017/light0600_OR112_quote.json",
+  "quote_sha256": "b08d6b8d33bb7d9304ba6f67188c76bbbf95bacdad58a87b5887a0a92c867132",
+  "verified_receipts": [
+    "0112_gamma_01",
+    "0112_fee_02",
+    "books_batch_01_03",
+    "geoblock_04"
+  ],
+  "held_NO_shares": 5,
+  "prior_NO": 0.88,
+  "selected_NO": 0.73,
+  "broad_NO_low": 0.2,
+  "indicative_fee_net_exit": 3.2045,
+  "walk": {
+    "complete": true,
+    "filled": 5.0,
+    "gross": 3.25,
+    "fee": 0.0455,
+    "fills": [
+      {
+        "shares": 5.0,
+        "price": 0.65
+      }
+    ],
+    "net": 3.2045
+  },
+  "central_hold_expected_payout": 4.4,
+  "selected_hold_expected_payout": 3.65,
+  "broad_low_hold_expected_payout": 1.0,
+  "carry_34d_sensitivity_exit_terminal": 3.2139263558406217,
+  "decision": "Retain5NO/noadd. Central and selected hold now exceed this datedexit; broadlow favorssale. InitialUMA9pp/freshGamma10ppspread and$260volume does not establish purequote noise or informedflow; exact currentchart review found no load-bearingcompletedmeasurement change, so no supportedsourcebroken update or crisis exit. This is a forwardcomparison, not sunk-cost recovery.",
+  "hle": "Bare defaultclient403 was setup/client-path gap; vetted existing source-monitor headers06:02HTTP200/Age2599/raw15fc012f... unchanged. No newsourcegap regime/score change; Kimi10YES retained/noadd, sourceclocknotfreshbenchmark guarantee.",
+  "joint_limits": "AIpairOR+Kimi canbothlose4.45cost; selected/broad andcommonvenue/source risk remain. Holdcentralexpectedpayout not guaranteedcash. No independencecredit, no aggregateNAV/producer/CSV update.",
+  "news": "Fixed05:45:16\u201306:01:05 window has2Israelresearch-only rows/0impacts; exactcurrentheld/BUY conditionjoin has noIsrael exposure. No classifierisolation-as-proof, body/poll/newPnoneadopted; no reviewmaterialtradertrigger.",
+  "daemons": "Initial3downreport invalid: python3-onlypattern andguessedPIDpaths. Actual4single/currentverified; no restart. Dated317MiBdiskheadroom means preserveboundedrawsources/no broadlog deletion without scopedcase.",
+  "next": "Existing10UTC light/14full, earlier materialevent; no newtimer. Research439remainsactiveuntilfinalunderwriting."
+}

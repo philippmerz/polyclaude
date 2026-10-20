@@ -1,0 +1,31 @@
+{
+  "schema": "bounded_storage_metadata_investigation.v1",
+  "reviewed_utc": "2026-10-20T06:11:57.363762+00:00",
+  "scope": "Onlyrepo logs/data metadata and existing publicarchive contracts; no privatehome/.codex/inbox/history search. No sourcebody deletion/read for thisaudit.",
+  "observed_free_space_mib": 317,
+  "result": "Not a globalmethodologyblock. Existingexactarchive allowlists alreadyreclaimedknownoriginals; no genericcleanup authorizedbytheir manifests. Threepossiblecopiedpublicsnapshots requirebytehash+consumer/immutabilitychecks beforeany reclaim. No filesdeleted orrewritten.",
+  "candidate_pairs": [
+    {
+      "paths": [
+        "logs/cron20261020T032706Z_discovery/current/shortlist_20261020T032735050852Z_thin_tail.json",
+        "data/snapshots/shortlist_20261020T032735050852Z_thin_tail.json"
+      ],
+      "bytes_each": 9684070
+    },
+    {
+      "paths": [
+        "logs/cron20261020T032706Z_discovery/preexisting/shortlist_20261020T021505109625Z_thin_tail.json",
+        "data/snapshots/shortlist_20261020T021505109625Z_thin_tail.json"
+      ],
+      "bytes_each": 9673062
+    },
+    {
+      "paths": [
+        "data/deep_review_20261017/work/tick043158_discovery_thin.json",
+        "data/snapshots/shortlist_20261020T043522897463Z_thin_tail.json"
+      ],
+      "bytes_each": 9750690
+    }
+  ],
+  "limits": "Size/time similarity notbyteidentity; noverifiedhardlinkduplicates. Preservefinancial/authenticated/privatecapture andlargeoriginalsources. No filesystemout-of-space yet; retain boundedsourceunits and existinghealthmonitor thresholds, no newtimer."
+}
