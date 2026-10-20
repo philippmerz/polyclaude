@@ -1,0 +1,76 @@
+{
+  "schema": "scheduled_tick.primary_review.v1",
+  "reviewed_utc": "2026-10-20T02:20:21.250944+00:00",
+  "tick": "20261020T020002Z",
+  "decision": "RETAIN currentholdings/noadd; original3BUYsretainexistingterms. No newfill, trade, cancel, redemption, transfer, forecastchange or materialTelegram. Root owns this decision, not classifier/Kelly output.",
+  "news_window": [
+    "2026-10-20T01:40:14.786921+00:00",
+    "2026-10-20T02:14:44.955459+00:00"
+  ],
+  "news_decisions": [
+    {
+      "id": "f90506edefe6a4bc5012f15c5441b3b24d365188",
+      "decision": "Michiganheldtopic: Rogersattributedcampaignclaim; exactGoogleleadreturnedconsent andboundedprimaryFoxsearchnoresults. Publisherbody/date/newpollcontentsunverified, notprovedrecycled/no-factbody. No verifiednewlikelihood or thesisbreak. RetainMI5NO44/selected34/noadd against~1.46exit/1.70selectedhold; broadNO20countercase remains."
+    },
+    {
+      "id": "54f02a415b71e63bfa34252d6f027635f9b51947",
+      "decision": "Unheldtopic/no identifieddirectchannel tocurrentholdingsorME02/CA06/NY01bids. Retainasresearchlead; publisherbody not independentlyverified. No allocation/forecast propagated fromtitle."
+    },
+    {
+      "id": "0e1b45e3f5beedd3680eb5b0d7fc5eb181b24bea",
+      "decision": "Unheldtopic/no identifieddirectchannel tocurrentholdingsorME02/CA06/NY01bids. Retainasresearchlead; publisherbody not independentlyverified. No allocation/forecast propagated fromtitle."
+    },
+    {
+      "id": "a25899f81c908c426e60b1bd781944c173124f7d",
+      "decision": "Unheldtopic/no identifieddirectchannel tocurrentholdingsorME02/CA06/NY01bids. Retainasresearchlead; publisherbody not independentlyverified. No allocation/forecast propagated fromtitle."
+    }
+  ],
+  "source_check": "HeldHLEandORfirst-partyHTTP200/bodies byte-identical tolastreview. HLEAge3525s, K3HLE41.08/calibration44.67; notfreshbenchmark/all-timeabsence. ORcachedAt01:19:13.618, Oct19partial25.617822T/Oct12historical164.043986T unchanged; targetsnotpresent. No new full-week observation or modelinput. Keep prior source/history/cutoff/config/settlement uncertainty.",
+  "source_unit": "data/deep_review_20261017/work/tick020002_held_sources_0218.json",
+  "exit_comparison": {
+    "scope": "CLIindicative02:15, not certifiedexecutionquote. Actualnewwriterrequiresfreshidentity/book/fee/accountgates. Existing15ppstress and broadcase do not automatically replace honestbelief.",
+    "Kimi10YES": {
+      "central_hold": 3.402125,
+      "selected_hold": 1.902125,
+      "illustrative_fillratio1p5_hold": 1.353928,
+      "broad_low_hold": 0.8,
+      "exit_approx": 0.96,
+      "decision": "Retain/noadd; broadlowcanfavor sale, source/private-fill risk and full1.20costloss accepted."
+    },
+    "MI5NO": {
+      "central_hold": 2.2,
+      "selected_hold": 1.7,
+      "broad_low_hold": 1,
+      "exit_approx": 1.46,
+      "decision": "Retain/noadd. DailyOct20rederivealreadydone, no newpoll verified; no duplicate aging."
+    },
+    "OR5NO": {
+      "central_hold": 4.4,
+      "selected_hold": 3.65,
+      "broad_low_hold": 1,
+      "exit_approx": 3.81,
+      "decision": "Retain/noadd aftercentral/selected/broad/jointcomparison. Stress favorssale; no thesisbreak/consumedcentraledge, smallfull-lossrisk. Zero-yieldexit already exceedsselected; idealizedAavecarry cannotreverse this countercase."
+    },
+    "Messi5YES": {
+      "central_hold": 3,
+      "selected_hold": 2,
+      "broad_low_hold": 1,
+      "exit_approx": 1.2,
+      "decision": "Retain/noadd; broadcase favorssale, hidden search/rank risk stays."
+    },
+    "Clarity": "Both29-sharelegsmanagedwhole; currentfullnetexit26.37 belowconditional29floor/58middle. Inconsistentoracle/venue0possible. Noindependentlegtrade/add.",
+    "dust": "Trump.33NO unchanged."
+  },
+  "joint_AI_terminal_states": {
+    "scope": "Otherassets fixedat illustrative180USD, not NAV. ActualKimi10YES/OR5NO, no independence/hedgecredit. Currentapproxexitcash4.77, sharedoriginalcost4.45canbothbelost.",
+    "both_win": 195,
+    "OR_only": 185,
+    "Kimi_only": 190,
+    "both_lose": 180,
+    "payout_comparison": "Centralexpectedpayout7.802125 vsapprox4.77exit; selectedOR73/Kimi19.02125 gives5.552125, illustrativefilladjustedKimi13.53928 gives5.003928; broadOR20/Kimi8 gives1.80favoringsale. Marginal sums do not assume independence; distribution/logsensitivitiesremainunmeasured. PriorFrechetdecisionunitboundsstillapplywith~.05higherORcashalternative."
+  },
+  "state_review": "3exactLIVE0bids6.50 unchanged;127trades withsameIDs/body;9indexedquantity/cumulativebuy/redeemable fields unchanged. Kimi currentdetailHTTP200null is not a newterminalproof; retain01:59affirmativeMATCHED/chainproof andunchangedtrades/index.3reservationrawbytes exactlyequalpriorafterfile; workerhashwasnormalizedserialization, notrawledger.",
+  "operations": "CLEAN/cruxquiet/0Ostium/0UMA/0overdue;4daemonsexactone/current. Local--fix receiptmislabelsread_only; truthfulsidecar flagslocalmutation/no financialmutation. Substringduplicateprobe wasfalsepositive; no restart.",
+  "safety": "No identifiednewthesisbreak/exploit/depeg/halt. No winningredeemables; loserstayunburned. Readscope not universalabsence.",
+  "next": "Existinglight06/full14UTC, earliermaterialevent/fill. No newgoal/timer/idlefollowup; no frozenqueuecontinuation."
+}

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 228 recorded observations from Apr-25
+The local performance CSV now has 229 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -84,13 +84,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 02:00 UTC
+## Last audited snapshot — October20 02:15 UTC
 
-**Indicative trading net depth $187.90 versus $170 contributed (+10.53%); authoritative bankroll $195.91 including $5.81 separate gas.** Trading midpoint190.10; same-producer PM36.15mid/33.95 indicative fee-net depth. Canonical producer02:00:30–47UTC. Sequential rounded quotes are not synchronized NAV or guaranteed proceeds;19.72residual is accounting arithmetic, not audited cash profit. VM/API costs excluded. CSV228 preserves226 earlier rows and adds separate pre/post-fill observations. [Financial record](research/2026-10-20-0200-postfill-financial-snapshot.md).
+**Indicative trading net depth $187.75 versus $170 contributed (+10.44%); authoritative bankroll $196.23 including $5.82 separate gas.** Trading midpoint190.41; same-producer PM36.47mid/33.81 indicative fee-net depth. Canonical producer02:14:58–02:15:13UTC. Sequential rounded quotes are not synchronized NAV or guaranteed proceeds;19.72residual is accounting arithmetic, not audited cash profit. VM/API costs excluded. CSV229 preserves228 earlier observations. [Financial record](research/2026-10-20-0215-financial-snapshot.md).
 
-Kimi HLE≥55 original maker bid filled10YES at12c /1.20 /zero maker fee. Exact trade, successful Polygon receipt, token balance, indexed buys and cash debit agree; **retain/noadd** after source/conditional-fill/fee-netexit/joint-risk review. Three remaining LIVE zero-matched bids commit6.50; dated pUSD19.251290 minus commitments gives12.751290 arithmetic, not certified venue free collateral. Full Kimi1.20 loss/source delay remain possible. [Held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
+No new fills or transactions. Kimi HLE≥55 remains10YES at12c /1.20cost/zero makerfee from the01:48 fill; retain/noadd. Three original LIVE zero-matched bids still commit6.50. Verified pUSD19.251290 minus commitments gives12.751290 arithmetic, not a synchronized NAV/free-collateral certificate. Full Kimi1.20loss/source delay remains possible. [Held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
 
-Michigan daily re-derivation retainsD56/NO44; OpenRouter chart update retainsYES12/NO88. Other holdings unchanged/noadd; protected Clarity pair managed whole. Final state audit CLEAN/cruxquiet; four daemons single/current, no code changes. Material Telegram1274 sent once. Capped discovery preserves unvalued omissions; it does not prove no opportunities. WeeklyOct23/monthlyNov12 notdue. [Completed check](research/2026-10-20-012937-checkin.md).
+Michigan/OpenRouter forecasts and other holdings unchanged/noadd; protected Clarity pair managed whole. AuditCLEAN/cruxquiet,0UMAalerts,0watchlist hits; four daemons single/current, no code changes. Checked HLE/OR source bodies unchanged; missing publisher bodies remain explicit uncertainty. Capped discovery preserves unvalued omissions and is not an absence finding. No duplicate Telegram after the prior fill summary. WeeklyOct23/monthlyNov12 notdue. [Completed scheduled check](research/2026-10-20-0200-checkin.md).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

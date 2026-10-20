@@ -1,0 +1,114 @@
+{
+  "schema": "scheduled_tick.validation.v1",
+  "reviewed_utc": "2026-10-20T02:24:52.341629+00:00",
+  "chart_tests": {
+    "command": "node --test tests/performance_chart.test.mjs",
+    "passed": 10,
+    "failed": 0
+  },
+  "CSV": {
+    "observations": 229,
+    "prior228rows_byte_preserved": true,
+    "sha256": "80908dfc6e1d03a64e56e5c1c321060cc9401b232d2bddbd4c5421de71dfe9a5"
+  },
+  "journal_append_only": true,
+  "financial_priors_decisions_revisions_unchanged": true,
+  "discovery": {
+    "receipt_hashes_verified": 9,
+    "snapshot_and_unit_surface_hashes_verified": true,
+    "context_batches": 40,
+    "surface_rows": 312,
+    "context_grouping_not_valuation_or_execution": true,
+    "receipt_schema": "Custom CLI receipt uses body_sha256, adjacent .body.json.gz, exit_code/timed_out; not read_capture HTTP schema.",
+    "verified_receipts": [
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/context/context_primary.receipt.json",
+        "body_sha256": "fb41e0fe44ccc37c396ffa0bf2fda8dc340d7a12d433a91b8564352946779ce5",
+        "gzip_sha256": "9d5bae209977845a802bc23ef21ef66f94a6f067cb69c207084bd7a33034d1e4",
+        "started_utc": "2026-10-20T02:16:39.483660+00:00",
+        "finished_utc": "2026-10-20T02:16:40.607053+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/context/context_thin_tail.receipt.json",
+        "body_sha256": "2977f1009d93b16b786da2abc401afa06fe9a9b5c4dae53b5cf770706fd55dd3",
+        "gzip_sha256": "8ad99ee2d3acae271f8672029ed08f1b6f4042311d50b11e1e258b1303d5730d",
+        "started_utc": "2026-10-20T02:16:40.607933+00:00",
+        "finished_utc": "2026-10-20T02:16:41.039057+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/primary.receipt.json",
+        "body_sha256": "037de56b69ff83cdcdd2a02d0c775a6631229c2b52083fb796e5802fb4df0117",
+        "gzip_sha256": "9518f600522bb154fcaec2a6964cace7c7fbaeffdd2f5d2447887a35615b2b95",
+        "started_utc": "2026-10-20T02:14:52.989810+00:00",
+        "finished_utc": "2026-10-20T02:14:54.419483+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/scanners/event_monotonicity.receipt.json",
+        "body_sha256": "cfd5a30a0090fae1af305ffc204293f3a24fb953f4f41dae5c517b3a1e6ed2e6",
+        "gzip_sha256": "50581596d4ba9283a3a6555578d32969b90ba4e6e0bd4acd0b28d8efe6f06c99",
+        "started_utc": "2026-10-20T02:15:52.536555+00:00",
+        "finished_utc": "2026-10-20T02:15:55.735112+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/scanners/favorite_fade.receipt.json",
+        "body_sha256": "673a78e0a49e8997bee2b9edbd86bc097345b6f68fab88e1fac12782813cd018",
+        "gzip_sha256": "b5893a9cdd7a24497a13df20188b4a7073ace96acedac3867a914c318f2be119",
+        "started_utc": "2026-10-20T02:16:34.676230+00:00",
+        "finished_utc": "2026-10-20T02:16:35.585860+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/scanners/macro.receipt.json",
+        "body_sha256": "6d3ca77e5f2ff6ecf3f93ef7a33bd1142d2998c40537844d04c2484493fd0245",
+        "gzip_sha256": "2d10a72923f23b4f9def0bdb7e0bda014e5506461f2c7ade7f0b1a258c427974",
+        "started_utc": "2026-10-20T02:15:51.942267+00:00",
+        "finished_utc": "2026-10-20T02:15:52.536082+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/scanners/pm_consistency.receipt.json",
+        "body_sha256": "aeca245a63b3d7acc08437ded794d3fd11f3df66894a0a1f5fa78afd5340bcaf",
+        "gzip_sha256": "8464be66d66553c7a530791b61e48f2bd8c0ff5414e27a6a13c3d02454b35282",
+        "started_utc": "2026-10-20T02:15:55.735888+00:00",
+        "finished_utc": "2026-10-20T02:16:34.675641+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/scanners/sports.receipt.json",
+        "body_sha256": "767ff85ea08f6b7b04d8aacf51465962432f04c2b9eb9123ec52333f3b21785d",
+        "gzip_sha256": "51bb829e98a333e14bcea73ba111710d79fa0093de7e449dcbb04f8eea0f38db",
+        "started_utc": "2026-10-20T02:15:05.554791+00:00",
+        "finished_utc": "2026-10-20T02:15:51.941100+00:00",
+        "exit": 0,
+        "timed_out": false
+      },
+      {
+        "receipt": "logs/deep_review_20261017/0700tick020002_discovery_0214/thin_tail.receipt.json",
+        "body_sha256": "fc11d221674ace0a190c48d4b4a7acf66f59a885bdcbc4407ce9624ca20962eb",
+        "gzip_sha256": "1640cd54e4588781cabc9a0d811eadd697ecbc232a91889317a3dd0a00a88826",
+        "started_utc": "2026-10-20T02:14:54.420559+00:00",
+        "finished_utc": "2026-10-20T02:15:05.554006+00:00",
+        "exit": 0,
+        "timed_out": false
+      }
+    ]
+  },
+  "context_packet": {
+    "status": "within_declared_validity",
+    "source_mismatches": [],
+    "packet_bytes": 9775,
+    "execution_ready": false
+  },
+  "outbound": "No materialchange; no duplicateTelegram. PriorKimi fillsummary1274 remains dated."
+}

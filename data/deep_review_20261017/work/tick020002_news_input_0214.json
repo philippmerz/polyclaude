@@ -1,0 +1,65 @@
+{
+  "schema": "scheduled_tick.fixed_news_window.v1",
+  "tick": "20261020T020002Z",
+  "review_after_utc": "2026-10-20T01:40:14.786921+00:00",
+  "review_through_utc": "2026-10-20T02:14:44.955459+00:00",
+  "scope": "Priorcompletedreviewcutoff, notmerelylatestjournalheader; no laterabsenceclaim. Relevance/source/action pendingprimary.",
+  "rows": [
+    {
+      "alert_id": "f90506edefe6a4bc5012f15c5441b3b24d365188",
+      "ts": "2026-10-20T01:50:43Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "Mike Rogers",
+      "title": "'Manufactured candidate' El-Sayed is losing his base: Mike Rogers - Fox News",
+      "link": "https://news.google.com/rss/articles/CBMiVkFVX3lxTE8xWHNLU2wzQ0RzdWtmSGRnbGJDUHFVVDZOSkJuQ01QRjRPSXRCT3d2b1hIR3RLdGtRN1htQnZUN3VITmszSnVHazdXLVFOSnMzZGNqbU5B?oc=5",
+      "agent_reason": "Opinion/recycled campaign messaging with no verified new fact or decision-relevant state change.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "raw_line_sha256": "560ee09bd575f040af317e8928980e2fe9246e965197d9d999400c6c3c7929f8"
+    },
+    {
+      "alert_id": "54f02a415b71e63bfa34252d6f027635f9b51947",
+      "ts": "2026-10-20T01:50:50Z",
+      "tier": 1,
+      "feed": "Venezuela presidency, Delcy Rodriguez and transition news",
+      "matched": "Delcy",
+      "title": "#Repost| Presidenta de la Rep\u00fablica Bolivariana de Venezuela Delcy Rodr\u00edguez @delcyrodriguezv \u00a1Un a\u00f1o de fe y bendiciones para Venezuela! \ud83c\uddfb\ud83c\uddea Celebramos el primer aniversario de la canonizaci\u00f3n de nuestros primeros santos, Jos\u00e9 Gregorio Hern\u00e1nde - Instagram",
+      "link": "https://news.google.com/rss/articles/CBMiUkFVX3lxTE9PMlhPeTNiRWdoV01TUkpXd1VXeUVKWm9iVkN5Qmd4N3FPeFhUeDh3U0l3a0swTmRsa2J3SHpBUTBWVFhlY3ludFFhdmpGejBXcHc?oc=5",
+      "agent_reason": "Recycled ceremonial content with no policy action, transition development, or market-relevant state change.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "raw_line_sha256": "ef3b7d0c92121f91f7d549c9cbe8fdc3158d119268e94716727de052535925b4"
+    },
+    {
+      "alert_id": "0e1b45e3f5beedd3680eb5b0d7fc5eb181b24bea",
+      "ts": "2026-10-20T02:01:45Z",
+      "tier": 1,
+      "feed": "Israel Knesset Hebrew polls, party lists and elections",
+      "matched": "\u05d4\u05dc\u05d9\u05db\u05d5\u05d3",
+      "title": "\u05dc\u05d5\u05d3 \u05d4\u05e1\u05d9\u05e8\u05d4 \u05e9\u05dc\u05d8\u05d9\u05dd \u05e9\u05dc \u05d4\u05e8\u05e9\u05d9\u05de\u05d4 \u05d4\u05de\u05e9\u05d5\u05ea\u05e4\u05ea \u05de\u05e8\u05db\u05d5\u05e9 \u05e6\u05d9\u05d1\u05d5\u05e8\u05d9, \u05e9\u05dc\u05d8\u05d9 \u05d4\u05dc\u05d9\u05db\u05d5\u05d3 \u05d4\u05d5\u05e9\u05d0\u05e8\u05d5 - \u05d4\u05d0\u05e8\u05e5",
+      "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNam5BMTFSSTE1by1Rclo5aE9oV1JJTzZMVVBMSFdEeklNbG9aYjNhbk90NlNyNmRqNWtHOS11clN2QXc5OTQxSVNsbnpTdTBDUnFKdURQLVZTdk5tSFZYM0NZUDVjNUZLbVlKeTF6eVQ0Tzk3YTNWQ2hHbmloQTNIMWtKbTlEdHBSNmRsdHVRRzQ2bFRzRlRrTEdVOUwxLTFB?oc=5",
+      "agent_reason": "Local Israeli municipal signage dispute; no direct causal channel to any held or pending position.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "raw_line_sha256": "236efc170be82b0b1a534cd51b632d80f32b00c2ad8d27d2167b94898efcc3ce"
+    },
+    {
+      "alert_id": "a25899f81c908c426e60b1bd781944c173124f7d",
+      "ts": "2026-10-20T02:07:09Z",
+      "tier": 1,
+      "feed": "US state gasoline prices and fuel-tax policy",
+      "matched": "gas prices",
+      "title": "Gas prices in South Carolina fall - AOL.ca",
+      "link": "https://news.google.com/rss/articles/CBMifkFVX3lxTFA1Q2xmVFcxdU55dnRUeTVRdDFBU3kwTU1IVU5Tc2pnaUtiYmxlNzFmOGxwZ0RSbDNrMHIwbXh2SThpVzgtTWFyWWR4VThkSXpxWWIyb1dnVHRKY0FfVGRnNU8wS3pQcGlvRG13SG5lT2l6R2g3SzJ3ZFRYTzBBUQ?oc=5",
+      "agent_reason": "Local South Carolina gas-price movement has no direct causal channel to the listed positions.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "raw_line_sha256": "64a097b2196bc0c4367ed3948d725b81cf15ab83c38c14cd791bde658134592b"
+    }
+  ]
+}
