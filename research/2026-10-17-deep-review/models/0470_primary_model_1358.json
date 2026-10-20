@@ -1,0 +1,104 @@
+{
+  "schema": "primary_accounting_bridge_model.v1",
+  "review_index": 470,
+  "created_utc": "2026-10-20T13:51:02.141903+00:00",
+  "identity": {
+    "market_id": "5730154",
+    "condition_id": "0x23f2b772400037e53c547ba4686bbb56ee6dd677aa3a36da3f0716a97eb51ae4",
+    "criteria_sha256": "fe23e7c56dfb2f74c13bb8b4e1bbf7835c524b5ebe8e4eed80a96e804fb68d92"
+  },
+  "metric": "Reported GAAP Property-Liability combined ratio, not non-GAAP underlying or insurer tax/netincome ratio.",
+  "band": "86inclusive to88exclusive: frozen siblings<86,86to88,88to90,90to92,92plus; common boundary goes higher. Most precise originally reported metric, no assumed extra rounding.",
+  "verified_facts": {
+    "Q2_2026": {
+      "premium_USD_m": 14918,
+      "reported": 86.6,
+      "underlying": 79.4,
+      "cat_ratio": 11.5,
+      "favorable_reserve_credit_pp": 4.6,
+      "amortization_pp": 0.3
+    },
+    "Q1_2026": {
+      "premium_USD_m": 14802,
+      "reported": 82.0,
+      "underlying": 80.3,
+      "cat_ratio": 8.4,
+      "favorable_reserve_credit_pp": 6.9,
+      "amortization_pp": 0.2
+    },
+    "Q3_2025": {
+      "premium_USD_m": 14533,
+      "reported": 80.1,
+      "underlying": 78.7,
+      "cat_ratio": 3.8,
+      "favorable_reserve_credit_pp": 2.7,
+      "amortization_pp": 0.3
+    },
+    "Q3_monthly_estimate_pretax_USD_m": 1650,
+    "August_standalone_aftertax_USD_m": 591,
+    "Jul_Aug_cumulative_aftertax_USD_m": 1130,
+    "source_correction": "Original1130August label corrected additively; no aftertaxcat amount used in GAAP bridge."
+  },
+  "formula": "GAAP = underlying + 100*pretaxcats/P-Learnedpremiums - favorable prior-year reserve credit + intangible amortization effect. Rounded historical rows need not sum exactly.",
+  "regimes": [
+    {
+      "name": "Q2 underwriting and reserve credit broadly persist",
+      "weight": 0.5,
+      "underlying": 79.4,
+      "cat_USD_m": 1650,
+      "PL_premiums_USD_m": 15100,
+      "reserve_credit_pp": 4.6,
+      "amortization_pp": 0.3,
+      "net_ratio_sigma_pp": 1.8,
+      "gaap_mean": 86.0271523178808,
+      "p_86_to_88": 0.3694840739010438
+    },
+    {
+      "name": "reserve normalization and modest claims pressure",
+      "weight": 0.35,
+      "underlying": 80.0,
+      "cat_USD_m": 1650,
+      "PL_premiums_USD_m": 15000,
+      "reserve_credit_pp": 3.0,
+      "amortization_pp": 0.3,
+      "net_ratio_sigma_pp": 2.0,
+      "gaap_mean": 88.3,
+      "p_86_to_88": 0.3153103719926075
+    },
+    {
+      "name": "fading reserve release and adverse claims/cat reestimate",
+      "weight": 0.15,
+      "underlying": 81.0,
+      "cat_USD_m": 1750,
+      "PL_premiums_USD_m": 14900,
+      "reserve_credit_pp": 1.0,
+      "amortization_pp": 0.3,
+      "net_ratio_sigma_pp": 2.8,
+      "gaap_mean": 92.04496644295301,
+      "p_86_to_88": 0.058852478750727855
+    }
+  ],
+  "raw_band_p": 0.3039285389605437,
+  "no_metric_or_no_release_default": {
+    "weight": 0.01,
+    "band_p": 0,
+    "reason": "Rulelowestbracket<86; low subjective reporting/source failure branch, not empiricalrate. DeadlineDec31 23:59ET. Transcript fallback applies if materials omitmetric."
+  },
+  "p_after_default_branch": 0.30088925357093826,
+  "adopted_p_yes": 0.3,
+  "range": [
+    0.05,
+    0.7
+  ],
+  "actual_entry_reserve_pp": 15,
+  "uncertainty": "Weights, sigma, Q3 premiums/underlying/reserve are subjective unfitted forecasts. Three historicalquarters are accounting anchors, not a calibrated distribution; cats estimate alone cannot calculateQ3ratio. Net sigma represents joint effects rather than independent components. 15pp exceeds10pp instance default for narrowband and unobserved reserves; broad sensitivity is not a guarantee.",
+  "sensitivity": {
+    "Q2_inputs_with_Q3cats_mean": 86.16046386915137,
+    "tight_centered_Normal87_sigma1_band": 0.6826894921370859,
+    "centering_or_sigma_failure": "A tightly centered true forecast could give band~68%, far above adopted30; neither company guidance nor analyst consensus for this tight band was recovered. Losing-NO scenario real.",
+    "source_precision": "No assumed independent roundoff correction; continuous latent approximation ignores reported0.1 grid mass, small versus epistemic uncertainty but exact boundary can matter."
+  },
+  "catalysts": "Nov4 after16:15ET=21:15UTC release; Nov5 09ET=14UTC call. No-release deadlineJan1 2027 04:59UTC, possible adjudication delay.",
+  "portfolio": "No Allstateheld/bid, no offchainstock recommendation. On-chain PMcontract only; common PMoracle/collateral and economicclaims-risk remain; no hedge/correlation credit.",
+  "alternative": "CachedvariableAave3.2035%, existingknowncandidates/currentholdingmarginalreturns aftercosts. NewBUYblockeduntil600+comparative selection. Nonurgentmakeror-skip, conditional-fill risk unmeasured."
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "provisional_candidate_comparison.v1",
+  "reviewed_utc": "2026-10-20T13:54:05.317820+00:00",
+  "purpose": "Compare new470 lead against known exact-contract leads/holding option and cash; not milestone600 selection, policy selection remainsnull.",
+  "rows": [
+    {
+      "case": 470,
+      "outcome": "No",
+      "basis": "13:42captured10shares fee-netaskcost5.10; central70%/selected55%; centralEV+1.90/selected+.40 beforefunding.20daycarry5.10882 approximately.",
+      "limit": "Unfitted narrow2ppmetric/unknown reserves; tight87/SD1 givesYES68.27%, NOloss;2xtailadversefillstressfails. Ordinarynonurgentmaker-or-skip, no conditionalfillcertificate."
+    },
+    {
+      "case": 469,
+      "outcome": "No",
+      "basis": "Same13:42quote10cost9.52376; central94%/selected79%, centralEV-.12376/selected-1.62376.",
+      "limit": "No positiveaskedge; samejoint monetary policy model nottwelveindependentvotes."
+    },
+    {
+      "case": 463,
+      "outcome": "Yes",
+      "basis": "Dated12:53quote1000cost1.04996 central9%/selected0: centralEV+88.95004 but selected-1.04996.",
+      "limit": "Uncalibratedeventtail, no scalablecertainprofit. Currentmarketmaydiffer; no decisionatoldquote."
+    },
+    {
+      "case": 468,
+      "outcome": "Yes",
+      "basis": "Dated12:53quote10cost1.20 central15%/selected0: central+.30/selected-1.20.",
+      "limit": "Currentmilitary-sourcegaps/sharedgeopoliticalregimes, no stresspositivecase."
+    },
+    {
+      "case": 1838,
+      "outcome": "existing5No",
+      "basis": "13:26fee-netexit1.40882 vs selectedterminal1.70, central2.20/broadlow1.00;75dayconstantcachedcarryexit1.41798. Separateoptional5NOask1.542 yieldsselected+.158beforefunding.",
+      "limit": "Existingholdmarginaloption, notcost-basisprofit orpermissiontoadd. Politicssalienceandfillriskunknown; MI+full3bids8.05canalllose."
+    },
+    {
+      "alternative": "ExistingAave/cash",
+      "basis": "CachedOct19 18:02 variable3.2035%; same-chainunwrapping/funding pathvettedbutactualfees/gas/availabilitymustrecheck.",
+      "limit": "Investableflooronly, no guaranteedfixedyield; lessbinaryrisk butstablecoin/protocol/chainrisk. Copper/B20onchainmanualcandidatesrequireunresolvedroute/returnevidence; no newoffchainstockallocation."
+    }
+  ],
+  "conclusion": "470NO is more promising on adopted selected ask math than the dated463/468tailleads and469NO, but comparative ranking remains provisional and input/fill uncertainty can reverse it. Keep as candidate for600primarycomparison; no newbid/targetselection, no forced allocation.",
+  "account_limit": "Lastfullfinancial12:19–12:20/auth13:25; no freshaccountorfinancialproducer run forresearch, so no currentcap/fundingeligibilitycertification.",
+  "references": [
+    "research/2026-10-17-deep-review/evaluations/0470.md",
+    "research/2026-10-17-deep-review/evaluations/0469.md",
+    "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json",
+    "notes/longterm_watchlist.md"
+  ],
+  "financial_action": false
+}

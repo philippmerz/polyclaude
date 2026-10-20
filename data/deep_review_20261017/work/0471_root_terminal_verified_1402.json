@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-20T13:51:49.947297+00:00",
+  "review_index": 471,
+  "quote_packet": "data/deep_review_20261017/work/cases469_470_471_quotes_1345.json",
+  "quote_packet_sha256": "38c3b28bd3d9b40b8835db1174956fc0f74db057daba7aa25b421692d0a1c6ec",
+  "gamma_received_utc": "2026-10-20T13:42:47.940699+00:00",
+  "exact_frozen_identity_and_raw_gamma_hash_verified": true,
+  "closed": true,
+  "acceptingOrders": false,
+  "umaResolutionStatus": "resolved",
+  "umaResolutionStatuses": "[\"proposed\", \"proposed\"]",
+  "outcomePrices": "[\"0\", \"1\"]",
+  "limits": "Top-levelresolved vs historicalperoutcomearrayproposed discrepancy retained. No officialscore/chainfinalityverified; currentlyclosed/nonacceptingexactvenue is exclusion basis, not missingbooks/price."
+}

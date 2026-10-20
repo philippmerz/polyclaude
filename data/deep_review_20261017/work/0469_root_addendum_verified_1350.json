@@ -1,0 +1,31 @@
+{
+  "verified_utc": "2026-10-20T13:45:30.006339+00:00",
+  "verified_receipts": [
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/bowman_oct14.receipt.json",
+      "raw_sha256": "28e5a1090dc413b2d81253de14f7db479e7b2953a5cdf0d628a11ccc6174edc0",
+      "received_utc": "2026-10-20T13:42:51.906495Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/official_speech_index.receipt.json",
+      "raw_sha256": "1497f75894dd973295a78b4e5ff7b965d8f2ecd5eeeeb4723cd2e942e906fcc5",
+      "received_utc": "2026-10-20T13:18:13.633687Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/nyfed_index/nyfed_speech_index.receipt.json",
+      "raw_sha256": "5fdf7a50a7d7923950c496cc0c1ae364a62e7b44b7fb1fcbc61b20453aa154f3",
+      "received_utc": "2026-10-20T13:43:17.923224Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/fed_recent/fed_recent.receipt.json",
+      "raw_sha256": "1857576a6010f4857418ade20492007c8b656d8f38b87f9498b62557e3ce6871",
+      "received_utc": "2026-10-20T13:43:33.859172Z"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/committee.receipt.json",
+      "raw_sha256": "ba554077eff58aa46a2bb9811f746d9236e85d9e267df7ccf16427009345ddca",
+      "received_utc": "2026-10-20T13:17:25.492022Z"
+    }
+  ],
+  "finding": "Bowman supervision/SVB speech, not a December vote commitment; index scope bounded, not exhaustive speeches/roster-change proof."
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "price_blind_accounting_addendum.v1",
+  "review_index": 470,
+  "market_id": "5730154",
+  "condition_id": "0x23f2b772400037e53c547ba4686bbb56ee6dd677aa3a36da3f0716a97eb51ae4",
+  "question": "Allstate (ALL) Q3 property-liability combined ratio 86% to 88%?",
+  "as_of_utc": "2026-10-20T13:48Z",
+  "source_verification": {
+    "method": "Verified each local gzip body SHA-256, decompressed raw-body SHA-256 and raw byte count against its existing receipt; all matched.",
+    "receipt_hash_scope": "supplied_bytes_only_not_wire_authentication",
+    "source_directory": "logs/deep_review_20261017/case470_allstate_facts_1318/",
+    "sources": {
+      "q2_supplement": {"url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000117/allcorp63026investorsupp.htm", "gzip_sha256": "794f719ad067f05ba7970fcdf04d2436e94dad8687836722dd1b773117486366", "raw_sha256": "3558fbf3b5ed91e3a26d2dba3569d3cec510146466d020ed188593cbb24b7843", "raw_bytes": 63984},
+      "q2_10q": {"url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000118/all-20260630.htm", "gzip_sha256": "bea45e5edde80e334c8ceb8e6cb1c929160065a513fa7fef48245f8e7100761a", "raw_sha256": "e2256e913207d94ae23ceacd0a0d2ea5f803ce9de1ea091e0b11b5e9cd672647", "raw_bytes": 4801101},
+      "july_cats": {"url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000127/exhibit99newsrelease082026.htm", "gzip_sha256": "446f482363c4e4f6ff1f9a777236aafdd562cfe6e4c17907384823175379cd99", "raw_sha256": "aff984846937033ae0ff2af7a1a8b3d34ae7fa7b05bcb20948ca8dde382a35a8", "raw_bytes": 7271},
+      "august_cats": {"url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000135/exhibit99newsrelease091726.htm", "gzip_sha256": "4ebd5f8a1b6e8c898af637e8eca27fd4b8254569c52b2257e21c5f60750d13fa", "raw_sha256": "32c9949803590ed83987e886feb40a7bc5eefaa6e06aa0a0332e0b1007de2288", "raw_bytes": 7370},
+      "september_cats": {"url": "https://www.sec.gov/Archives/edgar/data/899051/000089905126000150/exhibit99newsrelease101526.htm", "gzip_sha256": "fddab43a848c76654b904800ab635fd0d87bd80af3d80c51528417ad8028de6d", "raw_sha256": "672cac5c76c920ee06193ad6e4953efec1fa6454f38e06b85638ec7083370012", "raw_bytes": 7256}
+    }
+  },
+  "period_facts": {
+    "source": "Q2 2026 Investor Supplement, page 6, table 'The Allstate Corporation Property-Liability Results' (embedded slide text). The table's columns begin: Q2 2026, Q1 2026, Q4 2025, Q3 2025, Q2 2025, Q1 2025, 6M 2026, 6M 2025.",
+    "unit": "USD millions except ratios in percentage points",
+    "rows": [
+      {"period": "Q2 2026", "premiums_earned_usd_m": 14918, "gaap_combined_ratio_pct": 86.6, "underlying_combined_ratio_pct": 79.4, "catastrophe_effect_on_combined_ratio_pp": -11.5, "prior_year_reserve_reestimates_ex_cat_effect_pp": 4.6, "purchased_intangible_amortization_effect_pp": -0.3},
+      {"period": "Q1 2026", "premiums_earned_usd_m": 14802, "gaap_combined_ratio_pct": 82.0, "underlying_combined_ratio_pct": 80.3, "catastrophe_effect_on_combined_ratio_pp": -8.4, "prior_year_reserve_reestimates_ex_cat_effect_pp": 6.9, "purchased_intangible_amortization_effect_pp": -0.2},
+      {"period": "Q3 2025", "premiums_earned_usd_m": 14533, "gaap_combined_ratio_pct": 80.1, "underlying_combined_ratio_pct": 78.7, "catastrophe_effect_on_combined_ratio_pp": -3.8, "prior_year_reserve_reestimates_ex_cat_effect_pp": 2.7, "purchased_intangible_amortization_effect_pp": -0.3}
+    ],
+    "reconciliation_definition": "Supplement page 6 presents reported GAAP combined ratio followed by effects of catastrophe losses, prior-year reserve reestimates excluding catastrophes, and purchased-intangible amortization, then underlying combined ratio. Displayed tenths can have rounding differences; underlying ratio is explicitly non-GAAP and not a substitute for GAAP.",
+    "exact_table_values_context": "The same table reports Q2/Q1/Q3'25 P-L loss ratios 64.8/60.7/58.3 and expense ratios 21.8/21.3/21.8; GAAP combined ratio is their sum (as rounded in reported table). Catastrophe losses in dollars are 1,722/1,240/558 million for these periods, and underwriting income is 2,006/2,658/2,894 million."
+  },
+  "gaap_definition": {
+    "source": "Q2 2026 Form 10-Q, MD&A, 'Property-Liability operating ratios' definition passage (HTML filing; source body includes XBRL/HTML text).",
+    "coordinates": "Searchable filing text under MD&A operating ratios heading; exact page coordinate is not encoded in captured HTML receipt.",
+    "text": "Loss ratio is claims and claims expense (loss adjustment expenses) divided by premiums earned and includes catastrophe losses and prior-year reserve reestimates. Expense ratio is DAC amortization plus operating costs and expenses, purchased-intangible amortization/impairment and restructuring/related charges, less other revenue, divided by premiums earned. Combined ratio is the sum of loss and expense ratios. Effects of specific items on GAAP operating ratios are divided by Property-Liability premiums earned.",
+    "implication": "For frozen contract resolution, the reported GAAP P-L combined ratio is the exact metric; catastrophe estimates and underlying ratio are explanatory evidence only."
+  },
+  "catastrophe_release_correction": {
+    "correction_to_existing_fact_file": "In data/deep_review_20261017/work/0470_allstate_q3_ratio_facts_1325.json, August aftertax_USD_m=1130 incorrectly labels the cumulative July-August figure as an August-only value.",
+    "issuer_wording_and_scope": [
+      {"period": "July 2026", "release_date": "2026-08-20", "pretax_usd_m": 682, "aftertax_usd_m": 539, "coordinate": "July 2026 Monthly Release, first body paragraph"},
+      {"period": "August 2026", "release_date": "2026-09-17", "pretax_usd_m": 748, "aftertax_usd_m": 591, "coordinate": "August 2026 Monthly Release, first body paragraph"},
+      {"period": "July-August 2026 cumulative", "release_date": "2026-09-17", "pretax_usd_m": 1430, "aftertax_usd_m": 1130, "coordinate": "August 2026 Monthly Release, immediately following sentence: 'Total catastrophe losses for July and August were $1.43 billion or $1.13 billion, after-tax.'"},
+      {"period": "September 2026", "release_date": "2026-10-15", "pretax_usd_m": 220, "aftertax_usd_m": 173, "coordinate": "September 2026 Monthly Release, first body paragraph"},
+      {"period": "Q3 2026 cumulative", "release_date": "2026-10-15", "pretax_usd_m": 1650, "aftertax_usd_m": 1300, "coordinate": "September 2026 Monthly Release, immediately following sentence: 'Total catastrophe losses for the third quarter were $1.65 billion or $1.30 billion, after-tax.'"}
+    ],
+    "unit_and_definition": "USD millions; pretax catastrophe loss estimate or after-tax amount, as labeled by issuer. Monthly releases give estimates; they are not the quarterly GAAP combined ratio or a substitute for GAAP claims incurred.",
+    "interpretation": "The value 1,130 is cumulative Jul-Aug after-tax, not August-only. August standalone after-tax is 591. Q3 cumulative after-tax 1,300 equals Jul-Aug cumulative 1,130 plus September 173 after rounding."
+  },
+  "source_format_limit": "The existing supplement receipt is the SEC HTML exhibit, whose slide images have embedded text alternatives; it contains slide/page 6 values and was read directly. No actual supplement PDF file is present among this case's existing receipts or local files, so PDF page-box coordinates could not be independently checked with pypdf. The 10-Q receipt is likewise HTML; its operative definition passage is identified by heading/text, not PDF page coordinate.",
+  "remaining_q3_gap": "Q3 2026 reported GAAP combined ratio is unavailable before Allstate's scheduled 2026-11-04 results. Monthly catastrophe releases do not provide the premiums-earned denominator, full GAAP claims expense, prior-year reserve-development classification, or expense ratio needed to calculate it."
+}

@@ -1,0 +1,41 @@
+{
+  "verified_utc": "2026-10-20T13:55:19.934392+00:00",
+  "base_HEAD": "76257d333a791051a8354b6dfbb5bb27be095ff8",
+  "prior_ledger_prefix_preserved": true,
+  "new_records": [
+    {
+      "index": 469,
+      "status": "valued",
+      "record_sha256": "f38c1b91d0a26d3212642584bfa975a06e44a792a867a8b463972b60188e21a0",
+      "report_sha256": "d051520d5be0191ee79f8f079a5030774698897fa5c578c84059dedad08a0944"
+    },
+    {
+      "index": 470,
+      "status": "valued",
+      "record_sha256": "c73005da201e2ef229f76beef19618f12c6d733b35fbc52d2fa43d1b21938c9a",
+      "report_sha256": "0908fda9c6d0418b35652b75f5d1bd0feefad025b37e803f78bd5c3872dfc2be"
+    },
+    {
+      "index": 471,
+      "status": "excluded_factual",
+      "record_sha256": "23c02e7008af4a098ea9b4cbdda4189463680d9a105a3cb076f0f2f0bde6e414",
+      "report_sha256": "9943cf2d742e07f5f9a8d01c0dde70f3b607965391a898dc79d22baadfac8ea4"
+    }
+  ],
+  "append_count": 3,
+  "revision_ledger_unchanged": true,
+  "frozen_rules_hash_verified": true,
+  "counts": {
+    "completed_valuations": 393,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 376,
+    "pending": 2215,
+    "base_records": 785,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    472
+  ],
+  "no_financial_or_policy_change": true,
+  "verification_limit": "Identity/hash/math checks establish persistedreview, notcalibratedforecast orinvestmentauthorization."
+}

@@ -1,0 +1,31 @@
+{
+  "review_index": 471,
+  "market_id": "5723939",
+  "condition_id": "0xb41a590575123fbe1afc491f428c8f272e11e3c49c16059536d6ab822ee908ab",
+  "criteria_sha256": "7902e1e2c8e679c196179fe00832de510b2e463ac09e058f7edbeb3df3f08259",
+  "status": "excluded_factual",
+  "literal_analysis": "Over>=168combinedincludingOT,Under<=167; postponeduntilplayed,canceledwithoutmakeup50-50,officialLNBfinalscore. Exactclosed/nonacceptingvenue unavailable now.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5723939",
+      "observed_utc": "2026-10-20T13:42:47.940699+00:00",
+      "finding": "RootverifiedrawGammahash andexactfrozencriteria/orderedtokens:closedtrue/acceptingfalse/top-levelresolved. Per-outcomearrayproposed/proposed retained; no independentofficialscore/chainfinalityclaim."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Current exact venue closure/nonacceptance, not a probability or price/liquidity screen."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "not_available_for_entry": true,
+    "reason": "No executable new-entryroute atclosedvenue; missingbooks alone notclosureproof."
+  },
+  "verdict": "Objectiveclosedvenuefactualexclusion; notfullvaluation/600credit.",
+  "reopen_condition": "Exactvenueopens/acceptsorders oridentity/statusproofchanges; thenfullunderwriting/currentgates, no automaticentry.",
+  "evaluated_utc": "2026-10-20T13:51:50.010052+00:00",
+  "question": "Cholet vs. Chalon/Saone: O/U 167.5",
+  "valuation_author": "primary_operator",
+  "original_index": 471,
+  "report_sha256": "9943cf2d742e07f5f9a8d01c0dde70f3b607965391a898dc79d22baadfac8ea4"
+}

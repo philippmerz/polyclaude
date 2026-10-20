@@ -1,0 +1,52 @@
+{
+  "verified_utc": "2026-10-20T13:43:39.199613+00:00",
+  "receipt_pairs": [
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/latest_statement.receipt.json",
+      "received_utc": "2026-10-20T13:17:25.695601Z",
+      "raw_sha256": "58e4e3b030ddddc74d3426e77d576f41c841a4e91a33d03d89937ec6eea0ae08"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/calendar.receipt.json",
+      "received_utc": "2026-10-20T13:17:25.282656Z",
+      "raw_sha256": "e8a7bc531800f0ca6d80bdedbc9ff7c0c91b881ce42eb1e51ecce84453467107"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/committee.receipt.json",
+      "received_utc": "2026-10-20T13:17:25.492022Z",
+      "raw_sha256": "ba554077eff58aa46a2bb9811f746d9236e85d9e267df7ccf16427009345ddca"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/speeches_2026.receipt.json",
+      "received_utc": "2026-10-20T13:17:25.906111Z",
+      "raw_sha256": "1efc1a99042cc6d76fd73a431d9463698cac362c24e59708191cc2eb61d95f11"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/waller_oct08.receipt.json",
+      "received_utc": "2026-10-20T13:18:14.063077Z",
+      "raw_sha256": "41b7f787b639a2c4b4b676f5e9506b1019a3b762f2a6e59e320164e98edd4aa9"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/jefferson_oct01.receipt.json",
+      "received_utc": "2026-10-20T13:18:14.263951Z",
+      "raw_sha256": "f3226b894a39e34c42a905cb4364932c00ccc009c81b11720acd2fd4e4716fb6"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/official_speech_index.receipt.json",
+      "received_utc": "2026-10-20T13:18:13.633687Z",
+      "raw_sha256": "1497f75894dd973295a78b4e5ff7b965d8f2ecd5eeeeb4723cd2e942e906fcc5"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/september_minutes.receipt.json",
+      "received_utc": "2026-10-20T13:18:13.849987Z",
+      "raw_sha256": "8731adda1a2e63efbc4b4e489ae404f6eb38bc585664ebeb94a3cdcaf7ca8368"
+    },
+    {
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/williams_sep29.receipt.json",
+      "received_utc": "2026-10-20T13:18:14.625484Z",
+      "raw_sha256": "100c47cf00c6896b7ea5ed41950ecddb712c2a13c18deab2f09c0c1e93bce76e"
+    }
+  ],
+  "body_text_independently_read": true,
+  "limits": "Existing captures13:17-18, no freshspeechclaim; no December ballot commitments inferred."
+}

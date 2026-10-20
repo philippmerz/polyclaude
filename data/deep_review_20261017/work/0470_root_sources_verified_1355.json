@@ -1,0 +1,44 @@
+{
+  "verified_utc": "2026-10-20T13:47:34.467441+00:00",
+  "receipt_pairs": [
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/july_cats.receipt.json",
+      "raw_sha256": "aff984846937033ae0ff2af7a1a8b3d34ae7fa7b05bcb20948ca8dde382a35a8",
+      "received_utc": "2026-10-20T13:18:16.179294Z",
+      "body_representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/august_cats.receipt.json",
+      "raw_sha256": "32c9949803590ed83987e886feb40a7bc5eefaa6e06aa0a0332e0b1007de2288",
+      "received_utc": "2026-10-20T13:18:16.289102Z",
+      "body_representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/q2_10q.receipt.json",
+      "raw_sha256": "e2256e913207d94ae23ceacd0a0d2ea5f803ce9de1ea091e0b11b5e9cd672647",
+      "received_utc": "2026-10-20T13:18:15.132695Z",
+      "body_representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/september_cats.receipt.json",
+      "raw_sha256": "672cac5c76c920ee06193ad6e4953efec1fa6454f38e06b85638ec7083370012",
+      "received_utc": "2026-10-20T13:18:16.375110Z",
+      "body_representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/q2_supplement.receipt.json",
+      "raw_sha256": "3558fbf3b5ed91e3a26d2dba3569d3cec510146466d020ed188593cbb24b7843",
+      "received_utc": "2026-10-20T13:18:15.341927Z",
+      "body_representation": "http_body"
+    },
+    {
+      "receipt": "logs/deep_review_20261017/case470_allstate_facts_1318/q3_schedule.receipt.json",
+      "raw_sha256": "9f74b5b56c20aa9f33e8bc2bc008b74efc8e77b9d68df4dc5b3d25d436e48887",
+      "received_utc": "2026-10-20T13:18:16.091281Z",
+      "body_representation": "http_body"
+    }
+  ],
+  "table_body_independently_read": true,
+  "correction": "Original August aftertax1130 is cumulativeJul-Aug; standalone591. Both original/addendum preserved. Addendumas_of13:48 is collector editorial label, not refreshed observation; original received clocks above govern.",
+  "boundary": "Root frozen sibling titles inspected separately before probability."
+}

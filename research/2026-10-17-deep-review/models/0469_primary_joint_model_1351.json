@@ -1,0 +1,97 @@
+{
+  "schema": "primary_joint_dissent_model.v1",
+  "review_index": 469,
+  "created_utc": "2026-10-20T13:45:35.850840+00:00",
+  "count_bins": [
+    "0",
+    "1",
+    "2",
+    "3",
+    "4+"
+  ],
+  "evidence_bridge": [
+    "September unanimous12-0 is consensus evidence, not twelve independent forecasts.",
+    "Waller/Jefferson/Williams conditional guidance shows possible thresholds, not promised December dissents.",
+    "Two scheduled decisions and new data before December can alter coalitions; no arbitrary assignment of named members to future votes.",
+    "Latest official displayed indexes/supervision speech supply no new verified vote commitment; bounded coverage."
+  ],
+  "regimes": [
+    {
+      "name": "consensus process remains effective",
+      "weight": 0.65,
+      "counts_0_1_2_3_4plus": [
+        0.86,
+        0.1,
+        0.03,
+        0.008,
+        0.002
+      ]
+    },
+    {
+      "name": "persistent policy-threshold split",
+      "weight": 0.25,
+      "counts_0_1_2_3_4plus": [
+        0.2,
+        0.35,
+        0.25,
+        0.15,
+        0.05
+      ]
+    },
+    {
+      "name": "large economic/political shock",
+      "weight": 0.1,
+      "counts_0_1_2_3_4plus": [
+        0.3,
+        0.25,
+        0.2,
+        0.15,
+        0.1
+      ]
+    }
+  ],
+  "conditional_weights_are": "Subjective unfitted process judgment, not historical frequency, market-implied probability, speech-vote calibration or independent Bernoulli ballots.",
+  "base_joint_distribution": [
+    0.6390000000000001,
+    0.1775,
+    0.10200000000000001,
+    0.0577,
+    0.0238
+  ],
+  "meeting_or_source_ambiguity": {
+    "weight": 0.02,
+    "count_distribution": [
+      0.35,
+      0.25,
+      0.2,
+      0.1,
+      0.1
+    ],
+    "reason": "No explicit cancellation/postponement/no-statement rule; exceptional handling may delay or alter interpretation. This branch is judgment, not a proven NO default."
+  },
+  "joint_distribution": [
+    0.6332200000000001,
+    0.17895,
+    0.10396000000000001,
+    0.058546,
+    0.025324
+  ],
+  "raw_p_exact3": 0.058546,
+  "adopted_p_exact3": 0.06,
+  "range": [
+    0.005,
+    0.3
+  ],
+  "actual_entry_reserve_pp": 15,
+  "sensitivity": {
+    "strong_consensus_p3": 0.008,
+    "fragmented_p3": 0.15,
+    "shock_p3": 0.15,
+    "extreme_organized_three_member_coalition": 0.3,
+    "range_is": "Uncertainty envelope, not fitted confidence interval or guaranteed downside floor."
+  },
+  "family_binding": "0179 October zero-dissent forecast75% applies to a different meeting. December has longer data/coalition uncertainty; joint distribution here is reserved for exact December count siblings, not probability copied from October.",
+  "resolution": "Dec9 14ET=19UTC; frozen15:59Z endDate is not announcement. Exactly3 rate-decision votes, not >=3; separate implementation votes/discussion do not count. No express fallback; ordinary resolution fitsJanuary but adjudication may delay.",
+  "portfolio_alternative": "No current Fed holding/bid; shared macro/inflation/geopolitics with other monetary-policy candidates, no diversification credit. Compare after600 with known leads and cached variableAave; no fill-certified maker edge.",
+  "reopen": "Oct28 statement, subsequent December-guidance/roster/economic shock; fresh exact books/fees and capital/venue checks after600 selection."
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "deep_review_additive_facts.v1",
+  "captured_utc": "2026-10-20T13:44:00Z",
+  "review_index": 469,
+  "supplements": "data/deep_review_20261017/work/0469_fomc_facts_1318.json",
+  "scope": "Official Federal Reserve and New York Fed pages checked for Oct 9–20 voting-member speeches, roster changes, and Oct 16 FOMC guidance. No vote forecast, verdict, ranking, or trade assessment.",
+  "sources": [
+    {
+      "url": "https://www.federalreserve.gov/newsevents/speech/bowman20261014a.htm",
+      "title": "Supervisory Modernization After Silicon Valley Bank",
+      "speaker": "Michelle W. Bowman, Vice Chair for Supervision and FOMC voting member",
+      "publication_date": "2026-10-14",
+      "retrieved_utc": "2026-10-20T13:42:51.906495Z",
+      "http_status": 200,
+      "last_modified": "Thu, 15 Oct 2026 02:56:21 GMT",
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/bowman_oct14.receipt.json",
+      "raw_sha256": "28e5a1090dc413b2d81253de14f7db479e7b2953a5cdf0d628a11ccc6174edc0",
+      "finding": "Full body concerns bank supervision and the SVB review. No inflation, FOMC vote/dissent discussion, December rate preference, or vote commitment in substantive text; monetary policy matches are navigation/context."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/2026-speeches.htm",
+      "title": "Federal Reserve Board 2026 Speeches index",
+      "publication_date": "updated by 2026-10-15 (Last-Modified)",
+      "retrieved_utc": "2026-10-20T13:18:13.633687Z",
+      "http_status": 200,
+      "receipt": "logs/deep_review_20261020/case469_fed_followup_1325/official_speech_index.receipt.json",
+      "raw_sha256": "1497f75894dd973295a78b4e5ff7b965d8f2ecd5eeeeb4723cd2e942e906fcc5",
+      "finding": "Official dated index lists Bowman’s Oct 14 speech and Waller’s Oct 8 speech as the newest entries through Oct 20 retrieval. Oct 14 body was read separately."
+    },
+    {
+      "url": "https://www.newyorkfed.org/newsevents/speeches/index",
+      "title": "New York Fed Speeches index",
+      "publication_date": "current index retrieved 2026-10-20",
+      "retrieved_utc": "2026-10-20T13:43:17.923224Z",
+      "http_status": 200,
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/nyfed_index/nyfed_speech_index.receipt.json",
+      "raw_sha256": "5fdf7a50a7d7923950c496cc0c1ae364a62e7b44b7fb1fcbc61b20453aa154f3",
+      "finding": "Full index body lists its newest speech as Kartik Athreya on Oct 7; John Williams’s newest listed speech is Sep 29. It lists no speech dated Oct 9–20. Index scope is posted speeches only."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/recentpostings.htm",
+      "title": "Federal Reserve Board Recent Postings",
+      "publication_date": "current index (Last-Modified 2026-10-19 20:15:11 GMT)",
+      "retrieved_utc": "2026-10-20T13:43:33.859172Z",
+      "http_status": 200,
+      "receipt": "logs/deep_review_20261020/case469_fed_addendum_1345/fed_recent/fed_recent.receipt.json",
+      "raw_sha256": "1857576a6010f4857418ade20492007c8b656d8f38b87f9498b62557e3ce6871",
+      "finding": "Displayed Oct 16 entries are three FEDS Notes, one press release terminating two enforcement actions, and the G.17 industrial production release. The displayed list contains no Oct 16 FOMC statement or other item identified as FOMC policy guidance. The Oct 14 Bowman speech is also listed. Finding limited to displayed entries."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm",
+      "title": "Federal Reserve FOMC membership page",
+      "publication_date": "current page captured 2026-10-20",
+      "retrieved_utc": "2026-10-20T13:17:25Z",
+      "http_status": 200,
+      "receipt": "logs/deep_review_20261020/case469_fed_1320/committee.receipt.json",
+      "raw_sha256": "ba554077eff58aa46a2bb9811f746d9236e85d9e267df7ccf16427009345ddca",
+      "finding": "The already captured current page lists 12 voting members and separately lists alternates; it showed no vacancy. No second roster fetch. December attendance, substitutions, recusals, and abstentions remain unknown; no Oct 9–20 change verified here."
+    }
+  ],
+  "scope_and_gaps": [
+    "The first attempted October-specific Federal Reserve URL returned the official October calendar (HTTP 200), not a recent-postings page; its receipt is logs/deep_review_20261020/case469_fed_addendum_1345/october_postings/fed_october_postings.receipt.json. It is excluded from findings; the official Recent Postings page was then captured and read.",
+    "Indexes/displayed postings only; older speech bodies, unpublished/private material, and later publications were not checked. No inference beyond displayed content."
+  ],
+  "no_probability": true,
+  "no_verdict": true,
+  "no_ranking_or_trade": true
+}

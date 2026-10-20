@@ -1,0 +1,167 @@
+{
+  "review_index": 469,
+  "market_id": "3215057",
+  "condition_id": "0xe43c3d2b64ead284cb903280d5d4156954d8c682174c35ad20e732d2f9f2c50e",
+  "criteria_sha256": "1aae8590c926b4031f2405b1356a182dcabc640afaac3bf517551e93bad389f4",
+  "status": "valued",
+  "literal_analysis": "Exactly3 recorded Fed Funds-rate dissents at December8-9 meeting; statement/credible reporting; Dec9 19UTC release notGammaend15:59. Separate implementation votes not automatically counts. No express cancellation/no-statement fallback, possible adjudication delay.",
+  "evidence": [
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-20T13:17:25Z",
+      "finding": "2026 calendar lists Dec 8-9; next meeting Oct 27-28. Page last modified Oct 7."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomc.htm",
+      "observed_utc": "2026-10-20T13:17:25Z",
+      "finding": "Official roster12members; alternates separate, December attendance not established."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-20T13:18:47Z",
+      "finding": "Policy rate raised 25bp to 3.75%-4.00%; 12-0, all 12 named members in favor, none against."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "observed_utc": "2026-10-20T13:18:47Z",
+      "finding": "Minutes say all members agreed to the 25bp increase and reproduce the 12-0 roll call. Participant views/risks varied but are not mapped to individual December votes; alternates and other presidents are separately listed in attendance."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.06,
+    "low": 0.005,
+    "high": 0.3,
+    "actual_entry_reserve_pp": 15,
+    "method": "Subjective joint coalition/count distribution; consensus/split/shock and exceptional-source branches, 5.8546% rounded6. Unfitted, no independent-member binomial.",
+    "reasoning": "Latest12-0supports consensus; conditional heterogeneous speeches permit small coalitions but commit no December votes. Additional decision/data beforeDecember and attendance/source gaps keep wide sensitivity.",
+    "model": "research/2026-10-17-deep-review/models/0469_primary_joint_model_1351.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases469_470_471_quotes_1345.json",
+    "quote_file_sha256": "38c3b28bd3d9b40b8835db1174956fc0f74db057daba7aa25b421692d0a1c6ec",
+    "quote_capture_utc": "2026-10-20T13:42:48.086088+00:00",
+    "gamma_received_utc": "2026-10-20T13:42:47.609946+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 52.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.06,
+        "selected_stress_probability": 0,
+        "best_bid": 0.05,
+        "best_ask": 0.09,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792503698698",
+        "book_received_utc": "2026-10-20T13:42:48.085052+00:00",
+        "book_age_seconds_at_receipt": 69.38705205917358,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.8999999999999999,
+            "fee": 0.04096,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.9409599999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.05
+              }
+            ],
+            "net": 0.47624
+          }
+        },
+        "taker_cost_usd": 0.9409599999999999,
+        "central_expected_profit_usd": -0.34095999999999993,
+        "selected_stress_profit_usd": -0.9409599999999999,
+        "break_even_before_carry": 0.09409599999999999,
+        "break_even_constant_carry": 0.0945196595715985,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.94,
+        "selected_stress_probability": 0.7899999999999999,
+        "best_bid": 0.91,
+        "best_ask": 0.95,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792503698698",
+        "book_received_utc": "2026-10-20T13:42:48.085052+00:00",
+        "book_age_seconds_at_receipt": 69.38705205917358,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.5,
+            "fee": 0.02376,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.95
+              }
+            ],
+            "net": 9.52376
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.1,
+            "fee": 0.04095,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.91
+              }
+            ],
+            "net": 9.05905
+          }
+        },
+        "taker_cost_usd": 9.52376,
+        "central_expected_profit_usd": -0.12376000000000076,
+        "selected_stress_profit_usd": -1.6237599999999999,
+        "break_even_before_carry": 0.9523759999999999,
+        "break_even_constant_carry": 0.9566639953256322,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Neither ask central-positive; lowpricedYES below minimum at10shares/20shares stillnegative. No entry;600comparisonpause.",
+  "reopen_condition": "Oct28decision/newpolicycoalition, roster or data shock; after600 primarycomparative selection, revalidate exact identity/fees/books/funding/current account/joint risk.",
+  "evaluated_utc": "2026-10-20T13:46:55.537647+00:00",
+  "question": "Will three people dissent the December Fed decision?",
+  "valuation_author": "primary_operator",
+  "original_index": 469,
+  "report_sha256": "d051520d5be0191ee79f8f079a5030774698897fa5c578c84059dedad08a0944"
+}

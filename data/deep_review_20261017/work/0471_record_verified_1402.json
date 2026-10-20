@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T13:51:50.353569+00:00",
+  "review_index": 471,
+  "status": "excluded_factual",
+  "record_sha256": "23c02e7008af4a098ea9b4cbdda4189463680d9a105a3cb076f0f2f0bde6e414",
+  "report_sha256": "9943cf2d742e07f5f9a8d01c0dde70f3b607965391a898dc79d22baadfac8ea4",
+  "prior_ledger_prefix_preserved": true,
+  "completed_valuations": 393,
+  "factual_exclusions": 376,
+  "ledger_sha256": "9f8818cf706752d59f5093f90364bc46548a6f1f9bee87d398eb65314ef98477"
+}

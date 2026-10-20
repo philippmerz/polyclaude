@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T13:17:59.347106+00:00
+Updated: 2026-10-20T13:54:05.246447+00:00
 
-**391 valuations saved; first milestone100:** 391 valued; 16 blocked after in-depth review. 375 factual exclusions separately; 2218 pending.
+**393 valuations saved; first milestone100:** 393 valued; 16 blocked after in-depth review. 376 factual exclusions separately; 2215 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -480,6 +480,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |466|[Will the highest score achieved by a SpaceXAI Grok model on Humanity’s Last Exam in 2026 be 65% or higher?](evaluations/0466.md)|valued|Neither currentaskhascentralpositiveEV;selectedcasefailsordinaryimprovingmakers. No entry/600comparativepause, noprior/orderchange.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |468|[US x Cuba military clash in 2026?](evaluations/0468.md)|valued|CentralYESlead only; selectedstress andunmeasuredsource/conditionalfill risk notstrong enoughforentry. No trade/600comparativepause.|
+|469|[Will three people dissent the December Fed decision?](evaluations/0469.md)|valued|Neither ask central-positive; lowpricedYES below minimum at10shares/20shares stillnegative. No entry;600comparisonpause.|
+|470|[Allstate (ALL) Q3 property-liability combined ratio 86% to 88%?](evaluations/0470.md)|valued|ProvisionalNO central+1.90/selected+.40 per10shares at5.10cost beforefunding; conditionaladverse-fill2x tailfails. No entry under600+comparisonpause ormaker/taker-routegates.|
+|471|[Cholet vs. Chalon/Saone: O/U 167.5](evaluations/0471.md)|excluded_factual|Objectiveclosedvenuefactualexclusion; notfullvaluation/600credit.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
@@ -795,4 +798,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 469
+Active indices: 472

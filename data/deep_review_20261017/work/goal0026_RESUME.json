@@ -1,0 +1,70 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T13:58:41.525466+00:00",
+  "previous_goal_turn_classification": "progress: five full valuations and three factual exclusions saved immediately, eight records independently verified and published76257d33; late Michigan safety follow-up complete. Telegram-only expiry response did not advance research.",
+  "scope": "Continue full frozen3000 review; no newBUY until600valued plus primarycomparative selection.",
+  "counts": {
+    "completed_valuations": 393,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 376,
+    "pending": 2215,
+    "base_records": 785,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    472
+  ],
+  "next_index": 472,
+  "completed_this_turn": [
+    {
+      "verified_utc": "2026-10-20T13:46:55.901547+00:00",
+      "review_index": 469,
+      "status": "valued",
+      "record_sha256": "f38c1b91d0a26d3212642584bfa975a06e44a792a867a8b463972b60188e21a0",
+      "report_sha256": "d051520d5be0191ee79f8f079a5030774698897fa5c578c84059dedad08a0944",
+      "prior_ledger_prefix_preserved": true,
+      "forecast_economics_consistent": true,
+      "completed_valuations": 392,
+      "ledger_sha256": "5b2c969f15905b208429849773e0c71977619116411b3559b4395f876c4a61e6"
+    },
+    {
+      "verified_utc": "2026-10-20T13:51:02.748555+00:00",
+      "review_index": 470,
+      "status": "valued",
+      "record_sha256": "c73005da201e2ef229f76beef19618f12c6d733b35fbc52d2fa43d1b21938c9a",
+      "report_sha256": "0908fda9c6d0418b35652b75f5d1bd0feefad025b37e803f78bd5c3872dfc2be",
+      "prior_ledger_prefix_preserved": true,
+      "forecast_economics_consistent": true,
+      "completed_valuations": 393,
+      "ledger_sha256": "67444aa7b3936c74eba0181775f8b206068899706c17878817225f45bcad440d"
+    },
+    {
+      "verified_utc": "2026-10-20T13:51:50.353569+00:00",
+      "review_index": 471,
+      "status": "excluded_factual",
+      "record_sha256": "23c02e7008af4a098ea9b4cbdda4189463680d9a105a3cb076f0f2f0bde6e414",
+      "report_sha256": "9943cf2d742e07f5f9a8d01c0dde70f3b607965391a898dc79d22baadfac8ea4",
+      "prior_ledger_prefix_preserved": true,
+      "completed_valuations": 393,
+      "factual_exclusions": 376,
+      "ledger_sha256": "9f8818cf706752d59f5093f90364bc46548a6f1f9bee87d398eb65314ef98477"
+    }
+  ],
+  "active_work": "data/deep_review_20261017/work/0472_passings_facts_1405.json",
+  "source_addendum": "data/deep_review_20261017/work/0469_fed_addendum_1345.json",
+  "last_safety": "research/2026-10-20-121327-checkin.json",
+  "late_safety": "data/deep_review_20261017/work/goal0025_mi_safety_primary_1338.json",
+  "last_financial": "research/2026-10-20-1219-financial-snapshot.json",
+  "next_safety": "Existing14UTC or material event; MIprogram16UTC, debateOct21 23UTC. Goal continuation does not extend financial/source freshness.",
+  "run_contract": "Original finite goal active and incomplete; no new timer/watcher or idle continuation; scheduled safety work stays bounded.",
+  "next_telegram": "400valued/materialfinding/globalblock",
+  "handoff_pointer_fix": "RESUME still linked phase0024; current-context had0025. Pointing RESUME to this0026 source index, preserving prior phases.",
+  "limitations": [
+    "470originalAugustaftertax1130wasJul-Aug cumulative; standalone591correctedadditively beforemodel. Mainpretax1650inputunchanged.",
+    "470positive selectedNO mathnotconditionalmakeredge/selectionauthorization;2x tailfails."
+  ],
+  "next_source_unit": "472facts collected; root must inspect actual memorial/event date and Google source receipts; probability/economics unfinished.",
+  "case472_family": "SameGlobalPassingsliteral family56/203/310/400. Read0400.md+0400_primary_2255.json, verify fullrule equivalence; shared categoricalmass, not independent sibling probabilities. No currentliveness/deathdate claim adopted.",
+  "candidate_comparison": "data/deep_review_20261017/work/goal0026_candidate_comparison_1405.json",
+  "verification": "data/deep_review_20261017/work/goal0026_research_verified_1408.json"
+}
