@@ -1,0 +1,152 @@
+{
+  "schema": "bounded_check_receipt_and_context_verification.v1",
+  "reviewed_utc": "2026-10-20T06:30:39.704345+00:00",
+  "receipt_pairs_verified": 34,
+  "by_directory": {
+    "logs/tick060240_account": 12,
+    "logs/tick060240_ops": 9,
+    "logs/tick060240_sources": 2,
+    "logs/tick060240_catalysts": 2,
+    "logs/tick060240_clarity_rules": 2,
+    "logs/checkin_20261020T060240/discovery/captures": 1,
+    "logs/checkin_20261020T060240/discovery/captures_retry": 6
+  },
+  "private_receipt_manifest": {
+    "path": "logs/tick060240_sources/root_receipt_manifest.json",
+    "sha256": "3c56207bc146aaa8cac34ac532ced61ea83c3818fef29d4f2bde751c0aad033d"
+  },
+  "account_join": "Root independently verified3exactoriginalLIVE0matched list/details/0600fields,127exhaustedtrades;9publicidentity/size/totalBought/redeemable equal. Authownerfields retained onlyprivately; CLI envelopes label SDKenum but are serializedCLI, notHTTP. No freshCTFclaim.",
+  "contexts": [
+    {
+      "kind": "primary",
+      "counts": {
+        "batches": 2,
+        "cap_family_expansion": 0,
+        "current_markets": 80,
+        "expanded_context": 5,
+        "prior_markets": 80,
+        "prior_only_markets": 14,
+        "review_triggers": 16,
+        "selected": 21,
+        "selected_context": 5,
+        "selected_fail_open": 0,
+        "selected_semantic_ready": 21,
+        "selected_triggers": 16,
+        "truncated_triggers": 0
+      },
+      "changes": {
+        "new_to_snapshot": 14,
+        "best_ask": 2,
+        "best_bid": 1,
+        "no_price": 1,
+        "yes_price": 1,
+        "outcome_prices": 1
+      },
+      "source_sha256": "3f2771d4c92f8298185733a6529bdec5c28cd2addc82db451c08cae9bfaaded1",
+      "source_and_prior_hashes_verified": true
+    },
+    {
+      "kind": "thin_tail",
+      "counts": {
+        "batches": 72,
+        "cap_family_expansion": 0,
+        "current_markets": 3000,
+        "expanded_context": 701,
+        "prior_markets": 3000,
+        "prior_only_markets": 329,
+        "review_triggers": 543,
+        "selected": 1244,
+        "selected_context": 701,
+        "selected_fail_open": 0,
+        "selected_semantic_ready": 1244,
+        "selected_triggers": 543,
+        "truncated_triggers": 0
+      },
+      "changes": {
+        "tick": 4,
+        "best_ask": 157,
+        "best_bid": 148,
+        "no_price": 126,
+        "yes_price": 126,
+        "outcome_prices": 126,
+        "new_to_snapshot": 329,
+        "spread": 50
+      },
+      "source_sha256": "6d6abd2b26546a4afc18e380d65d6c94fe4e264b66c7211c5262c844368573f3",
+      "source_and_prior_hashes_verified": true
+    }
+  ],
+  "exact_held_or_pending_matches": [
+    {
+      "scan": "thin_tail",
+      "batch": 37,
+      "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
+      "question": "Will the highest score achieved by a Moonshot Kimi model on Humanity\u2019s Last Exam in 2026 be 55% or higher?",
+      "changes": [
+        "new_to_snapshot"
+      ]
+    }
+  ],
+  "execution_metadata_change_rows": [
+    {
+      "scan": "thin_tail",
+      "batch": 1,
+      "id": "5640290",
+      "question": "Will White House post 180-199 posts from October 16 to October 23, 2026?",
+      "changes": [
+        "tick",
+        "best_ask",
+        "best_bid",
+        "no_price",
+        "yes_price",
+        "outcome_prices"
+      ]
+    },
+    {
+      "scan": "thin_tail",
+      "batch": 1,
+      "id": "5887863",
+      "question": "Will MrBeast's next video get between 160 and 170 million views on week 1?",
+      "changes": [
+        "tick",
+        "best_ask",
+        "best_bid",
+        "no_price",
+        "yes_price",
+        "outcome_prices"
+      ]
+    },
+    {
+      "scan": "thin_tail",
+      "batch": 1,
+      "id": "3503552",
+      "question": "Will Jalen Hurts have 199.5+ rushing yards in the 2026-27 NFL regular season?",
+      "changes": [
+        "tick",
+        "best_bid",
+        "spread"
+      ]
+    },
+    {
+      "scan": "thin_tail",
+      "batch": 1,
+      "id": "3503900",
+      "question": "Will Jalen Hurts have 3,249.5+ passing yards in the 2026-27 NFL regular season?",
+      "changes": [
+        "tick"
+      ]
+    }
+  ],
+  "consistency_status_counts": {
+    "not_quoted": 91,
+    "quote_failed": 16,
+    "unquoted_leg_cap": 142,
+    "unquoted_group_cap": 41,
+    "quoted_nonpositive": 4
+  },
+  "batch_index": {
+    "path": "data/deep_review_20261017/work/tick060240_context_batch_index.json",
+    "sha256": "69644b0987afd017397cecaac9a63cf527d38c8ce3bf906f062d53350d916d80"
+  },
+  "limit": "All emitted batches/rawscanner outputs structurally/source reviewed; no individualvaluation, family equivalence, execution readiness, completeuniverse conclusion or newfrozen-case result. Allbounds/filter/topomissions remain."
+}

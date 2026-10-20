@@ -1,0 +1,36 @@
+{
+  "schema": "bounded_catalyst_source_review.v1",
+  "tick": "20261020T060240Z",
+  "sources": [
+    {
+      "name": "senate_schedule",
+      "url": "https://www.dailypress.senate.gov/",
+      "http_status": 403,
+      "received_utc": "2026-10-20T06:26:21.985999Z",
+      "receipt": "logs/tick060240_catalysts/senate_schedule.receipt.json",
+      "raw_sha256": "5e16da2b4744eec15f7bb9b80c07a215a62d1e416585841e630904e74a1700a7",
+      "gzip_sha256": "d0f7343c6a71893aea090d26d77318eba2fdbb54e7a3a8c89d5956c2c53a1431",
+      "adoption_limit": "Receipt/body primary only if status200. Searchcrawl/capture date not underlying event or poll fieldwork date.",
+      "facts": "Raw403 captured. Searchprovider rendered schedule prose, but no direct current homepage body was recovered; no new schedule or qualifying vote adopted from this response."
+    },
+    {
+      "name": "emerson_mi",
+      "url": "https://emersoncollegepolling.com/michigan-2026-poll-el-sayed-and-rogers-locked-in-close-election/",
+      "http_status": 200,
+      "received_utc": "2026-10-20T06:26:23.015237Z",
+      "receipt": "logs/tick060240_catalysts/emerson_mi.receipt.json",
+      "raw_sha256": "39479ceb94cac3e0cb4734256d94decb35a1f45c7f5ad1f2c854d4a9e684bde7",
+      "gzip_sha256": "26722e18cec25608b210d1caa33150706187ee233b6a1d5a6c65e88fbfb87ef2",
+      "adoption_limit": "Receipt/body primary only if status200. Searchcrawl/capture date not underlying event or poll fieldwork date.",
+      "facts": "Actual200 primary body: September12\u201314,2026 fieldwork,1000 likelyvoters, approximately3pp credibility interval; Senate48%El-Sayed/46%Rogers/4%undecided. MixedMMS probabilitypanel plusPureSpectrum. This is Septemberinstrument, not newOctoberpoll; capture/searchdate does not refresh it."
+    }
+  ],
+  "search_scope": {
+    "queries": [
+      "site:emersoncollegepolling.com Michigan Senate October 2026 El-Sayed Rogers",
+      "site:blog.google \"Year in Search 2026\" Messi",
+      "site:senate.gov \"Clarity\" \"October\" \"2026\" vote"
+    ],
+    "finding": "No new Google resolving ranking surfaced; MI search returned September12\u201314 poll, not an October instrument. Old cloture motionSept15 is not final-passage vote. Search results are leads, not absence proof."
+  }
+}

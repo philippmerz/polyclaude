@@ -1,0 +1,153 @@
+{
+  "schema": "bounded_tick_primary_judgment.v1",
+  "tick": "20261020T060240Z",
+  "reviewed_utc": "2026-10-20T06:31:47.741985+00:00",
+  "decision": "Retain holdings/noadd and three originalsmall LIVE0matched bids at originalterms; no transaction, forecast/financialprior mutation or new frozen-case valuation.",
+  "news": {
+    "requested_id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+    "requested_exact_line_sha256": "54bf26392c256bf7fc4505f23f211720ca80fb977d0b218c3e482ddc6d888c6e",
+    "source_review": "Exact requested WTVC/olderWRGB lines and24related priorrowhashes match actual saved substantive reviews;3saved raw/gzip pairs reverified, not queue receipt. Related Foxbody publishedOct18 reportsOct17interview/attributedadvocacy, no voter measurement. ExactWTVCcanonical/body linkage remainsunproved. ReclassMINORcontext, no automaticNOconfirmation or numericalupdate. MI5NO currentindex identity independentlyjoined; no duplicateOct20aging.",
+    "window": {
+      "start_exclusive": "2026-10-20T06:13:54.923675+00:00",
+      "end_inclusive": "2026-10-20T06:23:49.913678+00:00",
+      "new_rows": 0
+    },
+    "related_rows": 25,
+    "new_or_uncovered_related": 0
+  },
+  "sources": {
+    "HLE": "06:24HTTP200/Age342/body15fc012f unchanged66rows;K3HLE41.08/cal44.67. FreshHTTP is not freshbenchmark; issuer56tools notautomatic55.",
+    "OR": "06:24HTTP200/Age218/body7fa78f5b unchanged;completedOct12 164.043985914931T, Oct19partial30.038851003818T. Allfourtargetweeksabsent, not sourcefailure/settlement.",
+    "Clarity": "06:26 exacttwoGamma rulehashes35bc95d6 unchanged;Jan2operationalends versus literalbeforeJan1 cutoff, active/open/UMAunproposed. CurrentdirectSenatehomepage403 preserved; no qualifyingfinalvote adopted from oldcloture/searchsnippet.",
+    "other": "Search surfaced already-modeledME02TulchinOct12\u201314 500LV D50/R46, not newpoll; NYmodel-only aggregators are not districtpolls. FreshEmersonbody September12\u201314,not Octoberinstrument. No new Google2026resolvingranking or new load-bearing politicalbidfact established in scopedsearches; not absence proof."
+  },
+  "terminal_comparison": {
+    "rounded_current_indicative_fee_net_exit": {
+      "Kimi10YES": 1.06,
+      "OR5NO": 3.2,
+      "MI5NO": 1.41,
+      "Messi5YES": 1.2,
+      "Clarity29pairs": 24.53
+    },
+    "central_expected_payout": {
+      "Kimi10YES": 3.402125,
+      "OR5NO": 4.4,
+      "MI5NO": 2.2,
+      "Messi5YES": 3.0,
+      "Clarity29pairs": 29.0
+    },
+    "selected_expected_payout": {
+      "Kimi10YES": 1.902125,
+      "OR5NO": 3.65,
+      "MI5NO": 1.7,
+      "Messi5YES": 2.0,
+      "Clarity29pairs": 29.0
+    },
+    "broad_low_expected_payout": {
+      "Kimi10YES": 0.8,
+      "OR5NO": 1.0,
+      "MI5NO": 1.0,
+      "Messi5YES": 1.0,
+      "Clarity29pairs": 0.0
+    },
+    "constant_apy_sensitivity": {
+      "dated_APY": 0.032035,
+      "source_asof": "2026-10-19T18:02:51.823060Z",
+      "illustrative_days": {
+        "Kimi10YES": 73,
+        "OR5NO": 34,
+        "MI5NO": 14,
+        "Messi5YES": 73,
+        "Clarity29pairs": 74
+      },
+      "exit_terminal": {
+        "Kimi10YES": 1.0667060308372582,
+        "OR5NO": 3.209413118642531,
+        "MI5NO": 1.4117063828049337,
+        "Messi5YES": 1.207591733023311,
+        "Clarity29pairs": 24.687320337004902
+      },
+      "limits": "VariableAPY, not refreshedfundingquote; routes/gas/withdrawal/credit risk excluded. Valuesrounded fromsequentialCLIwalks, not executioncertificate."
+    },
+    "judgment": "Central/selected exceedcurrent exit+constantcarry; broadlow ordinaryclaims favorsale andClarityvenue-oraclefailure permits0. Selectedis uncertainty sensitivity, not newexitbelief. Retain smallpositions aftersource/wholeportfolio review, no guaranteedrecovery. Fresh exactfinalbook/fee/gates beforeaction."
+  },
+  "joint_AI": {
+    "other_assets_fixed_illustrative": 185.34,
+    "both_win": 200.34,
+    "Kimi_only": 195.34,
+    "OR_only": 190.34,
+    "both_lose": 185.34,
+    "exit_both_illustrative": 189.6,
+    "full_entry_cost_can_lose": 4.45,
+    "Frechet_dependence_sensitivity": [
+      {
+        "case": "central",
+        "p_both_win": 0.22021249999999992,
+        "hold_vs_exit_delta_expected_log": 0.01828267451197914
+      },
+      {
+        "case": "central",
+        "p_both_win": 0.3402125,
+        "hold_vs_exit_delta_expected_log": 0.01812119323341538
+      },
+      {
+        "case": "selected",
+        "p_both_win": 0,
+        "hold_vs_exit_delta_expected_log": 0.006703565827144531
+      },
+      {
+        "case": "selected",
+        "p_both_win": 0.1902125,
+        "hold_vs_exit_delta_expected_log": 0.0064476011796544665
+      },
+      {
+        "case": "broad_low",
+        "p_both_win": 0,
+        "hold_vs_exit_delta_expected_log": -0.013196647256382773
+      },
+      {
+        "case": "broad_low",
+        "p_both_win": 0.08,
+        "hold_vs_exit_delta_expected_log": -0.01330430144209194
+      }
+    ],
+    "limits": "Otherassets fixed atroundedmidpoint is illustration, not synchronizedNAV/independence/hedge or measuredjointdistribution; commonvenue/source failures remain."
+  },
+  "bids": {
+    "observed": "06:22 exactoriginal3LIVE0matched/6.50;127tradesexhaustedunchanged",
+    "sensitivity": [
+      {
+        "name": "ME02YES",
+        "selected_unconditional": 0.51,
+        "limit": 0.38,
+        "shares": 10,
+        "unmeasured_2x_adverse_fill_stress_p": 0.3422818791946309
+      },
+      {
+        "name": "CA06NO",
+        "selected_unconditional": 0.05,
+        "limit": 0.03,
+        "shares": 50,
+        "unmeasured_2x_adverse_fill_stress_p": 0.025641025641025644
+      },
+      {
+        "name": "NY01YES",
+        "selected_unconditional": 0.21,
+        "limit": 0.12,
+        "shares": 10,
+        "unmeasured_2x_adverse_fill_stress_p": 0.11731843575418993
+      }
+    ],
+    "judgment": "Existingunderwrittenpilots retained/full6.50riskbudget, not certifiedconditionaledge; allfailunmeasured2x adverse-fill stress. Noadd/chase/repost/taker. Cancel-first newlyunassessedmaterialfacts and knowncatalystpull, reviewnotautomaticexpiry. MIplusallfullfilledbids canlose8.05cost."
+  },
+  "whole_book_stress": {
+    "other_trading_assets_fixed": 153.95,
+    "fullbids6p50_allordinarylose_Clarity29": 176.45,
+    "same_Clarity0": 147.45,
+    "limit": "Hypotheticalterminalarithmetic, not probability/lowerbound;otherAave/stablescanfail. Heldcostalreadyspent not doublededucted."
+  },
+  "routing_and_ops": "Kellyusesmidpoint/rhoandold196.20cache, advisorynotjointmodel/scaleinauthority. Hurdle4clear0flagged; nooverdue/trigger/winningredeemables. Ordinarymakerfair considered/no compellingfilladvantage; hiddenKimisellat/belowfairbanned, no unsupportedjump-premiumquote. ManageClaritywhole/noadd;Whale0/legacyGeminiuncertainunburned.",
+  "discovery": "All7rawoutputs/74batches/1265rows structurally/source reviewed; one exactheldKimi newlyentersfilteredshortlist withunchangedcriteria/identity, notnewlisting/forecastsignal. No pendingBUYjoin;4nonexposuretickchanges needrouteverificationifpursued. Boundedcappedprofilesnotabsenceofopportunity or completedindividualvaluations.",
+  "schedule": "Existing10UTClight/14full/earliermaterialevent. WeeklyOct23/monthlyNov12notdue,methodologyconcluded. No goal lifecyclemutation,newtimer,idlefollowup orretiredoffchainwork.",
+  "Telegram": "None: requestedheadlinealreadyreviewed,no newmaterialaction/source/priorfinding."
+}

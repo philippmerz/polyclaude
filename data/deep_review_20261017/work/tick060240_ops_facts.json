@@ -1,0 +1,198 @@
+{
+  "observed_at_utc": "2026-10-20T06:21:51Z",
+  "capture_directory": "logs/tick060240_ops/ (private 0700; read_capture receipts/bodies 0600)",
+  "receipt_semantics": "CLI/SDK serialization supplied to read_capture; not raw HTTP wire bodies",
+  "cli_call_windows": {
+    "uma_status_check": {
+      "started_utc": "2026-10-20T06:21:29.377653Z",
+      "received_utc": "2026-10-20T06:21:35.513360Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "ostium_state_diff": {
+      "started_utc": "2026-10-20T06:21:35.523244Z",
+      "received_utc": "2026-10-20T06:21:38.045842Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "crux_coverage_check": {
+      "started_utc": "2026-10-20T06:21:38.056638Z",
+      "received_utc": "2026-10-20T06:21:38.404445Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "check_marginal_apy": {
+      "started_utc": "2026-10-20T06:21:38.415053Z",
+      "received_utc": "2026-10-20T06:21:39.157972Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "watchlist_auto_revet": {
+      "started_utc": "2026-10-20T06:21:39.169788Z",
+      "received_utc": "2026-10-20T06:21:39.634565Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "position_state_audit_fix": {
+      "started_utc": "2026-10-20T06:21:39.643684Z",
+      "received_utc": "2026-10-20T06:21:40.746385Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "decisions_pending": {
+      "started_utc": "2026-10-20T06:21:40.756627Z",
+      "received_utc": "2026-10-20T06:21:40.812637Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "portfolio_kelly_constrained": {
+      "started_utc": "2026-10-20T06:21:40.822846Z",
+      "received_utc": "2026-10-20T06:21:41.670746Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    },
+    "redemption_dryrun": {
+      "started_utc": "2026-10-20T06:21:41.680724Z",
+      "received_utc": "2026-10-20T06:21:42.705039Z",
+      "response_status": null,
+      "body_representation": "sdk_result_serialization"
+    }
+  },
+  "cli_facts": {
+    "uma_status_check": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "checked": 43,
+      "tracked": 45,
+      "positions_fetch_ok": true,
+      "alerts": []
+    },
+    "ostium_state_diff": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "current_count": 0,
+      "prior_count": 0,
+      "alert_count": 0,
+      "alerts": []
+    },
+    "crux_coverage_check": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "output_chars": 0,
+      "silent": true
+    },
+    "check_marginal_apy": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "summary_lines": [
+        "# hurdle: live 3.20% (polygon/USDC, 12h old); drawdown alert: 15%; priors: portfolio_kelly_priors.json",
+        "# 4 clear (0 acked-hold); 0 flagged (NEGATIVE_EDGE / below-hurdle); 3 protected group(s)"
+      ]
+    },
+    "watchlist_auto_revet": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "output_chars": 0,
+      "silent": true
+    },
+    "position_state_audit_fix": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "state": "CLEAN",
+      "indexed_positions": 7,
+      "deindexed_claim_rows": 1,
+      "expired_holds_pruned": 0,
+      "local_snapshot_refreshed": true
+    },
+    "decisions_pending": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "overdue_decisions": 0
+    },
+    "portfolio_kelly_constrained": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "output_chars": 2534,
+      "stderr_note": "Informational bankroll cache age 1.8h and 6 held rows / 3 protected groups; no error."
+    },
+    "redemption_dryrun": {
+      "exit_code": 0,
+      "stderr_nonempty": false,
+      "stderr_types": [],
+      "output_chars": 427,
+      "winning_redeemable": 0,
+      "positions_checked": 8,
+      "losing_or_uncertain_skipped": 2,
+      "live_mutation": false
+    }
+  },
+  "daemons": {
+    "news_watcher": {
+      "python_process_count": 1,
+      "pid": 148881,
+      "argv_verified": true,
+      "started_utc": "2026-10-19T05:28:37Z",
+      "script_mtime_utc": "2026-10-18T22:58:44Z",
+      "script_mtime_before_start": true,
+      "configured_pid_file_matches_process": true,
+      "log_last_mtime_utc": "2026-10-20T05:57:20Z"
+    },
+    "heartbeat_watch": {
+      "python_process_count": 1,
+      "pid": 450,
+      "argv_verified": true,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-10-02T14:31:39Z",
+      "script_mtime_before_start": true,
+      "configured_pid_file_matches_process": true,
+      "log_last_mtime_utc": "2026-10-20T05:34:45Z"
+    },
+    "telegram_listener": {
+      "python_process_count": 1,
+      "pid": 451,
+      "argv_verified": true,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-09-10T18:34:57Z",
+      "script_mtime_before_start": true,
+      "configured_pid_file_matches_process": true,
+      "log_last_mtime_utc": "2026-10-20T01:13:14Z"
+    },
+    "opportunity_watch": {
+      "python_process_count": 1,
+      "pid": 425,
+      "argv_verified": true,
+      "started_utc": "2026-10-18T09:33:44Z",
+      "script_mtime_utc": "2026-09-29T10:07:53Z",
+      "script_mtime_before_start": true,
+      "configured_pid_file_matches_process": true,
+      "log_last_mtime_utc": "2026-10-20T05:59:04Z"
+    }
+  },
+  "shell_wrappers": {
+    "heartbeat_watch": {
+      "count": 1,
+      "pid": 421,
+      "parent_pid": 386
+    },
+    "telegram_listener": {
+      "count": 1,
+      "pid": 424,
+      "parent_pid": 388
+    },
+    "other_daemon_shell_wrappers_seen": 0
+  },
+  "local_effects": [
+    "uma_status_check and ostium_state_diff refreshed their local caches",
+    "watchlist --auto-revet ran and returned no hits/output",
+    "position_state_audit --fix refreshed its conditionId snapshot and pruned 0 expired holds"
+  ],
+  "constraints": "No order, transaction, buy, or redemption was sent. Redemption was --dry-run only; no winning redeemable rows. No aggregate bankroll or CSV was written."
+}

@@ -1,0 +1,108 @@
+{
+  "schema": "bounded_news_input.v2",
+  "tick": "20261020T060240Z",
+  "read_utc": "2026-10-20T06:23:49.913678+00:00",
+  "window": {
+    "start_exclusive": "2026-10-20T06:13:54.923675+00:00",
+    "end_inclusive": "2026-10-20T06:23:49.913678+00:00",
+    "new_rows": 0
+  },
+  "requested_and_original": [
+    {
+      "line": 1180,
+      "sha256_newline": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea",
+      "sha256_no_newline": "3f3e3c272e8aae022cf06b9221dad5d22e578dab178604ca924e5b414added1d",
+      "record": {
+        "alert_id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+        "ts": "2026-10-20T03:23:02Z",
+        "tier": 1,
+        "feed": "Michigan Senate Rogers and El-Sayed news",
+        "matched": "El-Sayed",
+        "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WRGB",
+        "link": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxOU01KbE9BMlRWdUJKVUFrVnA1TmgzU0tIUGxSYWFPQUxqZm1zckF1T0VfMG91ZlpkYzktdlRCNjNuN1hIaFhIUVltN25lNkk5elROaTQxanVXU1dWTllJNkRJMjF1WGVMWnpQQ08za3lMWTNDZHk2TzZ6clVHXy12SEN2WnRRVEE3RmpldktkVWZKdzJFckJZVEVFWlVFQTBYdFVldTNlZnlHNjkyQXJ1NzZOT1NmWEpLRnlLczRaVXVuWHY2QjZpcUFmZHAzYVo1X0xqM2RhMXVrU2lVc1QwdF9SWV85UlJIc0FEUlFUQ3Q1UzFJ?oc=5",
+        "agent_reason": "Candidate-specific controversy may pressure Democrats\u2019 chances in the 2026 Michigan Senate race.",
+        "impacts": [
+          {
+            "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+            "level": "MATERIAL",
+            "reason": "Questions about Abdul El-Sayed\u2019s alleged Muslim Brotherhood ties could weaken Democratic prospects, supporting the held No position."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    },
+    {
+      "line": 1187,
+      "sha256_newline": "54bf26392c256bf7fc4505f23f211720ca80fb977d0b218c3e482ddc6d888c6e",
+      "sha256_no_newline": "b6705de4898e73ba07e4ff1a4b29828497a7f4987188aecc3cd7ce6a8e649449",
+      "record": {
+        "alert_id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+        "ts": "2026-10-20T05:09:23Z",
+        "tier": 1,
+        "feed": "Michigan Senate Rogers and El-Sayed news",
+        "matched": "El-Sayed",
+        "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - wtvcfox",
+        "link": "https://news.google.com/rss/articles/CBMi-gFBVV95cUxONlZFNldfYXh2bmRWeGhtVkF3d29LcnVvMS1rSVVaWFZsQWh6X0s3bE5ENDQ3WlYzUFczeHVYNllyZjVPS2FGd1ROWmViU1ktVXgzVXQyRGd0b2Q3OUVfdnBqQ2tDNERlWk84cUk5a3VDOXFqZllnaFd2ZngzNVcwcDJ4cE5YN3ZKVWF2c0hXOTZjdFBhNkF6Ul9ZMS1Ddm5aNElUWmk1M3VKWTZrNjJLYVlhWUNZMHo1d1NtVGluNjlhUW9VVzZvaW5FR2Q3bzVnRmVzRkdnenZIcGpCc1lISWFVcDdnNzdJbXhWNkZrVHFNTDFSbER1ekV3?oc=5",
+        "agent_reason": "Named Michigan Senate candidate faces a potentially consequential controversy over alleged Muslim Brotherhood ties, creating campaign-risk information.",
+        "impacts": [
+          {
+            "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+            "level": "MATERIAL",
+            "reason": "Negative candidate coverage pressures the Democratic-win thesis, though it is not yet outcome-determinative."
+          }
+        ],
+        "relevance": "portfolio_material_critical",
+        "review_required": true
+      }
+    }
+  ],
+  "prior_review_refs": [
+    {
+      "path": "data/deep_review_20261017/work/tick043158_late_news_primary_0548.json",
+      "sha256": "a99a559e958676d8cd63f2d17a8df5fbf614442cf5ba4c9c3d3981d5941be0e4"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick043158_wtvc_facts_0546.json",
+      "sha256": "8136cb4fa2610c68a9a8be66483a362bde22084304ce8c6be7c13536aa36bf30"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick043158_news_primary.json",
+      "sha256": "54ff22046c6f1fdf0049cba62199f2b8022066435134d6a85bcee34bfe2d5e6e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick043158_related_input.json",
+      "sha256": "90d1654c3bc7a8eedc422fc68ec4d70a4e592e73653021a662b11312a942c314"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick043158_related_decisions.jsonl",
+      "sha256": "4598a1b68e22043a20609628abc7cfe0a8d9ff00674e508a96b75fc19a7c7c09"
+    }
+  ],
+  "related_rows_since_Oct19_18UTC": 25,
+  "prior_related_hash_matches": 24,
+  "additional_requested_related_id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+  "uncovered_related": [],
+  "new_window": [],
+  "verified_existing_source_pairs": [
+    {
+      "receipt": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/alert_redirect.receipt.json",
+      "raw_sha256": "b4d904986d54c1199d8515ed0778de8c58f50b3ea82430652ce824f000c034e9",
+      "gzip_sha256": "02995a56535c7e4d17983350d6e9ca1397d9d619c1f2203783810d84c0efc519",
+      "response_status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/rss_noquery/alert_redirect_noquery.receipt.json",
+      "raw_sha256": "299c9138423536c0f5e506045fdd0caf14315d58c28081a74de04d87fa11dd3b",
+      "gzip_sha256": "51631b36fb77a1b7f4ce6f447cbb53b51c23b978a84eedd08ff858c2c7a46c83",
+      "response_status": 200
+    },
+    {
+      "receipt": "logs/deep_review_20261017/tick043158_wtvc_facts_0546/foxnews_original/foxnews_article.receipt.json",
+      "raw_sha256": "beb4e0a88bcd5b9f4762024f6b249dac4f966cffdb5fadec886467fc12294290",
+      "gzip_sha256": "24cf848ddb69f03d02b6dd6964ec47abf41c40715e3c5fbed7dfc0f06446c508",
+      "response_status": 200
+    }
+  ],
+  "limits": "Exact prior substantive/source review verified independently of dispatch. WTVC canonical/body identity with Fox/WRGB unresolved; saved related original article is not a poll, full transcript or voter response measurement. Current account refresh separate. Fixed news window only."
+}

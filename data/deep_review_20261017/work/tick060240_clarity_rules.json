@@ -1,0 +1,42 @@
+{
+  "schema": "held_pair_rule_refresh.v1",
+  "tick": "20261020T060240Z",
+  "legs": [
+    {
+      "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
+      "token": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
+      "outcome": "Yes",
+      "question": "Will over 50 Senators vote for the Clarity Act?",
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "same_literal_criteria_as_Oct8": true,
+      "endDate": "2027-01-02T04:59:00Z",
+      "active": true,
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "received_utc": "2026-10-20T06:26:51.858811Z",
+      "receipt": "logs/tick060240_clarity_rules/gamma_1.receipt.json",
+      "raw_sha256": "ddb6c4ee0a1ea4ae18062ab4c2a6c23a2c5895eeeca51b7988a3f808dbfb733b",
+      "gzip_sha256": "247a497319e9e06e253a78fe6e0fd4ff5d0fed81a1c4929f74beaa6838970148"
+    },
+    {
+      "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+      "token": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+      "outcome": "No",
+      "question": "Will over 58 Senators vote for the Clarity Act?",
+      "criteria_sha256": "35bc95d63e4844ffa3e9a9da459623dff33e3680fbff097227b70aa8a6aab693",
+      "same_literal_criteria_as_Oct8": true,
+      "endDate": "2027-01-02T04:59:00Z",
+      "active": true,
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "received_utc": "2026-10-20T06:26:51.975416Z",
+      "receipt": "logs/tick060240_clarity_rules/gamma_2.receipt.json",
+      "raw_sha256": "13e7081aa652168f12f9da986f170bb0971a1afe62a7a6f610c16bf662d774c9",
+      "gzip_sha256": "915a0d897fb4608235bf468476add66fb6cd4855e305863eaece6444e39136a2"
+    }
+  ],
+  "same_pair_criteria": true,
+  "interpretation": "Literal first full-Senate final-passage vote, strict thresholds; no qualifying vote => bothNO, qualifying voice/unanimous passage => bothYES. Equal29 over50YES+over58NO has conditional29 logicalfloor/58 middle, not venue/oracle failure protection. No qualification inferred from cloture/motion-to-proceed or searchsnippet."
+}

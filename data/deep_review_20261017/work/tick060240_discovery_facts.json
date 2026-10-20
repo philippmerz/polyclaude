@@ -1,0 +1,202 @@
+{
+  "schema": "scheduled_discovery_compact_result.v1",
+  "tick_id": "20261020T060240Z",
+  "collected_utc": "2026-10-20T06:22Z",
+  "scope": "step6_discovery_and_6b_offline_context_only",
+  "commands": [
+    {
+      "name": "primary",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures/primary.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures/primary.body.json.gz",
+      "raw_sha256": "e1de07084df3cba7341fe0b153506910a8635804668808c354af25dcad3c14d1",
+      "gzip_sha256": "0e07908dac70137011b2efdcfd6131f26f9e93bd8e4a0767c10e2bb8ed9196e7",
+      "raw_bytes": 5405
+    },
+    {
+      "name": "thin",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/thin.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/thin.body.json.gz",
+      "raw_sha256": "dfb47f80111d8d0098d76ccb92fc473f0abcf32ec04ef7ea797374eb2fba9241",
+      "gzip_sha256": "4b2b936ea777129b7814cf1099f7120fb62860904583ec342ff495f9f3af6f51",
+      "raw_bytes": 9574
+    },
+    {
+      "name": "sports",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/sports.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/sports.body.json.gz",
+      "raw_sha256": "3f7b20ff8b24e032915be01de26289d9caaba71dbfeed0932c5846e101c58395",
+      "gzip_sha256": "1f1cdb59cd1cb79289b22d3e66a1ed073409196bc5e7d18500d4136140f752ae",
+      "raw_bytes": 2543
+    },
+    {
+      "name": "macro",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/macro.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/macro.body.json.gz",
+      "raw_sha256": "58d996a72bee3b7acfb6efb97aa937faf9f63c7848bcfdec4b6ffe1562dca9d0",
+      "gzip_sha256": "d8ad1dcba955a8755850e87e383c9a8760aaf57c13655704cfca2f7cabf58b87",
+      "raw_bytes": 1032
+    },
+    {
+      "name": "event_monotonicity",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/event_monotonicity.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/event_monotonicity.body.json.gz",
+      "raw_sha256": "ad0d76653a75a3c559890c7abfc347b863dd4177f3f084d45e3e538a87254f7e",
+      "gzip_sha256": "65387dcec66eb8692bc0fb2a235129d5d7b2eb8459ce7be63b8c510b426da6db",
+      "raw_bytes": 679
+    },
+    {
+      "name": "polymarket_consistency",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/polymarket_consistency.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/polymarket_consistency.body.json.gz",
+      "raw_sha256": "4914aeb95d3439c4fff365996bebe6f7aa9eb5edbb6731c14b9ff61c8a08b1ad",
+      "gzip_sha256": "82fcb0242d6e6ac07a33df8b06c3a6f6227953931a052c361d56f17974bfaa0a",
+      "raw_bytes": 1255
+    },
+    {
+      "name": "favorite_fade",
+      "returncode": 0,
+      "timed_out": false,
+      "receipt_path": "logs/checkin_20261020T060240/discovery/captures_retry/favorite_fade.receipt.json",
+      "body_path": "logs/checkin_20261020T060240/discovery/captures_retry/favorite_fade.body.json.gz",
+      "raw_sha256": "9b38fc4071da82f56380bfa21cc8603f575ae3862a1301e411cfd2aab5d0feac",
+      "gzip_sha256": "acca59cbb3301fa684d00e630980f11ffd33feadf394502cd4af6913886d02c0",
+      "raw_bytes": 37298
+    }
+  ],
+  "snapshots": [
+    {
+      "scan_kind": "primary",
+      "path": "data/snapshots/shortlist_20261020T062159649242Z_primary.json",
+      "fetched": 1000,
+      "pagination": {
+        "pages_attempted": 10,
+        "pages_succeeded": 10,
+        "stop": "page_cap",
+        "complete": false
+      },
+      "selected": 80,
+      "eligible_before_top": 605,
+      "top_omitted": 525,
+      "filter_accounting_complete": true,
+      "selection_complete": false
+    },
+    {
+      "scan_kind": "thin_tail",
+      "path": "data/snapshots/shortlist_20261020T062215019238Z_thin_tail.json",
+      "fetched": 39322,
+      "pages_attempted": 20,
+      "pages_succeeded": 20,
+      "stop": "page_cap",
+      "complete": false,
+      "eligible_before_top": 3354,
+      "selected": 3000,
+      "top_omitted": 354,
+      "duplicate_rows": 60,
+      "filter_accounting_complete": true,
+      "selection_complete": false
+    }
+  ],
+  "scanners": {
+    "sports": {
+      "fetched": 52,
+      "candidate_rows": 16,
+      "consensus_requested": 3,
+      "consensus_result": "all 3 NO_CONSENSUS"
+    },
+    "macro": {
+      "markets": 9
+    },
+    "event_monotonicity": {
+      "events_inspected": 1100,
+      "pages_attempted": 15,
+      "successful_pages": 15,
+      "stop": "max_pages",
+      "complete": false,
+      "violations": 0,
+      "provisional_positive": 0,
+      "real_executable": 0,
+      "events_available_in_fetched_set": 1364
+    },
+    "polymarket_consistency": {
+      "open_markets_scanned": 5007,
+      "events": 637,
+      "pages": 32,
+      "coverage_complete": false,
+      "stop": "market_cap",
+      "midpoint_deviation_groups": 294,
+      "structural_groups": 203,
+      "live_groups_requested": 20,
+      "live_legs": 194,
+      "positive_candidates_over_2pct_modeled_net": 0,
+      "live_groups_validated": 4,
+      "live_groups_quote_failed": 16,
+      "live_groups_unquoted": 183
+    },
+    "favorite_fade": {
+      "candidate_rows": 29,
+      "fetched": 1000,
+      "pages_attempted": 10,
+      "stop": "max_pages",
+      "complete": false,
+      "rough_survivors": 58,
+      "selected_for_walk": 40,
+      "walk_cap_omissions": 18,
+      "all_candidate_only": true
+    }
+  },
+  "offline_6b": {
+    "primary": {
+      "markdown": "logs/checkin_20261020T060240/discovery/context/primary.md",
+      "json": "logs/checkin_20261020T060240/discovery/context/primary.json",
+      "batches": 2,
+      "emitted_rows": 21,
+      "truncated_triggers": 0,
+      "source_integrity_verified": true,
+      "prior_integrity_verified": true,
+      "all_rows_have_identity_criteria_and_semantic_context": true,
+      "family_routing_ready": false,
+      "safety": "offline_context_only_no_model_no_execution"
+    },
+    "thin_tail": {
+      "markdown": "logs/checkin_20261020T060240/discovery/context/thin_tail.md",
+      "json": "logs/checkin_20261020T060240/discovery/context/thin_tail.json",
+      "batches": 72,
+      "emitted_rows": 1244,
+      "truncated_triggers": 0,
+      "source_integrity_verified": true,
+      "prior_integrity_verified": true,
+      "all_rows_have_identity_criteria_and_semantic_context": true,
+      "family_routing_ready": false,
+      "safety": "offline_context_only_no_model_no_execution"
+    }
+  },
+  "structural_row_review": {
+    "context_batches_reviewed": 74,
+    "context_rows_checked": 1265,
+    "structural_consistency_candidates_checked": 294,
+    "event_monotonicity_violations": 0,
+    "no_valuation_or_execution_decision": true
+  },
+  "limitations": [
+    "Primary and thin-tail discovery stopped at page caps; thin-tail selected top 3000 of 3354 eligible, 354 top omitted.",
+    "Primary selected 80 of 605 eligible, 525 top omitted.",
+    "Sports consensus returned NO_CONSENSUS for all 3 requested candidates.",
+    "Event monotonicity stopped at 15-page cap; zero violations is not a comprehensive zero.",
+    "Polymarket consistency stopped at market cap; only 20 of 203 structural groups received live-quote pass; no comprehensive zero.",
+    "Favorite fade stopped at 10-page and 40-walk caps; 18 walk omissions."
+  ],
+  "initial_primary_capture_note": "Primary completed on first invocation. A helper budget bookkeeping mistake left an intermediate partial collector summary marked stopped-after-primary; remaining six commands completed with receipt captures, and this complete facts record supersedes that intermediate summary.",
+  "root_review_limit": "All7 rawCLI outputs and1265 emitted context rows structurally/source reviewed, not individuallyvalued. Consistency4valid/16quote-failed/183unquoted; no exchange-wide absence or execution certification."
+}

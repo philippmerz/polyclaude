@@ -1,0 +1,13 @@
+{
+  "schema": "bounded_check_closeout.v1",
+  "tick": "20261020T060240Z",
+  "reviewed_utc": "2026-10-20T06:35:00.722044+00:00",
+  "news_late_window": {
+    "start_exclusive": "2026-10-20T06:23:49.913678+00:00",
+    "end_inclusive": "2026-10-20T06:35:00.722044+00:00",
+    "rows": []
+  },
+  "frozen_checkpoint_sha256": "f58dcf393eae93db2252c0ae5eb489063dd32fe780b8449eaa6244e6dfb02a25",
+  "research_progress_unchanged": "377valued/14blocked/367factual/2242pending;next440/noactive. No lifecycle mutation.",
+  "limits": "This is a fixed closeout news window, not later-source/account/fill absence proof. Financial producer remains06:22; no extra market requests for CSV."
+}

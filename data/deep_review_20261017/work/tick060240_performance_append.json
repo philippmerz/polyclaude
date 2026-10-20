@@ -1,0 +1,29 @@
+{
+  "schema": "performance_append_preservation.v1",
+  "appended_utc": "2026-10-20T06:33:26.249026+00:00",
+  "old_rows": 231,
+  "new_rows": 232,
+  "old_byte_length": 131940,
+  "old_sha256": "59a2d5a0cd34d6a8c2d46a17133da925514b43a9331e219ff72626560f088bf9",
+  "old_bytes_preserved_as_prefix": true,
+  "new_sha256": "67a316373e2effba42ce1e206dcc0e256bdddb152225765a446e833da68926e5",
+  "row": {
+    "timestamp_utc": "2026-10-20T06:22:11Z",
+    "timestamp_kind": "check_window",
+    "trading_capital_usd": "170.00",
+    "total_mark_usd": "195.90",
+    "gas_usd": "5.81",
+    "pm_mark_usd": "36.14",
+    "pm_depth_usd": "31.94",
+    "settled_pnl_usd": "19.72",
+    "source": "research/2026-10-20-0622-financial-snapshot.md:1",
+    "source_commit": "",
+    "note": "Check-window anchor at second precision; producer06:22:11.687442\u201306:22:29.705743UTC. SameproducerPM36.14mid/31.94depth; sequentialrounded estimates, not synchronizedNAV/proceeds.19.72 accountingresidual not auditedcashprofit;VM/API excluded.",
+    "reported_trading_mark_usd": "190.09",
+    "gas_kind": "recorded",
+    "gas_rounding_bound_usd": ""
+  },
+  "contributions_sha256": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+  "source": "research/2026-10-20-0622-financial-snapshot.md",
+  "timestamp_precision": "CSV second-resolution window anchor; full microsecond producer bounds preserved in note/source. Initial unsupported fractional CSV timestamp corrected before publication."
+}

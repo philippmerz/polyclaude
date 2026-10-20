@@ -1,0 +1,168 @@
+{
+  "call_window": {
+    "finished_utc": "2026-10-20T06:22:50.780673Z",
+    "started_utc": "2026-10-20T06:22:11.687442Z"
+  },
+  "capture_dir": "logs/tick060240_account",
+  "cli": {
+    "bankroll": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "8f371813683ecba549fe994d4edb22987b7e54b2bc86ee3f609a8e69f959944d",
+        "raw_sha256": "e8e94bf74e16376d16ed5171fd30474910d498d010d4b94af65669bc931ac759",
+        "received_utc": "2026-10-20T06:22:29.705743Z",
+        "started_utc": "2026-10-20T06:22:11.687442Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    "crypto_status": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "f3ca3f64b7a437d0962931de2deba28412514f998d1d85455e05cc7a41201b39",
+        "raw_sha256": "33129035cc1016561dd4cefc5d1431c052060d5e0426c1e9aaab5615c530bfac",
+        "received_utc": "2026-10-20T06:22:45.565829Z",
+        "started_utc": "2026-10-20T06:22:38.807463Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    "exit_analysis": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "3d23de08977793040c7ef1e42cc279a7d712e1b61b2135d8796ffd9b8725cd56",
+        "raw_sha256": "6d0a761d7fd9ba7ada38f73503e4520ff04c1b1c5d80cb6fd88daf2922629fd8",
+        "received_utc": "2026-10-20T06:22:49.847881Z",
+        "started_utc": "2026-10-20T06:22:48.207928Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    "ostium_status": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "c057310467080020c92e8a8d6308bad23902e536942ba61568d65d7b1bd40f6a",
+        "raw_sha256": "b33358408a15d185446199b86f0cb0631ba602ede17555bb634fbca36c311e8a",
+        "received_utc": "2026-10-20T06:22:48.199052Z",
+        "started_utc": "2026-10-20T06:22:45.576688Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    "positions": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "3dd20471662e9eb3b8795c2720948c1d3ac1a34e04f167eb935f33ad0541ca68",
+        "raw_sha256": "5606a4434d1a45de24fa2dacfce7a87d07024446fd92b12a2f2302ebffd0ac37",
+        "received_utc": "2026-10-20T06:22:34.634167Z",
+        "started_utc": "2026-10-20T06:22:29.719138Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    },
+    "wallet_status": {
+      "receipt": {
+        "body_representation": "sdk_result_serialization",
+        "gzip_sha256": "23895e8926fbac406447e1b458dbfc66d8f31f4392bf42c23c15f8daeb887386",
+        "raw_sha256": "1f1b35499d4eb71d02fdb36d55268c5964b92d07494864341968841e7a65df37",
+        "received_utc": "2026-10-20T06:22:38.796355Z",
+        "started_utc": "2026-10-20T06:22:34.644463Z"
+      },
+      "returncode": 0,
+      "stderr": ""
+    }
+  },
+  "errors_and_warnings": {
+    "bankroll_warnings": [
+      "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $4.20 (mid $36.14 vs $31.94) \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return."
+    ],
+    "command_errors": [],
+    "other_command_warnings": {
+      "crypto_status": [],
+      "exit_analysis": [],
+      "ostium_status": [],
+      "positions": [],
+      "wallet_status": []
+    }
+  },
+  "evidence_limits": [
+    "CLI envelopes contain serialized returncode/stdout/stderr stored under existing broad sdk_result_serialization enum; they are not HTTP bodies or SDK account responses.",
+    "CLOB responses are sdk_result_serialization; public positions are http_body.",
+    "Capture times are call_window bounds, not wire timing.",
+    "The public positions call used one page of limit 50 and returned 9 rows."
+  ],
+  "order_details": {
+    "all_http_200": true,
+    "count": 3,
+    "exact_inventory_field_join": "Root independently verified all3 detail/list/prior identities, terms, status, zero matches and empty associate_trades."
+  },
+  "orders": {
+    "count": 3,
+    "items": [
+      {
+        "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+        "expiration": "0",
+        "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+        "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a",
+        "original_size": "10",
+        "price": "0.12",
+        "side": "BUY",
+        "size_matched": "0",
+        "status": "LIVE"
+      },
+      {
+        "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+        "expiration": "0",
+        "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+        "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2",
+        "original_size": "50",
+        "price": "0.03",
+        "side": "BUY",
+        "size_matched": "0",
+        "status": "LIVE"
+      },
+      {
+        "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+        "expiration": "0",
+        "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+        "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4",
+        "original_size": "10",
+        "price": "0.38",
+        "side": "BUY",
+        "size_matched": "0",
+        "status": "LIVE"
+      }
+    ],
+    "pagination_exhausted": true,
+    "remaining_buy_commitment_usd": 6.5,
+    "same_as_0600_inventory": true,
+    "same_three_live_zero_matched": true,
+    "status_code": 200
+  },
+  "private_raw_scope": "Full CLI output, authenticated response bodies and receipts retained only in capture_dir. Public facts retain necessary exact financial/venue identities without private owner fields.",
+  "public_positions": {
+    "count": 9,
+    "indexed_identity_join_to_0600": {
+      "current_only": [],
+      "exact_key_matches": 9,
+      "prior_only": [],
+      "quantity_changes": []
+    },
+    "private_current_body": "logs/tick060240_account/receipts/positions_0000.receipt.json",
+    "root_exact_join": "All9 conditionId/asset/outcome keys and size/totalBought/redeemable values match0600; indexed evidence only, not fresh CTF."
+  },
+  "schema": "tick060240_account_facts.v2",
+  "trades": {
+    "0435_raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+    "0600_raw_sha256": "46e20e4845d02788df18d10b89ac3720a01206402f4a9c3b75d2e2085007b250",
+    "count": 127,
+    "exact_0600_fact_count": true,
+    "exact_ordered_rows_equal_0435": true,
+    "exact_ordered_rows_equal_0600": true,
+    "pagination_exhausted": true,
+    "prior_0600_raw_sha256": "46e20e4845d02788df18d10b89ac3720a01206402f4a9c3b75d2e2085007b250",
+    "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+    "status_code": 200,
+    "unique_ids": 127
+  }
+}

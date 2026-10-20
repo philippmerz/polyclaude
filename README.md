@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 231 recorded observations from Apr-25
+The local performance CSV now has 232 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,7 +58,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **377 valued /14 blocked /367 factual /2,242 pending;758 base+69 revisions.**438 Iran11%YES/89%NO and439 CA-01 88%YES/12%NO are saved, with no entries after both-side costs and uncertainty/conditional-fill review.439 preserves its75%prequote model and postquote new-map source update. The fee-disabled research reader is repaired and verified;437 remains case-specific unpriced. Next440; later packets are facts only. [Latest valuation](research/2026-10-17-deep-review/evaluations/0439.md) · [Reader repair](research/2026-10-20-fee-disabled-research-capture.md) · [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
 
-**Kimi412 is10YES held at12c/1.20cost, not an open bid.** Three original LIVE zero-matched political bids commit6.50, independently verified04:35UTC. Retain/noadd; full Kimi loss/source delay remains possible. No new financial action during the04:31-triggered check. Financial figures retain their04:35 producer observation time. [Exact orders/management](notes/resting_orders.md) · [Current held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
+**Kimi412 remains 10YES held at12c/1.20cost.** Three original LIVE zero-matched political bids commit6.50, independently verified06:22UTC. Retain/noadd; full Kimi loss and source delay remain possible. The06:02-triggered full check produced no fill, trade or numerical forecast change. Financial figures below retain their06:22 producer window. [Exact orders/management](notes/resting_orders.md) · [Current held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
 
 ## Mandate and constraints
 
@@ -80,13 +80,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 04:35 UTC
+## Last audited snapshot — October20 06:22 UTC
 
-**Indicative trading net depth $187.84 versus $170 contributed (+10.49%); authoritative bankroll $196.20 including $5.86 separate gas.** Trading midpoint190.34; same-producer PM36.40mid/33.90indicative fee-net depth. Producer04:34:59–04:35:14UTC. Sequential rounded estimates are not synchronized NAV/proceeds;19.72residual is not audited cash profit, VM/API costs excluded. CSV231 preserves230 earlier observations. [Financial record](research/2026-10-20-0435-financial-snapshot.md).
+**Indicative trading net depth $185.89 versus $170 contributed (+9.35%); authoritative bankroll $195.90 including $5.81 separate gas.** Trading midpoint190.09; same-producer PM36.14mid/31.94indicative fee-net depth. Producer06:22:11–29UTC. Sequential rounded estimates are not synchronized NAV/proceeds;19.72 residual is not audited cash profit, VM/API costs excluded. CSV232 preserves all231 earlier observations. [Financial record](research/2026-10-20-0622-financial-snapshot.md).
 
-No new fill or transaction. Kimi remains10YES at12c/1.20cost; three original LIVE0matched bids commit6.50,127trades byte-identical. MI5NO indexed/on-chain. pUSD19.251290−6.50=12.751290 arithmetic, not freecollateral certificate. Requested WRGB05191... and24related Michigan rows reviewed; source limits remain, no measured voter update or forecast change. [Orders](notes/resting_orders.md) · [Primary hold review](data/deep_review_20261017/work/tick043158_hold_primary.json).
+No new fill or transaction. Three original LIVE0matched bids commit6.50; all separate order details and127 exhausted trades are unchanged. Nine public indexed identities/quantities match06UTC; no fresh CTF claim. pUSD19.251290−6.50=12.751290 arithmetic, not a free-collateral certificate. Requested WTVC51b06... and24older related Michigan records/source proofs reviewed; no measured voter update or forecast change. [Orders](notes/resting_orders.md) · [Primary hold review](data/deep_review_20261017/work/tick060240_primary_review.json).
 
-Due06UTC light: auditCLEAN/cruxquiet/Ostium0/hurdle4clear0flagged/watchlist0; all four daemons single/current, no restart. OR UMA price move reviewed against fresh source/books; retain5NO/noadd, indicative exit3.2045 versus4.40central/3.65selected. HLE verified bytes unchanged; OR only current partial changes, not settlement or a completed-week model replacement. Retain/noadd; manage Clarity whole. Discovery remains capped/incomplete, not an absence finding. Offline61batch/1022row follow-up completed from the same snapshots; no held/pendingCID match or new valuation. No Telegram. WeeklyOct23/monthlyNov12 notdue; next existing10light/14full or earlier material event. [Light check](research/2026-10-20-0600-light-check.md) · [Completed full check](research/2026-10-20-0431-checkin.md).
+Full checklist: auditCLEAN/cruxquiet/Ostium0/UMA0alerts/hurdle4clear0flagged/watchlist0/0overdue; four daemons single/current, no restart. No winning redemption. HLE and OR06:24 bodies unchanged; Clarity06:26 exact rule texts unchanged. Retain/noadd after pessimistic, carry and explicit joint-state comparisons; manage Clarity whole. A wider Clarity exit spread lowers the depth estimate without proving a changed payout thesis. [Completed check](research/2026-10-20-060240-checkin.md).
+
+Discovery remains capped/incomplete: primary80of605eligible, thin3000of3354; sports3consensus mapping failures, consistency4valid/16failed/183unquoted groups. All74offline batches/1265rows structurally/source reviewed, not individually valued. One held Kimi shortlist appearance is not a new listing or forecast signal. No Telegram: no new material action/source finding. WeeklyOct23/monthlyNov12 notdue; next existing10light/14full or earlier material event. [Coverage](data/deep_review_20261017/work/tick060240_discovery_facts.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
