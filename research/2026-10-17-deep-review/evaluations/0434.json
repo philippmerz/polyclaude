@@ -1,0 +1,192 @@
+{
+  "review_index": 434,
+  "market_id": "5154842",
+  "condition_id": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+  "criteria_sha256": "08126e459a5f9814be1939abdd31ff3d5149fc015025fff4199d746c560a0006",
+  "status": "blocked_after_review",
+  "literal_analysis": "Inclusive35–59, firstpostNov11 16UTCNCEIpreliminary controls/earlierpreliminaryexcluded/laterrevisionsignored; nextpublicationpriormonthfallback/permanentcrediblealternative. Fullrule/sourceclock reviewed.",
+  "evidence": [
+    {
+      "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/content/tornadoes/202609",
+      "observed_utc": "2026-10-20T04:25:57Z",
+      "finding": "Rootverifiedsevenraw/gzip pairs/readnarrative/chart/CSV/FAQ:57preliminary versus45confirmed; adapter65%whisker not a conversion.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_ncei_mapping_0458.json",
+        "sha256": "e53800307a168c423bb8c18c94d9f19b386ff5b32be95ee05351a8e445136edd"
+      }
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/monitoring-content/lib/reference/monthly-releases.json",
+      "observed_utc": "2026-10-20T04:49:02.990895Z",
+      "finding": "Rootverified/readarticle,JSandJSON:NationalNov9/GlobalNov12tentative, no tornado-specificscope; notproofOct11productdatewrong.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_release_facts_0450.json",
+        "sha256": "de8ef3e72f835457bf3a98c9ca98a57fff9491d8c8fec42c560d4f7238541495"
+      }
+    },
+    {
+      "url": "https://www.spc.noaa.gov/climo/reports/260930_rpts_torn.csv",
+      "observed_utc": "2026-10-20T04:49:29.422488Z",
+      "finding": "Rootverifiedall31dailybodies/receiptpairs;Sep-keyrows64vsNCEI57prelim, monthwindows/eventdedup/vintagebridge unresolved.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_september_crosscheck_0450.json",
+        "sha256": "d94b1cdd4f5f3f4379cd10a36680258fcb42e040acd6a96b70625c31eff743d7"
+      }
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/access/monitoring/tornadoes/time-series/1/10/data.json",
+      "observed_utc": "2026-10-20T04:26:27.979849Z",
+      "finding": "Earlierrootverifiedhistorical/currentSPC/NWS/outlook inputs; Octoberreportrows andregionaltracks notsamefirstpublicationmetric.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_primary_partial_0459.json",
+        "sha256": "73ecad72e6d346abae9b567d8523b634d0e35e2cffd4314ce16c5c5e920202c9"
+      }
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "low": 0,
+    "high": 1,
+    "explicitly_unpriced": true,
+    "method": "Source/vintage/clockbridge not identified after rawsource/chart/cross-month reconciliation.",
+    "reasoning": "NCEI57prelim vs45confirmed vs64SPCSeptember-keyrows; October53regularrows not interchangeable. No calibratedconversion or firsteligible publication bridge, no fabricatedpoint."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0434_quote_0453.json",
+    "quote_file_sha256": "a1be8f69c476f563041b02a2b70095d9dbeb26c2c0614979a716c6aa841752e6",
+    "quote_capture_utc": "2026-10-20T04:50:29.409334+00:00",
+    "gamma_received_utc": "2026-10-20T04:50:29.132875+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 22.0,
+    "probability_reference_outcome": null,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "best_bid": 0.76,
+        "best_ask": 0.77,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792471801704",
+        "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+        "book_age_seconds_at_receipt": 27.57945489883423,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.85,
+            "fee": 0.04428,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.77
+              }
+            ],
+            "net": 3.89428
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.8,
+            "fee": 0.04561,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.76
+              }
+            ],
+            "net": 3.75439
+          }
+        },
+        "taker_cost_usd": 3.89428,
+        "break_even_before_carry": 0.778856,
+        "break_even_constant_carry": 0.7803376965964743,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "best_bid": 0.23,
+        "best_ask": 0.24,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792471801704",
+        "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+        "book_age_seconds_at_receipt": 27.57945489883423,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.2,
+            "fee": 0.04561,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.24
+              }
+            ],
+            "net": 1.2456099999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.1500000000000001,
+            "fee": 0.04428,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.23
+              }
+            ],
+            "net": 1.10572
+          }
+        },
+        "taker_cost_usd": 1.2456099999999999,
+        "break_even_before_carry": 0.24912199999999998,
+        "break_even_constant_carry": 0.24959592999412838,
+        "current_execution_authorization": false
+      }
+    },
+    "forecast_explicitly_unpriced": true,
+    "calculation_note": "Helperdummy.5 usedonlytoextract probability-independentfee/depthwalks; no .5forecast/EVadopted or stored.",
+    "standard10pp_reserve_break_even_note": "An eventualunconditionalpointforecast would need>sidebreak_even+.10beforecosts; thisis not a conditionalfillbound/authorization.",
+    "gamma_status": {
+      "id": "5154842",
+      "conditionId": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+      "active": true,
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.25
+      },
+      "orderMinSize": 5
+    }
+  },
+  "verdict": "BLOCKED_AFTER_REVIEW, case-specific/unpriced/not economicrejection, no financialaction/globalgoalblock.",
+  "reopen_condition": "Verified monthlymetric/vintage reconciliation and qualifyingpublicationclock, or directlyeligiblepostclockvalue; then fresh primaryforecast/bothsides/currentfullgates.",
+  "evaluated_utc": "2026-10-20T04:52:43.667524+00:00",
+  "question": "Will there be between 35 and 59 tornadoes in the US in October 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 434,
+  "report_sha256": "badf86a0e8b60de4c2ea454087544b85d3d867c0cdcf1f4cb23351c67b163add"
+}

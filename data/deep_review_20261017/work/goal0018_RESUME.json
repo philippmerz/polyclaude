@@ -1,35 +1,35 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T04:44:28.792730+00:00",
+  "updated_utc": "2026-10-20T05:11:13.105303+00:00",
   "previous_goal_turn_classification": "progress",
-  "evidence": "Publishedb2a521f saved honest430partial and434/435/436 facts, repaired active-case handoff. Current430 individually valued/saved/indexed.",
-  "current_turn_progress": "Scheduled04:31 full11-stepcheck completed with04:35account/financial/source observations andfixednews04:40:55. No newfill/financialaction/priorchange or frozenuniverse valuation.434 stays incomplete with prior partial/source pointers. CSV231 preserves230rows; boundedrun ends afterpublication.",
+  "evidence": "Lastpublished443c738 completednecessaryfreshportfolio/safetyevidence; priorbdc71a2 appended430/431/433valuations. Current434sourcebridgeinvestigation independentlyfinished/saved/indexed.",
+  "current_turn_progress": "Prior434source bridge blocked/435exact closed route excluded, individually saved/indexed.436fullrule/source review saved as incomplete unpriced partial. Required scheduled closeout completed missing offline6b; no next substantive case or research continuation.",
   "counts": {
     "completed_valuations": 374,
-    "blocked_after_in_depth_review": 12,
-    "factual_exclusions": 366,
-    "pending": 2248,
-    "base_records": 752,
+    "blocked_after_in_depth_review": 13,
+    "factual_exclusions": 367,
+    "pending": 2246,
+    "base_records": 754,
     "revisions_written": 69,
     "active_indices": [
-      434
+      436
     ]
   },
   "last_completed": {
-    "index": 433,
-    "status": "valued",
-    "report": "evaluations/0433.md",
-    "sha256": "b4a47637c23cdcb5fd3235cc72a55ff72f5fb08bfe1a682404e28861f6ec6339",
-    "p_yes": 0.13532,
-    "decision": "NO_ENTRY"
+    "index": 435,
+    "status": "excluded_factual",
+    "report": "evaluations/0435.md",
+    "sha256": "f1327366d914b828736f7455dc6c08200fe917a4013af9c91b539c2bc6b27c3f",
+    "p_yes": null,
+    "decision": "EXACT_CLOSED_NONACCEPTING_ROUTE"
   },
   "next": [
-    434,
-    435,
     436,
     437,
     438,
-    439
+    439,
+    440,
+    441
   ],
   "next_facts": {
     "430": "work/0430_resume.json",
@@ -40,11 +40,14 @@
     "436": "work/0436_resume.json",
     "437": "work/0437_resume.json",
     "438": "work/0438_resume.json",
-    "439": "work/0439_resume.json"
+    "439": "work/0439_resume.json",
+    "440": "work/0440_resume.json",
+    "441": "work/0441_resume.json",
+    "442": "work/0442_resume.json"
   },
   "next_existing_safety": "2026-10-20T06:00:00Z",
   "financial_state": "Canonical04:34:59–04:35:14:196.20incl5.86gas;190.34tradingmid/187.84indicative fee-netdepth(+10.49%vs170), PM36.40/33.90, CSV231.04:35pUSD19.251290/3LIVE0bids6.50=>12.751290arithmetic/notfreecollateral.127trades identical; Kimi10YEScost1.20 unchanged.",
-  "goal_state": "Full finite3000 objective active/incomplete. Each primary evaluation saved before next substantive evaluation. Next existing06UTC/earliermaterial safety.",
+  "goal_state": "Full finite3000 objective incomplete. This scheduled run ends after necessary verification/publication; no lifecycle mutation, timer or idle continuation. When authorized research resumes, finish436 before437.",
   "safety_followup": {
     "tick": "20261020T043158Z",
     "report": "research/2026-10-20-0431-checkin.md",
@@ -69,7 +72,7 @@
     "window_end": "2026-10-20T04:40:55.231604Z"
   },
   "latest_scheduled_tick": "20261020T043158Z",
-  "active_case": 434,
+  "active_case": 436,
   "scheduled_closeout": {
     "completed_utc": "2026-10-20T04:46:20.534438+00:00",
     "tick": "20261020T043158Z",
@@ -78,5 +81,16 @@
     "new_valuations": 0,
     "resume": "work/0434_resume.json",
     "result": "Fullchecks/freshaccount/source/ops; no financialaction or numericalforecast. Boundedrun ends afterpublication."
+  },
+  "scheduled_verification_addendum": {
+    "verified_utc": "2026-10-20T05:11:13.105303+00:00",
+    "tick": "20261020T043158Z",
+    "proof": {
+      "path": "data/deep_review_20261017/work/tick043158_context_primary_0514.json",
+      "sha256": "7dda37a93d14f7f1cf052b6eb52af6513ee50132d0fede8de5281cb14807040a"
+    },
+    "new_financial_reads": false,
+    "new_valuations": 0,
+    "result": "61offlinebatches/1022rows all structurally reviewed; no exact held/pendingCID match. Requestedalert/16opsreceiptpairs reverified; existing financialrecords unchanged. Fixed late-news window oneopiniontitle/no adoptedmeasurement."
   }
 }

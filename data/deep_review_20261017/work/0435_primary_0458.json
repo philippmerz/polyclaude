@@ -1,0 +1,39 @@
+{
+  "review_index": 435,
+  "market_id": "5351685",
+  "condition_id": "0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0",
+  "criteria_sha256": "b1e1f73162ecd5d8717abc9118ccb2eebae94883e87121233b774e8d671620e2",
+  "status": "excluded_factual",
+  "literal_analysis": "Fullrule Over>=42/Under<42; postponementwait/cancelwithoutmakeup50-50, NCAAprimary. Exactcurrentclosed/resolved/nonaccepting, notdatealone.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5351685",
+      "observed_utc": "2026-10-20T04:49:21.107325Z",
+      "finding": "Rootraw/gzip/fullfrozenidentity verified:closedtrue/nonaccepting/UMAresolved;activetrue/resolvednullretained, no winnerinferred.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0435_root_source_verification_0455.json",
+        "sha256": "ebd83e15dcc313181612037126c0fc9c53762b587842b9308179525a5131a9e8"
+      }
+    },
+    {
+      "url": "https://clob.polymarket.com/clob-markets/0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0",
+      "observed_utc": "2026-10-20T04:49:21.262702Z",
+      "finding": "Compactcondition/fullOverUnderassetmapping matchesfrozen; raw/gzippair verified."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "explicitly_unpriced": true,
+    "reasoning": "Currentexactrouteclosure isobjectiveineligibility, not an outcomeforecast or price rejection."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_ineligible": true,
+    "not_quoted": true,
+    "reason": "BothfrozenOver/Undertokens belong toexactclosed/nonaccepting market; no vettednewentryroute orhypotheticalprobability adopted.",
+    "alternative": "Retaincash/currentpositions; proceednextpendingfrozencontract."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting, notcountedvaluation; nofinancialaction.",
+  "reopen_condition": "Exactcontractobjectivelyreopenswithlawfulvettedroute; verifyfullcurrentfacts/rules/quotes/accountgatesbefore anyallocation.",
+  "report_markdown": "# 0435 — Northern Illinois/Wyoming O/U41.5: closed exact market\n\n**Objective factual exclusion; not a forecast, valuation or trade.** Frozen market5351685/CID`0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0`, criteriaSHA`b1e1f73162ecd5d8717abc9118ccb2eebae94883e87121233b774e8d671620e2`. Root read the complete frozen rule: Over requires combinedscore≥42; Under below42. Postponement waits for completion; cancellation without makeup pays50–50. NCAA.com is the named outcome source; scheduledOct17 15:30ET is not by itself an exclusion reason.\n\nAt04:49:21UTC the exact current Gamma object matches every frozen question, full description, slug, resolution source, end date, condition, outcome and token field. It says **closed=true, acceptingOrders=false, umaResolutionStatus=resolved**; active=true and resolved=null are preserved and do not establish an open entry route or a numeric winner. The compact CLOB descriptor independently matches the condition and full Over/Under token map.\n\nRoot verified both raw/gzip pairs and all seven supplemental captures. The repository's vetted new-entry route cannot enter this closed/nonaccepting contract. No outcome-odds or date-only screen caused the exclusion. There is no reason to spend capital or invent a retrospective probability for an inaccessible new position. No book/price, account, order, prior, reservation or financial record was changed by this review.\n\nThe collector also captured CTF outputs; their request-hash preimage reconstruction was initially unresolved, so this exclusion does **not** depend on a claimed payout/winner. Captured school-score context likewise is not needed to establish current route closure. Any later reopening requires a current exact market/route check and fresh underwriting; no automatic re-entry or assumption about other contracts.\n\n[Closure facts and captures](../../../data/deep_review_20261017/work/0435_closure_0450.json) · [Root identity/hash verification and receipt paths](../../../data/deep_review_20261017/work/0435_root_source_verification_0455.json).\n"
+}

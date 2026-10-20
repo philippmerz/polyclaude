@@ -1,0 +1,14 @@
+{
+  "review_index": 441,
+  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
+  "phase": "collector facts saved only; not started, root-verified, valued or excluded",
+  "source_paths": [
+    "work/0441_facts_0500.json"
+  ],
+  "facts": {
+    "path": "work/0441_facts_0500.json",
+    "sha256": "a4186523fc083970325992ae2094042ffded4c64be3b921c699c4b5ab2b4a29e",
+    "bytes": 3915
+  },
+  "status_limit": "No forecast/decision; read exact full frozen rule and verify raw evidence before substantive primary review. No automatic retry/entry."
+}

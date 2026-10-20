@@ -1,0 +1,78 @@
+{
+  "schema": "bounded_check_closeout_verification.v1",
+  "tick": "20261020T043158Z",
+  "verified_utc": "2026-10-20T05:08:13.214346+00:00",
+  "requested_alert_id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+  "exact_line_sha256": "b644b68ba67d2bd4bd4f20e0ce6c62f54e013c178eab653482813eec29dbcbea",
+  "news_review": {
+    "path": "data/deep_review_20261017/work/tick043158_news_primary.json",
+    "sha256": "54ff22046c6f1fdf0049cba62199f2b8022066435134d6a85bcee34bfe2d5e6e"
+  },
+  "ops_receipt_pairs_verified": 16,
+  "ops_receipts": [
+    "bankroll.receipt.json",
+    "crux_coverage.receipt.json",
+    "crypto_status.receipt.json",
+    "decisions_pending.receipt.json",
+    "exit_analysis.receipt.json",
+    "full_status.receipt.json",
+    "marginal_apy.receipt.json",
+    "ostium_state_diff.receipt.json",
+    "ostium_status.receipt.json",
+    "portfolio_kelly.receipt.json",
+    "position_state_audit.receipt.json",
+    "positions.receipt.json",
+    "redeem_all_dry_run.receipt.json",
+    "uma_status.receipt.json",
+    "wallet_status.receipt.json",
+    "watchlist.receipt.json"
+  ],
+  "original_full_status_window": "2026-10-20T04:34:29.230746Z–04:34:43.685842Z",
+  "new_account_or_source_fetches": false,
+  "new_financial_record_rows": 0,
+  "later_news_window": {
+    "after": "2026-10-20T04:40:55.231604Z",
+    "through": "2026-10-20T05:04:49.443260Z",
+    "rows": [
+      {
+        "id": "f7efde52db1c84f9df027bdb67e2ac49f2f11299",
+        "ts": "2026-10-20T05:03:58Z",
+        "line_sha256": "69e1c3311e768cfa6792387a7ea3e4eb58e94f934efa0e10cbf75128b1883f21",
+        "title": "Luis Enrique talks Lionel Messi-Lamine Yamal comparisons - Barca Blaugranes",
+        "primary_decision": "Title is a football-player comparison/opinion lead. No resolving Google ranking/search measurement or material held-thesis fact is supplied; original body not fetched. No numerical forecast change, trade or Telegram justified by this title alone; not a claim of completed body review."
+      }
+    ],
+    "limit": "Fixed window; no later-news absence claim."
+  },
+  "research_records_already_finished": [
+    {
+      "index": 434,
+      "status": "blocked_after_review",
+      "report_sha256": "badf86a0e8b60de4c2ea454087544b85d3d867c0cdcf1f4cb23351c67b163add"
+    },
+    {
+      "index": 435,
+      "status": "excluded_factual",
+      "report_sha256": "f1327366d914b828736f7455dc6c08200fe917a4013af9c91b539c2bc6b27c3f"
+    }
+  ],
+  "ledger_prefix_preserved": true,
+  "protected_files_byte_identical_to_head": [
+    "docs/performance.csv",
+    "docs/contributions.csv",
+    "notes/portfolio_kelly_priors.json",
+    "notes/decisions.json",
+    "research/2026-10-17-deep-review/revisions.jsonl"
+  ],
+  "step6b": "Missing evidence identified; exact captured snapshots used in new offline context batches. All output review proof is saved separately before final closeout. No renewed scan or candidate valuation.",
+  "counts": {
+    "completed_valuations": 374,
+    "blocked_after_in_depth_review": 13,
+    "factual_exclusions": 367,
+    "pending": 2246,
+    "active_indices": [
+      436
+    ]
+  },
+  "boundary": "End this scheduled run after concrete verification/publication; no goal lifecycle mutation, timer, next case or idle continuation."
+}

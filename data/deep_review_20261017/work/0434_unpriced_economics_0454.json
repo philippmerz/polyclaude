@@ -1,0 +1,131 @@
+{
+  "both_sides_considered": true,
+  "quote_file": "data/deep_review_20261017/0434_quote_0453.json",
+  "quote_file_sha256": "a1be8f69c476f563041b02a2b70095d9dbeb26c2c0614979a716c6aa841752e6",
+  "quote_capture_utc": "2026-10-20T04:50:29.409334+00:00",
+  "gamma_received_utc": "2026-10-20T04:50:29.132875+00:00",
+  "hypothetical_gross_shares": 5.0,
+  "horizon_days": 22.0,
+  "probability_reference_outcome": null,
+  "fee_curve": {
+    "rate": 0.05,
+    "exponent": 1.0,
+    "taker_only": true,
+    "authoritative": true
+  },
+  "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+  "alternative": {
+    "apy": 0.032035,
+    "chain": "polygon",
+    "token": "USDC",
+    "supply_status": "live",
+    "fetched": "2026-10-19T18:02:51.823060+00:00",
+    "constant_rate_sensitivity_not_forecast": true,
+    "funding_and_operations_costs_not_assumed_free": true
+  },
+  "sides": {
+    "Yes": {
+      "best_bid": 0.76,
+      "best_ask": 0.77,
+      "minimum_shares": "5",
+      "tick_size": "0.01",
+      "book_timestamp": "1792471801704",
+      "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+      "book_age_seconds_at_receipt": 27.57945489883423,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 3.85,
+          "fee": 0.04428,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.77
+            }
+          ],
+          "net": 3.89428
+        },
+        "bids": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 3.8,
+          "fee": 0.04561,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.76
+            }
+          ],
+          "net": 3.75439
+        }
+      },
+      "taker_cost_usd": 3.89428,
+      "break_even_before_carry": 0.778856,
+      "break_even_constant_carry": 0.7803376965964743,
+      "current_execution_authorization": false
+    },
+    "No": {
+      "best_bid": 0.23,
+      "best_ask": 0.24,
+      "minimum_shares": "5",
+      "tick_size": "0.01",
+      "book_timestamp": "1792471801704",
+      "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+      "book_age_seconds_at_receipt": 27.57945489883423,
+      "passed_180s_at_receipt": true,
+      "walks": {
+        "asks": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 1.2,
+          "fee": 0.04561,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.24
+            }
+          ],
+          "net": 1.2456099999999999
+        },
+        "bids": {
+          "complete": true,
+          "filled": 5.0,
+          "gross": 1.1500000000000001,
+          "fee": 0.04428,
+          "fills": [
+            {
+              "shares": 5.0,
+              "price": 0.23
+            }
+          ],
+          "net": 1.10572
+        }
+      },
+      "taker_cost_usd": 1.2456099999999999,
+      "break_even_before_carry": 0.24912199999999998,
+      "break_even_constant_carry": 0.24959592999412838,
+      "current_execution_authorization": false
+    }
+  },
+  "forecast_explicitly_unpriced": true,
+  "calculation_note": "Helperdummy.5 usedonlytoextract probability-independentfee/depthwalks; no .5forecast/EVadopted or stored.",
+  "standard10pp_reserve_break_even_note": "An eventualunconditionalpointforecast would need>sidebreak_even+.10beforecosts; thisis not a conditionalfillbound/authorization.",
+  "gamma_status": {
+    "id": "5154842",
+    "conditionId": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+    "active": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "umaResolutionStatus": null,
+    "feesEnabled": true,
+    "feeSchedule": {
+      "exponent": 1,
+      "rate": 0.05,
+      "takerOnly": true,
+      "rebateRate": 0.25
+    },
+    "orderMinSize": 5
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "review_index": 435,
+  "market_id": "5351685",
+  "condition_id": "0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0",
+  "criteria_sha256": "b1e1f73162ecd5d8717abc9118ccb2eebae94883e87121233b774e8d671620e2",
+  "status": "excluded_factual",
+  "literal_analysis": "Fullrule Over>=42/Under<42; postponementwait/cancelwithoutmakeup50-50, NCAAprimary. Exactcurrentclosed/resolved/nonaccepting, notdatealone.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5351685",
+      "observed_utc": "2026-10-20T04:49:21.107325Z",
+      "finding": "Rootraw/gzip/fullfrozenidentity verified:closedtrue/nonaccepting/UMAresolved;activetrue/resolvednullretained, no winnerinferred.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0435_root_source_verification_0455.json",
+        "sha256": "ebd83e15dcc313181612037126c0fc9c53762b587842b9308179525a5131a9e8"
+      }
+    },
+    {
+      "url": "https://clob.polymarket.com/clob-markets/0x11f8ef36b32f20f0c9be95a89b7bc25a45330e2c3d6a853490d7ad4ab7f82df0",
+      "observed_utc": "2026-10-20T04:49:21.262702Z",
+      "finding": "Compactcondition/fullOverUnderassetmapping matchesfrozen; raw/gzippair verified."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "explicitly_unpriced": true,
+    "reasoning": "Currentexactrouteclosure isobjectiveineligibility, not an outcomeforecast or price rejection."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_ineligible": true,
+    "not_quoted": true,
+    "reason": "BothfrozenOver/Undertokens belong toexactclosed/nonaccepting market; no vettednewentryroute orhypotheticalprobability adopted.",
+    "alternative": "Retaincash/currentpositions; proceednextpendingfrozencontract."
+  },
+  "verdict": "EXCLUDED_FACTUAL: exactclosed/resolved/nonaccepting, notcountedvaluation; nofinancialaction.",
+  "reopen_condition": "Exactcontractobjectivelyreopenswithlawfulvettedroute; verifyfullcurrentfacts/rules/quotes/accountgatesbefore anyallocation.",
+  "evaluated_utc": "2026-10-20T04:55:53.712425+00:00",
+  "question": "Northern Illinois vs. Wyoming: O/U 41.5",
+  "valuation_author": "primary_operator",
+  "original_index": 435,
+  "report_sha256": "f1327366d914b828736f7455dc6c08200fe917a4013af9c91b539c2bc6b27c3f"
+}

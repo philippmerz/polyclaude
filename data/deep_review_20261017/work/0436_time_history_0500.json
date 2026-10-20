@@ -1,0 +1,23 @@
+{
+  "schema": "case436.time_history_facts.v1",
+  "observed_utc": "2026-10-20T04:58:36Z",
+  "scope": "Historical/editorial facts only; no probability or market assessment.",
+  "historical_labels_2000_2025": [
+    [2000,"George W. Bush"],[2001,"Rudolph Giuliani"],[2002,"The Whistleblowers (Cynthia Cooper, Coleen Rowley, Sherron Watkins)"],[2003,"The American Soldier"],[2004,"George W. Bush"],[2005,"The Good Samaritans (Bill Gates, Bono, Melinda Gates)"],[2006,"You"],[2007,"Vladimir Putin"],[2008,"Barack Obama"],[2009,"Ben Bernanke"],[2010,"Mark Zuckerberg"],[2011,"The Protester"],[2012,"Barack Obama"],[2013,"Pope Francis"],[2014,"Ebola Fighters"],[2015,"Angela Merkel"],[2016,"Donald Trump"],[2017,"The Silence Breakers"],[2018,"The Guardians and the War on Truth"],[2019,"Greta Thunberg"],[2020,"Joe Biden and Kamala Harris"],[2021,"Elon Musk"],[2022,"Volodymyr Zelensky and the Spirit of Ukraine"],[2023,"Taylor Swift"],[2024,"Donald Trump"],[2025,"The Architects of AI"]
+  ],
+  "interpretation_limits": [
+    "This is a descriptive annual-label sequence, not a fitted base rate or probability estimate. Repeat selections include George W. Bush (2000, 2004), Barack Obama (2008, 2012), and Donald Trump (2016, 2024).",
+    "TIME's captured explainer says editors select the person/people with most influence over the prior 12 months; it notes object and archetype selections (e.g. the personal computer, the protester) and says living-person status is tradition, not a rule. Group/concept labels need the frozen market's explicit naming/cover association rule; mere proximity or generic association is insufficient.",
+    "No official 2026 shortlist date or shortlist announcement was verified. TIME's current media kit gives category digital launches Dec 7–9, 2026 and main Person of the Year digital release Dec 10, 2026; it says dates/content are subject to change/editorial discretion and launch dates are directional. This is a schedule, not a shortlist promise."
+  ],
+  "sources": [
+    {"url":"https://time.com/4586372/time-person-of-the-year-facts/","source_date":"published 2016-12-07; page modified 2025-12-11","capture":"reused logs/deep_review_20261017/0700case0436_facts_0350/time_poy_method.receipt.json","status":200,"raw_sha256":"cb9e23bcdd438ff2d276078d19c9a61cb526bbb42e949ee143218c8d30640dc0","gzip_sha256":"5e11ecd6acfe164a782612b51129f0e91198285f55ddf0f91cdd847fbc758b5b"},
+    {"url":"https://time.com/7339685/person-of-the-year-2025-ai-architects/","source_date":"published 2025-12-11","capture":"reused logs/deep_review_20261017/0700case0436_facts_0350/time_2025_poy_article.receipt.json","status":200,"raw_sha256":"9025c7a26cbc3c048d91b1644cf2e86d007130c31b5fe76114479b3f811be123","gzip_sha256":"6c83a335aa18485c9a205680d187f3cb97bd3c6ed0cdca922e6b911148abacf0"},
+    {"url":"https://mediakit.time.com/","observed":"GET 2026-10-20T04:58:04.381104Z–04:58:04.745680Z; HTTP 200; body is current media-kit page","capture":"logs/deep_review_20261017/case0436_time_history_0500/time_2026_media_kit.receipt.json","raw_sha256":"a2897c137ea047b3de1b850e39b387ffd8310eb2494178f2c897a7b76a605037","gzip_sha256":"35257a037ff5b74e5d1dea13a34383ccfedc499a5709876e6a5518c042cab9d4"},
+    {"url":"https://time.com/4141716/time-person-of-the-year-angela-merkel-world-leaders/","attempt":"2026-10-20T04:58:36.130025Z–04:58:36.323499Z; HTTP 406, empty response","capture":"logs/deep_review_20261017/case0436_time_history_0500/time_2015_history_capture/time_2015_history.receipt.json"},
+    {"url":"https://time.com/3626016/person-of-the-year-faq/","attempt":"2026-10-20T04:58:04.008243Z–04:58:04.185737Z; HTTP 406, empty response","capture":"logs/deep_review_20261017/case0436_time_history_0500/time_faq.receipt.json"},
+    {"url":"https://time.com/5049635/person-of-the-year-cover-groups-history/","attempt":"2026-10-20T04:58:04.195462Z–04:58:04.369559Z; HTTP 406, empty response","capture":"logs/deep_review_20261017/case0436_time_history_0500/time_group_history.receipt.json"}
+  ],
+  "history_provenance_gap": "The 2000–2024 list is a factual reference compilation of official TIME annual winner labels, but direct receipt-backed body retrieval for TIME's retrospective/history pages was denied with HTTP 406 in this collection; the complete list is not independently body-verified here. The 2025 entry is supported by the reused direct TIME article capture.",
+  "limits": "The 2026 media-kit dates do not establish that a shortlist will be published then or that Mark Carney will be named. No inference of 2026 selection/absence."
+}

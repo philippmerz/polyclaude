@@ -1,10 +1,18 @@
 {
   "review_index": 436,
-  "updated_utc": "2026-10-20T03:54:09.842541+00:00",
-  "phase": "collector facts only; root source/identity verification and complete-rule/valuation or factual-exclusion decision pending",
+  "updated_utc": "2026-10-20T05:07:23.514584+00:00",
+  "phase": "incomplete436: full rule/source review saved; primary model and both-side economics pending",
   "source_paths": [
-    "work/0436_facts_0350.json"
+    "work/0436_facts_0350.json",
+    "work/0436_influence_facts_0500.json",
+    "work/0436_time_history_0500.json",
+    "work/0436_partial_closeout_0512.json"
   ],
   "facts_sha256": "f14d9160b55cd730f7b59e4b4848fcd3c7e4a6b0c5d47a177d733ead44d8b644",
-  "status_limit": "Not a completed evaluation; no probability or investment decision. Collector report is not independent root verification."
+  "status_limit": "No adopted probability, own-price review, valuation or decision; preserve unverified-source limits. Resume436 before437 only when authorized research resumes.",
+  "primary_partial": {
+    "path": "work/0436_partial_closeout_0512.json",
+    "sha256": "4ef3800c8ea1e7e7d3c85d4cb8dc39ed3c9cdd97670361181e5c8f709673d028",
+    "bytes": 3790
+  }
 }

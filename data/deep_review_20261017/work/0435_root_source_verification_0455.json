@@ -1,0 +1,23 @@
+{
+  "schema": "case_source_verification.v1",
+  "case": 435,
+  "allsevenrawgzip_verified": true,
+  "exactfullrule_identity_verified": true,
+  "gamma_closed_resolved_nonaccepting": true,
+  "receipt_paths": {
+    "gamma_market": "logs/deep_review_20261017/case435_closure_0450/gamma_market.receipt.json",
+    "clob_descriptor": "logs/deep_review_20261017/case435_closure_0450/clob_descriptor.receipt.json",
+    "chain_id": "logs/deep_review_20261017/case435_closure_0450/ctf/chain_id.receipt.json",
+    "block_number": "logs/deep_review_20261017/case435_closure_0450/ctf/block_number.receipt.json",
+    "payout_denominator": "logs/deep_review_20261017/case435_closure_0450/ctf/payout_denominator.receipt.json",
+    "payout_numerator_0": "logs/deep_review_20261017/case435_closure_0450/ctf/payout_numerator_0.receipt.json",
+    "payout_numerator_1": "logs/deep_review_20261017/case435_closure_0450/ctf/payout_numerator_1.receipt.json"
+  },
+  "ctf_scope": "Provider-results/read-onlyparamsmetadata verified as captures; actual input hashes require matching source bindings before relying on payout claims. Exclusion can rely on independentlyverified exactclosed/nonaccepting Gamma, not assumed calendar date.",
+  "collector_note": "Receiptfiles are in childdirectories, notallflatunder packetprivate_dir; use explicitrootpaths here. Blockhex5b677c7 means95844295; initial agent chat decimal95832007 was wrong, packet decimal correct.",
+  "ctf_request_bindings": {
+    "payout_denominator": [],
+    "payout_numerator_0": [],
+    "payout_numerator_1": []
+  }
+}

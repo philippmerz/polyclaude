@@ -1,0 +1,188 @@
+{
+  "review_index": 434,
+  "market_id": "5154842",
+  "condition_id": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+  "criteria_sha256": "08126e459a5f9814be1939abdd31ff3d5149fc015025fff4199d746c560a0006",
+  "status": "blocked_after_review",
+  "literal_analysis": "Inclusive35–59, firstpostNov11 16UTCNCEIpreliminary controls/earlierpreliminaryexcluded/laterrevisionsignored; nextpublicationpriormonthfallback/permanentcrediblealternative. Fullrule/sourceclock reviewed.",
+  "evidence": [
+    {
+      "url": "https://www.ncei.noaa.gov/access/monitoring/monthly-report/content/tornadoes/202609",
+      "observed_utc": "2026-10-20T04:25:57Z",
+      "finding": "Rootverifiedsevenraw/gzip pairs/readnarrative/chart/CSV/FAQ:57preliminary versus45confirmed; adapter65%whisker not a conversion.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_ncei_mapping_0458.json",
+        "sha256": "e53800307a168c423bb8c18c94d9f19b386ff5b32be95ee05351a8e445136edd"
+      }
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/monitoring-content/lib/reference/monthly-releases.json",
+      "observed_utc": "2026-10-20T04:49:02.990895Z",
+      "finding": "Rootverified/readarticle,JSandJSON:NationalNov9/GlobalNov12tentative, no tornado-specificscope; notproofOct11productdatewrong.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_release_facts_0450.json",
+        "sha256": "de8ef3e72f835457bf3a98c9ca98a57fff9491d8c8fec42c560d4f7238541495"
+      }
+    },
+    {
+      "url": "https://www.spc.noaa.gov/climo/reports/260930_rpts_torn.csv",
+      "observed_utc": "2026-10-20T04:49:29.422488Z",
+      "finding": "Rootverifiedall31dailybodies/receiptpairs;Sep-keyrows64vsNCEI57prelim, monthwindows/eventdedup/vintagebridge unresolved.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_september_crosscheck_0450.json",
+        "sha256": "d94b1cdd4f5f3f4379cd10a36680258fcb42e040acd6a96b70625c31eff743d7"
+      }
+    },
+    {
+      "url": "https://www.ncei.noaa.gov/access/monitoring/tornadoes/time-series/1/10/data.json",
+      "observed_utc": "2026-10-20T04:26:27.979849Z",
+      "finding": "Earlierrootverifiedhistorical/currentSPC/NWS/outlook inputs; Octoberreportrows andregionaltracks notsamefirstpublicationmetric.",
+      "source_unit": {
+        "path": "data/deep_review_20261017/work/0434_primary_partial_0459.json",
+        "sha256": "73ecad72e6d346abae9b567d8523b634d0e35e2cffd4314ce16c5c5e920202c9"
+      }
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "low": 0,
+    "high": 1,
+    "explicitly_unpriced": true,
+    "method": "Source/vintage/clockbridge not identified after rawsource/chart/cross-month reconciliation.",
+    "reasoning": "NCEI57prelim vs45confirmed vs64SPCSeptember-keyrows; October53regularrows not interchangeable. No calibratedconversion or firsteligible publication bridge, no fabricatedpoint."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0434_quote_0453.json",
+    "quote_file_sha256": "a1be8f69c476f563041b02a2b70095d9dbeb26c2c0614979a716c6aa841752e6",
+    "quote_capture_utc": "2026-10-20T04:50:29.409334+00:00",
+    "gamma_received_utc": "2026-10-20T04:50:29.132875+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 22.0,
+    "probability_reference_outcome": null,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "best_bid": 0.76,
+        "best_ask": 0.77,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792471801704",
+        "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+        "book_age_seconds_at_receipt": 27.57945489883423,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.85,
+            "fee": 0.04428,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.77
+              }
+            ],
+            "net": 3.89428
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 3.8,
+            "fee": 0.04561,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.76
+              }
+            ],
+            "net": 3.75439
+          }
+        },
+        "taker_cost_usd": 3.89428,
+        "break_even_before_carry": 0.778856,
+        "break_even_constant_carry": 0.7803376965964743,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "best_bid": 0.23,
+        "best_ask": 0.24,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792471801704",
+        "book_received_utc": "2026-10-20T04:50:29.283455+00:00",
+        "book_age_seconds_at_receipt": 27.57945489883423,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.2,
+            "fee": 0.04561,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.24
+              }
+            ],
+            "net": 1.2456099999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 1.1500000000000001,
+            "fee": 0.04428,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.23
+              }
+            ],
+            "net": 1.10572
+          }
+        },
+        "taker_cost_usd": 1.2456099999999999,
+        "break_even_before_carry": 0.24912199999999998,
+        "break_even_constant_carry": 0.24959592999412838,
+        "current_execution_authorization": false
+      }
+    },
+    "forecast_explicitly_unpriced": true,
+    "calculation_note": "Helperdummy.5 usedonlytoextract probability-independentfee/depthwalks; no .5forecast/EVadopted or stored.",
+    "standard10pp_reserve_break_even_note": "An eventualunconditionalpointforecast would need>sidebreak_even+.10beforecosts; thisis not a conditionalfillbound/authorization.",
+    "gamma_status": {
+      "id": "5154842",
+      "conditionId": "0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117",
+      "active": true,
+      "closed": false,
+      "acceptingOrders": true,
+      "umaResolutionStatus": null,
+      "feesEnabled": true,
+      "feeSchedule": {
+        "exponent": 1,
+        "rate": 0.05,
+        "takerOnly": true,
+        "rebateRate": 0.25
+      },
+      "orderMinSize": 5
+    }
+  },
+  "verdict": "BLOCKED_AFTER_REVIEW, case-specific/unpriced/not economicrejection, no financialaction/globalgoalblock.",
+  "reopen_condition": "Verified monthlymetric/vintage reconciliation and qualifyingpublicationclock, or directlyeligiblepostclockvalue; then fresh primaryforecast/bothsides/currentfullgates.",
+  "report_markdown": "# 0434 — US October tornadoes35–59: source-vintage gap remains\n\n**Blocked after substantive review; unpriced, not rejected or counted as a valuation.** Exact market5154842/CID`0x0b486755e550cade1cae8f605d91d0f0b0c0a9a9a638cf6fea358726ac9f9117`, criteriaSHA`08126e459a5f9814be1939abdd31ff3d5149fc015025fff4199d746c560a0006`. No trade or numerical prior.\n\nThe complete frozen rule requires35–59inclusive on the NCEI U.S.Tornadoes Time Series forOctober. Despite “finaldataset” language, it explicitly accepts the first relevant **post-Nov11 2026 11AMET** preliminary value and ignores later revisions; preliminary values before that time do not resolve. Delay/temporary-outage provisions wait until available, then use the most recent prior month if still unavailable at the next scheduled publication; permanent unavailability permits a credible alternative. Nov11 is EST,16UTC. The general National calendar is not a demonstrated tornado-product calendar.\n\n## What the source investigation established\n\n- Root hash-verified/read the NCEI September narrative, trendJSON, CSV and chart adapter. The Oct14 narrative/countsCSV/time-series agree on57preliminary reports; EF ratings separately total45confirmed. The chart's65–100%preliminary whisker is display logic, not a conversion or forecast probability.\n- Root verified all31SPC regular daily CSV captures forAug31–Sep30: September-key sum64rows, Aug31zero, no identical complete rows within files. This differs from NCEI57 by7. Windows start12Z; Sep30has2next-UTC-day Kansas reports that are stillSep30local. Event deduplication, month assignment and publication vintage remain unresolved;64is not a proven distinct-tornado total. A one-month57/64ratio is not a calibrated conversion forOctober or first-publication revisions.\n- Existing October files contain53interior reportrows, plus the dated boundary observations. Multiple entries describe the same track's start/end/damage. Regional NWS surveys identify events but do not supply a national first-vintage crosswalk; some listings are preliminary or return unrelated wind statements. Do not substitute those rows or a regional sum for the criterion.\n- NCEI's current calendar explicitly lists OctoberNationalNov9 andGlobalNov12, both11AMEST, and calls dates tentative. Its loaded article/JS/JSON has no separate tornado-product scope. September's current narrative is labeledOct14 versusNationalOct8/GlobalOct9 in the calendar; this does not establish the first time-series-count publication or proveOctober's frozenNov11 date wrong.\n- HistoricalOctober final/current-vintage counts are useful context (1996–2025:5of30inbracket, mean60.67; last10:2of10). They do not calibrate the future first-post-publication preliminary value conditional on this month's reports. SPC's Oct19day4–8 outlook allows isolated severe weather throughOct27, without a severe-probability area; it neither says zero tornadoes nor coversOct28–31.\n\n## Named gap and decision\n\nThe load-bearing gap is the bridge from observed regular reports/surveyed events to the **first eligible post-clock NCEI monthly count**, including vintage and month-boundary treatment. The unresolved publication clock/fallback reinforces the gap. Forecasting remaining weather is ordinary uncertainty; that alone would not block this case. Here, substituting the available final-history frequency,53reports,45confirmed or an arbitrary65%deduplication rule would price different variables. Root declines to manufacture a point probability or an unmeasured publication-mixture weight. No global-method or goal block follows; continue435 after this record is verified.\n\n## Both-side conditional economics\n\nExact fresh public Gamma/CLOB/rules/tokens/fee bindings verified at04:50:29UTC; open/accepting, no UMAstatus, structured rate.05/exponent1. Books27.58seconds old at receipt, not current execution authority. Five shares each satisfy5share and1USDgross minima. YES ask77c:3.85gross+.04428fee=3.89428, breakevenP(YES)77.8856%; NO ask24c:1.20+.04561=1.24561, breakevenP(NO)24.9122%. Immediate fee-net bid exits:3.75439/1.10572. With an eventual10ppreserve, respective point-probability thresholds would exceed87.8856%/34.9122% before carry; these are conditions, **not adopted probabilities or a flat edge rule**.\n\nCurrent fee-free maker touches76cYES/23cNO still need a justified probability conditional on fill, source updates and publication risk; cheap distance alone cannot supply it. No bid is proposed. Dated Aave3.2035%variableAPY held constant22days raises taker breakevens to78.0338%/24.9596%; actual delay/funding/gas/ops are not free. Existing04:35portfolio has3LIVE0bids/6.50 and Kimi10YES/OR5NO/Michigan5NO/Messi/wholeClarity; source/venue risk and opportunity cost matter. Preservecash/Aave/current commitments rather than allocate to an unpriced claim.\n\n**Reopen:** obtain a documented/current first-publication count recipe or multiple auditable source-vintage reconciliations linking the exact monthly series to observed inputs, plus qualifying product publication timing or a directly eligible published value. Then forecast/price both sides anew; existing costs are dated observations. No automatic retry, trade or Telegram.\n\n[Primary partial/source index](../../../data/deep_review_20261017/work/0434_primary_partial_0459.json) · [NCEI adapter facts](../../../data/deep_review_20261017/work/0434_ncei_mapping_0458.json) · [Calendar facts](../../../data/deep_review_20261017/work/0434_release_facts_0450.json) · [September crosscheck](../../../data/deep_review_20261017/work/0434_september_crosscheck_0450.json) · [Unpriced cost walks](../../../data/deep_review_20261017/work/0434_unpriced_economics_0454.json).\n"
+}

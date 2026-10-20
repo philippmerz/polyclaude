@@ -1,0 +1,51 @@
+{
+  "schema": "primary_research_partial.v1",
+  "review_index": 436,
+  "saved_utc": "2026-10-20T05:07:23.514584+00:00",
+  "status": "incomplete_unpriced_no_decision",
+  "frozen_identity": {
+    "id": "4798151",
+    "conditionId": "0x5ddf1776820e1f001635f0a48c280bffdd5eb9b526313418aba590f2924ab5e6",
+    "question": "Will Mark Carney be TIME Person of the Year 2026?",
+    "slug": "will-mark-carney-be-time-person-of-the-year-2026",
+    "outcomes": "[\"Yes\", \"No\"]",
+    "clobTokenIds": "[\"19801257871010915928461715426701726678695986988088749487395531360119171753647\", \"53391694501701903402193426226407123831418161452850630232271922772235303076714\"]"
+  },
+  "source_units": [
+    {
+      "path": "work/0436_facts_0350.json",
+      "sha256": "f14d9160b55cd730f7b59e4b4848fcd3c7e4a6b0c5d47a177d733ead44d8b644",
+      "bytes": 4962
+    },
+    {
+      "path": "work/0436_influence_facts_0500.json",
+      "sha256": "289a3ff41f7519c4288aa0806c5a32a3e5ab8e07134a21192c8090ba2d161d90",
+      "bytes": 4892
+    },
+    {
+      "path": "work/0436_time_history_0500.json",
+      "sha256": "54e1ed0653637949e0ca2ac30e4567aa5b7db77c54056edc5cbb1fc80aaf5689",
+      "bytes": 4563
+    }
+  ],
+  "primary_review_already_performed": [
+    "Full frozen rule read: explicit Carney naming qualifies; official group/concept cover qualifies a directly associated pictured person. Generic association and TIME100 do not suffice; multiple named persons can each qualify.",
+    "Literal no-announcement cutoff June30 2027 23:59ET (July1 03:59UTC), not Gamma Dec31 metadata. Normal December selection versus delayed-settlement tail needs separate modeling.",
+    "Existing five TIME/PM raw+gzip pairs verified/read. Editors choose influence for good or ill, not popularity, merit or reader poll. Private editorial selection remains uncertain.",
+    "Influence supplement: all four HTTP200 plus one406 raw/gzip pairs verified. WEF actual Jan20 speech read from main text; first article element is only a related card. Speech/government projections are claims/targets, not independently measured results.",
+    "Oct1 Pacific Link is proposal/designation/review with conditions targeted Sep2027; Oct2 AI Council advisory launch is not realized growth or a POY cover. Oct21–24 Türkiye visit is scheduled, not completed.",
+    "Current official media-kit 2026 section read: main POY digital Dec10; category announcements Dec7–9; issue12/28, adclose11/27, onsale12/18. Dates tentative/editorial, not shortlist or selection evidence."
+  ],
+  "excluded_from_probability_evidence": [
+    "Collector2000–2024 winner list lacks independently verified bodies: do not turn into a 26-year frequency/base rate.",
+    "TIME100 snippet and Jan23 TIME search result are unverified body leads; TIME100 is separate from POY.",
+    "HTTP406/empty body is unknown, not evidence of absent Carney coverage or absent selection."
+  ],
+  "remaining_primary_work": [
+    "Write defensible contract-specific probability/range including explicit naming and associated-cover paths, editorial competition, delay and uncertainty. No numerical forecast adopted or saved.",
+    "Then capture exact fresh public identity/rules/fees/books and compare both sides, ticket minima, Aave/cash, conditional maker fills, carry and joint portfolio risk.",
+    "Record/verify finished case before starting437. All source snapshots are dated observations, not current execution authority."
+  ],
+  "boundary": "Scheduled run closes after required checklist verification; no further research case, timer, idle follow-up or goal lifecycle mutation. This partial preserves earlier authorized work without claiming completion.",
+  "financial_asof": "04:35 UTC producer/account/source; no extra financial read, CSV row or trade during partial closeout."
+}

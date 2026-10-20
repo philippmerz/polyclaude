@@ -1,0 +1,12 @@
+{
+  "schema": "offline_rpc_binding_verification.v1",
+  "case": 435,
+  "source": "data/deep_review_20261017/work/0435_rpc_bindings_0457.json",
+  "source_sha256": "0965d4cc1fd338407c6aa6fb50eba442bec41517bffcbefcc4ae7cff43da3d20",
+  "verified": [
+    "payout_denominator",
+    "payout_numerator_0",
+    "payout_numerator_1"
+  ],
+  "result": "Allthree exactCTFselector/condition/index/to/block argumentpreimages reconstruct the capture hashes; provider-results decode denominator1/Over1/Under0. Hashes cover canonicalargumentbundle, not completewireJSONRPC. Originalclosed-routeexclusion unchanged; no newnetwork/valuation."
+}

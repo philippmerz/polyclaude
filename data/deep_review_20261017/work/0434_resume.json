@@ -1,11 +1,16 @@
 {
   "review_index": 434,
-  "updated_utc": "2026-10-20T04:32:10.611339+00:00",
-  "phase": "incomplete434 preserved at bounded scheduled closeout; mapping collector completed but root verification pending",
+  "updated_utc": "2026-10-20T04:53:39.107641+00:00",
+  "phase": "completed case-specific blocked_after_review; source mapping/calendar verified, no probability",
   "source_paths": [
-    "work/0434_partial_closeout_0436.json"
+    "evaluations/0434.md",
+    "work/0434_erratum_0454.json"
   ],
   "facts_sha256": "bf081575b5a7ff1f63699e58f6d1a9bcaaea25619c1c7a34012077cf44494fcf",
-  "status_limit": "Not a completed evaluation; no probability or investment decision. Collector report is not independent root verification.",
-  "primary_partial_sha256": "4221b8111e3099d26469304d4c3c181cacf05342444aa85e0ae24945fc5dc16a"
+  "status_limit": "Completed substantive source review, unpriced/not counted as valuation; no global goal block. Use canonicalrecord/erratum, not old incompletecollector phase.",
+  "primary_partial_sha256": "4221b8111e3099d26469304d4c3c181cacf05342444aa85e0ae24945fc5dc16a",
+  "status": "blocked_after_review",
+  "report": "evaluations/0434.md",
+  "report_sha256": "badf86a0e8b60de4c2ea454087544b85d3d867c0cdcf1f4cb23351c67b163add",
+  "pointer_reviewed_utc": "2026-10-20T05:12:25.342521+00:00"
 }
