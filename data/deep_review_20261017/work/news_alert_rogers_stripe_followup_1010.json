@@ -1,0 +1,56 @@
+{
+  "schema": "news_alert_followup.facts.v1",
+  "captured_utc": "2026-10-20T10:06Z",
+  "alerts": {
+    "american_prospect": {
+      "alert_id": "306853ae7b61f9ebfde6893964b2e3fb8086eedb",
+      "alert_utc": "2026-10-20T09:46:52Z",
+      "title": "Michigan’s Mike Rogers Got Big Payout Before Controversial Cybersecurity Firm Went Bankrupt",
+      "canonical_url": "https://prospect.org/2026/10/20/michigan-mike-rogers-cybersecurity-firm-ironnet-bankrupt-keith-alexander-andre-pienaar/",
+      "publisher_date": "2026-10-20 (Prospect RSS: Tue, 20 Oct 2026 09:30:00 +0000)",
+      "reported_claims": [
+        "American Prospect/CMD says filings show IronNet paid former Rep. Mike Rogers nearly $724,887 before its 2023 Chapter 11; story rounds to $725,000.",
+        "It reports a six-figure secured note, a 2023 financial-disclosure value in the $100,000–$1,000,000 range for IronNet capital gains, and a $557,883 secured claim still reflected in a Sep. 22, 2026 court document despite disappearing from a July 2026 statement."
+      ],
+      "primary_checks": [
+        {
+          "fact": "IronNet's Dec. 2022 8-K lists Michael J. Rogers among eight lenders to $6.9m aggregate secured notes bearing 13.8% annual interest; does not give his individual principal.",
+          "url": "https://www.sec.gov/Archives/edgar/data/1777946/000119312522297601/d413219d8k.htm",
+          "capture": "logs/rogers_primary_1008/sec_8k.receipt.json",
+          "raw_sha256": "19133d83dc6ceca1d468f7ac91001dd79751a64def186483e06760af3ee58792"
+        },
+        {
+          "fact": "Stretto-hosted IronNet bankruptcy Doc. 142 (filed 2023-11-17) contains a proof of claim naming Rogers, $557,883.35, debt date 2022-12-14, and secured-note/UCC-lien basis. This verifies the filed claim then, not that the same balance remained outstanding in Sep. 2026.",
+          "url": "https://cases.stretto.com/public/X295/12578/PLEADINGS/1257811172380000000045.pdf",
+          "capture": "logs/rogers_primary_docs_1010/claim_doc142.receipt.json",
+          "raw_sha256": "975eb0aee9ea26d78f78234e94139eb760fbc89217422d1e07b2e12a0600ccb2"
+        },
+        {
+          "fact": "Official House Clerk 2023 disclosure PDF located and captured (HTTP 200), but is image-only to available local text extraction; income/capital-gain bracket not independently verified here.",
+          "url": "https://disclosures-clerk.house.gov/public_disc/financial-pdfs/2023/8220490.pdf",
+          "capture": "logs/rogers_primary_docs_1010/house_2023.receipt.json",
+          "raw_sha256": "ad682bc6521f17b44f507b404b99b3d6939c30a0e1acd5bddce1d84d12c0bb94"
+        }
+      ],
+      "limits": "The payment total, 2026 statement comparison, and alleged current claim status remain Prospect/CMD reporting in this capture; public Stretto portal did not expose a current claim row. Article is about financial ties/claim status, not a new IronNet bankruptcy or a new Michigan poll. Article body HTTP 200; logs/american_prospect_article_1007/article.receipt.json; raw SHA-256 7b4e480fc2377b215e22894defedf039585e972ea4391fb513bfa96d89eee02f."
+    },
+    "startupfortune": {
+      "alert_id": "24ba12984cf1a575672481abeb51820d77179878",
+      "alert_utc": "2026-10-20T09:40:08Z",
+      "title": "Stripe buys OpenRouter for 7.5 billion and the pipe stops being neutral",
+      "canonical_url": "https://startupfortune.com/stripe-agrees-to-buy-ai-model-router-openrouter-for-75-billion/",
+      "alert_body_binding": "Not conclusively established. The public Google News alert link resolved only to Google's consent page in this bounded check. The captured StartupFortune page is related context: same publisher, topic, and $7.5bn claim, but its captured page title is 'Stripe Agrees to Buy AI Model Router OpenRouter for $7.5 Billion', which does not contain the alert's 'pipe stops being neutral' wording. Do not treat it as verified exact alert body.",
+      "publisher_date": "Metadata 2026-10-18T19:30:48Z; page display Oct. 19, 2026 1:00 AM",
+      "reported_claim": "StartupFortune says Stripe agreed to acquire OpenRouter for about $7.5bn, attributing the figure to NYT and saying Bloomberg/Axios corroborated; article notes estimates above $7bn and $8bn. Its neutrality language is editorial framing, not a measured event.",
+      "capture": "logs/deep_review_20261017/delayed1959_openrouter_0345/startupfortune_exact.receipt.json",
+      "raw_sha256": "4f28368f8496bd6e9eb114b5c75d190b4c2588a28cd404e71794bd04ff820af9",
+      "official_context": {
+        "url": "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+        "capture": "logs/deep_review_20261017/tick1559_root_sources/stripe_announcement.receipt.json",
+        "raw_sha256": "71441625548a1850aabe371e9e647a2b4758801b14aaa864ed996c2e2766d148",
+      "fact": "Stripe's Aug. 19 announcement says it agreed to acquire OpenRouter; no price or completion reported. The exact alert body remains unresolved; the related StartupFortune page is not evidence of a newly completed acquisition."
+      },
+      "limits": "The $7.5bn amount and completion status were not verified in an official company filing/announcement in the available captures; price is attributed secondary reporting."
+    }
+  }
+}

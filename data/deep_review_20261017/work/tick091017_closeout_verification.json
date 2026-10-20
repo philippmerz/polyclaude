@@ -1,0 +1,33 @@
+{
+  "reviewed_utc": "2026-10-20T10:20:44.724512+00:00",
+  "final_news_log_sha256": "38d350e6d48a1e8d075af3a31197c93153598f70a7242e6569b2e3897f955b40",
+  "after_inclusive_prior_review": "2026-10-20T09:57:44Z",
+  "delta_rows": [
+    {
+      "line": 1210,
+      "id": "2fc7fa7cdb47a36eef426dbccb6c4d09c0926d38",
+      "ts": "2026-10-20T10:14:21Z",
+      "line_sha256": "cf6f030243f27086a25c00d035d87b5594a534bf2189780de60786d44dd2ea2b",
+      "title": "Evita Duffy-Alfonso analyzes Michigan Senate race and Gen Z voter trends - Fox News",
+      "impacts": []
+    }
+  ],
+  "disk_free_mib_now": 205.0,
+  "numerical_priors_unchanged": true,
+  "research_checkpoint_sha256": "ed6a23788fef065f7518fbb8845e2e8611d0fede9c055cf305a5a39f21ce9062",
+  "no_goal_mutation_or_idle_continuation": true,
+  "classifier_impacts_empty": true,
+  "MI_2fc7_source_followup": "Bounded source attempt completed. Exactbodyunknown/Googleconsent; relatedAug15poll not verified as newalert content. Rootretain5NO/noadd/numericsunchanged; no zero-impact assertion. Existing14check/materialsource trigger for changed evidence.",
+  "fox_receipts_root_verified": [
+    {
+      "receipt": "logs/fox_michigan_context_1015/fox_aug15_context.receipt.json",
+      "raw_sha256": "780143b936bbd044fbc2105e406ae25d714abdccd23242e1e6589eb50d175092",
+      "received_utc": "2026-10-20T10:19:04.582347Z"
+    },
+    {
+      "receipt": "logs/fox_michigan_alert_1014/alert_link.receipt.json",
+      "raw_sha256": "25d3e6b411265ff3897511a5f4ad08ea26151ddf370a67c7786be0f2c7084ded",
+      "received_utc": "2026-10-20T10:18:46.037574Z"
+    }
+  ]
+}

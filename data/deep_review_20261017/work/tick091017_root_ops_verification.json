@@ -1,0 +1,61 @@
+{
+  "reviewed_utc": "2026-10-20T10:13:51.741114Z",
+  "verified_ops_receipts": [
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/crux.receipt.json",
+      "sha256": "6fb0c490fc6623a7d3c68fa28ba05bbe9303a0c587b39f86cbd53d5f55756551",
+      "received_utc": "2026-10-20T09:57:47.880669Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/decisions_pending.receipt.json",
+      "sha256": "f309c0b049b8b0f3c616520ad29986bfe1aa78a34d000ce31d166dcabc96e090",
+      "received_utc": "2026-10-20T09:57:51.627699Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/marginal_apy.receipt.json",
+      "sha256": "ea565dd245f126d62de7edbfca5eb6514073b386e5c6252ba8de6f397b5ae478",
+      "received_utc": "2026-10-20T09:57:50.977082Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/ostium_diff.receipt.json",
+      "sha256": "0f6033c9e2c9ebd2a93147d8abb5ad4e716dd562b7195b97aedd8ae3ae0d466d",
+      "received_utc": "2026-10-20T09:57:47.296501Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/portfolio_kelly_constrained.receipt.json",
+      "sha256": "2b2844d96c26fb0caead6ce0120d798950217b7fd5c8b581a1be0b2814c87531",
+      "received_utc": "2026-10-20T09:57:52.666654Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/position_audit_fix.receipt.json",
+      "sha256": "13cff92f43149cfacdc86b24a80722d0a04576afcea3e81ed3e1ae23d14839a7",
+      "received_utc": "2026-10-20T09:57:49.874827Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/uma.receipt.json",
+      "sha256": "f12fbd4584f2ff0ecc6d679dc31a3b81eed362d2250f538d78ab2aac86149f0e",
+      "received_utc": "2026-10-20T09:57:44.392821Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/cli/watchlist_hits_autorevet.receipt.json",
+      "sha256": "6fb0c490fc6623a7d3c68fa28ba05bbe9303a0c587b39f86cbd53d5f55756551",
+      "received_utc": "2026-10-20T09:57:51.549587Z"
+    },
+    {
+      "receipt": "logs/tick20261020T0957_ops/ostium_status/ostium_client_status.receipt.json",
+      "sha256": "a32b0f10cf725a59b58cef8a9101969c2d4e3ffe6e9067e73b17c6663ea59d9e",
+      "received_utc": "2026-10-20T09:58:15.416189Z"
+    },
+    {
+      "receipt": "logs/tick20261020T1000_retired_audit/cli/position_state_audit_report_only.receipt.json",
+      "sha256": "58269c3cacb547d57dedf51601f07f15db75820e38b1ee417a166703c0af7b44",
+      "received_utc": "2026-10-20T10:03:01.606564Z"
+    }
+  ],
+  "discovery_all_five_linked_artifact_hashes_verified": true,
+  "tests": {
+    "audit_unit": 31,
+    "performance_chart": 10
+  },
+  "interpretation": "Original audit false orphan resolved by complete retirement-marker guard; null-note incomplete markers also stay auditable. Original UMA coverage_limit is corrected by ops_followup: all45rows refreshed/43unique IDs. No financial mutation."
+}

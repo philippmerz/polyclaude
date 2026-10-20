@@ -1,0 +1,19 @@
+{
+  "schema": "fox_michigan_alert_facts.v1",
+  "alert_id": "2fc7fa7cdb47a36eef426dbccb6c4d09c0926d38",
+  "alert_utc": "2026-10-20T10:14:21Z",
+  "alert_title": "Evita Duffy-Alfonso analyzes Michigan Senate race and Gen Z voter trends - Fox News",
+  "alert_binding": "Exact publisher body not located. The public Google News link redirected to consent.google.com; Fox exact-title searches returned no result. Do not equate the captured related Fox item below with this alert.",
+  "related_publisher_item": {
+    "url": "https://www.foxnews.com/politics/dsa-brand-trial-el-sayed-struggles-where-dems-can-least-afford",
+    "title": "DSA brand on trial as El-Sayed struggles where Dems can least afford it",
+    "published": "2026-08-15T06:00:13-04:00",
+    "embedded_video": "Poll shows Mike Rogers has edge in Michigan Senate race; Fox page describes Evita Duffy-Alfonso discussing latest poll, candidate concerns and inflation.",
+    "poll_content": "Fox article says registered voters surveyed Aug. 6–10 gave Rogers 51% and El-Sayed 47%, within the margin of sampling error. The article does not state sample size or numerical MOE in its text. This is an August poll, not verified as the Oct. 20 alert’s content.",
+    "receipt": "logs/fox_michigan_context_1015/fox_aug15_context.receipt.json",
+    "raw_sha256": "780143b936bbd044fbc2105e406ae25d714abdccd23242e1e6589eb50d175092"
+  },
+  "finding": "No new poll, field dates, sample, topline, ballot test, or turnout measure is verified for the exact alert because its publisher body remains unresolved. The related August Fox page contains older poll measurements; classifier-empty status was not used as evidence.",
+  "alert_link_capture": "logs/fox_michigan_alert_1014/alert_link.receipt.json",
+  "alert_link_result": "HTTP 200 consent.google.com/ml page; raw SHA-256 25d3e6b411265ff3897511a5f4ad08ea26151ddf370a67c7786be0f2c7084ded"
+}

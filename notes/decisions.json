@@ -1,5 +1,5 @@
 {
-  "next_id": 246,
+  "next_id": 247,
   "decisions": [
     {
       "id": 1,
@@ -5379,6 +5379,26 @@
       "calibration_delta": "Unexecuted forecast; operationalclosure is not binary-outcome calibration or a profitable trade. DatedNO76.71/selected59.71 retained as research.",
       "lesson": "Review actual scoped-feed warmup sources before posting. Research-only suppression computed before candidate exposure does not clear its catalysts. New unassessed relevant lead warrants cancel-first.",
       "resolved_at": "2026-10-20T09:47:42Z"
+    },
+    {
+      "id": 246,
+      "timestamp": "2026-10-20T10:09:29Z",
+      "type": "scaffolding",
+      "thesis": "The orphan-prior audit ignored complete retirement metadata and repeatedly flagged the zero-filled, canceled Anthropic14 research prior. Honor only an explicit true retirement flag with an aware ISO date and nonblank reason; preserve numerical history and keep incomplete markers subject to live pending-BUY reconciliation.",
+      "confidence": "high",
+      "prediction": "Complete retirement metadata avoids a false orphan; incomplete markers and active unmatched priors still flag. Focused tests and a report-only audit verify this without changing any prior or financial position.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-20",
+      "tags": [
+        "audit",
+        "lifecycle",
+        "evidence"
+      ],
+      "slug": null,
+      "outcome": "Implemented complete retirement-marker validation; focused cases pass for complete, incomplete and null-note records, and the report-only audit is clean. Historical numerical forecasts and financial positions are unchanged.",
+      "calibration_delta": "Not a probability forecast; deterministic audit behavior verified.",
+      "lesson": "Read lifecycle metadata before declaring a prior orphan. Preserve dated forecasts after an unfilled cancellation; incomplete retirement metadata must still receive pending-inventory checks.",
+      "resolved_at": "2026-10-20T10:09:50Z"
     }
   ]
 }

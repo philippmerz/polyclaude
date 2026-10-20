@@ -36,6 +36,43 @@ def test_no_pending_order_retains_orphan(monkeypatch):
     ]
 
 
+def test_complete_explicit_retirement_preserves_prior_without_orphan_warning(monkeypatch):
+    retired = {"swift-album": {
+        **PRIOR["swift-album"],
+        "p_yes": 0.42,
+        "retired": True,
+        "retired_utc": "2026-10-20T09:47:42Z",
+        "retired_reason": "Canceled with zero fills; no holding.",
+    }}
+    monkeypatch.setattr(
+        enter, "_fetch_open_buy_commitments",
+        lambda: pytest.fail("a fully retired historical prior needs no inventory read"),
+    )
+    assert audit.orphan_prior_issues(retired, set(), set()) == []
+
+
+@pytest.mark.parametrize("retirement", [
+    {"retired": True, "retired_reason": "closed"},
+    {"retired": True, "retired_utc": "not-a-date", "retired_reason": "closed"},
+    {"retired": True, "retired_utc": "2026-10-20T09:47:42", "retired_reason": "closed"},
+    {"retired": True, "retired_utc": "2026-10-20T09:47:42Z", "retired_reason": "  "},
+    {"retired": False, "retired_utc": "2026-10-20T09:47:42Z", "retired_reason": "closed"},
+])
+def test_incomplete_retirement_metadata_does_not_hide_orphan(monkeypatch, retirement):
+    prior = {"swift-album": {**PRIOR["swift-album"], **retirement}}
+    monkeypatch.setattr(enter, "_fetch_open_buy_commitments", lambda: [])
+    assert any("PRIOR orphan" in issue
+               for issue in audit.orphan_prior_issues(prior, set(), set()))
+
+
+@pytest.mark.parametrize("retirement", [{}, {"retired": True}])
+def test_null_note_does_not_abort_unretired_or_incomplete_prior(monkeypatch, retirement):
+    prior = {"swift-album": {**PRIOR["swift-album"], "note": None, **retirement}}
+    monkeypatch.setattr(enter, "_fetch_open_buy_commitments", lambda: [])
+    assert any("PRIOR orphan" in issue
+               for issue in audit.orphan_prior_issues(prior, set(), set()))
+
+
 @pytest.mark.parametrize("bad_value", [True, "not-a-date", "2026-02-30"])
 def test_criteria_read_bad_metadata_is_unknown_not_comparable(bad_value):
     date, issue = audit._criteria_read_date(bad_value)

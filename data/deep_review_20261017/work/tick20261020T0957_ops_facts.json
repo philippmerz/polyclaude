@@ -1,0 +1,178 @@
+{
+  "checked_at_utc": "2026-10-20T09:58:52.773727+00:00",
+  "captures": {
+    "private_dir": "logs/tick20261020T0957_ops",
+    "representation": "CLI/SDK result serialization, not raw HTTP",
+    "all_receipts_written_before_output_parse": true,
+    "cli_receipts": {
+      "uma": {
+        "exit": 0,
+        "sha256": "f12fbd4584f2ff0ecc6d679dc31a3b81eed362d2250f538d78ab2aac86149f0e"
+      },
+      "ostium_diff": {
+        "exit": 0,
+        "sha256": "0f6033c9e2c9ebd2a93147d8abb5ad4e716dd562b7195b97aedd8ae3ae0d466d"
+      },
+      "crux_quiet": {
+        "exit": 0,
+        "sha256": "6fb0c490fc6623a7d3c68fa28ba05bbe9303a0c587b39f86cbd53d5f55756551"
+      },
+      "position_audit_fix": {
+        "exit": 1,
+        "sha256": "13cff92f43149cfacdc86b24a80722d0a04576afcea3e81ed3e1ae23d14839a7"
+      },
+      "marginal_apy": {
+        "exit": 0,
+        "sha256": "ea565dd245f126d62de7edbfca5eb6514073b386e5c6252ba8de6f397b5ae478"
+      },
+      "watchlist_hits_only_auto_revet_max1": {
+        "exit": 0,
+        "sha256": "6fb0c490fc6623a7d3c68fa28ba05bbe9303a0c587b39f86cbd53d5f55756551"
+      },
+      "decisions_pending": {
+        "exit": 0,
+        "sha256": "f309c0b049b8b0f3c616520ad29986bfe1aa78a34d000ce31d166dcabc96e090"
+      },
+      "portfolio_kelly_constrained": {
+        "exit": 0,
+        "sha256": "2b2844d96c26fb0caead6ce0120d798950217b7fd5c8b581a1be0b2814c87531"
+      },
+      "ostium_client_status": {
+        "exit": 0,
+        "sha256": "a32b0f10cf725a59b58cef8a9101969c2d4e3ffe6e9067e73b17c6663ea59d9e"
+      }
+    }
+  },
+  "ops": {
+    "uma": {
+      "alerts": 0,
+      "checked": 43,
+      "tracked": 45,
+      "gamma_refreshed": 43,
+      "positions_fetch_ok": true,
+      "coverage_limit": "Corrected root interpretation: all45slug rows refreshed;43unique Gamma market IDs, including three legacy aliases for ID1919425. See ops_followup."
+    },
+    "ostium": {
+      "diff_alerts": 0,
+      "current_count": 0,
+      "prior_count": 0,
+      "explicit_status": "open trades 0; active limits 0; status CLI succeeded"
+    },
+    "crux": {
+      "uncovered_positions": 0
+    },
+    "position_state_audit": {
+      "routine_fix": "snapshot refreshed; 7 indexed + 1 deindexed claim row; 0 expired acked holds pruned",
+      "judgment_issue": "one orphan prior/no live position/no closure note; retained and reported, not auto-removed",
+      "exit_code": 1
+    },
+    "marginal_apy": {
+      "hurdle_pct": 3.2,
+      "flagged": 0,
+      "drawdowns": 0,
+      "hold_rows": 4,
+      "protected_groups": 3,
+      "group_issues": 0,
+      "hurdle_cache_fetched_utc": "2026-10-19T18:02:51.823060+00:00",
+      "cache_age_hours_at_check": 15.93,
+      "cache_validity_limit_hours": 24,
+      "limit": "cached rate/status, no fresh rate request; cache labels supply_status live"
+    },
+    "watchlist": {
+      "hits": 0,
+      "auto_revet_spawned": 0,
+      "note": "hits-only output empty; no project-crypto trigger to revet"
+    },
+    "decisions_pending": {
+      "overdue": 0
+    },
+    "portfolio_kelly": {
+      "rows": 6,
+      "protected_groups": 3,
+      "bankroll_cache_usd": 194.91,
+      "bankroll_cache_age_hours": 0,
+      "cost_usd": 35.68,
+      "kelly_optimal_usd": 160.82,
+      "constrained": true,
+      "interpretation": "read-only sizing output; not a selection or action"
+    },
+    "weekly_monthly": {
+      "last_check_as_of_context": "2026-10-16",
+      "weekly_next_due": "2026-10-23",
+      "monthly_next_due": "2026-11-12",
+      "methodology_review": "concluded; no full journal loaded"
+    },
+    "host": {
+      "disk_free_mib": 221,
+      "disk_used_pct": 99,
+      "memory_available_mib": 1024
+    }
+  },
+  "daemons": [
+    {
+      "name": "news_watcher",
+      "pid": 148881,
+      "count": 1,
+      "executable": "python3.11",
+      "argv_python": "/.venv/bin/python",
+      "script": "scripts/news_watcher.py start",
+      "started_utc": "2026-10-19T05:28:37.310000+00:00",
+      "script_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+      "start_after_script_mtime": true,
+      "configured_pid_matches": true,
+      "state_mtime_utc": "2026-10-20T09:57:49.812525+00:00",
+      "log_mtime_utc": "2026-10-20T09:57:49.824524+00:00"
+    },
+    {
+      "name": "heartbeat_watch",
+      "pid": 450,
+      "count": 1,
+      "executable": "python3.11",
+      "argv_python": "/.venv/bin/python",
+      "script": "scripts/heartbeat_watch.py start",
+      "started_utc": "2026-10-18T09:33:44.960000+00:00",
+      "script_mtime_utc": "2026-10-02T14:31:39.989785+00:00",
+      "start_after_script_mtime": true,
+      "configured_pid_matches": true,
+      "state_mtime_utc": "2026-10-20T09:34:50.099488+00:00",
+      "log_mtime_utc": "2026-10-20T09:34:49.779489+00:00"
+    },
+    {
+      "name": "telegram_listener",
+      "pid": 451,
+      "count": 1,
+      "executable": "python3.11",
+      "argv_python": "/.venv/bin/python",
+      "script": "scripts/telegram_listener.py start",
+      "started_utc": "2026-10-18T09:33:44.990000+00:00",
+      "script_mtime_utc": "2026-09-10T18:34:57.001351+00:00",
+      "start_after_script_mtime": true,
+      "configured_pid_matches": true,
+      "state_mtime_utc": "2026-10-19T10:42:04.378744+00:00",
+      "log_mtime_utc": null
+    },
+    {
+      "name": "opportunity_watch",
+      "pid": 425,
+      "count": 1,
+      "executable": "python3.11",
+      "argv_python": "/.venv/bin/python3",
+      "script": "scripts/opportunity_watch.py start",
+      "started_utc": "2026-10-18T09:33:44.720000+00:00",
+      "script_mtime_utc": "2026-09-29T10:07:53.974910+00:00",
+      "start_after_script_mtime": true,
+      "configured_pid_matches": true,
+      "state_mtime_utc": "2026-10-20T09:58:02.608498+00:00",
+      "log_mtime_utc": null
+    }
+  ],
+  "limits": [
+    "State files are private; summary stores only timestamps and sanitized counts.",
+    "Daemon process identity and PID/start metadata are a point-in-time snapshot.",
+    "UMA43uniqueGammaIDs/45slugrows; all45rows refreshed. Raw counts are preserved; previous coverage-gap interpretation corrected.",
+    "Position audit surfaced a judgment item; no priors were changed.",
+    "CLI capture hashes bind supplied CLI serialization, not wire bytes."
+  ],
+  "actions": "No daemon restart, model, trade, finance CSV, prior deletion, Telegram, or research-case work.",
+  "root_correction_utc": "2026-10-20T10:15:36.483984+00:00"
+}

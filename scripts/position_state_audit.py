@@ -458,6 +458,28 @@ def orphan_prior_issues(priors: dict, tracked_slugs: set[str],
         if any(key in slug or slug in key for slug in tracked_slugs):
             continue
         note = prior.get("note", "") if isinstance(prior, dict) else ""
+        if not isinstance(note, str):
+            note = ""
+        # Preserve dated historical priors after an explicit lifecycle close.
+        # A bare boolean is insufficient: require a timezone-aware ISO timestamp
+        # and a reason so malformed/incomplete retirement metadata still gets
+        # the ordinary exact pending-BUY check.
+        retired = False
+        if isinstance(prior, dict) and prior.get("retired") is True:
+            retired_at = prior.get("retired_utc")
+            retired_reason = prior.get("retired_reason")
+            if isinstance(retired_at, str) and retired_at.strip() \
+                    and isinstance(retired_reason, str) and retired_reason.strip():
+                try:
+                    parsed_retired_at = dt.datetime.fromisoformat(
+                        retired_at.strip().replace("Z", "+00:00")
+                    )
+                    retired = parsed_retired_at.tzinfo is not None \
+                        and parsed_retired_at.utcoffset() is not None
+                except ValueError:
+                    retired = False
+        if retired:
+            continue
         if "closed" not in note.lower() and "re-entry" not in note.lower():
             candidates.append((key, prior))
     if not candidates:

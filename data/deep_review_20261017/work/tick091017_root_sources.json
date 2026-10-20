@@ -1,0 +1,83 @@
+{
+  "sources": {
+    "hle": {
+      "status": 200,
+      "received_utc": "2026-10-20T10:03:58.635372Z",
+      "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 10:03:58 GMT",
+        "content-type": "application/json",
+        "age": "2703",
+        "cache-control": "public"
+      },
+      "receipt": "logs/tick091017_root_sources_1008/hle.receipt.json",
+      "body": "logs/tick091017_root_sources_1008/hle.body.json.gz",
+      "models_count": 66,
+      "kimi": {
+        "Kimi K2.5": {
+          "hle": 25.4,
+          "hle_calibration_error": 75.9
+        },
+        "Kimi K3": {
+          "hle": 41.08,
+          "hle_calibration_error": 44.67
+        },
+        "Kimi K2.6": {
+          "hle": 35.48,
+          "hle_calibration_error": 58.19
+        },
+        "Kimi K2": {
+          "hle": 21.4,
+          "hle_calibration_error": 67.8
+        }
+      },
+      "same_raw_body_as_0808": true
+    },
+    "openrouter": {
+      "status": 200,
+      "received_utc": "2026-10-20T10:03:58.536903Z",
+      "raw_sha256": "626d5e08cb8ad0dbe3f1b4d414d1bee927e60bc3a7d7280109d1c0f0166e88c5",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 10:03:58 GMT",
+        "content-type": "application/json",
+        "age": "133",
+        "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+      },
+      "receipt": "logs/tick091017_root_sources_1008/openrouter.receipt.json",
+      "body": "logs/tick091017_root_sources_1008/openrouter.body.json.gz",
+      "row_count": 53,
+      "cachedAt": 1792488982524,
+      "weekly_totals_T": {
+        "2026-10-05": 171.842501724714,
+        "2026-10-12": 164.043985914931,
+        "2026-10-19": 34.88956347543
+      },
+      "target_weeks": {},
+      "exact_query": "anonymous no-argument endpoint; UI semantics prior data/deep_review_20261017/openrouter_chart_display_semantics_1100.json"
+    },
+    "jpost": {
+      "status": 200,
+      "received_utc": "2026-10-20T10:03:58.845294Z",
+      "raw_sha256": "837409a5bde9d73b6cc9110b901f6b6e1287d9b177ecdc6975f74bea53b59b28",
+      "headers": {
+        "date": "Tue, 20 Oct 2026 10:03:58 GMT",
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "public, max-age=150, must-revalidate, immutable"
+      },
+      "receipt": "logs/tick091017_root_sources_1008/jpost.receipt.json",
+      "body": "logs/tick091017_root_sources_1008/jpost.body.json.gz",
+      "published": "2026-10-20T06:38:35.000+00:00",
+      "modified": "2026-10-20T08:49:50.000+00:00",
+      "articleBody_sha256": "0ec2fd5ee968c0b35c32b4a9a3438fe98002131eab2d98321b90203391bcbd0d",
+      "articleBody_unchanged_from_0816": true,
+      "facts": "Publisher attributes statement to Monday Oct19 ABC interview. No voter-response measurement, poll or fieldwork in articleBody; source interview not yet captured."
+    },
+    "status_quick": {
+      "returncode": 0,
+      "stderr_nonempty": false,
+      "receipt": "logs/tick091017_root_sources_1008/status_quick.receipt.json",
+      "raw_sha256": "4a03b236c296792480efaf9f004f7a6f8c7507716ebc20354941283a90b41cc3"
+    }
+  },
+  "limits": "Response delivery/cache and dated publication are distinct; parse only captured bodies. No forecast/action."
+}

@@ -1,0 +1,74 @@
+{
+  "schema": "tick091017_primary_portfolio_judgment.v1",
+  "reviewed_utc": "2026-10-20T10:13:51.741114Z",
+  "decision": "Retain existing small holdings and complete Claritypair/noadd; retain3originalpoliticalpilotsat unchangedterms/noadd/chase/repost/taker. Broadcases can favor sale; this is honest primarybelief/sizing judgment, not certifiedrangefloor or recoverylogic.",
+  "separate_exit_planning_095746": {
+    "rounded_fee_net_exit": {
+      "Kimi10YES": 1.16,
+      "OR5NO": 3.26,
+      "MI5NO": 1.41,
+      "Messi5YES": 1.2,
+      "Clarity29pairs": 23.86
+    },
+    "central_payout": {
+      "Kimi10YES": 3.402125,
+      "OR5NO": 4.4,
+      "MI5NO": 2.2,
+      "Messi5YES": 3.0,
+      "Clarity29pairs": 29
+    },
+    "selected_payout": {
+      "Kimi10YES": 1.902125,
+      "OR5NO": 3.65,
+      "MI5NO": 1.7,
+      "Messi5YES": 2.0,
+      "Clarity29pairs": 29
+    },
+    "broad_low_payout": {
+      "Kimi10YES": 0.8,
+      "OR5NO": 1,
+      "MI5NO": 1,
+      "Messi5YES": 1,
+      "Clarity29pairs": 0
+    },
+    "exit_plus_constant_carry": {
+      "Kimi10YES": 1.1673386752558674,
+      "OR5NO": 3.269589614617078,
+      "MI5NO": 1.411828346281779,
+      "Messi5YES": 1.207591733023311,
+      "Clarity29pairs": 24.01302336897419
+    },
+    "limits": "Separate sequential rounded CLI planning quotes, not spliced into canonical bankroll. Approximate horizon days73/34/15/73/74; ORfallback/certification/MessiMarch31fallback/venue delays can extend. APY3.2035%datedOct19 18:02:51, variable and before gas/funding/creditrisk. Central and selected payout exceed these exits+carry; broadlow favorssale."
+  },
+  "joint": {
+    "AI_terminal_payouts": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "AI_exit_now": 4.42,
+    "AI_selected_EV": 5.552125,
+    "AI_selected_joint_bothlose_Frechet": [
+      0.0797875,
+      0.27
+    ],
+    "AI_original_cost_possible_full_loss": 4.45,
+    "politics_MI_plus_full_bids_cost_possible_full_loss": 8.05,
+    "whole_terminal_illustration": {
+      "nonPM_trading_assets_fixed": 153.95,
+      "after_full6p50bids_allordinarylose_Clarity29": 176.45,
+      "same_if_Clarity_venueoracle0": 147.45
+    },
+    "limits": "No independence/hedge credit or measured joint distribution. Toy holds other nonPM assets fixed; Aave/stables can fail. Existing held cost already spent, not deducted twice. Clarity29floor conditional on coherent normal settlement; middle58, venueoracle0possible."
+  },
+  "orders": "3authenticatedLIVE/0matched/6.50:ME0210YES38c,CA0650NO3c,NY0110YES12c. Selectedunconditional51/5/21%; allfailunmeasured2x adversefillstress, no certifiedconditionaledge. Retainoriginalsmallpilots/monitoring;cancel-firstnewunassessedmaterialfacts/knowncatalystpull;reviewnotexpiry.",
+  "exit_routing": "HiddenKimi no makerSELLat/belowfair; thesis-breakexit active. Ordinary fairmaker MI44/Messi60/OR88 considered; future public repricing/adverse fills can invalidate fair, and no additional conditional-fill benefit is underwritten. No new SELLorder.",
+  "ops": "4hurdleclear0flagged; Kellymidpoint/scalarrho notjointmodel/addauthority. No newfinancialaction/transfer/redemption/numericalpriorchange. No winningeligibleclaim; losers/uncertain legacyunburned.",
+  "evidence": [
+    "work/tick20261020T091017_account_facts.json",
+    "work/tick091017_root_account_verification.json",
+    "work/tick091017_primary_source_review.json",
+    "work/tick091017_root_ops_verification.json"
+  ]
+}

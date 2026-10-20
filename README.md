@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 234 recorded observations from Apr-25
+The local performance CSV now has 235 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -80,15 +80,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 09:18 UTC
+## Last audited snapshot — October20 09:57 UTC
 
-**Indicative trading net depth $182.50 versus $170 contributed (+7.35%); canonical bankroll $194.20 including $5.78 separate gas.** Trading midpoint $188.42; same-producer PM $34.48 midpoint/$28.56 fee-net depth. Sequential rounded estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV234 preserves all233 earlier rows and external flows. [Financial record](research/2026-10-20-0918-financial-snapshot.md).
+**Indicative trading net depth $184.84 versus $170 contributed (+8.73%); canonical bankroll $194.91 includes $5.78 separate gas.** Trading midpoint $189.13; same-producer PM $35.18 midpoint/$30.89 fee-net depth. Sequential rounded estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV235 preserves all234 earlier rows and external flows. [Financial record](research/2026-10-20-0957-financial-snapshot.md).
 
-No new fill, transfer or redemption observed. Current follow-up independently verified all9 indexed quantities,127 unchanged authenticated trades, case14 both CTF balances0 and pUSD19.251290. Its temporary maker commitment was canceled and reconciled without a fill or cash movement. The09:31 standalone PM35.23mid/31.73depth observation is separate from this aggregate. [Account verification](data/deep_review_20261017/work/arena14_account_root_verified_0930.json).
+No new fill, transfer or redemption: all9 indexed quantities and127 authenticated trades unchanged; three original BUYs LIVE/zero matched/$6.50. pUSD19.251290; Ostium0. Retain existing small holdings/noadd and completeClarity29+29; canceledAnthropic14 staysclosed. [Current orders](notes/resting_orders.md).
 
-Requested07:34 news reviews and full11steps completed once08:07–24. Kimi/Stripe-OpenRouter headlines do not establish new resolving-source values; latest Messi commentary concerns an already-modeled farewell. Retain existing holdings/noadd; manageClarity29+29 whole. Audit/UMA/ops remain dated to fullcheck;09:31quick status4hurdleclear/0flagged/nohitrows. WeeklyOct23/monthlyNov12notdue; next existing10light/14full or earlier material event. [Completed check](research/2026-10-20-073415-checkin.md).
+09:10-triggered full11steps and requested Michigan alert reviewed. Campaign stories affect both candidates but supply no new voter-response measurement; old Kimi cybersecurity/distillation reports do not establish HLE contamination. HLE/OR resolving sources checked10:03; no qualifying new source value. Audit retirement-marker bug fixed;31 focused tests and10 chart tests pass. UMA0alerts/all45rows refreshed/43uniqueIDs, four current daemon singletons. WeeklyOct23/monthlyNov12 not due; next existing14full or earlier material event. [Completed check](research/2026-10-20-091017-checkin.md).
 
-Discovery remains capped/incomplete: primary80/585eligible,thin3000/3321; consistency4quoted/20attempted/174unquotedgroups.69offline batches/1226emitted and3080retained snapshot rows structurally/source checked, not valuations. No universe-wide absence finding. [Discovery resume](data/deep_review_20261017/work/tick073415_discovery_resume.json).
+Discovery remains capped/incomplete: primary80/638eligible,thin3000/3200; consistency6quoted/20attempted/187unquotedgroups. All78offline batches/1366emitted and3080retained snapshot rows structurally/source checked, not valuations. Sports3/3 no consensus. No universe-wide absence finding. [Small discovery index](data/deep_review_20261017/work/tick091017_discovery_resume.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

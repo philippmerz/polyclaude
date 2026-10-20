@@ -1,0 +1,18 @@
+{
+  "changes": [
+    {
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "field": "criteria_read",
+      "before": "2026-10-19",
+      "after": "2026-10-20"
+    },
+    {
+      "slug": "will-the-democratic-party-win-the-me-01-house-seat-20260720160014016",
+      "field": "criteria_read",
+      "before": "2026-10-17",
+      "after": "2026-10-20"
+    }
+  ],
+  "basis": "Root read full current Gamma descriptions and all nine exact identity fields against frozen universe; source quote file tick091017_MI_ME_quotes.json. No numerical prior or management change.",
+  "original_mode_preserved": "0o755"
+}

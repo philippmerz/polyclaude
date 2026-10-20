@@ -1,0 +1,53 @@
+{
+  "checked_at_utc": "2026-10-20T10:03:17.801197+00:00",
+  "audit_fix": {
+    "files_changed": [
+      "scripts/position_state_audit.py",
+      "tests/test_position_state_audit.py"
+    ],
+    "behavior": "A prior is excluded from orphan candidates only when retired is exactly true, retired_utc parses as a timezone-aware ISO timestamp, and retired_reason is nonblank. Historical numeric prior fields are not changed.",
+    "tests": ".venv/bin/python -m pytest -q tests/test_position_state_audit.py: 29 passed.",
+    "fresh_audit": {
+      "command": "scripts/position_state_audit.py (report-only; no --fix)",
+      "exit_code": 0,
+      "result": "position state CLEAN (7 indexed positions, 1 deindexed claim row(s))",
+      "receipt": "logs/tick20261020T1000_retired_audit/cli/position_state_audit_report_only.receipt.json",
+      "captured_serialization_sha256": "58269c3cacb547d57dedf51601f07f15db75820e38b1ee417a166703c0af7b44"
+    }
+  },
+  "uma_counter_explanation": {
+    "cache_rows": 45,
+    "unique_gamma_market_ids": 43,
+    "cache_checked_at_window": "2026-10-20T09:57:38Z through 2026-10-20T09:57:44Z",
+    "difference_is_not_skipped_updates": true,
+    "duplicate_identity_groups": {
+      "1919425": [
+        {
+          "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192-799-449-125",
+          "checked_at": "2026-10-20T09:57:43Z",
+          "data_api_visible": false,
+          "status": "resolved"
+        },
+        {
+          "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192-799-449",
+          "checked_at": "2026-10-20T09:57:43Z",
+          "data_api_visible": false,
+          "status": "resolved"
+        },
+        {
+          "slug": "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192",
+          "checked_at": "2026-10-20T09:57:43Z",
+          "data_api_visible": false,
+          "status": "resolved"
+        }
+      ]
+    },
+    "interpretation": "gamma_refreshed_count counts unique market IDs via a set, while tracked_count counts slug-keyed rows. The three legacy May 31 Iran rows all reference market_id 1919425 and were each refreshed at 09:57:43Z, resolved, data_api_visible=false; they are absent from the current 8-row position/claim snapshot."
+  },
+  "weekly_monthly_evidence": {
+    "last_weekly_actual_record": "notes/pnl_weekly.md, heading \u201cWeek 2026-10-09 \u2192 2026-10-16\u201d (actual interval ends 2026-10-16).",
+    "journal_confirmation": "notes/journal.md, heading \u201c2026-10-16 ~00:17 UTC \u2014 full check and weekly P&L\u201d; interval is Oct 9\u201316.",
+    "next_due": "notes/pnl_weekly.md states weekly Oct 23 and monthly Nov 12."
+  },
+  "prior_records": "No changes to notes/portfolio_kelly_priors.json or other financial records."
+}

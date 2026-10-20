@@ -1,0 +1,9 @@
+{
+  "observations_before": 234,
+  "observations_after": 235,
+  "old_prefix_sha256": "1c967e1f696547dd7c8c5d24df656c145f7b49a861598865d8a469266780d571",
+  "old_bytes_preserved": true,
+  "contributions_unchanged_sha256": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+  "source": "research/2026-10-20-0957-financial-snapshot.md",
+  "chart_tests": "10 passed"
+}

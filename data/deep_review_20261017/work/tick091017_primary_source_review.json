@@ -1,0 +1,29 @@
+{
+  "schema": "tick091017_primary_source_review.v1",
+  "reviewed_utc": "2026-10-20T10:20:44.724512+00:00",
+  "requested": {
+    "id": "4b60e36bc058b89da4d3f762af09d75139fdc4dd",
+    "literal_condition": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+    "judgment": "Previously reviewed08:24; root reverified exact alert line281b2737 and actual JPost articleBody. Fresh10:03 HTTP200 content exactly matches08:16 body despite different HTMLhash. PublishedOct20 06:38; statement attributed to Oct19ABCinterview, distinctfromOct17MSNOW/townhall. No measured voter-response effect. Existing crossover/mobilization/sharedpoll-error scenarios remain; no duplicate Oct20 aging or likelihood multiplier."
+  },
+  "other_current_exposure": {
+    "MI_306853": "ActualProspect/CMD Oct20 09:30 report describes IronNet financial ties, opposing heldNO. SEC8-K verifies Rogers among8securednote lenders/6.9m aggregate/13.8%, not his principal. Nov17,2023 Doc142 verifies filed securedclaim557883.35, not its2026balance. Reported724887 payments/2026disclosurecomparison not independently established here. Potential campaign effect is not assumed zero; no new voter/poll measurement or quantified marginal impact to replace already wide forecast. Retain5NO/noadd44central/34selected/broadlow20.",
+    "Kimi_5fa456": "ActualTNW Aug7+Frontierprimary Aug8 clarification describe GitHub-allowlist shortcut in cybersecurity sandbox. Not an Oct20event or evidence of HLE contamination. General model/eval risk remains; do not infer measured HLE skill or guaranteed future admission.",
+    "Kimi_f534810": "Exactheadline CTech/Reuters July28 body verified after correcting a related-Oct6-page mismatch. Allegeddistillation, denial and possible sanctions are attributed claims, not verifiednewenactedrestriction or HLEscore. OldOct6valuation story is context only.",
+    "Kimi_e8ea6b": "Quartz Aug26 browserbody reports uncertain hyperscaler talks; directQuartz403/Reuters401. Distribution negotiations not new qualifying HLEscore. Retain10YES/noadd34.02125central/19.02125selected/8–80 broad.",
+    "OR_24ba12": "ExactGooglealertbody binding unresolved: consent interstitial. RelatedStartupFortune actualbody discusses Aug19agreement, secondary7.5B estimates and neutrality speculation. OfficialStripeAug19body contains no completion/price. Do not label the new alert a verified completeddeal or zero-impact fact. Freshresolvingchart53rows/completedOct12=164.043985914931T/Oct19partial34.889563475430T, targetweeksabsent. Retain5NO/noadd88central/73selected/20–99.5broad. Range claim can lose from either increase or decrease into725–775T; traffic-up alone notdirection proof.",
+    "MI_2fc7_closeout": "Final10:14FoxGenZanalysis alert has no classifier impacts but concerns heldMI. Exactpublisherbody unresolved after boundedGoogleconsent/title search; relatedAug15Foxarticle withAug6–10registered-voterR51/D47 is contextonly, not the newalertbody or newmeasurement. Unknowncontent is not zeroimpact. No verified new load-bearingpoll/ballot/turnout input adopted; retain small5NO/noadd with unchanged broaduncertainty, revisit through existing14check/materialsource trigger. No matchedpendingBUYidentity or new order."
+  },
+  "other_rows": "YahooAnthropicIPO financialcontext no longer candidate14exposure; Messi nostalgicfarewell alreadycorroboratedAFAOct6. Sun salaryranking and Mbappe integration commentary are not GoogleGlobalTrendingAthletesTop5 or growthmeasurement. California gas/Israelvote leads noheldorpendingexactexposure. Researchleadsnotvaluedrejections.",
+  "resolving_source_limits": "10:03HLE200/66rows/K3HLE41.08/cal44.67/rawsame15fc012f/Age2703; cache not source freshness. ORAge133/cachecutoff not exact data cutoff; partial not pace/settlement. Clarityofficialstatus remains08:08dated endingSep30 with Congress403gap; no laterabsenceproof.",
+  "evidence": [
+    "work/tick091017_news_input.json",
+    "work/tick091017_root_sources.json",
+    "work/kimi_0940_alert_source_facts_compact.json",
+    "work/kimi_0940_alert_source_receipts.json",
+    "work/news_alert_rogers_stripe_followup_1010.json",
+    "work/tick091017_MI_ME_quotes.json",
+    "work/fox_michigan_alert_1014_facts.json"
+  ],
+  "action": "No financial action or numericalprior change; criteria-read metadata refreshed only after full actual MI/ME02literalreads. Dispatch/journal recency is not evidence of source review."
+}

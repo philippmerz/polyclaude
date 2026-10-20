@@ -1,4 +1,4 @@
-# Current resting orders — October20 09:46 UTC
+# Current resting orders — October20 09:57 UTC
 
 **Three original BUYs remain LIVE/zero matched, committing $6.50.** Candidate14/DEC245 was briefly posted5NO49c/$2.45, then canceled09:39:38 before any fill. After300s exactterminal/trades/index/CTF/cash checks confirmed zero exposure; only its reservation retired4→3. Kimi412 remains a filled holding. [Candidate closure](../data/deep_review_20261017/work/arena14_canceled_reconciled_0946.json) · [Source/action record](../research/2026-10-20-anthropic-arena-order.md).
 
@@ -11,7 +11,7 @@
 - **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
 - Kimi’s filled reservation retired4→3 at01:59; after candidate14’s separate zero-fill closure, the original three records/terms remain unchanged. At09:45 pUSD19.251290 minus6.50 commitments gives12.751290 arithmetic, not venue free collateral. Filled1.20 was spent capital, not cash release/profit.
 - Review remaining political bids each existing tick/earlier material evidence. Cancel first on newly unassessed material poll/candidate/ballot/turnout facts; no add/chase/repost/taker fallback. Unannounced information/cache gaps can fill before cancellation. A scheduled check is a review, not automatic expiry; any fill needs fresh holding/source/fee-netexit/joint-risk judgment.
-- Latest canonical producer09:18:20–36:194.20incl5.78gas, trading188.42mid/182.50indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds. Original bid terms retained after source/conditional-fill/joint review; no add/chase/repost/taker. [Financial record](../research/2026-10-20-0918-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick20261020T0945_post_cancel_facts.json).
+- Latest canonical producer09:57:13–31:194.91incl5.78gas, trading189.13mid/184.84indicative fee-net depth. Sequential estimates, not synchronized NAV/proceeds.09:57auth3LIVE0matched/6.50/127unchangedtrades/9indexedquantities; canceled14detail200/null does not refresh09:45terminalproof. Original bid terms retained after source/conditional-fill/joint review; no add/chase/repost/taker. [Financial record](../research/2026-10-20-0957-financial-snapshot.md) · [Current account proof](../data/deep_review_20261017/work/tick20261020T091017_account_facts.json).
 
 ## Quote lifetime — clarified October19
 

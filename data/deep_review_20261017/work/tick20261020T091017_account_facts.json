@@ -1,0 +1,411 @@
+{
+  "schema": "tick20261020T091017_account_facts.v1",
+  "collection_window_utc": [
+    "2026-10-20T09:57:13.955517Z",
+    "2026-10-20T09:57:50.943473Z"
+  ],
+  "timing_basis": "call_window, not wire timing",
+  "private_capture_dir": "logs/tick20261020T091017_account (0700); raw CLI/auth payloads private.",
+  "candidate14_identity": {
+    "review_index": 14,
+    "condition_id": "0xe944062b6d02b59c5f6c39cd4d35538918053c0c7e5f8d7fa0ab1d4edb9baa46",
+    "ordered_token_ids": [
+      "43595531958558267934455886300539818619407063141211246186008687659488782680099",
+      "101106027123457230511923560603100933782439732335133293995646065340833826927163"
+    ],
+    "source": "deep_review_ledger.universe()[14]"
+  },
+  "cli_semantics": "CLI receipts are sdk_result_serialization envelopes, response_status null; not raw HTTP evidence. CLI stderr empty and returncode 0 for all six.",
+  "cli_evidence": [
+    {
+      "name": "bankroll",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "cbf23343ab71675d4057b617a9928b6a5b853613df4ef13085c9ff262e5f0a88",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI bankroll",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/bankroll.py"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/bankroll.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/bankroll.stderr.txt"
+    },
+    {
+      "name": "positions",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "8cf2c276a3348fa5abe56e508d6245896ca207bfc51f807a0f19f54e1cc35fd6",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI positions",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/positions.py"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/positions.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/positions.stderr.txt"
+    },
+    {
+      "name": "wallet_status",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "123fd6b507aa17990ab1e34651571f89ce421a3db05dd4eee108e2b2ee3ab2e7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI wallet_status",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/wallet_status.py"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/wallet_status.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/wallet_status.stderr.txt"
+    },
+    {
+      "name": "crypto_status",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "707e28138e373f574031da572d5b03f688147a9aa5e5cb798c726c9c8a9c5cba",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI crypto_status",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/crypto_status.py",
+        "crypto"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/crypto_status.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/crypto_status.stderr.txt"
+    },
+    {
+      "name": "ostium_status",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI ostium_status",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/ostium_client.py",
+        "status"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/ostium_status.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/ostium_status.stderr.txt"
+    },
+    {
+      "name": "exit_analysis",
+      "returncode": 0,
+      "response_status": null,
+      "stdout_sha256": "afd51f34004e00f528c7506d2d554b4b2eea8c1e62960c136e88db14754e6c11",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_empty": true,
+      "operation": "vetted read-only account CLI exit_analysis",
+      "command": [
+        ".venv/bin/python",
+        "-B",
+        "scripts/exit_analysis.py"
+      ],
+      "stdout_path": "logs/tick20261020T091017_account/exit_analysis.stdout.txt",
+      "stderr_path": "logs/tick20261020T091017_account/exit_analysis.stderr.txt"
+    }
+  ],
+  "bankroll_single_producer": {
+    "one_TOTAL_line": true,
+    "same_run_lines": [
+      "PM positions MTM                       $    35.18",
+      "TOTAL BANKROLL                         $   194.91",
+      "vs reference $170                         +24.91  (+14.7%)",
+      "REALIZED (settled cash)                 +19.72  (+11.6% of ref) <- the metric that counts",
+      "(gas tokens excluded)                     5.78  \u2014 separately deposited, not trading P&L",
+      "unrealized (marked)                      -0.59  \u2014 NOT return until closed or resolved",
+      "unrealized (realizable)                  -4.88  \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote",
+      "WARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $4.30 (mid $35.18 vs $30.89) \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return."
+    ],
+    "stdout": "logs/tick20261020T091017_account/bankroll.stdout.txt",
+    "receipt": "logs/tick20261020T091017_account/bankroll.receipt.json",
+    "body": "logs/tick20261020T091017_account/bankroll.body.json.gz"
+  },
+  "positions_cli": {
+    "OPEN_TOTAL_cost_usd": 35.77,
+    "MTM_usd": 35.18,
+    "max_payout_usd": 83.33,
+    "realizable_net_fees_usd": 30.89,
+    "midpoint_gap_usd": 4.3,
+    "thin_book_warnings": 2
+  },
+  "wallet_numeric_no_address": [
+    "MATIC: 47.708595",
+    "USDC.e: 0.000000",
+    "USDC: 0.108932",
+    "pUSD: 19.251290",
+    "aave USDC.e: 3.503851",
+    "aave USDC: 122.138639",
+    "pUSD committed to resting BUYs: 6.500000",
+    "pUSD DEPLOYABLE (net of bids):  12.751290",
+    "Venue free collateral not directly established; pUSD deployable figure is wallet-script arithmetic after resting BUY commitments."
+  ],
+  "crypto_status": "fresh block heights/balances captured for Arbitrum, Base, Polygon; Optimism empty (not an error). See private stdout and hashes.",
+  "ostium_status": {
+    "open_trades": 0,
+    "active_limits": 0,
+    "USDC_allowance_to_TradingStorage": 0
+  },
+  "orders": {
+    "count": 3,
+    "fully_paginated": true,
+    "HTTP_status": 200,
+    "sanitized_rows": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.12",
+        "candidate14": false
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "50",
+        "matched": "0",
+        "price": "0.03",
+        "candidate14": false
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.38",
+        "candidate14": false
+      }
+    ],
+    "exact_terms_same_as_0945": true,
+    "current_target_open": false,
+    "details": [
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.12",
+        "expiration": "0",
+        "associated_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "50",
+        "matched": "0",
+        "price": "0.03",
+        "expiration": "0",
+        "associated_trades_count": 0
+      },
+      {
+        "status": "LIVE",
+        "side": "BUY",
+        "size": "10",
+        "matched": "0",
+        "price": "0.38",
+        "expiration": "0",
+        "associated_trades_count": 0
+      },
+      {
+        "body_json_type": "NoneType"
+      }
+    ],
+    "detail_statuses": [
+      200,
+      200,
+      200,
+      200
+    ],
+    "target_detail_result": "HTTP 200 JSON null at this read; no order detail returned. Prior 09:45 direct detail was CANCELED/0 matched/0 associated; current open inventory excludes it."
+  },
+  "trades": {
+    "count": 127,
+    "unique_count": 127,
+    "fully_paginated": true,
+    "HTTP_status": 200,
+    "canonical_rows_sha256": "28a489c2c72999cbfd0a948a5737743794ac232ce5701cc1ffdf18b10b6db363",
+    "same_as_0945": true,
+    "no_target_order_refs": true
+  },
+  "indexed_positions": {
+    "HTTP_status": 200,
+    "row_count": 9,
+    "exact_identity_size_totalBought_redeemable_same_as_073415_and_0945": true,
+    "candidate14_rows": []
+  },
+  "balances": {
+    "pUSD_from_wallet_status": 19.25129,
+    "same_as_0945": true,
+    "CTF_probes": "not repeated; no new fill/order/position anomaly observed."
+  },
+  "receipt_body_pairs": [
+    {
+      "receipt": "logs/tick20261020T091017_account/bankroll.receipt.json",
+      "body": "logs/tick20261020T091017_account/bankroll.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:13.955517Z",
+      "received_utc": "2026-10-20T09:57:31.679719Z",
+      "raw_sha256": "95b3fdcb299a03372b1344866a14c69fc04d12335b17d1f77aeb7475f1df1f82",
+      "gzip_sha256": "72a263c2ac7e68c1d34d89f95a380056e8c2efaba651039eeb3b56457187408d",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/crypto_status.receipt.json",
+      "body": "logs/tick20261020T091017_account/crypto_status.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:36.876215Z",
+      "received_utc": "2026-10-20T09:57:43.401536Z",
+      "raw_sha256": "0cb508927f07752ea2c120aa6d24015524c976882a52d57e718f576a61469154",
+      "gzip_sha256": "d4ec8917775e5c1ab31d872915478ca7fcd906a016e0c9f5d8a0c537420716e6",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/exit_analysis.receipt.json",
+      "body": "logs/tick20261020T091017_account/exit_analysis.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:46.089908Z",
+      "received_utc": "2026-10-20T09:57:48.377386Z",
+      "raw_sha256": "532ae538d39dc9a2f8cabe14144e3b429a936158021650c2d518f617e88dad5e",
+      "gzip_sha256": "0deb21f642c6d9a827bb532d898e64653905cf67440f331cf9771b2f3d8e5382",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/indexed_positions.receipt.json",
+      "body": "logs/tick20261020T091017_account/indexed_positions.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:50.938799Z",
+      "received_utc": "2026-10-20T09:57:50.943473Z",
+      "raw_sha256": "0ca1b12ec283f48ceb89d184bcb516d42510ceb7ba91a9e485154aa391c72104",
+      "gzip_sha256": "fbaa984dd224a060ddfdc988362bd0cc4d4d505d8a168f18cf4e08e688b1fd70",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/order_detail_00.receipt.json",
+      "body": "logs/tick20261020T091017_account/order_detail_00.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:49.968623Z",
+      "received_utc": "2026-10-20T09:57:49.973441Z",
+      "raw_sha256": "58e0e16177d1cbd94c284a62b6dcf7246d9f4d3b577a1420a10ad650d9f19300",
+      "gzip_sha256": "6564e1195eb64e5dc668593e1dcc99fb4b1dfc5a3dcf80458de10f6fc95a734e",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/order_detail_01.receipt.json",
+      "body": "logs/tick20261020T091017_account/order_detail_01.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:50.138507Z",
+      "received_utc": "2026-10-20T09:57:50.143055Z",
+      "raw_sha256": "2c8735f1229483787d0c46b83f1fb542fa9a710cfaa413930f5ca6585cedf1cc",
+      "gzip_sha256": "9a39c19d31cbb6961283dc419584003f78f594d20828d89f9de150eb0fd58d97",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/order_detail_02.receipt.json",
+      "body": "logs/tick20261020T091017_account/order_detail_02.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:50.303980Z",
+      "received_utc": "2026-10-20T09:57:50.308730Z",
+      "raw_sha256": "ea956ce5362dd6a0c56ec947a9f40f4ea5e18bbe80e7f008cbd5ecba6d04f066",
+      "gzip_sha256": "e46ebced402757c6ecf7fb51e195747901b511e8603e0a188c28c5c8ca7d62ed",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/order_detail_03.receipt.json",
+      "body": "logs/tick20261020T091017_account/order_detail_03.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:50.448574Z",
+      "received_utc": "2026-10-20T09:57:50.453546Z",
+      "raw_sha256": "38e0b9de817f645c4bec37c0d4a3e58baecccb040f5718dc069a72c7385a0bed",
+      "gzip_sha256": "67daebe9552613a4cb21429a008f689b673f7d93a8e627fc2d7c9b240d946024",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/orders_p000.receipt.json",
+      "body": "logs/tick20261020T091017_account/orders_p000.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:49.578232Z",
+      "received_utc": "2026-10-20T09:57:49.589826Z",
+      "raw_sha256": "d89cdeb90e2fa7afafee53e8c9fd5e91f418a5a0ec1d4b3ce86ec713f01442f1",
+      "gzip_sha256": "fb4c6d1d8ff5dec099cbca9e8422eba38653615c6ccf0f87d11f0d2d3963714c",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/ostium_status.receipt.json",
+      "body": "logs/tick20261020T091017_account/ostium_status.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:43.411427Z",
+      "received_utc": "2026-10-20T09:57:46.080504Z",
+      "raw_sha256": "6aaf5727a16e940c021e42a298b0ed42bc5f249fc881f1963c7cc940113d587f",
+      "gzip_sha256": "e90281931adc13ab42e0d6b2c56fb81cf1e7bba9f5cdf61ebb1d6f320c0db244",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/positions.receipt.json",
+      "body": "logs/tick20261020T091017_account/positions.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:31.691274Z",
+      "received_utc": "2026-10-20T09:57:33.462070Z",
+      "raw_sha256": "857417419ed139620a51e2fb57a9fac5771f51179a4003ea8ed87080d4c8a8ea",
+      "gzip_sha256": "fa174d216b73aaab7f8f23d1ab113663317a0061b5f826b68ba094392fd48c3d",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/trades_p000.receipt.json",
+      "body": "logs/tick20261020T091017_account/trades_p000.body.json.gz",
+      "representation": "http_body",
+      "status": 200,
+      "started_utc": "2026-10-20T09:57:49.796650Z",
+      "received_utc": "2026-10-20T09:57:49.801853Z",
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "gzip_sha256": "74905bda8aadfcaefec53d807d06e0a3fc13d9f40a67cbbaccbff81f6f303b3f",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    },
+    {
+      "receipt": "logs/tick20261020T091017_account/wallet_status.receipt.json",
+      "body": "logs/tick20261020T091017_account/wallet_status.body.json.gz",
+      "representation": "sdk_result_serialization",
+      "status": null,
+      "started_utc": "2026-10-20T09:57:33.471853Z",
+      "received_utc": "2026-10-20T09:57:36.866007Z",
+      "raw_sha256": "628369f66dcd6d3fb86e549fd46ae11693514ce748a3e337ace6abf9f6ede816",
+      "gzip_sha256": "ae0312e4a6de2660a712031b33e9536f92773bb9ce64b602a6d907ddff8e612c",
+      "raw_hash_verified": true,
+      "gzip_hash_verified": true
+    }
+  ],
+  "assessment": "Original three BUY orders remain LIVE/0 matched; candidate14 absent from open orders. Trade history and indexed positions unchanged. Candidate order detail endpoint returned JSON null; prior post-cancel capture at 09:45 was terminal CANCELED. No new CTF RPC calls because no exposure anomaly."
+}
