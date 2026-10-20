@@ -1,0 +1,220 @@
+{
+  "observed_utc": "2026-10-20T10:52:31.586442+00:00",
+  "sources": {
+    "hle": {
+      "status": 403,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "hle",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:52:30.752833Z",
+        "received_utc": "2026-10-20T10:52:31.072485Z",
+        "response_status": 403,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 10:52:31 GMT",
+          "content-type": "text/plain; charset=utf-8",
+          "cache-control": "private, no-store, max-age=0"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://dashboard.safe.ai/api/models",
+          "operation": "current held resolving source or catalyst"
+        },
+        "raw_bytes": 59,
+        "raw_sha256": "b36d912d6d3631f2a0467b342d7726bc2394be0db9dfbd8110c65a3bf1149c54",
+        "gzip_sha256": "ad66d902040c08d24a5da27ffaaea1da6baf0eda793ff5fa53db2d2a45fdd878",
+        "body_path": "hle.body.json.gz"
+      },
+      "json_keys": null
+    },
+    "openrouter": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "openrouter",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:52:30.755214Z",
+        "received_utc": "2026-10-20T10:52:31.001177Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 10:52:30 GMT",
+          "content-type": "application/json",
+          "age": "294",
+          "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+          "operation": "current held resolving source or catalyst"
+        },
+        "raw_bytes": 24691,
+        "raw_sha256": "efd93fe8a34a4c6c8e642e2571da317c7a5e25a3b235a9bb5c3cfd37e3303e86",
+        "gzip_sha256": "e9f4ecc0a99eeb531d778212c7efe680234df9d273ee463c2953b1732439501b",
+        "body_path": "openrouter.body.json.gz"
+      },
+      "json_keys": [
+        "data"
+      ],
+      "row_count": 53,
+      "cachedAt": 1792492638469,
+      "weekly_totals_T": {
+        "2026-10-05": 171.842501724714,
+        "2026-10-12": 164.043985914931,
+        "2026-10-19": 36.124191481344
+      },
+      "target_weeks": {}
+    },
+    "senate": {
+      "status": 403,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "senate",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:52:30.755646Z",
+        "received_utc": "2026-10-20T10:52:31.487027Z",
+        "response_status": 403,
+        "error_type": null,
+        "headers": {
+          "content-length": "491",
+          "content-type": "text/html",
+          "cache-control": "max-age=0, no-cache",
+          "date": "Tue, 20 Oct 2026 10:52:31 GMT"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+          "operation": "current held resolving source or catalyst"
+        },
+        "raw_bytes": 491,
+        "raw_sha256": "84babe1e623566555cc15836ad8e73d0cd9a956b55241939cf8d846050f8266d",
+        "gzip_sha256": "4becb59944ddd0c0a37130b8e3d6a8fa2178ad3614c3f29fc2552211d0681967",
+        "body_path": "senate.body.json.gz"
+      },
+      "json_keys": null
+    },
+    "google2026": {
+      "status": 404,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "google2026",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:52:30.756014Z",
+        "received_utc": "2026-10-20T10:52:31.265706Z",
+        "response_status": 404,
+        "error_type": null,
+        "headers": {
+          "content-type": "text/html; charset=utf-8",
+          "cache-control": "max-age=300",
+          "date": "Tue, 20 Oct 2026 10:52:31 GMT"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://trends.withgoogle.com/year-in-search/2026/",
+          "operation": "current held resolving source or catalyst"
+        },
+        "raw_bytes": 58133,
+        "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+        "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+        "body_path": "google2026.body.json.gz"
+      },
+      "json_keys": null
+    },
+    "mi_program": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "mi_program",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:52:30.756348Z",
+        "received_utc": "2026-10-20T10:52:31.570737Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 10:52:31 GMT",
+          "cache-control": "no-cache, max-age=600",
+          "last-modified": "Mon, 19 Oct 2026 20:58:43 GMT",
+          "content-type": "text/html; charset=UTF-8"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+          "operation": "current held resolving source or catalyst"
+        },
+        "raw_bytes": 160289,
+        "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+        "gzip_sha256": "c4a722def93f8ccf59d04225369e0128618736f293d82b6577c1a339331a9735",
+        "body_path": "mi_program.body.json.gz"
+      },
+      "json_keys": null,
+      "agenda": "AGENDA ** Please Note: No Speaker Reception for this meeting ** 11:00 a.m. Registration & Network Caf\u00e9 12:00 p.m. Program (Theater-Style, Unreserved Seating) 1:05 p.m. Strolling Lunch with Open Seating TICKETS $55 \u2013 DEC Members $65 \u2013 Guests of DEC Members PURCHASE TICKETS VENUE The Masonic 500 Templ"
+    },
+    "hle_followup": {
+      "status": 200,
+      "receipt": {
+        "schema": "read_capture.response.v1",
+        "name": "hle",
+        "timing_basis": "call_window",
+        "started_utc": "2026-10-20T10:53:11.781201Z",
+        "received_utc": "2026-10-20T10:53:12.025491Z",
+        "response_status": 200,
+        "error_type": null,
+        "headers": {
+          "date": "Tue, 20 Oct 2026 10:53:12 GMT",
+          "content-type": "application/json",
+          "age": "2049",
+          "cache-control": "public"
+        },
+        "body_representation": "http_body",
+        "hash_scope": "supplied_bytes_only_not_wire_authentication",
+        "request": {
+          "read_only": true,
+          "method": "GET",
+          "url": "https://dashboard.safe.ai/api/models",
+          "operation": "bounded followup using vetted source monitor headers after default403"
+        },
+        "raw_bytes": 41010,
+        "raw_sha256": "15fc012f010d817b70d85a94858a306ec365ff1e4264cdd6d240fe35af1f1c83",
+        "gzip_sha256": "c99f7463a00639e054c7aae8ae9944fac988a8dd619096d74a5e6c0f96e20d1a",
+        "body_path": "hle.body.json.gz"
+      },
+      "models_count": 66,
+      "kimi": {
+        "Kimi K2.5": {
+          "hle": 25.4,
+          "hle_calibration_error": 75.9
+        },
+        "Kimi K3": {
+          "hle": 41.08,
+          "hle_calibration_error": 44.67
+        },
+        "Kimi K2.6": {
+          "hle": 35.48,
+          "hle_calibration_error": 58.19
+        },
+        "Kimi K2": {
+          "hle": 21.4,
+          "hle_calibration_error": 67.8
+        }
+      },
+      "same_raw_body_as_1003": true
+    }
+  },
+  "limits": "Call-window receipts; response delivery/cache differs from publication. Parse persisted bodies. No forecast or financial action."
+}

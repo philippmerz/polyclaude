@@ -1,0 +1,54 @@
+{
+  "schema": "tick104103_root_ops_verification.v1",
+  "verified_utc": "2026-10-20T10:56:00.977944+00:00",
+  "discovery_artifact_hashes_verified": 14,
+  "json_artifacts_read": {
+    "data/snapshots/shortlist_20261020T104648682052Z_primary.json": {
+      "top_level_type": "list",
+      "top_level_count": 80
+    },
+    "data/snapshots/shortlist_20261020T104648682052Z_primary.meta.json": {
+      "top_level_type": "dict",
+      "top_level_count": 10
+    },
+    "data/snapshots/shortlist_20261020T104703590448Z_thin_tail.json": {
+      "top_level_type": "list",
+      "top_level_count": 3000
+    },
+    "data/snapshots/shortlist_20261020T104703590448Z_thin_tail.meta.json": {
+      "top_level_type": "dict",
+      "top_level_count": 10
+    },
+    "data/deep_review_20261017/work/tick104103_discovery_primary_batches.json": {
+      "top_level_type": "dict",
+      "top_level_count": 16
+    },
+    "data/deep_review_20261017/work/tick104103_discovery_thin_tail_batches.json": {
+      "top_level_type": "dict",
+      "top_level_count": 16
+    },
+    "logs/polymarket_consistency_latest.json": {
+      "top_level_type": "dict",
+      "top_level_count": 4
+    }
+  },
+  "winning_redeemable_count": 0,
+  "losing_or_uncertain_rows": [
+    {
+      "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
+      "asset": "73168238092631084665488650926272039136850868604323922909743725093759786953626",
+      "outcome": "No",
+      "curPrice": 0
+    },
+    {
+      "condition_id": "0x1e69d243d667a44cc310c5a3c9ca97cb17a202fb4231c5ddbb74717f5bb4e49e",
+      "asset": "111835132798139435193189586258024326073875835103403390559042061675379269236081",
+      "outcome": "No",
+      "curPrice": 0
+    }
+  ],
+  "redeem_action": "Skipped; no winning eligible row. Losing/uncertain claims retained, no gas or burn.",
+  "new_buy_gate": "entry review gate: 383/600 completed valuations; new BUYs blocked",
+  "limits": "Artifact hashes/row inspection are structural coverage checks, not substantive valuations. SDK supplied-byte hashes do not certify wire data. No financial call.",
+  "post_verification_note": "All14 hashes matched during recorded verification; by11UTC consistency_latest JSON was overwritten by another normal producer. The discovery index marks the original JSON unavailable; dated104732Z Markdown remains. No probe rerun, fabricated recovery or execution conclusion."
+}

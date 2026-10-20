@@ -1,0 +1,89 @@
+{
+  "schema": "tick104103_primary_portfolio_judgment.v1",
+  "reviewed_utc": "2026-10-20T10:57:08.007720+00:00",
+  "decision": "Retain existing small holdings and complete Clarity29+29; retain three original political bids at unchanged terms. No adds, repricing, reposts, taker entries or new orders. No primary numerical forecast change.",
+  "exit_comparison_104853": {
+    "rounded_fee_net_exit": {
+      "Kimi10YES": 0.96,
+      "OR5NO": 3.26,
+      "MI5NO": 1.41,
+      "Messi5YES": 1.2,
+      "Clarity29pairs": 22.88
+    },
+    "central_payout": {
+      "Kimi10YES": 3.402125,
+      "OR5NO": 4.4,
+      "MI5NO": 2.2,
+      "Messi5YES": 3.0,
+      "Clarity29pairs": 29.0
+    },
+    "selected_stress_payout": {
+      "Kimi10YES": 1.902125,
+      "OR5NO": 3.65,
+      "MI5NO": 1.7,
+      "Messi5YES": 2.0,
+      "Clarity29pairs": 29.0
+    },
+    "broad_low_payout": {
+      "Kimi10YES": 0.8,
+      "OR5NO": 1.0,
+      "MI5NO": 1.0,
+      "Messi5YES": 1.0,
+      "Clarity29pairs": 0.0
+    },
+    "exit_plus_constant_carry": {
+      "Kimi10YES": 0.96615072,
+      "OR5NO": 3.2697281079452054,
+      "MI5NO": 1.411856274657534,
+      "Messi5YES": 1.2076884,
+      "Clarity29pairs": 23.028600271780824
+    },
+    "limits": "Separate sequential CLI planning quotes, not canonical account valuation or current execution permission. Approximate horizons73/34/15/73/74days; certification/source-fallback/venue delays can extend. Oct19 18:02:51 Aave3.2035% held constant is a variable-rate sensitivity before gas/route/protocol risk. Central and selected stress favor holding here; broad lows favor sale. These are primary judgments, not certified probability floors."
+  },
+  "joint": {
+    "AI_terminal_payouts": [
+      0,
+      5,
+      10,
+      15
+    ],
+    "AI_exit_now": 4.22,
+    "AI_selected_EV": 5.552125,
+    "AI_both_lose_Frechet_selected": [
+      0.0797875,
+      0.27
+    ],
+    "AI_cost_full_loss": 4.45,
+    "politics_MI_and_full_pending_bids_cost_full_loss": 8.05,
+    "whole_terminal_toy": {
+      "nonPM_trading_assets_fixed": 153.94,
+      "full6p50bids_all_ordinary_lose_Clarity29": 176.44,
+      "same_if_Clarity_venue_oracle_zero": 147.44
+    },
+    "limits": "No independence, hedge credit or measured joint distribution. Toy fixes nonPM assets; Aave/stables can also fail. Held entry cost already spent, not subtracted twice. Clarity29 logical floor depends on coherent normal settlement; middle pays58, venue/oracle failure can pay0."
+  },
+  "source_judgment": "Current HLE Kimi41.08/cal44.67 and same body as10:03. Old cyber-sandbox and disputed-distillation stories do not establish a new resolving-score or enacted-policy change. OR completedOct12 total unchanged; currentOct19 partial is not settlement. Rogers adverse reporting supplies uncertain campaign salience, not a measured poll update; existing44%NO/34% selected retained with broad20% admitted. Messi/Clarity source gaps remain explicit.",
+  "resting_bids": {
+    "terms": "ME02 10YES38c/3.80; CA06 50NO3c/1.50; NY01 10YES12c/1.20",
+    "central_unconditional_probabilities": [
+      0.61,
+      0.15,
+      0.31
+    ],
+    "selected_after_reserve": [
+      0.51,
+      0.05,
+      0.21
+    ],
+    "judgment": "Original small pilots retained after current source review. All fail an illustrative unmeasured2x adverse-fill stress; no certified conditional edge. CA06Oct16 mail incident is reviewed as minor: no verified candidate/ballot/affiliation or measured voter change, not ignored because queue classification was MINOR. Cancel-first remains binding for newly unassessed material evidence or known catalyst. Review is not an automatic expiry."
+  },
+  "exit_route": "Hidden Kimi: no maker SELL at/below fair. Ordinary fair-price makers considered but no separate conditional-fill benefit underwritten; no new sale order. Thesis-break exits remain available.",
+  "new_bid_gate": "383/600, selectionnull: verified offline closed. Reaching600 still requires comparative selection and every regular execution gate.",
+  "evidence": [
+    "tick104103_root_account_verification.json",
+    "tick104103_news_facts.json",
+    "tick104103_root_sources.json",
+    "tick104103_root_checks/exit_analysis.stdout.json",
+    "tick104103_root_ops_verification.json"
+  ]
+}

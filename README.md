@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 235 recorded observations from Apr-25
+The local performance CSV now has 236 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,15 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 09:57 UTC
+## Last audited snapshot — October20 10:46–10:47 UTC
 
-**Indicative trading net depth $184.84 versus $170 contributed (+8.73%); canonical bankroll $194.91 includes $5.78 separate gas.** Trading midpoint $189.13; same-producer PM $35.18 midpoint/$30.89 fee-net depth. Sequential rounded estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV235 preserves all234 earlier rows and external flows. [Financial record](research/2026-10-20-0957-financial-snapshot.md).
+**Indicative trading net depth $183.14 versus $170 contributed (+7.73%); canonical bankroll $194.74 includes $5.79 separate gas.** Trading midpoint $188.95; same-producer PM $35.01 midpoint/$29.20 fee-net depth. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV236 preserves235 earlier rows and external flows. [Financial record](research/2026-10-20-1046-financial-snapshot.md).
 
-Account reconciliation10:24: all9 indexed identities/quantities and127 authenticated trades unchanged; three original BUYs LIVE/zero matched/$6.50. Balances/financial marks remain09:57, including pUSD19.251290 and Ostium0. Retain existing small holdings/noadd and completeClarity29+29; canceledAnthropic14 staysclosed. [Current orders](notes/resting_orders.md) · [Latest reconciliation](data/deep_review_20261017/work/periodic1022_root_verification.json).
+At10:48:57 all nine indexed identities/quantities and127 authenticated trades were unchanged; original three BUYs LIVE/zero matched/$6.50. pUSD19.251290; Ostium0. Retain small holdings and complete Clarity29+29, with no adds. Canceled Anthropic14 staysclosed. [Current orders](notes/resting_orders.md) · [Reconciliation](data/deep_review_20261017/work/tick104103_root_account_verification.json).
 
-09:10-triggered full11steps and requested Michigan alert reviewed. Campaign stories affect both candidates but supply no new voter-response measurement; old Kimi cybersecurity/distillation reports do not establish HLE contamination. HLE/OR resolving sources checked10:03; no qualifying new source value. Audit retirement-marker bug fixed;31 focused tests and10 chart tests pass. UMA0alerts/all45rows refreshed/43uniqueIDs, four current daemon singletons. WeeklyOct23/monthlyNov12 not due; next existing14full or earlier material event. [Completed check](research/2026-10-20-091017-checkin.md).
+Full11steps and four requested alerts plus related/opposing stories reviewed. Old Kimi cyber/policy reports do not establish changed HLE evidence; OpenRouter agreement isAug19 and exact alert-body binding remains unresolved. Rogers reporting has uncertain electoral salience; no measured new poll. Kimi HLE41.08 unchanged; OpenRouter completedOct12 total unchanged/currentOct19 partial36.124191T is not settlement. CA06 dated mail incident reviewed as minor. No financial action or numerical prior change. UMA0alerts/45freshrows/43uniqueIDs; four current daemon singletons. Next existing14UTC check/earlier material event; weeklyOct23/monthlyNov12 notdue. [Completed check](research/2026-10-20-104103-checkin.md).
 
-Discovery remains capped/incomplete: primary80/638eligible,thin3000/3200; consistency6quoted/20attempted/187unquotedgroups. All78offline batches/1366emitted and3080retained snapshot rows structurally/source checked, not valuations. Sports3/3 no consensus. No universe-wide absence finding. [Small discovery index](data/deep_review_20261017/work/tick091017_discovery_resume.json).
+Discovery remains incomplete: primary80/635eligible and thin3000/3222, both page-capped. All47offline batches/813emitted rows structurally/source joined; root checked14artifact hashes. Consistency4validated/20attempted/190unquoted/16failed; sports3/3without verified consensus. These are discovery observations, not valuations or an exchange-wide absence finding. [Small index](data/deep_review_20261017/work/tick104103_discovery_index.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

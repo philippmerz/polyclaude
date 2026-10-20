@@ -1,0 +1,29 @@
+[
+  {
+    "name": "exit_analysis",
+    "started_utc": "2026-10-20T10:48:53.492829+00:00",
+    "finished_utc": "2026-10-20T10:48:55.470144+00:00",
+    "returncode": 0,
+    "stdout_sha256": "99cfc0a67ef0cace22544b83e6ce01aa591845e4dd8e84884cb7a5a97241fb74",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "representation": "CLI stdout/stderr; timestamps are subprocess windows, not HTTP wire times"
+  },
+  {
+    "name": "state_audit",
+    "started_utc": "2026-10-20T10:48:53.493190+00:00",
+    "finished_utc": "2026-10-20T10:48:54.914337+00:00",
+    "returncode": 0,
+    "stdout_sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "representation": "CLI stdout/stderr; timestamps are subprocess windows, not HTTP wire times"
+  },
+  {
+    "name": "watchlist",
+    "started_utc": "2026-10-20T10:48:53.493603+00:00",
+    "finished_utc": "2026-10-20T10:48:54.158911+00:00",
+    "returncode": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "representation": "CLI stdout/stderr; timestamps are subprocess windows, not HTTP wire times"
+  }
+]

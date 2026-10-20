@@ -1,0 +1,194 @@
+{
+  "tick": "cron20261020T104103Z",
+  "created_at": "2026-10-20T10:48Z",
+  "purpose": "Bounded public discovery evidence; facts only, no probability/ranking/selection/entry decisions.",
+  "policy": "New BUY pause until 600 fully valued cases plus comparative selection remains binding; this discovery adds no entries or completed valuation counts.",
+  "coverage": {
+    "primary": {
+      "command": "discover_markets.py (defaults)",
+      "fetched": 999,
+      "eligible_before_top": 635,
+      "emitted": 80,
+      "filter_exclusions": {
+        "horizon": 50,
+        "liquidity": 283,
+        "missing_deadline": 1,
+        "past_deadline": 26,
+        "spread": 4
+      },
+      "top_omitted": 555,
+      "pagination": "10/10 page cap; incomplete; 1 duplicate row"
+    },
+    "thin_tail": {
+      "command": "discover_markets.py --min-liquidity 500 --min-vol24 20 --max-pages 20 --via-events --clears-hurdle-only --top 3000",
+      "fetched": 38594,
+      "eligible_before_top": 3222,
+      "emitted": 3000,
+      "filter_exclusions": {
+        "horizon": 325,
+        "liquidity": 14734,
+        "missing_deadline": 38,
+        "not_tradable": 6024,
+        "past_deadline": 214,
+        "spread": 662,
+        "volume": 10117,
+        "win_assumed_hurdle": 3258
+      },
+      "top_omitted": 222,
+      "pagination": "20/20 page cap; incomplete; 32 duplicate market rows"
+    },
+    "primary_batches": {
+      "batches": 1,
+      "groups": 12,
+      "rows": 12,
+      "truncated_triggers": 0,
+      "exact_source_joins": "12/12 pass"
+    },
+    "thin_tail_batches": {
+      "batches": 46,
+      "groups": 223,
+      "rows": 801,
+      "truncated_triggers": 0,
+      "exact_source_joins": "801/801 pass"
+    },
+    "consistency": {
+      "markets_scanned": 5001,
+      "events": 631,
+      "retained_neg_risk_markets": 3165,
+      "coverage": "incomplete market_cap; 32 pages; 36.3 MiB streamed",
+      "midpoint_groups_over_threshold": 292,
+      "structural_groups": 210,
+      "live_groups_requested": 20,
+      "legs_requested": 193,
+      "groups_with_live_quotes": 4,
+      "provisional_positive": 0,
+      "limit": "not a universe-wide zero",
+      "events_fetched": 640,
+      "events_processed": 631,
+      "raw_response_bytes": 38041188,
+      "cursor_exhausted": false,
+      "live_groups_attempted": 20,
+      "live_groups_validated": 4,
+      "live_groups_skipped": 16,
+      "live_groups_unquoted": 190,
+      "quote_failed_groups": 16,
+      "analysis_incomplete_reasons": [
+        "market_cap",
+        "190 structural groups unquoted",
+        "16 structural groups quote-failed"
+      ],
+      "candidate_rows": 292,
+      "criteria_join": "consistency JSON summarizes groups but does not preserve member-level criteria/source receipts; no exact criteria join asserted"
+    },
+    "event_monotonicity": {
+      "events": 1397,
+      "multi_market_inspected": 1097,
+      "violations_midpoint": 0,
+      "provisional_after_books": 0,
+      "coverage": "incomplete max_pages 15/15; no failures"
+    },
+    "favorite_fade": {
+      "fetched": 1000,
+      "rough_survivors": 59,
+      "walked": 40,
+      "walk_cap_omissions": 19,
+      "valid_favorite_books": 40,
+      "outside_profile": 12,
+      "emitted": 28,
+      "coverage": "incomplete max_pages 10/10"
+    },
+    "sports": {
+      "threshold_passed": 64,
+      "top_rows": 20,
+      "consensus_attempted": 3,
+      "verified_consensus": 0,
+      "coverage": "scanner stdout did not report page counts"
+    },
+    "macro": {
+      "markets_over_volume_threshold": 8,
+      "consensus": "disabled",
+      "coverage": "scanner stdout did not report page counts/failures"
+    }
+  },
+  "limits": [
+    "Primary and thin-tail scans are capped; filtered/top-omitted markets are unreviewed.",
+    "The thin-tail slice is win-assumed hurdle-filtered and cannot establish absence of opposite-side or short-window candidates.",
+    "Context grouping uses observed exact Gamma event membership and does not prove proposition equivalence.",
+    "Scanner outputs are discovery facts; no model probability, candidate ranking, rejection, or entry selection is supplied.",
+    "Consistency latest JSON was overwritten after root hash verification; original dated Markdown output is preserved, but exact old JSON bytes/member-level receipts are unavailable. No new scan or action inferred."
+  ],
+  "artifacts": [
+    {
+      "path": "data/snapshots/shortlist_20261020T104648682052Z_primary.json",
+      "sha256": "0707483c3f8564ec882101df6c13c3afa1cd96d6037dac3937fb2e28e5c4b797",
+      "bytes": 277965
+    },
+    {
+      "path": "data/snapshots/shortlist_20261020T104648682052Z_primary.meta.json",
+      "sha256": "af5d6a07403e8ef3d37ea7e2892513e11193e88fc19fd1d53ebdc848d7d94b78",
+      "bytes": 1366
+    },
+    {
+      "path": "data/snapshots/shortlist_20261020T104703590448Z_thin_tail.json",
+      "sha256": "448b2ad26b819cf50b7aaeeec3570bb77fa92952bb931ffc35103d242eb8d4d1",
+      "bytes": 9711606
+    },
+    {
+      "path": "data/snapshots/shortlist_20261020T104703590448Z_thin_tail.meta.json",
+      "sha256": "149900e93633bc2db6c4405d3be77d015349151fdd7813e36b137e6dc06e0c55",
+      "bytes": 1478
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_primary_batches.json",
+      "sha256": "a925565b60213d8882a30c9967d44d2531f21362f682fe04716ab0e6881f927f",
+      "bytes": 73870
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_primary_batches.md",
+      "sha256": "9f74fdb9e1c258492e87789395d713b49b0bf0a5e670b4e003437820df5fca38",
+      "bytes": 9336
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_thin_tail_batches.json",
+      "sha256": "777455b665823e4b3af9e9401279dfc52f74078a2ab79bdbd61516ef569950f8",
+      "bytes": 4763554
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_thin_tail_batches.md",
+      "sha256": "12cab49361e217f307813d3e78d55895969b57a1a7d140d0202b51db8abb60a9",
+      "bytes": 320968
+    },
+    {
+      "path": "logs/polymarket_consistency_20261020T104732Z.md",
+      "sha256": "1812b9c984fd7e38ac7c9ce6b52c59f7431aaa137e8ad44345ce2ed78c169cef",
+      "bytes": 6824
+    },
+    {
+      "path": "logs/polymarket_consistency_latest.json",
+      "sha256": "34ddd8afc5d1f6fc46f88ba5774602dc2e21959c546062c5ece88a5cdf828bb6",
+      "bytes": 484176,
+      "evidence_status": "Original JSON hash verified by root before11UTC; shared latest file was subsequently overwritten. Exact historical JSON no longer recoverable at this path; do not bind later contents to this tick.",
+      "later_sha256_observed": "9b1a6afb45e9528437e9420920dae6a2e134444dc013042d7fc029d2c9783c60"
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_sports_receipt.md",
+      "sha256": "4290d30126a4d83a0eef00110b704c0120d53cf4f70c2f61a654201fab6991e6",
+      "bytes": 932
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_macro_receipt.md",
+      "sha256": "c57c30286873633c348781734708169c88e01bfa1e76b74c49dc97618b45a8a9",
+      "bytes": 689
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_event_monotonicity_receipt.md",
+      "sha256": "dbb2b6968adf2fc217a4b761cb69abd9a892c7a414f249c926c64972e3246250",
+      "bytes": 638
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick104103_discovery_favorite_fade_receipt.md",
+      "sha256": "65546fc76dc68d63db3bfb589e5586cc90644679a1fe4b919b7efb9cea9308e0",
+      "bytes": 751
+    }
+  ]
+}

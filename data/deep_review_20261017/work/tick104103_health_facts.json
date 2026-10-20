@@ -1,0 +1,104 @@
+{
+  "schema": "tick104103_health_facts.v2",
+  "captured_utc": "2026-10-20T10:51:19.905146+00:00",
+  "daemon_source": "Canonical constants imported from repository readers; raw secret-bearing path values omitted. Exact argv matched absolute expected Python and script paths.",
+  "daemons": [
+    {
+      "daemon": "news_watcher",
+      "pidfile_pid": 148881,
+      "pidfile_matches_expected_argv": true,
+      "exact_singleton_count": 1,
+      "matching_pids": [
+        148881
+      ],
+      "process_start_utc": "2026-10-19T05:28:37.310000+00:00",
+      "process_age_seconds": 105762.6,
+      "script_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+      "process_started_after_script_mtime": true,
+      "script_age_seconds": 129155.5,
+      "state": {
+        "exists": true,
+        "age_seconds": 292.6,
+        "mtime_utc": "2026-10-20T10:46:27.258128+00:00"
+      }
+    },
+    {
+      "daemon": "telegram_listener",
+      "pidfile_pid": 451,
+      "pidfile_matches_expected_argv": true,
+      "exact_singleton_count": 1,
+      "matching_pids": [
+        451
+      ],
+      "process_start_utc": "2026-10-18T09:33:44.990000+00:00",
+      "process_age_seconds": 177454.9,
+      "script_mtime_utc": "2026-09-10T18:34:57.001351+00:00",
+      "process_started_after_script_mtime": true,
+      "script_age_seconds": 3428182.9,
+      "state": {
+        "exists": true,
+        "age_seconds": 1562.7,
+        "mtime_utc": "2026-10-20T10:25:17.220992+00:00"
+      }
+    },
+    {
+      "daemon": "heartbeat_watch",
+      "pidfile_pid": 450,
+      "pidfile_matches_expected_argv": true,
+      "exact_singleton_count": 1,
+      "matching_pids": [
+        450
+      ],
+      "process_start_utc": "2026-10-18T09:33:44.960000+00:00",
+      "process_age_seconds": 177454.9,
+      "script_mtime_utc": "2026-10-02T14:31:39.989785+00:00",
+      "process_started_after_script_mtime": true,
+      "script_age_seconds": 1541979.9,
+      "state": {
+        "exists": true,
+        "age_seconds": 988.1,
+        "mtime_utc": "2026-10-20T10:34:51.819671+00:00"
+      }
+    },
+    {
+      "daemon": "opportunity_watch",
+      "pidfile_pid": 425,
+      "pidfile_matches_expected_argv": true,
+      "exact_singleton_count": 1,
+      "matching_pids": [
+        425
+      ],
+      "process_start_utc": "2026-10-18T09:33:44.720000+00:00",
+      "process_age_seconds": 177455.2,
+      "script_mtime_utc": "2026-09-29T10:07:53.974910+00:00",
+      "process_started_after_script_mtime": true,
+      "script_age_seconds": 1817005.9,
+      "state": {
+        "exists": true,
+        "age_seconds": 58.9,
+        "mtime_utc": "2026-10-20T10:50:21.013614+00:00"
+      }
+    }
+  ],
+  "uma_cache": {
+    "rows": 45,
+    "unique_market_ids": 43,
+    "reported_unique_refreshed": 43,
+    "all_cache_rows_checked_within_1h": true,
+    "max_checked_age_seconds": 211.9,
+    "stale_or_invalid_rows": [],
+    "duplicate_alias_groups": [
+      {
+        "market_id": "1919425",
+        "slugs": [
+          "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192-799-449-125",
+          "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192-799-449",
+          "us-x-iran-permanent-peace-deal-by-may-31-2026-333-871-241-192"
+        ],
+        "stale": false,
+        "alias_count": 2
+      }
+    ]
+  },
+  "prior_observation_correction": "Earlier guessed logs/news_watcher_state.json was wrong location; configured state path resolved through _paths and inspected here. Earlier metadata matched PID files to live processes but did not verify exact singleton argv or opportunity_watch."
+}

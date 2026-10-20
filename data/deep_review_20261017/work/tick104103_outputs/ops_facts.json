@@ -1,0 +1,241 @@
+{
+  "schema": "tick104103_ops_facts.v1",
+  "observed_utc": "2026-10-20T10:48:25.280337Z",
+  "status_and_checks": {
+    "bankroll": {
+      "started_utc": "2026-10-20T10:46:39.751328+00:00",
+      "finished_utc": "2026-10-20T10:47:29.161791+00:00",
+      "returncode": 0,
+      "total_usd": 194.74,
+      "pm_midpoint_usd": 35.01,
+      "pm_indicative_depth_net_usd": 29.2,
+      "gas_separate_usd": 5.79,
+      "unrealized_marked_usd": -0.76,
+      "unrealized_realizable_usd": -6.57,
+      "pUSD_usd": 19.25129,
+      "committed_BUY_usd": 6.5,
+      "legacy_cash_residual_labelled_realized_usd": 19.72,
+      "legacy_cash_residual_caveat": "Not a newly audited settled-profit figure.",
+      "output": "data/deep_review_20261017/work/tick104103_outputs/bankroll.json"
+    },
+    "full_status": {
+      "started_utc": "2026-10-20T10:47:29.163806+00:00",
+      "finished_utc": "2026-10-20T10:47:43.069592+00:00",
+      "returncode": 0,
+      "open_position_cost_usd": 35.77,
+      "pm_midpoint_usd": 35.01,
+      "pm_indicative_depth_net_usd": 28.28,
+      "open_unrealized_pnl_usd": -0.76,
+      "hurdle": "4 clear, 0 flagged, 3 protected groups",
+      "watchlist": "no triggers",
+      "UMA": "45 cache rows, 43 unique Gamma market IDs refreshed, zero alerts, positions_fetch_ok true",
+      "HLE": "compared against Jul 3 archive; live inventory updating; not a claim of change since previous check",
+      "output": "data/deep_review_20261017/work/tick104103_outputs/full_status.json"
+    },
+    "wallet_status_output": "data/deep_review_20261017/work/tick104103_outputs/wallet_status.stdout",
+    "crypto_status_output": "data/deep_review_20261017/work/tick104103_outputs/crypto_status.stdout",
+    "ostium": {
+      "open_trades": 0,
+      "active_limits": 0,
+      "allowance_usdc": 0,
+      "state_diff": "0 open trades (prior 0), no change"
+    },
+    "crux_coverage": "returncode 0; --quiet; no stdout/stderr",
+    "decisions_pending": "none overdue; returncode 0"
+  },
+  "authenticated_account": {
+    "orders": {
+      "http_status": 200,
+      "fully_paginated": true,
+      "row_count": 3,
+      "live_BUY_count": 3,
+      "orders": [
+        {
+          "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+          "status": "LIVE",
+          "side": "BUY",
+          "price": "0.12",
+          "original_size": "10",
+          "size_matched": "0",
+          "asset_id": "1309236961796814213282116190073921143698457854457840407101156157351932472760",
+          "market": "0x523229b4e2b7d6467333a94440f442c0e97ccd8b5b18496a1a18d87471e35e1a"
+        },
+        {
+          "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+          "status": "LIVE",
+          "side": "BUY",
+          "price": "0.03",
+          "original_size": "50",
+          "size_matched": "0",
+          "asset_id": "16023486908001375361896867545596933092058101961714333897342822645702969966393",
+          "market": "0x903cbd11469e0948360f745ccbbaa9325bad2927c40f65a0f1796dd9fc54aec2"
+        },
+        {
+          "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+          "status": "LIVE",
+          "side": "BUY",
+          "price": "0.38",
+          "original_size": "10",
+          "size_matched": "0",
+          "asset_id": "96914958250546616618098909674490573266030506817741031776466109480920768219053",
+          "market": "0x28621f3082ebe46c9a7ffbdb3fc07f3601d3e4e2d6f5975199abb0ef48c4e9d4"
+        }
+      ],
+      "receipt": "logs/tick104103_auth3/orders.receipt.json",
+      "representation": "SDK result serialization; call-window receipt",
+      "live_BUYs": [
+        {
+          "id": "0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585",
+          "price": "0.12",
+          "shares": "10",
+          "matched": "0"
+        },
+        {
+          "id": "0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd",
+          "price": "0.03",
+          "shares": "50",
+          "matched": "0"
+        },
+        {
+          "id": "0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37",
+          "price": "0.38",
+          "shares": "10",
+          "matched": "0"
+        }
+      ]
+    },
+    "trades": {
+      "http_status": 200,
+      "fully_paginated": true,
+      "row_count": 127,
+      "unique_id_count": 127,
+      "receipt": "logs/tick104103_auth3/trades.receipt.json",
+      "representation": "SDK result serialization; call-window receipt"
+    },
+    "indexed_positions": {
+      "row_count": 9,
+      "pages": 1,
+      "fully_paginated": true,
+      "same_as_1022_identity_quantity_totals_redeemable": true,
+      "positions": [
+        {
+          "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
+          "outcome": "Yes",
+          "size": 29,
+          "totalBought": 29,
+          "redeemable": false
+        },
+        {
+          "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+          "outcome": "No",
+          "size": 29,
+          "totalBought": 29,
+          "redeemable": false
+        },
+        {
+          "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+          "outcome": "Yes",
+          "size": 10,
+          "totalBought": 10,
+          "redeemable": false
+        },
+        {
+          "slug": "will-whalefall-opening-weekend-box-office-be-less-than-8m",
+          "outcome": "No",
+          "size": 6,
+          "totalBought": 6,
+          "redeemable": true
+        },
+        {
+          "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+          "outcome": "Yes",
+          "size": 5,
+          "totalBought": 5,
+          "redeemable": false
+        },
+        {
+          "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+          "outcome": "No",
+          "size": 5,
+          "totalBought": 5,
+          "redeemable": false
+        },
+        {
+          "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
+          "outcome": "No",
+          "size": 5,
+          "totalBought": 5,
+          "redeemable": false
+        },
+        {
+          "slug": "will-the-highest-score-achieved-by-a-google-gemini-model-on-humanitys-last-exam-in-2026-be-50-or-higher-20260723192605546",
+          "outcome": "No",
+          "size": 4.0347,
+          "totalBought": 161.0947,
+          "redeemable": true
+        },
+        {
+          "slug": "trump-out-as-president-before-2027",
+          "outcome": "No",
+          "size": 0.33,
+          "totalBought": 28.33,
+          "redeemable": false
+        }
+      ],
+      "receipt_dir": "logs/tick104103_auth3 (raw HTTP body receipts)"
+    },
+    "baseline_comparison": {
+      "baseline": "logs/tick20261020T1022_account_reconcile",
+      "open_order_terms_and_identity_equal": true,
+      "all_127_trade_rows_equal": true,
+      "all_9_indexed_position_rows_equal": true,
+      "open_order_trade_associations": 0,
+      "anthropic14": "absent from live orders/trades/index; prior final closure record arena14_canceled_reconciled_0946.json had terminal, matched zero, no trades/index/CTF/cash effect; no repost"
+    }
+  },
+  "daemon_disk": {
+    "captured_utc": "2026-10-20T10:48:25.280337Z",
+    "news_watcher_pid": 148881,
+    "telegram_listener_pid": 451,
+    "heartbeat_pid": 450,
+    "all_proc_entries_present": true,
+    "news_watcher_state_file": "logs/news_watcher_state.json absent; age unverified",
+    "disk_free_mib": 172,
+    "disk_used_percent": 99,
+    "df": "/dev/sda1 15G size, 14G used, 172M avail, 99%"
+  },
+  "caveats": [
+    "authenticated orders/trades receipts hash returned SDK serialization, not raw HTTP/wire; call-window timing only.",
+    "positions exact tuple comparison with 10:25 baseline is true for all 9 rows; this includes canceled Anthropic14 absence from live positions.",
+    "no trades, cancels, redemptions, transfers, or other financial writes performed.",
+    "two early receipt attempts stopped at capture-directory exists collision before any network call; successful evidence is isolated in auth3.",
+    "Bankroll producer reported $19.72 as REALIZED (settled cash), but this is the legacy cash residual and is not a newly audited settled-profit figure.",
+    "Bankroll and full status are separate producers: bankroll PM midpoint/net-depth $35.01/$29.20; full status $35.01/$28.28. Preserve each timestamp and do not splice marks.",
+    "Full status HLE UPDATING verdict is specifically live inventory versus Jul 3 archive; it does not establish a new change since the previous check.",
+    "Full original stdout, exact subprocess start/end, and return codes are saved in bankroll.json and full_status.json."
+  ],
+  "timing": {
+    "bankroll_started_utc": "2026-10-20T10:46:39.751328+00:00",
+    "bankroll_finished_utc": "2026-10-20T10:47:29.161791+00:00",
+    "full_status_started_utc": "2026-10-20T10:47:29.163806+00:00",
+    "full_status_finished_utc": "2026-10-20T10:47:43.069592+00:00",
+    "health_capture_utc": "2026-10-20T10:51:19.905146+00:00",
+    "account_capture_window": "See private receipt call-window timestamps in logs/tick104103_auth3"
+  },
+  "output_manifest": {
+    "directory": "data/deep_review_20261017/work/tick104103_outputs",
+    "stdout_stderr_for": [
+      "wallet_status",
+      "crypto_status",
+      "ostium_status",
+      "ostium_state_diff",
+      "crux_coverage",
+      "decisions_pending"
+    ],
+    "auth_capture_dir": "logs/tick104103_auth3 (mode 0700)",
+    "unused_empty_capture_dirs": [
+      "logs/tick104103_auth",
+      "logs/tick104103_auth2"
+    ]
+  }
+}

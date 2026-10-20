@@ -1,0 +1,2 @@
+FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)
+position state CLEAN (7 indexed positions, 1 deindexed claim row(s))

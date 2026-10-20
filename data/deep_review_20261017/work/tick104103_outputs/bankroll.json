@@ -1,0 +1,11 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "scripts/bankroll.py"
+  ],
+  "started_utc": "2026-10-20T10:46:39.751328+00:00",
+  "finished_utc": "2026-10-20T10:47:29.161791+00:00",
+  "returncode": 0,
+  "stdout": "PM positions MTM                       $    35.01\npolygon pm POL (47.7086):       $     4.39\npolygon pm USDC:            $     0.11\npolygon pm pUSD:            $    19.25\npolygon pm aUSDC.e:         $     3.50\npolygon pm aUSDC:           $   122.14\npolygon crypto POL (1.9914):       $     0.18\narbitrum crypto ETH (0.0004):       $     1.00\narbitrum crypto aUSDC:      $     7.90\nbase crypto ETH (0.0001):       $     0.22\nbase crypto USDC:           $     1.05\n--------------------------------------------------\nTOTAL BANKROLL                         $   194.74\nvs reference $170                         +24.74  (+14.6%)\n  REALIZED (settled cash)                 +19.72  (+11.6% of ref) <- the metric that counts\n  (gas tokens excluded)                     5.79  \u2014 separately deposited, not trading P&L\n  unrealized (marked)                      -0.76  \u2014 NOT return until closed or resolved\n  unrealized (realizable)                  -6.57  \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote\nWARNING: PM sleeve marked at MIDPOINTS overstates NET realizable by $5.80 (mid $35.01 vs $29.20) \u2014 indicative depth/fee estimate only; not a synchronized or freshness-verified liquidation quote; illiquid book(s); see positions.py for which. Quote the realizable figure alongside any headline return.\n",
+  "stderr": ""
+}

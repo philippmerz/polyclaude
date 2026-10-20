@@ -1,0 +1,44 @@
+{
+  "schema": "tick104103_primary_source_review.v1",
+  "reviewed_utc": "2026-10-20T10:57:08.007720+00:00",
+  "requested_alert_decisions": {
+    "24ba12984cf1a575672481abeb51820d77179878": "Retain OR5NO/noadd. Aug19 agreement and neutrality commitments are dated evidence; exact alert-to-body binding still unknown. Related Oct20 commentary is not proof of closing/changed routing or a new completed weekly total.",
+    "5fa45630a7ef41fc67a1685a286aae60f0e561e9": "Retain Kimi10YES/noadd. Exact TNW Aug7 + Frontier Aug6/Aug8 concerns allowlisted GitHub access in a cyber evaluation. It does not establish contamination of the contractual HLE leaderboard.",
+    "f534810c5538d26e2580ac14dbb36c64047f5760": "Retain Kimi/noadd. Exact CTech July28 and MOFCOMJuly27 concern attributed/disputed allegations and prospective measures; not a newly enacted sanction or new HLE result.",
+    "306853ae7b61f9ebfde6893964b2e3fb8086eedb": "Retain MI5NO/noadd. ProspectOct20 is opposing campaign evidence. Stretto2023 petition claim557883.35 is verified only as then; payment724887 and asserted2026remaining balance partly unverified. Incremental electoral salience remains uncertain; existing three-poll primary and44%NO/34% selected retained, broad20% can favor exit. No duplicate daily aging or zero-effect claim."
+  },
+  "related_alerts": "Read exact related/opposing IDs listed in tick104103_news_facts.json, including earlier Oct18/19 records; journal/dispatch recency was not treated as completed review.",
+  "additional_alerts": {
+    "77666e233708a8eb979dc3dac47aa139b35db532": {
+      "topic": "CA06 Kiley office mail incident",
+      "decision": "Reviewed as minor; retain original50NO3c pilot, no add/repost. Oct16 event predates this request; no verified new candidate withdrawal, health/ballot/caucus change or voter effect. Unknown exact Yahoo body binding is not a new material fact by itself.",
+      "sources": [
+        "https://www.kcra.com/article/rocklin-kevin-kiley-office-mail-powdery-substance/74164685",
+        "https://rollcall.com/2026/10/19/security-official-warns-more-suspicious-letters-lawmakers/"
+      ],
+      "limits": "Direct official Kiley/police current statement not recovered. KCRA-derived fact summary limited to dated incident; RollCall reports congressional memo, not direct forensic evidence for this envelope."
+    },
+    "e182a3facfde1b068754e7df3afdd109bb079b23": "Kansas race, no held/pending causal exposure identified.",
+    "44dd1b532354d8fbbd8bdc5950c47ae03471c793": "Anthropic/Nscale report is research-only after candidate14 canceled0; no current exact position or newBUY authority. No forecast made."
+  },
+  "held_catalysts": {
+    "hle": "Default-header403 retained; one bounded followup used existing source-monitor headers and returned200/66rows/same15fc012f body; K3HLE41.08/cal44.67, Age2049. UPDATING in status compares toJuly3, not change since10:03.",
+    "OR": "10:52:31 source200/Age294/53rows; Oct12completed164.043985914931T unchanged, Oct19partial36.124191481344T, targetweeks absent. Partial/pace cannot settle the fixed Oct26-Nov22 bracket; no new completed week so no numerical forecast revision.",
+    "Michigan": "Official program recaptured: Oct20 Detroit11-14EDT=15-18UTC, programnoonEDT=16UTC. Existing14UTC check precedes catalyst; no restingMIorder.",
+    "Clarity": "Official Senate web view again endsSep30/256rolls and listsSep15 failed motion-to-proceedcloture, not qualifying final passage; directHTTP403 retained. Not proof of no later/voice vote. Manage complete29+29 only.",
+    "Messi": "Official2026Year-in-Search route404; bounded search returns2025/method/context, not a2026GlobalAthleteslist or growth measurement. Retain60%/40% selected,20-90range; no inferred absence or duplicated farewell increment.",
+    "political_bids": "Exact frozen condition/outcome rules reread for CA06/ME02/NY01. Search found existing dated Maine poll/debate context and third-party NY forecast, not a fresh verified poll/ballot/caucus change. No model-derived p imported from search."
+  },
+  "source_links": [
+    "https://dashboard.safe.ai/api/models",
+    "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "https://blog.frontier.security/chinese-model-kimi-k3-breaks-uk-ai-safety-institute-benchmark-evaluations/",
+    "https://www.aisi.gov.uk/blog/preliminary-assessment-of-kimi-k3s-cyber-capabilities",
+    "https://stripe.com/newsroom/news/stripe-agrees-to-acquire-openrouter",
+    "https://openrouter.ai/blog/openrouter-is-joining-stripe/",
+    "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/",
+    "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+    "https://trends.withgoogle.com/year-in-search/2026/"
+  ],
+  "limits": "Bounded source collection, not exhaustive external news. Exact identities checked; no source/publication freshness inferred from retrieval or cache success. No financial action or numerical prior revision."
+}

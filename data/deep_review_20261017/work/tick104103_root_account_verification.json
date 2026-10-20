@@ -1,0 +1,38 @@
+{
+  "schema": "tick104103_root_account_verification.v1",
+  "verified_utc": "2026-10-20T10:54:49.863036+00:00",
+  "checks": {
+    "orders": {
+      "status": null,
+      "started_utc": "2026-10-20T10:48:57.192666Z",
+      "received_utc": "2026-10-20T10:48:57.300479Z",
+      "raw_sha256": "5e3a5395d6dba2eeefd51c49c920d93e6b3dd3f4398ac0e45f74e21ad32386b7",
+      "receipt": "logs/tick104103_auth3/orders.receipt.json",
+      "rows": 3,
+      "baseline_equal": true,
+      "next_cursor": "LTE=",
+      "sdk_reported_status": 200
+    },
+    "trades": {
+      "status": null,
+      "started_utc": "2026-10-20T10:48:57.310406Z",
+      "received_utc": "2026-10-20T10:48:57.449462Z",
+      "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "receipt": "logs/tick104103_auth3/trades.receipt.json",
+      "rows": 127,
+      "baseline_equal": true,
+      "next_cursor": "LTE=",
+      "sdk_reported_status": 200
+    },
+    "positions_00": {
+      "status": 200,
+      "started_utc": "2026-10-20T10:48:57.489144Z",
+      "received_utc": "2026-10-20T10:48:57.662138Z",
+      "raw_sha256": "fc9b5b7d3c72ae723216693b7a1ce71f8a80326fcf9419144908252aac7a0124",
+      "receipt": "logs/tick104103_auth3/positions_00.receipt.json",
+      "rows": 9,
+      "baseline_equal": true
+    }
+  },
+  "limits": "Hash-verified supplied bytes. Orders/trades are SDK response wrappers, unwrapped before comparison, not raw wire HTTP. Indexed equality excludes varying prices/marks. No financial write."
+}
