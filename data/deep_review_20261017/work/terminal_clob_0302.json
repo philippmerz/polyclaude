@@ -1,0 +1,32 @@
+{
+  "cases": [
+    {
+      "review_index": 425,
+      "url": "https://clob.polymarket.com/markets/0x5ee7ddbfc88ce9dfa2b5dfc8df258d85f26d93f1444c270f45c41563f942fb8f",
+      "received_utc": "2026-10-20T02:56:56.018545Z",
+      "status": 200,
+      "condition_and_tokens_exact": true,
+      "closed": true,
+      "active": true,
+      "accepting_orders": false,
+      "enable_order_book": false,
+      "receipt": "logs/deep_review_20261017/terminal_clob_0302/clob_425.receipt.json",
+      "raw_sha256": "c07281194fbb003d64b3c2974067a723661f69c20313cb1af7c55e36624680ab",
+      "field_scope": "Prices/winnerfieldsnotread;closureisnotonchainpayoutproof"
+    },
+    {
+      "review_index": 426,
+      "url": "https://clob.polymarket.com/markets/0x431730cb44de808bcaf6109a98c4d93cf75677ada0b421d9a6a6bfa23baa67d2",
+      "received_utc": "2026-10-20T02:56:56.018138Z",
+      "status": 200,
+      "condition_and_tokens_exact": true,
+      "closed": true,
+      "active": true,
+      "accepting_orders": false,
+      "enable_order_book": false,
+      "receipt": "logs/deep_review_20261017/terminal_clob_0302/clob_426.receipt.json",
+      "raw_sha256": "cae3b12a34b9a92dc59822bde1e5a21cf488b3ed05ced8731497d89b06f01197",
+      "field_scope": "Prices/winnerfieldsnotread;closureisnotonchainpayoutproof"
+    }
+  ]
+}

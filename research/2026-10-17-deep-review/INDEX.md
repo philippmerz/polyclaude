@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T02:38:09.528522+00:00
+Updated: 2026-10-20T03:16:27.725374+00:00
 
-**367 valuations saved; first milestone100:** 367 valued; 12 blocked after in-depth review. 364 factual exclusions separately; 2257 pending.
+**371 valuations saved; first milestone100:** 371 valued; 12 blocked after in-depth review. 366 factual exclusions separately; 2251 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -429,11 +429,17 @@ Each report below is written before moving to the next evaluation. Related contr
 |415|[Will the Republican Party win the TX-25 House seat?](evaluations/0415.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
 |416|[Felix Protocol FDV above $800M one day after launch?](evaluations/0416.md)|valued|NO_ENTRY:59YES cost1.07202/central+5.46990/selected−1.07202/broadlow−.48202;5NOcost4.98605/central−.54045/selected−1.29045. Ordinarymakers fail selectedstress. No allocation or monitoring change.|
 |417|[Spread: Presbyterian (-10.5)](evaluations/0417.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
+|418|[Will Shohei Ohtani be the #1 searched person on Google in the US this year?](evaluations/0418.md)|valued|NO_ENTRY: 426YEScost1.05517/central+11.77399/selected-1.05517;5NOcost4.99525/central-0.14583/selected-0.64583. Ordinarymakersfailselectedstress; noallocation.|
 |419|[Will the highest temperature in Munich be 15°C or below on October 17?](evaluations/0419.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |420|[Will Atsumi Harasawa win the 2026 Yokohama mayoral election?](evaluations/0420.md)|excluded_factual|Factualexcludedexactterminal/nontradingvenue; noindependentweather/score/electionoutcomeclaim/probabilityscreen/action.|
 |421|[Will the Republican Party win the MI-04 House seat?](evaluations/0421.md)|valued|Both sides valued; captured asks do not clear ordinary uncertainty reserve|
+|422|[Will Clavicular wear a Yarmulke in 2026?](evaluations/0422.md)|valued|NO_ENTRY:5YEScentral−.73211/selected−1.73211;5NOcentral+.50840/selected−.49160; ordinarymakersfailselectedstress. No allocation or monitoring change.|
 |423|[Counter-Strike: ENCE vs Phantom - Map 2 Winner](evaluations/0423.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |424|[NVIDIA (NVDA) Q3 adjusted gross margin 75% to 77%?](evaluations/0424.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
+|425|[Will the highest temperature in Wellington be 17°C on October 18?](evaluations/0425.md)|excluded_factual|EXCLUDED_FACTUAL_CLOSED: no currententryroute; not a valued/rejectedliveopportunity.|
+|426|[Will Elon Musk post 240+ tweets from October 17 to October 19, 2026?](evaluations/0426.md)|excluded_factual|EXCLUDED_FACTUAL_CLOSED: objectivelynocurrententryroute, not a valuedor rejectedliveopportunity.|
+|427|[Will the Republican Party win the IN-05 House seat?](evaluations/0427.md)|valued|NO_ENTRY: 5YEScost4.17823/central-0.34068/selected-1.09068;6NOcost1.11543/central+0.27951/selected-0.62049. Ordinarymakersfail15ppreserve;default10alsofails. Noallocation/monitoringchange.|
+|428|[Ink FDV above $500M one day after launch?](evaluations/0428.md)|valued|NO_ENTRY: YES central upside fails selected15pp reserve; NO fails central/stress. Current-touch makers fail selected; remote bids lack supported conditional-fill EV. No order/holding/prior/watcher change.|
 |429|[Will SV Werder Bremen vs. SC Paderborn 07 end in a draw?](evaluations/0429.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |432|[Will the Democrats win the Iowa Senate race in 2026?](evaluations/0432.md)|valued|No entry: both dated asks negative central EV. MakerresearchYES<=.30 orNO<=.46 x10 onlyafterfreshallgates.|
 |444|[Will the Republicans win the Georgia Senate race in 2026?](evaluations/0444.md)|valued|YES positive central thesis, fails preselected10ppreserve; NO negativecentral. EvidencewatchYES; makerNO<=.77 x10subjectfreshallgates.|

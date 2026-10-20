@@ -1,0 +1,62 @@
+{
+  "schema": "deep_review.primary_sources.v1",
+  "review_index": 428,
+  "written_utc": "2026-10-20T03:14:31.283806+00:00",
+  "market_id": "637456",
+  "condition_id": "0x4211e9bc23a48128233d2fbf2be43e246a56d58161796c07749b117243a7ea69",
+  "criteria_sha256": "06c393428b55b7577c531c46ef9fbfbdb025391552af2712cc89328ff6354271",
+  "collector_units": [
+    {
+      "path": "data/deep_review_20261017/work/0428_facts_0245.json",
+      "sha256": "2b4338ba4ed53401555cec7fb197d6d40fa7aa33bfbe6c6269d3727c1f6bafc7"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0428_primary_supplement_0248.json",
+      "sha256": "ee6505ef2254117e1c0fe8e54a055f05b6cc17607332f20337eee664b74da549"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0428_foundation_primary_0314.json",
+      "sha256": "67bed7d68c43bbc00c98071eadd70d12fb2b229537a637dff0c16406b46928f0"
+    }
+  ],
+  "root_findings": [
+    "Complete frozen rule read: strict FDV>500M at4PMET calendar day after public transferable/tradable launch; no launch byDec31 23:59ET→NO. It does not explicitly define total versus maximum supply, unlike416; no imported definition.",
+    "Kraken July24 2025 explicitly plans $INK integration and eligible-client/ecosystem airdrops via a Foundation subsidiary; no date, contract, supply, current transferability or valuation.",
+    "FAQ says no token/airdrop information to share. This is not cancellation or proof of no launch. Preserve worker claim of conflict, but root corrects it: differing communications may reflect stale text or network/Foundation distinction. HTTP LastModifiedOct14 does not date passage authorship; responseAge458231s shows cached publication metadata.",
+    "Direct June17 2025 X account INK FOUNDATION/@inkfndhq claims permanent1B cap/no inflation/governance mint. Kraken names Foundation but does not link this account. Affiliation/supply not independently verified on-chain. Price>0.50USD illustrates500M only if1B is correct denominator, not an established resolver conversion.",
+    "Dec2024 mainnet announcement is network/ETHgas, not separate $INK issuance. Apr2026 Ink Points archive describes loyalty; direct article03:06 returned403, neither absence nor transferable-token proof. NFTs/apps/other INK names are distinct.",
+    "Bounded root official-domain searches found archived plan/points/ecosystem leads, no body-backed launch notice. Not exhaustive history/no-launch proof. Current contract, supply, float, vesting, value capture and liquid FDV source unverified; no market probability substituted."
+  ],
+  "raw_gzip_capture_pairs_verified": 11,
+  "critical_receipts": [
+    {
+      "url": "https://blog.kraken.com/news/integrating-ink-token",
+      "receipt": "logs/deep_review_20261017/0428_foundation_primary_0314/kraken_announcement.receipt.json",
+      "received_utc": "2026-10-20T03:05:56.230460Z",
+      "status": 200,
+      "raw_sha256": "77eea6ccf300d39c2348565aa7bd0e9029879552dca3f720c015ad4b8f1fbde0"
+    },
+    {
+      "url": "https://x.com/InkFoundation/status/1934991633621078121",
+      "receipt": "logs/deep_review_20261017/0428_foundation_primary_0314/foundation_post.receipt.json",
+      "received_utc": "2026-10-20T03:05:57.333418Z",
+      "status": 200,
+      "raw_sha256": "e06ded6a5e96684a8bff30d9d07dd6f3c08543724ec28a3087ad5083ffdb5326"
+    },
+    {
+      "url": "https://inkonchain.com/",
+      "receipt": "logs/deep_review_20261017/0428_foundation_primary_0314/ink_official_site.receipt.json",
+      "received_utc": "2026-10-20T03:05:57.913490Z",
+      "status": 200,
+      "raw_sha256": "4bec5a857e9b0573d0ebe0beee2b7cc67fa879e526a19e9e8c6075cd0c2de9c8"
+    },
+    {
+      "url": "https://docs.inkonchain.com/faq",
+      "receipt": "logs/deep_review_20261017/0428_foundation_primary_0314/ink_official_docs_faq.receipt.json",
+      "received_utc": "2026-10-20T03:05:58.088531Z",
+      "status": 200,
+      "raw_sha256": "6cc9769bf2f8bf1c3a4d08d9480aec4830044a2cb3b6fea4ee65142365f0b47e"
+    }
+  ],
+  "method_limits": "Original receipt helper uses body_path/response_status, not gzip_path/status_code; first root verifier failed before saving. Corrected parser verifies original immutable bytes. Sources can be cached/stale; receipt time is not event time. Supplied HTTP body/call-window timing, not authenticated wire transcript. No fitted reference class/measured-tail license."
+}

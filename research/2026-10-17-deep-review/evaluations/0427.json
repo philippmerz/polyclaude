@@ -1,0 +1,183 @@
+{
+  "review_index": 427,
+  "market_id": "1283472",
+  "condition_id": "0x3b4e5588525b157216ef93c7149e67f937f5dd386e2d88ab68949c27a6ff751e",
+  "criteria_sha256": "ffd90a89a0ebb0c0d3b010ca9d22c5f1bbec5e94ef30f426d31c7e3043297193",
+  "status": "valued",
+  "literal_analysis": "IN05RepublicanpartywinYES, notFordYES. Party/identifiableaffiliationorlatestcaucusintentatallHouseconclusivecalltime; credibleconsensus/FECfallback. ElectionNov3notguaranteedNov4settlement.",
+  "evidence": [
+    {
+      "url": "https://www.in.gov/sos/elections/files/Candidate_List_Abbreviated_20260922_011251PM.xlsx",
+      "observed_utc": "2026-10-20T02:44:14.661761Z",
+      "finding": "sos_candidates; rootraw/gzipverified andoriginalavailablebody/dataread; preciseclaims/limits in linkedsourceunit."
+    },
+    {
+      "url": "https://enr.indianavoters.in.gov/archive/2024General/data/OffCatC_1005_A.json",
+      "observed_utc": "2026-10-20T02:47:07.922369Z",
+      "finding": "official_2024_house; rootraw/gzipverified andoriginalavailablebody/dataread; preciseclaims/limits in linkedsourceunit."
+    },
+    {
+      "url": "https://drive.google.com/uc?export=download&id=1I6GOKtnxpzHC9jDbA7C4K7zygH1MEbRN",
+      "observed_utc": "2026-10-20T02:46:00.891693Z",
+      "finding": "impact_memo; rootraw/gzipverified andoriginalavailablebody/dataread; preciseclaims/limits in linkedsourceunit."
+    },
+    {
+      "url": "https://www.spartzforcongress.com/news/spartz-to-j-d-ford-hoosiers-deserve-a-real-policy-debate-not-a-circus/",
+      "observed_utc": "2026-10-20T02:53:43.717259Z",
+      "finding": "Victoria Spartz campaign1; rootraw/gzipverified andoriginalavailablebody/dataread; preciseclaims/limits in linkedsourceunit."
+    },
+    {
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "observed_utc": "2026-10-20T03:00:34.145560Z",
+      "finding": "census_current; rootraw/gzipverified andoriginalavailablebody/dataread; preciseclaims/limits in linkedsourceunit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.7675103902862377,
+    "low": 0.35,
+    "high": 0.98,
+    "actual_entry_reserve_pp": 15,
+    "method": "Unfittedthree-regimeR-minus-Dmarginmixture plusparty-mappingbranch; ownquotesunseen untilsaved.",
+    "reasoning": "Verified2024R+18.58 andunchangedboundariesvsJulyinternalR+2; aging/selectiverelease/design/houseeffect uncertainty wide. ExplicitstrongDmomentumbranch, no latestnationalpollfiction/campaignrepeatdoublecount.15ppreserve andbroadrangejudgments.",
+    "model_path": "models/0427_in05_primary_0309.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0427_quote_0310.json",
+    "quote_file_sha256": "a7ded7f7212dba729c5b8113b1bfe70fca329c3191c12290340d54f5db35d5d2",
+    "quote_capture_utc": "2026-10-20T03:03:30.244649+00:00",
+    "gamma_received_utc": "2026-10-20T03:03:30.093481+00:00",
+    "horizon_days": 16.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.7675103902862377,
+        "selected_stress_probability": 0.6175103902862377,
+        "best_bid": 0.82,
+        "best_ask": 0.83,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792465403478",
+        "book_received_utc": "2026-10-20T03:03:30.243856+00:00",
+        "book_age_seconds_at_receipt": 6.765856027603149,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.1499999999999995,
+            "fee": 0.02823,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.83
+              }
+            ],
+            "net": 4.178229999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.1,
+            "fee": 0.02953,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.82
+              }
+            ],
+            "net": 4.070469999999999
+          }
+        },
+        "taker_cost_usd": 4.178229999999999,
+        "central_expected_profit_usd": -0.3406780485688108,
+        "selected_stress_profit_usd": -1.0906780485688108,
+        "break_even_before_carry": 0.8356459999999999,
+        "break_even_constant_carry": 0.8368018704636324,
+        "current_execution_authorization": false,
+        "gross_shares": 5
+      },
+      "No": {
+        "probability": 0.2324896097137623,
+        "selected_stress_probability": 0.08248960971376232,
+        "best_bid": 0.17,
+        "best_ask": 0.18,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792465403478",
+        "book_received_utc": "2026-10-20T03:03:30.243856+00:00",
+        "book_age_seconds_at_receipt": 6.765856027603149,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 1.08,
+            "fee": 0.03543,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.18
+              }
+            ],
+            "net": 1.1154300000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 6.0,
+            "gross": 1.02,
+            "fee": 0.03387,
+            "fills": [
+              {
+                "shares": 6.0,
+                "price": 0.17
+              }
+            ],
+            "net": 0.9861300000000001
+          }
+        },
+        "taker_cost_usd": 1.1154300000000001,
+        "central_expected_profit_usd": 0.27950765828257373,
+        "selected_stress_profit_usd": -0.6204923417174262,
+        "break_even_before_carry": 0.18590500000000001,
+        "break_even_constant_carry": 0.1861621448897519,
+        "current_execution_authorization": false,
+        "gross_shares": 6
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 5,
+      "No": 6
+    },
+    "minimum_and_maker": "5sharesvenue/separate1USDroute;5YESgross4.15/6NOgross1.08 botheligible,5NOgross.90failsroute. OrdinaryYES82–83failcentral76.751; ordinaryNO17–18failselected8.249evenwithoutfees/carry.10ppreservewouldgiveNO13.249, stillbelowmaker/taker; extra5ppnotcauseoffailure. No remote or postcatalystbid.",
+    "delay_60day_break_even": {
+      "Yes": 0.8399887647397557,
+      "No": 0.18687112881404846
+    },
+    "comparison": "No IN05 exposure. OtherHousebids/MI electionrisk/USturnout-correlations/cash/Aave/knownNY414Felix416 compete; no hedgeorindependencecredit. Dated02:15cash19.25129/commit6.50 notcurrententrygate. Aavevariable/fundinggasnotfree. ProposedOct19/20etcdebatesrequirefreshstation/candidateverificationbeforeanypotentialmaker."
+  },
+  "verdict": "NO_ENTRY: 5YEScost4.17823/central-0.34068/selected-1.09068;6NOcost1.11543/central+0.27951/selected-0.62049. Ordinarymakersfail15ppreserve;default10alsofails. Noallocation/monitoringchange.",
+  "reopen_condition": "Newmethod-backedpoll/turnout/candidate/debate/sourceorparty-rulechange, currentwholeexecution/portfolio/cash/cluster/vettedgate.",
+  "evaluated_utc": "2026-10-20T03:04:49.420208+00:00",
+  "question": "Will the Republican Party win the IN-05 House seat?",
+  "valuation_author": "primary_operator",
+  "original_index": 427,
+  "report_sha256": "1be99e094a6a35dac070aa565ff5282e968b8585df7260317280ac4c6cb78bdb"
+}

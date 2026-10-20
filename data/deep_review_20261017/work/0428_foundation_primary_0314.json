@@ -1,0 +1,55 @@
+{
+  "schema": "ink_foundation_primary_facts.v1",
+  "observed_utc": "2026-10-20T03:05:55.994465Z/2026-10-20T03:05:58.088531Z",
+  "scope": "Ink Foundation / Kraken-linked $INK token; facts only",
+  "facts": [
+    {
+      "source": "https://blog.kraken.com/news/integrating-ink-token",
+      "capture": "logs/deep_review_20261017/0428_foundation_primary_0314/kraken_announcement.receipt.json",
+      "published": "2025-07-24",
+      "fact": "Kraken plans to introduce $INK and Ink L2 to its products; says $INK will be issued by a subsidiary of the independent Ink Foundation, and eligible clients/ecosystem participants were intended for Kraken Drops airdrop; further details to follow as milestones are reached. The article links Ink L2 at inkonchain.com, not directly to @inkfndhq.",
+      "started_utc": "2026-10-20T03:05:55.994465Z",
+      "received_utc": "2026-10-20T03:05:56.230460Z",
+      "status": 200,
+      "raw_sha256": "77eea6ccf300d39c2348565aa7bd0e9029879552dca3f720c015ad4b8f1fbde0",
+      "gzip_sha256": "8a2a550f51af9361be81eb4e39d696b34d58b9546e5fd49bf231b5b5860c84db"
+    },
+    {
+      "source": "https://x.com/InkFoundation/status/1934991633621078121",
+      "capture": "logs/deep_review_20261017/0428_foundation_primary_0314/foundation_post.receipt.json",
+      "fact": "Direct status resolves to @inkfndhq, display name INK FOUNDATION; post date 2025-06-17 15:08:50Z. It states $INK total supply permanently capped at 1 billion, with no inflation or future governance minting. X metadata marks profile Business and is_blue_verified=false. This is an account claim, not independent on-chain contract verification.",
+      "started_utc": "2026-10-20T03:05:56.241254Z",
+      "received_utc": "2026-10-20T03:05:57.333418Z",
+      "status": 200,
+      "raw_sha256": "e06ded6a5e96684a8bff30d9d07dd6f3c08543724ec28a3087ad5083ffdb5326",
+      "gzip_sha256": "e22361fc82cfbb7a1f6463396d38a5fff67d9a77f6e246c7d1a0bd864d9cf708"
+    },
+    {
+      "source": "https://inkonchain.com/",
+      "capture": "logs/deep_review_20261017/0428_foundation_primary_0314/ink_official_site.receipt.json",
+      "fact": "Current Ink site identifies Ink as an Ethereum Layer 2 built by Kraken; its structured metadata links the Ink network account @inkonchain. This supports Kraken/Ink network identity, not a direct affiliation of @inkfndhq.",
+      "started_utc": "2026-10-20T03:05:57.346435Z",
+      "received_utc": "2026-10-20T03:05:57.913490Z",
+      "status": 200,
+      "raw_sha256": "4bec5a857e9b0573d0ebe0beee2b7cc67fa879e526a19e9e8c6075cd0c2de9c8",
+      "gzip_sha256": "e5efaa60ea50845f090afa359bbcb51548aaf26c7d75f8f1a969fcbecc3cffc2"
+    },
+    {
+      "source": "https://docs.inkonchain.com/faq",
+      "capture": "logs/deep_review_20261017/0428_foundation_primary_0314/ink_official_docs_faq.receipt.json",
+      "fact": "FAQ says no information to share regarding any Ink token or airdrop and warns about third-party social posts. No $INK contract or launch date is given. It conflicts with Kraken’s 2025 plan and the June 2025 @inkfndhq supply statement; these sources do not establish whether a token launch occurred.",
+      "started_utc": "2026-10-20T03:05:57.935061Z",
+      "received_utc": "2026-10-20T03:05:58.088531Z",
+      "status": 200,
+      "raw_sha256": "6cc9769bf2f8bf1c3a4d08d9480aec4830044a2cb3b6fea4ee65142365f0b47e",
+      "gzip_sha256": "01d3395863a4e39f71efad12a6208f863ebd7702a96f0cab2c2a6fa1a4d6c572",
+      "last_modified": "Wed, 14 Oct 2026 19:48:46 GMT"
+    }
+  ],
+  "gaps": [
+    "No current official token contract address, TGE/launch date, or official trading/listing notice verified in this four-body packet.",
+    "Kraken names the Foundation as issuer parent but does not hyperlink that entity to @inkfndhq; handle affiliation is not independently established by its article.",
+    "Do not treat Ink Points loyalty, Ink L2 NFTs/apps, or network gas as proof of $INK launch/contract."
+  ],
+  "capture_note": "Bodies were durably captured before parsing with read_capture; hashes cover supplied HTTP body bytes, not authenticated wire transcripts."
+}

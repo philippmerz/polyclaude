@@ -1,0 +1,42 @@
+{
+  "review_index": 426,
+  "market_id": "5742126",
+  "condition_id": "0x431730cb44de808bcaf6109a98c4d93cf75677ada0b421d9a6a6bfa23baa67d2",
+  "criteria_sha256": "f981ee3e27c0682fbe7bc2f71bff214c0f3f57e42e70a34b73411a19c7d3a6b1",
+  "status": "excluded_factual",
+  "literal_analysis": "Fullmain-feed/replyexception/deletion/communityrepost/Xtrackerprimary-Xsecondary rule read. Exact240+ threshold/window; no inferencefromtitlealone. Currententryunreachable on exactGamma/CLOBclosure.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5742126",
+      "observed_utc": "2026-10-20T02:56:13.856267+00:00",
+      "finding": "Allfrozenidentity/fullrule/tokens rawhashmatch;closed/acceptingfalse/resolvedmetadata."
+    },
+    {
+      "url": "https://clob.polymarket.com/markets/0x431730cb44de808bcaf6109a98c4d93cf75677ada0b421d9a6a6bfa23baa67d2",
+      "observed_utc": "2026-10-20T02:56:56.018138Z",
+      "finding": "IndependentCLOBexactCID/tokens;closedtrue/acceptingfalse/bookdisabled. No onchainpayoutproof."
+    },
+    {
+      "url": "https://xtracker.polymarket.com/api/trackings/25a1b053-d183-4f75-953d-b1877ca2617f",
+      "observed_utc": "2026-10-20T02:44:23.310026Z",
+      "finding": "Root48bins/62total; UTCfilteredexport62matches butpostclassification/completeness andstaleglobalusersync unresolved. Notexclusionbasis."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "reason": "No outcomeprobability: exactrouteclosed; tracker62not certifiedqualifyingcomplete/onchainpayoutproof."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "result": "Bothoutcomesunreachablethroughvettedentrypath; no currentprofitablebook claim/executionauthority.",
+    "terminal_unit": "data/deep_review_20261017/work/terminal_0301/case_0426.json",
+    "clob_unit": "data/deep_review_20261017/work/terminal_clob_0302.json"
+  },
+  "verdict": "EXCLUDED_FACTUAL_CLOSED: objectivelynocurrententryroute, not a valuedor rejectedliveopportunity.",
+  "reopen_condition": "Actualexactvenue reopening, sourcecomplete/qualifyingcount/window/secondarysource check andcurrentexecutiongates.",
+  "evaluated_utc": "2026-10-20T02:58:56.911590+00:00",
+  "question": "Will Elon Musk post 240+ tweets from October 17 to October 19, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 426,
+  "report_sha256": "2b02f3fd7c9783750ca4ff83ba359b06fd9dafe495759b1e526a2eb2be8442dd"
+}

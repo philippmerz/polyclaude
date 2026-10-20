@@ -1,0 +1,37 @@
+{
+  "review_index": 425,
+  "market_id": "5766884",
+  "condition_id": "0x5ee7ddbfc88ce9dfa2b5dfc8df258d85f26d93f1444c270f45c41563f942fb8f",
+  "criteria_sha256": "1eadd38082d3817ec7cb3e5e7b545901480dcdd00c474a7f1ba6e733d17cec05",
+  "status": "excluded_factual",
+  "literal_analysis": "RootreadfullNZWNNOAAwholeCmaxOct18/sourcefreeze/nextdayfallback/nodata-lowest/correction/revisionclauses. Exclusion isverifiedexactvenueclosure, not pastdateorforecasttemperature.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5766884",
+      "observed_utc": "2026-10-20T02:56:13.770839+00:00",
+      "finding": "Allfrozenidentity/rule/tokenfieldsverifiedrawhash; closed/acceptingfalse/singularresolved; pluralproposedstatusesretained."
+    },
+    {
+      "url": "https://clob.polymarket.com/markets/0x5ee7ddbfc88ce9dfa2b5dfc8df258d85f26d93f1444c270f45c41563f942fb8f",
+      "observed_utc": "2026-10-20T02:56:56.018545Z",
+      "finding": "PublicCLOB exactCID/tokens, closedtrue/acceptingfalse/enablebookfalse; rejectsremainingnewentryroute."
+    }
+  ],
+  "forecast": {
+    "p_yes": null,
+    "reason": "Notassigned: routeclosed; sourceweatheroutcome/fallbacknotindependentlyverified. Do notderiveprobabilityfromterminalprices."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "result": "Bothoutcomesunreachablethroughvettednewentrypath; no fee/book-profitforecast/currentexecutionauthority.",
+    "terminal_unit": "data/deep_review_20261017/work/terminal_0301/case_0425.json",
+    "clob_unit": "data/deep_review_20261017/work/terminal_clob_0302.json"
+  },
+  "verdict": "EXCLUDED_FACTUAL_CLOSED: no currententryroute; not a valued/rejectedliveopportunity.",
+  "reopen_condition": "Actualexactvenuereopening andupdatedcriteria/clarification/source/liveeconomics/currentexecutiongates.",
+  "evaluated_utc": "2026-10-20T02:57:40.849372+00:00",
+  "question": "Will the highest temperature in Wellington be 17°C on October 18?",
+  "valuation_author": "primary_operator",
+  "original_index": 425,
+  "report_sha256": "51bb521adfc44849e49bb8ab3cf6612e033856ceb3f906fdaf17c8adfa8aef3b"
+}

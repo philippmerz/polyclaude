@@ -1,0 +1,19 @@
+{
+  "review_index": 426,
+  "reviewed_utc": "2026-10-20T02:58:56.911313+00:00",
+  "root_verified": [
+    "Gammaallfrozenidentity/fullrule/tokens/raw+gzip; terminalmetadata",
+    "IndependentCLOBexactcondition/tokens/raw+gzip;closedtrue,notaccepting,bookdisabled",
+    "Xtrackerdetail/export raw+gzip:48bins sum62;88rows filteredexactUTCwindow62uniqueplatformIDs"
+  ],
+  "scope_limit": "No outcome/onchainpayoutforecast. Exclusion reliesvenueclosure only.",
+  "tracker_integrity_limits": {
+    "complete_flag": true,
+    "user_lastSync": "2026-10-13T22:55:30.002Z",
+    "user_lastSyncError": "2026-10-20T02:40:35.909Z",
+    "detail_updatedAt": "2026-10-19T16:00:26.634Z",
+    "export_has_post_types": false,
+    "export_has_pagination_total": false,
+    "source_warning": "UserlastSyncOct13predateswindowwhileexporthaslaterposts; metadataalonecannotdiagnoseoutage. Completeflag/filteredmatch not independentproof ofcaptureorqualifying-post completeness. Queryreturned16before/10afterwindow, so actualUTCfilteressential. One-secondenddifference documented; no boundaryrows."
+  }
+}

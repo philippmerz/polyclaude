@@ -1,21 +1,15 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T02:38:09.528522+00:00",
+  "updated_utc": "2026-10-20T03:16:27.725374+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 379,
-  "completed_valuations": 367,
+  "completed_in_depth_reviews": 383,
+  "completed_valuations": 371,
   "blocked_after_in_depth_review": 12,
-  "factual_exclusions": 364,
-  "pending": 2257,
+  "factual_exclusions": 366,
+  "pending": 2251,
   "active_indices": [],
   "next_pending_indices": [
-    418,
-    422,
-    425,
-    426,
-    427,
-    428,
     430,
     431,
     433,
@@ -39,13 +33,19 @@
     455,
     456,
     457,
-    458
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464
   ],
-  "base_records": 743,
+  "base_records": 749,
   "base_record_counts": {
-    "excluded_factual": 364,
+    "valued": 369,
     "blocked_after_review": 14,
-    "valued": 365
+    "excluded_factual": 366
   },
   "revisions_written": 69,
   "milestone": 100,
@@ -58,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 743,
-  "ledger_sha256": "f7516e72bcb4cb58af1a6c11a3feaf0185f0bd7eb4c9f50fc5a902b9fbdfc371",
+  "evaluations_written": 749,
+  "ledger_sha256": "2b5198ab000a07c5862a0cb68d101499cd2209edb0726e99d004594cd0a655bc",
   "revisions_sha256": "417ef4c84ad37f8b4659c7cf5ddd1b38a8637f4df886a82599d8916096e6cf15",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

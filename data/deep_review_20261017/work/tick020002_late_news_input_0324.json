@@ -1,0 +1,84 @@
+{
+  "schema": "bounded_news_input.v1",
+  "window_start_exclusive": "2026-10-20T02:14:44.955459Z",
+  "window_end_inclusive": "2026-10-20T03:17:20.748052Z",
+  "selection": "all recorded alert lines by timestamp in fixed window; source rows not independently verified by collection",
+  "rows": [
+    {
+      "alert_id": "00d00be3216b6e110fd8a909f5c9bb2b68bba28b",
+      "ts": "2026-10-20T02:17:52Z",
+      "line_sha256_including_newline": "8fe9c05c14e68aec01393cc5ad8649327b3ec39d5f6671ee5933c38f3cbc3e1a",
+      "title": "Rogers advierte a los votantes de « Michigan » sobre el programa «extremo» de El-Sayed de cara a las elecciones - Fox News",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxPam14YXdOOHNHVTk3MjUxY1QtRWp4d0cweUhqcXRiMzItdFhkRl9ZLWxCR0tMZzBDcUNOcWtZTUM3c25oY3dQR0NWM2pBUjdRSWRqNjBDR2JNMUpIN21RZjRfWkFMTzhWeWpVOGxyWC1nVEZyYzZlR2pKZEpESWNOUDNtTVJqQ0E3QmNaTHdfYllLNDlKUE1VNXEyZXBTbFBMZktJZGxOMmlpanc5c2NxYXZ2TGs?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "a3675bb73e08c4c98054b950b80d4027c0796133",
+      "ts": "2026-10-20T02:28:42Z",
+      "line_sha256_including_newline": "790e830657e97a797b945c58e32a4bed882a34e365816631cacab2057c54f7e1",
+      "title": "Kylian Mbappe Scores Sensational Solo Goal As Real Madrid Thrash Sevilla 4-1 - Mashable India",
+      "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNRDJKNGVDTTNHMENWWDZIV1U4eUVGYWR3em9zVzVKVFRucnRST0lRSENidTBTYUZ6ZXZjaXh3RVd1bHdlUXo3RVFocXJfeXd1WTNFY1pqWkgzQUxvX1pHajYxVkppX1c4OFQ0V0RxbXhvOHlobS1YbzlPZmtBNkdfSHlTVkdJSjBJWmFtTjkwdERIdnFKckp0SlJDeUJ3TFVkb1ZWVVlUbThQNnZhdFhpcVgxdEw?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "b96d383c4c96b09c03e610034894424784161a7f",
+      "ts": "2026-10-20T02:28:46Z",
+      "line_sha256_including_newline": "81af3b416c72d4d6f59eee28b9b1bfc08be35f0d759462a43d43dfe34b81c2ae",
+      "title": "The Greatest of All Time? Cristiano Ronaldo Leaves Lionel Messi in the Dust in Special Ballon d'Or Fan Vote - Soy Futbol",
+      "link": "https://news.google.com/rss/articles/CBMi7wFBVV95cUxOQW5oa1h1SmJSU3NDNzltaUEtdjZHZ18wVUVabmE4OTBaTldQZS14Ul9Xc0JPNnB2MFlGUGs4aFdkZWFFY2o5OXIxTE9ZbU9KWlN5MmJiam5MT1FBTFNZVEN1OE1zX3NhbW03S0dnMW1HajlHMldEMnlJVi1qbEVVdGFPR0pQNkJfNkRfdFVzaUwwNzNQTkwyOEJhUTJQNGliWUVYbmJpU3FrOWRXQ2FUeXJXWGRxQ2RxXzdjOTlJVEJBY3VjSHpKZGNwb1RuZGJBV3phNWQtRV9vLVp0SmQwVUxKVkpublRGb1Y1TDZvNA?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "7732eabb7fe4c67abfcb287b10a74f58b0517e89",
+      "ts": "2026-10-20T02:55:56Z",
+      "line_sha256_including_newline": "ac68ea42b139d8a83bcae8b6532e449d233ae8adb82d2b10d18d0f5155049645",
+      "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - The National News Desk",
+      "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMEZmVEhza2FuWXZCam9uZnJ1ai1TSjhGYWZrYnJpekdaLUJjVmJTTG93OXdjNHJ3ZmVXYXlhMHcwWlVHQmg2UGVQZ0xZSGlYdkRzZmlvTlRHVF9ZOVM3WXFjYkZQMUwtZTYtWmlhc2ZIN1hRdmV6ejBINEtWV2hPajZickdDSnduTVBkekNFaEJQdFI0RDJFOG16WVRfRGo4bXVzcFE0aC1sclRaNWdEUjJ3SzRneU5jckRHV3BQLWlsM0RCQmlyT24yaWJLcHlSVm5fUjJTTVhwTlRRX3Zpa0xWTFZRNnQwV3hsT1JwQlA?oc=5",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Allegations may weaken El-Sayed’s Democratic winning prospects in Michigan, supporting the held No position."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true
+    },
+    {
+      "alert_id": "7e59904f2e5a25553eeecb45d19895a08eb04a21",
+      "ts": "2026-10-20T03:12:04Z",
+      "line_sha256_including_newline": "4e0bf0adc737cfbd6e55f443f1ad791b8826a21b064495a34a2c6758264e64ff",
+      "title": "Lionel Messi memorabilia stolen during France riots - www.footballtransfers.com",
+      "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxQMExoYWJKakxlS2tPYzlpOWwtSVdkWkVxOWRYZ1lqU1IxajViaWtYT0tFV0ZCOXp4cG12c3FyN2EzSkpvTDRYenJScjVKRXdiZ0hYdDBoemJETXlTaWlreDdSdkZMcjNwVGhrZlN3TG5pVGlsM2swTGxKUWd3Q2pHWmNTdHlxR0FnRnh2VFJyTXN1RFJnZXhZd2tWQUVXUWQ2Vkl2dmNmc2J3M201T0lTTG5kZXRYMV80VldCakpn?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "690d57cc8809f324c475d72c568015426fd22b1e",
+      "ts": "2026-10-20T03:12:11Z",
+      "line_sha256_including_newline": "80e1a1128a4ad68274106d717e869a3903ee683c021adacdd1de1ac04a4d14ae",
+      "title": "How gas prices have changed in Burlington, North Carolina in the last week - WSOC TV",
+      "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxQV09fd19hWXE2anF3WndxY2RJTVhZS3Iyd2JLTk5XMlpLMm1admhRbm9WWVlfRDN5alB4VThIazQxR2JnOUg5bnBCVWM5Z3p6ZklQNGplU1lfZkhKZWNITEdCdmd1eUxOR3N0VTZ6ZlJ0TVB5N25Sd0x4Wk5vSnNVVNIBlAFBVV95cUxOVy15ZGlPSXNVNmFIRjJrc3NZNjBiS0tMZUZ6T3hoeDNDbmpqNHFMM3NyMFFhRVVQeFNtNUxyWDFOeXR3c1lMU0FQa05wWnQzMkN0RUpWSlVLb1dnR3poUGk1am5VZmRtVmZRQUNqeGZ3dlRxaTd1ZEdkRHFtaERWQzVKaFZnNldPUEpfT3M0d2ZuUFdN?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "0860bca46d92c720ddbc3a8c16a1fad9fb5aff59",
+      "ts": "2026-10-20T03:12:15Z",
+      "line_sha256_including_newline": "273c6b7a328322930b126a247905f0d19d1a34e62e290fecd8afa049e94beb4e",
+      "title": "Trump sobre un posible duelo electoral entre María Corina Machado y Delcy Rodríguez: “Eso sería interesante” - Correo del Caroní",
+      "link": "https://news.google.com/rss/articles/CBMi1wFBVV95cUxOZHdTV0pWWnNLbWx3YjlmckZDclM1c0pUSXVEamRXRjRRZmtUcTN2ek5ZZ09pY3pzYmh3clIyMTh0U3c2Ymp3QnN1ZjBIa0xxUl9SSUpMMnY2RHJLa1g3dUtTWHhzRUVTRjVST3VELTYyVUd1MnVtWkdDejlVM2x3a0hkY2lsSE1JeHB4SjdPcFRjOEtNd2RLYVJDT3pPMHJpdE1URno4MGRHMDdVS2ZMUDVab1VhMUtfQWNjdnBWR0JMQmUwN1VtOW83blBaUDdCTVROeHpoVQ?oc=5",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false
+    }
+  ]
+}

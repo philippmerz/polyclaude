@@ -1,0 +1,62 @@
+{
+  "schema": "deep_review.primary_model.v1",
+  "review_index": 428,
+  "written_utc": "2026-10-20T03:14:31.284319+00:00",
+  "source_unit": "data/deep_review_20261017/work/0428_primary_sources_0318.json",
+  "source_sha256": "5ba351d86ae4dcff4d7c7b3af1bcf2605edb41db32e7232a6a56232fea30da5a",
+  "own_quotes_seen": false,
+  "provenance_limit": "Own quote packet not yet captured/read. Incidental historical other-market prices/search wording are not forecast inputs; no global price-blindness claim.",
+  "forecast": {
+    "p_yes": 0.24007799999999999,
+    "low": 0.02,
+    "high": 0.85,
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0.09007799999999999,
+    "selected_no": 0.609922,
+    "confidence": "low; unfitted subjective joint-event tree, not calibrated posterior"
+  },
+  "branches": [
+    {
+      "regime": "already-qualified launch missed by bounded review",
+      "weight": 0.03,
+      "p_fdv_above500M": 0.65,
+      "yes_contribution": 0.0195
+    },
+    {
+      "regime": "not already qualified / ready and strong delivery",
+      "weight": 0.388,
+      "p_launch_by_deadline": 0.65,
+      "p_fdv_above500M_given_launch": 0.75,
+      "yes_contribution": 0.18915000000000004
+    },
+    {
+      "regime": "not already qualified / delay or weaker delivery",
+      "weight": 0.582,
+      "p_launch_by_deadline": 0.12,
+      "p_fdv_above500M_given_launch": 0.45,
+      "yes_contribution": 0.031428
+    }
+  ],
+  "reasoning": [
+    "Explicit Kraken integration/issuer intent gives a credible launch route. Established network/distribution can move rapidly; ready-regime40% and65% delivery are unfitted judgments, not issuer schedule.",
+    "Old July2025 plan/current no-details FAQ warrant substantial delay weight without treating search silence or LastModified as cancellation. Weak regime60%, launch12%; correlate weaker issuance and price prospects. No fitted history.",
+    "Conditional75/45% above500M balances strong distributor/low-float speculation against unknown token economics, supply, float, value capture, crypto demand and liquidity. No TVL multiple, audited current scale, price target or empirical launch comparison asserted.",
+    "3% missed-past-launch weight/65% conditional FDV are uncertain judgments, not finding no launch. Verified past launch can overturn this model; no informed-counterparty protection. Broad2–85% admits major timeline, valuation and adjudication error.",
+    "15pp selected decision reserve exceeds ordinary10pp for launch-history, supply/source and private-catalyst uncertainty; not statistical lower bound or calibrated coverage. No K5 measured-tail exemption; do not tune to book."
+  ],
+  "sensitivity": {
+    "p_future_launch_given_not_already": 0.332,
+    "p_future_yes_given_not_already": 0.2274,
+    "missed_past_launch_weight_unfitted": [
+      0,
+      0.2
+    ],
+    "broad_no": [
+      0.15,
+      0.98
+    ],
+    "all_weights_unfitted": true
+  },
+  "criteria_timing": "Transferable AND tradable byDec31 23:59ET;4PMET nextcalendar day, not24hours. Dec31launch measuresJan1 21UTC. Normal earlyJan permitted, dispute/source-delay lock possible.75day base/90day carry sensitivity are planning, not liquidity guarantee.",
+  "portfolio": "No Ink holding/bid. Crypto-demand/token-launch/PM venue and oracle risk shared with other cases, no hedge/independence credit. Held Kimi/OR/MI/Messi/wholeClarity and three political commitments compete with reachable Aave/cash. No allocation or Kraken trading authority."
+}

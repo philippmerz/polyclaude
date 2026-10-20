@@ -1,0 +1,13 @@
+{
+  "review_index": 426,
+  "updated_utc": "2026-10-20T03:17:58.391995+00:00",
+  "phase": "complete; excluded_factual; effective ledger/revision governs",
+  "report": "evaluations/0426.json",
+  "report_sha256": "2b02f3fd7c9783750ca4ff83ba359b06fd9dafe495759b1e526a2eb2be8442dd",
+  "source_paths": [
+    "work/0426_facts_0245.json",
+    "work/0426_primary_sources_0303.json",
+    "work/terminal_0301/case_0426.json",
+    "work/terminal_clob_0302.json"
+  ]
+}

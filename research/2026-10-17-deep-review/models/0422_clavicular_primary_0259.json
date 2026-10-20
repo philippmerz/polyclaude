@@ -1,0 +1,41 @@
+{
+  "schema": "primary_event_tree.v1",
+  "review_index": 422,
+  "written_utc": "2026-10-20T02:54:45.949046+00:00",
+  "phase": "final hypothesis before livebookinspection; no execution authority",
+  "source": "data/deep_review_20261017/work/0422_primary_sources_0256.json",
+  "source_sha256": "72185ca6cc368ee3b1556bd696962c8144e95dc64ac45552d3af8afa191366ef",
+  "own_live_quotes_seen": false,
+  "price_exposure": "Ownhistoricalapprox22–44% and siblingWall3% seenincidentally in searches; not numericalinputs, anchoringrisk remains. Do not claim globallypriceblind.",
+  "branches": {
+    "qualifying_postcreation_pastphoto_or_video_exists_unseen": 0.2,
+    "credible_consensus_given_past": 0.95,
+    "future_documented_wear_given_no_past": 0.2,
+    "credible_consensus_given_future": 0.85
+  },
+  "reasoning": [
+    "Already-known Israeltrip/rabbincontact makes a simplepublicact plausible. Kippahmemes and AIWallimages create substantial falsepositive risk; explicitcreationtime blocks oldfootage. Wallvisit isnot kippahproof andbaseballcapdoesnot satisfyexactobject.",
+    "20%unseenpastphoto/video branch acknowledgesmissingclips/history withoutassertingeventabsence.95%conditionalacceptance isnot anempiricalauthenticationrate.",
+    "Ifnopast,20%futurephotographed/videotapedwearthroughDec31 allows newtravel/meetup/streamingcontent despiteaudiencebacklash;85%credibleconsensus accountsforauthenticity/coverage. No verifiedfuturetrip orrepresentatives commitment.",
+    "Allbranchweights judgments, no calibratedreferenceclass.20ppreserve coverslargehistory/informedfill/intent/adjudicationerror, not statisticalCI. Broadrange5–85% admitsneverwearandhighlatentpast/currentprivateinformation scenarios.",
+    "Existingnoexposure; samePM/oraclerisks andcelebritynews shareinformationchannels, noindependencecredit. Wholepipeline freshbeforemoney.",
+    "Boundedoriginalmediafollowup completed with no verifiedpositive; directsourceimagescheckedbyroot. Preserve20%latentpast branch ratherthan convert2frames/searchgaps intonoevent. Future/past/credible-consensus weights remainlowconfidencejudgment."
+  ],
+  "timing": "Actwithincreation2026-07-10T17:30:26.612493Z toDec31 23:59ET, authenticatedcredibleconsensus canarrivelater;75daycarrynormalJanplanning, source/AI authenticitydispute can delay.",
+  "forecast": {
+    "p_yes": 0.326,
+    "low": 0.05,
+    "high": 0.85,
+    "confidence": "low; uncalibrated behavior/history/verification model",
+    "actual_entry_reserve_pp": 20,
+    "selected_yes": 0.126,
+    "selected_no": 0.4739999999999999
+  },
+  "prior_draft_sha256": "92bd290e2c8c52ebb8559337d502ea22992ba0b0285fa843c7bc8532853fa6ff",
+  "visual_supplement": {
+    "path": "data/deep_review_20261017/work/0422_visual_source_supplement_0254.json",
+    "sha256": "fe2f96a95562fe6e2ed80553a302b23f84bb647f16f9dbee88eaa88a3e49a2fe",
+    "root_images_viewed": "Xthumbnail21064e04...: source-attributedsubject baseballcap/backview, undercapunknown. Makophoto026711d3...: source-attributedsubjecthair/headuncovered; not facialidentity verification. These individualframes do not prove nootherwear.",
+    "limits": "XpostdateJuly11aftercreation isnot independentfilmingtime proof; Makopage403captiondateunverified. July13media404/noqualifyingpositive. No fullvideo/historyauthentication."
+  }
+}

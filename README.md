@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October20
 
-**367 valued /12 blocked /364 factual /2,257 pending;743 base+69 revisions; no active case.** Latest416Felix: YES11.088% (broad1–65%, low confidence),15pp reserve; neither side supports entry after costs/uncertainty. Saved and indexed individually.418/422/425 have factual packets only; primary valuation remains pending.408source gap is case-specific. [Latest case](research/2026-10-17-deep-review/evaluations/0416.md) · [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
+**371 valued /12 blocked /366 factual /2,251 pending;749 base+69 revisions; no active case.** Cases418/422/427/428 were valued individually; none justified entry after costs and uncertainty. Cases425/426 were excluded only after exact venue closure checks, with no outcome forecast. Latest428 Ink: YES24.0% (broad2–85%, low confidence),15pp reserve. Next430/431/433 have factual packets only. Source gaps remain case-specific. [Latest case](research/2026-10-17-deep-review/evaluations/0428.md) · [Small phase](data/deep_review_20261017/work/goal0018_RESUME.json).
 
-**Kimi412 is10YES held at12c/1.20cost, not an open bid.** Three original LIVE zero-matched political bids commit6.50, independently verified02:15UTC. Retain/noadd; full Kimi loss/source delay remains possible. No new financial action during the02UTC check or Felix follow-up. [Exact orders/management](notes/resting_orders.md) · [Current held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
+**Kimi412 is10YES held at12c/1.20cost, not an open bid.** Three original LIVE zero-matched political bids commit6.50, independently verified02:15UTC. Retain/noadd; full Kimi loss/source delay remains possible. No new financial action during the02UTC check or subsequent research. Financial figures retain their02:15 observation time. [Exact orders/management](notes/resting_orders.md) · [Current held review](research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.md).
 
 ## Mandate and constraints
 

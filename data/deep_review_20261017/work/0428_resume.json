@@ -1,0 +1,13 @@
+{
+  "review_index": 428,
+  "updated_utc": "2026-10-20T03:17:58.391995+00:00",
+  "phase": "complete; valued; effective ledger/revision governs",
+  "report": "evaluations/0428.json",
+  "report_sha256": "c1c39aa0ad0d3caf693ca7e9f91926c02a67c7cc8806201a64ee0f6c5625461a",
+  "source_paths": [
+    "work/0428_primary_sources_0318.json"
+  ],
+  "model_paths": [
+    "models/0428_ink_primary_0318.json"
+  ]
+}

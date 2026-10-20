@@ -1,0 +1,47 @@
+{
+  "schema": "late_michigan_alert_facts.v1",
+  "observed_utc": "2026-10-20T03:18:19Z",
+  "alert": {
+    "id": "7732eabb7fe4c67abfcb287b10a74f58b0517e89",
+    "alert_ts_utc": "2026-10-20T02:55:56Z",
+    "line_sha256": "ac68ea42b139d8a83bcae8b6532e449d233ae8adb82d2b10d18d0f5155049645",
+    "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - The National News Desk",
+    "publisher_label": "The National News Desk",
+    "link": "https://news.google.com/rss/articles/CBMi8AFBVV95cUxQMEZmVEhza2FuWXZCam9uZnJ1ai1TSjhGYWZrYnJpeldaLUJjVmJTTG93OXdjNHJ3ZmVXYXlhMHcwWlVHQmg2UGVQZ0xZSGlYdkRzZmlvTlRHVF9ZOVM3WXFjYkZQMUwtZTYtWmlhc2ZIN1hRdmV6ejBINEtWV2hPajZickdDSnduTVBkekNFaEJQdFI0RDJFOG16WVRfRGo4bXVzcFE0aC1sclRaNWdEUjJ3SzRneU5jckRHV3BQLWlsM0RCQmlyT24yaWJLcHlSVm5fUjJTTVhwTlRRX3Zpa0xWTFZRNnQwV3hsT1JwQlA?oc=5"
+  },
+  "retrievals": [
+    {
+      "attempt": 1,
+      "url": "Google News wrapper from alert",
+      "status": 200,
+      "started_utc": "2026-10-20T03:17:19.309454Z",
+      "received_utc": "2026-10-20T03:17:19.549514Z",
+      "bytes": 586930,
+      "raw_sha256": "335e7dab986148ae64c3ffe1583452c3e5eda88e3ae9d96f4ccf76b98f84ba40",
+      "gzip_sha256": "28a32e4a39b1ed4273c0fc52d756d65525038b567e41be3aa6a385421d03a3f3",
+      "receipt": "logs/deep_review_20261017/tick020002_late_mi_0317/google_article_redirect.receipt.json",
+      "result": "Google wrapper HTML only; no publisher title, source URL, body or date exposed."
+    },
+    {
+      "attempt": 2,
+      "method": "web open exact Google News wrapper",
+      "result": "tool returned URL not accessible; no article body."
+    }
+  ],
+  "search": {
+    "queries": 1,
+    "query": "exact alert headline + National News Desk",
+    "result": "No results."
+  },
+  "substantive_comparison": {
+    "prior_review": "data/deep_review_20261017/work/goal0018_mi_primary_0157.json",
+    "prior_summary": "That prior review records a separate Green Bay article as unavailable, says its title was consistent with Caro disavowal coverage but not proved duplicate; it separately references an already-reviewed CBS Oct17 exchange and Oct1 Mitchell poll (45.6 D / 41.4 R).",
+    "finding": "Current alert metadata is an allegation headline and says candidate pushes back, but there is no publisher body, original date, source URL, or linked candidate statement. Cannot determine whether this is a rehash or substantive new reporting relative to Caro/CBS. Alert metadata contains no poll/sample/method/result; no new voter measurement is verified."
+  },
+  "limits": [
+    "Alert/feed timestamp is not verified publisher publication time.",
+    "No claims in headline were independently substantiated; allegations remain allegations.",
+    "No directly linked original candidate response was available because source article body/link could not be retrieved.",
+    "No poll, endorsement, withdrawal, or election-status fact verified."
+  ]
+}

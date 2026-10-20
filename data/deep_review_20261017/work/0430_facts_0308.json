@@ -1,0 +1,41 @@
+{
+  "schema": "deep_review_case_facts.v1",
+  "observed_utc": "2026-10-20T03:01:48Z",
+  "review_index": 430,
+  "market_id": "4662691",
+  "condition_id": "0x1889c867f870b77d3beb6c768dc165c47771094956f286f8891e70b8d2768413",
+  "question": "Will Frank Ocean be featured on GTA VI: The Album?",
+  "effective_status": "pending",
+  "frozen_rule": {
+    "yes": "Frank Ocean is confirmed as a featured or credited artist on at least one track on Grand Theft Auto VI: The Album. Qualification source: Rockstar Games official tracklist or artist announcements; if unavailable, official credits on major streaming platforms such as Spotify or Apple Music.",
+    "no": "Otherwise No; also No if album fails to release by 2026-11-26 11:59 PM ET. Album is scheduled for 2026-11-19.",
+    "resolution_source": "https://www.rockstargames.com/VI/music and associated Rockstar announcements; otherwise official major-streaming-platform album credits.",
+    "criteria_sha256": "dbc5b78b44f7762f92c93b39b82a820de40b3f0c0500434a20e199c2f6443c59"
+  },
+  "sources": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-20T03:01:35.411228Z/2026-10-20T03:01:35.554814Z",
+      "status": 200,
+      "raw_sha256": "00ee364c9989808d543d24ec1fa02946164b2116fe264cae3cf937a1f8134e2d",
+      "gzip_sha256": "14a9118f38907f8e3f0f328c3e6f68411159b86fcc87e30af5a36fa522dd1c77",
+      "capture": "logs/deep_review_20261017/case430_facts_0308_sources/music_page.receipt.json",
+      "facts": "Current official page describes 34 original album tracks and says Coming November 19. It displays nine selected singles: Yung Lean feat. Future & Metro Boomin; Travis Scott; CA7RIEL & Paco Amoroso, PinkPantheress, Fred again.. & Etienne de Crécy; Justice feat. Tame Impala, SZA, King Gizzard & The Lizard Wizard; Morgan Wallen; Fuerza Regida; Rauw Alejandro; Cardi B; Keith Richards. No Frank Ocean on displayed selected singles."
+    },
+    {
+      "url": "https://www.rockstargames.com/newswire/article/7599a881942544/announcing-grand-theft-auto-vi-the-album-coming-november-19",
+      "observed_utc": "2026-10-20T03:01:35.582030Z/2026-10-20T03:01:35.769976Z",
+      "status": 200,
+      "raw_sha256": "b91d218c6ca247f3cc2cc5dcee1b22b2f35bf5011a8a0608b282483234567262",
+      "gzip_sha256": "33bdabc1c9fa0008adbe59e2d3c5bb56ae85587e67aee2a5079b0bc18a8c7701",
+      "capture": "logs/deep_review_20261017/case430_facts_0308_sources/album_news.receipt.json",
+      "facts": "Official Newswire article title announces album coming November 19; HTML metadata says official soundtrack is created in partnership with Atlantic Records and launches alongside GTA VI. Retrieved page body exposes metadata/title but not article body."
+    }
+  ],
+  "gaps": [
+    "Official full 34-track listing / Frank Ocean credit not established by currently displayed nine selective singles.",
+    "Current Spotify/Apple Music full-album credits were not fetched.",
+    "Official Newswire article body unavailable in retrieved HTML; observed title/metadata only."
+  ],
+  "capture_note": "Resume packet and public source HTTP bodies were durably captured with read_capture before parsing. Resume receipt: logs/deep_review_20261017/case430_facts_0308/resume430.receipt.json."
+}

@@ -1,0 +1,196 @@
+{
+  "review_index": 418,
+  "market_id": "3251341",
+  "condition_id": "0x31877856abac118ebb9e8a64c5abac5c4455a56b7f2ac276c1dd3444929578df",
+  "criteria_sha256": "01dcbbfa425f65a724884762203f29b0732752f282bae308441a217f30913d1a",
+  "status": "valued",
+  "literal_analysis": "ExactGoogle2026USPeople#1rank, notabsolute/Japan/global/athlete. Navigationnotbinding; mayresolveonpublication, no listbyMar31,2027 23:59ET→Other/thisNO. No guaranteedJanuarycash.",
+  "evidence": [
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-20T02:28:40.127669Z",
+      "finding": "google_method; rawSHA ad53b7075e618ab11ebef5a1f46976964cd2c7d95bd5e9684c2d591eedb40830; boundedprimaryfindings in linkedsourceunit."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2023/us/",
+      "observed_utc": "2026-10-20T02:28:48.963392Z",
+      "finding": "google_2023_us; rawSHA 1e5f98b43129d43cd4a0a18c6d335e24088547f1074543c6838f7014f6d6f75b; boundedprimaryfindings in linkedsourceunit."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/2025/us/",
+      "observed_utc": "2026-10-20T02:28:41.169457Z",
+      "finding": "google_2025_us; rawSHA f01155270d7e59b8612c7d57c42a9f6d0b5aae6dc1621992cae510b848ff59d8; boundedprimaryfindings in linkedsourceunit."
+    },
+    {
+      "url": "https://www.mlb.com/news/shohei-ohtani-leading-off-in-game-4-of-2026-nlcs-vs-brewers",
+      "observed_utc": "2026-10-20T02:29:02.235572Z",
+      "finding": "mlb_ohtani_oct16; rawSHA 8f993db1be15ff932dc62fd4ea2502f0ec8eef2f2be5236048a5ce137529eb97; boundedprimaryfindings in linkedsourceunit."
+    },
+    {
+      "url": "https://www.mlb.com/news/shohei-ohtani-unlikely-to-pitch-in-2026-will-focus-on-hitting",
+      "observed_utc": "2026-10-20T02:29:02.981900Z",
+      "finding": "mlb_ohtani_sep08; rawSHA ddff6e2db6c2ef6e03858faefb0787fdc92659f82c0ea62b1a60f5295523f2a2; boundedprimaryfindings in linkedsourceunit."
+    },
+    {
+      "url": "https://www.mlb.com/world-baseball-classic/history/2026",
+      "observed_utc": "2026-10-20T02:45:50.092383Z",
+      "finding": "wbc_history; rawSHA 01a90e9d6104a3afa818f36ab38e2360a79fb3d320ba84ca28d5f42a595a9889; boundedprimaryfindings in linkedsourceunit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.030115400000000004,
+    "low": 0.002,
+    "high": 0.25,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfitted publication×threecurrent/futurebreakout scenarios, primary authored before ownquotes.",
+    "reasoning": "USPeoplegrowthcriterion and highpriorsearchbaseline differfromfame. Known2026sportsweakening offsetsWBCexposure; hiddenGooglecohort/unseenpast/futureshocks explicit. No measuredrank or calibratedperson-levelbase rate; broaduncertainty.",
+    "model_path": "models/0418_google_people_primary_0249.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0418_quote_0250.json",
+    "quote_file_sha256": "c4f59e595204bbf1cde367c8ff05aae99d2d590b05a42b232cdcb7aa45b7a990",
+    "quote_capture_utc": "2026-10-20T02:46:51.055231+00:00",
+    "gamma_received_utc": "2026-10-20T02:46:50.861344+00:00",
+    "horizon_days": 50.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.030115400000000004,
+        "selected_stress_probability": 0,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792464382782",
+        "book_received_utc": "2026-10-20T02:46:51.053853+00:00",
+        "book_age_seconds_at_receipt": 28.27185297012329,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 426.0,
+            "gross": 1.0050900000000005,
+            "fee": 0.05008,
+            "fills": [
+              {
+                "shares": 341.71,
+                "price": 0.002
+              },
+              {
+                "shares": 79.99,
+                "price": 0.003
+              },
+              {
+                "shares": 4.300000000000026,
+                "price": 0.019
+              }
+            ],
+            "net": 1.0551700000000004
+          },
+          "bids": {
+            "complete": true,
+            "filled": 426.0,
+            "gross": 0.426,
+            "fee": 0.02128,
+            "fills": [
+              {
+                "shares": 426.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.40471999999999997
+          }
+        },
+        "taker_cost_usd": 1.0551700000000004,
+        "central_expected_profit_usd": 11.7739904,
+        "selected_stress_profit_usd": -1.0551700000000004,
+        "break_even_before_carry": 0.002476924882629109,
+        "break_even_constant_carry": 0.002487647179089176,
+        "current_execution_authorization": false,
+        "gross_shares": 426
+      },
+      "No": {
+        "probability": 0.9698846,
+        "selected_stress_probability": 0.8698846,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792464382782",
+        "book_received_utc": "2026-10-20T02:46:51.053853+00:00",
+        "book_age_seconds_at_receipt": 28.27185297012329,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.995,
+            "fee": 0.00025,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.999
+              }
+            ],
+            "net": 4.99525
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.99,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.998
+              }
+            ],
+            "net": 4.9895000000000005
+          }
+        },
+        "taker_cost_usd": 4.99525,
+        "central_expected_profit_usd": -0.1458270000000006,
+        "selected_stress_profit_usd": -0.6458270000000006,
+        "break_even_before_carry": 0.9990500000000001,
+        "break_even_constant_carry": 1.00337476186644,
+        "current_execution_authorization": false,
+        "gross_shares": 5
+      }
+    },
+    "hypothetical_side_gross_shares": {
+      "Yes": 426,
+      "No": 5
+    },
+    "minimum_and_fill_selection": "5sharesvenue vs1USDroute;5YESgross.01failsroute.426YESwalkgross1.00509 (341.71@.002,79.99@.003,4.3@.019);5NOgross4.995. An initial500shareplanningwalk was oversized relative to minimum, preserved separately; final uses426. Makers at.001–.002stillfail selectedYES0; NO.998–.999failscentral.9698846. Adversefill fromprivate search/celebrity news remainsunknown.",
+    "fallback_165day_break_even": {
+      "Yes": 0.0025124849382007113,
+      "No": 1.0133928950017654
+    },
+    "capital_and_alternatives": "Noallocation. SharedPM/oracle risk; Messisportsposition not searchhedge. Lastdated02:15 threeLIVEbids6.50/pUSD19.251290, notfreshentrycollateral. VariableAave3.2035%datedOct19 18:02/fundingandunwrapgas notfree. KnownNY414/Felix416 failreserves; this isnot anexchange-widecomparison. No entryorwatcher."
+  },
+  "verdict": "NO_ENTRY: 426YEScost1.05517/central+11.77399/selected-1.05517;5NOcost4.99525/central-0.14583/selected-0.64583. Ordinarymakersfailselectedstress; noallocation.",
+  "reopen_condition": "OfficialGoogle2026method/list orcompatibleUSgrowthcohortdata/materialpersonnews, freshfullbothsideexecution economics/portfolio/vettedgate.",
+  "evaluated_utc": "2026-10-20T02:48:19.845787+00:00",
+  "question": "Will Shohei Ohtani be the #1 searched person on Google in the US this year?",
+  "valuation_author": "primary_operator",
+  "original_index": 418,
+  "report_sha256": "72ad021cb78ac20186bd3ac470cef44172585f27606222011995877de3e2287b"
+}

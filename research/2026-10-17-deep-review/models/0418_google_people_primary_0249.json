@@ -1,0 +1,44 @@
+{
+  "schema": "primary_event_tree.v1",
+  "review_index": 418,
+  "written_utc": "2026-10-20T02:46:50.428708+00:00",
+  "own_quotes_seen": false,
+  "source": "data/deep_review_20261017/work/0418_primary_sources_0249.json",
+  "source_sha256": "abdac136b36a5bfcea6029fc6450cbe6780a5e70250ea7ad528fea84299ef17b",
+  "forecast": {
+    "p_yes": 0.030115400000000004,
+    "low": 0.002,
+    "high": 0.25,
+    "actual_entry_reserve_pp": 10,
+    "selected_yes": 0,
+    "selected_no": 0.8698846,
+    "confidence": "low; unfitted subjective bridge, no observed2026rank"
+  },
+  "publication_by_fallback_probability": 0.98,
+  "conditional_scenarios": [
+    {
+      "name": "ordinary continuation of known sports/media exposure",
+      "weight": 0.91,
+      "p_people_rank1": 0.003
+    },
+    {
+      "name": "already-established2026breakout not visible in bounded reviewed evidence",
+      "weight": 0.05,
+      "p_people_rank1": 0.2
+    },
+    {
+      "name": "major future nonfatal story before Googlemeasurementcutoff",
+      "weight": 0.04,
+      "p_people_rank1": 0.45
+    }
+  ],
+  "reasoning": [
+    "Exact USPeoplegrowthcriterion: Japanese/globalpopularity or highestathlete searches cannot settlethismarket. Google2025method is a continuityassumption for2026, not verified2026rulepublication.",
+    "Known2026sports pathisless dominantthan2025, priorhighsearchbaseline andabsencefrom2024/25People top10 weighagainstordinary#1. Notlinearlymappinghome runs into searches; WBCexposure included, notignored.",
+    "DamarHamlin/AntonioBrown demonstrate athletecanwin via health/controversyshock; not an Ohtani-person base rate.5%unseenexistingbreakout and4%futuremajorstory branches prevent a falseabsence forecast. No allegation ofnewwrongdoing or automaticinjurysearchsurge.",
+    "Scenario45%conditionalwin applies only to a verylarge alivepersonstory, not anyheadline. Branchweights/rankprobabilities are uncalibrated judgments; alternativejudgments can move probabilitybyseveralpp.",
+    "Broad.2–25% includes hiddenGooglecohort/windowdata, unseenexistinggrowth, futurestory/algorithm/adjudication changes.10ppentryreserveclassdefault, not statisticalCI. No measuredtail permitsK5exception."
+  ],
+  "timing": "ExpectedusualDecemberlist, but noverified2026releasedate. RuleallowsOtheronlyafterMar31,2027 23:59ET, so earlyJanuaryliquiditynotguaranteed.50daybaseline/165dayfallbackcarry sensitivity; sourceadjudicationcoulddelayfurther.",
+  "portfolio": "NoOhtanipositions/bids; sharesPM/oracle risk. ExistingMessifootballexposure isnot search-index hedge. Comparecash/Aave/knownheldandcandidate risks; no independencecredit."
+}

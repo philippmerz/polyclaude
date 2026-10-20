@@ -1,0 +1,23 @@
+{
+  "case_count": 2,
+  "cases": [
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 425,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal_0301/case_0425.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 426,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal_0301/case_0426.json"
+    }
+  ],
+  "created_utc": "2026-10-20T02:56:13.857329+00:00",
+  "schema": "deep_review_terminal_status_batch.v1"
+}

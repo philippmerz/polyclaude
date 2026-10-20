@@ -1,0 +1,9 @@
+{
+  "review_index": 430,
+  "updated_utc": "2026-10-20T03:17:58.391995+00:00",
+  "phase": "facts only; not started/valued; root complete-rule/source/forecast/economics pending",
+  "source_paths": [
+    "work/0430_facts_0308.json"
+  ],
+  "facts_sha256": "efec11eac5d78b9a2438cd53e9d3212552d871c1b0043dfff3120c645facd795"
+}

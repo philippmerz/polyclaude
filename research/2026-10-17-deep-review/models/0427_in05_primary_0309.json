@@ -1,0 +1,58 @@
+{
+  "schema": "primary_margin_mixture.v1",
+  "review_index": 427,
+  "written_utc": "2026-10-20T03:03:29.691845+00:00",
+  "own_quotes_seen": false,
+  "source": "data/deep_review_20261017/work/0427_primary_sources_0309.json",
+  "source_sha256": "d24dc63480cede2c9d84d59e3f17645ef6518c8aa1ff546f092b8ff02fe27d4b",
+  "forecast": {
+    "p_yes": 0.7675103902862377,
+    "p_no": 0.2324896097137623,
+    "low": 0.35,
+    "high": 0.98,
+    "actual_entry_reserve_pp": 15,
+    "selected_yes": 0.6175103902862377,
+    "selected_no": 0.08248960971376232,
+    "confidence": "low-to-medium; unfittedmixture, oldinterestedpoll"
+  },
+  "reference_outcome": "Yes = Republicanpartywin, not Fordwin",
+  "historical_R_minus_D_margin_pp": 18.57969287647131,
+  "scenarios": [
+    {
+      "name": "structuralRepublicanadvantageerodedbyunfitted6ppenvironment",
+      "weight": 0.5,
+      "margin_mean_pp": 12.57969287647131,
+      "margin_sd_pp": 7,
+      "p_R_candidate_win": 0.9638400463716832
+    },
+    {
+      "name": "oldpartisanlocalpollinformativewithunfitted2ppRhouseadjustment",
+      "weight": 0.35,
+      "margin_mean_pp": 4,
+      "margin_sd_pp": 8,
+      "p_R_candidate_win": 0.6914624612740131
+    },
+    {
+      "name": "genuineFordmomentum/incumbentweakness",
+      "weight": 0.15,
+      "margin_mean_pp": -4,
+      "margin_sd_pp": 8,
+      "p_R_candidate_win": 0.3085375387259869
+    }
+  ],
+  "party_mapping": {
+    "normal_major_candidate_party_mapping_weight": 0.99,
+    "unusualparty/caucus/other_outcome_weight": 0.01,
+    "p_R_under_other_branch": 0.5
+  },
+  "sampling_note": "Forunweightedn400 atR.48/D.46, marginSE≈100*sqrt(.94-.02**2)/sqrt(400)=4.85pp; quoted4.9%MOEistoplinesnotmargin. Unknownsampledesign/fullweights;7/8ppregimeSDs includeage/house/turnout error, notjuststatisticalmargin.",
+  "reasoning": [
+    "Official2024districtR+18.58anchorsstructuraladvantage under verifiedboundarycontinuity.6pperosionisjudgmentalcurrentenvironment scenario, not latestgenericpoll estimate.",
+    "JulyinternalR+2 genuineinformation, butselectedrelease, unknownmode/weights/questionnaire and90dayage preventtreatingaspresentneutralpoll. +2ppRhouseeffectassumptionunfitted, notempiricalpollsterbias; 35%regimeweightkeepsitmaterial.",
+    "15%Fordmomentumregimepermitsrealignment/incumbentweakness/strongDemocratturnout; positiveinformation50/44resultisnotobservedvote andnotdoublecounted.",
+    "Campaignads/proposeddebatesnotenewvoteobservations. Spartzchallengecouldchangeifactualdebatesoccurred, butstation/acceptance/outcomeunknown; pendingbeforeanyrestingbid.",
+    "BroadR35–98%admitsoldpollclose-trueraceandstructuralRhold.15ppselectedreserve(default10+5foroldpartisan/outlierbridge) chosenbeforequotes. No fittedbacktest/independentmodelvotes/calibratedposterior."
+  ],
+  "timing": "Nov3election;party/caucusclassifiedwhenall2026Houseracesconclusivelycalled, credibleconsensusorFECifambiguity.16daybaseline and60daycarrydelay sensitivity; no guaranteedNov4orJanuarycash.",
+  "portfolio": "BothsidescompeteexistingME02/CA06/NY01commitments,MIheld/cash/Aave/Kimi. Nationalturnout/newsshared; no independence/hedgecredit or automaticKellydeficitallocation."
+}

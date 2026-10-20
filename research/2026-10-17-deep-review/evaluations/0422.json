@@ -1,0 +1,170 @@
+{
+  "review_index": 422,
+  "market_id": "2872613",
+  "condition_id": "0x21ee027a604ded6a8a0ae8aa659568cb42d78e61157d9b91ca658b249fe44662",
+  "criteria_sha256": "8e45722c6d6f0bd5fbcf0c44328c25a7b76a57a1d0b0c0877a20ffa368fb761c",
+  "status": "valued",
+  "literal_analysis": "ActualClavicular/BradenPeterswearingYarmulke/Kippahphotographed/videotaped aftercreation2026-07-10T17:30:26.612493Z throughDec31 23:59ET; credibleconsensus. Editedmemes/baseballcaps/anotherperson/Wallvisit notproof. Postdate notfilmingtime; source/AI-disputedsettlementdelaypossible.",
+  "evidence": [
+    {
+      "url": "https://www.jta.org/2026/07/12/culture/clavicular-cuts-a-path-across-tel-aviv-dividing-pro-israel-influencers-over-his-record-of-antisemitism",
+      "observed_utc": "2026-10-20T02:28:10.151945Z",
+      "finding": "Clavicular cuts a path across Tel Aviv, dividing pro-Israel influencers over his record of antisemitism; rootraw-hash/fullavailablebodyreview; scopedfindingsin linkedsourceunit."
+    },
+    {
+      "url": "https://www.algemeiner.com/2026/07/22/when-an-influencer-visited-israel-his-own-fans-declared-him-a-jew/",
+      "observed_utc": "2026-10-20T02:27:48.631450Z",
+      "finding": "When an Influencer Visited Israel, His Own Fans Declared Him a Jew; rootraw-hash/fullavailablebodyreview; scopedfindingsin linkedsourceunit."
+    },
+    {
+      "url": "https://www.thefp.com/p/clavicular-israel-trip",
+      "observed_utc": "2026-10-20T02:50:08.400610Z",
+      "finding": "FreePressdirectinterviewpartial; rootraw-hash/fullavailablebodyreview; scopedfindingsin linkedsourceunit."
+    },
+    {
+      "url": "https://x.com/Clavicular0/status/2075806006928413064",
+      "observed_utc": "2026-10-20T02:51:08.212439Z",
+      "finding": "Rootviewedhash-boundthumbnail: baseballcapbackview, undercapunknown; nofacialidentity/fullvideoclaim. PostdateJuly11notfilmingtimeproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.326,
+    "low": 0.05,
+    "high": 0.85,
+    "actual_entry_reserve_pp": 20,
+    "method": "Subjective latentpastact plusfuturephotographedact/credible-consensus tree; no calibratedpopulationmodel.",
+    "reasoning": "Trip/rabbincontacts make simpleactplausible; noverifiedoriginalwear, editedmemes/authenticity/sourcecoverage andunknownfutureintent producebroadrange. Twoframesnotabsence. Stalepriceexposuredisclosed; ownlivebookafterfinalmodel.",
+    "model_path": "models/0422_clavicular_primary_0259.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/0422_quote_0259.json",
+    "quote_file_sha256": "f4a5228e77eb20437d7bb05f4ec3ffab1475ad0fbe68d01ca4ef710e94cd3e2b",
+    "quote_capture_utc": "2026-10-20T02:54:46.480703+00:00",
+    "gamma_received_utc": "2026-10-20T02:54:46.357433+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.326,
+        "selected_stress_probability": 0.126,
+        "best_bid": 0.44,
+        "best_ask": 0.46,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792464885341",
+        "book_received_utc": "2026-10-20T02:54:46.479934+00:00",
+        "book_age_seconds_at_receipt": 1.1389338970184326,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.3000000000000003,
+            "fee": 0.06211,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.46
+              }
+            ],
+            "net": 2.3621100000000004
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.2,
+            "fee": 0.06161,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.44
+              }
+            ],
+            "net": 2.1383900000000002
+          }
+        },
+        "taker_cost_usd": 2.3621100000000004,
+        "central_expected_profit_usd": -0.7321100000000003,
+        "selected_stress_profit_usd": -1.7321100000000005,
+        "break_even_before_carry": 0.47242200000000006,
+        "break_even_constant_carry": 0.4754929005839338,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.6739999999999999,
+        "selected_stress_probability": 0.4739999999999999,
+        "best_bid": 0.54,
+        "best_ask": 0.56,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792464885341",
+        "book_received_utc": "2026-10-20T02:54:46.479934+00:00",
+        "book_age_seconds_at_receipt": 1.1389338970184326,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.8000000000000003,
+            "fee": 0.0616,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.56
+              }
+            ],
+            "net": 2.8616
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 2.7,
+            "fee": 0.0621,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.54
+              }
+            ],
+            "net": 2.6379
+          }
+        },
+        "taker_cost_usd": 2.8616,
+        "central_expected_profit_usd": 0.5083999999999995,
+        "selected_stress_profit_usd": -0.4916000000000005,
+        "break_even_before_carry": 0.57232,
+        "break_even_constant_carry": 0.5760402709065136,
+        "current_execution_authorization": false
+      }
+    },
+    "minimum_and_timing": "5sharesvenue; YESgross2.30/NOgross2.80 both exceedseparate1USDroute.75daynormalearlyJanplanning, not guaranteedcredibleconsensus/settlement; AIauthenticity/source delayspossible.",
+    "maker_comparison": "OrdinaryYES44–46cfailscentral32.6/selected12.6; ordinaryNO54–56cfailsselected47.4 despitecentral67.4. Remotecheapbid cannot assume unchangedfillconditionalprobability; no lowpriceorder or reservefit.",
+    "risk_and_alternatives": "No currentClavicularholding/bid; hiddenalready-knownwear/AIauthentication/socialintent andPMoracle/venuerisks. No independentKelly/hedgecredit. Datedcurrentholdings/threebids/cash/Aave compete; variable3.2035%hurdle/fundinggas illustrative. No sourcecertainty or newfinancialgates/writer inferred fromquotes."
+  },
+  "verdict": "NO_ENTRY:5YEScentral−.73211/selected−1.73211;5NOcentral+.50840/selected−.49160; ordinarymakersfailselectedstress. No allocation or monitoring change.",
+  "reopen_condition": "Authenticoriginalphoto/fullvideo/filmingtime/credibleconsensus orverifiedfutureevent/statement, freshbothsideexecutioneconomics/currentaccount/portfolio/vettedpath.",
+  "evaluated_utc": "2026-10-20T02:55:50.805563+00:00",
+  "question": "Will Clavicular wear a Yarmulke in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 422,
+  "report_sha256": "f2777a4e75219a58c330d13a2dc45508e7c90bb3e11055a11da3b20e05f19bd1"
+}

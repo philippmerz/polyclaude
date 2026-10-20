@@ -1,0 +1,22 @@
+{
+  "review_index": 427,
+  "sources": [
+    {
+      "name": "census_current",
+      "url": "https://www.census.gov/programs-surveys/decennial-census/about/rdo/congressional-districts.html",
+      "status": 200,
+      "raw_sha256": "e151c0925d0c54144040a61db887246453d421ad5a5c82a8033509cacd55008d",
+      "received_utc": "2026-10-20T03:00:34.145560Z",
+      "receipt": "logs/deep_review_20261017/0427_primary_0306/census_current.receipt.json"
+    },
+    {
+      "name": "sos_maps",
+      "url": "https://www.in.gov/sos/elections/statistics-and-maps/",
+      "status": 200,
+      "raw_sha256": "88cd0fe434bb07c0c605ce1cb79b0953ebeb47f5d1940ca6787a0ecc01899e92",
+      "received_utc": "2026-10-20T03:00:33.654880Z",
+      "receipt": "logs/deep_review_20261017/0427_primary_0306/sos_maps.receipt.json"
+    }
+  ],
+  "finding": "CurrentCensus2026cycletext andSOSmapdesignation checked byroot; bodymeaning/limits inprimarysourceunit later."
+}

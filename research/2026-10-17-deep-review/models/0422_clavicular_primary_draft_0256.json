@@ -1,0 +1,32 @@
+{
+  "schema": "primary_event_tree.draft.v1",
+  "review_index": 422,
+  "written_utc": "2026-10-20T02:51:32.500639+00:00",
+  "phase": "provisional; original-media collector followup in progress, not valued/rejected",
+  "source": "data/deep_review_20261017/work/0422_primary_sources_0256.json",
+  "source_sha256": "72185ca6cc368ee3b1556bd696962c8144e95dc64ac45552d3af8afa191366ef",
+  "own_live_quotes_seen": false,
+  "price_exposure": "Ownhistoricalapprox22–44% and siblingWall3% seenincidentally in searches; not numericalinputs, anchoringrisk remains. Do not claim globallypriceblind.",
+  "draft_forecast": {
+    "p_yes": 0.326,
+    "low": 0.05,
+    "high": 0.85,
+    "reserve_pp": 20,
+    "confidence": "low; uncalibrated behavior/history/verification model"
+  },
+  "branches": {
+    "qualifying_postcreation_pastphoto_or_video_exists_unseen": 0.2,
+    "credible_consensus_given_past": 0.95,
+    "future_documented_wear_given_no_past": 0.2,
+    "credible_consensus_given_future": 0.85
+  },
+  "reasoning": [
+    "Already-known Israeltrip/rabbincontact makes a simplepublicact plausible. Kippahmemes and AIWallimages create substantial falsepositive risk; explicitcreationtime blocks oldfootage. Wallvisit isnot kippahproof andbaseballcapdoesnot satisfyexactobject.",
+    "20%unseenpastphoto/video branch acknowledgesmissingclips/history withoutassertingeventabsence.95%conditionalacceptance isnot anempiricalauthenticationrate.",
+    "Ifnopast,20%futurephotographed/videotapedwearthroughDec31 allows newtravel/meetup/streamingcontent despiteaudiencebacklash;85%credibleconsensus accountsforauthenticity/coverage. No verifiedfuturetrip orrepresentatives commitment.",
+    "Allbranchweights judgments, no calibratedreferenceclass.20ppreserve coverslargehistory/informedfill/intent/adjudicationerror, not statisticalCI. Broadrange5–85% admitsneverwearandhighlatentpast/currentprivateinformation scenarios.",
+    "Existingnoexposure; samePM/oraclerisks andcelebritynews shareinformationchannels, noindependencecredit. Wholepipeline freshbeforemoney."
+  ],
+  "timing": "Actwithincreation2026-07-10T17:30:26.612493Z toDec31 23:59ET, authenticatedcredibleconsensus canarrivelater;75daycarrynormalJanplanning, source/AI authenticitydispute can delay.",
+  "pending": "Do not finalize until collectororiginalmedia supplement returned or authoritative failure withnamedlimits. Positivequalifyingoriginalsource would replace judgmenthistory branch, not mechanicallykeepdraftp."
+}

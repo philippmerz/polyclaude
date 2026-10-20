@@ -1,8 +1,13 @@
 {
   "review_index": 418,
-  "phase": "facts collected; pending primary full-rule/source review, probability and both-side economics",
+  "updated_utc": "2026-10-20T03:17:58.391995+00:00",
+  "phase": "complete; valued; effective ledger/revision governs",
+  "report": "evaluations/0418.json",
+  "report_sha256": "72ad021cb78ac20186bd3ac470cef44172585f27606222011995877de3e2287b",
   "source_paths": [
-    "work/0418_facts_0230.json"
+    "work/0418_primary_sources_0249.json"
   ],
-  "facts_sha256": "17bd29034bc90ba53f962d25848bc6b007f68897bcd545e905626bcabd844a75"
+  "model_paths": [
+    "models/0418_google_people_primary_0249.json"
+  ]
 }
