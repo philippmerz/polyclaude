@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-20T04:16:46.396916+00:00"
+reviewed_at: "2026-10-20T04:32:10.611339+00:00"
 valid_until: "2026-10-20T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 0a824346cdfc1e4837521264fa705e26653eb451629dd9914393cb0b379fd0b1
+  README.md: 2e545daf223a93db864e9c42c89af0f2ab4c7bba1e46566c2a0cc35d18550af8
   strategy/00_philosophy.md: afd7fe802203212977eece3e513df2b6a47dd56edf61ae80732fa54ff654bf1d
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 0026e6e8534bb2c213505cc79051f09e8272ef038647aa735f443f1f926fa7e0
   strategy/03_opportunity_method.md: e64b3a09c86b4f54e12217ea20ce505e8179570f5d57cde0c16cda8531d4f99a
   scripts/README.md: 75cea379f799763e39a767ed09248386b1470cc823f386595cb665570ce3b480
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 7fc86762e213697d4cce425175bb0a989648a820e8dc65bdb29761de8cd5f097
+  notes/backlog.md: dce864c2368831eca81983fa8b3611fb2626ed57f67de8c43d097797f65cec3f
   notes/resting_orders.md: 04bce76fe85a3c5251553d492b33b3fdd4d802372bf1e4515fe86f7dd3f54614
-  notes/journal.md: c46500820b3c6b85aaa85e96599eb5ab4cbd45dd5453e7c74d11027b85996b1d
+  notes/journal.md: 82091170a819d6ea20b3da203d952f1908bd805019ece9fb8a58bd62595cb257
 ---
 
 ## Run status
@@ -37,6 +37,6 @@ AuditCLEAN/cruxquiet/Ostium0/nochange/UMA0/hurdle4clear0flagged/watchlist0/0over
 
 ## Finite research and limits
 
-**374valued/12blocked/366factual/2248pending;752base+69revisions;434active.**430/431/433individuallysaved/indexed/noentry.433exact25bp-cutYES13.532%/selected3.532, actualstatement/minutes/survey/CPI read; futuredata/source risk explicit.434fullrule and Nov9officialheader versus Nov11frozen schedule discrepancy verified; count-data supplement pending.435–439collector facts not decisions;408sourcegap case-specific. Single-active-caseguard now rejects nextstart afterfailedrecord;50relevantisolated/readerchecks passed, no financial/daemonpath edit. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), selectedresume; preserve everycompleted evaluation. Nextnotification400valued/materialfinding/block.
+**374valued/12blocked/366factual/2248pending;752base+69revisions;434active.**430/431/433individuallysaved/indexed/noentry.433exact25bp-cutYES13.532%/selected3.532, actualstatement/minutes/survey/CPI read; futuredata/source risk explicit.434historical/report sources saved; first-publication count mapping and product-specific timing unresolved. General U.S. headerNov9 is not proof the tornado-product date differs from frozenNov11; latest collector mapping remains unverified.435–439facts not decisions;408sourcegap case-specific. Single-active-caseguard rejects nextstart afterfailedrecord;50relevantchecks passed, no financial/daemonpath edit. Read [checkpoint](deep_review_checkpoint.json), [small phase](../data/deep_review_20261017/work/goal0018_RESUME.json), selectedresume; preserve completed evaluations. Nextnotification400valued/materialfinding/block.
 
 Discovery03:27–29 capped/incomplete:61metadata batches/17+1022rows inspected, not valuations;63+1978selected outside delta batches remain unvalued. Current mutable prior copied before overwrite, not retroactive recovery of earlier missing identity comparison. [Coverage](../data/deep_review_20261017/work/tick030114_discovery_primary_0343.json). No universe-wide absence finding. Entryconsole sibling/ask-label UI repair optional; exact contracts/vetted gates govern. Preserve unrelated changes and private raw account/copyright bodies.

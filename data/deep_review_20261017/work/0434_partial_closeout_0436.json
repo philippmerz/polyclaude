@@ -1,0 +1,21 @@
+{
+  "schema": "primary_partial_handoff.v1",
+  "review_index": 434,
+  "saved_utc": "2026-10-20T04:32:10.611339+00:00",
+  "prior_partial": {
+    "path": "work/0434_primary_partial_0459.json",
+    "sha256": "73ecad72e6d346abae9b567d8523b634d0e35e2cffd4314ce16c5c5e920202c9"
+  },
+  "new_collector_packet": {
+    "path": "work/0434_ncei_mapping_0458.json",
+    "sha256": "e53800307a168c423bb8c18c94d9f19b386ff5b32be95ee05351a8e445136edd",
+    "verification": "Collector completed; root has read this small packet but has NOT verified its new raw/gzip receipts or read its underlying bodies/JS/FAQ. Do not adopt as a forecast or completed evaluation."
+  },
+  "clarifications": [
+    "Prior Nov9 header is the general October U.S. release header; it has not been established as tornado-product release timing. Do not infer a product-specific schedule change relative to the frozen Nov11 criterion.",
+    "SPC report rows, surveyed tracks and the first published NCEI preliminary number are different possible vintages. Prior source review does not establish their mapping. Regular SPC CSV has some deduplication; do not label all its rows wholly raw.",
+    "No primary probability/range, model, own-price read, entry/rejection or case-specific blocking record has been made. Frozen counts remain374valued/12blocked/366factual/2248pending, active434."
+  ],
+  "next_independent_research_step": "Inspect new mapping evidence and product-specific schedule before deciding whether a defensible forecast bridge exists; otherwise a named case-specific gap may warrant blocked_after_review. Save434 before starting435. No work or idle continuation scheduled here.",
+  "bounded_tick": "Requested03:01 eleven-step check already completed; exact alert/proof and successful command receipts reverified offline after compaction. No new account/financial/source reads, trade, forecast, Telegram or goal lifecycle change. Fixed news cutoff03:28:14.986261Z; next existing06UTC safety or earlier material event."
+}

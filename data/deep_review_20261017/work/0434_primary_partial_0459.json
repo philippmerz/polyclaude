@@ -1,0 +1,40 @@
+{
+  "schema": "primary_partial_review.v1",
+  "review_index": 434,
+  "saved_utc": "2026-10-20T04:26:27.979849+00:00",
+  "phase": "Active434; substantial source review, no probability/valuation/quote/entry yet.",
+  "source_units": [
+    {
+      "path": "work/0434_facts_0350.json",
+      "sha256": "bf081575b5a7ff1f63699e58f6d1a9bcaaea25619c1c7a34012077cf44494fcf"
+    },
+    {
+      "path": "work/0434_supp_facts_0432.json",
+      "sha256": "52b19e13b351d58f56766578bf1a1023acb7a2fbdfd74f6c905d04a879c8ac9b"
+    },
+    {
+      "path": "work/0434_current_reports_0438.json",
+      "sha256": "40557c0602fadd7fcefcfc7750e820ddd92f5ba8a94b34030937154b618f5e9a"
+    },
+    {
+      "path": "work/0434_nws_tracks_0443.json",
+      "sha256": "2a5b23f81d0e90a04ccbebd23f8dbe12d1e15abd0e2a010097441b20b0e01d79"
+    }
+  ],
+  "root_verified": [
+    "Full frozenrule read. OriginalNCEI3raw/gzip pairs verified. Header(not extractedmaintext) saysOctoberU.S.ReleaseNov9 2026 11EST; ruleexplicitNov11 11ET (16UTC). Count35–59inclusive; firstpostfrozenrelease controls even ifpreliminary, pretimepreliminaryexcluded. Temporarydelay/nextpublicationmostrecentpriormonthfallback/permanentcrediblealternative. FinalNCEIonly versuspostprelimcontrol needscoherentwindow interpretation.",
+    "HistoricalOctoberJSON raw/gzip verified:1950–2025n76/15brackethits/mean38.80median29;1996–2025n30/5hits/mean60.67median62.5;2006–2025n20/4hits/mean59.35;2016–2025n10/2hits/mean59.7. Final/currentvintage frequency is not calibrated firstpublishedpreliminaryevent probability.",
+    "Root verified20SPCdaily raw/gzip/rowcounts andreadall72rows.19rowskeySep30 (17before24UTC,2at00:01/00:23UTC Kansas=>Sep30local);53interiorOctoberreportrows, notevents. Rawcomments explicitlyrepeatstart/end/damage forsame tracks; noexactduplicatesdoesnot establishdistincttornadoes. Oct19windowpartial, archiveentriescanchange.",
+    "All6NWSnewraw/gzip pairs verified. RootreadCHSoverview/fourdetailtableheaders+preliminaryStatesborolisting; CAEfive trackheaders/date/EF andpreliminarynote (fullnarrativeoutputtruncated; targetedheadersre-read); ILMtwotrackdetails/Atkinsonnodamageparagraph; RAHsingleHarrellsheader/preliminarynote. MHXtwoactualPNSheaders areunrelatedOct17/18windgusts, notindexedOct15tornadoes. No nationaltracktotal asserted.",
+    "CurrentSPCday4–8outlookHTTP200 rootread1515chars: issuedOct19 08:30UTC, validOct22 12Z–27 12Z, isolatedseverepotentialSW/HighPlains/modestmoisture; no severeprobarea introduced. Not zero-tornado forecast; not remainderOct28–31 coverage.",
+    "NewSepNCEImonthlyseries endpoint04:22:49shows20260957*,20250957. Directmonthlyreportshell200exposes noactualnarrative. This doesnot establishfirstpostNCEIcountsrecipe or mappingfromreportsto surveyedtracks."
+  ],
+  "load_bearing_gap": "Potential firstpostpreliminaryNCEI value may follow a different report/confirmation/dedup vintage from eventualsurveyed/finalhistorical counts. Cannot silently substitute53SPCreports or regionaltracksum as resolutionvariable. Adaptercollector is inspectingactualNCEIreportbody/notes toresolve countrecipe; no quote-drivenforecast.",
+  "pending_source_unit": "work/0434_ncei_mapping_0458.json factualcollector running; inspect actualreceipt/content, notjustclaim.",
+  "next_actions": [
+    "Verify available definition/mapping evidence; forecast only if a defensible primary bridge canbe made, otherwise documentcase-specificblocked_after_review. Ordinaryfutureweatheralone is not a block.",
+    "Ifvalued, bothsidescurrentfees/depth/route minima/makerselection/carry/fullportfolio before record. Ifblocked, preserveboth-sides conditionalprices without fabricatedp andreopen exactgap.",
+    "Record434 beforestart435; single-activeguard is nowlive.435terminalfactsready notrootrecorded."
+  ],
+  "not_done": "No p/range/model or ownprice read, no rejection/exclusion/trade; originalfull3000objectivecontinues. Financial03:27/source03:28–30observationsretain dates;06UTC/earliermaterial safety."
+}

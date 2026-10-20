@@ -1,9 +1,9 @@
 {
   "schema": "finite_goal_progress.v1",
-  "updated_utc": "2026-10-20T04:16:46.396916+00:00",
+  "updated_utc": "2026-10-20T04:32:10.611339+00:00",
   "previous_goal_turn_classification": "progress",
   "evidence": "Publishedb2a521f saved honest430partial and434/435/436 facts, repaired active-case handoff. Current430 individually valued/saved/indexed.",
-  "current_turn_progress": "430/431/433individuallyvalued/saved/indexed, no entry.434active/fullrule/source-schedule discrepancy read, current/historicalcount supplement pending. Single-active-caseguardimplemented/audited;25isolatedstart/revision tests plus25reader/terminaltests pass.",
+  "current_turn_progress": "Publishedbdc71a2 contains430/431/433valued andsequentialstartguard.434historical/report partial and latest unverified collector mapping are preserved in its selected resume. Bounded03:01tick ends; no further research/account read, financial action or goal lifecycle mutation at closeout.",
   "counts": {
     "completed_valuations": 374,
     "blocked_after_in_depth_review": 12,
@@ -69,5 +69,13 @@
     "window_end": "2026-10-20T03:28:14.986261Z"
   },
   "latest_scheduled_tick": "20261020T030114Z",
-  "active_case": 434
+  "active_case": 434,
+  "scheduled_closeout": {
+    "completed_utc": "2026-10-20T04:32:10.611339+00:00",
+    "tick": "20261020T030114Z",
+    "proof": "research/2026-10-20-0301-checkin.md",
+    "new_financial_reads": false,
+    "new_valuations": 0,
+    "resume": "work/0434_resume.json"
+  }
 }
