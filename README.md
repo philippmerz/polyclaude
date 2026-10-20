@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 238 recorded observations from Apr-25
+The local performance CSV now has 239 recorded observations from Apr-25
 through Oct-20. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,19 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October20 14:02 UTC
+## Last audited snapshot — October20 16:58 UTC
 
-**Indicative trading depth $181.68 versus $170 contributed (+6.87%); trading midpoint $188.94.** Canonical bankroll $194.83 includes $5.89 separately funded gas. Same-producer Polymarket midpoint/depth: $34.99/$27.73. Rounded sequential estimates are not synchronized NAV or proceeds; the $19.72 accounting residual is not audited cash profit. VM/API costs excluded. CSV238 preserves the prior237 rows and flows. [Financial record](research/2026-10-20-1402-financial-snapshot.json).
+**Indicative trading depth $178.57 versus $170 contributed (+5.04%); trading midpoint $188.36.** Canonical bankroll $194.31 includes $5.95 separately funded gas; same-producer PM midpoint/depth $34.40/$24.61. The recorded16:58:07 timestamp is stdout mtime; invocation bounds were not persisted. Rounded sequential estimates are not synchronized NAV or proceeds; $19.72 accounting residual is not audited cash profit, VM/API costs excluded. CSV239 preserves prior238 rows and flows. [Financial record](research/2026-10-20-1658-financial-snapshot.json).
 
-Latest15:55 verification: **zero open orders and zero reservations**. CA06/ME02/NY01 pilot bids were canceled15:48 under standing cancel-first after newly reviewed national vote-intention data; all three terminalCANCELED/0matched.127 trades, all nine position tuples, targetCTFs0 and pUSD19.251290 are unchanged after389s. The $6.50 commitment release is not cash income or profit. No automatic repost; new BUYpause400/600+comparison. Canonical financial mark remains14:02; CSV238 unchanged. [Current check](research/2026-10-20-151845-checkin.json) · [Final proof](data/deep_review_20261017/work/tick151845_cancel_reconciled.json).
+16:57 authenticated verification: **zero open orders,127 complete trades, all nine position tuples unchanged** against final15:55 cancellation proof; zero reservations and no winning redeemable. No trade, transfer, redemption, prior update or new research valuation this check. New BUYpause400/600+comparison remains. [Completed check](research/2026-10-20-165003-checkin.json) · [Account proof](data/deep_review_20261017/work/tick165003_account_ops.json).
 
-HLE14:08 configured monitor returned the same66-row body/KimiK3 score41.08; the July comparison is not a new score event. OpenRouter's current partial week grew to39.870563T, completed weeks unchanged and held target weeks absent; backend cache time is not a usage cutoff. Senate direct403 and Google2026 route404 remain coverage gaps. Clarity's two current rule bodies are identical, with29+29 shares: conditional payout29/58, venue/oracle failure0. [Sources](data/deep_review_20261017/work/tick134616_primary_source_review.json).
+Retain the small directional holdings/no additions after fresh16:58 exact-token exit/stress/carry and joint-loss review. Michigan5NO: current fee-net exit1.40882 versus selected terminal1.70;75d cached-carry sensitivity1.41798. Another5.64pp adverse selected shift reverses that comparison; broad-low cases favor sale. Original Rogers-contract records remain unverified, WBUR adds no rendered new poll, and WDIV confirms forum schedule only. Actual Oct20 remarks remain a gap; debateOct21 23UTC. [Primary judgment](data/deep_review_20261017/work/tick165003_primary_review.json).
 
-Michigan: retain5NO/no add after source, exit/carry and adverse-case review; numerical prior unchanged. Requested Scripps and related media-apology bodies are now recovered; original Rogers-contract evidence and measured voter response remain gaps. National poll results are not district or Michigan Senate win probabilities. MI program scheduled16UTC; actual remarks unverified, debateOct21 23UTC. One material cancellation summary sent. [Primary review](data/deep_review_20261017/work/tick151845_primary_review.json).
+17:01 sources: Kimi's resolving chart unchanged66rows/K3HLE41.08; OpenRouter completed weeks unchanged and current partial43.537T, held target weeks absent. Senate200 displayed list endsSep30; this is not proof no later passage. Google2026 route404 remains a coverage gap. Clarity29+29 retains its dated identical-rule proof: normal conditional payout29/58, venue/oracle failure0. [Source review](data/deep_review_20261017/work/tick165003_primary_source_review.json).
 
-All seven scans ran once, with capped/incomplete coverage. Primary80/638 eligible and thin-tail3000/3119; all81 offline batches/1398 emitted rows independently reproduced from their saved sources. Five structural groups validated,15 quote failures and158 unquoted groups remain; no actionable result was verified in that slice. This does not establish exchange-wide absence. [Coverage index](data/deep_review_20261017/work/tick134616_discovery_index.json).
-
-Four current daemon singletons; UMA0 alerts, hurdle4 clear/0 flagged, state audit CLEAN, no winning redeemable. No daemon code or execution path changed. Disk remains above128MiB critical but below512MiB warning; no additional cleanup. [Operations](data/deep_review_20261017/work/tick134616_ops_facts.json).
+All seven14UTCscans/81batches1398rows retain capped/incomplete coverage; no new entry selected and no exchange-wide absence claim. Four current daemons, UMA0 alerts, hurdle4clear/0flagged, state audit CLEAN, Ostium0open/0limits/nochange. No daemon code changed; disk above128MiB critical/below512MiB warning. No repeated Telegram headline or routine heartbeat. [Discovery coverage](data/deep_review_20261017/work/tick134616_discovery_index.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

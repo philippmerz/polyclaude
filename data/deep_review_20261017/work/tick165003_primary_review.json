@@ -1,0 +1,134 @@
+{
+  "schema": "polyclaude.primary_trigger_review.v1",
+  "tick_id": "20261020T165003Z",
+  "reviewed_utc": "2026-10-20T17:06:32.490390Z",
+  "explicit_requested_id": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+  "literal_MI_outcome": "NO is any non-D winner, not exclusively Rogers.",
+  "source_review": "data/deep_review_20261017/work/tick165003_news_facts.json",
+  "related_addendum": "data/deep_review_20261017/work/tick165003_related_news_addendum.json",
+  "alert_judgments": [
+    {
+      "ids": [
+        "b8e5c884943232b1d7197a5d58953b9ad4690bd2"
+      ],
+      "finding": "Explicit older row read regardless16:50journal. Prior actualDNbody attributes Aegis-contract/wealth/retraction-demand reporting to Drop Site. Original403, financial disclosures/procurement record/letter not independently reviewed; alleged report datesOct13/retractionOct15 from index only. Not adjudicated misconduct or new MI polling.",
+      "decision": "Potentially adverse to heldNO, effect not zero by assumption; no defensible state-specific numerical update from these facts. Retain5NO/noadd after currentexit/stress/joint review."
+    },
+    {
+      "ids": [
+        "1653aa8f319b7d5b83847e9e3e1a1c9e794dc38b"
+      ],
+      "finding": "ExactTRTbody unrecovered. Rootcaptured relatedAA-byline copy of NYT report describing HaleyStevens/Augustprimary, not a bot finding for either current nominee; originalNYT/evidence/funder and TRTstory correspondence unverified.",
+      "decision": "Do not assign presentnominee wrongdoing/vote shift from broad Michigan headline. No new numerical change."
+    },
+    {
+      "ids": [
+        "a0399407adaa7c3bd4191b2e7e84de5fc6caa424",
+        "31a13ac23588433b19156769aec4580d7ca48511"
+      ],
+      "finding": "Roothashed5newcaptures/readWBURandWDIVbodies. WBUR rendered race preview no newpoll; WDIV+officialDEC schedule noonET16UTC only. Linked55m51sWOODdebate is different prior event; not todayforum outcome. Actualremarks/recording remain gap.",
+      "decision": "Programme timing known, content unverified; no event-outcome claim or numerical update."
+    }
+  ],
+  "prior_probability_policy": "All four forecasts and selected/broad-low stresses remain prior primary judgments, not refreshed probabilities merely by current quotes/source delivery. No duplicate Oct20 aging.",
+  "holdings_comparisons": [
+    {
+      "index": 112,
+      "held_side": "No",
+      "quantity": 5,
+      "unchanged_prior_yes": 0.12,
+      "central_held_probability": 0.88,
+      "selected_held_probability": 0.73,
+      "broad_low_held_probability": 0.2,
+      "central_terminal_usd": 4.4,
+      "selected_terminal_usd": 3.65,
+      "broad_low_terminal_usd": 1.0,
+      "fee_net_sell_observation_usd": 3.2551200000000002,
+      "exit_plus_constant_carry_sensitivity_usd": 3.2762793657974743,
+      "adverse_selected_shift_reversing_comparison_pp": 7.474412684050513,
+      "execution_authorization": false
+    },
+    {
+      "index": 210,
+      "held_side": "Yes",
+      "quantity": 5,
+      "unchanged_prior_yes": 0.6,
+      "central_held_probability": 0.6,
+      "selected_held_probability": 0.39999999999999997,
+      "broad_low_held_probability": 0.2,
+      "central_terminal_usd": 3.0,
+      "selected_terminal_usd": 1.9999999999999998,
+      "broad_low_terminal_usd": 1.0,
+      "fee_net_sell_observation_usd": 1.20312,
+      "exit_plus_constant_carry_sensitivity_usd": 1.2093724886299881,
+      "adverse_selected_shift_reversing_comparison_pp": 15.812550227400235,
+      "execution_authorization": false
+    },
+    {
+      "index": 412,
+      "held_side": "Yes",
+      "quantity": 10,
+      "unchanged_prior_yes": 0.3402125,
+      "central_held_probability": 0.3402125,
+      "selected_held_probability": 0.19021249999999998,
+      "broad_low_held_probability": 0.08,
+      "central_terminal_usd": 3.402125,
+      "selected_terminal_usd": 1.9021249999999998,
+      "broad_low_terminal_usd": 0.8,
+      "fee_net_sell_observation_usd": 0.96399,
+      "exit_plus_constant_carry_sensitivity_usd": 0.9702562565543227,
+      "adverse_selected_shift_reversing_comparison_pp": 9.318687434456772,
+      "execution_authorization": false
+    },
+    {
+      "index": 1838,
+      "held_side": "No",
+      "quantity": 5,
+      "unchanged_prior_yes": 0.56,
+      "central_held_probability": 0.43999999999999995,
+      "selected_held_probability": 0.33999999999999997,
+      "broad_low_held_probability": 0.2,
+      "central_terminal_usd": 2.1999999999999997,
+      "selected_terminal_usd": 1.6999999999999997,
+      "broad_low_terminal_usd": 1.0,
+      "fee_net_sell_observation_usd": 1.40882,
+      "exit_plus_constant_carry_sensitivity_usd": 1.4179777999345022,
+      "adverse_selected_shift_reversing_comparison_pp": 5.640444001309952,
+      "execution_authorization": false
+    }
+  ],
+  "joint_terminal_states": {
+    "AI_OR112NO5_Kimi412YES10": {
+      "both_win_payoff": 15,
+      "only_Kimi_wins": 10,
+      "only_OR_wins": 5,
+      "both_lose": 0,
+      "original_cost": 4.45,
+      "limits": "All four joint states possible; AI shared/venue/model uncertainty is not a hedge or independently calibrated copula. Full original cost can be lost."
+    },
+    "four_directional_pilots": {
+      "original_cost": 7.35,
+      "all_lose_payoff": 0,
+      "limits": "AI+MI+Messi all-loss possible; probabilities not independent. No unfilled House or Anthropic commitment remains."
+    },
+    "Clarity29YES_gt50_and29NO_gt58": {
+      "latest_indicative_full_exit_from_separate_exit_analysis": 17.77,
+      "normal_settlement_minimum_conditional_payoff": 29,
+      "middle51to58_payoff": 58,
+      "inconsistent_oracle_or_venue_failure_payoff": 0,
+      "limits": "14:02identicalrule implication proof retained; currentUMA43refreshed0alerts and Senate displayed rollcall reviewed. Group exit is16:57indicative sequential tool observation, not an execution certificate. No leg-only sale."
+    }
+  },
+  "primary_decision": "Retain small directional holdings/noadd; central and chosen selected-stress terminal values exceed current observed fee-netexit plus conservative cached carry sensitivity. Broad-low cases favor sale and are not hidden: MIadditional5.640444ppselected adverse shift reverses comparison,6ppcase sells. Campaignreporting alone gives no justified new numeric bridge. Full-stake binary loss/source gaps/joint AI loss accepted at present small sizes; no claim of guaranteed recovery or robust profitability across all uncertainty.",
+  "maker_review": "No static maker sell placed. Kimi and OR hidden-info fair-jump/conditional-fill risk needs assessed premium. MInearprogramme/debate and public Messi changing salience also lack a newly justified conditional-fill quote; no passive order derived solely from central fair. Thesis-break exits remain active.",
+  "other_news": "Other six-hour rows read: Castro DW/exposition and IPO valuation reporting give no new held literal resolution input; Kiley letter incident has no held or liveBUY exposure after final zero-fill cancel; Goal B.O.A.T.vote is not GoogleGlobalAthletesranking. Indirect effects possible, no automatic numeric update.",
+  "execution_limits": "16:58:17heldresearchquotes age0.95–22.48s at receipt/identity+criteriaexact for all4; laterSALE needs fresh vetted current inputs. Carry3.2035%cached variable held constant75d (Messi60d) only a conservative comparison sensitivity, not exact settlement forecast or synchronized executable redeployment.",
+  "financial_actions": "none;0orders/127complete trades/9unchangedpositions/0winningredeemables. No prior, policy, financialflow or researchledger change.",
+  "telegram": "No new material action/holding change; older b8e5alreadyreviewed and no new confirmed thesis-breaking finding. No duplicate headline/routine Telegram.",
+  "account_root_recheck": "data/deep_review_20261017/work/tick165003_account_root_recheck.json",
+  "closeout_news": {
+    "id": "cd38c3baa48325b6172d0c8b2d4c1d8a336f82ff",
+    "timestamp": "2026-10-20T17:06:12Z",
+    "judgment": "Delcy/Caribbean sports meeting headline has no held or liveBUY instrument identity/direct resolution input identified. Exactbody/event/titleclaims unverified; not a valuation/rejection of its research candidate. No held prior/action change."
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "orders": {
+    "rows": 0,
+    "cursor": "LTE=",
+    "http_status": 200,
+    "raw_sha256": "b1b6fcddc2721ba0f8e03a56c7ae96422c74a18297dbdc15a34d8398fa21d186"
+  },
+  "trades": {
+    "rows": 127,
+    "cursor": "LTE=",
+    "http_status": 200,
+    "raw_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a"
+  },
+  "positions": {
+    "rows": 9,
+    "unchanged_tuples": 9,
+    "baseline_comparison": "Root independently verified receipt/raw hashes and all9 sorted(conditionId,asset,outcome,size,totalBought,redeemable)tuples against final15:55 raw baseline."
+  }
+}

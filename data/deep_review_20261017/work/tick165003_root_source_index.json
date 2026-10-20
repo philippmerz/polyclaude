@@ -1,0 +1,142 @@
+{
+  "schema": "polyclaude.held_source_captures.v1",
+  "review_tick": "20261020T165003Z",
+  "sources": {
+    "hle": {
+      "schema": "read_capture.response.v1",
+      "name": "hle",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T17:01:49.647655Z",
+      "received_utc": "2026-10-20T17:01:49.967995Z",
+      "response_status": 200,
+      "error_type": null,
+      "headers": {
+        "date": "Tue, 20 Oct 2026 17:01:49 GMT",
+        "content-type": "application/json",
+        "age": "1355",
+        "cache-control": "public"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://dashboard.safe.ai/api/models",
+        "scope": "held resolving source delta"
+      },
+      "raw_bytes": 41234,
+      "raw_sha256": "22bdfe6efea7f0aa6828d09947c3d68d5d48e10fc60ed2d8f251920124addba9",
+      "gzip_sha256": "2c234933d20a308764eef5e76e07767592e5b5e60363a039a9485484673e20be",
+      "body_path": "hle.body.json.gz"
+    },
+    "openrouter": {
+      "schema": "read_capture.response.v1",
+      "name": "openrouter",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T17:01:49.648810Z",
+      "received_utc": "2026-10-20T17:01:49.889099Z",
+      "response_status": 200,
+      "error_type": null,
+      "headers": {
+        "date": "Tue, 20 Oct 2026 17:01:49 GMT",
+        "content-type": "application/json",
+        "age": "310",
+        "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+        "scope": "held resolving source delta"
+      },
+      "raw_bytes": 24691,
+      "raw_sha256": "1acd03bb1e5c2cd26d421fcb4bd3937acced18e1b03990376d79b58230d28ef5",
+      "gzip_sha256": "c8b2f431be3127b047283f732f027adeb1b5bf75b434160fb15d84c95f38cbdd",
+      "body_path": "openrouter.body.json.gz"
+    },
+    "senate": {
+      "schema": "read_capture.response.v1",
+      "name": "senate",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T17:01:49.649221Z",
+      "received_utc": "2026-10-20T17:01:50.452395Z",
+      "response_status": 200,
+      "error_type": null,
+      "headers": {
+        "content-type": "text/html; charset=UTF-8",
+        "content-length": "22466",
+        "date": "Tue, 20 Oct 2026 17:01:50 GMT"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+        "scope": "held resolving source delta"
+      },
+      "raw_bytes": 217837,
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+      "gzip_sha256": "1bcef7417266b15be8c720a450d1ded7c1bb6a7485087fd581978053f3caf2e7",
+      "body_path": "senate.body.json.gz"
+    },
+    "google2026": {
+      "schema": "read_capture.response.v1",
+      "name": "google2026",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T17:01:49.649704Z",
+      "received_utc": "2026-10-20T17:01:50.110627Z",
+      "response_status": 404,
+      "error_type": null,
+      "headers": {
+        "content-type": "text/html; charset=utf-8",
+        "cache-control": "max-age=300",
+        "date": "Tue, 20 Oct 2026 17:01:50 GMT"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://trends.withgoogle.com/year-in-search/2026/",
+        "scope": "held resolving source delta"
+      },
+      "raw_bytes": 58133,
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+      "body_path": "google2026.body.json.gz"
+    },
+    "whitehouse": {
+      "schema": "read_capture.response.v1",
+      "name": "whitehouse",
+      "timing_basis": "call_window",
+      "started_utc": "2026-10-20T17:01:49.650035Z",
+      "received_utc": "2026-10-20T17:01:50.068082Z",
+      "response_status": 200,
+      "error_type": null,
+      "headers": {
+        "date": "Tue, 20 Oct 2026 17:01:49 GMT",
+        "content-type": "application/rss+xml; charset=UTF-8",
+        "last-modified": "Tue, 20 Oct 2026 16:46:55 GMT",
+        "etag": "W/\"abdb5f11b17d56eda524625458d77217\"",
+        "cache-control": "max-age=300, must-revalidate"
+      },
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "request": {
+        "read_only": true,
+        "method": "GET",
+        "url": "https://www.whitehouse.gov/news/feed/",
+        "scope": "held resolving source delta"
+      },
+      "raw_bytes": 614897,
+      "raw_sha256": "e01c42b538d08a6a290a03f1f1ac60b5b0c1193ba85c77e28d82c33f7893e3d1",
+      "gzip_sha256": "70248258a2aa10ae4082f7e63750125e5195d85b5f71f9029d054a5612c56248",
+      "body_path": "whitehouse.body.json.gz"
+    }
+  },
+  "limits": "HTTP body receipts are captured before interpretation; retrieval is not an event/publication timestamp.",
+  "private_capture_dir": "logs/cron20261020T165003Z_root_sources"
+}

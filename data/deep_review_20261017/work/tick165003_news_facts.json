@@ -1,0 +1,104 @@
+{
+  "schema": "tick165003_news_facts.v1",
+  "audited_utc": "2026-10-20T16:59:02.017305Z",
+  "scope": "bounded factual read of four alerts; no probability, ranking, trade, ledger or Telegram action",
+  "contract": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+  "alert_records_path": "notes/news_alerts.jsonl",
+  "selected_alerts": {
+    "b8e5c884943232b1d7197a5d58953b9ad4690bd2": {
+      "alert_utc": "2026-10-20T15:29:35Z",
+      "title": "Drop Site News: Mike Rogers’s Wife Won Lucrative Contracts While Rogers Served as Intel Chair - Democracy Now!",
+      "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPUFVjdUZfQXR5MVVncjRqZkhFcFEwdG1lQ0tMejBaTno4Mm83cnBlWm8zelgyQWZhSW5WanpUaklJWDFKb1F6dk1HRVNpRFdZYXVPQTJpVE9wbVY0dkRyeHBLX3JuWmxXQWs0aGJSYUc2T1ZzcE5nVzBGYWpKX09qaTZETmowN193ZzkzSXh0MzA5emdUekNDQXlEYVZBZzVvQ3c2aG9YUmZDZ3ZCZnBFdS1sa2o5TUtqc1BoWHBhXzk5WXBWQ1FmQlJRc21RUVNwRzFoTzhia08?oc=5",
+      "prior_dated_summary": "data/deep_review_20261017/work/tick151845_new_news_facts.json; Democracy Now story read there (published 2026-10-20), recapping Drop Site claims and noting campaign attorneys demanded retraction; that prior note says no financial disclosure calculations, contract docket or letter independently reviewed."
+    },
+    "1653aa8f319b7d5b83847e9e3e1a1c9e794dc38b": {
+      "alert_utc": "2026-10-20T15:51:04Z",
+      "title": "India bot accounts reportedly spread fake “man on the street” videos for Michigan Senate candidate - TRT World",
+      "link": "https://news.google.com/rss/articles/CBMi5gFBVV95cUxNV0VXLWg2d0duUW52eGVzSGtyMzZIN3NKdUEzQ3hFQ1F3bThmc3J3MVJjN1R5OFhTSUd1cHRnbmwzemN3OUxsV0FEcWFXOEVFT0JVM0hSLTFDRnVsVEVaUVZSNEg0SHBoLThkaFVlZVh6aUctTGNTcFhpV0o0azk4THJGd3RONGhIT1R1ZDRLYXY3YmFpcm4wSUV6VlpNQWNYTHFnUl85enlZVWtreGNXWENPMnROaDF1Q3F5M3hnWFFMSXV0c2hOdWJpOUhDandpR1k2dFpaTTcxd1p1ajVYak9OWmo0dw?oc=5",
+      "publisher_body": "Not recovered in the bounded reads; exact TRT URL and original underlying reporting/evidence remain a gap. Headline alone does not establish coordinated inauthenticity, campaign responsibility or electoral effect."
+    },
+    "a0399407adaa7c3bd4191b2e7e84de5fc6caa424": {
+      "alert_utc": "2026-10-20T16:17:34Z",
+      "title": "Inside the Senate race between Abdul El-Sayed and Mike Rogers in Michigan - WBUR",
+      "link": "https://www.wbur.org/hereandnow/2026/10/20/el-sayed-mike-rogers-michigan",
+      "publisher_body": "Captured WBUR story states that Detroit Free Press columnist M.L. Elrick talks with Lisa Mullins; segment airs Oct 20, with audio to be available after broadcast. It provides no specific new event/result in the rendered body."
+    },
+    "31a13ac23588433b19156769aec4580d7ca48511": {
+      "alert_utc": "2026-10-20T16:17:38Z",
+      "title": "Livestream: Michigan U.S. Senate candidates El-Sayed, Rogers join Detroit Economic Club - ClickOnDetroit | WDIV Local 4",
+      "link": "https://www.clickondetroit.com/news/local/2026/10/20/livestream-michigan-us-senate-candidates-el-sayed-rogers-join-detroit-economic-club/",
+      "publisher_body": "WDIV story published Oct 20 at 12:02 PM ET (=16:02 UTC); says event begins at noon ET, candidates each get individual Q&A time, Jason Colthorp moderates, and says viewers can watch when it begins. It does not report event outcomes or candidate statements. Official Detroit Economic Club page lists Oct 20, 11:00 AM–2:00 PM and noon program; this confirms schedule, not occurrence/content."
+    }
+  },
+  "captures": {
+    "dropsite": {
+      "receipt": "logs/cron20261020T165003Z_news_sources/dropsite/dropsite.receipt.json",
+      "body": "logs/cron20261020T165003Z_news_sources/dropsite/dropsite.body.json.gz",
+      "http_status": 403,
+      "retrieved_utc": "2026-10-20T16:58:11.714660Z",
+      "raw_bytes": 5947,
+      "raw_sha256": "07c45fb3ff3bbf0ee29cfecd9c202af3e476e8c41637fcf4acc1d5d05f6a74f9",
+      "gzip_sha256": "18204621ea555dda8cf9ae8c976b95c3822b153cf791e00d9abc89453fb758c0",
+      "hashes_verified": true,
+      "body_representation": "http_body",
+      "url": "https://www.dropsitenews.com/p/mike-rogers-wife-kristi-military-contracts-aegis-michigan-senate"
+    },
+    "wbur": {
+      "receipt": "logs/cron20261020T165003Z_news_sources/wbur/wbur.receipt.json",
+      "body": "logs/cron20261020T165003Z_news_sources/wbur/wbur.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T16:58:12.574369Z",
+      "raw_bytes": 369072,
+      "raw_sha256": "96c16fb954b23701efc64b8737b485c194600c868380631e2c9cb5b4f656461a",
+      "gzip_sha256": "90f8b78305038c4f3a8dc90159f6f223b9a3dac1a2d0f015c3345f223534f549",
+      "hashes_verified": true,
+      "body_representation": "http_body",
+      "url": "https://www.wbur.org/hereandnow/2026/10/20/el-sayed-mike-rogers-michigan"
+    },
+    "dec_event": {
+      "receipt": "logs/cron20261020T165003Z_news_sources/dec_event/dec_event.receipt.json",
+      "body": "logs/cron20261020T165003Z_news_sources/dec_event/dec_event.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T16:58:13.288748Z",
+      "raw_bytes": 160289,
+      "raw_sha256": "6e5aa92050ba1d14bc6687eba6bb51f17325c6e6e7d5a3842ffb1cc69d9b070b",
+      "gzip_sha256": "c4a722def93f8ccf59d04225369e0128618736f293d82b6577c1a339331a9735",
+      "hashes_verified": true,
+      "body_representation": "http_body",
+      "url": "https://www.econclub.org/meeting/2026-senatorial-candidates-state-of-michigan/"
+    },
+    "detroitpbs_stream": {
+      "receipt": "logs/cron20261020T165003Z_news_sources/detroitpbs_stream/detroitpbs_stream.receipt.json",
+      "body": "logs/cron20261020T165003Z_news_sources/detroitpbs_stream/detroitpbs_stream.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T16:58:14.028964Z",
+      "raw_bytes": 1289503,
+      "raw_sha256": "867c9759a49258e1cb484afc4cfc7ae6c4b35ff7385ceea06f05d6a2f13b1527",
+      "gzip_sha256": "fb95e59472cd6c6c56aa236cfac2950eaee5ee2c33efce8ff0afae284c71cc81",
+      "hashes_verified": true,
+      "body_representation": "http_body",
+      "url": "https://www.youtube.com/watch"
+    },
+    "wdiv_guess": {
+      "receipt": "logs/cron20261020T165003Z_news_sources/wdiv_guess/wdiv_guess.receipt.json",
+      "body": "logs/cron20261020T165003Z_news_sources/wdiv_guess/wdiv_guess.body.json.gz",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T16:58:35.382514Z",
+      "raw_bytes": 363924,
+      "raw_sha256": "c80014da3e132181d524e87e8eb53c1f79bb8d04c8749b76f9e4e8823a635f6c",
+      "gzip_sha256": "67c250d576f2aa543004abf3daed075fe76cf3249f44ac6fa4e169d17e15ac71",
+      "hashes_verified": true,
+      "body_representation": "http_body",
+      "url": "https://www.clickondetroit.com/news/local/2026/10/20/livestream-michigan-us-senate-candidates-el-sayed-rogers-join-detroit-economic-club/"
+    }
+  },
+  "interpretation_limits": [
+    "Drop Site original story GET returned HTTP 403 challenge page. Search-index excerpt available during bounded discovery attributed claims to Ryan Grim and Nancy Skinner; it reported an Oct 13 publication and Oct 15 retraction demand, stated Drop Site stands by its reporting, and included the caveat “There is no evidence of wrong-doing by Rep. Rogers or Aegis.” This is attributed reporting, not independently verified underlying misconduct. No cited financial disclosure, procurement docket or response letter was retrieved.",
+    "TRT actual publisher body was not retrieved. No finding is made about whether its headline accurately describes bot activity, who commissioned/produced videos, or their audience/vote impact.",
+    "The captured YouTube URL cited by a secondary Detroit Free Press syndicated page was a different prior WOOD-TV debate (55m51s), not the Oct 20 Detroit Economic Club event; it is not treated as evidence of this forum. No transcript or usable event recording captured.",
+    "No evidence reviewed here establishes adjudicated misconduct or quantifies effects on the Michigan Senate race. This is a factual source note, not a position assessment."
+  ],
+  "public_gets": 5,
+  "all_private_capture_hashes_independently_verified": true,
+  "raw_payloads_private_only": true
+}

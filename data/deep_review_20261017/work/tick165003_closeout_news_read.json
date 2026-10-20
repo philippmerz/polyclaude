@@ -1,0 +1,96 @@
+{
+  "read_utc": "2026-10-20T17:08:04.765344Z",
+  "named_id_read_older_than_journal": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+  "tail_rows_read": [
+    {
+      "alert_id": "038734c1afdd6e28c381e77ed8a08dedf3045701",
+      "ts": "2026-10-20T15:24:06Z",
+      "title": "Letter to the editor: Sam Forstag will work for the working class - Montana Standard",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+      "ts": "2026-10-20T15:29:35Z",
+      "title": "Drop Site News: Mike Rogers’s Wife Won Lucrative Contracts While Rogers Served as Intel Chair - Democracy Now!",
+      "relevance": "portfolio_material_critical",
+      "review_required": true
+    },
+    {
+      "alert_id": "cc5229f2fd99d5272ddb50d61763c8eb3b55c3b2",
+      "ts": "2026-10-20T15:29:43Z",
+      "title": "¿Podría Raúl Castro acabar como Maduro? - DW.com",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "881a30bc795ea45a87eb1fefd02961c2b92f8619",
+      "ts": "2026-10-20T15:34:56Z",
+      "title": "US midterm elections: Trump approval rating falls to new low",
+      "relevance": "minor",
+      "review_required": false
+    },
+    {
+      "alert_id": "1c097d3c389a86d0cb0517c31dc21a256c427f5e",
+      "ts": "2026-10-20T15:40:27Z",
+      "title": "Schmidt's Anthropic Stake Could Reach 27 Trillion Won - 조선일보",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "1653aa8f319b7d5b83847e9e3e1a1c9e794dc38b",
+      "ts": "2026-10-20T15:51:04Z",
+      "title": "India bot accounts reportedly spread fake 'man on the street' videos for Michigan Senate candidate - TRT World",
+      "relevance": "minor",
+      "review_required": false
+    },
+    {
+      "alert_id": "070be8d4813d233a1e2af5dc2be40953bf06f3d1",
+      "ts": "2026-10-20T16:12:09Z",
+      "title": "Cristiano Ronaldo dominates Lionel Messi in official 'B.O.A.T.' poll as Portuguese superstar leads GOAT debate ahead of London awards gala - Goal.com",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "a0399407adaa7c3bd4191b2e7e84de5fc6caa424",
+      "ts": "2026-10-20T16:17:34Z",
+      "title": "Inside the Senate race between Abdul El-Sayed and Mike Rogers in Michigan - WBUR",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "31a13ac23588433b19156769aec4580d7ca48511",
+      "ts": "2026-10-20T16:17:38Z",
+      "title": "Livestream: Michigan U.S. Senate candidates El-Sayed, Rogers join Detroit Economic Club - ClickOnDetroit | WDIV Local 4",
+      "relevance": "minor",
+      "review_required": false
+    },
+    {
+      "alert_id": "27f22bd611e63109ce47729122ce8b4d7a175195",
+      "ts": "2026-10-20T16:38:58Z",
+      "title": "OpenAI Eyes A $1.4 Trillion Tag As Anthropic’s Wall Street Debut Nears - Yellow.com",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "d2e7497cef8435b03a5c6549c73dddb42470de3e",
+      "ts": "2026-10-20T16:44:22Z",
+      "title": "Powdery substance found in mail sent to offices of Rep. Kevin Kiley, Sen. Alex Padilla - Yahoo",
+      "relevance": "research_only",
+      "review_required": false
+    },
+    {
+      "alert_id": "cd38c3baa48325b6172d0c8b2d4c1d8a336f82ff",
+      "ts": "2026-10-20T17:06:12Z",
+      "title": "Presidenta Delcy Rodríguez se reúne con directivos del Centro Caribe Sports en Caracas - MIPPCI",
+      "relevance": "research_only",
+      "review_required": false
+    }
+  ],
+  "latest_row_ts": "2026-10-20T17:06:12Z",
+  "new_rows_after_prior_journal165038": [
+    "cd38c3baa48325b6172d0c8b2d4c1d8a336f82ff"
+  ],
+  "judgment_unit": "data/deep_review_20261017/work/tick165003_primary_review.json",
+  "limits": "Explicit and related earlier alerts were read regardless journal boundary; queue is not review proof. These factual rows do not themselves update forecasts."
+}

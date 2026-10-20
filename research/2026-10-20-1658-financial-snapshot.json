@@ -1,0 +1,31 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261020T165003Z",
+  "producer": "scripts/bankroll.py",
+  "producer_stdout_sha256": "d3685c0a1addac3f4713ddb53c9677015f314cff538b1fb3e501df257f03858d",
+  "producer_started_utc": null,
+  "producer_completed_utc": null,
+  "producer_stdout_mtime_utc": "2026-10-20T16:58:07.221253Z",
+  "timing_basis": "Only stdout final mtime was persisted; it is an observation/write timestamp, not a quote or invocation start/end. Whole-second CSV anchor truncates its fractional second.",
+  "canonical_total_including_funded_gas_usd": "194.31",
+  "same_producer_funded_gas_usd": "5.95",
+  "same_producer_PM_mid_usd": "34.40",
+  "same_producer_PM_fee_net_depth_usd": "24.61",
+  "derived_trading_mid_usd": "188.36",
+  "derived_trading_fee_net_depth_usd": "178.57",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 5.04,
+  "reported_accounting_residual_usd": "19.72",
+  "previous_1402_comparison": {
+    "canonical_total_change_usd": "-0.52",
+    "trading_mid_change_usd": "-0.58",
+    "trading_depth_change_usd": "-3.11"
+  },
+  "limits": [
+    "Canonical TOTAL retained; gas and PM amounts come from that same producer. Do not substitute separate 16:57 positions or held-book quotes.",
+    "Rounded sequential marks and depth are not synchronized NAV, freshness-verified liquidation quotes or guaranteed proceeds. Bid liquidity changed; no financial trade/transfer/redemption/external flow this run.",
+    "Displayed midpoint minus depth is9.79; producer warning rounded an unrounded difference to9.80. CSV derives178.57 from the displayed component fields, not the rounded difference.",
+    "Reported19.72 accounting residual is not independently audited cash profit; historical basis/fees/flows and VM/API costs remain unreconciled; VM/APIexcluded."
+  ],
+  "producer_fact_unit": "data/deep_review_20261017/work/tick165003_account_ops.json"
+}

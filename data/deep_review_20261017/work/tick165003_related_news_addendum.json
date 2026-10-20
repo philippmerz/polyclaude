@@ -1,0 +1,35 @@
+{
+  "schema": "polyclaude.related_news_addendum.v1",
+  "related_alert_id": "1653aa8f319b7d5b83847e9e3e1a1c9e794dc38b",
+  "source_url": "https://www.usmuslims.com/indian-bot-accounts-spread-street-interview-videos-backing-us-senate-candidate-in-377164h.htm",
+  "private_capture_dir": "logs/cron20261020T165003Z_root_news_addendum",
+  "receipt": {
+    "schema": "read_capture.response.v1",
+    "name": "aa_copy",
+    "timing_basis": "call_window",
+    "started_utc": "2026-10-20T17:04:32.649584Z",
+    "received_utc": "2026-10-20T17:04:33.196702Z",
+    "response_status": 200,
+    "error_type": null,
+    "headers": {
+      "date": "Tue, 20 Oct 2026 17:04:33 GMT",
+      "content-type": "text/html; charset=UTF-8",
+      "cache-control": "public, max-age=0, must-revalidate, no-cache, no-store"
+    },
+    "body_representation": "http_body",
+    "hash_scope": "supplied_bytes_only_not_wire_authentication",
+    "request": {
+      "read_only": true,
+      "method": "GET",
+      "url": "https://www.usmuslims.com/indian-bot-accounts-spread-street-interview-videos-backing-us-senate-candidate-in-377164h.htm",
+      "scope": "attributed related AA report body; exact TRT cross-story identity unverified"
+    },
+    "raw_bytes": 165418,
+    "raw_sha256": "70ac5a9002ded407318e60075cd25763d1e48a6ca18f34040d044e386ac8b230",
+    "gzip_sha256": "3764179a219e129ac108f6e3423dc61ad3ee8f68d0326a92915b94737154bc83",
+    "body_path": "aa_copy.body.json.gz"
+  },
+  "root_body_recovered": true,
+  "attributed_finding": "Related Merve Aydogan/Anadolu-byline copy attributes to NYT a paid video operation supporting Haley Stevens in the August primary; copy says El-Sayed won that primary. Exact TRT story body and original NYT/evidence not recovered, so not treated as an operation for either current nominee. Funding/campaign responsibility and November voter effect unverified.",
+  "limits": "Secondary attributed reporting, not independent bot, payment, party-responsibility or electoral-effect verification. Publisher local 17:48 Oct20 lacks verified timezone here."
+}

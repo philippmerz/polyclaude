@@ -1,0 +1,234 @@
+{
+  "schema": "polyclaude.tick_account_ops.v1",
+  "task": "routine read-only account and status delta",
+  "captured_and_run_utc": {
+    "account_reads_completed": "2026-10-20T16:57:31.147855Z",
+    "polyclaude_status_output_mtime_utc": "2026-10-20T16:57:52.237288Z",
+    "bankroll_output_mtime_utc": "2026-10-20T16:58:07.221253Z",
+    "position_state_audit_output_mtime_utc": "2026-10-20T16:57:36.997325Z",
+    "exit_analysis_output_mtime_utc": "2026-10-20T16:57:38.737320Z",
+    "ostium_status_output_mtime_utc": "2026-10-20T16:58:16.365231Z",
+    "ostium_state_diff_output_mtime_utc": "2026-10-20T16:58:19.081224Z",
+    "crux_output_mtime_utc": "2026-10-20T16:58:19.085224Z",
+    "daemon_check_output_mtime_utc": "2026-10-20T16:58:19.541223Z"
+  },
+  "account_delta_vs_final_1555_cancel_baseline": {
+    "baseline": "logs/cron20261020T151845Z_cancel/final",
+    "baseline_verified_utc": "2026-10-20T15:55:25.961737Z",
+    "orders": {
+      "count": 0,
+      "complete_authenticated_cursor_LTE": true,
+      "sdk_api_status": null,
+      "sdk_status_code_field": 200,
+      "current_raw_serialization_sha256": "b1b6fcddc2721ba0f8e03a56c7ae96422c74a18297dbdc15a34d8398fa21d186",
+      "baseline_raw_serialization_sha256": "b1b6fcddc2721ba0f8e03a56c7ae96422c74a18297dbdc15a34d8398fa21d186",
+      "exact_wrapper_hash_match": true
+    },
+    "trades": {
+      "count": 127,
+      "complete_authenticated_cursor_LTE": true,
+      "sdk_api_status": null,
+      "sdk_status_code_field": 200,
+      "current_raw_serialization_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "baseline_raw_serialization_sha256": "19b5b7f49c57f9aaf0dd3d63eb10d389babc5aec291224238f848bb64c84c04a",
+      "exact_wrapper_hash_match": true
+    },
+    "positions": {
+      "sizeThreshold": "0",
+      "http_status": 200,
+      "current_rows": 9,
+      "baseline_rows": 9,
+      "exact_identity_asset_outcome_size_totalBought_redeemable_tuple_matches": 9,
+      "added_or_changed": 0,
+      "removed": 0,
+      "winning_redeemable_count_vetted_classifier": 0,
+      "body_sha256": "00ec2bcd4d5c1cf768d49afdf97dbeaad87da756611aee3fef05c8591d5b212c"
+    },
+    "private_receipts": "logs/cron20261020T165003Z_account/{orders,trades,positions}.{intent,body.json.gz,receipt}.json"
+  },
+  "canonical_bankroll_producer": {
+    "command": "scripts/bankroll.py (one run)",
+    "source_artifact": "logs/cron20261020T165003Z_account/status/bankroll.txt",
+    "sha256": "d3685c0a1addac3f4713ddb53c9677015f314cff538b1fb3e501df257f03858d",
+    "actual_output_mtime_utc": "2026-10-20T16:58:07.221253Z",
+    "breakdown_usd_as_printed": {
+      "PM positions MTM": "34.40",
+      "polygon pm POL (47.7086):": "4.51",
+      "polygon pm USDC:": "0.11",
+      "polygon pm pUSD:": "19.25",
+      "polygon pm aUSDC.e:": "3.50",
+      "polygon pm aUSDC:": "122.14",
+      "polygon crypto POL (1.9914):": "0.19",
+      "arbitrum crypto ETH (0.0004):": "1.03",
+      "arbitrum crypto aUSDC:": "7.90",
+      "base crypto ETH (0.0001):": "0.23",
+      "base crypto USDC:": "1.05"
+    },
+    "semantics_as_printed": {
+      "reference": "$170",
+      "reported_delta": "+$24.31 (+14.3%)",
+      "reported_realized_settled_cash": "+$19.72 (+11.6% of ref)",
+      "reported_gas_tokens_excluded": "$5.95 separately deposited, not trading P&L",
+      "reported_unrealized_marked": "-$1.37, not return until closed or resolved",
+      "reported_unrealized_realizable": "-$11.16 indicative depth/fee estimate, not synchronized or freshness-verified",
+      "midpoint_warning": "PM mid $34.40 vs net realizable $24.61; overstates by $9.80, indicative only"
+    },
+    "producer_total_usd": "194.31",
+    "note": "Producer-reported total only; no manual aggregate or financial-record update.",
+    "execution_metadata": {
+      "started_utc": "unavailable; invocation wrapper did not persist a start timestamp",
+      "completed_utc": "unavailable; invocation wrapper did not persist an end timestamp",
+      "only_reliable_time_bound": "status/bankroll.txt stdout mtime 2026-10-20T16:58:07.221253Z",
+      "producer_not_rerun": true
+    }
+  },
+  "required_status_checks": {
+    "hurdle_scan_in_status": true,
+    "watchlist_in_status": true,
+    "uma_in_status": true,
+    "kelly_in_status": true,
+    "exit_analysis_file_present": true,
+    "position_state_audit_rc": 0,
+    "position_state_audit_clean": true,
+    "position_state_audit_summary": "FIXED: snapshot refreshed (7 indexed + 1 deindexed claim row(s)), acked-holds pruned (0 dropped)\nposition state CLEAN (7 indexed positions, 1 deindexed claim row(s))",
+    "ostium_status_rc": 0,
+    "ostium_open_trades": 0,
+    "ostium_active_limits": 0,
+    "ostium_state_diff_rc": 0,
+    "ostium_state_diff_no_alerts": true,
+    "crux_rc": 0,
+    "crux_quiet_output_empty": true,
+    "daemon_check_rc": 0,
+    "daemon_singletons": {
+      "news_watcher": "OK",
+      "heartbeat_watch": "OK",
+      "telegram_listener": "OK",
+      "opportunity_watch": "OK"
+    },
+    "hurdle_scan_summary": "4 clear; 0 acked-hold; 0 flagged; 3 protected groups",
+    "watchlist_no_triggers": "(no triggers hit)",
+    "news_alerts_last_6h_count": 10,
+    "news_alerts_last_6h_topics": [
+      {
+        "utc": "15:29",
+        "topic": "Mike Rogers",
+        "tier": "t1"
+      },
+      {
+        "utc": "15:29",
+        "topic": "Maduro",
+        "tier": "t1"
+      },
+      {
+        "utc": "15:34",
+        "topic": "Trump approval",
+        "tier": "t2"
+      },
+      {
+        "utc": "15:40",
+        "topic": "Anthropic",
+        "tier": "t1"
+      },
+      {
+        "utc": "15:51",
+        "topic": "Michigan Senate",
+        "tier": "t1"
+      },
+      {
+        "utc": "16:12",
+        "topic": "Lionel Messi",
+        "tier": "t1"
+      },
+      {
+        "utc": "16:17",
+        "topic": "Mike Rogers",
+        "tier": "t1"
+      },
+      {
+        "utc": "16:17",
+        "topic": "El-Sayed",
+        "tier": "t1"
+      },
+      {
+        "utc": "16:38",
+        "topic": "Anthropic",
+        "tier": "t1"
+      },
+      {
+        "utc": "16:44",
+        "topic": "Kevin Kiley",
+        "tier": "t1"
+      }
+    ],
+    "news_alerts_detail_artifact": "logs/cron20261020T165003Z_account/status/polyclaude_status.txt"
+  },
+  "run_artifacts": {
+    "polyclaude_status.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/polyclaude_status.txt",
+      "sha256": "40de05e13b1b8f29f7b2579fa8e570201dcb5196613523175f2c28f30b894bc8",
+      "mtime_utc": "2026-10-20T16:57:52.237288Z"
+    },
+    "bankroll.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/bankroll.txt",
+      "sha256": "d3685c0a1addac3f4713ddb53c9677015f314cff538b1fb3e501df257f03858d",
+      "mtime_utc": "2026-10-20T16:58:07.221253Z"
+    },
+    "position_state_audit.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/position_state_audit.txt",
+      "sha256": "36b5c9481894b782f1a015c2a0b65e80663afe20e0536a5c2797479fb10d3b8f",
+      "mtime_utc": "2026-10-20T16:57:36.997325Z"
+    },
+    "exit_analysis.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/exit_analysis.txt",
+      "sha256": "dd737905809382f63db1bc690c73e8084ef13a9f14921ef4d78d4daae0b74c69",
+      "mtime_utc": "2026-10-20T16:57:38.737320Z"
+    },
+    "ostium_status.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/ostium_status.txt",
+      "sha256": "9dafbe67a91968f5a1a1fb9209250c7108472c9b98f4429b793308f3af7b07f2",
+      "mtime_utc": "2026-10-20T16:58:16.365231Z"
+    },
+    "ostium_state_diff.json": {
+      "path": "logs/cron20261020T165003Z_account/status/ostium_state_diff.json",
+      "sha256": "45471a48ed0372ad30a25f900fd624c8d3498e68bb51a28792181a9dd1c1f882",
+      "mtime_utc": "2026-10-20T16:58:19.081224Z"
+    },
+    "crux_coverage.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/crux_coverage.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "mtime_utc": "2026-10-20T16:58:19.085224Z"
+    },
+    "daemon_check.txt": {
+      "path": "logs/cron20261020T165003Z_account/status/daemon_check.txt",
+      "sha256": "b8d331cd2ed12cda4a152cfa8c845d7b95be3ae867cbc3bfa54cbcfc5d7709f4",
+      "mtime_utc": "2026-10-20T16:58:19.541223Z"
+    }
+  },
+  "disk_free_mb_at_start": 139,
+  "disk_free_mb_after_run": 136,
+  "public_index_contains_no_raw_account_payload": true,
+  "supplemental_status_checks": {
+    "callpath_review": {
+      "polyclaude_status.py_calls_wallet_status": false,
+      "polyclaude_status.py_calls_crypto_status": false,
+      "canonical_bankroll_includes_both_wallet_sleeves": true,
+      "no additional bankroll/aggregate run": true
+    },
+    "wallet_status": {
+      "started_utc": "2026-10-20T17:03:09.072517Z",
+      "completed_utc": "2026-10-20T17:03:12.910456Z",
+      "returncode": 0,
+      "stderr_bytes": 0,
+      "warning_or_error_output": false,
+      "private_output": "logs/cron20261020T165003Z_account/status/wallet_status.txt"
+    },
+    "crypto_status": {
+      "started_utc": "2026-10-20T17:03:12.911048Z",
+      "completed_utc": "2026-10-20T17:03:19.278325Z",
+      "returncode": 0,
+      "stderr_bytes": 0,
+      "warning_or_error_output": false,
+      "private_output": "logs/cron20261020T165003Z_account/status/crypto_status.txt"
+    }
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "schema": "polyclaude.held_source_review.v1",
+  "reviewed_utc": "2026-10-20T17:06:32.489775Z",
+  "capture_index": "data/deep_review_20261017/work/tick165003_root_source_index.json",
+  "all5_receipt_body_hashes_verified": true,
+  "hle": {
+    "http_status": 200,
+    "received_utc": "2026-10-20T17:01:49.967995Z",
+    "row_count": 66,
+    "same_raw_sha256_as1408": false,
+    "KimiK3_HLE": 41.08,
+    "KimiK3_calibration_error": 44.67,
+    "limits": "Configured existing monitor headers; no new55 threshold hit. Retrieval/July archive comparison is not a new score publication."
+  },
+  "openrouter": {
+    "http_status": 200,
+    "received_utc": "2026-10-20T17:01:49.889099Z",
+    "row_count": 53,
+    "cachedAt_utc": "2026-10-20T16:19:06.691000+00:00",
+    "weekly_totals_T": {
+      "2026-09-28": 165.856049857563,
+      "2026-10-05": 171.842501724714,
+      "2026-10-12": 164.043985914931,
+      "2026-10-19": 43.537473472261
+    },
+    "held_target_weeks_observed": [],
+    "limits": "Oct19partial43.537473472261T, completed weeks unchanged. Actual held targetsOct26/Nov2/Nov9/Nov16; cachedAt/delivery is not usage cutoff. No partial-week rate extrapolation."
+  },
+  "senate": {
+    "http_status": 200,
+    "received_utc": "2026-10-20T17:01:50.452395Z",
+    "table_rows": 257,
+    "latest_displayed_date": "2026-09-30",
+    "HR3633_displayed_row": "Sep15 vote234,49-50 rejected cloture on motion to proceed; not qualifying final passage.",
+    "limits": "Recovered displayed list, not exhaustive contemporaneous legislative evidence; lastSep30 is not proof no later vote/passage. Pair identities/rule implication retain14:02 proof; no fresh claim of rule reread."
+  },
+  "google2026": {
+    "http_status": 404,
+    "received_utc": "2026-10-20T17:01:50.110627Z",
+    "limits": "One route404 is not proof no2026ranking elsewhere. B.O.A.T. poll is not Google global-athlete search-growth measurement; no new named resolving list."
+  },
+  "Trump_dust": {
+    "whitehouse_feed_http_status": 200,
+    "received_utc": "2026-10-20T17:01:50.068082Z",
+    "bounded_feed_items": 30,
+    "latest_item_pubDate": "2026-10-20T16:33:15Z",
+    "limits": "No verified cessation event in reviewed feed; not exhaustive health/status proof.33NOdust unchanged; no fee/gas burn."
+  }
+}

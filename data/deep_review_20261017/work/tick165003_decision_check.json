@@ -1,0 +1,9 @@
+{
+  "started_utc": "2026-10-20T17:05:07.361214Z",
+  "completed_utc": "2026-10-20T17:05:07.408188Z",
+  "command": "scripts/decisions.py pending",
+  "returncode": 0,
+  "stdout_sha256": "f067a8610cb89d8bdef09606514077202781c27f9df6ecff28c1568d0b96eea4",
+  "no_overdue": true,
+  "private_stdout": "logs/cron20261020T165003Z_root_sources/decisions_pending.txt"
+}
