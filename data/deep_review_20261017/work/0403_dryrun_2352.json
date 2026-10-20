@@ -1,0 +1,21 @@
+{
+  "schema": "case0403_entry_dryrun.v1",
+  "returncode": 0,
+  "started_utc": "2026-10-19T23:50:42.614873Z",
+  "received_utc": "2026-10-19T23:50:44.740043Z",
+  "raw_sha256": "021e3d3bb9c336692bed96c8f38fa35d0fe7df77c30ca8c99ee312963db2e616",
+  "capture_directory": "logs/deep_review_20261017/case0403_dryrun_2352",
+  "selected_output": [
+    "  [maker] gate + sizing run on the POSTED rest price 0.001 (bid 0.001 / ask 0.002), maker fee $0 \u2014 not on ask+taker cost. Fill is not guaranteed; resting-order rules govern.",
+    "  [fine-tick maker] 1000 integer shares; exact signed cash $1.000",
+    "  [capital caps] ticket $1.00/$29.28; cluster australia-monetary-policy-2026 $49.80/$58.56",
+    "  Buying YES @ $0.0020, P(YES wins) = 0.1557",
+    "  Full Kelly: 15.5% of bankroll",
+    "  \u03c1-discount: 0.8750 (\u03c1=0.5, cluster_frac=0.25)",
+    "  Manual override: $1.00",
+    "  \u2192 Deploy: $1.00 (1000.00 shares)",
+    "DECISION: WOULD_REST $1.00 of YES @ 0.001 post-only (ask 0.0020; fill not guaranteed)"
+  ],
+  "candidate_status": "NOT_SUBMITTED",
+  "source_news_baseline_pending": true
+}

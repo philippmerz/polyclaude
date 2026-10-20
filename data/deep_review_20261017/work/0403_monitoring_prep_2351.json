@@ -1,0 +1,22 @@
+{
+  "schema": "case0403_monitoring_preparation.v1",
+  "created_utc": "2026-10-19T23:50:30.448275+00:00",
+  "financial_status": "CANDIDATE_NOT_SUBMITTED",
+  "slug": "reserve-bank-of-australia-increases-interest-rates-by-50-bps-at-the-november-2026-meeting-1786388202573",
+  "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+  "all_other_prior_objects_unchanged": true,
+  "new_feed": {
+    "name": "Australia monetary policy, Bullock and Hauser news",
+    "url": "https://news.google.com/rss/search?q=%28%22Reserve+Bank+of+Australia%22+OR+%22Michele+Bullock%22+OR+%22Andrew+Hauser%22%29+when%3A3d&hl=en-US&gl=US&ceid=US%3Aen"
+  },
+  "added_tier1_keywords": [
+    "Reserve Bank of Australia",
+    "Michele Bullock",
+    "Andrew Hauser"
+  ],
+  "no_bare_RBA_substring": true,
+  "news_baseline_review_pending": true,
+  "no_watcher_seen_state_edited": true,
+  "no_order_or_reservation_created": true,
+  "existing_shared_feeds_and_keywords_preserved": true
+}

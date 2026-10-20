@@ -1,0 +1,11 @@
+{
+  "schema": "polyclaude.deep_review_resume.v1",
+  "review_index": 404,
+  "phase": "FACTS_READY_NOT_STARTED_NOT_VALUED",
+  "source_paths": [
+    "work/0404_facts_2323.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "updated_utc": "2026-10-20T00:00:33.828083+00:00",
+  "next_step": "Primary read full literalrules/verifyexactBLSsourcecaptures beforeforecast/quotes; no forecast orfinancialauthority fromfacts. FailedBLSdirectrequests notabsence; successfulwebSDKserialization/callwindow/hashretainedinunit."
+}

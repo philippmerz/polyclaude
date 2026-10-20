@@ -1,0 +1,24 @@
+{
+  "schema": "case0400_financial_cleanup.v1",
+  "completed_utc": "2026-10-19T23:46:40.984482+00:00",
+  "proof": "data/deep_review_20261017/work/0400_final_reconcile_2345.json",
+  "prior_archived_from": "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824",
+  "prior_archived_to": "_closed_20261019_parton400",
+  "original_numeric_forecast_unchanged": true,
+  "all_other_prior_objects_unchanged": true,
+  "removed_feed_names": [
+    "Dolly Parton Global Passings rank news"
+  ],
+  "removed_terms": [
+    "Dolly Parton",
+    "Google Passings"
+  ],
+  "shared_messi_feed_and_year_in_search_keyword_preserved": true,
+  "other_config_fields_unchanged": true,
+  "decisions_count_before": 239,
+  "decisions_count_after": 241,
+  "all_first238_decisions_unchanged": true,
+  "dec239_research_fields_unchanged": true,
+  "cancel_decision_id": 240,
+  "engineering_decision_id": 241
+}

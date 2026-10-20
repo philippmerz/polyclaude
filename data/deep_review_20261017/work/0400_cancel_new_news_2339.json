@@ -1,0 +1,11 @@
+{
+  "schema": "case0400_cancel_first.v1",
+  "order_id": "0x4db0d4e96ab66c488da15c35e8ad0029be3ff4d542c29760bfd8233b8af8afbc",
+  "started_utc": "2026-10-19T23:39:04.716189+00:00",
+  "received_utc": "2026-10-19T23:39:07.689636+00:00",
+  "returncode": 0,
+  "private_capture": "logs/deep_review_20261017/case0400_cancel_new_news_2339",
+  "raw_sha256": "eed8d20c313dc55925d43c2e111c78e33d662bb75217450332f2b8aed47940f9",
+  "requires_independent_poststate": true,
+  "no_probability_update_from_headlines": true
+}

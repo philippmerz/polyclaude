@@ -1,0 +1,41 @@
+{
+  "schema": "primary_maker_entry_constraints.v1",
+  "review_index": 403,
+  "created_utc": "2026-10-19T23:31:48.220087+00:00",
+  "financial_status": "EVALUATED_NOT_SUBMITTED",
+  "physical_p_yes": 0.15570717199999998,
+  "physical_model_reserve": 0.15,
+  "pre_fill_selected_p_yes": 0.005707171999999983,
+  "conditional_fill_stress": {
+    "formula": "p_afterfill=p/(p+bias*(1-p)); NOstate fill likelihood bias relativetoYESstate=5. Normalizeslikelihoods, not independentp-loss penalty.",
+    "selected_bias": 5,
+    "conditionalcentral": 0.03557255608733643,
+    "conditionalselected": 0.0011466697933904635,
+    "uncalibrated": true,
+    "limitation": "No empirical fivefoldbound on fill selection. Tenfoldbiasfails; quantitycanlosefullcash, shortquote/sourcecancelreducesbutdoesnoteliminateinformationalasymmetry. Thisismodeledstress, not observedfillprobability/latencyguarantee."
+  },
+  "entry_effective_haircut": 0.15456050220660952,
+  "entry_effective_reserve_pp": 15.456050220660952,
+  "plan_if_all_current_gates_pass": {
+    "side": "YES",
+    "maker_price": 0.001,
+    "quantity": 1000,
+    "max_raw_cash": 1.0,
+    "maker_fee": 0,
+    "central_expected_profit_conditional": 34.57255608733643,
+    "selected_expected_profit_conditional": 0.1466697933904635,
+    "op_buffer": 0.05,
+    "carry_basis": "Aave3.2035%variable asdated; ~0.00123 per1USD/14.2days, notguaranteedrate.",
+    "manual_sizing_basis": "QuarterKelly on fivefoldfill-conditionedcentral3.5573%, not15.5707physical, gives~1.69USD atdated195.55 before rho/cluster. Choose1USDmaximum; currentaccount/caps must pass.",
+    "full_cash_loss_possible": 1.0,
+    "current_route": "Cent-onlywrapper cannotpost.001; offlineSDK/customwriteramountrepresentabilityproved, opt-inquantity-aware repairunderway/unvalidated. No bypass/rawBUY/FAKurgency."
+  },
+  "source_basis": "FurtherGovSep29explicitlyconsideredhold/25, noNovforwardguidance. Corroboratesexistingminutesnotindependentforecastshift. AugustSMPDecforecastdifferenthorizon fromAugactual, not a measuredforecastmiss. No physicalpchange afterquotes.",
+  "quote_lifetime_if_posted": "HardpullOct20 18UTC, beforeHauserOct21 08:45AEDT/Oct20 21:45UTC with3h45buffer. NamedpolicymediaQ&A risk, notgenericcronexpiry; existing18UTCcheck handlesit/no newtimer. EarlierunassessedmaterialRBA/data/energy/source/venuenews cancel-first. Noadd/chase/repost/takerfallback; anyfillfreshholding/source/netexit/jointriskreview, partialdustpossible.",
+  "other_source_catalysts": "SeptCPIOct28 11:30AEDT/00:30UTC, committeeOct28 11:15AEDT; Hauserbeforethose. BullockOct23graduationexplicitlynopolicy; ConnollypaymentsOct20 09:50AEDT correspondsOct19 22:50UTC/alreadypastcapture, notfuturenegativeabsence. MediaNov3footnoteAESTvAEDTconflictneedsbeforecatalystrevalidation; rateoverview/localSydney2:30 implies03:30UTC.",
+  "tenfold_sensitivity": {
+    "selected_p_yes": 0.0005736637981696933,
+    "selected_profit_1000": -0.42633620183030685
+  },
+  "post_state_required": "No candidateprior/order exists; beforeexecution currentbook/eligibility/account/collateral/correlation/fees/minlot/caps plusvettedpath; afterexecutionindependentorders/exhaustivetrades/index/CTF proof. Evaluationnotauthorization."
+}

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 224 recorded observations from Apr-25
+The local performance CSV now has 225 recorded observations from Apr-25
 through Oct-19. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-19. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-20. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 
@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October19
 
-**359 valued /11 blocked /364 factual /2,266 pending;734 base+65 revisions; no active case.** [Checkpoint](notes/deep_review_checkpoint.json) governs counts.398MonsterGAAP split-aware29.23%YES/20ppallowance saved/indexed/noentry;400Parton valuedNO80/selected53, exact5NO46c makerbid verifiedunfilled23:06/DEC239. Next402; prepared facts are not valuations.391historicalU.S.reliefsourceconflict remainsindividualblocked/unpriced. [Small phase](data/deep_review_20261017/work/goal2246_RESUME.json).
+**361 valued /11 blocked /364 factual /2,264 pending;736 base+66 revisions; no active case.** Cases402 and403 saved individually. Lee402:4.43%YES/20pp allowance/no entry. RBA403 revised to11.65%YES after a newer original transcript; unchanged15pp allowance leaves selectedYES0, and both sides fail. The proposed1USD maker bid was never submitted. Fine-tick route repair passed221tests+169money checks and is published; no investment edge follows from the repair. Next404 has facts only. [Small phase](data/deep_review_20261017/work/goal2317_RESUME.json).
 
-**Four LIVE/zero-matched BUYs /8.80 committed, independently verified23:05:58–59.** NewParton5NO46c/max2.30; originalthree exactorders unchanged. No candidate indexedholding/CTF0. Bid is a contingent commitment, not purchase/profit; sharedGoogle/Messi risk, hardpullOct23 22UTC/source-staleness budget, no chase/add/repost/takerfallback. [Exact orders/policies](notes/resting_orders.md) · [DEC239 proof](research/2026-10-19-parton400-maker.md).
+**Three LIVE zero-matched bids commit6.50.** Parton400 canceled once23:39; after353seconds,23:45 terminal/trades/cumulative-buys/CTF proof confirmed zero fills and retired only its reservation. Original three orders unchanged; no purchase, cash credit or profit. Dedicated Parton alerts removed, shared Messi/Google coverage retained. [Exact orders](notes/resting_orders.md) · [Closure](research/2026-10-19-parton400-cancellation.md).
 
 **Whalefall resolved YES: six NO shares pay0/full1.02economic loss.** Exact CTF payout andNegRisk wrapped-token identity verified atPolygon95828757. Six valueless tokens remain; no sale/burn/redemption transaction or active-risk alert. DEC222/235 outcomes recorded; original forecasts preserved. [Resolution](research/2026-10-19-whalefall-resolution.md).
 
@@ -84,13 +84,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October19 22:58 UTC
+## Last audited snapshot — October19 23:36 UTC
 
-**Indicative trading net depth187.14 versus170contributed (+10.08%); authoritative bankroll195.55 including5.84separate gas.** Trading189.71midpoint; PM34.57mid/32.00indicative fee-net depth. Exact producer22:58:50.210302–22:59:05.560272UTC precedesPartonbid. Rounded sequential quotes are not synchronized NAV or guaranteed proceeds;19.71residual is accounting arithmetic, not auditedcashprofit. VM/API costs excluded. CSV224 preserves all223earlier observations; internalgap2.58 versusdisplayed2.57 is rounding. [Financial record](research/2026-10-19-2258-financial-snapshot.md).
+**Indicative trading net depth185.79 versus170contributed (+9.29%); authoritative bankroll195.20 including5.83separate gas.** Trading midpoint189.37; PM34.23mid/30.65indicative fee-net depth. Canonical producer23:36:40.349789–23:36:57.061911UTC. Rounded sequential quotes are not synchronized NAV or guaranteed proceeds;19.71residual is accounting arithmetic, not audited cash profit. VM/API costs excluded. CSV225 preserves all224earlier rows. [Financial record](research/2026-10-19-2336-financial-snapshot.md).
 
-Postbid23:06 fourBUY8.80/fourreservations. Pre-entrypUSD20.45 lesscommitments8.80 mechanicallyearmarks11.65 available; not a new cashbalance observation or debit. PMdisplayedopen cost34.57+pending8.80=43.37, no independencehedge. Pair historicalfees remain in wallet accounting/separatecost record. If ordinaryholdings/bids all lose andClarity29/29set pays29, earlierjointscenario177.64→175.34 includingnew2.30fullfillloss; pair0:148.64→146.34, otherassetsconstant. Scenarios are not probabilities or a venue guarantee. [Order proof](data/deep_review_20261017/work/0400_postentry_2306.json).
+After the later verified zero-fill cancellation, three bids commit6.50; pUSD20.45 less those commitments mechanically leaves13.95 available. This is no new cash observation or credit. At the dated snapshot, all ordinary PM holdings/bids losing while the protected Clarity set pays29 gives177.64trading wealth; pair failure/payout0 gives148.64, other assets fixed. These are joint stress scenarios, not probabilities or guarantees. No RBA funds were allocated.
 
-Twelve22UTC lightchecks ranonce; newly detectedWhale resolution justified one subsequentpositions/bankroll producer pair. Final22:24stateaudit clean6indexed+1separatelegacydeindexedclaim/cruxquiet0; fourcanonicaldaemons count1/codecurrent/no restart. Hurdle0/projectwatchlist0hits/Ostium0 retain22:00dates. MI5NO44selected34 andOR5NO88selected73/noadd retained after source/fee-netexit review; broadadverse/fullcostloss retained. MissingSpanishpollinstruments triggered cancel-first;47.658025%YES research unchanged, freshunderwriting before any newentry. No new broad discovery. Next existingfullOct20 02UTC; weeklyOct23/monthlyNov12 notdue. [Completed check](research/2026-10-19-2200-checkin.md).
+The five requested22:24news IDs were substantively reviewed; MI/OR holds/noadd remain. Final Parton cancellation proof is separate from the23:36financial producer. Final23:57 order/index/reservation audit confirms three unchanged bids, no Parton/RBA exposure; auditCLEAN/cruxquiet. Four canonical daemons are single/current; config changes use ordinary reload. Full discovery16:48 and twelve22UTCchecks retain their dates. Next existing fullOct20 02UTC; weeklyOct23/monthlyNov12 not due. [Completed safety check](research/2026-10-19-2200-checkin.md) · [Requested-alert coverage](data/deep_review_20261017/work/tick222420_alert_coverage.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

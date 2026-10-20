@@ -1,0 +1,197 @@
+{
+  "review_index": 403,
+  "market_id": "3499791",
+  "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+  "criteria_sha256": "9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7",
+  "status": "valued",
+  "literal_analysis": "RBA Novmeetingtargetdelta, rawpositive>=37.5bpsroundsto50YES; upperboundifcorridor, emergencyoutsidemeetingexcluded. EligiblepostponementbeforeDec7nextmeetingstart; cancellation/toolatedefaultNO. Priorcurrent4.60notfixed5.10thresholdifinterveningemergencymove. ExpectedNov3Sydney2:30/03:30UTC, mediaAESTfootnoteconflictunresolved; nextstartclockunread.",
+  "evidence": [
+    {
+      "url": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html",
+      "observed_utc": "2026-10-19T23:18:13.295288Z",
+      "finding": "RootreadunanimousSep29+25to4.60; threeearlierhikes, inflationrisks/coolingactivity."
+    },
+    {
+      "url": "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-09-29.html",
+      "observed_utc": "2026-10-19T23:18:13.816531Z",
+      "finding": "Rootpolicyconsiderations/decision:25vshold, someupsideinflationrisksmaterialized; furtherhikespossible, no50pledge."
+    },
+    {
+      "url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/aug-2026",
+      "observed_utc": "2026-10-19T23:18:15.041856Z",
+      "finding": "Augheadline4.0/trimmed3.6, releasedSep30AFTERSep29meeting; nextSeptreleaseOct28."
+    },
+    {
+      "url": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/sep-2026",
+      "observed_utc": "2026-10-19T23:18:15.448763Z",
+      "finding": "SepemploymentSA−39,300/unemployment4.7/trend4.6; nextOctdataNov19aftermeeting; unroundedchangeexplainsrounding."
+    },
+    {
+      "url": "https://www.rba.gov.au/publications/smp/2026/aug/overview.html",
+      "observed_utc": "2026-10-19T23:26:41.484552Z",
+      "finding": "Aug5finalizedDecy/yCPI3.6/trim3.3/UE4.5, notSeptquarter/currentAugtarget; nosamehorizonforecastmissinferred."
+    },
+    {
+      "url": "https://www.rba.gov.au/speeches/2026/mc-gov-2026-09-29.html",
+      "observed_utc": "2026-10-19T23:26:41.913910Z",
+      "finding": "Governorconfirmsheld/25onlyconsideredanddeclinesNovguidance; corroboratesminuteswithoutnewpchange."
+    },
+    {
+      "url": "https://www.rba.gov.au/media/",
+      "observed_utc": "2026-10-19T23:26:42.320664Z",
+      "finding": "HauserOct21 08:45AEDT/Oct20 21:45UTC; Oct25economicinterview/Oct28committee. Bullockgraduationnopolicy; ConnollyOct20paymentseventalreadypastUTC. Nov3AEST/AEDTfootnoteconflict."
+    },
+    {
+      "url": "https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-19.html",
+      "observed_utc": "2026-10-19T23:48:53.999448Z",
+      "finding": "RootfullprimaryQ&A: futurecashpathupperendofuncertainNEUTRALestimates/somewhatrestrictive; ratesEASEDrecentweeks/NovemberpricingLOWER afterlabordata; directionreasonable; laborlooseningfasterthanforecast. Mixedcostpressures, waitCPI. AssistantGovernorFinMarkets, notnewBoard/Deputydecision."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.11652257950000001,
+    "low": 0.02,
+    "high": 0.55,
+    "method": "Source-conditioned subjective RBA regime reweighting afterquotes; no fittedreactionlaw or market-odds proxy.",
+    "reasoning": "NewOct19Kent primarytranscript omittedininitialsourcepack supports fasterlaborloosening and directionoflowerNovemberpricing; stanceonlysomewhatrestrictive/uncertainneutral, costsstillpersist. Reducepersistent30→25/severe12→7 andraisecontained55→65; conditional50propensities unchanged3/20/65/1. Thisis subjective sourceconditionedreweightingafterquotes, not measuredprobabilityorcopiedmarketodds; Sepjobs not counted twiceasnewdata. Historicalmodel remainsimmutable.15ppmodelreserveunchanged; YESstress0 beforefillselection,NOstress73.347742%. Numericalrevisionnotstatisticalconfidence.",
+    "model_path": "models/0403_revision_2358.json",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0403_quote_2350.json",
+    "quote_file_sha256": "400d85ef6854fd30966e7ee023fbd2ec615be286b64b087cce3a182838cb0a56",
+    "quote_capture_utc": "2026-10-19T23:47:21.492013+00:00",
+    "gamma_received_utc": "2026-10-19T23:47:21.245069+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 14.2,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.11652257950000001,
+        "selected_stress_probability": 0,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792453633139",
+        "book_received_utc": "2026-10-19T23:47:21.384849+00:00",
+        "book_age_seconds_at_receipt": 8.245849132537842,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.02,
+            "fee": 0.001,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.002
+              }
+            ],
+            "net": 0.021
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.01,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.0095
+          }
+        },
+        "taker_cost_usd": 0.021,
+        "central_expected_profit_usd": 1.1442257950000003,
+        "selected_stress_profit_usd": -0.021,
+        "break_even_before_carry": 0.0021000000000000003,
+        "break_even_constant_carry": 0.0021025777494897294,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8834774205,
+        "selected_stress_probability": 0.7334774205,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792453633139",
+        "book_received_utc": "2026-10-19T23:47:21.384849+00:00",
+        "book_age_seconds_at_receipt": 8.245849132537842,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.9905
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.98,
+            "fee": 0.001,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.998
+              }
+            ],
+            "net": 9.979000000000001
+          }
+        },
+        "taker_cost_usd": 9.9905,
+        "central_expected_profit_usd": -1.1557257950000004,
+        "selected_stress_profit_usd": -2.6557257950000013,
+        "break_even_before_carry": 0.9990500000000001,
+        "break_even_constant_carry": 1.000276333632245,
+        "current_execution_authorization": false
+      }
+    },
+    "maker_selected_stress": {
+      "YES1000at.001": {
+        "cash": 1.0,
+        "selected_probability": 0.0,
+        "selected_profit": -1.0,
+        "before_op_carry": true
+      },
+      "NO10at.998": {
+        "cash": 9.98,
+        "selected_probability": 0.7334774205,
+        "selected_profit": -2.645225795000001
+      },
+      "financial_action": false
+    }
+  },
+  "verdict": "NO_ENTRY on bothsides afternewprimarysource. Proposed1USDYESmaker droppedbeforeany--execute/reservation/order; unchanged15ppmodelreserve floorsselectedYES0. Codeprecisionrepair221+169passed/published215bdea doesnotestablishedge. Archiveonlypreparatoryfinancialprior/removeunique1feed3terms; numericalresearchretained. ThreeoriginalLIVEbids6.50/holdingsunchanged.",
+  "reopen_condition": "FreshindependentRBA/ABS/source/conditionalfillunderwriting ormaterialnewdecision-relevantevidence; evaluatecurrentquotes/bothsides/legalroute/account/caps fromscratch. No existingRBAorder/hardpull obligation orautomaticrepost/price-chase/taker fallback. All20RSStitlesmustremainvisible; exacttermmissnotirrelevance.",
+  "report_markdown": "# 403 revision · RBA November +50bps · no entry after newer primary evidence\n\n**Source-conditioned YES11.652258%, broad2–55%; unchanged15pp model allowance leaves selectedYES0. The proposed1000YES at0.001/1USD was dropped before submission.** No RBA order, reservation, fill or profit. Original15.570717% model and earlier positive maker sensitivity remain historical.\n\n- Exact market3499791; CID`0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22`; criteria`9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7`. Literal rules unchanged: November meeting target delta, nearest25bps/awayfromzero means raw+37.5 qualifies; outside-meeting emergencies excluded. Eligible postponement before Dec7nextmeetingstart counts; cancellation/toolate→NO. Exactstartclock/mediaNov3AEST-AEDT conflict remains; normalNov/Decfallback fits January, not guaranteed cash.\n- [Oct19 Kent original transcript](https://www.rba.gov.au/speeches/2026/sp-ag-2026-10-19.html), captured23:48:53.501294–53.999448UTC/HTTP200/rawSHA`e71c2377a8ae2aaedb3d06c72256a46036f73d556c7ce2424077d7a0bf69e790`: root read full policy Q&A. Current and projected cash-rate levels are compared with uncertain **neutral-rate estimates**; upper-end positioning means somewhat restrictive. It does not mean market rate expectations rose. Moderator describes lower November pricing after labour data; Kent describes recent easing, considers its direction reasonable and notes faster-than-forecast loosening. Household credit/spending weaken while business credit/cost pressures persist; future CPI matters. Kent is Assistant Governor(Financial Markets), not the Board or Deputy Governor; no50bps pledge.\n- The collector wrongly summarized pricing as rising and called17of20RSS entries irrelevant because literal names did not match. Root read ALL20titles, including Reuters/RBA abbreviations; title nonmatch has no economic rejection authority. Third-party bodies remain leads/unverified, not20independent reports. Root verified all5new raw+gzip receipt hashes and read relevant original transcripts; web-tool access failed, directHTTP200 body is retained. [Corrected small source unit and preserved original](../../../data/deep_review_20261017/work/0403_news_baseline_2350.json).\n- [Revised model](../models/0403_revision_2358.json) is explicitly afterquotes/source-conditioned: contained65/persistent25/severe7/demandshock3% versus original55/30/12/3, unchanged conditional50+3/20/65/1%. Standardmass11.53%; same offgrid/calendar branches giveYES11.652258/NO88.347742. This subjective reweighting uses policy interpretation, not a second independent employment surprise or a fitted reaction function. Broad2–55% remains a judgment range. Unchanged15pp allowance givesYES0/NO73.347742 before any additional adverse-fill stress.\n- [23:47:21 quote](../../../data/deep_review_20261017/work/0403_quote_2350.json): exactidentity, 5%taker-only fee parity, min5shares/tick0.001; bookage8.25s at receipt. YES0.001/0.002, NO0.998/0.999. TenYES cost0.021/central+1.144226/selected−0.021 and fails1USDcashminimum; scaling does not repair negative selectedEV. TenNO cost9.9905/central−1.155726/selected−2.655726. 1000YES maker at0.001 costs1/selected−1 beforeop/carry; ordinaryNOmaker10at0.998/selected−2.645226. Both sides fail. [Economics](../../../data/deep_review_20261017/work/0403_revision_economics_2358.json). These old quotes never authorize future execution.\n- The earlier dryrun at23:50 passed exact1000shares/1USD, ticket1/29.28 and declaredcluster49.80/58.56; it contained no`--execute`. Its forecast was invalidated by this source review. [Dryrun](../../../data/deep_review_20261017/work/0403_dryrun_2352.json). The explicit fine-tick route repair passed221focused/adjacent tests+169money checks and was published as215bdea; engineering validity is separate from investment edge.\n- Cash/existing Aave and existing holdings/three bids remain preferable under the selected assumptions. No capital allocated/no correlation credit. Preparatory RBA prior/feed/three keywords are retired; old proposed Oct20pull is no obligation because no order exists. Reopen only with fresh source/conditional-fill judgment and current execution gates; no smaller haircut, price chase, taker fallback or automatic order. No new timer or next research case in this bounded closeout.\n"
+}

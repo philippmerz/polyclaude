@@ -1,0 +1,21 @@
+{
+  "schema": "polyclaude.case400_tribute_news_facts.v1",
+  "review_index": 400,
+  "observed_utc": "2026-10-19T23:40:30Z",
+  "scope": "Two exact Tier-1 alert leads; date/event fact check only. No search-rank or probability inference.",
+  "alert_source": "data/deep_review_20261017/work/0400_new_alerts_2339.json",
+  "alerts": [
+    {"id":"0ebb9af61252aab524dc71534cbd45bd346f5dd4","alert_utc":"2026-10-19T23:08:34Z","headline":"Miley Cyrus Tearfully Details Communicating With Dolly Parton After Her Death - E! News","original_alert_link":"Google News RSS link in source row"},
+    {"id":"2a551dbfde59fa8d01f45d2b89cbb46ea16aa3ae","alert_utc":"2026-10-19T23:10:08Z","headline":"Miley Cyrus Tearfully Remembers Dolly Parton At Hollywood Bowl Concert, Performs ‘Jolene’ - Deadline","original_alert_link":"Google News RSS link in source row"}
+  ],
+  "publisher_body_attempts": [
+    {"publisher":"E! News","capture":"logs/deep_review_20261017/case0400_tribute_news_2340/enews/enews.body.json.gz","receipt":"logs/deep_review_20261017/case0400_tribute_news_2340/enews/enews.receipt.json","initial_http_status":302,"redirect_final_host":"consent.google.com","final_http_status":200,"final_title":"Before you continue","captured_bytes":35222,"raw_sha256":"9579ce5c230590e81e3b1f1a0dedd851b901f887d44834c59079a108eb06f56b","gzip_sha256":"35a6b00a5c51c1df8639319da221bddfcb9157ed544609d9f6f02479e61628ec","source_body_obtained":false},
+    {"publisher":"Deadline","capture":"logs/deep_review_20261017/case0400_tribute_news_2340/deadline/deadline.body.json.gz","receipt":"logs/deep_review_20261017/case0400_tribute_news_2340/deadline/deadline.receipt.json","initial_http_status":302,"redirect_final_host":"consent.google.com","final_http_status":200,"final_title":"Before you continue","captured_bytes":35062,"raw_sha256":"3f5306f970c6a0d87a3a329773b6296131c514e3d87e14e09de9d042f10e7c16","gzip_sha256":"4698aa4db54873b7ad04ceb6f4584ed4c29841f88a0ef026fe9ac8a3021e1c9a","source_body_obtained":false}
+  ],
+  "dated_leads": [
+    {"publisher":"E! News","publisher_url":"https://www.eonline.com/ca/news/1437247/miley-cyrus-tears-up-detailing-grief-after-dolly-parton-death","basis":"Search index result for the exact alert headline, not a captured publisher body.","displayed_publication_time":"2026-10-19 7:24 PM (timezone not established)","event_date_reported":"2026-10-18 Hollywood Bowl residency appearance","reported_context":"Cyrus discussed feeling Parton's presence after her Aug. 25 death."},
+    {"publisher":"Deadline","publisher_url":"Not recovered from the consent redirect or indexed result.","basis":"Third-party indexed excerpt attributed to Deadline; not a captured publisher body.","displayed_story_time":"2026-10-17 18:26 UTC","event_date_indicated":"Oct. 16, 2026 (the excerpt says 'last night' relative to Oct. 17).","reported_context":"Retrospective tribute/performance of 'Jolene' at the Hollywood Bowl after the already reported Aug. 25 death."}
+  ],
+  "bounded_conclusion": "The available dated leads concern Cyrus appearances on Oct. 16 and Oct. 18 and coverage published Oct. 17 and Oct. 19. They are later remembrance/performance coverage, not a new Dolly Parton death event; the death date remains the previously captured Aug. 25, 2026 announcement. No new primary interview or direct artist statement was obtained in this bounded retrieval.",
+  "limitations": ["Google News redirects ended at Google's consent page; the two retained HTML bodies are consent screens, not E! or Deadline articles.","E! date/event details are from its indexed result. Deadline date/event details are from a third-party excerpt. Confirm both against publisher bodies before treating details as primary-source verified.","These articles do not provide Google annual Global Passings ranking data."]
+}

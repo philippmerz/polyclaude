@@ -1,0 +1,232 @@
+{
+  "review_index": 402,
+  "market_id": "2071657",
+  "condition_id": "0xf4c72ff42c3f1ee9f25e835e62ca52d71a9cafbcc11f93c01af709af8ee5ff09",
+  "criteria_sha256": "ec49d00513eb0a261e73e0655d98962515510c168e0e505648eb9d89b0cc12ea",
+  "status": "valued",
+  "literal_analysis": "Any qualifyingcessation Apr24creation throughDec31 23:59ET, notjustyearend; announcementqualifiesbeforeeffectivedate; detention/effectiveremoval/permanentpreventionqualifies. OfficialLee/government orcredibleconsensus. Article65powerssuspension vsceasingoffice ambiguous; no exhaustedpastdocket/absenceclaim. RootverifiedcreationexactGamma; normalDecembercashfitsJanuary, dispute can delay.",
+  "evidence": [
+    {
+      "url": "https://www.korea.kr/briefing/presidentView.do?newsId=148973786",
+      "observed_utc": "2026-10-19T23:18:03.789022Z",
+      "finding": "OfficialOct19appointmentactivity: positivecurrentserviceevidence, notearlierabsence. Roothashverifiedbody."
+    },
+    {
+      "url": "https://elaw.klri.re.kr/eng_service/jomunPrint.do?cseq=1777689&hseq=1",
+      "observed_utc": "2026-10-19T23:21:39.468024+00:00",
+      "finding": "RootreadArt65/71/84: majorityproposal/two-thirdspassage/suspendedpowersvsremoval; actingauthorityincapacity; criminalchargeexceptioninsurrection/treason. Not a currentlegalopinion onparticulartrials."
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20261019007100315",
+      "observed_utc": "2026-10-19T23:21:39.468024+00:00",
+      "finding": "Directparliamentaryauditreport: no contemplatedindictmentwithdrawal; arrestdecisioncommentrefused; trialsremainsuspended. Doesnotestablishdetention/removal."
+    },
+    {
+      "url": "https://news.sbs.co.kr/english/article.do?cooper=SBSNEWSAMP&news_id=N1008801555",
+      "observed_utc": "2026-10-19T23:21:39.468024+00:00",
+      "finding": "Oct16directjudicialauditreport: fivehearingsindefinitelypostponed/eachpaneldecides; EnglishAItranslated, actualcourtorderunread."
+    },
+    {
+      "url": "https://world.kbs.co.kr/service/news_view.htm?Seq_Code=204912&lang=e",
+      "observed_utc": "2026-10-19T23:21:39.468024+00:00",
+      "finding": "Oct16discussionconcernsChiefJusticeJo; oppositionwarnspossibleLeecalls, notverifiedLeeimpeachmentmotion. Rootmaintitle/bodyverifiedafterpromoselectormismatch."
+    },
+    {
+      "url": "https://en.yna.co.kr/view/AEN20260602008360315",
+      "observed_utc": "2026-10-19T23:21:39.468024+00:00",
+      "finding": "June4DPmajority/9of14by-electionwinsdated, not exactOct19membership."
+    },
+    {
+      "url": "https://www.ccourt.go.kr/site/kor/info/selectDiscussionScheduleList.do?pageIndex=1",
+      "observed_utc": "2026-10-19T23:18:03.789022Z",
+      "finding": "Displayedcourtpagespartlystale/firstpageonly; noLee match isnot exhaustiveabsence. Assemblydocketnotreached; rootverifiedhistorycapturehashes/actualclocks."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.04427866765658384,
+    "low": 0.003,
+    "high": 0.25,
+    "method": "Orderedconditionalpast/political/court/voluntary/medical/securityscenario tree; primaryjudgment, uncalibrated.",
+    "reasoning": "Currentpositiveofficeactivity, constitutionalmajorityhurdle/trialstaysfavorcontinuity;6%crisis×35%qualification/2%court-only×25%/latent.8%/voluntary.3%/medical.4%/security.4% yield4.427867%YES. No formal-motionabsence/currentrosterclaimed; source/adjudicationgapexplicit. Actual20ppselectedNO75.5721, notmeasuredtail.",
+    "model_path": "models/0402_primary_2322.json",
+    "actual_entry_reserve_pp": 20
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0402_quote_2322.json",
+    "quote_file_sha256": "3e9093d8248d75a3c5d9ac6911b87e6bdb8d8404802e26ef46468d02827c5858",
+    "quote_capture_utc": "2026-10-19T23:20:11.962738+00:00",
+    "gamma_received_utc": "2026-10-19T23:20:11.756800+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 73.25,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.04427866765658384,
+        "selected_stress_probability": 0,
+        "best_bid": 0.044,
+        "best_ask": 0.067,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792451925545",
+        "book_received_utc": "2026-10-19T23:20:11.873197+00:00",
+        "book_age_seconds_at_receipt": 86.32819700241089,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.335,
+            "fee": 0.01251,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.067
+              }
+            ],
+            "net": 0.34751000000000004
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.21999999999999997,
+            "fee": 0.00842,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.044
+              }
+            ],
+            "net": 0.21157999999999996
+          }
+        },
+        "taker_cost_usd": 0.34751000000000004,
+        "central_expected_profit_usd": -0.12611666171708086,
+        "selected_stress_profit_usd": -0.34751000000000004,
+        "break_even_before_carry": 0.06950200000000001,
+        "break_even_constant_carry": 0.06994321111708778,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.9557213323434162,
+        "selected_stress_probability": 0.7557213323434162,
+        "best_bid": 0.933,
+        "best_ask": 0.956,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792451925545",
+        "book_received_utc": "2026-10-19T23:20:11.873197+00:00",
+        "book_age_seconds_at_receipt": 86.32819700241089,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.779999999999999,
+            "fee": 0.00842,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.956
+              }
+            ],
+            "net": 4.7884199999999995
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.665,
+            "fee": 0.01251,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.933
+              }
+            ],
+            "net": 4.65249
+          }
+        },
+        "taker_cost_usd": 4.7884199999999995,
+        "central_expected_profit_usd": -0.009813338282918416,
+        "selected_stress_profit_usd": -1.0098133382829184,
+        "break_even_before_carry": 0.9576839999999999,
+        "break_even_constant_carry": 0.9637635491850173,
+        "current_execution_authorization": false
+      }
+    },
+    "cash_minimum_illustration": {
+      "note": "5YESpaperwalk canfallbelow1USDsignedBUYminimum; separately20YESillustrationis hypotheticalnotentryauthorization. NOmain5sharewalksufficientcash butfailsselected.",
+      "quantity_yes": 20,
+      "yes": {
+        "probability": 0.04427866765658384,
+        "selected_stress_probability": 0,
+        "best_bid": 0.044,
+        "best_ask": 0.067,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792451925545",
+        "book_received_utc": "2026-10-19T23:20:11.873197+00:00",
+        "book_age_seconds_at_receipt": 86.32819700241089,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 1.34,
+            "fee": 0.05001,
+            "fills": [
+              {
+                "shares": 20.0,
+                "price": 0.067
+              }
+            ],
+            "net": 1.3900100000000002
+          },
+          "bids": {
+            "complete": true,
+            "filled": 20.0,
+            "gross": 0.8649999999999999,
+            "fee": 0.03311,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.044
+              },
+              {
+                "shares": 15.0,
+                "price": 0.043
+              }
+            ],
+            "net": 0.8318899999999999
+          }
+        },
+        "taker_cost_usd": 1.3900100000000002,
+        "central_expected_profit_usd": -0.5044366468683235,
+        "selected_stress_profit_usd": -1.3900100000000002,
+        "break_even_before_carry": 0.0695005,
+        "break_even_constant_carry": 0.0699417015948197,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Noentry: bothfee-nettakersandordinarymakerquotesfailselected20pp; main5NOcost4.78842/central−.00981/selected−1.00981, cashminimum20YEScost1.39001/central−.50444. No newprior/order/watch; comparecash/Aave/existingtinyPartonbid andsharedpolitical/venue risk.",
+  "reopen_condition": "ActualofficialLee departure/detention/incapacity/announcement, Assemblymotion/coalitionchange, trialresumption/CCourtdecision, materialsecurity orcriteriachange; lowerNOquotesrequirefreshconditionalfill/source/account/capunderwriting, noautomaticbids.",
+  "report_markdown": "# 402 · Lee Jae-myung out in2026 · ≈4.43%YES; no entry\n\nMarket2071657; CID `0xf4c72ff42c3f1ee9f25e835e62ca52d71a9cafbcc11f93c01af709af8ee5ff09`; criteria `ec49d00513eb0a261e73e0655d98962515510c168e0e505648eb9d89b0cc12ea`.\n\n- **Rule:** any qualifying cessation from verifiedcreation **Apr24 21:43:00.904729UTC** throughDec31 23:59ET/Jan1 04:59UTC. Announcedresignation/removal beforecutoff qualifies even ifeffective later; detention/effectiveremoval/permanentprevention also qualify. Not merely final-yearendofficeholder or criminalindictment. OfficialLee/government first, credibleconsensus allowed. No benign-fallback clause. RoutineDecemberresolution fitsJanuary; contestedadjudicationcan delaycash.\n- [OfficialOct19presidentialbriefing](https://www.korea.kr/briefing/presidentView.do?newsId=148973786) records Lee exercisingappointmentpowers that afternoon, not absence of earlierqualifyingevents. Rootverifiedbody/currentcreationGamma. [Constitution65/71/84](https://elaw.klri.re.kr/eng_service/jomunPrint.do?cseq=1777689&hseq=1): presidentialimpeachment needsmajorityproposal/two-thirds passage; passage suspends exerciseofpowers pendingadjudication, decisionremovesoffice. Actingauthority also coversincapacity. Suspension is not textually identical to ceasingoffice; effective-removal wording creates adjudicationrisk.\n- [Oct19prosecutoraudit](https://en.yna.co.kr/view/AEN20261019007100315) leavesindictmentsinplace/trialsstayed; refusingcomment onfuturearrest is not an arrestsignal. [Oct16judicialaudit](https://news.sbs.co.kr/english/article.do?cooper=SBSNEWSAMP&news_id=N1008801555) reportsfivehearingsindefinitelypostponed underArt84; eachpanelretainscontrol. Firsthandhearingreport, not an inspectedcourtorder; EnglishAItranslation disclosed. [KBSOct16](https://world.kbs.co.kr/service/news_view.htm?Seq_Code=204912&lang=e) concerns possibleChiefJusticeJoimpeachment andoppositionthreatofLeecalls, not verifiedLeemotion. [June4results](https://en.yna.co.kr/view/AEN20260602008360315) showDPmajority then, not exactOctroster. Rootcorrected firstHTMLarticle extraction thatselecteda musicpromo; propermaintitle/text corroboratesKBSclaim.\n- [Originalfacts](../../../data/deep_review_20261017/work/0402_facts_1828.json), [addendum](../../../data/deep_review_20261017/work/0402_addendum_2250.json), [historycoverage](../../../data/deep_review_20261017/work/0402_history_addendum_2318.json): Courtpages displayed32hearingentries/359bulletinrecords, partlystale/firstpageonly; Assemblysearchdidnotreachdocket/currentseatsunverified. No exhaustiveabsencefinding. Newhistorypacket's stale22:50header corrected againstactual23:17:50–23:18:03receiptwindows, originaltime retainedinerratum. Primary/reporterbodyhashes andcreationbindingverified; rawbodiesprivate.\n- **PrimaryYES4.4279%/NO95.5721%, broadYES0.3–25%.** [Priceblindmodel](../models/0402_primary_2322.json) saved23:20:11.373beforequote. Orderedconditionalbranches:0.8%latentpast;6%futurepoliticalcrisis×35%qualifyingresult;2%court-onlyreactivation×25%;0.3%voluntary;0.4%medical/violentincapacity;0.4%securityousting. NO isproductofsurvivalbranches, not independentempiricalhazards. Majority/proceduraltime/currenttrialstays favorcontinuity; crisis/announcement/powersinterpretation andunseenpast retainrisk. Weights/rangeareunfittedjudgment, not a measuredhazardlaw. 15%crisis×60%qualification liftsYESabove10%; largerlatent/health/securityriskcanexceedrange.\n- Actual20ppentryallowance (10ordinary+10unmeasuredtail/history/adjudication) givesselectedYES0/NO75.5721%, executionstressonly. Subsequent23:20:11.873book:YES4.4/6.7c,NO93.3/95.6c; exactidentity,4%taker-onlyfeeparity,min5/tick0.1c,age86.33s. [Boundeconomics](../../../data/deep_review_20261017/work/0402_economics_2323.json):5NOcost4.78842/central−0.00981/selected−1.00981;5YEScost0.34751below1USDsignedminimum,20YEScost1.39001/central−0.50444/selected−1.39001. JoiningNO93.3c givesselected−0.88639 per5beforecarry;25YES4.4c costs1.10/selected−1.10. Ordinarymakerquotes fail too.\n- **No entry/prior/order/watch added.** SharplylowerNOquotes need freshsource/conditionalfillunderwriting, not placeholderbids. ExistingPartonmaker/otherknowncandidates andcash/Aavevariable3.2035%are alternatives; no independencehedgeagainstpolitical/war/venueexposure. Dated23:06fourBUY8.80/22:58producer195.55incl5.84gas are context, not new executiongates. Reopen on actualofficialdeparture/detention/incapacity, Assemblymotion/coalitionchange, trialresumption/CCourtdecision or materialsecurity/criteriachange; verifybothsides/currentaccount beforemoney.\n"
+}

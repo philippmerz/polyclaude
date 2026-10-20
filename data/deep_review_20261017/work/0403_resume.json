@@ -1,0 +1,31 @@
+{
+  "schema": "deep_review.fact_resume.v1",
+  "review_index": 403,
+  "phase": "VALUED_REVISED_NO_ENTRY_NEVER_SUBMITTED",
+  "identity": {
+    "market_id": "3499791",
+    "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+    "criteria_sha256": "9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7",
+    "question": "Reserve Bank of Australia increases interest rates by 50+ bps at the November 2026 meeting?"
+  },
+  "source_paths": [
+    "work/0403_facts_2318.json",
+    "work/0403_guidance_addendum_2328.json",
+    "work/0403_news_baseline_2350.json"
+  ],
+  "source_capture_root": "logs/deep_review_20261017/case0403_sources_2318",
+  "unit_sha256": "abf6d6a605d49fb41c9fc217655a186658fc82b1557644f1f7f7c8f6455fcf78",
+  "captured_as_of": "2026-10-19",
+  "report": "research/2026-10-17-deep-review/evaluations/0403.md",
+  "report_sha256": "6bdbf4376da1989ac0c667a7cdc3c16b6a7372e5593e8a256536cdb9bc978a9c",
+  "updated_utc": "2026-10-20T00:00:33.828083+00:00",
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "latest_revision": "research/2026-10-17-deep-review/revisions/0403_20261019T235523790177Z.md",
+  "latest_revision_sha256": "fe029eea572e6b2aa56e74c8bfc45cfc788268562cb7d5dc439a8529945063dd",
+  "current_model": "research/2026-10-17-deep-review/models/0403_revision_2358.json",
+  "current_p_yes": 0.11652257950000001,
+  "actual_entry_reserve_pp": 15,
+  "financial_status": "NOT_ENTERED_SOURCE_REVISION",
+  "cleanup": "data/deep_review_20261017/work/0403_no_entry_cleanup_2359.json",
+  "note": "Originalreport/candidatedryrunhistorical; newerKentprimaryreadcorrectedpricingdirection/filtererrorbeforemoney. Noorder/reservation/holding; preparatorycoverage retired. Code221+169pass doesnotestablishedge. Next404notstarted."
+}

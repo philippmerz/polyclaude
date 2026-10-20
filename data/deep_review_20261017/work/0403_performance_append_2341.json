@@ -1,0 +1,10 @@
+{
+  "schema": "performance_append.v1",
+  "previous_rows": 224,
+  "new_rows": 225,
+  "previous_bytes": 129131,
+  "previous_sha256": "51da210dfbb24691e95a8015d37eea984a6252432a03cf7717aa7c89c882abe7",
+  "new_sha256": "117e62a0ac449e8c5bac0b521ea0e6f594e8a20fa7c5540575aab25b1611915c",
+  "prefix_preserved": true,
+  "producer_body_sha256": "197f590b7a8b077b8221150fbba3b49d4400698a09d4c05e2593172bdfe2db77"
+}

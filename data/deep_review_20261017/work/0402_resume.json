@@ -1,13 +1,17 @@
 {
   "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 402,
-  "phase": "Facts collected; primary may proceed after exact frozen rule and linked source units; no valuation or entry authority.",
+  "phase": "VALUED_NO_ENTRY",
   "source_paths": [
     "work/0402_facts_1828.json",
-    "work/status_batch_0305/case_0402.json"
+    "work/0402_addendum_2250.json",
+    "work/0402_history_addendum_2318.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-19T18:28:05Z",
+  "updated_utc": "2026-10-20T00:00:33.828083+00:00",
   "source_capture_root": "logs/deep_review_20261017/0402_sources_20261019",
-  "exact_identity_criteria_verified": true
+  "exact_identity_criteria_verified": true,
+  "report": "research/2026-10-17-deep-review/evaluations/0402.md",
+  "report_sha256": "893ab05ca78b11bc64609ca36729eb285ec5cb6514cee56888b4a74cd49b67fa",
+  "source_asof_note": "Originalfacts18:28/2250addendum; historycapture23:17:50\u201323:18:03 andvaluation23:21 retainactualdates; updated_utc is editorial only."
 }

@@ -1,0 +1,98 @@
+{
+  "schema": "postcleanup-readonly-check-v1",
+  "as_of_utc": "2026-10-19T23:47:42.602171Z",
+  "capture_dir": "logs/deep_review_20261017/postcleanup2350",
+  "checks": {
+    "polyclaude_status_quick": {
+      "started_utc": "2026-10-19T23:47:36.754652Z",
+      "received_utc": "2026-10-19T23:47:41.017134Z",
+      "returncode": 0,
+      "captured_result_sha256": "1f9152507370dffbb62c631c0a60d97cfb1f17b90e1bd961539d439ab92ed09b",
+      "captured_bytes": 3299,
+      "output_lines": 40,
+      "stderr_empty": true,
+      "error_or_warning_markers": 0
+    },
+    "position_state_audit_readonly": {
+      "started_utc": "2026-10-19T23:47:41.027851Z",
+      "received_utc": "2026-10-19T23:47:42.213185Z",
+      "returncode": 0,
+      "captured_result_sha256": "f0e1082ce5133f50dfd51a5ae345dc3368ff84a866b5361a1016371a3b02ad09",
+      "captured_bytes": 110,
+      "summary": "CLEAN",
+      "output_lines": 1,
+      "stderr_empty": true
+    },
+    "crux_coverage_quiet": {
+      "started_utc": "2026-10-19T23:47:42.222672Z",
+      "received_utc": "2026-10-19T23:47:42.536231Z",
+      "returncode": 0,
+      "captured_result_sha256": "a6c98c765596257989a33b495dbdc844f14662a966071e00f819825d43b23cae",
+      "captured_bytes": 40,
+      "uncovered_output_lines": 0,
+      "stdout_empty": true,
+      "stderr_empty": true
+    },
+    "daemon_code_config_probe": {
+      "started_utc": "2026-10-19T23:47:42.546872Z",
+      "received_utc": "2026-10-19T23:47:42.602171Z",
+      "result_sha256": "d2d8d56abdfd467b57cc0c7fedf88e1353cdfd66adf51da14c4db3d99819f54e",
+      "daemon_inventory": [
+        {
+          "daemon": "news_watcher",
+          "canonical_count": 1,
+          "all_startish_count": 1,
+          "process_starts_utc": [
+            "2026-10-19T05:28:37.310000+00:00"
+          ],
+          "script_mtime_utc": "2026-10-18T22:58:44.443045+00:00",
+          "code_fresh": true
+        },
+        {
+          "daemon": "heartbeat_watch",
+          "canonical_count": 1,
+          "all_startish_count": 1,
+          "process_starts_utc": [
+            "2026-10-18T09:33:44.960000+00:00"
+          ],
+          "script_mtime_utc": "2026-10-02T14:31:39.989785+00:00",
+          "code_fresh": true
+        },
+        {
+          "daemon": "telegram_listener",
+          "canonical_count": 1,
+          "all_startish_count": 1,
+          "process_starts_utc": [
+            "2026-10-18T09:33:44.990000+00:00"
+          ],
+          "script_mtime_utc": "2026-09-10T18:34:57.001351+00:00",
+          "code_fresh": true
+        },
+        {
+          "daemon": "opportunity_watch",
+          "canonical_count": 1,
+          "all_startish_count": 1,
+          "process_starts_utc": [
+            "2026-10-18T09:33:44.720000+00:00"
+          ],
+          "script_mtime_utc": "2026-09-29T10:07:53.974910+00:00",
+          "code_fresh": true
+        }
+      ],
+      "configs": [
+        {
+          "name": "news_watcher_config",
+          "exists": true,
+          "mtime_utc": "2026-10-19T23:46:40.996405+00:00",
+          "reload_behavior": "reloads at start of every poll loop"
+        },
+        {
+          "name": "opportunity_watch_triggers",
+          "exists": true,
+          "mtime_utc": "2026-10-06T10:56:24.793471+00:00",
+          "reload_behavior": "reread by trigger checks during poll loop"
+        }
+      ]
+    }
+  }
+}

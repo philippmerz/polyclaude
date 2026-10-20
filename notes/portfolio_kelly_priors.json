@@ -1721,7 +1721,7 @@
     "closure_verification": "data/deep_review_20261017/work/light2200_whale_adapter_2223.json",
     "resolution_verification": "data/deep_review_20261017/work/light2200_whale_resolution_2222.json"
   },
-  "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824": {
+  "_closed_20261019_parton400": {
     "p_yes": 0.2,
     "p_no": 0.8,
     "cluster": "google-year-in-search-2026",
@@ -1740,7 +1740,7 @@
     "model": "research/2026-10-17-deep-review/models/0400_primary_2255.json",
     "entry_constraints": "research/2026-10-17-deep-review/models/0400_entry_constraints_2300.json",
     "research_report": "research/2026-10-17-deep-review/evaluations/0400.md",
-    "financial_status": "LIVE_UNFILLED",
+    "financial_status": "CANCELED_ZERO_FILL",
     "rationale": "PrimarysharedcategoricalParton20/NO80 fromeligibleevents/recognition/competition, not measuredGlobalrank.20model+5conditionalfill+2Januarydelayreserve\u2192selectedNO53. Freshcomparison429/no data; exact2026cutoff/aliasesunknown. Tiny5NO<=46c/max2.30 onlyaftervettedlivegates; fullcashlosspossible.",
     "note": "Declared25%aggregateexistingrisk conservativelycoversallPMopen+pendingcost; noindependencehedgecredit againstMessi/googlemethod/publication/venue. BroadNO45canfavornoentry; nohighconfidencetailmeasurement.",
     "management": "Revieweach existingtick/earliermaterialGooglelist/method/cutoff/preview/comparison/Dolly/competitor/venueinput. Cancel-firstunassessedmaterialnews. HardpullOct23 22UTC: fourdayconditionalquote/source-stalenessbudget without comparableGlobalseries; freshunderwritingbeforeanyrepost. Noadd/chase/takerfallback. Anyfillfreshholding/source/netexit/jointriskreview; partialdustpossible. Hiddeninfosellsstrictlyabovefreshfair unlessverifiedthesisbreakexit.",
@@ -1753,6 +1753,44 @@
     "matched_shares_verified": 0,
     "state_verified_utc": "2026-10-19T23:05:59.446329Z",
     "poststate_proof": "data/deep_review_20261017/work/0400_postentry_2306.json",
-    "hard_pull_utc": "2026-10-23T22:00:00Z"
+    "hard_pull_utc": "2026-10-23T22:00:00Z",
+    "cancel_received_utc": "2026-10-19T23:39:07.689636Z",
+    "cancel_proof": "data/deep_review_20261017/work/0400_cancel_new_news_2339.json",
+    "current_management": "Closed zero-fill; no automatic repost/add/chase/taker fallback. Research is historical, not a current executable prior.",
+    "original_slug": "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824",
+    "closed_utc": "2026-10-19T23:46:40.984482+00:00",
+    "closure_verification": "data/deep_review_20261017/work/0400_final_reconcile_2345.json",
+    "current_assessment": "DEC240: standing cancel-first on two unassessed Miley/Dolly tribute leads. One23:39cancel; after353seconds exact terminalCANCELED0/exhausted126trades/cumulativebought0/bothCTFs0; onlytargetreservation4to3/threeothers6.50unchanged. No purchase, fee, cashcredit or profit. OriginalphysicalYES20/NO80/27pp research preserved; unique active coverage retired. Publisher bodies remain unavailable; no newrank effect adopted. Freshunderwritingbeforeanyrepost."
+  },
+  "_retired_20261019_rba403_unsubmitted": {
+    "p_yes": 0.15570717199999998,
+    "p_no": 0.844292828,
+    "edge_haircut": 0.15456050220660952,
+    "cluster": "australia-monetary-policy-2026",
+    "rho_within": 0.5,
+    "cluster_frac": 0.25,
+    "verified": "2026-10-19",
+    "criteria_read": "2026-10-19",
+    "updated_utc": "2026-10-19T23:50:30.443468+00:00",
+    "review_index": 403,
+    "market_id": "3499791",
+    "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+    "criteria_sha256": "9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7",
+    "asset": "91938155805115059537644364715626868610202911742123607938847229240776027009510",
+    "hidden_info": true,
+    "model": "research/2026-10-17-deep-review/models/0403_primary_2326.json",
+    "entry_constraints": "research/2026-10-17-deep-review/models/0403_entry_constraints_2334.json",
+    "research_report": "research/2026-10-17-deep-review/evaluations/0403.md",
+    "financial_status": "NOT_ENTERED_SOURCE_REVISION",
+    "rationale": "PhysicalYES15.570717% is unfitted primaryRBA/ABS regime judgment/broad2\u201355, not consensus or calibrated tail.15ppmodel allowance then fivefold NO-statefill likelihood stress produces selected0.11466698%; effective15.45605022pphaircut. Tenfold stressfails. Any allocationlimited1USD/1000YES.001postonly, fullcashlosscanoccur. No probabilityshiftafterquotes.",
+    "note": "Manual1USD below quarterKelly on fill-conditionedcentral3.5573% (~1.69 before rho). ToolKellyuses physicalcentral; manualbudget binding. Declared25%aggregatePMcost+commitmentcoverage/rho0.5 conservatively overlaps allcurrentPM, no independencehedge.",
+    "management": "Revieweachscheduledcheck/earliermaterialsourcefill. Cancel-first on unassessed materialRBA/data/energy/source/venueinput. Hardpull2026-10-20T18:00:00Z beforeHauser21:45UTCpolicyQ&A/3h45buffer; notgenericcronexpiry. Noadd/chase/repost/takerfallback. Anyfillfreshholding/source/netexit/jointriskreview; partialdustpossible. Hiddeninfosellsstrictlyabovefreshfair exceptverifiedthesisbreakexit.",
+    "hard_pull_utc": "2026-10-20T18:00:00Z",
+    "original_slug": "reserve-bank-of-australia-increases-interest-rates-by-50-bps-at-the-november-2026-meeting-1786388202573",
+    "retired_utc": "2026-10-19T23:55:50.274193+00:00",
+    "current_research_p_yes": 0.11652257950000001,
+    "current_research_model": "research/2026-10-17-deep-review/models/0403_revision_2358.json",
+    "current_assessment": "Preparatoryprior only/no--execute/reservation/order/holding. RootnewOct19Kenttranscript correctslowerpricing/fasterlaborloosening andbadliteralRSSexclusions; sourceconditionalYES11.652258 withunchanged15ppmodelallowancefloorsselectedYES0; bothsidesfail. Originalcandidatep15.5707/haircut15.45605 retainedhistorically. No capital/spend/profit/hardpull obligation orRBAalerts.",
+    "current_management": "No order exists. Reopen only with fresh independent source/conditional-fill/current economics and execution gates; no automatic entry/chase/taker fallback."
   }
 }

@@ -1,5 +1,5 @@
 {
-  "next_id": 240,
+  "next_id": 243,
   "decisions": [
     {
       "id": 1,
@@ -5218,10 +5218,10 @@
         "conditional-fill"
       ],
       "slug": "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824",
-      "outcome": null,
+      "outcome": "Operational zero-fill closure only: one vetted cancel23:39:04\u201307; fresh23:45 terminalCANCELED0matched, exhausted126authenticatedtrades/0targetmatches, indexedcumulativebuys0/bothCTFs0 after353seconds. Canonical locked pruning retired onlytarget4to3; originalthreeLIVEzero-matchedBUY6.50 unchanged. No purchase, spend, sale, fee, cashcredit or realizedPnL; unexecuted forecast, not market-outcome calibration.",
       "calibration_delta": null,
-      "lesson": null,
-      "financial_status": "LIVE_UNFILLED",
+      "lesson": "Cancel first on newly unassessed material sources; preserve all numerical research. Tribute headlines neither measure Global search rank nor prove a second passing. Publisher retrieval gaps require fresh underwriting before any new entry.",
+      "financial_status": "CANCELED_ZERO_FILL",
       "side": "NO",
       "planned_shares": 5,
       "limit_price": 0.46,
@@ -5238,7 +5238,73 @@
       "hard_pull_utc": "2026-10-23T22:00:00Z",
       "poststate_proof": "data/deep_review_20261017/work/0400_postentry_2306.json",
       "report": "research/2026-10-17-deep-review/evaluations/0400.md",
-      "management_record": "notes/resting_orders.md"
+      "management_record": "notes/resting_orders.md",
+      "resolved_at": "2026-10-19T23:46:41Z",
+      "closure_proof": "data/deep_review_20261017/work/0400_final_reconcile_2345.json",
+      "closed_utc": "2026-10-19T23:46:40.984482+00:00"
+    },
+    {
+      "id": 240,
+      "timestamp": "2026-10-19T23:46:41Z",
+      "type": "size_change",
+      "thesis": "Cancel unfilled Parton DEC239 fiveNO46c/maximum2.30 after unassessed Miley/Dolly tribute coverage; standing cancel-first policy. Exact after300s terminal/trades/cumulativebuys/CTF proof reconciled zero fills and retired only its reservation. No new probability or rank fact adopted; full publisher bodies unavailable. Source IDs and proof in research/2026-10-19-parton400-cancellation.md.",
+      "confidence": "high",
+      "prediction": "Canceled zero-fill order remains closed; fresh independent source/conditional-fill underwriting before any repost.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "cancel-unfilled",
+        "source-review",
+        "no-profit",
+        "deep-review"
+      ],
+      "slug": "will-dolly-parton-be-the-1-searched-passing-on-google-this-year-20260717220846824",
+      "outcome": "Operational zero-fill closure only: one vetted cancel23:39:04\u201307; fresh23:45 terminalCANCELED0matched, exhausted126authenticatedtrades/0targetmatches, indexedcumulativebuys0/bothCTFs0 after353seconds. Canonical locked pruning retired onlytarget4to3; originalthreeLIVEzero-matchedBUY6.50 unchanged. No purchase, spend, sale, fee, cashcredit or realizedPnL; unexecuted forecast, not market-outcome calibration.",
+      "calibration_delta": null,
+      "lesson": "Cancel first on newly unassessed material sources; preserve all numerical research. Tribute headlines neither measure Global search rank nor prove a second passing. Publisher retrieval gaps require fresh underwriting before any new entry.",
+      "resolved_at": "2026-10-19T23:46:41Z"
+    },
+    {
+      "id": 241,
+      "timestamp": "2026-10-19T23:46:41Z",
+      "type": "scaffolding",
+      "thesis": "Case403 revealed cent-grid maker limit discarded valid fine-tick price despite exact1USD/1000share amounts. Add explicit --maker-price opt-in with exact cent-cash integer lots and both-book identity/freshness/ask/tick/minimum checks; same price/quantity/risk through caps,reservation and post-only writer. Default paths unchanged. Root reviewed221focused/adjacent tests and169money checks; no live acceptance or investment proof.",
+      "confidence": "high",
+      "prediction": "Explicit representable fine-tick prices can reach the existing guarded writer; malformed, off-tick, stale/wrong-identity or crossing books fail before reservation/signing.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-19",
+      "tags": [
+        "execution-precision",
+        "maker",
+        "guarded-route",
+        "architecture"
+      ],
+      "slug": null,
+      "outcome": "Root code review complete;221focused/adjacent tests and169money-math checks pass. No financial action or live API acceptance demonstrated by tests. See research/2026-10-19-fine-tick-maker-repair.md.",
+      "calibration_delta": null,
+      "lesson": "Representability and live executability are separate. Exact price/cash/quantity must agree from preview through signed writer; keep opt-in changes behind all existing entry gates.",
+      "resolved_at": "2026-10-19T23:46:41Z"
+    },
+    {
+      "id": 242,
+      "timestamp": "2026-10-19T23:55:50Z",
+      "type": "skip",
+      "thesis": "RBA403 proposed1USD1000YES.001maker dropped BEFORE submission after previouslyomittedOct19Kent originalpolicyQ&A. Root corrected collector claim pricingrose: rates/pricingeased, cashpathupperend refersuncertainNEUTRALestimates. Fasterlaborloosening/newpolicyinterpretation reducesunfittedphysicalYES15.5707\u219211.652258; unchanged15ppmodelstress floorsselectedYES0; NOalsofails. Rootalsofound17of20RSSarticles mislabeledirrelevant byexactnamematching, readall20titles andcorrectedcollectionworkflow. Engineeringroute221tests+169moneychecks passed but establishesnoedge.",
+      "confidence": "medium",
+      "prediction": "Current source-conditionedYES11.652258%/broad2\u201355 is judgment, not calibratedprobability. No allocation/order/reservation orstandingRBAalert. Reopenonlywithfreshunderwriting; thirdpartybodiesremainunverifiedleads.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-03",
+      "tags": [
+        "deep-review",
+        "no-entry",
+        "source-revision",
+        "collector-error-corrected"
+      ],
+      "slug": "reserve-bank-of-australia-increases-interest-rates-by-50-bps-at-the-november-2026-meeting-1786388202573",
+      "outcome": "Operational no-entry only: rootretiredunsubmittedcandidateprior and1preparatoryfeed/3keywords. No--execute/order/reservation/fill/spend/profit. Research outcome not yet known; no market-outcome calibration supplied.",
+      "calibration_delta": null,
+      "lesson": "A literal-name title nonmatch is unreviewed, not irrelevant. Verify speaker, comparator and change direction in original primary bodies before probabilities or orders. Engineering executability does not establish investment edge.",
+      "resolved_at": "2026-10-19T23:55:50Z"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "schema": "case0403_no_entry_cleanup.v1",
+  "completed_utc": "2026-10-19T23:55:50.274193+00:00",
+  "financial_status": "NOT_ENTERED_SOURCE_REVISION",
+  "prior_archive_key": "_retired_20261019_rba403_unsubmitted",
+  "all_other_prior_objects_unchanged": true,
+  "original_candidate_forecast_fields_preserved": true,
+  "current_research_p_yes": 0.11652257950000001,
+  "removed_preparatory_feed": "Australia monetary policy, Bullock and Hauser news",
+  "removed_preparatory_terms": [
+    "Reserve Bank of Australia",
+    "Michele Bullock",
+    "Andrew Hauser"
+  ],
+  "no_order_submission_attempt": true,
+  "no_candidate_reservation_created": true,
+  "decision_id": 242,
+  "source_correction": "data/deep_review_20261017/work/0403_news_baseline_2350.json"
+}

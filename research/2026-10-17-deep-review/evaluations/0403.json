@@ -1,0 +1,206 @@
+{
+  "review_index": 403,
+  "market_id": "3499791",
+  "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+  "criteria_sha256": "9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7",
+  "status": "valued",
+  "literal_analysis": "RBA Novmeetingtargetdelta, rawpositive>=37.5bpsroundsto50YES; upperboundifcorridor, emergencyoutsidemeetingexcluded. EligiblepostponementbeforeDec7nextmeetingstart; cancellation/toolatedefaultNO. Priorcurrent4.60notfixed5.10thresholdifinterveningemergencymove. ExpectedNov3Sydney2:30/03:30UTC, mediaAESTfootnoteconflictunresolved; nextstartclockunread.",
+  "evidence": [
+    {
+      "url": "https://www.rba.gov.au/media-releases/2026/mr-26-27.html",
+      "observed_utc": "2026-10-19T23:18:13.295288Z",
+      "finding": "RootreadunanimousSep29+25to4.60; threeearlierhikes, inflationrisks/coolingactivity."
+    },
+    {
+      "url": "https://www.rba.gov.au/monetary-policy/rba-board-minutes/2026/2026-09-29.html",
+      "observed_utc": "2026-10-19T23:18:13.816531Z",
+      "finding": "Rootpolicyconsiderations/decision:25vshold, someupsideinflationrisksmaterialized; furtherhikespossible, no50pledge."
+    },
+    {
+      "url": "https://www.abs.gov.au/statistics/economy/price-indexes-and-inflation/consumer-price-index-australia/aug-2026",
+      "observed_utc": "2026-10-19T23:18:15.041856Z",
+      "finding": "Augheadline4.0/trimmed3.6, releasedSep30AFTERSep29meeting; nextSeptreleaseOct28."
+    },
+    {
+      "url": "https://www.abs.gov.au/statistics/labour/employment-and-unemployment/labour-force-australia/sep-2026",
+      "observed_utc": "2026-10-19T23:18:15.448763Z",
+      "finding": "SepemploymentSA−39,300/unemployment4.7/trend4.6; nextOctdataNov19aftermeeting; unroundedchangeexplainsrounding."
+    },
+    {
+      "url": "https://www.rba.gov.au/publications/smp/2026/aug/overview.html",
+      "observed_utc": "2026-10-19T23:26:41.484552Z",
+      "finding": "Aug5finalizedDecy/yCPI3.6/trim3.3/UE4.5, notSeptquarter/currentAugtarget; nosamehorizonforecastmissinferred."
+    },
+    {
+      "url": "https://www.rba.gov.au/speeches/2026/mc-gov-2026-09-29.html",
+      "observed_utc": "2026-10-19T23:26:41.913910Z",
+      "finding": "Governorconfirmsheld/25onlyconsideredanddeclinesNovguidance; corroboratesminuteswithoutnewpchange."
+    },
+    {
+      "url": "https://www.rba.gov.au/media/",
+      "observed_utc": "2026-10-19T23:26:42.320664Z",
+      "finding": "HauserOct21 08:45AEDT/Oct20 21:45UTC; Oct25economicinterview/Oct28committee. Bullockgraduationnopolicy; ConnollyOct20paymentseventalreadypastUTC. Nov3AEST/AEDTfootnoteconflict."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.15570717199999998,
+    "low": 0.02,
+    "high": 0.55,
+    "method": "Unfittedconditionalinflation/activityreactionregimes plus offgrid/calendarbranches; first-partydata bridge; fivefoldfillstress forproposedmaker.",
+    "reasoning": "55/30/12/3%regimeswith50+3/20/65/1%gives15.48standard; offgrid/postponement/defaultproducesphysical15.570717. Broad2–55notCI. Modelstress15ppthenNO-statefillbias5xmapsselectedYES0.114667%, equivalenttotal15.45605pp. No pchangefrompostquoteGovcorroboration; no empiricalselectionbound/currentexecutionclaim.",
+    "model_path": "models/0403_primary_2326.json",
+    "entry_constraints_path": "models/0403_entry_constraints_2334.json",
+    "actual_entry_reserve_pp": 15.456050220660952
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0403_quote_2326.json",
+    "quote_file_sha256": "3bea50865bbc8bf18cbd198a880c3b0b942a131190ee2a20d8fafb8c706fcb68",
+    "quote_capture_utc": "2026-10-19T23:24:21.089400+00:00",
+    "gamma_received_utc": "2026-10-19T23:24:20.857938+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 14.2,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.456050220660952,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.15570717199999998,
+        "selected_stress_probability": 0.0011466697933904535,
+        "best_bid": 0.001,
+        "best_ask": 0.002,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792452257868",
+        "book_received_utc": "2026-10-19T23:24:20.985399+00:00",
+        "book_age_seconds_at_receipt": 3.117398977279663,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.02,
+            "fee": 0.001,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.002
+              }
+            ],
+            "net": 0.021
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.01,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.001
+              }
+            ],
+            "net": 0.0095
+          }
+        },
+        "taker_cost_usd": 0.021,
+        "central_expected_profit_usd": 1.5360717199999998,
+        "selected_stress_profit_usd": -0.009533302066095466,
+        "break_even_before_carry": 0.0021000000000000003,
+        "break_even_constant_carry": 0.0021025777494897294,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.844292828,
+        "selected_stress_probability": 0.6897323257933905,
+        "best_bid": 0.998,
+        "best_ask": 0.999,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792452257868",
+        "book_received_utc": "2026-10-19T23:24:20.985399+00:00",
+        "book_age_seconds_at_receipt": 3.117398977279663,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0005,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.9905
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.98,
+            "fee": 0.001,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.998
+              }
+            ],
+            "net": 9.979000000000001
+          }
+        },
+        "taker_cost_usd": 9.9905,
+        "central_expected_profit_usd": -1.5475717200000005,
+        "selected_stress_profit_usd": -3.0931767420660954,
+        "break_even_before_carry": 0.9990500000000001,
+        "break_even_constant_carry": 1.000276333632245,
+        "current_execution_authorization": false
+      }
+    },
+    "maker_proposal_not_authorization": {
+      "side": "YES",
+      "maker_price": 0.001,
+      "quantity": 1000,
+      "max_raw_cash": 1.0,
+      "maker_fee": 0,
+      "central_expected_profit_conditional": 34.57255608733643,
+      "selected_expected_profit_conditional": 0.1466697933904635,
+      "op_buffer": 0.05,
+      "carry_basis": "Aave3.2035%variable asdated; ~0.00123 per1USD/14.2days, notguaranteedrate.",
+      "manual_sizing_basis": "QuarterKelly on fivefoldfill-conditionedcentral3.5573%, not15.5707physical, gives~1.69USD atdated195.55 before rho/cluster. Choose1USDmaximum; currentaccount/caps must pass.",
+      "full_cash_loss_possible": 1.0,
+      "current_route": "Cent-onlywrapper cannotpost.001; offlineSDK/customwriteramountrepresentabilityproved, opt-inquantity-aware repairunderway/unvalidated. No bypass/rawBUY/FAKurgency."
+    },
+    "conditional_stress_method": {
+      "formula": "p_afterfill=p/(p+bias*(1-p)); NOstate fill likelihood bias relativetoYESstate=5. Normalizeslikelihoods, not independentp-loss penalty.",
+      "selected_bias": 5,
+      "conditionalcentral": 0.03557255608733643,
+      "conditionalselected": 0.0011466697933904635,
+      "uncalibrated": true,
+      "limitation": "No empirical fivefoldbound on fill selection. Tenfoldbiasfails; quantitycanlosefullcash, shortquote/sourcecancelreducesbutdoesnoteliminateinformationalasymmetry. Thisismodeledstress, not observedfillprobability/latencyguarantee."
+    },
+    "paper_15pp_sensitivity_file": "data/deep_review_20261017/work/0403_economics_2327.json"
+  },
+  "verdict": "TinyYESmaker candidate, noorder/prior/holding. At.0011000YES/1USD selectedconditionalprofit.14667beforeop.05/carry;10xfillbiasfails. Currentcent-onlymakerrouteunsupported despiteunsignedfinepriceamountrepresentability; opt-inrepairunderway/testscurrentgatespending. Takerpaperpositive15ppwithouturgencydoesnotauthorizeFAK. NOfailscentral/selected. Comparecash/Aave/Parton/currentcorrelation, not exchange-widezero.",
+  "reopen_condition": "Finishandvalidateprecision-safeopt-inmakerroute; independentlyfreshsource/eligibility/fee/book/account/collateral/exposuregatesandconditionalfillreview beforeanymoney. IfpostednamedhardpullOct20 18UTCbeforeHauser; materialRBA/CPI/labor/energy/venuenews cancel-first; no chase/repost/takerfallback.",
+  "evaluated_utc": "2026-10-19T23:33:03.780514+00:00",
+  "question": "Reserve Bank of Australia increases interest rates by 50+ bps at the November 2026 meeting?",
+  "valuation_author": "primary_operator",
+  "original_index": 403,
+  "report_sha256": "6bdbf4376da1989ac0c667a7cdc3c16b6a7372e5593e8a256536cdb9bc978a9c"
+}

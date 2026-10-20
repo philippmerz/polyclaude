@@ -1,19 +1,16 @@
-# Current resting orders — October19 23:06 UTC
+# Current resting orders — October19 23:57 UTC
 
-**Four LIVE/zero-matched BUYs /8.80 remaining risk; four reservations.** Independent authenticated orders/detail/exhaustive126trades/indexedpositions/PartonNO CTF reads23:05:58–59 confirm new5NO46c/2.30 unfilled; originalthree exact IDs/CIDs/assets/terms/status unchanged. Eight indexed rows, no candidate identity, CTF0. Contingent commitments are not purchases or profit. Separate method-call windows are not atomic or protection against later fills. [Poststate proof](../data/deep_review_20261017/work/0400_postentry_2306.json) · [DEC239 and execution record](../research/2026-10-19-parton400-maker.md).
+**Three LIVE zero-matched BUYs commit6.50.** Parton400 canceled once23:39; post353s23:45 terminal/trades/cumulative-buys/CTF proof retired only its reservation4→3. Original three orders unchanged. No Parton purchase, profit or automatic repost. [Closure](../research/2026-10-19-parton400-cancellation.md) · [exact proof](../data/deep_review_20261017/work/0400_final_reconcile_2345.json).
 
-22:33:44–45 bounded authenticatedorders/index follow-up: exactthreeorderIDs/CIDs/assets/terms/status unchanged/zero matched/6.50. No cancellation/trade/reservation mutation. This does not refresh22:18terminal/trades/CTFproof or22:22financial producer. [Follow-up](../research/2026-10-19-2232-periodic-check.md).
+RBA403 was never submitted. Newer primary evidence invalidated the candidate; both sides fail the revised uncertainty check. Preparatory prior/feed/three terms retired, no RBA pull obligation or standing alerts. [Revision](../research/2026-10-17-deep-review/revisions/0403_20261019T235523790177Z.md).
 
 |Current BUY|Shares/limit/risk|Exact order ID|Management|
 |---|---|---|---|
 |ME02|10YES/38c/3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|HistoricalME01slug never overridesME02CID/asset|
 |CA06|50NO/3c/1.50|0x54ee5f6856f81232b3c6f2fc187bf869dd7663a0d57338c2f10d4d04401809dd|No add/repost/taker fallback|
 |NY01|10YES/12c/1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|No add/repost/taker fallback|
-|Parton400/DEC239|5NO/46c/2.30|0x4db0d4e96ab66c488da15c35e8ad0029be3ff4d542c29760bfd8233b8af8afbc|Shared Google/Messi cluster; hard pull Oct23 22UTC for source-staleness/conditional-quote budget|
 
 Review each scheduled check/earliermaterialnews: retain only if price, source freshness, full-fill correlation/caps and conditional-fill economics remain justified. Cancel-first on newly unassessed material poll/candidate/ballot/turnout evidence. A scheduled check alone is not a hard expiry; no chase/add/automaticrepost/taker fallback. Any fill requires fresh holding/source/fee-netexit/joint-risk review; partials can become dust. NextfullOct20 02UTC, not a newly invented pull deadline.
-
-Parton: cancel-first on material unassessed Google list/method/cutoff/preview/comparison, Dolly/competitor or venue evidence. Physical NO80% is an uncalibrated shared categorical estimate, not measured rank; 27pp reserve gives selectedNO53%, broadNO45–95%. Full2.30loss possible. Hard pull **2026-10-23 22UTC** bounds a four-day quote without a comparable Global series; fresh underwriting before any repost. New two keywords and one feed supplement shared Google coverage. Any fill invokes the review above; hidden-information sells require strictly above fresh fair value unless a verified thesis break justifies exit.
 
 ## Quote lifetime — clarified October19
 
@@ -25,6 +22,7 @@ Canceled orders remain closed. Reposting or changing an existing specific pull i
 
 **ALREADY CANCELED UNFILLED — never replay/repost:**
 
+- **Parton400/DEC239→240:**5NO46c/max2.30 canceled23:39 under standing cancel-first after two unassessed tribute leads.23:45 post353s exactterminalCANCELED0/exhausted126trades/cumulativebuys0/bothCTFs0; onlytargetreservation4→3/otherssame. OriginalYES20/NO80/27ppresearch preserved; publisherbodiesunavailable/no rankinference. Unique1feed/2terms removed/sharedMessikept. No purchase, fee, cashcredit orprofit; freshunderwriting before any entry. [Proof/decision](../research/2026-10-19-parton400-cancellation.md).
 - **Idaho1870/DEC210→237:**34YES3c/1.02 canceled22:00:22–25 under original22UTC pull. Post300s terminalCANCELED0matched/exhaustive126trades/indexedbuys/CTF0; onlyreservation5→4. Numeric20YES/15pp/broad1–80 preserved in archivedfinancialprior, no automaticrepost. UniqueIdahofeed/fourterms removed. [Proof](../data/deep_review_20261017/work/light2200_idaho_reconciled_2209.json).
 - **Sánchez386/DEC236→238:**10YES16c/1.60 canceled22:13:02–06 under standingcancel-first after omitteddistinctolderOct12pollinstruments found. RootOct16coalitionreport distinguishesSenate jointlists fromCongressleftsplit. No adversepointchange adopted:47.658025YES/30pp/broad10–85 preserved in archivedprior/research.22:18 post300s exactterminalCANCELED0/exhaustive126trades/indexedbuys/SpainbothCTFs0; onlyreservation4→3. Two uniqueSpanishfeeds/10terms removed. Freshprimarysource/conditional-fill underwriting before any newentry. [Proof](../data/deep_review_20261017/work/light2200_sanchez_reconciled_2218.json).
 - Both are unexecuted forecasts: no purchase, spend, fee, cashcredit, sale or realizedprofit; originaldecision outcomes record operationalclosure, not market-outcome calibration.

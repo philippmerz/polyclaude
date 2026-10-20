@@ -1,17 +1,15 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-19T23:01:32.567636+00:00",
+  "updated_utc": "2026-10-19T23:55:24.056874+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 370,
-  "completed_valuations": 359,
+  "completed_in_depth_reviews": 372,
+  "completed_valuations": 361,
   "blocked_after_in_depth_review": 11,
   "factual_exclusions": 364,
-  "pending": 2266,
+  "pending": 2264,
   "active_indices": [],
   "next_pending_indices": [
-    402,
-    403,
     404,
     406,
     408,
@@ -39,15 +37,17 @@
     442,
     443,
     445,
-    446
+    446,
+    449,
+    450
   ],
-  "base_records": 734,
+  "base_records": 736,
   "base_record_counts": {
-    "valued": 357,
     "excluded_factual": 364,
+    "valued": 359,
     "blocked_after_review": 13
   },
-  "revisions_written": 65,
+  "revisions_written": 66,
   "milestone": 100,
   "milestone_notified": true,
   "execution_authority": "Research records are observations, never later execution authorization.",
@@ -58,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 734,
-  "ledger_sha256": "9009ce5a9337f47cc81bbe50c3bafde0e6409c039dae7e70e412e7d3c657d263",
-  "revisions_sha256": "b9805d5a359b728da05633df1b02db92149b9f74d1b16f38ff2ec98c2bd9dbb0",
+  "evaluations_written": 736,
+  "ledger_sha256": "0ff5edd5de032bb1020549aeadcb3eb3d81a6fb5b0562a03e2620ec060e5b1ce",
+  "revisions_sha256": "ebddc2cefb2e508590d64a1e371b3f39438486fd4f79c6715416fa30c5f054a9",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

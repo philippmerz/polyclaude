@@ -34,7 +34,10 @@ asset ID, product, oracle and wallet route. A shared title/event is context, not
 proof of equivalence, mutual exclusion or identical settlement.
 
 Use cheap reviewers for bounded factual triage and source collection, with an
-explicit list of rows covered and rows still unreviewed. The offline context
+explicit list of rows covered and rows still unreviewed. For a bounded news feed,
+return all titles or an explicit unreviewed list; a literal-name mismatch does not
+establish irrelevance. The primary reviewer verifies load-bearing speaker,
+comparator and change-direction claims against the original body. The offline context
 batcher neither calls a model nor supplies a probability. It is a delta queue:
 unchanged prices can become interesting when a source, catalyst, cost, eligibility
 or horizon changes. Read the complete scanner output as well as emitted batches.

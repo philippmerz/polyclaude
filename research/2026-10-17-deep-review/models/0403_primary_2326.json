@@ -1,0 +1,80 @@
+{
+  "schema": "primary_scenario_forecast.v1",
+  "review_index": 403,
+  "created_utc": "2026-10-19T23:24:20.345806+00:00",
+  "priceblind": true,
+  "identity": {
+    "market_id": "3499791",
+    "condition_id": "0xe2edd12d540508783266d9d8b0b9bca151b9f1deb3188a35262660f87f65aa22",
+    "criteria_sha256": "9fd7181fb8483682b247561525f498a48ed61e00a1db6499b285149eb78ab8d7",
+    "question": "Reserve Bank of Australia increases interest rates by 50+ bps at the November 2026 meeting?"
+  },
+  "literal_event": "OfficialNovmeeting cash-target delta relative immediatelyprecedingmeeting level; roundednearest25bps/awayfromzero at37.5 meansYES rawpositivechange>=37.5bps, notonly>=50. Tinypositive<25rounds25=>NO. Pointtargetnotcorridorcurrentrate; ifcorridoruseupperbound. Emergencyoutside meetingexcluded.",
+  "timing": {
+    "meeting": "2026-11-02/03Australia/Sydney",
+    "expected_statement_utc": "2026-11-03T03:30:00+00:00",
+    "next_meeting_starts_date": "2026-12-07Australia/Sydney; exactstartclockunread/notinvented",
+    "fallback": "Postponementbeforestartofnextmeetingvalid; cancelled/noannouncementbynextmeetingstart=>NoChange/NOhere. JanhorizonfitsnormalNovandfallbackDec; disputeexitnotguaranteed."
+  },
+  "regimes": [
+    {
+      "name": "contained_underlyinginflation_and_coolinglabour",
+      "weight": 0.55,
+      "conditional_50plus": 0.03,
+      "conditional_25": 0.6,
+      "conditional_hold_or_cut": 0.37,
+      "basis": "UnderlyingAugust3.6unchanged/newSepjobs−39.3k/SAunemployment4.7/trend4.6; existingrestrictivepolicy andSep25cadence make25/holdmorelikelythanacceleration."
+    },
+    {
+      "name": "persistent_broaderinflation",
+      "weight": 0.3,
+      "conditional_50plus": 0.2,
+      "conditional_25": 0.7,
+      "conditional_hold_or_cut": 0.1,
+      "basis": "RBAcostliaison/weakproductivity/excessdemand, headlineAug4.0afterJuly3.5. Furtherupsidebutwithoutsevereexpectationdislocation canstillfavor25."
+    },
+    {
+      "name": "severe_CPI_or_expectations_or_energyshock",
+      "weight": 0.12,
+      "conditional_50plus": 0.65,
+      "conditional_25": 0.3,
+      "conditional_hold_or_cut": 0.05,
+      "basis": "SeptCPIincludingquarterlydataOct28ornewenergy/liasonpass-throughstrongenoughtojustifyaccelerating. No specificprint/consensus/option-implieddistribution claimed."
+    },
+    {
+      "name": "acute_demand_or_financialshock",
+      "weight": 0.03,
+      "conditional_50plus": 0.01,
+      "conditional_25": 0.09,
+      "conditional_hold_or_cut": 0.9,
+      "basis": "Housingdecline/consumptionslowing/globaluncertainty canworsen. RBAassessed balancesbuffersandlownear-termsharp-slowdownriskinSep, so smallerweightthaninflationregimes."
+    }
+  ],
+  "standard_step_50plus_probability": 0.1548,
+  "offgrid_rule_branch": {
+    "mass": 0.003,
+    "conditional_rawdelta_ge37pt5": 0.45,
+    "basis": "Smallunmeasurednonstandardstepreserve; exactboundary37.5 qualifies. Standard25/50cadence dominates; not claimingmeasuredoccurrencefrequency."
+  },
+  "held_on_time_or_normal_branch": 0.995,
+  "postponed_but_eligible_branch": {
+    "mass": 0.004,
+    "conditional_yes": 0.2
+  },
+  "cancelled_or_toolate_default_no_branch": 0.001,
+  "formula": "standard=sum(weight*p50); ordinary=.997*standard+.003*.45; pYES=.995*ordinary+.004*.20+.001*0. No independencecalibrationclaimed.",
+  "p_yes": 0.15570717199999998,
+  "p_no": 0.844292828,
+  "low": 0.02,
+  "high": 0.55,
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.005707171999999983,
+  "selected_no": 0.694292828,
+  "reserve_basis": "10ppnormalinstance+5ppreaction-function/newCPIregimeuncertainty; not an extraphysicalsurprisepenalty. Regimes/probabilitiesareprimaryunfittedjudgment, no bondtail exception.",
+  "evidence_bridge": "Sep29RBAhike25to4.60unanimous, threeearlier2026hikes/latestminutesconsider25vsholdandwarnpersistentinflation. AugCPIreleasedSep30AFTERlastmeeting:headline4.0upfrom3.5,trimmed3.6unchanged. SepjobsreleasedOct15AFTERlastmeeting:SA−39,300/unemployment4.7withroundingvsAug4.7,trendemployment+15,700/trendunemployment4.6. Neithernewheadlinepricesnornewjobsreplicatedasindependentrisks; theyinformcurrentregimeweights once.",
+  "unmeasured": "NoempiricalSeptemberCPIpredictivedistribution, exactconsensus, fittedBoardreactionfunction/currentOISprobability, measuredfuelpass-through orpostSep29spokencommentarysearchobtained. Broad2–55range isnotstatisticalconfidence; no absenceclaimaboutnewcommunications.",
+  "sensitivity": "Allcontainedregime3%standard50,allpersistence20%,allsevere65%. Doublingsevereregimeweightto24%fromcontainedraisesp50by~7.4pp, notindependentforecast. 50+decisionisrarerthananyhike; level4.60doesnotfix5.10thresholdifemergencypriorratechanges.",
+  "source_unit": "data/deep_review_20261017/work/0403_facts_2318.json",
+  "root_source_verification": "All8capturedprimarybodyhashes verified; readfullSep29decision/completepolicyconsiderations+decisionparagraphs ofSepminutes, officialrate/calendar,ABSkeytables/futurereleasedates. SubsequentlaborreleaseNov19comesaftermeeting; monthlyandquarterlytrimmedmeandefinitionsnotinterchanged.",
+  "portfolio": "NoAustraliaholding; macroinflation/energy/venueexposureoverlapsbroaderaccount, nohedgecredit. Comparecash/Aavevariableyield/currentPartonandUSelectioncommitments; entryrequiresfreshaccount/caps/makerselection/gates."
+}

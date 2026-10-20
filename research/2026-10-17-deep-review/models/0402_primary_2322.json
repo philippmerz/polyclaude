@@ -1,0 +1,68 @@
+{
+  "schema": "primary_scenario_forecast.v1",
+  "review_index": 402,
+  "created_utc": "2026-10-19T23:20:11.373014+00:00",
+  "priceblind": true,
+  "exact_identity": {
+    "market_id": "2071657",
+    "condition_id": "0xf4c72ff42c3f1ee9f25e835e62ca52d71a9cafbcc11f93c01af709af8ee5ff09",
+    "criteria_sha256": "ec49d00513eb0a261e73e0655d98962515510c168e0e505648eb9d89b0cc12ea"
+  },
+  "window": "Creation2026-04-24T21:43:00.904729Z through2027-01-01T04:59:00Z; remaining~73days fromOct19. Announcedresignation/removal beforecutoffqualifieseveniflater effective; detention/effectiveremoval/permanent preventionqualifies;anyperiod notjustyearend.",
+  "ordered_conditional_branches": [
+    {
+      "branch": "latentalreadyqualifyingcreationtotoday",
+      "conditional_p": 0.008,
+      "basis": "No qualifying event established. Same-day officialofficeactivity andcurrenttrialpostponement corroboration favorcontinuity but do not exclude earlier temporarydetention/suspension or announcedfuture departure; officialcourtpages partial/stale, Assemblydocket not reached. This is judgmental residual, not negative-searchfrequency."
+    },
+    {
+      "branch": "futurepoliticalconstitutionalcrisis",
+      "conditional_p": 0.020999999999999998,
+      "crisis_probability": 0.06,
+      "qualifying_departure_or_announcement_given_crisis": 0.35,
+      "basis": "JuneDPmajority/officialtwo-thirds passage creates defection hurdle; Oct16conflict is aboutChiefJusticeJo and threatenedLeeimpeachmentcalls, not verifiedLee motion. Article65suspension distinct fromremoval, but effective-removal/announcement interpretation can trigger beforefinalcourtoutcome. Both factors represented here; currentOctroster unknown."
+    },
+    {
+      "branch": "court_only_route_after_no_priorpoliticalevent",
+      "conditional_p": 0.005,
+      "case_reactivation_probability": 0.02,
+      "qualifying_detention_or_effective_removal_given_reactivation": 0.25,
+      "basis": "Art84andOct16judge/Oct19prosecutorauditreport showfivehearingdatesindefinitelypostponed, notacquittal/withdrawnindictments. Eachpanelcanreconsider; no Lee-specificorderinspected. Distinct incremental route conditional on precedingbranchesnotqualifying."
+    },
+    {
+      "branch": "voluntarydeparture_after_noabove",
+      "conditional_p": 0.003,
+      "basis": "No departureannouncementestablished; activeOct19appointmentexercise andshortremaining73days favorcontinuedtenure. Small judgmental residual forunobservedpolitical/privateshock, not measuredfrequency."
+    },
+    {
+      "branch": "death_or_permanentincapacity_after_noabove",
+      "conditional_p": 0.004,
+      "basis": "Unmeasured73daymedical/violence tail; no healthprobability or medicaldata claimed. Currentofficeactivitydoesnoteliminatethetail."
+    },
+    {
+      "branch": "security_or_extraconstitutional_detention_after_noabove",
+      "conditional_p": 0.004,
+      "basis": "Distinct residual forqualifyingdetention/effectiveousting, not ordinarydiplomaticrhetoric. No presentcoup/warforecasthasbeen independentlymeasured; tailjudgmentnotzero."
+    }
+  ],
+  "formula": "pNO=product(1-conditionalbranchp); branches are ordered conditional/competing, not assumedindependent measuredhazards. pYES=1-pNO.",
+  "p_yes": 0.04427866765658384,
+  "p_no": 0.9557213323434162,
+  "low": 0.003,
+  "high": 0.25,
+  "range_meaning": "Broadprimaryjudgment sensitivity, not a calibratedconfidenceinterval; allassumptions unfitted.",
+  "actual_entry_reserve_pp": 20,
+  "reserve_basis": "10ppordinaryinstanceallowance+10ppadditional allowanceforunmeasuredpoliticaltails/retrospectiveandadjudicationcoverage gaps. Executionstress only, not repeatedphysicaleventpenalty. No bondtail exception.",
+  "selected_yes": 0,
+  "selected_no": 0.7557213323434162,
+  "alternatives": "If politicalcrisis15%andqualification60%, allotherbranchpriorsunchanged pYES rises above10%; largerunseenpast/medical/securityrisk canexceedrange. If latent0 andfuturebranchesonequarter centralweight pYES near1%. Rootjudgmentcanchangeonsources, notcalibratedbybookprices.",
+  "source_units": [
+    "data/deep_review_20261017/work/0402_facts_1828.json",
+    "data/deep_review_20261017/work/0402_addendum_2250.json",
+    "data/deep_review_20261017/work/0402_history_addendum_2318.json"
+  ],
+  "source_review": "Root verified6primary/reporterbodyhashes/fullrelevantpresident/constitution/prosecutor/judge/KBS/JuneElectiontext; firstBeautifulSouparticlepickedKBSmusicpromo, correctedagainstfullbodytitle/maintext. Root verifiedcreationGammaexactID/CID/rawSHA and3historyreceipt hashes.",
+  "portfolio_comparison": "No existingKoreanposition. Sharedpolitical/venue/warregime risk means no hedgecredit againstME02/CA06/NY01/MI/Google/Clarity commitments; preservecash/Aavestableyield orbetterunderwrittenexistingcandidates. Currentexactaccount/newentrygates separate.",
+  "reforecast_inputs": "OfficialLee resignation/removal/detention/incapacity; actualAssemblymotion/majoritychange; CCourtdecision; eachpaneltrialresumption; crediblematerialsecurityevent ordefinition/sourcechange.",
+  "metadata_erratum": "Sourcebodycountclarified6+separatecreationGamma1; probabilities/branches unchangedafterquotes."
+}
