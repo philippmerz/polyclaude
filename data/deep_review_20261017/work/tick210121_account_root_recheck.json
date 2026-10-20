@@ -1,0 +1,30 @@
+{
+  "schema": "polyclaude.root_account_verification.v1",
+  "verified_utc": "2026-10-20T21:08:45.158646+00:00",
+  "account_original": "data/deep_review_20261017/work/tick210121_account_ops.json",
+  "orders": 0,
+  "trade_count": 127,
+  "terminal_cursor_both": "LTE=",
+  "positions_allsize": 9,
+  "tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "all_tuples_equal_1929": true,
+  "winning_redeemables": 0,
+  "private_account_raw_and_gzip_hashes_verified": {
+    "orders": "54deb2b8c7553fd26b9228336fab016dbb224d6a11caa29f7daecf5787db7c2c",
+    "trades": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+    "positions": "55f10b237e2191f374d64c3340bede9135e38def128ae4ee0645aac56de5de7d"
+  },
+  "command_output_hashes_verified": true,
+  "CLI_returncodes": "All8 actual0; original per-command callbounds/stdout/stderr hashes independently verified. Root initial output-path and classifier-name errors corrected against actual receipt/code; no producer rerun or state change.",
+  "completed_stdout_checks": "Hurdle4clear0flagged;watchlistnohits;UMA43refreshed0alerts;KellynoTRIM;Ostium0to0;cruxquiet;decisionsnooverdue;stateCLEAN7indexed+1claim/0expiredholds.",
+  "limitation": "Fullstatus rc0 includes HLE archived July3 comparison child503/exit2; live officialHLE independently200. Not all-checks-success. Kelly uses dated195.08cache, not21:03canonical193.57; no scalein authority.",
+  "group_exit": "21:02:58\u201321:03:00 actual exit_analysis CLI; wholeClarity indicative25.19/fee0, separate from bankroll producer.",
+  "zero_reservations_source": "21:03wallet actualrc0/pUSDcommitted0; not substituted into aggregate.",
+  "no_financial_writer": true
+}

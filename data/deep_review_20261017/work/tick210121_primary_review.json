@@ -1,0 +1,43 @@
+{
+  "schema": "polyclaude.triggered_primary_review.v1",
+  "reviewed_utc": "2026-10-20T21:10:57.431146+00:00",
+  "tick_id": "20261020T210121Z",
+  "requested_alerts": [
+    "becea882f54cd5206629d70e3388d4c244b481ad",
+    "19037093283021b08f96eab94992d5c3b8663318"
+  ],
+  "alert_decisions": "data/deep_review_20261017/work/tick210121_alert_decisions.json",
+  "Michigan": {
+    "identity": "1838/0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4; held5NO on Democratswinning2026MichiganSenate.",
+    "verified": "Rootread/hashverified KESQ+Scripps CNNNewsource text: JeffZeleny/EricBradner,2026ElSayed-v-Rogers/Nov3race. KESQOct20 19:29:33Z/Scripps20:16:48Z. Samepiece, not independentcorroboration. No newnamedpoll/fielddates/N/subgroupN/MOE/questionnaire. Relatedpollteaser not newinstrument.",
+    "evidence": "Reports postprimaryBlackcoalition concerns; sparseBlackattendance at one selectedFlintrally is not representative turnoutdata. RogersDetroitoutreach and reporter-attributedOct20EconomicClub remarks nowavailable. Counterevidence: supportiveBlackleaders/listening/enthusiasm and widespreadsupport in reporterconversations. FutureHarris/Obama/Warnockcampaignplans are not completed/officiallyverifiedevents. Campaignclaims/interviews selected, not electorateestimates.",
+    "limits": "APbody/fullforumtranscript and originalRogersrecords remaingaps despite limitedCNNforumquotes. Articleattackallegations/denial are not culpabilityfindings. No measuredturnout/numericcoalitionbridge.",
+    "judgment": "Dsupportslippageifreal helpsheldNO;190370classifierdirectionreversed. Qualitativeconcern supports existingclose-racemodel, but balancedcounterevidence/samplelimits do not justify arbitrarynumericrevision. RetainNO44%/selected34%/broadlow20%, noadd. Uncertainty explicit, not zeroeffectclaim.",
+    "forward_economics": "21:03:42netfullNOexit1.50+datedvariableAave75dcarry1.509814 vs selectedterminal1.70. Another3.8037pp adverseselectedshift reverses; broadlowterminal1favorssale. Entry1.55sunk, no recoverylogic. Smallposition/no newcontradictorymeasurement justify retain; futuretrade requires freshvettedroute.",
+    "source_unit": "data/deep_review_20261017/work/tick210121_MI_news_facts.json"
+  },
+  "Kimi": "21:02officialHLEHTTP200same66rows/K3accuracy41.08/cal44.67. Otherlab55+/issuer56withtools not qualifyingMoonshotboardresult. CacheAge3214s canmissnewinfo; July3archive503 is separatecoveragegap. Exact412\u226555officialHLEAccuracy byDec31 23:59ET; retainYES34.02125/selected19.02125/broad8\u201380. PriorBloombergexactbody remainsunverified, no newoldheadlinebinding.",
+  "other_directional": "ORcompletedOct12 164.043985914931T/currentOct19partial48.828344023861T(+1.270606757556T) not heldfuturewindowforecast. Target4weeksabsent/cachetime notusagecutoff. Messi award/goalheadlines not GoogleGlobalTrendingAthletestop5measure; no quantifiedpupdate.",
+  "hold_math": "data/deep_review_20261017/work/tick210121_hold_exit_math.json",
+  "fee_validation": "Rootverifiedexact4Gamma/8books identities/rawreceipts +4rawcompactdescriptors. StructuredGamma0rate/1exponent/takerOnly matchescompactfd despitefeesEnabledtrue; datedmarket-specific, not globalfeeclaim.",
+  "root_hold_decision": "Retain4pilots/noadd. Kimi/OR/Messi netexits1/3.30/1.25+datedAavecarry belowselectedterminal1.902125/3.65/2; MIdetails above. Broadlowcases favorsale, priorsuncalibrated/sourcegaps matter. No demonstratednewcrediblecase reversesselectedhold. Conditionalmakerfill/jumprisk gives no reason for standingnewsdonation sells.",
+  "joint": "KimiYES+ORNO canbothlose4.45originalcost; all4pilots7.35canalllose; no independence/hedgecredit. Smallcapital-risk judgment, not guaranteedorforecastedprofit.",
+  "Clarity_group": {
+    "held": "29YES>50 +29NO>58",
+    "normal_conditional_payoff": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "dated_rule_proof": "14:02identicalrulesretained, no newrulereadclaim",
+    "indicative_complete_group_exit": 25.19,
+    "actual_exit_tool_window": "21:02:58.435216Z\u201321:03:00.066510Z",
+    "cached75d_APY_sensitivity": 25.354813483119127,
+    "judgment": "Retainwholegroup/nolegonlysale. Conditional29 exceedsdatedexit+carry; protocol/oraclefailure0 remainsrisk. OfficialSenate listlatestSep30/#256; Sep15HR3633cloture rejected49\u201350 not finalpassage; incompletefuturecoverage."
+  },
+  "account_proof": "data/deep_review_20261017/work/tick210121_account_root_recheck.json",
+  "no_financial_writer_or_numeric_prior_change": true,
+  "BUY_pause": "405/600uniquevalued + primarycomparative selectionnull; no newbid/add/repost/taker/bundle. Kellyscaleupoutput notauthority.",
+  "telegram": "None: recoveredqualitativestory closes sourcegap, no newquantifiedthesisbreak/qualifyingresult/action; avoid repeatedheadlinealerts.",
+  "next_boundary": "Existing22UTCcheck/earliermaterialevent; MIdebateOct21 23UTC. No newtimer/goal/idlefollowup."
+}

@@ -1,0 +1,89 @@
+{
+  "schema": "tick210121_resolving_source_facts.v1",
+  "observed_utc": "2026-10-20T21:02:51Z",
+  "scope": "Read-only source facts; no model or action.",
+  "HLE": {
+    "url": "https://dashboard.safe.ai/api/models",
+    "status": 200,
+    "receipt": "logs/cron20261020T210121Z_resolving_sources/hle/hle.receipt.json",
+    "body_gzip": "logs/cron20261020T210121Z_resolving_sources/hle/hle.body.json.gz",
+    "started_utc": "2026-10-20T21:02:50.429663Z",
+    "received_utc": "2026-10-20T21:02:50.533183Z",
+    "date_header": "Tue, 20 Oct 2026 21:02:50 GMT",
+    "cache_age_seconds": 3214,
+    "bytes": 41236,
+    "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+    "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+    "comparison": "Raw/gzip hashes exactly match 19:28Z and earlier 18:04Z reads; 66 rows, no additions/removals, HLE/calibration unchanged.",
+    "Kimi_K3": {
+      "id": "kimi-k3-high",
+      "HLE_score": 41.08,
+      "calibration_error": 44.67
+    },
+    "existing_rows_score_at_least_55_not_new": [
+      {
+        "name": "Gemini 4 Argon",
+        "HLE_score": 55.6,
+        "calibration_error": 41.52
+      },
+      {
+        "name": "Opus 5.5",
+        "HLE_score": 55.36,
+        "calibration_error": 13.84
+      }
+    ],
+    "new_qualifying_rows_since_19:28Z": 0,
+    "field_note": "HLE score and calibration error are separate benchmark columns; calibration error is not accuracy. Cache age describes response freshness, not score-publication time."
+  },
+  "OpenRouter": {
+    "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "status": 200,
+    "receipt": "logs/cron20261020T210121Z_resolving_sources/openrouter/openrouter.receipt.json",
+    "body_gzip": "logs/cron20261020T210121Z_resolving_sources/openrouter/openrouter.body.json.gz",
+    "started_utc": "2026-10-20T21:02:50.575048Z",
+    "received_utc": "2026-10-20T21:02:50.671251Z",
+    "date_header": "Tue, 20 Oct 2026 21:02:50 GMT",
+    "cache_age_seconds": 394,
+    "cachedAt_utc": "2026-10-20T20:25:32.792Z",
+    "bytes": 24691,
+    "raw_sha256": "673fb231923f21deaa3aed84e39926878b9dcba2825ad114eab0a5f63cd77cb4",
+    "gzip_sha256": "d4f073bf9636c98867136060a2f88384e5b3c53aaf383ec01e0cec959effec2f",
+    "metric_unit": "Weekly chart rows; sums of integer per-model ys values divided by 10^12, as trillions of tokens (T).",
+    "weeks": [
+      {
+        "week_start": "2026-10-12",
+        "completed_week_sum_T": 164.043985914931
+      },
+      {
+        "week_start": "2026-10-19",
+        "returned_partial_row_sum_T": 48.828344023861,
+        "prior_19:28_partial_T": 47.557737266305,
+        "change_vs_19:28_T": 1.270606757556
+      }
+    ],
+    "target_future_week_rows": [],
+    "future_scope": "Rows for Oct 26, Nov 2, Nov 9 and Nov 16 are absent. Oct19 is a current partial-week row, not a forecast. API cache timestamps are not documented usage cutoffs; do not treat this value as finalized usage."
+  },
+  "official_Senate_rollcall": {
+    "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+    "status": 200,
+    "receipt": "logs/cron20261020T210121Z_resolving_sources/senate_rollcall/senate_rollcall.receipt.json",
+    "body_gzip": "logs/cron20261020T210121Z_resolving_sources/senate_rollcall/senate_rollcall.body.json.gz",
+    "started_utc": "2026-10-20T21:02:50.709641Z",
+    "received_utc": "2026-10-20T21:02:51.400643Z",
+    "date_header": "Tue, 20 Oct 2026 21:02:51 GMT",
+    "bytes": 217837,
+    "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+    "gzip_sha256": "1bcef7417266b15be8c720a450d1ded7c1bb6a7485087fd581978053f3caf2e7",
+    "page_scope": "119th Congress, 2nd session roll-call list; latest listed vote date Sep 30, 2026 (latest row #256, nomination confirmation, 47-41). No later vote date appears in this returned list.",
+    "crypto_bill_row": "Vote #234, Sep 15: cloture on motion to proceed to H.R.3633, rejected 49-50. This is not final passage; it is not the contract-qualifying first final-passage vote.",
+    "coverage_note": "Official roll-call-list snapshot only; list endpoint does not establish future schedule or whether/when a later qualifying vote will occur. Prior Clarity contract rule capture at logs/tick073415_sources/clarity50.receipt.json and clarity58.receipt.json was same-day 08:08Z; no contract API refetch here."
+  },
+  "root_erratum": {
+    "reviewed_utc": "2026-10-20T21:12:33.572464+00:00",
+    "original_unit_sha256": "c4f7499fe630872fac98333715fff45bf16c2f694d2494620974419d0a93a5c6",
+    "original_crypto_bill_row": "Vote #233, Sep 15: cloture on motion to proceed to H.R.3633, rejected 49-50. This is not final passage; it is not the contract-qualifying first final-passage vote.",
+    "correction": "Root parsed actual captured Senate HTML tr: H.R.3633 Sep15 cloture rejected49\u201350 is #234, not #233. Original helper unit privately preserved; vote type/result and no-final-passage interpretation unchanged.",
+    "source_raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773"
+  }
+}

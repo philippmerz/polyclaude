@@ -1,0 +1,117 @@
+{
+  "schema": "polyclaude.triggered_alert_dispositions.v1",
+  "reviewed_utc": "2026-10-20T21:10:35.187032+00:00",
+  "read_cutoff": "2026-10-20T21:07:03Z",
+  "note": "Two named alerts even when original predates latestjournal;13further lines throughcutoff. Queuedrelevance not executionevidence. Laterarrivals for existingwatchers/ticks.",
+  "alerts": [
+    {
+      "alert_id": "becea882f54cd5206629d70e3388d4c244b481ad",
+      "ts": "2026-10-20T19:32:09Z",
+      "line_sha256": "6a41461e5c4189b3fd5154accfcf0e7bd5be497583b8bd95e4c0f39a3e39436f",
+      "decision": "CNNNewsource body recovered via KESQ/Scripps: same2026ElSayed-v-Rogers piece, not independentreports or newpoll. Qualitative Dslippage supports held5NO. Correct190370 classifierdirection; retainprior/position/noadd."
+    },
+    {
+      "alert_id": "fdf48b35390a2e0a03251ad696a1e64dc1be23f2",
+      "ts": "2026-10-20T19:43:33Z",
+      "line_sha256": "1f8d023b4dd04a98b114eef6de0d9d73724311d69339be35f21ba47b93cba189",
+      "decision": "MIforum schedule/playernotice not fullactualremarks/poll; CNNnowreports limitedremarks. No quantifiedpbridge/action."
+    },
+    {
+      "alert_id": "fc00dd3540a8f5a8c1c0eb7457d302d6f7352b4d",
+      "ts": "2026-10-20T19:54:27Z",
+      "line_sha256": "16168f59693f6dbb4df84391726c7901c0c53c7d79267da36927e9d39a2025f1",
+      "decision": "One AP GoogleRSS request returned GoogleNewsHTML, not APbody. No new transcript/poll adopted. CNNlimitedOct20forum remarks now available; not fullAP/transcript substitute."
+    },
+    {
+      "alert_id": "0cac6bab7712fdd73c35b1b315efb3927dd2cc70",
+      "ts": "2026-10-20T20:05:28Z",
+      "line_sha256": "62b9f16a3a445ab289b5fab6785e1b79e214bb043f6df72337de794bc852d0c0",
+      "decision": "Athleteaward/goal headline not Google2026GlobalTrendingAthletestop5 result. Competitionattentionmaymatter but no measuredranking/numericbridge; no zeroeffectclaim/action."
+    },
+    {
+      "alert_id": "aa888cde3cc90e4f7a1bd0351e8f3732406c299c",
+      "ts": "2026-10-20T20:05:33Z",
+      "line_sha256": "508795607e60c9a129ff6013e0060445cc216d10407dbc6cc58f697824ff9fdb",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "e182a3facfde1b068754e7df3afdd109bb079b23",
+      "ts": "2026-10-20T20:10:47Z",
+      "line_sha256": "9c696ff822519d9d21295665a8d54f9ac5fca06c966ad298193727a8dd4df675",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "19037093283021b08f96eab94992d5c3b8663318",
+      "ts": "2026-10-20T20:10:59Z",
+      "line_sha256": "50f3938ff49de52e87345791a9330eae2748a5c2f3518261d63bebb985aea57c",
+      "decision": "CNNNewsource body recovered via KESQ/Scripps: same2026ElSayed-v-Rogers piece, not independentreports or newpoll. Qualitative Dslippage supports held5NO. Correct190370 classifierdirection; retainprior/position/noadd."
+    },
+    {
+      "alert_id": "e671892a44407a8341144e9f6287c1f5064f77f9",
+      "ts": "2026-10-20T20:33:06Z",
+      "line_sha256": "1a90d2ab164eca38f638af0cba457bc45fbce484309247bd2d5efcefe695d921",
+      "decision": "MIforum schedule/playernotice not fullactualremarks/poll; CNNnowreports limitedremarks. No quantifiedpbridge/action."
+    },
+    {
+      "alert_id": "57dac19f06e95cc61316c9ceef6ebcf8559ccee1",
+      "ts": "2026-10-20T20:44:26Z",
+      "line_sha256": "fc4b4ef8254d379f58f9b6695497ccced628a58589d340771a24bfefcdb111e7",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "7f6ce9d68bb472d111a1c865a7fc7550c529d092",
+      "ts": "2026-10-20T20:55:13Z",
+      "line_sha256": "20299be6c6b3a2bd9565247dc4a065ea8edc31466d1511dcf3b0a3a2ea12c901",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "0459e60438135e29c92c1c87f6a66dd88bb4f439",
+      "ts": "2026-10-20T20:55:18Z",
+      "line_sha256": "0f50ba8b10473bac2e875691a21874f3869464df5ed790f7a40410c6b0077e93",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "7b6725dc604223f85c52e5808a46bf27fe246747",
+      "ts": "2026-10-20T20:55:22Z",
+      "line_sha256": "4233e7095a513c78a1a3f6032b8d6e806d7c72c7a51927331b44be0424e2b6f5",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "1c6940c26832a1cc18098df32d6266e8b065745e",
+      "ts": "2026-10-20T20:55:31Z",
+      "line_sha256": "3cd9d76721d341efaf2319095c03b1d719669f83c530ff7ce60bf0de32925932",
+      "decision": "No causalchannel to current9heldidentities orliveBUY established;0orders. Researchlead remainsunvalued, noaction/TG."
+    },
+    {
+      "alert_id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+      "ts": "2026-10-20T21:06:56Z",
+      "line_sha256": "2f8e81000c551d20a77723cc850a8cd6a097be3329dc0aeed7d49b491d190658",
+      "decision": "Mezha headlineonly/bodyandduplicationunverified, not independentnewpoll. ClassifierassertsgreaterDcompetitiveness without evidence and misreadsheadline. CNNstoryread separately; no numericalupdate/action."
+    },
+    {
+      "alert_id": "2a7b1c9fd41d4f063b79bb752cba002f8b9ca8b0",
+      "ts": "2026-10-20T21:07:03Z",
+      "line_sha256": "a73c0810727b6d92e43499882d26030d42bd6b83c04c80b4775fc0fd286be1da",
+      "decision": "Athleteaward/goal headline not Google2026GlobalTrendingAthletestop5 result. Competitionattentionmaymatter but no measuredranking/numericbridge; no zeroeffectclaim/action."
+    }
+  ],
+  "older_related": [
+    {
+      "alert_id": "d5720d40d28c6a492eb996806aa033230b0b03bd",
+      "ts": "2026-10-19T16:37:13Z",
+      "line_sha256": "39a97503b39b59b62845f37dec035d99cfa3721fc3a3b18db1b65aaab644e55e",
+      "decision": "Older Michigan poll-roundup alert reread; no recovered new survey instrument. Prior Rasmussen Oct12\u201314 D46/R44 remains separate known data."
+    },
+    {
+      "alert_id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "ts": "2026-10-19T18:26:06Z",
+      "line_sha256": "98d490c5b6f8e18ed8c568827d423a0aebe1c806462fd583b8e0553aceaee961",
+      "decision": "Older Michigan poll-roundup alert reread; no recovered new survey instrument. Prior Rasmussen Oct12\u201314 D46/R44 remains separate known data."
+    }
+  ],
+  "source_facts": [
+    "data/deep_review_20261017/work/tick210121_MI_news_facts.json",
+    "data/deep_review_20261017/work/tick210121_related_MI_facts.json"
+  ],
+  "no_financial_or_prior_change": true
+}

@@ -1,0 +1,39 @@
+{
+  "schema": "tick210121.related_mi_facts.v1",
+  "audited_utc": "2026-10-20T21:08:18.144521Z",
+  "scope": "Three exact public alerts only; no probability, candidate-status or account judgment.",
+  "alerts": [
+    {
+      "alert_id": "fc00dd3540a8f5a8c1c0eb7457d302d6f7352b4d",
+      "alert_utc": "2026-10-20T19:54:27Z",
+      "headline_or_notice": "AP News alert: “Michigan Senate candidates El-Sayed, Rogers offer competing economic visions in Detroit”",
+      "verified_facts_and_limit": "A standard GET to the exact Google News alert link returned HTTP 200 Google News HTML, not an AP article. No AP publisher URL/body was obtained; no alternate URL or second fetch attempted."
+    },
+    {
+      "alert_id": "e671892a44407a8341144e9f6287c1f5064f77f9",
+      "alert_utc": "2026-10-20T20:33:06Z",
+      "headline_or_notice": "Facebook video notice: El-Sayed and Rogers answer questions at a Detroit Economic Club candidate forum",
+      "verified_facts_and_limit": "Alert text is a live-forum notice only. No transcript or actual remarks verified; Facebook was not fetched."
+    },
+    {
+      "alert_id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+      "alert_utc": "2026-10-20T21:06:56Z",
+      "headline_or_notice": "Mezha.net headline: “Democrats worry Black voter support could make Michigan Senate race ‘far closer than it should’”",
+      "verified_facts_and_limit": "Headline only. No Mezha article body fetched, so syndication/duplication with the previously captured CNN Newsource story is unverified."
+    }
+  ],
+  "one_ap_link_attempt": {
+    "requested_from_alert": true,
+    "request_url": "Google News RSS alert URL for fc00dd3540a8f5a8c1c0eb7457d302d6f7352b4d",
+    "http_status": 200,
+    "response_content_type": "text/html; charset=utf-8",
+    "response_bytes": 586330,
+    "response_is_google_news_html_not_ap_body": true,
+    "raw_sha256": "5928cd2ac21d5cb3619352c6337bf50c14a3c8440fba009c0afecf0f34b583be",
+    "gzip_sha256": "eff0b211acadbb958fe62ac5f7b52f94cd7d6aedf73092f19e4c7e7615667f66",
+    "private_receipt": "logs/cron20261020T210121Z_MI_AP_alert/ap_alert_link.receipt.json",
+    "private_body": "logs/cron20261020T210121Z_MI_AP_alert/ap_alert_link.body.json.gz",
+    "independent_hash_verification": "gzip decompression SHA256 matched receipt raw_sha256; compressed file SHA256 matched receipt gzip_sha256."
+  },
+  "coverage_limit": "The forum notice is not event coverage. The Mezha alert is not verified as a duplicate. The AP body gap remains; no further fetch or guessed URL was used."
+}

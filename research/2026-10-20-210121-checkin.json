@@ -1,0 +1,33 @@
+{
+  "schema": "polyclaude.triggered_bounded_checkin.v1",
+  "tick_id": "20261020T210121Z",
+  "reviewed_utc": "2026-10-20T21:13:38.931589+00:00",
+  "requested_alert_ids": [
+    "becea882f54cd5206629d70e3388d4c244b481ad",
+    "19037093283021b08f96eab94992d5c3b8663318"
+  ],
+  "steps": {
+    "1_state": "21:03root verified rawHTTP0orders/127trades/exhaustedLTE/9exactallsizepositions;0winningredeemable. EightCLIactualrc0/callbounds/stdoutstderr hashes persisted beforeconversion. One canonicalbankroll21:03:41\u201358rc0;wallet/cryptoactual0. Ostium0to0/cruxquiet/4currentexactabsolute-singletondaemons. StatuschildJuly3HLEarchive503/exit2 retained; liveHLEseparate200.",
+    "2_news": "Bothnamedalerts and2olderMIpollalerts read;13additionalnewlines through21:07:03 saved perID. Root read/hashchecked KESQ+Scripps CNNtext. Same2026race/interviews, no newpoll; DvulnerabilityhelpsheldNO, classifierdirection corrected. APbody/fulltranscript/Mezhabody remaingaps.",
+    "3_catalysts_hurdle_watchlist": "LiveHLE66rows/K3accuracy41.08/cal44.67/age3214s;OROct12complete164.043986T/Oct19partial48.828344T, not futureheldweeksforecast. Hurdle4clear0flagged/watchlistnohits/UMA43refreshed0alerts. No triggeredautorevet. Exact4criteria matchedfreshGamma. SenateSep15HR3633cloture rejected49\u201350 is #234, not finalpassage; originalhelper#233 retained witherratum.",
+    "3b_state": "Audit--fixCLEAN7indexed+1claim,0expiredholds;0orders/0committedpUSD. No unresolvedcancelreservation.",
+    "3c_exits_joint": "4Gamma/8books/4compactcurves raw/hashbound,0feecurvesmatch. Selected/broadlow/carry/conditionalfill/jointallloss reviewed; retain/noadd. WholeClarity29/58normalconditional,venue0, versus separate25.19exit/25.35481carry; nolegsale.",
+    "4_decisions_Kelly": "No financialaction/numericpriorchange requiringnewdecision; pendingnooverdue/KellynoTRIM. Scaleinoutput uses datedcache and cannotbypassBUYpause.",
+    "5_redeem": "Allsize9rows/rootvettedresolvedvalueclassifier0winningredeemable; no burn/redeem/gas.",
+    "6_discovery_batches": "Reuse completed14UTC7scans/81batches1398rows with originaldates/caps/failures; news-trigger no repeatedbroadscan,3kqueueadvance or exchange-wideabsenceclaim.",
+    "7_records": "One publicfinancialrecord/CSV241 preserving all240priorrows/flows. README/backlog/journal/currenthandoff refreshed after primaryreview; 10existingcharttests pass. Distinctstatus/bookread notspliced into canonicalaggregate.",
+    "8_telegram": "None: verifiedqualitativebody closesgap but no newquantifiedthesisbreak/qualifyingresult/action; no repeatheadline/markonlyheartbeat.",
+    "9_weekly": "LastOct16/nextOct23notdue; monthlyNov12notdue/offchainSundayretired.",
+    "10_methodology": "Completedexperimentretired/no rerun; no daemon/executioncode edit. DurableCLIcaptureprocedure now worked; no codechange needed.",
+    "11_publish": "Owned-pathdiff/secret/link/prefix/hash audits and commit/push; actualremoteverification writtenafterward to private publication/postflight.json. Pointeralone is not proof."
+  },
+  "financial_snapshot": "research/2026-10-20-2103-financial-snapshot.json",
+  "root_account": "data/deep_review_20261017/work/tick210121_account_root_recheck.json",
+  "primary_judgment": "data/deep_review_20261017/work/tick210121_primary_review.json",
+  "source_facts": "data/deep_review_20261017/work/tick210121_resolving_sources.json",
+  "alert_decisions": "data/deep_review_20261017/work/tick210121_alert_decisions.json",
+  "result": "Retain/noadd; no financialwriter/numericprior/entrypolicy/researchcountchange.405valued/19blocked/383factual/2193pending;495next notstarted.",
+  "publication_postflight": "logs/cron20261020T210121Z_root/publication/postflight.json",
+  "next_existing_boundary": "22UTC/earliermaterialevent; MIdebateOct21 23UTC.",
+  "end": "End after ownedpublication; no goalcreation/lifecyclechange/timer/idlecontinuation."
+}
