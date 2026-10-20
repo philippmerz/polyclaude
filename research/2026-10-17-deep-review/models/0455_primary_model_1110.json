@@ -1,0 +1,41 @@
+{
+  "schema": "case455_primary_model.v1",
+  "review_index": 455,
+  "model_utc": "2026-10-20T11:09:55.667970+00:00",
+  "status": "primary review; economics computed, ledger record pending",
+  "p_yes": 0.24,
+  "low": 0.05,
+  "high": 0.65,
+  "selected_absolute_reserve": 0.15,
+  "reasoning": "Strict final-instrument condition narrows an ordinary end-of-war or talks agreement. Current named-official statements still describe proposals/preconditions; roughly72days remain. Sanctions/blockade costs and live mediators preserve a real breakthrough path, while fourmonths without a verified final nuclear obligation and enrichment/sanctions sequencing lower the near-term baseline. Private progress and exact signed text coverage are incomplete.",
+  "already_qualifying_or_hidden_event_mass": 0.02,
+  "conditional_future_regimes": [
+    {
+      "regime": "continued coercion, stalemate or renewed fighting",
+      "weight": 0.55,
+      "qualifying_instrument_by_deadline": 0.05
+    },
+    {
+      "regime": "sequenced de-escalation and revived substantive talks",
+      "weight": 0.3,
+      "qualifying_instrument_by_deadline": 0.3
+    },
+    {
+      "regime": "rapid mutual compromise/grand bargain",
+      "weight": 0.15,
+      "qualifying_instrument_by_deadline": 0.7
+    }
+  ],
+  "raw_formula": ".02 + .98*(.55*.05 + .30*.30 + .15*.70) = .23805; rounded .24",
+  "assumptions": "Judgmental scenario weights and conditional probabilities, not fitted frequencies. Rates include both-state adoption and a present measurable obligation; do not apply another purported independence factor. The2% branch is a coverage/adjudication allowance, not a discovered agreement.",
+  "range_basis": "5%: sanctions/coercion dominates and present conditional text remains insufficient.65%: mediators have more progress than public sources show and leaders accept a narrow measurable commitment quickly. Neither endpoint is certified.15pp reserve was chosen before viewing the saved quote; not a tailor-made hurdle.",
+  "quote_file": "data/deep_review_20261017/work/cases455_457_quotes_1106.json",
+  "economics_file": "data/deep_review_20261017/work/0455_economics_1108_draft.json",
+  "source_units": [
+    "data/deep_review_20261017/work/0455_followup_facts_0856.json",
+    "data/deep_review_20261017/work/0455_current_facts_1105.json"
+  ],
+  "primary_source_correction": "APP field-docs-content begins with an APP Note identifying the text as a DRAFT and has dotted date/location blanks. Prior unit calls it a full archivalcopy; it is a complete draft transcription, not authenticated signed-final wording. Earlier source unit preserved; root adds this limitation before reliance.",
+  "expected_horizon": "December31 23:59ET=Jan1 04:59UTC; up-to28calendar-day text-release wait can reachJan28ET/Jan29UTC, beyond ordinary earlyJanuary processing.100day carry sensitivity is not settlement or project-evaluation assurance.",
+  "investment_judgment": "14cYES is a central-value research lead (+1.00USD per10shares) but15pp-stress loses.50USD beforecarry; NO8.7353cost also negative central. Maker8c/13shares is only a hypothetical later re-review condition; no quote/repost/order before600pluswinnerselection/allgates."
+}

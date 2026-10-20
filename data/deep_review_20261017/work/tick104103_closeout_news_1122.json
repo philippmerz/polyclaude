@@ -1,0 +1,84 @@
+{
+  "schema": "tick104103_closeout_news.v1",
+  "read_at": "2026-10-20T11:20:08.351302+00:00",
+  "after": "2026-10-20T11:01:50.075620+00:00",
+  "scope": "Local alert delta only, not exhaustive external coverage",
+  "rows": [
+    {
+      "alert_id": "9682a9f269961f6245455fbe2e838977d4c9c615",
+      "ts": "2026-10-20T11:02:26Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Michigan’s El-Sayed doubles down: Israel ‘not an ally’ - Jewish Telegraphic Agency",
+      "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPLV9Kb01NLXk4VVdtODVKbVo4OEZZc3NUSzlWUmN5c3l6X3BJRWRndkNDT0VNUmt2bHliU2lzMTJkSnFsLW9waGI1c2hWYmpTMk1jenhUYXJTUlJ0RmRMTHJfcHpRdnJWTllZM2Q3QldCRENWcWNxMEVFbkhGZHgzbGlKbG9HdERLbGVwaVBaT0JkMnQ5a3V4R0hVQQ?oc=5",
+      "agent_reason": "Named Michigan Senate candidate El-Sayed reaffirming a controversial position may affect Democratic electability.",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MINOR",
+          "reason": "El-Sayed’s reaffirmed stance modestly supports the thesis that Democrats may lose the Michigan Senate race."
+        }
+      ],
+      "relevance": "minor",
+      "review_required": false,
+      "row_sha256": "1394de61ad72aded576faa1c700ebf141729259d528bfd7b7170621e636762e2",
+      "primary_decision": "Reviewed in data/deep_review_20261017/work/tick104103_closeout_mi_review_1127.json: JTA exact publisher body recovered; Forward exact-body binding remains unknown. Related prior interview context, no new measured voter change adopted; retain MI/no add. Material classifier reviewed, not treated as research-only."
+    },
+    {
+      "alert_id": "6088adba38cc2fe73a9c7a4e6d56b71f531abf2d",
+      "ts": "2026-10-20T11:02:36Z",
+      "tier": 1,
+      "feed": "Google Year in Search, Messi and Mbappe athlete news",
+      "matched": "Kylian Mbappe",
+      "title": "Second time lucky? Kylian Mbappe to transfer claim made by ex-Arsenal star who formed part of talks when Real Madrid forward came ‘very close’ to joining Gunners - Goal.com",
+      "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQU3Izc3FzTTFjb2VoRWhMTHNrY0h5b0ZDRlVLSW43WXkyeHByQ2pYdUU4TndPam1NUVA0aTNmQUViQ0RhS2tlcG4tQzZnMFNVNDdvSWs1d2VEamVRY2k0ZUFKLVVqS0Z1VEJmR0VXV2lUWDdicTdycVlrcVN0RGZ1TjN1YVBnbHBnSFF0TFljR0NUcnk5aTZUX3RrYU9peVFHanBDZk9BQlpPb2t2X3BfQw?oc=5",
+      "agent_reason": "Speculative transfer commentary with no direct, material impact on the listed positions.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "row_sha256": "7aab1940ba342e9701744cabab9d6d060851c6459156bf862cd09e66311f30e7",
+      "primary_decision": "Research-only headline: no held or pending direct causal exposure identified from this row; not a completed substantive valuation. No action."
+    },
+    {
+      "alert_id": "53c2b746f5a7ccc0565e51823ea8288b8d7ee71a",
+      "ts": "2026-10-20T11:13:30Z",
+      "tier": 1,
+      "feed": "Kansas Senate Hamilton Marshall and Sedgwick election news",
+      "matched": "Kansas Senate",
+      "title": "Kansas Senate race on a knife edge as Democrats aim to end 94 years of Republican dominance - The Guardian",
+      "link": "https://news.google.com/rss/articles/CBMikwFBVV95cUxNY2p0aDR6czF0VkhTYkZRUWthZ0RZdGV3bVUwMWZZVzVuRUx6cVZjSnVocnRmME40YUd4MFZIY3Vka3dQZDFrcEJ3QVF4c2xmR0xDclc5c0dBQWI3czBxdmNBV2FESGhibGtyNUxRRFZuZ19JUW15OGFYYjNuczg2LW14VWNrRF9hMVZ5MVZwaVVBUnM?oc=5",
+      "agent_reason": "Kansas Senate race coverage has no direct causal channel to any held position or pending BUY order.",
+      "impacts": [],
+      "relevance": "research_only",
+      "review_required": false,
+      "row_sha256": "5cd9754cb532b17e2e0122c60821d1b2ddbaacc86a108b598ea5416bf055b80e",
+      "primary_decision": "Research-only headline: no held or pending direct causal exposure identified from this row; not a completed substantive valuation. No action."
+    },
+    {
+      "alert_id": "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+      "ts": "2026-10-20T11:19:02Z",
+      "tier": 1,
+      "feed": "Michigan Senate Rogers and El-Sayed news",
+      "matched": "El-Sayed",
+      "title": "Michigan’s El-Sayed doubles down: Israel ‘not an ally’ - The Forward",
+      "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxQSm9UcU5vV0tfQzRaYW1hN3Y1Y21idzB2aXZXSV9hSHMweFVpRXRhTG1YOXlUSUMxY2dUODVFMjJFX0xCVGh5TjJhOTBRR3E3Z2dRWmNTMFhxT19xekVoRWdTVWlLT3pxUEV1RDY5UGVyS1owbWx1cXdyNkdrcmxJellDbGQ3NnJCc0dOTnhSemJ0NVF6d1E?oc=5",
+      "agent_reason": "Named Michigan Senate candidate El-Sayed reaffirming a controversial position may affect Democratic electability.",
+      "impacts": [
+        {
+          "position": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+          "level": "MATERIAL",
+          "reason": "Controversial foreign-policy stance could pressure Democratic chances in Michigan, modestly supporting the No thesis."
+        }
+      ],
+      "relevance": "portfolio_material_critical",
+      "review_required": true,
+      "row_sha256": "b7bf23cd32bc6866242c280413937ecde707f267d71f8a7efd9e41acc5c795c7",
+      "primary_decision": "Reviewed in data/deep_review_20261017/work/tick104103_closeout_mi_review_1127.json: JTA exact publisher body recovered; Forward exact-body binding remains unknown. Related prior interview context, no new measured voter change adopted; retain MI/no add. Material classifier reviewed, not treated as research-only."
+    }
+  ],
+  "search_limit": "Initial two web searches failed; bounded publisher API lookup then recovered exact JTA post1911062. ForwardAPI403, exact Forward body unknown.",
+  "financial_action": false,
+  "reviewed_utc": "2026-10-20T11:22:18.312554+00:00",
+  "correction_record": "data/deep_review_20261017/work/tick104103_closeout_mi_review_1127.json"
+}

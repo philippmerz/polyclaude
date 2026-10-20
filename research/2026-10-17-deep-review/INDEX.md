@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T09:17:39.391388+00:00
+Updated: 2026-10-20T11:12:25.057567+00:00
 
-**383 valuations saved; first milestone100:** 383 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2231 pending.
+**384 valuations saved; first milestone100:** 384 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2230 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -466,6 +466,7 @@ Each report below is written before moving to the next evaluation. Related contr
 |452|[Will there be between 25 and 29 average daily transits of the Bab el-Mandeb Strait on October 31?](revisions/0452_20261020T090134479838Z.md)|valued|Noentry: NOpositivecentralat42c butfailsselected40;38–39c makerfailscase-specificconditionalselected31.75. Mappinggapclosed;notrejectedforinaccessiblefuturedata.|
 |453|[Will PSV win on 2026-10-17?](evaluations/0453.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |454|[Will Alibaba have the best AI model at the end of December 2026?](evaluations/0454.md)|valued|Noentry:AlibabaYESpositivecentralat0.4cbutselected0afterindependentlyjustified17ppreserve;NOoverpriced;preserverareeventlead.|
+|455|[US-Iran Final Nuclear Deal by December 31, 2026?](revisions/0455_20261020T111202715920Z.md)|valued|YES central-value lead at14c but fails15pp reserve and current maker economics; NO negative central. No trade; retain exact source/cheap-maker re-review conditions for comparison after600.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
@@ -781,3 +782,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 456

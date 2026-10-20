@@ -55,6 +55,12 @@ def _load_valuation_counts(root: Path) -> tuple[int, set[str]]:
         "excluded_factual": _require_int(checkpoint.get("factual_exclusions"), "factual count"),
         "pending": _require_int(checkpoint.get("pending"), "pending count"),
     }
+    declared_active = checkpoint.get("active_indices", [])
+    if (not isinstance(declared_active, list)
+            or any(type(index) is not int or not 1 <= index <= declared_universe
+                   for index in declared_active)
+            or len(set(declared_active)) != len(declared_active)):
+        raise EntryReviewGateError("entry review gate: invalid active review indices")
 
     try:
         with queue_path.open(newline="", encoding="utf-8") as stream:
@@ -69,6 +75,7 @@ def _load_valuation_counts(root: Path) -> tuple[int, set[str]]:
     condition_ids: set[str] = set()
     valued_condition_ids: set[str] = set()
     indices: set[int] = set()
+    active_indices: set[int] = set()
     for row in rows:
         if not isinstance(row, dict):
             raise EntryReviewGateError("entry review gate: malformed queue row")
@@ -82,11 +89,15 @@ def _load_valuation_counts(root: Path) -> tuple[int, set[str]]:
             raise EntryReviewGateError("entry review gate: duplicate or invalid queue index")
         if not CONDITION_RE.fullmatch(condition) or condition.lower() in condition_ids:
             raise EntryReviewGateError("entry review gate: duplicate or invalid condition identity")
-        if status not in VALID_STATUSES:
+        if status not in VALID_STATUSES and status != "in_progress":
             raise EntryReviewGateError("entry review gate: unknown queue status")
         indices.add(index)
         condition_ids.add(condition.lower())
-        counts[status] += 1
+        # The ledger includes active, unfinished cases in checkpoint.pending.
+        # They never contribute a completed valuation or a selectable target.
+        counts["pending" if status == "in_progress" else status] += 1
+        if status == "in_progress":
+            active_indices.add(index)
         if status == "valued":
             valued_condition_ids.add(condition.lower())
 
@@ -95,6 +106,8 @@ def _load_valuation_counts(root: Path) -> tuple[int, set[str]]:
         raise EntryReviewGateError("entry review gate: queue size disagrees with checkpoint universe")
     if counts != declared:
         raise EntryReviewGateError("entry review gate: queue status counts disagree with checkpoint")
+    if active_indices != set(declared_active):
+        raise EntryReviewGateError("entry review gate: active reviews disagree with checkpoint")
     return counts["valued"], valued_condition_ids
 
 

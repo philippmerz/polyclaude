@@ -1,0 +1,28 @@
+{
+  "schema": "tick104103_closeout_mi_review.v1",
+  "reviewed_utc": "2026-10-20T11:22:18.312554+00:00",
+  "alert_ids": [
+    "9682a9f269961f6245455fbe2e838977d4c9c615",
+    "92a9b95773daf78668119bd5c9d93c2a0cf88456"
+  ],
+  "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+  "exact_primary_publisher_url": "https://www.jta.org/2026/10/20/united-states/michigans-el-sayed-doubles-down-israel-not-an-ally",
+  "body_access": "Publisher public WordPress post1911062 JSON; exact matching JTA title and article link. Retrieved body read, not just search snippet.",
+  "article_published_local_display": "2026-10-20T06:55:47",
+  "article_modified_local_display": "2026-10-20T06:55:53",
+  "timezone_limit": "Publisher date field carries no explicit timezone; not converted toUTC.",
+  "received_utc": "2026-10-20T11:21:15.575068Z",
+  "raw_sha256": "03349600508dcc7cbb50b08aba45d35510730175aeb4e67d42cbfe2846d3bb82",
+  "gzip_sha256": "cae1d60c515faeae2849362d2f045d2089444243d7f3ee3f3f7c718dae77189b",
+  "receipt": "logs/deep_review_20261017/tick104103_closeout_jta_body_1126/jta_article.receipt.json",
+  "verified_findings": [
+    "Oct20 JTA report reiterates Monday ABC remarks, Thursday MSNOW remarks and the Oct8 debate stance; these are attributed interview claims, not independently verified full interview transcripts.",
+    "No new poll or voter-response measurement is supplied in the article. Source says final candidate debateWednesdayOct21; no exact time established here.",
+    "ABC interview was already incorporated as dated context in the07:34-triggered and10:41 reviews. Publication or syndication is not a second independent electoral observation."
+  ],
+  "forward_binding_limit": "Same exact headline is a related lead; Forward API403 retained. Its exact article body/URL was not recovered; no assertion of byte-identical syndication.",
+  "primary_judgment": "Material classifier has a plausible electoral channel, but this recovered article does not establish an incremental probability change beyond the already considered stance/interview. Retain MI5NO central44%, selected34%, broad low20%; no add, no duplicate Oct20 aging, no zero-effect claim. Existing10:48 rounded exit1.41 versus selected payout1.70 remains dated, not refreshed here.",
+  "catalysts": "Existing14UTC full check precedes today official15-18UTC program/main16. No resting MI order. Oct21 final-debate time needs verification at the next already-due review, before any new order; no new timer.",
+  "no_financial_action": true,
+  "review_note": "Corrects a transient closeout draft that classified the later Forward row as research-only before root inspected its material impact. Alert payload is retained; this is not a ledger valuation."
+}

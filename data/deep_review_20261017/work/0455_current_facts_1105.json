@@ -1,0 +1,75 @@
+{
+  "schema": "case455_public_current_facts.v1",
+  "checked_utc": "2026-10-20T11:07:06Z",
+  "scope": "Bounded factual supplement only; no forecast, ranking, eligibility finding, ledger action, or trade action.",
+  "case_identity": {
+    "review_index": 455,
+    "id": "2696747",
+    "conditionId": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+    "question": "US-Iran Final Nuclear Deal by December 31, 2026?",
+    "criteria_sha256": "94f8c30287f7c2ef0dc48bf025307fbe9bcef14e7ede68a0739633826c11ce4c"
+  },
+  "prior_facts": {
+    "path": "data/deep_review_20261017/work/0455_followup_facts_0856.json",
+    "sha256": "72f182c1baca46927f7326f5f472428dc438d5cc9a4161de1e8df1c49a9ed7ae"
+  },
+  "findings": [
+    {
+      "date": "2026-10-13",
+      "source": "Axios, Barak Ravid and Marc Caputo",
+      "url": "https://www.axios.com/2026/10/13/netanyahu-trump-iran-war-elections",
+      "finding": "Axios reported Qatari mediators were still waiting for Iran to respond to the latest US counterproposal, which included nuclear concessions. A US official characterized negotiations as neither dead nor alive. This is reported status, not an official instrument or evidence of bilateral acceptance.",
+      "retrieval": "Browser source opened; direct raw HTTP retrieval returned 403. Failure receipt/body preserved; it is not the article body.",
+      "receipt": "logs/deep_review_20261017/case455_current_20261020/receipts_1105/axios_oct13.receipt.json",
+      "receipt_sha256": "c33a044576b9e4d2510d0bcb156a618b05a84502360092e17824972be84cc3c3"
+    },
+    {
+      "date": "2026-10-12",
+      "source": "Anadolu Agency, citing Iranian Foreign Ministry spokesman Esmaeil Baqaei",
+      "url": "https://www.aa.com.tr/en/middle-east/iran-says-reviewing-us-proposals-for-talks-as-indirect-messages-continue/4085816",
+      "finding": "Baqaei said Iran was reviewing US proposals for negotiations, that message exchanges through mediators continued, and Iran's preconditions must be observed. This indicates proposed negotiations, not agreement to a final instrument.",
+      "retrieval": "Browser article opened and read. Direct raw HTTP retrieval ended RemoteDisconnected; failure receipt preserved.",
+      "receipt": "logs/deep_review_20261017/case455_current_20261020/receipts_1105/anadolu_oct12.receipt.json",
+      "receipt_sha256": "fbb0557536e49c339ed4a78e6bef5d163e6e00c5042deff12f12a7950e7b67c2"
+    },
+    {
+      "date": "2026-10-16",
+      "source": "Pakistan Ministry of Foreign Affairs, weekly spokesperson briefing",
+      "url": "https://mofa.gov.pk/press-releases/transcript-of-the-press-briefing-by-the-spokesperson-on-thursday-16th-october-2026",
+      "finding": "The official page's indexed extract answers a question about criticism of Pakistan's US-Iran mediation: the spokesperson called Iran a brotherly country and said its leadership appreciated Pakistan's role in mediation and bringing the Islamabad MoU to fruition. The excerpt does not report a newly signed/adopted nuclear instrument, specific measurable nuclear limit, negotiating timetable, or collapse. It is an incomplete page extract.",
+      "retrieval": "Direct host requests timed out/failed. Raw call-window failure receipts preserved; web search surfaced the official page and bounded excerpt. Retrieval failure or excerpt silence does not establish absence.",
+      "receipt": "logs/deep_review_20261017/case455_current_20261020/receipts_1105/pakistan_oct16.receipt.json",
+      "receipt_sha256": "a398f9477fbdeb3465c7f8c1c506966eb0bf9afac268bb4e48621328751fb7a4"
+    },
+    {
+      "date": "2026-09-25",
+      "source": "Associated Press, reporting Foreign Minister Abbas Araghchi's public proposal",
+      "url": "https://apnews.com/article/iran-us-war-negotiations-strait-hormuz-d8b9749fee99a11dd77513d326b824b6",
+      "finding": "Araghchi said Iran's seven-day plan would begin only after US acceptance; nuclear talks on a final deal would start on day seven after conditional steps. AP reported no immediate White House comment. This is a conditional proposal for future talks, not a present nuclear obligation.",
+      "retrieval": "Browser article opened and read. Direct raw HTTP retrieval returned 403; failure body preserved, not article text.",
+      "receipt": "logs/deep_review_20261017/case455_current_20261020/receipts_1105/ap_sep25.receipt.json",
+      "receipt_sha256": "f069c66347b207225519088c46360d3ddb9b94bb86134752d6cc43564703643a"
+    },
+    {
+      "date": "2026-09-30 (updated 2026-10-02, per surfaced result)",
+      "source": "Reuters, article link surfaced through a secondary Reddit post; article itself not retrieved",
+      "url": "https://www.reuters.com/world/middle-east/iran-awaits-us-move-after-wsj-report-says-trump-rejects-peace-plan-2026-09-26/",
+      "finding": "Not relied on for substantive facts because the underlying Reuters article was unavailable in this pass.",
+      "retrieval": "HTTP 401; failure body preserved. Secondary excerpt is outside the evidence basis.",
+      "receipt": "logs/deep_review_20261017/case455_current_20261020/receipts_1105/reuters_sep30.receipt.json",
+      "receipt_sha256": "66f45b270fd5f8d6403a186a01ff05f7f3d13e95447f823b64462fe9964bff17"
+    }
+  ],
+  "conclusion_boundary": "No located source in this bounded pass establishes that a final written instrument was signed or formally adopted by both states with a present unconditional measurable nuclear limit. Evidence instead describes a stalled/intermittent proposal-and-message process through Oct 13; Pakistan's Oct 16 indexed excerpt affirms mediation and the June MOU framework but provides no substantive nuclear status update. This is a source-coverage statement, not proof no instrument or private progress exists.",
+  "prior_june_text_caveat": "The previous follow-up's full-text archive is dated June 17 and expressly describes future negotiations/status quo. Do not assume its text is exactly the June 14 announcement referenced by the frozen rule; do not infer absence from current retrieval failures.",
+  "raw_receipts": [
+    "logs/deep_review_20261017/case455_current_20261020/receipts_1105/",
+    "logs/deep_review_20261017/case455_current_20261020/receipts_pakistan_1105/"
+  ],
+  "limits": [
+    "No complete official US/Iran/Pakistan mediator statement from Oct 17-20 was obtained.",
+    "No complete Oct 16 Pakistan briefing body was retrieved; only its indexed official-page extract was available.",
+    "Direct retrieval of the Iranian Foreign Ministry official site and the complete MOU/final instrument text was not repeated in this pass.",
+    "Browser-rendered major-agency/article content and search excerpts are identified as such; saved HTTP error bodies are not source article bodies."
+  ]
+}

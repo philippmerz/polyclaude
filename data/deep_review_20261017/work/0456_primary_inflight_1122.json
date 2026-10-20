@@ -1,0 +1,36 @@
+{
+  "schema": "deep_review_primary_inflight.v1",
+  "updated_utc": "2026-10-20T11:20:08.351302+00:00",
+  "review_index": 456,
+  "condition_id": "0x573b157703ef39c682aaa222bc869be0095a4c54609e944e5141f51d4950f29e",
+  "criteria_sha256": "829b46749aa7bf54a1b33ec9e67ee59e300855221229e4df3c856c9af2b88919",
+  "status": "Active; primary forecast/economics/final record unfinished. No valuation count.",
+  "literal_rule": "Messi must officially rank1-3 in final men2026Ballon d’Or. Canceled/no ranking byDec31 23:59ET resolvesNO. Officialsite primary, credible consensus fallback.",
+  "source_units": [
+    "data/deep_review_20261017/work/0456_nomination_facts_0851.json",
+    "data/deep_review_20261017/work/0456_official_nominees_1105.json",
+    "data/deep_review_20261017/work/0456_season_facts_1112.json"
+  ],
+  "root_rule_findings": [
+    "Official reference periodAug3,2025-Jul19,2026; no league/nationality exclusion. Ordered criteriaindividual performance, collective honors, class/fairplay.100journalists rank10from30 with15,12,10,8,7,5,4,3,2,1points; ties use first-place count then successive places.",
+    "Messi is an official nominee. CeremonyOct26 LondonPalladium; current record does not establish finalranking.",
+    "October farewell/MLS results are outside award reference period and cannot directly count as eligible seasonperformance. Held GoogleAthletes contract is a different predicate."
+  ],
+  "qualitative_interview_lead": {
+    "url": "https://cadenaser.com/nacional/2026/10/16/periodistas-con-contrato-de-exclusividad-con-el-balon-de-oro-desvelan-sus-impresiones-a-la-ser-podriamos-descartar-a-mbappe-de-la-pelea-cadena-ser/",
+    "access": "Earlier primary browser read in this run, not raw HTTP receipt. Reopen exact body as needed.",
+    "finding": "Publisher describes conversations with voting journalists; impressions/predictions, not disclosed ballots. Kane/Yamal dominate this unknown-size sample; other podium names vary.",
+    "limits": "Unknown sample/geography/shared narrative. Not a random poll, calibrated frequency, actual ballot leak or independent model."
+  },
+  "remaining": [
+    "Root verify load-bearing Messi WorldCup results and eligible performance; FIFA200shells/discovery leads remain unverified. MLSwindowaggregate absent.",
+    "Read official rival season facts with published-period caveats; collector interpretation is not primary verification.",
+    "Derive joint podium-slot forecast/range/reserve independently of PM/odds; outrights do not equal top3.",
+    "Use explicit dated quote packet for both sides; assess hidden ballot/fill selection, settlement delay, current portfolio and alternatives; no newBUY before600+selection.",
+    "Record and verify immutable evaluation before starting457."
+  ],
+  "quote_packet": "data/deep_review_20261017/work/cases455_457_quotes_1106.json",
+  "quote_asof": "2026-10-20T11:06:20Z; dated research input, no current execution authority",
+  "forecast": null,
+  "financial_action": false
+}

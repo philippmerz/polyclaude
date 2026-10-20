@@ -1,0 +1,62 @@
+{
+  "schema": "tick104103_closeout_verification.v1",
+  "verified_utc": "2026-10-20T11:22:18.312554+00:00",
+  "completed_check": "research/2026-10-20-104103-checkin.md",
+  "requested_alert_ids": [
+    "24ba12984cf1a575672481abeb51820d77179878",
+    "306853ae7b61f9ebfde6893964b2e3fb8086eedb",
+    "5fa45630a7ef41fc67a1685a286aae60f0e561e9",
+    "f534810c5538d26e2580ac14dbb36c64047f5760"
+  ],
+  "requested_rows": {
+    "24ba12984cf1a575672481abeb51820d77179878": "bf79d729664657fe98728706b7515b68a921967a0fa5222ca2d9ecb327c4c693",
+    "5fa45630a7ef41fc67a1685a286aae60f0e561e9": "83026a04591308f09aecc33961912ebaa486f8d3a8a93225aa137a3e25e8e628",
+    "f534810c5538d26e2580ac14dbb36c64047f5760": "1995f9f9a01d303976e77ca95a35a27e263d5e6a1b466e95a426cb1bec3ff430",
+    "306853ae7b61f9ebfde6893964b2e3fb8086eedb": "4bde23db5208ad39f017fe767b50ecae7bde4f4fce6289d05d0866c4dfb51ce8"
+  },
+  "case455": {
+    "status": "valued",
+    "effective_report": {
+      "path": "research/2026-10-17-deep-review/revisions/0455_20261020T111202715920Z.md",
+      "sha256": "72507d5d9046d13e8aea0ab367314050bab669d191cfa09ab73f308d21d406d0"
+    },
+    "metadata_erratum_only": true
+  },
+  "counts": {
+    "completed_valuations": 384,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2230,
+    "base_records": 770,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    456
+  ],
+  "active_work": "data/deep_review_20261017/work/0456_primary_inflight_1122.json",
+  "news_delta": "data/deep_review_20261017/work/tick104103_closeout_news_1122.json",
+  "last_news_row_ts": "2026-10-20T11:19:02Z",
+  "last_news_row_id": "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+  "no_new_financial_action": true,
+  "financial_asof": "2026-10-20T10:46:39.751328-10:47:29.161791UTC; no new aggregate mark/CSV row",
+  "orders_asof": "2026-10-20T10:48:57UTC; no new authenticated account observation",
+  "source_asof": "HLE10:53UTC/OR10:52UTC; preserved dates",
+  "next_existing_boundary": "14UTC or earlier material event",
+  "no_new_timer_or_goal_lifecycle_mutation": true,
+  "additional_material_review": "data/deep_review_20261017/work/tick104103_closeout_mi_review_1127.json",
+  "active_work_saved": true,
+  "entry_gate": {
+    "verified_utc": "2026-10-20T11:25:41.109540+00:00",
+    "before": "Fail-closed unknown queue status when456 active",
+    "result": "entry review gate: 384/600 completed valuations; new BUYs blocked",
+    "selection": null,
+    "repair": "Treat ledger in_progress as pending; validate exact checkpoint active indices; never count or select unfinished cases.",
+    "tests": "32 passed tests/test_entry_review_gate.py; one upstream websockets deprecation warning",
+    "code_sha256": "cd5593ad18a27d217ec3a19d280e0ccef3bad19dca9fc8213b93372f48ae1ef5"
+  },
+  "next_fact457_canonical_copy": {
+    "path": "data/deep_review_20261017/work/0457_official_status_1105.json",
+    "sha256": "582d59e78777667e8659f367d9fcdbce525bacbde7d564644517e14bf3007062",
+    "source_preserved": "work/0457_official_status_1105.json"
+  }
+}

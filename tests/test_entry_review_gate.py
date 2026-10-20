@@ -108,6 +108,76 @@ def test_600_valuations_alone_do_not_unlock_without_primary_selection(tmp_path):
         gate.require_new_buy_allowed(root=root)
 
 
+def _mark_active(root: Path, index: int) -> None:
+    queue = root / gate.QUEUE_REL
+    with queue.open(newline="", encoding="utf-8") as stream:
+        reader = csv.DictReader(stream)
+        fieldnames = reader.fieldnames
+        rows = list(reader)
+    next(row for row in rows if int(row["index"]) == index)["status"] = "in_progress"
+    with queue.open("w", newline="", encoding="utf-8") as stream:
+        writer = csv.DictWriter(stream, fieldnames=fieldnames)
+        writer.writeheader()
+        writer.writerows(rows)
+    checkpoint_path = root / gate.CHECKPOINT_REL
+    checkpoint = json.loads(checkpoint_path.read_text())
+    checkpoint["active_indices"] = [index]
+    checkpoint_path.write_text(json.dumps(checkpoint))
+
+
+def test_active_case_does_not_supply_the_600th_valuation(tmp_path):
+    root, _, _ = _make_root(tmp_path, valued=599, pending=1)
+    _mark_active(root, 600)
+    with pytest.raises(gate.EntryReviewGateError, match="599/600"):
+        gate.require_new_buy_allowed(root=root)
+
+
+def test_active_research_preserves_selection_requirement_and_selected_token(tmp_path):
+    root, _, token = _make_root(tmp_path, valued=600, pending=1)
+    _mark_active(root, 601)
+    with pytest.raises(gate.EntryReviewGateError, match="selection is required"):
+        gate.require_new_buy_allowed(root=root)
+
+    # A selected, completed case remains eligible while another case is active.
+    selected_root, _, token = _make_root(
+        tmp_path / "selected", valued=600, pending=1, selection=_valid_selection())
+    _mark_active(selected_root, 601)
+    assert gate.require_new_buy_allowed(token, root=selected_root) is None
+    with pytest.raises(gate.EntryReviewGateError, match="not a primary-selected"):
+        gate.require_new_buy_allowed("00000000000000000000", root=selected_root)
+
+
+def test_active_case_cannot_be_selected_after_600_completed_valuations(tmp_path):
+    root, _, token = _make_root(
+        tmp_path, valued=600, pending=1, selection=_valid_selection())
+    _mark_active(root, 601)
+    policy_path = root / gate.POLICY_REL
+    policy = json.loads(policy_path.read_text())
+    policy["selection"]["targets"][0]["condition_id"] = _condition(601)
+    policy_path.write_text(json.dumps(policy))
+    with gzip.open(root / gate.RULES_REL, "at", encoding="utf-8") as stream:
+        stream.write(json.dumps({
+            "review_index": 601,
+            "conditionId": _condition(601),
+            "clobTokenIds": json.dumps([token, "99999999999999999999"]),
+        }) + "\n")
+    with pytest.raises(gate.EntryReviewGateError, match="not a currently valued"):
+        gate.require_new_buy_allowed(token, root=root)
+
+
+@pytest.mark.parametrize("declared_active", [None, "600", [True], [0], [601],
+                                            [600, 600], [], [599]])
+def test_malformed_or_mismatched_active_state_fails_closed(tmp_path, declared_active):
+    root, _, _ = _make_root(tmp_path, valued=599, pending=1)
+    _mark_active(root, 600)
+    checkpoint_path = root / gate.CHECKPOINT_REL
+    checkpoint = json.loads(checkpoint_path.read_text())
+    checkpoint["active_indices"] = declared_active
+    checkpoint_path.write_text(json.dumps(checkpoint))
+    with pytest.raises(gate.EntryReviewGateError, match="active"):
+        gate.require_new_buy_allowed(root=root)
+
+
 def test_valid_selection_unlocks_only_exact_frozen_selected_token(tmp_path):
     root, condition, token = _make_root(
         tmp_path, valued=600, blocked=3, selection=_valid_selection())

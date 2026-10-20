@@ -1,0 +1,169 @@
+{
+  "review_index": 455,
+  "status": "valued",
+  "condition_id": "0x79b7408f02df2eba4034ca4c06ddf17b8dbeacc5adbe8595969e7573912c4e3b",
+  "market_id": "2696747",
+  "criteria_sha256": "94f8c30287f7c2ef0dc48bf025307fbe9bcef14e7ede68a0739633826c11ce4c",
+  "literal_analysis": "Both-state signed/formally adopted final written instrument with a present unconditional measurable nuclear limit byDec31 23:59ET; no implementation/ratification requirement, no post-creation-only condition. Preliminary MOU/future conditions/inspection-only promises insufficient.28day text-release delay may extend beyond earlyJanuary.",
+  "evidence": [
+    {
+      "url": "https://www.presidency.ucsb.edu/documents/islamabad-memorandum-understanding-between-the-united-states-america-and-the-islamic",
+      "observed_utc": "2026-10-20T08:54:52.166588Z",
+      "finding": "Complete archival draft transcription, not signed text; root read APPdraftnote/blanks and nuclear future-agreement/statusquo clauses. Prior source unit preserved with explicit caveat."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/06/president-trumps-iran-agreement-is-america-first-in-action/",
+      "observed_utc": "2026-10-20T07:33:11.173924Z",
+      "finding": "Official June19 MOU/further-negotiations language; not final nuclear text or proof no later instrument."
+    },
+    {
+      "url": "https://www.aa.com.tr/en/middle-east/iran-says-reviewing-us-proposals-for-talks-as-indirect-messages-continue/4085816",
+      "observed_utc": "2026-10-20T11:11:12.776333+00:00",
+      "finding": "Root browser-read Oct12 spokesman statement: proposals and mediator messages/preconditions, not mutual final adoption. Direct-body capture failure retained separately; search is bounded."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.24,
+    "low": 0.05,
+    "high": 0.65,
+    "method": "Explicit uncalibrated conditional-regime tree with separate2%history/adjudication allowance",
+    "reasoning": "2%already/unobserved branch plus98%*[55%impasse*5%qualifying+30%sequencedtalks*30%+15%rapidcompromise*70%]=23.805%, rounded24. Nuclear clauses/adoption/time matter; live mediators/costs preserve upside, stalled conditional process and source gaps widen range.",
+    "actual_entry_reserve_pp": 15
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases455_457_quotes_1106.json",
+    "quote_file_sha256": "0e3373d9b7c84aee952ece8305c7e6afa03448cfe440706da3b0bc26cdb242b4",
+    "quote_capture_utc": "2026-10-20T11:06:20.514575+00:00",
+    "gamma_received_utc": "2026-10-20T11:06:19.869873+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 100.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.24,
+        "selected_stress_probability": 0.09,
+        "best_bid": 0.13,
+        "best_ask": 0.14,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792494378000",
+        "book_received_utc": "2026-10-20T11:06:20.372766+00:00",
+        "book_age_seconds_at_receipt": 2.3727660179138184,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.14
+              }
+            ],
+            "net": 1.4000000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.2647,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 6.47,
+                "price": 0.13
+              },
+              {
+                "shares": 3.5300000000000002,
+                "price": 0.12
+              }
+            ],
+            "net": 1.2647
+          }
+        },
+        "taker_cost_usd": 1.4000000000000001,
+        "central_expected_profit_usd": 0.9999999999999998,
+        "selected_stress_profit_usd": -0.5000000000000002,
+        "break_even_before_carry": 0.14,
+        "break_even_constant_carry": 0.14121470828454133,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.76,
+        "selected_stress_probability": 0.61,
+        "best_bid": 0.86,
+        "best_ask": 0.87,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792494378000",
+        "book_received_utc": "2026-10-20T11:06:20.372766+00:00",
+        "book_age_seconds_at_receipt": 2.3727660179138184,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.7353,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 6.47,
+                "price": 0.87
+              },
+              {
+                "shares": 3.5300000000000002,
+                "price": 0.88
+              }
+            ],
+            "net": 8.7353
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.6,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.86
+              }
+            ],
+            "net": 8.6
+          }
+        },
+        "taker_cost_usd": 8.7353,
+        "central_expected_profit_usd": -1.1353000000000009,
+        "selected_stress_profit_usd": -2.635300000000001,
+        "break_even_before_carry": 0.87353,
+        "break_even_constant_carry": 0.8811091723413955,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "YES central-value lead at14c but fails15pp reserve and current maker economics; NO negative central. No trade; retain exact source/cheap-maker re-review conditions for comparison after600.",
+  "reopen_condition": "Mutually adopted final text or specific official terms/adoption, concrete new talks progress/collapse, improved signed-text coverage, or source-consistent cheaper YESbook. Fresh fullgates and600winnerselection before any order.",
+  "evaluated_utc": "2026-10-20T11:11:12.939288+00:00",
+  "question": "US-Iran Final Nuclear Deal by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 455,
+  "report_sha256": "243b548e0916fd581ecc6a3f1324ffd0cd99ba09df137d962f13fc9f313a49ec"
+}

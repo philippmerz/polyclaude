@@ -1,0 +1,120 @@
+{
+  "case": 456,
+  "identity": {
+    "id": "3399938",
+    "conditionId": "0x573b157703ef39c682aaa222bc869be0095a4c54609e944e5141f51d4950f29e",
+    "question": "Will Lionel Messi finish in the top 3 of the 2026 Ballon d’Or?",
+    "criteria_sha256": "829b46749aa7bf54a1b33ec9e67ee59e300855221229e4df3c856c9af2b88919"
+  },
+  "scope": "Bounded official-source facts only. This concerns the 2026 men’s Ballon d’Or final ranking named in the frozen criterion. It does not concern the 2025 result, the women’s Ballon d’Or, or another 2026 award category. No probability, ranking judgment, evaluation, or action.",
+  "facts": {
+    "official_mens_nominees_2026": {
+      "claim": "The official Ballon d’Or publisher lists 30 nominees for the 2026 men’s Ballon d’Or; Lionel Messi is named. The article is dated and updated 2026-09-08.",
+      "nominees": [
+        "Jude Bellingham",
+        "Pau Cubarsí",
+        "Marc Cucurella",
+        "Ousmane Dembélé",
+        "Luis Díaz",
+        "Bruno Fernandes",
+        "Gabriel",
+        "Erling Haaland",
+        "Achraf Hakimi",
+        "Harry Kane",
+        "Khvicha Kvaratskhelia",
+        "Lamine Yamal",
+        "Sadio Mané",
+        "Marquinhos",
+        "Lautaro Martínez",
+        "Kylian Mbappé",
+        "Nuno Mendes",
+        "Lionel Messi",
+        "João Neves",
+        "Michael Olise",
+        "Willian Pacho",
+        "Julián Quiñones",
+        "Declan Rice",
+        "Rodri",
+        "Fabián Ruiz",
+        "William Saliba",
+        "Ferran Torres",
+        "Dayot Upamecano",
+        "Vinícius Júnior",
+        "Vitinha"
+      ],
+      "source": "official_nominees"
+    },
+    "official_regulations_2026": {
+      "claims": [
+        "Articles 1–2 say France Football organizes the annual award and vote, the ceremony is co-organized with UEFA, and the award recognizes the best men’s and women’s player worldwide without distinction of league or nationality.",
+        "Article 3 sets the 2026 reference period as 2025-08-03 through 2026-07-19, including international competitions.",
+        "Article 4 states the ordered criteria: individual performance/decisiveness/impressiveness; collective performance and honors; class and fair play.",
+        "Article 5 says the men’s jury has one specialist journalist from each of the 100 highest FIFA-ranked countries, using the ranking current when nominee lists published on 2026-09-08.",
+        "Article 6 says each juror ranks ten players from a list of 30 drawn up by France Football’s editorial staff, L’Équipe editorial members, at least one prior-edition juror, and UEFA ambassadors Luis Figo and Fabio Capello for the men’s award.",
+        "Articles 7–9 set the points, tie-break order, and France Football editor-in-chief as dispute arbiter.",
+        "The published nine-article regulation contains no additional nationality/league exclusion, special nominee exception, or replacement/addition procedure."
+      ],
+      "source": "official_rules"
+    },
+    "award_date_and_result_state": {
+      "claim": "The official publisher schedules the 70th ceremony for Monday 2026-10-26 at London Palladium Theatre. At retrieval on 2026-10-20 11:06:57Z, this event was still in the future; no 2026 final ranking or winner was present in the official material captured for this packet. Thus 2026 final ranking/top-three status remains unpublished as of that retrieval, rather than a 2025 result.",
+      "source": "official_ceremony",
+      "corroborating_source": "uefa_ceremony_existing_0851"
+    }
+  },
+  "sources": [
+    {
+      "name": "official_nominees",
+      "url": "https://ballondor.com/fr/news/posts/decouvrez-les-30-nommes-pour-le-ballon-dor-2026",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T11:06:56.892843Z",
+      "raw_bytes": 194117,
+      "raw_sha256": "d61209181fadbe94df16e2c4d80cd8143d34f8a93bf5e1a3cd218049fa536239",
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_nominees.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_nominees.body.json.gz"
+    },
+    {
+      "name": "official_rules",
+      "url": "https://ballondor.com/fr/news/posts/tous-les-criteres-et-le-reglement-complet-du-ballon-dor-2026",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T11:06:57.120901Z",
+      "raw_bytes": 178951,
+      "raw_sha256": "261b4744499d9b764f6d66e9c9bc093944caea64a0d85d4838c493987bc02420",
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_rules.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_rules.body.json.gz"
+    },
+    {
+      "name": "official_ceremony",
+      "url": "https://ballondor.com/fr/news/posts/quand-et-ou-aura-lieu-la-70e-ceremonie-du-ballon-dor",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T11:06:57.291057Z",
+      "raw_bytes": 182069,
+      "raw_sha256": "ad89887605ff2d8eea6a72cd77be74a9a7fab014e0969c3ef7cb58e3a2581f0f",
+      "body_representation": "http_body",
+      "hash_scope": "supplied_bytes_only_not_wire_authentication",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_ceremony.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_1105/public/official_ceremony.body.json.gz"
+    },
+    {
+      "name": "uefa_ceremony_existing_0851",
+      "url": "https://www.uefa.com/ballondor/news/02aa-21dcfc743210-2786daba77d8-1000--2026-ballon-d-or-ceremony-when-and-where-all-the-nominees-/",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T08:50:59.327864Z",
+      "raw_sha256": "e6727b843182ec1374e2d05b6e8d7f5559ec191477a8aa031cd815e14ae45e73",
+      "receipt": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_ceremony.receipt.json",
+      "body": "logs/deep_review_20261017/case0456_official_nomination_0851/public/uefa_ceremony.body.json.gz",
+      "scope_limit": "Co-organizer article; says 2026 ceremony scheduled for 2026-10-26 and includes all-category nominee material. Its 2025 laureates section is prior-year material."
+    }
+  ],
+  "limits": [
+    "Official regulation lists selection/voting rules but does not provide separate individual nomination qualifications or a later replacement mechanism.",
+    "Event date is the announced schedule, not an observed completed ceremony date.",
+    "No final men’s ranking/result had been published in the official material reviewed at the recorded retrieval time.",
+    "HTTP receipt hashes bind supplied HTTP response body bytes; call-window timing does not claim transport-level wire timestamps."
+  ],
+  "captured_utc": "2026-10-20T11:06:57Z"
+}

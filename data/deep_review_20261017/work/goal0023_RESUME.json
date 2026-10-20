@@ -1,0 +1,44 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T11:25:41.109540+00:00",
+  "scope": "Continue original finite3000 in-depth review, preserving each completed case immediately. No new BUY until600 full valuations plus comparative selection.",
+  "previous_goal_turn_classification": "progress: required full safety/news review and chart/handoff recorded and pushed3519c993; no case count claimed for that turn.",
+  "counts": {
+    "completed_valuations": 384,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2230,
+    "base_records": 770,
+    "revisions_written": 75
+  },
+  "active_indices": [
+    456
+  ],
+  "next_index": 456,
+  "active_model": null,
+  "quote_packet": "data/deep_review_20261017/work/cases455_457_quotes_1106.json",
+  "next_fact_units": {
+    "455": "data/deep_review_20261017/work/0455_current_facts_1105.json",
+    "456": "data/deep_review_20261017/work/0456_official_nominees_1105.json",
+    "457": "data/deep_review_20261017/work/0457_official_status_1105.json",
+    "456_season": "data/deep_review_20261017/work/0456_season_facts_1112.json",
+    "457_source_limit": "Original top-level work copy preserved; API response captures11:06-07, collector rounded status time not a later observation. Facts only; root review pending."
+  },
+  "entry_restriction": {
+    "policy": "notes/entry_review_gate.json",
+    "minimum_completed_valuations": 600,
+    "selection": null
+  },
+  "last_safety": "research/2026-10-20-104103-checkin.md",
+  "last_financial": "research/2026-10-20-1046-financial-snapshot.md",
+  "next_safety": "Existing14UTC/earliermaterialevent; no new timer.",
+  "resume_limit": "Case455 full-rule packet8735bytes exceeds default8KB. Explicit --max-bytes10000 reads it intact; no rule truncation or global cap change.",
+  "completed_this_turn": [
+    {
+      "index": 455,
+      "proof": "data/deep_review_20261017/work/0455_record_verified_1112.json"
+    }
+  ],
+  "active_work": "data/deep_review_20261017/work/0456_primary_inflight_1122.json",
+  "bounded_closeout": "Scheduled10:41 run ends after publication. No next case/research batch, idle timer or goal lifecycle change in this closeout."
+}

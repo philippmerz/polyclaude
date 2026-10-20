@@ -1,0 +1,45 @@
+{
+  "review_index": 455,
+  "verified_utc": "2026-10-20T11:12:24.387627+00:00",
+  "status": "valued",
+  "effective_case": {
+    "status": "valued",
+    "evaluated_utc": "2026-10-20T11:12:02.716738+00:00",
+    "report_pointer": {
+      "path": "research/2026-10-17-deep-review/revisions/0455_20261020T111202715920Z.md",
+      "sha256": "72507d5d9046d13e8aea0ab367314050bab669d191cfa09ab73f308d21d406d0"
+    },
+    "latest_revision": {
+      "kind": "revision",
+      "json_path": "research/2026-10-17-deep-review/revisions/0455_20261020T111202715920Z.json",
+      "json_sha256": "f7f6234de63b95c0f5e35c432ccacf7503ea15903ae5b6ea0335a2329e531b6e",
+      "report_sha256": "72507d5d9046d13e8aea0ab367314050bab669d191cfa09ab73f308d21d406d0",
+      "revision_utc": "2026-10-20T11:12:02.716738+00:00",
+      "reason": "Correct persistence timing: model file was saved after quote math, not before reading prices; forecast and economics unchanged."
+    },
+    "verified_artifacts": [
+      {
+        "kind": "base",
+        "sha256": "243b548e0916fd581ecc6a3f1324ffd0cd99ba09df137d962f13fc9f313a49ec"
+      },
+      {
+        "kind": "revision",
+        "json_path": "research/2026-10-17-deep-review/revisions/0455_20261020T111202715920Z.json",
+        "json_sha256": "f7f6234de63b95c0f5e35c432ccacf7503ea15903ae5b6ea0335a2329e531b6e",
+        "report_sha256": "72507d5d9046d13e8aea0ab367314050bab669d191cfa09ab73f308d21d406d0",
+        "revision_utc": "2026-10-20T11:12:02.716738+00:00",
+        "reason": "Correct persistence timing: model file was saved after quote math, not before reading prices; forecast and economics unchanged."
+      }
+    ]
+  },
+  "checkpoint_counts": {
+    "completed_valuations": 384,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2230,
+    "base_records": 770,
+    "revisions_written": 75
+  },
+  "no_financial_action": true,
+  "metadata_erratum": "Base report persistence-timing sentence corrected via immutable revision; p/economics unchanged."
+}

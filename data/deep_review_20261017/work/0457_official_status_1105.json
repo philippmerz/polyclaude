@@ -1,0 +1,106 @@
+{
+  "schema": "polyclaude.charge_status_fact_collection.v1",
+  "recorded_utc": "2026-10-20T11:10:00Z",
+  "as_of_utc": "2026-10-20T11:10:00Z",
+  "market_identity": {
+    "review_index": 457,
+    "market_id": "5609863",
+    "condition_id": "0xdaafd2107465112c737afec122dfd3add1de5b5e1f1f42cb49275631e127b051",
+    "question": "Ilhan Omar federally charged by October 31?",
+    "target_person": "Ilhan Omar",
+    "contract_window_start_utc": "2026-10-12T15:39:59.545318Z",
+    "gamma_start_date_utc": "2026-10-12T15:40:12Z",
+    "contract_deadline_utc": "2026-11-01T03:59:00Z",
+    "rule": "Yes if the U.S. federal government formally charges or announces a criminal indictment of Omar between market creation and October 31, 11:59 PM ET; otherwise No. DC is included as a State. Primary source is official U.S. government information, with wide credible reporting also considered.",
+    "identity_source": "Gamma exact market-id lookup; complete condition ID and tokens match frozen rule packet."
+  },
+  "verified_facts": [
+    {
+      "claim": "Gamma reports createdAt 2026-10-12T15:39:59.545318Z, 13 seconds before acceptingOrdersTimestamp. The individual market and its parent event share this creation timestamp to the displayed precision.",
+      "source": "https://gamma-api.polymarket.com/markets?id=5609863",
+      "retrieval": {
+        "status": 200,
+        "received_utc": "2026-10-20T11:06:24.240146Z",
+        "receipt": "work/.capture_0457_gamma_1105/gamma_5609863.receipt.json",
+        "body": "work/.capture_0457_gamma_1105/gamma_5609863.body.json.gz",
+        "supplied_bytes_sha256": "ab9f0291ed208ea67827e31ba68af039d1f930143c2efee63b408cdbc33736bf"
+      }
+    },
+    {
+      "claim": "DOJ's publicly reported October 12 statement said HSI executed a judicially authorized search warrant secured by DOJ in the Washington, D.C. area and described the enforcement action as part of an ongoing federal criminal investigation; DOJ did not publicly name Omar or disclose the investigation's details in that statement. News reporting the same day connected the search to Omar and reported DOJ confirmation of an immigration probe. The search occurred before this market's 15:39:59.545 UTC creation time; it is investigation-stage evidence, not a charge.",
+      "sources": [
+        "https://apnews.com/article/8e18c2aea948bd90f4d7a4eb32b9ec3a",
+        "https://www.axios.com/2026/10/12/ilhan-omar-search-immigration",
+        "https://www.washingtonpost.com/nation/2026/10/12/federal-agents-search-rep-ilhan-omars-dc-home/"
+      ],
+      "source_limit": "These are contemporaneous reports quoting or describing DOJ statements, not a DOJ press release located in the public search. AP direct HTTP retrieval failed during this collection; the AP page was accessible through the web research index."
+    },
+    {
+      "claim": "AP reported on October 14, citing an unnamed person briefed on the matter, that a grand jury in Minnesota was collecting evidence in a federal probe of potential immigration-paperwork fraud, that Omar's phone had been seized, and that relatives received subpoenas. This is reported pre-charge investigative activity, not an indictment or complaint; the anonymous-source details were not independently confirmed in an official public filing located here.",
+      "source": "https://apnews.com/article/f968cfe403d61ad61812422f1252fd2c",
+      "source_limit": "AP direct HTTP retrieval failed; reported details remain secondary-source claims. No public grand-jury docket or charging document was located in this bounded collection."
+    },
+    {
+      "claim": "U.S. Attorney for the District of Columbia Jeanine Pirro said in an October 13 Fox News interview that Omar's financial disclosures were also the subject of an investigation by her office. AP later reported Pirro saying several investigations were underway. This is described separately from the immigration-paperwork investigation; no charge announcement was identified in that interview/reporting.",
+      "sources": [
+        "https://www.axios.com/2026/10/13/ilhan-omar-investigation-finances-pirro",
+        "https://www.foxnews.com/video/6406804390112",
+        "https://apnews.com/article/42c86bdbd54679e974e32ac4a924b402"
+      ],
+      "source_limit": "Interview and statements are reported through media, not a USAO-DC case announcement or public docket. AP direct HTTP retrieval failed."
+    },
+    {
+      "claim": "Omar's counsel publicly disputed the investigation and requested return of property after the search. DOJ's spokesperson was quoted by AP on October 17 saying agents complied with court orders and legal obligations. This is counterevidence about Omar's position and DOJ's response to the search-conduct dispute; neither statement establishes whether the investigation will produce charges.",
+      "sources": [
+        "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+        "https://apnews.com/article/42c86bdbd54679e974e32ac4a924b402"
+      ],
+      "retrieval": {
+        "omar_official_statement": {
+          "status": 200,
+          "received_utc": "2026-10-20T11:07:25.611406Z",
+          "receipt": "work/.capture_0457_sources_1105/omar_statement_20261012.receipt.json",
+          "body": "work/.capture_0457_sources_1105/omar_statement_20261012.body.json.gz",
+          "supplied_bytes_sha256": "a229e6c965427a5b0f3e63dc9f1db8cfa18bc2cf76b45bf23dc229d0a9dd3209"
+        },
+        "ap_direct_page": "HTTPError; web research index returned the article text."
+      }
+    },
+    {
+      "claim": "The prior House Ethics matter concerned financial disclosures and memoir royalties. OCE unanimously recommended dismissal; the Committee did not dismiss by majority vote but said OCE transmitted no findings and the Committee would not further review. It was a congressional ethics process, not a DOJ criminal charge. The public record predates this market by years.",
+      "source": "https://ethics.house.gov/press-releases/statement-chairman-and-ranking-member-committee-ethics-regarding-representative-ilhan/",
+      "retrieval": {
+        "status": 200,
+        "received_utc": "2026-10-20T11:07:25.406178Z",
+        "receipt": "work/.capture_0457_sources_1105/house_ethics_20220322.receipt.json",
+        "body": "work/.capture_0457_sources_1105/house_ethics_20220322.body.json.gz",
+        "supplied_bytes_sha256": "fdbd284dcf37790d0418fdb061b0bb624c476b217c441fd6455405e79bc25a68"
+      }
+    },
+    {
+      "claim": "Official DOJ releases about the January 2026 assault and Kansas threats identify other defendants as the charged people: Anthony James Kazmierczak was charged by complaint in the District of Minnesota on January 28, then indicted May 7 and sentenced September 18; Adam Lee Osborn was indicted in the District of Kansas for threatening Omar. These cases involve alleged perpetrators targeting Omar, not Omar as a defendant.",
+      "sources": [
+        "https://www.justice.gov/usao-mn/pr/minnesota-man-charged-forcibly-assaulting-representative-ilhan-omar-while-she-engaged",
+        "https://www.justice.gov/usao-mn/pr/minnesota-man-sentenced-assaulting-representative-ilhan-omar-during-minneapolis-town",
+        "https://www.justice.gov/usao-ks/pr/two-kansans-indicted-making-threats-against-federal-officials-separate-unrelated"
+      ],
+      "retrievals": [
+        {"status": 200, "received_utc": "2026-10-20T11:07:22.491251Z", "receipt": "work/.capture_0457_sources_1105/doj_mn_20260129.receipt.json", "body": "work/.capture_0457_sources_1105/doj_mn_20260129.body.json.gz", "supplied_bytes_sha256": "e971209115409b1d393fcc753f9e51dd59bcf489408c83188c3298c105d309a9"},
+        {"status": 200, "received_utc": "2026-10-20T11:07:22.969072Z", "receipt": "work/.capture_0457_sources_1105/doj_mn_20260918.receipt.json", "body": "work/.capture_0457_sources_1105/doj_mn_20260918.body.json.gz", "supplied_bytes_sha256": "14cd70a88b1b36d25257ede09d5a79a8d9870df974816be89353e8d95d200ef9"},
+        {"status": 200, "received_utc": "2026-10-20T11:07:24.563902Z", "receipt": "work/.capture_0457_sources_1105/doj_ks_20260129.receipt.json", "body": "work/.capture_0457_sources_1105/doj_ks_20260129.body.json.gz", "supplied_bytes_sha256": "bf4ba498ad43f83ad3e5760cf3497df430071c55913a5abce066a44754c24486"}
+      ]
+    }
+  ],
+  "status_as_of_utc": {
+    "finding": "No publicly announced federal charge or indictment of Ilhan Omar was found in the bounded review through 2026-10-20 11:10 UTC.",
+    "evidence_scope": "Official DOJ USAO public releases searched for Omar/charging terms; official House Ethics record reviewed; current DOJ activity cross-checked against contemporaneous national reporting of DOJ statements and court-authorized search. No publicly available charge document for Omar or official DOJ/USAO charging announcement was located.",
+    "limits": [
+      "This is a bounded public-record finding, not proof that no sealed complaint, sealed indictment, or nonpublic grand-jury action exists.",
+      "The search-warrant affidavit and underlying investigative file were not public in the reviewed sources; the investigation's complete scope and status are unknown.",
+      "Reports of subpoenas/grand-jury evidence rely on unnamed sources; AP direct retrieval failed in this collection and no official public docket corroborating those details was located.",
+      "A warrant, search, ethics inquiry, prosecutor investigation, or investigation/referred matter alone is not a formal charge under this market wording."
+    ],
+    "separate_public_court_proceeding": "Search results identified a D.D.C. miscellaneous proceeding filed October 15, 2026 by Judicial Watch seeking records relating to the sealed search-warrant matter (No. 1:26-mc-00147). It is a third-party access/unsealing application, not a criminal case against Omar; procedural detail is from a public docket aggregator, not an official docket capture.",
+    "no_probability_or_case_decision": true
+  }
+}
