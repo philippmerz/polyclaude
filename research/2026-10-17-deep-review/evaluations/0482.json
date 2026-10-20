@@ -1,0 +1,157 @@
+{
+  "review_index": 482,
+  "market_id": "701709",
+  "condition_id": "0x98ed458e28f6e297af38142cd8c33dd0d0569e3ad2b485376774dc5ebb28f808",
+  "criteria_sha256": "528b661fdc2a71993e017df1a0611e39a58ce7299821752fa9122bd6a8819ec5",
+  "status": "valued",
+  "literal_analysis": "ExactBinanceDOGE/USDTfinal1mHigh>=.48 anyincludedcandleNov24,2025 15:45ET–Dec31,2026 23:59ET; UTCstart20:45/endlastcandle04:59Jan1, notyearendclose orotherpair/venue. Prior2021/2024highsoutsidewindow.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-20T16:35:04.007394Z",
+      "finding": "Root6publicquery/rawhashesboundexactDOGEUSDT. Partialfirst1951m+329days/currentforminghigh boundcoveredpastbelow.48;current.08106, nofutureabsenceclaim."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-20T16:37:03.323584Z",
+      "finding": "Root3652021rowsverified,75dayclose12.314x/high15.527x possiblehistorically, outsidecontractwindow/notindependentprobability."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.033,
+    "low": 0.001,
+    "high": 0.25,
+    "actual_entry_reserve_pp": 20,
+    "method": "Primary80/15/5ordinary/broad-rally/manialog-price regimes; maximum-crossingformula andsavedsource/generatorhashes give3.3169% rounded3.3.",
+    "reasoning": "Currentexactpairpartialprice.08106 needs5.9215x to.48 in72.517days. Ordinary80% regime flatmedian/current60dayvol73.74% givesnegligiblediffusionhit;15%broad-rally median2x/vol150% and5%DOGEmania median4x/vol200% give7.94%/42.53%conditionalhit, totaling3.3169%, rounded3.3. Historical2021 forward75dhigh/start-close15.53x shows6xnotimpossible;2024-25close75max4.36xshowsrallyscale, neitherfrequencyisacurrentprobability.",
+    "model": "research/2026-10-17-deep-review/models/0482_primary_1643.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+    "quote_file_sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f",
+    "quote_capture_utc": "2026-10-20T16:23:31.352267+00:00",
+    "gamma_received_utc": "2026-10-20T16:23:31.247946+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.033,
+        "selected_stress_probability": 0,
+        "best_bid": 0.013,
+        "best_ask": 0.014,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513398155",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 13.195590019226074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.14,
+            "fee": 0.00967,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.014
+              }
+            ],
+            "net": 0.14967000000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.13,
+            "fee": 0.00899,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.013
+              }
+            ],
+            "net": 0.12101
+          }
+        },
+        "taker_cost_usd": 0.14967000000000003,
+        "central_expected_profit_usd": 0.18033,
+        "selected_stress_profit_usd": -0.14967000000000003,
+        "break_even_before_carry": 0.014967000000000003,
+        "break_even_constant_carry": 0.015064290492482858,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.967,
+        "selected_stress_probability": 0.7669999999999999,
+        "best_bid": 0.986,
+        "best_ask": 0.987,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513398155",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 13.195590019226074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.87,
+            "fee": 0.00899,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.987
+              }
+            ],
+            "net": 9.87899
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.86,
+            "fee": 0.00967,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.986
+              }
+            ],
+            "net": 9.85033
+          }
+        },
+        "taker_cost_usd": 9.87899,
+        "central_expected_profit_usd": -0.20899,
+        "selected_stress_profit_usd": -2.208990000000001,
+        "break_even_before_carry": 0.987899,
+        "break_even_constant_carry": 0.9943206730295531,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Central-onlyYES taillead;100sharecost1.49663central+1.80337 butselectednegative. NOcentralnegative. No measuredconditionaltail/short-regimebondlicence, noentry600pause.",
+  "reopen_condition": "Materialexactpairprice/catalyst/regimemeasurement, verifiedconditionalfillfloor andfreshbothside/carry comparative reviewafter600.",
+  "evaluated_utc": "2026-10-20T16:42:55.089604+00:00",
+  "question": "Will Dogecoin reach $0.48 by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 482,
+  "report_sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c"
+}

@@ -1,0 +1,13 @@
+{
+  "review_index": 480,
+  "quantity": 10,
+  "maker_NO_price": 0.123,
+  "commitment": 1.23,
+  "central_NO_profit": 2.15,
+  "selected_NO_profit": 0.14999999999999947,
+  "carry_75d_at_cached_APY": 0.007995410286223827,
+  "NO_taker_selected_profit_after_carry": 0.061484563028492714,
+  "loose50_selected_NO_profit_at_ask": -0.6100000000000001,
+  "not_an_order": true,
+  "no_taker_urgency": true
+}

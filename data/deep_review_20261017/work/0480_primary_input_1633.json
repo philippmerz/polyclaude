@@ -1,0 +1,163 @@
+{
+  "review_index": 480,
+  "market_id": "1469737",
+  "condition_id": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+  "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484",
+  "status": "valued",
+  "literal_analysis": "Dec31noonET deFactoprimarygoverningcontrol overIran armedforces/institutions/executive, regardlesstitle/recognition; demonstrabledomesticcontrolifclaimscompete, none=>NoHead. Crediblereportingconsensus; formaloffice/symbolicstatusinsufficient.",
+  "evidence": [
+    {
+      "url": "https://farsi.iranpress.ir/content/319908/",
+      "observed_utc": "2026-10-20T16:25:06.526581Z",
+      "finding": "Reported6militaryappointments attributedtoMojtaba; formalinstitutionalact, not independentlyobservedpersonalimplementation."
+    },
+    {
+      "url": "https://www.iranintl.com/en/202608102529",
+      "observed_utc": "2026-10-20T16:26:42.928460+00:00",
+      "finding": "RootoriginalreportAug10decree prioritizingcommandintegration; actualimplementationnotproved."
+    },
+    {
+      "url": "https://www.iranintl.com/en/202608192049",
+      "observed_utc": "2026-10-20T16:19:54.236792Z",
+      "finding": "ActualAug22bodyread, ambiguousorders/commandersroomtointerpret; no conclusivesolecontrol."
+    },
+    {
+      "url": "https://www.cbsnews.com/news/transcript-iranian-president-masoud-pezeshkian-face-the-nation-transcript-09-27-2026/",
+      "observed_utc": "2026-10-20T15:17:11.563192Z",
+      "finding": "Sept25recordedfirstpersonclaims; not independentcontrolproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.662,
+    "low": 0.25,
+    "high": 0.93,
+    "actual_entry_reserve_pp": 20,
+    "method": "Primary60/30/10currentcontrol regimes+72daytransitions/recognition give strict56%;70/30strict/officeproxy90 blend=>66.2. Unfittedprimaryscenarios.",
+    "reasoning": "Reportedappointments/institutionalcontinuity vs opaquepersonalcommand; explicitconsensuslooserisk ratherthanequatingtitletoevent. 50%looseweightreversesselectedNOedge.",
+    "model": "research/2026-10-17-deep-review/models/0480_interpretation_1632.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+    "quote_file_sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f",
+    "quote_capture_utc": "2026-10-20T16:23:31.352267+00:00",
+    "gamma_received_utc": "2026-10-20T16:23:30.911878+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.662,
+        "selected_stress_probability": 0.462,
+        "best_bid": 0.869,
+        "best_ask": 0.877,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513411079",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 0.271589994430542,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.77,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.877
+              }
+            ],
+            "net": 8.77
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.69,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.869
+              }
+            ],
+            "net": 8.69
+          }
+        },
+        "taker_cost_usd": 8.77,
+        "central_expected_profit_usd": -2.1499999999999995,
+        "selected_stress_profit_usd": -4.1499999999999995,
+        "break_even_before_carry": 0.877,
+        "break_even_constant_carry": 0.8827007925374133,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.33799999999999997,
+        "selected_stress_probability": 0.13799999999999996,
+        "best_bid": 0.123,
+        "best_ask": 0.131,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513411079",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 0.271589994430542,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.31,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.131
+              }
+            ],
+            "net": 1.31
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.23,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.123
+              }
+            ],
+            "net": 1.23
+          }
+        },
+        "taker_cost_usd": 1.31,
+        "central_expected_profit_usd": 2.07,
+        "selected_stress_profit_usd": 0.0699999999999994,
+        "break_even_before_carry": 0.131,
+        "break_even_constant_carry": 0.13185154369715066,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalNO selected+.07/10at13.1c beforecarry/funding, maker12.3c+.15; criterion/hiddencontrol/fillriskloadbearing, loose50reverses. Compareafter600, noentrycertified.",
+  "reopen_condition": "Verifiedpersonalcommand/orders/implementation, council/incapacity/changeor credibleconsensus; independentinterpretation andfreshbothside/conditionalfill review after600.",
+  "report_markdown": "# 480 Iran de facto head of state \u2014 provisional NO, interpretation drives edge\n\n**FinalYES66.2%/NO33.8%; broadYES25\u201393%,20pp reserve\u2192selectedNO13.8%.** NO13.1c/10shares gives selected+.07 beforecarry/funding; maker12.3c gives+.15. Preserve a provisional NO comparison lead, not a certified entry. A larger loose-interpretation weight reverses it. NewBUYpause600+comparative selection remains.\n\nComplete rule: individual exercising **primary de facto governing control** over Iran atDec31,2026 noonET(17UTC), includingarmedforces, nationalinstitutions and coreexecutive decisions. Formaloffice, foreignrecognition, nomination andsymbolism alone do notqualify. Competingclaimants require demonstrable domesticcontrol; ifnoindividual has effectivecontrol, NoHeadOfState. Crediblereporting consensus is the resolution source. Delegation is compatible with primaryauthority, but a name attached toorders doesnot prove it. Consensus/dispute delay can extend settlement beyondJanuary; normal75daycarry is only a planning horizon.\n\nRoot read and hash-verified [five initialsources](../../../data/deep_review_20261017/work/0480_facts_1525.json), [control addendum](../../../data/deep_review_20261017/work/0480_control_addendum_1630.json), [six military appointments](../../../data/deep_review_20261017/work/0480_appointments_facts_1628.json) and [integration reporting](../../../data/deep_review_20261017/work/0480_root_control_1628.json). MarchAssemblyappointment andOct19writtenchannelmessage establish claimedoffice, not personalcontrol. [IranPress appointments](https://farsi.iranpress.ir/content/319908/) are substantive military/institutional indicators attributed toMojtaba. Sourceprinted19Mordad1405/schemaAug10 timezoneunconfirmed; no falsely precise conversion. [Aug10originalintegration report](https://www.iranintl.com/en/202608102529) describes an attributeddecree combining strategic/operationalcommand underAbdollahi, not independently observed completedimplementation. These sources share an underlyingannouncement, not independentcontrol votes.\n\n[Aug22 analysis](https://www.iranintl.com/en/202608192049) reports commanders invokinginterpretablemessages and exercising operationalpower; it doesnot conclusivelyestablish either a figureheadorpersonalcommand. [Sept25 interview](https://www.cbsnews.com/news/transcript-iranian-president-masoud-pezeshkian-face-the-nation-transcript-09-27-2026/): Pezeshkian claimed two meetings and good health; his account does not independently verify personal command. [ConstitutionArt111](https://faolex.fao.org/docs/pdf/ira127540.pdf), rootPDFread, permits temporarycouncil dutiesduringincapacity; noactivation/removal independentlyverified. Translationversionunconfirmed. AP/EFE403 are coverage gaps, notabsence ordeathproof.\n\n[Price-blind control model](../models/0480_primary_1629.json): currentprimary/shared-ambiguous/nominal branches60/30/10%; respectiveDec31 primaryauthority78/40/12% andconsensus-recognition96/85/80% yield56.088%, roundedstrictYES56. Coherent-control sensitivity74.1%, fragmented25.8%. These are primaryunfitted72day state-transition judgments, not measuredsurvivalrates or datedobservations. Formalstatus/decreesfavorcontinuity; opaquecommand, illness/council, renewedconflict/removal andreportinguncertainty keep a wide range. Do notconvert publicabsence into proofincapacity.\n\n[Interpretation addendum](../models/0480_interpretation_1632.json) preserves that draft andexplicitly prices a looser consensus/office-proxy branch:70%strict56 +30%loose90 =66.2%YES. Doctrine's30% is a conservativeunfitted interpretation scenario, not measuredoraclefrequency. The87.7c ask was seenbeforethisaddendum and flagged interpretiverisk; it was not adopted as independentprobability. Iflooseweight50%,YES73/selectedNO7% and NO10at13.1c loses.61 inselectedcase. This is not a bet justified solely by a legalistic reading or currentofficialtitle.\n\n[Bothsideeconomics](../../../data/deep_review_20261017/work/0480_economics_final_1632.json):10YEScost8.77, central\u22122.15/selected\u22124.15;10NOcost1.31, central+2.07/selected+.07. ExactGamma/rules/tokens/books bound; minimum5/tick.001. Bookage.272s at16:23:31response, nowdatedplanning. Gammafeesdisabled plus exactfullCLOBmaker/takerbasefee numeric0 corroborate zero; no inventedfd descriptor. Helperauthoritativeflagfalse retained. UMAstatus keyabsent, notnull/clean proof.\n\n[Maker/carry sensitivity](../../../data/deep_review_20261017/work/0480_ticket_sensitivity_1632.json):10NOat12.3c costs1.23, selected+.15. CachedvariableAave3.2035% gives~.0085 carry on1.31/75d, leaving~.0615selectedaskedge beforefunding/operations. No takerurgency. Unknownpersonalcontrol can make restingNO fillwhenincumbencystrengthens; independentcontrol/interpretationreview needed before anybid. Bothsides can losefullstake.\n\nKnown470NO has selected+.40 on5.10 beforefunding;478YES/476NO have central-onlyleads. These datedestimates do not establish a final rank. Currentcash andunchanged15:55holdings remainalternatives; no directIranposition identified, no guaranteedhedgeagainstMI/AI/Messi/Clarity orindependencereturncredit. Comparefreshsources/conditionalfills andwholeportfolio at600; do notautoallocate. Reopen on authenticbindingorders/implementation, independentpersonalcontrol, incapacity/council/change inleader or sourceconsensus. No trade, prior orwatcher changed.\n"
+}

@@ -1,0 +1,178 @@
+{
+  "review_index": 482,
+  "market_id": "701709",
+  "condition_id": "0x98ed458e28f6e297af38142cd8c33dd0d0569e3ad2b485376774dc5ebb28f808",
+  "criteria_sha256": "528b661fdc2a71993e017df1a0611e39a58ce7299821752fa9122bd6a8819ec5",
+  "status": "valued",
+  "literal_analysis": "ExactBinanceDOGE/USDTfinal1mHigh>=.48 anyincludedcandleNov24,2025 15:45ET\u2013Dec31,2026 23:59ET; UTCstart20:45/endlastcandle04:59Jan1, notyearendclose orotherpair/venue. Prior2021/2024highsoutsidewindow.",
+  "evidence": [
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-20T16:35:04.007394Z",
+      "finding": "Root6publicquery/rawhashesboundexactDOGEUSDT. Partialfirst1951m+329days/currentforminghigh boundcoveredpastbelow.48;current.08106, nofutureabsenceclaim."
+    },
+    {
+      "url": "https://api.binance.com/api/v3/klines",
+      "observed_utc": "2026-10-20T16:37:03.323584Z",
+      "finding": "Root3652021rowsverified,75dayclose12.314x/high15.527x possiblehistorically, outsidecontractwindow/notindependentprobability."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.033,
+    "low": 0.001,
+    "high": 0.25,
+    "actual_entry_reserve_pp": 20,
+    "method": "Primary80/15/5ordinary/broad-rally/manialog-price regimes; maximum-crossingformula andsavedsource/generatorhashes give3.3169% rounded3.3.",
+    "reasoning": "Currentexactpairpartialprice.08106 needs5.9215x to.48 in72.517days. Ordinary80% regime flatmedian/current60dayvol73.74% givesnegligiblediffusionhit;15%broad-rally median2x/vol150% and5%DOGEmania median4x/vol200% give7.94%/42.53%conditionalhit, totaling3.3169%, rounded3.3. Historical2021 forward75dhigh/start-close15.53x shows6xnotimpossible;2024-25close75max4.36xshowsrallyscale, neitherfrequencyisacurrentprobability.",
+    "model": "research/2026-10-17-deep-review/models/0482_primary_1643.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+    "quote_file_sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f",
+    "quote_capture_utc": "2026-10-20T16:23:31.352267+00:00",
+    "gamma_received_utc": "2026-10-20T16:23:31.247946+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.07,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.033,
+        "selected_stress_probability": 0,
+        "best_bid": 0.013,
+        "best_ask": 0.014,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513398155",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 13.195590019226074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.14,
+            "fee": 0.00967,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.014
+              }
+            ],
+            "net": 0.14967000000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.13,
+            "fee": 0.00899,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.013
+              }
+            ],
+            "net": 0.12101
+          }
+        },
+        "taker_cost_usd": 0.14967000000000003,
+        "central_expected_profit_usd": 0.18033,
+        "selected_stress_profit_usd": -0.14967000000000003,
+        "break_even_before_carry": 0.014967000000000003,
+        "break_even_constant_carry": 0.015064290492482858,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.967,
+        "selected_stress_probability": 0.7669999999999999,
+        "best_bid": 0.986,
+        "best_ask": 0.987,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792513398155",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 13.195590019226074,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.87,
+            "fee": 0.00899,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.987
+              }
+            ],
+            "net": 9.87899
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.86,
+            "fee": 0.00967,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.986
+              }
+            ],
+            "net": 9.85033
+          }
+        },
+        "taker_cost_usd": 9.87899,
+        "central_expected_profit_usd": -0.20899,
+        "selected_stress_profit_usd": -2.208990000000001,
+        "break_even_before_carry": 0.987899,
+        "break_even_constant_carry": 0.9943206730295531,
+        "current_execution_authorization": false
+      }
+    },
+    "route_sized_100_actual_walk": {
+      "path": "data/deep_review_20261017/work/0482_ticket_sensitivity_1645.json",
+      "sha256": "80ccda24e8c58e4db64a3c20cc21e689562b38a7aef7aa06c6c4b7edda59cdea",
+      "gross_shares": 100,
+      "asks": {
+        "complete": true,
+        "filled": 100.0,
+        "gross": 1.6800000000000002,
+        "fee": 0.11549,
+        "fills": [
+          {
+            "shares": 72.0,
+            "price": 0.014
+          },
+          {
+            "shares": 28.0,
+            "price": 0.024
+          }
+        ],
+        "net": 1.7954900000000003
+      },
+      "central_profit": 1.50451,
+      "selected_profit": -1.7954900000000003,
+      "carry_75d_cached_APY": 0.011671283914481318
+    }
+  },
+  "verdict": "Central-onlyYES taillead; actual100shareswalkcost1.79549 central+1.50451 butselectednegative. NOcentralnegative. No measuredconditionaltail/short-regimebondlicence;600pause unchanged.",
+  "reopen_condition": "Materialexactpairprice/catalyst/regimemeasurement, verifiedconditionalfillfloor andfreshbothside/carry comparative reviewafter600.",
+  "report_markdown": "# 482 DOGE\u2265$0.48 by year-end \u2014 central YES tail lead, uncertainty fails\n\n**YES3.3%/NO96.7%; broadYES0.1\u201325%,20pp planning stress\u2192YES0/NO76.7%.** YES has centralpositiveeconomics at dated1.4c, but no defensible selected/conditionalfill floor was established; preserve a tail-research lead. NO is centralnegative. No bond-tail licence or entry;600+comparative selection stillblocks newBUYs.\n\nFull rule: **anyfinalHigh of BinanceDOGE/USDT1-minute candle\u2265.48**, fromNov24,2025 15:45ET throughDec31,2026 23:59ET. Start20:45UTC; finalincludedcandleopensJan1,2027 04:59UTC andclosesbefore05UTC. A wick counts if included in the finalizedHigh; terminalyear-endclose is insufficient. Otherexchange/pair/index prices do notqualify. Reading Binanceasresolution source doesnotauthorize CEXtrading; candidateinstrument is on-chainPolymarket.\n\n[Window facts](../../../data/deep_review_20261017/work/0482_facts_1630.json), [historical/currentpartial](../../../data/deep_review_20261017/work/0482_history_addendum_1636.json), [querybindings](../../../data/deep_review_20261017/work/0482_root_query_1643.json): rootindependentlyverifiedsixrequestparameter digests andraw/gzipreceipt hashes. Partialfirstday195contiguous1mcandles, max.1537;329completedUTCdaysNov25\u2013Oct19 max.15681. Oct20formingdayhigh.08204 at16:35:04 boundscompleted1mhighssofar, notfuture. Thus no qualifyinghit in capturedpast; not finalNO. Correct[officialAPI](https://developers.binance.com/docs/binance-spot-api-docs/rest-api/market-data-endpoints) uses UTC/defaulttimeZone, Highindex2 andCloseindex4.\n\n[Rootdata](../../../data/deep_review_20261017/work/0482_root_data_1640.json):1023contiguous2024Jan1\u20132026Oct19dailybars, current60/90dayannualizedlog-returnvol73.74%/66.25%, full89.24%. Earlieraddendum's60/90figuresendNov24,2025; theyarenotcurrent. FormingOct20price.08106USDT/DOGE needs5.9215x, logdistance1.7786, with72.517daysleft. Dailyaggregationbounds thehistorical1mhighs forcompletedcoveredUTCdays, notafutureprediction.\n\n[2021context](../../../data/deep_review_20261017/work/0482_2021_context_1639.json), rootraw/queryverified:365contiguousbars;75-daymaxclosefactor12.314 andforward75-daymaxhigh/start-close15.527. 2024\u2013Nov2025close75max4.356; high.48434 onDec8,2024. Allthosehighs predate thiscontractwindow anddo nottriggerYES. Overlappingwindows/historyselectedforcontext are notindependent hit-rate samples; 2021shows6xpossible, notlikelynow.\n\n[Primarymodel](../models/0482_primary_1643.json) and [projection](../models/0482_growth_projection_1642.json), with[savedgenerator](../models/0482_growth_projection_1642.py): ordinary80% flatmedian/current60dayvol givesnegligible6xhit; broadcrypto-rally15% median2x/vol150% gives7.94%conditionalhit; DOGEmania5% median4x/vol200% gives42.53%. Mixed3.3169% rounded3.3. Reflection-principlemaximumoflogdiffusion approximatesanytimecrossing, notterminaldigital. Weak/strongrallyweights give1.14%/8.76%. Regimeweights/bullvolatility are explicitunfittedprimaryjudgment; jumps, leverage, exchange-specificwicks andUSDTdislocations remainoutsidepureGBM. No namedforthcomingDOGEcatalyst verified inthisboundedset, notproofnoneexists.\n\nBroad0.1\u201325%isnotCI. 20ppanalyticstress reflectsunmeasuredregime/fill/microstructureuncertainty; **not a substitute for measuredshort-regime bond-tail gate**. A72-daymaniaweight isnotfirsthandtailmeasurement. Source/dataqualitycannotcalibrateitsownfuturetail. Conditionalfills on a cheapYES canoccurwhen rallyprobabilitycollapses; NO fills canbeadverseonnews/pricejumps. No quote wasusedtoset p; lateroddsinspection isauthorattested, notprovenbyearliercapturetimestamps.\n\n[Bothsideeconomics](../../../data/deep_review_20261017/work/0482_economics_1643.json),10shares: YES1.4c cost.14967, central+.18033/selected\u2212.14967; NO98.7c cost9.87899, central\u2212.20899/selected\u22122.20899. [Route-size](../../../data/deep_review_20261017/work/0482_ticket_sensitivity_1645.json):100YESwalk72at1.4c+28at2.4c: gross1.68+fee.11549=1.79549, central+1.50451/selected\u22121.79549; maker100YES1.3c costs1.30, central+2/selected\u22121.30. TenYESbelow$1floor isnot an availabletinytrade. Min5shares/tick.001; authoritative7%taker-onlycurve verified, notgeneric5%.\n\nBooks13.20s old at16:23:31response, precedingfinal16:35sourceupdate; dated/asynchronousplanning, notliveclearance. ExactGamma/rules/tokens/feesbound, open/accepting; UMAstatuskeyabsent notcleanproof. CachedvariableAave3.2035% carry on1.79549/75d~.0117 plusfunding/operations; stablecashbeatsselectedYESloss. Known470/480NO haveprovisionalpositive selectedmargins;478YES/476NO also central-only. No finalcandidate rank, measuredhedge orindependenceclaim. Currentportfolio hasnoidentifiedDOGEposition; commoncrypto/liquidity/venue/USDC risk matters. Reopen with actualprice/catalyst/regimemeasurement andfreshconditionalfill comparisonafter600. No trade/prior/watcher changed.\n\nAppend-only correction: initialprose100-share figures mistakenly assumed all100 atbestask; the saved ticketwalk wasalreadycorrect. Exact72/28levelwalknowreported. Forecast,10-shareeconomics,selectednegativeconclusion, holdings andno-entrydecision unchanged. Originalbase retained.\n"
+}

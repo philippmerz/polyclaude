@@ -1,0 +1,89 @@
+{
+  "schema": "goal0028_case482_revision_recheck.v1",
+  "rechecked_utc": "2026-10-20T16:46:21.373355Z",
+  "initial_audit_path": "data/deep_review_20261017/work/goal0028_482_audit_1646.json",
+  "initial_audit_sha256": "4fa9760d26350f1e6b1dc888142401f4b4326fc4e822f7f97a77a654eb222a98",
+  "effective_packet_index": 482,
+  "revision": {
+    "json_path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.json",
+    "json_sha256": "92bc602ac64a2f295d7b3d198ecbba6348db1019adbe6f344654c7214958e184",
+    "report_path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.md",
+    "report_sha256": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc",
+    "prior_report_sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c",
+    "prior_matches_immutable_base": true,
+    "effective_packet_points_to_revision": true
+  },
+  "correction_check": {
+    "depth_artifact_path": "data/deep_review_20261017/work/0482_ticket_sensitivity_1645.json",
+    "depth_artifact_sha256": "80ccda24e8c58e4db64a3c20cc21e689562b38a7aef7aa06c6c4b7edda59cdea",
+    "fills": [
+      {
+        "shares": 72.0,
+        "price": 0.014
+      },
+      {
+        "shares": 28.0,
+        "price": 0.024
+      }
+    ],
+    "gross_usd": 1.6800000000000002,
+    "7pct_fee_usd": 0.11549,
+    "actual_taker_cost_usd": 1.7954900000000003,
+    "central_profit_at_3_3pct": 1.50451,
+    "selected_profit_at_0pct": -1.7954900000000003,
+    "revision_report_values_match_saved_walk": true,
+    "incorrect_base_values_absent_from_effective_report": true,
+    "all_effective_report_local_links_exist": true
+  },
+  "unchanged": {
+    "forecast_matches_base": true,
+    "ten_share_economics_match_base": true,
+    "no_probability_or_execution_authority_change": true
+  },
+  "price_blindness": "The quote packet predates model creation; model own_market_quotes_seen=false is an author attestation, not timestamp-proven.",
+  "current_checkpoint": {
+    "updated_utc": "2026-10-20T16:45:16.578605+00:00",
+    "universe": 3000,
+    "completed_in_depth_reviews": 416,
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 381,
+    "pending": 2203,
+    "base_records": 797,
+    "revisions_written": 77,
+    "active_indices": [],
+    "next_pending_indices": [
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490,
+      492,
+      493,
+      494,
+      495,
+      497,
+      499,
+      500,
+      501,
+      502,
+      503,
+      504,
+      505,
+      506,
+      507,
+      508,
+      509,
+      510,
+      511,
+      512,
+      513,
+      514,
+      515,
+      516
+    ]
+  },
+  "result": "PASS_CORRECTION_VERIFIED; BASE_RETAINED_APPEND_ONLY"
+}

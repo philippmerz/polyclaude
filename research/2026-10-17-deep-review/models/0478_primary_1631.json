@@ -1,0 +1,59 @@
+{
+  "schema": "deep_review.primary_model.v1",
+  "review_index": 478,
+  "created_utc": "2026-10-20T16:20:58.905846+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "id": "4425462",
+    "conditionId": "0xf56fe1c53c6acec4bae2c7f221e2a6e4d2f5f1652e1a317deabba975067ca2ac",
+    "criteria_sha256": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe"
+  },
+  "p_yes": 0.23348,
+  "p_no": 0.76652,
+  "range_yes": [
+    0.03,
+    0.7
+  ],
+  "reserve_absolute": 0.2,
+  "selected_yes": 0.03347999999999998,
+  "selected_no": 0.5665199999999999,
+  "joint_model": "research/2026-10-17-deep-review/models/0478_joint_states_1631.json",
+  "joint_sha256": "93ffafca513e8af0528f945cde8d0b7beb69b546f0a636ef81e34f52408f822f",
+  "conditional_joshua_by_other_named_top5_count": {
+    "3": 0.15,
+    "2": 0.2,
+    "1": 0.27,
+    "0_with_list": 0.35,
+    "missing_list": 0
+  },
+  "forecast_bridge": "July25 knockdown/comeback plus first-party Fury promotion provide international 2026 search catalysts. Boxing has made historical GlobalTop5, but Pacquiao6 shows an internationally salient return can miss. Dec11 Fury fight lies after the2025 Nov25 cutoff precedent; 2026 cutoff unknown, promotion before cutoff may count. Weight Joshua lower when Messi/McGregor/Liu occupy slots, without assuming Top5 independence. Central23.348% is computation of explicit qualitative judgments, reported about23%, not measured precision or Google rank estimate.",
+  "sensitivities": {
+    "weak_boxing_conditional_by_3_2_1_0": [
+      0.04,
+      0.07,
+      0.1,
+      0.15
+    ],
+    "weak_boxing_p_yes": 0.08526,
+    "strong_boxing_conditional_by_3_2_1_0": [
+      0.3,
+      0.42,
+      0.55,
+      0.68
+    ],
+    "strong_boxing_p_yes": 0.47763
+  },
+  "calibration_limits": [
+    "No Joshua-specific2026 search time series or full-field growth scores; conditional probabilities are primary subjective judgment, not fitted historical hit rates.",
+    "2025 cutoff/source method not automatically transferred to2026. Dec2025 Paul fight may be outside a matched Jan-Nov prior-year baseline; do not automatically count it as high comparison baseline.",
+    "Alias aggregation, unknown competitors and 2026 cutoff give broad3-70% judgment range, not confidence interval. Family20pp reserve retained; no endpoint-unanimity demand.",
+    "SameGoogle source/Top5/cutoff/missing-list and venue factors as heldMessi; JoshuaNO+MessiYES can both lose. No hedge credit.",
+    "2% missing-list branch retained, settlesNO March31 2027 beyond January evaluation. Dec31 metadata not guaranteed settlement.",
+    "No current October health verification or inferred extra bout from discrepant career records."
+  ],
+  "sources": [
+    "data/deep_review_20261017/work/0478_facts_1515.json",
+    "data/deep_review_20261017/work/0478_root_current_sources_1525.json",
+    "data/deep_review_20261017/work/0478_selected_sources_1631.json"
+  ]
+}

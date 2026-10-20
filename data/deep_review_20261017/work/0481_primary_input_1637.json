@@ -1,0 +1,153 @@
+{
+  "review_index": 481,
+  "market_id": "5194857",
+  "condition_id": "0x225106d573af3ad964c91ba064b74a1531c35ff6862515c405398e0a50567118",
+  "criteria_sha256": "c9d665f94a268ebf07dde8c89643266a2be54c7dd9ebe98c2939e0a98dc9080f",
+  "status": "valued",
+  "literal_analysis": "InclusiveTreasuryDailyPar2Yr>=4.95 anydateOct2-31; resolveonhit/lastbusinessdaydata, missinglastday/noqualifierthroughNov13 23:59ET=>NO. Daily listedvalue notintraday/futures; same475sourcebutoppositeoperator/differentbarrier.",
+  "evidence": [
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026",
+      "observed_utc": "2026-10-20T14:51:24.789677Z",
+      "finding": "Rootraw/CSVrowshashverified throughOct19:latest4.77,maxwindow4.84,no>=4.95. Currentdistance18bp,9futureobservations."
+    },
+    {
+      "url": "https://home.treasury.gov/resource-center/data-chart-center/interest-rates/daily-treasury-rates.csv/2026/all?type=daily_treasury_yield_curve&field_tdr_date_value=2026&page&_format=csv",
+      "observed_utc": "2026-10-20T14:52:19.683124Z",
+      "finding": "Rootraw/CSVrowshashverified throughOct19:latest4.77,maxwindow4.84,no>=4.95. Currentdistance18bp,9futureobservations."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.26,
+    "low": 0.06,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primaryshared475eventregimeparameters65/20/8/7, saved9-daily-path generator80000/regime gives26.166%upperhit; rounded26, notprobabilitycopy.",
+    "reasoning": "Current18bpupwarddistanceover9dailyobservations; same475ordinary65/dovish20/growthpanic8/inflation7regimes produce26.166%upperhit, rounded26. Recent60changebootstrap30.5%/centered20.5% andGaussianhighvol40.8% expose drift/volatilitysensitivity. Knownpolicy/CPI conditionssupportordinaryhawkishmajority, butFOMCOct28/GDPPCEOct29/ECIOct30generate jump risk. No475probability/complement copied.",
+    "model": "research/2026-10-17-deep-review/models/0481_primary_1636.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+    "quote_file_sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f",
+    "quote_capture_utc": "2026-10-20T16:23:31.352267+00:00",
+    "gamma_received_utc": "2026-10-20T16:23:31.140438+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 15.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.26,
+        "selected_stress_probability": 0.11000000000000001,
+        "best_bid": 0.19,
+        "best_ask": 0.26,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792513408178",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 3.1725900173187256,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.6,
+            "fee": 0.09621,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.26
+              }
+            ],
+            "net": 2.69621
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.9,
+            "fee": 0.07695,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.19
+              }
+            ],
+            "net": 1.8230499999999998
+          }
+        },
+        "taker_cost_usd": 2.69621,
+        "central_expected_profit_usd": -0.09621000000000013,
+        "selected_stress_profit_usd": -1.5962100000000001,
+        "break_even_before_carry": 0.269621,
+        "break_even_constant_carry": 0.26997061741336137,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.74,
+        "selected_stress_probability": 0.59,
+        "best_bid": 0.74,
+        "best_ask": 0.81,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792513408178",
+        "book_received_utc": "2026-10-20T16:23:31.350590+00:00",
+        "book_age_seconds_at_receipt": 3.1725900173187256,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.100000000000001,
+            "fee": 0.07695,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.81
+              }
+            ],
+            "net": 8.176950000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.4,
+            "fee": 0.09621,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.74
+              }
+            ],
+            "net": 7.30379
+          }
+        },
+        "taker_cost_usd": 8.176950000000001,
+        "central_expected_profit_usd": -0.7769500000000011,
+        "selected_stress_profit_usd": -2.276950000000002,
+        "break_even_before_carry": 0.8176950000000002,
+        "break_even_constant_carry": 0.8187553046899854,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Bothsidecentral/selectedtakernegative; makerYES19/NO74 selectednegative. No entry, sharedratefactor/jumps/sourceandfillrisk explicit.",
+  "reopen_condition": "FreshTreasuryobservations/materialsurprise orpricewithconditionalfillmargin; compareafter600, exactsources/criteria/fees/UMA/account revalidation.",
+  "report_markdown": "# 481 October 2-year Treasury yield\u22654.95% \u2014 no selected entry at saved quotes\n\n**YES26%/NO74%; broadYES6\u201365%,15pp reserve gives selectedYES11%/NO59%.** Both outcomes have negative central/selected taker economics; nearby maker examples fail selected. No entry/currentallocation. The probability is a primary event-regime forecast, not a fitted rate-option estimate or case475 complement.\n\nFull rule: publishedTreasury **Daily Par Yield Curve,2Yr\u22654.95%** onanydateOct2\u201331 counts, inclusive. It can resolveearlyonhit or whenlastbusiness-day data areavailable; ifnohit andlast-day data remainunavailable Nov13,2026 23:59ET, NO. Intradayfutures/bondquotes and othermaturities do notqualify. Case475 shares source/window but usesstrict<4.55%; bothcanhappen, not mutualcomplements.\n\n[Source family](../../../data/deep_review_20261017/work/0481_source_family_facts_1525.json) and [rootbinding](../../../data/deep_review_20261017/work/0481_root_source_binding_1635.json): actualhash-bound officialCSV/HTMLthroughOct19 has latest4.77%, Oct2\u201319max4.84/min4.74 across11publishedrows, no\u22654.95. Oct1outsidewindow. Historicalmaxwas11bpbelowbarrier; currentmodelstarts4.77, **18bp** todisplayed4.95, not11bp. Nine scheduleddailyobservationsOct20\u201330 remain; none yetobserved inthatcapture. [Official source](https://home.treasury.gov/resource-center/data-chart-center/interest-rates/TextView?type=daily_treasury_yield_curve&field_tdr_date_value=2026).\n\n[Primary model](../models/0481_primary_1636.json) reuses475regimeparameters and facts, not itsprobability. Ordinaryhawkish65%/dovish20%/growthpanic8%/inflation7%; mean/sd bpperday .5/5.3,\u2212.3/5.8,\u22121/7,+1/5.8 withday7jumps0/\u221210/\u221222/+8. Nine **discrete** dailyobservations from4.77; latent\u22654.945 approximates published2dp\u22654.95, notcontinuousfirstpassage. Unfittedscenario mixture26.166% rounded26. Historical60changebootstrap30.5%, centered20.5%, highvolatilityGaussian40.8% illustratemodel sensitivity, not empiricallycalibratedconfidence.\n\nThe [reproducible jointprojection](../models/0481_joint_projection_1634.json) and [savedgenerator](../models/0481_barrier_projection_1634.py) preserve80000paths/regime, seed, code/source/config hashes. Jointboth.2212%, loweronly17.4672%, upperonly25.9452%, neither56.3664%; normalized. Thus twoNOs canbothlose ifbothbarriershit, and a lowerYES/upperYES structure is not an exclusivebundle. No correlation/hedgefreebie. Lowermarginal17.688% is nearprior18%, which remainsunchanged.\n\n**Reproducibility repair:** prior475savedparameters/seed but notgenerator/RNGdraworder. Thisnewcode defines a deterministicsharedpathprojection; it doesnotclaimexactoriginaldrawreplay. MCerror is computationalonly. Scopecontinues: this gap didnotinvalidateunderlyingsourcefacts or materiallychange theoldroundedforecast. Newload-bearingcomputedprojections savecodealongwithparameters.\n\nRootverifiedsix officialmacro/CPIreceiptpairs; [dated facts](../../../data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json) and [CPI](../../../data/deep_review_20261017/work/0475_cpi_addendum_1503.json) retainclocks. Septemberunanimous25bphike/SEP andOct14headlineCPI+.6monthly/3.7annual wereknownbeforeOct19yield, notfreshsurprises. Core+.3/2.6 differs; CPI\u2260PCE. FOMCOct27\u201328, GDPPCEOct29, ECIOct30 motivateevent-jumps; notfutureoutcomes. BLSoldercalendar/BEAtimezonegap retained. Unknowneventresponses, volatilityclustering and sourcepublication/rounding justify15pp above10ppinstance default; broadrangeisnotCI/allendpointtest.\n\n[Bothsides](../../../data/deep_review_20261017/work/0481_economics_1636.json),10shares: YES26c cost2.69621, central\u2212.09621/selected\u22121.59621; NO81c cost8.17695, central\u2212.77695/selected\u22122.27695. ExactGamma/rules/tokens/5%taker-only fee arebound; min5shares/tick1c. Books3.17s old at16:23:31response, nowdatedplanning; open/accepting, UMAstatuskeyabsent notcleanproof. [Makerexamples](../../../data/deep_review_20261017/work/0481_ticket_sensitivity_1637.json):10YES19c cost1.90 selected\u2212.80;10NO74c cost7.40 selected\u22121.50. Lowerrestingpricesneedfreshfillunderwriting; informedyield movesandcalendarjumps canselectfills. No takerurgency or measuredtaillicence.\n\nCachedvariableAave3.2035% is~.0035 carry onYEScost/15d, withfunding/operations extra; fallback25d costs more. Currentcash avoids thisnegativequoteEV;470/480NO remainprovisionalcomparisonleads,478YES/476NO central-only. No currentTreasuryholding identified, but common macro/venue/liquidity factors prevent blanketindependence fromtheportfolio. Reopen onnewpublishedrow/surprise or freshpricing with defensibleconditionalfillmargin;600+primarycomparisonstillrequired. No trade/heldprior/watcher changed.\n"
+}

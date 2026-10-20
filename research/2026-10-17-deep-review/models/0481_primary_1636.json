@@ -1,0 +1,40 @@
+{
+  "schema": "primary_daily_upper_yield_barrier.v1",
+  "review_index": 481,
+  "created_utc": "2026-10-20T16:33:21.079629+00:00",
+  "own_market_quotes_seen": false,
+  "p_yes": 0.26,
+  "p_no": 0.74,
+  "range_yes": [
+    0.06,
+    0.65
+  ],
+  "actual_entry_reserve_pp": 15,
+  "selected_yes": 0.11,
+  "selected_no": 0.59,
+  "unrounded_joint_projection": 0.26166425000000004,
+  "joint_projection": "research/2026-10-17-deep-review/models/0481_joint_projection_1634.json",
+  "joint_projection_sha256": "e079b5c651adb2e60b499b0ba7e9632ad0cc2d04ba2db372e718f067b78210a5",
+  "source_through": "Oct19Treasurydaily2Yr4.77;Oct2-19max4.84,none>=4.95. October1excluded.",
+  "criterion": "Inclusivepublished>=4.95,dailypar2Yr notintraday,anydateOct2-31. Lastbusinessdaydataorhit; unavailablelastdaythroughNov13 23:59ET=>NO.",
+  "bridge": "Current18bpupwarddistanceover9dailyobservations; same475ordinary65/dovish20/growthpanic8/inflation7regimes produce26.166%upperhit, rounded26. Recent60changebootstrap30.5%/centered20.5% andGaussianhighvol40.8% expose drift/volatilitysensitivity. Knownpolicy/CPI conditionssupportordinaryhawkishmajority, butFOMCOct28/GDPPCEOct29/ECIOct30generate jump risk. No475probability/complement copied.",
+  "regime_assumptions": "Saved475parameters retained, not learnedweights. DefaultnewMCordercode/source/seedpersisted; rawpreviousdraws unreconstructablewithcertainty. Lowerprojection17.688%nearold18 judgednotmaterial, oldforecastunchanged.",
+  "joint_cells": {
+    "both": 0.0022121249999999997,
+    "lower_only": 0.174671625,
+    "upper_only": 0.25945212500000003,
+    "neither": 0.5636641250000001,
+    "p_lower": 0.17688375,
+    "p_upper": 0.26166425000000004
+  },
+  "uncertainty": [
+    "Forecast usesunfittedjumpregimes/9dailyobservations; noindependent-day/exclusivecontract credit. Gaussian andbootstrapdrift assumptions notvalidatedrankings.",
+    "15pp reserveabove10ppdefault forjump/volatility, publication/rounding andmakerselectionrisk. Broad6-65%notconfidenceinterval; allendpointpassnotrequired.",
+    "Published2dp>=4.95representedlatent>=4.945 undernearestrounding; simulation continuousvaluesneverexactties. Historicalintegerbpchangesuseactualpublishedincrements.",
+    "KnownSepCPI/SEP/Fedhike notnewshock; starting4.77alreadyreflectsknowninformation. CPIandPCEdifferent; noCME/impliedp input.",
+    "Missingfuturepublicationdoesnotestablishnohit; fallbackcanlockuntilNov13,25daycarry sensitivity. Olddata/publishedcorrections mustrecheckbeforeentry.",
+    "MakerquotescanfillwhenFOMC/inflation/publiccurve/privatemarketinformationreprices; no measurablefilledtailfloor."
+  ],
+  "comparison": "Same-ratefactors475/481 strongdependence; bothcanhit .2212%, neither56.366%; notarbitrageexclusivebuckets. No currentTreasuryholding or restingbididentified. Cash andknown470/480NOleads remaincomparisonset.",
+  "execution_authority": false
+}

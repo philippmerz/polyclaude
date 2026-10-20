@@ -1,0 +1,19 @@
+{
+  "created_utc": "2026-10-20T16:20:58.905846+00:00",
+  "previous_turn_classification": "progress: named news review, verified zero-fill cancellations and publication; no case advance.",
+  "hashes": {
+    "docs/performance.csv": "33aa1b36e5c4f60670ecdaa617bcdbb1a32904ccb08ef96672e3ec650898b154",
+    "docs/contributions.csv": "a16d800a14418e6fbdb525c19a7af9fe0b32fef7517b537ab46104ae575b2ba6",
+    "notes/portfolio_kelly_priors.json": "a00dc8691af5d9a0af0ec443d5849f354b368f09e1f9ba6a5e26e40f74edd1a4",
+    "notes/entry_review_gate.json": "afb97a92be3c439c8a16809534e0cb57048131caedc89501aa3d98cbf8e95c8e",
+    "research/2026-10-17-deep-review/evaluations.jsonl": "076c83e1c20d5d1537bd1efb5860bd2d7f729f30549bcc1e67b0a0641041e8ff",
+    "research/2026-10-17-deep-review/revisions.jsonl": "64aca6d240e71659ee4096847d266fe7462bb7be7330d13dc7f95cdd3ff12d92",
+    "research/2026-10-17-primary-market-review-rules.jsonl.gz": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c"
+  },
+  "base_ledger_bytes": 3677255,
+  "revision_ledger_bytes": 47168,
+  "financial_asof_unchanged": "2026-10-20 14:02; no new producer/CSV row",
+  "source_account_asof": "15:55 cancellation reconciliation; no open bids/reservations",
+  "quota": "59%used/41%headroom, Oct27 06:33 reset; direct read-only probe completed",
+  "active_case": 478
+}

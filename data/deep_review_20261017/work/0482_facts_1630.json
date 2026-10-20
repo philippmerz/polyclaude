@@ -1,0 +1,90 @@
+{
+  "pair": "DOGEUSDT",
+  "source": "Binance Spot API",
+  "receipts": {
+    "first_partial_day_1m": {
+      "path": "logs/cron20261020T163000Z_case482/receipts/first_partial_day_1m.receipt.json",
+      "http_status": 200,
+      "raw_sha256": "bdc13888b4840a7af813e621d2d8c84ae7d95321296249556e263f0110a98cf4",
+      "raw_bytes": 31072,
+      "retrieved_utc": "2026-10-20T16:19:45.976329Z",
+      "request_endpoint": "/api/v3/klines",
+      "query_sha256": "35b610f3439e007a46078d94e07d65d3c024e41f2198b58e35eb55bd4bdaea74"
+    },
+    "daily_high_bound": {
+      "path": "logs/cron20261020T163000Z_case482/receipts/daily_high_bound.receipt.json",
+      "http_status": 200,
+      "raw_sha256": "93fdd978da2ec6936588da5db9f63a388fb64d0964b0f782abd7a0d417e38771",
+      "raw_bytes": 57809,
+      "retrieved_utc": "2026-10-20T16:19:46.310710Z",
+      "request_endpoint": "/api/v3/klines",
+      "query_sha256": "bbf2eafba068b1a7cf38713753b14beef4fbe82efa8e002b7412793a7573f340"
+    },
+    "latest_price": {
+      "path": "logs/cron20261020T163000Z_case482/receipts/latest_price.receipt.json",
+      "http_status": 200,
+      "raw_sha256": "42f951bd3ef7384fa7efc4078ee7be6e5e6d03fc85c52ca2e47a13593833c4f7",
+      "raw_bytes": 42,
+      "retrieved_utc": "2026-10-20T16:19:46.651281Z",
+      "request_endpoint": "/api/v3/ticker/price",
+      "query_sha256": "2b6f213119192bd1749c31141b44ca6f035a70460d17b999229ee5361ee07a52"
+    }
+  },
+  "window_utc": {
+    "start": "2025-11-24T20:45:00Z",
+    "end": "2027-01-01T04:59:00Z",
+    "note": "contract ET end Dec31 23:59 ET maps to Jan1 04:59Z; future portion not observable"
+  },
+  "first_partial_day_1m": {
+    "status": "parsed",
+    "bars": 195,
+    "first_open_utc": "2025-11-24T20:45:00Z",
+    "last_open_utc": "2025-11-24T23:59:00Z",
+    "max_high": 0.1537,
+    "qualifying_1m_high_count": 0
+  },
+  "full_utc_daily_bounds": {
+    "status": "parsed",
+    "bars": 329,
+    "first_open_utc": "2025-11-25T00:00:00Z",
+    "last_open_utc": "2026-10-19T00:00:00Z",
+    "max_daily_high": 0.15681,
+    "max_daily_high_date_utc": "2025-11-26T00:00:00Z",
+    "qualifying_days": 0
+  },
+  "latest_ticker": {
+    "symbol": "DOGEUSDT",
+    "price": "0.08042000"
+  },
+  "scope_note": "Daily highs bound all underlying 1m highs only for included complete UTC days; first partial ET start checked separately with 1m candles. No candle rows after retrieval date are observable.",
+  "requests": {
+    "first_partial_day_1m": {
+      "symbol": "DOGEUSDT",
+      "interval": "1m",
+      "startTime_utc": "2025-11-24T20:45:00Z",
+      "endTime_utc_inclusive": "2025-11-24T23:59:59.999Z",
+      "limit": 1000
+    },
+    "daily_high_bound": {
+      "symbol": "DOGEUSDT",
+      "interval": "1d",
+      "startTime_utc": "2025-11-25T00:00:00Z",
+      "endTime_utc_inclusive": "2026-10-19T23:59:59.999Z",
+      "limit": 1000
+    },
+    "latest_price": {
+      "symbol": "DOGEUSDT"
+    }
+  },
+  "coverage_validation": {
+    "first_partial_day_expected_minute_bars": 195,
+    "first_partial_day_observed": 195,
+    "first_partial_day_contiguous": true,
+    "daily_expected_utc_days": 329,
+    "daily_observed": 329,
+    "daily_contiguous": true,
+    "future_contract_window_unobserved_from": "2026-10-20T00:00:00Z",
+    "source_failures": 0
+  },
+  "contract_comparison_fact": "No qualifying >=0.48 high appears in the covered first partial ET day or completed full UTC daily bars through 2026-10-19; the observed upper bound is 0.15681. This is incomplete over the future remainder of the contract window and does not establish final NO."
+}

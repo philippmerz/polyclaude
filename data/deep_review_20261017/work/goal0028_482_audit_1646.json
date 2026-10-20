@@ -1,0 +1,231 @@
+{
+  "schema": "goal0028_case482_offline_audit.v1",
+  "audited_utc": "2026-10-20T16:46:05.373933Z",
+  "scope": "Initial offline audit snapshot for case 482; later append-only correction is separately rechecked. No network, probability/ranking change, staging, or account action.",
+  "identity": {
+    "review_index": 482,
+    "market_id": "701709",
+    "condition_id": "0x98ed458e28f6e297af38142cd8c33dd0d0569e3ad2b485376774dc5ebb28f808",
+    "criteria_sha256": "528b661fdc2a71993e017df1a0611e39a58ce7299821752fa9122bd6a8819ec5",
+    "matches_frozen_base_and_input": true,
+    "question": "Will Dogecoin reach $0.48 by December 31, 2026?",
+    "window_ET": "Nov 24, 2025 15:45 to Dec 31, 2026 23:59 ET",
+    "window_UTC": {
+      "start": "2025-11-24T20:45:00Z",
+      "end": "2027-01-01T04:59:00Z",
+      "note": "contract ET end Dec31 23:59 ET maps to Jan1 04:59Z; future portion not observable"
+    },
+    "timezone_check": "EST UTC−5 at both dates; included start candle opens Nov24 20:45Z; final included one-minute candle opens Jan1 04:59Z and closes 05:00Z."
+  },
+  "record": {
+    "base_report_sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c",
+    "matches_base_evaluation_and_initial_record_receipt": true,
+    "all_local_markdown_links_exist": true,
+    "local_markdown_links": 10
+  },
+  "sources": {
+    "six_query_bindings_checked": true,
+    "queries": [
+      {
+        "key": "first_partial_day_1m",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "bdc13888b4840a7af813e621d2d8c84ae7d95321296249556e263f0110a98cf4",
+        "received_utc": "2026-10-20T16:19:45.976329Z"
+      },
+      {
+        "key": "daily_high_bound",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "93fdd978da2ec6936588da5db9f63a388fb64d0964b0f782abd7a0d417e38771",
+        "received_utc": "2026-10-20T16:19:46.310710Z"
+      },
+      {
+        "key": "latest_price",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "42f951bd3ef7384fa7efc4078ee7be6e5e6d03fc85c52ca2e47a13593833c4f7",
+        "received_utc": "2026-10-20T16:19:46.651281Z"
+      },
+      {
+        "key": "historical_daily_2024_to_2025-11-24",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "699a20790b45b19a85f93697cc841cdeb531038b6ed51f5b4cbe7135e1741e81",
+        "received_utc": "2026-10-20T16:35:03.608154Z"
+      },
+      {
+        "key": "oct20_partial_daily",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "96d252da49bae1d747df501432c5d0cbcebeef0b55bf30d3b8082a49fbe3150d",
+        "received_utc": "2026-10-20T16:35:04.007394Z"
+      },
+      {
+        "key": "calendar_2021_daily",
+        "http_status": 200,
+        "query_digest_bound": true,
+        "raw_and_gzip_reverified": true,
+        "raw_sha256": "5c537db733c0716ff4ec146df5017d69c42c7d707489e45a3294535f218d42f4",
+        "received_utc": "2026-10-20T16:37:03.323584Z"
+      }
+    ],
+    "six_raw_and_gzip_hash_pairs_independently_reverified": true,
+    "covered_past_only": {
+      "start_partial_1m_rows": 195,
+      "start_partial_max_high": 0.1537,
+      "completed_full_utc_days_through_Oct19": 329,
+      "max_daily_high": 0.15681,
+      "Oct20_forming_high_at_16_35Z": 0.08204,
+      "source_asof": "2026-10-20T16:35:04.007394Z",
+      "no_future_absence_claim": true
+    },
+    "historical": {
+      "2021_forward_75d_max_high_over_start_close": 15.526835962581993,
+      "2024_to_Nov24_2025_daily_high_max": 0.48434,
+      "both_outside_contract_window": true,
+      "not_used_as_current_hit_rate": true
+    },
+    "volatility_erratum": {
+      "previous_history_60_90_ended": "2025-11-24",
+      "model_uses_recomputed_current_60d_vol_through": "2026-10-19",
+      "60d_ann_log_vol": 0.7373746436375822,
+      "90d_ann_log_vol": 0.6625118874149197,
+      "report_discloses_prior_window_not_current": true
+    }
+  },
+  "model": {
+    "frozen_identity_matches": true,
+    "projection_hash_matches_primary": true,
+    "source_data_hash_matches": true,
+    "generator_hash_matches": true,
+    "central_mixture": 0.03316903208088164,
+    "rounded_p_yes": 0.033,
+    "p_no": 0.967,
+    "selected_yes_after_20pp_reserve": 0,
+    "selected_no_after_20pp_reserve": 0.767,
+    "no_short_regime_bond_tail_license_claim": true,
+    "quote_received_utc": "2026-10-20T16:23:31.352267+00:00",
+    "model_created_utc": "2026-10-20T16:41:34.444221+00:00",
+    "own_market_quotes_seen_metadata": false,
+    "price_blindness": "Attested by model author; quote packet predates model timestamp, so timestamp alone does not prove the attestation."
+  },
+  "economics": {
+    "quote_file_sha256_matches": true,
+    "fee_rate": 0.07,
+    "fee_curve_authoritative": true,
+    "ten_share_yes_cost_central_selected": [
+      0.14967000000000003,
+      0.18033,
+      -0.14967000000000003
+    ],
+    "ten_share_no_cost_central_selected": [
+      9.87899,
+      -0.20899,
+      -2.208990000000001
+    ],
+    "100_yes_actual_depth_walk": {
+      "fills": [
+        {
+          "shares": 72.0,
+          "price": 0.014
+        },
+        {
+          "shares": 28.0,
+          "price": 0.024
+        }
+      ],
+      "gross": 1.68,
+      "fee": 0.11549,
+      "cost": 1.79549,
+      "central_profit_at_3.3pct": 1.50451,
+      "selected_profit_at_0pct": -1.79549,
+      "matches_saved_sensitivity": true
+    },
+    "initial_base_report_discrepancy": {
+      "present": true,
+      "base_text_cost": 1.49663,
+      "actual_depth_cost": 1.79549,
+      "base_text_central_profit": 1.80337,
+      "actual_central_profit": 1.50451,
+      "actual_selected_profit": -1.79549,
+      "reason": "Base report text assumed 100 shares at 1.4c, but saved depth was 72 at 1.4c plus 28 at 2.4c."
+    }
+  },
+  "result": "BASE_REPORT_MATERIAL_ROUTE_DEPTH_DISCREPANCY; APPEND_ONLY_CORRECTION_REQUIRES_RECHECK",
+  "path_hashes": [
+    {
+      "path": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
+      "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/progress.json",
+      "sha256": "947d9c306c1e625e415394ab98bb759bbed77d63cd63ea8411351373a96970e3"
+    },
+    {
+      "path": "notes/deep_review_checkpoint.json",
+      "sha256": "bf137da25d2dde3adf0b4ef8b4d8b090060963cc3cda3c8c4cee0cb1c9448836"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0482.json",
+      "sha256": "3c52eb5d1154e7fbec4f2e002c6ac3b84eb4f135d81e215c0418d87d77677401"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0482.md",
+      "sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_primary_input_1645.json",
+      "sha256": "ae01398fb948aef7841322d2d16d375842a955c143d55f83828cd4da4fb79f5b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_record_verified_1645.json",
+      "sha256": "f2c0c886035b51d8dae74381073b41a92efca39df16d601062c26f73fe02e67f"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_economics_1643.json",
+      "sha256": "c62e9ade56513ff0da42e1c5fcae5e335802489688676fe1caec34c3d2cfbe8e"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_ticket_sensitivity_1645.json",
+      "sha256": "80ccda24e8c58e4db64a3c20cc21e689562b38a7aef7aa06c6c4b7edda59cdea"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_query_binding_1642.json",
+      "sha256": "2f6709592b9bc60130ba627e208fbb8f240a50a885916c2513c34bbb7a0bbdec"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_root_query_1643.json",
+      "sha256": "e01f8b13159759d959dd22b683b3aa548ff1350097d4b36cd81f958c34458e27"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_root_data_1640.json",
+      "sha256": "ab7096178d6b074fdf5620b7dc4ff632b8a495cee49dae9841bef156e4e6b63d"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0482_history_addendum_1636.json",
+      "sha256": "b309d6736a902d7ba46b4f4d71eb4df15fb1a5e62518f3ec912c831866d5741d"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0482_primary_1643.json",
+      "sha256": "a23543ad88777f505727b0493d59fe348e151b33072730783ffe3ecf6b13303e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0482_growth_projection_1642.json",
+      "sha256": "98e3d5fb3fefc11c44d3b3ad2b032e67d45bea6b5cc246a5f5a4f84bc62c94e6"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0482_growth_projection_1642.py",
+      "sha256": "21d632c545bb12f1c2308ec48902784254e3389d060b964be39cf02b968cfb41"
+    },
+    {
+      "path": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+      "sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f"
+    }
+  ]
+}

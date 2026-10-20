@@ -1,0 +1,170 @@
+{
+  "schema": "deep_review.primary_joint_distribution.v1",
+  "review_index": 478,
+  "created_utc": "2026-10-20T16:20:58.905846+00:00",
+  "parent": "research/2026-10-17-deep-review/models/0406_athletes_primary_0032.json",
+  "parent_sha256": "d91e759a049888d496c9e00bb8fc02412a45049ed7131c1010e5fc47394b9a49",
+  "joint_states": [
+    {
+      "weight": 0.01155,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 1,
+      "Joshua": true
+    },
+    {
+      "weight": 0.06545,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 2,
+      "Joshua": false
+    },
+    {
+      "weight": 0.028600000000000004,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 2,
+      "Joshua": true
+    },
+    {
+      "weight": 0.11440000000000002,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": false
+    },
+    {
+      "weight": 0.0342,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 2,
+      "Joshua": true
+    },
+    {
+      "weight": 0.1368,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": false
+    },
+    {
+      "weight": 0.05643000000000001,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": true
+    },
+    {
+      "weight": 0.15257,
+      "list_exists": true,
+      "Messi": true,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 4,
+      "Joshua": false
+    },
+    {
+      "weight": 0.018,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 2,
+      "Joshua": true
+    },
+    {
+      "weight": 0.072,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": false
+    },
+    {
+      "weight": 0.024300000000000002,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": true
+    },
+    {
+      "weight": 0.0657,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": true,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 4,
+      "Joshua": false
+    },
+    {
+      "weight": 0.0324,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 3,
+      "Joshua": true
+    },
+    {
+      "weight": 0.0876,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": true,
+      "unnamed_remaining_top5_slots": 4,
+      "Joshua": false
+    },
+    {
+      "weight": 0.028000000000000004,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 4,
+      "Joshua": true
+    },
+    {
+      "weight": 0.05200000000000001,
+      "list_exists": true,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 5,
+      "Joshua": false
+    },
+    {
+      "weight": 0.02,
+      "list_exists": false,
+      "Messi": false,
+      "McGregor": false,
+      "Liu": false,
+      "unnamed_remaining_top5_slots": 0,
+      "Joshua": false
+    }
+  ],
+  "marginals": {
+    "Messi": 0.6,
+    "McGregor": 0.39999999999999997,
+    "Liu": 0.458,
+    "Joshua": 0.23348
+  },
+  "normalization": 1.0,
+  "partial_field_only": "Named4<=Top5; all remaining slots held by unnamed competitors. Retained family priors are compatibility context, not new held forecast updates."
+}

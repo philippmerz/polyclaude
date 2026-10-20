@@ -1,0 +1,164 @@
+{
+  "schema": "finite_review_root_publication_audit.v1",
+  "verified_utc": "2026-10-20T16:54:20.603878+00:00",
+  "counts": {
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 381,
+    "pending": 2203,
+    "base_records": 797,
+    "revisions_written": 77
+  },
+  "case_checks": [
+    {
+      "index": 478,
+      "status": "valued",
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0478.md",
+        "sha256": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752"
+      }
+    },
+    {
+      "index": 479,
+      "status": "excluded_factual",
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0479.md",
+        "sha256": "795d05e31c471bc96b4438957f1a6f9f349c08fef4f8049577321032327f6bb5"
+      }
+    },
+    {
+      "index": 480,
+      "status": "valued",
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0480.md",
+        "sha256": "b5f2e9ce0718bb2228294f64884612a96fef8407fac600d7b1c2f0eb2212ec42"
+      }
+    },
+    {
+      "index": 481,
+      "status": "valued",
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0481.md",
+        "sha256": "f3da8cd64f7e218d574dd385a66c80b47ef57aef3b85cf98bc6a3eb3250585c0"
+      }
+    },
+    {
+      "index": 482,
+      "status": "valued",
+      "report": {
+        "path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.md",
+        "sha256": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc"
+      }
+    },
+    {
+      "index": 483,
+      "status": "excluded_factual",
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0483.md",
+        "sha256": "3e6c6cbebcf3ff9830adcb221ba0276a5329005a66299f33d61b3468410e34a1"
+      }
+    }
+  ],
+  "prior_ledger_prefixes_exact": true,
+  "financial_CSV_contributions_priors_policy_frozen_rules_unchanged": true,
+  "local_links_and_forecast_economics_consistency_pass": true,
+  "model_generators_reproduced": true,
+  "handoff_valid_until": "2026-10-20T18:00:00Z",
+  "handoff_source_mismatches": 0,
+  "private_credentials_operator_histories_rawcaptures_excluded": true,
+  "quote_blindness": "Primaryauthorattestation, notindependentlyprovenbyfiletimestamps; final480addendumquoteaware.",
+  "correction": "482full100-sharedepthprose revisedappend-only; originalwalk/p/10sharesunchanged.",
+  "telegram400_sender_accepted": true,
+  "full_goal_active_incomplete": true,
+  "paths_hashed": {
+    "README.md": "fc7ea32f8df271c6c3ea5b2fd7712008e4c31f40ca4ba0761051084300e2a858",
+    "notes/backlog.md": "f0eb22894c972b47075be4460aed106bdb6c0279d5dae31591236ae7344685a8",
+    "notes/journal.md": "c7679a5d573e6e0b2213db699681138d28c5012750446803d159ce330215df5f",
+    "notes/current_context.md": "3b0082b9062fd5e8af006237902a1d54368172362acb90cc85382ff3c46795ca",
+    "notes/deep_review_checkpoint.json": "bf137da25d2dde3adf0b4ef8b4d8b090060963cc3cda3c8c4cee0cb1c9448836",
+    "research/2026-10-17-deep-review/INDEX.md": "d2682312cf55c934a4d89ce51debd9f61a1e072a0a4c84c4b3741f1049233ea3",
+    "research/2026-10-17-deep-review/PROTOCOL.md": "011b8200b35c8231b302cd7bb3ed0986224379fb545f05f55688c9536d49be0e",
+    "research/2026-10-17-deep-review/RESUME.md": "1db75b9676050776231c47914672227049b65eb4d8c4f3771ae35312b05a36e2",
+    "research/2026-10-17-deep-review/evaluations.jsonl": "6fe31e2dea32713d0ec6ced91e3985a3303e15a9e598285bb6fda62969f7f947",
+    "research/2026-10-17-deep-review/index.csv": "8049d5eaf13789d50ef767ccbbf448f650ea3c07254ec860971b602089f5980c",
+    "research/2026-10-17-deep-review/progress.json": "947d9c306c1e625e415394ab98bb759bbed77d63cd63ea8411351373a96970e3",
+    "research/2026-10-17-deep-review/revisions.jsonl": "57fc358e8766f7bf2a19ba75e165ce762d31380e148b8654fe200b396d03acfb",
+    "research/2026-10-17-deep-review/evaluations/0478.json": "8ebaf4eaf45b67bbacd4c7d5ed7854724cf122553738cbb34e7fc534a7687f1e",
+    "research/2026-10-17-deep-review/evaluations/0478.md": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752",
+    "research/2026-10-17-deep-review/evaluations/0479.json": "a2e37b2304fe4aad9fea1e06f8a0a07e6cbbdf01f75232827edaeadeee648636",
+    "research/2026-10-17-deep-review/evaluations/0479.md": "795d05e31c471bc96b4438957f1a6f9f349c08fef4f8049577321032327f6bb5",
+    "research/2026-10-17-deep-review/evaluations/0480.json": "cae4a5ecf9ac6ae74c88837ec359c8e9301f81af2ec4fd60d9858a75f095ec8e",
+    "research/2026-10-17-deep-review/evaluations/0480.md": "b5f2e9ce0718bb2228294f64884612a96fef8407fac600d7b1c2f0eb2212ec42",
+    "research/2026-10-17-deep-review/evaluations/0481.json": "9b2014eeadee4553c1fd706356a32f279fba525e139fc56863c9c9f03759a436",
+    "research/2026-10-17-deep-review/evaluations/0481.md": "f3da8cd64f7e218d574dd385a66c80b47ef57aef3b85cf98bc6a3eb3250585c0",
+    "research/2026-10-17-deep-review/evaluations/0482.json": "3c52eb5d1154e7fbec4f2e002c6ac3b84eb4f135d81e215c0418d87d77677401",
+    "research/2026-10-17-deep-review/evaluations/0482.md": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c",
+    "research/2026-10-17-deep-review/evaluations/0483.json": "c5b92f7083b1efc177e156e5734f692307eb1f86b6b7258bccbc0cc73d3a09da",
+    "research/2026-10-17-deep-review/evaluations/0483.md": "3e6c6cbebcf3ff9830adcb221ba0276a5329005a66299f33d61b3468410e34a1",
+    "research/2026-10-17-deep-review/models/0478_joint_states_1631.json": "93ffafca513e8af0528f945cde8d0b7beb69b546f0a636ef81e34f52408f822f",
+    "research/2026-10-17-deep-review/models/0478_primary_1631.json": "afced71b0121b275f6e8e95f33da9972beef9c189be345d2dbca3ee4d0f92b2e",
+    "research/2026-10-17-deep-review/models/0480_interpretation_1632.json": "c8d3b211199554f94ed79fb96aa52b0da737d88891ee55cfbb60fc206cbc991c",
+    "research/2026-10-17-deep-review/models/0480_primary_1629.json": "8d997803cd8ce3c4e8e2a6b0d37da6a90c577371d5044ec7c8a0372f7158ab91",
+    "research/2026-10-17-deep-review/models/0481_barrier_projection_1634.py": "d7e32df8b94f9286df1bf79be93be166c4341b2cf81b1ad06603535f6b7e9cd5",
+    "research/2026-10-17-deep-review/models/0481_joint_projection_1634.json": "e079b5c651adb2e60b499b0ba7e9632ad0cc2d04ba2db372e718f067b78210a5",
+    "research/2026-10-17-deep-review/models/0481_primary_1636.json": "1e5fb4b3a08a4ed49a6f36798d9c68fbd5d8d1579e54dd269d809349c3f79d5a",
+    "research/2026-10-17-deep-review/models/0482_growth_projection_1642.json": "98e3d5fb3fefc11c44d3b3ad2b032e67d45bea6b5cc246a5f5a4f84bc62c94e6",
+    "research/2026-10-17-deep-review/models/0482_growth_projection_1642.py": "21d632c545bb12f1c2308ec48902784254e3389d060b964be39cf02b968cfb41",
+    "research/2026-10-17-deep-review/models/0482_primary_1643.json": "a23543ad88777f505727b0493d59fe348e151b33072730783ffe3ecf6b13303e",
+    "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.json": "92bc602ac64a2f295d7b3d198ecbba6348db1019adbe6f344654c7214958e184",
+    "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.md": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc",
+    "data/deep_review_20261017/work/goal0028_preflight_1631.json": "dcbb6d01a046be7aeb16f9df3031d0699fca92e1a9ec33809cb6823ebc2e528b",
+    "data/deep_review_20261017/work/0478_selected_sources_1631.json": "cb3a476265b03767d26df95b9d4eeb8ee17867387ac3ee45a70074cef5608259",
+    "data/deep_review_20261017/work/0478_economics_1634.json": "5dadaa1bddfa96df67290063f7497d5c3e9bbc09d538d785182347b4c4cc589a",
+    "data/deep_review_20261017/work/0478_ticket_sensitivity_1635.json": "50854a2347a8b54c29bbb58135c6c89fce804a06d683842b209cb0d1634a28b5",
+    "data/deep_review_20261017/work/0478_primary_input_1635.json": "aaa1aa3a15067ccca12afc455af2408216684a63bf222f3a8eb8171a37f08a24",
+    "data/deep_review_20261017/work/0478_record_verified_1635.json": "227650d6d70118f8d722bde4c31b91ddcb104c9e9772d1e5714005802d5ae9bc",
+    "data/deep_review_20261017/work/0478_resume.json": "73a417f547e4bf027f2eb2ad03f3edea2473475a11b3a8579ff9dbc9f00669a9",
+    "data/deep_review_20261017/work/goal0028_RESUME.json": "3063acf5d095c8805a2b00cd49e9f879c6c227c7df914d045c8ecba23ef1e345",
+    "data/deep_review_20261017/work/0479_primary_input_1626.json": "dcf70a533569773119e1e0f73efbd88134ef23d5950f939404143ac9ae042f92",
+    "data/deep_review_20261017/work/0479_record_verified_1626.json": "10778772a615bf34483bc22e0d7146f40a3bbf7aae946cb5c1c87ff3f7abb029",
+    "data/deep_review_20261017/work/0480_control_addendum_1630.json": "fba7794f60e9b081e8473da417bcb0198a2d7145ad2a65785444b15ba8f3bf9e",
+    "data/deep_review_20261017/work/0480_appointments_facts_1628.json": "6418d3f19df5562e8a05e08255a04a9d23985eb1cb0628a8438286cd678747d6",
+    "data/deep_review_20261017/work/0480_root_control_1628.json": "2dc1ae23963cb1c81a3fdb4467e8e81dd726bb72004b4e9794b57b1845d8c7e5",
+    "data/deep_review_20261017/work/0480_economics_1630.json": "524a60b9a1b2ae86dbc70bf9e1f57fa5d3b878aa3898f68aed7f384edce9683c",
+    "data/deep_review_20261017/work/0480_economics_final_1632.json": "b49d7af9b7d3c0ff73959f8bdfe7c7c21e7fa8d0342eb2defbf1294d49f2c0d0",
+    "data/deep_review_20261017/work/0480_ticket_sensitivity_1632.json": "86e67723d5deff8186e6a30e3ec26d3687c757ace1bf3637398eff7ac04311ac",
+    "data/deep_review_20261017/work/0480_primary_input_1633.json": "f1c66bb4e9503799ff135312f8f7182c185afddacbc329f034a12662e5577579",
+    "data/deep_review_20261017/work/0480_record_verified_1633.json": "d3707badf6a762f33cbca21bec741292fa2d54e9b898c352559db13568ebdf92",
+    "data/deep_review_20261017/work/0481_root_source_binding_1635.json": "ef406d5a285fc40e6a9241e4fc5f3c2ba148e0555e47c4b4f6e5acc66aed27a3",
+    "data/deep_review_20261017/work/0481_economics_1636.json": "725f132bb93dc0f57fc86c2594ba469ea417cfb9b0da78e589f6b91aa8abf478",
+    "data/deep_review_20261017/work/0481_ticket_sensitivity_1637.json": "a8cbde9ad99375fbf5bba75ac48231179735b1ab210360468c2394c22253873c",
+    "data/deep_review_20261017/work/0481_primary_input_1637.json": "9f4d6a869babc55bab51422c4e6715767942d8a9856c4c255e019df0a6f7206b",
+    "data/deep_review_20261017/work/0481_record_verified_1637.json": "3498d68bb2b7b0bf6f600044966fb790245abcce3bc41ab76253d5555e437fb5",
+    "data/deep_review_20261017/work/0482_facts_1630.json": "a7051a701728ceea7cec1e0210ec59b79dfcf5473f2dcd967f4a0f290e956119",
+    "data/deep_review_20261017/work/0482_history_addendum_1636.json": "b309d6736a902d7ba46b4f4d71eb4df15fb1a5e62518f3ec912c831866d5741d",
+    "data/deep_review_20261017/work/0482_2021_context_1639.json": "4655f2341e4c97a2fc4a55cd68ea61e9bf041d4dddd939dd58f988f1f23e5fec",
+    "data/deep_review_20261017/work/0482_query_binding_1642.json": "2f6709592b9bc60130ba627e208fbb8f240a50a885916c2513c34bbb7a0bbdec",
+    "data/deep_review_20261017/work/0482_root_data_1640.json": "ab7096178d6b074fdf5620b7dc4ff632b8a495cee49dae9841bef156e4e6b63d",
+    "data/deep_review_20261017/work/0482_root_query_1643.json": "e01f8b13159759d959dd22b683b3aa548ff1350097d4b36cd81f958c34458e27",
+    "data/deep_review_20261017/work/0482_economics_1643.json": "c62e9ade56513ff0da42e1c5fcae5e335802489688676fe1caec34c3d2cfbe8e",
+    "data/deep_review_20261017/work/0482_ticket_sensitivity_1645.json": "80ccda24e8c58e4db64a3c20cc21e689562b38a7aef7aa06c6c4b7edda59cdea",
+    "data/deep_review_20261017/work/0482_primary_input_1645.json": "ae01398fb948aef7841322d2d16d375842a955c143d55f83828cd4da4fb79f5b",
+    "data/deep_review_20261017/work/0482_record_verified_1645.json": "f2c0c886035b51d8dae74381073b41a92efca39df16d601062c26f73fe02e67f",
+    "data/deep_review_20261017/work/0482_depth_correction_input_1648.json": "f334c05e85cd29e454b2743b913930d4320a71511db82da665a7747879a7c112",
+    "data/deep_review_20261017/work/0482_depth_revision_verified_1648.json": "c4c3fead4b4482585c93bdd08ecd99c4c5980be3901536f7a5a31a6680d740ad",
+    "data/deep_review_20261017/work/0483_primary_input_1650.json": "c70f95b5562de71b6265a4d91af2c7242e3d64954abd7405ed83d0239a27545e",
+    "data/deep_review_20261017/work/0483_record_verified_1650.json": "6715c6e3d439883443e887f28ddf7e8ff7964aa825994678c72eecde35531f8c",
+    "data/deep_review_20261017/work/0484_resume.json": "f6dac75a5a3f2c5ddcc0bac2ba42cb3afc8d83deb1c1b6c0da37929cf16dcafd",
+    "data/deep_review_20261017/work/goal0028_offline_audit_1640.json": "f27973cf43fac63fcafdce47a48fec4cfaa48ed8ea185112a5f6565953306178",
+    "data/deep_review_20261017/work/goal0028_482_audit_1646.json": "4fa9760d26350f1e6b1dc888142401f4b4326fc4e822f7f97a77a654eb222a98",
+    "data/deep_review_20261017/work/goal0028_482_audit_1648_recheck.json": "cae3e3fc01dc137813175ad0b79e0662cd84ae999e894ca1faad979dab65e4e7",
+    "data/deep_review_20261017/work/goal0028_candidate_comparison_1652.json": "93b4b7f8607630b370893a90101a8f78f5364e353e4b379a2756986a020452d0",
+    "data/deep_review_20261017/work/goal0028_telegram_receipt_1654.json": "f8ca5434a0a7b3a58538b9395f3e7e0f42c1eb6b183e5f8935610c80f6153e95",
+    "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f",
+    "data/deep_review_20261017/work/status483_490_1638/index.json": "fad651f217064c3d4d6d49abab764e0b33f56df7ee8aabf03a1047d797b3b727",
+    "data/deep_review_20261017/work/status483_490_1638/case_0483.json": "8deff462c22f2a78d9fd401c10c1a0bf523be0a284f2657143c4e8c3364c15da",
+    "data/deep_review_20261017/work/status483_490_1638/case_0484.json": "545ffae601b66c546e2e73944f3edaa6c87bc258398c9ba5ffec7fb8f1ff98a5",
+    "data/deep_review_20261017/work/status483_490_1638/case_0485.json": "ee916a4c38a2ba65c5f371d44ce5b4c0ec89010919eccf5cd5cfbcb899ac3e12",
+    "data/deep_review_20261017/work/status483_490_1638/case_0486.json": "87f1a76f2d234413498ad792f70896c3995bb3f8d2b4c7ce1717eb11e4458cfc",
+    "data/deep_review_20261017/work/status483_490_1638/case_0487.json": "c80dbcc4aea5edc10c54b7b3050dd9cefbc4284e3e22d1962fae21ab4212d6b4",
+    "data/deep_review_20261017/work/status483_490_1638/case_0488.json": "f7b0ec3ef8e494b8baeddd5f49ccc8cd7f56b315b7a7714580aff20a3df11b0e",
+    "data/deep_review_20261017/work/status483_490_1638/case_0489.json": "0379d810b48dec979e36626ade351f458bfc320c52a565b7098499da1a81e043",
+    "data/deep_review_20261017/work/status483_490_1638/case_0490.json": "494a4aebf3dfaecef7d1e8e6d196e6751afdb49c03ff1b32ede99e7af43aab6f"
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "pair": "DOGEUSDT",
+  "source": "Binance Spot API",
+  "units": "daily kline OHLC; open timestamps UTC; price USDT per DOGE",
+  "requested_utc": {
+    "start": "2021-01-01T00:00:00Z",
+    "end_inclusive": "2021-12-31T23:59:59.999Z",
+    "interval": "1d"
+  },
+  "coverage": {
+    "http_status": 200,
+    "rows": 365,
+    "expected_rows": 365,
+    "first_open_utc": "2021-01-01T00:00:00Z",
+    "last_open_utc": "2021-12-31T00:00:00Z",
+    "missing_or_duplicate_day_count": 0,
+    "raw_sha256": "5c537db733c0716ff4ec146df5017d69c42c7d707489e45a3294535f218d42f4",
+    "raw_bytes": 65129,
+    "receipt": "logs/cron20261020T163900Z_case482_2021/receipts/calendar_2021_daily.receipt.json",
+    "retrieved_utc": "2026-10-20T16:37:03.323584Z"
+  },
+  "rolling_75_elapsed_day_close_factor": {
+    "definition": "close[t]/close[t-75], overlapping 75 elapsed UTC intervals",
+    "windows": 290,
+    "max_factor": 12.314190184279065,
+    "max_window_start_utc": "2021-02-21T00:00:00Z",
+    "max_window_end_utc": "2021-05-07T00:00:00Z"
+  },
+  "forward_75d_daily_high_max_over_start_close": {
+    "definition": "max daily high over next 75 UTC daily rows divided by starting close; overlapping windows, not probability",
+    "windows": 290,
+    "max_hitting_metric": 15.526835962581993,
+    "max_window_start_utc": "2021-02-23T00:00:00Z",
+    "max_window_end_utc": "2021-05-09T00:00:00Z"
+  },
+  "daily_high": {
+    "maximum": 0.73995,
+    "date_utc": "2021-05-08T00:00:00Z"
+  },
+  "scope_note": "Historical descriptive extreme context only; calendar 2021 is outside frozen contract window."
+}

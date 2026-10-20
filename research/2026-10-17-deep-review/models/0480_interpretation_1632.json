@@ -1,0 +1,42 @@
+{
+  "schema": "deep_review.primary_interpretation_addendum.v1",
+  "review_index": 480,
+  "created_utc": "2026-10-20T16:29:05.964104+00:00",
+  "parent": "research/2026-10-17-deep-review/models/0480_primary_1629.json",
+  "parent_sha256": "8d997803cd8ce3c4e8e2a6b0d37da6a90c577371d5044ec7c8a0372f7158ab91",
+  "own_quotes_seen": true,
+  "why_addendum": "Priceblindcontrol model preserves strict56% point. Rule is deFactoprimaryauthority, but crediblepress/UMA may treat continuinginstitutional leader asqualifyingwithouttransparentpersonalcommand. Price87.7c is an interpretation warning, not independent calibrated probability or reason to reset strict estimate. Doctrinepricescriterionrisk instead ofassumingenforcement.",
+  "strict_control_p_yes": 0.56,
+  "office_proxy_loose_p_yes": 0.9,
+  "strict_weight": 0.7,
+  "loose_weight": 0.3,
+  "p_yes": 0.662,
+  "p_no": 0.33799999999999997,
+  "broad_yes": [
+    0.25,
+    0.93
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0.462,
+  "selected_no": 0.13799999999999996,
+  "bridge": "Officeproxybranch assumes currentformal/institutionalstatus oftencontinues throughDec31 and maydominateconsensus. 30%looseweight follows doctrine default asconservative uncalibrated scenario, not measuredoraclefrequency. Evenstrictbranch includesitsoriginalrecognitionuncertainty; nevertreatformaloffice ascontractfact.",
+  "competing_loose_weight_sensitivity": [
+    {
+      "weight": 0,
+      "p_yes": 0.56,
+      "selected_no": 0.24
+    },
+    {
+      "weight": 0.3,
+      "p_yes": 0.662,
+      "selected_no": 0.13799999999999996
+    },
+    {
+      "weight": 0.5,
+      "p_yes": 0.73,
+      "selected_no": 0.07
+    }
+  ],
+  "selection_limit": "Thin selectedNOmarginaftermixture, reverseswith50%looseweight/knowncontrol. Conditionalmakerfill canrevealstronger incumbency. Preserveprovisionallead; no certifiedentry or automaticranking.",
+  "uncertainty": "Broad25-93 notCI; primarycontrol/transition andofficeproxy endpointsunfitted. No requirementfor allendpointstofavorentry, but loadbearingcriteria riskcannotbehidden."
+}

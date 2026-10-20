@@ -1,0 +1,71 @@
+{
+  "case_count": 8,
+  "cases": [
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 483,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0483.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 484,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0484.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 485,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0485.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 486,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0486.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 487,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0487.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 488,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0488.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 489,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0489.json"
+    },
+    {
+      "classification": "unknown_primary_review",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 490,
+      "terminal_candidate": false,
+      "unit_path": "data/deep_review_20261017/work/status483_490_1638/case_0490.json"
+    }
+  ],
+  "created_utc": "2026-10-20T16:36:02.536768+00:00",
+  "schema": "deep_review_terminal_status_batch.v1"
+}

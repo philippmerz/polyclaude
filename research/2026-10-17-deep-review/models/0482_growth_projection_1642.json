@@ -1,0 +1,41 @@
+{
+  "schema": "primary_DOGE_log_barrier_sensitivity.v1",
+  "review_index": 482,
+  "created_utc": "2026-10-20T16:40:42.201369+00:00",
+  "data": "data/deep_review_20261017/work/0482_root_data_1640.json",
+  "data_sha256": "ab7096178d6b074fdf5620b7dc4ff632b8a495cee49dae9841bef156e4e6b63d",
+  "generator": "research/2026-10-17-deep-review/models/0482_growth_projection_1642.py",
+  "generator_sha256": "21d632c545bb12f1c2308ec48902784254e3389d060b964be39cf02b968cfb41",
+  "source_asof": "2026-10-20T16:35:04.007394Z",
+  "spot": 0.08106,
+  "barrier": 0.48,
+  "horizon_days": 72.5173147292361,
+  "scenarios": {
+    "ordinary": {
+      "weight": 0.8,
+      "median_terminal_factor": 1.0,
+      "annualized_log_drift": 0.0,
+      "annualized_volatility": 0.7373746436375822,
+      "continuous_hit_probability": 6.251142603953496e-08
+    },
+    "broad_crypto_rally": {
+      "weight": 0.15,
+      "median_terminal_factor": 2.0,
+      "annualized_log_drift": 3.4888043200306336,
+      "annualized_volatility": 1.5,
+      "continuous_hit_probability": 0.07936923443728211
+    },
+    "DOGE_mania": {
+      "weight": 0.05,
+      "median_terminal_factor": 4.0,
+      "annualized_log_drift": 6.977608640061267,
+      "annualized_volatility": 2.0,
+      "continuous_hit_probability": 0.4252719381229699
+    }
+  },
+  "central_mixture": 0.03316903208088164,
+  "weak_rally_mixture": 0.011396006740868523,
+  "strong_rally_mixture": 0.08760159543091445,
+  "method": "Reflection-principle maximum for drifted Brownian log-price, mixed across subjective regimes; not terminal-only digital probability.",
+  "limits": "Unfitted regime weights/conditional drift/volatility. Diffusion misses jumps, leverage feedback and exchange-specific wicks; actual contract uses finalized Binance 1m High. Historical overlapping windows are not independent probability samples. No measured short-horizon bond-tail licence."
+}

@@ -1,0 +1,63 @@
+{
+  "schema": "case0480_control_addendum.v1",
+  "collected_utc": "2026-10-20T16:20:29.877491Z",
+  "scope": "Additive factual evidence on actual/de facto control only; no probability, verdict, trade, or case-record change.",
+  "case": {
+    "review_index": 480,
+    "market_id": "1469737",
+    "condition_id": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+    "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484",
+    "cutoff": "2026-12-31 12:00 PM ET"
+  },
+  "prior_unit": {
+    "path": "data/deep_review_20261017/work/0480_facts_1525.json",
+    "sha256": "9a2d444102c262a293c6383589bd70c94dc8b412ad24ce2cf2b86cf233fd21ed",
+    "sha256_of_criteria": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484"
+  },
+  "new_reads": [
+    {
+      "name": "iranintl_aug19",
+      "url": "https://www.iranintl.com/en/202608192049",
+      "publisher": "Iran International",
+      "published_utc": "2026-08-22T16:04:33.018Z",
+      "modified_utc": "2026-08-22T16:08:36Z",
+      "retrieved_utc": "2026-10-20T16:19:54.236792Z",
+      "http_status": 200,
+      "representation": "http_body",
+      "raw_bytes": 367209,
+      "raw_sha256": "3c91339b6470dae399ec1ca7e75025e418c148bfb0a09d49b4dc021eaa750221",
+      "gzip_sha256": "751154f54e61209e2b9a841b4373fc905afed308c020181c7bca77a68a690bba",
+      "receipt": "logs/deep_review_20261017/case0480_control_1630/iranintl_aug19/iranintl_aug19.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_control_1630/iranintl_aug19/iranintl_aug19.body.json.gz",
+      "findings": [
+        "Article reports that Khamenei had no public appearance; written statements attributed to him and references to his wishes were used to validate policy, while messages permitted negotiations yet also promised retribution and were interpreted differently by officials.",
+        "It reports that senior commanders controlled forces conducting the war and had key decision positions; cites IRGC commander-adviser Ebrahim Jabbari saying Khamenei exercised “command and oversight” and managed expert meetings. The article itself cautions that such claims can present decisions as his orders even when no public directive was issued.",
+        "The article says recent command appointments were made in his name, while commanders had considerable scope to determine which message took precedence. These are reported institutional actions and attribution claims; the body does not independently authenticate Khamenei’s personal direction or establish who exercised primary governing control.",
+        "The report’s publication predates the Sept. 25 Pezeshkian-CBS interview already captured in the prior unit. In that later interview, Pezeshkian claimed he had met Khamenei twice, with the latest meeting lasting over seven hours. That first-person assertion is later but is not independently documented in this record."
+      ]
+    },
+    {
+      "name": "efe_sept7",
+      "url": "https://efe.com/english/other-news/2026-09-07/mojtaba-khamenei-unseen-six-months/",
+      "publisher": "EFE",
+      "attempted_utc": "2026-10-20T16:19:53.804198Z",
+      "http_status": 403,
+      "raw_bytes": 7355,
+      "raw_sha256": "b4b94e6496f82953c3c9d3d25bb482409d0204bf741e0db198b944bfe1409172",
+      "gzip_sha256": "a8bf58755463090194f0cfbd57375bc67038c4c50464efdaa8bf4d2e9675bed9",
+      "receipt": "logs/deep_review_20261017/case0480_control_1630/efe_sept7/efe_sept7.receipt.json",
+      "body": "logs/deep_review_20261017/case0480_control_1630/efe_sept7/efe_sept7.body.json.gz",
+      "limitation": "403; not treated as inspected publisher-body evidence. Search-result description was discovery only."
+    }
+  ],
+  "verified_existing_receipts": "Independently decompressed and recomputed raw and gzip hashes for all five receipts cited in 0480_facts_1525.json and both new response receipts; each matched recorded byte count and hashes.",
+  "assessment_limits": [
+    "Formal appointment and public written statements remain evidence of office/official attribution, not conclusive proof of de facto primary governing control.",
+    "Iran International provides direct reporting/analysis of reported institutional behavior and quotations, but the cited command claims are attributed to Iranian officials; no authenticated Khamenei order, independently observed operational command, or transparent chain of decision was obtained.",
+    "Later CBS interview gives Pezeshkian’s on-record claim of two meetings, most recently over seven hours; it does not independently verify the meeting or demonstrate effective control over armed forces, institutions, and core executive decisions.",
+    "No current constitutional incapacity/removal finding or independently verified public appearance was established by these reads. No evidence of absence is inferred from the unsuccessful EFE retrieval.",
+    "Control status at the Dec. 31 cutoff is unresolved and can materially change; this addendum is a dated snapshot, not a final rule application."
+  ],
+  "read_cap": 3,
+  "public_requests_used": 2
+}

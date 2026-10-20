@@ -1,0 +1,17 @@
+{
+  "review_index": 480,
+  "retrieved_utc": "2026-10-20T16:26:42.928460+00:00",
+  "source_url": "https://www.iranintl.com/en/202608102529",
+  "http_status": 200,
+  "receipt": "logs/deep_review_20261020/case0480_integration_root_1628/integration.receipt.json",
+  "raw_sha256": "d91a3e45d6641907502388ecc7e5e1c3b11db589e94bbe11982c8988bf450162",
+  "publication_date": "Aug10,2026 19:34 GMT+1 per displayed page",
+  "findings": [
+    "Original report describes a decree attributed toMojtaba appointingAliAbdollahi and prioritizing integration of GeneralStaff with KhatamAlAnbiya operationalcommand, plus readiness.",
+    "Report says Abdollahi led operationalcommand and briefedMojtaba inMay; this is journalist reporting of stateinstitutional actions, not root-authenticated order chain or proofintegrationfinished.",
+    "Reported decrees add exercise-of-office evidence beyond ceremonialmessage. Sameunderlying appointmentannouncement asIranPress; do notcount twice as independentcontrol observations."
+  ],
+  "root_selected_article_read": true,
+  "control_limit": "Orderingintegration is not independently observed personalprimarycontrol acrossmilitary/executive/state; currentOct condition remains uncertain.",
+  "prior_bindings": "Root earlier reverifiedall5prior and2addendum receipts; actualCBS p31-40/IranIntlhidden renderedparagraphs read."
+}

@@ -1,0 +1,212 @@
+{
+  "identities": [
+    {
+      "review_index": 478,
+      "market_id": "4425462",
+      "condition_id": "0xf56fe1c53c6acec4bae2c7f221e2a6e4d2f5f1652e1a317deabba975067ca2ac",
+      "criteria_sha256": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe",
+      "status": "valued",
+      "identity_matches_frozen": true,
+      "report_sha256_matches_base_and_receipt": true,
+      "local_markdown_links": 6,
+      "all_local_links_exist": true,
+      "evaluated_utc": "2026-10-20T16:22:22.483317+00:00",
+      "verified_utc": "2026-10-20T16:22:35.274717+00:00"
+    },
+    {
+      "review_index": 479,
+      "market_id": "5720975",
+      "condition_id": "0x16cc8433e563cb5e5effb3fbd44140c4ad1bcc240fedb4b75a40ea7b13cf9b85",
+      "criteria_sha256": "554256c0f8eb3eaa9c52434c69211a6980c4407fcd645f893d10b73a76f2bee7",
+      "status": "excluded_factual",
+      "identity_matches_frozen": true,
+      "report_sha256_matches_base_and_receipt": true,
+      "local_markdown_links": 1,
+      "all_local_links_exist": true,
+      "evaluated_utc": "2026-10-20T16:24:11.194864+00:00",
+      "verified_utc": "2026-10-20T16:24:11.622931+00:00"
+    },
+    {
+      "review_index": 480,
+      "market_id": "1469737",
+      "condition_id": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+      "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484",
+      "status": "valued",
+      "identity_matches_frozen": true,
+      "report_sha256_matches_base_and_receipt": true,
+      "local_markdown_links": 8,
+      "all_local_links_exist": true,
+      "evaluated_utc": "2026-10-20T16:30:06.093663+00:00",
+      "verified_utc": "2026-10-20T16:30:06.752758+00:00"
+    },
+    {
+      "review_index": 481,
+      "market_id": "5194857",
+      "condition_id": "0x225106d573af3ad964c91ba064b74a1531c35ff6862515c405398e0a50567118",
+      "criteria_sha256": "c9d665f94a268ebf07dde8c89643266a2be54c7dd9ebe98c2939e0a98dc9080f",
+      "status": "valued",
+      "identity_matches_frozen": true,
+      "report_sha256_matches_base_and_receipt": true,
+      "local_markdown_links": 9,
+      "all_local_links_exist": true,
+      "evaluated_utc": "2026-10-20T16:34:19.257513+00:00",
+      "verified_utc": "2026-10-20T16:34:19.684912+00:00"
+    }
+  ],
+  "checkpoint_hash_gate": {
+    "checkpoint": {
+      "sha256": "bd82b5d81a2047d482b0f27fef7171da94b9c98e8469dfbae266f50b416a0622",
+      "matches_checkpoint": true
+    },
+    "progress": {
+      "sha256": "7b3f4db0f0ac6ece3db1a600561691a51588d96b98b022e5bdb8b77ad0814431",
+      "matches_checkpoint": true
+    },
+    "frozen_rules_gzip": {
+      "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+      "matches_checkpoint": true
+    },
+    "base_ledger": {
+      "sha256": "38e527fc392787b0b95bc3f1c49665db5af735ed656610ec25e2ae94b5bf7cd7",
+      "matches_checkpoint": true
+    },
+    "revision_ledger": {
+      "sha256": "64aca6d240e71659ee4096847d266fe7462bb7be7330d13dc7f95cdd3ff12d92",
+      "matches_checkpoint": true
+    },
+    "queue_index": {
+      "sha256": "455932bb57aa22e24c9ac759f99451b5bec95f1f95ef13864756789aa9e3e655",
+      "matches_checkpoint": true
+    }
+  },
+  "model_logic": {
+    "478_joint_weights_normalize_and_marginal_matches": true,
+    "480_56_strict_plus_30pct_90_office_proxy_equals_66_2pct": true,
+    "481_joint_cells_normalize_model_hash_and_generator_hash": true,
+    "481_replay_limit": "Same saved475 parameters/seed, newly specified RNG order. Original generator/draw sequence was not saved; this is not an exact replay of475 simulations. Original18% forecast remains unchanged."
+  },
+  "case_specific_findings": {
+    "478": "Global Athletes list and March31 fallback match frozen rule. 17-state joint sums to1 and Joshua marginal matches 23.348%; selected probabilities and two-side economics recompute. Quote set is old (15:00Z) and report explicitly treats it as dated planning, not live clearance.",
+    "479": "Exact closed/nonaccepting/top-level UMA-resolved Gamma state is a venue/route exclusion only; proposed/proposed per-outcome statuses are retained. Report explicitly avoids claiming NOAA temperature or chain finality.",
+    "480": "Frozen criterion requires individual primary de facto control. The final 66.2% uses the explicitly rounded strict 56% draft plus 30% office-proxy 90% branch; arithmetic and 20pp reserve/13.1c NO economics recompute. Appointments are correctly described as reported/attributed, not verified personal operational control. Fee quote shows Gamma feesEnabled=false, exact CLOB fee-free corroboration, with authoritative flag false. Provenance caveat: strict model file timestamp is 16:27:32Z after quote receipt 16:23:30Z, while model metadata attests own_market_quotes_seen=false. Root reports the capture tool stdout exposed only counts/hash/paths and that root first inspected 480 prices after this draft was saved; those are operator-context statements, not independently auditable here. File timestamps alone neither prove nor disprove price blindness. The later interpretation addendum explicitly records quote awareness.",
+    "481": "Frozen upper condition is inclusive >=4.95; case475 lower condition is strict <4.55 and they are not complements. Treasury data is explicitly through Oct19, leaving nine published-date opportunities in that snapshot. Projection cells sum to1 and model/projection/generator hashes match. New RNG order and no exact replay of old draws are clearly disclosed."
+  },
+  "errors": [],
+  "result": "PASS_WITH_PROVENANCE_CAVEAT",
+  "audit_utc": "2026-10-20T16:39:57.164609Z",
+  "scope": "Offline selected-record audit for 478-481 only; no network, full ledgers, forecast updates or actions.",
+  "path_hashes": [
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0478.json",
+      "sha256": "8ebaf4eaf45b67bbacd4c7d5ed7854724cf122553738cbb34e7fc534a7687f1e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0478.md",
+      "sha256": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0478_primary_input_1635.json",
+      "sha256": "aaa1aa3a15067ccca12afc455af2408216684a63bf222f3a8eb8171a37f08a24"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0478_record_verified_1635.json",
+      "sha256": "227650d6d70118f8d722bde4c31b91ddcb104c9e9772d1e5714005802d5ae9bc"
+    },
+    {
+      "path": "data/deep_review_20261017/work/cases475_476_478_quotes_1502.json",
+      "sha256": "843354986c279e25d98f8342990fffb698246cea56accee841a344a724443634"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0478_primary_1631.json",
+      "sha256": "afced71b0121b275f6e8e95f33da9972beef9c189be345d2dbca3ee4d0f92b2e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0479.json",
+      "sha256": "a2e37b2304fe4aad9fea1e06f8a0a07e6cbbdf01f75232827edaeadeee648636"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0479.md",
+      "sha256": "795d05e31c471bc96b4438957f1a6f9f349c08fef4f8049577321032327f6bb5"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0479_primary_input_1626.json",
+      "sha256": "dcf70a533569773119e1e0f73efbd88134ef23d5950f939404143ac9ae042f92"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0479_record_verified_1626.json",
+      "sha256": "10778772a615bf34483bc22e0d7146f40a3bbf7aae946cb5c1c87ff3f7abb029"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0480.json",
+      "sha256": "cae4a5ecf9ac6ae74c88837ec359c8e9301f81af2ec4fd60d9858a75f095ec8e"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0480.md",
+      "sha256": "b5f2e9ce0718bb2228294f64884612a96fef8407fac600d7b1c2f0eb2212ec42"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0480_primary_input_1633.json",
+      "sha256": "f1c66bb4e9503799ff135312f8f7182c185afddacbc329f034a12662e5577579"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0480_record_verified_1633.json",
+      "sha256": "d3707badf6a762f33cbca21bec741292fa2d54e9b898c352559db13568ebdf92"
+    },
+    {
+      "path": "data/deep_review_20261017/work/cases480_481_482_quotes_1624.json",
+      "sha256": "befcf3873459eaeaa6f9d819bcfd5b4e66de61c541c0f0568080c8b430850f0f"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0480_interpretation_1632.json",
+      "sha256": "c8d3b211199554f94ed79fb96aa52b0da737d88891ee55cfbb60fc206cbc991c"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0481.json",
+      "sha256": "9b2014eeadee4553c1fd706356a32f279fba525e139fc56863c9c9f03759a436"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/evaluations/0481.md",
+      "sha256": "f3da8cd64f7e218d574dd385a66c80b47ef57aef3b85cf98bc6a3eb3250585c0"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0481_primary_input_1637.json",
+      "sha256": "9f4d6a869babc55bab51422c4e6715767942d8a9856c4c255e019df0a6f7206b"
+    },
+    {
+      "path": "data/deep_review_20261017/work/0481_record_verified_1637.json",
+      "sha256": "3498d68bb2b7b0bf6f600044966fb790245abcce3bc41ab76253d5555e437fb5"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0481_primary_1636.json",
+      "sha256": "1e5fb4b3a08a4ed49a6f36798d9c68fbd5d8d1579e54dd269d809349c3f79d5a"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0478_joint_states_1631.json",
+      "sha256": "93ffafca513e8af0528f945cde8d0b7beb69b546f0a636ef81e34f52408f822f"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0480_primary_1629.json",
+      "sha256": "8d997803cd8ce3c4e8e2a6b0d37da6a90c577371d5044ec7c8a0372f7158ab91"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0481_joint_projection_1634.json",
+      "sha256": "e079b5c651adb2e60b499b0ba7e9632ad0cc2d04ba2db372e718f067b78210a5"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/models/0481_barrier_projection_1634.py",
+      "sha256": "d7e32df8b94f9286df1bf79be93be166c4341b2cf81b1ad06603535f6b7e9cd5"
+    },
+    {
+      "path": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
+      "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c"
+    },
+    {
+      "path": "research/2026-10-17-deep-review/progress.json",
+      "sha256": "7b3f4db0f0ac6ece3db1a600561691a51588d96b98b022e5bdb8b77ad0814431"
+    },
+    {
+      "path": "notes/deep_review_checkpoint.json",
+      "sha256": "bd82b5d81a2047d482b0f27fef7171da94b9c98e8469dfbae266f50b416a0622"
+    }
+  ]
+}

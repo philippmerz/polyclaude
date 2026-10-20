@@ -1,0 +1,16 @@
+{
+  "verified_utc": "2026-10-20T16:42:55.660574+00:00",
+  "review_index": 482,
+  "status": "valued",
+  "report_sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c",
+  "input_sha256": "ae01398fb948aef7841322d2d16d375842a955c143d55f83828cd4da4fb79f5b",
+  "counts": {
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 380,
+    "pending": 2204,
+    "base_records": 796,
+    "revisions_written": 76
+  },
+  "saved_and_indexed_before_next_case": true
+}

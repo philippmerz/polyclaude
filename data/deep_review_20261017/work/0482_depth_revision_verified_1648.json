@@ -1,0 +1,43 @@
+{
+  "verified_utc": "2026-10-20T16:44:14.416795+00:00",
+  "review_index": 482,
+  "revision": {
+    "kind": "revision",
+    "json_path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.json",
+    "json_sha256": "92bc602ac64a2f295d7b3d198ecbba6348db1019adbe6f344654c7214958e184",
+    "report_sha256": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc",
+    "revision_utc": "2026-10-20T16:44:13.863972+00:00",
+    "reason": "Correct100-shareYESroute prose to actualsaveddepth72at1.4c+28at2.4c, cost1.79549/central1.50451. Originalticketmathalreadycorrect; p/10-shareeconomics/selectednegative/noentry unchanged."
+  },
+  "old_base_report_sha256": "638e20cb8deec54627f994af2812d2457f2db7ea65a4279f2165e646f2550e7c",
+  "new_effective_report": {
+    "path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.md",
+    "sha256": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc"
+  },
+  "actual_depth": {
+    "complete": true,
+    "filled": 100.0,
+    "gross": 1.6800000000000002,
+    "fee": 0.11549,
+    "fills": [
+      {
+        "shares": 72.0,
+        "price": 0.014
+      },
+      {
+        "shares": 28.0,
+        "price": 0.024
+      }
+    ],
+    "net": 1.7954900000000003
+  },
+  "counts": {
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 380,
+    "pending": 2204,
+    "base_records": 796,
+    "revisions_written": 77
+  },
+  "no_forecast_or_financial_change": true
+}

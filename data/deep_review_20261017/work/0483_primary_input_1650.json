@@ -1,0 +1,26 @@
+{
+  "review_index": 483,
+  "market_id": "4761437",
+  "condition_id": "0x2bdf2fca08c68332646a69eaa6d981d08640198a3ef8c07f0ef1c5ae23d80b0d",
+  "criteria_sha256": "69c45133ec15be3a1d9a24b3fd49d750960f2a70e61c34902676559e80e7d480",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactnamedOilers/Utah finalNHLscoreinclOT/shootout(+1winnergoal); postponementwaitscompletion/cancelnomakeup50-50. Fullrule andallvenuefieldsread.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4761437",
+      "observed_utc": "2026-10-20T16:36:02.056872+00:00",
+      "finding": "Rootallfrozenfields/orderedassets/raw+gziphashesmatch. Closed/nonaccepting/top-levelresolved/binaryterminal, peroutcomeproposed retained. No independentmatchresult/chainfinality adopted."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Exactclosedterminalvenue; no independentlyverifiedsportsresult forecast or remainingentryroute."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Neither namedoutcome hasopenexactvenue routeverified; no hypotheticalpricepseudovaluation."
+  },
+  "verdict": "Factualterminalvenueexclusion only.",
+  "reopen_condition": "Exactreopen/clarificationornewlawfulrouteverified, recheckfullrule.",
+  "report_markdown": "# 483 Oilers vs Utah \u2014 exact terminal venue\n\n**Factual exclusion, not a valuation or independently verified NHL result.** Complete frozenrule read: Oct17 10pmET game, finalscore includingOT/shootout; shootoutwinner receivesonegoalforsettlement. Postponementkeepsopenuntilcompletion, outrightcancellationwithoutmakeup50\u201350. NamedoutcomesOilers/Utah remainexact, not renamedYes/No.\n\n[Exactvenueunit](../../../data/deep_review_20261017/work/status483_490_1638/case_0483.json) and [publicGamma](https://gamma-api.polymarket.com/markets/4761437), receivedOct20 16:36:02UTC: rootraw/gziphashes andallfrozenfields/orderedassetsverified, closedtrue/acceptingfalse/top-levelUMAresolved/binaryterminal. Per-outcomestatusarrayproposed/proposed retained; notindependenton-chainfinality. No leagueboxscorequeryorwinnerassertion adopted. Closedexactvenue/no remainingrouteverified; noentry, probability orvaluationcredit. Reopen onlyonverifiedexactreopen/materialclarification oranotherlawfulroute, thenrecheckfullrules.\n"
+}

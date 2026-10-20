@@ -1,0 +1,98 @@
+{
+  "schema": "deep_review.primary_control_model.v1",
+  "review_index": 480,
+  "created_utc": "2026-10-20T16:27:32.332897+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "id": "1469737",
+    "conditionId": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+    "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484"
+  },
+  "target": "Mojtaba personally holds/exercises primarydeFactoIranstateauthority Dec31 12ET=17UTC; formaloffice aloneinsufficient. Noindividualeffectivecontrol=>NoHeadOfState. Consensuscredible reporting.",
+  "p_yes": 0.56,
+  "p_no": 0.44,
+  "unrounded_scenario_p_yes": 0.56088,
+  "broad_range_yes": [
+    0.15,
+    0.85
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0.36,
+  "selected_no": 0.24,
+  "scenarios": [
+    {
+      "state": "Currentprimaryauthority",
+      "weight": 0.6,
+      "p_primary_at_Dec31": 0.78,
+      "p_consensus_recognition_given": 0.96
+    },
+    {
+      "state": "Shareddelegatedauthority_ambiguousprimary",
+      "weight": 0.3,
+      "p_primary_at_Dec31": 0.4,
+      "p_consensus_recognition_given": 0.85
+    },
+    {
+      "state": "Nominalorotherprimarycontrol",
+      "weight": 0.1,
+      "p_primary_at_Dec31": 0.12,
+      "p_consensus_recognition_given": 0.8
+    }
+  ],
+  "forecast_bridge": "FormalMarchappointment, decrees attributed toMojtaba over6militaryposts/integration, reported officialconsultations andcurrentwrittenmessages support authoritycontinuity asbasecase. Lackof transparent personalcommand andreporting ofcommandersinterpreting ambiguousorders leave substantialfigurehead/sharedcontrol probability. Modelingthat uncertainty explicitly is preferableto equatingtitlewithcriterion. Currentauthority branches60/30/10 and72daytransition/consensus factors areprimaryjudgment, notindependentempiricalsurvivalrates. Sum56.088% rounded56.",
+  "competing_sensitivities": {
+    "authority_more_coherent": {
+      "weights": [
+        0.7,
+        0.25,
+        0.05
+      ],
+      "transition": [
+        0.88,
+        0.6,
+        0.2
+      ],
+      "recognition": [
+        0.97,
+        0.9,
+        0.8
+      ],
+      "p_yes": 0.74052
+    },
+    "control_more_fragmented": {
+      "weights": [
+        0.35,
+        0.4,
+        0.25
+      ],
+      "transition": [
+        0.6,
+        0.22,
+        0.05
+      ],
+      "recognition": [
+        0.9,
+        0.7,
+        0.6
+      ],
+      "p_yes": 0.2581
+    }
+  },
+  "limits": [
+    "Issuer/stateattribution plusoriginalreporting isnot independent proof ofpersonaloperationalcommand. ReportedMaybriefing/Augdecrees aredatedindicators, notcurrentOctoberobservations.",
+    "Sept25Pezeshkian asserted meetings/health; unconfirmedpersonally. CurrentOctwrittenmessage supportscontinuingclaimedoffice, not control.",
+    "Delegatingexecution doesnot itselfdisqualifyaprimaryleader; converselynameappearingonordersdoesnot provecontrol. Noofficialinterim/removalnotice verified, notproofabsence.",
+    "20ppreserve above10ppinstance default reflects hiddencontrol/war-transition andbroadconsensus/adjudication/fillrisk; neitherallendpointsnorzerouncertainty demanded.",
+    "Constitution107/111 providesappointment/incapacitycouncil mechanism, not observedactivation. FAOLEXtranslationversionunconfirmed.",
+    "Threats/escalation/injury/council/death/removal/otherindividual control canchange72daypath. Noautomaticgenericdeathrate orthreatcount convertedtohazard.",
+    "No calibratedcontrolclassifier orindependentstatevotes. Reopeningonactualcontrol/delegation evidence; no source-accessfailuretreatedasabsence."
+  ],
+  "sources": [
+    "data/deep_review_20261017/work/0480_facts_1525.json",
+    "data/deep_review_20261017/work/0480_control_addendum_1630.json",
+    "data/deep_review_20261017/work/0480_appointments_facts_1628.json",
+    "data/deep_review_20261017/work/0480_root_control_1628.json"
+  ],
+  "portfolio": "No directcurrentIrancontract identified in15:55holdings; no assumedhedgeagainstMI/AI/Google/Clarity. Commonvenue/liquidity andglobalrisk mayco-move; currentcash isalternative.",
+  "execution_authority": false
+}

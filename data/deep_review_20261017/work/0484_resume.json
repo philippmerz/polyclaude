@@ -1,0 +1,21 @@
+{
+  "review_index": 484,
+  "market_id": "3072316",
+  "condition_id": "0x86049cbc345ce8981afb368c3d19436fd56e90a546ad2df537b1ccafd5c02ade",
+  "criteria_sha256": "f27bc8cf625f3ca1327491d9742fcdab1d398030d7f477f31d8bb127d66dd197",
+  "updated_utc": "2026-10-20T16:48:16.914403+00:00",
+  "status": "pending_orientation_only",
+  "source_paths": [
+    "work/tick134616_primary_source_review.json",
+    "work/status483_490_1638/case_0484.json"
+  ],
+  "family_model_paths": [
+    "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json"
+  ],
+  "family_check": "Frozen484/412descriptionsbyte-identical;484>=60, held412>=55 undercommonMoonshotKimi/HLEAccuracy/Dec31ETsource, so60subset55. Do notcopy55p, olderentry/pullinstructions or calibrationerror.",
+  "next_primary_work": [
+    "start484beforeanalysis; runresume412foreffectiveholdingrevision and484fullrule; inspectlastofficialHLEscore/capture withactualdate andmodelrows.",
+    "Owncompatiblethresholdjointforecast/range/bothsideeconomicsunfinished. Frozen484fullrulereadfororientationonly, no forecast/valuationcredit."
+  ],
+  "no_execution_authority": true
+}

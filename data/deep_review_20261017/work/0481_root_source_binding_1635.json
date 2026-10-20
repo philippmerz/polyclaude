@@ -1,0 +1,46 @@
+{
+  "review_index": 481,
+  "verified_utc": "2026-10-20T16:32:43.556019+00:00",
+  "verified_receipts": [
+    {
+      "unit": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "received_utc": "2026-10-20T13:17:25.282656Z",
+      "raw_sha256": "e8a7bc531800f0ca6d80bdedbc9ff7c0c91b881ce42eb1e51ecce84453467107"
+    },
+    {
+      "unit": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "received_utc": "2026-10-20T13:17:25.695601Z",
+      "raw_sha256": "58e4e3b030ddddc74d3426e77d576f41c841a4e91a33d03d89937ec6eea0ae08"
+    },
+    {
+      "unit": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "received_utc": "2026-10-20T15:00:27.829885Z",
+      "raw_sha256": "5c35a7f93e3a816b1aff010496d8cedbfd30ede8fc02c90fd10b31d1be69a21f"
+    },
+    {
+      "unit": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "url": "https://www.bea.gov/news/schedule",
+      "received_utc": "2026-10-20T15:00:28.642057Z",
+      "raw_sha256": "a07ad750a3515b2dcf95e35fba43fa649d4374ffd8f98a663adf55dc80a31f1b"
+    },
+    {
+      "unit": "data/deep_review_20261017/work/0475_macro_catalyst_addendum_1500.json",
+      "url": "https://www.bls.gov/schedule/2026/",
+      "received_utc": "2026-10-18T23:11:37.323858+00:00",
+      "raw_sha256": "1bfb9d805fb7b419504962aa22773506b558534daac3b47d72c9de99fd16acac"
+    },
+    {
+      "unit": "data/deep_review_20261017/work/0475_cpi_addendum_1503.json",
+      "url": "https://www.bls.gov/news.release/archives/cpi_10142026.htm",
+      "received_utc": "2026-10-20T15:02:30.963128Z",
+      "raw_sha256": "b9f981390c08f4a530d839495fce582124015b979bac0398bfcc35ffde0544e4"
+    }
+  ],
+  "treasury": "Rootparsedall200CSVrows, latestOct19 4.77; inwindowmax4.84 no>=4.95. SharedHTML/CSValreadybound unit0481. Rootwebreopenedofficialtablecurrentturn.",
+  "distance_note": "Historicalmax4.84 was11bpbelowthreshold; simulationstarts latest4.77,18bp tofirstdisplayed4.95. Do notusethathistoricalmaxastodaysstartingyield.",
+  "known_not_surprise": "SeptemberFOMChike25bp/SEP andSepCPIpublishedOct14wereknownbeforeOct19yield; retainedweights, no duplicatedinflationshock.",
+  "reproducibility": "Original475generator wasnotpersisted; newjointgenerator saved withsource/parameter/codehashes, sameparamsbutnewdocumentedRNGorder, notexactoriginaldrawreplay."
+}

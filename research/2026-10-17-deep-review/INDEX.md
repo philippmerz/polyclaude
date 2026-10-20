@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T15:17:22.397164+00:00
+Updated: 2026-10-20T16:45:16.578605+00:00
 
-**396 valuations saved; first milestone100:** 396 valued; 16 blocked after in-depth review. 379 factual exclusions separately; 2209 pending.
+**400 valuations saved; first milestone100:** 400 valued; 16 blocked after in-depth review. 381 factual exclusions separately; 2203 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -489,6 +489,12 @@ Each report below is written before moving to the next evaluation. Related contr
 |475|[Will the 2-year Treasury yield dip below 4.55% in October?](evaluations/0475.md)|valued|No selected-positive currentquote; YES10cost4.14131selected−3.84131/NO8.94895selected−2.24895 beforecarry. Topaskthin,408sbooksstale, UMAstatusabsent. NoBUYunder600pause.|
 |476|[GTA VI released by November 30?](evaluations/0476.md)|valued|ProvisionalNOdelay-tail central+.61218/10shares butselectednegative, stale197sbooks and privateproductionfillrisk. NO30routecost1.16345 not$0.37paperdust. No currentrobustentry or600selection.|
 |477|[UAE Tri-Nations ODIs: Bangladesh vs Zimbabwe](evaluations/0477.md)|excluded_factual|Factualclosedvenueexclusion, notvaluation.|
+|478|[Will Anthony Joshua rank in Google’s Top 5 Most Searched Athletes of 2026?](evaluations/0478.md)|valued|ProvisionalYEScentral+.97825/10shares butselected-1.02175; NOcentral/selectednegative. Maker12at9cselectednegative, privateGooglefillrisk unmeasured. No entry/600comparativeselection.|
+|479|[Will the highest temperature in Jeddah be 35°C on October 17?](evaluations/0479.md)|excluded_factual|Factualclosedvenueexclusion, not valuation/NOAA result proof.|
+|480|[Will Mojtaba Khamenei be head of state in Iran end of 2026?](evaluations/0480.md)|valued|ProvisionalNO selected+.07/10at13.1c beforecarry/funding, maker12.3c+.15; criterion/hiddencontrol/fillriskloadbearing, loose50reverses. Compareafter600, noentrycertified.|
+|481|[Will the 2-year Treasury yield hit 4.95% in October?](evaluations/0481.md)|valued|Bothsidecentral/selectedtakernegative; makerYES19/NO74 selectednegative. No entry, sharedratefactor/jumps/sourceandfillrisk explicit.|
+|482|[Will Dogecoin reach $0.48 by December 31, 2026?](revisions/0482_20261020T164413862661Z.md)|valued|Central-onlyYES taillead; actual100shareswalkcost1.79549 central+1.50451 butselectednegative. NOcentralnegative. No measuredconditionaltail/short-regimebondlicence;600pause unchanged.|
+|483|[Oilers vs. Utah](evaluations/0483.md)|excluded_factual|Factualterminalvenueexclusion only.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
@@ -803,5 +809,3 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
-
-Active indices: 478

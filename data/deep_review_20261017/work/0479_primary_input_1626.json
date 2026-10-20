@@ -1,0 +1,26 @@
+{
+  "review_index": 479,
+  "market_id": "5720975",
+  "condition_id": "0x16cc8433e563cb5e5effb3fbd44140c4ad1bcc240fedb4b75a40ea7b13cf9b85",
+  "criteria_sha256": "554256c0f8eb3eaa9c52434c69211a6980c4407fcd645f893d10b73a76f2bee7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full NOAAOEJNhighestTempOct17Celsius/wholedegrees; nextdaydeadline/firstnextdaypoint, WUfallback/nodatalowestbracket; source-error7daycorrection/clarification and revisioncutoff read. No independenttemperatureassertion.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720975",
+      "observed_utc": "2026-10-20T14:48:27.157146+00:00",
+      "finding": "Exactidentity/fullrules/orderedassets and raw/gziphashes verified; closedtrue/acceptingfalse/top-levelUMAresolved/binaryterminal. Peroutcomearrayproposed retained."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Exactclosedterminalvenue with no remaining route verified; not market-outcome forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_route": "Closed/nonaccepting exactvenue; no quote/alternate route asserted."
+  },
+  "verdict": "Factualclosedvenueexclusion, not valuation/NOAA result proof.",
+  "reopen_condition": "Exactvenueverifiedreopen/sourceclarificationor anotherlawfulroute; reread fullrule/currentstatus.",
+  "report_markdown": "# 479 Jeddah high35\u00b0C Oct17 \u2014 exact terminal venue, no new entry route\n\n**Factual exclusion; no probability/valuation credit.** At14:48:27UTC Oct20 the exact public Gamma record is closed, not accepting orders and top-levelUMA-resolved with binaryterminal prices. Root verified complete frozen identity, description, question and orderedtokens/outcomes against raw/gzip hashes. Per-outcome status array remains proposed/proposed; this record is venue status, not independent chain finality or a measured35\u00b0C observation.\n\nFull rule read: NOAA KingAbdulaziz airport OEJN, highest Temp-column reading forOct17 in Celsius/whole-degree precision. If NOAA unavailable bynextday23:59ET useWeatherUnderground DailyObservations; ifnodata atdeadline lowestbracket. Resolveonfirstfollowing-date datapoint or nextdaydeadline, whicheverfirst. Revisions stopatfirstfollowing-date datapoint. A clearly erroneous/operationally compromised source permits an up-to7calendar-day correctionwindow and possibleclarification; not permission to substitute anotherstation or infer a temperature from venueprices.\n\n[Exactstatusunit](../../../data/deep_review_20261017/work/status473_479_1451/case_0479.json) binds original[Gamma](https://gamma-api.polymarket.com/markets/5720975) receipt/rawbytes. [SpecifiedNOAA source](https://www.weather.gov/wrh/timeseries?site=oejn) was identified from fullrules, not queried to assert an independent weatheroutcome. No trades, forecast, opinion-based screen, position or alternate route claimed. Reopen onlyif exactvenueactuallyreopens/materialruleclarification oranotherlawfulroute is verified; source correctionclause alone doesnotestablishanopenroute.\n"
+}

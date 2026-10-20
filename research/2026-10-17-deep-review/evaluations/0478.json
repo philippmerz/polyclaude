@@ -1,0 +1,162 @@
+{
+  "review_index": 478,
+  "market_id": "4425462",
+  "condition_id": "0xf56fe1c53c6acec4bae2c7f221e2a6e4d2f5f1652e1a317deabba975067ca2ac",
+  "criteria_sha256": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe",
+  "status": "valued",
+  "literal_analysis": "Official2026 GoogleGlobalAthletes rank1-5 forAnthonyJoshua; specifiedlist source regardlessnavigation. Earlylistsettles, missinglistMar31,2027 23:59ET=>NO; metadataDec31 not fallback. Exactdescriptionfamily210/406.",
+  "evidence": [
+    {
+      "url": "https://www.youtube.com/watch?v=BHVkoYIfBds",
+      "observed_utc": "2026-10-20T15:10:46.497089Z",
+      "finding": "Root actual attributed description/channel hashverified: July25 Jeddah comeback; not current health."
+    },
+    {
+      "url": "https://www.matchroomboxing.com/events/fury-vs-joshua/",
+      "observed_utc": "2026-10-20T15:10:46.675984Z",
+      "finding": "OfficialDec11scheduledbout, recheckedwebthisturn, notfutureoutcome."
+    },
+    {
+      "url": "https://trends.withgoogle.com/year-in-search/data-methodology/",
+      "observed_utc": "2026-10-20T00:12:03.677406Z",
+      "finding": "2025growthJan-Nov25vs2024, not2026fixedcutoff/volume; originalactualcardCrawford1/Pacquiao6."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.23348,
+    "low": 0.03,
+    "high": 0.7,
+    "actual_entry_reserve_pp": 20,
+    "method": "Primary compatible17-state Top5 extension, conditional15/20/27/35%; namedmargins retained, normalization/remaining slots verified.",
+    "reasoning": "July25 knockdown/comeback plus first-party Fury promotion provide international 2026 search catalysts. Boxing has made historical GlobalTop5, but Pacquiao6 shows an internationally salient return can miss. Dec11 Fury fight lies after the2025 Nov25 cutoff precedent; 2026 cutoff unknown, promotion before cutoff may count. Weight Joshua lower when Messi/McGregor/Liu occupy slots, without assuming Top5 independence. Central23.348% is computation of explicit qualitative judgments, reported about23%, not measured precision or Google rank estimate.",
+    "model": "research/2026-10-17-deep-review/models/0478_primary_1631.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases475_476_478_quotes_1502.json",
+    "quote_file_sha256": "843354986c279e25d98f8342990fffb698246cea56accee841a344a724443634",
+    "quote_capture_utc": "2026-10-20T15:00:38.488170+00:00",
+    "gamma_received_utc": "2026-10-20T15:00:38.384638+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 60.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.05,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.23348,
+        "selected_stress_probability": 0.03347999999999998,
+        "best_bid": 0.09,
+        "best_ask": 0.13,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792508414028",
+        "book_received_utc": "2026-10-20T15:00:38.487173+00:00",
+        "book_age_seconds_at_receipt": 24.45917296409607,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.3,
+            "fee": 0.05655,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.13
+              }
+            ],
+            "net": 1.3565500000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.8999999999999999,
+            "fee": 0.04096,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.8590399999999999
+          }
+        },
+        "taker_cost_usd": 1.3565500000000001,
+        "central_expected_profit_usd": 0.9782499999999998,
+        "selected_stress_profit_usd": -1.0217500000000004,
+        "break_even_before_carry": 0.13565500000000003,
+        "break_even_constant_carry": 0.13635998482703393,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.76652,
+        "selected_stress_probability": 0.5665199999999999,
+        "best_bid": 0.87,
+        "best_ask": 0.91,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792508414028",
+        "book_received_utc": "2026-10-20T15:00:38.487173+00:00",
+        "book_age_seconds_at_receipt": 24.45917296409607,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.1,
+            "fee": 0.04095,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.91
+              }
+            ],
+            "net": 9.14095
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.7,
+            "fee": 0.05655,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.87
+              }
+            ],
+            "net": 8.64345
+          }
+        },
+        "taker_cost_usd": 9.14095,
+        "central_expected_profit_usd": -1.4757500000000006,
+        "selected_stress_profit_usd": -3.4757500000000014,
+        "break_even_before_carry": 0.914095,
+        "break_even_constant_carry": 0.9188454559763191,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalYEScentral+.97825/10shares butselected-1.02175; NOcentral/selectednegative. Maker12at9cselectednegative, privateGooglefillrisk unmeasured. No entry/600comparativeselection.",
+  "reopen_condition": "Official2026method/list, measuredJoshuagrowth/aliases or materialboutupdates; freshbothside/conditionalfill/carry comparative review after600.",
+  "evaluated_utc": "2026-10-20T16:22:22.483317+00:00",
+  "question": "Will Anthony Joshua rank in Google’s Top 5 Most Searched Athletes of 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 478,
+  "report_sha256": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752"
+}

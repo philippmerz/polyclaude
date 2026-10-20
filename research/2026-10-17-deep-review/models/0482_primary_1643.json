@@ -1,0 +1,46 @@
+{
+  "schema": "primary_DOGE_threshold_model.v1",
+  "review_index": 482,
+  "created_utc": "2026-10-20T16:41:34.444221+00:00",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "id": "701709",
+    "conditionId": "0x98ed458e28f6e297af38142cd8c33dd0d0569e3ad2b485376774dc5ebb28f808",
+    "criteria_sha256": "528b661fdc2a71993e017df1a0611e39a58ce7299821752fa9122bd6a8819ec5"
+  },
+  "p_yes": 0.033,
+  "p_no": 0.967,
+  "range_yes": [
+    0.001,
+    0.25
+  ],
+  "actual_entry_reserve_pp": 20,
+  "selected_yes": 0,
+  "selected_no": 0.767,
+  "projection": "research/2026-10-17-deep-review/models/0482_growth_projection_1642.json",
+  "projection_sha256": "98e3d5fb3fefc11c44d3b3ad2b032e67d45bea6b5cc246a5f5a4f84bc62c94e6",
+  "unrounded_mixture": 0.03316903208088164,
+  "forecast_bridge": "Currentexactpairpartialprice.08106 needs5.9215x to.48 in72.517days. Ordinary80% regime flatmedian/current60dayvol73.74% givesnegligiblediffusionhit;15%broad-rally median2x/vol150% and5%DOGEmania median4x/vol200% give7.94%/42.53%conditionalhit, totaling3.3169%, rounded3.3. Historical2021 forward75dhigh/start-close15.53x shows6xnotimpossible;2024-25close75max4.36xshowsrallyscale, neitherfrequencyisacurrentprobability.",
+  "competing_sensitivities": {
+    "weak_rally": 0.011396006740868523,
+    "strong_rally": 0.08760159543091445
+  },
+  "limits": [
+    "Weightsandbullregimeparametersareprimaryunfittedjudgment; no verifiednear-termDOGEspecificcatalystinthisboundedsource set, notglobalabsenceproof.",
+    "Actualresolution isfinalBinanceDOGEUSDT1mHigh, so intraminutewickcounts; diffusionmaximumapproximatescrossing butmissesjumps/leverage/USDTdislocation orsourceanomalies. Nootherpair/venuepricecanqualify.",
+    "2021/2024highs areoutsideNov24,2025start. Partialstartdaychecked1m; 329fulldays+Oct20formingdailyhighboundcapturedpastonly. No finalNOclaim.",
+    "Recomputedcurrentrecent60vol.73737/90.66251 throughOct19; earlierhistoryunit60/90endedNov24,2025 andisnotcurrent. Independentraw/queryhashesverified.",
+    "BroadYES0.1-25%notCI. 20ppanalyticstress reflectsregimes, historicalselection, source/microstructure andconditionalfillrisk, not a bondeclaration.",
+    "Measuredshort-regimebond-taillicence notestablished:72day6xmaniaweightisnotfirsthandtailmeasurement. Flat20ppstresshereisplanning, not substitute forexecutiontailgate.",
+    "No ownGoogle/AI/politicalhedge inferred. No directDOGEcurrentholding, butoverallcrypto/liquidity/oracle/collateralriskandcashalternative apply.",
+    "No marketodds/impliedvolusedinforecast; subsequentquotesareconditional economics only."
+  ],
+  "source_units": [
+    "data/deep_review_20261017/work/0482_facts_1630.json",
+    "data/deep_review_20261017/work/0482_history_addendum_1636.json",
+    "data/deep_review_20261017/work/0482_2021_context_1639.json",
+    "data/deep_review_20261017/work/0482_root_data_1640.json",
+    "data/deep_review_20261017/work/0482_root_query_1643.json"
+  ],
+  "execution_authority": false
+}

@@ -1,0 +1,98 @@
+{
+  "schema": "primary_joint_daily_barrier_projection.v1",
+  "review_index": 481,
+  "created_utc": "2026-10-20T16:32:43.159295+00:00",
+  "seed": 47520261020,
+  "generator": "research/2026-10-17-deep-review/models/0481_barrier_projection_1634.py",
+  "generator_sha256": "d7e32df8b94f9286df1bf79be93be166c4341b2cf81b1ad06603535f6b7e9cd5",
+  "csv_receipt": "logs/deep_review_20261017/case475_treasury_csv_1455/treasury_csv_2026.receipt.json",
+  "csv_raw_sha256": "0c314f652a54469083e629e2548276a9fe11adad16a0e0e194c480e3d308d71d",
+  "source_observed_through": "2026-10-19",
+  "prior_parameters": "research/2026-10-17-deep-review/models/0475_firstpass_sensitivity_1503.json",
+  "prior_parameters_sha256": "5fad849831ac0c660c15a9c5b70eed8e06e49f08de6f81c25c59723dfa55c308",
+  "paths_per_scenario": 80000,
+  "daily_observations": 9,
+  "start_yield_pct": 4.77,
+  "barriers": "Published lower<4.55 (latent<4.545), upper>=4.95 (latent>=4.945); daily observations, not intraday.",
+  "scenarios": {
+    "historical60_iid": {
+      "both": 1.25e-05,
+      "lower_only": 0.0421125,
+      "upper_only": 0.3049625,
+      "neither": 0.6529125,
+      "p_lower": 0.042125,
+      "p_upper": 0.304975,
+      "upper_mc_standard_error": 0.0016277486345217741
+    },
+    "flat_centered60": {
+      "both": 1.25e-05,
+      "lower_only": 0.0973625,
+      "upper_only": 0.2045625,
+      "neither": 0.6980625,
+      "p_lower": 0.097375,
+      "p_upper": 0.204575,
+      "upper_mc_standard_error": 0.0014262015520912533
+    },
+    "ordinary_hawkish": {
+      "both": 2.5e-05,
+      "lower_only": 0.0682875,
+      "upper_only": 0.28365,
+      "neither": 0.6480375,
+      "p_lower": 0.0683125,
+      "p_upper": 0.283675,
+      "upper_mc_standard_error": 0.0015937514485287537
+    },
+    "routine_dovish_reprice": {
+      "both": 0.0011625,
+      "lower_only": 0.3537375,
+      "upper_only": 0.133575,
+      "neither": 0.511525,
+      "p_lower": 0.3549,
+      "p_upper": 0.1347375,
+      "upper_mc_standard_error": 0.0012071832198021456
+    },
+    "growth_panic": {
+      "both": 0.024225,
+      "lower_only": 0.7115125,
+      "upper_only": 0.108925,
+      "neither": 0.1553375,
+      "p_lower": 0.7357375,
+      "p_upper": 0.13315,
+      "upper_mc_standard_error": 0.0012011508934143122
+    },
+    "inflationary": {
+      "both": 0.0003625,
+      "lower_only": 0.037375,
+      "upper_only": 0.5664375,
+      "neither": 0.395825,
+      "p_lower": 0.0377375,
+      "p_upper": 0.5668,
+      "upper_mc_standard_error": 0.0017519195186994178
+    },
+    "high_volatility_no_jump": {
+      "both": 0.0122375,
+      "lower_only": 0.298675,
+      "upper_only": 0.395275,
+      "neither": 0.2938125,
+      "p_lower": 0.3109125,
+      "p_upper": 0.4075125,
+      "upper_mc_standard_error": 0.0017372609991871905
+    }
+  },
+  "weights": {
+    "ordinary_hawkish": 0.65,
+    "routine_dovish_reprice": 0.2,
+    "growth_panic": 0.08,
+    "inflationary": 0.07
+  },
+  "mixture": {
+    "both": 0.0022121249999999997,
+    "lower_only": 0.174671625,
+    "upper_only": 0.25945212500000003,
+    "neither": 0.5636641250000001,
+    "p_lower": 0.17688375,
+    "p_upper": 0.26166425000000004
+  },
+  "replay_limit": "Same saved475 parameters/seed, newly specified RNG order. Original generator/draw sequence was not saved; this is not an exact replay of475 simulations. Original18% forecast remains unchanged.",
+  "model_limits": "Subjective regime weights/jumps, non-IID historical changes and volatility clustering. MC error is computation only, not probability calibration. Both barriers can hit on one path; not exclusive complements."
+}

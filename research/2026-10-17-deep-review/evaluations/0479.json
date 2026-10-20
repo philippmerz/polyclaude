@@ -1,0 +1,30 @@
+{
+  "review_index": 479,
+  "market_id": "5720975",
+  "condition_id": "0x16cc8433e563cb5e5effb3fbd44140c4ad1bcc240fedb4b75a40ea7b13cf9b85",
+  "criteria_sha256": "554256c0f8eb3eaa9c52434c69211a6980c4407fcd645f893d10b73a76f2bee7",
+  "status": "excluded_factual",
+  "literal_analysis": "Full NOAAOEJNhighestTempOct17Celsius/wholedegrees; nextdaydeadline/firstnextdaypoint, WUfallback/nodatalowestbracket; source-error7daycorrection/clarification and revisioncutoff read. No independenttemperatureassertion.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720975",
+      "observed_utc": "2026-10-20T14:48:27.157146+00:00",
+      "finding": "Exactidentity/fullrules/orderedassets and raw/gziphashes verified; closedtrue/acceptingfalse/top-levelUMAresolved/binaryterminal. Peroutcomearrayproposed retained."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Exactclosedterminalvenue with no remaining route verified; not market-outcome forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "entry_route": "Closed/nonaccepting exactvenue; no quote/alternate route asserted."
+  },
+  "verdict": "Factualclosedvenueexclusion, not valuation/NOAA result proof.",
+  "reopen_condition": "Exactvenueverifiedreopen/sourceclarificationor anotherlawfulroute; reread fullrule/currentstatus.",
+  "evaluated_utc": "2026-10-20T16:24:11.194864+00:00",
+  "question": "Will the highest temperature in Jeddah be 35°C on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 479,
+  "report_sha256": "795d05e31c471bc96b4438957f1a6f9f349c08fef4f8049577321032327f6bb5"
+}

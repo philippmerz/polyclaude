@@ -46,6 +46,10 @@ Research records do not authorize execution. Any later action needs current exac
 
 For saved-quote math use `scripts/deep_review_economics.py` with an explicit packet path. Gamma economics fields and books must bind to hash-verified raw receipts; [binding audit](gamma_binding_audit_2226.md). Book age uses its matching CLOB response, never Gamma time. [Clock erratum](quote_clock_audit_2145.md) covers older helper output; prices/probabilities stay unchanged and material corrections append.
 
+When computed projections carry a forecast, save the small generator with source/configuration hashes and any seed. Parameters and a seed alone do not establish the draw order or an exact replay. Distinguish computational error from model uncertainty; preserve prior results when a new projection uses newly specified draws. [Joint-yield example](models/0481_joint_projection_1634.json).
+
+Generate intended-ticket prose from its saved depth walk, including every consumed level and fee. A best ask times a larger quantity is not a ticket quote. [Append-only DOGE correction](revisions/0482_20261020T164413862661Z.md) preserves the original report and already-correct walk.
+
 ## Records and progress
 
 Every case starts pending. Use `scripts/deep_review_ledger.py start --index N` before work. The start guard permits resuming the same unfinished case and rejects a different case until active work has a completed record; a failed record call does not permit advancing. After each finished case—not a batch—save the primary-authored input and run `record --input PATH`. This writes immutable base JSON/Markdown, append-only ledger, effective index, progress, and checkpoint. Partial work stays in bounded work/source directories. Verify saved identity, hashes, status, and checkpoint before moving on.

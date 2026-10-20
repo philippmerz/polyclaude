@@ -1,0 +1,30 @@
+{
+  "review_index": 483,
+  "market_id": "4761437",
+  "condition_id": "0x2bdf2fca08c68332646a69eaa6d981d08640198a3ef8c07f0ef1c5ae23d80b0d",
+  "criteria_sha256": "69c45133ec15be3a1d9a24b3fd49d750960f2a70e61c34902676559e80e7d480",
+  "status": "excluded_factual",
+  "literal_analysis": "ExactnamedOilers/Utah finalNHLscoreinclOT/shootout(+1winnergoal); postponementwaitscompletion/cancelnomakeup50-50. Fullrule andallvenuefieldsread.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4761437",
+      "observed_utc": "2026-10-20T16:36:02.056872+00:00",
+      "finding": "Rootallfrozenfields/orderedassets/raw+gziphashesmatch. Closed/nonaccepting/top-levelresolved/binaryterminal, peroutcomeproposed retained. No independentmatchresult/chainfinality adopted."
+    }
+  ],
+  "forecast": {
+    "not_estimated": true,
+    "reason": "Exactclosedterminalvenue; no independentlyverifiedsportsresult forecast or remainingentryroute."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Neither namedoutcome hasopenexactvenue routeverified; no hypotheticalpricepseudovaluation."
+  },
+  "verdict": "Factualterminalvenueexclusion only.",
+  "reopen_condition": "Exactreopen/clarificationornewlawfulrouteverified, recheckfullrule.",
+  "evaluated_utc": "2026-10-20T16:45:16.318647+00:00",
+  "question": "Oilers vs. Utah",
+  "valuation_author": "primary_operator",
+  "original_index": 483,
+  "report_sha256": "3e6c6cbebcf3ff9830adcb221ba0276a5329005a66299f33d61b3468410e34a1"
+}

@@ -1,0 +1,86 @@
+{
+  "scope": "offline binding for previously captured Binance public DOGEUSDT source reads",
+  "hash_algorithm": "SHA-256 over UTF-8 bytes of parameters sorted by key and serialized as key=value pairs joined with &; values use Python string form as supplied to httpx; no URL encoding in this binding string",
+  "query_bindings": {
+    "first_partial_day_1m": {
+      "endpoint": "/api/v3/klines",
+      "params": {
+        "symbol": "DOGEUSDT",
+        "interval": "1m",
+        "startTime": 1764017100000,
+        "endTime": 1764028799999,
+        "limit": 1000
+      },
+      "canonical_query_utf8": "endTime=1764028799999&interval=1m&limit=1000&startTime=1764017100000&symbol=DOGEUSDT",
+      "query_sha256_recomputed": "35b610f3439e007a46078d94e07d65d3c024e41f2198b58e35eb55bd4bdaea74",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "35b610f3439e007a46078d94e07d65d3c024e41f2198b58e35eb55bd4bdaea74"
+    },
+    "daily_high_bound": {
+      "endpoint": "/api/v3/klines",
+      "params": {
+        "symbol": "DOGEUSDT",
+        "interval": "1d",
+        "startTime": 1764028800000,
+        "endTime": 1792454399999,
+        "limit": 1000
+      },
+      "canonical_query_utf8": "endTime=1792454399999&interval=1d&limit=1000&startTime=1764028800000&symbol=DOGEUSDT",
+      "query_sha256_recomputed": "bbf2eafba068b1a7cf38713753b14beef4fbe82efa8e002b7412793a7573f340",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "bbf2eafba068b1a7cf38713753b14beef4fbe82efa8e002b7412793a7573f340"
+    },
+    "latest_price": {
+      "endpoint": "/api/v3/ticker/price",
+      "params": {
+        "symbol": "DOGEUSDT"
+      },
+      "canonical_query_utf8": "symbol=DOGEUSDT",
+      "query_sha256_recomputed": "2b6f213119192bd1749c31141b44ca6f035a70460d17b999229ee5361ee07a52",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "2b6f213119192bd1749c31141b44ca6f035a70460d17b999229ee5361ee07a52"
+    },
+    "historical_daily_2024_to_2025-11-24": {
+      "endpoint": "/api/v3/klines",
+      "params": {
+        "symbol": "DOGEUSDT",
+        "interval": "1d",
+        "startTime": 1704067200000,
+        "endTime": 1764028799999,
+        "limit": 1000
+      },
+      "canonical_query_utf8": "endTime=1764028799999&interval=1d&limit=1000&startTime=1704067200000&symbol=DOGEUSDT",
+      "query_sha256_recomputed": "ecccff7f523e72af43dcb33b1e029112ef08ce07513ff45c47497572230f643e",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "ecccff7f523e72af43dcb33b1e029112ef08ce07513ff45c47497572230f643e"
+    },
+    "oct20_partial_daily": {
+      "endpoint": "/api/v3/klines",
+      "params": {
+        "symbol": "DOGEUSDT",
+        "interval": "1d",
+        "startTime": 1792454400000,
+        "limit": 1
+      },
+      "canonical_query_utf8": "interval=1d&limit=1&startTime=1792454400000&symbol=DOGEUSDT",
+      "query_sha256_recomputed": "b5cdcd420841db37b98755025f0e27e7404da0f1efd74ad2e3d0e47336e0ef92",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "b5cdcd420841db37b98755025f0e27e7404da0f1efd74ad2e3d0e47336e0ef92"
+    },
+    "calendar_2021_daily": {
+      "endpoint": "/api/v3/klines",
+      "params": {
+        "symbol": "DOGEUSDT",
+        "interval": "1d",
+        "startTime": 1609459200000,
+        "endTime": 1640995199999,
+        "limit": 1000
+      },
+      "canonical_query_utf8": "endTime=1640995199999&interval=1d&limit=1000&startTime=1609459200000&symbol=DOGEUSDT",
+      "query_sha256_recomputed": "45a92464319441c744a8d91ca480219b6a7a335638b9bbf38609d56fc26229b2",
+      "matches_receipt_intent_hash": true,
+      "receipt_intent_query_sha256": "45a92464319441c744a8d91ca480219b6a7a335638b9bbf38609d56fc26229b2"
+    }
+  },
+  "note": "These request metadata bind public pair and requested windows to raw receipt hashes. No account/credential data; no network calls."
+}

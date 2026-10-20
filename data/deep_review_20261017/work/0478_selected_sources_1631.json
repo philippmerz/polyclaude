@@ -1,0 +1,40 @@
+{
+  "review_index": 478,
+  "verified_utc": "2026-10-20T16:20:58.905846+00:00",
+  "sources": [
+    {
+      "receipt": "logs/deep_review_20261020/case0478_facts_1515/joshua_result/joshua_result.receipt.json",
+      "raw_sha256": "e5bdb4165b7eb11a3d555e30b1e99cda540dea04f7c3fc03e18da575fc406f0c",
+      "received_utc": "2026-10-20T15:10:46.497089Z",
+      "status": 200,
+      "selected_path": "ytInitialData.contents.twoColumnWatchNextResults.results.results.contents.videoSecondaryInfoRenderer.attributedDescription.content",
+      "owner_channel_verified": "UC7LReVje9aPB4B6XAsXX8WQ",
+      "actual_description_read": true,
+      "finding": "Promoter describes two Joshua knockdowns followed by round-two comeback against Prenga at Jeddah on July25,2026. Descriptive result evidence, not October health proof. April planned Riyadh differs from actual described Jeddah.",
+      "youtube_limit": "HTML generic title/canonical and player details unavailable; actual initial-data attributed description and owner were inspected instead."
+    },
+    {
+      "receipt": "logs/deep_review_20261017/0700_case0406_facts_0011/google_global_2025.receipt.json",
+      "raw_sha256": "1895041dbc4f7d4c0e032fcda5df5ba7d127dd53f662424bca573627b490c2dc",
+      "received_utc": "2026-10-20T00:12:18.064450Z",
+      "status": 200,
+      "actual_card_read": true,
+      "category": "Global Athletes 2025",
+      "top10_in_order": [
+        "Terence Crawford",
+        "Rory McIlroy",
+        "Shedeur Sanders",
+        "Shai Gilgeous-Alexander",
+        "Jalen Hurts",
+        "Manny Pacquiao",
+        "Alexander Ovechkin",
+        "Cooper Flagg",
+        "Stefon Diggs",
+        "Cam Skattebo"
+      ],
+      "finding": "Crawford1/Pacquiao6 illustrate boxing can make or miss Top5; two examples are not calibrated base rates. Historical method ranks growth, not popularity."
+    }
+  ],
+  "rule_identity": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe",
+  "supplemental_current_web": "Official promoter event and Google2025 methodology reopened in web at this turn; Dec11 listing remains scheduled, method still explicitly2025. Original durable source clocks retained."
+}

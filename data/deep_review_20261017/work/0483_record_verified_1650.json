@@ -1,0 +1,15 @@
+{
+  "verified_utc": "2026-10-20T16:45:16.749679+00:00",
+  "review_index": 483,
+  "status": "excluded_factual",
+  "report_sha256": "3e6c6cbebcf3ff9830adcb221ba0276a5329005a66299f33d61b3468410e34a1",
+  "counts": {
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 381,
+    "pending": 2203,
+    "base_records": 797,
+    "revisions_written": 77
+  },
+  "saved_and_indexed_before_next_case": true
+}

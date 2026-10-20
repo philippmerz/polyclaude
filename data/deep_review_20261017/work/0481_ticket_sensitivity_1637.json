@@ -1,0 +1,27 @@
+{
+  "review_index": 481,
+  "quantity": 10,
+  "maker_sensitivities": [
+    {
+      "outcome": "Yes",
+      "price": 0.19,
+      "cost": 1.9,
+      "central_profit": 0.7,
+      "selected_profit": -0.8
+    },
+    {
+      "outcome": "No",
+      "price": 0.74,
+      "cost": 7.4,
+      "central_profit": 0,
+      "selected_profit": -1.5
+    }
+  ],
+  "alternative_carry_taker_15d": {
+    "Yes": 0.003496174133613684,
+    "No": 0.01060304689985291
+  },
+  "fallback_days": 25,
+  "planning_only": true,
+  "conditional_fill": "Lowerpricecouldchangealgebra, but event-drivenyield informationcanselectfills; no newlycertifiedlowerbid."
+}

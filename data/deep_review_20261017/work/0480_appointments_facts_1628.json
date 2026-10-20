@@ -1,0 +1,47 @@
+{
+  "schema": "case0480_appointments_facts.v1",
+  "collected_utc": "2026-10-20T16:25:58.224713Z",
+  "scope": "Factual source addendum; no valuation or action.",
+  "case": {
+    "review_index": 480,
+    "market_id": "1469737",
+    "condition_id": "0x25fb28382075f418a944a781a9f8840e2f541152eea0d9798d1cabfa1466adbb",
+    "criteria_sha256": "7283a7dfda4f229d1b3e8934b725eba0edaba3a038fe8332fee622b5df38d484",
+    "cutoff": "2026-12-31 12:00 PM ET"
+  },
+  "source": {
+    "publisher": "Iran Press (Farsi; Iranian state media)",
+    "url_requested": "https://farsi.iranpress.ir/content/319908/",
+    "url_after_redirect": "https://farsi.iranpress.ir/content/319908/%d8%a7%d9%86%d8%aa%d8%b5%d8%a7%d8%a8-%d8%b4%d8%b4-%d9%81%d8%b1%d9%85%d8%a7%d9%86%d8%af%d9%87-%d8%b9%d8%a7%d9%84%db%8c-%d8%b1%d8%aa%d8%a8%d9%87-%d8%af%d8%b1-%d8%b3%d8%aa%d8%a7%d8%af-%da%a9%d9%84-%d9%86%db%8c%d8%b1%d9%88%d9%87%d8%a7%db%8c-%d9%85%d8%b3%d9%84%d8%ad--%d8%b3%d9%be%d8%a7%d9%87-%d9%be%d8%a7%d8%b3%d8%af%d8%a7%d8%b1%d8%a7%d9%86-%d9%88-%d8%a8%d8%b3%db%8c%d8%ac-%d9%85%d8%b3%d8%aa%d8%b6%d8%b9%d9%81%db%8c%d9%86",
+    "title_fa": "انتصاب شش فرمانده عالی‌رتبه در ستاد کل نیروهای مسلح، سپاه پاسداران و بسیج مستضعفین",
+    "publication_date_display": "دوشنبه 19 مرداد 1405، 19:57:08 (Solar Hijri; retained as displayed; no Gregorian conversion asserted)",
+    "publication_datetime_schema": "2026-08-10 8:23:19 PM (timezone unspecified by page metadata)",
+    "retrieved_utc": "2026-10-20T16:25:06.526581Z",
+    "http_status": 200,
+    "raw_bytes": 81399,
+    "raw_sha256": "a376fed10f29f902f9dd9d8ea9235c5092232f67b999788f391350928fcd74ee",
+    "gzip_sha256": "d59dab848347d12f03f3b5f6d527f12eb37d1f88dffed3aab906570092996df6",
+    "receipt": "logs/deep_review_20261017/case0480_appointments_1628/iranpress_military_appointments/iranpress_military_appointments.receipt.json",
+    "body": "logs/deep_review_20261017/case0480_appointments_1628/iranpress_military_appointments/iranpress_military_appointments.body.json.gz"
+  },
+  "article_text_fa": [
+    "با صدور احکامی جداگانه از سوی فرمانده کل قوا صورت گرفت: انتصاب شش فرمانده عالی‌رتبه در ستاد کل نیروهای مسلح، سپاه پاسداران و بسیج مستضعفین",
+    "حضرت آیت‌الله سیدمجتبی حسینی خامنه‌ای، فرمانده معظم کل قوا، با صدور احکام جداگانه‌ای مسئولیت‌ها و مأموریت‌های شش تن از فرماندهان و مدیران عالی‌رتبه نیروهای مسلح را ابلاغ کردند.",
+    "به گزارش خبرگزاری ایران پرس، بر اساس این احکام، سردار سرلشکر خلبان پاسدار «علی عبداللهی» به عنوان رئیس ستاد کل نیروهای مسلح و امیر سرتیپ «کیومرث حیدری» به عنوان جانشین رئیس ستاد کل نیروهای مسلح تعیین شدند.",
+    "سردار سرتیپ پاسدار «احمد وحیدی» با اعطای درجه سرلشکری عهده‌دار فرماندهی کل سپاه پاسداران انقلاب اسلامی شد و سردار سرلشکر پاسدار «مصطفی ایزدی» مسئولیت جانشینی فرماندهی کل سپاه را بر عهده گرفت.",
+    "مسئولیت فرماندهی نیروی دریایی سپاه به سردار دریادار پاسدار «علی عظمایی» و ریاست سازمان بسیج مستضعفین نیز به حجت‌الاسلام والمسلمین «حسین طائب» سپرده شد."
+  ],
+  "faithful_english_rendering": [
+    "Iran Press reports that, by separate decrees from the Commander-in-Chief, Ayatollah Seyyed Mojtaba Hosseini Khamenei assigned duties/responsibilities to six senior military commanders and managers.",
+    "Ali Abdollahi was appointed chief of the Armed Forces General Staff; Kiomars Heydari deputy chief of that staff; Ahmad Vahidi commander-in-chief of the Islamic Revolutionary Guard Corps (IRGC), with promotion to major general; Mostafa Izadi deputy commander-in-chief of the IRGC; Ali Azmaei commander of the IRGC Navy; and Hossein Taeb head of the Basij Organization."
+  ],
+  "evidence_classification": "First-party state-media report of specific military command appointments attributed to written decrees by Mojtaba in his Commander-in-Chief capacity. This is a concrete exercise-of-office indicator and substantially closer to military/institutional control than a congratulatory or ceremonial statement.",
+  "limits": [
+    "The page reports that separate decrees were issued; this capture does not include the decree texts or independent verification of issuance/authentication.",
+    "Appointment is evidence of authority being exercised in his name, but does not by itself establish that Mojtaba personally made the decisions, that appointees assumed operational control, or that he exercises primary governing control across the state.",
+    "No actual implementation, command order, or independently observed operational response is documented in this article.",
+    "Do not convert the Solar Hijri display date here; source schema gives an ambiguous timezone timestamp, so both source forms are preserved."
+  ],
+  "capture_validation": "Raw body independently decompressed and SHA-256 verified against receipt; gzip hash and byte count are available in receipt.",
+  "optional_second_source": "Not fetched; single targeted fetch used."
+}

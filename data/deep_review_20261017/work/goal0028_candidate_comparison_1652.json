@@ -1,0 +1,94 @@
+{
+  "schema": "finite_review_candidate_comparison.v1",
+  "created_utc": "2026-10-20T16:48:16.857125+00:00",
+  "milestone": 400,
+  "scope": "Provisional dated known-candidate comparison, not final600winnerselection/ranking. Not exchange-wideabsenceclaim.",
+  "candidates": [
+    {
+      "index": 470,
+      "side": "No",
+      "quantity": 10,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0470.md",
+        "sha256": "0908fda9c6d0418b35652b75f5d1bd0feefad025b37e803f78bd5c3872dfc2be"
+      },
+      "quote_asof": "2026-10-20T13:42:48.086088+00:00",
+      "cost": 5.1,
+      "central_profit": 1.9000000000000004,
+      "selected_profit": 0.39999999999999947,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 476,
+      "side": "No",
+      "quantity": 30,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0476.md",
+        "sha256": "732349317e92644bef3e67beb55e6fb1c61b09fb27e79d02704edd453e6ef03c"
+      },
+      "quote_asof": "2026-10-20T15:00:38.488170+00:00",
+      "cost": 1.1634499999999999,
+      "central_profit": 1.8365499999999992,
+      "selected_profit": -1.1634499999999999,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 478,
+      "side": "Yes",
+      "quantity": 10,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0478.md",
+        "sha256": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752"
+      },
+      "quote_asof": "2026-10-20T15:00:38.488170+00:00",
+      "cost": 1.3565500000000001,
+      "central_profit": 0.9782499999999998,
+      "selected_profit": -1.0217500000000004,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 480,
+      "side": "No",
+      "quantity": 10,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0480.md",
+        "sha256": "b5f2e9ce0718bb2228294f64884612a96fef8407fac600d7b1c2f0eb2212ec42"
+      },
+      "quote_asof": "2026-10-20T16:23:31.352267+00:00",
+      "cost": 1.31,
+      "central_profit": 2.07,
+      "selected_profit": 0.0699999999999994,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 482,
+      "side": "Yes",
+      "quantity": 100,
+      "report": {
+        "path": "research/2026-10-17-deep-review/revisions/0482_20261020T164413862661Z.md",
+        "sha256": "f5aee6e5dd475e9842a6bcb81d0293c4b35ac05b2db81ca5c67418cf711c5dcc"
+      },
+      "quote_asof": "2026-10-20T16:23:31.352267+00:00",
+      "cost": 1.7954900000000003,
+      "central_profit": 1.50451,
+      "selected_profit": -1.7954900000000003,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    }
+  ],
+  "load_bearing_limits": {
+    "470": "Accounting/GAAPlossratio reserve/catmodel; possiblefillselection, provisionalnotcertified.",
+    "476": "Privatecompletion/delaytail, selectednegative.",
+    "478": "PrivateGooglegrowth/cutoff andTop5sharedwithheldMessi; selectednegative.",
+    "480": "Primarycontrolvsinstitutionalconsensus interpretation, thinselected+.07 ask/+ .15maker beforecarry/funding;50%looseweightreverses.",
+    "482": "Unfitted6xmaniaregime/1mwick, selectednegative; 100-shareactualdepth72@1.4+28@2.4, effectiveappend-onlycorrection."
+  },
+  "cash": "CachedvariableAave3.2035% Oct19 sensitivity; exactfunding/operations andsamechainavailabilitymustrevalidate. pUSD19.251290 wasunchanged15:55, no newwalletread/transfer.",
+  "portfolio": "No newposition/order/prior/financialproducer.15:55zeroorders/reservations; retainKimi10YES/OR5NO/MI5NO/Messi5YES andwholeClaritypair/dust fromlastrequiredcheck. Sharedlist/macro/venue/liquidityrisk, no hedge/independencecredit.",
+  "entry_pause": "400/600+primaryselectedexact-tokenhashreport; selectionnull. No wildcard/add/repost/taker/bundle. Existingholdings/SELL/cancel/redeemmanaged.",
+  "next": "Continuefrozenqueue484KimiHLE60, verifythresholdfamily/subset; no globalmethodblock, fullobjectiveincomplete."
+}

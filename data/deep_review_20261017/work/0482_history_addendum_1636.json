@@ -1,0 +1,56 @@
+{
+  "pair": "DOGEUSDT",
+  "source": "Binance Spot API",
+  "unit": "daily kline OHLC; open times UTC; prices USDT per DOGE",
+  "coverage": {
+    "requested_start_utc": "2024-01-01T00:00:00Z",
+    "requested_end_utc_inclusive": "2025-11-24T23:59:59.999Z",
+    "rows": 694,
+    "http_status": 200,
+    "first_open_utc": "2024-01-01T00:00:00Z",
+    "last_open_utc": "2025-11-24T00:00:00Z",
+    "expected_daily_rows": 694,
+    "gap_count": 0,
+    "sha256": "699a20790b45b19a85f93697cc841cdeb531038b6ed51f5b4cbe7135e1741e81",
+    "receipt": "logs/cron20261020T163600Z_case482_history/receipts/historical_daily.receipt.json"
+  },
+  "rolling_75d_close_factor": {
+    "definition": "close[t]/close[t-75] for 75 elapsed UTC daily intervals; dependent windows",
+    "window_count": 619,
+    "max_factor": 4.355715981012659,
+    "max_window_start_utc": "2024-09-17T00:00:00Z",
+    "max_window_end_utc": "2024-12-01T00:00:00Z",
+    "windows_factor_ge_2x": 97,
+    "windows_factor_ge_4x": 14,
+    "windows_factor_ge_6x": 0
+  },
+  "daily_log_return_volatility_annualized": {
+    "definition": "sample standard deviation of daily ln(close_t/close_t-1), times sqrt(365)",
+    "full_sample": 0.9869499596792572,
+    "recent_60_returns": 1.0046354467605043,
+    "recent_90_returns": 0.9233507466228105,
+    "return_count": 693
+  },
+  "oct20_partial_daily": {
+    "http_status": 200,
+    "receipt": "logs/cron20261020T163600Z_case482_history/receipts/oct20_partial_daily.receipt.json",
+    "sha256": "96d252da49bae1d747df501432c5d0cbcebeef0b55bf30d3b8082a49fbe3150d",
+    "bars": 1,
+    "open_utc": "2026-10-20T00:00:00Z",
+    "high_so_far": 0.08204,
+    "close_field_is_current_price_so_far": 0.08106,
+    "is_current_forming_daily_bar": true,
+    "interpretation": "Daily high includes trades through retrieval time and bounds finalized 1m-bar highs, but current 1m candle may still be forming."
+  },
+  "source_timestamps": {
+    "historical_received_utc": "2026-10-20T16:35:03.608154Z",
+    "oct20_received_utc": "2026-10-20T16:35:04.007394Z"
+  },
+  "note": "Historical daily context, not probabilities or a forecast.",
+  "daily_high_context": {
+    "max_daily_high": 0.48434,
+    "max_high_day_open_utc": "2024-12-08T00:00:00Z",
+    "days_high_ge_0.48": 2,
+    "max_daily_high_is_1m_upper_bound": true
+  }
+}

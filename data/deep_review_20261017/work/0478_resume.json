@@ -3,8 +3,8 @@
   "market_id": "4425462",
   "condition_id": "0xf56fe1c53c6acec4bae2c7f221e2a6e4d2f5f1652e1a317deabba975067ca2ac",
   "criteria_sha256": "84cc2f21723e48b5a4b9711599d9ddfbe0512207fea85aaab52ec7e65c59babe",
-  "status": "active_unvalued",
-  "updated_utc": "2026-10-20T15:29:41.883638+00:00",
+  "status": "valued",
+  "updated_utc": "2026-10-20T16:23:07.655878+00:00",
   "source_paths": [
     "work/0478_facts_1515.json",
     "work/0478_root_current_sources_1525.json"
@@ -15,11 +15,10 @@
   ],
   "quote_path": "work/cases475_476_478_quotes_1502.json",
   "next_primary_work": [
-    "Read actual attributed YouTube description and Google2025 Athletes ranking card; no new facts adopted from metadata alone.",
-    "Extend compatible joint Top5 states without changing held Messi prior merely from family reuse. Own forecast/range/reserve and bothside economics unfinished; no Joshua probability exists.",
-    "FuryDec11 bout is scheduled, not a result. Google2026 cutoff unknown; matched prior-year comparison may exclude Dec2025 Paul bout. Missing-list fallbackMar31=>NO.",
-    "Save and record immediately before advancing479. Exact full rules and tokens remain available via deep_review_resume.py --index478."
+    "478 complete; resume next pending479 after own full-rule/venue terminal verification."
   ],
   "no_execution_authority": true,
-  "run_boundary": "Preserved during latest bounded scheduled-check closeout; no new research case advanced, no goal lifecycle mutation/timer/idle continuation."
+  "run_boundary": "Active finite-goal continuation; no trade or held prior update.",
+  "completed_report": "research/2026-10-17-deep-review/evaluations/0478.md",
+  "record_proof": "work/0478_record_verified_1635.json"
 }

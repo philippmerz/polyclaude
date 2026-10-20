@@ -1,0 +1,81 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T16:50:38.680184+00:00",
+  "previous_goal_turn_classification": "progress: 151845news/safety/source/cancel proof published; current continuation advances full research objective.",
+  "scope": "Complete remaining frozen3000 in original index order; save/index every finished case immediately. Investigate substantive limitations, no forced forecasts.",
+  "counts": {
+    "completed_valuations": 400,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 381,
+    "pending": 2203,
+    "base_records": 797,
+    "revisions_written": 77
+  },
+  "completed_this_turn": [
+    {
+      "index": 478,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0478_record_verified_1635.json"
+    },
+    {
+      "index": 479,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0479_record_verified_1626.json"
+    },
+    {
+      "index": 480,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0480_record_verified_1633.json"
+    },
+    {
+      "index": 481,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0481_record_verified_1637.json"
+    },
+    {
+      "index": 482,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0482_record_verified_1645.json"
+    },
+    {
+      "index": 483,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0483_record_verified_1650.json"
+    }
+  ],
+  "active_indices": [],
+  "next_index": 484,
+  "entry_pause": "400/600uniquevalued+primaryselectionnull; nonewBUY.",
+  "candidate_comparison": "data/deep_review_20261017/work/goal0028_candidate_comparison_1652.json",
+  "last_safety": "research/2026-10-20-151845-checkin.json",
+  "last_financial": "research/2026-10-20-1402-financial-snapshot.json",
+  "next_safety": "Existing18UTC/earliermaterialevent; MIprogramme16UTCactualremarksunknown, debateOct21 23UTC. No newtimer.",
+  "current_portfolio": "15:55 zeroorders/reservations; Kimi10YES/OR5NO/MI5NO/Messi5YES,wholeClaritypair/dust; numericprior unchanged.",
+  "next_telegram": "500valued/materialfinding/globalblock;600comparativeselection remainsseparate.",
+  "source_units_ready": [
+    "work/status473_479_1451/case_0479.json",
+    "work/0480_facts_1525.json",
+    "work/0480_control_addendum_1630.json",
+    "work/0481_source_family_facts_1525.json",
+    "work/0482_facts_1630.json"
+  ],
+  "resource": "Directprobe59%used/41%headroom; bounded480/482factsdelegated, primaryforecasts.",
+  "limitations": "Googleunexposedgrowth/cutoff leaves widejudgmentrange; no calibratedmeasurement or globalmethodblock claimed.",
+  "publication": "Currentturn records local; explicitownedpublication after cohort; priorHEAD3e1931e6.",
+  "method_repair": "475originalstochasticgeneratornotpersisted; new481sharedcode+source/config/seed hashes saved, no exactold-drawclaim/globalblock. Current475rounded18 unchanged.",
+  "milestone400": "400uniquevaluedverified; oneTelegramaccepted, noentryrelease.",
+  "revisions_this_turn": [
+    {
+      "index": 482,
+      "proof": "data/deep_review_20261017/work/0482_depth_revision_verified_1648.json",
+      "reason": "Correct100-shareYESroute prose to actualsaveddepth72at1.4c+28at2.4c, cost1.79549/central1.50451. Originalticketmathalreadycorrect; p/10-shareeconomics/selectednegative/noentry unchanged."
+    }
+  ],
+  "active_work": "data/deep_review_20261017/work/0484_resume.json",
+  "audit": [
+    "data/deep_review_20261017/work/goal0028_offline_audit_1640.json",
+    "data/deep_review_20261017/work/goal0028_482_audit_1648_recheck.json"
+  ],
+  "next_source_unit": "484pendingorientation,485/489terminalleadsnotliteral-reviewed;486-490othersawaitprimary. Fullobjectivecontinues, not400completion.",
+  "telegram_receipt": "data/deep_review_20261017/work/goal0028_telegram_receipt_1654.json"
+}

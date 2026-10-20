@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T16:50:38.680184+00:00",
+  "milestone": "400uniquevalued",
+  "return_code": 0,
+  "sender_accepted": true,
+  "parts": 1,
+  "recipient_read_verified": false,
+  "private_receipt": "logs/deep_review_20261020/goal0028_publication_1654/telegram.out",
+  "receipt_sha256": "b2f7e1413b3e754a833d1458e81149a24f287cbf77cfc01be79e21e939858897",
+  "material_only": true
+}

@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-10-20T16:22:35.274717+00:00",
+  "review_index": 478,
+  "status": "valued",
+  "report_sha256": "c7c8056dd0707f05654d837f6304b8c873f9344087d0a1640ca8729ae0376752",
+  "input_sha256": "aaa1aa3a15067ccca12afc455af2408216684a63bf222f3a8eb8171a37f08a24",
+  "checkpoint_sha256": "82d95727e99e0e9e2d48d3d4061791f5820857cc6dea0b7294977416831eeabd",
+  "counts": {
+    "completed_valuations": 397,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 379,
+    "pending": 2208,
+    "base_records": 792,
+    "revisions_written": 76
+  },
+  "saved_and_indexed_before_next_case": true,
+  "post_record_script_erratum": "Record succeeded. Initial verification incorrectly assumed base JSON has report_path; re-read authoritative base/effective packet and default exact0478.md, no record retry."
+}
