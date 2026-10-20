@@ -1,0 +1,43 @@
+{
+  "schema": "bounded_delayed_news_review.v1",
+  "tick_id": "20261019T235849Z",
+  "completed_utc": "2026-10-20T00:08:45.084723+00:00",
+  "classification": "already_addressed_alerts_fresh_exposure_verified",
+  "alerts": [
+    {
+      "alert_id": "0ebb9af61252aab524dc71534cbd45bd346f5dd4",
+      "ts": "2026-10-19T23:08:34Z",
+      "raw_line_with_newline_sha256": "30d9def62362d7ec7bbdbe2b9ce966c27c95557f56f41c0fc3cfe3f9065f2b1f",
+      "identical_to_prior_reviewed_row": true,
+      "historical_relevance": "materiallead for thenunfilled400NO; cancel-firstalreadyexecuted23:39",
+      "current_disposition": "No400exposure/currentfinancialaction; no newpassing/rankfact inferred. Sourcebodiesunavailable/priorgapretained."
+    },
+    {
+      "alert_id": "2a551dbfde59fa8d01f45d2b89cbb46ea16aa3ae",
+      "ts": "2026-10-19T23:10:08Z",
+      "raw_line_with_newline_sha256": "1e6f935017d2483ef57684804da541a7a836f0963282e57878045cff7307cf8f",
+      "identical_to_prior_reviewed_row": true,
+      "historical_relevance": "materiallead for thenunfilled400NO; cancel-firstalreadyexecuted23:39",
+      "current_disposition": "No400exposure/currentfinancialaction; no newpassing/rankfact inferred. Sourcebodiesunavailable/priorgapretained."
+    }
+  ],
+  "prior_source_review": "research/2026-10-19-parton400-cancellation.md",
+  "prior_source_review_sha256": "c3383b2bd980c1a141ba17b57f3ec912eee715d1e6e9c1149e9b55d5fd95de2f",
+  "source_verification": "Bothsavedpublisherattemptbodyhashesverified; actualcapturedpagesareGoogleconsent, notE!/Deadlinebodies. Indexed/third-partypublication/eventdatesremainprovisional. No renewedfetch/absence/rankclaim.",
+  "fresh_state": "data/deep_review_20261017/work/tick235849_state.json",
+  "fresh_followup": "data/deep_review_20261017/work/tick235849_gap.json",
+  "account_conclusion": "00:05exhaustive3exactoriginalLIVE0BUY6.50/8indexedrows/3reservations/no400403exposure;00:07exhaustive126trades/canonicalroot_offline0targetmatches/NOCTF0. Rootall6raw+gziphashes/fullorderCIDs/assets/termsverified.",
+  "terminal_limitation": "Currentold400detailHTTP200/null doesNOTreconfirmCANCELED. Prior23:45affirmativeCANCELED0after353s andcurrenttrade/balanceinventoryproofretained; no recancel/prune/reopen.",
+  "bounded_new_news_window": {
+    "after": "2026-10-19T23:49:31.609895Z",
+    "through": "2026-10-20T00:05:14.600757Z",
+    "ids": [
+      "28f39c17050e20acebb7d677b93741f7a4e8b33a",
+      "4d46215110cb63036ba7c91b4e1d4f4dad79736f"
+    ],
+    "disposition": "RBAcandidatealreadyunsubmitted/retired;SouthCarolinagasheadlinehasnoheld/pendinginstrument. Researchonly, no changes to MI/OR/Messi/Clarity/otherbids."
+  },
+  "schedule": "Eventreviewonly; fullOct20 02UTC stilldue,12lightchecks22UTC/full16:48discoveryretainactualdates;weeklyOct23/monthlyNov12notdue/methodologyconcluded/offchainSundayretired.",
+  "financial_asof": "23:36producer195.20incl5.83gas/trading189.37mid185.79indicative depth/CSV225 unchanged. No newproducer/performanceobservation.",
+  "actions": "No neworders,cancellations,pruning,forecasts,DECrows,code/config/goal/timer/researchcase. No duplicateTelegram after1273. Journal/handoff/scopedcommit only."
+}
