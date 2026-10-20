@@ -1,0 +1,36 @@
+{
+  "schema": "case457_primary_source_followup.v1",
+  "review_index": 457,
+  "created_utc": "2026-10-20T11:39:09.384955+00:00",
+  "sources": [
+    {
+      "name": "reuters_tbs",
+      "url": "https://www.tbsnews.net/worldbiz/usa/us-probes-omars-decades-old-immigration-paperwork-eye-towards-deportation-sources",
+      "status": 200,
+      "raw_sha256": "e35ae406700e17b317731520ebec773124039c3ebd7e13efe78367e0ff7d4c59",
+      "gzip_sha256": "a6a176a45792e859d871de07b8ae916b477b420c59d851328a8ccaf916dbcabe",
+      "received_utc": "2026-10-20T11:39:09.318293Z",
+      "receipt": "logs/deep_review_20261017/case0457_root_sources_1144/reuters_tbs.receipt.json",
+      "body": "logs/deep_review_20261017/case0457_root_sources_1144/reuters_tbs.body.json.gz"
+    },
+    {
+      "name": "doj_civil_manual",
+      "url": "https://www.justice.gov/jm/jm-4-7000-immigration-litigation",
+      "status": 200,
+      "raw_sha256": "0f6aa40424be29f0e73db863dc68269728a3387f1e9af315583bb9bc68a100ab",
+      "gzip_sha256": "45b0e905900498b12a7487b71247fe11d1f97dab4fa2f9996ac603afc3fb7e47",
+      "received_utc": "2026-10-20T11:39:08.976884Z",
+      "receipt": "logs/deep_review_20261017/case0457_root_sources_1144/doj_civil_manual.receipt.json",
+      "body": "logs/deep_review_20261017/case0457_root_sources_1144/doj_civil_manual.body.json.gz"
+    }
+  ],
+  "root_browser_findings": {
+    "reuters_tbs": "Oct17 Reuters original reporting, hosted by TBS: sources describe sealed search warrant, phone seizure and morethan12subpoenas; counsel denies wrongdoing. Document-evidence review and legislative-record screening can delay any criminal charge; citizenship litigation may instead be civil. Neither report nor search is a charge.",
+    "doj_manual": "DOJ4-7.200 identifies affirmative civil denaturalization litigation under8USC1451; that route alone is not a criminal complaint/indictment.",
+    "axios_minimal": "Pirro publicly described a separate disclosure investigation.",
+    "search_status": "Bounded Oct20 DOJ/name searches found victim cases and public/FOIA materials, not a verified charge of Omar. Search failure is not absence; sealed filings unknown.",
+    "source_limits": "AP short URLs failed rootbrowser reopening; prior anonymous grandjury claims are not upgraded to independently verified officialdocket. Fresh DNA-related search headlines are unverified allegations, not proof of guilt or charges.2022HouseEthics matter is not proof about a separate2026financial disclosure issue."
+  },
+  "rule_interpretation": "Formal federal criminal charge against Omar or indictment announced inwindow qualifies; investigation/search/subpoena/civilonly/Houseethics do not. Guilt/conviction/arrest not required. State/DCboilerplate doesnot substitute stateprosecution for federalgovernment requirement.",
+  "agent_timestamp_limit": "Prior unit claims11:10status; its actual source receipts11:06-07. This unit does not refresh those claims to a later officialrecord."
+}

@@ -1,0 +1,9 @@
+{
+  "review_index": 457,
+  "reviewed_utc": "2026-10-20T11:45:25.251058+00:00",
+  "preserved_source_unit": "data/deep_review_20261017/work/0457_criminal_timing_facts_1150.json",
+  "correction": "Collector summary of1425(a)said anotherperson; captured statute says anyperson. Root read full statutory body and uses anyperson, not exclusion of self. Other statutory summary/source hashes unchanged.",
+  "legal_limit": "No conclusion current case timebarred: charges,statute,actdates,lastovertact,tollingunknown.",
+  "prior_draft_model": "research/2026-10-17-deep-review/models/0457_primary_model_1144.json",
+  "effective_primary_model": "research/2026-10-17-deep-review/models/0457_primary_model_1156.json"
+}

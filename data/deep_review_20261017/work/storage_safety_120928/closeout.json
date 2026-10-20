@@ -1,0 +1,41 @@
+{
+  "schema": "polyclaude.bounded_tick_safety_closeout.v1",
+  "reviewed_utc": "2026-10-20T12:13:17.362750+00:00",
+  "trigger": "20261020T104103Z",
+  "full_check": "research/2026-10-20-104103-checkin.md",
+  "full_check_repeated": false,
+  "four_requested_ids_independently_audited": true,
+  "late_delta_first_read_utc": "2026-10-20T12:04:17.081352+00:00",
+  "late_delta_decisions": [
+    {
+      "alert_id": "598fca5d922daeaf586dfe66be9e27adde30b864",
+      "row_sha256_excluding_newline": "55a8cff84c5de32b4d467d6622211f8bb73d656c9b6854bc242518936deec71d",
+      "ts": "2026-10-20T11:34:50Z",
+      "decision": "NY01 pending-bid candidate profile; MINOR headline lead, exact new body not verified. No identified material candidate/ballot/caucus or measured polling change adopted; original pilot retained/noadd."
+    },
+    {
+      "alert_id": "5a2f09a186680e7d4de3bd658e4cc61e1960f49b",
+      "row_sha256_excluding_newline": "4d561d4f09292ab47a04203c2350e99d83b41d43b8cefc67d0c9484e8218519b",
+      "ts": "2026-10-20T11:40:26Z",
+      "decision": "Delcy labor-dialogue lead; research-only, no current matching investment or action."
+    },
+    {
+      "alert_id": "2b9a82e42e7bd3cc6c4b8efd124ec34124ac1c82",
+      "row_sha256_excluding_newline": "6517a76f80412c3dd92338bb162f2908b071d5ac004fe27fc4b323ed4c17683a",
+      "ts": "2026-10-20T11:46:04Z",
+      "decision": "Mbappe NFL costume/feature lead; no resolving Google Year-in-Search measurement. No portfolio-prior change."
+    }
+  ],
+  "research_verification": "data/deep_review_20261017/work/tick104103_research_handoff_verified_120225.json",
+  "storage_verification": "data/deep_review_20261017/work/storage_safety_120928/verified.json",
+  "restore_roundtrip": "data/deep_review_20261017/work/storage_safety_120928/roundtrip.json",
+  "technical_checks": "data/deep_review_20261017/work/storage_safety_120928/technical_checks.json",
+  "telegram": {
+    "message_id": 1279,
+    "parts": 1,
+    "reason": "Material disk-space incident and verified recovery; no raw headline alerts."
+  },
+  "no_financial_action_or_portfolio_prior_change": true,
+  "next_existing_boundary": "14UTC full/earlier material event; no timer or goal lifecycle mutation",
+  "run_complete_after_publication": true
+}

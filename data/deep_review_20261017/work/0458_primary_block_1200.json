@@ -1,0 +1,53 @@
+{
+  "review_index": 458,
+  "market_id": "1185739",
+  "status": "blocked_after_review",
+  "condition_id": "0xb8c306bbd3257f6dade971a38b04225c51fd0adc310a5fca6c043fe3e534c6c6",
+  "criteria_sha256": "a6763199f44af76644708eaee62b942e43980808c32c1dfd64221120ac99028e",
+  "literal_analysis": "All2026finalized dailybar ArtemisHIP3DEXsOI Total>=9e9USD; bar finalizesnextdaypublished; fallbackonlypermanentlyunavailable. CurrentOI/volume/wholeHyperliquid/intradaynotexactpredicate.",
+  "evidence": [
+    {
+      "url": "https://classic.artemis.ai/asset/Hyperliquid?tab=hip_3",
+      "observed_utc": "2026-10-20T11:32:39Z",
+      "finding": "Genericpage/frontend plus dashboard2436 trace; no dailyvalues."
+    },
+    {
+      "url": "https://data-svc.artemisxyz.com/chart/10905/",
+      "observed_utc": "2026-10-20T11:32:05.257148Z",
+      "finding": "Rootverified exactnamedchartJSONmetadata/day/LAST/sixDEX/TOTAL; values absent."
+    },
+    {
+      "url": "https://data-svc.artemisxyz.com/v2/data/OPEN_INTEREST/?symbols=dreamcash,felix,hyena,kinetiq,tradexyz,ventuals&startDate=2026-01-01&endDate=2026-10-20&granularity=DAY",
+      "observed_utc": "2026-10-20T11:32:29.572846Z",
+      "finding": "Rootverified401Authenticationrequired/errorbody, no series returned; not proof permanentunavailability."
+    }
+  ],
+  "forecast": {
+    "status": "withheld",
+    "reason": "Named resolving historical dailyTotal/max/finalization unavailable; no defensible eventbaseline/crossing probability from this pass."
+  },
+  "economics": {
+    "status": "both_outcomes_unpriced",
+    "both_sides_considered": false,
+    "reason": "No p; no exact two-sided expectedprofit is claimed. Unknownsourcebaseline blocks meaningfulcomparison; not a price-based rejection."
+  },
+  "verdict": "Case-specific data-access/evidence block; notvalued/notrejected/noentry. Continue unrelated cases.",
+  "reopen_condition": "Lawfully available source historicalseries/export/ownerchart with coverage/units/finalization, or provenpermanentunavailability plus verifiedfallback.",
+  "report_markdown": "# 0458 — Hyperliquid HIP3 dailyTotal OI≥9B in2026\n\n**Blocked after substantive review; no valuation, probability or entry.** The exact resolving chart was identified, but its daily data request requires authentication. Historicalmaximum/finalizeddailyTotal and current comparable baseline remain unknown. This is a case-specific evidence gap, not a rejected opportunity or global review block.\n\n## Literal predicate and source binding\n\nAny finalized2026daily bar Total at least9BUSD in Artemis’s HIP3 DEXs by OpenInterest chart suffices, even if later OI falls. A bar finalizes when the following day’s point publishes. The rule is full-calendar2026, not merely postcreation. The Jan2 metadata date doesnot change that event window. Alternative reliable data are permitted only if the resolving source becomes permanently unavailable; an unauthenticated401 doesnot establish permanent unavailability.\n\nCurrent whole-Hyperliquid OI, trading volume, per-asset snapshots and unfinalized intraday maxima are different predicates. In particular, the July29 third-party9.06B search result concerns volume, not OI; no threshold success follows. A March secondary1.3BOI chart cannot establish October levels or an all-year maximum. Dated market prices/commentary are not source-series proof.\n\nThe official frontend maps HIP3 to public dashboard2436.16 exact chart configurations were retrieved; chart10905 is titled HIP3 DEXs by OpenInterest. It specifies OPEN_INTEREST, daily/LAST, currencyUSD, stackedcolumns and TOTAL cuts; six included DEX symbols are dreamcash/felix/hyena/kinetiq/tradexyz/ventuals. These metadata identify the series, not its values. The source-specific2026daily query returned401Authenticationrequired, with zero series points. Root verified chart and error-body receipt hashes. [Small trace](../../../data/deep_review_20261017/work/0458_artemis_series_followup_1135.json) · [Dashboard discovery](../../../data/deep_review_20261017/work/0458_artemis_facts_1130.json).\n\n## Missing fact and scope decision\n\nNeither whether the threshold already occurred nor the remaining-distance/growth process can be grounded in the exact series. Assigning a probability from generic HIP3 adoption, a single old level or another instrument’s book would hide that missing fact. Both sides remain unpriced; no pointless book rewalk, stake, scalar correlation or carry-APY claim substitutes for it. No credential use, authentication workaround or fabricated successful fetch occurred.\n\nReopen when lawfully available Artemis historical dailyTotal data, an authenticated operator-supplied chart/export with its dates and units, or direct owner-published chart evidence permits coverage/finalization verification. If permanent unavailability is actually established, evaluate the literal fallback and metric equivalence. Current substitute data might inform a forecast only with an explicit verified mapping; it cannot retrospectively prove this predicate by assertion.\n\nCash and already underwritten candidates remain alternatives, but no comparative investment rank is assigned without p/actualeconomics. No position is held in this contract; it supplies no portfolio hedge. New BUYs still require600fullvaluations and comparative selection. Preserve this source limitation while continuing459 onward; it doesnot make the method unreliable for unrelated observable contracts.\n",
+  "source_verification": [
+    {
+      "name": "chart",
+      "status": 200,
+      "received_utc": "2026-10-20T11:32:05.257148Z",
+      "raw_sha256": "7c523917a4764b032b06a4c45ff30ce6828bcc1ab6a9e035650c01de60770663",
+      "receipt": "logs/deep_review_20261017/case0458_hip3_series_followup_1135/public_charts/chart_10905.receipt.json"
+    },
+    {
+      "name": "data",
+      "status": 401,
+      "received_utc": "2026-10-20T11:32:29.572846Z",
+      "raw_sha256": "939105e98aac00284684c1aaaecd5e23cf2cad658671d815360b0b4aae84c6a9",
+      "receipt": "logs/deep_review_20261017/case0458_hip3_series_followup_1135/data_attempt/hip3_oi_2026_day.receipt.json"
+    }
+  ]
+}

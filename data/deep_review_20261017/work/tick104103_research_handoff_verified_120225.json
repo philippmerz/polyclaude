@@ -1,0 +1,178 @@
+{
+  "schema": "polyclaude.bounded_research_handoff.v1",
+  "verified_utc": "2026-10-20T12:02:25.014287+00:00",
+  "completed_cases": [
+    {
+      "index": 456,
+      "effective": {
+        "status": "valued",
+        "evaluated_utc": "2026-10-20T11:33:47.063202+00:00",
+        "report_pointer": {
+          "path": "research/2026-10-17-deep-review/evaluations/0456.md",
+          "sha256": "1ab6ed56775a41feadb33db7997186b2c0dc6c0af00605e9d2743f6e2fc07760"
+        },
+        "latest_revision": null,
+        "verified_artifacts": [
+          {
+            "kind": "base",
+            "sha256": "1ab6ed56775a41feadb33db7997186b2c0dc6c0af00605e9d2743f6e2fc07760"
+          }
+        ]
+      }
+    },
+    {
+      "index": 457,
+      "effective": {
+        "status": "valued",
+        "evaluated_utc": "2026-10-20T11:46:45.994198+00:00",
+        "report_pointer": {
+          "path": "research/2026-10-17-deep-review/evaluations/0457.md",
+          "sha256": "e6cf3af39acd811eb3c6812aa9f7ba6c1fd6d2b6a4f985f64d52fe4bcb82bc91"
+        },
+        "latest_revision": null,
+        "verified_artifacts": [
+          {
+            "kind": "base",
+            "sha256": "e6cf3af39acd811eb3c6812aa9f7ba6c1fd6d2b6a4f985f64d52fe4bcb82bc91"
+          }
+        ]
+      }
+    },
+    {
+      "index": 458,
+      "effective": {
+        "status": "blocked_after_review",
+        "evaluated_utc": "2026-10-20T11:48:21.885235+00:00",
+        "report_pointer": {
+          "path": "research/2026-10-17-deep-review/evaluations/0458.md",
+          "sha256": "53b3c8ce0406bd2eddeb605c8f8f944725fc15b58775eea0312a1717ea9a64c7"
+        },
+        "latest_revision": null,
+        "verified_artifacts": [
+          {
+            "kind": "base",
+            "sha256": "53b3c8ce0406bd2eddeb605c8f8f944725fc15b58775eea0312a1717ea9a64c7"
+          }
+        ]
+      }
+    },
+    {
+      "index": 459,
+      "effective": {
+        "status": "excluded_factual",
+        "evaluated_utc": "2026-10-20T11:49:13.950079+00:00",
+        "report_pointer": {
+          "path": "research/2026-10-17-deep-review/evaluations/0459.md",
+          "sha256": "d08abe7db89ec926d0fec24cb8d32bb88e0b0a1bc67d6f37a011f7de0898abee"
+        },
+        "latest_revision": null,
+        "verified_artifacts": [
+          {
+            "kind": "base",
+            "sha256": "d08abe7db89ec926d0fec24cb8d32bb88e0b0a1bc67d6f37a011f7de0898abee"
+          }
+        ]
+      }
+    }
+  ],
+  "counts": {
+    "updated_utc": "2026-10-20T11:50:13.914799+00:00",
+    "universe": 3000,
+    "completed_in_depth_reviews": 402,
+    "completed_valuations": 386,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 372,
+    "pending": 2226,
+    "base_records": 774,
+    "revisions_written": 75,
+    "active_indices": [
+      460
+    ],
+    "next_pending_indices": [
+      460,
+      461,
+      462,
+      463,
+      464,
+      465,
+      466,
+      468,
+      469,
+      470,
+      471,
+      472,
+      473,
+      474,
+      475,
+      476,
+      477,
+      478,
+      479,
+      480,
+      481,
+      482,
+      483,
+      484,
+      485,
+      486,
+      487,
+      488,
+      489,
+      490
+    ]
+  },
+  "checkpoint_hashes": {
+    "checkpoint": {
+      "sha256": "1253ce03b3ae6c7bba9c3dc4a17ddc8920d08bd2978963f6572d0dfed70212e9",
+      "path": "notes/deep_review_checkpoint.json"
+    },
+    "progress": {
+      "sha256": "22d83559712a36bbaf72c3a7160455e093453f7985d245997042de3b8d64616b",
+      "path": "research/2026-10-17-deep-review/progress.json"
+    },
+    "frozen_rules_gzip": {
+      "sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+      "path": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
+      "checkpoint_declared_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+      "matches_checkpoint": true
+    },
+    "base_ledger": {
+      "sha256": "0be4c5773d26b0fc30d860fc98d64b51b9b88ead6f7d49635ac27cc44b3b9a46",
+      "path": "research/2026-10-17-deep-review/evaluations.jsonl",
+      "checkpoint_declared_sha256": "0be4c5773d26b0fc30d860fc98d64b51b9b88ead6f7d49635ac27cc44b3b9a46",
+      "matches_checkpoint": true
+    },
+    "revision_ledger": {
+      "sha256": "dfaa10bff07a83a7af5d16a424de760c256f96bb2538e9f8264760b7ed75de95",
+      "path": "research/2026-10-17-deep-review/revisions.jsonl",
+      "checkpoint_declared_sha256": "dfaa10bff07a83a7af5d16a424de760c256f96bb2538e9f8264760b7ed75de95",
+      "matches_checkpoint": true
+    },
+    "queue_index": {
+      "sha256": "c92c2243b8f49dfc24ed5e42d889b9344e9557a56aeb1bf47ad1a2547d64e0f9",
+      "path": "research/2026-10-17-deep-review/index.csv"
+    }
+  },
+  "entry_gate": "entry review gate: 386/600 completed valuations; new BUYs blocked",
+  "active_case460": {
+    "status": "in_progress; not a completed valuation",
+    "model_draft": "research/2026-10-17-deep-review/models/0460_primary_model_1210.json",
+    "quote_path": "data/deep_review_20261017/work/cases456_457_460_quotes_1136.json",
+    "quote_sha256": "ef5c9f98cb462339e4f5aee548fc18d96d3fb6a828748ab39d9831fccd00fd8f",
+    "gamma_receipt": "logs/deep_review_20261017/cases456_457_460_quotes_1136/public/0460_gamma.receipt.json",
+    "gamma_received_utc": "2026-10-20T11:32:27.451444+00:00",
+    "gamma_raw_sha256": "fa3dc9a5943917b96d09ef94afe94aed1c036f479335e4b4ab92abdf3f9e5693",
+    "gamma_gzip_sha256": "509f52c33ba4ecf43c5d04205af29e2ed767ef0e73b94f4c13e610473f8c974e",
+    "exact_identity_rules_tokens_match": true,
+    "closed": false,
+    "acceptingOrders": true,
+    "umaResolutionStatuses": "[]",
+    "interpretation": "One-sided near-terminal-looking prices do not establish terminal resolution. Captured Gamma is open/accepting/no UMA proposal. Draft5% forecast and 15pp reserve are not finalized; current lot/depth, source/model discrepancy and family consistency remain for next authorized research session. No entry while600 gate active."
+  },
+  "clock_errata": {
+    "0459_record_verified_1202.json": "Original verified_utc precedes evaluated_utc by0.149s; this completed independent hash-chain verification provides an actual later verification time without rewriting the original proof.",
+    "disk_archive_candidates_1205.json": "Declared12:05 time was future at root11:58:52 receipt; use only as candidate pointers, not an observed disk clock."
+  },
+  "no_network_or_financial_action": true,
+  "run_contract": "End scheduled run after necessary safety follow-up and publication; no further discretionary case starts."
+}

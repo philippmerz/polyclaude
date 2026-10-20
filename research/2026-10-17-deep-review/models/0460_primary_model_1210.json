@@ -1,0 +1,164 @@
+{
+  "schema": "primary_openrouter_remaining_week.v1",
+  "review_index": 460,
+  "market_id": "5326400",
+  "condition_id": "0xf5d4506cb6fa3864a89de069c6ce11d5f00daa9e8b0bb7c2644cd5ca71fc7041",
+  "criteria_sha256": "6b87fc3b6a3d74f2c71f7e2dd2bde83536b0a69e68f447a45b6aa080c8909251",
+  "created_utc": "2026-10-20T11:54:08.540573+00:00",
+  "reference_outcome": "Yes",
+  "p_yes": 0.05,
+  "low": 0.005,
+  "high": 0.6,
+  "actual_entry_reserve_pp": 15,
+  "source_capture": {
+    "http_status": 200,
+    "request_started_utc": "2026-10-20T11:30:46.425492Z",
+    "response_received_utc": "2026-10-20T11:30:46.538419Z",
+    "date_header": "Tue, 20 Oct 2026 11:30:46 GMT",
+    "age_header_seconds": "144",
+    "api_cachedAt_utc": "2026-10-20T10:37:18.469Z",
+    "raw_sha256": "efd93fe8a34a4c6c8e642e2571da317c7a5e25a3b235a9bb5c3cfd37e3303e86",
+    "gzip_sha256": "e9f4ecc0a99eeb531d778212c7efe680234df9d273ee463c2953b1732439501b",
+    "body": "logs/deep_review_20261020/case460_chart_1113/openrouter_chart.body.json.gz",
+    "receipt": "logs/deep_review_20261020/case460_chart_1113/openrouter_chart.receipt.json",
+    "refresh_comparison": "Byte-identical to the existing 10:52 packet body (same SHA-256 and cachedAt); the later request did not provide a newer chart snapshot."
+  },
+  "completed_week_display_T": [
+    166,
+    172,
+    164
+  ],
+  "fixed_display_sum_T": 502,
+  "required_remaining_display_band_T": {
+    "lower_inclusive": 73,
+    "upper_exclusive": 123
+  },
+  "current_partial_week_T": 36.124191481344,
+  "anchor_last_complete_T": 164.043985914931,
+  "regimes": [
+    {
+      "name": "Moderation",
+      "weight": 0.4275,
+      "mean_log_growth": 0.035,
+      "sd_log_growth": 0.065,
+      "p_band_approx": 3.374243985887482e-07,
+      "weighted_p": 1.4424893039668985e-07,
+      "median_week_T": 169.88718492355034
+    },
+    {
+      "name": "Continued growth",
+      "weight": 0.3325,
+      "mean_log_growth": 0.08,
+      "sd_log_growth": 0.095,
+      "p_band_approx": 5.371652278401973e-05,
+      "weighted_p": 1.786074382568656e-05,
+      "median_week_T": 177.70672847149783
+    },
+    {
+      "name": "Release boom",
+      "weight": 0.095,
+      "mean_log_growth": 0.2,
+      "sd_log_growth": 0.1,
+      "p_band_approx": 5.317690580652901e-07,
+      "weighted_p": 5.051806051620256e-08,
+      "median_week_T": 200.36377685608477
+    },
+    {
+      "name": "Disruption",
+      "weight": 0.095,
+      "mean_log_growth": -0.15,
+      "sd_log_growth": 0.15,
+      "p_band_approx": 0.17886759766755944,
+      "weighted_p": 0.016992421778418147,
+      "median_week_T": 141.19396716154094
+    }
+  ],
+  "severe_disruption_or_source_ambiguity": {
+    "weight": 0.05,
+    "weekly_total_uniform_T": [
+      40,
+      130
+    ],
+    "p_band_approx": 0.5555555555555556,
+    "weighted_p": 0.027777777777777776,
+    "empirical_calibration": false
+  },
+  "raw_band_probability_approx": 0.04478825506701252,
+  "method": "Update sharedOct18family one-step log-growth model with actualOct12completion;95%previousregimeweights plus5%explicit severe-disruption/source branch. Only finalOct19week remains random; not four independentdraws.",
+  "evidence_statistics": {
+    "recent_13_completed_weeks_T": [
+      [
+        "2026-07-20",
+        58.04149741598
+      ],
+      [
+        "2026-07-27",
+        56.788588911921
+      ],
+      [
+        "2026-08-03",
+        69.046537847932
+      ],
+      [
+        "2026-08-10",
+        75.340581084831
+      ],
+      [
+        "2026-08-17",
+        93.377577206324
+      ],
+      [
+        "2026-08-24",
+        112.996824136069
+      ],
+      [
+        "2026-08-31",
+        115.463303706156
+      ],
+      [
+        "2026-09-07",
+        126.763022044183
+      ],
+      [
+        "2026-09-14",
+        128.895269979077
+      ],
+      [
+        "2026-09-21",
+        145.845105335054
+      ],
+      [
+        "2026-09-28",
+        165.856049857563
+      ],
+      [
+        "2026-10-05",
+        171.842501724714
+      ],
+      [
+        "2026-10-12",
+        164.043985914931
+      ]
+    ],
+    "12_week_log_returns": {
+      "mean": 0.08658136427119845,
+      "sample_sd": 0.08709316910373352,
+      "min": -0.046443771006857586,
+      "max": 0.21463232860823847
+    },
+    "partial_point_excluded_from_growth_fit": true,
+    "oldest_range_edge_excluded": true
+  },
+  "rounding": "First3display totals derived from verifiedformatter/priorUIbinding. Analytic forecast uses73-123continuous proxy; exactcompact rounding/latehistoricalrevisions are uncertainty, not a fabricated fresh tooltip. No market-boundary equality accepted into bothbuckets.",
+  "current_partial_limit": "cachedAt10:37 and11:30response are not usagecutoff; no calendar-time pace used as a measurement. UIpace separatelycomputedforecast cannot settle actualTotal.",
+  "reasoning": "Needs finalOct19week substantially below each of last3completedweeks164-172. Recentchartgrowth and same-sourcehistory support continuation more than that drawdown; explicit disruption mass retains realisticdownside. Weights/regimes/sourceerror branch are subjective, not calibrated probabilities or minvarianceproof.",
+  "sensitivity": "Analytic continuous-band probability4.4788255%, rounded5%; not empiricalcalibration. A concentrated remainingweek100T countermodel reversesNO; high60%scenario retains plateau/disruption/source uncertainty.",
+  "alternatives_and_dependence": "Sameweeklysourceandtrafficregimeasheldcase112futureOct26-Nov22, butdifferentweeks/bucket. No independenthedgecredit; case35sameperioddifferentbucket. Existing6.50bids/cash/Aavevariablecosts and600selectionapply.",
+  "persistence_note": "Saved before inspecting case460books/economics. Not a blinded registered forecast.",
+  "entry_authority": false,
+  "metadata_correction": {
+    "prior_path": "research/2026-10-17-deep-review/models/0460_primary_model_1208.json",
+    "prior_sha256": "3dc1ddb41dba44cfdbb7537fedac6e2091fd2258cd7ef21957139e575b29aee1",
+    "change": "Correct rough sensitivity prose4.62ish to actual saved rawprobability4.4788255%; allmodelnumbers/forecasts unchanged."
+  }
+}

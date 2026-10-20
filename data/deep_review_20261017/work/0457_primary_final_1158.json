@@ -1,0 +1,178 @@
+{
+  "review_index": 457,
+  "market_id": "5609863",
+  "status": "valued",
+  "condition_id": "0xdaafd2107465112c737afec122dfd3add1de5b5e1f1f42cb49275631e127b051",
+  "criteria_sha256": "223b27dff0e3175df613a59f375d7bb197af9ba24e76e8942c8256e309c8531c",
+  "literal_analysis": "Formal federal criminal charge against Omar or announced indictment in creationOct12 15:39:59.545318UTC-Oct31 23:59EDT window; search/civilonly/HouseEthics/stateonly do not qualify; governmentprimary/credibleconsensusfallback. Sealedformalcharge can create evidence/publication risk.",
+  "evidence": [
+    {
+      "url": "https://uscode.house.gov/us/usc/119-118/t18/s3291/",
+      "observed_utc": "2026-10-20T11:42:14.751366Z",
+      "finding": "18 U.S.C. §§1423–1428 and §§1541–1544, including conspiracy: indictment/information within 10 years after commission."
+    },
+    {
+      "url": "https://uscode.house.gov/us/usc/119-118/t18/s3282/",
+      "observed_utc": "2026-10-20T11:42:15.018964Z",
+      "finding": "Noncapital offense: indictment/information within 5 years unless another law expressly provides otherwise. Subsection (b) addresses DNA-profile indictments under chapter 109A."
+    },
+    {
+      "url": "https://uscode.house.gov/us/usc/119-118/t18/s1425/",
+      "observed_utc": "2026-10-20T11:42:15.397931Z",
+      "finding": "Root full body: subsection(a)anyperson; knowingunlawfulprocurement/attempt; covered by3291, no currentcase merits inferred."
+    },
+    {
+      "url": "https://www.tbsnews.net/worldbiz/usa/us-probes-omars-decades-old-immigration-paperwork-eye-towards-deportation-sources",
+      "observed_utc": "2026-10-20T11:39:09.318293Z",
+      "finding": "Oct17 Reuters original reporting, hosted by TBS: sources describe sealed search warrant, phone seizure and morethan12subpoenas; counsel denies wrongdoing. Document-evidence review and legislative-record screening can delay any criminal charge; citizenship litigation may instead be civil. Neither report nor search is a charge."
+    },
+    {
+      "url": "https://www.justice.gov/jm/jm-4-7000-immigration-litigation",
+      "observed_utc": "2026-10-20T11:39:08.976884Z",
+      "finding": "DOJ4-7.200 identifies affirmative civil denaturalization litigation under8USC1451; that route alone is not a criminal complaint/indictment."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets?id=5609863",
+      "observed_utc": "2026-10-20T11:06:24.240146Z",
+      "finding": "Exactmarketcreationtimestamp/identitycaptured; precreationraidnotcharge."
+    },
+    {
+      "url": "https://omar.house.gov/media/press-releases/office-rep-ilhan-omar-statement-dhs-raid",
+      "observed_utc": "2026-10-20T11:46:45.790405+00:00",
+      "finding": "Root verified saved body/hash; office denies wrongdoing, not an adjudication."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.2,
+    "low": 0.02,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 20,
+    "method": "Case-specific remaining-window hazard mixture; different investigative matters are jointly covered, not independent hazards multiplied.",
+    "reasoning": "Direct statutory review distinguishes a civil citizenship suit from a timely criminal case. Old1995-2000background is insufficient to demonstrate recent criminalchargeability;3291 covers1425with10years and3282general5years, but statute/lastact/tolling remainunknown and no timebar is inferred. Reduce maturecriminalbranch45to25%, increase evidence/civil/stalled mass. Separate2026financialdisclosure allegations can still yield timely charges. Judicialsearch/subpoenas/publicprosecutorinterest make risknontrivial; no imminence statement or filedcount recovered. 2-65scenario range; hiddenrecentchargepackage supports high, civil/protracted/weakcase supports low.20pp selectedreserve retained from prequote draft for unknownlegalpath/timing/privateinformation; it is not calibrated, not a credibleinterval endpoint and not a universal lowprobability ban."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/cases456_457_460_quotes_1136.json",
+    "quote_file_sha256": "ef5c9f98cb462339e4f5aee548fc18d96d3fb6a828748ab39d9831fccd00fd8f",
+    "quote_capture_utc": "2026-10-20T11:32:27.705212+00:00",
+    "gamma_received_utc": "2026-10-20T11:32:27.301163+00:00",
+    "hypothetical_gross_shares": 18.0,
+    "horizon_days": 14.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.2,
+        "selected_stress_probability": 0,
+        "best_bid": 0.049,
+        "best_ask": 0.059,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792495942408",
+        "book_received_utc": "2026-10-20T11:32:27.570091+00:00",
+        "book_age_seconds_at_receipt": 5.162091016769409,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 18.0,
+            "gross": 1.0619999999999998,
+            "fee": 0.03998,
+            "fills": [
+              {
+                "shares": 18.0,
+                "price": 0.059
+              }
+            ],
+            "net": 1.1019799999999997
+          },
+          "bids": {
+            "complete": true,
+            "filled": 18.0,
+            "gross": 0.882,
+            "fee": 0.03356,
+            "fills": [
+              {
+                "shares": 18.0,
+                "price": 0.049
+              }
+            ],
+            "net": 0.84844
+          }
+        },
+        "taker_cost_usd": 1.1019799999999997,
+        "central_expected_profit_usd": 2.4980200000000004,
+        "selected_stress_profit_usd": -1.1019799999999997,
+        "break_even_before_carry": 0.061221111111111094,
+        "break_even_constant_carry": 0.061295200934727366,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.8,
+        "selected_stress_probability": 0.6000000000000001,
+        "best_bid": 0.941,
+        "best_ask": 0.951,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792495942408",
+        "book_received_utc": "2026-10-20T11:32:27.570091+00:00",
+        "book_age_seconds_at_receipt": 5.162091016769409,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 18.0,
+            "gross": 17.118,
+            "fee": 0.03356,
+            "fills": [
+              {
+                "shares": 18.0,
+                "price": 0.951
+              }
+            ],
+            "net": 17.15156
+          },
+          "bids": {
+            "complete": true,
+            "filled": 18.0,
+            "gross": 16.938,
+            "fee": 0.03998,
+            "fills": [
+              {
+                "shares": 18.0,
+                "price": 0.941
+              }
+            ],
+            "net": 16.89802
+          }
+        },
+        "taker_cost_usd": 17.15156,
+        "central_expected_profit_usd": -2.7515599999999996,
+        "selected_stress_profit_usd": -6.351559999999999,
+        "break_even_before_carry": 0.9528644444444444,
+        "break_even_constant_carry": 0.9540176015390774,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Central-valueYESlead; no robust selected-stress entry/NOnegativecentrally. Legal-path and fill-model uncertainty unresolved, no financialaction;600+comparisonpause.",
+  "reopen_condition": "Verified recent criminal-act/charging-timing evidence or stronger conditionalforecast; read exact current source/legal/venue/portfolio after600comparative selection.",
+  "report_markdown": "# 0457 — Ilhan Omar federally charged byOctober31\n\nPrimary YES20%, range2–65%; a central-value lead at5.9c, but no robust entry. Separate civil citizenship litigation, stale allegations and a recent criminal charge. Neither outcome is approved for new money;600fullvaluations/comparative-selection pause remains.\n\n## Literal event and current evidence\n\nFederal government must formally charge Omar or announce a criminal indictment between creationOct12 15:39:59.545318UTC andOct31 23:59EDT=Nov1 03:59UTC. A criminal complaint/information can count; conviction or arrest is unnecessary. State/DC boilerplate doesnot turn a state-only case into federal prosecution. A search, subpoena, investigation, HouseEthics action or civil-only denaturalization is not a qualifying criminal charge. Sealed in-window charges may later become known; no exhaustive public docket or absence proof is claimed.\n\n[October17 Reuters reporting hosted byTBS](https://www.tbsnews.net/worldbiz/usa/us-probes-omars-decades-old-immigration-paperwork-eye-towards-deportation-sources) describes, through anonymous sources, a sealed search warrant, device seizure, subpoenas and immigration-related investigative theories. Legislative-record screening and evidence work can delay a charge. The report considers citizenship litigation; it supplies no named official imminent-charge statement. Omar’s official office denies wrongdoing. Investigative allegations are not established criminal conduct. The precreation raid doesnot itself satisfy the rule.\n\nA separate financial-disclosure inquiry has been publicly described. The2022memoir/ethics matter in an older packet is not the2026disclosure matter and doesnot exonerate it. Root could not reopen prior AP short URLs; their anonymous grand-jury claims are not upgraded to official findings. Current DNA-related headlines remain unverified allegations. Official DOJ search hits involving Omar as victim name other defendants; they do not satisfy this predicate. [Primary sources/gaps](../../../data/deep_review_20261017/work/0457_root_sources_1144.json).\n\n## Legal timing and forecast\n\n[18USC3291](https://uscode.house.gov/us/usc/119-118/t18/s3291/) gives10years for listed nationality/passport offenses including1425; [3282(a)](https://uscode.house.gov/us/usc/119-118/t18/s3282/) is the general5year noncapital rule unless otherwise provided. [DOJ4-7.200](https://www.justice.gov/jm/jm-4-7000-immigration-litigation) separately describes civil denaturalization. The alleged1995/2000background alone is not a ruling on timeliness: charge statute, recent acts, conspiracy/tolling and sealed documents are unknown. Root read the captured statutes. A collector’s1425(a)summary said anotherperson; the body says anyperson. [Preserved correction](../../../data/deep_review_20261017/work/0457_primary_legal_correction_1156.json).\n\nThe provisional30%model gave45%weight to a mature fast criminal case. Direct legal-path review reduces that weight to25%, with50%evidence-gathering/mostlycivil and25%delayed/aborted/legallyimpaired. Conditional probabilities of a qualifying charge in the remaining roughly11.7days are55/8/2%. Add2%alreadyqualifying/unobserved mass: .02+.98×(.25×.55+.50×.08+.25×.02)=.19885→20%. Multiple investigative matters are jointly represented, not treated as independent lotteries. The election-period practice is not an absolute prohibition.\n\nWeights are uncalibrated expert judgment.2%low represents no timely criminal pathway;65%high a privately advanced recent charge package.20pp reserve retained from before quote inspection prices unknown legal path, timing and private information; it clips selectedYES to0 and gives60%NO in separate adverse cases. This heuristic is not a certified bound or a blanket ban on low-probability markets. The draft and post-price source-driven revision remain saved. [Effective model](../models/0457_primary_model_1156.json).\n\n## Both sides, alternatives and reopening\n\nAt the saved11:32:27 book,18YES cost1.10198 including.03998fee: central profit2.49802, selected−1.10198; immediate fee-net resale.84844. The1.062gross purchase meets the1USD routefloor and5share minimum;10share draft didnot.18NO costs17.15156 including.03356fee: central−2.75156/selected−6.35156. Captured curve4%×p×(1−p), fine tick.001; complete depth at that snapshot is not later execution permission. [Economics](../../../data/deep_review_20261017/work/0457_economics_1156.json).\n\nCentral-value YES deserves a specific evidence follow-up, not an automatic bid. A standard10pp reserve would leave10% and an apparent lead, showing sensitivity to the unvalidated reserve. Unknown recent criminal predicates and conditional maker selection must be resolved, not hidden by the central ROI. No positive-price maker clears the selected0case. Prosecutors can know sealed facts before public readers; a2×adverse-odds illustration is not a bound.\n\nCash/Aave at the datedOct19 3.2035% variable rate is the funded alternative;14day constant carry excludes funding/gas/protocol costs and charge-publication delays. Current political holdings/three unfilled6.50bids share political/regulatory drivers, so no hedge credit or funded size. Prior Arena14 candidate also requires new evidence/fill review and stays canceled. Reopen on a verified recent chargeable-act theory, public charging document/schedule, corrected legal facts, or a much stronger independently validated conditional forecast, after600/comparison and every live gate. No trade, prior change to held positions or finding of guilt.\n",
+  "prepared_utc": "2026-10-20T11:46:45.790405+00:00"
+}

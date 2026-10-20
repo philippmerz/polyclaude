@@ -1,0 +1,43 @@
+{
+  "schema": "primary_award_slot_forecast.v1",
+  "review_index": 456,
+  "market_id": "3399938",
+  "condition_id": "0x573b157703ef39c682aaa222bc869be0095a4c54609e944e5141f51d4950f29e",
+  "criteria_sha256": "829b46749aa7bf54a1b33ec9e67ee59e300855221229e4df3c856c9af2b88919",
+  "created_utc": "2026-10-20T11:31:40.738758+00:00",
+  "reference_outcome": "Yes",
+  "p_yes": 0.27,
+  "low": 0.05,
+  "high": 0.65,
+  "actual_entry_reserve_pp": 20,
+  "scenarios": [
+    {
+      "name": "Kane and Yamal both top3",
+      "weight": 0.7,
+      "p_messi_top3_given": 0.2
+    },
+    {
+      "name": "Exactly one of Kane/Yamal outside top3",
+      "weight": 0.25,
+      "p_messi_top3_given": 0.4
+    },
+    {
+      "name": "Both Kane/Yamal outside top3",
+      "weight": 0.05,
+      "p_messi_top3_given": 0.6
+    }
+  ],
+  "ranking_published_by_cutoff": 0.995,
+  "unrounded_p_yes": 0.26865,
+  "reasoning": "Messi has a current official nomination, an eligible MLS title/MVP and8goals4assists in a WorldCup finalist campaign. Kane has extraordinary club output; other strong European and international candidates compete for only3slots. Qualitative voter-interview reporting favors Kane/Yamal but is selected and has no ballot disclosures. Joint slot branches avoid treating candidates as independent Bernoullis. Conditional rates express judgment about Messi against Mbappe/Rodri/Kvaratskhelia/Dembele/Olise and other nominees; they are not observed sample proportions.",
+  "uncertainty": "No calibrated award model, representative voter sample, actual ballots or certified private-information edge.5%low: European league/trophy preference and fragmented legacy support;65%high: broad international/legacy consensus beyond the observed interview sample.20pp selected reserve accounts for model/hidden-vote uncertainty, not a certified bound.",
+  "timing": "AnnouncedOct26 ceremony, cancellation/unpublished-byDec31 fallbackNO. Publication-probability adjustment covers delay/cancellation tail as judgment, not historical estimate.",
+  "eligibility_limits": "SeasonAug3,2025-Jul19,2026. Do not count October2026 MLS/farewell;2025regular-season totals are not the full eligible window. FIFA individual-award shell leads are not adopted.",
+  "sources": [
+    "data/deep_review_20261017/work/0456_official_nominees_1105.json",
+    "data/deep_review_20261017/work/0456_messi_tournament_facts_1130.json",
+    "data/deep_review_20261017/work/0456_season_facts_1112.json"
+  ],
+  "persistence_note": "Saved before this case economics computation; not a calibrated or externally registered blinded forecast.",
+  "entry_authority": false
+}

@@ -141,7 +141,7 @@ def validate_local_markdown_links(markdown, report_path):
     def archived_source_exists(root_relative):
         # These existing read-only adapters preserve legacy links after approved
         # public captures are gzip-archived. Their readers verify manifest hashes.
-        for module_name in ("public_source_archive", "public_snapshot_archive"):
+        for module_name in ("public_source_archive", "public_snapshot_archive", "public_snapshot_archive_data"):
             try:
                 module = __import__(module_name)
                 manifest_loader = getattr(module, "load_manifest", None)

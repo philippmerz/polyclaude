@@ -1,0 +1,24 @@
+{
+  "started_utc": "2026-10-20T12:09:28.805332+00:00",
+  "available_bytes": 127283200,
+  "plan_path": "data/deep_review_20261017/work/disk_archive_plan_1207.json",
+  "plan_sha256": "a7446d5a28c0f1ae08999011f356ebe62eca9eac3c9fe7ba7312011c8aff5478",
+  "protected_sha256": {
+    "notes/entry_review_gate.json": "afb97a92be3c439c8a16809534e0cb57048131caedc89501aa3d98cbf8e95c8e",
+    "notes/portfolio_kelly_priors.json": "98edcf5935f69fe446a4a498d2def86c99aa9ac1d6d79f0e184d2967692076a8",
+    "notes/decisions.json": "08841b35c7277103cee7715cf00ffe5cdd38a3700e8c6946fb47f23d29fdc9b2",
+    "notes/capital_ledger.md": "324d5a7270aa7873dbb24c38f214ba117e21116cdada745ff7ac5232c43a6697",
+    "notes/resting_orders.md": "b6e9a1f2dda0b9ca6ec7bc1c0429bff9a788cde6d5adf841fb59ada454a732d0",
+    "notes/position_condition_ids.json": "181c7d755837a14b18906bc8d56c82e6cde558a939815ba341ddaf6bf1c6497f",
+    "docs/performance.csv": "f1c9fee12c679f94c4dd48260f0bad27976afdabc1923e6f5f18157e5ce394df",
+    "research/2026-10-17-primary-market-review-rules.jsonl.gz": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
+    "notes/deep_review_checkpoint.json": "1253ce03b3ae6c7bba9c3dc4a17ddc8920d08bd2978963f6572d0dfed70212e9",
+    "research/2026-10-17-deep-review/models/0460_primary_model_1210.json": "fb92611f6c7fc8c10cd7cd7e478267eada53bf9441c0ff01d70e71711b2e7a7b"
+  },
+  "latest": {
+    "target": "shortlist_20261020T104703590448Z_thin_tail.json",
+    "mtime_ns": 1792493223766047679,
+    "mode": 41471
+  },
+  "scope": "Only exact48 pre-Oct13 public thin-tail snapshots; retain sidecars, active/frozen evidence and financial records."
+}

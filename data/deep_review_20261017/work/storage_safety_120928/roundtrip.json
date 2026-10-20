@@ -1,0 +1,18 @@
+{
+  "verified_utc": "2026-10-20T12:10:21.984694+00:00",
+  "restored": {
+    "restored": true,
+    "path": "data/snapshots/shortlist_20261012T141402452441Z_thin_tail.json",
+    "bytes": 9763196,
+    "sha256": "c1e0e976dd6755e37e2df8fb6592300baa3ef115c4cf98fecde191f3b8977de2"
+  },
+  "deterministic_recompression_sha256": "ccc7f0885f50718031c2577d11ddc780b66525e9bae86680f410ed3eb9ef7945",
+  "restored_bytes_mode_mtime_verified": true,
+  "rearchived_by_removing_only_just_restored_verified_duplicate": true,
+  "final_verification": {
+    "entries_verified": 48,
+    "symlink_aliases_verified": 48,
+    "original_bytes": 208905199,
+    "gzip_bytes": 47895115
+  }
+}

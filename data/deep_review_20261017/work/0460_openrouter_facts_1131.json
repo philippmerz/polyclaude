@@ -1,0 +1,84 @@
+{
+  "schema": "polyclaude.openrouter_weekly_chart_facts.v1",
+  "review_index": 460,
+  "market_id": "5326400",
+  "condition_id": "0xf5d4506cb6fa3864a89de069c6ce11d5f00daa9e8b0bb7c2644cd5ca71fc7041",
+  "as_of_utc": "2026-10-20T11:30:46.538419Z",
+  "rule": {
+    "question": "Will OpenRouter process between 575T and 625T tokens from Sep 28 to Oct 25?",
+    "target_week_starts_utc": [
+      "2026-09-28",
+      "2026-10-05",
+      "2026-10-12",
+      "2026-10-19"
+    ],
+    "week_window": "Monday 00:00 UTC through Sunday 23:59 UTC",
+    "contract_test": "Sum displayed Top Models weekly totals for the four named weeks; 575T <= sum < 625T, with a boundary assigned to the higher bracket.",
+    "finalization": "Use displayed totals once the 2026-10-26 week is first displayed; if it has not appeared by 2026-10-30 23:59 ET, use totals displayed then."
+  },
+  "source": {
+    "chart_page": "https://openrouter.ai/rankings#top-models",
+    "chart_api": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+    "binding_evidence": "Previously captured anonymous browser session showed the rankings page requesting this exact API endpoint and captured tooltip totals whose raw-series sums match the chart (Oct 5: raw 171.842502T displayed 172T; Oct 12 at that earlier, incomplete snapshot: raw 152.318277T displayed 152T). Page JS identifies the total tooltip formatter as compact-significant-thousands. Current refresh was against the same no-argument endpoint.",
+    "prior_ui_evidence": "data/deep_review_20261017/openrouter_chart_live_display_1113.json; API response, JS, DOM and tooltip screenshot hashes are recorded there.",
+    "shared_chart_family_research": [
+      "research/2026-10-17-deep-review/models/openrouter_calendar_weeks_1115.md"
+    ],
+    "current_capture": {
+      "http_status": 200,
+      "request_started_utc": "2026-10-20T11:30:46.425492Z",
+      "response_received_utc": "2026-10-20T11:30:46.538419Z",
+      "date_header": "Tue, 20 Oct 2026 11:30:46 GMT",
+      "age_header_seconds": "144",
+      "api_cachedAt_utc": "2026-10-20T10:37:18.469Z",
+      "raw_sha256": "efd93fe8a34a4c6c8e642e2571da317c7a5e25a3b235a9bb5c3cfd37e3303e86",
+      "gzip_sha256": "e9f4ecc0a99eeb531d778212c7efe680234df9d273ee463c2953b1732439501b",
+      "body": "logs/deep_review_20261020/case460_chart_1113/openrouter_chart.body.json.gz",
+      "receipt": "logs/deep_review_20261020/case460_chart_1113/openrouter_chart.receipt.json",
+      "refresh_comparison": "Byte-identical to the existing 10:52 packet body (same SHA-256 and cachedAt); the later request did not provide a newer chart snapshot."
+    }
+  },
+  "weekly_totals": [
+    {
+      "week_start_utc": "2026-09-28",
+      "series_count_including_Others": 10,
+      "raw_api_sum_T": 165.856049857563,
+      "display_total_T_from_verified_formatter": 166,
+      "status": "following 2026-10-05 point is present"
+    },
+    {
+      "week_start_utc": "2026-10-05",
+      "series_count_including_Others": 10,
+      "raw_api_sum_T": 171.842501724714,
+      "display_total_T_from_verified_formatter": 172,
+      "status": "following 2026-10-12 point is present"
+    },
+    {
+      "week_start_utc": "2026-10-12",
+      "series_count_including_Others": 10,
+      "raw_api_sum_T": 164.043985914931,
+      "display_total_T_from_verified_formatter": 164,
+      "status": "following 2026-10-19 point is present"
+    },
+    {
+      "week_start_utc": "2026-10-19",
+      "series_count_including_Others": 10,
+      "raw_api_sum_T": 36.124191481344,
+      "display_total_T_from_verified_formatter_estimate": 36.1,
+      "status": "partial week; chart API cachedAt 2026-10-20 10:37:18.469 UTC; measurement cutoff is not exposed"
+    }
+  ],
+  "current_snapshot_only": {
+    "raw_sum_all_four_T": 537.866728978552,
+    "sum_of_display_totals_from_verified_formatter_estimate_T": 538.1,
+    "caveat": "These are current-snapshot aggregates, not final settlement totals. The Oct 19 week is incomplete. No pace extrapolation is made."
+  },
+  "source_limits": [
+    "Raw API totals sum all ten series per week, including Others; they are not sums of individually rounded model labels.",
+    "Chart tooltip evidence confirms compact significant-digit rounding on earlier points. The current Oct 19 36.1T display is formatter-derived; this collection did not take a fresh browser screenshot of that tooltip.",
+    "The API exposes cachedAt and HTTP cache headers but no exact usage-through timestamp. Cache clocks do not establish the measurement cutoff.",
+    "The chart's first-display historical snapshots for the weeks are not retained in this unit; current API values are not proof of the exact values shown when each following week first appeared.",
+    "No Oct 26 row was present in the captured 53-point chart response; no later target weeks were searched or inferred."
+  ],
+  "prohibited_inference": "No forecast, probability, odds, case ranking, cross-case conclusion, or investment recommendation."
+}

@@ -1,0 +1,69 @@
+{
+  "schema": "case458_artemis_public_facts.v1",
+  "checked_utc": "2026-10-20T11:31:13Z",
+  "identity": {
+    "review_index": 458,
+    "market_id": "1185739",
+    "conditionId": "0xb8c306bbd3257f6dade971a38b04225c51fd0adc310a5fca6c043fe3e534c6c6",
+    "criteria_sha256": "a6763199f44af76644708eaee62b942e43980808c32c1dfd64221120ac99028e"
+  },
+  "prior_facts": {
+    "path": "data/deep_review_20261017/work/0458_hip3_facts_0900.json",
+    "sha256": "114f46a758c840cb7686b397f7cc461a1b94be1ad7a5644502d3364306ac5db1"
+  },
+  "scope": "Factual retrieval only. No probability, resolution verdict, valuation, ledger action, or trade action.",
+  "observations": [
+    {
+      "finding": "The Artemis frontend bundle for the frozen classic.artemis.ai page maps the hip_3 tab to dashboardTabId 2436. Its fetched public dashboard configuration at data-svc.artemisxyz.com/dashboard/2436/ identifies title 'HIP-3 Markets' and lists 16 chart IDs: 10840–10845, 10905, 10909–10911, 10987, 10989, 11438, 10846, 12589, 12591. This confirms the dashboard container, not which individual chart is the resolving 'HIP-3 DEXs by Open Interest' chart.",
+      "evidence": [
+        {
+          "name": "artemis_resolution_page_prior_capture",
+          "url": "https://classic.artemis.ai/asset/Hyperliquid?tab=hip_3",
+          "body_sha256": "ec82b342d5b5619790cc1dc40a150178c89b560a1631acfde0742ddd0f53eb23",
+          "receipt": "logs/deep_review_20261017/case0458_hip3_facts_0900/public/artemis_resolution_page.receipt.json"
+        },
+        {
+          "name": "artemis_asset_page_bundle",
+          "url": "https://classic.artemis.ai/_next/static/chunks/pages/asset/%5Basset%5D-5f989e75bb4fb731.js",
+          "body_sha256": "5be1ce0a1b0111af83086bb669e2649358765b230f78795b08cf46ee31de7e15",
+          "receipt_sha256": "9432d30803a285f5c79cbe2e170331a48f0392900bc879571b4a67d9c7caee25",
+          "receipt": "logs/deep_review_20261017/case0458_hip3_facts_1130/public/asset_page_js.receipt.json"
+        },
+        {
+          "name": "public_dashboard_configuration",
+          "url": "https://data-svc.artemisxyz.com/dashboard/2436/",
+          "body_sha256": "2dc592347caf820878f7a47ab779cd90f76b8f5c49816fa766572d93f418b04a",
+          "receipt_sha256": "b386e6884aecbb27da2962f4f4c75370d10c5128e3997db5c57530a7f7b1ea65",
+          "receipt": "logs/deep_review_20261017/case0458_hip3_facts_1130/api/dashboard_2436.receipt.json"
+        }
+      ]
+    },
+    {
+      "finding": "A single bounded public request to the apparent charts collection endpoint with all 16 dashboard chart IDs as an 'ids' query returned HTTP 200 and an empty JSON array. That request does not establish that chart configurations or their data are unavailable; the parameter may be unsupported. Individual chart-detail requests and chart-data requests were not made within the ~10-fetch cap.",
+      "evidence": {
+        "url": "https://data-svc.artemisxyz.com/charts/?ids=10840,10841,10842,10843,10844,10845,10905,10909,10910,10911,10987,10989,11438,10846,12589,12591",
+        "body_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "receipt_sha256": "959ad81861f64edaaf50a96354a9284968d117beebe19376617398debe2777ba",
+        "receipt": "logs/deep_review_20261017/case0458_hip3_facts_1130/api_batch/dashboard_charts_batch.receipt.json"
+      }
+    },
+    {
+      "finding": "No daily bar values, 2026 maximum, unit metadata for the chart's Total series, date coverage, or next-day finalization status were directly obtained. Therefore no statement is made here about whether the $9B threshold was reached. The official Hyperliquid current metaAndAssetCtxs endpoint remains a current per-asset view and is not substituted for Artemis' historical HIP-3 daily Total series.",
+      "source_rule": "Frozen rule requires the daily bar Total in Artemis' 'HIP-3 DEXs by Open Interest' chart; a daily value finalizes when the following day's point is published."
+    }
+  ],
+  "endpoint_investigation": {
+    "public_origin_seen_in_frontend": "https://data-svc.artemisxyz.com",
+    "dashboard_route_seen_in_frontend": "/dashboard/{id}/",
+    "chart_route_seen_in_frontend": "/chart/{id}/",
+    "dashboard_id": "2436",
+    "chart_detail_route_not_requested_due_to_fetch_cap": true,
+    "fetch_budget": "10 public HTTP fetches for this pass; no authenticated access or bypass used."
+  },
+  "limits": [
+    "The generic page shell and dashboard chart-ID list do not reveal chart identity or data series.",
+    "No historical HIP-3 Total series was recovered; no maximum can be reported from direct evidence.",
+    "No current whole-Hyperliquid OI value or third-party reconstructed estimate is used as the Artemis chart value."
+  ],
+  "raw_receipts_directory": "logs/deep_review_20261017/case0458_hip3_facts_1130/"
+}

@@ -1,0 +1,7 @@
+{
+  "completed_utc": "2026-10-20T12:13:17.362750+00:00",
+  "command": ".venv/bin/python -B -m pytest -p no:cacheprovider -q tests/test_public_snapshot_archive_data.py tests/test_deep_review_ledger_revisions.py tests/test_deep_review_ledger_start.py tests/test_deep_review_resume.py",
+  "returncode": 0,
+  "result": "47 passed in1.20s",
+  "scope": "Exact archive paths/sidecars/current-alias exclusion/corruption/collision/restore and ledger/resume integration. No financial writer or daemon change."
+}

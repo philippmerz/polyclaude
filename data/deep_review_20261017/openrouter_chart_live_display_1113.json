@@ -1,0 +1,109 @@
+{
+  "schema": "public_chart_live_display_evidence.v1",
+  "saved_utc": "2026-10-18T11:12:53.516407+00:00",
+  "source_working_packet": "data/deep_review_20261017/openrouter_chart_display_semantics_1100.json",
+  "source_working_packet_sha256_at_copy": "72222bb2baedaec755e00b27e4d4a8455c090252ec6487f1b6a0799667fd8c29",
+  "note": "Distinct stable record of later browser observation. Earlier offline unknown statements in working packet predate this browser evidence; public raw response/asset/screenshot captures are retained. No portfolio or probability decision.",
+  "browser_live_check": {
+    "access": "Anonymous, fresh Playwright context with isolated temp profile and Chromium under /tmp; no sign-in. Page loaded HTTP 200. Only public chart JSON and public JS asset bodies were retained; no cookies, auth headers, tokens, or account endpoints were recorded.",
+    "page_url": "https://openrouter.ai/rankings#top-models",
+    "chart_api_capture": {
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "status": 200,
+      "received_utc": "2026-10-18T11:06:24.407Z",
+      "bytes": 24609,
+      "sha256": "ae15872fa2989fb09ee1e7267bfa34a2fabab1c508e2f7179bc527f2aea2d7d0",
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_response_checked.json",
+      "response_cachedAt_utc": "2026-10-18T10:34:06.712Z"
+    },
+    "captured_ui": {
+      "dom_text_and_tooltip": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_tooltip_probe.json",
+      "chart_section_dom": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_dom.json",
+      "oct5_screenshot": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct5_probe.png",
+      "oct12_screenshot": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct12_probe.png",
+      "loaded_public_asset_index": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/loaded_chart_resource_urls.json"
+    },
+    "observed_tooltips": {
+      "2026-10-05": {
+        "series": [
+          "Others 66.2T",
+          "DeepSeek V4.1 Flash 41T",
+          "GLM 5.3 Flash 12.2T",
+          "MiMo-V2.6-Flash 11.5T",
+          "Step 5 Preview 8.84T",
+          "Hy4 preview 8.28T",
+          "GPT-6 Luna 7.08T",
+          "Nemotron 3 Ultra (free) 6.87T",
+          "Claude Opus 5.5 5.02T",
+          "DeepSeek V4 Flash 0731 4.92T"
+        ],
+        "tooltip_total": "172T",
+        "raw_total_T": 171.842501724714,
+        "sum_of_displayed_rounded_series_T": 171.91,
+        "forecast_row": "none observed"
+      },
+      "2026-10-12": {
+        "series": [
+          "Others 61.1T",
+          "DeepSeek V4.1 Flash 31.3T",
+          "Step 5 Preview 11.5T",
+          "GLM 5.3 Flash 11.4T",
+          "MiMo-V2.6-Flash 9.32T",
+          "Hy4 preview 7.1T",
+          "GPT-6 Luna 5.81T",
+          "Claude Opus 5.5 5.7T",
+          "GLM 5.3 4.87T",
+          "Nemotron 3 Ultra (free) 4.36T"
+        ],
+        "tooltip_total": "152T",
+        "raw_total_T": 152.318277309168,
+        "sum_of_displayed_rounded_series_T": 152.46,
+        "forecast_row": "Weekly Pace 165T (+12.6T)"
+      }
+    },
+    "resolved_display_semantics": {
+      "forecast_is_separate_overlay": "Yes. Public chart JS computes a forecast field for the last data point only when its x date equals the current UTC rollup week. It copies original point ys and adds forecast as a separate series. The renderer uses a `forecast-bar` with `url(#forecastStripes)`, which is the hatched overlay visible at the current right edge; the raw series remain separately represented.",
+      "oneweek_forecast_formula": "For weekly chart, UTC weekday weights are [0.1431,0.1483,0.1525,0.1515,0.1484,0.1257,0.1305] (Mon..Sun). Elapsed fraction = sum of weights for complete prior UTC days + current-day weight * (getUTCHours()/24); minutes/seconds are ignored. Factor i=1/max(0.01,elapsed fraction). Current raw total s=sum(point ys); d=s*(i-1) is additional projected use. Prior point total u is the preceding week; if s>u>0 use d uncapped; otherwise cap additional forecast at min(d,1.1*u). This makes the displayed pace a UI projection, not actual use or a frozen rule settlement input by itself.",
+      "observed_arithmetic_at_cachedAt": "For the Oct12 current point at cachedAt Sun Oct18 10:34:06Z: prior six day weights sum 0.8695; Sunday fraction uses hour 10 only, giving elapsed fraction 0.923875; d=12.55064685175T; projected total=164.868924160918T. The live tooltip shows +12.6T and 165T respectively. Prior-week cap is 1.1*171.842501724714=189.026751897185T, so it does not bind in this displayed example.",
+      "total_vs_rounded_series": "Tooltip total is computed from full raw series totals and then formatted separately: Oct12 raw sum 152.318T displays Total 152T, while individually displayed compact-rounded lines sum 152.46T. Oct5 raw sum 171.843T displays Total 172T while individually rounded lines sum 171.91T. Therefore do not sum already rounded model-line labels to reproduce Total.",
+      "formatting_observation": "Series labels visibly use compact chart formatting (typically about three significant digits; e.g. 61.1T, 9.32T, 7.1T); total and weekly pace display in whole T for these values. The renderer passes series through the `compact-chart-thousands` formatter; the separate display total is corroborated by live DOM and arithmetic.",
+      "date_and_cutoff": "Hovered tooltip headings are full UTC-week start dates \u201cOctober 5, 2026\u201d and \u201cOctober 12, 2026\u201d; x-axis ticks are sparse monthly dates. No data-through/cutoff label appears. `cachedAt` is 32 minutes earlier than the 11:06 browser response and drives only the forecast time reference in the caller; actual raw-observation cutoff remains undisclosed. The frozen Oct12\u201318 week was still calendar-open at capture.",
+      "first_display_history": "Browser shows current UI values for Oct5 and Oct12. It does not provide what the chart showed when a later week first appeared; historical revisions/first-display snapshots remain unavailable."
+    },
+    "relevant_chart_code": {
+      "url": "https://openrouter.ai/_next/static/immutable/chunks/3xobqxtdcoyru.js",
+      "received_utc": "2026-10-18T11:07:19.493Z",
+      "raw_sha256": "ec7661c54790c1ec7272911ab956e6fb7eea618da6281ea0b16fbd4631dfe8e4",
+      "gzip_path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/chart_component_candidate_5.js.gz",
+      "gzip_sha256": "797a789bd019db793c9b94c1c488a4914ddf9adf5ce59a1033c0233dc1500758"
+    },
+    "browser_setup": "Playwright JS package installed only under /tmp/openrouter-chart-playwright. Anonymous Chromium binary/cache isolated under /tmp/openrouter-chart-playwright/browsers; browser profile autogenerated under /tmp and closed after capture. No project dependencies or private browser profile touched."
+  },
+  "public_artifact_hashes": {
+    "dom_text_and_tooltip": {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_tooltip_probe.json",
+      "sha256": "ef6ba11162b686969ca80ae9381326b4e1732fa659f2440099b5159d6241f2b0",
+      "bytes": 2462
+    },
+    "chart_section_dom": {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_dom.json",
+      "sha256": "56154437a3b57ca07bd34ede782b7a9bb9fc44f04811bf20858801dc5e6dafb2",
+      "bytes": 261809
+    },
+    "oct5_screenshot": {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct5_probe.png",
+      "sha256": "253facd96ba8f1a9576a44e8316531a6ce9055d30137cf54137ab5a2d0bf0471",
+      "bytes": 169039
+    },
+    "oct12_screenshot": {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/live_chart_Oct12_probe.png",
+      "sha256": "ddd3d9eb7d6f47e324a6c4eaa4f9b851b4d99e9265ab463df8a094c1b62ac4fb",
+      "bytes": 169143
+    },
+    "loaded_public_asset_index": {
+      "path": "logs/deep_review_20261017/openrouter_chart_display_semantics_1100/loaded_chart_resource_urls.json",
+      "sha256": "98a1711b140bf8f32f2da0368958df3b3cc07db18ff7e5979fb07a47602b720a",
+      "bytes": 18079
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "review_index": 459,
+  "market_id": "5625870",
+  "status": "excluded_factual",
+  "condition_id": "0x346e40203cdacd72b8e2c5c8cafaf3fa99639988e387d90d0ab7f51f32a757db",
+  "criteria_sha256": "31a9c3b50b8c47f98e00d875a101357f1c4903b2928b78833e8ce101c2195a3b",
+  "literal_analysis": "Temple win by>=20=>Temple; otherwiseCharlotte. Postponedwait; canceled/no makeup50-50. Exact terminal/nonaccepting/UMAresolved state, not scheduleddate, establishes ineligibility.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5625870",
+      "observed_utc": "2026-10-20T11:40:28.521161+00:00",
+      "finding": "Root fullidentity and raw/gziphashverified:closedtrue/acceptingfalse/UMAresolved/binaryterminal."
+    }
+  ],
+  "forecast": {
+    "status": "not_forecast",
+    "reason": "Alreadyclosed/resolved venue contract, not an exante rejection."
+  },
+  "economics": {
+    "status": "not_enterable",
+    "both_sides_considered": false,
+    "reason": "VenueacceptingOrdersfalse; no valid newbid route or hypothetical edge claim."
+  },
+  "verdict": "Exclude exact closed/resolved/nonaccepting condition; not a full valuation.",
+  "reopen_condition": "Exactvenuegenuinelyreopens and currentrules/source/fees/depth/600comparison authorize review.",
+  "evaluated_utc": "2026-10-20T11:49:13.950079+00:00",
+  "question": "Spread: Temple (-19.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 459,
+  "report_sha256": "d08abe7db89ec926d0fec24cb8d32bb88e0b0a1bc67d6f37a011f7de0898abee"
+}

@@ -1,0 +1,27 @@
+{
+  "review_index": 459,
+  "market_id": "5625870",
+  "status": "excluded_factual",
+  "condition_id": "0x346e40203cdacd72b8e2c5c8cafaf3fa99639988e387d90d0ab7f51f32a757db",
+  "criteria_sha256": "31a9c3b50b8c47f98e00d875a101357f1c4903b2928b78833e8ce101c2195a3b",
+  "literal_analysis": "Temple win by>=20=>Temple; otherwiseCharlotte. Postponedwait; canceled/no makeup50-50. Exact terminal/nonaccepting/UMAresolved state, not scheduleddate, establishes ineligibility.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5625870",
+      "observed_utc": "2026-10-20T11:40:28.521161+00:00",
+      "finding": "Root fullidentity and raw/gziphashverified:closedtrue/acceptingfalse/UMAresolved/binaryterminal."
+    }
+  ],
+  "forecast": {
+    "status": "not_forecast",
+    "reason": "Alreadyclosed/resolved venue contract, not an exante rejection."
+  },
+  "economics": {
+    "status": "not_enterable",
+    "both_sides_considered": false,
+    "reason": "VenueacceptingOrdersfalse; no valid newbid route or hypothetical edge claim."
+  },
+  "verdict": "Exclude exact closed/resolved/nonaccepting condition; not a full valuation.",
+  "reopen_condition": "Exactvenuegenuinelyreopens and currentrules/source/fees/depth/600comparison authorize review.",
+  "report_markdown": "# 0459 — Temple–Charlotte spread19.5\n\n**Objective factual exclusion; no valuation.** Root read the full exact rule: Temple must win by20or more; otherwise Charlotte. Postponement waits for completion, total cancellation without makeup pays50/50. This is a spread contract, not a moneyline.\n\nThe11:40:28 exact-ID Gamma receipt is HTTP200, `closed=true`, `acceptingOrders=false`, UMAresolved and binaryterminal. Root matched full description, source, condition and both named token identities to the frozen case and verified body/gzip hashes. The state establishes no remaining ordinary new-exposure route; the past scheduled date alone would not.\n\nNo retrospective probability, bookmaker forecast, price-based screen or fresh book claim. No holding in this exact contract, trade, redemption or portfolio change. No effect on600fullvaluation count. Reopen only if exact venue state genuinely reopens and every current entry gate clears. [State evidence](../../../data/deep_review_20261017/work/terminal_status_459_461_465_1145/facts_index.json).\n"
+}

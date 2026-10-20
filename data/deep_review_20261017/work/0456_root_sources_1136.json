@@ -1,0 +1,35 @@
+{
+  "schema": "case456_root_source_review.v1",
+  "created_utc": "2026-10-20T11:32:27.492488+00:00",
+  "review_index": 456,
+  "sources": [
+    {
+      "name": "mls_title",
+      "url": "https://www.mlssoccer.com/news/inter-miami-cf-win-2025-mls-cup-presented-by-audi",
+      "status": 200,
+      "raw_sha256": "8e85ef48aec11a7d9680bbb812f85df3725ef0301fce2fd0dabdcd504cc065e8",
+      "gzip_sha256": "0cb8df083db0ed53aad1137144ce80d4db01b48a6de46a1019fcd5fa9df0e629",
+      "received_utc": "2026-10-20T11:32:27.475296Z",
+      "receipt": "logs/deep_review_20261017/case0456_root_sources_1136/mls_title.receipt.json"
+    },
+    {
+      "name": "ser_voter_interview",
+      "url": "https://cadenaser.com/nacional/2026/10/16/periodistas-con-contrato-de-exclusividad-con-el-balon-de-oro-desvelan-sus-impresiones-a-la-ser-podriamos-descartar-a-mbappe-de-la-pelea-cadena-ser/",
+      "status": 200,
+      "raw_sha256": "d65e800094c5a47a01229fbd4df4dceed9a1e91e0ca471146e8728b8ce24ed57",
+      "gzip_sha256": "8b808c260bbddcef6b14c05d75ca69e2d002024089ae8c2d3ed117cca1d27b13",
+      "received_utc": "2026-10-20T11:32:27.257321Z",
+      "receipt": "logs/deep_review_20261017/case0456_root_sources_1136/ser_voter_interview.receipt.json"
+    }
+  ],
+  "browser_verified_findings": {
+    "mls_title": "Official Dec6,2025 report: Miami champions; Messi finalMVP, two final assists, six goals/nine assists in playoffs. Within award reference window; whole2025regular-season total is not the eligible-window aggregate.",
+    "ser_voter_interview": "Oct16 interview sample predicts Kane/Yamal strongly; Messi one possible remaining podium contender. No actual ballots disclosed; sample unknown/nonrandom."
+  },
+  "additional_primary_browser_reads": {
+    "uefa_kvara": "UEFA May31: ChampionsLeague PlayerofSeason,10goals6assists and PSGtitle.",
+    "bundesliga_kane": "July20 publisher:36league/61Bayern/73club-country goals and6WorldCupgoals; publishedseasonaggregate, not independently match-date filtered.",
+    "bundesliga_olise": "May16: league PlayerofSeason,15goals19assists; award vote different from BallondOr."
+  },
+  "source_representation_limit": "Root read article text via browser before direct captures. Non200/direct failure bodies do not verify article; browser access remains separately identified. No ranking forecast is sourced from these facts."
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "primary_charge_hazard.v1",
+  "review_index": 457,
+  "market_id": "5609863",
+  "condition_id": "0xdaafd2107465112c737afec122dfd3add1de5b5e1f1f42cb49275631e127b051",
+  "criteria_sha256": "223b27dff0e3175df613a59f375d7bb197af9ba24e76e8942c8256e309c8531c",
+  "created_utc": "2026-10-20T11:39:09.384955+00:00",
+  "p_yes": 0.3,
+  "low": 0.05,
+  "high": 0.75,
+  "actual_entry_reserve_pp": 20,
+  "already_qualifying_unobserved_probability": 0.02,
+  "conditional_remaining_scenarios": [
+    {
+      "name": "Mature case near planned charge",
+      "weight": 0.45,
+      "p_qualifying_by_cutoff": 0.55
+    },
+    {
+      "name": "Evidence gathering or mostly civil path",
+      "weight": 0.45,
+      "p_qualifying_by_cutoff": 0.08
+    },
+    {
+      "name": "Delayed/aborted/legally impaired",
+      "weight": 0.1,
+      "p_qualifying_by_cutoff": 0.02
+    }
+  ],
+  "unrounded_p": 0.29979000000000006,
+  "method": "Case-specific remaining-window hazard mixture; different investigative matters are jointly covered, not independent hazards multiplied.",
+  "reasoning": "Judicially authorized search, seized devices/subpoenas and public prosecutor interest raise near-term charge risk above a generic political rumor. Roughly11.7days remain; evidence screening, unknown grandjury maturity, civil citizenship alternatives and legal challenges leave substantial nocharge mass. Neither guilt nor a legal-merits ruling is estimated. The60dayelection practice is not treated as an absolute prohibition.",
+  "uncertainty": "No docket or charge package inspected; source anonymity and private prosecutor timing. Weights/conditional rates are explicit expert judgment, not fitted frequencies.5-75range covers early evidence-gathering vs advanced hiddenchargepaperwork.20pp reserve prices this epistemic/conditionalfill exposure, not a certifiedbound.",
+  "evidence_notes": "Reuters/TBS verified browserbody supplies current load-bearing evidence; no reliance on DNAheadline truth or oldEthics clearance as exoneration. Sources rootunit0457_root_sources_1144.",
+  "persistence_note": "Saved before inspecting case457 quote economics; not a calibrated prospective model.",
+  "entry_authority": false
+}

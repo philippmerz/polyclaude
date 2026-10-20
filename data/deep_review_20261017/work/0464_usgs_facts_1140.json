@@ -1,0 +1,51 @@
+{
+  "schema": "case464_usgs_public_facts.v1",
+  "checked_utc": "2026-10-20T11:36:10Z",
+  "identity": {
+    "review_index": 464,
+    "market_id": "5473550",
+    "conditionId": "0xbf1ae57187d2df8ae7c20fda70da86e2996b3e5c4e56f57c381e3d3cb5c50d37",
+    "criteria_sha256": "e7709816f6b19c1a9fa500473b3ff3639bf1e9092072a40e5041f945e40b6d32"
+  },
+  "scope": "Facts only. No forecast, resolution verdict, eligibility decision, ledger action, or trade action.",
+  "market_window": {
+    "frozen_local": "2026-10-12 00:00 ET through 2026-10-18 23:59 ET",
+    "utc_query_inclusive": ["2026-10-12T04:00:00Z", "2026-10-19T03:59:59Z"],
+    "timezone_basis": "US Eastern daylight time (UTC-4) on both dates",
+    "final_day_24h_revision_point_utc": "2026-10-20T03:59:59Z",
+    "48h_missing_event_tail_point_utc": "2026-10-21T03:59:59Z"
+  },
+  "gamma": {
+    "endpoint": "https://gamma-api.polymarket.com/markets/5473550",
+    "http_status": 200,
+    "retrieved_utc": "2026-10-20T11:35:43.131312Z",
+    "body_sha256": "31e93125822b9c5af697be1c74c3f3651b2d49485372bf6999e91fcc3fe58879",
+    "receipt_sha256": "e40fd1640f6107d6b25e39bdf4f3bcfcb5da9c0adfba1306ce32b599951e4791",
+    "receipt": "logs/deep_review_20261017/case0464_terminal_1140/0464_gamma.receipt.json",
+    "helper_unit": "data/deep_review_20261017/work/case0464_terminal_1140/case_0464.json",
+    "identity_match": true,
+    "gamma_status": {"closed": false, "acceptingOrders": true, "umaResolutionStatus": "proposed", "umaResolutionStatuses": ["proposed", "proposed"]},
+    "helper_classification": "nonterminal_primary_review"
+  },
+  "usgs_query": {
+    "endpoint": "https://earthquake.usgs.gov/fdsnws/event/1/query",
+    "exact_url": "https://earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2026-10-12T04%3A00%3A00&endtime=2026-10-19T03%3A59%3A59&minmagnitude=6.5&orderby=time",
+    "parameters": {"format":"geojson","starttime":"2026-10-12T04:00:00Z","endtime":"2026-10-19T03:59:59Z","minmagnitude":6.5,"orderby":"time"},
+    "http_status": 200,
+    "api_version": "2.8.1",
+    "generated_utc": "2026-10-20T11:36:02Z",
+    "result_count": 3,
+    "body_bytes": 2765,
+    "body_sha256": "3a1139b1c54a4db70dd237c2079cc06c05ad027d00d5471faa52d2618831b205",
+    "receipt_sha256": "8e9f252cda2282111086191740ef5526f39a1e6b03afb90c973e4a005c9138e9",
+    "receipt": "logs/deep_review_20261017/case0464_usgs_1140/usgs_exact_window.receipt.json",
+    "body": "logs/deep_review_20261017/case0464_usgs_1140/usgs_exact_window.body.json.gz",
+    "events": [
+      {"id":"us6000u2mq","magnitude":6.9,"event_utc":"2026-10-16T03:35:31.925Z","updated_utc":"2026-10-17T03:41:49.338Z","status":"reviewed","type":"earthquake","place":"76 km NE of Ozernovskiy, Russia"},
+      {"id":"us6000u214","magnitude":6.8,"event_utc":"2026-10-13T12:23:07.248Z","updated_utc":"2026-10-13T15:39:33.040Z","status":"reviewed","type":"earthquake","place":"central Mid-Atlantic Ridge"},
+      {"id":"us6000u1z5","magnitude":6.7,"event_utc":"2026-10-13T05:44:46.919Z","updated_utc":"2026-10-14T16:41:15.359Z","status":"reviewed","type":"earthquake","place":"central Mid-Atlantic Ridge"}
+    ]
+  },
+  "timing_boundary": "The 24-hour final-day magnitude revision interval ended at 2026-10-20T03:59:59Z; the captured query is after that point and includes no Oct 18 event at M6.5+. The contract's 48-hour missing-substantial-event tail remains open through 2026-10-21T03:59:59Z as of capture. USGS currently reports three qualifying events in the exact window; this evidence does not establish that no late event will be added before the 48-hour point. A passed event window alone is not an objective ineligibility fact.",
+  "limits": ["USGS query was one bounded exact-window request; no global arrays were fetched.", "No conclusion about ultimate settlement or case eligibility is made."]
+}

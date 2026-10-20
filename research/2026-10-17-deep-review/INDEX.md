@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T11:12:25.057567+00:00
+Updated: 2026-10-20T11:50:13.914799+00:00
 
-**384 valuations saved; first milestone100:** 384 valued; 15 blocked after in-depth review. 371 factual exclusions separately; 2230 pending.
+**386 valuations saved; first milestone100:** 386 valued; 16 blocked after in-depth review. 372 factual exclusions separately; 2226 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -467,6 +467,10 @@ Each report below is written before moving to the next evaluation. Related contr
 |453|[Will PSV win on 2026-10-17?](evaluations/0453.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |454|[Will Alibaba have the best AI model at the end of December 2026?](evaluations/0454.md)|valued|Noentry:AlibabaYESpositivecentralat0.4cbutselected0afterindependentlyjustified17ppreserve;NOoverpriced;preserverareeventlead.|
 |455|[US-Iran Final Nuclear Deal by December 31, 2026?](revisions/0455_20261020T111202715920Z.md)|valued|YES central-value lead at14c but fails15pp reserve and current maker economics; NO negative central. No trade; retain exact source/cheap-maker re-review conditions for comparison after600.|
+|456|[Will Lionel Messi finish in the top 3 of the 2026 Ballon d'Or?](evaluations/0456.md)|valued|No entry: both current sides fail uncertainty-stressed economics; small central YES lead is not robust.600valuation/comparative-selection pause persists.|
+|457|[Ilhan Omar federally charged by October 31?](evaluations/0457.md)|valued|Central-valueYESlead; no robust selected-stress entry/NOnegativecentrally. Legal-path and fill-model uncertainty unresolved, no financialaction;600+comparisonpause.|
+|458|[Will Hyperliquid HIP-3 open interest hit $9B in 2026?](evaluations/0458.md)|blocked_after_review|Case-specific data-access/evidence block; notvalued/notrejected/noentry. Continue unrelated cases.|
+|459|[Spread: Temple (-19.5)](evaluations/0459.md)|excluded_factual|Exclude exact closed/resolved/nonaccepting condition; not a full valuation.|
 |467|[Will the highest temperature in Manila be 33°C on October 17?](evaluations/0467.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
@@ -783,4 +787,4 @@ Each report below is written before moving to the next evaluation. Related contr
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 
-Active indices: 456
+Active indices: 460

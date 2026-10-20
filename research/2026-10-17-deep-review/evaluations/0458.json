@@ -1,0 +1,57 @@
+{
+  "review_index": 458,
+  "market_id": "1185739",
+  "status": "blocked_after_review",
+  "condition_id": "0xb8c306bbd3257f6dade971a38b04225c51fd0adc310a5fca6c043fe3e534c6c6",
+  "criteria_sha256": "a6763199f44af76644708eaee62b942e43980808c32c1dfd64221120ac99028e",
+  "literal_analysis": "All2026finalized dailybar ArtemisHIP3DEXsOI Total>=9e9USD; bar finalizesnextdaypublished; fallbackonlypermanentlyunavailable. CurrentOI/volume/wholeHyperliquid/intradaynotexactpredicate.",
+  "evidence": [
+    {
+      "url": "https://classic.artemis.ai/asset/Hyperliquid?tab=hip_3",
+      "observed_utc": "2026-10-20T11:32:39Z",
+      "finding": "Genericpage/frontend plus dashboard2436 trace; no dailyvalues."
+    },
+    {
+      "url": "https://data-svc.artemisxyz.com/chart/10905/",
+      "observed_utc": "2026-10-20T11:32:05.257148Z",
+      "finding": "Rootverified exactnamedchartJSONmetadata/day/LAST/sixDEX/TOTAL; values absent."
+    },
+    {
+      "url": "https://data-svc.artemisxyz.com/v2/data/OPEN_INTEREST/?symbols=dreamcash,felix,hyena,kinetiq,tradexyz,ventuals&startDate=2026-01-01&endDate=2026-10-20&granularity=DAY",
+      "observed_utc": "2026-10-20T11:32:29.572846Z",
+      "finding": "Rootverified401Authenticationrequired/errorbody, no series returned; not proof permanentunavailability."
+    }
+  ],
+  "forecast": {
+    "status": "withheld",
+    "reason": "Named resolving historical dailyTotal/max/finalization unavailable; no defensible eventbaseline/crossing probability from this pass."
+  },
+  "economics": {
+    "status": "both_outcomes_unpriced",
+    "both_sides_considered": false,
+    "reason": "No p; no exact two-sided expectedprofit is claimed. Unknownsourcebaseline blocks meaningfulcomparison; not a price-based rejection."
+  },
+  "verdict": "Case-specific data-access/evidence block; notvalued/notrejected/noentry. Continue unrelated cases.",
+  "reopen_condition": "Lawfully available source historicalseries/export/ownerchart with coverage/units/finalization, or provenpermanentunavailability plus verifiedfallback.",
+  "source_verification": [
+    {
+      "name": "chart",
+      "status": 200,
+      "received_utc": "2026-10-20T11:32:05.257148Z",
+      "raw_sha256": "7c523917a4764b032b06a4c45ff30ce6828bcc1ab6a9e035650c01de60770663",
+      "receipt": "logs/deep_review_20261017/case0458_hip3_series_followup_1135/public_charts/chart_10905.receipt.json"
+    },
+    {
+      "name": "data",
+      "status": 401,
+      "received_utc": "2026-10-20T11:32:29.572846Z",
+      "raw_sha256": "939105e98aac00284684c1aaaecd5e23cf2cad658671d815360b0b4aae84c6a9",
+      "receipt": "logs/deep_review_20261017/case0458_hip3_series_followup_1135/data_attempt/hip3_oi_2026_day.receipt.json"
+    }
+  ],
+  "evaluated_utc": "2026-10-20T11:48:21.885235+00:00",
+  "question": "Will Hyperliquid HIP-3 open interest hit $9B in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 458,
+  "report_sha256": "53b3c8ce0406bd2eddeb605c8f8f944725fc15b58775eea0312a1717ea9a64c7"
+}

@@ -1,0 +1,19 @@
+{
+  "verified_utc": "2026-10-20T12:09:42.271786+00:00",
+  "available_bytes": 288276480,
+  "archive_result": {
+    "entries_archived": 48,
+    "original_bytes_removed": 208905199,
+    "gzip_bytes": 47895115,
+    "bytes_reclaimed": 161010084
+  },
+  "verification": {
+    "entries_verified": 48,
+    "symlink_aliases_verified": 48,
+    "original_bytes": 208905199,
+    "gzip_bytes": 47895115
+  },
+  "protected_files_unchanged": true,
+  "manifest_sha256": "4be9b53d85c36ab12babdda4ef90d9701f95fa535f820540af3b79f66773427b",
+  "latest_unchanged": true
+}

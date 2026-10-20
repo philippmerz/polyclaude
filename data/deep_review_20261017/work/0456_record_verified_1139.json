@@ -1,0 +1,30 @@
+{
+  "review_index": 456,
+  "verified_utc": "2026-10-20T11:34:12.627936+00:00",
+  "condition_id": "0x573b157703ef39c682aaa222bc869be0095a4c54609e944e5141f51d4950f29e",
+  "criteria_sha256": "829b46749aa7bf54a1b33ec9e67ee59e300855221229e4df3c856c9af2b88919",
+  "effective_case": {
+    "status": "valued",
+    "evaluated_utc": "2026-10-20T11:33:47.063202+00:00",
+    "report_pointer": {
+      "path": "research/2026-10-17-deep-review/evaluations/0456.md",
+      "sha256": "1ab6ed56775a41feadb33db7997186b2c0dc6c0af00605e9d2743f6e2fc07760"
+    },
+    "latest_revision": null,
+    "verified_artifacts": [
+      {
+        "kind": "base",
+        "sha256": "1ab6ed56775a41feadb33db7997186b2c0dc6c0af00605e9d2743f6e2fc07760"
+      }
+    ]
+  },
+  "counts": {
+    "completed_valuations": 385,
+    "blocked_after_in_depth_review": 15,
+    "factual_exclusions": 371,
+    "pending": 2229,
+    "base_records": 771,
+    "revisions_written": 75
+  },
+  "no_financial_action": true
+}

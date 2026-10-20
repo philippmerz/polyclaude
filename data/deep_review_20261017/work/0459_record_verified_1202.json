@@ -1,0 +1,28 @@
+{
+  "review_index": 459,
+  "verified_utc": "2026-10-20T11:49:13.801030+00:00",
+  "effective_case": {
+    "status": "excluded_factual",
+    "evaluated_utc": "2026-10-20T11:49:13.950079+00:00",
+    "report_pointer": {
+      "path": "research/2026-10-17-deep-review/evaluations/0459.md",
+      "sha256": "d08abe7db89ec926d0fec24cb8d32bb88e0b0a1bc67d6f37a011f7de0898abee"
+    },
+    "latest_revision": null,
+    "verified_artifacts": [
+      {
+        "kind": "base",
+        "sha256": "d08abe7db89ec926d0fec24cb8d32bb88e0b0a1bc67d6f37a011f7de0898abee"
+      }
+    ]
+  },
+  "counts": {
+    "completed_valuations": 386,
+    "blocked_after_in_depth_review": 16,
+    "factual_exclusions": 372,
+    "pending": 2226,
+    "base_records": 774,
+    "revisions_written": 75
+  },
+  "no_financial_action": true
+}
