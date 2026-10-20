@@ -1,0 +1,67 @@
+{
+  "schema": "polyclaude.frozen_market_factual_addendum.v1",
+  "review_index": 487,
+  "market_id": "5660044",
+  "condition_id": "0x538bed1b6ca20d2a9db109bd2da54ab0ed6caf3dedd366bd5edfabd234202582",
+  "question": "Will Vladimir Fedoseev finish in the Top 8 of Titled Tuesday on October 20?",
+  "rule_read": "Exact case read with scripts/deep_review_resume.py --index 487; checkpoint hashes verified by tool. No ledger action.",
+  "captured_utc": "2026-10-20T17:15:49.005625Z",
+  "scope": "Bounded facts only; no forecast or case disposition.",
+  "findings": [
+    "Frozen rule: Yes only if named player is in organizer Chess.com final top eight for Titled Tuesday Oct 20, 2026; if he does not play, No. Postponement past Nov 3, cancellation, or no final standings by Nov 3, 2026 11:59 PM ET also resolves No.",
+    "Official 2026 Chess.com event rulebook (page says updated Oct 19, 2026) schedules Titled Tuesday every Tuesday. For Sep 1–Oct 20: 8 a.m. PT, 11 a.m. ET and 17:00 CEST/CET-column time. For Oct 20 this corresponds to scheduled 15:00 UTC. Schedule is not proof it began or finished.",
+    "Same rulebook: 11-round Swiss, 5+0; win 1, draw 0.5, loss 0. Tied points use Buchholz Cut 1, Buchholz, Sonneborn-Berger, head-to-head (two-way), wins, wins with Black, opponent rating average Cut 1, then player rating.",
+    "Direct Oct 20 event results and schedule routes returned HTTP 200 at 17:14:35Z. Captured HTML has the relevant page title/navigation but is a client-rendered shell: no actual game list, participant data, standings or Fedoseev entry. Thus current completion/participation/result were not verified.",
+    "Official live-tournament listing returned HTTP 200 at 17:15:03Z; visible entries run from Oct 13 backwards and omit Oct 20. Guessed Oct 20 live slug returned HTTP 404. Neither observation establishes cancellation, nonparticipation, or absence of final standings.",
+    "Frozen question identifies Vladimir Fedoseev but supplies no Chess.com username/account ID; this check did not establish an account mapping."
+  ],
+  "unknowns": [
+    "Actual event start/completion or delay/cancellation.",
+    "Fedoseev participation and exact account identity.",
+    "Final standings, score/rank and any tiebreak use.",
+    "Dynamic event data not present in captured HTML."
+  ],
+  "sources": [
+    {
+      "role": "Official Chess.com 2026 event rulebook: schedule, format, tiebreaks.",
+      "url": "https://www.chess.com/official-event-rules",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:14:35.951584Z",
+      "raw_sha256": "df8fcbfe883f11f6def373caaefd5a781e96c5126c400a4698ab1dd2e907f27b",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_1730/official_rules/official_rules.receipt.json"
+    },
+    {
+      "role": "Exact Oct 20 Chess.com results route; returned shell without standings.",
+      "url": "https://www.chess.com/events/2026-titled-tuesday-blitz-october-20/results",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:14:35.011583Z",
+      "raw_sha256": "e7b2cbd8ed82587736120228053d28e7cb5c146720df7609f197f76024d9e6b8",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_1730/event_results/event_results.receipt.json"
+    },
+    {
+      "role": "Exact Oct 20 Chess.com schedule route; returned shell without event detail.",
+      "url": "https://www.chess.com/events/2026-titled-tuesday-blitz-october-20/schedule",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:14:35.433929Z",
+      "raw_sha256": "1d80dba0e7f09deccb54cfc1b707096eefb307c3895da75048aedb2313aa4f1b",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_1730/event_schedule/event_schedule.receipt.json"
+    },
+    {
+      "role": "Chess.com live-tournament listing; visible rows through Oct 13 only.",
+      "url": "https://www.chess.com/tournament/live/titled-tuesdays",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:15:03.350228Z",
+      "raw_sha256": "57da9866a28be51ddec46357b1f87672324438b5f274bb4a957f22436ede5e3c",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_1730/live_listing/live_listing.receipt.json"
+    },
+    {
+      "role": "Guessed event slug; 404, not proof of event status.",
+      "url": "https://www.chess.com/tournament/live/titled-tuesday-blitz-october-20-2026",
+      "status": 404,
+      "retrieved_utc": "2026-10-20T17:15:02.890057Z",
+      "raw_sha256": "0f0ffa4da0b7e6cc785238936b8f44608bc36874ef17cc41aa34ec047be3008b",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_1730/live_event/live_event.receipt.json"
+    }
+  ],
+  "limitations": "Five direct GETs used; one targeted official-domain search used only to discover official Chess.com event/rulebook URLs. No further retries. Captured call-window receipt timestamps are used; hashes bind supplied response bytes, not wire authentication."
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "0486_primary_reporters_addendum.v1",
+  "collected_utc": "2026-10-20T17:25:28.079472Z",
+  "scope": "bounded source addendum; no probability, verdict, ranking or action",
+  "contract_id": "667086",
+  "condition_id": "0x032e40c71875723c5878c4385458f17aa5a6e90f6bb5c92fd75cf13a5a8ea3d4",
+  "prior_facts": "data/deep_review_20261017/work/0486_facts_1730.json (preserved; direct 403s remain noted there)",
+  "reports": [
+    {
+      "publisher": "Anadolu Agency",
+      "url": "https://aa.com.tr/en/eurasia/kremlin-hopes-putin-will-meet-us-negotiators-witkoff-kushner-soon/4094685",
+      "published_date": "2026-10-20",
+      "reported_event_date": "2026-10-20",
+      "retrieved_utc": "2026-10-20T17:25:11.472254Z",
+      "http_status": 200,
+      "raw_sha256": "bbdc0ef5365ce26169380518f20661b9c6cd6753dfab058ae26492a6a750d8b9",
+      "gzip_sha256": "9f83c577e8fc418da2b7163f0d1d06029682bf81d8fd6cc47f741eae66ef0e66",
+      "receipt": "logs/cron20261020T1727Z_case0486_aa/aa_oct20_peskov/aa_oct20_peskov.receipt.json",
+      "body": "logs/cron20261020T1727Z_case0486_aa/aa_oct20_peskov/aa_oct20_peskov.body.json.gz",
+      "finding": "Anadolu reports Kremlin spokesman Dmitry Peskov said at a Moscow press briefing that the Kremlin hoped to arrange a near-term meeting between Putin and US envoys Steve Witkoff and Jared Kushner, to hear about contacts with Ukrainians and Europeans and continue Washington-Moscow exchanges. Peskov did not confirm St Petersburg as venue. This is an intended Putin-envoys meeting, not Putin-Zelenskyy."
+    },
+    {
+      "publisher": "Anadolu Agency",
+      "url": "https://www.aa.com.tr/en/eurasia/ukraine-agrees-to-us-proposed-trilateral-technical-talks-in-uae-zelenskyy-says/4077704",
+      "published_date": "2026-10-04",
+      "reported_event_date": "2026-10-04",
+      "retrieved_utc": "2026-10-20T17:25:12.655683Z",
+      "http_status": 200,
+      "raw_sha256": "56c6c47b483247642851d9ad79c49c9b6fbb501242b437416698e852b4a0dd57",
+      "gzip_sha256": "718b3ba157ff2ec8b30ac02867d9cf1d79910be76bca436689eabe78f8578974",
+      "receipt": "logs/cron20261020T1727Z_case0486_aa/aa_oct4_zelensky/aa_oct4_zelensky.receipt.json",
+      "body": "logs/cron20261020T1727Z_case0486_aa/aa_oct4_zelensky/aa_oct4_zelensky.body.json.gz",
+      "finding": "Anadolu reports Zelenskyy said at a joint Kyiv press conference with German Chancellor Friedrich Merz that Ukraine accepted the US proposal for technical-level trilateral talks by end October, in UAE or another US-proposed country, and awaited Russia’s response. Proposed technical talks among representatives do not themselves establish an encounter of the two leaders."
+    },
+    {
+      "publisher": "Anadolu Agency",
+      "url": "https://www.aa.com.tr/en/russia-ukraine-war/putin-publicly-responds-to-zelenskyy-s-open-letter-says-he-sees-no-sense-in-meeting-him/3957923",
+      "published_date": "2026-06-05",
+      "reported_event_date": "2026-06-05",
+      "retrieved_utc": "2026-10-20T17:25:13.733180Z",
+      "http_status": 200,
+      "raw_sha256": "bbbb7b9b06826090797eb59adc780bd4b5a3596b07fc2ec47a71bf2aba78aa1a",
+      "gzip_sha256": "3324b4fe83012fec0d3c7dd70ab072941be002d13e736e6dae3c2d93478185cf",
+      "receipt": "logs/cron20261020T1727Z_case0486_aa/aa_jun5_putin_letter/aa_jun5_putin_letter.receipt.json",
+      "body": "logs/cron20261020T1727Z_case0486_aa/aa_jun5_putin_letter/aa_jun5_putin_letter.body.json.gz",
+      "finding": "Anadolu reports Putin said at the St Petersburg International Economic Forum he then saw “no sense” in meeting Zelenskyy, saying past meetings bought time and that agreements were needed. This is a dated public position as of June 5, not proof of current stance after subsequent diplomatic developments."
+    }
+  ],
+  "interpretation": "The Oct 4 proposed talks were technical-level and awaited Russia’s reply; the Oct 20 statement concerns Putin meeting U.S. negotiators. Neither report says Zelenskyy and Putin met in person. The June Putin statement is direct evidence of his stated position at that date only. These three reports do not exhaust the remaining period or establish that no qualifying encounter occurred.",
+  "gaps": [
+    "The reports do not verify whether the proposed technical talks occurred by end October.",
+    "No direct official Kremlin transcript or exhaustive credible-reporting scan obtained."
+  ],
+  "all_raw_and_gzip_hashes_verified": true,
+  "raw_payloads_private_only": true
+}

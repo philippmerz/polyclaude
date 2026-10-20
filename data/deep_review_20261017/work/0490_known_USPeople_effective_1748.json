@@ -1,0 +1,61 @@
+[
+  {
+    "index": 77,
+    "question": "Will Sean 'Diddy' Combs be the #1 searched person on Google in the US this year?",
+    "status": "valued",
+    "forecast": {
+      "p_yes": 0.05,
+      "low": 0.005,
+      "high": 0.35,
+      "method": "Primary unfitted compatible USPeoplewinner scenarios, exact selected-query measurements and2025legalbaseline facts; no ownquote inputs.",
+      "reasoning": "USPeople rank1/Other fallback. Prior2025legal events verifiedDOJ;2026selectedSeanCombs-termweakbutalias/internalsandappealshockunknown. Primary5% fromcompatibleunfittedwinnerdistribution, notownprices.",
+      "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+    },
+    "report_sha256": "9b978d52b03b2a98dfeb98f49df4aa5014b214d9f6cbb2a91eaeab9222fdd7a8",
+    "report_path": "evaluations/0077.md"
+  },
+  {
+    "index": 224,
+    "question": "Will Lindsay Clancy be the #1 searched person on Google in the US this year?",
+    "status": "valued",
+    "forecast": {
+      "p_yes": 0.4,
+      "low": 0.1,
+      "high": 0.8,
+      "method": "Primary explicitcompatibleUSPeoplewinnerdistribution; observed2026queryburst plusdatedlegalcatalysts, unmeasuredYoY/fullfield. Noownquoteinputs.",
+      "reasoning": "FullUSPeople rank1 withMarch31missingOther matches sharedmodel; actual2026trial/mistrial, observedselectedweeklyburst, Nov2datedhearinglead, unknownYoY/internalmethod/fullfield. Central40explicitunfittedwinnerdistribution, notpriceinputs.",
+      "calibration": "Primary judgment/explicit assumptions; not a calibrated statistical posterior unless demonstrated in the report."
+    },
+    "report_sha256": "b68884b8f833c9d89895d47d32f6e70e28e9868f81fe0e782f306b1667a0c808",
+    "report_path": "evaluations/0224.md"
+  },
+  {
+    "index": 328,
+    "question": "Will Nancy Guthrie be the #1 searched person on Google in the US this year?",
+    "status": "blocked_after_review",
+    "forecast": {
+      "p_yes": null,
+      "method": "Substantive source/configuration review; conditionalhypotheses andbreak-even thresholds, no adoptedp.",
+      "reasoning": "No matched Nancy same-window prior/current-year measurement or otherwise defensible relative-growth/People-eligibility model against the 2026 field. Existing selected5-term series excludesNancy. Fresh ordinary37h-later matched request11:18got429, stopped/no workaround. InternalYISranking cannot be reconstructed from normalized index alone even with public data.",
+      "model_path": "research/2026-10-17-deep-review/models/0328_primary_block_1123.json"
+    },
+    "report_sha256": "941c73b914247d2e61897708a5c07a468e64a3401838bfd71c9f8e57859ca082",
+    "report_path": "evaluations/0328.md"
+  },
+  {
+    "index": 418,
+    "question": "Will Shohei Ohtani be the #1 searched person on Google in the US this year?",
+    "status": "valued",
+    "forecast": {
+      "p_yes": 0.030115400000000004,
+      "low": 0.002,
+      "high": 0.25,
+      "actual_entry_reserve_pp": 10,
+      "method": "Unfitted publication\u00d7threecurrent/futurebreakout scenarios, primary authored before ownquotes.",
+      "reasoning": "USPeoplegrowthcriterion and highpriorsearchbaseline differfromfame. Known2026sportsweakening offsetsWBCexposure; hiddenGooglecohort/unseenpast/futureshocks explicit. No measuredrank or calibratedperson-levelbase rate; broaduncertainty.",
+      "model_path": "models/0418_google_people_primary_0249.json"
+    },
+    "report_sha256": "72ad021cb78ac20186bd3ac470cef44172585f27606222011995877de3e2287b",
+    "report_path": "evaluations/0418.md"
+  }
+]

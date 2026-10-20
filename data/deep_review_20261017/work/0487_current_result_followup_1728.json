@@ -1,0 +1,59 @@
+{
+  "schema": "polyclaude.frozen_market_factual_followup.v1",
+  "review_index": 487,
+  "market_id": "5660044",
+  "captured_utc": "2026-10-20T17:26:41.839599Z",
+  "scope": "Bounded current official-source follow-up; no forecast, disposition, or ledger action.",
+  "findings": [
+    "Chess.com public profile API for candidate username bigfish1995 returns username bigfish1995, display name “Vladimir Fedoseev,” title GM, player ID 26303484, and member URL https://www.chess.com/member/Bigfish1995. It also explicitly reports verified=false and status=closed. This supports that the Chess.com profile displays the matching name, but the platform verification flag is false; treat the account-to-person mapping as not independently verified.",
+    "The same profile response reports last_online Unix 1767639133 (2026-01-05 18:52:13 UTC). That is an API profile field, not current activity or Oct 20 tournament evidence.",
+    "The public Chess.com monthly games API for this username returned HTTP 200 with {\"games\":[]} for October 2026. This reports no games in that returned archive, but by itself does not establish whether he joined/played in Titled Tuesday or what the event standings were.",
+    "The exact official Oct 20 /games route returned HTTP 200, but captured HTML is a client-rendered shell with page title/navigation only; no games, participants or standings are present. No final table or completion state recovered.",
+    "The page references official JS asset /r2/client-packages/events/2026.10.4/events-view.js. Its response exceeded the 2 MiB cap: only first 2 MiB retained and inspected. No complete-asset or standings claim is made."
+  ],
+  "unknowns": [
+    "Independent verification that account bigfish1995 belongs to the named person.",
+    "Whether Fedoseev participated, the Oct 20 event completion state, final standings, rank/score, and tiebreak result.",
+    "Whether event data are accessible through other non-client routes; none was tested beyond the requests listed."
+  ],
+  "sources": [
+    {
+      "role": "Chess.com public account profile API.",
+      "url": "https://api.chess.com/pub/player/bigfish1995",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:26:00.678372Z",
+      "captured_bytes": 629,
+      "raw_sha256": "075e3ca91ce1d8d96588d29695f689080883b74ece92cf587cc1536f96246dfb",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_followup_1728/candidate_profile/candidate_profile.receipt.json"
+    },
+    {
+      "role": "Chess.com public monthly games archive API.",
+      "url": "https://api.chess.com/pub/player/bigfish1995/games/2026/10",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:26:01.060255Z",
+      "captured_bytes": 12,
+      "raw_sha256": "245543ab380a8dc6af1f995f84fed049b99a3289285f127075c56d38119aa5ec",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_followup_1728/candidate_october_games/candidate_october_games.receipt.json"
+    },
+    {
+      "role": "Official Chess.com Oct 20 live games route.",
+      "url": "https://www.chess.com/events/2026-titled-tuesday-blitz-october-20/games",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:26:26.228372Z",
+      "captured_bytes": 107504,
+      "raw_sha256": "ce8248c39488dff8b36ca14bc6b39d7b860f9c6d0afd69401795b2c1cd78f691",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_followup_1728/event_games/event_games.receipt.json"
+    },
+    {
+      "role": "Official event frontend JS asset; capped response.",
+      "url": "https://www.chess.com/r2/client-packages/events/2026.10.4/events-view.js",
+      "status": 200,
+      "retrieved_utc": "2026-10-20T17:26:11.946682Z",
+      "captured_bytes": 2097152,
+      "raw_sha256": "ffe92004e959045b297c6079bebcc3e90a02345c5bd41f374cfe893175fd0323",
+      "receipt": "logs/deep_review_20261020/fedoseev_titled_tuesday_487_followup_1728/event_app_asset/event_app_asset.receipt.json",
+      "capture_note": "Body intentionally capped at 2 MiB; partial only, not a complete JavaScript file."
+    }
+  ],
+  "request_limit": "Four direct GETs in this follow-up; max five. Timeouts were 20 seconds. Each response was captured with read_capture before parsing; no more network attempts made."
+}

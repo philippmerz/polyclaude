@@ -1,0 +1,54 @@
+{
+  "schema": "deep_review.primary_event_tree.v1",
+  "review_index": 486,
+  "created_utc": "2026-10-20T17:28:25.878887Z",
+  "identity": {
+    "market_id": "667086",
+    "condition_id": "0x032e40c71875723c5878c4385458f17aa5a6e90f6bb5c92fd75cf13a5a8ea3d4",
+    "criteria_sha256": "05b4bb33df951e85f7ef844b1e75ed156ad2d06a8e78ac1aba8643bf376bfc01"
+  },
+  "own_market_quotes_seen": false,
+  "pre_model_status_capture_note": "EarlierexactGamma status body contains marketfields but helper omits numericprices; root used only identity/createdAt, not outcomePrices. Priceblindness is authorattestation; fresh ownbookcapture followsmodel.",
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0486_primary_reporters_addendum_1727.json": "1484b9df07292a0931d3a6c061f389ea29ce9108be8b4c6f7a2836ca1198c359",
+    "data/deep_review_20261017/work/0486_facts_1730.json": "56fbf7dde1ad684542c4ccde46c5ac0ccd00571970c51a0ec8816152c93919dc"
+  },
+  "literal": "YES=no meeting before2027; NO=atleastone qualifyinginpersonencounter ofZelenskyyandPutin byDec31ET, anylocation/briefinteractioncounts; remote/envoy-onlynot. OccupiedUkraineclassifiedRussia onlyaffectslocation-siblings. Consensuscredible reporting. Nextmeeting isforward-looking, createdNov5,2025; noexpressstart-dateclause inserted.",
+  "verified_facts": "Rootreadandhashverified3AAfirsthandreportedpublicstatements:Oct20PeskovhopesPutin-USenvoysmeeting, notZelenskyy;Oct4ZelenskyacceptedtechnicaltrilateralproposalawaitingRussia, notleaderencounter;June5Putinthenopposedleadermeeting, notfixedOct20stance. DirectUA/AP403andbrowsererrors remain; WHgallerydescribesseparateSep5Putin/Sep6Zelensky contacts. No exhaustivehistoricalabsenceproof.",
+  "prior_already_qualifying_encounter_probability": 0.03,
+  "prior_already_reason": "Explicitsubjectiveallowance for missedpriorencounter/sourceconsensus uncertainty sincecreation; no observedqualifyingevent. Not an empiricalfailure rate or proofnoevent.",
+  "conditional_future_regimes": [
+    {
+      "name": "Stalemate/indirect-only talks",
+      "mass": 0.6,
+      "p_any_leader_encounter_by_cutoff": 0.08,
+      "reason": "Hostility/venue/legitimacybarriers and repeatedenvoy-onlypattern; brief/surpriseencounterpossible evenwithoutpeacedeal."
+    },
+    {
+      "name": "Materialtechnicalorintermediaryprogress",
+      "mass": 0.3,
+      "p_any_leader_encounter_by_cutoff": 0.35,
+      "reason": "Oct4proposedtechnicaltalks/ongoingUSshuttle canopenleaderformat, but representatives meetingisnotproofleadersfollow."
+    },
+    {
+      "name": "Rapiddeal/high-levelintervention",
+      "mass": 0.1,
+      "p_any_leader_encounter_by_cutoff": 0.75,
+      "reason": "US/Turkish/neutralvenue pressureorcessationcanrapidlyscheduleencounter; logistics/security/withdrawalstillcanpreventit."
+    }
+  ],
+  "raw_future_meeting_probability": 0.228,
+  "raw_no_meeting_probability": 0.74884,
+  "p_yes": 0.75,
+  "p_no": 0.25,
+  "rounding": "Raw.97*(1-.228)=.74884 rounded75%; no claim4-decimalforecastprecision.",
+  "broad_judgment_range_yes": [
+    0.35,
+    0.96
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "reserve_reason": "10ppordinarypoliticalmodel+5ppprivate-negotiation/sourceconsensus/conditionalfillrisk; widebroadboundsseparate, no calibratedfloor.",
+  "sensitivity": "Breakthroughmass30%instead10%, shifting20ppfromstalemate, givesfuturemeeting36.2% andno-meeting61.886%. Noneoftheseweightsaremeasuredfrequencies. ConfirmedencounterwouldputYESnear0 subjecttoadjudication, notsmallposterioradjustment.",
+  "dependence": "No strictimplicationwith342anyauthorizeddiplomacybyNov30: roles, chancegreetings andwindowsdiffer. SharedRussia-Ukrainediplomacy source/regimes; no independentforecastorhedgecredit. No helddirectleadersmeeting position identified at16:57account.",
+  "horizon_days_to_cutoff": 72.47956158556714
+}

@@ -1,0 +1,43 @@
+{
+  "schema": "polyclaude.bounded_news_closeout.v1",
+  "reviewed_utc": "2026-10-20T17:56:33.492800+00:00",
+  "since_utc": "2026-10-20T17:06:12Z",
+  "alert_decisions": [
+    {
+      "id": "e706497b76f3221956b2ff64980c310537879f07",
+      "finding": "MontanaFlintIrancomment research-only; no matching held/liveBUY identity. Bodyunverified, no researchrejection."
+    },
+    {
+      "id": "6702336df1f56c97e822e646afa46707a7a59470",
+      "finding": "MontanaForstagcampaigncomment research-only; no matching held/liveBUY identity. Bodyunverified, no researchrejection."
+    },
+    {
+      "id": "b27070873be8269e6f95abbf691c1c93b18f5993",
+      "finding": "Actualpublisher200body describes four uncertain release traces and says its reported SGLang commit cannot be located. It does not supply an official release or qualifyingHLEscore. Underlyingfirstpartycode/registry/commitclaims not independently recovered; no verifieddate/capabilitythreshold. A rumor may matter, but no defensible newnumericbridge. Existing family model already permits capabilityupdate; do not count correlatedrumorsasindependentconfirmation.",
+      "action": "Retain/noadd; no prior/order/flowchange, not p(rumor)=0. Actualissuerrelease or resolverresult reopens."
+    }
+  ],
+  "source_receipts": [
+    {
+      "url": "https://www.orcarouter.ai/blog/kimi-k3-1-next-week-leak",
+      "http_status": 200,
+      "received_utc": "2026-10-20T17:55:43.088392Z",
+      "receipt": "logs/deep_review_20261020/goal0029_closeout_news/publisher/publisher.receipt.json",
+      "raw_sha256": "c9b7d9c30d3b5e75e091ee20a5762c9ee43d711fbae9956eac0f963973d5c7ca",
+      "gzip_sha256": "409198ed9d6bf599bd7b71b85f5a39d7945aa8d92f7447611fc4bf5ea007d8a1"
+    },
+    {
+      "url": "https://dashboard.safe.ai/api/models",
+      "http_status": 403,
+      "received_utc": "2026-10-20T17:55:42.778886Z",
+      "receipt": "logs/deep_review_20261020/goal0029_closeout_news/hle/hle.receipt.json",
+      "raw_sha256": "3c2da4178929a04fa899bfe5fc4dfeb5140ac55885587e6dbd9ec89687ba2d90",
+      "gzip_sha256": "6a6238a3829a65c84be8a575aee52526dad90297e3ec6bb2a0209caf8801b315"
+    }
+  ],
+  "resolver_followup": "One directofficialAPIGET403text; no score parsed/no retry or workaround. Last successful17:01:49resolver66rows/K3HLE41.08 remains dated, not refreshed. A transient403 is not permanentoutage/NO-resolution proof.",
+  "private_web_tool_capture": "logs/deep_review_20261020/goal0029_closeout/kimi_news_web_supplied.json",
+  "web_capture_scope": "Supplied webtool bytes/search representation, not HTTPbody/wireauthentication; directpublisherresponse separately captured.",
+  "execution": "None; no entry/SELL certificate from these sources.",
+  "notification": "No repeatedroutine/headlineTelegram; no confirmedthesisbreak/globalblock."
+}

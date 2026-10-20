@@ -1,0 +1,90 @@
+{
+  "schema": "finite_review_candidate_comparison.v1",
+  "created_utc": "2026-10-20T17:53:59.256272+00:00",
+  "scope": "Dated provisional comparisons; no final ranking, selection or executable recommendation. Different quote/source clocks retained.",
+  "candidates": [
+    {
+      "index": 470,
+      "side": "No",
+      "quantity": 10,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0470.md",
+        "sha256": "0908fda9c6d0418b35652b75f5d1bd0feefad025b37e803f78bd5c3872dfc2be"
+      },
+      "quote_asof": "2026-10-20T13:42:48.086088+00:00",
+      "cost": 5.1,
+      "central_profit": 1.9000000000000004,
+      "selected_profit": 0.39999999999999947,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 480,
+      "side": "No",
+      "quantity": 10,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0480.md",
+        "sha256": "b5f2e9ce0718bb2228294f64884612a96fef8407fac600d7b1c2f0eb2212ec42"
+      },
+      "quote_asof": "2026-10-20T16:23:31.352267+00:00",
+      "cost": 1.31,
+      "central_profit": 2.07,
+      "selected_profit": 0.0699999999999994,
+      "funding_ops_not_free": true,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 484,
+      "side": "Yes",
+      "quantity": 10.0,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0484.md",
+        "sha256": "b5c0a2eece09a044149c91c3d64148321c3052de557b75d168567626dc2e6123"
+      },
+      "quote_asof": "2026-10-20T17:17:00.743540+00:00",
+      "cost": 1.1391600000000002,
+      "central_profit": 0.8603399999999997,
+      "selected_profit": -0.6396600000000002,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 486,
+      "side": "No",
+      "quantity": 25.0,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0486.md",
+        "sha256": "38d510046634a063618c742bcaec37fa1e2130e5b75a893745210ff93392a757"
+      },
+      "quote_asof": "2026-10-20T17:28:26.482164+00:00",
+      "cost": 1.4000000000000001,
+      "central_profit": 4.85,
+      "selected_profit": 1.0999999999999999,
+      "current_execution_authorization": false
+    },
+    {
+      "index": 488,
+      "side": "No",
+      "quantity": 10.0,
+      "report": {
+        "path": "research/2026-10-17-deep-review/evaluations/0488.md",
+        "sha256": "2912eca691ae67617d3ac5b43e535a8bcfdb2e6242694924c6d338f412db4bac"
+      },
+      "quote_asof": "2026-10-20T17:38:35.071206+00:00",
+      "cost": 3.9951600000000003,
+      "central_profit": 0.2048399999999999,
+      "selected_profit": -1.29516,
+      "current_execution_authorization": false
+    }
+  ],
+  "load_bearing_limits": {
+    "470": "Accounting/catastrophe/reserve error; provisional selected+0.40/5.10 at13:42, not refreshed.",
+    "480": "Strict de facto wording/interpretation; thin selected+0.07/1.31 at16:23, not refreshed.",
+    "484": "Selectednegative; ≥60 nested inside held≥55. Existing55+newNO60 costs exceed conditional floor. No diversification or lock.",
+    "486": "No means a qualifying Putin–Zelenskyy encounter. Subjective NO25%;25shares cost1.40/selected+1.10. Strong-constraint countermodel meeting5.32575% gives central−0.0685625 and selected−1.40; a 50/50 model mixture nearly erases selected edge. No certified allocation.",
+    "488": "No42%; taker selectednegative. Hypothetical25NO5c maker costs1.25 and unconditional selected+5.50, but unknown fill/queue/inside-earnings selection: paper lead, not expected conditional-fill profit or certified order."
+  },
+  "cash": "Cached Oct19 variable Aave3.2035% held constant only as sensitivity; actual funding/gas/eligibility and current rate not assumed free or revalidated here.",
+  "portfolio": "16:57account0orders/127trades/9unchangedpositions,16:58canonical trading188.36mid/178.57depth. No new financial producer or flow. Existing Kimi55/OR/MI/Messi/wholeClarity/dust retained under17:06judgment; shared AI/venue/source risks and full-loss states remain.",
+  "entry_pause": "403/600 uniquevalued + primarycomparativeselectionnull. No wildcard/add/repost/taker/bundle; holdings/exits/cancel/redeem managed.",
+  "next": "Scheduledrun ends after publication.490unfinished with sources saved, no p/quotes/credit. Authorized future research resumes490 before492. No goal lifecycle mutation, timer or idle follow-up."
+}

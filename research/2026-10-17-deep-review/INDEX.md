@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T16:45:16.578605+00:00
+Updated: 2026-10-20T17:44:03.070738+00:00
 
-**400 valuations saved; first milestone100:** 400 valued; 16 blocked after in-depth review. 381 factual exclusions separately; 2203 pending.
+**403 valuations saved; first milestone100:** 403 valued; 17 blocked after in-depth review. 383 factual exclusions separately; 2197 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -495,6 +495,12 @@ Each report below is written before moving to the next evaluation. Related contr
 |481|[Will the 2-year Treasury yield hit 4.95% in October?](evaluations/0481.md)|valued|Bothsidecentral/selectedtakernegative; makerYES19/NO74 selectednegative. No entry, sharedratefactor/jumps/sourceandfillrisk explicit.|
 |482|[Will Dogecoin reach $0.48 by December 31, 2026?](revisions/0482_20261020T164413862661Z.md)|valued|Central-onlyYES taillead; actual100shareswalkcost1.79549 central+1.50451 butselectednegative. NOcentralnegative. No measuredconditionaltail/short-regimebondlicence;600pause unchanged.|
 |483|[Oilers vs. Utah](evaluations/0483.md)|excluded_factual|Factualterminalvenueexclusion only.|
+|484|[Will the highest score achieved by a Moonshot Kimi model on Humanity’s Last Exam in 2026 be 60% or higher?](evaluations/0484.md)|valued|YEScentralpositive butbothsidesselectednegative atobservedasks and makerbids; noentrylead or discounted55/60floorlock. Comparefreshat600, no currentBUY.|
+|485|[Will the highest temperature in Ankara be 9°C or below on October 17?](evaluations/0485.md)|excluded_factual|Factualexclusionexactterminalvenue, notcompletedvaluation orforecastwin.|
+|486|[Will Zelenskyy and Putin not meet before 2027?](evaluations/0486.md)|valued|ProvisionalmeetingNOpointselected+1.10on1.40/25shares beforefunding; constraintcountermodelnegative, noentrycertificate orfinalrank. NoBUYuntil600+comparison.|
+|487|[Will Vladimir Fedoseev finish in the Top 8 of Titled Tuesday on October 20?](evaluations/0487.md)|blocked_after_review|Case-specificblocked_after_review; no probability/valuationcredit. No fullgoal methodblock.|
+|488|[Will KLA Corp (KLAC) Q1 total revenues be above $4B?](evaluations/0488.md)|valued|Bothselectedtakersnegative; NOsmallcentralupside.5cbidmakerNOpaperpositivebutconditionalfillunmeasured, onlyprovisionalrouteleadfor600comparison. Noentrycertified.|
+|489|[UFC Fight Night: Tanner Boser vs. Jhonata Diniz (Heavyweight, Prelims)](evaluations/0489.md)|excluded_factual|Factualexclusionexactterminalvenue, not fullvaluation or fightresultclaim.|
 |491|[Will the highest temperature in Shenzhen be 31°C on October 17?](evaluations/0491.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
@@ -809,3 +815,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 490

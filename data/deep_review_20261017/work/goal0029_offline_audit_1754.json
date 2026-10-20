@@ -1,0 +1,104 @@
+{
+  "schema": "finite_review.offline_cohort_audit.v1",
+  "verified_utc": "2026-10-20T17:52:32.787504+00:00",
+  "baseline_head": "3e499223e15650e1d5b533e7969d785a14a195e1",
+  "cases": [
+    {
+      "index": 484,
+      "status": "valued",
+      "json_sha256": "e3fb1cad2002979568393620c5c4903ca0e6fe70c0468ae7e3fd4efa0aa07aa6",
+      "report_sha256": "b5c0a2eece09a044149c91c3d64148321c3052de557b75d168567626dc2e6123",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true,
+      "economics_replayed_both_sides_from_bound_raw_receipts": true,
+      "model_source_and_generator_hashes_rechecked": true
+    },
+    {
+      "index": 485,
+      "status": "excluded_factual",
+      "json_sha256": "54b594b98ece5e2aa6b0b4b3e3326010cef4db9a16f20769fd11933db58abba4",
+      "report_sha256": "8d68e14c1ced02c575ba1bc1ffc03d08ec17952db7ee93245d4c8101f817327e",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true
+    },
+    {
+      "index": 486,
+      "status": "valued",
+      "json_sha256": "2e09cc2320386a9daac68c77df4d6ec137f0a4580c5a09f61242d08226f24967",
+      "report_sha256": "38d510046634a063618c742bcaec37fa1e2130e5b75a893745210ff93392a757",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true,
+      "economics_replayed_both_sides_from_bound_raw_receipts": true,
+      "model_source_and_generator_hashes_rechecked": true
+    },
+    {
+      "index": 487,
+      "status": "blocked_after_review",
+      "json_sha256": "8277e789aec2176064df85a5b014a69ada452e60c824f835ab79cd79553536c6",
+      "report_sha256": "edca73a0237f29dd4193861846bf035ecaad344157c47467af13c48e862af3c3",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true
+    },
+    {
+      "index": 488,
+      "status": "valued",
+      "json_sha256": "7cbcbd3609370d3e1e464d50c23c5ca04b9473b1520c044669390ef8726a7d80",
+      "report_sha256": "2912eca691ae67617d3ac5b43e535a8bcfdb2e6242694924c6d338f412db4bac",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true,
+      "economics_replayed_both_sides_from_bound_raw_receipts": true,
+      "model_source_and_generator_hashes_rechecked": true
+    },
+    {
+      "index": 489,
+      "status": "excluded_factual",
+      "json_sha256": "3e7f825b92811e5153e9db27d8b58ca9781a92b0f866ccb4391527d117093b28",
+      "report_sha256": "6c2ddf087f60f1fc5480cffd074cf70d15bdc1c68fc692f6f77b6c6248e84041",
+      "exact_identity_rule_validated": true,
+      "all_local_report_links_valid": true
+    }
+  ],
+  "all_base_and_revision_hashchains_valid": true,
+  "base_records": 803,
+  "effective_records": 2,
+  "exact_six_append_prefix_preserved": true,
+  "counts": {
+    "completed_valuations": 403,
+    "blocked_after_in_depth_review": 17,
+    "factual_exclusions": 383,
+    "pending": 2197,
+    "base_records": 803,
+    "revisions_written": 77
+  },
+  "unfinished_active_case": 490,
+  "generators_replayed": {
+    "484": {
+      "p_yes": 0.19995000000000002,
+      "p_no": 0.8000499999999999,
+      "joint": {
+        "under55": 0.6597875,
+        "55throughunder60": 0.1402625,
+        "60throughunder65": 0.05995,
+        "65orabove": 0.14
+      },
+      "low_update_probability": 0.1122,
+      "high_update_probability": 0.24382500000000001
+    },
+    "486": {
+      "future_meeting": 0.228,
+      "raw_no_meeting": 0.74884,
+      "rounded_yes": 0.75,
+      "sensitivity_breakthrough30": 0.61886
+    },
+    "488": {
+      "raw_yes": 0.5767284128322211,
+      "rounded_yes": 0.58,
+      "zero_core_bias_yes": 0.45678579406890824,
+      "100M_core_bias_yes": 0.6778069712034032,
+      "qoq_required_pct": 9.362645438648109
+    }
+  },
+  "validation_limits": "Offline arithmetic, identity and persistence checks, not forecast calibration/current executable quotes. No financial/account producer rerun, trade or policy mutation.",
+  "source_correction": "data/deep_review_20261017/work/0490_source_hash_correction_1754.json",
+  "disk_free_MiB": 155.07421875
+}

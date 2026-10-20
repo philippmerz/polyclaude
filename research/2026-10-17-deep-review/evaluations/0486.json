@@ -1,0 +1,162 @@
+{
+  "review_index": 486,
+  "market_id": "667086",
+  "condition_id": "0x032e40c71875723c5878c4385458f17aa5a6e90f6bb5c92fd75cf13a5a8ea3d4",
+  "criteria_sha256": "05b4bb33df951e85f7ef844b1e75ed156ad2d06a8e78ac1aba8643bf376bfc01",
+  "status": "valued",
+  "literal_analysis": "YESnomeeting,NOanyinpersonZelenskyyPutininteractionbyDec31ET. Briefencountercounts; remote/envoy-onlynot. Crediblereportingconsensus; nextmeetingforward-looking, noexpressstartclause inserted; occupiedterritorylabelonlylocationfamily.",
+  "evidence": [
+    {
+      "url": "https://aa.com.tr/en/eurasia/kremlin-hopes-putin-will-meet-us-negotiators-witkoff-kushner-soon/4094685",
+      "observed_utc": "2026-10-20T17:25:11.472254Z",
+      "finding": "Anadolu reports Kremlin spokesman Dmitry Peskov said at a Moscow press briefing that the Kremlin hoped to arrange a near-term meeting between Putin and US envoys Steve Witkoff and Jared Kushner, to hear about contacts with Ukrainians and Europeans and continue Washington-Moscow exchanges. Peskov did not confirm St Petersburg as venue. This is an intended Putin-envoys meeting, not Putin-Zelenskyy."
+    },
+    {
+      "url": "https://www.aa.com.tr/en/eurasia/ukraine-agrees-to-us-proposed-trilateral-technical-talks-in-uae-zelenskyy-says/4077704",
+      "observed_utc": "2026-10-20T17:25:12.655683Z",
+      "finding": "Anadolu reports Zelenskyy said at a joint Kyiv press conference with German Chancellor Friedrich Merz that Ukraine accepted the US proposal for technical-level trilateral talks by end October, in UAE or another US-proposed country, and awaited Russia’s response. Proposed technical talks among representatives do not themselves establish an encounter of the two leaders."
+    },
+    {
+      "url": "https://www.aa.com.tr/en/russia-ukraine-war/putin-publicly-responds-to-zelenskyy-s-open-letter-says-he-sees-no-sense-in-meeting-him/3957923",
+      "observed_utc": "2026-10-20T17:25:13.733180Z",
+      "finding": "Anadolu reports Putin said at the St Petersburg International Economic Forum he then saw “no sense” in meeting Zelenskyy, saying past meetings bought time and that agreements were needed. This is a dated public position as of June 5, not proof of current stance after subsequent diplomatic developments."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.75,
+    "low": 0.35,
+    "high": 0.96,
+    "actual_entry_reserve_pp": 15,
+    "method": "Primarythreeconditionalfutureregimes plus3%missedprior/sourceconsensuschance: rawno-meeting74.884 rounded75. Savedprebookgenerator; unfittedweights.",
+    "reasoning": "Ongoingtechnical/envoydiplomacycreatesaleaderencounterpath, butprivatecontact/legitimacy/venue/securitybarriers andJuneoppositioncreatecrediblecountermodel. Strongconstraintmeeting5.32575%reversespointedge; no calibratedfloor.",
+    "model": "research/2026-10-17-deep-review/models/0486_no_meeting_primary_1730.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0486_quotes_1731.json",
+    "quote_file_sha256": "bbfe60068e14adafedae6af528c977711ee4ad469bcf882231b7afa5cd8139a6",
+    "quote_capture_utc": "2026-10-20T17:28:26.482164+00:00",
+    "gamma_received_utc": "2026-10-20T17:28:26.300528+00:00",
+    "hypothetical_gross_shares": 25.0,
+    "horizon_days": 75.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.75,
+        "selected_stress_probability": 0.6,
+        "best_bid": 0.944,
+        "best_ask": 0.951,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792517306366",
+        "book_received_utc": "2026-10-20T17:28:26.481090+00:00",
+        "book_age_seconds_at_receipt": 0.11509013175964355,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 25.0,
+            "gross": 23.775,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 25.0,
+                "price": 0.951
+              }
+            ],
+            "net": 23.775
+          },
+          "bids": {
+            "complete": true,
+            "filled": 25.0,
+            "gross": 23.599999999999998,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 25.0,
+                "price": 0.944
+              }
+            ],
+            "net": 23.599999999999998
+          }
+        },
+        "taker_cost_usd": 23.775,
+        "central_expected_profit_usd": -5.024999999999999,
+        "selected_stress_profit_usd": -8.774999999999999,
+        "break_even_before_carry": 0.951,
+        "break_even_constant_carry": 0.9571818172212998,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.25,
+        "selected_stress_probability": 0.1,
+        "best_bid": 0.049,
+        "best_ask": 0.056,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792517306366",
+        "book_received_utc": "2026-10-20T17:28:26.481090+00:00",
+        "book_age_seconds_at_receipt": 0.11509013175964355,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 25.0,
+            "gross": 1.4000000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 25.0,
+                "price": 0.056
+              }
+            ],
+            "net": 1.4000000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 25.0,
+            "gross": 1.225,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 25.0,
+                "price": 0.049
+              }
+            ],
+            "net": 1.225
+          }
+        },
+        "taker_cost_usd": 1.4000000000000001,
+        "central_expected_profit_usd": 4.85,
+        "selected_stress_profit_usd": 1.0999999999999999,
+        "break_even_before_carry": 0.05600000000000001,
+        "break_even_constant_carry": 0.056364018679698,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalmeetingNOpointselected+1.10on1.40/25shares beforefunding; constraintcountermodelnegative, noentrycertificate orfinalrank. NoBUYuntil600+comparison.",
+  "reopen_condition": "Verifiedencounter/leadermeetingformat+venueacceptance, legitimacy/securitystance change orindependentprobabilitybridge; freshbothsideprice/cost/conditionalfill/portfolioselectionafter600.",
+  "evaluated_utc": "2026-10-20T17:32:06.793767+00:00",
+  "question": "Will Zelenskyy and Putin not meet before 2027?",
+  "valuation_author": "primary_operator",
+  "original_index": 486,
+  "report_sha256": "38d510046634a063618c742bcaec37fa1e2130e5b75a893745210ff93392a757"
+}

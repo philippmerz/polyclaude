@@ -1,0 +1,16 @@
+{
+  "source_unit": "data/deep_review_20261017/work/0418_primary_sources_0249.json",
+  "source_unit_sha256": "abdac136b36a5bfcea6029fc6450cbe6780a5e70250ea7ad528fea84299ef17b",
+  "verified_google_source_receipts": [
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_method.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2019_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2020_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2021_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2022_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2023_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2024_us.receipt.json",
+    "logs/deep_review_20261017/case418_facts_0230/sources_0231/google_2025_us.receipt.json"
+  ],
+  "all_body_gzip_hashes_match": true,
+  "limits": "Historicalexamples/methodonly, not2026rank, quantitativeLeBrongrowth orperson-base-rate. ExistingGoogle429notretried."
+}

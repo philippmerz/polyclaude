@@ -1,0 +1,167 @@
+{
+  "review_index": 488,
+  "market_id": "5684895",
+  "condition_id": "0xb235708026afaafe37b72fedd0dee0b88428d9ab988e1290ca184eeab8b341d3",
+  "criteria_sha256": "0d6e2aa4a6bc5bbf15b0a133256375b880089538cdf655313140ddc088045458",
+  "status": "valued",
+  "literal_analysis": "FY2027Q1officialconsolidatedtotalrevenuesstrict>$4B. EqualityNO/rangemidpoint/mostpreciseoriginalmetric, alternate-scopesandlaterrevisionsnot; missingmetric/noreleaseNov30ETNO, webcastfallback. JulyQ4guideisnotQ1actual.",
+  "evidence": [
+    {
+      "url": "https://ir.kla.com/news-events/press-releases/detail/509/kla-corporation-reports-fiscal-2026-second-quarter-results",
+      "observed_utc": "2026-10-20T17:25:31.785688Z",
+      "finding": "q2_fy26_results primarybody/rawgziprootverified; exactquarter/consolidatedmetric/sourceperiodslinkedinfactunit."
+    },
+    {
+      "url": "https://ir.kla.com/news-events/press-releases/detail/514/kla-corporation-reports-fiscal-2026-third-quarter-results",
+      "observed_utc": "2026-10-20T17:25:31.624055Z",
+      "finding": "q3_fy26_results primarybody/rawgziprootverified; exactquarter/consolidatedmetric/sourceperiodslinkedinfactunit."
+    },
+    {
+      "url": "https://ir.kla.com/news-events/press-releases/detail/518/kla-corporation-reports-fiscal-2026-fourth-quarter-and-full",
+      "observed_utc": "2026-10-20T17:14:19.728941Z",
+      "finding": "q4_release primarybody/rawgziprootverified; exactquarter/consolidatedmetric/sourceperiodslinkedinfactunit."
+    },
+    {
+      "url": "https://ir.kla.com/news-events/press-releases/detail/522/kla-announces-first-quarter-fiscal-year-2027-earnings-date",
+      "observed_utc": "2026-10-20T17:25:31.466206Z",
+      "finding": "q1_fy27_earnings_date primarybody/rawgziprootverified; exactquarter/consolidatedmetric/sourceperiodslinkedinfactunit."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.58,
+    "low": 0.25,
+    "high": 0.85,
+    "actual_entry_reserve_pp": 15,
+    "method": "Unfittedquarterlyrevenue-errornormalmixture around4B+99%timelymetric, raw57.67284 rounded58. Deterministicgenerator/sourcehashessavedbeforeprice.",
+    "reasoning": "Guidemidpoint4B, twohistoricalbeats65/83Mnotcalibration; modest50Mcorebias/120Mdispersion withdown/updeliveryregimes. No newAIbonusdoublecount; zerocorebias45.68% materiallychangesdirection.",
+    "model": "research/2026-10-17-deep-review/models/0488_kla_primary_1740.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0488_quotes_1741.json",
+    "quote_file_sha256": "af218c72691817410529fbfaf2157214bdc2677f014d209d17c06b99981fd301",
+    "quote_capture_utc": "2026-10-20T17:38:35.071206+00:00",
+    "gamma_received_utc": "2026-10-20T17:38:34.898354+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 14.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.04,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032035,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-19T18:02:51.823060+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.58,
+        "selected_stress_probability": 0.42999999999999994,
+        "best_bid": 0.61,
+        "best_ask": 0.95,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792517881306",
+        "book_received_utc": "2026-10-20T17:38:35.070525+00:00",
+        "book_age_seconds_at_receipt": 33.764524936676025,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.5,
+            "fee": 0.01901,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.95
+              }
+            ],
+            "net": 9.51901
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.1,
+            "fee": 0.09516,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.61
+              }
+            ],
+            "net": 6.00484
+          }
+        },
+        "taker_cost_usd": 9.51901,
+        "central_expected_profit_usd": -3.71901,
+        "selected_stress_profit_usd": -5.219010000000001,
+        "break_even_before_carry": 0.951901,
+        "break_even_constant_carry": 0.9530529911336163,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.42000000000000004,
+        "selected_stress_probability": 0.27,
+        "best_bid": 0.05,
+        "best_ask": 0.39,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792517881306",
+        "book_received_utc": "2026-10-20T17:38:35.070525+00:00",
+        "book_age_seconds_at_receipt": 33.764524936676025,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.9000000000000004,
+            "fee": 0.09516,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.39
+              }
+            ],
+            "net": 3.9951600000000003
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.5,
+            "fee": 0.019,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.05
+              }
+            ],
+            "net": 0.481
+          }
+        },
+        "taker_cost_usd": 3.9951600000000003,
+        "central_expected_profit_usd": 0.2048399999999999,
+        "selected_stress_profit_usd": -1.29516,
+        "break_even_before_carry": 0.39951600000000004,
+        "break_even_constant_carry": 0.3999994944912737,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "Bothselectedtakersnegative; NOsmallcentralupside.5cbidmakerNOpaperpositivebutconditionalfillunmeasured, onlyprovisionalrouteleadfor600comparison. Noentrycertified.",
+  "reopen_condition": "Q1earnings/mostprecisetotalrevenuetable, verifiedbusinessupdate or conditionalmakerfill/catalystreview; freshexecutiongatesafter600+primaryselection.",
+  "evaluated_utc": "2026-10-20T17:41:08.605878+00:00",
+  "question": "Will KLA Corp (KLAC) Q1 total revenues be above $4B?",
+  "valuation_author": "primary_operator",
+  "original_index": 488,
+  "report_sha256": "2912eca691ae67617d3ac5b43e535a8bcfdb2e6242694924c6d338f412db4bac"
+}

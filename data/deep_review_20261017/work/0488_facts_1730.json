@@ -1,0 +1,92 @@
+{
+  "schema": "polyclaude.deep_review_case_facts.v1",
+  "review_index": 488,
+  "market_identity": {
+    "question": "Will KLA Corp (KLAC) Q1 total revenues be above $4B?",
+    "condition_id": "0xb235708026afaafe37b72fedd0dee0b88428d9ab988e1290ca184eeab8b341d3",
+    "slug": "will-kla-corp-klac-q1-total-revenues-be-above-20261008120052000-4b",
+    "criteria_sha256": "0d6e2aa4a6bc5bbf15b0a133256375b880089538cdf655313140ddc088045458"
+  },
+  "source_status": {
+    "asof_utc": "2026-10-20T17:14:20.774797Z",
+    "latest_results_release_captured": "2026-07-28 fiscal-2026-Q4/full-year release",
+    "later_issuer_notice_in_press_index": "Oct 01, 2026 9:00 am EDT",
+    "issuer_notice_date": "2026-10-01",
+    "q1_fy2027_actual_results_in_captured_materials": false,
+    "source_novelty": "New receipt-backed KLA issuer captures; no exact-family KLA source unit was found in the selected local work/model search."
+  },
+  "quarter_and_guidance": {
+    "fiscal_period": "First quarter fiscal 2027",
+    "quarter_end": "2026-09-30",
+    "release_wording": "first quarter fiscal 2027 ending in September",
+    "guidance_reported_utc": "2026-07-28 (prior-quarter earnings release)",
+    "metric": "Total revenues",
+    "range_usd": {
+      "low": 3800000000,
+      "high": 4200000000,
+      "midpoint": 4000000000
+    },
+    "reported_form": "$4.0 billion +/- $200 million",
+    "annualized": false,
+    "scope": "quarterly total revenues; the release gives this as a forward-looking total-revenue guidance range",
+    "revenue_recognition_note": "The captured release presents historical total revenues in the unaudited consolidated statement of operations. No separate detailed revenue-recognition policy was verified in these captures."
+  },
+  "exact_revenue_vs_segments": {
+    "source_release_heading": "Condensed Consolidated Unaudited Statements of Operations; table 2 in captured HTML",
+    "units": "USD thousands",
+    "three_months_ended_2026-06-30": {
+      "product": 2837151,
+      "service": 820405,
+      "consolidated_total_revenues": 3657556
+    },
+    "source_segment_reconciliation": "Segment Information; table 4 in captured HTML",
+    "segment_total_revenue": 3657595,
+    "foreign_currency_effect": -39,
+    "consolidated_total_revenues_after_fx": 3657556,
+    "reportable_segments": {
+      "Semiconductor Process Control": 3256781,
+      "Specialty Semiconductor Process": 159704,
+      "PCB and Component Inspection": 241110
+    },
+    "interpretation": "Segment revenues sum to 3,657,595 thousand; the company separately reports a -39 thousand foreign-currency reconciliation to consolidated total revenues of 3,657,556 thousand. These segment subtotal values are not substitutes for consolidated total revenues."
+  },
+  "resolution_rule_facts": {
+    "threshold_operator": "strictly above $4,000,000,000 (exactly $4,000,000,000 is not above)",
+    "rule_source": "frozen exact 488 rule read through scripts/deep_review_resume.py --index 488",
+    "range_handling": "If metric reported as a range, midpoint is used.",
+    "precision": "Most numerically precise version of the specified metric controls; subsequent revisions are ignored.",
+    "missing_metric": "If official earnings materials for quarter are released but metric is absent, resolves No.",
+    "release_deadline": "If official earnings materials for specified quarter are not released by 2026-11-30 11:59 PM ET, resolves No.",
+    "excluded_alternates": "Different-definition or different-scope alternatives do not count."
+  },
+  "receipt_backed_sources": [
+    {
+      "name": "q4_release",
+      "url": "https://ir.kla.com/news-events/press-releases/detail/518/kla-corporation-reports-fiscal-2026-fourth-quarter-and-full",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T17:14:19.728941Z",
+      "body_sha256": "b09481b7141879a74f51e785aee0ca60d5bd0cb704e4df13e96514d709c90235",
+      "raw_bytes": 172171,
+      "receipt": "logs/cron20261020T173000Z_case488/receipts/q4_release.receipt.json"
+    },
+    {
+      "name": "q4_8k_exhibit",
+      "url": "https://ir.kla.com/sec-filings/all-sec-filings/content/0000319201-26-000024/exhibit991earningsrelease7.htm",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T17:14:20.589034Z",
+      "body_sha256": "23dc6df9cd581353ea4262eb9ccee8a6cdc33103f465856658cc046feb5efd72",
+      "raw_bytes": 298954,
+      "receipt": "logs/cron20261020T173000Z_case488/receipts/q4_8k_exhibit.receipt.json"
+    },
+    {
+      "name": "press_release_index",
+      "url": "https://ir.kla.com/news-events/press-releases",
+      "http_status": 200,
+      "retrieved_utc": "2026-10-20T17:14:20.774797Z",
+      "body_sha256": "8d309561800d22cebf1bfcbf231c34245369833d526d4b2dde5f3be2517f79f5",
+      "raw_bytes": 38977,
+      "receipt": "logs/cron20261020T173000Z_case488/receipts/press_release_index.receipt.json"
+    }
+  ],
+  "disk_limit_note": "Free disk fell from 134 MiB to 127 MiB after three public-source captures; no further GETs were made. Exact Q1 earnings date announcement body was not captured; the captured issuer press-release index shows its Oct 1 notice only."
+}

@@ -1,0 +1,30 @@
+{
+  "review_index": 489,
+  "market_id": "5255231",
+  "condition_id": "0x2e178aa4a6224328bee00cf2690720f5997550b582a550804a2c8f69cbaebdc2",
+  "criteria_sha256": "f7b1559f454b60986543264f61ec09d8d0cd5d30f7abf7076cf88e2b2a2f2b72",
+  "status": "excluded_factual",
+  "literal_analysis": "OfficialUFCnamedBoser/Dinizwinner; draw/technicaldraw/NC/notscored/canceled/postponedbeyondOct31=>50–50. Exactfullrule read.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5255231",
+      "observed_utc": "2026-10-20T17:20:54.739982+00:00",
+      "finding": "Rootbody/gziphash+fullidentityverified; closedtrue/acceptingfalse/UMAresolved, objectivevenueunavailable."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactvenue terminal; no exantep/winnerinferredfromposteventstate."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Bothfrozennamedoutcomesclosed/nonaccepting; no executableentryeconomics."
+  },
+  "verdict": "Factualexclusionexactterminalvenue, not fullvaluation or fightresultclaim.",
+  "reopen_condition": "Verifiedsameconditionreopening withlawfulacceptingroute; differentidentityseparatelyreviewed.",
+  "evaluated_utc": "2026-10-20T17:43:14.818483+00:00",
+  "question": "UFC Fight Night: Tanner Boser vs. Jhonata Diniz (Heavyweight, Prelims)",
+  "valuation_author": "primary_operator",
+  "original_index": 489,
+  "report_sha256": "6c2ddf087f60f1fc5480cffd074cf70d15bdc1c68fc692f6f77b6c6248e84041"
+}

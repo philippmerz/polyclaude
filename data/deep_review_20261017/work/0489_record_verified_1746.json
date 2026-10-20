@@ -1,0 +1,11 @@
+{
+  "verified_utc": "2026-10-20T17:43:59.695397Z",
+  "index": 489,
+  "status": "excluded_factual",
+  "report_sha256": "6c2ddf087f60f1fc5480cffd074cf70d15bdc1c68fc692f6f77b6c6248e84041",
+  "json_sha256": "3e7f825b92811e5153e9db27d8b58ca9781a92b0f866ccb4391527d117093b28",
+  "indexed_once": true,
+  "count_valued": 403,
+  "count_factual": 383,
+  "pending": 2197
+}

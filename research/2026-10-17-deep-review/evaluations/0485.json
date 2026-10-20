@@ -1,0 +1,30 @@
+{
+  "review_index": 485,
+  "market_id": "5720696",
+  "condition_id": "0x4e142835f2e961723aefd18392f4fe6fcfaccc84ff566149ed7c8a9c1b254b5a",
+  "criteria_sha256": "2fda28bb52823a5320a26163cae4efa444df1ecceaf5ebb15df74b8c432843b9",
+  "status": "excluded_factual",
+  "literal_analysis": "NOAAEsenbogaLTAC Oct17maximumwholeC≤9; WUfallbackifNOAAmissingbyOct18ETdeadline, lowestbracketifneither. Firstnext-daypoint/nextdaydeadline locksdata exceptspecifiedtechnicalerror7daycorrection/clarification. Fullrule read, not weatheroutcomeestimated.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5720696",
+      "observed_utc": "2026-10-20T17:20:54.623219+00:00",
+      "finding": "Exactidentity/rules/tokens/status body+gziphashverified; closedtrue/acceptingOrdersfalse/UMAresolved. Objective currentvenueunavailable, not rejectionbyoldmodel/price."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Terminal exactvenue noentryroute; no exantep manufacturedfrompastweather."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both frozenoutcomes nonaccepting/closed; no currentticket economics or execution."
+  },
+  "verdict": "Factualexclusionexactterminalvenue, notcompletedvaluation orforecastwin.",
+  "reopen_condition": "Onlyverifiedreopeningofthisexactcondition withrestored lawfulroute; differentconditionneedsownreview.",
+  "evaluated_utc": "2026-10-20T17:22:00.991538+00:00",
+  "question": "Will the highest temperature in Ankara be 9°C or below on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 485,
+  "report_sha256": "8d68e14c1ced02c575ba1bc1ffc03d08ec17952db7ee93245d4c8101f817327e"
+}

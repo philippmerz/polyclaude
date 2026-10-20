@@ -1,0 +1,31 @@
+{
+  "schema": "deep_review.unfinished_source_correction.v1",
+  "verified_utc": "2026-10-20T17:52:32.787212+00:00",
+  "original_source_unit": "data/deep_review_20261017/work/0490_historical_context_1750.json",
+  "original_source_unit_sha256": "7afcc86c6a54361a6a7be0fc3bd6492168ee9a80ecbc9c4fe6361de39b5019fc",
+  "findings": "Google2018 addendum copied Lakers gzip digest into Google field. Correct Google digest is in this verified receipt table; original unit preserved. Raw body identity unchanged. No490forecast, quote, decision, completed-credit or ledger record exists. Facts remain research inputs only.",
+  "verified_receipts": [
+    {
+      "label": "google2018",
+      "receipt": "logs/cron20261020T1750Z_case0490_context/google_2018_us/google_2018_us.receipt.json",
+      "raw_sha256": "8982f20409c2e5c8638db427381b7c125eed764d4cf6e760133ec558788a73da",
+      "gzip_sha256": "d9b4fc09bfbff2dad270353d1b5be1ce7d69d587613441161faf67aef819295e",
+      "source_unit_gzip_digest_matches": false
+    },
+    {
+      "label": "sixers2026",
+      "receipt": "logs/cron20261020T1750Z_case0490_context/sixers_lebron_signing/sixers_lebron_signing.receipt.json",
+      "raw_sha256": "f7dc12b2d6167e8c8a594920d6df06db5c4bfff6e58af8cf4225514cf8cbe275",
+      "gzip_sha256": "c04c0121f650a0b7fcdd285b957d80c97a7498c176adb4af7ad84ed44bea3405",
+      "source_unit_gzip_digest_matches": true
+    },
+    {
+      "label": "lakers2018",
+      "receipt": "logs/cron20261020T1750Z_case0490_context/lakers_lebron_signing_2018/lakers_lebron_signing_2018.receipt.json",
+      "raw_sha256": "4b811799d1bfdabca61ea79630e9735b3e598d8989fa138dff35d2d83aefa227",
+      "gzip_sha256": "8a57911ddca7005115a46e72f6313306574e230e2dcf8a0625f73b926131b0e8",
+      "source_unit_gzip_digest_matches": true
+    }
+  ],
+  "content_limit": "Google2018 People#1DemiLovato/Athletes#1TristanThompson, not LeBron. One example, not base rate.2026team signing is not Google ranking evidence."
+}

@@ -1,0 +1,12 @@
+{
+  "performed_utc": "2026-10-20T17:16:59.052825Z",
+  "action": "Remove only regenerable .pyc files with immediate parent __pycache__ inside workspace scripts and.venv; source/runtime libraries/financial records/raw receipts retained.",
+  "files": 1948,
+  "selected_bytes": 36005086,
+  "free_MiB_before": 123.7421875,
+  "free_MiB_after": 161.93359375,
+  "private_exact_relative_paths": "logs/deep_review_20261020/storage_1719/regenerable_pyc_manifest.json",
+  "paths_manifest_sha256": "f024ae9dfbe8497da4fb99fd13cad248d943f77f23f289a47a48bcbc60b96fdc",
+  "scope_checks": "Each file regular nonsymlink, resolves inside workspace, suffix.pyc,parent __pycache__; no .py,.so,source body or ledger selected.",
+  "code_or_execution_path_change": false
+}

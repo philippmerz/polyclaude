@@ -1,0 +1,132 @@
+{
+  "schema": "0490_historical_context.v1",
+  "collected_utc": "2026-10-20T17:47:37.735433Z",
+  "scope": "factual source-quality addendum only; no probability or rank forecast",
+  "market_id": "3251334",
+  "condition_id": "0x518e158c9dc3f560410dcd28b2d80aa0d2f680ec090f73d46b8391b9197efbf7",
+  "google_2018_us_lists": {
+    "url": "https://trends.withgoogle.com/year-in-search/2018/us/",
+    "receipt": "logs/cron20261020T1750Z_case0490_context/google_2018_us/google_2018_us.receipt.json",
+    "retrieved_utc": "2026-10-20T17:46:46.870468Z",
+    "http_status": 200,
+    "raw_sha256": "8982f20409c2e5c8638db427381b7c125eed764d4cf6e760133ec558788a73da",
+    "gzip_sha256": "8a57911ddca7005115a46e72f6313306574e230e2dcf8a0625f73b926131b0e8",
+    "hashes_verified": true,
+    "people_top10": [
+      {
+        "rank": 1,
+        "name": "Demi Lovato"
+      },
+      {
+        "rank": 2,
+        "name": "Meghan Markle"
+      },
+      {
+        "rank": 3,
+        "name": "Brett Kavanaugh"
+      },
+      {
+        "rank": 4,
+        "name": "Logan Paul"
+      },
+      {
+        "rank": 5,
+        "name": "Khloé Kardashian"
+      },
+      {
+        "rank": 6,
+        "name": "Eminem"
+      },
+      {
+        "rank": 7,
+        "name": "Urban Meyer"
+      },
+      {
+        "rank": 8,
+        "name": "Ariana Grande"
+      },
+      {
+        "rank": 9,
+        "name": "Rick Ross"
+      },
+      {
+        "rank": 10,
+        "name": "Cardi B"
+      }
+    ],
+    "athletes_top10": [
+      {
+        "rank": 1,
+        "name": "Tristan Thompson"
+      },
+      {
+        "rank": 2,
+        "name": "Shaun White"
+      },
+      {
+        "rank": 3,
+        "name": "Lindsey Vonn"
+      },
+      {
+        "rank": 4,
+        "name": "Le'Veon Bell"
+      },
+      {
+        "rank": 5,
+        "name": "Kawhi Leonard"
+      },
+      {
+        "rank": 6,
+        "name": "Dez Bryant"
+      },
+      {
+        "rank": 7,
+        "name": "Nick Foles"
+      },
+      {
+        "rank": 8,
+        "name": "Chloe Kim"
+      },
+      {
+        "rank": 9,
+        "name": "Naomi Osaka"
+      },
+      {
+        "rank": 10,
+        "name": "Johnny Weir"
+      }
+    ],
+    "finding": "2018 US People #1 was Demi Lovato; 2018 US Athletes #1 was Tristan Thompson. LeBron James appears in neither captured US top ten. These are different categories; the recalled LeBron #1 Athlete lead is not supported by this official US page."
+  },
+  "career_context": {
+    "2026": {
+      "url": "https://www.nba.com/sixers/news/philadelphia-76ers-sign-4x-nba-champion-and-22x-all-star-lebron-james",
+      "receipt": "logs/cron20261020T1750Z_case0490_context/sixers_lebron_signing/sixers_lebron_signing.receipt.json",
+      "published_utc": "2026-07-27T14:15:05Z",
+      "retrieved_utc": "2026-10-20T17:46:48.948612Z",
+      "http_status": 200,
+      "raw_sha256": "f7dc12b2d6167e8c8a594920d6df06db5c4bfff6e58af8cf4225514cf8cbe275",
+      "gzip_sha256": "c04c0121f650a0b7fcdd285b957d80c97a7498c176adb4af7ad84ed44bea3405",
+      "hashes_verified": true,
+      "headline_finding": "PHILADELPHIA — July 27, 2026 — Philadelphia 76ers President of Basketball Operations Mike Gansey announced today that the team has signed four-time NBA champ..."
+    },
+    "2018": {
+      "url": "https://www.nba.com/lakers/news/espanol/180709lebronjames",
+      "receipt": "logs/cron20261020T1750Z_case0490_context/lakers_lebron_signing_2018/lakers_lebron_signing_2018.receipt.json",
+      "published_utc": "2018-07-09T23:59:00Z",
+      "retrieved_utc": "2026-10-20T17:47:19.467767Z",
+      "http_status": 200,
+      "raw_sha256": "4b811799d1bfdabca61ea79630e9735b3e598d8989fa138dff35d2d83aefa227",
+      "gzip_sha256": "8a57911ddca7005115a46e72f6313306574e230e2dcf8a0625f73b926131b0e8",
+      "hashes_verified": true,
+      "headline_finding": "El tres veces campeón de la NBA se viste de púrpura y oro."
+    }
+  },
+  "limits": [
+    "The Lakers signing source confirms the 2018 move to Los Angeles; the corresponding 2018 annual lists show rankings but do not establish causal effects of that move.",
+    "2018 is a one-year historical example, not a base rate or reliable predictor of the 2026 US People ranking.",
+    "The 2026 Philadelphia 76ers announcement is a team first-party signing confirmation published July 27, 2026; it is not a direct personal retirement statement by James, and it is not Google ranking evidence."
+  ],
+  "all_new_raw_and_gzip_hashes_verified": true,
+  "raw_payloads_private_only": true
+}

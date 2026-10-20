@@ -1,0 +1,33 @@
+{
+  "schema": "deep_review.primary_sensitivity.v1",
+  "review_index": 486,
+  "created_utc": "2026-10-20T17:32:06.633965Z",
+  "quote_aware": true,
+  "primary_central_unchanged": true,
+  "load_bearing_fact": "Oct20Peskov linksnegotiationstoalegitimaterepresentative; currentpressbriefingdoesnotnameZelenskyyinaPutinmeeting. Juneleaderrefusalalsorelevantbutdated.",
+  "strong_constraint_regimes": [
+    {
+      "mass": 0.85,
+      "p_meeting": 0.02
+    },
+    {
+      "mass": 0.13,
+      "p_meeting": 0.15
+    },
+    {
+      "mass": 0.02,
+      "p_meeting": 0.6
+    }
+  ],
+  "future_meeting": 0.0485,
+  "prior_already_meeting": 0.005,
+  "interpretation": "Lowerweightleaderbreakthrough, morepersistentMoscow/legitimacy/securitybarriers; subjectivecountermodel, notmarketpricefit.",
+  "central_model_meeting": 0.25,
+  "taker_price": 0.056,
+  "reserve_absolute": 0.15,
+  "total_meeting": 0.0532575,
+  "selected_no_probability": 0,
+  "central_no_profit25": -0.06856249999999986,
+  "selected_no_profit25": -1.4,
+  "break_even_meeting_probability_before_carry_and_funding": 0.206
+}

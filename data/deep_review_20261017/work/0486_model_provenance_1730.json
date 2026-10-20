@@ -1,0 +1,7 @@
+{
+  "model": "research/2026-10-17-deep-review/models/0486_no_meeting_primary_1730.json",
+  "model_sha256": "d8232b95ef2d46ba398ca678c9a9b6bb105d17a1a1369beef8f527416d781a10",
+  "generator": "research/2026-10-17-deep-review/models/0486_meeting_generator_1730.py",
+  "generator_sha256": "666f905705f6038bf99038a16ae9d0a0d236667f4a77c2bfc9e9f82571d3d8ca",
+  "saved_before_own_book_capture": true
+}

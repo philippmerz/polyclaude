@@ -1,0 +1,10 @@
+{
+  "schema": "deep_review.factual_addendum.v1",
+  "review_index": 484,
+  "source_unit": "data/deep_review_20261017/work/0484_primary_facts_1717.json",
+  "issuer_actual_HLE_table_row": [
+    "HLE-Full 43.5 / 56.0 53.3 / 63.0 44.5 / 58.0 49.8 / 57.9 41.4 / 52.2 \u2014"
+  ],
+  "raw_sha256_rechecked": true,
+  "limits": "Numeric row extraction from the alreadycaptured issuerbody. Original fact unit retained byte-identical to pre-price forecast input; no new forecast, release or market-price input."
+}

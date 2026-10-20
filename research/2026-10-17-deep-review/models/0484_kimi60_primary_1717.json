@@ -1,0 +1,60 @@
+{
+  "schema": "deep_review.primary_event_tree.v1",
+  "review_index": 484,
+  "created_utc": "2026-10-20T17:16:07.924244Z",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "3072316",
+    "condition_id": "0x86049cbc345ce8981afb368c3d19436fd56e90a546ad2df537b1ccafd5c02ade",
+    "criteria_sha256": "f27bc8cf625f3ca1327491d9742fcdab1d398030d7f477f31d8bb127d66dd197"
+  },
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0484_primary_facts_1717.json": "07d0a825d06f9788c6f9b560ad7c18083bacb8ed09dc03a304e0579a3fad5eb6",
+    "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json": "81c2129b0904d8ab24d9c5471594ab6ff42da807b7b3956240913d92f7a2e909"
+  },
+  "literal": "AnyMoonshotKimi2026officialHLEAccuracy>=60byDec31 23:59ET; restructured clear-equivalent only; calibration/Diamondnotautomatic. Temporarysourceoutagecanextend, permanent/endoutageofficialfallbackelseNO.",
+  "method": "Unfitteddisjointsource-admission/capability/no-update primaryeventtree, threshold-specific conditional judgments.65and55centralmarginalsnested, notinterpolatedfromprice.",
+  "branches": [
+    {
+      "state": "existing/historical60+admittedwithoutnewcapability",
+      "mass": 0.1,
+      "conditional_yes": 0.15,
+      "reason": "Unlike55known56tools, currentissuer56doesnotreach60. Smallmissedhistory/config-equivalence risk judgment, no observed60claim."
+    },
+    {
+      "state": "noexistingadmission; materialcapabilityupdatebycutoff",
+      "mass": 0.585,
+      "p60_given_update": 0.4,
+      "official_timely_given60": 0.75,
+      "reason": "Reusefamily65%updategivennoadmission, notschedule; conditional60 .40 below55 .55 and above65 .25.18.92ppgap vs13.92/23.92; lastK2.6->K3step5.6pp inadequate absentlargerjump. Frontier55.6not60Kimi proof."
+    },
+    {
+      "state": "noexistingadmission/no materialupdate",
+      "mass": 0.315,
+      "p60_remeasurement_or_equivalence": 0.06,
+      "official_timely_given60": 0.5,
+      "reason": "Excludesexistingadmissionbranch. Remeasure/sourcereconfigurationpossibility, half55 .12 becauseknown56stillshortof60; no benchmarktransferguarantee."
+    }
+  ],
+  "p_yes": 0.19995,
+  "p_no": 0.80005,
+  "broad_judgment_range_yes": [
+    0.03,
+    0.65
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "reserve_reason": "10ppordinaryunfittedmodel+5pphiddenrelease/sourceadmission/fill-selection; samefamily412, not a calibrated3%floor.",
+  "sensitivity": "materialupdate60chance .20/.50 gives11.22%/24.3825%YES holdingotherinputs; low/highbroadrange also movefamily release/timeliness/source assumptions, notfixed55forecast simultaneously.",
+  "threshold_central_joint_states": {
+    "under55": 0.6597875,
+    "55throughunder60": 0.1402625,
+    "60throughunder65": 0.05995,
+    "65orabove": 0.14
+  },
+  "dependence": "CentralP55=.3402125fromheld412/P60=.19995/P65=.14dated322 cancoexist. This is compatiblecentralcoupling, notestimatedjointdistribution. Anybroadregimeadoptedmustpropagatenestedfamily. Noheldpriorrevision/entryauthority.",
+  "generator": {
+    "path": "research/2026-10-17-deep-review/models/0484_threshold_generator_1717.py",
+    "sha256": "220b3b6853ca1c7eed2135c8f21a533521bef35529048747b1426744ad850b82",
+    "limits": "Deterministicarithmeticreplay, unfittedparameters, notcalibration/accuracyproof."
+  }
+}

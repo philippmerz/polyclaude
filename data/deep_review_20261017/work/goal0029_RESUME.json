@@ -1,0 +1,68 @@
+{
+  "schema": "finite_goal_progress.v2",
+  "updated_utc": "2026-10-20T17:56:33.492800+00:00",
+  "previous_goal_turn_classification": "progress: six records preserved during preceding continuation; bounded165003check completed17:09. Stop after owned closeout, do not start another case.",
+  "scope": "Fullremainingfrozen3000; preserve each evaluation immediately, no first600 completionclaim.",
+  "counts": {
+    "completed_valuations": 403,
+    "blocked_after_in_depth_review": 17,
+    "factual_exclusions": 383,
+    "pending": 2197,
+    "base_records": 803,
+    "revisions_written": 77
+  },
+  "active_indices": [
+    490
+  ],
+  "next_index": 490,
+  "active_work": "data/deep_review_20261017/work/0490_resume.json",
+  "model": null,
+  "state": "484/486/488valued;485/489factualclosed;487blocked.490activeunfinished, sources saved, no forecast/quote/credit.",
+  "last_safety": "research/2026-10-20-165003-checkin.json",
+  "last_financial": "research/2026-10-20-1658-financial-snapshot.json",
+  "next_safety": "Existing18UTC/earliermaterialevent; no newtimer.",
+  "entry_pause": "403/600+primaryselectionnull; noBUY/repost/add/taker/bundle.",
+  "next_telegram": "500valued/materialfinding/globalblock;400alreadyacceptedonce.",
+  "delegated_facts": "All current486/487/488/490bounded factual tasks finished; no running work needed. Root owns forecasts/actions.",
+  "resource": "Directprobe61%used/39%headroom, boundedroutinefactsdelegated.",
+  "next_required": "Future authorized research resumes exact490packet+smallsourceunits, then primary p/range/both-side economics or honestnamedblock, record/verify before492.",
+  "completed_this_turn": [
+    {
+      "index": 484,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0484_record_verified_1722.json"
+    },
+    {
+      "index": 485,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0485_record_verified_1723.json"
+    },
+    {
+      "index": 486,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0486_record_verified_1735.json"
+    },
+    {
+      "index": 487,
+      "status": "blocked_after_review",
+      "proof": "data/deep_review_20261017/work/0487_record_verified_1737.json"
+    },
+    {
+      "index": 488,
+      "status": "valued",
+      "proof": "data/deep_review_20261017/work/0488_record_verified_1745.json"
+    },
+    {
+      "index": 489,
+      "status": "excluded_factual",
+      "proof": "data/deep_review_20261017/work/0489_record_verified_1746.json"
+    }
+  ],
+  "comparison": "data/deep_review_20261017/work/goal0029_candidate_comparison_1755.json",
+  "offline_audit": "data/deep_review_20261017/work/goal0029_offline_audit_1754.json",
+  "storage": "data/deep_review_20261017/work/storage_safety_1719.json",
+  "source_correction": "data/deep_review_20261017/work/0490_source_hash_correction_1754.json",
+  "stop_boundary": "This scheduledrun closes after publication; no durablegoal maintenance, automatic nextcase, timer, or idle self-follow-up.",
+  "closeout_news": "data/deep_review_20261017/work/goal0029_closeout_news_1757.json",
+  "source_boundary": "CloseoutpublisherK3.1rumor200/unverifiedunderlyingclaims; officialHLEAPI403/no parsedscore; successful17:01resolver retainsdate. No prior/orderchange."
+}

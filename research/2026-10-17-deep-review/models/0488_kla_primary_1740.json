@@ -1,0 +1,72 @@
+{
+  "schema": "deep_review.primary_revenue_error_mixture.v1",
+  "review_index": 488,
+  "created_utc": "2026-10-20T17:38:34.420024Z",
+  "own_market_quotes_seen": false,
+  "identity": {
+    "market_id": "5684895",
+    "condition_id": "0xb235708026afaafe37b72fedd0dee0b88428d9ab988e1290ca184eeab8b341d3",
+    "criteria_sha256": "0d6e2aa4a6bc5bbf15b0a133256375b880089538cdf655313140ddc088045458",
+    "market_createdAt": "2026-10-14T12:21:55.192827Z"
+  },
+  "source_units_sha256": {
+    "data/deep_review_20261017/work/0488_facts_1730.json": "6940c23a876205160beb754af121d7b4f4099d7d32b9a4ab816f6aaf8933ed78",
+    "data/deep_review_20261017/work/0488_guidance_history_1727.json": "8a08e5fc6e1d7c94fbb9cad1b4f157ea017feca050c4742e7dd0e05930e4e932",
+    "data/deep_review_20261017/work/0488_root_source_recheck_1740.json": "6ce2e9241918384631224c67dc43ba583303e575e6036e899faf03daf04956a1"
+  },
+  "quarter": "FY2027Q1ended2026Sep30; Oct28afterclose results/2pmPTwebcast verified, Nov30ET fallbackdeadline.",
+  "literal": "Strictconsolidatedtotalrevenues>$4B inoriginalofficialspecifiedquartermaterials/mostprecise$000; equalityNO, rangeusesmidpoint, absentmetric/noreleasebyNov30NO. Revenue-notcash/segments/nonGAAPalternate, subsequentrevisionsignored.",
+  "guide_mid_usd_billion": 4.0,
+  "guide_range_usd_billion": [
+    3.8,
+    4.2
+  ],
+  "observed_guidance_errors_usd_billion": [
+    0.065078,
+    0.082556
+  ],
+  "history_limits": "Only2completedquarters, sharedcompany/AIcycle/forecastprocess; not independentcalibration, noSDestimatefromn2, nohistoryminfloor.",
+  "mixture_error_B": [
+    {
+      "state": "Routineexecutionwithmodestconservativeguidance",
+      "weight": 0.75,
+      "mean_error_B": 0.05,
+      "sd_error_B": 0.12,
+      "reason": "Twoquarterbeats65/83M supportsmodestpositivebias, shrunk50M; managementJulyAIaccelerationguidancealreadyincorporated, notaddedindependentgrowthbonus."
+    },
+    {
+      "state": "Shipment/acceptance/export/timingdownside",
+      "weight": 0.17,
+      "mean_error_B": -0.18,
+      "sd_error_B": 0.12,
+      "reason": "Quarterclosedbutactualunreleased; timing/acceptance/mixorcontrols canmissguide. No specificSeptdisruptionverified; branchisriskallowance, notnewsclaim."
+    },
+    {
+      "state": "Upsideacceleration/mix",
+      "weight": 0.08,
+      "mean_error_B": 0.2,
+      "sd_error_B": 0.13,
+      "reason": "StrongerAIdelivery/advancedpackagingcouldexceedrange, issueroutlooknotproof."
+    }
+  ],
+  "official_metric_timely_probability": 0.99,
+  "reporting_failure_reason": "1%unfittedmissing/late/precision/defaultNO allowance; priorreleasesregular, notaguarantee. No detailedrevrecognition/restatementaudit.",
+  "p_yes": 0.58,
+  "p_no": 0.42,
+  "broad_judgment_range_yes": [
+    0.25,
+    0.85
+  ],
+  "selected_entry_reserve_absolute": 0.15,
+  "reserve_reason": "10ppordinaryearningsmodel+5ppsmall-samplebias/timing/missing-quarterinfo/fillrisk; distribution/guidebandnotcalibratedquantiles.",
+  "method": "Error-in-quarterlyconsolidatedrevenue normalmixture around4B, deterministicCDFplanningapproximation. Means/weights/SDjudgment, not fitto2observations orguiderange.",
+  "source_context": "4Bguide requires~9.36%qoqgrowthover3.657556B; strongAIJulycommentaryalreadyingroupmidpoint. No laterguidancechange/preliminaryactual inselectedcaptures, notexhaustivesearchabsence.",
+  "horizon_days_normal": 14,
+  "horizon_days_Nov30_sensitivity": 42,
+  "dependence": "SharedUS/globalAIcapex linkswithheldKimi/ORandothertechcases; accounting quarteroutcomesnotindependentfromdeliverycycle. No hedgeorstandaloneKellyallocation inferred.",
+  "generator": {
+    "path": "research/2026-10-17-deep-review/models/0488_revenue_generator_1740.py",
+    "sha256": "715564540b276ce2f073cf9bc37133a303b58b0f1aff37d5ce6c5c94b5b199ed",
+    "no_seed": "DeterministicnormalCDF, parameters/sourcehashes preserved; no MonteCarlo/calibrationclaim."
+  }
+}

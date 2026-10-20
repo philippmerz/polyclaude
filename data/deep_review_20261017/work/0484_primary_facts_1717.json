@@ -1,0 +1,84 @@
+{
+  "schema": "deep_review.primary_facts.v1",
+  "review_index": 484,
+  "reviewed_utc": "2026-10-20T17:16:07.923810Z",
+  "identity": {
+    "market_id": "3072316",
+    "condition_id": "0x86049cbc345ce8981afb368c3d19436fd56e90a546ad2df537b1ccafd5c02ade",
+    "criteria_sha256": "f27bc8cf625f3ca1327491d9742fcdab1d398030d7f477f31d8bb127d66dd197"
+  },
+  "full_rule_relationship": "Rootread484and412fullrules; descriptions byte-identical, questions60vs55; >=60 subset>=55 under same2026window/source/fallback. Entire2026 includes precreation evidence, no creation-start assumption.",
+  "current_resolver": {
+    "receipt": "logs/cron20261020T165003Z_root_sources/hle.receipt.json",
+    "raw_sha256": "22bdfe6efea7f0aa6828d09947c3d68d5d48e10fc60ed2d8f251920124addba9",
+    "received_utc": "2026-10-20T17:01:49.967995Z",
+    "rows": 66,
+    "kimi": [
+      {
+        "name": "Kimi K2.5",
+        "id": "kimi-k2.5-thinking",
+        "hle": 25.4,
+        "calibration_error": 75.9,
+        "releaseDate_metadata": "2026-01-29"
+      },
+      {
+        "name": "Kimi K3",
+        "id": "kimi-k3-high",
+        "hle": 41.08,
+        "calibration_error": 44.67,
+        "releaseDate_metadata": "2026-07-16"
+      },
+      {
+        "name": "Kimi K2.6",
+        "id": "kimi-k2.6-64k",
+        "hle": 35.48,
+        "calibration_error": 58.19,
+        "releaseDate_metadata": "2026-04-20"
+      },
+      {
+        "name": "Kimi K2",
+        "id": "kimi-k2-thinking",
+        "hle": 21.4,
+        "calibration_error": 67.8,
+        "releaseDate_metadata": "2025-11-06"
+      }
+    ],
+    "frontier_context_notKimi": [
+      {
+        "name": "Gemini 4 Argon",
+        "hle": 55.6
+      },
+      {
+        "name": "Opus 5.5",
+        "hle": 55.36
+      },
+      {
+        "name": "Fable 5.1",
+        "hle": 54.6
+      }
+    ],
+    "limits": "Currentcachedresponse, no declaration of complete2026history/removals/future rows. releaseDate notscorepublication; UIvisibility binding is dated prior trace."
+  },
+  "ui_trace_verified": {
+    "unit": "data/deep_review_20261017/work/0412_resolver_trace_0055.json",
+    "sha256": "456948df8080a94c700f17f54451cf6944363eb89bf581a736d814072d2d0118",
+    "all_named_body_and_gzip_hashes_verified": true,
+    "binding": "scores.hle maps HLEAccuracy, Diamond/calibration distinct; toolconfiguration unspecified."
+  },
+  "issuer": {
+    "url": "https://raw.githubusercontent.com/MoonshotAI/Kimi-K3/main/README.md",
+    "receipt": "logs/deep_review_20261020/0484_issuer_1717/kimi_k3_readme.receipt.json",
+    "received_utc": "2026-10-20T17:16:07.901898Z",
+    "raw_sha256": "849a303d849486aac61d1f0c253e3a1148ca59e801be807151c2dc3cce57ccb2",
+    "gzip_sha256": "d1cd6bc351d58fd2b00ba867af7a1b86712e3d80e041d2283ff4f722771fcbc1",
+    "HLE_lines": [
+      "<td align=\"center\" style=\"vertical-align: middle; text-align: center\">HLE-Full</td>",
+      "All Kimi K3 results are obtained with reasoning effort set to 'max' and temperature = 1.0. For single-step tasks, such as GPQA Diamond, HLE-Full, and vision benchmarks without tools, we set top-p = 0.95; for agentic tasks, we set top-p = 1.0. For HLE-Full, MMMU-Pro, CharXiv (RQ), MathVision, and ZeroBench, each cell reports the scores without and with tool augmentation (general tools for HLE-Full, Python for the vision benchmarks), in that order."
+    ],
+    "finding": "HLE-Full43.5/no-tools and56/tools, neither60; differentbenchmarkconfiguration notautomaticspecifiedofficialchartmetric.56is relevant55admission lead, not60hit.",
+    "limits": "Readmecurrentbody notproof allhistorical scores/announcements; no dedicated newrelease sweep performed."
+  },
+  "primary_threshold_gap_pp": 18.92,
+  "time_to_cutoff_days": 72.4881027321412,
+  "no_own_market_quote_seen": true
+}

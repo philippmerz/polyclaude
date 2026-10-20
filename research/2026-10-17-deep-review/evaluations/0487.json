@@ -1,0 +1,50 @@
+{
+  "review_index": 487,
+  "market_id": "5660044",
+  "condition_id": "0x538bed1b6ca20d2a9db109bd2da54ab0ed6caf3dedd366bd5edfabd234202582",
+  "criteria_sha256": "eab5f9a7a4d0368ce184748aeed72cb5fd1306f25a28338a4f973358644c7954",
+  "status": "blocked_after_review",
+  "literal_analysis": "OrganizerOct20finaltop8Yes, nonparticipationNo; postponeafterNov3ET/canceled/nofinalstandingsbydeadlineNo; Chess.com/credibleconsensus. Tiebreak finalrank matters.",
+  "evidence": [
+    {
+      "url": "https://www.chess.com/official-event-rules",
+      "observed_utc": "2026-10-20T17:14:35.951584Z",
+      "finding": "Official Chess.com 2026 event rulebook: schedule, format, tiebreaks."
+    },
+    {
+      "url": "https://www.chess.com/events/2026-titled-tuesday-blitz-october-20/results",
+      "observed_utc": "2026-10-20T17:14:35.011583Z",
+      "finding": "Exact Oct 20 Chess.com results route; returned shell without standings."
+    },
+    {
+      "url": "https://www.chess.com/events/2026-titled-tuesday-blitz-october-20/schedule",
+      "observed_utc": "2026-10-20T17:14:35.433929Z",
+      "finding": "Exact Oct 20 Chess.com schedule route; returned shell without event detail."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5660044",
+      "observed_utc": "2026-10-20T17:25:18.035881+00:00",
+      "finding": "Exactnonterminalvenue, notfactualclosure."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "unresolved_load_bearing_facts": [
+      "Actualeventcompletion/currentround",
+      "Namedplayerparticipation/currentaccount",
+      "Organizerfinalrank/tiebreak"
+    ],
+    "reason": "Already-scheduledsame-dayeventmayhavebeenplayed; currentstateunknown, nopretournamentposterior invented."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "status": "unpricedbothoutcomes; no defensiblecurrentp so no ticket ortrade recommendation. Venueactive doesnotresolvefinalresult."
+  },
+  "verdict": "Case-specificblocked_after_review; no probability/valuationcredit. No fullgoal methodblock.",
+  "reopen_condition": "Officialfinaltable/participationmapping, orverifiedongoingevent+currentround/field; then bothsidecurrenteconomics ifstillopen.",
+  "evaluated_utc": "2026-10-20T17:35:20.968174+00:00",
+  "question": "Will Vladimir Fedoseev finish in the Top 8 of Titled Tuesday on October 20?",
+  "valuation_author": "primary_operator",
+  "original_index": 487,
+  "report_sha256": "edca73a0237f29dd4193861846bf035ecaad344157c47467af13c48e862af3c3"
+}

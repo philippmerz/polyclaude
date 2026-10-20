@@ -1,0 +1,12 @@
+{
+  "verified_receipts": [
+    "logs/cron20261020T173000Z_case488/receipts/q4_release.receipt.json",
+    "logs/cron20261020T173000Z_case488/receipts/q4_8k_exhibit.receipt.json",
+    "logs/cron20261020T173000Z_case488/receipts/press_release_index.receipt.json",
+    "logs/cron20261020T172700Z_case488_history/receipts/q2_fy26_results.receipt.json",
+    "logs/cron20261020T172700Z_case488_history/receipts/q3_fy26_results.receipt.json",
+    "logs/cron20261020T172700Z_case488_history/receipts/q1_fy27_earnings_date.receipt.json"
+  ],
+  "all_body_gzip_hashes_match": true,
+  "limits": "Tablesanddatedissueroutlookread; nooffchainpricecheck, no restatement/recognitionpolicy audit or exhaustivepreannouncementsearch."
+}
