@@ -1,0 +1,39 @@
+{
+  "schema": "deep_review.fact_addendum.v1",
+  "review_index": 404,
+  "editorial_review_utc": "2026-10-20T00:16:34.036806+00:00",
+  "evidence_representation": "web_tool_result_serialization",
+  "source_call_clocks": {
+    "started_utc": null,
+    "received_utc": null
+  },
+  "saved_utc": "2026-10-20T00:15:20.610285+00:00",
+  "post_call_preservation": true,
+  "body_path": "logs/deep_review_20261017/case0404_web_0014/supplied_web_result.body.json.gz",
+  "body_bytes": 31420,
+  "body_sha256": "949398fe877f7c5759008481ee2d65da3eb7543a48d061c3d0258560efb40876",
+  "gzip_sha256": "35c7f1ab6bbce710eab2c6bc379244bd873601c40c1e9953fc79a9f14f5607a2",
+  "receipt": "logs/deep_review_20261017/case0404_web_0014/supplied_web_result.receipt.json",
+  "sources": [
+    {
+      "url": "https://www.bls.gov/schedule/2026/12_sched_list.htm",
+      "finding": "Calendar lists Dec1 2026 10AM Eastern JOLTS for October2026; this verifies the next scheduled release after Nov3 September release for the literal fallback review. Calendar last-modified label Feb18 2026."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/archives/empsit_10022026.htm",
+      "publication_date": "2026-10-02",
+      "finding": "September payroll +29,000; unemployment4.2%; previous12month payroll average+45,000. July/Aug revisions combined-60,000. This is employment data, not a measurement or mechanical forecast of September job openings."
+    }
+  ],
+  "limits": [
+    "Precise original call start/receive clocks were not retained; editorial and save times do not refresh the source.",
+    "Saved web-tool extracts are not full raw HTTP release bodies.",
+    "No inferred government-shutdown probability, September JOLTS observation, current consensus or current survey standard error.",
+    "No forecast, valuation, quotes or execution authority."
+  ],
+  "history_verification": {
+    "unit": "work/0404_history_0011.json",
+    "root_verified_utc": "2026-10-20T00:16:34.036806+00:00",
+    "checks": "Both raw/gzip source hashes match; CSV44monthlyrows/lastAug2026=7079; series title/thousands/SA/Sep29update metadata match. Current-vintage history is not first-publication history."
+  }
+}

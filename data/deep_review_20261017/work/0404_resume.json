@@ -1,11 +1,20 @@
 {
   "schema": "polyclaude.deep_review_resume.v1",
   "review_index": 404,
-  "phase": "FACTS_READY_NOT_STARTED_NOT_VALUED",
+  "phase": "STARTED_FACTS_READY_NOT_VALUED",
   "source_paths": [
-    "work/0404_facts_2323.json"
+    "work/0404_facts_2323.json",
+    "work/0404_history_0011.json",
+    "work/0404_bls_addendum_0015.json"
   ],
   "source_paths_are_relative_to": "data/deep_review_20261017",
-  "updated_utc": "2026-10-20T00:00:33.828083+00:00",
-  "next_step": "Primary read full literalrules/verifyexactBLSsourcecaptures beforeforecast/quotes; no forecast orfinancialauthority fromfacts. FailedBLSdirectrequests notabsence; successfulwebSDKserialization/callwindow/hashretainedinunit."
+  "updated_utc": "2026-10-20T00:16:34.036806+00:00",
+  "next_step": "Resume existing active404 before newcases. Full frozen literalrule identity/threshold/firstpublished-vintage/fallback review; primary priceblind forecast before fresh both-side quotes, evaluate costs/uncertainty/portfolio and save one immutable valuation immediately. No existing probability, quote, order or unrecorded completed valuation. Next406workerfacts remain unvalued/unstarted.",
+  "started_utc": "2026-10-20T00:11:12.618614+00:00",
+  "source_units_sha256": {
+    "0404_facts_2323.json": "a45ee77b27e4ac54a95cf493c985128d82bf7434517d97cb20dd7b18d7f48040",
+    "0404_history_0011.json": "f93b27ccda38ea3260a964be7a317f1e347db52c67b9e70e59296b7b03b77e00",
+    "0404_bls_addendum_0015.json": "5fcc42cc46676293e3567a9a8730a28b3ba934cea375973a1454975b631d38d2"
+  },
+  "scheduled_run_boundary": "Delayed235849 event review completed00:08; this checkpoint preserves in-flight research only and does not extend the bounded scheduled run or change goal lifecycle. Next full safetyOct20 02UTC."
 }

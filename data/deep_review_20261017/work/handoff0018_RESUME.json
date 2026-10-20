@@ -1,0 +1,32 @@
+{
+  "schema": "bounded_run_inflight_research_handoff.v1",
+  "updated_utc": "2026-10-20T00:16:34.036806+00:00",
+  "scheduled_tick": "20261019T235849Z",
+  "tick_status": "completed00:08; independently audited after compaction; no missing event-closeout check",
+  "completed_review": "data/deep_review_20261017/work/tick235849_review.json",
+  "counts": {
+    "completed_valuations": 361,
+    "blocked_after_in_depth_review": 11,
+    "factual_exclusions": 364,
+    "pending": 2264,
+    "base_records": 736,
+    "revisions_written": 66,
+    "active_indices": [
+      404
+    ]
+  },
+  "active_research": {
+    "404": "Started00:11; facts only, no forecast/market quote/valuation/financial action; resume pointer work/0404_resume.json",
+    "406": "Worker facts only; unstarted/unvalued, unit work/0406_facts_0011.json; root must verify before adoption"
+  },
+  "unit_hashes": {
+    "0404_resume.json": "f75d5f35f204776f243fb4f9d3ae32a64d66b6a31a2c4a2e60b92b80274fe8c2",
+    "0404_history_0011.json": "f93b27ccda38ea3260a964be7a317f1e347db52c67b9e70e59296b7b03b77e00",
+    "0404_bls_addendum_0015.json": "5fcc42cc46676293e3567a9a8730a28b3ba934cea375973a1454975b631d38d2",
+    "0406_facts_0011.json": "5185bc84fa6f4409d8e20816664409f9a18e443a86ff0cea9096fdcfa3e1fe81",
+    "0406_resume.json": "9dd51a90b955e3853bcadc10b5c50bf5a362189d3ccc646ae6f45cfd11378d2e"
+  },
+  "next_already_scheduled_safety": "2026-10-20T02:00:00Z",
+  "financial_and_execution_state": "No new producer/CSV/prior/order/cancel/transfer/DEC/code/config/TG; all money and account observations keep prior timestamps. Three LIVE zero-matched bids6.50 asof00:05; Parton zero-fill closure remains complete.",
+  "goal_and_scope": "Existing finite goal not mutated. Stop this bounded scheduled run after evidence checkpoint/publication; no idle follow-up or new timer."
+}

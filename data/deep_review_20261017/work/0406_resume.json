@@ -1,0 +1,19 @@
+{
+  "captured_as_of": "2026-10-20T00:12:49Z",
+  "identity": {
+    "condition_id": "0xa3d91e6932c60ce2d59c0f269ccc03430faa7e3080634be508e0d6a3dcccf114",
+    "criteria_sha256": "cd9fadc01eadbafb12d7f1e007a18b940f7b7f8f0a2a6717fa0a71d0d1722b28",
+    "market_id": "4425461",
+    "question": "Will Alysa Liu rank in Google’s Top 5 Most Searched Athletes of 2026?"
+  },
+  "no_forecast": true,
+  "phase": "FACTS_READY_NOT_VALUED",
+  "review_index": 406,
+  "schema": "deep_review.fact_resume.v1",
+  "source_capture_root": "logs/deep_review_20261017/0700_case0406_facts_0011",
+  "source_paths": [
+    "work/0406_facts_0011.json"
+  ],
+  "source_paths_are_relative_to": "data/deep_review_20261017",
+  "unit_sha256": "5185bc84fa6f4409d8e20816664409f9a18e443a86ff0cea9096fdcfa3e1fe81"
+}

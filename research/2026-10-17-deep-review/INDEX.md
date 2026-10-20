@@ -1,6 +1,6 @@
 # In-depth market review — live index
 
-Updated: 2026-10-19T23:55:24.056874+00:00
+Updated: 2026-10-20T00:11:12.618614+00:00
 
 **361 valuations saved; first milestone100:** 361 valued; 11 blocked after in-depth review. 364 factual exclusions separately; 2264 pending.
 
@@ -748,3 +748,5 @@ Each report below is written before moving to the next evaluation. Related contr
 |2964|[Doncaster Rovers FC leading at halftime?](evaluations/2964.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2968|[Exact Score: Wigan Athletic FC 3 - 3 Reading FC?](evaluations/2968.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |2984|[Exact Score: West Bromwich Albion FC 3 - 3 Blackburn Rovers FC?](evaluations/2984.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
+
+Active indices: 404
