@@ -1,0 +1,158 @@
+{
+  "schema": "polyclaude.held_snapshot_economics.v1",
+  "computed_utc": "2026-10-20T22:37:42.462079+00:00",
+  "source_quote": "data/deep_review_20261017/work/tick223429_held_quotes.json",
+  "source_quote_sha256": "cd617e5a7563528b22e63b405ac4dfcc3737964d9945de9ec50f12b1042103d5",
+  "fee_descriptor_parity_root_verified": true,
+  "status": "Dated arithmetic under unchanged priors, not an executioncertificate",
+  "rows": [
+    {
+      "index": 112,
+      "side": "No",
+      "shares": 5,
+      "p_unchanged": 0.88,
+      "selected_p": 0.73,
+      "selected_terminal": 3.65,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 3.3000000000000003,
+      "exit_fills": [
+        {
+          "shares": 5.0,
+          "price": 0.66
+        }
+      ],
+      "fee_curve": {
+        "rate": 0.0,
+        "exponent": 1.0,
+        "taker_only": true,
+        "authoritative": true
+      },
+      "exit_plus_cached_carry_sensitivity": 3.321591285998139,
+      "additional_selected_adverse_pp_reversing": 6.56817428003722,
+      "book_age_seconds_at_receipt": 40.296303033828735,
+      "passed_180s_at_receipt": true,
+      "book_received_utc": "2026-10-20T22:35:47.342303+00:00",
+      "carry_source": {
+        "apy": 0.032247,
+        "chain": "polygon",
+        "token": "USDC",
+        "supply_status": "live",
+        "fetched": "2026-10-20T19:29:02.473940+00:00",
+        "constant_rate_sensitivity_not_forecast": true,
+        "funding_and_operations_costs_not_assumed_free": true
+      },
+      "current_execution_authorization": false
+    },
+    {
+      "index": 210,
+      "side": "Yes",
+      "shares": 5,
+      "p_unchanged": 0.6,
+      "selected_p": 0.39999999999999997,
+      "selected_terminal": 1.9999999999999998,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 1.25,
+      "exit_fills": [
+        {
+          "shares": 5.0,
+          "price": 0.25
+        }
+      ],
+      "fee_curve": {
+        "rate": 0.0,
+        "exponent": 1.0,
+        "taker_only": true,
+        "authoritative": true
+      },
+      "exit_plus_cached_carry_sensitivity": 1.2565385442607573,
+      "additional_selected_adverse_pp_reversing": 14.869229114784849,
+      "book_age_seconds_at_receipt": 12.951303005218506,
+      "passed_180s_at_receipt": true,
+      "book_received_utc": "2026-10-20T22:35:47.342303+00:00",
+      "carry_source": {
+        "apy": 0.032247,
+        "chain": "polygon",
+        "token": "USDC",
+        "supply_status": "live",
+        "fetched": "2026-10-20T19:29:02.473940+00:00",
+        "constant_rate_sensitivity_not_forecast": true,
+        "funding_and_operations_costs_not_assumed_free": true
+      },
+      "current_execution_authorization": false
+    },
+    {
+      "index": 412,
+      "side": "Yes",
+      "shares": 10,
+      "p_unchanged": 0.3402125,
+      "selected_p": 0.19021249999999998,
+      "selected_terminal": 1.9021249999999998,
+      "broad_low_terminal": 0.8,
+      "fee_net_exit": 1.0,
+      "exit_fills": [
+        {
+          "shares": 10.0,
+          "price": 0.1
+        }
+      ],
+      "fee_curve": {
+        "rate": 0.0,
+        "exponent": 1.0,
+        "taker_only": true,
+        "authoritative": true
+      },
+      "exit_plus_cached_carry_sensitivity": 1.00654281393883,
+      "additional_selected_adverse_pp_reversing": 8.955821860611698,
+      "book_age_seconds_at_receipt": 6.097303152084351,
+      "passed_180s_at_receipt": true,
+      "book_received_utc": "2026-10-20T22:35:47.342303+00:00",
+      "carry_source": {
+        "apy": 0.032247,
+        "chain": "polygon",
+        "token": "USDC",
+        "supply_status": "live",
+        "fetched": "2026-10-20T19:29:02.473940+00:00",
+        "constant_rate_sensitivity_not_forecast": true,
+        "funding_and_operations_costs_not_assumed_free": true
+      },
+      "current_execution_authorization": false
+    },
+    {
+      "index": 1838,
+      "side": "No",
+      "shares": 5,
+      "p_unchanged": 0.43999999999999995,
+      "selected_p": 0.33999999999999997,
+      "selected_terminal": 1.6999999999999997,
+      "broad_low_terminal": 1.0,
+      "fee_net_exit": 1.5,
+      "exit_fills": [
+        {
+          "shares": 5.0,
+          "price": 0.3
+        }
+      ],
+      "fee_curve": {
+        "rate": 0.0,
+        "exponent": 1.0,
+        "taker_only": true,
+        "authoritative": true
+      },
+      "exit_plus_cached_carry_sensitivity": 1.509814220908245,
+      "additional_selected_adverse_pp_reversing": 3.8037155818350987,
+      "book_age_seconds_at_receipt": 0.34130311012268066,
+      "passed_180s_at_receipt": true,
+      "book_received_utc": "2026-10-20T22:35:47.342303+00:00",
+      "carry_source": {
+        "apy": 0.032247,
+        "chain": "polygon",
+        "token": "USDC",
+        "supply_status": "live",
+        "fetched": "2026-10-20T19:29:02.473940+00:00",
+        "constant_rate_sensitivity_not_forecast": true,
+        "funding_and_operations_costs_not_assumed_free": true
+      },
+      "current_execution_authorization": false
+    }
+  ]
+}

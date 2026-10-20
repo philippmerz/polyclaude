@@ -1,0 +1,39 @@
+{
+  "schema": "polyclaude.triggered_primary_review.v1",
+  "tick_id": "20261020T223429Z",
+  "reviewed_utc": "2026-10-20T22:41:16.084291+00:00",
+  "requested_alert": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+  "MI": {
+    "exact_identity": "1838/0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4,held5NO on Democratswinning2026MichiganSenate",
+    "finding": "MezhaRSSlinkGoogleNewsHTML. Rootexacttitle search finds concretepublisherURL; webopenInternalError/ordinarypublisherHTTP403, no bypass/retry. Body/duplication/newpoll/independence unverified. Searchsnippetisnotarticle. ClassifiergreaterDcompetitiveness unsupported byheadlineframing, notadopted.",
+    "known_context": "Previouslyroot-read/hashchecked KESQ+Scripps sameCNNNewsource piece:2026ElSayed-v-Rogers, coalitioninterviews/selectedrallyobservation+supportivecounterevidence, no newpoll. Sameoriginnotindependentcorroboration. Dsupportslippageiftrue helpsheldNO. PriorRasmussenOct12\u201314D46R44alreadyknown; relatedroundup/AP/NYT/Mezha/JTAbodies stillgaps. LimitedCNNforumremarks notfulltranscript. Allegationsnotguilt; futurecampaignplans notcompleted/officiallyverifiedevents.",
+    "judgment": "RetainNO44%/selected34%/broadlow20%, noadd. Neither unverifiedheadline norselectiveinterviews supportarbitrarynumericrevision; no zeroeffectassumption. NewJTAallegation/voterreactionbodyunverified, unrelated2008searchdiscarded. ExistingoriginalRogersrecords remainunknown.",
+    "forward": "Fresh5NOfee-netexit1.50+datedvariableAave75dcarry1.509814 versusselectedterminal1.70; another3.8037pp adverse selectedshift reverses, broadlowterminal1favorssale. Smallposition/unfitteduncertainty explicit, entrycostsunk. No credibleverifiednewcounterevidence justifies reversingselectedhold."
+  },
+  "Kimi": "22:35HLE403 again, currentaccuracy/calibrationdeltaUNKNOWN. Last20021:02K3accuracy41.08/cal44.67/Age3214 retainsdate; otherlabs55+/issuerwithtools56 not qualifyingMoonshot\u226555officialAccuracy. Sourcefailure notNO/newscore/unchangedproof. Retain10YES/central34.02125/selected19.02125/broad8\u201380, noadd; visibilitygap increasesunknown but supplies no quantitativeforecastbridge.",
+  "other_pilots": "ORfutureOct26\u2013Nov22windownotyetobserved;21:02Oct12complete164.043986T/Oct19partial48.828344T not extrapolated. MessiGoogle2026GlobalTrendingAthletestop5, notawards/absolutevolume. Oldpriors retained, no fictitiousfreshsourcecheck.",
+  "root_decision": "Retain4pilots/noadd. FreshKimi/OR/MI/Messi netexits1/3.30/1.50/1.25+datedAave3.2247%75d/Messi60d sensitivities below selectedterminal1.902125/3.65/1.70/2. Broadlowcases favorsale; smallfinancialexposures/prioruncertainty/jointallloss explicitlyreviewed, notguaranteedROI. No standingconditionalmakernewsdonation.",
+  "quotes": "Exact4Gamma/8books/4compactfd receipts/rawhashes/criteria/assets and feeparity rootverified. Fourstructured0rate/1exponent/takerOnly matchescompactfd despitefeesEnabledtrue; market-specificdatedobservation, not globalpolicy. Futureexecutionneedsfreshfinalrewalk/currentaccount/legalvenue/routechecks; thisrecordnotexecutioncertificate.",
+  "joint": "KimiYES+ORNO canbothlose4.45originalcost; all4pilots7.35canalllose/no independenceorhedgecredit.",
+  "Clarity": {
+    "held": "29YES>50+29NO>58",
+    "normal_conditional_payoff": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "exit_tool_net": 26.05,
+    "exit_tool_actual_bounds": "22:35:47.956652Z\u201322:35:49.559198Z",
+    "dated75d_Aave_carry_sensitivity": 26.22044030310652,
+    "judgment": "Retainwholegroup/nolegonlysale; conditional29 exceedsseparatetool exit+carry.14:02same-ruleproofretained, no newrule-readclaim/unconditionalfloor."
+  },
+  "account_proof": "data/deep_review_20261017/work/tick223429_account_root_recheck.json",
+  "hold_math": "data/deep_review_20261017/work/tick223429_hold_exit_math.json",
+  "source_facts": "data/deep_review_20261017/work/tick223429_sources.json",
+  "publisher_attempt": "data/deep_review_20261017/work/tick223429_publisher_attempt.json",
+  "alert_decisions": "data/deep_review_20261017/work/tick223429_alert_decisions.json",
+  "entry": "405/600uniquevalued+primarycomparativeselectionnull; no newBUY/add/repost/taker/bundle. Kellyusesdated193.57cache, notnew194.84canonical andnotentryauthority.",
+  "no_financial_writer_or_numeric_prior_change": true,
+  "telegram": "None: no confirmedmaterialthesisbreak/qualifyingresult/action; mark/depthmove not realizedprofit, no rawheadlineheartbeat.",
+  "next_existing_boundary": "02UTCfullcheck/earliermaterialevent;MIdebateOct21 23UTC; no goal/timer/idlecontinuation."
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "polyclaude.root_account_verification.v1",
+  "verified_utc": "2026-10-20T22:38:56.658571+00:00",
+  "orders": 0,
+  "trades": 127,
+  "cursors_both": "LTE=",
+  "allsize_positions": 9,
+  "tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "exact_position_and_full_trade_match_2201": true,
+  "winning_redeemables": 0,
+  "raw_and_gzip_hashes_verified": true,
+  "all11CLI_actual_rc0_and_output_hashes_verified": true,
+  "all4daemon_starts_after_script_mtimes": true,
+  "daemon_wording_note": "Helper chat wording predated was reversed; actual JSON dates were independently compared, all starts AFTER scriptmtime, no stale daemon.",
+  "CLI_receipt_note": "New receipt schema uses flat stdout_sha256/stdout_bytes and sibling.bin; root initial nested-key read corrected beforeverification, no rerun/statechange.",
+  "summary": "UMA43refreshed0alerts,hurdle4clear0flagged,watchlistnohits,BBnoTRIMand6unmodeled,KellynoTRIManddated193.57cache,decisionsnooverdue,stateCLEAN7indexed+1claim/0expiredholds,Ostium0to0/cruxquiet. WalletpUSD19.251290/committed0.",
+  "no_financial_writer": true,
+  "source_ops": "data/deep_review_20261017/work/tick223429_account_ops.json"
+}

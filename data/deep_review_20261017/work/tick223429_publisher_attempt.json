@@ -1,0 +1,17 @@
+{
+  "schema": "polyclaude.public_publisher_attempt.v1",
+  "reviewed_utc": "2026-10-20T22:38:56.665935+00:00",
+  "alert_id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+  "exact_title_search": "MatchingMezhaheadline returned concretepublisherURL; JTAquery returnedunrelated2008race, discarded. Searchresult is notarticlebody.",
+  "publisher_url": "https://mezha.net/eng/news/mezha-e37aeb28faf6bce20b6dfc4e_democrats_worry_black/",
+  "http_status": 403,
+  "received_utc": "2026-10-20T22:37:07.564355Z",
+  "raw_sha256": "5d35fb37a9c153be8ecfecfb88bd95a3e498b0e6dc0d6c5fcdcb3b26e9cd5742",
+  "gzip_sha256": "7f8a3f4433c2961c640bcaaee8a6b10e2449b4e6c06c6f80cc251ea8b105c4fb",
+  "receipt": "logs/cron20261020T223429Z_root/mezha_publisher/mezha_publisher.receipt.json",
+  "root_hashes_verified": true,
+  "web_result_representation": "Exactsuppliedserializedwebtoolresultsprivatelysaved, notHTTPwireproof. Open failedInternalError; independent ordinaryHTTP403, no bypass/retry.",
+  "web_search_private": "logs/cron20261020T223429Z_root/mi_web_search_supplied.json",
+  "web_open_private": "logs/cron20261020T223429Z_root/mezha_web_supplied.json",
+  "finding": "Mezhabody stillunavailable; CNNduplication/newpoll/independence unverified. Do not adoptclassifierdirection or countasnewmeasurement."
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261020T223429Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-20T22:35:58.430691+00:00",
+  "producer_completed_utc": "2026-10-20T22:36:16.058433+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "464a774a989f30edf2a7482b370b49c1009c475effff8d633707963c13d98890",
+  "timing_basis": "Actual invocationbounds; sequential component quotes, not synchronizedNAV or individuallyfreshnesscertified. CSVwhole-secondstart/check_window.",
+  "canonical_total_including_funded_gas_usd": "194.84",
+  "same_producer_funded_gas_usd": "5.98",
+  "same_producer_PM_mid_usd": "34.91",
+  "same_producer_PM_fee_net_depth_usd": "33.10",
+  "derived_trading_mid_usd": "188.86",
+  "derived_trading_fee_net_depth_usd": "187.05",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.03,
+  "reported_accounting_residual_usd": "19.73",
+  "previous_complete_2103_comparison": {
+    "canonical_total_change_usd": "1.27",
+    "trading_mid_change_usd": "1.30",
+    "trading_depth_change_usd": "3.15"
+  },
+  "rounding_note": "Printed PMwarning says1.80; separatelyrounded34.91\u201333.10=1.81. CSV/deriveddepth use publishedroundedcomponents consistently, not warningdifference or a forced producerTOTAL. Roundingonlydepthbound0.02USD does not bound provider/timing/accountinguncertainty.",
+  "limits": [
+    "No trade/externalflow; changes reflect marks/depth/liquidity/interest/rounding observations, not auditedrealizedprofit.",
+    "19.73 accountingresidual not independently auditedcashprofit; historicalbasis/fees/flows remainunreconciled, VM/APIexcluded.",
+    "SameproducerallinTOTAL/gas/PMcomponents; separateCLI/held-tokenbookwalks notsubstituted. No unvaluedassetwarning; midpointoverstatementwarning preserved.",
+    "Indicative depth excludes routing/withdrawal/settlementrisk; not synchronizedNAV or guaranteedproceeds."
+  ],
+  "producer_receipt": "logs/cron20261020T223429Z_root/bankroll.receipt.json"
+}

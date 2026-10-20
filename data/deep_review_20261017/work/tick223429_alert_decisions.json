@@ -1,0 +1,65 @@
+{
+  "schema": "polyclaude.triggered_alert_dispositions.v1",
+  "reviewed_utc": "2026-10-20T22:40:18.500162+00:00",
+  "read_cutoff": "2026-10-20T22:07:38Z",
+  "requested_alert_id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+  "count": 9,
+  "alerts": [
+    {
+      "alert_id": "d5720d40d28c6a492eb996806aa033230b0b03bd",
+      "ts": "2026-10-19T16:37:13Z",
+      "line_sha256": "39a97503b39b59b62845f37dec035d99cfa3721fc3a3b18db1b65aaab644e55e",
+      "decision": "OlderMichiganpoll-roundup alerts reread; no recoverednewinstrument/fieldN/subgroup data. PriorRasmussenOct12\u201314D46R44alreadyknown. Tighteningdirectionrequiresknownbaseline, notautomaticDstrength."
+    },
+    {
+      "alert_id": "5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f",
+      "ts": "2026-10-19T18:26:06Z",
+      "line_sha256": "98d490c5b6f8e18ed8c568827d423a0aebe1c806462fd583b8e0553aceaee961",
+      "decision": "OlderMichiganpoll-roundup alerts reread; no recoverednewinstrument/fieldN/subgroup data. PriorRasmussenOct12\u201314D46R44alreadyknown. Tighteningdirectionrequiresknownbaseline, notautomaticDstrength."
+    },
+    {
+      "alert_id": "becea882f54cd5206629d70e3388d4c244b481ad",
+      "ts": "2026-10-20T19:32:09Z",
+      "line_sha256": "6a41461e5c4189b3fd5154accfcf0e7bd5be497583b8bd95e4c0f39a3e39436f",
+      "decision": "Earlierroot-readKESQ/Scripps sameCNNNewsource piece:2026ElSayed-v-Rogers, qualitativecoalition interviews+counterevidence/no newpoll. Oneorigin notindependentcorroboration.190370directionreversed; DvulnerabilityhelpsheldNO. Retainprior/noadd."
+    },
+    {
+      "alert_id": "fc00dd3540a8f5a8c1c0eb7457d302d6f7352b4d",
+      "ts": "2026-10-20T19:54:27Z",
+      "line_sha256": "16168f59693f6dbb4df84391726c7901c0c53c7d79267da36927e9d39a2025f1",
+      "decision": "Forumreport lead remainsbodygap afterpriorordinaryGooglealertrequests. LimitedCNNreporter-attributedremarks alreadyknown; no claimedfulltranscript/newpoll/numericshift."
+    },
+    {
+      "alert_id": "19037093283021b08f96eab94992d5c3b8663318",
+      "ts": "2026-10-20T20:10:59Z",
+      "line_sha256": "50f3938ff49de52e87345791a9330eae2748a5c2f3518261d63bebb985aea57c",
+      "decision": "Earlierroot-readKESQ/Scripps sameCNNNewsource piece:2026ElSayed-v-Rogers, qualitativecoalition interviews+counterevidence/no newpoll. Oneorigin notindependentcorroboration.190370directionreversed; DvulnerabilityhelpsheldNO. Retainprior/noadd."
+    },
+    {
+      "alert_id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+      "ts": "2026-10-20T21:06:56Z",
+      "line_sha256": "2f8e81000c551d20a77723cc850a8cd6a097be3329dc0aeed7d49b491d190658",
+      "decision": "RequiredMezhaalert reviewed despitejournalrecency. ExactRSSlinkGoogleHTML; root exacttitlesearch locatedpublisherURL, webopenfailed/InternalError, ordinarypublisherHTTP403. Body/duplication/newpoll remainunverified. ClassifierassertiongreaterDcompetitiveness contradictsheadlineweaknessframing; notadopted. Dslippageiftrue helpsheld5NO, no numericbridge/zeroeffectclaim/add."
+    },
+    {
+      "alert_id": "07b46a499c183e08a0e2e628cd47a8e7e57854c8",
+      "ts": "2026-10-20T21:51:08Z",
+      "line_sha256": "3e2386218925a13e00e2b391ac7943f6e7cafb68ba74cab0c5ea3c90ddb3915c",
+      "decision": "Forumreport lead remainsbodygap afterpriorordinaryGooglealertrequests. LimitedCNNreporter-attributedremarks alreadyknown; no claimedfulltranscript/newpoll/numericshift."
+    },
+    {
+      "alert_id": "906cdb214e7c192eccf236b756ccd5c76c3abe3c",
+      "ts": "2026-10-20T22:07:26Z",
+      "line_sha256": "a946581e762ca0202f4e6390f72ce1bb61ca5be158218fbd4f37f50f2ed7f988",
+      "decision": "JTAallegation/voterreactionlead: exactRSSrequestGoogleHTML, publisherbodyunverified; searchreturnedunrelated2008race discarded. Allegationnotfindingofguilt, voterreactionnotmeasuredturnout. No adoptednumericbridge/action."
+    },
+    {
+      "alert_id": "fed1ed44838e84b7d051beea31ead7b081476184",
+      "ts": "2026-10-20T22:07:38Z",
+      "line_sha256": "555bb20a5a30ddc9d12b5c8a80353e1cf6d61c21c9ee8f4ad44ae18f2871eadd",
+      "decision": "No causalchannel to currentrootverified9heldidentities/0liveBUY established; researchlead remainsunvalued, noaction/TG."
+    }
+  ],
+  "scope": "Named+sixolderrelated+laterlines; cutoffbounded, laterarrivalsfor existingwatchers/ticks. Relevanceprovisional, notauthority.",
+  "no_trade_or_numeric_prior_change": true
+}

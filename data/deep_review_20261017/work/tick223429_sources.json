@@ -1,0 +1,108 @@
+{
+  "schema": "tick223429_sources.v1",
+  "audited_utc": "2026-10-20T22:35:46.429570Z",
+  "alerts": [
+    {
+      "id": "becea882f54cd5206629d70e3388d4c244b481ad",
+      "ts": "2026-10-20T19:32:09Z",
+      "title": "Democrats fear slippage with Black voters makes Michigan Senate race feel \u2018far closer than it should\u2019 - CNN",
+      "line_sha256": "6a41461e5c4189b3fd5154accfcf0e7bd5be497583b8bd95e4c0f39a3e39436f"
+    },
+    {
+      "id": "19037093283021b08f96eab94992d5c3b8663318",
+      "ts": "2026-10-20T20:10:59Z",
+      "title": "Democrats fear slippage with Black voters makes Michigan Senate race feel \u2018far closer than it should\u2019 - KESQ",
+      "line_sha256": "50f3938ff49de52e87345791a9330eae2748a5c2f3518261d63bebb985aea57c"
+    },
+    {
+      "id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+      "ts": "2026-10-20T21:06:56Z",
+      "title": "Democrats worry Black voter support could make Michigan Senate race \u201cfar closer than it should\u201d - Mezha.net",
+      "line_sha256": "2f8e81000c551d20a77723cc850a8cd6a097be3329dc0aeed7d49b491d190658"
+    },
+    {
+      "id": "906cdb214e7c192eccf236b756ccd5c76c3abe3c",
+      "ts": "2026-10-20T22:07:26Z",
+      "title": "Mike Rogers says his opponent is \u2018anti-Jew.\u2019 Do Michigan\u2019s Jews believe him? - Jewish Telegraphic Agency",
+      "line_sha256": "a946581e762ca0202f4e6390f72ce1bb61ca5be158218fbd4f37f50f2ed7f988"
+    }
+  ],
+  "mezha": {
+    "capture": {
+      "status": 200,
+      "received_utc": "2026-10-20T22:35:27.060958Z",
+      "content_type": "text/html; charset=utf-8",
+      "date": "Tue, 20 Oct 2026 22:35:27 GMT",
+      "age": null,
+      "raw_sha256": "9dc89f78519a34bd5e8336eb52cae0a6472503b7efd71326640089f38d133892",
+      "gzip_sha256": "b555f7938630107ed2ecd1d6db129d897d8749c806d9e8c52dae0a07e4f18fdf",
+      "receipt": "logs/cron20261020T223429Z_sources/mezha/mezha.receipt.json",
+      "body": "logs/cron20261020T223429Z_sources/mezha/mezha.body.json.gz",
+      "hashes_verified": true
+    },
+    "finding": "HTTP 200 Google News HTML; no publisher body. CNN duplication remains unverified; no alternate URL/retry/bypass."
+  },
+  "jta": {
+    "capture": {
+      "status": 200,
+      "received_utc": "2026-10-20T22:35:27.356484Z",
+      "content_type": "text/html; charset=utf-8",
+      "date": "Tue, 20 Oct 2026 22:35:27 GMT",
+      "age": null,
+      "raw_sha256": "0d2e7615bb659e1d41d8115df51a75ce035513d1e39583aa90fb11afd6026e60",
+      "gzip_sha256": "373936a89449cd70e01eb52720a370699f479950574b8d64f5278ba620012858",
+      "receipt": "logs/cron20261020T223429Z_sources/jta/jta.receipt.json",
+      "body": "logs/cron20261020T223429Z_sources/jta/jta.body.json.gz",
+      "hashes_verified": true
+    },
+    "finding": "HTTP 200 Google News HTML; no JTA body. Headline allegation and voter reaction are unverified; no guilt claim."
+  },
+  "cnn_kesq_context": "Their exact alerts are listed above; prior tick authorized CNN syndication captures were already read and not refetched.",
+  "hle": {
+    "current": {
+      "status": 403,
+      "received_utc": "2026-10-20T22:35:27.698853Z",
+      "content_type": "text/plain; charset=utf-8",
+      "date": "Tue, 20 Oct 2026 22:35:27 GMT",
+      "age": null,
+      "raw_sha256": "7312978bd1a263804e4cdafc11386700abc65f4e1eb1e013607a0d7b0885f676",
+      "gzip_sha256": "dffcbdc95f57291d0285c559cc393232a27b959015d8aa014d5b202480235e7f",
+      "receipt": "logs/cron20261020T223429Z_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T223429Z_sources/hle/hle.body.json.gz",
+      "hashes_verified": true
+    },
+    "prior_22utc": {
+      "status": 403,
+      "received_utc": "2026-10-20T22:01:35.838448Z",
+      "content_type": "text/plain; charset=utf-8",
+      "date": "Tue, 20 Oct 2026 22:01:35 GMT",
+      "age": null,
+      "raw_sha256": "2a3d67cbbb551d602c5846704b8b4f044b7f3db6d19de9583f0c4c38661196a2",
+      "gzip_sha256": "7b3d43a751faed3e8117384db5fe5a97ae338e46dd936d639350f4bf4c963c47",
+      "receipt": "logs/cron20261020T2200Z_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T2200Z_sources/hle/hle.body.json.gz",
+      "hashes_verified": true
+    },
+    "tick210121_successful_baseline": {
+      "status": 200,
+      "received_utc": "2026-10-20T21:02:50.533183Z",
+      "date": "Tue, 20 Oct 2026 21:02:50 GMT",
+      "age_seconds": "3214",
+      "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+      "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+      "receipt": "logs/cron20261020T210121Z_resolving_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T210121Z_resolving_sources/hle/hle.body.json.gz",
+      "kimi_k3_hle": 41.08,
+      "kimi_k3_hle_calibration_error": 44.67
+    },
+    "comparison": "Current request again returned 403; current score/calibration unknown, so no delta can be inferred."
+  },
+  "hash_check": "All new HTTP body gzip/raw hashes and baseline gzip/raw hashes independently verified.",
+  "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
+  "root_erratum": {
+    "original_unit_sha256": "b2701b74188a6e9bbed796db19525aa8e8531924e6d7ad8464423f68076c3b80",
+    "original_field": "market_id",
+    "corrected_field": "condition_id",
+    "reason": "Exact value is a conditionId, not numericGamma marketid; value unchanged, original preservedprivately."
+  }
+}
