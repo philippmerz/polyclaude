@@ -1,0 +1,33 @@
+{
+ "schema": "polyclaude.Kimi_admission_sensitivity.v1",
+ "computed_utc": "2026-10-21T07:21:06.599813+00:00",
+ "base_model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
+ "holding": "10YES exact official HLEAccuracy55 market412",
+ "formula": "pYES=0.0989+0.32175*q; selected_p=pYES-0.15. q=timely official admission conditional on future material update achieving55. Other dated tree inputs fixed.",
+ "baseline_q": 0.75,
+ "scenarios": [
+  {
+   "q": 0.75,
+   "pYES": 0.3402125,
+   "selected_terminal_USD": 1.9021249999999998,
+   "beats_dated_exit_plus_carry": true
+  },
+  {
+   "q": 0.6,
+   "pYES": 0.29195,
+   "selected_terminal_USD": 1.4195,
+   "beats_dated_exit_plus_carry": true
+  },
+  {
+   "q": 0.5,
+   "pYES": 0.259775,
+   "selected_terminal_USD": 1.0977499999999998,
+   "beats_dated_exit_plus_carry": false
+  }
+ ],
+ "net_exit_USD": 1.1,
+ "dated_exit_plus_carry_USD": 1.107197095332713,
+ "q_indifference": 0.5029361601655674,
+ "uniform_probability_scale_indifference": 0.7663437102789324,
+ "limits": "Unfitted assumption sensitivity, not a calibrated floor, new probability estimate, likelihood ratio or execution certificate. q=.60 retains and .50 sells; broad8% also sells. Report supports directional credibility/access risk but supplies no empirically mapped q. No robustness across all plausible cases."
+}

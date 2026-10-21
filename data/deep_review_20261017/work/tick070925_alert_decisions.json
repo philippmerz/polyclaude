@@ -1,0 +1,48 @@
+{
+ "schema": "polyclaude.triggered_alert_decisions.v1",
+ "reviewed_utc": "2026-10-21T07:21:06.599813+00:00",
+ "cutoff": "2026-10-21T07:09:24Z",
+ "new_rows": [
+  {
+   "id": "8daec4beb8c88ee0c35ba20dc57e9f3444cac91a",
+   "ts": "2026-10-21T06:26:36Z",
+   "title": "Anthropic just posted a whopping half-yearly loss of $114 billion - and its valuation has plunged too - Startup Daily",
+   "raw_line_sha256_excluding_LF": "e1c25c9d7d28e3c885f5ab4baedd9b930bd1f9573b9a826a8e8ef46b5a9ea17f",
+   "decision": "Unheld IPO financial claim, headline figures not independently verified. Indirect AI competition channel not assumed zero; no verified held resolving fact or allocation."
+  },
+  {
+   "id": "63046afbda6dca8cfcb98bffd886c1418c0a3220",
+   "ts": "2026-10-21T06:26:55Z",
+   "title": "China’s Moonshot AI Expands Into Singapore - StratNews Global",
+   "raw_line_sha256_excluding_LF": "845d6a5d29e1020db16909812c0d9424b8ad93c358f674c69b9cd89f1cfeeed7",
+   "decision": "Headline-level expansion claim only; resources/distribution may indirectly matter but no verified HLE score/configuration or measured forecast change. No trade or allocation inferred."
+  },
+  {
+   "id": "2ed684fe4ed791b19386440fdfc41924f3820f48",
+   "ts": "2026-10-21T06:32:14Z",
+   "title": "Presidenta Delcy Rodríguez exalta el Golpe de Timón - Yvke Mundial",
+   "raw_line_sha256_excluding_LF": "84883ccab0e2b81bff3a67522081265045ecf7b552a19110bd6f826ba8de246f",
+   "decision": "Venezuela headline, no current held/pending Venezuela exposure after exact account check. No action; headline is not a new valuation or rejection."
+  },
+  {
+   "id": "a180079ff2e166c3b46252c0b948106f939c668e",
+   "ts": "2026-10-21T07:03:53Z",
+   "title": "Presidenta Delcy Rodríguez entrega viviendas transitorias en Ciudad Caribia - Radio Miraflores",
+   "raw_line_sha256_excluding_LF": "15f52eb39fd38536a12991cdd96d16e44110cdabacd2e334d16ff56e38f5db5d",
+   "decision": "Venezuela headline, no current held/pending Venezuela exposure after exact account check. No action; headline is not a new valuation or rejection."
+  },
+  {
+   "id": "9f3b76085ef64ce1080788cdbe67f34814ec9677",
+   "ts": "2026-10-21T07:09:24Z",
+   "title": "Anthropic claims Moonshot, DeepSeek secretly diverted user requests to Claude - South China Morning Post",
+   "raw_line_sha256_excluding_LF": "c6dfedecf755268755230098bee95c78bd66f3c7c58858a21bf14a0126d93b49",
+   "decision": "Required MATERIAL classification independently reviewed. September Anthropic telemetry allegation is newly inspected, not a new Oct21 incident or proof of HLE contamination/score withdrawal. Credibility/admission downside examined; retain/noadd, no numeric prior change. Current official HLE unavailable; no inferred clean score."
+  }
+ ],
+ "older_related_packet": "data/deep_review_20261017/work/tick052258_related_Kimi.json",
+ "older_packet_sha256": "7cb55683f3b3fc16d34c797dbaf29bd5be04d5994f18eb7ea77c068bf087e43b",
+ "older_rows_reread_and_hash_verified": 9,
+ "older_decision": "Copying/security claims, distribution stories, K3.1 rumor and commentary remain attributed/gapped. Correlated allegations are not independent score evidence. New primary routing report does not identify official HLE inputs/version or a score withdrawal. No refreshed old publication, score or forecast date.",
+ "primary_facts": "data/deep_review_20261017/work/tick070925_Kimi_routing_facts.json",
+ "primary_judgment": "data/deep_review_20261017/work/tick070925_primary_review.json"
+}

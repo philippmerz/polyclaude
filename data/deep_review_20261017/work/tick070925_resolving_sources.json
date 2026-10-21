@@ -1,0 +1,84 @@
+{
+ "schema": "polyclaude.resolving_sources.v1",
+ "tick_id": "20261021T070925Z",
+ "facts": [
+  {
+   "name": "hle",
+   "url": "https://dashboard.safe.ai/api/models",
+   "status": 403,
+   "started_utc": "2026-10-21T07:11:33.719575Z",
+   "received_utc": "2026-10-21T07:11:33.876140Z",
+   "headers": {
+    "date": "Wed, 21 Oct 2026 07:11:33 GMT",
+    "content-type": "text/plain; charset=utf-8",
+    "cache-control": "private, no-store, max-age=0"
+   },
+   "receipt": "logs/cron20261021T070925Z_root/resolving_sources/hle.receipt.json",
+   "raw_sha256": "b9ab580c4e0de777a2bbdea0c88910b89f5a618108dafa75257aad958444b2c1",
+   "gzip_sha256": "0ddd8fb6844ae1dd1c2711d8575e62256f641f2c3412b163cdcccc7e630064ac",
+   "bytes": 59,
+   "gap": "Current resolving-source data unavailable; no retry/bypass or absence-to-probability inference.",
+   "root_raw_gzip_verified": true
+  },
+  {
+   "name": "openrouter",
+   "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+   "status": 200,
+   "started_utc": "2026-10-21T07:11:33.889220Z",
+   "received_utc": "2026-10-21T07:11:33.951633Z",
+   "headers": {
+    "date": "Wed, 21 Oct 2026 07:11:33 GMT",
+    "content-type": "application/json",
+    "age": "210",
+    "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600"
+   },
+   "receipt": "logs/cron20261021T070925Z_root/resolving_sources/openrouter.receipt.json",
+   "raw_sha256": "4704b9f3155b8e7a30a768fcecb92a2df427b9fa3969f4523898f2dd3a4d32c6",
+   "gzip_sha256": "e848e94beb6d37dcd7e83f7616ba06a908e94c69b9a5f00438d60a1cda875e76",
+   "bytes": 24695,
+   "rows": 53,
+   "cachedAt": 1792565564114,
+   "weeks": [
+    {
+     "week": "2026-10-05",
+     "tokens_T": 171.842501724714
+    },
+    {
+     "week": "2026-10-12",
+     "tokens_T": 164.043985914931
+    },
+    {
+     "week": "2026-10-19",
+     "tokens_T": 60.796304422935
+    }
+   ],
+   "target_future_rows": [],
+   "root_raw_gzip_verified": true
+  }
+ ],
+ "hle": {
+  "result": "403; current official Accuracy unknown. No retry/bypass; not proof below55.",
+  "last_successful_asof": "2026-10-21T02:02:29.119527+00:00",
+  "last_successful_models": 66,
+  "last_successful_K3_Accuracy": 41.08,
+  "last_successful_K3_calibration_error": 44.67,
+  "date_limit": "Dated cached observation, not refreshed or current. Issuer with-tools56/other-lab55+ do not establish this exact Moonshot market.",
+  "prior_receipt_index": "data/deep_review_20261017/work/tick020001_resolving_sources.json"
+ },
+ "openrouter": {
+  "completed_Oct12_T": 164.043985914931,
+  "Oct19_partial_T": 60.796304422935,
+  "delta_partial_vs_0525_T": 2.497854797118002,
+  "cachedAt_utc": "2026-10-21T06:52:44.114000+00:00",
+  "units": "Integer per-model weekly y sums /1e12. Current Oct19 row is partial.",
+  "target_weeks": [
+   "2026-10-26",
+   "2026-11-02",
+   "2026-11-09",
+   "2026-11-16"
+  ],
+  "target_rows_present": false,
+  "limits": "cachedAt/Age are not a documented usage cutoff. Do not treat partial totals or growth as a completed-week forecast or interval probability."
+ },
+ "retained_dated_sources": "Senate and Google retain02:02 observations, no fresh request: no qualifying final passage observed; exact2026GlobalTrendingAthletes route404/rank unknown. No year/country/category substitution."
+}

@@ -1,0 +1,26 @@
+{
+ "schema": "polyclaude.root_account_verify.v1",
+ "verified_utc": "2026-10-21T07:12:56.467103+00:00",
+ "account_ops": "data/deep_review_20261017/work/tick070925_account_ops.json",
+ "account_ops_sha256": "b75ab529da5879c1b42d6a1028f7c21122ab599dfa70eca9171ddb25ebd87aee",
+ "raw_account_pairs_independently_verified": 3,
+ "11CLI_returncodes_and_output_hashes_verified": true,
+ "orders": 0,
+ "exhausted_trades": 127,
+ "terminal_cursors": "LTE=",
+ "full_trade_rows_match_light0600": true,
+ "positions": 9,
+ "exact_position_tuples_match_light0600": true,
+ "position_tuple_fields": [
+  "conditionId",
+  "asset",
+  "outcome",
+  "size",
+  "totalBought"
+ ],
+ "winning_redeemables": 0,
+ "four_exact_current_daemon_singletons": true,
+ "pUSD": 19.25129,
+ "BUY_commitment": 0,
+ "no_financial_writer": true
+}

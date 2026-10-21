@@ -1,0 +1,73 @@
+{
+ "schema": "tick070925_Kimi_routing_facts.v1",
+ "audited_utc": "2026-10-21T07:12:10.877221Z",
+ "target_alert": {
+  "id": "9f3b76085ef64ce1080788cdbe67f34814ec9677",
+  "ts": "2026-10-21T07:09:24Z",
+  "title": "Anthropic claims Moonshot, DeepSeek secretly diverted user requests to Claude - South China Morning Post",
+  "url": "https://www.scmp.com/news/us/diplomacy/article/3367112/moonshot-deepseek-secretly-routed-user-requests-claude-anthropic-claims",
+  "line_sha256_excluding_lf": "c6dfedecf755268755230098bee95c78bd66f3c7c58858a21bf14a0126d93b49",
+  "url_basis": "Original publisher URL; notified Google RSS link remains in private capture."
+ },
+ "related_alert_packet": "data/deep_review_20261017/work/tick052258_related_Kimi.json (checked older Kimi/security/benchmark rows, including Oct20 OpenAI reasoning-copy allegation a40093efed7c7b243727ac80c534760073f3c650); no additional older routing alert found in targeted notes/news_alerts.jsonl search.",
+ "captures": [
+  {
+   "receipt": "logs/cron20261021T070925Z_Kimi_routing/scmp_rss/scmp_alert.receipt.json",
+   "started": "2026-10-21T07:11:00.191036Z",
+   "received": "2026-10-21T07:11:00.575971Z",
+   "http": 200,
+   "raw_sha256": "7f52d948fe9d860ef4b15368e91582b44c888c4b01ef593aaacfe4ae58653fc5",
+   "gzip_sha256": "f32753db8c626222ab0e5a06597cdd9de3025479b00da2fd482c30d0ca8ed923",
+   "hashes_verified": true,
+   "cli_rc": 0
+  },
+  {
+   "receipt": "logs/cron20261021T070925Z_Kimi_routing/scmp_article/scmp_article.receipt.json",
+   "started": "2026-10-21T07:11:12.206065Z",
+   "received": "2026-10-21T07:11:12.633666Z",
+   "http": 200,
+   "raw_sha256": "f9d5f840dd76b3ab03e2eb05492b835f3ec1ac9c7e6908c1554d57c6ea8aeab8",
+   "gzip_sha256": "5e804bb1aa037cb6800834b64dbecaa93fe25813be72dc3bb2cf656814711723",
+   "hashes_verified": true,
+   "cli_rc": 0
+  },
+  {
+   "receipt": "logs/cron20261021T070925Z_Kimi_routing/anthropic_report/anthropic_report.receipt.json",
+   "started": "2026-10-21T07:11:12.676944Z",
+   "received": "2026-10-21T07:11:13.007043Z",
+   "http": 200,
+   "raw_sha256": "34f0b5ad508e40048df12eaf93af283bb4d9584f9d3991be11ce1f4a4117d6bb",
+   "gzip_sha256": "03b2e5432b6d794c366b395110d6cae37cf06407e3fe9b4bdf4ed36d33689210",
+   "hashes_verified": true,
+   "cli_rc": 0
+  }
+ ],
+ "scmp_article": {
+  "url": "https://www.scmp.com/news/us/diplomacy/article/3367112/moonshot-deepseek-secretly-routed-user-requests-claude-anthropic-claims",
+  "title": "Moonshot, DeepSeek secretly routed user requests to Claude, Anthropic claims",
+  "byline": "Vincent Chow",
+  "published": "2026-09-11T07:23:18+08:00",
+  "updated": "2026-09-11T07:26:28+08:00",
+  "body": "Ordinary HTTP200 response contained a 4,615-character public NewsArticle JSON-LD articleBody; visible extracted page showed a teaser and JSON-LD isAccessibleForFree=False. Structured body reports the routed-request/account counts, July K3 release and no immediate company response; it does not identify the routed Kimi version. No bypass or additional request used."
+ },
+ "primary_source": {
+  "url": "https://www.anthropic.com/threat-intelligence-report-september-2026?page=1",
+  "title": "Detecting and countering misuse of AI: September 2026",
+  "date": "Report month September 2026; covers incidents through August. SCMP published Sep 11 local and says released Thursday (Sep 10 by calendar); exact report timestamp absent from captured primary metadata.",
+  "finding": "Anthropic’s GTG-16002 alleges Moonshot forwarded live Kimi customer requests to Claude, returned Claude outputs as Kimi, routed nearly 300k in 10 days via 5,380 accounts, saved at least some exchanges, and built CoT extraction for distillation. It says it does not know whether customers were notified. Overall Moonshot-attributed distillation May–July exceeded 23m exchanges. This is Anthropic telemetry-based allegation, not independently adjudicated.",
+  "distinctions": "Routing/data exposure and later distillation are separate but linked allegations. Report identifies Kimi family, not K3/version; no weights, HLE score or HLE mention. Anthropic says it is strengthening defenses; no Moonshot-specific remediation/retraction found."
+ },
+ "score_context": "No HLE score was stated in SCMP article or Anthropic report. Prior exact first-party board capture in data/deep_review_20261017/work/tick012937_kimi_source_refresh_0210.json records Kimi K3 HLE field 41.08 and calibration error 44.67 as distinct values; root owns current API refresh. No new official Accuracy>=55 evidence from this check.",
+ "limits": [
+  "No response or official finding from Moonshot/DeepSeek captured.",
+  "No inference of guilt, K3 benchmark contamination, HLE change, retraction or remediation beyond Anthropic’s stated defense work. No bypass/retry."
+ ],
+ "root_offline_validation": {
+  "reviewed_utc": "2026-10-21T07:21:06.599813+00:00",
+  "original_helper_sha256": "334b4f28f71383cd3c2fb3dd599875ef459e6890c848bb52cc372a2be1c6ef71",
+  "all_three_raw_gzip_pairs_verified": true,
+  "primary_GTG_16002_section_reread": true,
+  "SCMP_JSON_LD_articleBody_reread": true,
+  "correction": "Clarify provided structured-body evidence versus visible paywalled teaser; underlying numeric claims confirmed, not full visible-body access. Exact report publication timestamp remains absent."
+ }
+}
