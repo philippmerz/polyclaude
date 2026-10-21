@@ -139,6 +139,12 @@ def validate_local_markdown_links(markdown, report_path):
         raise ValueError("report directory escapes repository") from exc
 
     def archived_source_exists(root_relative):
+        # Current closed-run archive: hashes bind the exact legacy bytes, with
+        # no source/evidence or research-count changes.
+        from log_storage import mappings, read_verified_bytes
+        if root_relative in mappings():
+            read_verified_bytes(root_relative)
+            return True
         # These existing read-only adapters preserve legacy links after approved
         # public captures are gzip-archived. Their readers verify manifest hashes.
         for module_name in ("public_source_archive", "public_snapshot_archive", "public_snapshot_archive_data"):

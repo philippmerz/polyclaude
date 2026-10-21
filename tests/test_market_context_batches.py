@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import datetime as dt
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -13,6 +14,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "scripts"))
 
 import discover_markets as dm  # noqa: E402
 import market_context_batches as mcb  # noqa: E402
+import log_storage  # noqa: E402
 
 
 def _market(market_id: str | None, *, event_id: str | None = None, **updates):
@@ -110,7 +112,7 @@ def test_snapshot_sidecar_is_additive_and_latest_stays_legacy_list_symlink(tmp_p
     now = dt.datetime(2026, 9, 23, 12, 34, 56, tzinfo=dt.timezone.utc)
     snap, meta = dm.write_snapshot(
         rows, scan_kind="thin_tail", params={"min_liquidity": 500},
-        snapshot_dir=tmp_path, now=now,
+        snapshot_dir=tmp_path, now=now, compressed=False,
     )
     assert json.loads(snap.read_text()) == rows
     assert (tmp_path / "shortlist_latest.json").is_symlink()
@@ -153,8 +155,8 @@ def test_same_instant_scan_kinds_have_distinct_snapshot_identities(tmp_path):
         now=now,
     )
     assert primary != thin_tail
-    assert json.loads(primary.read_text())[0]["id"] == "1"
-    assert json.loads(thin_tail.read_text())[0]["id"] == "2"
+    assert mcb.load_snapshot(primary)[0]["id"] == "1"
+    assert mcb.load_snapshot(thin_tail)[0]["id"] == "2"
     with pytest.raises(FileExistsError, match="refusing to overwrite"):
         dm.write_snapshot(
             [_market("3")], scan_kind="primary", params={},
@@ -495,7 +497,7 @@ def test_soft_cap_counts_truncated_trigger_families(tmp_path):
 def test_sidecar_hash_mismatch_fails_open_with_warning(tmp_path):
     current, _ = dm.write_snapshot(
         [_market("1", event_id="event-1")], scan_kind="primary", params={},
-        snapshot_dir=tmp_path,
+        snapshot_dir=tmp_path, compressed=False,
         now=dt.datetime(2026, 9, 23, 1, tzinfo=dt.timezone.utc),
     )
     current.write_text(json.dumps([_market("2", event_id="event-2")]))
@@ -521,3 +523,180 @@ def test_missing_sidecar_snapshot_name_fails_integrity(tmp_path):
     )
     assert payload["source_integrity_verified"] is False
     assert any("metadata names None" in warning for warning in payload["warnings"])
+
+
+def _saved_batches(tmp_path):
+    criteria = {"question": "Will CAFÉ win?", "description": "Exact   rules.\nDistinct cutoff: 23:59 UTC."}
+    row = _market("1", event_id="event-1", question=criteria["question"], criteria=criteria)
+    row["criteria_sha256"] = dm.criteria_sha256(criteria)
+    snapshot, _ = dm.write_snapshot(
+        [row, _market("2", event_id="event-2"), _market("3", event_id="event-3")],
+        scan_kind="primary", params={}, snapshot_dir=tmp_path,
+        now=dt.datetime(2026, 9, 23, 1, tzinfo=dt.timezone.utc),
+    )
+    payload = mcb.build_payload(
+        current_path=snapshot, prior_path=None, scan_kind="primary", batch_size=1,
+    )
+    saved = tmp_path / "batches.json"
+    saved.write_text(mcb.render_json(payload, compact=True), encoding="utf-8")
+    return saved, payload, snapshot
+
+
+def test_compact_json_preserves_exact_criteria_counts_and_existing_pretty_format(tmp_path):
+    saved, payload, _ = _saved_batches(tmp_path)
+    assert json.loads(saved.read_text()) == payload
+    assert mcb.render_json(payload) == json.dumps(payload, indent=2, sort_keys=True) + "\n"
+    assert len(saved.read_bytes()) < len(mcb.render_json(payload).encode()) * 0.8
+    assert "CAFÉ" in saved.read_text()
+    loaded, sha = mcb.load_payload_with_sha(saved)
+    assert loaded == payload
+    assert sha == hashlib.sha256(saved.read_bytes()).hexdigest()
+    market = loaded["batches"][0]["groups"][0]["markets"][0]["market"]
+    assert market["criteria"]["description"] == "Exact   rules.\nDistinct cutoff: 23:59 UTC."
+    assert market["criteria_sha256"] == dm.criteria_sha256(market["criteria"])
+
+
+def test_saved_batch_cli_resumes_without_source_reads_and_keeps_global_counts(tmp_path, monkeypatch, capsys):
+    saved, payload, snapshot = _saved_batches(tmp_path)
+    snapshot.unlink()
+    mcb.metadata_path(snapshot).unlink()
+    monkeypatch.setattr(mcb, "select_snapshots", lambda **kwargs: pytest.fail("source selection on saved input"))
+    assert mcb.main(["--input", str(saved), "--batch-index", "2", "--format", "compact-json"]) == 0
+    selected = json.loads(capsys.readouterr().out)
+    assert selected["batches"] == [payload["batches"][1]]
+    assert selected["counts"] == payload["counts"]
+    assert selected["warnings"] == payload["warnings"]
+    assert selected["execution_policy"] == payload["execution_policy"]
+    assert selected["output_selection"]["omitted_batches"] == 2
+    assert selected["output_selection"]["global_counts_preserved"] is True
+    assert "Counts and upstream coverage refer to the complete saved payload" in mcb.render_markdown(selected)
+
+
+def test_saved_batch_reference_stores_shared_metadata_once_and_accepts_gzip(tmp_path, capsys):
+    saved, payload, _ = _saved_batches(tmp_path)
+    packed = saved.with_suffix(".json.gz")
+    packed.write_bytes(gzip.compress(saved.read_bytes(), mtime=0))
+    assert mcb.main([
+        "--input", str(packed), "--batch-index", "1", "--reference-only", "--format", "compact-json",
+    ]) == 0
+    selected = json.loads(capsys.readouterr().out)
+    assert selected["batch"] == payload["batches"][0]
+    assert selected["parent_payload"] == {
+        "path": str(packed.resolve()), "sha256": hashlib.sha256(saved.read_bytes()).hexdigest(),
+        "hash_scope": "decoded_json_bytes",
+    }
+    assert "source" not in selected
+    assert "execution_policy" not in selected
+    assert selected["safety"] == "offline_context_only_no_model_no_execution"
+
+
+def test_compact_batch_cli_writes_deterministic_gzip_with_full_lossless_payload(tmp_path):
+    saved, payload, _ = _saved_batches(tmp_path)
+    outputs = [tmp_path / name for name in ("first.json.gz", "second.json.gz")]
+    for output in outputs:
+        assert mcb.main(["--input", str(saved), "--format", "compact-json", "--output", str(output)]) == 0
+        assert json.loads(gzip.decompress(output.read_bytes())) == payload
+        assert mcb.load_payload_with_sha(output)[0] == payload
+    assert outputs[0].read_bytes() == outputs[1].read_bytes()
+    assert outputs[0].stat().st_size < saved.stat().st_size
+
+
+@pytest.mark.parametrize("mutation,match", [
+    ("criteria", "content hash"), ("execution", "execution policy"),
+    ("counts", "global counts"), ("index", "contiguous"),
+])
+def test_saved_batch_reuse_rejects_tampered_contents_and_counts(tmp_path, mutation, match):
+    saved, payload, _ = _saved_batches(tmp_path)
+    item = payload["batches"][0]["groups"][0]["markets"][0]
+    if mutation == "criteria":
+        item["market"]["criteria"]["description"] = "Different rules"
+    elif mutation == "execution":
+        item["execution_ready"] = True
+    elif mutation == "counts":
+        payload["counts"]["selected"] += 1
+    else:
+        payload["batches"][1]["batch_index"] = 1
+    saved.write_text(json.dumps(payload))
+    with pytest.raises(ValueError, match=match):
+        mcb.load_payload_with_sha(saved)
+
+
+@pytest.mark.parametrize("extra_args", [
+    ["--batch-index", "0"], ["--batch-index", "4"],
+    ["--reference-only"], ["--batch-index", "1", "--reference-only", "--format", "markdown"],
+    ["--scan-kind", "primary"],
+])
+def test_saved_batch_cli_rejects_invalid_or_ambiguous_selection(tmp_path, extra_args):
+    saved, _, _ = _saved_batches(tmp_path)
+    with pytest.raises(SystemExit) as caught:
+        mcb.main(["--input", str(saved), *extra_args])
+    assert caught.value.code == 2
+
+
+def test_compressed_default_and_both_latest_aliases_preserve_decoded_source_hash(tmp_path):
+    saved, payload, snapshot = _saved_batches(tmp_path)
+    raw = gzip.decompress(snapshot.read_bytes())
+    assert snapshot.name.endswith(".json.gz")
+    assert mcb.load_snapshot(tmp_path / "shortlist_latest.json") == json.loads(raw)
+    assert mcb.load_snapshot(tmp_path / "shortlist_latest.json.gz") == json.loads(raw)
+    assert payload["source"]["current"]["sha256"] == hashlib.sha256(raw).hexdigest()
+    assert payload["source_integrity_verified"] is True
+    selected, prior, kind, _ = mcb.select_snapshots(
+        snapshot_dir=tmp_path, scan_kind="primary", current=None, prior=None,
+    )
+    assert (selected, prior, kind) == (snapshot.resolve(), None, "primary")
+
+    # A changed gzip header leaves decoded rules intact but invalidates stored proof.
+    packed = bytearray(snapshot.read_bytes())
+    packed[4] ^= 1
+    snapshot.write_bytes(packed)
+    changed = mcb.build_payload(
+        current_path=snapshot, prior_path=None, scan_kind="primary", batch_size=1,
+    )
+    assert changed["source_integrity_verified"] is False
+    assert any("gzip snapshot does not match" in warning for warning in changed["warnings"])
+    assert all(
+        item["semantic_triage_ready"] is False
+        for batch in changed["batches"] for group in batch["groups"] for item in group["markets"]
+    )
+
+
+def test_archived_legacy_snapshot_requires_manifest_and_keeps_original_identity(tmp_path, monkeypatch):
+    monkeypatch.setattr(log_storage, "ROOT", tmp_path)
+    snapshot_dir = tmp_path / "data" / "snapshots"
+    original, _ = dm.write_snapshot(
+        [_market("1", event_id="event-1")], scan_kind="primary", params={},
+        snapshot_dir=snapshot_dir, compressed=False,
+        now=dt.datetime(2026, 9, 23, 1, tzinfo=dt.timezone.utc),
+    )
+    raw = original.read_bytes()
+    packed = gzip.compress(raw, mtime=0)
+    archive = original.with_suffix(".json.gz")
+    archive.write_bytes(packed)
+    original.unlink()
+    with pytest.raises(ValueError, match="unable to read JSON bytes"):
+        mcb.load_snapshot(original)
+    with pytest.raises(ValueError, match="unable to read JSON bytes"):
+        mcb.select_snapshots(snapshot_dir=snapshot_dir, scan_kind="primary", current=None, prior=None)
+
+    index = tmp_path / log_storage.INDEX
+    index.parent.mkdir(parents=True)
+    index.write_text(json.dumps({
+        "path": original.relative_to(tmp_path).as_posix(),
+        "gzip_path": archive.relative_to(tmp_path).as_posix(),
+        "bytes": len(raw), "sha256": hashlib.sha256(raw).hexdigest(),
+        "gzip_sha256": hashlib.sha256(packed).hexdigest(),
+    }) + "\n")
+    current, _, _, _ = mcb.select_snapshots(
+        snapshot_dir=snapshot_dir, scan_kind="primary", current=None, prior=None,
+    )
+    assert current == original
+    payload = mcb.build_payload(
+        current_path=current, prior_path=None, scan_kind="primary", batch_size=20,
+    )
+    assert payload["source"]["current"]["path"] == str(original)
+    assert payload["source_integrity_verified"] is True
+    assert mcb.load_snapshot(snapshot_dir / "shortlist_latest.json") == json.loads(raw)
+    archive.write_bytes(packed + b"tampered")
+    with pytest.raises(ValueError, match="compressed hash mismatch"):
+        mcb.load_snapshot(original)

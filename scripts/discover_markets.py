@@ -1,5 +1,5 @@
 """Pull active markets from Polymarket gamma API, filter for discovery review,
-and emit a JSON snapshot to data/snapshots/<UTC ts>.json plus a markdown shortlist.
+and emit a compact gzip JSON snapshot plus a markdown shortlist.
 
 Read-only. Safe to run frequently.
 """
@@ -8,11 +8,13 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import gzip
 import hashlib
 import json
 import math
 import os
 import re
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -105,21 +107,42 @@ def parent_event_identity(market: dict[str, Any]) -> tuple[str | None, str | Non
 
 
 def snapshot_metadata_path(snapshot_path: Path) -> Path:
+    if snapshot_path.suffix == ".gz":
+        snapshot_path = snapshot_path.with_suffix("")
     return snapshot_path.with_name(f"{snapshot_path.stem}.meta.json")
 
 
-def _atomic_write_text(path: Path, content: str) -> None:
-    temporary = path.with_name(f".{path.name}.{os.getpid()}.tmp")
-    temporary.write_text(content, encoding="utf-8")
-    os.replace(temporary, path)
+def _atomic_write_new(path: Path, content: bytes) -> None:
+    """Publish complete immutable bytes without overwriting a competing scan."""
+    fd, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    temporary = Path(temporary_name)
+    directory_fd = os.open(path.parent, os.O_RDONLY)
+    try:
+        os.fchmod(fd, 0o644)
+        with os.fdopen(fd, "wb") as stream:
+            stream.write(content)
+            stream.flush()
+            os.fsync(stream.fileno())
+        os.link(temporary, path)
+        temporary.unlink()
+        os.fsync(directory_fd)
+    finally:
+        temporary.unlink(missing_ok=True)
+        os.close(directory_fd)
 
 
 def write_snapshot(
     rows: list[dict[str, Any]], *, scan_kind: str, params: dict[str, Any],
     snapshot_dir: Path = SNAP_DIR, now: dt.datetime | None = None,
     coverage: dict[str, Any] | None = None,
+    compressed: bool = True,
 ) -> tuple[Path, Path]:
-    """Write the legacy list snapshot plus an additive metadata sidecar."""
+    """Write a lossless gzip list and sidecar; ``compressed=False`` emits plain JSON.
+
+    ``snapshot_sha256`` binds decompressed JSON bytes in either mode. The legacy
+    latest alias follows the actual file, which is gzip by default; direct plain
+    JSON readers must opt out or use the compression-aware snapshot loader.
+    """
     now = now or dt.datetime.now(dt.timezone.utc)
     if now.tzinfo is None:
         now = now.replace(tzinfo=dt.timezone.utc)
@@ -129,11 +152,14 @@ def write_snapshot(
     ts = now.astimezone(dt.timezone.utc).strftime("%Y%m%dT%H%M%S%fZ")
     if not scan_kind or any(ch not in "abcdefghijklmnopqrstuvwxyz0123456789_" for ch in scan_kind):
         raise ValueError(f"invalid scan kind for snapshot identity: {scan_kind!r}")
-    snap_path = snapshot_dir / f"shortlist_{ts}_{scan_kind}.json"
-    if snap_path.exists() or snapshot_metadata_path(snap_path).exists():
+    plain_path = snapshot_dir / f"shortlist_{ts}_{scan_kind}.json"
+    gzip_path = plain_path.with_suffix(".json.gz")
+    snap_path = gzip_path if compressed else plain_path
+    if plain_path.exists() or gzip_path.exists() or snapshot_metadata_path(snap_path).exists():
         raise FileExistsError(f"refusing to overwrite snapshot identity: {snap_path}")
-    payload = json.dumps(rows, indent=2)
-    _atomic_write_text(snap_path, payload)
+    payload = json.dumps(rows, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    stored = gzip.compress(payload, compresslevel=6, mtime=0) if compressed else payload
+    _atomic_write_new(snap_path, stored)
     meta_path = snapshot_metadata_path(snap_path)
     metadata = {
         "schema_version": SNAPSHOT_SCHEMA_VERSION,
@@ -142,21 +168,29 @@ def write_snapshot(
         "scan_kind": scan_kind,
         "params": params,
         "market_count": len(rows),
-        "snapshot_sha256": hashlib.sha256(payload.encode("utf-8")).hexdigest(),
+        "snapshot_sha256": hashlib.sha256(payload).hexdigest(),
+        "storage": "gzip" if compressed else "json",
+        "snapshot_bytes": len(payload),
+        "stored_bytes": len(stored),
         "criteria_fingerprint": "sha256:canonical-json-exact-v1",
         "selection_policy": "filter-before-top-v1",
         "coverage": coverage,
     }
-    _atomic_write_text(meta_path, json.dumps(metadata, indent=2))
+    if compressed:
+        metadata["gzip_sha256"] = hashlib.sha256(stored).hexdigest()
+    _atomic_write_new(meta_path, (json.dumps(metadata, ensure_ascii=False, separators=(",", ":")) + "\n").encode("utf-8"))
 
-    latest = snapshot_dir / "shortlist_latest.json"
-    temporary_link = latest.with_name(f".{latest.name}.{os.getpid()}.tmp")
-    try:
-        temporary_link.unlink()
-    except FileNotFoundError:
-        pass
-    os.symlink(snap_path.name, temporary_link)
-    os.replace(temporary_link, latest)
+    aliases = [snapshot_dir / "shortlist_latest.json"]
+    latest_gzip = snapshot_dir / "shortlist_latest.json.gz"
+    if compressed:
+        aliases.append(latest_gzip)
+    elif latest_gzip.is_symlink():
+        latest_gzip.unlink()
+    for latest in aliases:
+        temporary_link = latest.with_name(f".{latest.name}.{os.getpid()}.tmp")
+        temporary_link.unlink(missing_ok=True)
+        os.symlink(snap_path.name, temporary_link)
+        os.replace(temporary_link, latest)
     return snap_path, meta_path
 
 
@@ -651,6 +685,8 @@ def main() -> None:
                     help="volume-ranked output cap; 0 keeps all filter survivors")
     ap.add_argument("--max-pages", type=int, default=10)
     ap.add_argument("--no-snapshot", action="store_true")
+    ap.add_argument("--plain-snapshot", action="store_true",
+                    help="write plain compact .json instead of the default lossless .json.gz")
     ap.add_argument("--via-events", action="store_true",
                     help="fetch via /events pagination (reaches the thin tail the "
                          "/markets offset ceiling hides — see fetch_active_via_events)")
@@ -716,6 +752,7 @@ def main() -> None:
         snap_path, _ = write_snapshot(
             short, scan_kind=scan_kind, params=snapshot_params,
             coverage={"fetch": fetch_stats, "filters": filter_stats},
+            compressed=not args.plain_snapshot,
         )
         print(f"wrote {snap_path}")
 

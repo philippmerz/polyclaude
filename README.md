@@ -114,6 +114,10 @@ and Router02 call configuration; 15 focused tests passed. See the
   06:00, 10:00, 18:00, and 22:00 UTC. On-chain opportunity research is on demand.
 - **Health:** `heartbeat_watch.py` checks daemon freshness, session progress,
   and disk headroom.
+- **Storage:** snapshots use compact gzip JSON; shared batch context is stored
+  once. Scheduled check-ins losslessly archive closed artifacts. The
+  [October21 pass](research/2026-10-21-storage-efficiency.json) reclaimed498MB
+  while preserving exact evidence and financial hashes.
 - **Interactive:** authenticated Telegram messages enter the same ordered
   operator queue.
 

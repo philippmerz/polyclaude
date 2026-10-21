@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-21T09:05:12.843875+00:00"
+reviewed_at: "2026-10-21T09:34:47.446386+00:00"
 valid_until: "2026-10-21T10:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 0969e9f6976eeb2f8a8cd651297852b23d84262fddab12a0c79f25eeb9f43737
+  README.md: 164fbaee8472d22ce6155a425d8c8f72a78afe85a2d3593f98e2ebeb25290201
   strategy/00_philosophy.md: 4941f0493b4a4da67fbf5f7afeea5365cc8245c5e040c5c98c3f9383b2731a88
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
-  strategy/02_operations.md: 8159eeefb97cc17a24bfdf5b7ff1b44e53224a31d2b1ea87195a35cab5f9a345
+  strategy/02_operations.md: efa271aec5a7d24f87deb87a1984f3d1c7f5d8bf1b98c8365d715cdad2a56e4a
   strategy/03_opportunity_method.md: d2347f74b5c7cca7e3b2a8f7591b2406daf2baaf396a97be900f7b675a42468c
-  scripts/README.md: 77735bba5d4c921aa3bfc06fb433273406148b255a86f5ab24c05312a53b20af
+  scripts/README.md: 5cad2d7e55dac41d176f724f86cbdb23a519945924844772d76603fd520ce502
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: b769d2ed3fb3c94bec6f7af933545bcb9942dadd03c793cc227316e64e904c6b
+  notes/backlog.md: daeb781928b5d6d1b2f846ca7ce5c4869a4e4fea2871b27e44b31e5dd9b05c7a
   notes/resting_orders.md: c47e7a6ef58fa794af2546afb05e7266cf1c9e8bd9594772b890dd2bbe6bd248
-  notes/journal.md: f2884a7de19b42a4ed8083ac2fa63476c1843d1fe56257e4edcb30e2693176ed
+  notes/journal.md: 98d7c34d45b8572937d6873a74379d7cb84fd530d021a490eff3a20909df3b58
 ---
 ## Active research boundary
 
@@ -39,4 +39,4 @@ source_hashes:
 ## Existing boundaries / operational limits
 
 - Next10UTC light/14UTCfull ormaterialevent; Michigan debate23UTC. WeeklyOct23/monthlyNov12notdue; offchainreviewretired. Completed02UTC7scans/155batches/2803items retaincaps/omissions/unpricedscopes; noexchange-wideabsenceclaim. [Check](../research/2026-10-21-084522-checkin.json).
-- Storagefree57.26→335.41MiBrecovered08:30–31withoutourcleanup; causeunknown. Later2026-10-21T08:50:22.125246+00:00 available2129.98MiB above512warning; no root/helpercleanup. Existingwatchdog retained, nohistory/source deletion. Prompttests8pass/bashn0; no daemonrestart. Preserveunrelatedworkingtree changes and immutablearchivehardlinks.
+- **Storage reviewed 2026-10-21T09:31:00.531559+00:00:**1126closed artifacts archived losslessly;497,882,852bytes freed (~475MiB), free2.51GiB.149tests pass; financial/case/checkpoint hashes unchanged. Future snapshots compactgzip, one shared batch parent with indexed resume; bounded archival on existing scheduled checks. Private/open/tracked files and hardlinks preserved. Use `log_storage.read_verified_bytes` or `scripts/log_storage.py restore PATH` for old artifacts. [Report](../research/2026-10-21-storage-efficiency.json).

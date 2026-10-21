@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import gzip
 import hashlib
 import json
 import math
@@ -19,11 +20,13 @@ import re
 import sys
 from typing import Any
 
+from log_storage import read_verified_bytes
+
 
 REPO_ROOT = Path(__file__).resolve().parent.parent
 DEFAULT_SNAPSHOT_DIR = REPO_ROOT / "data" / "snapshots"
 SNAPSHOT_RE = re.compile(
-    r"^shortlist_(\d{8}T\d{6}(?:\d{6})?Z)(?:_[a-z0-9_]+)?\.json$"
+    r"^shortlist_(\d{8}T\d{6}(?:\d{6})?Z)(?:_[a-z0-9_]+)?\.json(?:\.gz)?$"
 )
 CRITERIA_FINGERPRINT = "sha256:canonical-json-exact-v1"
 SNAPSHOT_SCHEMA_VERSION = 2
@@ -63,15 +66,25 @@ COMPACT_FIELDS = (
 
 
 def metadata_path(snapshot: Path) -> Path:
+    if snapshot.suffix == ".gz":
+        snapshot = snapshot.with_suffix("")
     return snapshot.with_name(f"{snapshot.stem}.meta.json")
+
+
+def _read_json_bytes(path: Path) -> bytes:
+    """Read plain/gzip JSON, verifying any fallback for a missing legacy path."""
+    try:
+        return read_verified_bytes(path.resolve())
+    except (OSError, EOFError) as exc:
+        raise ValueError(f"unable to read JSON bytes from {path}: {exc}") from exc
 
 
 def _read_json(path: Path) -> Any:
     try:
-        return json.loads(path.read_text(encoding="utf-8"))
+        return json.loads(_read_json_bytes(path))
     except FileNotFoundError as exc:
         raise ValueError(f"snapshot file not found: {path}") from exc
-    except json.JSONDecodeError as exc:
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError) as exc:
         raise ValueError(f"invalid JSON in {path}: {exc}") from exc
 
 
@@ -87,11 +100,11 @@ def load_metadata(snapshot: Path) -> dict[str, Any] | None:
 
 def load_snapshot_with_sha(path: Path) -> tuple[list[dict[str, Any]], str]:
     try:
-        raw = path.read_bytes()
+        raw = _read_json_bytes(path)
         value = json.loads(raw)
     except FileNotFoundError as exc:
         raise ValueError(f"snapshot file not found: {path}") from exc
-    except json.JSONDecodeError as exc:
+    except (json.JSONDecodeError, UnicodeDecodeError, OSError) as exc:
         raise ValueError(f"invalid JSON in {path}: {exc}") from exc
     if not isinstance(value, list) or any(not isinstance(row, dict) for row in value):
         raise ValueError(f"snapshot must be a JSON list of objects: {path}")
@@ -103,7 +116,7 @@ def load_snapshot(path: Path) -> list[dict[str, Any]]:
 
 
 def snapshot_sha256(path: Path) -> str:
-    return hashlib.sha256(path.read_bytes()).hexdigest()
+    return hashlib.sha256(_read_json_bytes(path)).hexdigest()
 
 
 def _metadata_integrity_warnings(
@@ -134,16 +147,26 @@ def _metadata_integrity_warnings(
         warnings.append(f"{label} metadata has an unsupported criteria fingerprint")
     if market_count is not None and metadata.get("market_count") != market_count:
         warnings.append(f"{label} metadata market_count does not match the snapshot")
+    if metadata.get("storage") == "gzip":
+        recorded_gzip = str(metadata.get("gzip_sha256") or "")
+        stored_path = snapshot.resolve()
+        actual_gzip = hashlib.sha256(stored_path.read_bytes()).hexdigest()
+        if not re.fullmatch(r"[0-9a-f]{64}", recorded_gzip) or recorded_gzip != actual_gzip:
+            warnings.append(f"{label} gzip snapshot does not match its metadata SHA-256")
     return warnings
 
 
 def _snapshot_candidates(snapshot_dir: Path, scan_kind: str) -> list[Path]:
     candidates: list[Path] = []
-    for path in snapshot_dir.glob("shortlist_*.json"):
+    for path in snapshot_dir.glob("shortlist_*.json*"):
         if not SNAPSHOT_RE.match(path.name):
             continue
         metadata = load_metadata(path)
         if metadata and metadata.get("scan_kind") == scan_kind:
+            # An archived legacy snapshot keeps its original logical identity;
+            # its missing plain path is usable only through the verified reader.
+            if path.suffix == ".gz" and metadata.get("snapshot") == path.with_suffix("").name:
+                path = path.with_suffix("")
             candidates.append(path.resolve())
     return sorted(set(candidates), key=lambda path: path.name)
 
@@ -171,8 +194,6 @@ def select_snapshots(
         if prior_path is None and len(candidates) > 1:
             prior_path = candidates[-2]
     else:
-        if not current_path.exists():
-            raise ValueError(f"snapshot file not found: {current_path}")
         if current_meta is None:
             warnings.append(f"current snapshot has no metadata sidecar: {current_path}")
         elif scan_kind and current_meta.get("scan_kind") != scan_kind:
@@ -188,8 +209,10 @@ def select_snapshots(
             if candidates:
                 prior_path = candidates[-1]
 
+    if not current_path.exists():
+        _read_json_bytes(current_path)
     if prior_path is not None and not prior_path.exists():
-        raise ValueError(f"snapshot file not found: {prior_path}")
+        _read_json_bytes(prior_path)
     if prior_path == current_path:
         raise ValueError("current and prior snapshots must differ")
     if prior_path is None:
@@ -944,6 +967,113 @@ def _md(value: Any) -> str:
     return str(value if value is not None else "").replace("|", "\\|").replace("\n", " ")
 
 
+def load_payload_with_sha(path: Path) -> tuple[dict[str, Any], str]:
+    """Verify a saved full batch payload without reopening its source snapshots.
+
+    Batch hashes establish consistency with the saved groups, not source truth
+    or freshness. The original source-integrity and coverage flags stay intact.
+    """
+    raw = _read_json_bytes(path)
+    try:
+        payload = json.loads(raw)
+    except (json.JSONDecodeError, UnicodeDecodeError) as exc:
+        raise ValueError(f"invalid JSON in saved batch payload {path}: {exc}") from exc
+    required = {
+        "schema_version", "safety", "family_routing_ready", "source",
+        "source_integrity_verified", "grouping_warning", "scan_kind",
+        "warnings", "counts", "batches",
+    }
+    if not isinstance(payload, dict) or not required <= payload.keys():
+        raise ValueError("saved batch payload must be a full context payload")
+    if (
+        payload["schema_version"] != 1
+        or payload["safety"] != "offline_context_only_no_model_no_execution"
+        or payload["family_routing_ready"] is not False
+        or "output_selection" in payload
+    ):
+        raise ValueError("saved batch payload has an unsupported schema, safety policy, or subset")
+    source, counts, batches = payload["source"], payload["counts"], payload["batches"]
+    if (
+        not isinstance(source, dict) or not isinstance(source.get("current"), dict)
+        or not isinstance(source["current"].get("sha256"), str)
+        or "prior" not in source
+        or not isinstance(payload["warnings"], list)
+        or not isinstance(counts, dict) or not isinstance(batches, list)
+    ):
+        raise ValueError("saved batch payload has malformed source, counts, warnings, or batches")
+    selected = selected_triggers = 0
+    for index, batch in enumerate(batches, 1):
+        if not isinstance(batch, dict) or batch.get("batch_index") != index:
+            raise ValueError("saved batch indices must be contiguous and one-based")
+        groups = batch.get("groups")
+        if not isinstance(groups, list) or any(
+            not isinstance(group, dict) or not isinstance(group.get("markets"), list)
+            for group in groups
+        ):
+            raise ValueError(f"saved batch {index} has malformed groups")
+        items = [item for group in groups for item in group["markets"]]
+        if any(
+            not isinstance(item, dict) or not isinstance(item.get("market"), dict)
+            or item.get("execution_ready") is not False
+            or item.get("live_rewalk_required") is not True
+            for item in items
+        ):
+            raise ValueError(f"saved batch {index} has malformed items or execution policy")
+        encoded = json.dumps(
+            groups, ensure_ascii=False, sort_keys=True, separators=(",", ":"),
+        ).encode("utf-8")
+        if (
+            batch.get("group_content_sha256") != hashlib.sha256(encoded).hexdigest()
+            or batch.get("group_content_chars") != len(encoded.decode("utf-8"))
+            or batch.get("market_count") != len(items)
+        ):
+            raise ValueError(f"saved batch {index} content hash or counts do not match")
+        selected += len(items)
+        selected_triggers += sum(bool(item.get("trigger")) for item in items)
+    expected_counts = {
+        "batches": len(batches), "selected": selected,
+        "selected_triggers": selected_triggers,
+        "selected_context": selected - selected_triggers,
+    }
+    if any(counts.get(key) != value for key, value in expected_counts.items()):
+        raise ValueError("saved batch payload global counts do not match its batches")
+    return payload, hashlib.sha256(raw).hexdigest()
+
+
+def select_saved_batch(
+    payload: dict[str, Any], batch_index: int, *, input_path: Path,
+    input_sha256: str, reference_only: bool = False,
+) -> dict[str, Any]:
+    """Return one intact batch with runtime context or a small parent reference."""
+    batches = payload["batches"]
+    if not 1 <= batch_index <= len(batches):
+        raise ValueError(f"batch index must be between 1 and {len(batches)}")
+    batch = batches[batch_index - 1]
+    parent = {
+        "path": str(input_path.resolve()), "sha256": input_sha256,
+        "hash_scope": "decoded_json_bytes",
+    }
+    if reference_only:
+        return {
+            "schema_version": 1, "payload_type": "market_context_batch_reference",
+            "safety": payload["safety"], "parent_payload": parent, "batch": batch,
+        }
+    return {
+        **payload, "batches": [batch],
+        "output_selection": {
+            "batch_indices": [batch_index], "market_count": batch["market_count"],
+            "omitted_batches": len(batches) - 1, "global_counts_preserved": True,
+            "parent_payload": parent,
+        },
+    }
+
+
+def render_json(payload: dict[str, Any], *, compact: bool = False) -> str:
+    if compact:
+        return json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(",", ":")) + "\n"
+    return json.dumps(payload, indent=2, sort_keys=True) + "\n"
+
+
 def render_markdown(payload: dict[str, Any]) -> str:
     lines = [
         "# Market context batches",
@@ -956,6 +1086,13 @@ def render_markdown(payload: dict[str, Any]) -> str:
     ]
     prior = payload["source"]["prior"]
     lines.append(f"Prior proof: `{prior['sha256'] if prior else 'none'}`")
+    if payload.get("output_selection"):
+        selection = payload["output_selection"]
+        lines.append(
+            f"Selected batch: `{selection['batch_indices'][0]}`; "
+            f"omitted batches: `{selection['omitted_batches']}`. "
+            "Counts and upstream coverage refer to the complete saved payload."
+        )
     if payload.get("discovery_coverage"):
         lines.extend(["", "Upstream discovery coverage: `"
                       + _md(json.dumps(payload["discovery_coverage"], sort_keys=True)) + "`"])
@@ -1004,42 +1141,70 @@ def main(argv: list[str] | None = None) -> int:
     parser.add_argument("--scan-kind", help="Sidecar scan kind (for example primary or thin_tail).")
     parser.add_argument("--current", type=Path, help="Explicit current shortlist JSON path.")
     parser.add_argument("--prior", type=Path, help="Explicit prior shortlist JSON path.")
+    parser.add_argument("--input", type=Path,
+                        help="Verify/reuse saved full batch JSON or JSON.gz without source reads.")
+    parser.add_argument("--batch-index", type=int,
+                        help="Emit one complete batch from --input; global counts remain explicit.")
+    parser.add_argument("--reference-only", action="store_true",
+                        help="For a saved selected batch, reference parent metadata instead of copying it.")
     parser.add_argument("--snapshot-dir", type=Path, default=DEFAULT_SNAPSHOT_DIR)
-    parser.add_argument("--format", choices=("json", "markdown"), default="json")
+    parser.add_argument("--format", choices=("json", "compact-json", "markdown"), default="json")
     parser.add_argument("--batch-size", type=int, default=20,
                         help="Soft maximum markets per batch; exact event groups stay intact.")
     parser.add_argument("--max-markets", type=int, default=0,
                         help="Soft output cap; exact event families are never split. 0 keeps all.")
     parser.add_argument("--price-change-pp", type=float, default=3.0,
                         help="Minimum absolute quote move that triggers review (default: 3pp).")
-    parser.add_argument("--output", type=Path, help="Write output here instead of stdout.")
+    parser.add_argument("--output", type=Path,
+                        help="Write output here; a .gz suffix stores deterministic gzip bytes.")
     args = parser.parse_args(argv)
     if (
         args.batch_size < 1 or args.max_markets < 0
         or not math.isfinite(args.price_change_pp) or args.price_change_pp < 0
     ):
         parser.error("batch size must be positive; caps and price threshold must be nonnegative")
+    if args.input and (args.current or args.prior or args.scan_kind):
+        parser.error("--input cannot be combined with snapshot selection arguments")
+    if args.batch_index is not None and not args.input:
+        parser.error("--batch-index requires --input")
+    if args.reference_only and (
+        args.batch_index is None or args.format == "markdown"
+    ):
+        parser.error("--reference-only requires --input, --batch-index, and a JSON format")
+    if args.input and args.output and args.input.resolve() == args.output.resolve():
+        parser.error("saved input and output paths must differ")
     try:
-        current, prior, scan_kind, warnings = select_snapshots(
-            snapshot_dir=args.snapshot_dir,
-            scan_kind=args.scan_kind,
-            current=args.current,
-            prior=args.prior,
-        )
-        payload = build_payload(
-            current_path=current, prior_path=prior, scan_kind=scan_kind,
-            batch_size=args.batch_size, max_markets=args.max_markets,
-            price_change_pp=args.price_change_pp,
-            warnings=warnings,
-        )
+        if args.input:
+            payload, input_sha256 = load_payload_with_sha(args.input)
+            if args.batch_index is not None:
+                payload = select_saved_batch(
+                    payload, args.batch_index, input_path=args.input,
+                    input_sha256=input_sha256, reference_only=args.reference_only,
+                )
+        else:
+            current, prior, scan_kind, warnings = select_snapshots(
+                snapshot_dir=args.snapshot_dir,
+                scan_kind=args.scan_kind,
+                current=args.current,
+                prior=args.prior,
+            )
+            payload = build_payload(
+                current_path=current, prior_path=prior, scan_kind=scan_kind,
+                batch_size=args.batch_size, max_markets=args.max_markets,
+                price_change_pp=args.price_change_pp,
+                warnings=warnings,
+            )
     except ValueError as exc:
         parser.error(str(exc))
     rendered = (
-        json.dumps(payload, indent=2, sort_keys=True) + "\n"
-        if args.format == "json" else render_markdown(payload)
+        render_markdown(payload) if args.format == "markdown"
+        else render_json(payload, compact=args.format == "compact-json")
     )
     if args.output:
-        args.output.write_text(rendered, encoding="utf-8")
+        if args.output.suffix == ".gz":
+            args.output.write_bytes(gzip.compress(rendered.encode("utf-8"), compresslevel=6, mtime=0))
+        else:
+            args.output.write_text(rendered, encoding="utf-8")
     else:
         sys.stdout.write(rendered)
     return 0

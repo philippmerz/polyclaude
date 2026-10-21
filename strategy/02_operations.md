@@ -119,6 +119,17 @@ Before formatting read evidence, persist it through the existing vetted reader;
 Label SDK serialization and call-window timing honestly; they are not raw HTTP
 or wire timestamps. The helper changes no financial execution path.
 
+Storage: prefer compact JSON/JSONL or CSV, with one shared policy/source parent
+and small indexed units. Large captures and discovery snapshots use gzip;
+retain raw-content hashes, timestamps, criteria and complete analysis. Do not
+save repeated Markdown wrappers or duplicate uncompressed bodies. Existing
+case/financial records retain their original bytes and hashes. `log_storage.py`
+archives closed, untracked artifacts older than24h, verifies gzip roundtrips,
+and preserves a local path/hash index. It excludes open files, current aliases,
+hardlinks, receipts and private operator paths. Read archived bytes with
+`read_verified_bytes`; `restore PATH` recreates an exact legacy file. Scheduled
+check-ins reuse a bounded maintenance pass; event-triggered checks skip it.
+
 For CLI checks, persist each completed command's stdout, stderr, return code and
 invocation bounds before optional receipt conversion or another command. Two
 October20 wrappers lost return codes by keeping them only in memory until a

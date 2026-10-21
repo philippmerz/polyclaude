@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import datetime as dt
+import gzip
+import hashlib
 import json
 from pathlib import Path
 import sys
@@ -142,7 +144,73 @@ def test_snapshot_preserves_coverage_and_minimum_is_in_shares(tmp_path):
     path, metadata = scanner.write_snapshot(rows, scan_kind="review", params={},
                                            snapshot_dir=tmp_path, now=NOW, coverage=stats)
     assert json.loads(metadata.read_text())["coverage"] == stats
+    assert json.loads(gzip.decompress(path.read_bytes())) == rows
+
+
+def test_snapshot_default_is_lossless_compact_gzip_with_both_hashes_and_no_raw_copy(tmp_path):
+    rows = [{"id": "1", "criteria": "CAFÉ\nResolve   YES exactly.", "tokens": ["yes", "no"]}]
+    path, metadata = scanner.write_snapshot(rows, scan_kind="review", params={},
+                                           snapshot_dir=tmp_path, now=NOW)
+    packed = path.read_bytes()
+    raw = gzip.decompress(packed)
+    saved = json.loads(metadata.read_text())
+    assert path.name.endswith(".json.gz")
+    assert not path.with_suffix("").exists()
+    assert raw == json.dumps(rows, ensure_ascii=False, separators=(",", ":")).encode("utf-8")
+    assert json.loads(raw) == rows
+    assert packed == gzip.compress(raw, compresslevel=6, mtime=0)
+    assert saved["snapshot"] == path.name
+    assert saved["snapshot_sha256"] == hashlib.sha256(raw).hexdigest()
+    assert saved["gzip_sha256"] == hashlib.sha256(packed).hexdigest()
+    assert saved["storage"] == "gzip"
+    assert saved["snapshot_bytes"] == len(raw)
+    assert saved["stored_bytes"] == len(packed)
+    assert scanner.snapshot_metadata_path(path) == metadata
+    assert scanner.snapshot_metadata_path(path.with_suffix("")) == metadata
+    assert (tmp_path / "shortlist_latest.json").resolve() == path
+    assert (tmp_path / "shortlist_latest.json.gz").resolve() == path
+    assert not list(tmp_path.glob(".*.tmp"))
+
+
+def test_snapshot_plain_mode_preserves_direct_json_reads_and_retires_stale_gzip_alias(tmp_path):
+    rows = [{"id": "1", "criteria": "Exact source text."}]
+    prior, _ = scanner.write_snapshot(rows, scan_kind="review", params={},
+                                      snapshot_dir=tmp_path, now=NOW)
+    prior_bytes = prior.read_bytes()
+    path, metadata = scanner.write_snapshot(rows, scan_kind="review", params={},
+                                           snapshot_dir=tmp_path, now=NOW + dt.timedelta(seconds=1),
+                                           compressed=False)
+    saved = json.loads(metadata.read_text())
+    assert path.suffix == ".json"
     assert json.loads(path.read_text()) == rows
+    assert json.loads((tmp_path / "shortlist_latest.json").read_text()) == rows
+    assert not (tmp_path / "shortlist_latest.json.gz").is_symlink()
+    assert saved["storage"] == "json"
+    assert saved["snapshot_sha256"] == hashlib.sha256(path.read_bytes()).hexdigest()
+    assert saved["snapshot_bytes"] == saved["stored_bytes"] == len(path.read_bytes())
+    assert "gzip_sha256" not in saved
+    assert prior.read_bytes() == prior_bytes
+
+
+def test_snapshot_identity_cannot_be_reused_with_different_compression(tmp_path):
+    rows = [{"id": "1"}]
+    path, metadata = scanner.write_snapshot(rows, scan_kind="review", params={},
+                                           snapshot_dir=tmp_path, now=NOW)
+    before = (path.read_bytes(), metadata.read_bytes())
+    with pytest.raises(FileExistsError, match="refusing to overwrite snapshot identity"):
+        scanner.write_snapshot([{"id": "changed"}], scan_kind="review", params={},
+                               snapshot_dir=tmp_path, now=NOW, compressed=False)
+    assert (path.read_bytes(), metadata.read_bytes()) == before
+    assert not path.with_suffix("").exists()
+
+
+def test_snapshot_atomic_publication_never_overwrites_existing_bytes(tmp_path):
+    path = tmp_path / "snapshot.json.gz"
+    path.write_bytes(b"existing evidence")
+    with pytest.raises(FileExistsError):
+        scanner._atomic_write_new(path, b"replacement")
+    assert path.read_bytes() == b"existing evidence"
+    assert not list(tmp_path.glob(".*.tmp"))
 
 
 def test_packets_expose_upstream_cap_without_confusing_integrity_with_coverage(tmp_path):
