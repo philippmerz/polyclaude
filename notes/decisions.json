@@ -1,5 +1,5 @@
 {
-  "next_id": 255,
+  "next_id": 256,
   "decisions": [
     {
       "id": 1,
@@ -5555,6 +5555,25 @@
         "pending-limit-order"
       ],
       "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 255,
+      "timestamp": "2026-10-21T14:37:08Z",
+      "type": "skip",
+      "thesis": "Retain existing5MichiganNO/noadd after requested MLive alert e9b6db97. Original SienaSept24 MI49D44R added as weak older observation; rawD57.624955 rounded58, NO44\u219242. Subjective8pp observation SD and missing methods explicit; youth82/11 is not statewide. SelectedNO32 gives1.60 terminal vs1.45 cash+21d variable-Aave sensitivity1.45265; credible G12/samebias1.42976 and broadlow1 favor sale. Source/model uncertainty unresolved; full original1.55 can lose. No trade/order/flow. See research/2026-10-21-142743-michigan-update.json.",
+      "confidence": "low",
+      "prediction": "For this exact party-winner contract, D wins with judgment probability0.58; any non-D winner0.42. Not a calibrated floor. This records a revised hold/skip-exit forecast, not a purchase; election calls/certification may be delayed.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-30",
+      "tags": [
+        "held-review",
+        "prior-revision",
+        "no-trade"
+      ],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

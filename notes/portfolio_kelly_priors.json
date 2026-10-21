@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-21T00:51:31.122444+00:00",
+  "_updated": "2026-10-21T14:37:08.653419+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1259,8 +1259,8 @@
     "latest_catalyst": "NewOct17 22:24/23:16revenue/headlinealerts: Anthropicquarterlyvsannualized16.8B/OpenAIestimatecut20B ambiguity; cancel-first originalmaker beforeverification. No claim headline is issueractual."
   },
   "will-the-democrats-win-the-michigan-senate-race-in-2026": {
-    "p_yes": 0.56,
-    "p_no": 0.44,
+    "p_yes": 0.58,
+    "p_no": 0.42,
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
@@ -1269,18 +1269,19 @@
     "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
-    "rationale": "Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct21 primary daily analytic rederivation reproduces Oct20 then recomputes poll ages17/7/11: D55.7302096215%, rounded56/NO44 retained; selectedNO34/broadNO20. Current IA/Rasmussen/official nominees and full literal rules root read/hash-verified; IA MI mode unknown, Oct12 X-pointer not a new numeric poll. Ipsos Oct16-19 nationalRV D+12 explicitly tested: G12/samebias D59.7314, G12/nobias69.7659; national RV is not Michigan LV. G8 remains multi-source judgment from FoxD6/YouGovD8-D11, unfitted cyclebias -1.5 retained. 5NO selected1.70 vs00:39 fee-netexit1.50+dated75dAave1.509814; G12/samebias selected1.513432 barely clears, G12/nobias/broadlow favor exit. Retain/noadd, full1.55costloss possible; credible model risk not a guaranteed floor. See daily_rederivation.",
+    "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
+    "current_assessment": "Oct21 14:33 primary update: added original SienaSept24 likely-voter MI49D44R margin+5 to the three-poll baseline. RawD55.7302096\u219257.6249550, rounded58/NO42 (all non-D winners);10pp reserve selectsNO32, broadNO20\u201370 retained. MLive youth82/11 is secondary indexed attribution, not a second statewide likelihood; exact crosstab match, sample, field dates/MOE/mode/weights unknown. Subjective8pp margin-observation SD is not measured sampling precision;27d release age is lower bound, older60d and4/6/12/20pp/G12/no-bias sensitivities saved. 5NO selected1.60 vs14:29 netexit1.45+21d carry1.452650; broadlow1 andG12/samebias1.429759 favorcash. Retain5/noadd, full1.55 originalcost canlose. Source/bias/model risk remains credible; no robust-all-model claim.",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
-    "current_revision": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_method.md",
+    "current_revision": "research/2026-10-21-142743-michigan-update.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick003800_mi_refresh.json",
-    "management": "Review each existing tick/earlier material poll, candidate, withdrawal, health, ballot or turnout news. Original BUY filled; Oct23 pull obsolete. Oct20 Economic Club program elapsed; full transcript/voter effect not verified. Upcoming MI debateOct21 23UTC; pull any future resting order before known catalyst and revalue. Mandatory early votingOct24-Nov1/absentee sinceSep24 remain dated context. New BUY currently paused405/600+comparison, then full live gates. No measured US-politics hedge.",
+    "latest_source_packet": "data/deep_review_20261017/work/tick142743/sources/siena_poll_addendum.json",
+    "management": "Review each existing tick/earlier material poll, candidate, withdrawal, health, ballot or turnout news. Original BUY filled; Oct23 pull obsolete. Oct20 Economic Club program elapsed; full transcript/voter effect not verified. Upcoming MI debateOct21 23UTC; pull any future resting order before known catalyst and revalue. Mandatory early votingOct24-Nov1/absentee sinceSep24 remain dated context. Any fresh BUY requires completed-universe policyv2, primary selection and every live gate; former experimental600 waiting rule retired. No measured US-politics hedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
-    "daily_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json"
+    "daily_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
+    "latest_news_review": "research/2026-10-21-142743-michigan-update.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
     "p_yes": 0.49,
