@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 21 17:43 UTC
+## Last audited snapshot — October 21 18:01 UTC
 
 **17:35 canonical bankroll: $196.46 including $6.12 funded gas.** Trading value is $190.34 at midpoint or $188.87 using indicative fee-net depth (+11.1% versus $170 contributed); same-producer PM values are $40.18/$38.71. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1735-financial-snapshot.json).
 
 **Positions and orders are unchanged.** December Fed remains 20 YES bought at 19¢ ($3.80, zero fee). Two bids remain unfilled, reserving $9.84; pUSD is $15.45129, with $5.61129 free after reservations. Adding separate WaPo/GMU and Marist surveys revises Michigan non-D win probability from 44% to 43%; retain five NO shares without adding. Tonight’s debate remains at 23:00 UTC. [Source/model review](research/2026-10-21-173336-michigan-update.json) · [Event check](research/2026-10-21-173336-news-review.json) · [Orders and deadlines](notes/resting_orders.md).
 
-Safety checks are clean; all four daemons are unique and running current code. The chart has **253 observations**, latest 17:35; previous rows and external contributions are unchanged. All 10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
+The 18:01 light check confirms unchanged holdings and bids, clean safety checks, and four unique daemons running current code. [Periodic review](research/2026-10-21-1800-periodic-review.json). The chart has **253 observations**, latest 17:35; previous rows and external contributions are unchanged. All 10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
