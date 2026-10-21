@@ -1,0 +1,103 @@
+{
+ "schema": "polyclaude.related_alert_unit.v1",
+ "rows": [
+  {
+   "id": "2fc7fa7cdb47a36eef426dbccb6c4d09c0926d38",
+   "ts": "2026-10-20T10:14:21Z",
+   "title": "Evita Duffy-Alfonso analyzes Michigan Senate race and Gen Z voter trends - Fox News",
+   "raw_line_sha256_excluding_LF": "cf6f030243f27086a25c00d035d87b5594a534bf2189780de60786d44dd2ea2b",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "9682a9f269961f6245455fbe2e838977d4c9c615",
+   "ts": "2026-10-20T11:02:26Z",
+   "title": "Michigan’s El-Sayed doubles down: Israel ‘not an ally’ - Jewish Telegraphic Agency",
+   "raw_line_sha256_excluding_LF": "1394de61ad72aded576faa1c700ebf141729259d528bfd7b7170621e636762e2",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "92a9b95773daf78668119bd5c9d93c2a0cf88456",
+   "ts": "2026-10-20T11:19:02Z",
+   "title": "Michigan’s El-Sayed doubles down: Israel ‘not an ally’ - The Forward",
+   "raw_line_sha256_excluding_LF": "b7bf23cd32bc6866242c280413937ecde707f267d71f8a7efd9e41acc5c795c7",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "86e7994e41fd2b524cd9f033f41bbcf70d2da3c2",
+   "ts": "2026-10-20T12:13:17Z",
+   "title": "'My Name Is Abdul': El-Sayed Confronts Trump's Racist, Anti-Muslim Attacks Head-On in New Ad - Common Dreams",
+   "raw_line_sha256_excluding_LF": "019974ed48a401a3eb8ae7a67b4022e1d9332fc706d2b8be36a8711bcbb2cb4d",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "1b32e4e8162f90d2cd49419eff81a3a13c1e5a1f",
+   "ts": "2026-10-20T12:29:38Z",
+   "title": "Watch Evita Duffy-Alfonso analyzes Michigan Senate race and Gen Z voter trends - FNC - FOX One",
+   "raw_line_sha256_excluding_LF": "0c568c0cdaead145f041dee53eedfa4702a112370b43aa57e49073572f99974a",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "8f083beb589641eeffbce1bd549c7ac217a252fc",
+   "ts": "2026-10-20T12:56:40Z",
+   "title": "Michigan heckler the son of Republican adviser paid for ‘influencer marketing’ against El-Sayed",
+   "raw_line_sha256_excluding_LF": "0c693f7ee90ede582a6dd487815e01ffd5ad103178f9e11e275304a3c0fa1503",
+   "decision_group": "opposition_claims"
+  },
+  {
+   "id": "5ac7384bceba5a731db1ae1887d6771414831d62",
+   "ts": "2026-10-20T13:07:55Z",
+   "title": "700 doctors endorse Abdul El-Sayed as GOP attacks his credentials - The Detroit News",
+   "raw_line_sha256_excluding_LF": "efea0eb911f4b90764137725b553e5cccc9778e56dd4f3554093fe5fb18ecf68",
+   "decision_group": "credentials"
+  },
+  {
+   "id": "e1fa7e2a0beca81bbfcb4d164926821f3c959f2d",
+   "ts": "2026-10-20T13:24:19Z",
+   "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan",
+   "raw_line_sha256_excluding_LF": "0c1a9368263531c3b054a834ab6fddc7ce4e73de739e0b9ac111c1d029a5d28c",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "6c93232b2bfff79f3c4f581422e254e54904b455",
+   "ts": "2026-10-20T13:24:34Z",
+   "title": "How Mike Rogers is courting Democrats to compete with Abdul El-Sayed in Michigan - CBS News",
+   "raw_line_sha256_excluding_LF": "880cda5f6bb4c20fe28c3ce4afffc5638770ee8e666eabb050a21c0f1ed2c8ee",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "4610724a656beefcf5066d11fb7d7d55a962d44c",
+   "ts": "2026-10-20T14:02:29Z",
+   "title": "CBS News Correspondent Apologizes for Partisan Post Targeting Michigan Senate Candidate El-Sayed - Democracy Now!",
+   "raw_line_sha256_excluding_LF": "7f44ca87dd8467a17dc6b06e3639e3c5cffa531b6699a2de477b90d3bc3ac8c7",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "07c4f3a0263f343f14f084b24e48937320a4f95d",
+   "ts": "2026-10-20T14:13:36Z",
+   "title": "Abdul El-Sayed emphasizes Muslim faith after Trump calls him a ‘jihadist’ - Scripps News",
+   "raw_line_sha256_excluding_LF": "e618f73e48131a1a4571360784f871e3ea2f1fe83dde395a7edb2b4311c04e04",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "02756ce4c0c23e842df26d56353b6537328d343c",
+   "ts": "2026-10-20T14:45:59Z",
+   "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - KABB",
+   "raw_line_sha256_excluding_LF": "9b2f0baa6e0b72ca3167322cd362a99fe75f7731a95ffa7571130b023d66f979",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "32462493e813cec875de00814c1ea2ad3da5acfb",
+   "ts": "2026-10-20T15:18:30Z",
+   "title": "Abdul El-Sayed, Mike Rogers set to appear before Detroit Economic Club - The Detroit News",
+   "raw_line_sha256_excluding_LF": "a717a5b455045eeda05317cba22e4f123395e7ec9c86b58962c740d82873dd56",
+   "decision_group": "forum"
+  },
+  {
+   "id": "b8e5c884943232b1d7197a5d58953b9ad4690bd2",
+   "ts": "2026-10-20T15:29:35Z",
+   "title": "Drop Site News: Mike Rogers’s Wife Won Lucrative Contracts While Rogers Served as Intel Chair - Democracy Now!",
+   "raw_line_sha256_excluding_LF": "cd0a178f9e3dc1e0f54060d86b8c3d55bdc7a878aff0adcdd2c3afc1222743e5",
+   "decision_group": "opposition_claims"
+  }
+ ]
+}

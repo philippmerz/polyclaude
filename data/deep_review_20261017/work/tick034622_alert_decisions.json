@@ -1,0 +1,99 @@
+{
+ "schema": "polyclaude.alert_decisions.v1",
+ "tick_id": "20261021T034622Z",
+ "reviewed_utc": "2026-10-21T03:55:31.149007+00:00",
+ "required_alert_ids": [
+  "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+  "bca84a6a6739f019e37273958bbed26c228cd76f"
+ ],
+ "cutoff_utc": "2026-10-21T03:41:07Z",
+ "new_scope": "Seven rows after prior02:26:27 cutoff plus the required older590008 row; all reread.",
+ "decisions": [
+  {
+   "id": "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+   "ts": "2026-10-21T02:26:27Z",
+   "raw_line_sha256_excluding_LF": "a967e702e773dca4cd3e70fea10d7656c964c040bc1d7147f1c4b19242b02542",
+   "decision": "Reread required older credentials allegation plus counterstories. No new independently verified credential/health or voter evidence; retain prior and holding."
+  },
+  {
+   "id": "a50af81baa7c8b6add449121e29b1b32fd9f9aa6",
+   "ts": "2026-10-21T02:31:57Z",
+   "raw_line_sha256_excluding_LF": "80e94126c8ee6e222a1a05ad2ad938356bc097a1af264d794d475629f4341476",
+   "decision": "Unheld topic and no current BUY commitment; no portfolio action or broad research obligation."
+  },
+  {
+   "id": "55a8804b5ef729b76a16cd44c5800a42e73613b2",
+   "ts": "2026-10-21T02:53:04Z",
+   "raw_line_sha256_excluding_LF": "2ca9097f7842285e5da9f1ef968bd19e8fc5d98e59e7a4028f83a931d035ec45",
+   "decision": "Trading-card headline is not official Google2026 Global Trending Athletes top5 evidence. Indirect attention could matter but no measured mapping supports prior change."
+  },
+  {
+   "id": "6fde630d9a4391dcc03939f44706d5d148457bc9",
+   "ts": "2026-10-21T03:03:47Z",
+   "raw_line_sha256_excluding_LF": "065536a48b7621034682cd97f50ec3ef9695a697f247fe34411835370ad2806a",
+   "decision": "Campaign/forum coverage. Do not infer new independent polling, syndication equivalence, or direction of voter effect from headline/classifier; no verified quantitative update."
+  },
+  {
+   "id": "0e697e140aca7812fd02394b386b5289d8485a0e",
+   "ts": "2026-10-21T03:14:25Z",
+   "raw_line_sha256_excluding_LF": "263551781b4b999ad5a7d1e838588303822c7c92790a669cb4f75fc3d1142f5f",
+   "decision": "Unheld topic and no current BUY commitment; no portfolio action or broad research obligation."
+  },
+  {
+   "id": "26f9af7b1d61462605bb988e5ef1effdc5505edc",
+   "ts": "2026-10-21T03:25:00Z",
+   "raw_line_sha256_excluding_LF": "60ff461a5c932b91c038f0752a4404059c21e8cacc75bf2758a5287be1a8ec3f",
+   "decision": "Campaign/forum coverage. Do not infer new independent polling, syndication equivalence, or direction of voter effect from headline/classifier; no verified quantitative update."
+  },
+  {
+   "id": "bca84a6a6739f019e37273958bbed26c228cd76f",
+   "ts": "2026-10-21T03:40:57Z",
+   "raw_line_sha256_excluding_LF": "51ef8cda73f447351616f745f07cc3f984af72278347997938e690486c731852",
+   "decision": "Review complete with publisher/original-video/official-record gaps. Attributed donation allegation and relayed campaign denial, not established wrongdoing. No measured vote effect, no prior or position change."
+  },
+  {
+   "id": "e20971ad1e78309b960a78c7d4aa3050432314e5",
+   "ts": "2026-10-21T03:41:07Z",
+   "raw_line_sha256_excluding_LF": "36090a0cc55e0e31182782ccf8ba81a48982d09747845c62bda1829185552126",
+   "decision": "Unheld topic and no current BUY commitment; no portfolio action or broad research obligation."
+  }
+ ],
+ "related_MI_scope": "Targeted Oct20–Oct21 El-Sayed/Rogers/Michigan-Senate rows, including before latest journal. 53 rows/52 unique IDs; duplicated8f083... retains both records, not independent corroboration.",
+ "related_units": [
+  {
+   "path": "data/deep_review_20261017/work/tick034622_related_MI_01.json",
+   "sha256": "1f66e1662eaaa60b57ab77018eccb4a69283a7ff225cebef4cb8f11327fca8d2",
+   "rows": 14,
+   "bytes": 4943
+  },
+  {
+   "path": "data/deep_review_20261017/work/tick034622_related_MI_02.json",
+   "sha256": "a3a1945ca5612b77cb5accbb7168be93652bf37145eb74f1c362775b54fbb7a5",
+   "rows": 14,
+   "bytes": 4890
+  },
+  {
+   "path": "data/deep_review_20261017/work/tick034622_related_MI_03.json",
+   "sha256": "169dcdfd7c12d31e8c90b51e03cbcff065720950270869a5d57f805549653e99",
+   "rows": 14,
+   "bytes": 5032
+  },
+  {
+   "path": "data/deep_review_20261017/work/tick034622_related_MI_04.json",
+   "sha256": "26f49c83316d7ff933e0d7c987e19f2c347a3297ee30488df65ecee815a5a849",
+   "rows": 11,
+   "bytes": 3968
+  }
+ ],
+ "group_decisions": {
+  "donation_allegation": "Source review in tick034622_news_facts; conditional electoral direction only, no quantified adjustment.",
+  "credentials": "Dated prior source gaps retained, degree/licensure/practice/health distinct; no inference of withdrawal.",
+  "forum": "Elapsed event; article/full transcript and measured voter response not verified.",
+  "opposition_claims": "Claims concerning either candidate can matter; no guilt inference or arbitrary offsets/favorable-headline counts.",
+  "coalition": "Prior ABC original expressly lacks a coalition-gain poll; no new independent likelihood from repeated coverage.",
+  "campaign_stance": "Attribution and overlap matter; headline/keywords are not independent vote measurements."
+ },
+ "source_facts": "data/deep_review_20261017/work/tick034622_news_facts.json",
+ "primary_review": "data/deep_review_20261017/work/tick034622_primary_review.json",
+ "outcome": "Review completed with explicit gaps; retain/no add/prior unchanged. A queued receipt was not used as review evidence."
+}

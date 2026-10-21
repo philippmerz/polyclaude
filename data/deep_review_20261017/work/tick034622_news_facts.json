@@ -1,0 +1,57 @@
+{
+ "schema": "polyclaude.news_source_facts.v2",
+ "tick_id": "20261021T034622Z",
+ "root_verified_utc": "2026-10-21T03:55:31.149007+00:00",
+ "original_worker_unit_sha256": "ab4bd9b83512ba96c2bc910ea321ca2806edb9b52d94622ca297c9f0a5fe56c2",
+ "original_worker_private": "logs/cron20261021T034622Z_root/news_worker_original.json",
+ "alert_metadata": "data/deep_review_20261017/work/tick034622_alert_decisions.json",
+ "target": "bca84a6a6739f019e37273958bbed26c228cd76f",
+ "target_original": "Exact RSS returned Google News HTML. Bounded exact-title/domain search did not resolve the National News Desk article; its body/byline/date/version remain unknown. This is not proof the article is absent.",
+ "secondary_report": {
+  "url": "https://www.michigannewssource.com/2026/10/democratic-organizer-fired-after-undercover-video-alleges-overseas-donations-to-el-sayed-campaign/",
+  "page_title": "Democratic Organizer Fired After Undercover Video Alleges Overseas Donations to El-Sayed Campaign",
+  "byline": "Katie Heid",
+  "jsonld_published": "2026-10-20T21:00:32+00:00",
+  "jsonld_modified": "2026-10-20T18:45:26+00:00",
+  "date_metadata_note": "Embedded modified timestamp precedes embedded published timestamp; retain both without resolving inconsistency.",
+  "body_summary": "Article reports O’Keefe Media Group released a video Monday Oct 19 identifying Abdoul Beckwith as a regional field organizer; it attributes the statement that he had never been employed by the Senate campaign to El-Sayed campaign. It recounts Beckwith’s overseas-donation allegation as reported by OMG, quotes the campaign calling comments untrue/wildly misinformed/not reflective and claiming FEC compliance, and says OMG reported the Michigan Democratic Party terminated Beckwith. It notes overseas location alone does not establish prohibited foreign-national contributions."
+ },
+ "relayed_denial": {
+  "url": "https://x.com/JamesOKeefeIII/status/2112299596273574225",
+  "author": "James O’Keefe (@JamesOKeefeIII), not the campaign",
+  "post_time": "2026-10-19T21:47:23Z",
+  "observation": "Root viewed the O’Keefe-hosted OMG/Abdul graphic: statement attributed to communications director Roxie Richner denies Beckwith was campaign-employed, rejects his comments, and asserts FEC compliance. This is a relayed denial, not a campaign-owned original or proof of either side."
+ },
+ "root_source_note": "Root verified all five raw/gzip pairs, read the MNS body, and viewed the O’Keefe-hosted graphic. MNS attributes denial via yourNEWS and termination to OMG; these relays do not independently prove donors, contributions, employment, findings or voter effects. MNS repeats Hamas/Brotherhood allegations too: do not double-count headlines.",
+ "capture_receipts": [
+  {
+   "receipt": "logs/cron20261021T034622Z_news/national_news_desk/national_news_desk.receipt.json",
+   "receipt_sha256": "d20caf365b2ec77490d030381b567ceee4c270d194827ac690daec5aafcfad48"
+  },
+  {
+   "receipt": "logs/cron20261021T034622Z_news/michigan_public/michigan_public.receipt.json",
+   "receipt_sha256": "c38f6d0fdb240d0f1416c20ac42dc475b46d450aca054ab98ea25bc65d041275"
+  },
+  {
+   "receipt": "logs/cron20261021T034622Z_news/campaign_statement/campaign_statement.receipt.json",
+   "receipt_sha256": "4efab15c0d8d36e586eadeb9b200bcc1555c9cec1e4662374abb82e5a154b359"
+  },
+  {
+   "receipt": "logs/cron20261021T034622Z_news/michigan_news_source/michigan_news_source.receipt.json",
+   "receipt_sha256": "b9e8a2492057de6f48c42c7417ca2efbf8bb06a705ece1b90febf3dd3c9b18b0"
+  },
+  {
+   "receipt": "logs/cron20261021T034622Z_news/campaign_statement_image/campaign_statement_image.receipt.json",
+   "receipt_sha256": "82d13fec2465083e7b66c621d70c29e9a7a8104332e71a6ca02e9d07912b55cd"
+  }
+ ],
+ "unknown": [
+  "Exact target National News Desk article body/byline/date/version unavailable; no exact publisher URL resolved.",
+  "Underlying video recording/context and edit completeness were not independently reviewed; statement attribution rests on O’Keefe/Michigan News Source reporting.",
+  "No official FEC finding, complaint disposition, campaign financial record, donor identity/citizenship, or prohibited contribution is established by these captures.",
+  "No new poll, sample, field dates, voter measurement, health issue, or withdrawal evidence found in the captured items.",
+  "No candidate withdrawal or nominee change established. Allegations are disputed and are not treated as guilt or verified fact."
+ ],
+ "related_credentials": "Required5900081b623d46e71dc87060f1e2578a2b63ffbe and older MedPage/Detroit News rows reread. Retain dated tick021544_credentials_followup.json, including direct MedPage403; no repeated blocked request or independent credential/health/withdrawal verification.",
+ "forum": "26f9af7b1d61462605bb988e5ef1effdc5505edc RSS likewise returned Google News HTML; separate elapsed forum, no verified transcript/poll or direction of voter effect."
+}

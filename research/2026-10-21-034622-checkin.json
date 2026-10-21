@@ -1,0 +1,29 @@
+{
+ "schema": "polyclaude.checkin.v1",
+ "tick_id": "20261021T034622Z",
+ "reviewed_utc": "2026-10-21T03:57:58.680442+00:00",
+ "required_alert_ids": [
+  "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+  "bca84a6a6739f019e37273958bbed26c228cd76f"
+ ],
+ "steps": {
+  "1_state": "11 routine CLI actual0, raw/gzip verified0orders/127exhausted unchanged trades/9unchangedpositions/0winningredeemable,4currentexactdaemon singletons; separate canonical bankroll producer0.",
+  "2_news": "Both required alerts and53relatedrows/52uniqueIDs plus7new newsrows reviewed through03:41:07. MNS body and OMG-relayed denial read, target publisher/video/original campaign gaps explicit; no guilt/credential/nominee/vote inference.",
+  "3_catalysts_hurdle": "UMA43refreshed0alerts;4clear0flagged/cruxquiet; watchlistauto-revet0/empty. Retain02:02 resolving-source observations dated.",
+  "3b_state": "Audit clean7indexed+1claim/0expiredholds. MI already rederived today00:51; no rerun/date-roll.",
+  "3c_exit_joint": "Current4Gamma8books4compact schedules root verified, retained all4pilots under selected cases; broad-low favors sale/full-loss risks explicit. Clarity whole conditional29/58 orvenue0 vs27.55cash+datedcarry27.7303; no leg sale.",
+  "4_decisions_Kelly": "Nooverdue; Kellycached196.04 not195.89/entryauthority, noTRIM; BB6unmodeled. No new numerical forecast or financial decision record.",
+  "5_redeem": "Vetted classifier on captured9allsize rows gives0winning; no redeem/burn/gas.",
+  "6_discovery": "Reuse completed02UTC7scans/155batches with every cap/omission/unpriced scope, no broad repeat/queue advance/exchange-wide absence claim.",
+  "7_records": "Same-producer195.89/gas5.97/PM35.96-depth34.40 ->trading189.92mid188.36depth/+10.80%; CSV246 preserves245prefix/flows;10charttests pass once. README/backlog/journal updated, handoff source hashes computed after final edits.",
+  "8_telegram": "None: no verified material thesis change, action or finding; contested allegations/marking drift are not standalone material updates.",
+  "9_weekly": "LastOct16/nextOct23notdue; monthlyNov12notdue/offchainretired.",
+  "10_methodology": "Concluded20/20experiment remains retired; no daemon/execution-code or storage mutation.",
+  "11_publish": "Owned allowlist diff/secret/prefix/control checks, commit/push/remote HEAD and owned hashes verified in private publication/postflight.json after command completion; a pointer is not proof."
+ },
+ "financial": "research/2026-10-21-0351-financial-snapshot.json",
+ "primary": "data/deep_review_20261017/work/tick034622_primary_review.json",
+ "account_ops": "data/deep_review_20261017/work/tick034622_account_ops.json",
+ "result": "Retain/noadd,405valued/19blocked/383factual/2193pending,495next; no financialwriter/numericprior/policy/flow/researchcount change.",
+ "end": "Bounded stop after publication, no goal/timer/idle follow-up."
+}

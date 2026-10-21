@@ -1,0 +1,32 @@
+{
+  "schema": "polyclaude.root_account_verify.v1",
+  "verified_utc": "2026-10-21T03:54:11.858487+00:00",
+  "account_ops": "data/deep_review_20261017/work/tick034622_account_ops.json",
+  "account_ops_sha256": "a55807c9ded4315d26249a5332c664bbe03a40b0708094903f35ae4fa72fb4de",
+  "raw_receipts_verified": [
+    "logs/deep_review_20261021/tick034622_ops/account/clob_01/clob_01.receipt.json",
+    "logs/deep_review_20261021/tick034622_ops/account/clob_02/clob_02.receipt.json",
+    "logs/deep_review_20261021/tick034622_ops/account/positions_allsize/positions_allsize.receipt.json"
+  ],
+  "representation": "Authenticated CLOB HTTP bodies; public data API allsize rows. Raw/gzip hashes rechecked, no raw account internals published.",
+  "orders": 0,
+  "exhausted_trades": 127,
+  "orders_and_trades_terminal_cursor": "LTE=",
+  "full_trade_rows_exact_match_prior": true,
+  "positions": 9,
+  "position_tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "position_tuples_match_prior": true,
+  "prior": "tick021544",
+  "winning_redeemables_using_positions_classifier": 0,
+  "cli_returncodes_and_output_hashes_verified": 11,
+  "four_exact_current_daemon_singletons": true,
+  "pUSD": 19.25129,
+  "committed_BUY": 0,
+  "no_financial_writer": true
+}

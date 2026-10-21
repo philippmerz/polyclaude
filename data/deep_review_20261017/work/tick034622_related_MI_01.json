@@ -1,0 +1,103 @@
+{
+ "schema": "polyclaude.related_alert_unit.v1",
+ "rows": [
+  {
+   "id": "947fffd88974a00707d3ef922908aeefdf766ec7",
+   "ts": "2026-10-20T00:09:30Z",
+   "title": "Abdul El-Sayed confronts accusations of having links to militant groups - Modern Ghana",
+   "raw_line_sha256_excluding_LF": "678b688ee28a0abcbe02db70763d8d926d44845a3af59b39aa1c72abc1b30b2b",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "d248f59082c3c21d789833e15150fbe53ad5f4bc",
+   "ts": "2026-10-20T00:09:34Z",
+   "title": "Abdul El-Sayed Disavows Muslim Brotherhood After Town Hall Heckler In Caro, Michigan: 15 outlets compared - NewsCord",
+   "raw_line_sha256_excluding_LF": "a5d0de3c5263cb89fb63e98cf7449173812d2563d0c77f0dff1ed6235f5560c1",
+   "decision_group": "opposition_claims"
+  },
+  {
+   "id": "dfb1b6579bb76a08381ad0e0505e9298ceca2e69",
+   "ts": "2026-10-20T01:02:36Z",
+   "title": "Jesse Watters humiliated by Fox New viewers after he makes Abdul El-Sayed claim - AOL.com",
+   "raw_line_sha256_excluding_LF": "16b06544a8700ae9b3fecf9fe9716f5aba713d4ded1337fa8683837e66b3b6c8",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "a099a9ac21f8d5315c10967822b6de06b6ca2a8f",
+   "ts": "2026-10-20T01:07:59Z",
+   "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Green Bay Press-Gazette",
+   "raw_line_sha256_excluding_LF": "0816a10b0b8f45b6537ec7a2e5b934ec301d97c5ad4ba46cf93cb4f2d3118be7",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "9dee237d6b85978c9fd9ab4ea2b921ffca8ade97",
+   "ts": "2026-10-20T01:40:10Z",
+   "title": "Abdul El-Sayed disavows Muslim Brotherhood in viral town hall interaction - Wooster Daily Record",
+   "raw_line_sha256_excluding_LF": "9d2af5088d345127a912d2a308ed1f3cc5e1fa4fb9069309e5ee91ea30e799ce",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "f90506edefe6a4bc5012f15c5441b3b24d365188",
+   "ts": "2026-10-20T01:50:43Z",
+   "title": "'Manufactured candidate' El-Sayed is losing his base: Mike Rogers - Fox News",
+   "raw_line_sha256_excluding_LF": "7ad9c281d6f2b3919c12831ecd6c4a259feca0ff00695c8acbfcf666ecff9bc8",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "00d00be3216b6e110fd8a909f5c9bb2b68bba28b",
+   "ts": "2026-10-20T02:17:52Z",
+   "title": "Rogers advierte a los votantes de « Michigan » sobre el programa «extremo» de El-Sayed de cara a las elecciones - Fox News",
+   "raw_line_sha256_excluding_LF": "687b6bf679f45e33e456a622ac3abd58d89e84f03f4cc65107279f79d8a9b59f",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "7732eabb7fe4c67abfcb287b10a74f58b0517e89",
+   "ts": "2026-10-20T02:55:56Z",
+   "title": "Questions surround El-Sayed’s allege Muslim Brotherhood ties: Senate candidate pushes back - The National News Desk",
+   "raw_line_sha256_excluding_LF": "5652cb741025b177c90d76a9d63b91abf3be7bc3334924315f97e1dc69d5b5e4",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "05191bd1f9b7896481fb09b065a79cb0b563f59b",
+   "ts": "2026-10-20T03:23:02Z",
+   "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - WRGB",
+   "raw_line_sha256_excluding_LF": "3f3e3c272e8aae022cf06b9221dad5d22e578dab178604ca924e5b414added1d",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "6452baa2c131633fb0e0df21363a29974595f02a",
+   "ts": "2026-10-20T04:10:43Z",
+   "title": "Abdul El-Sayed leans into faith in new political ad - CNN",
+   "raw_line_sha256_excluding_LF": "d41fdb61b9e2b20941081202013d8ae7c1aed54dea08c4123cd2b6636bdb7fd2",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "bdf14821769020f04a22c704a75f91e0f2c66244",
+   "ts": "2026-10-20T04:10:47Z",
+   "title": "Mike Rogers takes questions at 'Hannity' town hall - Yahoo",
+   "raw_line_sha256_excluding_LF": "1f892e3174c4d497d8cf6fcba5da60e28fa66ed583d70689a63e089292ab2e29",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "51b06dcdb0f35a071f616187d66e9d62c667f5e7",
+   "ts": "2026-10-20T05:09:23Z",
+   "title": "Abdul El-Sayed compares himself to JFK regarding questions about Muslim Brotherhood ties - wtvcfox",
+   "raw_line_sha256_excluding_LF": "b6705de4898e73ba07e4ff1a4b29828497a7f4987188aecc3cd7ce6a8e649449",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "4b60e36bc058b89da4d3f762af09d75139fdc4dd",
+   "ts": "2026-10-20T08:00:36Z",
+   "title": "'Israel is not our friend': Michigan's El-Sayed doubles down on anti-Israel stance - The Jerusalem Post",
+   "raw_line_sha256_excluding_LF": "281b2737bba868bed25cd86a2f2150e87f4e00d9e35fd3dfb0b678ef0fa62097",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "306853ae7b61f9ebfde6893964b2e3fb8086eedb",
+   "ts": "2026-10-20T09:46:52Z",
+   "title": "Michigan’s Mike Rogers Got Big Payout Before Controversial Cybersecurity Firm Went Bankrupt - The American Prospect",
+   "raw_line_sha256_excluding_LF": "4bde23db5208ad39f017fe767b50ecae7bde4f4fce6289d05d0866c4dfb51ce8",
+   "decision_group": "opposition_claims"
+  }
+ ]
+}

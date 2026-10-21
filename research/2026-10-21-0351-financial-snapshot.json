@@ -1,0 +1,30 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261021T034622Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-21T03:51:00.551038+00:00",
+  "producer_completed_utc": "2026-10-21T03:51:17.877875+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "ebaebd74e6386de0373e171b164bc201e92b1690473cc4fd0d10a7388ff1d987",
+  "canonical_total_including_funded_gas_usd": "195.89",
+  "same_producer_funded_gas_usd": "5.97",
+  "same_producer_PM_mid_usd": "35.96",
+  "same_producer_PM_fee_net_depth_usd": "34.40",
+  "derived_trading_mid_usd": "189.92",
+  "derived_trading_fee_net_depth_usd": "188.36",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.8,
+  "reported_accounting_residual_usd": "19.73",
+  "change_vs_complete_0220": {
+    "canonical_total_usd": "-0.15",
+    "trading_mid_usd": "-0.14",
+    "trading_depth_usd": "-0.11"
+  },
+  "timing_basis": "Actual invocation bounds; sequential rounded reads. CSV uses whole-second check-window start, not synchronized NAV or executable liquidation.",
+  "limits": [
+    "No trade or external flow verified; differences reflect marks, depth, interest and rounding, not audited realized profit.",
+    "Producer REALIZED19.73 label remains an unaudited accounting residual; historical basis/fees/flows unreconciled, VM/API costs excluded.",
+    "Same-producer TOTAL/gas/PM components only; no quote splicing. PM midpoint35.96 versus fee-net depth34.40 differs1.56. No unvalued-asset warning.",
+    "Trading depth188.36 is indicative, not guaranteed proceeds."
+  ]
+}

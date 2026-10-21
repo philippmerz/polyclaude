@@ -1,0 +1,36 @@
+{
+ "schema": "polyclaude.triggered_primary_review.v1",
+ "tick_id": "20261021T034622Z",
+ "reviewed_utc": "2026-10-21T03:56:29.449357+00:00",
+ "required_alert_ids": [
+  "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+  "bca84a6a6739f019e37273958bbed26c228cd76f"
+ ],
+ "identity": "1838/630805/0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4; held5NO means any non-Democratic winner, with nominee replacements governed by exact literal party rules. Current Gamma full criteria/identity/assets match frozen evidence.",
+ "result": "Retain existing holdings, no additions or financial writer. No numeric prior, policy, flow or research-count change.",
+ "news_judgment": "Donation allegations are attributed and contested. Root read secondary MNS body and an O’Keefe-relayed graphic attributed to campaign communications director; neither is independent proof of the allegation or campaign original. Underlying video/context, target publisher body and official financial findings remain unverified. A negative campaign narrative could help heldNO even if disputed, but no measured voter response supports an arbitrary probability change. Shared OMG-origin allegations are not independent observations. Credentials counterstories and older related rows reread; missing bodies/credential/health facts stay unknown. Forum and trading-card headlines supply no verified quantitative bridge to either held resolution.",
+ "alerts": "data/deep_review_20261017/work/tick034622_alert_decisions.json",
+ "sources": "data/deep_review_20261017/work/tick034622_news_facts.json",
+ "MI_prior": "Actual00:51 daily rederivation remains rawD55.7302096%, roundedD56/NO44, selectedNO34/broadNO20. Not rerun or date-rolled. NationalRV G12 proxy yieldsD59.7313675%, selected5NO1.513432 vs current exit+datedcarry1.509814: only0.003617 margin; removing assumed pro-R pollbias givesD69.7658571 and favors exit. G8/bias assumptions are unfitted; do not claim robustness over the broad range. No new MI-LV poll or nominee change verified in reviewed sources.",
+ "MI_boundary": "Current5NO exit1.50; selected terminal1.70 vs dated75d Aave1.509814. Another3.8037pp adverse shift in selectedNO reverses. Retain the small position under selected assumptions, not as guaranteed recovery; original1.55 can all lose. Reconsider immediately on a load-bearing poll/candidate/rule change.",
+ "pilot_math": "data/deep_review_20261017/work/tick034622_hold_exit_math.json",
+ "pilots": "03:50 exact4Gamma/8books/4compact schedules root verified. Kimi/OR/MI/Messi net exits1.00/3.10/1.50/1.25; dated75d/Messi60d Aave3.2247% constant carry below selected terminal1.902125/3.65/1.70/2. Broad-low terminal0.8/1/1/1 favors sale. AI original4.45 and all four7.35 can all lose; no independence or automatic hedge credit. Fee schedule zero is market-specific/as-of, not later execution certification.",
+ "Clarity": {
+  "held": "29YES>50+29NO>58",
+  "normal_conditional_payout": [
+   29,
+   58
+  ],
+  "venue_or_oracle_failure": 0,
+  "separate_exit_tool_net": 27.55,
+  "dated75d_carry_sensitivity": 27.730254524014764,
+  "receipt": "logs/deep_review_20261021/tick034622_ops/commands/exit_analysis/result.json",
+  "decision": "Retain whole pair; no leg-only sale/add. Oct20 14:02 same-rule proof retained, no fresh pair-rule-read claim."
+ },
+ "other_sources": "Retain02:02 HLE cached66/maxMoonshot41.08/cal44.67, OR current partial54.733427T/future4labelsabsent, SenateSep30latest/#234cloture notpassage and Google2026route404 as dated observations. No freshness advancement; no new alerts verified to break these theses. Trump0.33dust and two losing/uncertain claims unchanged.",
+ "account": "data/deep_review_20261017/work/tick034622_account_root_recheck.json",
+ "checks": "11CLIactual0, UMA43refreshed0alerts,4clear0flagged, clean audit,0orders/127unchangedtrades/9positions/0winningredeemable; Kellycached196.04 not fresh195.89/entryauthority, noTRIM; BB6unmodeled.",
+ "entry": "405/600 unique valued, primary comparative selection null; no BUY/add/repost/taker/bundle. Just-completed02UTC discovery retained with every cap/omission/unpriced scope; no queue advance or exchange-wide absence claim.",
+ "notification": "No Telegram: allegation flags and small marking differences are not verified material changes.",
+ "bounded_end": "After owned publication; no goal lifecycle/timer/idle follow-up. Next existing06UTC light/14UTC full or earlier material event; MI debate23UTC."
+}

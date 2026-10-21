@@ -1,0 +1,82 @@
+{
+ "schema": "polyclaude.related_alert_unit.v1",
+ "rows": [
+  {
+   "id": "80e8ad223db0fca2625836c0b682f0a93e20b123",
+   "ts": "2026-10-20T23:27:12Z",
+   "title": "Michigan GOP Senate candidate Mike Rogers says inroads with Black and Jewish voters will help him beat El-Sayed - ABC News - Breaking News, Latest News and Videos",
+   "raw_line_sha256_excluding_LF": "6d253541af9b0b8d40bbde22db8161e074c15597b267d6a3776804f5b19a31df",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "daae1cb47c58b2a546a865641f9005fc1674b3a9",
+   "ts": "2026-10-20T23:27:15Z",
+   "title": "Doctors Push Back on Claim That El-Sayed Is Not a Physician - MedPage Today",
+   "raw_line_sha256_excluding_LF": "565ea01758ba4bb13196503861fbb964fcfb09e6d34ec4c69726d8e4cc43bf18",
+   "decision_group": "credentials"
+  },
+  {
+   "id": "66a35932edecaf5b085d04bfef16afba7e03bf3b",
+   "ts": "2026-10-21T00:54:33Z",
+   "title": "Video All Access with Linsey Davis: Race to November with Mike Rogers - ABC News - Breaking News, Latest News and Videos",
+   "raw_line_sha256_excluding_LF": "5fd497cf1af6d0715566885910c253967c5a4ff8d273bfea67c1d86d879f218b",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "641caff61e1d98a4df78bf3fa6300e5fc89ccbdc",
+   "ts": "2026-10-21T01:26:39Z",
+   "title": "Jewish community show support for Republicans in key Michigan Senate race - News24",
+   "raw_line_sha256_excluding_LF": "665644caca003d76070d6fe80d80c7062a88a103d0e26ef756100f7dc22c2876",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "e0740c917aa7afe245943f85ecad39011ccfb16f",
+   "ts": "2026-10-21T01:26:43Z",
+   "title": "Michigan’s El-Sayed insists Israel ‘not an ally’ and ‘not actually our friend’ - The Times of Israel",
+   "raw_line_sha256_excluding_LF": "0e77b3b67ff0699a565a6245df2a3ca13f4a351ee32bae5d5c64050c9c5b789f",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "d4ba165ecc2fbaba94ef309702d6155ba0030576",
+   "ts": "2026-10-21T01:42:34Z",
+   "title": "Who Put Mike Rogers Next To Democrats On An “Anti-Extremism” Guide? - The Lever",
+   "raw_line_sha256_excluding_LF": "8232e5b818059788178749f843a002776b99b141052b65c3970e3425edcfcf5e",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "c172571b02a51b8d22de9e680ab5336bb4a929de",
+   "ts": "2026-10-21T02:15:36Z",
+   "title": "Michigan Senate race: Hamas claims spark Abdul El-Sayed campaign controversy - The Jerusalem Post",
+   "raw_line_sha256_excluding_LF": "9785804bef58f96b7d81543f07fc0dcdae5b0ca27375991bf961e4b55ceb619f",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+   "ts": "2026-10-21T02:26:27Z",
+   "title": "‘Conman’ Abdul El-Sayed calls himself a ‘doctor’ but has never had a medical license - The Weekly Times",
+   "raw_line_sha256_excluding_LF": "a967e702e773dca4cd3e70fea10d7656c964c040bc1d7147f1c4b19242b02542",
+   "decision_group": "credentials"
+  },
+  {
+   "id": "6fde630d9a4391dcc03939f44706d5d148457bc9",
+   "ts": "2026-10-21T03:03:47Z",
+   "title": "Mike Rogers and Abdul El-Sayed offer competing economic visions in Michigan - The Audubon County Advocate Journal",
+   "raw_line_sha256_excluding_LF": "065536a48b7621034682cd97f50ec3ef9695a697f247fe34411835370ad2806a",
+   "decision_group": "forum"
+  },
+  {
+   "id": "26f9af7b1d61462605bb988e5ef1effdc5505edc",
+   "ts": "2026-10-21T03:25:00Z",
+   "title": "El-Sayed, Rogers drill down on issues at Detroit Economic Club forum - Michigan Public",
+   "raw_line_sha256_excluding_LF": "60ff461a5c932b91c038f0752a4404059c21e8cacc75bf2758a5287be1a8ec3f",
+   "decision_group": "forum"
+  },
+  {
+   "id": "bca84a6a6739f019e37273958bbed26c228cd76f",
+   "ts": "2026-10-21T03:40:57Z",
+   "title": "Organizer in hidden video alleges overseas donations to El-Sayed; campaign denies claim - The National News Desk",
+   "raw_line_sha256_excluding_LF": "51ef8cda73f447351616f745f07cc3f984af72278347997938e690486c731852",
+   "decision_group": "donation_allegation"
+  }
+ ]
+}

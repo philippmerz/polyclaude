@@ -1,0 +1,103 @@
+{
+ "schema": "polyclaude.related_alert_unit.v1",
+ "rows": [
+  {
+   "id": "1653aa8f319b7d5b83847e9e3e1a1c9e794dc38b",
+   "ts": "2026-10-20T15:51:04Z",
+   "title": "India bot accounts reportedly spread fake 'man on the street' videos for Michigan Senate candidate - TRT World",
+   "raw_line_sha256_excluding_LF": "838705c83943c62bd126e4f9e7bad3a46f64190af903480562f4272e32fd7af3",
+   "decision_group": "opposition_claims"
+  },
+  {
+   "id": "a0399407adaa7c3bd4191b2e7e84de5fc6caa424",
+   "ts": "2026-10-20T16:17:34Z",
+   "title": "Inside the Senate race between Abdul El-Sayed and Mike Rogers in Michigan - WBUR",
+   "raw_line_sha256_excluding_LF": "182f54409a5e4555ba319013f8b6a45a045b47caffb33855ce70891a0ec30b22",
+   "decision_group": "campaign_stance"
+  },
+  {
+   "id": "31a13ac23588433b19156769aec4580d7ca48511",
+   "ts": "2026-10-20T16:17:38Z",
+   "title": "Livestream: Michigan U.S. Senate candidates El-Sayed, Rogers join Detroit Economic Club - ClickOnDetroit | WDIV Local 4",
+   "raw_line_sha256_excluding_LF": "abbb1b75469834c6a6c9edff1496bbcde2e2807355b547fe7b0beb3f12d48e06",
+   "decision_group": "forum"
+  },
+  {
+   "id": "8f083beb589641eeffbce1bd549c7ac217a252fc",
+   "ts": "2026-10-20T18:10:11Z",
+   "title": "Man who heckled El-Sayed is son of Republican adviser who was paid for ‘influencer marketing’",
+   "raw_line_sha256_excluding_LF": "2540c7bd47144d64c77337a749731e2edcb568adf0023a60c773a0ae1530aee7",
+   "decision_group": "opposition_claims"
+  },
+  {
+   "id": "bc6c680f90f8f8aaf01354f82b67b2eb068a233d",
+   "ts": "2026-10-20T18:10:30Z",
+   "title": "WATCH LIVE: Abdul El-Sayed and Mike Rogers outline economic vision in Detroit - Fox News",
+   "raw_line_sha256_excluding_LF": "21973fc9efbfa30165c00da23c19635211302cdc6c3b2ff92f31595686eaa990",
+   "decision_group": "forum"
+  },
+  {
+   "id": "9b921e8717eb346c7422133bb3500834a0a4a8cc",
+   "ts": "2026-10-20T19:04:30Z",
+   "title": "El-Sayed makes case for his brand of capitalism in forum with Rogers at Econ Club - Crain's Detroit",
+   "raw_line_sha256_excluding_LF": "8546a898a3ad54a8f9232f0f99c34fb49bd30d1b3924b0fec7efbe481b5450f4",
+   "decision_group": "forum"
+  },
+  {
+   "id": "becea882f54cd5206629d70e3388d4c244b481ad",
+   "ts": "2026-10-20T19:32:09Z",
+   "title": "Democrats fear slippage with Black voters makes Michigan Senate race feel ‘far closer than it should’ - CNN",
+   "raw_line_sha256_excluding_LF": "6a41461e5c4189b3fd5154accfcf0e7bd5be497583b8bd95e4c0f39a3e39436f",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "fdf48b35390a2e0a03251ad696a1e64dc1be23f2",
+   "ts": "2026-10-20T19:43:33Z",
+   "title": "Abdul El-Sayed, Mike Rogers set to appear before Detroit Economic Club - Yahoo",
+   "raw_line_sha256_excluding_LF": "1f8d023b4dd04a98b114eef6de0d9d73724311d69339be35f21ba47b93cba189",
+   "decision_group": "forum"
+  },
+  {
+   "id": "fc00dd3540a8f5a8c1c0eb7457d302d6f7352b4d",
+   "ts": "2026-10-20T19:54:27Z",
+   "title": "Michigan Senate candidates El-Sayed, Rogers offer competing economic visions in Detroit - AP News",
+   "raw_line_sha256_excluding_LF": "16168f59693f6dbb4df84391726c7901c0c53c7d79267da36927e9d39a2025f1",
+   "decision_group": "forum"
+  },
+  {
+   "id": "19037093283021b08f96eab94992d5c3b8663318",
+   "ts": "2026-10-20T20:10:59Z",
+   "title": "Democrats fear slippage with Black voters makes Michigan Senate race feel ‘far closer than it should’ - KESQ",
+   "raw_line_sha256_excluding_LF": "50f3938ff49de52e87345791a9330eae2748a5c2f3518261d63bebb985aea57c",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "e671892a44407a8341144e9f6287c1f5064f77f9",
+   "ts": "2026-10-20T20:33:06Z",
+   "title": "Watch live as Abdul El-Sayed and MIke Rogers, Michigan candidates for U.S. Senate, answer questions at a Detroit Economic Club candidate forum. See link below ⬇️ 📸 Paul Sancya, Pool - Facebook",
+   "raw_line_sha256_excluding_LF": "1a90d2ab164eca38f638af0cba457bc45fbce484309247bd2d5efcefe695d921",
+   "decision_group": "forum"
+  },
+  {
+   "id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+   "ts": "2026-10-20T21:06:56Z",
+   "title": "Democrats worry Black voter support could make Michigan Senate race “far closer than it should” - Mezha.net",
+   "raw_line_sha256_excluding_LF": "2f8e81000c551d20a77723cc850a8cd6a097be3329dc0aeed7d49b491d190658",
+   "decision_group": "coalition"
+  },
+  {
+   "id": "07b46a499c183e08a0e2e628cd47a8e7e57854c8",
+   "ts": "2026-10-20T21:51:08Z",
+   "title": "Michigan Senate Candidates Make Dueling Pitches to Business Leaders in Detroit - The New York Times",
+   "raw_line_sha256_excluding_LF": "3e2386218925a13e00e2b391ac7943f6e7cafb68ba74cab0c5ea3c90ddb3915c",
+   "decision_group": "forum"
+  },
+  {
+   "id": "906cdb214e7c192eccf236b756ccd5c76c3abe3c",
+   "ts": "2026-10-20T22:07:26Z",
+   "title": "Mike Rogers says his opponent is ‘anti-Jew.’ Do Michigan’s Jews believe him? - Jewish Telegraphic Agency",
+   "raw_line_sha256_excluding_LF": "a946581e762ca0202f4e6390f72ce1bb61ca5be158218fbd4f37f50f2ed7f988",
+   "decision_group": "campaign_stance"
+  }
+ ]
+}
