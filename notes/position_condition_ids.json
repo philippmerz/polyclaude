@@ -19,6 +19,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+   "outcome": "Yes",
+   "size": 20,
+   "conditionId": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+   "asset": "42865728742506860386768556888821101266630139112044622335353850919229585308601",
+   "negativeRisk": true
+  },
+  {
    "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
    "outcome": "Yes",
    "size": 10,

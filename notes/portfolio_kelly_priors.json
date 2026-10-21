@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-21T14:37:08.653419+00:00",
+  "_updated": "2026-10-21T16:11:37.941390+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1259,8 +1259,8 @@
     "latest_catalyst": "NewOct17 22:24/23:16revenue/headlinealerts: Anthropicquarterlyvsannualized16.8B/OpenAIestimatecut20B ambiguity; cancel-first originalmaker beforeverification. No claim headline is issueractual."
   },
   "will-the-democrats-win-the-michigan-senate-race-in-2026": {
-    "p_yes": 0.58,
-    "p_no": 0.42,
+    "p_yes": 0.56,
+    "p_no": 0.44,
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
@@ -1270,18 +1270,18 @@
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct21 14:33 primary update: added original SienaSept24 likely-voter MI49D44R margin+5 to the three-poll baseline. RawD55.7302096\u219257.6249550, rounded58/NO42 (all non-D winners);10pp reserve selectsNO32, broadNO20\u201370 retained. MLive youth82/11 is secondary indexed attribution, not a second statewide likelihood; exact crosstab match, sample, field dates/MOE/mode/weights unknown. Subjective8pp margin-observation SD is not measured sampling precision;27d release age is lower bound, older60d and4/6/12/20pp/G12/no-bias sensitivities saved. 5NO selected1.60 vs14:29 netexit1.45+21d carry1.452650; broadlow1 andG12/samebias1.429759 favorcash. Retain5/noadd, full1.55 originalcost canlose. Source/bias/model risk remains credible; no robust-all-model claim.",
+    "current_assessment": "Oct21 16:10 source-complete update: distinct originalFox Sep24\u201328 LV50ElSayed/49Rogers,n1028,reportedMOE3pp added to 4poll pool includingSiena. FoxextraSD3pp is subjectivepollster/specificationerror, age23d; notindependent ofall national/houseerror. Baselinesreproduce3pollD55.7302/4poll57.625;5pollrawD55.7875886\u2192rounded56/NO44 from42. NOisanynonDwinner,10ppreserve selects34,broad20\u201370 retained. NewfielddataareSeptember, notOctobernewswing. IA/YouGov/Siena repeats notdoublecounted; GVWiredecimalssecondary. Hold5/noadd: selected1.70 vs16:03 netexit1.45+21dcarry1.45265; G12samebias selected1.54163, G12nobias1.00701 andbroad1favorcash. Uncalibratedbias/turnout/jointsourceerror persists; full1.55 canlose.",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
-    "current_revision": "research/2026-10-21-142743-michigan-update.json",
+    "current_revision": "research/2026-10-21-160021-michigan-update.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick142743/sources/siena_poll_addendum.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick160021/michigan/siena_erratum_5poll_recompute.json",
     "management": "Review each existing tick/earlier material poll, candidate, withdrawal, health, ballot or turnout news. Original BUY filled; Oct23 pull obsolete. Oct20 Economic Club program elapsed; full transcript/voter effect not verified. Upcoming MI debateOct21 23UTC; pull any future resting order before known catalyst and revalue. Mandatory early votingOct24-Nov1/absentee sinceSep24 remain dated context. Any fresh BUY requires completed-universe policyv2, primary selection and every live gate; former experimental600 waiting rule retired. No measured US-politics hedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
     "daily_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
-    "latest_news_review": "research/2026-10-21-142743-michigan-update.json"
+    "latest_news_review": "research/2026-10-21-160021-michigan-update.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
     "p_yes": 0.49,
@@ -1957,7 +1957,7 @@
     "cluster_frac": 0.27,
     "verified": "2026-10-21",
     "criteria_read": "2026-10-21",
-    "updated_utc": "2026-10-21T13:10:50.656021+00:00",
+    "updated_utc": "2026-10-21T16:11:37.941345+00:00",
     "review_index": 511,
     "market_id": "3215007",
     "condition_id": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
@@ -1965,16 +1965,27 @@
     "criteria_sha256": "fc2c6973f601f04849125572920a57dc91893ab03869ee4eed22f38e7e195139",
     "hidden_info": true,
     "research_report": "research/2026-10-21-completed-review-allocation.json",
-    "financial_status": "LIVE_UNFILLED",
+    "financial_status": "FILLED_HELD",
     "rationale": "Primaryquote-awareallocationforecast; literalrule/source/uncertaintyandjointcashlossincomparisonreport. Uncalibratedscenariojudgment, notguaranteededge.",
-    "management": "CancelunfilledbeforeOct27 22UTC; Oct28FOMCchangesjointunderwriting; freshchecksandnewselectionbeforeanyrepost. Revieweachscheduledcheck/earliermaterialnews;cancel-firstunassessedmateriallead. Anyfillfreshtrade/index/chain/cashandhold-exitreview. Noadd/chase/takerfallback.",
+    "management": "Filled20YES; original unfilledOct27pull is obsolete. ReviewOct27beforeOct28 and afterOctoberdecision under currentconditionalDecemberpath. Noadd/chase/repost; hidden-information noSELLat/belowfair, thesis-breakexit active. Recheckcurrentfacts/exits/fees/UMA on eachduecheck and earliermaterialpolicy/source news. Dec8\u20139 normal resolution; rare nostatement fallback Jan26\u201327 can exceed project horizon.",
     "order_id": "0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153",
     "planned_shares": 20,
     "limit_price": 0.19,
-    "remaining_risk_usd": 3.8,
+    "remaining_risk_usd": 0,
     "decision_id": 253,
-    "matched_shares_verified": 0,
-    "state_verified_utc": "2026-10-21T13:17:41Z",
-    "poststate_proof": "data/deep_review_20261017/work/selection20261021/postentry_reconciliation/postentry_reconciliation.json"
+    "matched_shares_verified": 20,
+    "state_verified_utc": "2026-10-21T16:09:24Z",
+    "poststate_proof": "data/deep_review_20261017/work/tick160021/reconcile/result.json",
+    "held_shares": 20,
+    "actual_cost_usd": 3.8,
+    "actual_maker_fee_usd": 0,
+    "fill_trade_id": "5f76210c-f9d1-40c4-a2db-2099a408dc84",
+    "fill_transaction_hash": "0x02bbaa5ff617c664b87a8402e1e93823312c2729497be71bd9ba1cb4789ce8ee",
+    "divergence_ack": "2026-10-21",
+    "divergence_ack_note": "Primary postfill rederivation retains46%YES/31%selected vs18c executable bid; broad10%case and alternativepolicy models favorcash. Unfittedpayoutforecast, notprice-recoveryexpectation. Explicit20sharecap/noadd; whole3.80canlose. Rootreport research/2026-10-21-december-fed-fill.json.",
+    "remaining_order_commitment_usd": 0,
+    "held_cost_at_risk_usd": 3.8,
+    "remaining_risk_basis": "remaining_risk_usd is unfilled order commitment only; held3.80 canlose.",
+    "latest_hold_review": "research/2026-10-21-december-fed-fill.json"
   }
 }

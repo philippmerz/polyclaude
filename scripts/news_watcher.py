@@ -269,7 +269,7 @@ def _positions_summary_blocking() -> str:
         addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
         r = httpx.get(
             "https://data-api.polymarket.com/positions",
-            params={"user": addr.lower(), "limit": "50"},
+            params={"user": addr.lower(), "limit": "50", "sizeThreshold": "0"},
             timeout=10,
         )
         r.raise_for_status()

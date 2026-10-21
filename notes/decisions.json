@@ -1,5 +1,5 @@
 {
-  "next_id": 256,
+  "next_id": 259,
   "decisions": [
     {
       "id": 1,
@@ -5577,6 +5577,63 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 256,
+      "timestamp": "2026-10-21T16:21:03Z",
+      "type": "skip",
+      "thesis": "OriginalDEC253 maker bid now fully filled20YES19c=$3.80,fee0,match15:39:44UTC, exacttrade/chain/index/cash proof in research/2026-10-21-december-fed-fill.json. Retain20/noadd; primaryYES46%, selected31%, broad10-85. Selectedterminal6.20 vs3.60 exit+49d variablecarry; broad2.00 and rivalpolicycase favorcash, full3.80 canlose. Retiredonlyindexedreservation via lockedvettedmerge; no new order or additionalspend. Reassess aroundOct28; priorunfilledpull obsolete.",
+      "confidence": "low",
+      "prediction": "ExactDecember no-changeYES wins with judgment probability0.46; reserve-selected0.31 is notcalibrated floor. NormalDec8-9 upperbound vsimmediatepreDecember; rare no-statementfallback canextendtoJan27. This is postfillhold review, not a second purchase or resolvedoutcome.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-09",
+      "tags": [
+        "postfill-hold",
+        "no-add",
+        "no-new-order"
+      ],
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 257,
+      "timestamp": "2026-10-21T16:21:03Z",
+      "type": "skip",
+      "thesis": "Retain5MichiganNO/noadd after adding distinctofficialFoxSep24-28LV50D49R,n1028,reportedMOE3pp. RootextraSD3 subjective;5pollrawD55.7875886 rounds56/NO44,previous42. No new votertrend asserted; olderpoll evidence-set update. SelectedNO34 gives1.70 terminal vs1.45 exit+21d variablecarry1.45265; G12no-bias/broadlow favorcash, full1.55 originalstakecanlose. No MIorder ortrade. See research/2026-10-21-160021-michigan-update.json.",
+      "confidence": "low",
+      "prediction": "D wins exactMichigan party-winner contract with judgmentprobability0.56; anynon-Dwinner0.44. Includesminorparties approximately; unfittedmodel/common-bias/turnout uncertainty. Revisedforecastonly, no purchase.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-30",
+      "tags": [
+        "held-review",
+        "prior-revision",
+        "no-trade"
+      ],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 258,
+      "timestamp": "2026-10-21T16:21:04Z",
+      "type": "scaffolding",
+      "thesis": "Fixed proven watcher omission of unresolvedTrump0.33NO by adding sizeThreshold0 toexistingposition query. Existing18positions tests pass;liveAPI rows9\u219210/held7\u21928 retainsdust, pending2. Restartedoneabsolute-pathnewsdaemon afteredit;otherfilters/gatesunchanged. Earlier15:27inventory-warningcause remainsunknown; dustbugisdistinct.",
+      "confidence": "high",
+      "prediction": "Currentwatcherreader includes nonzero sub-shareholdings whileexcluding settledclaims, without raisingfalseholdings fromunknowninventory. Freshliveprobehas8held/2pending,pmavailableTrue; daemonmustremainexactlyone currentcodeprocess.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-22",
+      "tags": [
+        "news-watcher",
+        "bounded-safety-fix"
+      ],
+      "slug": null,
+      "outcome": "Implemented and deployed; existing18positions tests pass. FreshliveAPI includesunresolved0.33NO:10rows/8held2pending. Oneabsolute-pathnewsdaemon postdatesedit; all4daemonsunique/current at16:17. Verificationonly, notforeveruptimeclaim.",
+      "calibration_delta": "Currentreaderbehavior verified; no marketreturn orfutureavailability grade.",
+      "lesson": "DataAPI defaults can exclude nonzero sub-shareholdings. RequestsizeThreshold0 explicitly andverifyactualresponse; do notattribute unrelatedpastinventorywarnings tothisprovenomission.",
+      "resolved_at": "2026-10-21T16:22:31Z"
     }
   ]
 }

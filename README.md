@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 14:30 UTC
+## Last audited snapshot — October21 16:17 UTC
 
-**14:02 canonical bankroll: $196.29 including $6.00 funded gas.** Trading value is $190.29 at midpoint or $188.97 using indicative fee-net depth (+11.16% versus $170 contributed); same-producer PM values are $36.33/$35.01. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1402-financial-snapshot.json).
+**16:04 canonical bankroll: $196.24 including $6.12 funded gas.** Trading value is $190.12 at midpoint or $188.48 using indicative fee-net depth (+10.87% versus $170 contributed); same-producer PM values are $39.96/$38.32. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1604-financial-snapshot.json).
 
-**Three selected BUYs remain LIVE and unfilled; $13.64 reserved.** Authenticated orders/trades, nine all-size positions, six target CTF balances and pUSD $19.25129 reconcile; free pUSD $5.61129. Holdings are unchanged; the Michigan non-D win estimate is now 42% (from 44%) after adding an older original Siena statewide poll. No UMA alerts, winning redemption, overdue decision or daemon issue. Seven capped scans found no priced structural trade in their checked slice; unpriced and unvalued cases remain explicitly incomplete. [Latest source/risk review](research/2026-10-21-142743-news-review.json) · [14UTC discovery and limits](research/2026-10-21-140001-checkin.json) · [Order identities/deadlines](notes/resting_orders.md).
+**December Fed bid filled:20 YES at19c, $3.80 cost, zero fee; retained without adding.** Exact maker trade, new indexed/CTF20 and cash debit reconcile. Two bids remain unfilled, reserving $9.84; pUSD15.45129/free5.61129. Michigan non-D win estimate is44% after adding a distinct older Fox poll; retain5NO. No other numeric prior or position change. [Fill/hold review](research/2026-10-21-december-fed-fill.json) · [Full event review](research/2026-10-21-160021-news-review.json) · [Order management](notes/resting_orders.md).
 
-The chart has **251 observations**, latest October21 14:02; earlier rows and external contributions are unchanged. All 10 chart tests pass. [CSV methodology](docs/README.md) · [Historical source limits](research/2026-10-06-performance-history.json).
+The watcher now includes the0.33-share Trump holding;18 existing tests and a live check passed, and one updated daemon is running. The chart has **252 observations**, latest16:04; earlier rows and external contributions are unchanged,10 chart tests pass. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

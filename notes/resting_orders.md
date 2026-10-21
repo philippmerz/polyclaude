@@ -1,14 +1,15 @@
-# Current resting orders — October21 14:03 UTC
+# Current resting orders — October21 16:17 UTC
 
-**Three LIVE BUY bids, zero matched at14:03 UTC; $13.64 reserved.** GrosspUSD19.25129/uncommitted5.61129.127exhaustedtrades/9unchangedall-sizepositions/all6targetCTFs0; no purchase, fee, debit, transfer or profit. [Exactreconciliation](../research/2026-10-21-allocation-orders.json) · [Primaryselection](../research/2026-10-21-completed-review-allocation.json) · [Policyv2](entry_review_gate.json) · [14UTC revalidation](../research/2026-10-21-140001-checkin.json).
+**Two LIVE BUY bids, zero matched; $9.84 reserved.** pUSD15.45129/free5.61129. DecemberFed20YES19c filled15:39:44UTC for3.80/fee0; that reservation is retired, and exposure is held.128 exhausted confirmed trades/10 all-size positions; exact trade/index/CTF/cash proof reconciles. [Fill and hold](../research/2026-10-21-december-fed-fill.json) · [Current review](../research/2026-10-21-160021-news-review.json) · [Policyv2](entry_review_gate.json).
 
-|Claim / decision|YES shares ×limit|maxcash|Exactorder|Requiredpull ifunfilled|
+|Unfilled claim /decision|YES shares ×limit|maxcash|Exact order|Required pull|
 |---|---:|---:|---|---|
-|October Fed no dissent /DEC252|20×0.24|4.80|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|Oct27 22UTC;beforeOctoberFOMCdecision|
-|Delcy official head of state at year end /DEC254|28×0.18|5.04|`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`|Oct24 13UTC;72hcurrent-roleevidencebudget|
-|December Fed no rate change /DEC253|20×0.19|3.80|`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`|Oct27 22UTC;beforeOctoberFOMCdecision|
+|October Fed no dissent /252|20×0.24|4.80|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|Oct27 22UTC before October decision|
+|Delcy official year-end head of state /254|28×0.18|5.04|`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`|Oct24 13UTC;72h role-evidence budget|
 
-Revieweveryexistingcheckandearliermaterialsource/venueevent. Cancel-firstunassessedmaterialnews. No automaticadd/repost/chase/takerfallback. Anyfillrequiresfreshtrade/index/chain/cashandhold-versus-exitreview; beforefillsmaintainfullreservations. Fedcontracts sharepolicy/dataerror; nohedgecredit. CurrentDelcyrules/UN/government/BBCbodyrechecked; laterlegaltitleinstrumentsremainuncertain.
+Review existing checks and earlier material sources; cancel-first on unassessed material news. No automatic add/repost/chase/taker fallback. Any future fill requires current trade/index/chain/cash and hold-versus-exit review. Keep full reservations until proven indexed; no shared-error hedge credit.
+
+**Held December Fed /DEC253:**20YES, order`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`, market3215007/CID`0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0`. Original unfilledOct27 pull is obsolete; reviewOct27 beforeOct28 and after the October decision. PrimaryYES46%/selected31% versus18c exit; broad-low models favor cash, full3.80 can lose. Retain/noadd, hidden-information SELL rule applies; fallback may extend toJan27. [Exact assets, criteria and risk](../research/2026-10-21-december-fed-fill.json).
 
 ## Prior order record — historical
 
