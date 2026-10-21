@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October21
 
-**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current414valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+**New bids paused until 600 full valuations, followed by a comparative selection of the strongest candidates.** Current:415 valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
 
-**414 valued / 20 blocked / 389 factual / 2,177 pending; 823 base records + 78 revisions.** The finite goal is active. Cases 510–512 are saved individually: Cuba YES12%, December Fed no-change YES60%, AutoZone interval YES22%. The Fed case has positive provisional economics at the captured 20¢ ask; the latest Chair discussion remains a source gap, so it is not ready for entry. Next513; no active case. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase33](data/deep_review_20261017/work/goal0033_RESUME.json).
+**415 valued / 20 blocked / 391 factual / 2,174 pending; 826 base records + 78 revisions.** The finite goal is active. Latest: OpenRouter675–725T YES15%, with wide model/source uncertainty; both captured taker prices fail central economics and maker scenarios fail selected stress. Cases513/515 are exact closed-venue exclusions, without claiming verified game/weather results. December Fed YES60% remains a provisional lead with its Chair-source gap. Next516; no active case. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase34](data/deep_review_20261017/work/goal0034_RESUME.json).
 
 **Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids were canceled zero-fill15:48; final15:55 reconciliation retired their reservations. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
 
@@ -92,7 +92,7 @@ The Michigan alert repeats donation allegations; publisher text and an older con
 
 08:53 Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated cash carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broader downside cases favor sale; all pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus $27.03 indicative exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick084522_hold_exit_math.json).
 
-The 10:06 light check found no orders/UMA alerts; its PM midpoint/depth was $36.40/$34.55, with no whole-account refresh. The 10:29 periodic backlog review found no urgent follow-up. No agent trade or prior change. Next14UTC full check; Michigan debate23UTC. [Light review](research/2026-10-21-1006-light-check.json) · [Periodic review](research/2026-10-21-1028-periodic.json).
+The delayed10:16 Kimi request repeated a Sep10 article already reviewed at10:11. Current11:05 quick status/orders/UMA found zero orders/alerts/hurdle flags/watchlist hits; Kimi remains10YES. Fresh indicative net exit$1.10 remains below the dated selected payout$1.902125; broader downside favors cash. No trade/prior or whole-account refresh. Next14UTC full check; Michigan debate23UTC. [News review](research/2026-10-21-101636-news-review.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

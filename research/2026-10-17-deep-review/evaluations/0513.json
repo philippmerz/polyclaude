@@ -1,0 +1,35 @@
+{
+  "review_index": 513,
+  "market_id": "5348840",
+  "condition_id": "0x64b2f6060b04dcf01efc780a2790b821cdf03031d382c4527952badf6c8014fe",
+  "criteria_sha256": "da134ae39a1d01400a2fda9839e7e572ed29cc9305d8145245989af4749cb323",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: Kansas State wins by at least5 points => Kansas State; all other completed margins => Kansas. Oct17 noonET schedule. Postponed stays open until completion; entirely canceled with no makeup pays50/50. No actual score or cancellation asserted.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5348840",
+      "observed_utc": "2026-10-21T11:05:47.287087Z",
+      "finding": "Root independently verified9 frozen identities and raw/gzip hashes: closed/nonaccepting, canonical UMAresolved, terminal prices[1,0]. Historical UMAstatuses proposed/proposed retained as stale/ambiguous history, not clean execution."
+    },
+    {
+      "url": "https://www.ncaa.com/scoreboard/football/fbs/2026/10/17/all-conf",
+      "observed_utc": "2026-10-21T11:06:10.367518Z",
+      "finding": "NCAA404. No verified final margin; no inferred sporting outcome from failed source."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact closed venue exclusion, no retrospective probability or market-price forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact outcome tokens are closed/nonaccepting; no current project entry route established."
+  },
+  "verdict": "Factual venue exclusion, not valuation or sporting-result adjudication.",
+  "reopen_condition": "Verified lawful reopening of this exact condition; new spread/date must be separately reviewed.",
+  "evaluated_utc": "2026-10-21T11:08:04.550837+00:00",
+  "question": "Spread: Kansas State (-4.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 513,
+  "report_sha256": "48171783ab01a4eaf674042d1167d88a429dbb79efb8a655a33fcfdca2e2a1cb"
+}

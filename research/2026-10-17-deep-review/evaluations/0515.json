@@ -1,0 +1,35 @@
+{
+  "review_index": 515,
+  "market_id": "5726913",
+  "condition_id": "0xc43eab3b3c5a9aad984fc3a11df7f7c702107b0789d8db7ed0a1e2702afd8180",
+  "criteria_sha256": "ab1ee6b6b66504a56b9f8107ed8e36e61dbf6266a9e214f5f5ad47c1bf3aa3d4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: highest NOAAKSEA HourlyData Temp, Oct17, whole°F;60 or61 qualifies. NOAA→WU DailyObservations fallback if unavailable by Oct18 23:59ET; no data→lowest bracket. Resolve first following-date point or next-daydeadline earlier. Ordinary revisions stop at first next-date point; specified technical/error/interference correction can allow7ETcalendar days then clarification. ET deadlines not KSEA local date. No actual high/fallback eligibility asserted.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5726913",
+      "observed_utc": "2026-10-21T11:05:47.466987Z",
+      "finding": "Root independently verified9 frozen fields and raw/gzip hashes: canonical UMAresolved, closed/nonaccepting, prices[0,1]. Historical UMAstatuses proposed/proposed retained; no actual observation inferred."
+    },
+    {
+      "url": "https://www.weather.gov/wrh/timeseries?site=ksea",
+      "observed_utc": "2026-10-21T11:06:10.571864Z",
+      "finding": "NOAA pageHTTP200,72h table; captured page does not establish Oct17 high/hourly data or WU fallback. Requestedsitequery recorded separately from sanitizedreceipt."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact closed venue exclusion, no retrospective temperature probability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exactYes/No assets closed/nonaccepting; no current project entry route established."
+  },
+  "verdict": "Factual venue exclusion; not a temperature-result adjudication or model rejection.",
+  "reopen_condition": "Verified lawful reopening of exact condition, including correction/clarification; new observation dates or brackets separately reviewed.",
+  "evaluated_utc": "2026-10-21T11:14:54.196865+00:00",
+  "question": "Will the highest temperature in Seattle be between 60-61°F on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 515,
+  "report_sha256": "0a8c8bf734f3b26d3a8101d97e8e4a2f31d2212954980fbcf2df2e03ac9c8ff8"
+}
