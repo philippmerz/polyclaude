@@ -1,0 +1,30 @@
+{
+  "review_index": 521,
+  "market_id": "5769271",
+  "condition_id": "0x794dab4a6479e0ec45d6878140707787a0c7f54371e37ff1b42f8b4bce8d2b44",
+  "criteria_sha256": "d3de1693798dfad790ae87519872d1f5f5ef93683c68a526492c094eaf6986ad",
+  "status": "excluded_factual",
+  "literal_analysis": "Full frozen rule read: NOAAKATL Oct18 HourlyData Temp highestwhole°F;64 or65 qualifies. If NOAAunavailable byOct19 23:59ET useWU; no data=>lowest. Resolvefirstnext-datepoint or next-daydeadline earlier. Ordinaryrevisionsstopatnext-datepoint; specifiedtechnical/operational/interferenceerror canallow7ETcalendar days correction thenclarification. No actualhigh/sourcefallback assertion.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5769271",
+      "observed_utc": "2026-10-21T11:23:55.753053Z",
+      "finding": "Root originalGamma raw/gzip/9fieldsverified:closed/nonaccepting/canonicalUMAresolved; historicalproposed/proposed retained. Settlementprices not independentlyverified score/weather."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact current venue exclusion, not a retrospective sporting/weather forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact outcome tokens closed/nonaccepting; no current project entry route established."
+  },
+  "verdict": "Factual closed-venue exclusion only; source result remains unverified.",
+  "reopen_condition": "Verified lawful reopening of exact condition, including applicablecorrection/clarification. Newdate/threshold requiresseparate review.",
+  "evaluated_utc": "2026-10-21T11:47:41.835968+00:00",
+  "question": "Will the highest temperature in Atlanta be between 64-65°F on October 18?",
+  "valuation_author": "primary_operator",
+  "original_index": 521,
+  "report_sha256": "ff7bd3a4856cef936a8348f7519d6f25c1cade205f0b5b1cc939b5cf631d3ea4"
+}

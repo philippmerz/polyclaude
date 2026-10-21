@@ -1,0 +1,214 @@
+{
+  "review_index": 518,
+  "market_id": "5731328",
+  "condition_id": "0x8ce74531ec557ef56ebddf9f31199610a909c61a36ab7e6e236a6e2439c28c6a",
+  "criteria_sha256": "db38507a8960e8a947540b98ad4c9c3751228a2a0ebc789057275a44e9d9b9ce",
+  "status": "valued",
+  "literal_analysis": "Publisher DemocraticParty hourly value for window ENDING Oct23 12:00ET=16UTC, publishedprecision0.1pp, [64,66). Normal raw rounded-half-up band [63.95,65.95)pp. Individual venue quotes/election winner are not the target. NO_PRINT useslastprior; missingtarget maywaitOct30 23:59ET thenprior; permanentcessation useslastbeforecessation. No printsincecreation usesfirstaftertargetthroughdeadline elselowest. Earlyofficialunderlyingdecision usesextremebracket; thismiddlebandNO. Clearerror correction48h; laterrevisionexcluded. No automaticNO merelybecausemissing. Full frozen rule read; current valid print postdates verifiedOct15 creation, so no-prior-print branch not current default. Higher/lower siblings share exact remainder rules; [64,66) is not an extreme.",
+  "evidence": [
+    {
+      "url": "https://predictionmarketodds.com/latest/senate_control_2026.json",
+      "observed_utc": "2026-10-21T11:21:33.828869Z",
+      "finding": "Root fullrawHTTP200 feed read/hashverified. Published0.649 forOct21 10–11Z; exactweightedterms reconstruct0.6488477204 roundedhalfup0.649.5component medians not independent venue truth/fresh executable books; no forced Democratic/Republican complement."
+    },
+    {
+      "url": "https://predictionmarketodds.com/details/senate_control_2026__democratic_party.json",
+      "observed_utc": "2026-10-21T11:21:40.409432Z",
+      "finding": "Root raw/gzip history verified:168 unique contiguous hourlyvalues,62.7→64.9;53h fromlastrow to target. One RNGfallback/incomplete flagged value remains print;0NO_PRINT is not targetguarantee. Originalpublisher historynotindependentlyverified."
+    },
+    {
+      "url": "https://predictionmarketodds.com/senate-control-2026.html",
+      "observed_utc": "2026-10-21T11:21:22.765422Z",
+      "finding": "Originallisting links exactfeed/detail and hourlyvalues precision/window; publisher warns availability/revisions. Sourcealgorithm/source-window, not any single PMprice, resolves contract."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5731328",
+      "observed_utc": "2026-10-21T11:43:56.468100+00:00",
+      "finding": "Nine frozen identity/fee/bookreceiptchecks pass. CreatedOct15 beforeknownvalidprint. Structuredzero fee authoritative, UMAfieldabsent,2books22.098s old,min5shares/tick.01. No execution approval."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.56,
+    "low": 0.02,
+    "high": 0.99,
+    "confidence": "LOW/unfitted source-number endpoint mixture",
+    "actual_entry_reserve_pp": 15,
+    "method": "53h primary normal endpoint mixture with precision-correct band and explicit publication fallback/earlydecision branches.",
+    "reasoning": "Ordinary70%nodrift sigma1.1pp/20%observedtrend sigma1.3/10%jump sigma4; 97.99%ordinary+2%fallbackp.5+.01%earlydecisionp0 yields56.4781→56. Historical168hours informs scale, not fitted posterior; sourceRNGflagsvalidabsentcorrection. Stable95.34% and acceleration7.83%rivals can reverse sides. KnownMIdebate/sourceinput shocks not quantified; broadercalendarunreviewed.",
+    "model_file": "research/2026-10-17-deep-review/models/0518_primary_1152.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0518_quotes_1152.json",
+    "quote_file_sha256": "f4f792d9604d7da7b40e2acbd11187a7eaac14bd958598892877358fbd137d89",
+    "quote_capture_utc": "2026-10-21T11:43:56.595994+00:00",
+    "gamma_received_utc": "2026-10-21T11:43:56.468100+00:00",
+    "hypothetical_gross_shares": {
+      "Yes": 10,
+      "No": 10
+    },
+    "horizon_days": 3.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.56,
+        "selected_stress_probability": 0.41000000000000003,
+        "best_bid": 0.48,
+        "best_ask": 0.62,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792583014497",
+        "book_received_utc": "2026-10-21T11:43:56.595098+00:00",
+        "book_age_seconds_at_receipt": 22.098098039627075,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.2,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.62
+              }
+            ],
+            "net": 6.2
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.8,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.48
+              }
+            ],
+            "net": 4.8
+          }
+        },
+        "taker_cost_usd": 6.2,
+        "central_expected_profit_usd": -0.5999999999999996,
+        "selected_stress_profit_usd": -2.0999999999999996,
+        "break_even_before_carry": 0.62,
+        "break_even_constant_carry": 0.6201617543621464,
+        "current_execution_authorization": false,
+        "gross_shares": 10
+      },
+      "No": {
+        "probability": 0.43999999999999995,
+        "selected_stress_probability": 0.2899999999999999,
+        "best_bid": 0.38,
+        "best_ask": 0.52,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792583014497",
+        "book_received_utc": "2026-10-21T11:43:56.595098+00:00",
+        "book_age_seconds_at_receipt": 22.098098039627075,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.2,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.52
+              }
+            ],
+            "net": 5.2
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.8,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.38
+              }
+            ],
+            "net": 3.8
+          }
+        },
+        "taker_cost_usd": 5.2,
+        "central_expected_profit_usd": -0.8000000000000007,
+        "selected_stress_profit_usd": -2.3000000000000007,
+        "break_even_before_carry": 0.52,
+        "break_even_constant_carry": 0.520135664948897,
+        "current_execution_authorization": false,
+        "gross_shares": 10
+      }
+    },
+    "horizon_limit": "3d rounded target planning; missing target maywaitOct30 23:59ET, then possible48herrorcorrection and settlementlater.12dconstantcarry sensitivity is not guaranteedrelease.",
+    "own_gamma_created_at": "2026-10-15T13:58:38.161273Z",
+    "execution_limits": "Structuredfee checked; UMAstatus absent is not clean certification. No current funding/eligibility/privategates refreshed. Entry600+primarycomparison remains.",
+    "maker": {
+      "Yes": {
+        "shares": 10,
+        "limit": 0.49,
+        "cost": 4.9,
+        "central_profit": 0.7,
+        "selected_profit": -0.8,
+        "accelerating_rival_profit": -4.117108135384238
+      },
+      "No": {
+        "shares": 10,
+        "limit": 0.39,
+        "cost": 3.9,
+        "central_profit": 0.5,
+        "selected_profit": -1,
+        "stable_rival_profit": -3.434190196211818
+      },
+      "limits": "One tick above current bids/below asks; no assumed fills, source state can change before informed maker fills."
+    },
+    "known_pre_target_print_after_market_creation": true,
+    "rivals": [
+      {
+        "name": "Stable source near current level",
+        "mean_pct": 64.9,
+        "sigma_pp": 0.5,
+        "p_band": 0.9534190196211818
+      },
+      {
+        "name": "Accelerating Democratic repricing",
+        "mean_pct": 66.8,
+        "sigma_pp": 0.6,
+        "p_band": 0.07828918646157623
+      }
+    ],
+    "12day_carry_sensitivity": {
+      "Yes": 6.206472706972119,
+      "No": 5.205428721976616
+    }
+  },
+  "verdict": "No current taker entry:10YES62c cost6.20 central−.60/selected−2.10;10NO52c cost5.20 central−.80/selected−2.30. Maker49c/39c smallcentralpositives failselected and oppositecountermodels reverse. No approvedwinner/600gate unchanged.",
+  "reopen_condition": "New exactpublisher hourlyvalue/status/methodology, publicnews altering53h paths, targetprint/correction or currentbooks improving bothside conditional-fill economics; verifysource/currentaccount/eligibility/gas/horizon/jointportfolio and600comparison before anyBUY.",
+  "evaluated_utc": "2026-10-21T11:45:57.660806+00:00",
+  "question": "Democratic Senate odds 64-66% on October 23?",
+  "valuation_author": "primary_operator",
+  "original_index": 518,
+  "report_sha256": "a4bb82f06f52433f34c96020e0cc07aa9b9d2e016f51ae0c0bc009fc40a97cb2"
+}

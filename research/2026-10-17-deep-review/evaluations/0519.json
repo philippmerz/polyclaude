@@ -1,0 +1,30 @@
+{
+  "review_index": 519,
+  "market_id": "4367438",
+  "condition_id": "0x805f9815edc00b4e6374b32aa345c151a6602ba816d1aeffacee26910bfe7271",
+  "criteria_sha256": "4e53d7c2d7a30f9092e3bd5780527db75f6361918a169a85477d7bea384c3e60",
+  "status": "excluded_factual",
+  "literal_analysis": "Full frozen rule read: Titans+Colts combinedscore>=45=>Over; <45=>Under. Oct18 13ET scheduledstart. Postponed waitsforcompletion; entirecancel/no makeup50/50. No officialscore inferred.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4367438",
+      "observed_utc": "2026-10-21T11:23:55.619163Z",
+      "finding": "Root originalGamma raw/gzip/9fieldsverified:closed/nonaccepting/canonicalUMAresolved; historicalproposed/proposed retained. Settlementprices not independentlyverified score/weather."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact current venue exclusion, not a retrospective sporting/weather forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact outcome tokens closed/nonaccepting; no current project entry route established."
+  },
+  "verdict": "Factual closed-venue exclusion only; source result remains unverified.",
+  "reopen_condition": "Verified lawful reopening of exact condition, including applicablecorrection/clarification. Newdate/threshold requiresseparate review.",
+  "evaluated_utc": "2026-10-21T11:47:40.927030+00:00",
+  "question": "Titans vs. Colts: O/U 44.5",
+  "valuation_author": "primary_operator",
+  "original_index": 519,
+  "report_sha256": "710d71268a327f91d1af8fcdd2828e366082cb58deefc41cbb2d4fed67f89250"
+}

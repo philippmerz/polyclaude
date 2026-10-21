@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-21T11:14:54.449018+00:00
+Updated: 2026-10-21T11:47:42.069337+00:00
 
-**415 valuations saved; first milestone100:** 415 valued; 20 blocked after in-depth review. 391 factual exclusions separately; 2174 pending.
+**418 valuations saved; first milestone100:** 418 valued; 20 blocked after in-depth review. 393 factual exclusions separately; 2169 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -527,7 +527,12 @@ Each report below is written before moving to the next evaluation. Related contr
 |513|[Spread: Kansas State (-4.5)](evaluations/0513.md)|excluded_factual|Factual venue exclusion, not valuation or sporting-result adjudication.|
 |514|[Will OpenRouter process between 675T and 725T tokens from Oct 26 to Nov 22?](evaluations/0514.md)|valued|No current taker entry: YES22c andNO87c both negative central. MakerYES14c/NO79c small central positives fail selected stress; concentrated rival/informed fill risk can reverseNO. No approved winner,600gate unchanged.|
 |515|[Will the highest temperature in Seattle be between 60-61°F on October 17?](evaluations/0515.md)|excluded_factual|Factual venue exclusion; not a temperature-result adjudication or model rejection.|
+|516|[Will the Iranian regime fall by October 31?](evaluations/0516.md)|valued|PaperYES tail lead only:334-share fullwalkcost1.29134, central+8.72866/selected−1.29134; credible continuity rival−1.03249. NO10cost9.98 negativecentral. No current entry certificate or high-p bond claim;600+primarycomparison pause unchanged.|
+|517|[Will 1 Fed rate cut happen in 2026?](evaluations/0517.md)|valued|ProvisionalYES paperupside:72fullwalkcost1.025, central+3.295/selected−1.025; hawkish1%rival−.305. NO10cost9.92 negativecentral. MakerYES112@.009central+5.712 but selected−1.008; source readinessfalse/noentry/600gate unchanged.|
+|518|[Democratic Senate odds 64-66% on October 23?](evaluations/0518.md)|valued|No current taker entry:10YES62c cost6.20 central−.60/selected−2.10;10NO52c cost5.20 central−.80/selected−2.30. Maker49c/39c smallcentralpositives failselected and oppositecountermodels reverse. No approvedwinner/600gate unchanged.|
+|519|[Titans vs. Colts: O/U 44.5](evaluations/0519.md)|excluded_factual|Factual closed-venue exclusion only; source result remains unverified.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
+|521|[Will the highest temperature in Atlanta be between 64-65°F on October 18?](evaluations/0521.md)|excluded_factual|Factual closed-venue exclusion only; source result remains unverified.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |540|[Will the Republicans win Sedgwick County in the Kansas Senate race in 2026?](evaluations/0540.md)|valued|NOprioritymakerfollowup only; captured40ctakerfails15ppstress, noorder.|
