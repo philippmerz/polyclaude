@@ -2,7 +2,7 @@
 
 Operator explicitly requested `/goal` October18: continue the remaining review; occasional material Telegram progress; repair or investigate substantive limitations rather than force3,000 completions. No new timer/watcher. Each scheduled tick retains its own bounded safety work.
 
-**Authoritative state:** read the [checkpoint](../../notes/deep_review_checkpoint.json) for counts/active/next and the [current small phase](../../data/deep_review_20261017/work/goal0035_RESUME.json) for selected source/model pointers. This page deliberately carries no duplicated count or portfolio snapshot. [Current context](../../notes/current_context.md) indexes dated money, holdings, safety and the next scheduled boundary; an expired handoff or old source does not authorize action.
+**Authoritative state:** read the [checkpoint](../../notes/deep_review_checkpoint.json) for counts/active/next and the [current small phase](../../data/deep_review_20261017/work/goal0036_RESUME.json) for selected source/model pointers. This page deliberately carries no duplicated count or portfolio snapshot. [Current context](../../notes/current_context.md) indexes dated money, holdings, safety and the next scheduled boundary; an expired handoff or old source does not authorize action.
 
 New BUYs remain paused until600 full valuations followed by primary comparative winner selection; blocked/factual rows do not count. Existing holdings/orders remain managed. First100/200 progress was notified; next500/material finding/block. Historical prose never reopens a filled/canceled order. Case455 has a8735-byte full-rule packet; use explicit `--max-bytes10000` for that case, preserving the complete rule. Other packets retain the default cap.
 

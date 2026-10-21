@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-21T11:47:42.069337+00:00
+Updated: 2026-10-21T12:16:30.642551+00:00
 
-**418 valuations saved; first milestone100:** 418 valued; 20 blocked after in-depth review. 393 factual exclusions separately; 2169 pending.
+**420 valuations saved; first milestone100:** 420 valued; 20 blocked after in-depth review. 394 factual exclusions separately; 2166 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -533,6 +533,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |519|[Titans vs. Colts: O/U 44.5](evaluations/0519.md)|excluded_factual|Factual closed-venue exclusion only; source result remains unverified.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |521|[Will the highest temperature in Atlanta be between 64-65°F on October 18?](evaluations/0521.md)|excluded_factual|Factual closed-venue exclusion only; source result remains unverified.|
+|522|[Will the next Fable model (5.2+) be released on October 20, 2026?](evaluations/0522.md)|excluded_factual|Factual closed-venue exclusion. Underlying Anthropic release event unverified.|
+|523|[Will the Republican Party win the CA-06 House seat?](evaluations/0523.md)|valued|Provisional cheap-YES lead only:59YES at1.7c costs1.003, central+3.717 but selected loss1.003 and strict-nonGOP rival loss0.944. NO at99.5c is negative centrally and under stress. No entry; rule/caucus and current polling gaps remain,600+comparison gate unchanged.|
+|524|[Danaher (DHR) Q3 non-GAAP core revenue growth 3% to 4.5%?](evaluations/0524.md)|valued|Reported result supports YES, but no YES ask exists and99.9c maker is negative at99% central. CheapNO has only an unfitted residual-version/adjudication thesis:907shares full walk1.00699, central+8.06301 but selected−1.00699 and literal-agreement rival−0.82559. No entry or claimed measured settlement error rate; gate600+comparison unchanged.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |540|[Will the Republicans win Sedgwick County in the Kansas Senate race in 2026?](evaluations/0540.md)|valued|NOprioritymakerfollowup only; captured40ctakerfails15ppstress, noorder.|

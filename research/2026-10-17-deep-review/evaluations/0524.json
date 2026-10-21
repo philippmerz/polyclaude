@@ -1,0 +1,226 @@
+{
+  "review_index": 524,
+  "market_id": "5616777",
+  "condition_id": "0x9b26f70d2b7acb09873d9060ca984d522278fd72bcff40d86f9bf981400106cf",
+  "criteria_sha256": "0310a841082621afd90b04ac4f7c1e5a08c66b040eaf68e703bd48f1824ed757",
+  "status": "valued",
+  "literal_analysis": "Q3 specified total-company non-GAAP core revenue growth YoY; most numerically precise reported version, same definition/scope only. Subsequent revisions excluded; reported range uses midpoint. Missing metric or no materials byNov30 23:59ET -> lowest bracket. Exact shared boundary goes to higher bracket:3.0% belongs to3–4.5%. Nominal13:30UTC end is not a release/settlement guarantee.",
+  "evidence": [
+    {
+      "url": "https://investors.danaher.com/2026-10-21-Danaher-Reports-Third-Quarter-2026-Results",
+      "observed_utc": "2026-10-21T12:00:36.877505Z",
+      "finding": "Original official release reports Q3 total-company non-GAAP core revenue growth3.0%;5.5% excluding respiratory and8.5% GAAP differ in scope. Tariff-refund adjustment explicitly included in reported core."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000199/dhr-20260925.htm",
+      "observed_utc": "2026-10-21T12:04:25.774509Z",
+      "finding": "Root verified original filed10-Q: Q3 three months endedSep25 vs comparable2025, core3.0%; nine-month2.0% not target. Reconciliation8.5-6.5+0+1.0=3.0. No more precise Q3 core version found in this captured document."
+    },
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/313616/000031361626000201/dhr-20261021xex991.htm",
+      "observed_utc": "2026-10-21T12:04:52.880574Z",
+      "finding": "Root verified official8-K Exhibit99.1 agrees at3.0%, same total-company scope and tariff note. Submissions acceptance precedes nominal end; exact first-publication chronology remains unverified."
+    },
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5616777",
+      "observed_utc": "2026-10-21T12:14:16.971975+00:00",
+      "finding": "All nine frozen identity fields bound to raw receipt. Closedfalse/acceptingtrue, canonicalUMAproposed, not final. Proposal value not independently verified or used as outcome evidence."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.99,
+    "low": 0.95,
+    "high": 0.9998,
+    "confidence": "HIGH reported metric, MED contract settlement",
+    "method": "Already-reported official result, with explicit residual source/version/adjudication risk; not a forecast of stock returns or future earnings.",
+    "reasoning": "Root read original IR release, filed10-Q and filed8-K Exhibit99.1: all state3.0% total-company Q3 core growth. Refund adjustment is explicitly included in reported core, so no invented2.0% alternate. Exact3.0% goes to higher sibling band. Remaining1% is subjective missing-version/precision or contract adjudication risk, not measured historical error rate.",
+    "branches": [
+      {
+        "label": "Captured official3.0% governs as read",
+        "weight": 0.985,
+        "conditional_yes": 1
+      },
+      {
+        "label": "Unnoticed earlier version or same-scope greater precision",
+        "weight": 0.01,
+        "conditional_yes": 0.4
+      },
+      {
+        "label": "Residual source/definition/adjudication contingency",
+        "weight": 0.005,
+        "conditional_yes": 0.2
+      }
+    ],
+    "rivals": [
+      {
+        "label": "Unseen original first publication differed or definition interpreted otherwise",
+        "p_yes": 0.95
+      },
+      {
+        "label": "Literal reported3.0% is uncontested",
+        "p_yes": 0.9998
+      }
+    ],
+    "actual_entry_reserve_pp": 2,
+    "source_readiness": "Reported metric and bracket verified; exact first-publication chronology and exhaustive official presentation/webcast precision search remain incomplete.",
+    "model": "research/2026-10-17-deep-review/models/0524_primary_1228.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0524_quotes_1228.json",
+    "quote_file_sha256": "47cd2e87af3d4191edfce2f85a820c786c3e8e9b6b4d6a2e318efb615931e647",
+    "quote_capture_utc": "2026-10-21T12:14:17.094183+00:00",
+    "gamma_received_utc": "2026-10-21T12:14:16.971975+00:00",
+    "hypothetical_gross_shares": {
+      "Yes": 10,
+      "No": 907
+    },
+    "horizon_days": 7.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 2.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.99,
+        "selected_stress_probability": 0.97,
+        "best_bid": 0.999,
+        "best_ask": null,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792584835021",
+        "book_received_utc": "2026-10-21T12:14:17.093296+00:00",
+        "book_age_seconds_at_receipt": 22.072296142578125,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.99,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.999
+              }
+            ],
+            "net": 9.99
+          }
+        },
+        "taker_cost_usd": null,
+        "central_expected_profit_usd": null,
+        "selected_stress_profit_usd": null,
+        "break_even_before_carry": null,
+        "break_even_constant_carry": null,
+        "current_execution_authorization": false,
+        "gross_shares": 10,
+        "maker_hypothetical": {
+          "price": 0.999,
+          "gross_shares": 10,
+          "cost_if_full_fill": 9.99,
+          "central_profit_before_carry": -0.08999999999999986,
+          "selected_profit_before_carry": -0.2900000000000009,
+          "fill_probability": "unknown",
+          "adverse_selection": "No post-fill probability guarantee; source correction/version revelation could select fills.",
+          "maker_rebate_assumed": false,
+          "current_authorization": false
+        }
+      },
+      "No": {
+        "probability": 0.010000000000000009,
+        "selected_stress_probability": 0,
+        "best_bid": null,
+        "best_ask": 0.001,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792584835021",
+        "book_received_utc": "2026-10-21T12:14:17.093296+00:00",
+        "book_age_seconds_at_receipt": 22.072296142578125,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 907.0,
+            "gross": 1.00699,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 895.89,
+                "price": 0.001
+              },
+              {
+                "shares": 11.110000000000014,
+                "price": 0.01
+              }
+            ],
+            "net": 1.00699
+          },
+          "bids": {
+            "complete": false,
+            "filled": 0.0,
+            "gross": 0.0,
+            "fee": 0.0,
+            "fills": [],
+            "net": null
+          }
+        },
+        "taker_cost_usd": 1.00699,
+        "central_expected_profit_usd": 8.063010000000007,
+        "selected_stress_profit_usd": -1.00699,
+        "break_even_before_carry": 0.0011102425578831312,
+        "break_even_constant_carry": 0.0011109185389000724,
+        "current_execution_authorization": false,
+        "gross_shares": 907,
+        "maker_hypothetical": {
+          "price": null,
+          "reason": "No standing NO bid returned; any new bid would need current maker price/tick/minimum/reservation checks. No assumed fill or rebate.",
+          "current_authorization": false
+        },
+        "strong_agreement_rival_p_NO": 0.0002,
+        "strong_agreement_rival_profit_usd": -0.82559,
+        "worst_limit_collateral_usd": 9.07
+      }
+    },
+    "limitations": [
+      "Reported3.0% boundary verified but point99% and2pp stress are subjective settlement/source risks.",
+      "ProposedUMA is not final and no proposal value independently verified.",
+      "7-day planning horizon/45-day stress not guaranteed settlement; gas, bridge/funding and operations not free.",
+      "No order;600unique-valuations+primary-comparison gate unchanged."
+    ],
+    "oversized_best_ask_quantity_diagnostic": {
+      "gross_shares": 1000,
+      "full_walk_cost": 40.31589,
+      "meaning": "Ceil(1/best ask) overstates the size needed for one USD when the best level is shallow. This is not the intended ticket and must not hide a smaller feasible walk."
+    },
+    "intended_size_basis": "907NO walks895.89@0.001+11.11@0.01=1.00699. This is the first integer quantity reaching one USD at captured depth. A limit0.01 reserves up to9.07, not a guaranteed1.00699 fill cost; execution cannot rely on this snapshot."
+  },
+  "verdict": "Reported result supports YES, but no YES ask exists and99.9c maker is negative at99% central. CheapNO has only an unfitted residual-version/adjudication thesis:907shares full walk1.00699, central+8.06301 but selected−1.00699 and literal-agreement rival−0.82559. No entry or claimed measured settlement error rate; gate600+comparison unchanged.",
+  "reopen_condition": "Any verified earlier same-metric original version, greater official precision or adjudication dispute; favorable YES quotes or defensible independent NO thesis. Revalidate current status/books/fees/account/funding/correlation and600+primary-selection gate before execution.",
+  "evaluated_utc": "2026-10-21T12:16:30.345953+00:00",
+  "question": "Danaher (DHR) Q3 non-GAAP core revenue growth 3% to 4.5%?",
+  "valuation_author": "primary_operator",
+  "original_index": 524,
+  "report_sha256": "ba1d1c3b50759d8d4af2dbfdf5286726591213031f531420d3631426266a653e"
+}

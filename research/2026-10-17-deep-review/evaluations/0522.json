@@ -1,0 +1,30 @@
+{
+  "review_index": 522,
+  "market_id": "5219320",
+  "condition_id": "0xcfedabcf2fe5ab07664a472be66c466a01b48e5ea3800c2ee5d650b62df2fc83",
+  "criteria_sha256": "ea9b7afb79b2b60c721e26df7ef68cd7c7b66e13823c320a1e50eb5325dc3a33",
+  "status": "excluded_factual",
+  "literal_analysis": "Read full frozen rule: next Anthropic Fable name and version>=5.2 first publicly accessible calendar date ET; open beta/open rolling waitlist can qualify, private access/placeholder/mislabel cannot; official Anthropic primary plus credible consensus. No underlying release-date verification or assertion.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5219320",
+      "observed_utc": "2026-10-21T12:00:16.748465+00:00",
+      "finding": "Root independently verified original raw/gzip hashes and all nine frozen identity fields; closed=true, acceptingOrders=false, canonical UMA resolved. Historical status array preserved. This proves a closed exact venue, not actual public release date."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact closed/nonaccepting/resolved venue exclusion, no retrospective event forecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact outcome tokens are nonaccepting; no current project entry route established."
+  },
+  "verdict": "Factual closed-venue exclusion. Underlying Anthropic release event unverified.",
+  "reopen_condition": "Verified lawful reopening of exact condition; any new date/model contract requires separate literal review.",
+  "evaluated_utc": "2026-10-21T12:04:49.664195+00:00",
+  "question": "Will the next Fable model (5.2+) be released on October 20, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 522,
+  "report_sha256": "84a842976c584428076b8389a519229455d532b18d3bd390ba1ceeb9188dbe5a"
+}

@@ -1,0 +1,224 @@
+{
+  "review_index": 523,
+  "market_id": "1280972",
+  "condition_id": "0xbafe8c88ec505ca10f7d06f1ccf006efe5329ff08acd5605088246fd8715a6c0",
+  "criteria_sha256": "b214af4974ef9f223248b19c926d18cce09d8ddae82e0bf66c57d9975dcc57af",
+  "status": "valued",
+  "literal_analysis": "Party of the actual CA-06 winner when ALL2026 House races are conclusively called; ballot-listed or identifiable affiliation, otherwise most recent expressed caucus intent. Credible reporting; FEC fallback if ambiguous. Neither former GOP incumbency nor a negative GOP promise alone settles the rule. Exact district is the2026 map. All-House-call timing can extend beyond the nominal Nov4 end;45-day planning/90-day sensitivity is not a settlement guarantee. A no-GOP promise is neither a Democratic promise nor necessarily a revocation of an older affirmative GOP intent under this wording.",
+  "evidence": [
+    {
+      "url": "https://elections.cdn.sos.ca.gov/statewide-elections/2026-general/cert-list-candidates.pdf",
+      "observed_utc": "2026-10-21T12:01:02.140301Z",
+      "finding": "Root read exact original certified2026 CA06 list: Richard Pan Democratic; Kevin Kiley No Party Preference. Raw/gzip hashes verified."
+    },
+    {
+      "url": "https://elections.cdn.sos.ca.gov/sov/2026-primary/sov/76-us-rep.pdf",
+      "observed_utc": "2026-10-21T12:01:27.583803Z",
+      "finding": "Root verified certified June totals: Democrats107934, Kiley47165, Republican39118; total194217. Primary composition is not a general forecast."
+    },
+    {
+      "url": "https://www.semafor.com/article/09/16/2026/kiley-says-he-wont-caucus-with-republicans-if-reelected",
+      "observed_utc": "2026-10-21T12:06:03Z",
+      "finding": "Own event interview reports no plan for GOP caucus next term; current committee-purpose association remains. No affirmative Democratic caucus intent inferred; most-recent resolution-time position unknown."
+    },
+    {
+      "url": "https://independentcentervoice.com/insights/july-2026-district-survey-california-s-6th-congressional-district",
+      "observed_utc": "2026-10-21T12:06:03Z",
+      "finding": "Original July sponsor page:741likely voters, Pan39/Kiley35/unsure26. Stale and independent-aligned sponsor; original methodology/latest September poll not verified. Shared whole-tool batch receipt and scope erratum indexed."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.08,
+    "low": 0.001,
+    "high": 0.65,
+    "confidence": "LOW",
+    "method": "Election-outcome mixture times resolution-time Republican assignment; unfitted judgment, not calibrated frequencies.",
+    "reasoning": "Democratic primary consolidation and the stale July poll favor Pan, with wide uncertainty from incumbent appeal and undecided voters. A Kiley win is not automatically a Republican contract win. His next-term no-GOP plan lowers that assignment, but the rule may preserve an earlier affirmative GOP intent for the current term, or he may change intent before all House races are called. No Democratic caucus promise is inferred. Mixture7.6806% rounds to8%.",
+    "actual_entry_reserve_pp": 20,
+    "countermodels": [
+      {
+        "label": "NonGOPstrictfutureintent",
+        "p_K_win": 0.1,
+        "p_R_given_K_win": 0.01,
+        "p_yes": 0.001
+      },
+      {
+        "label": "CurrentGOPassociationoroldpositiveintentcontrols; competitiveK",
+        "p_K_win": 0.55,
+        "p_R_given_K_win": 0.85,
+        "p_yes": 0.4675
+      },
+      {
+        "label": "Ksurge+GOPreturn",
+        "p_K_win": 0.65,
+        "p_R_given_K_win": 0.95,
+        "p_yes": 0.6175
+      }
+    ],
+    "source_readiness": false,
+    "model": "research/2026-10-17-deep-review/models/0523_primary_1215.json",
+    "generator": "research/2026-10-17-deep-review/models/0523_replay_1224.py"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0523_quotes_1215.json",
+    "quote_file_sha256": "582f3177962a2c0f09e66263127420371f8df2e36a64dfd4464b6f5285b9fe85",
+    "quote_capture_utc": "2026-10-21T12:08:47.764782+00:00",
+    "gamma_received_utc": "2026-10-21T12:08:47.627292+00:00",
+    "hypothetical_gross_shares": {
+      "Yes": 59,
+      "No": 10
+    },
+    "horizon_days": 45.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 20.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.08,
+        "selected_stress_probability": 0,
+        "best_bid": 0.005,
+        "best_ask": 0.017,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792584495590",
+        "book_received_utc": "2026-10-21T12:08:47.763923+00:00",
+        "book_age_seconds_at_receipt": 32.17392301559448,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 59.0,
+            "gross": 1.0030000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 59.0,
+                "price": 0.017
+              }
+            ],
+            "net": 1.0030000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 59.0,
+            "gross": 0.295,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 59.0,
+                "price": 0.005
+              }
+            ],
+            "net": 0.295
+          }
+        },
+        "taker_cost_usd": 1.0030000000000001,
+        "central_expected_profit_usd": 3.7169999999999996,
+        "selected_stress_profit_usd": -1.0030000000000001,
+        "break_even_before_carry": 0.017,
+        "break_even_constant_carry": 0.017066649638612187,
+        "current_execution_authorization": false,
+        "gross_shares": 59,
+        "maker_hypothetical": {
+          "price": 0.005,
+          "gross_shares": 200,
+          "cost_if_full_fill": 1.0,
+          "central_profit_before_carry": 15.0,
+          "selected_profit_before_carry": -1.0,
+          "fill_probability": "unknown",
+          "adverse_selection": "postfillbeliefnotcertified",
+          "fees": "makerUSDcollateralcostonly; noassumedrebate; currentfeeauthorityrequired",
+          "current_authorization": false
+        },
+        "low_rival_expected_profit_usd": -0.9439999999999998
+      },
+      "No": {
+        "probability": 0.92,
+        "selected_stress_probability": 0.72,
+        "best_bid": 0.983,
+        "best_ask": 0.995,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792584495590",
+        "book_received_utc": "2026-10-21T12:08:47.763923+00:00",
+        "book_age_seconds_at_receipt": 32.17392301559448,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.95,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.995
+              }
+            ],
+            "net": 9.95
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.83,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.983
+              }
+            ],
+            "net": 9.83
+          }
+        },
+        "taker_cost_usd": 9.95,
+        "central_expected_profit_usd": -0.7499999999999982,
+        "selected_stress_profit_usd": -2.75,
+        "break_even_before_carry": 0.9949999999999999,
+        "break_even_constant_carry": 0.9989009641423013,
+        "current_execution_authorization": false,
+        "gross_shares": 10,
+        "maker_hypothetical": {
+          "price": 0.983,
+          "gross_shares": 10,
+          "cost_if_full_fill": 9.83,
+          "central_profit_before_carry": -0.629999999999999,
+          "selected_profit_before_carry": -2.630000000000001,
+          "fill_probability": "unknown",
+          "adverse_selection": "postfillbeliefnotcertified",
+          "fees": "makerUSDcollateralcostonly; noassumedrebate; currentfeeauthorityrequired",
+          "current_authorization": false
+        },
+        "high_rival_expected_profit_usd": -6.125
+      }
+    },
+    "limitations": [
+      "Captured parsed fee curve is authoritative zero; raw structured descriptor and exact identity verified by quote reader. Current execution checks and venue book freshness still required.",
+      "Noexecutionauthorization:600valuationgate+primaryselection; allHousecallshorizon45planning/90sensitivitynotpromise.",
+      "No calibratedlowerfloor;highYES61.75%rival reversesNO."
+    ]
+  },
+  "verdict": "Provisional cheap-YES lead only:59YES at1.7c costs1.003, central+3.717 but selected loss1.003 and strict-nonGOP rival loss0.944. NO at99.5c is negative centrally and under stress. No entry; rule/caucus and current polling gaps remain,600+comparison gate unchanged.",
+  "reopen_condition": "Verify latest candidate caucus statement and original current district polls; clarify treatment of a negative future GOP pledge versus older affirmative current-term intent; recheck exact books, fees, commitments, funding/correlation and comparative selection after600.",
+  "evaluated_utc": "2026-10-21T12:13:30.640052+00:00",
+  "question": "Will the Republican Party win the CA-06 House seat?",
+  "valuation_author": "primary_operator",
+  "original_index": 523,
+  "report_sha256": "a7cc45955bc922fd9ca993b71afcc5935183abc9e403e233e05252226dcbf0ab"
+}
