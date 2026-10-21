@@ -1,0 +1,38 @@
+{
+  "schema": "polyclaude.primary_checkin_review.v1",
+  "tick_id": "20261021T020001Z",
+  "reviewed_utc": "2026-10-21T02:11:42.837677+00:00",
+  "decision": "Retain current holdings/noadd/no financialwriter. No rounded numericprior change justified by captured current sources. Buy pause405/600+primarycomparativeselectionnull remains.",
+  "OpenRouter": "Separate UMA PRICE_MOVE YES27to36.5(+9.5pp), lowvol24USD122/spread3pp, no resolution/dispute alert. Root exact currentbook/fd gives held5NO exit3.10 versus prior3.40; lower exit alone does not update contract probability. Official chart02:02 cachedAt01:44/Age280: Oct12complete164.043985914931T, Oct19partial54.733426972387T (+5.905082948526 vsOct20 21:02). Four qualifyingfutureweeklabels Oct26/Nov2/9/16 absent. No extrapolation/cachetime-as-usagecutoff. KeepNO88/selected73/broadlow20; uncertainty can reverse under other forecasts, not guaranteedprice recovery.",
+  "Kimi": "02:02 HLEAPI200 restores visibility; exactsame41236bytes/66models as last200Oct20 21:02. Rootprovider=moonshot maximum scores.hle41.08, K3calibration44.67; Age3176 limits freshness. Otherlabs55+ not qualifyingMoonshot\u226555. No qualifyingresult observed in returned snapshot; cacheddata can miss new information, not universal absence. Keep10YES34.02125/selected19.02125/broad8-80.",
+  "MI": "ABC homepage301 exactcanonicalredirect200 -> linkedoriginalstory200/rootread/hashverified: Oct20 23:17published/Oct21 01:19modified. Rogers crossoverclaims, article explicitly says no poll measures coalitiongains. OlderlateSeptember FoxLV50D/49R attribution lacksN/numericMOE/question; linkedFoxrelease notfetched, not new independentlikelihood. Interviewvideo notread. ExactToI403; indexedJTAattribution notoriginalinterviewverification. No numeric vote-effect bridge, not zeroeffectassumption. Keep5NO44/selected34/broad20; actual00:51dailyrederivation D55.7302/G12D59.7314 withunfittedbias retained/datelabeled, notrerun. DebateOct21 23UTC upcoming.",
+  "Messi": "OfficialGoogle2026globalroute404; exactlist/ranksUNKNOWN, no country/2025/opinion/goal substitution. Keep5YES60/selected40/broadlow20; payout0possible.",
+  "hold_math": "data/deep_review_20261017/work/tick020001_hold_exit_math.json",
+  "quotes": "Root verified fresh4Gamma/fullrules/eightbooks/fourcompactfee curves, allstructured0rate/exponent1/takerOnlytrue despitefeesEnabledtrue. Bookagespassed180satreceipt, not laterexecutioncertificate. Literalrules unchanged against exactfrozenidentity.",
+  "joint": "KimiYES+ORNO original4.45canbothlose; allfourpilots7.35canalllose/no independence or measuredhedgecredit. Selectedterminal1.902125/3.65/1.70/2 exceeds02:01fee-netexits1.10/3.10/1.50/1.25 plusdatedvariableAave3.2247%constant75d/Messi60d. Broadlowcases favor sale; MI3.8037pp additionalselected adverse shift reverses. No standingconditionalmakernewsdonation.",
+  "Clarity": {
+    "held": "29YES>50+29NO>58",
+    "normal_conditional_payout": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "separate_exit_tool_net": 27.66,
+    "exit_tool_bounds": "02:01:19.910354Z/02:01:21.498442Z",
+    "dated75d_carry_sensitivity": 27.840974233548035,
+    "decision": "Retainwholepair/nolegsale/add. Oct20 14:02same-ruleproof retained, no freshpairrule-readclaim. OfficialSenatelist02:02samebytes/latestSep30#256; HR3633Sep15#234cloturerejected49-50 not finalpassage. Endpointnot future calendar."
+  },
+  "account": "data/deep_review_20261017/work/tick020001_account_root_recheck.json",
+  "news": "data/deep_review_20261017/work/tick020001_alert_decisions.json",
+  "discovery": "data/deep_review_20261017/work/tick020001_discovery_index.json",
+  "prospecting": "All7scans/2batchbuildersactual0,155batches/2803packetitems verified; page/top/walk caps,9unpacketizedprimary/268thin nontriggers,2unpriced sports,170unquoted/9failed consistency groups retained. No fullvaluation/rejection/entry/absenceinference. No queueadvance.",
+  "operational_note": "Reactivated helper initially repeated priorDEC task and rewrote old published factualunit; root retained unwantedcopy privately and restored exactHEAD bytes before currenttask. Allfinancial/prior/decision records unchanged; helperacknowledgedcurrentdiscovery.",
+  "telegram": "None: no material verified thesisbreak/action/newqualifyingscore; midpoint/depth move not bookedprofit.",
+  "next_existing_boundary": "06UTClightcheck/14UTCfullcheck or earliermaterialevent; MIdebate23UTC. No goal/timer/idlecontinuation.",
+  "storage_maintenance": {
+    "decision_id": 251,
+    "proof": "data/deep_review_20261017/work/tick020001_storage_deduplication.json",
+    "observed_reclaimed_MiB": 9.45,
+    "all_original_paths_bytes_hashes_preserved": true
+  }
+}

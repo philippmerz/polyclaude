@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 243 recorded observations from Apr-25
+The local performance CSV now has 244 recorded observations from Apr-25
 through Oct-21. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 00:39 UTC
+## Last audited snapshot — October21 02:02 UTC
 
-**Indicative trading depth $187.21 versus $170 contributed (+10.12%); midpoint $189.14.** Canonical bankroll $195.11 includes $5.97 separately funded gas; same-producer PM midpoint/depth $35.18/$33.25. Producer ran00:39:53–00:40:10UTC. Sequential rounded estimates are not synchronized NAV, guaranteed proceeds or realized profit. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV243 preserves all242 prior rows and flows; ten chart tests passed. [Financial record](research/2026-10-21-0039-financial-snapshot.json).
+**Indicative trading depth $188.57 versus $170 contributed (+10.92%); midpoint $190.16.** Canonical bankroll $196.14 includes $5.98 separately funded gas; same-producer PM midpoint/depth $36.20/$34.61. Producer ran02:02:32–49UTC. Sequential rounded estimates are not synchronized NAV, guaranteed proceeds or realized profit. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV244 preserves all243 prior rows and flows; ten chart tests passed. [Financial record](research/2026-10-21-0202-financial-snapshot.json).
 
-00:39 authenticated state: **zero orders,127 complete trades, nine unchanged all-size positions**, no winning redemption. Four daemons are current singletons; UMA43refreshed/0alerts, hurdle4clear/0flagged, watchlistnohits, Ostium0. The initial state audit flagged Michigan's required daily prior review. Fresh original sources and a model rerun retain D56%/heldNO44%; the follow-up audit is clean. Two due decision records were graded with source limits; no overdue records remain. [Root proof](data/deep_review_20261017/work/tick003800_account_root_recheck.json) · [Check](research/2026-10-21-003800-checkin.json).
+02:01 authenticated state: **zero orders,127 complete trades, nine unchanged all-size positions**, no winning redemption. Eleven routine checks returned0; four daemons are current singletons, state is clean, hurdle4clear/0flagged, watchlistnohits, Ostium0, no overdue decisions. UMA flagged a9.5pp OpenRouter price move on low volume; the fresh book/source review supports retaining the small holding. [Root proof](data/deep_review_20261017/work/tick020001_account_root_recheck.json) · [Check](research/2026-10-21-020001-checkin.json).
 
-Retain holdings; no additions or numeric prior changes. The required CNN alert matches a July24UTC K3 explainer, with no numeric HLE score or new K3.1 result. Current HLE returned403: score changes remain unknown; the last successful response remains dated Oct20 21:02. Michigan recomputes D55.73%; substituting national D+12 gives59.73%, nearly removing the selected holding margin. National RV polling is not Michigan LV data; model and poll-bias assumptions remain uncalibrated. [Primary review](data/deep_review_20261017/work/tick003800_primary_review.json) · [Michigan review](data/deep_review_20261017/work/tick003800_mi_judgment.json).
+Retain holdings; no additions or numeric prior changes. HLE returned200 with the same cached66-model body: Moonshot maximum Accuracy41.08, K3Calibration44.67; cache Age3176 limits freshness. OpenRouter's current partial week rose to54.733427T, while all four qualifying future weeks remain absent; no extrapolation. Google2026's route returned404. ABC reports Rogers' crossover claims but says coalition gains are unmeasured; Michigan's actual00:51 revaluation remains D56%/NO44%. [Primary review](data/deep_review_20261017/work/tick020001_primary_review.json).
 
-00:39 held-token net exits Kimi/OR/MI/Messi=$1.00/$3.40/$1.50/$1.25 remain below selected terminal values $1.902125/$3.65/$1.70/$2 after dated Aave carry sensitivities. Broad-low cases favor sale; all four pilots can lose their full $7.35 original cost. Whole Clarity normal conditional payout29/58, or0 under venue/oracle failure, exceeds the separate tool's $26.10 exit; no leg-only sale. [Saved math](data/deep_review_20261017/work/tick003800_hold_exit_math.json).
+02:01 held-token net exits Kimi/OR/MI/Messi=$1.10/$3.10/$1.50/$1.25 remain below selected terminal values $1.902125/$3.65/$1.70/$2 after dated Aave carry sensitivities. Broad-low cases favor sale; all four pilots can lose their full $7.35 original cost. Whole Clarity normal conditional payout29/58, or0 under venue/oracle failure, exceeds the separate tool's $27.66 exit; no leg-only sale. [Saved math](data/deep_review_20261017/work/tick020001_hold_exit_math.json).
 
-BUYpause405/600+comparative selection stays. Incomplete Oct20 14UTC discovery remains dated; no exchange-wide absence finding or new valuation. No financial writer or routine Telegram. Next existing02UTC check/earlier material event; Michigan debateOct21 23UTC.
+Seven fresh discovery scans and155offline batches retain page/top/walk limits and unpriced cases; no new valuation or exchange-wide absence finding. BUYpause405/600+comparative selection stays. Archived scan deduplication reclaimed9.45MiB while preserving every path and byte hash. No financial writer or routine Telegram. Next existing06UTC lightcheck/14UTC fullcheck or earlier material event; Michigan debate23UTC. [Discovery index](data/deep_review_20261017/work/tick020001_discovery_index.json) · [Storage proof](data/deep_review_20261017/work/tick020001_storage_deduplication.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

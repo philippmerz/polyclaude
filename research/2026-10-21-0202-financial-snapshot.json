@@ -1,0 +1,31 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261021T020001Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-21T02:02:32.471492+00:00",
+  "producer_completed_utc": "2026-10-21T02:02:49.261549+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "9d98f3abd827e1cbc5e3a45573bbfa794cae3cf8f7729f715e6d9dbffe18baed",
+  "timing_basis": "Actual invocationbounds; sequentialroundedobservations, not synchronizedNAV/individuallyfreshnesscertified liquidation. CSVwhole-secondcheck-windowstart.",
+  "canonical_total_including_funded_gas_usd": "196.14",
+  "same_producer_funded_gas_usd": "5.98",
+  "same_producer_PM_mid_usd": "36.20",
+  "same_producer_PM_fee_net_depth_usd": "34.61",
+  "derived_trading_mid_usd": "190.16",
+  "derived_trading_fee_net_depth_usd": "188.57",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.92,
+  "reported_accounting_residual_usd": "19.73",
+  "previous_complete_0039_comparison": {
+    "canonical_total_change_usd": "1.03",
+    "trading_mid_change_usd": "1.02",
+    "trading_depth_change_usd": "1.36"
+  },
+  "rounding_note": "Roundedcomponentdifference36.20-34.61=1.59 matches printedPMwarning; this arithmetic tolerance does not bound provider/timing/accounting uncertainty.",
+  "limits": [
+    "No trade/externalflow; mark/depth/liquidity/interest/rounding change not auditedrealizedprofit.",
+    "ProducerREALIZED19.73label not independently auditedcashprofit; historicalbasis/fees/flows unreconciled, VM/APIexcluded.",
+    "SameproducerTOTAL/gas/PMcomponents only; separate held-tokenquotes notspliced. No unvaluedassetwarning.",
+    "Tradingdepth188.57 is an indicative fee-netwhole-account estimate, not synchronizedexecutableproceeds."
+  ]
+}

@@ -1,0 +1,114 @@
+{
+  "schema": "tick020001_resolving_source_facts.v1",
+  "retrieval_window_utc": [
+    "2026-10-21T02:02:28.965701Z",
+    "2026-10-21T02:02:30.682884Z"
+  ],
+  "scope": "Four one-shot read-only requests; response bytes durably captured before parsing. No forecast or inference from missing sources.",
+  "sources": [
+    {
+      "name": "HLE chart",
+      "url": "https://dashboard.safe.ai/api/models",
+      "status": 200,
+      "received_utc": "2026-10-21T02:02:29.119527Z",
+      "response_date": "Wed, 21 Oct 2026 02:02:29 GMT",
+      "age_seconds": 3176,
+      "receipt": "logs/cron20261021T020001Z_resolving_sources/hle/hle.receipt.json",
+      "body_gzip": "logs/cron20261021T020001Z_resolving_sources/hle/hle.body.json.gz",
+      "raw_bytes": 41236,
+      "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+      "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+      "compared_with": "data/deep_review_20261017/work/tick210121_resolving_sources.json; exact same raw and gzip hashes.",
+      "rows": 66,
+      "Kimi_K3": {
+        "HLE_score": 41.08,
+        "calibration_error": 44.67
+      },
+      "current_HLE_score_ge_55_rows": [
+        {
+          "model": "Gemini 4 Argon",
+          "HLE_score": 55.6,
+          "calibration_error": 41.52
+        },
+        {
+          "model": "Opus 5.5",
+          "HLE_score": 55.36,
+          "calibration_error": 13.84
+        }
+      ],
+      "field_note": "HLE score and calibration error are distinct columns; error is not accuracy. Cache age does not establish score-publication time."
+    },
+    {
+      "name": "OpenRouter usage chart",
+      "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+      "status": 200,
+      "received_utc": "2026-10-21T02:02:29.265787Z",
+      "response_date": "Wed, 21 Oct 2026 02:02:29 GMT",
+      "age_seconds": 280,
+      "cachedAt_utc": "2026-10-21T01:44:06.771Z",
+      "receipt": "logs/cron20261021T020001Z_resolving_sources/openrouter/openrouter.receipt.json",
+      "body_gzip": "logs/cron20261021T020001Z_resolving_sources/openrouter/openrouter.body.json.gz",
+      "raw_bytes": 24695,
+      "raw_sha256": "75c775e53dc09495da884b471b120df1cb87146e9d053f3069b2984dc349f955",
+      "gzip_sha256": "53a33c81a1e8a61e55efd1ed096c88a94f0d307f0b605bcc0d5113256844a474",
+      "unit": "Sum of integer per-model weekly ys values divided by 10^12; chart values in trillions of tokens (T), Monday week labels.",
+      "weeks": [
+        {
+          "week_start": "2026-10-12",
+          "sum_T": 164.043985914931,
+          "status": "completed"
+        },
+        {
+          "week_start": "2026-10-19",
+          "sum_T": 54.733426972387,
+          "status": "current partial row",
+          "change_since_previous_capture_T": 5.905082948526,
+          "previous_capture_20261020T210250Z_sum_T": 48.828344023861
+        }
+      ],
+      "target_future_week_rows": [],
+      "future_weeks": "Oct26, Nov2, Nov9 and Nov16 labels absent.",
+      "cutoff_note": "Response date, cache Age and cachedAt are not a documented usage cutoff; current partial row is not finalized usage or forecast."
+    },
+    {
+      "name": "Official US Senate roll-call list",
+      "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+      "status": 200,
+      "received_utc": "2026-10-21T02:02:30.008205Z",
+      "response_date": "Wed, 21 Oct 2026 02:02:29 GMT",
+      "receipt": "logs/cron20261021T020001Z_resolving_sources/senate_rollcall/senate_rollcall.receipt.json",
+      "body_gzip": "logs/cron20261021T020001Z_resolving_sources/senate_rollcall/senate_rollcall.body.json.gz",
+      "raw_bytes": 217837,
+      "raw_sha256": "21e9ca87a56987504179ca04f8f1fb2aa86bb4399bfe14667c3513e49a25b773",
+      "gzip_sha256": "1bcef7417266b15be8c720a450d1ded7c1bb6a7485087fd581978053f3caf2e7",
+      "list_scope": "119th Congress, 2nd Session (2026); latest listed roll call #256, Sep30: Keith Sonderling nomination confirmation 47-41.",
+      "H_R_3633_vote": {
+        "number": 234,
+        "date": "Sep15",
+        "type": "cloture on motion to proceed to H.R.3633",
+        "result": "Rejected 49-50",
+        "qualifying_final_passage": false
+      },
+      "coverage_note": "This vote is cloture on a motion to proceed, not final passage. No later listed vote date appears; page does not establish a future schedule."
+    },
+    {
+      "name": "Google Year in Search 2026 global page",
+      "url": "https://trends.withgoogle.com/year-in-search/2026/",
+      "status": 404,
+      "received_utc": "2026-10-21T02:02:30.682884Z",
+      "response_date": "Wed, 21 Oct 2026 02:02:30 GMT",
+      "receipt": "logs/cron20261021T020001Z_resolving_sources/google_yis_2026/google_yis_2026.receipt.json",
+      "body_gzip": "logs/cron20261021T020001Z_resolving_sources/google_yis_2026/google_yis_2026.body.json.gz",
+      "raw_bytes": 58133,
+      "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+      "gzip_sha256": "efaac3e3d08f7d6801d4b16b36978e4d1b5a3e49670fd94e8b90573b8aed62dd",
+      "body_text": "Page not found",
+      "fact_status": "2026 global Trending Athletes list and ranks unavailable from this route; no country or 2025 list substituted. No retry or archive lookup."
+    }
+  ],
+  "hash_verification": "All four raw-body SHA-256 and gzip SHA-256 values were independently recomputed and match the captured receipts.",
+  "root_erratum": {
+    "original_sha256": "6c2a1fae6470bd91005152e0679e76f21e2ca47ac0b3e1b1a997f626a7b846e2",
+    "correction": "Worker previous_02:02_sum_T key misdated comparison;48.828344023861T is Oct20 21:02:50.671251Z, not an earlier Oct21 02:02 read. Actual values/delta/receipts unchanged."
+  }
+}

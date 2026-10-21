@@ -1,0 +1,52 @@
+{
+  "schema": "polyclaude.alert_decisions.v1",
+  "reviewed_utc": "2026-10-21T02:11:42.837677+00:00",
+  "window": "afterOct21 00:48:56 through2026-10-21T02:09:51Z",
+  "per_alert": [
+    {
+      "id": "66a35932edecaf5b085d04bfef16afba7e03bf3b",
+      "ts": "2026-10-21T00:54:33Z",
+      "line_sha256": "5fd497cf1af6d0715566885910c253967c5a4ff8d273bfea67c1d86d879f218b",
+      "decision": "ABC article read, not interview video. Rogers crossover statements plus older Fox50/49 attribution; no measured coalition shift or health/withdrawal in captured story. Hold/noadd."
+    },
+    {
+      "id": "693dcacc411d2b197e5a8597b405374e28a13ff6",
+      "ts": "2026-10-21T01:26:33Z",
+      "line_sha256": "89ec60fa493585fb11a1fea2cf074354fbf5f3356267530a0be86b05870b59aa",
+      "decision": "Financing headline not verified qualifyingHLE or OpenRouter future-four-week total. No Anthropic holding/order; do not assume zero indirect AI impact, no numerical bridge."
+    },
+    {
+      "id": "641caff61e1d98a4df78bf3fa6300e5fc89ccbdc",
+      "ts": "2026-10-21T01:26:39Z",
+      "line_sha256": "665644caca003d76070d6fe80d80c7062a88a103d0e26ef756100f7dc22c2876",
+      "decision": "Support headline not representative vote measurement; ABC original separately says coalition gains unmeasured. Retain5NO/NO44, no numeric adjustment."
+    },
+    {
+      "id": "e0740c917aa7afe245943f85ecad39011ccfb16f",
+      "ts": "2026-10-21T01:26:43Z",
+      "line_sha256": "0e77b3b67ff0699a565a6245df2a3ca13f4a351ee32bae5d5c64050c9c5b789f",
+      "decision": "ExactToIordinaryGET403; indexedJTAattribution is not original interview verification/independent poll. No arbitrary vote adjustment; body gap retained."
+    },
+    {
+      "id": "40ce37cadd974fc95a496b371df56583472fe388",
+      "ts": "2026-10-21T01:32:07Z",
+      "line_sha256": "bd8126ef18b9c74e66914e47d5e1472d89f9ca1e9ad275a7fe8b557fcf38cfd7",
+      "decision": "No exact held economic exposure/order; research/context only, no portfolio action."
+    },
+    {
+      "id": "d4ba165ecc2fbaba94ef309702d6155ba0030576",
+      "ts": "2026-10-21T01:42:34Z",
+      "line_sha256": "8232e5b818059788178749f843a002776b99b141052b65c3970e3425edcfcf5e",
+      "decision": "Campaign-guide/endorsement commentary; exact body not verified, no measured turnout/poll update or verified nominee change. Daily MI model remains dated00:51, no false fresh rederivation."
+    },
+    {
+      "id": "13ed10fc022db76726d96339ce0bdaafa1be5272",
+      "ts": "2026-10-21T02:09:51Z",
+      "line_sha256": "050a1b1223d2a3fa6e13bd3d7b6dd9bbf45c83aee896c624d84d620a1e793189",
+      "decision": "No load-bearing verified change to current exact holdings/orders from this headline; body/probability bridge not established, no action."
+    }
+  ],
+  "MI_primary_body": "data/deep_review_20261017/work/tick020001_MI_news_facts.json",
+  "prior_required_alert": "f17681c8f1d23bae9b91ab6b637e637096d6f40a completed previous tick; no new explicitIDrequest this tick.",
+  "authority": "Classifiers/headlines are review observations, not proven vote change/execution authority."
+}

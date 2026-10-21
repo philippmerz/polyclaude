@@ -1,0 +1,44 @@
+{
+  "schema": "tick020001_batch_index.v1",
+  "audited_utc": "2026-10-21T02:05:49.405295Z",
+  "columns": [
+    "scan_kind",
+    "batch",
+    "markets",
+    "groups",
+    "section_sha256"
+  ],
+  "verification": {
+    "section_hashes": "SHA256 of each emitted Markdown batch section, excluding file preamble",
+    "source_hashes_match_sidecars": true,
+    "every_emitted_market_id_unique": true,
+    "every_emitted_market_condition_id_matches_raw_snapshot": true,
+    "criteria_and_semantic_context_complete_for_emitted_rows": true,
+    "unbatched_current_rows_are_nontrigger_rows_not_packet_cap_truncation": true,
+    "batch_size_soft_cap_can_expand_for_exact_event_families": true
+  },
+  "batch_count": 155,
+  "emitted_market_rows": 2803,
+  "chunks": [
+    {
+      "path": "data/deep_review_20261017/work/tick020001_batches_01.json",
+      "sha256": "4bbfb764768bfba4600e2927a643761017d960fed82a43d64ff57f5d76cce384",
+      "rows": 40
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick020001_batches_02.json",
+      "sha256": "406ac7286104732d3ae00207aa18b019924fc24e1c883a81e74f84fef9a5160b",
+      "rows": 40
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick020001_batches_03.json",
+      "sha256": "2ec041deb1019af8f97c5ebb30f82603f58b8cc3de1221a4b5811c389b493bce",
+      "rows": 40
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick020001_batches_04.json",
+      "sha256": "ee6c86cb874009f3725d9fa23a743700cfc7512defa1d491a87d195ff1cc4295",
+      "rows": 35
+    }
+  ]
+}

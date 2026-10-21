@@ -1,0 +1,29 @@
+{
+  "schema": "polyclaude.exact_archived_snapshot_deduplication.v1",
+  "completed_utc": "2026-10-21T02:13:33.826701+00:00",
+  "scope": "Only2pairs of immutable private public-scan archive copies in this tick; working/live shortlists not linked. Same bytes, paths and hashes preserved. No financial/source deletion or daemon/codechange.",
+  "pairs": [
+    {
+      "kind": "primary",
+      "source": "logs/cron20261021T020001Z_discovery/snapshots/primary/shortlist_20261021T020214093646Z_primary.json",
+      "duplicate": "logs/cron20261021T020001Z_discovery/snapshots/primary/shortlist_latest.json",
+      "sha256": "138f9a1d6574ff0de8a9b879470cea26e18a8d7d64a9b3f6102581a4e8426073",
+      "bytes": 254648,
+      "allocated_duplicate_bytes": 258048
+    },
+    {
+      "kind": "thin_tail",
+      "source": "logs/cron20261021T020001Z_discovery/snapshots/thin_tail/shortlist_20261021T020223799553Z_thin_tail.json",
+      "duplicate": "logs/cron20261021T020001Z_discovery/snapshots/thin_tail/shortlist_latest.json",
+      "sha256": "485357951e5660bb646c31f25b5d5bf7ff4c5a198179db614420c2115e80a49e",
+      "bytes": 9653267,
+      "allocated_duplicate_bytes": 9658368
+    }
+  ],
+  "all_original_paths_and_bytes_preserved": true,
+  "same_inode_pairs_verified": true,
+  "before_free_MiB": 141.16,
+  "after_free_MiB": 150.61,
+  "observed_reclaimed_MiB": 9.45,
+  "reversibility": "If independent archived files are needed, copy source bytes to a new temporary regular file and atomically replace just the duplicate alias; verify existing SHA. Do not edit archived snapshots in place."
+}

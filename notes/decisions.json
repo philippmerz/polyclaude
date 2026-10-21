@@ -1,5 +1,5 @@
 {
-  "next_id": 251,
+  "next_id": 252,
   "decisions": [
     {
       "id": 1,
@@ -5484,6 +5484,26 @@
       "calibration_delta": "Unexecuted forecast. Operational cancellation is not a binary-outcome grade or profitable trade; original probability retained as dated research.",
       "lesson": "Revalidate national and local evidence before another quote; newBUYpause600+primarycomparison remains.",
       "resolved_at": "2026-10-20T15:56:29Z"
+    },
+    {
+      "id": 251,
+      "timestamp": "2026-10-21T02:14:07Z",
+      "type": "scaffolding",
+      "thesis": "Full02UTC discovery left141.16MiB free, near128MiB critical bound. Two immutable private public-scan archive pairs were exact byte duplicates; link only same-tick archivedlatest alias to datedcopy. Preserve both paths/bytes/hashes, keep liveworking shortlists independent. No source/financial deletion or trading/daemon code change. Proof:data/deep_review_20261017/work/tick020001_storage_deduplication.json.",
+      "confidence": "high",
+      "prediction": "Both archivedpaths for each pair retain exact recorded SHA and shareinode after replacement, at least9MiB reclaimed; all source receipt checks remain valid. Existingfinancial/trade/prior/policyrecords unaffected.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-21",
+      "tags": [
+        "storage",
+        "source-provenance",
+        "bounded-maintenance"
+      ],
+      "slug": null,
+      "outcome": "Verified two pairs shareinode/nlink2 while original byte hashes and paths remain identical; private archivecopies only. Disk141.16to150.61MiB, observed9.45MiB reclaimed. Liveworking snapshots not linked. Receipts/hashes continue to validate.",
+      "calibration_delta": "Engineering prediction met; no probability/financial PnL forecast or capital exposure.",
+      "lesson": "Deduplicate only immutable exactcopies after byte/hash/device checks. Keep liveworking paths separate; preserve every original archivepath/receipt and avoid edits in place to hardlinked archives.",
+      "resolved_at": "2026-10-21T02:14:07Z"
     }
   ]
 }

@@ -1,49 +1,47 @@
 ---
-reviewed_at: "2026-10-21T00:56:48.818299+00:00"
-valid_until: "2026-10-21T02:00:00Z"
+reviewed_at: "2026-10-21T02:18:05.252766+00:00"
+valid_until: "2026-10-21T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: fc26645c6e51bc9f66dc4cbee41639a121aa8b35ffedbe5def4aa0d7b157c4a4
+  README.md: 1516d86fbf1ea45038c47c6eb3346ea17cb488aee550f4035b7eab31ff8f8521
   strategy/00_philosophy.md: 4941f0493b4a4da67fbf5f7afeea5365cc8245c5e040c5c98c3f9383b2731a88
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 8159eeefb97cc17a24bfdf5b7ff1b44e53224a31d2b1ea87195a35cab5f9a345
   strategy/03_opportunity_method.md: d2347f74b5c7cca7e3b2a8f7591b2406daf2baaf396a97be900f7b675a42468c
   scripts/README.md: 77735bba5d4c921aa3bfc06fb433273406148b255a86f5ab24c05312a53b20af
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 9fd1fb0b9abb08c15ac5d1c543d12088948f9ba929d1464cfeb5432bb210feb8
+  notes/backlog.md: 042f9227202b0c772a2b85974889faf292e6a0b4000f3c21d3aba32473bfd604
   notes/resting_orders.md: c47e7a6ef58fa794af2546afb05e7266cf1c9e8bd9594772b890dd2bbe6bd248
-  notes/journal.md: 10aea88078a50d67866971d8d002e584ed2d48d30a8b6b39a63317dc1429871c
+  notes/journal.md: 8dcee940c436afb37fba21d07652f25183141f51645924a25b4c7dc6d3812cf7
 ---
 ## Current boundary
 
-**405 valued /19 blocked /383 factual /2193 pending;807 base+77 revisions.** No active case;495next.490/492 valued,493/494 named gaps.00:38triggered11-step check complete; no new unique evaluation. [Checkpoint](deep_review_checkpoint.json) · [Phase30](../data/deep_review_20261017/work/goal0030_RESUME.json).
+**405 valued /19 blocked /383 factual /2193 pending;807 base+77 revisions.** No activecase;495next.490/492valued;493/494 named gaps.02UTCfullcheck complete; no uniqueevaluation added. [Checkpoint](deep_review_checkpoint.json) · [Small phase30](../data/deep_review_20261017/work/goal0030_RESUME.json).
 
-**No new PM BUY until600uniquevalued + primary comparative selection, currently null.** No wildcard/add/repost/taker/bundle. Holdings/exits/cancels/redemptions managed.400Telegramaccepted; next500/material/globalblock. Boundedtick stops after publication, no goal/timer/idle continuation. [Policy](entry_review_gate.json).
+**No new PM BUY until600uniquevalued + primary comparative selection, currently null.** No wildcard/add/repost/taker/bundle; manage holdings/exits/cancels/redemptions.400Telegramaccepted/next500or material/globalblock. Boundedtick stops after publication; no goal/timer/idlecontinuation. [Policy](entry_review_gate.json).
 
-## Money and holdings
+## Money, account and risk
 
-**Oct21 00:39:53–00:40:10 canonical195.11 incl5.97fundedgas; trading189.14mid/187.21 indicative fee-netdepth vs170(+10.12%).** SameproducerPM35.18/33.25. Sequential rounded estimates not NAV/proceeds/profit;19.73residual unaudited/VMAPIexcluded. Depth+0.16vs22:35 without trade/flow is mark/liquidity/interest/rounding observation. CSV243 preserves242priorrows/flows;10charttests pass once. [Financial](../research/2026-10-21-0039-financial-snapshot.json).
+**02:02:32–49 canonical196.14 incl5.98fundedgas; trading190.16mid/188.57 indicative fee-netdepth vs170(+10.92%).** SameproducerPM36.20/34.61; sequentialrounded observations not NAV/proceeds/profit. Depth+1.36vs00:39 withouttrade/flow reflects marks/liquidity/interest/rounding;19.73residual unaudited/VMAPIexcluded. CSV244 preserves243priorrows/flows;10charttests pass once. [Financial](../research/2026-10-21-0202-financial-snapshot.json).
 
-00:39:31–32 root authenticatedraw/gzip **0orders/127exhaustedLTEtrades/9allsizepositions**, exacttuples/fulltradecontents matchOct20 22:36;0winningredeemable. OldHouse/Anthropic zero-fill cancellations remainclosed/no repost. WalletpUSD19.251290/committed0.4currentexact-daemon singletons/startAFTERmtime. Initial10routineCLI0+audit1; followup0/CLEAN after actualMIreview.UMA43refreshed0alerts/hurdle4clear0flagged/watchlistnohits/KellynoTRIM/BB6unmodelednoTRIM/Ostium0/cruxquiet. Kelly194.84cache not new195.11/entryauthority. [Root proof](../data/deep_review_20261017/work/tick003800_account_root_recheck.json).
+02:01:46–47 root authenticatedraw/gzip **0orders/127exhaustedLTEtrades/9allsizepositions**, exacttuples/fulltradecontents match00:39;0winningredeemable. House/Anthropic zero-fill cancellations stayclosed/no repost; pUSD19.251290/committed0.11routineCLIactual0;4daemon singletons/currentcode; auditCLEAN/hurdle4clear0flagged/Ostium0/cruxquiet/nooverdue. Requiredwatchlistauto-revet0/nohits. Kelly195.11cache not new196.14/entryauthority; noTRIM/BB6unmodeled. [Root proof](../data/deep_review_20261017/work/tick020001_account_root_recheck.json).
 
-Retain4pilots/noadd.00:39Kimi/OR/MI/Messi netexits1/3.40/1.50/1.25 plusdatedAave3.2247%75d/Messi60d sensitivity belowselectedterminal1.902125/3.65/1.70/2. Broadlowcases favor sale; MI3.8037pp additional adverse reversal. FourGamma/eightbooks/fourcompactcurves rootverified exact0fees, not venuewidepolicy/laterexecutioncertificate. AIoriginal4.45/allpilots7.35canalllose/no independence. WholeClarity29YES>50+29NO>58 normalconditional29/58 orvenue/oracle0 vsseparate00:39tool26.10exit; Oct20 14:02same-ruleproof retained/no leg-only sale. TrumpNO0.33dust/two losing-uncertain claims retained. [Primary](../data/deep_review_20261017/work/tick003800_primary_review.json).
+Retain4pilots/noadd.02:01Kimi/OR/MI/Messi fee-netexits1.10/3.10/1.50/1.25 plusdatedvariableAave3.2247%constant75d/Messi60d belowselectedterminal1.902125/3.65/1.70/2. Broadlowcases favor sale; MI3.8037pp additionalselected adverse reversal. FourGamma/fullrules/eightbooks/fourcompactcurves rootverified exact0fees, not globalpolicy/laterexecutioncertificate. AIoriginal4.45/allpilots7.35canalllose/no independence. WholeClarity29YES>50+29NO>58 normalconditional29/58 orvenue/oracle0 vsseparate02:01tool27.66exit; Oct20 14:02same-ruleproof retained/no leg-only sale. TrumpNO0.33dust/two losing-uncertain claims retained. [Primary](../data/deep_review_20261017/work/tick020001_primary_review.json).
 
-## Michigan daily review
+## Sources and Michigan
 
-Audit flagged14days left. CurrentIA/Rasmussen/official6names/fullrules rootread/hashverified; actualGaussian marginal reproducedOct20 then ages17/7/11 =>**D55.7302%; roundedD56/NO44 unchanged**, selectedNO34/broad20. IA MI mode unknown; Oct12 X-pointer notice has no new MI numbers, six-post publicprofile view not absence proof. Originalpolls IAOct9–10D48/R46,n1200/MOE2.83; RasOct12–14D46/R44,n798/MOE3. New IpsosOct16–19 nationalRV D47/R35 is not MichiganLV. G12 sensitivity D59.7314/selected5NO1.513432 barely exceeds exit+carry1.509814; G12/no-biasD69.7659 favors exit. G8 center remains judgment from FoxD6/YouGovD8-D11; cyclebias−1.5/covariance uncalibrated. Full1.55costloss possible. OnlyMIreview/source/management dates+topmetadata changed; numericpriors unchanged. [Daily judgment](../data/deep_review_20261017/work/tick003800_mi_judgment.json) · [Reproducible model](../research/2026-10-17-deep-review/models/mi_daily_20261021.py).
+**02:02HLE200 restoresvisibility; samecached41236bytes/66models asOct20 21:02.** Moonshotmaxscores.hle41.08/K3calibration44.67/Age3176; cache canmissnewdata, response timestamp not scorepublication. No qualifyingMoonshotAccuracy≥55 observed in returned snapshot; otherlabs55+ not qualifying. KeepKimi10YES34.02125/selected19.02125/broad8–80, not a recovery guarantee. PriorCNNJuly24 explainer was old, no numericHLE/K3.1. [Current source receipts](../data/deep_review_20261017/work/tick020001_resolving_sources.json).
 
-## News and evidence limits
+UMAORpricealertYES27→36.5(+9.5pp), vol24USD122/spread3pp; no resolutionalert. Exactheld5NOexit3.10 lowerthanprior3.40; pricealone not probability. OfficialOROct12complete164.043986T/Oct19partial54.733427T (+5.905083vsOct20 21:02), futureOct26/Nov2/9/16labels absent. No extrapolation/cachedAt-as-usagecutoff; keepNO88/selected73/broadlow20. Google2026GlobalTrendingAthletes route404/ranksUNKNOWN; Messi5YES60/selected40 retained, no country/2025/opinion substitution. Senate latestSep30/#256; HR3633Sep15#234cloture rejected49–50 not qualifying finalpassage/future schedule.
 
-Requiredf17681c8f1d23bae9b91ab6b637e637096d6f40a +7older Kimi alerts and16new rows through00:48:56 reviewed. Root matching CNN original+ABC17sameCNNorigin: **July24UTC/July23local K3 explainer**, no numericHLE/K3.1/calibration result; originalmodifiedsameJulydate. ExactGoogleRSSdestination not observed. Classifier new-release/performance implication not adopted. No rawheadline Telegram. [23dispositions](../data/deep_review_20261017/work/tick003800_alert_decisions.json) · [Article](../data/deep_review_20261017/work/tick003800_kimi_article.json).
+**Michigan actualdaily review00:51: D55.7302%, roundedD56/heldNO44; selectedNO34/broad20.** FreshIA/Ras/official6names/fullrules then read; ages17/7/11. NationalRV D+12 sensitivityG12D59.7314 leaves5NOselected1.513432 vs exit+carry1.509814; no-biasD69.7659 favors exit. G8/bias−1.5 assumptions unfitted; full1.55losspossible. No rerun/date-roll this tick. [Daily evidence/model](../data/deep_review_20261017/work/tick003800_mi_judgment.json).
 
-**00:39 officialHLE403: current Accuracy/calibrationdeltaUNKNOWN.** Last200Oct20 21:02:50/66rows/K3Accuracy41.08/cal44.67/Age3214 remainsdated. Failure notNO/qualifyingscore/freshunchangedproof. KimiYES34.02125/selected19.02125/broad8–80 retained; exactclaim officialMoonshotHLEAccuracy≥55byDec31 23:59ET. Otherlab55+/issuerwithtools56 not qualifying. [API receipts](../data/deep_review_20261017/work/tick003800_kimi_sources.json).
+7newalerts through02:09:51 dispositioned. RootABCoriginalOct20 23:17published/Oct21 01:19modified reports crossoverclaims, expressly no poll measuringcoalitiongains. OldFoxSeptemberLV50D/49R lacksN/numericMOE/question; originalpoll/video notread. ToI403/JTAattribution not originalinterviewproof. Other priorbody gaps retained; no arbitrary numerical vote-effect or zeroeffect claim. [ABCfacts](../data/deep_review_20261017/work/tick020001_MI_news_facts.json) · [Per-ID decisions](../data/deep_review_20261017/work/tick020001_alert_decisions.json).
 
-OROct26–Nov22 futureweeks unobserved; Oct20 21:02Oct12complete164.043986T/Oct19partial48.828344T not extrapolated. Messi needs Google2026GlobalTrendingAthletestop5; opinion/goals/awards not annualrank. PriorMezha/JTA/AP/NYT/fullforum/originalRogers body gaps retained; coalition/credentials headlines no measured vote effect. DatedSenateSep30/#256; HR3633Sep15cloture#234 rejected49–50, not finalpassage. No freshOR/Google/Senatesourcecheck claimed.
+## Discovery and next boundary
 
-## Resume and next boundary
+7freshscans+2offlinebuildersactual0;155batches/2803items root hashes/IDs/criteria verified. Primary998/pagecap→581eligible/top80/501omitted; thin41994/pagecap→3518/top3000/518omitted.9/268nontriggerrows unpacketized; thincohort differs/1173prior-only omissions notclosures. Sports2unpriced+1singlebookquote0.436/−1.1pp. Consistency5000cap/11validated/170unquoted/9failed/0provisionalpositive withinquotedsubset. Otherpage/walkcaps retained; no valuation/rejection/absenceclaim. [Smallindex/rawpointers](../data/deep_review_20261017/work/tick020001_discovery_index.json).
 
-ExistingDEC0160 engineering/DEC0201 attributedGammaNO graded; pendingaftergrading0/nooverdue. DEC0201 singularUMAresolved vs pluralproposed conflict/fullBinance1m unknown; no numerical probability adopted/scored. [Grading facts](../data/deep_review_20261017/work/tick003800_dec0201_byid_followup.json).
+**StorageDEC251:** two immutableprivatearchive duplicatepairs hardlinked; originalpaths/bytes/hashes preserved/liveworking independent.141.16→150.61MiB/+9.45 beforepublication, above128critical/below512warning. Do not edit linkedarchives in place; reversal inproof. Capital0/graded; olderdecisions unchanged. Stalehelper old-taskrewrite restored publishedbytes beforecurrenttask. [Proof](../data/deep_review_20261017/work/tick020001_storage_deduplication.json).
 
-495/497/501/506 terminalleads need fullrules/currentreceipts;499NASA/500Xpartialfacts unpriced,500bindcreationtime.493qualifyingHousehistory/494currentUALquarterinformation gaps remain. Load selected smallunits, not fulljournal/modelarrays. No globalmethodblock.14UTC7scans/81batches1398rows reused withcaps/failures; no newscan/entry/queueadvance/absenceclaim. [Phase30](../data/deep_review_20261017/work/goal0030_RESUME.json).
-
-Next existing02UTC fullcheck/earliermaterialevent; MIdebateOct21 23UTC. WeeklyOct23/monthlyNov12notdue/offchainretired. Disk below512MiBwarning/above128critical; bytecodeoff/receipts retained. No financialwriter/numericprior/policy/daemoncode/TG/goal/timer change. Dispatcher67%used/33%headroom verified withread-onlyprobe; routinefacts delegated, rootjudgedrisk. [11-stepcheck](../research/2026-10-21-003800-checkin.json).
+495/497/501/506 terminalleads need currentfullrules/receipts;499NASA/500Xpartialfacts unpriced,500bindcreationtime;493qualifyingHousehistory/494currentUALquarter gaps. Load selectedsmallunits, not fullhistory. No globalmethodblock. Next existing06UTClight/14UTCfull or earliermaterialevent; MIdebate23UTC. WeeklyOct23/monthlyNov12notdue/offchainretired. No financialwriter/numericprior/policy/flow/researchcount/daemoncode/TG/goal/timer change. Dispatcher68%used/32%headroom; requiredsafetychecks preserved/routinefacts delegated. [11-stepcheck](../research/2026-10-21-020001-checkin.json).
