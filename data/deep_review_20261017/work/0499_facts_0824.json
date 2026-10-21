@@ -1,0 +1,74 @@
+{
+ "case_index": 499,
+ "kind": "facts_only",
+ "saved_utc": "2026-10-21T08:30:12.549588Z",
+ "market_identity": {
+  "review_index": 499,
+  "id": "5180509",
+  "conditionId": "0x29d75600ba2e46ce9dd262e813ee710a64c83c2e0c4edfa025019d00a46ae05b",
+  "question": "Will the US confirm that aliens exist by October 31?",
+  "slug": "will-the-us-confirm-that-aliens-exist-by-october-31-396",
+  "description": "This market will resolve to \"Yes\" if the President of the United States, any member of the Cabinet of the United States, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists by October 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the government of the United States, however a consensus of credible reporting will also be used.",
+  "resolutionSource": "",
+  "outcomes": [
+   "Yes",
+   "No"
+  ],
+  "clobTokenIds": [
+   "114778773863960651133544528372842265754062506228638835147326321969265556602981",
+   "41931473504166418029338631982886893880623259289789668213357613020901641467679"
+  ],
+  "endDate": "2026-11-01T03:59:00Z",
+  "criteria_sha256": "919b3bae79a269ac01c51501b3cbd126cfac86e3bbfa20c939e1e0f6d0e2536a"
+ },
+ "identity_and_window": {
+  "basis": "Programmatic deep_review_ledger.universe()[499] copy; resume rc0. Fresh Gamma passes all nine identity/rule/ordered-token checks.",
+  "gamma_receipt": "http/gamma.receipt.json",
+  "gamma_body_sha256": "70ecd9c0586003df70efce00db76a3737aee374e429b90f77ea3aa6da11f25d7",
+  "createdAt": "2026-10-01T16:16:48.761261Z",
+  "startDate": "2026-10-01T16:16:58Z",
+  "literal_window": "No creation/start-date clause. Sole stated cutoff: October31 2026 23:59 ET; America/New_York conversion matches endDate. Metadata does not add a lower-bound clause."
+ },
+ "capture_root": "logs/deep_review_20261021/case499_0824",
+ "primary_sources": [
+  {
+   "url": "https://science.nasa.gov/uap/faqs/",
+   "retrieved_utc": "2026-10-21T08:27:38.270815Z",
+   "http_status": 200,
+   "body_sha256": "a6ca6fadc90d00f9044369437228be1cce03558e22b7e92ab3ab5b2165fa9021",
+   "receipt": "http/nasa_uap_faq.receipt.json",
+   "fact": "NASA reports no credible extraterrestrial-life evidence and no evidence UAPs are extraterrestrial. It redirects recent-disclosure questions to AARO. This is one agency statement.",
+   "source_time": "Page metadata modified 2026-10-08T15:33:08Z; initial publication 2022-10-21."
+  },
+  {
+   "url": "https://www.nasa.gov/news-release/nasa-says-mars-rover-discovered-potential-biosignature-last-year/",
+   "retrieved_utc": "2026-10-21T08:28:19.512978Z",
+   "http_status": 200,
+   "body_sha256": "100c8ed95ee3236bf75b1f2b29bc4cac5c8fc3f58f65270de59d3f1a99831753",
+   "receipt": "primary_followup/mars_release.receipt.json",
+   "fact": "NASA calls Sapphire Canyon a potential biosignature requiring more data/study before concluding life is present or absent. Sean Duffy calls it the closest NASA has come to Mars-life discovery; alternative explanations remain. Rock encountered July2024; release predates market creation.",
+   "source_time": "2025-09-10; RELEASE 25-061; metadata modified 15:34:02Z."
+  },
+  {
+   "url": "https://science.nasa.gov/blogs/science-news/2026/02/06/nasa-study-non-biologic-processes-dont-fully-explain-mars-organics/",
+   "retrieved_utc": "2026-10-21T08:28:55.771378Z",
+   "http_status": 200,
+   "body_sha256": "75211ad1dde903a420ee216b00e48b7d929931c4326d9a563a7f1b74f97ebf64",
+   "receipt": "curiosity/curiosity_release.receipt.json",
+   "fact": "Modeled non-biological sources did not fully explain Curiosity organic abundance. NASA calls biological origin a hypothesis; data alone could not identify living origin. More study is required before concluding presence or absence of life.",
+   "source_time": "2026-02-06 12:31PM displayed; timezone unspecified; underlying paper reported February4."
+  }
+ ],
+ "preserved_evidence": {
+  "prior_unit": "data/deep_review_20261017/work/0499_facts_1820.json",
+  "prior_unit_sha256": "370e027b505485bfc7558a868eb4fd94b24173df1abd242ca1352e4e806fd590",
+  "note": "Unchanged paraphrase; full frozen wording above. Old NASA body/gzip hashes verified."
+ },
+ "coverage_and_gaps": [
+  "Seven GET bodies/status/bounds saved before parse; verified_receipt_index.json indexes all receipts. Resume stdout/stderr/rc/bounds retained.",
+  "Mars September2025 report likewise requires further study. Can We Find Life linked the Curiosity release. Neither pages nor search snippets establish complete coverage.",
+  "JPL October12 article HTTP403: http/perseverance_oct12.receipt.json. Search snippet remains unverified; no same-URL retry.",
+  "No comprehensive official/agency statement scan; no AARO report body obtained. No claim of universal absence; no probability, ranking or verdict.",
+  "Publication/update/sample dates differ from retrieval/cutoff. Hashes bind supplied HTTP bytes; clocks bound calls, not wire times."
+ ]
+}

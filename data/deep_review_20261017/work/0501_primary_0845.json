@@ -1,0 +1,26 @@
+{
+  "review_index": 501,
+  "market_id": "4367453",
+  "condition_id": "0x902e9f2e34cebb81810ae959e204c640be81b6ec23c1ca3a7ecc19728e9053e8",
+  "criteria_sha256": "0cdecbbba3fbc4d76894c7a81aea39458c0611956a738bff5b6be47dc96a04d4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: Ravens winby4+ points covers\u22123.5; otherwiseBrowns. Oct18 13ET game; overtimeincluded, postponementwaituntilcompletion, totalcancellationwithoutmakeup50/50. OfficialNFLscores resolver. Namedoutcomes notgenericYes/No; no outcomeor retrospectiveforecast inferred fromterminalvenue.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4367453",
+      "observed_utc": "2026-10-21T08:29:02.132225+00:00",
+      "finding": "Rootverified raw/gzip andninefrozenidentitychecks; closedtrue/acceptingOrdersfalse/UMAresolved; both exacttokens unavailable."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactterminalnonacceptingvenue; no artificialretrospective probability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both namedoutcomes terminal/nonaccepting; no currentlawfulroute tothisexactcondition established."
+  },
+  "verdict": "Factualexclusion ofexactterminalvenue, notvaluation/modelrejection/claimedforecastwin. Researchonly.",
+  "reopen_condition": "Verifiedreopening ofthisexactcondition withlawfulroute; othercontracts separatelyreviewed.",
+  "report_markdown": "# Case 0501 \u2014 exact terminal venue\n\n**Factual exclusion; no valuation or trade.**\n\n- Full rule read: Ravens winby4+ points covers\u22123.5; otherwiseBrowns. Oct18 13ET game; overtimeincluded, postponementwaituntilcompletion, totalcancellationwithoutmakeup50/50. OfficialNFLscores resolver. Namedoutcomes notgenericYes/No; no outcomeor retrospectiveforecast inferred fromterminalvenue.\n- Root verified complete Gamma identity, literal criteria, ordered tokens and raw/gzip hashes at2026-10-21T08:29:02.132225+00:00: closed, nonaccepting, UMAresolved. No remaining entry route for either outcome; no independent game result claimed.\n- Reopen only if this exact condition reopens with a lawful route.\n\n[Bound source unit](../../../data/deep_review_20261017/work/terminal0824/case_0501.json).\n"
+}

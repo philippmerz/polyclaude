@@ -64,6 +64,8 @@ At each authorized milestone, report valued, blocked, excluded, and pending coun
 
 ## Resume and safety
 
+Scheduled check-ins bound their own work; they do not revoke this separately authorized finite review or justify marking its goal blocked. After due checks, the owning session returns to research under the native goal lifecycle. A blocked individual case is saved and the next pending case remains eligible. A global block requires a shared obstacle that prevents meaningful progress, not a completed cron tick, a milestone, or one missing source for an individual case. If the native goal is blocked while research remains possible, report the mismatch and continue authorized interactive work; do not fake completion or create a replacement goal. Resuming native automatic continuation uses the user/system goal control.
+
 After interruption or compaction, read the checkpoint and resume packet, then inspect the selected case and latest verified revision. Refresh the compact handoff after material checks or decisions. Historical notes/archive are evidence only; do not replay old trades, snapshots, deadlines, or instructions. Preserve unrelated changes and immutable financial records. This protocol creates no indefinite goal, timer, watcher, or idle continuation.
 Sourceorigination matters: directmanagement interviews carried by crediblepublishers are primaryevidence; issuer-domain-only searches can miss them. An emptynewsroom/filingsearch is boundedcoverage, not proof ofabsence.
 

@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-20T18:50:38.284707+00:00
+Updated: 2026-10-21T08:43:19.721551+00:00
 
-**405 valuations saved; first milestone100:** 405 valued; 19 blocked after in-depth review. 383 factual exclusions separately; 2193 pending.
+**407 valuations saved; first milestone100:** 407 valued; 19 blocked after in-depth review. 386 factual exclusions separately; 2188 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -506,8 +506,13 @@ Each report below is written before moving to the next evaluation. Related contr
 |492|[Will the Republicans win the Wisconsin governor race in 2026?](evaluations/0492.md)|valued|ProvisionalRYES21cselected+0.15on1.05 underprimaryp34; crediblemodelcountercasefailsevencentral. Furthercomparative/sourceworkneeded;600gate/noBUY.|
 |493|[Will Trump be impeached by December 31, 2026?](evaluations/0493.md)|blocked_after_review|Blockedsourcegap afterindepthrule/institutionalreview; nofullvaluationcredit/rejection/globalgoalblock.|
 |494|[United Airlines (UAL) Q3 consolidated passenger load factor 85%+?](evaluations/0494.md)|blocked_after_review|Case-specific information gap; not a rejection, completed valuation, global block or trade.|
+|495|[Wisconsin vs. UCLA](evaluations/0495.md)|excluded_factual|Factualexclusionexactterminalvenue; not valuation, modelrejection or claimed forecastwin. Researchonly/no financialwriter.|
 |496|[NVIDIA (NVDA) Q3 adjusted gross margin 77%+?](evaluations/0496.md)|valued|Both sides valued with charge/mix/precision tails; no captured ask clears ordinary reserve|
+|497|[Will Ethereum reach $2,500 on October 17?](evaluations/0497.md)|excluded_factual|Factualexclusionexactterminalvenue; not valuation, modelrejection or claimed forecastwin. Researchonly/no financialwriter.|
 |498|[Will the Republicans win the North Carolina Senate race in 2026?](evaluations/0498.md)|valued|YES positivecentral but fails10ppreserve; NOnegativecentral. Evidencewatch/futureYES1c x100 orNO<=.76 x10onlywithfreshallgates.|
+|499|[Will the US confirm that aliens exist by October 31?](evaluations/0499.md)|valued|Speculative YES central upside fails selected uncertainty case; NO centralnegative. No supported entry or live trading.|
+|500|[Will Jack Doherty post again on X by October 31?](evaluations/0500.md)|valued|ProvisionalYEScentral/selectedpaperedge, reversesundercrediblegenuine-restrictioncountermodel; no financialaction or entrycertificate.|
+|501|[Spread: Ravens (-3.5)](evaluations/0501.md)|excluded_factual|Factualexclusion ofexactterminalvenue, notvaluation/modelrejection/claimedforecastwin. Researchonly.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

@@ -1,0 +1,14 @@
+{
+  "verified_utc": "2026-10-21T08:39:23.051314+00:00",
+  "review_index": 499,
+  "status": "valued",
+  "report_sha256": "ca40c614582cc5c16180597c9aa25601b01cfb4ebaee39f05bb7f60bfc30c17b",
+  "counts": {
+    "completed_valuations": 406,
+    "blocked_after_in_depth_review": 19,
+    "factual_exclusions": 385,
+    "pending": 2190
+  },
+  "checkpoint_sha256": "e4bb19f283668798e017b0821bf46a57bfa5f1fdd21e5c386fded38dad06cda1",
+  "no_financial_execution": true
+}

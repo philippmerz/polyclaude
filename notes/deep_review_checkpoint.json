@@ -1,20 +1,15 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-20T18:50:38.284707+00:00",
+  "updated_utc": "2026-10-21T08:43:19.721551+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 424,
-  "completed_valuations": 405,
+  "completed_in_depth_reviews": 426,
+  "completed_valuations": 407,
   "blocked_after_in_depth_review": 19,
-  "factual_exclusions": 383,
-  "pending": 2193,
+  "factual_exclusions": 386,
+  "pending": 2188,
   "active_indices": [],
   "next_pending_indices": [
-    495,
-    497,
-    499,
-    500,
-    501,
     502,
     503,
     504,
@@ -39,13 +34,18 @@
     524,
     526,
     527,
-    528
+    528,
+    529,
+    530,
+    531,
+    532,
+    533
   ],
-  "base_records": 807,
+  "base_records": 812,
   "base_record_counts": {
-    "valued": 403,
-    "blocked_after_review": 21,
-    "excluded_factual": 383
+    "excluded_factual": 386,
+    "valued": 405,
+    "blocked_after_review": 21
   },
   "revisions_written": 77,
   "milestone": 100,
@@ -58,8 +58,8 @@
   "protocol": "research/2026-10-17-deep-review/PROTOCOL.md",
   "original_frozen_rules": "research/2026-10-17-primary-market-review-rules.jsonl.gz",
   "original_rules_sha256": "d28a80f9828e92d0f8241ad628bbc068cb787cfd1aeac04107eb627b875f0c9c",
-  "evaluations_written": 807,
-  "ledger_sha256": "12ca9f5b34e815d83df7d3a9789b834320b7a8407bf3ea937ede8f76289f2e92",
+  "evaluations_written": 812,
+  "ledger_sha256": "d4e29020a7ca70bd68bf900bac36355303b19ef3b804a28c3b812187af535f6e",
   "revisions_sha256": "57fc358e8766f7bf2a19ba75e165ce762d31380e148b8654fe200b396d03acfb",
   "resume": "Read PROTOCOL and progress; validate index/record identities. Resume active work first, then next pending. Preserve all prior case records; append explicit revisions for changed evidence. Never turn blocked/unpriced into rejected."
 }

@@ -1,0 +1,39 @@
+{
+  "case_count": 4,
+  "cases": [
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 495,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal0824/case_0495.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 497,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal0824/case_0497.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 501,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal0824/case_0501.json"
+    },
+    {
+      "classification": "terminal_candidate",
+      "http_status": 200,
+      "identity_exact": true,
+      "review_index": 506,
+      "terminal_candidate": true,
+      "unit_path": "data/deep_review_20261017/work/terminal0824/case_0506.json"
+    }
+  ],
+  "created_utc": "2026-10-21T08:29:02.189842+00:00",
+  "schema": "deep_review_terminal_status_batch.v1"
+}

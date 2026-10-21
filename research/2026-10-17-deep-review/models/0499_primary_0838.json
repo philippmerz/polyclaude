@@ -1,0 +1,43 @@
+{
+  "review_index": 499,
+  "created_utc": "2026-10-21T08:37:37.328816+00:00",
+  "author": "primary Astra; research only",
+  "p_yes": 0.03,
+  "low": 0.005,
+  "high": 0.15,
+  "method": "Judgmental, mutually exclusive event-path probability allocation; not a fitted frequency or confidence interval. Central rounded to whole percentage points.",
+  "paths": [
+    {
+      "path": "Scientific confirmation with qualifying government statement",
+      "probability": 0.003,
+      "basis": "NASA UAP FAQ updated Oct8 has no credible ET evidence; Mars releases explicitly require further study; about10.8 days remain."
+    },
+    {
+      "path": "Definitive political/military/agency assertion without established scientific proof, absent first path",
+      "probability": 0.017,
+      "basis": "Literal rule requires statement, not independent proof; wide set of officials and active UAP-disclosure attention leaves statement risk. Assigned tail, no calibrated event rate."
+    },
+    {
+      "path": "Already-made/missed or ambiguous statement accepted YES, absent earlier paths",
+      "probability": 0.01,
+      "basis": "No lower-bound clause; historical/political literal ambiguity; AARO direct FAQ403 and no exhaustive all-official survey. Captured WhiteHouse page explicitly means immigration and NASA biosignatures remain potential, so those observed texts are not central YES evidence."
+    },
+    {
+      "path": "No qualifying YES resolution",
+      "probability": 0.97
+    }
+  ],
+  "sensitivity": "Broad YES0.5\u201315% represents low-statement vs active-disclosure/loose-adjudication regimes, not observed frequencies. A strict science-only model would understate literal risk. Near date does not make NO risk-free. Any definitive qualifying new statement overwhelms this baseline.",
+  "source_units": [
+    {
+      "path": "data/deep_review_20261017/work/0499_facts_0824.json",
+      "sha256": "6603df42da92e5ef2927f23bac1cec28e221bef8d36364437bd3e19a4b1ae117"
+    },
+    {
+      "path": "logs/deep_review_20261021/case499_0836_primary/verification.json",
+      "sha256": "8abecd9c42c94e132aeb527a6404c713685e12674afbbfe3fa59973267ffce5f"
+    }
+  ],
+  "entry_stress": "5pp absolute tail-monitoring reserve => NO92%, YES0%; K=5 measured-tail licence unavailable because the tail is a judgment, not a measured resolving series. No execution under current model or600-review restriction.",
+  "quote_independence": "Primary has not inspected outcome prices from current helper Gamma or CLOB before saving this model; helper Gamma identity was parsed but prices not printed. This is a current-author attestation, not proof that no earlier session encountered quotes."
+}

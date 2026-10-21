@@ -1,0 +1,99 @@
+{
+  "schema": "deep_review.case_facts_supplement.v1",
+  "case_index": 500,
+  "prepared_utc": "2026-10-21T08:38:09.973680+00:00",
+  "identity": {
+    "market_id": "5620530",
+    "condition_id": "0x8dd87b12575f6d1ff9084aff987f94365c696f9b922bfaf889068c4e2ea5cca3",
+    "question": "Will Jack Doherty post again on X by October 31?",
+    "slug": "will-jack-doherty-post-again-on-x-by-october-31",
+    "outcomes": [
+      "Yes",
+      "No"
+    ],
+    "tokens": [
+      "12655868663242566079664198067292022817461186415775842703518620095565379054169",
+      "65553709413326171068605908113247285812546776065190189240963226378211589955244"
+    ],
+    "criteria_sha256": "3bf09e963d927da4ecda0f35b2f239e5e088179b965087e276f3af866a2f0160"
+  },
+  "prior": {
+    "path": "data/deep_review_20261017/work/0500_facts_0824.json",
+    "sha256": "6f8c4947794ec9c5bcb6c06928ca570c7de3f7eb79eaf9b7438adc18cf73e006",
+    "preserved": true
+  },
+  "scope": "Bounded public-source search for activity after2026-10-12T18:19:05.356801Z. Exactly3search queries and2GETs; no login, pagination or private data.",
+  "search_queries": [
+    "site:x.com/dohertyjackk/status \"Oct\" \"2026\" \"13\"",
+    "site:x.com/dohertyjackk/status after:2026-10-12 before:2026-10-22",
+    "\"dohertyjackk\" \"October 2026\""
+  ],
+  "results": [
+    "First two web queries returned irrelevant X help/account pages; third returned secondary reports embedding or discussing the previously verified Oct10 post. No explicit post URL after creation was identified. Search coverage is incomplete.",
+    "Public X latest-search GET for from:dohertyjackk since:2026-10-12 until:2026-10-22 returned307, zero body, redirect to /i/jf/onboarding/web with mode=login. Redirect not followed. Query cannot verify qualifying replies, reposts or originals.",
+    "Downloaded original Oct10 post image from its captured og:image URL; HTTP200,72318bytes, complete below350000byte cap. Visual inspection: Doherty says he signed a Shuffle casino contract without fully reading it; it bars online posting and is being enforced; he is working with his lawyer to change it; he anticipates a hiatus and hopes to return soon.",
+    "Image itself displays October9,2026 at9:08PM without timezone; original X status metadata remains Oct10,2026 01:18:08UTC. Neither image retrieval nor later search reporting constitutes a new in-window post."
+  ],
+  "primary_note_limits": "First-party public statement, marked Paid partnership on original post. The contract itself, fee, duration and legal enforceability are not established by this image. Secondary six-month claims were not verified against an issuer original and are not adopted.",
+  "conclusion": "No qualifying after-creation activity established by this bounded pass. This is unresolved occurrence, not evidence of absence or a forecast.",
+  "sources": {
+    "supplement_web01": {
+      "receipt": "logs/deep_review_20261021/case500_0824/supplement_web01/search.receipt.json",
+      "raw_sha256": "b64a4a4d9a61649ac70e328c3761979f990228e1ca411ea9550bfc035481c6e9",
+      "bytes": 17557,
+      "status": null,
+      "window": [
+        "2026-10-21T08:35:40.768691Z",
+        "2026-10-21T08:35:51.495720+00:00"
+      ]
+    },
+    "supplement_web02": {
+      "receipt": "logs/deep_review_20261021/case500_0824/supplement_web02/search.receipt.json",
+      "raw_sha256": "c54245e252d96beb85b4a87d4dcaa66170d77c97837f25b9c0368b570fc95d30",
+      "bytes": 15491,
+      "status": null,
+      "window": [
+        "2026-10-21T08:36:21.698557Z",
+        "2026-10-21T08:36:23.369847+00:00"
+      ]
+    },
+    "supplement_note_image": {
+      "receipt": "logs/deep_review_20261021/case500_0824/supplement_note_image/supplement_note_image.receipt.json",
+      "raw_sha256": "c6e4083443ec0abbd3c3536003578b95a0531b1b5e35e469544200deacfda890",
+      "bytes": 72318,
+      "status": 200,
+      "window": [
+        "2026-10-21T08:36:56.531643Z",
+        "2026-10-21T08:36:56.633926Z"
+      ]
+    },
+    "supplement_x_search": {
+      "receipt": "logs/deep_review_20261021/case500_0824/supplement_x_search/supplement_x_search.receipt.json",
+      "raw_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "status": 307,
+      "window": [
+        "2026-10-21T08:36:56.532479Z",
+        "2026-10-21T08:36:56.761198Z"
+      ]
+    }
+  },
+  "capture_limits": "Web receipts are provider-result JSON serialization, not source bodies or raw HTTP. GET receipts bind supplied HTTP decoded bytes; both capped GETs completed without truncation. Times are invocation bounds. No forecast, ranking, ledger/account edit or trade.",
+  "root_verification": {
+    "verified_utc": "2026-10-21T08:40:44.720569+00:00",
+    "visual_image_read": true,
+    "all_receipt_hashes": true,
+    "all_nine_gamma_fields": {
+      "market_id": true,
+      "condition_id": true,
+      "question": true,
+      "description": true,
+      "slug": true,
+      "resolutionSource": true,
+      "endDate": true,
+      "outcomes": true,
+      "token_ids": true
+    },
+    "note": "No contract original; paid-partnership context raises marketing-stunt possibility, not proven deceit or enforceability."
+  }
+}

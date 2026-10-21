@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October21
 
-**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current405valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current407valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
 
-**405 valued /19 blocked /383 factual /2,193 pending;807 base+77 revisions.** Cases490/492 add two valuations: LeBron USPeople tail upside fails selected cases; Wisconsin Republican governor34% is provisional and reverses under a credible competing model.493impeachment and494UAL load factor have named source gaps, not rejections. No active case;495 is next. The historical UAL39% scenario is not an adopted current forecast. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase30](data/deep_review_20261017/work/goal0030_RESUME.json) · [492review](research/2026-10-17-deep-review/evaluations/0492.md) · [494gap](research/2026-10-17-deep-review/evaluations/0494.md).
+**407 valued /19 blocked /386 factual /2,188 pending;812 base+77 revisions.** Interactive Astra research saved495/497/501 terminal exclusions and499/500 valuations individually; no live trading.500DohertyYES36% versus24c is provisional: genuine-restriction20.5% countermodel removes its edge. Native goal remains blocked; scheduled-scope wording clarified, user/system Resume required for automatic continuation. Next502/noactivecase. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase31](data/deep_review_20261017/work/goal0031_RESUME.json) · [Stall diagnosis](research/2026-10-21-goal-stall-diagnosis.md) · [500review](research/2026-10-17-deep-review/evaluations/0500.md).
 
 **Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids were canceled zero-fill15:48; final15:55 reconciliation retired their reservations. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
 
@@ -92,7 +92,7 @@ The required alert recirculates a September Anthropic allegation of Kimi request
 
 07:10 exact Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus the separate tool's $27.03 exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick070925_hold_exit_math.json).
 
-BUY pause405/600 plus comparative selection stays; completed02UTC discovery retains all limits. No routine Telegram. Next10UTC light/14UTC full or earlier material event; Michigan debate23UTC. [Last full check](research/2026-10-21-070925-checkin.json).
+BUY pause407/600 (research advanced after this check) plus comparative selection stays; completed02UTC discovery retains all limits. No routine Telegram. Next10UTC light/14UTC full or earlier material event; Michigan debate23UTC. [Last full check](research/2026-10-21-070925-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

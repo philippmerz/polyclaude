@@ -1,0 +1,26 @@
+{
+ "review_index": 495,
+ "market_id": "5343891",
+ "condition_id": "0xeee07559885cad65cdef04c98036dc2944fd90e98ea471ea6dfca8797283d698",
+ "criteria_sha256": "5e0275ab9e7d09a432c04df98f8af2a1acd4625f95207583ecc84b52f3be867b",
+ "status": "excluded_factual",
+ "literal_analysis": "Full rule read: Wisconsin vsUCLA Oct17 13:00ET winner; overtimeincluded; tie50/50; postponementwaitsforcompletion; outrightcancellationwithoutmakeup50/50. OfficialNCAA resolver. Terminal venue state, not a claimed sports result.",
+ "evidence": [
+  {
+   "url": "https://gamma-api.polymarket.com/markets/5343891",
+   "observed_utc": "2026-10-21T08:29:02.012475+00:00",
+   "finding": "Rootverified raw/gzip hashes and every frozen identity/fullrule/ordered-token field; closedtrue/acceptingOrdersfalse/UMAresolved. Both outcome routes unavailable at this venue. No eventwinner inferred from terminal marker."
+  }
+ ],
+ "forecast": {
+  "not_valued": true,
+  "reason": "Exact terminalvenue is objectively unavailable; no artificial retrospective probability."
+ },
+ "economics": {
+  "both_sides_considered": true,
+  "route": "Both frozen outcomes terminal/nonaccepting; no current entry ticket or alternative lawfulroute to this exactcondition established."
+ },
+ "verdict": "Factualexclusionexactterminalvenue; not valuation, modelrejection or claimed forecastwin. Researchonly/no financialwriter.",
+ "reopen_condition": "Onlyverifiedreopeningofthisexactcondition witha lawfulroute; differentcondition needsownreview.",
+ "report_markdown": "# Case 0495 — exact terminal venue\n\n**Factual exclusion; no valuation or trade.**\n\n- Full rule read: Wisconsin vsUCLA Oct17 13:00ET winner; overtimeincluded; tie50/50; postponementwaitsforcompletion; outrightcancellationwithoutmakeup50/50. OfficialNCAA resolver. Terminal venue state, not a claimed sports result.\n- Root verified complete Gamma identity, criteria, ordered tokens and raw/gzip hashes at 2026-10-21T08:29:02.012475+00:00: closed, nonaccepting and UMA resolved. Both sides unavailable; no event outcome or ex ante probability inferred.\n- Reopen only if this exact condition reopens with a lawful route.\n\n[Bound source unit](../../../data/deep_review_20261017/work/terminal0824/case_0495.json).\n"
+}

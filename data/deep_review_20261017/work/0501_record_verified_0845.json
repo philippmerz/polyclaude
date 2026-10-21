@@ -1,0 +1,15 @@
+{
+  "verified_utc": "2026-10-21T08:43:19.914741+00:00",
+  "review_index": 501,
+  "status": "excluded_factual",
+  "report_sha256": "9c15c80283f023f199f6d7a052b551655c1efc8b74538d2a2f9292c7380a0de9",
+  "source_raw_sha256": "0c3efe6adb501a967b33d71625e8edf34b037f1df9a670e35099c92559c673cf",
+  "counts": {
+    "completed_valuations": 407,
+    "blocked_after_in_depth_review": 19,
+    "factual_exclusions": 386,
+    "pending": 2188
+  },
+  "checkpoint_sha256": "140feeee276b7362d2b878381801ab3828c52ac08de26c6a17a3f417df8db9be",
+  "no_financial_execution": true
+}

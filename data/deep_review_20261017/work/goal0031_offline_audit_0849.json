@@ -1,0 +1,36 @@
+{
+  "verified_utc": "2026-10-21T08:49:05.455222+00:00",
+  "base_records": 812,
+  "revisions": 77,
+  "counts": {
+    "valued": 407,
+    "excluded_factual": 386,
+    "blocked_after_review": 19
+  },
+  "pending": 2188,
+  "next_index": 502,
+  "no_active": true,
+  "protected_files_unchanged": {
+    "docs/performance.csv": true,
+    "docs/contributions.csv": true,
+    "notes/capital_ledger.md": true,
+    "notes/entry_review_gate.json": true,
+    "notes/portfolio_kelly_priors.json": true,
+    "notes/resting_orders.md": true,
+    "notes/decisions.json": true,
+    "research/2026-10-17-deep-review/revisions.jsonl": true,
+    "research/2026-10-17-primary-market-review-rules.jsonl.gz": true
+  },
+  "append_only_prefixes_intact": {
+    "notes/journal.md": true,
+    "research/2026-10-17-deep-review/evaluations.jsonl": true
+  },
+  "no_financial_execution": true,
+  "native_goal": "Stillblocked; agentcannotresume; no state mutation",
+  "test_receipts": "logs/deep_review_20261021/goal_scope_tests0824",
+  "telegram": {
+    "accepted_message_id": 1285,
+    "returncode": 0,
+    "receipt": "logs/deep_review_20261021/research_resume0824_root/telegram_goal_progress/result.json"
+  }
+}

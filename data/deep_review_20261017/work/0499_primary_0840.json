@@ -1,0 +1,269 @@
+{
+  "review_index": 499,
+  "market_id": "5180509",
+  "condition_id": "0x29d75600ba2e46ce9dd262e813ee710a64c83c2e0c4edfa025019d00a46ae05b",
+  "criteria_sha256": "919b3bae79a269ac01c51501b3cbd126cfac86e3bbfa20c939e1e0f6d0e2536a",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \"Yes\" if the President of the United States, any member of the Cabinet of the United States, any member of the Joint Chiefs of Staff, or any US federal agency definitively states that extraterrestrial life or technology exists by October 31, 2026, 11:59 PM ET. Otherwise, this market will resolve to \"No\".\n\nThe primary resolution source for this market will be official information from the government of the United States, however a consensus of credible reporting will also be used. No creation lower bound; any qualifying statement, not scientific proof. Metadata is not a new clause.",
+  "evidence": [
+    {
+      "url": "https://science.nasa.gov/uap/faqs/",
+      "observed_utc": "2026-10-21T08:27:38.270815Z",
+      "finding": "NASA reports no credible extraterrestrial-life evidence and no evidence UAPs are extraterrestrial. It redirects recent-disclosure questions to AARO. This is one agency statement."
+    },
+    {
+      "url": "https://www.nasa.gov/news-release/nasa-says-mars-rover-discovered-potential-biosignature-last-year/",
+      "observed_utc": "2026-10-21T08:28:19.512978Z",
+      "finding": "NASA calls Sapphire Canyon a potential biosignature requiring more data/study before concluding life is present or absent. Sean Duffy calls it the closest NASA has come to Mars-life discovery; alternative explanations remain. Rock encountered July2024; release predates market creation."
+    },
+    {
+      "url": "https://science.nasa.gov/blogs/science-news/2026/02/06/nasa-study-non-biologic-processes-dont-fully-explain-mars-organics/",
+      "observed_utc": "2026-10-21T08:28:55.771378Z",
+      "finding": "Modeled non-biological sources did not fully explain Curiosity organic abundance. NASA calls biological origin a hypothesis; data alone could not identify living origin. More study is required before concluding presence or absence of life."
+    },
+    {
+      "url": "https://www.aaro.mil/FAQ/",
+      "observed_utc": "2026-10-21T08:36:39.219645Z",
+      "finding": "HTTP403; evidence unavailable, no absence inference"
+    },
+    {
+      "url": "https://www.whitehouse.gov/aliens/",
+      "observed_utc": "2026-10-21T08:36:39.465979Z",
+      "finding": "HTTP200; immigration semantics only"
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.03,
+    "low": 0.005,
+    "high": 0.15,
+    "actual_entry_reserve_pp": 5,
+    "method": "Judgmental, mutually exclusive event-path probability allocation; not a fitted frequency or confidence interval. Central rounded to whole percentage points.",
+    "reasoning": "Broad YES0.5\u201315% represents low-statement vs active-disclosure/loose-adjudication regimes, not observed frequencies. A strict science-only model would understate literal risk. Near date does not make NO risk-free. Any definitive qualifying new statement overwhelms this baseline.",
+    "model": "research/2026-10-17-deep-review/models/0499_primary_0838.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0499_quotes_0838.json",
+    "quote_file_sha256": "4961c7d2f42daf369a42f39edf43dec8d893db1d7dfbe9b2dd29900b060928ef",
+    "quote_capture_utc": "2026-10-21T08:37:37.817924+00:00",
+    "gamma_received_utc": "2026-10-21T08:37:37.672808+00:00",
+    "hypothetical_gross_shares": 5.0,
+    "horizon_days": 14.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 5.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.03,
+        "selected_stress_probability": 0,
+        "best_bid": 0.004,
+        "best_ask": 0.005,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792571846656",
+        "book_received_utc": "2026-10-21T08:37:37.817072+00:00",
+        "book_age_seconds_at_receipt": 11.161072015762329,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.025,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.005
+              }
+            ],
+            "net": 0.025
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 0.02,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.004
+              }
+            ],
+            "net": 0.02
+          }
+        },
+        "taker_cost_usd": 0.025,
+        "central_expected_profit_usd": 0.125,
+        "selected_stress_profit_usd": -0.025,
+        "break_even_before_carry": 0.005,
+        "break_even_constant_carry": 0.005006090442134969,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.97,
+        "selected_stress_probability": 0.9199999999999999,
+        "best_bid": 0.995,
+        "best_ask": 0.996,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792571846656",
+        "book_received_utc": "2026-10-21T08:37:37.817072+00:00",
+        "book_age_seconds_at_receipt": 11.161072015762329,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.98,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.996
+              }
+            ],
+            "net": 4.98
+          },
+          "bids": {
+            "complete": true,
+            "filled": 5.0,
+            "gross": 4.975,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.995
+              }
+            ],
+            "net": 4.975
+          }
+        },
+        "taker_cost_usd": 4.98,
+        "central_expected_profit_usd": -0.13000000000000078,
+        "selected_stress_profit_usd": -0.3800000000000008,
+        "break_even_before_carry": 0.9960000000000001,
+        "break_even_constant_carry": 0.9972132160732858,
+        "current_execution_authorization": false
+      }
+    },
+    "side_appropriate_ticket": {
+      "Yes": {
+        "gross_shares": 200,
+        "snapshot_economics": {
+          "probability": 0.03,
+          "selected_stress_probability": 0,
+          "best_bid": 0.004,
+          "best_ask": 0.005,
+          "minimum_shares": "5",
+          "tick_size": "0.001",
+          "book_timestamp": "1792571846656",
+          "book_received_utc": "2026-10-21T08:37:37.817072+00:00",
+          "book_age_seconds_at_receipt": 11.161072015762329,
+          "passed_180s_at_receipt": true,
+          "walks": {
+            "asks": {
+              "complete": true,
+              "filled": 200.0,
+              "gross": 1.0,
+              "fee": 0.0,
+              "fills": [
+                {
+                  "shares": 200.0,
+                  "price": 0.005
+                }
+              ],
+              "net": 1.0
+            },
+            "bids": {
+              "complete": true,
+              "filled": 200.0,
+              "gross": 0.8,
+              "fee": 0.0,
+              "fills": [
+                {
+                  "shares": 200.0,
+                  "price": 0.004
+                }
+              ],
+              "net": 0.8
+            }
+          },
+          "taker_cost_usd": 1.0,
+          "central_expected_profit_usd": 5.0,
+          "selected_stress_profit_usd": -1.0,
+          "break_even_before_carry": 0.005,
+          "break_even_constant_carry": 0.005006090442134969,
+          "current_execution_authorization": false
+        }
+      },
+      "No": {
+        "gross_shares": 5,
+        "snapshot_economics": {
+          "probability": 0.97,
+          "selected_stress_probability": 0.9199999999999999,
+          "best_bid": 0.995,
+          "best_ask": 0.996,
+          "minimum_shares": "5",
+          "tick_size": "0.001",
+          "book_timestamp": "1792571846656",
+          "book_received_utc": "2026-10-21T08:37:37.817072+00:00",
+          "book_age_seconds_at_receipt": 11.161072015762329,
+          "passed_180s_at_receipt": true,
+          "walks": {
+            "asks": {
+              "complete": true,
+              "filled": 5.0,
+              "gross": 4.98,
+              "fee": 0.0,
+              "fills": [
+                {
+                  "shares": 5.0,
+                  "price": 0.996
+                }
+              ],
+              "net": 4.98
+            },
+            "bids": {
+              "complete": true,
+              "filled": 5.0,
+              "gross": 4.975,
+              "fee": 0.0,
+              "fills": [
+                {
+                  "shares": 5.0,
+                  "price": 0.995
+                }
+              ],
+              "net": 4.975
+            }
+          },
+          "taker_cost_usd": 4.98,
+          "central_expected_profit_usd": -0.13000000000000078,
+          "selected_stress_profit_usd": -0.3800000000000008,
+          "break_even_before_carry": 0.9960000000000001,
+          "break_even_constant_carry": 0.9972132160732858,
+          "current_execution_authorization": false
+        }
+      }
+    },
+    "limitations": "Five-share YES2.5c walk is reference math, not a usable taker ticket; explicit200YES $1 ticket supplied. No funding-transfer/gas/venue/account or minimum-notional acceptance certified. Fourteen-day constant carry allows ~3days settlement buffer beyond10.8day criterion cutoff, not guaranteed settlement. Maker fills could follow new official evidence and destroy the assumed edge; no passive quote recommendation."
+  },
+  "verdict": "Speculative YES central upside fails selected uncertainty case; NO centralnegative. No supported entry or live trading.",
+  "reopen_condition": "Qualifying statement/disclosure catalyst or better-evidenced tail/current economics; fresh full gates and600comparison required.",
+  "report_markdown": "# Case 0499 \u2014 US extraterrestrial confirmation by October 31\n\n**Valued: YES 3%, broad 0.5\u201315%; speculative YES paper upside, no supported entry.** Research only under Astra. The 600-valuation/comparative-selection entry restriction also remains binding.\n\n- Literal rule: a definitive statement that extraterrestrial life **or technology exists** by Oct31 23:59 ET from the President, any Cabinet/Joint Chiefs member or federal agency. It does not require scientific proof, and gives no creation-date lower bound. Official government information is primary; credible-reporting consensus can resolve. Ordinary UAP imagery, potential biosignatures and immigration uses of \u201calien\u201d do not centrally satisfy it; loose interpretation remains a tail.\n- NASA\u2019s Oct8-updated [FAQ](https://science.nasa.gov/uap/faqs/) reports no credible life/UAP extraterrestrial evidence. Its [Sep2025 Mars finding](https://www.nasa.gov/news-release/nasa-says-mars-rover-discovered-potential-biosignature-last-year/) and [Feb2026 organic-material study](https://science.nasa.gov/blogs/science-news/2026/02/06/nasa-study-non-biologic-processes-dont-fully-explain-mars-organics/) require further work before concluding life exists. Root verified the saved bodies. The current [White House page](https://www.whitehouse.gov/aliens/) explicitly discusses immigration; AARO FAQ retrieval returned403. No comprehensive all-official statement survey or fresh AARO report was obtained.\n- Independent pre-CLOB judgment allocates 0.3pp to scientific confirmation, 1.7pp to another qualifying assertion, 1pp to missed/ambiguous accepted statements, mutually exclusive by construction. These are subjective scenario weights, not calibrated frequencies. A science-only forecast misses the actual contract. Central NO97%; default tail-monitoring reserve gives NO92% and YES0%. Measured-tail K=5 treatment is unavailable. Broad-low YES0.5% already loses after carry at the observed ask.\n- At08:37:37UTC, exact Gamma/compact zero-fee schedule and books hash-bind; both books11.16s old at receipt. **200YES at0.005 cost $1, fee0: central expected gain $5, selected-stress loss $1; immediate bid proceeds $0.80. FiveNO at0.996 cost $4.98: central loss $0.13, selected loss $0.38.** Both walks complete; smaller5YES $0.025 example is not the intended ticket. Dated Aave3.2247% held constant14days raises YES breakeven to0.500609% and NO to99.7213%, before gas/funding/other operational costs. Longer resolution delay adds cost.\n- Avoid NO: central economics already negative. YES is a tail hypothesis, not verified cheap risk; a genuine official assertion would collapse maker adverse-selection assumptions. Full $1 loss possible. Similar UAP/deadline bets share one event, not independent edges; no direct held alien exposure in the dated portfolio, but common venue/oracle/cash risk remains. Compare speculative candidates and lawful cash alternatives at600 with fresh inputs, not by nominal expected-return multiple.\n- Reopen on a qualifying official statement, announced disclosure with exact wording, changed resolving evidence, or a materially changed price backed by a better-supported tail estimate. This quote is a research observation, never execution authorization.\n\n[Model](../models/0499_primary_0838.json) \u00b7 [Facts](../../../data/deep_review_20261017/work/0499_facts_0824.json) \u00b7 [Official-page check](../../../data/deep_review_20261017/work/0499_primary_sources_0836.json) \u00b7 [Quotes](../../../data/deep_review_20261017/work/0499_quotes_0838.json) \u00b7 [200-share walk](../../../data/deep_review_20261017/work/0499_economics_200shares_0839.json).\n"
+}

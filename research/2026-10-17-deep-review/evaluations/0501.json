@@ -1,0 +1,30 @@
+{
+  "review_index": 501,
+  "market_id": "4367453",
+  "condition_id": "0x902e9f2e34cebb81810ae959e204c640be81b6ec23c1ca3a7ecc19728e9053e8",
+  "criteria_sha256": "0cdecbbba3fbc4d76894c7a81aea39458c0611956a738bff5b6be47dc96a04d4",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: Ravens winby4+ points covers−3.5; otherwiseBrowns. Oct18 13ET game; overtimeincluded, postponementwaituntilcompletion, totalcancellationwithoutmakeup50/50. OfficialNFLscores resolver. Namedoutcomes notgenericYes/No; no outcomeor retrospectiveforecast inferred fromterminalvenue.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/4367453",
+      "observed_utc": "2026-10-21T08:29:02.132225+00:00",
+      "finding": "Rootverified raw/gzip andninefrozenidentitychecks; closedtrue/acceptingOrdersfalse/UMAresolved; both exacttokens unavailable."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactterminalnonacceptingvenue; no artificialretrospective probability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both namedoutcomes terminal/nonaccepting; no currentlawfulroute tothisexactcondition established."
+  },
+  "verdict": "Factualexclusion ofexactterminalvenue, notvaluation/modelrejection/claimedforecastwin. Researchonly.",
+  "reopen_condition": "Verifiedreopening ofthisexactcondition withlawfulroute; othercontracts separatelyreviewed.",
+  "evaluated_utc": "2026-10-21T08:43:19.365722+00:00",
+  "question": "Spread: Ravens (-3.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 501,
+  "report_sha256": "9c15c80283f023f199f6d7a052b551655c1efc8b74538d2a2f9292c7380a0de9"
+}

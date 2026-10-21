@@ -1,0 +1,43 @@
+{
+  "review_index": 500,
+  "created_utc": "2026-10-21T08:40:44.721111+00:00",
+  "author": "primary Astra research only",
+  "p_yes": 0.36,
+  "low": 0.1,
+  "high": 0.75,
+  "scenario_raw_p": 0.355,
+  "method": "Unfitted scenario mixture; rounded central36%. No historical frequency calibration and no extrapolation of ordinary pre-hiatus cadence.",
+  "scenarios": [
+    {
+      "state": "Genuine restriction remains principal constraint",
+      "weight": 0.6,
+      "p_qualifying": 0.1,
+      "reason": "Primary says restriction enforced and seeking lawyer fix; observed bounded latest original stillOct10. Any reply/repost, deal change or noncompliance could qualify; no contract body/duration verified."
+    },
+    {
+      "state": "Promotional hiatus or rapidly resolved restriction",
+      "weight": 0.35,
+      "p_qualifying": 0.7,
+      "reason": "Paid-partnership label and casino-linked note permit promotion hypothesis; creator says intends return. In10.8days publicity/reply/return plausible; not established marketing deception."
+    },
+    {
+      "state": "Already qualifying unseen activity",
+      "weight": 0.05,
+      "p_qualifying": 1.0,
+      "reason": "Replies/reposts/search inaccessible unauthenticated; bounded originals absence cannot prove none sinceOct12creation.5% is subjective uncertainty mass, not measured omission frequency."
+    }
+  ],
+  "sensitivities": {
+    "mostly_genuine_85_10_5": 0.20500000000000002,
+    "mostly_promotional_30_65_5": 0.535,
+    "explanation": "Competing regimes yield20.5% and53.5%; larger unseen-event and negotiation uncertainty expands10\u201375% range. Not confidence intervals."
+  },
+  "criterion": "Any official sameaccount post/repost/quote/reply fromOct12 18:19:05.356801Z throughNov1 03:59Z. OriginalOct10post is65hbeforecreation and doesnotqualify. Otheraccounts neverqualify; successorhandlequalifies.",
+  "actual_entry_reserve_pp": 10,
+  "source_paths": [
+    "data/deep_review_20261017/work/0500_facts_0824.json",
+    "data/deep_review_20261017/work/0500_supplement_0835.json"
+  ],
+  "quote_independence": "Saved before currentCLOB capture; root has only inspected freshGamma identity/creation fields. Not a guarantee no earlier session saw quotes.",
+  "risk": "Named source gaps enter wide uncertainty; forecast doesnotcertifyabsence or contract enforceability. One genuine in-window post would invalidate the NO model."
+}

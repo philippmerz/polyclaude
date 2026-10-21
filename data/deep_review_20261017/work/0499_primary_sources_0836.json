@@ -1,0 +1,22 @@
+{
+  "review_index": 499,
+  "verified_utc": "2026-10-21T08:39:22.569298+00:00",
+  "sources": [
+    {
+      "url": "https://www.aaro.mil/FAQ/",
+      "receipt": "logs/deep_review_20261021/case499_0836_primary/aaro_faq.receipt.json",
+      "status": 403,
+      "raw_sha256": "80bc3a3d077d35cbd09c25866160ca4df9a5f2b079b557d68f093a7f9fcb13ae",
+      "received_utc": "2026-10-21T08:36:39.219645Z"
+    },
+    {
+      "url": "https://www.whitehouse.gov/aliens/",
+      "receipt": "logs/deep_review_20261021/case499_0836_primary/whitehouse_aliens.receipt.json",
+      "status": 200,
+      "raw_sha256": "73bc521b5080ada2d89d94baabcb86e239e37702d72b835b56e005aa39a2e0a9",
+      "received_utc": "2026-10-21T08:36:39.465979Z"
+    }
+  ],
+  "interpretation": "WhiteHouse page explicitly uses aliens for immigration and an ICE arrest map; not an extraterrestrial confirmation. AARO403 is unavailable evidence, not absence. NASA helper sources raw/gzip and allnine Gamma identity fields rootverified. No exhaustive survey claimed.",
+  "verification": "logs/deep_review_20261021/case499_0836_primary/verification.json"
+}

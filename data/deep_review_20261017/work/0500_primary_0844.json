@@ -1,0 +1,164 @@
+{
+  "review_index": 500,
+  "market_id": "5620530",
+  "condition_id": "0x8dd87b12575f6d1ff9084aff987f94365c696f9b922bfaf889068c4e2ea5cca3",
+  "criteria_sha256": "3bf09e963d927da4ecda0f35b2f239e5e088179b965087e276f3af866a2f0160",
+  "status": "valued",
+  "literal_analysis": "This market will resolve to \u201cYes\u201d if Jack Doherty posts again on X between market creation and the listed date, 11:59 PM ET. Otherwise, this market will resolve to \u201cNo\u201d.\n\nPosts include any post, repost, quote post, or reply.\n\nThe resolution source for this market is Jack Doherty's official X profile: https://x.com/dohertyjackk, including any successor names for the account. Posts from any other account will not qualify. Creation verifiedOct12 18:19:05.356801Z; Oct10 status is outsidewindow. No original-only restriction.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5620530",
+      "observed_utc": "2026-10-21T08:27:28.967100Z",
+      "finding": "Nine exactidentity checks/rootrawhashes verified; creationbound distinctfromstart."
+    },
+    {
+      "url": "https://x.com/dohertyjackk/status/2108728754893652425",
+      "observed_utc": "2026-10-21T08:27:29.530050Z",
+      "finding": "Oct10precreation status; Paidpartnershiplabel. Attachedprimarynote claims Shufflepostingrestriction/lawyerfix; contract/duration unverified."
+    },
+    {
+      "url": "https://pbs.twimg.com/media/HUO1oKtXoAAeXBX?format=webp&name=large",
+      "observed_utc": "2026-10-21T08:36:56.633926Z",
+      "finding": "Rootvisuallyread fullnote/hashverified. Promotionalhypothesis notproven; no sixmonthduration inimage."
+    },
+    {
+      "url": "https://x.com/dohertyjackk",
+      "observed_utc": "2026-10-21T08:27:29.349302Z",
+      "finding": "Bounded5originals latestOct10; replies/reposts/search unavailable. Noabsenceproof."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.36,
+    "low": 0.1,
+    "high": 0.75,
+    "actual_entry_reserve_pp": 10,
+    "method": "Unfittedprimary60/35/5scenario mixture; raw35.5rounded36%; publishedbeforecurrentCLOBcapture.",
+    "reasoning": "Claimedpostingrestriction vsPaidpartnershippromotion/negotiatedreturn; missedactivity component explicitlysubjective.20.5%countermodelremovesedge; nocertifiedabsence orunderlyingcontract.",
+    "model": "research/2026-10-17-deep-review/models/0500_primary_0842.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0500_quotes_0842.json",
+    "quote_file_sha256": "fe847c817bc250c90ea89756c3a0b0d0a56f7d103a5dd9d0eb93d2a80d1dcfa4",
+    "quote_capture_utc": "2026-10-21T08:40:45.873217+00:00",
+    "gamma_received_utc": "2026-10-21T08:40:45.691463+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 14.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.36,
+        "selected_stress_probability": 0.26,
+        "best_bid": 0.22,
+        "best_ask": 0.24,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792572041887",
+        "book_received_utc": "2026-10-21T08:40:45.872429+00:00",
+        "book_age_seconds_at_receipt": 3.985428810119629,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.4,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.24
+              }
+            ],
+            "net": 2.4
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.2,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.22
+              }
+            ],
+            "net": 2.2
+          }
+        },
+        "taker_cost_usd": 2.4,
+        "central_expected_profit_usd": 1.1999999999999997,
+        "selected_stress_profit_usd": 0.20000000000000018,
+        "break_even_before_carry": 0.24,
+        "break_even_constant_carry": 0.2402923412224785,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.64,
+        "selected_stress_probability": 0.54,
+        "best_bid": 0.76,
+        "best_ask": 0.78,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792572041887",
+        "book_received_utc": "2026-10-21T08:40:45.872429+00:00",
+        "book_age_seconds_at_receipt": 3.985428810119629,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.800000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.78
+              }
+            ],
+            "net": 7.800000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.6,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.76
+              }
+            ],
+            "net": 7.6
+          }
+        },
+        "taker_cost_usd": 7.800000000000001,
+        "central_expected_profit_usd": -1.4000000000000004,
+        "selected_stress_profit_usd": -2.4000000000000004,
+        "break_even_before_carry": 0.78,
+        "break_even_constant_carry": 0.7809501089730551,
+        "current_execution_authorization": false
+      }
+    },
+    "limitations": "14day constant carry includes~3day resolution buffer; variable dated Aave, no forecast. Funding/gas/account/geoblock not checked; no execution under Astra or600+comparative entry restriction. Maker fills conditional on new posting/contract news invalidate staticp. No correlated-position or cash availability certification."
+  },
+  "verdict": "ProvisionalYEScentral/selectedpaperedge, reversesundercrediblegenuine-restrictioncountermodel; no financialaction or entrycertificate.",
+  "reopen_condition": "Exactaccountactivity ororiginalcontract/issuerreturnclarification; comparative reviewat600 andallfreshgates beforepossibleexecution.",
+  "report_markdown": "# Case 0500 \u2014 Jack Doherty posting by October 31\n\n**Valued: YES36%, broad10\u201375%; provisional YES candidate, not an entry certificate.** Primary Astra research only; no new BUY before600 full valuations plus comparative selection.\n\n- Exact rule: any post, repost, quote or reply from the official @dohertyjackk account (including successor handles) from market creation **Oct12 18:19:05.356801Z** through Oct31 23:59ET/Nov1 03:59Z. Other accounts do not qualify. Metadata start18:19:19Z is distinct from creation. [Original Oct10 post](https://x.com/dohertyjackk/status/2108728754893652425) predates creation by234057.356801seconds; later display cannot make it a qualifying new post.\n- Root read the [primary note image](https://pbs.twimg.com/media/HUO1oKtXoAAeXBX?format=webp&name=large): he attributes a posting hiatus to an enforced Shuffle contract and says a lawyer is seeking a change. The status is labeled Paid partnership. The underlying contract, duration and enforceability are unverified; secondary six-month claims are not adopted. Promotional hiatus is a competing explanation, not proof of deception.\n- Current public profile supplies five originals dated Oct3/6/7/7/10. Replies/reposts/search redirect; no login attempted. No in-window event was established, but this is incomplete coverage, not proof of absence. Root verified bodies/hashes, creation timestamp and all nine frozen identity/rule/token fields.\n- Pre-CLOB scenario forecast:60% genuine restriction \u00d710% qualifying activity;35% promotion/rapid resolution \u00d770%;5% already-made unseen activity \u00d7100%. Total35.5%, rounded36%. Near11days remain; prior ordinary posting frequency is inappropriate after an announced hiatus. Weights/event chances are explicit primary judgments, not calibrated rates. Mostly-genuine85/10/5 gives20.5%; mostly-promotional30/65/5 gives53.5%. Wider10\u201375% includes missed posts/negotiation uncertainty. An actual in-window post supersedes these forecasts.\n- At08:40:45UTC exact Gamma/compact fee rate0 and both books3.985s old at receipt. **10YES@0.24 cost $2.40: central+$1.20, selected26%+$0.20; immediate bid $2.20. 10NO@0.78 cost $7.80: central\u2212$1.40, selected54%\u2212$2.40.** Full one-level walks, zero quoted fees. Dated Aave3.2247% constant14days raises YES breakeven24.0292%/NO78.0950%, before operational/funding costs; settlement could take longer.\n- The genuine-restriction countermodel20.5% makes YES central\u2212$0.35 before carry; selected uncertainty is not all-scenario robustness. A 24c bid/ask comparison alone cannot certify edge. Recheck primary contract or issuer statement and full account activity, then compare with other candidates/cash at600; $2.40 can all be lost. No current direct Doherty exposure in the dated portfolio; casino publicity, X access and shared Polymarket/oracle risk remain. Passive fills after adverse information are not free spread.\n- Reopen on any exact-account in-window activity, credible original contract/issuer clarification or changed return timetable. Reread exact rules, books, fees, legal access, bankroll/correlation and all gates under an authorized live-trading model before action.\n\n[Model](../models/0500_primary_0842.json) \u00b7 [Timestamp/source unit](../../../data/deep_review_20261017/work/0500_facts_0824.json) \u00b7 [Note/coverage supplement](../../../data/deep_review_20261017/work/0500_supplement_0835.json) \u00b7 [Quotes](../../../data/deep_review_20261017/work/0500_quotes_0842.json) \u00b7 [Economics](../../../data/deep_review_20261017/work/0500_economics_0842.json).\n"
+}

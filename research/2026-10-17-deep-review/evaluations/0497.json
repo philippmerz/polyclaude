@@ -1,0 +1,30 @@
+{
+  "review_index": 497,
+  "market_id": "5794314",
+  "condition_id": "0x17bd8f0102d1f84e1fcf376e5026a2578c78d0454b5319e324e4ec4339444da2",
+  "criteria_sha256": "619e40bc6e6fc7ea1641f9e24448534b492d34a5435cda785918474365bce8b6",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: any finalBinanceETH/USDT1-minuteHigh≥2500 withinOct17 00:00–23:59ET resolvesYES, otherwiseNO. Otherexchanges/pairs/spot notqualifying. Terminal venue state, not independently reconstructed ETHprice or exanteforecast.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5794314",
+      "observed_utc": "2026-10-21T08:29:02.071561+00:00",
+      "finding": "Rootverified raw/gzip hashes and every frozen identity/fullrule/ordered-token field; closedtrue/acceptingOrdersfalse/UMAresolved. Both outcome routes unavailable at this venue. No eventwinner inferred from terminal marker."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exact terminalvenue is objectively unavailable; no artificial retrospective probability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both frozen outcomes terminal/nonaccepting; no current entry ticket or alternative lawfulroute to this exactcondition established."
+  },
+  "verdict": "Factualexclusionexactterminalvenue; not valuation, modelrejection or claimed forecastwin. Researchonly/no financialwriter.",
+  "reopen_condition": "Onlyverifiedreopeningofthisexactcondition witha lawfulroute; differentcondition needsownreview.",
+  "evaluated_utc": "2026-10-21T08:31:04.110061+00:00",
+  "question": "Will Ethereum reach $2,500 on October 17?",
+  "valuation_author": "primary_operator",
+  "original_index": 497,
+  "report_sha256": "aec7133bf8cad1e378022a43453d3e1762e434703888601eb876a029528c6098"
+}
