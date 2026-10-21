@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 21 19:08 UTC
+## Last audited snapshot — October 21 20:41 UTC
 
-**19:07 canonical bankroll: $195.99 including $6.03 funded gas.** Trading value is $189.96 at midpoint or $188.18 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $39.79/$38.01. The $19.74 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1907-financial-snapshot.json).
+**20:41 canonical bankroll: $195.90 including $6.05 funded gas.** Trading value is $189.85 at midpoint or $188.07 using indicative fee-net depth (+10.6% versus $170 contributed); same-producer PM values are $39.69/$37.91. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-2041-financial-snapshot.json).
 
-**Holdings and bids remain unchanged.** December Fed20YES is held; October Fed20YES24¢ and Delcy28YES18¢ are unfilled, reserving $9.84. pUSD15.45129/free5.61129 reconciles. The Delcy consultation headline supplies no verified new legal term; keep its October24 13UTC unfilled-pull deadline. Michigan NO43% remains dated17:42 judgment; debate23UTC. [News/source review](research/2026-10-21-190625-news-review.json) · [Orders](notes/resting_orders.md).
+**Holdings, probabilities and bids remain unchanged.** December Fed20YES is held; October Fed20YES24¢ and Delcy28YES18¢ remain unfilled, reserving $9.84. pUSD15.45129/free5.61129 reconciles. The four requested headlines establish no verified new event or independent poll requiring a change. Michigan NO43% remains the dated17:42 model judgment; debate23UTC. [Source/risk review](research/2026-10-21-203918-news-review.json) · [Orders/deadlines](notes/resting_orders.md).
 
-Safety checks are clean; all four daemons are unique and running current code. The chart has **254 observations**, latest19:07; previous rows and external contributions are unchanged. All10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
+Safety checks and offline raw-response validation passed; four daemons are unique and running current code. The chart has **255 observations**, latest20:41; prior rows and contributions are unchanged. All10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery limits](research/2026-10-21-140001-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
