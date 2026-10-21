@@ -1,0 +1,175 @@
+{
+  "review_index": 510,
+  "market_id": "1553591",
+  "condition_id": "0x656235664464bcadcc586acb871051dadb7c7343b7e805a5eccc02815e20d7df",
+  "criteria_sha256": "d75b36ce56e9eea529b352a9430ac29bd8c15c4ccd48f4bfcc02182053a38021",
+  "token_ids": [
+    "15817672052205458642746211361748257031306114796905648075017940250831865046055",
+    "72413274791623935706318436448441626129741116452837525058113815959729031743718"
+  ],
+  "status": "valued",
+  "literal_analysis": "Clear/widelyreportedPCCdefactocontrolbreakbyDec31 23:59ET; PCCneednotdissolve. Othergovernment/transitionalauthorityortakenmultipartytransfercanqualify. PCCleaderreplacement/reform/unrest/partialterritorynotqualifyingunlessPCCnolongermanagesmajorityresidentpopulation. Crediblereportingconsensuscontrols, notforeignstatement/statute/embargovote.",
+  "evidence": [
+    {
+      "url": "https://www.un.org/pga/81/documents/readouts/readout-cuba-29-september-2026/",
+      "observed_utc": "2026-10-21T10:20:53.613479Z",
+      "finding": "UNSept29readoutdocumentsCubanforeignministerdiplomacy; notmajoritycontrolproof."
+    },
+    {
+      "url": "https://cuba.un.org/es/323680-cuba-fortalece-articulaciones-entre-lo-nacional-y-las-comunidades-en-gesti%C3%B3n-de-riesgos",
+      "observed_utc": "2026-10-21T10:21:13.583953Z",
+      "finding": "UNOct1describesnational/provincial/municipal/CivilDefensecoordination andgaps; functionaladministrationnotcoercivecohesionproof."
+    },
+    {
+      "url": "https://wipolex-res.wipo.int/edocs/lexdocs/laws/es/cu/cu096es_1.pdf",
+      "observed_utc": "2026-10-21T10:30:40.212466Z",
+      "finding": "2019Articles5/128/220 PCCguidingforce/presidentarmedcommand/FAR+MININT; notverifiedcurrentconsolidationoractualobedience."
+    },
+    {
+      "url": "https://www.whitehouse.gov/releases/2026/09/president-trump-at-the-united-nations-while-others-have-talked-I-have-acted/",
+      "observed_utc": "2026-10-21T10:30:06.322989Z",
+      "finding": "Sept22WHhemisphereforceposture/freedomforCuba rhetoric; no capturedCuba-specificdeploymentorder/date/timetable."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.12,
+    "low": 0.01,
+    "high": 0.6,
+    "confidence": "LOW/unfitted",
+    "actual_entry_reserve_pp": 15,
+    "method": "Primarydisjointdominant-mechanismregime/controltree; source/modeluncertaintyexplicit.",
+    "reasoning": "70%contained/ongoingcommand×2.5%qualifyingtransfer +20%elite/coercivefracture×30% +10%majoroutsideaction/rupture×45%=12.25%rounded12. PrimaryUNfunctionaladministrationand2019commandstructurearecontinuityinputs, notmajoritymap. WHintentnotdeployment. Cohesion3.4%/crisis28%rivals; broad1–60. ProvideronlyAP/Reutersdescriptions/accessgapsnotnegativeevidence.",
+    "model_path": "research/2026-10-17-deep-review/models/0510_primary_1035.json",
+    "model_sha256": "a2350f04443b47b01c92116551e4c67fdfbcad060f97b6bd3d08130f7bb9973b"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0510_quotes_1035.json",
+    "quote_file_sha256": "4da7334ace0f299fd874588e1c013da3e2aaad85e886340d35bda5a503038b57",
+    "quote_capture_utc": "2026-10-21T10:34:12.104549+00:00",
+    "gamma_received_utc": "2026-10-21T10:34:11.924221+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 71.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.12,
+        "selected_stress_probability": 0,
+        "best_bid": 0.09,
+        "best_ask": 0.1,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792578833662",
+        "book_received_utc": "2026-10-21T10:34:12.103472+00:00",
+        "book_age_seconds_at_receipt": 18.441472053527832,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.1
+              }
+            ],
+            "net": 1.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 0.8999999999999999,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.09
+              }
+            ],
+            "net": 0.8999999999999999
+          }
+        },
+        "taker_cost_usd": 1.0,
+        "central_expected_profit_usd": 0.19999999999999996,
+        "selected_stress_profit_usd": -1.0,
+        "break_even_before_carry": 0.1,
+        "break_even_constant_carry": 0.10061927856617373,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.88,
+        "selected_stress_probability": 0.73,
+        "best_bid": 0.9,
+        "best_ask": 0.91,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792578833662",
+        "book_received_utc": "2026-10-21T10:34:12.103472+00:00",
+        "book_age_seconds_at_receipt": 18.441472053527832,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.1,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.91
+              }
+            ],
+            "net": 9.1
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.9
+              }
+            ],
+            "net": 9.0
+          }
+        },
+        "taker_cost_usd": 9.1,
+        "central_expected_profit_usd": -0.29999999999999893,
+        "selected_stress_profit_usd": -1.7999999999999998,
+        "break_even_before_carry": 0.9099999999999999,
+        "break_even_constant_carry": 0.9156354349521807,
+        "current_execution_authorization": false
+      }
+    },
+    "fee_authority_limit": "Curveauthoritativefalse; publiccapture separatelycorroborateszero usingcompact/bookfee reads, no structuredGamma descriptor. Planningonly, notfeecertificate.",
+    "maker_analysis": "YES12sharesat9c=1.08,central+.36/selected−1.08; NO90cabove88central. Privatecoercion/controlnewsjumps selectfills; cheaperbidnotautomaticfix. Noentry."
+  },
+  "verdict": "Noentry: YESsmallpositivecentral fails15ppselected andcrediblecohesionrival; NOnegativecentral. CurrentGamma/2books matched, UMAfieldabsent/feeauthoritylimitnotcleanexecutionapproval. BUYpause600+comparisonnull; noorder/prior/watcherchange.",
+  "reopen_condition": "Verifiedactualmajoritycontrol/eliteorcoercivefracture/negotiatedgoverningtransferorexternalaction evidence, notleaderreplacement/blackout/embargovotealone; thennewforecast+freshbothsideidentity/UMA/fees/depth/lawfulfunding/correlation/horizon/gates.",
+  "evaluated_utc": "2026-10-21T10:35:17.899177+00:00",
+  "question": "Cuban regime falls in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 510,
+  "report_sha256": "30c568c432e7e653efb7f12c41bce7c081c1702cff52d9ac650b8f0e6549bbcc"
+}

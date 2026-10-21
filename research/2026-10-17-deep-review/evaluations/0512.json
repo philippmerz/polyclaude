@@ -1,0 +1,186 @@
+{
+  "review_index": 512,
+  "market_id": "5730920",
+  "condition_id": "0x9adcb1146c03aa2a88d6959f2d98ca65b43123aec6a6f3a2265e7714fca47557",
+  "criteria_sha256": "189dad7df7febd22bc74900b03dda99fcf9f4caed5cdc945f71499a16673eca4",
+  "token_ids": [
+    "73557212746647238997718209030628486757838337324444775234183586609289403205024",
+    "42159699004619762321852024367948232390846205622436548975698345919671851922093"
+  ],
+  "status": "valued",
+  "literal_analysis": "FY2027Q1domesticsame-storesalesgrowth, notglobal/international/constantcurrency/totalcommercialsales. Mostpreciseofficialnumber, midpointifrange, exactsharedboundaryhigher⇒[2.5,3.5). Subsequentrevisionsignored. Officialquarterearningsrelease/presentation/filing, recording/transcriptfallbackperrule. MissingusablemetricornoquartermaterialsbyJan31 2027 23:59ET⇒lowestbracket/thisYESfails; missingmetricandwebcastfallbackinteractionnotassumedresolved.",
+  "evidence": [
+    {
+      "url": "https://www.sec.gov/Archives/edgar/data/866787/000110465926073525/azo-20260509x10q.htm",
+      "observed_utc": "2026-10-21T10:17:51.732444Z",
+      "finding": "ActualSEC10QHTTP200domesticSSS4.1quarter/4.2YTD; commercial10.4notSSS; definition/quarterlength verified."
+    },
+    {
+      "url": "https://www.webcaster5.com/Webcast/Page/820/54424",
+      "observed_utc": "2026-10-21T10:17:51.395707Z",
+      "finding": "Provider-renderedofficialpage separatelycaptured, notHTTPbody: Q1prior4.8/Q4current1.6/FY3.3 andqualitativeacceleration; IRcalendarQ2headline3.4/targetdatedunconfirmed."
+    },
+    {
+      "url": "https://investors.autozone.com/news-releases/news-release-details/autozone-4th-quarter-total-company-same-store-sales-increase-15",
+      "observed_utc": "2026-10-21T10:23:29Z",
+      "finding": "Provider-renderedofficialpage separatelycaptured, notHTTPbody: Q1prior4.8/Q4current1.6/FY3.3 andqualitativeacceleration; IRcalendarQ2headline3.4/targetdatedunconfirmed."
+    },
+    {
+      "url": "https://investors.autozone.com/news-releases/news-release-details/autozone-1st-quarter-total-company-same-store-sales-increase-47",
+      "observed_utc": "2026-10-21T10:31:46Z",
+      "finding": "Provider-renderedofficialpage separatelycaptured, notHTTPbody: Q1prior4.8/Q4current1.6/FY3.3 andqualitativeacceleration; IRcalendarQ2headline3.4/targetdatedunconfirmed."
+    },
+    {
+      "url": "https://about.autozone.com/investor-relations/news-events",
+      "observed_utc": "2026-10-21T10:31:52Z",
+      "finding": "Provider-renderedofficialpage separatelycaptured, notHTTPbody: Q1prior4.8/Q4current1.6/FY3.3 andqualitativeacceleration; IRcalendarQ2headline3.4/targetdatedunconfirmed."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.22,
+    "low": 0.01,
+    "high": 0.7,
+    "confidence": "LOW/unfittedexactinterval",
+    "actual_entry_reserve_pp": 15,
+    "method": "Primaryreported-domesticgrowthregimemixturewithliteralhalf-openinterval/sourcefallback.",
+    "reasoning": "60%partialreboundN(3,1.25),25%stickyweakN(1.25,1),15%strongN(5,1.5) [percentagepointunits]; band[2.5,3.5)*98%usablemetric=22.1962%→22. FY26quarterhistory4.8/3.4/4.1/1.6 andlateQ4strength/qualFY27accelerationprovidecontext, notIIDfit/frequencyprobability. Weakpersist13.8448%/tight3.0center58.3436%rivals; broad1–70. Quarter/releaseunconfirmed, noFY27Q1actual/numericguidance.",
+    "model_path": "research/2026-10-17-deep-review/models/0512_primary_1045.json",
+    "model_sha256": "0708d4365e341d6c9f65f4d4c9e36e7cb255613413ecdcb7b0574e60e75a2098"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0512_quotes_1045.json",
+    "quote_file_sha256": "c385a4d468eb51e4e9ecf3d6ade05c7e1f474df1e669ba2d2b133008f7e43a22",
+    "quote_capture_utc": "2026-10-21T10:44:33.653511+00:00",
+    "gamma_received_utc": "2026-10-21T10:44:33.520120+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 49.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.22,
+        "selected_stress_probability": 0.07,
+        "best_bid": 0.31,
+        "best_ask": 0.47,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792579215257",
+        "book_received_utc": "2026-10-21T10:44:33.652553+00:00",
+        "book_age_seconds_at_receipt": 258.39555311203003,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 4.699999999999999,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.47
+              }
+            ],
+            "net": 4.699999999999999
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 3.1,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.31
+              }
+            ],
+            "net": 3.1
+          }
+        },
+        "taker_cost_usd": 4.699999999999999,
+        "central_expected_profit_usd": -2.499999999999999,
+        "selected_stress_profit_usd": -3.999999999999999,
+        "break_even_before_carry": 0.4699999999999999,
+        "break_even_constant_carry": 0.4720068082600183,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.78,
+        "selected_stress_probability": 0.63,
+        "best_bid": 0.53,
+        "best_ask": 0.69,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792579215257",
+        "book_received_utc": "2026-10-21T10:44:33.652553+00:00",
+        "book_age_seconds_at_receipt": 258.39555311203003,
+        "passed_180s_at_receipt": false,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 6.8999999999999995,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.69
+              }
+            ],
+            "net": 6.8999999999999995
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 5.300000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.53
+              }
+            ],
+            "net": 5.300000000000001
+          }
+        },
+        "taker_cost_usd": 6.8999999999999995,
+        "central_expected_profit_usd": 0.9000000000000012,
+        "selected_stress_profit_usd": -0.5999999999999996,
+        "break_even_before_carry": 0.69,
+        "break_even_constant_carry": 0.6929461653178992,
+        "current_execution_authorization": false
+      }
+    },
+    "hypothetical_maker_NO10_53c": {
+      "cost": 5.3,
+      "central_profit": 2.5,
+      "selected_profit": 1.0,
+      "tight_center_rival_profit": -1.134363733112596,
+      "judgment": "Selectedunconditionalpositiveisnotentrycertificate: strongnarrowreboundrivalreverses; internalweeklyresult/privateguidanceselectsincomingfills. No supportedconditionalposterior/automaticspreadcapture."
+    },
+    "fallback_102d_carry_break_even_no": 0.6961469973892156
+  },
+  "verdict": "ProvisionalNOcentrallead69c/78%fails15ppselected63%; YES47cnegativecentral. NOmaker53cpositiveunconditionalselectedbutcredibletight-center58.34%YESrivalreversesandfillselectionunknown. Bothbooks258.4s>180satcapture; noexecutioncertification/approvedwinner/order/prior/watcher. BUYpause600+primarycomparison.",
+  "reopen_condition": "OfficialFY27Q1metric/guidance/calendarspecificupdate orsupportedforecastdispersion/conditionalfillcase; exactmost-precision/boundary/webcastfallbackinterpretation; freshidentity/UMA/fees/books/funding/lawfulroute/Januarytail/correlationand600comparisongates.",
+  "evaluated_utc": "2026-10-21T10:46:02.593477+00:00",
+  "question": "Will AutoZone Q1 domestic same store sales growth be between 2.5% and 3.5%?",
+  "valuation_author": "primary_operator",
+  "original_index": 512,
+  "report_sha256": "76ca42d5487318ca330112839512c255c0e545467d97da7568d543d58cf65eff"
+}

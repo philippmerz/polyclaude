@@ -56,9 +56,9 @@ Writing default for replies, handoffs and maintained documents:
 
 ## Active in-depth review — October21
 
-**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current411valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+**New bids paused until600 full valuations, followed by a comparative selection of the strongest candidates.** Current414valued; blocked/factual screens do not count. No early wildcard/add/repost/taker/bundle entry. Holdings remain managed; there are no open bids. Selected winners still need every live execution gate. [Operator entry policy](notes/entry_review_gate.json) · [Doctrine](strategy/00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
 
-**411 valued /20 blocked /389 factual /2,180 pending;820 base+78 revisions.** Native finite goal resumed and verified active09:37. Saved502Kendrick/504Osborn/505Fed valuations individually;503exact-map history remains a local unpriced gap, with corrected distance units. New centralYES leads fail selected stress, not rejected by a screen. 508TIME/SandersYES9%centrallead alsofailsselectedstress;506/507/509exactterminalvenuesexcluded. Next510/noactivecase. [Checkpoint](notes/deep_review_checkpoint.json) · [Phase32](data/deep_review_20261017/work/goal0032_RESUME.json).
+**414 valued / 20 blocked / 389 factual / 2,177 pending; 823 base records + 78 revisions.** The finite goal is active. Cases 510–512 are saved individually: Cuba YES12%, December Fed no-change YES60%, AutoZone interval YES22%. The Fed case has positive provisional economics at the captured 20¢ ask; the latest Chair discussion remains a source gap, so it is not ready for entry. Next513; no active case. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase33](data/deep_review_20261017/work/goal0033_RESUME.json).
 
 **Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids were canceled zero-fill15:48; final15:55 reconciliation retired their reservations. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
 
@@ -92,7 +92,7 @@ The Michigan alert repeats donation allegations; publisher text and an older con
 
 08:53 Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated cash carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broader downside cases favor sale; all pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus $27.03 indicative exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick084522_hold_exit_math.json).
 
-BUY pause411/600 plus comparative selection remains. No routine Telegram. Operator restored Sol during closeout; no trade indicated. 10UTC lightcompleted:0orders/UMAalerts,4clearhurdle/nohits; PM36.40mid/34.55indicative depth, notwholebankrollrefresh. KimiSeptemberheadlineandOct12defensesreviewed; retain10YES/noadd, downside cases recorded. Next14UTCfullormaterialevent; Michigan debate23UTC. [Light review](research/2026-10-21-1006-light-check.json). [Check record](research/2026-10-21-084522-checkin.json).
+The 10:06 light check found no orders/UMA alerts; its PM midpoint/depth was $36.40/$34.55, with no whole-account refresh. The 10:29 periodic backlog review found no urgent follow-up. No agent trade or prior change. Next14UTC full check; Michigan debate23UTC. [Light review](research/2026-10-21-1006-light-check.json) · [Periodic review](research/2026-10-21-1028-periodic.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

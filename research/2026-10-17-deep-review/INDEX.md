@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-21T10:15:37.419985+00:00
+Updated: 2026-10-21T10:46:06.604426+00:00
 
-**411 valuations saved; first milestone100:** 411 valued; 20 blocked after in-depth review. 389 factual exclusions separately; 2180 pending.
+**414 valuations saved; first milestone100:** 414 valued; 20 blocked after in-depth review. 389 factual exclusions separately; 2177 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -521,6 +521,9 @@ Each report below is written before moving to the next evaluation. Related contr
 |507|[Spread: Maryland (-5.5)](evaluations/0507.md)|excluded_factual|Factualexclusion ofexactterminalvenue only, notforecast/modelrejection or investmentselection.|
 |508|[Will Bernie Sanders be TIME Person of the Year 2026?](evaluations/0508.md)|valued|ProvisionalYEScentralcheap-eventlead, noentrycertificate:15ppselectedYES0andbroad1%failcost; NOlosescentral. Bothbooks36.4minoldatreceipt; UMAstatusabsent, notprovedclean. BUYpause600+comparativeselectionnull. No order/prior/watcherchange.|
 |509|[Will the highest temperature in Chongqing be 21°C on October 18?](evaluations/0509.md)|excluded_factual|Factualexclusionofexactterminalvenue, notvaluation/modelrejection orweatherresultclaim.|
+|510|[Cuban regime falls in 2026?](evaluations/0510.md)|valued|Noentry: YESsmallpositivecentral fails15ppselected andcrediblecohesionrival; NOnegativecentral. CurrentGamma/2books matched, UMAfieldabsent/feeauthoritylimitnotcleanexecutionapproval. BUYpause600+comparisonnull; noorder/prior/watcherchange.|
+|511|[Will there be no change in Fed interest rates after the December 2026 meeting?](evaluations/0511.md)|valued|ProvisionalpositiveYESlead:10shares20c/2.00 central+4/selected+3; NO81cnegative. Source-readinessfalse/unreviewedpost-CPIChairremarks canreverse; noallocation/approvedwinner. No newPMBUYbefore600+primarycomparison; noorder/prior/watcherchange.|
+|512|[Will AutoZone Q1 domestic same store sales growth be between 2.5% and 3.5%?](evaluations/0512.md)|valued|ProvisionalNOcentrallead69c/78%fails15ppselected63%; YES47cnegativecentral. NOmaker53cpositiveunconditionalselectedbutcredibletight-center58.34%YESrivalreversesandfillselectionunknown. Bothbooks258.4s>180satcapture; noexecutioncertification/approvedwinner/order/prior/watcher. BUYpause600+primarycomparison.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

@@ -1,0 +1,220 @@
+{
+  "review_index": 511,
+  "market_id": "3215007",
+  "condition_id": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+  "criteria_sha256": "fc2c6973f601f04849125572920a57dc91893ab03869ee4eed22f38e7e195139",
+  "token_ids": [
+    "42865728742506860386768556888821101266630139112044622335353850919229585308601",
+    "8077351031134730167836761678618167504307708651130165095377248922919635337796"
+  ],
+  "status": "valued",
+  "literal_analysis": "UpperboundafterDec8–9vsimmediatelybeforeDecember; notOct21level4.00ifOctchanges. Exactzero=>Nochange; anysmallnonzerochange roundsup25bp. NoDecstatementbyendnextJan26–27meeting=>Nochange. OfficialFOMCstatement/openmarketlevel; calendar/SEPnotsettlement.",
+  "evidence": [
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomccalendars.htm",
+      "observed_utc": "2026-10-21T09:39:01.898288Z",
+      "finding": "Fed calendar current capture; last modified Oct 7; meetings Oct/Dec 2026 and Jan 2027; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/pressreleases/monetary20260916a.htm",
+      "observed_utc": "2026-10-21T09:39:02.338208Z",
+      "finding": "Fed Sep statement, published Sep 16; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcprojtabl20260916.htm",
+      "observed_utc": "2026-10-21T09:39:02.582530Z",
+      "finding": "Fed SEP, published Sep 16; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/speech/waller20261008a.htm",
+      "observed_utc": "2026-10-21T09:39:04.215403Z",
+      "finding": "Waller speech, published Oct 8; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/cpi.nr0.htm",
+      "observed_utc": "2026-10-21T09:39:12.406881Z",
+      "finding": "BLS Sep CPI, published Oct 14 08:30 ET; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.bls.gov/news.release/empsit.nr0.htm",
+      "observed_utc": "2026-10-21T09:39:12.503018Z",
+      "finding": "BLS Sep Employment Situation, published Oct 2 08:30 ET; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.federalreserve.gov/monetarypolicy/fomcminutes20260916.htm",
+      "observed_utc": "2026-10-21T10:16:45.021277Z",
+      "finding": "Fed Sep 15-16 minutes; published Oct 7; primarybody/hashverified, contextnotsettlement/probability."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/2026-speeches.htm",
+      "observed_utc": "2026-10-21T10:38:15.697158Z",
+      "finding": "Rootverifiedcapturedcurrentofficiallist/metadata; noevent-policycontentorexhaustiveabsenceclaim."
+    },
+    {
+      "url": "https://www.federalreserve.gov/newsevents/2026-october.htm?view=calendar",
+      "observed_utc": "2026-10-21T10:38:15.804283Z",
+      "finding": "Rootverifiedcapturedcurrentofficiallist/metadata; noevent-policycontentorexhaustiveabsenceclaim."
+    },
+    {
+      "url": "https://www.federalreserve.gov/recentpostings.htm",
+      "observed_utc": "2026-10-21T10:38:16.024783Z",
+      "finding": "Rootverifiedcapturedcurrentofficiallist/metadata; noevent-policycontentorexhaustiveabsenceclaim."
+    },
+    {
+      "url": "https://www.youtube.com/watch?v=T20jWBJ66X0",
+      "observed_utc": "2026-10-21T10:39:46.104623Z",
+      "finding": "Rootverifiedcapturedcurrentofficiallist/metadata; noevent-policycontentorexhaustiveabsenceclaim."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.6,
+    "low": 0.1,
+    "high": 0.9,
+    "confidence": "LOW/unfitted; currentChairremarksunreviewed",
+    "actual_entry_reserve_pp": 10,
+    "method": "PrimaryconditionalOct→Decreaction-functiontree plusnonstatementfallback.",
+    "reasoning": "October50+/25/hold/cutmasses9/53/35/3%; conditionalDecnochange80/72/38/45%=60.01%; tinyunfittedfallbackadjustment60.04999→60. Septembermedian/mostanotherhike supportsconditionalpauseafteroneOcthike, notdotfrequencyasprobability. VerifiedfreshsourceindexdoesnotresolveWarshOct15remarks; broadenlow25→10, preservepointandpriorprequotehash. Stickyinflationrival32.81725%/patientpause76.024%; noentrycertificate.",
+    "model_path": "research/2026-10-17-deep-review/models/0511_primary_final_1045.json",
+    "model_sha256": "6be1f3f87b830b0146677458e522a9a77d647ec04c177e339ac2f46d4ba0c1a4"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0511_quotes_1040.json",
+    "quote_file_sha256": "7baa02c4addf6199be39604592698dc467a71c7c313b338f7bcc2e66fadbfcea",
+    "quote_capture_utc": "2026-10-21T10:36:36.148925+00:00",
+    "gamma_received_utc": "2026-10-21T10:36:36.005654+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 49.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.6,
+        "selected_stress_probability": 0.5,
+        "best_bid": 0.19,
+        "best_ask": 0.2,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792578991206",
+        "book_received_utc": "2026-10-21T10:36:36.148004+00:00",
+        "book_age_seconds_at_receipt": 4.942003965377808,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.2
+              }
+            ],
+            "net": 2.0
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.9,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.19
+              }
+            ],
+            "net": 1.9
+          }
+        },
+        "taker_cost_usd": 2.0,
+        "central_expected_profit_usd": 4.0,
+        "selected_stress_profit_usd": 3.0,
+        "break_even_before_carry": 0.2,
+        "break_even_constant_carry": 0.20085396096170993,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.4,
+        "selected_stress_probability": 0.30000000000000004,
+        "best_bid": 0.8,
+        "best_ask": 0.81,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792578991206",
+        "book_received_utc": "2026-10-21T10:36:36.148004+00:00",
+        "book_age_seconds_at_receipt": 4.942003965377808,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.100000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.81
+              }
+            ],
+            "net": 8.100000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.0,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.8
+              }
+            ],
+            "net": 8.0
+          }
+        },
+        "taker_cost_usd": 8.100000000000001,
+        "central_expected_profit_usd": -4.100000000000001,
+        "selected_stress_profit_usd": -5.100000000000001,
+        "break_even_before_carry": 0.8100000000000002,
+        "break_even_constant_carry": 0.8134585418949254,
+        "current_execution_authorization": false
+      }
+    },
+    "source_readiness": false,
+    "source_limit": "Verifiedpost-CPIChairvideocontentunavailable; range10–90, notcoveredbyordinary10ppreserve. Positivecentral/selected/rivaleconomicsnotentrycertification.",
+    "adverse_fill_sensitivity": {
+      "formula": "pYES_given_fill=.6/(.6+L*.4); subtract10ppselected; LadverselyweightsNOstates. Unmeasureddiagnostic, notestimatedlikelihoodratio.",
+      "examples": {
+        "2": 0.3285714285714286,
+        "4": 0.1727272727272727
+      },
+      "L_indifference_at_dated_taker_carry": 3.4858077161593592,
+      "maker_10YES19c": "Cost1.90,central+4.10/selected+3.10; source/newsfillselectionnotquantified, noautomaticmakerroute."
+    },
+    "fallback_98d_carry_break_even_yes": 0.20171156817004052
+  },
+  "verdict": "ProvisionalpositiveYESlead:10shares20c/2.00 central+4/selected+3; NO81cnegative. Source-readinessfalse/unreviewedpost-CPIChairremarks canreverse; noallocation/approvedwinner. No newPMBUYbefore600+primarycomparison; noorder/prior/watcherchange.",
+  "reopen_condition": "VerifiedOct15/16Chairpolicycontentorcrediblelaterprimarypathguidance/currenteconomicdata; updateOctconditionalstates afterOctmeeting. Thencompareknowncandidates/cash/holdingsat600, freshidentity/UMA/fees/books/lawfulroute/funding/Januarytail/correlation/gates. Noautomatic20cprice-onlytrigger.",
+  "evaluated_utc": "2026-10-21T10:42:53.975022+00:00",
+  "question": "Will there be no change in Fed interest rates after the December 2026 meeting?",
+  "valuation_author": "primary_operator",
+  "original_index": 511,
+  "report_sha256": "45ffed705bd9589bc56aa243b25475b13e0d4dc893a41f3ea255b77e4b64f1be"
+}
