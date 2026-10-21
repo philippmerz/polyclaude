@@ -1,0 +1,120 @@
+{
+  "schema": "primary_MI_daily_rederivation.v2",
+  "computed_utc": "2026-10-21T00:48:52.907092+00:00",
+  "index": 1838,
+  "method": "Exact analytic marginal of saved Gaussian model; reproduce Oct20 then recompute Oct21 ages17/7/11. No quote or venue probability in inputs.",
+  "input_file": "research/2026-10-17-deep-review/models/senate_IA_revision_0059_inputs.json",
+  "input_sha256": "e3d481122aa7e903e745df619471f14d578fb0d6543e663dcc0f04cfd30e9ffb",
+  "model_sha256": "fb03a0cf2592b3eda9ee3f0f6a5eb9a064f7d5a848858c9d87db24f3a8800735",
+  "reproduced_Oct20": {
+    "p_D": 0.5568860692623434,
+    "center_pp": 0.6717236432974995,
+    "total_margin_sd_pp": 4.694777493633095,
+    "poll_center_pp": 1.5587809427751906,
+    "poll_weight": 0.8506673304567884
+  },
+  "polls": [
+    {
+      "margin_pp": 1.0,
+      "share_moe_pp": 2.5,
+      "age_days": 17,
+      "source": "YouGov Sep22\u2013Oct4 original allocated-respondent PDF",
+      "source_extra_sd_pp": 2.5,
+      "sponsor_adjustment_pp": 0.0
+    },
+    {
+      "margin_pp": 2.0,
+      "share_moe_pp": 3.0,
+      "age_days": 7,
+      "source": "Rasmussen Oct16 release; Oct12\u201314 n798MichiganLV, original six-name topline46ElSayed44Rogers,reported3pp/95confidence",
+      "source_extra_sd_pp": 3.0,
+      "sponsor_adjustment_pp": 0.0,
+      "precision_source": "Publisher reported marginofsamplingerror; fullmode/weights/responseunrecovered. Nationalphone/onlinewording preserved, not state-specificallocation.",
+      "source_url": "https://www.rasmussenreports.com/public_content/archive/election_2026/michigan_senate_el_sayed_46_rogers_44"
+    },
+    {
+      "margin_pp": 2.0,
+      "share_moe_pp": 2.83,
+      "age_days": 11,
+      "source": "OfficialIAhomepageOct11notice,MIElSayed48/Rogers46;fieldOct9\u201310,n1200LV;notdedicatedrelease/tabs, modeunknowninthisnotice",
+      "source_extra_sd_pp": 4.5,
+      "sponsor_adjustment_pp": 0.0,
+      "source_url": "https://insideradvantage.com/",
+      "precision_source": "PublisherMOE/weightingage/race/gender/party. Do not borrowmodefromotherrelease; fullinstrument/sponsorunrecovered."
+    }
+  ],
+  "scenarios": {
+    "central_G8_biasMinus1_5": {
+      "p_D": 0.5573020962148465,
+      "center_pp": 0.6772805620274033,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G8_bias0": {
+      "p_D": 0.6610793742651913,
+      "center_pp": 1.9520200552860294,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G8_biasMinus3": {
+      "p_D": 0.4494125619269264,
+      "center_pp": -0.5974589312312228,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G6_biasMinus3": {
+      "p_D": 0.42925179908513106,
+      "center_pp": -0.8377368050886883,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G10_bias0": {
+      "p_D": 0.6795870743107787,
+      "center_pp": 2.192297929143495,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G12_biasMinus1_5": {
+      "p_D": 0.5973136745897769,
+      "center_pp": 1.1578363097423343,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G12_bias0": {
+      "p_D": 0.6976585708235377,
+      "center_pp": 2.4325758030009608,
+      "total_margin_sd_pp": 4.699012095757255,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    },
+    "G8_wideCommon5": {
+      "p_D": 0.5436973333787652,
+      "center_pp": 0.6772805620274033,
+      "total_margin_sd_pp": 6.170957354906367,
+      "poll_center_pp": 1.561257907135088,
+      "poll_weight": 0.849826328839084
+    }
+  },
+  "constants": {
+    "prior_sd_pp": 7,
+    "national_sd_pp": 3,
+    "regional_sd_pp": 1,
+    "shared_poll_bias_sd_pp": 1,
+    "future_residual_sd_pp": 2,
+    "generic_D_margin_pp": 8,
+    "mean_poll_bias_pp": -1.5
+  },
+  "limitations": [
+    "Generic D8 was judgment from original Fox certain-vote D6 and YouGov loose/strict D8/D11, not a trained aggregate.",
+    "Ipsos Oct16-19 national RV D47/R35 is newer D+12, not Michigan LV data or an independent state likelihood; explicitly test G12.",
+    "InsiderAdvantage Michigan mode, full instrument/sponsor/overlap remain unknown; extra SD4.5 retained.",
+    "Ordinary D/R model omits explicit minor-party winner probability; NO means any non-D winner. Broad range retains specification risk.",
+    "Assumed covariance, candidate adjustment and bias are unfitted; scenarios are not confidence intervals."
+  ]
+}

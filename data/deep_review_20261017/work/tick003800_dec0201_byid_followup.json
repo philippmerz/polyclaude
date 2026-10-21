@@ -1,0 +1,42 @@
+{
+  "schema": "tick003800_dec0201_byid.v1",
+  "audited_utc": "2026-10-21T00:49:22.888553Z",
+  "gamma_capture": {
+    "url": "https://gamma-api.polymarket.com/markets/5593550",
+    "status": 200,
+    "started_utc": "2026-10-21T00:48:30.932315Z",
+    "received_utc": "2026-10-21T00:48:31.060689Z",
+    "date": "Wed, 21 Oct 2026 00:48:31 GMT",
+    "age": "109",
+    "raw_sha256": "bbe13208a40ab8ad103e2b3b75483f304950670e3fe9045bfd40107e979abc8a",
+    "gzip_sha256": "a11fc7b55cdf903f71f3dcef0877da6e15238a11b89305d751a8080e52761f2a",
+    "receipt": "logs/cron20261021T003800Z_dec0201_byid/gamma_by_id.receipt.json",
+    "body": "logs/cron20261021T003800Z_dec0201_byid/gamma_by_id.body.json.gz",
+    "hashes_independently_verified": true
+  },
+  "exact_identity": {
+    "market_id": "5593550",
+    "condition_id": "0x1f54117cc0c3ff4926fc6297c2341f13454b715d0a9afaf8d1dcf3c44c10d2d3",
+    "question": "Will Ethereum dip to $2,300 October 12-18?"
+  },
+  "criterion": "This market will immediately resolve to \"Yes\" if any Binance 1 minute candle for Ethereum (ETH/USDT) during the date range specified in the title (from 12:00 AM ET on the first date to 11:59 PM ET on the last) has a final \"Low\" price equal to or lower than the price specified in the title. Otherwise, this market will resolve to \"No.\"\n\nThe resolution source for this market is Binance, specifically the ETH/USDT \"Low\" prices available at https://www.binance.com/en/trade/ETH_USDT, with the chart settings on \"1m\" candles selected on the top bar.\n\nPlease note that the outcome of this market depends solely on the price data from the Binance ETH/USDT trading pair. Prices from other exchanges, different trading pairs, or spot markets will not be considered for the resolution of this market.",
+  "gamma_result": {
+    "closed": true,
+    "active": true,
+    "automaticallyResolved": true,
+    "umaResolutionStatus": "resolved",
+    "umaResolutionStatuses": "[\"proposed\", \"proposed\"]",
+    "outcomePrices": "[\"0\", \"1\"]",
+    "resolvedBy": "0x65070BE91477460D8A7AeEb94ef92fe056C2f2A7",
+    "closedTime": "2026-10-19 04:15:30+00",
+    "umaEndDate": "2026-10-19T04:15:30Z",
+    "endDate": "2026-10-19T04:00:00Z"
+  },
+  "interpretation": "Gamma reports closed and automatically resolved, singular UMA status resolved, YES/NO prices [0,1] (NO). Caveat: plural UMA status array remains [proposed, proposed], inconsistent with singular status; this response alone does not reconcile that field conflict.",
+  "DEC0160_validation": {
+    "prediction_as_recorded": "By 2026-10-20 the hurdle CLI should complete when group_exit_verdict returns margin=None, print after hurdle carry UNPRICED, and preserve a non-actionable group.",
+    "current_tick_summary": "Parent reports normal hurdle summary 4 clear, 0 flagged, 3 protected. This aggregate count alone does not prove which group/formatter branch was rendered.",
+    "historical_direct_validation": "notes/journal.md 2026-09-20 records actual Duma passed-endDate case: group model returned margin=None despite complete raw exit quote; formatter emitted after hurdle carry UNPRICED; live check_marginal_apy.py completed with five ordinary holds, zero close flags and all protected structures displayed. The same entry states 66 group regression tests, compilation, diff check and live command passed.",
+    "test_coverage_note": "tests/test_group_portfolio_analytics.py::test_formatter_fails_closed_when_verdict_margin_is_unpriced supplies margin=None directly; it validates formatting. Historical journal separately documents the real expired-endDate live scenario."
+  }
+}

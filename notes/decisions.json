@@ -3207,9 +3207,10 @@
         "fail-closed"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Engineering prediction supported: Sep20 direct expired-Duma live validation rendered margin=None as after hurdle carry UNPRICED and completed; historical66 regression tests passed. Through currentOct21 ordinary status/hurdle commands complete. Current4clear0flagged3protected counts alone do not prove the same formatter branch ran again. Evidence: data/deep_review_20261017/work/tick003800_dec0201_byid_followup.json.",
+      "calibration_delta": "No numerical outcome probability or PnL forecast to score. Expected fail-closed behavior observed historically; no recorded recurrence found in bounded current checks.",
+      "lesson": "Missing carry margin stays explicitly UNPRICED; successful aggregate output does not establish branch coverage. Preserve historical direct test evidence.",
+      "resolved_at": "2026-10-21T00:51:56Z"
     },
     {
       "id": 161,
@@ -4280,9 +4281,10 @@
         "no-entry"
       ],
       "slug": "will-ethereum-dip-to-2300-october-12-18-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "No position taken. Oct21 canonicalGamma markets/5593550 reports exactCID closed/automaticallyResolved, YES/NO prices0/1=>NO, closedTimeOct19 04:15:30UTC. SingularUMAstatus resolved conflicts with plural proposed/proposed. Initial markets?id query returnedempty; by-ID response retained separately. Full exactBinance1m window and UMAfinalchain state not independently reconstructed; this is an attributed Gamma outcome, not a source-certified minute-history result. Evidence: data/deep_review_20261017/work/tick003800_dec0201_byid_followup.json.",
+      "calibration_delta": "Unscored: ex-ante decision explicitly adopted no numerical contract-win forecast. Proxy0.627585 was uncalibrated; eventual NO neither validates nor falsifies the skip/volatility model. No realized PnL/counterfactualfill claimed.",
+      "lesson": "Grade source-specific outcomes with attribution and field-conflict limits. Hourly low2318 cannot prove no qualifying1m low, and a winning eventual side does not establish an ex-ante accessible edge.",
+      "resolved_at": "2026-10-21T00:51:57Z"
     },
     {
       "id": 202,

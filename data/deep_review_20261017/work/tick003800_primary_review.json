@@ -1,0 +1,32 @@
+{
+  "schema": "polyclaude.triggered_primary_review.v2",
+  "tick_id": "20261021T003800Z",
+  "reviewed_utc": "2026-10-21T00:54:44.206123+00:00",
+  "requested_alert": "f17681c8f1d23bae9b91ab6b637e637096d6f40a",
+  "Kimi": "Root read original CNN NewsArticle body and matching CNNNewsource ABC17 copy; both publication July24UTC, original modified sameJulydate. K3 discussion contains no HLE numeric score/calibration/K3.1. Matching title established; Google RSS destination binding not observed, same-origin copies not independent corroboration. Classifier new-performance implication supplies no current numeric bridge. Current official HLEAPI00:39 HTTP403; current deltaUNKNOWN. Last200Oct20 21:02:50K3 Accuracy41.08/calibration44.67/66rows/Age3214 remains dated. Temporary outage notNO. Retain10YES central34.02125/selected19.02125/broad8-80, noadd.",
+  "MI": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
+  "MI_result": "Initial auditrc1 at14days triggered actual daily evidence/rules reread + analytic ages17/7/11. ReproduceOct20 then recomputeD55.7302; rounded56/NO44 unchanged. G12/samebiasD59.7314 leaves selected terminal1.513432 vs exit+75dcarry1.509814; G12/nobiasD69.7659 and broadNO20 favor exit. Retain small5NO/noadd with explicit unfitted-bias/model risk. Updated only MI review/source/management fields and top timestamp; numeric priors unchanged. Audit rerun0/CLEAN.",
+  "other_pilots": "Retain5ORNO/5MessiYES, no additions. OR futureOct26-Nov22 weeks unobserved; datedOct20 21:02 partial usage not extrapolated. Messi resolves Google2026 Global Trending Athletes top5, not opinion, awards, country lists or absolute volume. No fresh OR/Google source check claimed.",
+  "hold_math": "data/deep_review_20261017/work/tick003800_hold_exit_math.json",
+  "decision": "00:39 exact four Gamma/eightbooks/fourcompactfee descriptors root raw/hash/identity verified; all zero-rate/exponent1/takerOnly parity despite feesEnabledtrue. Netexits Kimi1/OR3.40/MI1.50/Messi1.25 plus dated variableAave3.2247% constant75d/Messi60d sensitivity below selectedterminal1.902125/3.65/1.70/2. Broadlowcases favor exit. No standing maker sell donating hidden-news jump; future trade requires fresh final route/current account/venue checks. Indicative receipt times are not later executable quotes.",
+  "joint": "KimiYES+ORNO originalcost4.45 canbothlose; allfourpilots7.35 canalllose. No independence or measured hedge credit; low-cost pilots remain terminal-loss risks, not recovery forecasts.",
+  "Clarity": {
+    "held": "29YES>50+29NO>58",
+    "normal_conditional_payoff": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "separate_tool_exit_net": 26.1,
+    "tool_bounds": "2026-10-21T00:39:04.173096Z/00:39:05.976788Z",
+    "dated75d_carry_sensitivity": 26.270767443803464,
+    "judgment": "Retain whole group; no leg-only sale/add. PriorOct20 14:02 same-rule proof retained; no fresh two-leg rule read or unconditional floor claimed."
+  },
+  "other_positions": "TrumpNO0.33 dust and two losing/uncertain claims retained.0winningredeemable; no burn/gas/financialwriter.",
+  "account_proof": "data/deep_review_20261017/work/tick003800_account_root_recheck.json",
+  "alerts": "data/deep_review_20261017/work/tick003800_alert_decisions.json",
+  "entry": "405/600uniquevalued + primarycomparative selectionnull; no BUY/add/repost/taker/bundle. Kellydated194.84cache advisory not new195.11 capital or authority.",
+  "bookkeeping": "ExistingDEC0160 engineering outcome and DEC0201 attributedGammaNO graded throughvettedCLI; latter UMAfieldsconflict/fullBinance1mwindowunknown, unscored probability. Pendingaftergradingrc0/nooverdue; all original forecasts retained.",
+  "telegram": "None; old matching article/daily unchanged roundedprior/bookkeeping not material new finding/action requiring ping. No raw headline heartbeat.",
+  "next_existing_boundary": "02UTCfullcheck/earliermaterialevent; MIdebateOct21 23UTC. Endafterpublication; no goal lifecycle/timer/idlecontinuation."
+}

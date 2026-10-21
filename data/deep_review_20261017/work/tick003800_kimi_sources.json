@@ -1,0 +1,107 @@
+{
+  "schema": "tick003800_kimi_sources.v1",
+  "audited_utc": "2026-10-21T00:39:11.219506Z",
+  "alerts": [
+    {
+      "id": "a40093efed7c7b243727ac80c534760073f3c650",
+      "ts": "2026-10-20T06:45:08Z",
+      "title": "OpenAI Accuses Kimi Operator China’s Moonshot AI Of Copying AI Model Reasoning - Yahoo Finance",
+      "line_sha256": "c8be1d59dde466fe9e86ac73355f0d401ef5d5e32e102faa46d1c92cade824f5"
+    },
+    {
+      "id": "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+      "ts": "2026-10-20T07:17:34Z",
+      "title": "Moonshot’s Kimi K3 lands on Amazon in key test for Chinese open-source AI income - South China Morning Post",
+      "line_sha256": "ba3702c6e99fb5ecc5cd901b52fa648aaa4df3ccacab9e61d32e741e58b8be66"
+    },
+    {
+      "id": "e8ea6beea0ed415d918f6cb7c0993a7f05ecf9f3",
+      "ts": "2026-10-20T09:40:28Z",
+      "title": "Moonshot AI seeks revenue-sharing deals with Microsoft, Amazon, Google - Quartz",
+      "line_sha256": "62604021ed20347189551e39f32a562d3816bc2eb790902870f383589751571f"
+    },
+    {
+      "id": "5fa45630a7ef41fc67a1685a286aae60f0e561e9",
+      "ts": "2026-10-20T09:40:43Z",
+      "title": "Kimi K3 escaped its test sandbox to cheat, researchers say - The Next Web",
+      "line_sha256": "83026a04591308f09aecc33961912ebaa486f8d3a8a93225aa137a3e25e8e628"
+    },
+    {
+      "id": "f534810c5538d26e2580ac14dbb36c64047f5760",
+      "ts": "2026-10-20T09:41:11Z",
+      "title": "The AI cold war escalates as China and U.S. clash over Moonshot’s Kimi model - CTech",
+      "line_sha256": "1995f9f9a01d303976e77ca95a35a27e263d5e6a1b466e95a426cb1bec3ff430"
+    },
+    {
+      "id": "b27070873be8269e6f95abbf691c1c93b18f5993",
+      "ts": "2026-10-20T17:22:36Z",
+      "title": "Kimi K3.1: Four Signals Point at a Launch Next Week, and the One Commit Nobody Can Find - OrcaRouter",
+      "line_sha256": "7e11adfd710108bf2b778a01be70ed1724e0642067289da33264c3d29ee28f17"
+    },
+    {
+      "id": "358bcbdec31f76adea5c099a3dbb7f7f645d4fb0",
+      "ts": "2026-10-20T19:26:37Z",
+      "title": "What Is Moonshot AI’s Kimi K3 Model and Why Is It Making Waves? - Bloomberg.com",
+      "line_sha256": "194bca10118be1ad8e33a4efd4a65fb553ec476247fceeec8bcd799073082caf"
+    },
+    {
+      "id": "f17681c8f1d23bae9b91ab6b637e637096d6f40a",
+      "ts": "2026-10-21T00:38:00Z",
+      "title": "What is China’s Kimi K3 and why is the US so rattled by it? - CNN",
+      "line_sha256": "a3569d61c6d39037e46fb3dc73617bf17e2b121f54f69e66015ab46b4cb6a2fb"
+    }
+  ],
+  "cnn_alert_read": {
+    "capture": {
+      "status": 200,
+      "started_utc": "2026-10-21T00:39:02.162178Z",
+      "received_utc": "2026-10-21T00:39:02.466796Z",
+      "headers": {
+        "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+        "content-type": "text/html; charset=utf-8",
+        "date": "Wed, 21 Oct 2026 00:39:02 GMT"
+      },
+      "raw_sha256": "dccf4575f723b785bdd34d65a57e90d25a98e5d7825706fe41d666fad4a69e36",
+      "gzip_sha256": "4748e78e050dc23e9bc798bd8cd165109659e613823211a42656bbc20ec68226",
+      "receipt": "logs/cron20261021T003800Z_kimi/cnn/cnn_alert.receipt.json",
+      "body": "logs/cron20261021T003800Z_kimi/cnn/cnn_alert.body.json.gz",
+      "hashes_verified": true,
+      "bytes": 583931
+    },
+    "result": "HTTP 200 Google News HTML only, not CNN body. Publication date, referenced model/version, test methodology, new benchmark figures and accuracy-vs-calibration claims remain unverified here; no guessed publisher URL or paywall workaround."
+  },
+  "hle": {
+    "current": {
+      "status": 403,
+      "started_utc": "2026-10-21T00:39:02.507504Z",
+      "received_utc": "2026-10-21T00:39:02.675511Z",
+      "headers": {
+        "cache-control": "private, no-store, max-age=0",
+        "content-length": "59",
+        "content-type": "text/plain; charset=utf-8",
+        "date": "Wed, 21 Oct 2026 00:39:02 GMT"
+      },
+      "raw_sha256": "c57989d09edefc01cb44eee607e2d0f773723162366de8faf0b2bc890f0fb8a2",
+      "gzip_sha256": "5fc15fdc9dc73fb052656850cf33c2db5b052a2dcc4441dd808eb7d3703c5723",
+      "receipt": "logs/cron20261021T003800Z_kimi/hle/hle.receipt.json",
+      "body": "logs/cron20261021T003800Z_kimi/hle/hle.body.json.gz",
+      "hashes_verified": true,
+      "bytes": 59
+    },
+    "current_result": "HTTP 403 Forbidden; current HLE accuracy/calibration unknown; no retries or archive lookup.",
+    "tick210121_baseline": {
+      "status": 200,
+      "received_utc": "2026-10-20T21:02:50.533183Z",
+      "age_seconds": "3214",
+      "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+      "gzip_sha256": "6c8419287ead698b262f07fea3ccff401c7b044b80f9da33b0e9badea1ae23af",
+      "receipt": "logs/cron20261020T210121Z_resolving_sources/hle/hle.receipt.json",
+      "body": "logs/cron20261020T210121Z_resolving_sources/hle/hle.body.json.gz",
+      "rows": 66,
+      "kimi_k3_hle_accuracy_field": 41.08,
+      "kimi_k3_hle_calibration_error_field": 44.67
+    },
+    "comparison": "A baseline score is not a current change; current value unavailable."
+  },
+  "capture_verification": "New CNN/HLE and baseline HLE raw and gzip hashes were independently verified."
+}

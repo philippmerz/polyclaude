@@ -1,0 +1,101 @@
+{
+  "schema": "polyclaude.alert_decisions.v1",
+  "reviewed_utc": "2026-10-21T00:54:44.206123+00:00",
+  "required_alert": "f17681c8f1d23bae9b91ab6b637e637096d6f40a",
+  "new_window": "after2026-10-20T22:07:38Z through2026-10-21T00:48:56Z;16rows",
+  "per_alert": [
+    {
+      "id": "3e5aed6d25c95a385b9255a8dd60816214184fb4",
+      "line_sha256": "656db12586fcb99cebfc25cff5bf087f742279f7a6c8a0e9215c25f7424c6845",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "79f1edce0d55797500d9f5032f25f6880b3648d8",
+      "line_sha256": "b14a5b900e251fc7c4853ddd60f89e679b43a4189d6e7c39c6d2d9af8a67ceaf",
+      "decision": "Held0.33NO dust checked; allegation headline is not a verified qualifying departure/removal/incapacity event. No action; no guilt inference."
+    },
+    {
+      "id": "8e63735401f77edc914ce2a76b90b40c91cc4a8b",
+      "line_sha256": "6de6244feecff83811b7f7a23d558a0460f53057fc9faa9a8bb3d2c820493dad",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "4a7e17cf5dc84f081a16f27c8f56da8a9a4267d4",
+      "line_sha256": "5a66b9f5dc69f0ca73c6e2afe6a71d68de8d33a7d6b80db3a57d05a057481b55",
+      "decision": "No Anthropic holding/order; previous bid zero-fill canceled. IPO commentary not a measured Kimi HLE or OpenRouter qualifying total; no action."
+    },
+    {
+      "id": "80e8ad223db0fca2625836c0b682f0a93e20b123",
+      "line_sha256": "6d253541af9b0b8d40bbde22db8161e074c15597b267d6a3776804f5b19a31df",
+      "decision": "Rogers campaign-reported coalition inroads not measured MI vote response; body unverified. Daily MI rederivation completed separately, no numeric headline adjustment."
+    },
+    {
+      "id": "daae1cb47c58b2a546a865641f9005fc1674b3a9",
+      "line_sha256": "565ea01758ba4bb13196503861fbb964fcfb09e6d34ec4c69726d8e4cc43bf18",
+      "decision": "Physician-credentials dispute headline is not verified health/withdrawal/ballot change; body unverified. No quantified vote adjustment."
+    },
+    {
+      "id": "9e9884a4053f639f962e20856fe2ab09edec5271",
+      "line_sha256": "e32b33a92d2b77211772db16a4cd39f3e02fa59c42b6fb856ae8c17424a650fc",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "56d3efe4a86d986e930a4acd0b463d644d50f3f4",
+      "line_sha256": "b228f3fe493ee76dd0ca123920a521be692f001617a93ca458687a2af5dd9a40",
+      "decision": "Athlete opinion/performance is not Google2026 Global Trending Athletes top5 result; no numerical rank/probability adjustment."
+    },
+    {
+      "id": "d5382d99e27369d3d924d251e2b9e4be42a4d4f5",
+      "line_sha256": "966020de41edcc00ed9f139c22b002760f75b397938b340397ccc8111820c49c",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "840181e3bd5c568460ca21ae9bd901e88f69e395",
+      "line_sha256": "5c6ad37d58a0b8b08b202c99e52f0f27518256ca78b6d442eb1246175cfd207e",
+      "decision": "Athlete opinion/performance is not Google2026 Global Trending Athletes top5 result; no numerical rank/probability adjustment."
+    },
+    {
+      "id": "b7748eaf3f0af2cc625b5cba1d6969d07c2b9cad",
+      "line_sha256": "21ca0e5cd55931eb15ee02e4dd60bad9755b2aebc739f8bc315ad2e56c9dc99b",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "d0c5cadd2f62c1a5b59786f08ec5ed122faf3fbc",
+      "line_sha256": "ef91cb9338ef7a5565263f85eb481046ccf06d7d3345b967f9dc0fce6cd9f6f6",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "78d287289ef6b0296fa9972baaa9829acc1f401c",
+      "line_sha256": "bdb676a5600b85d0187d3f3190baf408f5c8b482b2c8f33c30d90f290c2f5de7",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "f17681c8f1d23bae9b91ab6b637e637096d6f40a",
+      "line_sha256": "a3569d61c6d39037e46fb3dc73617bf17e2b121f54f69e66015ab46b4cb6a2fb",
+      "decision": "Matching original CNN body is July24UTC/July23local K3 explainer, no numeric HLE score/K3.1. No new Oct21 release inferred. Current HLE403 unknown; retain10YES/noadd."
+    },
+    {
+      "id": "f253bab283b75edd8c6f647b7522d6010b8895ff",
+      "line_sha256": "826e3364b979374c9dbeb38978d46efe395bbd3c9e946648469bfaebd280d514",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    },
+    {
+      "id": "2cec2ee511b8fa9aed6f0842a1958433710d6107",
+      "line_sha256": "606c874ceb3f3be188b659351e1750e9e58a8caaa459cb61a283d6d3d1bbcdea",
+      "decision": "No exact held economic exposure or open order in authenticated book; research/context only, no portfolio action."
+    }
+  ],
+  "seven_older_related_Kimi_alerts": [
+    "a40093efed7c7b243727ac80c534760073f3c650",
+    "214d3b4a4fc1251e82385c54ef00b9a999d967c3",
+    "e8ea6beea0ed415d918f6cb7c0993a7f05ecf9f3",
+    "5fa45630a7ef41fc67a1685a286aae60f0e561e9",
+    "f534810c5538d26e2580ac14dbb36c64047f5760",
+    "b27070873be8269e6f95abbf691c1c93b18f5993",
+    "358bcbdec31f76adea5c099a3dbb7f7f645d4fb0"
+  ],
+  "older_review": "Read regardless of journal recency; see tick003800_kimi_sources.json for exact titles/timestamps/linehashes. Amazon distribution, alleged distillation/sandboxing, revenue discussions, unverified K3.1 rumor and Bloomberg explainer are not observed qualifying official HLE Accuracy. Prior body/source gaps remain; no independent duplicate-count probability update.",
+  "CNN_evidence": "data/deep_review_20261017/work/tick003800_kimi_article.json",
+  "MI_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
+  "authority": "Classifier MATERIAL tag queued this review, not proof of score, new release, current fillability or action authority."
+}

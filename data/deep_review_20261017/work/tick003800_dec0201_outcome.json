@@ -1,0 +1,32 @@
+{
+  "schema": "tick003800_dec0201_outcome.v1",
+  "audited_utc": "2026-10-21T00:48:01.211292Z",
+  "decision": {
+    "id": "DEC-0201",
+    "timestamp": "2026-10-15T14:12:43Z",
+    "prior_prediction": "No numerical outcome or profit forecast. At grading after the Oct18ET window, verify the exact Binance1m source/result separately from this ex-ante method review. The same captured inputs should reproduce the proxy and fee-gate failure; an eventual winning side alone does not validate forward volatility, probability calibration or the skipped trade. Evidence:data/checkin_20261015T1400_{ETH_source,ETH_sensitivity,root_reviews}.json and exact captured source/book receipts.",
+    "exact_market_id": "5593550",
+    "condition_id": "0x1f54117cc0c3ff4926fc6297c2341f13454b715d0a9afaf8d1dcf3c44c10d2d3",
+    "criterion_as_recorded": "YES if a final Binance ETHUSDT 1-minute candle within the contract’s Oct 12–18 ET window has Low <= $2,300; window closed before due date Oct 20.",
+    "current_gamma_capture": {
+      "url": "https://gamma-api.polymarket.com/markets",
+      "status": 200,
+      "started_utc": "2026-10-21T00:47:43.816554Z",
+      "received_utc": "2026-10-21T00:47:44.033315Z",
+      "date_header": "Wed, 21 Oct 2026 00:47:44 GMT",
+      "age_header": "133",
+      "raw_sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+      "gzip_sha256": "2ca4529576310b626c1bd48352d283b521d029d54f195d8416536872d826e4c6",
+      "receipt": "logs/cron20261021T003800Z_dec0201/gamma_market.receipt.json",
+      "body": "logs/cron20261021T003800Z_dec0201/gamma_market.body.json.gz",
+      "independent_hash_verification": true,
+      "parsed_market_rows": 0
+    },
+    "current_status": "UNKNOWN: exact Gamma lookup returned HTTP 200 with an empty result; no status/outcomePrices/UMA resolution is available from this response. No minute-history reconstruction attempted.",
+    "final_outcome": "UNKNOWN"
+  },
+  "DEC-0160_check": {
+    "recorded_prediction": "Through 2026-10-20, check_marginal_apy.py will complete protected-group reporting without an exception when group_exit_verdict returns margin=None, will print after hurdle carry UNPRICED, and will leave the underlying group non-actionable.",
+    "check": "Per parent-reported current check_marginal_apy.py result: 4 clear, 0 flagged, 3 protected groups; no exception, so predicted formatter behavior is observed. This is a factual verification only; no maintained record edited."
+  }
+}

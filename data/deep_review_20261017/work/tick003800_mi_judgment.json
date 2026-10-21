@@ -1,0 +1,41 @@
+{
+  "schema": "polyclaude.MI_daily_primary_judgment.v1",
+  "reviewed_utc": "2026-10-21T00:51:31.119969+00:00",
+  "identity": "1838/630805/0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4; held5NO means any non-D winner",
+  "facts": "Root raw+gzip verified current IA homepage/Oct12 notice/public X profile, Rasmussen article and official six-name candidate listing. Original IA Oct9-10 D48/R46 n1200 LV/MOE2.83; Rasmussen Oct12-14 D46/R44 n798 LV/MOE3. IA Michigan mode absent; adjacent-state text/panel not imported. Oct12 X-pointer gives no newer Michigan numbers; finite six-post profile view not absence proof. Official list not a withdrawal/change-history guarantee. Current full Gamma rules read and exactly match frozen criteria.",
+  "national_counterevidence": "Already-captured original Ipsos Oct16-19 KnowledgePanel n1679 adults/n1279 RV gives RV congressional D47/R35 (D+12); RV MOE2.8sharepp. National RV is not Michigan LV/Senate data. Original G8 judgment was informed by Fox certain-vote D6 and YouGov loose/strict D8/D11. Retain multi-source G8 as a subjective center; newer Ipsos12 widens the adverse NO case rather than adding an independent MI likelihood. Neither instrument selection nor poll-cycle bias is calibrated.",
+  "calculation": {
+    "model": "research/2026-10-17-deep-review/models/mi_daily_20261021.py",
+    "result": "data/deep_review_20261017/work/tick003800_mi_rederived.json",
+    "reproduced_Oct20_p_D": 0.5568860692623434,
+    "current_p_D": 0.5573020962148465,
+    "ages_days": [
+      17,
+      7,
+      11
+    ],
+    "G12_same_bias_p_D": 0.5973136745897769,
+    "G12_no_bias_p_D": 0.6976585708235377,
+    "G12_same_bias_selected_NO": 0.3026863254102231,
+    "G12_same_bias_selected_terminal": 1.5134316270511157,
+    "exit_plus_dated75d_carry": 1.509814220908245
+  },
+  "adopted": {
+    "D": 0.56,
+    "NO_any_non_D": 0.44,
+    "D_range": [
+      0.3,
+      0.8
+    ],
+    "selected_NO": 0.34,
+    "broad_low_NO": 0.2
+  },
+  "root_decision": "Retain5NO/noadd. Recomputed55.7302 rounds56, not a rolled verified date. Selected terminal1.70 exceeds00:39 netexit1.50 plus dated75dAave1.509814; broadlow1.00 favors exit. G12/samebias leaves only0.00362USD selected excess; G12/nobias selected about1.01171 favors exit. Strong-D/cycle-error countercases are credible; current evidence does not justify replacing the original central cycle-bias assumptions with certainty. Keep small1.55cost exposure; it can all be lost. No hedge or robust-all-model claim. Next existing ticks/earlier material news recheck; debateOct21 23UTC is upcoming, not a completed vote effect.",
+  "source_packets": [
+    "data/deep_review_20261017/work/tick003800_mi_refresh.json",
+    "data/deep_review_20261017/work/tick003800_mi_ia_followup.json",
+    "data/deep_review_20261017/work/tick151845_primary_poll.json"
+  ],
+  "forecast_lock": "Model/scenarios saved before root pricing calculation; no venue probability selected parameters.",
+  "entry": "New BUY paused405/600 plus comparative selectionnull; no financialwriter."
+}

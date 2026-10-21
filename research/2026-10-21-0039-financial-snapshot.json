@@ -1,0 +1,31 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261021T003800Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-21T00:39:53.628973+00:00",
+  "producer_completed_utc": "2026-10-21T00:40:10.500553+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "97ed4eb341d989e9773c871c67d940b19a519297def7a06db45c5d2ee2b1b511",
+  "timing_basis": "Actual invocation bounds; sequential component reads, not synchronized NAV or freshness-certified liquidation. CSV whole-second check-window start.",
+  "canonical_total_including_funded_gas_usd": "195.11",
+  "same_producer_funded_gas_usd": "5.97",
+  "same_producer_PM_mid_usd": "35.18",
+  "same_producer_PM_fee_net_depth_usd": "33.25",
+  "derived_trading_mid_usd": "189.14",
+  "derived_trading_fee_net_depth_usd": "187.21",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.12,
+  "reported_accounting_residual_usd": "19.73",
+  "previous_complete_2235_comparison": {
+    "canonical_total_change_usd": "0.27",
+    "trading_mid_change_usd": "0.28",
+    "trading_depth_change_usd": "0.16"
+  },
+  "rounding_note": "Producer printed PM warning1.93 agrees with rounded35.18-33.25. Same producer components only; rounded-depth arithmetic tolerance does not bound source/timing/accounting uncertainty.",
+  "limits": [
+    "No trade or external contribution; differences reflect marks, depth, liquidity, interest and rounding, not audited realized profit.",
+    "Producer labels19.73 REALIZED, but historical basis/fees/flows remain unreconciled; do not adopt label as audited cash profit. VM/API costs excluded.",
+    "Same-producer TOTAL/gas/PM values; separate held-token walks not substituted. No unvalued-asset warning.",
+    "Indicative fee-net trading depth187.21 is not executable synchronized account liquidation."
+  ]
+}

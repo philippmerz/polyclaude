@@ -1,0 +1,40 @@
+{
+  "schema": "polyclaude.root_account_verification.v2",
+  "verified_utc": "2026-10-21T00:50:35.026047+00:00",
+  "orders": 0,
+  "trades": 127,
+  "cursors_both": "LTE=",
+  "allsize_positions": 9,
+  "tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "exact_position_and_full_trade_match_2236": true,
+  "winning_redeemables": 0,
+  "raw_and_gzip_hashes_verified": true,
+  "CLI_actual_codes": {
+    "brownian_bridge_fv": 0,
+    "crux_coverage": 0,
+    "crypto_status": 0,
+    "decisions_pending": 0,
+    "exit_analysis": 0,
+    "kelly_constrained": 0,
+    "ostium_state_diff": 0,
+    "polyclaude_status_quick": 0,
+    "position_state_audit_fix": 1,
+    "uma_status": 0,
+    "wallet_status": 0
+  },
+  "all_CLI_output_hashes_verified": true,
+  "all4daemon_starts_after_script_mtimes": true,
+  "no_financial_writer": true,
+  "source_ops": "data/deep_review_20261017/work/tick003800_account_ops.json",
+  "limits": "Initial auditrc1/MIreview preserved; followup0 captured separately. DEC0201 Gamma-reportedNO has conflicting UMA status fields and unverified full Binance1m window; not a calibrated probability score.",
+  "followup_state_audit": "logs/cron20261021T003800Z_root/followup/state_audit_after_review/result.json",
+  "followup_actual_rc0": true,
+  "followup_state": "CLEAN after actualMIrederivation;7indexed+1claim/0expiredholds",
+  "decision_grading": "Existing0160/0201 graded with limits; capturedpendingaftergradingrc0/nooverdue"
+}
