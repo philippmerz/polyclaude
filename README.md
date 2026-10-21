@@ -82,11 +82,11 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 13:17 UTC
+## Last audited snapshot — October21 13:33 UTC
 
 **Pre-order canonical financial snapshot (12:59:24–39 UTC):** $196.34 total including $6.03 funded gas; trading midpoint $190.31 and indicative trading liquidation value $188.90 (+11.12% versus $170 contributed); same-producer PM midpoint/depth $36.35/$34.94. The $19.73 residual remains unaudited; VM/API costs are excluded. Values are sequential rounded estimates, not synchronized NAV or guaranteed proceeds. [Snapshot](research/2026-10-21-1259-financial-snapshot.json).
 
-**Post-order safety:** 13:17:41 UTC exact reconciliation found all 3 selected orders LIVE/0 matched, 127 confirmed historical trades, 9 all-size positions, all six target CTF balances zero, and pUSD equal to the pre-order $19.25129. Full-fill reservations total $13.64, leaving $5.61129 by arithmetic; no execution fee or realized profit has occurred. The13:20 quick status showed no watchlist hit; the 13:04 MLive source check failed, with no verified poll or thesis change. [Receipt-linked order proof](data/deep_review_20261017/work/selection20261021/postentry_reconciliation/postentry_reconciliation.json) · [Alert](notes/news_alerts.jsonl).
+**Post-order safety:** 13:33:51 UTC reconciliation again found all3 selected orders LIVE/0matched,127confirmed trades,9all-sizepositions,all6targetCTFs0,Kimi10YES andpUSD19.25129 unchanged. Three reservations total13.64; uncommitted5.61129. UMA0alerts,4hurdle-clear,watchlist0,auditclean,4currentdaemon singletons. No trade/prior-number change. [Delayed alert review and exact proof](research/2026-10-21-125321-news-review.json).
 
 The performance CSV now has **250 observations** through Oct21; the October21 12:59 snapshot is the latest row. Historical accounting retains its limits and source gaps. [CSV and methodology](docs/README.md) · [Source audit](research/2026-10-06-performance-history.json).
 

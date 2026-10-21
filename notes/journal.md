@@ -32745,3 +32745,12 @@ Backlog/recentjournal reviewed after fullcheck63a58de6. One10:24:01–02 authent
 - Telegram materialsummary sent13:23:46UTC/rc0/message1286; threebids, zero matched,13.64commitment vsnotpurchases; no newheadlinealerts or waitingloop.
 
 - 13:25nativegoalread returnednull; noactivegoalexists. Broadexperimentisended, notblocked; scheduledchecks donotreactivateit. Earlierpausedstatewas12:52observation, supersededbythislive lifecyclecheck.
+
+
+## 2026-10-21 13:38 UTC — delayed12:53 news tick, no action
+
+- Requested139d3a2ec01d19af67efe20ac584c3c063bac249andrelatedprioralertsread, notinferredcompletefromdispatch/journal. Newofficialindexedsourceclosedpartofpublication/action gap; directOpenAI403notretried/BigGobodyunknown. PrimaryretainKimi10YES/noadd/nosale/numericpriorchange; [source scope and exact review](../research/2026-10-21-125321-news-review.json).
+- CurrentKimi10YES netexit1.10 plus72dconstant3.2247%carry1.106908 vsselectedterminal1.902125; hypothetical25%futurebranchimpairment1.298844 stillaboveexit. Retentionindifference0.670462, broad8%pays0.80andfavorsexit. Nojudgment thatJulyconstraintsnewlycutfutureupdateoddsbythatmuch. ActualcurrentHLEscoreunverified; nofreeze/recoveryorcalibratedfloorclaim. OR/MI/Messi selected3.65/1.70/2 vs3.20/1.45/1.25exitspluscarry; broadlowsfavorcash. WholeClarity29faithfulfloorvs27.95exit; oracle/counterpartyfailurecanwipefloor, nolegsale. [Math](../data/deep_review_20261017/work/tick125321/hold_exit_math.json).
+-13:33:51exact3LIVE/0matched/13.64reservations,127exhaustedconfirmedtrades/noorderrefs,9samepositions/all6targetCTFs0,KimiCTF10/pUSD19.25129same. UMA43refreshed0alerts/Ostium0/nooverdue/cruxquiet/hurdle4clear/watchlist0/auditCLEAN7indexed+1alreadydeindexedclaim. No newdeindexorfinancialcorrection.4unique currentdaemons; failedpsutilprobeactual1, corrected/procprobe0preserved. [Safety](../data/deep_review_20261017/work/tick125321/account/tick_summary.json).
+-13:10fe283a4dFedalert linksverifiedSep16statement, alreadyunderwritten, noOctdecision.13:27IDs4e785c42/628c858b/5222460b genericfootball/weight-loss/gasnontriggerleads; exactIDsclassified, no newmarketmeasurement/materialthesisbreak. Scopeclosed13:32:39, noendlessalertcatchup.
+- Delayednews-eventtickreuses12:58fullsleevecheck/12:59canonical196.34(gas6.03,trading190.31mid/188.90indicative depth)and02UTCcappeddiscovery; nofreshwhole-accountproducer/CSVrow orfullscans.14UTCfullnext; weeklyOct23/monthlyNov12notdue. No order/flow/redemption/strategy/daemon/goal change; noTelegramflat-summary. Broad422experimentremainsended.

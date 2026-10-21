@@ -1841,7 +1841,15 @@
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
     "decision_id": 243,
     "latest_execution_review": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
-    "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json"
+    "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
+    "latest_news_review": {
+      "reviewed_utc": "2026-10-21T13:39:01.453337+00:00",
+      "alert_id": "139d3a2ec01d19af67efe20ac584c3c063bac249",
+      "report": "research/2026-10-21-125321-news-review.json",
+      "source": "data/deep_review_20261017/work/tick125321/primary_source_review.json",
+      "p_yes_unchanged": 0.34021250000000014,
+      "action": "RETAIN10YES/noadd/nosale; datedaccessriskscoped, noverifiednewbenchmarkormetricchange. CurrentHLEscoreunverified; pnotacalibratedfloor."
+    }
   },
   "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026": {
     "p_yes": 0.2329,
