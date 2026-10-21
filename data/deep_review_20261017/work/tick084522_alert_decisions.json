@@ -1,0 +1,71 @@
+{
+ "schema": "polyclaude.alert_decisions.v1",
+ "tick_id": "20261021T084522Z",
+ "reviewed_utc": "2026-10-21T09:03:00.219414+00:00",
+ "cutoff": "2026-10-21T09:01:25Z",
+ "alerts": [
+  {
+   "id": "68ded098da5ec6bc5d63da37a4e0940084b3a506",
+   "ts": "2026-10-21T07:25:42Z",
+   "title": "US lawmakers investigate DoorDash’s use of Moonshot AI’s Kimi K2.6 model - South China Morning Post",
+   "decision": "Relevant to held ANY-Moonshot-Kimi contract despite research-only routing. Exact SCMP match displays Aug1 publication/update; officialJuly31 committee release independently verified. Investigation creates general commercial/security risk, not a verified HLE score/admission update; no numerical shift."
+  },
+  {
+   "id": "19469efa01a6e1c434e5ff958e6eda026fc78120",
+   "ts": "2026-10-21T07:57:31Z",
+   "title": "Presidenta Delcy Rodríguez entregó 500 viviendas transitorias en Ciudad Caribia - Correo del Orinoco",
+   "decision": "Housing report: no current Venezuela exposure or pending order; no portfolio action."
+  },
+  {
+   "id": "ec4a230ee6a94da0053bb6704b23201cb1269ff4",
+   "ts": "2026-10-21T08:08:06Z",
+   "title": "Michigan Senate race tests Democrats' control hopes as Abdul El-Sayed bids for historic win - Traders Union",
+   "decision": "Michigan campaign framing. No verified new nomination, poll or vote effect supplied; not quantitative evidence for held5NO."
+  },
+  {
+   "id": "fa9d2333d80ecce049d4007e41085e1d07032e2c",
+   "ts": "2026-10-21T08:39:48Z",
+   "title": "Could Islamophobia cost Abdul El-Sayed the race for the US Senate? - The Journal",
+   "decision": "Michigan opinion headline; no measured vote change. Do not infer accusation/opinion direction or probability shift."
+  },
+  {
+   "id": "724d9b8f4ab57e23c8a38722eb0bd273149fb8b0",
+   "ts": "2026-10-21T08:45:17Z",
+   "title": "Organizer in hidden video alleges overseas donations to El-Sayed; campaign denies claim - KTUL",
+   "decision": "Required review completed: same headline as older bca84a6a. Original OMG text provenance verified; alleged donations/confrontation remain unverified and campaign denial attributed. KTUL body unavailable. No established voter effect or settlement change; retain existing review judgment, no financial action."
+  },
+  {
+   "id": "dc43876bea57cbda736c0c998db66cac869cf987",
+   "ts": "2026-10-21T08:50:38Z",
+   "title": "House Speaker Mike Johnson stumps in Bozeman for Aaron Flint - KTVH",
+   "decision": "MT01 campaign event. Prior Flint bid canceled zero-fill; no current exposure or commitment."
+  },
+  {
+   "id": "2528990ba9fda3e18146efbdc113cb32a84c17a2",
+   "ts": "2026-10-21T08:50:44Z",
+   "title": "Jim Cramer Warns AI Stocks May Have Further to Fall as Investors Await Big Tech Earnings and Anthropic IPO - Tekedia",
+   "decision": "Equity/IPO commentary; no Anthropic position/order or project stock exposure. Does not establish Kimi benchmark change."
+  },
+  {
+   "id": "0f9022532c83820b681cc3df715d5564d960f482",
+   "ts": "2026-10-21T08:50:49Z",
+   "title": "Cristiano Ronaldo leads Lionel Messi in top 10 highest-paid footballers in 2026 - See full list - Pulse Ghana",
+   "decision": "Football earnings ranking is not Google Global Trending Athletes resolution criterion; no exact-rank evidence."
+  },
+  {
+   "id": "bca84a6a6739f019e37273958bbed26c228cd76f",
+   "decision": "Older related alert reread despite08:50 research journal; same headline framing. Prior03:55 evidence and attributed denial reviewed alongside fresh original OMG posts. Not independent corroboration."
+  },
+  {
+   "id": "8de627e09b46969d51d32b7c4238711063226240",
+   "ts": "2026-10-21T09:01:25Z",
+   "title": "Mbappe Ballon d’Or aspiration — Goal.com",
+   "decision": "Closing-tail research-only headline reviewed: award aspiration is not exact Google Global Trending Athletes ranking evidence; no portfolio action. Article body not independently verified."
+  }
+ ],
+ "scope": "9 new rows since last safety-source review07:09:24 plus older related bca84a6a. Failed bodies remain unknown; unrelated-headline relevance is not article verification.",
+ "sources": [
+  "data/deep_review_20261017/work/tick084522_news_facts.json",
+  "data/deep_review_20261017/work/tick084522_doordash_facts.json"
+ ]
+}

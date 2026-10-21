@@ -1,0 +1,107 @@
+{
+ "schema": "polyclaude.resolving_sources.v1",
+ "tick_id": "20261021T084522Z",
+ "saved_utc": "2026-10-21T08:55:50.303004+00:00",
+ "scope": "Facts only; actual captures08:53UTC. No account, forecast, prior, action or ledger mutation.",
+ "identity": {
+  "held_cases": {
+   "Kimi": 412,
+   "OpenRouter": 112,
+   "Michigan_Democratic_nominee": 1838,
+   "Messi": 210
+  },
+  "correction": "Task210OpenRouter shorthand corrected from prior proof/freeze to112OpenRouter/210Messi; underlying records unchanged.",
+  "rules": "Complete frozen rules and latest reports read; full identities/hashes: logs/cron20261021T084522Z_sources/verified_rule_index.json",
+  "rule_index_sha256": "4beb6450086fce6eb8379588fc067aea1f130e07da2f56ae69f194aedf2f0a0a"
+ },
+ "quotes": {
+  "path": "data/deep_review_20261017/work/tick084522_held_quotes.json",
+  "sha256": "02fe16a8914ac7d9f71d4fb37ed9090dfeb0e9bb06a803558ae50b07a9481f59",
+  "cli_rc": 0,
+  "exact_Gamma": 4,
+  "compact_fee_descriptors": 4,
+  "book_rows": 8,
+  "all_raw_gzip_hashes_verified": true,
+  "fee_observation": "All four exact compactfd: rate0/exponent1/takerOnlytrue; structured Gamma parity verified.",
+  "book_received_utc": "2026-10-21T08:53:56.124175+00:00",
+  "limits": "Sequential observations, no execution authority/account/geoblock read."
+ },
+ "facts": [
+  {
+   "name": "hle",
+   "url": "https://dashboard.safe.ai/api/models",
+   "status": 403,
+   "started_utc": "2026-10-21T08:53:55.513729Z",
+   "received_utc": "2026-10-21T08:53:55.678927Z",
+   "receipt": "logs/cron20261021T084522Z_sources/resolvers/hle.receipt.json",
+   "raw_sha256": "36501b89824037ecfeb0cf1c319637981cba8767590d571e9b1947cdd06a730a",
+   "response_date": "Wed, 21 Oct 2026 08:53:55 GMT",
+   "age_seconds": null
+  },
+  {
+   "name": "openrouter",
+   "url": "https://openrouter.ai/api/frontend/v1/rankings/model-rankings-chart",
+   "status": 200,
+   "started_utc": "2026-10-21T08:53:55.690128Z",
+   "received_utc": "2026-10-21T08:53:55.787661Z",
+   "receipt": "logs/cron20261021T084522Z_sources/resolvers/openrouter.receipt.json",
+   "raw_sha256": "69f9b640bfa46c9414d63cb48c03b8f0e1ae3839ad1a15c0d52722e73e5b7982",
+   "response_date": "Wed, 21 Oct 2026 08:53:55 GMT",
+   "age_seconds": 235
+  },
+  {
+   "name": "senate_rollcall",
+   "url": "https://www.senate.gov/legislative/LIS/roll_call_lists/vote_menu_119_2.htm",
+   "status": 403,
+   "started_utc": "2026-10-21T08:53:55.798430Z",
+   "received_utc": "2026-10-21T08:53:56.333629Z",
+   "receipt": "logs/cron20261021T084522Z_sources/resolvers/senate_rollcall.receipt.json",
+   "raw_sha256": "215d015b6f342bd9b238dcfd3eeb60eaedf4f877dd2de573a4133db707f06325",
+   "response_date": "Wed, 21 Oct 2026 08:53:56 GMT",
+   "age_seconds": null
+  },
+  {
+   "name": "google_yis_2026",
+   "url": "https://trends.withgoogle.com/year-in-search/2026/",
+   "status": 404,
+   "started_utc": "2026-10-21T08:53:56.344616Z",
+   "received_utc": "2026-10-21T08:53:56.814866Z",
+   "receipt": "logs/cron20261021T084522Z_sources/resolvers/google_yis_2026.receipt.json",
+   "raw_sha256": "c85d48a4811fd7a5c4b0f18e78fff678d838a8e9129a5c81e04e776f7d0f05db",
+   "response_date": "Wed, 21 Oct 2026 08:53:56 GMT",
+   "age_seconds": null
+  }
+ ],
+ "hle": {
+  "current": "403; current official Accuracy unknown. One request, no retry/bypass. No deindexing, below55 or absence inference.",
+  "last_successful": "02:02:29.119527Z dated cached66models; KimiK3 scores.hle41.08, separate hle_calibration_error44.67. Old receipt/body/gzip hashes reverified; not current.",
+  "limits": "Rule uses official HLE Accuracy/equivalent, not issuer claims/calibration error. Historical maxima/removals incompletely verified."
+ },
+ "openrouter": {
+  "rows": 53,
+  "cachedAt": 1792569246764,
+  "cachedAt_utc": "2026-10-21T07:54:06.764000+00:00",
+  "completed_Oct12_T": 164.043985914931,
+  "Oct19_partial_T": 62.115411962842,
+  "Oct19_raw_integer_sum": 62115411962842,
+  "delta_partial_vs_0711_T": 1.3191075399070016,
+  "target_weeks": [
+   "2026-10-26",
+   "2026-11-02",
+   "2026-11-09",
+   "2026-11-16"
+  ],
+  "target_rows_present": [],
+  "method": "Sum each weekly row data.data[].ys integer values /1e12; Monday labels. Includes Others.",
+  "limits": "Future target rows absent, not zero. Partial total is not forecast; Age/cachedAt not usage cutoff. Rule uses displayed totals/rounding at Nov23 first display or Nov27 23:59ET; boundary enters higher bracket."
+ },
+ "Clarity": {
+  "current": "Senate roll-call route403; current final-passage status unverified, no retry/bypass.",
+  "dated_only": "02:02 list: latest256Sep30 nomination; HR3633 vote234Sep15 rejected49-50 cloture on motion to proceed, not passage. Old bounded list is not current/full legislative coverage.",
+  "prior_unit": "data/deep_review_20261017/work/tick020001_resolving_sources.json"
+ },
+ "Messi": {
+  "current": "Exact2026route404; body hash equals02:02. GlobalTrendingAthletes rank unknown; no year/country/category substitute.",
+  "rule_limit": "List may resolve on release; no list by March31 2027 23:59ET meansNO. December31 metadata is not that fallback."
+ }
+}

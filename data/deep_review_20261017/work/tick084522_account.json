@@ -1,0 +1,42 @@
+{
+  "schema": "polyclaude.account_read.v1",
+  "verified_utc": "2026-10-21T08:53:58.594305+00:00",
+  "receipts": [
+    {
+      "path": "logs/cron20261021T084522Z_root/account/clob_1.receipt.json",
+      "raw_sha256": "54deb2b8c7553fd26b9228336fab016dbb224d6a11caa29f7daecf5787db7c2c",
+      "status": 200,
+      "received_utc": "2026-10-21T08:53:58.178278Z"
+    },
+    {
+      "path": "logs/cron20261021T084522Z_root/account/clob_2.receipt.json",
+      "raw_sha256": "36e4c4e7c88256f13cc91968dc47d0df68ef39c700a74c2c615feaed5b1393b9",
+      "status": 200,
+      "received_utc": "2026-10-21T08:53:58.335903Z"
+    },
+    {
+      "path": "logs/cron20261021T084522Z_root/account/positions.receipt.json",
+      "raw_sha256": "842b42fd14131279715743ae738c613398d4494801d3a5a10d577bb3048b2bae",
+      "status": 200,
+      "received_utc": "2026-10-21T08:53:58.555930Z"
+    }
+  ],
+  "orders": 0,
+  "orders_terminal": "LTE=",
+  "trades": 127,
+  "trades_terminal": "LTE=",
+  "full_trade_rows_unchanged": true,
+  "positions": 9,
+  "position_tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "position_tuples_unchanged": true,
+  "winning_redeemables": 0,
+  "BUY_commitment": 0,
+  "no_financial_execution": true,
+  "private_positions": "logs/cron20261021T084522Z_root/account/positions.receipt.json"
+}

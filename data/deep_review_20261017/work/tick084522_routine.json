@@ -1,0 +1,172 @@
+{
+  "schema": "polyclaude.bounded_readonly_routine.v1",
+  "created_utc": "2026-10-21T08:57:30.616179+00:00",
+  "tick_id": "20261021T084522Z",
+  "scope": "Nine requested direct routine CLI calls once; Astra research/read-only. No financial, held-prior, decision or research-ledger writers; no Telegram, journal edit, queue advancement, bankroll producer or financial snapshot.",
+  "call_path_review": {
+    "status_children": [
+      "positions",
+      "check_marginal_apy",
+      "watchlist_monitor --hits-only",
+      "source_freeze_check",
+      "uma_status_check",
+      "portfolio_kelly --constrained",
+      "brownian_bridge_fv"
+    ],
+    "selected_mutations": "Only existing Aave hurdle/UMA/Ostium observational caches and optional watchlist research cache; --auto-revet child uses --no-log and nonautonomous research profile. No --fix or --telegram.",
+    "unsafe_selected_branch_found": false
+  },
+  "commands": [
+    {
+      "tag": "status_full",
+      "started_utc": "2026-10-21T08:55:00.663336+00:00",
+      "received_utc": "2026-10-21T08:55:12.977323+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "wallet_status",
+      "started_utc": "2026-10-21T08:55:12.984573+00:00",
+      "received_utc": "2026-10-21T08:55:18.070429+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "crypto_status",
+      "started_utc": "2026-10-21T08:55:18.079121+00:00",
+      "received_utc": "2026-10-21T08:55:25.573730+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "ostium_state_diff",
+      "started_utc": "2026-10-21T08:55:25.580859+00:00",
+      "received_utc": "2026-10-21T08:55:28.959102+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "crux_coverage",
+      "started_utc": "2026-10-21T08:55:28.967561+00:00",
+      "received_utc": "2026-10-21T08:55:29.336715+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "decisions_pending",
+      "started_utc": "2026-10-21T08:55:29.342387+00:00",
+      "received_utc": "2026-10-21T08:55:29.409774+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "position_state_audit",
+      "started_utc": "2026-10-21T08:55:29.416518+00:00",
+      "received_utc": "2026-10-21T08:55:29.784811+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "exit_analysis",
+      "started_utc": "2026-10-21T08:55:29.791927+00:00",
+      "received_utc": "2026-10-21T08:55:31.415046+00:00",
+      "returncode": 0,
+      "timed_out": false
+    },
+    {
+      "tag": "watchlist_auto_revet",
+      "started_utc": "2026-10-21T08:55:31.422722+00:00",
+      "received_utc": "2026-10-21T08:55:31.692317+00:00",
+      "returncode": 0,
+      "timed_out": false
+    }
+  ],
+  "material_flags": [],
+  "summary": {
+    "direct_cli_count": 9,
+    "all_direct_returncodes_zero": true,
+    "all_direct_stderr_empty": true,
+    "hurdle_clear": 4,
+    "hurdle_flagged": 0,
+    "uma_tracked": 45,
+    "uma_gamma_refreshed": 43,
+    "uma_alerts": 0,
+    "kelly_trim_candidates": 0,
+    "crux_quiet": true,
+    "overdue_decisions": 0,
+    "ostium_current_open_count": 0,
+    "ostium_previous_open_count": 0,
+    "state_audit": "CLEAN: 7 indexed positions + 1 deindexed claim; no --fix",
+    "watchlist_auto_revet_hits": 0,
+    "hle_source_freeze_child": "Successful parsed live-API versus July3 comparison within08:55:00.663336\u201308:55:12.977323UTC; --brief omitted KimiK3 Accuracy/calibration and the reader did not retain HTTP body/headers/cache age. This does not refresh numerical HLE evidence.",
+    "ordinary_exit_quotes_usd": {
+      "Kimi": 1.1,
+      "OpenRouter": 3.1,
+      "Michigan": 1.5,
+      "Messi": 1.25
+    },
+    "clarity_whole_group_exit_usd": 27.03,
+    "exit_decision_limit": "CLI central HOLD CANDIDATE is not final hold decision; root owns stressed/joint/redeployment judgment. All quotes separately timed, not synchronized NAV."
+  },
+  "protected_changes": [],
+  "protected_before": "logs/cron20261021T084522Z_routine/protected_before.json",
+  "protected_after": "logs/cron20261021T084522Z_routine/protected_after.json",
+  "daemon_check": {
+    "path": "logs/cron20261021T084522Z_routine/daemon_check.json",
+    "observed_utc": "2026-10-21T08:55:41.237383+00:00",
+    "all_four_exact_current_singletons": true
+  },
+  "due_reviews": {
+    "weekly_last_period_end": "2026-10-16",
+    "weekly_due": "2026-10-23",
+    "monthly_due": "2026-11-12",
+    "weekly_due_today": false,
+    "monthly_due_today": false,
+    "sources": [
+      "notes/pnl_weekly.md:1486",
+      "notes/pnl_weekly.md:1621",
+      "notes/current_context.md:40"
+    ],
+    "scope": "targeted maintained-note checks; no off-chain stock review"
+  },
+  "manifest": {
+    "path": "logs/cron20261021T084522Z_routine/manifest.json",
+    "sha256": "0b14a76e73c93d73734daacbb45fc468094a2e1afb5bd5f5e301b5e7cd038a3c"
+  },
+  "limits": [
+    "Direct CLI returncodes and bounds are actual. Aggregate status and Ostium-diff wrappers do not preserve every nested child returncode; outer rc0 alone is not proof of complete API coverage.",
+    "Independent account/venue reconciliation and holding source review remain with root.",
+    "Source captures preserved; no probes rerun."
+  ],
+  "capture_detail": "Manifest links per-CLI actual argv, durable stdout/stderr, sizes and hashes; each adjacent receipt was persisted before the next CLI. All streams independently hash-verified before this index.",
+  "hle_evidence_reconciliation": {
+    "reviewed_utc": "2026-10-21T09:01:26.943144+00:00",
+    "helper_read": {
+      "receipt": "logs/cron20261021T084522Z_sources/resolvers/hle.receipt.json",
+      "status": 403,
+      "started_utc": "2026-10-21T08:53:55.513729Z",
+      "received_utc": "2026-10-21T08:53:55.678927Z",
+      "raw_and_gzip_hashes_verified": true
+    },
+    "later_status_read": {
+      "stdout": "logs/cron20261021T084522Z_routine/01_status_full.stdout",
+      "stdout_sha256": "50b51fe605c3df3272bd91ea35f6585df351553cf0b8037a9450c420bbc9ee63",
+      "parent_start_utc": "2026-10-21T08:55:00.663336+00:00",
+      "parent_end_utc": "2026-10-21T08:55:12.977323+00:00",
+      "exact_child_fetch_time": null,
+      "current_kimi_k3_accuracy": null,
+      "current_kimi_k3_calibration_error": null,
+      "server_cache_age": null
+    },
+    "finding": "Different timed reads can fail then succeed. The status reader issues an HTTP GET, uses no local cache, and suppresses full score inventory under --brief. Its response body/status/headers were not retained; freshness of publication and exact K3 values are unknown. K3 appears in added identities versusJuly3, which is not a new event since the preceding check. HTTP403 does not establish global outage.",
+    "numerical_boundary": "41.08 Accuracy /44.67 calibration remains only the separately preserved02:02 observation, not values proved by the later successful CLI. No forecast change or further fetch.",
+    "code": [
+      "scripts/source_freeze_check.py:228",
+      "scripts/source_freeze_check.py:280",
+      "scripts/source_freeze_check.py:309",
+      "scripts/source_freeze_check.py:332",
+      "scripts/polyclaude_status.py:38",
+      "scripts/polyclaude_status.py:213"
+    ]
+  }
+}

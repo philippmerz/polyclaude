@@ -1,0 +1,66 @@
+{
+ "schema": "polyclaude.news_source_facts.v1",
+ "tick_id": "20261021T084522Z",
+ "prepared_utc": "2026-10-21T09:01:34.886875+00:00",
+ "alert": {
+  "alert_id": "68ded098da5ec6bc5d63da37a4e0940084b3a506",
+  "ts": "2026-10-21T07:25:42Z",
+  "title": "US lawmakers investigate DoorDash’s use of Moonshot AI’s Kimi K2.6 model - South China Morning Post",
+  "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOWlVnUFVUZTZ6ZWVnTElrblFhMVNfRHFhWXpLRjlzaWhtNUVmRFRSNFNxQzgwZXVGaUlOVGl2NmgtRTdrLW5GcXdjVjRuVnVZdXlPazYtdHIwMWZqcjBLWmNBaFBrWUh3T1Zqa3hxZlNyYU1Zc1dlMmpaVFR4ajhuc29KRlZHUGdxZ1dhQ2s1RGxyZVAtRlZMbWFIaXZacjFnZ200ODF1TzMzakczZHhMemhUbDdqUy1KX0RhRE1HVTdQd9IBwgFBVV95cUxORWdsQUZ5UVZBdDUzb1JJMndsbW1SUDdXcjJJSGdvb0dvRklzMlJkSUtKRWNRSHVac2Y0MmxjZWtiNzRWSEJ5TVp1dzR6RmJER0xKOEZzQ09vYW9qdXZnNWxOWVY2MFdnVlY2QkN2LU1Ja25SckJGdWQ5NWt4dGxMUHN5cTZZOFI5Z182bGVHLTM0NlFsN0ZLNExvT3RabFNtaUppdXcwTEFYRlRFZjRBeHEtbVg2bmpRVllfaVh3VDJPdw?oc=5"
+ },
+ "alert_line_sha256_excluding_LF": "88597dd935ab156050c0fdddd29e7a745c570a2fea0f3db63106cdb0f1c9ff11",
+ "scope": "One official committee-body GET and one exact-headline web query. Research only; no account, benchmark-source, model or financial write.",
+ "official": {
+  "url": "https://chinaselectcommittee.house.gov/media/press-releases/house-committees-investigate-doordash-s-use-of-chinese-ai-a-recipe-for-risk",
+  "title": "House Committees Investigate DoorDash’s Use of Chinese AI: A Recipe for Risk",
+  "displayed_date": "July31,2026",
+  "article_published_time": "2026-07-31T13:18:38-04:00",
+  "og_updated_time": "2026-08-04T15:30:22-04:00",
+  "body_facts": "Moolenaar and Garbarino announced a letter to DoorDash CEO Tony Xu about national-security, cybersecurity and economic-security implications of adopting Chinese open-weight AI. The release says investigation began with Anysphere/Airbnb letters in April and DoorDash was a subsequent information request. It contains broad model-distillation/IP allegations; no HLE score, benchmark contamination, organizer ruling or Kimi model identity appears in the release body."
+ },
+ "exact_scmp_match": {
+  "url": "https://www.scmp.com/news/china/diplomacy/article/3362616/us-lawmakers-investigate-doordashs-use-moonshot-ais-kimi-k26-model",
+  "title": "US lawmakers investigate DoorDash’s use of Moonshot AI’s Kimi K2.6 model",
+  "byline": "Vincent Chow in Washington",
+  "displayed_published": "6:53am,1Aug2026",
+  "displayed_updated": "7:07am,1Aug2026",
+  "date_limit": "Timezone not displayed in supplied provider text; not converted to UTC.",
+  "evidence_type": "Current search-provider supplied publisher extract, not a direct SCMP HTTP-body capture.",
+  "reported_action": "Extract describes a Friday letter requesting model/security-test information byAug14 and staff briefing byAug21; consistent with theJuly31 official announcement."
+ },
+ "novelty": "Exact matching SCMP headline is anAug1 report, withAug1 displayed update, rather than evidence of a newOct21 action. This conclusion uses the exact publisher match as well as theJuly31 committee release. No new October development is present in supplied material; broader later developments were not searched exhaustively.",
+ "hle_connection": "No HLE accuracy change, benchmark-specific contamination evidence, scoring/admission decision or organizer withdrawal is supplied by these sources. SCMP headline concerns KimiK2.6 commercial use; no identity bridge to held KimiK3 benchmark eligibility is established. General regulatory/provenance concerns are not a demonstrated HLE-score or eligibility update.",
+ "root_search_reused": {
+  "path": "logs/cron20261021T084522Z_root/doordash_web_supplied.json",
+  "sha256": "a6dd45ee382fdc0f26060f6d0f75348501f61bbab1114519516446b933c615e7",
+  "limit": "Previously supplied provider serialization used only to locate the official source; no fresh-body or exact-SCMP-date claim inferred from that older result."
+ },
+ "sources": [
+  {
+   "receipt": "logs/cron20261021T084522Z_news/kimi_doordash_house/house_release.receipt.json",
+   "receipt_sha256": "97d0676687e6bc55bc28f5e536db456f9e10fdaccf1307a7e6a4015871c9b0a9",
+   "http_status": 200,
+   "raw_sha256": "a48a86a2726e6dc91f17864483ff91fdbf1fc507089d5ce767a0dff1f2ae4bc9",
+   "raw_bytes": 54348,
+   "bounds": [
+    "2026-10-21T09:00:13.535526Z",
+    "2026-10-21T09:00:14.372088Z"
+   ],
+   "representation": "http_body"
+  },
+  {
+   "receipt": "logs/cron20261021T084522Z_news/kimi_doordash_search/search.receipt.json",
+   "receipt_sha256": "b72dff0a5f7f1488de88b2a424098efc7a794c61e1e12f4504de7149decdfc6c",
+   "http_status": null,
+   "raw_sha256": "dd5f4971e2284e0f4b6aa54fd0e2e0b3efde63aadf82589b61ab10982965b491",
+   "raw_bytes": 18074,
+   "bounds": [
+    "2026-10-21T09:00:28.857683Z",
+    "2026-10-21T09:00:32.324399+00:00"
+   ],
+   "representation": "supplied_bytes"
+  }
+ ],
+ "limits": "Receipts saved before parsing; hashes bind supplied bytes, with call-window bounds. Search output is provider-result serialization. Neither letter attachment, full SCMP paywalled body nor subsequent official responses reviewed. No probability or investment conclusion.",
+ "root_identity_clarification": "Held contract covers ANY Moonshot Kimi model, including K2.6; K3 is the known dated leaderboard leader, not the only eligible model. No specific bridge from this commercial-use investigation to official HLE Accuracy/admission is established."
+}

@@ -1,0 +1,24 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261021T084522Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-21T08:53:20.010083+00:00",
+  "producer_completed_utc": "2026-10-21T08:53:39.647165+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "a9053c267b040a1f4c677f3c9febe2d4c3abe0998b23fa8339540425d8de9f5e",
+  "canonical_total_including_funded_gas_usd": "195.55",
+  "same_producer_funded_gas_usd": "6.04",
+  "same_producer_PM_mid_usd": "35.55",
+  "same_producer_PM_fee_net_depth_usd": "33.98",
+  "derived_trading_mid_usd": "189.51",
+  "derived_trading_fee_net_depth_usd": "187.94",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.552941176470588,
+  "reported_accounting_residual_usd": "19.73",
+  "timing_basis": "Actual invocationbounds; sequentialrounded not synchronizedNAV/executableliquidation.",
+  "limits": [
+    "Accountingresidual unaudited; fees/costs/flowsnotfullyreconciled; VM/APIexcluded.",
+    "Onlysameproducer TOTAL/gas/PMcomponents combined; depthindicative, notguaranteedproceeds.",
+    "Astra reporting only; no assetexecution. No new tradeorflow throughaccountread."
+  ]
+}

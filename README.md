@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 247 recorded observations from Apr-25
+The local performance CSV now has 249 recorded observations from Apr-25
 through Oct-21. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 07:10 UTC
+## Last audited snapshot — October21 08:53 UTC
 
-**Indicative trading depth $187.94 versus $170 contributed (+10.55%); midpoint $189.56.** Canonical bankroll $195.56 includes $6.00 separately funded gas; same-producer PM midpoint/depth $35.60/$33.98. Producer ran07:10:59–07:11:16UTC. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV248 preserves all247 prior rows/flows; ten chart tests passed. [Financial record](research/2026-10-21-0710-financial-snapshot.json).
+**Indicative trading depth $187.94 versus $170 contributed (+10.55%); midpoint $189.51.** Canonical bankroll $195.55 includes $6.04 separately funded gas; same-producer PM midpoint/depth $35.55/$33.98. Producer ran08:53:20–39UTC. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. The $19.73 accounting residual remains unaudited; VM/API costs excluded. CSV249 preserves prior rows/flows; ten chart tests passed. [Financial record](research/2026-10-21-0853-financial-snapshot.json).
 
-**Zero orders,127 unchanged complete trades, nine unchanged all-size positions**, no winning redemption. Eleven routine commands returned0; auditCLEAN7indexed+1claim, four current daemon singletons, UMA43refreshed/0alerts, hurdle4clear/0flagged, watchlist no hits, Ostium0/no overdue decisions. No trade or numerical prior changed. [Root proof](data/deep_review_20261017/work/tick070925_account_root_recheck.json).
+**Zero orders,127 unchanged complete trades, nine unchanged all-size positions**, no winning redemption. Nine routine commands returned0; auditCLEAN7indexed+1claim, four current daemon singletons, UMA43refreshed/0alerts, hurdle4clear, watchlist no hits, Ostium0/no overdue decisions. No financial action or numerical prior changed. [Account proof](data/deep_review_20261017/work/tick084522_account.json).
 
-The required alert recirculates a September Anthropic allegation of Kimi requests routed to Claude. Primary-source review establishes no official HLE score withdrawal or benchmark-specific link; credibility/admission risk remains. HLE07:11 returned403/currentAccuracyunknown; last successful02:02 cached K3Accuracy41.08/calibration44.67 stays dated. OpenRouter's07:11 chart shows Oct19partial60.796304T; all four target weeks remain future. Retain holdings/no additions, with an explicit Kimi admission sensitivity that can favor sale. [Primary review](data/deep_review_20261017/work/tick070925_primary_review.json).
+The Michigan alert repeats donation allegations; publisher text and an older confrontation claim were verified as statements, not proven conduct or voter effects. KTUL/video/police-record gaps remain. The DoorDash/Kimi headline matches an August1 report, with no verified HLE-specific change. HLE's later successful brief response omits exact scores; current Accuracy remains unknown. OpenRouter Oct19partial62.115412T is not a final-period forecast. [Primary review](data/deep_review_20261017/work/tick084522_primary_review.json).
 
-07:10 exact Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus the separate tool's $27.03 exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick070925_hold_exit_math.json).
+08:53 Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated cash carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broader downside cases favor sale; all pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus $27.03 indicative exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick084522_hold_exit_math.json).
 
-BUY pause407/600 (research advanced after this check) plus comparative selection stays; completed02UTC discovery retains all limits. No routine Telegram. Next10UTC light/14UTC full or earlier material event; Michigan debate23UTC. [Last full check](research/2026-10-21-070925-checkin.json).
+BUY pause407/600 plus comparative selection remains. No routine Telegram. Operator restored Sol during closeout; no trade indicated. Next10UTC light/14UTC full or material event; Michigan debate23UTC. [Check record](research/2026-10-21-084522-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
