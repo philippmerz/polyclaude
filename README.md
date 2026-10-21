@@ -92,7 +92,7 @@ The required Kimi article is indexed as August6 commentary; its direct page retu
 
 05:24 exact Kimi/OR/MI/Messi net exits=$1.00/$3.10/$1.45/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus the separate tool's $27.03 exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick052258_hold_exit_math.json).
 
-BUY pause405/600 plus comparative selection stays; completed02UTC discovery retains all limits. Bytecode cleanup recovered2.25MiB; incremental Git packing recovered another11.49MiB. Full strict fsck passed; refs, reachable objects, source and financial records were preserved. No financial writer or routine Telegram. Next existing06UTC light/14UTC full check or earlier material event; Michigan debate23UTC. [11-step check](research/2026-10-21-052258-checkin.json).
+06UTC light review verified unchanged inventory, clean safety checks and no overdue decisions; financial/source observations retain their dated timestamps. BUY pause405/600 plus comparative selection stays; completed02UTC discovery retains all limits. No financial writer or routine Telegram. Next10UTC light/14UTC full check or earlier material event; Michigan debate23UTC. [Light review](data/deep_review_20261017/work/light0600_review.json) · [Last full check](research/2026-10-21-052258-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
