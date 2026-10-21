@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 16:17 UTC
+## Last audited snapshot — October 21 17:43 UTC
 
-**16:04 canonical bankroll: $196.24 including $6.12 funded gas.** Trading value is $190.12 at midpoint or $188.48 using indicative fee-net depth (+10.87% versus $170 contributed); same-producer PM values are $39.96/$38.32. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1604-financial-snapshot.json).
+**17:35 canonical bankroll: $196.46 including $6.12 funded gas.** Trading value is $190.34 at midpoint or $188.87 using indicative fee-net depth (+11.1% versus $170 contributed); same-producer PM values are $40.18/$38.71. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1735-financial-snapshot.json).
 
-**December Fed bid filled:20 YES at19c, $3.80 cost, zero fee; retained without adding.** Exact maker trade, new indexed/CTF20 and cash debit reconcile. Two bids remain unfilled, reserving $9.84; pUSD15.45129/free5.61129. Michigan non-D win estimate is44% after adding a distinct older Fox poll; retain5NO. No other numeric prior or position change. [Fill/hold review](research/2026-10-21-december-fed-fill.json) · [Full event review](research/2026-10-21-160021-news-review.json) · [Order management](notes/resting_orders.md).
+**Positions and orders are unchanged.** December Fed remains 20 YES bought at 19¢ ($3.80, zero fee). Two bids remain unfilled, reserving $9.84; pUSD is $15.45129, with $5.61129 free after reservations. Adding separate WaPo/GMU and Marist surveys revises Michigan non-D win probability from 44% to 43%; retain five NO shares without adding. Tonight’s debate remains at 23:00 UTC. [Source/model review](research/2026-10-21-173336-michigan-update.json) · [Event check](research/2026-10-21-173336-news-review.json) · [Orders and deadlines](notes/resting_orders.md).
 
-The watcher now includes the0.33-share Trump holding;18 existing tests and a live check passed, and one updated daemon is running. The chart has **252 observations**, latest16:04; earlier rows and external contributions are unchanged,10 chart tests pass. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
+Safety checks are clean; all four daemons are unique and running current code. The chart has **253 observations**, latest 17:35; previous rows and external contributions are unchanged. All 10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

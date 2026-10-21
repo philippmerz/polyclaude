@@ -1,5 +1,5 @@
 {
-  "next_id": 259,
+  "next_id": 260,
   "decisions": [
     {
       "id": 1,
@@ -5634,6 +5634,25 @@
       "calibration_delta": "Currentreaderbehavior verified; no marketreturn orfutureavailability grade.",
       "lesson": "DataAPI defaults can exclude nonzero sub-shareholdings. RequestsizeThreshold0 explicitly andverifyactualresponse; do notattribute unrelatedpastinventorywarnings tothisprovenomission.",
       "resolved_at": "2026-10-21T16:22:31Z"
+    },
+    {
+      "id": 259,
+      "timestamp": "2026-10-21T17:42:31Z",
+      "type": "skip",
+      "thesis": "Retain5MichiganNO/noadd after separately adding primary WaPoGMU Sep10-14 LV48D45R n803/MOE3.9 and originalMarist Oct15-18 LV50D48R/MOE4.3. Registered n1185 is not LV n. CNN average overlaps Fox/Siena and is not an eighth poll. Root subjective extraSD3 each;7poll rawD56.729209 rounds57/NO43 from56/44. SelectedNO33 pays1.65 vs1.45 exit+21d variablecarry1.45265. G12/no-bias and broadlow favorcash; full original1.55 can lose. No new voter-shift claim, no trade. See research/2026-10-21-173336-michigan-update.json.",
+      "confidence": "low",
+      "prediction": "Democratic party wins exactMichigan party-winner contract with judgmentprobability0.57; anynon-Dwinner0.43. Source/model revision only, no purchase; covariance/turnout/bias unfit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-30",
+      "tags": [
+        "held-review",
+        "prior-revision",
+        "no-trade"
+      ],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

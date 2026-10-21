@@ -1,6 +1,6 @@
 {
   "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
-  "_updated": "2026-10-21T16:11:37.941390+00:00",
+  "_updated": "2026-10-21T17:42:19.530404+00:00",
   "_groups": {
     "treasury-5y-monotonicity-2026": {
       "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -1259,8 +1259,8 @@
     "latest_catalyst": "NewOct17 22:24/23:16revenue/headlinealerts: Anthropicquarterlyvsannualized16.8B/OpenAIestimatecut20B ambiguity; cancel-first originalmaker beforeverification. No claim headline is issueractual."
   },
   "will-the-democrats-win-the-michigan-senate-race-in-2026": {
-    "p_yes": 0.56,
-    "p_no": 0.44,
+    "p_yes": 0.57,
+    "p_no": 0.43,
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
@@ -1270,18 +1270,18 @@
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct21 16:10 source-complete update: distinct originalFox Sep24\u201328 LV50ElSayed/49Rogers,n1028,reportedMOE3pp added to 4poll pool includingSiena. FoxextraSD3pp is subjectivepollster/specificationerror, age23d; notindependent ofall national/houseerror. Baselinesreproduce3pollD55.7302/4poll57.625;5pollrawD55.7875886\u2192rounded56/NO44 from42. NOisanynonDwinner,10ppreserve selects34,broad20\u201370 retained. NewfielddataareSeptember, notOctobernewswing. IA/YouGov/Siena repeats notdoublecounted; GVWiredecimalssecondary. Hold5/noadd: selected1.70 vs16:03 netexit1.45+21dcarry1.45265; G12samebias selected1.54163, G12nobias1.00701 andbroad1favorcash. Uncalibratedbias/turnout/jointsourceerror persists; full1.55 canlose.",
+    "current_assessment": "Oct21 17:42 review: add two distinct original polls once: WaPo/GMU Sep10-14 LV48D/45R n803/MOE3.9, Marist Oct15-18 LV50D/48R/MOE4.3 (n1185 is registered, LV n unspecified). CNN49/47 overlaps Fox/Siena and is not an eighth likelihood; older September Marist RV omitted. Subjective extraSD3 each, ages37/3; unchanged shared variance/G8/bias-1.5. Seven-poll rawD56.729209% rounds57/NO43 from56/44;10pp reserve selects33, broad20-70 unchanged. Hold5/noadd: selected1.65 vs1.45 exit+21d variablecarry1.45265. G12/no-bias and broadlow favorcash; full1.55 can lose. Not a measured voter shift or a calibrated probability. Debate23UTC remains upcoming; all source gaps/corrections in linked report.",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
-    "current_revision": "research/2026-10-21-160021-michigan-update.json",
+    "current_revision": "research/2026-10-21-173336-michigan-update.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick160021/michigan/siena_erratum_5poll_recompute.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick173336/michigan/math/poll_math_7poll_addendum.json",
     "management": "Review each existing tick/earlier material poll, candidate, withdrawal, health, ballot or turnout news. Original BUY filled; Oct23 pull obsolete. Oct20 Economic Club program elapsed; full transcript/voter effect not verified. Upcoming MI debateOct21 23UTC; pull any future resting order before known catalyst and revalue. Mandatory early votingOct24-Nov1/absentee sinceSep24 remain dated context. Any fresh BUY requires completed-universe policyv2, primary selection and every live gate; former experimental600 waiting rule retired. No measured US-politics hedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
     "daily_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
-    "latest_news_review": "research/2026-10-21-160021-michigan-update.json"
+    "latest_news_review": "research/2026-10-21-173336-michigan-update.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
     "p_yes": 0.49,

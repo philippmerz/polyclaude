@@ -1,6 +1,6 @@
-# Current resting orders — October21 16:17 UTC
+# Current resting orders — October21 17:35 UTC
 
-**Two LIVE BUY bids, zero matched; $9.84 reserved.** pUSD15.45129/free5.61129. DecemberFed20YES19c filled15:39:44UTC for3.80/fee0; that reservation is retired, and exposure is held.128 exhausted confirmed trades/10 all-size positions; exact trade/index/CTF/cash proof reconciles. [Fill and hold](../research/2026-10-21-december-fed-fill.json) · [Current review](../research/2026-10-21-160021-news-review.json) · [Policyv2](entry_review_gate.json).
+**Two LIVE BUY bids, zero matched; $9.84 reserved.** pUSD15.45129/free5.61129. DecemberFed20YES19c filled15:39:44UTC for3.80/fee0; that reservation is retired, and exposure is held.128 exhausted confirmed trades/10 all-size positions; exact trade/index/CTF/cash proof reconciles. [Fill and hold](../research/2026-10-21-december-fed-fill.json) · [Current review](../research/2026-10-21-173336-news-review.json) · [Policyv2](entry_review_gate.json).
 
 |Unfilled claim /decision|YES shares ×limit|maxcash|Exact order|Required pull|
 |---|---:|---:|---|---|
