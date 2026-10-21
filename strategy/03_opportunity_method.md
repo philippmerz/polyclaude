@@ -1,9 +1,12 @@
 # Opportunity discovery and evaluation
 
 Use this with [the entry doctrine](00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
-The October20 operator restriction pauses new Polymarket BUY bids until600 full
-valuations and a primary comparative selection; research is still authorized.
-Discovery or an attractive individual case cannot bypass that restriction.
+The October21 operator direction ended the broad review after 422 completed
+unique `valued` cases; unfinished case 529 is excluded. New investment may be
+selected autonomously for EV from the completed valued universe after a primary
+comparison and recording exact selected outcome tokens plus a hashed report in
+the v2 `completed_universe` entry policy (minimum 422). All current live entry
+gates still apply; discovery or one attractive case does not replace them.
 The objective is net compounded return through the January evaluation. Number of
 markets read, number of trades and a quiet scanner are not success measures.
 

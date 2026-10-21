@@ -1,18 +1,17 @@
 {
   "schema": "polyclaude.deep_review.v1",
-  "updated_utc": "2026-10-21T12:16:30.642551+00:00",
+  "updated_utc": "2026-10-21T12:48:13.161798+00:00",
   "scope": "All3000 frozen conditions; original screens do not reject. First100 completed valuations is operator inspection milestone; blocked reviews and factual exclusions are separate and do not count.",
   "universe": 3000,
-  "completed_in_depth_reviews": 440,
-  "completed_valuations": 420,
-  "blocked_after_in_depth_review": 20,
+  "completed_in_depth_reviews": 443,
+  "completed_valuations": 422,
+  "blocked_after_in_depth_review": 21,
   "factual_exclusions": 394,
-  "pending": 2166,
-  "active_indices": [],
+  "pending": 2163,
+  "active_indices": [
+    529
+  ],
   "next_pending_indices": [
-    526,
-    527,
-    528,
     529,
     530,
     531,
@@ -39,16 +38,22 @@
     557,
     558,
     559,
-    560
+    560,
+    561,
+    564,
+    565
   ],
-  "base_records": 834,
+  "base_records": 837,
   "base_record_counts": {
     "excluded_factual": 394,
-    "blocked_after_review": 22,
-    "valued": 418
+    "valued": 420,
+    "blocked_after_review": 23
   },
   "revisions_written": 78,
   "milestone": 100,
   "milestone_notified": true,
-  "execution_authority": "Research records are observations, never later execution authorization."
+  "execution_authority": "Research records are observations, never later execution authorization.",
+  "run_status": "stopped_by_operator_2026-10-21",
+  "scope_update_utc": "2026-10-21T13:24:36.392902+00:00",
+  "resume": "Broadexperimentended422valued;529partialunrecorded. Noactivenativegoal; donotautocontinue. Currentallocationresearch/2026-10-21-completed-review-allocation.json; managedordersresearch/2026-10-21-allocation-orders.json. Futurebroadreviewsrequirerenewedauthorization."
 }

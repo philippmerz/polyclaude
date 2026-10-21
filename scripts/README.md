@@ -89,13 +89,14 @@ provisional and requires an independent fresh rewalk before any action.
 
 ## On-chain operations
 
-- `entry_review_gate.py` — offline operator restriction on all new Polymarket
-  BUY bids:600 unique completed valuations plus a primary comparative selection
-  of exact winner tokens. It cross-checks canonical checkpoint/index counts and
-  a hashed research report; reaching600 alone does not release the pause.
-  Missing, malformed or inconsistent authority fails closed. The execution
-  CLIs and BUY writers enforce it; research previews and SELL/cancel/redemption
-  management remain available. Policy: `notes/entry_review_gate.json`.
+- `entry_review_gate.py` — offline gate for new Polymarket BUY bids. Under the
+  Oct21 operator direction it checks policy v2 (`completed_universe`, minimum
+  422 completed unique `valued` cases), a primary comparison, exact selected
+  outcome tokens, and a hashed research report. It cross-checks canonical
+  checkpoint/index counts; missing, malformed, or inconsistent authority fails
+  closed. Execution CLIs and BUY writers enforce it; research previews and
+  existing position/order management remain available. Policy:
+  `notes/entry_review_gate.json`.
 - `polyclaude_enter.py` — mandatory guarded Polymarket entry path. Single-market
   execution defaults to maker-or-skip: `--execute` with a taker route requires a
   logged `--taker-urgency` naming the short-lived reason that justifies fee and

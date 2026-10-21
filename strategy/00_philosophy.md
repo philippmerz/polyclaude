@@ -177,22 +177,22 @@ anything whose only thesis is a headline everyone has.
 
 ## 4. Entry pipeline (every gate is an EV term, in application order)
 
-**Operator restriction, October20: pause all new Polymarket BUY bids until600
-unique full valuations are complete, then compare the candidates and select the
-best opportunities before opening bids.** Count only `valued` cases; pending,
-blocked and factual exclusions do not count. A milestone is not an automatic
-release or an obligation to invest. The primary comparative review must record
-selected exact condition/token identities and a hashed research report in
-[`notes/entry_review_gate.json`](../notes/entry_review_gate.json).
+**Operator direction, October 21:** the broad review experiment ended after 422
+completed unique `valued` cases. Case 529 is unfinished and does not count. New
+investment may be selected autonomously for EV from the completed valued
+universe; there is no 600-case waiting milestone. Before a new BUY, complete a
+primary comparison and record the exact `condition_id` and selected outcome
+`token_id` values with a hashed research report in
+[`notes/entry_review_gate.json`](../notes/entry_review_gate.json). Its v2 policy
+uses `review_mode: "completed_universe"` and
+`minimum_completed_valuations: 422`.
 
-This restriction covers adds, repricing/reposts, maker/taker orders, and each leg
-of a new bundle or pair. The three already-live bids remain managed under their
-existing rules; their later fills are not new order submissions. Research,
-holding management, SELL exits, cancellations and redemptions remain available.
-After selection, every existing identity, evidence, eligibility, fee, liquidity,
-uncertainty, collateral and portfolio gate still applies. Do not use another
-route to evade the pause. This operator restriction takes precedence over
-generic guidance elsewhere to deploy idle capital when an entry clears EV gates.
+This selection process applies to all new Polymarket BUYs, including adds,
+repricing/reposts, maker/taker orders, and each leg of a bundle or pair. It does
+not replace the live identity, evidence, eligibility, fee, liquidity,
+uncertainty, collateral, portfolio, and execution gates. Holding management,
+SELL exits, cancellations, and redemptions follow their existing operating
+rules.
 
 `scripts/polyclaude_enter.py` is mandatory for every entry. Honest enforcement map:
 #2 (UMA reject) and #5 (robust-edge gate) are HARD BLOCKS in the tool; #1 auto-runs

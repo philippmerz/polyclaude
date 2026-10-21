@@ -1,0 +1,43 @@
+{
+  "review_index": 527,
+  "market_id": "2374271",
+  "condition_id": "0xbe9d61d80c767264a0adc8a16453fbcaf0413e673e665cc7c14701691143fac0",
+  "criteria_sha256": "8c0e7710cec157652e54aa1e6f6d343ca214991c2b2ee504851bc7cf37ea54ad",
+  "status": "blocked_after_review",
+  "literal_analysis": "Full rule: any Crimean territory under Claimed Ukrainian Counteroffensives since creation2026-05-27T22:11:51.034213Z and byDec31 23:59ET. Continuous shading must survive next full finalized ISW daily cycle, even after skipped day/date; later loss never reverses qualification. Black border/errors do not count. Negotiated transfer counts on actual control without qualifying map shading; de-jure announcement alone insufficient. ISW primary, unavailable permits DeepState; both permanently unavailable permits credible consensus. Existing qualifying historical event matters independently of future recapture.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/2374271",
+      "observed_utc": "2026-10-21T12:28:37.112820Z",
+      "finding": "Root verified9 frozen identity fields and raw/gzip. CreatedMay27 22:11:51Z; market remains open/accepting; absent UMA field not evidence no past qualifying event."
+    },
+    {
+      "url": "https://www.arcgis.com/sharing/rest/content/items/9f04944a2fe84edab9da31750c2b15eb/data",
+      "observed_utc": "2026-10-21T09:39:06.429047Z",
+      "finding": "Root verified Oct18/20 snapshots72/73 claimed-Ukr polygons, sourceWKID4326. No vertex-derived bbox overlaps a candidate Crimea control-layer outer envelope. Two dates and invalid multi-ring administrative substitute cannot prove any-part historical absence/persistence; Kinburn/mainland is not automatically Crimea."
+    },
+    {
+      "url": "https://services5.arcgis.com/SaBe5HMtmnbqSWlu/arcgis/rest/services/Ukraine_Timelapse_FEB_to_JAN/FeatureServer/8",
+      "observed_utc": "2026-10-21T12:34:57.173705Z",
+      "finding": "Root verified original layer definition and date-statistics query:2920features, min/max datesMar7 2022–Jan31 2023, hasLiveDatafalse. This concrete archive lead is outsideMay27–Oct20 2026; no claim no other archive exists."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Load-bearing unresolved historical qualification from creation through current date; cannot substitute future battlefield probability or sparse map absence.",
+    "conditional_framework": "P(YES)=P(prior qualifying condition)+(1-P(prior qualifying condition))*P(future qualifying shading or actual negotiated control | no prior qualification). Both map persistence/history and future raid/advance/negotiated-control paths require separate evidence.",
+    "forward_paths": "A strike, fire control, ship raid or landing photo alone does not establish persistent qualifying map shading; tiny claimed territory could qualify without whole-peninsula capture. No unsupported numeric bounds."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "unpriced_reason": "Without a supported final probability for whether the event already qualified, neither outcome has a defensible current EV. No quote-based probability, no assumed profitable NO carry or extreme tail YES. Entry600+comparison pause also remains.",
+    "funding": "No fresh account/fees/entry checks or financial action; dated alternatives are not execution certificates."
+  },
+  "verdict": "Case-local historical-source gap; blocked_after_review, not rejected/excluded or counted toward600. Continue unrelated pending cases.",
+  "reopen_condition": "Obtain relevant official historical claimed-Ukr-layer snapshots/time-enabled2026 archive fromMay27 through currentdate with defensibleCrimea boundary and next-finalized-update persistence, or credible verified qualifying negotiated actual transfer. Then value both outcomes using current inputs and all gates.",
+  "evaluated_utc": "2026-10-21T12:37:26.924690+00:00",
+  "question": "Will Ukraine recapture Crimean territory by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 527,
+  "report_sha256": "c4d9f84dbb24a21ca82928d52e1aeb61b508eeece7e811027347549c78e20058"
+}

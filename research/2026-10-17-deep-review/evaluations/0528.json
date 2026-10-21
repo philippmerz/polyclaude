@@ -1,0 +1,244 @@
+{
+  "review_index": 528,
+  "market_id": "629477",
+  "condition_id": "0x086445ea07954a360aeeddc96c292160832662b0227bdc8f07bc353dd511966f",
+  "criteria_sha256": "302a2fb8eace08b0f61ef2854606cc101c2e6eaba8e2a618df2bc76d995dd9f5",
+  "status": "valued",
+  "literal_analysis": "Winner of2026 Minnesota governor election, party nominee not name alone. Independents never included underDem/Rep based on informal affiliation; replacement nominee beforeelection remains covered. AP,Fox,NBC must all call samecandidate, otherwise officialcertification. Not Senate/AG or latercaucus-intent party. NominalNov4 end is not guaranteed settlement.",
+  "evidence": [
+    {
+      "url": "https://datawrapper.dwcdn.net/gVgz3/1/dataset.csv",
+      "observed_utc": "2026-10-21T12:40:54.326697+00:00",
+      "finding": "Original commissioner-linked public chart data root captured/normalized asTSV: All50Klobuchar/41Demuth/.8other/8undecided,99.8rounding. Direct source, not a poll mirror or electionprobability."
+    },
+    {
+      "url": "https://datawrapper.dwcdn.net/gVgz3/1/",
+      "observed_utc": "2026-10-21T12:40:26.710863+00:00",
+      "finding": "Original chart caption confirms800likelyvoters,Oct5–7,3.5pp individual MOE. Full mode/weighting/design notverified; methodlink inaccessible and not retried."
+    },
+    {
+      "url": "https://www.amyklobuchar.com/",
+      "observed_utc": "2026-10-21T12:34:18.092395Z",
+      "finding": "Official campaign confirms governor run with BenSchierer. Source unit erroneous future13:00 label corrected fromactualreceipt, original preserved; not official ballot certification."
+    },
+    {
+      "url": "https://electionresults.sos.mn.gov/",
+      "observed_utc": "2026-10-21T12:39:00Z",
+      "finding": "Official primaryindex datedAug11 obtained, details/media challenge prevented verifiedcandidate rows/certification. SecondaryOctoberSurveyUSA48/41 remains a sensitivity, originalJanuaryhypotheticalexcluded."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.84,
+    "low": 0.4,
+    "high": 0.9998,
+    "confidence": "LOW to MED; forward/turnout error uncalibrated",
+    "method": "Primary poll plus explicit correlated turnout/error regimes, with small nonmajor/institutional overlay. No external forecast copied or national poll converted to state probability.",
+    "reasoning": "Original commissioner chart gives+9 with8% undecided, while later unverified archive reports+7. Regional and independent splits permit coalition/turnout reversals. The weighted normal-margin model plus0.2% exceptional overlay yields84.4551%, rounded84%; standard deviations include common error and movement, not just sample noise. Model parameters are unfitted and full ballot certification/methodology were not obtained.",
+    "regimes": [
+      {
+        "label": "Poll coalition broadly persists",
+        "weight": 0.75,
+        "D_minus_R_margin_mean_pp": 8,
+        "sd_pp": 5.5,
+        "p_D_margin_positive": 0.927102429524012
+      },
+      {
+        "label": "Republican turnout/undecided or late movement erodes lead",
+        "weight": 0.2,
+        "D_minus_R_margin_mean_pp": 3,
+        "sd_pp": 6,
+        "p_D_margin_positive": 0.6914624612740131
+      },
+      {
+        "label": "Severe common polling error or late shock",
+        "weight": 0.05,
+        "D_minus_R_margin_mean_pp": -4,
+        "sd_pp": 6,
+        "p_D_margin_positive": 0.2524925375469229
+      }
+    ],
+    "rivals": [
+      {
+        "label": "Stable lead, minimal common error",
+        "D_margin_mean_pp": 10,
+        "sd_pp": 3,
+        "p_yes": 0.9995709396668031
+      },
+      {
+        "label": "R turnout/late swing reduces race to+1D",
+        "D_margin_mean_pp": 1,
+        "sd_pp": 5.5,
+        "p_yes": 0.5721372923399641
+      },
+      {
+        "label": "Large R-favorable common error",
+        "D_margin_mean_pp": -1.5,
+        "sd_pp": 6,
+        "p_yes": 0.4012936743170763
+      }
+    ],
+    "actual_entry_reserve_pp": 10,
+    "model": "research/2026-10-17-deep-review/models/0528_primary_final_1328.json",
+    "generator": "research/2026-10-17-deep-review/models/0528_replay_final_1328.py",
+    "timing": "Quote-aware: incidental unverified95% aggregate headline seen beforemodel. Equation84.4551% computed beforeexactCLOB; drafttyped86% corrected beforeimmutablevaluation, notprice-driven."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0528_quotes_1325.json",
+    "quote_file_sha256": "20d23ef1f91c6fe0ced78bfa33a779d48ec1141c08fc5b399a7577680df5512c",
+    "quote_capture_utc": "2026-10-21T12:43:19.675980+00:00",
+    "gamma_received_utc": "2026-10-21T12:43:19.533748+00:00",
+    "hypothetical_gross_shares": {
+      "Yes": 10,
+      "No": 17
+    },
+    "horizon_days": 30.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 10.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.84,
+        "selected_stress_probability": 0.74,
+        "best_bid": 0.94,
+        "best_ask": 0.96,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792586574326",
+        "book_received_utc": "2026-10-21T12:43:19.674971+00:00",
+        "book_age_seconds_at_receipt": 25.348971128463745,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.6,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.96
+              }
+            ],
+            "net": 9.6
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 9.399999999999999,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.94
+              }
+            ],
+            "net": 9.399999999999999
+          }
+        },
+        "taker_cost_usd": 9.6,
+        "central_expected_profit_usd": -1.1999999999999993,
+        "selected_stress_profit_usd": -2.1999999999999993,
+        "break_even_before_carry": 0.96,
+        "break_even_constant_carry": 0.9625075261589237,
+        "current_execution_authorization": false,
+        "gross_shares": 10,
+        "maker_hypothetical": {
+          "price": 0.94,
+          "gross_shares": 10,
+          "cost_if_full_fill": 9.399999999999999,
+          "central_profit": -0.9999999999999998,
+          "selected_profit": -1.9999999999999996,
+          "fill_probability": "unknown; conditional fills may reflect news/turnout surprises",
+          "rebate_assumed": false,
+          "authorization": false
+        }
+      },
+      "No": {
+        "probability": 0.16000000000000003,
+        "selected_stress_probability": 0.060000000000000026,
+        "best_bid": 0.04,
+        "best_ask": 0.06,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792586574326",
+        "book_received_utc": "2026-10-21T12:43:19.674971+00:00",
+        "book_age_seconds_at_receipt": 25.348971128463745,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 17.0,
+            "gross": 1.02,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 17.0,
+                "price": 0.06
+              }
+            ],
+            "net": 1.02
+          },
+          "bids": {
+            "complete": true,
+            "filled": 17.0,
+            "gross": 0.68,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 17.0,
+                "price": 0.04
+              }
+            ],
+            "net": 0.68
+          }
+        },
+        "taker_cost_usd": 1.02,
+        "central_expected_profit_usd": 1.7000000000000006,
+        "selected_stress_profit_usd": 4.440892098500626e-16,
+        "break_even_before_carry": 0.06,
+        "break_even_constant_carry": 0.060156720384932735,
+        "current_execution_authorization": false,
+        "gross_shares": 17,
+        "maker_hypothetical": {
+          "price": 0.04,
+          "gross_shares": 25,
+          "cost_if_full_fill": 1.0,
+          "central_profit": 3.0000000000000004,
+          "selected_profit": 0.5000000000000007,
+          "fill_probability": "unknown; conditional fills may reflect news/turnout surprises",
+          "rebate_assumed": false,
+          "authorization": false
+        }
+      }
+    },
+    "limitations": [
+      "Source/model/turnout regimes uncalibrated; no empirical win floor.",
+      "30-day settlement planning/90-day delay sensitivity, source consensus or certification can delay.",
+      "Dated3.2247% constant carry; funding/bridge/gas/operational cost not free.",
+      "No actual order;600+primaryselection pause remains."
+    ]
+  },
+  "verdict": "Retain maker-NO candidate for comparison, no bid.17NO6c cost1.02, central+1.70 but selectedzero beforecarry/negativeaftercarry. Maker25NO4c cost1, central+3/selected+.50, fill and post-fill belief unknown; stable-D99.9571% rival loses0.98927. YES96c negative.600+primary-selection pause unchanged.",
+  "reopen_condition": "Fresh original state poll/method/ballot proof, turnout/nominee/catalyst changes or better maker economics; compare with other R-factor candidates and heldMichigan, including conditionalfill, after600. Refresh exact identity, account, fees, books, funding/correlation and gates before any order.",
+  "evaluated_utc": "2026-10-21T12:48:12.287244+00:00",
+  "question": "Will the Democrats win the Minnesota governor race in 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 528,
+  "report_sha256": "ff2971f95bcb2a9c844aa3db6d653546c18ed653d8f80b3fa4d98e83c4d087c5"
+}

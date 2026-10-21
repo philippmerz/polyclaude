@@ -1,9 +1,32 @@
 {
-  "schema": "polyclaude.entry_review_gate.v1",
-  "minimum_completed_valuations": 600,
-  "selection": null,
-  "operator_directive_date": "2026-10-20",
-  "count_basis": "completed unique full valuations in the canonical deep-review index; factual exclusions, pending and blocked reviews do not count",
-  "scope": "All new Polymarket BUY orders, including adds, repricing/reposts, maker/taker and bundles. Existing orders and holding/cancel/sell/redemption management remain active.",
-  "release": "Reaching600 alone does not release the pause: complete a primary comparative review, record selected exact condition/token identities and a hashed research report, then apply every existing live execution gate."
+  "schema": "polyclaude.entry_review_gate.v2",
+  "review_mode": "completed_universe",
+  "minimum_completed_valuations": 422,
+  "operator_directive_date": "2026-10-21",
+  "count_basis": "Unique full valued cases only; factual/blocked/pending/in-progress excluded. Broadexperimentendedat422; no600wait orqueuecontinuation.",
+  "scope": "AllnewPolymarketBUYincludingadds/reposts/maker/taker/bundles; exactselectedtokensonly, everycurrentlivegateapplies.",
+  "selection": {
+    "reviewed_utc": "2026-10-21T13:15:15.030666+00:00",
+    "completed_valuations": 422,
+    "report": "research/2026-10-21-completed-review-allocation.json",
+    "report_sha256": "e02e7a073579fa5fbcab9fe785ec9f9713e68f225d9fb5af2a007071d28459b3",
+    "targets": [
+      {
+        "condition_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+        "token_id": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
+        "review_index": 300
+      },
+      {
+        "condition_id": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+        "token_id": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+        "review_index": 179
+      },
+      {
+        "condition_id": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
+        "token_id": "42865728742506860386768556888821101266630139112044622335353850919229585308601",
+        "review_index": 511
+      }
+    ]
+  },
+  "release": "Primarycomparisonamongcompleteduniverse selected3exactYES; reportmaxcash13.64. Thisisnotexecutionprooforautomaticretry/sizeauthority; finalcurrentevidence/cost/caps/eligibility/accountandvettedwriterremainmandatory."
 }

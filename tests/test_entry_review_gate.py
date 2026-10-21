@@ -24,7 +24,7 @@ def _condition(index: int) -> str:
 
 
 def _make_root(tmp_path: Path, *, valued: int = 600, blocked: int = 0,
-               factual: int = 0, pending: int = 0,
+               factual: int = 0, pending: int = 0, minimum: int = 600,
                selection: dict | None = None) -> tuple[Path, str, str]:
     root = tmp_path
     queue = root / gate.QUEUE_REL
@@ -83,7 +83,8 @@ def _make_root(tmp_path: Path, *, valued: int = 600, blocked: int = 0,
     policy_path.parent.mkdir(parents=True, exist_ok=True)
     policy_path.write_text(json.dumps({
         "schema": gate.SCHEMA,
-        "minimum_completed_valuations": gate.MINIMUM,
+        "review_mode": gate.REVIEW_MODE,
+        "minimum_completed_valuations": minimum,
         "selection": selection,
     }), encoding="utf-8")
     return root, _condition(1), "12345678901234567890"
@@ -185,6 +186,35 @@ def test_valid_selection_unlocks_only_exact_frozen_selected_token(tmp_path):
     assert gate.require_new_buy_allowed(token, root=root) is None
     with pytest.raises(gate.EntryReviewGateError, match="not a primary-selected"):
         gate.require_new_buy_allowed("00000000000000000000", root=root)
+
+
+def test_completed_universe_mode_uses_configured_positive_threshold(tmp_path):
+    selection = _valid_selection()
+    selection["completed_valuations"] = 422
+    root, _, token = _make_root(tmp_path, valued=422, minimum=422, selection=selection)
+    assert gate.require_new_buy_allowed(token, root=root) is None
+
+    below_root, _, _ = _make_root(
+        tmp_path / "below", valued=421, minimum=422, selection=selection)
+    with pytest.raises(gate.EntryReviewGateError, match="421/422"):
+        gate.require_new_buy_allowed(root=below_root)
+
+
+@pytest.mark.parametrize("change", [
+    {"schema": "polyclaude.entry_review_gate.v1"},
+    {"review_mode": "fixed_milestone"},
+    {"minimum_completed_valuations": 0},
+    {"minimum_completed_valuations": True},
+    {"minimum_completed_valuations": "422"},
+])
+def test_old_or_malformed_policy_configuration_fails_closed(tmp_path, change):
+    root, _, _ = _make_root(tmp_path, valued=600, selection=_valid_selection())
+    policy_path = root / gate.POLICY_REL
+    policy = json.loads(policy_path.read_text())
+    policy.update(change)
+    policy_path.write_text(json.dumps(policy))
+    with pytest.raises(gate.EntryReviewGateError, match="policy|minimum"):
+        gate.require_new_buy_allowed(root=root)
 
 
 @pytest.mark.parametrize("target_index", [601, 602, 603])

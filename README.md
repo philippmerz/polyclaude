@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 249 recorded observations from Apr-25
+The local performance CSV now has 250 recorded observations from Apr-25
 through Oct-21. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -36,9 +36,9 @@ This file is the current dashboard and entry point. Chronology belongs in
 [`notes/journal.md`](notes/journal.md), pending work in
 [`notes/backlog.md`](notes/backlog.md), and dated analysis in `research/`.
 
-The [compact current handoff](notes/current_context.md) indexes active work and
-blockers with explicit review/expiry times and source hashes. The active lessons
-guide is condensed; its [original ledger](strategy/archive/01_lessons_2026-10-12.md)
+The [compact handoff](notes/current_context.md) indexes the completed selection,
+current orders and dated financial evidence; check its expiry and source hashes.
+The active lessons guide is condensed; its [original ledger](strategy/archive/01_lessons_2026-10-12.md)
 remains historical evidence. `scripts/context_packet.py` builds bounded packets
 for four task scopes without loading full history or live state. Packets are
 orientation only; the required strategy reads and live execution checks remain.
@@ -54,13 +54,13 @@ Writing default for replies, handoffs and maintained documents:
   for comparisons and short headings for navigation; avoid cryptic shorthand
   and multi-topic bullets. Follow a specifically requested format when it differs.
 
-## Active in-depth review — October21
+## Completed-universe selection — October21
 
-**New bids paused until600 full valuations, followed by primary comparative selection.** Current420; blocked/factual cases do not count. No wildcard/add/repost/taker/bundle bypass. Holdings remain managed; latest order check11:05 found zero bids. [Entry policy](notes/entry_review_gate.json).
+**The broad experiment ended at 422 completed unique valuations; no 600-case wait or queue continuation.** There is no active native goal (verified13:25UTC). Counts: 422 valued, 394 factual exclusions, 21 blocked, 2,163 unfinished pending; 837 base records plus 78 revisions. Case529 is unfinished and excluded. Policy v2 permits autonomous selection from the completed universe, subject to primary comparison, exact selected outcome tokens, hashed report and every live entry gate. [Policy](notes/entry_review_gate.json) · [Selection and comparison](research/2026-10-21-completed-review-allocation.json).
 
-**420 valued /20 blocked /394 factual /2,166 pending;834 base records +78 revisions.** Finite goal active, no global blocker. Latest CA-06 Republican YES8% depends on independent Kiley’s resolution-time caucus intent; Danaher Q3 bracket YES99% follows three official3.0% reports, with no favorable YES ask. Cheap opposite-tail paper gains reverse under credible source/rule countermodels; neither is selected. One exact closed-venue exclusion makes no release-date claim. Next526, no active case. [Checkpoint](notes/deep_review_checkpoint.json) · [Small phase36](data/deep_review_20261017/work/goal0036_RESUME.json) · [Dated comparison](data/deep_review_20261017/work/goal0036_candidate_comparison.json).
+**Three exact YES maker orders were submitted and reconciled LIVE with zero matches:** #179 no October Fed dissent, 20 shares at 24¢/$4.80; #511 December Fed no change, 20 at 19¢/$3.80; #300 Delcy Rodríguez year-end leadership, 28 at 18¢/$5.04. Combined maximum cash risk is $13.64. Current reconciliation confirms three reservations live, target CTF balances zero, and pUSD unchanged; no fill, spending, fee or profit. No auto-chase. [Execution outcome](research/2026-10-21-allocation-orders.json) · [Exact post-entry reconciliation](data/deep_review_20261017/work/selection20261021/postentry_reconciliation/postentry_reconciliation.json) · [Resting orders](notes/resting_orders.md).
 
-**Anthropic14 maker canceled; no purchase.** FiveNO49c/$2.45 posted09:35:39, verified LIVE/0matched, then canceled09:39:38 after a previously unreviewed Claude research lead surfaced in feed warmup. Final terminal, trade, index, CTF and cash checks prove zero fill; only its reservation retired. No automatic repost. Original3political bids were canceled zero-fill15:48; final15:55 reconciliation retired their reservations. [Action record](research/2026-10-20-anthropic-arena-order.md) · [Exact current orders](notes/resting_orders.md).
+**Management deadlines:** pull both Fed bids by Oct27 22:00 UTC before the Oct28 decision; review after October before any December repost. Pull Delcy by Oct24 13:00 UTC; fresh underwriting precedes any new bid. Next full check Oct21 14:00 UTC; Michigan debate review Oct21 23:00 UTC. Kimi HLE score/source and Michigan poll/debate body remain open. The 13:04 MLive youth-vote headline was reviewed once; publisher retrieval failed, leaving poll figures, method and event date unknown. No Michigan order exists and no numeric prior or holding changed from its classifier label. Gaps do not certify absence. [Alert row](notes/news_alerts.jsonl) · [Held source review](research/2026-10-21-101636-news-review.json).
 
 ## Mandate and constraints
 
@@ -82,17 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 08:53 UTC
+## Last audited snapshot — October21 13:17 UTC
 
-**Indicative trading depth $187.94 versus $170 contributed (+10.55%); midpoint $189.51.** Canonical bankroll $195.55 includes $6.04 separately funded gas; same-producer PM midpoint/depth $35.55/$33.98. Producer ran08:53:20–39UTC. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. The $19.73 accounting residual remains unaudited; VM/API costs excluded. CSV249 preserves prior rows/flows; ten chart tests passed. [Financial record](research/2026-10-21-0853-financial-snapshot.json).
+**Pre-order canonical financial snapshot (12:59:24–39 UTC):** $196.34 total including $6.03 funded gas; trading midpoint $190.31 and indicative trading liquidation value $188.90 (+11.12% versus $170 contributed); same-producer PM midpoint/depth $36.35/$34.94. The $19.73 residual remains unaudited; VM/API costs are excluded. Values are sequential rounded estimates, not synchronized NAV or guaranteed proceeds. [Snapshot](research/2026-10-21-1259-financial-snapshot.json).
 
-**Zero orders,127 unchanged complete trades, nine unchanged all-size positions**, no winning redemption. Nine routine commands returned0; auditCLEAN7indexed+1claim, four current daemon singletons, UMA43refreshed/0alerts, hurdle4clear, watchlist no hits, Ostium0/no overdue decisions. No financial action or numerical prior changed. [Account proof](data/deep_review_20261017/work/tick084522_account.json).
+**Post-order safety:** 13:17:41 UTC exact reconciliation found all 3 selected orders LIVE/0 matched, 127 confirmed historical trades, 9 all-size positions, all six target CTF balances zero, and pUSD equal to the pre-order $19.25129. Full-fill reservations total $13.64, leaving $5.61129 by arithmetic; no execution fee or realized profit has occurred. The13:20 quick status showed no watchlist hit; the 13:04 MLive source check failed, with no verified poll or thesis change. [Receipt-linked order proof](data/deep_review_20261017/work/selection20261021/postentry_reconciliation/postentry_reconciliation.json) · [Alert](notes/news_alerts.jsonl).
 
-The Michigan alert repeats donation allegations; publisher text and an older confrontation claim were verified as statements, not proven conduct or voter effects. KTUL/video/police-record gaps remain. The DoorDash/Kimi headline matches an August1 report, with no verified HLE-specific change. HLE's later successful brief response omits exact scores; current Accuracy remains unknown. OpenRouter Oct19partial62.115412T is not a final-period forecast. [Primary review](data/deep_review_20261017/work/tick084522_primary_review.json).
-
-08:53 Kimi/OR/MI/Messi net exits=$1.10/$3.10/$1.50/$1.25 plus dated cash carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broader downside cases favor sale; all pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus $27.03 indicative exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick084522_hold_exit_math.json).
-
-The delayed10:16 Kimi request repeated a Sep10 article already reviewed at10:11. Current11:05 quick status/orders/UMA found zero orders/alerts/hurdle flags/watchlist hits; Kimi remains10YES. Fresh indicative net exit$1.10 remains below the dated selected payout$1.902125; broader downside favors cash. No trade/prior or whole-account refresh. Next14UTC full check; Michigan debate23UTC. [News review](research/2026-10-21-101636-news-review.json).
+The performance CSV now has **250 observations** through Oct21; the October21 12:59 snapshot is the latest row. Historical accounting retains its limits and source gaps. [CSV and methodology](docs/README.md) · [Source audit](research/2026-10-06-performance-history.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

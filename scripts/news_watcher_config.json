@@ -167,6 +167,14 @@
     {
       "name": "Kimi model, benchmark and Moonshot releases",
       "url": "https://news.google.com/rss/search?q=%28Kimi+OR+%22Moonshot+AI%22+OR+MoonshotAI%29+%28model+OR+release+OR+HLE+OR+benchmark%29&hl=en-US&gl=US&ceid=US%3Aen"
+    },
+    {
+      "name": "Fed official monetary-policy releases",
+      "url": "https://www.federalreserve.gov/feeds/press_monetary.xml"
+    },
+    {
+      "name": "Fed official speeches",
+      "url": "https://www.federalreserve.gov/feeds/speeches.xml"
     }
   ],
   "tier1_keywords": [
@@ -495,7 +503,15 @@
     "California 6th District",
     "Kimi",
     "Moonshot AI",
-    "MoonshotAI"
+    "MoonshotAI",
+    "Federal Reserve",
+    "FOMC",
+    "Kevin Warsh",
+    "Fed rates",
+    "Fed dissent",
+    "Fed rate",
+    "US inflation",
+    "U.S. inflation"
   ],
   "_trump_approval_note": "Trump approval coverage added 2026-09-18 for the short-dated held 38.5-38.9 YES bucket. The exact Datawrapper source is checked separately before close; tier 2 catches broader source/methodology reporting. Prune after the event resolves.",
   "_duma_note": "Duma coverage added 2026-08-28 for the held 295-339 equal-share range. Tier 2 is appropriate because forecasts/results need judgment, not an emergency tick. Prune after the September 2026 election resolves.",

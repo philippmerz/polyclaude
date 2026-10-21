@@ -1,51 +1,45 @@
 ---
-reviewed_at: "2026-10-21T12:20:13.645911+00:00"
+reviewed_at: "2026-10-21T13:26:01.007506+00:00"
 valid_until: "2026-10-21T14:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: c3ac5a901a745f52185a882bb3a3096723d4b869338a4f9ecc46854735b58b1e
-  strategy/00_philosophy.md: 4941f0493b4a4da67fbf5f7afeea5365cc8245c5e040c5c98c3f9383b2731a88
+  README.md: eca3ee48c0a6f04900d416937209ddb600a5314d67a93a1633adfbef5cfaac3b
+  strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 8046a2f8a0c9869705722a699774014bf4debbe970537892c4a808dee3562324
-  strategy/03_opportunity_method.md: d2347f74b5c7cca7e3b2a8f7591b2406daf2baaf396a97be900f7b675a42468c
-  scripts/README.md: a2b408c30d3b8c8b8a4b1ecccfe5dc0f919165d494c6b76ce10838b647c3237b
+  strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
+  scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 70a46c41de121abf82e937df5a6c82bf9323c5d3652b8ed7942b0d7e29bdd996
-  notes/resting_orders.md: c47e7a6ef58fa794af2546afb05e7266cf1c9e8bd9594772b890dd2bbe6bd248
-  notes/journal.md: b60a1328c85b97754e277b26d2b684f23675b2c303e4f5566ba85da476499340
+  notes/backlog.md: 6ee15255bd54f514e95a79e2f03debcc0875795a120be3bd8ed41d3c8a37f12d
+  notes/resting_orders.md: 43dbd26c6493d2e568f40a86eb34f7b377d6a2479442a1ff3a7318daf0581abb
+  notes/journal.md: 27eb1763720e8d245ad4e300b01de67a5e40510197c4dcad1a79c3431cec0284
 ---
-## Active finite review
+## Current work
 
-**420 valued /20 blocked /394 factual /2166 pending;834 base +78 revisions.** Native goal active, verified12:17; no active case,526 next. Save/index each before next start; local gaps do not block unrelated cases. [Checkpoint](deep_review_checkpoint.json) · [Small phase36](../data/deep_review_20261017/work/goal0036_RESUME.json).
+**Broad experiment ended at422valued/21blocked/394factual/2163pending;837base+78revisions.** Nativegoalread13:25 returnednull; noactivegoal orqueuecontinuation.529isunfinished/savedbutunrecorded/unselected;530facts-only. [Checkpoint](deep_review_checkpoint.json) · [Smallphase37](../data/deep_review_20261017/work/goal0037_RESUME.json). Do not load wholeledgers/journal.
 
-**No PM BUY until600 unique full valuations + primary comparative selection; selection null.** No wildcard/add/repost/taker/bundle. Holdings remain managed. Next progress notice500 valuations/material finding/block, not case500. [Policy](entry_review_gate.json).
+**Three exact YES bids LIVE/0matched at13:17:41UTC; maxcommitment13.64, no purchase.** [Selection](../research/2026-10-21-completed-review-allocation.json) · [Outcome/identities](../research/2026-10-21-allocation-orders.json) · [Restingorders](resting_orders.md).
 
-| Latest case | Primary YES | Decision limit |
-|---|---:|---|
-|522 Fable releaseOct20 |Not valued |Exact closed/nonaccepting/resolved venue; actual release date unverified.|
-|523 CA-06 GOP |8%; broad0.1–65, LOW |Pan(D) vs Kiley(NPP); next-term no-GOP plan is not a Democratic intent. Older affirmative GOP intent is ambiguous under rule.59YES costs1.003, central+3.717 but selected−1.003/strict-nonGOP rival−0.944.|
-|524 DHR Q3 core3–4.5% |99%; broad95–99.98 |Three official materials report3.0%, higher boundary band. No YES ask;99.9c maker negative.907NO walk1.00699 has central+8.06301 but selected−1.00699; residual1% NO is not a measured error rate.|
+|Case / decision|Shares ×limit /maxcash|CurrentprimaryYES /entryreserve|Unfilledpull|
+|---|---|---|---|
+|179 OctoberFednodissent /252|20×24c /4.80|67.346% /20pp|Oct27 22UTC,beforeOct28decision|
+|511 DecemberFednochange /253|20×19c /3.80|46% /15pp|Oct27 22UTC,beforeOctoberchangesbaseline|
+|300 Delcyofficialhead-of-state /254|28×18c /5.04|74.592% /15pp|Oct24 13UTC,72hrole-evidencebudget|
 
-- Independent523/524 source/identity/arithmetic/full-walk/fee audits passed. [Comparison](../data/deep_review_20261017/work/goal0036_candidate_comparison.json): datedW189.51 only; central log gains reverse under selected/rival models, joint2.00999 loss feasible. No final rank, hedge credit or selection.
-- **523 capture scope:** two named receipts contain one entire two-page web response. Both source sections verified; metadata correction is [indexed first](../data/deep_review_20261017/work/0523_resume.json). Final model is quote-aware; initial8% point predates quotes. Latest original district poll/current caucus intent remain unknown.
-- **524 sizing:**907NO consumes895.89 at.001 plus11.11 at.01. Limit.01 can reserve9.07; captured1.00699 is not guaranteed.1000-share40.31589 diagnostic is not intended size. Exact first-publication chronology/exhaustive precision search remains incomplete; proposedUMA is not final.
-- Next526 source facts prepared: official-publisher Oct20 text snapshot and MetaOct12 release, no primary valuation. Live designated UI403 remains unknown. Load only its [small packet sources](../data/deep_review_20261017/work/0526_resume.json).
-- Prior511 AP follow-up is reconstructed notes, not provider evidence; root read failed. Read [mandatory correction](../data/deep_review_20261017/work/0511_warsh_oct16_capture_correction_1055.json).516 final model is quote-aware despite inherited false flag: [indexed erratum](../data/deep_review_20261017/work/0516_resume.json).493/494/503 local gaps remain nonglobal.
+- Exact3orders/0matches,127exhaustedconfirmedtrades/notargetrefs,9sameall-sizepositions,all6targetCTFs0,pUSD19.25129unchanged;3live reservations. Uncommitted5.61129. No debit, fee, flow, transfer orprofit. Futurefillsrequirecurrentauthenticatedstate/trade/index/chain/cashandhold-exitreview. Noadd/chase/automaticrepost/takerfallback; cancel-firstunassessedmaterialnews. Hardpullrequiresfreshunderwritingbeforeanynewquote.
+- Policyv2 usescompleted-universe422+primarycomparison/hash/exactvaluedoutcometokens; former600waitingrule retired. Vettedentryonly; allotherlivegatesremain.43focusedgatetests and10charttests passed. BothFedclaims sharedata/policyerror; nohedgecredit. Conservative27%globalfloor coversgrosscost+allplanned51.064; largesttoolstate58.0518<30%cap58.902. Stakescanalllose13.64.
+- Forecastsareunfittedprimaryjudgments, notcalibratedfloors. CommonOctpath75hold/23hike25/1hike50+/1cut replacedinconsistentdatedresearchpaths;51160%→46,17975%→67.346. WarshactualAPsearchreport/Euronewsbodycaptured; oldreconstructedAPnotesexcluded, originaltranscriptstillunknown. CurrentVenezuelanUN/government/BBCtitleevidenceverified; laterlegalterm/dualheadinstrumentsremainuncertain. Officialrole isnotde-factoleadercontract.
+- Delcyconsole0depthwithin5% isnotzerobids: dated2716.38shares17c covers28→4.76vs5.04cost; futureexitnotguaranteed. Sizeallowsfullstake loss; SELLpathavailabilityisnotpromiseofliquidity.
 
-## Dated safety and holdings
+## Dated money and held risks
 
--11:05 quick/orders/UMA actual0: zero exhausted orders,43 Gamma refreshed/0 alerts,4 hurdle-clear/0 flags, no watchlist hits. Kimi10YES/OR5NO unchanged; seven visible open rows do not prove resolved dust live. [Event review](../research/2026-10-21-101636-news-review.json).
-- Requested266c9bdc repeats Sep10 publication already reviewed10:11.12:07 completion audit reverified prior source/command hashes; no new account freshness. Oct12 defenses are adverse access context, not measured HLE impairment. Common Dreams689ad1fe exact MI opinion link reached consent redirect; body/new crux unverified, no bypass/action. [Audit](../data/deep_review_20261017/work/tick101636_completion_audit_1203.json).
-- Kimi datedp34.02125%/selected19.02125% unchanged.11:05 indicative exit1.10 vs selected payout1.902125.25% future-branch impairment gives1.298844 vs dated72-day carry1.106908; retention<.670462 or broad-low0.80 favors cash. Retain pilot/no add; no calibrated floor/recovery guarantee. All pilots7.35 original cost can jointly lose.
-- Held112 is OR725–775T, distinct from514675–725; shared diagnostic12.35% near dated12%, no prior change. Selected5NO payout3.65 vs11:05 exit3.25+carry;750T concentrated rival favors sale. Clarity whole conditional29/58, or venue0, vs08:53 exit27.03; no leg sale.
+-12:59:24–39 canonical196.34includes6.03fundedgas; trading190.31mid/188.90indicativefee-netdepth(+11.12%vs170), sameproducerPM36.35/34.94. CSV250preserves249oldrows/flows; residual19.73unaudited,VM/APIexcluded,sequentialnotNAV/proceeds. [Financial](../research/2026-10-21-1259-financial-snapshot.json).
+- Full12:58status:UMA43refreshed/0alerts,hurdle4clear/watchlistnohits/Ostium0/auditCLEAN. Twozero-valuedresolvedclaimsarelosers,notwinningredeemables. HeldKimi10YES/OR5NO/MI5NO/Messi5YES andClarity29/29unchanged. CurrentK3Accuracyunverified; lastsuccessful41.08isdated, vendor56withtoolsisnotboardAccuracy. ORheld725–775T differsfrom514675–725; partialtrafficnotfinalforecast.
+- Three13UTC Kimi/MIheadlineURLsreturnedGoogleHTML; noverifiednewscore/legalimpairmentornewpoll.13:04MLiveyouth-vote exactrow/searchreviewedonce,publisherfailed; eventdate/numbers/methodunknown. NoMIorderexists; retain5NO/datenumericprior, noforcedsale/cancel fromclassifier. [Safety](../data/deep_review_20261017/work/selection20261021/held_news_safety.json) · [MLivegap](../data/deep_review_20261017/work/selection20261021/mlive_final_safety.json).
+- Claritynestedpairpaysatleast29underfaithfulresolution; oracle/counterpartyfailurecanremovefloor. Managewholepair,noleg-onlysale. Oldpilotbroadlossmodelsfavorcash; noautomaticaddfromKellyprintouts.
 
-## Last complete financial observations —08:53
+## Boundaries and evidence
 
-- Canonical195.55 includes6.04 funded gas; trading189.51 midpoint/187.94 indicative depth(+10.55%vs170), same-producer PM35.55/33.98. CSV249/flows unchanged;19.73 residual unaudited, VM/API excluded. Sequential rounded estimates, not NAV/proceeds. [Financial](../research/2026-10-21-0853-financial-snapshot.json).
-- Complete safety:0orders/127 exhausted unchanged trades/9 all-size positions/0 winning redeemables/0 commitment;9 routineCLIactual0/audit clean/4 current daemon singletons/Ostium0/no overdue. [Account](../data/deep_review_20261017/work/tick084522_account.json).
-- HLE08:53API403; later brief omitted scores. Current Accuracy unknown; last successful02:02 K3Accuracy41.08/cal44.67 stays dated. Held criterion ANY Kimi official HLE Accuracy≥55, not vendor tool score. Senate403/Google2026 page404 remain unknown.
-
-## Operating boundaries
-
-- **Next14UTC full check; Michigan debateOct21 23UTC.** WeeklyOct23/monthlyNov12 not due. Off-chain stocks/brokerage retired.02UTC7 scans/155 batches retain caps/omissions/unpriced scopes; no exchange-wide absence claim or repeated broad scan. Cron/watchers wait; finite review continues.
-- No financial action/order/prior/decision/flow/CSV/daemon/schedule/TG/lifecycle change this phase. Storage:497,882,852B freed losslessly/1126 artifacts/149 tests; compact gzip/shared metadata default. read_verified_bytes already decompresses; preserve immutable records. [Storage report](../research/2026-10-21-storage-efficiency.json).
+- **Next14UTCfullcheck; Michigan23UTCdebate.** WeeklyOct23/monthlyNov12notdue. Existingcron/watchersmanagewaiting; noidleloop/newgoal.2officialFedRSSfeeds/8tier2termsadded; warmupread30Google+15+15officialitemswithoutforcepoll/newdaemon. Telegramsummary1286sent13:23.
+-526Meta11%/528Minnesota84%valuationssaved;527Crimeahistorygapblocked. Read[528clockerratum](../data/deep_review_20261017/work/0528_capture_clock_erratum_1320.json) before reuse: persistenceboundsnotweb-callbounds; originalSDKcontentpreserved. NewdenseCSVgzipindexesall422; no3kfull-evaluationclaim.
+- Manualonchaincopper/watchlistremains; offchainstocks/brokerageretired. Preserveunrelatedcache/inject/news/opportunityworkingchanges. SourcefactsandfinancialCLIreceipts compactgzip/private; nooperatortranscripts. [Backlog](backlog.md).

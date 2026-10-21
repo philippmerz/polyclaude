@@ -20,8 +20,9 @@ POLICY_REL = Path("notes/entry_review_gate.json")
 CHECKPOINT_REL = Path("notes/deep_review_checkpoint.json")
 QUEUE_REL = Path("research/2026-10-17-deep-review/index.csv")
 RULES_REL = Path("research/2026-10-17-primary-market-review-rules.jsonl.gz")
-SCHEMA = "polyclaude.entry_review_gate.v1"
-MINIMUM = 600
+SCHEMA = "polyclaude.entry_review_gate.v2"
+REVIEW_MODE = "completed_universe"
+MINIMUM_FLOOR = 1
 VALID_STATUSES = {"valued", "blocked_after_review", "excluded_factual", "pending"}
 CONDITION_RE = re.compile(r"^0x[0-9a-fA-F]{64}$")
 
@@ -143,14 +144,14 @@ def _aware_utc(value: Any, label: str) -> dt.datetime:
 
 
 def _validate_selection(root: Path, selection: Any, valued_count: int,
-                         valued_conditions: set[str]) -> set[str]:
+                         valued_conditions: set[str], minimum: int) -> set[str]:
     if not isinstance(selection, dict):
         raise EntryReviewGateError("entry review gate: primary selection is required")
     reviewed = _aware_utc(selection.get("reviewed_utc"), "selection review time")
     if reviewed > dt.datetime.now(dt.timezone.utc):
         raise EntryReviewGateError("entry review gate: selection review time is in the future")
     selected_count = _require_int(selection.get("completed_valuations"), "selection valuation count",
-                                  minimum=MINIMUM)
+                                  minimum=minimum)
     if selected_count > valued_count:
         raise EntryReviewGateError("entry review gate: selection count exceeds current valued count")
 
@@ -219,24 +220,25 @@ def _require_new_buy_allowed(token_id: str | None, root: Path) -> None:
     except (OSError, json.JSONDecodeError) as exc:
         raise EntryReviewGateError("entry review gate: policy unavailable or malformed") from exc
     if (not isinstance(policy, dict) or policy.get("schema") != SCHEMA
-            or type(policy.get("minimum_completed_valuations")) is not int
-            or policy.get("minimum_completed_valuations") != MINIMUM):
-        raise EntryReviewGateError("entry review gate: policy schema or fixed milestone mismatch")
+            or policy.get("review_mode") != REVIEW_MODE):
+        raise EntryReviewGateError("entry review gate: policy schema or review mode mismatch")
+    minimum = _require_int(policy.get("minimum_completed_valuations"),
+                           "minimum completed valuations", minimum=MINIMUM_FLOOR)
 
     valued_count, valued_conditions = _load_valuation_counts(root)
-    if valued_count < MINIMUM:
+    if valued_count < minimum:
         raise EntryReviewGateError(
-            f"entry review gate: {valued_count}/{MINIMUM} completed valuations; new BUYs blocked")
+            f"entry review gate: {valued_count}/{minimum} completed valuations; new BUYs blocked")
     selected_tokens = _validate_selection(
-        root, policy.get("selection"), valued_count, valued_conditions)
+        root, policy.get("selection"), valued_count, valued_conditions, minimum)
     if token_id is not None and str(token_id) not in selected_tokens:
         raise EntryReviewGateError("entry review gate: token is not a primary-selected winner")
 
 
 def require_new_buy_allowed(token_id: str | None = None, *, root: Path = ROOT) -> None:
-    """Allow a new BUY only after the valuation milestone and selected target.
+    """Allow a new BUY after the configured universe threshold and selected target.
 
-    With ``token_id=None`` this validates the milestone/selection phase without
+    With ``token_id=None`` this validates the threshold/selection phase without
     authorizing any particular order. All malformed or unavailable inputs fail
     closed through the same RuntimeError subtype.
     """

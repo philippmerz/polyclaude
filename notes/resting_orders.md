@@ -1,3 +1,19 @@
+# Current resting orders — October21 13:17 UTC
+
+**Three LIVE BUY bids, zero matched; $13.64 reserved.** GrosspUSD19.25129/uncommitted5.61129.127exhaustedtrades/9unchangedall-sizepositions/all6targetCTFs0; no purchase, fee, debit, transfer or profit. [Exactreconciliation](../research/2026-10-21-allocation-orders.json) · [Primaryselection](../research/2026-10-21-completed-review-allocation.json) · [Policyv2](entry_review_gate.json).
+
+|Claim / decision|YES shares ×limit|maxcash|Exactorder|Requiredpull ifunfilled|
+|---|---:|---:|---|---|
+|October Fed no dissent /DEC252|20×0.24|4.80|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|Oct27 22UTC;beforeOctoberFOMCdecision|
+|Delcy official head of state at year end /DEC254|28×0.18|5.04|`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`|Oct24 13UTC;72hcurrent-roleevidencebudget|
+|December Fed no rate change /DEC253|20×0.19|3.80|`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`|Oct27 22UTC;beforeOctoberFOMCdecision|
+
+Revieweveryexistingcheckandearliermaterialsource/venueevent. Cancel-firstunassessedmaterialnews. No automaticadd/repost/chase/takerfallback. Anyfillrequiresfreshtrade/index/chain/cashandhold-versus-exitreview; beforefillsmaintainfullreservations. Fedcontracts sharepolicy/dataerror; nohedgecredit. CurrentDelcyrules/UN/government/BBCbodyrechecked; laterlegaltitleinstrumentsremainuncertain.
+
+## Prior order record — historical
+
+The October20 status and former600 waiting instruction below are historical; the Oct21 completed-universe selection above supersedes that waiting rule. Closed orders remain closed; their numeric forecasts are not current entry authority.
+
 # Current resting orders — October20 15:55 UTC
 
 **Zero open orders; zero entry reservations.** Three original political pilot bids were canceled15:48 under standing cancel-first after original national congressional vote-intention data postdating their underwriting. Shared national/fill assumptions need reassessment; this does not declare every original forecast wrong. No automatic repost. NewBUY/add/reprice/repost/taker/bundle remains paused396/600 fullvaluations plus primary comparative selection; holdings/SELL/cancel/redeem remain managed. [Policy](entry_review_gate.json).

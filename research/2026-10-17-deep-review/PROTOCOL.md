@@ -4,35 +4,30 @@ Read [RESUME.md](RESUME.md), then `.venv/bin/python scripts/deep_review_resume.p
 
 ## Scope and selection
 
-**October20 operator entry restriction:** no new Polymarket BUY bids until600
-unique full `valued` cases are complete, followed by a primary comparative
-selection of the best candidates reviewed so far. Blocked reviews and factual
-exclusions stay separate. Reaching600 alone does not authorize an order; record
-the comparison and exact selected tokens in
-[the entry policy](../../notes/entry_review_gate.json), then apply every current
-execution gate. No earlier wildcard entry, add, repost, taker or bundle bypass.
-Existing bids/holdings retain their management rules; research and safe exits
-continue. Keep per-case persistence and the finite queue independent of this
-entry restriction.
+**Operator direction, October 21:** the broad review experiment ended after 422
+completed unique `valued` cases. Case 529 remains unfinished and is excluded
+from the count. The 600-case waiting milestone is retired. New investment may
+be selected autonomously for EV from the completed valued universe after a
+primary comparison using fresh source/criteria checks, both-side executable
+economics, uncertainty, settlement horizon, maker-fill risk, and the current
+portfolio. The v2 [entry policy](../../notes/entry_review_gate.json) uses
+`review_mode: "completed_universe"` and
+`minimum_completed_valuations: 422`; record exact condition/token identities
+and a hashed research report there before any new BUY. All current execution
+gates still apply. A completed comparison is not itself an order or fill.
 
-After600, compare the reviewed candidates using fresh source/criteria checks,
-both-side executable economics, uncertainty, time to settlement, conditional
-maker-fill risk and the current portfolio. Historical edge estimates alone are
-insufficient; selection may conclude that no bid is justified. Preserve the
-comparison as a small research report. The policy's `selection` is initially
-`null`; a completed selection uses:
+Selection may conclude that no bid is justified. The policy's `selection` uses:
 
 ```json
-{"reviewed_utc":"<actual aware UTC time>","completed_valuations":600,
+{"reviewed_utc":"<actual aware UTC time>","completed_valuations":422,
  "report":"research/<comparative-report>.md","report_sha256":"<SHA256>",
  "targets":[{"condition_id":"<exact valued condition>","token_id":"<selected outcome token>"}]}
 ```
 
-The offline gate verifies count consistency, the report hash and selected token
-membership; it cannot certify the quality of the comparison or live eligibility.
-Do not populate this structure before the milestone or merely to release capital.
+The offline gate verifies configured count consistency, report hash and selected
+token membership; it cannot certify comparison quality or live eligibility.
 
-The authorization is a finite in-depth review of the full frozen 3,000-condition universe. Work in original index order; preserve each condition, market, token, literal criterion, and fingerprint. All cases remain eligible regardless of title, old model labels, price, liquidity, or cheap-model output. Small models and factual collectors cannot reject, rank, set probabilities, or choose investments. Primary review owns interpretation, forecasts, and investment conclusions.
+The October17 broad review authorization covered the frozen 3,000-condition universe and ended after 422 completed valuations. The remaining queue is not a current entry barrier or an instruction to resume that experiment; case 529 is unfinished. Preserve exact frozen identities and criteria in any future authorized case work. All cases remain eligible for research regardless of title, old model labels, price, liquidity, or cheap-model output. Small models and factual collectors cannot reject, rank, set probabilities, or choose investments. Primary review owns interpretation, forecasts, and investment conclusions.
 
 Read the complete rule before analysis. Copy case identities programmatically from the frozen universe; check complete token strings, not shortened or manually transcribed IDs. Preserve an erroneous source unit and append a correction before relying on it. Exclude only for an objective fact that makes the exact contract ineligible or unreachable within the project horizon, such as a resolved/closed event with no remaining route. Record the exact reason and source. A high price, thin book, research difficulty, or related market result is not sufficient. Inaccessible evidence is a gap unless the contract itself is objectively impossible to evaluate. Shared family research is permitted only when the relationship is demonstrated; index each condition and do not count shared evidence as independent forecasts.
 
@@ -62,11 +57,11 @@ Use `valued`, `blocked_after_review`, or `excluded_factual`. `valued` requires a
 
 For material correction, run `revise --input PATH --prior-report-sha256 SHA256 --reason "specific change"`, preserving exact frozen identity. Revisions append timestamped JSON/Markdown and a hash-linked ledger entry; never overwrite base records or older observations. Use verified revision logic for effective state. Count each condition once using its latest verified revision; retain base counts and `evaluations_written` separately from revision counts. If saving/rebuilding is interrupted, audit existing files before retrying; never repeat a completed case blindly.
 
-At each authorized milestone, report valued, blocked, excluded, and pending counts separately, plus coverage, evidence, risks, and supported entry conditions. Notify in chat and through the already-authorized Telegram route when applicable. Continue the finite queue unless the operator steers or pauses. A milestone count does not prove opportunity or full coverage.
+At each authorized milestone, report valued, blocked, excluded, and pending counts separately, plus coverage, evidence, risks, and supported entry conditions. Notify in chat and through the already-authorized Telegram route when applicable. Continue a queue only while that research authorization is active. The Oct21 direction ended the broad pass at 422 and the native goal is inactive; do not resume the remaining queue without renewed authorization. A milestone count does not prove opportunity or full coverage.
 
 ## Resume and safety
 
-Scheduled check-ins bound their own work; they do not revoke this separately authorized finite review or justify marking its goal blocked. After due checks, the owning session returns to research under the native goal lifecycle. A blocked individual case is saved and the next pending case remains eligible. A global block requires a shared obstacle that prevents meaningful progress, not a completed cron tick, a milestone, or one missing source for an individual case. If the native goal is blocked while research remains possible, report the mismatch and continue authorized interactive work; do not fake completion or create a replacement goal. Resuming native automatic continuation uses the user/system goal control.
+Scheduled check-ins do not reactivate a paused native goal or the ended broad-review authorization. A blocked individual case is saved and the next pending case remains eligible only under active research authorization. A global block requires a shared obstacle that prevents meaningful progress, not a completed cron tick, a milestone, or one missing source for an individual case. Do not fake completion or create a replacement goal. Resume native automatic continuation only through the user/system goal control.
 
 After interruption or compaction, read the checkpoint and resume packet, then inspect the selected case and latest verified revision. Refresh the compact handoff after material checks or decisions. Historical notes/archive are evidence only; do not replay old trades, snapshots, deadlines, or instructions. Preserve unrelated changes and immutable financial records. This protocol creates no indefinite goal, timer, watcher, or idle continuation.
 Provider captures must preserve the exact returned tool object/string before selection, parsing or paraphrase. Hashing reconstructed excerpts or agent-written source notes does not verify publisher content; label them as notes and retain an explicit source gap until the actual response is captured. A failed independent source read does not corroborate a collector's paraphrase.
