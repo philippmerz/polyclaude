@@ -1,5 +1,5 @@
 {
-  "next_id": 260,
+  "next_id": 261,
   "decisions": [
     {
       "id": 1,
@@ -5642,6 +5642,25 @@
       "thesis": "Retain5MichiganNO/noadd after separately adding primary WaPoGMU Sep10-14 LV48D45R n803/MOE3.9 and originalMarist Oct15-18 LV50D48R/MOE4.3. Registered n1185 is not LV n. CNN average overlaps Fox/Siena and is not an eighth poll. Root subjective extraSD3 each;7poll rawD56.729209 rounds57/NO43 from56/44. SelectedNO33 pays1.65 vs1.45 exit+21d variablecarry1.45265. G12/no-bias and broadlow favorcash; full original1.55 can lose. No new voter-shift claim, no trade. See research/2026-10-21-173336-michigan-update.json.",
       "confidence": "low",
       "prediction": "Democratic party wins exactMichigan party-winner contract with judgmentprobability0.57; anynon-Dwinner0.43. Source/model revision only, no purchase; covariance/turnout/bias unfit.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-30",
+      "tags": [
+        "held-review",
+        "prior-revision",
+        "no-trade"
+      ],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 260,
+      "timestamp": "2026-10-21T22:08:16Z",
+      "type": "skip",
+      "thesis": "Retain5MichiganNO/noadd after original OnPoint Oct19 release, fieldOct18 online586registered (LV n unspecified), unleanedLV48.7D42.8R/MOE5.2. Add once to seven distinct surveys; leaned6.3 is same-sample model alternative. ExtraSD3 age3 and G8/bias-1.5 shared terms subjective/unchanged. Eightpoll rawD59.385178 rounds59/NO41 from57/43. SelectedNO31 pays1.55 vs fresh1.50 exit+conservative21d variablecarry1.50278; unrounded selected1.53074. SD1.5 margin only0.00147; G12samebias/no-bias/broadlow favorcash. Full original1.55 can lose; no voter-shift/calibratedfloor claim. Debate23UTC. See research/2026-10-21-2200-michigan-update.json.",
+      "confidence": "low",
+      "prediction": "ExactMichigan party-winner contract: Democratic winner judgment0.59; anynonD0.41. Forecast-only source/model update; no purchase/size change, no outcome grade.",
       "size_usd": 0.0,
       "resolution_at": "2026-11-30",
       "tags": [
