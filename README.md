@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 246 recorded observations from Apr-25
+The local performance CSV now has 247 recorded observations from Apr-25
 through Oct-21. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 03:51 UTC
+## Last audited snapshot — October21 05:25 UTC
 
-**Indicative trading depth $188.36 versus $170 contributed (+10.80%); midpoint $189.92.** Canonical bankroll $195.89 includes $5.97 separately funded gas; same-producer PM midpoint/depth $35.96/$34.40. Producer ran03:51:00–03:51:17UTC. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV246 preserves all245 prior rows and flows; ten chart tests passed. [Financial record](research/2026-10-21-0351-financial-snapshot.json).
+**Indicative trading depth $187.79 versus $170 contributed (+10.46%); midpoint $189.29.** Canonical bankroll $195.28 includes $5.99 separately funded gas; same-producer PM midpoint/depth $35.33/$33.83. Producer ran05:25:49–05:26:06UTC. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV247 preserves all246 prior rows/flows; ten chart tests passed. [Financial record](research/2026-10-21-0525-financial-snapshot.json).
 
-**Zero orders,127 complete unchanged trades, nine unchanged all-size positions**, no winning redemption. Eleven routine commands returned0; four daemons are current singletons, audit clean, UMA43refreshed/0alerts, hurdle4clear/0flagged, watchlist no hits, Ostium0, no overdue decisions. [Root proof](data/deep_review_20261017/work/tick034622_account_root_recheck.json) · [Check](research/2026-10-21-034622-checkin.json).
+**Zero orders,127 unchanged complete trades, nine unchanged all-size positions**, no winning redemption. Ten routine commands returned0; the state audit flagged a25pp OpenRouter prior-to-mark gap. After explicit source/rule/hold/exit review, only its divergence acknowledgment and reason were added; the audit then returned0/CLEAN. No numerical prior or position changed. Four daemon singletons are current, UMA43refreshed/0alerts, hurdle4clear/0flagged, watchlist no hits, Ostium0, no overdue decisions. [Root proof](data/deep_review_20261017/work/tick052258_account_root_recheck.json) · [Divergence judgment](data/deep_review_20261017/work/tick052258_OR_divergence.json).
 
-Retain holdings; no additions or numeric prior changes. Both required Michigan alerts and older related reports were reread. The donation allegation and relayed campaign denial remain attributed claims; no prohibited donation, official finding, nominee change or measured voter response was verified. Original publisher/video and credential-source gaps remain explicit. Michigan's actual00:51 daily review remains D56%/heldNO44%; no headline-count adjustment. [Primary review](data/deep_review_20261017/work/tick034622_primary_review.json).
+The required Kimi article is indexed as August6 commentary; its direct page returned403. It establishes no new October21 release or qualifying HLE Accuracy. The current official HLE request also returned403: last successful02:02 cached K3Accuracy41.08/calibration44.67 remains dated, and current scores are unknown. OpenRouter's05:25 chart shows Oct19partial58.298450T; all four target weeks remain future. Retain holdings/no additions. [Primary review](data/deep_review_20261017/work/tick052258_primary_review.json).
 
-03:50 exact held-token net exits Kimi/OR/MI/Messi=$1.00/$3.10/$1.50/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, exceeds the separate tool's $27.55 exit; no leg-only sale. [Saved math](data/deep_review_20261017/work/tick034622_hold_exit_math.json).
+05:24 exact Kimi/OR/MI/Messi net exits=$1.00/$3.10/$1.45/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, versus the separate tool's $27.03 exit; no leg-only sale. [Math](data/deep_review_20261017/work/tick052258_hold_exit_math.json).
 
-Resolving sources retain their02:02 dates; the completed02UTC seven scans/155batches retain all limits. BUY pause405/600 plus comparative selection stays; no new valuation or exchange-wide absence finding. No financial writer or routine Telegram. Next existing06UTC light/14UTC full check or earlier material event; Michigan debate23UTC.
+BUY pause405/600 plus comparative selection stays; completed02UTC discovery retains all limits. Bytecode cleanup recovered2.25MiB; incremental Git packing recovered another11.49MiB. Full strict fsck passed; refs, reachable objects, source and financial records were preserved. No financial writer or routine Telegram. Next existing06UTC light/14UTC full check or earlier material event; Michigan debate23UTC. [11-step check](research/2026-10-21-052258-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

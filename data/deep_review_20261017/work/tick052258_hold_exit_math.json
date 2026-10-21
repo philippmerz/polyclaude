@@ -1,0 +1,81 @@
+{
+ "schema": "polyclaude.held_exit_math.v2",
+ "computed_utc": "2026-10-21T05:28:08.901384+00:00",
+ "quote_file": "data/deep_review_20261017/work/tick052258_held_quotes.json",
+ "quote_sha256": "da0555e46d7e31294584636d526404efa0d72740b6f4eb9b8fb078ebafc5a696",
+ "root_raw_identity_4Gamma_8books_4compactfee_parity_verified": true,
+ "holdings": [
+  {
+   "index": 412,
+   "side": "Yes",
+   "shares": 10,
+   "p": 0.3402125,
+   "selected_p": 0.19021249999999998,
+   "broad_low_p": 0.08,
+   "net_exit": 1.0,
+   "dated_exit_plus_carry": 1.00654281393883,
+   "selected_terminal": 1.9021249999999998,
+   "broad_low_terminal": 0.8,
+   "additional_selected_adverse_reversal_pp": 8.955821860611698,
+   "gamma_received": "2026-10-21T05:24:47.917423+00:00",
+   "book_age_s_at_receipt": 10.369644165039062
+  },
+  {
+   "index": 112,
+   "side": "No",
+   "shares": 5,
+   "p": 0.88,
+   "selected_p": 0.73,
+   "broad_low_p": 0.2,
+   "net_exit": 3.1,
+   "dated_exit_plus_carry": 3.120282723210373,
+   "selected_terminal": 3.65,
+   "broad_low_terminal": 1.0,
+   "additional_selected_adverse_reversal_pp": 10.594345535792538,
+   "gamma_received": "2026-10-21T05:24:48.025000+00:00",
+   "book_age_s_at_receipt": 112.12264394760132
+  },
+  {
+   "index": 1838,
+   "side": "No",
+   "shares": 5,
+   "p": 0.43999999999999995,
+   "selected_p": 0.33999999999999997,
+   "broad_low_p": 0.2,
+   "net_exit": 1.45,
+   "dated_exit_plus_carry": 1.4594870802113034,
+   "selected_terminal": 1.6999999999999997,
+   "broad_low_terminal": 1.0,
+   "additional_selected_adverse_reversal_pp": 4.810258395773931,
+   "gamma_received": "2026-10-21T05:24:48.102595+00:00",
+   "book_age_s_at_receipt": 0.07164406776428223
+  },
+  {
+   "index": 210,
+   "side": "Yes",
+   "shares": 5,
+   "p": 0.6,
+   "selected_p": 0.39999999999999997,
+   "broad_low_p": 0.2,
+   "net_exit": 1.25,
+   "dated_exit_plus_carry": 1.2565385442607573,
+   "selected_terminal": 1.9999999999999998,
+   "broad_low_terminal": 1.0,
+   "additional_selected_adverse_reversal_pp": 14.869229114784849,
+   "gamma_received": "2026-10-21T05:24:48.171447+00:00",
+   "book_age_s_at_receipt": 11.706644058227539
+  }
+ ],
+ "alternative": {
+  "apy": 0.032247,
+  "chain": "polygon",
+  "token": "USDC",
+  "supply_status": "live",
+  "fetched": "2026-10-20T19:29:02.473940+00:00",
+  "constant_rate_sensitivity_not_forecast": true,
+  "funding_and_operations_costs_not_assumed_free": true
+ },
+ "fee_note": "Compact fd zero rate matches structured Gamma schedule despite legacy fee fields. Per-market dated observations; not later execution authority.",
+ "horizon": "Dated variable Aave75d/Messi60d constant sensitivity, not forecast; route/funding costs not assumed free.",
+ "current_execution_authorization": false
+}

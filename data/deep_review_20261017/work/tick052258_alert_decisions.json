@@ -1,0 +1,48 @@
+{
+ "schema": "polyclaude.alert_decisions.v1",
+ "tick_id": "20261021T052258Z",
+ "reviewed_utc": "2026-10-21T05:31:21.197932+00:00",
+ "required_alert_ids": [
+  "e214c5aa7b4892f409a6a4c8680e759addd52ebe"
+ ],
+ "cutoff_utc": "2026-10-21T05:22:54Z",
+ "new_rows": [
+  {
+   "id": "b4bb867d8f0596e50f2e43796844217ddcfbe1d5",
+   "ts": "2026-10-21T03:51:41Z",
+   "title": "Anthropic IPO Prospectus: First-Half Loss Hits $80.7 Billion, $750 Billion Computing Spend Draws Attention - TradingKey",
+   "raw_line_sha256_excluding_LF": "a3f8d955e347e762ee81183f1ab0ac6fdbcd0fc7c5f06d09ee5c301b8f10ddee",
+   "decision": "No held AnthropicIPO exposure or pendingBUY. Financial headline claims not independently verified; no observed release/router-method/traffic update establishes a quantitative change to exact held outcomes. No portfolio action from this headline."
+  },
+  {
+   "id": "7727b6eaf913ae33cf9617e564d28d8f47105f00",
+   "ts": "2026-10-21T04:56:06Z",
+   "title": "Anthropic logged net loss of over $80 billion in first half of 2026 - StreetInsider",
+   "raw_line_sha256_excluding_LF": "a3c17ee8fd640654e9b46aed46c5f1586790ccfab78287279dccb4b5cc816412",
+   "decision": "No held AnthropicIPO exposure or pendingBUY. Financial headline claims not independently verified; no observed release/router-method/traffic update establishes a quantitative change to exact held outcomes. No portfolio action from this headline."
+  },
+  {
+   "id": "1b6316734c8b780c4dbf63f5a410ef032eee3167",
+   "ts": "2026-10-21T05:17:28Z",
+   "title": "OpenRouter Users Sent 84% of Tokens to Non-Frontier Models in Aug. 10 Week - TOKENPOST",
+   "raw_line_sha256_excluding_LF": "77b3d25279414073d1b520f28f2c55e57a6a583c2de162d1b6842b401bfea4ad",
+   "decision": "Aug10 model-composition report is historical and not four future weekly totals. Current official weekly source independently refreshed; review the OR25pp divergence in separate primary unit, no numeric prior change."
+  },
+  {
+   "id": "e214c5aa7b4892f409a6a4c8680e759addd52ebe",
+   "ts": "2026-10-21T05:22:54Z",
+   "title": "Can Moonshot’s Kimi K3 now stay in orbit? - The Japan Times",
+   "raw_line_sha256_excluding_LF": "31084db8299bdc405a43123dc3ac4bc90b407b1319232dfccb408fdd7b42b793",
+   "decision": "Required alert reviewed; indexedAug6 commentary does not establish a newOct21 release or exact HLE Accuracy55. Publisher403/currentHLE403 gaps retained; retain10YES/noadd."
+  }
+ ],
+ "related_older_and_required": {
+  "path": "data/deep_review_20261017/work/tick052258_related_Kimi.json",
+  "sha256": "7cb55683f3b3fc16d34c797dbaf29bd5be04d5994f18eb7ea77c068bf087e43b",
+  "rows": 9,
+  "note": "8 older plus required; metadata/rawline hashes verified against JSONL regardless journal recency."
+ },
+ "sources": "data/deep_review_20261017/work/tick052258_resolving_sources.json",
+ "OR_divergence": "data/deep_review_20261017/work/tick052258_OR_divergence.json",
+ "decision": "Review completed with source gaps. Retain holdings/noadd/no numerical prior changes. OR acknowledgment records explicit current manual review, not probability freshness or entry authority."
+}

@@ -1360,7 +1360,9 @@
     "latest_source_packet": "data/deep_review_20261017/work/tick012937_source_captures_0145.json",
     "management": "Filledholding, no originalrestingBUY remains. OldOct18 22UTCBUYpull obsolete; existing22UTCheldreview and earliermaterialnews remain. Re-underwrite currentexit/hold on source/rule/measurement/method/regimechanges; fullcurrentgates beforemoney. Noadd/repost. AnynewweeklyTotalrequiresrevaluation; WeeklyPace not realizedtotal/cutoff. Full3.25entrycost canbelost; noindependence orhedgecredit.",
     "monitoring": "Existing exposure-aware newsrouting; PID40455progressverified17:21 after17:19restart, rawRSS Telegramoff, queued/deferred is not reviewed. Current scopedsourcechecks remain required; cache/cooldown/cappedfeed/private-unannouncedchange gaps retained. No newdaemon/timer/manualpoll.",
-    "latest_catalyst": "Oct20 boundedcheck completedsource/holdreview. Existing02UTC or earliermaterialsource/fill; nextweeklydisplayOct26; exacttargetweeksOct26/Nov2/Nov9/Nov16, freezeonfirstNov23display/Nov27ETfallback. Currentpartialweek/weeklypace notsettlement; no liveORBUY."
+    "latest_catalyst": "Oct20 boundedcheck completedsource/holdreview. Existing02UTC or earliermaterialsource/fill; nextweeklydisplayOct26; exacttargetweeksOct26/Nov2/Nov9/Nov16, freezeonfirstNov23display/Nov27ETfallback. Currentpartialweek/weeklypace notsettlement; no liveORBUY.",
+    "divergence_ack": "2026-10-21",
+    "divergence_ack_reason": "Manual source/current-rule/hold/exit/joint-risk review at 2026-10-21T05:28:52.699859+00:00. Retain datedOct20NO88/selected73 under unfitted five-regime assumptions; no numeric rederivation/date-roll. Currentpartial not fullweek; concentrated750T countermodel reverses and broadlow favors exit. Retain5NO/noadd under600+selection pause. Review: data/deep_review_20261017/work/tick052258_OR_divergence.json"
   },
   "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
     "p_yes": 0.8,

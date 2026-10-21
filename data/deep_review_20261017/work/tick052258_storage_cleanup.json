@@ -1,0 +1,32 @@
+{
+ "schema": "polyclaude.regenerable_cache_cleanup.v1",
+ "completed_utc": "2026-10-21T05:33:47.387620+00:00",
+ "scope": "135 candidates inspected; only current-magic Python bytecode with present matching .py source deleted. No source, financial record, receipt, archive, credential or session history touched.",
+ "removed_files": 135,
+ "removed_allocated_bytes": 2416640,
+ "all_matching_sources_preserved_hashes": true,
+ "before_free_MiB": 129.79,
+ "after_free_MiB": 132.05,
+ "observed_reclaimed_MiB": 2.25,
+ "private_plan": "logs/cron20261021T052258Z_root/bytecode_cleanup_plan.json",
+ "private_plan_sha256": "7a07830b180482a6ae65cfafe8bc979ef7b2bb81cb85f99f7bed9c7db8e51af6",
+ "rebuild": "Normal import can regenerate caches from the same source. This does not restart daemons or change live code. Repository commands continue with PYTHONDONTWRITEBYTECODE=1/-B.",
+ "reason": "Disk near128MiB critical; recover enough transient headroom for required record publication. Existing storage watchdog handles future checks; no new timer/cleanup daemon.",
+ "incremental_git_compaction": {
+  "completed_utc": "2026-10-21T05:39:13.224704+00:00",
+  "command": "git repack -d -l (incremental loose-object packing, no history pruning)",
+  "full_strict_fsck_returncode": 0,
+  "HEAD": "36d9cf869478d6144614ae0c2c019a986e93fab6",
+  "all_refs_unchanged": true,
+  "reachable_object_count": 18562,
+  "reachable_object_id_set_unchanged": true,
+  "sorted_reachable_ids_sha256": "40f827cc3db46402fc1de2927e6dff1af520e8531c63d493176c143e33294d2c",
+  "all_owned_working_bytes_unchanged": true,
+  "count_before": "count: 332\nsize: 18.91 MiB\nin-pack: 18363\npacks: 3\nsize-pack: 64.91 MiB\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0 bytes\n",
+  "count_after": "count: 37\nsize: 5.45 MiB\nin-pack: 18658\npacks: 4\nsize-pack: 67.44 MiB\nprune-packable: 0\ngarbage: 0\nsize-garbage: 0 bytes\n",
+  "disk_before_MiB": 129.52,
+  "disk_after_MiB": 141.0,
+  "observed_reclaimed_MiB": 11.49,
+  "receipts": "logs/cron20261021T052258Z_root/git_storage/"
+ }
+}

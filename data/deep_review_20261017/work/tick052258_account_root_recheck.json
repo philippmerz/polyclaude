@@ -1,0 +1,32 @@
+{
+ "schema": "polyclaude.root_account_verify.v1",
+ "verified_utc": "2026-10-21T05:29:40.360070+00:00",
+ "account_ops": "data/deep_review_20261017/work/tick052258_account_ops.json",
+ "account_ops_sha256": "8551c9117e3fda3cba2cf35a4c6daac6a974e3110c9376a507e104409492a063",
+ "raw_receipts_verified": [
+  "logs/deep_review_20261021/tick052258_ops/account/clob_01/clob_01.receipt.json",
+  "logs/deep_review_20261021/tick052258_ops/account/clob_02/clob_02.receipt.json",
+  "logs/deep_review_20261021/tick052258_ops/account/positions_allsize/positions_allsize.receipt.json"
+ ],
+ "orders": 0,
+ "exhausted_trades": 127,
+ "terminal_cursors": "LTE=",
+ "full_trade_rows_exact_match_prior": true,
+ "positions": 9,
+ "position_tuple_fields": [
+  "conditionId",
+  "asset",
+  "outcome",
+  "size",
+  "totalBought"
+ ],
+ "position_tuples_match_prior": true,
+ "prior": "tick034622",
+ "winning_redeemables_using_positions_classifier": 0,
+ "CLI": "10routine actual0; audit actual1 divergence retained. Primary documented review/ack followed by separate audit actual0/CLEAN. All output hashes verified.",
+ "audit_resolution": "data/deep_review_20261017/work/tick052258_OR_divergence.json",
+ "four_exact_current_daemon_singletons": true,
+ "pUSD": 19.25129,
+ "committed_BUY": 0,
+ "no_financial_writer": true
+}

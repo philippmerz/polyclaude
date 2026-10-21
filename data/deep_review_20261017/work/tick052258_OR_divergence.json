@@ -1,0 +1,24 @@
+{
+ "schema": "polyclaude.intentional_divergence_review.v1",
+ "reviewed_utc": "2026-10-21T05:28:52.699859+00:00",
+ "tick_id": "20261021T052258Z",
+ "index": 112,
+ "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
+ "held": "5NO",
+ "trigger": "Audit rc1: current NOmark0.630 vs retained NOprior0.88,25pp gap; price disagreement requires judgment, not an automatic BUY or lower forecast.",
+ "current_source": "data/deep_review_20261017/work/tick052258_resolving_sources.json",
+ "facts": "Official05:25 chart200: completedOct12 still164.043985914931T; Oct19partial58.298449625817T, +3.56502265343T vs02:02. All four settlement target weeks Oct26/Nov2/Nov9/Nov16 remain absent. Currentpartial/cachedAt/Age do not define fullweek usage/cutoff. August10 composition headline is historical; total composition alone does not identify future four-week sum.",
+ "forecast_review": "Retain datedOct20 YES12/NO88, selectedNO73 and broadNO20\u201399.5. Completed model anchor is unchanged; additional partial usage is context, not a replacement fullweek. Five regime weights/drifts/noise remain primary unfitted assumptions, not calibrated evidence of edge. No numerical rederivation or freshness roll claimed today.",
+ "model_risk": "The previously saved concentrated750T countermodel gives~73.36%YES and reverses the NO judgment. A tighter future sum near750 is a live rival thesis. Market price alone does not settle dispersion/regime choice. No broad-range robustness claim.",
+ "hold_math": {
+  "exit_fee_net": 3.1,
+  "dated75d_cash_plus_Aave": 3.120282723210373,
+  "central_terminal": 4.4,
+  "selected_terminal": 3.65,
+  "broad_low_terminal": 1.0
+ },
+ "joint_risk": "AI original4.45 and all pilots7.35 can all lose; no automatic Kimi hedge, independence assumption or price-recovery thesis. Existing small size limits terminal capital loss, not probability error.",
+ "decision": "Retain5NO/noadd. Current selected terminal3.65 exceeds3.120283 datedexit+carry, while the rival concentrated/broad-low models favor sale. Retention rests on selected broad regime model, not certainty. No standing maker sell: future private usage/release information can change fair value before a quote is pulled.",
+ "entry": "NewBUY pause at405/600 plus primary selection null remains binding; advisory size-up language does not override it, and this manual acknowledgment is not entry authority.",
+ "metadata_change": "Set divergence_ack=2026-10-21 with linked reason only. Keep probabilities, verified/criteria dates, current_revision, source packet, all other entries and research counts unchanged. Reopen on actual new weekly totals, source/method/rule/regime evidence or material adverse events, using existing checks; no new timer."
+}

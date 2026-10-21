@@ -1,0 +1,72 @@
+{
+ "schema": "polyclaude.resolving_source_facts.v1",
+ "tick_id": "20261021T052258Z",
+ "audited_utc": "2026-10-21T05:26:50.879457+00:00",
+ "sources": [
+  {
+   "name": "hle",
+   "status": 403,
+   "started_utc": "2026-10-21T05:25:03.180811Z",
+   "received_utc": "2026-10-21T05:25:03.662006Z",
+   "headers": {
+    "cache-control": "private, no-store, max-age=0",
+    "content-type": "text/plain; charset=utf-8",
+    "date": "Wed, 21 Oct 2026 05:25:03 GMT"
+   },
+   "raw_sha256": "78bcd709a994b8d3a4353bf8126dc9dde757811d6c3c6030a75744b244fc592d",
+   "gzip_sha256": "727dc82c6bb0464823b2d0c76786903521cbf0ee8c910793d40c5ab2d6f4d37a",
+   "receipt": "logs/cron20261021T052258Z_root/resolving_sources/hle.receipt.json",
+   "bytes": 59,
+   "status_note": "403: current model scores unavailable. No retry, bypass, or probability inference from access failure.",
+   "last_successful_observation": {
+    "at": "2026-10-21T02:02:29.119527Z",
+    "rows": 66,
+    "Moonshot_K3_HLE_Accuracy": 41.08,
+    "K3_calibration_error": 44.67,
+    "raw_sha256": "07e284568dbaee2a1f6867c947620a3fa4f817eee70b51f840950cc4c92183e6",
+    "source": "data/deep_review_20261017/work/tick020001_resolving_sources.json",
+    "limit": "Dated cached observation, not current absence of a qualifying score."
+   }
+  },
+  {
+   "name": "openrouter",
+   "status": 200,
+   "started_utc": "2026-10-21T05:25:03.672034Z",
+   "received_utc": "2026-10-21T05:25:03.741401Z",
+   "headers": {
+    "age": "295",
+    "cache-control": "public, max-age=300, stale-while-revalidate=600, stale-if-error=3600",
+    "content-type": "application/json",
+    "date": "Wed, 21 Oct 2026 05:25:03 GMT"
+   },
+   "raw_sha256": "770996f621ceeeccef4df01fc8834327c9804ebd61940553cb7de50ced425c4c",
+   "gzip_sha256": "a14925be80ca5ebe22654cdb0385311fd8aee31af767dd06fdcd59f1ee72f1b2",
+   "receipt": "logs/cron20261021T052258Z_root/resolving_sources/openrouter.receipt.json",
+   "bytes": 24695,
+   "cachedAt": 1792558121838,
+   "weeks": [
+    {
+     "week": "2026-10-05",
+     "tokens_T": 171.842501724714
+    },
+    {
+     "week": "2026-10-12",
+     "tokens_T": 164.043985914931
+    },
+    {
+     "week": "2026-10-19",
+     "tokens_T": 58.298449625817
+    }
+   ],
+   "rows": 53,
+   "cachedAt_utc": "2026-10-21T04:48:41.838000+00:00",
+   "current_partial_T": 58.298449625817,
+   "change_vs0202_T": 3.565022653429999,
+   "completed_Oct12_T": 164.043985914931,
+   "August10_T": 75.340581084831,
+   "target_future_rows": [],
+   "units": "Sum of integer per-model ys /1e12; calendar week labels. Partial current week is not a finalized target total; cachedAt/Age are not verified usage cutoffs."
+  }
+ ],
+ "verification": "Raw/gzip hashes independently recomputed before parse; receipts preserve actual HTTP call bounds. Initial offline metadata formatter used nonexistent response_headers key; retained its KeyErrors privately, then reparsed existing captured bytes using headers, without more network requests."
+}

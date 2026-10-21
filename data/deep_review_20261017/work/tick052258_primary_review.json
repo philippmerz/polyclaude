@@ -1,0 +1,32 @@
+{
+ "schema": "polyclaude.triggered_primary_review.v1",
+ "tick_id": "20261021T052258Z",
+ "reviewed_utc": "2026-10-21T05:31:21.197932+00:00",
+ "required_alert": "e214c5aa7b4892f409a6a4c8680e759addd52ebe",
+ "result": "Retain4pilots and complete Clarity group. No orders, financial writer, numerical prior or research-count change. Only ORdivergence acknowledgment metadata added after documented judgment.",
+ "Kimi": "JapanTimes exact-title/source search identifies Aug6 commentary by CatherineThorbecke/Bloomberg. Directpublisher403, fullbody/currentversion unknown; no newOct21 release or exact score established. OfficialHLE05:25 returned403: current Accuracy unknown, not proof below55. Lastsuccessful02:02cached66 models/K3Accuracy41.08/cal44.67 retained dated; prior issuerwithtools56 is not exact resolverAccuracy. Retain10YES34.02125%/selected19.02125/broad8–80, noadd. Endpoint failure does not itself change a probability.",
+ "Kimi_sources": "data/deep_review_20261017/work/tick052258_Kimi_news_facts.json",
+ "alerts": "data/deep_review_20261017/work/tick052258_alert_decisions.json",
+ "OR": "05:25officialchart200: completedOct12 unchanged164.0439859T/currentOct19partial58.2984496T(+3.5650227vs02:02), fourfuturelabelsabsent. Prior model completed anchor unchanged; do not substitute partial/UIpace for fullweek or extrapolate a narrow interval probability. Retain datedYES12/NO88/selectedNO73/broadNO20–99.5. Source/method/model weights uncalibrated, concentrated750T countermodel reversesNO. Review acknowledges intentional market disagreement; BUYpause independently forbids additions.",
+ "OR_review": "data/deep_review_20261017/work/tick052258_OR_divergence.json",
+ "audit": "Initial10checks actual0, auditactual1 for25pp ORgap. Primarysource/rule/hold/jointreview followed by date-only acknowledgment+reason (all other prior fields unchanged), then freshauditactual0/CLEAN. Initial failure preserved, not relabeled success.",
+ "account": "data/deep_review_20261017/work/tick052258_account_root_recheck.json",
+ "exit_math": "data/deep_review_20261017/work/tick052258_hold_exit_math.json",
+ "pilot_risk": "CurrentKimi/OR/MI/Messi netexits1.00/3.10/1.45/1.25 plusdatedAave75d/Messi60d carry below selectedterminal1.902125/3.65/1.70/2. Broad-low terminal0.8/1/1/1 favors sale. AIoriginal4.45/allpilots7.35 can all lose; no independence/automatichedge/recovery credit. Current4Gamma/8books/4compactzero schedules root verified; future execution needs new final checks.",
+ "MI": "Actual00:51D55.7302rounded56/NO44/selected34/broad20 retained, not rederived. Current5NOexit1.45+datedcarry1.459487 vsselected1.70; another4.8103pp selected adverse shift reverses. NationalRV G12 selected1.513432 remains only0.053945 above currentdatedcash; no-bias sensitivity favors exit. Allegations remain contested and no new measured voter response verified.",
+ "Clarity": {
+  "held": "29YES>50+29NO>58",
+  "normal_conditional_payout": [
+   29,
+   58
+  ],
+  "venue_or_oracle_failure": 0,
+  "separate_tool_exit_net": 27.03,
+  "dated75d_Aave_cash_sensitivity": 27.206852260766574,
+  "decision": "Retain whole group/noadd/no leg-onlysale. Oct20 14:02 exact same-rule proof retained dated; no freshpair-rule-read claim."
+ },
+ "other_sources": "Senate/Google retain02:02 observations with limitations; no new resolving fact verified. Trump0.33dust and two losing/uncertain claims unchanged.",
+ "entry_and_discovery": "405/600 uniquevalued + primaryselectionnull; no BUY/add/repost/taker/bundle. Completed02UTC7scans/155batches retained dated with caps/omissions/unpriced scopes; no queue advance, research rejection or exchange-wide absence claim.",
+ "notification": "No Telegram: old-commentary flag and manually reviewed gap do not establish a new material thesis or position change.",
+ "bounded_end": "After owned publication, stop. No goal lifecycle/timer/idlefollow-up. Existing06UTC light/14UTC full or earlier material event; MIdebate23UTC."
+}
