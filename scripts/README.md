@@ -23,6 +23,13 @@ positions; they do not create a recurring stock or brokerage workflow.
 - `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow. Optional `POLYCLAUDE_DISPATCH_RECEIPT` records the actual lock/queue/fallback boundary; no receipt claims review completion.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
 
+`inject_prompt.sh` keeps the historical Markdown bytes in `notes/inject_log.md`
+and appends one compact JSON metadata line per queue attempt. New lines record
+UTC time, status/return code, queued-payload UTF-8 byte count and SHA-256, and
+whether the bounded contract was appended; they omit prompt and quota text. The
+heartbeat uses only the file modification time, so this preserves its liveness
+signal without duplicating prompt bodies.
+
 ## Sleeve clients (libraries imported by other scripts)
 
 - `polyclaude_client.py` — Polymarket CLOB wrapper. EOA signing (`signature_type=0`). `place_limit_buy/sell`, `orderbook`, allowance setup, position queries.

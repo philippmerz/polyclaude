@@ -1,8 +1,8 @@
 # In-depth market review — live index
 
-Updated: 2026-10-21T08:43:19.721551+00:00
+Updated: 2026-10-21T10:15:37.419985+00:00
 
-**407 valuations saved; first milestone100:** 407 valued; 19 blocked after in-depth review. 386 factual exclusions separately; 2188 pending.
+**411 valuations saved; first milestone100:** 411 valued; 20 blocked after in-depth review. 389 factual exclusions separately; 2180 pending.
 
 Full queue: [index.csv](index.csv). Machine resume: [progress.json](progress.json). Protocol: [PROTOCOL.md](PROTOCOL.md). Prior screens carry no rejection authority.
 
@@ -513,6 +513,14 @@ Each report below is written before moving to the next evaluation. Related contr
 |499|[Will the US confirm that aliens exist by October 31?](evaluations/0499.md)|valued|Speculative YES central upside fails selected uncertainty case; NO centralnegative. No supported entry or live trading.|
 |500|[Will Jack Doherty post again on X by October 31?](evaluations/0500.md)|valued|ProvisionalYEScentral/selectedpaperedge, reversesundercrediblegenuine-restrictioncountermodel; no financialaction or entrycertificate.|
 |501|[Spread: Ravens (-3.5)](evaluations/0501.md)|excluded_factual|Factualexclusion ofexactterminalvenue, notvaluation/modelrejection/claimedforecastwin. Researchonly.|
+|502|[Will Kendrick Lamar be featured on GTA VI: The Album?](evaluations/0502.md)|valued|No robust candidate; YEScentralpositive but selectednegative, NOcentralnegative;600+primarycomparisongate remains.|
+|503|[Will Russia capture Dobropillia by December 31, 2026?](evaluations/0503.md)|blocked_after_review|Localhistory/geometryevidencegap, blockednotrejected; no directionalentryjudgment.|
+|504|[Osborn flips Ricketts for Nebraska Senate by November 2?](evaluations/0504.md)|valued|ProvisionalcentralYESlead; selectedstressbothsidesnegative, noapprovedcandidate or execution.|
+|505|[Will the Fed increase interest rates by 50+ bps after the October 2026 meeting?](revisions/0505_20261021T095930967968Z.md)|valued|ProvisionalcentralYESlead; selectedstressbothsidesnegative, noapprovedcandidate or execution.|
+|506|[Will Karmine Corp advance from the Worlds 2026 Play-In?](evaluations/0506.md)|excluded_factual|Factualexclusion ofexactterminalvenue only, notforecast/modelrejection or investmentselection.|
+|507|[Spread: Maryland (-5.5)](evaluations/0507.md)|excluded_factual|Factualexclusion ofexactterminalvenue only, notforecast/modelrejection or investmentselection.|
+|508|[Will Bernie Sanders be TIME Person of the Year 2026?](evaluations/0508.md)|valued|ProvisionalYEScentralcheap-eventlead, noentrycertificate:15ppselectedYES0andbroad1%failcost; NOlosescentral. Bothbooks36.4minoldatreceipt; UMAstatusabsent, notprovedclean. BUYpause600+comparativeselectionnull. No order/prior/watcherchange.|
+|509|[Will the highest temperature in Chongqing be 21°C on October 18?](evaluations/0509.md)|excluded_factual|Factualexclusionofexactterminalvenue, notvaluation/modelrejection orweatherresultclaim.|
 |520|[Will MiniMax have the second highest OpenRouter market share the week of October 12?](revisions/0520_20261018T120933412685Z.md)|valued|No entry approved after daily-source revision; Google near99c has no central YES edge and GoogleNO has zero selected probability after15pp reserve. Exact sibling tails are not calibrated bond opportunities; current all-gate revaluation required.|
 |525|[ADO Den Haag vs. PSV: O/U 3.5](evaluations/0525.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|
 |537|[Counter-Strike: Betclic Apogee Esports vs Team Nemesis (BO3) - PGL Bucharest Closed Qualifier Playoffs](evaluations/0537.md)|excluded_factual|Factual exclusion: exact condition closed/resolved and not accepting new orders; not a forecast rejection.|

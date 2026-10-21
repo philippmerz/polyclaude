@@ -1,0 +1,140 @@
+{
+  "review_index": 503,
+  "market_id": "3862800",
+  "condition_id": "0xfc61377bf1822f97b14f3581729b67d9b95617a9129ac615c4d19e02f98d3514",
+  "criteria_sha256": "feb396c79a1efd3c6a34a7edba4f235f2b346c44d779dd2d6a8487e4dfc3452f",
+  "status": "blocked_after_review",
+  "literal_analysis": "Fullcreation-to-deadline irreversible anypartofintersection +two-update qualifyinglayers; excludedinfiltration/claims; actualnegotiatedcontrolclause andsourcefallbacks retained. Currentcenterpointnotfullhistoricalcondition.",
+  "evidence": [
+    {
+      "url": "https://storymaps.arcgis.com/stories/36a7f6a6f5a9448496de641cf64bd375",
+      "observed_utc": "2026-10-21T09:39:05.706546Z",
+      "finding": "CurrentOct20map anddatedOct18comparison; roothashcheckedbody. Qualifyinglayerscurrentlyoutsidecenter; approximatekmnotmeters. Historicalpersistenceunknown."
+    },
+    {
+      "url": "https://polymarket-upload.s3.us-east-2.amazonaws.com/Dobropillia1-6bc31d8213.png",
+      "observed_utc": "2026-10-21T09:54:51.116260+00:00",
+      "finding": "Rootviewedcriterionlocationguide; notcurrentterritory/persistenceproof."
+    }
+  ],
+  "forecast": {
+    "scope": "Unpriced: earlierirreversiblequalifyingevent/next-cyclemaphistoryunverified. No pointforecast invented."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0503_0505_quotes_0955.json",
+    "quote_file_sha256": "79a43e937ab3ced8f6ce40ba975b3181732c025a4aa0228c5f8230e6a150b1fd",
+    "gamma_received_utc": "2026-10-21T09:53:50.358182+00:00",
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": false
+    },
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "best_bid": 0.13,
+        "best_ask": 0.15,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792576430701",
+        "book_received_utc": "2026-10-21T09:53:50.754039+00:00",
+        "book_age_seconds_at_receipt": 0.0530390739440918,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.55,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.15
+              },
+              {
+                "shares": 5.0,
+                "price": 0.16
+              }
+            ],
+            "net": 1.55
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 1.3,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.13
+              }
+            ],
+            "net": 1.3
+          }
+        },
+        "taker_cost_usd": 1.55
+      },
+      "No": {
+        "best_bid": 0.85,
+        "best_ask": 0.87,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792576430701",
+        "book_received_utc": "2026-10-21T09:53:50.754039+00:00",
+        "book_age_seconds_at_receipt": 0.0530390739440918,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.7,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.87
+              }
+            ],
+            "net": 8.7
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 8.45,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.85
+              },
+              {
+                "shares": 5.0,
+                "price": 0.84
+              }
+            ],
+            "net": 8.45
+          }
+        },
+        "taker_cost_usd": 8.7
+      }
+    },
+    "scope": "Quote/ticketfacts only; noforecast/edge/rejection. Temporaryneutralarithmetic used onlytotraverseverifiedbookloader, allprobability/EVfields discarded."
+  },
+  "verdict": "Localhistory/geometryevidencegap, blockednotrejected; no directionalentryjudgment.",
+  "reopen_condition": "Recoverexactintersectionhistoricalqualifying/persistence oractualtransfer evidence; primaryforecastandcurrentcostriskcomparison.",
+  "evaluated_utc": "2026-10-21T09:54:51.175728+00:00",
+  "question": "Will Russia capture Dobropillia by December 31, 2026?",
+  "valuation_author": "primary_operator",
+  "original_index": 503,
+  "report_sha256": "08546e3a117840e637ec5eb3c80d004ec56f7ad9094a52eb77b637b2cf286ad3"
+}

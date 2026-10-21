@@ -1,0 +1,170 @@
+{
+  "review_index": 502,
+  "market_id": "4662689",
+  "condition_id": "0x85ca83689dcdeac0d1fc36c92383ea130857fdf1a936028b1b06300b43aac29f",
+  "criteria_sha256": "1066a4a044f06eb7b03a84d7ec3cc17134f5296a768d7f192c03d8b934dea90e",
+  "status": "valued",
+  "literal_analysis": "Album-track featured/credited artist by Rockstar; majorstreamingfallback ifofficialinfo unavailable. Radio-onlynotqualifying. AlbumnonreleaseNov26 23:59ET=>NO regardlessprematureconfirmation; metadata date notliteralcutoff. Aliases/creditrole ambiguity retained.",
+  "evidence": [
+    {
+      "url": "https://www.rockstargames.com/VI/music",
+      "observed_utc": "2026-10-21T09:39:43.035033+00:00",
+      "finding": "34originaltracks/selectedsingles; nofullcredits/exclusionproof."
+    },
+    {
+      "url": "https://www.tvazteca.com/azteca7/noticias-videojuegos/filtran-el-presunto-soundtrack-del-gta-6-con-frank-ocean-rihanna-peso-pluma-bad-bunny-y-mas-artistas/",
+      "observed_utc": "2026-10-21T09:40:41.694186+00:00",
+      "finding": "Sept18allegedprintsheet relay, unverified/notofficialcredit."
+    },
+    {
+      "url": "https://x.com/SourceVI/status/2100960002638754193",
+      "observed_utc": "2026-10-21T09:42:40.040963+00:00",
+      "finding": "Originalpublicclaim captured; rootviewedlinkedimage, qualifyingKendrickrowclaimed butauthenticity/finalinclusionunknown."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.3,
+    "low": 0.1,
+    "high": 0.65,
+    "actual_entry_reserve_pp": 15,
+    "method": "Unfittedsourceauthenticity/credit/release mixture, quote-aware;29.547% rounded30.",
+    "reasoning": "Partialofficialsinglescannotexcluderemainingcredit; allegedprintsheetplausiblebutunverified/stale/fabricatedrisk.15.876%/48.6864% competingcredibilitymodels changeeconomics.",
+    "model": "research/2026-10-17-deep-review/models/0502_primary_0944.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0502_quotes_0944.json",
+    "quote_file_sha256": "0ca6706177445761d9b489a62c6d6a26c40728049e423e393c16f98e73996a12",
+    "quote_capture_utc": "2026-10-21T09:42:40.793684+00:00",
+    "gamma_received_utc": "2026-10-21T09:42:40.641380+00:00",
+    "hypothetical_gross_shares": 10.0,
+    "horizon_days": 45.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.3,
+        "selected_stress_probability": 0.15,
+        "best_bid": 0.21,
+        "best_ask": 0.25,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792575756350",
+        "book_received_utc": "2026-10-21T09:42:40.792928+00:00",
+        "book_age_seconds_at_receipt": 4.442928075790405,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.5,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.25
+              }
+            ],
+            "net": 2.5
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 2.05,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.21
+              },
+              {
+                "shares": 5.0,
+                "price": 0.2
+              }
+            ],
+            "net": 2.05
+          }
+        },
+        "taker_cost_usd": 2.5,
+        "central_expected_profit_usd": 0.5,
+        "selected_stress_profit_usd": -1.0,
+        "break_even_before_carry": 0.25,
+        "break_even_constant_carry": 0.25098014174429684,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.7,
+        "selected_stress_probability": 0.5499999999999999,
+        "best_bid": 0.75,
+        "best_ask": 0.79,
+        "minimum_shares": "5",
+        "tick_size": "0.01",
+        "book_timestamp": "1792575756350",
+        "book_received_utc": "2026-10-21T09:42:40.792928+00:00",
+        "book_age_seconds_at_receipt": 4.442928075790405,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.95,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.0,
+                "price": 0.79
+              },
+              {
+                "shares": 5.0,
+                "price": 0.8
+              }
+            ],
+            "net": 7.95
+          },
+          "bids": {
+            "complete": true,
+            "filled": 10.0,
+            "gross": 7.5,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 10.0,
+                "price": 0.75
+              }
+            ],
+            "net": 7.5
+          }
+        },
+        "taker_cost_usd": 7.95,
+        "central_expected_profit_usd": -0.9500000000000002,
+        "selected_stress_profit_usd": -2.450000000000001,
+        "break_even_before_carry": 0.795,
+        "break_even_constant_carry": 0.798116850746864,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "No robust candidate; YEScentralpositive but selectednegative, NOcentralnegative;600+primarycomparisongate remains.",
+  "reopen_condition": "Authenticatedfinalcredits/substantivealbum-specificsource/price and conditional-fillcase, thenfreshfullgates.",
+  "evaluated_utc": "2026-10-21T09:45:31.429966+00:00",
+  "question": "Will Kendrick Lamar be featured on GTA VI: The Album?",
+  "valuation_author": "primary_operator",
+  "original_index": 502,
+  "report_sha256": "85b36f6acfb0e7e4dd9da0e1b12f02d93b74f38be35cb212ac38576238913dd1"
+}

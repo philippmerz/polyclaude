@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+import hashlib
+import json
 import os
 import shutil
 import subprocess
@@ -32,8 +34,7 @@ fi
 if [[ "${command_name}" != "queue" ]]; then
   exit 98
 fi
-payload=$(cat)
-printf '%s\\n' "${payload}" >> "${FAKE_CAPTURE}"
+cat > "${FAKE_CAPTURE}"
 exit "${FAKE_QUEUE_RC:-0}"
 """
     )
@@ -69,6 +70,17 @@ def _run(script: Path, prompt: str, env: dict[str, str]) -> subprocess.Completed
     )
 
 
+def _attempt(log_path: Path) -> dict[str, object]:
+    lines = log_path.read_text(encoding="utf8").splitlines()
+    assert len(lines) == 1
+    return json.loads(lines[0])
+
+
+def _assert_payload_binding(entry: dict[str, object], payload: bytes) -> None:
+    assert entry["queued_prompt_utf8_bytes"] == len(payload)
+    assert entry["queued_prompt_sha256"] == hashlib.sha256(payload).hexdigest()
+
+
 def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     script, captured, env = _fixture(tmp_path)
 
@@ -93,10 +105,14 @@ def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     assert "RESOURCE CONTRACT" in payload
     assert "check_usage.sh --brief" in payload
     assert "do not inject /usage" in payload
-    inject_log = (tmp_path / "notes" / "inject_log.md").read_text()
-    assert "bounded scheduled-run contract appended" in inject_log
-    assert "durable ROI-goal continuation contract appended" not in inject_log
-    assert "direct Codex quota-headroom contract appended" in inject_log
+    log_path = tmp_path / "notes" / "inject_log.md"
+    entry = _attempt(log_path)
+    _assert_payload_binding(entry, captured.read_bytes())
+    assert entry["status"] == "QUEUED"
+    assert entry["actual_rc"] == 0
+    assert entry["bounded_contract"] is True
+    assert "Cron tick" not in log_path.read_text(encoding="utf8")
+    assert "codex: 32% used" not in log_path.read_text(encoding="utf8")
 
 
 def test_daily_checkin_includes_direct_quota_preflight() -> None:
@@ -126,6 +142,9 @@ def test_failed_usage_probe_never_blocks_scheduled_risk_prompt(tmp_path: Path) -
     payload = captured.read_text()
     assert "quota unavailable" in payload
     assert "unavailable (probe failed" in payload
+    entry = _attempt(tmp_path / "notes" / "inject_log.md")
+    _assert_payload_binding(entry, captured.read_bytes())
+    assert entry["bounded_contract"] is True
 
 
 def test_periodic_prompt_also_gets_bounded_contract_but_ordinary_prompt_does_not(
@@ -138,14 +157,18 @@ def test_periodic_prompt_also_gets_bounded_contract_but_ordinary_prompt_does_not
         "Periodic check: anything else to take care of?",
         env,
     )
+    assert periodic.returncode == 0
+    periodic_payload = captured.read_text()
+    assert periodic_payload.count("BOUNDED RUN CONTRACT") == 1
     ordinary = _run(script, "operator asked a normal question", env)
-
-    assert periodic.returncode == ordinary.returncode == 0
-    payload = captured.read_text()
-    assert payload.count("BOUNDED RUN CONTRACT") == 1
-    assert "automatic continuation turns" not in payload
-    assert "maximum expected ROI" not in payload
-    assert "until the user manually cancels it" not in payload
+    assert ordinary.returncode == 0
+    ordinary_payload = captured.read_text()
+    assert "BOUNDED RUN CONTRACT" not in ordinary_payload
+    assert "operator asked a normal question" in ordinary_payload
+    for payload in (periodic_payload, ordinary_payload):
+        assert "automatic continuation turns" not in payload
+        assert "maximum expected ROI" not in payload
+        assert "until the user manually cancels it" not in payload
 
 
 def test_retired_sunday_seed_never_probes_queues_or_logs(tmp_path: Path) -> None:
@@ -178,6 +201,66 @@ def test_unscheduled_check_prompt_is_delivered_even_when_last_reply_is_idle(
 
     assert result.returncode == 0, result.stderr
     assert captured.read_text().strip() == "Continuation check: keep going"
+
+
+def test_attempt_log_is_metadata_only_and_tracks_exact_queued_utf8_payload(
+    tmp_path: Path,
+) -> None:
+    script, captured, env = _fixture(tmp_path)
+    log_path = tmp_path / "notes" / "inject_log.md"
+    legacy = b"## preserved legacy record\n"
+    log_path.write_bytes(legacy)
+    old_mtime_ns = 1_700_000_000_000_000_000
+    os.utime(log_path, ns=(old_mtime_ns, old_mtime_ns))
+    marker = tmp_path / "must-not-execute"
+    prompt = (
+        "Periodic check: literal $(touch "
+        + str(marker)
+        + ") and `touch "
+        + str(marker)
+        + "`;\nsecond line with $HOME and café"
+    )
+
+    result = _run(script, prompt, env)
+
+    assert result.returncode == 0, result.stderr
+    assert not marker.exists()
+    payload = captured.read_bytes()
+    assert prompt.encode("utf8") in payload
+    log_bytes = log_path.read_bytes()
+    assert log_bytes.startswith(legacy)
+    record_bytes = log_bytes[len(legacy):]
+    assert record_bytes.count(b"\n") == 1
+    assert b"touch " not in record_bytes
+    assert b"Periodic check" not in record_bytes
+    assert b"codex: 32% used" not in record_bytes
+    entry = json.loads(record_bytes)
+    _assert_payload_binding(entry, payload)
+    assert entry["status"] == "QUEUED"
+    assert entry["actual_rc"] == 0
+    assert entry["bounded_contract"] is True
+    assert log_path.stat().st_mtime_ns > old_mtime_ns
+
+
+def test_failed_queue_logs_rc_and_exact_payload_metadata_only(tmp_path: Path) -> None:
+    script, captured, env = _fixture(tmp_path)
+    env["FAKE_QUEUE_RC"] = "7"
+    prompt = "operator asked to retry after failure\nkeep this body private"
+
+    result = _run(script, prompt, env)
+
+    assert result.returncode == 7
+    payload = captured.read_bytes()
+    assert payload == prompt.encode("utf8")
+    log_path = tmp_path / "notes" / "inject_log.md"
+    log_bytes = log_path.read_bytes()
+    assert log_bytes.count(b"\n") == 1
+    assert prompt.encode("utf8") not in log_bytes
+    entry = _attempt(log_path)
+    _assert_payload_binding(entry, payload)
+    assert entry["status"] == "FAILED"
+    assert entry["actual_rc"] == 7
+    assert entry["bounded_contract"] is False
     assert "SKIPPED" not in (tmp_path / "notes" / "inject_log.md").read_text()
 
 
@@ -189,8 +272,13 @@ def test_queue_failure_is_preserved_and_logged(tmp_path: Path) -> None:
 
     assert result.returncode == 76
     assert "queue failed" in result.stderr
-    assert "inject FAILED" in (tmp_path / "notes" / "inject_log.md").read_text()
-    assert "BOUNDED RUN CONTRACT" in captured.read_text()
+    payload = captured.read_bytes()
+    assert b"BOUNDED RUN CONTRACT" in payload
+    entry = _attempt(tmp_path / "notes" / "inject_log.md")
+    _assert_payload_binding(entry, payload)
+    assert entry["status"] == "FAILED"
+    assert entry["actual_rc"] == 76
+    assert entry["bounded_contract"] is True
 
 
 def test_operator_followup_help_never_schedules_literal_help(tmp_path: Path) -> None:

@@ -1,0 +1,160 @@
+{
+  "review_index": 504,
+  "market_id": "5765915",
+  "condition_id": "0x8ec41042f49bdea4e3a1d42dbc63b12d4086471a0f4b7a59356bbc120add72d0",
+  "criteria_sha256": "a297bff08e3170da47888bc1a69356966d08157488021bc506b1f41051dae4f0",
+  "status": "valued",
+  "literal_analysis": "PMO hourly Osborn strictly>Ricketts for4consecutive publishedvalues at0.1pp precision fromcreationOct16 03:00:49.899088Z toNov3 00ET(05UTC). Tiesreset;NO_PRINTignored; no prints=>NO; permanentcessation usesearlierhours; earlyofficialwinneroverrides; errorcorrection48h/laterrevisionsignored. IndividualPMpricesdonotresolve.",
+  "evidence": [
+    {
+      "url": "https://predictionmarketodds.com/senate-nebraska-2026.html",
+      "observed_utc": "2026-10-21T09:39:10.493898Z",
+      "finding": "CapturedpublisherlatestO28.1/R71.5, ranges26.1–28.5/71.0–73.6; root verifiedall7receipt hashes and independentlycompared126alignedpostcreationhoursof393retained:0Osborn-higher/0ties. Firsthouroverlapscreation49.9s, irrelevantbecauseRhigher. Latestfeed09:00:44Z, notfuturehourproof. Multi-venue/250-sharefilters andhourmedians reduce single-printnoise; TWO_VENUE/randomnessfallback flagsandnocorrectionfields remain. PMOlevels are resolverinputs, not thiscontract targetprice or a calibratedelectionwinprior."
+    }
+  ],
+  "forecast": {
+    "p_yes": 0.21,
+    "low": 0.03,
+    "high": 0.6,
+    "actual_entry_reserve_pp": 15,
+    "method": "Unfittedprimaryregime mixture; roundedcoarsely, no probabilities inferredfromtargetmarketquote; savedbeforecurrentCLOBcapture.",
+    "reasoning": "65%quiet×4%cross +30%campaignshock×60%cross +5%sourceanomaly×12%cross=21.2%, rounded21. Ordinary10pp +5ppsource/correction/conditional-fill reserve givesselectedYES6%/NO64%. Quiet model~5%, late-shock model~47% are plausiblecountermodels. Fivecalmdaysdo not estimate13futureelectiondays;4hourpathprobability isnotultimatewinnerprobability.",
+    "model": "research/2026-10-17-deep-review/models/0504_primary_0955.json"
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "quote_file": "data/deep_review_20261017/work/0503_0505_quotes_0955.json",
+    "quote_file_sha256": "79a43e937ab3ced8f6ce40ba975b3181732c025a4aa0228c5f8230e6a150b1fd",
+    "quote_capture_utc": "2026-10-21T09:53:50.755865+00:00",
+    "gamma_received_utc": "2026-10-21T09:53:50.538926+00:00",
+    "hypothetical_gross_shares": 15.0,
+    "horizon_days": 20.0,
+    "probability_reference_outcome": "Yes",
+    "actual_entry_reserve_pp": 15.0,
+    "fee_curve": {
+      "rate": 0.0,
+      "exponent": 1.0,
+      "taker_only": true,
+      "authoritative": true
+    },
+    "fee_convention": "Repository USD-equivalent fee per gross share, ceil5dp per-side; hypothetical planning, not an execution certificate.",
+    "alternative": {
+      "apy": 0.032247,
+      "chain": "polygon",
+      "token": "USDC",
+      "supply_status": "live",
+      "fetched": "2026-10-20T19:29:02.473940+00:00",
+      "constant_rate_sensitivity_not_forecast": true,
+      "funding_and_operations_costs_not_assumed_free": true
+    },
+    "sides": {
+      "Yes": {
+        "probability": 0.21,
+        "selected_stress_probability": 0.06,
+        "best_bid": 0.061,
+        "best_ask": 0.069,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792576422855",
+        "book_received_utc": "2026-10-21T09:53:50.754039+00:00",
+        "book_age_seconds_at_receipt": 7.899039030075073,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 1.0350000000000001,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.069
+              }
+            ],
+            "net": 1.0350000000000001
+          },
+          "bids": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 0.9055,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.5,
+                "price": 0.061
+              },
+              {
+                "shares": 9.5,
+                "price": 0.06
+              }
+            ],
+            "net": 0.9055
+          }
+        },
+        "taker_cost_usd": 1.0350000000000001,
+        "central_expected_profit_usd": 2.1149999999999998,
+        "selected_stress_profit_usd": -0.13500000000000023,
+        "break_even_before_carry": 0.069,
+        "break_even_constant_carry": 0.06912010004931725,
+        "current_execution_authorization": false
+      },
+      "No": {
+        "probability": 0.79,
+        "selected_stress_probability": 0.64,
+        "best_bid": 0.931,
+        "best_ask": 0.939,
+        "minimum_shares": "5",
+        "tick_size": "0.001",
+        "book_timestamp": "1792576422855",
+        "book_received_utc": "2026-10-21T09:53:50.754039+00:00",
+        "book_age_seconds_at_receipt": 7.899039030075073,
+        "passed_180s_at_receipt": true,
+        "walks": {
+          "asks": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 14.0945,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 5.5,
+                "price": 0.939
+              },
+              {
+                "shares": 9.5,
+                "price": 0.94
+              }
+            ],
+            "net": 14.0945
+          },
+          "bids": {
+            "complete": true,
+            "filled": 15.0,
+            "gross": 13.965,
+            "fee": 0.0,
+            "fills": [
+              {
+                "shares": 15.0,
+                "price": 0.931
+              }
+            ],
+            "net": 13.965
+          }
+        },
+        "taker_cost_usd": 14.0945,
+        "central_expected_profit_usd": -2.2444999999999986,
+        "selected_stress_profit_usd": -4.4945,
+        "break_even_before_carry": 0.9396333333333333,
+        "break_even_constant_carry": 0.941268840719905,
+        "current_execution_authorization": false
+      }
+    }
+  },
+  "verdict": "ProvisionalcentralYESlead; selectedstressbothsidesnegative, noapprovedcandidate or execution.",
+  "reopen_condition": "Substantivepath/campaign/sourceevidence andfreshconditionalfill/costcase.",
+  "evaluated_utc": "2026-10-21T09:58:16.892216+00:00",
+  "question": "Osborn flips Ricketts for Nebraska Senate by November 2?",
+  "valuation_author": "primary_operator",
+  "original_index": 504,
+  "report_sha256": "2c07541451fd559709b8d879d34e2de92c297ff631adbd89beebe5ea2452b267"
+}

@@ -15,6 +15,8 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
 LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
+# Preserve the historical Markdown log; future appends are metadata-only JSON
+# lines so the heartbeat's mtime check remains useful without storing prompts.
 
 # The old mixed stock/brokerage review was retired 2026-10-06. Reject its
 # legacy seed before quota probes, operator delivery, or inject-log writes.
@@ -65,24 +67,27 @@ fi
 
 QUEUE_RC=0
 printf '%s' "${QUEUE_PROMPT}" | "${RUNNER}" queue --workdir "${POLYCLAUDE_DIR}" || QUEUE_RC=$?
+QUEUED_PROMPT_BYTES=$(printf '%s' "${QUEUE_PROMPT}" | wc -c)
+QUEUED_PROMPT_BYTES="${QUEUED_PROMPT_BYTES//[[:space:]]/}"
+QUEUED_PROMPT_SHA256=$(printf '%s' "${QUEUE_PROMPT}" | sha256sum)
+QUEUED_PROMPT_SHA256="${QUEUED_PROMPT_SHA256%% *}"
+ATTEMPT_UTC=$(date -u +%Y-%m-%dT%H:%M:%SZ)
+if (( BOUNDED_CONTRACT_APPENDED )); then
+    BOUNDED_CONTRACT_JSON=true
+else
+    BOUNDED_CONTRACT_JSON=false
+fi
+
 if (( QUEUE_RC != 0 )); then
-    {
-        echo ""
-        echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject FAILED (operator queue rc=${QUEUE_RC})"
-        echo "${PROMPT}"
-    } >> "${LOG}"
+    printf '{"ts_utc":"%s","status":"FAILED","actual_rc":%d,"queued_prompt_utf8_bytes":%s,"queued_prompt_sha256":"%s","bounded_contract":%s}\n' \
+        "${ATTEMPT_UTC}" "${QUEUE_RC}" "${QUEUED_PROMPT_BYTES}" \
+        "${QUEUED_PROMPT_SHA256}" "${BOUNDED_CONTRACT_JSON}" >> "${LOG}"
     echo "ERROR: operator queue failed (rc=${QUEUE_RC})" >&2
     exit "${QUEUE_RC}"
 fi
 
-{
-    echo ""
-    echo "## $(date -u +%Y-%m-%dT%H:%M:%SZ) — inject QUEUED"
-    echo "${PROMPT}"
-    if (( BOUNDED_CONTRACT_APPENDED )); then
-        echo "[bounded scheduled-run contract appended to queued prompt]"
-        echo "[direct Codex quota-headroom contract appended to queued prompt]"
-    fi
-} >> "${LOG}"
+printf '{"ts_utc":"%s","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":%s,"queued_prompt_sha256":"%s","bounded_contract":%s}\n' \
+    "${ATTEMPT_UTC}" "${QUEUED_PROMPT_BYTES}" \
+    "${QUEUED_PROMPT_SHA256}" "${BOUNDED_CONTRACT_JSON}" >> "${LOG}"
 
-echo "queued. logged to ${LOG}"
+echo "queued. attempt metadata logged"

@@ -1,0 +1,30 @@
+{
+  "review_index": 507,
+  "market_id": "5350407",
+  "condition_id": "0x32287ab9e68f955f772619fcb148138f480f31b879c6e8eb9d9b0fc9d1d64e93",
+  "criteria_sha256": "f7ddc2b117d54f8bf8121f356ff6c73364d10b6b770893dd922153d653f252f2",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: Marylandwinby6+ covers−5.5; otherwiseRutgers. Oct17 12:30ETgame; postponedwaitcompletion, canceledentirely/no makeup50/50. NCAAofficialsource; namedMaryland/Rutgersoutcomes preserved, no inventedYes/No or result-basedforecast.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5350407",
+      "observed_utc": "2026-10-21T09:51:04.366623+00:00",
+      "finding": "Root independently verified raw/gzip/receipt hashes,nine exact frozenidentitychecks and closedtrue/nonaccepting/UMAresolved/binaryterminalstate. No match-result inference."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactterminalnonacceptingvenue; no artificial retrospectiveprobability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact frozenoutcomes closed/nonaccepting; no currently executableprojectroute established. No CLOB execution or resultclaim."
+  },
+  "verdict": "Factualexclusion ofexactterminalvenue only, notforecast/modelrejection or investmentselection.",
+  "reopen_condition": "Verified reopening ofexactcondition through lawfulroute; anyothercontract reviewedseparately.",
+  "evaluated_utc": "2026-10-21T10:06:29.890254+00:00",
+  "question": "Spread: Maryland (-5.5)",
+  "valuation_author": "primary_operator",
+  "original_index": 507,
+  "report_sha256": "f84ac090494dd67051d2860b2b9cfcbdd947a54e88e5cd959f7b356b232120aa"
+}

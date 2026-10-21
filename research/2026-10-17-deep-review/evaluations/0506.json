@@ -1,0 +1,30 @@
+{
+  "review_index": 506,
+  "market_id": "5677028",
+  "condition_id": "0x66ec458d42b2db96731eede62ab8fe186f4b23cbb906427f51a9a240e072242d",
+  "criteria_sha256": "b10499aba922221a426b05bcb3fbb93632493f47f79c40e77b7d8b79eb35ff00",
+  "status": "excluded_factual",
+  "literal_analysis": "Full rule read: exactKarmineCorp facet of Worlds2026 Play-In→Swiss; Riot finalqualifying-match declaration, not directSwissseeding. Oct15–18planned/oneadvancer of4; laterDQ/withdrawal/replacement ignored. PostponementafterNov17 23:59ET/cancellation/noadvancer→familyOther, notdirectly substituted for thisbinaryfacet. Riot/LoLEsports,credibleconsensusfallback; GammaOct20date is notNov17fallback. Terminalvenueexclusion does not require inferring winner or resolving this facet ambiguity.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5677028",
+      "observed_utc": "2026-10-21T09:51:04.306123+00:00",
+      "finding": "Root independently verified raw/gzip/receipt hashes,nine exact frozenidentitychecks and closedtrue/nonaccepting/UMAresolved/binaryterminalstate. No match-result inference."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactterminalnonacceptingvenue; no artificial retrospectiveprobability."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "Both exact frozenoutcomes closed/nonaccepting; no currently executableprojectroute established. No CLOB execution or resultclaim."
+  },
+  "verdict": "Factualexclusion ofexactterminalvenue only, notforecast/modelrejection or investmentselection.",
+  "reopen_condition": "Verified reopening ofexactcondition through lawfulroute; anyothercontract reviewedseparately.",
+  "evaluated_utc": "2026-10-21T10:06:28.991247+00:00",
+  "question": "Will Karmine Corp advance from the Worlds 2026 Play-In?",
+  "valuation_author": "primary_operator",
+  "original_index": 506,
+  "report_sha256": "a31dcd7f914d52e93e471990cb905a4825d2b9ecf28c967cab3b61dc188c938e"
+}

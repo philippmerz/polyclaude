@@ -1,0 +1,30 @@
+{
+  "review_index": 509,
+  "market_id": "5767022",
+  "condition_id": "0x9a01c65298644586ff58559d1825f472f25536703a3a3e8cc06c3404d731ce1f",
+  "criteria_sha256": "a42d7780b878d7eb599f739fcfc354a4a56c51edca288b12c1e2acc71ed80dbc",
+  "status": "excluded_factual",
+  "literal_analysis": "Fullrule read: ChongqingJiangbei/ZUCKOct18 NOAAhighestTempwhole°C, exact21°Cbracket; fallbackWeatherUnderground ifNOAAunavailablebynextday23:59ET, bothmissing→lowestbracket. Resolvefirstnextdatedatapointornextday23:59ETearlier; revisionsuntilnextdatedatapoint, cleartechnical/interferenceerrorcanallow7daycorrection/clarification. ETfallbackclocksnotairportlocaldate. Terminalvenueexclusiondoesnotclaimobservedweather/winningbracket.",
+  "evidence": [
+    {
+      "url": "https://gamma-api.polymarket.com/markets/5767022",
+      "observed_utc": "2026-10-21T09:51:04.431186+00:00",
+      "finding": "Rootindependentlyverifiedraw/gzip/receipthashes,ninefrozenidentities,closed/nonaccepting/UMAresolved/binaryterminal. No temperatureobservation inferred."
+    }
+  ],
+  "forecast": {
+    "not_valued": true,
+    "reason": "Exactterminalvenueexclusion, noartificialretrospectiveweatherforecast."
+  },
+  "economics": {
+    "both_sides_considered": true,
+    "route": "BothexactYes/Notokensclosed/nonaccepting; nocurrentprojectrouteestablished."
+  },
+  "verdict": "Factualexclusionofexactterminalvenue, notvaluation/modelrejection orweatherresultclaim.",
+  "reopen_condition": "Verifiedlawfulreopeningofexactcondition; anynewdate/bracketseparatelyreviewed.",
+  "evaluated_utc": "2026-10-21T10:15:37.164264+00:00",
+  "question": "Will the highest temperature in Chongqing be 21°C on October 18?",
+  "valuation_author": "primary_operator",
+  "original_index": 509,
+  "report_sha256": "09eb4574a5acc32d11dffea6b316059ce4f30f5521719703f5751916a3d557ca"
+}

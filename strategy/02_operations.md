@@ -15,7 +15,7 @@ the interactive session, or create `logs/operator/` transcripts.
 - **Schedule (UTC):** `0 2 * * *` and `0 14 * * *` — symmetric 12h spacing. The 14:00 anchor catches the US-morning news cycle; 02:00 fills the otherwise-quiet window and catches Asia-morning + late-US news.
 - **Driver:** `scripts/daily_checkin.sh`. Resolves repo root from `${BASH_SOURCE[0]}`, sources `~/.polyclaude/env` for secret paths, queues to the long-lived operator when available, and otherwise starts a fresh fully onboarded headless fallback.
 - **Per-tick token cap:** ~100K (the prompt itself caps).
-- **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored, auto-pruned at 30d).
+- **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored; closed artifacts enter the bounded lossless archive described below).
 - **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + bankroll via `scripts/positions.py` + `scripts/bankroll.py` (authoritative total), scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
 
 The general Sunday stock/brokerage source rotation and missed-week catch-up are

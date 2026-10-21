@@ -1,0 +1,35 @@
+{
+  "classification": "unknown_primary_review",
+  "error": null,
+  "frozen_condition_id": "0x0a6b22310ccc32dfac249a78312be82714d15f71032dcbf0b664f75d0b39a807",
+  "frozen_criteria_sha256": "4366e81a16c2cce53408c7c3034d2c12b2f87370184d050a01e10d9f7dbc7645",
+  "frozen_id": "5763814",
+  "frozen_identity_sha256": "da4be7fdf9c2e731919030d99dbc363b868f36fb550e77106c218ba553247c7c",
+  "gamma_gzip_path": "logs/deep_review_20261021/terminal0953/0514_gamma.body.json.gz",
+  "gzip_sha256": "14d76cbb03a6236d68a69e4fef1650d0d8b746dfd9f33466f63fa987346ec9e5",
+  "http_status": 200,
+  "identity_checks": {
+    "assets": true,
+    "condition_id": true,
+    "description": true,
+    "end_date": true,
+    "market_id": true,
+    "outcomes": true,
+    "question": true,
+    "resolution_source": true,
+    "slug": true
+  },
+  "identity_exact": true,
+  "raw_sha256": "4441bd2802c2e8ff8c10ddf45a780c8d68193e849d5755ebc0ac19977053afac",
+  "receipt_path": "logs/deep_review_20261021/terminal0953/0514_gamma.receipt.json",
+  "received_utc": "2026-10-21T09:51:04.632083+00:00",
+  "review_index": 514,
+  "started_utc": "2026-10-21T09:51:04.576095+00:00",
+  "state_checks": {
+    "accepting_orders_false": false,
+    "binary_terminal_prices": false,
+    "closed_true": false,
+    "uma_resolved": false
+  },
+  "terminal_candidate": false
+}

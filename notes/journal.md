@@ -32665,3 +32665,22 @@ Backlog/recentjournal reviewed after fullcheck63a58de6. One10:24:01–02 authent
 - Archived1126closed untracked artifacts:601,178,921rawbytes removed/103,296,069newgzipbytes,497,882,852bytes saved (~475MiB). Every mapping roundtrip/hash verified. Raw-source bytes remain exactly recoverable; tracked financial/case/checkpoint hashes unchanged. Private histories, open files, receipts, aliases and existing hardlinks excluded.
 - Future snapshots compactgzip (~79%smaller in3000-row replay); one compressed compact batch parent + indexed reads/reference slices replaces repeated context. No analysis, literal criteria or coverage removed. Existing scheduled check-ins perform bounded archival, event ticks skip; removed age-deletion branch. Active daemon logs audited, not rotated.
 -149focused tests passed/actualpytest0; shellsyntax/diff clean; real archived-snapshot +indexed-resume smoke passed, including prior frozen archive compatibility. Quickstatus actual0; no financial action or valuation/count change. [Full structured report](../research/2026-10-21-storage-efficiency.json).
+
+
+## 2026-10-21 10:00 UTC — finite goal resumed
+
+- Nativegoal active verified09:37; previous goalturn made concrete storage/method progress. Saved502KendrickYES30%,504fourhourOsbornYES21%,505Fed50+YES9%, eachimmediatelyindexed. CentralYESleads remain provisional; selectedstresscostcase fails.505routecomparison revisedappend-only toYES300/NO10; noforecastchange.503fullhistory/persistencegap remains unpriced, notdirectionalrejection/globalblock. Initialkm/mcollectorerror corrected and independentlyverified beforeforecast.
+-410valued/20blocked/386factual/2184pending;816base+78revisions. No account/order/prior change;600+primarycomparisongateunchanged. [Small phase32](../data/deep_review_20261017/work/goal0032_RESUME.json). Next506; terminal0953 leads stillneedprimaryfullruleread. No milestoneTelegram. Financial/source observations in08:45check retain their dates.
+
+
+## 2026-10-21T10:17:45.767225+00:00 —10UTC light and finite review progress
+
+- Lightstatus10:06actual0; PM36.40mid/34.55indicative fee-netdepth,4clearhurdle/nohits. Exactorderrootread10:06:51HTTP200/emptyexhaustedcursor; UMA10:06:56actual0/43refreshed/0alerts. Ninepositionidentitiesunchanged; nofreshwholebankroll/gas/flows/CSV.08:53canonicalfinancial remains dated. [Light record](../research/2026-10-21-1006-light-check.json).
+- Sixpost08:53newsrows reviewed: Kimi266c9bdc repeatsTechCrunchSep10; originalAnthropicrawidentical07:11. Oct12defenses90–99%lowerharvest/ClaudeSWEbench80.4vs71.8 areadversefuturecapabilitycontext, notKimiHLEmeasure orquantifieddependency. Retain10YES/noadd/numericpriordated;25%futurebranchimpairmentselectedpayout1.298844 exceedsfresh1.10exit+dated71dcarry1.106812, retentionbelow.670422reverses; broad.80alsofavorssale. Unfittedsensitivity, norobustfloor/guaranteedrecovery. [Primary](../data/deep_review_20261017/work/light1005/primary_review.json).
+- WXYZfullbodyandmetadataverifyMIdebateTODAYOct21 19EDT=23UTC; helperinitialOct22readingcorrectedexplicitly. OthergenericMbappe/Delcy/debateheadlines do notestablishnumericalthesischange. No financialwriter,prior,order,flow,daemon,newtimer,goal-lifecycleorTelegramchange. Next14UTCfull/materialevent; returnfinitegoal. [PerID](../data/deep_review_20261017/work/light1005/alerts.json).
+- Individuallysaved506/507/509fullrule+exactterminalexclusions,508TIME/SandersYES9%/broad1–50. CollectivecoverpathincludesdirectassociationANDpicturedperson; MarchTIMEcoverage/SandersbillproposalsnotPOYproof. Model8.7578%→9 precedesownnewquote; diffuse4.35%/iconography32.32%rivals. YES84*.012=1.008central+6.552/selected−1.008; NO10*.99=9.90central−.80/selected−2.30. Books36.4minoldatreceipt/UMAfieldabsent, notexecutableclaim ormeasuredK5tail. Noentry/gaterelaxation. **411valued/20blocked/389factual/2180pending;820base+78revisions,next510/noactivecase.**600+primarycomparisongateunchanged. [Phase32](../data/deep_review_20261017/work/goal0032_RESUME.json).
+
+
+## 2026-10-21T10:25:24.207426+00:00 — compact dispatcher log follow-up
+
+- Foundtrackedinject_log stillduplicatedseedtext:955596bytes/8478lines, preexisting305newattempts/+105408bytes. FutureentriesnowcompactJSONstatus/actualrc/UTC/queuedpayloadUTF8length+SHA256/boundedflag; noprompt/quota/preambletext. Historicalfilebytes/unrelatedchangespreserved. Queuebytes/contract/exitrc unchanged; heartbeatstillreadsmtime, no daemonedit/restart/timer.18focusedqueue+dispatchtestsactual0/bashn0. [Verifiedfollow-up](../research/2026-10-21-storage-inject-followup.json).
