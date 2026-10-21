@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 13:33 UTC
+## Last audited snapshot — October21 14:03 UTC
 
-**Pre-order canonical financial snapshot (12:59:24–39 UTC):** $196.34 total including $6.03 funded gas; trading midpoint $190.31 and indicative trading liquidation value $188.90 (+11.12% versus $170 contributed); same-producer PM midpoint/depth $36.35/$34.94. The $19.73 residual remains unaudited; VM/API costs are excluded. Values are sequential rounded estimates, not synchronized NAV or guaranteed proceeds. [Snapshot](research/2026-10-21-1259-financial-snapshot.json).
+**14:02 canonical bankroll: $196.29 including $6.00 funded gas.** Trading value is $190.29 at midpoint or $188.97 using indicative fee-net depth (+11.16% versus $170 contributed); same-producer PM values are $36.33/$35.01. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential rounded estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1402-financial-snapshot.json).
 
-**Post-order safety:** 13:33:51 UTC reconciliation again found all3 selected orders LIVE/0matched,127confirmed trades,9all-sizepositions,all6targetCTFs0,Kimi10YES andpUSD19.25129 unchanged. Three reservations total13.64; uncommitted5.61129. UMA0alerts,4hurdle-clear,watchlist0,auditclean,4currentdaemon singletons. No trade/prior-number change. [Delayed alert review and exact proof](research/2026-10-21-125321-news-review.json).
+**Three selected BUYs remain LIVE and unfilled; $13.64 reserved.** Authenticated orders/trades, nine all-size positions, six target CTF balances and pUSD $19.25129 reconcile; free pUSD $5.61129. Holdings and numeric priors are unchanged. No UMA alerts, winning redemption, overdue decision or daemon issue. Seven capped scans found no priced structural trade in their checked slice; unpriced and unvalued cases remain explicitly incomplete. [Full check and limits](research/2026-10-21-140001-checkin.json) · [Order identities/deadlines](notes/resting_orders.md).
 
-The performance CSV now has **250 observations** through Oct21; the October21 12:59 snapshot is the latest row. Historical accounting retains its limits and source gaps. [CSV and methodology](docs/README.md) · [Source audit](research/2026-10-06-performance-history.json).
+The chart has **251 observations**, latest October21 14:02; earlier rows and external contributions are unchanged. All 10 chart tests pass. [CSV methodology](docs/README.md) · [Historical source limits](research/2026-10-06-performance-history.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

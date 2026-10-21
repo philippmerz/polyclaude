@@ -1,6 +1,6 @@
-# Current resting orders — October21 13:17 UTC
+# Current resting orders — October21 14:03 UTC
 
-**Three LIVE BUY bids, zero matched; $13.64 reserved.** GrosspUSD19.25129/uncommitted5.61129.127exhaustedtrades/9unchangedall-sizepositions/all6targetCTFs0; no purchase, fee, debit, transfer or profit. [Exactreconciliation](../research/2026-10-21-allocation-orders.json) · [Primaryselection](../research/2026-10-21-completed-review-allocation.json) · [Policyv2](entry_review_gate.json).
+**Three LIVE BUY bids, zero matched at14:03 UTC; $13.64 reserved.** GrosspUSD19.25129/uncommitted5.61129.127exhaustedtrades/9unchangedall-sizepositions/all6targetCTFs0; no purchase, fee, debit, transfer or profit. [Exactreconciliation](../research/2026-10-21-allocation-orders.json) · [Primaryselection](../research/2026-10-21-completed-review-allocation.json) · [Policyv2](entry_review_gate.json) · [14UTC revalidation](../research/2026-10-21-140001-checkin.json).
 
 |Claim / decision|YES shares ×limit|maxcash|Exactorder|Requiredpull ifunfilled|
 |---|---:|---:|---|---|
