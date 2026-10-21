@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 21 18:01 UTC
+## Last audited snapshot — October 21 19:08 UTC
 
-**17:35 canonical bankroll: $196.46 including $6.12 funded gas.** Trading value is $190.34 at midpoint or $188.87 using indicative fee-net depth (+11.1% versus $170 contributed); same-producer PM values are $40.18/$38.71. The $19.73 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1735-financial-snapshot.json).
+**19:07 canonical bankroll: $195.99 including $6.03 funded gas.** Trading value is $189.96 at midpoint or $188.18 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $39.79/$38.01. The $19.74 accounting residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-21-1907-financial-snapshot.json).
 
-**Positions and orders are unchanged.** December Fed remains 20 YES bought at 19¢ ($3.80, zero fee). Two bids remain unfilled, reserving $9.84; pUSD is $15.45129, with $5.61129 free after reservations. Adding separate WaPo/GMU and Marist surveys revises Michigan non-D win probability from 44% to 43%; retain five NO shares without adding. Tonight’s debate remains at 23:00 UTC. [Source/model review](research/2026-10-21-173336-michigan-update.json) · [Event check](research/2026-10-21-173336-news-review.json) · [Orders and deadlines](notes/resting_orders.md).
+**Holdings and bids remain unchanged.** December Fed20YES is held; October Fed20YES24¢ and Delcy28YES18¢ are unfilled, reserving $9.84. pUSD15.45129/free5.61129 reconciles. The Delcy consultation headline supplies no verified new legal term; keep its October24 13UTC unfilled-pull deadline. Michigan NO43% remains dated17:42 judgment; debate23UTC. [News/source review](research/2026-10-21-190625-news-review.json) · [Orders](notes/resting_orders.md).
 
-The 18:01 light check confirms unchanged holdings and bids, clean safety checks, and four unique daemons running current code. [Periodic review](research/2026-10-21-1800-periodic-review.json). The chart has **253 observations**, latest 17:35; previous rows and external contributions are unchanged. All 10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
+Safety checks are clean; all four daemons are unique and running current code. The chart has **254 observations**, latest19:07; previous rows and external contributions are unchanged. All10 chart tests passed. [CSV methodology](docs/README.md) · [14UTC discovery coverage](research/2026-10-21-140001-checkin.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
