@@ -1,0 +1,80 @@
+{
+  "schema": "tick021544_MI_news_facts.v1",
+  "audited_utc": "2026-10-21T02:21:12.075279Z",
+  "alert": {
+    "id": "c172571b02a51b8d22de9e680ab5336bb4a929de",
+    "alert_ts": "2026-10-21T02:15:36Z",
+    "title": "Michigan Senate race: Hamas claims spark Abdul El-Sayed campaign controversy - The Jerusalem Post",
+    "exact_alert_url": "https://news.google.com/rss/articles/CBMiZEFVX3lxTFB3YkFtQzhTdUJxYVNNWkdUNDNhNkNMRTdSNElXWU4wS2pBM3g2cG91UjhaZDMxY01jcXBLYmEzc3Nob0lmaUFVNFZwaEdzRFVlQ3Bxd2tpd3BzdEFsazQwa3IyMFg?oc=5",
+    "alert_line_sha256": "9785804bef58f96b7d81543f07fc0dcdae5b0ca27375991bf961e4b55ceb619f"
+  },
+  "related_last24h_alerts": [
+    {
+      "id": "7732eabb7fe4c67abfcb287b10a74f58b0517e89",
+      "ts": "2026-10-20T02:55:56Z",
+      "title": "Questions surround El-Sayed\u2019s allege Muslim Brotherhood ties: Senate candidate pushes back - The National News Desk",
+      "line_sha256": "5652cb741025b177c90d76a9d63b91abf3be7bc3334924315f97e1dc69d5b5e4"
+    },
+    {
+      "id": "9682a9f269961f6245455fbe2e838977d4c9c615",
+      "ts": "2026-10-20T11:02:26Z",
+      "title": "Michigan\u2019s El-Sayed doubles down: Israel \u2018not an ally\u2019 - Jewish Telegraphic Agency",
+      "line_sha256": "1394de61ad72aded576faa1c700ebf141729259d528bfd7b7170621e636762e2"
+    },
+    {
+      "id": "5cd38c659a0296d608f7b3c942a03fa61086094c",
+      "ts": "2026-10-20T21:06:56Z",
+      "title": "Democrats worry Black voter support could make Michigan Senate race \u201cfar closer than it should\u201d - Mezha.net",
+      "line_sha256": "2f8e81000c551d20a77723cc850a8cd6a097be3329dc0aeed7d49b491d190658"
+    },
+    {
+      "id": "906cdb214e7c192eccf236b756ccd5c76c3abe3c",
+      "ts": "2026-10-20T22:07:26Z",
+      "title": "Mike Rogers says his opponent is \u2018anti-Jew.\u2019 Do Michigan\u2019s Jews believe him? - Jewish Telegraphic Agency",
+      "line_sha256": "a946581e762ca0202f4e6390f72ce1bb61ca5be158218fbd4f37f50f2ed7f988"
+    },
+    {
+      "id": "80e8ad223db0fca2625836c0b682f0a93e20b123",
+      "ts": "2026-10-20T23:27:12Z",
+      "title": "Michigan GOP Senate candidate Mike Rogers says inroads with Black and Jewish voters will help him beat El-Sayed - ABC News - Breaking News, Latest News and Videos",
+      "line_sha256": "6d253541af9b0b8d40bbde22db8161e074c15597b267d6a3776804f5b19a31df"
+    }
+  ],
+  "capture": {
+    "receipt": "logs/cron20261021T021544Z_MI_news/jpost_alert.receipt.json",
+    "compressed_body": "logs/cron20261021T021544Z_MI_news/jpost_alert.body.json.gz",
+    "started_utc": "2026-10-21T02:20:36.237161Z",
+    "received_utc": "2026-10-21T02:20:36.506036Z",
+    "http_status": 200,
+    "final_url": "Google News RSS article URL; publisher destination not resolved",
+    "content_type": "text/html; charset=utf-8",
+    "body_representation": "http_body",
+    "raw_bytes": 582785,
+    "raw_sha256": "86e3c93c4df07133bfba348f364d7f839f54c8b8c8608603e1c7b97abacdb0b9",
+    "gzip_bytes": 120162,
+    "gzip_sha256": "fbd88b4b39a6d4234b184e1273ffcafa34493b182d4b81268bfccfd30f1bc533",
+    "hashes_independently_verified": true,
+    "body_identification": "Google News HTML, not JPost article body"
+  },
+  "findings": {
+    "publisher_publication_date": null,
+    "byline": null,
+    "article_version_or_update_time": null,
+    "underlying_claims_and_attribution": null,
+    "new_poll_or_instrument": null,
+    "field_dates_population_sample_size_or_voter_measurement": null,
+    "health_or_withdrawal_statement": null,
+    "reason": "The sole exact alert-link request returned Google News HTML; no publisher article body was available in this bounded check."
+  },
+  "limits": [
+    "Headline/alert metadata does not establish the underlying allegations or their attribution.",
+    "No inference of guilt, independent corroboration, polling effect, candidate health status, or withdrawal.",
+    "No exact publisher URL guessed or fetched; parent may resolve it independently."
+  ],
+  "root_erratum": {
+    "reviewed_utc": "2026-10-21T02:23:17.382067+00:00",
+    "worker_original_sha256": "3b8dec9d08289b43a61851ee3313ce24712e1a6c3187f830616531170c82457b",
+    "correction": "Workerrequested SHA included terminalLF; rootindexes excludeLF. Both correctly hash their declaredbytes. Normalized currentunitto no-LF and exactJSONLtitles/times; original preservedprivately. Factualmetadata/probability/action unchanged."
+  },
+  "raw_line_hash_includes_LF": false
+}

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 244 recorded observations from Apr-25
+The local performance CSV now has 245 recorded observations from Apr-25
 through Oct-21. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October21 02:02 UTC
+## Last audited snapshot — October21 02:20 UTC
 
-**Indicative trading depth $188.57 versus $170 contributed (+10.92%); midpoint $190.16.** Canonical bankroll $196.14 includes $5.98 separately funded gas; same-producer PM midpoint/depth $36.20/$34.61. Producer ran02:02:32–49UTC. Sequential rounded estimates are not synchronized NAV, guaranteed proceeds or realized profit. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV244 preserves all243 prior rows and flows; ten chart tests passed. [Financial record](research/2026-10-21-0202-financial-snapshot.json).
+**Indicative trading depth $188.47 versus $170 contributed (+10.86%); midpoint $190.06.** Canonical bankroll $196.04 includes $5.98 separately funded gas; same-producer PM midpoint/depth $36.10/$34.51. Producer ran02:20:51–02:21:09UTC. Sequential rounded estimates are not synchronized NAV, guaranteed proceeds or realized profit. The $19.73 accounting residual remains unaudited; VM/API costs are excluded. CSV245 preserves all244 prior rows and flows; ten chart tests passed. [Financial record](research/2026-10-21-0220-financial-snapshot.json).
 
-02:01 authenticated state: **zero orders,127 complete trades, nine unchanged all-size positions**, no winning redemption. Eleven routine checks returned0; four daemons are current singletons, state is clean, hurdle4clear/0flagged, watchlistnohits, Ostium0, no overdue decisions. UMA flagged a9.5pp OpenRouter price move on low volume; the fresh book/source review supports retaining the small holding. [Root proof](data/deep_review_20261017/work/tick020001_account_root_recheck.json) · [Check](research/2026-10-21-020001-checkin.json).
+**Zero orders,127 complete trades, nine unchanged all-size positions**, no winning redemption. Eleven routine commands returned0; four daemons are current singletons, auditclean, UMA43refreshed/0alerts, hurdle4clear/0flagged, watchlistnohits, Ostium0, no overdue decisions. [Root proof](data/deep_review_20261017/work/tick021544_account_root_recheck.json) · [Check](research/2026-10-21-021544-checkin.json).
 
-Retain holdings; no additions or numeric prior changes. HLE returned200 with the same cached66-model body: Moonshot maximum Accuracy41.08, K3Calibration44.67; cache Age3176 limits freshness. OpenRouter's current partial week rose to54.733427T, while all four qualifying future weeks remain absent; no extrapolation. Google2026's route returned404. ABC reports Rogers' crossover claims but says coalition gains are unmeasured; Michigan's actual00:51 revaluation remains D56%/NO44%. [Primary review](data/deep_review_20261017/work/tick020001_primary_review.json).
+Retain holdings; no additions or numeric prior changes. The required Jerusalem Post alert returned Google News HTML; the publisher's returned Michigan tag page supplied no matching article link. Exact article date, attribution, claim support and voter response remain unverified. The headline establishes no allegation as fact.44related rows/43unique IDs, including a late credentials alert, were reviewed despite journal recency. The exact MedPage counterstory returned403; degree, licensure and health claims remain unverified. No arbitrary vote-probability adjustment. Michigan's actual00:51 review remains D56%/heldNO44%. [Primary review](data/deep_review_20261017/work/tick021544_primary_review.json).
 
-02:01 held-token net exits Kimi/OR/MI/Messi=$1.10/$3.10/$1.50/$1.25 remain below selected terminal values $1.902125/$3.65/$1.70/$2 after dated Aave carry sensitivities. Broad-low cases favor sale; all four pilots can lose their full $7.35 original cost. Whole Clarity normal conditional payout29/58, or0 under venue/oracle failure, exceeds the separate tool's $27.66 exit; no leg-only sale. [Saved math](data/deep_review_20261017/work/tick020001_hold_exit_math.json).
+02:20 exact held-token net exits Kimi/OR/MI/Messi=$1.10/$3.10/$1.50/$1.25 plus dated Aave carry remain below selected terminal values $1.902125/$3.65/$1.70/$2. Broad-low cases favor sale; all four pilots can lose their $7.35 original cost. Whole Clarity conditional payout29/58, or0 under venue/oracle failure, exceeds the separate tool's $27.66 exit; no leg-only sale. [Saved math](data/deep_review_20261017/work/tick021544_hold_exit_math.json).
 
-Seven fresh discovery scans and155offline batches retain page/top/walk limits and unpriced cases; no new valuation or exchange-wide absence finding. BUYpause405/600+comparative selection stays. Archived scan deduplication reclaimed9.45MiB while preserving every path and byte hash. No financial writer or routine Telegram. Next existing06UTC lightcheck/14UTC fullcheck or earlier material event; Michigan debate23UTC. [Discovery index](data/deep_review_20261017/work/tick020001_discovery_index.json) · [Storage proof](data/deep_review_20261017/work/tick020001_storage_deduplication.json).
+Resolving sources retain their02:02 dates; the completed02UTC seven scans/155batches retain all limits. BUYpause405/600+comparative selection stays; no new valuation or exchange-wide absence finding. No financial writer or routine Telegram. Next existing06UTC light/14UTC fullcheck or earlier material event; Michigan debate23UTC.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

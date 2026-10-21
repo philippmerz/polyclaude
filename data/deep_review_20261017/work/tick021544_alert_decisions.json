@@ -1,0 +1,38 @@
+{
+  "schema": "polyclaude.alert_decisions.v1",
+  "reviewed_utc": "2026-10-21T02:26:18.408582+00:00",
+  "required_id": "c172571b02a51b8d22de9e680ab5336bb4a929de",
+  "required_line_sha256": "9785804bef58f96b7d81543f07fc0dcdae5b0ca27375991bf961e4b55ceb619f",
+  "rows_reviewed": 43,
+  "unique_ids": 42,
+  "duplicate_note": "SamealertID8f083beb589641eeffbce1bd549c7ac217a252fc occurs twice atdifferenttimes/titles; both rawrows preserved, not independent corroboration.",
+  "decision_groups": {
+    "requested": "Exactalert GoogleHTML200, JPosttag200/requiredtitlelinknotobserved, exactpublisherbody/date/attribution/poll/withdrawalUNKNOWN. Allegationnotfinding; no quantifiedvote bridge; retain5NO/noadd.",
+    "prior_context": "Reread olderrelatedrow despitejournalrecency. Allegations/campaignreactions/support/forums/biographies are not independent representativevote likelihoods. Exactbodies notfreshlyverified here; priorABC/CNNbody evidence staysdated. Retainpriorwithgaps, no headline-count update."
+  },
+  "chunks": [
+    {
+      "path": "data/deep_review_20261017/work/tick021544_related_MI_01.json",
+      "sha256": "e88791119a1093639c3e759797f2e0a29ab587cc121170008e3e182fd2e666c0",
+      "rows": 22
+    },
+    {
+      "path": "data/deep_review_20261017/work/tick021544_related_MI_02.json",
+      "sha256": "190da25b76c50796ee0da7ba8dbdd9a45e83cbb00431f6b1a120427795002e82",
+      "rows": 21
+    }
+  ],
+  "counterevidence": "Both ElSayed and Rogers face allegation/criticism headlines; unfavorableRogers claims could hurtheldNO iftrue/electorallymaterial. Do not selectively count favorableheadlines, assumezeroeffect or infer guilt. Voterresponse/representativeness notmeasured here.",
+  "facts": "data/deep_review_20261017/work/tick021544_MI_news_facts.json",
+  "publisher_lookup": "data/deep_review_20261017/work/tick021544_JPost_lookup.json",
+  "late_alert_review": {
+    "id": "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+    "ts": "2026-10-21T02:26:27Z",
+    "line_sha256": "a967e702e773dca4cd3e70fea10d7656c964c040bc1d7147f1c4b19242b02542",
+    "decision": "Credentialallegation sourcebodyunverified; GoogleRSSHTML only, exactMedPagecounterstoryURL recovered but403. Degree/licensure/residency/currentpractice aredistinctunverifiedfacts. No verifiedhealth/withdrawal or measuredvoterresponse; no probability/action change; retain5NO/noadd.",
+    "facts": "data/deep_review_20261017/work/tick021544_credentials_followup.json"
+  },
+  "total_rows_including_late_alert": 44,
+  "total_unique_ids_including_late_alert": 43,
+  "review_cutoff": "2026-10-21T02:26:27Z; no furthernews polling inthisboundedrun"
+}

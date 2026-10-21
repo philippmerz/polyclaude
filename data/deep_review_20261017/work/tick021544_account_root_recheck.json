@@ -1,0 +1,24 @@
+{
+  "schema": "polyclaude.root_account_verification.v1",
+  "verified_utc": "2026-10-21T02:22:24.547013+00:00",
+  "orders": 0,
+  "trades": 127,
+  "cursors_both": "LTE=",
+  "allsize_positions": 9,
+  "tuple_fields": [
+    "conditionId",
+    "asset",
+    "outcome",
+    "size",
+    "totalBought"
+  ],
+  "exact_positions_fulltrades_match_0201": true,
+  "winning_redeemables": 0,
+  "raw_gzip_CLI_hashes_verified": true,
+  "all11CLI_actualrc0": true,
+  "all4daemon_starts_after_script_mtimes": true,
+  "UMA": "45tracked43refreshed0alerts",
+  "state": "CLEAN7indexed+1claim/0expiredholds/hurdle4clear0flagged/watchlistnohits/nooverdue/Ostium0/cruxquiet",
+  "no_financial_writer": true,
+  "source_ops": "data/deep_review_20261017/work/tick021544_account_ops.json"
+}

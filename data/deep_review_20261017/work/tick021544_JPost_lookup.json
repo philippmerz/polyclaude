@@ -1,0 +1,28 @@
+{
+  "schema": "tick021544_JPost_lookup.v1",
+  "audited_utc": "2026-10-21T02:22:03.777098Z",
+  "source_url": "https://www.jpost.com/tags/michigan",
+  "capture": {
+    "receipt": "logs/cron20261021T021544Z_MI_news/jpost_tag_lookup/jpost_tag.receipt.json",
+    "body": "logs/cron20261021T021544Z_MI_news/jpost_tag_lookup/jpost_tag.body.json.gz",
+    "started_utc": "2026-10-21T02:21:58.170668Z",
+    "received_utc": "2026-10-21T02:21:59.124601Z",
+    "status": 200,
+    "bytes": 207086,
+    "raw_sha256": "298cdb04dc892134ae8ae673422fff261a530097a492d21aed0159c544e3760c",
+    "gzip_sha256": "da5f4725a14f849aa5439d4df5edc8ee1dfb7b15570d77d95f5c1a88a053d225",
+    "hashes_independently_verified": true
+  },
+  "observations": {
+    "page_title": "Michigan Articles and latest stories | The Jerusalem Post",
+    "exact_required_article_title_present": false,
+    "candidate_hrefs_with_el_sayed_or_hamas": [],
+    "page_scope": "Michigan tag page only; one request",
+    "result": "No exact-title or obvious same-title link found in the returned tag page."
+  },
+  "limits": [
+    "This tag page response does not establish that the article is unpublished or unavailable elsewhere.",
+    "No alternate or guessed URL, archive, retry, or access workaround was attempted.",
+    "Original publisher body and article metadata remain unknown."
+  ]
+}

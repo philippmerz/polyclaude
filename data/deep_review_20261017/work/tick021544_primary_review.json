@@ -1,0 +1,43 @@
+{
+  "schema": "polyclaude.triggered_primary_review.v1",
+  "tick_id": "20261021T021544Z",
+  "reviewed_utc": "2026-10-21T02:26:18.408582+00:00",
+  "required_alert": "c172571b02a51b8d22de9e680ab5336bb4a929de",
+  "identity": "1838/630805/0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4, held5NO onDemocratswinning2026MichiganSenate; NO means anynonDwinner, partyreplacementfollowsliteralrules.",
+  "news": "ExactGoogleRSS200 suppliesGoogleNewsHTML, notJPostbody. Rootexacttitle/domainsearch findsrelateddifferentdatedpieces, not exactstory. OneordinaryverifiedJPostMichigantag200 containsno exacttitle/matchingarticlelink; only returnedpagechecked, notproofnonexistence. Originalarticledate/version/attribution/claimsupport/independentnewpoll/withdrawalUNKNOWN. Do not adopt headlineallegations asfact or guilt.",
+  "primary_judgment": "Retain5NO/NO44selected34/broad20, noadd. Ifverified badnewsforDweakenswinprospects itcouldhelpNO, but no measuredvoterresponse/numericbridge supports revision. RelatedRogersallegationscouldhurtheldNO; no favorableheadline-only count or arbitraryoffset. Actual00:51MIrederivation D55.7302rounded56, G12D59.7314/nobias69.7659 sensitivities retained/datelabeled, notrerun. No sourcevisibilitygap translatedinto a probability.",
+  "related_alerts": "data/deep_review_20261017/work/tick021544_alert_decisions.json",
+  "source_facts": "data/deep_review_20261017/work/tick021544_MI_news_facts.json",
+  "lookup": "data/deep_review_20261017/work/tick021544_JPost_lookup.json",
+  "root_data_correction": "JSONLline SHA conventions normalized: workerincludesLF, root excludesLF; bothrawbytehashes valid, exactmetadata unchanged/originalpreserved.",
+  "hold_math": "data/deep_review_20261017/work/tick021544_hold_exit_math.json",
+  "all_pilots": "Retain4pilots/noadd. Freshexact4Gamma8books4compact0fee curves/rootidentity/rawhashparityverified. HeldKimi/OR/MI/Messi netexits1.10/3.10/1.50/1.25+datedvariableAave3.2247%constant75d/Messi60d sensitivities belowselectedterminal1.902125/3.65/1.70/2. Broadlowcases favor sale; MIanother3.8037pp adverse selectedshift reverses. Priorsunfitted/smallterminal-loss risks, not recoveryguarantees.",
+  "timing_note": "ExactpacketKimi10YESexit1.10 differs separateexitCLI1.00; sequentialdifferentreadwindows not synchronizedquotes. Usepacketforpilotmath andsameproducercomponents for aggregate; do not forceagreement or claim laterexecutioncertification.",
+  "joint": "AIoriginalcost4.45/all4pilots7.35 canalllose; no independence/automatichedgecredit. No standingconditionalmakernewsdonation.",
+  "Clarity": {
+    "held": "29YES>50+29NO>58",
+    "normalconditionalpayout": [
+      29,
+      58
+    ],
+    "venue_or_oracle_failure": 0,
+    "separate_exit_tool_net": 27.66,
+    "actual_bounds": [
+      "2026-10-21T02:20:15.988133Z",
+      "2026-10-21T02:20:17.600664Z"
+    ],
+    "dated75d_carry_sensitivity": 27.840974233548035,
+    "decision": "Retainwholegroup/no leg-onlysale/add; Oct20 14:02same-ruleproof keptdated, no freshpairrule-readclaim."
+  },
+  "retained_sources": "No resolving-sourceAPIrepeat claimed:02:02HLE200samecached66/Kimi41.08cal44.67Age3176; ORpartial54.733427T/futureweeksabsent; SenateSep30latest/#234cloturenotpassage; Google2026route404 remain02:02observations. EarlierABCbodyqualitative/no coalitionpoll remains02:05, video/originalFoxunread.",
+  "entry": "405/600uniquevalued+primarycomparative selectionnull; no BUY/add/repost/taker/bundle. 02UTC7scans/155batches retained withcaps/failures, no new broadscan/valuation/rejection.",
+  "account": "data/deep_review_20261017/work/tick021544_account_root_recheck.json",
+  "decision": "No financialwriter/numericprior/order/decision/policy/flow/researchcountchange. 0orders/127trades/9positions/0winningredeemable; safeexitsavailable. No materialverifiedfinding warrants Telegram.",
+  "next_existing_boundary": "06UTClight/14UTCfull or earliermaterialevent; MIdebate23UTC. Stopafterownedpublication, no goal/timer/idlecontinuation.",
+  "late_credentials_review": {
+    "alert": "5900081b623d46e71dc87060f1e2578a2b63ffbe",
+    "facts": "data/deep_review_20261017/work/tick021544_credentials_followup.json",
+    "finding": "ExactWeeklyTimesRSSGoogleHTML; search-discoveredsyndicationURL linksMedPageoriginal123497, ordinarydirectGET403. Teaser reports doctorspushback; not fullbody/independentcredentialproof. MDdegree, licence, residency, practice and candidatehealth aredistinct. Noneindependentlyverified; no quantifiedvotermeasurement/nomineechanges verified.",
+    "decision": "Retain/noadd/priorunchanged. Claimsnotfacts/guilt; credentialheadline doesnotestablish incapacity/withdrawal or alteredparty-resolutionrule. Endnewsreviewcutoff02:26:27."
+  }
+}

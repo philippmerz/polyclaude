@@ -1,0 +1,30 @@
+{
+  "schema": "polyclaude.financial_snapshot.v1",
+  "tick_id": "20261021T021544Z",
+  "producer": "scripts/bankroll.py",
+  "producer_started_utc": "2026-10-21T02:20:51.745339+00:00",
+  "producer_completed_utc": "2026-10-21T02:21:09.298476+00:00",
+  "producer_returncode": 0,
+  "producer_stdout_sha256": "4292304c97b8c3fb1fa0d734fbaab00972100173014f1874cca943402cada4d4",
+  "canonical_total_including_funded_gas_usd": "196.04",
+  "same_producer_funded_gas_usd": "5.98",
+  "same_producer_PM_mid_usd": "36.10",
+  "same_producer_PM_fee_net_depth_usd": "34.51",
+  "derived_trading_mid_usd": "190.06",
+  "derived_trading_fee_net_depth_usd": "188.47",
+  "external_trading_contributions_usd": "170",
+  "derived_trading_depth_return_percent": 10.86,
+  "reported_accounting_residual_usd": "19.73",
+  "change_vs_complete_0202": {
+    "canonical_total_usd": "-0.10",
+    "trading_mid_usd": "-0.10",
+    "trading_depth_usd": "-0.10"
+  },
+  "timing_basis": "Actualinvocationbounds/sequentialroundedreads; CSVwhole-secondcheck-windowstart. Not synchronizedNAV/freshness-certifiedliquidation.",
+  "limits": [
+    "No trade/externalflow; differences are marks/depth/interest/rounding, not auditedrealizedprofit.",
+    "ProducerREALIZED19.73 label unaudited; historicalbasis/fees/flows unreconciled/VMAPIexcluded.",
+    "SameproducerTOTAL/gas/PMcomponents only; no splicing separatequotes. Warning1.59 agrees rounded36.10-34.51. No unvaluedassetwarning.",
+    "Tradingdepth188.47 is indicative fee-netestimate, not guaranteedproceeds."
+  ]
+}

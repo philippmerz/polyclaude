@@ -1,0 +1,80 @@
+{
+  "schema": "polyclaude.held_exit_math.v2",
+  "computed_utc": "2026-10-21T02:22:24.811655+00:00",
+  "quote_file": "data/deep_review_20261017/work/tick021544_held_quotes.json",
+  "quote_sha256": "7b45b5e37be18ec8b58145d6a88ea0f8d8b088ff0694ad911a178e0bd52b3fa6",
+  "root_raw_identity_4Gamma_8books_4compactfee_parity_verified": true,
+  "holdings": [
+    {
+      "index": 412,
+      "side": "Yes",
+      "shares": 10,
+      "p": 0.3402125,
+      "selected_p": 0.19021249999999998,
+      "broad_low_p": 0.08,
+      "net_exit": 1.1,
+      "dated_exit_plus_carry": 1.107197095332713,
+      "selected_terminal": 1.9021249999999998,
+      "broad_low_terminal": 0.8,
+      "additional_selected_adverse_reversal_pp": 7.949279046672868,
+      "gamma_received": "2026-10-21T02:20:07.506200+00:00",
+      "book_age_s_at_receipt": 1.901458978652954
+    },
+    {
+      "index": 112,
+      "side": "No",
+      "shares": 5,
+      "p": 0.88,
+      "selected_p": 0.73,
+      "broad_low_p": 0.2,
+      "net_exit": 3.1,
+      "dated_exit_plus_carry": 3.120282723210373,
+      "selected_terminal": 3.65,
+      "broad_low_terminal": 1.0,
+      "additional_selected_adverse_reversal_pp": 10.594345535792538,
+      "gamma_received": "2026-10-21T02:20:07.671883+00:00",
+      "book_age_s_at_receipt": 32.84145903587341
+    },
+    {
+      "index": 1838,
+      "side": "No",
+      "shares": 5,
+      "p": 0.43999999999999995,
+      "selected_p": 0.33999999999999997,
+      "broad_low_p": 0.2,
+      "net_exit": 1.5,
+      "dated_exit_plus_carry": 1.509814220908245,
+      "selected_terminal": 1.6999999999999997,
+      "broad_low_terminal": 1.0,
+      "additional_selected_adverse_reversal_pp": 3.8037155818350987,
+      "gamma_received": "2026-10-21T02:20:07.748490+00:00",
+      "book_age_s_at_receipt": 0.8384590148925781
+    },
+    {
+      "index": 210,
+      "side": "Yes",
+      "shares": 5,
+      "p": 0.6,
+      "selected_p": 0.39999999999999997,
+      "broad_low_p": 0.2,
+      "net_exit": 1.25,
+      "dated_exit_plus_carry": 1.2565385442607573,
+      "selected_terminal": 1.9999999999999998,
+      "broad_low_terminal": 1.0,
+      "additional_selected_adverse_reversal_pp": 14.869229114784849,
+      "gamma_received": "2026-10-21T02:20:07.879453+00:00",
+      "book_age_s_at_receipt": 26.99945902824402
+    }
+  ],
+  "alternative": {
+    "apy": 0.032247,
+    "chain": "polygon",
+    "token": "USDC",
+    "supply_status": "live",
+    "fetched": "2026-10-20T19:29:02.473940+00:00",
+    "constant_rate_sensitivity_not_forecast": true,
+    "funding_and_operations_costs_not_assumed_free": true
+  },
+  "horizon": "Retained datedvariableAave75d/Messi60d heldconstant sensitivity, not forecast; route/fundingcosts not free.",
+  "current_execution_authorization": false
+}
