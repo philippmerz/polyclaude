@@ -1,5 +1,5 @@
 {
-  "next_id": 265,
+  "next_id": 266,
   "decisions": [
     {
       "id": 1,
@@ -5748,6 +5748,26 @@
         "openrouter"
       ],
       "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 265,
+      "timestamp": "2026-10-22T16:43:37Z",
+      "type": "skip",
+      "thesis": "Retain10KimiYES/noadd after Sept22CAC-report/Sept10routing-source review, exact55HLErules, fresh10share1.00exit and admission/update/joint-loss stresses; no new verified officialscore correction or bindingorder.",
+      "confidence": "medium",
+      "prediction": "DatedOct20pYES34.02125%/selected19.02125 unchanged; uncalibrated8\u201380range. Loweradmission/update countermodels favorcash/full1.20canlose; reportnotnewOct22score/order.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hold_review",
+        "kimi",
+        "source_integrity",
+        "regulatory_news"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

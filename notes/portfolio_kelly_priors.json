@@ -1839,7 +1839,7 @@
     "probability_model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
     "latest_source_packet": "data/deep_review_20261017/work/tick012937_kimi_source_refresh_0210.json",
     "rationale": "Primary34.02125%YES/15ppselected19.02125/broad8\u201380; uncalibratedsource-admission/update tree. Currentofficialboard41.08 vsissuer56withtools: admission/config/fallbackuncertain. MOFCOMscopedproposal/APIexception independentlyread, notblanketmodelban orverifiedK3.1roadmap.",
-    "current_assessment": "OriginalDEC243maker filled10YES@12c/1.20pUSD/zero makerfee at01:48:47. RootverifiedexactMATCHED10/10,127exhaustedtrades, successfulPolygon95837051/OrderFilled/CTF10YES0NO, cumulativebuys10 andcashdebit. Onlyfilledreservation4to3; original3bidsLIVE0/6.50 unchanged. Fresh01:59officialboard/issuerbodiesunchanged (cached/limited), current10YES fee-netexit.96399 vscentral3.402125/selected1.902125/illustrative1.5fillratio1.353928; broad.80 favorssale. RETAIN10YES/noadd; sharedOR+Kimi fullcostloss4.45 possible, nohedge. See data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json.",
+    "current_assessment": "Oct22source/holdreview DEC265: retain10YES/noadd, numericOct20forecast unchanged. Sept22CACsecondary-report/Sept10Anthropicrouting-training allegations relevant to genuine-model/admission/future-access risk, not newlyverifiedOct22order or HLEcorrection. Fresh10shareexit1.00 vsselected1.902125; branch stresses can favorcash/full1.20loss. research/2026-10-22-1635-kimi-hold-review.json",
     "management": "Filledholding: originalBUY cancel/pull obsolete. Noadd/chase/repost. Reviewexistingchecks/earlier material model/score/source/evaluation/export-policy change; reassess or exit on changed load-bearingfacts/uncertainty. Hidden-informationclass: no restingSELL at/belowfair; thesis-breakexit remains available. Full1.20costloss/sourceoutagepastJanuary possible; futuremoneyrequiresfresh fullgates.",
     "monitoring": "Existing scoped feed plus Kimi/Moonshot AI/MoonshotAIterms retained for nowheld exact55claim. Original30RSS coverage and unordered5000ID limitation remain dated/nonexhaustive; no stateedit/forcedpoll/newwatcher. Cache5min/caps/cooldown/private-unannouncedsource gaps remain. Newlymaterialevidence invokes freshhold/exitreview, not obsoleteBUYcancel.",
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
@@ -1847,13 +1847,14 @@
     "latest_execution_review": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
     "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
     "latest_news_review": {
-      "reviewed_utc": "2026-10-21T13:39:01.453337+00:00",
-      "alert_id": "139d3a2ec01d19af67efe20ac584c3c063bac249",
-      "report": "research/2026-10-21-125321-news-review.json",
-      "source": "data/deep_review_20261017/work/tick125321/primary_source_review.json",
+      "reviewed_utc": "2026-10-22T16:43:37.969150+00:00",
+      "alert_id": "3dfb9a3fe4ef1e0de48a296ff70b05e465ef5fc8",
+      "report": "research/2026-10-22-1635-kimi-hold-review.json",
+      "source": "/home/polyclaude/polyclaude/data/deep_review_20261017/work/tick20261022_163548/source_facts.json",
       "p_yes_unchanged": 0.34021250000000014,
-      "action": "RETAIN10YES/noadd/nosale; datedaccessriskscoped, noverifiednewbenchmarkormetricchange. CurrentHLEscoreunverified; pnotacalibratedfloor."
-    }
+      "action": "RETAIN10YES/noadd; source/rules/book/branch-countermodel and joint-loss reviewed, no verified new official-score correction/binding order."
+    },
+    "latest_risk_review": "research/2026-10-22-1635-kimi-hold-review.json"
   },
   "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026": {
     "p_yes": 0.2329,

@@ -1,20 +1,22 @@
-# Current resting orders — October22 14:19 UTC
+# Current resting orders — October22 16:56 UTC
 
-**Zero visible open orders; terminal state uncertain.** Original October Fed order20YES24¢ now has19.993158 confirmed YES, cost$4.798358. The latest14.73-share fill cost$3.5352; pUSD$5.612932. Authenticated exact-order GET again returned HTTP200 at14:01UTC JSON `null`, not terminal MATCHED/CANCELED.132 exhausted confirmed trades and CTF/cash/receipt agree. [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; terminal state uncertain.** Original October Fed order20YES24¢ now has19.993158 confirmed YES, cost$4.798358. The latest14.73-share fill cost$3.5352; pUSD$5.612932. Authenticated exact-order GET again returned HTTP200 at16:37UTC JSON `null`, not terminal MATCHED/CANCELED.132 exhausted confirmed trades and CTF/cash/receipt agree. [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
 |Claim / entry+hold DEC|Original / confirmed / arithmetic tail|Exact original order|Management|
 |---|---|---|---|
 |October Fed no dissent /252+263|20 /19.993158 /0.006842 YES at24¢|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|No visible bid to cancel; reconcile affirmative terminal/trade state|
 
-The vetted retirement preview retains the full$4.80 entry reservation. A reconciliation blocker now prevents new BUYs; no pruning, refund, released-risk claim, cancellation or repost. The0.006842 tail has$0.00164208 arithmetic limit value, not proved live exposure. 14:01 account/trades/CTF/cash and protected state unchanged; no new fill. [Current check](../research/2026-10-22-1400-checkin.json). Next documentedfullcheckOct23 02UTC; earlierexistingperiodic/materialwatchers, no idle polling. The original Oct27 22UTC pull applies only if a verified live remainder reappears. The blocker’s original local reason has an evidence-path typo; the corrected path is linked in the fill proof, with original protection preserved.
+The vetted retirement preview retains the full$4.80 entry reservation. A reconciliation blocker now prevents new BUYs; no pruning, refund, released-risk claim, cancellation or repost. The0.006842 tail has$0.00164208 arithmetic limit value, not proved live exposure. 16:37 account/trades/CTF/cash and protected state unchanged; no new fill. [Current check](../research/2026-10-22-1635-checkin.json). Next existing18UTClight/fullOct23 02UTC; earliermaterialwatchers, no idle polling. The original Oct27 22UTC pull applies only if a verified live remainder reappears. The blocker’s original local reason has an evidence-path typo; the corrected path is linked in the fill proof, with original protection preserved.
 
-**Held October Fed /DEC263:**19.993158YES, cost$4.798358; pYES67.346%/selected47.346% retained after fresh oil/policy, conditional-fill and joint-loss review. Selected terminal$9.466 vs14:01 indicative exit$4.00 plus carry. Broad30% less20pp reserve and severe adverse-fill sensitivity favor cash; full stake can lose. No calibrated floor or independent-voter product. [Primary review](../research/2026-10-22-1208-fed-hold-review.json).
+**Held October Fed /DEC263:**19.993158YES, cost$4.798358; pYES67.346%/selected47.346% retained after fresh oil/policy, conditional-fill and joint-loss review. Selected terminal$9.466 vs16:37 indicative exit$3.80 plus carry. Ratio3terminal4.146523 remains above prioractual4.00/current3.80+carry; ratio4 and broad30% less20pp reserve favor cash; full stake can lose. No calibrated floor or independent-voter product. [Primary review](../research/2026-10-22-1208-fed-hold-review.json) · [Dated math correction](../research/2026-10-22-1635-hold-economics.json).
 
 **HeldDelcy/DEC262:**28YES18¢/cost5.04, order`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`fullyfilled/absentopenorders. OriginalunfilledOct24pull obsolete; keepOct24 13UTCheldsource/exitreview andearliermateriallegal/successionnews. Primary74.592%/selected59.592%unfitted; laterlegalinstruments/Maduroco-designation/multiple-headrule canlosefullstake. Noautomaticadd. [Exactassets/criteria/risk](../research/2026-10-22-delcy300-fill.json).
 
 **HeldDecemberFed/DEC253+256:**20YES19¢/3.80,order`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`,market3215007/CID`0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0`. Originalunfilledpull obsolete; reviewOct27/afterOct28outcome. Primary46%/selected31%, broadlowsfavorcash; fallbackmayextendJan27. [Fill/rules](../research/2026-10-21-december-fed-fill.json).
 
 Noat/belowfairhidden-info restingSELL; nojump-riskpremium established. Verifiedthesis-break exitsactive; Claritymanagedwholepair/nohedgecredit. [Currentportfolio/news](../research/2026-10-22-051501-news-review.json).
+
+**HeldKimi/DEC243+265:**10YES/cost1.20 retained/noadd after requested source-integrity review. Sep22 reportedCAC inquiry/Sept10 Anthropic allegations do not establish a new binding order or HLE correction. Numerical.3402125/selected.1902125 unchanged; selectedterminal1.902125 vs1.006286cash+71dvariablecarry. Lower-admission/slower-update cases favorcash/full1.20loss. Literal criteria unchanged/structuredrate0 parity. [Current review](../research/2026-10-22-1635-kimi-hold-review.json).
 
 ## Prior order record — historical
 
