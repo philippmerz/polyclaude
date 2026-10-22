@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 267 recorded observations from Apr-25
+The local performance CSV now has 268 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 16:37 UTC
+## Last audited snapshot — October 22 18:01 UTC
 
-**Canonical bankroll: $196.13 including $5.72 funded gas.** Trading value is $190.41 at midpoint or $187.97 using indicative fee-net depth (+10.6% versus $170 contributed); same-producer PM values are $50.07/$47.63. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1637-financial-snapshot.json).
+**Canonical bankroll: $196.71 including $5.70 funded gas.** Trading value is $191.01 at midpoint or $188.67 using indicative fee-net depth (+11.0% versus $170 contributed); same-producer PM values are $50.67/$48.33. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1801-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. All 15 safety commands passed; four daemons remain unique/current. [Completed check](research/2026-10-22-1635-checkin.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed lookup still returns literal `null`; its full $4.80 reservation and new-buy block remain. All 13 light-check commands passed; four daemons remain current. [Periodic check](research/2026-10-22-1800-check.json).
 
-The requested Moonshot alert traces to a September inquiry report and provider allegations; no new binding order or benchmark correction was verified. Retain 10 Kimi YES; DEC265 records the hold with numerical forecasts unchanged. The chart has 267 observations with all 266 earlier rows preserved; 10 chart tests passed after correcting the new row’s reported midpoint. No Telegram warranted. [Source review](research/2026-10-22-1635-kimi-hold-review.json) · [News decisions](research/2026-10-22-1635-news-decisions.json).
+Reviewed 19 new headlines. The Michigan follow-up found an older primary FEC filing, with exact debate/funding article bodies unavailable; no new poll or measured voting effect was established. Retain holdings and numerical forecasts. The CSV has 268 observations with all 267 earlier rows preserved; 10 chart tests passed. No Telegram warranted. [Source limits](research/2026-10-22-1800-mi-source-review.json) · [News decisions](research/2026-10-22-1800-news-decisions.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
