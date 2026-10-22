@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 261 recorded observations from Apr-25
+The local performance CSV now has 262 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 09:04 UTC
+## Last audited snapshot — October 22 10:01 UTC
 
-**Canonical bankroll: $195.94 including $5.74 funded gas.** Trading value is $190.20 at midpoint or $188.24 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $46.33/$44.37. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-0904-financial-snapshot.json).
+**Canonical bankroll: $195.87 including $5.77 funded gas.** Trading value is $190.10 at midpoint or $188.13 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $46.24/$44.27. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-1001-financial-snapshot.json).
 
-**No position or order changes after the fill review.** Twelve all-size positions,131confirmed trades and the October Fed remainder reconcile with the prior check. Safety checks are clean, and four daemons remain unique/current. The original hold reviews and pull deadlines remain active. [Current periodic review](research/2026-10-22-0903-checkin.json) · [Orders](notes/resting_orders.md).
+**No position or order changes after the fill review.** Twelve all-size positions,131confirmed trades and the October Fed remainder reconcile with the prior check. Safety checks are clean, and four daemons remain unique/current. The original hold reviews and pull deadlines remain active. [Current periodic review](research/2026-10-22-1000-periodic-review.json) · [Orders](notes/resting_orders.md).
 
-The chart has 261 observations; all 260 earlier rows and contributions are unchanged, and 10 chart tests passed. Twelve alerts were reviewed. The requested Michigan article dates to October20 and reports campaign messaging; its direction and vote impact are unmeasured. No action or Telegram notification was warranted. Next existing check:10UTC/light,14UTC/full. [News decisions](research/2026-10-22-0903-news-decisions.json) · [Discovery limits](research/2026-10-22-0201-discovery.json).
+The chart has 262 observations; all 261 earlier rows and contributions are unchanged, and 10 chart tests passed. The due10UTC check and three later headline reviews produced no portfolio action or Telegram notification. The Michigan article's exact body remains unverified. Next existing full check:14UTC. [Review and limits](research/2026-10-22-1000-periodic-review.json) · [Discovery limits](research/2026-10-22-0201-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
