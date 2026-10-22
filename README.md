@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the requested Michigan and Delcy reviews. No new poll or legal tenure instrument was verified. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-22-2113-hold-review.json).
+**Management:** retain holdings/no add after reviewing Michigan spending and the repeated OpenRouter acquisition headline. No quantified new vote effect or matched traffic change was established. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-22-2200-hold-review.json).
 
 ## Mandate and constraints
 
@@ -86,9 +86,9 @@ establish an allocation. No position or new watcher was added.
 
 **Canonical bankroll: $196.09 including $5.72 funded gas.** Trading value is $190.37 at midpoint or $187.89 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.03/$47.55. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-2116-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. All 15 core safety commands passed; four daemons remain unique/current. [Completed check](research/2026-10-22-2113-check.json).
+**22:00 UTC light review:** quantities and cost basis remain unchanged: 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. Ten core checks and three account reads passed; four daemons are unique/current. No new bankroll estimate or CSV row was produced. [Completed check](research/2026-10-22-2200-check.json).
 
-Reviewed 10 headlines and all three requested alerts. Michigan’s 70% headline is market odds, not a poll; the verified Marist/OnPoint polls were already counted. Exact article bodies remain unavailable. Delcy’s plant-visit coverage establishes no verified tenure instrument. Holdings and forecasts remain unchanged. The CSV has 270 observations with all 269 earlier rows preserved; 10 chart tests passed. [Source decisions](research/2026-10-22-2113-news-decisions.json).
+Reviewed seven new headlines. The Stripe/OpenRouter agreement was announced in August; no new closing or matched traffic change was verified. Michigan’s reported $9M AIPAC spending remains unverified in the captured FEC material; no vote-effect estimate was inferred. Holdings and forecasts remain unchanged. The financial record above remains dated 21:16 UTC; its 270 CSV observations and earlier chart validation are preserved. [Source decisions](research/2026-10-22-2200-news-decisions.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
