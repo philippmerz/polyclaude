@@ -1,9 +1,9 @@
 ---
-reviewed_at: "2026-10-22T18:08:02.814756+00:00"
+reviewed_at: "2026-10-22T18:14:26.098768+00:00"
 valid_until: "2026-10-22T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 8c2476f5146db00a520863dbd14b062336cbdd73e64a44c433ee3467ffa12cc7
+  README.md: 54b9ba485341ca169fb8d1593d95e3b37a0b7b9a5b2993ee69d1c80ea168cb41
   strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 8046a2f8a0c9869705722a699774014bf4debbe970537892c4a808dee3562324
@@ -12,7 +12,7 @@ source_hashes:
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
   notes/backlog.md: a399013c5b499cef1f627dc7cfafe615788ce1919cd53b2de35dca19ba820708
   notes/resting_orders.md: 45173c300dd264efc9f6752d3796c74057c4b49f7a912c949124902ecd898910
-  notes/journal.md: d07ebfe3042755b2b5b974ab050008ef66141f43bfb618815fabc5b63fc888ba
+  notes/journal.md: 557e7abcad9a0a0242f2b720ca6331e5c9d4a51da65118618b7203ba9eafbb3a
   notes/longterm_watchlist.md: 0ead45f3047cf6be2f5fadce1c6870207ef88c3ba9428d5ff4686f736f88c881
 ---
 ## Current work and blocker
@@ -40,7 +40,8 @@ source_hashes:
 
 ## Next boundary
 
-- 13coreactualrc0/auditclean10indexed+1deindexed/noackdrops;UMA0/hurdle7clear0flags/watchlist0/Ostium0/cruxquiet/pendingnone/fourcurrentdaemons/no sourceeditrestart. Account/CLI/source receiptsbound in currentcheck. No materialTG;1291 latest.
+- **18:08trigger complete:**requestedfb65...alreadyreviewed in18UTCpublication; exactbodygapretained. New07b65...sportsheadline notrankmeasurement.7freshdeltaCLIrc0/MI5NOcost1.55unchanged/no newissue; account-bankrollsource times remain18:01. Priors/DECs/protectionunchanged/no CSVappend/TG. [Verification](../research/2026-10-22-1808-check.json).
+- Earlier18UTClight:13coreactualrc0/55receiptproofs/current13checks in linked18UTC unit; no sourcecodeedit/restart.1291 remains latestmaterialTG.
 - **Discovery14UTC reused:**7boundedscans;primary80retained/728eligible,thin3000/3625; bothpagecapped.5+167batches/notvaluations/3incompletecontextrows. WTIreferencegap/no substitutevaluation/Fedcostfails/ceasefireunvalued; caps/unvalued notzeroEV. [Counts/smallunits](../research/2026-10-22-1400-discovery.json).
 - **Next existing22UTClight/fullOct23 02UTC**, earliermaterialwatchers;weeklyOct23/monthlyNov12notdue/methodologyconcluded. DelcyOct24 13UTC heldreview;179Oct27 22UTCpullonlyverifiedliveremainder;Decemberbefore/afterOctoberdecision. Onchaincoppermanual/offchainbrokerageretired. No newtimer/goal. [Backlog](backlog.md).
 - **Experiment stopped:**422valued/21blocked/394factual/2163pending;837base+78revisions;529unfinishedexcluded/530facts only/noqueue restart. [Checkpoint](deep_review_checkpoint.json).

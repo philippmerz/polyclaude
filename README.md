@@ -86,9 +86,9 @@ establish an allocation. No position or new watcher was added.
 
 **Canonical bankroll: $196.71 including $5.70 funded gas.** Trading value is $191.01 at midpoint or $188.67 using indicative fee-net depth (+11.0% versus $170 contributed); same-producer PM values are $50.67/$48.33. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1801-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed lookup still returns literal `null`; its full $4.80 reservation and new-buy block remain. All 13 light-check commands passed; four daemons remain current. [Periodic check](research/2026-10-22-1800-check.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed lookup still returns literal `null`; its full $4.80 reservation and new-buy block remain. All 13 light-check commands passed; four daemons remain current. [18UTC check](research/2026-10-22-1800-check.json).
 
-Reviewed 19 new headlines. The Michigan follow-up found an older primary FEC filing, with exact debate/funding article bodies unavailable; no new poll or measured voting effect was established. Retain holdings and numerical forecasts. The CSV has 268 observations with all 267 earlier rows preserved; 10 chart tests passed. No Telegram warranted. [Source limits](research/2026-10-22-1800-mi-source-review.json) · [News decisions](research/2026-10-22-1800-news-decisions.json).
+Reviewed 19 new headlines. The Michigan follow-up found an older primary FEC filing, with exact debate/funding article bodies unavailable; no new poll or measured voting effect was established. The subsequent18:08 trigger requested the same alert; seven fresh safety checks found no new issue and Michigan exposure stayed unchanged. Retain holdings and numerical forecasts. [Trigger verification](research/2026-10-22-1808-check.json). The CSV has 268 observations with all 267 earlier rows preserved; 10 chart tests passed. No Telegram warranted. [Source limits](research/2026-10-22-1800-mi-source-review.json) · [News decisions](research/2026-10-22-1800-news-decisions.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
