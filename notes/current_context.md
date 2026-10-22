@@ -1,48 +1,45 @@
 ---
-reviewed_at: "2026-10-22T02:17:15.073787+00:00"
+reviewed_at: "2026-10-22T05:35:42.572225+00:00"
 valid_until: "2026-10-22T06:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 96b17eaad59062a36e5368be448ba2e2c48cce29faafa410fea83de28222939a
+  README.md: 3cd1923765a1ab7ecf32f221eaa4f07576585cb5420aa3de9e39b8d477f6a7e9
   strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: 709e1ab943c79a0b47fbdc70b724dc582a6705c3971778d6fcfe1427b0e406f6
   strategy/02_operations.md: 8046a2f8a0c9869705722a699774014bf4debbe970537892c4a808dee3562324
   strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
   scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: c953c3480375af828ec49d1f9259d452c42a882d04b229c8dcc7aefc4e78431c
-  notes/resting_orders.md: 47683058fb6a47abf7c3d82488d269c4e414bace272d2469b8ea52f1a42e0e0e
-  notes/journal.md: 20618a814856da8a57fac7cf33a458d1bc146e62ac07e0a876431573c9bd4d91
+  notes/backlog.md: 46c2cfd09ad15018dee410eb8a6613e6487e864a679c81b15ff1960496c586e2
+  notes/resting_orders.md: f74165777129fbb65e5a3315c49891395c4e6f82050f7f95ed864d74c226f7a2
+  notes/journal.md: 43c54ab1e6757835f930acbd93faac646c51ad7067d6accdf550aa540f7fb00b
 ---
 ## Current work
 
-**Broad experiment stopped:**422valued/21blocked/394factual/2163pending;837base+78revisions.529partial excluded,530facts only. No activegoal/queue restart. [Checkpoint](deep_review_checkpoint.json).
+**Broadexperimentstopped:**422valued/21blocked/394factual/2163pending;837base+78revisions.529partialexcluded/530facts only; nogoal/queue restart. [Checkpoint](deep_review_checkpoint.json).
 
-**Oct22 02:14 account unchanged:**10all-sizepositions/128CONFIRMED exhaustedtrades;511YES20NO0,179/300CTFs0/0,KimiYES10,pUSD15.45129. TwoLIVE0matched bids reserve9.84/free5.61129; 12financialfields unchanged; three9fieldcriteria lastchecked01:49. [Current proof](../research/2026-10-22-020001-queued-tick.json).
+**Oct22newfills:**300full28YES/179partial5.263158YES.12all-sizepositions/131CONFIRMED exhaustedtrades;10old12fieldtuplesunchanged. CTF30028/1795.263158/51120/Kimi10,pUSD9.148132; oneLIVE179remaining14.736842bid24¢/venuecommitment3.536842/free5.611290. [Reconciliation](../research/2026-10-22-0515-fill-reconciliation.json).
 
-|Exposure/decision|Shares/entry/cashrisk|Primary/selected|Management|
+|Exposure/entry+holddecision|Shares/entry/cashrisk|Primary/selected|Management|
 |---|---|---|---|
-|Held511 DecemberFednochange/253|20YES19¢/3.80|46%/31%|Reviewbefore/afterOctoberdecision; oldunfilledpullobsolete|
-|LIVE179 OctoberFednodissent/252|20YES24¢/4.80|67.346%/47.346%|PullunfilledOct27 22UTC|
-|LIVE300 Delcyofficialyearendheadstate/254|28YES18¢/5.04|74.592%/59.592%|PullunfilledOct24 13UTC|
+|Held511 DecemberFed/253+256|20YES19¢/3.80|46%/31%|Reviewbefore/afterOctoberdecision; oldunfilledpullobsolete|
+|Held179 OctoberFed/252+261|5.263158YES24¢/1.263158|67.346%/47.346%|Original14.736842remainderbid; pullunfilledOct27 22UTC|
+|Held300 Delcyofficialyearendheadstate/254+262|28YES18¢/5.04|74.592%/59.592%|Unfilledpullobsolete; heldsource/exitreviewOct24 13UTC|
 
-- Exact179/300 open/active/accepting,UMAhistory[]/singularabsent. Newfill requires trade/index/CTF/cash reconciliation plushold/exitreview. Noadd/chase/repost/takerfallback; cancel-first on unassessedmaterialchange. [Exact IDs](resting_orders.md) · [511fill](../research/2026-10-21-december-fed-fill.json).
-- Policyv2 selectsfromcompleted422; former600wait retired, everyentrygate retained. Ordinaryheld11.15+pending9.84 canjointlylose20.99/nohedgecredit. Fresh195.85:27%floor52.8795 coversgrosscost+pending51.06399348; +largest5.04=57.9195<30%cap58.755. Conservativecoverage, notfittedcovariance.
+- Exact179/300/511criteria/status unchanged/open/active/accepting,UMAhistory[]/singularabsent. No neworder/reprice/add/chase/takerfallback. Source/newsreviewcompletewithgaps; cancel-firstunassessedmaterialchange. [Exactorders](resting_orders.md).
+- Vettedlockedmerge05:25–26prunedonlyfullyindexed300reservation2→1;179rowbyte-equivalent/full4.80risk retainedconservativelywhilepartindexed. Venue remaining3.536842 differsfromledger4.80. Before/aftercash,CTFs,trades,remainingorderunchanged; no refund/profit.
+- Policyv2 selectscompleted422/everygate retained. Ordinaryheld17.453158+remaining3.536842=20.99canjointlylose/nohedgecredit. Actualgrosscost+remaining51.06399348; conservativeentryfullrisk+indexed52.3271514<27%floor52.9227. Floor+largestremaining3.53684208=56.45954208<30%cap58.803 at196.01; notfittedcovariance.
 
 ## Evidence and money
 
-- **MI dailyOct22:NO41 unchanged.**8datedpolls agedonce; rawD.594312928/NO.405687072 rounds59/41,10ppreserve selectsNO31. FiveNO selected1.55/unrounded1.528435 vs1.50exit+21dvariablecarry1.502783. OnPointSD1.5selected1.501862/G12/broadNO20–70 favorcash. Retain/noadd; no calibratedfloor/full1.55canlose. G8/bias−1.5/sharedterms subjective/unfitted. OnPoint586/Marist1185registeredn,LVnunknown; no leaned-sampledoublecount. DEC260forecast-only/unresolved. [Daily model](../research/2026-10-22-0154-michigan-daily.json).
-- APindexedpartial originalOct21debate coverage verified; exactYahoo/fulltranscript/completion and measuredvoteeffect unknown. No representativepostdebatepoll retrieved/no inferredswing fromrhetoric. EarlierWaPo/Marist source/methodscenarios linked [prior model](../research/2026-10-21-173336-michigan-update.json).
-- **01:50:09–26 canonical195.85incl5.94fundedgas:**trading189.91mid/188.15indicativefee-netdepth(+10.7%vs170),sameproducerPM39.74/37.98. Residual19.74unaudited/VMAPIexcluded/sequentialnotNAV/proceeds. CSV257 preserves256priorrows/flows;10charttests pass. [Financial](../research/2026-10-22-0150-financial-snapshot.json).
-- Dec/Kimi/OR/Messi selectedterminals6.20/1.902125/3.65/2 exceed01:49exits3.60/1/3.10/1.40+variablecarry; broadlowsfavorcash. Claritywholeexit27.38 vsfaithful29/58/29; oracle/counterpartyfailurecanremovefloor/managewholepair. Kellymidpoint/rho diagnostic/noaddauthority; hidden-infoSELLat/belowfairprohibited/thesis-breakexitsactive.
-- CurrentHLE unknown afterOct21 14:02source403;41.08dated differsvendor56withtools. OR14:02completeOct12 164.043986T/partialOct19 70.030626T is notheldOct26–Nov22volume/725–775T. SecondaryThreatDownbackendroutingstory doesnotquantifyfuturetraffic; originalreport unavailable. Stripe deal/Delcylaterlegalinstruments/Google2026rank unverified. No blockedsource retries.
+- **179dailyOct22:**freshsource/criteria/fill/cashreview reconsidered6dayhorizon; retainsOct21subjectivepath75/23/1/1×unanimity65/80/35/20 plus2%sourceexception. YES67.346/selected47.346; heldselected2.491895vs~1.263158exit+carry. Broad30less20reservefavorscash/fullstakecanlose. OfficialFedindexupdatedOct14/searchcoveragelimited; IMFeventmetadata hasnotranscript/policyremarks. Noindependentvoteproduct/calibratedfloor. [Primaryreview](../research/2026-10-22-fed179-partial-fill.json).
+- **300heldreview:**literalDec31noonETgovernmenthead-of-state/UNfallback/multipleheadprimary-earliest rule. Subjective.88*(.81+.12*.20)+.12*.10=.74592,selected.59592:16.68576vs5.04exit+71dvariablecarry. Laterlegalinstruments/Maduroco-designation unknown; broad10%cashcase/full5.04loss retained. Fiscalactivitynottenureextension. [Primaryreview](../research/2026-10-22-delcy300-fill.json).
+- **05:17:41–57 canonical196.01incl5.85fundedgas:**trading190.16mid/188.39indicativefee-netdepth(+10.8%vs170),sameproducerPM46.29/44.52. Producerwarn1.78vsroundedsubtract1.77/.01roundinggap; residual19.74unaudited/VMAPIexcluded/sequentialnotNAV/proceeds. CSV258preserves257priorrows/flows;10charttests pass. Purchasesinternaldeployment, notrealizedprofit. [Financial](../research/2026-10-22-0517-financial-snapshot.json).
+- **MI dailyOct22NO41/selected31unchanged:**8datedpolls/no newpoll;5NOselected1.55/unrounded1.528435vs1.502783exit+conservative21dvariablecarry. OnPointSD1.5/G12/broad20–70favorcash; no calibratedfloor/full1.55canlose. G8/bias−1.5/sharedterms unfitted; OnPoint586/Marist1185registeredn,LVnunknown/no leaned-sampledoublecount. DEC260forecast-only. [Dailymodel](../research/2026-10-22-0154-michigan-daily.json).
+- Updated05:29Dec/Kimi/MI/Messi/ORselectedterminals6.20/1.902125/1.55/2/3.65 exceed3.60/1.10/1.50/1.40/2.95exits+variablecarry; broadlowsfavorcash. Claritywholeexit27.59vsfaithful29/58/29; failurecanremovefloor/managewholepair. Kellymidpoint/rhoadvisory/noaddauthority; hidden-infoSELLat/belowfairprohibited, thesis-breakexitsactive.
 
 ## Checks and boundaries
 
-- Queued02UTCtick covered bycompletedfullcheck; fresh02:14:54–56account confirmsno newfill.8laterheadlines reviewedthrough02:11:16/noaction. ExactFlint/MIPPCIbody unknown; olderSep8WDIVpoll n/field/overlapunknown, verifybeforefutureuse. [Followup](../research/2026-10-22-020001-queued-tick.json).
-
-- Requested a447611b4e3d7456fa210d4d18952041b23a5988 plusall9tailrows through01:48:24 reviewed; fullIDs/limits in [current review](../research/2026-10-22-014829-news-review.json). No trade/fill/order/flow/transfer/redemption/numericpriorchange/Telegram.
-- Initialauditrc1 requiredMI dailyrederivation, completed; rerunrc0/8indexed+1deindexed/noackdrops. UMA0alerts/44checked/46tracked,hurdle5clear/0flagged/3protected,watchlist0,Ostium0/diff0,cruxquiet. Fouruniquecurrentdaemons/noedit/restart. Rawrc/windows/hashescaptured.
-- DEC169closed:29parsertests pass/currentimplementationverified; historicalincidentintervalungraded. Initialpendingraw alsohad215 despitecompactsummaryomission(corrected).215officialBOIheld3.25%,exactYES1/NO0, no recordedfill/currentholding; order200null notcancelproof, cancellationhistoryunknown/no1.05loss. Finalpendingnone. [BOI proof](../research/2026-10-22-boi-decision-close.json).
-- Due02UTCsevenboundedscans complete;80primary/3000thin-tailrows in offlinefactualbatches,allunvalued. Caps/omissions/3invalidsportsconsensus explicit; noverifiedpositive/noexchange-wideabsenceclaim. Initialbatchrc2 recoveredoffline/rc0. Canonicalconsistencylatest restoredfromcapture/lateradvanced02:07; priorlatestoverwritten/unavailable. [Coverage/index](../research/2026-10-22-0201-discovery.json).
-- **Next existing06UTC light/14UTC fullOct22**; earliermaterialwatcherleads active. WeeklyOct23/monthlyNov12notdue; methodologyconcluded. Onchaincoppermanual/offchainbrokerageretired. [Backlog](backlog.md).
+- Requesteddb86b710f867d57f9ba2e9812c8ace0da489501a plusall25tailIDsthrough05:14:57reviewed. ExactAJvideo/dateunknown; knownmatchupnotnewmeasuredlikelihood. RelatedOct21licensedBridgeindexedfactcheckverified, no measuredvoteshift/fulltranscript/newpoll. OlderSep8WDIVn/field/overlapunknown, verifybeforeuse. K3.1Sep23old/noHLEscore; currentHLEunknownafter403/no retry. BBCoilrobotsblocked; Delcyfiscaloriginals/legalforceunknown. ORfutureOct26-Nov22volume/Googleannualrank/laterDelcylegalinstrumentsunknown. [Sourceunit](../research/2026-10-22-0515-source-review.json).
+- Initialauditrc1fiveissuesassessed; snapshotsrefreshed,179actualdailyreview+datedintentionaldivergenceacks,05:28rerunrc0CLEAN10indexed+1deindexed/noackdrops. DEC261/262holdreviews,size0/original252/254unresolved. UMA0alerts/46checked48tracked,7hurdleclear/0flag/3protected,watchlist0,Ostium0diff0,cruxquiet/pendingnone. Fouruniquecurrentdaemons/noedit/restart. TG1290onefillnotification. [Fulltick](../research/2026-10-22-051501-news-review.json).
+- Completed02UTCsevenboundedscans reused;80primary/3000thin-tailrows in factualbatches,unvalued/capped/unpricedexplicit/noexchange-wideabsenceclaim. No broadqueue restart. **Next existing06light/14fullOct22**, earliermaterialwatchersactive. WeeklyOct23/monthlyNov12notdue/methodologyconcluded; onchaincoppermanual/offchainbrokerageretired. [Backlog](backlog.md).

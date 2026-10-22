@@ -1,15 +1,20 @@
-# Current resting orders — October21 20:40 UTC
+# Current resting orders — October22 05:35 UTC
 
-**Two LIVE BUY bids, zero matched; $9.84 reserved.** pUSD15.45129/free5.61129. DecemberFed20YES19c filled15:39:44UTC for3.80/fee0; that reservation is retired, and exposure is held.128 exhausted confirmed trades/10 all-size positions; exact trade/index/CTF/cash proof reconciles. [Fill and hold](../research/2026-10-21-december-fed-fill.json) · [Current review](../research/2026-10-21-203918-news-review.json) · [Policyv2](entry_review_gate.json).
+**One LIVE BUY, partially filled:**OctoberFedno dissent original20YES24¢, matched5.263158, remaining14.736842/venuecommitment3.53684208. Delcy28YES18¢fullyfilled/cost5.04; DecemberFed20YES19¢held/cost3.80. pUSD9.148132/free5.611290.131CONFIRMED exhaustedtrades/12all-sizepositions; maker/index/CTF/cashreconcile. [Current fills](../research/2026-10-22-0515-fill-reconciliation.json).
 
-|Unfilled claim /decision|YES shares ×limit|maxcash|Exact order|Required pull|
-|---|---:|---:|---|---|
-|October Fed no dissent /252|20×0.24|4.80|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|Oct27 22UTC before October decision|
-|Delcy official year-end head of state /254|28×0.18|5.04|`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`|Oct24 13UTC;72h role-evidence budget|
+|Remaining claim/entrydecision|Original/matched/remainingYES|Exact order|Required pull|
+|---|---|---|---|
+|OctoberFedno dissent/252|20/5.263158/14.736842 at24¢|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|UnfilledremainderOct27 22UTC|
 
-Review existing checks and earlier material sources; cancel-first on unassessed material news. No automatic add/repost/chase/taker fallback. Any future fill requires current trade/index/chain/cash and hold-versus-exit review. Keep full reservations until proven indexed; no shared-error hedge credit.
+The conservativeentryledger retains thisorder's original4.80risk untilalltargetsharesindexed; it was notshrunk tovenue's remaining3.53684208. OnlyfullyindexedDelcyreservation retired via vettedlockedmerge05:25–26; no cashrefund/profit. Otherorders unchanged. Revieweachcheck/earliermaterialevidence; cancel-firstonunassessedmaterialchange, noadd/repost/chase/takerfallback.
 
-**Held December Fed /DEC253:**20YES, order`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`, market3215007/CID`0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0`. Original unfilledOct27 pull is obsolete; reviewOct27 beforeOct28 and after the October decision. PrimaryYES46%/selected31% versus18c exit; broad-low models favor cash, full3.80 can lose. Retain/noadd, hidden-information SELL rule applies; fallback may extend toJan27. [Exact assets, criteria and risk](../research/2026-10-21-december-fed-fill.json).
+**HeldOctoberFed/DEC261:**5.263158YES,cashcost1.263158,pYES67.346%/selected47.346%. Selectedterminal2.491895vs~1.263158exit+6dvariablecarry; broad30%less20ppreservefavorscash, dissentcanloseall. ActualOct22dailyreviewretainssubjectiveOct21scenarioinputs; noindependentvoteproduct/calibratedfloor. Pullonlyunfilledremainder; heldsharesneedfreshhold/exitreview. [Underwriting](../research/2026-10-22-fed179-partial-fill.json).
+
+**HeldDelcy/DEC262:**28YES18¢/cost5.04, order`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`fullyfilled/absentopenorders. OriginalunfilledOct24pull obsolete; keepOct24 13UTCheldsource/exitreview andearliermateriallegal/successionnews. Primary74.592%/selected59.592%unfitted; laterlegalinstruments/Maduroco-designation/multiple-headrule canlosefullstake. Noautomaticadd. [Exactassets/criteria/risk](../research/2026-10-22-delcy300-fill.json).
+
+**HeldDecemberFed/DEC253+256:**20YES19¢/3.80,order`0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`,market3215007/CID`0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0`. Originalunfilledpull obsolete; reviewOct27/afterOct28outcome. Primary46%/selected31%, broadlowsfavorcash; fallbackmayextendJan27. [Fill/rules](../research/2026-10-21-december-fed-fill.json).
+
+Noat/belowfairhidden-info restingSELL; nojump-riskpremium established. Verifiedthesis-break exitsactive; Claritymanagedwholepair/nohedgecredit. [Currentportfolio/news](../research/2026-10-22-051501-news-review.json).
 
 ## Prior order record — historical
 

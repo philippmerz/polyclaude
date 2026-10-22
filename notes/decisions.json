@@ -1,5 +1,5 @@
 {
-  "next_id": 261,
+  "next_id": 263,
   "decisions": [
     {
       "id": 1,
@@ -5671,6 +5671,44 @@
         "no-trade"
       ],
       "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 261,
+      "timestamp": "2026-10-22T05:28:39Z",
+      "type": "skip",
+      "thesis": "Postfillhold/remainderreview, originalDEC252: exactmaker/CTF/cash confirms5.263158YES at24c cost1.263158; original14.736842bid remains, total20sharebudgetunchanged. FreshOct22six-dayunderwriting retains subjectivepath/conditionalunanimityinputs andpYES.67346/selected.47346; selectedheldterminal2.491895vs~1.263158exit+variablecarry. Lower30%minus20ppreservefavorscash; dissentcanloseall. Newofficialindexcoverage andIMFeventmetadata do not establishcommitteeintent ornewpolicypledge. Noindependentvoteproduct/confidencefloor/hedgecredit. Fullrisk ledger4.80 retained; pullunfilledOct27 22UTC/noadd/chase/restingSELL. research/2026-10-22-fed179-partial-fill.json",
+      "confidence": "low",
+      "prediction": "October27-28rate-decision statement has no dissent with subjective67.346% forecast; source/ratepath assumptionsunfitted. Existingheld5.263158/remainingoriginal14.736842maylose, no realizedoutcomegrade now.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-28",
+      "tags": [
+        "post-fill-hold",
+        "no-add",
+        "primary-review"
+      ],
+      "slug": "will-no-one-dissent-the-october-fed-decision-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 262,
+      "timestamp": "2026-10-22T05:28:40Z",
+      "type": "skip",
+      "thesis": "Postfillholdreview, originalDEC254: twoexactmakerfills16.67+11.33=28YES18c/cost5.04, CTFequals28 andcashdebitreconciled; no remainingDelcyorder. Retain28/noadd: subjectivepYES.74592/selected.59592 pays20.88576/16.68576vs5.04exit+71dvariablecarry. Literalofficialhead-of-state/multiple-headrule, laterlegalinstruments/Maduroco-designation andconditionalfillrisks remainpriceduncertainties; broad10%cashcasefavorssellandfull5.04canlose. Fiscalactivityisnottenureextension. Vettedpruneonlyfullyindexed300reservation, no refund/profit. UnfilledOct24pullobsolete; source/holdreviewOct24 13UTC/earliermaterialnews. research/2026-10-22-delcy300-fill.json",
+      "confidence": "low",
+      "prediction": "AtDec31noonET Delcyqualifiesunderliteralofficialhead-of-state/primary-earliestmultiple-headrule with subjective74.592% forecast. Notlegalcertification/calibratedfloor; full5.04losspossible; originalmarketoutcomeremainsunresolved.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "post-fill-hold",
+        "no-add",
+        "primary-review"
+      ],
+      "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 257 recorded observations from Apr-25
+The local performance CSV now has 258 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,9 +58,9 @@ Writing default for replies, handoffs and maintained documents:
 
 **The broad experiment ended at 422 completed unique valuations; no 600-case wait or queue continuation.** There is no active native goal (verified13:25UTC). Counts: 422 valued, 394 factual exclusions, 21 blocked, 2,163 unfinished pending; 837 base records plus 78 revisions. Case529 is unfinished and excluded. Policy v2 permits autonomous selection from the completed universe, subject to primary comparison, exact selected outcome tokens, hashed report and every live entry gate. [Policy](notes/entry_review_gate.json) · [Selection and comparison](research/2026-10-21-completed-review-allocation.json).
 
-**Current allocation:** December Fed no change (#511) filled20YES at19¢/$3.80, with trade/index/CTF/cash reconciliation. October Fed no dissent (#179)20YES24¢/$4.80 and Delcy official year-end head of state (#300)28YES18¢/$5.04 remain LIVE and unmatched at01:49UTC Oct22. Outstanding reservations total$9.84; pUSD15.45129/free5.61129. No automatic add or chase. [Fill proof](research/2026-10-21-december-fed-fill.json) · [Orders](notes/resting_orders.md).
+**Current allocation:** Delcy (#300) filled28YES18¢/$5.04; October Fed no dissent (#179) filled5.263158YES24¢/$1.263158, with14.736842shares remaining at the original bid. December Fed no change (#511) remains20YES19¢/$3.80. Cash9.148132; venue commitment3.536842/free5.611290. No new order or price change. [Fill reconciliation](research/2026-10-22-0515-fill-reconciliation.json) · [Current orders](notes/resting_orders.md).
 
-**Management:** pull unfilled October Fed byOct27 22UTC and Delcy byOct24 13UTC; review material evidence earlier. Review held December Fed before/after the October decision. The02UTC check verified partial original debate coverage; exact full transcript and measured vote effect remain unknown. Next full check14UTC Oct22. Kimi current HLE score, Delcy later legal instruments and final Google2026 ranking remain unknown. [Current review](research/2026-10-21-2200-periodic-review.json).
+**Management:** retain the holdings and original October Fed remainder after post-fill review; pull only its unfilled remainder byOct27 22UTC. Delcy’s former unfilled pull is obsolete; Oct24 13UTC remains a held-position source/exit review. Review December Fed before/after October’s decision. Earlier material evidence triggers review. [Current review](research/2026-10-22-051501-news-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 01:50 UTC
+## Last audited snapshot — October 22 05:17 UTC
 
-**Canonical bankroll: $195.85 including $5.94 funded gas.** Trading value is $189.91 at midpoint or $188.15 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $39.74/$37.98. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-0150-financial-snapshot.json).
+**Canonical bankroll: $196.01 including $5.85 funded gas.** Trading value is $190.16 at midpoint or $188.39 using indicative fee-net depth (+10.8% versus $170 contributed); same-producer PM values are $46.29/$44.52. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-0517-financial-snapshot.json).
 
-**Holdings, bids and numeric probabilities remain unchanged.** Michigan's Oct22 daily recomputation retains NO41%/five shares; selected unrounded value$1.5284 versus$1.5028 exit plus variable carry is sensitive to model choices. Partial original debate coverage is verified; exact transcript and vote effect remain unknown. [Current review](research/2026-10-22-014829-news-review.json) · [Michigan model](research/2026-10-22-0154-michigan-daily.json).
+**Two original bids filled; numeric probabilities are unchanged.** Delcy filled fully and October Fed partially; exact maker records, indexed holdings, CTF and cash reconcile. Post-fill reviews retain both holdings without added orders, while recording adverse cash cases and source uncertainty. The initial audit’s new-claim, daily-underwriting and prior/mark flags were assessed; its rerun passed. Four daemons remain unique/current. [Fed review](research/2026-10-22-fed179-partial-fill.json) · [Delcy review](research/2026-10-22-delcy300-fill.json).
 
-The initial audit required that daily update; its rerun passed. Two overdue records closed with evidence limits, two bids remain unmatched and four daemons are unique/current. The chart has257observations; all256earlier rows and contributions are unchanged,10charttests passed. Fresh capped discovery supplies candidates, not fully valued rejections or executable trades. [Discovery limits](research/2026-10-22-0201-discovery.json).
+The chart has258observations; all257earlier rows and contributions are unchanged,10charttests passed. All25new headlines were reviewed; the requested Michigan matchup headline supplies no measured vote effect. Exact source gaps remain documented. [News decisions](research/2026-10-22-0515-news-decisions.json) · [Completed02UTC discovery limits](research/2026-10-22-0201-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
