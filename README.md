@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 265 recorded observations from Apr-25
+The local performance CSV now has 266 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 13:43 UTC
+## Last audited snapshot — October 22 14:01 UTC
 
-**Canonical bankroll: $195.33 including $5.75 funded gas.** Trading value is $189.58 at midpoint or $186.92 using indicative fee-net depth (+10.0% versus $170 contributed); same-producer PM values are $49.24/$46.58. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1343-financial-snapshot.json).
+**Canonical bankroll: $195.35 including $5.77 funded gas.** Trading value is $189.58 at midpoint or $186.92 using indicative fee-net depth (+10.0% versus $170 contributed); same-producer PM values are $49.24/$46.58. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1401-financial-snapshot.json).
 
-**No new fill or position change:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order endpoint still returns `null`; its full $4.80 reservation and new-buy block remain. All 15 safety commands passed; four daemons remain unique/current. [Check and limits](research/2026-10-22-1341-checkin.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order endpoint still returns `null`; its full $4.80 reservation and new-buy block remain. All 15 safety commands passed; four daemons remain unique/current. [Full check](research/2026-10-22-1400-checkin.json).
 
-The chart has 265 observations; all 264 earlier rows and contributions are unchanged, and 10 chart tests passed. All 17 new alerts, including 5 requested IDs, were reviewed. The Marist 50–48 poll was already included; it predates the final debate. No numerical-prior change or Telegram warranted. Next existing full check: 14UTC. [News decisions](research/2026-10-22-1341-news-decisions.json) · [Discovery limits](research/2026-10-22-0201-discovery.json).
+Seven bounded discovery scans completed; page caps, unvalued cases and source gaps remain explicit. No new entry cleared the checks. Current OpenRouter partial-volume evidence was assessed without treating it as a completed week; holdings and numerical priors are unchanged. The chart has 266 observations with 265 earlier rows preserved; 10 chart tests passed. No Telegram warranted. [Discovery](research/2026-10-22-1400-discovery.json) · [Hold review](research/2026-10-22-1400-hold-review.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
