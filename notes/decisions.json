@@ -3394,9 +3394,10 @@
         "data-api"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Oct22 engineering verification: current parser and mocked redeem-all paths passed29 existing offline tests; strict2xx/JSON/list/object-row checks precede contract calls and transaction preparation. Wallet/provider/contract objects are constructed before parse. InvalidJSON branch code-inspected, not dynamically covered in selected tests. No live redemption performed; no exhaustiveSep21-Oct21 malformed-payload incident history inspected, so temporal survival prediction remains ungraded. Proof:data/deep_review_20261017/work/tick20261022_014829/dec169/summary.json.",
+      "calibration_delta": "Unscored: implementation checks verified; retrospective incident window not established; not a trading calibration or realized-profit result.",
+      "lesson": "Keep narrow fail-closed parser checks before contract calls/sign/broadcast; distinguish offline mechanism verification from an observed incident-free interval.",
+      "resolved_at": "2026-10-22T01:56:45Z"
     },
     {
       "id": 170,
@@ -4591,9 +4592,10 @@
         "uncalibrated-policy-model"
       ],
       "slug": "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Verified Oct22: Bank of Israel Oct21 official decision held its rate at3.25%; exact market4082027/CID0x1f5ac208ee96cd5b9fe98191b790df37abc287da716c5fb67d2d1f9394c80e3b is closed/UMAresolved, YES1/NO0. The former15NO7cent bid is absent from exhausted live orders; exact authenticated order detail returned HTTP200 JSONnull, with0 exact order references in128CONFIRMED exhausted trades and current CTFYES/NO0/0. No recorded fill or current holding; cancellation receipt/time and complete order lifecycle remain unknown. No realized P&L or1.05loss attributed.",
+      "calibration_delta": "Original centralNO32%/hold68%: observedNO0, so the modal hold branch occurred. One unfilled conditional commitment is not a realized trading result or evidence of systematic calibration bias. Historical LIVEzero-filled execution observation was not independently disproved; later cancellation time unknown.",
+      "lesson": "Separate resolved contract outcome, current inventory and order lifecycle. HTTP200 JSONnull is not an affirmative cancellation status; absence from current orders plus0trade references/0CTFs supports no recorded position, not an invented cancellation time. Never book an unfilled bid's maximum risk as a realized loss.",
+      "resolved_at": "2026-10-22T02:06:30Z"
     },
     {
       "id": 216,

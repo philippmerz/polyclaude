@@ -1264,24 +1264,24 @@
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
-    "verified": "2026-10-21",
+    "verified": "2026-10-22",
     "criteria_read": "2026-10-21",
     "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct21 22UTC: OnPoint original Oct19 release, fieldOct18 online586registered (LV n unspecified), LV48.7D/42.8R, weighting-adjusted shareMOE5.2. Add unleaned once to seven surveys; leaned51.7/45.4 imputes same-sample undecideds, not another poll. Unchanged G8/bias-1.5/shared terms; source extraSD3/age3 subjective. Eight-poll rawD59.385178% rounds59/NO41 from57/43. SelectedNO31 after10pp reserve:1.55 terminal vs fresh1.50 exit+21d variablecarry1.50278; unrounded selected1.53074, only2.8c margin. Hold5NO/noadd before23UTC debate. SD1.5 corner leaves0.15c; G12samebias/no-bias and broad20-70 include cash-favoring cases. No calibrated floor, measured voter swing or recovery claim; full1.55 can lose.",
+    "current_assessment": "Oct22 dailyprimaryreview: currentAPindexedpartialOct21debate evidence reviewed; exactYahoo/fulltranscript/completion/voteeffect unknown, no measuredswing or newpoll inferred. ReproducedOct21rawD.5938517788; advancedall8pollagesonce to18/8/12/28/24/38/4/4, rawD.5943129280/NO.4056870720 rounds59/41 unchanged. G8/bias-1.5/sharedterms subjective/unfitted; OnPoint586/Marist1185registeredn,LVnunknown; no leaned-sampledoublecount. SelectedNO31 pays1.55 vs1.50exit+conservative21dvariablecarry1.502783; unroundedselected1.528435/tinymargin. OnPointSD1.5/G12samebias/no-bias/broadlow favorcash. Retain5NO/noadd; no calibratedfloor/recoveryclaim, full1.55 canlose.",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
-    "current_revision": "research/2026-10-21-2200-michigan-update.json",
+    "current_revision": "research/2026-10-22-0154-michigan-daily.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/periodic220028/poll_math/sensitivity.json",
-    "management": "Review each existing tick/earlier material poll, candidate, withdrawal, health, ballot or turnout news. Original BUY filled; Oct23 pull obsolete. Oct20 Economic Club program elapsed; full transcript/voter effect not verified. Upcoming MI debateOct21 23UTC; pull any future resting order before known catalyst and revalue. Mandatory early votingOct24-Nov1/absentee sinceSep24 remain dated context. Any fresh BUY requires completed-universe policyv2, primary selection and every live gate; former experimental600 waiting rule retired. No measured US-politics hedge.",
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261022_014829/daily_mi_math.json",
+    "management": "Review each existingtick/earliermaterialpoll,candidacy,withdrawal,health,ballot or turnout news. OriginalBUYfilled/Oct23pullobsolete. Oct21debate elapsed; APpartialbodycheckedOct22, exactfulltranscript/completion/voteeffectunknown. Pullanyfuture restingorderbeforeknowncatalyst and revalue. MandatoryearlyvotingOct24-Nov1/absenteeSep24 remain datedcontext. EveryfreshBUYrequirescompleted-universepolicyv2, primaryselection andalllivegates; former600waitretired. No measuredUS-politicshedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
-    "daily_rederivation": "data/deep_review_20261017/work/tick003800_mi_judgment.json",
-    "latest_news_review": "research/2026-10-21-2200-michigan-update.json"
+    "daily_rederivation": "data/deep_review_20261017/work/tick20261022_014829/daily_mi_math.json",
+    "latest_news_review": "research/2026-10-22-014829-news-review.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
     "p_yes": 0.49,
