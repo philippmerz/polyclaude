@@ -1,4 +1,4 @@
-# Current backlog — October 22 02:09 UTC
+# Current backlog — October 22 02:17 UTC
 
 - **Experiment ended:**422valued/21blocked/394factual/2163pending;837base+78revisions. No goal/queue restart;529partial excluded,530facts only. [Checkpoint](deep_review_checkpoint.json).
 - **Account01:49 unchanged:**10positions/128exhausted CONFIRMED trades. DecemberFed20YES19¢ held; OctoberFed20YES24¢ andDelcy28YES18¢ LIVE0matched. Reserve9.84,pUSD15.45129/free5.61129. [Current proof](../research/2026-10-22-014829-news-review.json).
@@ -8,4 +8,5 @@
 - **Risk/gaps:**Ordinaryheld+pending20.99 canjointlylose/nohedgecredit. Clarity29/58/29 requiresfaithfulsettlement; wholeexit27.38,managepair. HLEcurrentunknown after403;41.08dated differsvendor56withtools. ORfuturevolume not established by secondaryThreatDownroutingstory; originalreport unverified. Delcylaterlegalinstruments/Googleannualrank unknown. [Current review](../research/2026-10-22-014829-news-review.json).
 - **Operations:**Dailyunderwriting cleared initialauditrc1; rerunrc0. DEC169 implementation verified/29tests, historicalincidentinterval ungraded. DEC215 resolvedYES/no recordedfill, cancellationhistoryunknown; finalpendingnone. Fouruniquecurrentdaemons/noedit. [BOI closure](../research/2026-10-22-boi-decision-close.json).
 - **Discovery02UTC complete:**Sevenboundedscans;80primary/3000thin-tail rows in factualbatches, all unvalued. Caps/omissions/invalidsportsconsensus explicit; noverifiedpositive/noexchange-wideabsenceclaim. Canonicalconsistencylatest restored fromcapturedscan, lateradvanced02:07; priorlatest overwritten/unrecoverable. [Coverage](../research/2026-10-22-0201-discovery.json).
+- **Queued02UTC followup:**Covered bycompletedfullcheck;02:14:54–56freshaccount confirmsno newfill/2unchangedbids.8laterheadlines reviewed/noaction. ExactFlint/MIPPCIbody unknown; olderSep8WDIVpoll field/n/overlap unverified, verifybeforeanyfutureuse. [Record](../research/2026-10-22-020001-queued-tick.json).
 - **Next:**Existinglight06UTC/full14UTC Oct22; earliermaterialwatcherleads active. WeeklyOct23/monthlyNov12notdue; methodologyconcluded. Onchaincoppermanual/offchainbrokerageretired. [Historical backlog](backlog_20261019T0240_archive.md).
