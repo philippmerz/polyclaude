@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 269 recorded observations from Apr-25
+The local performance CSV now has 270 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the requested Michigan, Delcy and Kimi source reviews. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-22-1942-hold-review.json).
+**Management:** retain holdings/no add after the requested Michigan and Delcy reviews. No new poll or legal tenure instrument was verified. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-22-2113-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 19:44 UTC
+## Last audited snapshot — October 22 21:16 UTC
 
-**Canonical bankroll: $196.06 including $5.70 funded gas.** Trading value is $190.36 at midpoint or $188.07 using indicative fee-net depth (+10.6% versus $170 contributed); same-producer PM values are $50.02/$47.73. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-1944-financial-snapshot.json).
+**Canonical bankroll: $196.09 including $5.72 funded gas.** Trading value is $190.37 at midpoint or $187.89 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.03/$47.55. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-22-2116-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. All 15 core safety commands passed; four daemons remain unique/current. [Completed check](research/2026-10-22-1942-check.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. All 15 core safety commands passed; four daemons remain unique/current. [Completed check](research/2026-10-22-2113-check.json).
 
-Reviewed 14 headlines and all three requested alerts. The mayoral endorsement’s body/date remain unverified; the official release found concerns her father. Delcy’s plant-visit posts provide no verified tenure instrument. Kimi’s police-report story is retrospective and supplies no benchmark correction. Holdings and numerical forecasts remain unchanged. The CSV has 269 observations with all 268 earlier rows preserved; 10 chart tests passed. No Telegram warranted. [Source decisions](research/2026-10-22-1942-news-decisions.json).
+Reviewed 10 headlines and all three requested alerts. Michigan’s 70% headline is market odds, not a poll; the verified Marist/OnPoint polls were already counted. Exact article bodies remain unavailable. Delcy’s plant-visit coverage establishes no verified tenure instrument. Holdings and forecasts remain unchanged. The CSV has 270 observations with all 269 earlier rows preserved; 10 chart tests passed. [Source decisions](research/2026-10-22-2113-news-decisions.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
