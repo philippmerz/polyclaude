@@ -35,20 +35,20 @@
    "negativeRisk": true
   },
   {
+   "slug": "will-no-one-dissent-the-october-fed-decision-2026",
+   "outcome": "Yes",
+   "size": 19.9931,
+   "conditionId": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+   "asset": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+   "negativeRisk": true
+  },
+  {
    "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
    "outcome": "Yes",
    "size": 10,
    "conditionId": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
    "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
    "negativeRisk": false
-  },
-  {
-   "slug": "will-no-one-dissent-the-october-fed-decision-2026",
-   "outcome": "Yes",
-   "size": 5.2631,
-   "conditionId": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
-   "asset": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
-   "negativeRisk": true
   },
   {
    "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",

@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 263 recorded observations from Apr-25
+The local performance CSV now has 264 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -58,9 +58,9 @@ Writing default for replies, handoffs and maintained documents:
 
 **The broad experiment ended at 422 completed unique valuations; no 600-case wait or queue continuation.** There is no active native goal (verified13:25UTC). Counts: 422 valued, 394 factual exclusions, 21 blocked, 2,163 unfinished pending; 837 base records plus 78 revisions. Case529 is unfinished and excluded. Policy v2 permits autonomous selection from the completed universe, subject to primary comparison, exact selected outcome tokens, hashed report and every live entry gate. [Policy](notes/entry_review_gate.json) · [Selection and comparison](research/2026-10-21-completed-review-allocation.json).
 
-**Current allocation:** Delcy (#300) filled28YES18¢/$5.04; October Fed no dissent (#179) filled5.263158YES24¢/$1.263158, with14.736842shares remaining at the original bid. December Fed no change (#511) remains20YES19¢/$3.80. Cash9.148132; venue commitment3.536842/free5.611290. No new order or price change. [Fill reconciliation](research/2026-10-22-0515-fill-reconciliation.json) · [Current orders](notes/resting_orders.md).
+**Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain the holdings and original October Fed remainder after post-fill review; pull only its unfilled remainder byOct27 22UTC. Delcy’s former unfilled pull is obsolete; Oct24 13UTC remains a held-position source/exit review. Review December Fed before/after October’s decision. Earlier material evidence triggers review. [Current review](research/2026-10-22-051501-news-review.json).
+**Management:** retain holdings after oil-policy and OpenRouter drawdown reviews; no add. The October order endpoint returns `null`, leaving its 0.006842-share arithmetic tail unconfirmed. The full $4.80 reservation remains, and vetted paths block new buys until affirmative reconciliation. Delcy held-source/exit review remains Oct24 13UTC; review December Fed before/after October’s decision. [Fed review](research/2026-10-22-1208-fed-hold-review.json) · [OpenRouter review](research/2026-10-22-1208-openrouter-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 10:37 UTC
+## Last audited snapshot — October 22 12:10 UTC
 
-**Canonical bankroll: $195.98 including $5.78 funded gas.** Trading value is $190.20 at midpoint or $188.32 using indicative fee-net depth (+10.8% versus $170 contributed); same-producer PM values are $46.34/$44.46. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-1037-financial-snapshot.json).
+**Canonical bankroll: $195.08 including $5.77 funded gas.** Trading value is $189.31 at midpoint or $186.81 using indicative fee-net depth (+9.9% versus $170 contributed); same-producer PM values are $48.97/$46.47. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. The fill is internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-1210-financial-snapshot.json).
 
-**No position or order changes after the fill review.** Twelve all-size positions,131confirmed trades and the October Fed remainder reconcile with the prior check. Safety checks are clean, and four daemons remain unique/current. The original hold reviews and pull deadlines remain active. [Current periodic review](research/2026-10-22-1036-checkin.json) · [Orders](notes/resting_orders.md).
+**Twelve all-size positions; 132 confirmed trades.** The fill reconciles against trades, cash, exact CTF balances and the Polygon receipt. The initial audit repaired its size snapshot; the final audit is clean. New buys remain blocked for the order’s uncertain terminal state. Four daemons remain unique/current. [Check and limits](research/2026-10-22-120847-checkin.json).
 
-The chart has 263 observations; all 262 earlier rows and contributions are unchanged, and 10 chart tests passed. Eight alerts were reviewed. The requested Michigan article remains blocked; related reporting documents allegations and denials, without a measured vote response. No action or Telegram was warranted. Next existing full check:14UTC. [News decisions](research/2026-10-22-1036-news-decisions.json) · [Discovery limits](research/2026-10-22-0201-discovery.json).
+The chart has 264 observations; all 263 earlier rows and contributions are unchanged, and 10 chart tests passed. All 15 new alerts, including 7 requested IDs, were reviewed. Telegram 1291 reports the fill and blocker. Next existing full check: 14UTC. [News decisions](research/2026-10-22-1208-news-decisions.json) · [Discovery limits](research/2026-10-22-0201-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

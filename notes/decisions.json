@@ -1,5 +1,5 @@
 {
-  "next_id": 263,
+  "next_id": 265,
   "decisions": [
     {
       "id": 1,
@@ -5709,6 +5709,45 @@
         "primary-review"
       ],
       "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 263,
+      "timestamp": "2026-10-22T12:23:22Z",
+      "type": "skip",
+      "thesis": "Retain19.993158YES after confirmed original maker fill and fresh oil/policy/joint-risk review; no add. Preserve4.80reservation/globalBUYblock because exact order endpoint null and20-share tail0.006842 terminal disposition unknown.",
+      "confidence": "medium",
+      "prediction": "Unchanged pYES67.346%, selected47.346%, broad30\u201390%; subjective/unfitted, full4.798358 cost can lose. December no-change46%/selected31% also retained under shared oil/policy uncertainty.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-10-28",
+      "tags": [
+        "hold_review",
+        "postfill",
+        "fed",
+        "order_reconciliation"
+      ],
+      "slug": "will-no-one-dissent-the-october-fed-decision-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 264,
+      "timestamp": "2026-10-22T12:23:22Z",
+      "type": "skip",
+      "thesis": "Retain5NO/noadd after drawdown/UMA mark alert, current official chart/rules/full book review. CompletedOct12 unchanged; Oct19partial and targetweeks absent; prior regime/measurement uncertainty explicit.",
+      "confidence": "medium",
+      "prediction": "Dated primaryNO88%/selected73% retained; broadNO20\u201399.5/concentrated750T rival favor cash. No forecast-date reset; full3.25 cost can lose.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-23",
+      "tags": [
+        "hold_review",
+        "drawdown",
+        "openrouter"
+      ],
+      "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

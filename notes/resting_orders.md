@@ -1,14 +1,14 @@
-# Current resting orders — October22 05:35 UTC
+# Current resting orders — October22 12:31 UTC
 
-**One LIVE BUY, partially filled:**OctoberFedno dissent original20YES24¢, matched5.263158, remaining14.736842/venuecommitment3.53684208. Delcy28YES18¢fullyfilled/cost5.04; DecemberFed20YES19¢held/cost3.80. pUSD9.148132/free5.611290.131CONFIRMED exhaustedtrades/12all-sizepositions; maker/index/CTF/cashreconcile. [Current fills](../research/2026-10-22-0515-fill-reconciliation.json).
+**Zero visible open orders; terminal state uncertain.** Original October Fed order20YES24¢ now has19.993158 confirmed YES, cost$4.798358. The latest14.73-share fill cost$3.5352; pUSD$5.612932. Authenticated exact-order GET returned HTTP200 JSON `null`, not terminal MATCHED/CANCELED.132 exhausted confirmed trades and CTF/cash/receipt agree. [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-|Remaining claim/entrydecision|Original/matched/remainingYES|Exact order|Required pull|
+|Claim / entry+hold DEC|Original / confirmed / arithmetic tail|Exact original order|Management|
 |---|---|---|---|
-|OctoberFedno dissent/252|20/5.263158/14.736842 at24¢|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|UnfilledremainderOct27 22UTC|
+|October Fed no dissent /252+263|20 /19.993158 /0.006842 YES at24¢|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|No visible bid to cancel; reconcile affirmative terminal/trade state|
 
-The conservativeentryledger retains thisorder's original4.80risk untilalltargetsharesindexed; it was notshrunk tovenue's remaining3.53684208. OnlyfullyindexedDelcyreservation retired via vettedlockedmerge05:25–26; no cashrefund/profit. Otherorders unchanged. Revieweachcheck/earliermaterialevidence; cancel-firstonunassessedmaterialchange, noadd/repost/chase/takerfallback.
+The vetted retirement preview retains the full$4.80 entry reservation. A reconciliation blocker now prevents new BUYs; no pruning, refund, released-risk claim, cancellation or repost. The0.006842 tail has$0.00164208 arithmetic limit value, not proved live exposure. Next existing14UTC review; no idle polling. The original Oct27 22UTC pull applies only if a verified live remainder reappears. The blocker’s original local reason has an evidence-path typo; the corrected path is linked in the fill proof, with original protection preserved.
 
-**HeldOctoberFed/DEC261:**5.263158YES,cashcost1.263158,pYES67.346%/selected47.346%. Selectedterminal2.491895vs~1.263158exit+6dvariablecarry; broad30%less20ppreservefavorscash, dissentcanloseall. ActualOct22dailyreviewretainssubjectiveOct21scenarioinputs; noindependentvoteproduct/calibratedfloor. Pullonlyunfilledremainder; heldsharesneedfreshhold/exitreview. [Underwriting](../research/2026-10-22-fed179-partial-fill.json).
+**Held October Fed /DEC263:**19.993158YES, cost$4.798358; pYES67.346%/selected47.346% retained after fresh oil/policy, conditional-fill and joint-loss review. Selected terminal$9.466 vs12:10 indicative exit$4.00 plus carry. Broad30% less20pp reserve and severe adverse-fill sensitivity favor cash; full stake can lose. No calibrated floor or independent-voter product. [Primary review](../research/2026-10-22-1208-fed-hold-review.json).
 
 **HeldDelcy/DEC262:**28YES18¢/cost5.04, order`0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`fullyfilled/absentopenorders. OriginalunfilledOct24pull obsolete; keepOct24 13UTCheldsource/exitreview andearliermateriallegal/successionnews. Primary74.592%/selected59.592%unfitted; laterlegalinstruments/Maduroco-designation/multiple-headrule canlosefullstake. Noautomaticadd. [Exactassets/criteria/risk](../research/2026-10-22-delcy300-fill.json).
 
