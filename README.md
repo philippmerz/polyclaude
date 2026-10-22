@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 258 recorded observations from Apr-25
+The local performance CSV now has 259 recorded observations from Apr-25
 through Oct-22. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 22 05:17 UTC
+## Last audited snapshot — October 22 06:01 UTC
 
-**Canonical bankroll: $196.01 including $5.85 funded gas.** Trading value is $190.16 at midpoint or $188.39 using indicative fee-net depth (+10.8% versus $170 contributed); same-producer PM values are $46.29/$44.52. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-0517-financial-snapshot.json).
+**Canonical bankroll: $195.93 including $5.83 funded gas.** Trading value is $190.10 at midpoint or $188.10 using indicative fee-net depth (+10.6% versus $170 contributed); same-producer PM values are $46.23/$44.23. The $19.74 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. Purchases are internal deployment, not realized profit. [Financial snapshot](research/2026-10-22-0601-financial-snapshot.json).
 
-**Two original bids filled; numeric probabilities are unchanged.** Delcy filled fully and October Fed partially; exact maker records, indexed holdings, CTF and cash reconcile. Post-fill reviews retain both holdings without added orders, while recording adverse cash cases and source uncertainty. The initial audit’s new-claim, daily-underwriting and prior/mark flags were assessed; its rerun passed. Four daemons remain unique/current. [Fed review](research/2026-10-22-fed179-partial-fill.json) · [Delcy review](research/2026-10-22-delcy300-fill.json).
+**No position or order changes after the fill review.** Twelve all-size positions,131confirmed trades and the October Fed remainder reconcile with the prior check. Safety checks are clean, and four daemons remain unique/current. The original hold reviews and pull deadlines remain active. [Current periodic review](research/2026-10-22-0600-periodic-review.json) · [Orders](notes/resting_orders.md).
 
-The chart has258observations; all257earlier rows and contributions are unchanged,10charttests passed. All25new headlines were reviewed; the requested Michigan matchup headline supplies no measured vote effect. Exact source gaps remain documented. [News decisions](research/2026-10-22-0515-news-decisions.json) · [Completed02UTC discovery limits](research/2026-10-22-0201-discovery.json).
+The chart has259observations; all258earlier rows and contributions are unchanged,10charttests passed. Three later headlines were reviewed: the Delcy sports meeting dates toOct19, and the official Taylor Swift announcement toSep23; neither establishes new evidence for a held outcome. No portfolio action or Telegram notification was warranted. Next scheduled check10UTC/full14UTC. [Completed02UTC discovery limits](research/2026-10-22-0201-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
