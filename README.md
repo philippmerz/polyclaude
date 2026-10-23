@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 272 recorded observations from Apr-25
-through Oct-22. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 273 recorded observations from Apr-25
+through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-22. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-23. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 
@@ -82,15 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 00:19 UTC
+## Last audited snapshot — October 23 01:49 UTC
 
-**Canonical bankroll: $196.09 including $5.71 funded gas.** Trading value is $190.38 at midpoint or $187.90 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.03/$47.55. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0019-financial-snapshot.json).
+**Canonical bankroll: $197.06 including $5.79 funded gas.** Trading value is $191.27 at midpoint or $188.25 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $50.93/$47.91. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0149-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains uncertain; its full $4.80 reservation and new-buy block remain. Required daily reviews cleared the initial stale flags; the final state audit and complete-pair exit check passed. Four daemons run once each. [Completed check](research/2026-10-23-0016-check.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order still returns `null`; its full $4.80 reservation and new-buy block remain. State audit, complete-pair exit check and daemon checks passed. [Completed check](research/2026-10-23-0146-check.json).
 
-All six requested alerts and 12 new rows were reviewed. Exact Michigan and Delcy bodies remain unverified; headlines supply no measured poll shift or year-end tenure instrument. Poll ages advanced once for Oct23; rounded forecasts remain unchanged. Clarity retains its paired criteria-consistent floor, with current Senate vote status and oracle risk explicit. All 271 earlier CSV rows and capital flows are preserved; 10 chart tests passed. [Source decisions](research/2026-10-23-0016-news-decisions.json).
+All four requested alerts and 10 new rows were reviewed. The mayoral quote and blackout-protest body remain unverified; dialogue reports may share one meeting. No measured poll shift, HLE score or new legal-tenure instrument was established. Same-day forecasts remain unchanged. Higher October Fed bids now make its previously documented ratio3 stress case favor cash; the adopted selected estimate still favors holding. [Source decisions](research/2026-10-23-0146-news-decisions.json) · [Hold comparisons](research/2026-10-23-0146-hold-review.json).
 
-**Weekly review completed:** Oct16–23 trading midpoint fell $0.30 (−0.16%); indicative depth fell $1.38 (−0.73%), before unreconciled VM/API costs. No alpha or audited realized-profit claim. The summary was sent to Telegram. [Weekly review](research/2026-10-23-weekly-review.json).
+**Weekly review completed at 00:34:** Oct16–23 trading midpoint fell $0.30 (−0.16%); indicative depth fell $1.38 (−0.73%), before unreconciled VM/API costs. No alpha or audited realized-profit claim. Summary already sent to Telegram; next weekly Oct30. [Weekly review](research/2026-10-23-weekly-review.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
