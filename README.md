@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 282 recorded observations from Apr-25
+The local performance CSV now has 283 recorded observations from Apr-25
 through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after a 14.73-share maker fill at 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the 14:00 account, source and discovery review; no numeric prior, verification-date or DEC change. The faculty donation report is not a representative poll, and the exact University Herald body remains unknown. Messi’s confirmed 2026 award supplies no measured Google ranking effect; K3.1 remains unverified. [Latest check](research/2026-10-23-1400-check.json) · [News decisions](research/2026-10-23-1400-news-decisions.json) · [Hold review](research/2026-10-23-1400-hold-review.json).
+**Management:** retain/no add after the 15:08 account, source and hold review; no numeric prior, verification-date or DEC change. The Michigan PAC report is secondary and not a measured voter shift; the exact Legis1 body and primary FEC record are unverified. The captured NSA press release does not name Moonshot or establish a binding ban; routing/action evidence remains incomplete. [Latest check](research/2026-10-23-1508-check.json) · [News decisions](research/2026-10-23-1508-news-decisions.json) · [Hold review](research/2026-10-23-1508-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,17 +82,16 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 14:02 UTC
+## Last audited snapshot — October 23 15:09 UTC
 
-**Canonical bankroll: $196.27 including $5.80 separately contributed gas.** Trading value is $190.47 at midpoint or $188.21 at indicative fee-net depth (+10.7% versus $170); same-producer PM values are $50.11/$47.85. The $19.76 producer “REALIZED” residual is unchanged arithmetic, not verified settlement or profit; VM/API costs are excluded. Estimates are sequential, not synchronized NAV or guaranteed proceeds. CSV 282 preserves the 281-row prefix; the 10 chart tests passed once. [Financial snapshot](research/2026-10-23-1402-financial-snapshot.json).
+**Canonical bankroll: $196.50 including $5.78 separately contributed gas.** Trading value is $190.72 midpoint or $188.36 at indicative fee-net depth (+10.8% versus $170); PM values are $50.36/$48.00. The $19.76 producer residual is arithmetic, not validated settlement or profit; VM/API costs are excluded. Snapshot is sequential, not synchronized NAV or guaranteed proceeds. CSV 283 preserves the exact 282-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-23-1509-financial-snapshot.json).
 
-**No new trade, fill or external flow:** 12 positions, 132 confirmed trade IDs, zero visible orders and pUSD $5.612932. All 12 financial identity/cost tuples and selected CTF balances are unchanged; current marks moved only for Delcy, December Fed, October no-dissent, Michigan and OpenRouter. The exact #179 GET returned HTTP 200 with JSON `null`; its terminal state remains unknown. The known maker fills remain 14.73 and 5.263158 YES, leaving a 0.006842 arithmetic share difference without terminal proof. Keep the full $4.80 reservation and global BUY block. Two zero-value claims remain redeemable; no burn was invoked. [Completed check](research/2026-10-23-1400-check.json).
+**Account and protection:** 12 positions, 132 confirmed trade IDs, zero visible orders, and pUSD $5.612932; all 12 financial tuples and selected CTF balances are unchanged. The exact #179 GET returned HTTP 200 with JSON `null`, so terminal state remains unknown. Captured maker fills are 14.73 and 5.263158 YES; the 0.006842 arithmetic tail is unresolved. Keep the full $4.80 reservation and global BUY block. Two zero-value claims remain; no burn was invoked. [Check](research/2026-10-23-1508-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Current exits:** #179 $4.60 plus five-day carry $4.602079; December Fed $4.20 plus 96-day carry $4.236440; Michigan $1.35 plus 21-day carry $1.352562; whole Clarity $27.51 plus 71-day carry $27.686527 against conditional $29. Delcy remains $5.04, Kimi $1.00, Messi $1.45 and OpenRouter $2.70. Michigan stresses at 1.5pp, 2.5pp and same-bias G12 remain above current cash+carry; 3.5pp is below. No measured voter shift supports repricing. Gross exposure plus full reservation is $55.8623514 versus 27%/$52.9929 and 30%/$58.881; neither cap authorizes entry. [Hold review](research/2026-10-23-1400-hold-review.json).
+**Current exits:** #179 $5.20 plus five-day carry $5.202350, versus selected terminal $9.465961 and ratio-3 cash case $4.146523. December Fed $4.20; Delcy $5.04; Michigan $1.35; Kimi $1.00; Messi $1.45; OpenRouter $2.65 plus 35-day carry $2.658383 versus selected $3.65; whole Clarity $27.31 plus 71-day carry $27.485244 versus conditional $29. Fixed OpenRouter anchors remain unadopted. Michigan’s 1.5pp, 2.5pp and same-bias G12 stresses exceed current cash+carry; 3.5pp is below. No measured voter shift supports repricing. Gross exposure plus full reservation is $55.8623514 versus 27%/$53.055 and 30%/$58.95; caps do not authorize entry. [Hold review](research/2026-10-23-1508-hold-review.json).
 
-**News and discovery:** six alerts reviewed; no new resolving measurement or forecast change. Fresh OpenRouter raw totals are 164.043986T completed/129.400341T partial; target weeks are absent, and the partial is not a final forecast. Seven bounded scans selected 3,080 row observations covering 3,045 distinct market IDs, all unvalued. The four context parents contain 5,319 repeated row observations; omissions and source gaps remain explicit. Fresh UMA disputed status bars both entries in the Russia–Ukraine lead; a cheap NO price and proposed talks are not EV evidence. [News](research/2026-10-23-1400-news-decisions.json) · [Discovery](research/2026-10-23-1400-discovery.json) · [Cases](research/2026-10-23-1400-discovery-cases.json).
+**News:** eight new rows reviewed, including the requested ID; no prior/date/model/DEC change. The PAC renaming/spend report is not a verified crossover measure; Sheffield repeats the Oct22 event. Captured NSA press-release text does not identify Moonshot or establish a binding ban, while the linked full CSA PDF remains inaccessible. Messi award/attendance coverage supplies no measured Google ranking effect. [News decisions](research/2026-10-23-1508-news-decisions.json).
 
-Bounded storage maintenance completed at 14:05 with rc0, zero files archived and zero errors. Next scheduled light checks are 18:00 and 22:00 UTC; next weekly review is Oct30.
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
 Coinbase B20 AAPLc/MSFTc/NVDAc have small-ticket Slipstream quotes losing about
