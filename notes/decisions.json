@@ -1,5 +1,5 @@
 {
-  "next_id": 266,
+  "next_id": 267,
   "decisions": [
     {
       "id": 1,
@@ -5766,6 +5766,26 @@
         "kimi",
         "source_integrity",
         "regulatory_news"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 266,
+      "timestamp": "2026-10-23T18:10:21Z",
+      "type": "skip",
+      "thesis": "Retain 10 Kimi YES and skip sale/add after verified official K3.1 Pro release: issuer HLE Full51.1/tools70, named-source admission unknown. Revise forecast from capability evidence; selected2.351 exceeds captured2.00 exit plus carry2.012834; low-update/admission cases favor cash.",
+      "confidence": "medium",
+      "prediction": "Subjective P(eligible Kimi HLE Accuracy>=55 by Dec31)=38.51%, selected23.51% after15pp reserve; not a claim the issuer score qualifies. Prior34.02125% superseded only for this holding.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hold_review",
+        "kimi",
+        "primary_release",
+        "forecast_revision"
       ],
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
       "outcome": null,

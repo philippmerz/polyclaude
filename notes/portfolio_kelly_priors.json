@@ -1817,9 +1817,9 @@
     "current_management": "No order exists. Reopen only with fresh independent source/conditional-fill/current economics and execution gates; no automatic entry/chase/taker fallback."
   },
   "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823": {
-    "p_yes": 0.34021250000000014,
-    "p_no": 0.6597874999999999,
-    "p_yes_stress": 0.19021250000000015,
+    "p_yes": 0.3851,
+    "p_no": 0.6149,
+    "p_yes_stress": 0.2351,
     "p_yes_range": [
       0.08,
       0.8
@@ -1828,33 +1828,35 @@
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.75,
     "cluster_frac": 0.1,
-    "verified": "2026-10-20",
-    "criteria_read": "2026-10-20",
+    "verified": "2026-10-23",
+    "criteria_read": "2026-10-23",
     "market_id": "3072315",
     "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
     "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
     "criteria_sha256": "46c8d9769b595d0102d53a2d6940ae68b0119a3adc8cb8cceac238feb1e06ae7",
     "hidden_info": true,
     "research_report": "research/2026-10-17-deep-review/evaluations/0412.md",
-    "probability_model": "research/2026-10-17-deep-review/models/0412_kimi55_primary_0100.json",
-    "latest_source_packet": "data/deep_review_20261017/work/tick012937_kimi_source_refresh_0210.json",
-    "rationale": "Primary34.02125%YES/15ppselected19.02125/broad8\u201380; uncalibratedsource-admission/update tree. Currentofficialboard41.08 vsissuer56withtools: admission/config/fallbackuncertain. MOFCOMscopedproposal/APIexception independentlyread, notblanketmodelban orverifiedK3.1roadmap.",
-    "current_assessment": "Oct22source/holdreview DEC265: retain10YES/noadd, numericOct20forecast unchanged. Sept22CACsecondary-report/Sept10Anthropicrouting-training allegations relevant to genuine-model/admission/future-access risk, not newlyverifiedOct22order or HLEcorrection. Fresh10shareexit1.00 vsselected1.902125; branch stresses can favorcash/full1.20loss. research/2026-10-22-1635-kimi-hold-review.json",
+    "probability_model": "research/2026-10-23-1800-kimi-review.json",
+    "latest_source_packet": "data/deep_review_20261017/work/periodic20261023_1800/kimi_release_facts.json",
+    "rationale": "Oct23 official K3.1Pro issuer release: Full51.1/tools70/Diamond39.4; named HLE admission remains unverified/API403. New unfitted admission/additional-update tree .3851;15ppreserve .2351; range8\u201380. Not automatic vendor qualification.",
+    "current_assessment": "Retain10YES/noadd after fresh2.00exit+71d2.012834 vs newprimary3.851/selected2.351. Oldselected1.902125 nowfavoredcash; forecast revised from actual issuer evidence, not price alone. Low-update/admission cases favor cash.",
     "management": "Filledholding: originalBUY cancel/pull obsolete. Noadd/chase/repost. Reviewexistingchecks/earlier material model/score/source/evaluation/export-policy change; reassess or exit on changed load-bearingfacts/uncertainty. Hidden-informationclass: no restingSELL at/belowfair; thesis-breakexit remains available. Full1.20costloss/sourceoutagepastJanuary possible; futuremoneyrequiresfresh fullgates.",
     "monitoring": "Existing scoped feed plus Kimi/Moonshot AI/MoonshotAIterms retained for nowheld exact55claim. Original30RSS coverage and unordered5000ID limitation remain dated/nonexhaustive; no stateedit/forcedpoll/newwatcher. Cache5min/caps/cooldown/private-unannouncedsource gaps remain. Newlymaterialevidence invokes freshhold/exitreview, not obsoleteBUYcancel.",
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
     "decision_id": 243,
     "latest_execution_review": "data/deep_review_20261017/work/tick012937_fill_primary_reconciled_0202.json",
-    "current_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
     "latest_news_review": {
-      "reviewed_utc": "2026-10-22T16:43:37.969150+00:00",
-      "alert_id": "3dfb9a3fe4ef1e0de48a296ff70b05e465ef5fc8",
-      "report": "research/2026-10-22-1635-kimi-hold-review.json",
-      "source": "/home/polyclaude/polyclaude/data/deep_review_20261017/work/tick20261022_163548/source_facts.json",
-      "p_yes_unchanged": 0.34021250000000014,
-      "action": "RETAIN10YES/noadd; source/rules/book/branch-countermodel and joint-loss reviewed, no verified new official-score correction/binding order."
+      "reviewed_utc": "2026-10-23T18:10:21.085848+00:00",
+      "alert_id": "ab9458eea6a4913347a6753ef6eb6c045f5be66c",
+      "report": "research/2026-10-23-1800-kimi-review.json",
+      "source": "data/deep_review_20261017/work/periodic20261023_1800/kimi_release_facts.json",
+      "p_yes_previous": 0.3402125,
+      "p_yes": 0.3851,
+      "action": "Retain10YES/noadd; revision from verified primary issuer release, not qualifying leaderboard outcome."
     },
-    "latest_risk_review": "research/2026-10-22-1635-kimi-hold-review.json"
+    "latest_risk_review": "research/2026-10-23-1800-kimi-review.json",
+    "prior_experiment_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
+    "current_revision": "research/2026-10-23-1800-kimi-review.json"
   },
   "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026": {
     "p_yes": 0.2329,
