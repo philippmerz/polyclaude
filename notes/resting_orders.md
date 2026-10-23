@@ -1,28 +1,28 @@
-# Current resting orders — October 23 19:45 UTC
+# Current resting orders — October 23 21:16 UTC
 
-**Zero visible open orders; #179 terminal state remains unknown.** Original 20 YES at 24¢ has 19.993158 confirmed shares at $4.798358 cost; fills remain 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP 200 JSON `null`; all 132 confirmed trade IDs, all 12 financial tuples and pUSD $5.612932 match 18:00. The 0.006842 share tail is arithmetic, not terminal proof. Keep the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-23-1945-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal state remains unknown.** Original 20 YES at 24¢ has 19.993158 confirmed shares at $4.798358 cost; fills remain 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP 200 JSON `null`; all 132 confirmed trade IDs, all 12 financial tuples and pUSD $5.612932 match 19:45. The 0.006842 share tail is arithmetic, not terminal proof. Keep full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-23-2116-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
 |Claim / entry+hold DEC|Original / confirmed / arithmetic tail|Exact original order|Management|
 |---|---|---|---|
 |October Fed no dissent /252+263|20 /19.993158 /0.006842 YES at24¢|`0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`|No visible bid to cancel; terminal state unknown|
 
-All-row `grossInitialValue` is $51.288773; plus full reservation it is $56.088773, unchanged. [Account audit](../data/deep_review_20261017/work/tick20261023_194523/account_audit.json) · [Gross reconciliation](../data/deep_review_20261017/work/tick20261023_194523/gross_exposure_correction.json).
+All-row `grossInitialValue` is $51.288773; plus full reservation it is $56.088773, a conservative gross diagnostic rather than current loss or entry authority. [Account and gross audit](../research/2026-10-23-2116-check.json).
 
-**Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; selected pYES 47.346% unchanged. Exit $5.00 plus five-day carry $5.002259; selected terminal $9.465961; ratio-3 cash case $4.146523. Keep full reservation and BUY block. [Check](../research/2026-10-23-1945-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; selected pYES 47.346% unchanged. Exit $5.20 plus five-day carry $5.202430; selected terminal $9.465961; ratio-3 cash case $4.146523. Keep full reservation and BUY block. [Check](../research/2026-10-23-2116-check.json).
 
-**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76 plus 71-day carry $4.790544; selected terminal $16.68576. This check found no fresh instrument or source validation. [Check](../research/2026-10-23-1945-check.json).
+**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76 plus 71-day carry $4.791583; selected terminal $16.68576. Current Instagram post identities/dates are unknown; no new tenure instrument verified. [Check](../research/2026-10-23-2116-check.json).
 
-**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 (terminal $3.65). Exit $2.50 plus 35-day carry $2.507908; fixed 160–220T completed-volume anchors remain unadopted. Full $3.25 can lose. Current mark $0.555 and thin book are not by themselves a thesis break or sell trigger. [Check](../research/2026-10-23-1945-check.json).
+**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 (terminal $3.65). Exit $2.65 plus 35-day carry $2.658668; fixed completed-volume anchors remain unadopted. Full $3.25 can lose; no mark-only forced sale. [Check](../research/2026-10-23-2116-check.json).
 
-**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.00 plus 96-day carry $4.034705 vs selected $6.20. No new December policy evidence or numeric update. [Check](../research/2026-10-23-1945-check.json).
+**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.00 plus 96-day carry $4.035886 vs selected $6.20. A selected 20% terminal $4 remains below carry; no new forecast update. [Check](../research/2026-10-23-2116-check.json).
 
-**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.90 plus 71-day carry $1.912192 versus selected terminal $2.351 (pYES38.51% central/23.51% after 15pp reserve). Retain/no add; OfficeChai repeats issuer claims without HLE evidence and Orca/Decoder bodies remain unknown. [Check](../research/2026-10-23-1945-check.json) · [Kimi review](../research/2026-10-23-1800-kimi-review.json).
+**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.90 plus 71-day carry $1.912607 versus selected terminal $2.351 (pYES38.51% central/23.51% after15pp reserve). Retain/no add; latest startup headline plans weights for Nov4 but supplies no qualifying HLE result. [Check](../research/2026-10-23-2116-check.json) · [Prior primary review](../research/2026-10-23-1800-kimi-review.json).
 
-**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit $1.45. The Oct23 award ceremony does not establish Google’s 2026 ranking. [Check](../research/2026-10-23-1945-check.json).
+**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit $1.45. The Oct23 ceremony does not establish Google’s annual ranking. [Check](../research/2026-10-23-2116-check.json).
 
-**Held Michigan / DEC261:** 5 NO; exit $1.35 plus 21-day carry $1.352562, versus selected $1.526054. New targeting headline bodies/metrics were unavailable; no measured crossover or numeric update. [Check](../research/2026-10-23-1945-check.json).
+**Held Michigan / DEC261:** 5 NO; exit $1.40 plus 21-day carry $1.402747, versus selected $1.526054. A −1.5pp stress remains above carry; −2.5pp and shared-bias stress fall just below it. No measured voter effect or automatic attack uplift. [Check](../research/2026-10-23-2116-check.json) · [Hold comparison](../research/2026-10-23-2116-hold-review.json).
 
-Clarity remains managed as a whole pair: exit $27.62 plus 71-day carry $27.797233 remains below conditional $29. Other exits: December $4.00, Kimi $1.90, Messi $1.45, Michigan $1.35 and OR $2.50. Retain/no add; no new prior/date/DEC change. [Check](../research/2026-10-23-1945-check.json).
+Clarity remains managed as a whole pair: exit $27.66 plus 71-day carry $27.843527 remains below conditional $29; joint oracle-control risk can remove the floor. Other exits: December $4.00, Kimi $1.90, Messi $1.45, Michigan $1.40 and OR $2.65. Retain/no add; no prior/date/model/DEC change. [Check](../research/2026-10-23-2116-check.json).
 
 ## Prior order record — historical
 
