@@ -1623,3 +1623,28 @@ No extra timer, durable goal or idle follow-up was created.
 
 Evidence: current journal entry, `data/checkin_20261016T0014_weekly_facts.json`,
 `data/checkin_20261016T0014_root_judgment.json` and the preserved run receipts.
+
+
+# Week 2026-10-16 → 2026-10-23
+
+Ex-gas trading midpoint fell **$0.30 (−0.16%)** to **$190.38**; indicative fee-net depth fell **$1.38 (−0.73%)** to **$187.90**. These sequential marks exclude unreconciled VM/API costs and are not audited realized P&L. The comparison spans approximately7.0013days, Oct16 00:17:26–42 to Oct23 00:19:15–31UTC.
+
+|Measure|Oct16|Oct23|Change|
+|---|---:|---:|---:|
+|Whole marked bankroll|196.69|196.09|−0.60|
+|Separately funded gas mark|6.01|5.71|−0.30|
+|Ex-gas trading midpoint|190.68|190.38|−0.30|
+|Ex-gas indicative depth|189.28|187.90|−1.38|
+|PM midpoint / depth|33.46 /32.06|50.03 /47.55|+16.57 /+15.49|
+|Whole approximate depth|195.29|193.61|−1.68|
+|Unaudited accounting residual|18.68|19.75|+1.07; notprofit|
+
+- No external flow is recorded during the window; documented trading capital remains170. The ledger is not an exhaustive on-chain flow audit. Trading depth is+10.53% versus170, before VM/API costs.
+- Authenticated trade ownership, rather than top-level counterparty fields, yields10maker-buy segments22.008358 and2taker-sells5.20;27.208358 execution notional is notP&L. Key holdings now include Kimi10YES/1.20, Delcy28YES/5.04, OctoberFed19.993158YES/4.798358 andDecemberFed20YES/3.80.
+- Whalefall6NO@17¢ lost1.02; duplicateDEC222/235 count once. The ledger grew201→265 records, with125→164 truthyoutcomes and76→101pending. Its64new/38resolved-at rows mix forecasts, skips, cancels and operational work; they are not independent calibration samples. BoI no-fill and no-position ETH outcomes are not investment losses. Most new holdings remain unresolved.
+- Retain holdings/noadd after current exit, source, low-case and joint-loss review. Models are unfitted, not calibratedfloors. Fed8.598358 andOR+Kimi4.45 can jointlylose/nohedgecredit. Clarity must stay complete; oracle/control failures can remove its logicalfloor. No at/belowfair hidden-info restingSELL; thesis-break exits remainactive.
+- The179order still lacks affirmative terminalproof for0.006842arithmeticshares. Preservefull4.80reservation/globalBUYblock despitezero visible orders. The broad experiment staysstopped at422valuations; no revivedqueue/600-casewait.
+- Passive comparison: a constant3.2988% cash-rate sensitivity on190.68 adds approximately0.12 over this window. It is not measured passive performance; actualcashcarry is already in bankroll. Matched BTC/ETH benchmark history was unavailable; no off-chain stock checks were restored. No alpha claim.
+- Reviewed the condensed lessons; added a local interpreter/capture-path preflight to the existing receipt rule after two capture-setup failures. Missing bodies remain gaps; no invented response statuses. Daily MI/Fed and whole-Clarity reviews preceded metadata renewals, with original numerical forecasts intact. Watcher inventory warnings were followed by a healthy direct probe; priorcause and daemoncache state remain unproved.
+
+[Weekly judgment and evidence](../research/2026-10-23-weekly-review.json) · [Current financial snapshot](../research/2026-10-23-0019-financial-snapshot.json). Next weekly boundary follows this closing window onOct30; monthlyreviewNov12; next existingfullcheck02UTC.

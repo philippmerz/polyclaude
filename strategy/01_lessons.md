@@ -180,7 +180,8 @@ and “Process & operator covenant.” Canonical records remain in notes/;
   follow-up and end. Cron and event watchers handle waiting. Do not create an
   indefinite goal, idle follow-up or extra timer because a check was quiet.
 - Inspect call paths before running tooling. For bounded probes, resolve and
-  verify the intended parent, then create a fresh capture directory with
+  verify the interpreter and intended parent with a harmless local round-trip,
+  then create a fresh capture directory with
   `exist_ok=False` before requests; keep writes within it. If post-probe
   processing fails, preserve receipts and mark lost metadata unknown instead
   of rerunning completed probes or reconstructing it. Preserve unrelated
