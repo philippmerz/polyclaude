@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 277 recorded observations from Apr-25
+The local performance CSV now has 278 recorded observations from Apr-25
 through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the Oct23 06:04 news and periodic review; no numeric prior, verification-date or DEC change. The earlier exact Al Jazeera report covers Oct22 protests, gives no election date and reports Machado’s July2027 demand; it remains adverse risk evidence, not a transition instrument. New Delcy meeting and Facebook titles lack verified body, terms or timetable. Delcy held-source review remains Oct24 13UTC; December Fed review remains before/after October’s decision. The October Fed order still returns JSON `null`; keep its full $4.80 reservation and new-buy block pending affirmative reconciliation. [Latest check](research/2026-10-23-0600-periodic-check.json) · [News decisions](research/2026-10-23-0600-news-decisions.json) · [Delcy review](research/2026-10-23-0447-delcy-review.json).
+**Management:** retain holdings/no add after the Oct23 06:21 news and periodic review; no numeric prior, verification-date or DEC change. The requested HolaNews body remains unavailable. Matching NoticiasSIN/EFE coverage dated Oct22 reports VTV arrival at a Delcy meeting but no details; a 2027-election proposal was unagreed, with further talks reported for Nov11–15. Separate Oct21 procedural-review/gold-commission agreements do not establish enacted law or a binding handover. No automatic tenure uplift. MI quote bodies remain unknown and no measured poll was verified. Delcy held-source review remains Oct24 13UTC; December Fed review remains before/after October’s decision. Keep the October Fed’s full $4.80 reservation and new-BUY block. [Latest check](research/2026-10-23-0617-check.json) · [Earlier Delcy rule review](research/2026-10-23-0447-delcy-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 06:01 UTC
+## Last audited snapshot — October 23 06:19 UTC
 
-**Canonical bankroll: $196.27 including $5.80 funded gas.** Trading value is $190.47 at midpoint or $187.85 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.13/$47.51. The $19.75 residual is unaudited; VM/API costs are excluded. The $0.02 increase from 04:48 is the gas-token mark, not trading return. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0601-financial-snapshot.json).
+**Canonical bankroll: $196.18 including $5.81 funded gas.** Trading value is $190.37 at midpoint or $187.85 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.03/$47.51. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. The CSV has 278 observations, preserving its 277-row prefix; the 10 chart tests passed once. [Financial snapshot](research/2026-10-23-0618-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 unchanged confirmed trade IDs, pUSD $5.612932 and zero visible orders. Delcy remains 28 YES; the only small mark move was Trump-out NO, 0.962 to 0.961 on 0.33 shares. Quantities and financial identity/cost tuples did not change. The October Fed order’s terminal state remains unknown; its full $4.80 reservation and new-buy block remain. State audit, safety checks and account reconciliation passed. [Completed check](research/2026-10-23-0600-periodic-check.json).
+**No new trade or fill:** 12 all-size positions, 132 unchanged confirmed trade IDs, pUSD $5.612932 and zero visible orders. Quantities and financial identity/cost tuples did not change. Marks moved only: October Fed no-dissent YES fell $0.10 and Trump-out NO rose $0.0001. The October Fed order’s terminal state remains unknown; its full $4.80 reservation and new-buy block remain. State audit, safety checks and account reconciliation passed. [Completed check](research/2026-10-23-0617-check.json).
 
-Eight additional rows through 05:56 were reviewed. The Kimi/Alibaba headline dates to July31 and supplies no verified full-HLE score; its Bloomberg body remains unavailable. The exact Michigan analysis and Delcy meeting statements remain unavailable, with no measured voter shift or tenure instrument. Retain/no add; no numeric prior, verification-date or DEC change. [News decisions](research/2026-10-23-0600-news-decisions.json) · [Current check](research/2026-10-23-0600-periodic-check.json).
+Three new rows through 06:12, including requested ID 8507, and six related older rows were reviewed. Matching NoticiasSIN/EFE reporting describes Oct22 meeting arrivals without details; the reported Figuera 2027 election proposal was unagreed and next talks were reported for Nov11–15. HolaNews body remains unavailable; this is not independent corroboration or a binding timetable. Miranda and MI quote bodies remain unknown; no measured poll or new tenure instrument. Retain/no add; no numeric prior, verification-date or DEC change. [Current check](research/2026-10-23-0617-check.json).
 
 The full 02UTC discovery pass is retained: seven scans and two compressed batch builds, with 3,080 unvalued row observations and explicit caps. Four literal-rule checks and three source checks established no complete new valuation. [Coverage](research/2026-10-23-0200-discovery.json) · [Focused cases](research/2026-10-23-0200-discovery-cases.json).
 
