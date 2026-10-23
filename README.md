@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 273 recorded observations from Apr-25
+The local performance CSV now has 274 recorded observations from Apr-25
 through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the Michigan odds/video reviews and verification of the earlier spending and acquisition reviews. No new poll was verified; the source gaps remain explicit. Oct23 daily and whole-Clarity reviews are complete; rounded forecasts are unchanged. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-23-0016-daily-hold-review.json).
+**Management:** retain holdings/no add after the full Oct23 02UTC source, exit and discovery checks. Forecasts are unchanged. OpenRouter’s partial-week raw total rose; its target weeks remain unobserved. October Fed’s ratio3 stress case now favors cash at the higher bid, while its adopted selected estimate still favors holding. The October order endpoint returns `null`; its 0.006842-share arithmetic tail remains unconfirmed. Preserve the full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source/exit review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-23-0200-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 01:49 UTC
+## Last audited snapshot — October 23 02:03 UTC
 
-**Canonical bankroll: $197.06 including $5.79 funded gas.** Trading value is $191.27 at midpoint or $188.25 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $50.93/$47.91. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0149-financial-snapshot.json).
+**Canonical bankroll: $197.04 including $5.74 funded gas.** Trading value is $191.30 at midpoint or $188.24 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $50.96/$47.90. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0203-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order still returns `null`; its full $4.80 reservation and new-buy block remain. State audit, complete-pair exit check and daemon checks passed. [Completed check](research/2026-10-23-0146-check.json).
+**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order still returns `null`; its full $4.80 reservation and new-buy block remain. The repeated +5pp UMA price flag was already observed in the preceding check. State audit, complete-pair exit check and daemon checks passed. [Completed check](research/2026-10-23-0200-check.json).
 
-All four requested alerts and 10 new rows were reviewed. The mayoral quote and blackout-protest body remain unverified; dialogue reports may share one meeting. No measured poll shift, HLE score or new legal-tenure instrument was established. Same-day forecasts remain unchanged. Higher October Fed bids now make its previously documented ratio3 stress case favor cash; the adopted selected estimate still favors holding. [Source decisions](research/2026-10-23-0146-news-decisions.json) · [Hold comparisons](research/2026-10-23-0146-hold-review.json).
+No new news rows were present through the frozen review boundary. Fresh OpenRouter data shows partial Oct19 usage of 116.124T; the completed Oct12 value is unchanged and contract weeks are absent. A distinct HLE-Diamond result does not establish Kimi’s qualifying full-HLE score. Same-day forecasts remain unchanged. [Hold comparisons](research/2026-10-23-0200-hold-review.json).
+
+Seven bounded discovery scans and both compressed batch builds completed. Their 3,080 row observations remain unvalued; page caps and omissions are explicit. Four literal-rule checks and three source checks established no complete new valuation. Gamma quotes are advisory, and minima are shares. [Coverage](research/2026-10-23-0200-discovery.json) · [Focused cases](research/2026-10-23-0200-discovery-cases.json).
 
 **Weekly review completed at 00:34:** Oct16–23 trading midpoint fell $0.30 (−0.16%); indicative depth fell $1.38 (−0.73%), before unreconciled VM/API costs. No alpha or audited realized-profit claim. Summary already sent to Telegram; next weekly Oct30. [Weekly review](research/2026-10-23-weekly-review.json).
 
