@@ -119,6 +119,11 @@ Before formatting read evidence, persist it through the existing vetted reader;
 Label SDK serialization and call-window timing honestly; they are not raw HTTP
 or wire timestamps. The helper changes no financial execution path.
 
+For tool-orchestrated web reads, store the returned string or object before any
+formatting or serialization. Use JSON and the proven writer; do not assume `btoa`
+or `Buffer` exists. If saving fails, retain the stored result and repair the writer
+without repeating the request. Mark any missing response or timing explicitly.
+
 Storage: prefer compact JSON/JSONL or CSV, with one shared policy/source parent
 and small indexed units. Large captures and discovery snapshots use gzip;
 retain raw-content hashes, timestamps, criteria and complete analysis. Do not
