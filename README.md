@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 285 recorded observations from Apr-25
+The local performance CSV now has 286 recorded observations from Apr-25
 through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after a 14.73-share maker fill at 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain/no add after the18UTC source/account review. Only Kimi forecast revised (DEC266): primary issuer K3.1 Pro HLE-Full51.1%/with-tools70% improves capability evidence but does not establish qualifying official leaderboard admission. Other priors unchanged; full4.80 reservation/global BUY block remains. [Latest check](research/2026-10-23-1800-periodic-check.json) · [Kimi judgment](research/2026-10-23-1800-kimi-review.json).
+**Management:** retain/no add after the19:45 source/account review; no forecast/date/DEC changes. Kimi remains38.51% primary/23.51% after reserve (DEC266, based on the18UTC issuer release); new coverage adds no verified named-source HLE qualification. Full $4.80 reservation/global BUY block remains. [Latest check](research/2026-10-23-1945-check.json) · [Kimi model](research/2026-10-23-1800-kimi-review.json).
 
 ## Mandate and constraints
 
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 18:00 UTC
+## Last audited snapshot — October 23 19:47 UTC
 
-**Canonical bankroll: $197.44 including $5.79 separately contributed gas.** Trading value is $191.65 midpoint or $189.42 at indicative fee-net depth (+11.4% versus $170); PM values are $51.30/$49.07. The producer reports $19.76 as REALIZED; this remains arithmetic, not independently validated settlement or profit, and VM/API costs are excluded. Values are sequential, not synchronized NAV or guaranteed proceeds. CSV 285 preserves the 284-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-23-1802-financial-snapshot.json).
+**Canonical bankroll: $197.11 including $5.73 separately contributed gas.** Trading value is $191.38 midpoint or $188.92 at indicative fee-net depth (+11.1% versus $170); PM values are $51.03/$48.57. The producer reports $19.76 as REALIZED; this is arithmetic, not independently validated settlement or profit, and VM/API costs are excluded. Values are sequential, not synchronized NAV or guaranteed proceeds. CSV 286 preserves the 285-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-23-1947-financial-snapshot.json).
 
-**Account and protection:** 12 positions, 132 confirmed trade IDs, zero visible orders, and pUSD $5.612932; all 12 financial tuples and selected CTF balances match the prior check. Exact #179 GET returned HTTP 200 with JSON `null`, so terminal status remains unknown. Captured maker fills total 19.993158 YES (14.73 and 5.263158), leaving a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims were not burned. [Check](research/2026-10-23-1800-periodic-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Account and protection:** 12 positions, 132 confirmed trade IDs, zero visible orders, and pUSD $5.612932; all 12 financial tuples and selected CTF balances match 18:00. Exact #179 GET returned HTTP 200 with JSON `null`, so terminal status remains unknown. Captured maker fills total 19.993158 YES (14.73 and 5.263158), leaving a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims were not burned. [Check](research/2026-10-23-1945-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Gross and caps:** all 12 rows’ `grossInitialValue` total $51.288773; plus the full reservation, gross plus reservation is $56.088773, unchanged from the prior read. The earlier $55.8623514 figure does not reproduce from the all-row fields. At $197.44, 27% and 30% caps are $53.3088 and $59.232; neither cap authorizes an entry.
+**Gross and caps:** all 12 rows’ `grossInitialValue` total $51.288773; plus the full reservation, gross plus reservation is $56.088773, unchanged. At $197.11, reference 27% and 30% amounts are $53.2197 and $59.133; neither cap authorizes an entry.
 
-**Current exits:** #179 $5.00 plus five-day carry $5.002259 versus selected $9.465961; December Fed $4.20 plus 96-day carry $4.236440 versus $6.20; Delcy $4.76 plus 71-day carry $4.790544 versus $16.68576; Michigan $1.35 plus 21-day carry $1.352562 versus $1.526054; Kimi $2.00 plus 71-day carry $2.012834 versus revised $2.351; Messi $1.45 plus 71-day carry $1.459304 versus $2; OpenRouter $2.70 plus 35-day carry $2.708541 versus $3.65; whole Clarity $27.62 plus 71-day carry $27.797233 versus conditional $29. These are comparisons, not sale instructions; #179 and Kimi exits are sequential quote values, not joint realizable proceeds. Quick status flags OpenRouter’s visible-row drawdown at −15.38%; the mark alone is not a thesis break or sell trigger. [Hold review](research/2026-10-23-1800-hold-review.json).
+**Current exits:** #179 $5.00 plus five-day carry $5.002259 versus selected $9.465961; December Fed $4.00 plus 96-day carry $4.034705 versus $6.20; Delcy $4.76 plus 71-day carry $4.790544 versus $16.68576; Michigan $1.35 plus 21-day carry $1.352562 versus $1.526054; Kimi $1.90 plus 71-day carry $1.912192 versus revised $2.351; Messi $1.45 plus 71-day carry $1.459304 versus $2; OpenRouter $2.50 plus 35-day carry $2.507908 versus $3.65; whole Clarity $27.62 plus 71-day carry $27.797233 versus conditional $29. These are sequential comparisons, not joint liquidation proceeds. Quick status shows OpenRouter at $0.555, down 14.62% on cost, with a thin-book warning; the mark alone is not a thesis break or sell trigger. [Hold review](research/2026-10-23-1945-check.json).
 
-**Decision and news:** retain/no add/no trade. The official K3.1 Pro release reports Full 51.1, Tools 70 and Diamond 39.4, but does not establish named HLE admission; the linked resolver API returned 403. Kimi 10 YES is retained with revised pYES 38.51% and selected 23.51%; the prior 34.02% forecast is superseded by issuer evidence, not price fitting. No other numeric prior changed. Seventeen new rows were reviewed: Sanders’ $1m report repeats an unverified transfer; targeting headlines do not establish voter movement; the Oct23 Messi ceremony is not evidence of Google’s 2026 athlete ranking. [News decisions](research/2026-10-23-1800-news-decisions.json) · [Kimi review](research/2026-10-23-1800-kimi-review.json).
+**Decision and news:** retain/no add/no trade; no numeric prior, date or DEC change. The revised Kimi DEC266 forecast remains pYES 38.51%/selected 23.51%; current $1.90 exit plus carry $1.912192 remains below selected $2.351. OfficeChai repeats issuer claims without HLE evidence; Orca/Decoder bodies were unavailable. KDBC/ABC targeting headlines do not establish voter movement; the Fox Hormuz report and IMO incident list do not verify the exact mine event or formal closure, with no measured Fed effect. The Oct23 Messi ceremony is not evidence of Google ranking. Eleven new IDs were reviewed, including all four requested. [Check and review](research/2026-10-23-1945-check.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
