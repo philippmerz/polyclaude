@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 275 recorded observations from Apr-25
+The local performance CSV now has 276 recorded observations from Apr-25
 through Oct-23. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after another 14.73-share maker fill at 24¢. December Fed no change (#511) holds 20 YES/$3.80. Cash $5.612932; zero visible open orders. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Order status](notes/resting_orders.md).
 
-**Management:** retain holdings/no add after the Oct23 03:17 Obama-support and related-source review. The campaign’s October12 ad predates two modeled polls; the October24 Detroit rally remains planned. Forecasts are unchanged. The October Fed order endpoint still returns `null`; preserve its full $4.80 reservation and new-buy block pending affirmative reconciliation. Delcy held-source review: Oct24 13UTC; December Fed: before/after October’s decision. [Current hold judgment](research/2026-10-23-0317-hold-review.json).
+**Management:** retain holdings/no add after the Oct23 04:57 source and hold review; no numeric prior, verification-date or DEC change. The exact Al Jazeera report covers Oct22 protests, gives no election date and reports Machado’s July2027 demand; it is adverse political-risk evidence, not an appointment or transition instrument. Meeting headlines do not establish a positive tenure update. Delcy held-source review remains Oct24 13UTC; December Fed review remains before/after October’s decision. The October Fed order still returns JSON `null`; keep its full $4.80 reservation and new-buy block pending affirmative reconciliation. [Delcy review](research/2026-10-23-0447-delcy-review.json) · [Current hold judgment](research/2026-10-23-0447-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,13 +82,13 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 03:18 UTC
+## Last audited snapshot — October 23 04:48 UTC
 
-**Canonical bankroll: $197.03 including $5.78 funded gas.** Trading value is $191.25 at midpoint or $188.14 using indicative fee-net depth (+10.7% versus $170 contributed); same-producer PM values are $50.91/$47.80. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0318-financial-snapshot.json).
+**Canonical bankroll: $196.25 including $5.78 funded gas.** Trading value is $190.47 at midpoint or $187.85 using indicative fee-net depth (+10.5% versus $170 contributed); same-producer PM values are $50.13/$47.51. The $19.75 residual is unaudited; VM/API costs are excluded. Sequential estimates are not synchronized NAV or guaranteed proceeds. [Financial snapshot](research/2026-10-23-0448-financial-snapshot.json).
 
-**No new trade or fill:** 12 all-size positions, 132 confirmed trades, pUSD $5.612932 and zero visible orders. The October Fed order’s terminal state remains unknown; its full $4.80 reservation and new-buy block remain. State audit, complete-pair exit check and daemon checks passed. [Completed check](research/2026-10-23-0317-check.json).
+**No new trade or fill:** 12 all-size positions, 132 unchanged confirmed trade IDs, pUSD $5.612932 and zero visible orders. Delcy remains 28 YES; marks moved but quantities and financial identity/cost tuples did not. The October Fed order’s terminal state remains unknown; its full $4.80 reservation and new-buy block remain. State audit, safety checks and account reconciliation passed. [Completed check](research/2026-10-23-0447-check.json).
 
-The requested Obama alert and all seven new rows were reviewed. Campaign support is confirmed in an October12 release; the October24 rally is a plan, and the exact Times of India article and warning context remain unverified. Two modeled surveys have later field dates; no new voter shift was inferred. Current Michigan exit/carry comparisons were updated at the $1.40 indicative bid value. [Source decisions](research/2026-10-23-0317-news-decisions.json) · [Hold comparisons](research/2026-10-23-0317-hold-review.json).
+The four requested material alerts and all eight new rows through 04:31 were reviewed. The Al Jazeera body confirms an Oct22 protest, no election date and Machado’s July2027 election demand; it does not report a binding transition schedule. Infobae/Correo/Barquisimeto bodies remain unknown and the targeted MPPRE request returned 503, so no automatic positive tenure update is warranted. The earlier Obama support/rally review remains unchanged; no fresh Michigan voter shift was measured. [Source decisions](research/2026-10-23-0447-news-decisions.json) · [Hold comparisons](research/2026-10-23-0447-hold-review.json).
 
 The full 02UTC discovery pass is retained: seven scans and two compressed batch builds, with 3,080 unvalued row observations and explicit caps. Four literal-rule checks and three source checks established no complete new valuation. [Coverage](research/2026-10-23-0200-discovery.json) · [Focused cases](research/2026-10-23-0200-discovery-cases.json).
 
