@@ -1,12 +1,12 @@
-# Current resting orders — October 24 10:02 UTC
+# Current resting orders — October 24 10:55 UTC
 
-**Zero visible open orders; #179 terminal status remains unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost; maker fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. Fresh 10:02 exact GET returned HTTP200 JSON `null`; the remaining 0.006842 is arithmetic, not terminal proof. Keep the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Check](../research/2026-10-24-1000-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal status remains unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost; maker fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. The 10:55 exact GET returned HTTP 200 JSON `null`; the remaining 0.006842 is arithmetic, not terminal proof. Keep the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Check](../research/2026-10-24-1054-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account mark:** 12 financial tuples, 132 confirmed trades, zero open orders, unchanged selected CTF balances and pUSD $5.612932. Two zero-value claims remain unburned. Current rounded exits: #179 $4.80, December Fed $4.20, Delcy $4.76, Kimi $1.00, Messi $1.45, MI $1.40, OR $2.70 and Clarity pair $27.22. The $56.088773 grossInitialValue-plus-reserve figure is a gross diagnostic, not current loss or entry authority. [Financial snapshot](../research/2026-10-24-1002-financial-snapshot.json).
+**Account mark:** 12 financial tuples, 132 confirmed trades, zero open orders, unchanged selected CTF balances and pUSD $5.612932. Two zero-value claims remain unburned. Current rounded exits: #179 $4.80, December Fed $4.20, Delcy $4.76, Kimi $1.00, Messi $1.45, MI $1.40, OR $2.70 and Clarity pair $27.22. The $56.088773 grossInitialValue-plus-reserve figure is a gross diagnostic, not current loss or entry authority. [Financial snapshot](../research/2026-10-24-1055-financial-snapshot.json).
 
-**Decision/source:** retain/no add/no trade; forecasts, positions, orders and DEC unchanged. Six alerts reviewed. The repeated $9m report concerns outside support for Rogers; recipient and delivered spending remain unverified, with no measured vote effect. Held Michigan NO covers all non-Democratic outcomes. Kimi’s “open weights” headline does not establish delivery or HLE qualification. [News](../research/2026-10-24-1000-news-review.json) · [Hold/risk](../research/2026-10-24-1000-hold-review.json).
+**Decision/source:** retain/no add/no trade; forecasts, positions, orders and DEC unchanged. Six new headlines and the requested older funding alert reviewed. The repeated $9m outside-support claim still has no verified recipient or delivered spending; Michigan NO covers all non-Democratic outcomes. New headlines establish no measured vote, HLE or annual-search change. [News](../research/2026-10-24-1054-news-review.json) · [Hold/risk](../research/2026-10-24-1054-hold-review.json).
 
-**Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit $4.80; HTTP200 JSON null does not establish terminal status.
+**Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit $4.80; HTTP 200 JSON null does not establish terminal status.
 
 **Held Delcy / DEC262:** 28 YES at 18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76; Cuba/Maduro coverage is not an appointment instrument.
 
@@ -14,13 +14,13 @@
 
 **Held December Fed / DEC253+256:** 20 YES at 19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.20.
 
-**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. The requested OrcaRoute body/date is unavailable. TerminalBench 4.0’s K3.1 65.7 vs Opus 66.4 (0.7pp) is coding, not HLE; linking it to the headline is inference. Open weights remain a Nov4 plan, not delivery.
+**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. “Open weights” remains a plan, not delivery or HLE evidence.
 
 **Held Messi / DEC244:** 5 YES at 27¢/$1.35; exit $1.45. Current award coverage does not establish Google’s annual rank.
 
 **Held Michigan / DEC261:** 5 NO; exit $1.40; operative 59/41, selected $0.31/NO ($1.55 for five NO). The outside-Rogers support claim’s effect on this all-non-Dem outcome is unmeasured; no probability change adopted.
 
-Clarity is managed as a whole pair: exit $27.22. Retain/no add; APY .03411 last fetched Oct23 21:17:38. [Check](../research/2026-10-24-1000-check.json).
+Clarity is managed as a whole pair: exit $27.22. Retain/no add; APY .03411 last fetched Oct23 21:17:38. [Check](../research/2026-10-24-1054-check.json).
 
 ## Prior order record — historical
 
