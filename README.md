@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 294 recorded observations from Apr-25
+The local performance CSV now has 295 recorded observations from Apr-25
 through Oct-24. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain/no add/no trade; no numerical forecast, position, order or DEC change. AA’s launch-article search result reports K3.1 Pro HLE 52% versus K3 47%, below 55%; population/configuration and named AGI leaderboard admission remain unverified. The earlier named HLE API call returned HTTP403; this does not establish a permanent outage. MI allegations and denial do not establish measured vote movement. [News review](research/2026-10-24-0451-news-review.json) · [Hold review](research/2026-10-24-0451-hold-review.json).
+**Management:** retain/no add/no trade; no numerical forecast, position, order or DEC change. AA’s official launch article identifies K3.1 Pro; its primary-search result reports HLE 52 for K3.1 Pro versus 47 for K3, below 55. This does not establish an AGI HLE admission or the benchmark configuration/population. The named HLE API call at 03:28 returned HTTP403; no retry was made and permanent outage is unproven. ANI/ET reports describe a November weights plan, not delivery or a verified HLE run. MI allegations/denial and an Oct23 Rogers headline do not establish measured voter movement. [News review](research/2026-10-24-0600-news-review.json) · [Hold review](research/2026-10-24-0600-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,15 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 24 04:55 UTC
+## Last audited snapshot — October 24 06:02 UTC
 
-**Canonical bankroll: $196.07 including $5.73 separately contributed gas.** Trading value is $190.34 midpoint or $188.23 at indicative fee-net depth (+10.7% versus $170); PM values are $49.98/$47.87. The producer’s $19.76 REALIZED line is arithmetic, not validated settlement or profit. VM/API costs are excluded; this is sequential, not synchronized NAV or guaranteed proceeds. CSV 294 preserves the 293-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-24-0455-financial-snapshot.json).
+**Canonical bankroll: $196.51 including $5.72 separately contributed gas.** Trading value is $190.79 midpoint or $188.73 at indicative fee-net depth (+11.0% versus $170); PM values are $50.43/$48.37. The producer’s $19.76 REALIZED line is arithmetic, not validated settlement or profit. VM/API costs are excluded; this is a sequential snapshot, not synchronized NAV or guaranteed proceeds. CSV 295 preserves the 294-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-24-0602-financial-snapshot.json).
 
-**Account and protection:** 12 financial tuples and 132 confirmed trade IDs are unchanged; zero visible orders and pUSD $5.612932. Exact #179 GET returned HTTP200 JSON `null`, so terminal state remains unknown; two confirmed maker fills total 19.993158 YES with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Account and protection:** 12 financial tuples and 132 confirmed trade IDs match the prior check; zero visible orders and pUSD $5.612932. Exact #179 GET returned HTTP200 JSON `null`, so terminal status remains unknown; captured confirmed maker fills total 14.73 and 5.263158 YES, with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-24-0600-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Gross and exits:** the 12 `grossInitialValue` rows total $51.288773; plus the full reservation, $56.088773 is a conservative gross diagnostic, not current loss or entry authority. Latest rounded individual exit displays: #179 $5.00; December Fed $4.20; Delcy $4.76; Kimi $1.00; Messi $1.45; Michigan $1.40; OpenRouter $2.75; whole Clarity pair $27.31. These are sequential marks, not joint liquidation proceeds. Aave APY 3.411% was last fetched Oct23 21:17:38. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Gross and exits:** the 12 `grossInitialValue` rows total $51.288773; plus the full reservation, $56.088773 is a gross diagnostic, not current loss or entry authority. Latest rounded individual exit displays: #179 $5.20; December Fed $4.20; Delcy $4.76; Kimi $1.00; Messi $1.45; Michigan $1.40; OpenRouter $2.75; whole Clarity pair $27.62. These are sequential marks, not joint proceeds. Aave APY 3.411% was last fetched Oct23 21:17:38. [Check](research/2026-10-24-0600-check.json).
 
-**Review and operations:** retain/no add/no trade; no numerical forecast, position, order or DEC change. AA’s launch-article search result reports K3.1 Pro HLE 52% versus K3 47%, below 55%; configuration and named AGI admission remain unverified. The earlier named HLE API call returned HTTP403, which does not prove a permanent outage. Account/core captures include 22 CLI children (19 rc0, 3 rc1); all failures are retained, and #179 was normalized offline from its one captured HTTP200/JSON-null response. The final pending check found no overdue decisions; UMA reported no alerts, the state audit was clean, and four current daemons were observed. [News review](research/2026-10-24-0451-news-review.json) · [Hold review](research/2026-10-24-0451-hold-review.json).
+**Review and operations:** retain/no add/no trade; no numerical forecast, position, order or DEC change. ANI/ET headlines describe a November weights plan, not delivery or a verified HLE run; the underlying wire/body remains unverified. The Oct23 Rogers headline is party framing, not a poll. Messi and Delcy items repeat prior coverage. Pending returned no overdue decisions; UMA had no alerts, the state audit was clean with zero acknowledged-hold drops, seven hurdle items were clear and none flagged, and four daemons were observed. Twenty-one captured CLI children returned 20 rc0 and one rc2; the storage argument error was corrected before the bounded pass, which archived zero files with zero errors. Two helper launch-path attempts failed before child/network execution and are disclosed as unreceipted attempts. [Check](research/2026-10-24-0600-check.json) · [News review](research/2026-10-24-0600-news-review.json) · [Hold review](research/2026-10-24-0600-hold-review.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
