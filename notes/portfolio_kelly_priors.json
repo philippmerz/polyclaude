@@ -162,8 +162,8 @@
     "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
     "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
     "verified": "2026-10-16",
-    "criteria_read": "2026-10-16",
-    "current_assessment": "Oct-16 first-hand criteria/source reread: exact Gamma description SHA-256 7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches Oct-8 on every operative clause. Permanent cessation or an announcement before Dec31 11:59PM ET qualifies even if effective later; temporary Section3, unsustained Section4 and impeachment without removal are excluded; sustained Section4 qualifies. Consensus credible reporting remains the source, with unchanged any-period/permanent-removal textual tension. Current captured WhiteHouse releases feed has Oct15 publications and Oct14 President Trump activity; no qualifying cessation announcement among captured entries. Feed-limited evidence, not universal absence, fresh medical/Congress verification or calibrated probability. Keep judgmental p_no=.97, remaining.33NO HOLD/NO ADD; numerical risk and group settings unchanged.",
+    "criteria_read": "2026-10-24",
+    "current_assessment": "Oct24 first-hand full literal Gamma reread/rawdescription SHA7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches Oct16 and frozen description exactly; market666861/CID/token identity exact. Permanent cessation/precutoff announcement qualifies even if effective later; temporarySection3/unsustainedSection4/impeachmentwithoutremoval excluded, sustainedSection4qualifies, consensus credible reporting. Any-period/permanent tension retained. Captured WhiteHouse release entries Oct22\u201315 no qualifying announcement; feedlimited, not universalabsence/newmedical/Congressverification. pNO.97 remains datedjudgment, verifiedOct16 notrolled; actual.33NO below5shareminimum, no executable dustsale/buyup/burn. research/2026-10-24-0019-trump-criteria.json",
     "key_facts": [
       {
         "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -279,7 +279,10 @@
         "source_date": "2026-10-14",
         "checked": "2026-10-16"
       }
-    ]
+    ],
+    "latest_criteria_review": "research/2026-10-24-0019-trump-criteria.json",
+    "source_ack": "2026-10-24",
+    "source_ack_reason": "Oct24 searched newer official WhiteHouse releases/actions and captured dated Oct22\u201315 entries with no qualifying cessation announcement in that bounded corpus. This does not refresh the Aug Congress/medical claims: those remain historical/unverified, market price is not factual proof, and no absence of newer reporting is asserted. Criteria were independently reread/current-exact; .33NO dust below5-share minimum means no executable cleanup. Tail/criteria/source uncertainty remains, no numerical prior or verified-date roll. See research/2026-10-24-0019-trump-criteria.json"
   },
   "will-apple-release-a-touchscreen-macbook-in-2026": {
     "p_no": 0.35,
@@ -1264,24 +1267,24 @@
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
-    "verified": "2026-10-23",
+    "verified": "2026-10-24",
     "criteria_read": "2026-10-21",
     "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct23primarydailyreview:8pollagesadvancedonce19/9/13/29/25/39/5/5; rawD.5947891170/NO.4052108830 rounds59/41 unchanged; selected5NO1.52605441489 after10ppreserve. Exact3newbodies unavailable/no newpollidentified; sourcegapsnotnoeffect/unfittedspecificationcountermodels retained.",
+    "current_assessment": "Oct24 daily model: advance old poll ages once20/10/14/30/26/40/6/6; replace older IA with latest same-house47D/46R, official homepage headline verified, fieldOct21\u201322/n1200LV/MOE2.8 secondary metadata; original release/mode/sponsor unknown.8 active observations/9 distinct surveys observed. Fixed G8/bias-1.5/source SD4.5 yields rawD.5859906383/NO.4140093617, rounds59/41 unchanged; operative selectedNO.31=>1.55/5shares, raw selected1.570047 separate. Sponsor\u00b12pp/SD6/G12/shared-error sensitivities retained; G12/bias0 favorscash. Headlines no measured vote shift; no automatic rhetoric uplift. research/2026-10-24-0019-daily-hold-review.json",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
     "current_revision": "research/2026-10-22-0154-michigan-daily.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick20261022_014829/daily_mi_math.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261024_001938/source_mi/primary_verification.json",
     "management": "Review each existingtick/earliermaterialpoll,candidacy,withdrawal,health,ballot or turnout news. OriginalBUYfilled/Oct23pullobsolete. Oct21debate elapsed; APpartialbodycheckedOct22, exactfulltranscript/completion/voteeffectunknown. Pullanyfuture restingorderbeforeknowncatalyst and revalue. MandatoryearlyvotingOct24-Nov1/absenteeSep24 remain datedcontext. EveryfreshBUYrequirescompleted-universepolicyv2, primaryselection andalllivegates; former600waitretired. No measuredUS-politicshedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
-    "daily_rederivation": "research/2026-10-23-0016-daily-hold-review.json",
-    "latest_news_review": "research/2026-10-22-014829-news-review.json"
+    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json",
+    "latest_news_review": "research/2026-10-24-0019-check.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
     "p_yes": 0.49,
@@ -1344,29 +1347,30 @@
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.75,
     "cluster_frac": 0.1,
-    "verified": "2026-10-20",
+    "verified": "2026-10-24",
     "criteria_read": "2026-10-20",
     "market_id": "5763815",
     "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
     "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
     "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
-    "rationale": "PrimaryYES12%/NO88%, rawYES11.5545%;15ppentryreserve selectedNO73%, broadNO20-99.5%. Explicit20%plateau regime fixes prior missingflatgrowth mode; otheroldregimes rescaled36/28/8/8, latest158.105Tpartial/UIremainingproxy. Fixedfour displayed weekly Totals Oct26/Nov2/9/16; currentWeekPace is not settlement. Sourcecutoff/regime/noise weights uncalibrated; concentrated750Tmodel73.36%YES reversesNO. SamefactorasotherAIexposure; rho.75/10%clusterfloor are sizing assumptions, not measuredhedge/correlation.",
-    "current_assessment": "Oct22drawdown/UMAwide-bookmove reviewed with current officialchart/exactrules/zero-rate/fullbook. CompletedOct12unchanged, Oct19partial notsettlement; retain datedOct20NO88/selected73 and all source/regime/specification uncertainty. research/2026-10-22-1208-openrouter-review.json",
+    "rationale": "Primary operativeYES12%/NO88%, selectedNO73% after15ppreserve. Current Oct20 completed-anchor model rawYES11.481%; old158.105partial/UIproxy wording was superseded by current_revision, not an adopted input. Five future weeks from calendarcompletedOct12raw164.043985914931T, sum Oct26/Nov2/9/16; fixed36/28/8/8/20% regimes includingplateau, unfitted drifts/noise/correlation. Oct19partial is context, not completed/UIrounded settlement. Concentrated750Tmodel73.36%YES reversesNO; source/regime/jointAI risk remains.",
+    "current_assessment": "Oct24 daily source/model review: fresh exact Gamma criteria/token identity, zero fee/min5shares,5NO cash2.80. Official chartHTTP200/Age291: latest completedOct12raw164.043985914931T unchanged; Oct19partial141.564252295011T, targetlabelsabsent. Same200k/seed/fixed regimes reproduce rawYES.11481; retain conservative operativeNO.88/selected.73. Hypothetical completedOct19 anchors160\u2013220T unadopted, selectedminimum3.437925 vs2.808762 cash+34dvariablecarry; concentrated750T/broadNO20%cashcases/full3.25loss remain. Rawseries not UI rounding/finality/firstdisplay; no partial linear extrapolation. research/2026-10-24-0019-daily-hold-review.json",
     "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md",
     "current_revision": "research/2026-10-17-deep-review/models/openrouter_tick012937_primary_0154.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
       "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick012937_source_captures_0145.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261024_001938/or_chart/chart_summary.json",
     "management": "Filledholding, no originalrestingBUY remains. OldOct18 22UTCBUYpull obsolete; existing22UTCheldreview and earliermaterialnews remain. Re-underwrite currentexit/hold on source/rule/measurement/method/regimechanges; fullcurrentgates beforemoney. Noadd/repost. AnynewweeklyTotalrequiresrevaluation; WeeklyPace not realizedtotal/cutoff. Full3.25entrycost canbelost; noindependence orhedgecredit.",
     "monitoring": "Existing exposure-aware newsrouting; PID40455progressverified17:21 after17:19restart, rawRSS Telegramoff, queued/deferred is not reviewed. Current scopedsourcechecks remain required; cache/cooldown/cappedfeed/private-unannouncedchange gaps retained. No newdaemon/timer/manualpoll.",
     "latest_catalyst": "Oct20 boundedcheck completedsource/holdreview. Existing02UTC or earliermaterialsource/fill; nextweeklydisplayOct26; exacttargetweeksOct26/Nov2/Nov9/Nov16, freezeonfirstNov23display/Nov27ETfallback. Currentpartialweek/weeklypace notsettlement; no liveORBUY.",
     "divergence_ack": "2026-10-22",
     "divergence_ack_reason": "Fresh source/currentquote/hold-vs-exit/joint-loss review; prior remains datedOct20/unfitted, no numeric rederivation/date roll. research/2026-10-22-1208-openrouter-review.json",
-    "latest_risk_review": "research/2026-10-22-1208-openrouter-review.json",
+    "latest_risk_review": "research/2026-10-24-0019-hold-review.json",
     "latest_execution_review": "research/2026-10-22-1208-openrouter-review.json",
-    "latest_news_review": "research/2026-10-22-120847-checkin.json"
+    "latest_news_review": "research/2026-10-22-120847-checkin.json",
+    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json"
   },
   "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
     "p_yes": 0.8,
@@ -1839,7 +1843,7 @@
     "probability_model": "research/2026-10-23-1800-kimi-review.json",
     "latest_source_packet": "data/deep_review_20261017/work/periodic20261023_1800/kimi_release_facts.json",
     "rationale": "Oct23 official K3.1Pro issuer release: Full51.1/tools70/Diamond39.4; named HLE admission remains unverified/API403. New unfitted admission/additional-update tree .3851;15ppreserve .2351; range8\u201380. Not automatic vendor qualification.",
-    "current_assessment": "Retain10YES/noadd after fresh2.00exit+71d2.012834 vs newprimary3.851/selected2.351. Oldselected1.902125 nowfavoredcash; forecast revised from actual issuer evidence, not price alone. Low-update/admission cases favor cash.",
+    "current_assessment": "Oct24 retain10YES/noadd: fresh account exit1.20; last issuerOct23 22:51 Full51.1/tools70/Diamond39.4 andAPI403 remain dated/notrefetched. DEC266tree rechecked, .3851 primary/.2351selected/2.351terminal; noexisting-admission1.551abovecash, low-update.812 andbroad.80favorcash. No verifiednewcause for remaining price divergence; source/admission/weight-delivery uncertainty remains. research/2026-10-24-0019-daily-hold-review.json",
     "management": "Filledholding: originalBUY cancel/pull obsolete. Noadd/chase/repost. Reviewexistingchecks/earlier material model/score/source/evaluation/export-policy change; reassess or exit on changed load-bearingfacts/uncertainty. Hidden-informationclass: no restingSELL at/belowfair; thesis-breakexit remains available. Full1.20costloss/sourceoutagepastJanuary possible; futuremoneyrequiresfresh fullgates.",
     "monitoring": "Existing scoped feed plus Kimi/Moonshot AI/MoonshotAIterms retained for nowheld exact55claim. Original30RSS coverage and unordered5000ID limitation remain dated/nonexhaustive; no stateedit/forcedpoll/newwatcher. Cache5min/caps/cooldown/private-unannouncedsource gaps remain. Newlymaterialevidence invokes freshhold/exitreview, not obsoleteBUYcancel.",
     "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",
@@ -1854,9 +1858,11 @@
       "p_yes": 0.3851,
       "action": "Retain10YES/noadd; revision from verified primary issuer release, not qualifying leaderboard outcome."
     },
-    "latest_risk_review": "research/2026-10-23-1800-kimi-review.json",
+    "latest_risk_review": "research/2026-10-24-0019-hold-review.json",
     "prior_experiment_revision": "research/2026-10-17-deep-review/revisions/0412_20261020T020519635270Z.json",
-    "current_revision": "research/2026-10-23-1800-kimi-review.json"
+    "current_revision": "research/2026-10-23-1800-kimi-review.json",
+    "divergence_ack": "2026-10-24",
+    "divergence_ack_reason": "Oct24 actual unchanged-tree rederivation .10*.80+.90*.60*.70*.75+.90*.40*.12*.50=.3851;15ppreserve=>.2351. Latest motivated Oct23 22:51 issuer release unchanged/API403, official55 admission unknown; currentexit1.20+70dvariablecarry1.207744 vs2.351selected. Low-update.812/broad.80cashcases/nohedge/jointAI/full1.20loss reviewed. Mark.125 is observation, not forecast proof or forced size-up; globalBUYblock remains. research/2026-10-24-0019-daily-hold-review.json"
   },
   "will-anthropic-have-the-best-ai-model-at-the-end-of-december-2026": {
     "p_yes": 0.2329,
@@ -1939,7 +1945,7 @@
     "cluster": "us-monetary-policy-2026",
     "rho_within": 0.5,
     "cluster_frac": 0.27,
-    "verified": "2026-10-23",
+    "verified": "2026-10-24",
     "criteria_read": "2026-10-21",
     "updated_utc": "2026-10-21T13:10:50.656021+00:00",
     "review_index": 179,
@@ -1967,8 +1973,8 @@
     "latest_news_review": "research/2026-10-22-120847-checkin.json",
     "divergence_ack": "2026-10-22",
     "divergence_ack_reason": "Primary postfill/source/joint-loss and cash/sensitivity reviewed, not automatic market rejection or calibratedfloor. See research/2026-10-22-1208-fed-hold-review.json",
-    "daily_rederivation": "research/2026-10-23-0016-daily-hold-review.json",
-    "current_assessment": "Oct23primarydailyreview:officialOct27-28schedule/datedSeptunanimity checked; no newcommitteepledgeverified in boundedresults. CBSIran-oilbodyunavailable; no newverifiedsupply/voteinput. Recomputed subjectivepath.67346/selected.47346/5dayhorizon/conditionalfillratio3+4/broadcashcases; full4.798358loss andFedjoint8.598358 remain. No automaticoil->dissent mapping.",
+    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json",
+    "current_assessment": "Oct24 real daily source/path recomputation .67346, selected .47346. Official Oct27\u201328 calendar and12-member roster checked; Sept16 unanimous hike and WallerOct8 conditional further-hike remarks were already in Oct21 inputs, not new independent evidence. Path75%HOLD/23%hike25/1%hike50+/1%cut, conditional unanimity65/80/35/20,2%source exception at50%. No new committee commitment verified in bounded sources. 4day cash/carry, adverse source/fill/jointFed loss reviewed; no quote-refit. research/2026-10-24-0019-daily-hold-review.json",
     "remaining_risk_basis": "Retainedfullentryreservation, visibleopenordercash0; unknownterminal0.006842-share arithmetic tail, not fresh4.80venuecommitment.",
     "venue_open_order_cash_usd": 0,
     "arithmetic_unfilled_shares": 0.006842

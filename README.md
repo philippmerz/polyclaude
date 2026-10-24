@@ -5,8 +5,8 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 289 recorded observations from Apr-25
-through Oct-23. Rounded reconstructions are labeled; unsupported historical
+The local performance CSV now has 290 recorded observations from Apr-25
+through Oct-24. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
 
@@ -19,7 +19,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-23. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-24. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain/no add; no forecast/date/model/DEC change. Kimi remains38.51% primary/23.51% after reserve (DEC266). Five new IDs and one older requested item were reviewed through22:37:37; source lineage remains incomplete. A fresh 14% market mark triggered a bounded official API read (403); admission is unknown. The issuer’s release still reports51.1 Full/70 tools/39.4 Diamond with Nov4 weights planned, not an independent admission result. [Latest check](research/2026-10-23-2248-check.json) · [Hold review](research/2026-10-23-2248-hold-review.json) · [Kimi model](research/2026-10-23-1800-kimi-review.json).
+**Management:** retain/no add/no trade; numerical priors/model parameters/DEC unchanged. Fourteen IDs reviewed through Oct24 00:14:18. New IA47/46 replaces the older same-house Michigan poll; raw NO41.4009% still rounds to operative41%/selected31%. Fed/Michigan/OpenRouter daily rederivations, Kimi divergence review and Trump criteria/source review are complete; final state audit passed after preserving both earlier rc1 receipts. [Latest check](research/2026-10-24-0019-check.json) · [Hold review](research/2026-10-24-0019-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,17 +82,17 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 23 22:49 UTC
+## Last audited snapshot — October 24 00:21 UTC
 
-**Canonical bankroll: $196.80 including $5.67 separately contributed gas.** Trading value is $191.13 midpoint or $188.97 at indicative fee-net depth (+11.2% versus $170); PM values are $50.78/$48.62. The producer reports $19.76 as REALIZED; this residual is unverified arithmetic, not independently validated settlement or profit. VM/API costs are excluded. Values are sequential, not synchronized NAV or guaranteed proceeds. CSV 289 preserves the 288-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-23-2249-financial-snapshot.json).
+**Canonical bankroll: $196.36 including $5.66 separately contributed gas.** Trading value is $190.70 midpoint or $188.61 at indicative fee-net depth (+10.9% versus $170); PM values are $50.35/$48.26. The producer reports $19.76 as REALIZED; this is an arithmetic residual, not validated settled cash or profit. VM/API costs are excluded. Values are sequential, not synchronized NAV or guaranteed proceeds. CSV 290 preserves the 289-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-24-0021-financial-snapshot.json).
 
-**Account and protection:** 12 financial tuples, 132 confirmed trade IDs, zero visible orders, and pUSD $5.612932 match 22:00. Exact #179 GET returned HTTP 200 with JSON `null`, so terminal status remains unknown; the two recorded maker fills total 19.993158 YES with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-23-2248-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Account and protection:** 12 financial tuples and 132 confirmed trade IDs match 22:48; zero visible orders and pUSD $5.612932. Exact #179 GET returned HTTP 200 with JSON `null`, so terminal status remains unknown; its two recorded maker fills total 19.993158 YES, with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-24-0019-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Gross and caps:** all 12 rows’ `grossInitialValue` total $51.288773; plus the full reservation, the conservative gross diagnostic is $56.088773. It includes historical position costs and the full reservation; it is not current aggregate loss or entry authority. At $196.80, reference 27% and 30% amounts are $53.136 and $59.04.
+**Gross and caps:** all 12 rows’ `grossInitialValue` total $51.288773; plus the full reservation, the conservative gross diagnostic is $56.088773. It includes historical position costs and the full reservation; it is not current aggregate loss or entry authority. At $196.36, reference 27% and 30% amounts are $53.0172 and $58.908.
 
-**Current exits:** #179 $5.20 plus five-day carry $5.202430 versus selected $9.465961; December Fed $4.20 plus 96-day carry $4.237680 versus $6.20; Delcy $4.76 plus 71-day carry $4.791583; Michigan $1.40 plus 21-day carry $1.402747 versus $1.526054; Kimi $1.20 plus 71-day carry $1.207962 versus $2.351; Messi $1.45 plus 71-day carry $1.459621 versus $2; OpenRouter $2.80 plus 35-day carry $2.809158 versus $3.65; whole Clarity $27.62 plus 71-day carry $27.803261 versus conditional $29. Carry sensitivities use 3.411% APY last fetched 21:17:38, not a fresh 22:49 quote. Michigan’s −2.5pp/shared-bias stresses are below cash. [Hold review](research/2026-10-23-2248-hold-review.json).
+**Current exits:** #179 $5.00; December Fed $4.00; Delcy $4.76; Michigan $1.40; Kimi $1.20; Messi $1.45; OpenRouter $2.80; whole Clarity pair $27.66. Aave carry uses 3.411% APY last fetched Oct 23 21:17:38, not a fresh quote. The new Michigan IA47/46 headline replaces the older same-house item; field dates are Oct 21–22 (n=1,200), but the original release and sponsor/mode remain unverified. The modeled raw NO probability is 0.414009; operative rounded NO is 0.41 and selected terminal value is $1.55 for five NO. OpenRouter’s completed Oct 12 chart total remains 164.043986T and Oct 19 is partial at 141.564252T; target-week labels remain absent, so the partial is not extrapolated. Operative NO is 0.88, selected terminal $0.73/share. [Hold review](research/2026-10-24-0019-hold-review.json).
 
-**Decision and news:** retain/no add/no trade; no forecast/date/model/DEC change. Five new IDs and one older requested item were reviewed. Kimi’s 6.5pp mark move is not a fill and its cause is unverified; an official API read returned 403, leaving admission unknown. The issuer release remains distinct from an independent HLE admission result. [Check](research/2026-10-23-2248-check.json).
+**Decision and audit:** retain/no add/no trade; no numerical probability/model-parameter/DEC change. Three daily verified dates, Trump criteria/source metadata and Kimi divergence metadata were updated after actual reviews; numerical values remain unchanged. The initial state audit returned rc1: three short-dated rederivations, Trump-out criteria reread, and Kimi prior/mark divergence were outstanding in that captured run; the second audit surfaced an old Trump source claim; bounded newer-source review and explicit uncertainty acknowledgement resolved it. Final audit at00:34:32 returned rc0; earlier rc1 receipts remain intact. Four distinct daemons were present, UMA reported no new alert, and other captured checks were clear. Fourteen news IDs were reviewed through 00:14:18. [Check](research/2026-10-24-0019-check.json) · [Daily hold review](research/2026-10-24-0019-daily-hold-review.json) · [Trump criteria](research/2026-10-24-0019-trump-criteria.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

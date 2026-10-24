@@ -1,26 +1,24 @@
-# Current resting orders — October 23 22:48 UTC
+# Current resting orders — October 24 00:21 UTC
 
-**Zero visible open orders; #179 terminal state remains unknown.** 20 YES at24¢ now has19.993158 confirmed shares at $4.798358 cost; fills are14.73 @ $0.24 and5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP200 JSON `null`; all132 confirmed trade IDs and all12 financial tuples match22:00. The0.006842 tail is arithmetic, not terminal proof. Keep full$4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-23-2248-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal state remains unknown.** 20 YES at24¢ has19.993158 confirmed shares at $4.798358 cost; fills are14.73 @ $0.24 and5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP200 JSON `null`; all132 confirmed trade IDs and all12 financial tuples match22:48. The0.006842 tail is arithmetic, not terminal proof. Keep full$4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-24-0019-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account mark:** 12 positions, pUSD $5.612932, selected CTF balances unchanged. Kimi YES market mark moved to14%; UMA flagged−6.5pp. Fresh official API read returned403, so current admission is unknown; do not treat the mark as a fill or terminal evidence. Two known zero-value claims remain unburned.
+**Account mark:** 12 positions, pUSD$5.612932, selected CTF balances unchanged. Latest exits: #179$5.00, Dec Fed$4.00, Delcy$4.76, Kimi$1.20, Messi$1.45, MI$1.40, OR$2.80, whole Clarity$27.66. Two known zero-value claims remain unburned. [Account and gross audit](../research/2026-10-24-0019-check.json).
 
-All-row `grossInitialValue` is $51.288773; plus full reservation it is $56.088773, a conservative gross diagnostic rather than current loss or entry authority. [Account and gross audit](../research/2026-10-23-2248-check.json).
+**Held October Fed / DEC263:** 19.993158 YES, cost$4.798358; exit$5.00. Keep full reservation and BUY block; exact order terminal state unknown. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
-**Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; selected pYES47.346% unchanged. Exit $5.20 plus five-day carry $5.202430; selected terminal $9.465961; ratio-3 cash case $4.146523. Keep full reservation and BUY block. [Hold review](../research/2026-10-23-2248-hold-review.json).
+**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit$4.76; no new binding tenure instrument established. [Check](../research/2026-10-24-0019-check.json).
 
-**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76 plus71-day carry $4.791583; selected terminal $16.68576. No new tenure instrument verified. [Check](../research/2026-10-23-2248-check.json).
+**Held OpenRouter / DEC264:** 5 NO at.65/$3.25; retain/no add, operative selected pNO.73 (terminal$0.73/share). Exit$2.80; completed Oct12 total164.043986T and Oct19 partial141.564252T; no target-week labels, no extrapolation. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
-**Held OpenRouter / DEC264:** 5 NO at.65/$3.25; retain/no add, selected pNO.73 (terminal$3.65). Exit$2.80 plus35-day carry$2.809158; fixed completed-volume anchors remain unadopted. Full$3.25 can lose; no mark-only forced sale. [Hold review](../research/2026-10-23-2248-hold-review.json).
+**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit$4.00. No numerical forecast change. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
-**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit$4.20 plus96-day carry$4.237680 vs selected$6.20. No new forecast update. [Hold review](../research/2026-10-23-2248-hold-review.json).
+**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit$1.20. Issuer reports51.1 Full/70 tools/39.4 Diamond with Nov4 weights planned, not an independent HLE admission result. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
-**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.20 plus71-day carry $1.207962 versus selected terminal $2.351 (pYES38.51% central/23.51% after15pp reserve). Retain/no add. The −6.5pp mark move has no verified cause; fresh official API read403 leaves admission unknown. Selected model remains distinct from the current quote; full$1.20 cost can lose. [Check](../research/2026-10-23-2248-check.json) · [Hold review](../research/2026-10-23-2248-hold-review.json) · [Primary review](../research/2026-10-23-1800-kimi-review.json).
+**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit$1.45. Current sports commentary does not establish Google’s annual ranking. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
-**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit$1.45 plus71-day carry$1.459621 vs selected$2. Current sports commentary does not establish Google’s annual ranking. [Hold review](../research/2026-10-23-2248-hold-review.json).
+**Held Michigan / DEC261:** 5 NO; exit$1.40. Fresh same-house IA47/46 headline has Oct21–22 field dates and n=1200; release, mode and sponsor remain unverified. Raw modeled NO.414009; operative rounded NO.41/selected$1.55 for five shares. [Daily hold](../research/2026-10-24-0019-daily-hold-review.json).
 
-**Held Michigan / DEC261:** 5 NO; exit$1.40 plus21-day carry$1.402747 vs selected$1.526054. The−2.5pp/shared-bias sensitivities fall below cash; these are unfitted stresses, not measured vote effects. [Hold review](../research/2026-10-23-2248-hold-review.json).
-
-Clarity remains managed as a whole pair: exit$27.62 plus71-day carry$27.803261 remains below conditional$29; oracle-control risk can remove the floor. Other latest exits: #179$5.20, December$4.20, Delcy$4.76, Michigan$1.40, Kimi$1.20, Messi$1.45 and OR$2.80. Retain/no add; no forecast/date/model/DEC change. [Hold review](../research/2026-10-23-2248-hold-review.json).
+Clarity is managed as a whole pair: exit$27.66. Retain/no add; no numerical probability/model-parameter/DEC change. APY .03411 was fetched Oct23 21:17:38 and is not fresh. Initial audit rc1 and later Trump source-gap rc1 remain intact; actual daily/source/criteria reviews completed and final00:34:32 audit returned rc0. [Hold review](../research/2026-10-24-0019-hold-review.json).
 
 ## Prior order record — historical
 
