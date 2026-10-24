@@ -1,24 +1,24 @@
-# Current resting orders — October 24 01:50 UTC
+# Current resting orders — October 24 02:00 UTC
 
-**Zero visible open orders; #179 terminal state remains unknown.** 20 YES at24¢ has19.993158 confirmed shares at$4.798358 cost; fills are14.73 @ $0.24 and5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP200 JSON `null`; all132 confirmed trade IDs and all12 financial tuples match00:21. The0.006842 tail is arithmetic, not terminal proof. Keep full$4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-24-0150-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal state remains unknown.** 20 YES at24¢ has19.993158 confirmed shares at$4.798358 cost; fills are14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP200 JSON `null`; all132 confirmed trade IDs and all12 financial tuples match01:50. The0.006842 tail is arithmetic, not terminal proof. Keep full$4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Latest check](../research/2026-10-24-0200-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account mark:** 12 positions, pUSD$5.612932, selected CTF balances unchanged. Two zero-value claims remain unburned. Current exits: #179$5.00, December Fed$4.00, Delcy$4.76, Kimi$1.00, Messi$1.45, MI$1.40, OR$2.75, whole Clarity$27.62. [Account check](../research/2026-10-24-0150-check.json).
+**Account mark:** 12 positions, pUSD$5.612932, selected CTF balances unchanged. Two zero-value claims remain unburned. Current rounded exits: #179$5.00, Dec Fed$4.00, Delcy$4.76, Kimi$1.00, Messi$1.45, MI$1.40, OR$2.75, Clarity pair$27.62. Full4.80 reservation remains; $56.088773 grossInitialValue-plus-reserve is not current loss or entry authority. [Account check](../research/2026-10-24-0200-check.json).
 
-**Held October Fed / DEC263:** 19.993158 YES, cost$4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit$5.00; exact terminal state unknown. Keep full reservation and BUY block. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held October Fed / DEC263:** 19.993158 YES, cost$4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit$5.00; HTTP200 JSON null does not establish terminal status. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit$4.76; no new tenure instrument. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held Delcy / DEC262:** 28 YES at18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit$4.76. The Oct23 oil-inspection report is the same cycle; no official appointment, UN fallback or multiple-head rule was established. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held OpenRouter / DEC264:** 5 NO at.65/$3.25; retain/no add, operative selected pNO.73 (terminal$0.73/share). Exit$2.75. Last chart read00:25: complete Oct12 total164.043986T; partial Oct19 total141.564252T, not extrapolated. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held OpenRouter / DEC264:** 5 NO at.65/$3.25; retain/no add, selected pNO.73 ($0.73/share terminal). Exit$2.75. Last chart read00:25: Oct12 complete164.043986T; Oct19 partial141.564252T, not extrapolated. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit$4.00. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held December Fed / DEC253+256:** 20 YES at19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit$4.00. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit$1.00. K3.1 Pro availability does not establish a new HLE score or delivered55% weights. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held Kimi / DEC243+266:** 10 YES at12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit$1.00. Product rollout is not a new HLE score or verified weights delivery; prior official API403 is not retried. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit$1.45. June award and Oct23 ceremony do not establish Google’s annual ranking. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held Messi / DEC244:** 5 YES at27¢/$1.35; exit$1.45. Ceremony coverage is not evidence of Google’s annual rank. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-**Held Michigan / DEC261:** 5 NO; exit$1.40. Operative59/41; selected$0.31 per NO/$1.55 for five NO. The fresh IA47/46 aggregate fielded Oct21–22 (n=1200) replaces the prior same-house item; release, mode and sponsor remain unverified. [Hold review](../research/2026-10-24-0150-hold-review.json).
+**Held Michigan / DEC261:** 5 NO; exit$1.40; operative59/41, selected$0.31/NO ($1.55 for five NO). Earlier same-house polls were not aged again today. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
-Clarity remains a whole pair: exit$27.62. Retain/no add; no new forecast, numerical prior, model or DEC change. APY .03411 was last fetched Oct23 21:17:38; Kelly’s cached$196.35 is separate from canonical$196.16. The state audit is clean; full reservation and BUY block remain. [Hold review](../research/2026-10-24-0150-hold-review.json).
+Clarity is managed as a whole pair: exit$27.62. Retain/no add; no forecast/date/model/DEC change. APY .03411 last fetched Oct23 21:17:38. The 02:00 audit was clean; all current protection remains. [Hold review](../research/2026-10-24-0200-hold-review.json).
 
 ## Prior order record — historical
 
