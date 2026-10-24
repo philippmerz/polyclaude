@@ -1,26 +1,26 @@
-# Current resting orders — October 24 03:34 UTC
+# Current resting orders — October 24 04:55 UTC
 
-**Zero visible open orders; #179 terminal state remains unknown.** 20 YES at 24¢ has 19.993158 confirmed shares at $4.798358 cost; fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. Exact authenticated GET returned HTTP200 JSON `null`; the 0.006842 tail is arithmetic, not terminal proof. Keep the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal status remains unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost; fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. The single exact authenticated GET returned HTTP200 JSON `null`; the 0.006842 tail is arithmetic, not terminal proof. Keep the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account mark:** 12 positions, 132 confirmed trades, zero open orders, pUSD $5.612932 and selected CTF balances unchanged. Two zero-value claims remain unburned. Current rounded exits: #179 $5.00, December Fed $4.20, Delcy $4.76, Kimi $1.00, Messi $1.45, MI $1.40, OR $2.75 and Clarity pair $27.62. The full reservation remains; $56.088773 grossInitialValue-plus-reserve is not current loss or entry authority. [Financial snapshot](../research/2026-10-24-0323-financial-snapshot.json).
+**Account mark:** 12 financial tuples, 132 confirmed trades, zero open orders and pUSD $5.612932; selected CTF balances unchanged. Two zero-value claims remain unburned. Current rounded exits: #179 $5.00, December Fed $4.20, Delcy $4.76, Kimi $1.00, Messi $1.45, MI $1.40, OR $2.75 and Clarity pair $27.31. The $56.088773 grossInitialValue-plus-reserve figure is a gross diagnostic, not current loss or entry authority. [Financial snapshot](../research/2026-10-24-0455-financial-snapshot.json).
 
-**Decision/source:** retain/no add/no trade; no market forecast, prior, position or order change. The named HLE API read at 03:28:23 returned HTTP403: no admission was observed on that request, but permanent outage is unproven. Composite AA index 55/#4 is not HLE; secondary 52.5 HLE is below threshold and its configuration is unverified. DEC172’s process outcome was updated to PARTIAL: grouping/fail-open mechanics supported, strict cohort-only comparison contradicted by Oct24 thin-tail ranking under a hurdle mismatch; production stable-snapshot, recall and ROI remain unscored. [Check](../research/2026-10-24-0321-check.json) · [News review](../research/2026-10-24-0321-news-review.json).
+**Decision/source:** retain/no add/no trade; no numerical forecast, position, order or DEC change. AA’s launch-article search result reports K3.1 Pro HLE 52% versus K3 47%, below 55%; configuration and named AGI admission remain unverified. The earlier named HLE API call returned HTTP403; permanent outage is unproven. [News review](../research/2026-10-24-0451-news-review.json) · [Hold review](../research/2026-10-24-0451-hold-review.json).
 
 **Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit $5.00; HTTP200 JSON null does not establish terminal status.
 
-**Held Delcy / DEC262:** 28 YES at 18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76. No new numeric forecast or order change.
+**Held Delcy / DEC262:** 28 YES at 18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.76.
 
-**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 ($0.73/share terminal). Exit $2.75. Last chart read 00:25: Oct12 complete 164.043986T; Oct19 partial 141.564252T, not extrapolated.
+**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 ($0.73/share terminal). Exit $2.75. Latest chart read remains dated 00:25: Oct12 complete 164.043986T; Oct19 partial 141.564252T, not extrapolated.
 
 **Held December Fed / DEC253+256:** 20 YES at 19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.20.
 
-**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. Product rollout is not a new HLE score or verified weights delivery. The named HLE API read at 03:28:23 returned HTTP403; no admission was observed on that request, but permanent outage is unproven. [News review](../research/2026-10-24-0321-news-review.json).
+**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. AA’s launch-article search result reports K3.1 Pro HLE 52% versus K3 47%, below 55%; configuration and named AGI admission remain unverified. No new verified HLE admission or weights delivery.
 
 **Held Messi / DEC244:** 5 YES at 27¢/$1.35; exit $1.45. Ceremony coverage is not evidence of Google’s annual rank.
 
 **Held Michigan / DEC261:** 5 NO; exit $1.40; operative 59/41, selected $0.31/NO ($1.55 for five NO). Earlier same-house polls were not aged again today.
 
-Clarity is managed as a whole pair: exit $27.62. Retain/no add; APY .03411 last fetched Oct23 21:17:38. [Financial snapshot](../research/2026-10-24-0323-financial-snapshot.json).
+Clarity is managed as a whole pair: exit $27.31. Retain/no add; APY .03411 last fetched Oct23 21:17:38..
 
 ## Prior order record — historical
 
