@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 292 recorded observations from Apr-25
+The local performance CSV now has 293 recorded observations from Apr-25
 through Oct-24. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain/no add/no trade; no forecast/date/model/DEC change. One new teleSUR alert through 01:55:50 reports the same Oct 23 oil-inspection cycle; its body timestamp timezone is unknown. “Presidenta encargada/(E)” fits the existing interim/acting hypothesis but does not establish an official appointment, UN fallback or multiple-head rule. [Latest check](research/2026-10-24-0200-check.json) · [Hold review](research/2026-10-24-0200-hold-review.json) · [Discovery](research/2026-10-24-0200-discovery.json).
+**Management:** retain/no add/no trade; no market forecast, prior, position or order change. The named HLE API read at 03:28:23 returned HTTP403: no admission was observed on that request, but a permanent outage is unproven. Composite AA index 55/#4 is not HLE; the secondary 52.5 HLE score is below threshold and its configuration is unverified. [News review](research/2026-10-24-0321-news-review.json) · [Hold review](research/2026-10-24-0321-hold-review.json).
 
 ## Mandate and constraints
 
@@ -82,19 +82,19 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 24 02:01 UTC
+## Last audited snapshot — October 24 03:23 UTC
 
-**Canonical bankroll: $196.14 including $5.70 separately contributed gas.** Trading value is $190.44 midpoint or $188.33 at indicative fee-net depth (+10.8% versus $170); PM values are $50.08/$47.97. The producer’s $19.76 REALIZED line is arithmetic, not validated settlement or profit. VM/API costs are excluded; this is a sequential snapshot, not synchronized NAV or guaranteed proceeds. CSV 292 preserves the 291-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-24-0201-financial-snapshot.json).
+**Canonical bankroll: $196.34 including $5.74 separately contributed gas.** Trading value is $190.60 midpoint or $188.52 at indicative fee-net depth (+10.9% versus $170); PM values are $50.25/$48.17. The producer’s $19.76 REALIZED line is arithmetic, not validated settlement or profit. VM/API costs are excluded; this is a sequential snapshot, not synchronized NAV or guaranteed proceeds. CSV 293 preserves the 292-row prefix; chart tests passed 10/10 once. [Financial snapshot](research/2026-10-24-0323-financial-snapshot.json).
 
-**Account and protection:** 12 financial tuples and 132 confirmed trade IDs match 01:50; zero visible orders and pUSD $5.612932. Exact #179 GET returned HTTP200 JSON `null`, so terminal status remains unknown; two confirmed maker fills total 19.993158 YES with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-24-0200-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Account and protection:** 12 financial tuples, 132 confirmed trade IDs, zero visible orders and pUSD $5.612932. Exact #179 GET returned HTTP200 JSON `null`, so terminal status remains unknown; two confirmed maker fills total 19.993158 YES with a 0.006842 arithmetic tail. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Gross, exits and limits:** all 12 `grossInitialValue` rows total $51.288773; plus the full reservation, $56.088773 is a conservative gross diagnostic, not current loss or entry authority. Current rounded exit displays: #179 $5.00; December Fed $4.00; Delcy $4.76; Kimi $1.00; Messi $1.45; Michigan $1.40; OpenRouter $2.75; whole Clarity pair $27.62. These are sequential marks, not joint liquidation proceeds. APY 3.411% was last fetched Oct23 21:17:38. [Hold review](research/2026-10-24-0200-hold-review.json).
+**Gross, exits and limits:** all 12 `grossInitialValue` rows total $51.288773; plus the full reservation, $56.088773 is a conservative gross diagnostic, not current loss or entry authority. Current rounded exit displays: #179 $5.00; December Fed $4.20; Delcy $4.76; Kimi $1.00; Messi $1.45; Michigan $1.40; OpenRouter $2.75; whole Clarity pair $27.62. These are sequential marks, not joint liquidation proceeds. APY 3.411% was last fetched Oct23 21:17:38. [Financial snapshot](research/2026-10-24-0323-financial-snapshot.json).
 
-**Decision and evidence:** retain/no add/no trade; no forecast/date/model/DEC change. The teleSUR report, timestamped Oct23 17:50 with timezone unknown, describes the already-known oil-inspection cycle. “Presidenta encargada/(E)” remains compatible with the interim/acting hypothesis, but no official appointment, UN fallback or multiple-head rule is established; the Oct21 current-role date remains dated, with source budget review due 13:00. [News/check](research/2026-10-24-0200-check.json) · [Hold review](research/2026-10-24-0200-hold-review.json).
+**Decision and source limit:** retain/no add/no trade; no market forecast, prior, position or order change. DEC172’s process outcome was updated to PARTIAL: event grouping and fail-open mechanics were supported; strict cohort-only comparison was contradicted by Oct24 thin-tail ranking under a hurdle mismatch. Stable-snapshot, recall and ROI claims remain unscored. The named HLE API read at 03:28:23 returned HTTP403; admission was not observable and permanent outage remains unproven. [Check](research/2026-10-24-0321-check.json) · [News review](research/2026-10-24-0321-news-review.json) · [Hold review](research/2026-10-24-0321-hold-review.json).
 
 **Discovery:** two page-capped scans selected 80/589 eligible primary and 3,000/3,425 eligible thin-tail records; omitted tops were509 and425. These are scanner selection counts, not valuations or an exchange-wide zero-opportunity claim. Paired parents contain51 primary rows in 3 batches and2,304 thin-tail rows in 130 batches, with no truncated triggers. Sports had 94 records, 20 selected and 3 NO_CONSENSUS, macro 5; monotonicity 1,269/0 flags, and consistency 5,007 markets/650 events/420 groups, 20 live/123 legs/13 quotes/7 skips/0 provisional positives remain incomplete. Favorite-fade covered27 profiles with 33 walk omissions. [Discovery](research/2026-10-24-0200-discovery.json).
 
-**Operations:** 29 captured CLI children returned rc0 (20 core/account/storage plus9 discovery/batch receipts); 32 account HTTP/RPC responses returned status200 and one teleSUR SDK result had status null. The audit was clean with 0 acknowledged holds dropped; UMA0, hurdle7 clear, watchlist0, no overdue decisions, Ostium diff clear and four unique current daemons. No new poll-aging or Kimi API retry was made. Next is the existing06:00 light check and14:00 full check; Delcy review is13:00, #179 remainder review is Oct27 22:00 only if verified, weekly Oct30 and monthly Nov12. [Check](research/2026-10-24-0200-check.json) · [Discovery](research/2026-10-24-0200-discovery.json).
+**Operations:** 22 captured CLI children returned rc0, including the routine check, financial append, chart test, DEC172 update and final pending check; 32 account HTTP/RPC responses returned status200, the named HLE API returned HTTP403, and six SDK captures had null status. The final pending check found no overdue decisions; UMA reported no alerts. The 32-test offline suite passed. Discovery was not repeated. [Check](research/2026-10-24-0321-check.json) · [Discovery](research/2026-10-24-0200-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 

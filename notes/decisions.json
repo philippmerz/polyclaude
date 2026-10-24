@@ -3455,9 +3455,10 @@
         "fail-open"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "PARTIAL: exact-event grouping, integrity warnings/fail-open reporting and offline design are supported. Strict cohort isolation is contradicted by Oct24 thin-tail output under a hurdle-parameter mismatch. Stable production primary snapshots were not observed.",
+      "calibration_delta": "No numeric calibration: this is a process prediction, not a scored probability or P&L. Record the isolation miss; leave recall and stable-snapshot claims unscored.",
+      "lesson": "An unverified-delta flag does not suppress comparison-derived triggers. Gate ranking on required cohort compatibility or label emitted rows non-comparable. New-to-snapshot is not proof of a genuinely new market.",
+      "resolved_at": "2026-10-24T03:33:39Z"
     },
     {
       "id": 173,
