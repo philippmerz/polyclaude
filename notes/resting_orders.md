@@ -1,26 +1,26 @@
-# Current resting orders — October 24 13:58 UTC
+# Current resting orders — October 24 15:28 UTC
 
-**Zero visible open orders; #179 terminal status remains unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost; maker fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. The 13:58 exact GET returned HTTP 200 JSON `null`; the remaining 0.006842 is arithmetic, not terminal proof. Preserve the full $4.80 reservation and global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Check](../research/2026-10-24-1356-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**Zero visible open orders; #179 terminal status remains unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost; maker fills are 14.73 @ $0.24 and 5.263158 @ $0.2400000151999997. The 15:28 exact GET returned HTTP 200 JSON `null`; the remaining 0.006842 is arithmetic, not terminal proof. Preserve the full $4.80 reservation/global BUY block; do not cancel, prune, repost, burn or treat risk as released. [Check](../research/2026-10-24-1527-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account mark:** 12 financial tuples, 132 confirmed trades, zero open orders, unchanged selected CTF balances and pUSD $5.612932. Marks changed without fills: OpenRouter NO 55.5¢→58.5¢; December Fed YES 21¢→21.5¢; Clarity over-50 YES 5.5¢→6.5¢; Delcy YES 17.5¢→17¢; Clarity over-58 NO 90.5¢→89¢. Two zero-value claims remain unburned. Current rounded exits: #179 $4.80, December Fed $4.20, Delcy $4.48, Kimi $1.00, Messi $1.45, MI $1.45, OR $2.70 and Clarity pair $26.48. $56.088773 grossInitialValue plus reserve is a gross diagnostic, not current loss or entry authority. [Financial snapshot](../research/2026-10-24-1358-financial-snapshot.json).
+**Account mark:** 12 tuples, 132 confirmed trades, zero open orders, unchanged selected CTF balances and pUSD $5.612932. Quote changes without fills: OpenRouter NO 58.5¢→59¢; December Fed YES 21.5¢→20.5¢; Clarity over-50 YES 6.5¢→5.5¢; Delcy YES 17¢→17.5¢; Clarity over-58 NO 89¢→93¢. Two zero-value claims remain unburned. Latest exits: #179 $4.80, December Fed $4.00, Delcy $4.48, Kimi $1.00, Messi $1.45, MI $1.45, OR $2.85, Clarity pair $27.31. [Financial snapshot](../research/2026-10-24-1528-financial-snapshot.json).
 
-**Decision/source:** retain/no add/no trade; priors, dates, positions, orders and DEC unchanged. Orca AA55 is a composite, not HLE; TerminalBench 65.7 vs 66.4 is cross-harness. Delcy’s bounded dialogue search found no instrument, not proof of absence. HLE API 403 is inconclusive; no probability change. [News](../research/2026-10-24-1356-news-review.json) · [Hold/risk](../research/2026-10-24-1356-hold-review.json).
+**Decision/source:** retain/no add/no trade; priors, dates, positions, orders and DEC unchanged. The Sep23 speech and Acting President title do not prove Dec31 sole-head tenure; NYT’s blocked article and the repeated ad headline do not establish a measured vote shift. No probability change. [News](../research/2026-10-24-1527-news-review.json) · [Hold/risk](../research/2026-10-24-1527-hold-review.json).
 
 **Held October Fed / DEC263:** 19.993158 YES, cost $4.798358; order `0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19`. Exit $4.80; HTTP 200 JSON null does not establish terminal status.
 
-**Held Delcy / DEC262:** 28 YES at 18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.48. The due13UTC review found repeat dialogue coverage and no new role instrument in bounded sources; this does not prove absence. Existing literal resolution criteria remain unchanged.
+**Held Delcy / DEC262:** 28 YES at 18¢/$5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $4.48. Sep23 speech/activity is not a Dec31 appointment or sole-head instrument; existing literal resolution criteria remain.
 
-**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 ($0.73/share terminal). Exit $2.70. Latest chart remains dated00:25: Oct12 complete 164.043986T; Oct19 partial 141.564252T, not extrapolated.
+**Held OpenRouter / DEC264:** 5 NO at .65/$3.25; retain/no add, selected pNO .73 ($0.73/share terminal). Exit $2.85. Latest chart remains dated00:25: Oct12 complete 164.043986T; Oct19 partial 141.564252T, not extrapolated.
 
-**Held December Fed / DEC253+256:** 20 YES at 19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.20.
+**Held December Fed / DEC253+256:** 20 YES at 19¢/$3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.00.
 
-**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. AA55 is a composite, not HLE; no inferred mapping from cyber benchmarks to HLE or probability.
+**Held Kimi / DEC243+266:** 10 YES at 12¢/$1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; exit $1.00. The HLE API’s prior 14:07 HTTP 403 was not refetched and does not establish absence.
 
-**Held Messi / DEC244:** 5 YES at 27¢/$1.35; exit $1.45. Football recaps do not establish Google’s annual rank.
+**Held Messi / DEC244:** 5 YES at 27¢/$1.35; exit $1.45. Football coverage does not establish Google’s annual rank.
 
-**Held Michigan / DEC261:** 5 NO; exit $1.45; operative 59/41, selected $0.31/NO ($1.55 for five NO) versus $1.452667 carry-adjusted cash. The unverified funding allegation’s effect on this all-non-Dem outcome is unmeasured; no probability change adopted.
+**Held Michigan / DEC261:** 5 NO; exit $1.45; operative 59/41, selected $0.31/NO ($1.55 for five NO). No measured vote shift verified; NO covers all non-Democratic outcomes. No forecast change.
 
-**Clarity Act pair:** 29 over-50 YES and 29 over-58 NO; current marks .065 YES and .89 NO; whole-pair exit $26.48. Conditional $29 terminal value vs $26.650883 cash plus 70-day carry. The 8.10% 29-or-zero threshold is a sensitivity, not probability; maintain whole-pair/no-add. APY 3.411% last fetched Oct23 21:17:38, not guaranteed. [Check](../research/2026-10-24-1356-check.json) · [Hold/risk](../research/2026-10-24-1356-hold-review.json).
+**Clarity Act pair:** 29 over-50 YES and 29 over-58 NO; marks .055 YES/.93 NO; whole-pair exit $27.31. Conditional $29 terminal vs $27.486239 cash plus 70-day carry; the 5.22% 29-or-zero break-even is sensitivity, not assigned probability. Keep whole-pair/no-add. APY 3.411% last fetched Oct23 21:17:38, not guaranteed. [Check](../research/2026-10-24-1527-check.json) · [Hold/risk](../research/2026-10-24-1527-hold-review.json).
 
 ## Prior order record — historical
 
