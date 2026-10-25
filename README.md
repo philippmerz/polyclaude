@@ -63,7 +63,8 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** the 20:44 event review retains all holdings; no asset, order/fill, prior or horizon change. Twelve new IDs plus one older requested row (13 reviewed rows total) and five requested IDs were reviewed. The Oct22 Clarity story concerns an excluded Sept procedural vote; the OpenRouter deal item repeats the Oct19 story and adds no measured close or volume shock. Michigan coverage does not establish a new voter measurement. [Check](research/2026-10-25-2044-check.json) · [News](research/2026-10-25-2044-news-review.json) · [Hold/risk](research/2026-10-25-2044-hold-review.json).
+**Management:** the 22:00 light review retains all holdings and forecasts. Fifteen new alert IDs were reviewed, including nine Michigan campaign alerts. Indexed primary evidence corroborates Trump delivering remarks and the opposing campaign's response; campaign rhetoric is not a measured voter shift. Fresh 22:02 API tuples/132 trade IDs match 20:46, with zero visible orders. Financial totals below remain dated 20:46; no new bankroll mark or CSV row. [Light review](research/2026-10-25-2200-periodic-check.json) · [Dated hold/risk](research/2026-10-25-2044-hold-review.json).
+
 ## Mandate and constraints
 
 - Reference trading capital: **$170**, verified from the initial on-chain
