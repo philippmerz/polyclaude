@@ -1,49 +1,49 @@
 ---
-reviewed_at: "2026-10-25T14:21:20.361229+00:00"
+reviewed_at: "2026-10-25T14:53:11.973611+00:00"
 valid_until: "2026-10-25T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 5709b063bbc61821b7158d2e05c492ce7bd17c9a0bb942df06e6890eaf4d6991
+  README.md: 79e3b606bfefdb3eb4c1a185733bbf012ec68b0af0263110f2edcd2b64438321
   strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: df5832219ac01546e43351418f6ac5c076d1b32432a0ab98ee255d65ea29b897
   strategy/02_operations.md: 89b59fee0dfe6d0808fd13a89b56f7360ae9c261d75b9b7aa4f60a888d1e2010
   strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
   scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
   docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
-  notes/backlog.md: 15cf7d7f3a059911231bba78d746b77ae4045cd06f15d981750936f59446db19
-  notes/resting_orders.md: 4b456b2d168f761f93a953a397dda9057bba29c180197ededfcefa69206c039b
-  notes/journal.md: 9751ce8804d5a707c661524340c2aedb504b5838dc7fedae88c965c15e495842
+  notes/backlog.md: 9ddb6f4f89121e7903c3229dfee50a1c0594e692d32977977250caba281fbc8c
+  notes/resting_orders.md: 3c7ae4c38500cee4d6a6d31b92729a719210b02f5ca50d627b0bba8d6a24361f
+  notes/journal.md: 6f82a0b32370f167b68bac9abeb677f30f5f8603b8a3187119b8e68fd54b7916
   notes/longterm_watchlist.md: 0ead45f3047cf6be2f5fadce1c6870207ef88c3ba9428d5ff4686f736f88c881
 ---
 
 ## Current decision
 
-**Oct 25, 14:00 full check: retain all holdings.** No trade, order, fill, probability or date change. Nine new alerts through 14:00:05Z reviewed; seven discovery scans completed with limited coverage. No active goal; the experiment stopped at 422 valued cases. [Check](../research/2026-10-25-1400-check.json) · [News](../research/2026-10-25-1400-news-review.json) · [Hold/risk](../research/2026-10-25-1400-hold-review.json) · [Discovery](../research/2026-10-25-1400-discovery.json).
+**Oct 25 14:37 event check: retain all holdings.** No trade, order/fill, probability or date change. Five new alerts through 14:27:02 Z plus two older requests reviewed. Exact WSLS body/linkage remains unverified; related AP copies describe a planned Michigan visit without a new poll or measured voter effect. Older Norwalk/AP and NewsCord facts reuse completed 14:00 review; NewsCord's 14 outlets aggregate the knownOct 24 rally, not independent measurements. No active goal; experiment stopped at 422 valued cases. [Check](../research/2026-10-25-1437-check.json) · [News](../research/2026-10-25-1437-news-review.json) · [Hold/risk](../research/2026-10-25-1437-hold-review.json).
 
-14:02 account: 12 financial tuples, 132 confirmed trade IDs, selected CTF balances and pUSD 5.612932 unchanged; no visible orders. **#179 remains terminal-unknown: HTTP 200/JSON null, two maker fills, 19.993158 YES/$4.798358 cost. Retain the full $4.80 reservation and global new-BUY block.** No cancel, prune, repost, burn or release without affirmative terminal evidence. The .006842 residual is SHARES arithmetic. Two zero-value claims remain unburned. [Identities/order](resting_orders.md).
+14:39–40 account:12 financial tuples/132 confirmed trade IDs/selected CTFs/pUSD 5.612932 unchanged; no visible orders. **#179 remains terminal-unknown: HTTP 200/JSONnull, same two maker fills,19.993158 YES/$4.798358 cost. Preserve full$4.80 reservation and global new-BUY block.** No cancel/prune/repost/burn/release without affirmative terminal evidence. Two zero claims remain unburned; DEC 223 historical$1.02 loss already booked, no duplicate loss/credit. Exact identities/fills remain in linked evidence. [Resting](resting_orders.md).
 
-|Holding/DEC|Shares/cost|Primary/selected|
-|---|---|---|
-|Oct Fed179/252+263|19.993158 YES/4.798358|67.346%/47.346%|
-|Dec Fed/253+256|20 YES/3.80|46%/31%|
-|Delcy/254+262|28 YES/5.04|74.592%/59.592%|
-|Kimi/243+266|10 YES/1.20|38.51%/23.51%|
-|OR/264 hold|5 NO/3.25|88%/73%|
-|Messi/244|5 YES/1.35|60%/40%|
-|Michigan/261|5 NO/1.55|41%/31%|
+## Underwriting
 
-## Evidence and uncertainty
+| Held side/size | Primary / selected p | Oct 25 days |
+|---|---:|---:|
+| October Fed 19.993158 YES | .67346 / .47346 | 3 |
+| December Fed 20 YES | .46 / .31 | 94 |
+| Delcy 28 YES | .74592 / .59592 | 69 |
+| Kimi 10 YES | .3851 / .2351 | 69 |
+| Messi 5 YES | .60 / .40 | 69 |
+| Michigan 5 NO | .41 / .31 | 19 |
+| OpenRouter 5 NO | .88 / .73 stress | 33 |
 
-- Kimi: fresh Gamma descriptions/tokens match 02:00. Its and Delcy's older reference fingerprints differ from literal hashes; this is not a new interval change. Full-status HLE inventory output matches 13:06 and compares July 3, not complete current scores. Targeted 14:05 API returned 403: no score, absence or permanent-outage proof. Dated 13:11 AA indexed HLE 52% differs from composite 55; protocol unknown, full page too large, WinBuzzer repeats AA. Oct 23 issuer Full51.1/tools70/Diamond39.4 uses distinct configurations; Nov4 weights remain planned. Contract requires HLE Accuracy/equivalent >=55 by Dec31 ET at agi.safe.ai with outage/fallback conditions; no categorical tools ban or weights requirement. Selected terminal2.351 and no-admission1.551 exceed .905725 cash; low .812/broad .80/u0zero favor cash. [Model](../research/2026-10-23-1800-kimi-review.json).
-- Michigan: exact Norwalk article is AP wire about planned Port Huron; NewsCord's 14-outlet comparison covers the known Oct24 rally. No new poll, completed Trump event or measured voter effect; outlet count is not independence. NBC body/context and the prior Obama-AP exact linkage remain unknown. Persuasion is unknown, not zero. Eight polls aged once at 00:38 Oct25: raw NO .4135878, operative .41/.31; selected terminal1.55 vs1.352359 cash. Common-bias/no-bias/IA-source sensitivities retain both hold and cash cases. NO covers all non-Democrats. [Daily](../research/2026-10-25-0038-daily-hold-review.json).
-- OpenRouter: five NO exit3.85/carry3.861693 exceeds selected-stress3.65, below primary4.40. Primary joint case retains; selected stress prefers OR cash, adverse prefers both OR/Kimi cash. Frechet endpoints and hypothetical180 other assets are not NAV, posterior, hedge or proof of optimum. Reuse 13:12 HTTP200/Age28: latest calendar-complete Oct12 raw164.043985914931T unchanged; oldest exposed Oct20-2025 bucket fell from1.218984061050T to.606124678848T, cause unknown. Neither is settlement proof. Oct19 partial176.070134721350T excluded; no extrapolation. API is not UI/first-display/finality. The 00:38 fixed-regime 200k replay, seed20261018182, raw YES.11481 remains uncalibrated; concentrated750T/NO.20 cash cases persist. No fresh OR read/refit. [Math](../data/deep_review_20261017/work/tick20261025_140001/root_math.json).
-- Clarity: fresh strict >50/>58 first full-Senate final-passage rules/tokens unchanged; no-vote and voice-vote branches retained. Official Sept15 failed motion to proceed49–50 is not final passage. Returned Senate schedule lists Nov9 votes/pro-forma days; Congress robots gap and bounded non-return do not prove universal absence. Whole-pair exit27.51/carry27.684986 vs conditional29/58/29. Failure break-even4.534532% is a sensitivity, not probability; 5%29-only27.55 and10%26.10 favor cash. Matching vote/source, void, control and delay risks remain; no unconditional floor or leg separation.
-- Other sources: current search reconfirms dated Fed Sept16 12–0/+25bp/3.75–4% and Oct27–28 calendar, not a new December pledge or exhaustive absence proof. Same3/94-day horizons. Delcy's Jan5 acting-president baseline and unverified Instagram activity do not establish tenure/exclusive head/Dec31 continuity; primary/first-assumed cohead and UN fallback govern. Acting can qualify; low .10/.15 cases favor cash. No official Google2026 annual Messi ranking returned is not absence proof; lowp.20 cash case/Mar31 fallback remain. Trump .33NO is below five-share minimum: no buy-up/burn. No hidden-information maker SELL at/below fair; verified thesis-break taker exits remain available.
+- MI/Fed/OR rederived once 00:38 Oct 25; no repeat aging. MI rawNO.413587811772 remains .41/.31 operative. Common-bias/no-bias/source-dependence sensitivities can reverse hold; political stories supply no calibrated voter-effect update. [Daily](../research/2026-10-25-0038-daily-hold-review.json).
+- Kimi exact market 3072315 requires >=55 HLEAccuracy/equivalent byDec 31 ET, with source/outage/fallback clauses; no categorical tool ban or weights condition. Full-status HLE inventory matches 14:02; printed July 03 differences are not complete live scores. Dated 14:05 API 403 gives no score/absence/permanent-outage proof. Dated 13:11 AA index: HLE 52 vs composite 55, protocol unknown/full-page size limit; WinBuzzer repeats AA. Oct 23 issuerFull 51.1/tools 70/Diamond 39.4 are different configurations; Nov 4 weights plan is not delivery/qualification. Selected 2.351/no-admission 1.551 >.905725 cash; low.812/broad.80/u 0 zero favorcash. [Kimi](../research/2026-10-23-1800-kimi-review.json).
+- OR dated 13:12 source: latest completeOct 12 raw 164.043985914931 T unchanged;51/52 prior totals match. Oldest exposed 2025 Oct 20 bucket changed -50.276%; revision/window-edge cause unknown, not finality. Oct 19 partial 176.070134721350 T excluded, no extrapolation; API is not first UI display. Primary 4.40 favors retain; stress 3.65 <3.861693 cash. Joint primary favors keep; selected stress favors sellOR/keepKimi; adverse favors cashboth. Hypothetical 180 other assets/Frechet endpoints are sensitivity, not NAV/posterior/hedge/optimum. [Math](../data/deep_review_20261017/work/tick20261025_143749/root_math.json).
+- Clarity whole pair exit 27.51/carry 27.684986:29/58/29 conditional on matched first full-Senate final-passage vote/source/void/control/delay. No unconditional floor/leg separation.29-only failure break-even 4.534532% is sensitivity, not probability;5%case 27.55/10%case 26.10 favorcash,58 bonus excluded. Dated 14:00 failed motion-to-proceed 49–50/scheduleNov 9/proforma and Congressrobots gap do not prove universal absence of passage.
+- Other holds: datedSept 16 official 12–0/25 bp hike to 3.75–4% andOct 27–28 calendar are not a new December pledge. Delcy acting can qualify; Jan 5 baseline/Instagram unknowns do not prove exclusive-head/Dec 31 continuity; first-assumed cohead/UN fallback govern, .10/.15 adverse favorcash. No official annual Google 2026 Messi ranking returned is not absence; limited-minutes reason/attention effect unknown; lowp.20 cashcase/Mar 31 fallback remain. Trump .33 NO below 5-share minimum: no buy-up/burn. No hidden-information makerSELL at/belowfair; verified thesis-break takerexit remains available. Dated 14:05 Gamma Kimi/Delcy/Clarity literals/identities matched 02:00; older fingerprint discrepancies are not interval changes. [Prior source review](../research/2026-10-25-1400-hold-review.json).
 
 ## State and next boundary
 
-- Producer14:02:17–33: total197.53 includes5.58 separately marked gas, not contribution; trading191.95 midpoint/189.74 indicative fee-net depth (+11.6% vs170), PM51.59/49.38. Residual19.78 unchanged/formula-only, not validated settlement/profit/credit. VM/API excluded; sequential, not NAV/proceeds. CSV321 preserves exact320-row prefix; chart10/10 once. Appender stdout/proof/state retained, but rc/stderr/bounds unavailable; explicit gap, no replay. [Financial](../research/2026-10-25-1402-financial-snapshot.json).
-- Ordinary seven exits21.87; Fed cost8.598358 and Kimi/OR cost4.45 can all lose. Kimi/OR exits4.75. Gross+reserve56.088773 includes historical-cost/reservation doublecount; no expected-loss or entry authority. Carry uses variable APY .03411 last observed Oct23 21:17:38, not refetched. Other cash/stress comparisons are in the linked math.
-- 21 required CLI receipts rc0 plus one appender invocation with unknown metadata; 36 HTTP200/one HLE403/four SDK-null, not HTTP/wire clocks. Offline finalizer/root-adapter attempts and gaps remain separate. Audit clean, pending clear, UMA0, hurdle7, watchlist0, Ostium0, four current daemons; six controls unchanged, Kelly cache noncanonical. Storage once14:07 rc0: no archives/errors/recovery. No new Telegram material. DEC174 partial108-test limits and DEC223 historical1.02 loss remain; no duplicate loss/credit/burn.
-- Seven scans/two parents/136 reference batches rc0; 2,369 selected rows passed metadata/hash checks, not external verification. 1,432 trigger records/614 groups remain unvalued. Primary fetched1000/retained80/omitted557; thin48021/3000/167, both capped. Monotonicity flag had -2pp execution edge; consistency19 quoted of214 groups/no provisional; sports top3 one0pp/two NO_CONSENSUS. No entry established in this incomplete slice.
-- Next light18UTC; full Oct26 02UTC; weeklyOct30/monthlyNov12/#179 Oct27 22 pull only a verified remainder. No repeat daily aging after00:38, goal, timer, idle follow-up, experiment or retired brokerage restart. Copy only helpers/manifests into new roots; never prior outputs or execute sealed helpers. [Backlog](backlog.md).
+- Producer 14:40:22–38: total 197.48 includes 5.57 separate gas, not contribution; trading 191.91 midpoint/189.75 indicative fee-net depth (+11.6% vs 170), PM 51.54/49.38. Residual 19.78 unchanged/formula-only, not validated settlement/profit/credit. VM/API excluded; sequential, not NAV/proceeds. CSV 322 preserves 321-row prefix; chart 10/10 once. Current appender fully capturedrc 0; prior 14:00 invocation gap remains unrepaired/unreplayed. [Financial](../research/2026-10-25-1440-financial-snapshot.json).
+- Ordinary 7 exits 21.87/cost 20.988358 can allzero; Fedcost 8.598358 and KimiORcost 4.45 can all lose, KimiOR exits 4.75. Gross+reserve 56.088773 includes historical-cost/reservation doublecount; not expected loss/entry authority. Variable carry APY.03411 last observedOct 23 21:17:38, not refetched. Full sensitivities linked above.
+-20 canonical CLIrc 0 (17 routine+launcher+append+chart);32 HTTP 200/1 SDKnull, not wire clocks. Audit clean/pending clear/UMA 0/46 refreshed/four current daemons; six controls unchanged/Kellycache noncanonical. No new Telegram material; expired update 62572756 disclosed no text, generic resend only(message 1297). No current storage/discovery rerun; DEC 174 partial 108-test limits retained.
+- Dated 14:00 discovery:7 scans/2 parents/136 reference batchesrc 0;2,369 selected rows metadata/hash complete, not external verification.1,432 triggers/614 groups unvalued. Primary 1000 fetched/80 retained/557 omitted; thin 48021/3000/167, capped. Sports one 0 pp/twoNO_CONSENSUS; monotonicity flag -2 pp executable; consistency 19 quoted of 214 groups/no provisional. No verified entry in incomplete slice. [Discovery](../research/2026-10-25-1400-discovery.json).
+- Next light 18 UTC/fullOct 26 02 UTC; weeklyOct 30/monthlyNov 12/#179 Oct 27 22 pull only a verified remainder. No goal/timer/idle follow-up/experiment/retired brokerage restart. Fresh roots may copy helper SOURCE/manifests only; never prior outputs or execute sealed helpers. [Backlog](backlog.md).
