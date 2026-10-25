@@ -1267,23 +1267,23 @@
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
-    "verified": "2026-10-24",
+    "verified": "2026-10-25",
     "criteria_read": "2026-10-21",
     "condition_id": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
     "market_id": "630805",
     "criteria_sha256": "d8381cce8308c2223f9a948aae59a3a28b0475c075306158758f422e97553301",
     "rationale": "[Previous three-poll model; superseded by current_assessment] Primary currentfirst-partyIA MI48D/46R Oct9\u201310notice addedto originalYouGov/Rasmussen; rawD55.605%, rounded56/44. D30\u201380specificationrange/10ppreserve; uncalibratedcandidate/bias/common-source assumptions retained. Fullrules/currentofficial6nominees andbothadvisoriesread. NOallnonD winners, not merelyRogers. Currentnetpolicy-stresspositiveat31c, not guaranteedrangefloor.",
-    "current_assessment": "Oct24 daily model: advance old poll ages once20/10/14/30/26/40/6/6; replace older IA with latest same-house47D/46R, official homepage headline verified, fieldOct21\u201322/n1200LV/MOE2.8 secondary metadata; original release/mode/sponsor unknown.8 active observations/9 distinct surveys observed. Fixed G8/bias-1.5/source SD4.5 yields rawD.5859906383/NO.4140093617, rounds59/41 unchanged; operative selectedNO.31=>1.55/5shares, raw selected1.570047 separate. Sponsor\u00b12pp/SD6/G12/shared-error sensitivities retained; G12/bias0 favorscash. Headlines no measured vote shift; no automatic rhetoric uplift. research/2026-10-24-0019-daily-hold-review.json",
+    "current_assessment": "Oct25 actualdailyrecompute:8activepollsagedonce21/11/3/31/27/41/7/7;latestIA47/46samehousepreserved/sourcerelease-methodgap, no duplicatepoll. RawNO0.413587811772, roundsoperative.41/.31selected unchanged. GuardianOct24completedObamaspeechconfirmed, not measuredpersuasion; priorendorsementplanalreadyknown. SameMaristOct15\u201318poll/Oct21release. G12samebias/bias0/sharedSD/IAunknown sensitivities recomputed; no quotedprice inprobabilityinputs. research/2026-10-25-0038-daily-hold-review.json",
     "research_report": "research/2026-10-17-deep-review/evaluations/1838.md",
     "current_revision": "research/2026-10-22-0154-michigan-daily.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/michigan_entry_skeptic.md",
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick20261024_001938/source_mi/primary_verification.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261025_003820/source_facts/mi_daily_facts.json",
     "management": "Review each existingtick/earliermaterialpoll,candidacy,withdrawal,health,ballot or turnout news. OriginalBUYfilled/Oct23pullobsolete. Oct21debate elapsed; APpartialbodycheckedOct22, exactfulltranscript/completion/voteeffectunknown. Pullanyfuture restingorderbeforeknowncatalyst and revalue. MandatoryearlyvotingOct24-Nov1/absenteeSep24 remain datedcontext. EveryfreshBUYrequirescompleted-universepolicyv2, primaryselection andalllivegates; former600waitretired. No measuredUS-politicshedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
-    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json",
+    "daily_rederivation": "research/2026-10-25-0038-daily-hold-review.json",
     "latest_news_review": "research/2026-10-24-0019-check.json"
   },
   "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
@@ -1347,21 +1347,21 @@
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.75,
     "cluster_frac": 0.1,
-    "verified": "2026-10-24",
+    "verified": "2026-10-25",
     "criteria_read": "2026-10-20",
     "market_id": "5763815",
     "condition_id": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
     "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
     "criteria_sha256": "42eb9156d8b64b618e67bf7dd66b6255eaf47ccce0d9a217f321fc1234e8ad30",
     "rationale": "Primary operativeYES12%/NO88%, selectedNO73% after15ppreserve. Current Oct20 completed-anchor model rawYES11.481%; old158.105partial/UIproxy wording was superseded by current_revision, not an adopted input. Five future weeks from calendarcompletedOct12raw164.043985914931T, sum Oct26/Nov2/9/16; fixed36/28/8/8/20% regimes includingplateau, unfitted drifts/noise/correlation. Oct19partial is context, not completed/UIrounded settlement. Concentrated750Tmodel73.36%YES reversesNO; source/regime/jointAI risk remains.",
-    "current_assessment": "Oct24 daily source/model review: fresh exact Gamma criteria/token identity, zero fee/min5shares,5NO cash2.80. Official chartHTTP200/Age291: latest completedOct12raw164.043985914931T unchanged; Oct19partial141.564252295011T, targetlabelsabsent. Same200k/seed/fixed regimes reproduce rawYES.11481; retain conservative operativeNO.88/selected.73. Hypothetical completedOct19 anchors160\u2013220T unadopted, selectedminimum3.437925 vs2.808762 cash+34dvariablecarry; concentrated750T/broadNO20%cashcases/full3.25loss remain. Rawseries not UI rounding/finality/firstdisplay; no partial linear extrapolation. research/2026-10-24-0019-daily-hold-review.json",
+    "current_assessment": "Oct25 freshchartHTTP20000:42:32/Age151:52completedtotalsmatchOct24captures/latestcompleteOct12raw164.043985914931T. Oct19partial164.647995128064T excluded;no targetlabels/finality/UIroundingclaim. Exact200kseed20261018182/fixedregimes replaysrawYES.11481; retainoperativeNO.88/selected.73afterriskreview, notcalibratedposterior. Concentrated750T/broadNO.20cashcases; no newGamma/criteria confirmation. research/2026-10-25-0038-daily-hold-review.json",
     "research_report": "research/2026-10-17-deep-review/revisions/0112_20261018T194055677692Z.md",
     "current_revision": "research/2026-10-17-deep-review/models/openrouter_tick012937_primary_0154.json",
     "balanced_reviews": [
       "research/2026-10-17-deep-review/advisories/0112_chart_champion_1110.md",
       "research/2026-10-17-deep-review/advisories/0112_chart_skeptic_1110.md"
     ],
-    "latest_source_packet": "data/deep_review_20261017/work/tick20261024_001938/or_chart/chart_summary.json",
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261025_003820/or_daily_facts.json",
     "management": "Filledholding, no originalrestingBUY remains. OldOct18 22UTCBUYpull obsolete; existing22UTCheldreview and earliermaterialnews remain. Re-underwrite currentexit/hold on source/rule/measurement/method/regimechanges; fullcurrentgates beforemoney. Noadd/repost. AnynewweeklyTotalrequiresrevaluation; WeeklyPace not realizedtotal/cutoff. Full3.25entrycost canbelost; noindependence orhedgecredit.",
     "monitoring": "Existing exposure-aware newsrouting; PID40455progressverified17:21 after17:19restart, rawRSS Telegramoff, queued/deferred is not reviewed. Current scopedsourcechecks remain required; cache/cooldown/cappedfeed/private-unannouncedchange gaps retained. No newdaemon/timer/manualpoll.",
     "latest_catalyst": "Oct20 boundedcheck completedsource/holdreview. Existing02UTC or earliermaterialsource/fill; nextweeklydisplayOct26; exacttargetweeksOct26/Nov2/Nov9/Nov16, freezeonfirstNov23display/Nov27ETfallback. Currentpartialweek/weeklypace notsettlement; no liveORBUY.",
@@ -1370,7 +1370,7 @@
     "latest_risk_review": "research/2026-10-24-0019-hold-review.json",
     "latest_execution_review": "research/2026-10-22-1208-openrouter-review.json",
     "latest_news_review": "research/2026-10-22-120847-checkin.json",
-    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json"
+    "daily_rederivation": "research/2026-10-25-0038-daily-hold-review.json"
   },
   "will-the-bank-of-israel-make-no-change-to-the-bank-of-israel-interest-rate-after-the-october-decision": {
     "p_yes": 0.8,
@@ -1945,7 +1945,7 @@
     "cluster": "us-monetary-policy-2026",
     "rho_within": 0.5,
     "cluster_frac": 0.27,
-    "verified": "2026-10-24",
+    "verified": "2026-10-25",
     "criteria_read": "2026-10-21",
     "updated_utc": "2026-10-21T13:10:50.656021+00:00",
     "review_index": 179,
@@ -1973,11 +1973,12 @@
     "latest_news_review": "research/2026-10-22-120847-checkin.json",
     "divergence_ack": "2026-10-22",
     "divergence_ack_reason": "Primary postfill/source/joint-loss and cash/sensitivity reviewed, not automatic market rejection or calibratedfloor. See research/2026-10-22-1208-fed-hold-review.json",
-    "daily_rederivation": "research/2026-10-24-0019-daily-hold-review.json",
-    "current_assessment": "Oct24 real daily source/path recomputation .67346, selected .47346. Official Oct27\u201328 calendar and12-member roster checked; Sept16 unanimous hike and WallerOct8 conditional further-hike remarks were already in Oct21 inputs, not new independent evidence. Path75%HOLD/23%hike25/1%hike50+/1%cut, conditional unanimity65/80/35/20,2%source exception at50%. No new committee commitment verified in bounded sources. 4day cash/carry, adverse source/fill/jointFed loss reviewed; no quote-refit. research/2026-10-24-0019-daily-hold-review.json",
+    "daily_rederivation": "research/2026-10-25-0038-daily-hold-review.json",
+    "current_assessment": "Oct25 actualpathrecompute.98*(.75*.65+.23*.80+.01*.35+.01*.20)+.02*.5=.67346;selected.47346unchanged. DatedSept16unanimous25bp hike/WallerOct8/calendarretained. NewFedSDKbatchbodylostbeforecapture; separateofficialXMLreadsSDKunsupported, currentcommunicationsunverified\u2014notno-newsproof. Retainsubjectivepathweights/20ppreserve aftersourcegap/currentexit/jointzerosreview; noindependentmemberassumption/quote-fit. research/2026-10-25-0038-daily-hold-review.json",
     "remaining_risk_basis": "Retainedfullentryreservation, visibleopenordercash0; unknownterminal0.006842-share arithmetic tail, not fresh4.80venuecommitment.",
     "venue_open_order_cash_usd": 0,
-    "arithmetic_unfilled_shares": 0.006842
+    "arithmetic_unfilled_shares": 0.006842,
+    "latest_source_packet": "data/deep_review_20261017/work/tick20261025_003820/fed_facts.json"
   },
   "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635": {
     "p_yes": 0.46,

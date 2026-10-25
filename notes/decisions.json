@@ -3497,9 +3497,10 @@
         "revalidation"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Partially verified throughOct24: inspected500-token batch cap perhelperinvocation/asset_id mapping/malformed-duplicate-unexpected rejection;108focusedtests passed. Scan-wideone-request-per500unique-token claim and universal fresh-execution-rewalk history cannot be verified from retained per-scan receipts; consistency also batches pergroup. This is not full success or proof of a trading breach.",
+      "calibration_delta": "Operational prediction only; partial verification, no numerical market calibration or measured ROI.",
+      "lesson": "Code/tests establish specific helper behavior, not observed request counts across all runs. Offline context batches are not HTTP book batches; preserve telemetry limits and never infer execution safety from a sequential batch snapshot.",
+      "resolved_at": "2026-10-25T00:48:04Z"
     },
     {
       "id": 175,
@@ -4825,17 +4826,22 @@
         "retain-no-add",
         "film-boxoffice-2026"
       ],
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null,
+      "outcome": "Same6NOWhalefallclaimasDEC222: Oct19Polygon95828757denominator1/YES1NO0alreadyverified. Original6NO17c/$1.02 pays0/full1.02economicloss alreadyrecorded inDEC222; no additionaltrade,loss,credit,redemptionorburntoday.6valuelessshares stillheld. This closes the duplicate retention forecast record, not another investment.",
+      "calibration_delta": "RetentionNO57.1022%lost (binarysquared error0.3260661); sameunderlyingforecast/position asDEC222, not an independentcalibrationtrial or newloss.",
+      "lesson": "Threshold-equality estimates were not finalgross; actual7,837,153andYESoracle payoutmakeheldNOworthless. Close redundant decision followups without duplicating P&L or spending gas toburnlosingtokens.",
       "original_decision_id": 222,
       "order_id": "0xfa037d287bcfcf6676c0ba6d7758d4cfdc4bfc3fd0c6f53f0292f434993e79db",
       "condition_id": "0x7ebc764e77eccde057b2d714b13f25a442d7f1e948fac4071ef368b40eb13a4e",
       "market_id": "5394247",
-      "financial_status": "HELD_FULLY_FILLED",
+      "financial_status": "RESOLVED_LOSS_NO_PAYOUT",
       "filled_shares": 6,
       "research_report": "research/2026-10-17-deep-review/whalefall299_filled_outcome_0135.md",
-      "verification": "data/deep_review_20261017/work/0299_root_fill_verified_0125.json"
+      "verification": "data/deep_review_20261017/work/0299_root_fill_verified_0125.json",
+      "resolved_at": "2026-10-25T00:48:04Z",
+      "payout_usd": 0,
+      "economic_trade_pnl_usd": -1.02,
+      "financial_verified_utc": "2026-10-19T22:23:57.762867+00:00",
+      "resolution_verification": "data/deep_review_20261017/work/whalefall_resolved_loss_2224.json"
     },
     {
       "id": 224,
