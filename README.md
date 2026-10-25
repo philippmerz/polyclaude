@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV now has 315 recorded observations from Apr-25
+The local performance CSV now has 316 recorded observations from Apr-25
 through Oct-25. Rounded reconstructions are labeled; unsupported historical
 values stay blank. The [source audit](research/2026-10-06-performance-history.json)
 records remaining gaps and accounting limits.
@@ -60,7 +60,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain all holdings; no add, trade, order, fill, or prior/date change. [Hold/risk](research/2026-10-25-0600-hold-review.json) · [Check](research/2026-10-25-0600-check.json).
+**Management:** retain all holdings; no add, trade, order, fill, or prior/date change. [Hold/risk](research/2026-10-25-0648-hold-review.json) · [Check](research/2026-10-25-0648-check.json).
 
 ## Mandate and constraints
 
@@ -82,15 +82,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 25 06:01–02 UTC
+## Last audited snapshot — October 25 06:50 UTC
 
-**Canonical bankroll: $196.63 including $5.63 separately marked gas, not a new contribution.** Trading value is $191.00 midpoint or $188.69 at indicative fee-net depth (+11.0% vs $170); PM values are $50.64/$48.33. Residual $19.78 is formula-only arithmetic, unchanged from the prior $19.78; it is not validated settlement or profit. VM/API are excluded; the snapshot is sequential, not NAV or proceeds. CSV has 315 observations with the exact 314-row prefix; chart check passed 10/10 once. [Financial snapshot](research/2026-10-25-0601-financial-snapshot.json) · [Check](research/2026-10-25-0600-check.json).
+**Canonical bankroll: $196.61 including $5.60 separately marked gas, not a new contribution.** Trading value is $191.01 midpoint or $188.70 at indicative fee-net depth (+11.0% vs $170); PM values are $50.64/$48.33. Residual $19.78 matches the prior display but is formula-only, not validated settlement or profit. VM/API are excluded; the snapshot is sequential, not NAV or proceeds. CSV has 316 observations with the exact 315-row prefix; chart check passed 10/10 once. [Financial snapshot](research/2026-10-25-0650-financial-snapshot.json) · [Check](research/2026-10-25-0648-check.json).
 
-**Account and protection:** 12 tuples, 132 confirmed trade IDs, selected CTF balances and pUSD $5.612932 match 05:16; zero visible orders. Mark-only changes: Clarity over-58 NO .93→.92, December Fed YES .195→.20, #179 YES .27→.26, Michigan NO .28→.285, and OpenRouter NO .645→.64. #179 returned HTTP 200 JSON `null`; terminal status remains unknown, with the same two maker fills and 19.993158 YES at $4.798358 cost. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-25-0600-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
+**Account and protection:** 12 tuples, 132 confirmed trade IDs, selected CTF balances and pUSD $5.612932 match 06:00; zero visible orders and no mark changes. #179 returned HTTP 200 JSON `null`; terminal status remains unknown, with the same two maker fills and 19.993158 YES at $4.798358 cost. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. [Check](research/2026-10-25-0648-check.json) · [Fill proof](research/2026-10-22-1208-fill-reconciliation.json).
 
-**Exits and risk:** #179 $5.00; December Fed $3.80; Delcy $5.32; Kimi $0.80; Messi $1.45; Michigan $1.40; OpenRouter $3.05; Clarity pair $27.51. Ordinary seven sum to $20.82 in sequential indicative exits. Delcy cash-plus-carry is $5.353839; Michigan $1.402447. Kimi’s low-update (.812) case is narrowly above its $0.805089 cash-plus-carry comparator; broad (.80) is narrowly below, while u=0 remains zero. Clarity cash-plus-carry is $27.684986; the 29-only failure break-even 4.534532% is an uncalibrated sensitivity, not probability. [Hold/risk](research/2026-10-25-0600-hold-review.json).
+**Exits and risk:** #179 $5.00; December Fed $3.80; Delcy $5.32; Kimi $0.80; Messi $1.45; Michigan $1.40; OpenRouter $3.05; Clarity pair $27.51. Ordinary seven sum to $20.82 in sequential indicative exits. Delcy cash-plus-carry is $5.353839; Michigan $1.402447. Kimi’s low-update (.812) case is narrowly above its $0.805089 cash-plus-carry comparator; broad (.80) is narrowly below, while u=0 remains zero. Clarity cash-plus-carry is $27.684986; the 29-only failure break-even 4.534532% is an uncalibrated sensitivity, not probability. [Hold/risk](research/2026-10-25-0648-hold-review.json).
 
-**Review and operations:** One new Mbappé prediction item was reviewed; it is not a Google measurement and its effect is unknown. No material requested item or new source call occurred. Retain all; no add, trade, order, fill, prior, or date change. All 17 routine jobs, append, chart and one storage pass returned rc0; canonical total 20 CLI rc0. Captures include 32 HTTP 200 responses and no routine SDK null statuses. Storage archived zero files, with zero errors and zero recovered tail bytes. State audit clean, pending clear, UMA 0, hurdle 7 clear, watchlist empty, Ostium 0, four daemons current. Kelly cache $197.05 is noncanonical. No new discovery scan or daily rederivation ran; capped discovery and daily review were reused. [News](research/2026-10-25-0600-news-review.json) · [Prior capped discovery](research/2026-10-25-0200-discovery.json).
+**Review and operations:** Four new alerts and two requested items were reviewed; seven older related rows were available. AP’s Yahoo item is the same Oct24 rally; WION’s body and chronology are unverified, so voter effect remains unknown, not zero. The Kimi issuer’s 81% vs 90.5% cyber-ablation comparison was already in the Oct23 raw evidence; it is not a new HLE drop or a 9.5-point haircut. Retain all; no add, trade, order, fill, probability, or date change. All 17 routine jobs, append, and chart checks returned rc0; 19 canonical CLI rc0. Captures include 32 HTTP 200 responses and six SDK null-status results (not HTTP). No new discovery scan, storage pass, or daily rederivation ran; prior source gaps and bounded discovery remain dated. State audit clean, pending clear, UMA 0, hurdle 7 clear, watchlist empty, Ostium 0, four daemons current. Kelly cache $196.62 is noncanonical. [News](research/2026-10-25-0648-news-review.json) · [Prior capped discovery](research/2026-10-25-0200-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
