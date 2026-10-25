@@ -1,22 +1,24 @@
 ---
-reviewed_at: "2026-10-25T17:56:37.808891+00:00"
-valid_until: "2026-10-25T18:00:00Z"
+reviewed_at: "2026-10-25T18:06:02.419241+00:00"
+valid_until: "2026-10-25T22:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 8ad255b9bd7ae6f2744eb44f28b9dab612f1b6b91b4deaa06ef6e50ca45ad56a
+  README.md: b822d5a263428d8d6b0bf4d6ea01b11ddd6ee6d29ac784710880dbef18fc2b03
   strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: df5832219ac01546e43351418f6ac5c076d1b32432a0ab98ee255d65ea29b897
   strategy/02_operations.md: 89b59fee0dfe6d0808fd13a89b56f7360ae9c261d75b9b7aa4f60a888d1e2010
   strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
   scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
-  notes/backlog.md: 50681f72367aefbd01e1a4645c0fa399054be7eb9711b2eebdda93bce9e3e189
+  notes/backlog.md: 7cbf43d3e68c1c197c772b29589ff91c023fbfb28ce7afc8dc6b2c62fe9a1949
   notes/resting_orders.md: 91ba1937fde8c6110d71911a80cb5448a19728996fe42d969cf34c2f6328f400
-  notes/journal.md: 6d3461aa8ac2c1840ff58648ea8c96a441f02095a91d9fe94e8ba27db65f382a
+  notes/journal.md: b74a6c2e94f51efde05781c118293d9e554e91f341d87eddb3e17ed5a4a6d2af
   notes/longterm_watchlist.md: 0ead45f3047cf6be2f5fadce1c6870207ef88c3ba9428d5ff4686f736f88c881
 ---
 
 ## Current decision
+
+**18:00 light review complete: no additional action due.** Reused the completed17:59 check; account/financial observations remain17:44–45. Both newer Michigan rows reviewed through17:51:51: odds article repeats known Marist, undated IA48–46 is not merged with homepage47–46/secondary field metadata, older Tyson claim not verified/admitted. NBC listing body blocked. All six controls/CSV324 unchanged; storage archived0/errors0. No Telegram repeat. [Periodic review](../research/2026-10-25-1800-periodic-check.json).
 
 **Oct 25 17:41 check: retain all holdings, no add or asset transaction.** Machado's verified return raises transition risk: Delcy primary .74592→.66, selected .59592→.51 (DEC 267). Keep 28 YES: selected payout 14.28 versus 5.353839 exit plus variable carry. Weights are unfitted judgment; .10/.15 adverse cases favor cash. Current UN list is datedOct 20 and names Delcy as acting head of state; later government legal instruments/expiry/co-head status remain unverified. Exact Gamma criteria/CID/tokens match 14:05. Return is not an appointment. [Delcy](../research/2026-10-25-1741-delcy-review.json) · [Check](../research/2026-10-25-1741-check.json).
 
@@ -47,4 +49,4 @@ News reviewed through 17:41:02 Z:22 rows/21 IDs, all 6 requested,12 olderDelcy+3
 - Producer 17:45:38–55: total 197.86 includes 5.67 separate gas; trading 192.19 mid/189.69 indicative fee-net depth (+11.6%vs 170), PM 51.82/49.32. Residual 19.78 unchanged/formula-only, not settlement/profit; VM/APIexcluded, sequential notNAV/proceeds. CSV 324/exact 323 prefix; append/chart rc 0,10/10 once. [Financial](../research/2026-10-25-1745-financial-snapshot.json).
 - Ordinary 7 exits 21.77/cost 20.988358, Fedcost 8.598358 and Kimi/ORcost 4.45 canalllose; no independence credit. VariableAPY.03411 lastobservedOct 23 21:17:38, notrefetched. Funding:70 USDC.e Apr 25 13:12:44 UTC +100 USDC Apr 29 19:16:57 UTC =170 nominal tradingcapital, not verified all-in spending; gas/fundingcosts excluded.5 USDCrefund internal/.000099 USDCunclassified. [Funding audit](../research/2026-10-25-initial-funding-audit.json) · [Ledger](capital_ledger.md).
 -21 canonicalCLIrc 0;35 HTTP 200/1 HLE 403/7 SDKnull. Auditclean/pendingclear/UMA 0 alerts 46 refreshed/fourcurrentdaemons; onlyDelcyprior+oneDEC changed among 6 controls, Kellycache noncanonical. UNPDF parser repaired offline after rawcapture, no replay. Telegram 1302 sent once for materialrevision. Dated 14 UTC discovery capped/incomplete:1,432 triggers/614 groups unvalued. No current discovery/storage rerun. [Discovery](../research/2026-10-25-1400-discovery.json).
-- Nextlight 18 UTC/fullOct 26 02 UTC; weeklyOct 30/monthlyNov 12/#179 Oct 27 22 pull only verifiedremainder. No active goal (experiment stopped 422 valued), timer, idle follow-up or retired brokerage restart. Fresh roots copy helperSOURCE/manifests only; never outputs or execute sealed helpers. [Backlog](backlog.md).
+- Nextlight 22 UTC/fullOct 26 02 UTC; weeklyOct 30/monthlyNov 12/#179 Oct 27 22 pull only verifiedremainder. No active goal (experiment stopped 422 valued), timer, idle follow-up or retired brokerage restart. Fresh roots copy helperSOURCE/manifests only; never outputs or execute sealed helpers. [Backlog](backlog.md).
