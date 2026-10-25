@@ -1,5 +1,5 @@
 {
-  "next_id": 267,
+  "next_id": 268,
   "decisions": [
     {
       "id": 1,
@@ -5795,6 +5795,25 @@
         "forecast_revision"
       ],
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 267,
+      "timestamp": "2026-10-25T17:50:25Z",
+      "type": "skip",
+      "thesis": "Machado physical return raises transition hazard. Delcy primary P(YES) .74592 to .66; selected .59592 to .51. Keep28YES, no add:14.28 selected terminal vs5.353839 cash+carry. Exact criteria/currentUNdatedOct20 checked; latergovernment legalinstrument unknown. research/2026-10-25-1741-delcy-review.json",
+      "confidence": "low",
+      "prediction": "Delcy officially qualifies at Dec31 noonET with subjective primary probability .66; broad .10-.90 uncertainty includes cash-favoring cases. Return is not a transfer of office.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31T17:00:00Z",
+      "tags": [
+        "delcy",
+        "prior_revision",
+        "hold_review"
+      ],
+      "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
