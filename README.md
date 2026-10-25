@@ -63,8 +63,9 @@ Writing default for replies, handoffs and maintained documents:
 **Management:** retain all holdings; no add, trade, order/fill action, probability change, or date change. The 14:00 bounded discovery review remains the latest full scan; its coverage is capped and no entry was verified in the inspected slice. [Hold/risk](research/2026-10-25-1437-hold-review.json) · [Check](research/2026-10-25-1437-check.json) · [News](research/2026-10-25-1437-news-review.json) · [Discovery](research/2026-10-25-1400-discovery.json).
 ## Mandate and constraints
 
-- Reference trading capital: **$170**. Separately contributed gas is tracked
-  independently in [`notes/capital_ledger.md`](notes/capital_ledger.md).
+- Reference trading capital: **$170**, verified from the initial on-chain
+  stablecoin receipts. Separate gas and funding costs are excluded; see the
+  [`capital ledger`](notes/capital_ledger.md).
 - Each project position must fit a **less-than-one-year** holding horizon.
   Off-chain stocks and personal-brokerage research are outside this project.
 - Normal Dec. 31 resolutions redeemed in the first days of January count for

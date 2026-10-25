@@ -98,14 +98,16 @@ ratios, not time-weighted or money-weighted returns. The gas-inclusive account
 series is available in USD only and is never divided by trading capital to
 claim a return.
 
-`contributions.csv` records $70 on Apr 25 and a further $100 on Apr 29. The
-first uses a date-only anchor; the second uses the archive's approximate
-19:55 UTC funding acknowledgment, not an exact on-chain transfer time. The
-Apr-29 02:00 and 14:00 observations still use $70. Internal bridges, Aave
-moves and sleeve transfers are not contributions. Future external flows must
-update the capital ledger, contribution CSV and observation denominator
-together; raw value changes then include those flows. The viewer checks that
-observations agree with the contribution steps.
+`contributions.csv` records two on-chain-verified initial receipts: $70 nominal
+USDC.e on Apr25 at 13:12:44 UTC and $100 native USDC on Apr29 at 19:16:57 UTC.
+These exact block timestamps replace the former date-only/acknowledgment anchors;
+the $170 trading-capital denominator is unchanged. Separate gas and funding costs
+are excluded, so this is not an all-in operator-cost total. The bounded
+[funding audit](../research/2026-10-25-initial-funding-audit.json) records receipts,
+refund/dust classification and coverage limits. Apr29 02:00 and 14:00 observations
+still use $70. Bridges, Aave moves, sleeve transfers and protocol refunds are not
+contributions. Future external flows must update the capital ledger, contribution
+CSV and observation denominator together; the viewer checks their agreement.
 
 `benchmarks.csv` contains validated contribution-timed SPY observations only.
 Use the market session's date, not retrieval date. Current close anchors are

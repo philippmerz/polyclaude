@@ -1,18 +1,18 @@
 ---
-reviewed_at: "2026-10-25T14:53:11.973611+00:00"
+reviewed_at: "2026-10-25T15:24:58.969426+00:00"
 valid_until: "2026-10-25T18:00:00Z"
 source_hashes:
   MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 79e3b606bfefdb3eb4c1a185733bbf012ec68b0af0263110f2edcd2b64438321
+  README.md: 3cde1ab204fd5b6d5d8fa3858b659b2fb7da0b6b481383a8729723f29af52af9
   strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
   strategy/01_lessons.md: df5832219ac01546e43351418f6ac5c076d1b32432a0ab98ee255d65ea29b897
   strategy/02_operations.md: 89b59fee0dfe6d0808fd13a89b56f7360ae9c261d75b9b7aa4f60a888d1e2010
   strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
   scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
-  docs/README.md: a5b747ed32aed5a32d767e0f28d25328a383d4a0e0b8f6a98d03f507f93c924c
+  docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: 9ddb6f4f89121e7903c3229dfee50a1c0594e692d32977977250caba281fbc8c
   notes/resting_orders.md: 3c7ae4c38500cee4d6a6d31b92729a719210b02f5ca50d627b0bba8d6a24361f
-  notes/journal.md: 6f82a0b32370f167b68bac9abeb677f30f5f8603b8a3187119b8e68fd54b7916
+  notes/journal.md: 0b35b4114eaff28a7efbe5b49184ead2ff77f0bf7c959f4e9879e474e2bcb984
   notes/longterm_watchlist.md: 0ead45f3047cf6be2f5fadce1c6870207ef88c3ba9428d5ff4686f736f88c881
 ---
 
@@ -41,6 +41,8 @@ source_hashes:
 - Other holds: datedSept 16 official 12–0/25 bp hike to 3.75–4% andOct 27–28 calendar are not a new December pledge. Delcy acting can qualify; Jan 5 baseline/Instagram unknowns do not prove exclusive-head/Dec 31 continuity; first-assumed cohead/UN fallback govern, .10/.15 adverse favorcash. No official annual Google 2026 Messi ranking returned is not absence; limited-minutes reason/attention effect unknown; lowp.20 cashcase/Mar 31 fallback remain. Trump .33 NO below 5-share minimum: no buy-up/burn. No hidden-information makerSELL at/belowfair; verified thesis-break takerexit remains available. Dated 14:05 Gamma Kimi/Delcy/Clarity literals/identities matched 02:00; older fingerprint discrepancies are not interval changes. [Prior source review](../research/2026-10-25-1400-hold-review.json).
 
 ## State and next boundary
+
+- Initial funding independently verified: **70 USDC.e Apr25 13:12:44 UTC +100 USDC Apr29 19:16:57 UTC =170 nominal trading capital**, same funding address. Contribution timestamps corrected; denominator and322 historical observations unchanged. The5 USDC Ostium refund is internal;0.000099 USDC remains unclassified. Gas funding/transfer-time USD costs are not fully verified;170 excludes separate gas/funding costs, not an all-in operator total. [Funding audit](../research/2026-10-25-initial-funding-audit.json) · [Ledger](capital_ledger.md).
 
 - Producer 14:40:22–38: total 197.48 includes 5.57 separate gas, not contribution; trading 191.91 midpoint/189.75 indicative fee-net depth (+11.6% vs 170), PM 51.54/49.38. Residual 19.78 unchanged/formula-only, not validated settlement/profit/credit. VM/API excluded; sequential, not NAV/proceeds. CSV 322 preserves 321-row prefix; chart 10/10 once. Current appender fully capturedrc 0; prior 14:00 invocation gap remains unrepaired/unreplayed. [Financial](../research/2026-10-25-1440-financial-snapshot.json).
 - Ordinary 7 exits 21.87/cost 20.988358 can allzero; Fedcost 8.598358 and KimiORcost 4.45 can all lose, KimiOR exits 4.75. Gross+reserve 56.088773 includes historical-cost/reservation doublecount; not expected loss/entry authority. Variable carry APY.03411 last observedOct 23 21:17:38, not refetched. Full sensitivities linked above.

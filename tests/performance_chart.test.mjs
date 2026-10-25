@@ -67,8 +67,12 @@ test('inception deposits are dated flows rather than invented account valuations
   assert.equal(capitalAt(flows, Date.parse('2026-04-28T12:00:00Z')), 70);
   assert.equal(capitalAt(flows, Date.parse('2026-04-29T12:00:00Z')), 70);
   assert.equal(capitalAt(flows, Date.parse('2026-04-29T20:00:00Z')), 170);
-  assert.equal(flows[0].timestampKind, 'day');
-  assert.equal(flows[1].timestampKind, 'check_window');
+  assert.equal(flows[0].timestampKind, 'second');
+  assert.equal(flows[1].timestampKind, 'second');
+  assert.equal(capitalAt(flows, Date.parse('2026-04-25T13:12:43Z')), 0);
+  assert.equal(capitalAt(flows, Date.parse('2026-04-25T13:12:44Z')), 70);
+  assert.equal(capitalAt(flows, Date.parse('2026-04-29T19:16:56Z')), 70);
+  assert.equal(capitalAt(flows, Date.parse('2026-04-29T19:16:57Z')), 170);
   assert.ok(flows.every(r => r.source));
   assert.equal(pathFor(flows, r => r.capital, t => t / 86400000, v => v, true).includes('H'), true);
   const text = await readFile(new URL('../docs/contributions.csv', import.meta.url), 'utf8');
