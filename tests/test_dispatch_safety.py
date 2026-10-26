@@ -133,7 +133,7 @@ def test_daily_checkin_queue_acceptance_receipt(tmp_path):
     )
 
 
-def test_daily_checkin_falls_back_only_when_no_operator_is_proven(tmp_path):
+def test_daily_checkin_does_not_start_a_model_when_the_operator_is_absent(tmp_path):
     repo, _runner, marker, env = _dispatch_fixture(tmp_path)
     env["FAKE_QUEUE_RC"] = "69"
 
@@ -147,14 +147,14 @@ def test_daily_checkin_falls_back_only_when_no_operator_is_proven(tmp_path):
         check=False,
     )
 
-    assert result.returncode == 0
-    assert marker.read_text(encoding="utf-8").splitlines() == ["fallback-run"]
-    assert "NEWS REVIEW REQUEST: retained-alert-id" in Path(env["FAKE_RUN_PROMPT"]).read_text()
+    assert result.returncode == 69
+    assert not marker.exists()
+    dispatch_log = (repo / "logs" / "cron" / "peer_skips.log").read_text()
+    assert "not starting a second model" in dispatch_log
     receipt = _receipt(repo)
     assert (receipt["status"], receipt["why"], receipt["returncode"]) == (
-        "fallback_starting", "operator_absent", 69
+        "failed", "operator_absent", 69
     )
-    assert receipt["status"] != "queued"
 
 
 def test_daily_checkin_lock_held_receipt_is_deferred(tmp_path):
@@ -175,8 +175,9 @@ def test_daily_checkin_lock_held_receipt_is_deferred(tmp_path):
     )
 
 
-def test_daily_checkin_force_headless_receipt_marks_start_not_completion(tmp_path):
+def test_daily_checkin_force_headless_still_queues_to_the_live_session(tmp_path):
     repo, _runner, marker, env = _dispatch_fixture(tmp_path)
+    env["FAKE_QUEUE_RC"] = "0"
     env["POLYCLAUDE_FORCE_HEADLESS"] = "1"
 
     result = subprocess.run(
@@ -185,8 +186,10 @@ def test_daily_checkin_force_headless_receipt_marks_start_not_completion(tmp_pat
     )
 
     assert result.returncode == 0
-    assert marker.read_text(encoding="utf-8").splitlines() == ["fallback-run"]
+    assert not marker.exists()
+    dispatch_log = (repo / "logs" / "cron" / "peer_skips.log").read_text()
+    assert "FORCE_HEADLESS ignored" in dispatch_log
     receipt = _receipt(repo)
     assert (receipt["status"], receipt["why"], receipt["returncode"]) == (
-        "fallback_starting", "operator_forced_headless", 0
+        "queued", "operator_queue_accepted", 0
     )

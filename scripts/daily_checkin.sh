@@ -1,7 +1,7 @@
 #!/bin/bash
 # Polyclaude check-in driver.
-# Invoked by cron. Queues the tick to the long-lived operator when available;
-# otherwise runs a fresh, fully onboarded headless fallback.
+# Invoked by cron. Queues the tick to the live grok session. A missing
+# session does not start another model.
 
 set -euo pipefail
 umask 077
@@ -64,44 +64,38 @@ LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 export HOME="${HOME:-$(getent passwd "$(id -un)" | cut -d: -f6)}"
 export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 
-# A queue acknowledgement is the dispatch boundary. It is safe while the
-# operator is busy and cannot turn prompt text into terminal or shell input.
-# POLYCLAUDE_FORCE_HEADLESS=1 is reserved for an explicit operator drill/recovery.
+# A queue acknowledgement is the dispatch boundary. The live grok session is
+# the only operator. POLYCLAUDE_FORCE_HEADLESS no longer starts a second model.
 CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (10-step list in scripts/daily_checkin.sh). Brief if nothing happened.${REASON_SUFFIX}"
 if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
-    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS set — skipping operator queue" \
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS ignored; the live grok session is the only operator" \
         >> "${LOG_DIR}/peer_skips.log"
-    write_dispatch_receipt "fallback_starting" "operator_forced_headless" 0
-else
-    INJECT_RC=0
-    "${SCRIPT_DIR}/inject_prompt.sh" "${CRON_MSG}" >/dev/null 2>&1 || INJECT_RC=$?
-    case "${INJECT_RC}" in
-      0)
-        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queued to operator; exiting" \
-            >> "${LOG_DIR}/peer_skips.log"
-        write_dispatch_receipt "queued" "operator_queue_accepted" 0
-        maintain_closed_artifacts
-        exit 0
-        ;;
-      69)
-        # The private runtime owns rc=69 and emits it only before dispatch,
-        # after proving there is no live operator process. This is the sole
-        # automatic path allowed to start another asset-capable worker.
-        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: no live operator — using headless fallback" \
-            >> "${LOG_DIR}/peer_skips.log"
-        write_dispatch_receipt "fallback_starting" "operator_absent" 69
-        ;;
-      *)
-        # A timeout can mean the queue accepted the message before the caller
-        # lost its acknowledgement. Fail closed so one tick can never run in
-        # both the interactive operator and a fresh autonomous process.
-        echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queue failed rc=${INJECT_RC}; no headless fallback (exact-one safety)" \
-            >> "${LOG_DIR}/peer_skips.log"
-        write_dispatch_receipt "failed" "operator_queue_failed" "${INJECT_RC}"
-        exit "${INJECT_RC}"
-        ;;
-    esac
 fi
+INJECT_RC=0
+"${SCRIPT_DIR}/inject_prompt.sh" "${CRON_MSG}" >/dev/null 2>&1 || INJECT_RC=$?
+case "${INJECT_RC}" in
+  0)
+    echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queued to operator; exiting" \
+        >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "queued" "operator_queue_accepted" 0
+    maintain_closed_artifacts
+    exit 0
+    ;;
+  69)
+    echo "$(date -u +%Y%m%dT%H%M%SZ) cron: no live operator — not starting a second model" \
+        >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "failed" "operator_absent" 69
+    exit 69
+    ;;
+  *)
+    # A timeout can mean the queue accepted the message before the caller
+    # lost its acknowledgement. Fail closed so one tick is never run twice.
+    echo "$(date -u +%Y%m%dT%H%M%SZ) cron: queue failed rc=${INJECT_RC}; no headless fallback (exact-one safety)" \
+        >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "failed" "operator_queue_failed" "${INJECT_RC}"
+    exit "${INJECT_RC}"
+    ;;
+esac
 
 # Load polyclaude path config (env vars for secret/state file locations).
 # File lives outside the repo at $HOME/.polyclaude/env, mode 0600.
@@ -181,11 +175,8 @@ Then do the check-in below. Be CONSERVATIVE: you lack the conversation context t
 
 --- SCHEDULED CHECK-IN ---
 "
-  printf '%s' "${PRIMER}${PROMPT}${REASON_SUFFIX}" | \
-    "${HOME}/.local/bin/polyclaude-agent" run \
-      --profile main --effort max --access autonomous \
-      --cwd "${POLYCLAUDE_DIR}" --timeout 7200 \
-      2>&1 || RC=$?
+  echo "headless operator launch removed; the live grok session is the only operator"
+  RC=69
   echo
   echo "=== exit ${RC} at $(date -u) ==="
 } >> "${LOG_FILE}" 2>&1
