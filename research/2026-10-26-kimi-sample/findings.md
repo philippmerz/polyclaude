@@ -135,3 +135,25 @@ Nothing in this draw was a named fact more than 10 cents from a book that can be
 The below gate again caught the wide stock barriers, including a Palantir low quoted at 0.48 on a $9 book with a spread of 0.82.
 
 Round 6 is drawn from what remained: 468 names, seed 20261031, split 20 primary / 15 thin / 2 below. The below bucket had 2 names left, so the draw took those instead of backfilling.
+
+
+## Round 6
+
+37 names, seed 20261031. The below bucket had 2 names left. Kimi returned 13 skip, 22 watch, and 2 investigate. The API did not refuse.
+
+No trade.
+
+The two investigate calls are a studio base rate and a 2025 valuation.
+
+- Wildwood for Best Animated Feature is 0.715. Nominations are January 21. Laika's past losses are not a fact about this film. The book is about $2,300.
+- OpenAI's IPO at $1.75-2T is 0.155. The October 2025 tender was $500B. March 2026 closed at $852B, and October talks are $1.25T, unsigned, with a public listing talked about for 2027. The book is about $12,500.
+
+Other prices checked against a print:
+
+- Ohio Senate Democrat is 0.68. That plus the Republican leg at 0.315 is about 0.995. Kalshi has Brown near 68%.
+- Russian diesel by November 30 is 0.875. The license is not a delivery. Agioi Fanendes is reported due November 7 to 10, which misses the October 31 contract and lands inside this one.
+- Bitcoin at $77,500 in October is 0.455. Spot is about $80,000, about 3% down, with five days left.
+- The Lula, Eizenkot, and Democratic Senate parlay is 0.44. Lula's runoff was October 25. The spread is 0.059.
+- The November Apple low of $328 is quoted at 0.47 on a $6 book with a spread of 0.90.
+
+Round 7 is drawn from what remained: 431 names, seed 20261101, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill it.
