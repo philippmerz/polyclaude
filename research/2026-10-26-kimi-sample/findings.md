@@ -270,3 +270,28 @@ The Anthropic IPO bins at $1.75-2.0T (0.32) and $2.00-2.25T (0.0665), and the Op
 The liquid election names match Kalshi within a few cents. The scanner did not hide a 10-cent gap there.
 
 Round 12 is drawn from what remained: 256 names, seed 20261106, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 12
+
+35 names, seed 20261106. The below bucket was empty. Kimi returned 16 skip, 16 watch, and 3 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The three investigate calls use a prior election result or a 2021-2022 base rate.
+
+- TX-15 Democrat is 0.815. Kalshi pages on October 26 put Pulido between about 81 and 88 percent. The 2024 result is not this race.
+- MI-07 Republican is 0.275. Kalshi has Barrett near 27 percent. The 2024 result is not this race.
+- A US bank failure by December 31 is 0.735 on about $2,400. The market was created September 28. The FDIC 2026 brief lists six closes, and the latest, Nano Banc on September 25, is outside the window. A zero count from 2021-2022 is stale.
+
+Other prices checked against a print:
+
+- Senate Democrat control is 0.655 on about $811,000. Kalshi has Senate Democrats near 63.5 percent.
+- Hormuz traffic not back to normal in 2026 is 0.895. The contract pays if the IMF 7-day average never reaches 60. The return-to-normal sibling was 0.115.
+- 1W above $15M is 0.795. The last official print checked was $6,082,668 on October 21. The window runs through November 2, and 0.795 sits between the $10M and $20M legs.
+- Bitcoin at $70,000 in October is 0.0235. Public October lows are near $78,500 to $79,400. The month runs through October 31.
+- Anthropic above the Bitcoin cap by December 31 is 0.775 on about $8,400. Spot near $80,000 puts that cap near $1.6T. The May round was $965B. A talked range is not a confirmed print above the cap.
+
+The liquid election names match Kalshi. The scanner did not hide a 10-cent gap there.
+
+Round 13 is drawn from what remained: 221 names, seed 20261107, split 20 primary / 5 thin / 0 below. The below bucket is empty, so the draw did not backfill.
