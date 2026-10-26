@@ -181,3 +181,26 @@ Other prices checked against a print:
 Fable by October 31 is 0.455, the same price as the October 30 sibling. OpenAI bankruptcy by 2029 is 0.175. October fundraising talk is not an announcement.
 
 Round 8 is drawn from what remained: 396 names, seed 20261102, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 8
+
+35 names, seed 20261102. The below bucket was empty. Kimi returned 19 skip, 13 watch, and 3 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The three investigate calls are a repeated September quote, a 2023 seat count, and a base rate.
+
+- The next US-Iran meeting by November 30 is 0.225. The market was created October 1. The December 31 sibling is 0.315. October coverage still describes a dead end.
+- PP plus Vox at 176 seats is 0.805. July 2023 was 170. The election is November 29. An October 26 Sigma Dos scenario has them at 196.
+- Another OpenAI Millennium announcement by the end of 2027 is 0.535. There is no qualifying announcement. The 2026 sibling is 0.062. The book is about $20,000.
+
+Other prices checked against a print:
+
+- Democratic House control is 0.915, on a book of about $3.9 million. Kalshi was near 90.6 percent on October 26.
+- Texas Senate Democrat is 0.625. October polls have Talarico ahead, and the Republican leg in the sample was 0.365.
+- Nebraska Senate independent is 0.275, next to the earlier Republican leg at 0.725. Kalshi had Ricketts near 74 percent.
+- Anthropic IPOs before OpenAI at 0.964. The S-1 is public, and OpenAI's talked listing is 2027.
+- Anthropic at a low of $800B is 0.036. The May round was $965B. The title is a dip. The pasted body says reaches or exceeds, and it also says highest/lowest. The book is about $5,300.
+
+Round 9 is drawn from what remained: 361 names, seed 20261103, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
