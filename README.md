@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV has 329 recorded observations through Oct-26. Rounded
+The local performance CSV has 330 recorded observations through Oct-26. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [performance source audit](research/2026-10-06-performance-history.json) records
 remaining gaps and accounting limits. Two initial stablecoin receipts confirm the
@@ -63,7 +63,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** retain holdings; no trade or numerical forecast change. Seven requested alerts/14new rows/60related older rows reviewed. Three daily rederivations and Messi criteria reread completed; followup audit clean. [Check](research/2026-10-26-0120-check.json) · [Daily risk](research/2026-10-26-0120-daily-hold-review.json).
+**Management:** Retain holdings; no trade or numerical forecast change. Full 02:00 check reviewed two new alerts, the OR price move and two sports leads; neither lead has verified bookmaker fair value. The 01:20 daily rederivations remain valid. [Check](research/2026-10-26-0200-check.json) · [Discovery](research/2026-10-26-0200-discovery.json).
 
 ## Mandate and constraints
 
@@ -86,15 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 26 01:22 UTC
+## Last audited snapshot — October 26 02:02 UTC
 
-**Bankroll:** $197.91, including $5.62 separately marked gas. Trading value is $192.29 midpoint / $189.78 indicative fee-net depth (depth return +11.6% vs $170); PM is $51.91 / $49.40. The $19.79 residual is arithmetic only, not settlement or profit. VM/API are excluded, and components are sequential rather than NAV or proceeds. CSV has 329 rows; the chart passed 10/10. [Financial snapshot](research/2026-10-26-0122-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
+**Bankroll:** $197.79 including $5.61 separately marked gas. Trading value is $192.18 midpoint / $189.53 indicative fee-net depth (depth return +11.5% vs $170); PM is $51.80 / $49.15. The $19.79 residual is arithmetic only, not settlement or profit. VM/API are excluded; components are sequential, not NAV or proceeds. CSV has 330 rows; chart passed 10/10. [Financial snapshot](research/2026-10-26-0202-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
 
-**Account and protection:** 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match the 23:49 check; no visible orders. Mark changes only. #179 returned HTTP 200 with `null`, so terminal status remains unknown. Keep the full $4.80 reservation and global BUY block. Two zero-value claims remain unburned. [Check](research/2026-10-26-0120-check.json).
+**Account and protection:** 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match the 01:22 check; no visible orders. Changes are marks only. #179 returned HTTP 200 with `null`, so terminal status remains unknown. Keep the full $4.80 reservation and global BUY block. Two zero-value claims remain unburned; all six execution controls are unchanged. [Check](research/2026-10-26-0200-check.json).
 
-**Exits and risk:** Ordinary exits display $21.89, rounded; Clarity displays $27.51. OR primary/stress probabilities remain 85%/70%: $4.25 primary value exceeds $4.162221 exit plus carry, while $3.50 stress value is below. Michigan primary value $2.05 exceeds $1.552566 cash, while selected value $1.55 is slightly lower. Source, model, joint and full-loss sensitivities remain explicit. [Daily risk](research/2026-10-26-0120-daily-hold-review.json).
+**Exits and risk:** Rounded ordinary exits sum $21.64; Clarity whole-pair exit is $27.51. OR primary/stress remain 85%/70%: $4.25 primary value exceeds $3.861575 exit plus variable carry; $3.50 stress is below. Michigan primary $2.05 exceeds $1.602704 cash; selected $1.55 is below. Source, model, joint and full-loss cases remain explicit. [Check](research/2026-10-26-0200-check.json) · [Daily underwriting](research/2026-10-26-0120-daily-hold-review.json).
 
-**Review and operations:** The new OR week and Oct 19 elapsed anchor (188.039035T) were reviewed without certifying UI settlement. Current IA dates and method were verified. All four checked contracts match frozen criteria; the OR criteria fingerprint representation was corrected. The initial audit’s one due item is resolved; follow-up is clean. There were 23 captured CLI calls, 45 captured HTTP 200 responses and 3 SDK nulls; UMA 0 and four current daemons. No Telegram. Next: full review 02 UTC, light review 06 UTC. [Check](research/2026-10-26-0120-check.json) · [Daily risk](research/2026-10-26-0120-daily-hold-review.json).
+**Review and operations:** OR raw API anchors updated to 188.039214T for Oct 19 and 1.838423T for the partial Oct 26 week; UI settlement is unverified. UMA reported one OR price alert with a 7 pp spread; no fill or proved fundamental cause. Audit clean, four current daemons. Seven discovery scans and 137 reference batches yielded 1,675 unvalued triggers in 839 groups; coverage remains incomplete, and thin-tail cohort changes prevent like-for-like delta claims. Storage archived zero files; no Telegram. Next full review 14 UTC, light review 06 UTC. [Check](research/2026-10-26-0200-check.json) · [Discovery](research/2026-10-26-0200-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
