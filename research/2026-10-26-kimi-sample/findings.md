@@ -317,3 +317,32 @@ The Anthropic first-day close bin at $1.25-1.5T is 0.0445. The talked range is a
 The liquid election names match Kalshi. The scanner did not hide a 10-cent gap there.
 
 Round 14 is drawn from what remained: 196 names, seed 20261108, split 20 primary / 0 thin / 0 below. Eligible before the take was 196 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 14
+
+20 names, seed 20261108. Thin and below were empty, so the draw was 20 primary. Kimi returned 13 skip, 7 watch, and 0 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+No investigate call. The prices that looked off match Kalshi or an open window.
+
+- Alaska Senate Dan Sullivan is 0.26. Kalshi has him near 25 to 26 percent, and Polymarket is near 26 percent. Mary Peltola is the favorite.
+- Wisconsin governor Democrat is 0.805. Kalshi has David Crowley near 79 percent, and Polymarket is near 80 to 81 percent.
+- Kansas Senate Republican is 0.62. Kalshi has Roger Marshall near 60 to 61 percent. A generic Republican lean points the wrong way.
+- Louisiana Senate Republican is 0.895. Kalshi has Julia Letlow near 89 to 91 percent.
+- MT-01 Democrat is 0.445. Kalshi has Sam Forstag near 45 percent. Ryan Zinke is not running.
+- Bitcoin at $82,500 in October is 0.46. The market was created October 22 at 16:17 UTC, so earlier highs do not count. Public highs after that are under $82,500. Spot is near $80,000.
+- Tesla and SpaceX at 0.63. On October 20 the companies formed special committees and had not agreed terms. A 0.15 prior misses those talks. The window runs through 2027.
+
+NVIDIA leads the October 26 market-cap boards at about $5.1 trillion to $5.2 trillion, with Apple close behind. Neither the October 31 close nor the December 31 close has printed.
+
+Ethereum at $1,900 in October is 0.0275. Public October lows are near $2,280 to $2,330. The window runs through October 31.
+
+WTI settled near $101.76 on October 26. The joint oil-and-Senate contract at 0.3415 is not a missed $80 print.
+
+The Israeli justice headline is the contract's "No Next Minister by Feb 28" bucket. The October 23 Canada tariff proclamation is unilateral. Neither is a signed outcome the book missed.
+
+The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
+
+Round 15 is drawn from what remained: 176 names, seed 20261109, split 20 primary / 0 thin / 0 below. Eligible before the take was 176 primary, 0 thin, and 0 below. The draw did not backfill.
