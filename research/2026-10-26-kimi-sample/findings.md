@@ -295,3 +295,25 @@ Other prices checked against a print:
 The liquid election names match Kalshi. The scanner did not hide a 10-cent gap there.
 
 Round 13 is drawn from what remained: 221 names, seed 20261107, split 20 primary / 5 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 13
+
+25 names, seed 20261107. Thin had five names left and the below bucket was empty. Kimi returned 15 skip, 10 watch, and 0 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+No investigate call. The watches that named a missing print match Kalshi or a still-open price path.
+
+- California governor Xavier Becerra is 0.9695. Kalshi has him near 96 percent.
+- Nebraska governor Democrat is 0.17. Kalshi has Lynne Walz near 17 to 18 percent. A generic Republican lean points the wrong way.
+- Oregon governor Democrat is 0.83. Kalshi has Tina Kotek near 79 to 81 percent, and Polymarket is near 83 percent.
+- Minnesota Senate Republican is 0.145 on about $167,000. Kalshi has Michele Tafoya near 15 to 16 percent.
+- FL-25 Republican is 0.215. Kalshi has Scott Singer near 17 to 19 percent.
+- Bitcoin at $65,000 by December 31 is 0.235. Public spot is near $80,000. $65,000 has not printed.
+
+The Anthropic first-day close bin at $1.25-1.5T is 0.0445. The talked range is about $1.5-2T, and the prospectus range is still blank.
+
+The liquid election names match Kalshi. The scanner did not hide a 10-cent gap there.
+
+Round 14 is drawn from what remained: 196 names, seed 20261108, split 20 primary / 0 thin / 0 below. Eligible before the take was 196 primary, 0 thin, and 0 below. The draw did not backfill.
