@@ -157,3 +157,27 @@ Other prices checked against a print:
 - The November Apple low of $328 is quoted at 0.47 on a $6 book with a spread of 0.90.
 
 Round 7 is drawn from what remained: 431 names, seed 20261101, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill it.
+
+
+## Round 7
+
+35 names, seed 20261101. The below bucket was empty. Kimi returned 23 skip, 11 watch, and 1 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The one investigate call treats the card's own background sentence as the meeting.
+
+- The next US-Iran senior meeting is 0.315. The market was created the evening of September 22, after the meeting named in the card, and it is still open. October coverage describes a dead end, not a later senior meeting. The book is about $64,000.
+
+Other prices checked against a print:
+
+- OH-07 Democrat is 0.895. Kalshi has Poindexter near 87 to 88 percent.
+- Hormuz traffic back to normal is 0.115, on a book of about $501,000. The contract needs a PortWatch 7-day average of 60. A live AIS count is about 7 a day, against a pre-crisis baseline near 85.
+- Bitcoin at $82,000 from October 26 through November 1 is 0.565. Spot is about $80,000, and the October 26 high is about $80,800.
+- SpaceX as the highest 2026 IPO close is 0.59. SpaceX listed on June 12, and the first-day close was about $2.1T. The model's missing-filing line is stale. Anthropic's talked range is about $1.5-2T, and the range is still blank.
+- A Republique curfew covers the night of October 26 to 27, so that day is not a clear day. The contract pays if any one day through October 31 has no curfew. The price is 0.795.
+- A Texas data-center moratorium is 0.021. The next regular session is January 2027, and only a statute counts.
+
+Fable by October 31 is 0.455, the same price as the October 30 sibling. OpenAI bankruptcy by 2029 is 0.175. October fundraising talk is not an announcement.
+
+Round 8 is drawn from what remained: 396 names, seed 20261102, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
