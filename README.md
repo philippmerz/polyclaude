@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV has 335 recorded observations through Oct-26. Rounded
+The local performance CSV has 336 recorded observations through Oct-26. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [performance source audit](research/2026-10-06-performance-history.json) records
 remaining gaps and accounting limits. Two initial stablecoin receipts confirm the
@@ -63,7 +63,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** Retain holdings; no add, trade, prior/date, control or decision-record change. One requested alert and 14 new rows reviewed; measurement and body-access limits remain explicit. [Check](research/2026-10-26-0857-check.json).
+**Management:** Retain holdings; no add, trade, prior/date, control or decision-record change. Six new rows and one internally consumed material alert (three repeated rows) reviewed. Source and timing limits remain explicit. [Check](research/2026-10-26-1000-check.json).
 
 ## Mandate and constraints
 
@@ -86,15 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 26 09:00 UTC
+## Last audited snapshot — October 26 10:02 UTC
 
-**Bankroll:** $197.77 includes $5.64 separately marked gas. Trading value is $192.13 midpoint / $189.25 indicative fee-net depth (+11.3% return vs the $170 reference); PM is $51.75 / $48.87. Residual $19.79 is arithmetic, not verified settlement or profit. VM/API excluded; sequential components are not NAV or guaranteed proceeds. CSV has 335 rows; chart 10/10. [Snapshot](research/2026-10-26-0859-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
+**Bankroll:** $197.91 includes $5.64 gas. Trading $192.27 midpoint / $189.53 indicative fee-net depth (+11.5% return vs $170 reference, not vs prior); PM $51.89 / $49.15. Residual $19.79 is producer arithmetic, not verified settlement or profit. CSV has 336 rows; exact prefix and chart 10/10. [Snapshot](research/2026-10-26-1002-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
 
-**Account and protection:** 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match the prior capture; zero visible orders. #179 HTTP 200/null remains terminal-unknown. Keep the full $4.80 reservation and global BUY block; two zero-value claims remain unburned. All six controls match baseline. [Check](research/2026-10-26-0857-check.json) · [Orders](notes/resting_orders.md).
+**Account and protection:** 12 financial tuples, 132 trade IDs, target balances and pUSD 5.612932 match prior; zero visible orders. #179 HTTP 200/null leaves terminal status unknown. Keep its full $4.80 reservation and global BUY block; two zero-value claims remain unburned; DEC223 $1.02 is historical booked value. All six controls match baseline. [Check](research/2026-10-26-1000-check.json) · [Orders](notes/resting_orders.md).
 
-**Risk and sources:** Retain all positions. No new measured Michigan voter shift; OpenRouter headline rank does not establish total-period traffic; Delcy appearances do not establish legal succession. Current cash and conditional cases favor holding under primary inputs while retaining cash-favoring stress/full-loss cases. [Check](research/2026-10-26-0857-check.json) · [Source review](data/deep_review_20261017/work/tick20261026_085751/combined_source_review.json).
+**Risk and source:** Retain holdings. OpenRouter acquisition headline repeats prior same-ID alerts; agreement is dated Aug 19, but price, closing/effective date and future routing remain unverified. Updated partial-week volume is not a total or directional NO signal. No new Michigan voter measurement. [Check](research/2026-10-26-1000-check.json) · [Source review](data/deep_review_20261017/work/light20261026_100021/combined_source_review.json).
 
-**Review and operations:** 14 new rows, one requested row and 128 selected older rows reviewed; omitted rows are not absence proof. HLE's unchanged inventory marker is not full score evidence. Audit clean; UMA zero alerts, 46 refreshed / 48 tracked. Next light 10 UTC / full 14 UTC. No additional discovery/storage pass or Telegram.
+**Review and operations:** Six new rows, three observations of one internally consumed material alert and 65 selected older rows reviewed; MI older-context cap omitted 377 rows, not absence proof. 21 canonical CLI receipts returned rc 0, 34 HTTP 200, two SDK results serialized with unknown wire status; zero capture failures. UMA zero alerts / 46 refreshed / 48 tracked. Next full 14 UTC, light 18 UTC; no active goal or idle follow-up.
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
