@@ -113,3 +113,25 @@ Other prices checked against a print:
 The below gate again caught the November stock barriers, with spreads of 0.74 to 0.85. The liquid election names match Kalshi.
 
 Round 5 is drawn from what remained: 518 names, seed 20261030, split 20 primary / 15 thin / 15 below.
+
+
+## Round 5
+
+50 more names, seed 20261030. Kimi returned 25 skip, 25 watch, and 0 investigate. The API did not refuse.
+
+No trade.
+
+Nothing in this draw was a named fact more than 10 cents from a book that can be filled.
+
+- Oregon governor Republican is 0.18. Drazan is the nominee. Kalshi has her near 19%. The polls are close, and the book matches Kalshi.
+- The California billionaire tax is 0.235. Proposition 40 qualified on June 17. A September Berkeley poll was 45 to 42, and Kalshi is also under 30%. The contract pays on the vote, not on surviving the competing measures.
+- Anthropic listed and trading by December 31 is 0.925. The S-1 was filed October 26, with the price range blank. The model's "no filing" line is stale. The contract pays on the open, and reported debut talk is the week of November 16.
+- October CPI at exactly 3.7% is 0.915. September printed 3.7% on October 14, and the October release is November 10. The book is about $7,700.
+- The Brewers lead the Rays 2-0, with Game 3 tonight. 0.833 is the live series.
+- Bitcoin at $75,000 and $72,500 in October are 0.165 and 0.0525. Spot is about $80,000, with five days left.
+- The November Selic cut of 25bp is 0.245, under the round-3 hold at 0.64, on about $1,700.
+- WTI at $95 in October is 0.225 with a 0.07 spread. Gold at $4,200 is 0.117 with a 0.15 spread and a book of about $260. GOOGL at $315 this week is 0.855, against an October 26 low near $316.60, with a 0.07 spread.
+
+The below gate again caught the wide stock barriers, including a Palantir low quoted at 0.48 on a $9 book with a spread of 0.82.
+
+Round 6 is drawn from what remained: 468 names, seed 20261031, split 20 primary / 15 thin / 2 below. The below bucket had 2 names left, so the draw took those instead of backfilling.

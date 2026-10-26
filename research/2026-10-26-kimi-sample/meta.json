@@ -222,6 +222,77 @@
     },
     "picked": 50,
     "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions",
-    "split": "20 primary / 15 thin / 15 below"
+    "split": "20 primary / 15 thin / 15 below",
+    "screened_at": "2026-10-26T22:27:33.030698+00:00",
+    "verdicts": {
+      "skip": 25,
+      "watch": 25,
+      "investigate": 0
+    },
+    "tokens_reported": {
+      "21": {
+        "total": 14004,
+        "input": 1850,
+        "output": 464,
+        "reasoning": 4778,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "22": {
+        "total": 16005,
+        "input": 1850,
+        "output": 490,
+        "reasoning": 6753,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "23": {
+        "total": 11334,
+        "input": 1881,
+        "output": 626,
+        "reasoning": 1915,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "24": {
+        "total": 17128,
+        "input": 1927,
+        "output": 470,
+        "reasoning": 7819,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "25": {
+        "total": 10134,
+        "input": 1992,
+        "output": 538,
+        "reasoning": 692,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      }
+    },
+    "quota": "No refusal through batch 25."
+  },
+  "round6": {
+    "seed": 20261031,
+    "eligible": 468,
+    "eligible_by_bucket": {
+      "primary": 356,
+      "thin": 110,
+      "below": 2
+    },
+    "picked": 37,
+    "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions",
+    "split": "20 primary / 15 thin / 2 below"
   }
 }
