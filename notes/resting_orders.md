@@ -1,28 +1,29 @@
-# Current resting orders — October 26, 07:28 UTC
+# Current resting orders — October 26, 09:00 UTC
 
-**No visible open orders; #179 remains terminal-unknown.** The 20 YES at 24¢ order has 19.993158 confirmed shares at $4.798358 cost. Maker fills are 14.73 at $0.24 and 5.263158 at $0.2400000151999997. Fresh HTTP 200 returned JSON `null`, not terminal proof. Keep the full $4.80 reservation and global BUY block. Do not cancel, prune, repost, burn or release risk. Two zero-value claims remain unburned. [Check](../research/2026-10-26-0726-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**No visible open orders. #179 remains terminal-unknown.** Its 19.993158 YES shares came from two confirmed maker fills at $0.24; the latest HTTP 200 returned JSON `null`, not terminal proof. Keep the full $4.80 reservation and global BUY block. The two zero-value claims remain unburned. Do not cancel, prune, repost, burn or release risk without affirmative terminal evidence. [Check](../research/2026-10-26-0857-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
-**Account and marks:** At 07:28, 12 financial tuples, 132 IDs, selected CTFs and pUSD 5.612932 match 05:56; zero visible orders. Marks changed; quantities did not. UMA zero alerts; six controls unchanged. [Snapshot](../research/2026-10-26-0728-financial-snapshot.json).
+**Account and marks:** At 09:00, 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match the prior capture; zero visible orders. Marks changed; quantities did not. UMA zero alerts (46 refreshed of 48 tracked); all six controls match baseline. [Snapshot](../research/2026-10-26-0859-financial-snapshot.json).
 
-**Decision and review:** Retain holdings; no add, trade or numerical prior/date change. Four requested alerts adjudicated, with publisher-body/event-date gaps. Fresh Kimi composite criteria and held identity match. MI/Delcy literal last verified05:58. [Check](../research/2026-10-26-0726-check.json).
+**Decision:** Retain holdings; no add, trade, prior/date, control or decision-record change. Source and cash comparisons were refreshed; probabilities are unchanged. [Check](../research/2026-10-26-0857-check.json) · [Source review](../data/deep_review_20261017/work/tick20261026_085751/combined_source_review.json).
 
-**Held October Fed / DEC 263:** 19.993158 YES; cost $4.798358; indicative exit $5.00; two-day cash plus carry $5.000938. HTTP 200 with JSON null does not establish terminal status. Due Oct 27 at 22:00 UTC: pull only after verifying the remainder.
+| Decision-relevant holding | Size; primary / selected | Current display exit | Cash plus variable carry |
+|---|---:|---:|---:|
+| October Fed, #179 YES | 19.993158; .67346 / .47346 | $4.60 | $4.600863 |
+| December Fed YES | 20; .46 / .31 | $4.00 | $4.035049 |
+| Delcy YES | 28; .66 / .51 | $5.32 | $5.354045 |
+| Kimi YES | 10; .3851 / .2351 | $0.90 | $0.905759 |
+| Messi YES | 5; .60 / .40 | $1.45 | $1.459279 |
+| Michigan NO | 5; .41 / .31 | $1.60 | $1.602704 |
+| OpenRouter NO | 5; .85 / .70 | $3.90 | $3.911725 |
+| Clarity Act pair | 29 YES + 29 NO | $27.11 | $27.283487 |
 
-**Held Delcy / DEC 262:** 28 YES at 18¢; cost $5.04; filled order `0xfe3d51f6db665f3c20e45373f1bcc9bb5f382ef902a4d79992ec6d388fbc39ee`. Exit $5.32; 68-day cash plus carry $5.354045; selected terminal value $14.28 at .66/.51. Machado’s return raised transition risk but is not an appointment or Dec 31 continuity proof. Later legal instrument, exclusivity and expiry remain unknown. [Prior review](../research/2026-10-25-1741-delcy-review.json) · [Current hold](../research/2026-10-25-2044-hold-review.json).
+**Michigan:** No new measured voter shift; retain .41/.31. No source-derived article details are repeated here; see the [MI source-facts unit](../data/deep_review_20261017/work/tick20261026_085751/mi_source_facts.json).
 
-**Held OpenRouter / DEC 264+268:** 5 NO at 65¢; cost $3.25; primary/stress .85/.70; retain, no add. Exit $3.95; 32-day cash plus variable carry $3.961875. Primary $4.25 is above cash; stress $3.50 is below. At the last 02:55 API read, Oct 19 anchor was 188.039244T and partial Oct 26 is 3.063356T; no certified UI first display or finality. Fixed model/scenarios remain unfitted. Joint primary keeps both; stress sells OR and keeps Kimi; adverse case favors cash for both. [Current risk](../research/2026-10-26-0726-check.json) · [Daily underwriting](../research/2026-10-26-0120-daily-hold-review.json).
+**OpenRouter:** Retain 5 NO at .85/.70. The Step5 partial bucket ranks sixth among nine named models, but a partial-week rank does not resolve a headline whose observation window is unknown. The elapsed anchor is 188.039299188347T; the current partial week is 9.227072104333T and is not linearly extrapolated. Usage growth can move the total into or out of [725T,775T); no signed NO effect or forecast update. [Current facts](../data/deep_review_20261017/work/tick20261026_085751/or_current_facts.json).
 
-**Held December Fed / DEC 253+256:** 20 YES at 19¢; cost $3.80; order `0x6e5a9383d0e08d2b9ec0b74836909fdd3493f5a7e6af07cd88f62537e6bb8153`; exit $4.00; cash plus carry $4.035049.
+**Clarity Act pair:** Current whole-pair exit is $27.11; cash plus carry is $27.283487. Conditional payoffs remain $29/$58/$29. The 5.919% one-outcome failure break-even is a sensitivity, not a probability; 5% hypothetical failure favors hold, 10/15/20/30% favor cash. No unconditional floor or leg separation. [Cash comparison](../data/deep_review_20261017/work/tick20261026_085751/current_cash_comparison.json) · [Literal review](../research/2026-10-25-2044-hold-review.json).
 
-**Held Kimi / DEC243+266:** 10 YES at 12¢; cost $1.20; filled order `0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`. Exit $0.90/carry $0.905759. Retain .3851/.2351; selected $2.351/no-existing-admission$1.551 exceed cash; .812/.80/zero cases favor cash. Fresh AA HLE 52.455977757% differs from composite 55.086921096; issuer Full 51.1/tools 70/Diamond 39.4 match dated claims. Named HLE API 403 is not absence proof; literal has no categorical tools ban or weights condition. Neither automatic tools exclusion nor qualifying-source admission. [Current source review](../data/deep_review_20261017/work/tick20261026_072612/combined_source_review.json).
-
-**Held Messi / DEC 244:** 5 YES at 27¢; cost $1.35; exit $1.45; cash plus carry $1.459279. Athlete headlines are not official annual Google-ranking evidence or a measured attention effect.
-
-**Held Michigan / DEC261:** 5 NO; exit $1.60; operative .41/.31. Primary $2.05 > 18-day cash $1.602704 > selected $1.55. Same eight polls aged once at01:20. Sinclair wrappers are not independent rallies or polling; official schedule does not verify current El-Sayed attendance. Primary-prospects classifier framing is outdated; effects uncertain. [Sources](../data/deep_review_20261017/work/tick20261026_072612/combined_source_review.json).
-
-**Clarity Act pair:** 29 YES over50/29 NO over58; marks .055 YES/.925 NO; whole-pair exit $26.68, 68-day cash $26.850735. Conditional $29/58/29, no unconditional floor or leg separation. First full Senate final-passage vote; strict >50/>58 separately; procedure excluded. No qualifying vote means NO on both; prior qualifying voice vote YES on both. Sept 15 procedure does not settle. Hypothetical $29-only failure break-even 7.411%; 5% favors hold,10/15/20/30% cash, excluding the $58 bonus. [Cash cases](../data/deep_review_20261017/work/tick20261026_072612/current_cash_comparison.json) · [Literal review](../data/deep_review_20261017/work/tick20261025_204431/clarity_source_review.json).
-
-**Finance and operations:** $197.68 includes $5.58 gas; trading $192.10 midpoint/$189.28 indicative fee-net depth; PM $51.72/$48.90. Residual $19.79 arithmetic, not verified settlement/profit. CSV 333→334 exact prefix/chart 10/10 once; 21 canonical CLI rc 0;35 HTTP 200/one HLE 403/five SDK result serializations plus one lost-result failure. All SDK wire statuses unknown. Audit clean/UMA zero alerts/four singleton daemons. No Telegram/discovery/storage repeat. Next light10/full 14 UTC. [Check](../research/2026-10-26-0726-check.json) · [Snapshot](../research/2026-10-26-0728-financial-snapshot.json).
+**Finance and operations:** Total is $197.77 including $5.64 gas; trading $192.13 mid / $189.25 indicative fee-net depth (+11.3% vs $170 reference), PM $51.75 / $48.87. Residual $19.79 is arithmetic, not verified settlement/profit. CSV 334→335 with exact prefix; chart 10/10. Twenty-two canonical CLI receipts returned rc 0; 35 explicit HTTP 200; two SDK results were serialized with unknown wire status. No Telegram, additional discovery or storage pass. Next light 10 UTC / full 14 UTC; #179 Oct 27 22 UTC, verify remainder before any pull. [Check](../research/2026-10-26-0857-check.json) · [Snapshot](../research/2026-10-26-0859-financial-snapshot.json).
 
 ## Prior order record — historical
 
