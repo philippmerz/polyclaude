@@ -49,6 +49,8 @@ VALID_TYPES = {
     "scaffolding",       # building a system capability (a script, an audit, a process change)
     "skip",              # explicitly NOT taking an action that was considered
 }
+# Forecasts can be scored later. Operational records cannot.
+FORECAST_TYPES = {"open_position", "close_position", "size_change", "skip"}
 
 VALID_CONFIDENCE = {"low", "medium", "high"}
 
@@ -208,9 +210,20 @@ def cmd_summary(_args: argparse.Namespace) -> int:
         n_res = sum(1 for r in lst if r.get("outcome"))
         print(f"  {c:8s}  total={len(lst):3d}  resolved={n_res:3d}")
 
-    # capital-weighted exposure of pending decisions
+    # Recorded decision sizes are not live positions or open orders.
     pending_capital = sum((r.get("size_usd") or 0) for r in pending)
-    print(f"\npending capital (sum of sizes): ${pending_capital:.2f}")
+    print(f"\npending recorded sizes (not live exposure): ${pending_capital:.2f}")
+
+    forecast = [r for r in rows if (r.get("type") or "") in FORECAST_TYPES]
+    forecast_pending = [r for r in forecast if not r.get("outcome")]
+    forecast_resolved = [r for r in forecast if r.get("outcome")]
+    forecast_pending_size = sum((r.get("size_usd") or 0) for r in forecast_pending)
+    print("\nforecast calibration sample "
+          "(open_position, close_position, size_change, skip):")
+    print(f"  total={len(forecast)}  resolved={len(forecast_resolved)}  "
+          f"pending={len(forecast_pending)}")
+    print("  pending recorded sizes (not live exposure): "
+          f"${forecast_pending_size:.2f}")
 
     # lessons recorded
     lessons = [r["lesson"] for r in rows if r.get("lesson")]

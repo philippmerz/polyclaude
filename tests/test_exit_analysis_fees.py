@@ -371,3 +371,91 @@ def test_binary_risk_text_exposes_zero_payoff_branch(
 def test_binary_risk_text_rejects_invalid_probability(fair: float) -> None:
     with pytest.raises(ValueError, match="fair must be between 0 and 1"):
         exits._binary_risk_text(fair)
+
+
+def test_best_sale_prefix_treats_an_exact_tie_as_an_exit() -> None:
+    tied = exits._best_sale_prefix([(2.5, 5.0, 0.0)], fair=0.50)
+
+    assert tied is not None
+    assert tied[3] == pytest.approx(0.0)
+    assert exits._best_sale_prefix([(2.5 - 1e-6, 5.0, 0.0)], fair=0.50) is None
+
+
+def test_best_sale_prefix_prefers_the_larger_tied_prefix() -> None:
+    best = exits._best_sale_prefix(
+        [(0.5, 1.0, 0.0), (2.5, 5.0, 0.0)], fair=0.50)
+
+    assert best is not None
+    assert best[1] == pytest.approx(5.0)
+
+
+def test_exit_cli_sells_when_stressed_hold_loses_to_cash(
+    monkeypatch, tmp_path, capsys
+) -> None:
+    priors_path = tmp_path / "priors.json"
+    priors_path.write_text(json.dumps({
+        "openrouter-band": {
+            "p_no": 0.85, "p_no_stress": 0.70, "verified": "2026-10-26",
+        },
+    }))
+    positions = [{
+        "slug": "openrouter-band", "outcome": "No", "size": "5",
+        "asset": "token", "conditionId": CID,
+    }]
+
+    def get(url: str, **_kwargs) -> _Response:
+        if "data-api.polymarket.com/positions" in url:
+            return _Response(positions)
+        if url.endswith("/book"):
+            return _Response({
+                "bids": [{"price": "0.72", "size": "5"}],
+                "min_order_size": "5",
+            })
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits, "PRIORS", priors_path)
+    monkeypatch.setattr(exits, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0})
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+
+    assert exits.main() == 0
+    output = capsys.readouterr().out
+    assert "SELL TAKER ALL NOW" in output
+    assert "stressed" in output
+
+
+def test_exit_cli_keeps_a_set_only_pair_whole_when_stress_prefers_cash(
+    monkeypatch, tmp_path, capsys
+) -> None:
+    priors_path = tmp_path / "priors.json"
+    priors_path.write_text(json.dumps({
+        "clarity-leg": {
+            "p_yes": 0.50, "p_yes_stress": 0.10, "verified": "2026-10-26",
+            "arb_paired": "manage only as the complete pair",
+        },
+    }))
+    positions = [{
+        "slug": "clarity-leg", "outcome": "Yes", "size": "5",
+        "asset": "token", "conditionId": CID,
+    }]
+
+    def get(url: str, **_kwargs) -> _Response:
+        if "data-api.polymarket.com/positions" in url:
+            return _Response(positions)
+        if url.endswith("/book"):
+            return _Response({
+                "bids": [{"price": "0.90", "size": "5"}],
+                "min_order_size": "5",
+            })
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits, "PRIORS", priors_path)
+    monkeypatch.setattr(exits, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0})
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+
+    assert exits.main() == 0
+    output = capsys.readouterr().out
+    assert "SELL TAKER" not in output
+    assert "GROUP STRUCTURES" in output
+    assert "GROUP_BROKEN" in output

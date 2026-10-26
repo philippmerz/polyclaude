@@ -33,11 +33,13 @@ portfolio snapshot. Chronology is in [`notes/journal.md`](notes/journal.md),
 pending work in [`notes/backlog.md`](notes/backlog.md), and dated analysis in
 `research/`.
 
-## Completed-universe selection — October21
+## Entry authority
 
-**The broad experiment ended at 422 completed unique valuations; no 600-case wait or queue continuation.** There is no active native goal (verified13:25UTC). Counts: 422 valued, 394 factual exclusions, 21 blocked, 2,163 unfinished pending; 837 base records plus 78 revisions. Case529 is unfinished and excluded. Policy v2 permits autonomous selection from the completed universe, subject to primary comparison, exact selected outcome tokens, hashed report and every live entry gate. [Policy](notes/entry_review_gate.json) · [Selection and comparison](research/2026-10-21-completed-review-allocation.json).
+New Polymarket buys go through the live gates in `scripts/polyclaude_enter.py`.
+`notes/entry_review_gate.json` is `review_mode: "live_gates"`. A finished
+valuation list is not a token allowlist.
 
-**Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
+**Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown. That reconciliation block stops new buys on that asset only, and the reservation counts the unindexed tail. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
 **Management:** Retain holdings; no add, trade, prior/date, control or decision-record change. Three explicit IDs and two post-boundary rows reviewed; Michigan and gas details remain linked to source facts. [Check](research/2026-10-26-1030-check.json).
 

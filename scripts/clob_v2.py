@@ -529,6 +529,33 @@ def _record_unreserved_cancel_block(order: dict, *, reason: str =
     tmp.replace(path)
 
 
+def _claim_blocked_by_reconciliation(token_id: str) -> None:
+    """Block a BUY on an unresolved asset, or on every asset if identity is missing."""
+    path = REPO_ROOT / ".entry_reconciliation_required.json"
+    if not path.exists():
+        return
+    try:
+        rows = json.loads(path.read_text())
+    except Exception as exc:
+        raise RuntimeError(f"entry reconciliation ledger is unreadable: {exc}")
+    if (not isinstance(rows, list) or not rows
+            or not all(isinstance(row, dict) for row in rows)):
+        raise RuntimeError(
+            "BUY blocked by unresolved entry reconciliation tombstone")
+    unscoped = False
+    matched = False
+    for row in rows:
+        condition = str(row.get("conditionId") or "").lower()
+        asset = str(row.get("asset") or "")
+        if not condition.startswith("0x") or not asset:
+            unscoped = True
+        if asset == str(token_id):
+            matched = True
+    if unscoped or matched:
+        raise RuntimeError(
+            "BUY blocked by unresolved entry reconciliation tombstone")
+
+
 def _claim_buy_reservation(token_id: str, price: float, usd_size: float,
                            reservation_id: str | None) -> dict:
     """Atomically consume one pending reservation before a BUY is signed.
@@ -539,10 +566,7 @@ def _claim_buy_reservation(token_id: str, price: float, usd_size: float,
     """
     claim_lock = _acquire_reservation_lock()
     try:
-        reconciliation = REPO_ROOT / ".entry_reconciliation_required.json"
-        if reconciliation.exists():
-            raise RuntimeError(
-                "BUY blocked by unresolved entry reconciliation tombstone")
+        _claim_blocked_by_reconciliation(str(token_id))
         path = REPO_ROOT / ".entry_reservations.json"
         if not path.exists():
             raise RuntimeError(

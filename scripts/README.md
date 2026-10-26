@@ -88,12 +88,12 @@ provisional and requires an independent fresh rewalk before any action.
 
 ## On-chain operations
 
-- `entry_review_gate.py` — offline gate for new Polymarket BUY bids. Under the
-  Oct21 operator direction it checks policy v2 (`completed_universe`, minimum
-  422 completed unique `valued` cases), a primary comparison, exact selected
-  outcome tokens, and a hashed research report. It cross-checks canonical
-  checkpoint/index counts; missing, malformed, or inconsistent authority fails
-  closed. Execution CLIs and BUY writers enforce it; research previews and
+- `entry_review_gate.py` — offline gate for new Polymarket BUY bids. Policy
+  v2 `review_mode: "live_gates"` checks the policy shape and returns. The live
+  gates in `polyclaude_enter.py` are the authority. A finished valuation list
+  is not a token allowlist. `completed_universe` remains available for a
+  replay of that finished study and still fails closed on a malformed ledger.
+  Execution CLIs and BUY writers enforce the gate; research previews and
   existing position/order management remain available. Policy:
   `notes/entry_review_gate.json`.
 - `polyclaude_enter.py` — mandatory guarded Polymarket entry path. Single-market

@@ -1264,6 +1264,7 @@
   "will-the-democrats-win-the-michigan-senate-race-in-2026": {
     "p_yes": 0.59,
     "p_no": 0.41,
+    "p_no_stress": 0.31,
     "cluster": "us-politics",
     "rho_within": 0.5,
     "cluster_frac": 0.18,
@@ -1281,7 +1282,7 @@
       "research/2026-10-17-deep-review/advisories/michigan_entry_champion.md"
     ],
     "latest_source_packet": "data/deep_review_20261017/work/tick20261026_012047/daily_math.json",
-    "management": "Review each existingtick/earliermaterialpoll,candidacy,withdrawal,health,ballot or turnout news. OriginalBUYfilled/Oct23pullobsolete. Oct21debate elapsed; APpartialbodycheckedOct22, exactfulltranscript/completion/voteeffectunknown. Pullanyfuture restingorderbeforeknowncatalyst and revalue. MandatoryearlyvotingOct24-Nov1/absenteeSep24 remain datedcontext. EveryfreshBUYrequirescompleted-universepolicyv2, primaryselection andalllivegates; former600waitretired. No measuredUS-politicshedge.",
+    "management": "Review each existingtick/earliermaterialpoll,candidacy,withdrawal,health,ballot or turnout news. OriginalBUYfilled/Oct23pullobsolete. Oct21debate elapsed; APpartialbodycheckedOct22, exactfulltranscript/completion/voteeffectunknown. Pullanyfuture restingorderbeforeknowncatalyst and revalue. MandatoryearlyvotingOct24-Nov1/absenteeSep24 remain datedcontext. Every fresh BUY uses the live entry gates. No measuredUS-politicshedge.",
     "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
     "daily_rederivation": "research/2026-10-26-0120-daily-hold-review.json",
     "latest_news_review": "research/2026-10-24-0019-check.json",
@@ -1348,6 +1349,7 @@
   "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
     "p_yes": 0.15,
     "p_no": 0.85,
+    "p_no_stress": 0.70,
     "cluster": "ai-ships-fast-short",
     "rho_within": 0.75,
     "cluster_frac": 0.1,

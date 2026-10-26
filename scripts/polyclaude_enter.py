@@ -1003,10 +1003,15 @@ def _entry_reconciliation_path() -> Path:
     return REPO_ROOT / ".entry_reconciliation_required.json"
 
 
-def _assert_no_entry_reconciliation_blocks() -> None:
+def _load_entry_reconciliation_blocks() -> list[dict]:
+    """Return identity-bearing reconciliation rows.
+
+    A missing file is clean. An empty or non-list ledger is malformed and
+    fails closed, because it cannot be scoped to one asset.
+    """
     path = _entry_reconciliation_path()
     if not path.exists():
-        return
+        return []
     try:
         rows = json.loads(path.read_text())
     except Exception as exc:
@@ -1014,10 +1019,47 @@ def _assert_no_entry_reconciliation_blocks() -> None:
     if not isinstance(rows, list) or not rows or not all(
             isinstance(row, dict) for row in rows):
         raise RuntimeError("entry reconciliation ledger is malformed")
-    order_ids = ", ".join(
-        str(row.get("orderId") or "?")[:18] for row in rows[:3])
-    raise RuntimeError(
-        f"entry order state requires manual reconciliation: {order_ids}")
+    return rows
+
+
+def _reconciliation_blocks_unscoped(blocks: list[dict]) -> bool:
+    for row in blocks:
+        condition = str(row.get("conditionId") or "").lower()
+        asset = str(row.get("asset") or "")
+        if not condition.startswith("0x") or not asset:
+            return True
+    return False
+
+
+def _assert_scoped_reconciliation_blocks(blocks: list[dict]) -> None:
+    if blocks and _reconciliation_blocks_unscoped(blocks):
+        order_ids = ", ".join(
+            str(row.get("orderId") or "?")[:18] for row in blocks[:3])
+        raise RuntimeError(
+            f"entry order state requires manual reconciliation: {order_ids}")
+
+
+def _reconciliation_block_matches(record: dict, blocks: list[dict]) -> bool:
+    order_id = str(record.get("orderId") or "")
+    asset = str(record.get("asset") or "")
+    for row in blocks:
+        if order_id and str(row.get("orderId") or "") == order_id:
+            return True
+        row_asset = str(row.get("asset") or "")
+        if asset and row_asset and asset == row_asset:
+            return True
+    return False
+
+
+def _assert_new_buy_not_blocked(condition_id: str, asset: str) -> None:
+    """Stop a new reservation on an unresolved asset, not the whole venue."""
+    blocks = _load_entry_reconciliation_blocks()
+    _assert_scoped_reconciliation_blocks(blocks)
+    if _reconciliation_block_matches(
+            {"conditionId": condition_id, "asset": asset}, blocks):
+        raise RuntimeError(
+            "entry order state requires manual reconciliation for this "
+            "condition/asset")
 
 
 @_reservation_locked
@@ -1238,8 +1280,11 @@ def _entry_reservation_commitments(positions: list[dict],
     fills that have not reached data-api yet. Only the cancel CLI's affirmative
     verification starts retirement; after a grace period, terminal order state,
     exhaustive trade history and cumulative buys must account for every fill.
+    A disappeared order whose indexed buys cover only part of the reservation
+    reserves the unindexed tail: those indexed shares are already in the position.
     """
-    _assert_no_entry_reconciliation_blocks()
+    blocks = _load_entry_reconciliation_blocks()
+    _assert_scoped_reconciliation_blocks(blocks)
     rows = _read_entry_reservations()
     if not isinstance(open_buys, list):
         raise RuntimeError("open BUY commitments are not a list")
@@ -1304,7 +1349,24 @@ def _entry_reservation_commitments(positions: list[dict],
                 and indexed_bought + _BALANCE_TOL >= baseline_bought + shares):
             # The position snapshot now carries the exposure and actual cost.
             continue
-        if prune and submission_state == "cancelled" and order_id:
+        commitment_risk = risk
+        commitment_shares = shares
+        indexed_delta = indexed_bought - baseline_bought
+        if (order_id not in open_ids
+                and indexed_delta > _BALANCE_TOL
+                and indexed_bought + _BALANCE_TOL < baseline_bought + shares):
+            # Indexed shares are already in the position. Keep the reservation
+            # row until the disappeared tail has terminal proof, and reserve
+            # only that tail.
+            commitment_shares = (baseline_bought + shares) - indexed_bought
+            commitment_risk = risk * (commitment_shares / shares)
+            if (not math.isfinite(commitment_risk) or commitment_risk <= 0.0
+                    or not math.isfinite(commitment_shares)
+                    or commitment_shares <= 0.0):
+                raise RuntimeError("entry reservation tail risk is invalid")
+        blocked = _reconciliation_block_matches(record, blocks)
+        if (prune and submission_state == "cancelled" and order_id
+                and not blocked):
             cancelled_at = _reservation_timestamp(
                 record.get("cancelVerifiedAt"), "cancelVerifiedAt")
             if (now - cancelled_at).total_seconds() >= (
@@ -1341,8 +1403,8 @@ def _entry_reservation_commitments(positions: list[dict],
             "question": str(record.get("question") or ""),
             "eventIds": [str(event_id) for event_id in events],
             "asset": asset,
-            "risk": risk,
-            "remainingShares": shares,
+            "risk": commitment_risk,
+            "remainingShares": commitment_shares,
             "reservationId": str(record.get("reservationId") or ""),
             "submissionState": submission_state,
             "cluster": reserved_cluster or None,
@@ -1360,9 +1422,10 @@ def _merge_entry_commitments(positions: list[dict], open_buys: list[dict], *,
     A local reservation represents the order's original full-fill risk until
     all target shares are indexed. When its order remains live, omit that
     order's smaller remaining-notional row; the full reservation deliberately
-    covers both remaining shares and any partial fill not indexed yet.
+    covers both remaining shares and any partial fill not indexed yet. When
+    the order is gone and only part of it is indexed, the commitment is the
+    unindexed tail.
     """
-    _assert_no_entry_reconciliation_blocks()
     local = _entry_reservation_commitments(
         positions, open_buys, prune=prune)
     local_by_id: dict[str, dict] = {}
@@ -1408,7 +1471,6 @@ def _merge_entry_commitments(positions: list[dict], open_buys: list[dict], *,
 
 @_reservation_locked
 def _add_entry_reservations(records: list[dict]) -> list[str]:
-    _assert_no_entry_reconciliation_blocks()
     if not isinstance(records, list) or not records:
         raise RuntimeError("reservation batch is empty")
     rows = _read_entry_reservations()
@@ -1430,6 +1492,7 @@ def _add_entry_reservations(records: list[dict]) -> list[str]:
             raise RuntimeError("invalid reservation submission state")
         key = (str(record.get("conditionId") or "").lower(),
                str(record.get("asset") or ""))
+        _assert_new_buy_not_blocked(key[0], key[1])
         if (not key[0].startswith("0x") or not key[1]
                 or key in occupied or key in new_keys):
             raise RuntimeError(

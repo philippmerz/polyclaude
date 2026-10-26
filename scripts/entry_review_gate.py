@@ -1,8 +1,13 @@
 """Fail-closed offline gate for new Polymarket BUY orders.
 
-This gate reads the current finite-review checkpoint/index and a root-owned
-selection document. It does not rebuild the ledger, use the network, or write
-state. Existing orders, sells, cancels, and redemptions are outside its scope.
+``review_mode`` ``live_gates`` checks the policy shape and returns. The live
+entry gates are then the authority. A finished valuation list is not a token
+allowlist.
+
+``completed_universe`` still requires the configured valuation count, a hashed
+comparison, and an exact selected token. This module does not rebuild that
+ledger, use the network, or write state. Sells, cancels, and redemptions are
+outside its scope.
 """
 from __future__ import annotations
 
@@ -22,6 +27,7 @@ QUEUE_REL = Path("research/2026-10-17-deep-review/index.csv")
 RULES_REL = Path("research/2026-10-17-primary-market-review-rules.jsonl.gz")
 SCHEMA = "polyclaude.entry_review_gate.v2"
 REVIEW_MODE = "completed_universe"
+LIVE_REVIEW_MODE = "live_gates"
 MINIMUM_FLOOR = 1
 VALID_STATUSES = {"valued", "blocked_after_review", "excluded_factual", "pending"}
 CONDITION_RE = re.compile(r"^0x[0-9a-fA-F]{64}$")
@@ -219,8 +225,16 @@ def _require_new_buy_allowed(token_id: str | None, root: Path) -> None:
         policy = json.loads((root / POLICY_REL).read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as exc:
         raise EntryReviewGateError("entry review gate: policy unavailable or malformed") from exc
-    if (not isinstance(policy, dict) or policy.get("schema") != SCHEMA
-            or policy.get("review_mode") != REVIEW_MODE):
+    if not isinstance(policy, dict) or policy.get("schema") != SCHEMA:
+        raise EntryReviewGateError("entry review gate: policy schema or review mode mismatch")
+    mode = policy.get("review_mode")
+    if mode == LIVE_REVIEW_MODE:
+        leftover = {"selection", "targets", "minimum_completed_valuations"} & set(policy)
+        if leftover:
+            raise EntryReviewGateError(
+                "entry review gate: live_gates policy must not carry a completed-universe allowlist")
+        return
+    if mode != REVIEW_MODE:
         raise EntryReviewGateError("entry review gate: policy schema or review mode mismatch")
     minimum = _require_int(policy.get("minimum_completed_valuations"),
                            "minimum completed valuations", minimum=MINIMUM_FLOOR)

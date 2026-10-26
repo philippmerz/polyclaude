@@ -1,6 +1,8 @@
 # Current resting orders — October 26, 10:32 UTC
 
-**No visible open orders. #179 remains terminal-unknown.** It holds 19.993158 YES with $4.798358 historical cost; HTTP 200/JSON null is not terminal proof. Keep the full $4.80 reservation/global BUY block. No cancel, prune, repost, release or burn without affirmative terminal proof; two zero-value claims remain unburned and DEC223 $1.02 is historical booked value. [Check](../research/2026-10-26-1030-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
+**20:14 UTC exits:** Michigan 5 NO sold FOK at 0.32 for $1.60. OpenRouter 5 NO sold FOK at 0.75 for $3.75. The table below is the 10:32 book.
+
+**No visible open orders. #179 remains terminal-unknown.** It holds 19.993158 YES with $4.798358 historical cost; HTTP 200/JSON null is not terminal proof. The reconciliation block stops new buys on that condition and asset only. Reserve the unindexed tail, not the indexed $4.80. No cancel, prune, repost, release or burn without affirmative terminal proof; two zero-value claims remain unburned and DEC223 $1.02 is historical booked value. [Check](../research/2026-10-26-1030-check.json) · [Fill proof](../research/2026-10-22-1208-fill-reconciliation.json).
 
 **Account:** 12 financial tuples, 132 IDs, selected CTFs and pUSD 5.612932 match prior; no open orders. All six controls match baseline. UMA zero alerts (46 refreshed of 48 tracked). [Snapshot](../research/2026-10-26-1031-financial-snapshot.json).
 
@@ -19,17 +21,17 @@
 
 **Michigan and gas:** No newly measured independent voter observation. Coverage partly matches earlier attack lineage; exact MS NOW body/date/event identity remains unresolved; persuasion/turnout/backlash can oppose. Gas headline body/date/metric/war causality also unresolved; no fresh upward shock to existing policy-risk inputs, no signed NO read. Article-derived details remain only in [source facts](../data/deep_review_20261017/work/tick20261026_103014/mi_gas_source_facts.json).
 
-**OpenRouter:** Reuse the full 10:00 review; no fresh chart capture. Same headline repetitions are not independent announcements. Keep 5 NO .85/.70; target weeks Oct26/Nov2/9/16, first UI Nov23, fallback Nov27 23:59 ET. Nov20 OpenAI approval is known; actual OR approval/cutoff/share/substitution unknown. Primary $4.25 terminal exceeds $3.961875 cash; stress $3.50 favors cash. [Cash and source review](../data/deep_review_20261017/work/tick20261026_103014/combined_source_review.json).
+**OpenRouter:** Reuse the full 10:00 review; no fresh chart capture. Same headline repetitions are not independent announcements. Sold 5 NO at 0.75 on 20:14 UTC; target weeks Oct26/Nov2/9/16, first UI Nov23, fallback Nov27 23:59 ET. Nov20 OpenAI approval is known; actual OR approval/cutoff/share/substitution unknown. Primary $4.25 terminal exceeds $3.961875 cash; stress $3.50 favors cash. [Cash and source review](../data/deep_review_20261017/work/tick20261026_103014/combined_source_review.json).
 
 **Clarity Act:** Whole pair $27.11 exit/$27.283487 carry; conditional $29/$58/$29. Hypothetical 5.919% one-outcome failure break-even is not a probability: 5% favors hold; 10/15/20/30% favor cash. Require full first Senate final passage, strict >50 and >58 separately, procedure excluded. No qualifying vote means NO on both; prior qualifying voice vote means YES on both. No floor or one-leg assumption.
 
-**Other gates:** Kimi HLE Accuracy ≥55% or equivalent by Dec31 ET under agi.safe.ai; outage/fallback unresolved, tools neither categorically excluded nor automatically admitted. Messi requires official 2026 Global Athletes Top5; missing Mar31 2027 23:59 ET means NO; Messi and Mbappé can both rank. Hidden-info SELL remains maker-only strictly above fair with priced jump risk; verified thesis-break taker exits remain active.
+**Other gates:** Kimi HLE Accuracy ≥55% or equivalent by Dec31 ET under agi.safe.ai; outage/fallback unresolved, tools neither categorically excluded nor automatically admitted. Messi requires official 2026 Global Athletes Top5; missing Mar31 2027 23:59 ET means NO; Messi and Mbappé can both rank. Hidden-info sells rest only strictly above fair. A rest at or below fair is banned. A premium-to-fair sell is the jump-risk pay. Verified thesis-break taker exits remain active. Taker sells use `scripts/pm_fees.py`: rate x [p x (1-p)]^exponent from the structured feeSchedule, with the 0.07 cap retained only for legacy compatibility. The authoritative live order set is `.venv/bin/python scripts/clob_v2.py orders`.
 
 **Finance / operations:** Total $197.80 includes $5.64 gas; trading $192.16 mid/$189.47 indicative depth (+11.5% vs $170 reference), PM $51.79/$49.10. Residual $19.79 is not verified settled cash/profit. CSV336→337 exact prefix; chart10/10. 23 canonical CLI receipts include 21 rc0 and two local pre-append errors; separate wrapper collision before launch. 34 HTTP200; two completed SDK results unknown status; zero capture failures. One append/chart success. Next full14 UTC/light18 UTC; #179 Oct27 22 verify remainder only. [Check](../research/2026-10-26-1030-check.json) · [Snapshot](../research/2026-10-26-1031-financial-snapshot.json).
 
 ## Prior order record — historical
 
-The October20 status and former600 waiting instruction below are historical; the Oct21 completed-universe selection above supersedes that waiting rule. Closed orders remain closed; their numeric forecasts are not current entry authority.
+The October 20 status below is a closed-order record. It is not current entry authority. Closed orders remain closed; their numeric forecasts are not current entry authority.
 
 # Current resting orders — October20 15:55 UTC
 
@@ -43,7 +45,7 @@ After389s, allthree exactterminalCANCELED/0matched;127 exhausted trades/no targe
 |ME02 DunlapD/LePageR|10Yes /0.38 /$3.80|0x4d61c26130d55737f88b66cc3b3630ff4f5f9641240f58060cdda25655793f37|CANCELED /0matched|
 |NY01 GallantD/LaLotaR|10Yes /0.12 /$1.20|0xc9c1e3efdd525579036ce95852a895ac4db3bdc0b7501a3a4e4ebd909d5be585|CANCELED /0matched|
 
-Original conditional decisions203/204/206 and operational closures248/249/250 are recorded as unexecuted forecasts; original numericpriors remain dated research with explicit lifecycle retirement. No market-outcome grade or realized return. Before any futurequote, complete600+comparative selection and fresh exactsource/identity/conditionalfill/cost/portfolio checks. [Primary source and judgment](../data/deep_review_20261017/work/tick151845_primary_review.json).
+Original conditional decisions203/204/206 and operational closures248/249/250 are recorded as unexecuted forecasts; original numericpriors remain dated research with explicit lifecycle retirement. No market-outcome grade or realized return. Closed unfilled bids are not current entry authority. [Primary source and judgment](../data/deep_review_20261017/work/tick151845_primary_review.json).
 
 - **Kimi412/DEC243 filled10YES at12c:** originalorder`0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932`; authenticatedmatch01:48:47, cost1.20, zero makerfee. Originalcancel/pull now obsolete. Exact market3072315/CID`0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41`; YESasset`37766872206008704788193600553604631093824104239948970702184049381100338243383`. Current source/fee-netexit/conditional-fill/joint review: **retain10YES/noadd**, full1.20loss possible. [Held decision](../data/deep_review_20261017/work/tick012937_postfill_hold_primary_0204.json).
 

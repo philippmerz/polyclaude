@@ -75,3 +75,27 @@ def test_add_refuses_non_object_or_boolean_identity(
         path.write_text(json.dumps(original))
         assert decisions.cmd_add(_args()) == 2
         assert json.loads(path.read_text()) == original
+
+
+def test_summary_keeps_scaffolding_out_of_the_forecast_sample(
+    tmp_path: Path, monkeypatch, capsys,
+) -> None:
+    path = tmp_path / "decisions.json"
+    path.write_text(json.dumps({
+        "next_id": 5,
+        "decisions": [
+            {"id": 1, "type": "scaffolding", "size_usd": 100, "outcome": ""},
+            {"id": 2, "type": "open_position", "size_usd": 4.5},
+            {"id": 3, "type": "strategy_change", "size_usd": 9, "outcome": "done"},
+            {"id": 4, "type": "skip", "size_usd": 0, "outcome": "passed"},
+        ],
+    }))
+    monkeypatch.setattr(decisions, "DECISIONS_PATH", path)
+
+    assert decisions.cmd_summary(argparse.Namespace()) == 0
+
+    out = capsys.readouterr().out
+    assert "forecast calibration sample" in out
+    assert "total=2  resolved=1  pending=1" in out
+    assert "pending recorded sizes (not live exposure): $104.50" in out
+    assert "  pending recorded sizes (not live exposure): $4.50" in out

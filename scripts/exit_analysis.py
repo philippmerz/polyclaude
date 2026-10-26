@@ -17,9 +17,10 @@ probability, joint cluster/log-growth risk, and redeployment value.
 Lesson sources: the Prime-SDCC exit (2026-07-24) sold taker into a thin book at
 the midpoint's flattering price and gave up ~$2 of EV vs holding; the Fed
 position (2026-07-28) showed taker breakeven 0.2778 vs maker breakeven 0.2500 —
-a 2.8pp gap that decides the trade. Doctrine (notes/resting_orders.md): when
-hold and sell are close, DON'T CHOOSE — rest a maker sell at the strictly-better
-price and let the market decide.
+a 2.8pp gap that decides the trade. A tie is an exit: executable net at or above the stressed hold value
+sells, using the central probability when no stressed probability is
+recorded. A mark above the bid is not cash. Grouped and set-only legs
+stay whole.
 
 Reads fair values from notes/portfolio_kelly_priors.json (side-aware, and it
 respects the `verified` staleness convention by WARNING on priors > 14d).
@@ -55,6 +56,28 @@ def _fair(slug: str, side: str, priors: dict):
             p = v.get("p_no") if side == "No" else v.get("p_yes")
             return (float(p) if p is not None else None), v.get("verified")
     return None, None
+
+
+def _recorded_probability(slug: str, side: str, priors: dict, *,
+                          stress: bool) -> float | None:
+    """Return a recorded side probability, or None when that field is absent."""
+    field = "p_no" if side == "No" else "p_yes"
+    if stress:
+        field += "_stress"
+    for key, value in priors.items():
+        if key.startswith("_") or not isinstance(value, dict):
+            continue
+        if key in slug or slug in key:
+            if field not in value or value.get(field) is None:
+                return None
+            try:
+                probability = float(value[field])
+            except (TypeError, ValueError) as exc:
+                raise ValueError(f"invalid {field} on {slug}") from exc
+            if not math.isfinite(probability) or not 0.0 <= probability <= 1.0:
+                raise ValueError(f"invalid {field} on {slug}")
+            return probability
+    return None
 
 
 def _execution_fee_market(condition_id: str) -> dict | None:
@@ -201,15 +224,18 @@ def _best_sale_prefix(
 ) -> tuple[float, float, float, float] | None:
     """Return the prefix with maximum central arithmetic gain over holding.
 
-    The result is ``(gross, filled, fee, gain)``. ``None`` means no executable
-    prefix has positive central arithmetic value. This remains a candidate;
+    The result is ``(gross, filled, fee, gain)``. ``None`` means every
+    executable prefix is strictly below the comparison value. A tie counts.
+    This remains a candidate;
     hidden information, probability stress, correlation and redeployment can
     change the final action.
     """
     best: tuple[float, float, float, float] | None = None
     for gross, filled, fee in options:
         gain = gross - fee - filled * fair
-        if gain > 1e-9 and (best is None or gain > best[3]):
+        if gain >= -1e-9 and (
+                best is None or gain > best[3] + 1e-12
+                or (abs(gain - best[3]) <= 1e-12 and filled > best[1])):
             best = (gross, filled, fee, gain)
     return best
 
@@ -384,7 +410,14 @@ def main() -> int:
                 break
         grouped = slug in group_book.by_slug
         binary_risk = _binary_risk_text(fair)
-        best_sale = _best_sale_prefix(bid_options, fair)
+        try:
+            stress_p = _recorded_probability(slug, side, priors, stress=True)
+        except ValueError as exc:
+            print(f"  [UNPRICED] {slug[:52]} — {exc}", file=sys.stderr)
+            continue
+        comparison = fair if stress_p is None else stress_p
+        comparison_label = "central" if stress_p is None else "stressed"
+        best_sale = _best_sale_prefix(bid_options, comparison)
         if set_only or grouped:
             # SET-ONLY legs are priced per-leg but only mean anything as a set.
             # For riskless pairs, closing one leg creates naked exposure; for a
@@ -404,29 +437,25 @@ def main() -> int:
         elif best_sale is not None:
             _, best_filled, _, best_gain = best_sale
             quantity = "ALL" if best_filled >= shares - 1e-9 else f"{best_filled:.1f} SHARES"
-            verdict = (f"SELL TAKER {quantity} NOW (+${best_gain:.2f} vs central "
-                       f"Bernoulli EV on those shares; {binary_risk})")
+            if best_gain <= 1e-9:
+                relation = (f"tie: executable net meets {comparison_label} "
+                            f"E[hold] {comparison:.3f}")
+            else:
+                relation = (f"+${best_gain:.2f} vs {comparison_label} "
+                            f"E[hold] on those shares")
+            verdict = (f"SELL TAKER {quantity} NOW ({relation}; {binary_risk})")
             if hidden:
                 verdict += " [hidden-info: VERIFY the move first]"
         elif hidden:
-            # Hidden-info doctrine, REFINED 2026-08-18 and reflected here
-            # 2026-08-25: resting AT or BELOW fair is banned (an informed lift
-            # means fair jumped, and the stale-fair sell donates the news), but
-            # resting ABOVE fair is PERMITTED — the premium is the compensation
-            # for jump risk. This text still imposed the superseded blanket ban while the
-            # book carried four permitted premium rests (Gemini 0.60 vs fair
-            # 0.54, OpenAI 0.70/0.45, MacBook 0.69), i.e. the tool contradicted
-            # both the doctrine and the live book. The lesson sitting next to
-            # the refinement says it: when practice diverges from a written
-            # rule, the expensive outcome is leaving both on the page.
-            verdict = (f"HOLD CANDIDATE (central arithmetic +${hold_ev - taker_net:.2f}; "
-                       f"{binary_risk}); CONFIRM stressed p + joint cluster/log-growth; "
+            # Hidden-info rests are allowed only strictly above fair.
+            verdict = (f"HOLD CANDIDATE (executable bid strictly below {comparison_label} E[hold] {comparison:.3f}; central arithmetic +${hold_ev - taker_net:.2f}; "
+                       f"{binary_risk}); {('stressed probability is the exit comparison; ' if stress_p is not None else 'no stressed probability recorded; ')}"
                        f"HIDDEN-INFO: rest maker sell only "
                        f"ABOVE fair {fair:.3f} (premium = jump-risk pay; at/below fair is BANNED "
                        f"— donates the news). Taker breakeven {taker_be_text}")
         else:
-            verdict = (f"HOLD CANDIDATE (central arithmetic +${hold_ev - taker_net:.2f}; "
-                       f"{binary_risk}); CONFIRM stressed p + joint cluster/log-growth; "
+            verdict = (f"HOLD CANDIDATE (executable bid strictly below {comparison_label} E[hold] {comparison:.3f}; central arithmetic +${hold_ev - taker_net:.2f}; "
+                       f"{binary_risk}); {('stressed probability is the exit comparison; ' if stress_p is not None else 'no stressed probability recorded; ')}"
                        f"rest maker sell >= "
                        f"{fair:.3f} (taker would need {taker_be_text})")
         rows.append((slug, side, shares, fair, avg_fill, hold_ev, taker_net, verdict, stale))
@@ -460,10 +489,7 @@ def main() -> int:
             print("\nGROUP CONFIGURATION ISSUES (all member-leg actions suppressed)")
             for issue in extra_issues:
                 print(f"  {issue}")
-    print("\nordinary hold$ is p × $1 + (1-p) × $0 per share. HOLD CANDIDATE is "
-          "a central-arithmetic screen, not a recovery forecast or a complete "
-          "portfolio-risk verdict; confirm stressed p, joint outcomes and "
-          "redeployment before action. Resolution is fee-free; maker sells are "
+    print("\nordinary hold$ is p × $1 + (1-p) × $0 per share. An exact tie is an exit: executable net at or above the stressed hold value, or the central hold value when no stressed probability is recorded. A mark above the bid is not cash. HOLD CANDIDATE means the bid is strictly below that value. SET-ONLY and grouped legs stay whole. Resolution is fee-free; maker sells are "
           "fee-free; taker sells pay "
           "rate x [p x (1-p)]^exponent/share at each fill level (V2 curve) — "
           "that gap is usually the whole decision.")

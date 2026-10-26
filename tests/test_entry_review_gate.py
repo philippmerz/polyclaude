@@ -355,3 +355,28 @@ def test_legacy_place_blocks_buy_before_signing_and_leaves_sell_ungated(monkeypa
     assert pc._place("token", price=0.4, size=10, side=polyclaude_client.SELL,
                      gtc=True, post_only=False) == {"ok": True}
     assert [call[0] for call in calls] == ["create", "post"]
+
+
+def test_live_gates_mode_does_not_require_a_valued_universe(tmp_path):
+    policy_path = tmp_path / gate.POLICY_REL
+    policy_path.parent.mkdir(parents=True)
+    policy_path.write_text(json.dumps({
+        "schema": gate.SCHEMA,
+        "review_mode": gate.LIVE_REVIEW_MODE,
+    }))
+
+    assert gate.require_new_buy_allowed(root=tmp_path) is None
+    assert gate.require_new_buy_allowed("999", root=tmp_path) is None
+
+
+def test_live_gates_rejects_a_leftover_allowlist(tmp_path):
+    policy_path = tmp_path / gate.POLICY_REL
+    policy_path.parent.mkdir(parents=True)
+    policy_path.write_text(json.dumps({
+        "schema": gate.SCHEMA,
+        "review_mode": gate.LIVE_REVIEW_MODE,
+        "minimum_completed_valuations": 422,
+    }))
+
+    with pytest.raises(gate.EntryReviewGateError, match="allowlist"):
+        gate.require_new_buy_allowed(root=tmp_path)

@@ -632,11 +632,25 @@ def test_cancel_reappearance_persists_fail_closed_block(tmp_path, monkeypatch):
     assert blocker[0]["orderId"] == "0xorder"
     # Even if the order disappears again, the stale cancel timestamp cannot
     # retire anything until the reappearance is reconciled explicitly.
-    with pytest.raises(RuntimeError, match="manual reconciliation"):
-        entry._merge_entry_commitments([], [], prune=True)
+    merged = entry._merge_entry_commitments([], [], prune=True)
+    assert len(merged) == 1
+    assert merged[0]["risk"] == pytest.approx(4)
     row = entry._read_entry_reservations()[0]
     assert row["submissionState"] == "cancelled"
     assert "cancelVerifiedAt" in row
+    entry._add_entry_reservation({
+        "conditionId": "0xother", "slug": "other",
+        "question": "Other?", "eventIds": ["event-2"],
+        "asset": "token-no", "shares": 10, "risk": 4,
+        "baselineBought": 0,
+    })
+    with pytest.raises(RuntimeError, match="this condition/asset"):
+        entry._add_entry_reservation({
+            "conditionId": "0xcandidate", "slug": "candidate",
+            "question": "Candidate?", "eventIds": ["event-1"],
+            "asset": "token-yes", "shares": 10, "risk": 4,
+            "baselineBought": 0,
+        })
 
 
 def test_cancel_verification_marks_only_exact_local_reservation(
@@ -663,8 +677,20 @@ def test_unreserved_cancel_tombstone_blocks_future_entry(
         "side": "BUY", "original_size": "10", "size_matched": "2",
         "price": "0.4",
     })
-    with pytest.raises(RuntimeError, match="manual reconciliation"):
-        entry._merge_entry_commitments([], [])
+    assert entry._merge_entry_commitments([], []) == []
+    with pytest.raises(RuntimeError, match="this condition/asset"):
+        entry._add_entry_reservation({
+            "conditionId": "0xmarket", "slug": "candidate",
+            "question": "Candidate?", "eventIds": ["event-1"],
+            "asset": "token-yes", "shares": 10, "risk": 4,
+            "baselineBought": 0,
+        })
+    entry._add_entry_reservation({
+        "conditionId": "0xother", "slug": "other",
+        "question": "Other?", "eventIds": ["event-2"],
+        "asset": "token-no", "shares": 10, "risk": 4,
+        "baselineBought": 0,
+    })
 
 
 def test_direct_clob_buy_atomically_claims_exact_pending_reservation(
@@ -1065,3 +1091,45 @@ def test_open_order_shape_failure_is_not_treated_as_zero(monkeypatch):
     })
     with pytest.raises(RuntimeError, match="unexpected shape"):
         entry._open_buy_commitment()
+
+
+def test_partial_index_reserves_only_the_unindexed_tail(tmp_path, monkeypatch):
+    monkeypatch.setattr(entry, "REPO_ROOT", tmp_path)
+    monkeypatch.setattr(clob_v2, "REPO_ROOT", tmp_path)
+    asset = "18462459733098935436849453877652057544981023026783662976270607791773257934675"
+    condition = "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae"
+    record = {
+        "conditionId": condition, "slug": "october-fed",
+        "question": "Will no one dissent?", "eventIds": ["990713"],
+        "asset": asset, "shares": 20, "risk": 4.8,
+        "baselineBought": 0,
+    }
+    reservation_id = entry._add_entry_reservation(record)
+    entry._update_entry_reservation(
+        reservation_id, "0xorder", submission_state="live")
+    (tmp_path / ".entry_reconciliation_required.json").write_text(json.dumps([{
+        "orderId": "0xorder", "conditionId": condition, "asset": asset,
+        "reason": "0.006842-share tail has no terminal proof",
+    }]))
+    indexed = [{
+        "conditionId": condition, "asset": asset, "slug": "october-fed",
+        "size": 19.993158, "totalBought": 19.993158,
+    }]
+
+    commitments = entry._entry_reservation_commitments(indexed, [], prune=True)
+
+    tail = 20 - 19.993158
+    assert len(commitments) == 1
+    assert commitments[0]["remainingShares"] == pytest.approx(tail)
+    assert commitments[0]["risk"] == pytest.approx(4.8 * tail / 20)
+    stored = entry._read_entry_reservations()
+    assert stored[0]["risk"] == 4.8
+    assert stored[0]["shares"] == 20
+    entry._add_entry_reservation({
+        "conditionId": "0x" + "ab" * 32, "slug": "other",
+        "question": "Other?", "eventIds": ["2"],
+        "asset": "token-other", "shares": 10, "risk": 4,
+        "baselineBought": 0,
+    })
+    with pytest.raises(RuntimeError, match="this condition/asset"):
+        entry._add_entry_reservation(record)

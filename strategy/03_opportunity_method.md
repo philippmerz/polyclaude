@@ -1,12 +1,9 @@
 # Opportunity discovery and evaluation
 
 Use this with [the entry pipeline](../AGENTS.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
-The October21 operator direction ended the broad review after 422 completed
-unique `valued` cases; unfinished case 529 is excluded. New investment may be
-selected autonomously for EV from the completed valued universe after a primary
-comparison and recording exact selected outcome tokens plus a hashed report in
-the v2 `completed_universe` entry policy (minimum 422). All current live entry
-gates still apply; discovery or one attractive case does not replace them.
+New buys are authorized by the live entry gates. A finished valuation list is
+not a token allowlist. Discovery or one attractive case does not replace those
+gates.
 The objective is net compounded return through the January evaluation. Number of
 markets read, number of trades and a quiet scanner are not success measures.
 

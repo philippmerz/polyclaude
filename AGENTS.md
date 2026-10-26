@@ -151,12 +151,11 @@ without a gross dislocation; any thesis that is only a headline everyone has.
 
 ## 4. Entry pipeline (every gate is an EV term, in application order)
 
-Select new investment for EV from the 422 completed unique `valued` cases.
-Case 529 is unfinished and does not count. Before a new BUY, complete a
-primary comparison and record the exact `condition_id` and selected outcome
-`token_id` with a hashed research report in
-[`notes/entry_review_gate.json`](notes/entry_review_gate.json). Policy v2 uses
-`review_mode: "completed_universe"` and `minimum_completed_valuations: 422`.
+New buys are authorized by the live gates below.
+[`notes/entry_review_gate.json`](notes/entry_review_gate.json) uses
+`review_mode: "live_gates"`. That mode checks the policy shape and returns.
+It does not keep a token allowlist. A finished research universe is not a
+precondition for a new BUY.
 
 This applies to every new Polymarket BUY, including adds, repricing, maker and
 taker orders, and each leg of a bundle or pair. It does not replace the live
@@ -274,9 +273,11 @@ time. Equal shares make the covered outcomes one synthetic binary.
   - A share pays $1 with probability `p` and $0 with probability `1−p`.
     `shares × p` is a central expected terminal payout, not a recovery path.
     Entry cost and the wish to avoid a realized loss are sunk.
-    `exit_analysis.py` labels a positive central comparison HOLD CANDIDATE.
-    The action compares an executable exit plus redeployment with a stressed
-    probability and the joint cluster's effect on log growth.
+    `exit_analysis.py` prints SELL TAKER when executable net is at or above
+    the stressed hold value, including a tie. With no stressed probability
+    recorded, it uses the central probability. A mark above the bid is not
+    cash. HOLD CANDIDATE means the bid is strictly below that value. Grouped
+    and set-only legs print HOLD — SET-ONLY; per-leg math does not sell them.
   - `portfolio_kelly.py` answers whether you would enter at this mark:
     static edge `p − mark`, time-agnostic. Use it for entries and adds. Its
     ordinary output uses the Gamma midpoint and a scalar ρ, so it ranks; it is
@@ -289,11 +290,13 @@ time. Equal shares make the covered outcomes one synthetic binary.
     bond-like NO's mark should migrate toward 1. Value the hold at
     `fair_BB × max_payout`, not `unconditional_p × max_payout`. Do not trim a
     late-stage NO because static Kelly's edge compressed.
-- **Consumed edge.** When a held leg's mark reaches or passes its honest prior
-  (`check_marginal_apy.py` negative edge at a hygienic central), sell into the
-  bid whenever bid ≥ E[hold] per share. Priors are honest beliefs; pessimism
-  lives in the entry gates. Positive-but-sub-hurdle legs stay held when the
-  exit spread and churn exceed the carry gap. Exit into strength.
+- **Consumed edge.** Sell when executable net is at or above E[hold],
+  including a tie. E[hold] is `shares ×` the stressed probability when
+  `p_yes_stress` or `p_no_stress` is recorded for the held side, otherwise
+  `shares ×` the central probability. A model price the book will not pay is
+  not cash and is not a reason to hold. `check_marginal_apy.py` still flags
+  carry below the Aave hurdle. A leg stays held only when the executable exit
+  is strictly below E[hold] and the spread and churn exceed the carry gap.
 - **Redeem and redeploy the same tick** (`clob_v2.py redeem-all`; `--dry-run`
   for a read-only check). Resolved capital goes to the next gated entry or to
   same-chain Aave.

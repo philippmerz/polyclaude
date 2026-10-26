@@ -1,5 +1,5 @@
 {
-  "next_id": 269,
+  "next_id": 271,
   "decisions": [
     {
       "id": 1,
@@ -5832,6 +5832,36 @@
         "source-risk",
         "hold"
       ],
+      "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 269,
+      "timestamp": "2026-10-26T20:17:03Z",
+      "type": "close_position",
+      "thesis": "Stressed NO probability 0.31 was below the live 0.32 bid. Sold 5 NO FOK at 0.32 for 1.60 USDC.",
+      "confidence": "medium",
+      "prediction": "Five Michigan NO shares are sold and the account shows about 1.60 USDC proceeds from order 0x03039a685715c89e.",
+      "size_usd": 1.6,
+      "resolution_at": "2026-11-04",
+      "tags": [],
+      "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 270,
+      "timestamp": "2026-10-26T20:17:03Z",
+      "type": "close_position",
+      "thesis": "Recorded stressed NO probability 0.70 was below the live bid. Sold 5 NO FOK at 0.75 for 3.75 USDC after a 0.76 FOK found no size.",
+      "confidence": "medium",
+      "prediction": "Five OpenRouter NO shares are sold and the account shows about 3.75 USDC proceeds from order 0x80b71bd65424c382.",
+      "size_usd": 3.75,
+      "resolution_at": "2026-11-27",
+      "tags": [],
       "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
       "outcome": null,
       "calibration_delta": null,
