@@ -244,3 +244,29 @@ Other prices checked against a print:
 - The next US-Iran meeting by October 31 is 0.045. The November 30 sibling is 0.225 and the December 31 sibling is 0.315.
 
 Round 11 is drawn from what remained: 291 names, seed 20261105, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 11
+
+35 names, seed 20261105. The below bucket was empty. Kimi returned 16 skip, 18 watch, and 1 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The one investigate call uses an October 2025 valuation.
+
+- Anthropic NPM high $2.25T by December 31 is 0.37. An October 2025 figure near $500B is stale. The May round was $965B, and the talked range is about $1.5-2T. $2.25T has not printed. The book is about $6,900.
+
+Other prices checked against a print:
+
+- Democratic Senate and House is 0.655 on about $2.95M. Kalshi has the joint near 63.5 to 64 percent.
+- Ohio governor Republican is 0.17. Kalshi has Ramaswamy near 18 to 19 percent. The Democrat leg is 0.825.
+- VA-01 Democrat is 0.635 and Republican is 0.36. Kalshi has Taylor near 60 to 61 percent and Wittman near 39 to 40.
+- Anthropic by December 15 is 0.92, and by November 25 is 0.82. The "no filing" line is stale. The S-1 is public, and each contract pays on the open. The November 25 book is about $4,500. The week-of-November-16 talk can slip.
+- GOOGL low $310 for the week of October 26 is 0.64. The October 26 low printed near $316.60. The week runs through October 30. The book is about $9,400.
+- Anthropic bankruptcy by the end of 2027 is 0.095 on about $494,000. The contract pays on an announcement. June 30 cash near $112B is not that announcement, and the gap to 0.01 is under 10 cents.
+
+The Anthropic IPO bins at $1.75-2.0T (0.32) and $2.00-2.25T (0.0665), and the OpenAI IPO bins under $1T (0.3055) and $1.25-1.5T (0.18), still have a blank prospectus range. An unsigned private talk is not an IPO price.
+
+The liquid election names match Kalshi within a few cents. The scanner did not hide a 10-cent gap there.
+
+Round 12 is drawn from what remained: 256 names, seed 20261106, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
