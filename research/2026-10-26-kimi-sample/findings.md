@@ -225,3 +225,22 @@ Other prices checked against a print:
 - Anthropic in November is 0.861 and December is 0.053. Both sit on the public S-1 and the same November talk.
 
 Round 10 is drawn from what remained: 326 names, seed 20261104, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 10
+
+35 names, seed 20261104. The below bucket was empty. Kimi returned 18 skip, 16 watch, and 1 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The one investigate call uses old North Carolina margins.
+
+- North Carolina Senate Democrat is 0.971. Kalshi has Roy Cooper near 97 percent. The 2014 and 2020 results are not this race. The book is about $186,000.
+
+Other prices checked against a print:
+
+- Kansas governor Republican is 0.77. Laura Kelly is term-limited. Kalshi has Masterson near 76 to 77 percent.
+- Anthropic at $3T is 0.17. A late-2025 figure near $350B is stale. The May round was $965B, and the talked range is about $1.5-2T. $3T has not printed.
+- The next US-Iran meeting by October 31 is 0.045. The November 30 sibling is 0.225 and the December 31 sibling is 0.315.
+
+Round 11 is drawn from what remained: 291 names, seed 20261105, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
