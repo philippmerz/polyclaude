@@ -1,0 +1,85 @@
+{
+  "seed": 20261026,
+  "pool": 2097,
+  "eligible": 978,
+  "picked": 50,
+  "drawn_at": "2026-10-26T21:14:05.254768+00:00",
+  "source": "gamma /markets volume24hr desc offsets 0-2000",
+  "note": "China-adjacent questions excluded before the model call. Held markets excluded. bucket is the scanner gate without the hurdle filter.",
+  "round2": {
+    "seed": 20261027,
+    "eligible": 589,
+    "picked": 50,
+    "filter": "dropped round-1 ids, sub-3-day names, prices outside 0.02-0.98, and exact-score/barrier/match-winner questions",
+    "screened_at": "2026-10-26T21:49:08.574647+00:00",
+    "verdicts": {
+      "skip": 28,
+      "watch": 21,
+      "investigate": 1
+    },
+    "tokens_reported": {
+      "6": {
+        "total": 12171,
+        "input": 1886,
+        "output": 535,
+        "reasoning": 2838,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "7": {
+        "total": 16589,
+        "input": 1813,
+        "output": 454,
+        "reasoning": 7410,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "8": {
+        "total": 18099,
+        "input": 1925,
+        "output": 544,
+        "reasoning": 8718,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "9": {
+        "total": 10636,
+        "input": 1931,
+        "output": 452,
+        "reasoning": 1341,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "10": {
+        "total": 11661,
+        "input": 1903,
+        "output": 576,
+        "reasoning": 2270,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      }
+    },
+    "quota": "no refusal through batch 10"
+  },
+  "round3": {
+    "seed": 20261028,
+    "eligible": 629,
+    "eligible_by_bucket": {
+      "primary": 422,
+      "thin": 158,
+      "below": 49
+    },
+    "picked": 50,
+    "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions"
+  }
+}
