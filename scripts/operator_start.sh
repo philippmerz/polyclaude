@@ -1,69 +1,10 @@
 #!/usr/bin/env bash
-# Spawn the long-lived PolyClaude operator in one tmux session.
-#
-# Usage:
-#   pc-attach --start
-#   pc-attach
-#
-# The host-private runtime owns provider/model details and writes the active
-# conversation identifier after the operator receives its first manual prompt.
+# The interactive operator is the grok tmux session attached with pc-attach.
+# This script must not start a model process.
 
 set -euo pipefail
-umask 077
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
-SESSION_NAME="operator"
-RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
-
-export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
-
-if tmux has-session -t "=${SESSION_NAME}" 2>/dev/null; then
-    echo "operator session already running."
-    echo "  attach: tmux attach -t ${SESSION_NAME}"
-    exit 0
-fi
-
-if [[ ! -x "${RUNNER}" ]]; then
-    echo "ERROR: operator runtime is missing or not executable" >&2
-    exit 69
-fi
-
-# Block every automated queue before launch. The private runtime opens this
-# gate only after the agent records a real terminal-entered user message.
-if ! "${RUNNER}" prepare-blank --workdir "${POLYCLAUDE_DIR}"; then
-    echo "ERROR: could not arm blank-session prompt gate" >&2
-    exit 78
-fi
-
-if ! timeout 15 "${RUNNER}" status >/dev/null; then
-    echo "ERROR: operator runtime authentication/health check failed" >&2
-    exit 78
-fi
-
-# The OpenCode session store keeps the operator's history; do not duplicate
-# the terminal transcript.
-printf -v CHILD_CMD 'exec %q interactive --workdir %q' \
-    "${RUNNER}" "${POLYCLAUDE_DIR}"
-
-echo "starting operator session"
+echo "interactive operator is the grok session."
 echo "  attach: pc-attach"
-
-tmux new-session -d -s "${SESSION_NAME}" -c "${POLYCLAUDE_DIR}" "${CHILD_CMD}"
-
-operator_live=0
-for _ in {1..120}; do
-    if "${RUNNER}" operator-live >/dev/null 2>&1; then
-        operator_live=1
-        break
-    fi
-    sleep 0.25
-done
-if [[ "${operator_live}" != "1" ]]; then
-    echo "ERROR: blank operator launched but no operator agent process became ready" >&2
-    tmux kill-session -t "=${SESSION_NAME}" 2>/dev/null || true
-    exit 70
-fi
-
-echo "blank operator ready; automated prompts are held until your first input."
-echo "Attach with pc-attach. Detach with Ctrl-B then D; do not exit the agent."
+echo "  status: pc-attach --status"
+exit 0

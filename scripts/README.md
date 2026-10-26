@@ -2,9 +2,9 @@
 
 Quick map for any agent (or human) reading the repo cold. For deeper context: [`../AGENTS.md`](../AGENTS.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
 
-`operator_start.sh` starts the interactive runtime directly in tmux, retaining
-the blank-session prompt gate. The OpenCode session store owns operator
-history; the launcher creates no duplicate terminal transcript.
+`pc-attach` attaches to the interactive Grok operator. `operator_start.sh`
+does not launch a second runtime. Scheduled prompts queue through the private
+adapter, and that delivery does not resume the interactive session.
 
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 

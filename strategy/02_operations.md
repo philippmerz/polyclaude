@@ -4,13 +4,12 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 ## Operator session history
 
-`scripts/operator_start.sh` starts the private interactive runtime directly in
-tmux. The runtime is the OpenCode CLI running the kimi-for-coding model; its
-native session store (`~/.local/share/opencode/`) is the session transcript.
-Operator directive 2026-10-19: disable duplicate terminal recording and remove
-the old operator transcript files. Do not reintroduce `script`, `tee`, or tmux
-output capture for the interactive session, or create `logs/operator/`
-transcripts.
+`pc-attach` attaches to the interactive operator. That session is the Grok
+CLI on grok-4.7. `scripts/operator_start.sh` does not launch a model runtime.
+Scheduled work queues through the private adapter, which runs a separate
+headless grok process and does not resume the interactive session. Operator
+directive 2026-10-19: do not reintroduce `script`, `tee`, or tmux output
+capture for the interactive session, or create `logs/operator/` transcripts.
 
 ## Cron — autonomous check-in driver
 
