@@ -204,3 +204,24 @@ Other prices checked against a print:
 - Anthropic at a low of $800B is 0.036. The May round was $965B. The title is a dip. The pasted body says reaches or exceeds, and it also says highest/lowest. The book is about $5,300.
 
 Round 9 is drawn from what remained: 361 names, seed 20261103, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
+
+
+## Round 9
+
+35 names, seed 20261103. The below bucket was empty. Kimi returned 15 skip, 19 watch, and 1 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+The one investigate call says Anthropic has no S-1.
+
+- Anthropic listed by November 20 is 0.67. The S-1 was filed October 26, with the price range blank. The contract pays on the open. Reported debut talk is the week of November 16, and it can slip. The book is about $6,000.
+
+Other prices checked against a print:
+
+- New Hampshire Senate Democrat is 0.92. Kalshi has Pappas near 90 percent.
+- Ohio governor Democrat is 0.825. Kalshi has Acton near 81 to 82 percent.
+- Bitcoin at $78,000 this week is 0.595. Spot is about $80,000, and the October 26 low is about $79,400.
+- The 1W sale at $10M is 0.904. The last official print is still $6,082,668 on October 21, and the window runs through November 2. The $60M leg is 0.295, on about $4,300, and it sits under the earlier $40M and $20M prices.
+- Anthropic in November is 0.861 and December is 0.053. Both sit on the public S-1 and the same November talk.
+
+Round 10 is drawn from what remained: 326 names, seed 20261104, split 20 primary / 15 thin / 0 below. The below bucket is empty, so the draw did not backfill.
