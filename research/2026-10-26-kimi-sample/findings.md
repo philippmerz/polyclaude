@@ -82,3 +82,34 @@ T1 is 2–1 in the Swiss stage and still alive, so Worlds at 0.155 is an open to
 The below gate caught the untradeable stock barriers. The liquid names that were checked sit on the futures ladder, the candidate markets, or a public print.
 
 Round 4 is drawn from what remained: 568 names, seed 20261029, the same 20/15/15 split.
+
+
+## Round 4
+
+50 more names, seed 20261029. Kimi returned 29 skip, 15 watch, and 6 investigate. The API did not refuse.
+
+No trade.
+
+The six investigate calls are a stale prior or a license read as a delivery.
+
+- Georgia Senate Republican is 0.04. Collins is the nominee. Kalshi has him near 6%, and the October AJC/UGA poll is Ossoff 48, Collins 40. The model's 0.45 is the 2024 presidential result.
+- Michigan governor Republican is 0.061. James is the nominee. Kalshi has him near 8%. Cook rates the race Leans Democratic.
+- Anthropic IPO before 2027 is 0.935. The S-1 was filed October 26, Nasdaq ticker ANT, price range blank. Reported debut talk is the week of November 16. The no-IPO-by-end-2027 leg is 0.025.
+- Anthropic at $1.8T or more on IPO day is 0.68, on about $8,900. The May 2026 round was about $965B, and reported deal talk is $1.5–2T. The model's $183B figure is older.
+- The OpenAI recorder market is 0.34. YES needs a definitive allegation that Alfozan acted for the Saudi government. The October 19 memo says the link appears to be support, and the charge is interception, not agency.
+- Russian diesel imported by October 31 is 0.075. General License 135 is already the premise. Agioi Fanendes loaded October 22 and is reported due November 7 to 10. The book is about $9,800.
+
+Other prices checked against a print:
+
+- Nebraska Senate Republican is 0.725. Osborn is running. Kalshi has Ricketts near 74%, and the polls are a near-tie.
+- Ohio Senate Republican is 0.315. Brown is the nominee. Kalshi has Husted near 32%. Tennessee governor Republican at 0.941 was left as a skip and matches the round-3 check.
+- US–Iran through November 8 is 0.645. YES fails only if a US air or missile strike hits Iranian land. A ceasefire document is a different question. No strike dated after this market opened on October 14 turned up. October 25 reporting describes plans, and the window runs through November 8.
+- A Houthi–Saudi 14-day quiet by October 31 is 0.053. Intercepted missiles and debris do not count. The price already treats the quiet period as missed, and the gap is inside 10 cents.
+- Ethereum at $2,200 in October is 0.425. The October low on these sources is about $2,293, and spot is about $2,310.
+- WTI at $125 in November is 0.055, with spot about $102. The week-of-October-26 $105 and $95 books are below the gate.
+- 1W above $40M is 0.365 and above $20M is 0.69. The last official print is $6,082,668 on October 21. The books are about $3,300 and $12,000. Same gap as round 2. Not a fill.
+- Banxico unchanged is 0.88, next to the round-2 cut at 0.115.
+
+The below gate again caught the November stock barriers, with spreads of 0.74 to 0.85. The liquid election names match Kalshi.
+
+Round 5 is drawn from what remained: 518 names, seed 20261030, split 20 primary / 15 thin / 15 below.
