@@ -80,6 +80,77 @@
       "below": 49
     },
     "picked": 50,
-    "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions"
+    "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions",
+    "screened_at": "2026-10-26T22:06:29.354357+00:00",
+    "verdicts": {
+      "skip": 36,
+      "watch": 11,
+      "investigate": 3
+    },
+    "tokens_reported": {
+      "11": {
+        "total": 9749,
+        "input": 1757,
+        "output": 550,
+        "reasoning": 530,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "12": {
+        "total": 14527,
+        "input": 1784,
+        "output": 647,
+        "reasoning": 5184,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "13": {
+        "total": 11395,
+        "input": 1882,
+        "output": 586,
+        "reasoning": 2015,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "14": {
+        "total": 12234,
+        "input": 1895,
+        "output": 603,
+        "reasoning": 2824,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      },
+      "15": {
+        "total": 16264,
+        "input": 1901,
+        "output": 501,
+        "reasoning": 6950,
+        "cache": {
+          "write": 0,
+          "read": 6912
+        }
+      }
+    },
+    "quota": "No refusal through batch 15. The stop printed after batch 11 matched the digits inside id 5784291. That answer was ten valid skips."
+  },
+  "round4": {
+    "seed": 20261029,
+    "eligible": 568,
+    "eligible_by_bucket": {
+      "primary": 396,
+      "thin": 140,
+      "below": 32
+    },
+    "picked": 50,
+    "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions",
+    "split": "20 primary / 15 thin / 15 below"
   }
 }

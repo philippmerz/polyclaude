@@ -54,3 +54,31 @@ Anthropic's October 12 safeguards post still lists Fable 5 and 5.1 as the genera
 The Ballon d'Or rank contracts were live during the London ceremony. Places 11 through 30 were out. The top ten were named and not ordered.
 
 Round 3 is drawn from what remained: 629 names, seed 20261028, the same 20/15/15 split, with matchups, spreads, scorelines, chart bins, and post-count bins removed before the draw.
+
+
+## Round 3
+
+50 more names, seed 20261028. Kimi returned 36 skip, 11 watch, and 3 investigate. The API did not refuse. The stop printed after batch 11 matched the digits inside id 5784291. That answer was ten valid skips.
+
+No trade.
+
+The three investigate calls are below-gate books. A November META low of $540, a COIN low of $135, and an AAPL high of $376 are quoted near one half, with spreads of 0.73 to 0.84 and books of $15 to $40. The scanner had already dropped them.
+
+Prices the model skipped because its memory stops earlier:
+
+- December Fed +25bp is 0.745. The target range is 3.75–4.00% after the September hike, and October is priced as a hold. Morningstar puts a December quarter-point hike near 75%. On the Sep–Dec ladder, Hike–Pause–Hike is 0.735 and Hike–Hike–Hike is 0.018. The Other leg is 0.0275, with a bid of 0.008 and an ask of 0.047. The held December position is a different contract.
+- Tennessee governor Democrat is 0.057. Blackburn leads Green. Kalshi has Blackburn near 92%, and the candidate contract near 94%. Spry’s October 10–16 poll is about +12, with Hatley near 12%. Cook rates the race Safe Republican.
+- Bitcoin at $90,000 by December 31 is 0.415. Spot is about $80,000. The window opens February 6, and the October 2 high was about $87,200. That is about 12% with 66 days left.
+- The 30-year yield under 4.90% before 2027 is 0.12. The window opens September 2, and the October 26 par yield is 5.31%. February’s 4.64% print is outside the window. The model’s “historically near 4.90%” is the stale prior.
+- Selic unchanged in November is 0.64, on about $679. The rate is 13.75%. Pre-election Focus looked for a November cut, and ASA’s October 26 note also calls one November cut, then a pause.
+- Lake Powell’s 3,500–3,510 ft minimum is 0.105. USBR on October 25 is 3,527.51. The low since the market opened is about 3,516.6 on September 15. The September most-probable study has December 31 at 3,513.51, above the band. The book is about $6,300.
+- Gold at $3,900 in October is 0.225. The October low on these sources is about $3,975, and spot is about $4,015. The spread is 0.07 and the book is about $3,000.
+- GOOGL at $305 in the week of October 26 is 0.485. The October 26 low is about $316.60, about 3.7% above the strike, with the week still open. The spread is 0.07.
+- PHP2Shell on the KEV catalog by October 31 is 0.62. Writeups through October 25–26 still leave both CVEs off the catalog. CISA’s October 21 alert said it had not observed exploitation. Attempts are being reported. The spread is 0.12 and the book is about $770.
+- Anthropic at a $2.5T high by December 31 is 0.30. The S-1 is public, and reported deal talk is $1.5–2T. The model’s “far below $2.5T” memory is the May round at $965B. The $2.0–2.25T IPO-day bracket at 0.222 sits beside a reported mode near $1.75–2T.
+
+T1 is 2–1 in the Swiss stage and still alive, so Worlds at 0.155 is an open tournament. A Trump–Putin–Xi meeting at APEC on November 18–19 has been proposed and not agreed. STRC trades about $99.20. Its January print above $100 came before this market opened on June 19.
+
+The below gate caught the untradeable stock barriers. The liquid names that were checked sit on the futures ladder, the candidate markets, or a public print.
+
+Round 4 is drawn from what remained: 568 names, seed 20261029, the same 20/15/15 split.
