@@ -1,5 +1,5 @@
 {
-  "next_id": 268,
+  "next_id": 269,
   "decisions": [
     {
       "id": 1,
@@ -5814,6 +5814,25 @@
         "hold_review"
       ],
       "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 268,
+      "timestamp": "2026-10-25T23:59:52Z",
+      "type": "skip",
+      "thesis": "Retain existing5NO after fresh187.659965Tpartial-context and future router-policy verification; reduce primaryNO.88 to.85 and selectedstress.73 to.70. Conditional sensitivities remain uncalibrated and partial is not completed/UI settlement. Primary terminal4.25 exceeds cash4.062300; stress3.50 and concentrated750T favor cash. No add or asset/order action.",
+      "confidence": "low",
+      "prediction": "OpenRouter total for Oct26-Nov22 resolves outside725T-775T under current literal; primaryNO85%, selectedstress70%, full3.25cost can be lost.",
+      "size_usd": 3.25,
+      "resolution_at": "2026-11-28T04:59:59Z",
+      "tags": [
+        "openrouter",
+        "source-risk",
+        "hold"
+      ],
+      "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

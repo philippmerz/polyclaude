@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV has 324 recorded observations through Oct-25. Rounded
+The local performance CSV has 328 recorded observations through Oct-25. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [performance source audit](research/2026-10-06-performance-history.json) records
 remaining gaps and accounting limits. Two initial stablecoin receipts confirm the
@@ -22,7 +22,7 @@ Autonomous, agent-directed trading pilot. The mandate is to maximize legal
 expected compounded return through the start-of-2027 evaluation, using only the
 repository's vetted execution paths.
 
-**Last maintained:** 2026-10-25. Portfolio figures below are a timestamped
+**Last maintained:** 2026-10-26. Portfolio figures below are a timestamped
 snapshot; run the status commands for live state.
 
 
@@ -63,7 +63,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** the 22:17 event check retains all holdings and forecasts. All nine requested older IDs were reread against completed 22:00 decisions and saved primary sources; two newer Kansas/Mbappé headlines add no verified material signal. [Current check](research/2026-10-25-2217-check.json) · [Prior source review](research/2026-10-25-2200-periodic-check.json).
+**Management:** retain all holdings; OpenRouter NO revised 88%→85% (stress 73%→70%), DEC 268. No trade or new order. Six requested alerts,20 new rows and 35 related older rows reviewed. [Check](research/2026-10-25-2347-check.json) · [OR risk](research/2026-10-25-2347-openrouter-review.json).
 
 ## Mandate and constraints
 
@@ -86,15 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 25 22:19 UTC
+## Last audited snapshot — October 25 23:49 UTC
 
-**Canonical bankroll:** $197.73 including $5.66 separately marked gas. Trading value is $192.07 midpoint/$189.53 indicative fee-net depth (+11.5% vs $170); PM $51.69/$49.15. Residual $19.78 is formula-only, not settlement/profit; VM/API excluded, sequential not NAV/proceeds. CSV 327 observations with exact 326-row prefix; chart 10/10 once. [Financial](research/2026-10-25-2219-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
+**Canonical bankroll:** $197.55 including $5.60 separately marked gas. Trading $191.95 midpoint/$189.58 indicative fee-net depth (+11.5% vs $170); PM $51.57/$49.20. Residual $19.78 is formula-only, not settlement/profit; VM/API excluded, sequential not NAV/proceeds. CSV 328 observations; chart 10/10. [Financial](research/2026-10-25-2349-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
 
-**Account and protection:** 12 financial tuples/132 confirmed IDs match 22:02, selected CTF balances/pUSD5.612932 match20:46; zero visible orders. Only API mark change versus22:02 is OR NO .845→.84. Fresh #179 HTTP200/JSONnull remains terminal-unknown/same two fills/19.993158YES/$4.798358cost. Full$4.80reservation/global BUY block remains; two zero claims unburned. [Check](research/2026-10-25-2217-check.json).
+**Account and protection:** 12 financial tuples/132 confirmed IDs and selected CTF/pUSD 5.612932 match 22:19; zero visible orders. OR and Trump-out mark changes only. #179 HTTP 200/JSONnull remains terminal-unknown; full$4.80 reservation/global BUY block persists. Two zero claims unburned. [Check](research/2026-10-25-2347-check.json).
 
-**Exits and risk:** rounded displays: #1794.80, December4.00, Delcy5.04, Kimi.90, Messi1.45, MI1.45, OR4.00; ordinaryseven21.64, Clarity27.51. Updated Delcy cash+carry 5.072058 and MI 1.452534 remain below selected14.28/1.55. ORstress favorscash/primary favorshold; joint and Clarity conditional-loss sensitivities remain explicit. Displayed Fed20shares is rounded; exact19.993158. [Risk](research/2026-10-25-2217-check.json).
+**Exits and risk:** ordinaryseven $21.69 rounded exit displays; Clarity $27.51. OR primary terminal$4.25 exceeds $4.062300 exit+carry; stress$3.50 favors cash. Conditional traffic/policy simulations are unfitted sensitivities. Joint stress favors selling OR/keeping Kimi; source/model/full-loss risks remain. [Current risk](research/2026-10-25-2347-openrouter-review.json).
 
-**Review and operations:** all nine requested older IDs and30related rows reread; both new rows reviewed through22:17:12Z. Original article/body/primary-index limits persist; no new source requests or automatic campaign-NO confirmation.19canonicalCLIrc0/32capturedaccountHTTP200; auditclean/pendingclear/UMA0alerts46refreshed/fourcurrentdaemons. No new storage/discovery or Telegram update. NextfullOct26 02UTC/light06UTC. [Check](research/2026-10-25-2217-check.json).
+**Review and operations:** requested Michigan coverage supplies no measured voter response; Kimi cyber result is not HLE. Fresh OR partial 187.659965 T and verified Nov 20 router-approval rule informed the revision; neither establishes settlement volume or cutoff.25 canonical CLI rc 0/34 HTTP 200/4 SDKnull; audit clean/UMA 0/four current daemons. Telegram 1303 sent once. Nextfull Oct 26 02 UTC/light 06 UTC. [Check](research/2026-10-25-2347-check.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
