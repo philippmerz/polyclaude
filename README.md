@@ -5,7 +5,7 @@
 - [Separate crypto wallet on DeBank](https://debank.com/profile/0x83dADaC202cd1276E985703f90d39EE31F3D3eE6)
 - [Live performance chart](https://philippmerz.github.io/polyclaude/) — [CSV and methodology](docs/README.md).
 
-The local performance CSV has 333 recorded observations through Oct-26. Rounded
+The local performance CSV has 334 recorded observations through Oct-26. Rounded
 reconstructions are labeled; unsupported historical values stay blank. The
 [performance source audit](research/2026-10-06-performance-history.json) records
 remaining gaps and accounting limits. Two initial stablecoin receipts confirm the
@@ -63,7 +63,7 @@ Writing default for replies, handoffs and maintained documents:
 
 **Current allocation:** Delcy (#300) holds 28 YES/$5.04; October Fed no dissent (#179) holds 19.993158 YES/$4.798358 after two confirmed maker fills near 24¢; December Fed (#511) holds 20 YES/$3.80. pUSD is $5.612932; no visible open orders. The exact 179 order still returns JSON `null`, so its terminal state is unknown; keep the full $4.80 reservation and global BUY block. [Fill proof](research/2026-10-22-1208-fill-reconciliation.json) · [Latest order status](notes/resting_orders.md).
 
-**Management:** Retain holdings; no trade or forecast change. Three requested political alerts reviewed against current exposure, source lineage and literal rules. Marist is an already-modelled poll; campaign effects remain uncertain. [Check](research/2026-10-26-0554-check.json).
+**Management:** Retain holdings; no trade or forecast change. Four requested alerts reviewed. Fresh primary AA separates Kimi HLE 52.456% from its composite 55.087; political article access and event-date gaps remain explicit. [Check](research/2026-10-26-0726-check.json).
 
 ## Mandate and constraints
 
@@ -86,15 +86,15 @@ XYZ `xyz:COPPER` listings. Copper remains a [manual candidate](notes/longterm_wa
 recurring carry, the January horizon and route/eligibility requirements do not
 establish an allocation. No position or new watcher was added.
 
-## Last audited snapshot — October 26 05:56 UTC
+## Last audited snapshot — October 26 07:28 UTC
 
-**Bankroll:** $197.39 includes $5.62 separately marked gas. Trading value is $191.77 midpoint / $186.73 indicative fee-net depth (+9.8% depth return vs $170); PM is $51.39 / $46.35. Residual $19.79 is arithmetic, not verified settlement or profit. VM/API excluded; sequential components are not NAV or guaranteed proceeds. CSV has 333 rows; chart 10/10. [Snapshot](research/2026-10-26-0556-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
+**Bankroll:** $197.68 includes $5.58 separately marked gas. Trading value is $192.10 midpoint / $189.28 indicative fee-net depth (+11.3% depth return vs $170); PM is $51.72 / $48.90. Residual $19.79 is arithmetic, not verified settlement or profit. VM/API excluded; sequential components are not NAV or guaranteed proceeds. CSV has 334 rows; chart 10/10. [Snapshot](research/2026-10-26-0728-financial-snapshot.json) · [Funding audit](research/2026-10-25-initial-funding-audit.json).
 
-**Account and protection:** 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match 04:24; zero visible orders. Marks changed; quantities did not. #179 HTTP 200/null remains terminal-unknown. Keep the full $4.80 reservation and global BUY block. Two zero claims unburned; six controls unchanged. [Check](research/2026-10-26-0554-check.json).
+**Account and protection:** 12 financial tuples, 132 trade IDs, selected CTFs and pUSD 5.612932 match 05:56; zero visible orders. Marks changed; quantities did not. #179 HTTP 200/null remains terminal-unknown. Keep the full $4.80 reservation and global BUY block. Two zero claims unburned; six controls unchanged. [Check](research/2026-10-26-0726-check.json).
 
-**Exits and risk:** Ordinary exits total $22.30; Clarity whole-pair exit $24.06, cash plus variable carry $24.213969. Its conditional $29-only failure break-even is 16.50%, a sensitivity, not a probability or unconditional floor. Michigan primary $2.05 > cash $1.552619 > selected $1.55; OR $4.25 > cash $3.811424 > stress $3.50. Source, model, joint and full-loss cases remain explicit. [Check](research/2026-10-26-0554-check.json).
+**Exits and risk:** Ordinary exits total $22.22; Clarity whole-pair exit $26.68, cash plus variable carry $26.850735. Its conditional $29-only failure break-even is 7.411%, a sensitivity, not a probability or unconditional floor. Michigan primary $2.05 > cash $1.602704 > selected $1.55; OR $4.25 > cash $3.961875 > stress $3.50. Source, model, joint and full-loss cases remain explicit. [Check](research/2026-10-26-0726-check.json).
 
-**Review and operations:** Nine new rows, five requested rows across three IDs and 108 selected older rows reviewed; omissions and exact-body/access gaps explicit. Fresh MI/Delcy rules and held identities match; no new qualifying source finding. Audit clean, UMA zero alerts, four current daemons. This run covers the 06 UTC light boundary; next light 10 UTC/full 14 UTC. No discovery/storage repeat or Telegram. [Check](research/2026-10-26-0554-check.json) · [Discovery](research/2026-10-26-0200-discovery.json).
+**Review and operations:** Thirteen new rows, four requested IDs and 143 selected older rows reviewed; capped omissions and unavailable publisher bodies explicit. Fresh Kimi literal/held identity match; named HLE API 403 is not absence proof. Audit clean, UMA zero alerts, four current daemons. Next light 10 UTC/full 14 UTC. No discovery/storage repeat or Telegram. [Check](research/2026-10-26-0726-check.json) · [Discovery](research/2026-10-26-0200-discovery.json).
 
 ## On-demand Base stock-token review — Oct 9 11:10 UTC
 
