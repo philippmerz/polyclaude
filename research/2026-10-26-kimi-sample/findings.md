@@ -346,3 +346,26 @@ The Israeli justice headline is the contract's "No Next Minister by Feb 28" buck
 The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
 
 Round 15 is drawn from what remained: 176 names, seed 20261109, split 20 primary / 0 thin / 0 below. Eligible before the take was 176 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 15
+
+20 names, seed 20261109. Thin and below were empty, so the draw was 20 primary. Kimi returned 15 skip, 5 watch, and 0 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+No investigate call. The prices that looked off match Kalshi or an open window.
+
+- Nevada governor Republican is 0.315. Kalshi has Joe Lombardo near 31 percent.
+- Alaska governor Jonathan Kreiss-Tomkins is 0.879. Kalshi has him near 87 percent, and Polymarket is near 88 percent.
+- NJ-02 Democrat is 0.245. Kalshi has Zack Mullock near 24 percent, and Polymarket is near 25 percent.
+- Mojtaba Khamenei as head of state at year end is 0.8635. Reports say he has been supreme leader since March, after Ali Khamenei was killed on February 28. He has not appeared in public. The contract pays on who holds the office on December 31. Kimi's question about Ali's health is stale.
+- Exactly three Fed hikes in 2026 is 0.04. September 16 was one 25 basis point hike. October 27-28 and December 8-9 are still ahead. Exactly three needs two more steps.
+- XRP at $1.00 in October is 0.026. Public October lows are near $1.25 to $1.29. The window runs through October 31.
+- Bitcoin at $95,000 by December 31 is 0.255. The market was created June 8. Spot is near $80,000, and recent public highs are under $87,000. The window runs through December 31.
+
+Marine Le Pen at 0.4365 is an April 2027 forecast on a large book. No hard conflicting fact was checked.
+
+The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
+
+Round 16 is drawn from what remained: 156 names, seed 20261110, split 20 primary / 0 thin / 0 below. Eligible before the take was 156 primary, 0 thin, and 0 below. The draw did not backfill.
