@@ -59,12 +59,22 @@
    "negativeRisk": false
   },
   {
+   "slug": "trump-out-as-president-before-2027",
+   "outcome": "No",
+   "size": 0.33,
+   "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
+   "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
+   "negativeRisk": false
+  },
+  {
    "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
    "outcome": "No",
    "size": 5,
    "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
    "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
-   "negativeRisk": true
+   "negativeRisk": true,
+   "deindexed": true,
+   "umaResolutionStatus": null
   },
   {
    "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",
@@ -72,15 +82,9 @@
    "size": 5,
    "conditionId": "0x2d7163f12f27b32d1e422b4c67aa21dee48a7e69c84b6c7b467c87ceba7a20d1",
    "asset": "69361310336830576230613545878669264146295166638950702624315653157292183550426",
-   "negativeRisk": true
-  },
-  {
-   "slug": "trump-out-as-president-before-2027",
-   "outcome": "No",
-   "size": 0.33,
-   "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
-   "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
-   "negativeRisk": false
+   "negativeRisk": true,
+   "deindexed": true,
+   "umaResolutionStatus": null
   },
   {
    "slug": "strait-of-hormuz-traffic-returns-to-normal-by-august-31-20260702154212320",
