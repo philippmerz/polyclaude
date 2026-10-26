@@ -1,6 +1,6 @@
 # Opportunity discovery and evaluation
 
-Use this with [the entry doctrine](00_philosophy.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
+Use this with [the entry pipeline](../AGENTS.md#4-entry-pipeline-every-gate-is-an-ev-term-in-application-order).
 The October21 operator direction ended the broad review after 422 completed
 unique `valued` cases; unfinished case 529 is excluded. New investment may be
 selected autonomously for EV from the completed valued universe after a primary
@@ -147,7 +147,6 @@ return into January, actual reachable size, correlation and route risk. A future
 writer is worth building only when an accessible thesis survives its all-in cost;
 adding a venue or a leverage product is not itself an edge. Keep current manual
 candidates and route blockers in [the project watchlist](../notes/longterm_watchlist.md).
-Retired personal-brokerage research stays retired.
 
 ## Measure decisions, not reading volume
 

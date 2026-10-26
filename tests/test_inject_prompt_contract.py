@@ -43,7 +43,7 @@ exit "${FAKE_QUEUE_RC:-0}"
     usage_probe.write_text(
         """#!/usr/bin/env bash
 set -euo pipefail
-printf '%s\n' 'Codex quota headroom:' '  codex: 32% used / 68% headroom (1w, resets later)'
+printf '%s\n' 'Model usage headroom:' '  kimi-for-coding: no provider quota exposed'
 """
     )
     usage_probe.chmod(0o755)
@@ -101,7 +101,7 @@ def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     assert "until the user manually cancels it" not in payload
     assert "durable ROI-goal" not in payload
     assert "RESOURCE SNAPSHOT" in payload
-    assert "codex: 32% used / 68% headroom" in payload
+    assert "kimi-for-coding: no provider quota exposed" in payload
     assert "RESOURCE CONTRACT" in payload
     assert "check_usage.sh --brief" in payload
     assert "do not inject /usage" in payload
@@ -112,7 +112,7 @@ def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     assert entry["actual_rc"] == 0
     assert entry["bounded_contract"] is True
     assert "Cron tick" not in log_path.read_text(encoding="utf8")
-    assert "codex: 32% used" not in log_path.read_text(encoding="utf8")
+    assert "no provider quota exposed" not in log_path.read_text(encoding="utf8")
 
 
 def test_daily_checkin_includes_direct_quota_preflight() -> None:
@@ -186,7 +186,7 @@ def test_retired_sunday_seed_never_probes_queues_or_logs(tmp_path: Path) -> None
     )
 
     assert result.returncode == 0, result.stderr
-    assert "Retired stock/brokerage review: no work queued." in result.stdout
+    assert "Retired scheduled seed: no work queued." in result.stdout
     assert not captured.exists()
     assert not probe_marker.exists()
     assert not (tmp_path / "notes" / "inject_log.md").exists()
@@ -233,7 +233,7 @@ def test_attempt_log_is_metadata_only_and_tracks_exact_queued_utf8_payload(
     assert record_bytes.count(b"\n") == 1
     assert b"touch " not in record_bytes
     assert b"Periodic check" not in record_bytes
-    assert b"codex: 32% used" not in record_bytes
+    assert b"no provider quota exposed" not in record_bytes
     entry = json.loads(record_bytes)
     _assert_payload_binding(entry, payload)
     assert entry["status"] == "QUEUED"

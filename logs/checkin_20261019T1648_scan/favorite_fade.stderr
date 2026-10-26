@@ -1,3 +1,0 @@
-# fetched 1000 active markets
-# 40 candidates in rough zone; walking live books
-SCAN_COVERAGE {"book_batch_error": null, "candidate_rows_emitted": 27, "market_fetch": {"command_failed": false, "complete": false, "failures": [], "max_pages": 10, "page_size": 100, "pages_attempted": 10, "pages_succeeded": 10, "stop_reason": "max_pages"}, "max_walks": 40, "missing_or_invalid_favorite_books": 0, "rough_survivors_before_book_cap": 58, "selected_for_book_walk": 40, "valid_books_outside_favorite_price_profile": 13, "valid_favorite_books": 40, "walk_cap_omissions": 18}

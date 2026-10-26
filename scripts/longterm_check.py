@@ -2,9 +2,8 @@
 """Bounded thesis review for project-accessible on-chain instruments.
 
 Companion to catalyst_check.py for continuous crypto markets and other named
-on-chain instruments. Off-chain stock and personal-brokerage research is retired.
-Research must fit the less-than-one-year project horizon and January 2027
-assessment. No report or price trigger authorizes a trade.
+on-chain instruments. Research must fit the less-than-one-year project horizon
+and January 2027 assessment. No report or price trigger authorizes a trade.
 
 Examples:
     python scripts/longterm_check.py "Uniswap (UNI)" crypto
@@ -36,8 +35,6 @@ Asset type: {asset_type}
 Analysis horizon: {horizon_years} years from {today_iso}
 Evaluation: start of January 2027; project positions must fit a less-than-one-year holding horizon.
 
-Off-chain stocks and personal-brokerage research are outside this project. Do
-not suggest an IBKR/CEX/KYC route, a multi-year allocation, or a recurring review.
 A tokenized instrument requires its own identity, legal-access and executable
 route evidence; an underlying stock quote is not its token price or liquidity.
 

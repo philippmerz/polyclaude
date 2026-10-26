@@ -30,7 +30,7 @@ if [[ ! -x "${RUNNER}" ]]; then
 fi
 
 # Block every automated queue before launch. The private runtime opens this
-# gate only after Codex records a real terminal-entered UserMessage.
+# gate only after the agent records a real terminal-entered user message.
 if ! "${RUNNER}" prepare-blank --workdir "${POLYCLAUDE_DIR}"; then
     echo "ERROR: could not arm blank-session prompt gate" >&2
     exit 78
@@ -41,7 +41,8 @@ if ! timeout 15 "${RUNNER}" status >/dev/null; then
     exit 78
 fi
 
-# Codex keeps its own session history; do not duplicate the terminal transcript.
+# The OpenCode session store keeps the operator's history; do not duplicate
+# the terminal transcript.
 printf -v CHILD_CMD 'exec %q interactive --workdir %q' \
     "${RUNNER}" "${POLYCLAUDE_DIR}"
 
@@ -59,7 +60,7 @@ for _ in {1..120}; do
     sleep 0.25
 done
 if [[ "${operator_live}" != "1" ]]; then
-    echo "ERROR: blank operator launched but no Codex process became ready" >&2
+    echo "ERROR: blank operator launched but no operator agent process became ready" >&2
     tmux kill-session -t "=${SESSION_NAME}" 2>/dev/null || true
     exit 70
 fi

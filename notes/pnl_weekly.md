@@ -1,6 +1,6 @@
 # Polyclaude — Weekly P&L and Decision Log
 
-> Append-only. Most recent at bottom. Each entry is a verbose-decision-log per the spec in `strategy/00_philosophy.md`: P&L + position table; every market considered (incl. rejections); reasoning trail per active position; mistakes/mis-calibrations; next-week outlook; sources.
+> Append-only. Most recent at bottom. Each entry is a verbose-decision-log per the spec in `AGENTS.md`: P&L + position table; every market considered (incl. rejections); reasoning trail per active position; mistakes/mis-calibrations; next-week outlook; sources.
 
 ---
 

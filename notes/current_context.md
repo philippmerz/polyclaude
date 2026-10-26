@@ -2,18 +2,16 @@
 reviewed_at: "2026-10-26T10:45:56Z"
 valid_until: "2026-10-26T14:00:00Z"
 source_hashes:
-  MANDATE.md: 63f3022c476bbf239f57c0628c8b57366e0949962a661175b1c9ce1ab478fcd7
-  README.md: 1f38c2b413f7f1b6feb1ebc3f6c1a8666cff8d8642e3f33e3a7586614eee6464
-  strategy/00_philosophy.md: d2c19c8ebfcf1c33e9105c1de1eab43d8ff57390c2d45a9c970b96bbc429e8ba
-  strategy/01_lessons.md: df5832219ac01546e43351418f6ac5c076d1b32432a0ab98ee255d65ea29b897
-  strategy/02_operations.md: 89b59fee0dfe6d0808fd13a89b56f7360ae9c261d75b9b7aa4f60a888d1e2010
-  strategy/03_opportunity_method.md: db69ce901b6f2025bde8000defbde72f7793322c056982b0e56b44d70dcd7425
-  scripts/README.md: 18ee2f7ce1dfe576b8cb445993c3d77185f1a3ba30b1f24167440684d74fcc9c
+  README.md: 889fc30cf12749709c442e5396af19aa07b0aef707e0c9ccbb771543e13b4ed0
+  strategy/01_lessons.md: 0a86e61f94ed6978cbab5dcfd9a9143406c4041531d506abf5a4f178cae4b519
+  strategy/02_operations.md: 99d89808fe29311db2c00c0e33dbcaa5cda477987c51f9cb34fd71c239b32425
+  strategy/03_opportunity_method.md: 38aa0c0e23d78e00f58ae9f059b1d8f8235ca958190b5bcaa7c86be152d6ee2a
+  scripts/README.md: 6c73a6b2ce6dad9650e58dd0b8502c3685e2d87af67c0163dd59f26884cec6fa
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: 16ea0d8cc5f38942bf68004511cf490e3827f44e040eef7c975b43907f32b1fc
   notes/resting_orders.md: 1fb29fe0ea59119ded142f6ebd084542788c690ef5aede389a2d0bccddf239f9
   notes/journal.md: 43478956ba4a91a501eee7e347d0f1da9311d34c93fb6028b3c5a4a5443d515b
-  notes/longterm_watchlist.md: 0ead45f3047cf6be2f5fadce1c6870207ef88c3ba9428d5ff4686f736f88c881
+  notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
 

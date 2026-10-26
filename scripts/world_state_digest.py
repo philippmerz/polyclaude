@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """On-demand primary-source digest for project-relevant on-chain opportunities.
 
-The old Sunday stock/brokerage rotation is retired. Select source domains only
-for a held thesis, material trigger or concrete opportunity the project can
-lawfully access. This catalog includes macro/industry facts because they can
-inform Polymarket, crypto and named on-chain exposures, not a stock watchlist.
+Select source domains only for a held thesis, material trigger or concrete
+opportunity the project can lawfully access. This catalog includes
+macro/industry facts because they can inform Polymarket, crypto and named
+on-chain exposures.
 
 Example:
     python scripts/world_state_digest.py --domain crypto-on-chain
@@ -65,9 +65,6 @@ Source catalog:
 
 Scope: held-position catalysts and lawfully accessible on-chain opportunities,
 with less-than-one-year holds and evaluation at the start of January 2027.
-Off-chain stock picking, personal-brokerage watchlists/alerts and a recurring
-Sunday domain rotation are retired. Do not propose restoring them or create a
-catch-up task from historical research timestamps.
 
 Read current primary sources. Date facts and distinguish announcements,
 implemented state and economic results. Independently verify any factual
@@ -78,8 +75,7 @@ Infer candidate themes only when facts support an edge in a named instrument
 that could be accessed on-chain. For each, identify the exact instrument,
 chain/venue and access evidence, holder value-accrual mechanism, catalyst
 before evaluation, current quote/depth and cost gaps, downside and model
-uncertainty. An industry trend or cheap off-chain stock is not a project
-candidate. Unknown route/access or executable economics must remain unverified;
+uncertainty. Unknown route/access or executable economics must remain unverified;
 no instrument may be recommended for execution from this report alone.
 
 Output only:
@@ -90,7 +86,7 @@ Group dated facts by domain, with primary-source links.
 ## PROJECT CANDIDATE THEMES
 For each: underlying facts; named on-chain instrument/venue; causal mechanism;
 catalyst/timeframe; net-cost and access evidence/gaps; confidence HIGH/MED/LOW.
-A null result is valid. Do not create off-chain stock or brokerage candidates.
+A null result is valid.
 ## BOUNDED NEXT STEPS
 Name only justified, concrete follow-up for the held thesis or accessible
 on-chain candidate. longterm_check.py accepts crypto/tokenized-equity/onchain

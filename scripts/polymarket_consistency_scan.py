@@ -31,7 +31,7 @@ scanner runs in two passes:
 All live observations are sequential and non-atomic. They are provisional
 revalidation prompts, never executable/REAL claims or instructions to trade.
 
-Output: logs/polymarket_consistency_<ts>.md + logs/polymarket_consistency_latest.json.
+Output: logs/polymarket_consistency_latest.json.
 """
 
 from __future__ import annotations
@@ -1699,117 +1699,11 @@ def main() -> int:
     # Output
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
-    out_md = OUT_DIR / f"polymarket_consistency_{ts}.md"
     out_json = OUT_DIR / "polymarket_consistency_latest.json"
 
     structural = [c for c in candidates if c["structural_free_arb"]]
     directional = [c for c in candidates if not c["structural_free_arb"]]
     provisional_hits = _provisional_live_hits(candidates)
-
-    with out_md.open("w") as f:
-        f.write(f"# Polymarket consistency scan — {ts} UTC\n\n")
-        f.write(f"Coverage: **{coverage_state}**. This is a volume-ranked ROI "
-                "slice unless the keyset cursor was exhausted.\n\n")
-        f.write(f"- filters: `{json.dumps(coverage['filters'], sort_keys=True)}`\n")
-        f.write(
-            f"- live quote selection: `{coverage.get('live_selection_method')}`; "
-            f"requested priority/exploration groups: "
-            f"{coverage.get('live_selection_lane_groups', {})}; "
-            f"legs: {coverage.get('live_selection_lane_legs', {})}; "
-            f"attempted groups/legs: {coverage.get('live_groups_attempted', 0)}/"
-            f"{coverage.get('live_legs_attempted', 0)}; "
-            f"prior exact-history records: {coverage.get('prior_quote_history_records', 0)}\n"
-        )
-        for warning in coverage.get("prior_quote_history_warnings", []):
-            f.write(f"- **History warning:** {warning}\n")
-        f.write(f"- {coverage['pages_fetched']} pages / "
-                f"{coverage['raw_response_bytes'] / (1024 * 1024):.1f} MiB streamed; "
-                f"projected peak memory "
-                f"{coverage['projected_peak_memory_bytes'] / (1024 * 1024):.1f} MiB\n")
-        f.write(f"- cursor_exhausted={str(coverage['cursor_exhausted']).lower()}, "
-                f"stop_reason={coverage['stop_reason'] or 'none'}, "
-                f"invalid_neg_risk_events={coverage['invalid_neg_risk_events']}\n\n")
-        if not coverage["analysis_complete"]:
-            f.write("> **Coverage is incomplete. A zero below means no hit in the "
-                    "scanned slice; it is not a comprehensive exchange-wide zero.**\n\n")
-        f.write(f"Universe slice: {coverage['open_markets_scanned']} open markets "
-                f"scanned, {len(markets)} validated neg-risk markets retained, "
-                f"{len(groups)} neg-risk groups, "
-                f"{len(candidates)} midpoint-violations > {LOG_THRESHOLD_GROSS*100:.1f}%.\n\n")
-        f.write(f"- **{len(provisional_hits)} PROVISIONAL positive structural baskets "
-                "(sequential CLOB depth; revalidation required)**\n")
-        f.write(f"- {len(structural)} sum>1 (midpoint), {len(directional)} sum<1 "
-                "(midpoint, directional)\n\n")
-        f.write("> WARNING: gamma-api `outcomePrices` shows midpoints between stale stub bids "
-                "(often $0.01) and real asks. Most midpoint-only \"free arb\" signals evaporate "
-                "when orderbook asks are checked. Positive live-depth observations below are "
-                "sequential and non-atomic: independently refresh every leg before any decision; "
-                "this report is not an execution instruction.\n\n")
-
-        f.write("## PROVISIONAL structural baskets (revalidation required)\n\n")
-        f.write("Computed by walking CLOB asks for buy-all-NO of every member at "
-                "one common size no smaller than any validated leg minimum. "
-                "Reported economics are per basket unit; snapshots are sequential, "
-                "not atomic. Profit assumes exactly one YES wins.\n\n")
-        if provisional_hits:
-            f.write(f"| Live Edge | Mid Edge | YES-sum | Members | Capital | Liquidity | Title |\n")
-            f.write(f"|---:|---:|---:|---:|---:|---:|---|\n")
-            for c in provisional_hits[:30]:
-                f.write(f"| {c['live_net_edge_frac']*100:+.2f}% | {c['net_edge_frac']*100:+.2f}% | "
-                        f"{c['yes_sum']:.4f} | "
-                        f"{c['members']} | ${c['live_capital_per_unit']:.2f}/unit | "
-                        f"${c['liquidity']:,.0f} | "
-                        f"{c['title'][:60]} |\n")
-        else:
-            if coverage["analysis_complete"]:
-                f.write("No positive provisional basket in the complete declared scope; "
-                        "every logged structural group received a terminal quote result.\n")
-            else:
-                f.write("No positive provisional candidate in the scanned slice. Analysis is "
-                        "incomplete, so this is not a comprehensive zero.\n")
-
-        f.write("\n## Midpoint-only sum>1 candidates (likely stale orderbooks)\n\n")
-        f.write("Sorted by midpoint net edge. These are NOT executable; included for diagnostic only.\n\n")
-        f.write(f"| Mid Edge | Live Edge | YES-sum | Members | Liquidity | Title |\n")
-        f.write(f"|---:|---:|---:|---:|---:|---|\n")
-        for c in structural[:30]:
-            live_e = c.get("live_net_edge_frac")
-            live_str = (
-                f"{live_e*100:+.2f}%" if live_e is not None
-                else c.get("live_skipped")
-                or c.get("live_unquoted_reason", "—")
-            )
-            f.write(f"| {c['net_edge_frac']*100:+.2f}% | {live_str} | {c['yes_sum']:.4f} | "
-                    f"{c['members']} | "
-                    f"${c['liquidity']:,.0f} | "
-                    f"{c['title'][:60]} |\n")
-
-        f.write("\n## Midpoint-only sum<1 candidates (directional, missing-mass risk)\n\n")
-        f.write(f"| Mid Edge | YES-sum | Members | Liquidity | Title |\n")
-        f.write(f"|---:|---:|---:|---:|---|\n")
-        for c in directional[:15]:
-            f.write(f"| {c['net_edge_frac']*100:+.2f}% | {c['yes_sum']:.4f} | "
-                    f"{c['members']} | "
-                    f"${c['liquidity']:,.0f} | "
-                    f"{c['title'][:60]} |\n")
-
-        if provisional_hits:
-            f.write("\n## PROVISIONAL basket breakdown\n\n")
-            for c in provisional_hits[:8]:
-                f.write(f"### {c['title']}\n")
-                f.write(f"- members: {c['members']}, YES-sum (mid): {c['yes_sum']:.4f}\n")
-                f.write(f"- validated common quote size: {c['target_shares']:.4f} shares/leg; "
-                        f"snapshot_atomic={str(c['snapshot_atomic']).lower()}\n")
-                f.write(f"- live notional/unit: ${c['live_notional_per_unit']:.4f}, "
-                        f"all-in capital/unit: ${c['live_capital_per_unit']:.4f}, "
-                        f"gross ${c['live_gross_payout']:.4f}, fees ${c['live_fees']:.4f}, "
-                        f"**net ${c['live_net_per_unit']:.4f} ({c['live_net_edge_frac']*100:+.2f}%)**\n")
-                f.write("- live quotes (per-member NO ask, walking the validated "
-                        "common size):\n")
-                for q in c.get("live_quotes", []):
-                    f.write(f"  - {q['member'][:55]}: avg_ask={q['avg_ask']:.4f} "
-                            f"(best={q['best_ask']:.3f} sz={q['best_ask_sz']:.0f})\n")
-                f.write("\n")
 
     payload = {
         "generated_at": ts,
@@ -1824,7 +1718,6 @@ def main() -> int:
     }
     out_json.write_text(json.dumps(payload, indent=2, default=str))
 
-    print(f"\nwrote {out_md}")
     print(f"wrote {out_json}\n")
 
     # Stdout summary — sequential observations, never execution claims.
@@ -1866,8 +1759,9 @@ def main() -> int:
                 f"cap/unit ${c['live_capital_per_unit']:.2f}  net/unit ${c['live_net_per_unit']:.4f}\n"
                 f"  {c['title'][:80]}"
             )
-        lines.append(f"\nRefresh membership, resolution criteria, fees, and every leg at one "
-                     f"common size before recommending action. Full table: {out_md.name}")
+        lines.append("\nRefresh membership, resolution criteria, fees, and every leg at one "
+                     "common size before recommending action. Full table: "
+                     "logs/polymarket_consistency_latest.json")
         _telegram("\n".join(lines))
 
     return 0

@@ -14,47 +14,39 @@ from typing import Any
 
 HANDOFF = "notes/current_context.md"
 PUBLIC_DOCS = {
-    "MANDATE.md", "README.md", "docs/README.md", "scripts/README.md",
-    "strategy/00_philosophy.md", "strategy/01_lessons.md",
+    "README.md", "docs/README.md", "scripts/README.md",
+    "strategy/01_lessons.md",
     "strategy/02_operations.md", "strategy/03_opportunity_method.md",
     "strategy/archive/01_lessons_2026-10-12.md",
     "notes/backlog.md", "notes/longterm_watchlist.md",
     "notes/primary_sources.md", "notes/resting_orders.md", "notes/journal.md",
 }
 QUERY_DOCS = (
-    "strategy/00_philosophy.md", "strategy/01_lessons.md",
+    "strategy/01_lessons.md",
     "strategy/02_operations.md", "strategy/03_opportunity_method.md",
     "strategy/archive/01_lessons_2026-10-12.md",
 )
 SCOPES = {
     "portfolio": [
-        ("MANDATE.md", "Mandate and legal/horizon boundaries."),
-        ("strategy/00_philosophy.md", "Current objective, risk framework, and portfolio context."),
         ("strategy/01_lessons.md", "Read first for hard-won execution and evidence lessons."),
         ("strategy/02_operations.md", "Operational procedures and execution controls."),
-        ("README.md", "Dashboard is dated context; use live tools for current state."),
     ],
     "research": [
-        ("MANDATE.md", "Mandate and research boundaries."),
-        ("strategy/00_philosophy.md", "Current objective and portfolio context."),
         ("strategy/01_lessons.md", "Read first for evidence and calibration lessons."),
         ("strategy/03_opportunity_method.md", "Discovery, evaluation, and review method."),
         ("notes/primary_sources.md", "Source registry; verify current facts independently."),
         ("notes/longterm_watchlist.md", "Current on-chain candidate routing, not a buy list."),
     ],
     "engineering": [
-        ("MANDATE.md", "Project scope and boundaries."),
         ("strategy/01_lessons.md", "Read first for failure classes and test expectations."),
         ("strategy/02_operations.md", "Secrets, wallets, operations, and side-effect controls."),
         ("strategy/03_opportunity_method.md", "Scanner/evaluation boundaries when relevant."),
         ("scripts/README.md", "Tool call paths and current execution constraints."),
     ],
     "operations": [
-        ("MANDATE.md", "Mandate and legal boundaries."),
         ("strategy/01_lessons.md", "Read first for operational failure lessons."),
         ("strategy/02_operations.md", "Canonical operations procedures."),
         ("scripts/README.md", "Tool catalog and operational call paths."),
-        ("README.md", "Dated public dashboard; not live state."),
         ("notes/backlog.md", "Current bounded follow-ups and dated triggers."),
     ],
 }
@@ -316,9 +308,9 @@ def build_packet(root: str | Path, scope: str, *, now: str | None = None,
         "public_history_sections_included": [x["id"] for x in matched if x["historical"]],
         "snapshot_not_live": True,
         "current_state_loaded": False,
-        "mandatory_primary_reads": ["MANDATE.md", "README.md", "strategy/00_philosophy.md",
-                                    "strategy/01_lessons.md", "strategy/02_operations.md"],
-        "mandatory_primary_read_note": "For consequential work, the primary agent must read MANDATE.md, README.md, strategy/00_philosophy.md, strategy/01_lessons.md, and strategy/02_operations.md. This packet is task orientation, not authorization or a replacement for required reads, live checks, or execution gates.",
+        "mandatory_primary_reads": ["AGENTS.md", "strategy/01_lessons.md",
+                                    "strategy/02_operations.md"],
+        "mandatory_primary_read_note": "For consequential work, the primary agent must read AGENTS.md, strategy/01_lessons.md, and strategy/02_operations.md. This packet is task orientation, not authorization or a replacement for required reads, live checks, or execution gates.",
         "limitations": "Handoff freshness is its declared editorial validity only; no probability, quote, account-state, liquidity, or execution freshness is inferred.",
         "execution_ready": False,
     }

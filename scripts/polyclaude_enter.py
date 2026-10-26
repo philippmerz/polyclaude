@@ -4,7 +4,7 @@
 Wraps the multi-step workflow used for every Polymarket entry into one command:
 1. Fetch market via gamma-api → check umaResolutionStatus (skip if disputed/proposed)
 2. Run catalyst_check.py to get P(YES) estimate (with multiplicative breakdown
-   for conjunction questions per philosophy 00 update)
+   for conjunction questions per AGENTS.md Philosophy)
 3. Compute Kelly+ρ optimal size via per-position math (default half-Kelly,
    ρ=0.6 if cluster specified, ρ=0 if independent)
 4. Print decision: SIZE / DON'T_TAKE / NEED_REVIEW with reasoning
@@ -2879,7 +2879,7 @@ def main() -> int:
     print(f"  endDate: {end_iso}")
     print(f"  negRisk: {neg_risk}")
 
-    # Permanence-near-date trap warning (00_philosophy §4.4; warn, not block).
+    # Permanence-near-date trap warning (AGENTS.md Philosophy §4.4; warn, not block).
     # A NO fade on (permanence/finality qualifier) × (near-date deadline) × (active
     # dealmaking) is a UMA-LOOSE trap: an announcement triggers loose-YES faster than
     # a strict failure confirms. Lost twice — R-U (-$16.73), DEC-0038 (-$11.31). The
@@ -2899,7 +2899,7 @@ def main() -> int:
     _ql = question.lower()
     if (args.side == "NO" and _days is not None and _days <= 45
             and any(k in _ql for k in _perm_kw)):
-        print(f"\n!! PERMANENCE-NEAR-DATE TRAP PATTERN (00_philosophy §4.4): NO fade on a "
+        print(f"\n!! PERMANENCE-NEAR-DATE TRAP PATTERN (AGENTS.md Philosophy §4.4): NO fade on a "
               f"permanence/finality market resolving in {_days}d.")
         print(f"!! An ANNOUNCEMENT can trigger loose-YES before a strict failure confirms. "
               f"Lost here twice (R-U -$16.73, DEC-0038 -$11.31).")
@@ -2925,7 +2925,7 @@ def main() -> int:
             combined = held_cost + args.usd
             print(f"!! combined ticket after this buy: ${combined:.2f} "
                   f"= {combined / args.bankroll * 100:.1f}% of bankroll "
-                  f"(15% hard cap = ${args.bankroll * 0.15:.2f}, 00_philosophy §5 model-error guardrails)")
+                  f"(15% hard cap = ${args.bankroll * 0.15:.2f}, AGENTS.md Philosophy §5 model-error guardrails)")
         print(f"!! this is an ADD — confirm cluster caps + run the sizing as a "
               f"size_change decision, not a fresh entry.")
 
@@ -3154,7 +3154,7 @@ def main() -> int:
               f"genuinely high-confidence (mechanical resolution, tight catalyst_check band).")
 
         # FLIP-THE-KILL CHECK (2026-08-13). The rule has been doctrine since
-        # 2026-07-17 (00_philosophy §3) and was NEVER mechanised — and grading
+        # 2026-07-17 (AGENTS.md Philosophy §3) and was NEVER mechanised — and grading
         # the skip ledger today measured what that costs: 2 of 9 graded rows are
         # flip misses. On DC Studios and Lucasfilm I evaluated NO at 0.80,
         # correctly skipped it, and never ran the gate on YES at 0.59, which won

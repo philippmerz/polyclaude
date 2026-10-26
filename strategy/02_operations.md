@@ -5,10 +5,12 @@ Single canonical home for the project's operational infrastructure. Other docs r
 ## Operator session history
 
 `scripts/operator_start.sh` starts the private interactive runtime directly in
-tmux. Codex's native history is the session transcript. Operator directive
-2026-10-19: disable duplicate terminal recording and remove the old operator
-transcript files. Do not reintroduce `script`, `tee`, or tmux output capture for
-the interactive session, or create `logs/operator/` transcripts.
+tmux. The runtime is the OpenCode CLI running the kimi-for-coding model; its
+native session store (`~/.local/share/opencode/`) is the session transcript.
+Operator directive 2026-10-19: disable duplicate terminal recording and remove
+the old operator transcript files. Do not reintroduce `script`, `tee`, or tmux
+output capture for the interactive session, or create `logs/operator/`
+transcripts.
 
 ## Cron — autonomous check-in driver
 
@@ -18,12 +20,7 @@ the interactive session, or create `logs/operator/` transcripts.
 - **Logs:** `polyclaude/logs/cron/checkin_<UTC ts>.log` (gitignored; closed artifacts enter the bounded lossless archive described below).
 - **What each tick does:** load context (memory, journal tail, strategy), mark portfolio + bankroll via `scripts/positions.py` + `scripts/bankroll.py` (authoritative total), scan WebSearch for active-position catalysts, decide hold/adjust/add/close, journal it, write a weekly report if ≥7d since last, commit + push (audit diff for secrets first), Telegram-alert if anything material moved.
 
-The general Sunday stock/brokerage source rotation and missed-week catch-up are
-retired as of 2026-10-06. Routine watchlist checks cover project crypto candidates
-only; no stock-price polling or personal-brokerage alerts. On-demand research may
-use macro, industry and protocol sources when they support a held thesis or a
-lawfully accessible on-chain opportunity within the project horizon. Weekly
-portfolio P&L and passive index comparisons remain part of account evaluation.
+Weekly portfolio P&L and passive index comparisons remain part of account evaluation.
 
 ## News watcher — 24/7 reactive layer
 
@@ -64,7 +61,7 @@ portfolio P&L and passive index comparisons remain part of account evaluation.
 
 | Sleeve | Address | Holds | Strategy spec |
 |---|---|---|---|
-| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | PM positions + Aave Polygon idle + pUSD + POL gas | `strategy/00_philosophy.md`; live positions via `scripts/positions.py`, decisions in `notes/decisions.json` |
+| Polymarket | `0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B` | PM positions + Aave Polygon idle + pUSD + POL gas | `AGENTS.md`; live positions via `scripts/positions.py`, decisions in `notes/decisions.json` |
 | Crypto | `0x83dADaC202cd1276E985703f90d39EE31F3D3eE6` | Aave Arb/Base idle + dust (Ostium venue wallet) | Same doctrine; aggregate via `scripts/bankroll.py` |
 
 Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `POLYCLAUDE_WALLET_CRYPTO`).
@@ -75,9 +72,7 @@ Both wallets resolved via the same `_paths.py` mechanism (`POLYCLAUDE_WALLET`, `
 - `scripts/telegram_listener.py start` — PID in `~/.polyclaude_telegram_listener.pid`
 - Both restart on reboot via `@reboot` crontab entries.
 
-## README.md as living portfolio dashboard
-
-Each cron tick (and any other meaningful state change) refreshes `README.md` at the repo root with: current portfolio across both sleeves, MTM, recent decisions, links to the canonical strategy/research docs. GitHub renders this on the front of the repo so the operator can see project state at a glance without reading the journal. Treat it as a public face — concise, link-heavy, no operational secrets.
+## Performance chart
 
 The static performance chart is in `docs/`. After an already-required complete
 portfolio snapshot, manually append its recorded totals to

@@ -1,8 +1,8 @@
 # Project-only watchlist
 
-Updated 2026-10-10. The original mixed watchlist is preserved verbatim in [the dated archive](longterm_watchlist_archive_2026-10-06.md) (SHA-256 `79848849682474b80d0ee19461dad41a2eea14cfaca8b9f118ed1589bed500e0`). Its stock, brokerage, and older candidate material is historical evidence only, not active project guidance.
+Updated 2026-10-10. The original mixed watchlist is preserved verbatim in [the dated archive](longterm_watchlist_archive_2026-10-06.md) (SHA-256 `79848849682474b80d0ee19461dad41a2eea14cfaca8b9f118ed1589bed500e0`). That archive is historical evidence only, not active project guidance.
 
-Recurring stock and personal-brokerage research, Sunday reviews, equity-price monitoring, and IBKR surfacing were retired on 2026-10-06. This file tracks only project-accessible, on-chain review gates. It makes no trade recommendation or automatic entry authorization.
+This file tracks only project-accessible, on-chain review gates. It makes no trade recommendation or automatic entry authorization.
 
 ## Active review gates
 
@@ -22,8 +22,7 @@ Oct 5 UNI evidence is recorded in the journal's 22:00 review and follow-up. The 
 | MSFTc | `0xB200000000000000000000Ab99cFa739E253872B` | $20 Slipstream purchase quoted 0.03785510 tokens; same-quantity reverse 19.979981 USDC at block 52,377,143. Microsoft reported 43% Azure growth and adjusted annual EPS $17.28; next announced results Oct 28. Establish a return thesis by January, lawful eligibility, and the route/cost gates below. No buy price or allocation is certified. |
 | NVDAc | `0xb20000000000000000000078ee7ce2fE4908108C` | $20 purchase quoted 0.08515405 tokens; same-quantity reverse 19.979999 USDC at the same block. NVIDIA reported Q2 FY27 revenue $96.2B and Q3 guidance $108B ±2%. Underwrite demand, earnings/multiple risk and AI correlation; growth is not proof of excess return. No allocation. |
 
-These are stock-backed tokens researched on demand, with no brokerage workflow or recurring
-equity-price polling. The [Oct 9 journal](journal.md) contains primary sources and the exact
+These are stock-backed tokens researched on demand. The [Oct 9 journal](journal.md) contains primary sources and the exact
 read-only route/cost review. Quotes are dated independent reads against unchanged pool state,
 not a guaranteed round trip. The existing swap tools do not execute Slipstream; a vetted writer
 and fresh complete funding/exit quotes are required. DEX transfers can be permissionless, but

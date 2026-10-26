@@ -211,8 +211,7 @@ def test_main_persists_explicit_partial_coverage_label(
 
     stdout = capsys.readouterr().out
     assert "coverage: BOUNDED PARTIAL" in stdout
-    report = next(tmp_path.glob("limitless_arb_*.md")).read_text()
-    assert "Polymarket universe coverage: **BOUNDED PARTIAL" in report
+    assert sorted(p.name for p in tmp_path.iterdir()) == ["limitless_arb_latest.json"]
     payload = json.loads((tmp_path / "limitless_arb_latest.json").read_text())
     assert payload["polymarket_universe"]["coverage"] == "bounded_partial"
     assert payload["polymarket_universe"]["markets_returned"] == 0

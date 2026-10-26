@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
-# Read Codex quota headroom without injecting a conversational /usage turn.
+# Read model usage headroom without injecting a conversational /usage turn.
+# The kimi backend exposes no provider quota API, so this wraps the local
+# OpenCode telemetry probe (scripts/model_usage.py).
 
 set -euo pipefail
 
@@ -8,9 +10,9 @@ POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 PYTHON="${POLYCLAUDE_PYTHON:-${POLYCLAUDE_DIR}/.venv/bin/python}"
 
 # The light 06/10/18/22 UTC crons invoke inject_prompt.sh directly and inherit
-# cron's minimal PATH. Codex is installed in /usr/local/bin on this host, so
-# make the normal system/local user locations explicit before Python resolves
-# the executable. Keep any caller-supplied PATH entries after the safe prefix.
+# cron's minimal PATH. OpenCode lives under the service account's ~/.local/bin,
+# so make the normal system/local user locations explicit before Python
+# resolves the executable. Keep caller-supplied PATH entries after the prefix.
 export PATH="/usr/local/bin:${HOME}/.local/bin:${PATH:-/usr/bin:/bin}"
 
 if [[ ! -x "${PYTHON}" ]]; then
@@ -18,4 +20,4 @@ if [[ ! -x "${PYTHON}" ]]; then
     exit 3
 fi
 
-exec "${PYTHON}" "${SCRIPT_DIR}/codex_usage.py" "$@"
+exec "${PYTHON}" "${SCRIPT_DIR}/model_usage.py" "$@"

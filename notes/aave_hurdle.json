@@ -1,6 +1,7 @@
 {
-  "apy": 0.030656,
+  "apy": 0.034833,
   "chain": "polygon",
-  "token": "USDC.e",
-  "fetched": "2026-09-17T10:00:55.350745+00:00"
+  "token": "USDC",
+  "supply_status": "live",
+  "fetched": "2026-10-25T22:19:26.936607+00:00"
 }

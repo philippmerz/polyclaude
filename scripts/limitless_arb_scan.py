@@ -11,7 +11,7 @@ cross-venue resolution equivalence remain unverified by this screen. It
 dumps a sorted table to:
 
   - stdout
-  - logs/limitless_arb_<UTC ts>.md (gitignored — fresh each run)
+  - logs/limitless_arb_latest.json (gitignored — overwritten each run)
 
 For each candidate, the table shows:
   - Limitless and matched Polymarket YES midpoints
@@ -945,37 +945,6 @@ def main() -> int:
     # Output
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     ts = dt.datetime.utcnow().strftime("%Y%m%dT%H%M%SZ")
-    out_path = OUT_DIR / f"limitless_arb_{ts}.md"
-    with out_path.open("w") as f:
-        f.write(f"# Limitless arb scan — {ts} UTC\n\n")
-        f.write(f"Total `isPolyArbitrage:true` markets: {len(cands)}\n")
-        f.write(f"Polymarket universe coverage: **{pm_fetch.coverage_label}**\n")
-        f.write(f"Polymarket-matched (top {len(top_for_lookup)} by breakeven): {len(matched)}\n\n")
-        f.write("Three-layer screening: (1) distinctive-word overlap ≥ 3 with Jaccard ≥ 0.55, ")
-        f.write("(2) numeric-token parity, (3) agent-verified resolution-language equivalence ")
-        f.write("(scoped fast profile). Only `IDENTICAL` verdicts qualify for manual review; ")
-        f.write("`SIMILAR`/`UNCERTAIN`/`DIFFERENT` are visibility-only. Downstream ")
-        f.write("auto-execution remains disabled.\n\n")
-        f.write("Polymarket uses its full feeSchedule rate/exponent via pm_fees.py. ")
-        f.write("Limitless assumes at most 3% of received contracts deducted: ")
-        f.write("cash per net share = price / 0.97, not price plus a notional fee. ")
-        f.write("Net edge = |midpoint spread| minus incremental fee costs per net share. ")
-        f.write("Positive is conditional screening only, not executable profit: exact ")
-        f.write("fees/rounding, book depth/freshness and rule equivalence remain unverified.\n\n")
-        f.write("## Matched (sorted by net edge)\n\n")
-        f.write(f"| Lim YES | PM YES | Spread | Breakeven | Net Edge | Conf | Verdict | Lim title / PM question |\n")
-        f.write(f"|---:|---:|---:|---:|---:|---:|:---:|---|\n")
-        for m in matched:
-            verdict = m.get("_verify_verdict", "—")
-            f.write(f"| {m['_yes_price']:.3f} | {m['_pm_yes']:.3f} | "
-                    f"{m['_spread']*100:+.2f}% | {m['_breakeven']*100:.2f}% | "
-                    f"{m['_net_edge']*100:+.2f}% | {m.get('_match_confidence', 0):.2f} | "
-                    f"{verdict} | "
-                    f"L: {m['title'][:60]}<br>PM: {m.get('_pm_question','')[:60]} |\n")
-        f.write("\n## Unmatched (Limitless markets with no clear Polymarket counterpart)\n\n")
-        for m in unmatched[:20]:
-            f.write(f"- YES {m['_yes_price']:.3f}  breakeven {m['_breakeven']*100:.2f}%  — {m['title'][:80]}\n")
-
     # Also dump a machine-readable JSON for the executor to consume
     out_json = OUT_DIR / "limitless_arb_latest.json"
     payload = {
@@ -1022,7 +991,6 @@ def main() -> int:
             payload["verified_other"].append(record)
     out_json.write_text(json.dumps(payload, indent=2, default=str))
 
-    print(f"wrote {out_path}")
     print(f"wrote {out_json}\n")
 
     # Stdout summary
@@ -1063,7 +1031,7 @@ def main() -> int:
                 f"  agent: {m.get('_verify_reason','')[:120]}\n"
                 f"  manual review required: midpoint estimate; check real orderbook depth before trading"
             )
-        lines.append(f"\nfull table: logs/limitless_arb_<ts>.md")
+        lines.append("\nfull table: logs/limitless_arb_latest.json")
         _telegram("\n".join(lines))
 
     return 0

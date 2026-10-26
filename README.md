@@ -28,34 +28,10 @@ snapshot; run the status commands for live state.
 
 ## Start here
 
-1. Read [`MANDATE.md`](MANDATE.md).
-2. Read [`strategy/00_philosophy.md`](strategy/00_philosophy.md) and
-   [`strategy/01_lessons.md`](strategy/01_lessons.md).
-3. Read [`strategy/02_operations.md`](strategy/02_operations.md) for wallets,
-   daemons, Telegram, execution, and emergency procedures.
-4. Run `.venv/bin/python scripts/polyclaude_status.py`.
-
-This file is the current dashboard and entry point. Chronology belongs in
-[`notes/journal.md`](notes/journal.md), pending work in
-[`notes/backlog.md`](notes/backlog.md), and dated analysis in `research/`.
-
-The [compact handoff](notes/current_context.md) indexes the completed selection,
-current orders and dated financial evidence; check its expiry and source hashes.
-The active lessons guide is condensed; its [original ledger](strategy/archive/01_lessons_2026-10-12.md)
-remains historical evidence. `scripts/context_packet.py` builds bounded packets
-for four task scopes without loading full history or live state. Packets are
-orientation only; the required strategy reads and live execution checks remain.
-
-Writing default for replies, handoffs and maintained documents:
-
-- Lead with the result; use concise bullets with one claim or action each.
-- Preserve relevant facts, numbers, identities, dates, assumptions, uncertainty,
-  conditions and evidence links. Shorten wording, not information.
-- Keep a detail when it changes interpretation, a decision, uncertainty or
-  verification; otherwise link supporting material instead of repeating it.
-- Remove repetition and filler; retain enough grammar to read once. Use tables
-  for comparisons and short headings for navigation; avoid cryptic shorthand
-  and multi-topic bullets. Follow a specifically requested format when it differs.
+This page is the public dashboard: wallets, constraints, and the latest
+portfolio snapshot. Chronology is in [`notes/journal.md`](notes/journal.md),
+pending work in [`notes/backlog.md`](notes/backlog.md), and dated analysis in
+`research/`.
 
 ## Completed-universe selection — October21
 
@@ -71,7 +47,6 @@ Writing default for replies, handoffs and maintained documents:
   stablecoin receipts. Separate gas and funding costs are excluded; see the
   [`capital ledger`](notes/capital_ledger.md).
 - Each project position must fit a **less-than-one-year** holding horizon.
-  Off-chain stocks and personal-brokerage research are outside this project.
 - Normal Dec. 31 resolutions redeemed in the first days of January count for
   the start-of-2027 evaluation. Do not cross a costly spread merely to print
   cash on Dec. 31.

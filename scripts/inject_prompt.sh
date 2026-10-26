@@ -18,11 +18,11 @@ LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
 # Preserve the historical Markdown log; future appends are metadata-only JSON
 # lines so the heartbeat's mtime check remains useful without storing prompts.
 
-# The old mixed stock/brokerage review was retired 2026-10-06. Reject its
-# legacy seed before quota probes, operator delivery, or inject-log writes.
+# Reject this retired scheduled seed before quota probes, operator delivery,
+# or inject-log writes.
 case "${PROMPT}" in
   "Sunday weekly long-term review."*)
-    echo "Retired stock/brokerage review: no work queued."
+    echo "Retired scheduled seed: no work queued."
     exit 0
     ;;
 esac
@@ -55,7 +55,7 @@ FINITE GOAL SCOPE: This contract bounds scheduled work only. It does not revoke 
 RESOURCE SNAPSHOT (read-only, captured by the dispatcher):
 ${USAGE_SNAPSHOT}
 
-RESOURCE CONTRACT: Use the main-Codex headroom above to reserve the primary context for portfolio/risk judgment and route bounded routine work to cheaper subagents. Refresh with ./scripts/check_usage.sh --brief before unusually expensive discretionary research. Never skip a required safety check or delay a thesis-break exit merely to conserve quota. The quota probe is direct and read-only; do not inject /usage as a conversational turn."
+RESOURCE CONTRACT: Use the main-model headroom above to reserve the primary context for portfolio/risk judgment and route bounded routine work to cheaper subagents. Refresh with ./scripts/check_usage.sh --brief before unusually expensive discretionary research. Never skip a required safety check or delay a thesis-break exit merely to conserve quota. The quota probe is direct and read-only; do not inject /usage as a conversational turn."
     BOUNDED_CONTRACT_APPENDED=1
     ;;
 esac

@@ -1,10 +1,10 @@
 # scripts/
 
-Quick map for any agent (or human) reading the repo cold. For deeper context: [`../README.md`](../README.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
+Quick map for any agent (or human) reading the repo cold. For deeper context: [`../AGENTS.md`](../AGENTS.md), [`../strategy/02_operations.md`](../strategy/02_operations.md), [`../notes/journal.md`](../notes/journal.md).
 
 `operator_start.sh` starts the interactive runtime directly in tmux, retaining
-the blank-session prompt gate. Codex owns session history; the launcher creates
-no duplicate terminal transcript.
+the blank-session prompt gate. The OpenCode session store owns operator
+history; the launcher creates no duplicate terminal transcript.
 
 ## Daemons (long-running; restarted on reboot via `@reboot` crontab)
 
@@ -14,11 +14,10 @@ no duplicate terminal transcript.
 
 ## Scheduled (crontab)
 
-The former Sunday stock/brokerage review and missed-week catch-up are retired.
-`watchlist_monitor.py` checks only project-routed crypto candidates.
+`watchlist_monitor.py` checks project-routed crypto candidates.
 `world_state_digest.py` and `longterm_check.py` remain tools for bounded,
 on-demand research supporting accessible on-chain opportunities and held
-positions; they do not create a recurring stock or brokerage workflow.
+positions.
 
 - `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow. Optional `POLYCLAUDE_DISPATCH_RECEIPT` records the actual lock/queue/fallback boundary; no receipt claims review completion.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
@@ -38,7 +37,7 @@ signal without duplicating prompt bodies.
 
 ## Decision-quality tracking
 
-- `decisions.py` — record/list/update/summarize structured decision entries. Stored in `notes/decisions.json`. Foundation for evaluating reasoning quality at scale; spec in `strategy/00_philosophy.md`.
+- `decisions.py` — record/list/update/summarize structured decision entries. Stored in `notes/decisions.json`. Foundation for evaluating reasoning quality at scale; spec in `AGENTS.md`.
 - `jev_shadow.py` — standalone, capped System One research client. It is shadow-only: no watcher, probability, order, or trade path calls it. `models` is read-only; `ask` accepts typed state plus an ID-keyed `{type, instructions, criteria}` question map, pins `jev-1.13.0` by default, and records only metering metadata plus a state hash in private local usage history. It enforces input, timeout, repeat, and $0.50 calendar-month caps.
 - `case_memory.py` — offline SQLite shadow store for exact case versions, source/configuration receipts, quote context and dependency-pinned assessments. `init`, `import-snapshot`, `observe`, `import-assessment`, `packet`, `bundle`, `status` use explicit paths/timestamps. Bundles losslessly share identical rule fields; stale/unknown cases remain visible. Use one coherent snapshot scope per DB; a different filter/profile is not complete observation of earlier cases. No network/model/execution/financial-record integration.
 - `case_distribution.py` — pure shadow projection of reviewer-supplied joint scenarios onto explicitly bound exact market predicates. `--model MODEL.json --bindings BINDINGS.json --packets PACKETS.json` requires provided literal criteria with matching hashes and outcome-token mappings; completeness of live terms remains uncertified. Unknown mass remains in bounds; supplied weights are not calibrated forecasts, and freshness/economics remain separate checks. See [the architecture and measured replay](../research/2026-10-12-finite-context-architecture.md).
@@ -135,7 +134,7 @@ provisional and requires an independent fresh rewalk before any action.
   criteria/event identity, fresh CLOB books, fee/route parity, portfolio caps,
   route-specific approvals, persistent correlation/group topology, FOK balance
   reconciliation, and bounded rollback.
-- `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, uses a scoped fast worker to verify resolution-language equivalence, and tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_<ts>.md` + `logs/limitless_arb_latest.json`.
+- `limitless_arb_scan.py` — paginates Limitless `isPolyArbitrage:true` markets, fuzzy-matches Polymarket counterparts, uses a scoped fast worker to verify resolution-language equivalence, and tags Chainlink-Data-Stream-backed markets as mechanical resolution. Output: `logs/limitless_arb_latest.json`.
 - `limitless_arb_executor.py` — live-quote inspector. Reads scan output, recomputes net edge after real orderbook slippage. **Does not submit orders** — the auto-execution path was removed after honest EV analysis showed expected value goes negative at our size given resolution-divergence risk on subjective markets.
 
 ## Emergency exits (3-layer sanity check spec in `strategy/02_operations.md`)

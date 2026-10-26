@@ -12,8 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "scripts"))
 import context_packet as cp
 
 NOW = "2026-10-12T10:00:00Z"
-REQUIRED = ["MANDATE.md", "README.md", "strategy/00_philosophy.md",
-            "strategy/01_lessons.md", "strategy/02_operations.md"]
+REQUIRED = ["AGENTS.md", "strategy/01_lessons.md", "strategy/02_operations.md"]
 
 
 def write_doc(root: Path, relative: str, text: str = "# Fixture\n\nText.\n") -> Path:
@@ -30,7 +29,7 @@ def fixture_root(tmp_path: Path, *, body: str = "## Handoff\n\nUse current evide
     root.mkdir(parents=True)
     for relative in cp.PUBLIC_DOCS:
         write_doc(root, relative, "# " + relative + "\n\nPublic fixture text.\n")
-    source = "strategy/00_philosophy.md"
+    source = "README.md"
     actual = hashlib.sha256((root / source).read_bytes()).hexdigest()
     hashes = hashes if hashes is not None else {source: actual}
     fm = ["---", f'reviewed_at: "{reviewed}"', f'valid_until: "{valid}"', "source_hashes:"]
@@ -85,7 +84,7 @@ def test_handoff_expiry_is_exclusive_and_nonpositive_window_invalid(tmp_path):
 
 def test_source_hash_change_invalidates_handoff_packet(tmp_path):
     root = fixture_root(tmp_path)
-    write_doc(root, "strategy/00_philosophy.md", "# Changed\n\nNew bytes.\n")
+    write_doc(root, "README.md", "# Changed\n\nNew bytes.\n")
     result = packet(root)
     assert result["packet_status"] == "invalid"
     assert result["handoff"]["status"] == "invalid"
@@ -99,9 +98,9 @@ def test_query_returns_complete_heading_match_and_reports_omissions(tmp_path):
               "# Lessons\n\nIntro.\n\n## Evidence Gates\n\nShort complete block.\n" +
               "\n## Evidence Gates Extra\n\n" + "detail " * 500)
     # Store current source hash in the handoff so this stays a valid handoff.
-    digest = hashlib.sha256((root / "strategy/00_philosophy.md").read_bytes()).hexdigest()
+    digest = hashlib.sha256((root / "README.md").read_bytes()).hexdigest()
     write_doc(root, cp.HANDOFF,
-              f'---\nreviewed_at: "{NOW}"\nvalid_until: "2026-10-12T12:00:00Z"\nsource_hashes:\n  strategy/00_philosophy.md: {digest}\n---\n\nHandoff.\n')
+              f'---\nreviewed_at: "{NOW}"\nvalid_until: "2026-10-12T12:00:00Z"\nsource_hashes:\n  README.md: {digest}\n---\n\nHandoff.\n')
     result = packet(root, query="evidence gates", max_bytes=5000)
     assert len(result["sections"]) <= 3
     assert result["omitted_section_ids"]
@@ -176,8 +175,8 @@ def test_symlink_escape_and_non_allowlisted_documents_rejected(tmp_path):
     root = fixture_root(tmp_path)
     outside = tmp_path / "secret.md"
     outside.write_text("private", encoding="utf-8")
-    (root / "MANDATE.md").unlink()
-    (root / "MANDATE.md").symlink_to(outside)
+    (root / "strategy/02_operations.md").unlink()
+    (root / "strategy/02_operations.md").symlink_to(outside)
     with pytest.raises(cp.PacketError, match="symlink"):
         cp.build_packet(root, "portfolio", now=NOW)
     with pytest.raises(cp.PacketError, match="outside the public allowlist"):
@@ -188,9 +187,9 @@ def test_symlink_escape_and_non_allowlisted_documents_rejected(tmp_path):
 
 def test_untracked_allowlisted_file_is_rejected(tmp_path):
     root = fixture_root(tmp_path)
-    subprocess.run(["git", "-C", str(root), "rm", "--cached", "--", "README.md"], check=True,
+    subprocess.run(["git", "-C", str(root), "rm", "--cached", "--", "strategy/02_operations.md"], check=True,
                    capture_output=True)
-    with pytest.raises(cp.PacketError, match="not tracked by git: README.md"):
+    with pytest.raises(cp.PacketError, match="not tracked by git: strategy/02_operations.md"):
         cp.build_packet(root, "portfolio", now=NOW)
 
 

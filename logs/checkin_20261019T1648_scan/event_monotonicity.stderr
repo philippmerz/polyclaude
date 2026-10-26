@@ -1,3 +1,0 @@
-# event_monotonicity_scan: fetching active events with vol24hr >= $1000
-# 1455 events to inspect
-# fetch coverage: INCOMPLETE; attempted=15 successful=15 failed=0 stop=max_pages

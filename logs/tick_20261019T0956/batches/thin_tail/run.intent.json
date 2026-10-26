@@ -1,1 +1,0 @@
-{"argv": [".venv/bin/python", "scripts/market_context_batches.py", "--scan-kind", "thin_tail", "--format", "markdown", "--batch-size", "20"], "name": "batches_thin_tail", "started_utc": "2026-10-19T09:59:41.543005+00:00"}

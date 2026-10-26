@@ -8,9 +8,7 @@
 > Created 2026-05-08. Add sources when a concrete project question requires them.
 
 This is a source catalog for bounded, on-demand research into held positions or
-accessible on-chain opportunities. The former Sunday stock/brokerage rotation
-was retired on 2026-10-06. A listed company or industry source does not authorize
-stock picking, personal-brokerage monitoring, or a recurring review.
+accessible on-chain opportunities.
 
 ## Selection criteria
 
@@ -125,7 +123,7 @@ On-demand digest:
    identify its lawful route and costs before any allocation.
 
 Cadence: on demand for a held thesis, material trigger, or concrete project
-opportunity; no general weekly stock or brokerage review.
+opportunity.
 
 ## Iteration
 

@@ -6,7 +6,7 @@ The original localization (longshot_calibration_backtest.py, N=1513, 2026-06-02:
   0.90-0.95 +4.8pp/3.2sigma, 0.95-0.98 +2.8pp/4.7sigma at ~7d) FAILED REPLICATION on 836
 fresh resolved markets (same methodology): 0.90-0.95 -0.5pp+-2.9, 0.95-0.98 -0.5pp+-1.9 —
 calibrated at mid, NEGATIVE at executable asks, at both 3d and 7d horizons
-(logs/backtest_askadjust_v3_20260703.log; doctrine strategy/00_philosophy.md §3.1). Either
+(logs/backtest_askadjust_v3_20260703.log; doctrine in AGENTS.md Philosophy §3.1). Either
 arbed away since June or the original was window-specific; both forbid POPULATION harvesting.
 The historical population calibration is falsified at executable asks and is not used to
 estimate probability, edge, yield, selection order, or inclusion. This scanner only surfaces

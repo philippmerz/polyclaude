@@ -6963,3 +6963,1624 @@ Periodic check: anything else to take care of? Review notes/backlog.md and the r
 
 ## 2026-09-10T18:00:03Z — inject FAILED (operator queue rc=76)
 Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-09-10T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T02:00:04Z — inject QUEUED
+Cron tick 20260911T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T03:00:35Z — inject QUEUED
+Cron tick 20260911T030029Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T04:35:01Z — inject QUEUED
+Cron tick 20260911T043459Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T06:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T14:00:04Z — inject QUEUED
+Cron tick 20260911T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-11T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T02:00:05Z — inject QUEUED
+Cron tick 20260912T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T14:00:04Z — inject QUEUED
+Cron tick 20260912T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T18:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-12T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T02:00:05Z — inject QUEUED
+Cron tick 20260913T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T14:00:06Z — inject QUEUED
+Cron tick 20260913T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T16:00:04Z — inject QUEUED
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T18:00:09Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-13T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T02:00:04Z — inject QUEUED
+Cron tick 20260914T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T06:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T14:00:04Z — inject QUEUED
+Cron tick 20260914T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-14T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T02:00:03Z — inject QUEUED
+Cron tick 20260915T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T14:00:05Z — inject QUEUED
+Cron tick 20260915T140002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-15T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T02:00:04Z — inject QUEUED
+Cron tick 20260916T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T14:00:04Z — inject QUEUED
+Cron tick 20260916T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-16T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T02:00:04Z — inject QUEUED
+Cron tick 20260917T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T03:05:43Z — inject QUEUED
+Cron tick 20260917T030539Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T04:39:30Z — inject QUEUED
+Cron tick 20260917T043928Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T06:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T06:28:54Z — inject QUEUED
+Cron tick 20260917T062851Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T08:18:10Z — inject QUEUED
+Cron tick 20260917T081805Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T14:00:04Z — inject QUEUED
+Cron tick 20260917T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-17T22:00:02Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T02:00:04Z — inject QUEUED
+Cron tick 20260918T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T06:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T14:00:04Z — inject QUEUED
+Cron tick 20260918T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-18T23:28:04Z — inject QUEUED
+TIME-BOUND SOURCE CHECK 2026-09-18 23:28 UTC: re-read the live Silver Bulletin/Datawrapper approval chart and exact Sep-18 value before the 23:59 UTC Polymarket close for held 13 YES in the 38.5-38.9 bucket. Independently verify the current chart version and market state. If Sep-18 falls below the 38.45 rounding boundary or another thesis-breaking source change occurs, run the vetted exit analysis and take the EV-maximizing action with full checks. If unchanged, record the check briefly and end. This is one bounded follow-up; do not schedule another idle follow-up.
+
+## 2026-09-19T02:00:04Z — inject QUEUED
+Cron tick 20260919T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-19T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-19T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-19T14:00:04Z — inject QUEUED
+Cron tick 20260919T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-19T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-19T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T02:00:04Z — inject QUEUED
+Cron tick 20260920T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T14:00:04Z — inject QUEUED
+Cron tick 20260920T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T16:00:04Z — inject QUEUED
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-20T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T02:00:03Z — inject QUEUED
+Cron tick 20260921T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T14:00:04Z — inject QUEUED
+Cron tick 20260921T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-21T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T02:00:06Z — inject QUEUED
+Cron tick 20260922T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T06:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T14:00:05Z — inject QUEUED
+Cron tick 20260922T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-22T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T02:00:06Z — inject QUEUED
+Cron tick 20260923T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T14:00:04Z — inject QUEUED
+Cron tick 20260923T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-23T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T02:00:05Z — inject QUEUED
+Cron tick 20260924T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T06:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T14:00:04Z — inject QUEUED
+Cron tick 20260924T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-24T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T02:00:04Z — inject QUEUED
+Cron tick 20260925T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T14:00:04Z — inject QUEUED
+Cron tick 20260925T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T18:00:08Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-25T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T02:00:09Z — inject QUEUED
+Cron tick 20260926T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T14:00:06Z — inject QUEUED
+Cron tick 20260926T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T18:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-26T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T02:00:04Z — inject QUEUED
+Cron tick 20260927T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T14:00:04Z — inject QUEUED
+Cron tick 20260927T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T16:00:05Z — inject QUEUED
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-27T22:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T02:00:03Z — inject QUEUED
+Cron tick 20260928T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T06:00:07Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T14:00:04Z — inject QUEUED
+Cron tick 20260928T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T18:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-28T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-29T02:00:04Z — inject QUEUED
+Cron tick 20260929T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-29T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-29T10:00:10Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-29T14:00:05Z — inject QUEUED
+Cron tick 20260929T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-29T18:00:03Z — inject FAILED (operator queue rc=69)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-09-29T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T02:00:04Z — inject QUEUED
+Cron tick 20260930T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T14:00:04Z — inject QUEUED
+Cron tick 20260930T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T21:08:54Z — inject QUEUED
+Cron tick 20260930T210848Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-09-30T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T02:00:03Z — inject QUEUED
+Cron tick 20261001T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T14:00:04Z — inject QUEUED
+Cron tick 20261001T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-01T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T02:00:04Z — inject QUEUED
+Cron tick 20261002T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T14:00:05Z — inject QUEUED
+Cron tick 20261002T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-02T22:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T02:00:06Z — inject QUEUED
+Cron tick 20261003T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T14:00:04Z — inject QUEUED
+Cron tick 20261003T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-03T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T02:00:03Z — inject QUEUED
+Cron tick 20261004T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T14:00:04Z — inject QUEUED
+Cron tick 20261004T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T16:00:03Z — inject QUEUED
+Sunday weekly long-term review. (1) Pick 2-3 domain slugs from notes/primary_sources.md that haven't been run in the last 4 weeks (check notes/world_state_log.md for last-run timestamps). Available slugs: macro-fiscal-labor, energy-power-infrastructure, critical-minerals-commodities, trade-regulation, tech-ai-chips, biotech-health, geopolitics-security, crypto-on-chain, markets-corporate. Run: python3 scripts/world_state_digest.py --domain <slug1>,<slug2>. (2) For any HIGH/MED-confidence themes surfaced, run scripts/longterm_check.py on the top 1-2 candidate tickers to vet for entry. (3) Update notes/longterm_watchlist.md with new candidates + flag any existing candidates whose entry triggers were hit. (4) Journal + Telegram tick summary.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-04T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T02:00:03Z — inject QUEUED
+Cron tick 20261005T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T14:00:04Z — inject QUEUED
+Cron tick 20261005T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-05T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T02:00:05Z — inject QUEUED
+Cron tick 20261006T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T06:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T14:00:03Z — inject QUEUED
+Cron tick 20261006T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T18:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-06T22:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T02:00:04Z — inject QUEUED
+Cron tick 20261007T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T14:00:04Z — inject QUEUED
+Cron tick 20261007T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-07T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T02:00:04Z — inject QUEUED
+Cron tick 20261008T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T14:00:05Z — inject QUEUED
+Cron tick 20261008T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-08T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T02:00:04Z — inject QUEUED
+Cron tick 20261009T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T14:00:09Z — inject QUEUED
+Cron tick 20261009T140002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-09T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T02:00:04Z — inject QUEUED
+Cron tick 20261010T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T10:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T14:00:05Z — inject QUEUED
+Cron tick 20261010T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-10T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T02:00:03Z — inject QUEUED
+Cron tick 20261011T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T14:00:05Z — inject QUEUED
+Cron tick 20261011T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-11T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T02:00:03Z — inject QUEUED
+Cron tick 20261012T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T10:00:08Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T14:00:03Z — inject QUEUED
+Cron tick 20261012T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T18:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-12T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T02:00:04Z — inject QUEUED
+Cron tick 20261013T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T14:00:07Z — inject QUEUED
+Cron tick 20261013T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-13T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T02:00:06Z — inject QUEUED
+Cron tick 20261014T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T10:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T14:00:05Z — inject QUEUED
+Cron tick 20261014T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T18:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-14T22:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T02:00:04Z — inject QUEUED
+Cron tick 20261015T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T14:00:05Z — inject QUEUED
+Cron tick 20261015T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T18:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-15T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T00:14:12Z — inject QUEUED
+Cron tick 20261016T001409Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [REVALIDATION REQUEST FROM OPPORTUNITY WATCH: monotonicity-arb — inspect notes/opportunity_alerts.jsonl (tail) FIRST. A trigger is an observation, not evidence of current executability or authorization to act; independently revalidate current inputs and constraints before recommending or taking action.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T02:00:03Z — inject QUEUED
+Cron tick 20261016T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T06:00:06Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T14:00:03Z — inject QUEUED
+Cron tick 20261016T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T18:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-16T22:00:05Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T02:00:05Z — inject QUEUED
+Cron tick 20261017T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T06:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T14:00:05Z — inject QUEUED
+Cron tick 20261017T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T18:00:02Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-17T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T01:55:29Z — inject QUEUED
+Cron tick 20261018T015522Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T02:00:03Z — inject QUEUED
+Cron tick 20261018T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T04:40:04Z — inject FAILED (operator queue rc=70)
+Cron tick 20261018T043914Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-10-18T06:00:17Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T09:34:16Z — inject FAILED (operator queue rc=69)
+Cron tick 20261018T093406Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-10-18T10:00:03Z — inject FAILED (operator queue rc=69)
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+
+## 2026-10-18T13:01:23Z — inject QUEUED
+Cron tick 20261018T130121Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T14:00:21Z — inject FAILED (operator queue rc=70)
+Cron tick 20261018T140005Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+
+## 2026-10-18T14:34:53Z — inject QUEUED
+Cron tick 20261018T143451Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T16:34:00Z — inject QUEUED
+Cron tick 20261018T163358Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T18:28:04Z — inject QUEUED
+Cron tick 20261018T182800Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 564af3ddd39cb941492066abbf8e9fa1e473dc2c. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T19:59:37Z — inject QUEUED
+Cron tick 20261018T195935Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 9fed4e2b8b5a6865ea3ae58f71abe1a1befddee1,cf6a4a6d63143233f091df2432ca0eebb7db8f10,f0d0bda3cd847858fe14943805e060f63aa3d73f,6916a682d4d2645bef70b4caacf8132a2a11e16e,8347d5716c2fa550a564ed7ced18a0afcbef900f,c5973152aa8da60fe7b4919a73a878c255bbee75. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T21:34:51Z — inject QUEUED
+Cron tick 20261018T213450Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs ffa1251d18e4af071b22d377a72656bef2467226. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-18T23:10:01Z — inject QUEUED
+Cron tick 20261018T230958Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 3a2dcab20733d5d7101e1bc42d6a6caa3d28cea3,34d32b7c63f0951a3e2907fb87bc64fc3e3480af,5a944924f37fce935cd197438df3a0fcbef8ee36,35979eef15b36ee34c2786189396c736044fa633,9191bcbbcfaf381a0eaf6beacfaf8a4f7fd49b0b,9655e5b446f8ecbe4b52142804b4ff1326a9d4c9,3832adf6b75241d71f2531e342588e02442bb362,353e775b74d4bc576fecadfd48aab540d6f1d8ce. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T00:43:18Z — inject QUEUED
+Cron tick 20261019T004316Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 71b477e9e2d78215b7d66eabd8152c6142cbced4,b80acde8e6d318741bcf386b4942cf3b32fe6a15. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T02:00:03Z — inject QUEUED
+Cron tick 20261019T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T02:16:37Z — inject QUEUED
+Cron tick 20261019T021636Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 92e7e1db0f4764c1d11f8760fc8593d8ce6f9ca6,84a38894719c8d1adbc76bb3a74c829a781dcf90,6d2e5ba0c94c3340ad8e0f3989ef48db2d93b6b4. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T03:47:50Z — inject QUEUED
+Cron tick 20261019T034748Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 002795d717e8d82bb6826127ae0bfabb05c3bc65,51a7f46e807bf4dfe11a3b21dc1e3fb4081a91d4. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T05:19:32Z — inject QUEUED
+Cron tick 20261019T051930Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 9a515d97e3509064538a8da747444768c28255b4,c4e794838759f98d52a4d8745f7533cbbaa499dc,468beceeced5721b3ca646123ee3501d1d733ea9,df0f08a98e2cee58004a9a58da579ccc5765e085,5fc895fd911b46a92a6dd2a6940a1e3facfd3d3f. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T06:00:02Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T06:54:29Z — inject QUEUED
+Cron tick 20261019T065427Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs c0540b1bc4e7da3bf6428a81655740bad8f19496. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T08:25:11Z — inject QUEUED
+Cron tick 20261019T082506Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs f9f38cd626ecbd2e5e10ce64c2a87463b5ea0a97,ea975f2ccc52da372c51e20231a8b656bfb92219,e46af719870ada9fff6c0fcad7f88994fc99700d. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T09:56:47Z — inject QUEUED
+Cron tick 20261019T095645Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs f9c70fee747559e340dcb03c51ce493a7f23246a. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T12:53:01Z — inject QUEUED
+Cron tick 20261019T125300Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs dcb4b0d62976c367dcbaead2fac9919df16fa18d. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T14:00:04Z — inject QUEUED
+Cron tick 20261019T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T14:27:06Z — inject QUEUED
+Cron tick 20261019T142704Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 77b80ae2356ce212bcd0426ab90e2e74e8c50639,068114f2ec76de44411de61ecb7394e62de94e80,fd1bac566f07b7a734c40adc28a4e3476ff1879d,122ce9ea5e4040f91e9846c4a04ae722a6910f07,63be18a0cbc53832bb8996a65eec5f48d33fbcb8,df272b3fbe4e54b17365c981f4800e6f2c72b2aa,ba9ab53f6bdd77624a18c08561687485e62037be,1261cc89640943a513f2b75a66c5dc16c769aab0. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T15:59:04Z — inject QUEUED
+Cron tick 20261019T155901Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs f846709391e48c514cfdb8a5dee4a51885ab7046,d52b43ac0a1334188dc02d91330f4eab8a603efb,af0388d7576b203ad1a10f47b781c80dd699680b,fb865a1a0580daf8a7892d55aee27f195a70dc06. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T16:15:47Z — inject QUEUED
+Cron tick 20261019T161545Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 53b1a2036cb9d71ce47180667ffab4bd9dbb0f8e,7dc141268f687283627ccdfc6fcd6e8f32461bcf. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T16:48:26Z — inject QUEUED
+Cron tick 20261019T164825Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 2f1cd958e63e0205b1db466f6469d37a6661b2cb,ffa1251d18e4af071b22d377a72656bef2467226,49b78be779d9309a29fcbb99660fb74400afbdc8. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T17:42:45Z — inject QUEUED
+Cron tick 20261019T174243Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs cc4e27e2f23386ca343375ff1973816baa2770d4,ef1955c177be072a077fba9b99d5d2476d4d0b24. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T18:00:02Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T19:14:29Z — inject QUEUED
+Cron tick 20261019T191427Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 5dc0d83066b111f8ce28b74a901b40936dd99f85,5d9e0ca9b92ca0f15f293c914eb4da9805e4f03f,d1944e5ccd89687ba23ef59d536b4b392da6b9a1. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T20:49:52Z — inject QUEUED
+Cron tick 20261019T204951Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 12856988e4fc1b37c5fa655fbf9ca56e311c86da,f3de70da126c2bb4885e029f1f92e1349706ccfe,dd8f14bde84cd4c2064aa3d1bb4563eb8b528564. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T22:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T22:24:22Z — inject QUEUED
+Cron tick 20261019T222420Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 5ef84b62bc3184801942e4f04fe94ce1a0f1b261,e6836a36c1895a323e2530832b79e375612ecdcf,bb8eaf30db0b21612ad051c4110610ac16ac153e,e569219197601f1fab365748941ee081615f4958,236c4e4e22079720761db8d03095edd6777637d4. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-19T23:58:51Z — inject QUEUED
+Cron tick 20261019T235849Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 0ebb9af61252aab524dc71534cbd45bd346f5dd4,2a551dbfde59fa8d01f45d2b89cbb46ea16aa3ae. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T01:29:39Z — inject QUEUED
+Cron tick 20261020T012937Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 947fffd88974a00707d3ef922908aeefdf766ec7,d248f59082c3c21d789833e15150fbe53ad5f4bc,a099a9ac21f8d5315c10967822b6de06b6ca2a8f. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T02:00:05Z — inject QUEUED
+Cron tick 20261020T020002Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T03:01:16Z — inject QUEUED
+Cron tick 20261020T030114Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 7732eabb7fe4c67abfcb287b10a74f58b0517e89. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T04:32:01Z — inject QUEUED
+Cron tick 20261020T043158Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 05191bd1f9b7896481fb09b065a79cb0b563f59b. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T06:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T06:02:41Z — inject QUEUED
+Cron tick 20261020T060240Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 51b06dcdb0f35a071f616187d66e9d62c667f5e7. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T07:34:17Z — inject QUEUED
+Cron tick 20261020T073415Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 214d3b4a4fc1251e82385c54ef00b9a999d967c3,ead7cfddc7fdeda5ea3bc127547e8b761c9e8698. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T09:10:20Z — inject QUEUED
+Cron tick 20261020T091017Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 4b60e36bc058b89da4d3f762af09d75139fdc4dd. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T10:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T10:41:05Z — inject QUEUED
+Cron tick 20261020T104103Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 24ba12984cf1a575672481abeb51820d77179878,5fa45630a7ef41fc67a1685a286aae60f0e561e9,f534810c5538d26e2580ac14dbb36c64047f5760,306853ae7b61f9ebfde6893964b2e3fb8086eedb. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T12:13:30Z — inject QUEUED
+Cron tick 20261020T121327Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 92a9b95773daf78668119bd5c9d93c2a0cf88456,86e7994e41fd2b524cd9f033f41bbcf70d2da3c2. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T13:46:18Z — inject QUEUED
+Cron tick 20261020T134616Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 5ac7384bceba5a731db1ae1887d6771414831d62,6c93232b2bfff79f3c4f581422e254e54904b455. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T14:00:04Z — inject QUEUED
+Cron tick 20261020T140001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T15:18:48Z — inject QUEUED
+Cron tick 20261020T151845Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 07c4f3a0263f343f14f084b24e48937320a4f95d. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T16:50:05Z — inject QUEUED
+Cron tick 20261020T165003Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs b8e5c884943232b1d7197a5d58953b9ad4690bd2. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T18:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T19:26:44Z — inject QUEUED
+Cron tick 20261020T192642Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 358bcbdec31f76adea5c099a3dbb7f7f645d4fb0. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T21:01:23Z — inject QUEUED
+Cron tick 20261020T210121Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs becea882f54cd5206629d70e3388d4c244b481ad,19037093283021b08f96eab94992d5c3b8663318. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T22:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-20T22:34:30Z — inject QUEUED
+Cron tick 20261020T223429Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 5cd38c659a0296d608f7b3c942a03fa61086094c. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T00:38:02Z — inject QUEUED
+Cron tick 20261021T003800Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs f17681c8f1d23bae9b91ab6b637e637096d6f40a. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T02:00:04Z — inject QUEUED
+Cron tick 20261021T020001Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T02:15:46Z — inject QUEUED
+Cron tick 20261021T021544Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs c172571b02a51b8d22de9e680ab5336bb4a929de. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T03:46:25Z — inject QUEUED
+Cron tick 20261021T034622Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 5900081b623d46e71dc87060f1e2578a2b63ffbe,bca84a6a6739f019e37273958bbed26c228cd76f. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T05:23:01Z — inject QUEUED
+Cron tick 20261021T052258Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs e214c5aa7b4892f409a6a4c8680e759addd52ebe. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T06:00:03Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T07:09:26Z — inject QUEUED
+Cron tick 20261021T070925Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 9f3b76085ef64ce1080788cdbe67f34814ec9677. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T08:45:24Z — inject QUEUED
+Cron tick 20261021T084522Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 724d9b8f4ab57e23c8a38722eb0bd273149fb8b0. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T10:00:04Z — inject QUEUED
+Periodic check: anything else to take care of? Review notes/backlog.md and the recent journal.
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+
+## 2026-10-21T10:16:38Z — inject QUEUED
+Cron tick 20261021T101636Z. Run your scheduled polyclaude check-in (11-step list in scripts/daily_checkin.sh). Brief if nothing happened. [NEWS REVIEW REQUEST: inspect notes/news_alerts.jsonl for alert IDs 266c9bdcb765ccbabf6ca092ec17631c86ed74b4. Read related alerts even if they predate the latest journal entry. Relevance is provisional; verify sources, current exposure and any action. A queued review is not a completed review.]
+[bounded scheduled-run contract appended to queued prompt]
+[direct Codex quota-headroom contract appended to queued prompt]
+{"ts_utc":"2026-10-21T12:53:23Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"77de75eef6e31f7d61a9811cf85cddf7ec30252ac76adbf3bb9e4f61ccd331f2","bounded_contract":true}
+{"ts_utc":"2026-10-21T14:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"1ebe8735c8b6f92eb2fd47b306ca98450eaaa38aa8cbb10026c2b3ae7133b7bc","bounded_contract":true}
+{"ts_utc":"2026-10-21T14:27:45Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"e47828b8278dff44a40ed2bde39e03efa6c027235dcf7a3a0260949c8cc657bb","bounded_contract":true}
+{"ts_utc":"2026-10-21T16:00:23Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2393,"queued_prompt_sha256":"0515a6a9be828aed5d526bba728e56869f140638a8d6c266431e81260e3949f1","bounded_contract":true}
+{"ts_utc":"2026-10-21T17:33:38Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"ad7962c07f25c7f61764a4d17ee3a745aa14af12543e9a87f899c13937349fde","bounded_contract":true}
+{"ts_utc":"2026-10-21T18:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"72e1b0ccf8e2ba398f3074825135a27a69e7ebb07292d26d5ec22a2c96e28dcd","bounded_contract":true}
+{"ts_utc":"2026-10-21T19:06:27Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"eb5f3e34a08898e3071c135bee5de5bd66f38bfe9f436ae3d38b0865be5b6187","bounded_contract":true}
+{"ts_utc":"2026-10-21T20:39:20Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"013c30b95e4e4fdca044fb04aeb77ae69761a7c4768b59c2d016420eaefcef63","bounded_contract":true}
+{"ts_utc":"2026-10-21T22:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"45df99263dcd0b3771e59b0b143bd22070e6cc3a3c3b816e936984f02e16deab","bounded_contract":true}
+{"ts_utc":"2026-10-21T22:11:32Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"e15b8a42082f95059fa7184604b91c42ab6664ee0034b813424b17afc62163d7","bounded_contract":true}
+{"ts_utc":"2026-10-21T23:43:15Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"621b7de2f37c3ee5aa2f11c9165870ce7b6d2ca3da83f860e11b9754c362e76f","bounded_contract":true}
+{"ts_utc":"2026-10-22T01:48:30Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"15d5e2166f60e4f76163c03df9b0a21d32888dd252eb94b8f8ccbdc894417f65","bounded_contract":true}
+{"ts_utc":"2026-10-22T02:00:02Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"40d9a96c368a0a6ae9ae99e2eb4e5b60286a287d478d206492e1a4a9b8507af4","bounded_contract":true}
+{"ts_utc":"2026-10-22T05:15:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"01f75595a92f4abfd861e1f69681e6a78e5b93291cafdb069be53aa43de98a6a","bounded_contract":true}
+{"ts_utc":"2026-10-22T06:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"3d4ad25ed044dd1e3189f59b2f5840867281baeb6f9629e9abd01be2cdc739e3","bounded_contract":true}
+{"ts_utc":"2026-10-22T07:33:02Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"cd1f1d08136b159c9db83ca35ede2f03f96aa28d041cd4a51acebd2585a3573c","bounded_contract":true}
+{"ts_utc":"2026-10-22T09:03:57Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"3b058892e50e79d4e159399882a0c7dc8f5d279c94bf01558b8bc732bf8014c2","bounded_contract":true}
+{"ts_utc":"2026-10-22T10:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"cccfe618b0d0d4a62ab845aebcb9351338925a62799d906eb09975680f8b77a5","bounded_contract":true}
+{"ts_utc":"2026-10-22T10:36:31Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"5a9378947ac5bb325dc5b241a021e2f7b33b9ce56a503ca2cb6d89317cf540de","bounded_contract":true}
+{"ts_utc":"2026-10-22T12:08:50Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2311,"queued_prompt_sha256":"60ef578a4aabfd7933e0db32a92c2efd5b3eb89f61a19df7f04d1271ddac0d94","bounded_contract":true}
+{"ts_utc":"2026-10-22T13:41:38Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2229,"queued_prompt_sha256":"f3a7b6013951fe6efd75389522a0da0cd52eef1a4560de9dfc3de7e4669afc1f","bounded_contract":true}
+{"ts_utc":"2026-10-22T14:00:05Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"e3e349cb50c27ee915f90ac7d3334336279ce32528a84f27aa8088f4e13033c5","bounded_contract":true}
+{"ts_utc":"2026-10-22T16:35:50Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"eb74da4c4bdca3b75390d4e6a1c28b8b50adaea2e2aab750c4045d3249a1aa5c","bounded_contract":true}
+{"ts_utc":"2026-10-22T18:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"6e0f891262e7c6d0e04249338878e0da4941d4ae3a9293d91615b6ffa9400251","bounded_contract":true}
+{"ts_utc":"2026-10-22T18:08:45Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"e488d25657d8bdbb86438689d79e1d4fac20a109f4a923583ed4431b1b812061","bounded_contract":true}
+{"ts_utc":"2026-10-22T19:42:11Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2146,"queued_prompt_sha256":"82833d070de3aec124bdb07d1798e98b8779783782db0f270f08ff625327a66a","bounded_contract":true}
+{"ts_utc":"2026-10-22T21:13:32Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2146,"queued_prompt_sha256":"3d4a1057a0601cbc42c1efee828dc3af24727cad1adf1c42934c9285f1f73fd6","bounded_contract":true}
+{"ts_utc":"2026-10-22T22:00:02Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"a2ab83dda52acabb27639f6d711f1cac346960da94cbdee59402f7cd24ec32ba","bounded_contract":true}
+{"ts_utc":"2026-10-22T22:45:16Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2187,"queued_prompt_sha256":"a6286e3a8425e335f952a54623966a7ec532f8025c6056f5eec16d60e763966b","bounded_contract":true}
+{"ts_utc":"2026-10-23T00:16:29Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2269,"queued_prompt_sha256":"faa8059116ae6e48592de7b1eed8652a2f6fe1758d5cbecfe80bdcfba114b5ed","bounded_contract":true}
+{"ts_utc":"2026-10-23T01:46:55Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2187,"queued_prompt_sha256":"bf8bd940a127803abe01fdafb066d8cd9c874386f7f43cc6422d37c0210b45b8","bounded_contract":true}
+{"ts_utc":"2026-10-23T02:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1768,"queued_prompt_sha256":"17a801a1e96edc266a7058341a874a0e3f53edc27c1895f9dfaef35a78c18dab","bounded_contract":true}
+{"ts_utc":"2026-10-23T03:17:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"67be646fa8fff80b99d5c0d364cde19db1a76a6f1e1fe4a23fbe1ae7f1703fd2","bounded_contract":true}
+{"ts_utc":"2026-10-23T04:47:14Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2187,"queued_prompt_sha256":"5c07cdd2a936fd0fb1fb1702fef6a28d6dce380372e87f18272d4f219d9db154","bounded_contract":true}
+{"ts_utc":"2026-10-23T06:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"881ac9942e2cab68cc444991f1af466509fb298f3beaeda47ee481624b4daf07","bounded_contract":true}
+{"ts_utc":"2026-10-23T06:17:44Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"5dd5476bf42381d15f6ce7cf7f5d9f8d2d1d1cd332f7b5427263016096b243f0","bounded_contract":true}
+{"ts_utc":"2026-10-23T09:46:07Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"9c3dbb55db6d553f273ae36b126a527212d805a41ec9ed3515492c2c8065e3c3","bounded_contract":true}
+{"ts_utc":"2026-10-23T10:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"579653df4843fb8daeca6794085e9a73ec906c660e347aa15ee474021d78ca32","bounded_contract":true}
+{"ts_utc":"2026-10-23T11:18:15Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2270,"queued_prompt_sha256":"797f36c60524f692c04506e298c8e6d83c651fbbc085bdf9e2d4435733c3523b","bounded_contract":true}
+{"ts_utc":"2026-10-23T12:49:14Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"3845aa0bcfdddec541eedb87a49cffa30d187a959d2f75610c23553c8b3d45bc","bounded_contract":true}
+{"ts_utc":"2026-10-23T14:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"8621c17cd6066edcb4743da35be799ec7263dadb5abeaa0e26305cfc2e8de7dd","bounded_contract":true}
+{"ts_utc":"2026-10-23T15:08:02Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"36306c7ef131316bbeaf013d9e5dd138b71626e61e4c23475c36c4ca0ba6955e","bounded_contract":true}
+{"ts_utc":"2026-10-23T16:40:35Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"7a89915c7007f1a2a92d5680bb67877fbce1ed412132d84417a21b2c004d5b3e","bounded_contract":true}
+{"ts_utc":"2026-10-23T18:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"b92e4293c09b9b0ea2159a1392443c399eb03af6bcc5f605efd862cedc4e6c2b","bounded_contract":true}
+{"ts_utc":"2026-10-23T18:13:45Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2474,"queued_prompt_sha256":"d0e8edd2b3446688d0dab01cf08b620b74892cbed23d5d498bcc248f8d9e18cb","bounded_contract":true}
+{"ts_utc":"2026-10-23T19:45:25Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2187,"queued_prompt_sha256":"c25ac54898dd7aa25f07c5930dd2251f0bd92030a6bdad70e1c9f4b5c6cf27a1","bounded_contract":true}
+{"ts_utc":"2026-10-23T21:16:21Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"01ee80de16658fa63950e94786f6133c39e4fad51a12124fb097f1afbb82bab5","bounded_contract":true}
+{"ts_utc":"2026-10-23T22:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"5f010d348da2aef0be4bc0899b21cf06aa50e9d2ed1afe4df628f158dafc3399","bounded_contract":true}
+{"ts_utc":"2026-10-23T22:48:13Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2105,"queued_prompt_sha256":"822263655ba1113062ad202d195b5fa65cd6e31c51621bbca11be76522716aff","bounded_contract":true}
+{"ts_utc":"2026-10-24T00:19:40Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2146,"queued_prompt_sha256":"ab54286f986017d13576d45825ca13926d8ca7155f90b4c5d43e5ed26a0cf6c3","bounded_contract":true}
+{"ts_utc":"2026-10-24T01:50:28Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2228,"queued_prompt_sha256":"79525d0be14a7eda381dbe7bc4e6a3b238ef5b17b349db3d57f304782591ca4c","bounded_contract":true}
+{"ts_utc":"2026-10-24T02:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1768,"queued_prompt_sha256":"230757e14460f071360e4a82c0222e358dbc87eab131a33ace958793430549b2","bounded_contract":true}
+{"ts_utc":"2026-10-24T03:21:40Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2187,"queued_prompt_sha256":"d514beede435bdf1be2fc6f1ac0dcff8ec21c696501fc420d25eafc35b6ed110","bounded_contract":true}
+{"ts_utc":"2026-10-24T04:51:50Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"3d5dc00fb7b39cee3477fd3aae01931655658491ce6663e63abc192445570c32","bounded_contract":true}
+{"ts_utc":"2026-10-24T06:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"636922511e4d5284936c48f116ad44d99b5468d7b2b9bb84c02d403720ae614d","bounded_contract":true}
+{"ts_utc":"2026-10-24T06:22:37Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2105,"queued_prompt_sha256":"ac58ae7b3b95e2113db46dd7f64d19dbe208ff605c841fa92404741121fc1641","bounded_contract":true}
+{"ts_utc":"2026-10-24T07:53:14Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"fce4cd0090510c21b1161cc728fe6c29ab7b8b1c8b3965b5f20fe68c271990f2","bounded_contract":true}
+{"ts_utc":"2026-10-24T09:23:18Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"fb2574d635e902d889bde5b9a9f1099b6329cb61cc36d974de0e8f9794a53ce4","bounded_contract":true}
+{"ts_utc":"2026-10-24T10:00:02Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"4459a700404280704eedfc8256df4079eb866acbf1e13283370f864fc201e7ec","bounded_contract":true}
+{"ts_utc":"2026-10-24T10:54:11Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"72048c87a5c73ccafa0c7a9352cad78dc5ba7bee75bc228aee38e792a27e5606","bounded_contract":true}
+{"ts_utc":"2026-10-24T12:24:56Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"97ba1033518dc406a72e8ef3fcb386d7bd4080cfef88433d3d12fcc288a0c647","bounded_contract":true}
+{"ts_utc":"2026-10-24T13:56:19Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"fc0f5f1e45958afea8aaba8c6809df6d03a91486977283e691551ce3469ea648","bounded_contract":true}
+{"ts_utc":"2026-10-24T14:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"1bb2692f91ef46535a931a546cddb6e1c5958a5e63f0c21c57fc6b383a8f5de2","bounded_contract":true}
+{"ts_utc":"2026-10-24T15:27:15Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2106,"queued_prompt_sha256":"b7d07016c3d228e2fec422620b2acfe1c78d24b870847556bc06aaf4e9af3383","bounded_contract":true}
+{"ts_utc":"2026-10-24T16:58:45Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"7fc985964579c41ec82fc60f69bb298e0a6591aa8ed7503182f9e97ce2a858a3","bounded_contract":true}
+{"ts_utc":"2026-10-24T18:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"aa946d813d01a8a48566e418ac3c1fb58519c81c85f1be9bb6fd505503b03d11","bounded_contract":true}
+{"ts_utc":"2026-10-24T18:30:31Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2106,"queued_prompt_sha256":"c2a331dce35cb3509dca4e14a2a74d83e3ed1053ea21bcbbbc8e7d7adda82a93","bounded_contract":true}
+{"ts_utc":"2026-10-24T20:02:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2270,"queued_prompt_sha256":"85a46372ef9a5863de8fba1f197b4dbe6d7a82071def7ab7b5446cde3deac5d7","bounded_contract":true}
+{"ts_utc":"2026-10-24T21:33:06Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"4456dbe8feb0df20ab9674e4b62533c4c288eafd922d7a9f63e53e71dfa9f7bc","bounded_contract":true}
+{"ts_utc":"2026-10-24T22:00:06Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"85134abc324286d7b76a8be81dd76c00f8581c1feb71819a7848bf01a1dfb65d","bounded_contract":true}
+{"ts_utc":"2026-10-24T23:08:09Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"261fdb9f07529d42d3c398d5cd1a49c656ba001908d2dd06a7842d7cbd646e86","bounded_contract":true}
+{"ts_utc":"2026-10-25T00:38:22Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"e9f185fc15272e611605365b0403c513c269ad7df3d4be901c45a39c90a8e2b5","bounded_contract":true}
+{"ts_utc":"2026-10-25T02:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"718e72aebd9e257f3bdd2769e1f8e0e41248057a1f70f69dd12febdb93a626ab","bounded_contract":true}
+{"ts_utc":"2026-10-25T02:08:25Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"1881fab5ba3365e12a2a5ef15971d61da8ba32698c9ec68a54468cbe31dc5b7b","bounded_contract":true}
+{"ts_utc":"2026-10-25T03:43:34Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2147,"queued_prompt_sha256":"8977283319959684fdb10fdea2c04d27eea3b78fc08468778a5ce7ca9086d365","bounded_contract":true}
+{"ts_utc":"2026-10-25T05:14:06Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2147,"queued_prompt_sha256":"7aeaa05e0a9d19fccc57e019ea8e29edfdf19abaa8d830379feae15e72fbbc98","bounded_contract":true}
+{"ts_utc":"2026-10-25T06:00:06Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"4f38690d94f5fe1e639c60cc0b13c9303d3586384a62fc6e1117378f99f48ce9","bounded_contract":true}
+{"ts_utc":"2026-10-25T06:48:42Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2106,"queued_prompt_sha256":"2ee8dfa8c1ab49e22b280cb78ec849826bed7e11098e006e48033bbc65112ec8","bounded_contract":true}
+{"ts_utc":"2026-10-25T08:23:55Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"41f6a8d6f10fdcca79364c90a76ed7aa8f2cc12eaa0e987743ef8fdd00bde056","bounded_contract":true}
+{"ts_utc":"2026-10-25T09:54:37Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2228,"queued_prompt_sha256":"841bb1c277a30fb65fde6a95ccdbbb946389675ec1194aa508d6d877fdc88897","bounded_contract":true}
+{"ts_utc":"2026-10-25T10:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"97776dc6a1191a91ba708727dd388a192a3c852397dc7c740172162a881d6404","bounded_contract":true}
+{"ts_utc":"2026-10-25T11:35:24Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"17846a67dfc4d79187e8fc8cd14b2b653fd0c9ea81176d7b6197f91c7b28e2f0","bounded_contract":true}
+{"ts_utc":"2026-10-25T13:06:40Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2270,"queued_prompt_sha256":"3e99eef65a3ee106a149ae0c5f008474c2af3c1fee272b6bd57cb6db1f749985","bounded_contract":true}
+{"ts_utc":"2026-10-25T14:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"35da11b732f83c881a536f29d421234aa10c9ddf1c007ae08d061d6e34e5bfa4","bounded_contract":true}
+{"ts_utc":"2026-10-25T14:37:50Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2147,"queued_prompt_sha256":"180d379780eac027396af9aedb52fe5fdfe27c9177819bd2fd9fd7d0febeca88","bounded_contract":true}
+{"ts_utc":"2026-10-25T16:08:40Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2147,"queued_prompt_sha256":"6532f4dbdd1479ec44c4b218fbb398249e9ceaa3098e59c362ead40fdc2b67db","bounded_contract":true}
+{"ts_utc":"2026-10-25T17:41:09Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2270,"queued_prompt_sha256":"ba457a8905fd0b6197695bfbcf9b42821621ce7d93f049ec2d0550509cf084e7","bounded_contract":true}
+{"ts_utc":"2026-10-25T18:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"462da20a0844a4b78bbb807fe31ffc79b8517338fdebe0310773ed829e5f90e3","bounded_contract":true}
+{"ts_utc":"2026-10-25T19:12:13Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"b8136cb9d72914c98668d13fc9c1fc47097d8e5ba0a4bbed6e8669b5dedbe66d","bounded_contract":true}
+{"ts_utc":"2026-10-25T20:44:33Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2229,"queued_prompt_sha256":"7be8f88b459ceed2aff3bd6da0b178ed931b8276a6e3e12c9afb71ccaebc085e","bounded_contract":true}
+{"ts_utc":"2026-10-25T22:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"694de45b31ba5aec9ef5590ec66060847ce724cb1643c3530e1c9a200088aa2b","bounded_contract":true}
+{"ts_utc":"2026-10-25T22:17:18Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2393,"queued_prompt_sha256":"0474db5d6fabf80ad1866db13650b15d09ebc19afd11c3880324d1bc9fe92d2c","bounded_contract":true}
+{"ts_utc":"2026-10-25T23:47:51Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2270,"queued_prompt_sha256":"d1fa53e6a9ae524f3dfb1cf864cddc1f8979252197da4210bf51b2c86f68973b","bounded_contract":true}
+{"ts_utc":"2026-10-26T01:20:50Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2311,"queued_prompt_sha256":"5099b1c49b15f4c2412bf6c43a3ce898cb45c835683c024afc06e9ae2fb1f115","bounded_contract":true}
+{"ts_utc":"2026-10-26T02:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1769,"queued_prompt_sha256":"247dd9984a180488fc7410cf39f4c54858b73325e376bcd15c23198b79f3743d","bounded_contract":true}
+{"ts_utc":"2026-10-26T02:51:53Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"b6363b2f57d69f85474203faff00feb89b12ee94b979b580af77990920e8be3f","bounded_contract":true}
+{"ts_utc":"2026-10-26T04:22:49Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2065,"queued_prompt_sha256":"8187d37c563713c7a40de51b317de7cbaf95b72e2b03e07094c195c2175fb606","bounded_contract":true}
+{"ts_utc":"2026-10-26T05:54:07Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2147,"queued_prompt_sha256":"cf12c368c79a33263280f356ea4c110e8a243625cf74c300b6e3c7de34b21f72","bounded_contract":true}
+{"ts_utc":"2026-10-26T06:00:03Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1726,"queued_prompt_sha256":"1c06730715e88a75a70ab60a4658215f6c8db5379cda48fd0a3f8478626094eb","bounded_contract":true}
+{"ts_utc":"2026-10-26T07:26:14Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2188,"queued_prompt_sha256":"1733e9b07bb5ab2e49e3bcdcf6440390d612234610d996734a40c4d63e3b8473","bounded_contract":true}
+{"ts_utc":"2026-10-26T08:57:54Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2064,"queued_prompt_sha256":"b8ffe96d75d0c77f762fa0db12cc8ff33d5c589e96e2724733ce0989d233fd89","bounded_contract":true}
+{"ts_utc":"2026-10-26T10:00:04Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":1725,"queued_prompt_sha256":"dae84d8efe32e7e44ddee9e023169c306ee283c77088a59f2f924f287a8fad61","bounded_contract":true}
+{"ts_utc":"2026-10-26T10:30:15Z","status":"QUEUED","actual_rc":0,"queued_prompt_utf8_bytes":2146,"queued_prompt_sha256":"121dbae9ff3d06323e508c9f49c306e177f1b0d98734c0d2fa16ed8e4c3e0820","bounded_contract":true}
+{"ts_utc":"2026-10-26T12:30:12Z","status":"FAILED","actual_rc":69,"queued_prompt_utf8_bytes":2146,"queued_prompt_sha256":"7496247e8705af297195b9b9f7391cc19cd576f07c6f3c6d46061f19c5a16948","bounded_contract":true}
+{"ts_utc":"2026-10-26T14:00:02Z","status":"FAILED","actual_rc":76,"queued_prompt_utf8_bytes":1822,"queued_prompt_sha256":"99afa46e05046658064c2e7a45e5c1a741852dd46f06782c4da300adfb8631cb","bounded_contract":true}
+{"ts_utc":"2026-10-26T14:03:24Z","status":"FAILED","actual_rc":76,"queued_prompt_utf8_bytes":3143,"queued_prompt_sha256":"a2dbf4af71b03f71a6706d8df1c8f1564e9a4bb7271be10cf4995ae5bbc3be8b","bounded_contract":true}
+{"ts_utc":"2026-10-26T15:45:24Z","status":"FAILED","actual_rc":76,"queued_prompt_utf8_bytes":4169,"queued_prompt_sha256":"722b0f419d54322c720b37815479e5635078e9305661f44ac76969e5c45ce397","bounded_contract":true}
+{"ts_utc":"2026-10-26T17:04:53Z","status":"FAILED","actual_rc":76,"queued_prompt_utf8_bytes":4169,"queued_prompt_sha256":"5e5d9f59babb2bdbaf53ffac8e9ac85dffde2998c884ed26c36063a5bc0e7cb0","bounded_contract":true}

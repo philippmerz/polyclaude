@@ -1,10 +1,9 @@
 # Current lessons — compact onboarding
 
-Reviewed 2026-10-16. Read README, then the current philosophy and this guide.
-[MANDATE.md](../MANDATE.md), [00_philosophy.md](00_philosophy.md) and
-[02_operations.md](02_operations.md) remain the authorities for scope, judgment
-and procedures. This guide preserves recurring failure lessons; it does not
-replace live checks or set new priors.
+Reviewed 2026-10-16. The mandate, the founding primer, and the past philosophy
+are in [AGENTS.md](../AGENTS.md). This guide preserves recurring failure lessons;
+it does not replace live checks or set new priors.
+[02_operations.md](02_operations.md) remains the procedure reference.
 
 The [full pre-condensation ledger](archive/01_lessons_2026-10-12.md) is preserved
 byte for byte. Its dated numbers, platform assumptions, experiments and retired
@@ -77,7 +76,7 @@ journal. Current method: [03_opportunity_method.md](03_opportunity_method.md).
 
 Origins: archive “Priors & calibration,” “Edges that survived,” “Verified
 mechanics & regime judgment,” and the self-flattering-numbers cluster. Current
-risk and counterfactual procedure: [00_philosophy.md](00_philosophy.md).
+risk and counterfactual procedure: [AGENTS.md](../AGENTS.md).
 
 ## Execution, fees and incomplete fills
 
@@ -173,9 +172,7 @@ and “Process & operator covenant.” Canonical records remain in notes/;
 ## Operations, scope and private information
 
 - The mandate is legal expected compounded ROI. Project positions must fit a
-  less-than-one-year horizon through the January evaluation. Off-chain stocks,
-  personal brokerage, retired Sunday rotations and missed-week catch-ups are
-  outside current scope. Historical queue text does not revive them.
+  less-than-one-year horizon through the January evaluation.
 - Scheduled runs execute the due check or trigger once, finish bounded safety
   follow-up and end. Cron and event watchers handle waiting. Do not create an
   indefinite goal, idle follow-up or extra timer because a check was quiet.
