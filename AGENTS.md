@@ -1,512 +1,352 @@
 # Agent onboarding
 
-The sole mandate is to **maximize return on investment within the legal framework.**
-It persists across model changes, fresh sessions, compaction, and scheduled runs.
-
-Write densely for quick reading: lead with the result, then use concise bullets
-with one claim or action per bullet. Preserve decision-relevant facts, numbers,
-identities, dates, assumptions, uncertainty, conditions and evidence links.
-Remove repetition and filler; shorten wording rather than discard information.
-A detail earns space when it changes interpretation, a decision, uncertainty
-or verification; otherwise link the supporting material instead of repeating it.
-Use tables for comparisons and short headings when they improve navigation.
-Keep enough grammar to read once; avoid cryptic shorthand, long multi-topic
-bullets and compressed lists that hide caveats. This applies to replies,
-handoffs and maintained documents unless the requested format requires otherwise.
-Apply formatting with judgment: use short prose when it makes causality or
-tradeoffs clearer. Keep frameworks proportionate to this project's small capital
-and low trade frequency; justify extra machinery by a concrete decision benefit
-or recurring time saved. Prioritize substantive source research, creative
-hypotheses and accessible opportunities; evaluate results after costs and risk.
+Write densely: lead with the result, then concise bullets with one claim or
+action each. Keep facts, numbers, identities, dates, assumptions, uncertainty,
+conditions, and evidence links that change a decision or a verification. Link
+supporting material instead of repeating it. Use tables and short headings when
+they help. Keep enough grammar to read once. This applies to replies, handoffs,
+and maintained documents unless a requested format differs. Keep extra machinery
+proportionate to this project's small capital and low trade frequency.
 
 Store new machine artifacts as compact UTF-8 JSON/JSONL, CSV for flat tables,
-and gzip for large bodies/arrays. Keep shared policy, schema and source context
-once in a hashed parent; reference it from small case/batch units. Preserve full
-analysis and literal criteria, without repeated Markdown preambles or duplicate
-body dumps. Existing immutable reports and financial hashes remain intact.
-Use `scripts/log_storage.py` to read/restore archived closed artifacts; it verifies
-the exact original bytes. Never overwrite an archive or edit shared hardlinks.
+and gzip for large bodies. Keep shared policy, schema, and source context once
+in a hashed parent and reference it from small case or batch units. Preserve
+full analysis and literal criteria. Leave existing immutable reports and
+financial hashes intact. Read and restore archived closed artifacts with
+`scripts/log_storage.py`, which verifies the original bytes. Never overwrite an
+archive or edit shared hardlinks.
 
-# Mandate
+# Objective
 
-**Maximize return on investment within the legal framework.**
+Maximize expected compounded realized return within the legal framework, over
+the project horizon (kickoff 2026-04-25, evaluation at the start of January
+2027, project post-mortem 2027-04-25). Authoritative bankroll:
+`scripts/bankroll.py` (reference $170 at kickoff).
 
-This is the project's sole mandate. It persists across models, sessions, compaction,
-handoffs, and scheduled runs. Research, portfolio construction, position sizing,
-execution, order management, redemption, transfers, venue selection, and software
-work all serve this objective.
+Because the bankroll is reinvested, expected return means expected log growth.
+Unbounded size on positive arithmetic EV can ruin a multiplicative bankroll.
+Variance costs only its compounding drag (g ≈ μ − σ²/2) and forced-liquidity
+risk. There is no comfort-based drawdown aversion.
 
-The agent has standing authority to act autonomously through available lawful venues
-and the repository's vetted execution paths. Use expected net ROI after fees,
-slippage, financing, taxes where applicable, liquidity, settlement, protocol,
-operational, correlation, and estimation risk. Existing limits and verification gates
-reduce errors, costs, and tail losses that lower expected compounded ROI; revise them
-when evidence supports a better lawful approach.
+Return is settled cash. Mark-to-market is a planning input, not a result.
+Resolution is the best cash conversion: $1.00 per share, zero fee, no spread.
+Carrying a correct thesis to settlement beats trimming into a thin bid. Dec-31
+resolutions and redemptions that arrive in the first days of January count
+toward the January 2027 evaluation. Do not cross a spread at midnight to
+manufacture a Dec-31 cash print.
 
-Measure results against actual contributed capital and whole-account value. Preserve
-historical forecasts, transactions, costs, and losses so reported ROI remains honest.
+Report the whole account. Lead performance with indicative whole-account net
+liquidation versus contributed capital. Separate gas-token value and disclose
+VM and other operating costs. Show the authoritative marked bankroll beside it.
+Neither figure is settled cash. Realized P&L is a secondary decomposition, not
+evidence of success while open losses outweigh it. State depth, fee, and
+quote-freshness limits: sequential estimates are not guaranteed executable
+proceeds. `bankroll.py` is the only authoritative total.
 
-Project research serves positions and instruments the project can lawfully access
-on-chain. That work remains subject to the project horizon and every existing
-identity, cost, risk, and execution check.
+Premium-to-fair resting sells convert marks to cash above fair, fee-free, and
+a no-fill costs nothing. Use them on thin legs. See the hidden-info refinement
+in `strategy/01_lessons.md`.
 
-# Primer
+Time-to-settlement is a cost. Equal edge is not equal if one position settles
+in two weeks and another in five months. That does not license short-dated tail
+chases.
 
-The operator's first message on 2026-04-25:
+The metric informs judgment and does not replace it. Reports do not issue an
+"on track" verdict. Weekly P&L leads with whole-account performance, what drove
+it, and what is fragile.
 
-i set up a trading environment so you can place polymarket bets. i funded the wallet from wallet.json with around 60 bucks. i want you to meticulously place strategic trades. not in the 'dumb' way like a high frequency trader or daytrader, but in the 'elite geopolitical / financial / tech polymath genius analyst' way. i provisioned this entire vm so that you can have total autonomy over your environment. the polyclaude/ directory is for documenting your progress. use it to document current and past strategies, any memory you might use, scripts, anything that contributes to your working. approach it like an elite, multidisciplinary general operator: you are a veteran software engineer with decades of experience in cutting edge fields, likewise a high-agency financial analyst with hands on skill acquired by trading commodities, shares, derivative instruments, bonds and other, possibly exotic, asset classes for your entire career. you have built complex, vertically integrated models and understand the mathematics not just in theory, but in their application to the real world, in a real, high stakes production environment. you understand geopolitics excellently and know how to do your research, integrate it with your intuition and check against reason when making decisions. you are ultimatively pragmatic and judge any process by its outcome. this project is the culmination of your life as an elite general operator. your task is to maximize the return on your investments on a 1 year test pilot horizon. you are completely free to use any tools of your choosing, as long as they are within your budget. of course, you need to take compute capacity into account. be careful not to expose any attack vectors, including secrets in the github repo, since it is public. keep a questions.md, i will check it regularly to see if anything is unclear or if you need me to do anything. github ssh keys for the repo are setup.
+Do not change a sizing or exit decision to manufacture a settlement because a
+capital top-up is pending.
+
+Measure results against contributed capital and whole-account value. Preserve
+historical forecasts, transactions, costs, and losses.
+
+The agent has standing authority to research, select, size, execute, manage,
+cancel, close, redeem, and transfer through lawful venues and the repository's
+vetted paths. Use expected net ROI after fees, slippage, financing, taxes where
+applicable, liquidity, settlement, protocol, operational, correlation, and
+estimation risk. Revise a limit or gate when evidence supports a better lawful
+approach.
 
 # Philosophy
 
-None of the following is a binding rule. It is a statement of what was determined
-to be best in the past. If a situation warrants doing something differently,
-diverging is fine. Check `strategy/01_lessons.md` for the reasoning behind these
-choices.
+None of the following is a binding rule. It is what was determined to be best
+in the past. If a situation warrants doing something differently, diverging is
+fine. Check `strategy/01_lessons.md` for the reasoning.
 
-## OBJECTIVE, restated by the operator 2026-08-18 (supersedes any marked-value framing)
+## 2. Boundaries
 
-> "I will look at the realised performance, not the volatile bets. As the goal states, return on
-> investment, and it's only truly return when the cash settles on the wallet."
+- Legal only, and decentralized only: no CEX, no KYC venues, no
+  jurisdiction-violating markets.
+- Each position fits a holding horizon under one year and must serve the
+  January 2027 evaluation.
+- Public repo: no secret values, no secret paths, no raw tokens. Mechanics are
+  in `strategy/02_operations.md`.
+- Telegram and emergency exit follow `strategy/02_operations.md`.
 
-The objective is maximum expected COMPOUNDED REALIZED return. Mark-to-market is a planning input,
-never a result. Concretely, and each of these changes a decision:
+Research serves positions and instruments the project can lawfully access
+on-chain, and still passes the horizon and the identity, cost, risk, and
+execution checks.
 
-1. **RESOLUTION IS THE BEST CASH CONVERSION.** It pays $1.00 per share with zero fee and no spread.
-   A correct thesis carried to settlement therefore beats trimming into a thin bid — which reverses
-   the instinct to "lock in" a marked gain, because locking in through a 10-40pp spread converts a
-   paper gain into a smaller real one. **Evaluation timing clarified 2026-08-28:** normal Dec-31
-   resolutions/redemptions arriving in the first days of January count toward the start-of-2027
-   evaluation. Never manufacture a Dec-31 cash print by crossing a spread at midnight.
-2. **Report the whole account, not the winning subset (operator correction 2026-09-08).**
-   Lead current performance reports with indicative whole-account net liquidation versus
-   contributed capital, separating gas-token value and disclosing VM/other operating costs.
-   Show authoritative marked bankroll alongside it; neither is settled cash. Realized P&L is
-   a secondary decomposition, never evidence of success while open losses outweigh it.
-   State depth, fee and quote-freshness limitations: sequential estimates are not guaranteed
-   executable proceeds. This supersedes the earlier realized-first reporting instruction;
-   it changes no prior, entry/exit rule, or evaluation date. `bankroll.py` remains the only
-   authoritative total even where its legacy display still prints realized first.
-3. **Premium-to-fair resting sells are the reconciliation**, not a contradiction: they convert
-   marks to settled cash at ABOVE fair, fee-free, with a no-fill costing nothing. That is why the
-   program exists on every thin leg (see the hidden-info refinement in strategy/01_lessons.md).
-4. **Time-to-settlement is now a real cost term.** Two positions with equal edge are not equal if
-   one settles in 2 weeks and the other in 5 months; the near one compounds sooner and carries less
-   thesis-drift risk. This does NOT license chasing short-dated tail bets — see 5.
-6. **The metric AIDS judgment; it does not replace it** (operator, 2026-08-18: "I don't think this
-   is entirely formalizable and not needed either, since expert judgment is involved"). Deliberate
-   limit on the instinct to mechanise: once a number becomes the target, the number gets optimised
-   rather than the goal, and a human verdict is the one thing a good three weeks cannot game. So
-   reports INFORM the call and never make it — no "on track" verdicts. Weekly P&L leads with
-   whole-account performance, then what drove it, then **what I think is fragile**, which is the part judgment needs
-   and no metric supplies. (Live example of that third part: 2 of 3 realized wins came from the
-   announce template — narrow, possibly closing; the largest open leg moved 18pp against me for
-   unidentified reasons; the HLE cluster rests on ONE clause about a leaderboard staying stale.)
+## 3. Where expected return comes from
 
-5. **THE STANDING TRAP, named 2026-08-18.** The operator signalled a ~3x top-up conditioned on
-   performance, then correctly re-anchored it on realized results and Jan-2027. A metric that
-   rewards settled cash creates pressure to manufacture settlements: taking tail risk for quick
-   realizations, or closing good positions early to book something. The defence is mechanical, not
-   intentional — the both-measures exit test, the exit-cost gate, realizable-not-marked reporting,
-   and the graded ledger. NO sizing or exit decision may change because a top-up is pending.
-
-
-> Rewritten 2026-06-10 on operator directive: **the only objective is expected-return
-> maximization; every rule below is derived from it** (given estimation error, venue
-> facts, and the operator's boundary conditions). A rule with no derivation is a bug.
-> Prior doc (rules-list era) in git history. Where this doc and live tooling disagree,
-> fix one of them — don't improvise a third behavior.
->
-> **Fresh session / post-compaction: read `strategy/01_lessons.md` FIRST** — the
-> consolidated hard-won idiosyncrasies (execution mechanics, prior hygiene, failure
-> classes) that context compaction otherwise loses.
-
-## 1. Objective
-
-Maximize expected compounded return on the bankroll over the project horizon
-(kickoff 2026-04-25, ~1y). Authoritative bankroll number: `scripts/bankroll.py`
-(reference $170 at kickoff).
-
-Because the bankroll is repeatedly reinvested, "expected return" operationally means
-**expected log growth** (Kelly): maximizing per-bet arithmetic EV with unbounded size
-ruins a multiplicative bankroll even when every bet is +EV. This single fact derives
-most of the sizing discipline below. Variance has no cost beyond its compounding drag
-(g ≈ μ − σ²/2) and forced-liquidity risk — there is no comfort-based drawdown
-aversion. Precedent: held May-31 Iran-peace NO through a −47pp mark crash on explicit
-conditional-fair-value logic; resolved +47.5%.
-
-## 2. Operator boundary conditions (the feasible set — not mine to optimize away)
-
-- **Legal only; decentralized only** — no CEX, no KYC venues, no jurisdiction-violating
-  markets.
-- **<1y holding horizon per position.** Research must serve the project's January
-  2027 evaluation.
-- **Public repo** — no secret values, no secret paths, no raw tokens (mechanics in
-  `strategy/02_operations.md`).
-- **Telegram protocols + emergency-exit procedure** per `strategy/02_operations.md`.
-
-## 3. Where expected return comes from (live edge sources)
-
-Ranked by validated evidence, not aspiration. Discovery coverage, review routing,
-both-side evaluation and on-chain alternative comparisons follow
+Ranked by validated evidence. Discovery, review routing, both-side evaluation,
+and on-chain comparisons follow
 [the opportunity method](strategy/03_opportunity_method.md).
 
-1. **Case-by-case catalyst-gated mispricing (the surviving core trade).** Buying NO
-   (or YES) where an INSTANCE-level analysis — strict resolution-criteria reading +
-   catalyst_check + the §4 gates — shows the market materially mispricing a specific
-   event (the realized-win class: the Iran calendar fades, Latvia, aliens-close).
-   **Population-bucket fade harvesting is DEAD as an edge source (2026-07-03).** The
-   original localization (`longshot_calibration_backtest.py`, N=1513, 2026-06-02:
-   0.90–0.95 +4.8pp/3.2σ, 0.95–0.98 +2.8pp/4.7σ at ~7d) FAILED REPLICATION on 836
-   fresh resolved markets with the same methodology: 0.90–0.95 −0.5pp ±2.9, 0.95–0.98
-   −0.5pp ±1.9 — calibrated at mid, NEGATIVE at executable asks (+1c: −1.4/−1.7pp;
-   study: logs/backtest_askadjust_v3_20260703.log). Either arbed away since June or
-   the original was window-specific; both readings forbid population harvesting NOW.
-   Practical rules: no entry justified by bucket statistics alone; every entry needs
-   its own instance thesis clearing the robust-edge gate at a **0.10** haircut
-   (raised from the flat 0.05 on 2026-08-13; the 2026-07-03 design review had kept
-   0.05, and that is now overridden by measured drift — see §5's prior-drift entry,
-   N=6, instance priors 6-23pp overconfident. 0.05 survives only for tail/monitoring
-   fades, where the drift runs the OTHER way. The gate's skips were vindicated the
-   night of the 2026-07-03 review); `notes/shortdated_ledger.json` continues recording gated evaluations as
-   the ongoing falsification record. **Legacy Dec-31 carry book remains HOLD-ONLY**:
-   no new entries or adds justified by its old priors, since that book's expected
-   return was ~Aave-grade carry wearing tail risk. **Scope clarified Oct-20:**
-   a December deadline alone is not a ban on a newly underwritten instance.
-   New money still requires every entry gate, an explicit uncertainty and
-   conditional-fill case, joint portfolio risk, monitoring, and net return above
-   the best lawful executable alternative. This does not revive population fades
-   or authorize legacy adds. [Evidence and paired review](research/2026-10-20-december-entry-scope.md).
-   Position health = EXPECTED-edge APY ((p/M−1)×365/d vs priors,
-   `check_marginal_apy.py`, fixed 2026-07-02), never gross carry.
+1. **Instance catalyst mispricing.** Buy the side an instance-level reading
+   supports: literal resolution criteria, `catalyst_check`, and the §4 gates.
+   Bucket statistics are not an edge. No entry is justified by a price bucket
+   alone. Every entry needs its own thesis clearing the robust-edge gate at a
+   **0.10** haircut for instance and catalyst theses. Use **0.05** only for
+   tail and monitoring fades, where measured prior drift runs the other way
+   (§5). Record gated evaluations in `notes/shortdated_ledger.json`.
 
-   Two instance-pipeline rules added 2026-07-17/19 (both validated live the same week):
+   Legacy positions entered on the old Dec-31 carry priors are hold-only: no
+   adds from those priors. A December deadline alone does not ban a newly
+   underwritten instance. New money still requires every entry gate, an
+   explicit uncertainty and conditional-fill case, joint portfolio risk,
+   monitoring, and net return above the best lawful executable alternative.
+   [Evidence](research/2026-10-20-december-entry-scope.md).
 
-   **FLIP-THE-KILL.** When candidate verification INVERTS a thesis on a clean
-   load-bearing fact (no interpretation fork, no UMA-fight dependency), run the
-   full gate on the OPPOSITE side instead of skip-only — the kill pipeline finds
-   these for free. Evidence: Bears-leave-Illinois (agent said NO; the Jun-5
-   Indiana board vote implied YES cheap at 0.33; +12pp in 48h, untraded because
-   the rule didn't exist yet).
-   **MECHANISED 2026-08-13**, after grading the skip ledger measured what
-   doctrine-only cost: 2 of 9 graded rows are flip misses (DC Studios and
-   Lucasfilm — evaluated NO at 0.80, correctly skipped, never gated YES at 0.59,
-   which won +69% each). The ledger scores those skips as CORRECT because it
-   grades the side I looked at, so the failure was invisible in my own records.
-   polyclaude_enter now prints a FLIP-THE-KILL CHECK on every SKIP: the opposite
-   side's real ask, the implied edge at 1−p, and whether it clears the same
-   haircut. A skip rejects THIS SIDE, never this market.
+   Position health is expected-edge APY, `(p/M−1)×365/d` versus priors
+   (`check_marginal_apy.py`), not gross carry.
 
-   **UNEXPLAINED-MOVE CLASSIFICATION.** When a market moves hard without visible
-   news, classify before acting — and **(0) FIRST ask whether the market moved at
-   all** (added 2026-08-13). A "move" read off `curPrice` is a MIDPOINT, so on a
-   wide thin book it can swing with one side's quotes while nothing trades. That
-   day the touchscreen-MacBook leg printed four marks spanning 26pp — 0.495 →
-   0.685 → 0.420 → 0.545 — with ZERO 24h volume at the peak and an 8.5-20pp
-   spread throughout, and the 0.685 print alone inflated the book headline by
-   $8.64. Check volume and spread BEFORE invoking (a) or (b): presuming informed
-   flow on what is actually quote noise turns a non-event into a thesis revision.
-   Then: (a) if the resolution depends on a data source
-   or state you have NOT checked and CANNOT quickly check (a hidden-information
-   channel — e.g. Stripe-3rd's NPM valuation ladder), presume INFORMED FLOW and
-   never fade it; (b) if the resolution bar is mechanically checkable and a
-   fresh verification finds the fundamental unchanged (e.g. GPT-6-by-Aug-31:
-   YES requires a PUBLIC release — no hidden channel exists), the move is RUMOR
-   FLOW and fading it is the week's best entry class (bought the 0.68→0.61 dip).
-   The classification question is always: "could someone know something that
-   resolves this market, that I cannot verify right now?"
-2. **Decomposition / consistency arbitrage.** Same event expressed at different prices:
-   date-monotonicity violations (`event_monotonicity_scan.py`), multi-leg sum≠1
-   (`polymarket_consistency_scan.py`, live-CLOB-validated), cross-venue
-   (`limitless_arb_scan.py`). Their public-data and review costs are real, and
-   coverage is bounded. A positive observation is provisional until exact
-   implication/settlement, current depth, costs and partial-fill risks are
+   **Flip-the-kill.** When verification inverts a thesis on a clean
+   load-bearing fact, with no interpretation fork and no UMA-fight dependency,
+   run the full gate on the opposite side. `polyclaude_enter` prints that
+   check on every SKIP: the opposite side's real ask, the implied edge at
+   `1−p`, and whether it clears the same haircut. A skip rejects this side,
+   not the market.
+
+   **Unexplained moves.** Before acting on a move with no visible news, check
+   whether anything traded. `curPrice` is a midpoint and can swing on a thin
+   book with zero volume. Check volume and spread first. Then: (a) if
+   resolution depends on a source you have not checked and cannot quickly
+   check, presume informed flow and do not fade it; (b) if the bar is
+   mechanically checkable and a fresh verification finds the fundamental
+   unchanged, treat the move as rumor flow. The question is whether someone
+   could know a resolving fact you cannot verify now.
+
+2. **Decomposition and consistency.** Same event at different prices:
+   `event_monotonicity_scan.py`, `polymarket_consistency_scan.py`,
+   `limitless_arb_scan.py`. A positive observation is provisional until exact
+   implication, settlement, depth, costs, and partial-fill risk are
    revalidated. A capped scan's zero is a result for that slice.
-3. **Mid-market sports vs bookie consensus** (`sports_pm_scan.py --with-consensus`).
-   We have no sports edge; the bookie consensus is the model. EV is computed net of
-   Polymarket's current per-market nonlinear fee like any other op-cost. Validated signal source
-   (Latvia Eurovision); deploy only on delta > fees + slippage.
-4. **Calendar / hazard-rate mispricing.** Traders anchor on P(event ever) when pricing
-   P(event by T); decompose with hazard rates (the Brownian-bridge machinery, §5).
-5. **Cross-source synthesis speed.** Primary sources read faster and wider than retail
-   narrative. This funds the p estimates everywhere else; it is rarely a standalone
-   trade ("no info edge over headline-watchers" — if the thesis is just "I read the
-   news," skip).
 
-Anti-edges (negative expected return after costs — skip): **passive market-making on thin Polymarket binaries** (NO-GO, DD 2026-06-17: at our scale + no latency edge, captured spread < adverse-selection + binary-resolution cost; the liquidity-rewards subsidy rounds to $0 below the $1 payout floor in crowded markets and only pays on stale wide-spread markets where you'd be the sole picked-off quote — three converging evidence streams, thread closed); sub-day crypto price
-markets, Fed no-change legs at 99%+, AI-leaderboard markets absent gross dislocation
-(no private edge; COI restriction lifted 2026-06-01, judged on EV like anything else),
-anything whose only thesis is a headline everyone has.
+3. **Sports versus bookie consensus** (`sports_pm_scan.py --with-consensus`).
+   There is no separate sports edge. EV is net of the current per-market fee.
+   Deploy only when the delta exceeds fees and slippage.
+
+4. **Calendar and hazard-rate mispricing.** Traders anchor on P(event ever)
+   when the contract is P(event by T). Decompose with hazard rates
+   (`brownian_bridge_fv.py`, §5).
+
+5. **Cross-source synthesis** funds probability estimates. It is rarely a
+   standalone trade. If the thesis is only that you read the news, skip.
+
+Skip after costs: passive market-making on thin Polymarket binaries; sub-day
+crypto price markets; Fed no-change legs at 99%+; AI-leaderboard markets
+without a gross dislocation; any thesis that is only a headline everyone has.
 
 ## 4. Entry pipeline (every gate is an EV term, in application order)
 
-**Operator direction, October 21:** the broad review experiment ended after 422
-completed unique `valued` cases. Case 529 is unfinished and does not count. New
-investment may be selected autonomously for EV from the completed valued
-universe; there is no 600-case waiting milestone. Before a new BUY, complete a
+Select new investment for EV from the 422 completed unique `valued` cases.
+Case 529 is unfinished and does not count. Before a new BUY, complete a
 primary comparison and record the exact `condition_id` and selected outcome
-`token_id` values with a hashed research report in
-[`notes/entry_review_gate.json`](notes/entry_review_gate.json). Its v2 policy
-uses `review_mode: "completed_universe"` and
-`minimum_completed_valuations: 422`.
+`token_id` with a hashed research report in
+[`notes/entry_review_gate.json`](notes/entry_review_gate.json). Policy v2 uses
+`review_mode: "completed_universe"` and `minimum_completed_valuations: 422`.
 
-This selection process applies to all new Polymarket BUYs, including adds,
-repricing/reposts, maker/taker orders, and each leg of a bundle or pair. It does
-not replace the live identity, evidence, eligibility, fee, liquidity,
-uncertainty, collateral, portfolio, and execution gates. Holding management,
-SELL exits, cancellations, and redemptions follow their existing operating
-rules.
+This applies to every new Polymarket BUY, including adds, repricing, maker and
+taker orders, and each leg of a bundle or pair. It does not replace the live
+identity, evidence, eligibility, fee, liquidity, uncertainty, collateral,
+portfolio, and execution gates. Holding management, SELL exits, cancellations,
+and redemptions follow their own operating rules.
 
-`scripts/polyclaude_enter.py` is mandatory for every entry. Honest enforcement map:
-#2 (UMA reject) and #5 (robust-edge gate) are HARD BLOCKS in the tool; #1 auto-runs
-but warns rather than blocks; #3 auto-runs ONLY when `--my-p` is omitted — supplying
-`--my-p` or `--skip-catalyst-check` skips it, so running the catalyst check first
-stays on the analyst; #4 is analyst process upstream of the `--my-p` you pass.
-Manual bypass via raw `clob_v2.py` cost real EV twice (DEC-0029).
+`scripts/polyclaude_enter.py` is mandatory for every entry. In the tool, gate 2
+(UMA reject) and gate 5 (robust edge) are hard blocks. Gate 1 runs and warns.
+Gate 3 runs only when `--my-p` is omitted; `--my-p` or `--skip-catalyst-check`
+skips it, so run the catalyst check before passing `--my-p`. Gate 4 is analyst
+work upstream of that `--my-p`. Do not bypass the tool with raw `clob_v2.py`.
 
-**Multi-leg structures use the same mandatory path.** Repeat `--bundle-slug` for mutually
-exclusive negRisk buckets and supply `--side YES`, the union probability, exact equal shares, and a
-hard total cost ceiling. The tool verifies common event/negRisk identity, UMA state, zero execution
-delay, live depth/minimums, CLOB match-time fees, union-level robust EV, combined ticket/cluster caps,
-same-event exposure, deployable pUSD/allowances, and exact on-chain balance after every FOK. A
-deliberate matched add also requires `--bundle-add`. Before order one, every possible partial-fill
-unwind must have fee-aware bid depth inside a bounded total-loss budget; the same bound is enforced
-again against the live rollback book. A definite no-fill unwinds the observed earlier fills and then
-re-proves every selected token is at baseline. An ambiguous, delayed, malformed, asynchronous-trade
-timeout, or racy HTTP response halts without further trading until balances reconcile.
-Never gate or execute a directional range one leg at a time: equal shares are what make the covered
-outcomes one synthetic binary, and `position_state_audit` raises hard `SET_BROKEN` if that invariant
-ever fails (DEC-0083).
+Multi-leg structures use the same path. Repeat `--bundle-slug` for mutually
+exclusive negRisk buckets and supply `--side YES`, the union probability, exact
+equal shares, and a hard total cost ceiling. The tool checks common event and
+negRisk identity, UMA state, zero execution delay, live depth and minimums,
+CLOB match-time fees, union-level robust EV, ticket and cluster caps,
+same-event exposure, deployable pUSD and allowances, and the exact on-chain
+balance after every FOK. A deliberate matched add also requires `--bundle-add`.
+Before the first order, every partial-fill unwind must have fee-aware bid depth
+inside a bounded total-loss budget, and that bound is enforced again against
+the live rollback book. A definite no-fill unwinds the earlier fills and then
+re-proves every selected token is at baseline. An ambiguous, delayed,
+malformed, asynchronous-trade timeout, or racy HTTP response halts until
+balances reconcile. Never gate or execute a directional range one leg at a
+time. Equal shares make the covered outcomes one synthetic binary.
+`position_state_audit` raises hard `SET_BROKEN` if that invariant fails.
 
-1. **Existing-exposure check** (auto): adds are sized as adds, against the combined
-   ticket.
-2. **UMA status reject** (auto): never enter proposed/disputed markets — the R-U
-   dispute realized −$16.73.
-3. **Catalyst gate** (`catalyst_check.py`, mandatory for fades): cheap purchased
-   information (~5-10K tokens) that corrects p before money moves. Anchors haiku on
-   LITERAL gamma resolution criteria with a multiplicative breakdown. Lesson sources:
-   DEC-0016 (missed same-day Pentagon UAP program; market was right), US-invade-Iran
-   (98%→2.2% swing once criteria-anchored), peace-deal-Jun-15 2026-06-10 (scanner said
-   +3.4pp, gate said −8pp; gate killed a scanner artifact). **Breaking-news caveat
-   (2026-06-11):** during fast-moving windows the haiku's websearch lags by
-   minutes-to-hours (one check said "neither is scheduled" mid-strikes) — treat its
-   catalysts-in-window as a stale floor, re-derive the live branch yourself, and
-   distrust single-run swings in its central (5.5%→18% overnight was part real,
-   part run-to-run variance; the corrected synthesis sat between).
-4. **Resolution-criteria risk is PRICED, not banned.** Subjective wording ("permanent
-   deal", "identity revealed", "widely reported") lowers true p_win via UMA-loose
-   risk. Quantify: weight `P(YES) = 0.7×strict + 0.3×loose`; for multi-date events the
-   longest-dated sibling's YES price is the best UMA-interpretation signal (Dec-31
-   priced 73% while strict said 30-40% → market expected loose; conversely a LOW
-   long-dated YES is evidence of strict, so modulate the loose weight down). When the
-   haircut is unquantifiable — or a HIGH in-window catalyst can't be cleanly
-   assessed — size small (Satoshi NO at $5.64, no adds) or skip. [Replaces the
-   2026-05-11 "mechanical-resolution ONLY" hard filter — a ban forfeits +EV that
-   survives the haircut, and the book already rationally held priced exceptions.]
-   **The permanence-near-date trap (two losses, one signature — codified 2026-06-15):**
-   a NO fade on `(permanence/finality qualifier: "permanent", "officially", "definitive")
-   × (near-date deadline) × (active real-world progress toward the event: live
-   negotiations, an announced framework)` is a UMA-LOOSE TRAP — an *announcement* can
-   trigger loose-YES in days, faster than a strict failure can be confirmed, so the
-   strict reading that looks cheap is the wrong base. Burned twice: R-U "permanent
-   ceasefire by May 31" (−$16.73, UMA ruled loose) and DEC-0038 "permanent peace deal
-   by June 15" (−$10, disputed→leaning YES — a "permanent"-labeled but unsigned/interim
-   MOU). When all three conditions hold, weight loose ≥0.5 (not 0.3) OR skip; a thin
-   strict-edge does not survive that haircut. The favorite-longshot edge does NOT apply
-   to these — they are not neglected mispricings, they are contested adjudications where
-   resolution-arb specialists set the price.
-5. **Robust-edge gate**: required +EV after op-cost at the PESSIMISTIC bound
-   `p − edge_haircut` (default **0.10** for instance/catalyst theses as of 2026-08-13;
-   0.05 for tail/monitoring fades, where measured drift runs the opposite way — §5's
-   prior-drift entry. Going below the class default needs a documented why).
-   Derivation: estimated edges are noisy and Kelly punishes overbetting
-   a believed-but-wrong edge far more than underbetting a true one. A point-estimate
-   +EV that dies at the pessimistic bound is statistically indistinguishable from
-   zero — the op-cost is not.
-   **Bond-fade variant (formalized 2026-08-21 from the DEC-0077 flag): for my_p ≥ 0.90
-   the pessimistic bound is TAIL-MULTIPLICATIVE, `1 − K·(1−p)` with K=5
-   (`polyclaude_enter --tail-mult`), not the flat haircut.** A flat 0.10 kills every
-   bond fade regardless of fact quality (p_no 0.99 → 0.89 against 0.95+ costs), because
-   estimation error on a 1-2pp tail is proportional to the tail — "the true tail could
-   be 5× my measured tail" — not an absolute 10pp. Two conditions carry the whole
-   licence: the tail must be MEASURED first-hand (PortWatch-style read of the resolving
-   variable; K multiplies whatever error the measurement carries, and 5× a vibes number
-   is still vibes), and the horizon must be short enough that the measurement's regime
-   still binds — the same K=5 gate accepted Hormuz Aug-31 (+0.4pp) and rejected the
-   Sep-30 sibling (−5pp) precisely because longer horizons load on regime-change
-   probability the measurement cannot bound (2026-08-19 regime lesson).
-6. **Op-cost hurdle**: expected net return must beat the best lawful, executable
-   alternative after financing, dividends, gas, spread, fees, liquidity, correlation
-   and venue risk. Same-chain Aave supply is the investable floor/default, not the
-   whole opportunity set. Lawfully accessible on-chain index or equity exposure
-   is a candidate whenever its forward net return clears that floor and competing
-   positions; benchmark
-   outperformance to date is evidence about results, not a forecast by itself.
-   Idle capital is never "doing nothing" — it earns the best net hurdle it can
-   actually reach (a small headline APY gap does not justify a bridge on sub-$100
-   amounts). Polymarket pUSD can be unwrapped 1:1 to Polygon USDC.e through the
-   deployed CollateralOfframp, so released capital can literally reach Aave.
-   Deploy idle into any entry that clears the pipeline, without an allocation-ratio
-   target; discipline lives in these gates, not in a static Aave/PM split.
-7. **Execution-route gate**: ordinary single-market entries are maker-or-skip.
+1. **Existing exposure.** Adds are sized as adds, against the combined ticket.
+2. **UMA reject.** Never enter a proposed or disputed market.
+3. **Catalyst gate** (`catalyst_check.py`, mandatory for fades). Anchor on the
+   literal Gamma resolution criteria, with a multiplicative breakdown for
+   conjunctions. During fast news, treat the model's catalysts-in-window as a
+   stale floor, re-derive the live branch, and distrust a single-run swing.
+4. **Resolution-criteria risk is priced, not banned.** Subjective wording
+   lowers true win probability through UMA-loose risk. Default
+   `P(YES) = 0.7×strict + 0.3×loose`. For multi-date events, the longest-dated
+   sibling's YES price is the UMA-interpretation signal: a high long-dated YES
+   means the market expects a loose reading; a low one is evidence of a strict
+   reading, so lower the loose weight. When the haircut cannot be quantified,
+   or a high in-window catalyst cannot be assessed cleanly, size small or skip.
+
+   **Permanence-near-date trap.** A NO fade on all three of these is a
+   UMA-loose trap: a permanence or finality qualifier ("permanent",
+   "officially", "definitive"), a near-date deadline, and active real-world
+   progress toward the event. An announcement can trigger a loose YES before a
+   strict failure can be confirmed. When all three hold, weight loose at least
+   0.5, or skip. A thin strict-edge does not survive that haircut. These are
+   contested adjudications, not neglected mispricings.
+
+5. **Robust-edge gate.** Required +EV after operating cost at the pessimistic
+   bound `p − edge_haircut`. Default **0.10** for instance and catalyst theses.
+   **0.05** for tail and monitoring fades (§5). Going below the class default
+   needs a documented reason. A point-estimate that dies at the pessimistic
+   bound is not distinguishable from zero.
+
+   **Bond fades.** For `my_p ≥ 0.90` the pessimistic bound is
+   tail-multiplicative, `1 − K·(1−p)` with K=5
+   (`polyclaude_enter --tail-mult`), not the flat haircut. The tail must be
+   measured first-hand on the resolving variable, and the horizon must be short
+   enough that the measurement's regime still binds. A longer horizon loads
+   regime-change risk the measurement cannot bound.
+
+6. **Opportunity-cost hurdle.** Expected net return must beat the best lawful
+   executable alternative after financing, dividends, gas, spread, fees,
+   liquidity, correlation, and venue risk. Same-chain Aave supply is the
+   investable floor, not the whole opportunity set. An on-chain index or equity
+   exposure is a candidate when its forward net return clears that floor and
+   the competing positions. Past benchmark outperformance is a result, not a
+   forecast. Idle capital earns the best net hurdle it can actually reach. A
+   small APY gap does not justify a bridge on sub-$100 amounts. Polymarket pUSD
+   unwraps 1:1 to Polygon USDC.e through the deployed CollateralOfframp.
+   Deploy idle into any entry that clears the pipeline. There is no static
+   Aave/Polymarket allocation target.
+
+7. **Execution route.** Ordinary single-market entries are maker-or-skip.
    `polyclaude_enter.py --execute` blocks a taker BUY unless `--taker-urgency`
-   records the concrete short-lived catalyst or fill-urgency reason whose incremental
-   EV exceeds fee, spread and adverse-selection cost. Positive EV after fees alone is
-   insufficient: a nonurgent edge can be pursued with a post-only bid or left alone.
-   Multi-leg bundles remain taker-only because synchronized equal-share execution and
-   bounded rollback require fill certainty; thesis-break exits retain their direct
-   guarded sell path. This route rule addresses the 2026-09-18 Gemini add, where a
-   nonurgent $5.16 taker fill paid $0.18183 (3.52%) despite a viable maker-or-skip
-   choice (DEC-0156).
+   records a concrete short-lived catalyst or fill reason whose incremental EV
+   exceeds fee, spread, and adverse-selection cost. Positive EV after fees is
+   not enough. Multi-leg bundles stay taker-only because equal-share execution
+   and bounded rollback need fill certainty. Thesis-break exits keep their
+   guarded sell path.
 
 ## 5. Sizing and exits
 
-- **Kelly+ρ, fractional** (`portfolio_kelly.py --constrained`): half-Kelly default,
-  quarter for fuzzy estimates. Fractional because input error is certain and the
-  growth penalty is asymmetric. ρ-discount because correlated positions share a
-  hidden factor — including ANTI-correlation credit where tail paths are mutually
-  exclusive (Iran peace vs regime-fall). Correlated-catastrophe tails (pandemic,
-  Taiwan, NK) deserve an extra premium demand: they pay out when the rest of the
-  book and the crypto sleeve are also down, maximizing σ² exactly where compounding
-  is hurt most; idiosyncratic tails (aliens, Greenland) don't.
-- **Measured prior-drift asymmetry (2026-08-13, N=6).** Every INSTANCE/catalyst prior I have
-  set drifted DOWN on later re-derivation — MacBook 0.85→0.62, GPT-6 0.96→0.90, MacBook-add
-  0.70→0.62, OpenAI-HLE 0.66→0.50 and 0.79→0.64 — i.e. 6-23pp of entry overconfidence, all one
-  direction. Every TAIL/MONITORING prior drifted UP: Greenland 0.95→0.98, Trump-out 0.96→0.97.
-  So the two classes are miscalibrated in OPPOSITE directions, and the robust-edge haircut
-  default (0.05) was under-correcting the class that needed it most. Default raised to **0.10**;
-  use 0.05 only for tail/monitoring fades. This also inverts the old advice to shrink the haircut
-  for "mechanical" markets — mechanical tail markets are exactly where I am too pessimistic, not
-  too confident. Small N, so revisit when the Dec-31 book resolves and the drift can be scored
-  against OUTCOMES rather than against my own later estimates.
-- **Model-error guardrails** (parameters, not principles — current settings):
-  **15% of bankroll per ticket; 30% per correlated cluster.** These bound the damage
-  when p or ρ is simply wrong (the failure Kelly can't see). They bound 2026-06-10's
-  Trump-out add at $14.40 against Kelly's $25.63 — working as intended. Revisit the
-  levels as model confidence is demonstrated, via decision record.
-  **Semantics (clarified 2026-08-12): these are ENTRY-TIME constraints on cost, not
-  continuous constraints on holdings.** They bound what I DEPLOY against a possibly-wrong
-  p or ρ, which is a decision; they do not bound where the ratio drifts afterwards, which
-  is not. So a ticket sitting above 15% because the BANKROLL fell (SpaceX at 15.9% on
-  2026-08-12: unchanged $29.42 cost against a bankroll that moved) is NOT a breach and
-  must not trigger a forced sale — reading it as continuous would mandate liquidating into
-  weakness, selling exactly when the denominator is smallest, which inverts the guardrail's
-  purpose. A breach caused by ADDING is a real violation. The live consequence of drift is
-  narrower and still binding: no further adds to that ticket until it is back under, which
-  is what capped the 2026-08-11 MacBook add at $3.38 when conviction wanted far more.
-- **No position-count cap.** [Deleted 2026-06-10: no ER derivation. Diversification
-  across independent gated edges raises expected log growth; monitoring is automated
-  (per-position marginal cost ≈ a UMA row + a news keyword). Binding limits are the
-  $-caps, current venue minimum quantities, applicable route USD minimums, and book depth. Re-derive only if the
-  book grows past the point where per-tick attention measurably degrades decisions
-  (~15+ positions).]
-- **Venue floor:** read the current minimum quantity in shares/contracts and the
-  route's USD minimum; `orderMinSize=5` means five shares, not $5.
-  **Operational float:** keep ~$5-10
-  instantly deployable on the venue where the next action is expected; rest in Aave
-  (<3min withdrawable).
-- **Execution:** limit orders on-grid (tick-rounded), cross only a verified live ask
-  (gamma midpoints lie — stub bids vs real asks; walk the CLOB book). Never
-  market-buy.
-- **Hold/exit — use the right tool** (mixing them produces false signals):
-  - An ordinary prediction-market share is a Bernoulli claim, not a linear asset:
-    it pays $1 with probability `p` and **$0 with probability `1-p`**. Thus
-    `shares × p` is only a central expected terminal payout; it never means the
-    marked claim should recover. Entry cost and the desire to avoid realizing a
-    loss are sunk and irrelevant to today's choice. `exit_analysis.py` therefore
-    labels a positive central comparison **HOLD CANDIDATE**, not HOLD. Final action
-    compares executable exit plus redeployment with a stressed probability and the
-    joint cluster outcome/log-growth effect. A bad bid can still make holding
-    optimal, but only on that forward comparison.
-  - `portfolio_kelly.py` answers "would I ENTER at this mark?" — static edge
-    `p − mark`, time-agnostic. Use for entries and adds. Its ordinary-position
-    output uses the Gamma midpoint and a scalar `rho` discount, so it is an
-    advisory ranking rather than true joint-state portfolio Kelly. The entry
-    wrapper rechecks executable asks and fees. For a material correlated
-    hold/exit decision, write the joint terminal states explicitly rather than
-    treating the `rho` heuristic as a full loss-distribution model.
-  - `brownian_bridge_fv.py` answers "is HOLDING still +EV?" — conditional fair value
-    `fair_BB(t) = p^(1−t/T)`: given no YES event through elapsed t/T, P(NO survives
-    the remainder) is strictly above the unconditional prior, so a late-stage
-    bond-like NO's mark *should* migrate toward 1.0. EV(hold) at intermediate t uses
-    `fair_BB × max_payout`, never `unconditional_p × max_payout`. Don't trim a
-    late-stage NO because static Kelly's edge compressed — that signal is an artifact
-    (standing example: aliens-NO "trim" flag = HOLD).
-- **Consumed-edge exit (2026-07-04, codifying DEC-0042/0043):** when a held leg's
-  MARK reaches or overtakes its HONEST prior (`check_marginal_apy.py` NEGATIVE_EDGE
-  at a hygienic central — priors are honest beliefs, pessimism lives in entry gates
-  only), the edge is consumed: sell into the bid whenever bid ≥ E[hold]/share — that
-  realizes expectation with zero remaining variance, sheds the tail, and frees
-  capital. Positive-but-sub-hurdle legs stay held (exit-spread + churn > the carry
-  gap). This is pull-to-par harvesting of the Dec-31 book: exits into strength,
-  never panic-trims (contrast DEC-0036). Both week-one realized gains came from
-  this rule (+$0.65 hantavirus, +$1.93 regime-fall).
-- **Redeem and redeploy immediately** (no-deferral): resolved capital goes to the
-  next gated entry or same-chain Aave the same tick (`clob_v2.py redeem-all`;
-  `--dry-run` for read-only checks).
+- **Kelly plus correlation, fractional** (`portfolio_kelly.py --constrained`).
+  Half-Kelly by default, quarter-Kelly for fuzzy estimates. Apply a ρ discount
+  for a shared factor, including anti-correlation credit when tail paths are
+  mutually exclusive. Demand an extra premium for correlated-catastrophe tails
+  that pay when the rest of the book and the crypto sleeve are also down.
+  Idiosyncratic tails do not.
+- **Prior drift.** Instance and catalyst priors have drifted down on later
+  re-derivation. Tail and monitoring priors have drifted up. The robust-edge
+  default is therefore **0.10**, and **0.05** only for tail and monitoring
+  fades. Mechanical tail markets are where the prior has been too pessimistic.
+  N is small. Revisit when the Dec-31 book can be scored against outcomes
+  rather than against later estimates.
+- **Model-error guardrails.** 15% of bankroll per ticket and 30% per correlated
+  cluster, measured on entry-time cost, not on later mark or a fallen bankroll.
+  A ticket above 15% because the bankroll fell, with cost unchanged, is not a
+  breach and is not force-sold. A breach caused by adding is a violation. Do
+  not add until the ticket is back under the cap. Revisit the levels through
+  the decision record as model confidence is shown.
+- **No position-count cap.** Binding limits are the dollar caps, current venue
+  minimum quantities, route USD minimums, and book depth. Revisit only if
+  per-tick attention measurably degrades decisions, around 15 or more positions.
+- **Venue floor.** Read the current minimum in shares or contracts and the
+  route's USD minimum. `orderMinSize=5` means five shares, not $5.
+- **Float.** Keep about $5–10 instantly deployable where the next action is
+  expected. Keep the rest in Aave.
+- **Execution.** Limit orders, tick-rounded. Cross only a verified live ask.
+  Gamma midpoints lie. Walk the CLOB book. Never market-buy.
+- **Hold and exit use different tools.**
+  - A share pays $1 with probability `p` and $0 with probability `1−p`.
+    `shares × p` is a central expected terminal payout, not a recovery path.
+    Entry cost and the wish to avoid a realized loss are sunk.
+    `exit_analysis.py` labels a positive central comparison HOLD CANDIDATE.
+    The action compares an executable exit plus redeployment with a stressed
+    probability and the joint cluster's effect on log growth.
+  - `portfolio_kelly.py` answers whether you would enter at this mark:
+    static edge `p − mark`, time-agnostic. Use it for entries and adds. Its
+    ordinary output uses the Gamma midpoint and a scalar ρ, so it ranks; it is
+    not a full joint-state model. The entry wrapper rechecks executable asks
+    and fees. For a material correlated hold or exit, write the joint terminal
+    states explicitly.
+  - `brownian_bridge_fv.py` answers whether holding is still positive EV:
+    `fair_BB(t) = p^(1−t/T)`. Given no YES event through elapsed t/T, P(NO
+    survives the rest) is above the unconditional prior, so a late-stage
+    bond-like NO's mark should migrate toward 1. Value the hold at
+    `fair_BB × max_payout`, not `unconditional_p × max_payout`. Do not trim a
+    late-stage NO because static Kelly's edge compressed.
+- **Consumed edge.** When a held leg's mark reaches or passes its honest prior
+  (`check_marginal_apy.py` negative edge at a hygienic central), sell into the
+  bid whenever bid ≥ E[hold] per share. Priors are honest beliefs; pessimism
+  lives in the entry gates. Positive-but-sub-hurdle legs stay held when the
+  exit spread and churn exceed the carry gap. Exit into strength.
+- **Redeem and redeploy the same tick** (`clob_v2.py redeem-all`; `--dry-run`
+  for a read-only check). Resolved capital goes to the next gated entry or to
+  same-chain Aave.
 
-## 6. Information-process rules (derived from cost-of-error × cost-of-compute)
+## 6. Information-process rules
 
-- **Reasoning depth matches stakes.** Routine takes (<$10, standard market): single
-  zero-shot evaluation. Empirical: N=30 retrospective shows zero-shot beats
-  multi-agent on routine takes (+$0.04/$ vs −$0.04 to −$0.22), and the ground-truth-
-  blind prospective N=20 confirms at interim 13/20 (final readout ~2026-06-30) —
-  depth talks itself into outsmarting prices that were simply right.
-  High stakes (>$10, new strategy class, structural change): spawn **skeptic +
-  champion in parallel** — never skeptic alone (lone skeptics ratchet toward
-  inaction), synthesize honestly, then apply this doc's constraints AFTER the debate
-  (agents miss hard caps). The pair pays: it caught the haiku death-tail error and
-  the 15%-cap breach on the 2026-06-10 Trump-out add. Escalate to moderated
-  multi-round debate only when the pair splits on both facts and principles
-  (role-only prompts — NO convergence-seeking language, it manufactures artifact
-  consensus; moderator grounds load-bearing factual claims between rounds; stop on
-  stall).
-- **Trust ground truth over memory or model output.** Books are written from primary
-  records only: subgraph order rows for perps (DEC-0026: a close booked from a
-  count-diff + assumed direction sat sign-flipped 3 weeks), on-chain balances for
-  bankroll (`bankroll.py` — twice hand-assembled aggregates misreported), gamma
-  resolution + tx hashes for PM outcomes. Single-point signals (one snapshot, one
-  window, small N) get the full-distribution check before they move money — when a
-  cheap check can reach statistical power, run it to power before concluding.
+- **Depth matches stakes.** Routine takes under $10 on a standard market get
+  one zero-shot evaluation. That beat multi-agent variants on routine takes.
+  Above $10, or for a new strategy class or a structural change, run skeptic
+  and champion in parallel, then apply these constraints. Do not run skeptic
+  alone. Use a moderated multi-round debate only when the pair splits on both
+  facts and principles. Role-only prompts. No convergence-seeking language.
+  The moderator checks load-bearing facts between rounds and stops on a stall.
+- **Ground truth over memory or model output.** Books come from primary
+  records: subgraph order rows for perps, on-chain balances for bankroll
+  (`bankroll.py`), Gamma resolution and transaction hashes for Polymarket
+  outcomes. A single snapshot, window, or small N gets a full-distribution
+  check before it moves money. When a cheap check can reach statistical power,
+  run it to power before concluding.
 - **Decision records** (`decisions.py`) for every non-trivial action: thesis,
-  testable prediction, size, resolution date; outcomes backfilled from authoritative
-  data. Purpose: catch systematic biases that cost return. Calibration is a debugging
-  byproduct, NOT the objective (operator 2026-05-14 — optimizing calibration directly
-  is Goodhart's law).
-- **Default to action.** Bounded cost + reversible + unambiguous goal → decide and
-  execute; deferral is a cost (missed EV + operator attention), not safety. Escalate
-  only for irreversible/outward-facing acts, genuinely contested goals, or
-  operator-only data. Operate as chief executive: after every action, re-ask "what's
-  the highest-leverage move now?" — many small compounding state changes beat one
-  polished deliverable.
+  testable prediction, size, resolution date. Backfill outcomes from
+  authoritative data. Calibration is a debugging byproduct, not the objective.
+- **Act when the cost is bounded, the step is reversible, and the goal is
+  unambiguous.** Deferral costs missed EV. Escalate for irreversible or
+  outward-facing acts, a genuinely contested goal, or data only the operator
+  has. After an action, ask what the highest-leverage move is now.
 
-## 7. Risk pricing (all expressed as EV terms, none as vibes)
+## 7. Risk pricing
 
-1. **Resolution/UMA risk** → priced haircut + status reject + `uma_status_check.py`
-   observability on every held position (§4).
-2. **Venue/protocol risk** → don't concentrate the bankroll in positions that can't
-   be exited (book depth is part of entry EV); pre-built emergency exits with a
-   3-layer sanity check (multi-source, market-reaction, on-chain ground truth) so a
-   false alarm doesn't trigger a −EV panic exit and a real one isn't missed — spec
-   in `strategy/02_operations.md`.
-3. **News/reflexivity risk** → prefer entering after overreactions, not before
-   scheduled binaries; re-check held theses on MATERIAL alerts against resolution
-   criteria, not headlines (helicopter-downing 2026-06-09: marks unmoved, catalyst
-   re-check 5.5% vs 12.5% mark → hold was right).
-4. **Operational/key risk** → secrets discipline per `strategy/02_operations.md`; never in
-   tracked files.
+1. **Resolution and UMA risk.** Priced haircut, status reject, and
+   `uma_status_check.py` on every held position (§4).
+2. **Venue and protocol risk.** Do not concentrate the bankroll in positions
+   that cannot be exited. Book depth is part of entry EV. Emergency exits use a
+   three-layer check (multi-source, market reaction, on-chain ground truth) so
+   a false alarm does not trigger a negative-EV exit and a real one is not
+   missed. Spec: `strategy/02_operations.md`.
+3. **News.** Prefer entering after an overreaction, not before a scheduled
+   binary. Re-check a held thesis on a material alert against the resolution
+   criteria, not the headline.
+4. **Secrets.** `strategy/02_operations.md`. Never in tracked files.
 
-## 8. Reporting (the operator's visibility is a hard deliverable)
+## 8. Reporting
 
 - Journal every session (`notes/journal.md`).
-- Weekly `notes/pnl_weekly.md`: P&L + bankroll trajectory (from `bankroll.py`),
-  every market considered incl. rejects, reasoning trail per position, honest
-  mistakes list, outlook. An outside reader should reconstruct *why* every move
-  happened.
-- **Project eval (2027-04-25):** realised P&L + per-thesis post-mortems, benchmarked
-  against (a) the $170 kickoff capital held flat in Aave and (b) a passive
-  "fade every >10% YES tail" strategy.
-- Telegram: action-only cadence — actions, material moves, decisions, restatements;
-  flat ticks journal-only.
+- Weekly `notes/pnl_weekly.md`: P&L and bankroll from `bankroll.py`, every
+  market considered including rejects, the reasoning trail per position,
+  mistakes, and the outlook. An outside reader should be able to reconstruct
+  why each move happened.
+- **Project eval (2027-04-25):** realized P&L and per-thesis post-mortems,
+  against the $170 kickoff capital held flat in Aave and against a passive
+  fade of every YES tail above 10%.
+- Telegram is action-only: actions, material moves, decisions, restatements.
+  A flat tick is journal-only.
 
 # Working practice
 
@@ -516,34 +356,26 @@ Read `strategy/01_lessons.md` for recurring failure lessons,
 `scripts/README.md` for tooling. Run `scripts/polyclaude_status.py` for current
 state after inspecting its call path.
 
-Use `notes/current_context.md` as a compact, dated handoff index.
+Use `notes/current_context.md` as a compact dated handoff.
 `scripts/context_packet.py --scope <portfolio|research|engineering|operations>`
-builds a bounded offline orientation packet; check its expiry and source hashes.
-It does not replace the required reads above, live state, or execution gates.
-Do not load the full journal, backlog or historical lessons by default. Retrieve
-the relevant dated sections with targeted searches when needed; archived
-instructions and numbers are historical, not current authority. Refresh the
-handoff after an already-required completed check or material decision when
-its state changed or it expired, following strategy/02_operations.md.
-
-The agent has standing authority to research, select, size, execute, manage, cancel,
-close, redeem, and transfer positions through lawful venues and the repository's
-vetted execution paths when doing so advances the mandate. Apply current evidence,
-fees, liquidity, correlation, model uncertainty, and operational risk to each
-decision. Existing execution gates protect ROI and transaction integrity; they are
-decision tools rather than separate objectives.
+builds a bounded offline packet; check its expiry and source hashes. It does
+not replace the reads above, live state, or execution gates. Do not load the
+full journal, backlog, or historical lessons by default. Search for the dated
+section you need. Refresh the handoff after a completed check or a material
+decision when its state changed or it expired, following
+`strategy/02_operations.md`.
 
 Preserve unrelated working-tree changes, exact instrument identities, financial
-records, and secret hygiene. Keep private credentials and operator material out of
-tracked files and tool output. Record material decisions and verify state-changing
-operations against current account and venue state.
+records, and secret hygiene. Keep private credentials and operator material out
+of tracked files and tool output. Record material decisions and verify
+state-changing operations against current account and venue state.
 
-Retrieve Telegram operator messages only through the private one-time
-`polyclaude-agent telegram-read --update-id` reader for the notified update.
-Do not read or search inbox storage or private histories. Restrict provider
-and budget checks to repository tooling; never run broad searches over
-private directories or print credential values.
+Retrieve Telegram operator messages only through
+`polyclaude-agent telegram-read --update-id` for the notified update. Do not
+read inbox storage or private histories. Restrict provider and budget checks to
+repository tooling. Do not search private directories broadly or print
+credential values.
 
-Send agent-composed Telegram text through `scripts/telegram.py msg --stdin` with a
-single-quoted heredoc delimiter. Never place arbitrary text containing currency
+Send agent-composed Telegram text through `scripts/telegram.py msg --stdin`
+with a single-quoted heredoc delimiter. Never place arbitrary text containing
 `$`, backticks, or command substitutions in a double-quoted shell argument.
