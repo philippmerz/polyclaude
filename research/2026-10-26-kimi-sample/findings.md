@@ -438,3 +438,26 @@ Kimi marked two investigates. Both use a stale base rate against a live print.
 The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
 
 Round 19 is drawn from what remained: 96 names, seed 20261113, split 20 primary / 0 thin / 0 below. Eligible before the take was 96 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 19
+
+20 names, seed 20261113. Thin and below were empty, so the draw was 20 primary. Kimi returned 6 skip, 12 watch, and 2 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+Kimi marked two investigates. Both use an old map or the wrong contract slice.
+
+- TX-09 Republicans are 0.765. The 2025 map moved Al Green out of this seat. Kalshi has Alex Mealer near 77 percent. The 2024 presidential result on the new district is about Republican plus 20. A 0.03 prior uses the old district.
+- A Democratic Ohio Senate win by 3 to 6 points is 0.295. That is the margin slice. Kalshi has Sherrod Brown near 68 percent to win, and the Polymarket ladder prices this slice at 29.5 percent.
+- Mississippi Republicans are 0.865. Kalshi has Cindy Hyde-Smith near 89 percent, and Polymarket is near 87 percent.
+- Republican Senate control is 0.345. Kalshi is near 36.5 percent, and Polymarket is near 35.5 percent.
+- Nevada governor Democrats are 0.685. Kalshi has Aaron Ford near 70 percent.
+- Arizona governor Democrats are 0.905. Polymarket has Katie Hobbs near 90.5 percent, and Kalshi has the Democrat near 88.5 percent.
+- Mary Peltola is 0.725. Kalshi has Dan Sullivan near 25 to 26 percent.
+- No Fed cut in 2026 is 0.9595. September 16 was a hike. October 27-28 and December 8-9 are ahead.
+- Ethereum at $2,000 in October is 0.051. Public October lows are near $2,280 to $2,330. The window runs through October 31.
+
+The liquid names match the other book. The scanner did not hide a 10-cent gap there.
+
+Round 20 is drawn from what remained: 76 names, seed 20261114, split 20 primary / 0 thin / 0 below. Eligible before the take was 76 primary, 0 thin, and 0 below. The draw did not backfill.
