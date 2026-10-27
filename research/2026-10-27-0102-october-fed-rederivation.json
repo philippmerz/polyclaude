@@ -1,0 +1,54 @@
+{
+  "schema": "polyclaude.october_fed_rederivation.v1",
+  "computed_utc": "2026-10-27T01:04:46Z",
+  "market_slug": "will-no-one-dissent-the-october-fed-decision-2026",
+  "identity": {
+    "path_weights": [
+      0.75,
+      0.23,
+      0.01,
+      0.01
+    ],
+    "conditional_unanimity": [
+      0.65,
+      0.8,
+      0.35,
+      0.2
+    ],
+    "source_exception": [
+      0.02,
+      0.5
+    ],
+    "haircut": 0.2,
+    "formula": "p=(1-e0)*sum(w*u)+e0*e1; stress=p-0.20"
+  },
+  "dot": 0.677,
+  "p_yes": 0.6734600000000001,
+  "p_yes_stress": 0.47346000000000005,
+  "probability_changed": false,
+  "quote_fit": false,
+  "evidence": {
+    "url": "https://www.cbsnews.com/news/federal-reserve-interest-rates-october-meeting/",
+    "read_utc": "2026-10-27T01:04:46Z",
+    "holds": [
+      "Economists expect the Wednesday 2 p.m. ET statement to hold the funds rate at 3.75% to 4%.",
+      "CME FedWatch in the article: 88% October hold, 71% December hike, no November meeting.",
+      "September was a quarter-point hike, the first in three years.",
+      "John Williams: no urgency after the September action.",
+      "Chair Kevin Warsh holds the press conference and is not giving forward guidance.",
+      "The article names no dissent."
+    ]
+  },
+  "live_october_no_change_yes": 0.9345,
+  "exit_this_tick": {
+    "bid": 0.21,
+    "sell_usd": 4.2,
+    "stressed_hold_usd": 13.46,
+    "verdict": "HOLD CANDIDATE"
+  },
+  "reservation": {
+    "remaining_risk_usd": 4.8,
+    "changed": false
+  },
+  "action": "Hold. No order. Probability unchanged."
+}
