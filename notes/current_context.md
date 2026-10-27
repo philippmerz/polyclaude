@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-27T02:01:59Z"
+reviewed_at: "2026-10-27T02:18:23Z"
 valid_until: "2026-10-27T06:00:00Z"
 source_hashes:
   README.md: ec3353895e40c84c10ff83326e59eabced032d7ad0aaceaced51827a3fd77f1f
@@ -10,18 +10,20 @@ source_hashes:
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: 3f781788fa766858cc3771127fbe8e17f30f062169570ebf8643d518334cc4bd
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: a09425b7af07a16e304561f4f0bd4e7e029d05414e32a26fb10dbf43029f0f32
+  notes/journal.md: 57c37248d12a404234ab3761f0901d8aad8c513df90484772df74b2b15493da7
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
 
-**2026-10-27 02:01 UTC:** 02:00 check, tick 20261027T020001Z. Retain every open holding. No trade and no Telegram. Delcy's new quote is her speaking as president. The vacancy sequence remains 2027.
+**2026-10-27 02:18 UTC:** Tick 20261027T021709Z. Retain every open holding. The China Daily Kimi launch is not an HLE print. Delcy's "stop the show" quote leaves her in office. A Ballon d'Or recap is not the Messi contract. No trade and no Telegram.
+
+**Oct 27 02:01 UTC:** The full check found the same holds. Discovery was page-capped and `execution_ready` was false.
 
 **Oct 26 20:14 UTC:** Michigan and OpenRouter were sold and deindexed.
 
 ## Underwriting
 
-| Holding | Size; primary / stress | Exit vs hold |
+| Holding | Size; primary / stress | Exit vs hold at 02:17 UTC |
 |---|---:|---:|
 | October Fed YES | 19.99; .673 / .473 | $4.20 vs $13.46 |
 | December Fed YES | 20; .460 / .310 | $4.20 vs $9.20 |
@@ -31,8 +33,8 @@ source_hashes:
 | Clarity pair | over-58 NO 29 and over-50 YES 29 | full exit $27.11 vs fair $29.00 |
 | Trump-out NO | 0.33 | still held |
 
-The #179 reservation stays. October Fed `verified` is 2026-10-27 and the probability is unchanged. Kelly scale-ins were not taken.
+The #179 reservation stays. October Fed `verified` is 2026-10-27 and the probability is unchanged.
 
 ## State and next boundary
 
-Bankroll $196.55 versus $170, +$26.55 (+15.6%). Settled cash +$20.35. Gas tokens $5.69 excluded. PM midpoint $45.12, realizable $42.15, overstatement $2.97. Hurdle 3.50%, 0 flags. Discovery page-capped, execution_ready false. Next light 2026-10-27 06:00 UTC. Next full 14:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. [Backlog](backlog.md).
+At 02:17 UTC, bankroll $196.54 versus $170, +$26.54 (+15.6%). Settled cash +$20.35. Gas tokens $5.67 excluded. PM midpoint $45.12, realizable $42.15. Next light 2026-10-27 06:00 UTC. Next full 14:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. [Backlog](backlog.md).
