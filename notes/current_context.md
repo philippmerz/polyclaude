@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-27T01:11:36Z"
+reviewed_at: "2026-10-27T01:12:57Z"
 valid_until: "2026-10-27T02:00:00Z"
 source_hashes:
   README.md: ec3353895e40c84c10ff83326e59eabced032d7ad0aaceaced51827a3fd77f1f
@@ -10,20 +10,20 @@ source_hashes:
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: 8046a3218efbeea4e036bc6d00334d0296ca06953cb01244237a454579f101e1
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: c4f259965b86b6fdad4560eaa881d7e36fedc7d0e1f2bac93c45a91995adc2ce
+  notes/journal.md: 5a968684a20eb365e6ba43f1f2b5cb63d8dfaa3b6e3e795d8389293ec2c0da4d
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
 
-**2026-10-27 01:11 UTC:** Tick 20261026T231238Z checklist. Retain every open holding. Fresh marks match the 01:10 book. The eight news ids stay the 01:09 judgment: the State Department vacancy quote is for 2027. No trade and no Telegram.
+**2026-10-27 01:12 UTC:** Tick 20261027T004545Z. Retain every open holding. The four alerts match the 01:09 judgment. Fresh 01:12 marks still hold Delcy at $4.20 versus $18.48. No trade and no Telegram.
 
-**Oct 27 01:09 UTC:** Those ids and the later 00:45 tick were read against El Nacional, NTN24, and LaSexta.
+**Oct 27 01:11 UTC:** The 23:12 checklist found the same book and page-capped discovery with `execution_ready` false.
 
 **Oct 26 20:14 UTC:** Michigan and OpenRouter were sold and deindexed.
 
 ## Underwriting
 
-| Holding | Size; primary / stress | Exit vs hold at 01:10 UTC |
+| Holding | Size; primary / stress | Exit vs hold at 01:12 UTC |
 |---|---:|---:|
 | October Fed YES | 19.99; .673 / .473 | $4.20 vs $13.46 |
 | December Fed YES | 20; .460 / .310 | $4.00 vs $9.20 |
@@ -37,4 +37,4 @@ The #179 reservation stays. October Fed `verified` is 2026-10-27 and the probabi
 
 ## State and next boundary
 
-At 01:10 UTC, bankroll $196.23 versus $170, +$26.23 (+15.4%). Settled cash +$20.35. Gas tokens $5.72 excluded. PM midpoint $44.78, realizable $41.95. Hurdle 3.50%, 0 flags. Discovery page-capped, execution_ready false. Next full check 2026-10-27 02:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. [Backlog](backlog.md).
+At 01:12 UTC, bankroll $196.23 versus $170, +$26.23 (+15.4%). Settled cash +$20.35. Gas tokens $5.71 excluded. PM midpoint $44.78, realizable $41.95. Next full check 2026-10-27 02:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. [Backlog](backlog.md).
