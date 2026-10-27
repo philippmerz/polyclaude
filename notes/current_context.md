@@ -1,21 +1,23 @@
 ---
-reviewed_at: "2026-10-27T08:34:47Z"
-valid_until: "2026-10-27T10:00:00Z"
+reviewed_at: "2026-10-27T12:26:49Z"
+valid_until: "2026-10-27T15:00:00Z"
 source_hashes:
-  README.md: ec3353895e40c84c10ff83326e59eabced032d7ad0aaceaced51827a3fd77f1f
+  README.md: e6cf85347b6cae95395f0eeed5a2556dd2a04fbeb02b41bfc1f49863689c7c82
   strategy/01_lessons.md: 0a86e61f94ed6978cbab5dcfd9a9143406c4041531d506abf5a4f178cae4b519
-  strategy/02_operations.md: 65de19f91b4d590e08e90633e78a668de6f07cbfe44ef7b99a22568d3ad2bc06
+  strategy/02_operations.md: 126d00792f1ea14e580e37f2351c34ab6cac83d06b6c58aa1502a28e0eaa7d0e
   strategy/03_opportunity_method.md: 65d71e22d45f0f0c3d7991f4ccc3ad663dcc0d55ab5f0777eb2501feba5ec20a
-  scripts/README.md: 42b116a0a1c8417cb73bdc7277cd2d54648ae4fc74c615c5aad94b36e78d00ae
+  scripts/README.md: e3ad891eeb8f73752c01cd057f5463e23a0c6dbb4a6c315ff7efd3f49e1e9446
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
-  notes/backlog.md: 11cc26fb806205f2eb88a2bc2825bb0fa681f246cdcb77a42dcc9b1cfc0c8eda
+  notes/backlog.md: ef7ed19e043526b41a088098948ab1c1ea19dcef42d43a16a8b2ba5bad0361f2
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: daf3c9f651b25beca56c9834cb2f7531c92ba99d41f1e32d06f646b0b39f76c4
+  notes/journal.md: 5e711ba21443e9336a011b87a5c14354174f9da2ea152e23fec750f640ea1c68
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
 
-**2026-10-27 08:34 UTC:** Tick 20261027T083325Z. Retain every open holding. Delcy is still the interim, and the U.S. route still places a vacancy in 2027. The size tag is not an order while the #179 buy block is up. October Fed's midpoint moved on a wide book; the bid is still below the stressed hold. No trade and no Telegram.
+**2026-10-27 12:26 UTC:** Check-ins are eight equispaced wakes at 00, 03, 06, 09, 12, 15, 18, and 21 UTC. Ordinary news waits for the next wake. Critical and safety leads still spawn a tick. A finite task is `scripts/goal_inject.sh set` and `goal_inject.sh clear` when the work is done. No trade and no Telegram. The book was not remeasured.
+
+**Oct 27 08:34 UTC:** Tick 20261027T083325Z. Retain every open holding. Delcy is still the interim, and the U.S. route still places a vacancy in 2027. The size tag is not an order while the #179 buy block is up. October Fed's midpoint moved on a wide book; the bid is still below the stressed hold.
 
 **Oct 27 02:01 UTC:** Full check. Discovery was page-capped and `execution_ready` was false.
 
@@ -37,4 +39,4 @@ The #179 reservation stays. October Fed `verified` is 2026-10-27 and the probabi
 
 ## State and next boundary
 
-At 08:33 UTC, bankroll $198.59 versus $170, +$28.59 (+16.8%). Settled cash +$20.35. Gas tokens $5.64 excluded. PM midpoint $47.20, realizable $42.84. Next light 2026-10-27 10:00 UTC. Next full 14:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. [Backlog](backlog.md).
+At 08:33 UTC, bankroll $198.59 versus $170, +$28.59 (+16.8%). Settled cash +$20.35. Gas tokens $5.64 excluded. PM midpoint $47.20, realizable $42.84. This cadence change did not remeasure the book. Next tick 2026-10-27 15:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 Oct 27 22:00: verify the remainder only. The news cursor for that tick is the 08:34 UTC journal, because this entry did not review alerts. [Backlog](backlog.md).

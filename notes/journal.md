@@ -33776,3 +33776,11 @@ Backlog/recentjournal reviewed after fullcheck63a58de6. One10:24:01–02 authent
 - **Other exits:** December Fed bid about 0.210, sell $4.20 versus hold $9.20. Kimi bid about 0.100, sell $1.00 versus hold $3.85. Messi bid about 0.300, sell $1.50 versus hold $3.00. Clarity full exit $27.38 versus fair $29.00, HOLD_COMPLETE_GROUP. No exact tie.
 - **Account:** Bankroll $198.59 versus $170, +$28.59 (+16.8%). Settled cash +$20.35. Gas tokens $5.64 excluded. PM midpoint $47.20, realizable $42.84, overstatement $4.36. Open cost $44.61, marked unrealised +$2.60. pUSD $10.96. redeem-all found 0 winners. UMA had this one price alert and no resolution alert. Daemons one each, current. Discovery stays the 02:00 page-capped pass and was not repeated.
 - **Due:** Next light 2026-10-27 10:00 UTC. Next full 14:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 remainder verify Oct 27 22:00.
+
+## 2026-10-27 12:26 UTC — eight equispaced ticks; finite goal inject
+
+- **Decision:** No trade, no prior change, and no Telegram. Check-ins are now eight equispaced wakes at 00, 03, 06, 09, 12, 15, 18, and 21 UTC (`0 */3 * * *`). The 02:00, 14:00, and light 06/10/18/22 lines are removed. Ordinary news reviews wait in `notes/news_alerts.jsonl` for the next wake. Critical and safety leads still spawn a tick. `scripts/goal_inject.sh set` queues one `/goal` line, and `scripts/goal_inject.sh clear` removes it when that work is done. A goal is not a waiting loop.
+- **News cursor:** This entry did not review alerts. The next tick reads `notes/news_alerts.jsonl` from the 08:34 UTC journal, including the 10:04 batch. Queue acceptance of that batch was not a completed review.
+- **Watcher:** `news_watcher.py` was restarted after the edit. One process, pid 594064, started 2026-10-27 12:25:26 UTC. Telegram, heartbeat, and opportunity watch were left running.
+- **Book:** Unchanged from the 08:33 marks and not remeasured. Bankroll $198.59 versus $170. Discovery stays the 02:00 page-capped pass.
+- **Due:** Next tick 2026-10-27 15:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 remainder verify Oct 27 22:00.

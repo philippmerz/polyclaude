@@ -9,10 +9,10 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 PYTHON="${POLYCLAUDE_PYTHON:-${POLYCLAUDE_DIR}/.venv/bin/python}"
 
-# The light 06/10/18/22 UTC crons invoke inject_prompt.sh directly and inherit
-# cron's minimal PATH. OpenCode lives under the service account's ~/.local/bin,
-# so make the normal system/local user locations explicit before Python
-# resolves the executable. Keep caller-supplied PATH entries after the prefix.
+# Scheduled check-ins call inject_prompt.sh, which calls this probe, and
+# inherit cron's minimal PATH. OpenCode lives under the service account's
+# ~/.local/bin, so make the normal system/local user locations explicit before
+# Python resolves the executable. Keep caller-supplied PATH entries after the prefix.
 export PATH="/usr/local/bin:${HOME}/.local/bin:${PATH:-/usr/bin:/bin}"
 
 if [[ ! -x "${PYTHON}" ]]; then

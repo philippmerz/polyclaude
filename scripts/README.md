@@ -19,7 +19,7 @@ adapter, and that delivery does not resume the interactive session.
 on-demand research supporting accessible on-chain opportunities and held
 positions.
 
-- `daily_checkin.sh` — main cron tick at `02:00` + `14:00` UTC. Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow. Optional `POLYCLAUDE_DISPATCH_RECEIPT` records the actual lock/queue/fallback boundary; no receipt claims review completion.
+- `daily_checkin.sh` — cron tick every 3 hours at 00, 03, 06, 09, 12, 15, 18, and 21 UTC (`0 */3 * * *`). Queues to the live operator, or runs a fresh onboarded fallback, then follows the standard portfolio + prospecting + journal flow. Optional `POLYCLAUDE_DISPATCH_RECEIPT` records the actual lock/queue/fallback boundary; no receipt claims review completion.
 - `arb_cron.sh` — hourly arb scan + executor at `30 * * * *`.
 
 `inject_prompt.sh` keeps the historical Markdown bytes in `notes/inject_log.md`
@@ -28,6 +28,8 @@ UTC time, status/return code, queued-payload UTF-8 byte count and SHA-256, and
 whether the bounded contract was appended; they omit prompt and quota text. The
 heartbeat uses only the file modification time, so this preserves its liveness
 signal without duplicating prompt bodies.
+
+`goal_inject.sh` queues one `/goal <objective>` line, or `/goal clear`, into the live session. Set it for a finite task and clear it when the work is done. The line is one slash command, so it does not receive the bounded-run appendix. A goal is not a waiting loop.
 
 ## Sleeve clients (libraries imported by other scripts)
 

@@ -88,9 +88,13 @@ and Router02 call configuration; 15 focused tests passed. See the
 ## Operating model
 
 - **Reactive:** `news_watcher.py` and `opportunity_watch.py` monitor material
-  events and can trigger a bounded review.
-- **Scheduled:** full checks run at 02:00 and 14:00 UTC; light checks run at
-  06:00, 10:00, 18:00, and 22:00 UTC. On-chain opportunity research is on demand.
+  events. Ordinary news reviews are read on the next scheduled tick. Critical
+  and safety leads wake a bounded review immediately, and an armed opportunity
+  trigger can wake one too.
+- **Scheduled:** eight check-ins a day, every three hours at 00:00, 03:00,
+  06:00, 09:00, 12:00, 15:00, 18:00, and 21:00 UTC. On-chain opportunity
+  research is on demand. A finite task uses `scripts/goal_inject.sh` and is
+  cleared when that work is done.
 - **Health:** `heartbeat_watch.py` checks daemon freshness, session progress,
   and disk headroom.
 - **Storage:** snapshots use compact gzip JSON; shared batch context is stored

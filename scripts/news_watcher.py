@@ -7,7 +7,9 @@ matches entry titles + summaries against tiered keyword lists, and:
   exposure; persist research leads without claiming an investment alert.
 - Tier 2 → filter and persist qualifying internal detections.
 - Material/critical current-exposure impacts and explicit uncertainty/safety
-  cases qualify for review. Track queue acknowledgment separately from review.
+  cases qualify for review. Ordinary reviews wait for the scheduled tick.
+  Critical leads still request a tick immediately. Track queue acknowledgment
+  separately from review.
 
 The watcher is detection-only: RSS matches never send Telegram messages.
 
@@ -176,13 +178,44 @@ def _dispatch_receipt(path: Path) -> dict | None:
 def _dispatch_pending_reviews(state: dict, review_alerts: list[dict], now: float) -> None:
     """Retain qualified alert IDs until the queue acknowledges their dispatch.
 
-    Journal recency is not proof that these alerts were read. An unconfirmed
-    request is checked for a late receipt, not blindly repeated. Critical and
-    infrastructure-safety leads bypass the ordinary 90-minute request cooldown.
+    Journal recency is not proof that these alerts were read. Ordinary reviews
+    wait for the next scheduled tick and do not spawn one. An unconfirmed
+    critical request is checked for a late receipt, not blindly repeated.
+    Critical leads still request a tick immediately.
     """
     pending = {r["alert_id"]: r for r in state.get("pending_review_alerts", [])
                if isinstance(r, dict) and isinstance(r.get("alert_id"), str)}
     pending.update({r["alert_id"]: r for r in review_alerts})
+    # Ordinary reviews stay in notes/news_alerts.jsonl for the next scheduled
+    # tick. They do not spawn an operator turn. Critical leads still do.
+    routine_ids = [key for key, row in list(pending.items()) if not row.get("critical")]
+    for key in routine_ids:
+        pending.pop(key, None)
+    if not pending:
+        if routine_ids:
+            record = {"status": "deferred", "why": "scheduled_cadence",
+                      "alert_ids": routine_ids}
+            previous = state.get("last_review_dispatch", {})
+            same = (previous.get("status") == record["status"]
+                    and previous.get("why") == record["why"]
+                    and previous.get("alert_ids") == record["alert_ids"])
+            if not same:
+                try:
+                    path = _REPO_ROOT / "logs" / "news_dispatch.jsonl"
+                    path.parent.mkdir(parents=True, exist_ok=True)
+                    with path.open("a") as stream:
+                        stream.write(json.dumps({
+                            "ts": dt.datetime.now(dt.timezone.utc).isoformat(),
+                            **record}) + "\n")
+                except OSError as exc:
+                    print(f"[watcher] dispatch-log append failed: "
+                          f"{_secrets.scrub(str(exc))[:120]}", flush=True)
+                print(f"[watcher] review dispatch deferred: scheduled_cadence; "
+                      f"{len(routine_ids)} alert(s); completion not asserted",
+                      flush=True)
+            state["last_review_dispatch"] = record
+        state["pending_review_alerts"] = []
+        return
     state["pending_review_alerts"] = list(pending.values())
     if not pending:
         return
