@@ -416,3 +416,25 @@ Kimi marked two investigates. Both are stale priors against a live book that mat
 The liquid names match the other book. The oil high is a source difference, not a confirmed miss. The scanner did not hide a 10-cent gap there.
 
 Round 18 is drawn from what remained: 116 names, seed 20261112, split 20 primary / 0 thin / 0 below. Eligible before the take was 116 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 18
+
+20 names, seed 20261112. Thin and below were empty, so the draw was 20 primary. Kimi returned 10 skip, 8 watch, and 2 investigate. The API did not refuse. One reply used id 5126775. The pool has no such id, and the reason is the Indiana moratorium, so that verdict is stored on 5126779.
+
+No trade. No order was sent.
+
+Kimi marked two investigates. Both use a stale base rate against a live print.
+
+- Oil below $85 and a Democratic Senate is 0.029. WTI settled near $101.76, so the oil leg is a drop from there. Kalshi has Democrats near 63 percent to win the Senate. The joint is the oil tail.
+- Iowa Democrats are 0.855. Kim Reynolds is not running. Kalshi has Rob Sand near 85 percent. A 0.45 prior uses the 2024 presidential lean.
+- Oil at $80 and a Democratic Senate is 0.653. The oil leg is not a missed print. The joint sits next to the Senate price.
+- Arizona Republicans are 0.095. Polymarket has Andy Biggs near 9.5 percent, and Kalshi has the Republican near 11.5 percent.
+- Bitcoin at $87,500 in October is 0.045. The market covers the whole month. A cited public high is about $86,492 on October 4. Spot is near $80,000. That is not a confirmed Binance 1-minute print. The window runs through October 31.
+- WTI at $120 in October is 0.023. The 52-week NYMEX high is about $119.48. This contract uses a Pyth ICE candle.
+- Anthropic under $1.25 trillion at the IPO close is 0.0345. The S-1 is filed, the price range is blank, and reported talk is about $1.5 trillion to $2 trillion. This outcome is that lower bracket.
+- Anthropic at $1.5 trillion by December 31 is 0.9625. The contract pays on the Nasdaq Private Market price. October talk of about $1.5 trillion to $2 trillion is unsigned. No NPM print was checked. Kimi's $300 billion figure is stale.
+
+The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
+
+Round 19 is drawn from what remained: 96 names, seed 20261113, split 20 primary / 0 thin / 0 below. Eligible before the take was 96 primary, 0 thin, and 0 below. The draw did not backfill.
