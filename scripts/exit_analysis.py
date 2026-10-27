@@ -316,8 +316,11 @@ def main() -> int:
     args = ap.parse_args()
 
     priors = json.loads(PRIORS.read_text())
+    # sizeThreshold=0 matches positions.py. The API default hides the
+    # sub-share Trump-out balance, which then never reaches a verdict.
     pos = httpx.get("https://data-api.polymarket.com/positions",
-                    params={"user": ADDR, "limit": "100"}, timeout=25).json()
+                    params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
+                    timeout=25).json()
     # Positive losing-token balances can remain indexed after finalization.
     # They have no hold/sell decision left and must not generate advice.
     pos = [p for p in pos if p.get("redeemable") is not True]
@@ -349,7 +352,10 @@ def main() -> int:
         except (TypeError, ValueError):
             print(f"  [UNPRICED] malformed size on {slug[:52]}", file=sys.stderr)
             continue
-        if not math.isfinite(shares) or shares < 0.5:
+        # Non-positive sizes have no sale. A smaller positive balance still
+        # gets a verdict: the venue minimum is enforced in the book walk, so
+        # dust that cannot fill prints zero sell proceeds instead of vanishing.
+        if not math.isfinite(shares) or shares <= 0:
             continue
         if (args.slug_filter and args.slug_filter not in slug
                 and slug not in selected_group_slugs):

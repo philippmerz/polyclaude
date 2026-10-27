@@ -459,3 +459,70 @@ def test_exit_cli_keeps_a_set_only_pair_whole_when_stress_prefers_cash(
     assert "SELL TAKER" not in output
     assert "GROUP STRUCTURES" in output
     assert "GROUP_BROKEN" in output
+
+
+def test_dust_balance_is_named_and_unsold(monkeypatch, tmp_path, capsys) -> None:
+    """A sub-share balance still reaches the live comparison and is not sold."""
+    priors = tmp_path / "priors.json"
+    priors.write_text(json.dumps({
+        "trump-out-as-president-before-2027": {
+            "p_no": 0.97,
+            "verified": "2026-10-27",
+        }
+    }))
+    monkeypatch.setattr(exits, "PRIORS", priors)
+    monkeypatch.setattr(
+        exits.position_groups,
+        "evaluate_groups",
+        lambda *_args, **_kwargs: type("Book", (), {
+            "groups": {},
+            "by_slug": {},
+            "issues": [],
+        })(),
+    )
+
+    seen: dict[str, object] = {}
+
+    def get(url: str, **kwargs) -> _Response:
+        if url.endswith("/positions"):
+            seen["params"] = kwargs.get("params")
+            return _Response([{
+                "slug": "trump-out-as-president-before-2027",
+                "outcome": "No",
+                "size": "0.33",
+                "asset": "token-dust",
+                "conditionId": CID,
+                "redeemable": False,
+            }, {
+                "slug": "zero-balance",
+                "outcome": "Yes",
+                "size": "0",
+                "asset": "token-zero",
+                "conditionId": CID,
+                "redeemable": False,
+            }])
+        if url.endswith("/book"):
+            return _Response({
+                "bids": [{"price": "0.99", "size": "10"}],
+                "min_order_size": "5",
+            })
+        if "/clob-markets/" in url:
+            return _Response({"c": CID, "fd": {"r": 0.0, "e": 1, "to": True}, "tbf": 0})
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+    assert exits.main() == 0
+    assert seen["params"]["sizeThreshold"] == "0"
+    out = capsys.readouterr().out
+    assert "trump-out-as-president-before-2027" in out
+    assert "zero-balance" not in out
+    line = next(row for row in out.splitlines() if row.startswith("trump-out"))
+    assert "HOLD CANDIDATE" in line
+    assert "SELL TAKER" not in line
+    # sell proceeds are the column before the verdict and sit below hold value
+    hold_sell = line.split()
+    # slug, side, shares, fair, bid, hold, sell
+    assert float(hold_sell[5]) == pytest.approx(0.32, abs=0.01)
+    assert float(hold_sell[6]) == pytest.approx(0.0)
+    assert float(hold_sell[6]) < float(hold_sell[5])
