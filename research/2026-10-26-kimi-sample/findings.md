@@ -485,3 +485,24 @@ Kimi marked no investigate. The checked prices match the other book or a named p
 The liquid names match the other book. The scanner did not hide a 10-cent gap there.
 
 Round 21 is drawn from what remained: 56 names, seed 20261115, split 20 primary / 0 thin / 0 below. Eligible before the take was 56 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 21
+
+20 names, seed 20261115. Thin and below were empty, so the draw was 20 primary. Kimi returned 13 skip, 6 watch, and 1 investigate. The API did not refuse.
+
+No trade. No order was sent. The Delcy holding was not touched.
+
+Kimi marked one investigate. It uses the old incumbent.
+
+- Iowa Democrats are 0.425. Joni Ernst is not running. Kalshi has Josh Turek near 42 percent, and Polymarket is near 42 to 43 percent. A 0.30 prior uses Ernst's old margin.
+- FL-07 Democrats are 0.25. Cory Mills lost the primary. Kalshi has Bale Dalton near 24 percent.
+- Maine Democrats are 0.545. Kalshi has Troy Jackson near 60 percent. The 0.47 prior uses Susan Collins's old streak.
+- A Republican Senate and a Democratic House is 0.265. Kalshi has that combination near 29 percent.
+- Nicolás Maduro as leader at the end of 2026 is 0.809. He was captured on January 3, and Delcy Rodriguez was sworn in as acting president on January 5. Reuters on October 26 still calls her the acting president. The contract pays on the official head of state on December 31, and both have claimed he remains the legal officeholder. That is not a clean 10-cent miss.
+- WTI at a $100 low in October is 0.80. The contract starts on October 23 and pays on a Pyth ICE candle, so the October 6 low does not count. The October 26 settlement was near $101.76. No post-creation $100 print was confirmed.
+- Russian diesel imports by December 31 are 0.915. The card already states the October 9 license. The contract pays on a physical import after October 19. No cargo was confirmed.
+
+The liquid names match the other book. The scanner did not hide a 10-cent gap there.
+
+Round 22 is drawn from what remained: 36 names, seed 20261116, split 20 primary / 0 thin / 0 below. Eligible before the take was 36 primary, 0 thin, and 0 below. The draw did not backfill.
