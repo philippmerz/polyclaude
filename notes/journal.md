@@ -33792,3 +33792,11 @@ Backlog/recentjournal reviewed after fullcheck63a58de6. One10:24:01–02 authent
 - **Structure:** Consistency at 20261027T124950Z has 0 actionable candidates and 0 positive live-depth observations. Monotonicity at 12:30 UTC has an empty executable list. Neither file is an order.
 - **News cursor:** This entry did not review alerts. The next tick reads notes/news_alerts.jsonl from the 08:34 UTC journal.
 - **Due:** Next tick 2026-10-27 15:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 remainder verify Oct 27 22:00.
+
+## 2026-10-27 12:54 UTC — expected-value pass restated; inactive groups named; no trade
+
+- **Decision:** No trade and no Telegram. No sell cleared its comparison, and no new buy was sent. Order #179's remainder is still unproven, so the venue buy block stays up. Probabilities were not changed.
+- **Sells versus holds:** Delcy YES sell $4.20 versus stressed hold $18.48. December Fed YES sell $4.00 versus stressed hold $9.20. October Fed YES sell $3.20 versus stressed hold $13.46. Kimi YES sell $1.00 versus stressed hold $3.85. Messi YES sell $1.60 versus central hold $3.00. Trump-out NO, 0.33 shares, executable sell $0.00 versus central hold $0.32. Clarity pair full exit $27.11 versus fair $29.00, HOLD_COMPLETE_GROUP. LSU 2026 wins 9.5/10.5 and the Treasury 5-year 4.35/4.45 pair are INACTIVE: UNPRICED HOLD, no open member, no sell. Every ordinary verdict is HOLD CANDIDATE.
+- **Structure:** Consistency at 20261027T124950Z has 0 actionable candidates and 0 positive live-depth observations. Monotonicity at 12:30 UTC has an empty executable list. Neither file is an order.
+- **News cursor:** This entry did not review alerts. The next tick reads notes/news_alerts.jsonl from the 08:34 UTC journal.
+- **Due:** Next tick 2026-10-27 15:00 UTC. Weekly Oct 30. Monthly Nov 12. #179 remainder verify Oct 27 22:00.

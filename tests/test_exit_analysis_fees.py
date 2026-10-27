@@ -526,3 +526,71 @@ def test_dust_balance_is_named_and_unsold(monkeypatch, tmp_path, capsys) -> None
     assert float(hold_sell[5]) == pytest.approx(0.32, abs=0.01)
     assert float(hold_sell[6]) == pytest.approx(0.0)
     assert float(hold_sell[6]) < float(hold_sell[5])
+
+
+def test_exit_cli_names_inactive_groups_as_unpriced_holds(monkeypatch, tmp_path, capsys) -> None:
+    """Configured groups with no open member still print an explicit hold."""
+    priors = tmp_path / "priors.json"
+    priors.write_text(json.dumps({
+        "solo": {"p_yes": 0.40, "verified": "2026-10-27"},
+    }))
+    monkeypatch.setattr(exits, "PRIORS", priors)
+    monkeypatch.setattr(exits, "_execution_fee_market", lambda _condition: {"takerBaseFee": 0})
+    inactive = {
+        "lsu": {
+            "group_id": "lsu",
+            "label": "LSU 2026 regular-season wins 9.5/10.5 monotonicity pair",
+            "status": "INACTIVE",
+            "actionable": False,
+            "issues": [],
+            "slugs": ["lsu-a", "lsu-b"],
+        },
+        "treasury": {
+            "group_id": "treasury",
+            "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
+            "status": "INACTIVE",
+            "actionable": False,
+            "issues": [],
+            "slugs": ["ty-a", "ty-b"],
+        },
+    }
+    monkeypatch.setattr(
+        exits.position_groups,
+        "evaluate_groups",
+        lambda *_args, **_kwargs: type("Book", (), {
+            "groups": inactive,
+            "by_slug": {},
+            "issues": [],
+        })(),
+    )
+
+    def get(url: str, **_kwargs) -> _Response:
+        if "positions" in url:
+            return _Response([{
+                "slug": "solo",
+                "outcome": "Yes",
+                "size": "5",
+                "asset": "token",
+                "conditionId": CID,
+                "redeemable": False,
+            }])
+        if url.endswith("/book"):
+            return _Response({
+                "bids": [{"price": "0.10", "size": "5"}],
+                "min_order_size": "1",
+            })
+        raise AssertionError(url)
+
+    monkeypatch.setattr(exits.httpx, "get", get)
+    monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
+    assert exits.main() == 0
+    out = capsys.readouterr().out
+    assert "SELL TAKER" not in out
+    for name in (
+        "LSU 2026 regular-season wins 9.5/10.5 monotonicity pair",
+        "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
+    ):
+        line = next(row for row in out.splitlines() if name in row)
+        assert "INACTIVE" in line
+        assert "UNPRICED HOLD" in line
+        assert "no sell" in line

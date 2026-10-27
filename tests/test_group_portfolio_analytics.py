@@ -193,6 +193,11 @@ def test_preconfigured_descending_monotonic_group_activates_on_first_leg():
     assert inactive.issues == []
     assert inactive.groups["meta"]["status"] == "INACTIVE"
 
+    summary = groups.format_group_summary(inactive.groups["meta"])
+    assert "INACTIVE" in summary
+    assert "UNPRICED HOLD" in summary
+    assert "no sell" in summary
+
     partial = groups.evaluate_groups(priors, _meta_positions()[:1])
     assert partial.groups["meta"]["status"] == "GROUP_BROKEN"
 

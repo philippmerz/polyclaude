@@ -1385,7 +1385,14 @@ def format_group_summary(
 ) -> str:
     """Compact human row shared by advisory CLIs."""
     if group.get("status") != "OK":
-        return f"{group.get('label', group.get('group_id', 'group'))}: " + "; ".join(group.get("issues", []))
+        label = group.get("label", group.get("group_id", "group"))
+        status = str(group.get("status") or "UNPRICED")
+        issues = [str(item) for item in (group.get("issues") or []) if str(item).strip()]
+        if status == "INACTIVE":
+            verdict = "UNPRICED HOLD — no open member; no sell"
+        else:
+            verdict = "GROUP_UNPRICED — HOLD; never fall back to leg-level action"
+        return f"{label}: " + "; ".join([status, *issues, verdict])
     if group.get("mark_status") == "OK":
         mark_text = (
             f"mark=${group['mark_value']:.2f} "

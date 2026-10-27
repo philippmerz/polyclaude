@@ -1,5 +1,5 @@
 ---
-reviewed_at: "2026-10-27T12:50:36Z"
+reviewed_at: "2026-10-27T12:54:30Z"
 valid_until: "2026-10-27T15:00:00Z"
 source_hashes:
   README.md: e6cf85347b6cae95395f0eeed5a2556dd2a04fbeb02b41bfc1f49863689c7c82
@@ -10,14 +10,14 @@ source_hashes:
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: ef7ed19e043526b41a088098948ab1c1ea19dcef42d43a16a8b2ba5bad0361f2
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: 68cd05343a73e6ac9e241a292faad81e4a75418f1c7ee3ada9821bbf3515aaf0
+  notes/journal.md: aa1d586f7485565e4d81ac47fce8bec404df60fb5091e356159a134f68b8f0e9
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
 
-**2026-10-27 12:50 UTC:** Expected-value pass. No trade and no Telegram. No open holding has executable sell proceeds at or above its stressed hold value, or its central hold value where no stressed probability is recorded. Order #179's remainder is unproven, so no new buy was sent.
+**2026-10-27 12:54 UTC:** Expected-value pass. No trade and no Telegram. No open holding has executable sell proceeds at or above its stressed hold value, or its central hold value where no stressed probability is recorded. The LSU and Treasury groups have no open member, so each is an unpriced hold. Order #179's remainder is unproven, so no new buy was sent.
 
-**Oct 27 08:34 UTC:** Tick 20261027T083325Z. Retain every open holding. Delcy is still the interim, and the U.S. route still places a vacancy in 2027. The size tag is not an order while the #179 buy block is up. October Fed's midpoint moved on a wide book; the bid is still below the stressed hold.
+**Oct 27 08:34 UTC:** Tick 20261027T083325Z. Retain every open holding. Delcy is still the interim, and the U.S. route still places a vacancy in 2027. The size tag is not an order while the #179 buy block is up.
 
 **Oct 27 02:01 UTC:** Full check. Discovery was page-capped and `execution_ready` was false.
 
@@ -27,13 +27,15 @@ source_hashes:
 
 | Holding | Size; primary / stress | Exit vs hold |
 |---|---:|---:|
-| October Fed YES | 19.99; .673 / .473 | $2.00 vs $13.46 |
+| October Fed YES | 19.99; .673 / .473 | $3.20 vs $13.46 |
 | December Fed YES | 20; .460 / .310 | $4.00 vs $9.20 |
 | Delcy YES | 28; .660 / .510 | $4.20 vs $18.48 |
 | Kimi YES | 10; .385 / .235 | $1.00 vs $3.85 |
 | Messi YES | 5; .600 central, no stress field | $1.60 vs $3.00 |
 | Clarity pair | over-58 NO 29 and over-50 YES 29 | full exit $27.11 vs fair $29.00 |
 | Trump-out NO | 0.33; .970 central | $0.00 vs $0.32 |
+| LSU 9.5/10.5 | no open member | UNPRICED HOLD, no sell |
+| Treasury 4.35/4.45 | no open member | UNPRICED HOLD, no sell |
 
 The #179 reservation stays. October Fed `verified` is 2026-10-27 and the probability is unchanged.
 
