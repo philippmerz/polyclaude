@@ -461,3 +461,27 @@ Kimi marked two investigates. Both use an old map or the wrong contract slice.
 The liquid names match the other book. The scanner did not hide a 10-cent gap there.
 
 Round 20 is drawn from what remained: 76 names, seed 20261114, split 20 primary / 0 thin / 0 below. Eligible before the take was 76 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 20
+
+20 names, seed 20261114. Thin and below were empty, so the draw was 20 primary. Kimi returned 11 skip, 9 watch, and 0 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+Kimi marked no investigate. The checked prices match the other book or a named public print.
+
+- Republican House control is 0.085. Kalshi has Republicans near 9.7 percent, and Polymarket is near 8 percent.
+- Montana Republicans are 0.92. Steve Daines is not running. Kalshi has Kurt Alme near 91 percent.
+- MT-01 Republicans are 0.55. Ryan Zinke is retiring. Kalshi and Polymarket have Aaron Flint near 55 percent.
+- Maine Republicans are 0.45. Kalshi has Susan Collins near 43 percent.
+- AZ-01 Democrats are 0.785. David Schweikert is retiring. Kalshi has Amish Shah near 79 percent.
+- NVIDIA as the largest company on October 31 is 0.91. October 26 screens put NVIDIA first and Apple second. The printed gap runs from about $10 billion to about $200 billion. The contract pays on that close.
+- A new press secretary by October 31 is 0.0415, and by November 30 is 0.325. Katie Zacharia was out on October 16. Those reports did not name a permanent replacement.
+- The Israel-Iran card through October 31 is 0.925. The full text pays No on an impacting strike. October 26 reporting describes a delayed strike, not a confirmed impact.
+- The Louisiana data-center card is 0.34. The full text counts a statewide moratorium, including centers above 100 MW. The card cut that clause.
+- A Ukraine peace instrument before 2027 is 0.10. A local pause does not qualify.
+
+The liquid names match the other book. The scanner did not hide a 10-cent gap there.
+
+Round 21 is drawn from what remained: 56 names, seed 20261115, split 20 primary / 0 thin / 0 below. Eligible before the take was 56 primary, 0 thin, and 0 below. The draw did not backfill.
