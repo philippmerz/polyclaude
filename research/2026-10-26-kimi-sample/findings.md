@@ -393,3 +393,26 @@ No investigate call. The one watch matches the other book. The skips that named 
 The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
 
 Round 17 is drawn from what remained: 136 names, seed 20261111, split 20 primary / 0 thin / 0 below. Eligible before the take was 136 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 17
+
+20 names, seed 20261111. Thin and below were empty, so the draw was 20 primary. Kimi returned 9 skip, 9 watch, and 2 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+Kimi marked two investigates. Both are stale priors against a live book that matches Kalshi.
+
+- Iowa Republicans are 0.145. Kim Reynolds is not running. Kalshi has Zach Lahn near 16 percent, and Polymarket is near 14 percent. A 0.70 prior uses the old Republican lean.
+- Texas Railroad Commissioner Democrats are 0.515. Kalshi has Jon Rosenthal near 50 percent and Bo French near 52 percent. A 0.15 prior uses the 1994 statewide streak.
+- Florida governor Democrats are 0.175. Kalshi has that side near 20 percent, and Polymarket has David Jolly near 18.5 percent.
+- Florida Senate Democrats are 0.10. Kalshi has that side near 12 percent, and Polymarket is near 11 percent.
+- Minnesota Senate Democrats are 0.855. Kalshi has Peggy Flanagan near 84 percent, and Polymarket is near 86 percent.
+- Oklahoma governor Republicans are 0.905. Kalshi has that side near 89.5 percent, and Polymarket has Mike Mazzei near 91.5 percent.
+- WTI at $105 in October is 0.46. The market was created September 25. NYMEX showed a $110.48 high on October 20. This contract uses a Pyth ICE candle, and the book is still about 0.46. That NYMEX print is not a confirmed Pyth candle.
+- WTI at $90 in October is 0.075. The market was created October 12 at 16:41 UTC, so earlier lows near $86.86 do not count. Later public daily lows are above $90. The window runs through October 31.
+- A December Fed increase of 50 basis points or more is 0.027. That is the ladder leg beside a 25 basis point increase at 0.745.
+
+The liquid names match the other book. The oil high is a source difference, not a confirmed miss. The scanner did not hide a 10-cent gap there.
+
+Round 18 is drawn from what remained: 116 names, seed 20261112, split 20 primary / 0 thin / 0 below. Eligible before the take was 116 primary, 0 thin, and 0 below. The draw did not backfill.
