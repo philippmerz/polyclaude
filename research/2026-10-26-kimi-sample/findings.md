@@ -506,3 +506,10 @@ Kimi marked one investigate. It uses the old incumbent.
 The liquid names match the other book. The scanner did not hide a 10-cent gap there.
 
 Round 22 is drawn from what remained: 36 names, seed 20261116, split 20 primary / 0 thin / 0 below. Eligible before the take was 36 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 22
+
+20 names, seed 20261116. Thin and below were empty, so the draw was 20 primary. The API refused on batch 73 before a verdict came back. The provider said the 5-hour usage limit was reached and returned HTTP 429. Batch 74 was not sent. These 20 names remain pending.
+
+No trade. No order was sent.

@@ -1100,6 +1100,8 @@
     },
     "picked": 20,
     "filter": "dropped screened ids, sub-3-day names, prices outside 0.02-0.98, China-adjacent questions, held contracts, and match, spread, score, chart, and post-count questions",
-    "split": "20 primary / 0 thin / 0 below"
+    "split": "20 primary / 0 thin / 0 below",
+    "quota": "API refused on batch 73: 5-hour usage limit, HTTP 429. Batch 74 was not sent.",
+    "screened": false
   }
 }
