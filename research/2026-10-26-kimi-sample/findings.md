@@ -369,3 +369,27 @@ Marine Le Pen at 0.4365 is an April 2027 forecast on a large book. No hard confl
 The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
 
 Round 16 is drawn from what remained: 156 names, seed 20261110, split 20 primary / 0 thin / 0 below. Eligible before the take was 156 primary, 0 thin, and 0 below. The draw did not backfill.
+
+
+## Round 16
+
+20 names, seed 20261110. Thin and below were empty, so the draw was 20 primary. Kimi returned 19 skip, 1 watch, and 0 investigate. The API did not refuse.
+
+No trade. No order was sent.
+
+No investigate call. The one watch matches the other book. The skips that named a missing price have a public print, and none of those prints is a 10-cent miss.
+
+- Mississippi Democrats are 0.135. Kalshi has Scott Colom near 11 percent, and Polymarket is near 14 percent. A 0.06 prior disagrees with both books.
+- Michigan Democrats are 0.675. Kalshi has Abdul El-Sayed near 66 percent, and Polymarket is near 68 percent.
+- Another Fed hike is 0.765. The September 16 hike does not count. October 27-28 and December 8-9 are ahead. The December ladder prices a 25 basis point increase at 0.745 and no change at 0.215.
+- WTI at $85 in October is 0.0255. A public October daily low is $86.86 on October 6, on the NYMEX series rather than a Pyth candle. Settlement on October 26 is near $101.76. The window runs through October 31.
+- Gold at $6,000 is 0.0285. Public settlements are near $4,030, and the 52-week high is under $5,630. The window runs through December.
+- Bitcoin at $130,000 is 0.0345. The cited peak is about $126,000 on October 6, 2025, before this window. Spot is near $80,000.
+- Tesla and SpaceX by December 31 is 0.125. On October 20 the companies formed special committees and had not agreed terms. No controlling-interest announcement has been reported.
+- Russia-Ukraine talks by October 31 are 0.029. The next talks are described as November, after this window.
+- Oil at $80 and a Republican Senate is 0.312. The oil leg is not a missed $80 print. Kalshi has Republicans near 36 percent to win the Senate.
+- Paxton over Talarico for four hours is 0.0675. Kalshi has Paxton near 35 percent and Talarico near 65 percent. The contract pays on that hourly lead, not on the election.
+
+The liquid names match the other book or an open path. The scanner did not hide a 10-cent gap there.
+
+Round 17 is drawn from what remained: 136 names, seed 20261111, split 20 primary / 0 thin / 0 below. Eligible before the take was 136 primary, 0 thin, and 0 below. The draw did not backfill.
