@@ -105,6 +105,7 @@ def test_scheduled_prompts_append_bounded_run_contract(tmp_path: Path) -> None:
     assert "RESOURCE CONTRACT" in payload
     assert "check_usage.sh --brief" in payload
     assert "do not inject /usage" in payload
+    assert "/goal" not in payload
     log_path = tmp_path / "notes" / "inject_log.md"
     entry = _attempt(log_path)
     _assert_payload_binding(entry, captured.read_bytes())
