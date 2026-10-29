@@ -33853,3 +33853,9 @@ Operator message 1350 asked for a trade.xyz opportunity review using kimi in ope
 The live xyz book had 120 markets. 78 had at least $1M day notional. Extreme liquid funding is single-name equity perps, longs receiving: SKHX about -208% annualized, MINIMAX -192%, SOFTBANK -176%, SMSN -150%, CXMT -123%. Those are directional, and a stock hedge is out of scope. Gold, silver, copper, and XYZ100 funding was about 5.5%. WTI was 4.3%, SP500 1.9%, Brent 1.5%. Platinum was about +25% on $2.4M day volume. Ostium funding did not answer, so no cross-venue gap is certified. HIP-4 txyz outcomes were not priced.
 
 No order. No vetted Hyperliquid writer. Finland eligibility remains unestablished. Polymarket pUSD does not fund xyz, and reservation #179 still blocks new Polymarket buys. Reply is Telegram 1352.
+
+## 2026-10-29 19:52 UTC — Telegram 62572765 Polymarket pause; our wallet unchanged
+
+Operator message 1355 said Polymarket was being hacked and had paused everything except cancels. Polymarket's status page records a cancel-only window from 18:05 to 19:05 UTC, marked resolved. They said a third-party provider was compromised, referred it to law enforcement, and will make affected users whole. The website was not opened.
+
+Wallet 0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B is unchanged from the 18:03 check: pUSD 14.962932, USDC 0.108932, POL 47.708595. Aave USDC is about $122.25. The CLOB order list is empty. Nothing was cancelled. #179 stays live at risk 4.8. The 0.006842 tail is from the resolved October market, not from this pause. Reply is Telegram 1356.
