@@ -206,6 +206,10 @@ needle=$(head -n 1 -- "$copy" | cut -c 1-40)
 
 deadline=$((SECONDS + WAIT_SECONDS))
 stable=0
+stable_need=${POLYCLAUDE_INJECT_STABLE:-5}
+if ! [[ "$stable_need" =~ ^[1-9][0-9]*$ ]]; then
+  stable_need=5
+fi
 cleared=0
 enters=0
 mark=""
@@ -251,7 +255,7 @@ while (( SECONDS < deadline )); do
 
   if [[ "$draft" != "ours" ]]; then
     stable=$((stable + 1))
-    if (( stable < 5 )); then
+    if (( stable < stable_need )); then
       sleep 1
       continue
     fi
