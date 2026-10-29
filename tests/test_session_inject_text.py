@@ -164,6 +164,89 @@ def test_insert_stops_when_enter_submits() -> None:
     assert "second line must not be typed" not in "\n".join(literals)
 
 
+class _CursorOnLastRowTmux(_FakeTmux):
+    """Live composer: typed rows sit above a blank ❯ row inside one box."""
+
+    def __init__(self, send_on_enter: bool = False) -> None:
+        super().__init__(send_on_enter=send_on_enter)
+        self.sent = ""
+
+    def key(self, name: str) -> None:
+        if name == "Enter" and self.send_on_enter:
+            self.actions.append(("key", name))
+            self.sent = "".join(self.parts)
+            self.parts.clear()
+            return
+        super().key(name)
+
+    def capture(self) -> str:
+        if self.sent:
+            bubble = "\n".join(f"│ {row}" for row in self.sent.split("\n") if row)
+            return (
+                f"╭\n{bubble}\n╰\n╭\n│ ❯ \n╰\n"
+                "Enter:send │ Alt+Enter:newline\n"
+            )
+        body = "".join(self.parts)
+        if not body:
+            return "╭\n│ ❯ \n╰\nShift+Tab:mode\n"
+        rows = body.split("\n")
+        above = "\n".join(f"│ {row}" for row in rows[:-1])
+        cursor = "│ ❯ " + rows[-1]
+        middle = (above + "\n" if above else "") + cursor
+        return f"╭\n{middle}\n╰\nEnter:send │ Alt+Enter:newline\n"
+
+
+def test_classify_keeps_text_above_the_cursor_inside_the_box() -> None:
+    needle = "Cron tick"
+    pane = (
+        "╭\n"
+        "│ Cron tick 20261029T150001Z. Run your scheduled\n"
+        "│ ❯ \n"
+        "╰\n"
+        "Enter:send │ Alt+Enter:newline\n"
+    )
+    assert MOD.classify_capture(pane, needle) == "0 send ours"
+    submitted = (
+        "╭\n"
+        "│ Cron tick 20261029T150001Z. Run your scheduled\n"
+        "╰\n"
+        "╭\n"
+        "│ ❯ \n"
+        "╰\n"
+        "Enter:send │ Alt+Enter:newline\n"
+    )
+    assert MOD.classify_capture(submitted, needle) == "0 send empty"
+
+
+def test_insert_continues_when_the_cursor_drops_to_a_blank_row() -> None:
+    text = "\n".join(
+        [
+            "Cron tick 20261029T150001Z. Run your scheduled check-in.",
+            "BOUNDED RUN CONTRACT: one scheduled run.",
+            "INJECT-CURSOR-END",
+        ]
+    )
+    tmux = _CursorOnLastRowTmux()
+    MOD.insert_text(text, tmux, sleep=lambda _seconds: None, literal_pause=0, newline_pause=0)
+    typed = "".join(value for kind, value in tmux.actions if kind == "literal" and value != "\\")
+    assert typed == "".join(MOD.prompt_lines(text))
+    enters = [i for i, (kind, value) in enumerate(tmux.actions) if kind == "key" and value == "Enter"]
+    assert len(enters) == text.count("\n")
+
+
+def test_insert_stops_when_a_submitted_line_leaves_the_composer_box() -> None:
+    text = "Cron tick 20261029T150001Z stay here\nsecond line must not be typed\n"
+    tmux = _CursorOnLastRowTmux(send_on_enter=True)
+    try:
+        MOD.insert_text(text, tmux, sleep=lambda _seconds: None, literal_pause=0, newline_pause=0)
+    except MOD.InjectError as exc:
+        assert "submitted" in str(exc)
+    else:
+        raise AssertionError("insert kept typing after the draft left the composer")
+    literals = [value for kind, value in tmux.actions if kind == "literal"]
+    assert "second line must not be typed" not in "".join(literals)
+
+
 def test_queued_count_reads_the_followup_row() -> None:
     pane = "▾ Queued 1\n#1 a user note\n╭\n❯ \n╰\nEnter:send now\n"
     assert MOD.queued_count(pane) == 1

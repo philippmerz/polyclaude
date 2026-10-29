@@ -78,7 +78,18 @@ def _composer(lines: list[str]) -> tuple[str, str, str]:
             beg = i
             break
     if beg is not None:
-        for i in range(beg, n):
+        # The cursor sits on the last row. Lines already typed stay above ❯
+        # inside this ╭…╰ box. A submitted message is an earlier box, so stop
+        # walking up at this box's ╭ or at the previous ╰.
+        start = beg
+        for i in range(beg, -1, -1):
+            if i != beg and "╰" in lines[i]:
+                break
+            start = i
+            if "╭" in lines[i]:
+                break
+        lo = start + 1 if "╭" in lines[start] else start
+        for i in range(lo, n):
             if "╰" in lines[i]:
                 break
             body.append(lines[i])
