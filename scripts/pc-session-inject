@@ -170,11 +170,25 @@ enqueue_now() {
     echo "paste did not appear in the composer" >&2
     exit 75
   fi
+  # A long draft scrolls the first line off the capture, so the needle
+  # classifies as foreign. The end of the rewritten file is still on screen.
+  endmark=$(python3 - "$copy" <<'PY'
+import sys
+from pathlib import Path
+lines = [ln for ln in Path(sys.argv[1]).read_text(encoding="utf-8").splitlines() if ln.strip()]
+print(lines[-1][:24] if lines else "", end="")
+PY
+)
+  [[ -n "$endmark" ]] || { echo "prompt file is empty" >&2; exit 64; }
   state=$(inspect_pane "$needle") || { echo "pane unreadable after type" >&2; exit 75; }
   read -r waiting footer draft <<<"$state"
+  pane=$(pane_text)
   echo "typed state=$state before=$before"
-  if [[ "$draft" != "ours" ]]; then
+  if [[ "$pane" != *"$endmark"* ]]; then
     echo "paste did not appear in the composer" >&2
+    if [[ "$draft" == "ours" || "$draft" == "chip" || "$draft" == "stuck" || "$draft" == "foreign" ]]; then
+      python3 "$MOD" clear-busy || true
+    fi
     exit 75
   fi
   if [[ "$footer" != "queue" && "$footer" != "send" && "$footer" != "alt" ]]; then
@@ -188,16 +202,17 @@ enqueue_now() {
     read -r waiting footer draft <<<"$state"
     after=$(pane_queue_count)
     pane=$(pane_text)
-    if [[ "$draft" != "ours" && "$draft" != "chip" && "$draft" != "stuck" ]] \
-      && (( after > before )) \
-      && [[ "$pane" == *"try one right now"* ]]; then
+    # Released means the end marker left the composer. A queued preview of
+    # the first line does not contain this end marker.
+    if (( after > before )) && [[ "$pane" != *"$endmark"* ]] \
+      && [[ "$draft" != "chip" && "$draft" != "stuck" ]]; then
       echo "enqueued before=$before after=$after state=$state"
       exit 0
     fi
     sleep 0.25
   done
   echo "draft was not queued (before=$before after=$after draft=$draft)" >&2
-  if [[ "$draft" == "ours" || "$draft" == "chip" || "$draft" == "stuck" ]]; then
+  if [[ "$pane" == *"$endmark"* ]]; then
     python3 "$MOD" clear-busy || true
   fi
   exit 75

@@ -230,7 +230,7 @@ def insert_text(
     tmux: Tmux,
     sleep=time.sleep,
     literal_pause: float = 0.04,
-    newline_pause: float = 0.15,
+    newline_pause: float = 0.30,
 ) -> None:
     """Type text into the focused composer. Do not press the send key."""
     lines = prompt_lines(text)
@@ -245,22 +245,32 @@ def insert_text(
         _apply(tmux, newline_actions(footer), sleep, newline_pause)
         draft = classify_capture(tmux.capture(), "").split()[2]
         if draft == "empty":
+            # A busy TUI can capture a blank frame mid-redraw.
+            sleep(0.25)
+            draft = classify_capture(tmux.capture(), "").split()[2]
+        if draft == "empty":
             raise InjectError("newline chord submitted the draft")
         _apply(tmux, [("literal", chunk) for chunk in literal_chunks(line)], sleep, literal_pause)
-    sleep(newline_pause)
-    capture = tmux.capture()
-    state = classify_capture(capture, "")
-    draft = state.split()[2]
-    if draft == "chip":
-        raise InjectError("typed text collapsed to a paste chip", clear=True)
     last = ""
     for line in reversed(lines):
         if line.strip():
             last = line
             break
     prefix = last[:24]
-    visible = composer_text(capture)
-    if prefix and prefix not in visible:
+    capture = ""
+    visible = ""
+    draft = "unknown"
+    for _ in range(8):
+        sleep(newline_pause)
+        capture = tmux.capture()
+        state = classify_capture(capture, "")
+        draft = state.split()[2]
+        if draft == "chip":
+            raise InjectError("typed text collapsed to a paste chip", clear=True)
+        visible = composer_text(capture)
+        if not prefix or prefix in visible or prefix in capture:
+            return
+    if prefix and prefix not in visible and prefix not in capture:
         # Esc Esc on an empty composer opens rewind. Clear only a confirmed draft.
         raise InjectError(
             "typed text did not appear in the composer",
