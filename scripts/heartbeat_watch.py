@@ -490,19 +490,83 @@ def check_tick_execution(state: dict) -> None:
               cooldown=TICK_EXEC_COOLDOWN)
 
 
-def check_operator_session(state: dict) -> None:
-    """Alert when the operator tmux session itself is absent (2026-07-16
-    audit: after the reboot, every daemon auto-recovered except the session —
-    a human closed that gap 21 minutes later by luck)."""
+OPERATOR_UID = "1000"
+
+
+def _proc_status_field(pid: int, field: str, proc_root: Path) -> str | None:
     try:
-        r = subprocess.run(["tmux", "has-session", "-t", "operator"],
-                           capture_output=True, timeout=10)
-        if r.returncode != 0:
-            _emit(state, "operator_session_missing",
-                  "operator tmux session is ABSENT (reboot?) — ticks/injects/"
-                  "messages have no destination and only headless fallbacks run. "
-                  "Operator: run pc-attach --start from an interactive terminal.",
-                  cooldown=DAEMON_DOWN_COOLDOWN)
+        text = (proc_root / str(pid) / "status").read_text(
+            encoding="utf-8", errors="replace"
+        )
+    except OSError:
+        return None
+    prefix = f"{field}:"
+    for line in text.splitlines():
+        if line.startswith(prefix):
+            parts = line.split()
+            return parts[1] if len(parts) > 1 else None
+    return None
+
+
+def _operator_tmux_live(proc_root: Path = Path("/proc")) -> bool:
+    """True when philipp's grok TUI is a child of a tmux server.
+
+    The interactive operator is that grok session. A tmux session named
+    operator does not exist, and this watcher runs as polyclaude, which
+    cannot open philipp's tmux socket. Headless grok has no tmux parent.
+    """
+    try:
+        entries = list(proc_root.iterdir())
+    except OSError:
+        return False
+    grok_pids: list[int] = []
+    for entry in entries:
+        if not entry.name.isdigit():
+            continue
+        pid = int(entry.name)
+        if _proc_status_field(pid, "Uid", proc_root) != OPERATOR_UID:
+            continue
+        try:
+            comm = (entry / "comm").read_text(encoding="utf-8").strip()
+        except OSError:
+            continue
+        if comm == "grok":
+            grok_pids.append(pid)
+    for pid in grok_pids:
+        current = pid
+        for _ in range(8):
+            parent_text = _proc_status_field(current, "PPid", proc_root)
+            if parent_text is None:
+                break
+            parent = int(parent_text)
+            if parent <= 1:
+                break
+            try:
+                parent_comm = (proc_root / str(parent) / "comm").read_text(
+                    encoding="utf-8"
+                ).strip()
+            except OSError:
+                break
+            if parent_comm == "tmux: server":
+                return True
+            current = parent
+    return False
+
+
+def check_operator_session(state: dict) -> None:
+    """Alert when philipp's grok tmux session is absent.
+
+    2026-07-16 audit: after a reboot, every daemon auto-recovered except the
+    interactive session. The session is grok, not a tmux session named operator.
+    """
+    try:
+        if _operator_tmux_live():
+            return
+        _emit(state, "operator_session_missing",
+              "interactive grok tmux session is ABSENT (reboot?) — ticks/injects/"
+              "messages have no destination and only headless fallbacks run. "
+              "Operator: run pc-attach --start from an interactive terminal.",
+              cooldown=DAEMON_DOWN_COOLDOWN)
     except Exception:
         pass
 

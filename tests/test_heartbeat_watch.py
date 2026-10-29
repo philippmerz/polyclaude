@@ -224,3 +224,65 @@ def test_poll_once_wires_disk_probe_without_production_state(
 
     assert calls == checks
     assert saved == [state]
+
+
+def _write_proc(root: Path, pid: int, comm: str, ppid: int, uid: str = "1000") -> None:
+    entry = root / str(pid)
+    entry.mkdir()
+    (entry / "comm").write_text(comm + "\n", encoding="utf-8")
+    (entry / "status").write_text(
+        f"Name:\t{comm}\nPPid:\t{ppid}\nUid:\t{uid}\t{uid}\t{uid}\t{uid}\n",
+        encoding="utf-8",
+    )
+
+
+def test_operator_tmux_live_accepts_philipp_grok_under_tmux(tmp_path: Path):
+    _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
+    _write_proc(tmp_path, 9, "grok", 2)
+
+    assert heartbeat._operator_tmux_live(tmp_path) is True
+
+
+def test_operator_tmux_live_rejects_headless_grok_and_other_users(tmp_path: Path):
+    _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
+    _write_proc(tmp_path, 3, "bash", 1)
+    _write_proc(tmp_path, 9, "grok", 3)
+    _write_proc(tmp_path, 10, "grok", 2, uid="1003")
+
+    assert heartbeat._operator_tmux_live(tmp_path) is False
+
+
+def test_live_grok_session_does_not_require_named_operator_session(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
+):
+    emitted = _capture_emit(monkeypatch)
+    _write_proc(tmp_path, 2, "tmux: server", 1, uid="0")
+    _write_proc(tmp_path, 9, "grok", 2)
+    monkeypatch.setattr(
+        heartbeat.subprocess, "run",
+        lambda *_args, **_kwargs: pytest.fail("tmux has-session must not be used"),
+    )
+    real = heartbeat._operator_tmux_live
+    monkeypatch.setattr(heartbeat, "_operator_tmux_live", lambda: real(tmp_path))
+
+    heartbeat.check_operator_session({"last_alerts": {}})
+
+    assert emitted == []
+
+
+def test_absent_grok_session_alerts_without_calling_tmux(
+    monkeypatch: pytest.MonkeyPatch, tmp_path: Path,
+):
+    emitted = _capture_emit(monkeypatch)
+    monkeypatch.setattr(
+        heartbeat.subprocess, "run",
+        lambda *_args, **_kwargs: pytest.fail("tmux has-session must not be used"),
+    )
+    real = heartbeat._operator_tmux_live
+    monkeypatch.setattr(heartbeat, "_operator_tmux_live", lambda: real(tmp_path))
+
+    heartbeat.check_operator_session({"last_alerts": {}})
+
+    assert emitted[0][0] == "operator_session_missing"
+    assert "grok tmux session is ABSENT" in emitted[0][1]
+    assert "pc-attach --start" in emitted[0][1]
