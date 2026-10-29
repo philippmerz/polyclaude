@@ -9,7 +9,10 @@
 # never becomes composer text, so the prompt is typed: one line at a time,
 # with a trailing backslash then Enter for each newline. Delivery counts only
 # when the log shows prompt.drain or prompt.drain_blocked and the composer
-# has released the text. This does not send Ctrl+C and does not send Ctrl+Enter.
+# has released the text. --enqueue does not wait for idle and does not count
+# as delivery: it types into an empty composer and presses Enter only when
+# the footer will queue that draft behind a follow-up already on screen.
+# This does not send Ctrl+C and does not send Ctrl+Enter.
 set -euo pipefail
 export PATH=/usr/sbin:/usr/bin:/sbin:/bin
 SOCK=/tmp/tmux-1000/default
@@ -141,6 +144,65 @@ send_submit() {
   fi
 }
 
+pane_queue_count() {
+  tmux_do capture-pane -p -t "$SESSION:0.0" | python3 "$MOD" queued-count
+}
+
+pane_text() {
+  tmux_do capture-pane -p -t "$SESSION:0.0"
+}
+
+# Queue the rewritten prompt behind follow-ups already waiting. Exit 0 only
+# when the composer released the draft and the queued count increased.
+# Enter while the footer is sendnow would send the top queued row now.
+enqueue_now() {
+  local state waiting footer draft before after pane
+  session_live || { echo "live grok session disappeared" >&2; exit 69; }
+  state=$(inspect_pane "$needle") || { echo "pane unreadable" >&2; exit 75; }
+  read -r waiting footer draft <<<"$state"
+  if [[ "$draft" != "empty" ]]; then
+    echo "composer is not empty; refusing to type over it" >&2
+    exit 75
+  fi
+  before=$(pane_queue_count)
+  focus_prompt || true
+  if ! python3 "$MOD" insert "$copy"; then
+    echo "paste did not appear in the composer" >&2
+    exit 75
+  fi
+  state=$(inspect_pane "$needle") || { echo "pane unreadable after type" >&2; exit 75; }
+  read -r waiting footer draft <<<"$state"
+  echo "typed state=$state before=$before"
+  if [[ "$draft" != "ours" ]]; then
+    echo "paste did not appear in the composer" >&2
+    exit 75
+  fi
+  if [[ "$footer" != "queue" && "$footer" != "send" && "$footer" != "alt" ]]; then
+    python3 "$MOD" clear-busy || true
+    echo "footer $footer would not queue the draft; cleared it" >&2
+    exit 75
+  fi
+  send_submit "$footer"
+  for _ in $(seq 1 20); do
+    state=$(inspect_pane "$needle") || { sleep 0.25; continue; }
+    read -r waiting footer draft <<<"$state"
+    after=$(pane_queue_count)
+    pane=$(pane_text)
+    if [[ "$draft" != "ours" && "$draft" != "chip" && "$draft" != "stuck" ]] \
+      && (( after > before )) \
+      && [[ "$pane" == *"try one right now"* ]]; then
+      echo "enqueued before=$before after=$after state=$state"
+      exit 0
+    fi
+    sleep 0.25
+  done
+  echo "draft was not queued (before=$before after=$after draft=$draft)" >&2
+  if [[ "$draft" == "ours" || "$draft" == "chip" || "$draft" == "stuck" ]]; then
+    python3 "$MOD" clear-busy || true
+  fi
+  exit 75
+}
+
 if [[ "${1:-}" == "--check" ]]; then
   session_live || { echo "live grok session is absent" >&2; exit 69; }
   echo "live-session-ok"
@@ -174,10 +236,14 @@ if [[ "${1:-}" == "--rewrite-only" && -n "${2:-}" ]]; then
 fi
 
 file=""
-if [[ "${1:-}" == "--file" && -n "${2:-}" ]]; then
+enqueue=0
+if [[ "${1:-}" == "--enqueue" && -n "${2:-}" ]]; then
+  file=$2
+  enqueue=1
+elif [[ "${1:-}" == "--file" && -n "${2:-}" ]]; then
   file=$2
 else
-  echo "usage: pc-session-inject --file PATH | --rewrite-only PATH | --check | --status" >&2
+  echo "usage: pc-session-inject --file PATH | --enqueue PATH | --rewrite-only PATH | --check | --status" >&2
   exit 64
 fi
 
@@ -203,6 +269,10 @@ python3 "$MOD" rewrite "$real" "$copy"
 chown philipp:philipp "$copy"
 needle=$(head -n 1 -- "$copy" | cut -c 1-40)
 [[ -n "$needle" ]] || { echo "prompt file is empty" >&2; exit 64; }
+
+if (( enqueue == 1 )); then
+  enqueue_now
+fi
 
 deadline=$((SECONDS + WAIT_SECONDS))
 stable=0

@@ -66,6 +66,14 @@ def test_classify_ours_chip_and_empty() -> None:
     assert MOD.classify_capture(alt, "hello").split()[1] == "alt"
     queued = "▾ Queued 1\n#1 a user message\n╭\n❯ \n╰\nEnter:send now │ Shift+Tab:mode\n"
     assert MOD.classify_capture(queued, needle).split()[1] == "sendnow"
+    hint = "▾ Queued 1\n╭\n❯ \n╰\nEnter:send now │ Ctrl+;:queue\n"
+    assert MOD.classify_capture(hint, needle).split()[1] == "sendnow"
+    behind = (
+        "▾ Queued 1\n#1 a user message\n╭\n"
+        f"❯ {needle}\n╰\n"
+        "Enter:queue │ Alt+Enter:newline\n"
+    )
+    assert MOD.classify_capture(behind, needle) == "0 queue ours"
 
 
 def test_find_drain_ignores_enqueue_and_older_events() -> None:
@@ -156,6 +164,12 @@ def test_insert_stops_when_enter_submits() -> None:
     assert "second line must not be typed" not in "\n".join(literals)
 
 
+def test_queued_count_reads_the_followup_row() -> None:
+    pane = "▾ Queued 1\n#1 a user note\n╭\n❯ \n╰\nEnter:send now\n"
+    assert MOD.queued_count(pane) == 1
+    assert MOD.queued_count("╭\n❯ \n╰\nEnter:send\n") == 0
+
+
 def test_multiline_footer_uses_plain_enter_for_newlines() -> None:
     assert MOD.newline_actions("alt") == [("key", "Enter")]
     assert MOD.newline_actions("send")[0] == ("literal", "\\")
@@ -165,6 +179,9 @@ def test_multiline_footer_uses_plain_enter_for_newlines() -> None:
 def test_injector_source_types_through_the_module() -> None:
     source = (REPO / "scripts" / "pc-session-inject").read_text(encoding="utf-8")
     assert "session_inject_text.py" in source
+    assert "--enqueue" in source
+    assert "queued-count" in source
+    assert "clear-busy" in source
     assert "paste-buffer" not in source
     assert "C-c" not in source
     live = Path("/usr/local/bin/pc-session-inject").read_text(encoding="utf-8")

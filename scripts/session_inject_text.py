@@ -52,13 +52,15 @@ def _composer(lines: list[str]) -> tuple[str, str, str]:
     start = max(0, n - 8)
     foot = " ".join(lines[start:])
     # Alt+Enter:send contains the substring Enter:send. Match the longer one first.
-    # "Enter:send now" is the empty-composer footer while a follow-up sits in
-    # the queue. It contains the substring Enter:send, so it has to win first.
-    # Typing under it would collide with that queued message.
-    if "Enter:send now" in foot or "▾ Queued" in foot:
-        footer = "sendnow"
-    elif "Enter:queue" in foot:
+    # "Enter:queue" is the nonempty-draft footer during a turn. It has to win
+    # over a visible "▾ Queued" row: that row stays on screen while a later
+    # Enter queues this draft behind the existing follow-up. "Enter:send now"
+    # is the empty-composer footer and contains Enter:send, so it wins over
+    # the plain send label. "Ctrl+;:queue" is only a shortcut hint.
+    if "Enter:queue" in foot:
         footer = "queue"
+    elif "Enter:send now" in foot or "▾ Queued" in foot:
+        footer = "sendnow"
     elif "Alt+Enter:send" in foot:
         footer = "alt"
     elif "Enter:send" in foot:
@@ -134,6 +136,18 @@ def newline_actions(footer: str) -> list[tuple[str, str]]:
     if footer == "alt":
         return [("key", "Enter")]
     return [("literal", "\\"), ("key", "Enter")]
+
+
+def queued_count(capture: str) -> int:
+    """How many follow-ups the pane says are queued. Zero when the row is absent."""
+    for line in capture.splitlines()[-25:]:
+        if "Queued" not in line:
+            continue
+        parts = line.replace("▾", " ").split()
+        for i, part in enumerate(parts):
+            if part == "Queued" and i + 1 < len(parts) and parts[i + 1].isdigit():
+                return int(parts[i + 1])
+    return 0
 
 
 def find_drain(blob: str, since: str, sid: str) -> dict | None:
@@ -225,8 +239,8 @@ def insert_text(
     _apply(tmux, [("literal", chunk) for chunk in literal_chunks(lines[0])], sleep, literal_pause)
     sleep(newline_pause)
     _waiting, footer, _draft = classify_capture(tmux.capture(), "").split()
-    if footer == "queue":
-        raise InjectError("composer is queueing, not idle")
+    # footer "queue" means a later Enter queues the draft. Keep typing.
+    # Newlines use the backslash chord unless multiline mode is on.
     for line in lines[1:]:
         _apply(tmux, newline_actions(footer), sleep, newline_pause)
         draft = classify_capture(tmux.capture(), "").split()[2]
@@ -254,6 +268,11 @@ def insert_text(
         )
 
 
+def clear_busy_draft(tmux: Tmux) -> None:
+    """One Ctrl+C clears a nonempty draft during a turn and does not cancel it."""
+    tmux.key("C-c")
+
+
 def clear_idle_draft(tmux: Tmux, sleep=time.sleep) -> None:
     """Esc Esc within 800ms clears a nonempty idle draft. It does not send Ctrl+C."""
     tmux.key("Escape")
@@ -279,7 +298,10 @@ def insert_file(path: Path) -> None:
 
 def main(argv: list[str]) -> int:
     if len(argv) < 2:
-        print("usage: session_inject_text.py rewrite|classify|insert|drain-since", file=sys.stderr)
+        print(
+            "usage: session_inject_text.py rewrite|classify|insert|drain-since|queued-count|clear-busy",
+            file=sys.stderr,
+        )
         return 64
     cmd = argv[1]
     if cmd == "rewrite":
@@ -300,6 +322,12 @@ def main(argv: list[str]) -> int:
             print("usage: session_inject_text.py insert FILE", file=sys.stderr)
             return 64
         insert_file(Path(argv[2]))
+        return 0
+    if cmd == "queued-count":
+        print(queued_count(sys.stdin.read()))
+        return 0
+    if cmd == "clear-busy":
+        clear_busy_draft(LiveTmux())
         return 0
     if cmd == "drain-since":
         if len(argv) != 4:
