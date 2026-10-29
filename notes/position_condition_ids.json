@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-10-27",
+ "_refreshed": "2026-10-29",
  "positions": [
   {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
@@ -24,22 +24,6 @@
    "size": 28,
    "conditionId": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
    "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
-   "negativeRisk": true
-  },
-  {
-   "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
-   "outcome": "Yes",
-   "size": 20,
-   "conditionId": "0x723822eb2b143cee54c0bd7c1efba322b21f0051984c266df8879c394f1011c0",
-   "asset": "42865728742506860386768556888821101266630139112044622335353850919229585308601",
-   "negativeRisk": true
-  },
-  {
-   "slug": "will-no-one-dissent-the-october-fed-decision-2026",
-   "outcome": "Yes",
-   "size": 19.9931,
-   "conditionId": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
-   "asset": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
    "negativeRisk": true
   },
   {

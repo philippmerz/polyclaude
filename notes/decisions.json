@@ -1,5 +1,5 @@
 {
-  "next_id": 271,
+  "next_id": 272,
   "decisions": [
     {
       "id": 1,
@@ -5528,9 +5528,10 @@
         "pending-limit-order"
       ],
       "slug": "will-no-one-dissent-the-october-fed-decision-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "YES resolved 0. FOMC statement 2026-10-28: 10-2 hold, Cook and Hammack dissented for a 25bp hike. Held 19.9931 YES, cost 4.7983, redeemable at 0.",
+      "calibration_delta": "central 0.673 and selected 0.473 versus outcome 0",
+      "lesson": "Unanimity stayed far above the live bid, so there was no pre-statement taker exit. The loss is the YES cost once the statement printed two dissents.",
+      "resolved_at": "2026-10-29T12:56:59Z"
     },
     {
       "id": 253,
@@ -5697,9 +5698,10 @@
         "primary-review"
       ],
       "slug": "will-no-one-dissent-the-october-fed-decision-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Confirmed fill stayed 19.993158 YES. Market resolved before any further match. Unfilled tail 0.006842 cannot fill.",
+      "calibration_delta": "partial-fill accounting matched the resolved position size; no extra shares",
+      "lesson": "The indexed position was the whole fill. Resolution closed the unknown tail at zero additional shares.",
+      "resolved_at": "2026-10-29T12:56:59Z"
     },
     {
       "id": 262,
@@ -5736,9 +5738,10 @@
         "order_reconciliation"
       ],
       "slug": "will-no-one-dissent-the-october-fed-decision-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Same 19.9931 YES resolved at 0. Reservation row 179 remains, risk 4.8 unchanged, because the ledger still shows submissionState live.",
+      "calibration_delta": "tail 0.006842 unfilled and now impossible",
+      "lesson": "Do not delete the reservation or rewrite stored risk 4.8. The global BUY block stays until the ledger reconcile retires the row.",
+      "resolved_at": "2026-10-29T12:56:59Z"
     },
     {
       "id": 264,
@@ -5866,6 +5869,22 @@
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
+    },
+    {
+      "id": 271,
+      "timestamp": "2026-10-29T12:57:06Z",
+      "type": "close_position",
+      "thesis": "After the 2026-10-28 10-2 hold, December no-change central is 0.18 and stress is 0.12. FedWatch hike odds were 81-87 percent. The YES bid was 0.20 with zero taker fee, so 20 shares net 4.00 against a 2.40 stressed hold and a 3.60 central hold. Price is above the 0.18 fair, so the hidden-info at-or-below-fair ban does not apply.",
+      "confidence": "medium",
+      "prediction": "FOK sell of 20 December no-change YES at 0.20 matches and the position leaves the book.",
+      "size_usd": 3.8,
+      "resolution_at": "2026-10-29",
+      "tags": [],
+      "slug": "will-there-be-no-change-in-fed-interest-rates-after-the-december-2026-meeting-20260729232808635",
+      "outcome": "FOK matched. order 0xa16c2658c9013562f2837ab6b283490ae0f67bdd4a606464aa6f18d2d8c98128 takingAmount 4 makingAmount 20 tx 0xbdf39773a4efd4fa090ccf82ac71c5b15f157e7531b73987df1e637e6e120374. data-api December row gone.",
+      "calibration_delta": "sold at 0.20 versus revised central 0.18; cash 4.00 beat stressed hold 2.40 by 1.60",
+      "lesson": "The October statement broke the 0.46 December no-change prior. A fee-free bid above the new fair was a taker exit, not a maker quote at fair.",
+      "resolved_at": "2026-10-29T12:57:14Z"
     }
   ]
 }
