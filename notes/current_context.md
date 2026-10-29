@@ -10,7 +10,7 @@ source_hashes:
   docs/README.md: 9830fb3f5235007f49d6f7a86a40cd260b06d9dbec821b0df84f1ed19b4f3e40
   notes/backlog.md: 515d38ac5485638304c183114ea4dc84a3b5d2742945b03830b6e7bb3bc8c476
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: 902e9f171e5eeb0b583c86f12eaa34696953b4bec70f68a290b0a8002eebbbac
+  notes/journal.md: 9812fe7aa844c325c178587498f2496f0eacc6d6673ab0fe6582308c22b7c74b
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
 ---
 ## Current decision
