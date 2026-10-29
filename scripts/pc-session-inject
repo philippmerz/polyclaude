@@ -108,7 +108,7 @@ turn_busy() {
   local state waiting footer draft
   state=$(inspect_pane "") || return 0
   read -r waiting footer draft <<<"$state" || return 0
-  [[ "$waiting" == "1" || "$footer" == "queue" ]]
+  [[ "$waiting" == "1" || "$footer" == "queue" || "$footer" == "sendnow" ]]
 }
 
 # Exit 0 when a drain newer than $1 is in the log and the composer released the needle.

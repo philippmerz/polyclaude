@@ -52,7 +52,12 @@ def _composer(lines: list[str]) -> tuple[str, str, str]:
     start = max(0, n - 8)
     foot = " ".join(lines[start:])
     # Alt+Enter:send contains the substring Enter:send. Match the longer one first.
-    if "Enter:queue" in foot:
+    # "Enter:send now" is the empty-composer footer while a follow-up sits in
+    # the queue. It contains the substring Enter:send, so it has to win first.
+    # Typing under it would collide with that queued message.
+    if "Enter:send now" in foot or "▾ Queued" in foot:
+        footer = "sendnow"
+    elif "Enter:queue" in foot:
         footer = "queue"
     elif "Alt+Enter:send" in foot:
         footer = "alt"

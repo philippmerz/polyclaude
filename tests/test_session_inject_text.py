@@ -64,6 +64,8 @@ def test_classify_ours_chip_and_empty() -> None:
     assert MOD.classify_capture(empty, needle) == "0 other empty"
     alt = "╭\n❯ hello\n╰\nAlt+Enter:send │ Enter:newline\n"
     assert MOD.classify_capture(alt, "hello").split()[1] == "alt"
+    queued = "▾ Queued 1\n#1 a user message\n╭\n❯ \n╰\nEnter:send now │ Shift+Tab:mode\n"
+    assert MOD.classify_capture(queued, needle).split()[1] == "sendnow"
 
 
 def test_find_drain_ignores_enqueue_and_older_events() -> None:
