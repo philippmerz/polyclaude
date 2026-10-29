@@ -1,0 +1,303 @@
+#!/bin/bash
+# Paste one operator prompt into philipp's live grok TUI.
+# polyclaude invokes this through sudo. It does not start a model.
+# Install this file to /usr/local/bin/pc-session-inject (root:root, mode 755).
+#
+# Grok will not send a message that mentions /goal unless the message starts
+# with that command. Scheduled ticks are not goal commands, so that mention
+# is rewritten before typing. A multiline bracketed paste becomes a chip and
+# never becomes composer text, so the prompt is typed: one line at a time,
+# with a trailing backslash then Enter for each newline. Delivery counts only
+# when the log shows prompt.drain or prompt.drain_blocked and the composer
+# has released the text. This does not send Ctrl+C and does not send Ctrl+Enter.
+set -euo pipefail
+export PATH=/usr/sbin:/usr/bin:/sbin:/bin
+SOCK=/tmp/tmux-1000/default
+SESSION=grok
+ALLOW=/home/polyclaude/.polyclaude/session_inject
+LOG=/home/philipp/.grok/logs/unified.jsonl
+SID=01a178b6-f938-7ca3-91a9-9538c2e791ef
+MOD=/home/polyclaude/polyclaude/scripts/session_inject_text.py
+WAIT_SECONDS=7200
+
+if [[ "$(id -u)" -ne 0 ]]; then
+  echo "pc-session-inject must run as root" >&2
+  exit 64
+fi
+
+tmux_do() {
+  runuser -u philipp -- tmux -S "$SOCK" "$@"
+}
+
+session_live() {
+  runuser -u philipp -- tmux -S "$SOCK" has-session -t "=$SESSION" 2>/dev/null
+}
+
+inhibit_held() {
+  local dir comm cmd
+  for dir in /proc/[0-9]*; do
+    comm=$(cat "$dir/comm" 2>/dev/null || true)
+    [[ "$comm" == "systemd-inhibit" ]] || continue
+    cmd=$(tr '\0' ' ' < "$dir/cmdline" 2>/dev/null || true)
+    [[ "$cmd" == *"--who=grok"* && "$cmd" == *"agent turn in progress"* ]] && return 0
+  done
+  return 1
+}
+
+# Prints one line: waiting footer draft
+inspect_pane() {
+  local needle=$1
+  tmux_do capture-pane -p -t "$SESSION:0.0" | NEEDLE="$needle" python3 "$MOD" classify
+}
+
+prompt_focused() {
+  local line y h flag
+  line=$(tmux_do display-message -p -t "$SESSION:0.0" '#{cursor_y} #{pane_height} #{cursor_flag}') || return 1
+  read -r y h flag <<<"$line" || return 1
+  [[ "$flag" == "1" && "$y" =~ ^[0-9]+$ && "$h" =~ ^[0-9]+$ ]] || return 1
+  (( y + 8 >= h ))
+}
+
+focus_prompt() {
+  if prompt_focused; then
+    return 0
+  fi
+  tmux_do send-keys -t "$SESSION:0.0" Tab
+  sleep 0.15
+}
+
+log_turn_open() {
+  [[ -r "$LOG" ]] || return 1
+  tail -c 300000 -- "$LOG" | python3 -c '
+import json, sys
+sid = sys.argv[1]
+data = sys.stdin.read()
+nl = data.find("\n")
+if nl != -1 and not data.startswith("{"):
+    data = data[nl + 1:]
+last_busy = ""
+last_idle = ""
+for line in data.splitlines():
+    i = line.find("{")
+    if i < 0:
+        continue
+    try:
+        obj = json.loads(line[i:])
+    except Exception:
+        continue
+    if obj.get("sid") != sid:
+        continue
+    msg = obj.get("msg")
+    ts = obj.get("ts") or ""
+    if msg in ("shell.handle_prompt.start", "prompt.acp_send.start", "prompt.drain"):
+        if ts >= last_busy:
+            last_busy = ts
+    elif msg in ("turn.complete", "agent response complete"):
+        if ts >= last_idle:
+            last_idle = ts
+sys.exit(0 if last_busy and last_busy > last_idle else 1)
+' "$SID"
+}
+
+turn_busy() {
+  # Inhibit is absent on some live turns, and turn.complete is not logged for
+  # every shell turn. The pane status row is the signal that tracks this TUI.
+  if inhibit_held; then
+    return 0
+  fi
+  local state waiting footer draft
+  state=$(inspect_pane "") || return 0
+  read -r waiting footer draft <<<"$state" || return 0
+  [[ "$waiting" == "1" || "$footer" == "queue" ]]
+}
+
+# Exit 0 when a drain newer than $1 is in the log and the composer released the needle.
+submitted() {
+  local since=$1 needle=$2 state waiting footer draft
+  tail -c 200000 -- "$LOG" | python3 "$MOD" drain-since "$since" "$SID" >/dev/null || return 1
+  state=$(inspect_pane "$needle") || return 1
+  read -r waiting footer draft <<<"$state" || return 1
+  [[ "$draft" == "empty" || "$draft" == "foreign" ]]
+}
+
+clear_stuck_draft() {
+  # Idle only. Esc Esc within 800ms clears a nonempty draft. A second press
+  # on an empty composer opens rewind, so callers use this once, on a chip.
+  tmux_do send-keys -t "$SESSION:0.0" Escape
+  sleep 0.2
+  tmux_do send-keys -t "$SESSION:0.0" Escape
+  sleep 0.4
+}
+
+send_submit() {
+  local mode=$1
+  focus_prompt
+  if [[ "$mode" == "alt" ]]; then
+    tmux_do send-keys -t "$SESSION:0.0" Escape
+    sleep 0.2
+    tmux_do send-keys -t "$SESSION:0.0" Enter
+  else
+    tmux_do send-keys -t "$SESSION:0.0" Enter
+  fi
+}
+
+if [[ "${1:-}" == "--check" ]]; then
+  session_live || { echo "live grok session is absent" >&2; exit 69; }
+  echo "live-session-ok"
+  exit 0
+fi
+
+if [[ "${1:-}" == "--status" ]]; then
+  session_live || { echo "absent" >&2; exit 69; }
+  inhibit=0
+  inhibit_held && inhibit=1
+  logopen=0
+  log_turn_open && logopen=1
+  state=$(inspect_pane "")
+  if turn_busy; then
+    echo "busy inhibit=$inhibit log=$logopen pane=$state"
+  else
+    echo "idle inhibit=$inhibit log=$logopen pane=$state"
+  fi
+  exit 0
+fi
+
+if [[ "${1:-}" == "--rewrite-only" && -n "${2:-}" ]]; then
+  real=$(readlink -f -- "$2")
+  case "$real" in
+    "$ALLOW"/*) ;;
+    *) echo "refusing path outside $ALLOW" >&2; exit 64 ;;
+  esac
+  [[ -f "$real" && ! -L "$2" ]] || { echo "prompt file is missing" >&2; exit 64; }
+  python3 "$MOD" rewrite "$real" -
+  exit 0
+fi
+
+file=""
+if [[ "${1:-}" == "--file" && -n "${2:-}" ]]; then
+  file=$2
+else
+  echo "usage: pc-session-inject --file PATH | --rewrite-only PATH | --check | --status" >&2
+  exit 64
+fi
+
+real=$(readlink -f -- "$file")
+case "$real" in
+  "$ALLOW"/*) ;;
+  *) echo "refusing path outside $ALLOW" >&2; exit 64 ;;
+esac
+[[ -f "$real" && ! -L "$file" ]] || { echo "prompt file is missing" >&2; exit 64; }
+
+exec 9>/run/pc-session-inject.lock
+if ! flock -w 7500 9; then
+  echo "injector is busy" >&2
+  exit 75
+fi
+
+copy=$(mktemp /run/pc-inject.XXXXXX)
+chown philipp:philipp "$copy"
+chmod 600 "$copy"
+cleanup() { rm -f -- "$copy"; }
+trap cleanup EXIT
+python3 "$MOD" rewrite "$real" "$copy"
+chown philipp:philipp "$copy"
+needle=$(head -n 1 -- "$copy" | cut -c 1-40)
+[[ -n "$needle" ]] || { echo "prompt file is empty" >&2; exit 64; }
+
+deadline=$((SECONDS + WAIT_SECONDS))
+stable=0
+cleared=0
+enters=0
+mark=""
+
+while (( SECONDS < deadline )); do
+  session_live || { echo "live grok session disappeared" >&2; exit 69; }
+  state=$(inspect_pane "$needle") || { sleep 1; continue; }
+  read -r waiting footer draft <<<"$state"
+
+  # A drain can arrive while the new turn is already busy. Leave as soon as
+  # the log and the composer agree, and do not type a second copy.
+  if [[ -n "$mark" ]] && submitted "$mark" "$needle"; then
+    exit 0
+  fi
+  if (( enters >= 1 )) && [[ "$draft" != "ours" ]]; then
+    sleep 0.25
+    continue
+  fi
+
+  if turn_busy; then
+    stable=0
+    sleep 1
+    continue
+  fi
+
+  if [[ "$draft" == "chip" || "$draft" == "stuck" ]]; then
+    if (( cleared == 0 )); then
+      clear_stuck_draft
+      cleared=1
+      stable=0
+      sleep 0.6
+      continue
+    fi
+    echo "composer still holds an unsent tick" >&2
+    exit 75
+  fi
+
+  if [[ "$draft" == "foreign" || "$draft" == "chip" || "$draft" == "unknown" ]]; then
+    stable=0
+    sleep 1
+    continue
+  fi
+
+  if [[ "$draft" != "ours" ]]; then
+    stable=$((stable + 1))
+    if (( stable < 5 )); then
+      sleep 1
+      continue
+    fi
+    focus_prompt || true
+    if ! python3 "$MOD" insert "$copy"; then
+      echo "paste did not appear in the composer" >&2
+      exit 75
+    fi
+    state=$(inspect_pane "$needle") || { echo "pane unreadable after type" >&2; exit 75; }
+    read -r waiting footer draft <<<"$state"
+    if [[ "$draft" != "ours" ]]; then
+      echo "paste did not appear in the composer" >&2
+      exit 75
+    fi
+  fi
+
+  if (( enters >= 2 )); then
+    echo "paste did not start a grok turn" >&2
+    exit 75
+  fi
+  state=$(inspect_pane "$needle") || { sleep 1; continue; }
+  read -r waiting footer draft <<<"$state"
+  if [[ "$draft" != "ours" ]]; then
+    stable=0
+    sleep 1
+    continue
+  fi
+  if [[ "$footer" != "send" && "$footer" != "alt" ]]; then
+    sleep 0.25
+    continue
+  fi
+  if turn_busy; then
+    sleep 0.25
+    continue
+  fi
+
+  mark=$(date -u +%Y-%m-%dT%H:%M:%S.%3NZ)
+  send_submit "$footer"
+  enters=$((enters + 1))
+  for _ in $(seq 1 40); do
+    if submitted "$mark" "$needle"; then
+      exit 0
+    fi
+    sleep 0.25
+  done
+done
+
+echo "live grok session did not become idle" >&2
+exit 69
