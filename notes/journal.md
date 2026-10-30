@@ -33883,3 +33883,15 @@ Wallet 0x9032ad983Ee5a22bfd078ECc4fD3D4D69E57267B is unchanged from the 18:03 ch
 **Ops debt for follow-up ticks:** pc-attach still grok-specific (18KB attach/recovery script) — either generalize or retire; opencode-inject composer-foreign-text heuristic is Escape-first + needle check (no grok-style state machine) — monitor first real ticks; reservation row #179 risk 4.8 retirement via the tool's grace path; Delcy criteria re-read; grok orphan PID cleanup on next reboot.
 
 Due: weekly P&L (this entry's window), then 15:00Z tick via the new injector.
+
+## 2026-10-30 16:40 UTC — tick 20261030T150001Z (late, via flush) + injector incident fixed to v4
+
+**Delivery incident.** The 15:00Z cron tick did not deliver cleanly. Root causes found in sequence: (1) v1 verified the paste by the body's FIRST line, but the opencode TUI renders a long bracketed paste as a `[Pasted ~N lines]` chip asynchronously — the 0.6s capture raced the render, the check false-negatived, and the script's two Escapes (harmless visually, but Esc = "interrupt" in opencode) exited 75; the paste sat in the composer until the operator cleared it manually. (2) v2/v3 tests ran while an agent turn was active: mid-turn pastes accumulate silently in the composer and Enter does not submit until the turn ends, so the accumulated drafts (v2 remnant + probe residue + test pastes) flushed as ONE concatenated user message (~3 tick copies + probe text) at turn end. The v2 attempt also exposed a real SQL bug (role filter on a nonexistent column in `already_delivered`).
+
+**Fix (pc-opencode-inject v4, installed /usr/local/bin, v1-v3 preserved):** no Escape/control keys anywhere; true-idle gate = last DB message not a user turn AND 8s of session time_updated stability (DB role alone reads idle mid-turn because assistant rows persist); idempotence check against recent user messages (role filter in Python) so retries never double-deliver; advisory pane poll (needle or `[Pasted` marker, up to 6s) with the authoritative confirmation remaining the post-Enter DB probe (600s). Stale spool items a307489f/f85002c2 superseded (content arrived inside the flush). A detached v4 self-test is in flight; the 18:00Z tick is the production test.
+
+**Tick substance (15:00Z contract, run at 16:40Z):** journal/context are 2h fresh; alerts since 14:45Z reviewed — three Delcy items (elections promised without date after Machado's return; chavismo-pillar maneuvering) all thesis-neutral, priors retained; no other book-relevant news; no trades; UMA was clean at 14:40Z and no position moved. Nothing else actionable; brief per contract.
+
+**Account:** unchanged since 14:40Z entry: TOTAL $190.76, PM mid $36.98 / realizable $32.94. Kimi position 50 YES after the morning add; buy block stays lifted.
+
+**v4 verified 16:55Z:** the detached self-test arrived as one clean user turn after this session's turn ended — true-idle gate, advisory detection, and DB-confirm all behaved. `/usr/local/bin/pc-opencode-inject` v4 is production-ready; 18:00Z is the live cron test.
