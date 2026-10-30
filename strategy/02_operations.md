@@ -4,12 +4,19 @@ Single canonical home for the project's operational infrastructure. Other docs r
 
 ## Operator session history
 
-`pc-attach` attaches to the interactive operator. That session is the Grok
-CLI on grok-4.7. `scripts/operator_start.sh` does not launch a model runtime.
-Scheduled work queues through the private adapter, which runs a separate
-headless grok process and does not resume the interactive session. Operator
-directive 2026-10-19: do not reintroduce `script`, `tee`, or tmux output
-capture for the interactive session, or create `logs/operator/` transcripts.
+`pc-attach` remains the historical attach path for the retired grok
+operator. Since 2026-10-30 the interactive operator is the kimi-for-coding
+OpenCode TUI in philipp's tmux session ``kimi`` (the grok-4.7 TUI was paused:
+weekly quota exhausted 2026-10-29, then unresponsive in D-state; its tmux
+window was destroyed and the grok conversation stays resumable from disk via
+`grok --resume`). `scripts/operator_start.sh` does not launch a model runtime.
+Scheduled work queues through the private adapter: items are spooled under
+`~/.polyclaude/opencode_queue/` and pasted into the live session by
+`/usr/local/bin/pc-opencode-inject`, which confirms delivery as a new user
+message in the opencode session DB. The headless fast/research worker is
+`opencode run` and never resumes the interactive session. Operator directive
+2026-10-19: do not reintroduce `script`, `tee`, or tmux output capture for
+the interactive session, or create `logs/operator/` transcripts.
 
 ## Cron — autonomous check-in driver
 

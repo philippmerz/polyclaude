@@ -1,5 +1,5 @@
 {
-  "next_id": 272,
+  "next_id": 273,
   "decisions": [
     {
       "id": 1,
@@ -5885,6 +5885,25 @@
       "calibration_delta": "sold at 0.20 versus revised central 0.18; cash 4.00 beat stressed hold 2.40 by 1.60",
       "lesson": "The October statement broke the 0.46 December no-change prior. A fee-free bid above the new fair was a taker exit, not a maker quote at fair.",
       "resolved_at": "2026-10-29T12:57:14Z"
+    },
+    {
+      "id": 272,
+      "timestamp": "2026-10-30T14:34:13Z",
+      "type": "open_position",
+      "thesis": "Official HLE board lists only Kimi K2.5 at 24.4% (Epoch/Scale mirror, 2026-10-30). K3.1 Pro launched 10/23: independent text-only ~52.5% (Artificial Analysis), self-reported with-tools 70%; open-weights release before 11/4 opens the official submission window. Two-month runway for an official K3.1 (or newer Kimi) no-tools submission >=55%. Central p 0.35, pessimistic 0.25 vs 0.15 ask.",
+      "confidence": "medium",
+      "prediction": "official agi.safe.ai HLE board shows a Moonshot Kimi row >=55% before 2027-01-01",
+      "size_usd": 6.0,
+      "resolution_at": "2027-01-01",
+      "tags": [
+        "kimi",
+        "hle",
+        "ai"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

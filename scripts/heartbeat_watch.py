@@ -509,11 +509,12 @@ def _proc_status_field(pid: int, field: str, proc_root: Path) -> str | None:
 
 
 def _operator_tmux_live(proc_root: Path = Path("/proc")) -> bool:
-    """True when philipp's grok TUI is a child of a tmux server.
+    """True when philipp's opencode TUI is a child of a tmux server.
 
-    The interactive operator is that grok session. A tmux session named
-    operator does not exist, and this watcher runs as polyclaude, which
-    cannot open philipp's tmux socket. Headless grok has no tmux parent.
+    The interactive operator is the kimi opencode TUI in tmux session
+    ``kimi`` (grok TUI paused 2026-10-30). A tmux session named operator
+    does not exist, and this watcher runs as polyclaude, which cannot open
+    philipp's tmux socket. Headless model workers have no tmux parent.
     """
     try:
         entries = list(proc_root.iterdir())
@@ -530,7 +531,7 @@ def _operator_tmux_live(proc_root: Path = Path("/proc")) -> bool:
             comm = (entry / "comm").read_text(encoding="utf-8").strip()
         except OSError:
             continue
-        if comm == "grok":
+        if comm == "opencode":
             grok_pids.append(pid)
     for pid in grok_pids:
         current = pid
@@ -554,18 +555,20 @@ def _operator_tmux_live(proc_root: Path = Path("/proc")) -> bool:
 
 
 def check_operator_session(state: dict) -> None:
-    """Alert when philipp's grok tmux session is absent.
+    """Alert when philipp's opencode tmux session is absent.
 
     2026-07-16 audit: after a reboot, every daemon auto-recovered except the
-    interactive session. The session is grok, not a tmux session named operator.
+    interactive session. The session is the kimi opencode TUI (tmux session
+    ``kimi``), not a tmux session named operator.
     """
     try:
         if _operator_tmux_live():
             return
         _emit(state, "operator_session_missing",
-              "interactive grok tmux session is ABSENT (reboot?) — ticks/injects/"
-              "messages have no destination and only headless fallbacks run. "
-              "Operator: run pc-attach --start from an interactive terminal.",
+              "interactive kimi opencode tmux session is ABSENT (reboot?) — "
+              "ticks/injects/messages have no destination and only headless "
+              "fallbacks run. Operator: start `opencode` in a fresh tmux session "
+              "named `kimi` as philipp (the grok pc-attach path is retired).",
               cooldown=DAEMON_DOWN_COOLDOWN)
     except Exception:
         pass

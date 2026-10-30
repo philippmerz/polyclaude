@@ -1648,3 +1648,22 @@ Ex-gas trading midpoint fell **$0.30 (−0.16%)** to **$190.38**; indicative fee
 - Reviewed the condensed lessons; added a local interpreter/capture-path preflight to the existing receipt rule after two capture-setup failures. Missing bodies remain gaps; no invented response statuses. Daily MI/Fed and whole-Clarity reviews preceded metadata renewals, with original numerical forecasts intact. Watcher inventory warnings were followed by a healthy direct probe; priorcause and daemoncache state remain unproved.
 
 [Weekly judgment and evidence](../research/2026-10-23-weekly-review.json) · [Current financial snapshot](../research/2026-10-23-0019-financial-snapshot.json). Next weekly boundary follows this closing window onOct30; monthlyreviewNov12; next existingfullcheck02UTC.
+
+# Week 2026-10-23 → 2026-10-30
+
+Ex-gas trading midpoint fell **$5.29 (−2.78%)** to **$185.09**; indicative fee-net depth fell to **$184.46**. Figures from `bankroll.py` (TOTAL $190.76 incl. $5.67 gas; PM mid $36.98 / depth $32.94). Marks are midpoints, not realized cash.
+
+|Measure|Oct23|Oct30|Change|
+|---|---:|---:|---:|
+|Whole marked bankroll|196.09|190.76|−5.33|
+|Ex-gas trading midpoint|190.38|185.09|−5.29|
+|PM midpoint / depth|50.03 / 47.55|36.98 / 32.94|−13.05 / −14.61|
+
+- **Realized this window:** October Fed no-dissent YES (19.993158 sh) resolved **0** → −$4.80 locked (the #179 position; terminal proof finally assembled 10/30). December Fed YES closed per 10/29 decision. Settled cash +$15.79 vs $170 reference remains the metric that counts.
+- **Open book (end of week):** Delcy YES 28 @ $5.04 (prior .660/.510, mark 0.135 — divergence flagged for criteria re-read); Clarity over-58 NO 29 + over-50 YES 29 (pair floor $29.00; hold-complete-group); Kimi HLE≥55 YES **50** @ $7.20 after today's 40-sh add @0.15 (DEC-0272; catalyst: K3.1 official-submission window post 11/4 weight release; board today shows only K2.5 24.4%); Messi Top-5 YES 5 @ $1.35 (prior .600); Trump-out NO 0.33 @ $0.29. Max payout $113.83.
+- **Markets considered, not entered:** December Fed ladder (no independent p), 2026 midterms cluster resolving Nov 3-4 (no instance edge; bucket prices only), Hormuz/hantavirus/midterm thin-tail rows (carry-filtered, not execution-ready), sports (no consensus delta), structural scans (0 provisional). Rejections logged in the journal.
+- **Mistakes/miscalibration:** (1) Six missed ticks + unclassified news during the grok quota outage — root cause was a single-provider operator + a classifier on the same provider; mitigated by the opencode takeover (dual-provider diversity remains thin — noted). (2) The #179 tail ambiguity blocked ALL new buys for 8 days; the proof was obtainable from day one via exhaustive trade pagination — lesson: run the full trade ledger before accepting a global block. (3) Weekly cadence slipped earlier this month; restored.
+- **Operations:** operator migrated grok → kimi opencode TUI (tmux `kimi`); delivery via `pc-opencode-inject` (DB-confirmed); heartbeat/liveness/docs/markers updated; backlog superseded; grok paths archived for rollback.
+- **Outlook/next boundaries:** 15:00Z/18:00Z ticks via new injector; Delcy criteria re-read; Kimi submission watch (weights ~11/4 → board rows); midterms resolve 11/3-4 (out of scope without edge); monthly review Nov 12.
+
+Evidence: [179 reconciliation](../research/2026-10-30-179-reconciliation.json), journal 2026-10-30 14:40Z entry, decision DEC-0272.

@@ -1,0 +1,45 @@
+{
+ "schema": "polyclaude.179-reconciliation.v1",
+ "reconciled_at": "2026-10-30T14:15:35.698977+00:00",
+ "orderId": "0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19",
+ "conditionId": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+ "asset": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+ "question": "Will no one dissent the October Fed decision?",
+ "method": "exhaustive authenticated /data/trades pagination (135 rows, 2026-04-25..2026-10-30) + CLOB open-orders + resolved market state",
+ "fills": [
+  {
+   "match_time": "2026-10-22T03:16:04+00:00",
+   "tx": "0xd2cc1c1e9c187923ad6813c8bb297aa160b2efc2748131f9b5f564e3bd92b879",
+   "status": "CONFIRMED",
+   "matched_amount": "5.263158",
+   "price": "0.2400000151999997",
+   "asset_id": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+   "outcome": "Yes",
+   "side": "BUY"
+  },
+  {
+   "match_time": "2026-10-22T11:02:27+00:00",
+   "tx": "0x330bb3c9067a85efadf56566ad547cc22abea29aaa286c785b2bbb163961738c",
+   "status": "CONFIRMED",
+   "matched_amount": "14.73",
+   "price": "0.24",
+   "asset_id": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+   "outcome": "Yes",
+   "side": "BUY"
+  }
+ ],
+ "totalBought": 19.993158,
+ "plannedShares": 20.0,
+ "unfilledTail": 0.006842,
+ "openOrders": [],
+ "authenticatedOrderGet": "JSON null (2026-10-22 and since)",
+ "market": "resolved; YES (no dissent) = 0; position 19.993158 is a resolved loss, cost .798358, redeemable at bash",
+ "conclusion": "Terminal state affirmatively proven: order 179 filled 19.993158/20 shares across two confirmed maker fills; the 0.006842 tail never filled and cannot fill post-resolution; no resting order exists. totalBought == exact on-chain CTF balance (2026-10-22 verification). Exposure fully accounted; reconciliation row retired.",
+ "prior_block_row": {
+  "asset": "18462459733098935436849453877652057544981023026783662976270607791773257934675",
+  "conditionId": "0x11ebfae2a842151dc4a9c36a595d13747f7fb5f5f2c0a21f330f8001d0b2c8ae",
+  "createdAt": "2026-10-22T12:18:58.118709+00:00",
+  "orderId": "0xc1e9131561d7cbca9e7fded81a2a20395d4ee572d516387c7e71a9a4fff37c19",
+  "reason": "Confirmed own fills/CTF total19.993158 of original20; exhaustive open orders empty, exact authenticated GET returns JSON null. Planned0.006842-share tail has unknown terminal disposition; no cancellation marker. Retain full4.80 reservation; new BUYs blocked until affirmative terminal/trade/totalBought reconciliation. Evidence: data/deep_review_20261017/work/tick20261022_120847/account/verification.json."
+ }
+}
