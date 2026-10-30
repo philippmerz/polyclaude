@@ -33907,3 +33907,13 @@ Due: weekly P&L (this entry's window), then 15:00Z tick via the new injector.
 **Tick review:** UMA clean (48 tracked); ostium 0; open orders = the new maker bid only; audit clean; DEC-0181 (CoinGecko) closed as superseded-in-practice. News since 16:55Z: four Delcy items (nation address; returning state assets to former owners; ending a chavismo pillar) — all consistent with acting-president consolidation and an undated election promise; prior 0.660/0.510 retained, no trade. No other book-relevant alerts.
 
 **Account, 18:10Z:** TOTAL $189.58 (−$1.18 vs 14:40Z mark drift; realized +$15.80). PM mid $36.98→ per positions (Kimi 22.5 @ mark 0.135 = $3.04 MTM). pUSD ~$10.4 + Aave $122.25 deployable; the maker bid is the only working order.
+
+## 2026-10-30 21:10 UTC — duplicate 18:00Z tick: confirm/idempotence bug found and fixed (injector v5.1)
+
+A second copy of the 18:00Z tick arrived at ~21:0xZ. Root cause chain: the injector's post-Enter confirm (and its idempotence check) extracted message text from `message.parts`/`content`, but in this opencode build the message row carries NO inline text — text lives in the separate `part` table. Both checks therefore matched nothing: the 18:00 delivery's confirm polled 600s and failed (worker log 18:10:52Z), the spool item stayed pending, and the 21:00 queue spawn redelivered it (idempotence also blind). The 18:00Z substance had already been fully processed (journal 18:10Z), so the duplicate was pure noise; v4's true-idle gate and clean first delivery still worked as designed.
+
+Containment: killed the in-flight v4 injector + worker before it could paste a third copy at this turn's end; superseded spool item f326deee (18:00 tick, processed); fixed both DB functions to join the part table (verified live: idempotence and confirm both find the 18:00 message); v5 patch initially shipped a stray `_message_text_sql = None` line that broke bash execution — caught on the worker log, removed (v5.1, syntax-checked). Worker respawned; the pending 21:00 item (839fd729) delivers via v5.1 after this turn ends.
+
+Lesson (twice-paid): never trust a "delivery confirmed" signal that was only ever validated by the happy path — the self-test at 13:59 verified paste+Enter (message arrival) while the confirm's exit code went unobserved. Unit-test the probe against known DB rows before shipping.
+
+No trading impact: positions, orders (maker bid 42 @ 0.13 LIVE), and bankroll ($189.58 at 18:10Z) unchanged. This tick's check-in substance = the above plus awaiting the 21:00 delivery.
