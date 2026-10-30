@@ -33895,3 +33895,15 @@ Due: weekly P&L (this entry's window), then 15:00Z tick via the new injector.
 **Account:** unchanged since 14:40Z entry: TOTAL $190.76, PM mid $36.98 / realizable $32.94. Kimi position 50 YES after the morning add; buy block stays lifted.
 
 **v4 verified 16:55Z:** the detached self-test arrived as one clean user turn after this session's turn ended — true-idle gate, advisory detection, and DB-confirm all behaved. `/usr/local/bin/pc-opencode-inject` v4 is production-ready; 18:00Z is the live cron test.
+
+## 2026-10-30 18:10 UTC — tick 20261030T180001Z (v4 production delivery confirmed) + fill-accounting CORRECTION
+
+**v4 production test passed:** the 18:00Z cron tick arrived through pc-opencode-inject v4 as one clean user turn — true-idle gate, advisory pane detection, and DB-confirm all worked in production.
+
+**Fill correction (material).** The 14:25Z Kimi taker buy did NOT fill $6/40 shares as journaled: the FAK took only what the 0.15 ask held — 12.5 shares, $1.875 (trade row CONFIRMED 14:25:54Z, tx 0x70d7…19c19; the response's takingAmount 12.5 / makingAmount 1.875 was accurate and I misread it as full). positions.py confirms 22.50 YES @ $3.07 (10 old + 12.5 new). The reservation's "ambiguous" state was this partial fill; I retired the stale row via the tool's own `_remove_entry_reservations` after trade-level proof. Telegram correction sent for the 15:2x tick note. DEC-0272 updated. Weekly table corrected.
+
+**Action this tick:** resting maker BUY 42 YES @ 0.13 (= $5.46, order 0xa826aa65…c7bf5, LIVE) on the same thesis (prior .350/.250; pessimistic edge vs 0.13 bid ≈ +12pp). Fuzzy-thesis quarter-Kelly discipline; maker-or-skip route per gate 7.
+
+**Tick review:** UMA clean (48 tracked); ostium 0; open orders = the new maker bid only; audit clean; DEC-0181 (CoinGecko) closed as superseded-in-practice. News since 16:55Z: four Delcy items (nation address; returning state assets to former owners; ending a chavismo pillar) — all consistent with acting-president consolidation and an undated election promise; prior 0.660/0.510 retained, no trade. No other book-relevant alerts.
+
+**Account, 18:10Z:** TOTAL $189.58 (−$1.18 vs 14:40Z mark drift; realized +$15.80). PM mid $36.98→ per positions (Kimi 22.5 @ mark 0.135 = $3.04 MTM). pUSD ~$10.4 + Aave $122.25 deployable; the maker bid is the only working order.

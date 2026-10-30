@@ -3643,9 +3643,10 @@
         "emergency-safety"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "superseded_in_practice",
+      "calibration_delta": "0",
+      "lesson": "bankroll.py reads gas-token value again (POL .67 at 2026-10-30 ticks); CoinGecko 403 cleared.",
+      "resolved_at": "2026-10-30T18:03:43Z"
     },
     {
       "id": 182,
@@ -5901,9 +5902,10 @@
         "ai"
       ],
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "partial_fill_logged",
+      "calibration_delta": "0",
+      "lesson": "CORRECTION 18:05Z: the 14:25Z taker FAK filled only 12.5 of 40 intended shares (.875 of ; thin ask at 0.15). Actual position 22.5 YES @ .07. Stale ambiguous reservation retired with trade-level proof (single CONFIRMED fill 12.5 @ 0.15, tx 0x70d7...19c19). Resting maker add 42 YES @ 0.13 posted (order 0xa826aa65...). Lesson: trust the trade ledger and positions.py over the order response JSON for fill accounting; takingAmount/makingAmount in the response WAS the truth.",
+      "resolved_at": "2026-10-30T18:08:38Z"
     }
   ]
 }
