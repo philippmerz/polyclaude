@@ -5902,10 +5902,10 @@
         "ai"
       ],
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
-      "outcome": "partial_fill_logged",
+      "outcome": "added_via_maker_fill",
       "calibration_delta": "0",
-      "lesson": "CORRECTION 18:05Z: the 14:25Z taker FAK filled only 12.5 of 40 intended shares (.875 of ; thin ask at 0.15). Actual position 22.5 YES @ .07. Stale ambiguous reservation retired with trade-level proof (single CONFIRMED fill 12.5 @ 0.15, tx 0x70d7...19c19). Resting maker add 42 YES @ 0.13 posted (order 0xa826aa65...). Lesson: trust the trade ledger and positions.py over the order response JSON for fill accounting; takingAmount/makingAmount in the response WAS the truth.",
-      "resolved_at": "2026-10-30T18:08:38Z"
+      "lesson": "Maker bid 42 @ 0.13 filled 2026-10-30T23:18:52Z (two CONFIRMED maker legs, txs 0x6e3557.../0xa49b06...). Position now 64.5 YES @ avg 0.132, cost .53, MTM .03. Stale live reservation retired with trade-level proof. Thesis watch unchanged: official agi.safe.ai submission window post 11/4 weight release.",
+      "resolved_at": "2026-10-31T00:04:53Z"
     }
   ]
 }
