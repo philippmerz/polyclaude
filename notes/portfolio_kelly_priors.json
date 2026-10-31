@@ -161,7 +161,7 @@
   "cluster_frac": 0.18,
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
-  "verified": "2026-10-16",
+  "verified": "2026-10-31",
   "criteria_read": "2026-10-24",
   "current_assessment": "Oct24 first-hand full literal Gamma reread/rawdescription SHA7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches Oct16 and frozen description exactly; market666861/CID/token identity exact. Permanent cessation/precutoff announcement qualifies even if effective later; temporarySection3/unsustainedSection4/impeachmentwithoutremoval excluded, sustainedSection4qualifies, consensus credible reporting. Any-period/permanent tension retained. Captured WhiteHouse release entries Oct22\u201315 no qualifying announcement; feedlimited, not universalabsence/newmedical/Congressverification. pNO.97 remains datedjudgment, verifiedOct16 notrolled; actual.33NO below5shareminimum, no executable dustsale/buyup/burn. research/2026-10-24-0019-trump-criteria.json",
   "key_facts": [
@@ -282,7 +282,9 @@
   ],
   "latest_criteria_review": "research/2026-10-24-0019-trump-criteria.json",
   "source_ack": "2026-10-24",
-  "source_ack_reason": "Oct24 searched newer official WhiteHouse releases/actions and captured dated Oct22\u201315 entries with no qualifying cessation announcement in that bounded corpus. This does not refresh the Aug Congress/medical claims: those remain historical/unverified, market price is not factual proof, and no absence of newer reporting is asserted. Criteria were independently reread/current-exact; .33NO dust below5-share minimum means no executable cleanup. Tail/criteria/source uncertainty remains, no numerical prior or verified-date roll. See research/2026-10-24-0019-trump-criteria.json"
+  "source_ack_reason": "Oct24 searched newer official WhiteHouse releases/actions and captured dated Oct22\u201315 entries with no qualifying cessation announcement in that bounded corpus. This does not refresh the Aug Congress/medical claims: those remain historical/unverified, market price is not factual proof, and no absence of newer reporting is asserted. Criteria were independently reread/current-exact; .33NO dust below5-share minimum means no executable cleanup. Tail/criteria/source uncertainty remains, no numerical prior or verified-date roll. See research/2026-10-24-0019-trump-criteria.json",
+  "updated_utc": "2026-10-31T03:02:38.006242+00:00",
+  "review_note": "00:20Z alert review: no Trump-removal news flow (politics coverage = midterms/gas/Michigan); 0.970 central retained for the 0.33-sh dust NO."
  },
  "will-apple-release-a-touchscreen-macbook-in-2026": {
   "p_no": 0.35,
