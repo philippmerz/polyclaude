@@ -33943,3 +33943,13 @@ Battery: bankroll $190.03 (realized +$15.80); UMA clean; ostium 0; no open order
 ## 2026-10-31 06:15 UTC — tick 20261031T060001Z; flat
 
 Battery: bankroll $189.73 (realized +$15.80); UMA 0 alerts on re-run; ostium 0; no open orders. One ephemeral UMA price-move line (YES 0.1230→0.2265, wide book, no vol24) flashed on a non-held tracked row and reverted — none of the held markets show it (Kimi mid 0.135, Delcy 0.135, Messi ~0.33). News since 03:15Z: Delcy image-pivot analysis + El-Sayed/Michigan (not held) + Mbappe noise — nothing thesis-moving; the Delcy "change of image" piece is consistent with election-positioning under the revised prior. Delivery: fifth consecutive clean v5.1 tick. No trades, no Telegram.
+
+## 2026-10-31 09:20 UTC — tick 20261031T090001Z; flat
+
+Battery: bankroll $190.51 (realized +$15.80); UMA 0 alerts on direct re-run; ostium 0; no open orders; audit clean.
+
+**Correction to the 06:15Z entry:** the oscillating row (YES 0.123→0.2265→0.1035, no volume) is NOT non-held — it is our held Clarity over-58 market (Gamma id 3210154, last 0.07, vol24 negligible). The leg's midpoint flaps ±12pp on an empty book; the pair floor ($29.00 at resolution) and HOLD_COMPLETE_GROUP verdict are unaffected. No Clarity catalyst news in the feed. No action beyond the note; the flap inflates/deflates the PM midpoint mark day-to-day and should not be read as thesis signal (matches the "midpoint is not cash" lesson).
+
+News since 06:15Z: Kimi K3.1 teaser with release date still unannounced (KuCoin 06:26Z) — no HLE figure, no official board row; watch continues toward the Nov 4 window. Messi future/team-news churn (Romano, MLS decision) — prominence-neutral for the Year-in-Search market. Delcy routine designation. Nothing else actionable.
+
+Delivery: sixth consecutive clean v5.1 tick (09:00:18Z). No trades, no Telegram.
