@@ -1,0 +1,54 @@
+{
+ "master": true,
+ "poll_seconds": 120,
+ "max_lifetime_hours": 72,
+ "notes": "v1 sells-only. Buy rests (discounted bids via gated polyclaude_enter maker path) are config-ready but disabled pending per-market underwriting. Doctrine: strategy/03 thin-book section + notes/resting_orders.md.",
+ "rests": [
+  {
+   "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+   "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
+   "side": "SELL",
+   "shares": 15,
+   "class": "hidden",
+   "min_price": 0.9,
+   "premium_pp": 0.05,
+   "alert_keys": [
+    "kimi",
+    "moonshot",
+    "hle"
+   ],
+   "justification": "Fills only above the post-jump fair (~0.95 after an official >=55 submission lands on agi.safe.ai); converts 15 of 64.5 sh to cash in a mania overpay without donating the up-spike. 72h lifetime; cancel-first on MATERIAL+ Kimi/HLE alerts (weight release, submission, integrity scandal escalation).",
+   "enabled": true
+  },
+  {
+   "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+   "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
+   "side": "SELL",
+   "shares": 10,
+   "class": "hidden",
+   "min_price": 0.7,
+   "premium_pp": 0.05,
+   "alert_keys": [
+    "delcy",
+    "venezuela",
+    "machado",
+    "maduro"
+   ],
+   "justification": "Fills only on a major consolidation repricing (post-Madrid-summit confirmation or a survived Nov 11-15 talks round); 0.70 clears any plausible post-jump fair. Cancels first on MATERIAL+ transition alerts (vacancy declaration = thesis break, we do NOT want this fill on replacement news \u2014 the alert pull covers the ambiguity). 72h lifetime.",
+   "enabled": true
+  },
+  {
+   "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+   "side": "SELL",
+   "shares": 5,
+   "class": "ordinary",
+   "min_price": 0.65,
+   "alert_keys": [
+    "messi"
+   ],
+   "justification": "Ordinary public-info class: rest at/above fair 0.60. Venue min is 5 sh, so this rests the entire 5-sh leg; fills only on year-end euphoria >= 0.65 (double the mark). 72h lifetime; cancel-first on MATERIAL+ Messi injury/retirement alerts.",
+   "enabled": true
+  }
+ ]
+}
