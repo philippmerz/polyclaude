@@ -34015,3 +34015,7 @@ Built and activated `scripts/resting_watch.py`: one-sided premium maker SELLs on
 Live rests: SELL 15 Kimi @ 0.90 (0x4783f880…), SELL 10 Delcy @ 0.70 (0x2c295ab4…), SELL 5 Messi @ 0.65 (0x3ad8e3a3…). All far from marks (0.14/0.135/0.33) — free options that convert euphoria to cash; a no-fill costs nothing. Config notes/resting_watch_config.json; state logs/.resting_watch_state.json.
 
 Teething notes: clob_v2 sell uses positional args (fixed); its stdout carries progress lines before the JSON (parser takes the last JSON object); venue orderMinSize=5 shares (Messi rest resized 2→5). One placement crashed mid-run before state save (root cause unrecovered — the adoption path covered it; watch the first daemon cycles).
+
+## 2026-11-01 20:00 UTC — strategy sweep delivered (operator-requested)
+
+research/2026-11-01-strategy-sweep.md: 14 classes screened. BUILD: source_watch (primary-source polling per held/watched market — the biggest real gap; every thesis resolves on a named source we currently check by hand daily; the 2026-08-01 lesson proved the repricing lag is minutes-to-hours). QUEUE: buy-side resting rests (resting_watch follow-up), hazard-mismatch scanner, funding-harvest hedge spec. COVERED: 6 (structural arbs, sports, new listings, redemption, macro, premium rests). SKIP: 4 with documented reasoning (continuous MM codified today; UMA-dispute; oracle-latency; farming). Meta-lesson recorded: manual-policy drift is the failure mode — every policy needs a named owner. Backlog prepended; awaiting operator go/no-go on source_watch build.

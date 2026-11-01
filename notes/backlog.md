@@ -1,3 +1,9 @@
+# Current backlog — 2026-11-01 20:00 UTC strategy sweep
+
+- **Decision:** Resting-watch daemon live (3 premium sells). Strategy sweep [research/2026-11-01-strategy-sweep.md](../research/2026-11-01-strategy-sweep.md) screened 14 classes: BUILD source_watch (primary-source polling per held market — highest EV), QUEUE buy-side rests / hazard-mismatch scanner / funding-hedge spec, COVERED 6, SKIP 4 with documented reasoning (incl. continuous MM — codified in strategy/03).
+- **Book:** Delcy 28 YES (0.35/0.25; Madrid summit + Nov 11-15 talks window), Kimi 64.5 YES (0.35/0.25; weights promised by Nov 4 → official HLE submission is the repricing event), Clarity pair, Messi 5, Trump-out 0.33. Resting sells: Kimi 15@0.90, Delcy 10@0.70, Messi 5@0.65.
+- **Account:** Bankroll ~$189 (realized +$15.82 vs $170). pUSD ~$7.6 + Aave $122 idle pending gated entries.
+- **Ops debt:** grok pc-attach path retired-but-present; injector v5.1 watch; buy-side rests need per-market underwriting; source_watch build on operator word.
 # Current backlog — 2026-10-27 15:08 UTC check
 
 - **Decision:** Retain every open holding. No trade, no prior change, and no Telegram. Tick 20261027T113442Z.
