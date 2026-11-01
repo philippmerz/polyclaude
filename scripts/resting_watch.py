@@ -143,19 +143,12 @@ def open_orders() -> list[dict]:
         [PY, CLOB, "orders"], cwd=str(REPO), capture_output=True, text=True, timeout=120)
     if r.returncode != 0:
         raise RuntimeError(f"orders read failed rc={r.returncode}: {r.stderr[:200]}")
-    # cmd_sell prints progress lines before the JSON document; parse the
-    # last JSON object in the output.
-    raw = r.stdout or ""
-    start = raw.rfind("{")
-    payload = None
-    while start != -1:
-        try:
-            payload = json.loads(raw[start:])
-            break
-        except ValueError:
-            start = raw.rfind("{", 0, start)
-    if payload is None:
-        raise RuntimeError("sell post returned no JSON")
+    if not (r.stdout or "").strip():
+        raise RuntimeError("orders read returned empty output (lock contention or CLI fault)")
+    try:
+        payload = json.loads(r.stdout)
+    except ValueError as exc:
+        raise RuntimeError(f"orders read non-JSON output: {(r.stdout or '')[:160]!r}") from exc
     body = payload.get("body") or {}
     rows = body.get("data")
     if not isinstance(rows, list):
@@ -172,7 +165,19 @@ def place_sell(rest: dict) -> str:
     out = (r.stdout or "") + (r.stderr or "")
     if r.returncode != 0:
         raise RuntimeError(f"sell post failed rc={r.returncode}: {out[:240]}")
-    payload = json.loads(r.stdout)
+    # cmd_sell prints progress lines before the JSON document; parse the last
+    # JSON object in the output.
+    raw = r.stdout or ""
+    start = raw.rfind("{")
+    payload = None
+    while start != -1:
+        try:
+            payload = json.loads(raw[start:])
+            break
+        except ValueError:
+            start = raw.rfind("{", 0, start)
+    if payload is None:
+        raise RuntimeError(f"sell post returned no JSON: {out[:200]}")
     body = payload.get("body") or {}
     if payload.get("status_code", 999) >= 400 or not body.get("success"):
         raise RuntimeError(f"sell post rejected: {out[:240]}")
@@ -184,7 +189,7 @@ def place_sell(rest: dict) -> str:
 
 def cancel_order(order_id: str) -> None:
     r = subprocess.run(
-        [PY, CLOB, "cancel", "--order-id", order_id],
+        [PY, CLOB, "cancel", order_id],
         cwd=str(REPO), capture_output=True, text=True, timeout=120)
     out = (r.stdout or "") + (r.stderr or "")
     if r.returncode != 0:
@@ -232,7 +237,26 @@ def recent_material_alerts(keys: list[str], since: dt.datetime) -> list[dict]:
     return hits
 
 
+CYCLE_LOCK = REPO / "logs" / ".resting_watch_cycle.lock"
+
+
 def reconcile(cfg: dict, state: dict, dry_run: bool = False) -> list[str]:
+    """One reconciliation pass, serialized against concurrent runners."""
+    import fcntl
+    lock_fd = os.open(CYCLE_LOCK, os.O_RDWR | os.O_CREAT, 0o600)
+    try:
+        fcntl.flock(lock_fd, fcntl.LOCK_EX | fcntl.LOCK_NB)
+    except BlockingIOError:
+        os.close(lock_fd)
+        return ["cycle skipped: another reconcile holds the lock"]
+    try:
+        return _reconcile_locked(cfg, state, dry_run)
+    finally:
+        fcntl.flock(lock_fd, fcntl.LOCK_UN)
+        os.close(lock_fd)
+
+
+def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str]:
     """One reconciliation pass. Returns a human-readable action summary."""
     actions: list[str] = []
     fairs = load_fairs()
@@ -343,7 +367,15 @@ def poll_loop() -> int:
                 _log(action)
         except Exception as exc:
             _log(f"cycle error: {exc}")
-            telegram(f"[resting_watch] cycle error: {str(exc)[:160]}")
+            # throttle error telegrams so a persistent fault cannot ping the
+            # operator every cycle
+            now = dt.datetime.now(dt.timezone.utc)
+            last = dt.datetime.fromisoformat(
+                str(state.get("last_error_tg", "1970-01-01T00:00:00+00:00")))
+            if (now - last).total_seconds() > 1800:
+                telegram(f"[resting_watch] cycle error: {str(exc)[:160]}")
+                state["last_error_tg"] = now.isoformat()
+                _save_json_atomic(STATE_PATH, state)
         if _rss_mb() > RSS_CAP_MB:
             _log(f"rss cap {_rss_mb():.0f}MB exceeded; exiting for keepalive restart")
             return 0
