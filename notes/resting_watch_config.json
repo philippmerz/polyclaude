@@ -2,7 +2,7 @@
  "master": true,
  "poll_seconds": 120,
  "max_lifetime_hours": 72,
- "notes": "v1 sells-only. Buy rests (discounted bids via gated polyclaude_enter maker path) are config-ready but disabled pending per-market underwriting. Doctrine: strategy/03 thin-book section + notes/resting_orders.md.",
+ "notes": "v1 sells-only. Auto-pull requires a CRITICAL-level impact explicitly attributed to the rest's conditionId by the news classifier (the fast profile over-attributes MATERIAL on routine keyword mentions; MATERIAL stays with the 3-hour tick review per the ops doc). Buy rests remain a documented follow-up.",
  "rests": [
   {
    "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
@@ -18,7 +18,8 @@
     "hle"
    ],
    "justification": "Fills only above the post-jump fair (~0.95 after an official >=55 submission lands on agi.safe.ai); converts 15 of 64.5 sh to cash in a mania overpay without donating the up-spike. 72h lifetime; cancel-first on MATERIAL+ Kimi/HLE alerts (weight release, submission, integrity scandal escalation).",
-   "enabled": true
+   "enabled": true,
+   "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41"
   },
   {
    "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
@@ -34,8 +35,9 @@
     "machado",
     "maduro"
    ],
-   "justification": "Fills only on a major consolidation repricing (post-Madrid-summit confirmation or a survived Nov 11-15 talks round); 0.70 clears any plausible post-jump fair. Cancels first on MATERIAL+ transition alerts (vacancy declaration = thesis break, we do NOT want this fill on replacement news \u2014 the alert pull covers the ambiguity). 72h lifetime.",
-   "enabled": true
+   "justification": "Fills only on a major consolidation repricing (post-Madrid-summit confirmation or a survived Nov 11-15 talks round); 0.70 clears any plausible post-jump fair. Auto-pull is CRITICAL+identity-matched only (the fast classifier over-attributes MATERIAL on routine Delcy mentions). 72h lifetime.",
+   "enabled": true,
+   "condition_id": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7"
   },
   {
    "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
@@ -48,7 +50,9 @@
     "messi"
    ],
    "justification": "Ordinary public-info class: rest at/above fair 0.60. Venue min is 5 sh, so this rests the entire 5-sh leg; fills only on year-end euphoria >= 0.65 (double the mark). 72h lifetime; cancel-first on MATERIAL+ Messi injury/retirement alerts.",
-   "enabled": true
+   "enabled": true,
+   "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69"
   }
- ]
+ ],
+ "pull_tier": "CRITICAL"
 }

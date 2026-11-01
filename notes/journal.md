@@ -34027,3 +34027,9 @@ Operator forwarded a cycle error (cancel used `--order-id`; clob_v2 cancel takes
 ## 2026-11-01 20:45 UTC — resting_watch alert routing fixed (operator feedback)
 
 Operator: error pings going only to the human are not useful. Rewired per ops doctrine (Telegram = action-only for the operator; the agent owns operational faults): cycle errors now wake the AGENT via the durable queue (polyclaude-agent queue -> spool -> v5.1 injector), throttled 30 min, with a consecutive-error counter that escalates to the human only after 5 straight failures; fills wake the agent (force) and ping the human (material action); pulls wake the agent; placements log only. Daemon restarted with the new routing; tests pass.
+
+## 2026-11-01 21:20 UTC — tick 20261101T210001Z: flat; resting_watch pull-tier redesigned
+
+Battery: bankroll $188.07 (realized +$15.82); UMA clean; ostium 0. News: Mbappe penalty, a newspaper-promo alert, a Maduro-comparison opinion, weekly crypto recap — nothing actionable.
+
+resting_watch hardening (from watching the first production hours): the fast classifier over-attributes MATERIAL on routine Delcy-keyword items (3/3 recent mentions including a newspaper promo), so MATERIAL-triggered auto-pull churned the Delcy rest twice. Redesigned per the ops doc's original allocation of tiers: **auto-pull now requires CRITICAL level AND an impact explicitly attributed to the rest's conditionId** (CRITICAL = 64/4088 alerts, all thesis-scale events). MATERIAL stays with the 3-hour tick review (me). Also confirmed the agent-wake path: last_agent_wake=None because no pull/error has fired since the routing deployed — next incident will exercise it. Delcy rest re-placed via the fully fixed pipeline (order 0xf49c5bda…, parse+state clean end-to-end). Daemon steady; book = the three intended rests.

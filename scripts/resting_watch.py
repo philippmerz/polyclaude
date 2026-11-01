@@ -54,7 +54,6 @@ LOG_PATH = REPO / "logs" / "resting_watch.log"
 RSS_CAP_MB = 150
 LOOP_SECONDS_DEFAULT = 120
 DEFAULT_PREMIUM_PP = 0.05
-MATERIAL_LEVELS = {"MATERIAL", "CRITICAL"}
 
 
 def _log(msg: str) -> None:
@@ -233,11 +232,16 @@ def wake_agent(text: str, state: dict, *, force: bool = False) -> bool:
         return False
 
 
-def recent_material_alerts(keys: list[str], since: dt.datetime) -> list[dict]:
-    """news_alerts rows after `since` whose text matches keys and carry a
-    MATERIAL/CRITICAL impact level (classifier-populated)."""
+def recent_pull_alerts(keys: list[str], condition_id: str, since: dt.datetime) -> list[dict]:
+    """news_alerts rows after `since` that justify an automatic pull: a
+    CRITICAL-level impact EXPLICITLY attributed to this rest's conditionId.
+    The fast classifier over-attributes MATERIAL on routine keyword mentions
+    (observed 2026-11-01: newspaper promos classified MATERIAL on Delcy), so
+    MATERIAL stays with the 3-hour tick review; auto-pull is CRITICAL-only
+    plus identity match — rare (~1.6% of alerts) and thesis-scale."""
     if not keys:
         return []
+    cid = str(condition_id or "").lower()
     rows = []
     try:
         with ALERTS_PATH.open("r", encoding="utf-8") as fh:
@@ -259,8 +263,14 @@ def recent_material_alerts(keys: list[str], since: dt.datetime) -> list[dict]:
         if not any(k.lower() in hay for k in keys):
             continue
         impacts = row.get("impacts") or []
-        levels = {str(i.get("level", "")).upper() for i in impacts if isinstance(i, dict)}
-        if levels & MATERIAL_LEVELS:
+        matched = any(
+            isinstance(i, dict)
+            and str(i.get("level", "")).upper() == "CRITICAL"
+            and cid
+            and str(i.get("position", "")).lower() == cid
+            for i in impacts
+        )
+        if matched:
             hits.append(row)
     return hits
 
@@ -338,10 +348,11 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
             if age_h > max_age_h:
                 pull_reason = f"lifetime {age_h:.1f}h > {max_age_h}h; re-underwrite required"
             else:
-                hits = recent_material_alerts(
-                    list(rest.get("alert_keys") or []), placed_at)
+                hits = recent_pull_alerts(
+                    list(rest.get("alert_keys") or []),
+                    str(rest.get("condition_id") or ""), placed_at)
                 if hits:
-                    pull_reason = (f"cancel-first: {len(hits)} MATERIAL/CRITICAL alert(s) "
+                    pull_reason = (f"cancel-first: {len(hits)} CRITICAL identity-matched alert(s) "
                                    f"since placement (latest {hits[-1].get('ts')})")
             if pull_reason:
                 if not dry_run:
