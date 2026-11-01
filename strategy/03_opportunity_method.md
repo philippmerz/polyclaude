@@ -136,6 +136,28 @@ remain analyst responsibilities before invoking the vetted writer. Preserve
 15% ticket/30% factor-cluster caps, complete-set invariants, reservations, final
 current-state checks and balance/fill reconciliation.
 
+## Thin books are a search advantage, not a valuation advantage
+
+Mispricings persist longest in low-liquidity markets because well-capitalized
+sharps cannot size into them; a small bankroll's capacity constraint is the
+market's capacity constraint (scale invariance: capacity is not a filter).
+That locates candidates; it prices nothing. A thin-market entry still needs its
+own thesis clearing every live gate, and it pays for illiquidity three ways:
+(a) the exit is theoretical, so a thesis-break cannot be traded out of — entry
+size is the only loss control, which means SMALLER tickets for the same edge;
+(b) fills against you in a thin book are disproportionately informed, so apply
+the unexplained-moves rule before fading any move; (c) the estimate is noisier
+because thin books carry less information, so hold the pessimistic haircut
+(0.10) and quarter-Kelly rather than relaxing them. Holding to resolution is
+the compensation, not a consolation: chosen at entry, it deletes the exit-cost
+term (resolution pays $1.00, fee-free) and must come with clean, verifiable
+resolution criteria — otherwise hold-to-maturity converts a wrong thesis into
+a total loss just as efficiently as it converts a right one into full payout.
+Continuous two-sided market making in these books is a different business and
+stays on the skip list (adverse selection concentrates in one thesis where a
+diversified market maker would average it away); use one-sided premium resting
+orders instead — a free option, not an inventory strategy.
+
 ## All on-chain candidates use the same comparison
 
 PM is the most developed discovery path, not the whole opportunity set. Compare

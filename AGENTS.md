@@ -142,7 +142,14 @@ and on-chain comparisons follow
    when the contract is P(event by T). Decompose with hazard rates
    (`brownian_bridge_fv.py`, §5).
 
-5. **Cross-source synthesis** funds probability estimates. It is rarely a
+5. **Thin-book capacity alpha.** Low-liquidity markets deter size-constrained
+   sharps; the small bankroll's capacity matches the book. Search advantage
+   only — every entry still needs its own thesis, smaller tickets (the exit is
+   theoretical), the standard haircuts, and hold-to-resolution chosen at entry
+   with clean criteria. Doctrine:
+   [strategy/03_opportunity_method.md](strategy/03_opportunity_method.md).
+
+6. **Cross-source synthesis** funds probability estimates. It is rarely a
    standalone trade. If the thesis is only that you read the news, skip.
 
 Skip after costs: passive market-making on thin Polymarket binaries; sub-day
