@@ -205,6 +205,34 @@ def telegram(text: str) -> None:
         _log(f"telegram failed: {exc}")
 
 
+AGENT_RUNNER = "/home/polyclaude/.local/bin/polyclaude-agent"
+AGENT_WAKE_MIN_SECONDS = 1800
+HUMAN_ESCALATE_CONSECUTIVE_ERRORS = 5
+
+
+def wake_agent(text: str, state: dict, *, force: bool = False) -> bool:
+    """Queue a bounded message to the operator session (durable spool ->
+    injector). Throttled to one wake per AGENT_WAKE_MIN_SECONDS unless
+    force. Returns True when a wake was queued."""
+    now = dt.datetime.now(dt.timezone.utc)
+    last = dt.datetime.fromisoformat(
+        str(state.get("last_agent_wake", "1970-01-01T00:00:00+00:00")))
+    if not force and (now - last).total_seconds() < AGENT_WAKE_MIN_SECONDS:
+        return False
+    try:
+        r = subprocess.run(
+            [AGENT_RUNNER, "queue", "--workdir", str(REPO)],
+            input=text, text=True, capture_output=True, timeout=60)
+        if r.returncode != 0:
+            _log(f"agent wake queue failed rc={r.returncode}: {(r.stderr or '')[:160]}")
+            return False
+        state["last_agent_wake"] = now.isoformat()
+        return True
+    except Exception as exc:
+        _log(f"agent wake failed: {exc}")
+        return False
+
+
 def recent_material_alerts(keys: list[str], since: dt.datetime) -> list[dict]:
     """news_alerts rows after `since` whose text matches keys and carry a
     MATERIAL/CRITICAL impact level (classifier-populated)."""
@@ -321,7 +349,9 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
                     state["managed"][key] = {**managed, "suspended": pull_reason,
                                              "suspended_at": now.isoformat()}
                     _save_json_atomic(STATE_PATH, state)
-                    telegram(f"[resting_watch] PULLED {key}: {pull_reason}")
+                    wake_agent(f"[resting_watch] PULLED {key}: {pull_reason}. "
+                               "Review the trigger; clear the suspension in "
+                               "logs/.resting_watch_state.json to re-place.", state)
                 actions.append(f"pulled {key}: {pull_reason}")
             continue
 
@@ -334,7 +364,10 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
                                      "suspended_at": now.isoformat()}
             if not dry_run:
                 _save_json_atomic(STATE_PATH, state)
-                telegram(f"[resting_watch] fill suspected: {key} — verify and re-underwrite")
+                wake_agent(f"[resting_watch] FILL suspected: {key} — verify the fill, "
+                           "journal it, and re-underwrite before any repost.", state,
+                           force=True)
+                telegram(f"[resting_watch] fill suspected: {key}")
             continue
 
         # Suspended rests wait for manual re-underwrite (agent decision).
@@ -352,7 +385,6 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
             }
             _save_json_atomic(STATE_PATH, state)
             _log(f"placed {key} order={order_id} justification={rest['justification']}")
-            telegram(f"[resting_watch] resting sell live: {key} order {order_id[:12]}…")
     return actions
 
 
@@ -367,14 +399,21 @@ def poll_loop() -> int:
                 _log(action)
         except Exception as exc:
             _log(f"cycle error: {exc}")
-            # throttle error telegrams so a persistent fault cannot ping the
-            # operator every cycle
-            now = dt.datetime.now(dt.timezone.utc)
-            last = dt.datetime.fromisoformat(
-                str(state.get("last_error_tg", "1970-01-01T00:00:00+00:00")))
-            if (now - last).total_seconds() > 1800:
-                telegram(f"[resting_watch] cycle error: {str(exc)[:160]}")
-                state["last_error_tg"] = now.isoformat()
+            state = _load_json(STATE_PATH, {"managed": {}})
+            state["consecutive_errors"] = int(state.get("consecutive_errors", 0)) + 1
+            woke = wake_agent(
+                f"[resting_watch] cycle error ({state['consecutive_errors']}x): "
+                f"{str(exc)[:200]}. Check logs/resting_watch.log; set master=false "
+                "in notes/resting_watch_config.json to halt all rests.", state)
+            if state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS:
+                telegram(f"[resting_watch] ESCALATION: {state['consecutive_errors']} "
+                         f"consecutive cycle errors; last: {str(exc)[:140]}")
+                state["consecutive_errors"] = 0  # re-arm after notifying
+            if woke or state["consecutive_errors"] == 1:
+                _save_json_atomic(STATE_PATH, state)
+        else:
+            if int(state.get("consecutive_errors", 0)) > 0:
+                state["consecutive_errors"] = 0
                 _save_json_atomic(STATE_PATH, state)
         if _rss_mb() > RSS_CAP_MB:
             _log(f"rss cap {_rss_mb():.0f}MB exceeded; exiting for keepalive restart")
