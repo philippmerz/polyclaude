@@ -42,6 +42,25 @@ PID_PATH = Path.home() / ".polyclaude_heartbeat.pid"
 STATE_PATH = Path.home() / ".polyclaude_heartbeat_state.json"
 LOG_PATH = _REPO_ROOT / "logs" / "heartbeat.log"
 
+
+def _webhook_mode() -> bool:
+    """Box host (2026-11-02): no interactive operator; wakes go to a webhook."""
+    return os.environ.get("POLYCLAUDE_OPERATOR_MODE") == "webhook"
+
+
+def _webhook_configured() -> bool:
+    if os.environ.get("POLYCLAUDE_WAKE_URL") and os.environ.get("POLYCLAUDE_WAKE_KEY"):
+        return True
+    vals = {}
+    try:
+        for raw in (_REPO_ROOT / ".env.wake").read_text().splitlines():
+            k, _, v = raw.strip().partition("=")
+            if not raw.strip().startswith("#") and v.strip():
+                vals[k.strip()] = v.strip()
+    except OSError:
+        return False
+    return bool(vals.get("POLYCLAUDE_WAKE_URL") and vals.get("POLYCLAUDE_WAKE_KEY"))
+
 POLL_INTERVAL_SECONDS = 3600          # 1 hour
 NEWS_STATE_STALE_SECONDS = 30 * 60    # 30 min
 CRON_FORK_AGE_LIMIT_SECONDS = 60 * 60 # 1 hour for any single cron tick
@@ -307,6 +326,8 @@ def check_session_liveness(state: dict) -> None:
     Telegram (LLM-independent path) so an outage is a ping within hours,
     not a silence discovered days later.
     """
+    if _webhook_mode() and not _webhook_configured():
+        return  # wakes are only logged to logs/wake_outbox.jsonl until the webhook is set
     repo = Path(__file__).resolve().parent.parent
     journal = repo / "notes" / "journal.md"
     inject_log = repo / "notes" / "inject_log.md"
@@ -458,6 +479,8 @@ def check_tick_execution(state: dict) -> None:
     asset-capable worker from this ambiguous state: the operator can be alive
     on a long turn or working through a backlog.
     """
+    if _webhook_mode() and not _webhook_configured():
+        return  # wakes are only logged to logs/wake_outbox.jsonl until the webhook is set
     repo = Path(__file__).resolve().parent.parent
     skips = repo / "logs" / "cron" / "peer_skips.log"
     journal = repo / "notes" / "journal.md"
@@ -561,6 +584,8 @@ def check_operator_session(state: dict) -> None:
     interactive session. The session is the kimi opencode TUI (tmux session
     ``kimi``), not a tmux session named operator.
     """
+    if _webhook_mode():
+        return  # no interactive operator on the box host
     try:
         if _operator_tmux_live():
             return

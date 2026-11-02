@@ -214,7 +214,8 @@ def telegram(text: str) -> None:
         _log(f"telegram failed: {exc}")
 
 
-AGENT_RUNNER = "/home/polyclaude/.local/bin/polyclaude-agent"
+AGENT_RUNNER = os.environ.get(
+    "POLYCLAUDE_AGENT_RUNNER", str(Path.home() / ".local" / "bin" / "polyclaude-agent"))
 AGENT_WAKE_MIN_SECONDS = 1800
 HUMAN_ESCALATE_CONSECUTIVE_ERRORS = 5
 
@@ -231,7 +232,8 @@ def wake_agent(text: str, state: dict, *, force: bool = False) -> bool:
     try:
         r = subprocess.run(
             [AGENT_RUNNER, "queue", "--workdir", str(REPO)],
-            input=text, text=True, capture_output=True, timeout=60)
+            input=text, text=True, capture_output=True, timeout=60,
+            env={**os.environ, "POLYCLAUDE_WAKE_SOURCE": "resting_watch"})
         if r.returncode != 0:
             _log(f"agent wake queue failed rc={r.returncode}: {(r.stderr or '')[:160]}")
             return False

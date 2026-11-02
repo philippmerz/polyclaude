@@ -17,7 +17,7 @@
 # reboots and can point at unrelated processes — audited class).
 
 set -u
-REPO="/home/polyclaude/polyclaude"
+REPO="${POLYCLAUDE_REPO:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"
 PY="${REPO}/.venv/bin/python3"
 LOG="${REPO}/logs/daemon_keepalive.log"
 

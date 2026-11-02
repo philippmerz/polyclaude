@@ -40,7 +40,7 @@ def _make_repo(tmp_path, script_name):
     daemonctl.chmod(daemonctl.stat().st_mode | stat.S_IXUSR)
 
     keepalive_source = (SCRIPTS / "daemon_keepalive.sh").read_text(encoding="utf-8")
-    repo_setting = 'REPO="/home/polyclaude/polyclaude"'
+    repo_setting = 'REPO="${POLYCLAUDE_REPO:-$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)}"'
     lock_setting = 'exec 9>"/tmp/daemon_keepalive.lock"'
     assert repo_setting in keepalive_source
     assert lock_setting in keepalive_source
