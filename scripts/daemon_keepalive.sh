@@ -25,22 +25,13 @@ exec 9>"/tmp/daemon_keepalive.lock"
 flock -n 9 || exit 0
 
 alive() {  # alive <script-abs-path> — a live daemon running "<python> <script> start"?
-    # Exact-form match only: substring matching gets fooled by interactive
-    # shells whose command text mentions daemon names (observed 2026-07-16 —
-    # a maintenance shell running pkill/verify text matched and masked a dead
-    # daemon). A real daemon's cmdline is exactly "<venv python|python3>
-    # <script> start"; no wrapper shell has that form. Both interpreter names
-    # are accepted because @reboot lines use .venv/bin/python while this
-    # script starts with .venv/bin/python3 — exact-single-form matching would
-    # see a boot-started daemon as "not mine" and spawn a duplicate.
-    local script="$1" pid cmd
-    for pid in $(pgrep -u "$(id -u)" -f "$script" 2>/dev/null); do
-        cmd=$(tr '\0' ' ' < "/proc/${pid}/cmdline" 2>/dev/null | sed 's/ $//')
-        if [[ "$cmd" =~ ^[^\ ]+/python3?\ ${script}\ start$ ]]; then
-            return 0
-        fi
-    done
-    return 1
+    # Share daemonctl's positional /proc argv matching so relative script paths
+    # count without matching parent command text. Status also exits zero when
+    # nothing is running, so inspect the PID field rather than its exit code.
+    local script="$1" output pids
+    output=$("${REPO}/scripts/daemonctl.sh" status "${script##*/}" 2>/dev/null) || return 1
+    pids="${output#*: }"
+    [[ "$pids" =~ ^[0-9]+([[:space:]]+[0-9]+)*$ ]]
 }
 
 revive() {  # revive <needle> <python> <script-abs-path> start

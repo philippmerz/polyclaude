@@ -33,6 +33,15 @@ if [[ ! "${DELAY}" =~ ^[1-9][0-9]*$ ]]; then
     echo "ERROR: delay_min must be a positive integer" >&2
     exit 2
 fi
+# The retired Claude UserPromptSubmit hook queued this prefix every turn.
+# Refuse it before cancelling anything, so a stale hook cannot replace a
+# concrete follow-up (operator directive 2026-09-08).
+case "${PROMPT}" in
+  "AUTOMATED SELF-FOLLOWUP"*)
+    echo "Refusing idle self-followup. Cron and event watchers cover the wait (operator directive 2026-09-08)." >&2
+    exit 0
+    ;;
+esac
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 PID_FILE="${POLYCLAUDE_DIR}/notes/.followup_pid"

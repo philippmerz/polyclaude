@@ -82,11 +82,9 @@ case "${ACTION}" in
     fi
     if [[ "${ACTION}" == "restart" ]]; then
         cd "${REPO}" || exit 1
-        # ABSOLUTE script path required: daemon_keepalive.sh's alive() regex
-        # matches the exact cmdline form "<python3> <abs-path> start" — a
-        # relative-path daemon is invisible to it and gets DUPLICATED on the
-        # next 10-min keepalive pass (observed 2026-07-29: 7.5h of two
-        # opportunity_watch instances after a relative-path restart).
+        # Start with an absolute script path for a canonical cmdline. Both this
+        # script and daemon_keepalive.sh recognize historical relative forms,
+        # so those workers are replaced rather than duplicated.
         # Log name must match daemon_keepalive.sh's convention (incl. the
         # heartbeat_watch special case) or the daemon's output ALTERNATES
         # between two files depending on which mechanism last started it

@@ -1832,9 +1832,9 @@
   "current_management": "No order exists. Reopen only with fresh independent source/conditional-fill/current economics and execution gates; no automatic entry/chase/taker fallback."
  },
  "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823": {
-  "p_yes": 0.3851,
-  "p_no": 0.6149,
-  "p_yes_stress": 0.2351,
+  "p_yes": 0.2646,
+  "p_no": 0.7354,
+  "p_yes_stress": 0.1146,
   "p_yes_range": [
    0.08,
    0.8
@@ -1843,7 +1843,8 @@
   "cluster": "ai-ships-fast-short",
   "rho_within": 0.75,
   "cluster_frac": 0.1,
-  "verified": "2026-10-23",
+  "verified": "2026-11-02",
+  "updated_utc": "2026-11-02T18:45:32Z",
   "criteria_read": "2026-10-23",
   "market_id": "3072315",
   "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
@@ -1854,7 +1855,7 @@
   "probability_model": "research/2026-10-23-1800-kimi-review.json",
   "latest_source_packet": "data/deep_review_20261017/work/periodic20261023_1800/kimi_release_facts.json",
   "rationale": "Oct23 official K3.1Pro issuer release: Full51.1/tools70/Diamond39.4; named HLE admission remains unverified/API403. New unfitted admission/additional-update tree .3851;15ppreserve .2351; range8\u201380. Not automatic vendor qualification.",
-  "current_assessment": "Oct24 retain10YES/noadd: fresh account exit1.20; last issuerOct23 22:51 Full51.1/tools70/Diamond39.4 andAPI403 remain dated/notrefetched. DEC266tree rechecked, .3851 primary/.2351selected/2.351terminal; noexisting-admission1.551abovecash, low-update.812 andbroad.80favorcash. No verifiednewcause for remaining price divergence; source/admission/weight-delivery uncertainty remains. research/2026-10-24-0019-daily-hold-review.json",
+  "current_assessment": "Nov2 HLE hold reassessment: resolving-source state logs/.source_watch_state.json (baseline first observed current state 2026-11-02 11:25Z; publication time unknown) shows Kimi K3.1 Pro HLE Accuracy 46.44, tools '-', below the held 55 threshold. China Daily alert 49b7997566d1e4cd0adfa6cf5f411462763dc16d recycles the Oct27 ID/URL and is not new evidence. Remove the invalidated .08 existing-qualification contribution and replace the old issuer-51.1-supported .70 future-threshold conditional with neutral q=.60, retaining .60 future-model chance, .75 timely-official chance and .0216 remeasurement: central=.9*.60*.60*.75+.0216=.2646; stress=.1146 after the 15pp reserve. Sensitivity q=.50-.65 gives central .2241-.2849 and stress .0741-.1349. Judgmental, not calibrated or parameter-fitted; at q=.55 exit would clear only slightly. HOLD 64.5 YES: stressed hold value $7.3857 (~$7.39) exceeds current net exit $6.42 (~.099535/share); no sale and no resting-order change.",
   "management": "Filledholding: originalBUY cancel/pull obsolete. Noadd/chase/repost. Reviewexistingchecks/earlier material model/score/source/evaluation/export-policy change; reassess or exit on changed load-bearingfacts/uncertainty. Hidden-informationclass: no restingSELL at/belowfair; thesis-breakexit remains available. Full1.20costloss/sourceoutagepastJanuary possible; futuremoneyrequiresfresh fullgates.",
   "monitoring": "Existing scoped feed plus Kimi/Moonshot AI/MoonshotAIterms retained for nowheld exact55claim. Original30RSS coverage and unordered5000ID limitation remain dated/nonexhaustive; no stateedit/forcedpoll/newwatcher. Cache5min/caps/cooldown/private-unannouncedsource gaps remain. Newlymaterialevidence invokes freshhold/exitreview, not obsoleteBUYcancel.",
   "order_id": "0x728b62fe5f143a0c3e8baa47cdd7f7bad760b46d67fa1579ecacf69651a68932",

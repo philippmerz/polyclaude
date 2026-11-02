@@ -1,5 +1,5 @@
 {
-  "next_id": 275,
+  "next_id": 276,
   "decisions": [
     {
       "id": 1,
@@ -5940,6 +5940,27 @@
         "c7"
       ],
       "slug": "next-fable-model-5pt2-released-by-november-6-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 275,
+      "timestamp": "2026-11-02T18:45:41Z",
+      "type": "skip",
+      "thesis": "Resolving-source state logs/.source_watch_state.json (baseline first observed current state 2026-11-02 11:25Z; publication time unknown) shows Kimi K3.1 Pro HLE Accuracy 46.44, tools -, below the held 55 threshold; China Daily alert 49b7997566d1e4cd0adfa6cf5f411462763dc16d recycles the Oct27 ID/URL and is not new evidence. Removed the invalidated .08 existing-qualification contribution and replaced the old issuer-51.1-supported .70 future-threshold conditional with neutral q=.60 while retaining .60 future-model chance, .75 timely-official chance and .0216 remeasurement: central=.9*.60*.60*.75+.0216=.2646 and stress=.1146 after the 15pp reserve. Sensitivity q=.50-.65 gives central .2241-.2849 and stress .0741-.1349; this is judgmental, not calibrated or parameter-fitted.",
+      "confidence": "medium",
+      "prediction": "At this review, retaining 64.5 YES shares is preferable to selling: stressed hold value 64.5*.1146=$7.3857 (~$7.39) exceeds current net exit $6.42 (~.099535/share), so HOLD with no sale and no resting-order change. At q=.55 exit would clear only slightly; reassess on new official evidence rather than fitting q to the desired action.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-12-31",
+      "tags": [
+        "hold_review",
+        "kimi",
+        "hle",
+        "source_update",
+        "forecast_revision"
+      ],
+      "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null

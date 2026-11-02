@@ -301,3 +301,55 @@ def test_operator_followup_help_never_schedules_literal_help(tmp_path: Path) -> 
     assert result.returncode == 0
     assert "usage:" in result.stdout
     assert not (notes / ".followup_pid").exists()
+
+
+def test_operator_followup_refuses_idle_self_followup(tmp_path: Path) -> None:
+    scripts = tmp_path / "scripts"
+    notes = tmp_path / "notes"
+    scripts.mkdir()
+    notes.mkdir()
+    script = scripts / "operator_followup.sh"
+    shutil.copy2(REPO / "scripts" / "operator_followup.sh", script)
+    prompt = (
+        "AUTOMATED SELF-FOLLOWUP (source: Claude UserPromptSubmit hook): "
+        "Read /home/polyclaude/polyclaude/MANDATE.md first"
+    )
+
+    result = subprocess.run(
+        ["bash", str(script), prompt, "20"],
+        cwd=tmp_path,
+        text=True,
+        capture_output=True,
+        timeout=10,
+    )
+
+    assert result.returncode == 0
+    assert "Refusing idle self-followup" in result.stderr
+    assert not (notes / ".followup_pid").exists()
+
+
+def test_operator_followup_still_schedules_a_concrete_prompt(tmp_path: Path) -> None:
+    scripts = tmp_path / "scripts"
+    notes = tmp_path / "notes"
+    scripts.mkdir()
+    notes.mkdir()
+    script = scripts / "operator_followup.sh"
+    shutil.copy2(REPO / "scripts" / "operator_followup.sh", script)
+
+    result = subprocess.run(
+        ["bash", str(script), "recheck order 179 remainder at 22:00", "1"],
+        cwd=tmp_path,
+        text=True,
+        capture_output=True,
+        timeout=10,
+    )
+
+    assert result.returncode == 0
+    pid_path = notes / ".followup_pid"
+    assert pid_path.exists()
+    pid = int(pid_path.read_text().strip())
+    try:
+        os.kill(pid, 15)
+    except ProcessLookupError:
+        pass
+    assert "scheduled followup" in result.stdout
