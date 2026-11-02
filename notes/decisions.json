@@ -1,5 +1,5 @@
 {
-  "next_id": 273,
+  "next_id": 275,
   "decisions": [
     {
       "id": 1,
@@ -5906,6 +5906,43 @@
       "calibration_delta": "0",
       "lesson": "Maker bid 42 @ 0.13 filled 2026-10-30T23:18:52Z (two CONFIRMED maker legs, txs 0x6e3557.../0xa49b06...). Position now 64.5 YES @ avg 0.132, cost .53, MTM .03. Stale live reservation retired with trade-level proof. Thesis watch unchanged: official agi.safe.ai submission window post 11/4 weight release.",
       "resolved_at": "2026-10-31T00:04:53Z"
+    },
+    {
+      "id": 273,
+      "timestamp": "2026-11-02T12:01:51Z",
+      "type": "open_position",
+      "thesis": "C7 test entry 1. GPT-6.1 Astra scrapped 2026-09-28 (WSJ/CSA; deception+scope; Congress/FTC). Sol/Terra fail the Astra-name criteria. No revival news as of 11-02. Sibling-week pricing (7% next week) contradicts this weeks 74% YES. Maker NO 11sh @ 0.26.",
+      "confidence": "high",
+      "prediction": "NO: no Astra-named 6.1+ model is publicly released Nov 2-8 ET",
+      "size_usd": 2.86,
+      "resolution_at": "2026-11-09",
+      "tags": [
+        "thin-market-test",
+        "c7",
+        "astra"
+      ],
+      "slug": "will-gpt-astra-6pt1-be-released-between-november-2-and-november-8-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 274,
+      "timestamp": "2026-11-02T12:01:51Z",
+      "type": "open_position",
+      "thesis": "C7 test entry 2 (thin margin). No announcement; IPO-window comms. Maker NO 5sh @ 0.64.",
+      "confidence": "medium",
+      "prediction": "NO: no Fable 5.2+ public release by Nov 6 ET",
+      "size_usd": 3.2,
+      "resolution_at": "2026-11-07",
+      "tags": [
+        "thin-market-test",
+        "c7"
+      ],
+      "slug": "next-fable-model-5pt2-released-by-november-6-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
     }
   ]
 }

@@ -404,12 +404,19 @@ def poll_loop() -> int:
                     _log("master=false; idle")
                 else:
                     state = _load_json(STATE_PATH, {"sources": {}})
-                    if dense_active(state):
-                        poll = max(POLL_SECONDS_MIN,
-                                   int(cfg.get("dense_poll_seconds", 90)))
                     for action in run_cycle(cfg, state, client):
                         _log(action)
                     _save_json_atomic(STATE_PATH, state)
+                    # Recompute AFTER the cycle: a change detected this pass
+                    # must dense-poll from the very next sleep (checking
+                    # before the cycle would wait a full 600s baseline poll,
+                    # missing most of the post-change window).
+                    if dense_active(state):
+                        # Dense floor 60s: the regular POLL_SECONDS_MIN guards
+                        # the baseline cadence; the dense window is bounded
+                        # (~dense_minutes), so the extra ~30 polls per change
+                        # day stay well inside venue rate limits.
+                        poll = max(60, int(cfg.get("dense_poll_seconds", 90)))
             except Exception as exc:
                 _log(f"cycle error: {exc}")
             if _rss_mb() > RSS_CAP_MB:

@@ -19,14 +19,28 @@ presented as expectations.
   constant-hazard fit at 5pt gaps made +4.67/share on 86 trades at mid with
   no fees, event-bootstrap P(≤0) ≈ 0.15; **negative at 15pt gaps**; the
   market prices the ladders better than the fit (Brier 0.2132 vs 0.2276).
-  At our capacity that signal is worth ≈ $1–3/month if it survives real
-  costs — the ONLY measured systematic edge found, and it is small.
+  Corrected twice: first pass said $401 (arithmetic error, multiplying
+  the total by the trade count); Grok's second review caught that +4.67 is
+  the TOTAL per-share P&L summed over all 86 trades (a share cannot earn
+  more than $1 per trade), i.e. ~$4.67 gross across the whole backtest
+  window (~10 months of ladder resolutions). At any size that is cents per
+  month - dead before costs. C6 is the only pre-registered SYSTEMATIC TEST
+  COMPLETED, and its result is thin with doubtful robustness - hence no
+  capital. Calling it 'the only measured systematic signal' overstated a
+  failed test; corrected here and in the registry.
 - Conclusion: uninformed flow exists in thin books, but a general
   fade-the-gamblers rule has been tried and retired here (favorite-fade
   calibration failure, 2026-10-12 review; Grok's hazard result confirms the
-  market beats naive structural models). Edge comes from **underwritten
-  instances**, not from the bucket. The plan therefore measures per-slice
-  and gates capital per claim.
+  market beats naive structural models). Per-strategy realized P&L
+  (2026-11-02 breakdown of notes/decisions.json, 29 of 105 trade records
+  parsed with explicit dollar outcomes; canceled-unfilled excluded):
+  underwritten instance entries +$15.77 net (carrying the -$4.80 October
+  Fed loss), tail/carry fades -$10.89, HLE class small/negative (one leg
+  -66% at 2026-08-04 mark, journal :4579; leg exits not dollar-parsed),
+  politics/structural records still open or unfilled. So 'underwritten
+  instances worked' is measured for REALIZED P&L; it is not yet measured
+  for the open book (Clarity pair, Delcy, Kimi all unresolved). The plan
+  measures per-slice and gates capital per claim.
 
 ## 2. Plan: claims registry → data → gates → size
 

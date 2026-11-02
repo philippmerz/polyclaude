@@ -1,0 +1,74 @@
+{
+  "schema": "primary_case0332_draft.v1",
+  "authored_utc": "2026-10-19T11:29:29.753304+00:00",
+  "phase": "Draftunconditionalhazard; ordinaryflow/conditionalfillfacts pending before finaldisposition",
+  "p_yes_provisional": 0.006,
+  "range_yes": [
+    0.001,
+    0.03
+  ],
+  "current_source_cutoff_utc": "2026-10-19T11:17:59Z",
+  "exact_created_utc": "2026-09-30T14:00:53.685591Z",
+  "exact_origin_cutoff_utc": "2026-11-01T03:59:59+00:00",
+  "remaining_days": 12.687838503425926,
+  "source_verification": {
+    "unique_history_records": 17,
+    "history_exposure_years": 126,
+    "types": [
+      "earthquake"
+    ],
+    "post_year_counts": {
+      "1950": 13,
+      "1990": 6,
+      "2000": 6
+    },
+    "all_preferred_magtypes": [
+      "mw",
+      "mww"
+    ],
+    "current_ge8_count": 0
+  },
+  "unfitted_rate_model": {
+    "N": 17,
+    "T_years": 126,
+    "mle_rate_per_year": 0.1349206349206349,
+    "poisson_remaining_p": 0.004675923141273741,
+    "Jeffreys_shape": 17.5,
+    "Gamma_rate_years": 126,
+    "gamma_poisson_predictive_remaining_p": 0.004812457034319095,
+    "rate_times2_p": 0.009329982025324424,
+    "rate_times5_p": 0.023161993102007505
+  },
+  "p_provisional_bridge": "Stationarymodel~0.48%, plus0.12pp rough latepreferredmagnitude/revision/adjudication/nonstationarityallowance\u21920.6%. No ability to predict earthquake timing/location; globalhistorynotconditionalforecast. Broad0.1\u20133%physical-eventscenario, not a calibratedconfidenceinterval.",
+  "source_limits": "ZeroonlycurrentUSGS>=8fromexactcreationthroughsourcecutoff. Sub8revision/delayedlistingpossible; third-day revisions/uptooneweekextension/sourceunavailableNO rules binding. Metadataend59secondsearlierthanliteralcutoff; slugSep28notcreationSep30.",
+  "fill_toxicity_diagnostic": [
+    {
+      "prob_uninformed_fill_nohazard": 0.02,
+      "assume_hazard_fill": 1,
+      "p_hazard_given_fill": 0.23183925811437403
+    },
+    {
+      "prob_uninformed_fill_nohazard": 0.05,
+      "assume_hazard_fill": 1,
+      "p_hazard_given_fill": 0.10771992818671454
+    },
+    {
+      "prob_uninformed_fill_nohazard": 0.1,
+      "assume_hazard_fill": 1,
+      "p_hazard_given_fill": 0.056925996204933584
+    },
+    {
+      "prob_uninformed_fill_nohazard": 0.25,
+      "assume_hazard_fill": 1,
+      "p_hazard_given_fill": 0.023575638506876228
+    },
+    {
+      "prob_uninformed_fill_nohazard": 0.5,
+      "assume_hazard_fill": 1,
+      "p_hazard_given_fill": 0.011928429423459244
+    }
+  ],
+  "diagnostic_not_fill_forecast": "Unconditionalhazard is notp givenmakerfill. Racebetweensourceevent/newsandcancelcanfillNOafterhazard; cannotassumewatcherbeatscounterparty. qparametersunmeasured; freshtradefeed/rolelimitationspending.",
+  "quotes_seen_before_model": true,
+  "no_execution_authority": true
+}
