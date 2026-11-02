@@ -73,3 +73,12 @@ def test_post_jump_fair_above_price_rejected():
 
 def test_post_jump_fair_cleared_passes():
     assert rw.validate_rest(_rest(min_price=0.96, post_jump_fair=0.95), fair=0.385) == []
+
+
+def test_post_jump_fair_enforced_when_present():
+    problems = rw.validate_rest(_rest(min_price=0.90, post_jump_fair=0.95), fair=0.385)
+    assert any("post_jump_fair" in p for p in problems)
+
+
+def test_rest_above_post_jump_fair_passes():
+    assert rw.validate_rest(_rest(min_price=0.97, post_jump_fair=0.95), fair=0.385) == []

@@ -1,10 +1,10 @@
 {
- "master": false,
- "mode": "paper",
+ "master": true,
+ "mode": "live",
  "telegram": false,
  "poll_seconds": 600,
  "min_alert_level": "MATERIAL",
- "notes": "Alert-only resolution-source watcher (scripts/source_watch.py). Never trades. master=false and mode=paper by default; mode=live writes news_alerts.jsonl rows, and a CRITICAL row attributed to a rest's condition_id makes resting_watch auto-pull that rest. Enable only with operator approval. See research/2026-11-02-sweep-verification/README.md.",
+ "notes": "Alert-only resolution-source watcher (scripts/source_watch.py). Never trades. master=false and mode=paper by default; mode=live writes news_alerts.jsonl rows, and a CRITICAL row attributed to a rest's condition_id makes resting_watch auto-pull that rest. Enabled 2026-11-02 with operator approval (Grok Bot relay, Philipp): live mode writes CRITICAL news_alerts rows that resting_watch auto-pulls on; lag measured in logs/source_watch_history.jsonl. See research/2026-11-02-sweep-verification/README.md.",
  "sources": [
   {
    "id": "hle_chart_api",
@@ -12,17 +12,30 @@
    "enabled": true,
    "url": "https://dashboard.safe.ai/api/models",
    "display_url": "https://agi.safe.ai/",
-   "alert_keys": ["kimi", "moonshot", "hle"],
+   "alert_keys": [
+    "kimi",
+    "moonshot",
+    "hle"
+   ],
    "rules": [
-    {"name_regex": "kimi|moonshot", "score_gte": 55.0, "level": "CRITICAL",
-     "why": "Kimi HLE >=55 YES condition met on the resolving chart; the 0.90 hidden-info rest sells below the ~0.95 post-jump fair in its own justification."},
-    {"name_regex": "kimi|moonshot", "level": "MATERIAL",
-     "why": "any other Kimi/Moonshot row change on the resolving chart"}
+    {
+     "name_regex": "kimi|moonshot",
+     "score_gte": 55.0,
+     "level": "CRITICAL",
+     "why": "Kimi HLE >=55 YES condition met on the resolving chart; the 0.90 hidden-info rest sells below the ~0.95 post-jump fair in its own justification."
+    },
+    {
+     "name_regex": "kimi|moonshot",
+     "level": "MATERIAL",
+     "why": "any other Kimi/Moonshot row change on the resolving chart"
+    }
    ],
    "positions": [
-    {"slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+    {
+     "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
      "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
-     "token_id": "37766872206008704788193600553604631093824104239948970702184049381100338243383"}
+     "token_id": "37766872206008704788193600553604631093824104239948970702184049381100338243383"
+    }
    ]
   }
  ]

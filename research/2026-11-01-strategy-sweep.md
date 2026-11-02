@@ -12,9 +12,13 @@ gaps are latency/automation around edges we already hold.
 
 Every current thesis resolves on a named primary source we check by hand at
 ticks: agi.safe.ai (Kimi HLE), official Venezuelan channels (Delcy), Google
-Year-in-Search (Messi), Senate records (Clarity). The 2026-08-01 HLE
-resolution-source-lag lesson proved the repricing lag is minutes-to-hours
-after a source updates. A daemon that polls each named source on a bounded
+Year-in-Search (Messi), Senate records (Clarity). (Correction 2026-11-02 after the Grok review: the 2026-08-01 HLE
+lesson proved no such thing — it was source-staleness vs capability-hype,
+the trade went -66% on one leg and was reclassified as an interpretation
+bet, and the lag is unmeasurable retroactively because API captures are
+403 since 2026-08-28. The verified rationale is defensive: held rests must
+be pulled the moment the resolving source moves, and a live change history
+with CLOB mids is the only way to MEASURE any lag going forward.) A daemon that polls each named source on a bounded
 cadence (5–15 min), diffs content, and fires a tiered alert (source changed →
 wake a check-in; source confirms thesis → trade before repricing) converts our
 manual daily glance into the same edge at machine latency. Cheap (httpx +

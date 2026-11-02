@@ -63,4 +63,5 @@ revive "heartbeat_watch.py"    "$PY" "${REPO}/scripts/heartbeat_watch.py" start
 revive "telegram_listener.py"  "$PY" "${REPO}/scripts/telegram_listener.py" start
 revive "news_watcher.py"       "$PY" "${REPO}/scripts/news_watcher.py" start
 revive "resting_watch.py"      "$PY" "${REPO}/scripts/resting_watch.py" start
+revive "source_watch.py"       "$PY" "${REPO}/scripts/source_watch.py" start
 exit 0
