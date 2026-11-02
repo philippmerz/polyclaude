@@ -70,6 +70,7 @@ def test_cmd_msg_rejects_missing_source_before_loading_credentials(monkeypatch):
 
 
 def test_cmd_msg_sends_stdin_body_without_changes(monkeypatch):
+    monkeypatch.setenv("POLYCLAUDE_TELEGRAM_OUTBOUND", "1")  # legacy opt-in path only
     body = "Values: $170, $164.65, and $12.35\n"
     payloads = []
 

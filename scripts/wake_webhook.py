@@ -11,6 +11,10 @@ Subcommands (same CLI shape callers already use):
       Until URL and KEY are set, the wake is recorded as ``pending`` in
       logs/wake_outbox.jsonl and replayed later. Exit 0 = durably recorded.
   replay        POST every pending outbox wake (oldest first) if configured.
+  alert --source NAME [--severity S]   text on stdin
+      Operator alert (what used to be an outbound Telegram message). Same outbox,
+      dedupe and rate limits as wakes, plus a severity (critical|warning|info).
+      scripts/telegram.py routes every send here; outbound Telegram is disabled.
   status        Print config presence (never values) and outbox counts.
   run ...       No model backend on the box: exit 75 (callers fail open).
   operator-live Exit 1 (there is no interactive operator process).
@@ -29,6 +33,13 @@ opportunity triggers, resting_watch critical order alerts) and Telegram
 messages wake; scheduled ticks, self-followups and goal_set never do.
 Telegram messages are user-initiated and exempt from the market cooldown and
 daily cap (each update_id is still delivered at most once).
+
+Alerts (kind="alert") are rate-limited separately from wakes so alert noise can
+never starve a real wake: identical alert kind (text with digits normalised) at
+most once per 30 min, health/heartbeat kinds at most once per hour
+(POLYCLAUDE_WAKE_HEALTH_COOLDOWN_S), one alert per market per 30 min, and
+POLYCLAUDE_ALERT_DAILY_CAP (default 12) non-critical alerts per UTC day.
+Critical alerts are still deduped but bypass the market cooldown and daily cap.
 """
 from __future__ import annotations
 
@@ -46,6 +57,11 @@ from pathlib import Path
 
 REPO = Path(__file__).resolve().parents[1]
 NEVER_WAKE = {"scheduled_tick", "self_followup", "goal_set"}
+HEALTH_SOURCES = {"heartbeat_watch", "daemon_keepalive", "box_supervisor"}
+_HEALTH_RE = re.compile(r"\b(rss|cycle error|stale|stuck|dead|absent|disk|memory|keepalive|"
+                        r"pid file|session|tick eaten|unreachable|timed? ?out)\b", re.I)
+_CRITICAL_RE = re.compile(r"critical|emergency|escalation|fill suspected|pulled|liquidat", re.I)
+_WARNING_RE = re.compile(r"warn|stale|stuck|dead|absent|fail|error|exceed|⚠|alert|eaten", re.I)
 
 
 def _repo(workdir: str | None = None) -> Path:
@@ -78,6 +94,8 @@ def load_config(repo: Path) -> dict:
         "scheme": get("POLYCLAUDE_WAKE_AUTH_SCHEME", "Bearer"),
         "cooldown": int(get("POLYCLAUDE_WAKE_MARKET_COOLDOWN_S", "1800") or 1800),
         "daily_cap": int(get("POLYCLAUDE_WAKE_DAILY_CAP", "12") or 12),
+        "alert_daily_cap": int(get("POLYCLAUDE_ALERT_DAILY_CAP", "12") or 12),
+        "health_cooldown": int(get("POLYCLAUDE_WAKE_HEALTH_COOLDOWN_S", "3600") or 3600),
         "max_age": int(get("POLYCLAUDE_WAKE_REPLAY_MAX_AGE_S", "86400") or 86400),
         "timeout": float(get("POLYCLAUDE_WAKE_TIMEOUT_S", "10") or 10),
     }
@@ -242,7 +260,9 @@ def post(cfg: dict, payload: dict) -> tuple[bool, str]:
 
 
 def _payload(row: dict) -> dict:
-    return {k: row[k] for k in ("id", "source", "severity", "market_slug", "headline", "ts")}
+    out = {k: row[k] for k in ("id", "source", "severity", "market_slug", "headline", "ts")}
+    out["kind"] = row.get("kind", "wake")
+    return out
 
 
 def replay(repo: Path, cfg: dict, ob: Outbox) -> dict:
@@ -270,7 +290,9 @@ def admit(row: dict, rows: list[dict], cfg: dict, now: dt.datetime) -> str:
     """Return 'pending' to deliver, or a terminal reason for log-only."""
     if row["source"] in NEVER_WAKE:
         return "suppressed_policy"
-    latest = state_of(rows)
+    if row.get("kind") == "alert":
+        return admit_alert(row, rows, cfg, now)
+    latest = {k: v for k, v in state_of(rows).items() if v.get("kind", "wake") == "wake"}
     for prev in latest.values():
         if prev.get("dedupe_key") == row["dedupe_key"] and prev.get("status") in ("pending", "sent"):
             if row["source"] == "telegram" or \
@@ -293,6 +315,85 @@ def admit(row: dict, rows: list[dict], cfg: dict, now: dt.datetime) -> str:
     return "pending"
 
 
+def _is_health(row: dict) -> bool:
+    return row["source"] in HEALTH_SOURCES or bool(_HEALTH_RE.search(row.get("headline") or ""))
+
+
+def admit_alert(row: dict, rows: list[dict], cfg: dict, now: dt.datetime) -> str:
+    latest = [v for v in state_of(rows).values() if v.get("kind") == "alert"
+              and v.get("status") in ("pending", "sent", "expired")]
+    age = lambda p: (now - _parse_ts(p["ts"])).total_seconds()  # noqa: E731
+    window = cfg["health_cooldown"] if _is_health(row) else cfg["cooldown"]
+    if any(p.get("dedupe_key") == row["dedupe_key"] and age(p) < window for p in latest):
+        return "duplicate"
+    if row["severity"] == "critical":
+        return "pending"
+    if row.get("market_slug") and any(
+            p.get("market_slug") == row["market_slug"] and age(p) < cfg["cooldown"] for p in latest):
+        return "rate_limited_market"
+    day = now.date().isoformat()
+    used = sum(1 for p in latest if p.get("severity") != "critical" and p["ts"][:10] == day)
+    if used >= cfg["alert_daily_cap"]:
+        return "rate_limited_daily"
+    return "pending"
+
+
+def alert_kind(text: str) -> str:
+    t = re.sub(r"0x[0-9a-fA-F]+", "0x#", text.lower())
+    t = re.sub(r"\d+(?:[.,]\d+)*", "#", t)
+    return " ".join(t.split())[:100]
+
+
+def classify_alert(text: str, source: str, severity: str | None = None,
+                   env: dict | None = None) -> dict:
+    env = os.environ if env is None else env
+    info = classify(text, env={k: v for k, v in env.items()
+                               if k in ("POLYCLAUDE_WAKE_MARKET",)})
+    sev = (severity or env.get("POLYCLAUDE_WAKE_SEVERITY") or "").lower()
+    if sev not in ("critical", "warning", "info"):
+        if _CRITICAL_RE.search(text):
+            sev = "critical"
+        elif source in HEALTH_SOURCES or _WARNING_RE.search(text) or _HEALTH_RE.search(text):
+            sev = "warning"
+        else:
+            sev = "info"
+    headline = re.sub(r"^\[[A-Za-z_ ]+\]\s*", "", " ".join((text or "").split()))[:280]
+    return {"source": source or "other", "severity": sev,
+            "market_slug": info["market_slug"], "headline": headline}
+
+
+def record_alert(text: str, *, source: str, severity: str | None = None,
+                 repo: Path | None = None) -> tuple[str, str]:
+    """Durably record one operator alert; POST it now if the webhook is configured."""
+    repo = repo or REPO
+    cfg = load_config(repo)
+    info = classify_alert(text, source, severity)
+    now = _now()
+    dkey = hashlib.sha256(f"alert|{info['source']}|{alert_kind(text)}".encode()).hexdigest()[:16]
+    wid = hashlib.sha256(f"{dkey}|{now.isoformat()}".encode()).hexdigest()[:12]
+    row = {"event": "wake", "kind": "alert", "id": wid,
+           "ts": now.isoformat().replace("+00:00", "Z"), **info, "dedupe_key": dkey,
+           "prompt_sha256": hashlib.sha256(text.encode()).hexdigest()}
+    with Outbox(repo) as ob:
+        row["status"] = admit(row, ob.rows(), cfg, now)
+        ob.append(row)
+        if row["status"] == "pending" and cfg["url"] and cfg["key"]:
+            replay(repo, cfg, ob)
+        final = state_of(ob.rows()).get(wid, row).get("status")
+    return wid, final
+
+
+def cmd_alert(args) -> int:
+    text = sys.stdin.read()
+    if not text.strip():
+        print("ERROR: empty alert", file=sys.stderr)
+        return 2
+    wid, final = record_alert(text, source=args.source, severity=args.severity,
+                              repo=_repo(args.workdir))
+    print(f"alert {wid}: {final}")
+    return 0
+
+
 def cmd_queue(args) -> int:
     repo = _repo(args.workdir)
     cfg = load_config(repo)
@@ -308,7 +409,7 @@ def cmd_queue(args) -> int:
         dkey = hashlib.sha256(f"{info['source']}|{info['market_slug']}|{info['headline']}"
                               .encode()).hexdigest()[:16]
     wid = hashlib.sha256(f"{dkey}|{now.isoformat()}".encode()).hexdigest()[:12]
-    row = {"event": "wake", "id": wid, "ts": now.isoformat().replace("+00:00", "Z"),
+    row = {"event": "wake", "kind": "wake", "id": wid, "ts": now.isoformat().replace("+00:00", "Z"),
            **info, "dedupe_key": dkey, "prompt_sha256": hashlib.sha256(text.encode()).hexdigest()}
     with Outbox(repo) as ob:
         row["status"] = admit(row, ob.rows(), cfg, now)
@@ -350,7 +451,7 @@ def main(argv=None) -> int:
         return 75
     if raw and raw[0] == "operator-live":
         return 1
-    if raw and raw[0] not in ("queue", "replay", "status"):
+    if raw and raw[0] not in ("queue", "replay", "status", "alert"):
         print(f"unsupported subcommand: {raw[0]}", file=sys.stderr)
         return 69
     p = argparse.ArgumentParser()
@@ -359,12 +460,18 @@ def main(argv=None) -> int:
     q.add_argument("--workdir")
     q.add_argument("--reference-id")
     q.add_argument("--expires-at")
+    a = sub.add_parser("alert")
+    a.add_argument("--workdir")
+    a.add_argument("--source", default="other")
+    a.add_argument("--severity", choices=["critical", "warning", "info"])
     for name in ("replay", "status"):
         s = sub.add_parser(name)
         s.add_argument("--workdir")
     args, _rest = p.parse_known_args(argv)
     if args.cmd == "queue":
         return cmd_queue(args)
+    if args.cmd == "alert":
+        return cmd_alert(args)
     if args.cmd == "replay":
         return cmd_replay(args)
     if args.cmd == "status":

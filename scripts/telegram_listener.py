@@ -133,7 +133,13 @@ def _token() -> str:
 
 
 def _notify_sender(token: str, chat_id: int, text: str) -> bool:
-    """Send one best-effort delivery-status note and verify API acceptance."""
+    """Delivery-status note. Outbound Telegram is disabled (2026-11-02): the note
+    goes to the operator as a wake_webhook alert instead of the sender's chat."""
+    if os.environ.get("POLYCLAUDE_TELEGRAM_OUTBOUND") != "1":
+        import wake_webhook
+        wake_webhook.record_alert(f"[telegram_listener] {text}", source="telegram_listener",
+                                  severity="warning")
+        return True
     response = httpx.post(
         f"{API}/bot{token}/sendMessage",
         json={"chat_id": chat_id, "text": text},

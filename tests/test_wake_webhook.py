@@ -38,7 +38,7 @@ def test_unconfigured_logs_pending_and_payload_shape(tmp_path):
     assert row["source"] == "news_watcher" and row["severity"] == "critical"
     assert row["market_slug"] == "fed-cut-december-2026"
     assert row["headline"].startswith("NEWS REVIEW REQUEST:")
-    assert set(ww._payload(row)) == {"id", "source", "severity", "market_slug", "headline", "ts"}
+    assert set(ww._payload(row)) == {"id", "source", "severity", "market_slug", "headline", "ts", "kind"}
 
 
 def test_policy_scheduled_and_followup_never_wake(tmp_path):

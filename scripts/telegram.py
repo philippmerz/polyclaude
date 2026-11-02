@@ -18,6 +18,13 @@ Subcommands:
                      send as document (preserving fences/structure).
 
 All subcommands exit 0 on success, non-zero with a JSON error blob on failure.
+
+OUTBOUND TELEGRAM IS DISABLED (2026-11-02, box host). msg/file/md never contact
+Telegram: every send is recorded as an operator alert through
+scripts/wake_webhook.py (webhook to Grok Bot; queued in logs/wake_outbox.jsonl
+until POLYCLAUDE_WAKE_URL/KEY are set) and exits 0 once durably recorded.
+The only way back to real Telegram sends is POLYCLAUDE_TELEGRAM_OUTBOUND=1.
+Source is POLYCLAUDE_WAKE_SOURCE, else the calling script's name.
 """
 
 from __future__ import annotations
@@ -39,6 +46,37 @@ STATE_PATH = _secrets.path("POLYCLAUDE_TELEGRAM_STATE")
 API = "https://api.telegram.org"
 TEXT_CHUNK = 3500  # < 4096 Telegram limit, leaves room for markdown formatting
 SMALL_MD_LIMIT = 3000  # send shorter md as text
+
+
+def _outbound_enabled() -> bool:
+    return os.environ.get("POLYCLAUDE_TELEGRAM_OUTBOUND") == "1"
+
+
+def _caller_source() -> str:
+    explicit = os.environ.get("POLYCLAUDE_WAKE_SOURCE")
+    if explicit:
+        return explicit
+    try:
+        argv = Path(f"/proc/{os.getppid()}/cmdline").read_bytes().split(b"\0")
+        for arg in argv[1:] + argv[:1]:
+            name = Path(arg.decode(errors="replace")).name
+            if name.endswith((".py", ".sh")) and name != "telegram.py":
+                return name.rsplit(".", 1)[0]
+    except OSError:
+        pass
+    return "telegram_helper"
+
+
+def _route_to_wake(text: str) -> int:
+    import wake_webhook
+    try:
+        wid, status = wake_webhook.record_alert(text, source=_caller_source())
+    except Exception as exc:  # never fall back to Telegram
+        print(json.dumps({"ok": False, "routed": "wake_webhook",
+                          "error": _secrets.scrub(str(exc))[:200]}))
+        return 1
+    print(json.dumps({"ok": True, "routed": "wake_webhook", "id": wid, "status": status}))
+    return 0
 
 
 def _token() -> str:
@@ -81,6 +119,9 @@ def _chat_id() -> int:
 
 
 def cmd_setup(args: argparse.Namespace) -> int:
+    if not _outbound_enabled():
+        print("telegram setup disabled: outbound Telegram is off on this host", file=sys.stderr)
+        return 3
     prior = _state()
     expected_chat_id = args.expected_chat_id or prior.get("chat_id")
     if not expected_chat_id:
@@ -166,6 +207,8 @@ def cmd_msg(args: argparse.Namespace) -> int:
     except (OSError, UnicodeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
+    if not _outbound_enabled():
+        return _route_to_wake(text)
     token = _token(); chat_id = _chat_id()
     parse_mode = args.parse_mode
     chunks = _split(text)
@@ -184,8 +227,10 @@ def cmd_msg(args: argparse.Namespace) -> int:
 
 
 def cmd_file(args: argparse.Namespace) -> int:
-    token = _token(); chat_id = _chat_id()
     p = Path(args.path).expanduser().resolve()
+    if not _outbound_enabled():
+        return _route_to_wake(f"{args.caption or 'file'} (file: {p})")
+    token = _token(); chat_id = _chat_id()
     if not p.exists():
         print(f"ERROR: {p} not found", file=sys.stderr); return 1
     if p.stat().st_size > 50 * 1024 * 1024:

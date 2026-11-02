@@ -9,3 +9,4 @@ export POLYCLAUDE_OPERATOR_MODE=webhook
 export GIT_SSH_COMMAND="ssh -i ${HOME}/.ssh/id_ed25519 -o IdentitiesOnly=yes"
 export PATH="${POLYCLAUDE_REPO}/.venv/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin"
 umask 077
+export POLYCLAUDE_TELEGRAM_OUTBOUND=0  # outbound Telegram disabled; alerts go to wake_webhook
