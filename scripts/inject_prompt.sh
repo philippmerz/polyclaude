@@ -16,20 +16,40 @@ POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
 LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
 
-# Operator auto-prompt kill switch (2026-11-02, Philipp: the LLM operator is
-# prompted on demand only). When notes/operator_autoprompt.json says
-# "enabled": false, every automatic dispatch (cron ticks, news/opportunity
-# triggers, operator_followup, goal_inject) is dropped here, before quota
-# probes or queueing. Suppressed attempts are logged to a separate file so
-# notes/inject_log.md stays quiet and heartbeat's session-dead check (journal
-# stale while injects fresh) does not false-fire. Absent file = enabled.
-AUTOPROMPT_FLAG="${POLYCLAUDE_DIR}/notes/operator_autoprompt.json"
-if [[ -f "${AUTOPROMPT_FLAG}" ]] && grep -qE '"enabled"[[:space:]]*:[[:space:]]*false' "${AUTOPROMPT_FLAG}"; then
+# Operator auto-prompt policy (2026-11-02, Philipp: no automatic ticks; urgent
+# event wakes are welcome). scripts/autoprompt_policy.py reads
+# notes/operator_autoprompt.json and decides per source: scheduled_tick,
+# event_wake, self_followup, goal_set. The source comes from
+# POLYCLAUDE_PROMPT_SOURCE (daily_checkin.sh / operator_followup.sh set it);
+# otherwise it is inferred from the prompt shape. Suppressed attempts go to
+# logs/inject_suppressed.jsonl, never notes/inject_log.md, so heartbeat's
+# session-dead check (journal stale while injects fresh) does not false-fire.
+case "${PROMPT}" in
+  "/goal clear") PROMPT_SOURCE="goal_clear" ;;
+  "/goal "*) PROMPT_SOURCE="goal_set" ;;
+  *)
+    PROMPT_SOURCE="${POLYCLAUDE_PROMPT_SOURCE:-}"
+    if [[ -z "${PROMPT_SOURCE}" ]]; then
+        case "${PROMPT}" in
+          "Cron tick "*|"Periodic check:"*) PROMPT_SOURCE="scheduled_tick" ;;
+          *) PROMPT_SOURCE="other" ;;
+        esac
+    fi
+    ;;
+esac
+# Policy rc: 0 allow, 1 suppress. No policy file = allow (legacy). If the
+# gate cannot run while a policy file exists, only event wakes and ungated
+# prompts pass (urgent news must still wake the operator).
+POLICY_RC=0
+if [[ -f "${POLYCLAUDE_DIR}/notes/operator_autoprompt.json" ]]; then
+    python3 "${SCRIPT_DIR}/autoprompt_policy.py" "${PROMPT_SOURCE}" || POLICY_RC=$?
+fi
+if (( POLICY_RC == 1 )) || { (( POLICY_RC != 0 )) && [[ "${PROMPT_SOURCE}" =~ ^(scheduled_tick|self_followup|goal_set)$ ]]; }; then
     mkdir -p "${POLYCLAUDE_DIR}/logs"
-    printf '{"ts_utc":"%s","status":"SUPPRESSED","reason":"operator_autoprompt_disabled","prompt_head":"%s"}\n' \
-        "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(printf '%s' "${PROMPT:0:60}" | tr -d '"\\' | tr '\n' ' ')" \
+    printf '{"ts_utc":"%s","status":"SUPPRESSED","source":"%s","reason":"operator_autoprompt_policy","prompt_head":"%s"}\n' \
+        "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "${PROMPT_SOURCE}" "$(printf '%s' "${PROMPT:0:60}" | tr -d '"\\' | tr '\n' ' ')" \
         >> "${POLYCLAUDE_DIR}/logs/inject_suppressed.jsonl"
-    echo "Operator auto-prompt disabled (notes/operator_autoprompt.json): not queued."
+    echo "Operator auto-prompt policy suppressed source=${PROMPT_SOURCE} (notes/operator_autoprompt.json): not queued."
     exit 0
 fi
 # Preserve the historical Markdown log; future appends are metadata-only JSON

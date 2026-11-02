@@ -59,14 +59,26 @@ fi
 REASON_SUFFIX=""
 if [[ -n "${1:-}" ]]; then REASON_SUFFIX=" [$1]"; fi
 
-# Operator auto-prompt kill switch (see scripts/inject_prompt.sh). Daemon-fired
-# ticks (news_watcher / opportunity_watch) still arrive here; record and exit
-# cleanly without queueing. Storage maintenance still runs on plain ticks.
-AUTOPROMPT_FLAG="${POLYCLAUDE_DIR}/notes/operator_autoprompt.json"
-if [[ -f "${AUTOPROMPT_FLAG}" ]] && grep -qE '"enabled"[[:space:]]*:[[:space:]]*false' "${AUTOPROMPT_FLAG}"; then
-    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: operator auto-prompt disabled; not queued${REASON_SUFFIX}" \
+# Operator auto-prompt policy (2026-11-02, Philipp: no automatic ticks; urgent
+# event wakes are welcome). Only the two daemon review requests count as event
+# wakes; a plain cron run or any other reason (incl. a manual run) is a
+# scheduled tick. See scripts/autoprompt_policy.py / notes/operator_autoprompt.json.
+case "${1:-}" in
+  "NEWS REVIEW REQUEST:"*|"REVALIDATION REQUEST FROM OPPORTUNITY WATCH:"*) CHECKIN_SOURCE="event_wake" ;;
+  *) CHECKIN_SOURCE="scheduled_tick" ;;
+esac
+export POLYCLAUDE_PROMPT_SOURCE="${CHECKIN_SOURCE}"
+# Policy rc: 0 allow, 1 suppress. No policy file = allow (legacy). If the
+# gate cannot run while a policy file exists, only event wakes and ungated
+# prompts pass (urgent news must still wake the operator).
+POLICY_RC=0
+if [[ -f "${POLYCLAUDE_DIR}/notes/operator_autoprompt.json" ]]; then
+    python3 "${SCRIPT_DIR}/autoprompt_policy.py" "${CHECKIN_SOURCE}" || POLICY_RC=$?
+fi
+if (( POLICY_RC == 1 )) || { (( POLICY_RC != 0 )) && [[ "${CHECKIN_SOURCE}" =~ ^(scheduled_tick|self_followup|goal_set)$ ]]; }; then
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: ${CHECKIN_SOURCE} suppressed by operator auto-prompt policy; not queued${REASON_SUFFIX}" \
         >> "${LOG_DIR}/peer_skips.log"
-    write_dispatch_receipt "suppressed" "operator_autoprompt_disabled" 0
+    write_dispatch_receipt "suppressed" "operator_autoprompt_policy" 0
     maintain_closed_artifacts
     exit 0
 fi

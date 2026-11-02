@@ -56,7 +56,9 @@ fi
 # Schedule new followup via background sleep+inject. Quoted carefully to handle
 # arbitrary text in PROMPT (the inject script takes one positional arg).
 DELAY_SEC=$((10#${DELAY} * 60))
-nohup bash -c "sleep $DELAY_SEC && '$SCRIPT_DIR/inject_prompt.sh' \"\$1\"" \
+# POLYCLAUDE_PROMPT_SOURCE lets inject_prompt.sh apply the self_followups policy
+# (notes/operator_autoprompt.json; off since 2026-11-02).
+nohup env POLYCLAUDE_PROMPT_SOURCE=self_followup bash -c "sleep $DELAY_SEC && '$SCRIPT_DIR/inject_prompt.sh' \"\$1\"" \
     _ "$PROMPT" >/dev/null 2>&1 &
 new_pid=$!
 echo "$new_pid" > "$PID_FILE"

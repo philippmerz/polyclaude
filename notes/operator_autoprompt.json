@@ -1,8 +1,11 @@
 {
-  "enabled": false,
-  "since_utc": "2026-11-02T12:39Z",
+  "scheduled_ticks": false,
+  "event_wakes": true,
+  "self_followups": false,
+  "goal_set": false,
+  "since_utc": "2026-11-02T13:05Z",
   "set_by": "Grok Bot (co-lead), on Philipp's instruction 2026-11-02",
-  "why": "Project is run by Grok Bot; the LLM operator (Kimi K3.1 in tmux 'kimi') is prompted on demand only, when pushback is useful. No automatic cron/news/opportunity/followup prompts.",
-  "scope": "scripts/inject_prompt.sh and scripts/daily_checkin.sh drop automatic dispatches (logged to logs/inject_suppressed.jsonl and logs/cron/peer_skips.log). The 0 */3 daily_checkin crontab line is also commented out. Safety daemons, keepalive and arb_cron keep running.",
-  "re_enable": "set enabled to true (and uncomment the crontab line from the backup)"
+  "why": "Philipp: no automatic ticks; waking the operator (K3.1, tmux 'kimi') on urgent news is still fine and beneficial. Otherwise the operator is prompted on demand.",
+  "scope": "Gate: scripts/autoprompt_policy.py, called by scripts/daily_checkin.sh and scripts/inject_prompt.sh. scheduled_tick = daily_checkin.sh run by cron or by hand with any reason other than the two daemon review requests. event_wake = daily_checkin.sh 'NEWS REVIEW REQUEST:' (news_watcher) or 'REVALIDATION REQUEST FROM OPPORTUNITY WATCH:' (opportunity_watch). self_followup = operator_followup.sh timers. goal_set = goal_inject.sh set ('/goal clear' always passes). resting_watch CRITICAL wakes and telegram_listener (Philipp's messages) queue directly and are not gated. The 3-hourly crontab line is also commented out.",
+  "re_enable": "Set scheduled_ticks true and uncomment the daily_checkin line from ~polyclaude/.polyclaude/crontab_backups/crontab.20261102T1239Z.bak."
 }
