@@ -1,0 +1,17 @@
+{
+ "schema": "polyclaude.cancel-block-resolution.v1",
+ "resolved_at": "2026-11-02T12:28Z",
+ "block_row": {
+  "asset": "",
+  "conditionId": "",
+  "createdAt": "2026-11-02T12:16:03.792963+00:00",
+  "matchedSharesAtCancel": null,
+  "orderId": "0x2166d13dca24",
+  "originalShares": null,
+  "price": null,
+  "reason": "cancel target absent from exhaustive pre-cancel inventory; it may have filled during indexing lag",
+  "side": "UNKNOWN"
+ },
+ "resolution": "The 12:16:03Z block was caused by a hand-truncated cancel id (0x2166d13dca24, 14 chars) that could not match the live inventory. The full order id 0x2166d13dca2426b30cd204f10ccd69ffea0df7de82f624cd7d1368d7b2dfe59e was verified LIVE (open-orders read at 12:26Z, size_matched 0) and then CANCELED with the exact id at ~12:27Z; the 12:28Z open-orders read shows it absent. No fills occurred (size_matched 0 throughout). Terminal state affirmatively proven; block retired.",
+ "full_order_id": "0x2166d13dca2426b30cd204f10ccd69ffea0df7de82f624cd7d1368d7b2dfe59e"
+}
