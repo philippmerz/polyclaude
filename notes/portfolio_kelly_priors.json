@@ -2042,5 +2042,29 @@
   "sell_proceeds_usd": 4.0,
   "closed_utc": "2026-10-29T12:56:00Z",
   "note": "closed 2026-10-29 FOK sell 20 YES at 0.20 for 4.00."
+ },
+ "will-gpt-astra-6pt1-be-released-between-november-2-and-november-8-2026": {
+  "p_yes": 0.08,
+  "p_no": 0.92,
+  "p_yes_stress": 0.18,
+  "edge_haircut": 0.1,
+  "cluster": "openai-astra6pt1-ladder-2026",
+  "rho_within": 0.5,
+  "cluster_frac": 0.3,
+  "verified": "2026-11-02",
+  "updated_utc": "2026-11-02T11:59:28.096825+00:00",
+  "review_note": "C7 thin-market test entry 1. Astra 6.1+ release Nov 2-8: model scrapped 9/28 (WSJ/CSA), Sol+Terra do not meet Astra-name criteria; Congress/FTC scrutiny. Cluster unique: OpenAI-specific event, independent of Kimi HLE and Anthropic Fable ladders."
+ },
+ "next-fable-model-5pt2-released-by-november-6-2026": {
+  "p_yes": 0.2,
+  "p_no": 0.8,
+  "p_yes_stress": 0.3,
+  "edge_haircut": 0.1,
+  "cluster": "anthropic-fable-ladder-2026",
+  "rho_within": 0.5,
+  "cluster_frac": 0.3,
+  "verified": "2026-11-02",
+  "updated_utc": "2026-11-02T11:59:28.096825+00:00",
+  "review_note": "C7 thin-market test entry 2 (thin margin, flagged). Fable 5.2+ by 11-06: no announcement, IPO-window comms. Independent of OpenAI/Google ladders."
  }
 }

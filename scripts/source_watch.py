@@ -65,6 +65,7 @@ CONFIG_PATH = REPO / "notes" / "source_watch_config.json"
 ALERTS_PATH = REPO / "notes" / "news_alerts.jsonl"
 STATE_PATH = REPO / "logs" / ".source_watch_state.json"
 HISTORY_PATH = REPO / "logs" / "source_watch_history.jsonl"
+MIDS_PATH = REPO / "logs" / "source_watch_mids.jsonl"
 PAPER_PATH = REPO / "logs" / "source_watch_paper.jsonl"
 PID_PATH = REPO / "logs" / "source_watch.pid"
 LOG_PATH = REPO / "logs" / "source_watch.log"
@@ -308,6 +309,19 @@ def telegram(text: str) -> None:
 
 # --------------------------------------------------------------------- cycle
 
+
+def dense_active(state: dict, now: dt.datetime | None = None) -> bool:
+    """True while any source is inside its dense post-change mid-snapshot
+    window (C1 measurement: baseline mids every poll, dense mids every
+    ~dense_poll_seconds for dense_minutes after each detected change)."""
+    now = now or _now()
+    stamp = _stamp(now)
+    for st in (state.get("sources") or {}).values():
+        until = st.get("dense_until")
+        if until and str(until) > stamp:
+            return True
+    return False
+
 def run_cycle(cfg: dict, state: dict, client: httpx.Client, *, write: bool = True,
               now: dt.datetime | None = None) -> list[str]:
     """One pass over every enabled source. Mutates `state`. Returns actions."""
@@ -333,6 +347,11 @@ def run_cycle(cfg: dict, state: dict, client: httpx.Client, *, write: bool = Tru
             continue
         st["consecutive_errors"] = 0
         st["last_ok"] = _stamp(now)
+        dense = bool(st.get("dense_until") and str(st["dense_until"]) > _stamp(now))
+        if cfg.get("mid_log", True):
+            _append_jsonl(MIDS_PATH, {"ts": _stamp(now), "source": sid,
+                                      "kind": "dense" if dense else "baseline",
+                                      "midpoints": midpoints(client, src)})
         base = st.get("baseline")
         if base is None:
             st["baseline"] = new
@@ -343,6 +362,8 @@ def run_cycle(cfg: dict, state: dict, client: httpx.Client, *, write: bool = Tru
             out.append(f"{sid}: unchanged")
             continue
         out.append(f"{sid}: CHANGE {level}: " + "; ".join(reasons))
+        st["dense_until"] = _stamp(now + dt.timedelta(
+            minutes=float(cfg.get("dense_minutes", 45))))
         if not write:
             continue
         mids = midpoints(client, src)
@@ -350,6 +371,9 @@ def run_cycle(cfg: dict, state: dict, client: httpx.Client, *, write: bool = Tru
                 "diff": d, "old_hash": base["hash"], "new_hash": new["hash"],
                 "midpoints": mids, "mode": mode}
         _append_jsonl(HISTORY_PATH, hist)
+        if cfg.get("mid_log", True):
+            _append_jsonl(MIDS_PATH, {"ts": _stamp(now), "source": sid,
+                                      "kind": "change", "midpoints": mids})
         alert = build_alert(src, level, reasons, now)
         min_level = cfg.get("min_alert_level", "MATERIAL")
         if LEVELS.index(level) >= LEVELS.index(min_level):
@@ -380,6 +404,9 @@ def poll_loop() -> int:
                     _log("master=false; idle")
                 else:
                     state = _load_json(STATE_PATH, {"sources": {}})
+                    if dense_active(state):
+                        poll = max(POLL_SECONDS_MIN,
+                                   int(cfg.get("dense_poll_seconds", 90)))
                     for action in run_cycle(cfg, state, client):
                         _log(action)
                     _save_json_atomic(STATE_PATH, state)
