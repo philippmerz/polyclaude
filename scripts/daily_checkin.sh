@@ -58,6 +58,18 @@ fi
 # as generic ticks and got answered "nothing happened").
 REASON_SUFFIX=""
 if [[ -n "${1:-}" ]]; then REASON_SUFFIX=" [$1]"; fi
+
+# Operator auto-prompt kill switch (see scripts/inject_prompt.sh). Daemon-fired
+# ticks (news_watcher / opportunity_watch) still arrive here; record and exit
+# cleanly without queueing. Storage maintenance still runs on plain ticks.
+AUTOPROMPT_FLAG="${POLYCLAUDE_DIR}/notes/operator_autoprompt.json"
+if [[ -f "${AUTOPROMPT_FLAG}" ]] && grep -qE '"enabled"[[:space:]]*:[[:space:]]*false' "${AUTOPROMPT_FLAG}"; then
+    echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: operator auto-prompt disabled; not queued${REASON_SUFFIX}" \
+        >> "${LOG_DIR}/peer_skips.log"
+    write_dispatch_receipt "suppressed" "operator_autoprompt_disabled" 0
+    maintain_closed_artifacts
+    exit 0
+fi
 LOG_FILE="${LOG_DIR}/checkin_${TS}.log"
 
 # Ensure a working PATH for cron. HOME must be resolved before PATH.

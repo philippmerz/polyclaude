@@ -15,6 +15,23 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 POLYCLAUDE_DIR="$(dirname "${SCRIPT_DIR}")"
 RUNNER="${POLYCLAUDE_AGENT_RUNNER:-${HOME}/.local/bin/polyclaude-agent}"
 LOG="${POLYCLAUDE_DIR}/notes/inject_log.md"
+
+# Operator auto-prompt kill switch (2026-11-02, Philipp: the LLM operator is
+# prompted on demand only). When notes/operator_autoprompt.json says
+# "enabled": false, every automatic dispatch (cron ticks, news/opportunity
+# triggers, operator_followup, goal_inject) is dropped here, before quota
+# probes or queueing. Suppressed attempts are logged to a separate file so
+# notes/inject_log.md stays quiet and heartbeat's session-dead check (journal
+# stale while injects fresh) does not false-fire. Absent file = enabled.
+AUTOPROMPT_FLAG="${POLYCLAUDE_DIR}/notes/operator_autoprompt.json"
+if [[ -f "${AUTOPROMPT_FLAG}" ]] && grep -qE '"enabled"[[:space:]]*:[[:space:]]*false' "${AUTOPROMPT_FLAG}"; then
+    mkdir -p "${POLYCLAUDE_DIR}/logs"
+    printf '{"ts_utc":"%s","status":"SUPPRESSED","reason":"operator_autoprompt_disabled","prompt_head":"%s"}\n' \
+        "$(date -u +%Y-%m-%dT%H:%M:%SZ)" "$(printf '%s' "${PROMPT:0:60}" | tr -d '"\\' | tr '\n' ' ')" \
+        >> "${POLYCLAUDE_DIR}/logs/inject_suppressed.jsonl"
+    echo "Operator auto-prompt disabled (notes/operator_autoprompt.json): not queued."
+    exit 0
+fi
 # Preserve the historical Markdown log; future appends are metadata-only JSON
 # lines so the heartbeat's mtime check remains useful without storing prompts.
 

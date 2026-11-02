@@ -1,0 +1,8 @@
+{
+  "enabled": false,
+  "since_utc": "2026-11-02T12:39Z",
+  "set_by": "Grok Bot (co-lead), on Philipp's instruction 2026-11-02",
+  "why": "Project is run by Grok Bot; the LLM operator (Kimi K3.1 in tmux 'kimi') is prompted on demand only, when pushback is useful. No automatic cron/news/opportunity/followup prompts.",
+  "scope": "scripts/inject_prompt.sh and scripts/daily_checkin.sh drop automatic dispatches (logged to logs/inject_suppressed.jsonl and logs/cron/peer_skips.log). The 0 */3 daily_checkin crontab line is also commented out. Safety daemons, keepalive and arb_cron keep running.",
+  "re_enable": "set enabled to true (and uncomment the crontab line from the backup)"
+}
