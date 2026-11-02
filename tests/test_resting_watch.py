@@ -59,3 +59,17 @@ def test_missing_fair_rejected():
 def test_nonpositive_shares_rejected():
     problems = rw.validate_rest(_rest(shares=0), fair=0.385)
     assert any("shares" in p for p in problems)
+
+
+def test_post_jump_fair_absent_keeps_v1_behavior():
+    assert rw.validate_rest(_rest(min_price=0.90), fair=0.385) == []
+
+
+def test_post_jump_fair_above_price_rejected():
+    # Mirrors the live Kimi HLE rest: 0.90 vs a stated ~0.95 post-jump fair.
+    problems = rw.validate_rest(_rest(min_price=0.90, post_jump_fair=0.95), fair=0.385)
+    assert any("post_jump_fair" in p for p in problems)
+
+
+def test_post_jump_fair_cleared_passes():
+    assert rw.validate_rest(_rest(min_price=0.96, post_jump_fair=0.95), fair=0.385) == []

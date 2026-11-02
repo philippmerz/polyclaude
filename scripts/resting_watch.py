@@ -132,6 +132,16 @@ def validate_rest(rest: dict, fair: float | None) -> list[str]:
             if price is not None and price <= floor:
                 problems.append(
                     f"hidden-info rest {price} not strictly above fair+premium ({floor:.3f})")
+            # Optional explicit post-jump fair (2026-11-02): the docstring's
+            # "must also clear the post-jump fair" was prose-only; when a rest
+            # records the estimate, enforce it.
+            pjf = rest.get("post_jump_fair")
+            if pjf is not None:
+                if not isinstance(pjf, (int, float)) or not (0 < pjf <= 1):
+                    problems.append("post_jump_fair must be in (0,1]")
+                elif price is not None and price < pjf:
+                    problems.append(
+                        f"hidden-info rest {price} below its post_jump_fair {pjf}")
         elif cls == "ordinary" and price is not None and price < fair:
             problems.append(f"ordinary rest {price} below fair {fair}")
     return problems
