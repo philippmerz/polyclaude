@@ -25,5 +25,5 @@ while :; do
         last_arb_hour=$hour
         ( bash scripts/arb_cron.sh 8>&- ) &
     fi
-    sleep 20
+    sleep 20 8>&-
 done

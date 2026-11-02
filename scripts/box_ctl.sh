@@ -12,7 +12,11 @@ case "${1:-status}" in
       sleep 8; fi
     "$0" status ;;
   stop)
-    p=$(sup_pid) && kill "$p" && echo "stopped supervisor $p"
+    if p=$(sup_pid); then
+      kill "$p" && echo "stopped supervisor $p"
+      # bash defers exit until its foreground sleep returns; wait so restart can take the lock
+      for _ in $(seq 1 30); do kill -0 "$p" 2>/dev/null || break; sleep 1; done
+    fi
     for d in $DAEMONS; do bash scripts/daemonctl.sh stop "$d"; done ;;
   restart) "$0" stop; sleep 2; "$0" start ;;
   status)
