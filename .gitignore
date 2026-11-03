@@ -50,3 +50,9 @@ data/
 notes/.uma_status_cache.json
 notes/entries_log.md
 notes/.ostium_state_cache.json
+
+# box runtime: never commit
+.home/
+secrets/
+.env.wake
+logs/

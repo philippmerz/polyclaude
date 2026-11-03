@@ -30,6 +30,8 @@ def _entry(entry_id: str, title: str, summary: str = "A new report.") -> dict:
 def _poll_harness(monkeypatch, tmp_path, feeds, *, now=2_000_000.0):
     """Provide feed, state, clock, alert-log, and cron fakes; no I/O escapes."""
     by_url = feeds  # Follow replacements between simulated polling cycles.
+    monkeypatch.setattr(news_watcher.httpx, "get", lambda url, **kwargs: SimpleNamespace(
+        content=url, raise_for_status=lambda: None))
     monkeypatch.setattr(
         news_watcher.feedparser,
         "parse",

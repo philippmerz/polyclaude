@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import copy
 import datetime as dt
 import json
@@ -867,6 +869,7 @@ def test_directional_component_cannot_be_relabelled_nondirectional() -> None:
 
 
 class _Response:
+    status_code = 200
     def __init__(self, payload: object):
         self._payload = payload
 
@@ -890,8 +893,8 @@ def test_exit_cli_replaces_member_rows_with_one_group_row(
         positions[0]["size"] = "twenty"
 
     def get(url: str, **kwargs) -> _Response:
-        if "data-api.polymarket.com/positions" in url:
-            return _Response(positions)
+        if "data-api.polymarket.com/v2/positions" in url:
+            return _Response(envelope(positions))
         if "/clob-markets/" in url:
             condition_id = url.rsplit("/", 1)[-1]
             return _Response(
@@ -908,6 +911,10 @@ def test_exit_cli_replaces_member_rows_with_one_group_row(
     monkeypatch.setattr(exits.httpx, "get", get)
     monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
 
+    if malformed_size:
+        with pytest.raises(exits._data_api.DataApiError, match="current_size"):
+            exits.main()
+        return
     assert exits.main() == 0
     output = capsys.readouterr().out
     assert output.count("Duma covered union") == 1

@@ -10,6 +10,10 @@ Output: exec_trades.jsonl (resumable).
 import json, os, sys, time, argparse, random
 import httpx
 
+from pathlib import Path
+sys.path.insert(0, str(Path(__file__).resolve().parents[2] / "scripts"))
+import _data_api
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--paths", default="/tmp/listing_study/paths.jsonl")
@@ -64,28 +68,14 @@ def main():
                 continue
             cutoff = r["t0"] + 48 * 3600
             early, n_total, reached = [], 0, False
-            for pg in range(args.page_cap):
-                try:
-                    tr = c.get("https://data-api.polymarket.com/trades",
-                               params={"market": cid, "limit": 500, "offset": pg * 500}).json()
-                except Exception:
-                    tr = None
-                if not isinstance(tr, list) or not tr:
-                    reached = True  # ran out of trades -> we saw them all
-                    break
-                n_total += len(tr)
-                for t in tr:
-                    if t.get("timestamp") and t["timestamp"] <= cutoff:
-                        early.append({"ts": t["timestamp"], "side": t.get("side"),
-                                      "outcome": t.get("outcome"), "p": float(t.get("price") or 0),
-                                      "sz": float(t.get("size") or 0)})
-                if tr[-1].get("timestamp", 0) <= r["t0"]:  # paged past listing time
-                    reached = True
-                    break
-                if len(tr) < 500:
-                    reached = True
-                    break
-                time.sleep(0.08)
+            tr = _data_api.get_trades(market=cid, limit=500, max_pages=args.page_cap, timeout=25)
+            n_total = len(tr)
+            reached = True
+            for t in tr:
+                if t.get("timestamp") and t["timestamp"] <= cutoff:
+                    early.append({"ts": t["timestamp"], "side": t.get("side"),
+                                  "outcome": t.get("outcome"), "p": float(t.get("price") or 0),
+                                  "sz": float(t.get("size") or 0)})
             out["n_trades_total_seen"] = n_total
             out["complete_early_window"] = reached
             out["early_trades"] = sorted(early, key=lambda x: x["ts"])

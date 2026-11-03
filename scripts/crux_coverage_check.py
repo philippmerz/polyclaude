@@ -42,6 +42,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 CONFIG_PATH = Path(__file__).resolve().parent / "news_watcher_config.json"
 
@@ -80,15 +81,13 @@ def _positions() -> list[dict]:
     sys.path.insert(0, str(Path(__file__).resolve().parent))
     import _paths as _secrets
     addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
-    with httpx.Client(timeout=20.0) as c:
-        r = c.get("https://data-api.polymarket.com/positions",
-                  params={"user": addr.lower(), "limit": "100"})
-        r.raise_for_status()
-        return [
-            p for p in r.json()
-            if float(p.get("size", 0) or 0) > 0.5
-            and p.get("redeemable") is not True
-        ]
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": "100"}, timeout=20.0)
+    r.raise_for_status()
+    return [
+        p for p in r.json()
+        if float(p.get("size", 0) or 0) > 0.5
+        and p.get("redeemable") is not True
+    ]
 
 
 def _salient(question: str) -> set[str]:

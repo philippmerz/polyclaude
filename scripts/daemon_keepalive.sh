@@ -46,7 +46,7 @@ revive() {  # revive <needle> <python> <script-abs-path> start
     # 9>&- : do NOT let the daemon inherit the flock FD — an inherited lock
     # FD is held for the daemon's lifetime and every later keepalive run
     # would silently exit at flock -n (bit us within minutes of shipping).
-    nohup "$@" >> "${REPO}/logs/${logname}" 2>&1 9>&- &
+    setsid nohup "$@" >> "${REPO}/logs/${logname}" 2>&1 < /dev/null 9>&- &
 }
 
 revive "opportunity_watch.py"  "$PY" "${REPO}/scripts/opportunity_watch.py" start

@@ -269,7 +269,7 @@ def test_short_dated_rotation_fails_safely_on_bad_live_dates() -> None:
 
 
 def _response(status: int, payload: object, **headers: str) -> httpx.Response:
-    request = httpx.Request("GET", audit.POSITIONS_URL)
+    request = httpx.Request("GET", audit._data_api.BASE_URL + "/v2/positions")
     return httpx.Response(
         status,
         json=payload,
@@ -295,7 +295,7 @@ def test_live_positions_retries_rate_limit_then_validates_success(monkeypatch) -
     ]
     sleeps: list[float] = []
 
-    monkeypatch.setattr(audit.httpx, "get", lambda *_args, **_kwargs: responses.pop(0))
+    monkeypatch.setattr(audit._data_api, "get_positions", lambda *_args, **_kwargs: responses.pop(0))
     monkeypatch.setattr(audit.time, "sleep", sleeps.append)
 
     assert audit._live_positions() == [
@@ -316,7 +316,7 @@ def test_live_positions_rejects_error_payload_shape_without_attribute_error(
         calls += 1
         return _response(200, "rate limited")
 
-    monkeypatch.setattr(audit.httpx, "get", get)
+    monkeypatch.setattr(audit._data_api, "get_positions", get)
     monkeypatch.setattr(audit.time, "sleep", lambda _seconds: None)
 
     with pytest.raises(audit.LivePositionsUnavailable) as excinfo:
@@ -342,8 +342,8 @@ def test_live_positions_rejects_malformed_live_rows(
     monkeypatch, row: dict, match: str
 ) -> None:
     monkeypatch.setattr(
-        audit.httpx,
-        "get",
+        audit._data_api,
+        "get_positions",
         lambda *_args, **_kwargs: _response(200, [row]),
     )
     monkeypatch.setattr(audit.time, "sleep", lambda _seconds: None)

@@ -24,6 +24,7 @@ Run:  .venv/bin/python tests/test_money_math.py
 """
 
 from __future__ import annotations
+from _v2_data_api import envelope
 
 import atexit
 import json
@@ -632,14 +633,14 @@ _book_requests = []
 
 
 def _filtered_inventory(request):
-    threshold = float(request.url.params.get("sizeThreshold", "1"))
+    threshold = float(request.url.params.get("sizeThreshold", request.url.params.get("filter_amount", "1")))
     return [row for row in _inventory_rows if row["size"] > threshold]
 
 
 def _inventory_transport(request):
-    if request.url.path == "/positions":
+    if request.url.path == "/v2/positions":
         _inventory_requests.append(request)
-        return httpx.Response(200, json=_filtered_inventory(request))
+        return httpx.Response(200, json=envelope(_filtered_inventory(request)))
     if request.url.path == "/markets":
         _book_requests.append(request.url.params["slug"])
         return httpx.Response(200, json=[{
@@ -663,7 +664,7 @@ def _inventory_get(url, *, params, **kwargs):
         return client.get(url, params=params)
 
 
-_default_request = httpx.Request("GET", bankroll.DATA_API + "/positions")
+_default_request = httpx.Request("GET", bankroll._data_api.BASE_URL + "/v2/positions")
 check("default API hides sub-one-share residual",
       "trump-residual" in [r["slug"] for r in _filtered_inventory(_default_request)], False)
 with patch.object(httpx, "get", _inventory_get), patch.object(httpx, "Client", _inventory_client):
@@ -671,7 +672,7 @@ with patch.object(httpx, "get", _inventory_get), patch.object(httpx, "Client", _
         _warnings = []
         _complete_mid = bankroll.pm_positions_mtm("0xwallet", _warnings)
         check("bankroll retains dust and settled payout in total", _complete_mid, 3.5151)
-        check("bankroll retains unresolved dust cost", bankroll.PM_STATE["cost"], 1.2907)
+        check("bankroll retains unresolved dust cost", bankroll.PM_STATE["cost"], 1.290697)
         check("bankroll keeps settled rows out of open midpoint", bankroll.PM_STATE["mid"], 1.5151)
         check("dust never enters minimum-lot depth walk", bankroll.PM_STATE["realizable"], 1)
         check("resolved winning claim still has fee-free value", bankroll.PM_STATE["sleeve_realizable"], 3)
@@ -680,7 +681,7 @@ with patch.object(httpx, "get", _inventory_get), patch.object(httpx, "Client", _
             bankroll.PM_STATE["cost"], bankroll.PM_STATE["realizable"])["realized"]
         _filtered_realized = bankroll.realized_split(183.2, 170, 5, 1.2, 1)["realized"]
         check("restoring dust corrects realized by remaining cost",
-              _complete_realized - _filtered_realized, .2907)
+              _complete_realized - _filtered_realized, .290697)
     _printed = io.StringIO()
     with patch.object(positions_report.Wallet, "load", return_value=SimpleNamespace(address="0xwallet")), contextlib.redirect_stdout(_printed):
         positions_report.main()
@@ -694,6 +695,6 @@ with patch.object(httpx, "get", _inventory_get), patch.object(httpx, "Client", _
           [(r["slug"], r["size"], r["asset"]) for r in _audit_inventory],
           [("ordinary", 2, "ordinary-no"), ("trump-residual", .33, "trump-no")])
 check("all three readers explicitly disable API size filtering",
-      [r.url.params.get("sizeThreshold") for r in _inventory_requests], ["0", "0", "0"])
+      [r.url.params.get("sizeThreshold") for r in _inventory_requests], ["0.0"] * 6)
 check("only tradeable ordinary inventory requests a book",
       _book_requests, ["ordinary", "ordinary"])

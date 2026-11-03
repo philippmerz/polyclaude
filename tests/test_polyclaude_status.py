@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import sys
 import subprocess
 from pathlib import Path
@@ -133,6 +135,7 @@ def test_actual_positions_producer_output_reaches_status_formatter(
     monkeypatch, capsys
 ) -> None:
     class FakeResponse:
+        status_code = 200
         def __init__(self, payload):
             self.payload = payload
 
@@ -170,7 +173,7 @@ def test_actual_positions_producer_output_reaches_status_formatter(
 
         def get(self, url, **kwargs):
             if url.endswith("/positions"):
-                return FakeResponse([position])
+                return FakeResponse(envelope([position]))
             if "gamma-api.polymarket.com" in url:
                 return FakeResponse([market])
             if "clob.polymarket.com" in url:
@@ -183,6 +186,7 @@ def test_actual_positions_producer_output_reaches_status_formatter(
         staticmethod(lambda: SimpleNamespace(address="0x1234")),
     )
     monkeypatch.setattr(positions.httpx, "Client", lambda *args, **kwargs: FakeClient())
+    monkeypatch.setattr(positions.httpx, "get", lambda url, **kwargs: FakeClient().get(url, **kwargs))
 
     positions.main()
     producer_output = capsys.readouterr().out

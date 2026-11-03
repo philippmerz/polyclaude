@@ -42,6 +42,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _paths as _secrets
@@ -77,9 +78,10 @@ def fetch_market(market_id: str) -> dict | None:
 
 
 def fetch_positions(addr: str) -> list[dict]:
-    positions, ok, _ = _fetch_positions_checked(addr)
-    # Preserve the historical list API, including valid rows returned at the
-    # request cap; callers that need coverage status should use the helper.
+    positions, ok, error = _fetch_positions_checked(addr)
+    if not ok:
+        raise _data_api.DataApiError(f"positions coverage unavailable: {error}")
+    # The status-bearing helper lets main retain coverage-unavailable alerts.
     return positions
 
 
@@ -91,11 +93,9 @@ def _fetch_positions_checked(addr: str) -> tuple[list[dict], bool, str | None]:
     an empty wallet.
     """
     try:
-        with httpx.Client(timeout=15) as c:
-            r = c.get("https://data-api.polymarket.com/positions",
-                      params={"user": addr.lower(), "limit": 100, "sizeThreshold": 0.0})
-            r.raise_for_status()
-            payload = r.json()
+        r = _data_api.get_positions(params={"user": addr.lower(), "limit": 100, "sizeThreshold": 0.0}, timeout=15)
+        r.raise_for_status()
+        payload = r.json()
         if not isinstance(payload, list):
             return [], False, "response was not a list"
         for position in payload:

@@ -34,6 +34,7 @@ from pathlib import Path
 from typing import Any
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 from eth_account import Account
 from eth_account.messages import encode_typed_data
 
@@ -809,8 +810,7 @@ _CTF_IDENTITY_ABI = [
 
 
 def _data_api_positions(address: str) -> list[dict]:
-    r = httpx.get("https://data-api.polymarket.com/positions",
-                  params={"user": address.lower(), "limit": 50}, timeout=15)
+    r = _data_api.get_positions(params={"user": address.lower(), "limit": 50}, timeout=15)
     status = getattr(r, "status_code", None)
     if not isinstance(status, int) or not 200 <= status < 300:
         raise RuntimeError(

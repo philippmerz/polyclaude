@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import sys
 import json
 from pathlib import Path
@@ -19,6 +21,7 @@ CID = "0xabc"
 
 
 class _Response:
+    status_code = 200
     def __init__(self, payload: object, *, error: Exception | None = None):
         self.payload = payload
         self.error = error
@@ -278,8 +281,8 @@ def test_exit_cli_does_not_recommend_subminimum_taker_sale(
     }]
 
     def get(url: str, **_kwargs) -> _Response:
-        if "data-api.polymarket.com/positions" in url:
-            return _Response(positions)
+        if "data-api.polymarket.com/v2/positions" in url:
+            return _Response(envelope(positions))
         if url.endswith("/book"):
             return _Response({
                 "bids": [{"price": "0.99", "size": "4.03"}],
@@ -312,8 +315,8 @@ def test_exit_cli_fails_closed_when_book_minimum_is_missing(
     }]
 
     def get(url: str, **_kwargs) -> _Response:
-        if "data-api.polymarket.com/positions" in url:
-            return _Response(positions)
+        if "data-api.polymarket.com/v2/positions" in url:
+            return _Response(envelope(positions))
         if url.endswith("/book"):
             return _Response({"bids": [{"price": "0.99", "size": "10"}]})
         raise AssertionError(url)
@@ -404,8 +407,8 @@ def test_exit_cli_sells_when_stressed_hold_loses_to_cash(
     }]
 
     def get(url: str, **_kwargs) -> _Response:
-        if "data-api.polymarket.com/positions" in url:
-            return _Response(positions)
+        if "data-api.polymarket.com/v2/positions" in url:
+            return _Response(envelope(positions))
         if url.endswith("/book"):
             return _Response({
                 "bids": [{"price": "0.72", "size": "5"}],
@@ -440,8 +443,8 @@ def test_exit_cli_keeps_a_set_only_pair_whole_when_stress_prefers_cash(
     }]
 
     def get(url: str, **_kwargs) -> _Response:
-        if "data-api.polymarket.com/positions" in url:
-            return _Response(positions)
+        if "data-api.polymarket.com/v2/positions" in url:
+            return _Response(envelope(positions))
         if url.endswith("/book"):
             return _Response({
                 "bids": [{"price": "0.90", "size": "5"}],
@@ -486,7 +489,7 @@ def test_dust_balance_is_named_and_unsold(monkeypatch, tmp_path, capsys) -> None
     def get(url: str, **kwargs) -> _Response:
         if url.endswith("/positions"):
             seen["params"] = kwargs.get("params")
-            return _Response([{
+            return _Response(envelope([{
                 "slug": "trump-out-as-president-before-2027",
                 "outcome": "No",
                 "size": "0.33",
@@ -500,7 +503,7 @@ def test_dust_balance_is_named_and_unsold(monkeypatch, tmp_path, capsys) -> None
                 "asset": "token-zero",
                 "conditionId": CID,
                 "redeemable": False,
-            }])
+            }]))
         if url.endswith("/book"):
             return _Response({
                 "bids": [{"price": "0.99", "size": "10"}],
@@ -513,7 +516,7 @@ def test_dust_balance_is_named_and_unsold(monkeypatch, tmp_path, capsys) -> None
     monkeypatch.setattr(exits.httpx, "get", get)
     monkeypatch.setattr(sys, "argv", ["exit_analysis.py"])
     assert exits.main() == 0
-    assert seen["params"]["sizeThreshold"] == "0"
+    assert seen["params"]["sizeThreshold"] == 0
     out = capsys.readouterr().out
     assert "trump-out-as-president-before-2027" in out
     assert "zero-balance" not in out
@@ -566,14 +569,14 @@ def test_exit_cli_names_inactive_groups_as_unpriced_holds(monkeypatch, tmp_path,
 
     def get(url: str, **_kwargs) -> _Response:
         if "positions" in url:
-            return _Response([{
+            return _Response(envelope([{
                 "slug": "solo",
                 "outcome": "Yes",
                 "size": "5",
                 "asset": "token",
                 "conditionId": CID,
                 "redeemable": False,
-            }])
+            }]))
         if url.endswith("/book"):
             return _Response({
                 "bids": [{"price": "0.10", "size": "5"}],

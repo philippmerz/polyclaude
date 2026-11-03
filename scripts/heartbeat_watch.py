@@ -618,6 +618,11 @@ def cmd_start(_args: argparse.Namespace) -> int:
     print(f"[heartbeat] up pid={os.getpid()}", flush=True)
     while True:
         try:
+            try:
+                from _supervisor_guard import ensure_supervisor
+                ensure_supervisor(_REPO_ROOT)
+            except Exception as exc:
+                print(f"[heartbeat] supervisor guard error: {exc}", flush=True)
             poll_once()
         except KeyboardInterrupt:
             print("[heartbeat] interrupted", flush=True)

@@ -2,6 +2,8 @@
 
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import json
 import sys
 import time
@@ -35,7 +37,7 @@ def _mock_inventory(monkeypatch, tmp_path, *, positions=None, orders=None) -> No
         "exposures": [], "ostium_available": True, "ostium_open_trades": 0,
     })
     monkeypatch.setattr(news_watcher.httpx, "get", lambda *_a, **_kw: SimpleNamespace(
-        raise_for_status=lambda: None, json=lambda: positions or [],
+        status_code=200, raise_for_status=lambda: None, json=lambda: envelope(positions or []),
     ))
     monkeypatch.setattr(polyclaude_enter, "_fetch_open_buy_commitments", lambda: orders or [])
     monkeypatch.setattr(news_watcher, "_ostium_positions_summary_blocking", lambda: "No crypto trades.")

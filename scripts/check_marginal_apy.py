@@ -45,6 +45,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 # Fallback hurdle only. This constant has now gone stale TWICE — 0.034 was a
 # May-08 snapshot already wrong by the 2026-07-02 audit, and the 0.05 that
@@ -217,8 +218,7 @@ def _fetch_positions(addr: str) -> list[dict]:
 
     Matches scripts/positions.py: lowercase address, limit=100.
     """
-    url = "https://data-api.polymarket.com/positions"
-    r = httpx.get(url, params={"user": addr.lower(), "limit": "100"}, timeout=20)
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": "100"}, timeout=20)
     r.raise_for_status()
     return r.json() or []
 

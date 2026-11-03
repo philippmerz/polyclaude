@@ -103,7 +103,7 @@ def test_fetch_positions_requests_threshold_and_defensively_filters(monkeypatch,
             calls.append((url, params))
             return FakeResponse()
 
-    monkeypatch.setattr(module.httpx, "Client", FakeClient)
+    monkeypatch.setattr(module._data_api, "get_positions", lambda params, **kwargs: FakeClient().get("/v2/positions", params=params))
 
     assert module.fetch_positions("0xABC") == [{"slug": "live", "size": 2.0}]
     assert calls[0][1]["user"] == "0xabc"

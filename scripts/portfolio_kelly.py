@@ -41,6 +41,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _paths as _secrets
@@ -299,26 +300,24 @@ def gate_scale_in_candidates(
 
 
 def fetch_positions(addr: str) -> list[dict]:
-    with httpx.Client(timeout=15) as c:
-        r = c.get("https://data-api.polymarket.com/positions",
-                  params={"user": addr.lower(), "limit": 100,
-                          "sizeThreshold": MIN_POSITION_SHARES})
-        r.raise_for_status()
-        payload = r.json() or []
-        if not isinstance(payload, list):
-            raise ValueError("positions payload is not a list")
-        for index, position in enumerate(payload):
-            if not isinstance(position, dict):
-                raise ValueError(f"position row {index} is not an object")
-            try:
-                size = float(position.get("size", 0) or 0)
-            except (TypeError, ValueError) as exc:
-                raise ValueError(f"position row {index} has malformed size") from exc
-            if not math.isfinite(size) or size < 0:
-                raise ValueError(f"position row {index} has invalid size")
-        # Defend locally too: the headline and allocation set must remain clean
-        # if data-api ever ignores or changes sizeThreshold semantics.
-        return filter_operational_positions(payload)
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": 100,
+        "sizeThreshold": MIN_POSITION_SHARES}, timeout=15)
+    r.raise_for_status()
+    payload = r.json() or []
+    if not isinstance(payload, list):
+        raise ValueError("positions payload is not a list")
+    for index, position in enumerate(payload):
+        if not isinstance(position, dict):
+            raise ValueError(f"position row {index} is not an object")
+        try:
+            size = float(position.get("size", 0) or 0)
+        except (TypeError, ValueError) as exc:
+            raise ValueError(f"position row {index} has malformed size") from exc
+        if not math.isfinite(size) or size < 0:
+            raise ValueError(f"position row {index} has invalid size")
+    # Defend locally too: the headline and allocation set must remain clean
+    # if data-api ever ignores or changes sizeThreshold semantics.
+    return filter_operational_positions(payload)
 
 
 def fetch_market_status(market_id: str) -> tuple[str | None, str | None]:

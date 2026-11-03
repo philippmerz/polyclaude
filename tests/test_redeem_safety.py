@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import sys
 from pathlib import Path
 
@@ -21,23 +23,23 @@ class _HttpResponse:
 
 
 def test_data_api_positions_accepts_a_list_of_objects(monkeypatch) -> None:
-    rows = [{"conditionId": "0xabc", "redeemable": False}]
-    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse(rows))
+    rows = [{"conditionId": "0xabc", "redeemable": False, "size": 2}]
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse(envelope(rows)))
 
-    assert clob_v2._data_api_positions("0xWALLET") == rows
+    assert clob_v2._data_api_positions("0xWALLET")[0]['conditionId'] == rows[0]['conditionId']
 
 
 def test_data_api_positions_rejects_object_payload(monkeypatch) -> None:
     monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse({"data": []}))
 
-    with pytest.raises(RuntimeError, match="was not a list"):
+    with pytest.raises(RuntimeError, match="pagination"):
         clob_v2._data_api_positions("0xWALLET")
 
 
 def test_data_api_positions_rejects_non_object_row(monkeypatch) -> None:
-    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse([{"ok": 1}, "bad"]))
+    monkeypatch.setattr(clob_v2.httpx, "get", lambda *args, **kwargs: _HttpResponse({"data": [{"ok": 1}, "bad"], "pagination": {"next_cursor": None}}))
 
-    with pytest.raises(RuntimeError, match="row 1 was not an object"):
+    with pytest.raises(RuntimeError, match="list of objects"):
         clob_v2._data_api_positions("0xWALLET")
 
 

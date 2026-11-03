@@ -19,6 +19,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 from web3 import Web3
 
 import book_walk
@@ -65,7 +66,7 @@ def realized_split(total: float, ref: float, gas_usd: float,
 
 import _paths as _secrets
 
-DATA_API = "https://data-api.polymarket.com"
+BANKROLL_CACHE_PATH = Path(__file__).resolve().parent.parent / "notes" / ".bankroll_cache.json"
 
 ERC20_ABI = [
     {"constant": True, "inputs": [{"name": "_owner", "type": "address"}],
@@ -186,8 +187,7 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
     or freshness-verified liquidation quote.
     """
     try:
-        r = httpx.get(f"{DATA_API}/positions",
-                      params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"}, timeout=15)
+        r = _data_api.get_positions(params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"}, timeout=15)
         r.raise_for_status()
         rows = r.json()
         mid = sum(p["currentValue"] for p in rows)
@@ -244,8 +244,7 @@ def pm_positions_mtm(addr: str, warnings: list[str]) -> float:
             warnings.append(f"realizable cross-check unavailable ({str(e)[:40]})")
         return mid
     except Exception as e:
-        warnings.append(f"data-api positions failed ({e}); PM MTM counted as $0")
-        return 0.0
+        raise _data_api.DataApiError(f"PM positions unavailable: {e}") from e
 
 
 def ostium_open_trades(warnings: list[str]) -> None:
@@ -271,7 +270,11 @@ def main() -> int:
     prices = native_prices(warnings)
 
     total = 0.0
-    pm_mtm = pm_positions_mtm(addrs["pm"], warnings)
+    try:
+        pm_mtm = pm_positions_mtm(addrs["pm"], warnings)
+    except Exception as exc:
+        print(f"ERROR: PM positions unavailable ({exc}); bankroll NOT computed", file=sys.stderr)
+        return 2
     total += pm_mtm
     print(f"{'PM positions MTM':38s} ${pm_mtm:>9.2f}")
 
@@ -316,7 +319,7 @@ def main() -> int:
     # default to the live figure instead of a static constant (doctrine: this
     # script IS the authoritative bankroll number).
     try:
-        cache = Path(__file__).resolve().parent.parent / "notes" / ".bankroll_cache.json"
+        cache = BANKROLL_CACHE_PATH
         import datetime as _dt
         cache.write_text(json.dumps({
             "total": round(total, 2),

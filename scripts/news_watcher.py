@@ -37,8 +37,11 @@ import tempfile
 import time
 from pathlib import Path
 
+import socket
+
 import feedparser
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 from bs4 import BeautifulSoup
 
 import _paths as _secrets
@@ -300,9 +303,7 @@ def _positions_summary_blocking() -> str:
     _POSITIONS_CACHE["exposures"] = exposures
     try:
         addr = json.loads(_secrets.path("POLYCLAUDE_WALLET").read_text())["address"]
-        r = httpx.get(
-            "https://data-api.polymarket.com/positions",
-            params={"user": addr.lower(), "limit": "50", "sizeThreshold": "0"},
+        r = _data_api.get_positions(params={"user": addr.lower(), "limit": "50", "sizeThreshold": "0"},
             timeout=10,
         )
         r.raise_for_status()
@@ -329,7 +330,7 @@ def _positions_summary_blocking() -> str:
                              f"— {str(p.get('title') or '')[:70]}; condition={cid}")
     except Exception as e:
         available = False
-        lines.append(f"  (positions read failed: {_secrets.scrub(str(e))[:120]})")
+        lines.append(f"  POSITIONS UNAVAILABLE: {_secrets.scrub(str(e))[:120]}")
 
     try:
         lines.append("\n" + _pending_buy_summary_blocking())
@@ -776,7 +777,10 @@ def poll_once(config: dict, state: dict) -> int:
 
     for feed in config["feeds"]:
         try:
-            d = feedparser.parse(feed["url"])
+            response = httpx.get(feed["url"], timeout=20.0, follow_redirects=True,
+                                 headers={"User-Agent": "Polyclaude-NewsWatcher/1.0"})
+            response.raise_for_status()
+            d = feedparser.parse(response.content)
         except Exception as e:
             print(f"[watcher] feed error {feed['name']}: {e}", flush=True)
             continue
@@ -923,6 +927,7 @@ def cmd_start(_args: argparse.Namespace) -> int:
             return 2
         except (ValueError, OSError):
             pass  # PID file stale or process dead; ok to claim
+    socket.setdefaulttimeout(30)
     PID_PATH.write_text(str(os.getpid()))
     # Redirect stdout/stderr to LOG_PATH so daemon output persists even when
     # invoked from ephemeral shells (background tasks, tmux session-exit, etc.).

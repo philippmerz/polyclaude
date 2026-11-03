@@ -49,6 +49,7 @@ import time
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 from book_walk import conservative_sell_fee, maker_rest_price
 from gamma_market_lookup import GammaLookupError, lookup_active_market_identifier
@@ -66,13 +67,12 @@ def fetch_market_by_slug_or_question(slug_or_q: str) -> dict:
 def _existing_exposure(condition_id: str | None, question: str) -> dict | None:
     """Live data-api check: do we already hold this market? (DEC-0029 lesson:
     2026-06-01 bought a market already held, found out after.) Returns the
-    matching position dict or None; never raises (warn-path only)."""
+    matching position dict or None; raises when inventory is unavailable."""
     try:
         sys.path.insert(0, str(Path(__file__).resolve().parent))
         from polyclaude_client import Wallet
         addr = Wallet.load().address
-        r = httpx.get("https://data-api.polymarket.com/positions",
-                      params={"user": addr.lower(), "limit": "100"}, timeout=15)
+        r = _data_api.get_positions(params={"user": addr.lower(), "limit": "100"}, timeout=15)
         r.raise_for_status()
         for pos in r.json():
             if condition_id and pos.get("conditionId") == condition_id:
@@ -80,7 +80,7 @@ def _existing_exposure(condition_id: str | None, question: str) -> dict | None:
             if pos.get("title") and pos["title"].strip().lower() == question.strip().lower():
                 return pos
     except Exception as e:
-        print(f"# existing-exposure check unavailable ({e}) — verify manually", file=sys.stderr)
+        raise _data_api.DataApiError(f"existing-exposure check unavailable: {e}") from e
     return None
 
 
@@ -811,10 +811,8 @@ def _fetch_live_positions() -> list[dict]:
     page_size = 500
     offset = 0
     while True:
-        r = httpx.get(
-            "https://data-api.polymarket.com/positions",
-            params={"user": address.lower(), "limit": page_size,
-                    "offset": offset, "sizeThreshold": 0},
+        r = _data_api.get_positions(params={"user": address.lower(), "limit": page_size,
+            "offset": offset, "sizeThreshold": 0},
             timeout=15,
         )
         r.raise_for_status()

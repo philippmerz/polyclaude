@@ -30,13 +30,13 @@ import sys
 import time
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 import _paths as _secrets
 from polyclaude_client import Polyclaude
 
 _secrets.install_scrubbing_excepthook()
 
-DATA_API = "https://data-api.polymarket.com"
 # 10% — deliberately LOOSER than emergency_swap_usdc_to_eth's 5%, because this
 # guards thin binary books where 10% can be the entire spread; a 5% cap here
 # would abort exits on ordinary illiquidity, in the one scenario where getting
@@ -58,11 +58,9 @@ def _telegram(text: str) -> None:
 
 
 def _positions(addr: str) -> list[dict]:
-    with httpx.Client(timeout=20.0) as c:
-        r = c.get(f"{DATA_API}/positions",
-                  params={"user": addr.lower(), "limit": "200"})
-        r.raise_for_status()
-        return r.json() or []
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": "200"}, timeout=20.0)
+    r.raise_for_status()
+    return r.json() or []
 
 
 def _best_bid(orderbook: dict) -> float | None:

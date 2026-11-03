@@ -170,7 +170,7 @@ class _PositionClient:
 def test_positions_schema_failures_are_not_empty_success(
     monkeypatch: pytest.MonkeyPatch, payload, reason: str
 ) -> None:
-    monkeypatch.setattr(uma.httpx, "Client", lambda **_kwargs: _PositionClient(payload))
+    monkeypatch.setattr(uma._data_api, "get_positions", lambda **_kwargs: _PositionResponse(payload))
     positions, ok, error = uma._fetch_positions_checked("0xABC")
     assert positions == []
     assert ok is False
@@ -178,7 +178,7 @@ def test_positions_schema_failures_are_not_empty_success(
 
 
 def test_empty_positions_is_distinct_success(monkeypatch: pytest.MonkeyPatch) -> None:
-    monkeypatch.setattr(uma.httpx, "Client", lambda **_kwargs: _PositionClient([]))
+    monkeypatch.setattr(uma._data_api, "get_positions", lambda **_kwargs: _PositionResponse([]))
     assert uma._fetch_positions_checked("0xABC") == ([], True, None)
 
 
@@ -188,7 +188,7 @@ def test_request_or_decode_failure_is_not_empty_success(monkeypatch, failure):
         def get(self, *_args, **_kwargs):
             raise failure
 
-    monkeypatch.setattr(uma.httpx, "Client", lambda **_kwargs: FailedClient(None))
+    monkeypatch.setattr(uma._data_api, "get_positions", FailedClient(None).get)
     positions, ok, error = uma._fetch_positions_checked("0xABC")
     assert positions == []
     assert ok is False
@@ -199,7 +199,7 @@ def test_capped_positions_are_retained_but_visibility_is_unknown(
     monkeypatch: pytest.MonkeyPatch,
 ) -> None:
     payload = [{"slug": f"market-{i}", "size": 1} for i in range(100)]
-    monkeypatch.setattr(uma.httpx, "Client", lambda **_kwargs: _PositionClient(payload))
+    monkeypatch.setattr(uma._data_api, "get_positions", lambda **_kwargs: _PositionResponse(payload))
     positions, ok, error = uma._fetch_positions_checked("0xABC")
     assert len(positions) == 100
     assert ok is False

@@ -12,11 +12,11 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 import book_walk
 from polyclaude_client import Wallet  # noqa: E402
 
-DATA_API = "https://data-api.polymarket.com"
 
 
 def resolved_realizable_value(position: dict) -> float | None:
@@ -40,10 +40,9 @@ def resolved_realizable_value(position: dict) -> float | None:
 
 def main() -> None:
     addr = Wallet.load().address
-    with httpx.Client(timeout=15.0) as c:
-        r = c.get(f"{DATA_API}/positions", params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"})
-        r.raise_for_status()
-        rows = r.json()
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": "100", "sizeThreshold": "0"}, timeout=15.0)
+    r.raise_for_status()
+    rows = r.json()
     if not rows:
         print("(no open positions)")
         return

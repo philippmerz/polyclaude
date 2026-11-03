@@ -411,37 +411,96 @@ def _reconcile_locked(cfg: dict, state: dict, dry_run: bool = False) -> list[str
     return actions
 
 
+def _safe_sleep(consecutive_errors: int) -> None:
+    try:
+        poll = int(load_config().get("poll_seconds", LOOP_SECONDS_DEFAULT))
+        if poll <= 0:
+            raise ValueError("poll_seconds must be positive")
+    except Exception as exc:
+        _log(f"poll config error: {exc}; using default")
+        poll = LOOP_SECONDS_DEFAULT
+    # First error: retry at the normal cadence (rests protect live positions);
+    # repeated errors back off exponentially, capped so we never go blind long.
+    backoff = min(poll * 2 ** min(consecutive_errors - 2, 10), 480) if consecutive_errors >= 2 else 0
+    time.sleep(poll + backoff)
+
+
+def _loop_signal(signum, _frame) -> None:
+    name = signal.Signals(signum).name
+    _log(f"received {name}: " + ("ignoring" if signum == signal.SIGHUP else "exiting"))
+    if signum == signal.SIGTERM:
+        raise SystemExit(0)
+
+
 def poll_loop() -> int:
-    PID_PATH.write_text(str(os.getpid()), encoding="utf-8")
-    _log(f"up pid={os.getpid()}")
-    while True:
-        try:
-            cfg = load_config()
-            state = _load_json(STATE_PATH, {"managed": {}})
-            for action in reconcile(cfg, state):
-                _log(action)
-        except Exception as exc:
-            _log(f"cycle error: {exc}")
-            state = _load_json(STATE_PATH, {"managed": {}})
-            state["consecutive_errors"] = int(state.get("consecutive_errors", 0)) + 1
-            woke = wake_agent(
-                f"[resting_watch] cycle error ({state['consecutive_errors']}x): "
-                f"{str(exc)[:200]}. Check logs/resting_watch.log; set master=false "
-                "in notes/resting_watch_config.json to halt all rests.", state)
-            if state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS:
-                telegram(f"[resting_watch] ESCALATION: {state['consecutive_errors']} "
-                         f"consecutive cycle errors; last: {str(exc)[:140]}")
-                state["consecutive_errors"] = 0  # re-arm after notifying
-            if woke or state["consecutive_errors"] == 1:
-                _save_json_atomic(STATE_PATH, state)
-        else:
-            if int(state.get("consecutive_errors", 0)) > 0:
-                state["consecutive_errors"] = 0
-                _save_json_atomic(STATE_PATH, state)
-        if _rss_mb() > RSS_CAP_MB:
-            _log(f"rss cap {_rss_mb():.0f}MB exceeded; exiting for keepalive restart")
-            return 0
-        time.sleep(int(load_config().get("poll_seconds", LOOP_SECONDS_DEFAULT)))
+    rc = 1
+    errors = 0
+    previous = {}
+    try:
+        for sig in (signal.SIGTERM, signal.SIGHUP):
+            previous[sig] = signal.signal(sig, _loop_signal)
+        PID_PATH.write_text(str(os.getpid()), encoding="utf-8")
+        _log(f"up pid={os.getpid()}")
+        while True:
+            try:
+                from _supervisor_guard import ensure_supervisor
+                ensure_supervisor(REPO)
+            except Exception as exc:
+                _log(f"supervisor guard error: {exc}")
+            try:
+                cfg = load_config()
+                state = _load_json(STATE_PATH, {"managed": {}})
+                for action in reconcile(cfg, state):
+                    _log(action)
+                if int(state.get("consecutive_errors", 0)) > 0:
+                    state["consecutive_errors"] = 0
+                    _save_json_atomic(STATE_PATH, state)
+            except Exception as exc:
+                errors += 1
+                _log(f"cycle error: {exc}")
+                try:
+                    state = _load_json(STATE_PATH, {"managed": {}})
+                    state["consecutive_errors"] = int(state.get("consecutive_errors", 0)) + 1
+                except Exception as side_exc:
+                    _log(f"error state load failed: {side_exc}")
+                    state = {"managed": {}, "consecutive_errors": errors}
+                woke = False
+                try:
+                    woke = wake_agent(
+                        f"[resting_watch] cycle error ({state['consecutive_errors']}x): "
+                        f"{str(exc)[:200]}. Check logs/resting_watch.log; set master=false "
+                        "in notes/resting_watch_config.json to halt all rests.", state)
+                except Exception as side_exc:
+                    _log(f"error wake failed: {side_exc}")
+                try:
+                    if state["consecutive_errors"] >= HUMAN_ESCALATE_CONSECUTIVE_ERRORS:
+                        telegram(f"[resting_watch] ESCALATION: {state['consecutive_errors']} "
+                                 f"consecutive cycle errors; last: {str(exc)[:140]}")
+                        state["consecutive_errors"] = 0
+                except Exception as side_exc:
+                    _log(f"error telegram failed: {side_exc}")
+                try:
+                    if woke or state["consecutive_errors"] == 1:
+                        _save_json_atomic(STATE_PATH, state)
+                except Exception as side_exc:
+                    _log(f"error state save failed: {side_exc}")
+            else:
+                errors = 0
+            if _rss_mb() > RSS_CAP_MB:
+                _log(f"rss cap {_rss_mb():.0f}MB exceeded; exiting for keepalive restart")
+                rc = 0
+                return rc
+            _safe_sleep(errors)
+    except SystemExit as exc:
+        rc = exc.code if isinstance(exc.code, int) else 1
+        raise
+    except KeyboardInterrupt:
+        rc = 130
+        raise
+    finally:
+        _log(f"exiting rc={rc}")
+        for sig, handler in previous.items():
+            signal.signal(sig, handler)
 
 
 def main() -> int:

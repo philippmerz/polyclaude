@@ -48,6 +48,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import _paths as _secrets
@@ -88,17 +89,13 @@ def filter_operational_positions(positions: list[dict]) -> list[dict]:
 
 
 def fetch_positions(addr: str) -> list[dict]:
-    with httpx.Client(timeout=15) as c:
-        r = c.get(
-            "https://data-api.polymarket.com/positions",
-            params={"user": addr.lower(), "limit": 100,
-                    "sizeThreshold": MIN_POSITION_SHARES},
-        )
-        r.raise_for_status()
-        # Keep the local filter even though the API accepts sizeThreshold: an
-        # upstream default/parameter regression must not reintroduce resolved
-        # dust into the operational book or its headline count.
-        return filter_operational_positions(r.json() or [])
+    r = _data_api.get_positions(params={"user": addr.lower(), "limit": 100,
+        "sizeThreshold": MIN_POSITION_SHARES}, timeout=15)
+    r.raise_for_status()
+    # Keep the local filter even though the API accepts sizeThreshold: an
+    # upstream default/parameter regression must not reintroduce resolved
+    # dust into the operational book or its headline count.
+    return filter_operational_positions(r.json() or [])
 
 
 def find_entry_for_slug(slug: str, decisions: list[dict]) -> tuple[float | None, float | None]:

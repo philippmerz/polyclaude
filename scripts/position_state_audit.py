@@ -31,6 +31,7 @@ import time
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 import position_groups
 
@@ -39,7 +40,6 @@ NOTES = REPO / "notes"
 ADDR = "0x9032ad983ee5a22bfd078ecc4fd3d4d69e57267b"
 MIN_LIVE_SHARES = 0.5
 SET_SIZE_TOLERANCE = 0.01
-POSITIONS_URL = "https://data-api.polymarket.com/positions"
 POSITION_FETCH_ATTEMPTS = 3
 POSITION_RETRY_BASE_SECONDS = 0.5
 POSITION_RETRY_MAX_SECONDS = 2.0
@@ -82,9 +82,7 @@ def _live_positions() -> list[dict]:
         response: httpx.Response | None = None
         retryable = True
         try:
-            response = httpx.get(
-                POSITIONS_URL,
-                params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
+            response = _data_api.get_positions(params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
                 timeout=25,
             )
             response.raise_for_status()
@@ -145,7 +143,7 @@ def _live_positions() -> list[dict]:
             retryable = status == 429 or 500 <= status < 600
         except httpx.RequestError as exc:
             last_error = type(exc).__name__
-        except (TypeError, ValueError) as exc:
+        except (TypeError, ValueError, _data_api.DataApiError) as exc:
             # A gateway/CDN can return a successful HTTP status with an error
             # payload. Retry briefly, but never treat that payload as no book.
             last_error = str(exc)

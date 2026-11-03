@@ -38,6 +38,7 @@ import sys
 from pathlib import Path
 
 import httpx
+import _data_api  # Data API v1 retired 2026-11-03; v2 shim
 
 import book_walk
 from pm_fees import fee_per_share, fee_schedule
@@ -318,9 +319,8 @@ def main() -> int:
     priors = json.loads(PRIORS.read_text())
     # sizeThreshold=0 matches positions.py. The API default hides the
     # sub-share Trump-out balance, which then never reaches a verdict.
-    pos = httpx.get("https://data-api.polymarket.com/positions",
-                    params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
-                    timeout=25).json()
+    pos = _data_api.get_positions(params={"user": ADDR, "limit": "100", "sizeThreshold": "0"},
+        timeout=25).json()
     # Positive losing-token balances can remain indexed after finalization.
     # They have no hold/sell decision left and must not generate advice.
     pos = [p for p in pos if p.get("redeemable") is not True]

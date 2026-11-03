@@ -428,35 +428,24 @@ def test_wallet_entry_lock_rejects_concurrent_executor(tmp_path, monkeypatch):
 
 
 def test_position_fetch_requests_dust_and_paginates(monkeypatch):
-    class Response:
-        def __init__(self, payload):
-            self.payload = payload
-
-        def raise_for_status(self):
-            return None
-
-        def json(self):
-            return self.payload
-
-    first_page = [{"conditionId": f"0x{index:064x}", "row": index}
-                  for index in range(500)]
+    from _v2_data_api import envelope
+    first_page = [{"conditionId": f"0x{index:064x}", "asset": str(index),
+                   "slug": str(index), "size": 2, "avgPrice": .5,
+                   "currentValue": 1, "curPrice": .5} for index in range(500)]
     calls = []
-
-    def fake_get(_url, *, params, timeout):
+    def fake_get(url, *, params, timeout):
         calls.append((params, timeout))
-        return Response(first_page if params["offset"] == 0 else [first_page[-1]])
-
-    monkeypatch.setattr(
-        polyclaude_client.Wallet,
-        "load", staticmethod(lambda: SimpleNamespace(address="0xwallet")),
-    )
+        payload = envelope([first_page[-1]] if params.get('cursor') else first_page)
+        if not params.get('cursor'):
+            payload['pagination']['next_cursor'] = 'next'
+        return SimpleNamespace(status_code=200, json=lambda: payload)
+    monkeypatch.setattr(polyclaude_client.Wallet, "load", staticmethod(lambda: SimpleNamespace(address="0xwallet")))
     monkeypatch.setattr(entry.httpx, "get", fake_get)
-
     rows = entry._fetch_live_positions()
-
-    assert len(rows) == 500  # exact duplicate at the page boundary is removed
-    assert [call[0]["offset"] for call in calls] == [0, 500]
-    assert all(call[0]["sizeThreshold"] == 0 for call in calls)
+    assert len(rows) == 500
+    assert all('offset' not in params for params, _ in calls)
+    assert any(params.get('cursor') == 'next' for params, _ in calls)
+    assert all(params['sizeThreshold'] == 0 for params, _ in calls)
 
 
 def test_entry_reservation_bridges_open_order_and_position_index_lag(

@@ -1,5 +1,7 @@
 from __future__ import annotations
 
+from _v2_data_api import envelope
+
 import sys
 from pathlib import Path
 from types import SimpleNamespace
@@ -12,6 +14,7 @@ import positions  # noqa: E402
 
 
 class _Response:
+    status_code = 200
     def __init__(self, payload):
         self.payload = payload
 
@@ -59,7 +62,7 @@ def test_positions_output_qualifies_sequential_depth_estimate(monkeypatch, capsy
 
         def get(self, url, **kwargs):
             if url.endswith("/positions"):
-                return _Response([_position()])
+                return _Response(envelope([_position()]))
             if "gamma-api.polymarket.com" in url:
                 return _Response([_market()])
             if "clob.polymarket.com" in url:
@@ -72,6 +75,7 @@ def test_positions_output_qualifies_sequential_depth_estimate(monkeypatch, capsy
         staticmethod(lambda: SimpleNamespace(address="0x1234")),
     )
     monkeypatch.setattr(positions.httpx, "Client", lambda *args, **kwargs: _Client())
+    monkeypatch.setattr(positions.httpx, "get", lambda url, **kwargs: _Client().get(url, params=kwargs.get("params")))
 
     positions.main()
     output = capsys.readouterr().out
@@ -93,7 +97,7 @@ def test_positions_malformed_book_reports_unavailable_without_estimate(
 
         def get(self, url, **kwargs):
             if url.endswith("/positions"):
-                return _Response([_position()])
+                return _Response(envelope([_position()]))
             if "gamma-api.polymarket.com" in url:
                 return _Response([_market()])
             if "clob.polymarket.com" in url:
@@ -106,6 +110,7 @@ def test_positions_malformed_book_reports_unavailable_without_estimate(
         staticmethod(lambda: SimpleNamespace(address="0x1234")),
     )
     monkeypatch.setattr(positions.httpx, "Client", lambda *args, **kwargs: _Client())
+    monkeypatch.setattr(positions.httpx, "get", lambda url, **kwargs: _Client().get(url, params=kwargs.get("params")))
 
     positions.main()
     output = capsys.readouterr().out
@@ -140,7 +145,7 @@ def test_bankroll_output_qualifies_realizable_estimate_and_uses_temp_cache(
 
     def fake_get(url, **kwargs):
         if url.endswith("/positions"):
-            return _Response([_position()])
+            return _Response(envelope([_position()]))
         if "gamma-api.polymarket.com" in url:
             return _Response([_market()])
         if "clob.polymarket.com" in url:
@@ -162,7 +167,7 @@ def test_bankroll_output_qualifies_realizable_estimate_and_uses_temp_cache(
     temp_scripts.mkdir()
     temp_notes.mkdir()
 
-    monkeypatch.setattr(bankroll, "__file__", str(temp_scripts / "bankroll.py"))
+    monkeypatch.setattr(bankroll, "BANKROLL_CACHE_PATH", temp_notes / ".bankroll_cache.json")
     monkeypatch.setattr(bankroll.sys, "argv", ["bankroll.py"])
     monkeypatch.setattr(
         bankroll, "wallet_addresses", lambda: {"pm": "pm", "crypto": "crypto"}
