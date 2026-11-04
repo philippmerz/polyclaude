@@ -34110,3 +34110,8 @@ Verified and stopped orphan `source_watch` PID 4043633; canonical PID 4044549 re
 - bankroll.py: positions failure now exits 2 with ERROR and does NOT write notes/.bankroll_cache.json (previously cached a cash-only $147.55). Verified live $188.72. existing-exposure check in polyclaude_enter now fails closed.
 - Outage root cause: no OOM; box VM hibernates/forks when idle and all daemons shared one session with the supervisor, so one group kill took everything. Now: daemons start in their own sessions (setsid), supervisor writes a heartbeat + logs signals/resume gaps, daemons (resting_watch, heartbeat_watch) respawn a dead/stale supervisor via `box_ctl.sh ensure` (rate-limited), resting_watch except/sleep paths guarded with capped backoff and signal/exit logging, news_watcher RSS fetch has a 20s timeout + socket default timeout.
 - Tests: 1555 passed, 8 pre-existing failures unchanged. No trades or order changes.
+
+## 2026-11-04T10:08Z — event wake 64473ffc5197 (heartbeat_watch: news_watcher state stale 212 min)
+- Cause: box VM was suspended; supervisor logged resume gap=9625s at 10:06:13Z. Not a stuck loop. This time all six daemons and the supervisor survived the suspend (setsid fix holding); no restart needed. news_watcher resumed polling and secrets/news_watcher_state.json was rewritten 10:06:50Z.
+- Positions (6 open, mtm $39.96, realizable $36.02), 3 LIVE resting SELLs unchanged and unmatched (Kimi-HLE 15 @0.97, Delcy 10 @0.70, Messi 5 @0.65). Bankroll $187.91, realized +$15.39.
+- No market referenced; no trades or order changes. Possible follow-up: heartbeat_watch could suppress staleness alerts right after a supervisor-logged resume gap.
