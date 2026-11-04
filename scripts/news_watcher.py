@@ -46,6 +46,7 @@ from bs4 import BeautifulSoup
 
 import _paths as _secrets
 from agent_runtime import run_agent
+import holdings_news
 
 _secrets.install_scrubbing_excepthook()
 
@@ -761,6 +762,35 @@ def _newest_entries_first(entries: list, limit: int | None = None) -> list:
     return ordered if limit is None else ordered[:limit]
 
 
+_HOLDINGS: "holdings_news.HoldingsKeywords | None" = None
+
+
+def _holdings_wake_check(blob: str, title: str, link: str = "") -> list[tuple[str, str]]:
+    """Immediate webhook wake when a headline mentions a held/ordered market.
+
+    Independent of tier keywords and of the (absent) model filter. One wake per
+    headline (first matching market; others named in the text); wake_webhook's
+    outbox enforces the per-market and daily caps. Never raises.
+    """
+    global _HOLDINGS
+    try:
+        if _HOLDINGS is None:
+            _HOLDINGS = holdings_news.HoldingsKeywords()
+        hits = holdings_news.match(blob, _HOLDINGS.get())
+        if not hits:
+            return []
+        slug, kw = hits[0]
+        others = [h[0] for h in hits[1:]]
+        headline = title + (f" [also: {', '.join(others)}]" if others else "")
+        status = holdings_news.send_wake(slug, headline, kw, link)
+        print(f"[watcher] holdings wake market={slug} kw={kw!r} -> {status} "
+              f"title={title[:80]!r}", flush=True)
+        return hits
+    except Exception as e:
+        print(f"[watcher] holdings wake check failed: {e}", flush=True)
+        return []
+
+
 def poll_once(config: dict, state: dict) -> int:
     """Run one detection cycle. Return the number of internally retained alerts."""
     seen = set(state.get("seen_ids", []))
@@ -803,6 +833,8 @@ def poll_once(config: dict, state: dict) -> int:
             summary = entry.get("summary", "") or entry.get("description", "")
             blob = f"{title}. {summary}"
             link = entry.get("link", "")
+
+            _holdings_wake_check(blob, title, link)
 
             kw1 = match_keywords(blob, tier1)
             kw2 = None if kw1 else match_keywords(blob, tier2)

@@ -1,0 +1,20 @@
+{
+  "_comment": "Curated news keywords for held/ordered markets. 'match' = case-insensitive substrings of the market or event slug. 'keywords' fire a wake; 'exclude' vetoes a match when present anywhere in headline+summary. Phrases are matched with word boundaries.",
+  "aliases": [
+    {"match": ["kimi", "moonshot"],
+     "keywords": ["Kimi K3", "Kimi K2", "Moonshot AI", "Moonshot Kimi", "Kimi model", "Humanity's Last Exam", "Humanity’s Last Exam"],
+     "exclude": ["Antonelli", "Formula 1", "Formula One", "F1", "Grand Prix", "Mercedes"]},
+    {"match": ["delcy-rodrguez", "delcy-rodriguez", "venezuela-leader"],
+     "keywords": ["Delcy Rodriguez", "Delcy Rodríguez", "Delcy", "Venezuela president", "Venezuelan president", "Maduro", "Machado", "Edmundo Gonzalez", "Edmundo González", "Miraflores"],
+     "exclude": []},
+    {"match": ["messi"],
+     "keywords": ["Lionel Messi", "Messi"],
+     "exclude": []},
+    {"match": ["clarity-act"],
+     "keywords": ["Clarity Act", "CLARITY Act", "market structure bill", "crypto market structure"],
+     "exclude": []},
+    {"match": ["trump-out-as-president"],
+     "keywords": ["Trump impeach", "impeachment of Trump", "Trump impeached", "Trump resigns", "Trump resignation", "25th Amendment", "Trump hospitalized", "Trump health", "Trump dies", "Trump dead", "Vance sworn in", "acting president"],
+     "exclude": []}
+  ]
+}
