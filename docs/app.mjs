@@ -1,7 +1,7 @@
 const DAY = 86400000;
 const NS = 'http://www.w3.org/2000/svg';
 const SOURCE_ROOT = 'https://github.com/philippmerz/polyclaude/blob/main/';
-const COLORS = { depth: '#087f72', mark: '#98aaa6', total: '#697fa8', spy: '#bc8841' };
+const COLORS = { depth: '#087f72', mark: '#98aaa6', total: '#697fa8' };
 const REQUIRED = ['timestamp_utc', 'trading_capital_usd', 'total_mark_usd', 'gas_usd', 'pm_mark_usd', 'pm_depth_usd', 'settled_pnl_usd', 'source', 'note'];
 
 export function parseCSV(text) {
@@ -170,9 +170,9 @@ async function init() {
     if (!r.ok) throw new Error(`Could not load ${file} (HTTP ${r.status}).`);
     return r.text();
   };
-  const [data, benchmarkData, contributionData] = await Promise.all([read('performance.csv'), read('benchmarks.csv'), read('contributions.csv')]);
-  const rows = parsePerformance(data), benchmarks = parseBenchmarks(benchmarkData), contributions = parseContributions(contributionData);
-  if ([...rows, ...benchmarks].some(r => Math.abs(r.capital - capitalAt(contributions, r.t)) > 1e-8)) throw new Error('An observation disagrees with the contribution ledger.');
+  const [data, contributionData] = await Promise.all([read('performance.csv'), read('contributions.csv')]);
+  const rows = parsePerformance(data), contributions = parseContributions(contributionData);
+  if (rows.some(r => Math.abs(r.capital - capitalAt(contributions, r.t)) > 1e-8)) throw new Error('An observation disagrees with the contribution ledger.');
   const latest = rows.at(-1), change = performanceChange(rows);
   document.querySelector('#updated').textContent = `Recorded ${dateTime(latest.t)}`;
   document.querySelector('#value').textContent = money(latest.depth);
@@ -200,9 +200,10 @@ async function init() {
   });
 
   const svg = document.querySelector('#chart'), tooltip = document.querySelector('#tooltip'), wrap = document.querySelector('#chart-wrap');
-  const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, total: true, spy: true }, selected: -1 };
+  const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, total: true }, selected: -1 };
   let W = 960, H = 390;
-  const left = 64, right = 20, top = 30, bottom = 46;
+  let left = 64;
+  const right = 20, top = 30, bottom = 46;
   let points = [], x, y, lo, hi, guide, valueAt;
 
   function hideTooltip() { tooltip.hidden = true; if (guide) guide.setAttribute('visibility', 'hidden'); }
@@ -218,10 +219,6 @@ async function init() {
       if (state.enabled.depth) lines.push(['Depth', state.unit === 'usd' ? valuation(r, r.depth) : valuation(r, returnOf(r.depth, r.capital), pct)]);
       if (state.enabled.mark) lines.push(['Midpoint', state.unit === 'usd' ? valuation(r, r.mark) : valuation(r, returnOf(r.mark, r.capital), pct)]);
       if (state.enabled.total && state.unit === 'usd') lines.push(['Account incl. gas', money(r.total)]);
-    }
-    if (point.benchmark && state.enabled.spy) {
-      const r = point.benchmark;
-      lines.push(['SPY benchmark', state.unit === 'usd' ? money(r.spy) : pct(returnOf(r.spy, r.capital))]);
     }
     lines.forEach(([label, value]) => {
       const span = document.createElement('span'), a = document.createElement('span'), b = document.createElement('span');
@@ -239,50 +236,52 @@ async function init() {
   function render() {
     hideTooltip(); svg.replaceChildren(); state.selected = -1;
     const narrow = wrap.clientWidth < 600;
-    W = narrow ? 520 : 960; H = narrow ? 360 : 390;
+    W = narrow ? 520 : 960; H = narrow ? 460 : 390;
+    left = narrow ? 62 : 64;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    svg.style.setProperty('--axis-font-size', narrow ? '17px' : '12px');
+    svg.style.setProperty('--axis-font-size', narrow ? '15px' : '12px');
     const first = Math.min(rows[0].t, contributions[0].t);
     lo = state.days ? Math.max(first, latest.t - state.days * DAY) : first; hi = latest.t;
     const visible = rows.filter(r => r.t >= lo && r.t <= hi);
-    const bench = benchmarks.filter(r => r.t >= lo && r.t <= hi);
     const flows = contributions.filter(r => r.t > lo && r.t <= hi);
+    const axisTicks = narrow ? 2 : 4;
     const capitalRows = [{ t: lo, capital: capitalAt(contributions, lo) }, ...flows, { t: hi, capital: capitalAt(contributions, hi) }];
     valueAt = (r, key) => chartValue(r, key, state.unit);
     const values = capitalRows.map(r => state.unit === 'usd' ? r.capital : 0);
     if (state.enabled.depth) visible.forEach(r => { if (r.depth !== null) values.push(valueAt(r, 'depth')); });
     if (state.enabled.mark) visible.forEach(r => { if (r.mark !== null) values.push(valueAt(r, 'mark')); });
     if (state.enabled.total && state.unit === 'usd') visible.forEach(r => { if (r.total !== null) values.push(valueAt(r, 'total')); });
-    if (state.enabled.spy) bench.forEach(r => values.push(valueAt(r, 'spy')));
     const min = Math.min(...values), max = Math.max(...values), span = Math.max(max - min, state.unit === 'usd' ? 8 : 4);
     const y0 = min - span * .15, y1 = max + span * .15;
     x = t => left + (t - lo) / Math.max(hi - lo, 1) * (W - left - right);
     y = v => top + (y1 - v) / (y1 - y0) * (H - top - bottom);
-    for (let i = 0; i <= 4; i++) {
-      const v = y0 + (y1 - y0) * i / 4;
+    for (let i = 0; i <= axisTicks; i++) {
+      const v = y0 + (y1 - y0) * i / axisTicks;
       svg.append(node('line', { x1: left, x2: W - right, y1: y(v), y2: y(v), stroke: '#edf0eb' }));
       svg.append(node('text', { x: left - 10, y: y(v) + 4, 'text-anchor': 'end' }, state.unit === 'usd' ? '$' + Math.round(v) : v.toFixed(1) + '%'));
     }
-    for (let i = 0; i <= 4; i++) {
-      const t = lo + (hi - lo) * i / 4;
-      svg.append(node('text', { x: x(t), y: H - 14, 'text-anchor': i === 0 ? 'start' : i === 4 ? 'end' : 'middle' }, date(t)));
+    for (let i = 0; i <= axisTicks; i++) {
+      const t = lo + (hi - lo) * i / axisTicks;
+      svg.append(node('text', { x: x(t), y: H - 14, 'text-anchor': i === 0 ? 'start' : i === axisTicks ? 'end' : 'middle' }, date(t)));
     }
     svg.append(node('path', { d: pathFor(capitalRows, r => state.unit === 'usd' ? r.capital : 0, x, y, true), fill: 'none', stroke: '#a8b4ab', 'stroke-dasharray': '3 5', 'stroke-width': 1.3 }));
-    for (const [key, seriesRows] of [['total', visible], ['mark', visible], ['spy', bench], ['depth', visible]]) {
+    for (const [key, seriesRows] of [['total', visible], ['mark', visible], ['depth', visible]]) {
       if (!state.enabled[key] || !seriesRows.length || (key === 'total' && state.unit !== 'usd')) continue;
       const attrs = { d: pathFor(seriesRows, r => valueAt(r, key), x, y), class: 'series', stroke: COLORS[key], 'stroke-width': key === 'depth' ? 2.8 : 1.8 };
-      if (key === 'spy' || key === 'total') attrs['stroke-dasharray'] = '6 6';
+      if (key === 'total') attrs['stroke-dasharray'] = '6 6';
       svg.append(node('path', attrs));
-      seriesRows.forEach(r => {
-        const v = valueAt(r, key); if (v === null) return;
-        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: key === 'spy' ? 4 : 2.5, fill: key === 'spy' ? 'white' : COLORS[key], stroke: COLORS[key], 'stroke-width': 1.5 }));
+      const marked = seriesRows.filter(r => valueAt(r, key) !== null);
+      const drawAllDots = marked.length <= 24;
+      marked.forEach((r, i) => {
+        if (!drawAllDots && i !== marked.length - 1) return;
+        const v = valueAt(r, key);
+        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: 2.5, fill: COLORS[key], stroke: COLORS[key], 'stroke-width': 1.5 }));
       });
     }
     guide = node('line', { x1: 0, x2: 0, y1: top, y2: H - bottom, stroke: '#788d82', 'stroke-dasharray': '3 4', visibility: 'hidden' }); svg.append(guide);
     const merged = new Map();
     visible.forEach(r => merged.set(r.t, { t: r.t, pilot: r }));
     contributions.filter(r => r.t >= lo && r.t <= hi).forEach(r => merged.set(r.t, { ...merged.get(r.t), t: r.t, contribution: r }));
-    if (state.enabled.spy) bench.forEach(r => merged.set(r.t, { ...merged.get(r.t), t: r.t, benchmark: r }));
     points = [...merged.values()].sort((a, b) => a.t - b.t);
     const complete = visible.filter(r => r.depth !== null).length;
     const accountMarks = visible.filter(r => r.total !== null).length;

@@ -109,11 +109,10 @@ still use $70. Bridges, Aave moves, sleeve transfers and protocol refunds are no
 contributions. Future external flows must update the capital ledger, contribution
 CSV and observation denominator together; the viewer checks their agreement.
 
-`benchmarks.csv` contains validated contribution-timed SPY observations only.
-Use the market session's date, not retrieval date. Current close anchors are
-20:00 UTC for the documented regular US sessions. The Sep 24 diagnostic
-reconstruction is deliberately absent because the strict run failed. CSV source
-links identify the actual records. No missing daily benchmark prices are filled.
+`benchmarks.csv` remains in this directory as a historical record of validated
+contribution-timed SPY observations. The public chart no longer plots that
+comparison: a live trajectory would need a browser-readable price API, and the
+Yahoo Finance and Stooq feeds do not allow cross-origin reads from this page.
 
 Run the focused checks with:
 
