@@ -33,7 +33,10 @@ button:focus-visible, a:focus-visible, summary:focus-visible, svg:focus-visible 
 .swatch.total { border-color: #697fa8; border-top-style: dashed; }
 .legend label:has(input:disabled) { opacity: .45; cursor: default; }
 .swatch.capital { border-color: #9eaaa2; border-top-style: dotted; border-top-width: 2px; }
-.chart-wrap { position: relative; margin-top: 6px; }
+.chart-wrap { position: relative; margin-top: 6px; touch-action: none; user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; -webkit-tap-highlight-color: transparent; }
+.chart-wrap * { user-select: none; -webkit-user-select: none; -webkit-touch-callout: none; }
+#chart { touch-action: none; }
+svg text { pointer-events: none; }
 svg { display: block; width: 100%; height: auto; min-height: 210px; overflow: visible; }
 svg text { font: 12px -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; font-size: var(--axis-font-size, 12px); fill: var(--muted); }
 svg .series { fill: none; stroke-linejoin: round; stroke-linecap: round; }

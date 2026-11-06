@@ -147,7 +147,7 @@ const pct = n => n === null || n === undefined ? '—' : `${n >= 0 ? '+' : ''}${
 const date = t => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(t);
 const dateTime = t => new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'UTC' }).format(t) + ' UTC';
 const returnOf = (v, capital) => v === null ? null : (v / capital - 1) * 100;
-const valuation = (row, value, format = money) => (row.reconstructed && value !== null ? '~' : '') + format(value);
+const valuation = (row, value, format = money) => (row.reconstructed && value !== null ? '~ ' : '') + format(value);
 
 function sourceLink(ref, commit = '') {
   const match = /^((?:notes|research)\/[a-zA-Z0-9_.-]+|README\.md)(?::(\d+))?$/.exec(ref);
@@ -183,9 +183,9 @@ async function init() {
   if (change) {
     document.querySelector('#change-label').textContent = `Since ${date(change.start.t)}`;
     const el = document.querySelector('#change');
-    el.textContent = `${change.dollars >= 0 ? '+' : '−'}${money(Math.abs(change.dollars))}`;
+    const approx = change.start.reconstructed || change.latest.reconstructed ? '~ ' : '';
+    el.textContent = `${approx}${change.dollars >= 0 ? '+' : '−'}${money(Math.abs(change.dollars))}`;
     el.className = change.dollars >= 0 ? 'positive' : 'negative';
-    if (change.start.reconstructed || change.latest.reconstructed) el.textContent = '~' + el.textContent;
     document.querySelector('#change-detail').textContent = `${pct(change.percent)} in value${change.sameCapital ? ' · no change in contributions' : ' · contributions changed'}${change.start.reconstructed || change.latest.reconstructed ? ' · rounded reconstruction' : ''}`;
   }
   document.querySelector('#record-count').textContent = `(${rows.length})`;
@@ -201,12 +201,13 @@ async function init() {
 
   const svg = document.querySelector('#chart'), tooltip = document.querySelector('#tooltip'), wrap = document.querySelector('#chart-wrap');
   const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, total: true }, selected: -1 };
+  let pinned = false;
   let W = 960, H = 390;
   let left = 64;
   const right = 20, top = 30, bottom = 46;
   let points = [], x, y, lo, hi, guide, valueAt;
 
-  function hideTooltip() { tooltip.hidden = true; if (guide) guide.setAttribute('visibility', 'hidden'); }
+  function hideTooltip() { tooltip.hidden = true; pinned = false; if (guide) guide.setAttribute('visibility', 'hidden'); }
   function select(index) {
     if (!points.length) return;
     state.selected = Math.max(0, Math.min(points.length - 1, index));
@@ -275,7 +276,7 @@ async function init() {
       marked.forEach((r, i) => {
         if (!drawAllDots && i !== marked.length - 1) return;
         const v = valueAt(r, key);
-        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: 2.5, fill: COLORS[key], stroke: COLORS[key], 'stroke-width': 1.5 }));
+        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: 1.1, fill: COLORS[key], 'fill-opacity': '0.7' }));
       });
     }
     guide = node('line', { x1: 0, x2: 0, y1: top, y2: H - bottom, stroke: '#788d82', 'stroke-dasharray': '3 4', visibility: 'hidden' }); svg.append(guide);
@@ -298,12 +299,30 @@ async function init() {
     document.querySelectorAll('[data-unit]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); }); render();
   }));
   document.querySelectorAll('[data-series]').forEach(input => input.addEventListener('change', () => { state.enabled[input.dataset.series] = input.checked; render(); }));
-  svg.addEventListener('pointermove', e => {
-    const rect = svg.getBoundingClientRect(), px = (e.clientX - rect.left) / rect.width * W;
-    if (px < left || px > W - right || !points.length) { hideTooltip(); return; }
+  let seeking = null;
+  const seekTo = (e, clamp) => {
+    const rect = svg.getBoundingClientRect(); let px = (e.clientX - rect.left) / rect.width * W;
+    if (!points.length) return;
+    if (px < left || px > W - right) { if (!clamp) { hideTooltip(); return; } px = Math.max(left, Math.min(W - right, px)); }
     select(points.reduce((best, r, i) => Math.abs(x(r.t) - px) < Math.abs(x(points[best].t) - px) ? i : best, 0));
+  };
+  wrap.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    e.preventDefault(); seeking = e.pointerId; pinned = true;
+    try { wrap.setPointerCapture(e.pointerId); } catch {}
+    seekTo(e, true);
   });
-  svg.addEventListener('pointerleave', hideTooltip);
+  wrap.addEventListener('pointermove', e => {
+    if (seeking === e.pointerId) { e.preventDefault(); seekTo(e, true); }
+    else if (e.pointerType === 'mouse' && seeking === null && !pinned) seekTo(e, false);
+  });
+  const endSeek = e => { if (seeking === e.pointerId) { seeking = null; try { wrap.releasePointerCapture(e.pointerId); } catch {} } };
+  wrap.addEventListener('pointerup', endSeek);
+  wrap.addEventListener('pointercancel', endSeek);
+  wrap.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && seeking === null && !pinned) hideTooltip(); });
+  wrap.addEventListener('contextmenu', e => e.preventDefault());
+  wrap.addEventListener('selectstart', e => e.preventDefault());
+  document.addEventListener('pointerdown', e => { if (!wrap.contains(e.target)) hideTooltip(); });
   window.addEventListener('resize', () => { if ((wrap.clientWidth < 600) !== (W === 520)) render(); });
   svg.addEventListener('keydown', e => {
     if (['ArrowLeft', 'ArrowRight', 'Home', 'End', 'Escape'].includes(e.key)) e.preventDefault();
