@@ -275,7 +275,7 @@ async function init() {
       marked.forEach((r, i) => {
         if (!drawAllDots && i !== marked.length - 1) return;
         const v = valueAt(r, key);
-        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: 2.5, fill: COLORS[key], stroke: COLORS[key], 'stroke-width': 1.5 }));
+        svg.append(node('circle', { cx: x(r.t), cy: y(v), r: 1.1, fill: COLORS[key], 'fill-opacity': '0.7' }));
       });
     }
     guide = node('line', { x1: 0, x2: 0, y1: top, y2: H - bottom, stroke: '#788d82', 'stroke-dasharray': '3 4', visibility: 'hidden' }); svg.append(guide);
