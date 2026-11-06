@@ -298,12 +298,30 @@ async function init() {
     document.querySelectorAll('[data-unit]').forEach(b => { b.classList.toggle('active', b === button); b.setAttribute('aria-pressed', String(b === button)); }); render();
   }));
   document.querySelectorAll('[data-series]').forEach(input => input.addEventListener('change', () => { state.enabled[input.dataset.series] = input.checked; render(); }));
-  svg.addEventListener('pointermove', e => {
-    const rect = svg.getBoundingClientRect(), px = (e.clientX - rect.left) / rect.width * W;
-    if (px < left || px > W - right || !points.length) { hideTooltip(); return; }
+  let seeking = null;
+  const seekTo = (e, clamp) => {
+    const rect = svg.getBoundingClientRect(); let px = (e.clientX - rect.left) / rect.width * W;
+    if (!points.length) return;
+    if (px < left || px > W - right) { if (!clamp) { hideTooltip(); return; } px = Math.max(left, Math.min(W - right, px)); }
     select(points.reduce((best, r, i) => Math.abs(x(r.t) - px) < Math.abs(x(points[best].t) - px) ? i : best, 0));
+  };
+  wrap.addEventListener('pointerdown', e => {
+    if (e.pointerType === 'mouse' && e.button !== 0) return;
+    e.preventDefault(); seeking = e.pointerId;
+    try { wrap.setPointerCapture(e.pointerId); } catch {}
+    seekTo(e, true);
   });
-  svg.addEventListener('pointerleave', hideTooltip);
+  wrap.addEventListener('pointermove', e => {
+    if (seeking === e.pointerId) { e.preventDefault(); seekTo(e, true); }
+    else if (e.pointerType === 'mouse' && seeking === null) seekTo(e, false);
+  });
+  const endSeek = e => { if (seeking === e.pointerId) { seeking = null; try { wrap.releasePointerCapture(e.pointerId); } catch {} } };
+  wrap.addEventListener('pointerup', endSeek);
+  wrap.addEventListener('pointercancel', endSeek);
+  wrap.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && seeking === null) hideTooltip(); });
+  wrap.addEventListener('contextmenu', e => e.preventDefault());
+  wrap.addEventListener('selectstart', e => e.preventDefault());
+  document.addEventListener('pointerdown', e => { if (!wrap.contains(e.target)) hideTooltip(); });
   window.addEventListener('resize', () => { if ((wrap.clientWidth < 600) !== (W === 520)) render(); });
   svg.addEventListener('keydown', e => {
     if (['ArrowLeft', 'ArrowRight', 'Home', 'End', 'Escape'].includes(e.key)) e.preventDefault();
