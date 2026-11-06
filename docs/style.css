@@ -61,20 +61,21 @@ td:last-child, th:last-child { text-align: left; }
   main { padding: 0 16px; }
   .masthead { padding: 20px 0; }
   .status { max-width: 150px; font-size: 10px; }
-  .intro { padding: 30px 0 22px; }
-  .stats { grid-template-columns: 1fr; gap: 8px; }
-  .stats article { padding: 14px 18px; }
-  .stats strong { font-size: 28px; margin: 1px 0; }
-  .chart-card { display: flex; flex-direction: column; padding: 16px 12px 12px; }
+  .intro { padding: 22px 0 16px; }
+  .stats { grid-template-columns: 1fr; gap: 6px; }
+  .stats article { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; padding: 10px 14px; }
+  .stats strong { font-size: 22px; margin: 0; }
+  .stat-label { font-size: 12px; }
+  .stats small { display: none; }
+  .chart-card { display: flex; flex-direction: column; padding: 14px 10px 12px; }
   .chart-toolbar { flex-direction: column; align-items: stretch; gap: 8px; }
-  .chart-wrap { order: 1; }
-  .legend { order: 2; margin-top: 12px; }
-  .chart-footer { order: 3; }
-  .periods { width: 100%; }
-  .periods button { flex: 1; }
-  .units { align-self: flex-start; }
+  .periods, .units { width: 100%; }
+  .periods button, .units button { flex: 1; }
   button { padding: 8px 9px; font-size: 11px; }
-  .legend { gap: 10px 16px; font-size: 12px; }
+  .chart-wrap { order: 1; }
+  .legend { order: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; margin-top: 12px; font-size: 12px; }
+  .legend-note { display: none; }
   .legend label, .capital-key { min-height: 28px; }
-  .chart-footer { flex-direction: column; gap: 2px; }
+  .chart-footer { order: 3; flex-direction: column; gap: 2px; }
+  svg { min-height: 280px; }
 }

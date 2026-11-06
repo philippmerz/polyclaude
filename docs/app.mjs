@@ -236,10 +236,10 @@ async function init() {
   function render() {
     hideTooltip(); svg.replaceChildren(); state.selected = -1;
     const narrow = wrap.clientWidth < 600;
-    W = narrow ? 520 : 960; H = narrow ? 400 : 390;
+    W = narrow ? 520 : 960; H = narrow ? 460 : 390;
     left = narrow ? 62 : 64;
     svg.setAttribute('viewBox', `0 0 ${W} ${H}`);
-    svg.style.setProperty('--axis-font-size', narrow ? '17px' : '12px');
+    svg.style.setProperty('--axis-font-size', narrow ? '15px' : '12px');
     const first = Math.min(rows[0].t, contributions[0].t);
     lo = state.days ? Math.max(first, latest.t - state.days * DAY) : first; hi = latest.t;
     const visible = rows.filter(r => r.t >= lo && r.t <= hi);
