@@ -147,7 +147,7 @@ const pct = n => n === null || n === undefined ? '—' : `${n >= 0 ? '+' : ''}${
 const date = t => new Intl.DateTimeFormat('en-US', { month: 'short', day: 'numeric', timeZone: 'UTC' }).format(t);
 const dateTime = t => new Intl.DateTimeFormat('en-GB', { year: 'numeric', month: 'short', day: '2-digit', hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZone: 'UTC' }).format(t) + ' UTC';
 const returnOf = (v, capital) => v === null ? null : (v / capital - 1) * 100;
-const valuation = (row, value, format = money) => (row.reconstructed && value !== null ? '~' : '') + format(value);
+const valuation = (row, value, format = money) => (row.reconstructed && value !== null ? '~ ' : '') + format(value);
 
 function sourceLink(ref, commit = '') {
   const match = /^((?:notes|research)\/[a-zA-Z0-9_.-]+|README\.md)(?::(\d+))?$/.exec(ref);
@@ -183,9 +183,9 @@ async function init() {
   if (change) {
     document.querySelector('#change-label').textContent = `Since ${date(change.start.t)}`;
     const el = document.querySelector('#change');
-    el.textContent = `${change.dollars >= 0 ? '+' : '−'}${money(Math.abs(change.dollars))}`;
+    const approx = change.start.reconstructed || change.latest.reconstructed ? '~ ' : '';
+    el.textContent = `${approx}${change.dollars >= 0 ? '+' : '−'}${money(Math.abs(change.dollars))}`;
     el.className = change.dollars >= 0 ? 'positive' : 'negative';
-    if (change.start.reconstructed || change.latest.reconstructed) el.textContent = '~' + el.textContent;
     document.querySelector('#change-detail').textContent = `${pct(change.percent)} in value${change.sameCapital ? ' · no change in contributions' : ' · contributions changed'}${change.start.reconstructed || change.latest.reconstructed ? ' · rounded reconstruction' : ''}`;
   }
   document.querySelector('#record-count').textContent = `(${rows.length})`;
@@ -201,12 +201,13 @@ async function init() {
 
   const svg = document.querySelector('#chart'), tooltip = document.querySelector('#tooltip'), wrap = document.querySelector('#chart-wrap');
   const state = { days: 0, unit: 'usd', enabled: { depth: true, mark: true, total: true }, selected: -1 };
+  let pinned = false;
   let W = 960, H = 390;
   let left = 64;
   const right = 20, top = 30, bottom = 46;
   let points = [], x, y, lo, hi, guide, valueAt;
 
-  function hideTooltip() { tooltip.hidden = true; if (guide) guide.setAttribute('visibility', 'hidden'); }
+  function hideTooltip() { tooltip.hidden = true; pinned = false; if (guide) guide.setAttribute('visibility', 'hidden'); }
   function select(index) {
     if (!points.length) return;
     state.selected = Math.max(0, Math.min(points.length - 1, index));
@@ -307,18 +308,18 @@ async function init() {
   };
   wrap.addEventListener('pointerdown', e => {
     if (e.pointerType === 'mouse' && e.button !== 0) return;
-    e.preventDefault(); seeking = e.pointerId;
+    e.preventDefault(); seeking = e.pointerId; pinned = true;
     try { wrap.setPointerCapture(e.pointerId); } catch {}
     seekTo(e, true);
   });
   wrap.addEventListener('pointermove', e => {
     if (seeking === e.pointerId) { e.preventDefault(); seekTo(e, true); }
-    else if (e.pointerType === 'mouse' && seeking === null) seekTo(e, false);
+    else if (e.pointerType === 'mouse' && seeking === null && !pinned) seekTo(e, false);
   });
   const endSeek = e => { if (seeking === e.pointerId) { seeking = null; try { wrap.releasePointerCapture(e.pointerId); } catch {} } };
   wrap.addEventListener('pointerup', endSeek);
   wrap.addEventListener('pointercancel', endSeek);
-  wrap.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && seeking === null) hideTooltip(); });
+  wrap.addEventListener('pointerleave', e => { if (e.pointerType === 'mouse' && seeking === null && !pinned) hideTooltip(); });
   wrap.addEventListener('contextmenu', e => e.preventDefault());
   wrap.addEventListener('selectstart', e => e.preventDefault());
   document.addEventListener('pointerdown', e => { if (!wrap.contains(e.target)) hideTooltip(); });
