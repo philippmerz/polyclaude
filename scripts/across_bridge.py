@@ -290,8 +290,8 @@ def main() -> int:
                 "nonce": nonce,
                 "chainId": src["id"],
                 "gas": 100_000,
-                "maxFeePerGas": gas_price * 2,
-                "maxPriorityFeePerGas": 0,
+                "maxFeePerGas": gas_price * 2 + (30_000_000_000 if src["id"] == 137 else 0),
+                "maxPriorityFeePerGas": (30_000_000_000 if src["id"] == 137 else 0),
             })
             signed = Account.sign_transaction(approve_tx, pk)
             h = w.eth.send_raw_transaction(signed.raw_transaction)
@@ -329,8 +329,8 @@ def main() -> int:
         # For native ETH: send the input amount as msg.value; the SpokePool
         # is payable and wraps to WETH internally.
         **({"value": amount} if is_native_eth else {}),
-        "maxFeePerGas": gas_price * 2,
-        "maxPriorityFeePerGas": 0,
+        "maxFeePerGas": gas_price * 2 + (30_000_000_000 if src["id"] == 137 else 0),
+        "maxPriorityFeePerGas": (30_000_000_000 if src["id"] == 137 else 0),
     })
     signed = Account.sign_transaction(deposit_tx, pk)
     h = w.eth.send_raw_transaction(signed.raw_transaction)

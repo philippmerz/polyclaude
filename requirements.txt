@@ -15,3 +15,6 @@ feedparser==6.0.12
 
 # Crypto sleeve — Ostium RWA-perp client
 ostium-python-sdk==3.2.0
+
+# news_watcher HTML body-fetch
+beautifulsoup4==4.15.0
