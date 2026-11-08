@@ -511,7 +511,9 @@
     "Fed dissent",
     "Fed rate",
     "US inflation",
-    "U.S. inflation"
+    "U.S. inflation",
+    "Chicago weather",
+    "KORD"
   ],
   "_trump_approval_note": "Trump approval coverage added 2026-09-18 for the short-dated held 38.5-38.9 YES bucket. The exact Datawrapper source is checked separately before close; tier 2 catches broader source/methodology reporting. Prune after the event resolves.",
   "_duma_note": "Duma coverage added 2026-08-28 for the held 295-339 equal-share range. Tier 2 is appropriate because forecasts/results need judgment, not an emergency tick. Prune after the September 2026 election resolves.",

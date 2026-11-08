@@ -1667,3 +1667,22 @@ Ex-gas trading midpoint fell **$5.29 (−2.78%)** to **$185.09**; indicative fee
 - **Outlook/next boundaries:** 15:00Z/18:00Z ticks via new injector; Delcy criteria re-read; Kimi submission watch (weights ~11/4 → board rows); midterms resolve 11/3-4 (out of scope without edge); monthly review Nov 12.
 
 Evidence: [179 reconciliation](../research/2026-10-30-179-reconciliation.json), journal 2026-10-30 14:40Z entry, decision DEC-0272.
+
+# Week 2026-10-30 → 2026-11-08
+
+Indicative whole-account marked value fell **$8.85 (−4.64%)** to **$181.91**; ex-gas trading midpoint fell **$7.82 (−4.22%)** to **$177.27**. Against $170 contributed capital, those marks are +7.00% and +4.28% respectively before unreconciled VM/API/operating costs. They are sequential marks, not settled cash.
+
+|Measure|Oct30|Nov8|Change|
+|---|---:|---:|---:|
+|Whole marked account|190.76|181.91|−8.85|
+|Ex-gas trading midpoint|185.09|177.27|−7.82|
+|Ex-gas indicative depth|184.46|172.74|−11.72|
+|PM midpoint / depth|36.98 / 32.94|37.23 / 32.70|+0.25 / −0.24|
+
+- **Reconciliation:** `bankroll.py` reports $113.53. Same-window additions outside its coverage are Arbitrum WBTC 0.00072391 × $75,625.455 = $54.75 (block 522475061), Hyperliquid HYPE 0.16988101 × $76.1065 = $12.93 (canonical HYPE/USDC pair @107), and HL USDC $0.70487: $68.38 total. $113.53 + $68.38 = $181.91. Gas deducted for ex-gas figures is $4.64 (Polygon POL and Base ETH dust); Arbitrum ETH $35.77 is treated as trading capital after the Nov-6 reallocation, not gas. The script's realized/gas residuals are accounting artifacts after that reallocation; no reconciled settled-cash figure is claimed.
+- **Open book:** seven positions cost $45.43, midpoint $37.23, indicative fee/depth-net realizable $32.70; midpoint overstates by $4.53, mainly the thin Clarity and Messi books. Three unmatched premium SELLs remain: Kimi 15@0.97, Delcy 10@0.70, Messi 5@0.65. Clarity stays an equal 29-share pair with a $29 logical floor and $24.51 indicative whole-pair exit; no independent-leg action.
+- **Drivers/fragility:** Investor's Nov-8 Chicago 58–59°F YES 19 @0.11 ($2.09 plus fee) was falsified by routine KORD 081951Z T01560033 = 15.6°C/60°F; current terminal probability is zero and the ticket is held to resolution. Delcy YES is $5.04 cost/$1.54 marked; Kimi YES is $8.53/$5.48; both retain large model and resolution risk. The Nov-6 WBTC/ETH/HYPE allocation is an internal reallocation, not a return or a funding source for PM tickets.
+- **Other actions:** Kimi's 42-share maker add filled Oct-30 after the prior report, bringing the holding to 64.5 YES. C7 Astra exited Nov-2 (−$0.46); Fable was withdrawn. No other PM entry this tick. UMA, Ostium and final state audits were clean before a later transient Data API 429; redemption found zero winning redeemable positions.
+- **Considered/rejected:** Mexico City 23°C (hot-path SPECI), canceled-fixture rule gaps (no robust edge), box-office estimates, Elon brackets, intraday weather, negRisk baskets (minimum size/depth exceed edge), Millennium and Billboard (no defensible misprice), and Nov-9 Chicago NO (invalidated when Nov-8 reached 60°F). Primary discovery fetched 1,000 rows/10 pages, selected 80, omitted 305 eligible rows at the page cap. Thin-tail fetched 48,253 rows/20 pages and retained 2,575 carry-filtered candidates; this is a capped slice, not an exchange-wide zero. Sports consensus was incomplete after worker timeout/Outcome mismatch; no sports entry.
+- **Decision tracker:** 275 records, 180 with outcomes, 95 pending; pending recorded sizes are not live exposure. Seven overdue operational/closed records were reconciled. The Chicago failure is a direct adverse nowcast calibration point: the 0.63 estimate did not survive the next hourly observation. Existing lessons already require current resolving-source reads, terminal-loss pricing and honest prior revision; no duplicate rule was added in the weekly condensation review.
+- **Outlook:** Chicago settlement; no Nov-9 weather entry under the invalidated watch. Kimi resolving chart remains unchanged (K3.1 Pro 46.44 <55); Delcy talks Nov 11–15; Messi awaits Google's official list; monthly review Nov 12. Next scheduled tick 2026-11-09 00:00 UTC.

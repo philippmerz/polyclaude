@@ -1,7 +1,15 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-10-31",
+ "_refreshed": "2026-11-08",
  "positions": [
+  {
+   "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
+   "outcome": "No",
+   "size": 29.0,
+   "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
+   "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
+   "negativeRisk": false
+  },
   {
    "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
    "outcome": "Yes",
@@ -11,36 +19,28 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
+   "outcome": "Yes",
+   "size": 5.0,
+   "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
+   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
+   "negativeRisk": false
+  },
+  {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
    "outcome": "Yes",
-   "size": 29,
+   "size": 29.0,
    "conditionId": "0x7dae88f6807b879a1fc30959ea007208f4fc871425626d2cceb2ca15277863e7",
    "asset": "27574293309104117988785722816384166732256180683715968874076479908449482000352",
    "negativeRisk": false
   },
   {
-   "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
-   "outcome": "No",
-   "size": 29,
-   "conditionId": "0xfc8fec03848728e014c222dc778e0b64a8034c6879c90158ce1f370de84a8f34",
-   "asset": "43566386855398527373115443041865408808190028685008561538141743908824051774750",
-   "negativeRisk": false
-  },
-  {
    "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
    "outcome": "Yes",
-   "size": 28,
+   "size": 28.0,
    "conditionId": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
    "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
    "negativeRisk": true
-  },
-  {
-   "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
-   "outcome": "Yes",
-   "size": 5,
-   "conditionId": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
-   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
-   "negativeRisk": false
   },
   {
    "slug": "trump-out-as-president-before-2027",
@@ -51,14 +51,12 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
-   "outcome": "No",
-   "size": 5,
-   "conditionId": "0xbfeb6d4cf3eab6071e204219b0647c8224d63a12778df467311b5f2a4b3a5bd4",
-   "asset": "64025664961497419708095468282573682984741903075312816516046832361290996190088",
-   "negativeRisk": true,
-   "deindexed": true,
-   "umaResolutionStatus": null
+   "slug": "highest-temperature-in-chicago-on-november-8-2026-58-59f",
+   "outcome": "Yes",
+   "size": 19.0,
+   "conditionId": "0x8bcc016337cd6db933ab4670367186ee557ec751b1f9ec385c0794c831ac4c4f",
+   "asset": "91192353018736350494839655010680453486075723062053513859428445148918623599137",
+   "negativeRisk": true
   },
   {
    "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",

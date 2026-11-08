@@ -3759,9 +3759,10 @@
         "news-coverage"
       ],
       "slug": null,
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational close: residual position visibility and coverage fixes completed.",
+      "calibration_delta": "Not a market forecast.",
+      "lesson": "Use sizeThreshold=0 and explicit residual retention.",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 186,
@@ -4245,9 +4246,10 @@
         "bounded-review"
       ],
       "slug": "will-xagusd-dip-to-56-in-october-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational close: both sides skipped; no order or position.",
+      "calibration_delta": "Not applicable; no supported forecast or execution.",
+      "lesson": "Expired source credentials and ambiguous identity block entry.",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 200,
@@ -4265,9 +4267,10 @@
         "no-entry"
       ],
       "slug": "lol-we-bro2-2026-10-15",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational close: both sides skipped; no order or position.",
+      "calibration_delta": "Not applicable; no executable forecast was taken.",
+      "lesson": "Preserve exact fixture identity and source/fee gates.",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 201,
@@ -4717,9 +4720,9 @@
         "israel-knesset-2026"
       ],
       "slug": "will-yisrael-beiteinu-win-less-than-5-percent-of-the-vote-in-the-2026-knesset-elections",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null,
+      "outcome": "Operational close: maker order canceled unfilled; no position or spend.",
+      "calibration_delta": "Unexecuted forecast; not market-scored.",
+      "lesson": "Canceled commitments require terminal proof and no automatic repost.",
       "order_id": "0x3a54b32b52460a2fc1e8a6d5128211582438823efcd46213808dfd988cd97a1d",
       "condition_id": "0xca272965873a68c5f6e2cd81240a990d3080268f3a8cfd907e8b1126dd2c482c",
       "market_id": "4375452",
@@ -4731,7 +4734,8 @@
       "financial_status": "LIVE_UNFILLED_NOT_HELD",
       "pull_at": "2026-10-19T02:00:00Z",
       "research_report": "research/2026-10-17-deep-review/yisrael293_entry_outcome_2325.md",
-      "verification": "data/deep_review_20261017/work/0293_postproof_2330.json"
+      "verification": "data/deep_review_20261017/work/0293_postproof_2330.json",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 221,
@@ -4750,9 +4754,9 @@
         "us-retail-gas-2026"
       ],
       "slug": "will-gas-be-below-3pt75gallon-in-any-state-on-october-31",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null,
+      "outcome": "Operational close: gas maker order canceled unfilled; no position or spend.",
+      "calibration_delta": "Unexecuted forecast; not market-scored.",
+      "lesson": "Preserve source and policy-risk uncertainty; no automatic repost.",
       "order_id": "0x33d214589d75af40f30be1ac14cbe39ba3b394c299f8a1255d6316ca0f74bf94",
       "condition_id": "0x55a50ce88443a051d8c405ad0b036df3fa297bad458c22d7c150d6a45fd88a1a",
       "market_id": "4641857",
@@ -4764,7 +4768,8 @@
       "financial_status": "LIVE_UNFILLED_NOT_HELD",
       "pull_at": "2026-10-19T02:00:00Z",
       "research_report": "research/2026-10-17-deep-review/gas296_entry_outcome_2355.md",
-      "verification": "data/deep_review_20261017/work/0296_postproof_2355.json"
+      "verification": "data/deep_review_20261017/work/0296_postproof_2355.json",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 222,
@@ -5852,9 +5857,10 @@
       "resolution_at": "2026-11-04",
       "tags": [],
       "slug": "will-the-democrats-win-the-michigan-senate-race-in-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Sold 5 Michigan NO FOK at 0.32 for USD 1.60 on 2026-10-26; no remaining position.",
+      "calibration_delta": "Exit executed because stressed hold value was below the executable bid.",
+      "lesson": "Use stressed hold value versus fee-aware executable cash, not entry cost.",
+      "resolved_at": "2026-11-08T21:18:13Z"
     },
     {
       "id": 270,
@@ -5940,9 +5946,10 @@
         "c7"
       ],
       "slug": "next-fable-model-5pt2-released-by-november-6-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational close: Fable order withdrawn; no live exposure remains.",
+      "calibration_delta": "Unexecuted/closed C7 test; not a resolved market forecast.",
+      "lesson": "Thin-margin tests still require terminal reconciliation and prior retirement.",
+      "resolved_at": "2026-11-08T21:12:14Z"
     },
     {
       "id": 275,
