@@ -1,5 +1,5 @@
 {
-  "next_id": 277,
+  "next_id": 278,
   "decisions": [
     {
       "id": 1,
@@ -5986,6 +5986,25 @@
         "usgs",
         "count-base-rate",
         "backfill"
+      ],
+      "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 277,
+      "timestamp": "2026-11-09T21:17:52Z",
+      "type": "strategy_change",
+      "thesis": "USGS annual 11-13 YES remains count 13 with central p=0.15. The 0.088 ask gives no improved add and a low maker BUY would be adversely selected after a thesis-breaking M7. A 28.31-share post-only SELL at 0.20 is instead a no-fill-cost premium offer above fair and above about 0.168 fair sensitivity after 72h without an event; any new M7.0+ invalidates the underlying ticket.",
+      "confidence": "medium",
+      "prediction": "The 28.31-share GTC post-only offer is LIVE and unmatched; any execution sells at 0.20, while no fill preserves the resolution payout. Verify terminal status or fill before any repost.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-12",
+      "tags": [
+        "resting_order",
+        "usgs",
+        "premium_sell"
       ],
       "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
       "outcome": null,

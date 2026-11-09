@@ -109,3 +109,17 @@ TRADE: BUY 28.31 YES "11-13" at avg 0.089, $2.52, order 0xb43a671fe24cf7c6b7df53
 Invalidation: any M7.0+ (USGS) before year-end -> position ~worthless; no exit needed. Watch only for a 6.9→7.0 revision of older events (none pending).
 Secondary (not taken): 17-19 NO at 0.79 vs P(NO)~0.85 (~7%, capital heavy); 14-16 YES 0.71 vs 0.685 (no edge).
 Generalizable idea for next cycles: count/base-rate markets (earthquakes, hurricanes, named storms, Elon-style counts with long windows) where the book overweights recent rate — compare against long USGS/NOAA catalogs.
+
+## Niche iteration — 2026-11-09 21:20 UTC
+### M1 Weekly USGS M5.5+ exact-count brackets — KILLED after matched-cutoff measurement
+- Contract/event 1326719: Nov 9 00:00 ET through Nov 15 23:59 ET; <=6, exact 7/8/.../13, >13; USGS FDSN preferred records. Exact 8 is not 8+.
+- USGS at 21:00:46Z: 0 qualifying events after 16.01h; M4.5+ control count 12 confirms newer catalog activity. Fresh historical query returned 1,035 unique qualifying events across 114 complete Monday weeks through Nov 9.
+- Conditional on 0 at the matched 16.01h cutoff: <=6 = 19/54 (35.2%) all vs 5/23 (21.7%) latest 52; exact 7 = 16.7%/26.1%; exact 8 = 14.8%/13.0%. Quotes: <=6 YES 0.34/0.36; exact 7 0.11/0.14; exact 8 0.09/0.12; taker fee 0.05*p*(1-p).
+- Verdict: no robust side. <=6 YES is below its 0.367 fee-inclusive cost on a central pooled/latest blend; exact-8's small central edge disappears at the 0.10 haircut; exact-7 changes sign across cohorts. No order. Raw receipts/analysis: `/tmp/opencode/usgs_weekly_20261109_2125_v2` (the first capture directory failed before network because metadata omitted read_only).
+### M2 OpenRouter weekly market-share ranks — KILLED for current cash/robustness
+- Official `modality-chart?routeSegment=text`, cached 20:53:33Z, already has partial Nov-9 absolute author data. Current shares: DeepSeek 30.36%, OpenAI 19.08%, Google 14.56%; next labs Z.ai 5.93%, Qwen 5.83%, Anthropic 5.64%. Nov-2 finals were 31.80/19.31/13.64%. Rules skip Others/Stealth and resolve the displayed Nov-9 week when Nov-16 first displays.
+- Books: DeepSeek #1 YES 0.953/0.982; OpenAI #2 0.59/0.97; Google #3 0.77/0.98; Google #2 0.002/0.035; OpenAI #3 no bid/0.23. Five-share minimum makes the stable leaders exceed $2.46 free pUSD; current-rank longshots do not survive a 0.10 haircut. No order.
+### M3 Existing annual USGS 11–13 YES — premium SELL lead/action
+- Count remains 13 (USGS generated 20:53–20:56Z); no M6.5+ near-threshold additions since Nagqu beyond reviewed Vanuatu 6.8/Bonin 6.5. Live YES book 0.004/0.088, fee 0. No add: price is not improved versus the 0.089 entry and a low resting BUY would be adversely selected after a thesis-breaking M7.
+- Action: post-only SELL 28.31 YES @0.20, order `0xa186d87014105075a5f6061d3fad64767ba3f4a97859ddd79f8903c030da4af6`, LIVE/0 matched at 21:17Z. Central fair 0.15; 0.20 also exceeds about 0.168 fair sensitivity after 72h with no event. Initial 28.3146 post got HTTP 400 (two-decimal SELL accuracy); authenticated book showed no order before the 28.31 correction. No cash spent or position sold. DEC-0277.
+- Resolution: USGS M7.0+ catalog, Jan 1–Dec 31 2026 ET, with the written late-report window. Invalidation: any new M7.0+; retain the underlying ticket to resolution if the premium offer does not fill.

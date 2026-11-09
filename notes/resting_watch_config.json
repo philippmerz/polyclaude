@@ -53,6 +53,22 @@
    "justification": "Ordinary public-info class: rest at/above fair 0.60. Venue min is 5 sh, so this rests the entire 5-sh leg; fills only on year-end euphoria >= 0.65 (double the mark). 72h lifetime; cancel-first on MATERIAL+ Messi injury/retirement alerts.",
    "enabled": true,
    "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69"
+  },
+  {
+   "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
+   "asset": "53690317089366474143234098661596586722077438719337429627862224648098471810135",
+   "side": "SELL",
+   "shares": 28.31,
+   "class": "ordinary",
+   "min_price": 0.2,
+   "premium_pp": 0.05,
+   "alert_keys": [
+    "earthquake",
+    "usgs"
+   ],
+   "justification": "USGS count remains 13 on 2026-11-09; central P(11-13) is 0.15 from the measured remaining-window catalog. A 0.20 post-only offer is strictly above fair and covers about 72h of no-event time decay (fair sensitivity about 0.168); no fill costs nothing. Any new M7.0+ invalidates the ticket. 72h lifetime; cancel-first on CRITICAL identity-matched alerts.",
+   "enabled": true,
+   "condition_id": "0x5328ccb90355de61509485631db102862ec06146c9fd10d101fb9607c4344e03"
   }
  ],
  "pull_tier": "CRITICAL"

@@ -1,6 +1,6 @@
 ---
-reviewed_at: "2026-11-09T10:49:14Z"
-valid_until: "2026-11-09T12:00:00Z"
+reviewed_at: "2026-11-09T21:22:00Z"
+valid_until: "2026-11-10T00:00:00Z"
 source_hashes:
   README.md: e6cf85347b6cae95395f0eeed5a2556dd2a04fbeb02b41bfc1f49863689c7c82
   strategy/01_lessons.md: 0a86e61f94ed6978cbab5dcfd9a9143406c4041531d506abf5a4f178cae4b519
@@ -10,28 +10,32 @@ source_hashes:
   docs/README.md: bacd07d38a8885d76b6df1a4e8bd27e80c45ea51c8135065d963dba41e9d7e00
   notes/backlog.md: cbdaac1cb4e3d48eef958d4c27ee87fe40ca518f055476b35a8f220bfce80800
   notes/resting_orders.md: 7864299e4aca9a36f39ce984abbf700c3d08411b9f3ae397a4a3f8f1393adc91
-  notes/journal.md: 6fd486663b898d9fc95dd110947fbad61c2887a0796075fda92ad75eade12230
+  notes/journal.md: 912872166b857b6bc3558e64a5a956ea21b29261750ad72c688cb760264d2ccf
   notes/longterm_watchlist.md: feaf850d2675e638de1e49ba7d5bb41520a359bfd6144f1172c99c8bbffa1a50
+  notes/hunt_iteration.md: 17e0a5b2fdd80bfde4bcd449af016b66bc6b430540e46f2a207fc4e104c963da
+  notes/resting_watch_config.json: e309bbd5166e413f273283788bdb41ebd25ebfa61591e88fd5511c72ba79dac6
+  notes/forecast_log.csv: 6a99a3c24d89300d61906f34943f1383d2d6e467ca89bbf35e926d065cb71435
+  notes/partner_dialogue.md: 44c8283f626699db607690c0803120faa22638d81e5c6707ca02b5479bc9a271
 ---
 ## Current decision
 
-**2026-11-09 10:49 UTC:** No new action. Chicago Nov-8 58–59 YES resolved NO after an official 61°F high; prior retired and full loss preserved. The USGS 11–13 M7+ position remains at count 13 with p=0.15; hold 28.31 YES to resolution/no add. Nov-9 Chicago NO remains invalidated. Outbound Telegram to Philipp is disabled.
+**2026-11-09 21:22 UTC:** USGS 2026 M7+ count remains 13. No add at the unchanged 0.088 ask; premium post-only SELL 28.31 11–13 YES @0.20 is LIVE/unmatched (`0xa186d870…`, DEC-0277). Central p=0.15; any new M7.0+ invalidates the ticket. Weekly USGS brackets and OpenRouter rank candidates were killed; see `notes/hunt_iteration.md` M1–M3.
 
 ## Account and underwriting
 
-- `bankroll.py` TOTAL **$110.45**; WBTC/HYPE/HL USDC remain omitted after the Nov-6 reallocation, so this is not whole-account net liquidation. PM open cost $45.86, midpoint $38.60, indicative depth/fee-net $32.82; free pUSD $2.462932. Three LIVE unmatched premium SELLs: Kimi 15@0.97, Delcy 10@0.70, Messi 5@0.65. No BUY commitment.
+- Post-rebalance `bankroll.py` TOTAL **$95.52** at 21:22Z; the drop from $110.84 is movement into omitted WBTC/HYPE/HL USDC, not a trading loss. Investor's marked whole account is ~$179.2 (`19f2c173`), not settled cash. PM open cost $45.86, midpoint $39.53, indicative depth/fee-net $36.16; sequential marks are not executable proceeds. Free pUSD **$2.462932** plus $3.51 Aave USDC.e ticket buffer. Four LIVE unmatched premium SELLs: Kimi 15@0.97, Delcy 10@0.70, Messi 5@0.65, USGS 28.31@0.20. No BUY commitment.
 
 | Holding | Size; current central / stress | Management |
 |---|---:|---|
-| Clarity pair | over-58 NO 29 + over-50 YES 29; pair floor accounting | Hold complete set; no add or independent-leg action |
-| Kimi HLE>=55 YES | 64.5; .2646 / .1146 | Chart unchanged, K3.1 Pro 46.44; hold/no add |
-| Delcy YES | 28; .35 / .25 | No vacancy/replacement instrument; hold/no add |
+| Clarity pair | over-58 NO 29 + over-50 YES 29; pair floor accounting | Hold complete set; no independent-leg action |
+| Kimi HLE>=55 YES | 64.5; .2646 / .1146 | Chart unchanged 21:18Z, K3.1 Pro below 55; hold/no add |
+| Delcy YES | 28; .35 / .25 | No new vacancy/replacement instrument; hold/no add |
 | Messi YES | 5; .60 central | Hold; official Google Global Athletes Top5 only |
-| USGS 11–13 M7+ YES | 28.31; .15 central | Count 13; any new M7 breaks it; hold/no add |
+| USGS 11–13 M7+ YES | 28.31; .15 central | Count 13; premium SELL 28.31@0.20; any new M7 breaks it |
 | Trump-out NO | 0.33; .97 central | Sub-minimum dust; hold to resolution |
 
 ## Completed check and next boundary
 
-09:40Z check completed: flat book, UMA/Ostium/state/coverage clean, marginal APY no close flags, no SELL-TAKER, redemption zero winning rows, and no overdue decisions. USGS remains 13; Kimi chart unchanged. Primary/thin-tail discovery remained capped with no promoted candidate; sports consensus timed out. Full evidence is in the 09:40Z journal entry. Weekly report is not due after the Nov-8 report.
+Recovery/scheduled check completed 17:57–21:20Z. The 12Z/15Z blocks were missed because the prior session was poisoned; 18Z/21Z prompts were consumed by this run without duplication. UMA/Ostium/state/coverage/stale-code checks clean; marginal APY and exit screens no sale; redemption zero; no overdue decisions. Primary/thin-tail discovery remained page-capped with no promoted entry; sports consensus was incomplete. Full evidence is in the 21:20Z journal entry. Weekly report is not due after Nov-8.
 
-Next scheduled boundary **2026-11-09 12:00 UTC**. Delcy talks Nov 11–15; monthly review Nov 12; Kimi/USGS/Messi source watches continue through existing checks. No extra timer, goal, or idle follow-up.
+Next scheduled boundary **2026-11-10 00:00 UTC**. Messi 5@0.65 reaches 72h ~2026-11-10 18:03Z: next tick rechecks criteria/news/fair/book and renews only after fresh underwriting, otherwise lets the watcher pull/lapse. Delcy talks Nov 11–15; monthly review Nov 12. No extra timer, goal, or idle follow-up.

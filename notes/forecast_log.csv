@@ -1,0 +1,6 @@
+logged_utc,who,market_slug,outcome,our_prob,market_price,action,edge_type,resolution_source,resolved_utc,result,notes
+2026-11-09T07:05Z,Investor,11-13-m7-earthquakes-2026,YES,0.15,0.089,BUY 28.31@0.089,base-rate,USGS M7.0+ catalog,,,backfilled
+2026-11-08T19:00Z,Investor,kord-nov8-high-58-59f,YES,,0.11,BUY 19@0.11,weather,NWS/METAR KORD,2026-11-09,0,backfilled; pre-trade prob not recorded
+2026-11-09T21:18Z,Kimi,will-there-be-6-earthquakes-of-5pt5-or-above-magnitude-worldwide-oct19-25-copy-copy-copy,YES,0.28,0.36,PASS,base-rate,USGS FDSN weekly M5.5+ catalog,,,"0 events at matched 16.01h cutoff; conditional <=6 = 35.2% across 114 weeks vs 21.7% latest 52; regime sensitivity and 10pp stress fail"
+2026-11-09T21:18Z,Kimi,will-there-be-8-earthquakes-of-5pt5-or-above-magnitude-worldwide-oct19-25-copy-copy-copy,YES,0.14,0.12,PASS,base-rate,USGS FDSN weekly M5.5+ catalog,,,"Exactly 8; conditional frequency 14.8% across 54 matched zero-start weeks vs 13.0% latest 52; fee and 10pp stress kill"
+2026-11-09T21:18Z,Kimi,will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026,YES,0.15,0.088,PASS ADD; REST SELL 28.31@0.20,base-rate,USGS M7.0+ catalog,,,"Count 13; no price improvement and maker-buy adverse selection; premium sell is a no-fill-cost alternative"
