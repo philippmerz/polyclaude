@@ -1,6 +1,6 @@
 {
  "_comment": "Per-position P(win) priors for portfolio_kelly.py. cluster + rho_within define correlation-discount applied via Kelly fraction. cluster_frac is the existing-deployment-as-fraction-of-bankroll for that cluster \u2014 used as the discount factor. Resolved-market entries are pruned (git history preserves them).",
- "_updated": "2026-10-21T17:42:19.530404+00:00",
+ "_updated": "2026-11-09T08:06:36Z",
  "_groups": {
   "treasury-5y-monotonicity-2026": {
    "label": "Treasury 5-year yield 4.35%/4.45% monotonicity pair",
@@ -162,8 +162,8 @@
   "rationale": "[ENTRY-TIME RECORD, superseded by `note` \u2014 do NOT read as current] 2026-07-03 prior-hygiene pass: 2026-06-10 skeptic+champion central P(YES) ~3% (death tail 1.5-2.2% at age 80 w/ presidential medicine + assassination 0.3-0.7% + resignation ~0.8% + removal ~0; Dem-House-flip seats AFTER resolution) -> p_no 0.97. Previous 0.96 carried extra entry-pessimism. Tails already inside the central; no further dated event. cluster_frac unchanged (assassination sliver correlates w/ iran-regime).",
   "note": "RE-VERIFIED 2026-08-29: Trump was visibly exercising presidential duties on Aug-28, the current official White House corpus contained no resignation or removal announcement, the latest disclosed physician memorandum found him fit for duty, H.Res.537/939 remained merely introduced, and no cabinet Section-4 process appeared. p_no 0.97 remains the honest central prior; the 3% YES tail covers mortality/acute incapacity, assassination, surprise resignation, or removal announcement before cutoff.",
   "verified": "2026-10-31",
-  "criteria_read": "2026-10-24",
-  "current_assessment": "Oct24 first-hand full literal Gamma reread/rawdescription SHA7401f960d5e75e4f04f93dca92c5b31a36d00e63fe9ee0da242742076f25edd9 matches Oct16 and frozen description exactly; market666861/CID/token identity exact. Permanent cessation/precutoff announcement qualifies even if effective later; temporarySection3/unsustainedSection4/impeachmentwithoutremoval excluded, sustainedSection4qualifies, consensus credible reporting. Any-period/permanent tension retained. Captured WhiteHouse release entries Oct22\u201315 no qualifying announcement; feedlimited, not universalabsence/newmedical/Congressverification. pNO.97 remains datedjudgment, verifiedOct16 notrolled; actual.33NO below5shareminimum, no executable dustsale/buyup/burn. research/2026-10-24-0019-trump-criteria.json",
+  "criteria_read": "2026-11-08",
+  "current_assessment": "Nov8 first-hand Gamma reread: no criteria drift from Oct24. Permanent cessation or a pre-cutoff resignation/removal announcement qualifies; temporary Section 3, unsustained Section 4 and impeachment without removal remain excluded; sustained Section 4 qualifies; consensus of credible reporting remains the source. Current White House releases through Nov8 still identify Trump as President and show no qualifying announcement. pNO 0.97 remains the dated judgment; 0.33 NO is below the five-share minimum, so hold the dust to resolution with no add or sale.",
   "key_facts": [
    {
     "claim": "Only PERMANENT removal qualifies: a temporary 25th-Amendment Section 3 invocation (routine for medical procedures) does NOT count.",
@@ -1091,7 +1091,7 @@
  "will-over-50-senators-vote-for-the-clarity-act-20260729193533307": {
   "p_yes": 0.5,
   "verified": "2026-10-23",
-  "criteria_read": "2026-10-23",
+  "criteria_read": "2026-11-08",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
@@ -1103,7 +1103,7 @@
  "will-over-58-senators-vote-for-the-clarity-act-20260729193533309": {
   "p_no": 0.5,
   "verified": "2026-10-23",
-  "criteria_read": "2026-10-23",
+  "criteria_read": "2026-11-08",
   "cluster": "clarity-act-senate-threshold-monotonicity",
   "rho_within": 1.0,
   "cluster_frac": 0.1463,
@@ -1288,7 +1288,10 @@
   "monitoring": "Existing31stRSS feed: all30cachedtitles seenby72hdedupafter normal00:33/00:38ingestion;18exactIDsretainedunder5000cap. MikeRogers/El-Sayed/AbdulElSayed/MichiganSenate terms promoted00:38:44; laternormalcycle00:43:18provesreload. No manualpoll/stateedit/restart/newdaemon/timer. Broad directtier1bypassescheapfilter, notexhaustivenewscoverage.",
   "daily_rederivation": "research/2026-10-26-0120-daily-hold-review.json",
   "latest_news_review": "research/2026-10-24-0019-check.json",
-  "literal_description_sha256": "7975072a7ee0ee22ff2dee00e34b9a1929a8a5bcf94fb3693352da813dc38fdf"
+  "literal_description_sha256": "7975072a7ee0ee22ff2dee00e34b9a1929a8a5bcf94fb3693352da813dc38fdf",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "Michigan position is closed and no re-entry is authorized; preserve the dated forecast for post-mortem."
  },
  "will-the-democrats-win-sedgwick-county-in-the-kansas-senate-race-in-2026": {
   "p_yes": 0.49,
@@ -1325,7 +1328,7 @@
   "rho_within": 0.5,
   "cluster_frac": 0.18,
   "verified": "2026-10-18",
-  "criteria_read": "2026-10-26",
+  "criteria_read": "2026-11-08",
   "market_id": "4425465",
   "condition_id": "0xfc0db4dd2a5a4de205351141724a341d0b5197bcdb0f284278a57e21e5dbfe69",
   "asset": "107362396213618806325753097259713785352730185699997736827082034877187570305865",
@@ -1346,7 +1349,7 @@
   "source_review_20261020": "Actual AFA Oct6 home-public farewell corroboration upgrades previous indexed FIFA evidence (directFIFA bodywas shell); nostalgicOct19commentary supplies noGoogleTop5/growth measurement. No duplicateevent probabilityincrement or formalretirement inference. Retain5YES/noadd; p60/selected40 and uncertaintyunchanged.",
   "literal_description_sha256": "458acef81579b7bd9164fe68e09ab66533450a57e9a72ce363cc9175a3f7ff40",
   "latest_criteria_review": "research/2026-10-26-0120-daily-hold-review.json",
-  "criteria_review_note": "CurrentGamma4425465/CID/YESasset and complete literal match frozenOct17. OfficialGoogle2026GlobalAthletesTop5; navigationirrelevant; missinglistbyMarch31,2027 23:59ET\u2192NO. Sportsnews notrank. Criteria-only review; probability .60/.40 and verifiedOct18unchanged."
+  "criteria_review_note": "Nov8 live Gamma 4425465/CID/YES asset and full criteria match the frozen read: official Google 2026 Global Athletes Top5; navigation is irrelevant; missing list by Mar31 2027 23:59 ET resolves NO. Sports news is not the ranking. Criteria-only review; probability .60/.40 and verified Oct18 unchanged."
  },
  "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026": {
   "p_yes": 0.15,
@@ -1845,7 +1848,7 @@
   "cluster_frac": 0.1,
   "verified": "2026-11-02",
   "updated_utc": "2026-11-02T18:45:32Z",
-  "criteria_read": "2026-10-23",
+  "criteria_read": "2026-11-08",
   "market_id": "3072315",
   "condition_id": "0x99ac08ed7765e5b35836b9e68bd90a7d6ad89417a8444d90bac61febcb8a8d41",
   "asset": "37766872206008704788193600553604631093824104239948970702184049381100338243383",
@@ -1920,7 +1923,7 @@
   "rho_within": 0.5,
   "cluster_frac": 0.27,
   "verified": "2026-10-21",
-  "criteria_read": "2026-10-30",
+  "criteria_read": "2026-11-08",
   "updated_utc": "2026-10-30T21:10:48.262681+00:00",
   "review_index": 300,
   "market_id": "1105742",
@@ -1945,8 +1948,8 @@
   "current_revision": "research/2026-10-25-1741-delcy-review.json",
   "latest_execution_review": "research/2026-10-22-delcy300-fill.json",
   "latest_news_review": "research/2026-10-25-1741-news-review.json",
-  "divergence_ack": "2026-10-22",
-  "divergence_ack_reason": "Intentionaldisagreement reviewedafteractualfills/freshcriteria,sourcegaps,selected/broadcashcases andjointloss. Market.245/.190 is not independentprobabilitymeasurement; no automaticadd. See datedpostfillunit; acknowledgmentdoesnotvalidatep.",
+  "divergence_ack": "2026-11-08",
+  "divergence_ack_reason": "Retain 28 YES/no add after the 2026-11-08 review: no vacancy, replacement, co-head or expiry instrument; 0.35 central/0.25 stress remains the dated thesis, while the 0.055 midpoint and ~0.05 executable bid are not independent probability evidence. Premium SELL 10@0.70 remains live. Acknowledgment does not validate the prior or authorize adding.",
   "current_assessment": "Oct 25: Reuters and Guardian corroborate Machado returning to Venezuela. Her direct post was blocked. The retrieved UN list, dated Oct 20, names Delcy in its Head of State column as Presidenta Encargada; later government instruments, expiry and possible co-head status remain unverified. Return increases mobilization and negotiated-transition risk without proving a transfer of office. Unfitted scenario .88*(.70+.20*.20)+.12*.10=.6632, rounded to .66; retain 15pp reserve, selected .51. Retain 28 YES, no add: selected payout14.28 versus5.353839 exit plus variable carry. Broad .10/.15 cases favor cash. Fresh Gamma criteria/token/CID match14:05 literal SHA165643d7e4a02d4696422b1c972a1f26be76bc3881bf2b7c2c3ec518a9c08adf. The Oct21 verified date is preserved; this review does not certify later legal status.",
   "review_note": "2026-10-30 criteria re-read: market resolves to whoever OFFICIALLY holds Venezuelan head of state on Dec 31 2026 12PM ET (source: UN-recognized government info); acting/interim not excluded per se. Context the 0.66 prior missed: Maduro captured by US forces 2026-01-03; Delcy installed as ACTING president under Washington's Rubio 3-stage plan; State Dept roadmap (10-27) pressures her to declare a PERMANENT VACANCY before elections; talks next round Nov 11-15. Re-derived 0.35 central / 0.25 stress: market 0.135 prices real replacement risk. Contested UMA read + informed flow -> hold 28, no add. Thesis-break trigger: permanent-vacancy declaration or new interim appointed before Dec 31."
  },
@@ -2054,7 +2057,10 @@
   "cluster_frac": 0.3,
   "verified": "2026-11-02",
   "updated_utc": "2026-11-02T11:59:28.096825+00:00",
-  "review_note": "C7 thin-market test entry 1. Astra 6.1+ release Nov 2-8: model scrapped 9/28 (WSJ/CSA), Sol+Terra do not meet Astra-name criteria; Congress/FTC scrutiny. Cluster unique: OpenAI-specific event, independent of Kimi HLE and Anthropic Fable ladders."
+  "review_note": "C7 thin-market test entry 1. Astra 6.1+ release Nov 2-8: model scrapped 9/28 (WSJ/CSA), Sol+Terra do not meet Astra-name criteria; Congress/FTC scrutiny. Cluster unique: OpenAI-specific event, independent of Kimi HLE and Anthropic Fable ladders.",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "Astra position exited 2026-11-02; no live exposure or re-entry authorization."
  },
  "next-fable-model-5pt2-released-by-november-6-2026": {
   "p_yes": 0.2,
@@ -2066,6 +2072,73 @@
   "cluster_frac": 0.3,
   "verified": "2026-11-02",
   "updated_utc": "2026-11-02T11:59:28.096825+00:00",
-  "review_note": "C7 thin-market test entry 2 (thin margin, flagged). Fable 5.2+ by 11-06: no announcement, IPO-window comms. Independent of OpenAI/Google ladders."
+  "review_note": "C7 thin-market test entry 2 (thin margin, flagged). Fable 5.2+ by 11-06: no announcement, IPO-window comms. Independent of OpenAI/Google ladders.",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "Fable order withdrawn with no live exposure; no re-entry authorization."
+ },
+ "highest-temperature-in-mexico-city-on-november-8-2026-23c": {
+  "p": 0.27,
+  "cluster": "wx-mmmx-2026-11-08",
+  "rho_within": 0.0,
+  "note": "hunt_iteration 2026-11-08: GFS/EC bias-corrected peak ~23.6C; 4-day METAR analogs (noon 20-21C -> max 23)",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "Candidate rejected after the 18:08Z SPECI showed the hot path; no order or position."
+ },
+ "highest-temperature-in-chicago-on-november-8-2026-58-59f": {
+  "p_yes": 0.0,
+  "p_no": 1.0,
+  "p_yes_stress": 0.0,
+  "edge_haircut": 0.1,
+  "cluster": "wx-kord-2026-11",
+  "rho_within": 0.5,
+  "cluster_frac": 0.0,
+  "verified": "2026-11-08",
+  "updated_utc": "2026-11-08T21:05:00Z",
+  "criteria_read": "2026-11-08",
+  "note": "Thesis falsified by routine METAR KORD 081951Z T01560033 = 15.6C = 60.08F, rounded to official 60F. A daily high already at 60F makes 58-59F impossible. Hold the existing 19 YES to resolution; no add or thin-book exit."
+ },
+ "highest-temperature-in-chicago-on-november-8-2026-60-61f": {
+  "p_yes": 0.31,
+  "p_no": 0.69,
+  "edge_haircut": 0.1,
+  "cluster": "wx-kord-2026-11",
+  "rho_within": 0.5,
+  "cluster_frac": 0.0,
+  "verified": "2026-11-08",
+  "updated_utc": "2026-11-08T18:58:38Z",
+  "criteria_read": "2026-11-08",
+  "note": "Same nowcast as 58-59f sibling: P(60-61)~31% vs book ~67-75% YES. Cluster shared with other KORD Nov 8/9 buckets.",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "No position; candidate closed after the 19:51Z KORD print confirmed the 60F bucket. No new entry."
+ },
+ "highest-temperature-in-chicago-on-november-9-2026-60-61f": {
+  "p_yes": 0.18,
+  "p_no": 0.82,
+  "edge_haircut": 0.1,
+  "cluster": "wx-kord-2026-11",
+  "rho_within": 0.5,
+  "cluster_frac": 0.0,
+  "verified": "2026-11-08",
+  "updated_utc": "2026-11-08T18:58:38Z",
+  "criteria_read": "2026-11-08",
+  "note": "Nov 9 KORD: NWS high near 58 (hourly peak 58). NBM 56.7 / most physics ~56-58; JMA/AIFS 59.7. Combined Open-Meteo GFS+EC ensembles 0/82 members in [59.5, 61.5). Provisional; do not trade until Nov 8 official high is known (invalidate if today prints >=60F).",
+  "retired": true,
+  "retired_utc": "2026-11-08T21:05:00Z",
+  "retired_reason": "Watch invalidated when Nov 8 reached 60F at 19:51Z; no position and no Nov 9 entry."
+ },
+ "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026": {
+  "p_yes": 0.15,
+  "p_no": 0.85,
+  "edge_haircut": 0.05,
+  "cluster": "usgs-m7-count-2026",
+  "rho_within": 0.5,
+  "cluster_frac": 0.0,
+  "verified": "2026-11-09",
+  "updated_utc": "2026-11-09T08:06:36Z",
+  "criteria_read": "2026-11-09",
+  "note": "USGS M7.0+ count 2026 = 13 as of 9 Nov (last: Nagqu M7.0 mww reviewed 22 Oct). YES needs 0 more M7+ Nov 9-Dec 31 (53 days). USGS 1976-2025 sliding 53-day windows: P(0)=0.153, P(1-3)=0.685, P(4-6)=0.154. Independent of all other holdings."
  }
 }
