@@ -1,6 +1,6 @@
 {
  "_purpose": "Claim insurance: de-index-during-resolution is a known failure (Mojtaba, Marvel) \u2014 redemption must never depend on data-api indexing. Unresolved/final-winning deindexed rows are retained until deliberate cleanup. Refreshed by position_state_audit.py --fix.",
- "_refreshed": "2026-11-08",
+ "_refreshed": "2026-11-09",
  "positions": [
   {
    "slug": "will-over-58-senators-vote-for-the-clarity-act-20260729193533309",
@@ -27,6 +27,14 @@
    "negativeRisk": false
   },
   {
+   "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+   "outcome": "Yes",
+   "size": 28.0,
+   "conditionId": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
+   "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
+   "negativeRisk": true
+  },
+  {
    "slug": "will-over-50-senators-vote-for-the-clarity-act-20260729193533307",
    "outcome": "Yes",
    "size": 29.0,
@@ -35,11 +43,11 @@
    "negativeRisk": false
   },
   {
-   "slug": "will-delcy-rodrguez-be-the-leader-of-venezuela-end-of-2026",
+   "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
    "outcome": "Yes",
-   "size": 28.0,
-   "conditionId": "0xa01d48a973e40770719dab42faf1aeae5da4376d9eca46e77265c7551d1be0f7",
-   "asset": "38667196958602416137463628517439560119304765709104570192447644733106171420112",
+   "size": 28.3146,
+   "conditionId": "0x5328ccb90355de61509485631db102862ec06146c9fd10d101fb9607c4344e03",
+   "asset": "53690317089366474143234098661596586722077438719337429627862224648098471810135",
    "negativeRisk": true
   },
   {
@@ -49,14 +57,6 @@
    "conditionId": "0x48b0b0bca515f68fccf95af4793dbd0edbfec1f8ec6e8df2c0f69ba74f8c4722",
    "asset": "2849827372590072151380088930233312280478318575453624773762283369907909283027",
    "negativeRisk": false
-  },
-  {
-   "slug": "highest-temperature-in-chicago-on-november-8-2026-58-59f",
-   "outcome": "Yes",
-   "size": 19.0,
-   "conditionId": "0x8bcc016337cd6db933ab4670367186ee557ec751b1f9ec385c0794c831ac4c4f",
-   "asset": "91192353018736350494839655010680453486075723062053513859428445148918623599137",
-   "negativeRisk": true
   },
   {
    "slug": "will-openrouter-process-between-725t-and-775t-tokens-oct-26-to-nov-22-2026",

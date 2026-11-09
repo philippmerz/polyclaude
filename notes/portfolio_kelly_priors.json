@@ -2097,8 +2097,11 @@
   "verified": "2026-11-08",
   "updated_utc": "2026-11-08T21:05:00Z",
   "criteria_read": "2026-11-08",
-  "note": "Thesis falsified by routine METAR KORD 081951Z T01560033 = 15.6C = 60.08F, rounded to official 60F. A daily high already at 60F makes 58-59F impossible. Hold the existing 19 YES to resolution; no add or thin-book exit."
- },
+   "note": "RESOLVED NO: routine KORD 082051Z T01610033 = 16.1C = 61F made 58-59F impossible; Gamma is resolved YES=0/NO=1. The 19-share ticket lost its full cost. Preserve the falsified forecast for post-mortem.",
+   "retired": true,
+   "retired_utc": "2026-11-09T08:12:00Z",
+   "retired_reason": "Market resolved NO and no live position remains; no re-entry."
+  },
  "highest-temperature-in-chicago-on-november-8-2026-60-61f": {
   "p_yes": 0.31,
   "p_no": 0.69,

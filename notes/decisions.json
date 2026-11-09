@@ -1,5 +1,5 @@
 {
-  "next_id": 276,
+  "next_id": 277,
   "decisions": [
     {
       "id": 1,
@@ -5968,6 +5968,26 @@
         "forecast_revision"
       ],
       "slug": "will-the-highest-score-achieved-by-a-moonshot-kimi-model-on-humanitys-last-exam-in-2026-be-55-or-higher-20260723191206823",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 276,
+      "timestamp": "2026-11-09T08:18:03Z",
+      "type": "open_position",
+      "thesis": "Backfilled Investor 2026-11-09 entry: bought 28.31 YES at 0.089 for 2.52 USD. USGS shows 13 M7.0+ events in 2026; YES needs no further event through Dec-31 23:59 ET. USGS 1976-2025 sliding 53-day windows give P(zero)=0.153; no pending near-threshold upgrade found. Thin exit is not a recovery path.",
+      "confidence": "medium",
+      "prediction": "The final USGS 2026 M7.0+ count remains 13 and this 11-13 bucket resolves YES.",
+      "size_usd": 2.52,
+      "resolution_at": "2027-01-07",
+      "tags": [
+        "earthquake",
+        "usgs",
+        "count-base-rate",
+        "backfill"
+      ],
+      "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
