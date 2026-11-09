@@ -90,7 +90,7 @@ export PATH="${HOME}/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bi
 
 # A queue acknowledgement is the dispatch boundary. The live grok session is
 # the only operator. POLYCLAUDE_FORCE_HEADLESS no longer starts a second model.
-CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (10-step list in scripts/daily_checkin.sh). Brief if nothing happened.${REASON_SUFFIX}"
+CRON_MSG="Cron tick ${TS}. Run your scheduled polyclaude check-in (10-step list in scripts/daily_checkin.sh), keep the bookkeeping short, then spend the rest of the turn on the ROI hunt per notes/hunt_iteration.md: pick a niche or mechanical edge, research and validate or kill it, and move to the next until you have a lead. Do not end on a flat status pass.${REASON_SUFFIX}"
 if [[ "${POLYCLAUDE_FORCE_HEADLESS:-}" == "1" ]]; then
     echo "$(date -u +%Y%m%dT%H%M%SZ) checkin: FORCE_HEADLESS ignored; the live grok session is the only operator" \
         >> "${LOG_DIR}/peer_skips.log"
