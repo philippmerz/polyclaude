@@ -60,13 +60,13 @@
    "side": "SELL",
    "shares": 28.31,
    "class": "ordinary",
-   "min_price": 0.2,
+   "min_price": 0.18,
    "premium_pp": 0.05,
    "alert_keys": [
     "earthquake",
     "usgs"
    ],
-   "justification": "USGS count remains 13 on 2026-11-09; central P(11-13) is 0.15 from the measured remaining-window catalog. A 0.20 post-only offer is strictly above fair and covers about 72h of no-event time decay (fair sensitivity about 0.168); no fill costs nothing. Any new M7.0+ invalidates the ticket. 72h lifetime; cancel-first on CRITICAL identity-matched alerts.",
+   "justification": "USGS count remains 13 on 2026-11-10; central P(11-13) is 0.15 from the measured remaining-window catalog. A 0.18 post-only offer is strictly above fair and the prior 72h no-event fair sensitivity (about 0.168); it improves queue position without selling at fair. Any new M7.0+ invalidates the ticket. 72h lifetime; cancel-first on CRITICAL identity-matched alerts.",
    "enabled": true,
    "condition_id": "0x5328ccb90355de61509485631db102862ec06146c9fd10d101fb9607c4344e03"
   }

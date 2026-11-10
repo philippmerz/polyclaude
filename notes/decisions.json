@@ -1,5 +1,5 @@
 {
-  "next_id": 278,
+  "next_id": 280,
   "decisions": [
     {
       "id": 1,
@@ -5928,9 +5928,10 @@
         "astra"
       ],
       "slug": "will-gpt-astra-6pt1-be-released-between-november-2-and-november-8-2026",
-      "outcome": null,
-      "calibration_delta": null,
-      "lesson": null
+      "outcome": "Operational closure: Astra NO test exited 2026-11-02 for a $0.46 realized loss; the Nov-2\u2013Nov-8 release window ended without a qualifying GPT-6.1 Astra release. This was an executed tiny C7 test, not an unfilled forecast.",
+      "calibration_delta": "Thesis direction validated by no qualifying release, but execution lost $0.46 after an immediately marketable supposed-maker entry and thin exit economics; direction alone did not create positive ROI.",
+      "lesson": "Do not place an at-best-bid maker order without expecting immediate execution; thin-book entry and exit fees/spread can make a correct directional thesis unprofitable.",
+      "resolved_at": "2026-11-10T11:59:08Z"
     },
     {
       "id": 274,
@@ -6007,6 +6008,47 @@
         "premium_sell"
       ],
       "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
+      "outcome": "Superseded unfilled: the 0.20 offer was canceled with 0 matched on 2026-11-10 and replaced after fresh USGS count/book review by DEC-0278 at 0.18. No sale, cash credit or realized P&L.",
+      "calibration_delta": "No market outcome or fill occurred; this grades order lifecycle only, not the annual count thesis.",
+      "lesson": "A premium resting offer is an option, not a fill promise. Reprice only when fresh fair and queue evidence preserve a strict premium.",
+      "resolved_at": "2026-11-10T12:21:45Z"
+    },
+    {
+      "id": 278,
+      "timestamp": "2026-11-10T12:21:45Z",
+      "type": "strategy_change",
+      "thesis": "USGS remains at 13 M7.0+ events through 2026-11-10T11:52Z, with no new near-threshold addition. The central 11-13 probability stays 0.15; 0.18 remains strictly above fair and the prior 0.168 72-hour no-event sensitivity. Moving the post-only SELL from 0.20 to 0.18 improves queue position and converts 28.31 shares to 5.0958 USD if filled, above the 4.2465 USD central resolution value. Any new M7.0+ invalidates the underlying ticket.",
+      "confidence": "medium",
+      "prediction": "The 28.31-share GTC post-only offer is LIVE and unmatched at 0.18; any execution sells the full offered quantity at 0.18, while no fill preserves the annual resolution payout. Verify terminal status or fill before any later repost.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-13",
+      "tags": [
+        "resting_order",
+        "usgs",
+        "premium_sell",
+        "reprice"
+      ],
+      "slug": "will-there-be-between-11-and-13-earthquakes-of-magnitude-7pt0-or-higher-worldwide-in-2026",
+      "outcome": null,
+      "calibration_delta": null,
+      "lesson": null
+    },
+    {
+      "id": 279,
+      "timestamp": "2026-11-10T12:21:45Z",
+      "type": "strategy_change",
+      "thesis": "Messi remains an unfitted 0.60 central / 0.40 selected-stress Global Athletes Top5 thesis. The 2026 Google page is still 404 and current official methodology measures prior-year-period growth with internal tools, not a reproducible public Trends ranking. Recent football/FIFPRO headlines add no measured rank. Renew the entire five-share ordinary-class post-only SELL at 0.65, strictly above central fair, rather than adding or taking the 0.43 bid; no known source catalyst is scheduled in the next 72 hours.",
+      "confidence": "low",
+      "prediction": "The replacement five-share GTC SELL is LIVE and unmatched at 0.65 through its next review boundary; any execution converts all five shares to 3.25 USD, while no fill preserves the Google-list resolution payout. An official 2026 list/method release or material competitor evidence requires fresh review.",
+      "size_usd": 0.0,
+      "resolution_at": "2026-11-13",
+      "tags": [
+        "resting_order",
+        "messi",
+        "google_year_in_search",
+        "renewal"
+      ],
+      "slug": "will-lionel-messi-rank-in-googles-top-5-most-searched-athletes-of-2026",
       "outcome": null,
       "calibration_delta": null,
       "lesson": null
