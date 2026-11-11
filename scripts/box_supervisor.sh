@@ -31,6 +31,7 @@ while :; do
     if (( now - last_keep >= 600 )); then
         timeout 300 bash scripts/daemon_keepalive.sh 8>&- || echo "$(date -u +%FT%TZ) keepalive rc=$?"
         timeout 60 bash scripts/kimi_session.sh ensure >> logs/kimi_session.log 2>&1 8>&- || echo "$(date -u +%FT%TZ) kimi_session ensure rc=$?"
+        timeout 60 bash scripts/kimi_session.sh heal >> logs/kimi_session.log 2>&1 8>&- || echo "$(date -u +%FT%TZ) kimi_session heal rc=$?"
         timeout 120 .venv/bin/python scripts/wake_webhook.py replay >> logs/wake_replay.log 2>&1 8>&-
         last_keep=$now
     fi

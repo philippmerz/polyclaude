@@ -60,7 +60,7 @@ case "${1:-status}" in
     echo "kimi fresh session failed to start" >&2; exit 1
     ;;
   heal)
-    if session_live && tmux capture-pane -pt "=${SESSION}:" -S -200 2>/dev/null \
+    if session_live && tmux capture-pane -pt "=${SESSION}:" 2>/dev/null | tail -n 30 \
          | grep -q "role 'assistant' must not be empty\|role assistant must not be empty"; then
         echo "$(date -u +%FT%TZ) kimi_session: poisoned session detected; fresh restart" >> "${LOG}"
         exec "$0" fresh
