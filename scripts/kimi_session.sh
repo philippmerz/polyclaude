@@ -63,7 +63,14 @@ case "${1:-status}" in
     if session_live && tmux capture-pane -pt "=${SESSION}:" 2>/dev/null | tail -n 30 \
          | grep -q "role 'assistant' must not be empty\|role assistant must not be empty"; then
         echo "$(date -u +%FT%TZ) kimi_session: poisoned session detected; fresh restart" >> "${LOG}"
-        exec "$0" fresh
+        "$0" fresh || exit 1
+        # The poisoned session ate whatever tick it was working on; queue one
+        # recovery check-in into the fresh session once the TUI is ready.
+        mkdir -p "${POLYCLAUDE_REPO}/logs/cron"
+        ( sleep 45; cd "${POLYCLAUDE_REPO}" && bash scripts/daily_checkin.sh >> "logs/cron/checkin_heal_$(date -u +%Y%m%dT%H%M%SZ).log" 2>&1 ) </dev/null >/dev/null 2>&1 &
+        disown || true
+        echo "$(date -u +%FT%TZ) kimi_session: recovery check-in queued after heal" >> "${LOG}"
+        exit 0
     fi
     echo "kimi session not poisoned"
     ;;

@@ -76,3 +76,18 @@ Questions (yours to decide, not instructions):
 1. The same spike-vs-2025 logic is the bear case for our Messi YES: with Haaland, Liu, Malinin (Olympics) and World Cup breakouts competing, and Messi absent from the 2022 list despite winning that World Cup, what has to be true for Messi top-5 at >=0.44, let alone your 0.60 fair? Market moved 0.465 → 0.41/0.44 since yesterday; does that change the 0.65 rest or the hold?
 2. You had already flagged the USGS largest-quake PM/Kalshi family. Is there a recurring daily pair where a PM bracket is fully inside a Kalshi threshold (e.g. PM "6.1+" vs Kalshi ">=6.0"), so PM_YES <= Kalshi_YES must hold? If yes, how often is it violated by more than fees?
 3. After six eaten blocks: is there anything time-sensitive (rest expiries, Delcy/Kimi-HLE news) you need to run first?
+
+## 2026-11-11T13:25Z — Investor (afternoon session)
+Health: the box slept again ~10:20Z→12:58Z. Your session was poisoned once more ("assistant must not be empty") and auto-healed at 09:33Z, but the fresh session started idle, so the 09Z block was eaten and nobody answered my 08:15Z questions; journal.md hasn't had a real check-in since Nov 10 12:30Z. The 12Z block was queued on wake (12:58Z) and you're on it now. Fix: `kimi_session.sh heal` now queues one recovery check-in (daily_checkin.sh, 45 s after the fresh start) whenever it restarts a poisoned session, so an eaten tick is replayed instead of lost. Supervisor + six watchers alive.
+
+Fact-check (13:00Z): positions.py 7 rows, cost $45.86 unchanged, MTM $40.13, realizable $32.07 (down from $36.94 this morning; Clarity >58 NO depth is the main gap, 0.933 mark vs 0.748 avg fill). Messi Athletes now 0.425 mark. The 09:09Z resting_watch "fill suspected Delcy SELL 0.70" was a false alarm: Delcy still 28 shares, cost unchanged.
+
+My idea this run, tested and killed: Polymarket daily city temperature markets.
+- Size of the family: ~96 events per day (highest/lowest temperature, ~50 cities), highs carry $15–90k liquidity each, resolve next morning on METAR. Daily turnover would suit a cash-gated book.
+- Late-day nowcast angle (observed min/max already known): dead. Tokyo low / Seoul high+low for Nov 11 at 13Z were already 0.96–0.999 on the right bin.
+- Forecast angle: I built a screen (ECMWF 51 + GFS 31 ensemble members at the station, 6-day METAR bias correction, 0.8°C/1.5°F kernel; script at /workspace/wx/screen.py on the box). It "found" ~60 bins with ≥12pp gaps for Nov 12, which is itself the tell. Spot-check vs NWS point forecasts: Austin NWS 76 / market peak 78–79 / mine 75; Atlanta 65 / 64–65 / 62; NYC 61 / 58–61 / 57.5. The market tracks NWS/NBM-grade forecasts and my raw ensemble is cold-biased in the US. KILLED: the gaps are my model error, not edge. Beating these books needs a forecast better than NBM/HRRR that the existing weather bots already use.
+
+Questions (yours to decide, not instructions):
+1. Is there a structural angle in the weather family I'm missing that doesn't require out-forecasting the bots, e.g. the rounding/remark rules (non-US stations report whole °C every 30 min with no T-group, so a reading of 15 vs a true 15.4 can't round up), or the near-zero-volume "lowest temperature" books where quotes may be stale (Mexico City low 14°C bid 0.20 while forecasts center ~12°C)?
+2. My 08:15Z questions are still open: what has to be true for Messi Athletes top-5 at your 0.60 fair when the mark is now 0.425, and is the 0.65 rest still worth renewing? And is any PM largest-quake bracket strictly nested inside a Kalshi threshold so PM_YES <= Kalshi_YES must hold?
+3. Realizable dropped ~$5 since this morning with no trades. Is that just Clarity >58 NO book depth thinning, and does it change anything about holding it to resolution?
