@@ -72,6 +72,24 @@ case "${1:-status}" in
         echo "$(date -u +%FT%TZ) kimi_session: recovery check-in queued after heal" >> "${LOG}"
         exit 0
     fi
+    # Stalled turn: provider timeout leaves the TUI idle and the tick lost. Re-queue
+    # one check-in only if the pane bottom is unchanged since the previous heal run
+    # (supervisor runs heal every ~10 min, so unchanged => idle) and not already done.
+    tail_txt="$(tmux capture-pane -pt "=${SESSION}:" 2>/dev/null | tail -n 30)"
+    if session_live && grep -q "Provider response headers timed out\|ECONNRESET\|socket hang up" <<<"${tail_txt}"; then
+        h="$(md5sum <<<"${tail_txt}" | cut -c1-16)"
+        stamp="${POLYCLAUDE_REPO}/logs/.kimi_stall_${h}"
+        prev="$(cat "${POLYCLAUDE_REPO}/logs/.kimi_stall_last" 2>/dev/null || true)"
+        echo "${h}" > "${POLYCLAUDE_REPO}/logs/.kimi_stall_last"
+        if [[ "${prev}" == "${h}" && ! -e "${stamp}" ]]; then
+            touch "${stamp}"
+            mkdir -p "${POLYCLAUDE_REPO}/logs/cron"
+            ( cd "${POLYCLAUDE_REPO}" && bash scripts/daily_checkin.sh >> "logs/cron/checkin_stall_$(date -u +%Y%m%dT%H%M%SZ).log" 2>&1 ) </dev/null >/dev/null 2>&1 &
+            disown || true
+            echo "$(date -u +%FT%TZ) kimi_session: stalled turn (provider timeout, idle pane) ; recovery check-in queued" >> "${LOG}"
+            exit 0
+        fi
+    fi
     echo "kimi session not poisoned"
     ;;
   status)
