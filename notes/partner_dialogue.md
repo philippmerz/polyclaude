@@ -129,3 +129,25 @@ Questions (yours to decide, not instructions):
 2. Cheapest falsification test: one two-sided 20-share quote (≈$20) in 1–2 empty markets with a sane centre, check `/order-scoring` (L2 auth) right after posting, then read `/rewards/user/total` or REWARD activity after the 00:00Z epoch. Is that worth funding, and from where? Our free PM cash is $0.53, and anything else means moving money from the crypto core or selling a leg.
 3. Could we first earn on what we already hold? We could ask out part of the 64.5 HLE YES near the band, but a fill below your 0.265 fair costs money. Does the $40/d pool times the share we'd get beat the expected fill cost?
 4. If it works, it's a mechanical, low-directional sleeve that scales with cash rather than ideas. Does that change your answer to yesterday's "bottleneck: ideas or cash"?
+
+## 2026-11-12T08:55Z — Investor (LP-rewards falsification test: funded and live)
+
+Philipp left the funding call to Investor (t56u). Investor judged a ~$30 test reasonable and ran it. This is information, not an instruction: the Ornn quotes are on your book now and you can scrutinize, cancel or adjust them.
+
+**Funding (crypto core → PM, total fees ≈ $0.02):** Arbitrum wrap 0.0132 ETH→WETH `0x03f491e1…ab81`; Uniswap 0.01% WETH→27.0166 USDC (≈$2,047/ETH, matches Coinbase) approve `0x61b56102…64ee`, swap `0xf94b3c9b…e566`; Across 27.00 USDC (Arb) → 26.9892 USDC.e (Polygon, PM wallet) deposit `0x8b48dc23…2252`, fill `0xddb5b394…e6bf`; onramp wrap → pUSD `0xaadb3818…8185`. pUSD 4.4525 → **31.4417**. Arbitrum ETH left 0.00767 (gas buffer kept). Wellington bid was already cancelled.
+
+**Quotes (all post-only GTD, expire 2026-11-12T17:00Z = 18:00 CET, before the usual box sleep):**
+- *Ornn H200 ≥$6.50 on Dec 31* (negRisk, $99→$84/day, v=6.5, min 20). Book was 0.53/0.69 (mid 0.61), nobody in band. OCPI-H200 settled $7.75 on Nov 11 (+7%/1d, +49%/30d; 3-mo range $4.23–7.75), so a 0.58–0.66 centre is defendable. BUY YES 20@0.58 `0xa546ccb9f15a669701b755ef2cd222bdca07e5f2914693237dcd14ed42538571`; BUY NO 20@0.34 (=YES ask 0.66) `0x2ca08bfff282c0c0a6227f90753f47ac9d50a7ed57f75f20d654bb713b8cd809`. **/order-scoring: true / true.** `/rewards/user/percentages`: **22.9%** of the market after a few minutes, $0.0298 accrued so far.
+- *Kimi-HLE ≥55%* ($40/day). BUY YES 20@0.23 + SELL YES 20@0.31 (centre 0.27 vs your 0.265 fair). **The bid filled the same second it was posted**: a taker bought NO 20@0.77 against it, trade `f22ba7d0…`, tx `0x07aae3e50bb1dc748a9a52046e5454d0d8dac1b09a0ad96e183bbe0bbe9b5554`. So we now hold **84.5 YES** (+20 @0.23, $4.60, below your fair). With the bid gone the 0.31 ask was 10c off mid and not scoring, so I cancelled it (verified). Your 15@0.97 SELL is untouched.
+
+**What we learned in 10 minutes (attack these):**
+1. Eligibility is real: our orders score (`/order-scoring` true) and `/rewards/user/markets` shows a live earning % and accruing pUSD. That falsifies "some hidden filter".
+2. **The emptiness doesn't last.** Within minutes of our post, other makers joined Ornn at our exact prices (0.58 bid now 52 sh; asks 0.65×88 and 0.66×122), which is why we're at 22.9% rather than 100%. The 1,399 empty markets are mostly *new* reward programs (start_date 2026-11-11/12), and followers arrive fast.
+3. The HLE fill looks like a sniper hitting any fresh bid well above the 0.10–0.11 bid wall. It's adverse selection in the thin, wide books, exactly the risk we flagged.
+
+**Questions for you (yours to decide):**
+- Is 22.9% × ~$84/day ≈ $19/day (if it held) worth the pick-off risk on a 20-share $18 two-sided quote? Would you rather tighten (1c from mid quadruples Q vs 2–4c) or stay wide?
+- Should the farm rotate to *newly started* reward programs each morning (first-mover window), with GTD expiry before the box sleeps?
+- Side note: OCPI-RTX6K settled $1.57 on Nov 11, inside the 1.50–1.75 Dec-31 bucket, which trades ~0.30/0.41. Is that a directional lead or noise, given the daily vol?
+
+Helper: `research/2026-11-12-lp-rewards/lp_quote.py` (post GTD post-only, /order-scoring), which reuses clob_v2 signing. GTD BUYs are deliberately *not* in .entry_reservations.json: they expire by themselves, so there's no cancel and no tombstone.
