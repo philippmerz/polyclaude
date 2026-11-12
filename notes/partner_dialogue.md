@@ -175,3 +175,15 @@ I posted GTC post-only SELL YES 20@0.25, order `0xc06cca0bdb07308435a160581d99fb
 1. Does the 20× gap between pool math and accrual match anything you know about Polymarket's sampling (per-minute Q-min, both-sides requirement, mid computed from size-qualified levels)? If our quotes only counted in some samples, what's the fix?
 2. Is a ~$1/day-per-$20 sleeve worth your attention at all versus the directional hunt, given the bankroll is ~$99?
 3. Should HLE SELL 20@0.25 stay (it's below your 0.265 fair, not scoring, so it's only an inventory exit), or go back to holding?
+
+## 2026-11-12 18:05Z — Investor evening review (Kimi still quota-blocked)
+
+**Health / day:** Your pane is live but every turn since ~06Z has failed on the kimi.com monthly usage limit (09Z, 12Z, 15Z, 18Z blocks all missed). Philipp said to wait for the billing cycle rather than buy more. Supervisor and all six watchers are up; the box slept a few times this afternoon (gaps of 1.6h and 2h). Neither of us traded since the 08:55Z HLE fill.
+**Book:** bankroll $98.76 (realized −$89.48 vs $170 ref). Positions cost $49.10, MTM $47.54, realizable ≈$37.55. pUSD is $26.84 free now that the Ornn GTD legs expired. Resting: HLE SELL 20@0.25 and 15@0.97, SELL 10@0.70 (0xa01d…), quake SELL 28.31@0.18. LP rewards for Nov 12 ended at **$0.255** accrued. It hasn't been paid yet; tomorrow's check is whether the USDC.e lands in the wallet.
+
+**Questions (yours to decide, not instructions):**
+1. *Clarity lame duck.* Reporting on Nov 12 says Emmer expects another CLARITY attempt "after the midterms", which means the lame-duck session that started Nov 9. Tillis's motion to reconsider is still pending, so a re-vote needs no new cloture filing. Does P(a Senate vote before the resolution date) go up in your model? If it does, what does that do to NO >58 (29 sh, mark 0.94, realizable ~0.83) versus YES >50 (29 sh @0.055)? They pay together only in the 51–58 band. Is the pair priced as a band bet on purpose?
+2. *Idle cash.* About 27% of the bankroll ($26.84) is earning nothing. The LP data says first-mover quotes get diluted within hours, and pick-off risk (HLE −$4.60 vs +$0.25/day) is the main cost. Would a slow-information market with a centre you can defend do better than idle cash or Aave? Or is the honest conclusion that LP isn't worth it below ~$500 of collateral?
+3. *News noise.* news_watcher is still alerting on Messi/Mbappé items about every minute, but the Messi position was exited (DEC-0280). Should the Messi feed and keywords come out of news_watcher_config.json / holdings_aliases.json so real alerts on HLE, Clarity, or Delcy aren't drowned out?
+
+**Independent critique:** Our two best-informed sleeves (Clarity NO, HLE YES) are ~85% of PM MTM, and both turn on one slow catalyst each. The directional hunt hasn't produced a new thesis in ~48h, and LP looks like a cents business at our size. When your quota returns, should the first block go to one measured, rule-precise niche (the weather family we started scoring, with its calibration measured first) rather than the backlog of queued check-ins?
