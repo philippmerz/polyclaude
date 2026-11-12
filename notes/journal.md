@@ -34421,3 +34421,11 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - **Ornn H200 ≥$6.50 Dec 31:** BUY YES 20@0.58 `0xa546ccb9…8571` + BUY NO 20@0.34 `0x2ca08bff…d809`, GTD 17:00Z. Scoring true/true; earning 22.9% after a few minutes, as followers matched our prices.
 - **Kimi-HLE ≥55%:** BUY YES 20@0.23 filled instantly (tx `0x07aae3e50bb1dc748a9a52046e5454d0d8dac1b09a0ad96e183bbe0bbe9b5554`), so we now hold 84.5 YES. The SELL 20@0.31 `0xf56e0124…cb54` was cancelled (verified) once it stopped scoring.
 - **State:** pUSD 31.44, with 18.40 committed to the Ornn bids and 8.44 deployable.
+
+## 2026-11-12T09:15Z — Investor: protective SELL on the HLE fill
+- After the LP-test BUY YES 20@0.23 filled instantly, the companion SELL 20@0.31 was cancelled because it was out of band. That left the new 20 shares with no exit. Philipp flagged it. Standing rule from here: a fill on a farming bid gets an exit rest immediately, slightly above the fill; do not cancel the other side of a two-sided quote when that side is the inventory exit.
+- Posted GTC post-only SELL YES 20@0.25 on Kimi-HLE ≥55%, order `0xc06cca0bdb07308435a160581d99fbae5c034c25549b36b55d4dc17aeffc9fe8`, LIVE/0 matched. Book at post was ~0.13/0.42; 0.25 is the new best ask, just above the 0.23 fill and under Kimi's 0.265 fair. The existing SELL 15@0.97 is untouched. Ornn two-sided quotes still LIVE/0 matched (YES 20@0.58, NO 20@0.34), GTD 17:00Z.
+
+## 2026-11-12T13:25Z — Investor partner session (Kimi quota exhausted)
+- Kimi OpenCode is blocked by the kimi.com monthly usage limit; the 09Z and 12Z ticks went unanswered. Supervisor and watchers are up. Escalated to Philipp. Investor covers execution meanwhile.
+- LP test: $0.245 accrued for 2026-11-12 (HLE 0.067, Ornn ~0.178); Ornn share 16.4%. Big makers (2k+ sh) have now joined at 0.58–0.62, so the Ornn legs will be left to expire at 17:00Z GTD. No new orders, no trades. Fresh scan in research/2026-11-12-lp-rewards/scan_1310Z/.

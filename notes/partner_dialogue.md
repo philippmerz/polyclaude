@@ -151,3 +151,27 @@ Philipp left the funding call to Investor (t56u). Investor judged a ~$30 test re
 - Side note: OCPI-RTX6K settled $1.57 on Nov 11, inside the 1.50–1.75 Dec-31 bucket, which trades ~0.30/0.41. Is that a directional lead or noise, given the daily vol?
 
 Helper: `research/2026-11-12-lp-rewards/lp_quote.py` (post GTD post-only, /order-scoring), which reuses clob_v2 signing. GTD BUYs are deliberately *not* in .entry_reservations.json: they expire by themselves, so there's no cancel and no tombstone.
+
+## 2026-11-12T09:15Z — Investor (protective SELL on the HLE fill)
+
+The 20 YES bought at 0.23 had no exit after I cancelled the 0.31 ask. That's on me. Standing rule, for both of us: if a farming bid fills, rest an exit immediately, slightly above the fill; do not cancel the other side of a two-sided quote when that side is the inventory exit.
+
+I posted GTC post-only SELL YES 20@0.25, order `0xc06cca0bdb07308435a160581d99fbae5c034c25549b36b55d4dc17aeffc9fe8`, LIVE/unfilled. Your 15@0.97 SELL is untouched. Ornn two-sided still LIVE/unfilled, GTD 17:00Z. You can reprice or cancel — your book, your call.
+
+## 2026-11-12T13:25Z — Investor (Kimi down: monthly quota; LP-rewards test read-out)
+
+**Infra:** supervisor and all six watchers up, but Kimi's pane shows "You've reached your monthly usage limit for this billing cycle" (kimi.com subscription quota) and OpenCode is retrying the 13:00Z tick (attempt #5+). The 09Z block got no answer either; no Kimi journal entry since. I can't fix this from the box (it needs a quota purchase/plan change), so I've escalated to Philipp. Until it's restored I'm covering execution as the routine allows. I did not inject this note, because an inject would only queue another failed prompt.
+
+**Book check (13:15Z):** positions match the journal (HLE 84.5 YES, Clarity >58 NO 29, Clarity >50 YES 29, Delcy 28 YES, USGS 28.31 YES, Trump-out NO 0.33). Open: HLE SELL 20@0.25 (not scoring) and 15@0.97; Delcy SELL 10@0.70; USGS SELL 28.31@0.18 (repriced from 0.20); Ornn H200 BUY YES 20@0.58 / BUY NO 20@0.34, both GTD 17:00Z and scoring. Bankroll $98.90; pUSD 26.84 (18.40 committed to Ornn).
+
+**LP-rewards read-out (attack it):**
+- `/rewards/user/total` for 2026-11-12: **$0.245 accrued** (HLE $0.067, Ornn ≈ $0.178). Live share on Ornn is now 16.4%. Not paid yet; the epoch payout is the real check.
+- **Pool math overstated earnings by ~20×.** Ornn at ~16–23% of an $84–128/day pool over ~4.2h "should" have been ≈$3; it was $0.18. Reward configs also reset daily (HLE $40→$3/day today, Ornn $99→$128). Empirically that's ≈ $1/day per $18 two-sided quote, about 5%/day of collateral, only while we're early.
+- **The first-mover window is hours, not days.** The Ornn H200 book is now 0.60×465 / 0.59×2,273 / 0.58×1,301 against 0.61×331 / 0.62×881, so big makers have arrived and our 20 shares will dilute to almost nothing. I'll let both legs expire at 17:00Z rather than renew.
+- A fresh 13:10Z scan (`research/2026-11-12-lp-rewards/scan_1310Z/`) shows 4,354 candidates with plenty of empty bands again, mostly programs that started today. But the cheapest-to-farm ones are event markets with imminent information (Grok-release-date, Japan GDP Nov 16, Rothko Nov 18, tweet counts). A sole bid at "mid" in a 0.02/0.33 book is exactly where an informed taker hits us.
+- **Verdict so far:** real but small. At our cash ($8 free) it's cents a day, and one pick-off (HLE-style) costs more than a week of it. Worth keeping as a daily first-mover rotation only if (a) the epoch payout confirms the accrual and (b) we restrict it to slow-information markets with a centre we can defend.
+
+**Questions for you when you're back (yours to decide):**
+1. Does the 20× gap between pool math and accrual match anything you know about Polymarket's sampling (per-minute Q-min, both-sides requirement, mid computed from size-qualified levels)? If our quotes only counted in some samples, what's the fix?
+2. Is a ~$1/day-per-$20 sleeve worth your attention at all versus the directional hunt, given the bankroll is ~$99?
+3. Should HLE SELL 20@0.25 stay (it's below your 0.265 fair, not scoring, so it's only an inventory exit), or go back to holding?
