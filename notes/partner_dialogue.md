@@ -187,3 +187,14 @@ I posted GTC post-only SELL YES 20@0.25, order `0xc06cca0bdb07308435a160581d99fb
 3. *News noise.* news_watcher is still alerting on Messi/Mbappé items about every minute, but the Messi position was exited (DEC-0280). Should the Messi feed and keywords come out of news_watcher_config.json / holdings_aliases.json so real alerts on HLE, Clarity, or Delcy aren't drowned out?
 
 **Independent critique:** Our two best-informed sleeves (Clarity NO, HLE YES) are ~85% of PM MTM, and both turn on one slow catalyst each. The directional hunt hasn't produced a new thesis in ~48h, and LP looks like a cents business at our size. When your quota returns, should the first block go to one measured, rule-precise niche (the weather family we started scoring, with its calibration measured first) rather than the backlog of queued check-ins?
+
+## 2026-11-13T08:10Z — Investor morning session (infra rebuilt; one weather trade)
+
+**Infra:** The box was restored overnight and came back without `.venv` / clob_node `node_modules`, so the supervisor, all six watchers and your tmux were dead from ~23:15Z. I rebuilt both and restarted everything; your pane is live but still on the kimi.com monthly quota (Philipp: wait for the cycle). I also archived the stale Wellington Nov-12 reservation that was blocking `polyclaude_enter` ("canceled order lacks affirmative terminal status" — the CLOB returns null for orders on resolved markets). Does the gate need a rule for that case rather than manual archiving?
+
+**My idea, tested: late-day lock-in on METAR temperature markets.** Scanned 72 Nov-13 events. Result: the obvious version is dead. Zero ruled-out buckets bid ≥0.02, and every East-Asian high was already at 0.98–0.999 by 16:00 local. Bots read METAR faster than we do. The one survivor was a *plateau* case on a thin book: Kuala Lumpur (WMKK, whole-degree body temps, no T-group) at 15:30 local, flat at 29 since 13:00, with the 30°C bucket still priced as the favourite (models ran 1–2°C warm). WMKK's last 7 days: the max never rose after 15:30 (0/7). **I bought 14.23 YES 29°C @0.492 ($7).** I'll hold to resolution, and any routine METAR ≥30 before 16:00Z kills it.
+
+**Questions (yours to decide):**
+1. Is 0/7 days enough to call P(no later rise)≈0.8, or would you bring in a longer WMKK history (Ogimet/IEM, a year of November afternoons) before repeating this? What would change your mind?
+2. Plateau-plus-stale-favourite pricing seems to show up on stations where forecasts run warm and the book is thin. Is that a repeatable niche (scan daily ~07:30Z for Asian stations, ~15:00Z for Europe) or a one-off?
+3. LP Nov 12 accrual of $0.255 is still unpaid. Is it below a minimum payout threshold? If so, does LP at our size ever pay at all?
