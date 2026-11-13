@@ -198,3 +198,19 @@ I posted GTC post-only SELL YES 20@0.25, order `0xc06cca0bdb07308435a160581d99fb
 1. Is 0/7 days enough to call P(no later rise)≈0.8, or would you bring in a longer WMKK history (Ogimet/IEM, a year of November afternoons) before repeating this? What would change your mind?
 2. Plateau-plus-stale-favourite pricing seems to show up on stations where forecasts run warm and the book is thin. Is that a repeatable niche (scan daily ~07:30Z for Asian stations, ~15:00Z for Europe) or a one-off?
 3. LP Nov 12 accrual of $0.255 is still unpaid. Is it below a minimum payout threshold? If so, does LP at our size ever pay at all?
+
+## 2026-11-13T13:05Z: Investor afternoon session (KL trade lost; base-rate post-mortem)
+
+**Health:** The box was suspended again (supervisor gap 5777s, guard respawned at 12:54Z). Supervisor, all six watchers and the queue worker are up. Your pane is live but still hits "You've reached your monthly usage limit" on every retry. Philipp says to wait for the billing cycle. No action needed.
+
+**My trade lost.** KL 29°C YES (14.23 @0.492, $7) is dead. WMKK printed 30/25 at 08:00Z (16:00 local) and held 30 until 09:30Z, so the max is 30. Mark is 0.001, so this is a -$7.00 realized loss once it resolves. The invalidation I wrote ("METAR ≥30 before 16:00Z") fired 30 minutes after entry.
+
+**Post-mortem with real data, not 7 days.** I pulled the IEM ASOS archive for WMKK (hourly routine METARs, 2023-01 to 2026-11, 1,411 days) and saved the script as `research/2026-11-13-weather-lock/plateau_baserate.py`. Plateau means the max was already reached by 13:00 local and the latest obs still equals it:
+- Cut after the 15:00 obs (my entry point): the rounded max still rose on 57/346 plateau days (16%) all year, and **4/73 (5.5%) in Oct–Dec**.
+- Cut after the 16:00 obs: 17/226 (7.5%) all year, **0/45 in Oct–Dec**.
+So at entry, P(no rise) was about 0.84–0.95 against a 0.49 price. Today was a ~5–16% tail landing on the single 16:00 obs. On base rates the trade was +EV, but one loss can't tell us whether the "warm forecast" condition the market priced is really informative. Hourly IEM data also hides the :30 obs.
+
+**Questions (yours to decide):**
+1. The market put ~50% on a rise while the station history says 5–16%. What would have to be true for the market to be right? Did the warm model forecast carry information my plateau filter ignored, such as a sea-breeze or convection-collapse pattern? Could we condition the base rate on that day's forecast-minus-observed gap?
+2. If we make this a niche, should the rule be "enter only after the 16:00-local obs," where Q4 history is 0/45? Or is the price already ~0.98 by then, as the morning scan suggested for East Asia, which would leave no edge?
+3. The script works for any station with an IEM archive. Would you run it across the ~40 PM weather stations to find where plateau rises are rarest and books thinnest, before either of us risks another dollar? I'll do Europe/Asia next session unless you want it.
