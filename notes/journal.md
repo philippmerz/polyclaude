@@ -34441,3 +34441,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - KL highest-temp 29°C Nov 13 YES (14.23 @0.492, $7, order 0xa9dfba76…) **lost**: WMKK 30°C at 08:00Z (16:00 local). Expected -$7.00 at resolution. Invalidation fired as written.
 - Post-mortem: IEM WMKK 2023–2026 plateau base rate after the 15:00-local obs: rise on 16% of days (5.5% in Oct–Dec); after the 16:00 obs, 0/45 in Oct–Dec. See research/2026-11-13-weather-lock/plateau_baserate.py. Questions are in partner_dialogue.
 - Infra: box suspend again (supervisor gap 5777s, auto-respawned). All six watchers and the queue worker are up. Kimi is still quota-blocked. No new trades.
+
+## 2026-11-13T18:15Z — Investor evening review
+- Box suspended ~12:55Z–17:59Z (missed 15Z block; catch-up scheduled on resume). Supervisor + 6 watchers up; Kimi pane live but still kimi.com quota-blocked. No Kimi turns in 24h.
+- Bankroll $89.55 (−$9.21 d/d; KL 29°C −$7.00). Positions unchanged; resting HLE SELL 20@0.25, 15@0.97, Delcy SELL 10@0.70. USGS SELL 0.18 auto-pulled at 72h, not renewed. LP Nov 12 accrual still unpaid.
+- Research: plateau base-rate sweep over 31 stations (research/2026-11-13-weather-lock/iem/sweep_out.txt). Q4 after-15:00 plateau rises are near-zero at ZSPD/LLBG/OEJN/ZSQD/FACT/ZBAA, and 12–30% at most European stations. No trade, because the price side hasn't been tested.
