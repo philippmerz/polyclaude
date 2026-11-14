@@ -232,3 +232,21 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 3. Cumulatively we're −57% realized, and the last two directional bets I made were small, base-rate-justified and lost. Is our problem edge or variance at $5–7 tickets? How many independent weather tickets would we need before a 10pp edge separates from noise, and can the $19 of free pUSD support that many?
 
 **Independent critique:** We have spent ~4 sessions measuring niches (LP, METAR lock-in, plateau) and each has died on "bots already price it" or "too small at our size." That's honest work, but the bankroll keeps bleeding on the slow sleeves. One option when you're back: put a hard date on the HLE and Delcy theses (what evidence by Dec 1 keeps them alive?) so a drift isn't mistaken for patience.
+
+## 2026-11-14T08:15Z — Investor partner session
+**Health:** Box resumed 05:49Z after a 6.5h suspend (another gap of 5574s ended at 08:03Z). Supervisor and all six watchers are up, and the Kimi pane is live. OpenCode is still returning the kimi.com monthly-limit error (last one 06:30:45Z). Philipp says to wait for the next cycle, so no purchase.
+**State:** Bankroll is $85.69 (−$3.86 since last evening, mostly ETH and the PM marks). pUSD is 19.66, plus 3.51 aUSDC.e. Positions are unchanged (Clarity pair, HLE 84.5 YES, Delcy 28 YES, USGS 11–13 28.31 YES, Trump-out dust). No trades.
+
+**Idea 1 (mine): USGS M7 ladder mispricing. Result: mostly dead.**
+- The 2026 USGS M≥7 count is still **13** (last one Oct 22, M7.0 Nagqu), so 11–13 YES = zero more M7 by Dec 31 (~47.6 days).
+- Poisson at ~15/yr gives P0≈0.14, which looked like an edge against the 0.089 ask. The empirical catalog disagrees. Counting M≥7 per year in the Nov 14–Dec 31 window over 1976–2025 gives 0:5, 1:15, 2:16, 3:5, 4:6, 5:2, 7:1. So **P0=0.10** (2000+: 2/26=0.077), and the window is *under*-dispersed at zero, not over. The 0.089 ask is fair. Our 28 shares at a 0.049 mid are marked a bit low but carry no edge to add.
+- 17–19 (needs 4–6 more): empirical 0.16 (2000+: 0.15) vs the 0.20 bid → NO at ~0.80 vs a fair ~0.84. That's +4pp for 47 days on a 457-liquidity book. Not worth the cash. 14–16 and 20+ are fair.
+- Script/data: research/2026-11-14-quake-tail/m7.csv.
+
+**Idea 2: price side of the plateau thesis (last evening's Q1). Result: answered, dead.**
+- At 08:05Z, 16:05 local: Shanghai ZSPD flat at 18–19 all day in rain, and its 19°C bucket is 0.991/0.997. Beijing ZBAA is flat at 13 since 05:30Z, and 13°C is 0.98/0.992. At the clean stations the plateau favourite is priced at the base rate or richer. Any plateau edge only exists at thin, wide-spread stations like KL, and that's exactly where we took the tail hit.
+
+**Questions for you (yours to decide):**
+1. Two independent niches died on "already priced" in 24h. Does that tell us our edge has to come from *information timing* (resolution-source lag, e.g. USGS/Wunderground revisions) rather than better models of base rates? What resolution source do you know that updates later than the underlying fact?
+2. The USGS ladder description lets the market stay open until Jan 7 for late-catalogued quakes. Does a late-December M7 create a window where the PM price lags the USGS feed? Would a source_watch hook on the USGS feed for this event be worth wiring?
+3. Same as yesterday: what evidence by Dec 1 keeps HLE (84.5 YES at a 0.12 mark) and Delcy (0.07) alive?

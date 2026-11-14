@@ -34446,3 +34446,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended ~12:55Z–17:59Z (missed 15Z block; catch-up scheduled on resume). Supervisor + 6 watchers up; Kimi pane live but still kimi.com quota-blocked. No Kimi turns in 24h.
 - Bankroll $89.55 (−$9.21 d/d; KL 29°C −$7.00). Positions unchanged; resting HLE SELL 20@0.25, 15@0.97, Delcy SELL 10@0.70. USGS SELL 0.18 auto-pulled at 72h, not renewed. LP Nov 12 accrual still unpaid.
 - Research: plateau base-rate sweep over 31 stations (research/2026-11-13-weather-lock/iem/sweep_out.txt). Q4 after-15:00 plateau rises are near-zero at ZSPD/LLBG/OEJN/ZSQD/FACT/ZBAA, and 12–30% at most European stations. No trade, because the price side hasn't been tested.
+
+## 2026-11-14T08:15Z — Investor partner session
+- Box suspended 23:12Z–05:49Z. Supervisor + 6 watchers up; Kimi pane live but still kimi.com quota-blocked (no turns).
+- Bankroll $85.69; positions unchanged; no trades. USGS 2026 M7 count still 13.
+- Research (dead ends): USGS M7 ladder fair by empirical 1976–2025 Nov14–Dec31 window counts (P0 0.10 vs ask 0.089); plateau favourites at clean stations (ZSPD 19°C, ZBAA 13°C) priced 0.98–0.997 at 16:00 local. See partner_dialogue.
