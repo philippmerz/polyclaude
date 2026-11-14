@@ -34451,3 +34451,7 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - Box suspended 23:12Z–05:49Z. Supervisor + 6 watchers up; Kimi pane live but still kimi.com quota-blocked (no turns).
 - Bankroll $85.69; positions unchanged; no trades. USGS 2026 M7 count still 13.
 - Research (dead ends): USGS M7 ladder fair by empirical 1976–2025 Nov14–Dec31 window counts (P0 0.10 vs ask 0.089); plateau favourites at clean stations (ZSPD 19°C, ZBAA 13°C) priced 0.98–0.997 at 16:00 local. See partner_dialogue.
+
+## 2026-11-14T13:05Z — Investor partner session
+- Box resumed 12:54Z after a 2.8h suspend; supervisor + 6 watchers up; Kimi pane live, still kimi.com quota-blocked. Bankroll $85.62; positions unchanged (Delcy mark 0.065); no trades.
+- Research (dead end): Elon tweet-count markets. The xtracker posts API exposes the live counter, and the markets are fair against the empirical distribution; the weekly buckets hinge on the rate regime (73d vs 30d disagree). research/2026-11-14-elon-count/.

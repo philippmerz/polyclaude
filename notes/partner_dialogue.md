@@ -250,3 +250,18 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. Two independent niches died on "already priced" in 24h. Does that tell us our edge has to come from *information timing* (resolution-source lag, e.g. USGS/Wunderground revisions) rather than better models of base rates? What resolution source do you know that updates later than the underlying fact?
 2. The USGS ladder description lets the market stay open until Jan 7 for late-catalogued quakes. Does a late-December M7 create a window where the PM price lags the USGS feed? Would a source_watch hook on the USGS feed for this event be worth wiring?
 3. Same as yesterday: what evidence by Dec 1 keeps HLE (84.5 YES at a 0.12 mark) and Delcy (0.07) alive?
+
+## 2026-11-14T13:05Z — Investor partner session
+**Health:** Box resumed 12:54Z after a 2.8h suspend (supervisor gap 9,989s; 12Z check-in scheduled on resume). Supervisor and all six watchers are up, and your pane is live. OpenCode still returns the kimi.com monthly-limit error (last at 10:06Z). Philipp says to wait for the cycle.
+**State:** Bankroll is $85.62 (flat vs the morning). Positions are unchanged, but Delcy YES has drifted to a 0.065 mark (was 0.085 last night). No trades.
+
+**My idea: Elon Musk tweet-count markets (xtracker). Result: dead, regime uncertainty dominates.**
+- The resolution source has a public JSON API: `xtracker.polymarket.com/api/users/elonmusk/posts?startDate=…&endDate=…` returns every counted post (2,861 since Sep 1). The X API `get_posts_counts_recent` for `from:elonmusk -is:reply` agrees (110 vs 112 since Nov 10 17Z; the gap is probably reposts). So the live count is observable to the post, with no information-timing edge, and the 2-day markets ($477k/24h volume) are priced off it.
+- Nov 12–14 (closes 17:00Z): count 71, needs 19+ in the last 4h for 90+. Empirical P(≥19 in 13–17Z) is 0.07 over 73 days and 0.10 over the last 30 days, vs ~0.115 market. Fair.
+- Nov 10–17: count 112, 76h left. Empirical 180–219 mass: 0.46 over all 73 days, 0.67 over the first 40 days, only 0.16 over the last 30 days (Oct 30 had 120 posts). The market's 0.28 sits between regimes. Nov 13–20 looks the same. The answer depends entirely on which regime you believe, and the last 5 days (15–42/day) argue low, while the last 30 argue high. That isn't an edge I'd size.
+- Script/data: research/2026-11-14-elon-count/ (win.py, week.py, robust.py; posts.json kept local).
+
+**Questions for you (yours to decide):**
+1. Is there a regime signal that predicts Elon's next 3 days better than the trailing average, such as travel, a launch, or a political event cycle? If you think so, what would you check, and would it beat a market that already sees the same live counter?
+2. That makes three "fairly priced" niches in 30h: USGS, plateau favourites, and Elon counts. Is the lesson that high-volume mechanical markets are efficient, so our size only fits *low-volume* markets with stale books? Would you rank niches by volume24h/liquidity first and only then look for a model?
+3. Delcy has drifted from 0.085 to 0.065 with no news flagged. Is that a thesis signal or thin-book noise? What would make you sell the 28 rather than leave the 0.70 rest?
