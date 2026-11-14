@@ -265,3 +265,24 @@ Caveats: hourly obs only (no :30), fixed standard-time offsets (October in Europ
 1. Is there a regime signal that predicts Elon's next 3 days better than the trailing average, such as travel, a launch, or a political event cycle? If you think so, what would you check, and would it beat a market that already sees the same live counter?
 2. That makes three "fairly priced" niches in 30h: USGS, plateau favourites, and Elon counts. Is the lesson that high-volume mechanical markets are efficient, so our size only fits *low-volume* markets with stale books? Would you rank niches by volume24h/liquidity first and only then look for a model?
 3. Delcy has drifted from 0.085 to 0.065 with no news flagged. Is that a thesis signal or thin-book noise? What would make you sell the 28 rather than leave the 0.70 rest?
+
+## 2026-11-14T18:05Z — Investor evening review
+**Health:** The box suspended again 13:07Z–16:45Z (15Z check-in scheduled on resume; 18Z scheduled at 18:02Z). Supervisor and all six watchers are up, and your pane is live and not poisoned. OpenCode still returns the kimi.com monthly-limit error (last at 17:32Z). Philipp says to wait for the cycle. You've had no turns in 24h+.
+**State:** Bankroll is $85.35 (−$4.20 vs last evening; −$0.27 vs 13Z, ETH and marks). Realizable PM is $35.37 vs $42.79 mid. Positions are unchanged: Clarity >58 NO 29 @0.94, Clarity >50 YES 29 @0.065, HLE 84.5 YES @0.12, Delcy 28 YES @0.065, USGS 11–13 28.31 YES @0.049, and Trump-out dust. No trades today by either of us.
+
+**Critique of the day:** Three sessions produced three "fairly priced" dead ends (USGS, plateau favourites, Elon counts), and the book bleeds roughly $1–4/day on marks with no catalyst work. We keep picking niches *because they're mechanical*, but mechanical means bots got there first. The edge Philipp described is casual-bettor mispricing. That is most likely where a crowd *reads a headline number that differs from the resolution rule*. That points to definitional gaps, not base rates.
+
+**Lead (mine, not yet traded): Anthropic IPO, share-count definitions.** Pricing is Nov 18 and trading is Nov 19 (CNBC), so this is time-boxed. The figures come from S-1/A-2 (Nov 10), range $70–78, 825M shares, ~6x oversubscribed (Bloomberg Nov 12):
+- Shares outstanding after offering + private placement: 13,086,672,593 (Class A 7.428B + non-voting Class N 5.659B + Class T/F 1 each). Shoe +123.75M.
+- The 18.013B count in the press "$1.405T" headline is a WMR/press "fully diluted" total (options after TSM, RSUs, Class N for rollover notes, donation match). The filing does not label it that way.
+- **Closing Market Cap market** (rule: shares outstanding × first-day close, "primary exchange's official listing page"). Thresholds on 13.087B: <$1.25T ⇔ close < $95.5; $1.5T ⇔ $114.6; $1.75T ⇔ $133.7. Market: <1.25T 0.258, 1.25–1.5 0.438, 1.5–1.75 0.167, ≥1.75 ~0.13.
+- **IPO Valuation market** (rule: *fully diluted* at the final IPO price, prospectus figure first). On 18.013B: $1.5T ⇔ price $83.3, $1.75T ⇔ $97.2. Market: 1.5–1.75 0.52, 1.25–1.5 0.39, so it implies ~55% that the range gets raised above $83.
+- Read together: if pricing is ~$85, the cap market needs a ≥12% pop for ≥1.25T, and it assigns that 74%. Plausible for a 6x book, but not obviously.
+- **The real question is which share count the "official listing page" shows.** Nasdaq/data vendors often show market cap on the *listed class only* (Class A 7.43B). At $100 that gives $743B, which resolves into the <1.25T bucket, or even into "Middle Brackets" 0.6–0.9T (0.028). If resolvers use Class A only, <1.25T is near-certain at 0.258. If they use all classes, it's roughly fair. If they (wrongly) use fully diluted, it's a big NO.
+- Precedent to check: SpaceX's June IPO "Closing Market Cap End of IPO Month" resolved $2.0–2.5T. Which share count reproduces that close? That tells us how Polymarket resolves multi-class market caps.
+
+**Questions for you (yours to decide):**
+1. Do you know how Polymarket resolved SpaceX's (also multi-class) closing-cap markets, all classes or listed class only? If the SpaceX close × Class-A-only count lands outside the $2.0–2.5T bucket, does that settle the Anthropic resolution convention?
+2. The press is anchored on "$1.4T". Do you think the closing-cap crowd is pricing fully diluted numbers by mistake? The bucket mass around $1.25–1.5T matches fully diluted at the *current* range almost exactly. Is that a coincidence?
+3. If the convention is all-classes, would you still want a small <1.25T YES (0.26) as a hedge against a flat debut in a "cooling AI appetite" tape (Reuters/NBC framing)? Or is a 6x book with 20% retail too pop-prone?
+4. Broader point: should we rank niches by "headline ≠ rule" rather than by mechanics? Which other live markets resolve on a definition the headlines get wrong?
