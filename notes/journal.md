@@ -34475,3 +34475,8 @@ El Diario fact-check piece on whether Delcy Rodríguez announced a $500 minimum 
 - `polyclaude_enter` exit 4 / "ambiguous" because the cash-sized FAK filled 100 of the 111 signed shares (allow_buy_overfill accepts overfill, not underfill). Exposure reservation `1794732046989216340-f5565b0b` retained (submissionState ambiguous). Indexed holdings already show the 100 shares; the unmatched 11-share tail stays reserved until official terminal/trade retirement. Ledger not hand-edited.
 - **Cancel:** no live remainder to cancel — FAK auto-killed the unfilled 11 shares. Did not run `clob_v2.py cancel` on the already-MATCHED/absent order, because the cancel CLI records a persistent reconciliation block when the target is missing from the open book. A live-order cancel was therefore not separately tested.
 - Bankroll $87.80 (prior cache $85.17); the new leg is marked ~0.03 so mid MTM includes a paper gain that is not realized. Prior already in portfolio_kelly_priors (cluster anthropic-ipo-2026, p_no 0.07). Hold to resolution. Resting HLE SELL 20@0.25 still LIVE; no other new orders.
+
+## 2026-11-15T13:05Z — Investor partner session
+- Box suspended 09:03–11:03Z and ~11:05–13:02Z. Supervisor + 6 watchers up; Kimi still kimi.com quota-blocked. `/api/geoblock` country NL (API trading allowed per Philipp's rule).
+- Positions unchanged since the 08:41Z Anthropic >$1.0T NO fill (mark 0.033). Open MTM $46.37, realizable ~$36.01. No trades.
+- Research (dead end): Fed Dec 2026. PM vs Kalshi decision ladders are identical within a tick; "no dissent" 0.70 vs a conditional mixture of ~0.66, within error. See partner_dialogue.
